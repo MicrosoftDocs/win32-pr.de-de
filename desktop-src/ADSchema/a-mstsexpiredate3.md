@@ -1,11 +1,11 @@
 ---
 title: MS-TS-ExpireDate3-Attribut
-description: Das Ablaufdatum der dritten TS pro Benutzer-CAL.
+description: Ablaufdatum des dritten TS pro Benutzer-CAL.
 ms.assetid: 47dea1aa-54c3-4d0a-b82f-5161deaefd3d
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-TS-ExpireDate3-Attribut
-- msTSExpireDate3-Attribut AD-Schema
+- AD-Schema des MS-TS-ExpireDate3-Attributs
+- MSTSExpireDate3-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d4dac7405699357e7e9db7cd771e077633452b6
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: dc9ea487fe93ec01854563042f262128a1d54ad879e9cfd40e4301d03a91cfdf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344532"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119589610"
 ---
 # <a name="ms-ts-expiredate3-attribute"></a>MS-TS-ExpireDate3-Attribut
 
-Das Ablaufdatum der dritten TS pro Benutzer-CAL.
+Ablaufdatum des dritten TS pro Benutzer-CAL.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------------------------|
 | CN                | MS-TS-ExpireDate3                                             |
-| LDAP-Display-Name | msTSExpireDate3                                               |
+| Ldap-Anzeigename | msTSExpireDate3                                               |
 | Size              | \-                                                            |
-| Berechtigung aktualisieren  | \-                                                            |
-| Aktualisierungshäufigkeit  | \-                                                            |
+| Aktualisieren von Berechtigungen  | \-                                                            |
+| Updatehäufigkeit  | \-                                                            |
 | Attribute-Id      | 1.2.840.113556.1.4.2003                                       |
-| System-ID-GUID    | 41bc7f 04-be72-4930-BD10-1F 3439412387                          |
+| System-ID-GUID    | 41bc7f04-be72-4930-bd10-1f3439412387                          |
 | Syntax            | [**String(Generalized-Time)**](s-string-generalized-time.md) |
 
 
@@ -55,10 +55,10 @@ Das Ablaufdatum der dritten TS pro Benutzer-CAL.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Ist einwertig       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000001   |
@@ -76,10 +76,10 @@ Das Ablaufdatum der dritten TS pro Benutzer-CAL.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Ist einwertig       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000001   |
@@ -97,10 +97,10 @@ Das Ablaufdatum der dritten TS pro Benutzer-CAL.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Ist einwertig       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000001   |

@@ -1,5 +1,5 @@
 ---
-description: 'ID3DXMATRIXStack::RotateYawPitchRollLocal-Methode (D3dx9math.h): Rotiert (relativ zum lokalen Koordinatenraum des Objekts) um eine beliebige Achse.'
+description: ID3DXMATRIXStack::RotateYawPitchRollLocal-Methode (D3dx9math.h) – Rotiert (relativ zum lokalen Koordinatenraum des Objekts) um eine beliebige Achse.
 ms.assetid: c69f5ea7-5d14-4187-9405-1ceff8230185
 title: ID3DXMATRIXStack::RotateYawPitchRollLocal-Methode (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 1d104676b6d346afd527552dbfba4bac23ed09cd
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3cd1355039a570f0ef0e3546150cb9d8ebed5900b88ba14b6640f3d8a1799150
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493189"
 ---
 # <a name="id3dxmatrixstackrotateyawpitchrolllocal-method-d3dx9mathh"></a>ID3DXMATRIXStack::RotateYawPitchRollLocal-Methode (D3dx9math.h)
 
-Rotiert (relativ zum lokalen Koordinatenraum des Objekts) um eine beliebige Achse.
+Dreht (relativ zum lokalen Koordinatenraum des Objekts) um eine beliebige Achse.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,16 +47,16 @@ HRESULT RotateYawPitchRollLocal(
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Das Gähnen um die y-Achse im Bogenmaß.
+Das Gieren um die y-Achse im Bogenmaß.
 
 </dd> <dt>
 
-*Tonhöhe* \[ In\]
+*Pitch* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Die Tonhöhe um die x-Achse im Bogenmaß.
+Die Tonhöhe um die X-Achse im Bogenmaß.
 
 </dd> <dt>
 
@@ -65,7 +65,7 @@ Die Tonhöhe um die x-Achse im Bogenmaß.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Das Rollback um die Z-Achse im Bogenmaß.
+Der Roll um die Z-Achse im Bogenmaß.
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Das Rollback um die Z-Achse im Bogenmaß.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode fügt die Drehung dem Matrixstapel mit der berechneten Drehungsmatrix ähnlich der folgenden hinzu:
+Diese Methode fügt die Drehung dem Matrixstapel mit der berechneten Rotationsmatrix ähnlich der folgenden hinzu:
 
 
 ```
@@ -88,20 +88,20 @@ m_stack[m_currentPos] = tmp * m_stack[m_currentPos];
 
 
 
-Da die Drehung mit dem Matrixstapel nach links multipliziert wird, ist die Drehung relativ zum lokalen Koordinatenraum des Objekts.
+Da die Drehung links multipliziert mit dem Matrixstapel ist, ist die Drehung relativ zum lokalen Koordinatenraum des Objekts.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

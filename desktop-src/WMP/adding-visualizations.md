@@ -4,23 +4,23 @@ description: Hinzufügen von Visualisierungen
 ms.assetid: adb5d10b-070c-426c-a74a-8d4881d9acbf
 keywords:
 - Erstellen von Skins, Visualisierungen
-- Windows Media Player Skins, Visualisierungen
+- Windows Media Player Skins,Visualisierungen
 - Skins, Visualisierungen
-- Visualisierungen, Skins
+- Visualisierungen,Skins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9750b114d99af8c59777ea28ff4dab85a56dd229
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d236990d3e29cf4e51dbb46e8e1269b0c8a50ccaf205940a6f34b97c89fa6e62
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119619150"
 ---
 # <a name="adding-visualizations"></a>Hinzufügen von Visualisierungen
 
-Sie können ein Visualisierungs Fenster auf die gleiche Weise hinzufügen, wie Sie ein Videofenster hinzugefügt haben. Dieselbe Skin kann verwendet werden, es wird jedoch ein **Effects** -Element verwendet.
+Sie können ein Visualisierungsfenster auf die gleiche Weise hinzufügen, wie Sie ein Videofenster hinzugefügt haben. Die gleiche Skin kann verwendet werden, es wird jedoch **ein EFFECTS-Element** verwendet.
 
-Zuerst müssen Sie das **Effects** -Element hinzufügen und ihm eine ID und eine Größe geben:
+Zuerst müssen Sie das **EFFECTS-Element** hinzufügen und ihm eine ID und Größe geben:
 
 
 ```C++
@@ -35,7 +35,7 @@ Zuerst müssen Sie das **Effects** -Element hinzufügen und ihm eine ID und eine
 
 
 
-Anschließend können Sie die beiden Schaltflächen als vorherige und nächste Visualisierungs Code Zeichenfolge zuweisen:
+Anschließend können Sie den beiden Schaltflächen eine vorherige und eine nächste Visualisierungscodezeichenfolge zuweisen:
 
 
 ```C++
@@ -53,9 +53,9 @@ Anschließend können Sie die beiden Schaltflächen als vorherige und nächste V
 
 
 
-Die Ebenen und Bitmaps waren dieselben, die im Video Beispiel verwendet wurden, mit dem Unterschied, dass der Wiedergabe Pfeil horizontal kopiert und gekippt wurde.
+Die Ebenen und Bitmaps waren die gleichen, die im Videobeispiel verwendet wurden, mit der Ausnahme, dass der Wiedergabepfeil kopiert und horizontal gekippt wurde.
 
-Schließlich wurde ein einfaches **Player** -Element mit dem **URL** -Attribut hinzugefügt, um einen zu Wiedergabe enden Song auszuwählen.
+Schließlich wurde ein einfaches **PLAYER-Element** mit dem **URL-Attribut** hinzugefügt, um einen zu spielenden Titel zu wählen.
 
 
 ```C++
@@ -67,18 +67,18 @@ Schließlich wurde ein einfaches **Player** -Element mit dem **URL** -Attribut h
 
 
 
-Im Beispiel Abschnitt des SDK sehen Sie eine ähnliche Funktionsweise für die Visualisierung.
+Eine ähnliche funktionierende Visualisierungss skin finden Sie im Beispielabschnitt des SDK.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Leitfaden zum Erstellen von Skin**](skin-creation-guide.md)
+[**Handbuch zur Erstellung von Skins**](skin-creation-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

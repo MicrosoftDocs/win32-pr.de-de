@@ -1,34 +1,34 @@
 ---
-title: Vorgehensweise beim Abschneiden einer geometrischen Maske
-description: Zeigt, wie Sie einen Bereich mit Ebenen Ausschneiden.
+title: Ausschneiden einer geometrischen Maske
+description: Zeigt, wie ein Bereich mit Ebenen beschnitten wird.
 ms.assetid: eaeb6cfd-de62-46f1-972d-a11e0ccc11d9
 ms.topic: article
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 979281fb7fa6e034894bffaecbd6246fe8a9aa94
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0c2258938020593014b5b6f5ea77516e7770f8589601cf4139971b3532b22fff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473725"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119569345"
 ---
-# <a name="how-to-clip-to-a-geometric-mask"></a>Vorgehensweise beim Abschneiden einer geometrischen Maske
+# <a name="how-to-clip-to-a-geometric-mask"></a>Ausschneiden einer geometrischen Maske
 
-In diesem Thema wird beschrieben, wie Sie mit einer geometrischen Maske einen Bereich einer Ebene ausschneiden.
+In diesem Thema wird beschrieben, wie eine geometrische Maske verwendet wird, um einen Bereich einer Ebene zu beschneiden.
 
-**So schneiden Sie einen Bereich mit einer geometrischen Maske ab**
+**So beschneiden Sie einen Bereich mit einer geometrischen Maske**
 
-1.  Erstellen Sie die [**ID2D1Geometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry) , die zum Abschneiden des Bereichs verwendet wird.
-2.  Rufen Sie [**ID2D1RenderTarget:: kreatelayer**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(id2d1layer)) auf, um eine Ebene zu erstellen.
-3.  Nennen Sie [**ID2D1RenderTarget::P ushlayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) , und übergeben Sie die geometrische Maske, die Sie in Schritt 1 definiert haben.
-4.  Zeichnen Sie den Inhalt zu Clip.
-5.  [**ID2D1RenderTarget::P oplayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) aufgerufen, um die Ebene aus dem Renderziel zu entfernen.
+1.  Erstellen Sie die [**ID2D1Geometry,**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry) die zum Beschneiden des Bereichs verwendet wird.
+2.  Rufen Sie [**ID2D1RenderTarget::CreateLayer**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(id2d1layer)) auf, um eine Ebene zu erstellen.
+3.  Rufen Sie [**ID2D1RenderTarget::P ushLayer auf,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) und übergeben Sie die geometrische Maske, die Sie in Schritt 1 definiert haben.
+4.  Zeichnen Sie den zu beschneidende Inhalt.
+5.  Rufen Sie [**ID2D1RenderTarget::P opLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) auf, um die Ebene aus dem Renderziel zu entfernen.
 
-Im folgenden Beispiel wird eine geometrische Maske zum Ausschneiden eines Bilds und mehrerer Rechtecke verwendet. Die folgende Abbildung zeigt die ursprüngliche Bitmap auf der linken Seite und die Bitmap, die auf der rechten Seite der geometrischen Maske abgeschnitten wird.
+Im folgenden Beispiel wird eine geometrische Maske verwendet, um ein Bild und mehrere Rechtecke zu beschneiden. Die folgende Abbildung zeigt die ursprüngliche Bitmap auf der linken Seite und die Bitmap, die auf die geometrische Maske auf der rechten Seite abgeschnitten ist.
 
-![Abbildung einer Goldfisch-Bitmap vor und nach dem Abschneiden der Bitmap auf eine sternförmige Maske](images/cliparegion-layers.png)
+![Abbildung einer Goldfish-Bitmap vor und nach dem Abschneiden der Bitmap auf eine sternförmige Maske](images/cliparegion-layers.png)
 
-Um die Zeichnung wie in der obigen Abbildung gezeigt zu schneiden, erstellen Sie eine [**ID2D1PathGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1pathgeometry) , und verwenden Sie Sie, um einen Stern zu definieren. Dies wird im folgenden Code veranschaulicht.
+Um die Zeichnung wie in der vorherigen Abbildung dargestellt zu beschneiden, erstellen Sie eine [**ID2D1PathGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1pathgeometry) und verwenden sie, um einen Stern zu definieren. Dies wird im folgenden Code veranschaulicht.
 
 
 ```C++
@@ -61,14 +61,14 @@ SafeRelease(&pSink);
 
 
 
-Rufen Sie zum Erstellen einer Ebene " [**kreatelayer**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(id2d1layer)) " auf.
+Rufen [**Sie CreateLayer**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(id2d1layer)) auf, um eine Ebene zu erstellen.
 
 > [!Note]  
-> Ab Windows 8 müssen Sie nicht " [**kreatelayer**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(id2d1layer))" aufrufen. In den meisten Fällen ist die Leistung besser, wenn Sie diese Methode nicht aufzurufen und Direct2D die ebenenressourcen verwaltet.
+> Ab Windows 8 müssen Sie [**CreateLayer**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(id2d1layer))nicht mehr aufrufen. In den meisten Situationen ist die Leistung besser, wenn Sie diese Methode nicht aufrufen und Direct2D die Ebenenressourcen verwaltet.
 
- 
+ 
 
-Ruft die [**pushschicht**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) mit der Geometrie Maske auf, um die Ebene zu pushen. Zeichnen Sie den Inhalt, und klicken Sie dann auf [**poplayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) , um die Ebene zu poptieren. Dadurch wird die sternförmige Zeichnung erzeugt. Dies wird im folgenden Code veranschaulicht.
+Rufen Sie [**PushLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) mit der Geometriemaske auf, um die Ebene zu pushen. Zeichnen Sie den Zuschneidende Inhalt, und rufen Sie dann [**PopLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) auf, um die Ebene zu befüllen. Dadurch wird die sternförmige Zeichnung erzeugt. Dies wird im folgenden Code veranschaulicht.
 
 
 ```C++
@@ -115,12 +115,12 @@ HRESULT DemoApp::RenderWithLayer(ID2D1RenderTarget *pRT)
 
 <dl> <dt>
 
-[Übersicht über Schichten](direct2d-layers-overview.md)
+[Übersicht über Ebenen](direct2d-layers-overview.md)
 </dt> <dt>
 
 [Direct2D-Referenz](reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

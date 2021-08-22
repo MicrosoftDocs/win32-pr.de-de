@@ -1,7 +1,7 @@
 ---
-description: Füllt ein Array mit rotierenden Schlüsseldaten, die für die Keyframe-Animation verwendet werden.
+description: Füllt ein Array mit Rotationsschlüsseldaten aus, die für die Keyframe-Animation verwendet werden.
 ms.assetid: 9ae8bc28-d231-4d50-98f0-762b2d2c04e8
-title: 'ID3DXKeyframedAnimationSet:: getrotationkeys-Methode (D3dx9anim. h)'
+title: ID3DXKeyframedAnimationSet::GetRotationKeys-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: af9242ccf75bc1e5443f040399ffbd8a939ed92e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b95d2591c8eef4b3df22cd8af301bfee9862dd2e3124ecd1cda8d92a589f91df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762309"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493536"
 ---
-# <a name="id3dxkeyframedanimationsetgetrotationkeys-method"></a>ID3DXKeyframedAnimationSet:: getrotationkeys-Methode
+# <a name="id3dxkeyframedanimationsetgetrotationkeys-method"></a>ID3DXKeyframedAnimationSet::GetRotationKeys-Methode
 
-Füllt ein Array mit rotierenden Schlüsseldaten, die für die Keyframe-Animation verwendet werden.
+Füllt ein Array mit Rotationsschlüsseldaten aus, die für die Keyframe-Animation verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetRotationKeys(
 
 <dl> <dt>
 
-*Animation* \[ in\]
+*Animation* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Animations Index.
+Animationsindex.
 
 </dd> <dt>
 
-" *protationkeys* \[ " in\]
+*pRotationKeys* \[ In\]
 </dt> <dd>
 
-Typ: **[ **LPD3DXKEY \_ Quaternion**](d3dxkey-quaternion.md)**
+Typ: **[ **LPD3DXKEY \_ QUATERNION**](d3dxkey-quaternion.md)**
 
-Zeiger auf ein vom Benutzer zugewiesenes Array von [**D3DXKEY \_ Quaternion**](d3dxkey-quaternion.md) Quaternionen, das die Methode mit Animations Rotationsdaten ausfüllen soll.
+Zeiger auf ein vom Benutzer zugeordnetes Array von [**D3DXKEY \_ QUATERNION-Quaternionen,**](d3dxkey-quaternion.md) die die Methode mit Animationsrotationsdaten füllen soll.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Zeiger auf ein vom Benutzer zugewiesenes Array von [**D3DXKEY \_ Quaternion**](d
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -83,7 +83,7 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 [ID3DXKeyframedAnimationSet](id3dxkeyframedanimationset.md)
 </dt> <dt>
 
-[**ID3DXKeyframedAnimationSet:: getnumrotationkeys**](id3dxkeyframedanimationset--getnumrotationkeys.md)
+[**ID3DXKeyframedAnimationSet::GetNumRotationKeys**](id3dxkeyframedanimationset--getnumrotationkeys.md)
 </dt> </dl>
 
  

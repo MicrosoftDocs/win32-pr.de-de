@@ -1,38 +1,38 @@
 ---
-description: Die folgenden Klassen werden deklariert und mit Klassen Bezeichner (CLSIDs) in wmcodecdsp. h verknüpft.
+description: Die folgenden Klassen werden deklariert und klassenbezeichnern (CLSIDs) in wmcodecdsp.h zugeordnet.
 ms.assetid: f82d92dc-fbce-4274-a10f-72fa8dd776cc
-title: Klassen Bezeichner für den Inhaltsverzeichnis Tabelle (wmcodecdsp. h)
+title: Klassenbezeichner für den Inhaltsverzeichnisparser (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e5108855c687085e77ce36aa14b3424732e25572
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 12c340ec32b8de4ce42619d57f6e44da9d77d0eead4940dc94d90baec4d349ab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119664690"
 ---
-# <a name="class-identifiers-for-table-of-contents-parser"></a>Klassen Bezeichner für Inhaltsverzeichnis Tabelle
+# <a name="class-identifiers-for-table-of-contents-parser"></a>Klassenbezeichner für den Inhaltsverzeichnisparser
 
-Die folgenden Klassen werden deklariert und mit Klassen Bezeichner (CLSIDs) in wmcodecdsp. h verknüpft.
+Die folgenden Klassen werden deklariert und klassenbezeichnern (CLSIDs) in wmcodecdsp.h zugeordnet.
 
 
 
-| Klassenname       | Anzeigeobjekt Name |
+| Klassenname       | Anzeigeobjektname |
 |------------------|----------------------|
-| Cchcentry        | Inhaltseintrag            |
-| Cycentrylist    | Inhaltsliste für Inhaltsverzeichnis       |
-| Cinhalts Verzeichnis             | INHALTSVERZEICHNIS                  |
-| Cdeccollection   | Inhalts Sammlung       |
-| Cdecparser       | Inhaltsverzeichnis           |
-| Cdecgeneratordmo | TOC-Generator        |
+| CTocEntry        | TOC-Eintrag            |
+| CTocEntryList    | TOC-Eintragsliste       |
+| CToc             | INHALTSVERZEICHNIS                  |
+| CTocCollection   | TOC-Sammlung       |
+| CTocParser       | TOC-Parser           |
+| CTocGeneratorDmo | TOC Generator        |
 
 
 
  
 
-Die obige Tabelle enthält einen anzeigen Amen für jede Klasse. In dieser Dokumentation werden diese anzeigen Amen verwendet, um auf Instanzen der Klassen zu verweisen. Die Dokumentation bezieht sich z. b. auf eine Instanz der cycentry-Klasse als ein Inhalts Objekt.
+Die obige Tabelle enthält einen Anzeigeobjektnamen für jede Klasse. In dieser Dokumentation werden diese Anzeigenamen verwendet, um auf Instanzen der Klassen zu verweisen. Die Dokumentation bezieht sich beispielsweise auf eine Instanz der CTocEntry-Klasse als TOC Entry-Objekt.
 
-Im Code können Sie **\_ \_ uuidof** verwenden, um auf die CLSIDs zu verweisen. Beispielsweise können Sie den folgenden Code verwenden, um auf die CLSID für cycgeneratordmo zu verweisen.
+Im Code können Sie **\_ \_ uuidof** verwenden, um auf die CLSIDs zu verweisen. Beispielsweise können Sie den folgenden Code verwenden, um auf die CLSID für CTocGeneratorDmo zu verweisen.
 
 
 ```C++
@@ -41,33 +41,33 @@ __uuidof(CTocGeneratorDmo)
 
 
 
-### <a name="clsid-constants-defined-in-wmcodecdsph"></a>In "wmcodecdsp. h" definierte CLSID-Konstanten
+### <a name="clsid-constants-defined-in-wmcodecdsph"></a>CLSID-Konstanten, die in Wmcodecdsp.h definiert sind
 
-Als Alternative zur Verwendung von **\_ \_ uuidof** können Sie Konstanten verwenden, um auf die CLSIDs zu verweisen. Die folgenden Konstanten sind in wmcodecdsp. h definiert.
+Als Alternative zur Verwendung von **\_ \_ uuidof** können Sie Konstanten verwenden, um auf die CLSIDs zu verweisen. Die folgenden Konstanten sind in wmcodecdsp.h definiert.
 
 
 
 | Klassenname     | CLSID-Konstante        |
 |----------------|-----------------------|
-| Cchcentry      | CLSID \_ cumcentry      |
-| Cycentrylist  | CLSID \_ cycentrylist  |
-| Cinhalts Verzeichnis           | CLSID- \_ cinhalts           |
-| Cdeccollection | CLSID \_ cdeccollection |
-| Cdecparser     | CLSID \_ cdecparser     |
+| CTocEntry      | CLSID \_ CTocEntry      |
+| CTocEntryList  | CLSID \_ CTocEntryList  |
+| CToc           | CLSID \_ CToc           |
+| CTocCollection | CLSID \_ CTocCollection |
+| CTocParser     | CLSID \_ CTocParser     |
 
 
 
  
 
-### <a name="clsid-constants-defined-in-wmcodecdspuuidlib"></a>In wmcodecdspuuid. lib definierte CLSID-Konstanten
+### <a name="clsid-constants-defined-in-wmcodecdspuuidlib"></a>CLSID-Konstanten definiert in Wmcodecdspuuid.lib
 
-Die folgende CLSID-Konstante wird in wmcodecdsp. h deklariert, aber nicht definiert. Um Sie im Code zu verwenden, müssen Sie eine Verknüpfung mit wmcodecdspuuid. lib herstellen.
+Die folgende CLSID-Konstante wird in wmcodecdsp.h deklariert, aber nicht definiert. Um sie im Code zu verwenden, müssen Sie eine Verknüpfung mit wmcodecdspuuid.lib erstellen.
 
 
 
 | Klassenname       | CLSID-Konstante          |
 |------------------|-------------------------|
-| Cdecgeneratordmo | CLSID \_ cdecgeneratordmo |
+| CTocGeneratorDmo | CLSID \_ CTocGeneratorDmo |
 
 
 
@@ -79,9 +79,9 @@ Die folgende CLSID-Konstante wird in wmcodecdsp. h deklariert, aber nicht defini
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wmvdspa.dll</dt> </dl>  |
 
 
@@ -90,7 +90,7 @@ Die folgende CLSID-Konstante wird in wmcodecdsp. h deklariert, aber nicht defini
 
 <dl> <dt>
 
-[Tabelle mit Inhalts parserobjekten](toc-parser-objects.md)
+[Inhaltsverzeichnisparserobjekte](toc-parser-objects.md)
 </dt> </dl>
 
  

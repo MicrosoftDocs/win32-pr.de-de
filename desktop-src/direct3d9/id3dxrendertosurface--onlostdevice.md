@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 772b678dc4260954c2e03c13d7259565cd896bdc
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 9073cfbc4c51b04049f39d5788b7538f768cebc82ac1036a5fdf1901f2418412
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093113"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119492410"
 ---
 # <a name="id3dxrendertosurfaceonlostdevice-method"></a>ID3DXRenderToSurface::OnLostDevice-Methode
 
@@ -44,7 +44,7 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode sollte immer dann aufgerufen werden, wenn das Gerät verloren geht oder bevor der Benutzer [**IDirect3DDevice9::Reset aufruft.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-reset) Selbst wenn das Gerät nicht tatsächlich verloren gegangen ist, ist ID3DXRenderToSurface::OnLostDevice für die Freigabe von Zustandsblocks und anderen Ressourcen verantwortlich, die möglicherweise freigegeben werden müssen, bevor das Gerät zurück gesetzt wird. Daher kann das Schriftartobjekt vor dem Aufruf von **IDirect3DDevice9::Reset** und id3DXRenderToSurface::OnResetDevice nicht erneut verwendet werden.
 
@@ -52,14 +52,14 @@ Diese Methode sollte immer dann aufgerufen werden, wenn das Gerät verloren geht
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

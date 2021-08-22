@@ -1,9 +1,9 @@
 ---
-title: EN_ENDCOMPOSITION Benachrichtigungs Code (RichEdit. h)
-description: Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements, dass der Benutzer neue Daten eingegeben hat oder die Eingabe von Daten während der Verwendung von IME oder Text Services Framework abgeschlossen hat.
+title: EN_ENDCOMPOSITION Benachrichtigungscode (Richedit.h)
+description: Benachrichtigt ein übergeordnetes Fenster des Rich-Edit-Steuerelements, dass der Benutzer neue Daten eingegeben oder die Eingabe von Daten beendet hat, während er IME oder Textdienstframework.
 ms.assetid: 3956313F-F82F-41A2-AEDA-52E63218977C
 keywords:
-- Windows-Steuerelemente für EN_ENDCOMPOSITION Benachrichtigungs
+- EN_ENDCOMPOSITION Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9df1c2b5d08b2da73c67edeb6fe7ca4ac639000c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5d9fe75910ea018cf9d72dd14696067eb0b2bc00dabd4456cca63e41a099a75d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119436849"
 ---
-# <a name="en_endcomposition-notification-code"></a>EN \_ endcomposition-Benachrichtigungs Code
+# <a name="en_endcomposition-notification-code"></a>EN \_ ENDCOMPOSITION-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements, dass der Benutzer neue Daten eingegeben hat oder die Eingabe von Daten während der Verwendung von IME oder [Text Services Framework](/windows/desktop/TSF/text-services-framework)abgeschlossen hat.
+Benachrichtigt ein übergeordnetes Fenster des Rich-Edit-Steuerelements, dass der Benutzer neue Daten eingegeben oder die Eingabe von Daten beendet hat, während er IME oder [Textdienstframework.](/windows/desktop/TSF/text-services-framework)
 
 
 ```C++
@@ -41,7 +41,7 @@ EN_ENDCOMPOSITION
 *lParam* 
 </dt> <dd>
 
-Eine [**endcompositionnotify**](/windows/win32/api/richedit/ns-richedit-endcompositionnotify) -Struktur, die Informationen über die End-Kompositions Bedingung empfängt.
+Eine [**ENDCOMPOSITIONNOTIFY-Struktur,**](/windows/win32/api/richedit/ns-richedit-endcompositionnotify) die Informationen zur Endkompositionsbedingung empfängt.
 
 </dd> </dl>
 
@@ -51,9 +51,9 @@ Eine [**endcompositionnotify**](/windows/win32/api/richedit/ns-richedit-endcompo
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 

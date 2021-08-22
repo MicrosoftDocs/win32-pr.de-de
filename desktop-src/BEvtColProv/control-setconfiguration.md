@@ -1,8 +1,8 @@
 ---
-description: Legen Sie die neue aktive Konfiguration des Sammlers fest.
+description: Legen Sie die neue aktive Konfiguration des Collectors fest.
 ms.assetid: 1979e657-a8f3-4eab-991c-a884bde10724
 ms.tgt_platform: multiple
-title: SetConfiguration-Methode der Steuerelement Klasse
+title: SetConfiguration-Methode der Control-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - BEvtCol.exe
-ms.openlocfilehash: 4f482de9c4cd8f410371da51e605762a1f92e104
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 41ff2c97eaa4b3e2080493c640b716ae4a822762b0f598c94e141a8cc4b4ac6b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103747784"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119589070"
 ---
-# <a name="setconfiguration-method-of-the-control-class"></a>SetConfiguration-Methode der Steuerelement Klasse
+# <a name="setconfiguration-method-of-the-control-class"></a>SetConfiguration-Methode der Control-Klasse
 
-Legen Sie die neue aktive Konfiguration des Sammlers fest.
+Legen Sie die neue aktive Konfiguration des Collectors fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,66 +48,66 @@ Uint32 SetConfiguration(
 
 <dl> <dt>
 
-*Config* \[ in\]
+*Konfiguration* \[ In\]
 </dt> <dd>
 
-Die zu Aktivier-Konfiguration.
+Die zu aktivierende Konfiguration.
 
 </dd> <dt>
 
-*Oldtimestamplow* \[ in\]
+*OldTimestampLow* \[ In\]
 </dt> <dd>
 
-Die nieder wertigen Bits eines Zeitstempels, der angibt, wann die aktuelle aktive Konfiguration festgelegt wurde. Die atomizitäts Prüfung ist aktiviert, wenn diese Eigenschaft nicht auf 0 festgelegt ist.
+Die niedrigen Bits eines Zeitstempels, der angibt, wann die aktuelle aktive Konfiguration festgelegt wurde. Die Atomaritätsprüfung ist aktiviert, wenn diese Eigenschaft nicht auf 0 festgelegt ist.
 
 </dd> <dt>
 
-*Oldtimestamphigh* \[ in\]
+*OldTimestampHigh* \[ In\]
 </dt> <dd>
 
-Die höherwertigen Bits eines Zeitstempels, der angibt, wann die aktuelle aktive Konfiguration festgelegt wurde. Die atomizitäts Prüfung ist aktiviert, wenn diese Eigenschaft nicht auf 0 festgelegt ist.
+Die hohen Bits eines Zeitstempels, der angibt, wann die aktuelle aktive Konfiguration festgelegt wurde. Die Atomaritätsprüfung ist aktiviert, wenn diese Eigenschaft nicht auf 0 festgelegt ist.
 
 </dd> <dt>
 
-*Newtimestamplow* \[ vorgenommen\]
+*NewTimestampLow* \[ out\]
 </dt> <dd>
 
-Wenn diese Methode zurückgegeben wird, enthält dieser Parameter die nieder wertigen Bits eines Zeitstempels, der angibt, wann die neue Konfiguration festgelegt wurde. Die atomizitäts Prüfung ist aktiviert, wenn diese Eigenschaft nicht auf 0 festgelegt ist.
+Wenn diese Methode zurückgegeben wird, enthält dieser Parameter die niedrigen Bits eines Zeitstempels, der angibt, wann die neue Konfiguration festgelegt wurde. Die Atomaritätsprüfung ist aktiviert, wenn diese Eigenschaft nicht auf 0 festgelegt ist.
 
 </dd> <dt>
 
-*Newtimestamphigh* \[ vorgenommen\]
+*NewTimestampHigh* \[ out\]
 </dt> <dd>
 
-Wenn diese Methode zurückgegeben wird, enthält dieser Parameter die höherwertigen Bits des Zeitstempels, der angibt, wann die neue Konfiguration festgelegt wurde. Die atomizitäts Prüfung ist aktiviert, wenn diese Eigenschaft nicht auf 0 festgelegt ist.
+Wenn diese Methode zurückgegeben wird, enthält dieser Parameter die hohen Bits des Zeitstempels, der angibt, wann die neue Konfiguration festgelegt wurde. Die Atomaritätsprüfung ist aktiviert, wenn diese Eigenschaft nicht auf 0 festgelegt ist.
 
 </dd> <dt>
 
-*ErrorString* \[ vorgenommen\]
+*ErrorString* \[ out\]
 </dt> <dd>
 
-Wenn diese Methode zurückgegeben wird, enthält dieser Parameter die Fehlerbeschreibung, wenn ein Fehler aufgetreten ist.
+Wenn diese Methode einen Fehler zurückgibt, enthält dieser Parameter die Fehlerbeschreibung.
 
 </dd> <dt>
 
-*Warningstring* \[ vorgenommen\]
+*WarningString* \[ out\]
 </dt> <dd>
 
 Wenn diese Methode zurückgegeben wird, enthält dieser Parameter alle Warnmeldungen für den Vorgang.
 
 </dd> <dt>
 
-*InfoString* \[ vorgenommen\]
+*InfoString* \[ out\]
 </dt> <dd>
 
-Wenn diese Methode zurückgegeben wird, enthält dieser Parameterinformationen für die neue aktive Konfiguration.
+Wenn diese Methode zurückgegeben wird, enthält dieser Parameter Informationen für die neue aktive Konfiguration.
 
 </dd> <dt>
 
-*ErrorType* \[ vorgenommen\]
+*ErrorType* \[ out\]
 </dt> <dd>
 
-Wenn diese Methode zurückgegeben wird, gibt dieser Parameter den Fehlertyp an, wenn ein Fehler aufgetreten ist.
+Wenn bei dieser Methode ein Fehler aufgetreten ist, gibt dieser Parameter den Fehlertyp an.
 
 <dt>
 
@@ -142,14 +142,14 @@ Es ist ein Fehler aufgetreten, der durch einen geöffneten Socket verursacht wur
 4
 </dt> <dd>
 
-Fehler beim Schreiben von Dateien.
+Es ist ein Datei-Schreibfehler aufgetreten.
 
 </dd> <dt>
 
 5
 </dt> <dd>
 
-Unteilbarkeit-Fehler.
+Es ist ein Atomaritätsfehler aufgetreten.
 
 </dd> </dl> </dd> </dl>
 
@@ -181,10 +181,10 @@ Erfolg
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                       |
-| Namespace<br/>                | Stammverzeichnis von \\ Microsoft \\ Windows \\ booteventcollector<br/>                                              |
-| MOF<br/>                      | <dl> <dt>Booteventcollector WMI. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ Microsoft \\ Windows \\ BootEventCollector<br/>                                              |
+| MOF<br/>                      | <dl> <dt>BootEventCollectorWMI.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>BEvtCol.exe</dt> </dl>               |
 
 

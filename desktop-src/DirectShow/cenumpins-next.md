@@ -1,7 +1,7 @@
 ---
-description: 'Die Next-Methode ruft eine angegebene Anzahl von Pins in der enumerationssequenz ab. Diese Methode implementiert die iumumpins:: Next-Methode.'
+description: Die Next-Methode ruft eine angegebene Anzahl von Pins in der Enumerationssequenz ab. Diese Methode implementiert die IEnumPins::Next-Methode.
 ms.assetid: c38fbd32-7d83-43ec-a105-4a7cb515b471
-title: Cenumpins. Next-Methode (amfilter. h)
+title: CEnumPins.Next-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 612dcd638939b34803b7296babf7445a07cdad22
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 683b8eb5beb9946db7f37d4db53a84c96d5bff7fc91fa4864020fffde5554824
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119567080"
 ---
-# <a name="cenumpinsnext-method"></a>Cenumpins. Next-Methode
+# <a name="cenumpinsnext-method"></a>CEnumPins.Next-Methode
 
-Die Next-Methode ruft eine angegebene Anzahl von Pins in der enumerationssequenz ab. Diese Methode implementiert die [**iumumpins:: Next**](/windows/desktop/api/Strmif/nf-strmif-ienumpins-next) -Methode.
+Die Next-Methode ruft eine angegebene Anzahl von Pins in der Enumerationssequenz ab. Diese Methode implementiert die [**IEnumPins::Next-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ienumpins-next)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,52 +44,52 @@ HRESULT Next(
 
 <dl> <dt>
 
-*cpins* 
+*cPins* 
 </dt> <dd>
 
 Anzahl der abzurufenden Pins.
 
 </dd> <dt>
 
-*pppins* 
+*ppPins* 
 </dt> <dd>
 
-Ein Array von Größen- *cpins* , das mit [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Zeigern gefüllt ist.
+Array der Größe *cPins,* das mit [**IPin-Zeigern**](/windows/desktop/api/Strmif/nn-strmif-ipin) gefüllt ist.
 
 </dd> <dt>
 
-*pcfetch* 
+*pcFetched* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Anzahl der abgerufenen Pins empfängt. Kann **null** sein, wenn *cpins* den Wert 1 hat.
+Zeiger auf eine Variable, die die Anzahl der abgerufenen Pins empfängt. Kann **NULL** sein, wenn *cPins* 1 ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                                                            |
 |------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl>                    | Es wurden nicht so viele Pins wie angefordert abgerufen.<br/>                                 |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>                    | Es wurden nicht so viele Pins wie angefordert abgerufen.<br/>                                 |
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Erfolg.<br/>                                                                    |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>               | Ungültiges Argument.<br/>                                                           |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>                  | **Null** -Zeigerargument.<br/>                                                  |
-| <dl> <dt>**VFW \_ E \_ Enum \_ nicht \_ \_ synchron**</dt> </dl> | Der Zustand des Filters wurde geändert und ist nun inkonsistent mit dem Enumerator.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>               | Ungültiges Argument.<br/>                                                           |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>                  | **NULL-Zeigerargument.**<br/>                                                  |
+| <dl> <dt>**VFW \_ E \_ ENUM \_ OUT \_ OF \_ SYNC**</dt> </dl> | Der Status des Filters hat sich geändert und ist nun mit dem Enumerator inkonsistent.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft Zeiger auf die angegebene Anzahl von Pins ab, beginnend an der aktuellen Position in der Enumeration und platziert Sie im angegebenen Array.
+Diese Methode ruft Zeiger auf die angegebene Anzahl von Pins ab, beginnend an der aktuellen Position in der Enumeration, und platziert sie im angegebenen Array.
 
-Diese Methode ruft die [**cbasefilter:: getpin**](cbasefilter-getpin.md) -Methode des Filters auf, um die Pins abzurufen.
+Diese Methode ruft die [**CBaseFilter::GetPin-Methode**](cbasefilter-getpin.md) des Filters auf, um die Pins abzurufen.
 
-Wenn die Methode erfolgreich ausgeführt wird, weisen die **IPin** -Zeiger alle ausstehenden Verweis Zähler auf. Stellen Sie sicher, dass Sie Sie freigeben, wenn Sie dies erledigt haben.
+Wenn die Methode erfolgreich ist, verfügen alle **IPin-Zeiger** über ausstehende Verweisanzahlen. Stellen Sie sicher, dass Sie sie freigeben, wenn Sie fertig sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,8 +97,8 @@ Wenn die Methode erfolgreich ausgeführt wird, weisen die **IPin** -Zeiger alle 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -106,7 +106,7 @@ Wenn die Methode erfolgreich ausgeführt wird, weisen die **IPin** -Zeiger alle 
 
 <dl> <dt>
 
-[**Cenumpins-Klasse**](cenumpins.md)
+[**CEnumPins-Klasse**](cenumpins.md)
 </dt> </dl>
 
  

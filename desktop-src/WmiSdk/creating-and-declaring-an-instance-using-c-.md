@@ -2,21 +2,21 @@
 description: Sie können eine Instanz in C++ über die IWbemServices-Schnittstelle erstellen.
 ms.assetid: ee54c1ef-bc91-4771-8c11-9ee3aacd8112
 ms.tgt_platform: multiple
-title: Erstellen und Deklarieren einer Instanz mithilfe von C++
+title: Erstellen und Deklarieren einer Instanz mit C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bd316975c68625383a9d2a2d1fe2fc389d30494a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 046c8c32944c7b726e09eade2701f8d35c9edb0363635eca2a16f7e3d630799a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356970"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119568799"
 ---
-# <a name="creating-and-declaring-an-instance-using-c"></a>Erstellen und Deklarieren einer Instanz mithilfe von C++
+# <a name="creating-and-declaring-an-instance-using-c"></a>Erstellen und Deklarieren einer Instanz mit C++
 
-Sie können eine Instanz in C++ über die [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Schnittstelle erstellen.
+Sie können eine Instanz in C++ über die [**IWbemServices-Schnittstelle**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) erstellen.
 
-Die Codebeispiele in diesem Thema erfordern, dass die folgende \# include-Anweisung ordnungsgemäß kompiliert wird.
+Die Codebeispiele in diesem Thema erfordern die folgende \# include-Anweisung, um ordnungsgemäß zu kompilieren.
 
 
 ```C++
@@ -29,9 +29,9 @@ Im folgenden Verfahren wird beschrieben, wie eine Instanz einer vorhandenen Klas
 
 **So erstellen Sie eine Instanz einer vorhandenen Klasse**
 
-1.  Rufen Sie die Definition der vorhandenen Klasse ab, indem Sie die [**IWbemServices:: GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) -Methode oder die [**IWbemServices:: GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) -Methode aufrufen.
+1.  Rufen Sie die Definition der vorhandenen Klasse ab, indem Sie die [**Methoden IWbemServices::GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) oder [**IWbemServices::GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) aufrufen.
 
-    Im folgenden Codebeispiel wird gezeigt, wie die [**GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) -Methode und die [**GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) -Methode verwendet werden, um einen Zeiger auf die [**IWbemClassObject**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemclassobject) -Schnittstelle zu erhalten, die Zugriff auf die Klassendefinition bietet.
+    Im folgenden Codebeispiel wird gezeigt, wie sie die [**Methoden GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) und [**GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) verwenden, um einen Zeiger auf die [**IWbemClassObject-Schnittstelle**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemclassobject) abzurufen, die Zugriff auf die Klassendefinition bietet.
 
     ```C++
     // The pSv variable is of type IWbemServices *
@@ -49,9 +49,9 @@ Im folgenden Verfahren wird beschrieben, wie eine Instanz einer vorhandenen Klas
 
     
 
-2.  Erstellen Sie die neue-Instanz, indem Sie die [**IWbemClassObject:: SpawnInstance**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-spawninstance) -Methode aufrufen.
+2.  Erstellen Sie die neue Instanz, indem Sie die [**IWbemClassObject::SpawnInstance-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-spawninstance) aufrufen.
 
-    Im folgenden Codebeispiel wird gezeigt, wie Sie eine neue-Instanz erstellen und dann die-Klasse freigeben.
+    Das folgende Codebeispiel zeigt, wie Sie eine neue -Instanz erstellen und dann die -Klasse freigeben.
 
     ```C++
     pExampleClass->SpawnInstance(0, &pNewInstance);
@@ -60,13 +60,13 @@ Im folgenden Verfahren wird beschrieben, wie eine Instanz einer vorhandenen Klas
 
     
 
-3.  Legen Sie Werte für alle Eigenschaften fest, die die Werte, die für die Klasse definiert sind, durch Aufrufen der Methode [**IWbemClassObject::P UT**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-put) nicht erben.
+3.  Legen Sie Werte für eigenschaften fest, die die für die Klasse definierten Werte nicht erben, indem Sie die [**IWbemClassObject::P ut-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-put) aufrufen.
 
-    Jede Instanz einer Klasse erbt alle Eigenschaften, die für die Klasse definiert sind. Sie können jedoch andere Eigenschaftswerte angeben, wenn Sie auswählen.
+    Jede Instanz einer Klasse erbt alle Eigenschaften, die für die Klasse definiert sind. Sie können jedoch bei Bedarf unterschiedliche Eigenschaftswerte angeben.
 
-    Wenn die vorhandene Klasse über eine Schlüsseleigenschaft verfügt, sollten Sie die-Eigenschaft entweder auf **null** oder einen garantierten eindeutigen Wert festlegen. Wenn Sie den Schlüssel auf **null** festlegen und der Schlüssel eine Zeichenfolge ist, generiert [**PutInstanceAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstanceasync) oder [**PutInstance**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstance) intern eine GUID und weist Sie dem Schlüssel zu. Auf diese Weise können Sie bei Angabe von **null** für eine Schlüsseleigenschaft eine eindeutige-Instanz erstellen, die keine vorherige Instanz überschreibt.
+    Wenn die vorhandene Klasse über eine Schlüsseleigenschaft verfügt, sollten Sie die Eigenschaft entweder auf **NULL** oder einen garantierten eindeutigen Wert festlegen. Wenn Sie den Schlüssel auf **NULL** festlegen und der Schlüssel eine Zeichenfolge ist, generiert [**putInstanceAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstanceasync) oder [**PutInstance**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstance) intern eine GUID und weist dem Schlüssel eine GUID zu. Auf diese Weise können Sie durch Angeben von **NULL** für eine Schlüsseleigenschaft eine eindeutige Instanz erstellen, die keine vorherige Instanz überschreibt.
 
-    Im folgenden Codebeispiel wird veranschaulicht, wie der Wert der [**Index**](swbemrefreshableitem-index.md) Eigenschaft der Instanzklasse example festgelegt wird.
+    Das folgende Codebeispiel zeigt, [](swbemrefreshableitem-index.md) wie der Index-Eigenschaftswert der Beispielinstanzklasse festgelegt wird.
 
     ```C++
     VARIANT v;
@@ -83,17 +83,17 @@ Im folgenden Verfahren wird beschrieben, wie eine Instanz einer vorhandenen Klas
 
     
 
-4.  Legen Sie die Werte für alle relevanten Qualifizierer durch einen Befehl von [**IWbemClassObject:: getqualifierset**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-getqualifierset)fest.
+4.  Legen Sie die Werte für alle relevanten Qualifizierer durch einen Aufruf von [**IWbemClassObject::GetQualifierSet**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-getqualifierset)fest.
 
-    Die [**getqualifierset**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-getqualifierset) -Methode gibt einen Zeiger auf eine [**iwbemqualifierset**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemqualifierset) -Schnittstelle zurück, die für den Zugriff auf die Qualifizierer für eine Klasse oder eine Instanz verwendet. Sie können unterschiedliche Werte für einen Qualifizierer angeben, der für die Klasse definiert ist, wenn die klassenqualifizierungskonfiguration **EnableOverride** Klassen Qualifizierer können nicht geändert oder gelöscht werden  Weitere Informationen finden Sie unter [qualifizierervarianten](qualifier-flavors.md).
+    Die [**GetQualifierSet-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-getqualifierset) gibt einen Zeiger auf eine [**IWbemQualifierSet-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemqualifierset) zurück, die verwendet, um auf die Qualifizierer für eine Klasse oder Instanz zuzugreifen. Sie können unterschiedliche Werte für einen für die Klasse definierten Qualifizierer angeben, wenn der Typ des Klassenqualifizierers **EnableOverride** ist. Sie können einen Klassenqualifizierer nicht ändern oder löschen, wenn die Variante auf **DisableOverride** festgelegt ist. Weitere Informationen finden Sie unter [Qualifier Flavors](qualifier-flavors.md).
 
-    Optional können Sie auch zusätzliche Qualifizierer für Ihre Instanzklasse definieren. Sie können zusätzliche Qualifizierer für die Instanz oder die Instanzeigenschaft definieren, die nicht in der Klassen Deklaration enthalten sein müssen.
+    Optional können Sie auch zusätzliche Qualifizierer für Ihre Instanzklasse definieren. Sie können zusätzliche Qualifizierer für die Instanz- oder Instanzeigenschaft definieren, die nicht in der Klassendeklaration angezeigt werden müssen.
 
-5.  Speichern Sie die Instanz, indem Sie die [**IWbemServices::P utinstance**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstance) -Methode oder die [**IWbemServices::P utinstanceasync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstanceasync) -Methode aufrufen.
+5.  Speichern Sie die Instanz, indem Sie die [**IWbemServices::P utInstance-**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstance) oder [**IWbemServices::P utInstanceAsync-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstanceasync) aufrufen.
 
-    WMI speichert die Instanz im aktuellen WMI-Namespace. Daher ist der vollständige Pfad der-Instanz vom-Namespace abhängig, bei dem es sich in der Regel um einen Stamm \\ Standard handelt. Für dieses Codebeispiel lautet der vollständige Pfadname \\ \\ . \\ root \\ Default: example. Index = "IX100".
+    WMI speichert die Instanz im aktuellen WMI-Namespace. Daher ist der vollständige Pfad der Instanz vom Namespace abhängig, der in der Regel der \\ Stammstandard ist. In diesem Codebeispiel lautet der vollständige Pfadname \\ \\ . \\ root \\ default:Example.Index="IX100".
 
-    Im folgenden Codebeispiel wird gezeigt, wie eine-Instanz gespeichert wird.
+    Das folgende Codebeispiel zeigt, wie eine -Instanz gespeichert wird.
 
     ```C++
         hRes = pSvc->PutInstance(pNewInstance, 0, pCtx, &pResult);
@@ -102,17 +102,17 @@ Im folgenden Verfahren wird beschrieben, wie eine Instanz einer vorhandenen Klas
 
     
 
-Das Speichern der Instanz in WMI sperrt mehrere der Eigenschaften der Instanz.
+Durch das Speichern der Instanz in WMI werden mehrere Eigenschaften der Instanz gesperrt.
 
-Vor allem können Sie die folgenden Vorgänge nicht über die WMI-API ausführen, nachdem eine Instanz in der WMI-Infrastruktur vorhanden ist:
+Insbesondere können Sie keine der folgenden Vorgänge über die WMI-API ausführen, nachdem eine Instanz innerhalb der WMI-Infrastruktur vorhanden ist:
 
 -   Ändern Sie die übergeordnete Klasse der Klasse, zu der die Instanz gehört.
--   Eigenschaften hinzufügen oder entfernen.
--   Ändern Sie die Eigenschafts Typen.
--   [**Schlüssel**](standard-qualifiers.md) oder **indizierte** Qualifizierer hinzufügen oder entfernen.
--   Fügen Sie [**Singleton**](standard-wmi-qualifiers.md)-, **dynamische** oder [**abstrakte**](standard-qualifiers.md) Qualifizierer hinzu oder entfernen Sie Sie.
+-   Hinzufügen oder Entfernen von Eigenschaften.
+-   Ändern Von Eigenschaftstypen.
+-   Hinzufügen oder Entfernen von [**Schlüssel-**](standard-qualifiers.md) oder **indizierten** Qualifizierern.
+-   Hinzufügen oder Entfernen von [**Singleton-,**](standard-wmi-qualifiers.md) **Dynamic-** oder Abstract-Qualifizierern. [](standard-qualifiers.md)
 
-Im folgenden Codebeispiel werden die Codebeispiele kombiniert, die im vorherigen Verfahren erläutert wurden, um zu veranschaulichen, wie eine-Instanz mithilfe der WMI-API erstellt wird.
+Im folgenden Codebeispiel werden die im vorherigen Verfahren erläuterten Codebeispiele kombiniert, um zu zeigen, wie eine -Instanz mithilfe der WMI-API erstellt wird.
 
 
 ```C++

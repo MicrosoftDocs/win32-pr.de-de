@@ -1,32 +1,32 @@
 ---
-title: Datenschutzbestimmungen (Windows Media Geräte-Manager 11 SDK)
-description: Erfahren Sie mehr über eine Datenschutzerklärung, in der Entwickler, die das Windows Media Geräte-Manager 11 SDK verwenden, darüber informieren sollten, wie der Datenschutz für Benutzer beeinträchtigt werden könnte.
+title: Datenschutzerklärung (Windows Media Geräte-Manager 11 SDK)
+description: Erfahren Sie mehr über eine Datenschutzerklärung, in der Entwickler, die das Windows Media Geräte-Manager 11 SDK verwenden, mitteilen sollten, wie der Datenschutz des Benutzers beeinträchtigt werden könnte.
 ms.assetid: cfa5bc63-9774-418a-b1ae-207b277b63ba
 keywords:
 - Windows Media Geräte-Manager,Datenschutzbestimmungen
 - Geräte-Manager,Datenschutzbestimmungen
 - Programmierhandbuch,Datenschutzbestimmungen
-- Desktopanwendungen,Datenschutzbestimmungen
+- Desktopanwendungen, Datenschutzbestimmungen
 - Erstellen von Windows Media Geräte-Manager-Anwendungen,Datenschutzbestimmungen
 - Datenschutzbestimmungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ffd5ef7d49d63a2e1fe00d3975252908e1c4819
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 256583992ae6be5dbaebd0bcee1dd0b587825956b89b438bc49239d4ccd10b85
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112406553"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119619552"
 ---
-# <a name="privacy-statement-windows-media-device-manager-11-sdk"></a>Datenschutzbestimmungen (Windows Media Geräte-Manager 11 SDK)
+# <a name="privacy-statement-windows-media-device-manager-11-sdk"></a>Datenschutzerklärung (Windows Media Geräte-Manager 11 SDK)
 
-Entwickler, die Windows Media Geräte-Manager-Anwendungen erstellen, sollten ihren Benutzern klar vermitteln, wie ihre Privatsphäre beeinträchtigt werden könnte. Microsoft hat Datenschutzrichtlinien auf der [Windows Media Privacy-Webseite veröffentlicht,](https://www.microsoft.com/windows/windowsmedia/privacy/10ssdk.aspx)um Sie beim Erstellen einer Datenschutzbestimmungen für Endbenutzer zu unterstützen.
+Entwickler, die Windows Media Geräte-Manager-Anwendungen erstellen, sollten ihren Benutzern klar mitteilen, wie ihre Privatsphäre beeinträchtigt werden könnte. Um Sie beim Erstellen einer Endbenutzer-Datenschutzerklärung zu unterstützen, hat Microsoft Datenschutzrichtlinien auf der [Windows Media Privacy Web Page](https://www.microsoft.com/windows/windowsmedia/privacy/10ssdk.aspx)veröffentlicht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Erstellen einer Windows Media Geräte-Manager Anwendung**](creating-a-windows-media-device-manager-application.md)
+[**Erstellen einer Windows Media Geräte-Manager-Anwendung**](creating-a-windows-media-device-manager-application.md)
 </dt> </dl>
 
  

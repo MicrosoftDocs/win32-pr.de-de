@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der Eigenschaft instanceparameters. prereadiomax.
-title: Instanceparameters. prereadiomax (Eigenschaft)
+description: 'Weitere Informationen zu: InstanceParameters.PrereadIOMax-Eigenschaft'
+title: InstanceParameters.PrereadIOMax-Eigenschaft
 TOCTitle: 'PrereadIOMax property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.InstanceParameters.PrereadIOMax
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.instanceparameters.prereadiomax(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 68a6b569a59c2a4a80137f9dafed62ca62a85a13
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cc3af75d137b07df729d987ac4942612ac88aded08d546378b89146d5ae121ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362781"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119617930"
 ---
-# <a name="instanceparametersprereadiomax-property"></a>Instanceparameters. prereadiomax (Eigenschaft)
+# <a name="instanceparametersprereadiomax-property"></a>InstanceParameters.PrereadIOMax-Eigenschaft
 
-Dient zum Abrufen oder Festlegen der maximalen Anzahl von e/a-Vorgängen, die für einen bestimmten Zweck gesendet werden.
+Ruft die maximale Anzahl von E/A-Vorgängen ab, die für einen bestimmten Zweck gesendet werden, oder legt diese fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int PrereadIOMax { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Instanceparameters-Klasse](./instanceparameters-class.md)
+[InstanceParameters-Klasse](./instanceparameters-class.md)
 
-[Instanceparameters-Elemente](./instanceparameters-members.md)
+[InstanceParameters-Member](./instanceparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

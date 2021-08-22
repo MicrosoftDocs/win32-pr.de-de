@@ -1,11 +1,11 @@
 ---
-title: Ienumbackgroundcopyfiles Skip-Methode (deliveryoptimization. h)
-description: Überspringt die nächste angegebene Anzahl von Elementen in der enumerationssequenz. Wenn in der Sequenz weniger Elemente als die angeforderte Anzahl der zu über springenden Elemente vorhanden sind, wird das letzte Element in der Sequenz übersprungen.
+title: IEnumBackgroundCopyFiles Skip-Methode (Deliveryoptimization.h)
+description: Überspringt die nächste angegebene Anzahl von Elementen in der Enumerationssequenz. Wenn in der Sequenz weniger Elemente vorhanden sind als die angeforderte Anzahl von zu überspringenden Elementen, überspringt sie das letzte Element in der Sequenz.
 ms.assetid: B01D4292-6BA5-4171-928B-AB2C555E2C2A
 keywords:
 - Skip-Methode
-- Skip-Methode, ienumbackgroundcopyfiles-Schnittstelle
-- Ienumbackgroundcopyfiles-Schnittstelle, Skip-Methode
+- Skip-Methode, IEnumBackgroundCopyFiles-Schnittstelle
+- IEnumBackgroundCopyFiles-Schnittstelle, Skip-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5d88a7d971ab93b90c844fc8d9d92d7f154c0ebf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 174b8ac3e0286a4d2a19e211773969d408c7f7762e8b2dd4fe743f0b4b2aabeb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119567360"
 ---
-# <a name="ienumbackgroundcopyfilesskip-method"></a>Ienumbackgroundcopyfiles:: Skip-Methode
+# <a name="ienumbackgroundcopyfilesskip-method"></a>IEnumBackgroundCopyFiles::Skip-Methode
 
-Überspringt die nächste angegebene Anzahl von Elementen in der enumerationssequenz. Wenn in der Sequenz weniger Elemente als die angeforderte Anzahl der zu über springenden Elemente vorhanden sind, wird das letzte Element in der Sequenz übersprungen.
+Überspringt die nächste angegebene Anzahl von Elementen in der Enumerationssequenz. Wenn in der Sequenz weniger Elemente vorhanden sind als die angeforderte Anzahl von zu überspringenden Elementen, überspringt sie das letzte Element in der Sequenz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ HRESULT Skip(
 
 <dl> <dt>
 
-*celt* \[ in\]
+*celt* \[ In\]
 </dt> <dd>
 
 Anzahl der zu überspringenden Elemente.
@@ -52,14 +52,14 @@ Anzahl der zu überspringenden Elemente.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurück.
+Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 
 
 | Rückgabecode                                                                              | Beschreibung                                                       |
 |------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
-| <dl> <dt>S_OK * * * *</dt> </dl> | Die Anzahl der angeforderten Elemente wurde erfolgreich übersprungen.<br/> |
-| <dl> <dt>**S_FALSE**</dt> </dl>  | Wird kleiner als die Anzahl der angeforderten Elemente übersprungen.<br/>    |
+| <dl> <dt>S_OK</dt> </dl> | Die Anzahl der angeforderten Elemente wurde erfolgreich übersprungen.<br/> |
+| <dl> <dt>**S_FALSE**</dt> </dl>  | Kleiner als die Anzahl der angeforderten Elemente übersprungen.<br/>    |
 
 
 
@@ -71,11 +71,11 @@ Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurü
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
 | IID<br/>                      | IID_IEnumBackgroundCopyFiles ist als CA51E165-C365-424C-8D41-24AAA4FF3C40 definiert.<br/>         |
 
@@ -85,7 +85,7 @@ Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurü
 
 <dl> <dt>
 
-[**Ienumbackgroundcopyfiles**](ienumbackgroundcopyfiles-.md)
+[**IEnumBackgroundCopyFiles**](ienumbackgroundcopyfiles-.md)
 </dt> </dl>
 
  

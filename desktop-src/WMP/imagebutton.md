@@ -1,9 +1,9 @@
 ---
-title: Image Button
-description: Dies ist eine vordefinierte Schaltfläche mit dem folgenden Standardwert.
+title: Imagebutton
+description: Dies ist eine vordefinierte SCHALTFLÄCHE mit dem folgenden Standardwert.
 ms.assetid: db5c1a95-d031-46d5-a210-883599236b8f
 keywords:
-- ImageButton-Fenster Media Player
+- IMAGEBUTTON Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,26 +13,26 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9c77445268ca0bcdd24efcde1bb3b08ff80e1317
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 565e375db9b6ac2c64e554a3b575cf961e7acdb9e5c378ec1f29c12e5ac4b335
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372183"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119509240"
 ---
-# <a name="imagebutton"></a>Image Button
+# <a name="imagebutton"></a>Imagebutton
 
-Dies ist eine vordefinierte **Schaltfläche** mit dem folgenden Standardwert.
+Dies ist eine vordefinierte **SCHALTFLÄCHE** mit dem folgenden Standardwert.
 
 ``` syntax
 cursor="Hand"
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Schaltflächen können Bilder enthalten. Dieses Element ist für die Code Verdeutlichung nützlich, um eine Schaltfläche anzugeben, die primär als Bild Container verwendet wird.
+Alle Schaltflächen können Bilder enthalten. Dieses Element ist für die Codeerklärung nützlich, um eine Schaltfläche anzugeben, die hauptsächlich als Imagecontainer verwendet wird.
 
-Alle Eigenschaften dieser **Schaltfläche** können überschrieben werden, indem Sie explizit angegeben werden.
+Alle Eigenschaften dieser **SCHALTFLÄCHE** können überschrieben werden, indem sie explizit angegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -40,7 +40,7 @@ Alle Eigenschaften dieser **Schaltfläche** können überschrieben werden, indem
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -48,7 +48,7 @@ Alle Eigenschaften dieser **Schaltfläche** können überschrieben werden, indem
 
 <dl> <dt>
 
-[**Button-Element**](button-element.md)
+[**BUTTON-Element**](button-element.md)
 </dt> </dl>
 
  

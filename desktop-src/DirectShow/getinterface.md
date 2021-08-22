@@ -1,7 +1,7 @@
 ---
-description: Die GetInterface-Funktion Ruft einen Schnittstellen Zeiger ab.
+description: Die GetInterface-Funktion ruft einen Schnittstellenzeiger ab.
 ms.assetid: 75fe8849-c779-4d47-a5ff-5a23308c8a21
-title: GetInterface-Funktion (ComBase. h)
+title: GetInterface-Funktion (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 317f08af2a4ff0e9410c61da8b19d14735a14f6c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 289c6e56d4b5387fe9224e476c69865107102141b687825cdfd9a717f482632c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360962"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119537030"
 ---
 # <a name="getinterface-function"></a>GetInterface-Funktion
 
-Die- `GetInterface` Funktion Ruft einen Schnittstellen Zeiger ab.
+Die `GetInterface` Funktion ruft einen Schnittstellenzeiger ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,14 +43,14 @@ HRESULT GetInterface(
 
 <dl> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf die **IUnknown** -Schnittstelle.
+Zeiger auf die **IUnknown-Schnittstelle.**
 
 </dd> <dt>
 
-*PPV* 
+*Ppv* 
 </dt> <dd>
 
 Adresse eines Zeigers auf die abgerufene Schnittstelle.
@@ -59,11 +59,11 @@ Adresse eines Zeigers auf die abgerufene Schnittstelle.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion führt ein Thread sicheres Inkrement des Verweis zählungs Elements aus. Um die Schnittstelle abzurufen und einen Verweis hinzuzufügen, rufen Sie diese Funktion von der über schreibenden Implementierung der **inondelegatingunknown:: nondelegatingqueryinterface** -Methode auf.
+Diese Memberfunktion führt ein threadsicheres Inkrement des Verweiszählers aus. Um die Schnittstelle abzurufen und einen Verweis hinzuzufügen, rufen Sie diese Funktion aus Ihrer überschreibenden Implementierung der **INonDelegatingUnknown::NonDelegatingQueryInterface-Methode auf.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Diese Member-Funktion führt ein Thread sicheres Inkrement des Verweis zählungs
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ Diese Member-Funktion führt ein Thread sicheres Inkrement des Verweis zählungs
 [**COM-Hilfsfunktionen**](com-helper-functions.md)
 </dt> <dt>
 
-[**Inondelegatingunknown**](inondelegatingunknown.md)
+[**INonDelegatingUnknown**](inondelegatingunknown.md)
 </dt> </dl>
 
  

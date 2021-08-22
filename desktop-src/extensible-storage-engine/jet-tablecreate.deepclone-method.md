@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_TABLECREATE. Deepclone-Methode'
-title: JET_TABLECREATE. Deepclone-Methode
+description: 'Weitere Informationen finden Sie unter: JET_TABLECREATE. DeepClone-Methode'
+title: JET_TABLECREATE. DeepClone-Methode
 TOCTitle: 'DeepClone method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_TABLECREATE.DeepClone
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_tablecreate.deepclone(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d1844a0295b9b7f680ebcedb79da9313769c8406
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5c829cbb2e1c4e6839d589a222dc9bf9d4b8aa84d4dc3eab7bb26fc2fd7d3095
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364201"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119616050"
 ---
-# <a name="jet_tablecreatedeepclone-method"></a>JET_TABLECREATE. Deepclone-Methode
+# <a name="jet_tablecreatedeepclone-method"></a>JET_TABLECREATE. DeepClone-Methode
 
-Gibt eine tiefe Kopie des-Objekts zurück.
+Gibt eine tiefe Kopie des -Objekts zurück.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,19 +56,19 @@ public JET_TABLECREATE DeepClone()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLECREATE](./jet-tablecreate-class.md)  
-Eine tiefe Kopie des-Objekts.  
+Typ: [Microsoft.Isam.Esent.Interop.JET_TABLECREATE](./jet-tablecreate-class.md)  
+Eine tiefe Kopie des -Objekts.  
 
 #### <a name="implements"></a>Implementiert
 
-[Ideepcloneable \<T\> . Deepclone ()](./ideepcloneable-t-.deepclone-method.md)  
+[IDeepCloneable \<T\> . DeepClone()](./ideepcloneable-t-.deepclone-method.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_TABLECREATE-Klasse](./jet-tablecreate-class.md)
 
-[Mitglieder JET_TABLECREATE](./jet-tablecreate-members.md)
+[JET_TABLECREATE Mitglieder](./jet-tablecreate-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

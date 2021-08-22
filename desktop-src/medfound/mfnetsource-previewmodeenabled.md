@@ -1,39 +1,39 @@
 ---
-description: Aktiviert oder deaktiviert den Vorschaumodus, der es der Anwendung ermöglicht, die anfängliche pufferlogik zu überschreiben.
+description: Aktiviert oder deaktiviert den Vorschaumodus, der es der Anwendung ermöglicht, die anfängliche Pufferlogik zu überschreiben.
 ms.assetid: 8aa8c6ac-8746-4bf6-9f57-b1426495a275
-title: MFNETSOURCE_PREVIEWMODEENABLED-Eigenschaft (mspdl. h)
+title: MFNETSOURCE_PREVIEWMODEENABLED -Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1170135b0feb90a79bf5e26d36a02e262fdc1977
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e03940828c6fa32b9e0367a03f960d4d64d88edf691100817ed31883013ce1b5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362604"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119663860"
 ---
-# <a name="mfnetsource_previewmodeenabled-property"></a>Eigenschaft "previewmodeaktivierte" für MF NetSource \_
+# <a name="mfnetsource_previewmodeenabled-property"></a>MFNETSOURCE \_ PREVIEWMODEENABLED (Eigenschaft)
 
-Aktiviert oder deaktiviert den Vorschaumodus, der es der Anwendung ermöglicht, die anfängliche pufferlogik zu überschreiben.
+Aktiviert oder deaktiviert den Vorschaumodus, der es der Anwendung ermöglicht, die anfängliche Pufferlogik zu überschreiben.
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
-**BOOL**
+**Bool**
 
-VT \_ bool
+VT \_ BOOL
 
-**LVAL**
+**lVal**
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Konstante " **MF NetSource \_ previewmodeaktivi"** definiert die GUID für den Eigenschafts Schlüssel. Der Eigenschaften Bezeichner (PID) ist 0 (null). Diese Eigenschaft wird für die Netzwerkquelle festgelegt, indem ein **IPropertyStore** -Zeiger an den quellresolver übergeben wird. Weitere Informationen finden Sie unter [Konfigurieren einer Medienquelle](configuring-a-media-source.md).
+Die Konstante **MFNETSOURCE \_ PREVIEWMODEENABLED** definiert die GUID für den Eigenschaftsschlüssel. Der Eigenschaftenbezeichner (PID) ist 0 (null). Diese Eigenschaft wird für die Netzwerkquelle festgelegt, indem ein **IPropertyStore-Zeiger** an den Quellre resolver übergeben wird. Weitere Informationen finden Sie unter [Konfigurieren einer Medienquelle.](configuring-a-media-source.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,9 +41,9 @@ Die Konstante " **MF NetSource \_ previewmodeaktivi"** definiert die GUID für d
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ Die Konstante " **MF NetSource \_ previewmodeaktivi"** definiert die GUID für d
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
 [Netzwerk in Media Foundation](networking-in-media-foundation.md)

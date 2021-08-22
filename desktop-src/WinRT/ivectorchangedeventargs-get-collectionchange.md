@@ -1,7 +1,7 @@
 ---
-description: Ruft den Typ der Änderung ab, die im Vektor aufgetreten ist.
+description: Ruft den Änderungstyp ab, der im Vektor aufgetreten ist.
 ms.assetid: 213f4794-b972-44e3-a400-8a24b1583ddd
-title: 'Ivectorchangedeventargs:: get_CollectionChange-Methode (ivectorchangedeventargs. h)'
+title: IVectorChangedEventArgs::get_CollectionChange-Methode (IVectorChangedEventArgs.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IVectorChangedEventArgs.h
-ms.openlocfilehash: a843574bcaf93ec524173ba76800cc15012c89fd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2476f9563b4e2a0cabf9babbcfc265ee4f3549416c2fdfda0dbb0f204b7ca9bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214604"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119504810"
 ---
-# <a name="ivectorchangedeventargsget_collectionchange-method"></a>Ivectorchangedeventargs:: get \_ CollectionChange-Methode
+# <a name="ivectorchangedeventargsget_collectionchange-method"></a>IVectorChangedEventArgs::get \_ CollectionChange-Methode
 
-Ruft den Typ der Änderung ab, die im Vektor aufgetreten ist.
+Ruft den Änderungstyp ab, der im Vektor aufgetreten ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,12 +39,12 @@ HRESULT get_CollectionChange(
 
 <dl> <dt>
 
-*Wert* \[ Out, retval\]
+*wert* \[ out, retval\]
 </dt> <dd>
 
-Typ: **CollectionChange \** _
+Typ: **CollectionChange \***
 
-Ein Wert aus der [_ *CollectionChange* *](/uwp/api/Windows.Foundation.Collections.CollectionChange?view=winrt-19041) -Enumeration, der die Änderung beschreibt.
+Ein Wert aus der [**CollectionChange-Enumeration,**](/uwp/api/Windows.Foundation.Collections.CollectionChange?view=winrt-19041) der die Änderung beschreibt.
 
 </dd> </dl>
 
@@ -52,7 +52,7 @@ Ein Wert aus der [_ *CollectionChange* *](/uwp/api/Windows.Foundation.Collection
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,7 +62,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                       |
-| Header<br/>                   | <dl> <dt>IVector changedebug-args. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IVectorChangedEventArgs.h</dt> </dl> |
 
 
 
@@ -70,7 +70,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**IVector changedebug-args**](ivectorchangedeventargs.md)
+[**IVectorChangedEventArgs**](ivectorchangedeventargs.md)
 </dt> </dl>
 
  

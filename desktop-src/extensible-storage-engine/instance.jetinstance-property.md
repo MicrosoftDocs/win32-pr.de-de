@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu den folgenden Informationen: instance. jetinstance (Eigenschaft)'
-title: Instance. jetinstance (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: Instance.JetInstance-Eigenschaft'
+title: Instance.JetInstance(Eigenschaft)
 TOCTitle: 'JetInstance property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Instance.JetInstance
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.instance.jetinstance(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cc1e330be27f25fe677410d5468e56eea7b26933
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e886e2367fd1ab7204d1fe3d31aba8644355cd80ea8a8281f43a968d1f673fc1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527503"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119618300"
 ---
-# <a name="instancejetinstance-property"></a>Instance. jetinstance (Eigenschaft)
+# <a name="instancejetinstance-property"></a>Instance.JetInstance(Eigenschaft)
 
-Ruft den JET_INSTANCE ab, den diese Instanz enthält.
+Ruft die JET_INSTANCE ab, die diese Instanz enthält.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public JET_INSTANCE JetInstance { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_INSTANCE](./jet-instance-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Instanzklasse](./instance-class.md)
 
-[Instanzmember](./instance-members.md)
+[Instanzmitglieder](./instance-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,57 +1,57 @@
 ---
-description: Der Pipeserver gibt die Pipe-Zugriffs-, Überlappungs-und Schreibvorgänge im dwopenmode-Parameter der Funktion "up-amedpipe" an. Die Pipeclients können diese geöffneten Modi für Ihre Pipehandles mithilfe der Funktion "-Funktion" (Funktion) angeben.
+description: Der Pipeserver gibt den Pipezugriffs-, Überlappungs- und Schreibmodus im dwOpenMode-Parameter der CreateNamedPipe-Funktion an. Die Pipeclients können diese offenen Modi für ihre Pipehandles mithilfe der CreateFile-Funktion angeben.
 ms.assetid: 88824566-93c7-4941-a4fc-3a7ae9a332a4
-title: Named Pipe-Öffnungs Modi
+title: Named Pipe Open Modes
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 97f51d41ea98a47a269634b06ccdad869bd649fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9d7fe3f843a157e69d8b938630e5eb9efa95035960cb6578325be6bddd5d93c5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960674"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119451260"
 ---
-# <a name="named-pipe-open-modes"></a>Named Pipe-Öffnungs Modi
+# <a name="named-pipe-open-modes"></a>Named Pipe Open Modes
 
-Der Pipeserver gibt die Pipe-Zugriffs-, Überlappungs-und Schreibvorgänge im *dwopenmode* -Parameter der Funktion "up- [**amedpipe**](/windows/desktop/api/Winbase/nf-winbase-createnamedpipea) " an. Die Pipeclients können diese geöffneten Modi für Ihre Pipehandles [**mithilfe der Funktion**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) "-Funktion" (Funktion) angeben.
+Der Pipeserver gibt den Pipezugriffs-, Überlappungs- und Schreibmodus im *dwOpenMode-Parameter* der [**CreateNamedPipe-Funktion**](/windows/desktop/api/Winbase/nf-winbase-createnamedpipea) an. Die Pipeclients können diese offenen Modi für ihre Pipehandles mithilfe der [**CreateFile-Funktion**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) angeben.
 
 ## <a name="access-mode"></a>Zugriffsmodus
 
-Das Festlegen des pipezugriffsmodus entspricht dem Angeben des Lese-oder Schreibzugriffs, der den Handles des Pipeservers zugeordnet ist. In der folgenden Tabelle wird das äquivalente allgemeine Zugriffsrecht für jeden Zugriffsmodus angezeigt, den Sie mit " [**kreatenamedpipe**](/windows/desktop/api/Winbase/nf-winbase-createnamedpipea)" angeben können.
+Das Festlegen des Pipezugriffsmodus entspricht der Angabe des Lese- oder Schreibzugriffs, der den Handles des Pipeservers zugeordnet ist. Die folgende Tabelle zeigt das entsprechende generische Zugriffsrecht für jeden Zugriffsmodus, den Sie mit [**CreateNamedPipe**](/windows/desktop/api/Winbase/nf-winbase-createnamedpipea)angeben können.
 
 
 
-| Zugriffsmodus            | Äquivalente generische Zugriffsrechte |
+| Zugriffsmodus            | Entsprechendes generisches Zugriffsrecht |
 |------------------------|---------------------------------|
-| senkrechter Pipe- \_ Zugriff \_  | generischer \_ Lesevorgang                   |
-| ausgehende Pipe- \_ Zugriff \_ | generischer \_ Schreibvorgang                  |
-| \_pipezugriffsduplex \_   | generischer \_ Lese \| generischer \_ Schreibvorgang |
+| EINGEHENDER \_ PIPEZUGRIFF \_  | GENERISCHER \_ LESE-                   |
+| AUSGEHENDER \_ PIPEZUGRIFF \_ | GENERISCHER \_ SCHREIBVORGANG                  |
+| PIPEZUGRIFF \_ \_ DUPLEX   | GENERISCHER \_ \| GENERISCHER \_ LESESCHREIBVORGANG |
 
 
 
  
 
-Wenn der Pipeserver eine Pipe mit einem eingehenden Pipe \_ -Zugriff erstellt \_ , ist die Pipe für den Pipeserver schreibgeschützt und für den Pipeclient schreibgeschützt. Wenn der Pipeserver eine Pipe mit \_ ausgehendem Pipe-Zugriff erstellt \_ , ist die Pipe schreibgeschützt für den Pipeserver und schreibgeschützt für den Pipeclient. Eine Pipe, die mit Pipe \_ -Zugriffs Duplex erstellt wurde, \_ wird sowohl für den Pipeserver als auch für den Pipeclient gelesen/geschrieben.
+Wenn der Pipeserver eine Pipe mit PIPE \_ ACCESS \_ INBOUND erstellt, ist die Pipe für den Pipeserver schreibgeschützt und für den Pipeclient schreibgeschützt. Wenn der Pipeserver eine Pipe mit PIPE \_ ACCESS \_ OUTBOUND erstellt, ist die Pipe schreibgeschützt für den Pipeserver und schreibgeschützt für den Pipeclient. Eine Pipe, die mit PIPE ACCESS DUPLEX erstellt \_ \_ wurde, ist sowohl für den Pipeserver als auch für den Pipeclient lese-/schreibgeschützt.
 
-Mithilfe von Pipe- [**Clients, die**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) mithilfe von "" eine Verbindung mit einem Named Pipe herstellen, muss im Parameter " *dwDesiredAccess* " ein Zugriffsrecht angegeben werden, der mit dem vom Pipeserver angegebenen Zugriffsmodus kompatibel ist. Beispielsweise muss ein Client generischen \_ Lesezugriff angeben, um ein Handle für eine Pipe zu öffnen, die der Pipeserver mit \_ ausgehendem Pipe-Zugriff erstellt hat \_ . Die Zugriffs Modi müssen für alle Instanzen einer Pipe identisch sein.
+Pipeclients, die [**CreateFile**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) zum Herstellen einer Verbindung mit einer Named Pipe verwenden, müssen ein Zugriffsrecht im *dwDesiredAccess-Parameter* angeben, der mit dem vom Pipeserver angegebenen Zugriffsmodus kompatibel ist. Beispielsweise muss ein Client GENERIC READ-Zugriff angeben, \_ um ein Handle für eine Pipe zu öffnen, die der Pipeserver mit PIPE ACCESS OUTBOUND erstellt \_ \_ hat. Die Zugriffsmodi müssen für alle Instanzen einer Pipe identisch sein.
 
-Zum Lesen von pipeattributen, wie z. b. dem Lesemodus oder dem Blockierungs Modus, muss das Pipehandle über die Datei \_ Lese Attribute-Zugriffsberechtigung verfügen \_ . um pipeattribute schreiben zu können, muss das Pipehandle über das \_ \_ Zugriffsrecht Datei Schreib Attribute verfügen. Diese Zugriffsrechte können mit dem generischen Zugriffsrecht kombiniert werden, das für die Pipe geeignet ist: generisches \_ Lesen mit Datei \_ Schreib \_ Attributen für eine schreibgeschützte Pipe oder generisches \_ Schreiben mit Datei \_ Lese \_ Attributen für eine schreibgeschützte Pipe. Das Einschränken von Zugriffsrechten auf diese Weise bietet eine bessere Sicherheit für die Pipe.
+Um Pipeattribute wie den Lese- oder Blockierungsmodus zu lesen, muss das Pipehandle über das \_ FILE READ \_ ATTRIBUTES-Zugriffsrecht verfügen. Zum Schreiben von Pipeattributen muss das Pipehandle über das \_ FILE WRITE \_ ATTRIBUTES-Zugriffsrecht verfügen. Diese Zugriffsrechte können mit dem generischen Zugriffsrecht kombiniert werden, das für die Pipe geeignet ist: GENERISCHES \_ LESEN mit FILE WRITE ATTRIBUTES für eine \_ \_ schreibgeschützte Pipe oder GENERISCHES \_ SCHREIBEN mit FILE READ ATTRIBUTES für eine \_ \_ schreibgeschützte Pipe. Das Einschränken von Zugriffsrechten auf diese Weise bietet eine höhere Sicherheit für die Pipe.
 
-## <a name="overlapped-mode"></a>Überlappende Modus
+## <a name="overlapped-mode"></a>Überlappender Modus
 
-Im überlappenden Modus können Funktionen, die lange Lese-, Schreib-und Verbindungs Vorgänge ausführen, sofort zurückgeben. Dadurch kann der Thread andere Vorgänge ausführen, während ein zeitaufwändiger Vorgang im Hintergrund ausgeführt wird. Um den überlappenden Modus anzugeben, verwenden Sie das überlappende \_ Flag Dateiflag \_ . Weitere Informationen finden Sie unter [synchrone und überlappende Eingabe und Ausgabe](synchronous-and-overlapped-input-and-output.md).
+Im überlappenden Modus können Funktionen, die lange Lese-, Schreib- und Verbindungsvorgänge ausführen, sofort zurückgeben. Dadurch kann der Thread andere Vorgänge ausführen, während ein zeitaufwändiger Vorgang im Hintergrund ausgeführt wird. Verwenden Sie das FLAG FILE \_ FLAG OVERLAPPED, um den Überlappungsmodus \_ anzugeben. Weitere Informationen finden Sie unter [Synchrone und überlappende Eingabe und Ausgabe.](synchronous-and-overlapped-input-and-output.md)
 
-Die [**Funktion "**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Funktion" ermöglicht dem Pipe-Client das Festlegen des überlappenden Modus (Dateiflag \_ überlappen \_ ) für die zugehörigen Pipehandles mithilfe des Parameters " *dwflagsandattributs* ".
+Mit der [**CreateFile-Funktion**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) kann der Pipeclient den überlappenden Modus (FILE \_ FLAG \_ OVERLAPPED) für seine Pipehandles mithilfe des *parameters dwFlagsAndAttributes* festlegen.
 
-## <a name="write-through-mode"></a>Write-Through Modus
+## <a name="write-through-mode"></a>Write-Through-Modus
 
-Geben Sie den Lese-/Schreibmodus mit einem \_ Dateiflag an \_ \_ . Dieser Modus wirkt sich nur auf Schreibvorgänge zwischen Pipeclients und pipeservern auf verschiedenen Computern aus. Im Write-Through-Modus geben die Funktionen, die in eine Named Pipe schreiben, erst dann zurück, wenn die Daten über das Netzwerk und in den Puffer der Pipe auf dem Remote Computer übertragen werden. Der Lese-/Schreibmodus ist nützlich für Anwendungen, die für jeden Schreibvorgang eine Synchronisierung erfordern.
+Geben Sie den Schreibmodus mit FILE \_ FLAG \_ WRITE THROUGH \_ an. Dieser Modus wirkt sich nur auf Schreibvorgänge in Bytetyppipes zwischen Pipeclients und Pipeservern auf verschiedenen Computern aus. Im Schreibmodus geben die Funktionen, die in eine Named Pipe schreiben, erst dann zurück, wenn die Daten über das Netzwerk und in den Puffer der Pipe auf dem Remotecomputer übertragen werden. Der Schreibmodus ist nützlich für Anwendungen, die für jeden Schreibvorgang eine Synchronisierung erfordern.
 
-Wenn der Lese-/Schreibmodus nicht aktiviert ist, erweitert das System die Effizienz von Netzwerk Vorgängen, indem Daten gepuffert werden, bis eine Mindestanzahl von Bytes kumuliert wurde oder bis ein maximaler Zeitraum abgelaufen ist. Durch die Pufferung kann das System mehrere Schreibvorgänge in einer einzelnen Netzwerkübertragung kombinieren. Dies bedeutet, dass ein Schreibvorgang erfolgreich abgeschlossen werden kann, nachdem das System die Daten in den ausgehenden Puffer eingefügt hat, jedoch bevor das System Sie über das Netzwerk überträgt.
+Wenn der Schreibmodus nicht aktiviert ist, erhöht das System die Effizienz von Netzwerkvorgängen, indem Daten gepuffert werden, bis sich eine Mindestanzahl von Bytes angesammelt hat oder bis ein maximaler Zeitraum abgelaufen ist. Die Pufferung ermöglicht es dem System, mehrere Schreibvorgänge in einer einzigen Netzwerkübertragung zu kombinieren. Dies bedeutet, dass ein Schreibvorgang erfolgreich abgeschlossen werden kann, nachdem das System die Daten in den ausgehenden Puffer gestellt hat, aber bevor das System sie über das Netzwerk überträgt.
 
-Die [**Funktion "**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Funktion" ermöglicht dem Pipe-Client das Festlegen des Lese-/Schreibmodus (Dateiflag- \_ \_ Schreibvorgang \_ ) für die Pipe-Handles mithilfe des Parameters " *dwflagsandattributs* ". Der Lese-/Schreibmodus eines Pipehandles kann nicht geändert werden, nachdem das Pipehandle erstellt wurde. Der Lese-/Schreibmodus kann für Server-und Client Handles in derselben Pipe-Instanz unterschiedlich sein.
+Mit der [**CreateFile-Funktion**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) kann der Pipeclient den Schreibmodus (FILE \_ FLAG WRITE \_ \_ THROUGH) für seine Pipehandles mithilfe des *parameters dwFlagsAndAttributes* festlegen. Der Schreibmodus eines Pipehandle kann nicht mehr geändert werden, nachdem das Pipehandle erstellt wurde. Der Schreibmodus kann sich für Server- und Clienthandles von derselben Pipeinstanz unterscheiden.
 
-Ein Pipe-Client kann die [**setnamedpipelenker State**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-setnamedpipehandlestate) -Funktion verwenden, um die Anzahl von Bytes und den Timeout Zeitraum vor der Übertragung für eine Pipe zu steuern, in der der Schreibmodus deaktiviert ist. Bei einer schreibgeschützten Pipe muss das Pipehandle mit den allgemeinen \_ Zugriffsrechten für Lese-und Datei \_ Schreib \_ Attribute geöffnet werden.
+Ein Pipeclient kann die [**SetNamedPipeHandleState-Funktion**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-setnamedpipehandlestate) verwenden, um die Anzahl der Bytes und den Time out-Zeitraum vor der Übertragung für eine Pipe zu steuern, für die der Schreibmodus deaktiviert ist. Für eine schreibgeschützte Pipe muss das Pipehandle mit den Zugriffsrechten GENERIC READ und FILE WRITE ATTRIBUTES geöffnet \_ \_ \_ werden.
 
  
 

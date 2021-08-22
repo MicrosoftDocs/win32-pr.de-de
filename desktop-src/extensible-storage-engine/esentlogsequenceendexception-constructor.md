@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentlogsequenceendexception-Konstruktor'
-title: Esentlogsequenceendexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentLogSequenceEndException-Konstruktor'
+title: EsentLogSequenceEndException-Konstruktor
 TOCTitle: 'EsentLogSequenceEndException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentLogSequenceEndException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentlogsequenceendexception.esentlogsequenceendexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2fddeea7b996a8599a8dfb7abf52fda387b43dfd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eb1a7c3eac4e357f72050b18f23e446e018e7f6021722acf423b27b8ee8b150a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042517"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119620150"
 ---
-# <a name="esentlogsequenceendexception-constructor"></a>Esentlogsequenceendexception-Konstruktor
+# <a name="esentlogsequenceendexception-constructor"></a>EsentLogSequenceEndException-Konstruktor
 
-Initialisiert eine neue Instanz der esentlogsequenceendexception-Klasse.
+Initialisiert eine neue Instanz der EsentLogSequenceEndException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentLogSequenceEndException()
 public EsentLogSequenceEndException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentlogsequenceendexception-Klasse](./esentlogsequenceendexception-class.md)
+[EsentLogSequenceEndException-Klasse](./esentlogsequenceendexception-class.md)
 
-[Esentlogsequenceendexception-Elemente](./esentlogsequenceendexception-members.md)
+[EsentLogSequenceEndException-Member](./esentlogsequenceendexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

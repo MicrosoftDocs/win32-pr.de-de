@@ -1,7 +1,7 @@
 ---
-description: Fügt dem iinkanalyzer Strich Daten für einen einzelnen Strich hinzu und weist dem Strich den Kultur Bezeichner des aktiven Eingabe Threads zu.
+description: Fügt dem IInkAnalyzer Strichdaten für einen einzelnen Strich hinzu und weist dem Strich den Kulturbezeichner des aktiven Eingabethreads zu.
 ms.assetid: 0e603e5a-d722-4ab8-bc59-605e131c863b
-title: 'Iinkanalyzer:: AddStroke-Methode (iacom. h)'
+title: IInkAnalyzer::AddStroke-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: fc946e7975772eb7be6fff54d01bb1a6dae8ebe7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f7ba08e779e115c243918d94e5b41e8a7d77f54fab92b045274135ead2ae0264
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119590590"
 ---
-# <a name="iinkanalyzeraddstroke-method"></a>Iinkanalyzer:: AddStroke-Methode
+# <a name="iinkanalyzeraddstroke-method"></a>IInkAnalyzer::AddStroke-Methode
 
-Fügt dem [**iinkanalyzer**](iinkanalyzer.md) Strich Daten für einen einzelnen Strich hinzu und weist dem Strich den Kultur Bezeichner des aktiven Eingabe Threads zu.
+Fügt dem [**IInkAnalyzer**](iinkanalyzer.md) Strichdaten für einen einzelnen Strich hinzu und weist dem Strich den Kulturbezeichner des aktiven Eingabethreads zu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,70 +44,70 @@ HRESULT AddStroke(
 
 <dl> <dt>
 
-*lstrokeid* \[ in\]
+*lStrokeId* \[ In\]
 </dt> <dd>
 
-Der Bezeichner für den hinzu zufügenden Strich.
+Der Bezeichner für den hinzuzufügenden Strich.
 
 </dd> <dt>
 
-*ulstrokepacketdatacount* \[ in\]
+*ulStrokePacketDataCount* \[ In\]
 </dt> <dd>
 
 Die Anzahl der Pakete im Strich.
 
 </dd> <dt>
 
-*plstrokepacketdata* \[ in\]
+*plStrokePacketData* \[ In\]
 </dt> <dd>
 
 Ein Array, das die Paketdaten für den Strich enthält.
 
 </dd> <dt>
 
-*ulstrokepacketdescriptioncount* \[ in\]
+*ulStrokePacketDescriptionCount* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Paket Eigenschaften in jedem Paket.
+Die Anzahl der Paketeigenschaften in jedem Paket.
 
 </dd> <dt>
 
-*pstrokepacketdescriptionguids* \[ in\]
+*pStrokePacketDescriptionGuids* \[ In\]
 </dt> <dd>
 
-Ein Array, das die Paket Eigenschaften Bezeichner enthält.
+Ein Array, das die Paketeigenschaftsbezeichner enthält.
 
 </dd> <dt>
 
-*ppcontextnodestrokeaddto* \[ vorgenommen\]
+*ppContextNodeStrokeAddedTo* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf den [**icontextnode**](icontextnode.md) , dem [**iinkanalyzer**](iinkanalyzer.md) den Strich hinzugefügt hat.
+Ein Zeiger auf den [**IContextNode,**](icontextnode.md) dem der [**IInkAnalyzer**](iinkanalyzer.md) den Strich hinzugefügt hat.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speichermangel zu vermeiden, müssen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf *ppcontextnozerstörkeaddto* abrufen, wenn Sie das-Objekt nicht mehr verwenden müssen.
+> Um einen Speicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) für *ppContextNodeStrokeAddedTo* auf, wenn Sie das Objekt nicht mehr verwenden müssen.
 
  
 
-Wenn *ppcontextnodestrokeaddedto* **null** ist, gibt es an, dass der Aufrufer nicht an dem Rückgabewert der-Methode interessiert ist.
+Wenn *ppContextNodeStrokeAddedTo* **NULL** ist, gibt dies an, dass der Aufrufer nicht an dem Rückgabewert der Methode interessiert ist.
 
-[**Iinkanalyzer**](iinkanalyzer.md) fügt den Strich einem [**icontextnode**](icontextnode.md) vom Typ UnclassifiedInk hinzu (siehe [Kontext Knoten Typen](context-node-types.md)). Dieser Knoten befindet sich in der unter Knoten Sammlung des Stamm Knotens (Weitere Informationen finden Sie unter [**iinkanalyzer:: GetRootNode-Methode**](iinkanalyzer-getrootnode.md) und [**icontextnode:: getsubnodes**](icontextnode-getsubnodes.md) -Methoden).
+Der [**IInkAnalyzer**](iinkanalyzer.md) fügt den Strich einem [**IContextNode**](icontextnode.md) vom Typ UnclassifiedInk hinzu (siehe [Kontextknotentypen](context-node-types.md)). Dieser Knoten befindet sich in der Unterknotensammlung des Stammknotens (siehe [**IInkAnalyzer::GetRootNode-Methode**](iinkanalyzer-getrootnode.md) und [**IContextNode::GetSubNodes-Methoden).**](icontextnode-getsubnodes.md)
 
-[**Iinkanalyzer**](iinkanalyzer.md) weist den Kultur Bezeichner des aktiven Eingabe Threads dem Strich zu und fügt den Strich dem ersten UnclassifiedInk-Kontext Knoten unter dem Stamm Knoten der Ink Analyzer hinzu, der Striche mit dem gleichen Kultur Bezeichner enthält. Wenn der Ink Analyzer keinen Knoten mit demselben Kultur Bezeichner besitzt, erstellt er einen neuen UnclassifiedInk-Kontext Knoten unter seinem Stamm Knoten und fügt den Strich dem neuen UnclassifiedInk-Kontext Knoten hinzu.
+[**IInkAnalyzer**](iinkanalyzer.md) weist dem Strich den Kulturbezeichner des aktiven Eingabethreads zu und fügt den Strich dem ersten UnclassifiedInk-Kontextknoten unter dem Stammknoten des Freihandanalysetools hinzu, der Striche mit dem gleichen Kulturbezeichner enthält. Wenn das Freihandanalyseprogramm keinen Knoten mit demselben Kulturbezeichner hat, erstellt er einen neuen UnclassifiedInk-Kontextknoten unter seinem Stammknoten und fügt den Strich dem neuen UnclassifiedInk-Kontextknoten hinzu.
 
-*plstrokepacketdata* enthält Paketdaten für alle Punkte im Strich. *pstrokepacketdescriptionguids* enthält die global eindeutigen Bezeichner (GUIDs), die die Typen der Paketdaten beschreiben, die für jeden Punkt im Strich enthalten sind. Eine umfassende Liste der verfügbaren Paket Eigenschaften finden Sie unter [packetpropertyguids-Konstanten](packetpropertyguids-constants.md).
+*plStrokePacketData* enthält Paketdaten für alle Punkte im Strich. *pStrokePacketDescriptionGuids* enthält die GUIDs (Globally Unique Identifiers), die die Paketdatentypen beschreiben, die für jeden Punkt im Strich enthalten sind. Eine vollständige Liste der verfügbaren Paketeigenschaften finden Sie unter [PacketPropertyGuids-Konstanten.](packetpropertyguids-constants.md)
 
-Mit dieser Methode wird der geänderte Bereich in die Gesamtmenge des aktuellen Werts des Bereichs und das umgebende Feld des hinzugefügten Strichs erweitert.
+Diese Methode erweitert den geänderten Bereich auf die Vereinigung des aktuellen Werts des Bereichs und des begrenzungsfelds des hinzugefügten Strichs.
 
-Wenn [**iinkanalyzer**](iinkanalyzer.md) bereits einen Strich mit dem gleichen Strich Bezeichner enthält, gibt **iinkanalyzer** ein **HRESULT** von **E \_ invalidArg** zurück.
+Wenn der [**IInkAnalyzer**](iinkanalyzer.md) bereits einen Strich mit dem gleichen Strichbezeichner enthält, gibt **der IInkAnalyzer** ein **HRESULT** von **E \_ INVALIDARG** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,9 +115,9 @@ Wenn [**iinkanalyzer**](iinkanalyzer.md) bereits einen Strich mit dem gleichen S
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -126,25 +126,25 @@ Wenn [**iinkanalyzer**](iinkanalyzer.md) bereits einen Strich mit dem gleichen S
 
 <dl> <dt>
 
-[**InkAnalyzer**](iinkanalyzer.md)
+[**Inkanalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: addstrokeforlanguage-Methode**](iinkanalyzer-addstrokeforlanguage.md)
+[**IInkAnalyzer::AddStrokeForLanguage-Methode**](iinkanalyzer-addstrokeforlanguage.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: AddStrokes-Methode**](iinkanalyzer-addstrokes.md)
+[**IInkAnalyzer::AddStrokes-Methode**](iinkanalyzer-addstrokes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: addstrokesforlanguage-Methode**](iinkanalyzer-addstrokesforlanguage.md)
+[**IInkAnalyzer::AddStrokesForLanguage-Methode**](iinkanalyzer-addstrokesforlanguage.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: RemoveStroke-Methode**](iinkanalyzer-removestroke.md)
+[**IInkAnalyzer::RemoveStroke-Methode**](iinkanalyzer-removestroke.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: RemoveStrokes-Methode**](iinkanalyzer-removestrokes.md)
+[**IInkAnalyzer::RemoveStrokes-Methode**](iinkanalyzer-removestrokes.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

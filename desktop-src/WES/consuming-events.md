@@ -1,21 +1,21 @@
 ---
-title: Verarbeiten von Ereignissen (Windows-Ereignisprotokoll)
-description: Ereignisse können von Kanälen oder Protokolldateien genutzt werden.
+title: Nutzen von Ereignissen (Windows Ereignisprotokoll)
+description: Sie können Ereignisse aus Kanälen oder Protokolldateien nutzen.
 ms.assetid: 17204d3f-0875-42c5-9af4-caca6349a67d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: adb3fb1b36a0cd4ecf836a8893bc1abc14e46451
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: f131f0f3b02485c3c838e9180ea1daaebb4121b8846e5a124f36cfdb6bf377f8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106341765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119620380"
 ---
-# <a name="consuming-events-windows-event-log"></a>Verarbeiten von Ereignissen (Windows-Ereignisprotokoll)
+# <a name="consuming-events-windows-event-log"></a>Nutzen von Ereignissen (Windows Ereignisprotokoll)
 
-Ereignisse können von Kanälen oder Protokolldateien genutzt werden. Um Ereignisse zu verarbeiten, können Sie alle Ereignisse verarbeiten, oder Sie können einen XPath-Ausdruck angeben, der die Ereignisse identifiziert, die Sie verwenden möchten. Informationen zum Bestimmen der Elemente und Attribute eines Ereignisses, das Sie im XPath-Ausdruck verwenden können, finden Sie unter [Ereignis Schema](eventschema-schema.md).
+Sie können Ereignisse aus Kanälen oder Protokolldateien nutzen. Um Ereignisse zu nutzen, können Sie alle Ereignisse nutzen oder einen XPath-Ausdruck angeben, der die Ereignisse identifiziert, die Sie nutzen möchten. Informationen zum Bestimmen der Elemente und Attribute eines Ereignisses, die Sie in Ihrem XPath-Ausdruck verwenden können, finden Sie unter [Ereignisschema.](eventschema-schema.md)
 
-Das Windows-Ereignisprotokoll unterstützt eine Teilmenge von XPath 1,0. Ausführliche Informationen zu den Einschränkungen finden Sie unter [Einschränkungen für XPath 1,0](#xpath-10-limitations).
+Windows Das Ereignisprotokoll unterstützt eine Teilmenge von XPath 1.0. Ausführliche Informationen zu den Einschränkungen finden Sie unter [XPath 1.0-Einschränkungen.](#xpath-10-limitations)
 
 Die folgenden Beispiele zeigen einfache XPath-Ausdrücke.
 
@@ -41,9 +41,9 @@ XPath Query: *[System[(Level <= 3) and TimeCreated[timediff(@SystemTime) <= 8640
 
 
 
-Sie können die XPath-Ausdrücke direkt verwenden, wenn Sie die Funktionen [**evtquery**](/windows/desktop/api/WinEvt/nf-winevt-evtquery) oder [**evtsubscribe**](/windows/desktop/api/WinEvt/nf-winevt-evtsubscribe) aufrufen, oder Sie können eine strukturierte XML-Abfrage verwenden, die den XPath-Ausdruck enthält. Für einfache Abfragen, die Ereignisse aus einer einzelnen Quelle Abfragen, ist die Verwendung eines XPath-Ausdrucks in Ordnung. Handelt es sich bei dem XPath-Ausdruck um einen Verbund Ausdruck, der mehr als 20 Ausdrücke enthält oder um Ereignisse aus mehreren Quellen abzufragen, müssen Sie eine strukturierte XML-Abfrage verwenden. Ausführliche Informationen zu den Elementen einer strukturierten XML-Abfrage finden Sie unter [Abfrage Schema](queryschema-schema.md).
+Sie können die XPath-Ausdrücke direkt verwenden, wenn Sie die [**EvtQuery-**](/windows/desktop/api/WinEvt/nf-winevt-evtquery) oder [**EvtSubscribe-Funktionen**](/windows/desktop/api/WinEvt/nf-winevt-evtsubscribe) aufrufen, oder Sie können eine strukturierte XML-Abfrage verwenden, die den XPath-Ausdruck enthält. Bei einfachen Abfragen, die Ereignisse aus einer einzelnen Quelle abfragen, ist die Verwendung eines XPath-Ausdrucks in Ordnung. Wenn der XPath-Ausdruck ein zusammengesetzter Ausdruck ist, der mehr als 20 Ausdrücke enthält, oder Wenn Sie Ereignisse aus mehreren Quellen abfragen, müssen Sie eine strukturierte XML-Abfrage verwenden. Ausführliche Informationen zu den Elementen einer strukturierten XML-Abfrage finden Sie unter [Abfrageschema.](queryschema-schema.md)
 
-Eine strukturierte Abfrage identifiziert die Quelle der Ereignisse und einen oder mehrere Selektoren oder Unterdrücker. Ein Selektor enthält einen XPath-Ausdruck, der Ereignisse aus der Quelle auswählt, und ein unter Prüfer enthält einen XPath-Ausdruck, der verhindert, dass Ereignisse ausgewählt werden. Sie können Ereignisse aus mehreren Quellen auswählen. Wenn ein Selektor und unter Prüfer dasselbe Ereignis identifizieren, ist das Ereignis nicht im Ergebnis enthalten.
+Eine strukturierte Abfrage identifiziert die Quelle der Ereignisse und eine oder mehrere Selektoren oder Unterdrücker. Ein Selektor enthält einen XPath-Ausdruck, der Ereignisse aus der Quelle auswählt, und ein Suppressor enthält einen XPath-Ausdruck, der verhindert, dass Ereignisse ausgewählt werden. Sie können Ereignisse aus mehreren Quellen auswählen. Wenn ein Selektor und ein Suppressor das gleiche Ereignis identifizieren, ist das Ereignis nicht im Ergebnis enthalten.
 
 Das folgende Beispiel zeigt eine strukturierte XML-Abfrage, die einen Satz von Selektoren und Unterdrückern angibt.
 
@@ -68,45 +68,45 @@ Das folgende Beispiel zeigt eine strukturierte XML-Abfrage, die einen Satz von S
 
 
 
-Das Resultset aus der Abfrage enthält keine Momentaufnahme der Ereignisse zum Zeitpunkt der Abfrage. Stattdessen enthält das Resultset die Ereignisse zum Zeitpunkt der Abfrage und enthält außerdem alle neuen Ereignisse, die bei der Enumeration der Ergebnisse mit den Abfrage Kriterien übereinstimmen.
+Das Resultset der Abfrage enthält keine Momentaufnahme der Ereignisse zum Zeitpunkt der Abfrage. Stattdessen enthält das Resultset die Ereignisse zum Zeitpunkt der Abfrage und enthält auch alle neuen Ereignisse, die ausgelöst werden, die den Abfragekriterien entsprechen, während Sie die Ergebnisse aufzählen.
 
 > [!Note]  
-> Die Reihenfolge der Ereignisse wird für Ereignisse beibehalten, die vom gleichen Thread geschrieben werden. Es ist jedoch möglich, dass Ereignisse, die von separaten Threads auf unterschiedlichen Prozessoren eines Computers mit mehreren Prozessoren geschrieben wurden, nicht in der richtigen Reihenfolge angezeigt werden.
+> Die Reihenfolge der Ereignisse wird für Ereignisse beibehalten, die vom gleichen Thread geschrieben werden. Es ist jedoch möglich, dass Ereignisse, die von separaten Threads auf verschiedenen Prozessoren eines Computers mit mehreren Prozessoren geschrieben werden, nicht in der reihenfolgengeordneten Reihenfolge angezeigt werden.
 
  
 
-Ausführliche Informationen zum Verarbeiten von Ereignissen finden Sie in den folgenden Themen:
+Ausführliche Informationen zum Nutzen von Ereignissen finden Sie in den folgenden Themen:
 
 -   [Abfragen von Ereignissen](querying-for-events.md)
 -   [Abonnieren von Ereignissen](subscribing-to-events.md)
 -   [Renderingereignisse](rendering-events.md)
 -   [Formatieren von Ereignismeldungen](formatting-event-messages.md)
--   [Lesezeichen Ereignisse](bookmarking-events.md)
+-   [Lesezeichenereignisse](bookmarking-events.md)
 
-Die standardmäßigen Endbenutzer Tools zum Verarbeiten von Ereignissen lauten:
+Die standard-Endbenutzertools für die Nutzung von -Ereignis sind:
 
 -   [Ereignisanzeige](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11))
--   Das Windows PowerShell-Cmdlet " [Get-WinEvent](/previous-versions//dd367894(v=technet.10)) "
+-   Das Windows PowerShell [Get-WinEvent-Cmdlet](/previous-versions//dd367894(v=technet.10))
 -   [**WevtUtil**](windows-event-log-tools.md)
 
-## <a name="xpath-10-limitations"></a>Einschränkungen für XPath 1,0
+## <a name="xpath-10-limitations"></a>XPath 1.0-Einschränkungen
 
-Das Windows-Ereignisprotokoll unterstützt eine Teilmenge von XPath 1,0. Die primäre Einschränkung besteht darin, dass nur XML-Elemente, die Ereignisse darstellen, von einem Ereignis Selektor ausgewählt werden können. Eine XPath-Abfrage, die kein Ereignis auswählt, ist ungültig. Alle gültigen Auswahl Pfade beginnen mit \* oder "Event". Alle Standort Pfade arbeiten auf den Ereignis Knoten und bestehen aus einer Reihe von Schritten. Jeder Schritt besteht aus einer Struktur von drei Teilen: der Achse, dem Knoten Test und dem Prädikat. Weitere Informationen zu diesen Teilen und zu XPath 1,0 finden Sie unter [XML Path Language (XPath)](https://www.w3.org/TR/xpath). Das Windows-Ereignisprotokoll fügt die folgenden Einschränkungen für den Ausdruck ein:
+Windows Das Ereignisprotokoll unterstützt eine Teilmenge von XPath 1.0. Die primäre Einschränkung besteht darin, dass nur XML-Elemente, die Ereignisse darstellen, von einem Ereignisselektor ausgewählt werden können. Eine XPath-Abfrage, die kein Ereignis auswählt, ist ungültig. Alle gültigen Selektorpfade beginnen mit \* oder "Event". Alle Speicherortpfade werden auf den Ereignisknoten ausgeführt und bestehen aus einer Reihe von Schritten. Jeder Schritt besteht aus drei Teilen: Achse, Knotentest und Prädikat. Weitere Informationen zu diesen Teilen und zu XPath 1.0 finden Sie unter [XML Path Language (XPath)](https://www.w3.org/TR/xpath). Windows Das Ereignisprotokoll weist die folgenden Einschränkungen für den Ausdruck auf:
 
--   Achse: nur das untergeordnete (Standard-) und das-Attribut (und seine Kurzwert-Achse) werden unterstützt.
--   Knoten Tests: nur Knoten Namen und NCName-Tests werden unterstützt. Das \* Zeichen "", von dem ein beliebiges Zeichen ausgewählt wird, wird unterstützt.
--   Prädikate: jeder gültige XPath-Ausdruck ist zulässig, wenn die Speicherort Pfade den folgenden Einschränkungen entsprechen:
-    -   Standard Operatoren **oder**, **and**, =,! =, <=, <, >=, > und Klammern werden unterstützt.
-    -   Das Erstellen eines Zeichen folgen Werts für einen Knoten Namen wird nicht unterstützt.
+-   Achse: Es werden nur die untergeordnete Achse (Standard) und das Attribut (und die kurzformige @-Achse) unterstützt.
+-   Knotentests: Es werden nur Knotennamen und NCName-Tests unterstützt. Das \* Zeichen "", das ein beliebiges Zeichen auswählt, wird unterstützt.
+-   Prädikate: Jeder gültige XPath-Ausdruck ist akzeptabel, wenn die Speicherortpfade den folgenden Einschränkungen entsprechen:
+    -   Die Standardoperatoren **OR**, **AND**, =, !=, <=, <, >=, > und Klammern werden unterstützt.
+    -   Das Generieren eines Zeichenfolgenwerts für einen Knotennamen wird nicht unterstützt.
     -   Die Auswertung in umgekehrter Reihenfolge wird nicht unterstützt.
-    -   Knotengruppen werden nicht unterstützt.
-    -   Namespace-Gültigkeits Bereiche werden nicht unterstützt.
-    -   Namespace-, Verarbeitungs-und Kommentar Knoten werden nicht unterstützt.
-    -   Die Kontext Größe wird nicht unterstützt.
-    -   Variablen Bindungen werden nicht unterstützt.
-    -   Die Positions Funktion und deren Kurzwert-Array Verweis werden unterstützt (nur auf Blattknoten).
-    -   Die Band Funktion wird unterstützt. Die-Funktion führt ein bitweises and für zwei ganzzahlige Zahlen Argumente aus. Wenn das Ergebnis der bitweisen and-Funktion ungleich NULL ist, wird die-Funktion als true ausgewertet. Andernfalls wird die-Funktion zu false ausgewertet.
-    -   Die timediff-Funktion wird unterstützt. Die-Funktion berechnet den Unterschied zwischen dem zweiten Argument und dem ersten Argument. Eines der Argumente muss eine Literalzahl sein. Die Argumente müssen die FILETIME-Darstellung verwenden. Das Ergebnis ist die Anzahl der Millisekunden zwischen den zwei Uhrzeiten. Das Ergebnis ist positiv, wenn das zweite Argument einen späteren Zeitpunkt darstellt. Andernfalls ist sie negativ. Wenn das zweite Argument nicht angegeben wird, wird die aktuelle Systemzeit verwendet.
+    -   Knotensätze werden nicht unterstützt.
+    -   Namespace-Bereichsinformationen werden nicht unterstützt.
+    -   Namespace-, Verarbeitungs- und Kommentarknoten werden nicht unterstützt.
+    -   Die Kontextgröße wird nicht unterstützt.
+    -   Variablenbindungen werden nicht unterstützt.
+    -   Die Position-Funktion und ihr Kurzformarrayverweis werden unterstützt (nur auf Blattknoten).
+    -   Die Band-Funktion wird unterstützt. Die -Funktion führt ein bitweises AND für zwei ganzzahlige Zahlenargumente aus. Wenn das Ergebnis des bitweisen AND ungleich 0 (null) ist, wird die Funktion als TRUE ausgewertet. andernfalls wird die Funktion als FALSE ausgewertet.
+    -   Die timediff-Funktion wird unterstützt. Die Funktion berechnet den Unterschied zwischen dem zweiten argument und dem ersten Argument. Eines der Argumente muss eine Literalzahl sein. Die Argumente müssen die FILETIME-Darstellung verwenden. Das Ergebnis ist die Anzahl von Millisekunden zwischen den beiden Zeiten. Das Ergebnis ist positiv, wenn das zweite Argument einen späteren Zeitpunkt darstellt. andernfalls ist sie negativ. Wenn das zweite Argument nicht angegeben wird, wird die aktuelle Systemzeit verwendet.
 
  
 

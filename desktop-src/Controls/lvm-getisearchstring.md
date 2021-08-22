@@ -1,9 +1,9 @@
 ---
-title: LVM_GETISEARCHSTRING Meldung (kommstrg. h)
-description: Ruft die inkrementelle Such Zeichenfolge eines Listenansicht-Steuer Elements ab. Sie können diese Nachricht explizit oder mithilfe des ListView \_ getisearchstring-Makros senden.
+title: LVM_GETISEARCHSTRING (Commctrl.h)
+description: Ruft die inkrementelle Suchzeichenfolge eines Listenansicht-Steuerelements ab. Sie können diese Nachricht explizit oder mithilfe des ListView \_ GetISearchString-Makros senden.
 ms.assetid: e953c4a0-0556-4987-8abf-3276e787fe49
 keywords:
-- Windows-Steuerelemente für LVM_GETISEARCHSTRING Meldung
+- LVM_GETISEARCHSTRING meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9040cf96c5c483b29764b1ccfb67e0e4fff3f897
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d612a6c1ba303bc08b6d5067ccb4dd3802354456159e3aea4120bd122348e74f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478525"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119540820"
 ---
-# <a name="lvm_getisearchstring-message"></a>LVM- \_ getisearchstring-Nachricht
+# <a name="lvm_getisearchstring-message"></a>LVM \_ GETISEARCHSTRING-Nachricht
 
-Ruft die inkrementelle Such Zeichenfolge eines Listenansicht-Steuer Elements ab. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ getisearchstring**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getisearchstring) -Makros senden.
+Ruft die inkrementelle Suchzeichenfolge eines Listenansicht-Steuerelements ab. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ GetISearchString-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getisearchstring) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,23 +37,23 @@ Ruft die inkrementelle Such Zeichenfolge eines Listenansicht-Steuer Elements ab.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf einen Puffer, der die inkrementelle Such Zeichenfolge empfängt Legen Sie *LPARAM* auf **null** fest, um die Länge der Zeichenfolge abzurufen.
+Zeiger auf einen Puffer, der die inkrementelle Suchzeichenfolge empfängt. Um einfach die Länge der Zeichenfolge abzurufen, legen *Sie lParam auf* **NULL fest.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl der Zeichen in der inkrementellen Such Zeichenfolge zurück, ohne das abschließende Null-Zeichen, oder 0 (null), wenn sich das Listenansicht-Steuerelement nicht im inkrementellen
+Gibt die Anzahl der Zeichen in der inkrementellen Suchzeichenfolge zurück, ohne das beendende NULL-Zeichen, oder 0 (null), wenn sich das Listenansicht-Steuerelement nicht im inkrementellen Suchmodus befindet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Sicherheitswarnung:** Wenn Sie diese Meldung falsch verwenden, kann dies die Sicherheit des Programms beeinträchtigen. Diese Meldung bietet keine Möglichkeit, die Größe des Puffers zu kennen. Wenn Sie diese Meldung verwenden, müssen Sie zuerst die Nachricht mit der Übergabe von **null** im *LPARAM*-Element aufzurufen. Dadurch wird die Anzahl der Zeichen zurückgegeben, ausgenommen **null** . Rufen Sie dann die Nachricht ein zweites Mal auf, um die Zeichenfolge abzurufen. Überprüfen Sie die [Sicherheitsaspekte: Microsoft Windows](sec-comctls.md) -Steuerelemente, bevor Sie fortfahren.
+**Sicherheitswarnung:** Wenn Sie diese Meldung falsch verwenden, kann dies die Sicherheit Ihres Programms gefährden. Diese Meldung bietet Ihnen keine Möglichkeit, die Größe des Puffers zu kennen. Wenn Sie diese Meldung verwenden, rufen Sie zuerst die Meldung auf, die **NULL** im *lParam* übergibt. Dadurch wird die Anzahl der zeichen zurückgegeben, mit Ausnahme von **NULL,** die erforderlich sind. Rufen Sie dann die Nachricht ein zweites Mal auf, um die Zeichenfolge abzurufen. Lesen Sie die [Sicherheitsüberlegungen: Microsoft Windows Controls,](sec-comctls.md) bevor Sie fortfahren.
 
-Die *inkrementelle Such Zeichenfolge* ist die Zeichenfolge, die der Benutzer eingibt, während die Listenansicht den Eingabefokus besitzt. Jedes Mal, wenn der Benutzer ein Zeichen eingibt, fügt das System das Zeichen an die Such Zeichenfolge an und sucht dann nach einem entsprechenden Element. Wenn das System eine Entsprechung findet, wählt es das Element aus und führt ggf. einen Bildlauf in die Ansicht aus.
+Die *inkrementelle Suchzeichenfolge* ist die Zeichenfolge, die der Benutzer eingibt, während die Listenansicht den Eingabefokus besitzt. Jedes Mal, wenn der Benutzer ein Zeichen eingibt, fügt das System das Zeichen an die Suchzeichenfolge an und sucht dann nach einem übereinstimmenden Element. Wenn das System eine Übereinstimmung findet, wählt es das Element aus und führt bei Bedarf einen Bildlauf in die Ansicht durch.
 
-Jedem Zeichen, das der Benutzer eingibt, wird ein Timeout Zeitraum zugeordnet. Wenn die Timeout Spanne abläuft, bevor der Benutzer ein anderes Zeichen eingibt, wird die Zeichenfolge für die inkrementelle Suche zurückgesetzt.
+Jedem Vom Benutzer typisierungsbasierten Zeichen wird ein Time out-Zeitraum zugeordnet. Wenn das Time out verstreicht, bevor der Benutzer ein anderes Zeichen eingibt, wird die inkrementelle Suchzeichenfolge zurückgesetzt.
 
-Stellen Sie sicher, dass der Puffer groß genug ist, um die Zeichenfolge und das abschließende Null-Zeichen zu speichern. Wenn es zu klein ist, wird ein sofortiger ungültiger Seiten Fehler zurückzuführen.
+Stellen Sie sicher, dass der Puffer groß genug ist, um die Zeichenfolge und das beendende NULL-Zeichen zu enthalten. Wenn er zu klein ist, führt dies zu einem unmittelbar ungültigen Seitenfehler.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,10 +61,10 @@ Stellen Sie sicher, dass der Puffer groß genug ist, um die Zeichenfolge und das
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **LVM \_ Getisearchstringw** (Unicode) und **LVM \_ getisearchstrauinga** (ANSI)<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **LVM \_ GETISEARCHSTRINGW** (Unicode) und **LVM \_ GETISEARCHSTRINGA** (ANSI)<br/> |
 
 
 

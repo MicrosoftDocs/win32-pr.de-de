@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_EJECT Meldung (VFW. h)
-description: Die mciwndm- \_ Ausgabenachricht sendet einen Befehl an ein MCI-Gerät, um Ihre Medien auszuewerfen. Sie können diese Nachricht explizit oder mithilfe des mciwndeject-Makros senden.
+title: MCIWNDM_EJECT (Vfw.h)
+description: Die MCIWNDM-EJECT-Nachricht sendet einen Befehl an ein \_ MCI-Gerät, um seine Medien auswerfen zu können. Sie können diese Nachricht explizit oder mithilfe des Makros MCIWndEject senden.
 ms.assetid: a492f504-8b58-480e-9766-bc2878466c44
 keywords:
-- MCIWNDM_EJECT-Nachricht (Multimedia)
+- MCIWNDM_EJECT von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e41686ce41b82dc48ee6c22ac556606c79c5b24a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 66c752f192e8f74f2c6e861e581fd22a561bafd9ff6c0f369ba669bc4bf87fb4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391644"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119429430"
 ---
-# <a name="mciwndm_eject-message"></a>Mciwndm- \_ Ausgabenachricht
+# <a name="mciwndm_eject-message"></a>\_MCIWNDM-EJECT-Nachricht
 
-Die **mciwndm \_ -Ausgabenachricht** sendet einen Befehl an ein MCI-Gerät, um Ihre Medien auszuewerfen. Sie können diese Nachricht explizit oder mithilfe des [**mciwndeject**](/windows/desktop/api/Vfw/nf-vfw-mciwndeject) -Makros senden.
+Die **\_ MCIWNDM-EJECT-Nachricht** sendet einen Befehl an ein MCI-Gerät, um seine Medien auswerfen zu können. Sie können diese Nachricht explizit oder mithilfe des [**Makros MCIWndEject**](/windows/desktop/api/Vfw/nf-vfw-mciwndeject) senden.
 
 
 ```C++
@@ -36,7 +36,7 @@ lParam = 0;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,15 +46,15 @@ Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mciwndebug**](/windows/desktop/api/Vfw/nf-vfw-mciwndeject)
+[**MCIWndEject**](/windows/desktop/api/Vfw/nf-vfw-mciwndeject)
 </dt> </dl>
 
  

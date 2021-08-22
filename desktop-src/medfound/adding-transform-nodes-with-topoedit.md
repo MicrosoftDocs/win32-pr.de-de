@@ -1,62 +1,62 @@
 ---
-description: Hinzufügen von Transformations Knoten mit topoedit
+description: Hinzufügen von Transformationsknoten mit TopoEdit
 ms.assetid: e1725c37-3f04-4208-9c09-56ce9a854138
-title: Hinzufügen von Transformations Knoten mit topoedit
+title: Hinzufügen von Transformationsknoten mit TopoEdit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 97fa39457f8808070f93a4e5de31e181525ca33b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8b9357b08230b706dc9215cebdbc60d226cadaf0a3f1d7b29f533324ae2e3b1f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119664930"
 ---
-# <a name="adding-transform-nodes-with-topoedit"></a>Hinzufügen von Transformations Knoten mit topoedit
+# <a name="adding-transform-nodes-with-topoedit"></a>Hinzufügen von Transformationsknoten mit TopoEdit
 
-Ein Transformations Knoten stellt eine Media Foundation Transformation (MFT) dar, die von einem Quellknoten empfangene Mediendaten verarbeitet. Wenn er bereit ist, übergibt die Pipeline ihn zum Rendern an den Ausgabe Knoten. In Media Foundation werden Encoder, Decoder, Multiplexer, de-Multiplexer und Audiovideo Effekte als MFTs implementiert. Topoedit unterstützt das Hinzufügen von Transformations Knoten, die sowohl registrierte als auch benutzerdefinierte MFTs darstellen.
+Ein Transformationsknoten stellt einen Media Foundation Transform (MFT) dar, der Mediendaten verarbeitet, die er von einem Quellknoten empfängt. Wenn sie bereit ist, übergibt die Pipeline sie zum Rendern an den Ausgabeknoten. In Media Foundation werden Encoder, Decoder, Multiplexer, De-Multiplexer und Audiovideoeffekte als MFTs implementiert. TopoEdit unterstützt das Hinzufügen von Transformationsknoten, die sowohl registrierte als auch benutzerdefinierte MFTs darstellen.
 
-Weitere Informationen zum programmgesteuerten Hinzufügen von Transformations Knoten mithilfe Media Foundation APIs finden Sie unter [Erstellen von Transformations Knoten](creating-transform-nodes.md).
+Informationen zum programmgesteuerten Hinzufügen von Transformationsknoten mithilfe Media Foundation-APIs finden Sie unter [Erstellen von Transformationsknoten.](creating-transform-nodes.md)
 
-## <a name="to-add-a-registered-mft-to-the-topology"></a>So fügen Sie der Topologie eine registrierte MFT hinzu
+## <a name="to-add-a-registered-mft-to-the-topology"></a>So fügen Sie der Topologie einen registrierten MFT hinzu
 
-1.  Klicken Sie im Menü **Topologie** auf **Transformation hinzufügen**.
+1.  Klicken Sie im Menü **Topologie** auf **Transformieren hinzufügen.**
 
-    Das Dialogfeld **Transformation auswählen** wird geöffnet. Es wird eine kategorisierte Liste registrierter MFTs angezeigt, die durch das Auflisten der registrierten Einträge in der Registrierung durch Aufrufen der [**mftenum**](/windows/desktop/api/mfapi/nf-mfapi-mftenum) -Funktion generiert wird.
+    Das Dialogfeld **Transformation auswählen** wird geöffnet. Es zeigt eine kategorisierte Liste der registrierten MFTs an, die generiert wird, indem die registrierten Einträge in der Registrierung durch Aufrufen der [**MFTEnum-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mftenum) auflistet werden.
 
-2.  Erweitern Sie die Kategorie, und wählen Sie die MFT aus, die Sie der Topologie hinzufügen möchten.
+2.  Erweitern Sie die Kategorie, und wählen Sie den MFT aus, den Sie der Topologie hinzufügen möchten.
 
-3.  Klicken Sie auf **OK** , um das Dialogfeld zu schließen und zum Bereich **Topologie** zurückzukehren.
+3.  Klicken Sie auf **OK,** um das Dialogfeld zu schließen und zum **Topologiebereich** zurückzukehren.
 
-Topoedit erstellt den angegebenen Transformations Knoten. Der Bereich " **Topologie** " zeigt den Transformations Knoten als grünes Feld an, in dem der Name der MFT angezeigt wird.
+TopoEdit erstellt den angegebenen Transformationsknoten. Im **Topologiebereich** wird der Transformationsknoten als grünes Feld mit dem Namen des MFT angezeigt.
 
 ## <a name="to-add-a-custom-mft-to-the-topology"></a>So fügen Sie der Topologie einen benutzerdefinierten MFT hinzu
 
-1.  Klicken Sie im Menü **Topologie** auf **benutzerdefinierte MFT hinzufügen**.
+1.  Klicken Sie im Menü **Topologie** auf **Benutzerdefiniertes MFT hinzufügen.**
 
-    Dadurch wird das Dialogfeld **benutzerdefinierte GUID eingeben** geöffnet.
+    Dadurch wird das Dialogfeld **Benutzerdefinierte GUID eingeben** geöffnet.
 
-2.  Geben Sie im Feld **GUID:** die GUID der MFT ein, die Sie der Topologie hinzufügen möchten.
+2.  Geben Sie im Feld **GUID:** die GUID des MFT ein, das Sie der Topologie hinzufügen möchten.
 
     > [!Note]  
-    > Topoedit erwartet die GUID im Format "{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}". Andernfalls kann der Knoten nicht hinzugefügt werden, und es wird die Fehlermeldung "Ungültige GUID" angezeigt.
+    > TopoEdit erwartet die GUID im Format "{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}". Andernfalls kann der Knoten nicht hinzugefügt werden, und es wird die Fehlermeldung "Ungültige GUID" angezeigt.
 
      
 
-3.  Klicken Sie auf **OK** , um das Dialogfeld zu schließen und zum Bereich **Topologie** zurückzukehren.
+3.  Klicken Sie auf **OK,** um das Dialogfeld zu schließen und zum **Topologiebereich** zurückzukehren.
 
-Topoedit erstellt den angegebenen Transformations Knoten. Der Bereich " **Topologie** " zeigt den Transformations Knoten als grünes Feld an, in dem der Name der MFT angezeigt wird.
+TopoEdit erstellt den angegebenen Transformationsknoten. Im **Topologiebereich** wird der Transformationsknoten als grünes Feld mit dem Namen des MFT angezeigt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Entwickeln von Topologien mithilfe von topoedit](building-topologies-by-using-topoedit.md)
+[Erstellen von Topologien mit topoEdit](building-topologies-by-using-topoedit.md)
 </dt> <dt>
 
 [Media Foundation Transformationen](media-foundation-transforms.md)
 </dt> <dt>
 
-[Topoedit](topoedit.md)
+[TopoEdit](topoedit.md)
 </dt> </dl>
 
  

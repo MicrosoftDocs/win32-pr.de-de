@@ -1,50 +1,50 @@
 ---
-description: Gibt die Endzeit der Präsentation an.
+description: Gibt die Beendigungszeit der Präsentation an.
 ms.assetid: c1022538-ea9f-41e9-9075-c106e8b16b7b
-title: MF_TOPONODE_MEDIASTOP-Attribut (mspdl. h)
+title: MF_TOPONODE_MEDIASTOP-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a5b763d1d5adabc520900dde6839d1599ddcb3d
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: ea2abc172151afe404f3acc6cf8c75d03bd0ac495564cb0f322283998677f83b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106363033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119663870"
 ---
-# <a name="mf_toponode_mediastop-attribute"></a>MF- \_ toponode- \_ mediastop-Attribut
+# <a name="mf_toponode_mediastop-attribute"></a>MF \_ TOPONODE \_ MEDIASTOP-Attribut
 
-Gibt die Endzeit der Präsentation an.
+Gibt die Beendigungszeit der Präsentation an.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT64**
 
-Als **Longlong** -Wert behandeln.
+Als **LONGLONG-Wert** behandeln.
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUINT64 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT64 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**Imftopologynode**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode)
+[**TOPOLOGYNode**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gibt die Position in der Quelle an, an der die Wiedergabe in 100-Nanosecond-Einheiten relativ zum Start der Quelle beendet wird. Wenn das Attribut nicht festgelegt ist, wird die Wiedergabe am Ende der Quelle angehalten. Um z. b. die Wiedergabe an der 5-Sekunden-Markierung anzuhalten, legen Sie dieses Attribut auf 50 Millionen fest. Legen Sie das-Attribut auf den Quellknoten in der Topologie fest (Knoten, deren Typ gleich der **MF- \_ Topologie \_ sourcestream- \_ Knoten** ist). Legen Sie das-Attribut vor dem Aufrufen von [**imfmediasession:: settopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology)fest.
+Dieses Attribut gibt die Position in der Quelle an, an der die Wiedergabe in Einheiten von 100 Nanosekunden relativ zum Start der Quelle beendet wird. Wenn das Attribut nicht festgelegt ist, wird die Wiedergabe am Ende der Quelle beendet. Um beispielsweise die Wiedergabe bei der 5-Sekunden-Marke zu beenden, legen Sie dieses Attribut auf 50000000 fest. Legen Sie das Attribut auf den Quellknoten in der Topologie fest (Knoten mit dem Typ **MF \_ TOPOLOGY \_ SOURCESTREAM \_ NODE**). Legen Sie das -Attribut fest, bevor [**Sie DIE ATTRIBUTEMediaSession::SetTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology)aufrufen.
 
 > [!Note]  
-> Wenn Sie einen Decoder manuell in die Topologie einfügen, müssen Sie auch die hier aufgeführten Attribute " [MF \_ toponode \_ Markin \_ here](mf-toponode-markin-here-attribute.md) " und " [MF \_ toponode \_ markout \_ ](mf-toponode-markout-here-attribute.md) " auf dem Decoder-Knoten festlegen.
+> Wenn Sie einen Decoder manuell in die Topologie einfügen, müssen Sie auch die Attribute [MF \_ TOPONODE \_ MARKIN \_ HERE](mf-toponode-markin-here-attribute.md) und [MF \_ TOPONODE \_ MARKOUT \_ HERE](mf-toponode-markout-here-attribute.md) auf dem Decoderknoten festlegen.
 
  
 
-Nachdem die Topologie festgelegt wurde, hat das Festlegen dieses Attributs keine Auswirkung.
+Nachdem die Topologie festgelegt wurde, hat das Festlegen dieses Attributs keine Auswirkungen.
 
-Dieses Attribut ist ein Wert mit Vorzeichen, obwohl er als **UINT64** gespeichert wird. Negative Werte sind jedoch nicht sinnvoll.
+Dieses Attribut ist ein Wert mit Vorzeichen, obwohl es als **UINT64** gespeichert ist. Negative Werte sind jedoch nicht sinnvoll.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,9 +52,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -65,13 +65,13 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Sequenz Präsentations Zeiten](sequence-presentation-times.md)
+[Sequenzpräsentationszeiten](sequence-presentation-times.md)
 </dt> <dt>
 
 [Topologieknotenattribute](topology-node-attributes.md)
 </dt> <dt>
 
-[**MF \_ toponode \_ mediastart**](mf-toponode-mediastart-attribute.md)
+[**MF \_ TOPONODE \_ MEDIASTART**](mf-toponode-mediastart-attribute.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Acquisitiontimeyearmonth-Attribut
-description: Das acquisitiontimeyearmonth-Attribut ist der Jahres-und Monats Teil des Datums und der Uhrzeit, zu der das Element der Bibliothek hinzugefügt wurde.
+title: AcquisitionTimeYearMonth-Attribut
+description: Das AcquisitionTimeYearMonth-Attribut ist der Jahres- und Monatsteil des Datums und der Uhrzeit, zu der das Element der Bibliothek hinzugefügt wurde.
 ms.assetid: 9fed9c82-5807-4dc8-87f8-c97254e7d9dc
 keywords:
-- Acquisitiontimeyearmonth-Attribut, Windows Media Player
+- Attribut "AcquisitionTimeYearMonth Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,31 +12,31 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b900a15e67b31482278558ab4ed16a364f04d5b5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 84ab384dcbdf6bb704a3e8477a76ad40f1952d14de7bb793046b1f83079fefb1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357604"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119619160"
 ---
-# <a name="acquisitiontimeyearmonth-attribute"></a>Acquisitiontimeyearmonth-Attribut
+# <a name="acquisitiontimeyearmonth-attribute"></a>AcquisitionTimeYearMonth-Attribut
 
-Das **acquisitiontimeyearmonth** -Attribut ist der Jahres-und Monats Teil des Datums und der Uhrzeit, zu der das Element der Bibliothek hinzugefügt wurde.
+Das **AcquisitionTimeYearMonth-Attribut** ist der Jahres- und Monatsteil des Datums und der Uhrzeit, zu der das Element der Bibliothek hinzugefügt wurde.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
 -   [Andere Elemente](other-item-attributes.md)
--   [Foto Elemente](photo-item-attributes.md)
+-   [Fotoelemente](photo-item-attributes.md)
 -   [Wiedergabelisten](playlist-attributes-ref.md)
--   [Options Felder](radio-item-attributes.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Optionselemente](radio-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur in der-Bibliothek gespeichert.
+Dieses Attribut wird nur in der Bibliothek gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

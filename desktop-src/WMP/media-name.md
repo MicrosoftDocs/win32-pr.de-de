@@ -1,9 +1,9 @@
 ---
 title: Media.name
-description: Die Name-Eigenschaft gibt den Namen des Medien Elements an oder ruft ihn ab.
+description: Die Name-Eigenschaft gibt den Namen des Medienelements an oder ruft diesen ab.
 ms.assetid: 68aba78a-86fd-4411-9ac4-58f38d915e2c
 keywords:
-- Media.Name Windows Media Player
+- Media.name Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9de8095d88c3ddec9049e0b43461adcf5553ec74
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3abe6df00b5674cfbd443a5838b208814e30c5ecf75875586907314fc3a39d9f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368585"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119616856"
 ---
 # <a name="medianame"></a>Media.name
 
-Die **Name** -Eigenschaft gibt den Namen des Medien Elements an oder ruft ihn ab.
+Die **Name-Eigenschaft** gibt den Namen des Medienelements an oder ruft diesen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,19 +31,19 @@ Die **Name** -Eigenschaft gibt den Namen des Medien Elements an oder ruft ihn ab
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine Lese- **/schreibzeichenfolge** , die den Namen des Medien Elements enthält.
+Diese Eigenschaft ist eine  Zeichenfolge mit Lese-/Schreibzugriff, die den Namen des Medienelements enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Um den Wert dieser Eigenschaft anzugeben, ist der vollständige Zugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Um den Wert dieser Eigenschaft anzugeben, ist Vollzugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-Bevor Sie diese Methode verwenden, um den Namen eines Medien Elements anzugeben, verwenden Sie **isleseronlyitem** , um zu bestimmen, ob der Name festgelegt werden kann.
+Bevor Sie diese Methode verwenden, um den Namen eines Medienelements anzugeben, verwenden Sie **isReadOnlyItem,** um zu bestimmen, ob der Name festgelegt werden kann.
 
 **Windows Media Player 10 Mobile:** Diese Eigenschaft ist schreibgeschützt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel werden *Medien* verwendet. **Name** , um den Namen des aktuellen Medien Elements zu ändern. Mit einem HTML-Text Eingabe Element namens "NameText" kann der Benutzer eine Text Zeichenfolge für den neuen Namen eingeben. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript Media *verwendet.* **Name,** um den Namen des aktuellen Medienelements zu ändern. Mit einem HTML TEXT-Eingabeelement namens NameText kann der Benutzer eine Textzeichenfolge für den neuen Namen eingeben. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -68,7 +68,7 @@ Im folgenden JScript-Beispiel werden *Medien* verwendet. **Name** , um den Namen
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -80,10 +80,10 @@ Im folgenden JScript-Beispiel werden *Medien* verwendet. **Name** , um den Namen
 [**Medienobjekt**](media-object.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

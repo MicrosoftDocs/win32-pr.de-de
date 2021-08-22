@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_Server-Klasse
-description: Die MicrosoftDNS- \_ Serverklasse beschreibt einen DNS-Server. Jede Instanz dieser Klasse kann mit einer Instanz des MicrosoftDNS \_ -Caches, einer Instanz von MicrosoftDNS \_ -roothints und mehreren Instanzen der MicrosoftDNS-Zone verknüpft werden \_ .
+description: Die MicrosoftDNS \_ Server-Klasse beschreibt einen DNS-Server. Jede Instanz dieser Klasse kann einer Instanz von MicrosoftDNS \_ Cache, einer Instanz von MicrosoftDNS \_ RootHints und mehreren Instanzen der MicrosoftDNS-Zone zugeordnet \_ werden.
 ms.assetid: 768f5f96-d7a5-472f-afe6-63aa9c0e5258
 keywords:
-- DNS-MicrosoftDNS_Server Klasse
-- DNS-MicrosoftDNS_Server Klasse, beschrieben
+- dns der MicrosoftDNS_Server-Klasse
+- MicrosoftDNS_Server Dns-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -67,18 +67,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 854a90f5b0fa4d331bd0478d104e50dd70b0cd65
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6c4a42432a11b5cde0df657ba2a9725a68d76a055fce3787bce56c10dfd227ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119539270"
 ---
-# <a name="microsoftdns_server-class"></a>MicrosoftDNS- \_ Server Klasse
+# <a name="microsoftdns_server-class"></a>\_MicrosoftDNS-Serverklasse
 
-Die **MicrosoftDNS- \_ Server** Klasse beschreibt einen DNS-Server. Jede Instanz dieser Klasse kann mit einer Instanz des [**MicrosoftDNS- \_ Caches**](microsoftdns-cache.md), einer Instanz von [**MicrosoftDNS- \_ roothints**](microsoftdns-roothints.md)und mehreren Instanzen der [**MicrosoftDNS- \_ Zone**](microsoftdns-zone.md)verknüpft werden.
+Die **MicrosoftDNS \_ Server-Klasse** beschreibt einen DNS-Server. Jede Instanz dieser Klasse kann einer Instanz von [**MicrosoftDNS \_ Cache,**](microsoftdns-cache.md)einer Instanz von [**MicrosoftDNS \_ RootHints**](microsoftdns-roothints.md)und mehreren Instanzen der [**MicrosoftDNS-Zone \_**](microsoftdns-zone.md)zugeordnet werden.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -138,23 +138,23 @@ class MicrosoftDNS_Server : CIM_Service
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS- \_ Server** Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ Server-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS- \_ Server** Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ Server-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                   | BESCHREIBUNG                                                                      |
+| Methode                   | Beschreibung                                                                      |
 |:-------------------------|:---------------------------------------------------------------------------------|
-| **Getchilshedname** | Ruft den DNS-Distinguished Name für die Zone ab.<br/>                        |
-| **Startscavenging**      | Startet das Bereinigung veralteter Datensätze in den Zonen, die für das Löschen von Daten stehen.<br/> |
-| **Start Service**         | Hiermit wird der DNS-Server gestartet.<br/>                                                |
-| **Stop Service**          | Beendet den DNS-Server.<br/>                                                 |
+| **GetDistinguishedName** | Ruft den DNS-Distinguished Name für die Zone ab.<br/>                        |
+| **StartScavenging**      | Beginnt mit dem Aufräumen veralteter Datensätze in den Zonen, die der Kapselung unterliegen.<br/> |
+| **Startservice**         | Startet den DNS-Server.<br/>                                                |
+| **StopService**          | Beendet den DNS-Server.<br/>                                                 |
 
 
 
@@ -162,74 +162,74 @@ Die **MicrosoftDNS- \_ Server** Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS- \_ Server** Klasse verfügt über diese Eigenschaften.
+Die **\_ MicrosoftDNS-Serverklasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Addressbeantworungslimit**
+**AddressAnswerLimit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Maximale Anzahl von Host Datensätzen, die als Reaktion auf eine Adress Anforderung zurückgegeben werden. Werte zwischen 5 und 28 sind gültig.
+Maximale Anzahl von Hostdatensätzen, die als Antwort auf eine Adressanforderung zurückgegeben werden. Werte zwischen 5 und 28 sind gültig.
 
 </dd> <dt>
 
 **AllowUpdate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der DNS-Server dynamische Update Anforderungen akzeptiert. Gültige Werte sind wie in der folgenden Tabelle dargestellt.
+Gibt an, ob der DNS-Server dynamische Updateanforderungen akzeptiert. Gültige Werte sind wie in der folgenden Tabelle dargestellt.
 
 
 
 | Wert                                                                                                | Bedeutung                                                                                               |
 |------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
 | <span id="0"></span><dl> <dt>**0**</dt> </dl> | Keine Einschränkungen.<br/>                                                                           |
-| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Lässt keine dynamische Aktualisierung von SOA-Datensätzen zu.<br/>                                             |
-| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Lässt keine dynamischen Updates von NS-Datensätzen am Zonen Stamm zu.<br/>                             |
-| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Lässt keine dynamischen Updates von NS-Einträgen zu, die sich nicht im Zonen Stamm befinden (Delegierung von NS-Einträgen).<br/> |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Dynamische Updates von SOA-Datensätzen sind nicht zulässig.<br/>                                             |
+| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Dynamische Updates von NS-Einträgen im Zonenstamm sind nicht zulässig.<br/>                             |
+| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Dynamische Updates von NS-Einträgen, die sich nicht im Zonenstamm befinden (Delegierungs-NS-Einträge), sind nicht zulässig.<br/> |
 
 
 
  
 
-Addieren Sie diese Werte, um den Einstellungs Wert zu bestimmen.
+Addieren Sie diese Werte, um den Einstellungswert zu bestimmen.
 
 </dd> <dt>
 
-**Autocacheupdate**
+**AutoCacheUpdate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der DNS-Server versucht, seine Cache Einträge mithilfe von Daten von Stamm Servern zu aktualisieren. Wenn ein DNS-Server gestartet wird, benötigt er eine Liste der "Hinweise" des Stamm Servers und eine Einträge für die Server, die in der Vergangenheit als Cachedatei bezeichnet wurden. Microsoft DNS-Server verfügen über eine Funktion, mit der Sie versuchen können, eine neue Cachedatei auf der Grundlage der Antworten von Stamm Servern zurückzuschreiben.
+Gibt an, ob der DNS-Server versucht, seine Cacheeinträge mithilfe von Daten von Stammservern zu aktualisieren. Wenn ein DNS-Server gestartet wird, benötigt er eine Liste der Stammserverhinweise NS- und A-Einträge für die Server, die in der Vergangenheit als Cachedatei bezeichnet wurden. Microsoft DNS-Server verfügen über ein Feature, mit dem sie versuchen können, basierend auf den Antworten von Stammservern eine neue Cachedatei zurückzuschreiben.
 
 </dd> <dt>
 
-**Autoconfigfilezones**
+**AutoConfigFileZones**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, welche standardmäßigen primären Zonen, die für den Namen des DNS-Servers autorisierend sind, aktualisiert werden müssen, wenn der Namen Server geändert wird. Gültige Werte sind:
+Gibt an, welche primären Standardzonen, die für den Namen des DNS-Servers autoritativ sind, aktualisiert werden müssen, wenn sich der Namenserver ändert. Gültige Werte sind:
 
 
 
@@ -244,46 +244,46 @@ Gibt an, welche standardmäßigen primären Zonen, die für den Namen des DNS-Se
 
  
 
-Der Standardwert ist 1.
+Der Standardwert ist 1.
 
-* * Windows Server 2003: * *
+**Windows Server 2003: **
 
-Die Zahl 3 stellt alle Server dar.
+Die Zahl 3 steht für Alle Server.
 
 </dd> <dt>
 
-**Bindsecon-Datenbanken**
+**BindSecondaries**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Bestimmt das AXFR-Nachrichtenformat beim Senden an sekundäre DNS-Server-Objekte, die nicht von Microsoft verwendet werden. Wenn diese Einstellung auf "true" festgelegt ist, sendet der DNS-Server Übertragungen an sekundäre DNS-Server-Replikate im nicht komprimierten Format. Bei "false" werden alle Übertragungen im schnellen Format gesendet.
+Bestimmt das AXFR-Nachrichtenformat beim Senden an Nicht-Microsoft DNS Server-Secondaries. Wenn diese Einstellung auf TRUE festgelegt ist, sendet der DNS-Server Übertragungen an Nicht-Microsoft DNS Server-Secondaries im nicht komprimierten Format. False gibt an, dass alle Übertragungen im schnellen Format gesendet werden.
 
 </dd> <dt>
 
-**Bootmethod**
+**BootMethod**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Initialisierungs Methode für den DNS-Server. Gültige Werte werden in der folgenden Tabelle angezeigt.
+Initialisierungsmethode für den DNS-Server. Gültige Werte werden in der folgenden Tabelle angezeigt.
 
 
 
 | Wert                                                                                                | Bedeutung                                      |
 |------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <span id="0"></span><dl> <dt>**0**</dt> </dl> | Nicht initialisiert.<br/>                    |
-| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Starten von einer Datei aus.<br/>                   |
-| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Starten von der Registrierung aus.<br/>               |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl> | Starten von Verzeichnis und Registrierung.<br/> |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Starten sie aus der Datei.<br/>                   |
+| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Starten sie aus der Registrierung.<br/>               |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl> | Starten Sie über das Verzeichnis und die Registrierung.<br/> |
 
 
 
@@ -294,196 +294,196 @@ Initialisierungs Methode für den DNS-Server. Gültige Werte werden in der folge
 **DefaultAgingState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Standardwert für **ScavengingInterval** ist für alle Active Directory integrierten Zonen festgelegt, die auf diesem DNS-Server erstellt wurden. Der Standardwert ist 0 (null), was bedeutet, dass das Bereinigung deaktiviert ist
+Der **ScavengingInterval-Standardwert** wird für alle active Directory-integrierten Zonen festgelegt, die auf diesem DNS-Server erstellt wurden. Der Standardwert ist 0 (null), was angibt, dass die Kapselung deaktiviert ist.
 
 </dd> <dt>
 
 **DefaultNoRefreshInterval**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Kein Aktualisierungs Intervall (in Stunden) für alle Active Directory integrierten Zonen, die auf diesem DNS-Server erstellt wurden. Der Standardwert ist 168 Stunden (sieben Tage).
+Das Aktualisierungsintervall in Stunden wird für alle active Directory-integrierten Zonen festgelegt, die auf diesem DNS-Server erstellt wurden. Der Standardwert ist 168 Stunden (sieben Tage).
 
 </dd> <dt>
 
 **DefaultRefreshInterval**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Aktualisierungs Intervall (in Stunden), das für alle Active Directory integrierten Zonen festgelegt wird, die auf diesem DNS-Server erstellt wurden. Der Standardwert ist 168 Stunden (sieben Tage).
+Aktualisierungsintervall in Stunden für alle active Directory-integrierten Zonen festgelegt, die auf diesem DNS-Server erstellt wurden. Der Standardwert ist 168 Stunden (sieben Tage).
 
 </dd> <dt>
 
-**Disableautoreverversionen**
+**DisableAutoReverseZones**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der DNS-Server automatisch standardmäßige Reverse-Lookupzonen erstellt.
+Gibt an, ob der DNS-Server automatisch Standardmäßige Reverse-Look up-Zonen erstellt.
 
 </dd> <dt>
 
-**Disjoinnetze**
+**DisjointNets**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Standard Port Bindung für einen Socket, der zum Senden von Abfragen an DNS-Remote Server verwendet wird, überschrieben werden kann.
+Gibt an, ob die Standardportbindung für einen Socket, der zum Senden von Abfragen an DNS-Remoteserver verwendet wird, überschrieben werden kann.
 
 </dd> <dt>
 
-**Dsavailable**
+**DsAvailable**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob auf dem DNS-Server ein verfügbarer DS vorhanden ist.
+Gibt an, ob ein DS auf dem DNS-Server verfügbar ist.
 
 </dd> <dt>
 
-**Dspollinginterval**
+**DsPollingInterval**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Intervall (in Sekunden) zum Abfragen der in DS integrierten Zonen.
+Intervall in Sekunden zum Abfragen der in DS integrierten Zonen.
 
 </dd> <dt>
 
-**Dstombstoneinterval**
+**DsTombstoneInterval**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Lebensdauer von Datensätzen mit tombstoning in den in einem Verzeichnisdienst integrierten Zonen, ausgedrückt in Sekunden.
+Lebensdauer von tombstoned-Datensätzen in verzeichnisdienstintegrierten Zonen, ausgedrückt in Sekunden.
 
 </dd> <dt>
 
-**EDNSCacheTimeout**
+**EDnsCacheTimeout**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Lebensdauer (in Sekunden) der zwischengespeicherten Informationen, die die von anderen DNS-Servern unterstützte EDNS-Version beschreiben.
+Lebensdauer der zwischengespeicherten Informationen in Sekunden, die die von anderen DNS-Servern unterstützte EDNS-Version beschreiben.
 
 </dd> <dt>
 
-**Enabledirectoriypartitions**
+**EnableDirectoryPartitions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Unterstützung für Anwendungsverzeichnis Partitionen auf dem DNS-Server aktiviert ist.
+Gibt an, ob die Unterstützung für Anwendungsverzeichnispartitionen auf dem DNS-Server aktiviert ist.
 
-* * Windows Server 2003: * *
+**Windows Server 2003: **
 
-Diese Methode heißt enabledirectorypartitionsupport.
+Diese Methode heißt EnableDirectoryPartitionSupport.
 
 </dd> <dt>
 
 **EnableDnsSec**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der DNS-Server DNSSEC-spezifische RRS, Key, SIG und NXT in einer Antwort enthält, die in der folgenden Tabelle aufgeführt sind:
+Gibt an, ob der DNS-Server DNSSEC-spezifische RRs, KEY, SIG und NXT in einer Antwort gemäß der folgenden Tabelle enthält:
 
 
 
 | Wert                                                                                                | Bedeutung                                                                                                                                        |
 |------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="0"></span><dl> <dt>**0**</dt> </dl> | In der Antwort sind keine DNSSEC-Einträge enthalten, es sei denn, die Abfrage hat einen Ressourcen Eintrags Satz des DNSSEC-Daten Satz Typs angefordert.<br/>          |
-| <span id="1"></span><dl> <dt>**1**</dt> </dl> | DNSSEC-Datensätze sind in der Antwort gemäß RFC 2535 enthalten.<br/>                                                                  |
-| <span id="2"></span><dl> <dt>**2**</dt> </dl> | DNSSEC-Datensätze sind nur in einer Antwort enthalten, wenn die ursprüngliche Client Abfrage den Opt-Ressourcen Daten Satz gemäß RFC 2671 enthielt.<br/> |
+| <span id="0"></span><dl> <dt>**0**</dt> </dl> | In der Antwort sind keine DNSSEC-Einträge enthalten, es sei denn, die Abfrage hat einen Ressourceneintragssatz des DNSSEC-Eintragstyps angefordert.<br/>          |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl> | DNSSEC-Einträge sind gemäß RFC 2535 in der Antwort enthalten.<br/>                                                                  |
+| <span id="2"></span><dl> <dt>**2**</dt> </dl> | DNSSEC-Einträge sind nur dann in einer Antwort enthalten, wenn die ursprüngliche Clientabfrage den OPT-Ressourceneintrag gemäß RFC 2671 enthielt.<br/> |
 
 
 
  
 
-Wenn eine Abfrage einen Ressourcen Eintrags Satz des DNSSEC-Typs anfordert, antwortet der DNS-Server immer mit solchen Datensätzen, falls verfügbar.
+Wenn eine Abfrage einen Ressourceneintragssatz vom Typ DNSSEC anfordert, antwortet der DNS-Server immer mit solchen Einträgen, sofern verfügbar.
 
 </dd> <dt>
 
 **EnableEDnsProbes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt das Verhalten des DNS-Servers an. TRUE gibt an, dass der DNS-Server nach RFC 2671 immer mit opt-Ressourcen Einträgen antwortet, es sei denn, der Remote Server hat angegeben, dass EDNS in einem früheren Exchange nicht unterstützt werden. FALSE gibt an, dass der DNS-Server nur dann auf Abfragen mit OPTS antwortet, wenn opts in der ursprünglichen Abfrage gesendet werden.
+Gibt das Verhalten des DNS-Servers an. Bei TRUE antwortet der DNS-Server immer mit OPT-Ressourceneinträgen gemäß RFC 2671, es sei denn, der Remoteserver hat angegeben, dass er EDNS in einem früheren Austausch nicht unterstützt. False gibt an, dass der DNS-Server nur dann auf Abfragen mit OPTs antwortet, wenn OPTs in der ursprünglichen Abfrage gesendet werden.
 
 </dd> <dt>
 
 **EventLogLevel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, welche Ereignisse der DNS-Server im Ereignisanzeige System Protokoll aufzeichnet. Die folgenden Werte werden verwendet.
+Gibt an, welche Ereignisse der DNS-Server im Ereignisanzeige Systemprotokoll aufzeichnet. Die folgenden Werte werden verwendet.
 
 
 
 | Wert                                                                                                | Bedeutung                                  |
 |------------------------------------------------------------------------------------------------------|------------------------------------------|
 | <span id="0"></span><dl> <dt>**0**</dt> </dl> | Keine.<br/>                         |
-| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Nur Fehler protokollieren.<br/>              |
-| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Protokolliert nur Warnungen und Fehler.<br/> |
-| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Alle Ereignisse protokollieren.<br/>               |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Protokollieren Sie nur Fehler.<br/>              |
+| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Protokollieren Sie nur Warnungen und Fehler.<br/> |
+| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Protokollieren Sie alle Ereignisse.<br/>               |
 
 
 
@@ -491,23 +491,23 @@ Gibt an, welche Ereignisse der DNS-Server im Ereignisanzeige System Protokoll au
 
 </dd> <dt>
 
-**Weiterleitungen**
+**ForwardDelegations**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob Abfragen an Delegierte Subzonen weitergeleitet werden.
+Gibt an, ob Abfragen an delegierte Unterzonen weitergeleitet werden.
 
 </dd> <dt>
 
 **Weiterleitungen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -517,131 +517,131 @@ Listet die IP-Adressen der Weiterleitungen auf, an die der DNS-Server Abfragen w
 
 </dd> <dt>
 
-**"Forwardingtimeout"**
+**ForwardingTimeout**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Zeit (in Sekunden), die ein DNS-Server, der eine Abfrage weiterleitet, auf Auflösung von der Weiterleitung wartet [*, bevor versucht*](f-gly.md) wird, die Abfrage selbst aufzulösen.
+Die Zeit in Sekunden, in der ein DNS-Server, der eine Abfrage weiterleiten kann, auf die Auflösung der [*Weiterleitung*](f-gly.md) wartet, bevor versucht wird, die Abfrage selbst aufzulösen.
 
-Dieser Wert ist bedeutungslos, wenn der Weiterleitungsserver nicht für die Verwendung der Rekursion festgelegt ist. Um dies zu ermitteln, überprüfen Sie die Eigenschaft ' isslave ' Boolean.
+Dieser Wert ist bedeutungslos, wenn der Weiterleitungsserver nicht für die Verwendung der Rekursion festgelegt ist. Überprüfen Sie die boolesche IsSlave-Eigenschaft, um dies zu ermitteln.
 
 </dd> <dt>
 
-**Isslave**
+**IsSlave**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-**True** , wenn der DNS-Server keine Rekursion verwendet, wenn die Namensauflösung durch Weiterleitungen fehlschlägt.
+**TRUE,** wenn der DNS-Server keine Rekursion verwendet, wenn die Namensauflösung über Weiterleitungen fehlschlägt.
 
 </dd> <dt>
 
-**Listenadressen**
+**ListenAddresses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Listet die IP-Adressen auf, auf denen der DNS-Server Abfragen empfangen kann.
+Listet die IP-Adressen auf, für die der DNS-Server Abfragen empfangen kann.
 
 </dd> <dt>
 
-**Localnetpriority**
+**LocalNetPriority**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der DNS-Server bei der Rückgabe von Datensätzen Priorität für die lokale Netzwerkadresse erhält.
+Gibt an, ob der DNS-Server der lokalen Netzwerkadresse prioritätiert, wenn A-Einträge zurückgegeben werden.
 
 </dd> <dt>
 
 **LogFileMaxSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Größe des DNS-Server-Debugprotokolls in Bytes.
+Größe des DNS-Serverdebuggingprotokolls in Bytes.
 
 </dd> <dt>
 
-**LogFilePath**
+**Logfilepath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Dateiname und Pfad für das DNS-Server-Debugprotokoll. Der Standardwert ist% System32% \\ DNS \\ DNS. log. Relative Pfade sind relativ zu% systemroot% \\ system32. Absolute Pfade können verwendet werden, UNC-Pfade werden jedoch nicht unterstützt.
+Dateiname und Pfad für das DNS-Serverdebuggingprotokoll. Der Standardwert ist %system32% \\ dns \\ dns.log. Relative Pfade sind relativ zu %Systemroot% \\ System32. Absolute Pfade können verwendet werden, ABER UNC-Pfade werden nicht unterstützt.
 
 </dd> <dt>
 
-**Logipfilterlist**
+**LogIPFilterList**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Liste der IP-Adressen, die zum Filtern von in das Debugprotokoll geschriebenen DNS-Ereignissen verwendet werden.
+Liste der IP-Adressen, die zum Filtern von DNS-Ereignissen verwendet werden, die in das Debugprotokoll geschrieben wurden.
 
 </dd> <dt>
 
 **LogLevel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, welche Richtlinien im Ereignisanzeige System Protokoll aktiviert werden.
+Gibt an, welche Richtlinien im Ereignisanzeige Systemprotokoll aktiviert werden.
 
-Sollte auf Grundlage des folgenden Algorithmus auf bestimmte Werte festgelegt werden: für jede Richtlinie (die im Ereignisanzeige System Protokoll aktiviert werden soll) wird ein bestimmter Wert zugewiesen.
+Sollte basierend auf dem folgenden Algorithmus auf bestimmte Werte festgelegt werden: Jeder Richtlinie (die im Ereignisanzeige Systemprotokoll aktiviert werden soll) wird ein bestimmter Wert zugewiesen.
 
 
 
 | Wert                                                                                                                  | Bedeutung                                             |
 |------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| <span id="1"></span><dl> <dt>**1**</dt> </dl>                   | Such.<br/>                                   |
-| <span id="16"></span><dl> <dt>**Uhr**</dt> </dl>                 | Informiert.<br/>                                  |
-| <span id="32"></span><dl> <dt>**32**</dt> </dl>                 | Alisierungs.<br/>                                  |
-| <span id="254"></span><dl> <dt>**254**</dt> </dl>               | Nicht abgefragt Transaktionen.<br/>                   |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl>                   | Abfrage.<br/>                                   |
+| <span id="16"></span><dl> <dt>**16**</dt> </dl>                 | Benachrichtigen.<br/>                                  |
+| <span id="32"></span><dl> <dt>**32**</dt> </dl>                 | aktualisieren.<br/>                                  |
+| <span id="254"></span><dl> <dt>**254**</dt> </dl>               | Nichtabfragetransaktionen.<br/>                   |
 | <span id="256"></span><dl> <dt>**256**</dt> </dl>               | Fragen.<br/>                               |
-| <span id="512"></span><dl> <dt>**512**</dt> </dl>               | Beantwortet.<br/>                                 |
+| <span id="512"></span><dl> <dt>**512**</dt> </dl>               | Antworten.<br/>                                 |
 | <span id="4096"></span><dl> <dt>**4096**</dt> </dl>             | Send.<br/>                                    |
-| <span id="8192"></span><dl> <dt>**8192**</dt> </dl>             | Medizinisch.<br/>                                 |
-| <span id="16384"></span><dl> <dt>**16384**</dt> </dl>           | UDP.<br/>                                     |
+| <span id="8192"></span><dl> <dt>**8192**</dt> </dl>             | Erhalten.<br/>                                 |
+| <span id="16384"></span><dl> <dt>**16384**</dt> </dl>           | Udp.<br/>                                     |
 | <span id="32768"></span><dl> <dt>**32768**</dt> </dl>           | TCP.<br/>                                     |
 | <span id="65535"></span><dl> <dt>**65535**</dt> </dl>           | Alle Pakete.<br/>                             |
-| <span id="65536"></span><dl> <dt>**65536**</dt> </dl>           | NT-Verzeichnisdienst-Schreib Transaktion.<br/>  |
-| <span id="131072"></span><dl> <dt>**131072**</dt> </dl>         | NT-Verzeichnisdienst-Aktualisierungs Transaktion.<br/> |
+| <span id="65536"></span><dl> <dt>**65536**</dt> </dl>           | NT Directory Service-Schreibtransaktion.<br/>  |
+| <span id="131072"></span><dl> <dt>**131072**</dt> </dl>         | NT Directory Service-Updatetransaktion.<br/> |
 | <span id="16777216"></span><dl> <dt>**16777216**</dt> </dl>     | Vollständige Pakete.<br/>                            |
-| <span id="2147483648"></span><dl> <dt>**2147483648**</dt> </dl> | Schreiben Sie.<br/>                           |
+| <span id="2147483648"></span><dl> <dt>**2147483648**</dt> </dl> | Schreiben sie durch.<br/>                           |
 
 
 
@@ -651,64 +651,64 @@ Die Summe der Werte, die allen zu aktivierenden Richtlinien entsprechen, wird in
 
 </dd> <dt>
 
-**Looseemwildcarding**
+**LooseWildcarding**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der DNS-Server lose Platzhalter Vorgänge ausführt. Wenn nicht definiert oder 0 (null), folgt der Server dem in der DNS-RFC angegebenen Platzhalter Verhalten. In diesem Fall wird empfohlen, MX-Einträge für alle Hosts aufzunehmen, die keine e-Mail empfangen können. Wenn der Wert ungleich NULL ist, wird vom Server der nächste Platzhalter Knoten gesucht. in diesem Fall sollte ein Administrator MX-Einträge am Zonen Stamm und in einem Platzhalter Knoten (" \* ") direkt unterhalb des Zonen Stamms ablegen. Administratoren sollten außerdem selbst verweisende MX-Einträge auf Hosts platzieren, die ihre eigene e-Mail erhalten.
+Gibt an, ob der DNS-Server lose Platzhalter ausführt. Wenn nicht definiert oder 0 (null), folgt der Server dem in der DNS RFC angegebenen Platzhalterverhalten. In diesem Fall wird einem Administrator empfohlen, MX-Einträge für alle Hosts einzuschließen, die keine E-Mails empfangen können. Wenn der Wert ungleich 0 (null) ist, sucht der Server den nächstgelegenen Platzhalterknoten. In diesem Fall sollte ein Administrator MX-Einträge im Zonenstamm und in einem Platzhalterknoten \* ("") direkt unterhalb des Zonenstamms speichern. Außerdem sollten Administratoren selbstverweisende MX-Einträge auf Hosts setzen, die ihre eigenen E-Mails empfangen.
 
 </dd> <dt>
 
-**Maxcachettl**
+**MaxCacheTTL**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Maximale Zeit in Sekunden, während der der Datensatz einer rekursiven Namensabfrage im DNS-Server Cache verbleiben kann. Der DNS-Server löscht Datensätze aus dem Cache, wenn der Wert dieses Eintrags abläuft, auch wenn der Wert des TTL-Felds im Datensatz größer ist.
+Die maximale Zeit (in Sekunden) kann der Datensatz einer rekursiven Namensabfrage im DNS-Servercache verbleiben. Der DNS-Server löscht Datensätze aus dem Cache, wenn der Wert dieses Eintrags abläuft, auch wenn der Wert des TTL-Felds im Datensatz größer ist.
 
 Der Standardwert dieser Eigenschaft ist 86.400 Sekunden (1 Tag).
 
 </dd> <dt>
 
-**Maxnegativecachettl**
+**MaxNegativeCacheTTL**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die maximale Zeit in Sekunden, die ein Namensfehler Ergebnis einer rekursiven Abfrage im DNS-Server Cache verbleiben kann. DNS löscht Datensätze aus dem Cache, wenn dieser Timer abläuft, auch wenn das TTL-Feld größer ist. Der Standardwert ist 86.400 (ein Tag).
+Die maximale Zeit in Sekunden, die ein Namensfehler aufgrund einer rekursiven Abfrage verursacht, kann im DNS-Servercache verbleiben. DNS löscht Datensätze aus dem Cache, wenn dieser Timer abläuft, auch wenn das TTL-Feld größer ist. Der Standardwert ist 86.400 (ein Tag).
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der voll qualifizierte Domänen Name (FQDN) oder die IP-Adresse des DNS-Servers.
+Vollqualifizierte Domänennamen (Fully Qualified Domain Name, FQDN) oder IP-Adresse des DNS-Servers.
 
 </dd> <dt>
 
-**Namecheckflag**
+**NameCheckFlag**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -728,7 +728,7 @@ Gibt den Satz berechtigter Zeichen an, die in DNS-Namen verwendet werden sollen.
 
  
 
-* * Windows Server 2003: * *
+**Windows Server 2003: **
 
 Der Wert "2" gibt "Any" an.
 
@@ -737,56 +737,56 @@ Der Wert "2" gibt "Any" an.
 **NoRecursion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der DNS-Server rekursive Suche ausführt. TRUE gibt an, dass rekursive Suchen nicht ausgeführt werden.
+Gibt an, ob der DNS-Server rekursive Suchläufe ausführt. TRUE gibt an, dass rekursive Suchläufe nicht ausgeführt werden.
 
 </dd> <dt>
 
-**Rekursionretry**
+**RekursionRetry**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Verstrichene Sekunden vor Wiederholungsversuch für eine rekursive Suche. Wenn die Eigenschaft nicht definiert oder NULL ist, werden nach drei Sekunden Wiederholungs Versuche durchgeführt. Benutzer werden davon abgeraten, diese Eigenschaft zu ändern. Es gibt bestimmte Situationen, in denen die Eigenschaft geändert werden soll. ein Beispiel hierfür ist, wenn der DNS-Server über eine langsame Verbindung mit Remote Servern kontaktiert und der DNS-Server wiederholt wird, bevor die Antwort vom Remote-DNS empfangen wird. In diesem Fall wäre es sinnvoll, den Timeout zu erhöhen, wenn die beobachtete Antwortzeit des Remote-DNS etwas länger ist.
+Verstrichene Sekunden, bevor eine rekursive Suche wiederholt wird. Wenn die Eigenschaft nicht definiert oder 0 (null) ist, werden nach drei Sekunden Erneutentitäten vorgenommen. Benutzer werden davon abgeraten, diese Eigenschaft zu ändern. Es gibt bestimmte Situationen, in denen die Eigenschaft geändert werden soll. Ein Beispiel ist, wenn der DNS-Server Remoteserver über eine langsame Verbindung kontaktiert und der DNS-Server einen Wiederholungsversuch vor dem Empfang der Antwort vom Remote-DNS vorn durchfing. In diesem Fall wäre es sinnvoll, das Time out auf einen etwas längeren Zeitraum als die beobachtete Antwortzeit vom Remote-DNS aus zu erhöhen.
 
 </dd> <dt>
 
-**Recursiontimeout**
+**RecursionTimeout**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Verstrichene Sekunden, bevor der DNS-Server eine rekursive Abfrage ermöglicht. Wenn die Eigenschaft nicht definiert oder NULL ist, gibt der DNS-Server nach 15 Sekunden einen Wert aus. Im Allgemeinen ist das 15-Sekunden-Timeout ausreichend, damit alle ausstehenden Antworten an den DNS-Server zurückgegeben werden können.
+Verstrichene Sekunden, bevor der DNS-Server eine rekursive Abfrage aufgibt. Wenn die Eigenschaft nicht definiert oder 0 (null) ist, gibt der DNS-Server nach 15 Sekunden auf. Im Allgemeinen reicht das 15-Sekunden-Time out aus, damit alle ausstehenden Antworten wieder an den DNS-Server gesendet werden können.
 
-Benutzer werden davon abgeraten, diese Eigenschaft zu ändern. Ein Szenario, in dem die Eigenschaft geändert werden sollte, ist, wenn der DNS-Server über eine langsame Verbindung mit Remote Servern kontaktiert wird und der DNS-Server beobachtet wird, dass Abfragen (mit Server \_ Fehlern) abgelehnt werden, bevor Antworten empfangen werden.
+Benutzer werden davon abgeraten, diese Eigenschaft zu ändern. Ein Szenario, in dem die -Eigenschaft geändert werden sollte, ist, wenn der DNS-Server Remoteserver über eine langsame Verbindung kontaktiert und der DNS-Server beobachtet wird, dass Abfragen (mit SERVERFEHLER) abgelehnt werden, bevor Antworten empfangen \_ werden.
 
-Clientresolver wiederholen auch Abfragen, daher ist eine sorgfältige Untersuchung erforderlich, um zu bestimmen, ob Remote Antworten tatsächlich der Abfrage zugeordnet sind, für die ein Timeout aufgetreten ist. In diesem Fall wäre es sinnvoll, den Timeout Wert so zu erhöhen, dass er etwas länger als die beobachtete Antwortzeit des Remote-DNS ist.
+Client-Resolver wiederholen auch Abfragen, daher ist eine sorgfältige Untersuchung erforderlich, um zu ermitteln, ob Remoteantworten tatsächlich mit der Abfrage verknüpft sind, bei der ein Time out auft ist. In diesem Fall wäre es sinnvoll, den Time out-Wert so zu erhöhen, dass er etwas länger als die beobachtete Antwortzeit vom Remote-DNS ist.
 
 </dd> <dt>
 
-**Roundrobin**
+**RoundRobin**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der DNS-Server mehrere A-Einträge aufrundet.
+Gibt an, ob der DNS-Server mehrere A-Einträge roundrobiniert.
 
 </dd> <dt>
 
@@ -799,7 +799,7 @@ Datentyp: **sint32**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-RPC-Protokoll oder-Protokolle, über die administrative RPC ausgeführt werden. Der folgende Algorithmus wird verwendet, um einen bestimmten Wert zuzuweisen:
+RPC-Protokoll oder -Protokolle, über die der administrative RPC ausgeführt wird. Der folgende Algorithmus wird verwendet, um einen bestimmten Wert zu zuweisen:
 
 
 
@@ -808,7 +808,7 @@ RPC-Protokoll oder-Protokolle, über die administrative RPC ausgeführt werden. 
 | <span id="0"></span><dl> <dt>**0**</dt> </dl> | Keine<br/>        |
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | TCP<br/>         |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | Named Pipes<br/> |
-| <span id="4"></span><dl> <dt>**4**</dt> </dl> | LPC<br/>         |
+| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Lpc<br/>         |
 
 
 
@@ -821,54 +821,54 @@ Die Summe der Werte gibt die verwendeten Protokolle an.
 **ScavengingInterval**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Intervall (in Stunden) zwischen zwei aufeinander folgenden Bereinigung-Vorgängen, die vom DNS-Server ausgeführt werden. NULL gibt an, dass das Bereinigung deaktiviert ist. Der Standardwert ist 168 Stunden (sieben Tage).
+Intervall in Stunden zwischen zwei aufeinanderfolgenden Besendungsvorgängen, die vom DNS-Server ausgeführt werden. 0 (null) gibt an, dass die Besenkung deaktiviert ist. Der Standardwert ist 168 Stunden (sieben Tage).
 
 </dd> <dt>
 
-**Secureresponses**
+**SecureResponses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der DNS-Server exklusiv Datensätze in derselben Unterstruktur speichert wie der Server, von dem Sie bereitgestellt wurden.
+Gibt an, ob der DNS-Server ausschließlich Einträge mit Namen in derselben Unterstruktur speichert wie der Server, der sie bereitgestellt hat.
 
 </dd> <dt>
 
 **SendPort**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Port, an den der DNS-Server UDP-Abfragen an andere Server sendet. Standardmäßig sendet der DNS-Server Abfragen an einen Socket, der an den DNS-Port gebunden ist.
+Port, an dem der DNS-Server UDP-Abfragen an andere Server sendet. Standardmäßig sendet der DNS-Server Abfragen an einen Socket, der an den DNS-Port gebunden ist.
 
-In bestimmten Situationen ist dies nicht die beste Konfiguration. Ein offensichtlicher Fall ist, wenn ein Administrator den DNS-Port mit einer Firewall blockiert, um den externen Zugriff auf den DNS-Server zu verhindern, der Server jedoch weiterhin in der Lage sein soll, eine Verbindung mit den Internet-DNS-Servern aufzunehmen, um die Namensauflösung für interne Clients Ein weiterer Fall ist, wenn der DNS-Server nicht zusammenhängende Netze unterstützt (die Eigenschaft **disjointnets** , die auf true festgelegt ist, identifiziert dieses Szenario). In diesen Fällen weist das Festlegen der **sendonnondnsport** -Eigenschaft auf einen Wert ungleich NULL den DNS-Server an, an einen beliebigen Port für das Senden an Remote-DNS-Server zu binden.
+In bestimmten Situationen ist dies nicht die beste Konfiguration. Ein offensichtlicher Fall ist, wenn ein Administrator den DNS-Port mit einer Firewall blockiert, um externen Zugriff auf den DNS-Server zu verhindern, aber dennoch möchte, dass der Server Internet-DNS-Server kontaktieren kann, um eine Namensauflösung für interne Clients zu ermöglichen. Ein weiterer Fall ist, wenn der DNS-Server disjoint-Nets unterstützt (die Eigenschaft **DisjointNets,** die auf TRUE festgelegt ist, identifiziert dieses Szenario). In diesen Fällen wird der DNS-Server durch Festlegen der **SendOnNonDnsPort-Eigenschaft** auf einen Wert ungleich 0 (null) an einen beliebigen Port zum Senden an DNS-Remoteserver gebunden.
 
-Wenn der **sendonnondnsport** -Wert größer als 1024 ist, bindet der DNS-Server explizit an den angegebenen Portwert. Diese Konfigurationsoption ist nützlich, wenn ein Administrator den DNS-abfrageport zu firewallzwecken korrigieren muss.
+Wenn der **SendOnNonDnsPort-Wert** größer als 1024 ist, wird der DNS-Server explizit an den angegebenen Portwert gebunden. Diese Konfigurationsoption ist nützlich, wenn ein Administrator den DNS-Abfrageport für Firewallzwecke korrigieren muss.
 
-* * Windows Server 2003: * *
+**Windows Server 2003: **
 
-Das Festlegen der sendport-Eigenschaft auf einen Wert ungleich 0 (null) bewirkt, dass der DNS-Server an einen beliebigen Port zum Senden an Remote-DNS-Server gebunden wird.
+Das Festlegen der SendPort-Eigenschaft auf einen Wert von nicht 0 (null) bewirkt, dass der DNS-Server eine Bindung an einen beliebigen Port zum Senden an DNS-Remoteserver erstellt.
 
 </dd> <dt>
 
-**Serveradressen**
+**ServerAddresses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -878,48 +878,48 @@ Listet die IP-Adressen für den DNS-Server auf.
 
 </dd> <dt>
 
-**Strictfile-paramesing**
+**StrictFileParsing**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob [*Zonendateien*](z-gly.md) vom DNS-Server strikt analysiert werden. Wenn Sie nicht definiert oder NULL ist, protokolliert der Server ungültige Daten in der Zonendatei und ignoriert diese, und die Daten werden weiterhin geladen. Wenn der Wert ungleich NULL ist, protokolliert der Server Fehler bei Zonendateien und schlägt fehl.
+Gibt an, ob der DNS-Server [*Zonendateien streng*](z-gly.md) analysiert. Wenn nicht definiert oder 0 (null) ist, protokolliert und ignoriert der Server fehlerhafte Daten in der Zonendatei und wird weiterhin geladen. Wenn nicht 0 (null) ist, protokolliert der Server Zonendateifehler und kann nicht ausgeführt werden.
 
 </dd> <dt>
 
-**Update Options**
+**UpdateOptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Schränkt den Typ der Datensätze ein, die auf dem Server dynamisch aktualisiert werden können, und wird zusätzlich zu den **AllowUpdate** -Einstellungen auf Server-und Zonen Objekten verwendet.
+Schränkt den Typ der Datensätze ein, die auf dem Server dynamisch aktualisiert werden können und zusätzlich zu den **AllowUpdate-Einstellungen** für Server- und Zonenobjekte verwendet werden.
 
-* * Windows Server 2003: * *
+**Windows Server 2003: **
 
-0: keine Einschränkungen.
+0: Keine Einschränkungen.
 
-1: dynamische Updates von SOA-Datensätzen nicht zulassen.
+1: Dynamische Updates von SOA-Datensätzen nicht zulassen.
 
-2: lassen Sie keine dynamischen Updates von NS-Datensätzen am Zonen Stamm zu.
+2: Dynamische Updates von NS-Einträgen im Zonenstamm nicht zulassen.
 
-4: lassen Sie keine dynamischen Updates von NS-Einträgen zu, die sich nicht im Zonen Stamm befinden (Delegierung NS-Einträge).
+4: Dynamische Updates von NS-Einträgen, die sich nicht im Zonenstamm befinden, nicht zulassen (Delegierung von NS-Einträgen).
 
-Addieren Sie diese Werte, um den Einstellungs Wert zu bestimmen.
+Summiert diese Werte, um den Einstellungswert zu bestimmen.
 
 </dd> <dt>
 
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -929,29 +929,29 @@ Version des DNS-Servers.
 
 </dd> <dt>
 
-**Schreib Autorität**
+**WriteAuthorityNS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der DNS-Server bei erfolgreicher Antwort NS-und SOA-Einträge in den Autorisierungs Abschnitt schreibt.
+Gibt an, ob der DNS-Server bei erfolgreicher Antwort NS- und SOA-Einträge in den Autoritätsabschnitt schreibt.
 
 </dd> <dt>
 
-**Xfrconnecttimeout**
+**XfrConnectTimeout**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Zeit in Sekunden, während der der DNS-Server auf eine erfolgreiche TCP-Verbindung mit einem Remote Server wartet, wenn eine Zonen Übertragung versucht wird.
+Die Zeit in Sekunden, die der DNS-Server beim Versuch einer Zonenübertragung auf eine erfolgreiche TCP-Verbindung mit einem Remoteserver wartet.
 
 </dd> </dl>
 
@@ -964,7 +964,7 @@ Die Zeit in Sekunden, während der der DNS-Server auf eine erfolgreiche TCP-Verb
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -972,16 +972,16 @@ Die Zeit in Sekunden, während der der DNS-Server auf eine erfolgreiche TCP-Verb
 
 <dl> <dt>
 
-[**Start Service-Methode der MicrosoftDNS- \_ Server Klasse**](microsoftdns-server-startservice.md)
+[**StartService-Methode der \_ MicrosoftDNS-Serverklasse**](microsoftdns-server-startservice.md)
 </dt> <dt>
 
-[**Stop Service-Methode der MicrosoftDNS- \_ Server Klasse**](microsoftdns-server-stopservice.md)
+[**StopService-Methode der \_ MicrosoftDNS-Serverklasse**](microsoftdns-server-stopservice.md)
 </dt> <dt>
 
-[**Startscavenging-Methode der MicrosoftDNS- \_ Server Klasse**](microsoftdns-server-startscavenging.md)
+[**StartScavenging-Methode der \_ MicrosoftDNS-Serverklasse**](microsoftdns-server-startscavenging.md)
 </dt> <dt>
 
-[**Geterkennbar shedname-Methode der MicrosoftDNS- \_ Server Klasse**](microsoftdns-server-getdistinguishedname.md)
+[**GetDistinguishedName-Methode der \_ MicrosoftDNS-Serverklasse**](microsoftdns-server-getdistinguishedname.md)
 </dt> </dl>
 
  

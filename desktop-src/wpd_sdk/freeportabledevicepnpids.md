@@ -1,7 +1,7 @@
 ---
-description: 'Gibt die Plug & Play (PNP)-IDs frei, die von den Methoden iportabledevicemanager:: GetDevices oder iportabledeviceservicemanager:: getdeviceservices abgerufen werden.'
+description: Gibt die Plug & Play(PnP)-Bezeichner frei, die von den Methoden IPortableDeviceManager::GetDevices oder IPortableDeviceServiceManager::GetDeviceServices abgerufen werden.
 ms.assetid: b86f7733-81a3-4b60-bb7c-840c75f8d03f
-title: Freportabledebug-Funktion (portabledevice. h)
+title: FreePortableDevicePnPIDs-Funktion (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: 58bb5fa33007ed0e167226edf7078d08c2e5c3de
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 150796912d2796a2697d3c088963c20e1523288f5a1301e9467a6859845db68c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217199"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119590314"
 ---
-# <a name="freeportabledevicepnpids-function"></a>Freportabledebug Item-Funktion
+# <a name="freeportabledevicepnpids-function"></a>FreePortableDevicePnPIDs-Funktion
 
-Die Hilfsfunktion " **freportabledevicepnpids** " gibt die Plug & Play (PNP)-IDs frei, die von der [**iportabledevicemanager:: GetDevices**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicemanager-getdevices) -Methode oder der [**iportabledeviceservicemanager:: getdeviceservices**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicemanager-getdeviceservices) -Methode abgerufen werden.
+The **FreePortableDevicePnPIDs** helper function frees the Plug and Play (PnP) identifiers that are retrieved by the [**IPortableDeviceManager::GetDevices**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicemanager-getdevices) or [**IPortableDeviceServiceManager::GetDeviceServices**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicemanager-getdeviceservices) methods.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ void FreePortableDevicePnPIDs(
 
 <dl> <dt>
 
-*ppnpids* 
+*pPnPIDs* 
 </dt> <dd>
 
-Das Array von Plug & Play-Bezeichner (PNP), das freigegeben werden soll.
+Das Array der Plug & Play (PnP), die frei werden sollen.
 
 </dd> <dt>
 
-*cpnpids* 
+*cPnPIDs* 
 </dt> <dd>
 
-Die Anzahl der Bezeichner im Array, das vom *ppnpids* -Parameter angegeben wird.
+Die Anzahl der Bezeichner im Array, die durch den *pPnPIDs-Parameter angegeben* werden.
 
 </dd> </dl>
 
@@ -58,9 +58,9 @@ Die Anzahl der Bezeichner im Array, das vom *ppnpids* -Parameter angegeben wird.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung ist dafür verantwortlich, das Array von Zeigern freizugeben, das Sie zuweist.
+Die Anwendung ist dafür verantwortlich, das Array von Zeigern frei zu geben, die sie zuteilen.
 
 ## <a name="examples"></a>Beispiele
 
@@ -90,9 +90,9 @@ if (pPnpDeviceIDs != NULL)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                   |
-| Header<br/>                   | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 

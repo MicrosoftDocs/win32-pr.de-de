@@ -1,11 +1,11 @@
 ---
-title: Media. getmarkertime-Methode
-description: Die getmarkertime-Methode ruft die Zeit des Markers am angegebenen Index ab.
+title: Media.getMarkerTime-Methode
+description: Die getMarkerTime-Methode ruft die Zeit des Markers am angegebenen Index ab.
 ms.assetid: c3e6bead-2831-4d84-9d13-dcb865efe472
 keywords:
-- getmarkertime-Methode, Windows-Media Player
-- getmarkertime-Methode, Windows Media Player, Medienklasse
-- Medienklasse Windows Media Player, getmarkertime-Methode
+- getMarkerTime-Windows Media Player
+- getMarkerTime-Methode Windows Media Player , Media-Klasse
+- Medienklasse Windows Media Player , getMarkerTime-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4398f89055a1996acb3f921d33c7675e52100ddd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0f90d1382302e4a053a6dee4dac911d2cc0c0aa67066469c8143f6f38b3bd889
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358726"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119508410"
 ---
-# <a name="mediagetmarkertime-method"></a>Media. getmarkertime-Methode
+# <a name="mediagetmarkertime-method"></a>Media.getMarkerTime-Methode
 
-Die **getmarkertime** -Methode ruft die Zeit des Markers am angegebenen Index ab.
+Die **getMarkerTime-Methode** ruft die Zeit des Markers am angegebenen Index ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ retVal = Media.getMarkerTime(
 
 <dl> <dt>
 
-*markernum* \[ in\]
+*markerNum* \[ In\]
 </dt> <dd>
 
-**Zahl** (**Long**), die den MarkerIndex angibt.
+**Number** (**long**) gibt den Markerindex an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zahl** (**Double**) zurück, die den Speicherort der Markierung in Sekunden ab dem Anfang des Clips angibt.
+Diese Methode gibt eine **Zahl** **(double)** zurück, die die Position des Markers in Sekunden ab dem Anfang des Clips angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gibt **null** zurück, wenn der angegebene Marker nicht vorhanden ist.
+Diese Methode gibt **NULL zurück,** wenn der angegebene Marker nicht vorhanden ist.
 
-Einige digitale Medienelemente enthalten keine Marker. Verwenden Sie **markercount** , um herauszufinden, wie viele Marker im aktuellen Clip angezeigt werden.
+Einige digitale Medienelemente enthalten keine Marker. Verwenden **Sie markerCount,** um herauszufinden, wie viele Marker sich im aktuellen Clip befinden.
 
 Markerindexnummern beginnen bei 1.
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel werden *Medien* verwendet. **getmarkertime** zum Ausfüllen eines HTML-TEXTAREA-Elements mit dem Namen "mtimes" mit dem Speicherort der einzelnen Marker. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript Media *verwendet.* **getMarkerTime,** um ein HTML-TEXTAREA-Element namens MTIMES mit der Position der einzelnen Marker zu füllen. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -95,7 +95,7 @@ for (var i = 1;i < mcount + 1; i++){
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -107,16 +107,16 @@ for (var i = 1;i < mcount + 1; i++){
 [**Medienobjekt**](media-object.md)
 </dt> <dt>
 
-[**Media. getmarkername**](media-getmarkername.md)
+[**Media.getMarkerName**](media-getmarkername.md)
 </dt> <dt>
 
-[**Media. markercount**](media-markercount.md)
+[**Media.markerCount**](media-markercount.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

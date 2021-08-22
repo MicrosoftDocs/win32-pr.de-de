@@ -1,7 +1,7 @@
 ---
-description: Ändert den Gebiets Schema Bezeichner für die angegebenen Striche.
+description: Ändert den Locale Identifier für die angegebenen Striche.
 ms.assetid: 39dd24d5-4381-4b51-8d95-7d936fd69d47
-title: 'Iinkanalyzer:: SetStrokesLanguageId-Methode (iacom. h)'
+title: IInkAnalyzer::SetStrokesLanguageId-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 84d2e4b9e3ac24fc73eddc4f84bcc9337cb4c372
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2a063180d89fd9f29ebcacd5b9cbd9e98e4299d82aac2328b08624e3c1557249
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345121"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119590340"
 ---
-# <a name="iinkanalyzersetstrokeslanguageid-method"></a>Iinkanalyzer:: SetStrokesLanguageId-Methode
+# <a name="iinkanalyzersetstrokeslanguageid-method"></a>IInkAnalyzer::SetStrokesLanguageId-Methode
 
-Ändert den Gebiets Schema Bezeichner für die angegebenen Striche.
+Ändert den Locale Identifier für die angegebenen Striche.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,48 +41,48 @@ HRESULT SetStrokesLanguageId(
 
 <dl> <dt>
 
-*ulstrokeidcount* \[ in\]
+*ulStrokeIdCount* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Stroke-IDs in *plstrokes*.
+Die Anzahl der Strichbezeichner in *plStrokes*.
 
 </dd> <dt>
 
-*pltakte* \[ in\]
+*plStrokes* \[ In\]
 </dt> <dd>
 
-Das Array von Bezeichnern für die Striche, denen der Gebiets Schema Bezeichner zugewiesen werden soll.
+Das Array von Bezeichnern für die Striche, denen der Locale Identifier zugewiesen werden soll.
 
 </dd> <dt>
 
-*lstrokeslcid* \[ in\]
+*lStrokesLCID* \[ In\]
 </dt> <dd>
 
-Der Gebiets Schema Bezeichner, der den Strichen zugewiesen werden soll.
+Der Den Strichen zu zuweisende Lokalbezeichner.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Gebiets Schema eines Strichs wird festgelegt, wenn Sie den Strich durch Aufrufen von [**iinkanalyzer:: AddStroke Method**](iinkanalyzer-addstroke.md), [**iinkanalyzer:: addstrokeforlanguage-Methode**](iinkanalyzer-addstrokeforlanguage.md), [**iinkanalyzer:: addstriche**](iinkanalyzer-addstrokes.md)-Methode oder [**iinkanalyzer:: addstrokesforlanguage**](iinkanalyzer-addstrokesforlanguage.md)-Methode hinzufügen. Um das Gebiets Schema abzurufen, das momentan einem Strich zugewiesen ist, müssen Sie die [**iinkanalyzer:: GetStrokeLanguageId-Methode**](iinkanalyzer-getstrokelanguageid.md)aufrufen.
+Das Locale eines Strichs wird festgelegt, wenn Sie den Strich durch Aufrufen der [**IInkAnalyzer::AddStroke-Methode,**](iinkanalyzer-addstroke.md) [**der IInkAnalyzer::AddStrokeForLanguage-Methode,**](iinkanalyzer-addstrokeforlanguage.md) [**der IInkAnalyzer::AddStrokes-Methode**](iinkanalyzer-addstrokes.md)oder der [**IInkAnalyzer::AddStrokesForLanguage-Methode hinzufügen.**](iinkanalyzer-addstrokesforlanguage.md) Rufen Sie die [**IInkAnalyzer::GetStrokeLanguageId-Methode**](iinkanalyzer-getstrokelanguageid.md)auf, um das derzeit einem Strich zugewiesene Locale zu erhalten.
 
-Die angegebenen Striche werden auf einen nicht klassifizierten frei Hand Knoten verschoben (siehe [**icontextnode:: GetType**](icontextnode-gettype.md)), der Striche derselben Sprache enthält. Wenn kein solcher [**icontextnode**](icontextnode.md) vorhanden ist, erstellt diese Methode einen neuen nicht klassifizierten frei Hand Knoten und verschiebt die Striche darauf. Bei einem nicht klassifizierten Ink-Knoten handelt es sich um einen **icontextnode** mit dem Typ unclassimeedink.
+Die angegebenen Striche werden in einen nicht klassifizierten Ink-Knoten verschoben (siehe [**IContextNode::GetType),**](icontextnode-gettype.md)der Striche derselben Sprache enthält. Wenn kein solcher [**IContextNode vorhanden**](icontextnode.md) ist, erstellt diese Methode einen neuen nicht klassifizierten Ink-Knoten und verschiebt die Striche darauf. Ein nicht klassifizierter Ink-Knoten ist ein **IContextNode mit** dem Typ UnclassifiedInk.
 
-Wenn diese Methode Striche von einem [**icontextnode**](icontextnode.md) verschiebt, bei dem es sich nicht um einen nicht klassifizierten frei Hand Knoten handelt, fügt diese Methode auch die Begrenzungs Felder der Striche in den geänderten Bereich der Ink Analyzer ein (siehe [**iinkanalyzer:: getdirtyregion-Methode**](iinkanalyzer-getdirtyregion.md)).
+Wenn diese Methode Striche von einem [**IContextNode**](icontextnode.md) verschiebt, der kein nicht klassifizierter Ink-Knoten ist, fügt diese Methode auch die Begrenzungsfelder der Striche zum verfälschten Bereich des Ink Analyzers hinzu (siehe [**IInkAnalyzer::GetDirtyRegion-Methode**](iinkanalyzer-getdirtyregion.md)).
 
-Diese Methode verschiebt keinen Strich, wenn der *lstrokelcid* -Parameter mit dem aktuellen sprach Bezeichner des Strichs übereinstimmt.
+Diese Methode bewegt keinen Strich, wenn der *lStrokeLCID-Parameter* dem aktuellen Sprachbezeichner des Strichs entspricht.
 
-Wenn ein angegebener Strich nicht mit [**iinkanalyzer**](iinkanalyzer.md)verknüpft ist, ignoriert diese Methode den Bezeichner.
+Wenn ein angegebener Strich nicht dem [**IInkAnalyzer**](iinkanalyzer.md)zugeordnet ist, ignoriert diese Methode den Bezeichner.
 
-Wenn keiner der angegebenen Striche einen Strich identifiziert, der dem [**iinkanalyzer**](iinkanalyzer.md)zugeordnet ist, gibt diese Methode zurück, ohne **iinkanalyzer** zu aktualisieren.
+Wenn keiner der angegebenen Striche einen Strich identifiziert, der [**dem IInkAnalyzer**](iinkanalyzer.md)zugeordnet ist, gibt diese Methode zurück, ohne **IInkAnalyzer zu aktualisieren.**
 
-Diese Methode gibt einen Fehlercode zurück, wenn strokeIds **null** ist.
+Diese Methode gibt einen Fehlercode zurück, wenn strokeIds NULL **ist.**
 
-Weitere Informationen zu sprach Bezeichnern finden Sie unter [sprach Bezeichner-Konstanten und-](/windows/desktop/Intl/language-identifier-constants-and-strings)Zeichen folgen.
+Weitere Informationen zu Sprachbezeichnern finden Sie unter [Sprachbezeichnerkonst konstanten und Zeichenfolgen](/windows/desktop/Intl/language-identifier-constants-and-strings).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,9 +90,9 @@ Weitere Informationen zu sprach Bezeichnern finden Sie unter [sprach Bezeichner-
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -101,28 +101,28 @@ Weitere Informationen zu sprach Bezeichnern finden Sie unter [sprach Bezeichner-
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: AddStroke-Methode**](iinkanalyzer-addstroke.md)
+[**IInkAnalyzer::AddStroke-Methode**](iinkanalyzer-addstroke.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: addstrokeforlanguage-Methode**](iinkanalyzer-addstrokeforlanguage.md)
+[**IInkAnalyzer::AddStrokeForLanguage-Methode**](iinkanalyzer-addstrokeforlanguage.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: AddStrokes-Methode**](iinkanalyzer-addstrokes.md)
+[**IInkAnalyzer::AddStrokes-Methode**](iinkanalyzer-addstrokes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: addstrokesforlanguage-Methode**](iinkanalyzer-addstrokesforlanguage.md)
+[**IInkAnalyzer::AddStrokesForLanguage-Methode**](iinkanalyzer-addstrokesforlanguage.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: GetStrokeLanguageId-Methode**](iinkanalyzer-getstrokelanguageid.md)
+[**IInkAnalyzer::GetStrokeLanguageId-Methode**](iinkanalyzer-getstrokelanguageid.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: SetStrokeLanguageId-Methode**](iinkanalyzer-setstrokelanguageid.md)
+[**IInkAnalyzer::SetStrokeLanguageId-Methode**](iinkanalyzer-setstrokelanguageid.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

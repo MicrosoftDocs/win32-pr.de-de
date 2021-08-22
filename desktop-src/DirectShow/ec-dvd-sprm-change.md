@@ -1,7 +1,7 @@
 ---
-description: Wird gesendet, wenn sich der Wert eines Systemparameter Registers (SPRM) ändert.
+description: Wird gesendet, wenn sich der Wert eines Systemparameterregisters (SPRM) ändert.
 ms.assetid: 266b6de1-740d-4b3d-8487-5a9570d6c852
-title: EC_DVD_SPRM_Change (dvdevcode. h)
+title: EC_DVD_SPRM_Change (Dvdevcode.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - dvdevcode.h
-ms.openlocfilehash: 1af5b8637a197973bca2129a8b8a0198d20248eb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e242fb17bfd80826b4bd165a2008789a2df7e478e5f526342bcbbe17ddf9d081
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366919"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119537020"
 ---
-# <a name="ec_dvd_sprm_change"></a>EC- \_ DVD- \_ SPRM- \_ Änderung
+# <a name="ec_dvd_sprm_change"></a>EC \_ DVD \_ SPRM \_ Change
 
-Wird gesendet, wenn sich der Wert eines Systemparameter Registers (SPRM) ändert.
+Wird gesendet, wenn sich der Wert eines Systemparameterregisters (SPRM) ändert.
 
 ## <a name="parameters"></a>Parameter
 
@@ -31,7 +31,7 @@ Wird gesendet, wenn sich der Wert eines Systemparameter Registers (SPRM) ändert
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-Der null basierte Index des SPRM-Werts, der geändert wurde.
+Der nullbasierte Index des sprm-Werts, der geändert wurde.
 
 </dd> <dt>
 
@@ -42,9 +42,9 @@ Die unteren 16 Bits enthalten den neuen SPRM-Wert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis ist standardmäßig deaktiviert. Um dieses Ereignis zu aktivieren, müssen Sie [**IDvdControl2:: SetOption**](/windows/desktop/api/Strmif/nf-strmif-idvdcontrol2-setoption) aufrufen und die Option " **DVD \_ enableloggingevents** " auf " **true**" festlegen.
+Dieses Ereignis ist standardmäßig deaktiviert. Um dieses Ereignis zu aktivieren, rufen [**Sie IDvdControl2::SetOption**](/windows/desktop/api/Strmif/nf-strmif-idvdcontrol2-setoption) auf, und legen Sie die **Option DVD \_ EnableLoggingEvents** auf **TRUE** fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Dieses Ereignis ist standardmäßig deaktiviert. Um dieses Ereignis zu aktiviere
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdevcode. h (Include DShow. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdevcode.h (include Dshow.h)</dt> </dl> |
 
 
 
@@ -63,13 +63,13 @@ Dieses Ereignis ist standardmäßig deaktiviert. Um dieses Ereignis zu aktiviere
 [DVD-Anwendungen](dvd-applications.md)
 </dt> <dt>
 
-[DVD-Ereignis Benachrichtigungs Codes](dvd-notification-codes.md)
+[DVD-Ereignisbenachrichtigungscodes](dvd-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> <dt>
 
-[**IDvdInfo2:: getallsprms**](/windows/desktop/api/Strmif/nf-strmif-idvdinfo2-getallsprms)
+[**IDvdInfo2::GetAllSPRMs**](/windows/desktop/api/Strmif/nf-strmif-idvdinfo2-getallsprms)
 </dt> </dl>
 
  

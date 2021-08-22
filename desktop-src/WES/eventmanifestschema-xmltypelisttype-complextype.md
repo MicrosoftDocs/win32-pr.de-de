@@ -1,9 +1,9 @@
 ---
-title: Komplexer xmltypelisttype-Typ
-description: Definiert einen Listen Ausgabetyp, den der Dienst verwendet, um zu bestimmen, wie ein Eingabe Datentyp dargestellt werden soll.
+title: Komplexer XmlTypeListType-Typ
+description: Definiert listenausgabetypen, die der Dienst verwendet, um zu bestimmen, wie ein Eingabedatentyp gerendert wird.
 ms.assetid: d90b32cc-a0b5-44d1-8083-781aa5e10783
 keywords:
-- Xmltypelisttype Complex-Typ EventLog
+- Komplexer XmlTypeListType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 388161572ec9c84ed46d5b40987df5fb8d1ed077
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e30ca23a0e4ab0168ff7479a5246acfb4b34e3a43bc62886d988d5f54549672b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340797"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119620320"
 ---
-# <a name="xmltypelisttype-complex-type"></a>Komplexer xmltypelisttype-Typ
+# <a name="xmltypelisttype-complex-type"></a>Komplexer XmlTypeListType-Typ
 
-Definiert einen Listen Ausgabetyp, den der Dienst verwendet, um zu bestimmen, wie ein Eingabe Datentyp dargestellt werden soll.
+Definiert listenausgabetypen, die der Dienst verwendet, um zu bestimmen, wie ein Eingabedatentyp gerendert wird.
 
 ``` syntax
 <xs:complexType name="XmlTypeListType">
@@ -60,9 +60,9 @@ Definiert einen Listen Ausgabetyp, den der Dienst verwendet, um zu bestimmen, wi
 
 
 
-| Element                                                                | type | BESCHREIBUNG                      |
+| Element                                                                | Typ | Beschreibung                      |
 |------------------------------------------------------------------------|------|----------------------------------|
-| [**xmlType**](eventmanifestschema-xmltype-xmltypelisttype-element.md) |      | Definiert einen XML-Typ. <br/> |
+| [**Xmltype**](eventmanifestschema-xmltype-xmltypelisttype-element.md) |      | Definiert einen XML-Typ. <br/> |
 
 
 
@@ -70,17 +70,17 @@ Definiert einen Listen Ausgabetyp, den der Dienst verwendet, um zu bestimmen, wi
 
 
 
-| Name   | type                                                              | BESCHREIBUNG                                                                                                                                                                                                                                                |
+| Name   | Typ                                                              | Beschreibung                                                                                                                                                                                                                                                |
 |--------|-------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| name   | **QName**                                                         | Der Name des Ausgabe Typs.<br/>                                                                                                                                                                                                                    |
-| Symbol | [**Csymboltype**](eventmanifestschema-csymboltype-simpletype.md) | Das Symbol, mit dem auf den Ausgabetyp in der Anwendung verwiesen werden soll. Der [**Nachrichten Compiler (MC.exe)**](message-compiler--mc-exe-.md) verwendet das Symbol, um eine Konstante für den Ausgabetyp in der vom Compiler generierten Header Datei zu erstellen.<br/> |
+| name   | **QName**                                                         | Der Name des Ausgabetyps.<br/>                                                                                                                                                                                                                    |
+| Symbol | [**CSymbolType**](eventmanifestschema-csymboltype-simpletype.md) | Das Symbol, das verwendet werden soll, um auf den Ausgabetyp in Ihrer Anwendung zu verweisen. Der [**Nachrichtencompiler (MC.exe)**](message-compiler--mc-exe-.md) verwendet das -Symbol, um eine Konstante für den Ausgabetyp in der Headerdatei zu erstellen, die der Compiler generiert.<br/> |
 | value  | Zeichenfolge                                                            | Ein ganzzahliger Wert, der den Ausgabetyp in der Liste der von Ihnen definierten Ausgabetypen eindeutig identifiziert.<br/>                                                                                                                                          |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die \\ include \\Winmeta.xml-Datei, die im Windows SDK enthalten ist, enthält eine Liste vordefinierter Ausgabetypen.
+Die IncludeWinmeta.xml datei, die im Windows SDK enthalten ist, enthält eine Liste \\ \\ vordefinierter Ausgabetypen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,8 +88,8 @@ Die \\ include \\Winmeta.xml-Datei, die im Windows SDK enthalten ist, enthält e
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

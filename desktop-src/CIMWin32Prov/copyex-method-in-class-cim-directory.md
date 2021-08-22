@@ -1,5 +1,5 @@
 ---
-description: Die CopyEx-Methode kopiert die im Objekt Pfad angegebene logische Datei (oder das Verzeichnis) an den Speicherort, der durch den filename-Parameter angegeben wird. Bei dieser Methode handelt es sich um eine erweiterte Version der Copy-Methode, die von der CIM \_ LogicalFile geerbt wird.
+description: Die CopyEx-Methode kopiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist, an den speicherort, der durch den FileName-Parameter angegeben wird. Diese Methode ist eine erweiterte Version der Copy-Methode und wird von CIM \_ LogicalFile geerbt.
 ms.assetid: e207cc80-055e-41bc-ab80-dc50131b544d
 ms.tgt_platform: multiple
 title: CopyEx-Methode der CIM_Directory-Klasse
@@ -14,23 +14,23 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 1d7502c46c616d9b8e1fffeebf5aefcd022dd4cc
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6ef84023cc5c6f42aa398cf1591ab381a634330b3423f381f5b386607e305b79
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958236"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119504880"
 ---
-# <a name="copyex-method-of-the-cim_directory-class"></a>CopyEx-Methode der CIM- \_ Verzeichnis Klasse
+# <a name="copyex-method-of-the-cim_directory-class"></a>CopyEx-Methode der CIM \_ Directory-Klasse
 
-Die **CopyEx** -Methode kopiert die im Objekt Pfad angegebene logische Datei (oder das Verzeichnis) an den Speicherort, der durch den *filename* -Parameter angegeben wird. Bei dieser Methode handelt es sich um eine erweiterte Version der [**Copy**](copy-method-in-class-cim-directory.md) -Methode, die von der [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt wird.
+Die **CopyEx-Methode** kopiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist, an den speicherort, der durch den *FileName-Parameter angegeben* wird. Diese Methode ist eine erweiterte Version der [**Copy-Methode**](copy-method-in-class-cim-directory.md) und wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,39 +50,39 @@ uint32 CopyEx(
 
 <dl> <dt>
 
-*Dateiname* \[ in\]
+*FileName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name der Kopie der Zieldatei (oder des Verzeichnisses).
+Vollqualifizierter Name der Kopie der Zieldatei (oder des Zielverzeichnisses).
 
-Beispiel: "c: \\ Temp \\ NewDirectory"
+Beispiel: "c: \\ temp \\ newdirectory"
 
 </dd> <dt>
 
-*Stop filename* \[ vorgenommen\]
+*StopFileName* \[ out\]
 </dt> <dd>
 
-Eine Zeichenfolge, die den Namen der Datei (oder des Verzeichnisses) darstellt, in der die Methode fehlgeschlagen ist. Dieser Parameter ist **null** , wenn die Methode erfolgreich ist.
+Eine Zeichenfolge, die den Namen der Datei (oder des Verzeichnisses) darstellt, in der bzw. dem die Methode fehlgeschlagen ist. Dieser Parameter ist **NULL,** wenn die Methode erfolgreich ist.
 
 </dd> <dt>
 
-*Startdateiname* \[ in\]
+*StartFileName* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die die untergeordnete Datei (oder das Verzeichnis) darstellt, die als Ausgangspunkt für diese Methode verwendet werden soll. In der Regel handelt es sich bei diesem Parameter um den *StopFileName* -Parameter, der die Datei oder das Verzeichnis angibt, in dem ein Fehler aus dem vorherigen Methoden aufzurufen Wenn dieser Parameter **null** ist, wird der Vorgang für die Datei (oder das Verzeichnis) ausgeführt, die im [**ExecMethod**](/windows/desktop/WmiSdk/swbemservices-execmethod) -Befehl angegeben ist.
+Eine Zeichenfolge, die die untergeordnete Datei (oder das Verzeichnis) darstellt, die als Ausgangspunkt für diese Methode verwendet werden soll. In der Regel ist dieser Parameter der *StopFileName-Parameter,* der die Datei oder das Verzeichnis angibt, in der bzw. dem beim vorherigen Methodenaufruf ein Fehler aufgetreten ist. Wenn dieser Parameter **NULL ist,** wird der Vorgang für die Datei (oder das Verzeichnis) ausgeführt, die im [**ExecMethod-Aufruf angegeben**](/windows/desktop/WmiSdk/swbemservices-execmethod) ist.
 
 </dd> <dt>
 
-*Rekursiv* \[ in\]
+*Rekursiv* \[ In\]
 </dt> <dd>
 
-TRUE gibt an, dass die Methode auch rekursiv auf Dateien und Verzeichnisse innerhalb des Verzeichnisses angewendet wird, das von der [**CIM- \_ Verzeichnis**](cim-directory.md) Instanz angegeben wird. Bei Datei Instanzen wird dieser Parameter ignoriert.
+True gibt an, dass die -Methode auch rekursiv auf Dateien und Verzeichnisse innerhalb des Verzeichnisses angewendet wird, das von der [**\_ CIM-Verzeichnisinstanz angegeben**](cim-directory.md) wird. Bei Dateiinstanzen wird dieser Parameter ignoriert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg den Wert 0 (null) zurück, und jede andere Zahl gibt einen Fehler an.
+Gibt bei Erfolg den Wert 0 (null) und eine beliebige andere Zahl zurück, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -100,7 +100,7 @@ Erfolg.
 
 2
 
-Zugriff verweigert.
+Zugriff verweigert:
 
 </dd> <dt>
 
@@ -109,7 +109,7 @@ Zugriff verweigert.
 
 8
 
-Nicht spezifizierter Fehler.
+Nicht angegebener Fehler.
 
 </dd> <dt>
 
@@ -136,7 +136,7 @@ Das Objekt ist bereits vorhanden.
 
 11
 
-Das Dateisystem ist nicht NTFS.
+Dateisystem, nicht NTFS.
 
 </dd> <dt>
 
@@ -154,7 +154,7 @@ Plattform nicht Windows.
 
 13
 
-Das Laufwerk ist nicht identisch.
+Laufwerk nicht identisch.
 
 </dd> <dt>
 
@@ -190,7 +190,7 @@ Ungültige Startdatei.
 
 17
 
-Die Berechtigung wurde nicht aufrechterhalten.
+Die Berechtigung wurde nicht gehalten.
 
 </dd> <dt>
 
@@ -203,11 +203,11 @@ Ungültiger Parameter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird zurzeit nicht von WMI implementiert. Um diese Methode verwenden zu können, müssen Sie Sie in Ihrem eigenen Anbieter implementieren.
+Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -217,8 +217,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -227,10 +227,10 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[CIM- \_ Verzeichnis](copyex-method-in-class-cim-directory.md)
+[\_CIM-Verzeichnis](copyex-method-in-class-cim-directory.md)
 </dt> <dt>
 
-[**CIM- \_ Verzeichnis**](cim-directory.md)
+[**\_CIM-Verzeichnis**](cim-directory.md)
 </dt> </dl>
 
  

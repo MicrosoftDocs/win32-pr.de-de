@@ -1,11 +1,11 @@
 ---
-title: Ivmparallelport-Namenseigenschaft (vpccominterfaces. h)
-description: Der Name des parallelen Anschlusses.
+title: IVMParallelPort Name-Eigenschaft (VPCCOMInterfaces.h)
+description: Name des parallelen Ports.
 ms.assetid: 254df134-2b48-4a81-8229-0f5fbacf2e1c
 keywords:
-- Name-Eigenschaft virtueller PC
-- Name-Eigenschaft Virtual PC, ivmparallelport-Schnittstelle
-- Ivmparallelport Interface Virtual PC, Name-Eigenschaft
+- Name-Eigenschaft Virtueller PC
+- Name-Eigenschaft Virtual PC , IVMParallelPort-Schnittstelle
+- IVMParallelPort-Schnittstelle Virtueller PC , Name-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,18 +18,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 42f89638504b7e0fd8814ea8b429ee70f43c6c67
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f4e4ce0ebf800329d40352adda9fa69d1233c8e72d0a5551a710b3c943b29fb0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102803"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119510380"
 ---
-# <a name="ivmparallelportname-property"></a>Ivmparallelport:: Name-Eigenschaft
+# <a name="ivmparallelportname-property"></a>IVMParallelPort::Name-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft den Namen des parallelen Ports ab und legt ihn fest.
+Ruft den Namen des parallelen Ports ab und legt den Namen fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -50,7 +50,7 @@ HRESULT get_Name(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt den Namen des parallelen Anschlusses fest (z. b. "LPT1").
+Legt den Namen des parallelen Ports fest (z. B. "LPT1").
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -59,10 +59,10 @@ Legt den Namen des parallelen Anschlusses fest (z. b. "LPT1").
 | Name/Wert                                                                                                                                                    | Bedeutung                                                               |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>                              |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>                                 |
-| <dl> <dt>E \_ InvalidArg</dt> <dt>0x80000003</dt> </dl>      | Der-Parameter verweist auf einen ungültigen parallelen Port.<br/> |
-| <dl> <dt>VM \_ E \_ VM \_ unbekannt</dt> <dt>0xa0040207</dt> </dl> | Die Konfiguration für diesen virtuellen Computer ist ungültig.<br/>   |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                          |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>         | Der Parameter ist **NULL.**<br/>                                 |
+| <dl> <dt>E \_ INVALIDARG-0x80000003</dt> <dt></dt> </dl>      | Der -Parameter verweist auf einen ungültigen parallelen Port.<br/> |
+| <dl> <dt>VM \_ E \_ VM \_ UNKNOWN</dt> <dt>0xA0040207</dt> </dl> | Die Konfiguration für diesen virtuellen Computer ist ungültig.<br/>   |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                          |
 
 
 
@@ -72,12 +72,12 @@ Legt den Namen des parallelen Anschlusses fest (z. b. "LPT1").
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmparallelport ist als 097beecb-0a02-474b-abd6-298b22293fc6 definiert.<br/>            |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMParallelPort ist als 097beecb-0a02-474f-abd6-298b22293fc6 definiert.<br/>            |
 
 
 
@@ -85,7 +85,7 @@ Legt den Namen des parallelen Anschlusses fest (z. b. "LPT1").
 
 <dl> <dt>
 
-[**Ivmparallelport**](ivmparallelport.md)
+[**IVMParallelPort**](ivmparallelport.md)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
-title: Iwmpquery (VB und C)-Schnittstelle (WMP. h)
-description: Stellt eine Verbund Abfrage dar.
+title: IWMPQuery-Schnittstelle (VB und C ) (Wmp.h)
+description: Stellt eine zusammengesetzte Abfrage dar.
 ms.assetid: b9cfeec9-f928-4b12-88c2-0f78b26f8687
 keywords:
-- Iwmpquery (VB und C) Interface Windows Media Player
-- Iwmpquery (VB und C) Interface Windows Media Player, beschrieben
+- IWMPQuery-Schnittstelle (VB und C) Windows Media Player
+- IWMPQuery-Schnittstelle (VB und C) Windows Media Player , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,45 +15,45 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 85468f6118f013bdd101ecbc527aa5d76e222088
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5e3b101d7fdc650eda5df3c34f8290e4dafc0d0d159f5f174bc84c48cf14c017
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371970"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119508580"
 ---
-# <a name="iwmpquery-vb-and-c-interface"></a>Iwmpquery (VB und c#)-Schnittstelle
+# <a name="iwmpquery-vb-and-c-interface"></a>IWMPQuery-Schnittstelle (VB und C#)
 
-Stellt eine Verbund Abfrage dar.
+Stellt eine zusammengesetzte Abfrage dar.
 
 ## <a name="members"></a>Member
 
-Die **iwmpquery (VB und c#)** -Schnittstelle verfügt über diese Typen von Membern:
+Die **IWMPQuery-Schnittstelle (VB und C#)** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmpquery-Schnittstelle (VB und c#)** verfügt über diese Methoden.
+Die **IWMPQuery-Schnittstelle (VB und C#)** verfügt über diese Methoden.
 
 
 
-| Methode                                                                       | BESCHREIBUNG                                                            |
+| Methode                                                                       | Beschreibung                                                            |
 |:-----------------------------------------------------------------------------|:-----------------------------------------------------------------------|
-| [**addcondition**](wmplibiwmpquery-iwmpquery-addcondition--vb-and-c.md)     | Fügt der Verbund Abfrage mithilfe der **-und der-** Logik eine Bedingung hinzu.<br/> |
-| [**beginnextgroup**](wmplibiwmpquery-iwmpquery-beginnextgroup--vb-and-c.md) | Startet eine neue Bedingungs Gruppe.<br/>                               |
+| [**addCondition**](wmplibiwmpquery-iwmpquery-addcondition--vb-and-c.md)     | Fügt der zusammengesetzten Abfrage mithilfe der **AND-Logik eine Bedingung** hinzu.<br/> |
+| [**beginNextGroup**](wmplibiwmpquery-iwmpquery-beginnextgroup--vb-and-c.md) | Startet eine neue Bedingungsgruppe.<br/>                               |
 
 
 
  
 
-Verwenden Sie die folgende Methode, um eine **iwmpquery** -Schnittstelle zu erhalten.
+Verwenden Sie die folgende Methode, um eine **IWMPQuery-Schnittstelle** zu erhalten.
 
 
 
 | Schnittstelle                                                      | Methode                                                  |
 |----------------------------------------------------------------|---------------------------------------------------------|
-| [**IWMPMediaCollection2**](iwmpmediacollection2--vb-and-c.md) | [**createQuery**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpmediacollection2-createquery) |
+| [**IWMPMediaCollection2**](iwmpmediacollection2--vb-and-c.md) | [**Createquery**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpmediacollection2-createquery) |
 
 
 
@@ -65,7 +65,7 @@ Verwenden Sie die folgende Methode, um eine **iwmpquery** -Schnittstelle zu erha
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMP. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmp.h</dt> </dl> |
 
 
 
@@ -73,16 +73,16 @@ Verwenden Sie die folgende Methode, um eine **iwmpquery** -Schnittstelle zu erha
 
 <dl> <dt>
 
-[**Schnittstellen für Visual Basic .net und C #**](interfaces-for-visual-basic--net-and-c.md)
+[**Schnittstellen für Visual Basic .NET und C #**](interfaces-for-visual-basic--net-and-c.md)
 </dt> <dt>
 
-[**IWMPMediaCollection2. kreatequery (VB und c#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-createquery--vb-and-c.md)
+[**IWMPMediaCollection2.createQuery (VB und C#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-createquery--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPMediaCollection2. getplaylistbyquery (VB und c#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-getplaylistbyquery--vb-and-c.md)
+[**IWMPMediaCollection2.getPlaylistByQuery (VB und C#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-getplaylistbyquery--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPMediaCollection2. getstringcollectionbyquery (VB und c#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-getstringcollectionbyquery--vb-and-c.md)
+[**IWMPMediaCollection2.getStringCollectionByQuery (VB und C#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-getstringcollectionbyquery--vb-and-c.md)
 </dt> </dl>
 
  

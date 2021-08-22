@@ -1,9 +1,9 @@
 ---
-title: glistexture-Funktion (GL. h)
-description: Die Funktion "glistexture" bestimmt, ob ein Name einer Textur entspricht.
+title: glIsTexture-Funktion (Gl.h)
+description: Die glIsTexture-Funktion bestimmt, ob ein Name einer Textur entspricht.
 ms.assetid: 89d06642-ff28-4a67-ac7f-ca58150f301e
 keywords:
-- Funktion "glistexture" OpenGL
+- glIsTexture-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8897cc0eb004da701f28b410f2ca28b6194c9d26
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7db28b6892d5aa0e9eaf98aec50b02ad102db8ba549474c673c6c0d918d799d6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478711"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493350"
 ---
-# <a name="glistexture-function"></a>glistexture-Funktion
+# <a name="glistexture-function"></a>glIsTexture-Funktion
 
-Die Funktion " **glistexture** " bestimmt, ob ein Name einer Textur entspricht.
+Die **glIsTexture-Funktion** bestimmt, ob ein Name einer Textur entspricht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,33 +40,33 @@ GLboolean WINAPI glIsTexture(
 
 <dl> <dt>
 
-*Konsistenz* 
+*Textur* 
 </dt> <dd>
 
-Ein-Wert, der den Namen einer Textur ist.
+Ein -Wert, der dem Namen einer Textur entspricht.
 
 </dd> </dl>
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der *Textur* Parameter derzeit der Name einer Textur ist, gibt die Funktion " **glistexture** " den Wert "GL true" zurück \_ . Die Funktion " **glistexture** " gibt "GL false" zurück, \_ Wenn *Textur* NULL ist. Außerdem wird "GL false" zurückgegeben, \_ Wenn es sich um einen Wert ungleich 0 (null) handelt, der derzeit nicht der Name einer Textur ist, oder wenn ein Fehler auftritt.
+Wenn der *Texturparameter* derzeit der Name einer Textur ist, gibt die **glIsTexture-Funktion** GL \_ TRUE zurück. Die **glIsTexture-Funktion** gibt GL \_ FALSE zurück, wenn die *Textur* 0 (null) ist. Außerdem wird GL FALSE zurückgegeben, wenn es sich um \_ einen Wert ungleich 0 (null) handelt, der derzeit nicht der Name einer Textur ist, oder wenn ein Fehler auftritt.
 
-Sie können keine Aufrufe von " **glistexture** " in Anzeigelisten einschließen.
+Aufrufe von **glIsTexture** können nicht in Anzeigelisten eingeschlossen werden.
 
 > [!Note]  
-> Die Funktion " **glistexture** " ist nur in OpenGL, Version 1,1 oder höher, verfügbar.
+> Die **glIsTexture-Funktion** ist nur in OpenGL Version 1.1 oder höher verfügbar.
 
  
 
@@ -78,8 +78,8 @@ Sie können keine Aufrufe von " **glistexture** " in Anzeigelisten einschließen
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -97,13 +97,13 @@ Sie können keine Aufrufe von " **glistexture** " in Anzeigelisten einschließen
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glgentexturen**](glgentextures.md)
+[**glGenTextures**](glgentextures.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glgettexparameter**](glgettexparameter.md)
+[**glGetTexParameter**](glgettexparameter.md)
 </dt> <dt>
 
 [**glTexImage1D**](glteximage1d.md)
@@ -112,7 +112,7 @@ Sie können keine Aufrufe von " **glistexture** " in Anzeigelisten einschließen
 [**glTexImage2D**](glteximage2d.md)
 </dt> <dt>
 
-[**gltexparameter**](gltexparameter-functions.md)
+[**glTexParameter**](gltexparameter-functions.md)
 </dt> </dl>
 
  

@@ -1,17 +1,17 @@
 ---
-title: Highlights und Schatteneffekte
+title: Highlights und Schatteneffekt
 description: Passt die Highlights und Schatten des Bilds an.
 ms.assetid: ebbb7d99-9144-ffff-af73-d89e7d269924
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d595a5b82a2df0b0b0bab14c03e6a807511ed61
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3335de3bc6b115221c1a2a343cac9c5c5154a6d868c9fa8f63b2cfa719e287c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104562388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119569614"
 ---
-# <a name="highlights-and-shadows-effect"></a>Highlights und Schatteneffekte
+# <a name="highlights-and-shadows-effect"></a>Highlights und Schatteneffekt
 
 Passt die Highlights und Schatten des Bilds an.
 
@@ -19,13 +19,13 @@ Die CLSID für diesen Effekt ist CLSID \_ D2D1HighlightsShadows.
 
 -   [Beispielbild](#example-image)
 -   [Beispielcode](#sample-code)
--   [Effekt Eigenschaften](#effect-properties)
--   [Anforderungen](#requirements)
+-   [Effect-Eigenschaften](#effect-properties)
+-   [Requirements](#requirements)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="example-image"></a>Beispielbild
 
-![Beispiel für Effekte Ausgabe](images/highlights-and-shadows-effect.png)
+![Beispiel für die Auswirkungsausgabe](images/highlights-and-shadows-effect.png)
 
 ## <a name="sample-code"></a>Beispielcode
 
@@ -45,18 +45,18 @@ m_d2dContext->DrawImage(hueToRgbEffect.Get());
 m_d2dContext->EndDraw();
 ```
 
-## <a name="effect-properties"></a>Effekt Eigenschaften
+## <a name="effect-properties"></a>Effect-Eigenschaften
 
-Die Eigenschaften für den Hervorhebungen und den Schatteneffekt werden von der [**D2D1 \_ highlighnerandshadows- \_ Prop**](/windows/desktop/api/d2d1effects_2/ne-d2d1effects_2-d2d1_highlightsandshadows_prop) -Enumeration definiert.
+Die Eigenschaften für den Effekt highlights und shadows werden durch die [**D2D1 \_ HIGHLIGHTSANDSHADOWS \_ PROP-Enumeration**](/windows/desktop/api/d2d1effects_2/ne-d2d1effects_2-d2d1_highlightsandshadows_prop) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |--------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 10 \[ Desktop Apps- \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 10 \[ Desktop Apps- \| Windows Store-Apps\] |
-| Header                   | d2d1effects \_ 2. h                                  |
-| Bibliothek                  | d2d1. lib, dxguid. lib                              |
+| Unterstützte Mindestversion (Client) | \[Windows 10 Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | \[Windows 10 Desktop-Apps \| Windows Store Apps\] |
+| Header                   | d2d1effects \_ 2.h                                  |
+| Bibliothek                  | d2d1.lib, dxguid.lib                              |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,9 +1,9 @@
 ---
-title: glgettexparameteriv-Funktion (GL. h)
-description: Die Funktionen "glgettexparameterfv" und "glgettexparameteriv" geben Textur Parameterwerte zurück. | glgettexparameteriv-Funktion (GL. h)
+title: glGetTexParameteriv-Funktion (Gl.h)
+description: Die Funktionen glGetTexParameterfv und glGetTexParameteriv geben Texturparameterwerte zurück. | glGetTexParameteriv-Funktion (Gl.h)
 ms.assetid: b89d10f1-5e30-4d25-8953-fbd59781fdac
 keywords:
-- glgettexparameteriv-Funktion OpenGL
+- glGetTexParameteriv-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ca78983594487fd22917c15a5b211c529b6b14d
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 1226f4096088d20851b0eab9789acf19cb84ecfac5202ff9e992c8c07ded4bb2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106351899"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493670"
 ---
-# <a name="glgettexparameteriv-function"></a>glgettexparameteriv-Funktion
+# <a name="glgettexparameteriv-function"></a>glGetTexParameteriv-Funktion
 
-Die Funktionen " [**glgettexparameterfv**](glgettexparameterfv.md) " und " **glgettexparameteriv** " geben Textur Parameterwerte zurück.
+Die Funktionen [**glGetTexParameterfv**](glgettexparameterfv.md) und **glGetTexParameteriv** geben Texturparameterwerte zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,26 +45,26 @@ void WINAPI glGetTexParameteriv(
 *Ziel* 
 </dt> <dd>
 
-Der symbolische Name der Ziel Textur. GL \_ Texture \_ 1D und GL \_ Texture \_ 2D werden akzeptiert.
+Der symbolische Name der Zieltextur. GL \_ TEXTURE \_ 1D und GL \_ TEXTURE \_ 2D werden akzeptiert.
 
 </dd> <dt>
 
-*pName* 
+*pname* 
 </dt> <dd>
 
-Der symbolische Name eines Textur Parameters. Die folgenden Werte werden akzeptiert.
+Der symbolische Name eines Texturparameters. Die folgenden Werte werden akzeptiert.
 
 
 
 | Wert                                                                                                                                                                                         | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                      |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_TEXTURE_MAG_FILTER"></span><span id="gl_texture_mag_filter"></span><dl> <dt>**GL- \_ Textur- \_ mag- \_ Filter**</dt> </dl>       | Gibt den einwertigen Textur Vergrößerungs Filter zurück, eine symbolische Konstante.<br/>                                                                                                                                                                                                                                                                                                      |
-| <span id="GL_TEXTURE_MIN_FILTER"></span><span id="gl_texture_min_filter"></span><dl> <dt>**GL- \_ Textur- \_ Min- \_ Filter**</dt> </dl>       | Gibt den einwertigen Textur Minimierung-Filter zurück, eine symbolische Konstante.<br/>                                                                                                                                                                                                                                                                                                       |
-| <span id="GL_TEXTURE_WRAP_S"></span><span id="gl_texture_wrap_s"></span><dl> <dt>**GL- \_ Textur Umbruch \_ \_ S**</dt> </dl>                   | Gibt die einwertige Wrapping Funktion für Texturkoordinaten *s* zurück, eine symbolische Konstante.<br/>                                                                                                                                                                                                                                                                                      |
-| <span id="GL_TEXTURE_WRAP_T"></span><span id="gl_texture_wrap_t"></span><dl> <dt>**GL- \_ Textur Umbruch \_ \_ T**</dt> </dl>                   | Gibt die einwertige Wrapping Funktion für die Textur Koordinate *t* zurück, eine symbolische Konstante.<br/>                                                                                                                                                                                                                                                                                      |
-| <span id="GL_TEXTURE_BORDER_COLOR"></span><span id="gl_texture_border_color"></span><dl> <dt>**Rahmenfarbe des GL- \_ Textur Rahmens \_ \_**</dt> </dl> | Gibt vier ganzzahlige oder Gleit Komma Zahlen zurück, die die RGBA-Farbe des Textur Rahmens bilden. Gleit Komma Werte werden im Bereich \[ 0, 1 zurückgegeben \] . Ganzzahlige Werte werden als lineare Zuordnung der internen Gleit Komma Darstellung zurückgegeben, sodass 1,0 der positivsten darstellbaren Ganzzahl und-1,0 der negativsten darstellbaren Ganzzahl zugeordnet wird.<br/> |
-| <span id="GL_TEXTURE_PRIORITY"></span><span id="gl_texture_priority"></span><dl> <dt>**GL- \_ Textur \_ Priorität**</dt> </dl>              | Gibt die Residenz Priorität der Ziel Textur zurück (oder die an Sie gebundene benannte Textur). Der Anfangswert ist 1. Siehe [**glpriorizetexturen**](glprioritizetextures.md).<br/>                                                                                                                                                                                                        |
-| <span id="GL_TEXTURE_RESIDENT"></span><span id="gl_texture_resident"></span><dl> <dt>**GL- \_ Textur \_ residente**</dt> </dl>              | Gibt den Wohnsitz Status der Ziel Textur zurück. Wenn der Wert, der in Parametern zurückgegeben wird \_ , GL true ist, ist die Textur im Texturspeicher ansässig. Siehe [**glaretexturesresidente**](glaretexturesresident.md).<br/>                                                                                                                                                                           |
+| <span id="GL_TEXTURE_MAG_FILTER"></span><span id="gl_texture_mag_filter"></span><dl> <dt>**GL \_ TEXTURE \_ MAG \_ FILTER**</dt> </dl>       | Gibt den Filter für die Vergrößerung der einwertigen Textur zurück, eine symbolische Konstante.<br/>                                                                                                                                                                                                                                                                                                      |
+| <span id="GL_TEXTURE_MIN_FILTER"></span><span id="gl_texture_min_filter"></span><dl> <dt>**GL \_ TEXTURE \_ MIN \_ FILTER**</dt> </dl>       | Gibt den einwertigen Texturverkleinerungsfilter zurück, eine symbolische Konstante.<br/>                                                                                                                                                                                                                                                                                                       |
+| <span id="GL_TEXTURE_WRAP_S"></span><span id="gl_texture_wrap_s"></span><dl> <dt>**GL \_ TEXTURE \_ WRAP \_ S**</dt> </dl>                   | Gibt die einwertige Wrappingfunktion für Texturkoordinaten *zurück,* eine symbolische Konstante.<br/>                                                                                                                                                                                                                                                                                      |
+| <span id="GL_TEXTURE_WRAP_T"></span><span id="gl_texture_wrap_t"></span><dl> <dt>**GL \_ TEXTURE \_ WRAP \_ T**</dt> </dl>                   | Gibt die einwertige Wrappingfunktion für die Texturkoordinate *t* zurück, eine symbolische Konstante.<br/>                                                                                                                                                                                                                                                                                      |
+| <span id="GL_TEXTURE_BORDER_COLOR"></span><span id="gl_texture_border_color"></span><dl> <dt>**GL \_ TEXTURE \_ BORDER \_ COLOR**</dt> </dl> | Gibt vier ganzzahlige Zahlen oder Gleitkommazahlen zurück, die die RGBA-Farbe des Texturrahmens bilden. Gleitkommawerte werden im Bereich \[ von 0,1 \] zurückgegeben. Ganzzahlige Werte werden als lineare Zuordnung der internen Gleitkommadarstellung zurückgegeben, sodass 1,0 der positivsten darstellbaren ganzen Zahl und -1,0 der negativsten darstellbaren ganzen Zahl zugeordnet wird.<br/> |
+| <span id="GL_TEXTURE_PRIORITY"></span><span id="gl_texture_priority"></span><dl> <dt>**GL \_ TEXTURE \_ PRIORITY**</dt> </dl>              | Gibt die Priorität der Zieltextur (oder der an sie gebundenen benannten Textur) zurück. Der Anfangswert ist 1. Siehe [**glPrioritizeTextures**](glprioritizetextures.md).<br/>                                                                                                                                                                                                        |
+| <span id="GL_TEXTURE_RESIDENT"></span><span id="gl_texture_resident"></span><dl> <dt>**GL \_ TEXTURE \_ RESIDENT**</dt> </dl>              | Gibt den Status der Zieltextur zurück. Wenn der in Params zurückgegebene Wert GL \_ TRUE ist, befindet sich die Textur im Texturspeicher. Siehe [**glAreTexturesResident.**](glaretexturesresident.md)<br/>                                                                                                                                                                           |
 
 
 
@@ -75,7 +75,7 @@ Der symbolische Name eines Textur Parameters. Die folgenden Werte werden akzepti
 *params* 
 </dt> <dd>
 
-Gibt die Textur Parameter zurück.
+Gibt die Texturparameter zurück.
 
 </dd> </dl>
 
@@ -85,22 +85,22 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | Das *Ziel* oder der *Name* war kein akzeptierter Wert.<br/>                                                                              |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *target* oder *name* war kein akzeptierter Wert.<br/>                                                                              |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glgettexparameter** " *gibt in Parameter* den Wert oder die Werte des als " *PName*" angegebenen Textur Parameters zurück. Der *target* -Parameter definiert die Ziel Textur (GL \_ Texture \_ 1D oder GL \_ Texture \_ 2D), um eindimensionale oder zweidimensionale Texturierung anzugeben. Der *PName* -Parameter akzeptiert dieselben Symbole wie [**gltexparameter**](gltexparameter-functions.md)mit denselben Interpretationen.
+Die **glGetTexParameter-Funktion** gibt *in* den Wert oder die Werte des Texturparameters zurück, der als *pname* angegeben ist. Der *Zielparameter* definiert die Zieltextur, entweder GL \_ TEXTURE \_ 1D oder GL \_ TEXTURE \_ 2D, um eindimensionale oder zweidimensionale Textur anzugeben. Der *pname-Parameter* akzeptiert die gleichen Symbole wie [**glTexParameter**](gltexparameter-functions.md)mit den gleichen Interpretationen.
 
-Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt von *para* Metern vorgenommen.
+Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt der *Parameter* vorgenommen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,8 +110,8 @@ Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt von *para* Metern
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -126,7 +126,7 @@ Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt von *para* Metern
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**gltexparameter**](gltexparameter-functions.md)
+[**glTexParameter**](gltexparameter-functions.md)
 </dt> </dl>
 
  

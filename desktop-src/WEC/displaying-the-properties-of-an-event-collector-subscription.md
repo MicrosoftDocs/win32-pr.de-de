@@ -1,42 +1,42 @@
 ---
-title: Anzeigen der Eigenschaften des Ereignis Sammler Abonnements
-description: Sie können nützliche Informationen über ein Ereignis Sammler Abonnement und seine Ereignis Quellen anzeigen, indem Sie die Eigenschaften des Abonnements abrufen und anzeigen.
+title: Anzeigen von Ereignissammlerabonnementeigenschaften
+description: Sie können nützliche Informationen zu einem Ereignissammlerabonnement und seinen Ereignisquellen anzeigen, indem Sie die Eigenschaften des Abonnements abrufen und anzeigen.
 ms.assetid: 984e21cf-3671-4aca-9e8e-bcad1fa2f02c
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4630bfc41ecbc0cc9372ae6bb99ce6d3184e4b6e
-ms.sourcegitcommit: 2e9db3c7d9a3dbea15196b03c883846fad6f32be
+ms.openlocfilehash: 0a39042997fd61b3e8bb96eb7fb8030d0fbe1c91d7aa84b9c1482319355db411
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "103719241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119620690"
 ---
-# <a name="display-event-collector-subscription-properties"></a>Anzeigen der Eigenschaften des Ereignis Sammler Abonnements
+# <a name="display-event-collector-subscription-properties"></a>Anzeigen von Ereignissammlerabonnementeigenschaften
 
-Sie können nützliche Informationen über ein Ereignis Sammler Abonnement und seine Ereignis Quellen anzeigen, indem Sie die Eigenschaften des Abonnements abrufen und anzeigen.
+Sie können nützliche Informationen zu einem Ereignissammlerabonnement und seinen Ereignisquellen anzeigen, indem Sie die Eigenschaften des Abonnements abrufen und anzeigen.
 
 > [!Note]
 >
 > Sie können dieses Beispiel verwenden, um die Eigenschaftswerte eines Abonnements anzuzeigen, oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
 >
-> " **wecutil GS** " ( *Abonnement Name* )
+> **wecutil gs** *SubscriptionName*
 
- 
+ 
 
-Um die zugehörigen Eigenschaften anzuzeigen, geben Sie den Namen eines Abonnements an. Weitere Informationen und ein C++-Codebeispiel zum Auflisten der Namen aktueller Abonnements auf einem lokalen Computer finden Sie unter Auflisten von [Event Collector-Abonnements](listing-event-collector-subscriptions.md), oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
+Geben Sie den Namen eines Abonnements an, um dessen Eigenschaften anzuzeigen. Weitere Informationen und ein C++-Codebeispiel zum Auflisten der Namen der aktuellen Abonnements auf einem lokalen Computer finden Sie unter Auflisten von [Ereignissammlerabonnements,](listing-event-collector-subscriptions.md)oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
 
-**wecutil**
+**wecutil es**
 
-Im folgenden Codebeispiel wird eine Prozedur zum Anzeigen der Eigenschaften eines Ereignis Sammler Abonnements und der zugehörigen Ereignis Quellen befolgt.
+Im folgenden Codebeispiel wird eine Prozedur zum Anzeigen der Eigenschaften eines Ereignissammlerabonnements und der zugehörigen Ereignisquellen verwendet.
 
-**So zeigen Sie die Eigenschaften eines Ereignis Sammler Abonnements und der zugehörigen Ereignis Quellen an**
+**So zeigen Sie die Eigenschaften eines Ereignissammlerabonnements und seiner Ereignisquellen an**
 
-1.  Öffnen Sie das Abonnement, indem Sie den Abonnement Namen und die Zugriffsrechte als Parameter für die [**ecopenabonnement**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) -Funktion angeben. Weitere Informationen zu Zugriffsrechten finden Sie unter [**Windows-Ereignis Sammler Konstanten**](windows-event-collector-constants.md).
-2.  Rufen Sie die Eigenschaften des Abonnements und der Ereignis Quellen ab, und zeigen Sie Sie an, indem Sie die [**ecgetabonneptionproperty**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetsubscriptionproperty) -Funktion und die [**ecgetobjectarrayproperty**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetobjectarrayproperty) -Funktion aufrufen. Weitere Informationen zu den Eigenschaften von Abonnement und Ereignis Quelle, die angezeigt werden können, finden Sie in der [**\_ \_ Eigenschaft \_ ID**](/windows/desktop/api/Evcoll/ne-evcoll-ec_subscription_property_id) -Enumeration für das EC-Abonnement.
-3.  Schließen Sie das Abonnement, indem Sie die [**ecclose**](/windows/desktop/api/Evcoll/nf-evcoll-ecclose) -Funktion aufrufen.
+1.  Öffnen Sie das Abonnement, indem Sie den Abonnementnamen und die Zugriffsrechte als Parameter für die [**EcOpenSubscription-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) bereitstellen. Weitere Informationen zu Zugriffsrechten finden Sie unter [**Windows Event Collector-Konstanten.**](windows-event-collector-constants.md)
+2.  Rufen Sie die [**EcGetSubscriptionProperty-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetsubscriptionproperty) und die [**EcGetObjectArrayProperty-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetobjectarrayproperty) auf, um die Eigenschaften des Abonnements und der Ereignisquellen abzurufen und anzuzeigen. Weitere Informationen zu Abonnement- und Ereignisquelleigenschaften, die angezeigt werden können, finden Sie in der [**EC \_ SUBSCRIPTION PROPERTY \_ \_ ID-Enumeration.**](/windows/desktop/api/Evcoll/ne-evcoll-ec_subscription_property_id)
+3.  Schließen Sie das Abonnement, indem Sie die [**EcClose-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecclose) aufrufen.
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie die Eigenschaften eines Ereignis Sammler Abonnements angezeigt werden.
+Das folgende C++-Codebeispiel zeigt, wie die Eigenschaften eines Event Collector-Abonnements angezeigt werden.
 
 
 ```C++
@@ -774,15 +774,15 @@ std::wstring ConvertEcSubscriptionType(DWORD code)
 
 <dl> <dt>
 
-[Auflisten von Event Collector-Abonnements](listing-event-collector-subscriptions.md)
+[Auflisten von Ereignissammlerabonnements](listing-event-collector-subscriptions.md)
 </dt> <dt>
 
-[Referenz zur Windows-Ereignis Sammlung](windows-event-collector-reference.md)
+[Windows Ereignissammlerreferenz](windows-event-collector-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

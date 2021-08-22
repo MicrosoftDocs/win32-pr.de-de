@@ -1,23 +1,23 @@
 ---
-title: Erstellen eines Warp-Geräts
-description: In diesem Thema wird gezeigt, wie ein Warp-Gerät erstellt wird, das einen hoch Geschwindigkeits Software-Rasterizer implementiert.
+title: Erstellen eines WARP-Geräts
+description: In diesem Thema wird gezeigt, wie Sie ein WARP-Gerät erstellen, das einen Softwarerasterizer mit hoher Geschwindigkeit implementiert.
 ms.assetid: 6daf661e-bc24-4b90-83a7-031acb57cf87
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: deda409971d22f46132a1cb9b008d3dd1eb7c407
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f78d3e8b5224018fb9f45df2c6eec5ee6f9d88cdd664715a31050eaab4ddd948
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104993486"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119407800"
 ---
-# <a name="how-to-create-a-warp-device"></a>Vorgehensweise: Erstellen eines Warp-Geräts
+# <a name="how-to-create-a-warp-device"></a>Vorgehensweise: Erstellen eines WARP-Geräts
 
-In diesem Thema wird gezeigt, wie ein Warp-Gerät erstellt wird, das einen hoch Geschwindigkeits Software-Rasterizer implementiert. Zum Erstellen eines Warp-Geräts geben Sie einfach an, dass das Gerät, das Sie erstellen, einen Warp-Treiber verwendet. In diesem Beispiel werden gleichzeitig ein Gerät und eine SwapChain erstellt.
+In diesem Thema wird gezeigt, wie Sie ein WARP-Gerät erstellen, das einen Softwarerasterizer mit hoher Geschwindigkeit implementiert. Um ein WARP-Gerät zu erstellen, geben Sie einfach an, dass das gerät, das Sie erstellen, einen WARP-Treiber verwendet. In diesem Beispiel werden ein Gerät und eine Austauschkette gleichzeitig erstellt.
 
-**So erstellen Sie ein Warp-Gerät**
+**So erstellen Sie ein WARP-Gerät**
 
-1.  Definieren Sie anfängliche Parameter für eine SwapChain.
+1.  Definieren sie anfängliche Parameter für eine Swapkette.
     ```
         DXGI_SWAP_CHAIN_DESC sd;
         ZeroMemory( &sd, sizeof( sd ) );
@@ -36,7 +36,7 @@ In diesem Thema wird gezeigt, wie ein Warp-Gerät erstellt wird, das einen hoch 
 
     
 
-2.  Fordern Sie eine Funktionsebene an, die die Features implementiert, die Ihre Anwendung benötigt. Ein Warp-Gerät kann für featureebenen erfolgreich erstellt werden **D3D \_ Featureebene \_ \_ 9 \_ 1** bis **D3D \_ Funktions \_ Ebene \_ 10 \_ 1** und ab Windows 8 für alle featureebenen.
+2.  Fordern Sie eine Featureebene an, die die Features implementiert, die Ihre Anwendung benötigt. Ein WARP-Gerät kann erfolgreich für die Featureebenen **D3D \_ FEATURE \_ LEVEL \_ 9 \_ 1** bis **D3D \_ FEATURE LEVEL \_ \_ 10 \_ 1** erstellt werden und mit Windows 8 für alle Featureebenen beginnen.
 
     ```
         D3D_FEATURE_LEVEL FeatureLevels = D3D_FEATURE_LEVEL_10_1;
@@ -44,9 +44,9 @@ In diesem Thema wird gezeigt, wie ein Warp-Gerät erstellt wird, das einen hoch 
 
     
 
-    Weitere Informationen zu featureebenen finden Sie in der Enumeration der [**D3D- \_ Funktions \_ Ebene**](/windows/desktop/api/D3DCommon/ne-d3dcommon-d3d_feature_level) .
+    Weitere Informationen zu Featureebenen finden Sie in der [**D3D \_ FEATURE \_ LEVEL-Enumeration.**](/windows/desktop/api/D3DCommon/ne-d3dcommon-d3d_feature_level)
 
-3.  Erstellen Sie das Gerät durch Aufrufen von [**D3D11CreateDeviceAndSwapChain**](/windows/desktop/api/D3D11/nf-d3d11-d3d11createdeviceandswapchain).
+3.  Erstellen Sie das Gerät, indem [**Sie D3D11CreateDeviceAndSwapChain**](/windows/desktop/api/D3D11/nf-d3d11-d3d11createdeviceandswapchain)aufrufen.
 
 
 ```
@@ -70,13 +70,13 @@ In diesem Thema wird gezeigt, wie ein Warp-Gerät erstellt wird, das einen hoch 
 
 
 
-Sie müssen den API-Befehl mit dem Warp-Treibertyp aus der [**D3D \_ Driver \_ Type**](/windows/desktop/api/D3DCommon/ne-d3dcommon-d3d_driver_type) -Enumeration bereitstellen. Nachdem die Methode erfolgreich ausgeführt wurde, gibt Sie eine Austausch Ketten Schnittstelle, eine Geräteschnittstelle, einen Zeiger auf die Featureebene, die vom Treiber erteilt wurde, und eine unmittelbare Kontext Schnittstelle zurück.
+Sie müssen den API-Aufruf mit dem WARP-Treibertyp aus der [**D3D \_ DRIVER \_ TYPE-Enumeration**](/windows/desktop/api/D3DCommon/ne-d3dcommon-d3d_driver_type) bereitstellen. Nachdem die Methode erfolgreich ausgeführt wurde, gibt sie eine Austauschkettenschnittstelle, eine Geräteschnittstelle, einen Zeiger auf die vom Treiber gewährte Featureebene und eine direkte Kontextschnittstelle zurück.
 
-Informationen zu Einschränkungen bei der Erstellung eines Warp-Geräts auf bestimmten featureebenen finden Sie unter [Einschränkungen beim Erstellen von Warp-und Referenz Geräten](overviews-direct3d-11-devices-limitations.md).
+Informationen zu Einschränkungen beim Erstellen eines WARP-Geräts auf bestimmten Featureebenen finden Sie unter [Einschränkungen beim Erstellen von WARP- und Referenzgeräten.](overviews-direct3d-11-devices-limitations.md)
 
 ## <a name="new-for-windows-8"></a>Neu für Windows 8
 
-Wenn der primäre Anzeige Adapter eines Computers der "Microsoft Basic Display Adapter" (Warp-Adapter) ist, verfügt dieser Computer auch über einen zweiten Adapter. Bei diesem zweiten Adapter handelt es sich um das reine Rendering-Gerät ohne Anzeige Ausgaben. Weitere Informationen zum reinen Rendering-Gerät finden Sie unter [neue Informationen in Windows 8 zum Auflisten von Adaptern](/windows/desktop/direct3ddxgi/d3d10-graphics-programming-guide-dxgi).
+Wenn der primäre Anzeigeadapter eines Computers der "Microsoft Basic Display Adapter" (WARP-Adapter) ist, verfügt dieser Computer auch über einen zweiten Adapter. Bei diesem zweiten Adapter handelt es sich um das rein renderbasierte Gerät ohne Anzeigeausgaben. Weitere Informationen zum reinen Rendergerät finden Sie [unter neue Informationen in Windows 8 zum Aufzählen von Adaptern.](/windows/desktop/direct3ddxgi/d3d10-graphics-programming-guide-dxgi)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -85,9 +85,9 @@ Wenn der primäre Anzeige Adapter eines Computers der "Microsoft Basic Display A
 [Geräte](overviews-direct3d-11-devices.md)
 </dt> <dt>
 
-[Verwendung von Direct3D 11](how-to-use-direct3d-11.md)
+[Verwenden von Direct3D 11](how-to-use-direct3d-11.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,39 +1,39 @@
 ---
-title: Anwenden von Effekten auf primitive
-description: In diesem Thema wird gezeigt, wie Sie eine Reihe von Effekten auf Direct2D und DirectWrite-primitive anwenden.
+title: Anwenden von Effekten auf Primitive
+description: In diesem Thema wird gezeigt, wie Sie eine Reihe von Effekten auf Direct2D und DirectWrite Primitive anwenden.
 ms.assetid: 9782C22E-5D4C-494D-A0B1-19474C2CA900
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aafb171c20c567d1fbd6385d23cc3b2925efc154
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c17cbf1efe17d1c23c90382f3b95fb41e33946a93935b0be02fc5b41f314a8c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390736"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119569584"
 ---
-# <a name="how-to-apply-effects-to-primitives"></a>Anwenden von Effekten auf primitive
+# <a name="how-to-apply-effects-to-primitives"></a>Anwenden von Effekten auf Primitive
 
-In diesem Thema wird gezeigt, wie Sie eine Reihe von Effekten auf [Direct2D](./direct2d-portal.md) und [DirectWrite](direct2d-and-directwrite.md) -primitive anwenden.
+In diesem Thema wird gezeigt, wie Sie eine Reihe von Effekten auf [Direct2D](./direct2d-portal.md) und [DirectWrite](direct2d-and-directwrite.md) Primitive anwenden.
 
-Mit der [Direct2D Effects-API](effects-overview.md) können Sie Effekt Diagramme auf primitive anwenden, die von [Direct2D](./direct2d-portal.md) auf ein Bild gerendert werden. Das Beispiel enthält zwei abgerundete Rechtecke und den Text "Direct2D". Verwenden Sie Direct2D, um die Rechtecke und [DirectWrite](direct2d-and-directwrite.md) zum Zeichnen des Texts zu zeichnen.
+Sie können die [Direct2D-Effekt-API](effects-overview.md) verwenden, um Effektdiagramme auf Primitive anzuwenden, die von [Direct2D](./direct2d-portal.md) auf ein Bild gerendert werden. Das beispiel enthält zwei abgerundete Rechtecke und den Text "Direct2D". Verwenden Sie Direct2D, um die Rechtecke zu zeichnen, und [DirectWrite,](direct2d-and-directwrite.md) um den Text zu zeichnen.
 
-![Rechtecke mit dem Text "Direct2D" in.](images/direct2d-rounded.png)
+![Rechtecke mit dem Darin enthaltenen Text "direct2d".](images/direct2d-rounded.png)
 
-Durch die Verwendung von [Direct2D-Effekten](effects-overview.md)können Sie dieses Bild wie das nächste Bild aussehen lassen. Wenden Sie die [Gaußscher Weichzeichner](gaussian-blur.md), [Punkt Glanz Beleuchtung](specular-lighting.md), [arithmetische zusammengesetzte](arithmetic-composite.md)und zusammen [gesetzte](composite.md) Effekte auf die 2D-primitiven an, um das Bild hier zu erstellen.
+Mit [Direct2D-Effekten](effects-overview.md)können Sie dieses Bild wie das nächste Bild aussehen lassen. Wenden Sie die [effekte Gaußscher Weichzeichner](gaussian-blur.md), [Point Specular Lighting](specular-lighting.md), [Arithmetic Composite](arithmetic-composite.md)und [Composite](composite.md) auf die 2D-Primitive an, um das Bild hier zu erstellen.
 
-![Rechtecke mit dem Text "Direct2D" in, nachdem mehrere Effekte angewendet wurden.](images/direct2d-svg.png)
+![Rechtecke mit dem Text "direct2d" innerhalb von , nachdem mehrere Effekte angewendet wurden.](images/direct2d-svg.png)
 
-Nachdem Sie die Rechtecke und den Text auf einer zwischen Oberfläche rendert haben, können Sie diese als Eingabe für [**ID2D1Effect**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1effect) -Objekte im Bild Diagramm verwenden.
+Nachdem Sie die Rechtecke und den Text auf einer Zwischenoberfläche gerendert haben, können Sie diese als Eingabe für [**ID2D1Effect-Objekte**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1effect) im Bilddiagramm verwenden.
 
-Legen Sie in diesem Beispiel das ursprüngliche Bild als Eingabe für den [Gaußscher Weichzeichner Effekt](gaussian-blur.md) fest, und legen Sie dann die Ausgabe des weichpunkts als Eingabe für den Glanz der [Punktbeleuchtung](specular-lighting.md)fest. Das Ergebnis dieses Effekts wird dann zweimal mit dem ursprünglichen Bild zusammengesetzt, um das endgültige Bild zu erhalten, das im Fenster gerendert wird.
+Legen Sie in diesem Beispiel das ursprüngliche Bild als Eingabe für den [effekt Gaußscher Weichzeichner](gaussian-blur.md) fest, und legen Sie dann die Ausgabe des Weichzeichners als Eingabe für den [Point Specular Lighting-Effekt](specular-lighting.md)fest. Das Ergebnis dieses Effekts wird dann zweimal mit dem ursprünglichen Bild zusammengesetzt, um das endgültige Bild abzurufen, das im Fenster gerendert wird.
 
-Im folgenden finden Sie ein Diagramm des Bild Diagramms.
+Hier sehen Sie ein Diagramm des Bilddiagramms.
 
-![Diagramm des Wirkungs Diagramms.](images/effect-graph.png)
+![Diagramm des Effektdiagramms.](images/effect-graph.png)
 
-Dieses Effekt Diagramm besteht aus vier [**ID2D1Effect**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1effect) -Objekten, die jeweils einen anderen integrierten Effekt darstellen. Sie können benutzerdefinierte Effekte auf die gleiche Weise erstellen und verbinden, nachdem Sie Sie mit [**ID1D1Factory1:: registereffect**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1factory1-registereffectfromstring)registriert haben. Der Code hier erstellt die Effekte, legt die Eigenschaften fest und verbindet das zuvor gezeigte Effekt Diagramm.
+Dieses Effektdiagramm besteht aus vier [**ID2D1Effect-Objekten,**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1effect) die jeweils einen anderen integrierten Effekt darstellen. Sie können benutzerdefinierte Effekte auf die gleiche Weise erstellen und verbinden, nachdem Sie sie mit [**id1D1Factory1::RegisterEffect**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1factory1-registereffectfromstring)registriert haben. Der Code hier erstellt die Effekte, legt die Eigenschaften fest und verbindet das zuvor gezeigte Effektdiagramm.
 
-1.  Erstellen Sie den [gauischen](gaussian-blur.md) Weichzeichnereffekt mithilfe der [**ID2D1DeviceContext:: kreateeffect**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-createeffect) -Methode, und geben Sie die richtige CLSID an. Die CLSIDs für die integrierten Effekte werden in d2d1effects. h definiert. Anschließend legen Sie die Standardabweichung des weichungs Werts mithilfe der [**ID2D1Effect:: SetValue**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-setvalue(uint32_constbyte_uint32)) -Methode fest.
+1.  Erstellen Sie den [Blureffekt "Gaussian"](gaussian-blur.md) mithilfe der [**ID2D1DeviceContext::CreateEffect-Methode,**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-createeffect) und geben Sie die richtige CLSID an. Die CLSIDs für die integrierten Effekte werden in d2d1effects.h definiert. Anschließend legen Sie die Standardabweichung des Weichzeichners mithilfe der [**ID2D1Effect::SetValue-Methode**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-setvalue(uint32_constbyte_uint32)) fest.
 
     ```C++
     // Create the Gaussian Blur Effect
@@ -49,9 +49,9 @@ Dieses Effekt Diagramm besteht aus vier [**ID2D1Effect**](/windows/win32/api/d2d
 
     
 
-    Mit dem [gauischen](gaussian-blur.md) Weichzeichnereffekt werden alle Kanäle des Bilds, einschließlich des Alphakanals, verwischt.
+    Der [Weichzeichnereffekt "Gaussian"](gaussian-blur.md) verwischt alle Kanäle des Bilds, einschließlich des Alphakanals.
 
-2.  Erstellen Sie den Glanzeffekt, und legen [Sie die Eigenschaften](point-specular.md) fest. Die Position des Lichts ist ein Vektor von drei Gleit Komma Werten, sodass Sie ihn als separate Variable deklarieren und an die [**SetValue**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-setvalue(uint32_constbyte_uint32)) -Methode übergeben müssen.
+2.  Erstellen Sie den [Glanzlichteffekt,](point-specular.md) und legen Sie die Eigenschaften fest. Die Position des Lichts ist ein Vektor von drei Gleitkommawerten. Daher müssen Sie sie als separate Variable deklarieren und an die [**SetValue-Methode**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-setvalue(uint32_constbyte_uint32)) übergeben.
 
     ```C++
     // Create the Specular Lighting Effect
@@ -78,13 +78,13 @@ Dieses Effekt Diagramm besteht aus vier [**ID2D1Effect**](/windows/win32/api/d2d
 
     
 
-    Der Glanz [Licht](point-specular.md) Effekt verwendet den Alphakanal der Eingabe, um eine Höhen Zuordnung für die Beleuchtung zu erstellen.
+    Der [Glanzlichteffekt](point-specular.md) verwendet den Alphakanal der Eingabe, um eine Höhenkarte für die Beleuchtung zu erstellen.
 
-3.  Es gibt zwei verschiedene [zusammengesetzte Effekte](composite.md) , die Sie zusammen mit dem zusammengesetzten Effekt und der [arithmetischen](arithmetic-composite.md)Zusammensetzung verwenden können. Dieses Effekt Diagramm verwendet beide.
+3.  Es gibt zwei verschiedene zusammengesetzte Effekte, die Sie den [zusammengesetzten](composite.md) Effekt und den [arithmetischen zusammengesetzten](arithmetic-composite.md)verwenden können. Dieses Effektdiagramm verwendet beides.
 
-    Erstellen Sie den zusammen [gesetzten](composite.md) Effekt, und legen Sie den Modus auf D2D1 \_ Composite \_ Mode \_ Source \_ in fest, der die Schnittmenge der Quell-und Ziel Images ausgibt.
+    Erstellen Sie den [zusammengesetzten](composite.md) Effekt, und legen Sie den Modus auf D2D1 \_ COMPOSITE MODE SOURCE IN \_ \_ \_ fest, der die Schnittmenge der Quell- und Zielbilder ausgibt.
 
-    Durch den [arithmetischen zusammengesetzten](arithmetic-composite.md) Effekt werden die beiden Eingabe Bilder auf der Grundlage einer Formel verfasst, die durch den World Wide Web Consortium (W3C) für den SVG (Scalable Vector Graphics)-Standard definiert ist. Erstellen Sie eine arithmetische zusammengesetzte, und legen Sie die Koeffizienten für die Formel fest.
+    Der [arithmetische zusammengesetzte](arithmetic-composite.md) Effekt erstellt die beiden Eingabebilder basierend auf einer Formel, die vom World Wide Web Consortium (W3C) für den SVG-Standard (Scalable Vector Graphics) definiert wird. Erstellen Sie eine arithmetische Zusammengesetztkeit, und legen Sie die Koeffizienten für die Formel fest.
 
     ```C++
     // Create the Composite Effects
@@ -107,7 +107,7 @@ Dieses Effekt Diagramm besteht aus vier [**ID2D1Effect**](/windows/win32/api/d2d
 
     
 
-    Die Koeffizienten für den [arithmetischen zusammengesetzten](arithmetic-composite.md) Effekt werden hier dargestellt.
+    Die Koeffizienten für den [arithmetischen zusammengesetzten](arithmetic-composite.md) Effekt sind hier dargestellt.
 
     ```C++
     D2D1_VECTOR_4F sc_arithmeticCoefficients   = D2D1::Vector4F(0.0f, 1.0f, 1.0f, 0.0f);
@@ -115,13 +115,13 @@ Dieses Effekt Diagramm besteht aus vier [**ID2D1Effect**](/windows/win32/api/d2d
 
     
 
-    In diesem Effekt Diagramm führen beide zusammengesetzten Effekte die Ausgabe der anderen Effekte und die zwischen Oberfläche als Eingaben aus und führen Sie zusammen.
+    In diesem Effektdiagramm nehmen beide zusammengesetzten Effekte die Ausgabe der anderen Effekte und die Zwischenoberfläche als Eingaben und zusammengesetzte Effekte an.
 
-4.  Schließlich verbinden Sie die Effekte, um das Diagramm zu bilden, indem Sie die Eingaben auf die richtigen Bilder und Bitmaps festlegen.
+4.  Abschließend verbinden Sie die Effekte, um das Diagramm zu bilden, indem Sie die Eingaben auf die richtigen Bilder und Bitmaps festlegen.
 
-    Der erste Effekt, [gauweich](gaussian-blur.md)weich, empfängt seine Eingabe von der zwischen Oberfläche, in der Sie die primitiven gerendert haben. Sie legen die Eingabe mithilfe der [**ID2D1Effect:: SetInput**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1effect-setinput) -Methode und angeben des Indexes eines [**ID2D1Image**](/windows/win32/api/d2d1/nn-d2d1-id2d1image) -Objekts fest. Die Gauß-und Glanz [Lichter](point-specular.md) wirken sich nur auf eine einzelne Eingabe aus. Der Glanzlicht Effekt verwendet den unscharfen Alphakanal des Gauß
+    Der erste Effekt, [der Gausssche Weichzeichner,](gaussian-blur.md)empfängt seine Eingabe von der Zwischenoberfläche, in der Sie die Primitiven gerendert haben. Sie legen die Eingabe mithilfe der [**ID2D1Effect::SetInput-Methode**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1effect-setinput) fest und geben den Index eines [**ID2D1Image-Objekts**](/windows/win32/api/d2d1/nn-d2d1-id2d1image) an. Die Weichzeichner- und [Glanzlichteffekte](point-specular.md) von Gaussian weisen nur eine einzige Eingabe auf. Für den Glanzlichteffekt wird der unscharfe Alphakanal des Gaußschen Weichzeichners verwendet.
 
-    Die [zusammengesetzten und](composite.md) [arithmetischen zusammengesetzten](arithmetic-composite.md) Effekte haben mehrere Eingaben. Um sicherzustellen, dass die Bilder in der richtigen Reihenfolge angeordnet werden, müssen Sie den korrekten Index für jedes Eingabe Abbild angeben.
+    Die [zusammengesetzten](composite.md) und [arithmetischen Verbundeffekte](arithmetic-composite.md) weisen mehrere Eingaben auf. Um sicherzustellen, dass die Bilder in der richtigen Reihenfolge zusammengestellt werden, müssen Sie den richtigen Index für jedes Eingabebild angeben.
 
     ```C++
     // Connect the graph.
@@ -142,7 +142,7 @@ Dieses Effekt Diagramm besteht aus vier [**ID2D1Effect**](/windows/win32/api/d2d
 
     
 
-5.  Übergeben Sie das [arithmetische zusammengesetzte](arithmetic-composite.md) Effekt Objekt an die [**ID2DDeviceContext::D rawImage**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-drawimage(id2d1image_constd2d1_point_2f_constd2d1_rect_f_d2d1_interpolation_mode_d2d1_composite_mode)) -Methode, und die Ausgabe des Diagramms wird verarbeitet und gezeichnet.
+5.  Übergeben Sie das [arithmetische Objekt des zusammengesetzten](arithmetic-composite.md) Effekts an die [**ID2DDeviceContext::D rawImage-Methode,**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-drawimage(id2d1image_constd2d1_point_2f_constd2d1_rect_f_d2d1_interpolation_mode_d2d1_composite_mode)) und es verarbeitet und zeichnet die Ausgabe des Graphen.
 
     ```C++
         // Draw the output of the effects graph.
@@ -157,6 +157,6 @@ Dieses Effekt Diagramm besteht aus vier [**ID2D1Effect**](/windows/win32/api/d2d
 
     
 
- 
+ 
 
- 
+ 

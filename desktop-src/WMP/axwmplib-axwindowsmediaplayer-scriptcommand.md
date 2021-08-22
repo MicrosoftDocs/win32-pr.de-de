@@ -3,7 +3,7 @@ title: ScriptCommand-Ereignis des AxWindowsMediaPlayer-Objekts
 description: Das ScriptCommand-Ereignis tritt auf, wenn ein synchronisierter Befehl oder eine synchronisierte URL empfangen wird. | ScriptCommand-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: b6c613b2-f1b0-43d3-9992-c01d1e00e644
 keywords:
-- ScriptCommand-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- ScriptCommand-Ereignis des AxWindowsMediaPlayer-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 49d004fbfc265784ef77969258ff168670d9907f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 26724d8d2d86bd14be9aa5360678dd9caf54620e48d4b361ab120bc2b8927fb1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358093"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119509330"
 ---
 # <a name="scriptcommand-event-of-the-axwindowsmediaplayer-object"></a>ScriptCommand-Ereignis des AxWindowsMediaPlayer-Objekts
 
@@ -41,58 +41,58 @@ Private Sub player_ScriptCommand(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ scriptcommandeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ scriptcommandevent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ ScriptCommandEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ ScriptCommandEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft | BESCHREIBUNG                                                   |
+| Eigenschaft | Beschreibung                                                   |
 |----------|---------------------------------------------------------------|
-| sctype   | System. StringGibt den Typ des Skript Befehls an.<br/> |
-| Parameter    | System. StringGibt den Skript Befehl an.<br/>         |
+| scType   | System.String Gibt den Typ des Skriptbefehls an.<br/> |
+| Parameter    | System.String Gibt den Skriptbefehl an.<br/>         |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Befehle können zwischen den Sounds und Bildern einer Windows Media-Datei oder eines Windows-Streams eingebettet werden. Die Befehle sind ein paar von Unicode-Zeichen folgen, die mit einer bestimmten Zeit im Stream verknüpft sind. Wenn der Stream den dem Befehl zugeordneten Zeitpunkt erreicht, sendet das Windows Media Player-Steuerelement ein **ScriptCommand** -Ereignis mit zwei Parametern. Ein Parameter gibt den Typ des gesendeten Befehls an, und der andere Parameter gibt den Befehl an. Der Parametertyp wird verwendet, um zu bestimmen, wie der Befehlsparameter verarbeitet wird. Alle Befehls Typen können in eine Datei oder einen Stream eingebettet werden, damit Sie vom **ScriptCommand** -Ereignis verarbeitet wird.
+Befehle können in die Sounds und Bilder einer Mediendatei oder eines Windows Stream eingebettet werden. Die Befehle sind ein Paar von Unicode-Zeichenfolgen, die einer festgelegten Zeit im Stream zugeordnet sind. Wenn der Stream die Zeit erreicht, die dem Befehl zugeordnet ist, sendet das **Windows Media Player-Steuerelement ein ScriptCommand-Ereignis** mit zwei Parametern. Ein Parameter gibt den Typ des gesendeten Befehls an, während der andere Parameter den Befehl angibt. Der Typ des Parameters wird verwendet, um zu bestimmen, wie der Befehlsparameter verarbeitet wird. Jeder Befehlstyp kann in eine Datei oder einen Stream eingebettet werden, um vom **ScriptCommand-Ereignis behandelt zu** werden.
 
-In der folgenden Tabelle sind Skript Befehls Typen aufgeführt, die automatisch von Windows Media Player verarbeitet werden.
+In der folgenden Tabelle werden Skriptbefehlstypen aufgeführt, die automatisch von der Windows Media Player.
 
 
 
-| type                   | BESCHREIBUNG                                                                                                                                                         |
+| Typ                   | Beschreibung                                                                                                                                                         |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CAPTION                | Das-Steuerelement zeigt den zugeordneten Text im von iwmpclosedcaption angegebenen HTML-Element an. **captioningid**.                                                       |
-| EREIGNIS                  | Das Steuerelement führt Anweisungen aus, die für das angegebene Ereignis definiert sind.                                                                                                  |
-| Einfügen               | Das-Steuerelement setzt seine **URL** -Eigenschaft zurück, versucht, die angegebene Datei zu öffnen, und beginnt sofort mit der Wiedergabe des neuen Streams.                                        |
-| OpenEvent              | Puffert den zugeordneten Ereignistyp Befehl für die rechtzeitige Ausführung des Ereignis Skripts.                                                                                 |
-| SYNCHRONIZEDLYRICLYRIC | Der Parameter *param* enthält den synchronisierten Text. In Windows Media Player wird der Text im Bereich geschlossene Überschrift der Funktion **jetzt abgespielt** angezeigt. |
-| TEXT                   | Das-Steuerelement zeigt den zugeordneten Text im von iwmpclosedcaption angegebenen HTML-Element an. **captioningid**.                                                       |
-| URL                    | Das-Steuerelement öffnet automatisch die URL, die mit dem Standard Internet Browser angegeben wird, wenn iwmpsettings. die **invokeurls** -Eigenschaft ist auf true festgelegt.                    |
+| CAPTION                | Das -Steuerelement zeigt den zugeordneten Text in dem durch IWMPClosedCaption angegebenen HTML-Element an. **captioningId**.                                                       |
+| EREIGNIS                  | Das -Steuerelement führt anweisungen aus, die für das angegebene Ereignis definiert sind.                                                                                                  |
+| Dateiname               | Das Steuerelement setzt seine **URL-Eigenschaft** zurück, versucht, die angegebene Datei zu öffnen, und beginnt sofort mit der Wiedergabe des neuen Streams.                                        |
+| OPENEVENT              | Puffert den zugeordneten EVENT-Typbefehl für die rechtzeitige Ausführung des EVENT-Skripts.                                                                                 |
+| SYNCHRONIZEDLYRICLYRIC | Der *Parameter param* enthält den synchronisierten Text . Windows Media Player wird der Text im Untertitelbereich des Features **Jetzt wieder verwendet** angezeigt. |
+| TEXT                   | Das -Steuerelement zeigt den zugeordneten Text in dem durch IWMPClosedCaption angegebenen HTML-Element an. **captioningId**.                                                       |
+| URL                    | Das Steuerelement öffnet automatisch die URL, die mithilfe des Standard-Internetbrowsers angegeben wird, wenn IWMPSettings verwendet wird. **Die invokeURLs-Eigenschaft** ist auf TRUE festgelegt.                    |
 
 
 
  
 
-Sie können beliebige andere Befehls Typen einbetten, solange Sie Code zum Verarbeiten des Befehls bereitstellen. Obwohl unbekannte Befehle vom Windows Media Player-Steuerelement ignoriert werden, werden Sie weiterhin an das **ScriptCommand** -Ereignis übergeben.
+Sie können jeden anderen Befehlstyp einbetten, solange Sie Code zur Handhabung des Befehls bereitstellen. Obwohl unbekannte Befehle vom Steuerelement ignoriert Windows Media Player werden, werden sie weiterhin an das **ScriptCommand-Ereignis** übergeben.
 
-Das ScriptCommand-Ereignis wird nicht aufgerufen, wenn die Datei im schnell Forward-oder Rewind-Modus gescannt wird.
+Das ScriptCommand-Ereignis wird nicht aufgerufen, wenn die Datei im Modus für schnelles Vorwärts- oder Zurücksenden gescannt wird.
 
-URL-Befehle, die vom Windows-Media Player-Steuerelement empfangen werden, werden automatisch in Ihrem Standard Webbrowser aufgerufen, wenn iwmpsettings. die **invokeurls** -Eigenschaft ist auf true festgelegt. Sie können die iwmpsettings verwenden. **defaultframe** -Eigenschaft, um den Zielframe anzugeben, in dem die Webseite angezeigt wird.
+URL-Befehle, die vom Windows Media Player-Steuerelement empfangen werden, werden automatisch in Ihrem Standardwebbrowser aufgerufen, wenn IWMPSettings verwendet wird. **Die invokeURLs-Eigenschaft** ist auf TRUE festgelegt. Sie können die IWMPSettings verwenden. **defaultFrame-Eigenschaft,** um den Zielframe anzugeben, in dem die Webseite angezeigt wird.
 
-Die an Windows Media Player gesendete URL wird relativ zur Basis-URL verarbeitet, die von iwmpsettings angegeben wird. **baseurl** -Eigenschaft. Die Basis-URL wird mit dem relative URL verkettet, was zu einer vollständig angegebenen URL führt, die vom **ScriptCommand** -Ereignis als Befehlsparameter übergeben wird.
+Die an Windows Media Player url wird relativ zur Basis-URL verarbeitet, die von IWMPSettings angegeben wird. **baseURL-Eigenschaft.** Die Basis-URL wird mit dem relative URL verkettet, was zu einer vollständig angegebenen URL führt, die vom **ScriptCommand-Ereignis** als Befehlsparameter übergeben wird.
 
-Das Windows Media Player-Steuerelement verarbeitet eingehende URL-Befehle immer wie folgt:
+Das Windows Media Player verarbeitet eingehende URL-Befehle immer wie folgt:
 
-1.  Ein URL-Type-Befehl wird empfangen.
-2.  Iwmpsettings. **baseurl** wird verwendet, um eine vollständige URL aus der relative URL zu erstellen, die im Skript Befehl angegeben ist.
+1.  Ein URL-Typbefehl wird empfangen.
+2.  IWMPSettings. **baseURL wird** verwendet, um eine vollständige URL aus dem im Skriptbefehl angegebenen relative URL zu erstellen.
 3.  **ScriptCommand** wird aufgerufen.
-4.  Nachdem **ScriptCommand** zurückgegeben wurde, iwmpsettings. **invokeurls** wird geprüft.
-5.  Wenn iwmpsettings. **invokeurls** ist true, und der Befehl ist ein URL-Befehl, die angegebene URL wird aufgerufen. Wenn iwmpsettings. **invokeurls** ist false, oder wenn der Befehl kein URL-Befehl ist, wird der Befehl ignoriert.
+4.  Nachdem **ScriptCommand zurückgegeben** wurde, wird IWMPSettings zurückgegeben. **invokeURLs** ist überprüft.
+5.  Wenn IWMPSettings. **invokeURLs** ist true, und der Befehl ist ein URL-Befehl. Die angegebene URL wird aufgerufen. Wenn IWMPSettings. **invokeURLs** ist false, oder wenn der Befehl kein URL-Befehl ist, wird der Befehl ignoriert.
 
-Wenn Sie eine Windows Media-Datei erstellen, können Sie angeben, in welchem Frame die neue URL angezeigt werden soll, indem Sie zwei kaufmännische und den Namen des Frames im Parameterfeld verketten. Im folgenden Beispiel werden typische **ScriptCommand** -Parameter veranschaulicht. Er gibt an, dass die URL *MyPage* im Frame " *MyFrame* " gestartet werden muss.
+Beim Erstellen einer Windows Media-Datei können Sie angeben, in welchem Frame die neue URL angezeigt wird, indem Sie zwei ampersands und den Namen des Frames im Parameterfeld verketten. Das folgende Beispiel veranschaulicht typische **ScriptCommand-Parameter.** Sie gibt an, dass die URL *mypage* im *myframe-Frame gestartet werden* muss.
 
 
 ```CSharp
@@ -102,7 +102,7 @@ Param = https://myweb/mypage.html&&myframe
 
 
 
-Das ScriptCommand-Ereignis wird nicht aufgerufen, wenn die Datei gescannt wird (schnell weitergeleitet oder reaktiviert).
+Das ScriptCommand-Ereignis wird nicht aufgerufen, wenn die Datei gescannt wird (schnelles Weitergeleitetes oder erneutes Durchwaschen).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -120,22 +120,22 @@ Das ScriptCommand-Ereignis wird nicht aufgerufen, wenn die Datei gescannt wird (
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. URL (VB und c#)**](axwmplib-axwindowsmediaplayer-url--vb-and-c.md)
+[**AxWindowsMediaPlayer.URL (VB und C#)**](axwmplib-axwindowsmediaplayer-url--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpclosedcaption. captioningid (VB und c#)**](wmplibiwmpclosedcaption-iwmpclosedcaption-captioningid--vb-and-c.md)
+[**IWMPClosedCaption.captioningId (VB und C#)**](wmplibiwmpclosedcaption-iwmpclosedcaption-captioningid--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. baseurl (VB und c#)**](wmplibiwmpsettings-iwmpsettings-baseurl--vb-and-c.md)
+[**IWMPSettings.baseURL (VB und C#)**](wmplibiwmpsettings-iwmpsettings-baseurl--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. defaultframe (VB und c#)**](wmplibiwmpsettings-iwmpsettings-defaultframe--vb-and-c.md)
+[**IWMPSettings.defaultFrame (VB und C#)**](wmplibiwmpsettings-iwmpsettings-defaultframe--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. invokeurls (VB und c#)**](wmplibiwmpsettings-iwmpsettings-invokeurls--vb-and-c.md)
+[**IWMPSettings.invokeURLs (VB und C#)**](wmplibiwmpsettings-iwmpsettings-invokeurls--vb-and-c.md)
 </dt> </dl>
 
  

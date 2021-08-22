@@ -1,28 +1,28 @@
 ---
-title: Verwenden des gegenseitigen Ausschlusses mehrerer Bitrate
-description: Verwenden des gegenseitigen Ausschlusses mehrerer Bitrate
+title: Verwenden des gegenseitigen Ausschlusses der Mehrfachbitrate
+description: Verwenden des gegenseitigen Ausschlusses der Mehrfachbitrate
 ms.assetid: 69898b4d-fe10-422e-9ed2-87b65aa7bdb3
 keywords:
-- mehrfache Bitrate (MBR), gegenseitiger Ausschluss
-- MBR (mehrfache Bitrate), gegenseitiger Ausschluss
-- gegenseitiger Ausschluss, mehrfache Bitrate (MBR)
-- Profile, mehrfache Bitrate (MBR)
+- Multiple Bit Rate (MBR), gegenseitigen Ausschluss
+- MBR (Multiple Bit Rate), gegenseitiger Ausschluss
+- Gegenseitiger Ausschluss,Multiple-Bit-Rate (MBR)
+- Profile,Multiple Bit Rate (MBR)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: be77c7615845d10d07982676dfdb4dc8c617cebe
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: c31c7954f6aa5098f6cc221a7a761428ff15fd6a4c2c0a6e5c8cea2b6622a84b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104314224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119446970"
 ---
-# <a name="using-multiple-bit-rate-mutual-exclusion"></a>Verwenden des gegenseitigen Ausschlusses mehrerer Bitrate
+# <a name="using-multiple-bit-rate-mutual-exclusion"></a>Verwenden des gegenseitigen Ausschlusses der Mehrfachbitrate
 
-Der gegenseitige gegenseitigen Ausschluss von MBR (Multiple Bitrate) ist nützlich, wenn Sie Inhalte für eine Vielzahl von Wiedergabe Szenarios codieren möchten. Eine MBR-Videoausgabe besteht aus einer einzelnen Eingabe, die mehrmals codiert ist, jeweils mit unterschiedlichen Bitrate-Einstellungen. Wenn eine Datei mit MBR-Codierung gelesen wird, bestimmt der Reader basierend auf der verfügbaren Bandbreite, welcher Stream verwendet werden soll.
+Der gegenseitige Ausschluss mit mehrfacher Bitrate (Multiple Bit Rate, MBR) ist nützlich, wenn Sie Inhalte für eine Vielzahl von Wiedergabeszenarien codieren möchten. Eine MBR-Videoausgabe besteht aus einer einzelnen Eingabe, die mehrmals codiert ist und die jeweils unterschiedliche Einstellungen für die Bitrate haben. Wenn eine Datei mit MBR-Codierung gelesen wird, bestimmt der Reader basierend auf der verfügbaren Bandbreite, welcher Stream verwendet werden soll.
 
-Das Windows Media-Format-SDK unterstützt die MBR-Codierung für Video-und Audiodatenströme. Außerdem können Sie eine besondere Art von MBR-Codierung erstellen, die als MBR-Codierung mit mehreren Video Größen bezeichnet wird. Die MBR-Videofunktionen mit mehreren Videos sind identisch mit dem normalen MBR-Video, mit dem Unterschied, dass Sie unterschiedliche Bildgrößen für die Videostreams im gegenseitigen Ausschluss angeben können.
+Das Windows Media Format SDK unterstützt die MBR-Codierung für Video- und Audiostreams. Darüber hinaus können Sie einen speziellen MbR-Codierungstyp erstellen, der MBR-Codierung mit mehreren Videogrößen genannt wird. MBR-Videofunktionen mit mehreren Videogrößen funktionieren identisch mit normalem MBR-Video, mit der Ausnahme, dass Sie unterschiedliche Bildgrößen für die Videostreams beim gegenseitigen Ausschluss angeben können.
 
-Im folgenden Beispiel wird veranschaulicht, wie Sie ein Profil für ein MBR-Video mit mehreren Video Größen einrichten. Es erstellt ein neues Profil mit drei Videostreams mit unterschiedlichen Bitraten und Größen und schließt Sie in ein gegenseitiges Ausschluss Objekt ein.
+Im folgenden Beispiel wird veranschaulicht, wie Sie ein Profil für MBR-Videos mit mehreren Videogrößen einrichten. Es erstellt ein neues Profil mit drei Videostreams mit unterschiedlichen Bitraten und Größen und schließt sie in ein Objekt für gegenseitigen Ausschluss ein.
 
 
 ```C++
@@ -146,27 +146,27 @@ pProfileMgr = NULL;
 
 <dl> <dt>
 
-[**Iwmmedia-Eigenschaften Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmediaprops)
+[**IWMMediaProps-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmediaprops)
 </dt> <dt>
 
-[**Iwmmutualexclusion-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmutualexclusion)
+[**IWMMutualExclusion-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmutualexclusion)
 </dt> <dt>
 
-[**Iwmprofile-Schnittstelle**](iwmprofile.md)
+[**IWMProfile-Schnittstelle**](iwmprofile.md)
 </dt> <dt>
 
-[**Iwmstreamconfig-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig)
+[**IWMStreamConfig-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig)
 </dt> <dt>
 
-[**Verwenden von gegenseitigem Ausschluss**](using-mutual-exclusion.md)
+[**Verwenden des gegenseitigen Ausschlusses**](using-mutual-exclusion.md)
 </dt> <dt>
 
-[**WM \_ - \_ Medientyp**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_media_type)
+[**\_ \_ WM-MEDIENTYP**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_media_type)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
 description: Private Nachricht, die die Palette erkennt.
 ms.assetid: 1a8c9b31-031f-48c4-8f97-58b824d38e06
-title: 'Cbasewindow:: m_RealizePalette Member (winutil. h)'
+title: CBaseWindow::m_RealizePalette-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ad05b499432747bde52651bcabe576fe9f356b28
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dd1e51a48b4e359f8000b3be5e40b3bbfa725507bdb956d637ea8ded98eaad6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369590"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119567430"
 ---
-# <a name="cbasewindowm_realizepalette-member"></a>Cbasewindow:: m \_ RealizePalette Member
+# <a name="cbasewindowm_realizepalette-member"></a>CBaseWindow::m \_ RealizePalette-Member
 
 Private Nachricht, die die Palette erkennt.
 
@@ -36,9 +36,9 @@ UINT m_RealizePalette;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird von der [**cbasewindow:: SetPalette**](cbasewindow-setpalette.md) -Methode gesendet.
+Die [**CBaseWindow::SetPalette-Methode**](cbasewindow-setpalette.md) sendet diese Nachricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,8 +46,8 @@ Diese Meldung wird von der [**cbasewindow:: SetPalette**](cbasewindow-setpalette
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Diese Meldung wird von der [**cbasewindow:: SetPalette**](cbasewindow-setpalette
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

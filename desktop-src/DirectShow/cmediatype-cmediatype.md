@@ -1,7 +1,7 @@
 ---
-description: Erfahren Sie mehr über die cmediatype. cmediatype-Konstruktormethode (mtype. h). Diese Methode verwendet keine Parameter.
+description: Erfahren Sie mehr über die CMediaType.CMediaType-Konstruktormethode (Mtype.h). Diese Methode verwendet keine Parameter.
 ms.assetid: 6636a56c-5b13-47bb-94e3-dedd8ed27a3f
-title: Cmediatype. cmediatype-Konstruktor (mtype. h)-keine Parameter
+title: 'CMediaType.CMediaType-Konstruktor (Mtype.h): Keine Parameter'
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0b688c5b12fa82269ba18ff032abcbe82ebe859a
-ms.sourcegitcommit: 11f52354f570aacaf1ba2a266b2e507abd73352a
+ms.openlocfilehash: 7e6a579cb7ff0210a7c820b3dc22bccb6838ac41196da306431d90a0b5a6e105
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "106364405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119566410"
 ---
-# <a name="cmediatypecmediatype-constructor-mtypeh---no-parameters"></a>Cmediatype. cmediatype-Konstruktor (mtype. h)-keine Parameter
+# <a name="cmediatypecmediatype-constructor-mtypeh---no-parameters"></a>CMediaType.CMediaType-Konstruktor (Mtype.h): Keine Parameter
 
 Konstruktormethode.
 
@@ -38,24 +38,24 @@ CMediaType();
 
 ## <a name="parameters"></a>Parameter
 
-Dieser Konstruktor weist keine Parameter auf.
+Dieser Konstruktor verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Konstruktor ruft die [**cmediatype:: initmediatype**](cmediatype-initmediatype.md) -Methode auf, um den Medientyp zu initialisieren.
+Der Konstruktor ruft die [**CMediaType::InitMediaType-Methode**](cmediatype-initmediatype.md) auf, um den Medientyp zu initialisieren.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung                   | Wert                                                                                                                                                                                           |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header  | Mtype. h (Include Streams. h)                                                                                     |
-| Bibliothek | "Straumbase. lib" (Einzelhandels Builds); "Straumbasd. lib" (Debugbuilds) |
+| Header  | Mtype.h (include Streams.h)                                                                                     |
+| Bibliothek | Strmbase.lib (Verkaufsbuilds); Strmbasd.lib (Debugbuilds) |
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  

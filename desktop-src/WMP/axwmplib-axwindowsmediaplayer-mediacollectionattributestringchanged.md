@@ -1,9 +1,9 @@
 ---
-title: Mediacollectionattributestringchanged-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das mediacollectionattributestringchanged-Ereignis tritt auf, wenn ein Attribut Wert in der Bibliothek geändert wird. | Mediacollectionattributestringchanged-Ereignis des AxWindowsMediaPlayer-Objekts
+title: MediaCollectionAttributeStringChanged-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das MediaCollectionAttributeStringChanged-Ereignis tritt auf, wenn ein Attributwert in der Bibliothek geändert wird. | MediaCollectionAttributeStringChanged-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: f5b91399-42b7-4202-9b65-caa9b15847b9
 keywords:
-- Mediacollectionattributestringchanged-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- MediaCollectionAttributeStringChanged-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c8b83d8036ca0dca7f79e2a9ba721830447f9c5a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5dcc755d1a183525923b91ce2de7937860582c3cf795d13cbf4a8c22d7c9c37f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365613"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119618780"
 ---
-# <a name="mediacollectionattributestringchanged-event-of-the-axwindowsmediaplayer-object"></a>Mediacollectionattributestringchanged-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="mediacollectionattributestringchanged-event-of-the-axwindowsmediaplayer-object"></a>MediaCollectionAttributeStringChanged-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das mediacollectionattributestringchanged-Ereignis tritt auf, wenn ein Attribut Wert in der Bibliothek geändert wird.
+Das MediaCollectionAttributeStringChanged-Ereignis tritt auf, wenn ein Attributwert in der Bibliothek geändert wird.
 
 ``` syntax
 [C#]
@@ -41,23 +41,23 @@ Private Sub player_MediaCollectionAttributeStringChanged(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ mediacollectionattributestringchangedeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ mediacollectionattributestringchangedevent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ MediaCollectionAttributeStringChangedEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ MediaCollectionAttributeStringChangedEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft         | BESCHREIBUNG                                                                                                                                                                                  |
+| Eigenschaft         | Beschreibung                                                                                                                                                                                  |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| bstrattribname   | System. StringGibt den Namen des Attributs an. Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Attribut Referenz](attribute-reference.md).<br/> |
-| bstroldattribval | System. StringGibt den alten Wert des Attributs an.<br/>                                                                                                                            |
-| bstraunetwattribval | System. StringGibt den neuen Wert des Attributs an.<br/>                                                                                                                            |
+| bstrAttribName   | System.String Gibt den Namen des Attributs an. Informationen zu den attributen, die von Windows Media Player unterstützt werden, finden Sie unter [Attributverweis.](attribute-reference.md)<br/> |
+| bstrOldAttribVal | System.String Gibt den alten Wert des Attributs an.<br/>                                                                                                                            |
+| bstrNewAttribVal | System.String Gibt den neuen Wert des Attributs an.<br/>                                                                                                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Benutzer Bibliotheks Metadaten ändert, wird die Mediensammlung aktualisiert, und dieses Ereignis wird für jedes geänderte Attribut ausgelöst.
+Wenn ein Benutzer Bibliotheksmetadaten ändert, wird die Mediensammlung aktualisiert, und dieses Ereignis wird für jedes geänderte Attribut ausgelöst.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,23 +65,23 @@ Wenn ein Benutzer Bibliotheks Metadaten ändert, wird die Mediensammlung aktuali
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. mediacollection (VB und c#)**](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)
+[**AxWindowsMediaPlayer.mediaCollection (VB und C#)**](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> </dl>
 
  

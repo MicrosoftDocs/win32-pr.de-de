@@ -1,33 +1,33 @@
 ---
-description: Legt den Sequenz Parametersatz-Bezeichner (SPS) in der SPS-Einheit für die Netzwerk Abstraktionsschicht (NAL) des H. 264-Bit-Streams fest.
+description: Legt den SPS-Bezeichner (Sequence Parameter Set) in der SPS-NAL-Einheit (Network Abstraction Layer) des H.264-Bitstreams fest.
 ms.assetid: 583DD539-6EE8-4DD4-A0FE-D2BBE1A4302F
-title: CODECAPI_AVEncH264SPSID-Eigenschaft (codecapi. h)
+title: CODECAPI_AVEncH264SPSID-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e06fb78fc128b2eec5db2c61faf70ee10a5eba5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: da06e431a3747e676e3934ac9a261e1d0e1ec37e18bacf01f8a3e623c4257488
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127981"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119664660"
 ---
-# <a name="codecapi_avench264spsid-property"></a>Codecapi \_ AVEncH264SPSID Eigenschaft
+# <a name="codecapi_avench264spsid-property"></a>CODECAPI \_ AVEncH264SPSID-Eigenschaft
 
-Legt den Sequenz Parametersatz-Bezeichner (SPS) in der SPS-Einheit für die Netzwerk Abstraktionsschicht (NAL) des H. 264-Bit-Streams fest.
+Legt den SPS-Bezeichner (Sequence Parameter Set) in der SPS-NAL-Einheit (Network Abstraction Layer) des H.264-Bitstreams fest.
 
 ## <a name="data-type"></a>Datentyp
 
-**Ulong** (VT \_ UI4)
+**ULONG** (VT \_ UI4)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ AVEncH264SPSID**
+**CODECAPI \_ AVEncH264SPSID**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt den Wert der **Seq- \_ Parameter \_ Satz- \_ ID** in der SPS-nal-Einheit an. Das **Seq- \_ Parameter \_ Satz- \_ ID** -Syntax Element identifiziert den Satz von Sequenz Parametern. Der resultierende Bitstream kann mit anderen Bitstreams verkettet werden, um einen längeren Bitstream zu schaffen, der mehrere Sequenz Parametersätze mit unterschiedlichen SPS-bezeichtern enthält.
+Gibt den Wert der **seq-Parametersatz-ID \_ \_ \_** in der SPS-NAL-Einheit an. Das **Syntaxelement seq \_ parameter set \_ \_ id** identifiziert den Sequenzparametersatz. Der resultierende Bitstream kann mit anderen Bitstreams verkettet werden, um einen längeren Bitstream zu erzeugen, der mehrere Sequenzparametersätze mit unterschiedlichen SPS-Bezeichnern enthält.
 
-Der gültige Bereich ist 0 31, wie in der H. 264/AVC-Spezifikation angegeben.
+Der gültige Bereich ist 0 31, wie in der H.264/AVC-Spezifikation angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Der gültige Bereich ist 0 31, wie in der H. 264/AVC-Spezifikation angegeben.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -45,10 +45,10 @@ Der gültige Bereich ist 0 31, wie in der H. 264/AVC-Spezifikation angegeben.
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
-[**Icodecapi**](/windows/desktop/api/strmif/nn-strmif-icodecapi)
+[**ICodecAPI**](/windows/desktop/api/strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

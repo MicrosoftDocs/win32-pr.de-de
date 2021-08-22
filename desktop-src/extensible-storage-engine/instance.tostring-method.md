@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: instance. destring-Methode'
-title: Instance. destring-Methode
+description: Weitere Informationen finden Sie unter Instance.ToString-Methode.
+title: Instance.ToString-Methode
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Instance.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.instance.tostring(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2456701e7111036a938d794bdb817992c86ddd6d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7227f1141840c76c2b71f542483d0a57f2eceedeb01961c60ae1a99bb3f7a30f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119618290"
 ---
-# <a name="instancetostring-method"></a>Instance. destring-Methode
+# <a name="instancetostring-method"></a>Instance.ToString-Methode
 
 Gibt eine [Zeichenfolge](/dotnet/api/system.string) zurück, die die aktuelle [Instanz](./instance-class.md)darstellt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Eine [Zeichenfolge](/dotnet/api/system.string) , die die aktuelle [Instanz](./instance-class.md)darstellt.  
+Typ: [System.String](/dotnet/api/system.string)  
+Eine [Zeichenfolge,](/dotnet/api/system.string) die die aktuelle [Instanz](./instance-class.md)darstellt.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Instanzklasse](./instance-class.md)
 
 [Instanzmember](./instance-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

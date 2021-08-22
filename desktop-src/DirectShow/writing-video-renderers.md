@@ -1,24 +1,24 @@
 ---
-description: Schreiben von Videorenderer
+description: Schreiben von Videorenderern
 ms.assetid: 61dfff97-86b2-4d75-ac1c-a69b1dbde02a
-title: Schreiben von Videorenderer
+title: Schreiben von Videorenderern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c6ec5b6ca42304514e8f0683ddf7f59cf6e77064
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 91d9d4b2322661156f3871d383db13af1821fa1b6823a2cbfa633e3e202f236f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348483"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119535950"
 ---
-# <a name="writing-video-renderers"></a>Schreiben von Videorenderer
+# <a name="writing-video-renderers"></a>Schreiben von Videorenderern
 
-In diesem Abschnitt wird beschrieben, wie Videorenderer geschrieben und verwendet werden, sowohl Vollbild-als auch benutzerdefinierte Renderer. Es wird erläutert, wie und warum ein Vollbild-Renderer unterstützt wird und wie Benachrichtigungen, Zustandsänderungen und Änderungen an dynamischen Formaten in einem benutzerdefinierten Renderer behandelt werden.
+In diesem Abschnitt wird beschrieben, wie Sie Videorenderer schreiben und verwenden, sowohl Vollbild- als auch benutzerdefinierte Renderer. Es wird erläutert, wie und warum ein Vollbildrenderer unterstützt wird und wie Benachrichtigungen, Statusänderungen und dynamische Formatänderungen in einem benutzerdefinierten Renderer behandelt werden.
 
 In diesem Abschnitt werden die folgenden Themen behandelt:
 
 -   [Alternative Videorenderer](alternative-video-renderers.md)
--   [Quell-und Ziel Rechtecke in Videorenderer](source-and-target-rectangles-in-video-renderers.md)
+-   [Quell- und Zielrechtecke in Videorenderern](source-and-target-rectangles-in-video-renderers.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

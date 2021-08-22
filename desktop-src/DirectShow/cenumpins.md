@@ -1,7 +1,7 @@
 ---
-description: Die cenumpins-Klasse implementiert einen Enumerator für Pins.
+description: Die CEnumPins-Klasse implementiert einen Enumerator für Pins.
 ms.assetid: 8729f294-c76d-404f-9f51-7565470eced8
-title: Cenumpins-Klasse (amfilter. h)
+title: CEnumPins-Klasse (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,34 +16,34 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5dde02c31ed0ef72e6df36a6cf0364b7f184304e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7135a07aedb879503d36011b274bdeab8035924b91bb5d9bc656d6d89dfbe201
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365509"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119567004"
 ---
-# <a name="cenumpins-class"></a>Cenumpins-Klasse
+# <a name="cenumpins-class"></a>CEnumPins-Klasse
 
 ![cenumpins-Klassenhierarchie](images/filter03.png)
 
-Die- `CEnumPins` Klasse implementiert einen Enumerator für Pins.
+Die `CEnumPins` -Klasse implementiert einen Enumerator für Pins.
 
-Diese Klasse implementiert die [**iumumpins**](/windows/desktop/api/Strmif/nn-strmif-ienumpins) -Schnittstelle. Die folgenden [**cbasefilter**](cbasefilter.md) -Methoden werden aufgerufen:
+Diese Klasse implementiert die [**IEnumPins-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-ienumpins) Sie ruft die folgenden [**CBaseFilter-Methoden**](cbasefilter.md) auf:
 
--   [**Cbasefilter:: getpin**](cbasefilter-getpin.md): Ruft eine PIN für den Filter ab, auf die durch einen NULL basierten Index verwiesen wird.
--   [**Cbasefilter:: getpincount**](cbasefilter-getpincount.md): Ruft die Gesamtanzahl der Pins für den Filter ab.
--   [**Cbasefilter:: getpinversion**](cbasefilter-getpinversion.md): bestimmt, ob die Pins geändert wurden.
+-   [**CBaseFilter::GetPin:**](cbasefilter-getpin.md)Ruft einen Pin für den Filter ab, auf den von einem nullbasierten Index verwiesen wird.
+-   [**CBaseFilter::GetPinCount:**](cbasefilter-getpincount.md)Ruft die Gesamtzahl der Pins im Filter ab.
+-   [**CBaseFilter::GetPinVersion:**](cbasefilter-getpinversion.md)Bestimmt, ob sich die Pins geändert haben.
 
-Wenn der Filter Pins dynamisch erstellt oder zerstört, erhöht er die PIN-Version, wenn die Pins geändert werden. Wenn die Versionsnummer geändert wird, wird das Enumeratorobjekt nicht mehr mit dem Filter synchronisiert. Sobald der Enumerator nicht mehr synchronisiert ist, geben die Methoden in `CEnumPins` VFW \_ E \_ Enum \_ nicht \_ \_ synchron zurück. Zum erneuten Synchronisieren des Enumerators wird die [**cenumpins:: Reset**](cenumpins-reset.md) -Methode aufgerufen.
+Wenn der Filter pins dynamisch erstellt oder zerstört, erhöht er die Pinversion, sobald sich die Stecknadeln ändern. Wenn sich die Versionsnummer ändert, wird das Enumeratorobjekt nicht mehr mit dem Filter synchronisiert. Sobald der Enumerator nicht mehr synchron ist, geben die Methoden in `CEnumPins` VFW \_ E \_ ENUM \_ OUT OF SYNC \_ \_ zurück. Rufen Sie die [**CEnumPins::Reset-Methode**](cenumpins-reset.md) auf, um den Enumerator erneut zu synchronisieren.
 
 
 
-| Öffentliche Methoden                             | BESCHREIBUNG                                                     |
+| Öffentliche Methoden                             | Beschreibung                                                     |
 |--------------------------------------------|-----------------------------------------------------------------|
-| [**Cenumpins**](cenumpins-cenumpins.md)   | Konstruktormethode.                                             |
-| [**~ Cenumpins**](cenumpins--cenumpins.md) | Dekonstruktormethode. Virtu.                                     |
-| Ienumins-Methoden                          | BESCHREIBUNG                                                     |
+| [**CEnumPins**](cenumpins-cenumpins.md)   | Konstruktormethode.                                             |
+| [**~CEnumPins**](cenumpins--cenumpins.md) | Destruktormethode. Virtuellen.                                     |
+| IEnumPins-Methoden                          | Beschreibung                                                     |
 | [**Klon**](cenumpins-clone.md)           | Erstellt eine Kopie des Enumerators mit dem gleichen Enumerationszustand. |
 | [**Weiter**](cenumpins-next.md)             | Ruft eine angegebene Anzahl von Pins ab.                           |
 | [**Zurücksetzen**](cenumpins-reset.md)           | Setzt die Enumerationsfolge auf den Anfang zurück.               |
@@ -59,8 +59,8 @@ Wenn der Filter Pins dynamisch erstellt oder zerstört, erhöht er die PIN-Versi
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

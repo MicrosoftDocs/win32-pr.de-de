@@ -1,31 +1,31 @@
 ---
-description: Die folgende Liste enthält präzise Beschreibungen der einzelnen Winsock-SPI-Strukturen. Wenn Sie weitere Informationen zu jeder Winsock SPI-Struktur benötigen, klicken Sie auf den Struktur Namen.
+description: Die folgende Liste enthält präzise Beschreibungen jeder Winsock SPI-Struktur. Klicken Sie auf den Strukturnamen, um weitere Informationen zu jeder Winsock SPI-Struktur zu finden.
 ms.assetid: 0e198e36-c025-4745-a841-3a23ea3d40aa
 title: Winsock SPI-Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: da37b5a7ea166af3e3c335f2d520034509e57391
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1ef3c516bd695ecbf249556aa05bafda47b8e87d36c487c10217bc010ffa8f5f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214986"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119569060"
 ---
 # <a name="winsock-spi-structures"></a>Winsock SPI-Strukturen
 
-Die folgende Liste enthält präzise Beschreibungen der einzelnen Winsock-SPI-Strukturen. Wenn Sie weitere Informationen zu jeder Winsock SPI-Struktur benötigen, klicken Sie auf den Struktur Namen.
+Die folgende Liste enthält präzise Beschreibungen jeder Winsock SPI-Struktur. Klicken Sie auf den Strukturnamen, um weitere Informationen zu jeder Winsock SPI-Struktur zu finden.
 
 
 
-| Winsock SPI-Struktur                                         | BESCHREIBUNG                                                                                                   |
+| Winsock SPI-Struktur                                         | Beschreibung                                                                                                   |
 |---------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| [**NSP- \_ Routine**](/windows/desktop/api/Ws2spi/ns-ws2spi-nsp_routine)                           | Enthält Informationen zu den Funktionen, die von einem Anbieter von Namespace-Dienstanbieter Version 1 (NSPv1) implementiert werden. |
-| [**NSPV2- \_ Routine**](/windows/desktop/api/Ws2spi/ns-ws2spi-nspv2_routine)                       | Enthält Informationen zu den Funktionen, die von einem Anbieter von Namespace Service Provider Version 2 (NSPv2) implementiert werden. |
-| [**Wsathreadid**](/windows/desktop/api/Ws2spi/ns-ws2spi-wsathreadid)                          | Ermöglicht einem Anbieter, einen Thread zu identifizieren, in dem asynchrone Prozedur Aufrufe (APCs) in die Warteschlange eingereiht werden können.           |
-| [**Überwachungsinformationen für den WSC- \_ Anbieter \_ \_**](/windows/desktop/api/Ws2spi/ns-ws2spi-wsc_provider_audit_info) | Enthält Überwachungsinformationen für einen LSP-Eintrag (geschichteter Dienstanbieter).                                        |
-| [**Wspdata**](/windows/desktop/api/Ws2spi/ns-ws2spi-wspdata)                                  | Enthält Informationen zum Dienstanbieter.                                                                        |
-| [**wspproc- \_ Tabelle**](/windows/desktop/api/Ws2spi/ns-ws2spi-wspproc_table)                       | Enthält eine Tabelle mit Zeigern auf Dienstanbieter Funktionen.                                                   |
-| [**Wspupcalltable**](/windows/desktop/api/Ws2spi/ns-ws2spi-wspupcalltable)                      | Enthält eine Tabelle mit Zeigern für upcallfunktionen von Dienstanbietern.                                            |
+| [**\_NSP-ROUTINE**](/windows/desktop/api/Ws2spi/ns-ws2spi-nsp_routine)                           | Enthält Informationen zu den Funktionen, die von einem NSPv1-Anbieter (Namespace Service Provider Version 1) implementiert werden. |
+| [**NSPV2-ROUTINE \_**](/windows/desktop/api/Ws2spi/ns-ws2spi-nspv2_routine)                       | Enthält Informationen zu den Funktionen, die von einem NSPv2-Anbieter (Namespace Service Provider Version 2) implementiert werden. |
+| [**WSATHREADID**](/windows/desktop/api/Ws2spi/ns-ws2spi-wsathreadid)                          | Ermöglicht es einem Anbieter, einen Thread zu identifizieren, in dem asynchrone Prozeduraufrufe (APCs) in die Warteschlange eingereiht werden können.           |
+| [**\_ÜBERWACHUNGSINFORMATIONEN DES WSC-ANBIETERS \_ \_**](/windows/desktop/api/Ws2spi/ns-ws2spi-wsc_provider_audit_info) | Enthält Überwachungsinformationen für einen LSP-Eintrag (Layered Service Provider).                                        |
+| [**WSPDATA**](/windows/desktop/api/Ws2spi/ns-ws2spi-wspdata)                                  | Enthält Dienstanbieterinformationen.                                                                        |
+| [**\_WSPPROC-TABELLE**](/windows/desktop/api/Ws2spi/ns-ws2spi-wspproc_table)                       | Enthält eine Tabelle mit Zeigern auf Dienstanbieterfunktionen.                                                   |
+| [**WSPUPCALLTABLE**](/windows/desktop/api/Ws2spi/ns-ws2spi-wspupcalltable)                      | Enthält eine Tabelle mit Zeigern auf Dienstanbieter-Upcallfunktionen.                                            |
 
 
 

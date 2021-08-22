@@ -1,9 +1,9 @@
 ---
-title: EN_PARAGRAPHEXPANDED Benachrichtigungs Code (RichEdit. h)
-description: Benachrichtigt das übergeordnete Element eines Rich-Edit-Steuer Elements, dass eine Gliederung erweitert wurde. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer WM-Benachrichtigungs \_ Meldung.
+title: EN_PARAGRAPHEXPANDED Benachrichtigungscode (Richedit.h)
+description: Benachrichtigt das übergeordnete Element eines Rich-Edit-Steuerelements, dass eine Kontur erweitert wurde. Dieses Benachrichtigungscode wird von einem Rich-Edit-Steuerelement in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: D33EB118-FC79-4284-820B-3424F13722C4
 keywords:
-- Windows-Steuerelemente für EN_PARAGRAPHEXPANDED Benachrichtigungs
+- EN_PARAGRAPHEXPANDED Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f862260c0653d23b0b53649a2c05e59820e3808
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: eefff660e03afd38932b81c2852e999dd8d56196dafacd3afa5aa79076b51326
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476980"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119436660"
 ---
-# <a name="en_paragraphexpanded-notification-code"></a>EN \_ paragrapherweiterter Benachrichtigungs Code
+# <a name="en_paragraphexpanded-notification-code"></a>EN \_ PARAGRAPHEXPANDED-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Element eines Rich-Edit-Steuer Elements, dass eine Gliederung erweitert wurde. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer WM-Benachrichtigungs Meldung. [**\_**](wm-notify.md)
+Benachrichtigt das übergeordnete Element eines Rich-Edit-Steuerelements, dass eine Kontur erweitert wurde. Dieses Benachrichtigungscode wird von einem Rich-Edit-Steuerelement in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ EN_PARAGRAPHEXPANDED
 *lParam* 
 </dt> <dd>
 
-Eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur.
+Eine [**NMHDR-Struktur.**](/windows/desktop/api/richedit/ns-richedit-nmhdr)
 
 </dd> </dl>
 
@@ -51,9 +51,9 @@ Eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 

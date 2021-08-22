@@ -1,9 +1,9 @@
 ---
-title: HDN_DROPDOWN Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Header Steuerelement an das übergeordnete Element gesendet, wenn auf den Dropdown Pfeil im Header Steuerelement geklickt wird. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: HDN_DROPDOWN Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Headersteuerelement an sein übergeordnetes Element gesendet, wenn auf den Dropdownpfeil auf dem Headersteuerelement geklickt wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: cacf5cb9-0593-42ff-868d-b098481f565f
 keywords:
-- Windows-Steuerelemente für HDN_DROPDOWN Benachrichtigungs
+- HDN_DROPDOWN Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c0ae7f2e2ee31feab1d8a2293913ac875a03718
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8a5a7e423c40fa655a9eca0e5b97c20a2d61add1e6c0b7f66b65a69afdc32a55
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859352"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119435570"
 ---
-# <a name="hdn_dropdown-notification-code"></a>Benachrichtigungs Code für Hdn- \_ Dropdown
+# <a name="hdn_dropdown-notification-code"></a>\_HDN-DROPDOWN-Benachrichtigungscode
 
-Wird von einem Header Steuerelement an das übergeordnete Element gesendet, wenn auf den Dropdown Pfeil im Header Steuerelement geklickt wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Headersteuerelement an sein übergeordnetes Element gesendet, wenn auf den Dropdownpfeil auf dem Headersteuerelement geklickt wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ HDN_DROPDOWN
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**NMHEADER**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) -Struktur, die Informationen über das Header Steuerelement enthält.
+Ein Zeiger auf eine [**NMHEADER-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) die Informationen zum Headersteuerelement enthält.
 
 </dd> </dl>
 
@@ -49,11 +49,11 @@ Ein Zeiger auf eine [**NMHEADER**](/windows/win32/api/commctrl/ns-commctrl-nmhea
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Beispiel im Abschnitt Syntax zeigt, wie der Benachrichtigungs Empfänger **LPARAM** zum Abrufen der [**NMHEADER**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) -Struktur umwirft. **WParam** enthält die ID des Steuer Elements, das diese Nachricht sendet.
+Das Beispiel im Abschnitt Syntax zeigt, wie der Benachrichtigungsempfänger **LPARAM** umgibt, um die [**NMHEADER-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) abzurufen. **WPARAM** enthält die ID des Steuerelements, das diese Nachricht sendet.
 
-Diese Meldung wird nur gesendet, wenn \_ für das Header Element Style HDF SplitButton festgelegt ist.
+Diese Nachricht wird nur gesendet, wenn das HDF \_ SPLITBUTTON-Format für das Headerelement festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,9 +61,9 @@ Diese Meldung wird nur gesendet, wenn \_ für das Header Element Style HDF Split
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

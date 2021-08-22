@@ -1,7 +1,7 @@
 ---
-description: Bestimmt, ob sich der Terminal Server im Installationsmodus befindet.
+description: Bestimmt, ob sich der Terminalserver im INSTALLATIONSmodus befindet.
 ms.assetid: edf362e6-c1a4-49fe-8e07-1188c66616be
-title: Termsrvappinstallmode-Funktion
+title: TermsrvAppInstallMode-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Kernel32.dll
-ms.openlocfilehash: f80e51dc417cd637b2abaf8d5dfdc5c0d00f6578
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f6bf6408fb7bd72b1757b8ca2219e1bbd2cc612829359fdcaf090786e8e7e98b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373612"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119570890"
 ---
-# <a name="termsrvappinstallmode-function"></a>Termsrvappinstallmode-Funktion
+# <a name="termsrvappinstallmode-function"></a>TermsrvAppInstallMode-Funktion
 
-\[Diese Funktion wird nicht unterstützt und sollte nicht verwendet werden. Er kann ohne vorherige Ankündigung geändert oder ausgeblendet werden.\]
+\[Diese Funktion wird nicht unterstützt und sollte nicht verwendet werden. Sie kann sich ohne vorherige Ankündigung ändern oder vollständig verschwinden.\]
 
-Bestimmt, ob sich der Terminal Server im Installationsmodus befindet.
+Bestimmt, ob sich der Terminalserver im INSTALLATIONSmodus befindet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt **true** zurück, wenn sich der Terminal Server im Installationsmodus befindet, und **false** , wenn er sich im Ausführungs Modus befindet.
+Diese Funktion gibt **TRUE** zurück, wenn sich der Terminalserver im INSTALLATIONSmodus befindet, und **FALSE,** wenn er sich im EXECUTE-Modus befindet.
 
 ## <a name="requirements"></a>Anforderungen
 

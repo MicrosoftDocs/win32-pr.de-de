@@ -1,7 +1,7 @@
 ---
-description: Ruft die direkten untergeordneten Knoten des icontextnode-Objekts ab.
+description: Ruft die direkten untergeordneten Knoten des IContextNode-Objekts ab.
 ms.assetid: 50ce2fa4-031e-42e9-8e47-c0d3c2d2b4df
-title: 'Icontextnode:: getsubnodes-Methode (iacom. h)'
+title: IContextNode::GetSubNodes-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 5c0526ca4a5b4db355c1f895a44ebbf634cb8bc0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0154e1f3e541981f7b74095ea0346695dc95f8aada9e11325bba44073958a03f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372836"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119590732"
 ---
-# <a name="icontextnodegetsubnodes-method"></a>Icontextnode:: getsubnodes-Methode
+# <a name="icontextnodegetsubnodes-method"></a>IContextNode::GetSubNodes-Methode
 
-Ruft die direkten untergeordneten Knoten des [**icontextnode**](icontextnode.md) -Objekts ab.
+Ruft die direkten untergeordneten Knoten des [**IContextNode-Objekts**](icontextnode.md) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,34 +39,34 @@ HRESULT GetSubNodes(
 
 <dl> <dt>
 
-*ppsubcontextnodes* \[ vorgenommen\]
+*ppSubContextNodes* \[ out\]
 </dt> <dd>
 
-Eine Auflistung der [**icontextnode**](icontextnode.md) -Objekte, die direkt untergeordnete Knoten dieses **icontextnode** sind.
+Eine Auflistung der [**IContextNode-Objekte,**](icontextnode.md) die direkte untergeordnete Knoten dieses **IContextNode sind.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, nennen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf \* *ppsubcontextnodes* , wenn Sie die Auflistung der untergeordneten Knoten nicht mehr verwenden müssen.
+> Um einen Arbeitsspeicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf \* *ppSubContextNodes* auf, wenn Sie die Auflistung von UntergeordnetenNodes nicht mehr verwenden müssen.
 
  
 
-Dies gibt nur die direkten untergeordneten Knoten zurück, nicht alle untergeordneten Knoten.
+Dadurch werden nur die direkten untergeordneten Knoten zurückgegeben, nicht alle nachfolgern Knoten.
 
 ## <a name="examples"></a>Beispiele
 
-Dieses Beispiel zeigt eine Methode, `ExploreContextNode` , die einen [**icontextnode**](icontextnode.md)untersucht. Die-Methode führt Folgendes aus:
+Dieses Beispiel zeigt eine Methode, `ExploreContextNode` , die einen [**IContextNode untersucht.**](icontextnode.md) Die -Methode führt Folgendes aus:
 
--   Ruft den Typ des Kontext Knotens ab.
--   Überprüft bestimmte Eigenschaften des Knoten Typs durch Aufrufen einer Hilfsmethode, wenn es sich bei dem Kontext Knoten um einen nicht klassifizierten Ink-, Analyse-oder benutzerdefinierten Erkennungs Knoten handelt.
--   Prüft jeden unter Knoten durch Aufrufen von sich selbst, wenn der Knoten über untergeordnete Knoten verfügt.
--   Untersucht die Strich Daten für den Knoten durch Aufrufen einer Hilfsmethode, wenn der Knoten ein frei Hand Blattknoten ist.
+-   Ruft den Typ des Kontextknotens ab.
+-   Untersucht bestimmte Eigenschaften des Knotentyps durch Aufrufen einer Hilfsmethode, wenn der Kontextknoten ein nicht klassifizierter Ink-, Analysehinweis- oder benutzerdefinierter Recognizer-Knoten ist.
+-   Untersucht jeden Unterknoten, indem er sich selbst aufruft, wenn der Knoten Überunterknoten hat.
+-   Untersucht die Strichdaten für den Knoten durch Aufrufen einer Hilfsmethode, wenn der Knoten ein Ink-Blattknoten ist.
 
 
 ```C++
@@ -176,9 +176,9 @@ HRESULT CMyClass::ExploreContextNode(
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -187,13 +187,13 @@ HRESULT CMyClass::ExploreContextNode(
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Icontextnode:: getparameentnode**](icontextnode-getparentnode.md)
+[**IContextNode::GetParentNode**](icontextnode-getparentnode.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

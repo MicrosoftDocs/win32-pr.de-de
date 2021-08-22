@@ -1,9 +1,9 @@
 ---
-title: LB_ADDFILE Meldung (Winuser. h)
-description: Fügt den angegebenen Dateinamen zu einem Listenfeld hinzu, das eine Verzeichnisliste enthält.
+title: LB_ADDFILE Meldung (Winuser.h)
+description: Fügt einem Listenfeld, das eine Verzeichnisauflistung enthält, den angegebenen Dateinamen hinzu.
 ms.assetid: 60426293-779b-4a4b-95a2-4901b5f6a13b
 keywords:
-- Windows-Steuerelemente für LB_ADDFILE Meldung
+- LB_ADDFILE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 18b3d66c6a6c8495c67df2078370911ca9cd31df
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8077bda3015fef36d6383f37f272ddaf25469fcb6930bb38bd0fa8122efc5b55
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478261"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119434480"
 ---
-# <a name="lb_addfile-message"></a>LB- \_ AddFile-Nachricht
+# <a name="lb_addfile-message"></a>LB \_ ADDFILE-Meldung
 
-Fügt den angegebenen Dateinamen zu einem Listenfeld hinzu, das eine Verzeichnisliste enthält.
+Fügt einem Listenfeld, das eine Verzeichnisauflistung enthält, den angegebenen Dateinamen hinzu.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,21 +39,21 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der den Namen der hinzu zufügenden Datei angibt.
+Ein Zeiger auf einen Puffer, der den Namen der hinzuzufügenden Datei angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist der null basierte Index der Datei, die hinzugefügt wurde, oder lb- \_ Err, wenn ein Fehler auftritt.
+Der Rückgabewert ist der nullbasierte Index der hinzugefügten Datei oder LB \_ ERR, wenn ein Fehler auftritt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Listenfeld, dem *LPARAM* hinzugefügt wird, muss von der [**dlgdirlist**](/windows/desktop/api/Winuser/nf-winuser-dlgdirlista) -Funktion ausgefüllt werden.
+Das Listenfeld, dem *lParam* hinzugefügt wird, muss von der [**DlgDirList-Funktion**](/windows/desktop/api/Winuser/nf-winuser-dlgdirlista) ausgefüllt worden sein.
 
-Die " [**lb- \_ InitStorage**](lb-initstorage.md) "-Nachricht beschleunigt die Initialisierung von Listenfeldern, die über eine große Anzahl von Elementen (mehr als 100) verfügen. Sie reserviert die angegebene Menge an Arbeitsspeicher, sodass nachfolgende **lb- \_ AddFile** -Nachrichten die kürzeste Zeit in Anspruch nehmen. Sie können Schätzwerte für den *wParam* -Parameter und den *LPARAM* -Parameter verwenden. Wenn Sie den Wert überschätzen, wird der zusätzliche Arbeitsspeicher zugeordnet. Wenn Sie unterschätzen, wird die normale Zuordnung für Elemente verwendet, die den angeforderten Betrag überschreiten.
+Die [**LB \_ INITSTORAGE-Nachricht**](lb-initstorage.md) beschleunigt die Initialisierung von Listenfeldern mit einer großen Anzahl von Elementen (mehr als 100). Sie reserviert die angegebene Arbeitsspeichermenge, sodass nachfolgende **\_ LB ADDFILE-Nachrichten** die kürzeste Zeit in Anspruch nehmen. Sie können Schätzungen für die *Parameter wParam* und *lParam* verwenden. Wenn Sie überbewerten, wird der zusätzliche Arbeitsspeicher belegt. Wenn Sie dies nicht möchten, wird die normale Zuordnung für Elemente verwendet, die den angeforderten Betrag überschreiten.
 
-Für eine ANSI-Anwendung konvertiert das System den Text in einem Listenfeld mithilfe von CP ACP in Unicode \_ . Dies kann zu Problemen führen. Beispielsweise werden Zeichen mit untergeordneten Zeichen in einem nicht-Unicode-Listenfeld in einem japanischen Fenster gegartet. Um dieses Problem zu beheben, kompilieren Sie die Anwendung entweder als Unicode, oder verwenden Sie ein vom Besitzer gezeichnetes Listenfeld.
+Bei einer ANSI-Anwendung konvertiert das System den Text in einem Listenfeld mit CP ACP in \_ Unicode. Dies kann Probleme verursachen. Beispielsweise werden romanische Zeichen mit Akzent in einem Nicht-Unicode-Listenfeld in japanischen Windows garniert angezeigt. Kompilieren Sie die Anwendung entweder als Unicode, oder verwenden Sie ein vom Besitzer gezeichnetes Listenfeld, um dieses Problem zu beheben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,23 +61,23 @@ Für eine ANSI-Anwendung konvertiert das System den Text in einem Listenfeld mit
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Dlgdirlist**](/windows/desktop/api/Winuser/nf-winuser-dlgdirlista)
+[**DlgDirList**](/windows/desktop/api/Winuser/nf-winuser-dlgdirlista)
 </dt> <dt>
 
-[**LB- \_ AddString**](lb-addstring.md)
+[**LB \_ ADDSTRING**](lb-addstring.md)
 </dt> </dl>
 
  

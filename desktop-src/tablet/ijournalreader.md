@@ -1,7 +1,7 @@
 ---
-description: Bietet Lesezugriff auf eine Windows-Journal Datei und gibt einen Stream zurück, der eine XML-Version des Datei Inhalts enthält.
+description: Bietet Lesezugriff auf eine Windows Journaldatei und gibt einen Stream zurück, der eine XML-Version des Dateiinhalts enthält.
 ms.assetid: e4e19f69-6377-4f06-856d-7f9b453e7656
-title: Ijournalreader-Schnittstelle (Journal. h)
+title: I JournalReader-Schnittstelle (Journal.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,52 +13,52 @@ api_type:
 - COM
 api_location:
 - Journal.dll
-ms.openlocfilehash: 7576996d341f13518879310f08c0a48996e1293f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ff0151432e38a3e611e09efe2d5192eefb8c1d3e6cb0e79296e992b728c5a16a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104349909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119590313"
 ---
-# <a name="ijournalreader-interface"></a>Ijournalreader-Schnittstelle
+# <a name="ijournalreader-interface"></a>IJournalReader-Schnittstelle
 
-Bietet Lesezugriff auf eine Windows-Journal Datei und gibt einen Stream zurück, der eine XML-Version des Datei Inhalts enthält.
+Bietet Lesezugriff auf eine Windows Journaldatei und gibt einen Stream zurück, der eine XML-Version des Dateiinhalts enthält.
 
 > [!Note]  
-> Die Journal Leser Komponente kann keine Windows-Journal Dateien lesen, die von Computern mit Windows 7 oder höher erstellt wurden. Die ijournalreader-Schnittstelle sollte als veraltet oder veraltet betrachtet werden und sollte nicht verwendet werden.
+> Die Journallesekomponente kann keine Journaldateien Windows, die von Computern mit Windows 7 oder höher erstellt wurden. Die IJournalReader-Schnittstelle sollte als veraltet oder veraltet betrachtet und nicht verwendet werden.
 
  
 
 ## <a name="members"></a>Member
 
-Die **ijournalreader** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Ijournalreader** verfügt auch über die folgenden Typen von Membern:
+Die **IJournalReader-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IJournalReader** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ijournalreader** -Schnittstelle verfügt über diese Methoden.
+Die **IJournalReader-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                  | BESCHREIBUNG                                                                                                           |
+| Methode                                                  | Beschreibung                                                                                                           |
 |:--------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|
-| [**"Read FromStream"**](ijournalreader-readfromstream.md) | Nimmt einen Stream in eine Journal Notiz Datei und gibt einen XML-Stream zurück, der den Inhalt des Dokuments darstellt.<br/> |
+| [**ReadFromStream**](ijournalreader-readfromstream.md) | Übergibt einen Stream an eine Journal Note-Datei und gibt einen XML-Stream zurück, der den Inhalt des Dokuments darstellt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **JournalReader** -Klasse ermöglicht das Laden eines Journal Dokument Datenstroms und das Empfangen eines XML-Streams, der den Inhalt darstellt. Sie können das frei Handzeichen wiederherstellen, anzeigen und bearbeiten.
+Mit **der JournalReader-Klasse** können Sie einen Journaldokumentstream laden und einen XML-Stream empfangen, der den Inhalt darstellt. Sie können die Ink-Datei rekonsituieren, anzeigen und bearbeiten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel eines Handlers für das [**Click**](/dotnet/api/system.windows.forms.control.click?view=netcore-3.1) -Ereignis einer Schaltfläche wird eine Instanz der **JournalReader** -Klasse erstellt und verwendet, um eine vorhandene Journal Datei zu lesen.
+Im folgenden Beispiel eines Handlers für das [**Click-Ereignis**](/dotnet/api/system.windows.forms.control.click?view=netcore-3.1) einer Schaltfläche wird eine Instanz der **JournalReader-Klasse** erstellt und zum Lesen einer vorhandenen Journaldatei verwendet.
 
 > [!Note]  
-> Die von diesem Beispiel aufgerufene **displayxml** -Methode wird nicht angezeigt. Die spezifische Implementierung einer solchen Methode hängt von den Anforderungen Ihrer Anwendung ab.
+> Die in diesem Beispiel aufgerufene **DisplayXml-Methode** wird nicht angezeigt. Die spezifische Implementierung einer solchen Methode hängt von den Anforderungen Ihrer Anwendung ab.
 
  
 
@@ -157,9 +157,9 @@ void CJntlReaderMFCDlg::OnBnClickedButton1()
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                         |
-| Header<br/>                   | <dl> <dt>Journal. h (erfordert auch Journal \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Journal.h (erfordert auch Journal \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Journal.dll</dt> </dl>                            |
 
 
@@ -168,10 +168,10 @@ void CJntlReaderMFCDlg::OnBnClickedButton1()
 
 <dl> <dt>
 
-[GUIDs der benutzerdefinierten Eigenschaft](custom-property-guids.md)
+[Benutzerdefinierte Eigenschaften-GUIDs](custom-property-guids.md)
 </dt> <dt>
 
-[**Read FromStream-Methode**](ijournalreader-readfromstream.md)
+[**ReadFromStream-Methode**](ijournalreader-readfromstream.md)
 </dt> </dl>
 
  

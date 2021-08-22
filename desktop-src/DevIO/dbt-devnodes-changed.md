@@ -1,21 +1,21 @@
 ---
-description: Das System sendet das \_ geänderte Geräte Ereignis DBT Devnodes \_ , wenn ein Gerät dem System hinzugefügt oder daraus entfernt wurde. Anwendungen, die Listen von Geräten im System verwalten, sollten Ihre Listen aktualisieren.
+description: Das System überträgt das DBT \_ DEVNODES CHANGED-Geräteereignis, wenn ein Gerät dem System hinzugefügt \_ oder daraus entfernt wurde. Anwendungen, die Listen von Geräten im System verwalten, sollten ihre Listen aktualisieren.
 ms.assetid: 62acc633-7dad-4792-a5a2-1f95356479d1
-title: DBT_DEVNODES_CHANGED-Ereignis (DBT. h)
+title: DBT_DEVNODES_CHANGED -Ereignis (Dbt.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1450e9a87d541e5df3d9a9286e48601697e6aaae
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 00d43873241c3f72336dd996fb9fa3486229d9ffcf522923d68ab606313afb7e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119539160"
 ---
-# <a name="dbt_devnodes_changed-event"></a>Geändertes DBT- \_ Devnodes- \_ Ereignis
+# <a name="dbt_devnodes_changed-event"></a>DBT \_ DEVNODES \_ CHANGED-Ereignis
 
-Das System sendet das \_ geänderte Geräte Ereignis DBT Devnodes \_ , wenn ein Gerät dem System hinzugefügt oder daraus entfernt wurde. Anwendungen, die Listen von Geräten im System verwalten, sollten Ihre Listen aktualisieren.
+Das System überträgt das DBT \_ DEVNODES CHANGED-Geräteereignis, wenn ein Gerät dem System hinzugefügt \_ oder daraus entfernt wurde. Anwendungen, die Listen von Geräten im System verwalten, sollten ihre Listen aktualisieren.
 
-Zum übertragen dieses Geräte Ereignisses verwendet das System die [**WM \_ devicechange**](wm-devicechange.md) -Nachricht, wobei *wParam* auf DBT \_ Devnodes \_ geändert und *LPARAM* auf NULL festgelegt ist.
+Um dieses Geräteereignis zu übertragen, verwendet das System die [**WM \_ DEVICECHANGE-Nachricht,**](wm-devicechange.md) bei der *wParam* auf DBT \_ DEVNODES CHANGED und \_ *lParam auf* 0 (null) festgelegt ist.
 
 
 ```C++
@@ -33,24 +33,24 @@ LRESULT CALLBACK WindowProc(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
 Das Fensterhandle
 
 </dd> <dt>
 
-*Umschlag* 
+*uMsg* 
 </dt> <dd>
 
-Der [**WM- \_ devicechange**](wm-devicechange.md) -Nachrichten Bezeichner.
+Der [**WM \_ DEVICECHANGE-Nachrichtenbezeichner.**](wm-devicechange.md)
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Legen Sie fest, dass DBT \_ Devnodes \_ geändert wurde.
+Legen Sie auf DBT \_ DEVNODES \_ CHANGED fest.
 
 </dd> <dt>
 
@@ -63,11 +63,11 @@ Auf NULL festlegen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück.
+Gibt **TRUE zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es gibt keine zusätzlichen Informationen darüber, welches Gerät dem System hinzugefügt oder daraus entfernt wurde. Anwendungen, für die weitere Informationen erforderlich sind, sollten sich mithilfe der [**registerdevicenotifi-**](/windows/desktop/api/Winuser/nf-winuser-registerdevicenotificationa) Funktion für die Geräte Benachrichtigung registrieren.
+Es gibt keine zusätzlichen Informationen darüber, welches Gerät dem System hinzugefügt oder daraus entfernt wurde. Anwendungen, die weitere Informationen benötigen, sollten sich mithilfe der [**RegisterDeviceNotification-Funktion für Gerätebenachrichtigungen**](/windows/desktop/api/Winuser/nf-winuser-registerdevicenotificationa) registrieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,8 +76,8 @@ Es gibt keine zusätzlichen Informationen darüber, welches Gerät dem System hi
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                   |
-| Header<br/>                   | <dl> <dt>DBT. h</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Dbt.h</dt> </dl> |
 
 
 
@@ -85,16 +85,16 @@ Es gibt keine zusätzlichen Informationen darüber, welches Gerät dem System hi
 
 <dl> <dt>
 
-[Geräte Ereignisse](device-events.md)
+[Geräteereignisse](device-events.md)
 </dt> <dt>
 
-[Geräte Verwaltungs Ereignisse](device-management-events.md)
+[Geräteverwaltung Ereignisse](device-management-events.md)
 </dt> <dt>
 
-[**Entwickler- \_ Broadcast \_ HDR**](/windows/desktop/api/Dbt/ns-dbt-dev_broadcast_hdr)
+[**DEV \_ BROADCAST \_ HDR**](/windows/desktop/api/Dbt/ns-dbt-dev_broadcast_hdr)
 </dt> <dt>
 
-[**WM- \_ devicechange**](wm-devicechange.md)
+[**WM \_ DEVICECHANGE**](wm-devicechange.md)
 </dt> </dl>
 
  

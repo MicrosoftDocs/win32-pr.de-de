@@ -1,19 +1,19 @@
 ---
-description: Die spfilenotify- \_ Datei extrahierte Benachrichtigung wird von setupiteratecabinet an eine Rückruf Routine gesendet, um anzugeben, dass eine Datei aus der CAB-Datei extrahiert wurde oder dass eine Extraktion fehlgeschlagen ist und die CAB-Verarbeitung abgebrochen wurde.
+description: Die SPFILENOTIFY FILEEXTRACTED-Benachrichtigung wird von SetupIterateCabinet an eine Rückrufroutine gesendet, um anzugeben, dass eine Datei aus der Schränkung extrahiert wurde oder dass eine Extraktion fehlgeschlagen ist und die Verarbeitung des Schränkes abgebrochen \_ wurde.
 ms.assetid: 70ffe06c-e72d-4bb8-a13c-e2946ff72fa6
-title: SPFILENOTIFY_FILEEXTRACTED Meldung (Setupapi. h)
+title: SPFILENOTIFY_FILEEXTRACTED (Setupapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: efdd66c7f218e632ba817d00a6e6c9447052e350
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 56b5028dec11cf2317be080fb82b79bf155be007c66abcbee33492aa229d6317
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119665110"
 ---
-# <a name="spfilenotify_fileextracted-message"></a>Spfilenotify \_ fileextrahierte Meldung
+# <a name="spfilenotify_fileextracted-message"></a>SPFILENOTIFY \_ FILEEXTRACTED-Meldung
 
-Die **spfilenotify- \_ Datei extrahierte** Benachrichtigung wird von [**setupiteratecabinet**](/windows/desktop/api/Setupapi/nf-setupapi-setupiteratecabineta) an eine Rückruf Routine gesendet, um anzugeben, dass eine Datei aus der CAB-Datei extrahiert wurde oder dass eine Extraktion fehlgeschlagen ist und die CAB-Verarbeitung abgebrochen wurde.
+Die **SPFILENOTIFY \_ FILEEXTRACTED-Benachrichtigung** wird von [**SetupIterateCabinet**](/windows/desktop/api/Setupapi/nf-setupapi-setupiteratecabineta) an eine Rückrufroutine gesendet, um anzugeben, dass eine Datei aus der Schränkung extrahiert wurde oder dass eine Extraktion fehlgeschlagen ist und die Verarbeitung des Schränkes abgebrochen wurde.
 
 
 ```C++
@@ -32,7 +32,7 @@ SPFILENOTIFY_FILEEXTRACTED
 *Param1* 
 </dt> <dd>
 
-Zeiger auf eine [**FilePath**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a) -Struktur, die Pfadinformationen für die extrahierte Datei enthält. Der **SourceFile** -Member der **FilePath** -Struktur enthält den vollständigen Quellpfad der CAB-Datei. Der **targetfile** -Member liefert den vollständigen Zielpfad der Datei, die auf dem System installiert werden soll.
+Zeiger auf eine [**FILEPATHS-Struktur,**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a) die Pfadinformationen für die extrahierte Datei enthält. Das **SourceFile-Member** der **FILEPATHS-Struktur** enthält den vollständigen Quellpfad der Schränkung. Das **TargetFile-Mitglied** gibt den vollständigen Zielpfad der Datei an, die auf dem System installiert werden soll.
 
 </dd> <dt>
 
@@ -45,21 +45,21 @@ Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die CAB-Rückruf Routine muss einen der folgenden Werte zurückgeben.
+Die Rückrufroutine für die Schränkung sollte einen der folgenden Werte zurückgeben.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                                                                                                                                                                                          |
 |-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**kein \_ Fehler**</dt> </dl>  | Es wurde kein Fehler gefunden. setzen Sie die Verarbeitung der CAB-<br/>                                                                                                                                |
-| <dl> <dt>**Fehler \_ xxx**</dt> </dl> | Ein Fehler des angegebenen Typs ist aufgetreten. [**Setupiteratecabinet**](/windows/desktop/api/Setupapi/nf-setupapi-setupiteratecabineta) gibt 0 (null) zurück. [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt den angegebenen Fehlercode zurück.<br/> |
+| <dl> <dt>**NO \_ ERROR**</dt> </dl>  | Es ist kein Fehler aufgetreten. Fahren Sie mit der Verarbeitung des Schränks fort.<br/>                                                                                                                                |
+| <dl> <dt>**FEHLER \_ XXX**</dt> </dl> | Ein Fehler des angegebenen Typs ist aufgetreten. [**SetupIterateCabinet gibt**](/windows/desktop/api/Setupapi/nf-setupapi-setupiteratecabineta) 0 (null) zurück. [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt den angegebenen Fehlercode zurück.<br/> |
 
 
 
  
 
 > [!Note]  
-> Mit der Setup-API wird keine standardmäßige CAB-Rückruf Routine bereitgestellt. Die Setup Anwendung sollte eine Rückruf Routine bereitstellen, um die Benachrichtigungen zu verarbeiten, die von der [**setupiteratecabinet**](/windows/desktop/api/Setupapi/nf-setupapi-setupiteratecabineta) -Funktion gesendet werden.
+> Die Setup-API enthält keine standardmäßige Rückrufroutine für die Schränkung. Ihre Setupanwendung sollte eine Rückrufroutine zur Handhabung der von der [**SetupIterateCabinet-Funktion gesendeten Benachrichtigungen**](/windows/desktop/api/Setupapi/nf-setupapi-setupiteratecabineta) liefern.
 
  
 
@@ -69,9 +69,9 @@ Die CAB-Rückruf Routine muss einen der folgenden Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Setupapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Setupapi.h</dt> </dl> |
 
 
 
@@ -85,10 +85,10 @@ Die CAB-Rückruf Routine muss einen der folgenden Werte zurückgeben.
 [Benachrichtigungen](notifications.md)
 </dt> <dt>
 
-[**FILEPATHS**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a)
+[**Filepaths**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a)
 </dt> <dt>
 
-[**Setupiteratecabinet**](/windows/desktop/api/Setupapi/nf-setupapi-setupiteratecabineta)
+[**SetupIterateCabinet**](/windows/desktop/api/Setupapi/nf-setupapi-setupiteratecabineta)
 </dt> </dl>
 
  

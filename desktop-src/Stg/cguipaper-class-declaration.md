@@ -1,19 +1,19 @@
 ---
-title: Cguipaper-Klassen Deklaration
-description: Cguipaper-Klassen Deklaration
+title: CGuiPaper-Klassendeklaration
+description: CGuiPaper-Klassendeklaration
 ms.assetid: b772d056-bf89-46a8-9462-21772cf96dfa
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 269694b83804f3e85cd8654cd2a1be843396a2ce
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3d684618eea78247b94ed03223cfce45d2cc713f5507b1e290731d3451212b09
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036493"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119663520"
 ---
-# <a name="cguipaper-class-declaration"></a>Cguipaper-Klassen Deklaration
+# <a name="cguipaper-class-declaration"></a>CGuiPaper-Klassendeklaration
 
-Im folgenden finden Sie die **cguipaper** -Klassen Deklaration aus "guipaper. H".
+Im Folgenden finden Sie die **CGuiPaper-Klassendeklaration** von GUIPAPER.H.
 
 
 ```C++
@@ -75,21 +75,21 @@ class CGuiPaper
 
 
 
-**Cguipaper** behält die aktuellen GUI-Eigenschaften für das Zeichnungs Papier bei. Member **m \_ crinkcolor**, **m \_ crinkwidth** und **m \_ winrect** enthalten Werte für die aktuelle frei Hand Farbe, die frei Handbreite und das Zeichnungs Rechteck. Das **m- \_ HWND** -Element speichert das Handle für das Fenster, in dem das Zeichnen erfolgt.
+**CGuiPaper verwaltet** die aktuellen GUI-Eigenschaften für das Zeichnungsdokument. Die **Member m \_ crInkColor,** **m \_ crInkWidth** und **m \_ WinRect** enthalten Werte für die aktuelle Ink-Farbe, Die Breite der Ink-Farbe und das Zeichenrechteck. Das **m \_ hWnd-Member** speichert das Handle im Fenster, in dem das Malen erfolgt.
 
-Das eigentliche Zeichnen von Bildern erfolgt mithilfe eines Handles für einen Gerätekontext, der in Mitglied **m \_ hdc** gespeichert ist. Ein Handle für den aktuellen Zeichnungs Stift wird im Member **m \_ HPEN** beibehalten. Der Stift wird zerstört und neu erstellt, wenn seine Farbe oder Breite vom Benutzer geändert wird.
+Das eigentliche Malen von Bildern erfolgt mithilfe eines Handles für einen Gerätekontext, der im **Member m \_ hDC gespeichert ist.** Ein Handle für den aktuellen Zeichnungsstift wird im Member **m \_ hPen beibehalten.** Der Stift wird zerstört und neu erstellt, wenn seine Farbe oder Breite vom Benutzer geändert wird.
 
-Die Member **m \_ pcopapersink** und **m \_ dwtaschen Sink** halten Werte, die für die Verbindung mit copaper erforderlich sind, um eingehende Benachrichtigungen über die [**ipapersink**](ipapersink-methods.md) -Schnittstelle zu empfangen. Der Member **m \_ bdirty** enthält ein Flag, das angibt, dass der Benutzer die Zeichnung geändert hat und dass die in der Datei gespeicherten Daten nicht mehr wiedergegeben werden.
+Die **Member \_ m pCOPaperSink** und **m \_ dwPaperSink** enthalten Werte, die zum Herstellen einer Verbindung mit COPaper erforderlich sind, um eingehende Benachrichtigungen über die [**IPaperSink-Schnittstelle zu**](ipapersink-methods.md) empfangen. Member **m \_ bDirty enthält** ein Flag, das angibt, dass der Benutzer die Zeichnung geändert hat und die in der Datei gespeicherten Daten nicht mehr wiedergibt.
 
-Mitglied **m \_ pipaper** enthält den Haupt Schnittstellen Zeiger auf das copaper-Objekt. Der Zugriff auf alle copaper-Funktionen erfolgt über diesen Zeiger.
+Member **m \_ pIPaper enthält** den Hauptschnittstellenzeiger auf das COPaper-Objekt. Auf alle COPaper-Funktionen wird über diesen Zeiger zugegriffen.
 
-Der **m \_ nlockkey** -Member wird verwendet, um ein Client Sperr Schema zu unterstützen, das für mehrere Clients verwendet wird, um einem exklusiven Client Zugriff auf ein frei gegebenes copaper-Objekt zu ermöglichen. Copaper weist während eines [**iPaper**](ipaper-methods.md)::**Lock** -Aufrufs **m \_ nlockkey** zu und wird vom Client in nachfolgenden Aufrufen an copaper als Parameter übergeben. Copaper führt die Arbeit in diesen Aufrufen nur dann durch, wenn der übergebene Sperr Schlüssel mit dem Schlüssel übereinstimmt, der zuletzt von copaper an einen Client ausgegeben wurde.
+Das **m \_ nLockKey-Member** wird verwendet, um ein Clientsperrschema zu unterstützen, das mit mehreren Clients verwendet wird, um einem Client exklusiven Zugriff auf ein freigegebenes COPaper-Objekt zu ermöglichen. COPaper weist **m \_ nLockKey** während eines [**IPaper**](ipaper-methods.md)**::** Lock-Aufrufs zu und wird vom Client in nachfolgenden Aufrufen an COPaper als Parameter übergeben. COPaper führt die Arbeit in diesen Aufrufen nur aus, wenn der übergebene Sperresschlüssel mit dem Schlüssel stimmt, der zuletzt von COPaper an einen Client übergeben wurde.
 
-Mitglied **m \_ ppapfile** enthält einen Zeiger auf ein [**cpapfile**](cpapfile-class-and-methods.md) -Objekt. Dabei handelt es sich um ein C++-Objekt, das Lade-und Speichervorgänge in einer strukturierten Speicher Verbund Datei kapselt. **Cpapfile** kann mit dem zugrunde liegenden serverbasierten copaper-Objekt verwendet werden, um die copaper-Zeichnungsdaten zu laden und zu speichern.
+Member **m \_ pPapFile** enthält einen Zeiger auf ein [**CPapFile-Objekt.**](cpapfile-class-and-methods.md) Es handelt sich um ein C++-Objekt, das Lade- und Speichervorgänge für eine strukturierte Speicherverbunddatei kapselt. **CPapFile arbeitet** mit dem zugrunde liegenden serverbasierten COPaper-Objekt zusammen, um die COPaper-Zeichnungsdaten zu laden und zu speichern.
 
- 
+ 
 
- 
+ 
 
 
 
