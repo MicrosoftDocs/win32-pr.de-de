@@ -1,7 +1,7 @@
 ---
-description: Die Receive-Methode empfängt ein Medien Beispiel, verarbeitet sie und stellt ein Ausgabe Beispiel für den downstreamfilter bereit.
+description: Die Receive-Methode empfängt ein Medienbeispiel, verarbeitet es und übergibt ein Ausgabebeispiel an den Downstreamfilter.
 ms.assetid: 036b209a-3535-4922-b7e9-dbed25b812f5
-title: Ctransformfilter. Receive-Methode (Transfrm. h)
+title: CTransformFilter.Receive-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 67924bffc4d4d80b998e686d80d0e50afcd040ef
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6a0c57cf6826274169a5984dd794e1ba9a5b8e78c7ffb774b00b05f16384e4a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354709"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953409"
 ---
-# <a name="ctransformfilterreceive-method"></a>Ctransformfilter. Receive-Methode
+# <a name="ctransformfilterreceive-method"></a>CTransformFilter.Receive-Methode
 
-Die- `Receive` Methode empfängt ein Medien Beispiel, verarbeitet sie und stellt ein Ausgabe Beispiel für den downstreamfilter bereit.
+Die `Receive` -Methode empfängt ein Medienbeispiel, verarbeitet es und übergibt ein Ausgabebeispiel an den Downstreamfilter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,33 +42,33 @@ HRESULT Receive(
 
 <dl> <dt>
 
-*psample* 
+*pSample* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle für das Eingabe Beispiel.
+Zeiger auf die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) im Eingabebeispiel.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Folgende Werte sind möglich:
+Gibt einen **HRESULT-Wert** zurück. Folgende Werte sind möglich:
 
 
 
 | Rückgabecode                                                                             | Beschreibung                                                 |
 |-----------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl> | Der upstreamfilter sollte das Senden von Beispielen abbrechen.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Der Upstreamfilter sollte das Senden von Beispielen beenden.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg.<br/>                                         |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Eingabe-PIN des Filters ruft diese Methode auf, wenn Sie ein Beispiel empfängt. Diese Methode ruft die [**ctransformfilter:: initializeoutputsample**](ctransformfilter-initializeoutputsample.md) -Methode auf, die ein neues Ausgabe Beispiel vorbereitet. Anschließend wird die [**ctransformfilter:: Transform**](ctransformfilter-transform.md) -Methode aufgerufen, die von der abgeleiteten Klasse implementiert werden muss. Die **Transformations** Methode verarbeitet die Eingabedaten und erzeugt Ausgabedaten.
+Der Eingabepin des Filters ruft diese Methode auf, wenn er ein Beispiel empfängt. Diese Methode ruft die [**CTransformFilter::InitializeOutputSample-Methode**](ctransformfilter-initializeoutputsample.md) auf, die ein neues Ausgabebeispiel vorbereitet. Anschließend wird die [**CTransformFilter::Transform-Methode**](ctransformfilter-transform.md) aufgerufen, die von der abgeleiteten Klasse implementiert werden muss. Die **Transform-Methode** verarbeitet die Eingabedaten und erzeugt Ausgabedaten.
 
-Wenn die **Transformations** Methode S false zurückgibt \_ , `Receive` Löscht die Methode dieses Beispiel. Im ersten gelöschten Beispiel sendet der Filter ein [**EC- \_ Qualitäts \_ Änderungs**](ec-quality-change.md) Ereignis an den Filter Graph-Manager. Andernfalls liefert der  \_ Filter das Ausgabe Beispiel, wenn die Transform-Methode "S OK" zurückgibt. Zu diesem Zweck wird die [**IMemInputPin:: Receive**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) -Methode für die downstreameingabepin aufgerufen.
+Wenn die **Transform-Methode** S \_ FALSE zurückgibt, `Receive` löscht die Methode dieses Beispiel. Im ersten gelöschten Beispiel sendet der Filter ein [**EC \_ QUALITY \_ CHANGE-Ereignis**](ec-quality-change.md) an den Filterdiagramm-Manager. Andernfalls liefert der Filter das Ausgabebeispiel, wenn die **Transform-Methode** S \_ OK zurückgibt. Dazu ruft sie die [**IMemInputPin::Receive-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) auf dem Nach-Eingabepin auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,16 +76,16 @@ Wenn die **Transformations** Methode S false zurückgibt \_ , `Receive` Löscht 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

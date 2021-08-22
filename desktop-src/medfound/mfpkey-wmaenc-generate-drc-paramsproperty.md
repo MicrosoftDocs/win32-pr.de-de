@@ -1,31 +1,31 @@
 ---
-description: Gibt an, ob der Encoder dynamische Bereichsparameter für die Bereichs Generierung generieren soll.
+description: Gibt an, ob der Encoder dynamische Bereichs-Congrol-Parameter generieren soll.
 ms.assetid: 4ae424f1-10be-466a-8a98-163789fc9553
-title: MFPKEY_WMAENC_GENERATE_DRC_PARAMS-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_WMAENC_GENERATE_DRC_PARAMS-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9bc29ffe9d68cce13afedf5ad694ef81b29957db
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 982a48f0a42d3fe050c07a349c75fadb0cff72abc39baa1d2058870c47d0fc0e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973219"
 ---
-# <a name="mfpkey_wmaenc_generate_drc_params-property"></a>Mfpkey \_ wmaenc- \_ Eigenschaft zum Generieren von DRC- \_ \_ Parametern
+# <a name="mfpkey_wmaenc_generate_drc_params-property"></a>MFPKEY \_ WMAENC \_ GENERATE \_ DRC \_ PARAMS-Eigenschaft
 
-Gibt an, ob der Encoder dynamische Bereichsparameter für die Bereichs Generierung generieren soll.
+Gibt an, ob der Encoder dynamische Bereichs-Congrol-Parameter generieren soll.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mit [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
-**VT \_ bool**
+**VT \_ BOOL**
 
 ## <a name="default-value"></a>Standardwert
 
-**Variant \_ true**
+**VARIANT \_ TRUE**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -34,7 +34,7 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Client<br/> | Windows Vista oder Windows 7<br/>                                                   |
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -42,7 +42,7 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

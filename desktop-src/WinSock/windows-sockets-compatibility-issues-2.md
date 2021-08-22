@@ -1,26 +1,26 @@
 ---
-description: Windows Sockets 2 unterstützt weiterhin alle Semantik-und Funktionsaufrufe von Windows Sockets 1,1, mit Ausnahme derjenigen, die mit der Pseudo Blockierung arbeiten.
+description: Windows Sockets 2 unterstützt weiterhin alle Windows Sockets 1.1-Semantik und Funktionsaufrufe, mit Ausnahme derjenigen, die pseudoblockiert werden.
 ms.assetid: e4dc4019-d421-49b8-825a-faa6d5f5fcae
-title: Windows Sockets-Kompatibilitätsprobleme
+title: Windows Kompatibilitätsprobleme bei Sockets
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 58495db7ff504b68d0db41104fe0fff79b93f985
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2d3fa7aba32ed74f04b04d717e0b2897dc92e0c78079d2a8c20e2c3bcdd85191
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214989"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051468"
 ---
-# <a name="windows-sockets-compatibility-issues"></a>Windows Sockets-Kompatibilitätsprobleme
+# <a name="windows-sockets-compatibility-issues"></a>Windows Kompatibilitätsprobleme bei Sockets
 
-Windows Sockets 2 unterstützt weiterhin alle Semantik-und Funktionsaufrufe von Windows Sockets 1,1, mit Ausnahme derjenigen, die mit der Pseudo Blockierung arbeiten. Da Windows Sockets 2 nur in den in 32-Bit-Umgebungen, in der voremptiv geplanten Umgebungen, ausgeführt wird, ist es nicht erforderlich, die in Windows Sockets 1,1 gefundene Pseudo Blockierung zu implementieren. Dies bedeutet, dass der wsaan Progress-Fehlercode nie angezeigt wird und dass die folgenden Windows Sockets 1,1-Funktionen für Windows Sockets 2-Anwendungen nicht verfügbar sind:
+Windows Sockets 2 unterstützt weiterhin alle Windows Sockets 1.1-Semantik und Funktionsaufrufe, mit Ausnahme derjenigen, die pseudoblockiert werden. Da Windows Sockets 2 nur in 32-Bit-Umgebungen mit präemptivem Zeitplan ausgeführt wird, ist es nicht erforderlich, die Pseudoblockierung in Windows Sockets 1.1 zu implementieren. Dies bedeutet, dass der WSAEINPROGRESS-Fehlercode nie angegeben wird und dass die folgenden Windows Sockets 1.1-Funktionen für Windows Sockets 2-Anwendungen nicht verfügbar sind:
 
--   Wsacancelblockingcall
--   Wsais-Blockierung
--   Wsasetblockinghook
--   Wsaunhuokblockinghook
+-   WSACancelBlockingCall
+-   WSAIsBlocking
+-   WSASetBlockingHook
+-   WSAUnhookBlockingHook
 
-Windows Sockets 1,1-Programme, die zur Verwendung von Pseudo Blockierungen geschrieben werden, funktionieren weiterhin ordnungsgemäß, da Sie mit Winsock.dll oder Wsock32.dll verknüpft sind. Beide unterstützen weiterhin den kompletten Satz von Windows Sockets 1,1-Funktionen. Damit Programme zu Windows Sockets 2-Anwendungen werden können, muss eine Änderung des Codes erfolgen. In den meisten Fällen kann die kluge Verwendung von Threads durch die Verarbeitung der Verarbeitung ersetzt werden, die mit einer blockierenden Hook-Funktion erreicht wurde.
+Windows Sockets 1.1-Programme, die zur Verwendung von Pseudoblockierung geschrieben wurden, funktionieren weiterhin ordnungsgemäß, da sie entweder mit Winsock.dll oder Wsock32.dll verknüpft sind. Beide unterstützen weiterhin den vollständigen Satz von Windows Sockets 1.1-Funktionen. Damit Programme Windows Sockets 2-Anwendungen werden, müssen einige Codeänderungen vorgenommen werden. In den meisten Fällen kann die wohlgemeinte Verwendung von Threads ersetzt werden, um die Verarbeitung zu ermöglichen, die mit einer blockierenden Hookfunktion durchgeführt wurde.
 
  
 

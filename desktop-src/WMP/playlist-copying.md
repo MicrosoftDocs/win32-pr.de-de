@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. Kopieren
-description: Das Attribut Copy Ruft einen Wert ab, der angibt, ob das Wiedergabelisten Element den Kopiervorgang durchläuft.
+title: PLAYLIST.copying
+description: Das attribut copying ruft einen Wert ab, der angibt, ob sich das PLAYLIST-Element im Kopiervorgang befindet.
 ms.assetid: 60f21f4a-51a1-43cd-9bfa-6bff19214a32
 keywords:
-- Wiedergabeliste. Kopieren von Windows-Media Player
+- PLAYLIST.copying Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 710926a966713901733ac9bbee3d188458ebcf65
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b9d803986626f728db78b03933d65629e06d6021f63a5b7806503d7eec7176b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367109"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054228"
 ---
-# <a name="playlistcopying"></a>Wiedergabeliste. Kopieren
+# <a name="playlistcopying"></a>PLAYLIST.copying
 
-Das Attribut **Copy** Ruft einen Wert ab, der angibt, ob das **Wiedergabe** Listenelement den Kopiervorgang durchläuft.
+Das **attribut copying** ruft einen Wert ab, der angibt, ob sich das **PLAYLIST-Element** im Kopiervorgang befindet.
 
 ``` syntax
         elementID.copying
@@ -29,14 +29,14 @@ Das Attribut **Copy** Ruft einen Wert ab, der angibt, ob das **Wiedergabe** List
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein Schreib geschützter **boolescher** Wert.
+Dieses Attribut ist ein schreibgeschützter **boolescher** Wert.
 
 
 
 | Wert | BESCHREIBUNG                              |
 |-------|------------------------------------------|
-| true  | Das **Wiedergabe** Listenelement wird kopiert.     |
-| false | Das **Wiedergabe** Listenelement wird nicht kopiert. |
+| true  | Das **PLAYLIST-Element** wird kopiert.     |
+| false | Das **PLAYLIST-Element** wird nicht kopiert. |
 
 
 
@@ -48,7 +48,7 @@ Dieses Attribut ist ein Schreib geschützter **boolescher** Wert.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -56,13 +56,13 @@ Dieses Attribut ist ein Schreib geschützter **boolescher** Wert.
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> <dt>
 
-[**Wiedergabeliste. abortcopy**](playlist-abortcopy.md)
+[**PLAYLIST.abortCopy**](playlist-abortcopy.md)
 </dt> <dt>
 
-[**Wiedergabeliste. Kopieren**](playlist-copy.md)
+[**PLAYLIST.copy**](playlist-copy.md)
 </dt> </dl>
 
  

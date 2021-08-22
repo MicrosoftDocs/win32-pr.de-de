@@ -1,28 +1,28 @@
 ---
-description: Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für Enumerationen von Zeiger Geräte-Eingabe stapeln.
+description: Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für Pointer Device Input Stack-Enumerationen.
 ms.assetid: 39A3FB53-DFC9-4189-A05B-6E01DB0DF922
-title: Enumerationen für Zeiger Geräte-Eingabe Stapel
+title: Zeigergeräteeingabestapelenumerationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d140b069c9cb19f6a9401aa4d1f517eb471c6de
-ms.sourcegitcommit: 11f52354f570aacaf1ba2a266b2e507abd73352a
+ms.openlocfilehash: 156dd80b642774d6364cc15c333aa45d2a091feba33b60be7ac95fdd364910f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "106365144"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976990"
 ---
-# <a name="pointer-device-input-stack-enumerations"></a>Enumerationen für Zeiger Geräte-Eingabe Stapel
+# <a name="pointer-device-input-stack-enumerations"></a>Zeigergeräteeingabestapelenumerationen
 
-Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für Enumerationen von [Zeiger Geräte-Eingabe Stapeln](pointer-device-stack-portal.md) .
+Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [Zeigergeräteeingabestapel-Enumerationen.](pointer-device-stack-portal.md)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 | Thema | BESCHREIBUNG |
 |---|---|
-| [**POINTER_DEVICE_CURSOR_TYPE**](/windows/win32/api/winuser/ne-winuser-pointer_device_cursor_type)<br/> | Identifiziert die Cursor Typen.<br/>         |
-| [**POINTER_DEVICE_TYPE**](/windows/win32/api/winuser/ne-winuser-pointer_device_cursor_type)<br/> | Identifiziert die Zeiger Gerätetypen.<br/> |
-| [POINTER_FEEDBACK_MODE](/windows/win32/api/winuser/ne-winuser-pointer_feedback_mode) | Gibt die für " [kreatesynderticpointerdevice](/windows/win32/api/winuser/nf-winuser-createsyntheticpointerdevice)" verfügbaren visuellen Feedback Verhaltensweisen an. |
+| [**POINTER_DEVICE_CURSOR_TYPE**](/windows/win32/api/winuser/ne-winuser-pointer_device_cursor_type)<br/> | Identifiziert die Cursortypen.<br/>         |
+| [**POINTER_DEVICE_TYPE**](/windows/win32/api/winuser/ne-winuser-pointer_device_cursor_type)<br/> | Identifiziert die Zeigergerätetypen.<br/> |
+| [POINTER_FEEDBACK_MODE](/windows/win32/api/winuser/ne-winuser-pointer_feedback_mode) | Identifiziert das visuelle Feedbackverhalten, das [für CreateSyntheticPointerDevice](/windows/win32/api/winuser/nf-winuser-createsyntheticpointerdevice)verfügbar ist. |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Verweis auf Zeiger Geräte-Eingabe Stapel Referenz](unified-input-stack-reference.md)
+[Zeigergeräteeingabestapelreferenz](unified-input-stack-reference.md)

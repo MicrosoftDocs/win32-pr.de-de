@@ -1,11 +1,11 @@
 ---
-title: Cdrom. eject-Methode
-description: Die Auswerfen-Methode fügt die CD oder DVD vom Laufwerk ein. | Cdrom. eject-Methode
+title: Corpora.eject-Methode
+description: Die Eject-Methode wirft die CD oder DVD vom Laufwerk aus. | Corpora.eject-Methode
 ms.assetid: f43c7f10-7de2-488c-833a-ecd3ac21744b
 keywords:
-- Auswerfen-Methode, Windows-Media Player
-- Auswerfen-Methode, Windows Media Player, cdrom-Klasse
-- Cdrom-Klasse, Windows Media Player, Auswerfen-Methode
+- Eject-Methode Windows Media Player
+- Eject-Methode Windows Media Player , Corpora-Klasse
+- Corpora-Klasse Windows Media Player , Eject-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 78326ca57dcf097344fc073681fae772222ea9ad
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: c9bd1c5a7a79c2a9b76b3a7a1997c43713fe0f3c1ae28e635a235feb82d214ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106363922"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997680"
 ---
-# <a name="cdromeject-method"></a>Cdrom. eject-Methode
+# <a name="cdromeject-method"></a>Corpora.eject-Methode
 
-Die **auswerfen** -Methode fügt die CD oder DVD vom Laufwerk ein.
+Die **Eject-Methode** wirft die CD oder DVD vom Laufwerk aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Laufwerks Tür geöffnet ist, schließt diese Methode die Tür.
+Wenn die Laufwerktür geöffnet ist, schließt diese Methode die Tür.
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das *CDROM* verwendet. **auswerfen** zum Öffnen der Tür des Laufwerks mit dem laufwerkspezifizierer Index NULL. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird ein HTML-Schaltflächenelement erstellt, das *Credo* verwendet. **Werfen Sie aus,** um die Tür des Laufwerks zu öffnen, das über den Index 0 (null) des Laufwerks verfügt. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -73,27 +73,27 @@ Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das *CDROM*
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Version<br/>                  | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Version<br/>                  | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>                      | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdrom-Objekt**](cdrom-object.md)
+[**Chole-Objekt**](cdrom-object.md)
 </dt> <dt>
 
-[**Player. playstate**](player-playstate.md)
+[**Player.playState**](player-playstate.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

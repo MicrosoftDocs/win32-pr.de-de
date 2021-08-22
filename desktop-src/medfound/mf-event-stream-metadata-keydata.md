@@ -1,23 +1,23 @@
 ---
-description: Gibt die Schutzsystem spezifischen Daten an.
+description: Gibt systemspezifische Schutzdaten an.
 ms.assetid: 9FF8B67A-E7A3-4732-9770-503C1D07A1FF
-title: MF_EVENT_STREAM_METADATA_KEYDATA-Attribut (mfapi. h)
+title: MF_EVENT_STREAM_METADATA_KEYDATA-Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 77fbd048cb34a1ee31657c63768e48cbf3dc474d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bafd2a4d60c76c31023dab5e685c84f2333959bb6e1ca82a98816767b8085b6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973779"
 ---
-# <a name="mf_event_stream_metadata_keydata-attribute"></a>\_ \_ \_ \_ Schlüsseldaten Attribut für MF-Ereignisdaten Strom-Metadaten
+# <a name="mf_event_stream_metadata_keydata-attribute"></a>MF \_ EVENT STREAM METADATA \_ \_ \_ KEYDATA-Attribut
 
-Gibt die Schutzsystem spezifischen Daten an.
+Gibt systemspezifische Schutzdaten an.
 
 ## <a name="data-type"></a>Datentyp
 
-**BLOB**
+**Blob**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -25,13 +25,13 @@ Gibt die Schutzsystem spezifischen Daten an.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>                                |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                     |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 \|Desktop-Apps UWP-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

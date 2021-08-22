@@ -1,57 +1,57 @@
 ---
-description: In diesem Thema wird beschrieben, wie die Sequencer-Quelle verwendet wird.
+description: In diesem Thema wird die Verwendung der Sequencerquelle beschrieben.
 ms.assetid: 7ce8dc67-02b1-4fd4-9e4d-6614fdb40620
-title: Verwenden der Sequencer-Quelle
+title: Verwenden der Sequencerquelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ba99202838fbdc8be86f2f1d8931e5aa99ae9bf9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e2b0607d65d02e507f576a5177ea432f3f7e0fab57c3b575fbb34240a46e91be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118972729"
 ---
-# <a name="using-the-sequencer-source"></a>Verwenden der Sequencer-Quelle
+# <a name="using-the-sequencer-source"></a>Verwenden der Sequencerquelle
 
-In diesem Thema wird beschrieben, wie die [Sequencer-Quelle](sequencer-source.md)verwendet wird. Sie enthält die folgenden Abschnitte:
+In diesem Thema wird die Verwendung von [Sequencer Source](sequencer-source.md)beschrieben. Sie enthält die folgenden Abschnitte:
 
 -   [Übersicht](#overview)
 -   [Hinzufügen von Topologien](#adding-topologies)
 -   [Löschen von Topologien](#deleting-topologies)
--   [Überspringen zu einem Segment](#skipping-to-a-segment)
+-   [Überspringen auf ein Segment](#skipping-to-a-segment)
 -   [Zugehörige Themen](#related-topics)
 
-Eine allgemeine Übersicht über die Sequencer-Quelle finden Sie unter [Informationen zur Sequencer-Quelle](about-the-sequencer-source.md).
+Eine allgemeine Übersicht über die Sequencerquelle finden Sie unter [Informationen zur Sequencerquelle.](about-the-sequencer-source.md)
 
 ## <a name="overview"></a>Übersicht
 
-Die Sequencer-Quelle macht die folgenden Schnittstellen verfügbar.
+Die Sequencerquelle macht die folgenden Schnittstellen verfügbar.
 
 
 
 | Schnittstelle                                                                        | BESCHREIBUNG                                                                        |
 |----------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**Imfmediasource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)                                         | Macht Funktionen der generischen Medienquelle verfügbar.                                        |
-| [**IMF sequencersource**](/windows/desktop/api/mfidl/nn-mfidl-imfsequencersource)                                 | Ermöglicht es der Anwendung, Topologien hinzuzufügen oder zu entfernen.                               |
-| [**Imfmediasourcetopologyprovider**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourcetopologyprovider)         | Ruft die nächste Topologie in die Warteschlange für die Medien Sitzung ab.                         |
-| [**Imfmediasourcepresentationprovider**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourcepresentationprovider) | Wird von der Medien Sitzung zum Beenden von Segmenten verwendet. Diese Schnittstelle wird von Anwendungen nicht verwendet. |
-| [**IMF-Dienst**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice)                                           | Fragt die Sequencer-Quelle für [Dienst Schnittstellen](service-interfaces.md)ab.     |
+| [**WFMEDIASOURCE**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)                                         | Macht generische Medienquellfunktionen verfügbar.                                        |
+| [**CERSequencerSource**](/windows/desktop/api/mfidl/nn-mfidl-imfsequencersource)                                 | Ermöglicht der Anwendung das Hinzufügen oder Entfernen von Topologien.                               |
+| [**WFMediaSourceTopologyProvider**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourcetopologyprovider)         | Ruft die nächste Topologie ab, die in der Mediensitzung in die Warteschlange eingereiht werden soll.                         |
+| [**IMFMediaSourcePresentationProvider**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourcepresentationprovider) | Wird von der Mediensitzung für Endsegmente verwendet. Anwendungen verwenden diese Schnittstelle nicht. |
+| [**VERZRGETService**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice)                                           | Fragt die Sequencerquelle nach [Dienstschnittstellen](service-interfaces.md)ab.     |
 
 
 
  
 
-Führen Sie die folgenden Schritte aus, um eine Sequenz von Medienquellen wiederzugeben:
+Führen Sie die folgenden Schritte aus, um eine Sequenz von Medienquellen wiederzuspielen:
 
-1.  Um die Sequencer-Quelle zu erstellen, rufen Sie die [**mfkreatesequencersource**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesequencersource) -Funktion auf.
-2.  Erstellen Sie für jedes Segment eine Wiedergabe Topologie, wie unter [Erstellen von Wiedergabe Topologien](creating-playback-topologies.md)beschrieben. Um der Präsentation die Topologie hinzuzufügen, nennen Sie [**imfsequencersource:: appendtopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-appendtopology).
-3.  Bevor Sie die Wiedergabe starten, müssen Sie [**imfmediasource:: foratepresentationdescriptor**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor) für die Sequencer-Quelle aufrufen. Diese Methode gibt einen Zeiger auf einen Präsentations Deskriptor für das erste Segment zurück. Um die diesem Segment zugeordnete Topologie abzurufen, nennen Sie **QueryInterface** in der Sequencer-Quelle für die [**imfmediasourcetopologyprovider**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourcetopologyprovider) -Schnittstelle. Übergeben Sie den Präsentations Deskriptor an die [**imfmediasourcetopologyprovider:: getmediasourcetopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourcetopologyprovider-getmediasourcetopology) -Methode. Diese Methode gibt einen Zeiger auf die Topologie zurück.
-4.  Übergeben Sie die Topologie für das erste Segment an die Medien Sitzung, indem Sie die [**imfmediasession:: settopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology) -Methode der Medien Sitzung aufrufen.
-5.  Wiedergabe durch Aufrufen von [**imfmediasession:: Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start)starten.
-6.  Wenn die Sequencer-Quelle für das vorab Ausführen des nächsten Segments bereit ist, sendet Sie ein [menewpresentation](menewpresentation.md) -Ereignis, dessen Ereignisdaten ein [**imfpresentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor) -Schnittstellen Zeiger ist. Rufen Sie die Topologie für das Segment ab, indem Sie [**getmediasourcetopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourcetopologyprovider-getmediasourcetopology) für die Sequencer-Quelle aufrufen, und legen Sie die Topologie für die Medien Sitzung fest, indem Sie [**settopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology)aufrufen. Die Medienquelle muss nicht neu gestartet werden. Er wird automatisch bis zum nächsten Segment durchgespielt.
-7.  Bevor die Anwendung beendet wird, fahren Sie die Sequencer-Quelle durch Aufrufen von [**imfmediasource:: Shutdown**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-shutdown)herunter.
+1.  Um die Sequencerquelle zu erstellen, rufen Sie die [**MFCreateSequencerSource-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesequencersource) auf.
+2.  Erstellen Sie für jedes Segment eine Wiedergabetopologie, wie unter [Erstellen von Wiedergabetopologien](creating-playback-topologies.md)beschrieben. Um die Topologie der Präsentation hinzuzufügen, rufen Sie [**DIE SOURCESequencerSource::AppendTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-appendtopology)auf.
+3.  Rufen Sie vor dem Starten der Wiedergabe [**DEN SEQUENCEMediaSource::CreatePresentationDescriptor**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor) für die Sequencerquelle auf. Diese Methode gibt einen Zeiger auf einen Präsentationsdeskriptor für das erste Segment zurück. Um die diesem Segment zugeordnete Topologie abzurufen, rufen Sie **QueryInterface** für die Sequencerquelle für die [**SCHNITTSTELLE VONMEDIASourceTopologyProvider**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourcetopologyprovider) auf. Übergeben Sie den Präsentationsdeskriptor an die [**METHODE VONMEDIASOURCETopologyProvider::GetMediaSourceTopology.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourcetopologyprovider-getmediasourcetopology) Diese Methode gibt einen Zeiger auf die Topologie zurück.
+4.  Übergeben Sie die Topologie für das erste Segment an die Mediensitzung, indem Sie die [**METHODE VON MEDIAMEDIASession::SetTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology) der Mediensitzung aufrufen.
+5.  Starten Sie die Wiedergabe, indem Sie [**DEN AUFRUF VONMEDIASESSION::Start ausführen.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start)
+6.  Wenn die Sequencerquelle bereit ist, das nächste Segment vorab zu erstellen, sendet sie ein [MENewPresentation-Ereignis,](menewpresentation.md) dessen Ereignisdaten ein [**POINTERPresentationDescriptor-Schnittstellenzeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor) sind. Rufen Sie erneut die Topologie für das Segment ab, indem [**Sie GetMediaSourceTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourcetopologyprovider-getmediasourcetopology) für die Sequencerquelle aufrufen, und legen Sie die Topologie in der Mediensitzung fest, indem [**Sie SetTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology)aufrufen. Es ist nicht erforderlich, die Medienquelle neu zu starten. es wird automatisch bis zum nächsten Segment wiedergegeben.
+7.  Bevor die Anwendung beendet wird, fahren Sie die Sequencerquelle herunter, indem Sie [**DEN AUFRUF VONMEDIASOURCE::Shutdown**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-shutdown)aufrufen.
 
-Der folgende Code zeigt, wie Sie die Topologie erhalten und in der Medien Sitzung festlegen:
+Der folgende Code zeigt, wie Sie die Topologie abrufen und in der Mediensitzung festlegen:
 
 
 ```C++
@@ -87,41 +87,41 @@ done:
 
 
 
-Ein umfassendes Codebeispiel finden Sie unter [Beispielcode für die Sequencer-Quelle](sequencer-source-example-code.md).
+Ein vollständiges Codebeispiel finden Sie unter [Sequencer Source Example Code](sequencer-source-example-code.md).
 
 ## <a name="adding-topologies"></a>Hinzufügen von Topologien
 
-Die Sequencer-Quelle verwaltet zwei Listen von Topologien: die *Eingabeliste* und die *vorab Liste*.
+Die Sequencerquelle verwaltet zwei Listen von Topologien: die *Eingabeliste* und die *Vorabliste*.
 
-Die Eingabeliste ist eine Auflistung von Topologien, die Wiedergabelisten Segmenten entsprechen, in der Reihenfolge, in der Sie durch die Anwendung hinzugefügt wurden, indem [**imfsequencersource:: appendtopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-appendtopology)aufgerufen wurde. Diese Methode weist jeder Topologie einen eindeutigen *Segment Bezeichner* des Typs **MF sequencerelementid** zu. Der Segment Bezeichner wird als Attribut für alle Knoten der Quell Topologie festgelegt. Eine Anwendung kann den Segment Bezeichner von einem Quellknoten mit dem [Element "MF \_ toponode \_ Sequence \_ elementId](mf-toponode-sequence-elementid-attribute.md) " erhalten. Die Eingabeliste kann doppelte Topologien aufweisen, wenn die Anwendung **appendtopology** mehrmals in derselben Topologie aufrief. Sie werden jedoch durch Ihre eindeutigen Segment Bezeichner identifiziert.
+Bei der Eingabeliste handelt es sich um eine Sammlung von Topologien, die Wiedergabelistensegmenten entsprechen, in der Reihenfolge, in der sie von der Anwendung durch Aufrufen von [**APPENDSequencerSource::AppendTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-appendtopology)hinzugefügt wurden. Diese Methode weist jeder Topologie einen eindeutigen *Segmentbezeichner* des Typs **MFSequencerElementId** zu. Der Segmentbezeichner wird als Attribut für alle Quelltopologieknoten festgelegt. Eine Anwendung kann den Segmentbezeichner mithilfe des [MF \_ TOPONODE \_ SEQUENCE \_ ELEMENTID-Attributs](mf-toponode-sequence-elementid-attribute.md) von einem Quellknoten abrufen. Die Eingabeliste kann doppelte Topologien aufweisen, wenn die Anwendung **AppendTopology** in derselben Topologie mehr als einmal aufgerufen hat. Sie werden jedoch durch ihre eindeutigen Segmentbezeichner identifiziert.
 
-Die ein Vorlauf ausgeführt-Liste ist eine Auflistung von Eingabe Listen Topologien, die zur Vorbereitung der Wiedergabe initialisiert wurden. Dies ermöglicht es der Medien Sitzung, nahtlos zur nächsten Topologie zu wechseln, wenn die aktive Topologie endet. Die Anwendung kann keine Topologien direkt aus der ein Vorlauf ausgeführt-Liste hinzufügen oder entfernen. Sie wird von der Sequencer-Quelle generiert, wenn eine Topologie aus der Eingabeliste für die Wiedergabe ausgewählt wird. Dies bewirkt, dass die Sequencer-Quelle die nächste Topologie aus der Eingabeliste der ein Vorlauf ausgeführt-Liste hinzufügt. Danach löst die Sequencer-Quelle das Ereignis " [menewpresentation](menewpresentation.md) " asynchron aus und übergibt den Präsentations Deskriptor für die ein Vorlauf ausgeführt-Topologie als Ereignisdaten. Die Anwendung muss dieses Ereignis überwachen, indem Sie die [**imfmediaeventgenerator**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator) -Schnittstelle der Medien Sitzung verwendet und die ein Vorlauf ausgeführt-Topologie in der Medien Sitzung durch Aufrufen von [**imfmediasession:: settopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology)in die Warteschlange eingereiht. Dies muss erfolgen, bevor die Wiedergabe der aktiven Topologie in der Medien Sitzung abgeschlossen ist. Die **settopologie** informiert die Medien Sitzung über die nächste Topologie, die Sie wiedergeben muss, nachdem die Wiedergabe der aktiven Topologie beendet wurde. Um eine nahtlose treansition sicherzustellen, muss die Anwendung **settopology** aufzurufen, bevor die Medien Sitzung die Wiedergabe der vorherigen Topologie abschließt. Andernfalls besteht eine Lücke zwischen den Segmenten.
+Die Vorabliste ist eine Sammlung von Eingabelistentopologien, die als Vorbereitung für die Wiedergabe initialisiert wurden. Dadurch kann die Mediensitzung nahtlos zur nächsten Topologie übergehen, wenn die aktive Topologie endet. Die Anwendung kann Topologien nicht direkt zur Vorabrollliste hinzufügen oder daraus entfernen. sie wird von der Sequencerquelle generiert, wenn eine Topologie aus der Eingabeliste für die Wiedergabe ausgewählt wird. Dies bewirkt, dass die Sequencerquelle die nächste Topologie aus der Eingabeliste der Vorabrollliste hinzufügt. Anschließend löst die Sequencerquelle asynchron das [MENewPresentation-Ereignis](menewpresentation.md) aus und übergibt den Präsentationsdeskriptor für die Prärolltopologie als Ereignisdaten. Die Anwendung muss auf dieses Ereignis lauschen, indem sie die [**SCHNITTSTELLE "OPCMediaEventGenerator"**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator) der Mediensitzung verwendet und die Prärolltopologie für die Mediensitzung in die Warteschlange einreiht, indem [**SIE DIE SESSIONMediaSession::SetTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology)aufruft. Dies muss geschehen, bevor die Mediensitzung die Wiedergabe der aktiven Topologie abschließt. **SetTopology** informiert die Mediensitzung über die nächste Topologie, die nach dem Beenden der Wiedergabe der aktiven Topologie wiedergegeben werden muss. Um eine nahtlose Treansition sicherzustellen, muss die Anwendung **SetTopology** aufrufen, bevor die Mediensitzung die Wiedergabe der vorherigen Topologie abgeschlossen hat. Andernfalls besteht eine Lücke zwischen den Segmenten.
 
-Das [menewpresentation](menewpresentation.md) -Ereignis wird ausgelöst, solange eine Topologie vorhanden ist, die der aktiven Topologie folgt. Folglich wird dieses Ereignis nicht ausgelöst, wenn die Eingabeliste nur eine Topologie enthält oder wenn es sich bei der aktiven Topologie um das letzte in der Eingabeliste handelt.
+Das [MENewPresentation-Ereignis](menewpresentation.md) wird ausgelöst, solange eine Topologie nach der aktiven Topologie vorhanden ist. Wenn die Eingabeliste also nur eine Topologie enthält oder die aktive Topologie die letzte in der Eingabeliste ist, wird dieses Ereignis nicht ausgelöst.
 
-Die vorab Liste ist mit der Eingabeliste synchronisiert und wird jedes Mal aktualisiert, wenn der Eingabeliste eine Topologie hinzugefügt oder aus ihr gelöscht wird.
+Die Prerollliste wird mit der Eingabeliste synchronisiert und jedes Mal aktualisiert, wenn der Eingabeliste eine Topologie hinzugefügt oder aus dieser gelöscht wird.
 
 ## <a name="deleting-topologies"></a>Löschen von Topologien
 
-Um eine Topologie aus der Sequencer-Quelle zu entfernen, muss eine Anwendung die [**imfsequencersource::D eletetopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-deletetopology) -Methode abrufen und den Segment Bezeichner angeben.
+Um eine Topologie aus der Sequencerquelle zu entfernen, muss eine Anwendung die [**METHODE VONSEQUENCERSOURCE::D eleteTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-deletetopology) aufrufen und den Segmentbezeichner angeben.
 
-Bevor [**deletetopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-deletetopology)aufgerufen wird, muss die Anwendung sicherstellen, dass die Medien Sitzung nicht die Topologie verwendet, die von der Anwendung gelöscht werden soll. Zu diesem Zweck müssen die beiden folgenden Punkte auftreten, bevor die Anwendung **deletetopology** aufruft:
+Vor dem Aufrufen von [**DeleteTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-deletetopology)muss die Anwendung sicherstellen, dass die Mediensitzung nicht die Topologie verwendet, die von der Anwendung gelöscht werden soll. Hierzu müssen beide folgenden Schritte ausgeführt werden, bevor die Anwendung **DeleteTopology** aufruft:
 
--   Das [mesessiontopologystatus](mesessiontopologystatus.md) -Ereignis mit der "MF \_ topostatus" \_ wurde für die Topologie empfangen, um sicherzustellen, dass die Wiedergabe der Medien Sitzung abgeschlossen ist
+-   Das [MESessionTopologyStatus-Ereignis](mesessiontopologystatus.md) mit MF \_ TOPOSTATUS \_ ENDED wird für die Topologie empfangen, um sicherzustellen, dass die Mediensitzung die Wiedergabe abgeschlossen hat.
 
--   [Mesessiontopologystatus](mesessiontopologystatus.md) mit \_ der von MF topostatus \_ gestartete \_ Quelle wird für die nächste Topologie empfangen, um sicherzustellen, dass die Medien Sitzung mit der nächsten Topologie begonnen hat. das [mesessionend](mesessionended.md) -Ereignis wird empfangen, um sicherzustellen, dass die Medien Sitzung mit der letzten Topologie in der Sequencer-Quelle ausgeführt wird.
+-   [MESessionTopologyStatus](mesessiontopologystatus.md) mit MF \_ TOPOSTATUS \_ STARTED SOURCE wird für die nächste Topologie \_ empfangen, um sicherzustellen, dass die Mediensitzung mit der Wiedergabe der nächsten Topologie begonnen hat. Das [MESessionEnded-Ereignis](mesessionended.md) wird empfangen, um sicherzustellen, dass die Mediensitzung mit der letzten Topologie in der Sequencerquelle abgeschlossen wird.
 
-Wenn das Segment, das gelöscht wird, die aktive Topologie ist, wird die Wiedergabe angehalten, und die Sequencer-Quelle löst das [meendof presentationsegment](meendofpresentationsegment.md) -Ereignis aus. Wenn die aktive Topologie auch die letzte Topologie ist, wird das [meendof Presentation](meendofpresentation.md) -Ereignis ausgelöst.
+Wenn das zu löschende Segment die aktive Topologie ist, wird die Wiedergabe beendet, und die Sequencerquelle löst das [MEEndOfPresentationSegment-Ereignis](meendofpresentationsegment.md) aus. Wenn die aktive Topologie auch die letzte Topologie ist, wird das [MEEndOfPresentation-Ereignis](meendofpresentation.md) ausgelöst.
 
-## <a name="skipping-to-a-segment"></a>Überspringen zu einem Segment
+## <a name="skipping-to-a-segment"></a>Überspringen auf ein Segment
 
-Eine Anwendung kann mit einem bestimmten Segment in der Sequenz übersprungen werden, indem die [Medien Sitzung](media-session.md) mit einem Segment Offset wie folgt gestartet wird:
+Eine Anwendung kann zu einem bestimmten Segment in der Sequenz springen, indem sie die [Mediensitzung](media-session.md) wie folgt mit einem Segmentoffset startet:
 
-1.  Rufen Sie die [**mfkreatesequencersegmentoffset**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesequencersegmentoffset) -Funktion auf, um den Segment Offset zu erstellen. Geben Sie den Bezeichner des Segments im *dwID* -Parameter an. (Der Bezeichner wurde von der [**imfsequencersource:: appendtopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-appendtopology) -Methode zurückgegeben, als Sie die Topologie zum ersten Mal der Sequencer-Quelle hinzugefügt haben.) Der *hnsoffset* -Parameter gibt einen Zeit Offset relativ zum Anfang des Segments an. Die Wiedergabe wird zu diesem Zeitpunkt gestartet. Übergeben Sie für den *pvarsegmentoffset* -Parameter die Adresse eines leeren **PROPVARIANT**-Parameters. Wenn die Funktion zurückgegeben wird, enthält diese **PROPVARIANT** den Segment Offset.
+1.  Rufen Sie die [**MFCreateSequencerSegmentOffset-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesequencersegmentoffset) auf, um den Segmentoffset zu erstellen. Geben Sie den Bezeichner des Segments im *dwId-Parameter* an. (Der Bezeichner wurde von der [**METHODE VONSEQUENCERSOURCE::AppendTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-appendtopology) zurückgegeben, als Sie der Sequencerquelle zum ersten Mal die Topologie hinzugefügt haben.) Der *Parameter hnsOffset* gibt einen Zeitoffset relativ zum Anfang des Segments an. Die Wiedergabe beginnt zu diesem Zeitpunkt. Übergeben Sie für den *pvarSegmentOffset-Parameter* die Adresse eines leeren **PROPVARIANT -Werts.** Wenn die Funktion zurückgegeben wird, enthält diese **PROPVARIANT** den Segmentoffset.
 
-2.  Nennen Sie die [**imfmediasession:: Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start) -Methode für die Medien Sitzung. Verwenden Sie für den *pguidtimeformat* -Parameter den GUID-Wert MF- \_ Zeit \_ Format \_ Segment \_ Offset. Dieser Wert gibt die Suche nach Segment Offset an. Übergeben Sie für den *pvarstartposition* -Parameter die Adresse der im vorherigen Schritt erstellten **PROPVARIANT** .
+2.  Rufen Sie die [**METHODE VONMEDIASESSION::Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start) für die Mediensitzung auf. Verwenden Sie für den *Parameter pguidTimeFormat* den GUID-Wert MF \_ TIME FORMAT SEGMENT \_ \_ \_ OFFSET. Dieser Wert gibt die Suche nach Segmentoffset an. Übergeben Sie für den *Parameter pvarStartPosition* die Adresse des im vorherigen Schritt erstellten **PROPVARIANT.**
 
-Im folgenden Codebeispiel wird veranschaulicht, wie mit dem Anfang eines angegebenen Segments in einer Sequenz übersprungen wird.
+Im folgenden Codebeispiel wird gezeigt, wie sie zum Anfang eines angegebenen Segments in einer Sequenz springen.
 
 
 ```C++
@@ -151,21 +151,21 @@ HRESULT CPlaylist::SkipTo(DWORD index)
 
 
 
-Wenn die Anwendung über Segmente hinweg sucht, empfängt die Anwendung mehrere Ereignisse, da die Sequencer-Quelle das aktuelle Segment beendet und die Wiedergabe des neuen Segments vorbereitet. Da diese Ereignisse asynchron empfangen werden, ist es schwierig, die genaue Reihenfolge der Ereignisse vorherzusagen. Diese Ereignisse lauten wie folgt:
+Wenn die Anwendung segmentübergreifend sucht, empfängt die Anwendung mehrere Ereignisse, während die Sequencerquelle das aktuelle Segment beendet und sich auf die Wiedergabe des neuen Segments vorbereitet. Da diese Ereignisse asynchron empfangen werden, ist es schwierig, die genaue Sequenz von Ereignissen vorherzusagen. Diese Ereignisse sind wie folgt:
 
--   Die Sequencer-Quelle sendet ein [menewpresentation](menewpresentation.md) -Ereignis für das neue Segment, an das die Medien Sitzung übersprungen wird.
+-   Die Sequencerquelle sendet ein [MENewPresentation-Ereignis](menewpresentation.md) für das neue Segment, an das die Mediensitzung übersprungen wird.
 
--   Wenn die Sequencer-Quelle das aktive Segment beendet, sendet Sie das [meendofpresentationsegment](meendofpresentationsegment.md) -Ereignis.
--   Die Sequencer-Quelle bricht dann die ein Vorlauf ausgeführt-Topologie ab. Dies führt zu den folgenden Ereignissen für die abgebrochene Topologie:
+-   Wenn die Sequencerquelle das aktive Segment beendet, sendet sie das [MEEndOfPresentationSegment-Ereignis.](meendofpresentationsegment.md)
+-   Die Sequencerquelle bricht dann die Prärolltopologie ab. Dies führt zu den folgenden Ereignissen für die abgebrochene Topologie:
 
-    -   [Mesessiontopologystatus](mesessiontopologystatus.md) -Ereignis mit dem MF- \_ Flag "topostatus \_ Ready".
-    -   Das [mesessiontopologystatus](mesessiontopologystatus.md) -Ereignis mit dem \_ \_ quellflag "MF topostatus Started" \_ .
-    -   Das [meendofpresentationsegment](meendofpresentationsegment.md) -Ereignis mit der [MF- \_ Ereignis \_ Quell Topologie hat das Attribut \_ \_ abgebrochen](mf-event-source-topology-canceled-attribute.md) , um anzugeben, dass die Topologie von der Sequencer-Quelle abgebrochen wurde.
+    -   [MESessionTopologyStatus-Ereignis](mesessiontopologystatus.md) mit dem \_ MF TOPOSTATUS \_ READY-Flag.
+    -   [MESessionTopologyStatus-Ereignis](mesessiontopologystatus.md) mit dem \_ MF TOPOSTATUS \_ STARTED \_ SOURCE-Flag.
+    -   [MEEndOfPresentationSegment-Ereignis](meendofpresentationsegment.md) mit dem [MF EVENT SOURCE \_ \_ \_ TOPOLOGY \_ CANCELED-Attribut,](mf-event-source-topology-canceled-attribute.md) um anzugeben, dass die Topologie von der Sequencerquelle abgebrochen wurde.
 
--   Als nächstes sendet die Sequencer-Quelle Ereignisse für das neue Segment, einschließlich verschiedener [mesessiontopologystatus](mesessiontopologystatus.md) -Ereignisse.
--   Wenn das neue Segment nicht das letzte in der Liste ist, aktualisiert die Sequencer-Quelle die vorab Liste und löst eine weitere [menewpresentation](menewpresentation.md) für die neue ein Vorlauf ausgeführt-Topologie aus. Weitere Informationen zu Topologien in der ein Vorlauf ausgeführt-Liste finden Sie unter Informationen zur [Sequencer-Quelle](about-the-sequencer-source.md).
+-   Als Nächstes sendet die Sequencerquelle Ereignisse für das neue Segment, einschließlich verschiedener [MESessionTopologyStatus-Ereignisse.](mesessiontopologystatus.md)
+-   Wenn das neue Segment nicht das letzte in der Liste ist, aktualisiert die Sequencerquelle die Prerollliste und löst eine weitere [MENewPresentation](menewpresentation.md) für die neue Prärolltopologie aus. Informationen zu Topologien in der Prerollliste finden Sie unter [Informationen zur Sequencerquelle.](about-the-sequencer-source.md)
 
-Weitere Informationen zu den von der Sequencer-Quelle gesendeten Ereignissen finden Sie im Thema [Sequencer-Quell Ereignisse](sequencer-source-events.md).
+Weitere Informationen zu den ereignissen, die von der Sequencerquelle gesendet werden, finden Sie im Thema [Sequencer Source Events](sequencer-source-events.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -174,7 +174,7 @@ Weitere Informationen zu den von der Sequencer-Quelle gesendeten Ereignissen fin
 [Erstellen einer Wiedergabeliste](how-to-create-a-playlist.md)
 </dt> <dt>
 
-[Sequencer-Quelle](sequencer-source.md)
+[Sequencerquelle](sequencer-source.md)
 </dt> </dl>
 
  

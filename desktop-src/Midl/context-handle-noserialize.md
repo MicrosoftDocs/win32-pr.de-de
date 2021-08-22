@@ -1,9 +1,9 @@
 ---
 title: context_handle_noserialize-Attribut
-description: Das \ Context \_ handle \_ noserialize \ ACF-Attribut stellt sicher, dass ein Kontext Handle unabhängig vom Standardverhalten der Anwendung niemals serialisiert wird.
+description: Das \context \_ handle \_ noserialize\ACF-Attribut garantiert, dass ein Kontexthandle unabhängig vom Standardverhalten der Anwendung nie serialisiert wird.
 ms.assetid: aff2484e-639b-41d2-94a9-f34ca4f2343c
 keywords:
-- context_handle_noserialize Attribut-Mittel l
+- context_handle_noserialize-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1394f3f2a72837df5efa3b74bd2672e39c3c3b12
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 40556db0d63441e42d46a0ed7f9bd45edb8b2ce65f8d4b9b84e3a848325ddbb8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103724961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013998"
 ---
-# <a name="context_handle_noserialize-attribute"></a>Kontext \_ handle- \_ noserialize-Attribut
+# <a name="context_handle_noserialize-attribute"></a>\_Kontexthandle \_ noserialize-Attribut
 
-Das **\[ Kontext \_ \_ handle \]** -ACF-Attribut stellt sicher, dass ein Kontext Handle unabhängig vom Standardverhalten der Anwendung niemals serialisiert wird.
+Das **\[ \_ Kontexthandle \_ noserialize \]** ACF-Attribut garantiert, dass ein Kontexthandle unabhängig vom Standardverhalten der Anwendung nie serialisiert wird.
 
 ``` syntax
 typedef [context_handle_noserialize [ , type-acf-attribute-list ] ] context-handle-type
@@ -36,57 +36,57 @@ function-name (   [context_handle_noserialize
 
 <dl> <dt>
 
-*Type-ACF-Attribute-List* 
+*type-acf-attribute-list* 
 </dt> <dd>
 
-Alle anderen ACF-Attribute, die auf den Typ angewendet werden.
+Alle anderen ACF-Attribute, die für den Typ gelten.
 
 </dd> <dt>
 
-*Context-Handle-type* 
+*context-handle-type* 
 </dt> <dd>
 
-Der Bezeichner, der den Typ des Kontext Handles angibt, wie in einer [**typedef**](typedef.md) -Deklaration definiert. Dies ist der Typ, der das [**\[ Kontext \_ handle \]**](context-handle.md) -Attribut in der IDL-Datei empfängt.
+Der Bezeichner, der den Kontexthandletyp angibt, wie in einer [**typedef-Deklaration**](typedef.md) definiert. Dies ist der Typ, der das [**\[ \_ \] Kontexthandleattribut**](context-handle.md) in der IDL-Datei empfängt.
 
 </dd> <dt>
 
-*Function-ACF-Attribute-List* 
+*function-acf-attribute-list* 
 </dt> <dd>
 
-Alle zusätzlichen ACF-Attribute, die auf die Funktion angewendet werden.
+Alle zusätzlichen ACF-Attribute, die für die Funktion gelten.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
 Der Name der Funktion, wie in der IDL-Datei definiert.
 
 </dd> <dt>
 
-*Parameter-ACF-Attribute-List* 
+*parameter-acf-attribute-list* 
 </dt> <dd>
 
-Alle anderen ACF-Attribute, die auf den-Parameter angewendet werden.
+Alle anderen ACF-Attribute, die für den Parameter gelten.
 
 </dd> <dt>
 
-*Param-Name* 
+*param-name* 
 </dt> <dd>
 
-Der Name des Parameters, wie er in der IDL-Datei definiert ist.
+Der Name des Parameters, wie in der IDL-Datei definiert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das [**\[ Kontext \_ handle \]**](context-handle.md) -Attribut identifiziert ein Bindungs handle, das Kontext-oder Zustandsinformationen auf dem Server zwischen Remote Prozedur aufrufen verwaltet. Das Attribut kann als IDL [**typedef**](typedef.md) Type-Attribut, als Funktions Rückgabetyp Attribut oder als Parameter Attribut angezeigt werden.
+Das [**\[ \_ \] Kontexthandleatat**](context-handle.md) identifiziert ein Bindungshandle, das Kontext- oder Zustandsinformationen auf dem Server zwischen Remoteprozeduraufrufen verwaltet. Das Attribut kann als [**IDL-Typdefinitionstypattribut,**](typedef.md) als Funktionsrückgabetypattribut oder als Parameterattribut angezeigt werden.
 
-Standardmäßig werden Aufrufe für Kontext Handles serialisiert. Eine Anwendung kann [**rpcssdontserializecontext**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcssdontserializecontext) aufgerufen werden, um dieses Standardverhalten zu überschreiben. Durch die Verwendung des [**\[ Kontext \_ handle \]**](context-handle.md) -Attributs in einer ACF-Datei wird sichergestellt, dass Aufrufe für dieses Kontext Handle unabhängig vom Verhalten der aufrufenden Anwendung nicht serialisiert werden. Das Bereitstellen einer Kontext-Rundown-Routine ist optional.
+Standardmäßig werden Aufrufe von Kontexthandles serialisiert. Eine Anwendung kann [**RpcSsDontSerializeContext**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcssdontserializecontext) aufrufen, um dieses Standardverhalten zu überschreiben. Die Verwendung des [**\[ \_ \] Kontexthandleattributs**](context-handle.md) in einer ACF-Datei garantiert, dass Aufrufe für dieses bestimmte Kontexthandle unabhängig vom Verhalten der aufrufenden Anwendung nicht serialisiert werden. Das Bereitstellen einer Kontext-Rundownroutine ist optional.
 
-Dieses Attribut ist in der mittleren l-Version 5,0 verfügbar.
+Dieses Attribut ist in MIDL Version 5.0 verfügbar.
 
-**Windows Server 2003 und Windows XP oder höher:** Eine einzelne Schnittstelle kann sowohl serialisierte als auch nicht serialisierte Kontext Handles aufnehmen, sodass eine Methode in einer Schnittstelle ausschließlich auf ein Kontext Handle (serialisiert) zugreifen kann, während andere Methoden auf dieses Kontext Handle im freigegebenen Modus zugreifen (nicht serialisiert). Diese Zugriffs Funktionen sind mit Lese-/schreibsperrungs-Mechanismen vergleichbar. Methoden, die ein serialisiertes Kontext Handle verwenden, sind exklusive Benutzer (Writer), während Methoden, die ein nicht serialisiertes Kontext Handle verwenden, freigegebene Benutzer (Reader) sind. Methoden, die den Zustand eines Kontext Handles zerstören oder ändern, müssen serialisiert werden. Methoden, die den Zustand eines Kontext Handles nicht ändern, wie z. b. die Methoden, die einfach aus einem Kontext Handle lesen, können nicht serialisiert werden. Beachten Sie, dass Erstellungs Methoden implizit serialisiert werden.
+**Windows Server 2003 und Windows XP oder höher:** Eine einzelne Schnittstelle kann sowohl serialisierte als auch nicht serialisierte Kontexthandles aufnehmen, sodass eine Methode einer Schnittstelle ausschließlich auf ein Kontexthandle zugreifen kann (serialisiert), während andere Methoden im freigegebenen Modus (nicht serialisiert) auf dieses Kontexthandle zugreifen. Diese Zugriffsfunktionen sind vergleichbar mit Lese-/Schreibsperrmechanismen. -Methoden, die ein serialisiertes Kontexthandle verwenden, sind exklusive Benutzer (Writer), während Methoden, die ein nicht serialisiertes Kontexthandle verwenden, freigegebene Benutzer (Reader) sind. Methoden, die den Zustand eines Kontexthandle zerstören oder ändern, müssen serialisiert werden. Methoden, die den Zustand eines Kontexthandles nicht ändern, z. B. Methoden, die einfach aus einem Kontexthandle lesen, können nicht deserialisiert werden. Beachten Sie, dass Erstellungsmethoden implizit serialisiert werden.
 
 ## <a name="examples"></a>Beispiele
 
@@ -102,27 +102,27 @@ HRESULT RemoteFunc([context_handle_noserialize] pCxHandle);
 [ACF-Attribute](acf-attributes.md)
 </dt> <dt>
 
-[**Kontext \_ handle- \_ Serialisierung**](context-handle-serialize.md)
+[**\_Kontexthandle \_ serialisieren**](context-handle-serialize.md)
 </dt> <dt>
 
-[**Kontext \_ handle**](context-handle.md)
+[**\_Kontexthandle**](context-handle.md)
 </dt> <dt>
 
-[Kontext Handles](/windows/desktop/Rpc/context-handles)
+[Kontexthandles](/windows/desktop/Rpc/context-handles)
 </dt> <dt>
 
-[**Rpcssdontserializecontext**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcssdontserializecontext)
+[**RpcSsDontSerializeContext**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcssdontserializecontext)
 </dt> <dt>
 
-[Server Kontext-Lauf-ab-Routine](/windows/desktop/Rpc/server-context-run-down-routine)
+[Run-down-Routine für Serverkontext](/windows/desktop/Rpc/server-context-run-down-routine)
 </dt> <dt>
 
-[Multithread-Clients und Kontext Handles](/windows/desktop/Rpc/multithreaded-clients-and-context-handles)
+[Multithreadclients und Kontexthandles](/windows/desktop/Rpc/multithreaded-clients-and-context-handles)
 </dt> <dt>
 
-[**typedef**](typedef.md)
+[**Typedef**](typedef.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

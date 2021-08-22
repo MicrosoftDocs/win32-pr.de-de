@@ -1,19 +1,19 @@
 ---
-description: In diesem Abschnitt werden die Enumerationen der Erkennung beschrieben.
+description: In diesem Abschnitt werden die Recognizer-Enumerationen beschrieben.
 ms.assetid: f0df02b0-bef6-461f-a2cf-d4ac58bd5f0e
 title: Erkennungsenumerationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9086c7175f13a24bc4078d61e01143cc0065e658
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 879ebe2b0465a20f8a68468bdacda6e97f02d031980ef6487e5c6b4c3f8f7350
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119031648"
 ---
 # <a name="recognizer-enumerations"></a>Erkennungsenumerationen
 
-In diesem Abschnitt werden die Enumerationen der Erkennung beschrieben.
+In diesem Abschnitt werden die Recognizer-Enumerationen beschrieben.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,10 +21,10 @@ In diesem Abschnitt werden die Enumerationen der Erkennung beschrieben.
 
 | Enumeration                                   | Beschreibung                                                                                |
 |-----------------------------------------------|--------------------------------------------------------------------------------------------|
-| [**ALT- \_ Umbrüche**](/windows/win32/api/rectypes/ne-rectypes-alt_breaks)             | Gibt an, wie Alternativen aus einer optimalen Ergebnis Zeichenfolge erstellt werden.<br/>                   |
-| [**Vertrauens \_ Grad**](/windows/win32/api/rectypes/ne-rectypes-confidence_level) | Gibt die Vertrauens Ebene an, die die Erkennung im Erkennungs Ergebnis aufweist.<br/> |
-| [**\_linienmetriken**](/windows/win32/api/rectypes/ne-rectypes-line_metrics)         | Stellt die in einem Segment gefundenen Zeilen dar.<br/>                                        |
-| [**Eigenschaften \_ Einheiten**](/windows/desktop/api/tpcshrd/ne-tpcshrd-property_units)     | Gibt die Maßeinheit einer Eigenschaft an.<br/>                                |
+| [**\_ALT-UMBRÜCHE**](/windows/win32/api/rectypes/ne-rectypes-alt_breaks)             | Gibt an, wie Alternativen aus einer Zeichenfolge mit dem besten Ergebnis erstellt werden.<br/>                   |
+| [**\_KONFIDENZSTUFE**](/windows/win32/api/rectypes/ne-rectypes-confidence_level) | Gibt den Vertrauensgrad an, den die Erkennung im Erkennungsergebnis hat.<br/> |
+| [**\_ZEILENMETRIKEN**](/windows/win32/api/rectypes/ne-rectypes-line_metrics)         | Stellt die in einem Segment gefundenen Zeilen dar.<br/>                                        |
+| [**\_EIGENSCHAFTENEINHEITEN**](/windows/desktop/api/tpcshrd/ne-tpcshrd-property_units)     | Gibt die Maßeinheit einer Eigenschaft an.<br/>                                |
 
 
 

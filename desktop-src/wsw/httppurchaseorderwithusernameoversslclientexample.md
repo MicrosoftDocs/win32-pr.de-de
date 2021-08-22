@@ -1,29 +1,29 @@
 ---
-title: Httppurchaseorderwithusernameoversslcliumtexample
-description: Dieses Beispiel zeigt einen HTTP-Client, der den Dienst Proxy für die Kommunikation mit einem PurchaseOrder-Dienst verwendet, mit dem Benutzernamen über SSL-Sicherheit im gemischten Modus.
+title: HttpPurchaseOrderWithUsernameOverSslClientExample
+description: Dieses Beispiel zeigt einen HTTP-Client, der einen Dienstproxy verwendet, um mit einem PurchaseOrder-Dienst zu kommunizieren, mit Benutzername über SSL-Sicherheit im gemischten Modus.
 ms.assetid: 9874f00d-1efa-47ed-8029-f93962046789
 keywords:
-- Httppurchaseorderwithusernameoversslcliumtexample Native-Web-Services
-- Wwsapi
+- HttpPurchaseOrderWithUsernameOverSslClientExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e014bce5cd877681583e0fc4cbf27dd74bda62c1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2f776230a3c87e105c11b44e2cd3d0762b34baf50f2ff6670d0b118a84d6a626
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963129"
 ---
-# <a name="httppurchaseorderwithusernameoversslclientexample"></a>Httppurchaseorderwithusernameoversslcliumtexample
+# <a name="httppurchaseorderwithusernameoversslclientexample"></a>HttpPurchaseOrderWithUsernameOverSslClientExample
 
-Dieses Beispiel zeigt einen HTTP-Client, der den Dienst Proxy für die Kommunikation mit einem PurchaseOrder-Dienst verwendet, mit dem Benutzernamen über SSL-Sicherheit im gemischten Modus. In diesem Setup wird die Transport Verbindung von SSL geschützt (signiert, verschlüsselt), der auch die Server Authentifizierung bereitstellt. Die Client Authentifizierung wird von einem Paar aus Benutzername und Kennwort in einem WS-Security-Header in der Nachricht bereitgestellt.
+Dieses Beispiel zeigt einen HTTP-Client, der einen Dienstproxy verwendet, um mit einem PurchaseOrder-Dienst zu kommunizieren, mit Benutzername über SSL-Sicherheit im gemischten Modus. In diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Benutzername-Kennwort-Paar in einem WS-Security Header in der Nachricht bereitgestellt.
 
--   [Purchaseorderclientusernameoverssl. cpp](#purchaseorderclientusernameoversslcpp)
--   [PurchaseOrder. WSDL](#purchaseorderwsdl)
+-   [PurchaseOrderClientUserNameOverSsl.cpp](#purchaseorderclientusernameoversslcpp)
+-   [PurchaseOrder.wsdl](#purchaseorderwsdl)
 -   [Makefile](#makefile)
 
-## <a name="purchaseorderclientusernameoversslcpp"></a>Purchaseorderclientusernameoverssl. cpp
+## <a name="purchaseorderclientusernameoversslcpp"></a>PurchaseOrderClientUserNameOverSsl.cpp
 
 
 ```C++
@@ -331,7 +331,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a>PurchaseOrder. WSDL
+## <a name="purchaseorderwsdl"></a>PurchaseOrder.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -470,9 +470,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

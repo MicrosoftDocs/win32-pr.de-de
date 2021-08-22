@@ -1,29 +1,29 @@
 ---
 title: Erstellen eines App-Pakets (C++)
-description: Erfahren Sie, wie Sie mithilfe der Paket-API ein App-Paket für eine Windows-app erstellen.
+description: Erfahren Sie, wie Sie mithilfe der Paketerstellungs-API ein App-Paket für eine Windows-App erstellen.
 ms.assetid: FD677D75-50D5-4228-891F-73B5F40679B0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f1808ebf57d4c7125f5509db68e22b78ce949f7
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 9ac2e471443acd22a39128c046590eed29d320b75bafee0a65cb6d37fb4fb8d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "106338251"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119049058"
 ---
 # <a name="how-to-create-an-app-package-c"></a>Erstellen eines App-Pakets (C++)
 
-Erfahren Sie, wie Sie mithilfe der [Paket-API](interfaces.md)ein App-Paket für eine Windows-app erstellen.
+Erfahren Sie, wie Sie ein App-Paket für eine Windows-App mithilfe der [Paketerstellungs-API](interfaces.md)erstellen.
 
-Wenn Sie ein Desktop-App-Paket manuell erstellen möchten, können Sie auch das MakeAppx.exe Tool verwenden, das die [Paketierungs-API](interfaces.md)verwendet. Weitere Informationen finden Sie unter [App Packager (MakeAppx.exe)](make-appx-package--makeappx-exe-.md) .
+Wenn Sie ein Desktop-App-Paket manuell erstellen möchten, können Sie auch das MakeAppx.exe Tool verwenden, das die [Paketerstellungs-API](interfaces.md)verwendet. Weitere Informationen finden Sie unter [App Packager (MakeAppx.exe).](make-appx-package--makeappx-exe-.md)
 
-Wenn Sie Visual Studio verwenden, wird empfohlen, dass Sie den Visual Studio-Paketierungs-Assistenten verwenden, um Ihre APP zu verpacken. Weitere Informationen finden Sie unter [Packen einer UWP-App mithilfe von Visual Studio](/windows/msix/package/packaging-uwp-apps).
+Wenn Sie Visual Studio verwenden, wird empfohlen, die App mithilfe des Assistenten für die Visual Studio Paketierung zu verpacken. Weitere Informationen finden Sie unter [Packen einer UWP-App mit Visual Studio](/windows/msix/package/packaging-uwp-apps).
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-create-a-package-writer"></a>Schritt 1: Erstellen eines paketwriters
+### <a name="step-1-create-a-package-writer"></a>Schritt 1: Erstellen eines Paketwriters
 
-Um einen paketwriter zu erstellen, rufen Sie die [**iappxfactory:: kreatepackagewriter**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfactory-createpackagewriter) -Methode auf. Der erste Parameter ist ein Ausgabestream, in den das Paket geschrieben wird. Der zweite Parameter ist ein Zeiger auf eine [**AppX- \_ Paket \_ Einstellungs**](/windows/desktop/api/AppxPackaging/ns-appxpackaging-appx_package_settings) Struktur, die Paket Einstellungen angibt. Der dritte Parameter ist ein Ausgabeparameter, der einen Zeiger auf einen [**iappxpackagewriter**](/windows/desktop/api/AppxPackaging/nn-appxpackaging-iappxpackagewriter) -Zeiger empfängt.
+Um einen Paketwriter zu erstellen, rufen Sie die [**IAppxFactory::CreatePackageWriter-Methode**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfactory-createpackagewriter) auf. Der erste Parameter ist ein Ausgabestream, in den das Paket geschrieben wird. Der zweite Parameter ist ein Zeiger auf eine [**APPX \_ PACKAGE \_ SETTINGS-Struktur,**](/windows/desktop/api/AppxPackaging/ns-appxpackaging-appx_package_settings) die Paketeinstellungen angibt. Der dritte Parameter ist ein Ausgabeparameter, der einen Zeiger auf einen [**IAppxPackageWriter-Zeiger**](/windows/desktop/api/AppxPackaging/nn-appxpackaging-iappxpackagewriter) empfängt.
 
 
 ```C++
@@ -137,9 +137,9 @@ HRESULT GetPackageWriter(
 
 
 
-### <a name="step-2-add-the-payload-files-for-your-app-to-the-package"></a>Schritt 2: Hinzufügen der Nutz Last Dateien für Ihre APP zum Paket
+### <a name="step-2-add-the-payload-files-for-your-app-to-the-package"></a>Schritt 2: Hinzufügen der Nutzlastdateien für Ihre App zum Paket
 
-Rufen Sie die [**iappxpackagewriter:: addpayloadfile**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxpackagewriter-addpayloadfile) -Methode auf, um dem Paketdateien hinzuzufügen. Der erste Parameter ist der relative Pfad der Datei. Der zweite Parameter gibt den Inhaltstyp der Datei an. Der dritte Parameter gibt Optionen aus der [**AppX \_ - \_ komprimierungsoptionsenumeration**](/windows/desktop/api/AppxPackaging/ne-appxpackaging-appx_compression_option) an. Der vierte Parameter ist der Eingabestream für die Datei.
+Rufen Sie die [**IAppxPackageWriter::AddPayloadFile-Methode**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxpackagewriter-addpayloadfile) auf, um dem Paket Dateien hinzuzufügen. Der erste Parameter ist der relative Pfad der Datei. Der zweite Parameter gibt den Inhaltstyp der Datei an. Der dritte Parameter gibt Optionen aus der [**APPX \_ COMPRESSION \_ OPTION-Enumeration**](/windows/desktop/api/AppxPackaging/ne-appxpackaging-appx_compression_option) an. Der vierte Parameter ist der Eingabestream für die Datei.
 
 
 ```C++
@@ -173,7 +173,7 @@ for (int i = 0; SUCCEEDED(hr) && (i < PayloadFilesCount); i++)
 
 
 
-Der vorherige Code verwendet diese Variablen Definitionen und `GetFileStream` Hilfsfunktionen.
+Im vorherigen Code werden diese Variablendefinitionen und `GetFileStream` hilfsfunktion verwendet.
 
 
 ```C++
@@ -248,11 +248,11 @@ HRESULT GetFileStream(
 
 
 
-### <a name="step-3-add-the-package-manifest-to-the-package"></a>Schritt 3: Hinzufügen des Paket Manifests zum Paket
+### <a name="step-3-add-the-package-manifest-to-the-package"></a>Schritt 3: Hinzufügen des Paketmanifests zum Paket
 
-Jedes Paket muss über ein Paket Manifest verfügen. Um das Paket Manifest zum Paket hinzuzufügen, erstellen Sie einen Eingabestream für die Datei, und rufen Sie dann die [**iappxpackagewriter:: Close**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxpackagewriter-close) -Methode auf, um das Manifest am Ende des Pakets zu schreiben und den Ausgabestream für den paketwriter zu schließen.
+Jedes Paket muss über ein Paketmanifest verfügen. Um dem Paket das Paketmanifest hinzuzufügen, erstellen Sie einen Eingabestream für die Datei, und rufen Sie dann die [**IAppxPackageWriter::Close-Methode**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxpackagewriter-close) auf, um das Manifest am Ende des Pakets zu schreiben und den Ausgabestream für den Paketwriter zu schließen.
 
-In diesem Code wird die `GetFileStream` im vorherigen Schritt gezeigte Hilfsfunktion verwendet, um den Datenstrom für das Paket Manifest zu erstellen.
+In diesem Code wird die `GetFileStream` im vorherigen Schritt gezeigte Hilfsfunktion verwendet, um den Stream für das Paketmanifest zu erstellen.
 
 
 ```C++
@@ -277,9 +277,9 @@ if (manifestStream != NULL)
 
 
 
-### <a name="step-4-clean-up-the-package-writer"></a>Schritt 4: Bereinigen des paketwriters
+### <a name="step-4-clean-up-the-package-writer"></a>Schritt 4: Bereinigen des Paketwriters
 
-Bevor Sie von der-Funktion zurückgegeben `wmain` werden, müssen Sie die [**releasemethode**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) zum Bereinigen des paketwriter und die Funktion " [**count Initialize**](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize) " aufruft.
+Rufen Sie vor dem Zurückgeben von der `wmain` Funktion die [**Release-Methode**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf, um den Paketwriter zu bereinigen, und rufen Sie die [**CoUninitialize-Funktion**](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize) auf.
 
 
 ```C++
@@ -300,15 +300,15 @@ CoUninitialize();
 **Beispiele**
 </dt> <dt>
 
-[App-Paket erstellen (Beispiel)](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/AppxPackingCreateAppx)
+[Beispiel zum Erstellen eines App-Pakets](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/AppxPackingCreateAppx)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Iappxpackagewriter**](/windows/desktop/api/AppxPackaging/nn-appxpackaging-iappxpackagewriter)
+[**IAppxPackageWriter**](/windows/desktop/api/AppxPackaging/nn-appxpackaging-iappxpackagewriter)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

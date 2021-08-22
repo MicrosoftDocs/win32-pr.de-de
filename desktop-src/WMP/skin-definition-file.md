@@ -1,36 +1,36 @@
 ---
-title: Skin-Definitionsdatei
-description: Skin-Definitionsdatei
+title: Skindefinitionsdatei
+description: Skindefinitionsdatei
 ms.assetid: ed5f7c61-c830-4075-a79f-d5539454bd3b
 keywords:
-- Windows Media Player Skins, Skin-Definitions Dateien
-- Skins, Skin-Definitions Dateien
-- Dateien für Skins, Skin-Definition
-- Skin-Definitions Dateien, Informationen zu
+- Windows Media Player Skins, Skindefinitionsdateien
+- Skins, Skindefinitionsdateien
+- Dateien für Skins,Skindefinition
+- Skindefinitionsdateien,Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2bd06708a99a15dc9a8266278850c0507007f058
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a7bf162870596968872c4f146772c9e62277f5b2ccb660270794248786a71355
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995240"
 ---
-# <a name="skin-definition-file"></a>Skin-Definitionsdatei
+# <a name="skin-definition-file"></a>Skindefinitionsdatei
 
-Skin-Definitions Dateien enthalten die grundlegenden Anweisungen, wie die Skin funktioniert und welche anderen von der Skin verwendeten Dateien gefunden werden können. Es kann nur eine Skin-Definitionsdatei für einen Skin vorhanden sein, die die Dateinamenerweiterung. WMS enthält.
+Skindefinitionsdateien enthalten die grundlegenden Anweisungen dazu, was die Skin macht und wo andere dateien gefunden werden können, die vom Skin verwendet werden. Es kann nur eine Skindefinitionsdatei für eine Skin geben, und sie hat die Dateinamenerweiterung .wms.
 
-Die Anweisungen in der Skin-Definitionsdatei werden in Extensible Markup Language (XML) geschrieben, die HTML ähnelt. Wenn Sie zum Erstellen von Webseiten HTML verwendet haben, werden Sie feststellen, dass XML vertraut ist.
+Die Anweisungen in der Skindefinitionsdatei sind in Extensible Markup Language (XML) geschrieben, was HTML ähnelt. Wenn Sie HTML zum Erstellen von Webseiten verwendet haben, werden Sie feststellen, dass XML vertraut aussieht.
 
-Der XML-Code in der Skin-Definitionsdatei verwendet einen Satz von speziellen Element Tags, um Teile der Skin-Benutzeroberfläche zu definieren. Beispielsweise definiert das [Button](button-element.md) -Element, wie sich eine Schaltfläche verhält, wo Sie angezeigt wird und wie Sie aussehen soll.
+Der XML-Code in der Skindefinitionsdatei verwendet einen Satz spezieller Elementtags, um Teile der Skin-Benutzeroberfläche zu definieren. Das [BUTTON-Element](button-element.md) definiert beispielsweise, wie sich eine Schaltfläche verhält, wohin sie wechseln wird und wie sie aussieht.
 
-Jedes Elementtag weist bestimmte Attribute auf. Beispielsweise verfügt das [Button](button-element.md) -Element über ein **Image** -Attribut, das definiert, wo das Bild für die Schaltfläche gefunden werden kann. Dies ähnelt HTML, wobei das Body-Element über ein **BgColor** -Attribut verfügt, das die Hintergrundfarbe der HTML-Seite definiert. Ausführliche Informationen zu allen Skin-Elementen und deren Attributen finden Sie im Abschnitt zur Design- [Programmier Referenz](skin-programming-reference.md) .
+Jedes Elementtag verfügt über bestimmte Attribute. Das [BUTTON-Element](button-element.md) verfügt beispielsweise über ein Bildattribut, das definiert, wo sich das Bild für die Schaltfläche befindet.  Dies ähnelt HTML, wobei das BODY-Element über ein **bgcolor-Attribut** verfügt, das die Hintergrundfarbe der HTML-Seite definiert. Ausführliche Informationen zu allen Skinelementen und ihren Attributen finden Sie im Abschnitt Skin Programming Reference (Referenz zur [Skinprogrammierung).](skin-programming-reference.md)
 
-XML hat einige einfache Regeln, die Sie zum Erstellen von Skins kennen müssen. Im Gegensatz zu HTML erfordert XML, dass Sie die Regeln genau befolgen.
+XML verfügt über einige einfache Regeln, die Sie kennen müssen, um Skins zu erstellen. Im Gegensatz zu HTML erfordert XML, dass Sie die Regeln genau befolgen.
 
 ## <a name="enclose-elements-with-angle-brackets"></a>Einschließen von Elementen mit spitzen Klammern
 
-Alle Elemente werden in spitzen Klammern eingeschlossen. Beispielsweise ist das **Button** -Element wie folgt typisiert:
+Alle Elemente werden in spitzen Klammern eingeschlossen. Beispielsweise wird das **BUTTON-Element** wie folgt eingegeben:
 
 
 ```C++
@@ -40,11 +40,11 @@ Alle Elemente werden in spitzen Klammern eingeschlossen. Beispielsweise ist das 
 
 
 
-Sie müssen das Wort "Button" nicht in Großbuchstaben eingeben, aber die Konvention zum Eingeben von Elementnamen in Großbuchstaben wird im Beispielcode dieses SDK verwendet.
+Sie müssen das Wort "BUTTON" nicht in Großbuchstaben eingeben, aber die Konvention der Eingabe von Elementnamen in Großbuchstaben wird im Beispielcode dieses SDK verwendet.
 
-## <a name="put-attributes-before-the-closing-bracket"></a>Attribute vor der schließenden Klammer platzieren
+## <a name="put-attributes-before-the-closing-bracket"></a>Attribute vor der schließenden Klammer setzen
 
-Alle Attribute für ein bestimmtes Element müssen vor der schließenden Spitze Klammer eingeschlossen werden. Ein Attribut besteht aus dem Attributnamen, gefolgt von einem Gleichheitszeichen (=) und dem Wert des Attributs in Anführungszeichen.
+Alle Attribute für ein bestimmtes Element müssen vor der schließenden spitzen Klammer eingeschlossen werden. Ein Attribut besteht aus dem Attributnamen gefolgt von einem Gleichheitszeichen (=) und dem Wert des Attributs in Anführungszeichen.
 
 
 ```C++
@@ -54,11 +54,11 @@ Alle Attribute für ein bestimmtes Element müssen vor der schließenden Spitze 
 
 
 
-Sie müssen das Wort "Image" nicht in Kleinbuchstaben eingeben, aber die Konvention der Typisierung von Attributnamen in Kleinbuchstaben wird im Beispielcode dieses SDK verwendet. Beachten Sie außerdem, dass der Wert des-Attributs in Anführungszeichen eingeschlossen ist.
+Sie müssen das Wort "image" nicht in Kleinbuchstaben eingeben, aber die Konvention der Eingabe von Attributnamen in Kleinbuchstaben wird im Beispielcode dieses SDK verwendet. Beachten Sie auch, dass der Wert des Attributs in Anführungszeichen eingeschlossen ist.
 
-## <a name="opening-and-closing-elements"></a>Öffnende und schließende Elemente
+## <a name="opening-and-closing-elements"></a>Öffnen und Schließen von Elementen
 
-Einige Elemente werden in einem anderen Element gruppiert. Beispielsweise ist das **ButtonGroup** -Element nicht sehr sinnvoll, es sei denn, Sie verwenden ein oder mehrere **ButtonElement** -Elemente. Um die Gruppierung klar zu machen, müssen Sie für jedes Element über ein öffnendes und ein Schließ Endes Tag verfügen. Das öffnende Tag ist nur der Elementname und alle zugehörigen Attribute in spitzen Klammern. Das schließende Tag ist der Elementname, dem ein Schrägstrich (/) vorangestellt und dann durch spitzen Klammern eingeschlossen wird. Beispielsweise sieht das öffnende Tag des **ButtonGroup** -Elements wie folgt aus:
+Einige Elemente werden in einem anderen Element gruppiert. Beispielsweise ist das **BUTTONGROUP-Element** nur sinnvoll, wenn Sie mindestens ein **BUTTONELEMENT-Element** damit verwenden. Um die Gruppierung zu deaktivieren, benötigen Sie ein öffnendes und schließendes Tag für jedes Element. Das öffnende Tag ist nur der Elementname und alle zugehörigen Attribute, die von spitzen Klammern umgeben sind. Das schließende Tag ist der Elementname, dem ein Schrägstrich (/) vorangestellt und dann in spitzen Klammern eingeschlossen wird. Das Öffnen des **BUTTONGROUP-Elements** sieht z. B. wie folgt aus:
 
 
 ```C++
@@ -68,7 +68,7 @@ Einige Elemente werden in einem anderen Element gruppiert. Beispielsweise ist da
 
 
 
-Das schließende **ButtonGroup** -Tag sieht wie folgt aus:
+Das schließende **BUTTONGROUP-Tag** sieht wie folgt aus:
 
 
 ```C++
@@ -78,7 +78,7 @@ Das schließende **ButtonGroup** -Tag sieht wie folgt aus:
 
 
 
-Sie würden die **ButtonElement** -Tags zwischen den öffnenden und schließenden **ButtonGroup** -Element Tags platzieren. Beispiel:
+Sie würden die **BUTTONELEMENT-Tags** zwischen den öffnenden und schließenden **BUTTONGROUP-Elementtags** setzen. Beispiel:
 
 
 ```C++
@@ -94,9 +94,9 @@ Sie würden die **ButtonElement** -Tags zwischen den öffnenden und schließende
 
 ## <a name="closing-off-elements"></a>Schließen von Elementen
 
-Wenn ein Element keine anderen Elemente enthält, müssen Sie einen Schrägstrich am Ende des Element namens direkt vor der schließenden Spitze Klammer platzieren. Im obigen Code hat jedes **ButtonElement** -Element z. b. einen Schrägstrich, um anzugeben, dass keine anderen Elemente geschachtelt sind.
+Wenn ein Element keine anderen Elemente enthält, müssen Sie einen Schrägstrich am Ende des Elementnamens direkt vor der schließenden spitzen Klammer setzen. Im obigen Code weist jedes **BUTTONELEMENT-Element** beispielsweise einen Schrägstrich auf, um anzugeben, dass keine anderen Elemente darin geschachtelt sind.
 
-Mit anderen Worten, Sie müssen entweder ein Schließ Endes Elementtag haben oder das Element mit einem Schrägstrich schließen.
+Anders ausgedrückt: Sie müssen entweder über ein schließende Elementtag verfügen oder Ihr Element mit einem Schrägstrich schließen.
 
 Dies ist richtig:
 
@@ -111,7 +111,7 @@ Dies ist richtig:
 
 
 
-Dies ist nicht korrekt:
+Dies ist nicht richtig:
 
 
 ```C++
@@ -124,7 +124,7 @@ Dies ist nicht korrekt:
 
 
 
-Dies ist auch nicht korrekt:
+Dies ist auch nicht richtig:
 
 
 ```C++
@@ -137,20 +137,20 @@ Dies ist auch nicht korrekt:
 
 
 
-Der folgende Abschnitt enthält weitere Informationen zu Skin-Definitions Dateien:
+Der folgende Abschnitt enthält weitere Informationen zu Skindefinitionsdateien:
 
--   [Struktur der Skin-Definitionsdatei](skin-definition-file-structure.md)
+-   [Struktur der Skindefinitionsdatei](skin-definition-file-structure.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Skin-Dateien**](skin-files.md)
+[**Skindateien**](skin-files.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

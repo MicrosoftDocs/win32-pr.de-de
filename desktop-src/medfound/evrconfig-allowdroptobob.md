@@ -1,19 +1,19 @@
 ---
-description: Ermöglicht dem erweiterten Videorenderer (EVR), die Leistung mithilfe von Bob Deinterlacing zu verbessern.
+description: Ermöglicht es dem Enhanced Video Renderer (EVR), die Leistung mithilfe von Bob-Deinterlacing zu verbessern.
 ms.assetid: e145e862-b987-4962-a94b-f8370bbcd5ac
-title: EVRConfig_AllowDropToBob-Attribut (UUIDs. h)
+title: EVRConfig_AllowDropToBob -Attribut (Uuids.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3940edd0945999f7300060d963806e3572a5d0fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0dea0dc405f746ad6bbcd37e5bf5428e1f50b5e32049e10c71a196b461f03f62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974479"
 ---
-# <a name="evrconfig_allowdroptobob-attribute"></a>Evrconfig \_ allowdroptybob-Attribut
+# <a name="evrconfig_allowdroptobob-attribute"></a>\_EVRConfig-Attribut "AllowDropToBob"
 
-Ermöglicht dem erweiterten Videorenderer (EVR), die Leistung mithilfe von Bob Deinterlacing zu verbessern.
+Ermöglicht es dem Enhanced Video Renderer (EVR), die Leistung mithilfe von Bob-Deinterlacing zu verbessern.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,17 +21,17 @@ Ermöglicht dem erweiterten Videorenderer (EVR), die Leistung mithilfe von Bob D
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut kann für die evrmedia-Senke festgelegt werden. Um das Attribut festzulegen, wird **QueryInterface** zum Abfragen der EVR-Medien Senke für die [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Schnittstelle festgelegt.
+Dieses Attribut kann für die EVRmedia-Senke festgelegt werden. Um das -Attribut fest zu legen, **queryInterface,** um die EVR-Mediensenke für die [**BENUTZEROBERFLÄCHEAttributes-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) abfragt.
 
-Das Festlegen dieses Attributs hat dieselbe Auswirkung wie das Festlegen des " **MF videomixprefs \_ allowdroptybob** "-Flags für den EVR. Eine Beschreibung dieses Flags finden Sie unter [**MF videomixprefs**](/windows/desktop/api/evr/ne-evr-mfvideomixprefs) .
+Das Festlegen dieses Attributs hat die gleiche Auswirkung wie das Festlegen des **MFVideoMixPrefs-Flags \_ AllowDropToBob** auf der EVR. Eine Beschreibung dieses Flags finden Sie unter [**MFVideoMixPrefs.**](/windows/desktop/api/evr/ne-evr-mfvideomixprefs)
 
-Die GUID-Konstante für dieses Attribut wird aus "straumiids. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus strmiids.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,23 +39,23 @@ Die GUID-Konstante für dieses Attribut wird aus "straumiids. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>UUIDs. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Uuids.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [EVR-Attribute](enhanced-video-renderer-attributes.md)
 </dt> <dt>
 
-[Video Qualitäts Verwaltung](video-quality-management.md)
+[VideoQualitätsverwaltung](video-quality-management.md)
 </dt> </dl>
 
  

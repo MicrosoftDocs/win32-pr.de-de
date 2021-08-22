@@ -1,13 +1,13 @@
 ---
-title: Windows Media-Wiedergabelisten
-description: Windows Media-Wiedergabelisten
+title: Windows Medienwiedergabelisten
+description: Windows Medienwiedergabelisten
 ms.assetid: 70df7021-d08f-4c26-a9f9-bb44b4999d35
 keywords:
-- Windows Media-Wiedergabelisten (WPL)
-- WPL (Windows Media-Wiedergabelisten)
-- Windows Media, Windows Media-Wiedergabelisten (WPL)
-- Wiedergabelisten, Windows Media-Wiedergabelisten (WPL)
-- Referenz für Windows Media-Wiedergabelisten
+- Windows Medienwiedergabelisten (WPL)
+- WPL (Windows Medienwiedergabelisten)
+- Windows Medien-, Windows Medienwiedergabelisten (WPL)
+- Wiedergabelisten,Windows Medienwiedergabelisten (WPL)
+- Referenz für Windows Medienwiedergabelisten
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: ee21e07c91945063ee610990419e53236534e105
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 304621d97eea67834747d28bb92b00b6ba4022a36465202428c1e53903f72c37
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388383"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053838"
 ---
-# <a name="windows-media-playlists"></a>Windows Media-Wiedergabelisten
+# <a name="windows-media-playlists"></a>Windows Medienwiedergabelisten
 
-Dieser Verweis dokumentiert Windows Media-Wiedergabelisten. Eine Windows Media-Wiedergabeliste (WPL) ist eine Datei, in der die in diesem Verweis dokumentierten Elemente verwendet werden, um entweder eine dynamische "intelligente" Wiedergabeliste von Medien Elementen oder einen statischen Satz von Medien Elementen zu definieren.
+Diese Referenz dokumentiert Windows Medienwiedergabelisten. Eine Windows Media Playlist (WPL) ist eine Datei, die die in diesem Verweis dokumentierten Elemente verwendet, um entweder eine dynamische "intelligente" Wiedergabeliste von Medienelementen oder einen statischen Satz von Medienelementen zu definieren.
 
 Diese Referenz umfasst folgende Abschnitte:
 
@@ -32,22 +32,22 @@ Diese Referenz umfasst folgende Abschnitte:
 
 | `Section`                                                                                    | BESCHREIBUNG                                                                                                            |
 |--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [Referenz zu Windows Media-Wiedergabelisten Elementen](windows-media-playlist-elements-reference.md) | Erläutert ausführlich die einzelnen Wiedergabelisten Elemente, ihre Attribute und Werte sowie spezielle, im Zusammenhang stehende Bedingungen. |
+| [Windows Referenz zu Medienwiedergabelistenelementen](windows-media-playlist-elements-reference.md) | Erläutert ausführlich die einzelnen Wiedergabelistenelemente, ihre Attribute und Werte sowie spezielle Bedingungen, die sich auf die einzelnen Elemente bezieht. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Windows Media Player SDK**](windows-media-player-sdk.md)
+[**Windows Media Player Sdk**](windows-media-player-sdk.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

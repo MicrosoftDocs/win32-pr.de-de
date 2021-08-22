@@ -1,7 +1,7 @@
 ---
-description: Virtualdesktopmanager implementiert die ivirtualdesktopmanager-Schnittstelle.
+description: VirtualDesktopManager implementiert die IVirtualDesktopManager-Schnittstelle.
 ms.assetid: 25e6c583-b91f-4eeb-90fb-34a7ebed7495
-title: Virtualdesktopmanager-Klasse (shobjidl. h)
+title: VirtualDesktopManager-Klasse (Shobjidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,38 +11,38 @@ api_name:
 - VirtualDesktopManager
 api_type:
 - COM
-ms.openlocfilehash: 9f08a4c6b565a733593ba8b9972ce3de36907ce6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 52becd94c0426c19d6a53658e2eef43c8d1f2396f1974cf5107f695c4e1734f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959680"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118967789"
 ---
-# <a name="virtualdesktopmanager-class"></a>Virtualdesktopmanager-Klasse
+# <a name="virtualdesktopmanager-class"></a>VirtualDesktopManager-Klasse
 
-**Virtualdesktopmanager** implementiert die [**ivirtualdesktopmanager**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ivirtualdesktopmanager) -Schnittstelle.
+**VirtualDesktopManager** implementiert die [**IVirtualDesktopManager-Schnittstelle.**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ivirtualdesktopmanager)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Schnittstelle, um mit den virtuellen Desktops zu interagieren und zu steuern, wo Programmfenster gestartet werden. Weitere Informationen finden Sie unter [**ivirtualdesktopmanager**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ivirtualdesktopmanager).
+Verwenden Sie diese Schnittstelle, um mit den virtuellen Desktops zu interagieren und zu steuern, wo Programmfenster gestartet werden. Weitere Informationen finden Sie unter [**IVirtualDesktopManager.**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ivirtualdesktopmanager)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Shobjidl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Shobjidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Ivirtualdesktopmanager**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ivirtualdesktopmanager)
+[**IVirtualDesktopManager**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ivirtualdesktopmanager)
 </dt> </dl>
 
  

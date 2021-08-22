@@ -1,9 +1,9 @@
 ---
-title: Komplexer localizationtype-Typ
-description: Definiert eine Gruppe lokalisierter Ressourcen, auf die im Manifest verwiesen wird. | Komplexer localizationtype-Typ
+title: LocalizationType Complex Type
+description: Definiert eine Gruppe lokalisierter Ressourcen, auf die Sie im Manifest verweisen. | LocalizationType Complex Type
 ms.assetid: fecab4e0-7136-4b13-8c24-bebbad0812e6
 keywords:
-- EventLog-Typ des komplexen lokalisierationstyp
+- LocalizationType complex type EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cbb6911ea606ea30d8e656f20b4c566d4f6d0e08
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 09a596ff981944943c193fb158f14aa04eafb0b0b3d4df660d2034c5b5d281be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106370370"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055948"
 ---
-# <a name="localizationtype-complex-type"></a>Komplexer localizationtype-Typ
+# <a name="localizationtype-complex-type"></a>LocalizationType Complex Type
 
-Definiert eine Gruppe lokalisierter Ressourcen, auf die im Manifest verwiesen wird.
+Definiert eine Gruppe lokalisierter Ressourcen, auf die Sie im Manifest verweisen.
 
 ``` syntax
 <xs:complexType name="LocalizationType">
@@ -72,10 +72,10 @@ Definiert eine Gruppe lokalisierter Ressourcen, auf die im Manifest verwiesen wi
 
 
 
-| Element                                                                         | type                                                                       | BESCHREIBUNG                                                                                                         |
+| Element                                                                         | Typ                                                                       | Beschreibung                                                                                                         |
 |---------------------------------------------------------------------------------|----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| [**verfügt**](eventmanifestschema-resources-localizationtype-element.md)     |                                                                            | Definiert eine Gruppe von Zeichen folgen Tabellen, die die lokalisierten Zeichen folgen enthalten, auf die im Manifest verwiesen wird.<br/> |
-| [**STRINGTABLE**](eventmanifestschema-stringtable-localizationtype-element.md) | [**Stringtabletype**](eventmanifestschema-stringtabletype-complextype.md) | Definiert eine Liste lokalisierter Zeichen folgen, auf die Sie im Manifest verweisen können.<br/>                             |
+| [**Ressourcen**](eventmanifestschema-resources-localizationtype-element.md)     |                                                                            | Definiert eine Gruppe von Zeichenfolgentabellen, die die lokalisierten Zeichenfolgen enthalten, auf die Sie im Manifest verweisen.<br/> |
+| [**Stringtable**](eventmanifestschema-stringtable-localizationtype-element.md) | [**StringTableType**](eventmanifestschema-stringtabletype-complextype.md) | Definiert eine Liste lokalisierter Zeichenfolgen, auf die Sie im Manifest verweisen können.<br/>                             |
 
 
 
@@ -83,10 +83,10 @@ Definiert eine Gruppe lokalisierter Ressourcen, auf die im Manifest verwiesen wi
 
 
 
-| Name            | type   | BESCHREIBUNG                                                                                                                                            |
+| Name            | Typ   | Beschreibung                                                                                                                                            |
 |-----------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| culture         | Zeichenfolge | Ein Sprachen Name, der die Kultur der lokalisierten Zeichen folgen in der Zeichen folgen Tabelle angibt. Beispiel: "en-US" für Englisch (USA).<br/> |
-| fallbackCulture | Zeichenfolge | Nicht verwendet.<br/>                                                                                                                                   |
+| Kultur         | Zeichenfolge | Ein Sprachname, der die Kultur der lokalisierten Zeichenfolgen in der Zeichenfolgentabelle identifiziert. Beispiel: "en-US" für Englisch (USA).<br/> |
+| fallbackCulture | Zeichenfolge | Wird nicht verwendet.<br/>                                                                                                                                   |
 
 
 
@@ -96,8 +96,8 @@ Definiert eine Gruppe lokalisierter Ressourcen, auf die im Manifest verwiesen wi
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

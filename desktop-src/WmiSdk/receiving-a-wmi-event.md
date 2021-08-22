@@ -1,5 +1,5 @@
 ---
-description: WMI enthält eine Ereignis Infrastruktur, die Benachrichtigungen zu Änderungen in WMI-Daten und-Diensten erzeugt. WMI-Ereignis Klassen stellen Benachrichtigungen bereit, wenn bestimmte Ereignisse auftreten.
+description: WMI enthält eine Ereignisinfrastruktur, die Benachrichtigungen über Änderungen an WMI-Daten und -Diensten erzeugt. WMI-Ereignisklassen bieten Benachrichtigungen, wenn bestimmte Ereignisse auftreten.
 ms.assetid: 347808a7-0f7b-4687-93f4-bea55c96795a
 ms.tgt_platform: multiple
 title: Empfangen eines WMI-Ereignisses
@@ -10,35 +10,35 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 255f54f78bb64659d1cd07eddb72eae55b0263c5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5dac8aba93cc841211cbdc02bc5e75773ab444eaa2763c4b0367fbd36ada37b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992590"
 ---
 # <a name="receiving-a-wmi-event"></a>Empfangen eines WMI-Ereignisses
 
-WMI enthält eine Ereignis Infrastruktur, die Benachrichtigungen zu Änderungen in WMI-Daten und-Diensten erzeugt. WMI- [*Ereignis Klassen*](gloss-e.md) stellen Benachrichtigungen bereit, wenn bestimmte Ereignisse auftreten.
+WMI enthält eine Ereignisinfrastruktur, die Benachrichtigungen über Änderungen an WMI-Daten und -Diensten erzeugt. [*WMI-Ereignisklassen bieten*](gloss-e.md) Benachrichtigungen, wenn bestimmte Ereignisse auftreten.
 
 In diesem Thema werden die folgenden Abschnitte erläutert:
 
--   [Ereignis Abfragen](#event-queries)
+-   [Ereignisabfragen](#event-queries)
 -   [Beispiel](#example)
--   [Ereignisconsumer](#event-consumers)
+-   [Ereignisverbraucher](#event-consumers)
 -   [Bereitstellen von Ereignissen](#providing-events)
--   [Abonnement Kontingente](#subscription-quotas)
+-   [Abonnementkontingente](#subscription-quotas)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="event-queries"></a>Ereignis Abfragen
+## <a name="event-queries"></a>Ereignisabfragen
 
-Sie können eine [semisynchrone](receiving-synchronous-and-semisynchronous-event-notifications.md) oder [**asynchrone**](receiving-asynchronous-event-notifications.md) Abfrage erstellen, um Änderungen an Ereignisprotokollen, Prozesserstellung, Dienststatus, Computer Verfügbarkeit oder freiem Speicherplatz auf dem Datenträger sowie andere Entitäten oder Ereignisse zu überwachen. Bei der Skripterstellung wird die [**SWbemServices.Execnotificationquery**](swbemservices-execnotificationquery.md) -Methode verwendet, um Ereignisse zu abonnieren. In C++ wird [**IWbemServices:: ExecNotificationQuery**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationquery) verwendet. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+Sie können eine [semisynchrone](receiving-synchronous-and-semisynchronous-event-notifications.md) oder asynchrone Abfrage erstellen, um Änderungen an Ereignisprotokollen, der Prozesserstellung, dem Dienststatus, der Computerverfügbarkeit oder dem freien Speicherplatz auf dem Datenträger sowie an anderen Entitäten oder Ereignissen zu überwachen. [](receiving-asynchronous-event-notifications.md) Bei der Skripterstellung wird [**dieSWbemServices.ExecNotificationQuery-Methode**](swbemservices-execnotificationquery.md) verwendet, um Ereignisse zu abonnieren. In C++ wird [**IWbemServices::ExecNotificationQuery**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationquery) verwendet. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
-Eine Benachrichtigung über eine Änderung im standardmäßigen WMI-Datenmodell wird als System internes [*Ereignis*](gloss-i.md)bezeichnet. [**\_ \_ Instancecreationevent**](--instancecreationevent.md) oder [**\_ \_ namespacedeletionevent**](--namespacedeletionevent.md) sind Beispiele für systeminterne Ereignisse. Eine Benachrichtigung über eine Änderung, die ein Anbieter zum Definieren eines Anbieter Ereignisses vornimmt, wird als [*System externe-Ereignis*](gloss-e.md)bezeichnet. Beispielsweise definieren der [System Registrierungs Anbieter](/previous-versions/windows/desktop/regprov/system-registry-provider), der [Energie Verwaltungs Ereignis Anbieter](/windows/desktop/CIMWin32Prov/power-management-event-provider)und der [Win32-Anbieter](/windows/desktop/CIMWin32Prov/win32-provider) ihre eigenen Ereignisse. Weitere Informationen finden Sie unter [bestimmen des empfangenden Ereignis Typs](determining-the-type-of-event-to-receive.md).
+Die Benachrichtigung über eine Änderung im WMI-Standarddatenmodell wird als [*systeminternes Ereignis bezeichnet.*](gloss-i.md) [**\_ \_ InstanceCreationEvent oder**](--instancecreationevent.md) [**\_ \_ NamespaceDeletionEvent sind**](--namespacedeletionevent.md) Beispiele für systeminterne Ereignisse. Die Benachrichtigung über eine Änderung, die ein Anbieter zum Definieren eines Anbieterereignis vor sich geht, wird als [*extrinsisches Ereignis bezeichnet.*](gloss-e.md) Beispielsweise definieren der [Systemregistrierungsanbieter,](/previous-versions/windows/desktop/regprov/system-registry-provider) [der Energieverwaltungsereignisanbieter](/windows/desktop/CIMWin32Prov/power-management-event-provider)und der [Win32-Anbieter](/windows/desktop/CIMWin32Prov/win32-provider) eigene Ereignisse. Weitere Informationen finden Sie unter [Bestimmen des Ereignistyps, der empfangen werden soll.](determining-the-type-of-event-to-receive.md)
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Skriptcode Beispiel ist eine Abfrage für das intrinsische [**\_ \_ instancecreationevent**](--instancecreationevent.md) der Ereignisklasse [**Win32 \_ ntlogevent**](/previous-versions/windows/desktop/eventlogprov/win32-ntlogevent). Sie können dieses Programm im Hintergrund ausführen, und wenn ein Ereignis vorliegt, wird eine Meldung angezeigt. Wenn Sie das Dialogfeld **warten auf Ereignisse** schließen, hält das Programm nicht mehr auf Ereignisse. Beachten Sie, dass **SeSecurityPrivilege** aktiviert werden muss.
+Das folgende Skriptcodebeispiel ist eine Abfrage für das [**\_ \_ systeminterne InstanceCreationEvent**](--instancecreationevent.md) der [**Ereignisklasse Win32 \_ NTLogEvent**](/previous-versions/windows/desktop/eventlogprov/win32-ntlogevent). Sie können dieses Programm im Hintergrund ausführen, und wenn ein Ereignis auftritt, wird eine Meldung angezeigt. Wenn Sie das Dialogfeld **Warten auf Ereignisse** schließen, wartet das Programm nicht mehr auf Ereignisse. Beachten Sie, dass **SeSecurityPrivilege** aktiviert sein muss.
 
 
 ```VB
@@ -82,7 +82,7 @@ Register-WmiEvent -Source Demo1 -Query $query -Action {
 
 
 
-Das folgende VBScript-Codebeispiel zeigt das System externe-Ereignis [ \_ \_ RegistryValueChangeEvent](registering-for-system-registry-events.md) , das der Registrierungs Anbieter definiert. Das Skript erstellt einen temporären Consumer mithilfe des Aufrufes [**SWbemServices.Execnotificationqueryasync**](swbemservices-execnotificationqueryasync.md)und empfängt nur Ereignisse, wenn das Skript ausgeführt wird. Das folgende Skript wird unbegrenzt ausgeführt, bis der Computer neu gestartet, WMI beendet oder das Skript beendet wird. Um das Skript manuell anzuhalten, verwenden Sie den Task-Manager, um den Prozess zu unterbinden. Verwenden Sie zum programmgesteuerten beenden die Methode " [**Beenden**](/windows/desktop/CIMWin32Prov/terminate-method-in-class-win32-process) " in der Win32- \_ Prozess Klasse. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen](setting-security-on-an-asynchronous-call.md)-Befehl.
+Das folgende VBScript-Codebeispiel zeigt das vom Registrierungsanbieter definierte extrinsische Ereignis [ \_ \_ RegistryValueChangeEvent.](registering-for-system-registry-events.md) Das Skript erstellt einen temporären Consumer mithilfe des Aufrufs von [**SWbemServices.ExecNotificationQueryAsync**](swbemservices-execnotificationqueryasync.md)und empfängt Nur-Ereignisse, wenn das Skript ausgeführt wird. Das folgende Skript wird unbegrenzt ausgeführt, bis der Computer neu gestartet, WMI beendet oder das Skript beendet wird. Um das Skript manuell zu beenden, verwenden Sie Task-Manager, um den Prozess zu beenden. Verwenden Sie zum programmgesteuerten Beenden die [**Terminate-Methode**](/windows/desktop/CIMWin32Prov/terminate-method-in-class-win32-process) in der Win32 \_ Process-Klasse. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen Aufruf](setting-security-on-an-asynchronous-call.md)von .
 
 
 ```VB
@@ -119,55 +119,55 @@ End Sub
 
 ## <a name="event-consumers"></a>Ereignisconsumer
 
-Beim Ausführen eines Skripts oder einer Anwendung können Ereignisse mithilfe der folgenden Verbraucher überwacht oder genutzt werden:
+Sie können Ereignisse mithilfe der folgenden Benutzer überwachen oder nutzen, während ein Skript oder eine Anwendung ausgeführt wird:
 
--   Temporäre Ereignisconsumer
+-   Temporäre Ereignisverbraucher
 
-    Ein [*temporärer Consumer*](gloss-t.md) ist eine WMI-Client Anwendung, die ein WMI-Ereignis empfängt. WMI enthält eine eindeutige Schnittstelle, die verwendet, um die Ereignisse anzugeben, die von WMI an eine Client Anwendung gesendet werden sollen. Ein temporärer Ereignisconsumer gilt als temporär, da er nur funktioniert, wenn er von einem Benutzer explizit geladen wird. Weitere Informationen finden Sie unter [empfangen von Ereignissen für die Dauer Ihrer Anwendung](receiving-events-for-the-duration-of-your-application.md).
+    Ein [*temporärer Consumer*](gloss-t.md) ist eine WMI-Clientanwendung, die ein WMI-Ereignis empfängt. WMI enthält eine eindeutige Schnittstelle, die verwendet, um die Ereignisse anzugeben, die WMI an eine Clientanwendung senden soll. Ein temporärer Ereignisverbraucher gilt als temporär, da er nur funktioniert, wenn er speziell von einem Benutzer geladen wird. Weitere Informationen finden Sie unter [Empfangen von Ereignissen für die Dauer Ihrer Anwendung.](receiving-events-for-the-duration-of-your-application.md)
 
--   Permanente Ereignisconsumer
+-   Permanente Ereignisverbraucher
 
-    Ein [*dauerhafter Consumer*](gloss-p.md) ist ein COM-Objekt, das jederzeit ein WMI-Ereignis empfangen kann. Ein dauerhafter Ereignisconsumer verwendet einen Satz von persistenten Objekten und Filtern, um ein WMI-Ereignis zu erfassen. Wie bei einem temporären Ereignisconsumer richten Sie eine Reihe von WMI-Objekten und filtern ein, die ein WMI-Ereignis erfassen. Wenn ein Ereignis auftritt, das einem Filter entspricht, lädt WMI den permanenten Ereignisconsumer und benachrichtigt ihn über das Ereignis. Da ein dauerhafter Consumer im WMI-Repository implementiert ist und eine ausführbare Datei ist, die in WMI registriert ist, wird der permanente Ereignisconsumer nach der Erstellung und auch nach einem Neustart des Betriebssystems, solange WMI ausgeführt wird, nach einem Neustart des Betriebssystems ausgeführt. Weitere Informationen finden Sie [unter empfangen von Ereignissen zu allen Zeit](receiving-events-at-all-times.md)Punkten.
+    Ein [*permanenter Consumer*](gloss-p.md) ist ein COM-Objekt, das jederzeit ein WMI-Ereignis empfangen kann. Ein permanenter Ereignisverbraucher verwendet einen Satz persistenter Objekte und Filter, um ein WMI-Ereignis zu erfassen. Wie ein temporärer Ereignisverbraucher richten Sie eine Reihe von WMI-Objekten und -Filtern ein, die ein WMI-Ereignis erfassen. Wenn ein Ereignis auftritt, das einem Filter entspricht, lädt WMI den permanenten Ereignisverbraucher und benachrichtigt ihn über das Ereignis. Da ein permanenter Consumer im WMI-Repository implementiert ist und eine ausführbare Datei ist, die in WMI registriert ist, arbeitet der permanente Ereignisverbraucher nach derEntstellung und auch nach einem Neustart des Betriebssystems, solange WMI ausgeführt wird, und empfängt Ereignisse. Weitere Informationen finden Sie unter [Empfangen von Ereignissen zu allen Zeiten.](receiving-events-at-all-times.md)
 
-Skripts oder Anwendungen, die Ereignisse empfangen, haben besondere Sicherheitsüberlegungen. Weitere Informationen finden Sie unter [Sichern von WMI-Ereignissen](securing-wmi-events.md).
+Skripts oder Anwendungen, die Ereignisse empfangen, haben besondere Sicherheitsüberlegungen. Weitere Informationen finden Sie unter [Sichern von WMI-Ereignissen.](securing-wmi-events.md)
 
-Eine Anwendung oder ein Skript kann einen integrierten WMI-Ereignis Anbieter verwenden, der [Standard Consumerklassen](standard-consumer-classes.md)bereitstellt. Jede Standard Consumerklasse antwortet auf ein Ereignis mit einer anderen Aktion, indem eine e-Mail-Nachricht gesendet oder ein Skript ausgeführt wird. Sie müssen keinen Anbieter Code schreiben, um eine Standard Consumerklasse zum Erstellen eines permanenten Ereignisconsumer zu verwenden. Weitere Informationen finden Sie unter über [wachen und reagieren auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern.
+Eine Anwendung oder ein Skript kann einen integrierten WMI-Ereignisanbieter verwenden, der [Standardverbraucherklassen an stellt.](standard-consumer-classes.md) Jede Standard-Consumerklasse antwortet auf ein Ereignis mit einer anderen Aktion, indem eine E-Mail-Nachricht gesendet oder ein Skript ausgeführt wird. Sie müssen keinen Anbietercode schreiben, um eine Standard-Consumerklasse zum Erstellen eines permanenten Ereignisverbraucher zu verwenden. Weitere Informationen finden Sie unter [Überwachen und Reagieren auf Ereignisse mit Standardverbrauchern.](monitoring-and-responding-to-events-with-standard-consumers.md)
 
 ## <a name="providing-events"></a>Bereitstellen von Ereignissen
 
-Ein Ereignis Anbieter ist eine COM-Komponente, die ein Ereignis an WMI sendet. Sie können einen Ereignis Anbieter erstellen, um ein Ereignis in einer C++-oder c#-Anwendung zu senden. Die meisten Ereignis Anbieter verwalten ein Objekt für WMI, z. b. eine Anwendung oder ein Hardware Element. Weitere Informationen finden Sie unter [Schreiben eines Ereignis Anbieters](writing-an-event-provider.md).
+Ein Ereignisanbieter ist eine COM-Komponente, die ein Ereignis an WMI sendet. Sie können einen Ereignisanbieter erstellen, um ein Ereignis in einer C++- oder C#-Anwendung zu senden. Die meisten Ereignisanbieter verwalten ein Objekt für WMI, z. B. eine Anwendung oder ein Hardwareelement. Weitere Informationen finden Sie unter [Schreiben eines Ereignisanbieters.](writing-an-event-provider.md)
 
-Ein zeitgesteuertes oder sich wiederholendes Ereignis ist ein Ereignis, das zu einem bestimmten Zeitpunkt auftritt.
+Ein Zeit- oder Wiederholungsereignis ist ein Ereignis, das zu einem vordefinierten Zeitpunkt auftritt.
 
-WMI bietet die folgenden Möglichkeiten, um zeitgesteuerte oder sich wiederholende Ereignisse für Ihre Anwendungen zu erstellen:
+WMI bietet die folgenden Möglichkeiten zum Erstellen von Zeit- oder Wiederholungsereignissen für Ihre Anwendungen:
 
--   Die standardmäßige Microsoft-Ereignis Infrastruktur.
--   Eine spezialisierte Timer-Klasse.
+-   Die standardmäßige Microsoft-Ereignisinfrastruktur.
+-   Eine spezialisierte Timerklasse.
 
-Weitere Informationen finden Sie unter [empfangen eines zeitgesteuerten oder wiederholten Ereignisses](receiving-a-timed-or-repeating-event.md). Wenn Sie einen Ereignis Anbieter schreiben, sollten Sie die Sicherheitsinformationen beachten, die bei der [sicheren Bereitstellung von Ereignissen](providing-events-securely.md)identifiziert werden
+Weitere Informationen finden Sie unter [Empfangen eines Zeit- oder Wiederholungsereigniss.](receiving-a-timed-or-repeating-event.md) Berücksichtigen Sie beim Schreiben eines Ereignisanbieters die Sicherheitsinformationen, die unter [Sicheres Bereitstellen von Ereignissen identifiziert werden.](providing-events-securely.md)
 
-Es wird empfohlen, dass permanente Ereignis Abonnements in den Namespace des Stamm Abonnements kompiliert werden \\ \\ . Weitere Informationen finden Sie unter [Implementieren von Abonnements für permanente Namespace-Ereignisse](implementing-cross-namespace-permanent-event-subscriptions.md).
+Es wird empfohlen, permanente Ereignisabonnements in den \\ Stammabonnementnamespace \\ zu kompilieren. Weitere Informationen finden Sie unter [Implementing Cross-Namespace Permanent Event Subscriptions](implementing-cross-namespace-permanent-event-subscriptions.md).
 
-## <a name="subscription-quotas"></a>Abonnement Kontingente
+## <a name="subscription-quotas"></a>Abonnementkontingente
 
-Durch das Abrufen von Ereignissen kann die Leistung für Anbieter beeinträchtigt werden, die Abfragen für große Datasets unterstützen. Außerdem kann jeder Benutzer, der über Lesezugriff auf einen Namespace mit dynamischen Anbietern verfügt, einen Denial-of-Service-Angriff (DOS) durchführen. WMI verwaltet Kontingente für alle Benutzer zusammen und für jeden Ereignisconsumer in der einzelnen Instanz von " [**\_ \_ arbiatorconfiguration**](--arbitratorconfiguration.md) ", die sich im Stamm \\ Namespace befindet. Diese Kontingente sind global und nicht für jeden Namespace. Die Kontingente können nicht geändert werden.
+Das Abfragen von Ereignissen kann die Leistung von Anbietern beeinträchtigen, die Abfragen für große Datensätze unterstützen. Darüber hinaus kann jeder Benutzer, der über Lesezugriff auf einen Namespace mit dynamischen Anbietern verfügt, einen Denial-of-Service-Angriff (DoS) ausführen. WMI verwaltet Kontingente für alle Kombinierten Benutzer und für jeden Ereignisverbraucher in der einzelnen Instanz von [**\_ \_ "Ungconfiguration"**](--arbitratorconfiguration.md) im \\ Stammnamespace. Diese Kontingente sind global und nicht für jeden Namespace. Sie können die Kontingente nicht ändern.
 
-WMI erzwingt derzeit Kontingente mithilfe der Eigenschaften von " [**\_ \_ arbiatorconfiguration**](--arbitratorconfiguration.md)". Jedes Kontingent verfügt über einen pro-Benutzer und eine Gesamt Version, die alle Benutzer kombiniert und nicht pro Namespace umfasst. In der folgenden Tabelle sind die Kontingente aufgelistet, die für die Eigenschaften von " **\_ \_ arbiatorconfiguration** " gelten.
+WMI erzwingt derzeit Kontingente mithilfe der Eigenschaften von [**\_ \_ "Configuration".**](--arbitratorconfiguration.md) Jedes Kontingent verfügt über eine pro Benutzer und eine Gesamtversion, die alle Benutzer kombiniert und nicht pro Namespace enthält. In der folgenden Tabelle sind die Kontingente aufgeführt, die für die **\_ \_ Eigenschaften von "Configuration" gelten.**
 
 
 
-| Gesamt/Benutzer                                                                   | Kontingent                                                                       |
+| Total/PerUser                                                                   | Kontingent                                                                       |
 |---------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| Temporaryabonnemenzstotal<br/> Temporaryabonnemenamtionsperuser<br/> | 10.000<br/> 1\.000<br/>                                          |
-| Permanent abonniert<br/> Permanentabonneptionsperuser<br/> | 10.000<br/> 1\.000<br/>                                          |
-| Pollinginstructionstotal<br/> Pollinginstructionsperuser<br/>       | 10.000<br/> 1\.000<br/>                                          |
-| Pollingmemorytotal<br/> Pollingmemoryperuser<br/>                   | 10 Millionen (0x989680) Bytes<br/> 5 Millionen (0x4cb40) Bytes<br/> |
+| TemporarySubscriptionsTotal<br/> TemporarySubscriptionsPerUser<br/> | 10.000<br/> 1\.000<br/>                                          |
+| PermanentSubscriptionsTotal<br/> PermanentSubscriptionsPerUser<br/> | 10.000<br/> 1\.000<br/>                                          |
+| PollingInstructionsTotal<br/> PollingInstructionsPerUser<br/>       | 10.000<br/> 1\.000<br/>                                          |
+| PollingMemoryTotal<br/> PollingMemoryPerUser<br/>                   | 10.000.000 (0x989680) Bytes<br/> 5.000.000 (0x4CB40) Bytes<br/> |
 
 
 
  
 
-Ein Administrator oder Benutzer mit **Vollständiger \_ Schreib** Berechtigung im-Namespace kann die Singleton-Instanz von " [**\_ \_ arbiatorconfiguration**](--arbitratorconfiguration.md)" ändern. WMI verfolgt das Kontingent pro Benutzer.
+Ein Administrator oder ein Benutzer mit **der BERECHTIGUNG FULL \_ WRITE** im -Namespace kann die Singletoninstanz von [**\_ \_ "Vorkonfigurierung" ändern.**](--arbitratorconfiguration.md) WMI verfolgt das Kontingent pro Benutzer nach.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,9 +1,9 @@
 ---
-title: Effects. effectcount
-description: Das effectcount-Attribut ruft die Anzahl der verfügbaren Visualisierungen ab.
+title: EFFECTS.effectCount
+description: Das attribut effectCount ruft die Anzahl der verfügbaren Visualisierungen ab.
 ms.assetid: 819499be-31aa-4f11-a616-95a378f2512d
 keywords:
-- Effekte. effectcount-Windows-Media Player
+- EFFECTS.effectCount Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6abcf7d13efb741e8d927bcc49324c6350efce02
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 730a877efa498beb8fd16fd08c7dfbdf0c337cf1520137d6654adf689e6aedb7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364612"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996690"
 ---
-# <a name="effectseffectcount"></a>Effects. effectcount
+# <a name="effectseffectcount"></a>EFFECTS.effectCount
 
-Das **effectcount** -Attribut ruft die Anzahl der verfügbaren Visualisierungen ab.
+Das **attribut effectCount** ruft die Anzahl der verfügbaren Visualisierungen ab.
 
 ``` syntax
         elementID.effectCount
@@ -29,7 +29,7 @@ Das **effectcount** -Attribut ruft die Anzahl der verfügbaren Visualisierungen 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long**).
+Dieses Attribut ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 <dl> <dt>
 
-[**Effects-Element**](effects-element.md)
+[**EFFECTS-Element**](effects-element.md)
 </dt> </dl>
 
  

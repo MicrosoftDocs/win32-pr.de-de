@@ -1,6 +1,6 @@
 ---
 title: MDM_DeviceStatus_UAC01-Klasse
-description: Die MDM \_ DeviceStatus \_ UAC01-Klasse wird vom Unternehmen verwendet, um den UAC-Status von Geräten mit ihren Unternehmensrichtlinien abzufragen.
+description: Die MDM \_ DeviceStatus UAC01-Klasse wird vom Unternehmen verwendet, um den UAC-Status von Geräten mit \_ ihren Unternehmensrichtlinien abfragt.
 ms.assetid: fb1ca1bb-229e-4eaa-a1e3-e790c1dab760
 keywords:
 - MDM_DeviceStatus_UAC01-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6eecba42cd97bee660f66570e7f96c1ab2799f85
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: afef2a4e4259c5c3fcaa6d988181d32951e39e527603e416a7961ee8b97e91a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077264"
 ---
 # <a name="mdm_devicestatus_uac01-class"></a>MDM \_ DeviceStatus \_ UAC01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ DeviceStatus \_ UAC01** -Klasse wird vom Unternehmen verwendet, um den UAC-Status von Geräten mit ihren Unternehmensrichtlinien abzufragen.
+Die **MDM \_ DeviceStatus \_ UAC01-Klasse** wird vom Unternehmen verwendet, um den UAC-Status von Geräten mit ihren Unternehmensrichtlinien abfragt.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,20 +46,20 @@ class MDM_DeviceStatus_UAC01
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ DeviceStatus \_ UAC01** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ DeviceStatus \_ UAC01-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ DeviceStatus \_ UAC01** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ DeviceStatus \_ UAC01-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -72,10 +72,10 @@ Knoten für die UAC-Abfrage.
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -105,10 +105,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die getwindowhdc-Methode ruft ein Handle für den Gerätekontext (DC) des Fensters ab.
+description: Die GetWindowHDC-Methode ruft ein Handle für den Gerätekontext des Fensters ab.
 ms.assetid: 35ee2a66-ee56-44dc-ad59-fd467bb4aa63
-title: Cbasewindow. getwindowhdc-Methode (winutil. h)
+title: CBaseWindow.GetWindowHDC-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 16c2502b3a9de587e91ff43ddc45a84ae08492db
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ff0129e63e9a0c9808e36d73e37ff0e76d712b64c18e1e37ef88105797e2b495
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358080"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074604"
 ---
-# <a name="cbasewindowgetwindowhdc-method"></a>Cbasewindow. getwindowhdc-Methode
+# <a name="cbasewindowgetwindowhdc-method"></a>CBaseWindow.GetWindowHDC-Methode
 
-Die- `GetWindowHDC` Methode ruft ein Handle für den Gerätekontext des Fensters ab.
+Die `GetWindowHDC` -Methode ruft ein Handle für den Gerätekontext (DC) des Fensters ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,16 +50,16 @@ Gibt ein Handle für den DC zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

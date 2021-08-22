@@ -1,19 +1,19 @@
 ---
-description: Der folgende Code veranschaulicht, wie Sie einen nicht ergänzten Symbolnamen mithilfe von undecoratesymbolname von einem Symbolnamen abrufen können.
+description: Der folgende Code veranschaulicht das Abrufen eines nicht korrigierten Symbolnamens aus einem Symbolnamen mit unDecorateSymbolName.
 ms.assetid: fcb0591a-dac3-45eb-b4c0-4a35c42450e5
-title: Abrufen von nicht ergänzten Symbol Namen
+title: Abrufen von nicht korrigierten Symbolnamen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 99b0f21c884a0a58f0546ef275f2f3096abe2c50
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: f18a1cbdf51c64134489850343b466e49d9867fab483699a719997c3be9b5798
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076344"
 ---
-# <a name="retrieving-undecorated-symbol-names"></a>Abrufen von nicht ergänzten Symbol Namen
+# <a name="retrieving-undecorated-symbol-names"></a>Abrufen von nicht korrigierten Symbolnamen
 
-Der folgende Code veranschaulicht, wie Sie einen nicht ergänzten Symbolnamen mithilfe von [**undecoratesymbolname**](/windows/desktop/api/Dbghelp/nf-dbghelp-undecoratesymbolname)von einem Symbolnamen abrufen können. Der ergänzte Name wird in gespeichert `szName` . Im Beispiel wird davon ausgegangen, dass Sie den Symbol Handler initialisiert haben, indem Sie den Code zum [Initialisieren des Symbol Handlers](initializing-the-symbol-handler.md)verwenden.
+Der folgende Code veranschaulicht, wie ein nicht korrigierter Symbolname mithilfe von [**UnDecorateSymbolName**](/windows/desktop/api/Dbghelp/nf-dbghelp-undecoratesymbolname)aus einem Symbolnamen abgerufen wird. Der ergänzte Name wird in `szName` gespeichert. Im Beispiel wird davon ausgegangen, dass Sie den Symbolhandler mithilfe des Codes in [Initialisieren des Symbolhandlers initialisiert](initializing-the-symbol-handler.md)haben.
 
 
 ```C++

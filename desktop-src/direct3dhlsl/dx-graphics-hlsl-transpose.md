@@ -1,9 +1,9 @@
 ---
-title: austauschen
-description: Vertauscht die angegebene Eingabe Matrix.
+title: Umsetzung
+description: Transponiert die angegebene Eingabematrix.
 ms.assetid: 2a2ff2fb-73f0-4bb8-af83-38fe0567d122
 keywords:
-- HLSL austauschen
+- Transponieren von HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 44f129a87edaff260de87136954be7598ee3acb6
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e6e545e657e6d9eaded92affba5bbb52a22222db2bf87acd5dddb72335a17ab0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119754"
 ---
-# <a name="transpose"></a>austauschen
+# <a name="transpose"></a>Umsetzung
 
-Vertauscht die angegebene Eingabe Matrix.
+Transponiert die angegebene Eingabematrix.
 
 
 
-| Ret-austauschen (*x*) |
+| ret transponieren(*x*) |
 |--------------------|
 
 
@@ -37,9 +37,9 @@ Vertauscht die angegebene Eingabe Matrix.
 
 
 
-| Element                                                   | BESCHREIBUNG                             |
+| Element                                                   | Beschreibung                             |
 |--------------------------------------------------------|-----------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[in \] der angegebenen Matrix.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Die angegebene Matrix.<br/> |
 
 
 
@@ -47,11 +47,11 @@ Vertauscht die angegebene Eingabe Matrix.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der übersetzte Wert des *x* -Parameters.
+Der transponierte Wert des *x-Parameters.*
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Dimensionen der Quell Matrix *Zeilen* *Spalten* sind, handelt es sich bei der resultierenden Matrix um *Spalten* *Zeilen*.
+Wenn die Dimensionen der Quellmatrix *Zeilenspalten* *sind,* ist die resultierende Matrix *Spaltenzeilen.* 
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -59,22 +59,22 @@ Wenn die Dimensionen der Quell Matrix *Zeilen* *Spalten* sind, handelt es sich b
 
 | Name | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                       | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                         | Size                                                                                   |
 |------|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| *x*  | [**Matrix**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types), [**int**](/windows/desktop/WinProg/windows-data-types), [**bool**](/windows/desktop/WinProg/windows-data-types) | any                                                                                    |
-| TZI  | [**Matrix**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types), [**int**](/windows/desktop/WinProg/windows-data-types), [**bool**](/windows/desktop/WinProg/windows-data-types) | Rows = gleiche Anzahl von Spalten wie Eingabe *x*, Spalten = gleiche Anzahl von Zeilen als Eingabe *x* |
+| *x*  | [**Matrix**](dx-graphics-hlsl-intrinsic-functions.md) | [**float,**](/windows/desktop/WinProg/windows-data-types) [**int,**](/windows/desktop/WinProg/windows-data-types) [**bool**](/windows/desktop/WinProg/windows-data-types) | any                                                                                    |
+| Ret  | [**Matrix**](dx-graphics-hlsl-intrinsic-functions.md) | [**float,**](/windows/desktop/WinProg/windows-data-types) [**int,**](/windows/desktop/WinProg/windows-data-types) [**bool**](/windows/desktop/WinProg/windows-data-types) | rows = gleiche Anzahl von Spalten wie Eingabe *x,* Spalten = gleiche Anzahl von Zeilen wie Eingabe *x* |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt |
 |------------------------------------------------------------------------------------|-----------|
-| [Shader Model 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) und höhere Shader-Modelle | ja       |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) und höhere Shadermodelle | Ja       |
 
 
 
@@ -84,7 +84,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

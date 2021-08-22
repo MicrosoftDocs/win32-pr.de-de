@@ -1,11 +1,11 @@
 ---
-title: Iwmpsettings-playcount (Eigenschaft)
-description: Die playcount-Eigenschaft ruft die Häufigkeit ab, mit der ein Medien Element abgespielt wird, oder legt diese fest.
+title: IWMPSettings playCount-Eigenschaft
+description: Die playCount-Eigenschaft ruft ab oder legt fest, wie oft ein Medienelement wiedergegeben wird.
 ms.assetid: 5d18909d-8b7a-448e-b54a-23a312041066
 keywords:
-- playcount-Eigenschaften Fenster Media Player
-- playcount-Eigenschaft, Windows Media Player, iwmpsettings-Schnittstelle
-- Iwmpsettings-Schnittstelle, Windows Media Player, playcount (Eigenschaft)
+- playCount-Eigenschaft Windows Media Player
+- playCount-Eigenschaft Windows Media Player , IWMPSettings-Schnittstelle
+- IWMPSettings-Schnittstelle Windows Media Player , playCount-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fab28ce930e7ab64fe1214fba937cd0ba400ab9c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3a3ea6421b2e27f5154174d47b744f54bc0427fd9c28f513fb29e4967de7f09d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360453"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053398"
 ---
-# <a name="iwmpsettingsplaycount-property"></a>Iwmpsettings::p laycount-Eigenschaft
+# <a name="iwmpsettingsplaycount-property"></a>IWMPSettings::p layCount-Eigenschaft
 
-Die **playcount** -Eigenschaft ruft die Häufigkeit ab, mit der ein Medien Element abgespielt wird, oder legt diese fest.
+Die **playCount-Eigenschaft** ruft ab oder legt fest, wie oft ein Medienelement wiedergegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Public Property playCount As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der die Wiedergabe Anzahl ist, mit dem Minimalwert 1 und dem Standardwert 1.
+Eine **System.Int32-Datei,** bei der es sich um die Wiedergabeanzahl mit einem Mindestwert von 1 und einem Standardwert von 1 handelt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ Ein **System. Int32** -Wert, der die Wiedergabe Anzahl ist, mit dem Minimalwert 
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -64,7 +64,7 @@ Ein **System. Int32** -Wert, der die Wiedergabe Anzahl ist, mit dem Minimalwert 
 
 <dl> <dt>
 
-[**Iwmpsettings-Schnittstelle (VB und c#)**](iwmpsettings--vb-and-c.md)
+[**IWMPSettings-Schnittstelle (VB und C#)**](iwmpsettings--vb-and-c.md)
 </dt> </dl>
 
  

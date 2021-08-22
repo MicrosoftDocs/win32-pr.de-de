@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code zum Lesen von defaultSecurityDescriptor
-description: Im folgenden Codebeispiel wird der defaultSecurityDescriptor für eine angegebene Objektklasse gelesen.
+title: Beispielcode zum Lesen von defaultSecurityDescriptor
+description: Im folgenden Codebeispiel wird defaultSecurityDescriptor für eine angegebene Objektklasse gelesen.
 ms.assetid: 9462686d-654b-40bb-be10-80ca03790ad5
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Lesen von defaultSecurityDescriptor
+- Active Directory-Beispiele Active Directory , Lesen von defaultSecurityDescriptor
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7913b6008f1794e36f699f675cf79b5028931c29
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d0fc57830d88686ebbd23aeed26c8262d17312b35e7ce4f1ab5b7af3cc2fcea9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855443"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962239"
 ---
-# <a name="example-code-for-reading-defaultsecuritydescriptor"></a>Beispiel Code zum Lesen von defaultSecurityDescriptor
+# <a name="example-code-for-reading-defaultsecuritydescriptor"></a>Beispielcode zum Lesen von defaultSecurityDescriptor
 
-Im folgenden Codebeispiel wird der **defaultSecurityDescriptor** für eine angegebene Objektklasse gelesen.
+Im folgenden Codebeispiel wird **defaultSecurityDescriptor** für eine angegebene Objektklasse gelesen.
 
 
 ```C++
@@ -166,9 +166,9 @@ cleanup:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

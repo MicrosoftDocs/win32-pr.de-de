@@ -1,28 +1,28 @@
 ---
-description: Die iupdatecollection-Schnittstelle definiert die folgenden Methoden.
+description: Die IUpdateCollection-Schnittstelle definiert die folgenden Methoden.
 ms.assetid: 88216f8d-eba1-4bf4-bd70-f2856474a96f
-title: Iupdatecollection-Methoden
+title: IUpdateCollection-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ded7bb4e3dc3ace213de109d2574d780514db987
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3795d7a91cb1c24bef64604121ed7c958652295caf53905590a554c151823aa2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214735"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119049278"
 ---
-# <a name="iupdatecollection-methods"></a>Iupdatecollection-Methoden
+# <a name="iupdatecollection-methods"></a>IUpdateCollection-Methoden
 
-Die [**iupdatecollection**](/windows/desktop/api/Wuapi/nn-wuapi-iupdatecollection) -Schnittstelle definiert die folgenden Methoden.
+Die [**IUpdateCollection-Schnittstelle**](/windows/desktop/api/Wuapi/nn-wuapi-iupdatecollection) definiert die folgenden Methoden.
 
 
 
-| Methode                                         | BESCHREIBUNG                                                    |
+| Methode                                         | Beschreibung                                                    |
 |------------------------------------------------|----------------------------------------------------------------|
-| [**Eren**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatecollection-add)           | Fügt der Auflistung ein Element hinzu.                                |
-| [**Klartext**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatecollection-clear)       | Entfernt alle Elemente aus der Auflistung.                  |
+| [**Hinzufügen**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatecollection-add)           | Fügt der Auflistung ein Element hinzu.                                |
+| [**Clear**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatecollection-clear)       | Entfernt alle Elemente aus der Auflistung.                  |
 | [**Kopieren**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatecollection-copy)         | Erstellt eine flache Lese-/Schreibkopie der Auflistung.           |
-| [**Setze**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatecollection-insert)     | Fügt ein Element an der angegebenen Position in die Auflistung ein. |
+| [**Einfügen**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatecollection-insert)     | Fügt ein Element an der angegebenen Position in die Auflistung ein. |
 | [**RemoveAt**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatecollection-removeat) | Entfernt das Element am angegebenen Index aus der Auflistung.   |
 
 

@@ -1,34 +1,34 @@
 ---
-title: Ressourcen Informationen für den DNS-WMI-Anbieter
-description: Weitere Informationen zum DNS-WMI-Anbieter finden Sie in den in der folgenden Tabelle aufgeführten Themen.
+title: Ressourceninformationen für den DNS-WMI-Anbieter
+description: Weitere Informationen zum DNS-WMI-Anbieter finden Sie in den Themen in der folgenden Tabelle.
 ms.assetid: 2b48baad-a6cb-4ebb-948a-d1066c171783
 keywords:
-- Ressourcen Informationen für den DNS-WMI-Anbieter-DNS
+- Ressourceninformationen für den DNS-WMI-Anbieter-DNS
 - Domain Name System DNS, WMI-Anbieter, Ressourcen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6179b0255c8865d0d87ea6a0615102d6612f388a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b2316eaa74fdd9c937d8625a4468e95c109840b07c5d88d5cf60ff2bb5ebad53
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076544"
 ---
-# <a name="resource-information-for-the-dns-wmi-provider"></a>Ressourcen Informationen für den DNS-WMI-Anbieter
+# <a name="resource-information-for-the-dns-wmi-provider"></a>Ressourceninformationen für den DNS-WMI-Anbieter
 
-Weitere Informationen zum DNS-WMI-Anbieter finden Sie in den in der folgenden Tabelle aufgeführten Themen.
+Weitere Informationen zum DNS-WMI-Anbieter finden Sie in den Themen in der folgenden Tabelle.
 
 
 
-| Thema                                                                         | BESCHREIBUNG                                                                                                                                                                                                                   |
+| Thema                                                                         | Beschreibung                                                                                                                                                                                                                   |
 |-------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Windows 2000-DNS-Whitepaper](https://www.microsoft.com/technet/prodtechnol/windows2000serv/plan/w2kdns2.mspx) | Stellt die Windows 2000-Implementierung von DNS mit Beispielen dar und beschreibt die Architektur Kriterien, die Netzwerk Architekten und-Administratoren berücksichtigen sollten, wenn Sie einen DNS-Namespace für Active Directory Dienste entwerfen. |
-| [Windows Script-Technologien](/previous-versions/ms950396(v=msdn.10)) | Skriptinformationen für eine Vielzahl von Skript Erstellungs Technologien.                                                                                                                                                                |
+| [Whitepaper zu Windows 2000 DNS](https://www.microsoft.com/technet/prodtechnol/windows2000serv/plan/w2kdns2.mspx) | Bietet die Windows 2000-Implementierung von DNS mit Beispielen und beschreibt Architekturkriterien, die Netzwerkarchitekten und Administratoren beim Entwerfen eines DNS-Namensraums für Active Directory-Dienste berücksichtigen sollten. |
+| [Windows Skripttechnologien](/previous-versions/ms950396(v=msdn.10)) | Skriptinformationen für eine Vielzahl von Skripttechnologien.                                                                                                                                                                |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

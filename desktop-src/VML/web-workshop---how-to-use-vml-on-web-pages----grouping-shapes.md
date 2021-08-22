@@ -1,12 +1,12 @@
 ---
 title: Gruppieren von Formen
-description: In diesem Artikel wird das Gruppieren von Formen in VML beschrieben, einem Feature, das seit Windows Internet Explorer 9 veraltet ist.
+description: In diesem Artikel wird das Gruppieren von Formen in VML beschrieben, einem Feature, das ab Version Windows Internet Explorer 9 veraltet ist.
 ms.assetid: 469c9e4d-d1ae-4285-b2cb-ac833ebe59ff
 keywords:
 - Web-Workshop, Gruppieren von Formen
 - Entwerfen von Webseiten, Gruppieren von Formen
 - Vector Markup Language (VML), Gruppieren von Formen
-- VML (Vector Markup Language),Gruppieren von Formen
+- VML (Vector Markup Language), Gruppieren von Formen
 - Vektorgrafiken, Gruppieren von Formen
 - VML-Formen, Gruppierung
 - Gruppieren von Formen
@@ -18,19 +18,19 @@ keywords:
 - Vector Markup Language (VML), lokaler Koordinatenraum
 - VML (Vector Markup Language),lokaler Koordinatenraum
 - Vektorgrafiken, lokaler Koordinatenraum
-- Lokaler Koordinatenraum
+- lokaler Koordinatenraum
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61e0c3073f55d23c15734b5d5ddfa886e7291530
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 2bc9ac6da1d38bb6b30f685ebfd0f5a1d9d6026620a0e0c65366ee021668240a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112407703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056958"
 ---
 # <a name="grouping-shapes"></a>Gruppieren von Formen
 
-In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
 > Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
@@ -78,13 +78,13 @@ Die folgenden Zeilen veranschaulichen beispielsweise eine geschachtelte Gruppe m
 
 
 
-Weitere Informationen zu diesem Element finden Sie in der [VML-Spezifikation](https://www.w3.org/TR/NOTE-VML#-toc416858388) .
+Weitere Informationen zu diesem Element finden Sie in der [VML-Spezifikation.](https://www.w3.org/TR/NOTE-VML#-toc416858388)
 
 [![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="summary"></a>Zusammenfassung
 
-Sie können das `<group>` -Element verwenden, um viele Formen zu gruppieren, damit sie als eine Einheit transformiert werden können.
+Sie können das `<group>` -Element verwenden, um viele Formen zu gruppieren, sodass sie als eine Einheit transformiert werden können.
 
  
 

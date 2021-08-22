@@ -1,8 +1,8 @@
 ---
-description: Die Item-Methode des "Swap Name"-Objekts Ruft ein "taubemnamedvalue"-Objekt aus der Auflistung ab.
+description: Die Item-Methode des SWbemNamedValueSet-Objekts ruft ein SWbemNamedValue-Objekt aus der Auflistung ab.
 ms.assetid: ccebe65e-6032-43d5-9004-2247c3b96d6d
 ms.tgt_platform: multiple
-title: Swap-namedvalueset. Item-Methode (wbemdisp. h)
+title: SWbemNamedValueSet.Item-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: a4932409fa7b8ac9e0f326e5de7e8ecf0f89c2b8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 688c78aa644b7a5eab3fd6be9ae806ec254a7a50647dc9e87539e96049d6df04
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992080"
 ---
-# <a name="swbemnamedvaluesetitem-method"></a>Swap-namedvalueset. Item-Methode
+# <a name="swbemnamedvaluesetitem-method"></a>SWbemNamedValueSet.Item-Methode
 
-Die **Item** -Methode des " [**Swap Name**](swbemnamedvalueset.md) "-Objekts Ruft ein " [**taubemnamedvalue**](swbemnamedvalue.md) "-Objekt aus der Auflistung ab.
+Die **Item-Methode** des [**SWbemNamedValueSet-Objekts**](swbemnamedvalueset.md) ruft ein [**SWbemNamedValue-Objekt**](swbemnamedvalue.md) aus der Auflistung ab.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,61 +45,61 @@ objNamedValue = .Item( _
 
 <dl> <dt>
 
-" *Name* \[ " in\]
+*strName* \[ In\]
 </dt> <dd>
 
-Erforderlich. Der Name des abzurufenden Werts.
+Erforderlich. Name des abzurufende Werts.
 
 </dd> <dt>
 
-*IFlags* \[ in, optional\]
+*iFlags* \[ in, optional\]
 </dt> <dd>
 
-Reserviert. Dieser Wert muss NULL sein, wenn angegeben.
+Reserviert. Dieser Wert muss 0 (null) sein, wenn er angegeben wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, wird das angeforderte " [**Swap Name**](swbemnamedvalue.md) "-Objekt zurückgegeben.
+Bei Erfolg wird das [**angeforderte SWbemNamedValue-Objekt**](swbemnamedvalue.md) zurückgegeben.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach Abschluss der **Element** Methode kann das **Err** -Objekt einen der Fehlercodes in der folgenden Liste enthalten.
+Nach Abschluss der **Item-Methode** kann das **Err-Objekt** einen der Fehlercodes in der folgenden Liste enthalten.
 
 <dl> <dt>
 
-**wbemErrFailed** -2147749889 (0x80041001)
+**wbemErrFailed** – 2147749889 (0x80041001)
 </dt> <dd>
 
 Unbekannter Fehler.
 
 </dd> <dt>
 
-**wbemErrInvalidParameter** -2147749896 (0x80041008)
+**wbemErrInvalidParameter** – 2147749896 (0x80041008)
 </dt> <dd>
 
-Es wurde ein ungültiger Parameter angegeben, oder der Namespace konnte nicht analysiert werden.
+Ein ungültiger Parameter wurde angegeben, oder der Namespace konnte nicht analysiert werden.
 
 </dd> <dt>
 
-**wbemErrOutOfMemory** -2147749894 (0x80041006)
+**wbemErrOutOfMemory** – 2147749894 (0x80041006)
 </dt> <dd>
 
-Der Arbeitsspeicher reicht nicht aus, um den Vorgang abzuschließen.
+Nicht genügend Arbeitsspeicher, um den Vorgang abzuschließen.
 
 </dd> <dt>
 
-**wbemErrNotFound** -2147749890 (0x80041002 angezeigt)
+**wbemErrNotFound** – 2147749890 (0x80041002)
 </dt> <dd>
 
 Das angeforderte Element wurde nicht gefunden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beispiele zum Hinzufügen und Abrufen benannter [**Werte finden Sie**](swbemnamedvalue-value.md)unter "".
+Beispiele zum Hinzufügen und Abrufen benannter Werte finden Sie unter [**SWbemNamedValue.Value.**](swbemnamedvalue-value.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -109,19 +109,19 @@ Beispiele zum Hinzufügen und Abrufen benannter [**Werte finden Sie**](swbemname
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-namedvalueset<br/>                                                    |
-| IID<br/>                      | IID \_ iswbemnamedvalueset<br/>                                                     |
+| CLSID<br/>                    | CLSID \_ SWbemNamedValueSet<br/>                                                    |
+| IID<br/>                      | IID \_ ISWbemNamedValueSet<br/>                                                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Austausch Elementname**](swbemnamedvalueset.md)
+[**SWbemNamedValueSet**](swbemnamedvalueset.md)
 </dt> </dl>
 
  

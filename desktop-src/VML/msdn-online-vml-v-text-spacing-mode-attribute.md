@@ -1,55 +1,55 @@
 ---
-title: VML V-Text-Spacing-Mode-Attribut
-description: VML V-Text-Spacing-Mode-Attribut
+title: VML-Attribut "V-Text-Spacing-Mode"
+description: VML-Attribut "V-Text-Spacing-Mode"
 ms.assetid: 2c20e9d7-cb6a-4da7-af7a-9a7b1baa8e1f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a288f89a1405412ba8c582a5c52c7bfe56809c38
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a42137e8c8ec401548c4e0b027a50f34813fc7b45b04c4568011617906ac8e1c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104474172"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119057658"
 ---
-# <a name="vml-v-text-spacing-mode-attribute"></a>VML V-Text-Spacing-Mode-Attribut
+# <a name="vml-v-text-spacing-mode-attribute"></a>VML-Attribut "V-Text-Spacing-Mode"
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den Modus für Brief Abstände. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert den Modus für Letterspacing. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
-[TextPath](msdn-online-vml-textpath-element.md)
+[Textpath](msdn-online-vml-textpath-element.md)
 
 **Tagsyntax**
 
-<v: *Element* Style = "v-Text-Spacing-Mode: *Expression* " >
+<v: *element* style="v-text-spacing-mode: *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Style. v-Text-Spacing-Mode = "*Ausdruck*"
+*element* .style.v-text-spacing-mode="*expression*"
 
-*Ausdruck* = *Element*. Style. v-Text-Abstände-Modus
+*expression* = *Element*.style.v-text-spacing-mode
 
 **Anmerkungen**
 
 Zu den Werten zählen
 
--   wird **verschärft** (Standard)
--   **Paletten**
+-   **Tightening** (Standard)
+-   **Tracking**
 
-Mit diesem Attribut wird festgelegt, ob zwischen den einzelnen Buchstaben (das Ende) oder zwischen den einzelnen Buchstaben (Nachverfolgung) ein Leerzeichen entfernt wird Die Menge der Änderungen im Buchstaben Abstand wird durch das [V-Text-Spacing-](msdn-online-vml-v-text-spacing-attribute.md) Attribut definiert.
+Dieses Attribut bestimmt, ob Zwischenraum zwischen den einzelnen Buchstaben entfernt (Verkraffung) oder zwischen jedem Buchstaben (Nachverfolgung) hinzugefügt wird. Der Umfang der Änderung des Letterpacings wird durch das [V-Text-Spacing-Attribut](msdn-online-vml-v-text-spacing-attribute.md) definiert.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Der Brief Abstand zwischen den einzelnen Buchstaben wird um 200 Einheiten angehoben.
+Die Buchstabenpashierung zwischen den einzelnen Buchstaben wird um 200 Einheiten erhöht.
 
 
 ```HTML
@@ -63,6 +63,6 @@ Der Brief Abstand zwischen den einzelnen Buchstaben wird um 200 Einheiten angeho
 
 
 
- 
+ 
 
- 
+ 

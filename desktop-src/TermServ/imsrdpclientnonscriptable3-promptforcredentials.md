@@ -1,26 +1,26 @@
 ---
-title: IMsRdpClientNonScriptable3 promptforanmelde-Eigenschaft (wuapi. h)
-description: Gibt an oder Ruft ab, ob das Dialogfeld Eingabeaufforderung für Anmelde Informationen für die Verbindung aktiviert ist.
+title: IMsRdpClientNonScriptable3 PromptForCredentials-Eigenschaft (Wuapi.h)
+description: Gibt an oder ruft ab, ob das Dialogfeld zur Eingabe von Anmeldeinformationen für die Verbindung aktiviert ist.
 ms.assetid: 252ec5bd-bd52-40d4-ae48-b2c00c0720c0
 ms.tgt_platform: multiple
 keywords:
-- Promptforanmelde-Eigenschaft Remotedesktopdienste
-- Promptfor-Anmelde Informationen-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3 Interface Remotedesktopdienste, promptforanmeldeinformationen (Eigenschaft)
-- Promptfor-Anmelde Informationen-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, promptforanmeldeinformationen (Eigenschaft)
-- Promptfor-Anmelde Informationen-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, promptforanmeldeinformationen (Eigenschaft)
-- Promptfor-Anmelde Informationen (Eigenschaft Remotedesktopdienste, MsRdpClient5-Objekt
-- MsRdpClient5-Objekt Remotedesktopdienste, promptforanmeldeinformationen (Eigenschaft)
-- Promptfor-Anmelde Informationen (Eigenschaft Remotedesktopdienste, MsRdpClient6-Objekt
-- MsRdpClient6-Objekt Remotedesktopdienste, promptforanmeldeinformationen (Eigenschaft)
-- Promptfor-Anmelde Informationen (Eigenschaft Remotedesktopdienste, MsRdpClient7-Objekt
-- MsRdpClient7-Objekt Remotedesktopdienste, promptforanmeldeinformationen (Eigenschaft)
-- Promptfor-Anmelde Informationen (Eigenschaft Remotedesktopdienste, MsRdpClient8-Objekt
-- MsRdpClient8-Objekt Remotedesktopdienste, promptforanmeldeinformationen (Eigenschaft)
-- Promptfor-Anmelde Informationen (Eigenschaft Remotedesktopdienste, MsRdpClient9-Objekt
-- MsRdpClient9-Objekt Remotedesktopdienste, promptforanmeldeinformationen (Eigenschaft)
+- PromptForCredentials-Remotedesktopdienste
+- PromptForCredentials-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , PromptForCredentials-Eigenschaft
+- PromptForCredentials-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , PromptForCredentials-Eigenschaft
+- PromptForCredentials-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , PromptForCredentials-Eigenschaft
+- PromptForCredentials-Eigenschaft Remotedesktopdienste , MsRdpClient5-Objekt
+- MsRdpClient5-Objekt Remotedesktopdienste , PromptForCredentials-Eigenschaft
+- PromptForCredentials-Eigenschaft Remotedesktopdienste , MsRdpClient6-Objekt
+- MsRdpClient6-Objekt Remotedesktopdienste , PromptForCredentials-Eigenschaft
+- PromptForCredentials-Eigenschaft Remotedesktopdienste , MsRdpClient7-Objekt
+- MsRdpClient7-Objekt Remotedesktopdienste , PromptForCredentials-Eigenschaft
+- PromptForCredentials-Eigenschaft Remotedesktopdienste , MsRdpClient8-Objekt
+- MsRdpClient8-Objekt Remotedesktopdienste , PromptForCredentials-Eigenschaft
+- PromptForCredentials-Eigenschaft Remotedesktopdienste , MsRdpClient9-Objekt
+- MsRdpClient9-Objekt Remotedesktopdienste , PromptForCredentials-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -44,16 +44,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 62f913937c9a2ff01d4aabeaba48dcbdc8ddb21d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fcfb206e8479892b5c8e2e544d3c660c2dcfbd76c6dfe3c66f382c78c734e9bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001120"
 ---
-# <a name="imsrdpclientnonscriptable3promptforcredentials-property"></a>IMsRdpClientNonScriptable3::P romptforanmeldeinformationen (Eigenschaft)
+# <a name="imsrdpclientnonscriptable3promptforcredentials-property"></a>IMsRdpClientNonScriptable3::P romptForCredentials-Eigenschaft
 
-Gibt an oder Ruft ab, ob das Dialogfeld Eingabeaufforderung für Anmelde Informationen für die Verbindung aktiviert ist.
+Gibt an oder ruft ab, ob das Dialogfeld zur Eingabe von Anmeldeinformationen für die Verbindung aktiviert ist.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -74,7 +74,7 @@ HRESULT get_PromptForCredentials(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt an, ob das Dialogfeld zur Eingabe der Anmelde Informationen für die Verbindung aktiviert ist.
+Gibt an, ob das Dialogfeld "Eingabeaufforderung für Anmeldeinformationen" für die Verbindung aktiviert ist.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -86,7 +86,7 @@ Gibt an, ob das Dialogfeld zur Eingabe der Anmelde Informationen für die Verbin
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                |
-| Header<br/>                   | <dl> <dt>Wuapi. h</dt> </dl>            |
+| Header<br/>                   | <dl> <dt>Wuapi.h</dt> </dl>            |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>        |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>        |
 | IID<br/>                      | IID \_ IMsRdpClientNonScriptable3 ist als b3378d90-0728-45c7-8ed7-b6159fb92219 definiert.<br/> |

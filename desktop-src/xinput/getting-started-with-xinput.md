@@ -1,64 +1,64 @@
 ---
-title: Einstieg in xinput
-description: Xinput ist eine API, mit der Anwendungen Eingaben vom Xbox-Controller für Windows empfangen können. Die Auswirkungen des Controllers und die Spracheingabe und-Ausgabe werden unterstützt.
+title: Erste Schritte mit XInput
+description: XInput ist eine API, mit der Anwendungen Eingaben vom Xbox Controller für Windows empfangen können. Controller-Rumble-Effekte sowie Spracheingabe und -ausgabe werden unterstützt.
 ms.assetid: 7b5eec3e-b3da-de5c-c926-8258c1418ef0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 91f590f54bbb2641881cf89cd6d31539d75665c0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 68a9ca17e3046db676887290b9b9dcbb7318f2dc89d4dd9543cbe790bf271b60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103727657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962499"
 ---
-# <a name="getting-started-with-xinput"></a>Einstieg in xinput
+# <a name="getting-started-with-xinput"></a>Erste Schritte mit XInput
 
-Xinput ist eine API, mit der Anwendungen Eingaben vom Xbox-Controller für Windows empfangen können. Die Auswirkungen des Controllers und die Spracheingabe und-Ausgabe werden unterstützt.
+XInput ist eine API, mit der Anwendungen Eingaben vom Xbox Controller für Windows empfangen können. Controller-Rumble-Effekte sowie Spracheingabe und -ausgabe werden unterstützt.
 
-Dieses Thema enthält eine kurze Übersicht über die Funktionen von XInput und deren Einrichtung in einer Anwendung. Dies umfasst Folgendes:
+Dieses Thema bietet eine kurze Übersicht über die Funktionen von XInput und die Einrichtung in einer Anwendung. Dies umfasst Folgendes:
 
--   [Einführung in xinput](#introduction-to-xinput)
-    -   [Der Xbox-Controller](#the-xbox-controller)
--   [Verwenden von xinput](#using-xinput)
+-   [Einführung in XInput](#introduction-to-xinput)
+    -   [The Xbox Controller](#the-xbox-controller)
+-   [Verwenden von XInput](#using-xinput)
     -   [Mehrere Controller](#multiple-controllers)
-    -   [Erhalten des Controller Zustands](#getting-controller-state)
-    -   [Unzustellbare Zone](#dead-zone)
-    -   [Festlegen von Vibrations Effekten](#setting-vibration-effects)
-    -   [Erhalten von audiogerätebezeichgern](#getting-audio-device-identifiers)
-    -   [Erhalten von DirectSound-GUIDs (nur Legacy-DirectX SDK)](#getting-directsound-guids-legacy-directx-sdk-only)
+    -   [Abrufen des Controllerzustands](#getting-controller-state)
+    -   [In tote Zone](#dead-zone)
+    -   [Festlegen von Schwingungseffekten](#setting-vibration-effects)
+    -   [Abrufen von Audiogerätebezeichnern](#getting-audio-device-identifiers)
+    -   [Abrufen von DirectSound-GUIDs (nur Legacy-DirectX SDK)](#getting-directsound-guids-legacy-directx-sdk-only)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="introduction-to-xinput"></a>Einführung in xinput
+## <a name="introduction-to-xinput"></a>Einführung in XInput
 
-Die Xbox-Konsole verwendet einen Spiele Controller, der mit Windows kompatibel ist. Anwendungen können die xinput-API für die Kommunikation mit diesen Controllern verwenden, wenn Sie an einem Windows-PC angeschlossen sind (bis zu vier eindeutige Controller können gleichzeitig eingebunden werden).
+Die Xbox-Konsole verwendet einen Gamingcontroller, der mit Windows kompatibel ist. Anwendungen können die XInput-API verwenden, um mit diesen Controllern zu kommunizieren, wenn sie an einen Windows PC angeschlossen sind (bis zu vier eindeutige Controller können gleichzeitig angeschlossen werden).
 
-Mit dieser API können alle verbundenen Xbox-Controller für den Status abgefragt werden, und es können Vibrationseffekte festgelegt werden. Controller, denen das-Headset zugeordnet ist, können auch auf Audioeingabe-und Ausgabegeräte abgefragt werden, die mit dem Headset für die Sprachverarbeitung verwendet werden können.
+Mit dieser API kann jeder verbundene Xbox Controller nach seinem Zustand abgefragt und Schwingungseffekte festgelegt werden. Controller, an die das Headset angeschlossen ist, können auch nach Audioeingabe- und Ausgabegeräten abgefragt werden, die mit dem Headset für die Sprachverarbeitung verwendet werden können.
 
-### <a name="the-xbox-controller"></a>Der Xbox-Controller
+### <a name="the-xbox-controller"></a>The Xbox Controller
 
-Der Xbox Controller verfügt über zwei analoge direktionale Stifte, von denen jeder über eine digitale Schaltfläche, zwei analoge Trigger, ein digitales direktionales Pad mit vier Richtungen und acht digitale Schaltflächen verfügt. Die Zustände der einzelnen Eingaben werden in der [**xinput- \_ Gamepad**](/windows/desktop/api/XInput/ns-xinput-xinput_gamepad) -Struktur zurückgegeben, wenn die Funktion " [**xinputgetstate**](/windows/desktop/api/XInput/nf-xinput-xinputgetstate) " aufgerufen wird.
+Der Xbox Controller verfügt über zwei analoge Richtungsstäbchen, jeweils mit einer digitalen Schaltfläche, zwei analogen Triggern, einem digitalen direktionalen Pad mit vier Richtungen und acht digitalen Schaltflächen. Die Zustände jeder dieser Eingaben werden in der [**XINPUT \_ GAMEPAD-Struktur**](/windows/desktop/api/XInput/ns-xinput-xinput_gamepad) zurückgegeben, wenn die [**XInputGetState-Funktion**](/windows/desktop/api/XInput/nf-xinput-xinputgetstate) aufgerufen wird.
 
-Der Controller verfügt auch über zwei Vibrationsmotoren, um dem Benutzer Force-Feedback Effekte bereitzustellen. Die Geschwindigkeiten dieser Motoren werden in der [**xinput- \_ Vibrations**](/windows/desktop/api/XInput/ns-xinput-xinput_vibration) Struktur angegeben, die an die Funktion " [**xinputsetstate**](/windows/desktop/api/XInput/nf-xinput-xinputsetstate) " übertragen wird, um Schwingungs Effekte festzulegen.
+Der Controller verfügt auch über zwei Schwingungsbringe, um dem Benutzer Force-Feedback-Effekte zu liefern. Die Geschwindigkeiten dieser Vibrationen werden in der [**XINPUT \_ VIBRATION-Struktur**](/windows/desktop/api/XInput/ns-xinput-xinput_vibration) angegeben, die an die [**XInputSetState-Funktion**](/windows/desktop/api/XInput/nf-xinput-xinputsetstate) übergeben wird, um Schwingungseffekte festzulegen.
 
-Optional kann ein Headset mit dem Controller verbunden werden. Das Headset verfügt über ein Mikrofon für die Spracheingabe und ein Telefon für die Audioausgabe. Sie können die Funktion " [**xinputgetaudiode viceids**](/windows/desktop/api/XInput/nf-xinput-xinputgetaudiodeviceids) " oder "Legacy [**xinputgetdsoundaudiodeviceguids**](/windows/desktop/api/XInput/nf-xinput-xinputgetdsoundaudiodeviceguids) " aufrufen, um die Geräte Bezeichner zu erhalten, die den Geräten für das Mikrofon und das Telefon entsprechen. Sie können dann die [kernaudio-APIs](/windows/desktop/CoreAudio/core-audio-apis-in-windows-vista) verwenden, um Spracheingaben zu empfangen und Audioausgaben zu senden.
+Optional kann ein Headset mit dem Controller verbunden werden. Das Headset verfügt über ein Mikrofon für die Spracheingabe und eine Audioausgabe. Sie können die [**XInputGetAudioDeviceIds-**](/windows/desktop/api/XInput/nf-xinput-xinputgetaudiodeviceids) oder legacy [**XInputGetDSoundAudioDeviceGuids-Funktion**](/windows/desktop/api/XInput/nf-xinput-xinputgetdsoundaudiodeviceguids) aufrufen, um die Gerätebezeichner abzurufen, die den Geräten für mikrofon und audio entsprechen. Anschließend können Sie die [Core Audio-APIs](/windows/desktop/CoreAudio/core-audio-apis-in-windows-vista) verwenden, um Spracheingaben zu empfangen und Audioausgaben zu senden.
 
-## <a name="using-xinput"></a>Verwenden von xinput
+## <a name="using-xinput"></a>Verwenden von XInput
 
-Die Verwendung von xinput ist so einfach wie das Aufrufen der xinput-Funktionen nach Bedarf. Mithilfe der xinput-Funktionen können Sie den Controller Zustand abrufen, die Headset-audioids abrufen und die Auswirkungen des Controllers auf den Controller festlegen.
+Die Verwendung von XInput ist so einfach wie das Aufrufen der XInput-Funktionen. Mithilfe der XInput-Funktionen können Sie den Controllerzustand abrufen, Headset-Audio-IDs abrufen und Controller-Rumble-Effekte festlegen.
 
 ### <a name="multiple-controllers"></a>Mehrere Controller
 
-Die xinput-API unterstützt bis zu vier Controller, die zu einem beliebigen Zeitpunkt verbunden sind. Die xinput-Funktionen erfordern alle einen *dwuserindex* -Parameter, der übergeben wird, um den Controller zu identifizieren, der festgelegt oder abgefragt wird. Diese ID befindet sich im Bereich von 0-3 und wird automatisch von xinput festgelegt. Die Zahl entspricht dem Port, an dem der Controller angeschlossen ist, und kann nicht geändert werden.
+Die XInput-API unterstützt bis zu vier Controller, die jederzeit verbunden sind. Alle XInput-Funktionen erfordern einen *dwUserIndex-Parameter,* der übergeben wird, um den controller zu identifizieren, der festgelegt oder abgefragt wird. Diese ID liegt im Bereich von 0 bis 3 und wird automatisch von XInput festgelegt. Die Zahl entspricht dem Port, an den der Controller angeschlossen ist, und ist nicht änderbar.
 
-Jeder Controller zeigt an, welche ID er verwendet, indem er einen Quadranten in der Mitte des Controllers in der Mitte des Controllers beleuchtet. Der *dwuserindex* -Wert 0 entspricht dem oberen linken Quadranten. die Nummerierung wird im Uhrzeigersinn um den Ring fortgesetzt.
+Jeder Controller zeigt an, welche ID er verwendet, indem er einen Quadranten am "Lichtring" in der Mitte des Controllers auslicht. Der *dwUserIndex-Wert* 0 entspricht dem oberen linken Quadranten. Die Nummerierung wird im Uhrzeigersinn um den Ring herum fortgesetzt.
 
 Anwendungen sollten mehrere Controller unterstützen.
 
-### <a name="getting-controller-state"></a>Erhalten des Controller Zustands
+### <a name="getting-controller-state"></a>Abrufen des Controllerstatus
 
-Während der gesamten Dauer einer Anwendung wird das erhalten des Zustands von einem Controller wahrscheinlich am häufigsten durchgeführt. Von Frame zu Frame in einer Spiel Anwendung sollte State abgerufen werden, und die Spielinformationen werden aktualisiert, um die Controller Änderungen widerzuspiegeln.
+Während der gesamten Dauer einer Anwendung erfolgt das Abrufen des Zustands von einem Controller wahrscheinlich am häufigsten. Von Frame zu Frame in einer Spielanwendung sollte der Zustand abgerufen und die Spielinformationen aktualisiert werden, um die Controlleränderungen widerzuspiegeln.
 
-Verwenden Sie zum Abrufen des Zustands die Funktion " [**xinputgetstate**](/windows/desktop/api/XInput/nf-xinput-xinputgetstate) ":
+Verwenden Sie zum Abrufen des Zustands die [**XInputGetState-Funktion:**](/windows/desktop/api/XInput/nf-xinput-xinputgetstate)
 
 ```cpp
 DWORD dwResult;    
@@ -81,24 +81,24 @@ for (DWORD i=0; i< XUSER_MAX_COUNT; i++ )
 }
 ```
 
-Beachten Sie, dass der Rückgabewert von " [**xinputgetstate**](/windows/desktop/api/XInput/nf-xinput-xinputgetstate) " verwendet werden kann, um zu bestimmen, ob der Controller verbunden ist. Anwendungen sollten eine Struktur zum Speichern interner Controller Informationen definieren. Diese Informationen sollten mit den Ergebnissen von " **xinputgetstate** " verglichen werden, um zu bestimmen, welche Änderungen, wie z. b. Schaltflächen-oder analoge Controller Delta, zu diesem Frame gemacht wurden. Im obigen Beispiel stellt *g \_ Controller* eine solche Struktur dar.
+Beachten Sie, dass der Rückgabewert von [**XInputGetState**](/windows/desktop/api/XInput/nf-xinput-xinputgetstate) verwendet werden kann, um zu bestimmen, ob der Controller verbunden ist. Anwendungen sollten eine Struktur definieren, die interne Controllerinformationen enthält. Diese Informationen sollten mit den Ergebnissen von **XInputGetState** verglichen werden, um zu bestimmen, welche Änderungen an diesem Frame vorgenommen wurden, z. B. Tastendrucke oder analoge Controllerdelta. Im obigen Beispiel stellt *g \_ Controllers* eine solche Struktur dar.
 
-Nachdem der Zustand in einer [**xinput- \_ Zustands**](/windows/desktop/api/XInput/ns-xinput-xinput_state) Struktur abgerufen wurde, können Sie ihn auf Änderungen überprüfen und bestimmte Informationen zum Controller Status abrufen.
+Nachdem der Zustand in einer [**XINPUT \_ STATE-Struktur**](/windows/desktop/api/XInput/ns-xinput-xinput_state) abgerufen wurde, können Sie ihn auf Änderungen überprüfen und spezifische Informationen zum Controllerzustand abrufen.
 
-Der *dwpacketnumber* -Member der [**xinput- \_ Status**](/windows/desktop/api/XInput/ns-xinput-xinput_state) Struktur kann verwendet werden, um zu überprüfen, ob sich der Zustand des Controllers seit dem letzten Aufrufen von " [**xinputgetstate**](/windows/desktop/api/XInput/nf-xinput-xinputgetstate)" geändert hat. Wenn *dwpacketnumber* sich nicht zwischen zwei sequenziellen Aufrufen von " **xinputgetstate**" ändert, hat sich der Status nicht geändert. Wenn Sie sich unterscheidet, sollte die Anwendung den *Gamepad* -Member der **xinput \_** -Struktur überprüfen, um ausführlichere Zustandsinformationen zu erhalten.
+Der *dwPacketNumber-Member* der [**XINPUT \_ STATE-Struktur**](/windows/desktop/api/XInput/ns-xinput-xinput_state) kann verwendet werden, um zu überprüfen, ob sich der Zustand des Controllers seit dem letzten Aufruf von [**XInputGetState**](/windows/desktop/api/XInput/nf-xinput-xinputgetstate)geändert hat. Wenn *dwPacketNumber* zwischen zwei sequenziellen Aufrufen von **XInputGetState** nicht geändert wird, hat sich der Zustand nicht geändert. Wenn sich dies unterscheidet, sollte die Anwendung den *Gamepad-Member* der **XINPUT \_ STATE-Struktur** überprüfen, um ausführlichere Zustandsinformationen zu erhalten.
 
-Aus Leistungsgründen wird " [**xinputgetstate**](/windows/desktop/api/XInput/nf-xinput-xinputgetstate) " nicht für einen "leeren" Benutzer Slot jeden Frame aufgerufen. Es wird empfohlen, dass Sie stattdessen alle paar Sekunden Überprüfungen auf neue Controller durchführen.
+Rufen Sie aus Leistungsgründen nicht [**XInputGetState**](/windows/desktop/api/XInput/nf-xinput-xinputgetstate) für einen "leeren" Benutzerslot für jeden Frame auf. Es wird empfohlen, dass Sie stattdessen alle paar Sekunden Leerraumüberprüfungen für neue Controller durchführen.
 
-### <a name="dead-zone"></a>Unzustellbare Zone
+### <a name="dead-zone"></a>In tote Zone
 
-Damit Benutzer ein konsistentes Spielverhalten haben, muss Ihr Spiel die Zone "Dead Zone" ordnungsgemäß implementieren. Die unzustellbare Zone ist "Verschiebungs Werte", die vom Controller gemeldet werden, auch wenn die analogen Fingerabdrücke unverändert und zentriert sind. Es gibt auch eine unzustellbare Zone für die 2 analogen Trigger.
+Damit Benutzer ein konsistentes Spielerlebnis erhalten, muss Ihr Spiel die intakte Zone ordnungsgemäß implementieren. Bei der intakten Zone handelt es sich um "Bewegungswerte", die vom Controller gemeldet werden, auch wenn die analogen Sticks unverändert und zentriert sind. Es gibt auch eine in dead zone für die zwei analogen Trigger.
 
 > [!Note]  
-> Spiele, die xinput verwenden, bei denen keine unzustellbare Zone überhaupt gefiltert wird, haben ein schlechtes Spiel. Beachten Sie, dass einige Controller sensibler als andere Controller sind. Daher kann die unzustellbare Zone von Unit zu Unit abweichen. Es wird empfohlen, dass Sie Ihre Spiele mit mehreren Xbox-Controllern auf verschiedenen Systemen testen.
+> Spiele, die XInput verwenden, die keine intime Zone filtern, erhalten schlechtes Spiel. Beachten Sie, dass einige Controller sensibler sind als andere, sodass die zone für unzufällige Daten von Einheit zu Einheit variieren kann. Es wird empfohlen, Ihre Spiele mit mehreren Xbox-Controllern auf verschiedenen Systemen zu testen.
 
-Anwendungen sollten "unzustellbare Zonen" für analoge Eingaben (Trigger, Stöcke) verwenden, um anzugeben, wann eine Bewegung ausreichend auf dem Stick oder Trigger erstellt wurde, um als gültig betrachtet zu werden.
+Anwendungen sollten "dead zones" für analoge Eingaben (Trigger, Striche) verwenden, um anzugeben, wann eine Bewegung ausreichend auf dem Stick oder Trigger vorgenommen wurde, um als gültig angesehen zu werden.
 
-Die Anwendung sollte auf unzustellbare Zonen prüfen und appopriately Antworten, wie in diesem Beispiel:
+Ihre Anwendung sollte auf inaktive Zonen überprüfen und wie im folgenden Beispiel appopriately reagieren:
 
 ```cpp
 XINPUT_STATE state = g_Controllers[i].state;
@@ -137,9 +137,9 @@ else //if the controller is in the deadzone zero out the magnitude
 //repeat for right thumb stick
 ```
 
-In diesem Beispiel wird der Richtungsvektor des Controllers und die Länge des Vektors, mit dem der Controller gepusht wurde, berechnet. Dies ermöglicht die Erzwingung einer zirkulären deadzone, indem überprüft wird, ob die Größe des Controllers größer als der deadzonenwert ist. Außerdem normalisiert der Code die Größe des Controllers, der dann mit einem spielspezifischen Faktor multipliziert werden kann, um die Position des Controllers in die für das Spiel relevanten Einheiten zu konvertieren.
+In diesem Beispiel wird der Richtungsvektor des Controllers berechnet, und es wird berechnet, wie weit entlang des Vektors der Controller gepusht wurde. Dies ermöglicht die Erzwingung einer zirkulären in deadzone, indem einfach überprüft wird, ob die Größe des Controllers größer als der Wert für die un tote Zone ist. Darüber hinaus normalisiert der Code die Größe des Controllers, die dann mit einem spielspezifischen Faktor multipliziert werden kann, um die Position des Controllers in für das Spiel relevante Einheiten zu konvertieren.
 
-Beachten Sie, dass Sie für die Sticks und Trigger (von 0-65534) eigene unzustellbare Zonen definieren können. Sie können aber auch die bereitgestellten deadzones verwenden, die als xinput- \_ Gamepad-" \_ left \_ Thumb \_ deadzone", "xinput \_ Gamepad \_ right \_ Thumb \_ deadzone" und "xinput \_ Gamepad \_ Trigger \_ Threshold" in xinput. h definiert sind:
+Beachten Sie, dass Sie ihre eigenen intakten Zonen für die Sticks und Trigger definieren können (zwischen 0 und 65534), oder Sie können die bereitgestellten deadzones verwenden, die als XINPUT \_ GAMEPAD \_ LEFT THUMB \_ \_ DEADZONE, XINPUT \_ GAMEPAD RIGHT THUMB \_ \_ \_ DEADZONE und XINPUT \_ GAMEPAD TRIGGER THRESHOLD in \_ \_ XInput.h definiert sind:
 
 ```cpp
 #define XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE  7849
@@ -147,15 +147,15 @@ Beachten Sie, dass Sie für die Sticks und Trigger (von 0-65534) eigene unzustel
 #define XINPUT_GAMEPAD_TRIGGER_THRESHOLD    30
 ```
 
-Nachdem die deadzone erzwungen wurde, ist es möglicherweise hilfreich, den resultierenden Bereich \[ 0,0.. 1.0 \] (wie im obigen Beispiel) zu skalieren und optional eine nichtlineare Transformation anzuwenden.
+Nachdem die unzustellbare Zone erzwungen wurde, kann es hilfreich sein, den resultierenden Bereich \[ 0.0...1.0 \] gleitkomma (wie im obigen Beispiel) zu skalieren und optional eine nicht lineare Transformation anzuwenden.
 
-Beispielsweise kann es beim Spielen von spielen hilfreich sein, das Ergebnis zu verziften, um ein besseres Gefühl für den Einsatz der Autos mit einem Gamepad zu bieten. das Ergebnis bietet Ihnen mehr Genauigkeit in den unteren Bereichen, was wünschenswert ist, da Spieler in der Regel eine weiche Kraft anwenden, um eine feine Bewegung zu erzielen oder eine harte Kraft auf eine Richtung zu erhalten.
+Beispielsweise kann es beim Fahren von Spielen hilfreich sein, das Ergebnis zu würfeln, um das Autofahren mithilfe eines Gamepads besser zu gestalten, da das Cubing des Ergebnisses ihnen eine höhere Genauigkeit in den unteren Bereichen bietet. Dies ist wünschenswert, da Gamer in der Regel soft force anwenden, um eine dezente Bewegung zu erhalten, oder harte Kraft in einer Richtung anwenden, um rd-Antworten zu erhalten.
 
-### <a name="setting-vibration-effects"></a>Festlegen von Vibrations Effekten
+### <a name="setting-vibration-effects"></a>Festlegen von Schwingungseffekten
 
-Zusätzlich zum Status des Controllers können Sie auch Vibrations Daten an den Controller senden, um das Feedback für den Benutzer des Controllers zu ändern. Der Controller enthält zwei rauschende Motoren, die unabhängig voneinander gesteuert werden können, indem Werte an die Funktion " [**xinputsetstate**](/windows/desktop/api/XInput/nf-xinput-xinputsetstate) " übergeben werden.
+Zusätzlich zum Abrufen des Zustands des Controllers können Sie auch Schwingungsdaten an den Controller senden, um das Feedback zu ändern, das dem Benutzer des Controllers zur Verfügung gestellt wird. Der Controller enthält zwei Rumble-Schaltungen, die unabhängig gesteuert werden können, indem Werte an die [**XInputSetState-Funktion**](/windows/desktop/api/XInput/nf-xinput-xinputsetstate) übergeben werden.
 
-Die Geschwindigkeit der einzelnen Fahrzeuge kann mithilfe eines Wort Werts in der [**xinput- \_ Vibrations**](/windows/desktop/api/XInput/ns-xinput-xinput_vibration) Struktur angegeben werden, die wie folgt an die Funktion " [**xinputsetstate**](/windows/desktop/api/XInput/nf-xinput-xinputsetstate) " übermittelt wird:
+Die Geschwindigkeit jedes Motor kann mithilfe eines WORD-Werts in der [**XINPUT \_ VIBRATION-Struktur**](/windows/desktop/api/XInput/ns-xinput-xinput_vibration) angegeben werden, der wie folgt an die [**XInputSetState-Funktion**](/windows/desktop/api/XInput/nf-xinput-xinputsetstate) übergeben wird:
 
 ```cpp
 XINPUT_VIBRATION vibration;
@@ -165,16 +165,16 @@ vibration.wRightMotorSpeed = 16000; // use any value between 0-65535 here
 XInputSetState( i, &vibration );
 ```
 
-Beachten Sie, dass es sich bei dem richtigen Motor um den Hochleistungs-Motor handelt, der linke Motor ist der niedrige Häufigkeits Motor. Sie müssen nicht immer auf denselben Betrag festgelegt werden, da Sie unterschiedliche Effekte bieten.
+Beachten Sie, dass der rechte Motor der Hochfrequenz-Motor und der linke Motor der Motor mit niedriger Frequenz ist. Sie müssen nicht immer auf die gleiche Menge festgelegt werden, da sie unterschiedliche Auswirkungen haben.
 
-### <a name="getting-audio-device-identifiers"></a>Erhalten von audiogerätebezeichgern
+### <a name="getting-audio-device-identifiers"></a>Abrufen von Audiogerätebezeichnern
 
-Das Headset für einen Xbox-Controller verfügt über folgende Funktionen:
+Das Headset für einen Xbox Controller verfügt über die folgenden Funktionen:
 
--   Sound mithilfe eines Mikrofons aufzeichnen
--   Wiedergabe von Sound mit einem Telefon
+-   Aufzeichnen von Sound mithilfe eines Mikrofons
+-   Wiedergeben von Sound mithilfe eines Rauschens
 
-Verwenden Sie diesen Code zum Abrufen der Geräte Bezeichner für das Headset:
+Verwenden Sie diesen Code, um die Gerätebezeichner für das Headset abzurufen:
 
 ```cpp
 WCHAR renderId[ 256 ] = {0};
@@ -185,7 +185,7 @@ UINT ccount = 256;
 XInputGetAudioDeviceIds( i, renderId, &rcount, captureId, &ccount );
 ```
 
-Nachdem Sie die Geräte Bezeichner abgerufen haben, können Sie die entsprechenden Schnittstellen erstellen. Wenn Sie z. b. xaudio2,8 verwenden, verwenden Sie diesen Code, um eine Mastering-Stimme für dieses Gerät zu erstellen:
+Nachdem Sie die Gerätebezeichner erhalten haben, können Sie die entsprechenden Schnittstellen erstellen. Wenn Sie beispielsweise XAudio 2.8 verwenden, verwenden Sie diesen Code, um eine Masteringstimme für dieses Gerät zu erstellen:
 
 ```cpp
 IXAudio2* pXAudio2 = NULL;
@@ -198,16 +198,16 @@ if ( FAILED(hr = pXAudio2->CreateMasteringVoice( &pMasterVoice, XAUDIO2_DEFAULT_
     return hr;
 ```
 
-Informationen zur Verwendung des captureid-Geräte Bezeichners finden Sie unter [Erfassen eines Streams](/windows/desktop/CoreAudio/capturing-a-stream).
+Informationen zur Verwendung des CaptureId-Gerätebezeichners finden Sie unter [Erfassen eines Streams.](/windows/desktop/CoreAudio/capturing-a-stream)
 
-### <a name="getting-directsound-guids-legacy-directx-sdk-only"></a>Erhalten von DirectSound-GUIDs (nur Legacy-DirectX SDK)
+### <a name="getting-directsound-guids-legacy-directx-sdk-only"></a>Abrufen von DirectSound-GUIDs (nur Legacy-DirectX SDK)
 
-Das Headset, das mit einem Xbox-Controller verbunden werden kann, verfügt über zwei Funktionen: er kann Sound mithilfe eines Mikrofons aufzeichnen und Sound mit einem Telefon abspielen. In der xinput-API werden diese Funktionen mithilfe von [DirectSound](/previous-versions/windows/desktop/ee416960(v=vs.85))mithilfe der **IDirectSound8** -und **IDirectSoundCapture8** -Schnittstellen erreicht.
+Das Headset, das mit einem Xbox Controller verbunden werden kann, verfügt über zwei Funktionen: Es kann Sound mithilfe eines Mikrofons aufzeichnen und sound mithilfe eines Sprechgeräts wiedergeben. In der XInput-API werden diese Funktionen über [DirectSound](/previous-versions/windows/desktop/ee416960(v=vs.85))mithilfe der Schnittstellen **IDirectSound8** und **IDirectSoundCapture8** ausgeführt.
 
-Um dem Headset-Mikrofon und dem Telefon den entsprechenden [DirectSound](/previous-versions/windows/desktop/ee416960(v=vs.85)) -Schnittstellen zuzuordnen, müssen Sie die directsoundguids für die Erfassungs-und Rendering-Geräte abrufen, indem Sie " [**xinputgetdsoundaudiodeviceguids**](/windows/desktop/api/XInput/nf-xinput-xinputgetdsoundaudiodeviceguids)" aufrufen.
+Um das Mikrofon und die Mikrofone des Headsets den entsprechenden [DirectSound-Schnittstellen](/previous-versions/windows/desktop/ee416960(v=vs.85)) zuzuordnen, müssen Sie die DirectSoundGUIDs für die Erfassungs- und Rendergeräte abrufen, indem Sie [**XInputGetDSoundAudioDeviceGuids**](/windows/desktop/api/XInput/nf-xinput-xinputgetdsoundaudiodeviceguids)aufrufen.
 
 > [!Note]  
-> Die Verwendung des Legacy- [directsounds](/previous-versions/windows/desktop/ee416960(v=vs.85)) wird nicht empfohlen und ist in Windows Store-Apps nicht verfügbar. Die Informationen in diesem Abschnitt gelten nur für die DirectX SDK-Version von xinput (xinput 1,3). Die Windows 8-Version von xinput (xinput 1,4) verwendet exklusiv die von " [**xinputgetaudiodeviceids**](/windows/desktop/api/XInput/nf-xinput-xinputgetaudiodeviceids)" erhaltenen Geräte Bezeichner der Windows-audiositzungsapi (WASAPI).
+> Die Verwendung des [Legacy-DirectSound](/previous-versions/windows/desktop/ee416960(v=vs.85)) wird nicht empfohlen und ist in Windows Store-Apps nicht verfügbar. Die Informationen in diesem Abschnitt gelten nur für die DirectX SDK-Version von XInput (XInput 1.3). Die Windows 8 Version von XInput (XInput 1.4) verwendet ausschließlich Windows WASAPI-Gerätebezeichner (Audio Session API), die über [**XInputGetAudioDeviceIds**](/windows/desktop/api/XInput/nf-xinput-xinputgetaudiodeviceids)abgerufen werden.
 
 ```cpp
 XInputGetDSoundAudioDeviceGuids( i, &dsRenderGuid, &dsCaptureGuid );

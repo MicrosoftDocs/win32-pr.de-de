@@ -1,67 +1,67 @@
 ---
 title: Verwenden des Taskplaner
-description: Dieser Abschnitt enthält Codebeispiele, die veranschaulichen, wie die Taskplaner-API verwendet wird, und XML-Beispiele, die zeigen, wie Aufgaben im Taskplaner Schema definiert werden.
+description: Dieser Abschnitt enthält Codebeispiele, die veranschaulichen, wie die Taskplaner-API verwendet wird, sowie XML-Beispiele, die veranschaulichen, wie Aufgaben im Taskplaner werden.
 ms.assetid: 6346cbd3-b584-47b4-8313-7830f7fd77b3
 keywords:
-- Trigger Taskplaner, Beispiele
-- Starten einer Aufgabe Taskplaner
-- Erstellen von Aufgaben Taskplaner
+- Trigger Taskplaner , Beispiele
+- Starten einer Taskplaner
+- Erstellen von Taskplaner
 - Taskplaner Taskplaner mit
-- Taskplaner Beispiele Taskplaner
-- Taskplaner Taskplaner finden Sie in den Beispielen Taskplaner Beispiele Taskplaner
-- Beispiele Taskplaner finden Sie Taskplaner Beispiele Taskplaner
+- Taskplaner beispiele Taskplaner
+- Taskplaner Taskplaner finden Sie in den Beispielen Taskplaner Beispielen Taskplaner
+- Beispiele Taskplaner Siehe Taskplaner Beispiele Taskplaner
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f81dda9551917b8f6345248a316bd5941de53f0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d4ba0c50a918f6c90d48eb1603bf42ec1336f7eae9ec5696b7627dd7d06cbeaf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001888"
 ---
 # <a name="using-the-task-scheduler"></a>Verwenden des Taskplaner
 
-Dieser Abschnitt enthält Codebeispiele, die veranschaulichen, wie die Taskplaner-API verwendet wird, und XML-Beispiele, die zeigen, wie Aufgaben im Taskplaner Schema definiert werden. Die meisten dieser Beispiele sind eigenständige Codes, die unabhängig ausgeführt werden können oder in eine größere Anwendung eingefügt und an die Anforderungen der Anwendung angepasst werden können.
+Dieser Abschnitt enthält Codebeispiele, die veranschaulichen, wie die Taskplaner-API verwendet wird, sowie XML-Beispiele, die veranschaulichen, wie Aufgaben im Taskplaner werden. Bei den meisten dieser Beispiele handelt es sich um eigenständigen Code, der unabhängig ausgeführt oder in eine größere Anwendung verwendet und an die Anforderungen der Anwendung angepasst werden kann.
 
-In der folgenden Tabelle sind die Taskplaner 2,0-Beispiele in diesem Abschnitt aufgeführt.
+In der folgenden Tabelle sind Taskplaner 2.0-Beispiele aufgeführt, die in diesem Abschnitt enthalten sind.
 
 
 
 | Beispiel                                                                                                    | BESCHREIBUNG                                                                            |
 |------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| [Starten einer ausführbaren Datei zu einem bestimmten Zeitpunkt](starting-an-executable-at-a-spcific-time.md)                  | Definiert einen Task, der den Editor zu einem angegebenen Zeitpunkt startet.                                |
-| [Täglich eine ausführbare Datei starten](starting-an-executable-daily.md)                                           | Definiert eine Aufgabe, die täglich mit Notepad startet.                                              |
-| [Starten einer ausführbaren Datei beim System Start](starting-an-executable-on-system-boot.md)                         | Definiert einen Task, der den Editor startet, wenn das System gestartet wird.                          |
-| [Wöchentliches Starten einer ausführbaren Datei](starting-an-executable-weekly.md)                                         | Definiert einen Task, der den Notepad wöchentlich startet.                                  |
-| [Starten einer ausführbaren Datei, wenn eine Aufgabe registriert ist](starting-an-executable-when-a-task-is-registered.md)   | Definiert einen Task, der den Editor startet, wenn der Task registriert wird.                        |
-| [Starten einer ausführbaren Datei, wenn sich ein Benutzer anmeldet](starting-an-executable-when-a-user-logs-on.md)               | Definiert einen Task, der den Editor startet, wenn sich ein Benutzer anmeldet.                                |
-| [Auflisten von Aufgaben und Anzeigen von Aufgabeninformationen](enumerating-tasks-and-displaying-task-information.md) | Listet alle Tasks auf dem lokalen Computer auf und zeigt den Zustand jeder Aufgabe an. |
+| [Starten einer ausführbaren Datei zu einem bestimmten Zeitpunkt](starting-an-executable-at-a-spcific-time.md)                  | Definiert eine Aufgabe, die Editor zu einem angegebenen Zeitpunkt startet.                                |
+| [Tägliches Starten einer ausführbaren Datei](starting-an-executable-daily.md)                                           | Definiert eine Aufgabe, die täglich Editor startet.                                              |
+| [Starten einer ausführbaren Datei beim Systemstart](starting-an-executable-on-system-boot.md)                         | Definiert eine Aufgabe, die Editor beim Systemstart gestartet wird.                          |
+| [Wöchentliches Starten einer ausführbaren Datei](starting-an-executable-weekly.md)                                         | Definiert eine Aufgabe, die Editor wöchentlich startet.                                  |
+| [Starten einer ausführbaren Datei, wenn ein Task registriert ist](starting-an-executable-when-a-task-is-registered.md)   | Definiert eine Aufgabe, die Editor, wenn der Task registriert wird.                        |
+| [Starten einer ausführbaren Datei, wenn sich ein Benutzer anmeldet](starting-an-executable-when-a-user-logs-on.md)               | Definiert eine Aufgabe, die Editor, wenn sich ein Benutzer anmeldet.                                |
+| [Aufzählen von Aufgaben und Anzeigen von Aufgabeninformationen](enumerating-tasks-and-displaying-task-information.md) | Listet alle Aufgaben auf dem lokalen Computer auf und zeigt den Status der einzelnen Tasks an. |
 
 
 
- 
+ 
 
-In der folgenden Tabelle sind die Taskplaner 1,0-Beispiele in diesem Abschnitt aufgeführt. 
+In der folgenden Tabelle sind Taskplaner 1.0-Beispiele aufgeführt, die in diesem Abschnitt enthalten sind. 
 
 | Beispiel                                                                                    | BESCHREIBUNG                                                                                   |
 |--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| [Erstellen einer Aufgabe mit NewWorkItem-Beispiel](creating-a-task-using-newworkitem-example.md) | Erstellt eine neue Aufgabe.                                                                           |
-| [Beispiel für Aufzählung von Aufgaben](enumerating-tasks-example.md)                                 | Listet alle Tasks auf dem lokalen Computer auf.                                               |
-| [Beispiel für das Starten einer Aufgabe](starting-a-task-example.md)                                     | Startet eine bekannte Aufgabe.                                                                          |
-| [Bearbeiten eines Arbeits Elements mithilfe von Eigenschaften Seiten](editing-a-work-item-using-property-pages.md)   | Zeigt die Eigenschaften Seiten einer Aufgabe zum Bearbeiten an.                                            |
-| [Abrufen von Beispielen für Arbeits Element Eigenschaften](retrieving-work-item-property-examples.md)       | Eine Reihe von Beispielen, die zeigen, wie Eigenschaften abgerufen werden, die für alle Typen von Arbeitsaufgaben gelten. |
-| [Festlegen von Beispielen für Arbeits Element Eigenschaften](setting-work-item-property-examples.md)             | Eine Reihe von Beispielen, die zeigen, wie Eigenschaften festgelegt werden, die für alle Typen von Arbeitsaufgaben gelten.      |
-| [Abrufen von Aufgaben Eigenschafts Beispielen](retrieving-task-property-examples.md)                 | Eine Reihe von Beispielen, die zeigen, wie Eigenschaften abgerufen werden, die für Aufgaben eindeutig sind.                       |
-| [Festlegen von Aufgaben Eigenschafts Beispielen](setting-task-property-examples.md)                       | Eine Reihe von Beispielen, die zeigen, wie Eigenschaften festgelegt werden, die für Aufgaben eindeutig sind.                            |
-| [Abrufen einer Aufgabenseite (Beispiel)](retrieving-a-task-page-example.md)                       | Ruft die Seite "allgemeine Aufgabe" einer bekannten Aufgabe ab und zeigt diese an.                                 |
-| [Erstellen eines neuen-Auslösers](creating-a-new-trigger.md)                                       | Erstellt einen neuen-Auslösers für eine bekannte Aufgabe.                                                       |
-| [Erstellen eines Beispiels für einen Leerlauf-Timeout](creating-an-idle-trigger-example.md)                   | Erstellt einen ereignisbasierten Leerlauf--Auslösers für eine bekannte Aufgabe.                                         |
-| [Beispiel für das Beenden einer Aufgabe](terminating-a-task-example.md)                               | Beendet eine Aufgabe, während Sie ausgeführt wird.                                                        |
-| [Beispiel für das Abrufen von Beispiel Zeichen folgen](retrieving-trigger-strings-example.md)               | Ruft die triggerzeichenfolge aller mit einer bekannten Aufgabe verknüpften Trigger ab.                    |
+| [Erstellen einer Aufgabe mithilfe eines NewWorkItem-Beispiels](creating-a-task-using-newworkitem-example.md) | Erstellt eine neue Aufgabe.                                                                           |
+| [Beispiel für das Aufzählen von Aufgaben](enumerating-tasks-example.md)                                 | Enumeriert alle Aufgaben auf dem lokalen Computer.                                               |
+| [Beispiel zum Starten einer Aufgabe](starting-a-task-example.md)                                     | Startet eine bekannte Aufgabe.                                                                          |
+| [Bearbeiten eines Arbeitselements mithilfe von Eigenschaftenseiten](editing-a-work-item-using-property-pages.md)   | Zeigt die Eigenschaftenseiten einer Aufgabe zur Bearbeitung an.                                            |
+| [Beispiele für das Abrufen von Arbeitselementeigenschaft](retrieving-work-item-property-examples.md)       | Eine Reihe von Beispielen, die zeigen, wie Eigenschaften abgerufen werden, die für alle Typen von Arbeitselementen gelten. |
+| [Beispiele für das Festlegen von Arbeitselementeigenschaft](setting-work-item-property-examples.md)             | Eine Reihe von Beispielen, die zeigen, wie Eigenschaften festgelegt werden, die für alle Typen von Arbeitselementen gelten.      |
+| [Beispiele für das Abrufen von Aufgabeneigenschaft](retrieving-task-property-examples.md)                 | Eine Reihe von Beispielen, die zeigen, wie Eigenschaften abgerufen werden, die für Tasks eindeutig sind.                       |
+| [Festlegen von Aufgabeneigenschaftsbeispielen](setting-task-property-examples.md)                       | Eine Reihe von Beispielen, die zeigen, wie Eigenschaften festgelegt werden, die für Aufgaben eindeutig sind.                            |
+| [Beispiel für das Abrufen einer Aufgabenseite](retrieving-a-task-page-example.md)                       | Ruft die allgemeine Aufgabenseite einer bekannten Aufgabe ab und zeigt sie an.                                 |
+| [Erstellen eines neuen Triggers](creating-a-new-trigger.md)                                       | Erstellt einen neuen Trigger für eine bekannte Aufgabe.                                                       |
+| [Beispiel zum Erstellen eines Leerlauftriggers](creating-an-idle-trigger-example.md)                   | Erstellt einen ereignisbasierten Leerlauftrigger für eine bekannte Aufgabe.                                         |
+| [Beenden eines Taskbeispiels](terminating-a-task-example.md)                               | Beendet einen Task, während er ausgeführt wird.                                                        |
+| [Beispiel zum Abrufen von Triggerzeichenfolgen](retrieving-trigger-strings-example.md)               | Ruft die Triggerzeichenfolge aller Trigger ab, die einer bekannten Aufgabe zugeordnet sind.                    |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -73,9 +73,9 @@ In der folgenden Tabelle sind die Taskplaner 1,0-Beispiele in diesem Abschnitt a
 [Informationen zum Taskplaner](about-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

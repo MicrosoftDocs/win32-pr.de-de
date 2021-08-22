@@ -1,29 +1,29 @@
 ---
-description: Das erkenzercontext-Objekt definiert die Einstellungen für einen einzelnen Erkennungs Kontext. Er empfängt die frei Hand Eingaben, definiert die Einschränkungen für die frei Hand Eingabe und die Erkennungs Ausgabe und kann auf Erkennungsergebnisse abgefragt werden.
+description: Das RecognizerContext-Objekt definiert die Einstellungen für einen einzelnen Recognizer-Kontext. Er empfängt die zu erkennende Ink, definiert die Einschränkungen für die Eingabe der Ink-Eingabe und die Erkennungsausgabe und kann nach Erkennungsergebnissen abgefragt werden.
 ms.assetid: 31fceafc-554c-4c93-8741-eb2d1b0d8b18
-title: Erkennungs Kontext
+title: Kontext der Wiedererkennung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a5a165eddab272c87ab73412fe9cc51d3a6c6ee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7e8b7ffc3b88968a4a349980de4d160a83374194dcae23d74e8a2c112651f44
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352537"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119031628"
 ---
-# <a name="recognizer-context"></a>Erkennungs Kontext
+# <a name="recognizer-context"></a>Kontext der Wiedererkennung
 
-Das [**erkenzercontext**](inkrecognizercontext-class.md) -Objekt definiert die Einstellungen für einen einzelnen Erkennungs Kontext. Er empfängt die frei Hand Eingaben, definiert die Einschränkungen für die frei Hand Eingabe und die Erkennungs Ausgabe und kann auf Erkennungsergebnisse abgefragt werden.
+Das [**RecognizerContext-Objekt**](inkrecognizercontext-class.md) definiert die Einstellungen für einen einzelnen Recognizer-Kontext. Er empfängt die zu erkennende Ink, definiert die Einschränkungen für die Eingabe der Ink-Eingabe und die Erkennungsausgabe und kann nach Erkennungsergebnissen abgefragt werden.
 
-Weitere Informationen zu frei Hand Daten finden Sie unter frei Hand [Daten](ink-data.md). Weitere Informationen zur Freihand Auflistung finden Sie unter [Ink Collection](ink-collection.md).
+Weitere Informationen zu Ink-Daten finden Sie unter [Ink Data](ink-data.md). Weitere Informationen zur Ink-Sammlung finden Sie unter [Ink Collection](ink-collection.md).
 
-Einschränkungen, die Sie für die Eingabe-und Erkennungs Ausgabe des [**erkenzercontext**](inkrecognizercontext-class.md) -Objekts festlegen können, sind:
+Einschränkungen, die Sie für die Eingabe und Erkennungsausgabe von Ink des [**RecognizerContext-Objekts**](inkrecognizercontext-class.md) festlegen können, sind:
 
--   Die erkannte oder zurückgegebene Sprache
--   Das verwendete Wörterbuch.
--   Faktoide
+-   Die Sprache, die erkannt oder zurückgegeben wird.
+-   Das verwendete Wörterbuch
+-   Factoids
 
-Weitere Informationen zu Einschränkungen, die Sie für das [**erkenzercontext**](inkrecognizercontext-class.md) -Objekt festlegen können, finden Sie unter [Wörterbücher und Faktoide](dictionaries-and-factoids.md).
+Weitere Informationen zu Einschränkungen, die Sie für das [**RecognizerContext-Objekt**](inkrecognizercontext-class.md) festlegen können, finden Sie unter [Wörterbücher und Factoids](dictionaries-and-factoids.md).
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Enthält den aktuellen Signal Generierungs Status einer PIN.
+description: Enthält den aktuellen Signalgenerierungsstatus eines Pins.
 ms.assetid: 07D76F8D-C5B5-4500-BFA2-452989868027
-title: PWM_PIN_IS_STARTED_OUTPUT Struktur (PWM. h)
+title: PWM_PIN_IS_STARTED_OUTPUT -Struktur (Pwm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - Pwm.h
-ms.openlocfilehash: 11350c3bb0fbec0f05ab3153c339f8fa30baeed5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 448b38e66b7cfb4bf7e24c5d3b7658d0e38ccb8a5ca8c95e1155129737087c68
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106339678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076184"
 ---
-# <a name="pwm_pin_is_started_output-structure"></a>PWM- \_ Pin \_ wird gestartet- \_ \_ Ausgabestruktur
+# <a name="pwm_pin_is_started_output-structure"></a>PWM \_ PIN IS STARTED \_ \_ \_ OUTPUT-Struktur
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Enthält den aktuellen Signal Generierungs Status einer PIN.
+Enthält den aktuellen Signalgenerierungsstatus eines Pins.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ typedef struct _PWM_PIN_IS_STARTED_OUTPUT {
 
 <dl> <dt>
 
-**IsStarted**
+**Isstarted**
 </dt> <dd>
 
-Der Status der aktuellen Signalgenerierung der PIN. Der Wert true bedeutet, dass die PIN gestartet wird. Der Wert false bedeutet, dass die PIN angehalten wurde.
+Der Aktuelle Signalgenerierungszustand anheften. Der Wert true bedeutet, dass die Stecknadel gestartet wird. Der Wert false bedeutet, dass die Stecknadel beendet wird.
 
 </dd> </dl>
 
@@ -54,11 +54,11 @@ Der Status der aktuellen Signalgenerierung der PIN. Der Wert true bedeutet, dass
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                             |
 | KMDF-Mindestversion<br/>     | 1.19<br/>                                                                                  |
 | UMDF-Mindestversion<br/>     | 2.19<br/>                                                                                  |
-| Header<br/>                   | <dl> <dt>PWM. h (Include PWM. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Pwm.h (einschließlich Pwm.h)</dt> </dl> |
 
 
 
@@ -66,7 +66,7 @@ Der Status der aktuellen Signalgenerierung der PIN. Der Wert true bedeutet, dass
 
 <dl> <dt>
 
-[**IOCTL \_ PWM- \_ PIN wurde \_ \_ gestartet.**](https://www.bing.com/search?q=**IOCTL\_PWM\_PIN\_IS\_STARTED**)
+[**IOCTL \_ PWM \_ PIN WIRD \_ \_ GESTARTET**](https://www.bing.com/search?q=**IOCTL\_PWM\_PIN\_IS\_STARTED**)
 </dt> </dl>
 
  

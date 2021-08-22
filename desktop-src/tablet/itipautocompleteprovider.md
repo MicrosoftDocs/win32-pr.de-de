@@ -1,7 +1,7 @@
 ---
-description: Verwaltet die Seite der Anwendung der automatischen vollständigen Integration des Text Eingabe Bereichs.
+description: Verwaltet die Anwendungsseite der automatischen Integration des Texteingabebereichs.
 ms.assetid: 02601258-d867-4c01-b094-bf9ff96d2f6e
-title: Itipauescompleteprovider-Schnittstelle (tipauabcomplete. h)
+title: ITipAutocompleteProvider-Schnittstelle (TipAutoComplete.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,33 +13,33 @@ api_type:
 - COM
 api_location:
 - tiptsf.dll
-ms.openlocfilehash: 3c300e2724ccabbc8388ef647f8f0145531cfc8d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 66c1e38c419e7eb37745864b447249d55b384b6c832293bd3fab4d0cc171e0fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355440"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119031868"
 ---
-# <a name="itipautocompleteprovider-interface"></a>Itipauescompleteprovider-Schnittstelle
+# <a name="itipautocompleteprovider-interface"></a>ITipAutocompleteProvider-Schnittstelle
 
-Verwaltet die Seite der Anwendung der automatischen vollständigen Integration des Text Eingabe Bereichs.
+Verwaltet die Anwendungsseite der automatischen Integration des Texteingabebereichs.
 
 ## <a name="members"></a>Member
 
-Die **itipauescompleteprovider** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Itipautocompleteprovider** verfügt auch über die folgenden Typen von Membern:
+Die **ITipAutocompleteProvider-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ITipAutocompleteProvider** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **itipaudecompleteprovider** -Schnittstelle verfügt über diese Methoden.
+Die **ITipAutocompleteProvider-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                  | BESCHREIBUNG                                                                                                          |
+| Methode                                                                  | Beschreibung                                                                                                          |
 |:------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------|
-| [**Auftritt**](itipautocompleteprovider-show.md)                           | Hiermit wird die Liste der Auto Vervollständigen angezeigt oder ausgeblendet.<br/>                                                                 |
-| [**Updatepzudingtext**](itipautocompleteprovider-updatependingtext.md) | Wird vom Auto Vervollständigen-Client verwendet, um die Anwendung über den Text zu benachrichtigen, den ein Benutzer in den Eingabebereich eingegeben hat.<br/> |
+| [**Zeigen**](itipautocompleteprovider-show.md)                           | Zeigt die Liste der automatischen Vervollstehungen an oder blendet sie aus.<br/>                                                                 |
+| [**UpdatePendingText**](itipautocompleteprovider-updatependingtext.md) | Wird vom AutoVervollständigen-Client verwendet, um die Anwendung über den Text zu benachrichtigen, den ein Benutzer in den Eingabebereich eingegeben hat.<br/> |
 
 
 
@@ -51,9 +51,9 @@ Die **itipaudecompleteprovider** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                                       |
-| Header<br/>                   | <dl> <dt>Tipautocomplete. h (erfordert auch "pinputpanel \_ i. c")</dt> </dl> |
+| Header<br/>                   | <dl> <dt>TipAutoComplete.h (erfordert auch Peninputpanel \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Tiptsf.dll</dt> </dl>                                           |
 
 
@@ -62,10 +62,10 @@ Die **itipaudecompleteprovider** -Schnittstelle verfügt über diese Methoden.
 
 <dl> <dt>
 
-[Verweis auf Text Eingabe Panel](text-input-panel-reference.md)
+[Referenz zum Texteingabebereich](text-input-panel-reference.md)
 </dt> <dt>
 
-[**Itipauwebcompleteclient-Schnittstelle**](itipautocompleteclient.md)
+[**ITipAutocompleteClient-Schnittstelle**](itipautocompleteclient.md)
 </dt> </dl>
 
  

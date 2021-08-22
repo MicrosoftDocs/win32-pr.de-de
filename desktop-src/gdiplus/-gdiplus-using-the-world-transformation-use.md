@@ -1,21 +1,21 @@
 ---
-description: Die Welt Transformation ist eine Eigenschaft der Grafikklasse.
+description: Die Welttransformation ist eine Eigenschaft der Graphics-Klasse.
 ms.assetid: 22f43b29-ea7b-4faf-9795-2242bf704ed3
 title: Verwenden der globalen Transformation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2138df1bbd2be6d3329695fc6898da49da93b3b4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b6288b5640e330a827e96b632541dac44e9463b87c566c16a94797810c4c92c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214566"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118977240"
 ---
 # <a name="using-the-world-transformation"></a>Verwenden der globalen Transformation
 
-Die Welt Transformation ist eine Eigenschaft der [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse. Die Zahlen, die die globale Transformation angeben, werden in einem [**Matrix**](/windows/desktop/api/gdiplusmatrix/nl-gdiplusmatrix-matrix) Objekt gespeichert, das eine 3 × 3-Matrix darstellt. Die **Matrix** -und **Grafik** Klassen verfügen über mehrere Methoden zum Festlegen der Zahlen in der Transformations Matrix der Welt. Die Beispiele in diesem Abschnitt manipulieren Rechtecke, da Rechtecke leicht gezeichnet werden können, und es ist leicht, die Auswirkungen von Transformationen auf Rechtecke anzuzeigen.
+Die Welttransformation ist eine Eigenschaft der [**Graphics-Klasse.**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Die Zahlen, die die Welttransformation angeben, werden in einem [**Matrix-Objekt**](/windows/desktop/api/gdiplusmatrix/nl-gdiplusmatrix-matrix) gespeichert, das eine 3-×3-Matrix darstellt. Die **Klassen Matrix** und **Graphics** verfügen über mehrere Methoden zum Festlegen der Zahlen in der Welttransformationsmatrix. In den Beispielen in diesem Abschnitt werden Rechtecke bearbeitet, da Rechtecke einfach zu zeichnen sind und die Auswirkungen von Transformationen auf Rechtecke leicht zu erkennen sind.
 
-Wir beginnen mit dem Erstellen eines 50 nach 50-Rechtecks und der Suche am Ursprung (0,0). Der Ursprung befindet sich in der oberen linken Ecke des Client Bereichs.
+Wir beginnen mit dem Erstellen eines Rechtecks von 50 durch 50 und dem Suchen am Ursprung (0, 0). Der Ursprung befindet sich in der oberen linken Ecke des Clientbereichs.
 
 
 ```
@@ -26,7 +26,7 @@ graphics.DrawRectangle(&pen, rect);
 
 
 
-Der folgende Code wendet eine Skalierungs Transformation an, die das Rechteck um den Faktor 1,75 in der x-Richtung erweitert und das Rechteck um den Faktor 0,5 in der y-Richtung verkleinert:
+Der folgende Code wendet eine Skalierungstransformation an, die das Rechteck um den Faktor 1,75 in x-Richtung erweitert und das Rechteck um den Faktor 0,5 in y-Richtung verkleinert:
 
 
 ```
@@ -38,9 +38,9 @@ graphics.DrawRectangle(&pen, rect);
 
 
 
-Das Ergebnis ist ein Rechteck, das in der x-Richtung länger und kürzer in der y-Richtung als die ursprüngliche ist.
+Das Ergebnis ist ein Rechteck, das länger in x-Richtung und kürzer in y-Richtung als das Original ist.
 
-Um das Rechteck zu drehen, anstatt es zu skalieren, verwenden Sie den folgenden Code anstelle des vorangehenden Codes:
+Verwenden Sie anstelle des vorangehenden Codes den folgenden Code, um das Rechteck zu drehen, anstatt es zu skalieren:
 
 
 ```

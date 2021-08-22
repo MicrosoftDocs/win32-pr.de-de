@@ -1,5 +1,5 @@
 ---
-description: Gibt an, dass ein Intelligent Platform Management Interface (IPMI)-System Ereignis aufgetreten ist. Der Fehler wird in das SMBIOS-System Ereignisprotokoll (SEL) geschrieben. Diese Klasse ist nur in 64-Bit-Windows-Systemen verfügbar.
+description: Gibt an, dass ein Systemereignis der intelligenten Plattformverwaltungsschnittstelle (Intelligent Platform Management Interface, IPMI) aufgetreten ist. Der Fehler wird in das SMBIOS-Systemereignisprotokoll (SEL) geschrieben. Diese Klasse ist nur in 64-Bit-Systemen Windows verfügbar.
 ms.assetid: 1964f850-ac55-4639-9205-2eb0996dbaae
 title: MSMCAEvent_SystemEventError-Klasse
 ms.topic: reference
@@ -35,18 +35,18 @@ api_type:
 - DllExport
 api_location:
 - Wmiprov.dll
-ms.openlocfilehash: f20f95fb5e1b1bf07b0f70c25d54122642b13569
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4ff5d05cb1b9db7430f2f91a0f2a5ad3a97a56557c3fc5ae832eecc85d13128c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362629"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051248"
 ---
-# <a name="msmcaevent_systemeventerror-class"></a>Msmcaevent \_ systemeventerror-Klasse
+# <a name="msmcaevent_systemeventerror-class"></a>MSMCAEvent \_ SystemEventError-Klasse
 
-Die **msmcaevent \_ systemeventerror** -Klasse gibt an, dass ein Management Interface (IPMI)-System Ereignis aufgetreten ist. Der Fehler wird in das SMBIOS-System Ereignisprotokoll (SEL) geschrieben. Diese Klasse ist nur in 64-Bit-Windows-Systemen verfügbar.
+Die **MSMCAEvent \_ SystemEventError-Klasse** gibt an, dass ein Systemereignis der intelligenten Plattformverwaltungsschnittstelle (Intelligent Platform Management Interface, IPMI) aufgetreten ist. Der Fehler wird in das SMBIOS-Systemereignisprotokoll (SEL) geschrieben. Diese Klasse ist nur in 64-Bit-Systemen Windows verfügbar.
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -80,33 +80,33 @@ class MSMCAEvent_SystemEventError : WMIEvent
 
 ## <a name="members"></a>Member
 
-Die **msmcaevent \_ systemeventerror** -Klasse verfügt über diese Typen von Membern:
+Die **MSMCAEvent \_ SystemEventError-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **msmcaevent \_ systemeventerror** -Klasse verfügt über diese Eigenschaften.
+Die **MSMCAEvent \_ SystemEventError-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Aktiv**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True**, wenn diese Instanz der-Klasse aktiv ist. andernfalls **false**.
+**TRUE**, wenn diese Instanz der -Klasse aktiv ist; andernfalls **FALSE**.
 
 </dd> <dt>
 
-**Additionalerrors**
+**AdditionalErrors**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -116,37 +116,37 @@ Anzahl zusätzlicher Fehler im Datensatz.
 
 </dd> <dt>
 
-**CPU**
+**Cpu**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-CPU, die den Fehler gemeldet hat. Diese Eigenschaft gilt nur für ein Multiprozessorsystem, dem dem ersten Prozessor die Zahl 0 zugewiesen ist, dem zweiten Prozessor die Zahl 1 zugewiesen wird usw.
+CPU, die den Fehler gemeldet hat. Diese Eigenschaft gilt nur für ein Multiprozessorsystem, in dem dem ersten Prozessor die Zahl 0, dem zweiten Prozessor die Zahl 1 zugewiesen wird, und so weiter.
 
 </dd> <dt>
 
-**Errorschwere Grad**
+**ErrorSeverity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Schweregrad des gemeldeten Fehlers.
+Schweregrad des gemeldeten Fehlers.
 
 
 
 | Wert                                                                                                | Bedeutung                |
 |------------------------------------------------------------------------------------------------------|------------------------|
 | <span id="0"></span><dl> <dt>**0**</dt> </dl> | Wiederherstellbar<br/> |
-| <span id="1"></span><dl> <dt>**1**</dt> </dl> | FAT<br/>       |
-| <span id="2"></span><dl> <dt>**2**</dt> </dl> | KORRIGIER barer<br/> |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Schwerwiegend<br/>       |
+| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Korrigierbar<br/> |
 
 
 
@@ -157,7 +157,7 @@ Der Schweregrad des gemeldeten Fehlers.
 **InstanceName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -166,146 +166,146 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Eindeutiger Bezeichner dieser Instanz der Klasse.
+Eindeutiger Bezeichner dieser Instanz der -Klasse.
 
 </dd> <dt>
 
-**Logtoeventlog**
+**LogToEventlog**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn 0 (null) ist, wird dieses Ereignis nicht im System Ereignisprotokoll protokolliert.
+Bei 0 (null) wird dieses Ereignis nicht im Systemereignisprotokoll protokolliert.
 
 </dd> <dt>
 
-**Rawrecord**
+**RawRecord**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Bytearray, das den unformatierten Fehler Daten Satz enthält. Die Anzahl von Elementen im Array, die von der **size** -Eigenschaft angegeben wird.
+Ein Bytearray, das den unformatten Fehlerdatensatz enthält. Die Anzahl der Elemente im Array, die von der **Size-Eigenschaft** angegeben werden.
 
 </dd> <dt>
 
-**Datensatz**
+**Recordid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Datensatz-ID des Fehler Datensatzes für diesen Fehler.
+Datensatzbezeichner des Fehlerdatensatz für diesen Fehler.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
-**SEL \_ data1**
+**SEL \_ DATA1**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ereignisdaten Feld 1.
+Ereignisdatenfeld 1.
 
 </dd> <dt>
 
-**SEL \_ data2**
+**SEL \_ DATA2**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ereignisdaten Feld 2.
+Ereignisdatenfeld 2.
 
 </dd> <dt>
 
-**SEL \_ data3**
+**SEL \_ DATA3**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ereignisdaten Feld 3.
+Ereignisdatenfeld 3.
 
 </dd> <dt>
 
-**SEL- \_ Ereignis \_ dir- \_ Typ**
+**SEL \_ EVENT \_ DIR \_ TYPE**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Ereignis Verzeichnistyp.
+Ereignisverzeichnistyp.
 
 </dd> <dt>
 
-**SEL \_ EVM \_ Rev**
+**SEL \_ EVM \_ REV**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Format Version der Fehlermeldung.
+Formatversion der Fehlermeldung.
 
 </dd> <dt>
 
-**SEL \_ Generator- \_ ID**
+**\_ \_ SEL-GENERATOR-ID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Software Bezeichner, wenn das Ereignis Software generiert wurde.
+Softwarebezeichner, wenn das Ereignis softwaregenerierte wurde.
 
 </dd> <dt>
 
-**SEL- \_ Datensatz- \_ ID**
+**SEL \_ RECORD \_ ID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Datensatz-ID für den Zugriff auf das SMBIOS-System Ereignisprotokoll (SEL).
+Datensatzbezeichner, der für den ZUGRIFF auf das SMBIOS-Systemereignisprotokoll (SEL) verwendet wird.
 
 </dd> <dt>
 
-**SEL- \_ Daten Satz \_ Typen**
+**SEL \_ RECORD \_ TYPE**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -315,110 +315,110 @@ Der Datensatztyp.
 
 </dd> <dt>
 
-**SEL- \_ Sensor \_ NUM**
+**SEL \_ SENSOR \_ NUM**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Sensor Nummer, die das Ereignis generiert hat.
+Sensornummer, die das Ereignis generiert hat.
 
 </dd> <dt>
 
-**SEL \_ - \_ Sensortyp**
+**\_ \_ SEL-SENSORTYP**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Sensortyp Code des Sensors, der das Ereignis generiert hat.
+Sensortypcode des Sensors, der das Ereignis generiert hat.
 
 </dd> <dt>
 
-**SEL- \_ Zeit \_ Stempel**
+**\_ \_ SEL-ZEITSTEMPEL**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zeitstempel des Ereignis Protokolls.
+Zeitstempel des Ereignisprotokolls.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
 **Größe**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Größe des unformatierten Fehler Datensatzes.
+Größe des unformatten Fehlerdatensatz.
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ der Ereignisprotokoll Meldung. Diese Meldungen entsprechen den Ereignisprotokoll-Nachrichten Codes, die zum Einfügen von Ereignisprotokoll Meldungen vom Windows-Ereignisprotokoll-Consumeranbieter verwendet werden, wenn ein Ereignis empfangen wird.
+Typ der Ereignisprotokollmeldung. Diese Nachrichten entsprechen den Ereignisprotokoll-Nachrichtencodes, die zum Einfügen von Ereignisprotokollmeldungen durch den Windows-Ereignisprotokoll-Consumeranbieter verwendet werden, wenn er eines der Ereignisse empfängt.
 
 </dd> <dt>
 
-**Validierungs \_ Bits**
+**\_VALIDIERUNGSBITS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Validierungs Bits zum Angeben der Gültigkeit der nachfolgenden Felder.
+Validierungsbits, die verwendet werden, um die Gültigkeit der nachfolgenden Felder anzugeben.
 
 
 
 | Wert                                                                                                                                            | Bedeutung                                     |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
-| <span id="1_0x1"></span><span id="1_0X1"></span><dl> <dt>**1 0x1**</dt> </dl>             | **SEL \_ Die Datensatz- \_ ID** ist gültig.<br/>    |
-| <span id="2_0x2"></span><span id="2_0X2"></span><dl> <dt>**2 0x2**</dt> </dl>             | **SEL \_ Der \_ Typ des Datensatzes** ist gültig.<br/>  |
-| <span id="4_0x4"></span><span id="4_0X4"></span><dl> <dt>**4 0x4**</dt> </dl>             | **SEL \_ Die Generator- \_ ID** ist gültig.<br/> |
-| <span id="8_0x8"></span><span id="8_0X8"></span><dl> <dt>**8 0x8**</dt> </dl>             | **SEL \_ EVM- \_ Rev** ist gültig.<br/>      |
-| <span id="16_0x10"></span><span id="16_0X10"></span><dl> <dt>**16 0x10**</dt> </dl>       | **SEL \_ Der \_ Sensortyp** ist gültig.<br/>  |
-| <span id="32_0x20"></span><span id="32_0X20"></span><dl> <dt>**32 0x20**</dt> </dl>       | **SEL \_ Der Sensor " \_ NUM** " ist gültig.<br/>   |
-| <span id="64_0x40"></span><span id="64_0X40"></span><dl> <dt>**64 0x40**</dt> </dl>       | **SEL \_ Das \_ Ereignis** Verzeichnis ist gültig.<br/>    |
-| <span id="128_0x80"></span><span id="128_0X80"></span><dl> <dt>**128 0x80**</dt> </dl>    | **SEL \_ Das Ereignis \_ data1** ist gültig.<br/>  |
-| <span id="256_0x100"></span><span id="256_0X100"></span><dl> <dt>**256 0x100**</dt> </dl> | **SEL \_ Das Ereignis \_ data2** ist gültig.<br/>  |
-| <span id="512_0x200"></span><span id="512_0X200"></span><dl> <dt>**512 0x200**</dt> </dl> | **SEL \_ Das Ereignis \_ data3** ist gültig.<br/>  |
+| <span id="1_0x1"></span><span id="1_0X1"></span><dl> <dt>**1 0x1**</dt> </dl>             | **SEL \_ RECORD \_ ID** ist gültig.<br/>    |
+| <span id="2_0x2"></span><span id="2_0X2"></span><dl> <dt>**2 0x2**</dt> </dl>             | **SEL \_ RECORD \_ TYPE** ist gültig.<br/>  |
+| <span id="4_0x4"></span><span id="4_0X4"></span><dl> <dt>**4 0x4**</dt> </dl>             | **SEL \_ Die \_ GENERATOR-ID** ist gültig.<br/> |
+| <span id="8_0x8"></span><span id="8_0X8"></span><dl> <dt>**8 0x8**</dt> </dl>             | **SEL \_ EVM \_ REV** ist gültig.<br/>      |
+| <span id="16_0x10"></span><span id="16_0X10"></span><dl> <dt>**16 0x10**</dt> </dl>       | **SEL \_ SENSOR \_ TYPE** ist gültig.<br/>  |
+| <span id="32_0x20"></span><span id="32_0X20"></span><dl> <dt>**32 0x20**</dt> </dl>       | **SEL \_ SENSOR \_ NUM** ist gültig.<br/>   |
+| <span id="64_0x40"></span><span id="64_0X40"></span><dl> <dt>**64 0x40**</dt> </dl>       | **SEL \_ EVENT \_ DIR** ist gültig.<br/>    |
+| <span id="128_0x80"></span><span id="128_0X80"></span><dl> <dt>**128 0x80**</dt> </dl>    | **SEL \_ EVENT \_ DATA1** ist gültig.<br/>  |
+| <span id="256_0x100"></span><span id="256_0X100"></span><dl> <dt>**256 0x100**</dt> </dl> | **SEL \_ EVENT \_ DATA2** ist gültig.<br/>  |
+| <span id="512_0x200"></span><span id="512_0X200"></span><dl> <dt>**512 0x200**</dt> </dl> | **SEL \_ EVENT \_ DATA3** ist gültig.<br/>  |
 
 
 
  
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **msmcaevent \_ systemeventerror** -Klasse wird von [**wmievent**](wmievent.md)abgeleitet.
+Die **MSMCAEvent \_ SystemEventError-Klasse** wird von [**WMIEvent abgeleitet.**](wmievent.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -427,9 +427,9 @@ Die **msmcaevent \_ systemeventerror** -Klasse wird von [**wmievent**](wmievent.
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP<br/>                                                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                         |
-| Namespace<br/>                | WMI-Stammdatei \\<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                         |
+| Namespace<br/>                | Root \\ wmi<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>Wmicore.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wmiprov.dll</dt> </dl> |
 
 

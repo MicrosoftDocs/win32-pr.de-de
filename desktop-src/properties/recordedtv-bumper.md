@@ -4,12 +4,12 @@ ms.assetid: 30be0468-1b4e-4650-a5d2-aa467d800ef7
 title: RecordedTV
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 81d766886007820ec4b19c53a99e3fd31d0d6339
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3620ab995fc1b89f5054bc53c668b5d4dc59d8dafdad357e71ea217991f13fb9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108113858"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118969772"
 ---
 # <a name="recordedtv"></a>RecordedTV
 
@@ -33,7 +33,7 @@ ms.locfileid: "108113858"
 | [System.RecordedTV.OriginalBroadcastDate](./props-system-recordedtv-originalbroadcastdate.md)<br/>             |                                                                                                                                                                       |
 | [System.RecordedTV.ProgramDescription](./props-system-recordedtv-programdescription.md)<br/>                   |                                                                                                                                                                       |
 | [System.RecordedTV.RecordingTime](./props-system-recordedtv-recordingtime.md)<br/>                             |                                                                                                                                                                       |
-| [System.RecordedTV.StationCallSign](./props-system-recordedtv-stationcallsign.md)<br/>                         | Alle aufgezeichneten Stationsanrufzeichen. Beispiel: "TOONP".<br/>                                                                                                     |
+| [System.RecordedTV.StationCallSign](./props-system-recordedtv-stationcallsign.md)<br/>                         | Alle aufgezeichneten Stationsaufrufzeichen. Beispiel: "TOONP".<br/>                                                                                                     |
 | [System.RecordedTV.StationName](./props-system-recordedtv-stationname.md)<br/>                                 |                                                                                                                                                                       |
 
 

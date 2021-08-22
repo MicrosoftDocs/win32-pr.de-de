@@ -1,7 +1,7 @@
 ---
-description: Legt einen Platzhalter Filter fest, der auf die zurückgegebenen Elemente angewendet wird.
+description: Legt einen Platzhalterfilter fest, der auf die zurückgegebenen Elemente angewendet werden soll.
 ms.assetid: 19ca82c5-16ff-46c7-8ea1-ddbfc2ce3ac9
-title: FolderItems3. Filter-Methode (Shldisp. h)
+title: FolderItems3.Filter-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 26a24dc3ef1f4d0de09dbd97a5dce4c8ed8c783b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dd4983d340645e916595534f17dccb2ef09e2f5c185b6eaf97cc7de2e52669dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119032588"
 ---
-# <a name="folderitems3filter-method"></a>FolderItems3. Filter-Methode
+# <a name="folderitems3filter-method"></a>FolderItems3.Filter-Methode
 
-Legt einen Platzhalter Filter fest, der auf die zurückgegebenen Elemente angewendet wird.
+Legt einen Platzhalterfilter fest, der auf die zurückgegebenen Elemente angewendet werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,29 +40,29 @@ iRetVal = FolderItems3.Filter(
 
 <dl> <dt>
 
-*grfFlags* \[ in\]
+*grfFlags* \[ In\]
 </dt> <dd>
 
-Type: **Integer**
+Typ: **Integer**
 
-Dieser Parameter kann eines der in [**shcontf**](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf)aufgelisteten Flags sein.
+Dieser Parameter kann eines der flags sein, die in [**SHCONTF aufgeführt sind.**](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf)
 
 </dd> <dt>
 
-*bstrinfilter* \[ in\]
+*bstrFilter* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Eine Filter Zeichenfolge, die angibt, was in der [**folderitems**](folderitems.md) -Auflistung aufgeführt werden soll.
+Eine Filterzeichenfolge, die angibt, was in der [**FolderItems-Auflistung aufgelistet werden**](folderitems.md) soll.
 
 </dd> </dl>
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung des **Filters** für JScript, VBScript und Visual Basic.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung von **Filter** für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -94,7 +94,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -165,7 +165,7 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -173,13 +173,13 @@ End Sub
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6,0 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
@@ -189,7 +189,7 @@ End Sub
 [**FolderItems2**](folderitems2-object.md)
 </dt> <dt>
 
-[**Von folderItem**](folderitem.md)
+[**FolderItem**](folderitem.md)
 </dt> </dl>
 
  

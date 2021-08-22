@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetgetobjectinfo-Methode.
-title: API. jetgetobjectinfo-Methode
+description: Weitere Informationen finden Sie unter Api.JetGetObjectInfo-Methode.
+title: Api.JetGetObjectInfo-Methode
 TOCTitle: 'JetGetObjectInfo method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.Api.JetGetObjectInfo
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgetobjectinfo(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: a302687b3712f2dfb61bfe80cf85e96a9c11a701
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 89c819470555f96424b2eb58b487d4ac06c94ede97982401e1db163d419b5e69
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128693"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983320"
 ---
-# <a name="apijetgetobjectinfo-method"></a>API. jetgetobjectinfo-Methode
+# <a name="apijetgetobjectinfo-method"></a>Api.JetGetObjectInfo-Methode
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -39,12 +39,12 @@ Geerbte Member einschließen
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn292179(v=exchg.10).md">Jetgetobjectinfo (JET_SESID, JET_DBID, JET_OBJECTLIST)</a></td>
+<td><a href="dn292179(v=exchg.10).md">JetGetObjectInfo(JET_SESID, JET_DBID, JET_OBJECTLIST)</a></td>
 <td>Ruft Informationen zu Datenbankobjekten ab.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn292178(v=exchg.10).md">Jetgetobjectinfo (JET_SESID, JET_DBID, JET_objtyp, Zeichenfolge, JET_OBJECTINFO)</a></td>
+<td><a href="dn292178(v=exchg.10).md">JetGetObjectInfo(JET_SESID, JET_DBID, JET_objtyp, String, JET_OBJECTINFO)</a></td>
 <td>Ruft Informationen zu Datenbankobjekten ab.</td>
 </tr>
 </tbody>
@@ -55,10 +55,10 @@ Oben
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

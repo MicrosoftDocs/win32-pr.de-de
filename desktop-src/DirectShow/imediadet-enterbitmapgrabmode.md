@@ -1,7 +1,7 @@
 ---
-description: Die enterbitmapgrabmode-Methode schaltet den Medien Detektor in den bitmapingmodus um und sucht das Filter Diagramm zu einem angegebenen Zeitpunkt.
+description: Die EnterBitmapGrabMode-Methode schaltet die Medienerkennung in den Bitmapgrabbermodus um und sucht den Filtergraphen zu einer angegebenen Zeit.
 ms.assetid: 9351ce73-766c-4863-88a5-f974ede79ee6
-title: 'Imediadet:: enterbitmapgrabmode-Methode (qedit. h)'
+title: IMediaDet::EnterBitmapGrabMode-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: b6c332451bc9ebb5f2ccf5068003c9a33617da21
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d47989b95663a9a99f4363fb505aec996ea23acdd813cf301f7ee252c874dc78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359382"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118952619"
 ---
-# <a name="imediadetenterbitmapgrabmode-method"></a>Imediadet:: enterbitmapgrabmode-Methode
+# <a name="imediadetenterbitmapgrabmode-method"></a>IMediaDet::EnterBitmapGrabMode-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die `EnterBitmapGrabMode` -Methode schaltet den Medien Detektor in den bitmapingmodus um und sucht das Filter Diagramm zu einem bestimmten Zeitpunkt.
+Die `EnterBitmapGrabMode` -Methode schaltet die Medienerkennung in den Bitmapgrabbermodus um und sucht das Filterdiagramm zu einer angegebenen Zeit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,45 +45,45 @@ HRESULT EnterBitmapGrabMode(
 
 <dl> <dt>
 
-*Streamtime* 
+*StreamTime* 
 </dt> <dd>
 
-Die Zeit (in Sekunden), die das Diagramm sucht.
+Die Zeit in Sekunden, nach der das Diagramm sucht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Folgende Werte sind möglich:
+Gibt einen **HRESULT-Wert** zurück. Folgende Werte sind möglich:
 
 
 
 | Rückgabecode                                                                                             | Beschreibung                                              |
 |---------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                    | Erfolg.<br/>                                      |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>            | Ungültiges Argument.<br/>                             |
-| <dl> <dt>**VFW \_ E \_ invalidmediatype**</dt> </dl> | Die Quelldatei enthält keinen Videostream.<br/> |
-| <dl> <dt>**VFW \_ E \_ Zeit \_ abgelaufen**</dt> </dl>    | Timeout beim Suchbefehl.<br/>                       |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>            | Ungültiges Argument.<br/>                             |
+| <dl> <dt>**VFW \_ E \_ INVALIDMEDIATYPE**</dt> </dl> | Die Quelldatei verfügt nicht über einen Videostream.<br/> |
+| <dl> <dt>**VFW \_ E \_ TIME \_ EXPIRED**</dt> </dl>    | Time out des Seek-Befehls.<br/>                       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bevor Sie diese Methode aufrufen, legen Sie den Dateinamen und den Stream durch Aufrufen von [**imediadet::p UT \_ filename**](imediadet-put-filename.md) und [**imediadet::p UT \_ currentstream**](imediadet-put-currentstream.md)fest.
+Legen Sie vor dem Aufrufen dieser Methode den Dateinamen und den Stream fest, indem [**Sie IMediaDet::p ut \_ Filename**](imediadet-put-filename.md) und [**IMediaDet::p ut \_ CurrentStream**](imediadet-put-currentstream.md)aufrufen.
 
-Mit dieser Methode wird der [**Sample Grabber**](sample-grabber-filter.md) Filter in das Filter Diagramm eingefügt. Sie können dann [**imediadet:: getsamplegrabber**](imediadet-getsamplegrabber.md) aufrufen, um einen Zeiger auf die [**isamplegrabber**](isamplegrabber.md) -Schnittstelle zu erhalten. Sobald der Medien Detektor in den bitmapingmodus wechselt, funktionieren die verschiedenen Informationsmethoden in **imediadet** nicht mehr.
+Diese Methode fügt den [**Sample Grabber-Filter**](sample-grabber-filter.md) in das Filterdiagramm ein. Anschließend können Sie [**IMediaDet::GetSampleGrabber**](imediadet-getsamplegrabber.md) aufrufen, um einen Zeiger auf die [**ISampleGrabber-Schnittstelle**](isamplegrabber.md) abzurufen. Sobald die Medienerkennung in den Bitmapgrabbermodus wechselt, funktionieren die verschiedenen Informationsmethoden in **IMediaDet** nicht mehr.
 
-Mit der [**imediadet:: getbitmapbits**](imediadet-getbitmapbits.md) -Methode oder der [**imediadet:: Write-Bitmapbits**](imediadet-writebitmapbits.md) -Methode wird der Medien Detektor auch in den bitmapmodus versetzt.
+Die [**IMediaDet::GetBitmapBits-**](imediadet-getbitmapbits.md) oder [**IMediaDet::WriteBitmapBits-Methoden**](imediadet-writebitmapbits.md) versetzen die Medienerkennung auch in den Bitmapgrabbermodus.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -93,8 +93,8 @@ Mit der [**imediadet:: getbitmapbits**](imediadet-getbitmapbits.md) -Methode ode
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -102,10 +102,10 @@ Mit der [**imediadet:: getbitmapbits**](imediadet-getbitmapbits.md) -Methode ode
 
 <dl> <dt>
 
-[**Imediadet-Schnittstelle**](imediadet.md)
+[**IMediaDet-Schnittstelle**](imediadet.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

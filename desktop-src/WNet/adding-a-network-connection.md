@@ -1,21 +1,21 @@
 ---
 title: Hinzufügen einer Netzwerkverbindung
-description: Zum Herstellen einer Verbindung mit einer Netzwerkressource, die durch eine Struktur vom Typ "nettresource" beschrieben wird, kann eine Anwendung die WNetAddConnection2-, WNetAddConnection3-oder wnettuseconnetction-Funktion aufrufen.
+description: Um eine Verbindung mit einer Netzwerkressource herzustellen, die von einer NETRESOURCE-Struktur beschrieben wird, kann eine Anwendung die Funktion WNetAddConnection2, WNetAddConnection3 oder WNetUseConnection aufrufen.
 ms.assetid: 0dab9eed-9019-4075-833b-324e5caee257
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 476e03193b919f17a2060e415db5e7ea60c8364e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8298216ab277c5f0ec4a0db8c4d6d1b6c592a8b643e6c30de96731ae2a32632b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053388"
 ---
 # <a name="adding-a-network-connection"></a>Hinzufügen einer Netzwerkverbindung
 
-Zum Herstellen einer Verbindung mit einer Netzwerkressource, die durch eine Struktur vom Typ " [**nettresource**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea) " beschrieben wird, kann eine Anwendung die [**WNetAddConnection2**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection2a)-, [**WNetAddConnection3**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection3a)-oder [**wnettuseconnetction**](/windows/win32/api/winnetwk/nf-winnetwk-wnetuseconnectiona) -Funktion aufrufen. Im folgenden Beispiel wird die Verwendung der **WNetAddConnection2** -Funktion veranschaulicht.
+Um eine Verbindung mit einer Netzwerkressource herzustellen, die von einer [**NETRESOURCE-Struktur**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea) beschrieben wird, kann eine Anwendung [**die Funktion WNetAddConnection2,**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection2a) [**WNetAddConnection3**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection3a)oder [**WNetUseConnection**](/windows/win32/api/winnetwk/nf-winnetwk-wnetuseconnectiona) aufrufen. Im folgenden Beispiel wird die Verwendung der **WNetAddConnection2-Funktion** veranschaulicht.
 
-Das Codebeispiel ruft die **WNetAddConnection2** -Funktion auf, wobei angegeben wird, dass das System das Profil des Benutzers mit den Informationen aktualisieren soll, indem eine "gespeicherte" oder eine persistente Verbindung erstellt wird. Das Beispiel ruft einen Anwendungs definierten Fehlerhandler zum Verarbeiten von Fehlern und die [**TextOut**](/windows/desktop/api/wingdi/nf-wingdi-textouta) -Funktion zum Drucken auf.
+Das Codebeispiel ruft die **WNetAddConnection2-Funktion** auf und gibt an, dass das System das Benutzerprofil mit den Informationen aktualisieren soll, wodurch eine "gespeicherte" oder dauerhafte Verbindung erstellt wird. Im Beispiel wird ein anwendungsdefiniertes Fehlerhandler zum Verarbeiten von Fehlern und die [**TextOut-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-textouta) zum Drucken aufrufen.
 
 
 ```C++
@@ -63,10 +63,10 @@ printf("Connected to the specified resource.\n");
 
 
 
-Die Funktion " [**wnetaddconnection**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnectiona) " wird für die Kompatibilität mit früheren Versionen von Windows für Arbeitsgruppen unterstützt. Neue Anwendungen sollten die [**WNetAddConnection2**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection2a) -Funktion oder die [**WNetAddConnection3**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection3a) -Funktion aufzurufen.
+Die [**WNetAddConnection-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnectiona) wird aus Gründen der Kompatibilität mit früheren Versionen von Windows für Arbeitsgruppen unterstützt. Neue Anwendungen sollten die [**WNetAddConnection2-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection2a) oder die [**WNetAddConnection3-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection3a) aufrufen.
 
-Weitere Informationen zum Verwenden eines Anwendungs definierten Fehler Handlers finden Sie unter [Abrufen von Netzwerkfehlern](retrieving-network-errors.md).
+Weitere Informationen zur Verwendung eines anwendungsdefinierte Fehlerhandlers finden Sie unter [Abrufen von Netzwerkfehlern.](retrieving-network-errors.md)
 
- 
+ 
 
- 
+ 

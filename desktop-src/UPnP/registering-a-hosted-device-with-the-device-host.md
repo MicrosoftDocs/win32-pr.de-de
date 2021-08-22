@@ -1,60 +1,60 @@
 ---
-title: Registrieren eines gehosteten Geräts beim Geräte Host
-description: Das Registrieren eines gehosteten Geräts bedeutet, dass der Geräte Host die Geräte Beschreibung und das zugehörige Geräte Steuerungsobjekt bereitstellt.
+title: Registrieren eines gehosteten Geräts beim Gerätehost
+description: Das Registrieren eines gehosteten Geräts bedeutet, dem Gerätehost die Gerätebeschreibung und das Gerätesteuerungsobjekt zur Verfügung zu stellen.
 ms.assetid: 1d85b412-9b1b-415d-8664-8d96a6644793
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4a607af4f6ada359a9ee32e98e416d8271fd502
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 486d01364b684e2aa6792b8a6c0b91ccc87a26670057c67192fe587ac049c388
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206681"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999560"
 ---
-# <a name="registering-a-hosted-device-with-the-device-host"></a>Registrieren eines gehosteten Geräts beim Geräte Host
+# <a name="registering-a-hosted-device-with-the-device-host"></a>Registrieren eines gehosteten Geräts beim Gerätehost
 
-Das Registrieren eines gehosteten Geräts bedeutet, dass der Geräte Host die Geräte Beschreibung und das zugehörige Geräte Steuerungsobjekt bereitstellt. Der Geräte Host erstellt dann eine komplette UPnP-Geräte Beschreibung, veröffentlicht Sie und kündigt das Gerät mithilfe des UPnP-Ermittlungs Protokolls im Netzwerk an. Sobald ein Gerät veröffentlicht wurde, ist es für Steuerungs Punkte verfügbar.
+Das Registrieren eines gehosteten Geräts bedeutet, dem Gerätehost die Gerätebeschreibung und das Gerätesteuerungsobjekt zur Verfügung zu stellen. Der Gerätehost erstellt dann eine vollständige UPnP-Gerätebeschreibung, veröffentlicht sie und kündigt das Gerät im Netzwerk mithilfe des UPnP-Ermittlungsprotokolls an. Sobald ein Gerät veröffentlicht wurde, ist es für Steuerungspunkte verfügbar.
 
 Geräte werden auf zwei Arten registriert:
 
--   Eine Anwendung erstellt eine Instanz des Geräte Steuerungs Objekts und übergibt einen Zeiger darauf an den Geräte Host.
--   Die Anwendung übergibt die ProgID für ein registriertes Geräte Steuerungsobjekt an den Geräte Host. Der Geräte Host instanziiert ihn, wenn der Geräte Host die erste Anforderung für das Gerät empfängt.
+-   Eine Anwendung erstellt eine Instanz des Gerätesteuerungsobjekts und übergibt einen Zeiger darauf an den Gerätehost.
+-   Die Anwendung übergibt die ProgID für ein registriertes Gerätesteuerungsobjekt an den Gerätehost. Der Gerätehost instanziiert sie, wenn der Gerätehost die erste Anforderung für das Gerät empfängt.
 
-Unabhängig davon, welche Methode verwendet wird, veröffentlicht und kündigt der Geräte Host das Gerät an, sobald es registriert ist. Der Unterschied zwischen den beiden Ansätzen ist, wenn der Geräte Code geladen wird. Wenn die Anwendung einen Zeiger auf das Geräte Steuerungsobjekt übergibt, wird der Geräte Code zum Zeitpunkt der Registrierung geladen und ausgeführt. Wenn die Anwendung eine ProgID übergibt, wird der Geräte Code nur geladen, wenn eine Aktion aufgerufen, eine Eigenschaft abgefragt oder eine Ereignis Abonnement Anforderung eingeht. Der zweite Ansatz ist etwas effizienter. Sie eignet sich jedoch nicht für Geräte, die vor dem Eintreffen von Steuerungs-oder Ereignis Abonnement Anforderungen ausgeführt werden müssen. bei dieser Vorgehensweise werden Geräte Steuerungs Objekte nur dann erstellt, wenn Sie benötigt werden. Diese zweite Methode kann auch zu Leistungsproblemen führen, wenn Sie die erste Anforderung für einen Gerätetyp empfängt.
+Unabhängig davon, welche Methode verwendet wird, veröffentlicht und kündigt der Gerätehost das Gerät an, sobald es registriert ist. Der Unterschied zwischen den beiden Ansätzen hat mit dem Laden des Gerätecodes zu tun. Wenn die Anwendung einen Zeiger auf das Gerätesteuerungsobjekt übergibt, wird der Gerätecode geladen und zum Zeitpunkt der Registrierung ausgeführt. Wenn die Anwendung eine ProgID übergibt, wird der Gerätecode nur geladen, wenn eine Aktion aufgerufen wird, eine Eigenschaft abgefragt wird oder eine Ereignisabonnementanforderung eingeht. Der zweite Ansatz ist etwas effizienter. Sie ist jedoch nicht für Geräte geeignet, die ausgeführt werden müssen, bevor Steuerungs- oder Ereignisabonnementanforderungen eintreffen, da bei diesem Ansatz Gerätesteuerungsobjekte nur erstellt werden, wenn sie benötigt werden. Diese zweite Methode kann auch Leistungsprobleme erzeugen, wenn sie die erste Anforderung für einen Gerätetyp empfängt.
 
-Wenn Sie sicherstellen möchten, dass ein Gerät vom Geräte Host automatisch im Netzwerk angekündigt wird, wenn der Computer gestartet wird, rufen Sie [**iupnpregistranar:: registerdevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerdevice)auf. **Registerdevice** stellt sicher, dass der Geräte Code nur geladen wird, wenn eine Anforderung für ein Steuerelement oder ein Ereignis Abonnement empfangen wird.
+Wenn Sie sicherstellen möchten, dass ein Gerät automatisch vom Gerätehost im Netzwerk angekündigt wird, wenn der Computer gestartet wird, rufen Sie [**IUPnPRegistrar::RegisterDevice auf.**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerdevice) **RegisterDevice stellt** sicher, dass Ihr Gerätecode nur geladen wird, wenn eine Steuerelement- oder Ereignisabonnementanforderung empfangen wird.
 
-Wenn Ihre Geräte flüchtig oder überbrückt sind, rufen Sie [**iupnpregistranar:: registerrunningdevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerrunningdevice)auf, und das Gerät wird nicht automatisch erneut angekündigt, wenn der Computer neu gestartet wird.
+Wenn Ihre Geräte vorübergehend oder überbrückt sind, rufen Sie [**IUPnPRegistrar::RegisterRunningDevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerrunningdevice)auf, und das Gerät wird nicht automatisch erneut angekündigt, wenn der Computer neu gestartet wird.
 
-## <a name="discovery-announcement-lifetime"></a>Lebensdauer der Ermittlungs Ankündigung
+## <a name="discovery-announcement-lifetime"></a>Lebensdauer der Ermittlungsankündigung
 
-Jedes Gerät, das beim Geräte Host registriert ist, wird einer Lebensdauer zugeordnet, die vom Gerät bei der Registrierung angegeben wird. Die Lebensdauer des Geräts ist die Zeitspanne, für die die Ermittlungs Ankündigungen des Geräts gültig sind. Die Lebensdauer wird als Header in der ersten Ermittlungs Ankündigung an den Kontrollpunkt übermittelt. Der Geräte Host aktualisiert die Ankündigung automatisch vor der Ablaufzeit. Die Werte für die Lebensdauer der Ermittlungs Ankündigung sollten 15 Minuten oder länger betragen (der Standardwert ist 30 Minuten).
+Jedes gerät, das beim Gerätehost registriert ist, ist einer Lebensdauer zugeordnet, die vom Gerät bei der Registrierung angegeben wird. Die Lebensdauer des Geräts ist der Zeitraum, für den die Ermittlungsankündigungen des Geräts gültig sind. Die Lebensdauer wird an den Kontrollpunkt als Header in der ersten Ermittlungsankündigung übergeben. Der Gerätehost aktualisiert die Ankündigung automatisch vor der Ablaufzeit. Die Werte für die Lebensdauer der Ermittlungsankündigung sollten 15 Minuten oder mehr sein (der Standardwert ist 30 Minuten).
 
-## <a name="device-identifiers-created-at-registration"></a>Bei der Registrierung erstellte Geräte Bezeichner
+## <a name="device-identifiers-created-at-registration"></a>Bei der Registrierung erstellte Gerätebezeichner
 
-Wenn Sie eine Geräte Beschreibungs Vorlage erstellen, muss der Geräte Entwickler den Ressourcen Pfad für die Dienst Beschreibung und zugehörige Symbole angeben. Der Ressourcen Pfad wird von der Geräte Anwendung bestimmt.
+Beim Erstellen einer Gerätebeschreibungsvorlage muss der Geräteentwickler den Ressourcenpfad zur Dienstbeschreibung und den zugehörigen Symbolen bereitstellen. Der Ressourcenpfad wird von der Geräteanwendung bestimmt.
 
-Da das gleiche Gerät mehrmals auf demselben Computer registriert werden kann, reicht der in der Vorlage für die Geräte Beschreibung angegebene udn nicht aus, um ein Gerät eindeutig zu identifizieren. Wenn ein Gerät registriert ist, erstellt der Geräte Host daher einen Geräte Bezeichner. Dieser Geräte Bezeichner kann in Verbindung mit dem udn in der Vorlage Geräte Beschreibung verwendet werden, um ein Gerät eindeutig zu identifizieren.
+Da dasselbe Gerät mehrmals auf demselben Computer registriert werden kann, reicht die in der Gerätebeschreibungsvorlage angegebene UDN nicht aus, um ein Gerät eindeutig zu identifizieren. Daher erstellt der Gerätehost bei der Registrierung eines Geräts eine Geräte-ID. Dieser Gerätebezeichner kann in Verbindung mit dem UDN in der Gerätebeschreibungsvorlage verwendet werden, um ein Gerät eindeutig zu identifizieren.
 
-Dieser Bezeichner wird auch verwendet, wenn die Registrierung des Geräts vorübergehend aufgehoben und anschließend erneut registriert wird. Wenn die Registrierung eines Geräts vorübergehend aufgehoben wird, wird der udn vom Geräte Host nicht gelöscht. Folgende Gründe sind nicht zum Löschen des udn zu finden:
+Dieser Bezeichner wird auch verwendet, wenn die Registrierung des Geräts vorübergehend aufgehoben und dann erneut registriert wird. Wenn die Registrierung eines Geräts vorübergehend aufgehoben wird, löscht der Gerätehost den UDN nicht. Gründe für das Nichtlöschen der UDN sind:
 
 -   Das Gerät wird aktualisiert.
 -   Sie ändern die Eigenschaften des Geräts.
 -   Ein Dienst ist vorübergehend nicht verfügbar.
 -   Sie fügen einem Gerät einen neuen Dienst hinzu.
--   Sie aktualisieren die dll.
--   Das Gerät befindet sich im Standbymodus.
+-   Sie aktualisieren die DLL.
+-   Das Gerät befindet sich im Stand-by-Modus.
 
 Weitere Informationen zur Registrierung finden Sie in den folgenden Abschnitten:
 
--   [Registrieren eines Geräts beim Geräte Host](how-to-register-a-device-with-the-device-host.md)
+-   [Registrieren eines Geräts beim Gerätehost](how-to-register-a-device-with-the-device-host.md)
 -   [Aufheben der Registrierung eines Geräts](unregistering-a-device.md)
--   [**Iupnpregistranar:: unregisterdevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-unregisterdevice)
--   [**Iupnpreregistrinar**](/windows/desktop/api/Upnphost/nn-upnphost-iupnpreregistrar)
+-   [**IUPnPRegistrar::UnregisterDevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-unregisterdevice)
+-   [**IUPnPReregistrar**](/windows/desktop/api/Upnphost/nn-upnphost-iupnpreregistrar)
 
- 
+ 
 
- 
+ 
 
 
 

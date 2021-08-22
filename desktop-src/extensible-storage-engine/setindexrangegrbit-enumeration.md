@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: setindexrangegrbit-Enumeration'
-title: Setindexrangegrbit-Enumeration
+description: Weitere Informationen finden Sie unter SetIndexRangeGrbit-Enumeration.
+title: SetIndexRangeGrbit-Enumeration
 TOCTitle: SetIndexRangeGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.SetIndexRangeGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.setindexrangegrbit(v=EXCHG.10)
@@ -34,21 +34,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6cda73597f88d2c8fca911ebb96d7a3c6399ed9f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2fe0125291952fc8af7e9c2d2b565dcb8ce7d50ca94b1104b430834d30ab2a1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355509"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978550"
 ---
-# <a name="setindexrangegrbit-enumeration"></a>Setindexrangegrbit-Enumeration
+# <a name="setindexrangegrbit-enumeration"></a>SetIndexRangeGrbit-Enumeration
 
-Optionen für jetsetindexrange.
+Optionen für JetSetIndexRange.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -83,30 +83,30 @@ public enum SetIndexRangeGrbit
 </tr>
 <tr class="even">
 <td></td>
-<td>Rangeinen clusive</td>
-<td>Diese Option gibt an, dass die Beschränkung des Index Bereichs inklusiv ist.</td>
+<td>RangeInclusive</td>
+<td>Diese Option gibt an, dass der Indexbereich inklusiv ist.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Rangeupperlimit</td>
-<td>Der Suchschlüssel im Cursor stellt die Suchkriterien für den Index Eintrag dar, der am nächsten am Ende des Indexes liegt, der mit dem Index Bereich übereinstimmt.</td>
+<td>RangeUpperLimit</td>
+<td>Der Suchschlüssel im Cursor stellt die Suchkriterien für den Indexeintrag dar, der dem Ende des Indexes am nächsten ist, der dem Indexbereich entspricht.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Rangeinstantduration</td>
-<td>Der Index Bereich sollte entfernt werden, sobald er eingerichtet wurde. Dies ist hilfreich, um zu testen, ob Indexeinträge vorhanden sind, die mit den Suchkriterien übereinstimmen.</td>
+<td>RangeInstantDuration</td>
+<td>Der Indexbereich sollte entfernt werden, sobald er eingerichtet wurde. Dies ist nützlich, um zu testen, ob Indexeinträge vorliegen, die den Suchkriterien entsprechen.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Rangeremove</td>
-<td>Abbrechen und vorhandener Index Bereich.</td>
+<td>RangeRemove</td>
+<td>Abbrechen und vorhandener Indexbereich.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

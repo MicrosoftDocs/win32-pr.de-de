@@ -1,26 +1,26 @@
 ---
-description: Die Sensor-API kann Ereignis Benachrichtigungen bereitstellen.
+description: Die Sensor-API kann Ereignisbenachrichtigungen bereitstellen.
 ms.assetid: 2400619c-ee9c-4662-ae57-6d4bc317e730
 title: Informationen zu Sensor-API-Ereignissen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e941dca86d5b7ec3aa9922220c1232b10429f60a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b4af21bfed2a36c0c79fa46811221afbf2fcf87a4a5f15cf21adfbeaac8601f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867620"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003893"
 ---
 # <a name="about-sensor-api-events"></a>Informationen zu Sensor-API-Ereignissen
 
-Die Sensor-API kann Ereignis Benachrichtigungen bereitstellen.
+Die Sensor-API kann Ereignisbenachrichtigungen bereitstellen.
 
-Wenn Sie sich beim Empfangen von Ereignissen über [**iSensor:: seteventsink**](/windows/win32/api/sensorsapi/nf-sensorsapi-isensor-seteventsink) oder [**isensormanager:: seteventsink**](/windows/win32/api/sensorsapi/nf-sensorsapi-isensormanager-seteventsink)registrieren, müssen Sie einen Zeiger auf eine Rückruf Schnittstelle bereitstellen. Sie müssen die Methoden der Rückruf Schnittstelle in Ihrem Code implementieren. Die Sensor-API definiert die folgenden Rückruf Schnittstellen:
+Wenn Sie sich für den Empfang von Ereignissen registrieren, müssen Sie entweder über [**ISensor::SetEventSink**](/windows/win32/api/sensorsapi/nf-sensorsapi-isensor-seteventsink) oder [**ISensorManager::SetEventSink**](/windows/win32/api/sensorsapi/nf-sensorsapi-isensormanager-seteventsink)einen Zeiger auf eine Rückrufschnittstelle bereitstellen. Sie müssen die Methoden der Rückrufschnittstelle in Ihrem Code implementieren. Die Sensor-API definiert die folgenden Rückrufschnittstellen:
 
--   [**Isenevents**](/windows/desktop/api/sensorsapi/nn-sensorsapi-isensorevents). Implementieren Sie diese Schnittstelle, um Ereignisse von Sensoren zu empfangen. Sensoren können Ihre Anwendung über neue Daten, Änderungen am Sensor Zustand, Sensor Trennung und benutzerdefinierte Ereignisse benachrichtigen, die vom Sensorhersteller definiert werden.
--   [**Isensormanagerevents**](/windows/desktop/api/sensorsapi/nn-sensorsapi-isensormanagerevents). Implementieren Sie diese Schnittstelle, um Ereignisse vom Sensor-Manager zu empfangen. Der Sensor-Manager kann die Anwendung Benachrichtigen, wenn ein Sensor eine Verbindung herstellt und daher möglicherweise zur Verwendung verfügbar ist.
+-   [**ISensorEvents**](/windows/desktop/api/sensorsapi/nn-sensorsapi-isensorevents). Implementieren Sie diese Schnittstelle, um Ereignisse von Sensoren zu empfangen. Sensoren können Ihre Anwendung über neue Daten, Änderungen des Sensorzustands, die Trennung des Sensors und benutzerdefinierte Ereignisse benachrichtigen, die vom Sensorhersteller definiert werden.
+-   [**ISensorManagerEvents**](/windows/desktop/api/sensorsapi/nn-sensorsapi-isensormanagerevents). Implementieren Sie diese Schnittstelle, um Ereignisse vom Sensor-Manager zu empfangen. Der Sensor-Manager kann Ihre Anwendung benachrichtigen, wenn ein Sensor verbunden wird, und ist daher möglicherweise für die Verwendung verfügbar.
 
-Sie können Ereignis Benachrichtigungen abbrechen, indem Sie " [**lteventsink**](/windows/win32/api/sensorsapi/nf-sensorsapi-isensor-seteventsink) " erneut aufrufen. dieses Mal wird ein **null** -Wert über den-Parameter übergeben.
+Sie können Ereignisbenachrichtigungen abbrechen, indem [**Sie SetEventSink**](/windows/win32/api/sensorsapi/nf-sensorsapi-isensor-seteventsink) erneut aufrufen. Dieses Mal übergeben Sie einen **NULL-Wert** über den -Parameter.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

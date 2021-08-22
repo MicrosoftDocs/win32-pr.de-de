@@ -1,22 +1,22 @@
 ---
 description: Die folgenden Elemente werden bei der strukturierten Ausnahmebehandlung verwendet.
 ms.assetid: fd658422-9ab1-4f00-9b61-ed87efac39b6
-title: Referenz für die strukturierte Ausnahmebehandlung
+title: Referenz zur strukturierten Ausnahmebehandlung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a83f5a9863e5466b8e6035177a9e1c38475ab03
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 48f76dde0881b2c8fb4916fc5865af7bfb2c32033dbdf4d9eef7f290bd4fbf04
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076354"
 ---
-# <a name="structured-exception-handling-reference"></a>Referenz für die strukturierte Ausnahmebehandlung
+# <a name="structured-exception-handling-reference"></a>Referenz zur strukturierten Ausnahmebehandlung
 
 Die folgenden Elemente werden bei der strukturierten Ausnahmebehandlung verwendet.
 
--   [Funktionen für die strukturierte Ausnahmebehandlung](structured-exception-handling-functions.md)
--   [Strukturierte Ausnahme Behandlungs Strukturen](structured-exception-handling-structures.md)
+-   [Strukturierte Funktionen zur Ausnahmebehandlung](structured-exception-handling-functions.md)
+-   [Strukturierte Ausnahmebehandlungsstrukturen](structured-exception-handling-structures.md)
 
  
 

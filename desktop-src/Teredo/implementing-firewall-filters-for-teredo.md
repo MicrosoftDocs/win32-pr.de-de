@@ -1,23 +1,23 @@
 ---
 title: Implementieren von Firewallfiltern für Teredo
-description: Mithilfe von Windows können Anwendungen eine Socketoption festlegen, die es Anwendungen ermöglicht, eine explizite Absicht zum Empfangen von Teredo-Datenverkehr anzugeben, der über die Windows-Filter Plattform an die Host Firewall gesendet wurde.
+description: Windows ermöglicht Anwendungen das Festlegen einer Socketoption, mit der Anwendungen eine explizite Absicht angeben können, Teredo-Datenverkehr zu empfangen, der über die Windows Filterplattform an die Hostfirewall gesendet wird.
 ms.assetid: 9e53e28c-e0e5-438d-b624-27d7bd65e4a3
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f24d4351f10a3b37f2bf63c952e81883d97b781
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9fe854b210e6b07f0777a492d5c952f502e2f7c2b6c1c4b40497bad3a9e8248a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001808"
 ---
 # <a name="implementing-firewall-filters-for-teredo"></a>Implementieren von Firewallfiltern für Teredo
 
-Mithilfe von Windows können Anwendungen eine Socketoption festlegen, die es Anwendungen ermöglicht, eine explizite Absicht zum Empfangen von Teredo-Datenverkehr anzugeben, der über die Windows-Filter Plattform an die Host Firewall gesendet wurde. In Windows wird eine Socketoption zum Festlegen einer Schutz Ebene verwendet, um einer Anwendung zu ermöglichen, den Typ des Datenverkehrs zu erhalten, der für den Empfang bereit ist. Genauer gesagt wird in Szenarien, in denen Teredo-Datenverkehr beteiligt ist, die IPv6-Option für die [IPv6- \_ Schutz \_ Ebene](/windows/desktop/WinSock/ipv6-protection-level) angegeben Es wird empfohlen, dass für Host-Firewall-Implementierungen die folgenden Filter beibehalten werden, um den Teredo-Datenverkehr für eine Anwendung selektiv zuzulassen, während der Datenverkehr standardmäßig für jede Anwendung ohne Ausnahme blockiert wird.
+Windows ermöglicht Anwendungen das Festlegen einer Socketoption, mit der Anwendungen eine explizite Absicht angeben können, Teredo-Datenverkehr zu empfangen, der über die Windows Filterplattform an die Hostfirewall gesendet wird. In Windows wird eine Socketoption zum Festlegen einer Schutzebene verwendet, damit eine Anwendung definieren kann, welche Art von Datenverkehr sie empfangen möchte. Genauer gesagt wird in Szenarien mit Teredo-Datenverkehr die Socketoption [IPV6 \_ PROTECTION \_ LEVEL](/windows/desktop/WinSock/ipv6-protection-level) angegeben. Es wird empfohlen, dass Hostfirewallimplementierungen die folgenden Filter beibehalten, um Teredo-Datenverkehr für eine Anwendung selektiv zuzulassen, während der Datenverkehr standardmäßig für jede Anwendung ohne Ausnahme blockiert wird.
 
-## <a name="default-block-filter-for-edge-traversed-traffic"></a>Standard Block Filter für den von Edge durchsuchten Datenverkehr
+## <a name="default-block-filter-for-edge-traversed-traffic"></a>Standardblockfilter für Edgedurchlaufdatenverkehr
 
-Eine Host Firewall muss \_ \_ für den \_ \_ Datenverkehr, der mit dem angegebenen **Schnittstellentyp Tunnel** und den **Tunneltyp-Teredo** -Bedingungen übereinstimmt, immer einen Standard Block Filter in der Ebene der "ALE auth recv Accept Bei der Implementierung gibt dieser Filter an, dass eine Edgeausnahme unterstützender Host Firewall im System vorhanden ist. Dieser Filter wird als API-Vertrag zwischen der Host Firewall und Windows angezeigt. Standardmäßig blockiert dieser Filter den von Edge durchsuchten Datenverkehr zu beliebigen Anwendungen.
+Eine Hostfirewall muss immer einen Standardblockfilter innerhalb der ALE \_ AUTH \_ RECV \_ ACCEPT \_ V6-Filterebene für Datenverkehr beibehalten, der den angegebenen **Schnittstellentyp- Tunnel** und **Tunnel Teredo-Bedingungen** entspricht. Bei implementierung gibt dieser Filter das Vorhandensein einer Durchlauf-fähigen Edgehostfirewall im System an. Dieser Filter wird als API-Vertrag zwischen der Hostfirewall und Windows angezeigt. Standardmäßig blockiert dieser Filter datenverkehrsgetrahte Edgedatenverkehr an eine beliebige Anwendung.
 
 ``` syntax
    filter.layerKey  = FWPM_LAYER_ALE_AUTH_RECV_ACCEPT_V6;
@@ -52,13 +52,13 @@ Eine Host Firewall muss \_ \_ für den \_ \_ Datenverkehr, der mit dem angegeben
 ```
 
 > [!Note]  
-> Die Klassen "Delivery", "Arrival" und "Next Hop" der Schnittstellen Bedingungen werden verwendet, um ein schwaches Host Modell und die Paket Weiterleitung über Schnittstellen hinweg zu steuern. Im obigen Beispiel wird die Klasse "Delivery" verwendet. Überprüfen Sie die [Filterbedingungen, die auf jeder Filter Ebene](/windows/desktop/FWP/filtering-conditions-available-at-each-filtering-layer) in der WFP SDK-Dokumentation verfügbar sind, da der Sicherheits Entwurf jeden Fall berücksichtigen muss.
+> Die Klassen "Delivery", "Arrival" und "Next Hop" von Schnittstellenbedingungen werden verwendet, um ein schwaches Hostmodell und die Paketweiterleitung schnittstellenübergreifend zu steuern. Im obigen Beispiel wird die Delivery-Klasse verwendet. Lesen Sie [filtering conditions Available at Each Filtering Layer (Verfügbare Filterbedingungen für jede Filterebene)](/windows/desktop/FWP/filtering-conditions-available-at-each-filtering-layer) in der WFP SDK-Dokumentation, da Ihr Sicherheitsentwurf jeden Fall berücksichtigen muss.
 
- 
+ 
 
 ## <a name="allow-filter-for-exempt-applications"></a>Filter für ausgenommene Anwendungen zulassen
 
-Wenn eine Anwendung vom Empfang von Teredo-Datenverkehr in einem lauschenden Socket ausgenommen ist, muss ein Zulassungs Filter innerhalb der ALE \_ auth- \_ RCV-Methode \_ zum Akzeptieren von \_ V6 in der Host Firewall implementiert werden. Beachten Sie, dass die Host Firewall abhängig von der Konfiguration der Ausnahme durch den Benutzer oder die Anwendung eine Socketoption enthalten kann.
+Wenn eine Anwendung vom Empfang von Teredo-Datenverkehr in einem Lauschsocket ausgenommen ist, muss ein Zulassungsfilter innerhalb der Filterebene ALE \_ AUTH \_ RCV \_ ACCEPT \_ V6 in der Hostfirewall implementiert werden. Beachten Sie, dass die Hostfirewall abhängig davon, wie die Ausnahme vom Benutzer oder der Anwendung konfiguriert wird, eine Socketoption enthalten kann.
 
 ``` syntax
    filter.layerKey   = FWPM_LAYER_ALE_AUTH_RCV_ACCEPT_V6;
@@ -98,9 +98,9 @@ Wenn eine Anwendung vom Empfang von Teredo-Datenverkehr in einem lauschenden Soc
    filterConditions[3].conditionValue.uint32 = FWP_CONDITION_SOCKET_PROPERTY_FLAG_ALLOW_EDGE_TRAFFIC;
 ```
 
-## <a name="dormancy-callout-filter"></a>Dormancy-Legenden Filter
+## <a name="dormancy-callout-filter"></a>Ruhezustands-Calloutfilter
 
-Der Teredo-Dienst in Windows implementiert ein Ruhezeit-Modell. Wenn keine Anwendungen an einem UDP-oder TCP-Socket mit aktivierter Edgeausnahme lauschen, wechselt der Dienst zu einem bestimmten Zeitpunkt in den Ruhezustand. Damit der Ruhezeit-Mechanismus funktionsfähig ist, muss die Host Firewall einen Legenden Filter für jede ausgenommene Anwendung, die in der \_ Ebene auth \_ lauschen \_ -Filterschicht für TCP angegeben ist, und die ALE- \_ Ressourcenzuweisung V6-Filter \_ \_ Schicht für UDP-basierte Anwendungen beibehalten. Im folgenden Beispiel wird eine Ruhezeit-Legende für eine **TCP** -Anwendung veranschaulicht.
+Der Teredo-Dienst in Windows implementiert ein Ruhezustandsmodell. Wenn zu einem bestimmten Zeitpunkt keine Anwendungen an einem UDP- oder TCP-Socket lauschen, für den der Edgedurchlauf aktiviert ist, wechselt der Dienst in einen ruhenden Zustand. Damit der Ruhemechanismus funktioniert, muss die Hostfirewall einen Aufruffilter für jede ausgenommene Anwendung beibehalten, die in der Filterebene ALE \_ AUTH \_ LISTEN \_ V6 für TCP und ALE \_ RESOURCE ASSIGNMENT \_ \_ V6 für UDP-basierte Anwendungen angegeben ist. Im folgenden Beispiel wird ein Ruhezustandsaufruf für eine **TCP-Anwendung** veranschaulicht.
 
 ``` syntax
    filter.layerKey = FWPM_LAYER_ALE_AUTH_LISTEN_V6;
@@ -135,6 +135,6 @@ Der Teredo-Dienst in Windows implementiert ein Ruhezeit-Modell. Wenn keine Anwen
    filterConditions[1].conditionValue.uint32 = FWP_CONDITION_SOCKET_PROPERTY_FLAG_ALLOW_EDGE_TRAFFIC;
 ```
 
- 
+ 
 
- 
+ 

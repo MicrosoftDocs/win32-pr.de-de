@@ -1,19 +1,19 @@
 ---
-description: Dieser Artikel enthält Häufigkeitstabellen für die internationale analoge TV-Optimierung für Spanien. Häufigkeitsindizes sind für Kanalnummern nicht geeignet.
+description: Dieser Artikel enthält Häufigkeitstabellen für die internationale analoge TV-Optimierung für Spanien. Häufigkeitsindizes eignen sich nicht für Kanalnummern.
 ms.assetid: 955fb828-4290-4e60-a5db-d3f243b86d8d
 title: Italien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f1e74092318cfbc889f9173685176d48d6b72fc0
-ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
+ms.openlocfilehash: 3f10e7b6bad33e092da60877116c9306d6b9c2594f128aff77b0045847689816
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "112068576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118952499"
 ---
 # <a name="italy"></a>Italien
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
 Die Häufigkeitsindizes in den Tabellen "Spanien" sind nicht für die Verwendung als Kanalnummern geeignet.
 
@@ -23,7 +23,7 @@ Die Häufigkeitsindizes in den Tabellen "Spanien" sind nicht für die Verwendung
 -   [Frühere Kanalzuweisungen](#earlier-channel-assignments)
     -   [Broadcastzuweisungen in Spanien](#italy-broadcast-assignments)
     -   [Italienische Kabelzuweisungen](#italy-cable-assignments)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
 ## <a name="windows-7-and-later"></a>Windows 7 und höher
 

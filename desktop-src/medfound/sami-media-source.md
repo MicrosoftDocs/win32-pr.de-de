@@ -1,23 +1,23 @@
 ---
-description: Der synchronisierte, barrierefreie Medienaustausch (Sami) ist ein Format zum Hinzufügen von Beschriftungen zu digitalen Medien.
+description: Synchronized Accessible Media Interchange (SAMI) ist ein Format zum Hinzufügen von Untertiteln zu digitalen Medien.
 ms.assetid: 007c8181-089e-4e56-a31d-9d1942f90b07
-title: Sami-Medienquelle
+title: SAMI-Medienquelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9340b51815b130cb41061478358b2ab9dcf68f60
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: c7567f7479b6f8d0d2439f89dbf3e6cf273fc7dcae31590ddf9b51a4d66a6940
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104050698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119034818"
 ---
-# <a name="sami-media-source"></a>Sami-Medienquelle
+# <a name="sami-media-source"></a>SAMI-Medienquelle
 
-Der synchronisierte, barrierefreie Medienaustausch (Sami) ist ein Format zum Hinzufügen von Beschriftungen zu digitalen Medien. Die Beschriftungen werden in einer separaten Textdatei mit der Dateinamenerweiterung ". SMI" oder ". Sami" gespeichert.
+Synchronized Accessible Media Interchange (SAMI) ist ein Format zum Hinzufügen von Untertiteln zu digitalen Medien. Die Untertitel werden in einer separaten Textdatei mit der Dateierweiterung .smi oder .sami gespeichert.
 
-In Media Foundation werden Sami Caption-Dateien durch die Sami Media-Quelle unterstützt. Verwenden Sie den [quellresolver](source-resolver.md) , um eine Instanz der Sami Media-Quelle aus einer URL oder einem Bytestream zu erstellen. Media Foundation stellt keine-Komponente bereit, die Sami-Beschriftungen anzeigt. Die Anwendung muss die Beschriftungs Daten interpretieren, die Sie von der Sami-Medienquelle empfängt.
+In Media Foundation werden SAMI-Untertiteldateien über die SAMI-Medienquelle unterstützt. Verwenden Sie den [Quelllöser,](source-resolver.md) um eine Instanz der SAMI-Medienquelle aus einer URL oder einem Bytestream zu erstellen. Media Foundation stellt keine Komponente bereit, die SAMI-Untertitel anzeigt. Die Anwendung muss die Beschriftungsdaten interpretieren, die sie von der SAMI-Medienquelle empfängt.
 
-Im folgenden wird ein Beispiel für eine Sami-Datei gezeigt.
+Das folgende Beispiel zeigt eine SAMI-Beispieldatei.
 
 ``` syntax
 <SAMI>
@@ -56,16 +56,16 @@ Im folgenden wird ein Beispiel für eine Sami-Datei gezeigt.
 </SAMI>
 ```
 
-Das- `<STYLE>` Element enthält Stil Informationen. Dieses Beispiel enthält einen Basistyp für `<P>` Elemente, zusammen mit zwei benannten Stilen: "Standard" und "Hilite". Die benannten Stile werden zum Ändern des Basistyps verwendet. Beschriftungen werden innerhalb von `<SYNC>` Elementen platziert. Das Start-Attribut gibt die Präsentationszeit in Millisekunden für diese Beschriftung an. Die Beschriftungen in diesem Beispiel werden in zwei Sprachen angegeben, die durch ihre RFC-1766-sprach Tags "en-US" und "fr-FR" angegeben werden. Innerhalb der Beschriftungen werden Sprachen anhand ihrer Klassennamen identifiziert. in diesem Fall: "Deutsch." und "frfrcc".
+Das `<STYLE>` -Element enthält Stilinformationen. Dieses Beispiel enthält einen Basisstil für `<P>` Elemente zusammen mit zwei benannten Stilen, "standard" und "hilite". Die benannten Stile werden verwendet, um den Basisstil zu ändern. Beschriftungen werden in `<SYNC>` -Elementen platziert. Das Startattribut gibt die Präsentationszeit für diese Beschriftung in Millisekunden an. Die Beschriftungen in diesem Beispiel werden in zwei Sprachen angegeben, die durch die RFC-1766-Sprachtags "en-US" und "fr -FR" angegeben werden. Innerhalb der Beschriftungen werden Sprachen anhand ihrer Klassennamen identifiziert. in diesem Fall "ENUSCC" und "FRFRCC".
 
-Die Sami Media-Quelle erstellt einen Mediendaten Strom für jede Sprache. Standardmäßig ist der erste Stream ausgewählt, und die verbleibenden Datenströme werden deaktiviert. Die Anwendung kann die Datenstrom Auswahl ändern, indem [**imfpresentationdescriptor:: selectstream**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-selectstream) und [**imfpresentationdescriptor::D eselectstream**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-deselectstream)aufgerufen werden. Jeder Datenstrom Deskriptor enthält die folgenden Attribute.
+Die SAMI-Medienquelle erstellt einen Medienstream für jede Sprache. Standardmäßig wird der erste Stream ausgewählt, und die restlichen Streams werden deaktiviert. Die Anwendung kann die Datenstromauswahl ändern, indem [**SIE DIE AUFRUFEPRESENTATIONDescriptor::SelectStream**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-selectstream) und [**DIE ZusammenstellungDescriptor::D eselectStream**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-deselectstream)aufrufen. Jeder Streamdeskriptor enthält die folgenden Attribute.
 
 
 
-| Attribut                                                       | BESCHREIBUNG                                      |
+| attribute                                                       | Beschreibung                                      |
 |-----------------------------------------------------------------|--------------------------------------------------|
-| [**MF \_ SD- \_ Sprache**](mf-sd-language-attribute.md)            | Das Sprachtag, wie durch das- `lang` Attribut angegeben.  |
-| [**MF, \_ SD, \_ Samisch \_**](mf-sd-sami-language-attribute.md) | Der Name der Sprache, wie vom- `Name` Attribut angegeben. |
+| [**MF \_ SD \_ LANGUAGE**](mf-sd-language-attribute.md)            | Sprachtag, wie durch das `lang` -Attribut angegeben.  |
+| [**MF \_ SD \_ SAMI \_ LANGUAGE**](mf-sd-sami-language-attribute.md) | Sprachname, wie durch das `Name` -Attribut angegeben. |
 
 
 
@@ -75,16 +75,16 @@ Jeder Stream weist den folgenden Medientyp auf:
 
 
 
-| Attribut                                                                            | Wert                 |
+| attribute                                                                            | Wert                 |
 |--------------------------------------------------------------------------------------|-----------------------|
-| [**Haupt-Typ des MF- \_ MT \_ \_**](mf-mt-major-type-attribute.md)                            | **MF MediaType \_ Sami** |
-| [**\_ \_ alle \_ Beispiele \_ unabhängig von MF**](mf-mt-all-samples-independent-attribute.md) | **TRUE**              |
+| [**MF \_ \_ MT-HAUPTTYP \_**](mf-mt-major-type-attribute.md)                            | **MFMediaType \_ SAMI** |
+| [**MF \_ \_ MT– ALLE \_ BEISPIELE \_ UNABHÄNGIG**](mf-mt-all-samples-independent-attribute.md) | **TRUE**              |
 
 
 
  
 
-Die Sami-Quelle übermittelt jede Beschriftung in einem separaten Medien Beispiel. Der Beispiel Zeitstempel und die Dauer werden vom- `<SYNC>` Element abgeleitet. Der im Beispiel enthaltene Medien Puffer enthält die Beschriftung als ASCII-Text. Der Beschriftungs Stil ist in die Beschriftung als Inline `STYLE` Attribut eingebettet. Wenn z. b. die vorherige samische Datei und der englischsprachige Stream mit den Standardformaten verwendet werden, enthält der erste Medien Puffer die folgenden Daten. (Die Zeilenumbrüche können sich von den hier gezeigten unterscheiden.)
+Die SAMI-Quelle übermittelt jede Beschriftung in einem separaten Medienbeispiel. Der Beispielzeitstempel und die Dauer werden vom `<SYNC>` -Element abgeleitet. Der im Beispiel enthaltene Medienpuffer enthält die Beschriftung als ASCII-Text. Der Beschriftungsstil wird als Inlineattribut in die Beschriftung `STYLE` eingebettet. Wenn Sie beispielsweise die vorherige SAMI-Datei verwenden und den englischsprachigen Datenstrom mit den Standardformaten verwenden, enthält der erste Medienpuffer die folgenden Daten. (Die Zeilenumbrüche können sich von den hier gezeigten unterscheiden.)
 
 ``` syntax
 <P STYLE="
@@ -96,11 +96,11 @@ Die Sami-Quelle übermittelt jede Beschriftung in einem separaten Medien Beispie
     font-size: 14pt; ">The<I>first</I> caption.
 ```
 
-## <a name="sami-styles"></a>Sami-Stile
+## <a name="sami-styles"></a>SAMI-Stile
 
-Um den aktuellen Stil zu ändern, verwenden Sie die [**imfsamistyle**](/windows/desktop/api/mfidl/nn-mfidl-imfsamistyle) -Schnittstelle. Diese Schnittstelle wird durch Aufrufen von [**imfgetservice:: GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) in der Sami Media-Quelle abgerufen. (Wenn Sie die Sami Media-Quelle mit der Medien Sitzung verwenden, müssen Sie **GetService** für die Medien Sitzung aufrufen.) Der Dienst Bezeichner ist der **MF- \_ Sami- \_ Dienst**.
+Um den aktuellen Stil zu ändern, verwenden Sie die [**INTERFACESSAMIStyle-Schnittstelle.**](/windows/desktop/api/mfidl/nn-mfidl-imfsamistyle) Diese Schnittstelle wird abgerufen, indem [**SIE AUFGETService::GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) für die SAMI-Medienquelle aufrufen. (Wenn Sie die SAMI-Medienquelle mit der Mediensitzung verwenden, rufen **Sie GetService** in der Mediensitzung auf.) Der Dienstbezeichner ist **MF \_ SAMI \_ SERVICE.**
 
-Im folgenden Beispiel wird der aktuelle Sami-Stil festgelegt, der durch den Index angegeben wird.
+Im folgenden Beispiel wird der aktuelle SAMI-Stil festgelegt, der durch index angegeben wird.
 
 
 ```C++
@@ -146,19 +146,19 @@ done:
 
 
 
-In diesem Beispiel werden die folgenden Methoden für die Sami Media-Quelle aufgerufen:
+In diesem Beispiel werden die folgenden Methoden für die SAMI-Medienquelle aufrufen:
 
--   [**IMF-mistyle:: getstylecount**](/windows/desktop/api/mfidl/nf-mfidl-imfsamistyle-getstylecount) Ruft die Anzahl der Stile ab.
--   [**Imbsamistyle:: getStyles**](/windows/desktop/api/mfidl/nf-mfidl-imfsamistyle-getstyles) Ruft eine Liste der in einem **PROPVARIANT** gespeicherten Stilnamen ab.
--   [**Imamsamistyle:: setselectedstyle**](/windows/desktop/api/mfidl/nf-mfidl-imfsamistyle-setselectedstyle) legt einen Stil anhand des namensfest.
+-   [**STYLESSAMIStyle::GetStyleCount**](/windows/desktop/api/mfidl/nf-mfidl-imfsamistyle-getstylecount) ruft die Anzahl der Stile ab.
+-   [**STYLESSAMIStyle::GetStyles**](/windows/desktop/api/mfidl/nf-mfidl-imfsamistyle-getstyles) ruft eine Liste der Formatnamen ab, die in einem **PROPVARIANT** gespeichert sind.
+-   [**STYLESSAMIStyle::SetSelectedStyle**](/windows/desktop/api/mfidl/nf-mfidl-imfsamistyle-setselectedstyle) legt einen Stil nach Namen fest.
 
-Die Liste der stylenames wird auch auf dem Präsentations Deskriptor im [**MF PD-Attribut \_ " \_ Sami \_ stylelist**](mf-pd-sami-stylelist-attribute.md) " gespeichert.
+Die Liste der Stilnamen wird auch im Präsentationsdeskriptor im [**MF \_ PD \_ SAMI \_ STYLELIST-Attribut**](mf-pd-sami-stylelist-attribute.md) gespeichert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Medienquellen und senken](media-sources-and-sinks.md)
+[Medienquellen und -senken](media-sources-and-sinks.md)
 </dt> <dt>
 
 [Unterstützte Medienformate in Media Foundation](supported-media-formats-in-media-foundation.md)

@@ -1,25 +1,25 @@
 ---
-description: Der Windows Installer verfügt über viele integrierte Standard Aktionen, die in den Sequenz Tabellen verwendet werden. In den Themen in diesem Abschnitt werden Informationen zu Standard Aktionen behandelt.
+description: Der Windows Installer verfügt über viele integrierte Standardaktionen, die in den Sequenztabellen verwendet werden. In den Themen in diesem Abschnitt werden Informationen zu Standardaktionen behandelt.
 ms.assetid: d2fd77e0-c949-4405-9fe4-41d44a76e6fb
-title: Informationen zu Standard Aktionen
+title: Informationen zu Standardaktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f6557f779876d62ce40b4efaea7fe2f76ac2fa4b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bc12854ad21039fac2a24044d9e63c727eaebdc4219237868d99e50b32597400
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013278"
 ---
-# <a name="about-standard-actions"></a>Informationen zu Standard Aktionen
+# <a name="about-standard-actions"></a>Informationen zu Standardaktionen
 
-Der Windows Installer verfügt über viele integrierte Standard Aktionen, die in den [*Sequenz Tabellen*](s-gly.md)verwendet werden. In den Themen in diesem Abschnitt werden Informationen zu Standard Aktionen behandelt.
+Der Windows Installer verfügt über viele integrierte Standardaktionen, die in den [*Sequenztabellen verwendet werden.*](s-gly.md) In den Themen in diesem Abschnitt werden Informationen zu Standardaktionen behandelt.
 
--   [Aktions Ausführungsreihenfolge](action-execution-order.md)
--   [Aktionen mit Sequenz Einschränkungen](actions-with-sequencing-restrictions.md)
--   [Aktionen ohne Sequenz Einschränkungen](actions-without-sequencing-restrictions.md)
+-   [Reihenfolge der Aktionsausführung](action-execution-order.md)
+-   [Aktionen mit Sequenzierungseinschränkungen](actions-with-sequencing-restrictions.md)
+-   [Aktionen ohne Sequenzierungseinschränkungen](actions-without-sequencing-restrictions.md)
 
-Weitere Informationen finden [Sie unter Verwenden von Standard Aktionen](using-standard-actions.md) oder [Referenz zu Standard Aktionen](standard-actions-reference.md).
+Siehe auch [Verwenden von Standardaktionen oder](using-standard-actions.md) Referenz zu [Standardaktionen.](standard-actions-reference.md)
 
  
 

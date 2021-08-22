@@ -1,7 +1,7 @@
 ---
 description: Erstellt einen Referenzpunkt eines virtuellen Systems.
 ms.assetid: 9cc7665a-9562-4267-bcd0-3162e426fbad
-title: Die Methode "kreatereferencepoint" der Msvm_VirtualSystemReferencePointService-Klasse
+title: CreateReferencePoint-Methode der Msvm_VirtualSystemReferencePointService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 08d28970288ba62346894d758ebac5ac156962ff
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: fdcf4680ff10bdc8135fae4ec3bb9f81d53c26092e7196e73965ee4f4d87991f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106354908"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014478"
 ---
-# <a name="createreferencepoint-method-of-the-msvm_virtualsystemreferencepointservice-class"></a>Methode "kreatereferencepoint" der Klasse "MSVM \_ virtualsystemreferencepointservice"
+# <a name="createreferencepoint-method-of-the-msvm_virtualsystemreferencepointservice-class"></a>CreateReferencePoint-Methode der Msvm \_ VirtualSystemReferencePointService-Klasse
 
 Erstellt einen Referenzpunkt eines virtuellen Systems.
 
@@ -43,66 +43,66 @@ uint32 CreateReferencePoint(
 
 <dl> <dt>
 
-*Affectedsystem* \[ in\]
+*AffectedSystem* \[ In\]
 </dt> <dd>
 
-Ein [**MSVM- \_ Computersystem**](msvm-computersystem.md) , das auf das betroffene virtuelle System verweist.
+Ein [**\_ Msvm-Computersystem,**](msvm-computersystem.md) das auf das betroffene virtuelle System verweist.
 
 </dd> <dt>
 
-*Referencepointsettings* \[ in\]
+*ReferencePointSettings* \[ In\]
 </dt> <dd>
 
 Enthält die Parametereinstellungen.
 
 </dd> <dt>
 
-*Referencepointtype* \[ in\]
+*ReferencePointType* \[ In\]
 </dt> <dd>
 
-Angeforderter Verweis Punkttyp:
+Angeforderter Referenzpunkttyp:
 
 <dt>
 
 <span id="Log_based"></span><span id="log_based"></span><span id="LOG_BASED"></span>
 
-<span id="Log_based"></span><span id="log_based"></span><span id="LOG_BASED"></span>**Protokoll basiert** (0)
+<span id="Log_based"></span><span id="log_based"></span><span id="LOG_BASED"></span>**Protokollbasiertes** Protokoll (0)
 
 
 </dt> <dd>
 
-Basierend auf der Protokoll Verfolgung von Hyper-V-Replikaten.
+Basierend auf der Nachverfolgung von Hyper-V-Replikatprotokollen.
 
 </dd> <dt>
 
 <span id="RCT_based"></span><span id="rct_based"></span><span id="RCT_BASED"></span>
 
-<span id="RCT_based"></span><span id="rct_based"></span><span id="RCT_BASED"></span>**RCT basierend** (1)
+<span id="RCT_based"></span><span id="rct_based"></span><span id="RCT_BASED"></span>**RCT-basiert** (1)
 
 
 </dt> <dd>
 
-Basierend auf robusten Änderungsnachverfolgung von virtuellen Datenträgern.
+Basierend auf resilienten Änderungsnachverfolgung virtuellen Datenträgern.
 
 </dd> </dl> </dd> <dt>
 
-*Resultingreferencepoint* \[ in, out\]
+*ResultingReferencePoint* \[ in, out\]
 </dt> <dd>
 
-Resultierender virtueller System-Referenzpunkt
+Resultierender Referenzpunkt des virtuellen Systems
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang lange ausgeführt wird, kann optional ein Auftrag zurückgegeben werden. In diesem Fall wird die Instanz der " [**MSVM \_ virtualsystemreferencepoint**](msvm-virtualsystemreferencepoint.md) "-Klasse, die den neuen virtuellen System Verweis Punkt darstellt, über die [**CIM- \_ affectedjobelements**](cim-affectedjobelement.md) -Zuordnung mit dem Wert der **affectedelta** -Eigenschaft, die auf die neue Instanz der **MSVM \_ virtualsystemreferencepoint** -Klasse verweist, die den Verweis Punkt des virtuellen Systems und den Wert der **elementeffects** auf 5 (Create) festgelegt ist.
+Wenn der Vorgang lange ausgeführt wird, kann optional ein Auftrag zurückgegeben werden. In diesem Fall wird die Instanz der [**Msvm \_ VirtualSystemReferencePoint-Klasse,**](msvm-virtualsystemreferencepoint.md) die den neuen Referenzpunkt des virtuellen Systems darstellt, über die [**CIM \_ AffectedJobElement-Zuordnung**](cim-affectedjobelement.md) mit dem Wert der **AffectedElement-Eigenschaft** dargestellt, die auf die neue Instanz der **Msvm \_ VirtualSystemReferencePoint-Klasse** verweist, die den Referenzpunkt des virtuellen Systems und den Wert der **ElementEffects** darstellt, die auf 5 (Create) festgelegt ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird 0 zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
+Bei Erfolg gibt 0 zurück. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -112,7 +112,7 @@ Bei Erfolg wird 0 zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -121,22 +121,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
 **Ungültiger Typ** (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -145,10 +145,10 @@ Fehler **(2** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -157,7 +157,7 @@ Fehler **(2** )
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemreferencepointservice**](msvm-virtualsystemreferencepointservice.md)
+[**Msvm \_ VirtualSystemReferencePointService**](msvm-virtualsystemreferencepointservice.md)
 </dt> </dl>
 
  

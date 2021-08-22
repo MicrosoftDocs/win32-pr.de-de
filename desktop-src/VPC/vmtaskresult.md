@@ -1,9 +1,9 @@
 ---
-title: Vmtaskresult-Enumeration (vpccominterfaces. h)
+title: VMTaskResult-Enumeration (VPCCOMInterfaces.h)
 description: Gibt das Ergebnis einer Aufgabe an.
 ms.assetid: 34aa193a-466d-492e-8648-467c286a8c11
 keywords:
-- Vmtaskresult-Enumeration virtueller PC
+- VMTaskResult-Enumeration Virtueller PC
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 903425ca8036e1862df7042f16946fc0f2e9cc7d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0884d89776ac840586f221f21f8335f1d93c18886fd36bbe790164ebd1ba4cd8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518908"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998440"
 ---
-# <a name="vmtaskresult-enumeration"></a>Vmtaskresult-Enumeration
+# <a name="vmtaskresult-enumeration"></a>VMTaskResult-Enumeration
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Gibt das Ergebnis einer Aufgabe an.
 
@@ -51,70 +51,70 @@ typedef enum  {
 
 <dl> <dt>
 
-<span id="vmTaskResult_Success"></span><span id="vmtaskresult_success"></span><span id="VMTASKRESULT_SUCCESS"></span>**vmtaskresult \_ erfolgreich**
+<span id="vmTaskResult_Success"></span><span id="vmtaskresult_success"></span><span id="VMTASKRESULT_SUCCESS"></span>**vmTaskResult \_ Success**
 </dt> <dd>
 
-Der Task wurde erfolgreich ausgeführt.
+Die Aufgabe war erfolgreich.
 
 </dd> <dt>
 
-<span id="vmTaskResult_Cancelled"></span><span id="vmtaskresult_cancelled"></span><span id="VMTASKRESULT_CANCELLED"></span>**vmtaskresult \_ abgebrochen**
+<span id="vmTaskResult_Cancelled"></span><span id="vmtaskresult_cancelled"></span><span id="VMTASKRESULT_CANCELLED"></span>**vmTaskResult \_ Cancelled**
 </dt> <dd>
 
 Der Task wurde abgebrochen.
 
 </dd> <dt>
 
-<span id="vmTaskResult_UnexpectedError"></span><span id="vmtaskresult_unexpectederror"></span><span id="VMTASKRESULT_UNEXPECTEDERROR"></span>**vmtaskresult \_ unexpectederror**
+<span id="vmTaskResult_UnexpectedError"></span><span id="vmtaskresult_unexpectederror"></span><span id="VMTASKRESULT_UNEXPECTEDERROR"></span>**vmTaskResult \_ UnexpectedError**
 </dt> <dd>
 
-Unerwarteter Fehler bei der Aufgabe.
+Bei der Aufgabe ist ein unerwarteter Fehler aufgetreten.
 
 </dd> <dt>
 
-<span id="vmTaskResult_OutOfMemoryError"></span><span id="vmtaskresult_outofmemoryerror"></span><span id="VMTASKRESULT_OUTOFMEMORYERROR"></span>**vmtaskresult \_ outo-MemoryError**
+<span id="vmTaskResult_OutOfMemoryError"></span><span id="vmtaskresult_outofmemoryerror"></span><span id="VMTASKRESULT_OUTOFMEMORYERROR"></span>**vmTaskResult \_ OutOfMemoryError**
 </dt> <dd>
 
-Es war nicht genügend Arbeitsspeicher vorhanden, um den Task abzuschließen.
+Es war nicht genügend Arbeitsspeicher vorhanden, damit die Aufgabe abgeschlossen werden konnte.
 
 </dd> <dt>
 
-<span id="vmTaskResult_DiskRelatedError"></span><span id="vmtaskresult_diskrelatederror"></span><span id="VMTASKRESULT_DISKRELATEDERROR"></span>**vmtaskresult \_ diskrelatederror**
+<span id="vmTaskResult_DiskRelatedError"></span><span id="vmtaskresult_diskrelatederror"></span><span id="VMTASKRESULT_DISKRELATEDERROR"></span>**vmTaskResult \_ DiskRelatedError**
 </dt> <dd>
 
-Fehler bei der Aufgabe beim Schreiben auf den Datenträger (stellen Sie sicher, dass genügend Speicherplatz vorhanden ist).
+Beim Schreiben auf den Datenträger ist bei der Aufgabe ein Fehler aufgetreten (stellen Sie sicher, dass genügend Speicherplatz vorhanden ist).
 
 </dd> <dt>
 
-<span id="vmTaskResult_IncompatibleSavedStateError"></span><span id="vmtaskresult_incompatiblesavedstateerror"></span><span id="VMTASKRESULT_INCOMPATIBLESAVEDSTATEERROR"></span>**vmtaskresult \_ incompatiblesavedstateerror**
+<span id="vmTaskResult_IncompatibleSavedStateError"></span><span id="vmtaskresult_incompatiblesavedstateerror"></span><span id="VMTASKRESULT_INCOMPATIBLESAVEDSTATEERROR"></span>**vmTaskResult \_ IncompatibleSavedStateError**
 </dt> <dd>
 
-Die virtuelle Maschine konnte nicht wieder hergestellt werden, da der gespeicherte Zustand nicht kompatibel war.
+Der virtuelle Computer konnte nicht wiederhergestellt werden, da der gespeicherte Zustand inkompatibel war.
 
 </dd> <dt>
 
-<span id="vmTaskResult_TimeOutError"></span><span id="vmtaskresult_timeouterror"></span><span id="VMTASKRESULT_TIMEOUTERROR"></span>**vmtaskresult \_ timeouterror**
+<span id="vmTaskResult_TimeOutError"></span><span id="vmtaskresult_timeouterror"></span><span id="VMTASKRESULT_TIMEOUTERROR"></span>**vmTaskResult \_ TimeOutError**
 </dt> <dd>
 
-Timeout beim Task.
+Für den Task ist ein Time out erfolgt.
 
 </dd> <dt>
 
-<span id="vmTaskResult_IllegalValueError"></span><span id="vmtaskresult_illegalvalueerror"></span><span id="VMTASKRESULT_ILLEGALVALUEERROR"></span>**vmtaskresult \_ illegalvalueerror**
+<span id="vmTaskResult_IllegalValueError"></span><span id="vmtaskresult_illegalvalueerror"></span><span id="VMTASKRESULT_ILLEGALVALUEERROR"></span>**vmTaskResult \_ IllegalValueError**
 </dt> <dd>
 
-Beim Verarbeiten der Aufgabe wurde ein unzulässiger Einstellungs Wert gelesen.
+Ein unzulässiger Einstellungswert wurde gelesen, während der Task verarbeitet wurde.
 
 </dd> <dt>
 
-<span id="vmTaskResult_ThreadCrashError"></span><span id="vmtaskresult_threadcrasherror"></span><span id="VMTASKRESULT_THREADCRASHERROR"></span>**vmtaskresult \_ threadcrasherror**
+<span id="vmTaskResult_ThreadCrashError"></span><span id="vmtaskresult_threadcrasherror"></span><span id="VMTASKRESULT_THREADCRASHERROR"></span>**vmTaskResult \_ ThreadCrashError**
 </dt> <dd>
 
-Ein dem Task zugeordneter Thread ist abgestürzt.
+Ein Thread, der dem Task zugeordnet ist, ist abgestürzt.
 
 </dd> <dt>
 
-<span id="vmTaskResult_ShutdownAbort"></span><span id="vmtaskresult_shutdownabort"></span><span id="VMTASKRESULT_SHUTDOWNABORT"></span>**vmtaskresult \_ shutdownabort**
+<span id="vmTaskResult_ShutdownAbort"></span><span id="vmtaskresult_shutdownabort"></span><span id="VMTASKRESULT_SHUTDOWNABORT"></span>**vmTaskResult \_ ShutdownAbort**
 </dt> <dd>
 
 Das angeforderte Herunterfahren wurde abgebrochen.
@@ -127,19 +127,19 @@ Das angeforderte Herunterfahren wurde abgebrochen.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmtask:: result**](ivmtask-result.md)
+[**IVMTask::Result**](ivmtask-result.md)
 </dt> </dl>
 
  

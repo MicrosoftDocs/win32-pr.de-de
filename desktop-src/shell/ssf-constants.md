@@ -1,6 +1,6 @@
 ---
-description: Wird von der shgetsetsettings-Funktion verwendet, um anzugeben, welche Member der shellstate-Struktur festgelegt oder abgerufen werden sollen.
-title: SSF-Konstanten (shlobj. h)
+description: Wird von der SHGetSetSettings-Funktion verwendet, um anzugeben, welche Member der SHELLSTATE-Struktur festgelegt oder wiederholt werden sollen.
+title: SSF-Konstanten (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 2a883110-fdc3-4451-9e47-e58894600e3b
@@ -39,20 +39,20 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: b26ba102ff72caf235a51d3888183ccafba9d639
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c022b1d93cb411f0cce73822a47f2d8f85b30e8093bbe2064fb3c50eab5c4870
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104994830"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118967939"
 ---
 # <a name="ssf-constants"></a>SSF-Konstanten
 
-Wird von der [**shgetsetsettings**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetsetsettings) -Funktion verwendet, um anzugeben, welche Member der [**shellstate**](/windows/win32/api/shlobj_core/ns-shlobj_core-shellstatea) -Struktur festgelegt oder abgerufen werden sollen.
+Wird von der [**SHGetSetSettings-Funktion**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetsetsettings) verwendet, um anzugeben, welche Member der [**SHELLSTATE-Struktur**](/windows/win32/api/shlobj_core/ns-shlobj_core-shellstatea) festgelegt oder wiederholt werden sollen.
 
 <dl> <dt>
 
-<span id="SSF_SHOWALLOBJECTS"></span><span id="ssf_showallobjects"></span>**SSF- \_ showallobjects**
+<span id="SSF_SHOWALLOBJECTS"></span><span id="ssf_showallobjects"></span>**SSF \_ SHOWALLOBJECTS**
 </dt> <dd> <dl> <dt>
 
 0x00000001
@@ -60,12 +60,12 @@ Wird von der [**shgetsetsettings**](/windows/desktop/api/shlobj_core/nf-shlobj_c
 
 
 
-Der **fshowallobjects** -Member wird angefordert.
+Das **fShowAllObjects-Member** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_SHOWEXTENSIONS"></span><span id="ssf_showextensions"></span>**SSF- \_ showextensions**
+<span id="SSF_SHOWEXTENSIONS"></span><span id="ssf_showextensions"></span>**SSF \_ SHOWEXTENSIONS**
 </dt> <dd> <dl> <dt>
 
 0x00000002
@@ -73,12 +73,12 @@ Der **fshowallobjects** -Member wird angefordert.
 
 
 
-Der **fshowextensions** -Member wird angefordert.
+Das **fShowExtensions-Member** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_HIDDENFILEEXTS"></span><span id="ssf_hiddenfileexts"></span>**SSF- \_ hiddenfileexts**
+<span id="SSF_HIDDENFILEEXTS"></span><span id="ssf_hiddenfileexts"></span>**SSF \_ HIDDENFILEEXTS**
 </dt> <dd> <dl> <dt>
 
 0x00000004
@@ -86,12 +86,12 @@ Der **fshowextensions** -Member wird angefordert.
 
 
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_SERVERADMINUI"></span><span id="ssf_serveradminui"></span>**SSF \_ serveradminui**
+<span id="SSF_SERVERADMINUI"></span><span id="ssf_serveradminui"></span>**SSF \_ SERVERADMINUI**
 </dt> <dd> <dl> <dt>
 
 0x00000004
@@ -99,12 +99,12 @@ Nicht verwendet.
 
 
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_SHOWCOMPCOLOR"></span><span id="ssf_showcompcolor"></span>**SSF- \_ showcompcolor**
+<span id="SSF_SHOWCOMPCOLOR"></span><span id="ssf_showcompcolor"></span>**SSF \_ SHOWCOMPCOLOR**
 </dt> <dd> <dl> <dt>
 
 0x00000008
@@ -112,12 +112,12 @@ Nicht verwendet.
 
 
 
-Der **fshowcompcolor** -Member wird angefordert.
+Das **fShowCompColor-Member** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_SORTCOLUMNS"></span><span id="ssf_sortcolumns"></span>**SSF \_ sortColumns**
+<span id="SSF_SORTCOLUMNS"></span><span id="ssf_sortcolumns"></span>**SSF \_ SORTCOLUMNS**
 </dt> <dd> <dl> <dt>
 
 0x00000010
@@ -125,12 +125,12 @@ Der **fshowcompcolor** -Member wird angefordert.
 
 
 
-Die Member **lparamsort** und **isortdirection** werden angefordert.
+Die **Member lParamSort** **und iSortDirection** werden angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_SHOWSYSFILES"></span><span id="ssf_showsysfiles"></span>**SSF- \_ showsysfiles**
+<span id="SSF_SHOWSYSFILES"></span><span id="ssf_showsysfiles"></span>**SSF \_ SHOWSYSFILES**
 </dt> <dd> <dl> <dt>
 
 0x00000020
@@ -138,12 +138,12 @@ Die Member **lparamsort** und **isortdirection** werden angefordert.
 
 
 
-Der **fshowsysfiles** -Member wird angefordert.
+Das **fShowSysFiles-Member** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_DOUBLECLICKINWEBVIEW"></span><span id="ssf_doubleclickinwebview"></span>**SSF \_ doubleclickinwebview**
+<span id="SSF_DOUBLECLICKINWEBVIEW"></span><span id="ssf_doubleclickinwebview"></span>**SSF \_ DOUBLECLICKINWEBVIEW**
 </dt> <dd> <dl> <dt>
 
 0x00000080
@@ -151,12 +151,12 @@ Der **fshowsysfiles** -Member wird angefordert.
 
 
 
-Der **fdoubleclickinwebview** -Member wird angefordert.
+Das **fDoubleClickInWebView-Mitglied** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_SHOWATTRIBCOL"></span><span id="ssf_showattribcol"></span>**SSF \_ ShowAttribCol**
+<span id="SSF_SHOWATTRIBCOL"></span><span id="ssf_showattribcol"></span>**SSF \_ SHOWATTRIBCOL**
 </dt> <dd> <dl> <dt>
 
 0x00000100
@@ -164,14 +164,14 @@ Der **fdoubleclickinwebview** -Member wird angefordert.
 
 
 
-Der **fshowattribcol** -Member wird angefordert.
+Das **fShowAttribCol-Member** wird angefordert.
 
 **Windows Vista:** Nicht verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_DESKTOPHTML"></span><span id="ssf_desktophtml"></span>**SSF \_ desktophtml**
+<span id="SSF_DESKTOPHTML"></span><span id="ssf_desktophtml"></span>**SSF \_ DESKTOPHTML**
 </dt> <dd> <dl> <dt>
 
 0x00000200
@@ -179,7 +179,7 @@ Der **fshowattribcol** -Member wird angefordert.
 
 
 
-Der **fdesktophtml** -Member wird angefordert. Set ist nicht verfügbar. Aktivieren Sie stattdessen für Windows-Versionen vor Windows XP Desktop-HTML von [**iactivedesktop**](/windows/win32/api/shlobj_core/nn-shlobj_core-iactivedesktop). Die Verwendung von **iactivedesktop** zu diesem Zweck wird jedoch für Windows XP und höhere Versionen von Windows nicht empfohlen und ist in Windows Vista veraltet.
+Das **fDesktopHTML-Member** wird angefordert. Set ist nicht verfügbar. Aktivieren Sie stattdessen für Versionen von Windows vor Windows XP Desktop-HTML von [**IActiveDesktop**](/windows/win32/api/shlobj_core/nn-shlobj_core-iactivedesktop). Die Verwendung von **IActiveDesktop** für diesen Zweck wird jedoch für Windows XP und spätere Versionen von Windows nicht empfohlen und ist in Windows Vista veraltet.
 
 
 </dt> </dl> </dd> <dt>
@@ -192,12 +192,12 @@ Der **fdesktophtml** -Member wird angefordert. Set ist nicht verfügbar. Aktivie
 
 
 
-Der **fWin95Classic** -Member wird angefordert.
+Der **fWin95Classic-Member** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_DONTPRETTYPATH"></span><span id="ssf_dontprettypath"></span>**SSF- \_ dontprettypath**
+<span id="SSF_DONTPRETTYPATH"></span><span id="ssf_dontprettypath"></span>**SSF \_ DONTPRETTYPATH**
 </dt> <dd> <dl> <dt>
 
 0x00000800
@@ -205,12 +205,12 @@ Der **fWin95Classic** -Member wird angefordert.
 
 
 
-Der Member " **fdontprettypath** " wird angefordert.
+Das **fDontPrettyPath-Mitglied** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_MAPNETDRVBUTTON"></span><span id="ssf_mapnetdrvbutton"></span>**SSF \_ mapnetdrvbutton**
+<span id="SSF_MAPNETDRVBUTTON"></span><span id="ssf_mapnetdrvbutton"></span>**SSF \_ MAPNETDRVBUTTON**
 </dt> <dd> <dl> <dt>
 
 0x00001000
@@ -218,12 +218,12 @@ Der Member " **fdontprettypath** " wird angefordert.
 
 
 
-Der **fmapnetdrvbtn** -Member wird angefordert.
+Das **fMapNetDrvBtn-Member** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_SHOWINFOTIP"></span><span id="ssf_showinfotip"></span>**SSF- \_ ShowInfoTip**
+<span id="SSF_SHOWINFOTIP"></span><span id="ssf_showinfotip"></span>**SSF \_ SHOWINFOTIP**
 </dt> <dd> <dl> <dt>
 
 0x00002000
@@ -231,12 +231,12 @@ Der **fmapnetdrvbtn** -Member wird angefordert.
 
 
 
-Der **fshowinfotip** -Member wird angefordert.
+Das **fShowInfoTip-Element** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_HIDEICONS"></span><span id="ssf_hideicons"></span>**SSF- \_ hideicons**
+<span id="SSF_HIDEICONS"></span><span id="ssf_hideicons"></span>**\_SSF-HIDEICONS**
 </dt> <dd> <dl> <dt>
 
 0x00004000
@@ -244,12 +244,12 @@ Der **fshowinfotip** -Member wird angefordert.
 
 
 
-Der **fhideicons** -Member wird angefordert.
+Das **fHideIcons-Member** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_NOCONFIRMRECYCLE"></span><span id="ssf_noconfirmrecycle"></span>**SSF- \_ noconfirm-Wiederverwendung**
+<span id="SSF_NOCONFIRMRECYCLE"></span><span id="ssf_noconfirmrecycle"></span>**SSF \_ NOCONFIRMRECYCLE**
 </dt> <dd> <dl> <dt>
 
 0x00008000
@@ -257,12 +257,12 @@ Der **fhideicons** -Member wird angefordert.
 
 
 
-Der **fnoconfirmrecycle** -Member wird angefordert.
+Das **fNoConfirmRecycle-Mitglied** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_FILTER"></span><span id="ssf_filter"></span>**SSF- \_ Filter**
+<span id="SSF_FILTER"></span><span id="ssf_filter"></span>**SSF-FILTER \_**
 </dt> <dd> <dl> <dt>
 
 0x00010000
@@ -270,14 +270,14 @@ Der **fnoconfirmrecycle** -Member wird angefordert.
 
 
 
-Der **ffilter** -Member wird angefordert.
+Das **fFilter-Member** wird angefordert.
 
 **Windows Vista:** Nicht verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_WEBVIEW"></span><span id="ssf_webview"></span>**SSF- \_ WebView**
+<span id="SSF_WEBVIEW"></span><span id="ssf_webview"></span>**\_SSF-WEBVIEW**
 </dt> <dd> <dl> <dt>
 
 0x00020000
@@ -285,12 +285,12 @@ Der **ffilter** -Member wird angefordert.
 
 
 
-Der **fwebview** -Member wird angefordert.
+Das **fWebView-Member** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_SHOWSUPERHIDDEN"></span><span id="ssf_showsuperhidden"></span>**SSF \_ ShowSuperHidden**
+<span id="SSF_SHOWSUPERHIDDEN"></span><span id="ssf_showsuperhidden"></span>**SSF \_ SHOWSUPERHIDDEN**
 </dt> <dd> <dl> <dt>
 
 0x00040000
@@ -298,12 +298,12 @@ Der **fwebview** -Member wird angefordert.
 
 
 
-Der **fshowsuperhidden** -Member wird angefordert.
+Das **fShowSuperHidden-Mitglied** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_SEPPROCESS"></span><span id="ssf_sepprocess"></span>**SSF- \_ sepprocess**
+<span id="SSF_SEPPROCESS"></span><span id="ssf_sepprocess"></span>**SSF \_ SEPPROCESS**
 </dt> <dd> <dl> <dt>
 
 0x00080000
@@ -311,12 +311,12 @@ Der **fshowsuperhidden** -Member wird angefordert.
 
 
 
-Der **fsepprocess** -Member wird angefordert.
+Das **fSepProcess-Member** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_NONETCRAWLING"></span><span id="ssf_nonetcrawling"></span>**SSF- \_ nonetcrawlen**
+<span id="SSF_NONETCRAWLING"></span><span id="ssf_nonetcrawling"></span>**SSF \_ NONETCRAWLING**
 </dt> <dd> <dl> <dt>
 
 0x00100000
@@ -324,12 +324,12 @@ Der **fsepprocess** -Member wird angefordert.
 
 
 
-**Windows XP und** höher. Der **fnonetcrawlen** -Member wird angefordert.
+**Windows XP und höher.** Der **fNoNetCrawling-Member** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_STARTPANELON"></span><span id="ssf_startpanelon"></span>**SSF \_ startpanelon**
+<span id="SSF_STARTPANELON"></span><span id="ssf_startpanelon"></span>**SSF \_ STARTPANELON**
 </dt> <dd> <dl> <dt>
 
 0x00200000
@@ -337,12 +337,12 @@ Der **fsepprocess** -Member wird angefordert.
 
 
 
-**Windows XP und** höher. Das **fstartpanelon** -Element wird angefordert.
+**Windows XP und höher.** Das **fStartPanelOn-Element** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_SHOWSTARTPAGE"></span><span id="ssf_showstartpage"></span>**SSF- \_ showstartpage**
+<span id="SSF_SHOWSTARTPAGE"></span><span id="ssf_showstartpage"></span>**SSF \_ SHOWSTARTPAGE**
 </dt> <dd> <dl> <dt>
 
 0x00400000
@@ -350,12 +350,12 @@ Der **fsepprocess** -Member wird angefordert.
 
 
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_AUTOCHECKSELECT"></span><span id="ssf_autocheckselect"></span>**SSF \_ autocheckselect**
+<span id="SSF_AUTOCHECKSELECT"></span><span id="ssf_autocheckselect"></span>**SSF \_ AUTOCHECKSELECT**
 </dt> <dd> <dl> <dt>
 
 0x00800000
@@ -363,12 +363,12 @@ Nicht verwendet.
 
 
 
-**Windows Vista und** höher. Das **fautocheckselect** -Element wird angefordert.
+**Windows Vista und höher.** Das **fAutoCheckSelect-Mitglied** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_ICONSONLY"></span><span id="ssf_iconsonly"></span>**SSF ( \_ iconsonly)**
+<span id="SSF_ICONSONLY"></span><span id="ssf_iconsonly"></span>**\_SSF-SYMBOLEONLY**
 </dt> <dd> <dl> <dt>
 
 0x01000000
@@ -376,12 +376,12 @@ Nicht verwendet.
 
 
 
-**Windows Vista und** höher. Der **Member** wird angefordert.
+**Windows Vista und höher.** Das **fIconsOnly-Member** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_SHOWTYPEOVERLAY"></span><span id="ssf_showtypeoverlay"></span>**SSF- \_ showtypeoverlay**
+<span id="SSF_SHOWTYPEOVERLAY"></span><span id="ssf_showtypeoverlay"></span>**SSF \_ SHOWTYPEOVERLAY**
 </dt> <dd> <dl> <dt>
 
 0x02000000
@@ -389,12 +389,12 @@ Nicht verwendet.
 
 
 
-**Windows Vista und** höher. Das **fshowtypeoverlay** -Element wird angefordert.
+**Windows Vista und höher.** Das **fShowTypeOverlay-Member** wird angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="SSF_SHOWSTATUSBAR"></span><span id="ssf_showstatusbar"></span>**SSF- \_ ShowStatusBar**
+<span id="SSF_SHOWSTATUSBAR"></span><span id="ssf_showstatusbar"></span>**SSF \_ SHOWSTATUSBAR**
 </dt> <dd> <dl> <dt>
 
 0x04000000
@@ -402,12 +402,12 @@ Nicht verwendet.
 
 
 
-**Windows 8 und** höher: der **fshowstatusbar** -Member wird angefordert.
+**Windows 8 und höher:** Das **fShowStatusBar-Member** wird angefordert.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -415,7 +415,7 @@ Nicht verwendet.
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

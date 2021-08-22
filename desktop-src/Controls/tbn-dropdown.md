@@ -1,9 +1,9 @@
 ---
-title: TBN_DROPDOWN Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem ToolBar-Steuerelement gesendet, wenn der Benutzer auf eine Dropdown-Schaltfläche klickt Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TBN_DROPDOWN Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Symbolleistensteuerelement gesendet, wenn der Benutzer auf eine Dropdownschaltfläche klickt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 85360f74-4b43-4d0a-8c89-22b0741fe96a
 keywords:
-- Windows-Steuerelemente für TBN_DROPDOWN Benachrichtigungs
+- TBN_DROPDOWN Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ad7adbb9e0e2ed3d77f8ca8bfb6b09dedd2265be
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1e2cdee38176b2ed72d42aaa29ca685a5e73dd30ceb7e315b5cbe0971161dc13
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949693"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077924"
 ---
-# <a name="tbn_dropdown-notification-code"></a>TBN- \_ Dropdown-Benachrichtigungs Code
+# <a name="tbn_dropdown-notification-code"></a>\_TBN-DROPDOWN-Benachrichtigungscode
 
-Wird von einem ToolBar-Steuerelement gesendet, wenn der Benutzer auf eine Dropdown-Schaltfläche klickt Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Symbolleistensteuerelement gesendet, wenn der Benutzer auf eine Dropdownschaltfläche klickt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ TBN_DROPDOWN
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmtoolbar**](/windows/win32/api/commctrl/ns-commctrl-nmtoolbara) -Struktur, die Informationen zu diesem Benachrichtigungs Code enthält. Bei diesem Benachrichtigungs Code sind nur die **HDR** -und **iItem** -Member dieser Struktur gültig.
+Zeiger auf eine [**NMTOOLBAR-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmtoolbara) die Informationen zu diesem Benachrichtigungscode enthält. Für diesen Benachrichtigungscode sind nur die **HDR-** und **iItem-Member** dieser Struktur gültig.
 
 </dd> </dl>
 
@@ -53,18 +53,18 @@ Gibt einen der folgenden Werte zurück:
 
 | Rückgabecode                                                                                          | Beschreibung                                                                       |
 |------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| <dl> <dt>**tbddret ( \_ Standard)**</dt> </dl>      | Der Dropdown wurde behandelt.<br/>                                             |
-| <dl> <dt>**tbddret \_ NODEFAULT**</dt> </dl>    | Die Dropdown-Dropdown-Anwendung wurde nicht behandelt.<br/>                                         |
-| <dl> <dt>**tbddret- \_ behandelte**</dt> </dl> | Das Dropdown Feld wurde behandelt, aber die Schaltfläche wird wie eine reguläre Schaltfläche behandelt.<br/> |
+| <dl> <dt>**TBDDRET \_ DEFAULT**</dt> </dl>      | Das Dropdown wurde verarbeitet.<br/>                                             |
+| <dl> <dt>**TBDDRET \_ NODEFAULT**</dt> </dl>    | Das Dropdown wurde nicht behandelt.<br/>                                         |
+| <dl> <dt>**TBDDRET \_ TREATPRESSED**</dt> </dl> | Die Dropdown-Schaltfläche wurde behandelt, behandelt die Schaltfläche jedoch wie eine reguläre Schaltfläche.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dropdown Schaltflächen können Plain ([**btns- \_ Dropdown**](toolbar-control-and-button-styles.md) -Stil) sein, einen Pfeil neben dem Schaltflächen Bild anzeigen ([**btns- \_ volledropdown**](toolbar-control-and-button-styles.md) -Stil) oder einen Pfeil anzeigen, der vom Bild getrennt ist ([**tbstyle \_ Ex \_ drawddarrows**](toolbar-extended-styles.md) -Stil). Wenn ein getrennter Pfeil verwendet wird, wird die TBN- \_ Dropdown Liste nur gesendet, wenn der Benutzer auf den Pfeil Bereich der Schaltfläche klickt. Wenn der Benutzer auf den Hauptteil der Schaltfläche klickt, wird eine [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung mit der ID des Schaltflächen wie bei einer Standard Schaltfläche gesendet. Für die beiden anderen Stile der Dropdown Schaltfläche wird die TBN- \_ Dropdown Liste gesendet, wenn der Benutzer auf einen beliebigen Teil der Schaltfläche klickt.
+> Dropdownschaltflächen können einfach sein [**(BTNS-DROPDOWN-Stil), \_**](toolbar-control-and-button-styles.md) einen Pfeil neben dem [**Schaltflächenbild anzeigen (BTNS \_ WHOLEDROPDOWN-Stil)**](toolbar-control-and-button-styles.md) oder einen Pfeil anzeigen, der vom Bild getrennt ist [**(TBSTYLE \_ EX \_ DRAWDDARROWS-Stil).**](toolbar-extended-styles.md) Wenn ein separater Pfeil verwendet wird, wird TBN \_ DROPDOWN nur gesendet, wenn der Benutzer auf den Pfeilteil der Schaltfläche klickt. Wenn der Benutzer auf den Hauptteil der Schaltfläche klickt, wird wie bei einer Standardschaltfläche eine [**WM \_ COMMAND-Meldung**](/windows/desktop/menurc/wm-command) mit der ID der Schaltfläche gesendet. Für die anderen beiden Stile der Dropdown-Schaltfläche wird TBN \_ DROPDOWN gesendet, wenn der Benutzer auf einen Beliebigen Teil der Schaltfläche klickt.
 
  
 
@@ -74,9 +74,9 @@ Gibt einen der folgenden Werte zurück:
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

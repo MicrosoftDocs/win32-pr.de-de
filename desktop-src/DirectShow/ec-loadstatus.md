@@ -1,17 +1,17 @@
 ---
 description: Benachrichtigt die Anwendung über den Fortschritt beim Öffnen einer Netzwerkdatei.
 ms.assetid: 022b87e5-76af-4253-9485-97140f294938
-title: EC_LOADSTATUS (DShow. h)
+title: EC_LOADSTATUS (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cc06022a9774d851cabff6a18c0f8808f62f14f9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 499f05a26f3fa1387347929f5c14a64b1f440a53ed9b5fd17830d582fb640c3b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119015938"
 ---
-# <a name="ec_loadstatus"></a>EC- \_ loadstatus
+# <a name="ec_loadstatus"></a>EC \_ LOADSTATUS
 
 Benachrichtigt die Anwendung über den Fortschritt beim Öffnen einer Netzwerkdatei.
 
@@ -37,21 +37,21 @@ Keinen.
 
 Keine.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der [WM-ASF-Reader](wm-asf-reader-filter.md) -Filter und der ältere [Windows Media-Quell](windows-media-source-filter.md) Filter Senden dieses Ereignis. Der erste Ereignis Parameter hat einen der folgenden Werte.
+Der [WM ASF-Readerfilter](wm-asf-reader-filter.md) und der Legacyfilter [Windows Medienquelle](windows-media-source-filter.md) senden dieses Ereignis. Der erste Ereignisparameter weist einen der folgenden Werte auf.
 
 
 
-| Wert                        | BESCHREIBUNG                                    |
+| Wert                        | Beschreibung                                    |
 |------------------------------|------------------------------------------------|
-| AM \_ loadstatus \_ geschlossen       | Der Quell Filter hat die Datei geschlossen.         |
-| AM \_ loadstatus- \_ Verbindung   | Der Quell Filter stellt eine Verbindung mit dem Server her. |
-| AM \_ loadstatus \_ loadingdescr | Nicht verwendet.                                      |
-| AM \_ loadstatus \_ loadingmcast | Nicht verwendet                                       |
-| AM \_ loadstatus \_ Suchen     | Der Quell Filter sucht die angeforderten Daten.  |
-| AM \_ loadstatus \_ geöffnet         | Der Quell Filter hat die Datei geöffnet.         |
-| AM \_ loadstatus \_ Öffnen      | Der Quell Filter öffnet die Datei.         |
+| AM \_ LOADSTATUS \_ CLOSED       | Der Quellfilter hat die Datei geschlossen.         |
+| AM \_ LOADSTATUS \_ CONNECTING   | Der Quellfilter stellt eine Verbindung mit dem Server her. |
+| AM \_ LOADSTATUS \_ LOADINGDESCR | Wird nicht verwendet.                                      |
+| AM \_ LOADSTATUS \_ LOADINGMCAST | Nicht verwendet                                       |
+| AM \_ LOADSTATUS \_ LOCATING     | Der Quellfilter sucht nach angeforderten Daten.  |
+| AM \_ LOADSTATUS \_ OPEN         | Der Quellfilter hat die Datei geöffnet.         |
+| AM \_ LOADSTATUS \_ OPENING      | Der Quellfilter öffnet die Datei.         |
 
 
 
@@ -63,7 +63,7 @@ Der [WM-ASF-Reader](wm-asf-reader-filter.md) -Filter und der ältere [Windows Me
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
@@ -71,10 +71,10 @@ Der [WM-ASF-Reader](wm-asf-reader-filter.md) -Filter und der ältere [Windows Me
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

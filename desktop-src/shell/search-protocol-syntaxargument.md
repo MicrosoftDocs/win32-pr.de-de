@@ -1,19 +1,19 @@
 ---
-description: Mit dem Syntaxargument können Sie die Syntax Ihrer Abfrage identifizieren. Zulässige Werte sind entweder Natural Query Syntax (NQS) oder Advanced Query Syntax (AQS). AQS ist die Standardeinstellung und wird immer als analysiert und unterstützt angenommen.
+description: Mit dem Syntaxargument können Sie die Syntax Ihrer Abfrage identifizieren. Zulässige Werte sind entweder Natural Query Syntax (NQS) oder Advanced Query Syntax (AQS). AQS ist die Standardeinstellung und wird immer angenommen, dass sie analysiert und unterstützt wird.
 ms.assetid: cd439a29-4908-47af-b3f7-3794bd65db7c
 title: SYNTAX-Argument (die Windows Shell)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2cb7607718d46677284ac09eca005bb95be3525e
-ms.sourcegitcommit: 822413efb4a70dd464e5db4d9e8693ef74f8132f
+ms.openlocfilehash: 21bd015f5cde28a4050b397b92680ba05c56593c886133532469821670d06e52
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113581788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968729"
 ---
 # <a name="syntax-argument-the-windows-shell"></a>SYNTAX-Argument (die Windows Shell)
 
-Mit `syntax` dem -Argument können Sie die Syntax Ihrer Abfrage identifizieren. Zulässige Werte sind entweder Natural Query Syntax (NQS) oder Advanced Query Syntax (AQS). AQS ist die Standardeinstellung und wird immer als analysiert und unterstützt angenommen.
+Mit `syntax` dem -Argument können Sie die Syntax Ihrer Abfrage identifizieren. Zulässige Werte sind entweder Natural Query Syntax (NQS) oder Advanced Query Syntax (AQS). AQS ist die Standardeinstellung und wird immer angenommen, dass sie analysiert und unterstützt wird.
 
 ## <a name="example"></a>Beispiel
 

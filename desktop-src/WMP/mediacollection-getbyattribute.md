@@ -1,11 +1,11 @@
 ---
-title: Mediacollection. getbyattribute-Methode
-description: Die getbyattribute-Methode ruft eine Wiedergabeliste von Medien Elementen ab, die einen angegebenen Wert für ein angegebenes Attribut enthalten.
+title: MediaCollection.getByAttribute-Methode
+description: Die getByAttribute-Methode ruft eine Wiedergabeliste von Medienelementen ab, die einen angegebenen Wert für ein angegebenes Attribut enthalten.
 ms.assetid: a89f9c52-c655-4420-858e-c0eed661856f
 keywords:
-- getbyattribute-Methode, Windows-Media Player
-- getbyattribute-Methode, Windows Media Player, mediacollection-Klasse
-- Mediacollection-Klasse, Windows Media Player, getbyattribute-Methode
+- getByAttribute-Windows Media Player
+- getByAttribute-Methode Windows Media Player , MediaCollection-Klasse
+- MediaCollection-Klasse Windows Media Player , getByAttribute-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 533823127364416f8f4492c82381e682173c5c78
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f942f0718202d6c3e509b177c34c4c4be20c058b1e74991fa0ae89955d7711d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370226"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996309"
 ---
-# <a name="mediacollectiongetbyattribute-method"></a>Mediacollection. getbyattribute-Methode
+# <a name="mediacollectiongetbyattribute-method"></a>MediaCollection.getByAttribute-Methode
 
-Die **getbyattribute** -Methode ruft eine Wiedergabeliste von Medien Elementen ab, die einen angegebenen Wert für ein angegebenes Attribut enthalten.
+Die **getByAttribute-Methode** ruft eine Wiedergabeliste von Medienelementen ab, die einen angegebenen Wert für ein angegebenes Attribut enthalten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,50 +43,50 @@ retVal = MediaCollection.getByAttribute(
 
 <dl> <dt>
 
-*Attribut* \[ in\]
+*Attribut* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Namen des zu durchsuchenden Attributs angibt. Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Referenz](attribute-reference.md)zu Windows Media Player-Attributen.
+**Eine Zeichenfolge,** die den Namen des zu durchsuchenden Attributs angibt. Informationen zu den attributes, die von Windows Media Player unterstützt werden, finden Sie in der Windows Media Player [Attribute Reference](attribute-reference.md).
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*value* \[ In\]
 </dt> <dd>
 
-Eine **Zeichenfolge** , die den Wert angibt, den das Attribut aufweisen sollte.
+**Eine Zeichenfolge,** die den Wert angibt, über den das Attribut verfügen soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt ein **Wiedergabe** Listen Objekt zurück.
+Diese Methode gibt ein **Playlist-Objekt** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kann verwendet werden, um eine generische Abfrage für Medienelemente zu erstellen, die einem Wert für ein Attribut in der Datenbank entsprechen. Dies ist nützlich für benutzerdefinierte Attribute. Wenn das Attribut nicht vorhanden ist, führt dies zu einem Fehler.
+Diese Methode kann verwendet werden, um eine generische Abfrage für Medienelemente zu erstellen, die mit einem Wert für ein Attribut in der Datenbank übereinstimmen. Dies ist bei benutzerdefinierten Attributen nützlich. Wenn das Attribut nicht vorhanden ist, tritt ein Fehler auf.
 
-Mit dieser Methode können Sie alle Medienelemente eines bestimmten Typs abrufen. Verwenden Sie den Attributnamen "MediaType" und einen der folgenden Werte:
+Sie können diese Methode verwenden, um alle Medienelemente eines bestimmten Typs abzurufen. Verwenden Sie den Attributnamen "MediaType" und einen der folgenden Werte:
 
 
 
-| Wert    | BESCHREIBUNG                                                |
+| Wert    | Beschreibung                                                |
 |----------|------------------------------------------------------------|
-| Audio    | Musik und andere reine Audioelemente.                          |
-| Abspielen | Wiedergabelisten, die als **Medien** Objekte dargestellt werden.                |
-| radio    | Radio Station-Elemente. Wird nicht von Windows Media Player 10 verwendet.  |
-| video    | Video Elemente.                                               |
-| Foto    | Foto Elemente. Erfordert Windows Media Player 10.             |
-| andere    | Andere Elemente, wie z. b. ASF-Dateien oder URLs für Streaming-Medien. |
+| Audio    | Musik und andere Nur-Audio-Elemente.                          |
+| Playlist | Wiedergabelisten, die als **Medienobjekte dargestellt** werden.                |
+| radio    | Radiostationselemente. Wird von Windows Media Player 10 nicht verwendet.  |
+| video    | Videoelemente.                                               |
+| Foto    | Fotoelemente. Erfordert Windows Media Player 10.             |
+| Sonstige    | Andere Elemente, z. B. ASF-Dateien oder URLs für Streamingmedien. |
 
 
 
  
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *mediacollection* verwendet. " **getbyattribute** ", um den gesamten Inhalt der Bibliothek von der Künstlerin mit dem Namen "48 drei Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript *MediaCollection verwendet.* **getByAttribute** zum Wiederspielen aller Inhalte aus der Bibliothek durch den Interpreten namens Attributde 48. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -110,25 +110,25 @@ Player.controls.play();
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mediacollection-Objekt**](mediacollection-object.md)
+[**MediaCollection-Objekt**](mediacollection-object.md)
 </dt> <dt>
 
-[**Wiedergabelisten Objekt**](playlist-object.md)
+[**Wiedergabelistenobjekt**](playlist-object.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Network. receivedpakete
-description: Die receivedpaketen-Eigenschaft ruft die Anzahl der empfangenen Pakete ab.
+title: Network.receivedPackets
+description: Die receivedPackets-Eigenschaft ruft die Anzahl der empfangenen Pakete ab.
 ms.assetid: db4f6f08-c248-4db8-ab19-fdd5d2794085
 keywords:
-- Network. receivedpaketen-Windows-Media Player
+- Network.receivedPackets Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,32 +14,32 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7bc792330cd107ca428ad0fbec930fe262a2f131
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ca9544332fa6e81211dae45cddc74ce9daee0d47e70d467137aaca2084bbc6f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054498"
 ---
-# <a name="networkreceivedpackets"></a>Network. receivedpakete
+# <a name="networkreceivedpackets"></a>Network.receivedPackets
 
-Die **receivedpaketen** -Eigenschaft ruft die Anzahl der empfangenen Pakete ab.
+Die **receivedPackets-Eigenschaft** ruft die Anzahl der empfangenen Pakete ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player*. *Netzwerk*. **receivedpakete**
+*Player*. *network*. **receivedPackets**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jedes Mal, wenn die Clip Wiedergabe beendet und neu gestartet wird, wird diese Eigenschaft auf NULL festgelegt. Wenn die Dateiwiedergabe angehalten wird, wird Sie nicht zurückgesetzt.
+Jedes Mal, wenn die Clipwiedergabe beendet und neu gestartet wird, wird diese Eigenschaft auf 0 (null) festgelegt. Sie wird nicht zurückgesetzt, wenn die Dateiwiedergabe angehalten wird.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *Network* verwendet. **receivedpakete** zum Anzeigen der Anzahl empfangener Pakete. Die Informationen werden in einem HTML div-Code angezeigt, der mit ID = "RP" erstellt wurde. Im Beispiel wird ein Timer mit einem Intervall von 1 Sekunde verwendet, um die Anzeige zu aktualisieren. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird *Network* verwendet. **receivedPackets,** um die Anzahl der empfangenen Pakete anzuzeigen. Die Informationen werden in einem HTML-DIV angezeigt, das mit der ID = "RP" erstellt wurde. Im Beispiel wird ein Timer mit einem Intervall von 1 Sekunde verwendet, um die Anzeige zu aktualisieren. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -76,7 +76,7 @@ function UpdateRP(){
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -85,7 +85,7 @@ function UpdateRP(){
 
 <dl> <dt>
 
-[**Netzwerk Objekt**](network-object.md)
+[**Netzwerkobjekt**](network-object.md)
 </dt> </dl>
 
  

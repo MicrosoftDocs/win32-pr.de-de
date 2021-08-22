@@ -1,6 +1,6 @@
 ---
-title: D2DGetInputCoordinate-Funktion (D2d1effecthelpers. h)
-description: Gibt den Wert des eingegebenen texcoordn zurück. Nur für komplexe Eingaben verfügbar.
+title: D2DGetInputCoordinate-Funktion (D2d1effecthelpers.h)
+description: Gibt den Wert der Eingabe TEXCOORDN zurück. Nur für komplexe Eingaben verfügbar.
 ms.assetid: 60125E23-53B3-45ED-89FE-684E79004F6B
 keywords:
 - D2DGetInputCoordinate-Funktion Direct2D
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d5d9ee759de12bb8b017d582026dd5b5ca8c3fb3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5a3fe0d825dea70c8e5211b8c13f1e850fa513670bbc93de98f1f8e2b87ef046
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361465"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119075294"
 ---
 # <a name="d2dgetinputcoordinate-function"></a>D2DGetInputCoordinate-Funktion
 
-Gibt den Wert des eingegebenen texcoordn zurück. Nur für komplexe Eingaben verfügbar.
+Gibt den Wert der Eingabe TEXCOORDN zurück. Nur für komplexe Eingaben verfügbar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,19 +40,19 @@ float4 WINAPI D2DGetInputCoordinate(
 *N* \[ in\]
 </dt> <dd>
 
-Die Eingabe Nummer.
+Die Eingabenummer.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt ein **float4** im Format texcoordn zurück.
+Die Funktion gibt **float4** im Format TEXCOORDN zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die von dieser Funktion zurückgegebene Koordinate ist in textraum. Ein Shader sollte keinerlei Abhängigkeiten davon annehmen, wie dieser Wert berechnet wird. Es sollte nur verwendet werden, um eine Stichprobe der Ausgabe des Pixelshaders zu verwenden. Weitere Informationen finden Sie unter [Hinzufügen eines Pixelshaders zu einer benutzerdefinierten Transformation](./custom-effects.md#adding-a-pixel-shader-to-a-custom-transform).
+Die von dieser Funktion zurückgegebene Koordinate befindet sich im Texelraum. Ein Shader sollte keine Abhängigkeiten davon annehmen, wie dieser Wert berechnet wird. Es sollte nur verwendet werden, um die Eingabe des Pixelshaders abzutasten. Weitere Informationen finden Sie unter [Hinzufügen eines Pixel-Shaders zu einer benutzerdefinierten Transformation.](./custom-effects.md#adding-a-pixel-shader-to-a-custom-transform)
 
-Das folgende Beispiel zeigt die-Funktion, die für einen Verschiebungs Zuordnungs Effekt verwendet wird.
+Das folgende Beispiel zeigt die Funktion, die für einen Verschiebungszuordnungseffekt verwendet wird.
 
 ``` syntax
 float2 GetDisplacementOffset(float4 uv0, float4 uv1)  
@@ -74,7 +74,7 @@ D2D_PS_ENTRY(DisplacementMapBilinear)
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D2d1effecthelpers. hlsli</dt> </dl> |
+| Header<br/> | <dl> <dt>D2d1effecthelpers.hlsli</dt> </dl> |
 | DLL<br/>    | <dl> <dt>D2d1.dll</dt> </dl>                |
 
 
@@ -86,7 +86,7 @@ D2D_PS_ENTRY(DisplacementMapBilinear)
 [Effektshader-Verknüpfung](effect-shader-linking.md)
 </dt> <dt>
 
-[HLSL-Hilfsprogramme](hlsl-helpers.md)
+[HLSL-Hilfshilfen](hlsl-helpers.md)
 </dt> </dl>
 
  

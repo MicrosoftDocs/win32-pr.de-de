@@ -1,19 +1,19 @@
 ---
-description: Die Ws2 \_ -32.dll bietet Funktionen für die Erstellung von Ereignis Objekten für Anwendungen und Dienstanbieter, obwohl in den meisten Fällen Ereignis Objekte von Anwendungen erstellt werden.
+description: Der Ws2-32.dll stellt Einrichtungen für die Erstellung von Ereignisobjekten sowohl für Anwendungen als auch für Dienstanbieter zur Verfügung, obwohl in den meisten Fällen Ereignisobjekte \_ von Anwendungen erstellt werden.
 ms.assetid: 86da30ad-80bc-4982-9306-bbe29b1bab19
-title: Erstellen von Ereignis Objekten
+title: Erstellen von Ereignisobjekten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bec202f8f17790ed85979a8287005aa65374a244
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bab867e6398db4b5c97303c8739431d7baaca311daf8d103f4375721e96a864b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051698"
 ---
-# <a name="creating-event-objects"></a>Erstellen von Ereignis Objekten
+# <a name="creating-event-objects"></a>Erstellen von Ereignisobjekten
 
-Die Ws2 \_ -32.dll bietet Funktionen für die Erstellung von Ereignis Objekten für Anwendungen und Dienstanbieter, obwohl in den meisten Fällen Ereignis Objekte von Anwendungen erstellt werden. Ereignis Objekt Dienste werden für Windows Sockets-Dienstanbieter über [**wpudeateevent**](/windows/desktop/api/Ws2spi/nf-ws2spi-wpucreateevent) bereitgestellt. Dies ist einfach als Hilfsmechanismus für jegliche interne Verarbeitung, die vom gleichen profitieren können. Beachten Sie, dass das Ereignis Objekt Handle nur im Kontext des aufrufenden Prozesses gültig ist. In Windows-Umgebungen erfolgt die Realisierung von Ereignis Objekten über die systemeigenen Ereignis Dienste, die vom Betriebssystem bereitgestellt werden.
+Der Ws2-32.dll stellt Einrichtungen für die Erstellung von Ereignisobjekten sowohl für Anwendungen als auch für Dienstanbieter zur Verfügung, obwohl in den meisten Fällen Ereignisobjekte \_ von Anwendungen erstellt werden. Ereignisobjektdienste werden Windows Sockets-Dienstanbietern über [**WPUCreateEvent**](/windows/desktop/api/Ws2spi/nf-ws2spi-wpucreateevent) zur Verfügung gestellt, einfach als praktischen Mechanismus für jede interne Verarbeitung, die von derselben profitieren kann. Beachten Sie, dass das Ereignisobjekthand handle nur im Kontext des aufrufenden Prozesses gültig ist. In Windows umgebungen erfolgt die Umsetzung von Ereignisobjekten über die nativen Ereignisdienste, die vom Betriebssystem bereitgestellt werden.
 
  
 

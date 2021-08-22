@@ -1,106 +1,106 @@
 ---
-description: Stellt Regeln zum Mapping von WMI-Klassen Active Directory bereit.
+description: Stellt Regeln zum Zuordnen von WMI-Klassen zu Active Directory zur
 ms.assetid: 295d3233-5729-4eb0-9fa3-1cf64fef2909
 ms.tgt_platform: multiple
-title: Zuordnung von Active Directory Klassen
+title: Zuordnen von Active Directory-Klassen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a606cfacc2e9d56ef07973df182f5ce1a65be35
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bc38e91d52b59a206a0b64465d0f9710f6d515c9487853824477b7f4f6a126aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992900"
 ---
-# <a name="mapping-active-directory-classes"></a>Zuordnung von Active Directory Klassen
+# <a name="mapping-active-directory-classes"></a>Zuordnen von Active Directory-Klassen
 
-Da Active Directory über eine Vielzahl möglicher Objekte verfügt, kann WMI keine direkte eins-zu-Eins-Zuordnung erstellen. Stattdessen verwendet der Verzeichnisdienst Anbieter Regeln, um Klassen zwischen den beiden Technologien zuzuordnen.
+Da Active Directory über eine Vielzahl von möglichen Objekten verfügt, kann WMI keine direkte 1:1-Zuordnung erstellen. Stattdessen verwendet der Verzeichnisdiensteanbieter Regeln, um Klassen zwischen den beiden Technologien zu ordnen.
 
-Die folgenden Abschnitte werden in diesem Thema behandelt:
+In diesem Thema werden die folgenden Abschnitte erläutert:
 
--   [Mapping-Klassen](#mapping-classes)
--   [Mapping-Attribute](#mapping-attributes)
--   [Zuordnungs Klassen](#association-classes)
+-   [Zuordnungsklassen](#mapping-classes)
+-   [Zuordnungsattribute](#mapping-attributes)
+-   [Zuordnungsklassen](#association-classes)
 
 > [!Note]  
-> Weitere Informationen zur Unterstützung und Installation dieser Komponente auf einem bestimmten Betriebssystem finden Sie unter [Betriebssystem Verfügbarkeit von WMI-Komponenten](operating-system-availability-of-wmi-components.md).
+> Weitere Informationen zur Unterstützung und Installation dieser Komponente unter einem bestimmten Betriebssystem finden Sie unter [Betriebssystemverfügbarkeit von WMI-Komponenten.](operating-system-availability-of-wmi-components.md)
 
  
 
-## <a name="mapping-classes"></a>Mapping-Klassen
+## <a name="mapping-classes"></a>Zuordnungsklassen
 
-In der folgenden Liste werden die Richtlinien beschrieben, die der Verzeichnisdienst Anbieter zum Zuordnen von Active Directory Klassen zu WMI-Klassen verwendet:
+In der folgenden Liste werden die Richtlinien beschrieben, die der Verzeichnisdiensteanbieter zum Zuordnen von Active Directory-Klassen zu WMI-Klassen verwendet:
 
--   Jede abstrakte Klasse im Active Directory Schema wird einer abstrakten Klasse im WMI-Schema zugeordnet.
+-   Jede abstrakte Klasse im Active Directory-Schema wird einer abstrakten Klasse im WMI-Schema entspricht.
 
-    Im WMI-Schema wird jeder abstrakten Klasse das Präfix DS vorangestellt \_ . Beispielsweise wird die **Person** -Klasse aus dem Active Directory-Schema der **DS- \_ Person** -WMI-Klasse zugeordnet.
+    Im WMI-Schema wird jeder abstrakten Klasse DS \_ vorangestellt. Beispielsweise wird die **Person-Klasse** aus dem Active Directory-Schema der **WMI-Klasse der \_ DS-Person** angezeigt.
 
--   Jede nicht abstrakte Klasse aus dem Active Directory-Schema wird den folgenden zwei Klassen im WMI-Schema zugeordnet:
+-   Jede nicht abstract-Klasse aus dem Active Directory-Schema wird den folgenden beiden Klassen im WMI-Schema zu ordnet:
 
-    -   Der ersten zugeordneten Klasse wird das Präfix ADS vorangestellt \_ . Dabei handelt es sich um abstrakte Klassen, die gemäß den folgenden Regeln zugeordnet werden.
-    -   Die zweite zugeordnete Klasse ist eine nicht abstrakte Klasse mit dem DS- \_ namens Präfix. Diese Klasse wird von der ADS \_ abstract-Klasse abgeleitet, wobei der [**Anbieter Qualifizierer**](/windows/desktop/api/Provider/nl-provider-provider) hinzugefügt wird.
+    -   Der ersten zugeordneten Klasse wird ADS \_ vorangestellt. Hierbei handelt es sich um abstrakte Klassen, die gemäß den folgenden Regeln zugeordnet werden.
+    -   Die zweite zugeordnete Klasse ist eine nicht abstract-Klasse mit dem \_ DS-Namenspräfix. Diese Klasse wird von der abstrakten \_ ADS-Klasse mit dem [**Anbieterqualifizierer**](/windows/desktop/api/Provider/nl-provider-provider) abgeleitet.
 
-    Beispielsweise wird die **Benutzer** Klasse aus dem Active Directory-Schema zwei Klassen zugeordnet. Die erste Klasse ist die **\_ Benutzer** abstrakte Klasse ADS, die gemäß den Regeln unten zugeordnet ist. Die zweite Klasse ist die nicht abstrakte Klasse " **DS- \_ Benutzer** ". Sie wird von **ADS \_ User** abgeleitet und verfügt über den hinzugefügten [**Anbieter Qualifizierer**](/windows/desktop/api/Provider/nl-provider-provider) .
+    Beispielsweise wird die **Benutzerklasse** aus dem Active Directory-Schema zwei Klassen angezeigt. Die erste Klasse ist die **abstrakte \_ ADS-Benutzerklasse,** die gemäß den folgenden Regeln zugeordnet wird. Die zweite Klasse ist die nicht abstract-Klasse des **DS-Benutzers. \_** Sie wird vom **\_ ADS-Benutzer abgeleitet** und verfügt über den hinzugefügten Anbieterqualifizierer. [](/windows/desktop/api/Provider/nl-provider-provider)
 
--   Sofern nicht anders angegeben, ist der Name einer zugeordneten Klasse der gehat Wert der **LDAP-Display-Name-** Eigenschaft in der Active Directory-Klasse.
--   Wenn die **Unterklasse-of-** Eigenschaft in der Active Directory-Klasse vorhanden ist, wird die WMI-zugeordnete Klasse von der angegebenen Klasse abgeleitet.
+-   Sofern nicht anders angegeben, ist der Name einer zugeordneten Klasse der verfappte Wert der **LDAP-Display-Name-Eigenschaft** in der Active Directory-Klasse.
+-   Wenn die **Sub-Class-Of-Eigenschaft** in der Active Directory-Klasse vorhanden ist, wird die WMI-zugeordnete Klasse von der angegebenen Klasse abgeleitet.
 
-    Wenn die **Unterklasse-of-** Eigenschaft nicht vorhanden ist, wird die WMI-zugeordnete Klasse von der **DS \_ LDAP \_ \_** -Stamm klassenklasse abgeleitet, wie in der MOF-Datei angegeben.
+    Wenn die **Sub-Class-Of-Eigenschaft** nicht vorhanden ist, wird die WMI-zugeordnete Klasse von der **DS \_ LDAP-Stammklassenklasse \_ \_** abgeleitet, wie in der MOF-Datei angegeben.
 
     > [!Note]  
-    > Diese Klasse verfügt über die **adsipath** -Schlüsseleigenschaft mit dem Typ **VT \_ BSTR**. Dies ist der eindeutige ADSI-Pfad, der diese Instanz identifiziert. Active Directory unterstützt nur die einfache Vererbung, sodass dies funktioniert.
+    > Diese Klasse verfügt über die **ADSIPath-Schlüsseleigenschaft** mit dem **Typ VT \_ BSTR**. Dies ist der eindeutige ADSI-Pfad, der diese Instanz identifiziert. Active Directory unterstützt nur die einzelne Vererbung, sodass dies funktioniert.
 
      
 
--   Für jede Klasse wird ein **dynamischer** Qualifizierer vom Typ **VT \_ bool** und `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE | WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` für jede Klasse der Wert auf **true** festgelegt. Dies ist ein standardmäßiger WMI-Qualifizierer, der angibt, dass Instanzen dieser Klasse dynamisch bereitgestellt werden.
--   Wenn die Klasse nicht abstrakt ist, erstellt der Anbieter einen [**Anbieter Qualifizierer**](/windows/desktop/api/Provider/nl-provider-provider) vom Typ **VT \_ BSTR bool** und die qualifiziererkonfiguration `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE | WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` , die für jede Klasse auf "DS-Instanzanbieter" festgelegt ist. Dies ist ein standardmäßiger WMI-Qualifizierer, der den Namen des Anbieters angibt, der Instanzen dieser Klasse dynamisch bereitstellt.
+-   Für **jede** Klasse wird ein dynamischer Qualifizierer vom Typ **VT \_ BOOL** erstellt, und die Variante wird `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE | WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` auf **TRUE** festgelegt. Dies ist ein WMI-Standardqualifizierer, der angibt, dass Instanzen dieser Klasse dynamisch bereitgestellt werden.
+-   Wenn die Klasse nicht abstrakt [](/windows/desktop/api/Provider/nl-provider-provider) ist, erstellt der Anbieter einen Anbieterqualifizierer vom Typ **VT \_ BSTR BOOL,** und der Qualifizierertyp wird für jede Klasse auf `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE | WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` "DS-Instanzanbieter" festgelegt. Dies ist ein WMI-Standardqualifizierer, der den Namen des Anbieters angibt, der dynamisch Instanzen dieser Klasse angibt.
 
-Die restlichen ADSI-Eigenschaften werden den Klassen Qualifizierern und Eigenschaften gemäß den folgenden Tabellen zugeordnet. Alle Qualifizierer werden mit einem qualifiziererflagwert von zugeordnet `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE | WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` .
+Die restlichen ADSI-Eigenschaften werden klassenqualifizierern und Eigenschaften wie in den folgenden Tabellen dargestellt. Alle Qualifizierer werden dem Qualifiziererflagwert () `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE | WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` zuordnen.
 
-Im folgenden werden die Mapping-Informationen für die Active Directory-Klasse aufgelistet, die den WMI-Qualifizierer und den WMI-qualifizierungstyp für jede Active Directory
+Im Folgenden werden Zuordnungsinformationen für die Active Directory-Klasse aufgeführt, die den WMI-Qualifizierer und den WMI-Qualifizierertyp für jede Active Directory-Eigenschaft anzeigen.
 
 <dl> <dt>
 
-**Gemeinsamer Name**
+**Common-Name**
 </dt> <dd>
 
 **CN** (**VT \_ BSTR**)
 
-Wird direkt aus dem Zeichen folgen Wert zugeordnet.
+Wird direkt aus dem Zeichenfolgenwert zugeordnet.
 
 </dd> <dt>
 
 **Default-Object-Category**
 </dt> <dd>
 
-**Defaultobjectcategory** (**VT \_ BSTR**)
+**DefaultObjectCategory** (**VT \_ BSTR**)
 
-Wird direkt aus dem Zeichen folgen Wert zugeordnet.
+Wird direkt aus dem Zeichenfolgenwert zugeordnet.
 
 </dd> <dt>
 
-**Standard-Security-Descriptor**
+**Default-Security-Descriptor**
 </dt> <dd>
 
 **DefaultSecurityDescriptor** (**VT \_ BSTR**)
 
-Wird direkt aus dem Zeichen folgen Wert zugeordnet.
+Wird direkt aus dem Zeichenfolgenwert zugeordnet.
 
 </dd> <dt>
 
-**Regelt-ID**
+**Governs-Id**
 </dt> <dd>
 
 **GovernsId** (**VT \_ BSTR**)
 
-Wird von der Zeichen folgen Darstellung der OID zugeordnet. Beispiel: "{1 3 3 6}".
+Wird aus der Zeichenfolgendarstellung der OID zugeordnet. Beispiel: "{ 1 3 3 6 }".
 
 </dd> <dt>
 
-**Object-Klasse**
+**Object-Class**
 </dt> <dd>
 
-–
+Nicht zutreffend
 
 Nicht zugeordnet.
 
@@ -111,23 +111,23 @@ Nicht zugeordnet.
 
 **ObjectClassCategory** (**VT \_ I4**)
 
-Wird direkt aus dem ganzzahligen Wert zugeordnet. Wenn der Wert abstrakt (2) ist, wird außerdem der standardmäßige **VT \_ bool** CIM-Qualifizierer, der als **"abstract"** -Qualifizierer bezeichnet wird, ebenfalls erstellt.
+Wird direkt aus dem ganzzahligen Wert zugeordnet. Wenn der Wert "Abstract(2)" ist, wird außerdem der STANDARDMÄßIGE CIM-Qualifizierer **\_ "VT BOOL"** erstellt, der **als "Abstract"-Qualifizierer** bezeichnet wird.
 
 </dd> <dt>
 
 **RDN-ATT-ID**
 </dt> <dd>
 
-**rDNAttID** (**VT \_ BSTR**)
+**RDNATTID** (**VT \_ BSTR**)
 
-Wird von der Zeichen folgen Darstellung des OID-Werts zugeordnet. Beispiel: "{1 3 3 6}". Außerdem wird die hier identifizierte Eigenschaft mit dem standardmäßigen **indizierten** CIM-Qualifizierer kommentiert, der auf **true** festgelegt ist.
+Wird aus der Zeichenfolgendarstellung des OID-Werts zugeordnet. Beispiel: "{ 1 3 3 6 }". Darüber hinaus wird die hier identifizierte Eigenschaft mit dem standardmäßigen **indexierten** CIM-Qualifizierer kommentiert, der auf **TRUE festgelegt ist.**
 
 </dd> <dt>
 
 **Nur System**
 </dt> <dd>
 
-**Systemonly** (**VT \_ bool**)
+**SystemOnly** (**VT \_ BOOL**)
 
 Wird direkt aus dem booleschen Wert zugeordnet.
 
@@ -135,7 +135,7 @@ Wird direkt aus dem booleschen Wert zugeordnet.
 
  
 
-Im folgenden werden die Eigenschaften der Active Directory-Klasse aufgelistet, die WMI-Klasseneigenschaften zugeordnet sind.
+Im Folgenden werden die Eigenschaften der Active Directory-Klasse aufgeführt, die WMI-Klasseneigenschaften zugeordnet sind.
 
 <dl> <dt>
 
@@ -146,70 +146,70 @@ Jede Eigenschaft in dieser Liste wird einer WMI-Eigenschaft zugeordnet.
 
 </dd> <dt>
 
-**Muss enthalten**
+**Must-Contain**
 </dt> <dd>
 
-Jede Eigenschaft in dieser Liste wird einer WMI-Eigenschaft zugeordnet. Der standardmäßige **Not \_ null** -CIM-Qualifizierer wird für jeden dieser Werte erstellt.
+Jede Eigenschaft in dieser Liste wird einer WMI-Eigenschaft zugeordnet. Der **\_ CIM-Standardqualifizierer** Not Null wird für jede dieser Qualifizierer erstellt.
 
 </dd> <dt>
 
-**System-kann enthalten**
+**System kann enthalten**
 </dt> <dd>
 
-Jede Eigenschaft in dieser Liste wird einer WMI-Eigenschaft zugeordnet. Außerdem wird jede Eigenschaft mit einem **System** Qualifizierer versehen und auf " **true**" festgelegt.
+Jede Eigenschaft in dieser Liste wird einer WMI-Eigenschaft zugeordnet. Darüber hinaus wird jede Eigenschaft mit  einem Systemqualifizierer kommentiert, der auf **TRUE festgelegt ist.**
 
 </dd> <dt>
 
-**System-muss enthalten**
+**System muss enthalten**
 </dt> <dd>
 
-Jede Eigenschaft in dieser Liste wird einer WMI-Eigenschaft zugeordnet. Der standardmäßige **Not \_ null** -CIM-Qualifizierer wird für jeden dieser Werte erstellt. Außerdem wird jede Eigenschaft mit einem **System** Qualifizierer versehen und auf " **true**" festgelegt.
+Jede Eigenschaft in dieser Liste wird einer WMI-Eigenschaft zugeordnet. Der **\_ CIM-Standardqualifizierer** Not Null wird für jede dieser Qualifizierer erstellt. Darüber hinaus wird jede Eigenschaft mit  einem Systemqualifizierer kommentiert, der auf **TRUE festgelegt ist.**
 
 </dd> </dl>
 
-## <a name="mapping-attributes"></a>Mapping-Attribute
+## <a name="mapping-attributes"></a>Zuordnungsattribute
 
-Der Verzeichnisdienst Anbieter ordnet jedes Attribut einer Active Directory-Klasse gemäß den Regeln in diesem Abschnitt genau einer Eigenschaft der entsprechenden WMI-Klasse zu. Im allgemeinen benennt der Verzeichnis Dienstanbieter die WMI-Eigenschaft als die geschützte Version des **LDAP-Display-Name-** Werts des Active Directory Attributs.
+Der Verzeichnisdiensteanbieter ordnet jedes Attribut einer Active Directory-Klasse genau einer Eigenschaft der entsprechenden WMI-Klasse gemäß den Regeln in diesem Abschnitt zu. Im Allgemeinen benennt der Verzeichnisdienstanbieter die WMI-Eigenschaft als die verfingte Version des **LDAP-Display-Name-Werts** des Active Directory-Attributs.
 
-Wenn die Active Directory **-** Eigenschaft den Wert " **false**" hat, wird diese WMI-Eigenschaft mit dem or-Operator mit dem CIM- **Flag- \_ \_ Array** kombiniert. Beachten Sie, dass jede Eigenschaft mit dem **VT \_ BSTR** -Qualifizierer " **adsyntax**" gekennzeichnet ist. Sie stellt die zugrunde liegende Active Directory-Syntax dar.
+Wenn die Active **Directory-Eigenschaft Is-Single-Valued** **false** ist, wird diese WMI-Eigenschaft mit dem OR-Operator mit **CIM FLAG ARRAY \_ \_ kombiniert.** Beachten Sie, dass jede Eigenschaft mit dem **VT BSTR-Qualifizierer \_** **ADSyntax gekennzeichnet ist.** Sie stellt die zugrunde liegende Active Directory-Syntax dar.
 
-In der folgenden Tabelle wird die Zuordnung der Active Directory-Syntax zum WMI-Eigenschafts Datentyp aufgelistet.
+In der folgenden Tabelle ist die Zuordnung der Active Directory-Syntax zum WMI-Eigenschaftsdatentyp aufgeführt.
 
 
 
 | Active Directory-Element                                      | WMI-Datentyp                                                           |
 |---------------------------------------------------------------|-------------------------------------------------------------------------|
-| [**Zugriffspunkt**](/windows/desktop/ADSchema/s-object-access-point)            | **CIM- \_ Zeichenfolge**                                                         |
-| [**Booleschen**](/windows/desktop/ADSchema/s-boolean)                             | **CIM- \_ boolescher Wert**                                                        |
-| **Groß-/Kleinschreibung**                                   | **CIM- \_ Zeichenfolge**                                                         |
-| [**Groß-/Kleinschreibung**](/windows/desktop/ADSchema/s-string-case-sensitive) | **CIM- \_ Zeichenfolge**                                                         |
-| [**Definierter Name**](/windows/desktop/ADSchema/s-object-ds-dn)             | **CIM- \_ Zeichenfolge**                                                         |
-| [**DN-Binär**](/windows/desktop/ADSchema/s-object-dn-binary)                  | Eingebettetes Objekt der Klasse **DN \_ mit \_ binärer Binärdatei** .<br/> |
-| [**DN-Zeichenfolge**](/windows/desktop/ADSchema/s-object-dn-string)                  | Eingebettetes Objekt der Klasse **DN \_ mit \_ Zeichenfolge** , die unten definiert ist.<br/> |
+| [**Access-Point**](/windows/desktop/ADSchema/s-object-access-point)            | **\_CIM-ZEICHENFOLGE**                                                         |
+| [**Boolean**](/windows/desktop/ADSchema/s-boolean)                             | **CIM \_ BOOLEAN**                                                        |
+| **Zeichenfolge ohne Unterscheidung nach Groß-/Kleinschreibung**                                   | **\_CIM-ZEICHENFOLGE**                                                         |
+| [**Zeichenfolge mit Zeichenfolge mit Sensitiver Schreibung**](/windows/desktop/ADSchema/s-string-case-sensitive) | **\_CIM-ZEICHENFOLGE**                                                         |
+| [**Distinguished Name**](/windows/desktop/ADSchema/s-object-ds-dn)             | **\_CIM-ZEICHENFOLGE**                                                         |
+| [**DN-Binary**](/windows/desktop/ADSchema/s-object-dn-binary)                  | Eingebettetes Objekt der **DN-Klasse \_ mit \_ unten definierter** Binärdatei.<br/> |
+| [**DN-String**](/windows/desktop/ADSchema/s-object-dn-string)                  | Eingebettetes Objekt der **Klasse DN \_ mit unten \_ definierter** Zeichenfolge.<br/> |
 | [**Enumeration**](/windows/desktop/ADSchema/s-enumeration)                     | **CIM \_ SINT32**                                                         |
-| [**Enumeration**](/windows/desktop/ADSchema/s-enumeration)                     | **CIM- \_ Zeichenfolge**                                                         |
-| [**Zah**](/windows/desktop/ADSchema/s-integer)                             | **CIM \_ SINT32**                                                         |
-| [**LargeInteger**](/windows/desktop/ADSchema/s-largeinteger)                   | **CIM- \_ Zeichenfolge**                                                         |
-| Sicherheitsbeschreibung                                           | Eingebettetes Objekt der Klasse **Uint8Array** unten definiert.<br/>       |
-| Numerische Zeichenfolge                                                | **CIM- \_ Zeichenfolge**                                                         |
-| ObjectID                                                     | **CIM- \_ Zeichenfolge**                                                         |
-| Oktett-Zeichenfolge                                                  | Eingebettetes Objekt der Klasse **Uint8Array** unten definiert.<br/>       |
-| Oder Name                                                       | **CIM- \_ Zeichenfolge**                                                         |
-| Presentation-Address                                          | Eingebettetes Objekt der Klasse **Uint8Array** unten definiert.<br/>       |
-| Print Case-Zeichenfolge                                             | **CIM- \_ Zeichenfolge**                                                         |
-| Replikat Link                                                  | Eingebettetes Objekt der Klasse **Uint8Array** unten definiert.<br/>       |
-| [**Zeichenfolge (SID)**](/windows/desktop/ADSchema/s-string-sid)                      | Eingebettetes Objekt der Klasse **Uint8Array** unten definiert.<br/>       |
-| Time                                                          | **CIM- \_ DateTime**                                                       |
-| UTC-codierte Zeit                                                | **CIM- \_ DateTime**                                                       |
-| Unicode-Zeichenfolge                                                | **CIM- \_ Zeichenfolge**                                                         |
+| [**Enumeration**](/windows/desktop/ADSchema/s-enumeration)                     | **\_CIM-ZEICHENFOLGE**                                                         |
+| [**Integer**](/windows/desktop/ADSchema/s-integer)                             | **CIM \_ SINT32**                                                         |
+| [**LargeInteger**](/windows/desktop/ADSchema/s-largeinteger)                   | **\_CIM-ZEICHENFOLGE**                                                         |
+| Sicherheitsbeschreibung                                           | Eingebettetes Objekt der **Klasse Uint8Array, unten** definiert.<br/>       |
+| Numerische Zeichenfolge                                                | **\_CIM-ZEICHENFOLGE**                                                         |
+| Objekt-ID                                                     | **\_CIM-ZEICHENFOLGE**                                                         |
+| Oktettzeichenfolge                                                  | Eingebettetes Objekt der **Klasse Uint8Array, unten** definiert.<br/>       |
+| OR-Name                                                       | **\_CIM-ZEICHENFOLGE**                                                         |
+| Presentation-Address                                          | Eingebettetes Objekt der **Klasse Uint8Array, unten** definiert.<br/>       |
+| Druckfallzeichenfolge                                             | **\_CIM-ZEICHENFOLGE**                                                         |
+| Replikatlink                                                  | Eingebettetes Objekt der **Klasse Uint8Array, unten** definiert.<br/>       |
+| [**String(Sid)**](/windows/desktop/ADSchema/s-string-sid)                      | Eingebettetes Objekt der **Klasse Uint8Array, unten** definiert.<br/>       |
+| Time                                                          | **CIM \_ DATETIME**                                                       |
+| UTC-Codierte Zeit                                                | **CIM \_ DATETIME**                                                       |
+| Unicode-Zeichenfolge                                                | **\_CIM-ZEICHENFOLGE**                                                         |
 
 
 
  
 
-Die Oktett-Zeichen folgen Syntax, die auf ein Array von **Uint8** -Werten verweist, stellt bei der Zuordnung zu WMI ein Problem dar, da WMI Eigenschaften von Typen **Uint8** und Arrays von **Uint8** zulässt, während Active Directory Eigenschaften vom Typ Oktett String sowie Arrays von Oktett-Zeichen folgen zulässt.
+Die Oktettzeichenfolgensyntax, die auf ein Array von **uint8-Werten** verweist, stellt bei der Zuordnung zu WMI ein Problem dar, da WMI Eigenschaften des Typs **uint8** und Arrays von **uint8** zulässt, während Active Directory Eigenschaften des Typs Oktettzeichenfolge sowie Arrays von Oktettzeichenfolgen zulässt.
 
-Das folgende Beispiel zeigt die Verzeichnisdienst Anbieter-Klasse, die verwendet wird, um ein Array von Eigenschaften des Oktett-Zeichen folgen Typs zuzuordnen.
+Das folgende Beispiel zeigt die Directory Services Provider-Klasse, die zum Zuordnen eines Arrays von Octet String-Typeigenschaften verwendet wird.
 
 ``` syntax
 Class Uint8Array 
@@ -219,9 +219,9 @@ Class Uint8Array
 };
 ```
 
-WMI ordnet alle Oktett-Zeichen folgen Active Directory-Eigenschafts Werten eingebetteten Instanzen von **Uint8Array** zu. Ebenso ordnet WMI Arrays von Oktett-Zeichen folgen Arrays von eingebetteten **Uint8Array** -Objekten zu.
+WMI ordnet alle Active Directory-Eigenschaftswerte der Oktettzeichenfolge eingebetteten Instanzen von **Uint8Array zu.** Entsprechend ordnet WMI Arrays von Oktettzeichenfolgen Arrays von eingebetteten **Uint8Array-Objekten** zu.
 
-Das folgende Beispiel zeigt die Klassen, die von WMI zugeordnet werden, um die Eigenschaften Werte DN-Binary und DN-String DS zu.
+Das folgende Beispiel zeigt die Klassen, die von WMI den DS-Eigenschaftswerten DN-Binary und DN-String zugeordnet werden.
 
 ``` syntax
 Class DN_With_String
@@ -237,30 +237,30 @@ Class DN_With_Binary
 };
 ```
 
-In der folgenden Tabelle ist aufgelistet, wie WMI die restlichen Eigenschaften der Active Directory-Attribut Schnittstelle den WMI-Eigenschafts Qualifizierern zuordnet.
+In der folgenden Tabelle wird aufgeführt, wie WMI die restlichen Eigenschaften der Active Directory-Attributschnittstelle WMI-Eigenschaftenqualifizierern zuweist.
 
 
 
-| Active Directory Attribut-Eigenschaftsname | WMI Qualifizierer       | Datentyp    | Mapping-Informationen                               |
+| Active Directory-Attributeigenschaftsname | WMI-Qualifizierer       | Datentyp    | Zuordnungsinformationen                               |
 |------------------------------------------|---------------------|--------------|---------------------------------------------------|
-| **Attribut Syntax**                     | **AttributeSyntax** | **VT \_ BSTR** | Wird von der Zeichen folgen Darstellung der OID zugeordnet. |
-| **Gemeinsamer Name**                          | **2.300**              | **VT \_ BSTR** | Wird vom Zeichen folgen Wert zugeordnet.                     |
-| **Nur System**                          | **System**          | **VT \_ bool** | Wird vom booleschen Wert zugeordnet.                    |
+| **Attributsyntax**                     | **AttributeSyntax** | **VT \_ BSTR** | Wird aus der Zeichenfolgendarstellung der OID zugeordnet. |
+| **Common-Name**                          | **CN**              | **VT \_ BSTR** | Wird aus dem Zeichenfolgenwert zugeordnet.                     |
+| **Nur System**                          | **System**          | **VT \_ BOOL** | Wird aus dem booleschen Wert zugeordnet.                    |
 
 
 
  
 
 > [!Note]  
-> WMI ordnet alle Active Directory Qualifizierer den `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE | WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` qualifizierervarianten zu.
+> WMI ordnet alle Active Directory-Qualifizierer den `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE | WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` Qualifizierer-Varianten zu.
 
  
 
-## <a name="association-classes"></a>Zuordnungs Klassen
+## <a name="association-classes"></a>Zuordnungsklassen
 
-Der Verzeichnisdienst ist im Grunde ein hierarchischer Speicher von Objekten. Die Objekte, die auf einer nicht Blatt Ebene in der Hierarchie vorkommen können, werden als "Container" bezeichnet. Die Struktur dieser Hierarchie wird weiter von den Eigenschaften "Poss-Vorgesetzten" und "System-Poss-Vorgesetzten" einer Klasse im Schema gesteuert. Diese geben die Klassen an, deren Instanzen in einer Instanz einer Container Klasse enthalten sein können.
+Der Verzeichnisdienst ist im Wesentlichen ein hierarchischer Objektspeicher. Die Objekte, die auf einer Nichtblattebene in der Hierarchie angezeigt werden können, werden als "Container" bezeichnet. Die Struktur dieser Hierarchie wird weiter durch die Eigenschaften "Poss-Superiors" und "System-Poss-Superiors" einer Klasse im Schema gesteuert. Diese geben zusammen den Satz von Klassen an, deren Instanzen in einer Instanz einer Containerklasse enthalten sein können.
 
-Im folgenden Beispiel wird eine CIM-Zuordnung als Instanzen der statischen Association-Klasse [**DS \_ LDAP \_ Class \_ Containment**](/previous-versions/windows/desktop/dsprov/ds-ldap-class-containment)modelliert.
+Im folgenden Beispiel wird eine CIM-Zuordnung als Instanzen der statischen Zuordnungsklasse [**DS \_ LDAP Class \_ \_ Containment modelliert.**](/previous-versions/windows/desktop/dsprov/ds-ldap-class-containment)
 
 ``` syntax
 //  DS Class Associations Provider 
@@ -304,7 +304,7 @@ instance of __InstanceProviderRegistration
 };
 ```
 
-Der Association-Klassen Anbieter unterstützt die Methoden " [**GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) " und " [**feateclassenenumasync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-createclassenumasync) ".
+Der Zuordnungsklassenanbieter unterstützt die [**Methoden GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) und [**CreateClassEnumAsync.**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-createclassenumasync)
 
  
 

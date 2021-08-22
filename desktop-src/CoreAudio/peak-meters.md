@@ -1,27 +1,27 @@
 ---
-description: Spitzen Zähler
+description: Spitzenzähler
 ms.assetid: 02f5d1b4-ba4f-424a-897f-b113d1f7cd6b
-title: Spitzen Zähler
+title: Spitzenzähler
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9ccd2f1ce0b8fd45fbf1cb3710c878c05544f7d4
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e04a15ddd2e5fd91cf60845f2a939715e7a4a992f36aea3b9129e69c30d05961
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127093"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077504"
 ---
-# <a name="peak-meters"></a>Spitzen Zähler
+# <a name="peak-meters"></a>Spitzenzähler
 
-Zur Unterstützung von Windows-Anwendungen, in denen Spitzen Zähler angezeigt werden, enthält die [endpointvolume-API](endpointvolume-api.md) eine [**iaudiometerinformation**](/windows/desktop/api/Endpointvolume/nn-endpointvolume-iaudiometerinformation) -Schnittstelle. Diese Schnittstelle stellt einen Spitzen Zähler auf einem [audioendpunktgerät](audio-endpoint-devices.md)dar. Bei einem renderinggerät stellt der Wert, der von der Spitzen Messung abgerufen wird, den maximalen Stichproben Wert dar, der im Ausgabestream des Geräts während des vorangegangenen Messungs Zeitraums gefunden wurde. Bei einem Erfassungsgerät stellt der Wert, der von der Spitzen Messung abgerufen wurde, den maximalen Stichproben Wert dar, der im Eingabestream vom Gerät gefunden wurde.
+Zur Unterstützung Windows Anwendungen, die Spitzenzähler anzeigen, enthält die [EndpointVolume-API](endpointvolume-api.md) eine [**IAudioMeterInformation-Schnittstelle.**](/windows/desktop/api/Endpointvolume/nn-endpointvolume-iaudiometerinformation) Diese Schnittstelle stellt eine Spitzenmessung auf einem [Audioendpunktgerät dar.](audio-endpoint-devices.md) Bei einem Renderinggerät stellt der von der Spitzenmessung abgerufene Wert den maximalen Stichprobenwert dar, der während des vorherigen Messzeitraums im Ausgabestream an das Gerät gefunden wurde. Bei einem Erfassungsgerät stellt der von der Spitzenmessung abgerufene Wert den maximalen Stichprobenwert dar, der im Eingabestream des Geräts gefunden wurde.
 
-Bei den Spitzenwert Werten, die von den Methoden in der [**iaudiometerinformation**](/windows/desktop/api/Endpointvolume/nn-endpointvolume-iaudiometerinformation) -Schnittstelle abgerufen werden, handelt es sich um Gleit Komma Zahlen im normalisierten Bereich von 0,0 bis 1,0. Wenn z. b. ein PCM mit 16-Bit-Stichproben und der Höchstwert für einen bestimmten Messungs Zeitraum – 8914 ist, dann ist der absolute Wert, der von der Spitzen Messung aufgezeichnet wird, 8914, und der normalisierte Spitzenwert, der von der **iaudiometerinformation** -Schnittstelle gemeldet wird, ist 8914/32768 = 0,272.
+Die Spitzenmessungswerte, die von den Methoden in der [**IAudioMeterInformation-Schnittstelle**](/windows/desktop/api/Endpointvolume/nn-endpointvolume-iaudiometerinformation) ermittelt werden, sind Gleitkommazahlen im normalisierten Bereich von 0,0 bis 1,0. Wenn ein PCM-Datenstrom beispielsweise 16-Bit-Stichproben enthält und der Spitzenwert für die Stichprobenentnahme während eines bestimmten Messzeitraums –8914 ist, ist der absolute Wert, der von der Spitzenmessung aufgezeichnet wird, 8914, und der von der **IAudioMeterInformation-Schnittstelle** gemeldete normalisierte Spitzenwert ist 8914/32768 = 0,272.
 
-Wenn das audioendpunktgerät die Spitzen Meter in Hardware implementiert, verwendet die [**iaudiometerinformation**](/windows/desktop/api/Endpointvolume/nn-endpointvolume-iaudiometerinformation) -Schnittstelle die Hardware Spitzen Meter. Andernfalls implementiert die-Schnittstelle die Spitzen Meter in Software.
+Wenn das Audioendpunktgerät die Spitzenmessung in der Hardware implementiert, verwendet die [**Schnittstelle IAudioMeterInformation**](/windows/desktop/api/Endpointvolume/nn-endpointvolume-iaudiometerinformation) die Hardwarespitzenmessung. Andernfalls implementiert die Schnittstelle die Spitzenmessung in der Software.
 
-Wenn ein Gerät über einen Hardware Spitzen Zähler verfügt, ist die Spitzen Messgröße sowohl im gemeinsam genutzten als auch im exklusiven Modus aktiv. Wenn auf einem Gerät keine Hardware Spitzen gemessen werden, ist die Spitzen Verbrauchseinheit im Modus freigegeben, aber nicht im exklusiven Modus aktiv. Im exklusiven Modus tauschen die Anwendung und die Audiohardware Audiodaten direkt aus, wobei der Software-Spitzen Zähler umgangen wird (der stets einen Spitzenwert von 0,0 meldet).
+Wenn ein Gerät über eine Hardwarespitzenmessung verfügt, ist die Spitzenmessung sowohl im gemeinsam genutzten als auch im exklusiven Modus aktiv. Wenn ein Gerät keine Hardwarespitzenmessung hat, ist die Spitzenmessung im modus shared aktiv, aber nicht im exklusiven Modus. Im exklusiven Modus tauschen die Anwendung und die Audiohardware Audiodaten direkt aus und umgehen dabei die Softwarespitzenmessung (die immer einen Spitzenwert von 0,0 meldet).
 
-Das folgende C++-Codebeispiel ist eine Windows-Anwendung, die eine Spitzen Meter für das standardmäßige renderinggerät anzeigt:
+Das folgende C++-Codebeispiel ist eine Windows-Anwendung, die eine Spitzenmessung für das Standardrenderinggerät anzeigt:
 
 
 ```C++
@@ -178,13 +178,13 @@ void DrawPeakMeter(HWND hPeakMeter, float peak)
 
 
 
-Im vorangehenden Codebeispiel ruft die [**WinMain**](/windows/win32/api/winbase/nf-winbase-winmain) -Funktion die [**cokreateinstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion auf, um eine Instanz der [**immdeviceenumerator**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdeviceenumerator) -Schnittstelle zu erstellen, und ruft die [**immdeviceenumerator:: getdefaultaudioendpoint**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-getdefaultaudioendpoint) -Methode auf, um die [**immdevice**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdevice) -Schnittstelle des standardrenderinggeräts abzurufen. **WinMain** Ruft die [**immdevice:: Aktivierungs**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) -Methode auf, um die [**iaudiometerinformation**](/windows/desktop/api/Endpointvolume/nn-endpointvolume-iaudiometerinformation) -Schnittstelle des Geräts zu erhalten, und öffnet ein Dialogfeld, in dem eine Spitzen Meter für das Gerät angezeigt wird. Weitere Informationen zu **WinMain** und **cokreateinstance** finden Sie in der Windows SDK-Dokumentation. Weitere Informationen zu " **immdeviceenumerator** " und " **immdevice**" finden Sie unter Auflisten von [Audiogeräten](enumerating-audio-devices.md).
+Im vorherigen Codebeispiel ruft die [**WinMain-Funktion**](/windows/win32/api/winbase/nf-winbase-winmain) die [**CoCreateInstance-Funktion**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) auf, um eine Instanz der [**IMMDeviceEnumerator-Schnittstelle**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdeviceenumerator) zu erstellen, und ruft die [**IMMDeviceEnumerator::GetDefaultAudioEndpoint-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-getdefaultaudioendpoint) auf, um die [**IMMDevice-Schnittstelle**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdevice) des Standardrenderinggeräts zu erhalten. **WinMain** ruft die [**IMMDevice::Activate-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) auf, um die [**IAudioMeterInformation-Schnittstelle**](/windows/desktop/api/Endpointvolume/nn-endpointvolume-iaudiometerinformation) des Geräts zu erhalten, und öffnet ein Dialogfeld, in dem eine Spitzenmessung für das Gerät angezeigt wird. Weitere Informationen zu **WinMain** und **CoCreateInstance** finden Sie in der Windows SDK-Dokumentation. Weitere Informationen zu **IMMDeviceEnumerator** und **IMMDevice finden** Sie unter [Aufzählen von Audiogeräten.](enumerating-audio-devices.md)
 
-Im vorangehenden Codebeispiel zeigt die DlgProc-Funktion den Spitzen Zähler im Dialogfeld an. Bei der Verarbeitung der WM- \_ InitDialog-Nachricht ruft DlgProc die [**SETTIMER**](/windows/win32/api/winuser/nf-winuser-settimer) -Funktion auf, um einen Timer einzurichten, der \_ in regelmäßigen Abständen WM-Zeit Geber Nachrichten generiert. Wenn DlgProc eine WM-Zeit Geber \_ Nachricht empfängt, ruft er [**iaudiometerinformation:: getPeer Value**](/windows/desktop/api/Endpointvolume/nf-endpointvolume-iaudiometerinformation-getpeakvalue) auf, um das neueste Lese-/ausgabelesevorgang für den Datenstrom abzurufen. DlgProc ruft dann die drawpeer Meter-Funktion auf, um die aktualisierte Spitzen Meter im Dialogfeld zu zeichnen. Weitere Informationen zu den **tittimer** -und WM-und WM-Zeit Geber \_ \_ Meldungen finden Sie in der Windows SDK-Dokumentation.
+Im obigen Codebeispiel zeigt die DlgProc-Funktion die Spitzenmessung im Dialogfeld an. Während der Verarbeitung der WM \_ INITDIALOG-Nachricht ruft DlgProc die [**SetTimer-Funktion**](/windows/win32/api/winuser/nf-winuser-settimer) auf, um einen Timer zu einrichten, der in regelmäßigen Zeitintervallen WM \_ TIMER-Nachrichten generiert. Wenn DlgProc eine WM TIMER-Nachricht empfängt, ruft sie \_ [**IAudioMeterInformation::GetPeakValue**](/windows/desktop/api/Endpointvolume/nf-endpointvolume-iaudiometerinformation-getpeakvalue) auf, um den letzten Messwert der Spitzenmessung für den Stream zu erhalten. DlgProc ruft dann die DrawPeakMeter-Funktion auf, um die aktualisierte Spitzenmessung im Dialogfeld zu zeichnen. Weitere Informationen zu **SetTimer und** den WM INITDIALOG- und WM TIMER-Meldungen finden Sie in der Windows \_ \_ SDK-Dokumentation.
 
-Sie können das vorangehende Codebeispiel leicht ändern, um eine Spitzen Meter für das Standard Erfassungsgerät anzuzeigen. Ändern Sie in der [**WinMain**](/windows/win32/api/winbase/nf-winbase-winmain) -Funktion den Wert des ersten Parameters im-Befehl von " [**immdeviceenumerator:: getdefaultaudioendpoint**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-getdefaultaudioendpoint) " von "-" in "ecapture".
+Sie können das vorherige Codebeispiel problemlos ändern, um eine Spitzenmessung für das Standarderfassungsgerät anzuzeigen. Ändern Sie in der [**WinMain-Funktion**](/windows/win32/api/winbase/nf-winbase-winmain) den Wert des ersten Parameters im Aufruf von [**IMMDeviceEnumerator::GetDefaultAudioEndpoint**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-getdefaultaudioendpoint) von eRender in eCapture.
 
-Das folgende Codebeispiel ist das Ressourcen Skript, das die Steuerelemente definiert, die im vorangehenden Codebeispiel angezeigt werden:
+Das folgende Codebeispiel ist das Ressourcenskript, das die Steuerelemente definiert, die im vorherigen Codebeispiel angezeigt werden:
 
 
 ```C++
@@ -209,7 +209,7 @@ END
 
 
 
-Das folgende Codebeispiel zeigt die Ressourcen Header Datei, die die Steuerelement Bezeichner definiert, die in den vorangehenden Codebeispielen angezeigt werden:
+Das folgende Codebeispiel ist die Ressourcenheaderdatei, die die Steuerelementbezeichner definiert, die in den obigen Codebeispielen angezeigt werden:
 
 
 ```C++

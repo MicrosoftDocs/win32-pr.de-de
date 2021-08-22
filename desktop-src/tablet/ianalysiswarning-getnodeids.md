@@ -1,7 +1,7 @@
 ---
-description: Gibt die Bezeichner aller relevanten Kontext Knoten zurück, die dieser Warnung zugeordnet sind.
+description: Gibt die Bezeichner aller relevanten Kontextknoten zurück, die dieser Warnung zugeordnet sind.
 ms.assetid: 8c418f48-3903-47c1-82e2-085de39574d4
-title: 'Ianalysiswarning:: GetNodeIds-Methode (iacom. h)'
+title: IAnalysisWarning::GetNodeIds-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: a38abd054e457ef9dbaf5dd93c38954b1ce6dcb3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 97e6f4fde66faef14402c815f6b95517a2bd19adfb90eac4e865383770bc753f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118967479"
 ---
-# <a name="ianalysiswarninggetnodeids-method"></a>Ianalysiswarning:: GetNodeIds-Methode
+# <a name="ianalysiswarninggetnodeids-method"></a>IAnalysisWarning::GetNodeIds-Methode
 
-Gibt die Bezeichner aller relevanten Kontext Knoten zurück, die dieser Warnung zugeordnet sind.
+Gibt die Bezeichner aller relevanten Kontextknoten zurück, die dieser Warnung zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,33 +43,33 @@ HRESULT GetNodeIds(
 *pulCount* \[ in, out\]
 </dt> <dd>
 
-Die Anzahl der global eindeutigen Bezeichner (GUIDs) in *ppnodeids*.
+Die Anzahl global eindeutiger Bezeichner (GUIDs) in *ppNodeIds*.
 
 </dd> <dt>
 
-*ppnodeids* \[ vorgenommen\]
+*ppNodeIds* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf ein Array von GUIDs, das die dieser Analyse Warnung zugeordneten Kontext Knoten identifiziert, oder **null** , wenn der Warnung keine Kontext Knoten zugeordnet sind.
+Ein Zeiger auf ein Array von GUIDs, das die Kontextknoten identifiziert, die dieser Analysewarnung zugeordnet sind, oder **NULL,** wenn der Warnung keine Kontextknoten zugeordnet sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn *ppnodeids* als **null**-Werte übermittelt wird, gibt die **GetNodeIds** -Methode **S \_ OK** zurück, und die Anzahl der Rechtecke wird in *pulCount* zurückgegeben.
+Wenn *ppNodeIds als* NULL übergeben **wird,** gibt die **GetNodeIds-Methode** **S \_ OK** zurück, und die Anzahl der Rechtecke wird in *pulCount zurückgegeben.*
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, verwenden Sie " [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) ", um den Arbeitsspeicher von \* *ppnodeids* freizugeben, wenn Sie die Informationen nicht mehr benötigen.
+> Um einen Arbeitsspeicherverlust zu vermeiden, verwenden Sie [**CoTaskMemFree,**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) um den Arbeitsspeicher von \* *ppNodeIds* frei zu geben, wenn Sie die Informationen nicht mehr benötigen.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie Sie die [**icontextnode**](icontextnode.md) -Objekte, die sich in [**ianalysiswarning**](ianalysiswarning.md)befinden, `warning` sowie die Anzahl der **icontextnode** -Objekte erhalten.
+Das folgende Beispiel zeigt, wie sie die [**IContextNode-Objekte**](icontextnode.md) in [**IAnalysisWarning**](ianalysiswarning.md), und nur die Anzahl der `warning` **IContextNode-Objekte erhalten.**
 
 
 ```C++
@@ -95,27 +95,27 @@ warning->GetNodeIds(&number, NULL);
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ianalysiswarning**](ianalysiswarning.md)
+[**IAnalysisWarning**](ianalysiswarning.md)
 </dt> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: FindNode-Methode**](iinkanalyzer-findnode.md)
+[**IInkAnalyzer::FindNode-Methode**](iinkanalyzer-findnode.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

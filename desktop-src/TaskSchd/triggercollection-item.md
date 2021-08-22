@@ -1,11 +1,11 @@
 ---
-title: TriggerCollection. Item-Eigenschaft
-description: Ruft bei der Skripterstellung den angegebenen-Auslösers aus der Auflistung ab.
+title: TriggerCollection.Item-Eigenschaft
+description: Ruft für die Skripterstellung den angegebenen Trigger aus der Auflistung ab.
 ms.assetid: 517976df-b3fc-4f2e-8d37-262195c65182
 keywords:
-- Element Eigenschaft Taskplaner
-- Element Eigenschaft Taskplaner, TriggerCollection-Objekt
-- TriggerCollection-Objekt Taskplaner, Element Eigenschaft
+- Elementeigenschaft Taskplaner
+- Item-Eigenschaft Taskplaner , TriggerCollection-Objekt
+- TriggerCollection-Objekt Taskplaner , Item-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d600418d43459d6c4cbfcb0746a378633d096c24
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: aee0460d79ef239c8dacbf7fbd45573dac8ba03ad9b53e6e9881dded1bf01030
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001958"
 ---
-# <a name="triggercollectionitem-property"></a>TriggerCollection. Item-Eigenschaft
+# <a name="triggercollectionitem-property"></a>TriggerCollection.Item-Eigenschaft
 
-Ruft bei der Skripterstellung den angegebenen-Auslösers aus der Auflistung ab.
+Ruft für die Skripterstellung den angegebenen Trigger aus der Auflistung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,11 +40,11 @@ TriggerCollection.Item( _
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein [**Auslöserobjekt**](trigger.md) , das den angeforderten-Auslösers darstellt
+Ein [**Trigger-Objekt,**](trigger.md) das den angeforderten Trigger darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sammlungen sind 1-basiert. Anders ausgedrückt: der Index für das erste Element in der Auflistung ist 1.
+Auflistungen sind 1-basiert. Anders ausgedrückt: Der Index für das erste Element in der Auflistung ist 1.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,9 +52,9 @@ Sammlungen sind 1-basiert. Anders ausgedrückt: der Index für das erste Element
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

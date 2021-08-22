@@ -1,7 +1,7 @@
 ---
-description: Stellt den Ausführungs Kontext dar, wenn getprintexecutiondata aufgerufen wird.
+description: Stellt den Ausführungskontext dar, wenn GetPrintExecutionData aufgerufen wird.
 ms.assetid: b6c026b2-8519-45d3-9614-b502eec23cde
-title: PRINT_EXECUTION_CONTEXT-Enumeration (winspool. h)
+title: PRINT_EXECUTION_CONTEXT-Enumeration (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 20b1050edc0088fb629ee10cf63dc9cffa07228a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 78e4afb29b75c0a73799302ddb76e270b18ca2c38cb6325b59ebae5041d5f99e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119033958"
 ---
-# <a name="print_execution_context-enumeration"></a>\_Enumeration des druckausführungs \_ Kontexts
+# <a name="print_execution_context-enumeration"></a>PRINT \_ EXECUTION \_ CONTEXT-Enumeration
 
-Stellt den Ausführungs Kontext dar, wenn [**getprintexecutiondata**](getprintexecutiondata.md) aufgerufen wird.
+Stellt den Ausführungskontext dar, wenn [**GetPrintExecutionData**](getprintexecutiondata.md) aufgerufen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,35 +43,35 @@ typedef enum  {
 
 <dl> <dt>
 
-<span id="PRINT_EXECUTION_CONTEXT_APPLICATION"></span><span id="print_execution_context_application"></span>**Druck \_ Ausführungs \_ Kontext- \_ Anwendung**
+<span id="PRINT_EXECUTION_CONTEXT_APPLICATION"></span><span id="print_execution_context_application"></span>**\_ \_ DRUCKAUSFÜHRUNGSKONTEXTANWENDUNG \_**
 </dt> <dd>
 
-Der Aufrufer wird in einer-Anwendung ausgeführt.
+Der Aufrufer wird in einer Anwendung ausgeführt.
 
 </dd> <dt>
 
-<span id="PRINT_EXECUTION_CONTEXT_SPOOLER_SERVICE"></span><span id="print_execution_context_spooler_service"></span>**\_ \_ \_ Spoolerdienst für Druck Ausführungs Kontext \_**
+<span id="PRINT_EXECUTION_CONTEXT_SPOOLER_SERVICE"></span><span id="print_execution_context_spooler_service"></span>**\_ \_ \_ DRUCKAUSFÜHRUNGSKONTEXT-SPOOLERDIENST \_**
 </dt> <dd>
 
 Der Aufrufer wird im Spoolerdienst (spoolsv.exe) ausgeführt.
 
 </dd> <dt>
 
-<span id="PRINT_EXECUTION_CONTEXT_SPOOLER_ISOLATION_HOST"></span><span id="print_execution_context_spooler_isolation_host"></span>**\_ \_ \_ \_ Isolations Host für Spooler für Druck Ausführungs Kontext \_**
+<span id="PRINT_EXECUTION_CONTEXT_SPOOLER_ISOLATION_HOST"></span><span id="print_execution_context_spooler_isolation_host"></span>**\_ \_ \_ DRUCKAUSFÜHRUNGSKONTEXTSPOOLERISOLATIONSHOST \_ \_**
 </dt> <dd>
 
-Der Aufrufer wird auf dem druckisolations Host ausgeführt (PrintIsolationHost.exe).
+Der Aufrufer wird auf dem Druckisolationshost (PrintIsolationHost.exe) ausgeführt.
 
 </dd> <dt>
 
-<span id="PRINT_EXECUTION_CONTEXT_FILTER_PIPELINE"></span><span id="print_execution_context_filter_pipeline"></span>**Druck \_ Ausführungs \_ Kontext- \_ Filter \_ Pipeline**
+<span id="PRINT_EXECUTION_CONTEXT_FILTER_PIPELINE"></span><span id="print_execution_context_filter_pipeline"></span>**\_ \_ \_ DRUCKAUSFÜHRUNGSKONTEXTFILTERPIPELINE \_**
 </dt> <dd>
 
-Der Aufrufer wird in der Druckfilter Pipeline ausgeführt (printfilterpipelinesvc.exe).
+Der Aufrufer wird in der Druckfilterpipeline (printfilterpipelinesvc.exe) ausgeführt.
 
 </dd> <dt>
 
-<span id="PRINT_EXECUTION_CONTEXT_WOW64"></span><span id="print_execution_context_wow64"></span>**Druck \_ Ausführungs \_ Kontext \_ WOW64**
+<span id="PRINT_EXECUTION_CONTEXT_WOW64"></span><span id="print_execution_context_wow64"></span>**\_DRUCKAUSFÜHRUNGSKONTEXT \_ \_ WOW64**
 </dt> <dd>
 
 Der Aufrufer wird in splwow64.exe
@@ -84,9 +84,9 @@ Der Aufrufer wird in splwow64.exe
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -94,10 +94,10 @@ Der Aufrufer wird in splwow64.exe
 
 <dl> <dt>
 
-[**Getprintexecutiondata**](getprintexecutiondata.md)
+[**GetPrintExecutionData**](getprintexecutiondata.md)
 </dt> <dt>
 
-[**\_Ausführungs \_ Daten drucken**](print-execution-data.md)
+[**\_ \_ DRUCKAUSFÜHRUNGSDATEN**](print-execution-data.md)
 </dt> </dl>
 
  

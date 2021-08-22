@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung dar, in der ein verwaltetes Element von einem anderen gehostet wird.
+description: Stellt eine Zuordnung dar, bei der ein verwaltetes Element von einem anderen gehostet wird.
 ms.assetid: ae8476f7-38a4-4d08-a7dc-21e120d3cbe1
 title: CIM_HostedDependency-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 551931fd88fac88f85bcc8ffd51423538de3bb5c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3f96406b632a784da209495488965fea1694bcd70233fd2c536142a9bafb9c5e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342810"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014598"
 ---
-# <a name="cim_hosteddependency-class"></a>CIM-Klasse "- \_ Klassen Abhängigkeiten"
+# <a name="cim_hosteddependency-class"></a>CIM \_ HostedDependency-Klasse
 
-Stellt eine Zuordnung dar, in der ein verwaltetes Element von einem anderen gehostet wird.
+Stellt eine Zuordnung dar, bei der ein verwaltetes Element von einem anderen gehostet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,42 +39,42 @@ class CIM_HostedDependency : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die CIM-Klasse " **\_ husteddependenz** " verfügt über diese Typen von Membern:
+Die **CIM \_ HostedDependency-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die CIM-Klasse " **\_ husteddepend** " verfügt über diese Eigenschaften.
+Die **CIM \_ HostedDependency-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
 Das vom Host verwaltete Element.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
 Das gehostete verwaltete Element.
@@ -89,8 +89,8 @@ Das gehostete verwaltete Element.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -99,7 +99,7 @@ Das gehostete verwaltete Element.
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

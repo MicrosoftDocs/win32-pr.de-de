@@ -1,7 +1,7 @@
 ---
-description: Die Unlock-Methode entsperrt das Objekt des kritischen Abschnitts.
+description: Die Unlock-Methode entsperrt das kritische Abschnittsobjekt.
 ms.assetid: 61811e0e-df77-48e9-96d5-b7dff8c8db9b
-title: Ccritsec. Unlock-Methode (wxutil. h)
+title: CCritSec.Unlock-Methode (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ca84ce452d71d0d3111039d7a95d8f5dd3155058
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 919b73e5e1fc0becfb7c5fad40b87a5eb28fa008ba5cea1706373ddec9128682
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370197"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074384"
 ---
-# <a name="ccritsecunlock-method"></a>Ccritsec. Unlock-Methode
+# <a name="ccritsecunlock-method"></a>CCritSec.Unlock-Methode
 
-Die **Unlock** -Methode entsperrt das Objekt des kritischen Abschnitts.
+Die **Unlock-Methode** entsperrt das kritische Abschnittsobjekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**LeaveCriticalSection**](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection) -Funktion auf. Diese Methode wird einmal für jeden aufzurufenden Befehl der [**ccritsec:: Lock**](ccritsec-lock.md) -Methode aufgerufen.
+Diese Methode ruft die [**LeaveCriticalSection-Funktion**](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection) auf. Rufen Sie diese Methode einmal für jeden Aufruf der [**CCritSec::Lock-Methode**](ccritsec-lock.md) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Methode ruft die [**LeaveCriticalSection**](/windows/desktop/api/synchapi/
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode ruft die [**LeaveCriticalSection**](/windows/desktop/api/synchapi/
 
 <dl> <dt>
 
-[**Ccritsec-Klasse**](ccritsec.md)
+[**CCritSec-Klasse**](ccritsec.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: ButtonGroup. downImage
-description: Das downImage-Attribut gibt den Namen des Bilds an oder Ruft den Namen des Bilds ab, das den Zustand der ButtonGroup darstellt.
+title: BUTTONGROUP.downImage
+description: Das downImage-Attribut gibt den Namen des Bilds an, das den Downstatus der BUTTONGROUP darstellt, oder ruft den Namen ab.
 ms.assetid: 022e77e7-d3c0-41b5-984a-84d016a5a25a
 keywords:
-- ButtonGroup. downImage-Fenster Media Player
+- BUTTONGROUP.downImage-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 82b8a1d5bc2f4c68894a3bba1ad8ce9f2b3aa28a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 233c56951ec88444ab58de901732517a4ced4c249f8a9b75f3461eb38e86c975
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997750"
 ---
-# <a name="buttongroupdownimage"></a>ButtonGroup. downImage
+# <a name="buttongroupdownimage"></a>BUTTONGROUP.downImage
 
-Das **downImage** -Attribut gibt den Namen des Bilds an oder Ruft den Namen des Bilds ab, das den Zustand der **ButtonGroup** darstellt.
+Das **downImage-Attribut** gibt den Namen des Bilds an, das den Zustand "Down" der BUTTONGROUP darstellt, **oder ruft sie ab.**
 
 ``` syntax
         elementID.downImage
@@ -29,15 +29,15 @@ Das **downImage** -Attribut gibt den Namen des Bilds an oder Ruft den Namen des 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die unterstützten Bildformate sind BMP, JPG, PNG und GIF. Wenn es sich bei dem Bild um eine 8-Bit-BMP-Datei handelt, können seine Farbton-und Sättigungswerte mithilfe der Attribute **hueshift** und **Sättigung** dynamisch geändert werden.
+Die unterstützten Bildformate sind BMP, JPG, PNG und GIF. Wenn es sich bei dem Bild um eine 8-Bit-BMP-Datei handelt, können die Farbton- und Sättigungswerte mithilfe der **Attribute hueShift** und **Sättigung** dynamisch geändert werden.
 
-Das Standard Image ist das im **Image** -Attribut angegebene.
+Das Standardbild ist das im **Imageattribut angegebene** Bild.
 
-Wenn das Abbild größer als der definierte Bereich ist, wird das Bild mit dem Bild abgeschnitten.
+Wenn das Bild nach unten größer als der definierte Bereich ist, wird das Bild nach unten zugeschnitten.
 
 Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild) angezeigt.
 
@@ -47,24 +47,24 @@ Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ButtonGroup-Element**](buttongroup-element.md)
+[**BUTTONGROUP-Element**](buttongroup-element.md)
 </dt> <dt>
 
-[**ButtonGroup. hueshift**](buttongroup-hueshift.md)
+[**BUTTONGROUP.hueShift**](buttongroup-hueshift.md)
 </dt> <dt>
 
-[**ButtonGroup. Image**](buttongroup-image.md)
+[**BUTTONGROUP.image**](buttongroup-image.md)
 </dt> <dt>
 
-[**ButtonGroup. Sättigung**](buttongroup-saturation.md)
+[**BUTTONGROUP.saturation**](buttongroup-saturation.md)
 </dt> </dl>
 
  
