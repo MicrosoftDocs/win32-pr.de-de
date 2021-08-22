@@ -1,7 +1,7 @@
 ---
-description: Die aktive Methode erstellt einen Arbeits Thread, der Daten aus der Ausgabe-PIN abruft. Diese Methode führt auch einen Commit für die Zuweisung aus.
+description: Die Active-Methode erstellt einen Arbeitsthread, der Daten vom Ausgabepin abruft. Diese Methode committet auch die Zuweisung.
 ms.assetid: 9efa20f3-7909-4d87-bfa8-314d055b80f8
-title: Cpullpin. Active-Methode (pullpin. h)
+title: CPullPin.Active-Methode (Pullpin.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 461f6554f828dc096029ee1e7a1832e12a7c262a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a6572ad0b415f4c1a51133d080e84a2e869787dea0c23614478b09c7b86296b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354842"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073524"
 ---
-# <a name="cpullpinactive-method"></a>Cpullpin. Active-Methode
+# <a name="cpullpinactive-method"></a>CPullPin.Active-Methode
 
-Die **aktive** Methode erstellt einen Arbeits Thread, der Daten aus der Ausgabe-PIN abruft. Diese Methode führt auch einen Commit für die Zuweisung aus.
+Die **Active-Methode** erstellt einen Arbeitsthread, der Daten vom Ausgabepin abruft. Diese Methode committet auch die Zuweisung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,25 +42,25 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                                           |
 |----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Erfolg.<br/>                                                   |
-| <dl> <dt>**E \_ unerwartet**</dt> </dl> | Die PIN-Verbindung wurde nicht ordnungsgemäß eingerichtet.<br/>          |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>       | Der Thread konnte nicht erstellt werden, oder der Thread ist bereits vorhanden.<br/> |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl> | Die Pinverbindung wurde nicht ordnungsgemäß hergestellt.<br/>          |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>       | Der Thread konnte nicht erstellt werden, oder der Thread ist bereits vorhanden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ruft diese Methode auf, wenn der besitzende Filter aktiv wird. (Wenn Ihre Eingabe-PIN von [**cbasepin**](cbasepin.md)abgeleitet ist, überschreiben Sie die [**cbasepin:: Active**](cbasepin-active.md) -Methode.)
+Rufen Sie diese Methode auf, wenn der besitzende Filter aktiv wird. (Wenn Ihr Eingabepin von [**CBasePin**](cbasepin.md)abgeleitet wird, überschreiben Sie die [**CBasePin::Active-Methode.)**](cbasepin-active.md)
 
-Rufen Sie vor dem Aufrufen dieser Methode die [**cpullpin:: Connect**](cpullpin-connect.md) -Methode auf, um die Verbindung mit der Ausgabepin herzustellen.
+Rufen Sie vor dem Aufrufen dieser Methode die [**CPullPin::Verbinden-Methode**](cpullpin-connect.md) auf, um die Verbindung mit dem Ausgabepin herzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,8 +68,8 @@ Rufen Sie vor dem Aufrufen dieser Methode die [**cpullpin:: Connect**](cpullpin-
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Pullpin. h</dt> </dl>                                                                                                       |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pullpin.h</dt> </dl>                                                                                                       |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -77,7 +77,7 @@ Rufen Sie vor dem Aufrufen dieser Methode die [**cpullpin:: Connect**](cpullpin-
 
 <dl> <dt>
 
-[**Cpullpin-Klasse**](cpullpin.md)
+[**CPullPin-Klasse**](cpullpin.md)
 </dt> </dl>
 
  

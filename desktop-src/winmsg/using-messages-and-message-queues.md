@@ -1,32 +1,32 @@
 ---
-description: Die folgenden Codebeispiele veranschaulichen, wie die folgenden Aufgaben ausgeführt werden, die Windows-Meldungen und Nachrichten Warteschlangen zugeordnet sind.
+description: In den folgenden Codebeispielen wird veranschaulicht, wie sie die folgenden Aufgaben ausführen, die Windows Nachrichten und Nachrichtenwarteschlangen zugeordnet sind.
 ms.assetid: 62b4616c-37bf-4d9f-8891-7010c7035d18
-title: Verwenden von Meldungen und Nachrichten Warteschlangen
+title: Verwenden von Nachrichten und Nachrichtenwarteschlangen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a33f422a1a7c77f2c2fcd5913f931168a350a26
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee617f2c48325eccf5a2fdb07741bb88b47738dea812d372acda1454c9dd3d9d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373057"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119028338"
 ---
-# <a name="using-messages-and-message-queues"></a>Verwenden von Meldungen und Nachrichten Warteschlangen
+# <a name="using-messages-and-message-queues"></a>Verwenden von Nachrichten und Nachrichtenwarteschlangen
 
-Die folgenden Codebeispiele veranschaulichen, wie die folgenden Aufgaben ausgeführt werden, die Windows-Meldungen und Nachrichten Warteschlangen zugeordnet sind.
+In den folgenden Codebeispielen wird veranschaulicht, wie sie die folgenden Aufgaben ausführen, die Windows Nachrichten und Nachrichtenwarteschlangen zugeordnet sind.
 
--   [Erstellen einer Nachrichten Schleife](#creating-a-message-loop)
--   [Überprüfen einer Nachrichten Warteschlange](#examining-a-message-queue)
--   [Veröffentlichen einer Nachricht](#posting-a-message)
+-   [Erstellen einer Nachrichtenschleife](#creating-a-message-loop)
+-   [Untersuchen einer Nachrichtenwarteschlange](#examining-a-message-queue)
+-   [Posten einer Nachricht](#posting-a-message)
 -   [Senden einer Nachricht](#sending-a-message)
 
-## <a name="creating-a-message-loop"></a>Erstellen einer Nachrichten Schleife
+## <a name="creating-a-message-loop"></a>Erstellen einer Nachrichtenschleife
 
-Das System erstellt nicht automatisch eine Nachrichten Warteschlange für jeden Thread. Stattdessen erstellt das System eine Nachrichten Warteschlange nur für Threads, die Vorgänge ausführen, für die eine Nachrichten Warteschlange erforderlich ist. Wenn der Thread ein oder mehrere Fenster erstellt, muss eine Nachrichten Schleife bereitgestellt werden. Diese Nachrichten Schleife ruft Nachrichten aus der Nachrichten Warteschlange des Threads ab und sendet Sie an die entsprechenden Fenster Prozeduren.
+Das System erstellt nicht automatisch eine Nachrichtenwarteschlange für jeden Thread. Stattdessen erstellt das System eine Nachrichtenwarteschlange nur für Threads, die Vorgänge ausführen, die eine Nachrichtenwarteschlange erfordern. Wenn der Thread ein oder mehrere Fenster erstellt, muss eine Meldungsschleife bereitgestellt werden. Diese Nachrichtenschleife ruft Nachrichten aus der Nachrichtenwarteschlange des Threads ab und gibt sie an die entsprechenden Fensterverfahren weiter.
 
-Da das System Nachrichten an einzelne Fenster in einer Anwendung weiterleitet, muss ein Thread vor dem Starten der Nachrichten Schleife mindestens ein Fenster erstellen. Die meisten Anwendungen enthalten einen einzelnen Thread, der Windows erstellt. Eine typische Anwendung registriert die Fenster Klasse für das Hauptfenster, erstellt und zeigt das Hauptfenster an und startet dann die Nachrichten Schleife – alles in der [**WinMain**](/windows/win32/api/winbase/nf-winbase-winmain) -Funktion.
+Da das System Nachrichten an einzelne Fenster in einer Anwendung weiter leitet, muss ein Thread mindestens ein Fenster erstellen, bevor die Nachrichtenschleife gestartet wird. Die meisten Anwendungen enthalten einen einzelnen Thread, der Fenster erstellt. Eine typische Anwendung registriert die Fensterklasse für ihr Hauptfenster, erstellt und zeigt das Hauptfenster an und startet dann die Meldungsschleife – alles in der [**WinMain-Funktion.**](/windows/win32/api/winbase/nf-winbase-winmain)
 
-Sie erstellen eine Nachrichten Schleife mithilfe der Funktionen [**GetMessage**](/windows/win32/api/winuser/nf-winuser-getmessage) und [**DispatchMessage**](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . Wenn die Anwendung Zeichen Eingaben vom Benutzer abrufen muss, schließen Sie die [**translatemess**](/windows/win32/api/winuser/nf-winuser-translatemessage) -Funktion in die-Schleife ein. **Translatemess** übersetzt die Nachrichten von virtuellen Schlüsseln in Zeichen Nachrichten. Das folgende Beispiel zeigt die Nachrichten Schleife in der [**WinMain**](/windows/win32/api/winbase/nf-winbase-winmain) -Funktion einer einfachen Windows-basierten Anwendung.
+Sie erstellen eine Nachrichtenschleife mithilfe der [**Funktionen GetMessage**](/windows/win32/api/winuser/nf-winuser-getmessage) und [**DispatchMessage.**](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Wenn Ihre Anwendung Zeicheneingaben vom Benutzer abrufen muss, schließen Sie die [**TranslateMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-translatemessage) in die Schleife ein. **TranslateMessage** übersetzt Nachrichten virtueller Schlüssel in Zeichennachrichten. Das folgende Beispiel zeigt die Meldungsschleife in der [**WinMain-Funktion**](/windows/win32/api/winbase/nf-winbase-winmain) einer einfachen Windows-basierten Anwendung.
 
 
 ```
@@ -105,7 +105,7 @@ int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
 
 
-Das folgende Beispiel zeigt eine Meldungs Schleife für einen Thread, der Accelerators verwendet und ein nicht modalem Dialogfeld anzeigt. Wenn [**TranslateAccelerator**](/windows/win32/api/winuser/nf-winuser-translateacceleratora) oder [**IsDialogMessage**](/windows/win32/api/winuser/nf-winuser-isdialogmessagea) **true** zurückgibt (gibt an, dass die Nachricht verarbeitet wurde), werden [**translatemmeage**](/windows/win32/api/winuser/nf-winuser-translatemessage) und [**DispatchMessage**](/windows/win32/api/winuser/nf-winuser-dispatchmessage) nicht aufgerufen. Der Grund hierfür ist, dass **TranslateAccelerator** und **IsDialogMessage** alle notwendigen Übersetzungen und die Weiterleitung von Nachrichten durchführen.
+Das folgende Beispiel zeigt eine Meldungsschleife für einen Thread, der Zugriffstasten verwendet und ein nicht modusloses Dialogfeld anzeigt. Wenn [**TranslateAccelerator**](/windows/win32/api/winuser/nf-winuser-translateacceleratora) oder [**IsDialogMessage**](/windows/win32/api/winuser/nf-winuser-isdialogmessagea) **TRUE** zurückgibt (was angibt, dass die Nachricht verarbeitet wurde), werden [**TranslateMessage**](/windows/win32/api/winuser/nf-winuser-translatemessage) und [**DispatchMessage**](/windows/win32/api/winuser/nf-winuser-dispatchmessage) nicht aufgerufen. Der Grund dafür ist, dass **TranslateAccelerator** und **IsDialogMessage** alle erforderlichen Übersetzungs- und Verteilerübersetzungen von Nachrichten durchführen.
 
 
 ```
@@ -140,13 +140,13 @@ while( (bRet = GetMessage( &msg, NULL, 0, 0 )) != 0)
 
 
 
-## <a name="examining-a-message-queue"></a>Überprüfen einer Nachrichten Warteschlange
+## <a name="examining-a-message-queue"></a>Untersuchen einer Nachrichtenwarteschlange
 
-Gelegentlich muss eine Anwendung den Inhalt der Nachrichten Warteschlange eines Threads von außerhalb der Nachrichten Schleife des Threads untersuchen. Wenn z. b. die Fenster Prozedur einer Anwendung einen langwierigen Zeichnungs Vorgang ausführt, kann es sein, dass der Benutzer in der Lage sein soll, den Vorgang zu unterbrechen. Wenn die Anwendung die Nachrichten Warteschlange während des Vorgangs für Maus-und Tastatur Meldungen nicht regelmäßig überprüft, antwortet sie erst nach Abschluss des Vorgangs auf Benutzereingaben. Der Grund hierfür ist, dass die [**DispatchMessage**](/windows/win32/api/winuser/nf-winuser-dispatchmessage) -Funktion in der Nachrichten Schleife des Threads erst dann zurückgegeben wird, wenn die Verarbeitung einer Nachricht durch die Fenster Prozedur abgeschlossen ist.
+Gelegentlich muss eine Anwendung den Inhalt der Nachrichtenwarteschlange eines Threads außerhalb der Nachrichtenschleife des Threads untersuchen. Wenn beispielsweise die Fensterprozedur einer Anwendung einen längeren Zeichnungsvorgang ausführt, möchten Sie möglicherweise, dass der Benutzer den Vorgang unterbrechen kann. Sofern ihre Anwendung die Nachrichtenwarteschlange während des Vorgangs nicht regelmäßig auf Maus- und Tastaturmeldungen überprüft, reagiert sie erst nach Abschluss des Vorgangs auf Benutzereingaben. Der Grund dafür ist, dass die [**DispatchMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-dispatchmessage) in der Nachrichtenschleife des Threads erst dann zurückkehrt, wenn die Fensterprozedur die Verarbeitung einer Nachricht beendet hat.
 
-Sie können die Funktion " [**Peer Message**](/windows/win32/api/winuser/nf-winuser-peekmessagea) " verwenden, um eine Nachrichten Warteschlange während eines langen Vorgangs zu untersuchen. " **Peer Message** " ähnelt der [**GetMessage**](/windows/win32/api/winuser/nf-winuser-getmessage) -Funktion. Beide überprüfen eine Meldungs Warteschlange auf eine Nachricht, die den Filterkriterien entspricht, und kopieren dann die Nachricht in eine [**msg**](/windows/win32/api/winuser/ns-winuser-msg) -Struktur. Der Hauptunterschied zwischen den beiden Funktionen besteht darin, dass **GetMessage** nicht **zurückgibt,** bis eine Nachricht, die mit den Filterkriterien übereinstimmt, in der Warteschlange platziert wird.
+Sie können die [**PeekMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-peekmessagea) verwenden, um eine Nachrichtenwarteschlange während eines längeren Vorgangs zu untersuchen. **PeekMessage** ähnelt der [**GetMessage-Funktion.**](/windows/win32/api/winuser/nf-winuser-getmessage) Überprüfen Sie eine Nachrichtenwarteschlange auf eine Nachricht, die den Filterkriterien entspricht, und kopieren Sie die Nachricht dann in eine [**MSG-Struktur.**](/windows/win32/api/winuser/ns-winuser-msg) Der Hauptunterschied zwischen den beiden Funktionen besteht in der Rückgabe von **GetMessage,** bis eine Nachricht, die den Filterkriterien entspricht, in der Warteschlange platziert wird, während **PeekMessage** unabhängig davon, ob sich eine Nachricht in der Warteschlange befindet, sofort zurückgibt.
 
-Im folgenden Beispiel wird gezeigt, wie Sie mithilfe von " [**Peer Message**](/windows/win32/api/winuser/nf-winuser-peekmessagea) " eine Meldungs Warteschlange für Mausklicks und Tastatureingaben während eines langen Vorgangs untersuchen können.
+Das folgende Beispiel zeigt, wie [**PeekMessage**](/windows/win32/api/winuser/nf-winuser-peekmessagea) verwendet wird, um eine Nachrichtenwarteschlange während eines längeren Vorgangs auf Mausklicks und Tastatureingaben zu untersuchen.
 
 
 ```
@@ -184,17 +184,17 @@ while (!fDone)
 
 
 
-Andere Funktionen, einschließlich [**getqueuestatus**](/windows/win32/api/winuser/nf-winuser-getqueuestatus) und [**getinputstate**](/windows/win32/api/winuser/nf-winuser-getinputstate), ermöglichen es Ihnen außerdem, den Inhalt der Nachrichten Warteschlange eines Threads zu untersuchen. **Getqueuestatus** gibt ein Array von Flags zurück, das die Nachrichten Typen in der Warteschlange angibt. die Verwendung ist die schnellste Möglichkeit, um zu ermitteln, ob die Warteschlange Nachrichten enthält. **Getinputstate** gibt **true** zurück, wenn die Warteschlange Maus-oder Tastatur Meldungen enthält. Beide Funktionen können verwendet werden, um zu bestimmen, ob die Warteschlange Nachrichten enthält, die verarbeitet werden müssen.
+Mit anderen Funktionen, einschließlich [**GetQueueStatus**](/windows/win32/api/winuser/nf-winuser-getqueuestatus) und [**GetInputState,**](/windows/win32/api/winuser/nf-winuser-getinputstate)können Sie auch den Inhalt der Nachrichtenwarteschlange eines Threads untersuchen. **GetQueueStatus gibt** ein Array von Flags zurück, das die Nachrichtentypen in der Warteschlange angibt. mithilfe dieser Methode können Sie am schnellsten feststellen, ob die Warteschlange Nachrichten enthält. **GetInputState gibt** **TRUE zurück,** wenn die Warteschlange Maus- oder Tastaturmeldungen enthält. Beide Funktionen können verwendet werden, um zu bestimmen, ob die Warteschlange Nachrichten enthält, die verarbeitet werden müssen.
 
-## <a name="posting-a-message"></a>Veröffentlichen einer Nachricht
+## <a name="posting-a-message"></a>Posten einer Nachricht
 
-Mithilfe der [**PostMessage**](/windows/win32/api/winuser/nf-winuser-postmessagea) -Funktion können Sie eine Nachricht in einer Nachrichten Warteschlange veröffentlichen. Nach **richten** platziert eine Nachricht am Ende der Nachrichten Warteschlange eines Threads und gibt sofort zurück, ohne darauf zu warten, dass der Thread die Nachricht verarbeitet. Die Parameter der Funktion enthalten ein Fenster Handle, eine Nachrichten-ID und zwei Nachrichten Parameter. Das System kopiert diese Parameter in eine [**msg**](/windows/win32/api/winuser/ns-winuser-msg) -Struktur, füllt die **Zeit** -und **PT** -Member der Struktur aus und platziert die Struktur in der Nachrichten Warteschlange.
+Sie können eine Nachricht mithilfe der [**PostMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-postmessagea) in einer Nachrichtenwarteschlange posten. **PostMessage** platziert eine Nachricht am Ende der Nachrichtenwarteschlange eines Threads und kehrt sofort zurück, ohne auf die Verarbeitung der Nachricht durch den Thread zu warten. Die Parameter der Funktion umfassen ein Fensterhand handle, einen Nachrichtenbezeichner und zwei Meldungsparameter. Das System kopiert diese Parameter in eine  [**MSG-Struktur,**](/windows/win32/api/winuser/ns-winuser-msg) füllt die Zeit- und **PT-Member** der Struktur aus und platziert die Struktur in der Nachrichtenwarteschlange.
 
-Das System verwendet das mit der [**PostMessage**](/windows/win32/api/winuser/nf-winuser-postmessagea) -Funktion über gegebene Fenster Handle, um zu bestimmen, welche Thread Nachrichten Warteschlange die Nachricht empfangen soll. Wenn das Handle das **\_ oberste HWND** ist, stellt das System die Nachricht an die Thread Nachrichten Warteschlangen aller Fenster der obersten Ebene.
+Das System verwendet das mit der [**PostMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-postmessagea) übergebene Fensterhand handle, um zu bestimmen, welche Threadnachrichtenwarteschlange die Nachricht empfangen soll. Wenn das Handle **HWND \_ TOPMOST** ist, übermittelt das System die Nachricht an die Threadnachrichtenwarteschlangen aller Fenster der obersten Ebene.
 
-Sie können die [**PostThreadMessage**](/windows/win32/api/winuser/nf-winuser-postthreadmessagea) -Funktion verwenden, um eine Nachricht an eine bestimmte Thread Nachrichten Warteschlange zu senden. **PostThreadMessage** ist " [**PostMessage**](/windows/win32/api/winuser/nf-winuser-postmessagea)" ähnlich, außer der erste Parameter ist ein Thread Bezeichner und kein Fenster handle. Sie können den Thread Bezeichner abrufen, indem Sie die [**GetCurrentThreadID**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthreadid) -Funktion aufrufen.
+Sie können die [**PostThreadMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-postthreadmessagea) verwenden, um eine Nachricht an eine bestimmte Threadnachrichtenwarteschlange zu senden. **PostThreadMessage** ähnelt [**PostMessage,**](/windows/win32/api/winuser/nf-winuser-postmessagea)mit der Ausnahme, dass der erste Parameter ein Threadbezeichner und kein Fensterhandles ist. Sie können den Threadbezeichner abrufen, indem Sie die [**GetCurrentThreadId-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthreadid) aufrufen.
 
-Verwenden Sie die [**PostQuitMessage**](/windows/win32/api/winuser/nf-winuser-postquitmessage) -Funktion, um eine Nachrichten Schleife zu beenden. **PostQuitMessage sendet** die [**WM \_**](wm-quit.md) -beendenden Nachricht an den derzeit ausgeführten Thread. Die Nachrichten Schleife des Threads wird beendet, und die Steuerung wird an das System zurückgegeben, wenn die **WM- \_** Beendungs Meldung erkannt wird. Eine Anwendung ruft in der Regel **PostQuitMessage** als Antwort auf die WM-Lösch Meldung auf, wie im folgenden Beispiel gezeigt. [**\_**](wm-destroy.md)
+Verwenden Sie die [**PostQuitMessage-Funktion,**](/windows/win32/api/winuser/nf-winuser-postquitmessage) um eine Nachrichtenschleife zu beenden. **PostQuitMessage überträgt** die [**WM \_ QUIT-Nachricht**](wm-quit.md) an den aktuell ausgeführten Thread. Die Meldungsschleife des Threads wird beendet und gibt die Steuerung an das System zurück, wenn die **WM \_ QUIT-Nachricht angezeigt** wird. Eine Anwendung ruft **postQuitMessage** in der Regel als Antwort auf die [**WM \_ DESTROY-Nachricht**](wm-destroy.md) auf, wie im folgenden Beispiel gezeigt.
 
 
 ```
@@ -210,11 +210,11 @@ case WM_DESTROY:
 
 ## <a name="sending-a-message"></a>Senden einer Nachricht
 
-Die [**SendMessage**](/windows/win32/api/winuser/nf-winuser-sendmessage) -Funktion wird verwendet, um eine Nachricht direkt an eine Fenster Prozedur zu senden. **SendMessage** Ruft eine Fenster Prozedur auf und wartet darauf, dass diese Prozedur die Nachricht verarbeitet und ein Ergebnis zurückgibt.
+Die [**SendMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-sendmessage) wird verwendet, um eine Nachricht direkt an eine Fensterprozedur zu senden. **SendMessage** ruft eine Fensterprozedur auf und wartet, bis diese Prozedur die Nachricht verarbeiten und ein Ergebnis zurückgeben kann.
 
-Eine Nachricht kann an jedes Fenster im System gesendet werden. alles, was erforderlich ist, ist ein Fenster handle. Das System verwendet das Handle, um zu bestimmen, welche Fenster Prozedur die Nachricht empfangen soll.
+Eine Nachricht kann an ein beliebiges Fenster im System gesendet werden. Alles, was erforderlich ist, ist ein Fensterhand handle. Das System verwendet das Handle, um zu bestimmen, welche Fensterprozedur die Nachricht empfangen soll.
 
-Vor dem Verarbeiten einer Nachricht, die möglicherweise von einem anderen Thread gesendet wurde, sollte eine Fenster Prozedur zuerst die [**insendmessage**](/windows/win32/api/winuser/nf-winuser-insendmessage) -Funktion aufzurufen. Wenn diese Funktion " **true**" zurückgibt, sollte die Fenster Prozedur " [**replymess Age**](/windows/win32/api/winuser/nf-winuser-replymessage) " vor jeder Funktion aufgerufen werden, die bewirkt, dass der Thread die Steuerung übernimmt, wie im folgenden Beispiel gezeigt.
+Vor der Verarbeitung einer Nachricht, die möglicherweise von einem anderen Thread gesendet wurde, sollte eine Fensterprozedur zuerst die [**InSendMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-insendmessage) aufrufen. Wenn diese Funktion **TRUE zurückgibt,** sollte die Fensterprozedur [**ReplyMessage**](/windows/win32/api/winuser/nf-winuser-replymessage) vor jeder Funktion aufrufen, die bewirkt, dass der Thread die Steuerung ergibt, wie im folgenden Beispiel gezeigt.
 
 
 ```
@@ -228,9 +228,9 @@ case WM_USER + 5:
 
 
 
-An Steuerelemente in einem Dialogfeld können eine Reihe von Nachrichten gesendet werden. Diese Steuerungs Meldungen legen die Darstellung, das Verhalten und den Inhalt von Steuerelementen fest oder rufen Informationen zu Steuerelementen ab. Beispielsweise kann die [**CB \_ AddString**](../controls/cb-addstring.md) -Nachricht eine Zeichenfolge zu einem Kombinations Feld hinzufügen, und die [**BM- \_ setcheck**](../controls/bm-setcheck.md) -Nachricht kann den Prüf Zustand eines Kontrollkästchens oder Options Felds festlegen.
+Eine Reihe von Nachrichten kann an Steuerelemente in einem Dialogfeld gesendet werden. Diese Steuerungsmeldungen legen die Darstellung, das Verhalten und den Inhalt von Steuerelementen fest oder rufen Informationen zu Steuerelementen ab. Beispielsweise kann die [**CB \_ ADDSTRING-Nachricht**](../controls/cb-addstring.md) einem Kombinationsfeld eine Zeichenfolge hinzufügen, und die [**BM \_ SETCHECK-Meldung**](../controls/bm-setcheck.md) kann den Überprüfungszustand eines Kontrollkästchens oder Optionsfelds festlegen.
 
-Verwenden Sie die [**SendDlgItemMess**](/windows/win32/api/winuser/nf-winuser-senddlgitemmessagea) -Funktion, um eine Nachricht an ein Steuerelement zu senden, und geben Sie dabei den Bezeichner des Steuer Elements und das Handle des Dialogfeld Fensters an, das das Steuerelement enthält. Im folgenden Beispiel, das aus einer Dialogfeld Prozedur stammt, wird eine Zeichenfolge aus dem Bearbeitungs Steuerelement eines Kombinations Felds in das Listenfeld kopiert. Das Beispiel verwendet **SendDlgItemMess** , um eine [**CB \_ AddString**](../controls/cb-addstring.md) -Nachricht an das Kombinations Feld zu senden.
+Verwenden Sie [**die SendDlgItemMessage-Funktion,**](/windows/win32/api/winuser/nf-winuser-senddlgitemmessagea) um eine Nachricht an ein Steuerelement zu senden, und geben Sie dabei den Bezeichner des Steuerelements und das Handle des Dialogfeldfensters an, das das Steuerelement enthält. Im folgenden Beispiel aus einer Dialogfeldprozedur wird eine Zeichenfolge aus dem Bearbeitungssteuerfeld eines Kombinationsfelds in das Listenfeld kopiert. Im Beispiel wird **SendDlgItemMessage** verwendet, um eine [**CB \_ ADDSTRING-Nachricht**](../controls/cb-addstring.md) an das Kombinationsfeld zu senden.
 
 
 ```

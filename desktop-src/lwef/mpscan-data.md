@@ -1,10 +1,10 @@
 ---
-title: MPSCAN_DATA Struktur (mpclient. h)
+title: MPSCAN_DATA -Struktur (MpClient.h)
 description: Überprüfen Sie die an den Rückruf übergebenen Daten.
 ms.assetid: 6C9AAF1E-7566-43EE-A100-5112E9B8878C
 keywords:
-- MPSCAN_DATA Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPSCAN_DATA Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPSCAN_DATA struktur Legacy Windows Umgebungsfeatures
+- PMPSCAN_DATA Strukturzeiger Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,18 +15,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e78508313f102e2baad19cf359a5c3a7c172db0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5b7c00357b8f104fff42b94de552d52979c364dee64a82bb8e438946319c8c13
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975990"
 ---
-# <a name="mpscan_data-structure"></a>Mpscan- \_ Datenstruktur
+# <a name="mpscan_data-structure"></a>MPSCAN \_ DATA-Struktur
 
 Überprüfen Sie die an den Rückruf übergebenen Daten.
 
-Diese Struktur enthält kumulative Bedrohungs-und Ressourcen Statistiken. Diese Stat-Felder sind immer gültig.
+Diese Struktur enthält kumulative Bedrohungs- und Ressourcenstatistiken. Diese Statistikfelder sind immer gültig.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ typedef struct tagMPSCAN_DATA {
 **ScanType**
 </dt> <dd>
 
-Typ: **[ **mpscan- \_ Typ**](mpscan-type.md)**
+Typ: **[ **MPSCAN \_ TYPE**](mpscan-type.md)**
 
 </dd> <dd>
 
@@ -60,18 +60,18 @@ Scantyp.
 **ResourceInfo**
 </dt> <dd>
 
-Typ: **pmpresource- \_ Informationen**
+Typ: **PMPRESOURCE \_ INFO**
 
 </dd> <dd>
 
-Ressourceninformationen Informationen finden Sie unter [**mpresource- \_ Informationen**](mpresource-info.md).
+Ressourceninformationen Weitere Informationen [**finden Sie unter MPRESOURCE \_ INFO**](mpresource-info.md).
 
 </dd> <dt>
 
-**Resourcestats**
+**ResourceStats**
 </dt> <dd>
 
-Typ: **[ **mpresource- \_ Statistik**](mpresource-stats.md)**
+Typ: **[ **MPRESOURCE \_ STATS**](mpresource-stats.md)**
 
 </dd> <dd>
 
@@ -79,14 +79,14 @@ Ressourcenbezogene kumulative Statistiken.
 
 </dd> <dt>
 
-**Bedrohlich stats**
+**ThreatStats**
 </dt> <dd>
 
-Typ: **[ **mpthreat- \_ Statistik**](mpthreat-stats.md)**
+Typ: **[ **MPTHREAT \_ STATS**](mpthreat-stats.md)**
 
 </dd> <dd>
 
-Bedrohungs Statistik mit erfolgreichen Überprüfungs Vervollständigungen.
+Bedrohungsstatistiken mit erfolgreichen Überprüfungsabschluss.
 
 </dd> </dl>
 
@@ -96,26 +96,26 @@ Bedrohungs Statistik mit erfolgreichen Überprüfungs Vervollständigungen.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**mpresource- \_ Informationen**](mpresource-info.md)
+[**MPRESOURCE-INFORMATIONEN \_**](mpresource-info.md)
 </dt> <dt>
 
-[**mpresource- \_ Statistik**](mpresource-stats.md)
+[**\_MPRESOURCE-STATISTIKEN**](mpresource-stats.md)
 </dt> <dt>
 
-[**mpscan- \_ Typ**](mpscan-type.md)
+[**\_MPSCAN-TYP**](mpscan-type.md)
 </dt> <dt>
 
-[**mpthreat- \_ Statistik**](mpthreat-stats.md)
+[**MPTHREAT \_ STATS**](mpthreat-stats.md)
 </dt> </dl>
 
  

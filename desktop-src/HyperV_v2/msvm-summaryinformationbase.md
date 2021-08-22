@@ -1,5 +1,5 @@
 ---
-description: Wird in der getsummaryinformation-Methode in der MSVM \_ virtualsystemmanagementservice-Klasse verwendet, um schnell allgemeine Informationen abzurufen, die sich auf ein virtuelles System oder eine Momentaufnahme beziehen.
+description: Wird in der GetSummaryInformation-Methode in der Msvm VirtualSystemManagementService-Klasse verwendet, um schnell allgemeine Informationen zu einem virtuellen System oder einer \_ Momentaufnahme abzurufen.
 ms.assetid: f8daa387-d812-4f44-bf5f-e0a0c18c6db8
 title: Msvm_SummaryInformationBase-Klasse
 ms.topic: reference
@@ -30,16 +30,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 65c20239673f279babba2581c4300f373f1392bb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d131a2630c0c64e4b4b6bcec371eb901665c989948a1db510b47a41d9159f06d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357423"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950099"
 ---
-# <a name="msvm_summaryinformationbase-class"></a>MSVM \_ summaryinformationbase-Klasse
+# <a name="msvm_summaryinformationbase-class"></a>Msvm \_ SummaryInformationBase-Klasse
 
-Wird in der [**getsummaryinformation**](getsummaryinformation-msvm-virtualsystemmanagementservice.md) -Methode in der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse verwendet, um schnell allgemeine Informationen abzurufen, die sich auf ein virtuelles System oder eine Momentaufnahme beziehen.
+Wird in der [**GetSummaryInformation-Methode**](getsummaryinformation-msvm-virtualsystemmanagementservice.md) in der [**Msvm \_ VirtualSystemManagementService-Klasse**](msvm-virtualsystemmanagementservice.md) verwendet, um schnell allgemeine Informationen zu einem virtuellen System oder einer Momentaufnahme abzurufen.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -71,20 +71,20 @@ class Msvm_SummaryInformationBase : CIM_View
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ summaryinformationbase** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ SummaryInformationBase-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ summaryinformationbase** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ SummaryInformationBase-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**CreationTime**
+**Creationtime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **DateTime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -103,36 +103,36 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("CIM \_ managedelta Element. Elementname")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ ManagedElement.ElementName")
 </dt> </dl>
 
-Der Anzeige Name für das virtuelle System oder die Momentaufnahme.
+Der Benutzername für das virtuelle System oder die Momentaufnahme.
 
 </dd> <dt>
 
 **EnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Zustand des virtuellen Systems oder der Momentaufnahme.
+Der aktuelle Status des virtuellen Systems oder der Momentaufnahme.
 
 </dd> <dt>
 
-**Enhancedsessionmodestate**
+**EnhancedSessionModeState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob Verbindungen im erweiterten Modus vom Host zugelassen werden, und falls zulässig, ob Sie für den virtuellen Computer verfügbar sind.
+Gibt an, ob Verbindungen im erweiterten Modus vom Host zugelassen werden und ob sie für den virtuellen Computer verfügbar sind, sofern zulässig.
 
 <dt>
 
@@ -162,17 +162,17 @@ Gibt an, ob Verbindungen im erweiterten Modus vom Host zugelassen werden, und fa
 **HealthState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Integritäts Status des virtuellen Systems. Diese Eigenschaft ist für Instanzen von [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) , die eine Momentaufnahme eines virtuellen Systems darstellen, ungültig.
+Der aktuelle Integritätsstatus für das virtuelle System. Diese Eigenschaft ist für Instanzen von [**Msvm \_ SummaryInformation**](msvm-summaryinformation.md) ungültig, die eine Momentaufnahme des virtuellen Systems darstellen.
 
 </dd> <dt>
 
-**Hostcomputersystemname**
+**HostComputerSystemName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -181,7 +181,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Computers, auf dem dieser virtuelle Computer gehostet wird.
+Der Name des Computers, der diesen virtuellen Computer hosten soll.
 
 </dd> <dt>
 
@@ -194,20 +194,20 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("CIM \_ managedelta Element. InstanceId"), [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ ManagedElement.InstanceID"), [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-"InstanceId" ist eine optionale Eigenschaft, die verwendet werden kann, um eine Instanz dieser Klasse innerhalb des Gültigkeits Bereichs des instanziierten Namespace eindeutig und eindeutig zu identifizieren. Verschiedene Unterklassen dieser Klasse können diese Eigenschaft überschreiben, um Sie erforderlich zu machen, oder einen Schlüssel. Diese Unterklassen können auch die bevorzugten Algorithmen zum Sicherstellen der Eindeutigkeit ändern, die unten definiert sind.
+InstanceID ist eine optionale Eigenschaft, die verwendet werden kann, um eine Instanz dieser Klasse innerhalb des Bereichs des instanziierenden Namespace undurchsichtig und eindeutig zu identifizieren. Verschiedene Unterklassen dieser Klasse können diese Eigenschaft überschreiben, um sie erforderlich zu machen, oder einen Schlüssel. Solche Unterklassen können auch die bevorzugten Algorithmen ändern, um die Eindeutigkeit sicherzustellen, die unten definiert sind.
 
-Um die Eindeutigkeit innerhalb des Namespaces sicherzustellen, sollte der Wert von InstanceId mit dem folgenden "bevorzugten" Algorithmus erstellt werden:
+Um die Eindeutigkeit innerhalb des NameSpace sicherzustellen, sollte der Wert von InstanceID mit dem folgenden "bevorzugten" Algorithmus erstellt werden:
 
 <OrgID>:<LocalID>
 
-Dabei <OrgID> <LocalID> sind und durch einen Doppelpunkt (:) und wobei <OrgID> ein urheberrechtlich geschütztes, mit einem oder ein oder anderweitig eindeutiger Name enthalten muss, der der Geschäfts Entität entspricht, die die InstanceId erstellt oder definiert, oder die eine registrierte ID ist, die der Geschäfts Entität von einer anerkannten globalen Autorität zugewiesen ist. (Diese Anforderung ähnelt der <Schema Name> \_ <Class Name> Struktur von Schema Klassennamen.) Außerdem <OrgID> darf keine Doppelpunkte (:) enthalten, um die Eindeutigkeit sicherzustellen. Wenn dieser Algorithmus verwendet wird, muss der erste Doppelpunkt, der in InstanceId angezeigt wird, zwischen und angezeigt werden <OrgID> <LocalID> .
+Wobei und durch einen Doppelpunkt (:)) getrennt sind und wo einen urheberrechtlich geschützten, markengebundenen oder anderweitig eindeutigen Namen enthalten muss, der im Besitz der Geschäftseinheit ist, die die InstanceID erstellt oder definiert, oder die eine registrierte ID ist, die der Geschäftseinheit von einer anerkannten globalen Autorität zugewiesen <OrgID> <LocalID> <OrgID> wird. (Diese Anforderung ähnelt der <Schema Name> \_ <Class Name> Struktur von Schemaklassennamen.) Darüber hinaus darf zur Sicherstellung der <OrgID> Eindeutigkeit keinen Doppelpunkt (:). Bei Verwendung dieses Algorithmus muss der erste Doppelpunkt, der in InstanceID angezeigt wird, zwischen und <OrgID> angezeigt <LocalID> werden.
 
-<LocalID> wird von der Business-Entität gewählt und sollte nicht wieder verwendet werden, um verschiedene zugrunde liegende (reale) Elemente zu identifizieren. Wenn not NULL und der oben genannte "bevorzugte" Algorithmus nicht verwendet wird, muss die definierende Entität sicherstellen, dass die resultierende InstanceId nicht in allen instanceids wieder verwendet wird, die von diesem oder anderen Anbietern für den Namespace dieser Instanz erstellt werden.
+<LocalID> wird von der Geschäftsentität ausgewählt und sollte nicht wiederverwendet werden, um verschiedene zugrunde liegende (reale) Elemente zu identifizieren. Wenn nicht NULL festgelegt ist und der oben genannte "bevorzugte" Algorithmus nicht verwendet wird, muss die definierende Entität sicherstellen, dass die resultierende InstanceID nicht für instanceIDs wiederverwendet wird, die von diesem oder anderen Anbietern für den NameSpace dieser Instanz erzeugt werden.
 
-Wenn für von DMTF definierte Instanzen nicht auf NULL festgelegt ist, muss der "bevorzugte" Algorithmus verwendet werden, wobei <OrgID> auf CIM festgelegt ist.
+Wenn für DMTF-definierte Instanzen nicht auf NULL festgelegt ist, muss der "bevorzugte" Algorithmus mit dem auf <OrgID> CIM festgelegten verwendet werden.
 
 </dd> <dt>
 
@@ -224,7 +224,7 @@ Der eindeutige Name für das virtuelle System oder die Momentaufnahme.
 
 </dd> <dt>
 
-**Hinweise**
+**Notizen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -233,40 +233,40 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anmerkungen, die dem virtuellen System oder der Momentaufnahme zugeordnet sind.
+Die dem virtuellen System oder der Momentaufnahme zugeordneten Hinweise.
 
 </dd> <dt>
 
 **NumberOfProcessors**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtanzahl der virtuellen Prozessoren, die dem virtuellen System oder der Momentaufnahme zugeordnet sind.
+Die Gesamtzahl der virtuellen Prozessoren, die dem virtuellen System oder der Momentaufnahme zugeordnet sind.
 
 </dd> <dt>
 
 **OperationalStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
 Der aktuelle Status des Elements.
 
 </dd> <dt>
 
-**Otherenabledstate**
+**OtherEnabledState**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -275,36 +275,36 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die den aktivierten oder deaktivierten Status des Elements beschreibt, wenn die **enabledstate** -Eigenschaft auf 1 ("Other") festgelegt ist. Diese Eigenschaft muss auf NULL festgelegt werden, wenn **enabledstate** ein anderer Wert als 1 ist.
+Eine Zeichenfolge, die den aktivierten oder deaktivierten Zustand des Elements beschreibt, wenn die **EnabledState-Eigenschaft** auf 1 ("Sonstige") festgelegt ist. Diese Eigenschaft muss auf NULL festgelegt werden, wenn **EnabledState** ein anderer Wert als 1 ist.
 
 </dd> <dt>
 
-**Status Beschreibungen**
+**StatusDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
-Zeichen folgen, die die verschiedenen **OperationalStatus** -Array Werte beschreiben.
+Zeichenfolgen, die die verschiedenen **OperationalStatus-Arraywerte** beschreiben.
 
 </dd> <dt>
 
-**Betriebszeit**
+**Verfügbarkeit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Zeitspanne seit dem letzten Starten des virtuellen Systems. Diese Eigenschaft ist für Instanzen von [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) , die eine Momentaufnahme eines virtuellen Systems darstellen, ungültig.
+Die Zeit seit dem letzten Start des virtuellen Systems. Diese Eigenschaft ist für Instanzen von [**Msvm \_ SummaryInformation**](msvm-summaryinformation.md) ungültig, die eine Momentaufnahme des virtuellen Systems darstellen.
 
 </dd> <dt>
 
@@ -317,23 +317,23 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Version des virtuellen Systems im Format "Major. Minor"; Beispiel: "2,0".
+Die Version des virtuellen Systems im Format "major.minor"; Beispiel: "2.0".
 
 </dd> <dt>
 
-**Virtualswitchnames**
+**VirtualSwitchNames**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
-Zeichen folgen, die die anzeigen amen der virtuellen Switches auflisten, mit denen der virtuelle Computer verbunden ist.
+Zeichenfolgen, die die Benutzerfreundlichen Namen der virtuellen Switches auflisten, mit denen die VM verbunden ist.
 
 </dd> <dt>
 
@@ -352,14 +352,14 @@ Der Untertyp des virtuellen Systems.
 
 <span id="Microsoft_Hyper-V_SubType_1"></span><span id="microsoft_hyper-v_subtype_1"></span><span id="MICROSOFT_HYPER-V_SUBTYPE_1"></span>
 
-**Microsoft: Hyper-v: Untertyp: 1** ("Microsoft: Hyper-v: SubType: 1")
+**Microsoft:Hyper-V:SubType:1** ("Microsoft:Hyper-V:SubType:1")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Microsoft_Hyper-V_SubType_2"></span><span id="microsoft_hyper-v_subtype_2"></span><span id="MICROSOFT_HYPER-V_SUBTYPE_2"></span>
 
-**Microsoft: Hyper-v: SubType: 2** ("Microsoft: Hyper-v: SubType: 2")
+**Microsoft:Hyper-V:SubType:2** ("Microsoft:Hyper-V:SubType:2")
 
 
 </dt> <dd></dd> </dl>
@@ -372,10 +372,10 @@ Der Untertyp des virtuellen Systems.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -384,7 +384,7 @@ Der Untertyp des virtuellen Systems.
 
 <dl> <dt>
 
-[**CIM- \_ Ansicht**](cim-view.md)
+[**\_CIM-Ansicht**](cim-view.md)
 </dt> </dl>
 
  

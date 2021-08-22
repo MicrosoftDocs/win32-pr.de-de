@@ -1,31 +1,31 @@
 ---
-description: Ein Wert, der angibt, ob ein Frame mithilfe der aktiven Infrarotbeleuchtung (IR) erfasst wurde.
+description: Ein -Wert, der angibt, ob ein Frame mithilfe eines aktiven Ir-Schildes (ActiveIra) erfasst wurde.
 ms.assetid: D84772C8-902F-4302-8288-0430892A1896
-title: MF_CAPTURE_METADATA_FRAME_ILLUMINATION-Attribut (mfapi. h)
+title: MF_CAPTURE_METADATA_FRAME_ILLUMINATION -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cb9aa60b5e921e99ac4f4c56cb4643af8389aa91
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6a23658f8f396a81180a074badc43e98d0f392fc355c1a81a4d1e731d132de12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973949"
 ---
-# <a name="mf_capture_metadata_frame_illumination-attribute"></a>MF- \_ Attribut zur Erfassung von \_ \_ metadatenframe \_
+# <a name="mf_capture_metadata_frame_illumination-attribute"></a>MF \_ CAPTURE METADATA FRAME \_ \_ \_ FRAME-Attribut
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Ein Wert, der angibt, ob ein Frame mithilfe der aktiven Infrarotbeleuchtung (IR) erfasst wurde.
+Ein -Wert, der angibt, ob ein Frame mithilfe eines aktiven Ir-Schildes (ActiveIra) erfasst wurde.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT64**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist eine Bitmaske. Es handelt sich um einen 64-Bit-Wert für die Abwärtskompatibilität.
+Dieses Attribut ist eine Bitmaske. Aus Gründen der Abwärtskompatibilität ist dies ein 64-Bit-Wert.
 
-Die aktive Beleuchtung ist, wenn ein Gerät einen Licht Emitter hat, der sich in der Nähe der IR-Kamera befindet und einen Lichtstrahl ausgibt, um die Szene zu beleuchten Legen Sie Value auf (Wert & 0x1)! = 0 fest, wenn Frame aufgezeichnet wurde, als die aktive Beleuchtung aktiviert war, und legen Sie (Wert & 0x1) = = 0 fest, wenn die aktive Beleuchtung deaktiviert war.
+Aktives Licht ist, wenn ein Gerät einen Lichtausträger in der Nähe der IR-Kamera hat, der einen Lichtstrahl aussendet, um die Szene zu beleuchten. In der Regel wird IR-Licht ausgegeben, sodass es keine menschlichen Augen beeinträchtigt. Legen Sie den Wert auf (Wert & 0x1) != 0 fest, wenn der Frame erfasst wurde, als aktives Licht eingeschaltet war, und legen Sie (Wert & 0x1) == 0 fest, wenn aktives Licht ausgeschaltet war.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,9 +33,9 @@ Die aktive Beleuchtung ist, wenn ein Gerät einen Licht Emitter hat, der sich in
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                      |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1709 \[\]<br/>                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                      |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 

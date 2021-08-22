@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine hierarchische Struktur von IWiaItem2-Objekten für ein Windows-Abbild Erfassungsgerät (WIA) 2,0.
+description: Erstellt eine hierarchische Struktur von IWiaItem2-Objekten für ein wia 2.0-Gerät (Windows Image Acquisition).
 ms.assetid: df7f3cc2-da0a-4238-b280-89c72107753c
-title: 'IWiaDevMgr2:: kreatedevice-Methode (WIA. h)'
+title: IWiaDevMgr2::CreateDevice-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: a548a0ef43c2621b77c4ed10acde393af21d596d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a40267e77671b807f0e6969845a3a5a7096694e4f4e7978467ee9ca5909284d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965729"
 ---
-# <a name="iwiadevmgr2createdevice-method"></a>IWiaDevMgr2:: kreatedevice-Methode
+# <a name="iwiadevmgr2createdevice-method"></a>IWiaDevMgr2::CreateDevice-Methode
 
-Erstellt eine hierarchische Struktur von [**IWiaItem2**](-wia-iwiaitem2.md) -Objekten für ein Windows-Abbild Erfassungsgerät (WIA) 2,0.
+Erstellt eine hierarchische Struktur von [**IWiaItem2-Objekten**](-wia-iwiaitem2.md) für ein wia 2.0-Gerät (Windows Image Acquisition).
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ HRESULT CreateDevice(
 
 <dl> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
 Derzeit nicht verwendet. Sollte auf Null festgelegt werden.
 
 </dd> <dt>
 
-*bstraude viceid* \[ in\]
+*bstrDeviceID* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
 
-Gibt den eindeutigen Bezeichner des WIA 2,0-Geräts an.
+Gibt den eindeutigen Bezeichner des WIA 2.0-Geräts an.
 
 </dd> <dt>
 
-*ppWiaItem2Root* \[ vorgenommen\]
+*ppWiaItem2Root* \[ out\]
 </dt> <dd>
 
 Typ: **[ **IWiaItem2**](-wia-iwiaitem2.md)\*\***
 
-Empfängt die Adresse eines Zeigers auf die [**IWiaItem2**](-wia-iwiaitem2.md) -Schnittstelle des Stamm Elements in der hierarchischen Struktur für das WIA 2,0-Gerät.
+Empfängt die Adresse eines Zeigers auf die [**IWiaItem2-Schnittstelle**](-wia-iwiaitem2.md) des Stammelements in der hierarchischen Struktur für das WIA 2.0-Gerät.
 
 </dd> </dl>
 
@@ -72,13 +72,13 @@ Empfängt die Adresse eines Zeigers auf die [**IWiaItem2**](-wia-iwiaitem2.md) -
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen verwenden die **IWiaDevMgr2:: kreatedevice** -Methode, um ein Geräte Objekt für die WIA 2,0-Geräte zu erstellen, die durch den bstrindeviceid-Parameter angegeben werden. Wenn der Wert zurückgegeben wird, speichert die **IWiaDevMgr2:: kreatedevice** -Methode eine Adresse eines Zeigers im Parameter *ppWiaItem2Root*, der auf das Stamm Element der [**IWiaItem2**](-wia-iwiaitem2.md) -Objekte zeigt, die von **IWiaDevMgr2:: kreatedevice** erstellt wurden. Anwendungen können diese Objektstruktur verwenden, um Daten aus dem WIA 2,0-Gerät zu steuern und abzurufen.
+Anwendungen verwenden die **IWiaDevMgr2::CreateDevice-Methode,** um ein Geräteobjekt für die WIA 2.0-Geräte zu erstellen, die durch den bstrDeviceID-Parameter angegeben werden. Nach der Rückgabe speichert die **IWiaDevMgr2::CreateDevice-Methode** eine Adresse eines Zeigers im Parameter *ppWiaItem2Root,* der auf das Stammelement der Struktur von [**IWiaItem2-Objekten**](-wia-iwiaitem2.md) verweist, die von **IWiaDevMgr2::CreateDevice** erstellt wurden. Anwendungen können diese Struktur von Objekten verwenden, um Daten vom WIA 2.0-Gerät zu steuern und abzurufen.
 
-Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) -Methode für die Zeiger aufrufen, die Sie über den *ppWiaItem2Root* -Parameter empfangen.
+Anwendungen müssen die [IUnknown::Release-Methode](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für die Zeiger aufrufen, die sie über den *ppWiaItem2Root-Parameter* empfangen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,10 +86,10 @@ Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

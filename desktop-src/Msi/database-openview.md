@@ -1,7 +1,7 @@
 ---
-description: Die OpenView-Methode des Database-Objekts gibt ein Ansichts Objekt zurück, das die durch eine SQL-Zeichenfolge angegebene Abfrage darstellt.
+description: Die OpenView-Methode des Database-Objekts gibt ein View-Objekt zurück, das die von einer Zeichenfolge angegebene SQL darstellt.
 ms.assetid: 6afb2fdb-0e6a-468f-8faf-e48d8d1960b6
-title: Database. OpenView-Methode (certview. h)
+title: Database.OpenView-Methode (Certview.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 8dc62ca38bfe28980da71ecf63eda8e6c39aaf0a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ccc37b72dd44064172672d1067dae293da30048853f3ca83f82fb50b0a90cfaf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359810"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118947523"
 ---
-# <a name="databaseopenview-method"></a>Database. OpenView-Methode
+# <a name="databaseopenview-method"></a>Database.OpenView-Methode
 
-Die **OpenView** -Methode des [**Database**](database-object.md) -Objekts gibt ein [**Ansichts**](view-object.md) Objekt zurück, das die durch eine SQL-Zeichenfolge angegebene Abfrage darstellt.
+Die **OpenView-Methode** des [**Database-Objekts**](database-object.md) gibt ein [**View-Objekt**](view-object.md) zurück, das die von einer Zeichenfolge angegebene SQL darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Database.OpenView(
 *sql* 
 </dt> <dd>
 
-Erforderliche SQL-Abfrage Zeichenfolge.
+Erforderlich SQL Abfragezeichenfolge.
 
 </dd> </dl>
 
@@ -50,11 +50,11 @@ Erforderliche SQL-Abfrage Zeichenfolge.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur SQL-Syntax, die im Installer implementiert ist, finden Sie unter [SQL-Syntax](sql-syntax.md).
+Weitere Informationen zur SQL im Installationsprogramm implementierten Syntax finden Sie unter [SQL Syntax](sql-syntax.md).
 
-Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithilfe der [**lasterrorrecord**](installer-lasterrorrecord.md) -Methode abrufen.
+Wenn bei der Methode ein Fehler auftritt, können Sie erweiterte Fehlerinformationen mithilfe der [**LastErrorRecord-Methode**](installer-lasterrorrecord.md) abrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,10 +62,10 @@ Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithil
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
-| Header<br/>  | <dl> <dt>Certview. h</dt> </dl>                                                                                                                                                                   |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
+| Header<br/>  | <dl> <dt>Certview.h</dt> </dl>                                                                                                                                                                   |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ idatabase ist definiert als 000c109d-0000-0000-C000-000000000046<br/>                                                                                                                                                                            |
+| IID<br/>     | IDatabase der IID ist als \_ 000C109D-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                            |
 
 
 
@@ -73,7 +73,7 @@ Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithil
 
 <dl> <dt>
 
-[**Verbindung**](database-object.md)
+[**Datenbank**](database-object.md)
 </dt> <dt>
 
 [SQL-Syntax](sql-syntax.md)

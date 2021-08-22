@@ -1,29 +1,29 @@
 ---
-description: Wenn diese System Richtlinie auf 1 festgelegt ist, speichert das Installationsprogramm während der Installation keine Rollback-Dateien und deaktiviert das Installations Rollback.
+description: Wenn diese Systemrichtlinie auf 1 festgelegt ist, werden im Installationsprogramm keine Rollbackdateien während der Installation gespeichert, und das Installationsrollback wird deaktiviert.
 ms.assetid: 01747de6-7478-4403-ba36-8ff1abc2b70f
-title: DISABLEROLLBACK
+title: DisableRollback
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f7f0ce15e618880f021e04adf7d2146a97f6ed65
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5da8380ce5dc7ea0b711d5766a554d6dce970bc81587a75164e61f3694c6a5ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118947314"
 ---
-# <a name="disablerollback"></a>DISABLEROLLBACK
+# <a name="disablerollback"></a>DisableRollback
 
-Wenn diese [System Richtlinie](system-policy.md) auf 1 festgelegt ist, speichert das Installationsprogramm während der Installation keine Rollback-Dateien und deaktiviert das Installations Rollback. Standardmäßig ist das Rollback aktiviert. Administratoren wird empfohlen, diese Richtlinie nicht zu verwenden, es sei denn, Sie ist unbedingt erforderlich. Weitere Informationen finden Sie unter [Rollback-Installation](rollback-installation.md).
+Wenn diese [Systemrichtlinie](system-policy.md) auf 1 festgelegt ist, werden im Installationsprogramm keine Rollbackdateien während der Installation gespeichert, und das Installationsrollback wird deaktiviert. Standardmäßig ist ein Rollback aktiviert. Administratoren wird empfohlen, diese Richtlinie nur zu verwenden, wenn sie unbedingt erforderlich ist. Weitere Informationen finden Sie unter [Rollbackinstallation](rollback-installation.md).
 
 ## <a name="registry-key"></a>Registrierungsschlüssel
 
-Um das Rollback für Installationen pro Benutzer zu deaktivieren, legen Sie **DISABLEROLLBACK** unter dem folgenden Registrierungsschlüssel auf 1 fest:
+Um das Rollback für benutzerspezifische Installationen zu deaktivieren, legen **Sie DisableRollback** unter dem folgenden Registrierungsschlüssel auf 1 fest:
 
-**HKEY \_ Aktuelle \_** Richtlinien für Benutzer \\ **Software** \\  \\ **Microsoft** \\ **Windows** \\ **Installer**
+**HKEY \_ CURRENT \_ USER** \\ **Software** \\ **Policies** \\ **Microsoft** \\ **Windows** \\ **Installer**
 
-Um das Rollback für Installationen pro Computer zu deaktivieren, legen Sie **DISABLEROLLBACK** unter dem folgenden Registrierungsschlüssel auf 1 fest.
+Um das Rollback für Computerinstallationen zu deaktivieren, legen **Sie DisableRollback** unter dem folgenden Registrierungsschlüssel auf 1 fest.
 
-**HKEY \_ Software Richtlinien für lokale \_ Computer** \\  \\  \\ **Microsoft** \\ **Windows** \\ **Installer**
+**HKEY \_ LOCAL \_** \\ **MACHINE-Softwarerichtlinien** \\  \\ **Microsoft** \\ **Windows** \\ **Installer**
 
 ## <a name="data-type"></a>Datentyp
 

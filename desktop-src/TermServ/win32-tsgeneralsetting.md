@@ -1,11 +1,11 @@
 ---
 title: Win32_TSGeneralSetting-Klasse
-description: Stellt allgemeine Einstellungen des Terminals dar, z. b. die Verschlüsselungs Stufe und das Transportprotokoll.
+description: Stellt allgemeine Einstellungen des Terminals dar, z. B. die Verschlüsselungsebene und das Transportprotokoll.
 ms.assetid: a31d68c0-e446-4d78-85e0-5173e7870255
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSGeneralSetting-Klasse Remotedesktopdienste
-- Win32_TSGeneralSetting Klasse Remotedesktopdienste, beschrieben
+- Win32_TSGeneralSetting der Remotedesktopdienste
+- Win32_TSGeneralSetting klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -36,18 +36,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 172f18bbddd364d74dfcfb00e7e665628267af36
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: de2cc2e7ede46b503e0d33f65c5735d5e0cc653a75184384be2d706bfc8ac9cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999810"
 ---
-# <a name="win32_tsgeneralsetting-class"></a>Win32-Klasse "t \_ General setting"
+# <a name="win32_tsgeneralsetting-class"></a>Win32 \_ TSGeneralSetting-Klasse
 
-Die **Win32 \_ tgeneralsetting** -WMI-Klasse stellt allgemeine Einstellungen des Terminals dar, z. b. die Verschlüsselungs Stufe und das Transportprotokoll.
+Die **WMI-Klasse Win32 \_ TSGeneralSetting** stellt allgemeine Einstellungen des Terminals dar, z. B. die Verschlüsselungsebene und das Transportprotokoll.
 
-Die folgende Syntax wird aus dem MOF-Code vereinfacht und umfasst alle definierten und geerbten Eigenschaften in alphabetischer Reihenfolge. Referenzinformationen zu-Methoden finden Sie in der Tabelle mit den Methoden weiter unten in diesem Thema.
+Die folgende Syntax wird von MOF-Code vereinfacht und enthält alle definierten und geerbten Eigenschaften in alphabetischer Reihenfolge. Referenzinformationen zu Methoden finden Sie in der Tabelle der Methoden weiter unten in diesem Thema.
 
 ## <a name="syntax"></a>Syntax
 
@@ -80,22 +80,22 @@ class Win32_TSGeneralSetting : Win32_TerminalSetting
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ zgeneralsetting** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSGeneralSetting-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ zgeneralsetting** " verfügt über diese Methoden.
+Die **Win32 \_ TSGeneralSetting-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                        | BESCHREIBUNG                                                                                                                                                             |
+| Methode                                                                                        | Beschreibung                                                                                                                                                             |
 |:----------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Setencryptionlevel**](win32-tsgeneralsetting-setencryptionlevel.md)                       | Legt die Verschlüsselungs Stufe fest.<br/>                                                                                                                                   |
-| [**Setsecuritylayer**](win32-tsgeneralsetting-setsecuritylayer.md)                           | Legt die Sicherheitsstufe auf "RDP Security Layer" (0), "aushandeln" (1) oder "SSL" (2) fest.<br/>                                                                   |
-| [**Setuserauthenticationrequired**](setuserauthenticationrequired-win32-tsgeneralsetting.md) | Aktiviert oder deaktiviert die Anforderung, dass Benutzer zur Verbindungszeit authentifiziert werden müssen, indem der Wert der **UserAuthenticationRequired** -Eigenschaft festgelegt wird.<br/> |
+| [**SetEncryptionLevel**](win32-tsgeneralsetting-setencryptionlevel.md)                       | Legt die Verschlüsselungsstufe fest.<br/>                                                                                                                                   |
+| [**SetSecurityLayer**](win32-tsgeneralsetting-setsecuritylayer.md)                           | Legt die Sicherheitsschicht auf eine der Folgenden fest: "RDP-Sicherheitsschicht" (0), "Aushandlung" (1) oder "SSL" (2).<br/>                                                                   |
+| [**SetUserAuthenticationRequired**](setuserauthenticationrequired-win32-tsgeneralsetting.md) | Aktiviert oder deaktiviert die Anforderung, dass Benutzer zur Verbindungszeit durch Festlegen des Werts der **UserAuthenticationRequired-Eigenschaft authentifiziert werden** müssen.<br/> |
 
 
 
@@ -103,71 +103,71 @@ Die Win32-Klasse " **\_ zgeneralsetting** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse "t- **\_ generalsetting** " verfügt über diese Eigenschaften.
+Die **Win32 \_ TSGeneralSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Beschreibung (einzeilige Zeichenfolge) des-Objekts.
+Kurze Beschreibung (einzeilenbasierte Zeichenfolge) des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **CertificateName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzeige Name für den Antragsteller Namen des persönlichen Zertifikats für den lokalen Computer.
+Anzeigename für den Namen des persönlichen Zertifikats des lokalen Computers.
 
 </dd> <dt>
 
 **Zertifikate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Enthält einen serialisierten Zertifikat Speicher, der alle Zertifikate aus dem **eigenen Benutzerkonten** Speicher auf dem Computer enthält, bei denen es sich um gültige Server Zertifikate für die Verwendung mit SSL (Secure Sockets Layer) handelt.
+Enthält einen serialisierten Zertifikatspeicher, der alle  Zertifikate aus dem Speicher Mein Benutzerkonto auf dem Computer enthält, die gültige Serverzertifikate für die Verwendung mit Secure Sockets Layer (SSL) sind.
 
 </dd> <dt>
 
-**Kommentar**
+**Comment**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Beschreibender Name der Kombination aus Sitzungsschicht und Transportprotokoll.
+Beschreibender Name der Kombination aus Sitzungsebene und Transportprotokoll.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -175,41 +175,41 @@ Zugriffstyp: Schreibgeschützt
 
 Eine Beschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 ")
+Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5")
 </dt> </dl>
 
-Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert gibt nicht an, dass das Objekt nicht installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Minverschlüsselungslevel**
+**MinEncryptionLevel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **niedrig** ("nur Daten, die vom Client an den Server gesendet werden, werden durch Verschlüsselung basierend auf der Standardschlüssel Stärke des Servers geschützt. Die vom Server an den Client gesendeten Daten sind nicht geschützt. "), **Mittel** (" alle Daten, die zwischen dem Server und dem Client gesendet werden, werden durch Verschlüsselung basierend auf der Standardschlüssel Stärke des Servers geschützt. "), **hoch** (" alle Daten, die zwischen Server und Client gesendet werden, werden durch die Verschlüsselungs basierte maximale Schlüssel Stärke von onServer geschützt. ")
+Qualifizierer: **Niedrig** ("Nur vom Client an den Server gesendete Daten werden durch Verschlüsselung basierend auf der Standardschlüsselstärke des Servers geschützt. Vom Server an den Client gesendete Daten sind nicht geschützt."), **Mittel** ("Alle zwischen Server und Client gesendeten Daten werden basierend auf der Standardschlüsselstärke des Servers durch Verschlüsselung geschützt."), **Hoch** ("Alle zwischen Server und Client gesendeten Daten werden basierend auf der maximalen Schlüsselstärke des Servers durch Verschlüsselung geschützt.")
 </dt> </dl>
 
-Die minimale Verschlüsselungs Stufe.
+Die Mindestverschlüsselungsstufe.
 
 <dt>
 
@@ -220,18 +220,18 @@ Die minimale Verschlüsselungs Stufe.
 
 </dt> <dd>
 
-Niedriger Verschlüsselungs Grad. Nur vom Client an den Server gesendete Daten werden mithilfe der 56-Bit-Verschlüsselung verschlüsselt. Beachten Sie, dass die vom Server an den Client gesendeten Daten nicht verschlüsselt sind.
+Niedrige Verschlüsselungsebene. Nur daten, die vom Client an den Server gesendet werden, werden mit 56-Bit-Verschlüsselung verschlüsselt. Beachten Sie, dass vom Server an den Client gesendete Daten nicht verschlüsselt sind.
 
 </dd> <dt>
 
 <span id="Medium___Client_Compatible"></span><span id="medium___client_compatible"></span><span id="MEDIUM___CLIENT_COMPATIBLE"></span>
 
-<span id="Medium___Client_Compatible"></span><span id="medium___client_compatible"></span><span id="MEDIUM___CLIENT_COMPATIBLE"></span>**Mittel/Client kompatibel** (2)
+<span id="Medium___Client_Compatible"></span><span id="medium___client_compatible"></span><span id="MEDIUM___CLIENT_COMPATIBLE"></span>**Mittel/Clientkompatibel** (2)
 
 
 </dt> <dd>
 
-Client kompatibler Verschlüsselungs Grad. Alle Daten, die vom Client an den Server und vom Server an den Client gesendet werden, werden mit der maximalen Schlüssel Stärke verschlüsselt, die vom Client unterstützt wird.
+Clientkompatible Verschlüsselungsebene. Alle vom Client an den Server und vom Server an den Client gesendeten Daten werden mit der maximalen Schlüsselstärke verschlüsselt, die vom Client unterstützt wird.
 
 </dd> <dt>
 
@@ -242,18 +242,18 @@ Client kompatibler Verschlüsselungs Grad. Alle Daten, die vom Client an den Ser
 
 </dt> <dd>
 
-Hohes Maß an Verschlüsselung. Alle Daten, die vom Client an den Server und vom Server an den Client gesendet werden, werden mit starker 128-Bit-Verschlüsselung verschlüsselt. Clients, die diese Verschlüsselungs Stufe nicht unterstützen, können keine Verbindung herstellen.
+Hohes Maß an Verschlüsselung. Alle vom Client an den Server und vom Server an den Client gesendeten Daten werden mit starker 128-Bit-Verschlüsselung verschlüsselt. Clients, die diese Verschlüsselungsstufe nicht unterstützen, können keine Verbindung herstellen.
 
 </dd> <dt>
 
 <span id="FIPS_Compliant"></span><span id="fips_compliant"></span><span id="FIPS_COMPLIANT"></span>
 
-<span id="FIPS_Compliant"></span><span id="fips_compliant"></span><span id="FIPS_COMPLIANT"></span>**Kompatibel** mit der Konformität (4)
+<span id="FIPS_Compliant"></span><span id="fips_compliant"></span><span id="FIPS_COMPLIANT"></span>**FIPS-kompatibel** (4)
 
 
 </dt> <dd>
 
-Mit Aktivier barer Verschlüsselung. Alle Daten, die vom Client an den Server und vom Server an den Client gesendet werden, werden verschlüsselt und mit den Federal Information Processing Standard (FI)-Verschlüsselungsalgorithmen mithilfe der Kryptografiemodule von Microsoft entschlüsselt. Der Standardwert für "Sicherheitsanforderungen für kryptografische Module" ist "Standard". In den Informationen zu den in der US-Regierung verwendeten Hardware-und Softwaremodulen werden die behördlichen Anforderungen für Hardware-und Software Kryptografiemodule beschrieben. 2001 140-2 1994 140-1
+FIPS-konforme Verschlüsselung. Alle daten, die vom Client zum Server und vom Server zum Client gesendet werden, werden mithilfe der verschlüsselungsalgorithmen der Federal Information Processing Standard (FIPS) mithilfe der Microsoft-Kryptografiemodule verschlüsselt und entschlüsselt. FIPS ist ein Standard mit dem Titel "Sicherheitsanforderungen für Kryptografiemodule". FIPS 140-1 (1994) und FIPS 140-2 (2001) beschreiben die anforderungen der Regierung für hardware- und software kryptografische Module, die innerhalb der US-Regierung verwendet werden.
 
 </dd> </dl>
 
@@ -262,7 +262,7 @@ Mit Aktivier barer Verschlüsselung. Alle Daten, die vom Client an den Server un
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -270,20 +270,20 @@ Zugriffstyp: Schreibgeschützt
 
 Der Name des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Policysourceminverschlüsselunglevel**
+**PolicySourceMinEncryptionLevel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **minverschlüsseltionlevel** -Eigenschaft vom Server, von der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, **ob die MinEncryptionLevel-Eigenschaft** vom Server, von der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -310,16 +310,16 @@ Standard
 
 </dd> <dt>
 
-**Policysourcesecuritylayer**
+**PolicySourceSecurityLayer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **securitylayer** -Eigenschaft vom Server, von der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, **ob die SecurityLayer-Eigenschaft** vom Server, von der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -346,16 +346,16 @@ Standard
 
 </dd> <dt>
 
-**Policysourceuserauthenticationrequired**
+**PolicySourceUserAuthenticationRequired**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **UserAuthenticationRequired** -Eigenschaft vom Server, von der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, ob die **UserAuthenticationRequired-Eigenschaft** vom Server, von der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -385,27 +385,27 @@ Standard
 **SecurityLayer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **rdpsecuritylayer** ("RDP-Sicherheitsebene: Kommunikation zwischen dem Server und der Client verwendet die Native RDP-Verschlüsselung"), **Aushandlungs** ("die sicherste Ebene, die vom Client unterstützt wird, wird verwendet. Wenn unterstützt, wird TLS 1,0 verwendet. "), **SSL** (" SSL (TLS 1,0) "wird für die Server Authentifizierung verwendet, und alle Daten, die zwischen dem Server und dem Client übertragen werden, werden verschlüsselt. Diese Einstellung erfordert, dass der Server über ein SSL-kompatibles Zertifikat verfügt. "), **newtbd** (" eine neue Sicherheitsebene in Longhorn ")
+Qualifizierer: **RDPSecurityLayer** ("RDP-Sicherheitsschicht: Kommunikation zwischen dem Server und dem Client verwendet native RDP-Verschlüsselung."), **Negotiate** ("Die sicherste Ebene, die vom Client unterstützt wird, wird verwendet. Wenn dies unterstützt wird, wird TLS 1.0 verwendet."), **SSL** ("SSL (TLS 1.0) wird für die Serverauthentifizierung sowie für die Verschlüsselung aller Daten verwendet, die zwischen dem Server und dem Client übertragen werden. Für diese Einstellung muss der Server über ein SSL-kompatibles Zertifikat verfügen."), **NEWTBD** ("A NEW SECURITY LAYER in LONGHORN").
 </dt> </dl>
 
-Gibt die Sicherheitsebene an, die zwischen dem Client und dem Server verwendet wird.
+Gibt die Sicherheitsschicht an, die zwischen Client und Server verwendet wird.
 
 <dt>
 
 <span id="RDP_Security_Layer"></span><span id="rdp_security_layer"></span><span id="RDP_SECURITY_LAYER"></span>
 
-<span id="RDP_Security_Layer"></span><span id="rdp_security_layer"></span><span id="RDP_SECURITY_LAYER"></span>**RDP-Sicherheitsebene** (1)
+<span id="RDP_Security_Layer"></span><span id="rdp_security_layer"></span><span id="RDP_SECURITY_LAYER"></span>**RDP-Sicherheitsschicht** (1)
 
 
 </dt> <dd>
 
-Bei der Kommunikation zwischen dem Server und dem Client wird die Native RDP-Verschlüsselung verwendet.
+Für die Kommunikation zwischen dem Server und dem Client wird native RDP-Verschlüsselung verwendet.
 
 </dd> <dt>
 
@@ -416,7 +416,7 @@ Bei der Kommunikation zwischen dem Server und dem Client wird die Native RDP-Ver
 
 </dt> <dd>
 
-Die sicherste Ebene, die vom Client unterstützt wird, wird verwendet. Wenn unterstützt, wird SSL (TLS 1,0) verwendet.
+Die sicherste Ebene, die vom Client unterstützt wird, wird verwendet. Falls unterstützt, wird SSL (TLS 1.0) verwendet.
 
 </dd> <dt>
 
@@ -427,13 +427,13 @@ Die sicherste Ebene, die vom Client unterstützt wird, wird verwendet. Wenn unte
 
 </dt> <dd>
 
-SSL (TLS 1,0) wird für die Server Authentifizierung und für die Verschlüsselung aller Daten verwendet, die zwischen dem Server und dem Client übertragen werden. Diese Einstellung erfordert, dass der Server über ein SSL-kompatibles Zertifikat verfügt. Diese Einstellung ist nicht kompatibel mit dem **minverschlüsseltionlevel** -Wert 1.
+SSL (TLS 1.0) wird für die Serverauthentifizierung und die Verschlüsselung aller zwischen dem Server und dem Client übertragenen Daten verwendet. Für diese Einstellung muss der Server über ein SSL-kompatibles Zertifikat verfügen. Diese Einstellung ist nicht kompatibel mit dem **MinEncryptionLevel-Wert** 1.
 
 </dd> <dt>
 
 <span id="NEWTBD"></span><span id="newtbd"></span>
 
-<span id="NEWTBD"></span><span id="newtbd"></span>**Newtbd** (4)
+<span id="NEWTBD"></span><span id="newtbd"></span>**NEWTBD** (4)
 
 
 </dt> <dd>
@@ -447,28 +447,28 @@ Eine neue Sicherheitsebene.
 **SSLCertificateSHA1Hash**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt den SHA1-Hash im Hexadezimal Format des SSL-Zertifikats an, das vom Zielserver verwendet werden soll.
+Gibt den SHA1-Hash im Hexadezimalformat des SSL-Zertifikats an, das der Zielserver verwenden soll.
 
-Sie finden den Fingerabdruck eines Zertifikats mithilfe des MMC-Snap-Ins "Zertifikate" auf der Registerkarte "Details" auf der Seite "Zertifikat Eigenschaften".
+Den Fingerabdruck eines Zertifikats finden Sie über das MMC-Snap-In Zertifikate auf der Registerkarte Details der Eigenschaftenseite des Zertifikats.
 
 </dd> <dt>
 
 **SSLCertificateSHA1HashType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Status der **SSLCertificateSHA1Hash** -Eigenschaft an.
+Gibt den Zustand der **SSLCertificateSHA1Hash-Eigenschaft** an.
 
 <dt>
 
@@ -482,14 +482,14 @@ Ungültig
 1 (0x1)
 </dt> <dd>
 
-Standardmäßig selbst signiert
+Standardmäßig selbstsignierend
 
 </dd> <dt>
 
 2 (0x2)
 </dt> <dd>
 
-Standard Gruppenrichtlinie erzwungen
+Erzwungene Standardgruppenrichtlinie
 
 </dd> <dt>
 
@@ -505,16 +505,16 @@ Benutzerdefiniert
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -578,10 +578,10 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Terminal Name**
+**TerminalName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -596,63 +596,63 @@ Diese Eigenschaft wird von [**Win32 \_ TerminalSetting**](win32-terminalsetting.
 **TerminalProtocol**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Sitzungsschicht Protokolls. Beispiel: Microsoft RDP 5,0.
+Der Name des Sitzungsebenenprotokolls. Beispiel: Microsoft RDP 5.0.
 
 </dd> <dt>
 
 **Transport**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Transporttyp, der in der Verbindung verwendet wird. beispielsweise TCP, NetBIOS oder IPX/SPX.
+Der in der Verbindung verwendete Transporttyp. Beispielsweise TCP, NetBIOS oder IPX/SPX.
 
 </dd> <dt>
 
 **UserAuthenticationRequired**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Typ der Benutzerauthentifizierung an, die für Remote Verbindungen verwendet wird. Wenn der Wert auf 1 festgelegt ist, bedeutet dies, dass **UserAuthenticationRequired** zur Verbindungszeit eine Benutzerauthentifizierung erfordert, um den Server Schutz vor Netzwerk Angriffen zu erhöhen. Nur [Remotedesktopprotokoll](remote-desktop-protocol.md) (RDP)-Clients, die RDP-Version 6,0 oder höher unterstützen, können eine Verbindung herstellen. Um Unterbrechungen für Remote Benutzer zu vermeiden, wird empfohlen, RDP-Clients bereitzustellen, die die entsprechende Protokollversion unterstützen, bevor Sie die-Eigenschaft aktivieren.
+Gibt den Typ der Benutzerauthentifizierung an, der für Remoteverbindungen verwendet wird. Wenn diese Option auf 1 festgelegt ist, bedeutet dies, dass **UserAuthenticationRequired** zur Verbindungszeit eine Benutzerauthentifizierung erfordert, um den Serverschutz vor Netzwerkangriffen zu erhöhen. Nur [Remotedesktopprotokoll-Clients](remote-desktop-protocol.md) (RDP), die RDP Version 6.0 oder höher unterstützen, können eine Verbindung herstellen. Um Unterbrechungen für Remotebenutzer zu vermeiden, wird empfohlen, dass Sie RDP-Clients bereitstellen, die die entsprechende Protokollversion unterstützen, bevor Sie die -Eigenschaft aktivieren.
 
-Verwenden Sie die [**setuserauthenticationrequired**](setuserauthenticationrequired-win32-tsgeneralsetting.md) -Methode, um diese Eigenschaft zu aktivieren oder zu deaktivieren.
+Verwenden Sie die [**SetUserAuthenticationRequired-Methode,**](setuserauthenticationrequired-win32-tsgeneralsetting.md) um diese Eigenschaft zu aktivieren oder zu deaktivieren.
 
 <dt>
 
 <span id="FALSE"></span><span id="false"></span>
 
-<span id="FALSE"></span><span id="false"></span>**False** (0)
+<span id="FALSE"></span><span id="false"></span>**FALSE** (0)
 
 
 </dt> <dd>
 
-Die Benutzerauthentifizierung bei Verbindung ist deaktiviert.
+Die Benutzerauthentifizierung bei der Verbindung ist deaktiviert.
 
 </dd> <dt>
 
 <span id="TRUE"></span><span id="true"></span>
 
-<span id="TRUE"></span><span id="true"></span>**True** (1)
+<span id="TRUE"></span><span id="true"></span>**TRUE** (1)
 
 
 </dt> <dd>
 
-Die Benutzerauthentifizierung bei Verbindung ist aktiviert.
+Die Benutzerauthentifizierung bei der Verbindung ist aktiviert.
 
 </dd> </dl>
 
@@ -661,45 +661,45 @@ Die Benutzerauthentifizierung bei Verbindung ist aktiviert.
 **WindowsAuthentication**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Verbindung standardmäßig auf den standardmäßigen Windows-Authentifizierungsprozess oder auf ein anderes auf dem System installiertes Authentifizierungs Paket festgelegt ist.
+Gibt an, ob die Verbindung standardmäßig auf den Standard-Windows Authentifizierungsprozess oder auf ein anderes Authentifizierungspaket festgelegt ist, das auf dem System installiert wurde.
 
 <dt>
 
 <span id="FALSE"></span><span id="false"></span>
 
-<span id="FALSE"></span><span id="false"></span>**False** (0)
+<span id="FALSE"></span><span id="false"></span>**FALSE** (0)
 
 
 </dt> <dd>
 
-Der standardmäßige Windows-Authentifizierungsprozess wird nicht standardmäßig verwendet.
+Standardmäßig wird nicht der Standard-Windows-Authentifizierungsprozess verwendet.
 
 </dd> <dt>
 
 <span id="TRUE"></span><span id="true"></span>
 
-<span id="TRUE"></span><span id="true"></span>**True** (1)
+<span id="TRUE"></span><span id="true"></span>**TRUE** (1)
 
 
 </dt> <dd>
 
-Standardmäßig wird der Windows-Authentifizierungsprozess standardmäßig verwendet.
+Der Standardwert ist der Standardmäßige Windows Authentifizierungsprozess.
 
 </dd> </dl>
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass Windows-Stationen, die nicht der Konsolen Sitzung zugeordnet sind, nicht auf die Methoden und Eigenschaften dieser Klasse zugreifen können. Wenn ein Versuch unternommen wird, indem "Console" als Wert der Terminalname-Eigenschaft angegeben wird, wird **WBEM \_ E \_ \_** von Methoden dieses Objekts zurückgegeben. Dieser Fehlercode wird auch zurückgegeben, wenn eine Fenster Station versucht, Methoden dieses Objekts zum Hinzufügen oder Ändern der Sicherheitseigenschaften der Konten "LocalSystem", "LocalService" oder "Network Service" aufzurufen.
+Beachten Sie, dass Fensterstationen, die nicht der Konsolensitzung zugeordnet sind, nicht auf die Methoden und Eigenschaften dieser Klasse zugreifen können. Wenn versucht wird, dies zu tun, indem "Console" als Wert der TerminalName-Eigenschaft angegeben wird, geben Methoden dieses Objekts **WBEM \_ E NOT SUPPORTED \_ \_ zurück.** Dieser Fehlercode wird auch zurückgegeben, wenn eine Fensterstation versucht, Methoden dieses Objekts zum Hinzufügen oder Ändern der Sicherheitseigenschaften der Konten LocalSystem, LocalService oder NetworkService aufzurufen.
 
-Zum Herstellen einer Verbindung mit dem \\ root \\ CIMV2 \\ TerminalServices-Namespace muss die Authentifizierungs Ebene den Datenschutz für das Paket enthalten. Bei C/C++-aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene der **RPC- \_ c- \_ authn- \_ Ebene \_ Pkt \_ Privacy**. Bei Visual Basic-und Skript aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene von **wbemauthenticationlevelpzprivacy** oder "PKTPRIVACY" mit einem Wert von 6. Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird gezeigt, wie eine Verbindung mit einem Remote Computer mit Paket Datenschutz hergestellt wird.
+Um eine Verbindung mit dem \\ \\ CIMV2 \\ TerminalServices-Stammnamespace herzustellen, muss die Authentifizierungsebene Paketdatenschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**. Bei Visual Basic- und Skriptaufrufen ist dies die Authentifizierungsebene **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Beispiel Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -710,7 +710,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -721,12 +721,12 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

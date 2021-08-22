@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_DESCRIPTOR_RANGE1-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, um die einfache Initialisierung einer D3D12 \_ Descriptor \_ Bereich1-Struktur zu ermöglichen.
+title: CD3DX12_DESCRIPTOR_RANGE1-Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, um die einfache Initialisierung einer D3D12 \_ DESCRIPTOR \_ RANGE1-Struktur zu ermöglichen.
 ms.assetid: 9D073158-5907-4D1C-8D75-72B304277DAD
 keywords:
-- CD3DX12_DESCRIPTOR_RANGE1 Struktur
+- CD3DX12_DESCRIPTOR_RANGE1-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6386d8094d573fba9cd3af44b0148215ee621e2f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 404cb41a019dac404bbe351f78f1d1e65277dd9ad2aecf2cc2d94d06fe242f6f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106373490"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118989880"
 ---
-# <a name="cd3dx12_descriptor_range1-structure"></a>CD3DX12 \_ Descriptor \_ Bereich1-Struktur
+# <a name="cd3dx12_descriptor_range1-structure"></a>CD3DX12 \_ DESCRIPTOR \_ RANGE1-Struktur
 
-Eine hilfsstruktur, um die einfache Initialisierung einer [**D3D12 \_ Descriptor \_ Bereich1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1) -Struktur zu ermöglichen.
+Eine Hilfsstruktur, um eine einfache Initialisierung einer [**D3D12 \_ DESCRIPTOR \_ RANGE1-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1) zu ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,76 +45,76 @@ struct CD3DX12_DESCRIPTOR_RANGE1  : public D3D12_DESCRIPTOR_RANGE1{
 
 <dl> <dt>
 
-**CD3DX12 \_ Descriptor \_ Bereich1 ()**
+**CD3DX12 \_ DESCRIPTOR \_ RANGE1()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12- \_ Deskriptors \_ Bereich1.
+Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12 \_ DESCRIPTOR \_ RANGE1.
 
 </dd> <dt>
 
-**expliziter CD3DX12- \_ Deskriptor \_ Bereich1 (konstant D3D12 \_ Deskriptor \_ Bereich1 &o)**
+**explicit CD3DX12 \_ DESCRIPTOR \_ RANGE1(const D3D12 \_ DESCRIPTOR \_ RANGE1 &o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 \_ Deskriptors \_ Bereich1, die mit dem Inhalt einer anderen [**D3D12 \_ Descriptor \_ Bereich1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1) -Struktur initialisiert wird.
+Erstellt eine neue Instanz eines CD3DX12 \_ DESCRIPTOR \_ RANGE1, initialisiert mit dem Inhalt einer anderen [**D3D12 \_ DESCRIPTOR \_ RANGE1-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1)
 
 </dd> <dt>
 
-**CD3DX12 \_ Descriptor \_ Bereich1 (D3D12 \_ deskriptorbereichstyp \_ \_ RangeType, uint numdescriptors, uint baseshaderregister, uint registerspace = 0, D3D12 \_ deskriptorbereichsflags \_ \_ = D3D12 \_ deskriptorbereichsflag \_ \_ \_ None, uint offsetindescriptorsfromtablestart = D3D12 \_ \_ deskriptorrange \_ Offset \_ Append)**
+**CD3DX12 \_ DESCRIPTOR \_ RANGE1(D3D12 \_ DESCRIPTOR \_ RANGE \_ TYPE rangeType, UINT numDescriptors, UINT baseShaderRegister, UINT registerSpace = 0, D3D12 \_ DESCRIPTOR \_ RANGE \_ FLAGS flags = D3D12 \_ DESCRIPTOR \_ RANGE \_ FLAG \_ NONE, UINT offsetInDescriptorsFromTableStart = D3D12 \_ DESCRIPTOR \_ RANGE \_ OFFSET \_ APPEND)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 \_ Deskriptors \_ Bereich1 und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz von CD3DX12 \_ DESCRIPTOR \_ RANGE1 und initialisiert die folgenden Parameter:
 
-[**D3D12 \_ \_ \_ Deskriptorbereichstyp**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_type) "RangeType"
+[**D3D12 \_ DESCRIPTOR \_ RANGE \_ TYPE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_type) rangeType
 
-Uint-numdeskriptors
+UINT numDescriptors
 
-Uint baseshaderregister
+UINT baseShaderRegister
 
-Uint registerspace = 0
+UINT registerSpace = 0
 
-[**D3D12 \_ Deskriptorbereichsflags \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_flags) -Flags = D3D12 \_ deskriptorbereichsflag " \_ \_ \_ None"
+[**D3D12 \_ DESCRIPTOR \_ RANGE \_ FLAGS**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_flags) flags = D3D12 \_ DESCRIPTOR \_ RANGE \_ FLAG \_ NONE
 
-Uint offsetindescriptorsfromtablestart = D3D12 \_ \_ deskriptorrange \_ Offset \_ Anfügen
+UINT offsetInDescriptorsFromTableStart = D3D12 \_ DESCRIPTOR \_ RANGE \_ OFFSET \_ APPEND
 
 </dd> <dt>
 
-**Inline-init (D3D12 \_ Descriptor \_ Range \_ Type RangeType, uint numdescriptors, uint baseshaderregister, uint registerspace = 0, D3D12 \_ Descriptor \_ Range \_ Flags Flags = D3D12 \_ Descriptor \_ Range \_ Flag \_ None, uint offsetindescriptorsfromtablestart = D3D12 \_ Descriptor \_ Range \_ Offset \_ Append)**
+**inline Init(D3D12 \_ DESCRIPTOR \_ RANGE \_ TYPE rangeType, UINT numDescriptors, UINT baseShaderRegister, UINT registerSpace = 0, D3D12 \_ DESCRIPTOR \_ RANGE \_ FLAGS flags = D3D12 \_ DESCRIPTOR \_ RANGE FLAG \_ \_ NONE, UINT offsetInDescriptorsFromTableStart = D3D12 \_ DESCRIPTOR \_ RANGE OFFSET \_ \_ APPEND)**
 </dt> <dd>
 
 Gibt eine Funktion an, die die folgenden Parameter initialisiert:
 
-[**D3D12 \_ \_ \_ Deskriptorbereichstyp**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_type) "RangeType"
+[**D3D12 \_ DESCRIPTOR \_ RANGE \_ TYPE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_type) rangeType
 
-Uint-numdeskriptors
+UINT numDescriptors
 
-Uint baseshaderregister
+UINT baseShaderRegister
 
-Uint registerspace = 0
+UINT registerSpace = 0
 
-[**D3D12 \_ Deskriptorbereichsflags \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_flags) -Flags = D3D12 \_ deskriptorbereichsflag " \_ \_ \_ None"
+[**D3D12 \_ DESCRIPTOR \_ RANGE \_ FLAGS**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_flags) flags = D3D12 \_ DESCRIPTOR \_ RANGE \_ FLAG \_ NONE
 
-Uint offsetindescriptorsfromtablestart = D3D12 \_ \_ deskriptorrange \_ Offset \_ Anfügen
+UINT offsetInDescriptorsFromTableStart = D3D12 \_ DESCRIPTOR \_ RANGE \_ OFFSET \_ APPEND
 
 </dd> <dt>
 
-**static Inline init (D3D12 \_ Descriptor \_ Bereich1 &Range, D3D12 \_ Descriptor \_ Range \_ Type RangeType, uint numdescriptors, uint baseshaderregister, uint registerspace = 0, D3D12 \_ Descriptor \_ Range \_ Flags Flags = D3D12 \_ Descriptor \_ Range \_ Flag \_ None, uint offsetindescriptorsfromtablestart = D3D12 \_ Descriptor \_ Range \_ Offset \_ Append)**
+**static inline Init(D3D12 \_ DESCRIPTOR \_ RANGE1 &range, D3D12 \_ DESCRIPTOR \_ RANGE TYPE \_ rangeType, UINT numDescriptors, UINT baseShaderRegister, UINT registerSpace = 0, D3D12 \_ DESCRIPTOR \_ RANGE \_ FLAGS flags = D3D12 \_ DESCRIPTOR \_ RANGE FLAG \_ \_ NONE, UINT offsetInDescriptorsFromTableStart = D3D12 \_ DESCRIPTOR \_ RANGE OFFSET \_ \_ APPEND)**
 </dt> <dd>
 
 Gibt eine Funktion an, die die folgenden Parameter initialisiert:
 
-[**D3D12 \_ Deskriptor \_ Bereich1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1) &Bereich
+[**D3D12 \_ DESCRIPTOR \_ RANGE1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1) &-Bereich
 
-[**D3D12 \_ \_ \_ Deskriptorbereichstyp**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_type) "RangeType"
+[**D3D12 \_ DESCRIPTOR \_ RANGE \_ TYPE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_type) rangeType
 
-Uint-numdeskriptors
+UINT numDescriptors
 
-Uint baseshaderregister
+UINT baseShaderRegister
 
-Uint registerspace = 0
+UINT registerSpace = 0
 
-[**D3D12 \_ Deskriptorbereichsflags \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_flags) -Flags = D3D12 \_ deskriptorbereichsflag " \_ \_ \_ None"
+[**D3D12 \_ DESCRIPTOR \_ RANGE \_ FLAGS**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_flags) flags = D3D12 \_ DESCRIPTOR \_ RANGE \_ FLAG \_ NONE
 
-Uint offsetindescriptorsfromtablestart = D3D12 \_ \_ deskriptorrange \_ Offset \_ Anfügen
+UINT offsetInDescriptorsFromTableStart = D3D12 \_ DESCRIPTOR \_ RANGE \_ OFFSET \_ APPEND
 
 </dd> </dl>
 
@@ -124,15 +124,15 @@ Uint offsetindescriptorsfromtablestart = D3D12 \_ \_ deskriptorrange \_ Offset \
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**D3D12- \_ Deskriptor \_ Bereich1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1)
+[**D3D12 \_ DESCRIPTOR \_ RANGE1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

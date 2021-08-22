@@ -1,41 +1,41 @@
 ---
-description: Details der Winsock-Ablauf Verfolgungs Ereignisse.
+description: Details zu Winsock-Ablaufverfolgungsereignissen.
 ms.assetid: 246AE0BE-E8E2-4291-8BF4-577F889F055B
-title: Winsock-Ablauf Verfolgungs Ereignisse
+title: Winsock-Ablaufverfolgungsereignisse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aeabd2d06741f8dfa1f47b513a09c941ee1490b6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f9b2f36991a187d32359694956efcc7b7e3243ac17efd769db454848b5f87e5d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129104"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118821984"
 ---
-# <a name="winsock-tracing-events"></a>Winsock-Ablauf Verfolgungs Ereignisse
+# <a name="winsock-tracing-events"></a>Winsock-Ablaufverfolgungsereignisse
 
-In diesem Abschnitt werden ausführliche Informationen zu bestimmten Details der Winsock-Ablauf Verfolgungs Ereignisse beschrieben.
+In diesem Abschnitt werden ausführliche Informationen zu bestimmten Winsock-Ablaufverfolgungsereignissen beschrieben.
 
-Die Winsock-Ablauf Verfolgung ist ein Feature zur Problembehandlung, das in Binärdateien im Einzelhandel aktiviert werden kann, um bestimmte Windows Socket-Ereignisse mit minimalem mehr Aufwand Diese Funktion ermöglicht bessere Diagnosefunktionen für Entwickler und den Produktsupport. Die Winsock-Netzwerk Ereignis Ablauf Verfolgung unterstützt Ablaufverfolgungs-Socketvorgänge für IPv4-und IPv6 Die Ablauf Verfolgung der Winsock-Katalog Änderung unterstützt die Ablauf Verfolgung von Änderungen, die an den Winsock-Katalog durch mehrstufige Dienstanbieter (LSPs
+Die Winsock-Ablaufverfolgung ist ein Problembehandlungsfeature, das in Binärdateien für den Einzelhandel aktiviert werden kann, um bestimmte Ereignisse Windows Sockets mit minimalem Mehraufwand zu verfolgen. Dieses Feature ermöglicht bessere Diagnosefunktionen für Entwickler und den Produktsupport. Die Winsock-Netzwerkereignisablaufverfolgung unterstützt die Ablaufverfolgung von Socketvorgängen für IPv4- und IPv6-Anwendungen. Die Winsock-Katalogänderungsablaufverfolgung unterstützt die Ablaufverfolgung von Änderungen, die von mehrschichtigen Dienstanbietern (Layered Service Providers, LSPs) am Winsock-Katalog vorgenommen wurden.
 
 > [!Note]  
-> Mehrstufige Dienstanbieter sind veraltet. Ab Windows 8 und Windows Server 2012 verwenden Sie die [Windows-Filter Plattform](../fwp/windows-filtering-platform-start-page.md).
+> Mehrschichtige Dienstanbieter sind veraltet. Verwenden Sie ab Windows 8 Windows Server 2012 [Filterplattform Windows Filterplattform](../fwp/windows-filtering-platform-start-page.md).
 
  
 
-Die Winsock-Ablauf Verfolgung verwendet die Ereignis Ablauf Verfolgung für Windows (Event Tracing for Windows, etw), eine allgemeine, hoch Geschwindigkeits Ablauf Verfolgungs Funktion des Betriebssystems. Etw bietet einen Ablauf Verfolgungs Mechanismus für Ereignisse, die von Anwendungen im Benutzermodus und im Kernel Modus-Gerätetreibern ausgelöst werden. Etw kann die Protokollierung dynamisch aktivieren und deaktivieren, sodass eine ausführliche Ablauf Verfolgung in Produktionsumgebungen ohne Neustarts oder Anwendungs Neustarts problemlos durchgeführt werden kann. Unterstützung für die Winsock-Ablauf Verfolgung mit etw wurde unter Windows Vista und höher hinzugefügt. Allgemeine Informationen zu etw finden Sie unter verbessertes [Debugging und Leistungsoptimierung mit etw](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw).
+Die Winsock-Ablaufverfolgung verwendet die Ereignisablaufverfolgung für Windows (ETW), eine allgemeine, vom Betriebssystem bereitgestellte Hochgeschwindigkeits-Ablaufverfolgungseinrichtung. ETW bietet einen Ablaufverfolgungsmechanismus für Ereignisse, die sowohl von Benutzermodusanwendungen als auch von Kernelmodus-Gerätetreibern ausgelöst werden. ETW kann die Protokollierung dynamisch aktivieren und deaktivieren, wodurch es einfach ist, eine detaillierte Ablaufverfolgung in Produktionsumgebungen durchzuführen, ohne dass Neustarts oder Anwendungsneustarts erforderlich sind. Unterstützung für die Winsock-Ablaufverfolgung mit ETW wurde in Windows Vista und höher hinzugefügt. Allgemeine Informationen zu ETW finden Sie unter [Improve Debugging and Performance Tuning With ETW](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw).
 
-In der folgenden Liste finden Sie ausführliche Informationen zu den einzelnen Winsock-Ablauf Verfolgungs Ereignissen. Klicken Sie auf den Ereignis Namen, um weitere Informationen zu einem beliebigen Ereignis zu erhalten.
+Die folgende Liste enthält ausführliche Informationen zu jedem Winsock-Ablaufverfolgungsereignis. Klicken Sie auf den Ereignisnamen, um weitere Informationen zu einem Ereignis zu erhalten.
 
 
 
 | Veranstaltungsname                                                            | BESCHREIBUNG                                                                               |
 |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [**AFD- \_ Ereignis \_ Erstellung**](afd-event-create.md)                        | Winsock-Netzwerk Ablauf Verfolgungs Ereignis für einen Socket-Erstellungs Vorgang.                            |
-| [**AFD- \_ Ereignis \_ Schließen**](afd-event-close.md)                          | Winsock-Netzwerkablaufverfolgungs-Ereignis für SocketClose.                                 |
-| [**Winsock \_ WS2HELP \_ LSP- \_ Installation**](winsock-ws2help-lsp-install.md) | Änderungs Ereignis für den Winsock-Katalog für einen mehrstufigen Dienstanbieter (LSP). |
-| [**Winsock \_ WS2HELP \_ LSP \_ Entfernen**](winsock-ws2help-lsp-remove.md)   | Änderungs Ereignis für den Winsock-Katalog für einen mehrstufigen Dienstanbieter (LSP).      |
-| [**Winsock \_ WS2HELP \_ LSP \_ Deaktivieren**](winsock-ws2help-lsp-disable.md) | Änderungs Ereignis für den Winsock-Katalog für einen mehrstufigen Dienstanbieter (LSP).      |
-| [**Winsock \_ WS2HELP \_ LSP \_ Reset**](winsock-ws2help-lsp-reset.md)     | Das Änderungs Ereignis für den Winsock-Katalog für einen Winsock-Katalog Zurücksetzungs Vorgang.                       |
+| [**AFD \_ EVENT \_ CREATE**](afd-event-create.md)                        | Winsock-Netzwerkablaufverfolgungsereignis für einen Socketerstellungsvorgang.                            |
+| [**\_AFD-EREIGNIS \_ CLOSE**](afd-event-close.md)                          | Winsock-Netzwerkablaufverfolgungsereignis für socket- Close-Vorgang.                                 |
+| [**WINSOCK \_ WS2HELP \_ LSP \_ INSTALL**](winsock-ws2help-lsp-install.md) | Winsock-Katalogänderungsereignis für einen mehrschichtigen Dienstanbieter -Installationsvorgang (LSP). |
+| [**WINSOCK \_ WS2HELP \_ LSP \_ REMOVE**](winsock-ws2help-lsp-remove.md)   | Winsock-Katalogänderungsereignis für einen LSP-Entfernungsvorgang (Layered Service Provider).      |
+| [**WINSOCK \_ WS2HELP \_ LSP \_ DISABLE**](winsock-ws2help-lsp-disable.md) | Winsock-Katalogänderungsereignis für einen mehrschichtigen Dienstanbieter (Layered Service Provider, LSP) – Deaktivierungsvorgang.      |
+| [**WINSOCK \_ WS2HELP \_ LSP \_ RESET**](winsock-ws2help-lsp-reset.md)     | Winsock-Katalogänderungsereignis für einen Winsock-Katalogzurücksetzungsvorgang.                       |
 
 
 
@@ -48,19 +48,19 @@ In der folgenden Liste finden Sie ausführliche Informationen zu den einzelnen W
 [Verbessertes Debugging und Leistungsoptimierung mit ETW](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
 </dt> <dt>
 
-[Winsock-Ablauf Verfolgung](winsock-tracing.md)
+[Winsock-Ablaufverfolgung](winsock-tracing.md)
 </dt> <dt>
 
-[Winsock-Ablauf Verfolgungs Ebenen](winsock-tracing-levels.md)
+[Winsock-Ablaufverfolgungsebenen](winsock-tracing-levels.md)
 </dt> <dt>
 
-[Kontrolle über die Winsock-Ablauf Verfolgung](control-of-winsock-tracing.md)
+[Steuerung der Winsock-Ablaufverfolgung](control-of-winsock-tracing.md)
 </dt> <dt>
 
-[Details der Winsock-Netzwerk Ereignis Ablauf Verfolgung](winsock-tracing-event-details.md)
+[Details zur Winsock Network-Ereignisablaufverfolgung](winsock-tracing-event-details.md)
 </dt> <dt>
 
-[Details zur Änderung der Winsock-Katalog Änderung](winsock-layered-service-provider-tracing-event-details.md)
+[Details zur Ablaufverfolgung für Winsock-Katalogänderung](winsock-layered-service-provider-tracing-event-details.md)
 </dt> </dl>
 
  

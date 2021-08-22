@@ -1,9 +1,9 @@
 ---
-title: 'Texture2DMS:: Sample. Operator-Funktion'
-description: 'Ruft einen Wert aus der Ressource an dem Speicherort und dem angegebenen Beispiel Index ab. | Texture2DMS:: Sample. Operator-Funktion'
+title: Texture2DMS::sample. Operatorfunktion
+description: Ruft einen Wert aus der Ressource am angegebenen Speicherort und Beispielindex ab. | Texture2DMS::sample. Operatorfunktion
 ms.assetid: 5bc24129-b690-44dd-ae85-8533b10befaa
 keywords:
-- Blutprobe. Operator Function HLSL
+- Beispiel. Operatorfunktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1a73577fa67992b212b4769059f1523e584acbaf
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
-ms.translationtype: HT
+ms.openlocfilehash: 8f5d7082ee72c49d3aa4be131491151b1bab65502e6fe85884b2a03573c497b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118508472"
 ---
-# <a name="texture2dmssampleoperator----function"></a>Texture2DMS:: Sample. Operator-Funktion
+# <a name="texture2dmssampleoperator----function"></a>Texture2DMS::sample. Operatorfunktion
 
-Ruft einen Wert aus der Ressource an dem Speicherort und dem angegebenen Beispiel Index ab.
+Ruft einen Wert aus der Ressource am angegebenen Speicherort und Beispielindex ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,21 +37,21 @@ R sample.Operator[][](
 
 <dl> <dt>
 
-*sampleslice* \[ in\]
+*sampleSlice* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Beispiel-Slice-Index.
+Der Beispielsliceindex.
 
 </dd> <dt>
 
-*POS* \[ in\]
+*pos* \[ In\]
 </dt> <dd>
 
 Typ: **uint2**
 
-Die Indexposition. Die-Komponenten enthalten die (x, y)-Koordinaten.
+Die Indexposition. Die Komponenten enthalten die Koordinaten (x, y).
 
 </dd> </dl>
 
@@ -59,9 +59,9 @@ Die Indexposition. Die-Komponenten enthalten die (x, y)-Koordinaten.
 
 Typ: **R**
 
-Eine schreibgeschützte Ressourcen Variable.
+Eine schreibgeschützte Ressourcenvariable.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="usage-example"></a>Verwendungsbeispiel
 
@@ -77,11 +77,11 @@ float4 main( float3 tcoord : texturecoord0 ) : SV_Target
 
 
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -89,14 +89,14 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [Texture2DMS](sm5-object-texture2dms.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

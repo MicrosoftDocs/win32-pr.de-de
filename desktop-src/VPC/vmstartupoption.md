@@ -1,9 +1,9 @@
 ---
-title: Vmstartupoption-Enumeration (vpccominterfaces. h)
+title: VMStartupOption-Enumeration (VPCCOMInterfaces.h)
 description: Gibt die Startoption an.
 ms.assetid: ac4de9a7-7fc7-4361-89dd-e7da8f5dbb92
 keywords:
-- Vmstartupoption-Enumeration virtueller PC
+- VMStartupOption-Enumeration Virtueller PC
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7dc4a3bbcc1c82c57dfe144f818c29b403fd83a5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3f9799f4eb797c76be9c37b458551f99e0067977f42422c4b4181cee66c92527
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998460"
 ---
-# <a name="vmstartupoption-enumeration"></a>Vmstartupoption-Enumeration
+# <a name="vmstartupoption-enumeration"></a>VMStartupOption-Enumeration
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Gibt die Startoption an.
 
@@ -43,17 +43,17 @@ typedef enum  {
 
 <dl> <dt>
 
-<span id="vmStartupOption_Normal"></span><span id="vmstartupoption_normal"></span><span id="VMSTARTUPOPTION_NORMAL"></span>**vmstartupoption \_ Normal**
+<span id="vmStartupOption_Normal"></span><span id="vmstartupoption_normal"></span><span id="VMSTARTUPOPTION_NORMAL"></span>**vmStartupOption \_ Normal**
 </dt> <dd>
 
 Starten Sie normal.
 
 </dd> <dt>
 
-<span id="vmStartupOption_FixParentTimestampMismatch"></span><span id="vmstartupoption_fixparenttimestampmismatch"></span><span id="VMSTARTUPOPTION_FIXPARENTTIMESTAMPMISMATCH"></span>**vmstartupoption \_ fixparameenttimestampmismatch**
+<span id="vmStartupOption_FixParentTimestampMismatch"></span><span id="vmstartupoption_fixparenttimestampmismatch"></span><span id="VMSTARTUPOPTION_FIXPARENTTIMESTAMPMISMATCH"></span>**vmStartupOption \_ FixParentTimestampMismatch**
 </dt> <dd>
 
-Korrigieren Sie den nicht übereinstimmenden übergeordneten Zeitstempel.
+Korrektur des übergeordneten Zeitstempelkonflikts.
 
 </dd> </dl>
 
@@ -63,19 +63,19 @@ Korrigieren Sie den nicht übereinstimmenden übergeordneten Zeitstempel.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmvirtualmachine:: Startup2**](ivmvirtualmachine-startup2.md)
+[**IVMVirtualMachine::Startup2**](ivmvirtualmachine-startup2.md)
 </dt> </dl>
 
  

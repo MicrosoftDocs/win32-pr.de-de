@@ -1,21 +1,21 @@
 ---
-description: Mit der Delete-Methode wird das Medium gelöscht, das dem angegebenen Index entspricht.
+description: Die Delete-Methode löscht die Medien, die dem angegebenen Index entsprechen.
 ms.assetid: 5fcbd026-75a8-4db2-a701-e080dc222537
-title: Itmediacollection::D Elete-Methode (sdpblb. h)
+title: ITMediaCollection::D elete-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f0ffabee84bd7d04f517ef26ad5259f642cfed48
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d31f799ae413c26e09552d02a8ed31412ae25330acd7060cfad1d03a29741eee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372583"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118864829"
 ---
-# <a name="itmediacollectiondelete-method"></a>Itmediacollection::D Elete-Methode
+# <a name="itmediacollectiondelete-method"></a>ITMediaCollection::D elete-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Mit der **Delete** -Methode wird das Medium gelöscht, das dem angegebenen Index entspricht.
+Die **Delete-Methode** löscht die Medien, die dem angegebenen Index entsprechen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT Delete(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-Der Index des zu löschenden Mediums.
+Index der zu löschenden Medien.
 
 </dd> </dl>
 
@@ -48,19 +48,19 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                                                              | Beschreibung                                                                                              |
 |------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                                     | Methode war erfolgreich.<br/>                                                                             |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>                                             | Der *Index* -Parameter weist einen Wert auf, der kleiner als 1 oder größer als die aktuelle Anzahl der Elemente ist.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>                                            | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/>                                          |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>                                                   | Interner Fehler (sollte nur auftreten, wenn ein vorheriger-Rückruf einen Fehler zurückgegeben hat).<br/>                      |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>                                                | Diese Methode ist noch nicht implementiert.<br/>                                                           |
-| <dl> <dt>**HRESULT \_ aus \_ Fehler \_ Code (sdpblb \_ conf \_ BLOB \_ zerstört)**</dt> </dl> | Das SDP-BLOB ist nicht vorhanden.<br/>                                                                   |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>                                             | Der *Index-Parameter* hat einen Wert kleiner als 1 oder größer als die aktuelle Anzahl von Elementen.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>                                            | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/>                                          |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>                                                   | Interner Fehler (sollte nur auftreten, wenn ein vorheriger Aufruf einen Fehler zurückgegeben hat).<br/>                      |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>                                                | Diese Methode ist noch nicht implementiert.<br/>                                                           |
+| <dl> <dt>**HRESULT \_ FROM \_ ERROR \_ CODE(SDPBLB \_ CONF \_ BLOB \_ DESTROYED)**</dt> </dl> | Das SDP-Blob ist nicht vorhanden.<br/>                                                                   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die meisten C-und C++-Listen sind 0-basiert, aber dieser Index basiert auf Visual Basic Kompatibilität, d. h., das erste Element hat eine Indexnummer von 1.
+Die meisten C- und C++-Listen sind 0-basiert, aber dieser Index basiert aus Visual Basic Kompatibilität auf 1, was bedeutet, dass das erste Element eine Indexnummer von 1 hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,9 +68,9 @@ Die meisten C-und C++-Listen sind 0-basiert, aber dieser Index basiert auf Visua
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
@@ -79,7 +79,7 @@ Die meisten C-und C++-Listen sind 0-basiert, aber dieser Index basiert auf Visua
 
 <dl> <dt>
 
-[**Itmediacollection**](itmediacollection.md)
+[**ITMediaCollection**](itmediacollection.md)
 </dt> </dl>
 
  

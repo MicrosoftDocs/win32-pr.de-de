@@ -1,34 +1,34 @@
 ---
-description: Die Interruptzeit ist die Zeitspanne seit dem letzten Start des Systems in 100-Nanosekunden-Intervallen.
+description: Interruptzeit ist die Zeitspanne seit dem letzten Start des Systems in Intervallen von 100 Nanosekunden.
 ms.assetid: 56fe322e-53ea-4186-9b5e-352f69b09109
 title: Interruptzeit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6018d97ab0eecd1182c02b734357ca13fbe12632
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5e0da8fa92fc51cdceef6f0052dda7a2cd27d7b21b24d11bd8ec7b1ea4aff18b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118885510"
 ---
 # <a name="interrupt-time"></a>Interruptzeit
 
-Die *Interruptzeit* ist die Zeitspanne seit dem letzten Start des Systems in 100-Nanosekunden-Intervallen. Der Wert für die Interruptzeit beginnt bei 0 (null), wenn das System gestartet wird, und wird bei jeder Uhr Unterbrechung um die Länge eines Takt zeitakts erhöht. Die genaue Länge eines Takt zeitachs hängt von der zugrunde liegenden Hardware ab und kann je nach System variieren.
+*Interruptzeit* ist die Zeitspanne seit dem letzten Start des Systems in Intervallen von 100 Nanosekunden. Die Anzahl der Interruptzeit beginnt bei 0 (null), wenn das System gestartet wird, und wird bei jedem Uhrunterbrechungsschritt um die Länge eines Takts erhöht. Die genaue Länge eines Takts hängt von der zugrunde liegenden Hardware ab und kann je nach System variieren.
 
-Im Unterschied zur [Systemzeit](system-time.md)unterliegt die Anzahl der Interrupt-Zeiten nicht den Anpassungen durch Benutzer oder den Windows-Zeit Dienst, sodass Sie eine bessere Wahl für die Messung kurzer Dauer haben. Anwendungen, die eine höhere Genauigkeit benötigen als die Anzahl der Interruptzeit, sollten einen Zeit Geber mit [hoher Auflösung](../winmsg/about-timers.md)verwenden. Verwenden Sie die Funktion [**QueryPerformanceFrequency**](/windows/win32/api/profileapi/nf-profileapi-queryperformancefrequency) , um die Häufigkeit des hochauflösenden Timers abzurufen, und die [**QueryPerformanceCounter**](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) -Funktion, um den Wert des Zählers abzurufen.
+Im [Gegensatz zur Systemzeit](system-time.md)unterliegt die Anzahl der Interruptzeiten keinen Anpassungen durch Benutzer oder den Windows-Zeitdienst. Dies ist eine bessere Wahl für die Messung kurzer Zeitdauern. Anwendungen, die eine höhere Genauigkeit als die Anzahl der Interruptzeit erfordern, sollten einen [timer mit hoher Auflösung verwenden.](../winmsg/about-timers.md) Verwenden Sie [**die QueryPerformanceFrequency-Funktion,**](/windows/win32/api/profileapi/nf-profileapi-queryperformancefrequency) um die Häufigkeit des timer mit hoher Auflösung und die [**QueryPerformanceCounter-Funktion**](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) abzurufen, um den Wert des Indikators abzurufen.
 
-Die Funktionen [**queryinterrupttime**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttime), [**queryinterrupttimepräzisen**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttimeprecise), [**queryunbiasedinterrupttime**](/windows/win32/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttime)und [**queryunbiasedinterrupttimepräzisen**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttimeprecise) können verwendet werden, um die Anzahl der Interrupt-Zeiten abzurufen. Eine unausgewogene Interruptzeit bedeutet, dass nur die Zeit gezählt wird, in der sich das System im Arbeitszustand befindet – daher ist die Anzahl der Interrupt-Zeit nicht "verzerrt", wenn das System im Standbymodus oder Ruhezustand verbringt.
+Die [**Funktionen QueryInterruptTime,**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttime) [**QueryInterruptTimePrecise,**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttimeprecise) [**QueryUnbiasedInterruptTime**](/windows/win32/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttime)und [**QueryUnbiasedInterruptTimePrecise**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttimeprecise) können verwendet werden, um die Interruptzeitanzahl abzurufen. Unvoreingenommene Interruptzeit bedeutet, dass nur die Zeit gezählt wird, in der sich das System im Arbeitszustand befindet. Daher wird die Anzahl der Interruptzeit nicht durch die Zeit "verzerrt", die das System im Ruhezustand oder Ruhezustand verbringt.
 
-**Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP/2000:** Die [**queryunbiasedinterrupttime**](/windows/win32/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttime) -Funktion ist ab Windows 7 und Windows Server 2008 R2 verfügbar.
+**Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP/2000:** Die [**QueryUnbiasedInterruptTime-Funktion**](/windows/win32/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttime) ist ab Windows 7 und Windows Server 2008 R2 verfügbar.
 
-Die von den Funktionen [**TimeBeginPeriod**](/windows/desktop/api/timeapi/nf-timeapi-timebeginperiod) und [**timeendperiod**](/windows/desktop/api/timeapi/nf-timeapi-timeendperiod) festgelegte Zeit Geber Auflösung wirkt sich auf die Auflösung der Funktionen [**queryinterrupttime**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttime) und [**queryunbiasedinterrupttime**](/windows/win32/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttime) aus. Das Erhöhen der Zeit Geber Auflösung wird jedoch nicht empfohlen, da dadurch die Gesamtsystemleistung reduziert und der Stromverbrauch erhöht werden kann, da der Prozessor nicht in den Energiesparmodus wechselt. Stattdessen sollten Anwendungen einen hochauflösenden Timer verwenden.
+Die von den [**timeBeginPeriod-**](/windows/desktop/api/timeapi/nf-timeapi-timebeginperiod) und [**timeEndPeriod-Funktionen**](/windows/desktop/api/timeapi/nf-timeapi-timeendperiod) festgelegte Timerauflösung wirkt sich auf die Auflösung der [**Funktionen QueryInterruptTime**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttime) und [**QueryUnbiasedInterruptTime**](/windows/win32/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttime) aus. Es wird jedoch nicht empfohlen, die Timerauflösung zu erhöhen, da dies die Gesamtleistung des Systems verringern und den Energieverbrauch erhöhen kann, indem verhindert wird, dass der Prozessor energiesparende Zustände einnimmt. Stattdessen sollten Anwendungen einen timer mit hoher Auflösung verwenden.
 
 > [!Note]  
-> Die Funktionen " [**queryinterrupttime**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttime)", " [**queryinterrupttimepräzisen**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttimeprecise)", " [**queryunbiasedinterrupttime**](/windows/win32/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttime)" und " [**queryunbiasedinterrupttimepräzisen**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttimeprecise) " erzeugen unterschiedliche Ergebnisse beim Debuggen ("aktivierte") Builds von Windows, da die Anzahl der Interruptzeit und die Takt Anzahl um ungefähr 49 Tage erweitert werden. Dies hilft, Fehler zu identifizieren, die möglicherweise erst auftreten, wenn das System über einen längeren Zeitraum ausgeführt wird. Der überprüfte Build steht MSDN-Abonnenten über die [MSDN-Website (Microsoft Developer Network)](https://msdn.microsoft.com/default.aspx) zur Verfügung.
+> Die [**Funktionen QueryInterruptTime,**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttime) [**QueryInterruptTimePrecise,**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttimeprecise) [**QueryUnbiasedInterruptTime**](/windows/win32/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttime)und [**QueryUnbiasedInterruptTimePrecise**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttimeprecise) erzeugen unterschiedliche Ergebnisse bei Debugbuilds ("überprüft") von Windows, da die Anzahl der Interruptzeiten und Ticks um ca. 49 Tage erweitert wird. Dadurch können Fehler identifiziert werden, die möglicherweise erst auftreten, wenn das System lange ausgeführt wurde. Der überprüfte Build steht MSDN-Abonnenten über die MSDN-Website [(Microsoft-Entwickler Network)](https://msdn.microsoft.com/default.aspx) zur Verfügung.
 
  
 
-Im folgenden Beispiel wird gezeigt, wie die Interruptzeit-Anzahl abgerufen wird, indem die Funktionen [**queryinterrupttime**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttime), [**queryinterrupttimepräzisen**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttimeprecise), [**queryunbiasedinterrupttime**](/windows/win32/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttime)und [**queryunbiasedinterrupttimepräzisen**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttimeprecise) aufgerufen werden. Verknüpfung mit der onecore. lib-Bibliothek, wenn Sie eine Konsolenanwendung erstellen, die diese Funktionen aufruft.
+Das folgende Beispiel zeigt, wie die Interruptzeitanzahl durch Aufrufen der Funktionen [**QueryInterruptTime,**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttime) [**QueryInterruptTimePrecise,**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttimeprecise) [**QueryUnbiasedInterruptTime**](/windows/win32/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttime)und [**QueryUnbiasedInterruptTimePrecise**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttimeprecise) abgerufen wird. Link zur Bibliothek OneCore.lib, wenn Sie eine Konsolenanwendung erstellen, die diese Funktionen aufruft.
 
 
 ```C++
@@ -93,28 +93,28 @@ int main(void)
 
 
 
-Um die verstrichene Zeit für den Standbymodus oder den Ruhezustand abzurufen, verwenden Sie die Funktion [**GetTickCount**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-gettickcount) oder [**GetTickCount64**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-gettickcount64) , oder verwenden Sie den Leistungs Zähler System Betriebszeit. Dieser Leistungswert kann aus den Leistungsdaten in den **HKEY- \_ Leistungs \_ Daten** des Registrierungsschlüssels abgerufen werden. Der zurückgegebene Wert ist ein 8-Byte-Wert. Weitere Informationen finden Sie unter [Performance Counters](/windows/desktop/PerfCtrs/performance-counters-portal).
+Verwenden Sie die [**GetTickCount-**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-gettickcount) oder [**GetTickCount64-Funktion,**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-gettickcount64) oder verwenden Sie den System up Time-Leistungsindikator, um die verstrichene Zeit abzurufen, die für den Ruhezustand oder Ruhezustand verwendet wird. Dieser Leistungsindikator kann aus den Leistungsdaten im Registrierungsschlüssel **HKEY \_ PERFORMANCE DATA abgerufen \_ werden.** Der zurückgegebene Wert ist ein 8-Byte-Wert. Weitere Informationen finden Sie unter [Performance Counters](/windows/desktop/PerfCtrs/performance-counters-portal).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Queryinterrupttime**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttime)
+[**QueryInterruptTime**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttime)
 </dt> <dt>
 
-[**Queryinterrupttimepräzisen**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttimeprecise)
+[**QueryInterruptTimePrecise**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryinterrupttimeprecise)
 </dt> <dt>
 
-[**Queryunbiasedinterrupttime**](/windows/win32/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttime)
+[**QueryUnbiasedInterruptTime**](/windows/win32/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttime)
 </dt> <dt>
 
-[**Queryunbiasedinterrupttimepräzisen**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttimeprecise)
+[**QueryUnbiasedInterruptTimePrecise**](/windows/desktop/api/realtimeapiset/nf-realtimeapiset-queryunbiasedinterrupttimeprecise)
 </dt> <dt>
 
-[**TimeBeginPeriod**](/windows/desktop/api/timeapi/nf-timeapi-timebeginperiod)
+[**timeBeginPeriod**](/windows/desktop/api/timeapi/nf-timeapi-timebeginperiod)
 </dt> <dt>
 
-[**timeendperiod**](/windows/desktop/api/timeapi/nf-timeapi-timeendperiod)
+[**timeEndPeriod**](/windows/desktop/api/timeapi/nf-timeapi-timeendperiod)
 </dt> </dl>
 
  

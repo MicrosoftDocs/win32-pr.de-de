@@ -1,7 +1,7 @@
 ---
-description: Eine Beschreibung des aktuellen Schriftart Objekts erhalten.
+description: Hier erhalten Sie eine Beschreibung des aktuellen Schriftartobjekts.
 ms.assetid: f08beb35-351f-4087-a2db-097843463291
-title: 'ID3DX10Font:: getdesc-Methode (d3dx10. h)'
+title: ID3DX10Font::GetDesc-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 59a7e361ebb6254fcc49eab30ff44ab39c38fd76
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d684a0bf485db441a0a6bf23cd36496cc13fdfe766eaa890682259b76b3800c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365117"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990440"
 ---
-# <a name="id3dx10fontgetdesc-method"></a>ID3DX10Font:: getdesc-Methode
+# <a name="id3dx10fontgetdesc-method"></a>ID3DX10Font::GetDesc-Methode
 
-Eine Beschreibung des aktuellen Schriftart Objekts erhalten.
+Hier erhalten Sie eine Beschreibung des aktuellen Schriftartobjekts.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT GetDesc(
 
 <dl> <dt>
 
-*PDE SC* \[ in\]
+*pDesc* \[ In\]
 </dt> <dd>
 
-Type: **[ **d3dx10 \_ Font \_ DESC**](d3dx10-font-desc.md)\***
+Typ: **[ **D3DX10 \_ FONT \_ DESC**](d3dx10-font-desc.md)\***
 
-Zeiger auf eine [**d3dx10 \_ Font \_**](d3dx10-font-desc.md) -Debug-Struktur, die das Schriftart Objekt beschreibt. Wenn Unicode definiert ist, wird ein Zeiger auf einen D3DX10FONT- \_ descw zurückgegeben; andernfalls wird ein Zeiger auf einen D3DX10FONT \_ DeScA zurückgegeben.
+Zeiger auf eine [**D3DX10 \_ FONT \_ DESC-Struktur,**](d3dx10-font-desc.md) die das Schriftartobjekt beschreibt. Wenn UNICODE definiert ist, wird ein Zeiger auf eine D3DX10FONT DESCW zurückgegeben. Andernfalls wird ein Zeiger auf eine \_ D3DX10FONT \_ DESCA zurückgegeben.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Zeiger auf eine [**d3dx10 \_ Font \_**](d3dx10-font-desc.md) -Debug-Struktur, di
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode beschreibt Unicode-Schriftart Objekte, wenn Unicode definiert ist. Andernfalls wird getdesca aufgerufen, wodurch ein Zeiger auf die D3DX10FONT DeScA-Struktur zurückgegeben wird \_ .
+Diese Methode beschreibt Unicode-Schriftartobjekte, wenn UNICODE definiert ist. Andernfalls wird GetDescA aufgerufen, das einen Zeiger auf die D3DX10FONT \_ DESCA-Struktur zurückgibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,12 +65,12 @@ Diese Methode beschreibt Unicode-Schriftart Objekte, wenn Unicode definiert ist.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

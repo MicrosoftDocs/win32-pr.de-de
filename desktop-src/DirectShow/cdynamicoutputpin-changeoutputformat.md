@@ -1,7 +1,7 @@
 ---
-description: Mit der changeoutputformat-Methode wird der Medientyp für die Verbindung dynamisch geändert, und es werden neue Segmentinformationen bereitstellt.
+description: Die ChangeOutputFormat-Methode ändert dynamisch den Medientyp für die Verbindung und stellt neue Segmentinformationen zur Verfügung.
 ms.assetid: d1204ca0-a489-48a0-8fe5-3ade04f51c93
-title: Cdynamicoutputpin. changeoutputformat-Methode (amfilter. h)
+title: CDynamicOutputPin.ChangeOutputFormat-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 57421b2fd9624d9798037151a5656343e386a497
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 534d588bc1633770c35b0e0edbc2079ed8f7ab5035d3a8d2ff181042d26fdb3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367201"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074274"
 ---
-# <a name="cdynamicoutputpinchangeoutputformat-method"></a>Cdynamicoutputpin. changeoutputformat-Methode
+# <a name="cdynamicoutputpinchangeoutputformat-method"></a>CDynamicOutputPin.ChangeOutputFormat-Methode
 
-Mit der `ChangeOutputFormat` -Methode wird der Medientyp für die Verbindung dynamisch geändert, und es werden neue Segmentinformationen bereitstellt. Die Änderung kann auftreten, während das Filter Diagramm ausgeführt wird. Nachdem diese Methode aufgerufen wurde, können keine Beispiele mit dem alten Medientyp übermittelt werden. Der Aufrufer muss sicherstellen, dass keine alten Beispiele ausstehend sind.
+Die `ChangeOutputFormat` -Methode ändert dynamisch den Medientyp für die Verbindung und stellt neue Segmentinformationen zur Verfügung. Die Änderung kann auftreten, während das Filterdiagramm ausgeführt wird. Sobald diese Methode aufgerufen wurde, können Beispiele mit dem alten Medientyp nicht übermittelt werden. Der Aufrufer muss sicherstellen, dass keine alten Stichproben ausstehen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,55 +45,55 @@ HRESULT ChangeOutputFormat(
 
 <dl> <dt>
 
-*PMT* 
+*Pmt* 
 </dt> <dd>
 
-Zeiger auf eine [**am \_ - \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur, die den Medientyp angibt.
+Zeiger auf eine [**AM \_ MEDIA \_ TYPE-Struktur,**](/windows/win32/api/strmif/ns-strmif-am_media_type) die den Medientyp angibt.
 
 </dd> <dt>
 
-*tsegmentstart* 
+*tSegmentStart* 
 </dt> <dd>
 
-Die Startzeit des Segments.
+Startzeit des Segments.
 
 </dd> <dt>
 
-*tsegmentbeendet* 
+*tSegmentStop* 
 </dt> <dd>
 
-Die Endzeit des Segments.
+Die Stoppzeit des Segments.
 
 </dd> <dt>
 
-*dsegmentrate* 
+*dSegmentRate* 
 </dt> <dd>
 
-Segment Rate.
+Segmentrate.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
 
 
 
 | Rückgabecode                                                                                           | Beschreibung                                                                                                                              |
 |-------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                  | Erfolg.<br/>                                                                                                                      |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>                | Fehler. Möglicherweise hat der besitzende Filter [**cdynamicoutputpin:: setconfiginfo**](cdynamicoutputpin-setconfiginfo.md)nicht aufgerufen.<br/> |
-| <dl> <dt>**VFW \_ E \_ nicht \_ verbunden**</dt> </dl> | Die PIN ist nicht verbunden.<br/>                                                                                                     |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>                | Fehler. Möglicherweise hat der besitzende Filter [**CDynamicOutputPin::SetConfigInfo nicht aufruft.**](cdynamicoutputpin-setconfiginfo.md)<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Die Stecknadel ist nicht verbunden.<br/>                                                                                                     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ändert den Formattyp, während der Filter ausgeführt wird. Wenn die downstreampin das neue Format annimmt, ist keine erneute Verbindung erforderlich. Andernfalls versucht die Methode, die PIN erneut zu verbinden. Wenn die-Methode das Format erfolgreich ändert, werden die neuen Segmentinformationen übermittelt. Diese Methode ruft die [**cdynamicoutputpin:: changemediatype**](cdynamicoutputpin-changemediatype.md) -Methode auf, um die Formatänderung auszuführen.
+Diese Methode ändert den Formattyp, während der Filter ausgeführt wird. Wenn der Downstreampin das neue Format akzeptiert, ist keine erneute Verbindung erforderlich. Andernfalls versucht die -Methode, die Verbindung mit dem Pin wiederherzustellen. Wenn die Methode das Format erfolgreich ändert, werden die neuen Segmentinformationen angezeigt. Diese Methode ruft die [**CDynamicOutputPin::ChangeMediaType-Methode**](cdynamicoutputpin-changemediatype.md) auf, um die Formatänderung durchzuführen.
 
-Sie müssen die [**cdynamicoutputpin:: startusingoutputpin**](cdynamicoutputpin-startusingoutputpin.md) -Methode aufrufen, bevor Sie diese Methode aufrufen.
+Sie müssen die [**CDynamicOutputPin::StartUsingOutputPin-Methode**](cdynamicoutputpin-startusingoutputpin.md) aufrufen, bevor Sie diese Methode aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,8 +101,8 @@ Sie müssen die [**cdynamicoutputpin:: startusingoutputpin**](cdynamicoutputpin-
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -110,7 +110,7 @@ Sie müssen die [**cdynamicoutputpin:: startusingoutputpin**](cdynamicoutputpin-
 
 <dl> <dt>
 
-[**Cdynamicoutputpin-Klasse**](cdynamicoutputpin.md)
+[**CDynamicOutputPin-Klasse**](cdynamicoutputpin.md)
 </dt> </dl>
 
  

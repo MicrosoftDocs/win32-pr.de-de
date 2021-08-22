@@ -1,7 +1,7 @@
 ---
-description: Bietet schreibgeschützten Zugriff auf die Eigenschaften der erweiterten Schlüssel Verwendung (Extended Key Usage, EKU) eines Zertifikats.
+description: Bietet schreibgeschützten Zugriff auf die Erweiterten Schlüsselverwendungseigenschaften (Extended Key Usage, EKU) eines Zertifikats.
 ms.assetid: 636d7f65-d286-4800-a576-a23e6e9811b2
-title: Extendedkeyusage-Objekt
+title: ExtendedKeyUsage-Objekt
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,44 +13,44 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 5a93be1f6fe75559d0284ca955ca5b6e9c516eed
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 927e219e22bd0e87c444b1ca3cb63b09a5ddc2fb9ac74e63ebb8f66c6ed75437
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367690"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007318"
 ---
-# <a name="extendedkeyusage-object"></a>Extendedkeyusage-Objekt
+# <a name="extendedkeyusage-object"></a>ExtendedKeyUsage-Objekt
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509EnhancedKeyUsageExtension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509enhancedkeyusageextension?view=netcore-3.1) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace.\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509EnhancedKeyUsageExtension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509enhancedkeyusageextension?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Das **extendedkeyusage** -Objekt bietet schreibgeschützten Zugriff auf die Eigenschaften der erweiterten Schlüssel Verwendung (Extended Key Usage, EKU) eines Zertifikats.
+Das **ExtendedKeyUsage-Objekt** bietet schreibgeschützten Zugriff auf die Eigenschaften der erweiterten Schlüsselverwendung (Extended Key Usage, EKU) eines Zertifikats.
 
 ## <a name="members"></a>Member
 
-Das **extendedkeyusage** -Objekt verfügt über diese Typen von Membern:
+Das **ExtendedKeyUsage-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **extendedkeyusage** -Objekt verfügt über diese Eigenschaften.
+Das **ExtendedKeyUsage-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                     | Zugriffstyp          | BESCHREIBUNG                                                                                                                             |
+| Eigenschaft                                                     | Zugriffstyp          | Beschreibung                                                                                                                             |
 |:-------------------------------------------------------------|:---------------------|:----------------------------------------------------------------------------------------------------------------------------------------|
-| [**EKUs**](extendedkeyusage-ekus.md)<br/>             | Schreibgeschützt<br/> | [**EKUs**](ekus.md) -Sammlung, die die [**EKU**](eku.md) -Objekte für das Zertifikat enthält.<br/>                            |
-| [**IsCritical**](extendedkeyusage-iscritical.md)<br/> | Schreibgeschützt<br/> | Ruft einen **booleschen** Wert ab, der angibt, ob die EKU-Erweiterung als kritisch markiert ist.<br/>                                   |
-| [**IsPresent**](extendedkeyusage-ispresent.md)<br/>   | Schreibgeschützt<br/> | Ruft einen **booleschen** Wert ab, der angibt, ob die EKU-Erweiterung vorhanden ist.<br/> Dies ist die Standard Eigenschaft. <br/> |
+| [**EKUs**](extendedkeyusage-ekus.md)<br/>             | Schreibgeschützt<br/> | [**EKUs-Sammlung,**](ekus.md) die die [**EKU-Objekte**](eku.md) für das Zertifikat enthält.<br/>                            |
+| [**IsCritical**](extendedkeyusage-iscritical.md)<br/> | Schreibgeschützt<br/> | Ruft einen **booleschen Wert ab,** der angibt, ob die EKU-Erweiterung als kritisch markiert ist.<br/>                                   |
+| [**IsPresent**](extendedkeyusage-ispresent.md)<br/>   | Schreibgeschützt<br/> | Ruft einen **booleschen Wert ab,** der angibt, ob die EKU-Erweiterung vorhanden ist.<br/> Dies ist die Standardeigenschaft. <br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **extendedkeyusage** -Objekt kann nicht erstellt werden.
+Das **ExtendedKeyUsage-Objekt** kann nicht erstellt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,12 +60,12 @@ Das **extendedkeyusage** -Objekt kann nicht erstellt werden.
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

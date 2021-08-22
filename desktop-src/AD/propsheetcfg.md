@@ -1,11 +1,11 @@
 ---
-title: Propsheetcfg-Struktur
-description: Wird verwendet, um Eigenschaften Blatt-Konfigurationsdaten zu enthalten.
+title: PROPSHEETCFG-Struktur
+description: Wird verwendet, um Konfigurationsdaten für Eigenschaftenblätter zu enthalten.
 ms.assetid: d3bde744-9d85-4506-894f-f8be3463721f
 ms.tgt_platform: multiple
 keywords:
-- Propsheetcfg-Struktur Active Directory
-- Ppropsheetcfg-Struktur Zeiger Active Directory
+- PROPSHEETCFG-Struktur In Active Directory
+- PPROPSHEETCFG-Strukturzeiger Active Directory
 topic_type:
 - apiref
 api_name:
@@ -15,19 +15,19 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 33f4a1186cc756435cc49ed7c81592385faaee60
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 971296e1e269e977919f142d1efe24426b9c83f19ac26da2e2362ab48da0aa9f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040644"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119025438"
 ---
-# <a name="propsheetcfg-structure"></a>Propsheetcfg-Struktur
+# <a name="propsheetcfg-structure"></a>PROPSHEETCFG-Struktur
 
-Die **propsheetcfg** -Struktur wird verwendet, um Eigenschaften Blatt-Konfigurationsdaten zu enthalten. Diese Struktur ist im " [**cfstr \_ DS \_ propsheetconfig**](cfstr-ds-propsheetconfig.md) "-Zwischenablage Format enthalten.
+Die **PROPSHEETCFG-Struktur** wird verwendet, um Konfigurationsdaten für Eigenschaftenblätter zu enthalten. Diese Struktur ist im [**CFSTR \_ DS \_ PROPSHEETCONFIG-Zwischenablageformat**](cfstr-ds-propsheetconfig.md) enthalten.
 
 > [!Note]  
-> Diese Struktur ist nicht in einer veröffentlichten Header Datei definiert. Um diese Struktur verwenden zu können, müssen Sie Sie im exakten Format definieren.
+> Diese Struktur ist nicht in einer veröffentlichten Headerdatei definiert. Um diese Struktur zu verwenden, müssen Sie sie selbst im genauen formatierten Format definieren.
 
  
 
@@ -49,31 +49,31 @@ typedef struct {
 
 <dl> <dt>
 
-**lnotifyhandle**
+**lNotifyHandle**
 </dt> <dd>
 
-Enthält das Benachrichtigungs handle. Dies ist identisch mit dem Handle, das für den *handle* -Parameter in der [**IExtendPropertySheet2:: deatepropertypages**](/previous-versions/windows/desktop/legacy/aa814847(v=vs.85)) -Methode übergeben wird.
+Enthält das Benachrichtigungshand handle. Dies ist identisch mit dem Handle, das für den *handle-Parameter* in der [**IExtendPropertySheet2::CreatePropertyPages-Methode übergeben**](/previous-versions/windows/desktop/legacy/aa814847(v=vs.85)) wird.
 
 </dd> <dt>
 
-**hwndparametrisheet**
+**hwndParentSheet**
 </dt> <dd>
 
-Enthält das Fenster Handle des übergeordneten Eigenschaften Blatts.
+Enthält das Fensterhand handle des übergeordneten Eigenschaftenblatts.
 
 </dd> <dt>
 
-**hwndhidden**
+**hwndHidden**
 </dt> <dd>
 
 Enthält das Handle des ausgeblendeten Fensters.
 
 </dd> <dt>
 
-**wparamsheetclose**
+**wParamSheetClose**
 </dt> <dd>
 
-Enthält einen von der Anwendung definierten 32-Bit-Wert. Dieser Wert wird an die Anwendung in der *wParam* des [**WM-DSA- \_ Blatts \_ " \_ Close \_ Notify**](wm-dsa-sheet-close-notify.md) Message" zurückgegeben.
+Enthält einen anwendungsdefinierten 32-Bit-Wert. Dieser Wert wird in der *wParam-Datei* der [**WM \_ DSA \_ SHEET CLOSE \_ \_ NOTIFY-Meldung**](wm-dsa-sheet-close-notify.md) an die Anwendung übergeben.
 
 </dd> </dl>
 
@@ -92,10 +92,10 @@ Enthält einen von der Anwendung definierten 32-Bit-Wert. Dieser Wert wird an di
 
 <dl> <dt>
 
-[**cfstr \_ DS \_ propsheetconfig**](cfstr-ds-propsheetconfig.md)
+[**CFSTR \_ DS \_ PROPSHEETCONFIG**](cfstr-ds-propsheetconfig.md)
 </dt> <dt>
 
-[**WM- \_ DSA- \_ Blatt " \_ Schließen \_ "**](wm-dsa-sheet-close-notify.md)
+[**WM \_ DSA \_ SHEET \_ CLOSE \_ NOTIFY**](wm-dsa-sheet-close-notify.md)
 </dt> </dl>
 
  

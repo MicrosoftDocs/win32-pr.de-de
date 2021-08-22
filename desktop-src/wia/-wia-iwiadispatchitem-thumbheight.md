@@ -1,7 +1,7 @@
 ---
-description: Die Höhe des Miniatur Bilds in Pixel. Diese Eigenschaft gibt-1 zurück, wenn dieses Element keine Miniaturansichten unterstützt. Schreibgeschützt.
+description: Die Höhe des Miniaturbilds in Pixel. Diese Eigenschaft gibt -1 zurück, wenn dieses Element keine Miniaturansichten unterstützt. Schreibgeschützt.
 ms.assetid: b9c4815e-42b8-49ab-b067-1fd79593cc5c
-title: Item. thumbheight-Eigenschaft
+title: Item.ThumbHeight-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wiascr.dll
-ms.openlocfilehash: 196f96198abb6abe8c6392a8cdb05c7c8e420cd8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3e1e14d025262e0431d36cf3f185b71c89c8f72f8875e035cfcd51e0b8614734
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527065"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965599"
 ---
-# <a name="itemthumbheight-property"></a>Item. thumbheight-Eigenschaft
+# <a name="itemthumbheight-property"></a>Item.ThumbHeight-Eigenschaft
 
-Die Höhe des Miniatur Bilds in Pixel. Diese Eigenschaft gibt-1 zurück, wenn dieses Element keine Miniaturansichten unterstützt. Schreibgeschützt.
+Die Höhe des Miniaturbilds in Pixel. Diese Eigenschaft gibt -1 zurück, wenn dieses Element keine Miniaturansichten unterstützt. Schreibgeschützt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,7 +37,7 @@ propVal = Item.ThumbHeight
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Variable, die die Höhe der Miniaturansicht empfängt.
+Variable, die die Miniaturansichtshöhe empfängt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Eine Variable, die die Höhe der Miniaturansicht empfängt.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4,90 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 
 
 

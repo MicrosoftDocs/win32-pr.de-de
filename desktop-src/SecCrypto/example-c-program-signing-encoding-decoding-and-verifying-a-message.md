@@ -1,43 +1,43 @@
 ---
-description: Im folgenden Beispiel wird das Signieren und Codieren einer Nachricht und das Decodieren einer signierten Nachricht und die Überprüfung der Signatur kombiniert.
+description: Im folgenden Beispiel werden das Signieren und Codieren einer Nachricht sowie das Decodieren einer signierten Nachricht und das Überprüfen der Signatur kombiniert.
 ms.assetid: 2cad11a8-75ad-4726-a7bb-82870b71c721
-title: 'Beispiel-C-Programm: Signieren, codieren, decodieren und Überprüfen einer Nachricht'
+title: 'C-Beispielprogramm: Signieren, Codieren, Decodieren und Überprüfen einer Nachricht'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 128b4368a75d5f7636394fdf9a3b1b2694f45176
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d8b274c8db1bc36c32616c84c4771d95a144f965effc7a849e77dde9d276950b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752145"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007468"
 ---
-# <a name="example-c-program-signing-encoding-decoding-and-verifying-a-message"></a>Beispiel-C-Programm: Signieren, codieren, decodieren und Überprüfen einer Nachricht
+# <a name="example-c-program-signing-encoding-decoding-and-verifying-a-message"></a>C-Beispielprogramm: Signieren, Codieren, Decodieren und Überprüfen einer Nachricht
 
-Im folgenden Beispiel wird das Signieren und Codieren einer Nachricht und das Decodieren einer signierten Nachricht und die Überprüfung der Signatur kombiniert. Die beiden Vorgänge befinden sich normalerweise in separaten Programmen. Das Codierungs Beispiel erstellt die codierte Nachricht, speichert Sie in einer Datenträger Datei oder auf andere Weise an einen anderen Benutzer. Das Beispiel zum Decodieren würde die codierte Nachricht empfangen, decodieren und die Signatur überprüfen. Die beiden Prozesse wurden hier kombiniert, sodass beide Prozeduren funktionieren.
+Im folgenden Beispiel werden das Signieren und Codieren einer Nachricht sowie das Decodieren einer signierten Nachricht und das Überprüfen der Signatur kombiniert. Die beiden Vorgänge werden in der Regel in separaten Programmen durchgeführt. Im Codierungsbeispiel wird die codierte Nachricht erstellt, in einer Datenträgerdatei gespeichert oder auf andere Weise an einen anderen Benutzer gesendet. Das Decodierungsbeispiel würde die codierte Nachricht empfangen, decodieren und die Signatur überprüfen. Die beiden Prozesse wurden hier kombiniert, um zu zeigen, dass beide Prozeduren funktionieren.
 
-Das Signieren und Codieren einer Nachricht gewährleistet nicht den Datenschutz für diese Nachricht. Stattdessen wird die Authentizität der Nachricht sichergestellt. Da die Nachricht mit dem privaten Schlüssel des Absenders signiert ist und der Empfänger der Nachricht die Signatur mit dem [*öffentlichen Schlüssel*](../secgloss/p-gly.md) des Absenders entschlüsselt (verfügbar über das Zertifikat, das zusammen mit der Nachricht gesendet wird), kann der Empfänger sicher sein, dass die Nachricht von der Person oder Entität gesendet wurde, die dem Zertifikat zugeordnet ist, und dass die Nachricht nach der Signierung nicht geändert wurde.
+Das Signieren und Codieren einer Nachricht stellt keinen Datenschutz für diese Nachricht sicher. Stattdessen wird die Authentizität der Nachricht sichergestellt. Da die Nachricht mit dem privaten Schlüssel des Absenders signiert ist und der Empfänger der Nachricht die Signatur mit dem [*öffentlichen Schlüssel*](../secgloss/p-gly.md) des Absenders entschlüsselt (verfügbar über das Zertifikat, das zusammen mit der Nachricht gesendet wird), kann der Empfänger sicher sein, dass die Nachricht von der Person oder Entität gesendet wurde, die dem Zertifikat zugeordnet ist, und dass die Nachricht nach dem Signieren nicht geändert wurde.
 
-In diesem Beispiel werden die folgenden Aufgaben und kryptoapi-Funktionen zum Codieren einer Nachricht veranschaulicht:
+In diesem Beispiel werden die folgenden Aufgaben und CryptoAPI-Funktionen zum Codieren einer Nachricht veranschaulicht:
 
--   Öffnen eines Zertifikat Speicher mithilfe von " [**certopeinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore)".
--   Abrufen eines Zertifikats mit einem bestimmten Antragsteller Namen unter Verwendung von [**certfindcertifikateinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore).
--   Der Antragsteller Name eines Zertifikats wird mithilfe von [**certgetnamestring**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa)abgerufen und gedruckt.
--   Initialisieren einer [**crypt \_ - \_ Zeichen \_**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_sign_message_para) Struktur, die in einem Rückruf von " [**cryptsignmessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsignmessage)" verwendet werden soll.
--   Signieren und Codieren einer Nachricht mit " [**cryptsignmessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsignmessage)".
+-   Öffnen eines Zertifikatspeichers mit [**CertOpenStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore).
+-   Abrufen eines Zertifikats mit einem bestimmten Antragstellernamen mithilfe von [**CertFindCertificateInStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore).
+-   Abrufen und Drucken des Antragstellernamens eines Zertifikats mithilfe von [**CertGetNameString.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa)
+-   Initialisieren einer [**CRYPT \_ SIGN MESSAGE \_ \_ PARA-Struktur,**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_sign_message_para) die in einem Aufruf von [**CryptSignMessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsignmessage)verwendet werden soll.
+-   Signieren und Codieren einer Nachricht mit [**CryptSignMessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsignmessage).
 
-In diesem Beispiel werden die folgenden Aufgaben und kryptoapi-Funktionen zum Decodieren einer Nachricht und Überprüfen der Signatur veranschaulicht:
+In diesem Beispiel werden die folgenden Aufgaben und CryptoAPI-Funktionen zum Decodieren einer Nachricht und Überprüfen der Signatur veranschaulicht:
 
--   Öffnen einer Meldung zum [**decodieren mit cryptmsgopentodecode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentodecode).
--   Das codierte [*BLOB*](../secgloss/b-gly.md) wird der Nachricht hinzugefügt, die mithilfe von [**cryptmsgupdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate)decodiert werden soll.
--   Decodieren der Nachricht mithilfe von [**cryptmsggetparam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsggetparam).
--   Öffnen eines Zertifikat Speichers im Speicher mit [**certopeinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore) unter Verwendung der empfangenen und decodierten Nachricht.
--   Das Zertifikat des Signatur Gebers der Nachricht wird mithilfe von [**certgetsubjetcertificefromstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetsubjectcertificatefromstore) abgerufen.
--   Überprüfen der Signatur einer Nachricht mithilfe von [**cryptmsgcontrol**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgcontrol).
--   Freigeben von Arbeitsspeicher, schließen von [*Zertifikat speichern*](../secgloss/c-gly.md)und Freigeben von [*Zertifikat Kontext*](../secgloss/c-gly.md).
+-   Öffnen einer Nachricht für die Decodierung mit [**CryptMsgOpenToDecode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentodecode).
+-   Hinzufügen des codierten [*BLOB*](../secgloss/b-gly.md) zur nachricht, die mit [**CryptMsgUpdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate)decodiert werden soll.
+-   Decodieren der Nachricht mithilfe von [**CryptMsgGetParam.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsggetparam)
+-   Öffnen eines Zertifikatspeichers im Arbeitsspeicher mit [**CertOpenStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore) unter Verwendung der empfangenen und decodierten Nachricht.
+-   Verwenden sie [**CertGetSubjectCertificateFromStore,**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetsubjectcertificatefromstore) um das Zertifikat des Signierers der Nachricht abzurufen.
+-   Überprüfen der Signatur einer Nachricht mithilfe von [**CryptMsgControl**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgcontrol).
+-   Freigeben von Arbeitsspeicher, Schließen von [*Zertifikatspeichern*](../secgloss/c-gly.md)und Freigeben des [*Zertifikatkontexts.*](../secgloss/c-gly.md)
 
-Ein Beispiel für die Durchführung dieser ähnlichen Vorgänge mithilfe eines streamrückrufs finden Sie unter [Beispiel C-Programm: Codieren und Decodieren einer Nachricht mithilfe eines Streams](example-c-program--encoding-and-decoding-a-message-using-a-stream.md).
+Ein Beispiel für das Ausführen dieser ähnlichen Vorgänge mithilfe eines Streamrückrufs finden Sie unter [Beispiel C-Programm: Codieren und Decodieren einer Nachricht mithilfe eines Streams.](example-c-program--encoding-and-decoding-a-message-using-a-stream.md)
 
-In diesem Beispiel wird die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist im Beispiel enthalten. Der Code für diese und andere Hilfsfunktionen wird auch unter [allgemeine \_ \_ Funktionen](general-purpose-functions.md)aufgeführt.
+In diesem Beispiel wird die Funktion [**MyHandleError verwendet.**](myhandleerror.md) Code für diese Funktion ist im Beispiel enthalten. Code für diese und andere Hilfsfunktionen ist auch unter [Allgemeine \_ \_ Funktionen](general-purpose-functions.md)aufgeführt.
 
 
 ```C++

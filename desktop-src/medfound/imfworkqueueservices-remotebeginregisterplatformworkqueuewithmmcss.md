@@ -1,19 +1,19 @@
 ---
-description: 'Remotable-Version der imfworkqueueservices:: beginregisterplatformworkqueuewithmmcss-Methode.'
+description: Remotable version of theNSGEWORKQueueServices::BeginRegisterPlatformWorkQueueWithMMCSS method.
 ms.assetid: 158497a9-9d66-4e58-919d-e35765fd29e4
-title: Remotebeginregisterplatformworkqueuewithmmcss (mfobjects. h)
+title: RemoteBeginRegisterPlatformWorkQueueWithMMCSS (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c7009def4e86a97720bc4b94eb2c9edb477afe0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b19d163e8f3e34a9d4b0eca70f70c15442f683450319243e80f3842548f78d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868035"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974279"
 ---
-# <a name="remotebeginregisterplatformworkqueuewithmmcss"></a>Remotebeginregisterplatformworkqueuewithmmcss
+# <a name="remotebeginregisterplatformworkqueuewithmmcss"></a>RemoteBeginRegisterPlatformWorkQueueWithMMCSS
 
-Remotable-Version der [**imfworkqueueservices:: beginregisterplatformworkqueuewithmmcss**](/windows/desktop/api/mfidl/nf-mfidl-imfworkqueueservices-beginregisterplatformworkqueuewithmmcss) -Methode.
+Remotable version of [**theNSGEWORKQueueServices::BeginRegisterPlatformWorkQueueWithMMCSS**](/windows/desktop/api/mfidl/nf-mfidl-imfworkqueueservices-beginregisterplatformworkqueuewithmmcss) method.
 
 ``` syntax
 [call_as(BeginRegisterPlatformWorkQueueWithMMCSS)]
@@ -25,9 +25,9 @@ HRESULT RemoteBeginRegisterPlatformWorkQueueWithMMCSS(
 );
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen können diese Methode nicht direkt aufzurufen, und-Objekte implementieren diese Methode nicht. Die-Methode wird nicht in der vtable für die-Schnittstelle angezeigt. Wenn [**beginregisterplatformworkqueuewithmmcss**](/windows/desktop/api/mfidl/nf-mfidl-imfworkqueueservices-beginregisterplatformworkqueuewithmmcss) über Prozess Grenzen hinweg aufgerufen wird, übersetzt der Media Foundation Proxy/Stub-DLL den Aufruf in einen Aufruf der Remote Methode und übersetzt ihn anschließend wieder.
+Anwendungen können diese Methode nicht direkt aufrufen, und Objekte implementieren diese Methode nicht. Die -Methode wird nicht in der vtable für die -Schnittstelle angezeigt. Wenn [**BeginRegisterPlatformWorkQueueWithMMCSS**](/windows/desktop/api/mfidl/nf-mfidl-imfworkqueueservices-beginregisterplatformworkqueuewithmmcss) prozessübergreifend aufgerufen wird, übersetzt die Media Foundation-Proxy-/Stub-DLL den Aufruf in einen Aufruf der Remotemethode und übersetzt ihn dann zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,10 +35,10 @@ Anwendungen können diese Methode nicht direkt aufzurufen, und-Objekte implement
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Mfuuid. lib</dt> </dl>                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Mfuuid.lib</dt> </dl>                    |
 
 
 
@@ -46,7 +46,7 @@ Anwendungen können diese Methode nicht direkt aufzurufen, und-Objekte implement
 
 <dl> <dt>
 
-[**IMF workqueueservices**](/windows/desktop/api/mfidl/nn-mfidl-imfworkqueueservices)
+[**BEARBEITUNGQueueServices**](/windows/desktop/api/mfidl/nn-mfidl-imfworkqueueservices)
 </dt> </dl>
 
  

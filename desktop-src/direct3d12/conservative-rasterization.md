@@ -1,223 +1,223 @@
 ---
-title: Direct3D 12 konservative rasterisierung
-description: Die konservative rasterisierung sorgt für ein gewisses Maß an Sicherheit für das Pixel Rendering. Dies ist insbesondere bei Algorithmen zum Erkennen von Kollisionen hilfreich.
+title: Direct3D 12 Konservative Rasterung
+description: Die konservative Rasterung bietet eine gewisse Sicherheit beim Pixelrendering, was insbesondere für Algorithmen zur Kollisionserkennung hilfreich ist.
 ms.assetid: 081199AD-1702-4EC8-95AD-B1148C676199
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e4fae3489d54ab7b6b7abfda56f54dd8d970962
-ms.sourcegitcommit: cba7f424a292fd7f3a8518947b9466439b455419
+ms.openlocfilehash: 15bb5893e944c5d495cf91fdb334bd6ab5f755b7f1e200648242cb46b281f695
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "104548755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119045763"
 ---
-# <a name="direct3d-12-conservative-rasterization"></a>Direct3D 12 konservative rasterisierung
+# <a name="direct3d-12-conservative-rasterization"></a>Direct3D 12 Konservative Rasterung
 
-Die konservative rasterisierung sorgt für ein gewisses Maß an Sicherheit für das Pixel Rendering. Dies ist insbesondere bei Algorithmen zum Erkennen von Kollisionen hilfreich.
+Die konservative Rasterung bietet eine gewisse Sicherheit beim Pixelrendering, was insbesondere für Algorithmen zur Kollisionserkennung hilfreich ist.
 
 -   [Übersicht](#overview)
 -   [Interaktionen mit der Pipeline](#interactions-with-the-pipeline)
-    -   [Interaktion von rasterisierungsregeln](#rasterization-rules-interaction)
-    -   [Multisampling-Interaktion](#multisampling-interaction)
-    -   [Samplemask-Interaktion](#samplemask-interaction)
-    -   [Interaktion mit tiefen/Schablone testen](#depthstencil-test-interaction)
-    -   [Hilfspixel Interaktion](#helper-pixel-interaction)
-    -   [Interaktion bei der Ausgabe Abdeckung](#output-coverage-interaction)
-    -   [Inputcoverage-Interaktion](#inputcoverage-interaction)
-    -   [Innercoverage-Interaktion](#innercoverage-interaction)
-    -   [Interaktion mit Attribut Interpolations](#attribute-interpolation-interaction)
-    -   [Clipping-Interaktion](#clipping-interaction)
-    -   [Interaktion bei Clip Distanz](#clip-distance-interaction)
-    -   [Ziel unabhängige rasterisierungsinteraktion](#target-independent-rasterization-interaction)
-    -   [Interaktion mit primitiver Topologie](#ia-primitive-topology-interaction)
-    -   [Abfrage Interaktion](#query-interaction)
-    -   [Interaktionsinteraktion](#cull-state-interaction)
-    -   [Isfrontface-Interaktion](#isfrontface-interaction)
-    -   [Interaktion mit Füll Modi](#fill-modes-interaction)
--   [Implementierungsdetails](#implementation-details)
+    -   [Interaktion mit Rasterungsregeln](#rasterization-rules-interaction)
+    -   [Multisamplinginteraktion](#multisampling-interaction)
+    -   [SampleMask-Interaktion](#samplemask-interaction)
+    -   [Tiefen-/Schablonen-Testinteraktion](#depthstencil-test-interaction)
+    -   [Pixelinteraktion des Hilfselements](#helper-pixel-interaction)
+    -   [Ausgabeabdeckungsinteraktion](#output-coverage-interaction)
+    -   [InputCoverage-Interaktion](#inputcoverage-interaction)
+    -   [InnerCoverage-Interaktion](#innercoverage-interaction)
+    -   [Attributinterpolationsinteraktion](#attribute-interpolation-interaction)
+    -   [Clippinginteraktion](#clipping-interaction)
+    -   [Clip Distance-Interaktion](#clip-distance-interaction)
+    -   [Interaktion mit unabhängiger Rasterung als Ziel](#target-independent-rasterization-interaction)
+    -   [IA Primitive Topologieinteraktion](#ia-primitive-topology-interaction)
+    -   [Abfrageinteraktion](#query-interaction)
+    -   [Cull-Zustandsinteraktion](#cull-state-interaction)
+    -   [IsFrontFace-Interaktion](#isfrontface-interaction)
+    -   [Interaktion mit Füllmodi](#fill-modes-interaction)
+-   [Details zur Implementierung](#implementation-details)
 -   [API-Zusammenfassung](#api-summary)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
-## <a name="overview"></a>Überblick
+## <a name="overview"></a>Übersicht
 
-Die konservative rasterisierung bedeutet, dass alle Pixel, die zumindest teilweise von einem gerenderten primitiven abgedeckt werden, rasterisiert sind. Dies bedeutet, dass der Pixelshader aufgerufen wird. Normales Verhalten ist die Stichprobenentnahme, die nicht verwendet wird, wenn die konservative rasterisierung aktiviert ist.
+Die konservative Rasterung bedeutet, dass alle Pixel, die mindestens teilweise von einem gerenderten Primitiven abgedeckt werden, gerastert werden, was bedeutet, dass der Pixelshader aufgerufen wird. Das normale Verhalten ist die Stichprobenentnahme, die nicht verwendet wird, wenn die konservative Rasterung aktiviert ist.
 
-Die konservative rasterisierung ist in einer Reihe von Situationen nützlich, einschließlich der Sicherheit bei der Konflikterkennung, der Okklusions Erkennung und des gekachelten Rendering.
+Die konservative Rasterung ist in einer Reihe von Situationen nützlich, z. B. zur Sicherheit bei der Kollisionserkennung, verdeckungs-culling und kachelntem Rendering.
 
-Die folgende Abbildung zeigt z. b. ein grünes Dreieck, das mit konservativer rasterisierung gerendert wird, wie es im Raster (mit 16,8-Scheitelpunkt Koordinaten mit festem Punkt) angezeigt würde. Der braune Bereich wird als "Ungewissheit-Region" bezeichnet. Dies ist ein konzeptioneller Bereich, der die erweiterten Begrenzungen des Dreiecks darstellt. Dies ist erforderlich, um sicherzustellen, dass der primitive im Raster in Bezug auf die ursprünglichen Gleit Komma Koordinaten des Vertex konservativ ist. Die roten Quadrate in den einzelnen Scheitel Punkten zeigen, wie der unsicher-Bereich berechnet wird: als ein gesweep Quadrat.
+Die folgende Abbildung zeigt beispielsweise ein grünes Dreieck, das mithilfe der konservativen Rasterung gerendert wird, wie es im Rasterizer angezeigt wird (d.h. mit 16,8 Scheitelpunktkoordinaten mit festem Punkt). Der browne Bereich wird als "Unsicherkeitsregion" bezeichnet– ein konzeptioneller Bereich, der die erweiterten Begrenzungen des Dreiecks darstellt, der erforderlich ist, um sicherzustellen, dass der Primitive im Rasterizer hinsichtlich der ursprünglichen Gleitkomma-Scheitelpunktkoordinaten konservativer ist. Die roten Quadrate an jedem Scheitelpunkt zeigen, wie der Unsicherheitsbereich berechnet wird: als ausgeweetetes Quadrat.
 
-Die großen grauen Quadrate zeigen die Pixel an, die gerendert werden. In den rosa Quadraten werden Pixel angezeigt, die mit der "Top-Left"-Regel gerendert werden. diese wird wiedergegeben, wenn der Rand des Dreiecks den Rand der Pixel überschreitet. Es können falsch positive Ergebnisse (Pixel festgelegt werden, die nicht vorhanden sein sollten) sein, die das System normalerweise aber nicht immer umschlägt.
+Die großen grauen Quadrate zeigen die Pixel an, die gerendert werden. Die rosa quadratischen Quadrate zeigen Pixel, die mithilfe der "Regel oben links" gerendert werden, die ins Spiel kommt, wenn der Rand des Dreiecks den Rand der Pixel überschreitet. Es können falsch positive Ergebnisse (Pixel festgelegt, die nicht vorhanden sein sollten) vorhanden sein, die das System normalerweise, aber nicht immer mit Cull aufweist.
 
-![die linke obere Regel](images/conservative-rasterization-0.png)
+![Die Regel oben links](images/conservative-rasterization-0.png)
 
 ## <a name="interactions-with-the-pipeline"></a>Interaktionen mit der Pipeline
 
-### <a name="rasterization-rules-interaction"></a>Interaktion von rasterisierungsregeln
+### <a name="rasterization-rules-interaction"></a>Interaktion mit Rasterungsregeln
 
-Im konservativen rasterisierungsmodus gelten rasterisierungsregeln genauso wie, wenn der konservative rasterisierungsmodus nicht mit Ausnahmen für die Top-Left Regel, wie oben beschrieben, und Pixel Abdeckung aktiviert ist. 16,8 Fixed-Point Genauigkeit für den Rasterizer muss verwendet werden.
+Im konservativen Rasterungsmodus gelten Rasterungsregeln auf die gleiche Weise wie, wenn der konservative Rasterungsmodus nicht aktiviert ist, mit Ausnahmen für die oben beschriebene Top-Left-Regel und Pixelabdeckung. 16.8 Fixed-Point Rasterizer-Genauigkeit muss verwendet werden.
 
-Pixel, die nicht abgedeckt werden, wenn die Hardware vollständige Gleit Komma Koordinaten verwendet, kann nur eingeschlossen werden, wenn Sie sich innerhalb eines unsicheren Bereichs befinden, der nicht größer als ein Pixel in der fest Komma Domäne ist. Zukünftige Hardware geht davon aus, dass die in Ebene 2 angegebene verschärfte Unsicherheit erreicht werden soll. Beachten Sie, dass diese Anforderung verhindert, dass Farbname Dreiecke weiter als erforderlich erweitert werden.
+Pixel, die nicht abgedeckt würden, wenn Hardware vollständige Gleitkomma-Scheitelpunktkoordinaten verwendet, können nur eingeschlossen werden, wenn sie sich innerhalb eines Unsicherheitsbereichs befinden, der nicht größer als ein halbes Pixel in der Festkommadomäne ist. Es wird erwartet, dass zukünftige Hardware die in Ebene 2 angegebene region mit verstärkter Unsicherheit erreicht. Beachten Sie, dass diese Anforderung verhindert, dass sich sliver Dreiecke weiter als nötig erweitern.
 
-Ein ähnlicher gültiger Bereich für Ungewissheit gilt `InnerCoverage` auch für, aber es ist strenger, da keine Implementierungen in diesem Fall einen größeren unsicheren Bereich erfordern. Weitere Details finden Sie unter [innercoverage-Interaktion](#innercoverage-interaction) .
+Eine ähnliche gültige Unsicherheitsregion gilt auch für `InnerCoverage` , aber sie ist enger, da keine Implementierungen in diesem Fall eine größere Unsicherheitsregion erfordern. Weitere Informationen finden Sie unter [Interaktion mit InnerCoverage.](#innercoverage-interaction)
 
-Innere und äußere Ungleichheits Bereiche müssen größer oder gleich der Größe der Hälfte des unter-Pixel-Rasters oder 1/512 eines Pixels in der Fixed-Point-Domäne sein. Dies ist der minimale gültige unsicherungsbereich. 1/512 stammt aus der Koordinaten Darstellung von 16,8 Fixed Point Rasterizer und der roundTo-Next-Regel, die angewendet wird, wenn Gleit Komma-Scheitelpunkt Koordinaten in 16,8 festgelegte Punkt Koordinaten umgeschrieben werden. 1/512 kann sich ändern, wenn die Genauigkeit des Rasterizers geändert wird. Wenn eine Implementierung diesen minimalen unsicheren Bereich implementiert, müssen Sie der Top-Left Regel folgen, wenn ein Rand oder eine Ecke des unsicheren Bereichs an der Kante oder Ecke eines Pixels liegt. Die ausgeschnittenen Kanten des unsicheren Bereichs sollten als nächster Scheitelpunkt behandelt werden, was bedeutet, dass Sie als zwei Ränder gezählt werden: die beiden, die am zugeordneten Scheitelpunkt beitreten. Top-Left Regel ist erforderlich, wenn der Bereich für die minimale Ungewissheit verwendet wird. ist dies nicht der Fall, würde eine konservative rasterization-Implementierung die Pixel, die abgedeckt werden können, wenn der konservative rasterisierungsmodus deaktiviert ist, nicht Rasterisieren.
+Innere und äußere Unsicherkeitsregionen müssen größer oder gleich der Größe der Hälfte des Subpixelrasters oder 1/512 eines Pixels in der Festkommadomäne sein. Dies ist die mindestens gültige Unsicherheitsregion. 1/512 stammt aus der Rasterizer-Koordinatendarstellung mit 16,8 festem Punkt und der Regel für die Rundung auf die nächste, die beim Konvertieren von Gleitkomma-Scheitelpunktkoordinaten in 16,8 Festpunktkoordinaten angewendet wird. 1/512 kann sich ändern, wenn sich die Genauigkeit des Rasterizers ändert. Wenn eine Implementierung diesen Minimalunsicherheitsbereich implementiert, müssen sie der Top-Left Regel folgen, wenn ein Rand oder eine Ecke des Unsicherheitsbereichs entlang der Kante oder Ecke eines Pixels fällt. Die abgeschnittenen Ränder des Unsicherkeitsbereichs sollten als der nächste Scheitelpunkt behandelt werden, was bedeutet, dass sie als zwei Kanten gezählt werden: die beiden, die am zugeordneten Scheitelpunkt verknüpft sind. Top-Left Regel ist erforderlich, wenn der Mindestunsicherheitsbereich verwendet wird. Wenn dies nicht der Fall ist, kann eine konservative Rasterungsimplementierung keine Pixel rastern, die abgedeckt werden könnten, wenn der konservative Rasterungsmodus deaktiviert ist.
 
-Im folgenden Diagramm wird ein gültiger äußerer unsicher dargestellt, der durch das Durchlaufen eines Quadrats um die Ränder des primitiven in der Fixed-Point-Domäne erzeugt wird (d. h., die Scheitel Punkte wurden mit der 16,8-fest Komma Darstellung quantifisiert). Die Abmessungen dieses Quadrats basieren auf der gültigen Regions Größe für äußere Ungewissheit: für 1/2 eines Pixels beträgt das Quadrat 1 Pixel in Breite und Höhe, bei 1/512 eines Pixels ist das Quadrat 1/256 eines Pixels in Breite und Höhe. Das grüne Dreieck stellt ein bestimmtes primitiv dar, die rote gepunktete Linie stellt die Grenze für die überschätzte konservative rasterisierung dar, die schwarzen Quadrate stellen das Quadrat dar, das entlang der primitiven Ränder gezogen wird, und der blaue aktivierte Bereich ist der äußere unsicher-Bereich:
+Das folgende Diagramm veranschaulicht einen gültigen äußeren Unsicherkeitsbereich, der entsteht, indem ein Quadrat um die Ränder des Primitivs in der Festkommadomäne geleert wird (d. h. die Scheitelpunkte wurden durch die 16,8-Fixpunktdarstellung quantisiert). Die Abmessungen dieses Quadrats basieren auf der gültigen Größe des äußeren Unsicherkeitsbereichs: Für 1/2 eines Pixels ist das Quadrat 1 Pixel breite und höhe, für 1/512 pixel beträgt das Quadrat 1/256 eines Pixels in Breite und Höhe. Das grüne Dreieck stellt ein bestimmtes Primitiv dar, die rote gepunktete Linie stellt die Grenze an der überschätzten konservativen Rasterung dar, die soliden schwarzen Quadrate stellen das Quadrat dar, das entlang der primitiven Ränder gekehrt wird, und der blaue markierte Bereich ist der äußere Unsicherkeitsbereich:
 
-![äußerer unsicheren Bereich.](images/outercoverage.jpg)
+![äußerer Unsicherheitsbereich.](images/outercoverage.jpg)
 
-### <a name="multisampling-interaction"></a>Multisampling-Interaktion
+### <a name="multisampling-interaction"></a>Multisamplinginteraktion
 
-Unabhängig von der Anzahl von Beispielen in **renderTarget** / **depthstencil** -Oberflächen (bzw. unabhängig davon, ob *forcedsamplecount* verwendet wird oder nicht) werden alle Beispiele für Pixel behandelt, die durch die konservative rasterisierung gerengt werden. Einzelne Beispiel Speicherorte werden nicht darauf getestet, ob Sie in den primitiven oder nicht.
+Unabhängig von der Anzahl der Stichproben in **RenderTarget** / **DepthStencil-Oberflächen** (oder ob *ForcedSampleCount* verwendet wird oder nicht), werden alle Stichproben für Pixel abgedeckt, die durch konservative Rasterung gerastet werden. Einzelne Beispielspeicherorte werden nicht getestet, ob sie in den Primitiven fallen oder nicht.
 
-### <a name="samplemask-interaction"></a>Samplemask-Interaktion
+### <a name="samplemask-interaction"></a>SampleMask-Interaktion
 
-Der Zustand des *samplemask* -Rasterizers wird auf dieselbe Weise angewendet, als wenn die konservative rasterisierung nicht aktiviert ist `InputCoverage` , aber keine Auswirkung hat `InnerCoverage` (d. h. er wird nicht in eine mit deklarierte Eingabe umgewandelt `InnerCoverage` ). Dies liegt daran, `InnerCoverage` dass nicht mit der Maskierung von MSAA-Beispielen in Beziehung steht: "0" `InnerCoverage` bedeutet nur, dass das Pixel nicht vollständig abgedeckt ist und keine Beispiele aktualisiert werden.
+Der *SampleMask-Rasterizerstatus* gilt auf die gleiche Weise wie , wenn die konservative Rasterung für nicht aktiviert `InputCoverage` ist, aber keine Auswirkungen hat `InnerCoverage` (d. h. es wird nicht AND in eine Eingabe eingegeben, die mit deklariert `InnerCoverage` wurde). Dies `InnerCoverage` liegt daran, dass nicht mit der Maskierung von MSAA-Stichproben zusammenhängt: 0 `InnerCoverage` bedeutet nur, dass das Pixel nicht garantiert vollständig abgedeckt ist, und nicht, dass keine Stichproben aktualisiert werden.
 
-### <a name="depthstencil-test-interaction"></a>Interaktion mit tiefen/Schablone testen
+### <a name="depthstencil-test-interaction"></a>Tiefen-/Schablonen-Testinteraktion
 
-Das Testen der Tiefe/Schablone verläuft für ein konservatives rasterisiertes Pixel auf dieselbe Weise, als wenn alle Stichproben behandelt werden, wenn die konservative rasterisierung nicht aktiviert ist.
+Tiefen-/Schablonentests werden für ein konservatives rasterisiertes Pixel auf die gleiche Weise fortgesetzt, als wären alle Stichproben abgedeckt, wenn die konservative Rasterung nicht aktiviert ist.
 
-Wenn Sie mit allen behandelten Beispielen fortfahren, kann dies zu einer tiefen Extrapolierung führen, die gültig ist und wie angegeben an den Viewport gebunden werden muss, wenn die konservative rasterisierung nicht aktiviert ist. Dies ist vergleichbar mit der Verwendung von Pixelfrequenz-Interpolations Modi für ein **renderTarget** mit einer Stichproben Anzahl von mehr als 1. im Fall von konservativer rasterisierung ist es jedoch der tiefen Wert, der in den tiefen Test für die festgelegte Funktion geht, der extrapoliert werden kann.
+Wenn Sie mit allen behandelten Beispielen fortfahren, kann dies zu einer Tiefen extrapolation führen, die gültig ist und wie angegeben an den Viewport angepasst werden muss, wenn die konservative Rasterung nicht aktiviert ist. Dies ähnelt der Verwendung von Pixelfrequenzinterpolationsmodi auf einem **RenderTarget** mit einer Stichprobenanzahl größer als 1. Im Fall der konservativen Rasterung ist es jedoch der Tiefenwert, der in den festen Funktionstiefetest geht, der extrapoliert werden kann.
 
-Das frühe tiefen kulationsverhalten bei tiefen extrapolierungsverhalten ist nicht definiert. Dies ist darauf zurückzuführen, dass einige frühesnapskationshardware die extrapolierten tiefen Werte nicht unterstützen kann Allerdings ist das frühe Verhalten bei der Tiefe der tiefen extrapolierungsverhalten auch bei Hardware, die extrapolierte tiefen Werte unterstützen kann, problematisch. Dieses Problem kann umgangen werden, indem die Pixel-Shader-Eingabe Tiefe auf die minimalen und maximalen tiefen Werte des primitiven, das gerachtelert wird, und das Schreiben dieses Werts in `oDepth` (das Pixel-Shader-Ausgabe tiefen Register) geklammert wird. Zum Deaktivieren der frühen tiefen Erstellung in diesem Fall sind Implementierungen aufgrund des Schreibzugriffs erforderlich `oDepth` .
+Early Depth culling behavior with Depth Extrapolation is undefined( Early Depth culling behavior with Depth Extrapolation is undefined. Dies liegt daran, dass einige Hardware für die Frühzeitige Tiefenkeulung extrapolierte Tiefenwerte nicht ordnungsgemäß unterstützen kann. Das Verhalten der frühen Tiefenkeulierung bei der Tiefen extrapolation ist jedoch selbst bei Hardware problematisch, die extrapolierte Tiefenwerte unterstützen kann. Dieses Problem kann behoben werden, indem die Pixel-Shader-Eingabetiefe an die Minimal- und Höchstwerte des Primitiven gebunden wird, der gerastt wird, und diesen Wert in `oDepth` schreibt (das Pixel-Shader-Ausgabetieferegister). Implementierungen sind erforderlich, um early depth culling in diesem Fall aufgrund des `oDepth` Schreibzugriffs zu deaktivieren.
 
-### <a name="helper-pixel-interaction"></a>Hilfspixel Interaktion
+### <a name="helper-pixel-interaction"></a>Pixelinteraktion des Hilfselements
 
-Hilfspixel Regeln gelten genauso wie bei nicht aktivierter konservativer rasterisierung. Im Rahmen dieser Angabe müssen alle Pixel, einschließlich `InputCoverage` der Hilfsskripts, genau wie im `InputCoverage` Interaktions Abschnitt angegeben Berichten. Die Abdeckung für vollständig nicht abgedeckte Pixel Report 0.
+Hilfspixelregeln gelten auf die gleiche Weise wie bei nicht aktivierter konservativer Rasterung. Im Rahmen dieses Abschnitts müssen alle Pixel, einschließlich Der Hilfspixel, `InputCoverage` genau wie im Interaktionsabschnitt angegeben angezeigt `InputCoverage` werden. Daher melden vollständig nicht abgedeckte Pixel eine Abdeckung von 0.
 
-### <a name="output-coverage-interaction"></a>Interaktion bei der Ausgabe Abdeckung
+### <a name="output-coverage-interaction"></a>Ausgabeabdeckungsinteraktion
 
-Die Ausgabe Abdeckung ( `oMask` ) verhält sich für ein konrechtes geändertes Pixel, wie dies geschieht, wenn die konservative rasterisierung nicht mit allen behandelten Beispielen aktiviert ist.
+Die Ausgabeabdeckung `oMask` () verhält sich für ein konservatives rasterisiertes Pixel, wie dies der Fall ist, wenn die konservative Rasterung nicht mit allen behandelten Stichproben aktiviert ist.
 
-### <a name="inputcoverage-interaction"></a>Inputcoverage-Interaktion
+### <a name="inputcoverage-interaction"></a>InputCoverage-Interaktion
 
-Im Modus für die konservative rasterisierung wird dieses Eingabe Register aufgefüllt, als ob alle Stichproben abgedeckt werden, wenn die konservative rasterisierung nicht für ein bestimmtes, Geheimnis geändertes Pixel aktiviert ist. Das heißt, dass alle vorhandenen Interaktionen zutreffen (z. b. *samplemask* ), und die ersten n-Bits in `InputCoverage` aus dem lsb werden für ein Modell mit einer geheimnisvollen Schleife auf 1 festgelegt. dabei wird ein n-Beispiel pro Pixel **renderTarget** und/oder **depthstencil** -Puffer, das bei der **Ausgabe** Zusammenführung gebunden ist, bzw Der Rest der Bits ist 0 (null).
+Im konservativen Rasterungsmodus wird dieses Eingaberegister aufgefüllt, als ob alle Stichproben abgedeckt wären, wenn die konservative Rasterung für ein bestimmtes konservatives Rasterpixel nicht aktiviert ist. Das heißt, alle vorhandenen Interaktionen gelten (z.B. *SampleMask* wird angewendet), und die ersten n Bits `InputCoverage` aus dem LSB werden für ein konservatives Rasterpixel auf 1 festgelegt, wenn eine n Stichprobe pro Pixel **renderTarget** und/oder **der DepthStencil-Puffer** an der **Ausgabezusammenführung** gebunden ist, oder ein n Sample *ForcedSampleCount*. Die restlichen Bits sind 0.
 
-Diese Eingabe ist unabhängig von der Verwendung der konservativen rasterisierung in einem Shader verfügbar, obwohl die konservative rasterisierung das Verhalten ändert, sodass nur alle Abtastungen angezeigt werden (oder keine für hilfspixel).
+Diese Eingabe ist in einem Shader verfügbar, unabhängig von der Verwendung der konservativen Rasterung, obwohl die konservative Rasterung ihr Verhalten so ändert, dass nur alle abgedeckten Stichproben (oder keine für Hilfspixel) angezeigt werden.
 
-### <a name="innercoverage-interaction"></a>Innercoverage-Interaktion
+### <a name="innercoverage-interaction"></a>InnerCoverage-Interaktion
 
-Diese Funktion ist für und nur in, Ebene 3, erforderlich. Die Laufzeit schlägt die Shader-Erstellung für Shader fehl, die diesen Modus verwenden, wenn eine Implementierung eine Ebene unterstützt, die kleiner als Ebene 3 ist.
+Dieses Feature ist für Ebene 3 erforderlich und nur in verfügbar. Die Laufzeit schlägt bei der Shadererstellung für Shader fehl, die diesen Modus verwenden, wenn eine Implementierung eine Ebene kleiner als Ebene 3 unterstützt.
 
-Der Pixelshader verfügt über einen 32-Bit-Skalarwert für einen Skalarwert mit skalarem System `InnerCoverage` . Dabei handelt es sich um ein Bitfeld, das Bit 0 vom lsb auf 1 festgelegt ist, und zwar nur dann, wenn das Pixel sicher vollständig innerhalb des aktuellen primitiven liegt. Alle anderen Eingabe Register Bits müssen auf 0 festgelegt werden, wenn Bit 0 nicht festgelegt ist. Sie sind jedoch nicht definiert, wenn Bit 0 auf 1 festgelegt ist (im Grunde stellt dieses Bitfeld einen booleschen Wert dar, bei dem false genau 0 sein muss. true kann jedoch ein beliebiger Wert (d. h. Bit 0 Set) sein, der ungleich NULL ist. Diese Eingabe wird für unterschätzte konservative rasterisierungsinformationen verwendet. Er informiert den Pixelshader darüber, ob das aktuelle Pixel vollständig innerhalb der Geometrie liegt.
+Der Pixelshader verfügt über eine 32-Bit-Skalarzahl vom Typ System Generate Value ( Systemgenerierungswert): `InnerCoverage` . Dies ist ein Bitfeld, bei dem Bit 0 vom LSB für ein bestimmtes konservatives Rasterpixel auf 1 festgelegt ist, nur wenn dieses Pixel garantiert vollständig innerhalb des aktuellen Primitiven liegt. Alle anderen Eingaberegisterbits müssen auf 0 festgelegt werden, wenn Bit 0 nicht festgelegt ist, aber nicht definiert sind, wenn Bit 0 auf 1 festgelegt ist (im Wesentlichen stellt dieses Bitfeld einen booleschen Wert dar, wobei false genau 0 sein muss, true kann jedoch ein ungerader Wert (d. h. bit 0 set) ungleich 0 sein). Diese Eingabe wird für geschätzte konservative Rasterungsinformationen verwendet. Sie informiert den Pixelshader darüber, ob das aktuelle Pixel vollständig innerhalb der Geometrie liegt.
 
-Dabei muss ein Ausrichtungsfehler bei Auflösungen auftreten, der größer oder gleich der Auflösung ist, in der die aktuelle Zeichnung ausgeführt wird. Es dürfen keine falsch positiven Ergebnisse auftreten (legen Sie `InnerCoverage` Bits fest, wenn das Pixel nicht vollständig für einen Ausrichtungsfehler bei Auflösungen, die größer oder gleich der Auflösung sind, bei der der aktuelle Zeichnen ausgeführt wird, nicht vollständig abgedeckt ist), aber es sind falsche Negative Werte zulässig. Zusammenfassend lässt sich sagen, dass die-Implementierung Pixel nicht fälschlicherweise als vollständig abgedeckte kennzeichnen muss, die nicht mit vollständigen Gleit Komma Koordinaten im Rasterizer zu tun haben.
+Dies muss ausrichtungsfehler bei Auflösungen berücksichtigen, die größer oder gleich der Auflösung sind, mit der das aktuelle Zeichnen funktioniert. Falsch positive Ergebnisse dürfen nicht vorhanden sein (Festlegen von `InnerCoverage` Bits, wenn das Pixel nicht vollständig für Ausrichtungsfehler bei Auflösungen abgedeckt ist, die größer oder gleich der Auflösung sind, bei der das aktuelle Zeichnen funktioniert), aber falsch negative Ergebnisse sind zulässig. Zusammenfassend lässt sich feststellen, dass die Implementierung Pixel nicht fälschlicherweise als vollständig abgedeckt identifizieren darf, die nicht mit vollständigen Gleitkomma-Scheitelpunktkoordinaten im Rasterizer wären.
 
-Pixel, die vollständig abgedeckt werden, wenn die Hardware vollständige Gleit Komma Koordinaten verwendet, darf nur ausgelassen werden, wenn Sie den inneren unsicheren Bereich überschneiden, der nicht größer als die Größe des unter-Pixel-Rasters oder 1/256 eines Pixels in der Fixed-Point-Domäne sein muss. Anders gesagt: Pixel, die sich vollständig innerhalb der inneren Grenze des inneren unsicheren Bereichs befinden, müssen als vollständig abgedeckt gekennzeichnet werden. Die innere Begrenzung des unsicheren Bereichs wird in der Abbildung unten durch die rote gepunktete Linie dargestellt. 1/256 stammt aus der Koordinaten Darstellung von 16,8 Fixed Point Rasterizer, die sich ändern kann, wenn die Genauigkeit des Rasterizers geändert wird. Diese unsicheren Region ist ausreichend, um den Ausrichtungsfehler zu berücksichtigen, der durch die Konvertierung von Vertex-Gleit Komma Koordinaten in die Scheitelpunkt Koordinaten des Rasterizers verursacht wurde.
+Pixel, die vollständig abgedeckt wären, wenn Hardware vollständige Gleitkomma-Scheitelpunktkoordinaten verwendet, können nur weggelassen werden, wenn sie den inneren Unsicherkeitsbereich überschneiden, der nicht größer als die Größe des Subpixelrasters oder 1/256 eines Pixels in der Festkommadomäne sein darf. Anders gesagt: Pixel, die sich vollständig innerhalb der inneren Begrenzung des inneren Unsicherkeitsbereichs befinden, müssen als vollständig abgedeckt gekennzeichnet werden. Die innere Grenze des Unsicherheitsbereichs wird im folgenden Diagramm durch die fette schwarze gepunktete Linie dargestellt. 1/256 stammt aus der Rasterizer-Koordinatendarstellung mit festem Punkt 16,8, die sich ändern kann, wenn sich die Genauigkeit des Rasterizers ändert. Dieser Unsicherkeitsbereich reicht aus, um Ausrichtungsfehler zu berücksichtigen, die durch die Konvertierung von Gleitkomma-Scheitelpunktkoordinaten in Scheitelpunktkoordinaten mit festem Punkt im Rasterizer verursacht werden.
 
-Die gleichen 1/512-Mindestanforderungen hinsichtlich der Ungewissheit, die bei der Interaktion mit der rasterisierungsregeln definiert sind, gelten auch hier.
+Hier gelten auch die gleichen 1/512-Mindestanforderungen für unsichere Regionen, die in der Interaktion mit Rasterungsregeln definiert sind.
 
-Das folgende Diagramm veranschaulicht einen gültigen inneren unsicheren Bereich, der durch das Durchlaufen eines Quadrats um die Ränder des primitiven in der Fixed-Point-Domäne erzeugt wird (d. h., die Scheitel Punkte wurden mit der 16,8-fest Komma Darstellung quantifisiert). Die Abmessungen dieses Quadrats basieren auf der gültigen Regions Größe für die innere Ungewissheit: für 1/256 eines Pixels ist das Quadrat 1/128 eines Pixels in Breite und Höhe. Das grüne Dreieck stellt ein bestimmtes primitiv dar, die fettrote gepunktete Linie stellt die Grenze des inneren unsicheren Bereichs dar, die schwarzen Quadrate stellen das Quadrat dar, das entlang der primitiven Ränder gezogen wird, und der Orange aktivierte Bereich ist der innere unsicher-Bereich:
+Das folgende Diagramm veranschaulicht einen gültigen inneren Unsicherheitsbereich, der durch Sweeping eines Quadrats um die Ränder des Primitiven in der Festen Punktdomäne erzeugt wird (d. h., die Scheitelpunkte wurden durch die 16.8-Festpunktdarstellung quantisiert). Die Abmessungen dieses Quadrats basieren auf der gültigen Größe des inneren Unschärfebereichs: Für 1/256 eines Pixels beträgt das Quadrat 1/128 pixel in Breite und Höhe. Das grüne Dreieck stellt ein bestimmtes Primitiv dar, die fette schwarze gepunktete Linie stellt die Grenze des inneren Unsicherheitsbereichs dar, die soliden schwarzen Quadrate stellen das Quadrat dar, das entlang der primitiven Ränder geschwenkt wird, und der orange gepunktete Bereich ist der innere Unsicherheitsbereich:
 
-![reqion der inneren Ungewissheit.](images/innercoverage.jpg)
+![innerer Unsicherheits-Reqion.](images/innercoverage.jpg)
 
-Die Verwendung von wirkt sich nicht darauf aus `InnerCoverage` , ob ein Pixel konservativ rasteriert ist, d. h., die Verwendung eines dieser Modi wirkt sich nicht darauf aus, `InputCoverage` welche Pixel gerengt werden, wenn der konservative rasterisierungsmodus aktiviert ist. Wenn `InnerCoverage` verwendet wird und der Pixelshader ein Pixel verarbeitet, das von der Geometrie nicht vollständig abgedeckt ist, ist der Wert 0, aber für den Pixelshader-Aufruf werden Beispiele aktualisiert. Dies unterscheidet sich von, wenn 0 (null) `InputCoverage` ist, was bedeutet, dass keine Beispiele aktualisiert werden.
+Die Verwendung von wirkt sich nicht darauf aus, ob ein Pixel konservativ rastert wird, d. h. die Verwendung eines dieser Modi wirkt sich nicht darauf aus, welche Pixel rastert werden, wenn der konservative Rasterungsmodus aktiviert `InnerCoverage` `InputCoverage` ist. Wenn verwendet wird und der Pixel-Shader ein Pixel verarbeitet, das nicht vollständig von der Geometrie abgedeckt ist, ist der Wert daher 0, aber beim Aufruf des Pixels shaders werden die Beispiele `InnerCoverage` aktualisiert. Dies ist anders als , `InputCoverage` wenn 0 ist, was bedeutet, dass keine Beispiele aktualisiert werden.
 
-Diese Eingabe schließt sich gegenseitig aus `InputCoverage` : beide können nicht verwendet werden.
+Diese Eingabe schließen sich gegenseitig mit `InputCoverage` aus: Beide können nicht verwendet werden.
 
-Für den Zugriff auf `InnerCoverage` muss Sie als einzelne Komponente aus einem der Pixel-Shader-Eingabe Register deklariert werden. Der Interpolations Modus für die Deklaration muss konstant sein (Interpolation ist nicht anwendbar).
+Für den Zugriff auf muss es als einzelne Komponente aus einem der `InnerCoverage` Pixel-Shader-Eingaberegister deklariert werden. Der Interpolationsmodus für die Deklaration muss konstant sein (interpolation does not apply).
 
-Das `InnerCoverage` Bitfeld wirkt sich nicht auf tiefen-und Schablonen Tests aus, und es ist nicht mit dem *samplemask* -Rasterizer-Zustand verknüpft.
+Das Bitfeld ist weder von Tiefen-/Schablonentests betroffen, noch wird es mit dem `InnerCoverage` *Status SampleMask* Rasterizer anded.
 
-Diese Eingabe ist nur im konservativen rasterisierungsmodus gültig. Wenn die konservative rasterisierung nicht aktiviert ist, `InnerCoverage` erzeugt einen nicht definierten Wert.
+Diese Eingabe ist nur im konservativen Rasterungsmodus gültig. Wenn die konservative Rasterung nicht aktiviert ist, `InnerCoverage` erzeugt einen nicht definierten Wert.
 
-Bei Pixeln-Shader-aufrufen, die durch die Notwendigkeit von Hilfsskripts verursacht werden, aber andernfalls nicht durch die primitive abgedeckt werden, muss das `InnerCoverage` Register auf 0 festgelegt sein.
+Bei Pixel-Shaderaufrufen, die durch die Notwendigkeit von Hilfspixeln verursacht werden, andernfalls aber nicht durch den Primitiven abgedeckt werden, muss das Register `InnerCoverage` auf 0 festgelegt sein.
 
-### <a name="attribute-interpolation-interaction"></a>Interaktion mit Attribut Interpolations
+### <a name="attribute-interpolation-interaction"></a>Interaktion mit Attributinterpolation
 
-Die Attribut Interpolations Modi sind unverändert und werden auf dieselbe Weise fortgesetzt, wenn die konservative rasterisierung nicht aktiviert ist, in der die mit Viewports skalierten und mit einem Punkt konvertierten Vertices verwendet werden. Da alle Beispiele in einem konservativ erfassten Pixel als abgedeckt angesehen werden, ist es für Werte gültig, die extrapoliert werden, ähnlich wie bei Verwendung von Pixel-Frequency-Interpolations Modi für ein **renderTarget** mit einer Stichproben Anzahl von mehr als 1. Centroid-Interpolations Modi liefern Ergebnisse, die mit dem entsprechenden nicht-Centroid-Interpolations Modus identisch sind. Das Konzept von "Schwerpunkt" ist in diesem Szenario bedeutungslos – wobei die Stichproben Abdeckung nur "Full" oder "0" ist.
+Die Attributinterpolationsmodi bleiben unverändert und gehen genauso vor wie bei nicht aktivierter konservativer Rasterung, bei der die durch viewportskalierten und festpunktkonverkehrten Scheitelzeichen verwendet werden. Da alle Stichproben in einem konservativ rasterisierten Pixel als abgedeckt betrachtet werden, ist es gültig, dass Werte extrapoliert werden, ähnlich wie bei Verwendung von Pixelfrequenzinterpolationsmodi auf einem **RenderTarget-Objekt** mit einer Stichprobenanzahl größer als 1. Schwerpunktinterpolationsmodi erzeugen Ergebnisse, die mit dem entsprechenden Nicht-Schwerpunktinterpolationsmodus identisch sind. das Konzept des Schwerpunkts ist in diesem Szenario bedeutungslos – bei dem die Beispielabdeckung entweder vollständig oder 0 ist.
 
-Durch die konservative rasterisierung können degenerierte Dreiecke zum Generieren von PixelShader-Aufrufen verwendet werden. Daher müssen degenerierte Dreiecke die Werte, die Vertex 0 zugewiesen sind, für alle interinterpolierten Werte verwenden.
+Die konservative Rasterung ermöglicht degenerierten Dreiecken, Pixel-Shader-Aufrufe zu erzeugen. Daher müssen degenerierte Dreiecke die Werte verwenden, die Vertex 0 für alle interpolierten Werte zugewiesen sind.
 
-### <a name="clipping-interaction"></a>Clipping-Interaktion
+### <a name="clipping-interaction"></a>Clippinginteraktion
 
-Wenn der konservative rasterisierungsmodus aktiviert und der tiefen Clip deaktiviert ist (wenn der Status des *depthcliutable* -Rasterizers auf false festgelegt ist), es gibt möglicherweise Abweichungen in der Attribut Interpolation für Segmente eines primitiven, die außerhalb des Bereichs 0 <= z <= w liegen, abhängig von der Implementierung: entweder werden Konstante Werte von einem Punkt verwendet, an dem die primitive die relevante Ebene (fast oder weit) überschneidet, oder die Attribut Interpolation verhält sich so, als wäre der konservative rasterisierungsmodus deaktiviert. Allerdings ist das Verhalten des tiefen Werts unabhängig vom Modus für die konservative rasterisierung identisch, d. h., dass primitive, die außerhalb des tiefen Bereichs liegen, immer noch den Wert des nächsten Limits für den Bereich der viewporttiefe erhalten müssen. Das Attribut Interpolations Verhalten im Bereich 0 <= z <= w muss unverändert bleiben.
+Wenn der konservative Rasterungsmodus aktiviert und der Tiefenclip deaktiviert ist (wenn *der DepthClipEnable-Rasterizerzustand* auf FALSE festgelegt ist), gibt es möglicherweise Abweichungen bei der Attributinterpolation für Segmente eines Primitivs, die außerhalb des Bereichs 0 <= z <= w liegen, je nach Implementierung: Entweder werden konstante Werte von einem Punkt aus verwendet, an dem der Primitive die relevante Ebene schneidet (nah oder weit), oder die Attributinterpolation verhält sich wie bei deaktivierter konservativer Rasterung. Das Tiefenwertverhalten ist jedoch unabhängig vom konservativen Rasterungsmodus identisch, d. h., primitiven Typen, die außerhalb des Tiefenbereichs liegen, muss weiterhin der Wert des nächsten Grenzwerts des Viewport-Tiefenbereichs zugewiesen werden. Das Attributinterpolationsverhalten innerhalb des Bereichs 0 <= z <= w muss unverändert bleiben.
 
-### <a name="clip-distance-interaction"></a>Interaktion bei Clip Distanz
+### <a name="clip-distance-interaction"></a>Clip Distance-Interaktion
 
-Die Clip-Distanz ist gültig, wenn der konservative rasterisierungsmodus aktiviert ist, und sich für ein konkales rasterisiertes Pixel verhält, wie es der Fall ist, wenn die konservative rasterisierung nicht mit allen behandelten Beispielen aktiviert ist.
+Clip Distance ist gültig, wenn der konservative Rasterungsmodus aktiviert ist, und verhält sich für ein konservativ rasterisiertes Pixel wie bei nicht aktivierter konservativer Rasterung mit allen behandelten Stichproben.
 
-Beachten Sie, dass die konservative rasterisierung eine Extrapolierung der w-Scheitelpunkt Koordinate verursachen kann, was zu einer w <= 0 führen kann. Dies könnte dazu führen, dass pro-Pixel-Clip Entfernungs Implementierungen auf eine Clip Distanz angewendet werden, die durch einen ungültigen W-Wert geteilt wurde. Clip Entfernungs Implementierungen müssen vor dem Aufruf von Rasterung für Pixel stehen, bei denen die Vertex-Koordinate <= 0 (z. b. aufgrund der Extrapolierung im Modus für die konservative rasterisierung).
+Beachten Sie, dass die konservative Rasterung zu einer Extrapolierung der W-Scheitelpunktkoordinate führen kann, was dazu führen kann, dass W <= 0 ist. Dies kann dazu führen, dass Clip Distance-Implementierungen pro Pixel für einen Clip Distance-Wert verwendet werden, der perspektivisch dividiert durch einen ungültigen W-Wert wurde. Clip Distance-Implementierungen müssen vor dem Aufrufen der Rasterung für Pixel schützen, bei denen die Scheitelpunktkoordinate W <= 0 ist (z. B. aufgrund von Extrapolation im konservativen Rasterisierungsmodus).
 
-### <a name="target-independent-rasterization-interaction"></a>Ziel unabhängige rasterisierungsinteraktion
+### <a name="target-independent-rasterization-interaction"></a>Target Independent Rasterization interaction (Interaktion mit der unabhängigen Zielrasterung)
 
-Der konservative rasterisierungsmodus ist mit der Ziel unabhängigen rasterization (TIR) kompatibel. Es gelten die TIR-Regeln und-Einschränkungen, die sich für ein konservatives rasterisiertes Pixel Verhalten, als ob alle Stichproben abgedeckt werden.
+Der konservative Rasterungsmodus ist kompatibel mit target Independent Rasterization (SOLL). ES GELTEN Regeln und Einschränkungen, die sich für ein konservativ rasteriertes Pixel verhalten, als ob alle Stichproben abgedeckt würden.
 
-### <a name="ia-primitive-topology-interaction"></a>Interaktion mit primitiver Topologie
+### <a name="ia-primitive-topology-interaction"></a>Interaktion der primitiven IA-Topologie
 
-Die konservative rasterisierung ist für Zeilen-oder Punkt primitiven nicht definiert. Daher wird durch primitive Topologien, die Punkte oder Zeilen angeben, ein nicht definiertes Verhalten erzeugt, wenn Sie in die Raster-Einheit eingespeist werden, wenn die konservative rasterisierung aktiviert ist.
+Die konservative Rasterung ist für Linien- oder Punktprimitiven nicht definiert. Daher erzeugen primitive Topologien, die Punkte oder Linien angeben, ein nicht definiertes Verhalten, wenn sie an die Rasterizereinheit gespeist werden, wenn die konservative Rasterung aktiviert ist.
 
-Die debugebenenvalidierung überprüft, ob Anwendungen diese primitiven Topologien nicht verwenden.
+Die Überprüfung der Debugebene überprüft, ob Anwendungen diese primitiven Topologien nicht verwenden.
 
-### <a name="query-interaction"></a>Abfrage Interaktion
+### <a name="query-interaction"></a>Abfrageinteraktion
 
-Für ein konformisch Erfassungs Endes Pixel Verhalten sich die Abfragen so, wie Sie es tun, wenn die konservative rasterisierung nicht aktiviert ist, wenn alle Stichproben abgedeckt werden. Beispielsweise müssen Sie für ein konformes rasterisiertes Pixel das D3D12 \_ \_ \_ -Abfragetyp-oksion und den D3D12- \_ \_ \_ Abfragetyp Pipeline \_ Statistiken (aus [**D3D12- \_ Abfragetyp \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_query_type)) so Verhalten, als würden die konservative rasterisierung nicht aktiviert, wenn alle Stichproben abgedeckt werden.
+Bei einem konservativ rasterisierten Pixel verhalten sich Abfragen wie abfragen, wenn die konservative Rasterung nicht aktiviert ist, wenn alle Stichproben behandelt werden. Für ein konservativ rasterisiertes Pixel müssen sich beispielsweise D3D12 \_ QUERY \_ TYPE \_ OCCLUSION und D3D12 \_ QUERY TYPE PIPELINE STATISTICS \_ \_ \_ (von [**D3D12 \_ QUERY \_ TYPE)**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_query_type)wie bei einer nicht aktivierten konservativen Rasterung verhalten, wenn alle Stichproben behandelt werden.
 
-Pixel-Shader-Aufrufe sollten für jedes im konservativ aufgeblenierte Pixel im konservativen rasterisierungsmodus erhöht werden.
+Pixel-Shader-Aufrufe sollten für jedes konservativ rasterisierte Pixel im konservativen Rasterungsmodus inkrementiert werden.
 
-### <a name="cull-state-interaction"></a>Interaktionsinteraktion
+### <a name="cull-state-interaction"></a>CULL-Zustandsinteraktion
 
-Alle Statusangaben sind im Modus für die konservative rasterisierung gültig und befolgen dieselben Regeln wie bei aktivierter konservativer rasterisierung.
+Alle Cull-Zustände sind im konservativen Rasterungsmodus gültig und befolgen die gleichen Regeln wie, wenn die konservative Rasterung nicht aktiviert ist.
 
-Wenn Sie die konservative rasterisierung über Auflösungen mit sich selbst oder ohne die konservative rasterisierung hinweg vergleichen, besteht die Möglichkeit, dass einige primitive eine nicht übereinstimmende faktigkeit aufweisen (d. h. ein Back-End, die andere Vorderseite). Anwendungen können diese Ungewissheit vermeiden, indem Sie D3D12 \_ cull \_ Mode \_ None (aus dem [**D3D12 \_ cull- \_ Modus**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_cull_mode)) verwenden und nicht den vom `IsFrontFace` System generierten Wert verwenden.
+Beim Vergleich der konservativen Rasterung über Auflösungen hinweg mit sich selbst oder ohne aktivierte konservative Rasterung besteht die Möglichkeit, dass einige Primitive nicht übereinstimmende Gegenüberheit haben (d. h. eine hintere Seite, die andere nach vorne). Anwendungen können diese Unsicherheit vermeiden, indem sie D3D12 \_ CULL \_ MODE NONE \_ (aus dem [**D3D12 \_ \_ CULL-MODUS)**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_cull_mode)und nicht den `IsFrontFace` vom System generierten Wert verwenden.
 
-### <a name="isfrontface-interaction"></a>Isfrontface-Interaktion
+### <a name="isfrontface-interaction"></a>IsFrontFace-Interaktion
 
-Der vom `IsFrontFace` System generierte Wert ist für die Verwendung im konservativen rasterisierungsmodus gültig und folgt dem Verhalten, das definiert ist, wenn die konservative rasterisierung nicht aktiviert ist.
+Der vom System generierte Wert ist für die Verwendung im konservativen Rasterungsmodus gültig und folgt dem Verhalten, das definiert ist, wenn die konservative `IsFrontFace` Rasterung nicht aktiviert ist.
 
-### <a name="fill-modes-interaction"></a>Interaktion mit Füll Modi
+### <a name="fill-modes-interaction"></a>Interaktion mit Füllmodi
 
-Der einzige gültige [**D3D12 \_ - \_ Füllmodus**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_fill_mode) für die konservative rasterisierung ist D3D12 \_ Fill \_ Solid, jeder andere Füll Modus ist ein ungültiger Parameter für den Status des Rasterizers.
+Der einzige gültige [**D3D12 \_ \_ FILL-MODUS**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_fill_mode) für die konservative Rasterung ist D3D12 FILL SOLID. Jeder andere Füllmodus ist ein ungültiger Parameter für den \_ \_ Rasterizerzustand.
 
-Dies liegt daran, dass die D3D12-Funktionsspezifikation angibt, dass der Draht Modell-Füllmodus Dreiecks Ränder in Linien konvertieren und die zeilenrasterisierungsregeln und das Verhalten der konservativen Zeilen rasterisierung nicht definiert wurde.
+Dies liegt daran, dass die D3D12-Funktionsspezifikation angibt, dass der Wireframe-Füllmodus Dreiecksränder in Linien konvertieren und den Linienrasterregeln folgen und das verhalten der konservativen Linienrasterung nicht definiert wurde.
 
 ## <a name="implementation-details"></a>Details zur Implementierung
 
-Der Typ der in Direct3D 12 unterstützten rasterisierung wird manchmal als "überschätzte konservative rasterisierung" bezeichnet. Es gibt auch das Konzept der "unterschätzten konservative rasterisierung", was bedeutet, dass nur Pixel, die vollständig von einem gerenderten primitiven abgedeckt werden, rasterisiert werden. Unterschätzte konservative rasterisierungsinformationen sind über den Pixelshader durch die Verwendung von Eingabe Abdeckungs Daten verfügbar, und nur die überschätzte konservative rasterisierung ist als rasterisierungsmodus verfügbar.
+Der in Direct3D 12 unterstützte Rasterungstyp wird manchmal als "Überschätzung der konservativen Rasterung" bezeichnet. Es gibt auch das Konzept der "konservativ-konservativen Rasterung", was bedeutet, dass nur Pixel, die vollständig von einem gerenderten Primitiv abgedeckt sind, rasterisiert werden. Über den Pixel-Shader sind über Eingabeabdeckungsdaten nicht über die konservative Rasterung informationen verfügbar, und nur die überschätzte konservative Rasterung ist als Rastermodus verfügbar.
 
-Wenn ein beliebiger Teil eines primitiven ein Pixel überlappt, wird dieses Pixel als abgedeckt betrachtet und dann rasteriert. Wenn ein Rand oder eine Ecke eines primitiven entlang der Kante oder Ecke eines Pixels fällt, ist die Anwendung der "Top-Left-Regel" Implementierungs spezifisch. Bei Implementierungen, die degenerierte Dreiecke unterstützen, muss ein degeneriertes Dreieck an einer Kante oder Ecke jedoch mindestens ein Pixel abdecken.
+Wenn ein Teil eines Primitiven ein Pixel überlappt, wird dieses Pixel als abgedeckt betrachtet und dann rastert. Wenn ein Rand oder eine Ecke eines Primitivs entlang der Kante oder Ecke eines Pixels fällt, ist die Anwendung der "regel oben links" implementierungsspezifisch. Für Implementierungen, die degenerierte Dreiecke unterstützen, muss ein degeneriertes Dreieck entlang einer Kante oder Ecke jedoch mindestens ein Pixel abdecken.
 
-Konservative rasterization-Implementierungen können sich auf unterschiedlichen Hardware unterscheiden, und es werden falsche positiv Ergebnisse erzeugt. Dies bedeutet, dass Sie fälschlicherweise festlegen können, dass Pixel abgedeckt werden. Dies kann aufgrund von Implementierungs spezifischen Details auftreten, wie z. b. primitive ansteigende oder Ausrichtungsfehler, die in den in der rasterisierung verwendeten festen Punkt Vertex-Koordinaten enthalten sind. Der Grund, warum falsch positive Ergebnisse (in Bezug auf Scheitelpunkt Koordinaten mit festem Punkt) gültig sind, liegt darin, dass einige falsch positive Ergebnisse erforderlich sind, damit eine Implementierung die Abdeckungs Auswertung für nach gestellte Scheitel Punkte (d. h. vertexkoordinaten, die von Gleit Komma Zahlen in den in der Rasterizer verwendeten Fixed-Punkt 16,8 konvertiert wurden, berücksichtigen jedoch die Abdeckung, die von den ursprünglichen Gleit Komma Koordinaten des Vertex erzeugt wurde.
+Konservative Rasterisierungsimplementierungsimplementierungen können auf unterschiedlicher Hardware variieren und falsch positive Ergebnisse erzeugen, was bedeutet, dass sie fälschlicherweise entscheiden können, dass Pixel abgedeckt sind. Dies kann aufgrund von implementierungsspezifischen Details auftreten, z. B. primitivem Wachstum oder Ausrichtungsfehlern, die in den bei der Rasterung verwendeten Scheitelpunktkoordinaten mit festem Punkt auftreten. Falsch positive Ergebnisse (in Bezug auf Punkt-Scheitelpunktkoordinaten) sind gültig, da einige falsch positive Ergebnisse erforderlich sind, damit eine Implementierung eine Abdeckungsauswertung für nachgestellte Scheitelpunkte (d. h. Scheitelpunktkoordinaten, die von Gleitkommakoordinaten in den im Rasterizer verwendeten 16.8-Fixpunkt konvertiert wurden) ermöglicht, aber die abdeckungsbasierte Abdeckung der ursprünglichen Gleitkommavertexkoordinaten beachtet.
 
-Konservative rasterization-Implementierungen generieren keine falschen negativen in Bezug auf die Vertex-Gleit Komma Koordinaten für nicht degenerierte Post-Snap-primitive: Wenn ein beliebiger Teil eines primitiven einen Teil eines Pixels überlappt, wird dieses Pixel rasteriert.
+Konservative Rasterungsimplementierungsimplementierungen erzeugen keine falsch negativen Ergebnisse in Bezug auf die Gleitkomma-Scheitelpunktkoordinaten für nicht degenerierte Primitive nach dem Andocken: Wenn ein Teil eines primitiv einen beliebigen Teil eines Pixels überlappt, wird dieses Pixel rasterisiert.
 
-Dreiecke, die deseriell sind (doppelte Indizes in einem Index Puffer oder kollinear in 3D) oder nach der fest Komma Konvertierung (kollinear Vertices in the Rasterizer) deseriell werden. Beide sind ein gültiges Verhalten. Degenerierte Dreiecke müssen als "zurück" betrachtet werden. Wenn also ein bestimmtes Verhalten für eine Anwendung erforderlich ist, kann es die Hintergrund Erkennung oder den Test für die Vorderseite verwenden. Degenerierte Dreiecke verwenden die den Scheitel Punkten 0 zugewiesenen Werte für alle interpoliert-Werte.
+Dreiecke, die degeneriert sind (doppelte Indizes in einem Indexpuffer oder collinear in 3D) oder nach der Konvertierung mit festem Punkt (collineare Vertices im Rasterizer) degeneriert werden, können gecullt werden. beide sind gültige Verhaltensweisen. Degenerierte Dreiecke müssen als zurückgesichtet betrachtet werden. Wenn also ein bestimmtes Verhalten für eine Anwendung erforderlich ist, kann sie das Back-Face-Culling verwenden oder für die Vorderseite testen. Degenerierte Dreiecke verwenden die Werte, die Vertex 0 für alle interpolierten Werte zugewiesen sind.
 
-Es gibt drei Ebenen von Hardwareunterstützung, zusätzlich zur Möglichkeit, dass die Hardware dieses Feature nicht unterstützt.
+Zusätzlich zur Möglichkeit, dass die Hardware dieses Feature nicht unterstützt, gibt es drei Ebenen der Hardwareunterstützung.
 
--   Ebene 1 erzwingt einen maximalen Bereich von 1/2 Pixel Unsicherheit und unterstützt nicht die Post-Snap-Degenerierung. Dies eignet sich gut für das gekachelte Rendering, einen Textur Atlas, eine Licht Zuordnungs Generierung und unter Pixel Schatten Zuordnungen.
--   Ebene 2 reduziert den Bereich für die maximale Anzahl von Unsicherheiten auf 1/256 und erfordert, dass Post-Snap-Ins nicht durchgeführt werden. Diese Ebene ist für die CPU-basierte Beschleunigung der Algorithmen (z. b. voxelization) hilfreich.
--   Ebene 3 behält einen maximalen Bereich von 1/256-Unsicherheiten bei und bietet Unterstützung für die innere Eingabe Abdeckung. Die innere Eingabe Abdeckung fügt den neuen Wert der `SV_InnerCoverage` High Level Shading Language (HLSL) hinzu. Dies ist eine ganzzahlige 32-Bit-Ganzzahl, die für die Eingabe an einen PixelShader angegeben werden kann, und stellt die unterschätzten Informationen zur konservativen rasterisierung dar (d. h., ob ein Pixel garantiert vollständig abgedeckt ist). Diese Ebene ist für die Verschleierung von Okklusion hilfreich.
+-   Ebene 1 erzwingt einen maximal 1/2 Pixel großen Unklarheitsbereich und unterstützt keine Degeneriert nach dem Andocken. Dies ist gut für gekacheltes Rendering, einen Texturatlas, die Generierung von Lichtkarten und Schattenkarten mit Unterpixeln.
+-   Ebene 2 reduziert die maximale Unsicherheitsregion auf 1/256 und erfordert, dass nach dem Snap-Andocken keine Degenerierte gecullt werden. Diese Ebene ist für die CPU-basierte Algorithmusbeschleunigung (z. B. Voxelisierung) hilfreich.
+-   Ebene 3 verwaltet eine maximal 1/256 Unsicherheitsregion und fügt Unterstützung für die innere Eingabeabdeckung hinzu. Die innere Eingabeabdeckung fügt den neuen Wert `SV_InnerCoverage` der High Level Shading Language (HLSL) hinzu. Dies ist eine 32-Bit-Skalar-Ganzzahl, die bei der Eingabe in einen Pixel-Shader angegeben werden kann und die unterschätzenden Informationen zur konservativen Rasterung darstellt (d. h., ob ein Pixel garantiert vollständig abgedeckt ist). Diese Ebene ist für das Verdecken von Culling hilfreich.
 
 ## <a name="api-summary"></a>API-Zusammenfassung
 
-Die folgenden Methoden, Strukturen, Enumerationsklassen und Hilfsklassen verweisen auf die konservative rasterisierung:
+Die folgenden Methoden, Strukturen, Enums und Hilfsklassen verweisen auf die konservative Rasterung:
 
--   [**D3D12 \_ Raster \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rasterizer_desc) -Debug: Struktur mit der Beschreibung des Rasterizers.
--   [**D3D12 \_ Konservativer \_ rasterisierungsmodus \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_conservative_rasterization_mode) : Enumeration-Werte für den Modus (ein oder aus).
--   [**D3D12 \_ Feature \_ Data \_ D3D12 \_ Optionen**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options) : Struktur, die die Ebene der Unterstützung enthält.
--   [**D3D12 \_ Konservative \_ rasterization- \_ Ebene**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_conservative_rasterization_tier) : Enumerationswerte für jede Ebene der Unterstützung durch die Hardware.
--   [**Checkfeaturesupport**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-checkfeaturesupport) : Methode für den Zugriff auf die unterstützten Funktionen.
--   [**CD3DX12 \_ Raster \_ DESC**](cd3dx12-rasterizer-desc.md) : Hilfsklasse zum Erstellen von Raster-Beschreibungen.
+-   [**D3D12 \_ RASTERIZER \_ DESC:**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rasterizer_desc) Struktur mit der Beschreibung des Rasterizers.
+-   [**D3D12 \_ \_KONSERVATIVER \_ RASTERISIERUNGSMODUS:**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_conservative_rasterization_mode) Aufzählwerte für den Modus (ein oder aus).
+-   [**D3D12 \_ FEATURE \_ DATA \_ D3D12 \_ OPTIONS**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options) : Struktur, die die Unterstützungsebene auf hält.
+-   [**D3D12 \_ CONSERVATIVE \_ RASTERIZATION \_ TIER**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_conservative_rasterization_tier) : enum values for each tier of support by the hardware.
+-   [**CheckFeatureSupport:**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-checkfeaturesupport) Methode für den Zugriff auf die unterstützten Features.
+-   [**CD3DX12 \_ RASTERIZER \_ DESC:**](cd3dx12-rasterizer-desc.md) Hilfsklasse zum Erstellen von Rasterizerbeschreibungen.
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Video-Tutorials zu DirectX Advanced Learning: konservative rasterization](https://www.youtube.com/watch?v=zL0oSY_YmDY)
+[Videotutorials für erweitertes Lernen mit DirectX: Konservative Rasterung](https://www.youtube.com/watch?v=zL0oSY_YmDY)
 </dt> <dt>
 
-[Geordnete Ansichten des Rasterizers](rasterizer-order-views.md)
+[Geordnete Rasterizeransichten](rasterizer-order-views.md)
 </dt> <dt>
 
-[Darstellung](rendering.md)
+[Rendering](rendering.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,8 +1,8 @@
 ---
-description: Zum Erstellen eines WMI-Ereignis Anbieters müssen Sie die \_ \_ Win32Provider-Instanz, die den Anbieter darstellt, mithilfe einer Instanz von \_ \_ eventproviderregistration registrieren.
+description: Um einen WMI-Ereignisanbieter zu erstellen, müssen Sie die Win32Provider-Instanz registrieren, die Ihren Anbieter darstellt, indem Sie eine \_ \_ Instanz von \_ \_ EventProviderRegistration verwenden.
 ms.assetid: 81f2ba3b-a1cb-42f5-b1a7-b1ca65963902
 ms.tgt_platform: multiple
-title: Registrieren eines Ereignis Anbieters
+title: Registrieren eines Ereignisanbieters
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,31 +10,31 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 2a4aa77c5c5936639435844179f259080085e02c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 44c6521e56441c929ef108ce4c4b624c11b06ca26dc508c8f2f924e2f87babba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131917"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992510"
 ---
-# <a name="registering-an-event-provider"></a>Registrieren eines Ereignis Anbieters
+# <a name="registering-an-event-provider"></a>Registrieren eines Ereignisanbieters
 
-Zum Erstellen eines WMI- [*Ereignis Anbieters*](gloss-e.md) müssen Sie die [**\_ \_ Win32Provider**](--win32provider.md) -Instanz, die den Anbieter darstellt, mithilfe einer Instanz von [**\_ \_ eventproviderregistration**](--eventproviderregistration.md)registrieren. Als COM-Objekt muss sich Ihr Anbieter beim Betriebssystem und WMI registrieren. Im folgenden Verfahren wird davon ausgegangen, dass Sie den Registrierungsprozess bereits implementiert haben, wie unter [Registrieren eines Anbieters](registering-a-provider.md)beschrieben.
+Um einen [*WMI-Ereignisanbieter zu erstellen,*](gloss-e.md) müssen Sie die [**\_ \_ Win32Provider-Instanz**](--win32provider.md) registrieren, die Ihren Anbieter darstellt, indem Sie eine Instanz von [**\_ \_ EventProviderRegistration verwenden.**](--eventproviderregistration.md) Als COM-Objekt muss sich Ihr Anbieter beim Betriebssystem und WMI registrieren. Beim folgenden Verfahren wird davon ausgegangen, dass Sie den Registrierungsprozess bereits implementiert haben, wie unter [Registrieren eines Anbieters beschrieben.](registering-a-provider.md)
 
-Im folgenden Verfahren wird beschrieben, wie ein Ereignis Anbieter registriert wird.
+Im folgenden Verfahren wird beschrieben, wie Sie einen Ereignisanbieter registrieren.
 
-**So registrieren Sie einen Ereignis Anbieter**
+**So registrieren Sie einen Ereignisanbieter**
 
-1.  Erstellen Sie eine Instanz der [**\_ \_ Win32Provider**](--win32provider.md) -Klasse, die den Anbieter beschreibt.
-2.  Erstellen Sie eine Instanz der [**\_ \_ eventproviderregistration**](--eventproviderregistration.md) -Klasse, die den Funktions Satz des Anbieters beschreibt.
+1.  Erstellen Sie eine Instanz der [**\_ \_ Win32Provider-Klasse,**](--win32provider.md) die den Anbieter beschreibt.
+2.  Erstellen Sie eine Instanz der [**\_ \_ EventProviderRegistration-Klasse,**](--eventproviderregistration.md) die den Funktionssatz des Anbieters beschreibt.
 
-    Die [**\_ \_ eventproviderregistration**](--eventproviderregistration.md) -Klasse erbt viele Eigenschaften von der übergeordneten [**\_ \_ objectproviderregistration**](--objectproviderregistration.md) -Klasse. Die lokalen Eigenschaften der **\_ \_ eventproviderregistration** -Klasse sind der Objekt Pfad zum Anbieter und eine Liste von Abfragen, die die vom Anbieter unterstützten Ereignisse beschreiben. Weitere Informationen finden Sie unter [WMI-Abfrage](querying-wmi.md).
+    Die [**\_ \_ EventProviderRegistration-Klasse**](--eventproviderregistration.md) erbt viele Eigenschaften von der übergeordneten [**\_ \_ ObjectProviderRegistration-Klasse.**](--objectproviderregistration.md) Die lokalen Eigenschaften der **\_ \_ EventProviderRegistration-Klasse** sind der Objektpfad zum Anbieter und eine Liste von Abfragen, die die vom Anbieter unterstützten Ereignisse beschreiben. Weitere Informationen finden Sie unter [Abfragen von WMI.](querying-wmi.md)
 
-3.  Laden Sie die Implementierung der [**\_ \_ Win32Provider**](--win32provider.md) -Klasse und der [**\_ \_ eventproviderregistration**](--eventproviderregistration.md) -Klasse in das WMI-Repository.
+3.  Laden Sie Ihre Implementierung der [**\_ \_ Klassen Win32Provider**](--win32provider.md) [**\_ \_ und EventProviderRegistration**](--eventproviderregistration.md) in das WMI-Repository.
 
-    WMI verwendet Ihre Klassendefinition, um den Ereignis Anbieter zu registrieren und darauf zuzugreifen. Weitere Informationen finden Sie unter [Registrieren eines Anbieters](registering-a-provider.md).
+    WMI verwendet Ihre Klassendefinition, um Ihren Ereignisanbieter zu registrieren und darauf zu zugreifen. Weitere Informationen finden Sie unter [Registrieren eines Anbieters.](registering-a-provider.md)
 
-Im folgenden Codebeispiel wird eine Implementierung einer [**\_ \_ Win32Provider**](--win32provider.md) -Klasse und einer [**\_ \_ eventproviderregistration**](--eventproviderregistration.md) -Klasse beschrieben.
+Im folgenden Codebeispiel wird eine Implementierung einer [**\_ \_ Win32Provider-Klasse**](--win32provider.md) und einer [**\_ \_ EventProviderRegistration-Klasse**](--eventproviderregistration.md) beschrieben.
 
 ``` syntax
 instance of __Win32Provider as $P
@@ -61,9 +61,9 @@ EventQueryList = {
 };
 ```
 
-Die erste Abfrage gibt an, dass der Anbieter alle Ereignis Benachrichtigungen für das faxereignis der System externe-Ereignisklasse generiert. Da der ISA-Operator verwendet wird, impliziert die zweite Abfrage, dass der Anbieter Benachrichtigungen für alle instanzerstellungsereignisse für die [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) -Klasse und alle seine Unterklassen generiert.
+Die erste Abfrage gibt an, dass der Anbieter alle Ereignisbenachrichtigungen für die extrinsische Ereignisklasse FaxEvent generiert. Da der ISA-Operator verwendet wird, impliziert die zweite Abfrage, dass der Anbieter Benachrichtigungen für alle Instanzerstellungsereignisse für die [**Win32 \_ LogicalDisk-Klasse**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) und alle ihre Unterklassen generiert.
 
-Wenn ein Anbieter registriert wird, um ein System internes Ereignis bereitzustellen, muss das Ereignis auf alle Instanzen einer Klasse angewendet werden. Anders ausgedrückt: Es kann keine Abfrage geschrieben werden, um instanzerstellungsereignisse nur für einige Laufwerke bereitzustellen, die zur [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) -Klasse gehören.
+Wenn ein Anbieter registriert wird, um ein systeminternes Ereignis zur Verfügung zu stellen, muss das Ereignis auf alle Instanzen einer Klasse angewendet werden. Anders ausgedrückt: Eine Abfrage kann nicht geschrieben werden, um Instanzerstellungsereignisse nur für einige der Laufwerke zu liefern, die zur [**Win32 \_ LogicalDisk-Klasse**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) gehören.
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Erfahren Sie mehr über die coaref time. coaref Time-Konstruktormethode (ctlutil. h). Diese Methode verwendet den 't-Parameter.
+description: Erfahren Sie mehr über die COARefTime.COARefTime-Konstruktormethode (Ctlutil.h). Diese Methode verwendet den "t"-Parameter.
 ms.assetid: 1f3b5c63-edaa-42c1-8892-d6681c81ae4d
-title: Coaref time. coaref Time-Konstruktor (ctlutil. h)-t-Parameter
+title: COARefTime.COARefTime-Konstruktor (Ctlutil.h) – t-Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 397c37e594024fe4b5e6bcb41e9cf7382d3e62a8
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: b03641cd61d48fa62bf74876211857e136e3ff201e48234117603408317f4ed6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106389120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073944"
 ---
-# <a name="coareftimecoareftime-constructor-ctlutilh---t-parameter"></a>Coaref time. coaref Time-Konstruktor (ctlutil. h)-t-Parameter
+# <a name="coareftimecoareftime-constructor-ctlutilh---t-parameter"></a>COARefTime.COARefTime-Konstruktor (Ctlutil.h) – t-Parameter
 
 Konstruktormethode.
 
@@ -45,7 +45,7 @@ COARefTime(
 *t* 
 </dt> <dd>
 
-[**Verweis \_**](reference-time.md) Der Uhrzeitwert, der die Verweis Zeit in 100-Nanosecond-Einheiten angibt.
+[**REFERENZ \_ TIME-Wert,**](reference-time.md) der die Referenzzeit in Einheiten von 100 Nanosekunden angibt.
 
 </dd> </dl>
 
@@ -53,14 +53,14 @@ COARefTime(
 
 | Anforderung                   | Wert                                                                                                                                                                                           |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header  | Ctlutil. h (Include Streams. h)                                                                                   |
-| Bibliothek | "Straumbase. lib" (Einzelhandels Builds); "Straumbasd. lib" (Debugbuilds) |
+| Header  | Ctlutil.h (include Streams.h)                                                                                   |
+| Bibliothek | Strmbase.lib (Verkaufsbuilds); Strmbasd.lib (Debugbuilds) |
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Coaref Time-Klasse**](coareftime.md)
+[**COARefTime-Klasse**](coareftime.md)
 </dt> </dl>
 
  

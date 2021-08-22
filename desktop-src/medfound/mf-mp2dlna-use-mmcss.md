@@ -1,35 +1,35 @@
 ---
-description: Gibt an, ob die Media-Senke der Digital Living Network Alliance (DLNA) den Multimedia Class Scheduler Service (MMCSS) verwendet.
+description: Gibt an, ob die MEDIENSenke der Digital Living Network Alliance (DLNA) den Multimedia Class Scheduler Service (MMCSS) verwendet.
 ms.assetid: 4c27e2ec-624a-4b1f-bea9-3aaad1534c9b
-title: MF_MP2DLNA_USE_MMCSS-Attribut (Mfmp2dlna. h)
+title: MF_MP2DLNA_USE_MMCSS Attribut (Mfmp2dlna.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ccfdaf36ce51f1158e110dcb3682a5b072c060dc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 79e824451be89bf4aca485edd2c61ce381f0cf4e0a9d5eefff82bf6c99cef2eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042340"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119104756"
 ---
-# <a name="mf_mp2dlna_use_mmcss-attribute"></a>MF \_ MP2DLNA \_ Verwenden des \_ MMCSS-Attributs
+# <a name="mf_mp2dlna_use_mmcss-attribute"></a>MF \_ MP2DLNA \_ USE \_ MMCSS-Attribut
 
-Gibt an, ob die Media-Senke der Digital Living Network Alliance (DLNA) den Multimedia Class Scheduler Service (MMCSS) verwendet.
+Gibt an, ob die MEDIENSenke der Digital Living Network Alliance (DLNA) den Multimedia Class Scheduler Service (MMCSS) verwendet.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL** als **UINT32** gespeichert
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie dieses Attribut für die DLNA-Medien Senke festlegen möchten, Fragen Sie die Medien Senke nach der [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Schnittstelle ab. Legen Sie das-Attribut vor Beginn des Streamings fest.
+Um dieses Attribut für die DLNA-Mediensenke festzulegen, fragen Sie die Mediensenke nach der [**SCHNITTSTELLE "ATTRIBUTESAttributes"**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) ab. Legen Sie das Attribut fest, bevor das Streaming beginnt.
 
-Wenn dieses Attribut **true** ist, registriert sich die DLNA-Medien Senke bei MMCSS.
+Wenn dieses Attribut **TRUE** ist, registriert sich die DLNA-Mediensenke selbst bei MMCSS.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,13 +37,13 @@ Wenn dieses Attribut **true** ist, registriert sich die DLNA-Medien Senke bei MM
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mfmp2dlna. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Mfmp2dlna.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

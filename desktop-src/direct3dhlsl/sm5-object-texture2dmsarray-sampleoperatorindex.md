@@ -1,9 +1,9 @@
 ---
-title: 'Texture2DMSArray:: Sample. Operator-Funktion'
-description: 'Gibt eine schreibgeschützte Ressourcen Variable zurück. | Texture2DMSArray:: Sample. Operator-Funktion'
+title: Texture2DMSArray::sample. Operatorfunktion
+description: Gibt eine schreibgeschützte Ressourcenvariable zurück. | Texture2DMSArray::sample. Operatorfunktion
 ms.assetid: 5334c1d5-dfbd-4987-875c-0b92967b0f13
 keywords:
-- Blutprobe. Operator Function HLSL
+- Beispiel. Operatorfunktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e78746e0afe03e65a313982ca35c27a75ea14f1b
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 09ac18e7830dfe6b18718deed56e8495ba476dcedcb8290eab4e16aa0d7f24fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104982005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118508325"
 ---
-# <a name="texture2dmsarraysampleoperator----function"></a>Texture2DMSArray:: Sample. Operator-Funktion
+# <a name="texture2dmsarraysampleoperator----function"></a>Texture2DMSArray::sample. Operatorfunktion
 
-Gibt eine schreibgeschützte Ressourcen Variable zurück.
+Gibt eine schreibgeschützte Ressourcenvariable zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,21 +37,21 @@ R sample.Operator[][](
 
 <dl> <dt>
 
-*sampleslice* \[ in\]
+*sampleSlice* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Beispiel-Slice-Index.
+Der Beispielsliceindex.
 
 </dd> <dt>
 
-*POS* \[ in\]
+*pos* \[ In\]
 </dt> <dd>
 
 Typ: **uint3**
 
-Die Indexposition. Die erste und die zweite Komponente enthalten die (x, y)-Koordinaten. Die dritte Komponente gibt den gewünschten Array Slice an.
+Die Indexposition. Die erste und zweite Komponente enthalten die Koordinaten (x, y). Die dritte Komponente gibt den gewünschten Arrayslice an.
 
 </dd> </dl>
 
@@ -59,9 +59,9 @@ Die Indexposition. Die erste und die zweite Komponente enthalten die (x, y)-Koor
 
 Typ: **R**
 
-Eine schreibgeschützte Ressourcen Variable.
+Eine schreibgeschützte Ressourcenvariable.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="usage-example"></a>Verwendungsbeispiel
 
@@ -77,11 +77,11 @@ float4 main( float3 tcoord : texturecoord0 ) : SV_Target
 
 
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -89,14 +89,14 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [Texture2DMSArray](sm5-object-texture2dmsarray.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

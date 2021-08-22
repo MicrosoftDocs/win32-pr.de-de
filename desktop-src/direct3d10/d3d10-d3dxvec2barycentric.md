@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVec2BaryCentric-Funktion (D3DX10Math.h): Gibt unter Verwendung der angegebenen 2D-Vektoren einen Punkt in barycentric-Koordinaten zurück.'
+description: 'D3DXVec2BaryCentric-Funktion (D3DX10Math.h): Gibt unter Verwendung der angegebenen 2D-Vektoren einen Punkt in baryzentrierten Koordinaten zurück.'
 ms.assetid: 8eceb2c0-26a0-4a7f-9830-85327dcb31ab
 title: D3DXVec2BaryCentric-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 5b78d08c67fed04af9ef0d54d0c6895106b99208
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: be7cf659a3f6c8aeffd07cdc9990e1e705d8b1db84aef019f77c0201961d16a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990740"
 ---
 # <a name="d3dxvec2barycentric-function-d3dx10mathh"></a>D3DXVec2BaryCentric-Funktion (D3DX10Math.h)
 
-Gibt unter Verwendung der angegebenen 2D-Vektoren einen Punkt in Barycentric-Koordinaten zurück.
+Gibt unter Verwendung der angegebenen 2D-Vektoren einen Punkt in baryzentrierten Koordinaten zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ D3DXVECTOR2* D3DXVec2BaryCentric(
 
 Typ: **[ **D3DXVECTOR2**](../direct3d9/d3dxvector2.md)\***
 
-Zeiger auf [**D3DXVECTOR2,**](d3d10-d3dxvector2.md) das das Ergebnis des Vorgangs ist.
+Zeiger auf den [**D3DXVECTOR2,**](d3d10-d3dxvector2.md) der das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
@@ -105,7 +105,7 @@ Typ: **[ **D3DXVECTOR2**](../direct3d9/d3dxvector2.md)\***
 
 Zeiger auf eine D3DXVECTOR2-Struktur in baryzentrierten Koordinaten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die D3DXVec2BaryCentric-Funktion bietet eine Möglichkeit, Punkte in und um ein Dreieck zu verstehen, unabhängig davon, wo sich das Dreieck tatsächlich befindet. Diese Funktion gibt den resultierenden Punkt mithilfe der folgenden Gleichung zurück: V1 + f(V2-V1) + g(V3-V1).
 
@@ -128,14 +128,14 @@ Baryzentrierte Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Be
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

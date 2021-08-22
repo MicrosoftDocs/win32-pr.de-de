@@ -1,29 +1,29 @@
 ---
 title: Empfangen von SNMP-Nachrichten
-description: Die Anwendung WinSNMP muss die Funktion snmprecvmsg aufrufen, um die Antwort auf eine snmpsendmsg-Anforderung abzurufen.
+description: Die WinSNMP-Anwendung muss die SnmpRecvMsg-Funktion aufrufen, um die Antwort auf eine SnmpSendMsg-Anforderung abzurufen.
 ms.assetid: 323a5565-a8a5-4efd-aa4e-e4623b581d09
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 529420deaf637cec8598a8e8becc87ab514b40b4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3bd341e71aa6b8387b82f6576599fb6cb7d3545f34e01f80267f19a73edb7cba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103713062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119009178"
 ---
 # <a name="receiving-snmp-messages"></a>Empfangen von SNMP-Nachrichten
 
-Die Anwendung WinSNMP muss die Funktion [**snmprecvmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg) aufrufen, um die Antwort auf eine [**snmpsendmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg) -Anforderung abzurufen.
+Die WinSNMP-Anwendung muss die [**SnmpRecvMsg-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg) aufrufen, um die Antwort auf eine [**SnmpSendMsg-Anforderung abzurufen.**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg)
 
-Die [**snmpkreatesession**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession) -Funktion übergibt ein Anwendungsfenster Handle und einen Benachrichtigungs Bezeichner an die Microsoft WinSNMP-Implementierung. Wenn das Anwendungsfenster diese Nachricht empfängt, signalisiert es der Anwendung, die Funktion [**snmprecvmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg) mithilfe des Sitzungs Handles aufzurufen, das von [**snmpkreatesession**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession)zurückgegeben wurde.
+Die [**SnmpCreateSession-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession) übergibt ein Anwendungsfensterhandl und eine Benachrichtigungsmeldungs-ID an die Microsoft WinSNMP-Implementierung. Wenn das Anwendungsfenster diese Meldung empfängt, signalisiert es der Anwendung, die [**SnmpRecvMsg-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg) mithilfe des sitzungshandlers aufzugeben, das von [**SnmpCreateSession zurückgegeben wird.**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession)
 
-Die [**snmprecvmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg) -Funktion gibt zwei Entitäts Handles, ein Kontext Handle und das Handle für ein PDU zurück. Es wird empfohlen, dass die WinSNMP-Anwendung diese Ressourcen mit den Funktionen " [**snmpfreeentity**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreeentity)", " [**snmpfreecontext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreecontext)" und " [**snmpfreepdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreepdu) " freigibt.
+Die [**SnmpRecvMsg-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg) gibt zwei Entitätshandles, ein Kontexthandles und das Handle an ein PDU zurück. Es wird empfohlen, dass die WinSNMP-Anwendung diese Ressourcen mithilfe der [**Funktionen SnmpFreeEntity,**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreeentity) [**SnmpFreeContext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreecontext)und [**SnmpFreePdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreepdu) frei gibt.
 
-Weitere Informationen zum Verwalten der Zeit zwischen einem Aufruf der [**snmpsendmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg) -Funktion und dem Empfang der entsprechenden Antwort finden Sie unter [Informationen zur erneuten Übertragung](about-retransmission.md). Weitere Informationen zur Verwendung des Felds **Request \_ ID** PDU zum Abgleichen einer Antwort-PDU mit der Anforderungs-PDU finden Sie unter [übereinstimmende Antwort und Anforderungs-PDUs](matching-response-and-request-pdus.md).
+Weitere Informationen zum Verwalten der Zeit zwischen einem Aufruf der [**SnmpSendMsg-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg) und dem Empfang der entsprechenden Antwort finden Sie unter Informationen zur [Neuübertragung](about-retransmission.md)von . Weitere Informationen zur Verwendung des PDU-Felds der Anforderungs-ID zum Abgleichen eines Antwort-PDU mit dem Anforderungs-PDU finden Sie unter Abgleichen von [Antwort- und Anforderungs-PDUs.](matching-response-and-request-pdus.md) **\_**
 
- 
+ 
 
- 
+ 
 
 
 

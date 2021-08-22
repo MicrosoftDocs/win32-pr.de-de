@@ -1,8 +1,8 @@
 ---
-description: Sie können eine Remote Verbindung mit WMI mit VBScript herstellen, indem Sie ein Verbindungs Objekt erstellen. Dieses Objekt enthält den Namen des Computers, den WMI-Namespace, mit dem Sie eine Verbindung herstellen möchten, sowie alle relevanten Anmelde Informationen und Authentifizierungs Ebenen.
+description: Sie können eine Remoteverbindung mit WMI mit VBScript erstellen, indem Sie ein Verbindungsobjekt erstellen. Dieses Objekt enthält den Namen des Computers, den WMI-Namespace, mit dem Sie eine Verbindung herstellen möchten, sowie alle relevanten Anmeldeinformationen und Authentifizierungsebenen.
 ms.assetid: b2ad262b-148d-47cc-8be7-6df99245aa7f
 ms.tgt_platform: multiple
-title: Remote Verbindung mit WMI mit VBScript
+title: Herstellen einer Remoteverbindung mit WMI mit VBScript
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,22 +10,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 07cff2f0cd0ca06de059d9b39e36d715b5555eaa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ccdd4466273cdc3b49399abf30915a975418433183d821482a8fa92920d52d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345276"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118819688"
 ---
-# <a name="connecting-to-wmi-remotely-with-vbscript"></a>Remote Verbindung mit WMI mit VBScript
+# <a name="connecting-to-wmi-remotely-with-vbscript"></a>Herstellen einer Remoteverbindung mit WMI mit VBScript
 
-Sie können eine Remote Verbindung mit WMI mit VBScript herstellen, indem Sie ein Verbindungs Objekt erstellen. Dieses Objekt enthält den Namen des Computers, den WMI-Namespace, mit dem Sie eine Verbindung herstellen möchten, sowie alle relevanten Anmelde Informationen und Authentifizierungs Ebenen.
+Sie können eine Remoteverbindung mit WMI mit VBScript erstellen, indem Sie ein Verbindungsobjekt erstellen. Dieses Objekt enthält den Namen des Computers, den WMI-Namespace, mit dem Sie eine Verbindung herstellen möchten, sowie alle relevanten Anmeldeinformationen und Authentifizierungsebenen.
 
-**So stellen Sie eine Verbindung mit einem Remote System mithilfe von VBScript her**
+**So stellen Sie mit VBScript eine Verbindung mit einem Remotesystem herstellen**
 
-1.  Geben Sie die Verbindungsinformationen an, z. b. den Remote Computernamen, die Anmelde Informationen und die Authentifizierungs Ebene für die Verbindung.
+1.  Geben Sie die Verbindungsinformationen an, z. B. den Namen des Remotecomputers, die Anmeldeinformationen und die Authentifizierungsebene für die Verbindung.
 
-    Wenn Sie mit den gleichen Anmelde Informationen (Domäne und Benutzername), mit denen Sie angemeldet sind, eine Verbindung mit einem Remote Computer herstellen, können Sie die Verbindungsinformationen in einem [**GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject)-[Moniker](constructing-a-moniker-string.md)angeben, wie im folgenden Codebeispiel beschrieben.
+    Wenn Sie eine Verbindung mit einem Remotecomputer mit den gleichen Anmeldeinformationen (Domäne und Benutzername) herstellen, mit dem Sie angemeldet sind, können Sie die Verbindungsinformationen in einem [**GetObject-Moniker**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject)[](constructing-a-moniker-string.md)angeben, wie im folgenden Codebeispiel beschrieben.
 
     ```VB
     strComputer = "Computer_B"
@@ -34,13 +34,13 @@ Sie können eine Remote Verbindung mit WMI mit VBScript herstellen, indem Sie ei
 
     
 
-    Im Allgemeinen sollten Sie den WMI-Namespace angeben, mit dem auf dem Remote Computer eine Verbindung hergestellt werden soll. Dies liegt daran, dass es möglich ist, dass der Standard Namespace auf unterschiedlichen Computern nicht identisch ist. Durch die Angabe des Namespace wird sichergestellt, dass Sie eine Verbindung mit dem gleichen Namespace auf allen Computern herstellen.
+    Im Allgemeinen sollten Sie den WMI-Namespace angeben, mit dem auf dem Remotecomputer eine Verbindung hergestellt werden soll. Dies liegt daran, dass es möglich ist, dass der Standardnamespace auf verschiedenen Computern nicht identisch ist. Wenn Sie den Namespace angeben, stellen Sie sicher, dass Sie auf allen Computern eine Verbindung mit demselben Namespace herstellen.
 
-    Weitere Informationen zu VBScript-Konstanten und Skript Zeichenfolgen für die Verwendung der monikerverbindung finden Sie unter [Festlegen der standardmäßigen Prozess Sicherheitsstufe mithilfe von VBScript](setting-the-default-process-security-level-using-vbscript.md).
+    Weitere Informationen zu VBScript-Konstanten und Skriptzeichenfolgen für die Verwendung der Monikerverbindung finden Sie unter [Setting the Default Process Security Level Using VBScript](setting-the-default-process-security-level-using-vbscript.md).
 
-2.  Wenn Sie eine Verbindung mit einem Remote Computer in einer anderen Domäne herstellen oder einen anderen Benutzernamen und ein anderes Kennwort verwenden, müssen Sie die Methode " [**Swap. ConnectServer**](swbemlocator-connectserver.md) " verwenden.
+2.  Wenn Sie eine Verbindung mit einem Remotecomputer in einer anderen Domäne herstellen oder einen anderen Benutzernamen und ein anderes Kennwort verwenden, müssen Sie die [**SWbemLocator.ConnectServer-Methode**](swbemlocator-connectserver.md) verwenden.
 
-    Wie bei einem Moniker verwenden Sie **ConnectServer** , um die Anmelde Informationen, die Authentifizierungs Ebene und den Namespace für die Remote Verbindung anzugeben. Im folgenden Codebeispiel wird die Verwendung von ConnectServer für den Zugriff auf einen Remote Computer mithilfe eines Administrator Kontos und Kennworts beschrieben.
+    Wie bei einem Moniker verwenden Sie **ConnectServer,** um die Anmeldeinformationen, die Authentifizierungsebene und den Namespace für die Remoteverbindung anzugeben. Im folgenden Codebeispiel wird die Verwendung von ConnectServer für den Zugriff auf einen Remotecomputer mithilfe eines Administratorkontos und Kennworts beschrieben.
 
     ```VB
     strComputer = "Computer_B"
@@ -53,9 +53,9 @@ Sie können eine Remote Verbindung mit WMI mit VBScript herstellen, indem Sie ei
 
     
 
-3.  Wenn Sie die [**ConnectServer**](swbemlocator-connectserver.md) -Funktion für Remote Verbindungen verwenden, legen Sie Identitätswechsel und Authentifizierung für das Sicherheits Objekt fest, das durch einen aufrufswert von " [**Swap Services. Security**](swbemservices-security-.md)" abgerufen wird Sie können die Enumeration [wbemimpersonationlevelenum](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemimpersonationlevelenum) zum Angeben der Identitätswechsel Ebene verwenden.
+3.  Wenn Sie die [**ConnectServer-Funktion**](swbemlocator-connectserver.md) für Remoteverbindungen verwenden, legen Sie den Identitätswechsel und die Authentifizierung für das Sicherheitsobjekt fest, das durch einen Aufruf von [**SWbemServices.Security erhalten wurde.**](swbemservices-security-.md) Sie können die Enumeration [WbemImpersonationLevelEnum verwenden,](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemimpersonationlevelenum) um die Identitätswechselebene anzugeben.
 
-    Im folgenden Codebeispiel wird die Identitätswechsel Ebene für das vorherige VBScript-Codebeispiel festgelegt.
+    Das folgende Codebeispiel legt die Identitätswechselebene für das vorherige VBScript-Codebeispiel fest.
 
     ```VB
     objSWbemServices.Security_.ImpersonationLevel = 3
@@ -63,17 +63,17 @@ Sie können eine Remote Verbindung mit WMI mit VBScript herstellen, indem Sie ei
 
     
 
-    Beachten Sie, dass einige Verbindungen eine bestimmte Authentifizierungs Ebene erfordern. Weitere Informationen finden Sie unter [Festlegen der Prozesssicherheit für Client Anwendungen](setting-client-application-process-security.md) und [Sichern von Skript Clients](securing-scripting-clients.md).
+    Beachten Sie, dass einige Verbindungen eine bestimmte Authentifizierungsebene erfordern. Weitere Informationen finden Sie unter [Setting Client Application Process Security](setting-client-application-process-security.md) und [Securing Scripting Clients](securing-scripting-clients.md).
 
-    Insbesondere sollten Sie die Authentifizierungs Ebene auf **RPC \_ C \_ authn \_ Level \_ Pkt \_ Privacy** oder 6 festlegen, wenn der Namespace, für den Sie eine Verbindung mit dem Remote Computer herstellen, eine verschlüsselte Verbindung erfordert, bevor Daten zurückgegeben werden. Sie können diese Authentifizierungs Ebene auch dann verwenden, wenn Sie vom Namespace nicht benötigt wird. Dadurch wird sichergestellt, dass die Daten beim Überschreiten des Netzwerks verschlüsselt werden. Wenn Sie versuchen, eine niedrigere Authentifizierungs Ebene festzulegen, als zulässig ist, wird die Meldung "Zugriff verweigert" zurückgegeben. Weitere Informationen finden Sie unter [erfordern einer verschlüsselten Verbindung mit einem Namespace](requiring-an-encrypted-connection-to-a-namespace.md).
+    Insbesondere sollten Sie die Authentifizierungsebene auf **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY** oder 6 festlegen, wenn für den Namespace, mit dem Sie eine Verbindung auf dem Remotecomputer herstellen, eine verschlüsselte Verbindung erforderlich ist, bevor Daten zurückgeben werden. Sie können diese Authentifizierungsebene auch dann verwenden, wenn der Namespace sie nicht benötigt. Dadurch wird sichergestellt, dass Daten verschlüsselt werden, wenn sie das Netzwerk überqueren. Wenn Sie versuchen, eine niedrigere Authentifizierungsebene als zulässig zu setzen, wird eine Meldung zu verweigerten Zugriffen zurückgegeben. Weitere Informationen finden Sie unter [Erfordern einer verschlüsselten Verbindung mit einem Namespace.](requiring-an-encrypted-connection-to-a-namespace.md)
 
-Nachdem Sie die Verbindung hergestellt haben, können Sie weiterhin auf WMI-Daten zugreifen. Weitere Informationen finden Sie unter [WMI-Tasks für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md).
+Nachdem Sie die Verbindung hergestellt haben, können Sie weiterhin auf WMI-Daten zugreifen. Weitere Informationen finden Sie unter WMI Tasks for Scripts and Applications ( [WMI-Tasks für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)).
 
 ## <a name="examples"></a>Beispiele
 
-Ein umfangreicheres VBScript-Beispiel finden Sie im Abschnitt "Beispiele" auf der Referenzseite zu " [**mpbemlocator. ConnectServer**](swbemlocator-connectserver.md) ".
+Ein größeres VBScript-Beispiel finden Sie im Abschnitt Beispiele auf der [**Referenzseite zu SWbemLocator.ConnectServer.**](swbemlocator-connectserver.md)
 
-Im folgenden VBScript-Codebeispiel wird eine Verbindung mit einer Gruppe von Remote Computern in derselben Domäne hergestellt, indem ein Array von Remote Computernamen erstellt und dann die Namen der Plug & Play Geräte – Instanzen von [**Win32 \_ pnptity**](/windows/desktop/CIMWin32Prov/win32-pnpentity)– auf den einzelnen Computern angezeigt werden. Zum Ausführen des folgenden Skripts müssen Sie Administrator auf den Remote Computern sein. Beachten Sie, dass \\ \\ vor dem Hinzufügen des Remote Computer namens durch das Skript nach der Einstellung der Identitätswechsel Ebene "" erforderlich ist. Weitere Informationen zu WMI-Pfaden finden Sie unter [beschreiben des Speicher Orts eines WMI-Objekts](describing-the-location-of-a-wmi-object.md).
+The following VBScript code example connects to a group of remote computers in the same domain by creating an array of remote computer names and then displaying names of the Plug and Play devices—instances of [**Win32\_PnPEntity**](/windows/desktop/CIMWin32Prov/win32-pnpentity)—on each computer. Zum Ausführen des folgenden Skripts müssen Sie Administrator auf den Remotecomputern sein. Beachten Sie, dass " " erforderlich ist, bevor der Name des Remotecomputers vom Skript nach der Einstellung für die \\ \\ Identitätswechselebene hinzugefügt wird. Weitere Informationen zu WMI-Pfaden finden Sie unter [Beschreiben des Speicherorts eines WMI-Objekts.](describing-the-location-of-a-wmi-object.md)
 
 
 ```VB
@@ -99,7 +99,7 @@ Next
 
 
 
-Mithilfe des folgenden VBScript-Code Beispiels können Sie eine Verbindung mit einem Remote Computer mithilfe verschiedener Anmelde Informationen herstellen. Beispielsweise ein Remote Computer in einer anderen Domäne oder eine Verbindung mit einem Remote Computer, der einen anderen Benutzernamen und ein anderes Kennwort benötigt. Verwenden Sie in diesem Fall die Verbindung " [**Swap Services. ConnectServer**](swbemlocator-connectserver.md) ".
+Im folgenden VBScript-Codebeispiel können Sie mithilfe verschiedener Anmeldeinformationen eine Verbindung mit einem Remotecomputer herstellen. Beispielsweise ein Remotecomputer in einer anderen Domäne oder das Herstellen einer Verbindung mit einem Remotecomputer, der einen anderen Benutzernamen und ein anderes Kennwort erfordert. Verwenden Sie in diesem Fall die [**SWbemServices.ConnectServer-Verbindung.**](swbemlocator-connectserver.md)
 
 
 ```VB
@@ -134,7 +134,7 @@ Next
 
 <dl> <dt>
 
-[Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md)
+[Herstellen einer Verbindung mit WMI auf einem Remotecomputer](connecting-to-wmi-on-a-remote-computer.md)
 </dt> </dl>
 
  

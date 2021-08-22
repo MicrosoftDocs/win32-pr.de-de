@@ -1,6 +1,6 @@
 ---
-title: log2 (corecrt \_ Math. h)
-description: Gibt den Logarithmus zur Basis 2 des angegebenen-Werts zurück.
+title: log2 (Corecrt \_ math.h)
+description: Gibt den Logarithmus der Basis 2 des angegebenen Werts zurück.
 ms.assetid: 0bc75697-92c0-4de5-89bd-2ce824baa03e
 keywords:
 - log2 HLSL
@@ -14,20 +14,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 81692071b7886fa3e3096d785bccf80c7eff937a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5f606c668e20ef12ba4d1272cb7f8bd1e6060af18c78738801e4ea17ea29b6de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118514101"
 ---
 # <a name="log2"></a>log2
 
-Gibt den Logarithmus zur Basis 2 des angegebenen-Werts zurück.
+Gibt den Logarithmus der Basis 2 des angegebenen Werts zurück.
 
 
 
-| *ret* log2 (*x*) |
+| *ret* log2(*x*) |
 |-----------------|
 
 
@@ -38,9 +38,9 @@ Gibt den Logarithmus zur Basis 2 des angegebenen-Werts zurück.
 
 
 
-| Element                                                   | BESCHREIBUNG                            |
+| Element                                                   | Beschreibung                            |
 |--------------------------------------------------------|----------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[im \] angegebenen Wert.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der angegebene Wert.<br/> |
 
 
 
@@ -48,7 +48,7 @@ Gibt den Logarithmus zur Basis 2 des angegebenen-Werts zurück.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Logarithmus zur Basis 2 des *x* -Parameters. Wenn der *x* -Parameter negativ ist, gibt diese Funktion unbegrenzt zurück. Wenn der *x* -Parameter 0 (null) ist, gibt diese Funktion + INF zurück.
+Der Logarithmus der Basis 2 des *x-Parameters.* Wenn der *x-Parameter* negativ ist, gibt diese Funktion einen unbestimmten Wert zurück. Wenn der *x-Parameter* 0 ist, gibt diese Funktion +INF zurück.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -56,43 +56,43 @@ Der Logarithmus zur Basis 2 des *x* -Parameters. Wenn der *x* -Parameter negativ
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                           |
 |-------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------------|
-| *x*   | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
-| *TZI* | identisch mit Eingabe *x*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *x* |
+| *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
+| *Ret* | identisch mit Eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(n) wie Eingabe *x* |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt           |
 |------------------------------------------------------------------------------------|---------------------|
-| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | ja                 |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja ( \_ nur vs 1 \_ 1) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja                 |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja (nur \_ im Vergleich \_ zu 1 1) |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Corecrt \_ Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Corecrt \_ math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

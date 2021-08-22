@@ -1,7 +1,7 @@
 ---
-description: Die isendofstreamdelivered-Methode fragt ab, ob das EC \_ Complete-Ereignis an den Filter Graph-Manager übermittelt wurde.
+description: Die IsEndOfStreamDelivered-Methode fragt ab, ob das \_ EC COMPLETE-Ereignis an den Filterdiagramm-Manager übermittelt wurde.
 ms.assetid: 13138626-35b0-4da1-9c7e-5d22d86ad2e3
-title: Cbasererererer. isendobstreamdelivered-Methode (renbase. h)
+title: CBaseRenderer.IsEndOfStreamDelivered-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f60216afc6481411010fb2f2b0618c36a7d7acf4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4f15c2bca14e6c0f55f46441bbb4de362e6375d0b67f3012a4ad234a9366b188
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954879"
 ---
-# <a name="cbaserendererisendofstreamdelivered-method"></a>Cbaserderderer. isendobstreamdelivered-Methode
+# <a name="cbaserendererisendofstreamdelivered-method"></a>CBaseRenderer.IsEndOfStreamDelivered-Methode
 
-Die- `IsEndOfStreamDelivered` Methode fragt ab, ob das EC \_ Complete-Ereignis an den Filter Graph-Manager übermittelt wurde.
+Die `IsEndOfStreamDelivered` -Methode fragt ab, ob das EC \_ COMPLETE-Ereignis an den Filterdiagramm-Manager übermittelt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Flag " [**cbaserenderer:: m \_ beosdelivered**](cbaserenderer-m-beosdelivered.md) " zurück.
+Gibt das [**Flag CBaseRenderer::m \_ bEOSDelivered**](cbaserenderer-m-beosdelivered.md) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt das Flag " [**cbaserenderer:: m \_ beosdelivered**](cbaserenderer-m-beosdel
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt das Flag " [**cbaserenderer:: m \_ beosdelivered**](cbaserenderer-m-beosdel
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

@@ -1,34 +1,34 @@
 ---
-description: In diesem Abschnitt werden die für Internetwork Packet Exchange/sequenzierte Paket Austausch (IPX/SPX) spezifischen Winsock-Erweiterungen beschrieben. Außerdem werden Aspekte von Basis-Winsock-Funktionen beschrieben, die entweder besondere Überlegungen erfordern oder eindeutiges Verhalten aufweisen können.
+description: In diesem Abschnitt werden Winsock-Erweiterungen beschrieben, die spezifisch für Internetwork Packet Exchange/Sequenced Packet Exchange (IPX/SPX) sind. Außerdem werden Aspekte von Winsock-Basisfunktionen beschrieben, die entweder besondere Überlegungen erfordern oder ein eindeutiges Verhalten aufweisen können.
 ms.assetid: 8447e063-767a-40b8-b094-724393e85be2
-title: WinSock-IPX/SPX-Anhang
+title: Winsock IPX/SPX Anhang
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c533781fa07c997d7f2363dd6b00d6b4213f22e3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 74e5a97b90dc29f577bf2335b93a15fb3fb2c87c8362e0585151e1ac8b1e3393
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354562"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051348"
 ---
-# <a name="winsock-ipxspx-annex"></a>WinSock-IPX/SPX-Anhang
+# <a name="winsock-ipxspx-annex"></a>Winsock IPX/SPX Anhang
 
-In diesem Abschnitt werden die für Internetwork Packet Exchange/sequenzierte Paket Austausch (IPX/SPX) spezifischen Winsock-Erweiterungen beschrieben. Außerdem werden Aspekte von Basis-Winsock-Funktionen beschrieben, die entweder besondere Überlegungen erfordern oder eindeutiges Verhalten aufweisen können.
+In diesem Abschnitt werden Winsock-Erweiterungen beschrieben, die spezifisch für Internetwork Packet Exchange/Sequenced Packet Exchange (IPX/SPX) sind. Außerdem werden Aspekte von Winsock-Basisfunktionen beschrieben, die entweder besondere Überlegungen erfordern oder ein eindeutiges Verhalten aufweisen können.
 
 
 
-| Element          | BESCHREIBUNG                                                                                                                                     |
+| Element          | Beschreibung                                                                                                                                     |
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| Protokoll Name (n) | IPX, SPX                                                                                                                                        |
-| BESCHREIBUNG      | Bietet Transportdienste über die IPX-Netzwerkebene: IPX für unzuverlässige Datagramme, SPX für zuverlässige, Verbindungs orientierte Nachrichtenströme. |
-| Adressfamilie   | AF- \_ IPX                                                                                                                                         |
-| Headerdatei      | Wsipx. h                                                                                                                                         |
+| Protokollnamen | IPX, SPX                                                                                                                                        |
+| Beschreibung      | Stellt Transportdienste über die IPX-Netzwerkebene bereit: IPX für unzuverlässige Datagramme, SPX für zuverlässige, verbindungsorientierte Nachrichtenströme. |
+| Adressfamilie   | AF \_ IPX                                                                                                                                         |
+| Headerdatei      | Wsipx.h                                                                                                                                         |
 
 
 
  
 
-In diesem Abschnitt wird erläutert, wie Winsock mit der IPX-Familie von Protokollen verwendet wird, sodass herkömmliche IPX-Anwendungen in Winsock portiert werden können. IPX-Netzwerke funktionieren in einer grundlegenden Weise als IP-Netzwerke, sodass solche Unterschiede bei der Verwendung von IPX/SPX berücksichtigt werden müssen.
+In diesem Abschnitt wird erläutert, wie Sie Winsock mit der IPX-Protokollfamilie verwenden, sodass herkömmliche IPX-Anwendungen nach Winsock portiert werden können. IPX-Netzwerke funktionieren grundlegend anders als IP-Netzwerke. Daher müssen solche Unterschiede bei der Verwendung von IPX/SPX berücksichtigt werden.
 
  
 

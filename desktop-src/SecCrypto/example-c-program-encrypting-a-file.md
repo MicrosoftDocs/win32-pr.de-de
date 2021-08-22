@@ -1,25 +1,25 @@
 ---
-description: Im folgenden Beispiel wird eine Datendatei verschlüsselt. Im Beispiel wird interaktiv angefordert, dass der Name der Datei, die Klartext enthält, verschlüsselt werden soll, und der Name einer Datei, in der die verschlüsselten Daten geschrieben werden sollen.
+description: Im folgenden Beispiel wird eine Datendatei verschlüsselt. Das Beispiel fordert interaktiv den Namen der Datei an, die den zu verschlüsselnden Klartext enthält, und den Namen einer Datei, in die die verschlüsselten Daten geschrieben werden sollen.
 ms.assetid: a21dd25a-ac3c-483b-b270-6d86f10ae0a0
-title: 'Beispiel-C-Programm: Verschlüsseln einer Datei'
+title: 'Beispiel C-Programm: Verschlüsseln einer Datei'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a4f20d05b1456c6b38783bc9ec10d4c26633c2d8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a5b67729c5b6068d1c85b3ecdf1b345b89c9554166d1942f266966f5c3702499
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528715"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007658"
 ---
-# <a name="example-c-program-encrypting-a-file"></a>Beispiel-C-Programm: Verschlüsseln einer Datei
+# <a name="example-c-program-encrypting-a-file"></a>Beispiel C-Programm: Verschlüsseln einer Datei
 
-Im folgenden Beispiel wird eine Datendatei verschlüsselt. Im Beispiel wird interaktiv angefordert, dass der Name der Datei, die [*Klartext*](../secgloss/p-gly.md) enthält, verschlüsselt werden soll, und der Name einer Datei, in der die verschlüsselten Daten geschrieben werden sollen.
+Im folgenden Beispiel wird eine Datendatei verschlüsselt. Das Beispiel fordert interaktiv den Namen [](../secgloss/p-gly.md) der Datei an, die den zu verschlüsselnden Klartext enthält, und den Namen einer Datei, in die die verschlüsselten Daten geschrieben werden sollen.
 
-Im Beispiel wird der Benutzer zur Eingabe der Namen einer Eingabedatei und einer Ausgabedatei aufgefordert. Außerdem wird der Benutzer aufgefordert, anzugeben, ob ein Kennwort verwendet werden soll, um den Verschlüsselungs Sitzungsschlüssel zu erstellen. Wenn ein Kennwort bei der Verschlüsselung der Daten verwendet werden soll, muss das gleiche Kennwort in dem Programm verwendet werden, das die Datei entschlüsselt. Weitere Informationen finden Sie unter [Beispiel C-Programm: Entschlüsseln einer Datei](example-c-program-decrypting-a-file.md).
+Im Beispiel wird der Benutzer zur Eingabe der Namen einer Eingabedatei und einer Ausgabedatei aufgefordert. Außerdem wird der Benutzer gefragt, ob zum Erstellen des Verschlüsselungssitzungsschlüssels ein Kennwort verwendet werden soll. Wenn ein Kennwort bei der Verschlüsselung der Daten verwendet werden soll, muss dasselbe Kennwort in dem Programm verwendet werden, das die Datei entschlüsselt. Weitere Informationen finden Sie unter [Beispiel C-Programm: Entschlüsseln einer Datei](example-c-program-decrypting-a-file.md).
 
-Aufgrund der Änderung der Einschränkungen bei der Exportkontrolle können sich der standardmäßige [*Kryptografiedienstanbieter*](../secgloss/c-gly.md) (CSP) und die Standard [*Schlüssellänge*](../secgloss/k-gly.md) zwischen Betriebssystemversionen ändern. Es ist wichtig, dass sowohl die Verschlüsselung als auch die Entschlüsselung denselben CSP verwenden und dass die Schlüssellänge explizit festgelegt wird, um die Interoperabilität auf verschiedenen Betriebssystemplattformen sicherzustellen.
+Aufgrund geänderter Exportkontrolleinschränkungen können sich der Standard-Kryptografiedienstanbieter (Cryptographic [*Service Provider,*](../secgloss/c-gly.md) CSP) und die Standardschlüssellänge zwischen Betriebssystemversionen ändern. [](../secgloss/k-gly.md) Es ist wichtig, dass sowohl die Verschlüsselung als auch die Entschlüsselung denselben CSP verwenden und dass die Schlüssellänge explizit festgelegt wird, um die Interoperabilität auf verschiedenen Betriebssystemplattformen sicherzustellen.
 
-In diesem Beispiel wird die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist im Beispiel enthalten. Der Code für dieses und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+In diesem Beispiel wird die [**MyHandleError-Funktion verwendet.**](myhandleerror.md) Der Code für diese Funktion ist im Beispiel enthalten. Der Code für diese und andere Hilfsfunktionen ist auch unter Universell [Functions aufgeführt.](general-purpose-functions.md)
 
 
 ```C++

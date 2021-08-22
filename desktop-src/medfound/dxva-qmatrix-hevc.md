@@ -1,7 +1,7 @@
 ---
-description: Definiert eine quantisierungsmatrix.
+description: Definiert eine Quantisierungsmatrix.
 ms.assetid: 44a5c81f-98d8-4b16-a467-433bae781691
-title: DXVA_Qmatrix_HEVC-Struktur (DXVA. h)
+title: DXVA_Qmatrix_HEVC -Struktur (Dxva.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - dxva.h
-ms.openlocfilehash: 2aba66636717eee5deb04032d9408ace495e1edf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5d71b392d41c123eb0106d08f1a75d2a5147977b106c811e0bf0786ab2acff2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524547"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974589"
 ---
-# <a name="dxva_qmatrix_hevc-structure"></a>DXVA- \_ QMatrix \_ hevc-Struktur
+# <a name="dxva_qmatrix_hevc-structure"></a>DXVA \_ Qmatrix \_ HEVC-Struktur
 
-Definiert eine quantisierungsmatrix.
+Definiert eine Quantisierungsmatrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,42 +47,42 @@ typedef struct _DXVA_Qmatrix_HEVC {
 **ucScalingLists0 \[ 6 \] \[ 16\]**
 </dt> <dd>
 
-Enthält die Skalierungs Listen für den 4 x 4-Skalierungs Prozess entsprechend der skinglist \[ 0 \] \[ MatrixID \] \[ i \] in der hevc-Spezifikation, wobei MatrixID im Bereich von 0 bis 5 (einschließlich) liegt, und ich liegt im Bereich von 0 bis 15 (einschließlich).
+Enthält die Skalierungslisten für den 4x4-Skalierungsprozess, die ScalingList \[ 0 \] \[ MatrixID i in der HEVC-Spezifikation entsprechen, wobei MatrixID im Bereich von 0 bis 5 liegt ( einschließlich) und i im Bereich von 0 bis \] \[ \] 15 liegt (einschließlich).
 
 </dd> <dt>
 
 **ucScalingLists1 \[ 6 \] \[ 64\]**
 </dt> <dd>
 
-Enthält die Skalierungs Listen für den 8x8-Skalierungs Prozess entsprechend der skinglist \[ 1 \] \[ MatrixID \] \[ i \] in der hevc-Spezifikation, wobei MatrixID im Bereich von 0 bis 5 (einschließlich) liegt, und ich liegt im Bereich von 0 bis 63 (einschließlich).
+Enthält die Skalierungslisten für den 8x8-Skalierungsprozess, die scalingList \[ 1 \] \[ MatrixID i in der HEVC-Spezifikation entsprechen, wobei MatrixID im Bereich von 0 bis 5 liegt ( einschließlich) und i im Bereich von 0 bis \] \[ \] 63 liegt (einschließlich).
 
 </dd> <dt>
 
 **ucScalingLists2 \[ 6 \] \[ 64\]**
 </dt> <dd>
 
-Enthält die Skalierungs Listen für den 8x8-Skalierungs Prozess entsprechend der skinglist \[ 2 \] \[ MatrixID \] \[ i \] in der hevc-Spezifikation, wobei MatrixID im Bereich von 0 bis 5 (einschließlich) liegt, und ich liegt im Bereich von 0 bis 63 (einschließlich).
+Enthält die Skalierungslisten für den 8x8-Skalierungsprozess, die ScalingList \[ 2 \] \[ MatrixID i in der HEVC-Spezifikation entsprechen, wobei MatrixID im Bereich von 0 bis 5 liegt ( einschließlich) und i im Bereich von 0 bis \] \[ \] 63 liegt (einschließlich).
 
 </dd> <dt>
 
 **ucScalingLists3 \[ 2 \] \[ 64\]**
 </dt> <dd>
 
-Enthält die Skalierungs Listen für den 8x8-Skalierungs Prozess entsprechend der skinglist \[ 3 \] \[ MatrixID \] \[ i \] in der hevc-Spezifikation, wobei MatrixID im Bereich zwischen 0 und 1 (einschließlich) liegt. der Bereich liegt zwischen 0 und 63 (einschließlich).
+Enthält die Skalierungslisten für den 8x8-Skalierungsprozess, die scalingList \[ 3 \] \[ MatrixID i in der HEVC-Spezifikation entsprechen, wobei MatrixID im Bereich von 0 bis 1 liegt ( einschließlich) und i im Bereich von 0 bis \] \[ \] 63 liegt (einschließlich).
 
 </dd> <dt>
 
 **ucScalingListDCCoefSizeID2**
 </dt> <dd>
 
-Enthält den DC-Wert der Skalierungs Liste für die 16x16-Größe mit der sizeid gleich 2 und entspricht der Skalierungs \_ Liste \_ DC \_ coef \_ Minus8 \[ sizeid − 2 \] \[ MatrixID \] + 8 mit sizeid ist gleich 2 und MatrixID im Bereich von 0 bis 5 (einschließlich) in der hevc-Spezifikation.
+Enthält den DC-Wert der Skalierungsliste für die Größe 16x16 mit sizeID gleich 2 und entspricht der Skalierungsliste \_ \_ dc \_ coef \_ minus8 \[ sizeID − 2 matrixID +8 mit sizeID gleich 2 und matrixID im Bereich von 0 bis \] \[ \] 5 (einschließlich) in der HEVC-Spezifikation.
 
 </dd> <dt>
 
 **ucScalingListDCCoefSizeID3**
 </dt> <dd>
 
-Enthält den DC-Wert der Skalierungs Liste für die Größe 32x32 mit sizeid gleich 3 und entspricht dem Skalierungs \_ Listen- \_ DC \_ coef \_ Minus8 \[ sizeid − 2 \] \[ MatrixID \] + 8 mit sizeid, gleich 3 und MatrixID im Bereich von 0 bis 1 (einschließlich) in der hevc-Spezifikation.
+Enthält den DC-Wert der Skalierungsliste für die Größe 32x32 mit sizeID gleich 3 und entspricht der Skalierungsliste \_ \_ dc \_ coef \_ minus8 \[ sizeID = 2 matrixID +8 mit sizeID gleich 3 und matrixID im Bereich von 0 bis \] \[ \] 1 (einschließlich) in der HEVC-Spezifikation.
 
 </dd> </dl>
 
@@ -92,13 +92,13 @@ Enthält den DC-Wert der Skalierungs Liste für die Größe 32x32 mit sizeid gle
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>DXVA. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Dxva.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

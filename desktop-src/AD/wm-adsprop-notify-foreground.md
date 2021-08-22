@@ -1,10 +1,10 @@
 ---
-title: WM_ADSPROP_NOTIFY_FOREGROUND Meldung (adsprop. h)
-description: Die "WM \_ adsprop notify"- \_ \_ Vordergrund Meldung wird intern vom Benachrichtigungs Objekt verwendet.
+title: WM_ADSPROP_NOTIFY_FOREGROUND Nachricht (Adsprop.h)
+description: Die WM \_ ADSPROP \_ NOTIFY \_ FOREGROUND-Nachricht wird intern vom Benachrichtigungsobjekt verwendet.
 ms.assetid: c984edd5-deca-490b-ac46-846a365d20c4
 ms.tgt_platform: multiple
 keywords:
-- WM_ADSPROP_NOTIFY_FOREGROUND Meldung Active Directory
+- WM_ADSPROP_NOTIFY_FOREGROUND-Meldung Active Directory
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aa901d31407a4f3ce11e86bdda94f98e45a1096f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a8e7cf7ce67a7db18855bfd72678c6194628c46771f9add22c1f71d4ec7be12c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024308"
 ---
-# <a name="wm_adsprop_notify_foreground-message"></a>"WM \_ adsprop notify"- \_ \_ Vordergrund Meldung
+# <a name="wm_adsprop_notify_foreground-message"></a>WM \_ ADSPROP \_ NOTIFY \_ FOREGROUND-Nachricht
 
-Die " **WM \_ adsprop notify"- \_ \_ Vordergrund** Meldung wird intern vom Benachrichtigungs Objekt verwendet.
+Die **WM \_ ADSPROP NOTIFY \_ \_ FOREGROUND-Nachricht** wird intern vom Benachrichtigungsobjekt verwendet.
 
 
 ```C++
@@ -41,24 +41,24 @@ WM_ADSPROP_NOTIFY_FOREGROUND
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
@@ -74,7 +74,7 @@ Diese Nachricht weist keinen Rückgabewert auf.
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Adsprop. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Adsprop.h</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die IsConnected-Methode bestimmt, ob die PIN mit einer anderen Pin verbunden ist.
+description: Die IsConnected-Methode bestimmt, ob der Pin mit einem anderen Pin verbunden ist.
 ms.assetid: d8b9b43b-6f8d-4d75-9688-f0cee3794a78
-title: Cbasepin. IsConnected-Methode (amfilter. h)
+title: CBasePin.IsConnected-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b857e1ceff4844d66c55cf729a3d2b9771d48846
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 95bfbe3613482d879bde4945d32e3df590c9bd5491b9f274442f3315771f9f96
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955179"
 ---
-# <a name="cbasepinisconnected-method"></a>Cbasepin. IsConnected-Methode
+# <a name="cbasepinisconnected-method"></a>CBasePin.IsConnected-Methode
 
-Die- `IsConnected` Methode bestimmt, ob die PIN mit einer anderen Pin verbunden ist.
+Die `IsConnected` -Methode bestimmt, ob der Pin mit einem anderen Pin verbunden ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " **true** " zurück, wenn die PIN verbunden ist. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE zurück,** wenn der Pin verbunden ist. Andernfalls wird **FALSE zurückgegeben.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt " **true** " zurück, wenn die PIN verbunden ist. Andernfalls wird **false*
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt " **true** " zurück, wenn die PIN verbunden ist. Andernfalls wird **false*
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

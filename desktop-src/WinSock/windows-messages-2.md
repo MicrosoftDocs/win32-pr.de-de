@@ -1,21 +1,21 @@
 ---
-description: In Windows Sockets 1,1 wurde der Async-Select-Mechanismus eingeführt, um Netzwerk Ereignis Hinweise bereitzustellen, für die weder Abruf noch Blockierung aufgetreten ist.
+description: Windows Mit Sockets 1.1 wurde der Async-Select-Mechanismus eingeführt, um Netzwerkereignisanzeigen ohne Abruf oder Blockierung zu ermöglichen.
 ms.assetid: d536f796-c532-4b57-8dc7-3415661b736b
 title: Windows-Meldungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dac0f60bb597a7dd92c0039dd805a971bb8587ce
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7bab33ecb4d2898c8f1e363ab19ad425503e9d005bf24229a29f581aadf1788f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118993210"
 ---
 # <a name="windows-messages"></a>Windows-Meldungen
 
-In Windows Sockets 1,1 wurde der Async-Select-Mechanismus eingeführt, um Netzwerk Ereignis Hinweise bereitzustellen, für die weder Abruf noch Blockierung aufgetreten ist. Die [**wspasyncselect**](/previous-versions/windows/desktop/legacy/ms742267(v=vs.85)) -Funktion wird verwendet, um ein Interesse an einem oder mehreren Netzwerk Ereignissen zu registrieren, wie im vorherigen Abschnitt aufgeführt, und stellt ein Fenster Handle bereit, das für die Benachrichtigung verwendet wird. Wenn ein gedesigniertes Netzwerk Ereignis auftritt, wird eine vom Client angegebene Windows-Meldung an das angegebene Fenster gesendet. Der Dienstanbieter muss die [**wpupostmessage**](/windows/desktop/api/Ws2spi/nf-ws2spi-wpupostmessage) -Funktion verwenden, um dies zu erreichen.
+Windows Mit Sockets 1.1 wurde der Async-Select-Mechanismus eingeführt, um Netzwerkereignisanzeigen ohne Abruf oder Blockierung zu ermöglichen. Die [**WSPAsyncSelect-Funktion**](/previous-versions/windows/desktop/legacy/ms742267(v=vs.85)) wird verwendet, um ein Interesse an einem oder mehr Netzwerkereignissen zu registrieren, wie in der vorherigen Liste aufgeführt, und um ein Fensterhand handle für die Benachrichtigung bereitstellen. Wenn ein nicht eintretendes Netzwerkereignis auftritt, wird eine vom Client Windows Nachricht an das angegebene Fenster gesendet. Der Dienstanbieter muss dazu die [**WPUPostMessage-Funktion**](/windows/desktop/api/Ws2spi/nf-ws2spi-wpupostmessage) verwenden.
 
-In Windows ist dies möglicherweise nicht der effizienteste Benachrichtigungs Mechanismus und für Daemons und Dienste, die keine Fenster öffnen möchten, unpraktisch. Das in den folgenden beschriebenen Verfahren zum Signalisieren von Ereignis Objekten wird eingeführt, um dieses Problem zu beheben.
+In Windows ist dies möglicherweise nicht der effizienteste Benachrichtigungsmechanismus und un umständlich für Daemons und Dienste, die keine Fenster öffnen möchten. Der im Folgenden beschriebene Signalisierungsmechanismus für Ereignisobjekt wird eingeführt, um dieses Problem zu lösen.
 
  
 

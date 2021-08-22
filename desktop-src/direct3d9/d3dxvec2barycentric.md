@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVec2BaryCentric-Funktion (D3dx9math.h): Gibt unter Verwendung der angegebenen 2D-Vektoren einen Punkt in baryzentrierten Koordinaten zurück.'
+description: 'D3DXVec2BaryCentric-Funktion (D3dx9math.h): Gibt unter Verwendung der angegebenen 2D-Vektoren einen Punkt in barycentric-Koordinaten zurück.'
 ms.assetid: afbffe6d-d786-4d65-b737-ae201613d1ac
 title: D3DXVec2BaryCentric-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: c3210624087a3d1d5a612ba1eb628e7d85ba4fea
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0dee8da578524bd9f95efb10fe4af091facc83552e07c92d248de6c7fd9a0e80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119044658"
 ---
 # <a name="d3dxvec2barycentric-function-d3dx9mathh"></a>D3DXVec2BaryCentric-Funktion (D3dx9math.h)
 
-Gibt unter Verwendung der angegebenen 2D-Vektoren einen Punkt in baryzentrierten Koordinaten zurück.
+Gibt unter Verwendung der angegebenen 2D-Vektoren einen Punkt in Barycentric-Koordinaten zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -105,7 +105,7 @@ Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***
 
 Zeiger auf eine [**D3DXVECTOR2-Struktur**](d3dxvector2.md) in baryzentrischen Koordinaten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die **D3DXVec2BaryCentric-Funktion** bietet eine Möglichkeit, Punkte in und um ein Dreieck zu verstehen, unabhängig davon, wo sich das Dreieck tatsächlich befindet. Diese Funktion gibt den resultierenden Punkt mithilfe der folgenden Gleichung zurück: V1 + f(V2-V1) + g(V3-V1).
 
@@ -128,7 +128,7 @@ Barycentric-Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

@@ -3,48 +3,48 @@ title: Language Strings
 description: Language Strings
 ms.assetid: 625f7e95-0d21-4e16-8323-0f6301a04b30
 keywords:
-- Windows Media-Format-SDK, sprach Zeichenfolgen
-- Advanced Systems Format (ASF), sprach Zeichenfolgen
-- ASF (Advanced Systems Format), sprach Zeichenfolgen
+- Windows Medienformat-SDK, Sprachzeichenfolgen
+- Advanced Systems Format (ASF), Sprachzeichenfolgen
+- ASF (Advanced Systems Format), Sprachzeichenfolgen
 - Sprachezeichenfolgen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 42cc82437c49feb82eac40ec5d056bbd98d99987
-ms.sourcegitcommit: 80d74c0bf4fc402865a1ad223480abe1ce4d1115
+ms.openlocfilehash: 5fbf6abfb291e111231d2bf2641633f9dc15372b3c9abb422fb5484f8e586175
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "104208745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119027528"
 ---
 # <a name="language-strings"></a>Language Strings
 
-Die Funktionen für die Unterstützung mehrerer Sprachen des SDK für das Windows Media-Format verwenden die mit RFC 1766 kompatiblen sprach Zeichenfolgen. In der folgenden Tabelle sind die häufig unterstützten sprach Zeichenfolgen aufgeführt.
+Die Funktionen zur Unterstützung mehrerer Sprachen des Windows Media Format SDK verwenden Sprachzeichenfolgen, die mit RFC 1766 konform sind. In der folgenden Tabelle sind die häufig unterstützten Sprachzeichenfolgen aufgeführt.
 
 
 
 | Sprachenzeichenfolge | BESCHREIBUNG                  |
 |-----------------|------------------------------|
 | af              | Afrikaans                    |
-| AR-AE           | Arabisch (Vereinigte Arabische Emirate)              |
-| AR-BH           | Arabisch (Königreich, Bahrain)  |
-| ar-DZ           | Arabisch (Algerien)             |
-| AR-z           | Arabisch (Ägypten)               |
-| AR-IQ           | Arabisch (Irak)                |
-| AR-Jo           | Arabisch (Jordanien)              |
-| AR-kW           | Arabisch (Kuwait)              |
-| AR-lb           | Arabisch (Libanon)             |
-| AR-ly           | Arabisch (Libyen)               |
-| AR-MA           | Arabisch (Marokko)             |
-| AR-OM           | Arabisch (Oman)                |
-| AR-QA           | Arabisch (Katar)               |
-| AR-SA           | Arabisch (Saudi-Arabien)        |
-| ar-SY           | Arabisch (Syrien)               |
-| AR-TN           | Arabisch (Tunesien)             |
-| AR-Ye           | Arabisch (Jemen)               |
+| ar-ae           | Arabisch (Vereinigte Arabische Emirate)              |
+| ar-wie           | Arabisch (Großbritannien)  |
+| ar-mail           | Arabisch (Algerien)             |
+| ar-eg           | Arabisch (Ägypten)               |
+| ar-iq           | Arabisch (Irak)                |
+| ar-jo           | Arabisch (Jordanien)              |
+| ar-kw           | Arabisch (Kuwait)              |
+| ar-lb           | Arabisch (Libanon)             |
+| ar-ly           | Arabisch (Libyen)               |
+| ar-ma           | Arabisch (Marokko)             |
+| ar-om           | Arabisch (Oman)                |
+| ar-qa           | Arabisch (Katar)               |
+| ar-sa           | Arabisch (Saudi-Arabien)        |
+| ar-sy           | Arabisch (Syrien)               |
+| ar-tn           | Arabisch (Tunesien)             |
+| ar-ye           | Arabisch (Jemen)               |
 | ar              | Arabisch                       |
 | as              | Assamesisch                     |
 | az              | Aserbaidschanisch                  |
-| werde              | Belarussisch                   |
+| Werden              | Belarussisch                   |
 | bg              | Bulgarisch                    |
 | bn              | Bengalisch                       |
 | ca              | Katalanisch                      |
@@ -52,41 +52,41 @@ Die Funktionen für die Unterstützung mehrerer Sprachen des SDK für das Window
 | da              | Dänisch                       |
 | de-at           | Deutsch (Österreich)             |
 | de-ch           | Deutsch (Schweiz)         |
-| de-Li           | Deutsch (Liechtenstein)       |
+| de-li           | Deutsch (Liechtenstein)       |
 | de-lu           | Deutsch (Luxemburg)          |
 | de              | Deutsch (Deutschland)             |
 | div             | Divehi                       |
 | el              | Griechisch                        |
 | en-au           | Englisch (Australien)          |
-| de-BZ           | Englisch (Belize)             |
+| en-bz           | Englisch (Belize)             |
 | en-ca           | Englisch (Kanada)             |
 | en-gb           | Walisisch (Großbritannien)     |
-| en-IE           | Englisch (Irland)            |
-| en-JM           | Englisch (Jamaika)            |
+| en-ie           | Englisch (Irland)            |
+| en-jm           | Englisch (Jamaika)            |
 | en-nz           | Englisch (Neuseeland)        |
-| s-pH           | Englisch (Philippinen)        |
-| de-TT           | Englisch (Trinidad)           |
+| en-ph           | Englisch (Philippinen)        |
+| en-tt           | Englisch ():(English)           |
 | de-de           | Englisch (USA)      |
 | en-za           | Englisch (Südafrika)       |
-| de-ZW           | Englisch (Simbabwe)           |
+| en-zw           | Englisch (Zimbabwe)           |
 | en              | Englisch                      |
 | es-ar           | Spanisch (Argentinien)          |
-| es-Bo           | Spanisch (Bolivien)            |
+| es-bo           | Spanisch (Bolivien)            |
 | es-cl           | Spanisch (Chile)              |
-| Es-Co           | Spanisch (Kolumbien)           |
-| es-CR           | Spanisch (Costa Rica)         |
+| es-co           | Spanisch (Kolumbien)           |
+| es-cr           | Spanisch (Costa Rica)         |
 | es-do           | Spanisch (Dominikanische Republik) |
-| es-EC           | Spanisch (Ecuador)            |
+| es-ec           | Spanisch (Ecuador)            |
 | es-gt           | Spanisch (Guatemala)          |
-| es-HN           | Spanisch (Honduras)           |
-| es-MX           | Spanisch (Mexiko)             |
-| es-NI           | Spanisch (Nicaragua)          |
-| es-PA           | Spanisch (Panama)             |
-| es-PE           | Spanisch (Peru)               |
-| es-PR           | Spanisch (Puerto Rico)        |
+| es-hn           | Spanisch (Honduras)           |
+| es-mx           | Spanisch (Mexiko)             |
+| es-ni           | Spanisch (Nicaragua)          |
+| es-pa           | Spanisch (Panama)             |
+| es-pe           | Spanisch (Peru)               |
+| es-pr           | Spanisch (Puerto Rico)        |
 | es-py           | Spanisch (Paraguay)           |
-| es-SV           | Spanisch (El Salvador)        |
-| es-US           | Spanisch (USA)      |
+| es-sv           | Spanisch (El Salvador)        |
+| es-us           | Spanisch (USA)      |
 | es-uy           | Spanisch (Uruguay)            |
 | es-ve           | Spanisch (Venezuela)          |
 | es              | Spanisch                      |
@@ -94,83 +94,83 @@ Die Funktionen für die Unterstützung mehrerer Sprachen des SDK für das Window
 | eu              | Baskisch (Baskenland)              |
 | fa              | Persisch                      |
 | fi              | Finnisch                      |
-| Sender              | Faeroese                     |
+| Fo              | Faeroese                     |
 | fr-be           | Französisch (Belgien)             |
 | fr-ca           | Französisch (Kanada)              |
 | fr-ch           | Französisch (Schweiz)         |
-| Fr-lu           | Französisch (Luxemburg)          |
-| Fr-MC           | Französisch (Monaco)              |
+| fr-lu           | Französisch (Luxemburg)          |
+| fr-mc           | Französisch (Monaco)              |
 | fr              | Französisch (Frankreich)              |
-| Ersetzen              | Schottisch-Gälisch              |
+| gd              | Schottisch-Gälisch              |
 | gl              | Galizisch                     |
 | gu              | Gujarati                     |
-| he              | Hebräisch                       |
+| er              | Hebräisch                       |
 | hi              | Hindi                        |
 | Std.              | Kroatisch                     |
 | hu              | Ungarisch                    |
 | hy              | Armenisch                     |
 | id              | Indonesisch                   |
-| is              | Isländisch                    |
-| IT-ch           | Italienisch (Schweiz)        |
+| ergibt der Wert eine prozentuale Übereinstimmung von              | Isländisch                    |
+| it-ch           | Italienisch (Schweiz)        |
 | it              | Italienisch (Italien)              |
 | ja              | Japanisch                     |
-| at              | Georgisch                     |
+| Ka              | Georgisch                     |
 | kk              | Kasachisch                       |
 | kn              | Kannada                      |
 | ko              | Koreanisch                       |
-| ZZ             | Konkani                      |
-| gekannt              | Kirgisisch                       |
+| Kok             | Konkani                      |
+| Kz              | Kirgisisch                       |
 | lt              | Litauisch                   |
 | lv              | Lettisch                      |
-| gegründete              | Nord mazedonischer             |
+| Mk              | Nordedonisch             |
 | ml              | Malayalam                    |
-| NS              | Mongolisch (Kyrillisch)         |
+| Mn              | Mongolisch (Kyrillisch)         |
 | mr              | Marathi                      |
 | ms              | Malaiisch                        |
 | Mt              | Maltesisch                      |
 | nb-NO           | Norwegisch (Bokmål)           |
-| ne              | Nepali (Indien)               |
+| ne              | Solli (Indien)               |
 | nl-be           | Niederländisch (Belgien)              |
 | nl              | Niederländisch (Niederlande)          |
-| NN-Nein           | Norwegisch (Nynorsk)          |
-| nein              | Norwegisch (Bokmål)           |
+| nn-no           | Norwegisch (Nynorsk)          |
+| Nein              | Norwegisch (Bokmål)           |
 | oder              | Odia                         |
 | pa              | Pandschabi                      |
 | pl              | Polnisch                       |
 | pt-br           | Portugiesisch (Brasilien)          |
 | pt              | Portugiesisch (Portugal)        |
 | rm              | Rhaeto-Romanic               |
-| RO-MD           | Rumänisch (Republik Moldau)           |
+| ro-md           | Republik (Republik)           |
 | ro              | Rumänisch                     |
-| ru-MD           | Russisch (Republik Moldau)            |
+| ru-md           | Russisch (Russisch)            |
 | ru              | Russisch                      |
 | sa              | Sanskrit                     |
 | sb              | Sorbian                      |
 | sk              | Slowakisch                       |
 | sl              | Slowenisch                    |
-| SQ              | Albanisch                     |
+| sq              | Albanisch                     |
 | sr              | Serbisch                      |
-| SV-FI           | Schwedisch (Finnland)            |
+| sv-fi           | Schwedisch (Finnland)            |
 | sv              | Schwedisch                      |
 | sw              | Suaheli                      |
 | sx              | Sutu                         |
-| SYR             | Syrisch                       |
+| Syr             | Syrisch                       |
 | ta              | Tamilisch                        |
 | te              | Telugu                       |
 | th              | Thailändisch                         |
-| TN              | Tswana                       |
+| Tn              | Tswana                       |
 | tr              | Türkisch                      |
 | ts              | Tsonga                       |
 | tt              | Tatarisch                        |
 | uk              | Ukrainisch                    |
 | ur              | Urdu                         |
-| UZ              | Usbekisch                        |
+| Uz              | Usbekisch                        |
 | vi              | Vietnamesisch                   |
-| xh              | Xhosa                        |
-| verschrieben              | Jiddisch                      |
+| Xh              | Xhosa                        |
+| Yi              | Jiddisch                      |
 | zh-cn           | Chinesisch (China)              |
 | zh-hk           | Chinesisch (Hongkong SAR)      |
-| zh-mo           | Chinesisch (Macau SAR)          |
+| zh-mo           | Chinesisch (Macao SAR)          |
 | zh-sg           | Chinesisch (Singapur)          |
 | zh-tw           | Chinesisch (Taiwan)             |
 | zh              | Chinesisch                      |
@@ -178,7 +178,7 @@ Die Funktionen für die Unterstützung mehrerer Sprachen des SDK für das Window
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -187,6 +187,6 @@ Die Funktionen für die Unterstützung mehrerer Sprachen des SDK für das Window
 [**Programmierverzeichnis**](programming-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

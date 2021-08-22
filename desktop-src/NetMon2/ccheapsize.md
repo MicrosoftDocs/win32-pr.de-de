@@ -1,7 +1,7 @@
 ---
-description: Die ccheapsize-Funktion gibt die Größe des Arbeitsspeichers zurück, der von der ccheap-Zuordnungs Funktion belegt wird.
+description: Die CCHeapSize-Funktion gibt die Größe des von der CCHeapAlloc-Funktion zugeordneten Arbeitsspeichers zurück.
 ms.assetid: 45d0fd89-bcd1-4298-8cc3-834d86301f93
-title: Ccheapsize-Funktion (Netmon. h)
+title: CCHeapSize-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: e184ae196253a66fc68f9066615b39c48f6921e7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b086777b571af417662bd60a582fbc53a07c49300d21d2c59b6a36d2247b9d14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358562"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119012310"
 ---
-# <a name="ccheapsize-function"></a>Ccheapsize-Funktion
+# <a name="ccheapsize-function"></a>CCHeapSize-Funktion
 
-Die **ccheapsize** -Funktion gibt die Größe des Arbeitsspeichers zurück, der von der **ccheap-Zuordnungs** Funktion belegt wird.
+Die **CCHeapSize-Funktion** gibt die Größe des von der **CCHeapAlloc-Funktion** zugeordneten Arbeitsspeichers zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ SIZE_T WINAPI CCHeapSize(
 
 <dl> <dt>
 
-*lpmem* 
+*lpMem* 
 </dt> <dd>
 
 Zeiger auf zugewiesenen Speicher.
@@ -48,9 +48,9 @@ Zeiger auf zugewiesenen Speicher.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert die Größe des angeforderten Speicherblocks, gemessen in Bytes.
+Wenn die Funktion erfolgreich ist, entspricht der Rückgabewert der Größe des angeforderten Speicherblocks, gemessen in Bytes.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **null**.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **NULL.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,29 +60,29 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **null**.
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Setccinstptr](setccinstptr.md)
+[SetCCInstPtr](setccinstptr.md)
 </dt> <dt>
 
-[Getccinstptr](getccinstptr.md)
+[GetCCInstPtr](getccinstptr.md)
 </dt> <dt>
 
-[Ccheap-Zuweisung](ccheapalloc.md)
+[CCHeapAlloc](ccheapalloc.md)
 </dt> <dt>
 
-[Ccheapfree](ccheapfree.md)
+[CCHeapFree](ccheapfree.md)
 </dt> <dt>
 
-[Ccheaprezuweisung](ccheaprealloc.md)
+[CCHeapReAlloc](ccheaprealloc.md)
 </dt> </dl>
 
  

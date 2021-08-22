@@ -1,31 +1,31 @@
 ---
-description: Ein Dreiecks Streifen ist eine Reihe verbundener Dreiecke.
+description: Ein Dreiecksstreifen besteht aus einer Reihe verbundener Dreiecke.
 ms.assetid: 3923c570-47a4-4b53-a097-731981380ae0
-title: Dreiecks Streifen
+title: Dreiecksstreifen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b2766529a37b994e5fe30815ca6300476f06c7d4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: cf229883fa156afc93ca2889a0a97f4f2c3eabbb344fb7551476c98f33905f8a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104556171"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119044106"
 ---
-# <a name="triangle-strips"></a>Dreiecks Streifen
+# <a name="triangle-strips"></a>Dreiecksstreifen
 
-Ein Dreiecks Streifen ist eine Reihe verbundener Dreiecke. Da die Dreiecke verbunden ist, muss die Anwendung nicht wiederholt alle drei Scheitel Punkte für jedes Dreieck angeben. Beispielsweise benötigen Sie nur sieben Scheitel Punkte, um den folgenden Dreieck Streifen zu definieren.
+Ein Dreiecksstreifen besteht aus einer Reihe verbundener Dreiecke. Da die Dreiecke verbunden sind, muss die Anwendung nicht wiederholt alle drei Scheitelungen für jedes Dreieck angeben. Beispielsweise benötigen Sie nur sieben Scheitelstellen, um den folgenden Dreiecksstreifen zu definieren.
 
-![Abbildung eines Dreiecks Streifens mit sieben Vertices](images/tristrip.png)
+![Abbildung eines Dreiecksstreifens mit sieben Scheitelungen](images/tristrip.png)
 
-Das System verwendet Vertices v1, v2 und V3 zum Zeichnen des ersten Dreiecks. v2, v4 und V3 zum Zeichnen des zweiten Dreiecks. v3, v4 und V5 zum Zeichnen des dritten. V4, V6 und V5 zum Zeichnen des vierten; Und so weiter. Beachten Sie, dass die Scheitel Punkte des zweiten und vierten Dreiecke nicht in der richtigen Reihenfolge sind. Dies ist erforderlich, um sicherzustellen, dass alle Dreiecke in einer Ausrichtung im Uhrzeigersinn gezeichnet werden.
+Das System verwendet Scheitelungen v1, v2 und v3, um das erste Dreieck zu zeichnen. v2, v4 und v3 zum Zeichnen des zweiten Dreiecks; v3, v4 und v5 zum Zeichnen des dritten; v4, v6 und v5 zum Zeichnen des vierten; Und so weiter. Beachten Sie, dass die Scheitelungen des zweiten und vierten Dreiecks nicht in der Reihenfolge sind. dies ist erforderlich, um sicherzustellen, dass alle Dreiecke im Uhrzeigersinn gezeichnet werden.
 
-Die meisten Objekte in 3D-Szenen bestehen aus Dreiecks Streifen. Dies liegt daran, dass mithilfe von Dreiecks Streifen komplexe Objekte auf eine Weise festgelegt werden können, die die Speicher-und Verarbeitungszeit effizient verwendet.
+Die meisten Objekte in 3D-Szenen bestehen aus Dreiecksstreifen. Dies liegt daran, dass Dreiecksstreifen verwendet werden können, um komplexe Objekte so anzugeben, dass Arbeitsspeicher und Verarbeitungszeit effizient genutzt werden.
 
-In der folgenden Abbildung ist ein gerenderter Dreiecks Streifen dargestellt.
+Die folgende Abbildung zeigt einen gerenderten Dreiecksstreifen.
 
-![Abbildung eines gerenderten Dreiecks Streifens](images/tstrip2.png)
+![Abbildung eines gerenderten Dreiecksstreifens](images/tstrip2.png)
 
-Der folgende Code zeigt, wie Scheitel Punkte für diesen Dreiecks Streifen erstellt werden.
+Der folgende Code zeigt, wie Scheitelungen für diesen Dreiecksstreifen erstellt werden.
 
 
 ```
@@ -47,7 +47,7 @@ CUSTOMVERTEX Vertices[] =
 
 
 
-Das folgende Codebeispiel zeigt, wie Sie diesen Dreiecks Streifen in Direct3D 9 mit [**IDirect3DDevice9::D rawprimitiv**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive)Renderern.
+Das folgende Codebeispiel zeigt, wie Sie diesen Dreiecksstreifen in Direct3D 9 mithilfe von [**IDirect3DDevice9::D rawPrimitive rendern.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive)
 
 
 ```
@@ -60,7 +60,7 @@ d3dDevice->DrawPrimitive( D3DPT_TRIANGLESTRIP, 0, 4);
 
 
 
-Verwenden Sie einen Dreiecks Streifen, um Dreiecke zu Renten, die nicht miteinander verbunden sind. Geben Sie zu diesem Zweck ein degeneriertes Dreieck (d. h. ein Dreieck, dessen Bereich NULL ist) in der Dreiecks Liste an. Dadurch wird eine Linie zwischen den beiden Dreiecken erstellt, die nicht dargestellt wird. Um nur den ersten und den letzten Dreiecke aus dem vorherigen Beispiel zu erstellen, ändern Sie den Vertex-Puffer, wie hier gezeigt:
+Verwenden Sie einen Dreiecksstreifen, um Dreiecke zu rendern, die nicht miteinander verbunden sind. Geben Sie hierzu ein degeneriertes Dreieck (d. h. ein Dreieck, dessen Bereich 0 (null) ist) in der Dreiecksliste an. Dadurch wird eine Linie zwischen den beiden Dreiecken erstellt, die nicht gerendert wird. Um nur das erste und letzte Dreieck aus dem vorherigen Beispiel zu rendern, ändern Sie den Scheitelpunktpuffer wie hier gezeigt:
 
 
 ```

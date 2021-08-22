@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: c734727f3f2f44c9094885e0e743f605f16c91d2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 9742a9a0787fe605c84972b87f0a8a6fa17b93fc7a8f091dc3aa38048a9f1dbe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108114318"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119044648"
 ---
 # <a name="d3dxvec2catmullrom-function-d3dx9mathh"></a>D3DXVec2CatmullRom-Funktion (D3dx9math.h)
 
@@ -103,9 +103,9 @@ Gewichtungsfaktor. Siehe Hinweise.
 
 Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***
 
-Zeiger auf eine [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) die das Ergebnis der Catmull-Rom Interpolation ist.
+Zeiger auf eine [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) die das Ergebnis der Catmull-Rom ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Suchen Sie bei vier Punkten (p1, p2, p3, p4) eine Funktion Q(s) so, dass:
 
@@ -119,7 +119,7 @@ Q(s) is parallel to the line joining p2 to p4 when s is 1.
 
 
 
-Die Catmull-Rom Spline kann durch Festlegen von vom Hermite-Spline abgeleitet werden:
+Die Catmull-Rom spline kann durch Festlegen von vom Hermite-Spline abgeleitet werden:
 
 
 ```
@@ -141,7 +141,7 @@ p3 ist der Inhalt von pV2.
 
 p4 ist der Inhalt von pV3.
 
-Verwenden der Hermite-Splinegleichung:
+Verwenden der Splinegleichung "Hermite":
 
 
 ```
@@ -150,7 +150,7 @@ Q(s) = (2s3 - 3s2 + 1)v1 + (-2s3 + 3s2)v2 + (s3 - 2s2 + s)t1 + (s3 - s2)t2
 
 
 
-und Ersetzen durch v1, v2, t1, t2 ergibt:
+und der Ersatz für v1, v2, t1, t2 ergibt:
 
 
 ```
@@ -159,7 +159,7 @@ Q(s) = (2s3 - 3s2 + 1)p2 + (-2s3 + 3s2)p3 + (s3 - 2s2 + s)(p3 - p1) / 2 + (s3 - 
 
 
 
-Dies kann wie hier erläutert neu angeordnet werden:
+Dies kann neu angeordnet werden wie:
 
 
 ```
@@ -172,14 +172,14 @@ Q(s) = [(-s3 + 2s2 - s)p1 + (3s3 - 5s2 + 2)p2 + (-3s3 + 4s2 + s)p3 + (s3 - s2)p4
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

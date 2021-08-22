@@ -1,6 +1,6 @@
 ---
-title: Filterbedingungen, die auf jeder Filter Ebene verfügbar sind ("f")
-description: Die Filter-Engine der Windows-Filter Plattform (WFP) unterstützt einen anderen Satz an Filterbedingungen auf den einzelnen Filter Ebenen.
+title: Auf jeder Filterebene verfügbare Filterbedingungen (Fwpmu.h)
+description: Die Windows Filterplattform (WFP) unterstützt einen anderen Satz von Filterbedingungen auf jeder Filterebene.
 ms.assetid: 6faace21-44ec-49dd-8e77-e403c258c14a
 topic_type:
 - apiref
@@ -44,16 +44,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fd0c3806c7c3c7a5fa7f10af0e5e11c212bd93e3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c66aaceadec9a04e926806cf95859ffff2e4fa542b592edb4a11608a621a3338
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118951199"
 ---
-# <a name="filtering-conditions-available-at-each-filtering-layer"></a>Filterbedingungen, die auf jeder Filter Ebene verfügbar sind
+# <a name="filtering-conditions-available-at-each-filtering-layer"></a>Filterbedingungen, die auf jeder Filterebene verfügbar sind
 
-Die Filter-Engine der Windows-Filter Plattform (WFP) unterstützt einen anderen Satz an Filterbedingungen auf den einzelnen Filter Ebenen.
+Die Windows Filterplattform (WFP) unterstützt einen anderen Satz von Filterbedingungen auf jeder Filterebene.
 
 Die Liste der Filterbedingungen, die auf jeder Ebene verfügbar sind, lautet wie folgt.
 
@@ -162,7 +162,7 @@ Die Liste der Filterbedingungen, die auf jeder Ebene verfügbar sind, lautet wie
 ## <a name="fwpm_layer_inbound_icmp_error_v4--fwpm_layer_inbound_icmp_error_v4_discard--fwpm_layer_inbound_icmp_error_v6--fwpm_layer_inbound_icmp_error_v6_discard"></a>FWPM_LAYER_INBOUND_ICMP_ERROR_V4/FWPM_LAYER_INBOUND_ICMP_ERROR_V4_DISCARD/FWPM_LAYER_INBOUND_ICMP_ERROR_V6/FWPM_LAYER_INBOUND_ICMP_ERROR_V6_DISCARD
 - FWPM_CONDITION_ARRIVAL_INTERFACE_INDEX
 - FWPM_CONDITION_ARRIVAL_INTERFACE_TYPE
-- FWPM_CONDITION_ARRIVAL_SUB_INTERFACE_INDEX **Windows Vista/Windows 7:** FWPM_CONDITION_SUB_INTERFACE_INDEX
+- FWPM_CONDITION_ARRIVAL_SUB_INTERFACE_INDEX Windows **Vista/Windows 7:** FWPM_CONDITION_SUB_INTERFACE_INDEX
 - FWPM_CONDITION_ARRIVAL_TUNNEL_TYPE
 - FWPM_CONDITION_FLAGS
 - FWPM_CONDITION_ICMP_CODE
@@ -177,9 +177,9 @@ Die Liste der Filterbedingungen, die auf jeder Ebene verfügbar sind, lautet wie
 - FWPM_CONDITION_IP_LOCAL_ADDRESS
 - FWPM_CONDITION_IP_LOCAL_INTERFACE
 - FWPM_CONDITION_IP_REMOTE_ADDRESS
-- FWPM_CONDITION_LOCAL_INTERFACE_INDEX **Windows Vista/Windows 7:** FWPM_CONDITION_INTERFACE_INDEX
+- FWPM_CONDITION_LOCAL_INTERFACE_INDEX Windows **Vista/Windows 7:** FWPM_CONDITION_INTERFACE_INDEX
 - FWPM_CONDITION_LOCAL_INTERFACE_TYPE **Windows Vista/Windows 7:** FWPM_CONDITION_INTERFACE_TYPE
-- FWPM_CONDITION_LOCAL_TUNNEL_TYPE **Windows Vista/Windows 7:** FWPM_CONDITION_TUNNEL_TYPE
+- FWPM_CONDITION_LOCAL_TUNNEL_TYPE Windows **Vista/Windows 7:** FWPM_CONDITION_TUNNEL_TYPE
 ###  <a name="windows-7--and-later"></a>Windows 7 und höher
 - FWPM_CONDITION_ARRIVAL_INTERFACE_PROFILE_ID
 ## <a name="fwpm_layer_outbound_icmp_error_v4--fwpm_layer_outbound_icmp_error_v4_discard--fwpm_layer_outbound_icmp_error_v6--fwpm_layer_outbound_icmp_error_v6_discard"></a>FWPM_LAYER_OUTBOUND_ICMP_ERROR_V4/FWPM_LAYER_OUTBOUND_ICMP_ERROR_V4_DISCARD/FWPM_LAYER_OUTBOUND_ICMP_ERROR_V6/FWPM_LAYER_OUTBOUND_ICMP_ERROR_V6_DISCARD
@@ -275,7 +275,7 @@ Die Liste der Filterbedingungen, die auf jeder Ebene verfügbar sind, lautet wie
 - FWPM_CONDITION_ALE_USER_ID
 - FWPM_CONDITION_ARRIVAL_INTERFACE_INDEX
 - FWPM_CONDITION_ARRIVAL_INTERFACE_TYPE
-- FWPM_CONDITION_ARRIVAL_SUB_INTERFACE_INDEX **Windows Vista/Windows 7:** FWPM_CONDITION_SUB_INTERFACE_INDEX
+- FWPM_CONDITION_ARRIVAL_SUB_INTERFACE_INDEX Windows **Vista/Windows 7:** FWPM_CONDITION_SUB_INTERFACE_INDEX
 - FWPM_CONDITION_ARRIVAL_TUNNEL_TYPE
 - FWPM_CONDITION_FLAGS
 - FWPM_CONDITION_IP_ARRIVAL_INTERFACE
@@ -286,9 +286,9 @@ Die Liste der Filterbedingungen, die auf jeder Ebene verfügbar sind, lautet wie
 - FWPM_CONDITION_IP_PROTOCOL
 - FWPM_CONDITION_IP_REMOTE_ADDRESS
 - FWPM_CONDITION_IP_REMOTE_PORT
-- FWPM_CONDITION_LOCAL_INTERFACE_INDEX **Windows Vista/Windows 7:** FWPM_CONDITION_INTERFACE_INDEX
-- FWPM_CONDITION_LOCAL_INTERFACE_TYPE **Windows Vista/Windows 7:** FWPM_CONDITION_INTERFACE_TYPE
-- FWPM_CONDITION_LOCAL_TUNNEL_TYPE **Windows Vista/Windows 7:** FWPM_CONDITION_TUNNEL_TYPE
+- FWPM_CONDITION_LOCAL_INTERFACE_INDEX Windows **Vista/Windows 7:** FWPM_CONDITION_INTERFACE_INDEX
+- FWPM_CONDITION_LOCAL_INTERFACE_TYPE Windows **Vista/Windows 7:** FWPM_CONDITION_INTERFACE_TYPE
+- FWPM_CONDITION_LOCAL_TUNNEL_TYPE Windows **Vista/Windows 7:** FWPM_CONDITION_TUNNEL_TYPE
 ###  <a name="windows-7--and-later"></a>Windows 7 und höher
 - FWPM_CONDITION_NEXTHOP_SUB_INTERFACE_INDEX
 - FWPM_CONDITION_IP_NEXTHOP_INTERFACE
@@ -335,7 +335,7 @@ Die Liste der Filterbedingungen, die auf jeder Ebene verfügbar sind, lautet wie
 - FWPM_CONDITION_IP_ARRIVAL_INTERFACE
 - FWPM_CONDITION_ARRIVAL_INTERFACE_TYPE
 - FWPM_CONDITION_ARRIVAL_TUNNEL_TYPE
-- FWPM_CONDITION_ARRIVAL_INTERFACE_INDEX von Windows Vista _sp1 und laterFWPM_CONDITION_INTERFACE_INDEX 
+- FWPM_CONDITION_ARRIVAL_INTERFACE_INDEX Windows Vista _sp1 und laterFWPM_CONDITION_INTERFACE_INDEX 
 ###  <a name="windows-7--and-later"></a>Windows 7 und höher
 - FWPM_CONDITION_NEXTHOP_SUB_INTERFACE_INDEX
 - FWPM_CONDITION_IP_NEXTHOP_INTERFACE
@@ -512,9 +512,9 @@ Die Liste der Filterbedingungen, die auf jeder Ebene verfügbar sind, lautet wie
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die v4-und V6-Suffixe am Ende der ebenenids geben an, ob sich die Ebene im IPv4-Netzwerk Stapel oder im IPv6-Netzwerk Stapel befindet.
+Die Suffixe V4 und V6 am Ende der Ebenenbezeichner geben an, ob sich die Ebene im IPv4-Netzwerkstapel oder im IPv6-Netzwerkstapel befindet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -522,9 +522,9 @@ Die v4-und V6-Suffixe am Ende der ebenenids geben an, ob sich die Ebene im IPv4-
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>"F"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Fwpmu.h</dt> </dl> |
 
 
 

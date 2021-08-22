@@ -1,7 +1,7 @@
 ---
-description: Dieser Operator subtrahiert eine Verweis Zeit von einer anderen.
+description: Dieser Operator subtrahiert eine Verweiszeit von einer anderen.
 ms.assetid: 5691cd76-0d25-45c0-bb58-6668abe1db01
-title: Coaref time. Operator-Method (ctlutil. h)
+title: COARefTime.operator--Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e51ee8aaed69830a498d1d22cebdc3927987f045
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: da8de864f344321cc5dca801782aab1f8476eb91608b42577cca6a34c625e153
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364935"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073824"
 ---
-# <a name="coareftimeoperator--method"></a>Coaref time. Operator-Methode
+# <a name="coareftimeoperator--method"></a>COARefTime.operator--Methode
 
-Dieser Operator subtrahiert eine Verweis Zeit von einer anderen.
+Dieser Operator subtrahiert eine Verweiszeit von einer anderen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ COARefTime operator-(
 
 <dl> <dt>
 
-*RT* \[ atur\]
+*rt* \[ Ref\]
 </dt> <dd>
 
-Verweis auf das **coareftime** -Objekt, das subtrahiert werden soll.
+Verweis auf das **zu subtrahierende COARefTime-Objekt.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein neues **coareftime** -Objekt zurück, das der Differenz der Verweis Zeiten entspricht.
+Gibt ein neues **COARefTime-Objekt** zurück, das der Differenz der Verweiszeiten entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt ein neues **coareftime** -Objekt zurück, das der Differenz der Verweis Zei
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt ein neues **coareftime** -Objekt zurück, das der Differenz der Verweis Zei
 
 <dl> <dt>
 
-[**Coaref Time-Klasse**](coareftime.md)
+[**COARefTime-Klasse**](coareftime.md)
 </dt> </dl>
 
  

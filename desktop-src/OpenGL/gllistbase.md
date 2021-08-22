@@ -1,9 +1,9 @@
 ---
-title: gllistbase-Funktion (GL. h)
-description: Die gllistbase-Funktion legt die Basis für die Anzeigeliste für glcalllists fest.
+title: glListBase-Funktion (Gl.h)
+description: Die glListBase-Funktion legt die Basis der Anzeigeliste für glCallLists fest.
 ms.assetid: df82f699-b2af-471a-83f3-5620857ba45d
 keywords:
-- gllistbase-Funktion OpenGL
+- glListBase-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c46af03477afc1b656df3a321fd8aa652b034b35
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4ba7cbe7b179184efa739ac3492f4e74b36f56abe0f02498a0e1a688b85183a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118938517"
 ---
-# <a name="gllistbase-function"></a>gllistbase-Funktion
+# <a name="gllistbase-function"></a>glListBase-Funktion
 
-Die **gllistbase** -Funktion legt die Basis für die Anzeigeliste für **glcalllists** fest.
+Die **glListBase-Funktion** legt die Basis der Anzeigeliste für **glCallLists fest.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void WINAPI glListBase(
 *base* 
 </dt> <dd>
 
-Ein ganzzahliger Offset, der zu [**glcalllists**](glcalllists.md) -Offsets hinzugefügt wird, um anzeigen Listennamen zu generieren. Der Anfangswert ist NULL.
+Ein ganzzahliger Offset, der [**glCallLists-Offsets**](glcalllists.md) hinzugefügt wird, um Anzeigelistennamen zu generieren. Der Anfangswert ist 0 (null).
 
 </dd> </dl>
 
@@ -53,23 +53,23 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **gllistbase** -Funktion gibt ein Array von Offsets an. Anzeigen von Listennamen werden durch Hinzufügen von *Basis* zu jedem Offset generiert. Namen, die auf gültige Anzeigelisten verweisen, werden ausgeführt. andere werden ignoriert.
+Die **glListBase-Funktion** gibt ein Array von Offsets an. Anzeigelistennamen werden durch Hinzufügen der *Basis zu* jedem Offset generiert. Namen, die auf gültige Anzeigelisten verweisen, werden ausgeführt. andere werden ignoriert.
 
-Die folgende Funktion Ruft Informationen im Zusammenhang mit **gllistbase** ab:
+Die folgende Funktion ruft Informationen im Zusammenhang mit **glListBase ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument-GL- \_ Listen \_ Basis
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ LIST \_ BASE
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **gllistbase** ab:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -92,7 +92,7 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **gllistbase** ab:
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glcalllists**](glcalllists.md)
+[**glCallLists**](glcalllists.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)

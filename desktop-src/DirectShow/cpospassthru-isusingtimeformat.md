@@ -1,7 +1,7 @@
 ---
-description: 'Die isusingtimeformat-Methode bestimmt, ob ein angegebenes Zeitformat das derzeit verwendete Format ist. Diese Methode implementiert die imediaseeking:: isusingtimeformat-Methode.'
+description: Die IsUsingTimeFormat-Methode bestimmt, ob ein angegebenes Zeitformat das derzeit verwendete Format ist. Diese Methode implementiert die IMediaSeeking::IsUsingTimeFormat-Methode.
 ms.assetid: e377bcf0-0518-42b2-8975-e4c345e3fed4
-title: Cpospassthru. isusingtimeformat-Methode (ctlutil. h)
+title: CPosPassThru.IsUsingTimeFormat-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 012a9487f5840117edb9f8bc0afa1d9388b4bce0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 64c240a0b1c269dde57e07e50bcbdbbd4d5d7e03d24a4e6d263662947f3d65de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359817"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954009"
 ---
-# <a name="cpospassthruisusingtimeformat-method"></a>Cpospassthru. isusingtimeformat-Methode
+# <a name="cpospassthruisusingtimeformat-method"></a>CPosPassThru.IsUsingTimeFormat-Methode
 
-Die- `IsUsingTimeFormat` Methode bestimmt, ob ein angegebenes Zeitformat das derzeit verwendete Format ist. Diese Methode implementiert die [**imediaseeking:: isusingtimeformat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-isusingtimeformat) -Methode.
+Die `IsUsingTimeFormat` -Methode bestimmt, ob ein angegebenes Zeitformat das derzeit verwendete Format ist. Diese Methode implementiert die [**IMediaSeeking::IsUsingTimeFormat-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-isusingtimeformat)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT IsUsingTimeFormat(
 
 <dl> <dt>
 
-*pformat* 
+*pFormat* 
 </dt> <dd>
 
 Zeiger auf eine Zeitformat-GUID.
@@ -51,7 +51,7 @@ Zeiger auf eine Zeitformat-GUID.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
+Gibt den **HRESULT-Wert** vom verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,10 +68,10 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> <dt>
 
-[**Zeit Format-GUIDs**](time-format-guids.md)
+[**Zeitformat-GUIDs**](time-format-guids.md)
 </dt> </dl>
 
  

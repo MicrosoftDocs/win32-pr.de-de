@@ -1,44 +1,44 @@
 ---
-description: Gibt einen Eingabestream für eine Media Foundation Transformation (MFT) an.
+description: Gibt einen Eingabestream für eine Media Foundation Transform (MFT) an.
 ms.assetid: 2922af62-3fcc-4153-a26a-aba3c4121a0b
-title: MF_EVENT_MFT_INPUT_STREAM_ID-Attribut (mfapi. h)
+title: MF_EVENT_MFT_INPUT_STREAM_ID -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 59d3966c33dc563fc9e38ad367cc675ba6616c03
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f3d211eb30280e6b7390df8509795d49567c7f8a8c9016b2825786858fe888b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214772"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973809"
 ---
-# <a name="mf_event_mft_input_stream_id-attribute"></a>ID-Attribut des MF- \_ \_ MFT- \_ Eingabedaten \_ Stroms \_
+# <a name="mf_event_mft_input_stream_id-attribute"></a>MF \_ EVENT \_ MFT INPUT STREAM \_ \_ \_ ID-Attribut
 
-Gibt einen Eingabestream für eine Media Foundation Transformation (MFT) an.
+Gibt einen Eingabestream für eine Media Foundation Transform (MFT) an.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-Der Wert ist ein Eingabedaten Strom Bezeichner.
+Der Wert ist ein Eingabestreambezeichner.
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF Media Event**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaevent)
+[**BESENKMediaEvent**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaevent)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Attribut wird mit den folgenden Ereignissen verwendet:
 
--   [Metransformdraunvollständig](metransformdraincomplete.md)
--   [Metransformneedinput](metransformneedinput.md)
+-   [METransformDgreifComplete](metransformdraincomplete.md)
+-   [METransformNeedInput](metransformneedinput.md)
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,17 +46,17 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                     |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server 2008 \[ \| R2-Desktop-Apps\]<br/>                     |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [Asynchrone MFTs](asynchronous-mfts.md)

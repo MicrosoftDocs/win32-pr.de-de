@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Copyright-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Copyright-Eigenschaft.
 ms.assetid: 84d2f55b-5ca4-4912-b038-c18a72e6fc34
-title: System. Copyright Photo Metadata-Richtlinie
+title: System.Copyright Photo Metadata Policy
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6fc65024458d88088e3c0cbeccc3bc9ea0211910
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b00b57bc3523feaa29da9008340bd34c32401879a8fc4e872082bbdcddd1fdf8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364230"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118710813"
 ---
-# <a name="systemcopyright-photo-metadata-policy"></a>System. Copyright Photo Metadata-Richtlinie
+# <a name="systemcopyright-photo-metadata-policy"></a>System.Copyright Photo Metadata Policy
 
-Die fotometadatenrichtlinie für die [System. Copyright](../properties/props-system-copyright.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.Copyright-Eigenschaft.](../properties/props-system-copyright.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ Copyright
+PKEY \_ Copyright
 
 ### <a name="containers"></a>Container
 
@@ -27,60 +27,60 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
-### <a name="input-propvariant-type"></a>Eingabe-PROPVARIANT-Typ
+### <a name="input-propvariant-type"></a>PROPVARIANT-Eingabetyp
 
 String
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                                      | Datenträger Format |
+| Auftrag | Pfad                                      | Datenträgerformat |
 |-------|-------------------------------------------|-------------|
-|       | /App1/IFD/{ushort = 33432}                  | ascii       |
-|       | /app13/IRB/8bimiptc/IPTC/Copyright Hinweis |             |
-|       | /XMP/ <xmpalt> DC: Rechte              | Unicode     |
-|       | /XMP/DC: Rechte                            | Unicode     |
-|       | /app13/IRB/8bimiptc/IPTC/Copyright Hinweis |             |
+|       | /app1/ifd/{ushort=33432}                  | ascii       |
+|       | /app13/irb/8bimiptc/iptc/copyright notice |             |
+|       | /xmp/ <xmpalt> dc:rights              | Unicode     |
+|       | /xmp/dc:rights                            | Unicode     |
+|       | /app13/irb/8bimiptc/iptc/copyright notice |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                                      | Datenträger Format |
+| Auftrag | Pfad                                      | Datenträgerformat |
 |-------|-------------------------------------------|-------------|
-|       | /XMP/DC: Rechte                            | Unicode     |
-|       | /XMP/ <xmpalt> DC: Rechte              | Unicode     |
-|       | /app13/IRB/8bimiptc/IPTC/Copyright Hinweis |             |
-|       | /App1/IFD/{ushort = 33432}                  | ascii       |
+|       | /xmp/dc:rights                            | Unicode     |
+|       | /xmp/ <xmpalt> dc:rights              | Unicode     |
+|       | /app13/irb/8bimiptc/iptc/copyright notice |             |
+|       | /app1/ifd/{ushort=33432}                  | ascii       |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                                      |
 |-------|-------------------------------------------|
-|       | /XMP/DC: Rechte                            |
-|       | /app13/IRB/8bimiptc/IPTC/Copyright Hinweis |
-|       | /App1/IFD/{ushort = 33432}                  |
+|       | /xmp/dc:rights                            |
+|       | /app13/irb/8bimiptc/iptc/copyright notice |
+|       | /app1/ifd/{ushort=33432}                  |
 
 
 
@@ -88,61 +88,61 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policy"></a>TIFF-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                                    | Datenträger Format |
+| Auftrag | Pfad                                    | Datenträgerformat |
 |-------|-----------------------------------------|-------------|
-|       | /IFD/{ushort = 33432}                     | ascii       |
-|       | /IFD/IPTC/Copyright Hinweis              |             |
-|       | /IFD/XMP/ <xmpalt> DC: Rechte        | Unicode     |
-|       | /IFD/XMP/DC: Rechte                      | Unicode     |
-|       | /IFD/IPTC/Copyright Hinweis              |             |
-|       | /IFD/IRB/8bimiptc/IPTC/Copyright Hinweis |             |
+|       | /ifd/{ushort=33432}                     | ascii       |
+|       | /ifd/iptc/copyright notice              |             |
+|       | /ifd/xmp/ <xmpalt> dc:rights        | Unicode     |
+|       | /ifd/xmp/dc:rights                      | Unicode     |
+|       | /ifd/iptc/copyright notice              |             |
+|       | /ifd/irb/8bimiptc/iptc/copyright notice |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                                    | Datenträger Format |
+| Auftrag | Pfad                                    | Datenträgerformat |
 |-------|-----------------------------------------|-------------|
-|       | /IFD/XMP/DC: Rechte                      | Unicode     |
-|       | /IFD/XMP/ <xmpalt> DC: Rechte        | Unicode     |
-|       | /IFD/IPTC/Copyright Hinweis              |             |
-|       | /IFD/IRB/8bimiptc/IPTC/Copyright Hinweis |             |
-|       | /IFD/{ushort = 33432}                     | ascii       |
+|       | /ifd/xmp/dc:rights                      | Unicode     |
+|       | /ifd/xmp/ <xmpalt> dc:rights        | Unicode     |
+|       | /ifd/iptc/copyright notice              |             |
+|       | /ifd/irb/8bimiptc/iptc/copyright notice |             |
+|       | /ifd/{ushort=33432}                     | ascii       |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                                    |
 |-------|-----------------------------------------|
-|       | /IFD/XMP/DC: Rechte                      |
-|       | /IFD/IPTC/Copyright Hinweis              |
-|       | /IFD/IRB/8bimiptc/IPTC/Copyright Hinweis |
-|       | /IFD/{ushort = 33432}                     |
+|       | /ifd/xmp/dc:rights                      |
+|       | /ifd/iptc/copyright notice              |
+|       | /ifd/irb/8bimiptc/iptc/copyright notice |
+|       | /ifd/{ushort=33432}                     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Copyright](../properties/props-system-copyright.md)
+[System.Copyright](../properties/props-system-copyright.md)
 </dt> </dl>
 
  

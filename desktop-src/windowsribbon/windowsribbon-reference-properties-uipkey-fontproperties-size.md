@@ -1,66 +1,66 @@
 ---
 title: UI_PKEY_FontProperties_Size
-description: Gibt die Größe der Eigenschaft "UI- \_ pkey \_ fontproperties" an \_ .
+description: Identifiziert die \_ PKEY \_ FontProperties \_ Size-Eigenschaft der Benutzeroberfläche.
 ms.assetid: bd426910-9852-48e1-91c8-b94be5ef7199
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ae991cfe5f91b4aca4fe0b49a7b7c547e71b0fb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a9c013c41290f6e062b03572a9e3cb848752efcb12f1c779348a0253f94d40e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339791"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119028628"
 ---
-# <a name="ui_pkey_fontproperties_size"></a>Größe der Benutzeroberflächen- \_ pkey- \_ fontproperties \_
+# <a name="ui_pkey_fontproperties_size"></a>UI \_ PKEY \_ FontProperties \_ Size
 
-Gibt die Größe der Eigenschaft "UI- \_ pkey \_ fontproperties" an \_ .
+Identifiziert die \_ PKEY \_ FontProperties \_ Size-Eigenschaft der Benutzeroberfläche.
 
 ```
 propertyDescription
-   name = UI_PKEY_FontProperties_Size
-   shellPKey = UI_PKEY_FontProperties_Size
-   formatID = 00000302-7363-696e-8441798acf5aebb7
-   propID = 302
-   typeInfo
-      type = VT_DECIMAL
+   name = UI_PKEY_FontProperties_Size
+   shellPKey = UI_PKEY_FontProperties_Size
+   formatID = 00000302-7363-696e-8441798acf5aebb7
+   propID = 302
+   typeInfo
+      type = VT_DECIMAL
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-\_Die Größe der UI-pkey- \_ fontproperties \_ wird von einer Anwendung verwendet, um den Wert des Steuer Elements für die **Schriftgröße** abzufragen.
+Ui PKEY FontProperties Size wird von einer Anwendung verwendet, um den Wert des Steuerelements \_ \_ \_ **Schriftgrad abfragt.**
 
-Gültige Werte für diese Eigenschaft liegen zwischen 1 und 9999 (einschließlich). Wenn ein Benutzer versucht, einen ungültigen Wert einzugeben, wird der Eintrag abgelehnt, und das **Schriftart Größen** Steuerelement wird auf den letzten gültigen Wert zurückgesetzt.
+Gültige Werte für diese Eigenschaft reichen von 1 bis einschließlich 9999. Wenn ein Benutzer versucht, einen ungültigen Wert eineingaben, wird der Eintrag abgelehnt, und das Steuerelement Schriftgrad wird auf den letzten gültigen Wert zurückverwendet. 
 
-Wenn eine Anwendung versucht, die Schriftgröße Programm gesteuert auf einen Wert außerhalb des gültigen Bereichs festzulegen, werden alle Schriftart Eigenschaften für das Menüband-Framework ungültig und die Schriftart Steuerelemente (**Schrift** Grad und **Schriftart**) auf leer oder auf ihren Standardzustand (soweit zutreffend) festgelegt.
+Wenn eine Anwendung versucht, den Schriftgrad programmgesteuert auf einen Wert außerhalb des gültigen Bereichs zu setzen, macht das Menübandframework alle Schriftarteigenschaften ungültig und legt die Schriftartsteuerelemente **(** Schriftgrad und Schriftartgesicht **)** auf leer oder gegebenenfalls auf ihren Standardzustand fest.
 
 Der Standardwert ist 0.
 
-Der Wert 0 gibt an, dass keine einzelne Punktgröße ausgewählt ist (entweder kein Text oder eine ausgewertegröße mit Hetero gener Größe).
+Der Wert 0 gibt an, dass keine Einzelpunktgröße ausgewählt wird (es wird entweder kein Text oder eine Ausführung mit heterogenem Text ausgewählt).
 
-Ein Benutzer kann das Steuerelement für die **Schriftgröße** nicht auf 0 festlegen.
+Ein Benutzer kann das Steuerelement **Schriftgrad nicht** auf 0 festlegen.
 
-Ein anderer Wert als 0 gibt an, dass gültige Werte für \_ \_ die Eigenschaften der UI-pkey-fontproperties \_ zwischen *MinimumFontSize* und *maximumfontsize* liegen, wie im [Schriftart-Steuer](windowsribbon-controls-fontcontrol.md) Element Markup deklariert.
+Ab dem Wert 0 liegen gültige Werte für \_ ui PKEY \_ FontProperties Size zwischen \_ *MinimumFontSize* und *MaximumFontSize,* wie im [Font Control-Markup](windowsribbon-controls-fontcontrol.md) deklariert.
 
 > [!Note]  
-> Das **Schriftart Größe** -Steuerelement wird auf leer festgelegt, wenn der Schrift Grad Programm gesteuert auf 0 festgelegt ist, z. b. Wenn ein Text mit einer heterogenen Größe hervorgehoben wird.
+> Das **Steuerelement Schriftgrad** wird auf leer festgelegt, wenn der Schriftgrad programmgesteuert auf 0 festgelegt ist, z. B. wenn eine Ausführung von heterogenem Text hervorgehoben ist.
 
- 
+ 
 
-Wenn ein Text mit heterogener Größe ausgewählt wird, muss die Anwendung die [UI \_ pkey \_ fontproperties \_ Delta size](windowsribbon-reference-properties-uipkey-fontproperties-deltasize.md) Abfragen, um die Befehle zum **vergrößern Schriftart** und zum **Verkleinern der Schriftart** zu erfassen.
+Wenn eine Ausführung von heterogenem Text ausgewählt ist, sollte die Anwendung [ \_ PKEY \_ FontProperties \_ DeltaSize](windowsribbon-reference-properties-uipkey-fontproperties-deltasize.md) der Benutzeroberfläche abfragen, um die Befehle **Schriftart** vergrößeren und **Schriftart verkleinern zu** erfassen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Schriftart Steuerelement-Eigenschaften](windowsribbon-reference-properties-fontcontrol.md)
+[Eigenschaften des Schriftart-Steuerelements](windowsribbon-reference-properties-fontcontrol.md)
 </dt> <dt>
 
 [Schriftart-Steuerelement](windowsribbon-controls-fontcontrol.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Zerstört ein zuvor zugewiesenes Microsoft DirectDraw Surface-Objekt im Kernel Modus.
+description: Zerstört ein zuvor zugeordnetes Kernelmodus-Microsoft DirectDraw-Oberflächenobjekt.
 ms.assetid: 65419fce-9e82-4621-9906-832144888a3b
-title: Ntgdidddestroysurface-Funktion (ntgdi. h)
+title: NtGdiDdDestroySurface-Funktion (Ntgdi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Ext-MS-Win-GDI-Internal-Desktop-L1-1-0.dll
 - GDI32.dll
 - GDI32Full.dll
-ms.openlocfilehash: 54799aa90007370439b2be8c8cf8c1f584360a5d
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1ec5538e7aea7abd938cb57dc3dfba9c51e7c6c60f81630bf6665c1ee467ed24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118956509"
 ---
-# <a name="ntgdidddestroysurface-function"></a>Ntgdidddestroysurface-Funktion
+# <a name="ntgdidddestroysurface-function"></a>NtGdiDdDestroySurface-Funktion
 
-\[Diese Funktion kann bei jeder Betriebssystem Revision geändert werden. Verwenden Sie stattdessen DirectDraw und Microsoft Direct3DAPIs; Diese APIs isolieren Anwendungen vor solchen Betriebssystem Änderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeige Treibern.\]
+\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen DirectDraw und Microsoft Direct3DAPIs. diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
 
-Zerstört ein zuvor zugewiesenes Microsoft DirectDraw Surface-Objekt im Kernel Modus.
+Zerstört ein zuvor zugeordnetes Kernelmodus-Microsoft DirectDraw-Oberflächenobjekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,60 +45,60 @@ DWORD APIENTRY NtGdiDdDestroySurface(
 
 <dl> <dt>
 
-*hsurface* \[ in\]
+*hSurface* \[ In\]
 </dt> <dd>
 
-Handle für das zuvor zugewiesene kernelmodusetobjekt.
+Handle für zuvor zugeordnetes Kernelmodus-Oberflächenobjekt.
 
 </dd> <dt>
 
-*brealdestroy* \[ in\]
+*bRealDestroy* \[ In\]
 </dt> <dd>
 
-Gibt an, wie die-Oberfläche zerstört werden soll. Kann einen der folgenden Werte aufweisen.
+Gibt an, wie die Oberfläche zerstört werden soll. Kann einer der folgenden Werte sein.
 
 <dt>
 
 
 
- Fall
+ (TRUE)
 
 
 </dt> <dd>
 
-Zerstören der Oberfläche und kostenlosen Video Arbeitsspeichers.
+Zerstören Sie die Oberfläche und den freien Videospeicher.
 
 </dd> <dt>
 
 
 
- Alarm
+ (FALSE)
 
 
 </dt> <dd>
 
-Geben Sie den Videospeicher frei, aber lassen Sie die Oberfläche in einem nicht initialisierten Zustand.
+Geben Sie den Videospeicher frei, belassen Sie die Oberfläche jedoch in einem nicht initialisierten Zustand.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Ntgdidddestroysurface** gibt einen der folgenden Rückruf Codes zurück.
+**NtGdiDdDestroySurface** gibt einen der folgenden Rückrufcodes zurück.
 
 
 
 | Rückgabecode                                                                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                |
 |----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**ddhal- \_ Treiber \_ behandelt**</dt> </dl>    | Der Treiber hat den Vorgang durchgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, fährt DirectDraw oder Direct3D mit der-Funktion fort. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
-| <dl> <dt>**ddhal- \_ Treiber \_ nothandled**</dt> </dl> | Der Treiber hat keinen Kommentar zum angeforderten Vorgang. Wenn der Treiber einen bestimmten Rückruf implementieren muss, meldet DirectDraw oder Direct3D eine Fehlerbedingung. Andernfalls behandelt DirectDraw oder Direct3D den Vorgang so, als ob der Treiber Rückruf nicht durch Ausführen der geräteunabhängigen DirectDraw-oder Direct3D-Implementierung definiert wurde.<br/> |
+| <dl> <dt>**BEHANDELTER \_ DDHAL-TREIBER \_**</dt> </dl>    | Der Treiber hat den Vorgang ausgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, wird DirectDraw oder Direct3D mit der Funktion fortgesetzt. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
+| <dl> <dt>**\_DDHAL-TREIBER \_ NICHT BEHANDELT**</dt> </dl> | Der Treiber hat keinen Kommentar zum angeforderten Vorgang. Wenn der Treiber einen bestimmten Rückruf implementiert haben muss, meldet DirectDraw oder Direct3D eine Fehlerbedingung. Andernfalls verarbeitet DirectDraw oder Direct3D den Vorgang so, als ob der Treiberrückruf nicht durch Ausführen der geräteunabhängigen DirectDraw- oder Direct3D-Implementierung definiert worden wäre.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es wird empfohlen, dass Anwendungen die DirectDraw-und Direct3D-APIs verwenden, um Oberflächen anstelle dieser Funktion zu erstellen und zu zerstören.
+Es wird empfohlen, dass Anwendungen anstelle dieser Funktion die DirectDraw- und Direct3D-APIs verwenden, um Oberflächen zu erstellen und zu zerstören.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,7 +108,7 @@ Es wird empfohlen, dass Anwendungen die DirectDraw-und Direct3D-APIs verwenden, 
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Ntgdi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntgdi.h</dt> </dl> |
 
 
 
@@ -116,7 +116,7 @@ Es wird empfohlen, dass Anwendungen die DirectDraw-und Direct3D-APIs verwenden, 
 
 <dl> <dt>
 
-[Unterstützung der untergeordneten Grafik Ebene](-dxgkernel-low-level-client-support.md)
+[Grafik– Clientunterstützung auf niedriger Ebene](-dxgkernel-low-level-client-support.md)
 </dt> </dl>
 
  

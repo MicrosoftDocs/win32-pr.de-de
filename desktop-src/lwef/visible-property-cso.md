@@ -4,16 +4,16 @@ description: Erfahren Sie mehr über die Visible-Eigenschaft des Commands-Objekt
 ms.assetid: 0178a789-141b-4d4c-ba7c-05c7995f13bc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a6ea780ed5f19dbe732b18de741f9d7ee376df67
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: c742733d06f0a4c7ae2d10c7fb97a20e735b59370c61efa5f7204003f1cd81bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112396255"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975470"
 ---
 # <a name="visible-property-commands-object"></a>Visible-Eigenschaft (Commands-Objekt)
 
-\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
@@ -31,7 +31,7 @@ Gibt einen Wert zurück, der bestimmt, ob die Beschriftung Ihrer [**Commands-Auf
 
 
 
-| Teil      | Beschreibung                                                                                                                                                                                                                             |
+| Teil      | BESCHREIBUNG                                                                                                                                                                                                                             |
 |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | *boolean* | Ein boolescher Ausdruck, der an gibt, ob das [**Commands-Objekt**](/windows/desktop/lwef/the-commands-collection-object) im Popupmenü des Zeichens angezeigt wird. <br/> **True** Die Beschriftung wird angezeigt.<br/> **False** Die Beschriftung wird nicht angezeigt.<br/> |
 
@@ -41,7 +41,7 @@ Gibt einen Wert zurück, der bestimmt, ob die Beschriftung Ihrer [**Commands-Auf
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Damit die Beschriftung im Popupmenü des Zeichens angezeigt wird, wenn Ihre Anwendung nicht der eingabeaktive Client ist, muss diese Eigenschaft auf **True** und die [**Caption-Eigenschaft**](caption-property.md) für Ihre Commands-Sammlung festgelegt werden. Darüber hinaus muss diese Eigenschaft auf **True** festgelegt werden, damit Befehle in Ihrer Sammlung im Popupmenü angezeigt werden, wenn Ihre Anwendung eingabeaktiv ist.
 
