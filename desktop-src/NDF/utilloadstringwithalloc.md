@@ -1,9 +1,9 @@
 ---
-title: Utilloadstringwithzugsc-Funktion (ndattributils. h)
-description: Ordnet eine Zeichenfolge zu und lädt Sie aus der Ressourcen Tabelle.
+title: UtilLoadStringWithAlloc-Funktion (Ndattributils.h)
+description: Ordnet eine Zeichenfolge aus der Ressourcentabelle zu und lädt sie.
 ms.assetid: 34bf0b93-2bec-49c3-9441-c83686c4abdb
 keywords:
-- Utilloadstringwithzugsc-Funktion NDF
+- UtilLoadStringWithAlloc-Funktion NDF
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 72e13930fe9bb11ae9c9456152c823491eabc462
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ca649599e2a8a29ecdab2dbbfe2c188947b40487ceb82ab4937622ce82c701a2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106502"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119685610"
 ---
-# <a name="utilloadstringwithalloc-function"></a>Utilloadstringwithzugsc-Funktion
+# <a name="utilloadstringwithalloc-function"></a>UtilLoadStringWithAlloc-Funktion
 
-Die **utilloadstringwithzucfunktion** ordnet eine Zeichenfolge zu und lädt Sie aus der Ressourcen Tabelle.
+Die **UtilLoadStringWithAlloc-Funktion** ordnet eine Zeichenfolge zu und lädt sie aus der Ressourcentabelle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,33 +42,33 @@ HRESULT UtilLoadStringWithAlloc(
 
 <dl> <dt>
 
-*UID* \[ in\]
+*uID* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Der Bezeichner der zu ladenden Zeichenfolge.
+Bezeichner der zu ladenden Zeichenfolge.
 
 </dd> <dt>
 
-*ppwzpuffer* \[ vorgenommen\]
+*ppwzBuffer* \[ out\]
 </dt> <dd>
 
-Typ: **LPWSTR \** _
+Typ: **LPWSTR \***
 
-Der Speicherort, an dem die neu zugewiesene Zeichenfolge platziert wird. Die Zeichenfolge muss mit [_ *CoTaskMemFree* *](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) freigegeben werden, wenn Sie nicht mehr benötigt wird.
+Der Speicherort, an dem die neu zugeordnete Zeichenfolge platziert wird. Die Zeichenfolge muss mit [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) freigegeben werden, wenn sie nicht mehr benötigt wird.
 
 </dd> <dt>
 
-*cchbuffermax* \[ in\]
+*cchBufferMax* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Die maximale Anzahl von Zeichen, die aus der Ressourcen Tabelle geladen werden sollen. Wenn die Ressourcen Zeichenfolge länger als die angegebene Anzahl von Zeichen ist, wird Sie abgeschnitten und mit Null beendet.
+Die maximale Anzahl von Zeichen, die aus der Ressourcentabelle geladen werden sollen. Wenn die Ressourcenzeichenfolge länger als die angegebene Anzahl von Zeichen ist, wird sie abgeschnitten und mit NULL beendet.
 
 > [!Note]  
-> Dieser Parameter darf nicht auf 0 (null) festgelegt werden.
+> Dieser Parameter kann nicht auf 0 (null) festgelegt werden.
 
  
 
@@ -78,14 +78,14 @@ Die maximale Anzahl von Zeichen, die aus der Ressourcen Tabelle geladen werden s
 
 Typ: **HRESULT**
 
-Mögliche Rückgabewerte sind u. a. die folgenden.
+Mögliche Rückgabewerte sind u. a. folgende.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                                        |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Der Vorgang wurde erfolgreich ausgeführt.<br/>                                |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Mindestens ein Parameter wurde nicht ordnungsgemäß bereitgestellt.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Mindestens ein Parameter wurde nicht ordnungsgemäß bereitgestellt.<br/> |
 
 
 
@@ -97,9 +97,9 @@ Mögliche Rückgabewerte sind u. a. die folgenden.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Ndattributils. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Ndattributils.h</dt> </dl> |
 
 
 
@@ -107,10 +107,10 @@ Mögliche Rückgabewerte sind u. a. die folgenden.
 
 <dl> <dt>
 
-[**Utilstringcopywithzuzuweisung**](utilstringcopywithalloc.md)
+[**UtilStringCopyWithAlloc**](utilstringcopywithalloc.md)
 </dt> <dt>
 
-[**Utilassemlestringswithzuweisung**](utilassemblestringswithalloc.md)
+[**UtilAssembleStringsWithAlloc**](utilassemblestringswithalloc.md)
 </dt> <dt>
 
 [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)

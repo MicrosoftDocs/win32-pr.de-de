@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVECTOR3-Struktur (D3dx9math.h): Beschreibt einen Vektor mit drei Komponenten, einschließlich Operatorüberladungen und Typcasts.'
+description: 'D3DXVECTOR3-Struktur (D3dx9math.h): Beschreibt einen Drei-Komponenten-Vektor, einschließlich Operatorüberladungen und Typcasts.'
 ms.assetid: 4d73de4b-82fe-452a-8a1e-17208f172a03
 title: D3DXVECTOR3-Struktur (D3dx9math.h)
 ms.topic: reference
@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: 29d6743f0c0c365911ebbbba66cb4d44f10792e7
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 49b5d91f9ed87e3af218db9a72db9a7d196c98202e5e4381bc0838c26f2e9859
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097578"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119675880"
 ---
 # <a name="d3dxvector3-structure-d3dx9mathh"></a>D3DXVECTOR3-Struktur (D3dx9math.h)
 
@@ -74,7 +74,7 @@ Die z-Komponente.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="d3dxvector3-extensions"></a>D3DXVECTOR3-Erweiterungen
 
@@ -155,13 +155,13 @@ public:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

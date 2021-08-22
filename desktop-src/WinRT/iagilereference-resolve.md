@@ -1,7 +1,7 @@
 ---
-description: Ruft die Schnittstellen-ID eines Agile-Verweises auf ein Objekt ab.
+description: Ruft die Schnittstellen-ID eines agilen Verweises auf ein -Objekt ab.
 ms.assetid: 627A7EE4-CFEF-47F6-BA99-51BEB78C5D55
-title: 'Iagilereferen:: Resolve-Methode'
+title: IAgileReference::Resolve-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - objidl.h
-ms.openlocfilehash: 1c3ac95802a44f4305abb24566744ad98c67b174
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b58013ba81bb394715a0042f3f3d7435a381fa01f5b985bd9ad81d12122441e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119758775"
 ---
-# <a name="iagilereferenceresolve-method"></a>Iagilereferen:: Resolve-Methode
+# <a name="iagilereferenceresolve-method"></a>IAgileReference::Resolve-Methode
 
-Ruft die Schnittstellen-ID eines Agile-Verweises auf ein Objekt ab.
+Ruft die Schnittstellen-ID eines agilen Verweises auf ein -Objekt ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ HRESULT Resolve(
 
 <dl> <dt>
 
-*riid* \[ in\]
+*riid* \[ In\]
 </dt> <dd>
 
-Die Schnittstellen-ID der Schnittstelle, die aus dem Agile-Verweis abgerufen werden soll. Es muss nicht mit der registrierten Schnittstelle identisch sein.
+Die Schnittstellen-ID der Schnittstelle, die aus dem agilen Verweis abgerufen werden soll. Sie muss nicht mit der registrierten Schnittstelle identisch sein.
 
 </dd> <dt>
 
-*ppvobjectreferenzierung* \[ Out, retval\]
+*ppvObjectReference* \[ out, retval\]
 </dt> <dd>
 
-Nach erfolgreichem Abschluss \* ist *ppvobjectreferenein* Zeiger auf die durch *riid* angegebene Schnittstelle.
+Nach erfolgreichem Abschluss \* *ist ppvObjectReference* ein Zeiger auf die durch *riid angegebene Schnittstelle.*
 
 </dd> </dl>
 
@@ -60,18 +60,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Rückgabewert                                                                              | BESCHREIBUNG                                                                    |
+| Rückgabewert                                                                              | Beschreibung                                                                    |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> </dl>          | Die Methode wurde erfolgreich abgeschlossen.<br/>                                  |
-| <dl> <dt>E \_ nointerface</dt> </dl> | Die angeforderte Schnittstelle ist für das registrierte Objekt nicht implementiert.<br/> |
+| <dl> <dt>E \_ NOINTERFACE</dt> </dl> | Die angeforderte Schnittstelle wird für das registrierte Objekt nicht implementiert.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Rufen Sie die [**rogetagilereferenzierungsfunktion**](/windows/desktop/api/ComBaseApi/nf-combaseapi-rogetagilereference) auf, um einen agilen Verweis auf ein Objekt zu erstellen. Aufrufen der **Resolve** -Methode, um das Objekt in das Apartment zu lokalisieren, in dem **Resolve** aufgerufen wird.
+Rufen Sie die [**RoGetAgileReference-Funktion auf,**](/windows/desktop/api/ComBaseApi/nf-combaseapi-rogetagilereference) um einen agilen Verweis auf ein Objekt zu erstellen. Rufen Sie die **Resolve-Methode** auf, um das Objekt in dem Apartment zu lokalisieren, in dem **Resolve** aufgerufen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Rufen Sie die [**rogetagilereferenzierungsfunktion**](/windows/desktop/api/ComBa
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Desktop-Apps \| UWP-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/> |
 
 
 
@@ -88,10 +88,10 @@ Rufen Sie die [**rogetagilereferenzierungsfunktion**](/windows/desktop/api/ComBa
 
 <dl> <dt>
 
-[**Iagilereferenzierung**](/windows/desktop/api/objidl/nn-objidl-iagilereference)
+[**IAgileReference**](/windows/desktop/api/objidl/nn-objidl-iagilereference)
 </dt> <dt>
 
-[**Rogetagilereferenzierung**](/windows/desktop/api/ComBaseApi/nf-combaseapi-rogetagilereference)
+[**RoGetAgileReference**](/windows/desktop/api/ComBaseApi/nf-combaseapi-rogetagilereference)
 </dt> </dl>
 
  

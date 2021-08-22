@@ -1,7 +1,7 @@
 ---
 description: Beschreibt eine Renderoberfläche.
 ms.assetid: cffa1555-1fa2-427d-8bcb-da0e61d82152
-title: D3DXRTS_DESC-Struktur (D3dx9core. h)
+title: D3DXRTS_DESC-Struktur (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9core.h
-ms.openlocfilehash: 3a0b52f258956f7b62734ca97cc5d1bf5ed00ac3
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 838fc7d08eff0889049e7f0c73ae779239934e49049948b926fa956eeac3d40a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961593"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119607630"
 ---
-# <a name="d3dxrts_desc-structure"></a>D3DXRTS- \_ Struktur
+# <a name="d3dxrts_desc-structure"></a>\_D3DXRTS-DESC-Struktur
 
 Beschreibt eine Renderoberfläche.
 
@@ -46,7 +46,7 @@ typedef struct D3DXRTS_DESC {
 **Width**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -57,7 +57,7 @@ Breite der Renderoberfläche in Pixel.
 **Height**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -72,29 +72,29 @@ Typ: **[D3DFORMAT](d3dformat.md)**
 
 </dd> <dd>
 
-Member des [D3DFORMAT](d3dformat.md) -Enumerationstyps, der das Pixel Format der Renderoberfläche beschreibt.
+Member des [D3DFORMAT-Enumerationstyps,](d3dformat.md) der das Pixelformat der Renderoberfläche beschreibt.
 
 </dd> <dt>
 
-**Depthstencil**
+**Tiefenschablone**
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-**True** gibt an, dass die Renderoberfläche eine tiefen Schablone unterstützt. Andernfalls ist dieser Member auf **false** festgelegt.
+True gibt an, dass die Renderoberfläche eine Tiefenschablonenoberfläche unterstützt. Andernfalls wird dieser Member auf **FALSE** festgelegt.
 
 </dd> <dt>
 
-**Depthstencilformat**
+**DepthStencilFormat**
 </dt> <dd>
 
 Typ: **[D3DFORMAT](d3dformat.md)**
 
 </dd> <dd>
 
-Wenn depthstencil auf **true** festgelegt ist, ist dieser Parameter ein Member des [D3DFORMAT](d3dformat.md) -Enumerationstyps, der das tiefen Schablone-Format der Renderoberfläche beschreibt.
+Wenn DepthStencil auf **TRUE** festgelegt ist, ist dieser Parameter ein Member des [D3DFORMAT-Enumerationstyps,](d3dformat.md) der das Tiefenschablonenformat der Renderoberfläche beschreibt.
 
 </dd> </dl>
 
@@ -104,7 +104,7 @@ Wenn depthstencil auf **true** festgelegt ist, ist dieser Parameter ein Member d
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9core. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9core.h</dt> </dl> |
 
 
 
@@ -115,7 +115,7 @@ Wenn depthstencil auf **true** festgelegt ist, ist dieser Parameter ein Member d
 [D3DX-Strukturen](dx9-graphics-reference-d3dx-structures.md)
 </dt> <dt>
 
-[**ID3DXRenderToSurface:: getdebug**](id3dxrendertosurface--getdesc.md)
+[**ID3DXRenderToSurface::GetDesc**](id3dxrendertosurface--getdesc.md)
 </dt> </dl>
 
  

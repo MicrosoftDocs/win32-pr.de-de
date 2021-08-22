@@ -1,9 +1,9 @@
 ---
-title: Mrmkreateconfig-Funktion (mrmresourceingedexer. h)
-description: Erstellt eine neue, initialisierte PRI-Konfigurationsdatei, die die von Ihnen angegebenen qualifiziererstandardwerte definiert. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme.
+title: MrmCreateConfig-Funktion (MrmResourceIndexer.h)
+description: Erstellt eine neue, initialisierte PRI-Konfigurationsdatei, die die von Ihnen angegebenen Qualifizierer-Standardwerte definiert. Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für die Paketressourcenindizierung (Package Resource Indexing, PRI) und benutzerdefinierte Buildsysteme.
 ms.assetid: F8FB4E9C-1C04-460A-BFA1-FB663653DA3C
 keywords:
-- Mrmcreateconfig-Funktions Menüs und weitere Ressourcen
+- MrmCreateConfig-Funktionsmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3adb270d9bbd9194822181314a697fa1d267a127
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 618823054914a609a451d6a0fe77ed6380e2d95982e14158f5965bf3f9c82260
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339365"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119601920"
 ---
-# <a name="mrmcreateconfig-function"></a>Mrmkreateconfig-Funktion
+# <a name="mrmcreateconfig-function"></a>MrmCreateConfig-Funktion
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Erstellt eine neue, initialisierte PRI-Konfigurationsdatei, die die von Ihnen angegebenen qualifiziererstandardwerte definiert. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für [Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme](/windows/uwp/app-resources/pri-apis-custom-build-systems).
+Erstellt eine neue, initialisierte PRI-Konfigurationsdatei, die die von Ihnen angegebenen Qualifizierer-Standardwerte definiert. Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für die Paketressourcenindizierung und benutzerdefinierte [Buildsysteme.](/windows/uwp/app-resources/pri-apis-custom-build-systems)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,28 +44,28 @@ HRESULT HRESULT MrmCreateConfig(
 
 <dl> <dt>
 
-*platformversion* \[ in\]
+*platformVersion* \[ In\]
 </dt> <dd>
 
-Typ: **[ **mrmplatformversion**](mrmplatformversion.md)**
+Typ: **[ **MrmPlatformVersion**](mrmplatformversion.md)**
 
-Die Platt Form Version (*targetosversion*), die für die generierte Konfigurationsdatei verwendet werden soll.
+Die Plattformversion (*targetOsVersion*), die für die generierte Konfigurationsdatei verwendet werden soll.
 
 </dd> <dt>
 
-*defaultqualifizierer* \[ in, optional\]
+*defaultQualifiers* \[ in, optional\]
 </dt> <dd>
 
-Typ: **pcwstr**
+Typ: **PCWSTR**
 
-Eine Liste der Standard Ressourcen Qualifizierer. Beispiel: L "language-en-US \_ Scale-100 \_ Contrast-Standard"
+Eine Liste der Standardressourcenqualifizierer. Beispiel: L"language-en-US \_ scale-100 \_ contrast-standard"
 
 </dd> <dt>
 
-*outputxmlfile* \[ in\]
+*outputXmlFile* \[ In\]
 </dt> <dd>
 
-Typ: **pcwstr**
+Typ: **PCWSTR**
 
 Der Pfad der zu erstellenden Konfigurationsdatei.
 
@@ -75,7 +75,7 @@ Der Pfad der zu erstellenden Konfigurationsdatei.
 
 Typ: **HRESULT**
 
-S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwenden Sie die Makros Success () oder failed () (in WinError. h definiert), um den Erfolg oder Misserfolg zu ermitteln.
+S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwenden Sie die Makros SUCCEEDED() oder FAILED() (definiert in winerror.h), um den Erfolg oder Fehler zu bestimmen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,10 +83,10 @@ S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwen
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1803, \[ nur Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ -Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Mrmresourceingedexer. h</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Mrmsupport. lib</dt> </dl>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1803 desktop apps only (Nur \[ Desktop-Apps der Version 1803)\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur \[ Serverdesktop-Apps\]<br/>                                                 |
+| Header<br/>                   | <dl> <dt>MrmResourceIndexer.h</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Mrmsupport.lib</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Mrmsupport.dll</dt> </dl>       |
 
 

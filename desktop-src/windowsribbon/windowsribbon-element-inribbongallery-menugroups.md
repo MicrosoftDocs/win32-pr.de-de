@@ -23,7 +23,7 @@ ms.locfileid: "119710480"
 
 Stellt einen Container für die Dropdownmenüelemente eines [Menüband-Katalog-Steuerelements](windowsribbon-controls-inribbongallery.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <InRibbonGallery.MenuGroups>
@@ -39,7 +39,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                         | BESCHREIBUNG                                     |
+| Element                                                         | Beschreibung                                     |
 |-----------------------------------------------------------------|-------------------------------------------------|
 | [**Menugroup**](windowsribbon-element-menugroup.md)<br/> | Muss mindestens einmal auftreten.<br/> <br/> |
 
@@ -107,7 +107,7 @@ Dieser Codeabschnitt zeigt die **Steuerelementdeklaration InRibbonGallery.MenuGr
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

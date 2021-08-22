@@ -1,9 +1,9 @@
 ---
-title: HDN_OVERFLOWCLICK Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Header Steuerelement an das übergeordnete Element gesendet, wenn auf die Überlauf Schaltfläche des Headers geklickt wird Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: HDN_OVERFLOWCLICK Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Headersteuerelement an das übergeordnete Element gesendet, wenn auf die Überlaufschaltfläche des Headers geklickt wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 770ae00a-b87f-4de2-b869-2a233f2c493e
 keywords:
-- Windows-Steuerelemente für HDN_OVERFLOWCLICK Benachrichtigungs
+- HDN_OVERFLOWCLICK Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 911953fcbea785cb7024bc9d0670c8ed33239524
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 61cee31369bfa1574ba4690f952bc60fb0dde1e5a9bf2f41e98b659356a79625
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119576220"
 ---
-# <a name="hdn_overflowclick-notification-code"></a>\_Benachrichtigungs Code für den über Fluss von Hdn
+# <a name="hdn_overflowclick-notification-code"></a>HDN \_ OVERFLOWCLICK-Benachrichtigungscode
 
-Wird von einem Header Steuerelement an das übergeordnete Element gesendet, wenn auf die Überlauf Schaltfläche des Headers geklickt wird Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Headersteuerelement an das übergeordnete Element gesendet, wenn auf die Überlaufschaltfläche des Headers geklickt wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -38,12 +38,12 @@ HDN_OVERFLOWCLICK
 
 <dl> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**NMHEADER**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) -Struktur, die den Benachrichtigungs Code beschreibt. Der Aufrufprozess ist dafür verantwortlich, diese Struktur zuzuordnen, einschließlich der enthaltenen [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur. Legen Sie die Member der **NMHDR** -Struktur fest, einschließlich des *Code* Members, der auf den Hdn-overflowclick festgelegt werden muss \_ .
+Ein Zeiger auf eine [**NMHEADER-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) die den Benachrichtigungscode beschreibt. Der aufrufende Prozess ist für die Zuordnung dieser Struktur verantwortlich, einschließlich der enthaltenen [**NMHDR-Struktur.**](/windows/desktop/api/richedit/ns-richedit-nmhdr) Legen Sie die Member der **NMHDR-Struktur** fest, einschließlich des *Codemembers,* der auf HDN OVERFLOWCLICK festgelegt werden \_ muss.
 
-Legen Sie den **iItem** -Member der [**NMHEADER**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) -Struktur auf den Index des ersten Header Elements fest, das nicht sichtbar ist und daher bei einem Überlauf angezeigt werden soll.
+Legen Sie den **iItem-Member** der [**NMHEADER-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) auf den Index des ersten Headerelements fest, das nicht sichtbar ist und daher bei einem Überlauf angezeigt werden soll.
 
 </dd> </dl>
 
@@ -51,11 +51,11 @@ Legen Sie den **iItem** -Member der [**NMHEADER**](/windows/win32/api/commctrl/n
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Benachrichtigungs Empfänger wandelt **LPARAM** ein, um die [**NMHEADER**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) -Struktur abzurufen. **WParam** enthält die ID des Steuer Elements, das die Benachrichtigung sendet.
+Der Benachrichtigungsempfänger castt **LPARAM,** um die [**NMHEADER-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) abzurufen. **WPARAM** enthält die ID des Steuerelements, das die Benachrichtigung sendet.
 
-Diese Meldung wird nur gesendet, wenn für das Header Steuerelement Style [**HDS \_ Overflow**](header-control-styles.md) festgelegt ist.
+Diese Meldung wird nur gesendet, wenn [**der HDS \_ OVERFLOW-Stil**](header-control-styles.md) für das Headersteuerelement festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ Diese Meldung wird nur gesendet, wenn für das Header Steuerelement Style [**HDS
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

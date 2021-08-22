@@ -3,43 +3,43 @@ title: Verwenden von automatischen Wiedergabelisten zum Organisieren von Inhalte
 description: Verwenden von automatischen Wiedergabelisten zum Organisieren von Inhalten in der Bibliothek
 ms.assetid: 118d4357-044f-4986-af51-0c344470e891
 keywords:
-- Windows Media Player Online Stores, automatische Wiedergabelisten
-- Online Stores, automatische Wiedergabelisten
-- Typ 1 Online Stores, automatische Wiedergabelisten
-- Typ 2 Online Stores, automatische Wiedergabelisten
-- Windows Media Player Online Stores, organisieren von Bibliotheks Inhalten
-- Online Stores, organisieren von Bibliotheks Inhalten
-- Geben Sie 1 Online Stores ein, organisieren Sie Bibliotheksinhalte.
-- Typ 2 Online Stores, organisieren von Bibliotheksinhalt
-- Windows Media Player Online Stores, organisieren von Bibliotheks Inhalten
-- Online Stores, organisieren von Bibliotheks Inhalten
-- Typ 1 Online Stores, Bibliothek Inhalt organisieren
-- Typ 2 Online Stores, Bibliothek Inhalt organisieren
-- Bibliothek, organisieren von Inhalten
-- Organisieren von Bibliotheksinhalt
-- automatische Wiedergabelisten
+- Windows Media Player Onlineshops, automatische Wiedergabelisten
+- Onlineshops, automatische Wiedergabelisten
+- Geben Sie 1 Onlineshops ein, automatische Wiedergabelisten
+- Geben Sie 2 Onlineshops ein, automatische Wiedergabelisten.
+- Windows Media Player Onlineshops, Organisieren von Bibliotheksinhalten
+- Onlineshops, Organisieren von Bibliotheksinhalten
+- Typ 1 Onlineshops, Organisieren von Bibliotheksinhalten
+- Typ 2 Onlineshops, Organisieren von Bibliotheksinhalten
+- Windows Media Player Onlineshops, Organisieren von Bibliotheksinhalten
+- Onlineshops, Organisieren von Bibliotheksinhalten
+- Typ 1 Onlineshops, Organisieren von Bibliotheksinhalten
+- Typ 2 Onlineshops, Organisieren von Bibliotheksinhalten
+- Bibliothek,Organisieren von Inhalten
+- Organisieren von Bibliotheksinhalten
+- Automatische Wiedergabelisten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aa53a4b9f56a8aa6425f137ef4a8c43bd8ed1454
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c0e32d0f95093d9550c71643330267d59a57f56db7e0d666274a492ac29b2c58
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119507170"
 ---
 # <a name="using-auto-playlists-to-organize-content-in-the-library"></a>Verwenden von automatischen Wiedergabelisten zum Organisieren von Inhalten in der Bibliothek
 
-Sie können automatische Wiedergabelisten verwenden, um von Ihnen bereitgestellte Premium-Inhalte zu organisieren. Beispielsweise können Sie mit Windows Media Player eine automatische Wiedergabeliste erstellen, die nur Inhalte enthält, die Sie mit einer Benutzer Bewertung von mindestens vier Sternen angegeben haben. Anschließend können Sie die automatische Wiedergabeliste der Bibliothek in Windows Media Player hinzufügen, sodass Sie im Knoten "erworbene Musik" unter Ihrem Inhalts Verteilerknoten angezeigt wird.
+Sie können automatische Wiedergabelisten verwenden, um die von Ihnen zur Verfügung stellen Premium-Inhalte zu organisieren. Beispielsweise können Sie Windows Media Player verwenden, um eine automatische Wiedergabeliste zu erstellen, die nur inhalte enthält, die Sie mit einer Benutzerbewertung von mindestens vier Sternen bereitgestellt haben. Anschließend können Sie die automatische Wiedergabeliste der Bibliothek in Windows Media Player hinzufügen, sodass sie im Knoten Erworbene Musik unter dem Knoten Ihres Inhaltsverteilers angezeigt wird.
 
 Gehen Sie hierzu folgendermaßen vor:
 
 1.  Erstellen Sie die automatische Wiedergabeliste.
-2.  Navigieren Sie in Windows-Explorer zur automatischen Wiedergabeliste, und rufen Sie die WPL-Datei ab.
-3.  Fügen Sie der Bibliothek mithilfe des Windows Media Player-Objektmodells die automatische Wiedergabeliste hinzu.
-4.  Legen Sie das **WM/contentdistributor-** Attribut für die Wiedergabeliste auf den Schlüsselnamen ihres Inhalts Verteilers fest.
-5.  Legen Sie das **synattribute** -Attribut für die Wiedergabeliste auf true fest.
+2.  Navigieren Sie mit Windows Explorer zur automatischen Wiedergabeliste, und rufen Sie die WPL-Datei ab.
+3.  Fügen Sie die automatische Wiedergabeliste mithilfe des Windows Media Player-Objektmodells der Bibliothek hinzu.
+4.  Legen Sie das **WM/ContentDistributor-Attribut** für die Wiedergabeliste auf den Schlüsselnamen Ihres Inhaltsverteilers fest.
+5.  Legen Sie das **SyncOnly-Attribut** für die Wiedergabeliste auf TRUE fest.
 
-Der folgende JScript-Beispielcode zeigt eine Funktion, die dem Proseware-Knoten in der Bibliothek eine automatische Wiedergabeliste mit dem Namen "Favoriten Treffer" hinzufügt:
+Der folgende JScript Beispielcode zeigt eine Funktion, die dem Proseware-Knoten in der Bibliothek eine automatische Wiedergabeliste namens "Favoritentreffer" hinzufügt:
 
 
 ```C++
@@ -57,33 +57,33 @@ function AddWPL()
 
 <dl> <dt>
 
-[Informationen zur Bibliotheks Integration](download-manager-overview.md)
+[Informationen zur Bibliotheksintegration](download-manager-overview.md)
 </dt> <dt>
 
-[**Informationen, die von Typ 1 und Typ 2 Online Stores gemeinsam sind**](information-common-to-type-1-and-type-2-online-stores.md)
+[**Allgemeine Informationen zu Onlineshops vom Typ 1 und Typ 2**](information-common-to-type-1-and-type-2-online-stores.md)
 </dt> <dt>
 
-[**Mediacollection. Add**](mediacollection-add.md)
+[**MediaCollection.add**](mediacollection-add.md)
 </dt> <dt>
 
-[**Wiedergabeliste. Einstellungs Element**](playlist-setiteminfo.md)
+[**Playlist.setItemInfo**](playlist-setiteminfo.md)
 </dt> <dt>
 
 [**Statische und automatische Wiedergabelisten**](static-and-auto-playlists.md)
 </dt> <dt>
 
-[**Synkonstante-Attribut**](synconly-attribute.md)
+[**SyncOnly-Attribut**](synconly-attribute.md)
 </dt> <dt>
 
-[**WM-/contentverteilungs-Attribut**](wm-contentdistributor-attribute.md)
+[**WM/ContentDistributor-Attribut**](wm-contentdistributor-attribute.md)
 </dt> <dt>
 
 [**Arbeiten mit der Bibliothek**](working-with-the-library.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

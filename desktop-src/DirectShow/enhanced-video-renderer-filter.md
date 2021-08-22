@@ -1,15 +1,15 @@
 ---
-description: Der EVR-Filter (Enhanced Video Renderer) ist ein Video-Mixer und Renderer mit 16 Kanälen. Sie verfügt über die gleichen Kernfunktionen und das Plug-in-Modell wie die Media Foundation EVR-Medien Senke.
+description: Der EVR-Filter (Enhanced Video Renderer) ist ein 16-Kanal-Videomixer und -renderer. Es verfügt über die gleiche Kernfunktionalität und das gleiche Plug-In-Modell wie Media Foundation EVR-Mediensenke.
 ms.assetid: ead99cb3-2be2-42c6-ac22-be0c2ddf28d5
 title: Erweiterter Videorendererfilter
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ba6e7c14386ea37424364274263859844182ed7
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 4e6b99eefe8f31074c755f4f74b4cd8749e44de996f49592cea5827d6fa1e123
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104041214"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119537070"
 ---
 # <a name="enhanced-video-renderer-filter"></a>Erweiterter Videorendererfilter
 
@@ -18,9 +18,9 @@ ms.locfileid: "104041214"
 
  
 
-Der EVR-Filter (Enhanced Video Renderer) ist ein Video-Mixer und Renderer mit 16 Kanälen. Sie verfügt über die gleichen Kernfunktionen und das Plug-in-Modell wie die Media Foundation EVR-Medien Senke.
+Der EVR-Filter (Enhanced Video Renderer) ist ein 16-Kanal-Videomixer und -renderer. Es verfügt über die gleiche Kernfunktionalität und das gleiche Plug-In-Modell wie Media Foundation EVR-Mediensenke.
 
-Der DirectShow-EVR-Filter ist in der Media Foundation SDK-Dokumentation dokumentiert. Weitere Informationen finden Sie unter [Enhanced Video Renderer](../medfound/enhanced-video-renderer.md).
+Der DirectShow EVR-Filter ist in der Dokumentation zum Media Foundation SDK dokumentiert. Weitere Informationen finden Sie unter [Enhanced Video Renderer](../medfound/enhanced-video-renderer.md).
 
 
 
@@ -31,55 +31,55 @@ Der DirectShow-EVR-Filter ist in der Media Foundation SDK-Dokumentation dokument
 </colgroup>
 <tbody>
 <tr class="odd">
-<td>Filter Schnittstellen (über <strong>QueryInterface</strong>)</td>
+<td>Filterschnittstellen (über <strong>QueryInterface</strong>)</td>
 <td>DirectShow-Schnittstellen:
 <ul>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-iamcertifiedoutputprotection"><strong>Iamcertifiedoutputprotection</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-iamfiltermiscflags"><strong>Iamfilterfehlflags</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-ibasefilter"><strong>Ibasefilter</strong></a></li>
-<li><a href="ikspropertyset.md"><strong>"Ikspropertyset"</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-imediaeventsink"><strong>Imediaeventsink</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-imediaseeking"><strong>Imediaseeking</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>Iqualitycontrol</strong></a></li>
-<li><a href="/previous-versions/windows/desktop/api/Amvideo/nn-amvideo-iqualprop"><strong>Iqualprop</strong></a></li>
+<li><a href="/windows/desktop/api/Strmif/nn-strmif-iamcertifiedoutputprotection"><strong>IAMCertifiedOutputProtection</strong></a></li>
+<li><a href="/windows/desktop/api/Strmif/nn-strmif-iamfiltermiscflags"><strong>IAMFilterMiscFlags</strong></a></li>
+<li><a href="/windows/desktop/api/Strmif/nn-strmif-ibasefilter"><strong>IBaseFilter</strong></a></li>
+<li><a href="ikspropertyset.md"><strong>IKsPropertySet</strong></a></li>
+<li><a href="/windows/desktop/api/Strmif/nn-strmif-imediaeventsink"><strong>IMediaEventSink</strong></a></li>
+<li><a href="/windows/desktop/api/Strmif/nn-strmif-imediaseeking"><strong>IMediaSeeking</strong></a></li>
+<li><a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a></li>
+<li><a href="/previous-versions/windows/desktop/api/Amvideo/nn-amvideo-iqualprop"><strong>IQualProp</strong></a></li>
 </ul>
-Media Foundation-Schnittstellen:<br/>
+Media Foundation Schnittstellen:<br/>
 <ul>
-<li><a href="/windows/desktop/api/evr/nn-evr-ievrfilterconfig"><strong>Ievrfilterconfig</strong></a></li>
-<li><a href="/windows/desktop/api/mfidl/nn-mfidl-imfgetservice"><strong>IMF-Dienst</strong></a></li>
-<li><a href="/windows/desktop/api/evr/nn-evr-imfvideopositionmapper"><strong>IMF videopositionmapper</strong></a></li>
-<li><a href="/windows/desktop/api/evr/nn-evr-imfvideorenderer"><strong>Imsvideorenderer</strong></a></li>
+<li><a href="/windows/desktop/api/evr/nn-evr-ievrfilterconfig"><strong>IEVRFilterConfig</strong></a></li>
+<li><a href="/windows/desktop/api/mfidl/nn-mfidl-imfgetservice"><strong>GEGETService</strong></a></li>
+<li><a href="/windows/desktop/api/evr/nn-evr-imfvideopositionmapper"><strong>CITRIXVideoPositionMapper</strong></a></li>
+<li><a href="/windows/desktop/api/evr/nn-evr-imfvideorenderer"><strong>BENTVideoRenderer</strong></a></li>
 </ul></td>
 </tr>
 <tr class="even">
-<td>Eingabe-PIN-Medientypen</td>
+<td>Eingabepin-Medientypen</td>
 <td>Variable, abhängig vom Grafiktreiber.</td>
 </tr>
 <tr class="odd">
-<td>Eingabe-PIN-Schnittstellen (über <strong>QueryInterface</strong>)</td>
+<td>Eingabepinschnittstellen (über <strong>QueryInterface</strong>)</td>
 <td>DirectShow-Schnittstellen:
 <ul>
 <li><a href="/windows/desktop/api/Strmif/nn-strmif-imeminputpin"><strong>IMemInputPin</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>Iqualitycontrol</strong></a></li>
+<li><a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>Ipin</strong></a></li>
+<li><a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a></li>
 </ul>
-Media Foundation-Schnittstellen:<br/>
+Media Foundation Schnittstellen:<br/>
 <ul>
-<li><a href="/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideomemoryconfiguration"><strong>Idirectxvideomemoryconfiguration</strong></a></li>
-<li><a href="/windows/desktop/api/evr9/nn-evr9-ievrvideostreamcontrol"><strong>Ievrvideostreamcontrol</strong></a></li>
-<li><a href="/windows/desktop/api/mfidl/nn-mfidl-imfgetservice"><strong>IMF-Dienst</strong></a></li>
+<li><a href="/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideomemoryconfiguration"><strong>IDirectXVideoMemoryConfiguration</strong></a></li>
+<li><a href="/windows/desktop/api/evr9/nn-evr9-ievrvideostreamcontrol"><strong>IEVRVideoStreamControl</strong></a></li>
+<li><a href="/windows/desktop/api/mfidl/nn-mfidl-imfgetservice"><strong>GEGETService</strong></a></li>
 </ul></td>
 </tr>
 <tr class="even">
-<td>Ausgabe-PIN-Medientypen</td>
+<td>Ausgabepin-Medientypen</td>
 <td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>PIN-Schnittstellen</td>
+<td>Ausgabe-PIN-Schnittstellen</td>
 <td>Nicht zutreffend</td>
 </tr>
 <tr class="even">
-<td>CLSID Filtern</td>
+<td>Filtern der CLSID</td>
 <td>CLSID_EnhancedVideoRenderer</td>
 </tr>
 <tr class="odd">
@@ -91,7 +91,7 @@ Media Foundation-Schnittstellen:<br/>
 <td>MERIT_DO_NOT_USE</td>
 </tr>
 <tr class="odd">
-<td><a href="filter-categories.md">Filter Kategorie</a></td>
+<td><a href="filter-categories.md">Filterkategorie</a></td>
 <td>CLSID_LegacyAmFilterCategory</td>
 </tr>
 </tbody>
@@ -101,33 +101,33 @@ Media Foundation-Schnittstellen:<br/>
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zusätzlich zu den Schnittstellen, die über **QueryInterface** verfügbar gemacht werden, macht der EVR andere Schnittstellen über die [**imfgetservice:: GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) -Methode verfügbar. Einige dieser Schnittstellen werden von dem EVR Presenter oder dem EVR-Mixer implementiert, nicht von dem EVR selbst. Wenn die Anwendung einen benutzerdefinierten Presenter oder Mixer auf dem EVR festlegt, machen die benutzerdefinierten Versionen möglicherweise einen anderen Satz von Schnittstellen verfügbar.
+Zusätzlich zu den Schnittstellen, die über **QueryInterface verfügbar** gemacht werden, macht der EVR andere Schnittstellen über die [**METHODE DURCHGETService::GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) verfügbar. Einige dieser Schnittstellen werden von der EVR-Moderatorin oder dem EVR-Mixer und nicht von der EVR selbst implementiert. Wenn die Anwendung eine benutzerdefinierte Präsentation oder einen benutzerdefinierten Mixer auf der EVR-Schnittstelle festgelegt, können die benutzerdefinierten Versionen einen anderen Satz von Schnittstellen verfügbar machen.
 
 
 
-| Object     | Dienst Bezeichner                                              | Schnittstellen                                                                                                                                                                                                                                                                                                     |
+| Object     | Dienstbezeichner                                              | Schnittstellen                                                                                                                                                                                                                                                                                                     |
 |------------|-----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| EVR-Filter | Mr- \_ Video- \_ Rendering- \_ Dienst (Abfrage EVR oder Presenter)<br/> | [**IMF videoabviceid**](/windows/desktop/api/evr/nn-evr-imfvideodeviceid)<br/> [**IMF videodisplaycontrol**](/windows/desktop/api/evr/nn-evr-imfvideodisplaycontrol)<br/> [**IMF videopositionmapper**](/windows/desktop/api/evr/nn-evr-imfvideopositionmapper)<br/> [**IMF videopresenter**](/windows/desktop/api/evr/nn-evr-imfvideopresenter)<br/>                                                          |
-| EVR-Filter | Mr- \_ Video \_ Beschleunigungs \_ Dienst (Abfrage Presenter)<br/>  | [**IDirect3DDeviceManager9**](/windows/desktop/api/dxva2api/nn-dxva2api-idirect3ddevicemanager9)                                                                                                                                                                                                                                                      |
-| EVR-Filter | Mr- \_ Video- \_ Mixer- \_ Dienst (Queries-Mixer)<br/>             | [**IMF videoabviceid**](/windows/desktop/api/evr/nn-evr-imfvideodeviceid)<br/> [**IMF videomixerbitmap**](/windows/desktop/api/evr9/nn-evr9-imfvideomixerbitmap)<br/> [**IMF videomixercontrol**](/windows/desktop/api/evr/nn-evr-imfvideomixercontrol)<br/> [**IMF videopositionmapper**](/windows/desktop/api/evr/nn-evr-imfvideopositionmapper)<br/> [**IMF videoprocessor**](/windows/desktop/api/evr9/nn-evr9-imfvideoprocessor)<br/> |
-| Eingabe Pins | Mr- \_ Video \_ Beschleunigungs \_ Dienst                                | [**Idirectxvideomemoryconfiguration**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideomemoryconfiguration)                                                                                                                                                                                                                                    |
+| EVR-Filter | MR \_ VIDEO \_ RENDER \_ SERVICE(Fragt EVR oder Presenter ab)<br/> | [**BENTVideoDeviceID**](/windows/desktop/api/evr/nn-evr-imfvideodeviceid)<br/> [**BILDSCHIRMANZEIGEVideoDisplayControl**](/windows/desktop/api/evr/nn-evr-imfvideodisplaycontrol)<br/> [**CITRIXVideoPositionMapper**](/windows/desktop/api/evr/nn-evr-imfvideopositionmapper)<br/> [**VERERBUNGVideoPresenter**](/windows/desktop/api/evr/nn-evr-imfvideopresenter)<br/>                                                          |
+| EVR-Filter | MR \_ VIDEO \_ ACCELERATION \_ SERVICE(Queries presenter)<br/>  | [**IDirect3DDeviceManager9**](/windows/desktop/api/dxva2api/nn-dxva2api-idirect3ddevicemanager9)                                                                                                                                                                                                                                                      |
+| EVR-Filter | MR \_ VIDEO MIXER SERVICE \_ \_ (Abfragemixer)<br/>             | [**BENTVideoDeviceID**](/windows/desktop/api/evr/nn-evr-imfvideodeviceid)<br/> [**BEREINIGERVideoMixerBitmap**](/windows/desktop/api/evr9/nn-evr9-imfvideomixerbitmap)<br/> [**BEREINIGERVideoMixerControl**](/windows/desktop/api/evr/nn-evr-imfvideomixercontrol)<br/> [**CITRIXVideoPositionMapper**](/windows/desktop/api/evr/nn-evr-imfvideopositionmapper)<br/> [**VERWERTERVideoProzessor**](/windows/desktop/api/evr9/nn-evr9-imfvideoprocessor)<br/> |
+| Eingabepins | \_ \_ MR-VIDEOBESCHLEUNIGUNGSDIENST \_                                | [**IDirectXVideoMemoryConfiguration**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideomemoryconfiguration)                                                                                                                                                                                                                                    |
 
 
 
  
 
-Der EVR kann bis zu 16 Videostreams mischen. Der erste Eingabedaten Strom (PIN 0) wird als *Verweis Datenstrom* bezeichnet. Der Verweis Datenstrom wird immer zuerst in der z-Reihenfolge angezeigt. Alle zusätzlichen Streams werden als Substreams bezeichnet und werden oberhalb des Verweis Datenstroms gemischt. Die Anwendung kann die z-Reihenfolge der untergeordneten Datenströme ändern, aber kein untergeordneter Stream kann in der z-Reihenfolge angegeben werden.
+Der EVR kann bis zu 16 Videostreams mischen. Der erste Eingabestream (Pin 0) wird als *Verweisstream bezeichnet.* Der Verweisstream wird immer zuerst in der Z-Reihenfolge angezeigt. Alle zusätzlichen Streams werden als Unterstreams bezeichnet und über dem Verweisstream gemischt. Die Anwendung kann die Z-Reihenfolge der Unterstreams ändern, aber kein Unterstream darf in der Z-Reihenfolge an erster Stelle sein.
 
-Der Grafiktreiber bestimmt, welche Videoformate unterstützt werden, aber in der Regel sind Sie auf Folgendes beschränkt:
+Der Grafiktreiber bestimmt, welche Videoformate unterstützt werden, in der Regel sind sie jedoch auf Folgendes beschränkt:
 
--   Verweis Datenstrom: progressiv oder Zeilen Sprung-YUV ohne pro Pixel Alpha (z. b. NV12 oder im YUY2); oder progressiv RGB.
--   Unter Ströme: Progressive YUV mit pro Pixel-Alpha, wie z. b. ayuv oder AI44.
+-   Verweisstream: Progressiver yuv ohne Pixel-Alpha (z. B. NV12 oder YUY2) oder progressives RGB.
+-   Unterstreams: Progressive YUV mit Pro-Pixel-Alpha, z. B. AYUV oder AI44.
 
-Die verfügbaren substreamformate können vom Format des Verweis Datenstroms abhängen.
+Die verfügbaren Unterstreamformate können vom Format des Verweisstreams abhängen.
 
-Der EVR leitet Seek-Befehle durch Upstream durch PIN 0 weiter. Die untergeordneten Datenstrom-Pins leiten keine Seek-Befehle weiter. Der Quell-oder Splitter Filter ist dafür verantwortlich, dass die untergeordneten Datenströme mit dem Verweisstream synchronisiert werden.
+Der EVR weitert Suchbefehle upstream über Pin 0. Die Unterstreampins geben keine Suchbefehle weiter. Es liegt in der Verantwortung des Quell- oder Splitterfilters, die Unterstreams mit dem Verweisstream synchron zu halten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -135,8 +135,8 @@ Der EVR leitet Seek-Befehle durch Upstream durch PIN 0 weiter. Die untergeordnet
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

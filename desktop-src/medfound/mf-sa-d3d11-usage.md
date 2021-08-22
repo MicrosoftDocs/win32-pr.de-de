@@ -1,47 +1,47 @@
 ---
-description: Gibt an, wie Microsoft Direct3D 11-Oberflächen für Medien Beispiele zugeteilt werden.
+description: Gibt an, wie Microsoft Direct3D 11-Oberflächen für Medienbeispiele reserviert werden.
 ms.assetid: E9A415FA-74BF-4822-BB0E-D8AAA7D73664
-title: MF_SA_D3D11_USAGE-Attribut (MF Transform. h)
+title: MF_SA_D3D11_USAGE -Attribut (Mftransform.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e0609435cf42134f28e8464fd3173412836c8d3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6c7364b9777d94baa1a6c25aead6631ad6b11dcddc12db83698da04affebe0fd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214885"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119663950"
 ---
-# <a name="mf_sa_d3d11_usage-attribute"></a>MF \_ sa \_ D3D11 \_ Usage-Attribut
+# <a name="mf_sa_d3d11_usage-attribute"></a>MF \_ SA \_ D3D11 \_ USAGE-Attribut
 
-Gibt an, wie Microsoft Direct3D 11-Oberflächen für Medien Beispiele zugeteilt werden. Die Verwendung gibt direkt an, ob eine Stichprobe für die CPU oder die GPU zugänglich ist.
+Gibt an, wie Microsoft Direct3D 11-Oberflächen für Medienbeispiele reserviert werden. Die Nutzung gibt direkt an, ob die CPU oder GPU auf ein Beispiel zu zugegriffen werden kann.
 
 ## <a name="data-type"></a>Datentyp
 
-**D3D11 \_** Als **UInt32** gespeicherte Verwendung
+**D3D11 \_ USAGE** als **UINT32 gespeichert**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert dieses Attributs ist ein [**D3D11 \_ Usage**](/windows/win32/api/d3d11/ne-d3d11-d3d11_usage) -Wert.
+Der Wert dieses Attributs ist ein [**D3D11 \_ USAGE-Wert.**](/windows/win32/api/d3d11/ne-d3d11-d3d11_usage)
 
 ### <a name="microsoft-media-foundation-transforms"></a>Microsoft Media Foundation Transformationen
 
-In diesem Kontext wird das-Attribut nur angewendet, wenn die Microsoft Media Foundation Transformation (MFT) **true** für das MF-Attribut [ \_ \_ D3D11 \_ Aware](mf-sa-d3d11-aware.md) zurückgibt.
+In diesem Kontext gilt das -Attribut nur, wenn die Microsoft Media Foundation-Transformation (MFT) **TRUE** für das [MF \_ SA \_ D3D11 \_ AWARE-Attribut zurückgibt.](mf-sa-d3d11-aware.md)
 
-Wenn eine MFT Direct3D 11 unterstützt, stellt dieses Attribut einen Hinweis für die MFT bereit, wenn Microsoft Direct3D-Oberflächen für die Ausgabe zugewiesen werden. Legen Sie das-Attribut wie folgt fest:
+Wenn ein MFT Direct3D 11 unterstützt, stellt dieses Attribut einen Hinweis für MFT bei der Zuweisung von Microsoft Direct3D-Oberflächen für die Ausgabe zur Verfügung. Legen Sie das Attribut wie folgt fest:
 
-1.  Aufrufen von [**imftransform:: getoutputstreamtribute**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputstreamattributes) zum Abrufen des MFT-Attribut Speicher.
-2.  Rückrufe [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+1.  Rufen [**Sie DEN MFT-Attributspeicher**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputstreamattributes) auf, um DEN MFT-Attributspeicher zu erhalten.
+2.  Rufen [**Sie DIE ATTRIBUTEs::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-Die Media Foundation Pipeline legt das-Attribut vor dem Starten des Streamings fest. Der MFT sollte die Einstellung bei der Zuweisung von Oberflächen berücksichtigen. Wenn dies nicht möglich ist, kann das MFT das Attribut ignorieren und nicht die Zuordnung.
+Die Media Foundation-Pipeline legt das -Attribut fest, bevor das Streaming gestartet wird. MFT sollte versuchen, die Einstellung beim Zuordnen von Oberflächen zu verwenden. Wenn dies nicht möglich ist, kann MFT das Attribut ignorieren, anstatt die Zuordnung zu fehlschlagen.
 
-Wenn der MFT außerdem Direct3D-Oberflächen für die Eingabe erfordert, kann er dieses Attribut als Hinweis dafür verfügbar machen, wie die Eingabe Oberflächen zugeordnet werden sollen. Fragen Sie das Attribut wie folgt ab:
+Wenn für MFT Direct3D-Oberflächen für die Eingabe erforderlich sind, kann dieses Attribut außerdem als Hinweis dafür verfügbar sein, wie die Eingabeoberflächen zugeordnet werden sollen. Fragen Sie das Attribut wie folgt ab:
 
-1.  Aufrufen von [**imftransform:: getinputstreamattributs**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getinputstreamattributes) , um die Eingabedaten Strom Attribute abzurufen.
-2.  Rückrufe [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+1.  Rufen [**Sie ZUM Erhalten der Eingabestreamattribute DEN WERT FÜR DIETRANSFORM::GetInputStreamAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getinputstreamattributes) auf.
+2.  Rufen [**Sie DIE ATTRIBUTE::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-### <a name="sample-allocator"></a>Beispiel Zuweisung
+### <a name="sample-allocator"></a>Beispielzuweisung
 
-Dieses Attribut kann für die Video Sample-Zuweisung in der [**IMF-Methode IMF videosamplezuordcatorex:: initializesampledepcatorex**](/windows/desktop/api/mfidl/nf-mfidl-imfvideosampleallocatorex-initializesampleallocatorex) festgelegt werden.
+Dieses Attribut kann für die Videobeispielbelegung in der [**METHODE ALLOCATVideoSampleAllocatorEx::InitializeSampleAllocatorEx festgelegt**](/windows/desktop/api/mfidl/nf-mfidl-imfvideosampleallocatorex-initializesampleallocatorex) werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Dieses Attribut kann für die Video Sample-Zuweisung in der [**IMF-Methode IMF v
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>"MF Transform. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Mftransform.h</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Dieses Attribut kann für die Video Sample-Zuweisung in der [**IMF-Methode IMF v
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

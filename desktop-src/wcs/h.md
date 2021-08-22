@@ -9,7 +9,7 @@ keywords:
 - Farbverwaltung,Glossar
 - Farben, Glossar
 - Windows Farbsystem (WCS), Definitionen
-- WCS (Windows Color System), Definitionen
+- WCS (Windows Color System),Definitionen
 - Bildfarbverwaltung,Definitionen
 - Farbverwaltung,Definitionen
 - Farben, Definitionen

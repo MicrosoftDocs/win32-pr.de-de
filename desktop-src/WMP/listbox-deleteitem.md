@@ -1,9 +1,9 @@
 ---
-title: ListBox. DeleteItem
-description: Mit der DeleteItem-Methode wird das Listenfeld-Steuerelement am angegebenen Index gelöscht.
+title: LISTBOX.deleteItem
+description: Die deleteItem-Methode löscht das Listenfeld-Steuerelement am angegebenen Index.
 ms.assetid: b7ed38b7-8495-426f-b799-e62cd149b397
 keywords:
-- ListBox. DeleteItem-Fenster Media Player
+- LISTBOX.deleteItem Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 45f4df09c608500e9a618b310b6296febaf073c4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: caa0a8aa74536692f188df4117a41c69af8ead4c510f315125ac0100e690fb1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351307"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054778"
 ---
-# <a name="listboxdeleteitem"></a>ListBox. DeleteItem
+# <a name="listboxdeleteitem"></a>LISTBOX.deleteItem
 
-Mit der **DeleteItem** -Methode wird das Listenfeld-Steuerelement am angegebenen Index gelöscht.
+Die **deleteItem-Methode** löscht das Listenfeld-Steuerelement am angegebenen Index.
 
 ``` syntax
         elementID.deleteItem(index)
@@ -32,10 +32,10 @@ Mit der **DeleteItem** -Methode wird das Listenfeld-Steuerelement am angegebenen
 
 <dl> <dt>
 
-<span id="index"></span><span id="INDEX"></span>*Sin*
+<span id="index"></span><span id="INDEX"></span>*Index*
 </dt> <dd>
 
-**Zahl** (**Long**), die den Index des zu löschenden Elements enthält.
+**Number** (**long**), die den Index des zu löschenden Elements enthält.
 
 </dd> </dl>
 
@@ -43,9 +43,9 @@ Mit der **DeleteItem** -Methode wird das Listenfeld-Steuerelement am angegebenen
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Zeilen unterhalb der gelöschten Zeile werden um einen Indexwert nach oben verschoben.
+Die Zeilen unterhalb der gelöschten Zeile werden um einen Indexwert nach oben bewegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Die Zeilen unterhalb der gelöschten Zeile werden um einen Indexwert nach oben v
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> </dl>
 
  

@@ -57,7 +57,7 @@ Der Windows Media Video 9 Screen-Encoder unterstützt die folgenden Eigenschafte
 <thead>
 <tr class="header">
 <th>Eigenschaft</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -69,7 +69,7 @@ Nur Schreibzugriff.<br />
 </tr>
 <tr class="even">
 <td><a href="mfpkey-bavgproperty.md">MFPKEY_BAVG</a></td>
-<td>Gibt das Pufferfenster (in Millisekunden) eines eingeschränkten VBR-Streams (Variable Bit Rate) mit der durchschnittlichen Bitrate (angegeben durch <a href="mfpkey-ravgproperty.md">MFPKEY_RAVG) an.</a><br/> <dl> Windows XP und höher.<br />
+<td>Gibt das Pufferfenster eines eingeschränkten VBR-Streams (Variable Bit Rate) in Millisekunden mit der durchschnittlichen Bitrate an (angegeben <a href="mfpkey-ravgproperty.md">durch MFPKEY_RAVG</a>).<br/> <dl> Windows XP und höher.<br />
 Lese-/Schreibzugriff.<br />
 </dl></td>
 </tr>
@@ -210,9 +210,9 @@ Schreibgeschützt.<br />
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Bildschirmencoder-Objekt macht die **IMediaObject-Schnittstelle** verfügbar, sodass das Objekt als DirectX-Medienobjekt (DMO) verwendet werden kann, und macht die **BERTRANSFORM-Schnittstelle** verfügbar, sodass das Objekt als Media Foundation Transform (MFT) verwendet werden kann.
+Ein Bildschirmencoderobjekt macht die **IMediaObject-Schnittstelle** verfügbar, sodass das Objekt als DirectX-Medienobjekt (DMO) verwendet werden kann, und es macht die **BENUTZEROBERFLÄCHETransform-Schnittstelle** verfügbar, sodass das Objekt als Media Foundation Transform (MFT) verwendet werden kann.
 
-Ein Bildschirmencoder verhält sich wie ein DMO MFT, je nachdem, welche Schnittstellen Sie abrufen und welche Version Windows wird. Die folgende Tabelle zeigt die Bedingungen, unter denen sich ein Bildschirmencoder als DMO MFT verhält.
+Ein Bildschirmencoder verhält sich wie ein DMO MFT, je nachdem, welche Schnittstellen Sie abrufen und welche Windows ausgeführt wird. Die folgende Tabelle zeigt die Bedingungen, unter denen sich ein Bildschirmencoder als DMO MFT verhält.
 
 
 
@@ -237,7 +237,7 @@ Ein Bildschirmencoder verhält sich wie ein DMO MFT, je nachdem, welche Schnitts
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

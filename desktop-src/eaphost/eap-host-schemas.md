@@ -1,28 +1,28 @@
 ---
-title: EAPHost-und Legacy-Schema Beispiele
-description: Werden beim Schreiben von Anwendungen verwendet, die EAPHost-API-Elemente aufzurufen oder implementieren.
+title: Beispiele für EAPHost- und Legacyschemas
+description: Werden beim Schreiben von Anwendungen verwendet, die EAPHost-API-Elemente aufrufen oder implementieren.
 ms.assetid: d65c4433-489c-473d-8f03-c753bace2806
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 97f9ee85b06605efbba601715df3a8c86c502487
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: 9a92cd33d2db96064684401aaad333a6d11cddf38e311bad9ca6f8c3787fbe38
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "104038388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119561890"
 ---
-# <a name="eaphost-and-legacy-schema-samples"></a>EAPHost-und Legacy-Schema Beispiele
+# <a name="eaphost-and-legacy-schema-samples"></a>Beispiele für EAPHost- und Legacyschemas
 
-Das XML-Schema wird beim Schreiben von Anwendungen verwendet, die EAPHost-API-Elemente aufzurufen oder implementieren.
+Xml-Schemas werden beim Schreiben von Anwendungen verwendet, die EAPHost-API-Elemente aufrufen oder implementieren.
 
-Hier werden zwei verschiedene Gruppen von Schema Beispielen bereitgestellt.
+Es gibt zwei verschiedene Gruppen von Schemabeispielen, die hier bereitgestellt werden.
 
--   [Verbindungs Eigenschaften](connection-profiles.md)
+-   [Verbindungseigenschaften](connection-profiles.md)
 -   [Benutzereigenschaften](user-profiles.md)
 
- 
+ 
 
- 
+ 
 
 
 

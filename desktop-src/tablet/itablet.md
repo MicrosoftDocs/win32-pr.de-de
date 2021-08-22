@@ -27,7 +27,7 @@ Stellt ein Tablet dar, das an den Computer angefügt ist.
 
 ## <a name="members"></a>Member
 
-Die **ITablet-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ITablet** verfügt auch über diese Typen von Membern:
+Die **ITablet-Schnittstelle erbt** von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ITablet** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
@@ -37,16 +37,16 @@ Die **ITablet-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                 | BESCHREIBUNG                                                                           |
+| Methode                                                                 | Beschreibung                                                                           |
 |:-----------------------------------------------------------------------|:--------------------------------------------------------------------------------------|
 | [**CreateContext**](itablet-createcontext.md)                         | Erstellt ein Kontextobjekt, das das angegebene Tablettgerät beschreibt.<br/>       |
 | [**GetCursor**](/previous-versions/windows/desktop/legacy/aa373535(v=vs.85))                                 | Ruft das angegebene [**ITabletCursor-Objekt**](itabletcursor.md) ab.<br/>     |
 | [**GetCursorCount**](itablet-getcursorcount.md)                       | Ruft die Anzahl der Cursorobjekte ab, die dem Tablet zugeordnet sind.<br/>         |
 | [**GetDefaultContextSettings**](itablet-getdefaultcontextsettings.md) | Ruft die Standardkontexteinstellungen für das Tablet ab.<br/>                     |
-| [**GetHardwareCaps**](itablet-gethardwarecaps.md)                     | Ruft einen Wert ab, der die Funktionen der Tabletthardware darstellt.<br/> |
-| [**GetMaxInputRect**](itablet-getmaxinputrect.md)                     | Ruft ein Rechteck ab, das den maximalen Eingabebereich des Tablets darstellt.<br/>    |
+| [**GetHardwareCaps**](itablet-gethardwarecaps.md)                     | Ruft einen Wert ab, der die Funktionen der Tablethardware darstellt.<br/> |
+| [**GetMaxInputRect**](itablet-getmaxinputrect.md)                     | Ruft ein Rechteck ab, das den maximalen Eingabebereich des Tabletts darstellt.<br/>    |
 | [**GetName**](itablet-getname.md)                                     | Ruft eine Zeichenfolge ab, die den Namen des Tablettgeräts enthält.<br/>               |
-| [**GetPlugAndPlayId**](itablet-getplugandplayid.md)                   | Ruft eine Zeichenfolge ab, die die Plug & Play-ID für das Tablettgerät enthält.<br/>  |
+| [**GetPlugAndPlayId**](itablet-getplugandplayid.md)                   | Ruft eine Zeichenfolge ab, die die Plug & Play-ID für das Tabletgerät enthält.<br/>  |
 | [**GetPropertyMetrics**](/previous-versions/windows/desktop/legacy/aa367722(v=vs.85))               | Ruft die Metrikdaten für eine angegebene Eigenschaft ab.<br/>                       |
 
 

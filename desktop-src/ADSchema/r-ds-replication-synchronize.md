@@ -1,10 +1,10 @@
 ---
-title: DS-Replikation-Synchronisierung erweitert rechts
-description: Erweiterte Rechte, die zum Synchronisieren der Replikation von einem bestimmten NC benötigt werden.
+title: Erweiterte Rechte "DS-Replication-Synchronize"
+description: Erweitertes Recht erforderlich, um die Replikation von einem bestimmten NC zu synchronisieren.
 ms.assetid: ea22cee4-9107-49f4-9755-9979ba5e5e04
 ms.tgt_platform: multiple
 keywords:
-- DS-Replikation-AD-Schema für erweiterte Rechte synchronisieren
+- DS-Replication-Synchronize extended right AD Schema
 topic_type:
 - apiref
 api_name:
@@ -13,31 +13,31 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 429bce8708fac9e7ed7142a79ebaec99a1b6899b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ae1cebc1d3940f2d54f97b7b07ece3549125d3148c06e42eccc542cce3f80250
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957671"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119532020"
 ---
-# <a name="ds-replication-synchronize-extended-right"></a>DS-Replikation-Synchronisierung erweitert rechts
+# <a name="ds-replication-synchronize-extended-right"></a>Erweiterte Rechte "DS-Replication-Synchronize"
 
-Erweiterte Rechte, die zum Synchronisieren der Replikation von einem bestimmten NC benötigt werden.
+Erweitertes Recht erforderlich, um die Replikation von einem bestimmten NC zu synchronisieren.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
-| CN           | DS-Replikation-synchronisieren           |
-| Anzeigename | Replikation synchronisieren          |
-| Rights-GUID  | 1131f -9c07-11d1-f c04fc2dcd2 |
+| CN           | DS-Replication-Synchronize           |
+| Anzeigename | Replikationssynchronisierung          |
+| Rights-GUID  | 1131f6ab-9c07-11d1-f79f-00c04fc2dcd2 |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -50,19 +50,19 @@ Erweiterte Rechte, die zum Synchronisieren der Replikation von einem bestimmten 
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 26                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 26                                                                                                                               |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 26                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 26                                                                                                                               |
 
 
 
@@ -72,8 +72,8 @@ Erweiterte Rechte, die zum Synchronisieren der Replikation von einem bestimmten 
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 26                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 26                                                                                                                               |
 
 
 
@@ -83,8 +83,8 @@ Erweiterte Rechte, die zum Synchronisieren der Replikation von einem bestimmten 
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 26                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 26                                                                                                                               |
 
 
 
@@ -94,8 +94,8 @@ Erweiterte Rechte, die zum Synchronisieren der Replikation von einem bestimmten 
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 26                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 26                                                                                                                               |
 
 
 
@@ -105,8 +105,8 @@ Erweiterte Rechte, die zum Synchronisieren der Replikation von einem bestimmten 
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 26                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 26                                                                                                                               |
 
 
 
@@ -116,8 +116,8 @@ Erweiterte Rechte, die zum Synchronisieren der Replikation von einem bestimmten 
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 26                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 26                                                                                                                               |
 
 
 

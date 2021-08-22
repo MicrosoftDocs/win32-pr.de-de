@@ -1,12 +1,12 @@
 ---
-title: Imsrdpclientsecuredsettings keyboardhuokmode (Eigenschaft)
-description: Gibt die Einstellungen der Tastatur Umleitung an, die angeben, wie und wann die Windows-Tastenkombination angewendet werden soll (z. b. Alt + Tab).
+title: IMsRdpClientSecuredSettings-Eigenschaft "KeyboardHookMode"
+description: Gibt die Einstellungen für die Tastaturumleitung an, die angeben, wie und wann Windows Tastenkombination (z. B. ALT+TAB) angewendet werden soll.
 ms.assetid: 16734580-9be9-476b-b8e7-1eca3ba24d61
 ms.tgt_platform: multiple
 keywords:
-- Keyboardhuokmode-Eigenschaft Remotedesktopdienste
-- Keyboardhuokmode-Eigenschaft Remotedesktopdienste, imsrdpclientsecuredsettings-Schnittstelle
-- Imsrdpclientsecuredsettings-Schnittstelle Remotedesktopdienste, keyboardhuokmode-Eigenschaft
+- KeyboardHookMode-Eigenschaft Remotedesktopdienste
+- KeyboardHookMode-Eigenschaft Remotedesktopdienste , IMsRdpClientSecuredSettings-Schnittstelle
+- IMsRdpClientSecuredSettings-Schnittstelle Remotedesktopdienste , KeyboardHookMode-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 948069b689d8799a98805148017a204b719d7645
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a291eeb26f8011440b8629ed46e1bb12c8b9cfb7adb937d33f80afe60a4d5cd7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391730"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119657590"
 ---
-# <a name="imsrdpclientsecuredsettingskeyboardhookmode-property"></a>Imsrdpclientsecuredsettings:: keyboardhuokmode-Eigenschaft
+# <a name="imsrdpclientsecuredsettingskeyboardhookmode-property"></a>IMsRdpClientSecuredSettings::KeyboardHookMode-Eigenschaft
 
-Gibt die Einstellungen der Tastatur Umleitung an, die angeben, wie und wann die Windows-Tastenkombination angewendet werden soll (z. b. Alt + Tab).
+Gibt die Einstellungen für die Tastaturumleitung an, die angeben, wie und wann Windows Tastenkombination (z. B. ALT+TAB) angewendet werden soll.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -56,21 +56,21 @@ Die neuen Einstellungen. Dieser Parameter kann einen der folgenden Werte annehme
 0
 </dt> <dd>
 
-Anwenden von Tastenkombinationen nur lokal auf dem Client Computer.
+Wenden Sie Schlüsselkombinationen nur lokal auf dem Clientcomputer an.
 
 </dd> <dt>
 
 1
 </dt> <dd>
 
-Anwenden von Tastenkombinationen auf dem Remote Server.
+Wenden Sie Schlüsselkombinationen auf dem Remoteserver an.
 
 </dd> <dt>
 
 2
 </dt> <dd>
 
-Anwenden von Tastenkombinationen auf den Remote Server, wenn der Client im Vollbildmodus ausgeführt wird. Dies ist der Standardwert.
+Wenden Sie Tastenkombinationen nur dann auf den Remoteserver an, wenn der Client im Vollbildmodus ausgeführt wird. Dies ist der Standardwert.
 
 </dd> </dl>
 
@@ -78,11 +78,11 @@ Anwenden von Tastenkombinationen auf den Remote Server, wenn der Client im Vollb
 
 Gibt bei Erfolg **S \_ OK** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Eigenschaften können nicht festgelegt werden, wenn das Steuerelement verbunden ist.
 
-Weitere Informationen finden Sie unter [Bereitstellen der RDP-Client Sicherheit](providing-for-rdp-client-security.md) .
+Weitere Informationen finden Sie unter [Bereitstellen der RDP-Clientsicherheit.](providing-for-rdp-client-security.md)
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -96,7 +96,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                 |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>         |
-| IID<br/>                      | IID \_ imsrdpclientsecuredsettings ist als 605befcf-39c1-45cc-a811-068fb7be346d definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientSecuredSettings ist als 605befcf-39c1-45cc-a811-068fb7be346d definiert.<br/> |
 
 
 
@@ -104,7 +104,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imsrdpclientsecuredsettings**](imsrdpclientsecuredsettings-interface.md)
+[**IMsRdpClientSecuredSettings**](imsrdpclientsecuredsettings-interface.md)
 </dt> </dl>
 
  

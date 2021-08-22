@@ -1,10 +1,10 @@
 ---
-title: DRM_OPL_OUTPUT_IDS Struktur (wmdrmsdk. h)
-description: Die Struktur der DRM- \_ OPL- \_ Ausgabe- \_ IDs enthält eine Reihe von OPL-Ausgabe bezeichlern (Output Protection Level).
+title: DRM_OPL_OUTPUT_IDS -Struktur (Wmdrmsdk.h)
+description: Die DRM OPL OUTPUT IDS-Struktur enthält eine Reihe von Ausgabebezeichnern für die \_ \_ \_ Ausgabeschutzebene (Output Protection Level, OPL).
 ms.assetid: 3627f2a7-1cea-400b-82e7-678898ccc386
 keywords:
-- DRM_OPL_OUTPUT_IDS Struktur-Windows Media-Format
-- Struktur des Windows-Medien Formats
+- DRM_OPL_OUTPUT_IDS struktur windows media format
+- Strukturfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 802787c5e373c837d639e0225bf650d80c105970
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 265e1015dd31281043d388debc802b390e7dd2d534f426ecbe24402efffd13df
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365532"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119658860"
 ---
-# <a name="drm_opl_output_ids-structure"></a>Struktur der DRM- \_ OPL- \_ Ausgabe- \_ IDs
+# <a name="drm_opl_output_ids-structure"></a>DRM \_ \_ \_ OPL-Ausgabe-IDS-Struktur
 
-Die Struktur der **DRM- \_ OPL- \_ Ausgabe- \_ IDs** enthält eine Reihe von OPL-Ausgabe bezeichlern (Output Protection Level).
+Die **DRM \_ OPL \_ OUTPUT \_ IDS-Struktur** enthält eine Reihe von Ausgabebezeichnern für die Ausgabeschutzebene (Output Protection Level, OPL).
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ typedef struct DRM_OPL_OUTPUT_IDS {
 
 <dl> <dt>
 
-**cIds**
+**Cids**
 </dt> <dd>
 
-Anzahl der Bezeichner in dem Array, auf das von **rgids** verwiesen wird.
+Anzahl der Bezeichner im Array, auf die von **rgIds verwiesen wird.**
 
 </dd> <dt>
 
-**rgids**
+**rgIds**
 </dt> <dd>
 
-Adresse eines Arrays von GUIDs. Jeder Member des Arrays enthält einen OPL-Ausgabe Bezeichner.
+Adresse eines Arrays von GUIDs. Jedes Member des Arrays enthält einen OPL-Ausgabebezeichner.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird als Mitglied der [**DRM-Kopier- \_ \_ OPL**](drmdrm-copy-opl.md) -und [**DRM \_ Play \_ OPL**](drmdrm-play-opl.md) -Strukturen verwendet, um Gruppen von Ausgabe bezeichatoren zu identifizieren.
+Diese Struktur wird als Member der [**DRM \_ COPY \_ OPL-**](drmdrm-copy-opl.md) und [**DRM \_ PLAY \_ OPL-Strukturen**](drmdrm-play-opl.md) verwendet, um Gruppen von Ausgabebezeichnern zu identifizieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,7 +66,7 @@ Diese Struktur wird als Mitglied der [**DRM-Kopier- \_ \_ OPL**](drmdrm-copy-opl
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 

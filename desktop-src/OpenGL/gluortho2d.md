@@ -1,6 +1,6 @@
 ---
 title: gluOrtho2D-Funktion (Glu.h)
-description: Die gluOrtho2D-Funktion definiert eine orthografische 2D-Projektionsmatrix.
+description: Die gluOrtho2D-Funktion definiert eine 2D-Orthografische Projektionsmatrix.
 ms.assetid: ba83fb5c-e5c7-4486-a815-a1aff0469757
 keywords:
 - gluOrtho2D-Funktion OpenGL
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1bf07fea583c5ae46680d888f6bf6c0a9c5aa9a0
-ms.sourcegitcommit: 88049609e29f91a42442235885abf56f598b06b3
+ms.openlocfilehash: b4a2f0d5fad1a2efb0df0c802dbb2cf51b54ff3e43402c3143bad982009f4f95
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110153553"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119488860"
 ---
 # <a name="gluortho2d-function"></a>gluOrtho2D-Funktion
 
-Die **gluOrtho2D-Funktion** definiert eine orthografische 2D-Projektionsmatrix.
+Die **gluOrtho2D-Funktion** definiert eine 2D-Orthografische Projektionsmatrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ Die Koordinate für die rechte vertikale Clippingebene.
 *top* 
 </dt> <dd>
 
-Die Koordinate für die obere horizontale Ausschneideebene.
+Die Koordinate für die obere horizontale Clippingebene.
 
 </dd> <dt>
 
 *Unteres* 
 </dt> <dd>
 
-Die Koordinate für die untere horizontale Ausschneideebene.
+Die Koordinate für die untere horizontale Clippingebene.
 
 </dd> </dl>
 
@@ -75,9 +75,9 @@ Die Koordinate für die untere horizontale Ausschneideebene.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **gluOrtho2D-Funktion** richtet einen zweidimensionalen orthografischen Anzeigebereich ein. Dies entspricht dem Aufrufen von [**glOrtho**](glortho.md) mit zNear = -1 und zFar = 1.
+Die **gluOrtho2D-Funktion** richtet einen zweidimensionalen orthografischen Anzeigebereich ein. Dies entspricht dem Aufruf [**von glOrtho**](glortho.md) mit zNear = -1 und zFar = 1.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,7 +93,7 @@ Die **gluOrtho2D-Funktion** richtet einen zweidimensionalen orthografischen Anze
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

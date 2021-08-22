@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Index Parameter'
+description: Weitere Informationen finden Sie unter Indexparameter.
 title: Indexparameter
 TOCTitle: Index Parameters
 ms:assetid: df3dfbc7-71fb-4ae2-a94a-b00eaa1572ec
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2901887233ff8b25114334c97e6a731072a69ce1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3d322334d5a14439461f903a583e11e78a7b829863c2b55dbf653dc13aa4d22d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119604480"
 ---
 # <a name="index-parameters"></a>Indexparameter
 
@@ -34,7 +34,7 @@ Dieses Thema enthält Parameter, die für den Index verwendet werden.
 *JET_paramIndexTupleIncrement*  
 132  
 
-Dieser Parameter gibt den Standardwert für das Offset Inkrement an, mit dem der Wert der Quell Spalte durchlaufen wird, während jedes Tupel erzeugt wird. Weitere Informationen finden Sie in der [JET_TUPLELIMITS](./jet-tuplelimits-structure.md) -Struktur.
+Dieser Parameter gibt den Standardwert für das Offsetinkrement an, das verwendet wird, um den Quellspaltenwert beim Generieren der einzelnen Tupel schrittweise zu durchschritten. Weitere Informationen finden Sie unter [JET_TUPLELIMITS](./jet-tuplelimits-structure.md) Struktur.
 
 <table>
 <colgroup>
@@ -59,19 +59,19 @@ Dieser Parameter gibt den Standardwert für das Offset Inkrement an, mit dem der
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -93,7 +93,7 @@ Dieser Parameter gibt den Standardwert für das Offset Inkrement an, mit dem der
 *JET_paramIndexTupleStart*  
 133  
 
-Dieser Parameter gibt den Standardwert für den Offset in dem Wert der Quell Spalte an, ab dem die tupelgenerierung gestartet wird. Weitere Informationen finden Sie in der [JET_TUPLELIMITS](./jet-tuplelimits-structure.md) -Struktur.
+Dieser Parameter gibt den Standardwert für den Offset im Quellspaltenwert an, ab dem die Tupelgenerierung beginnt. Weitere Informationen finden Sie unter [JET_TUPLELIMITS](./jet-tuplelimits-structure.md) Struktur.
 
 <table>
 <colgroup>
@@ -118,19 +118,19 @@ Dieser Parameter gibt den Standardwert für den Offset in dem Wert der Quell Spa
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -152,9 +152,9 @@ Dieser Parameter gibt den Standardwert für den Offset in dem Wert der Quell Spa
 *JET_paramIndexTuplesLengthMax*  
 111  
 
-Dieser Parameter gibt den Standardwert für die maximale tupellänge in einem Tupelindex an. Weitere Informationen finden Sie in der [JET_TUPLELIMITS](./jet-tuplelimits-structure.md) -Struktur.
+Dieser Parameter gibt den Standardwert für die maximale Tupellänge in einem Tupelindex an. Weitere Informationen finden Sie unter [JET_TUPLELIMITS](./jet-tuplelimits-structure.md) Struktur.
 
-**Windows Vista:**  Vor Windows Vista würde das Festlegen dieses Parameters auf NULL auf seinen Standardwert zurückgesetzt. Für Windows Vista wird dies nicht mehr unterstützt.
+**Windows Vista:**  Vor der Windows Vista würde das Festlegen dieses Parameters auf 0 (null) den Standardwert zurücksetzen. Für Windows Vista wird dies nicht mehr unterstützt.
 
 <table>
 <colgroup>
@@ -172,27 +172,27 @@ Dieser Parameter gibt den Standardwert für die maximale tupellänge in einem Tu
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
-<td><p><strong>Windows 2000, Windows XP und Windows Server 2003: </strong>  0, 2-255</p>
-<p><strong>Windows Vista:</strong>  2-255</p></td>
+<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong> 0, 2-255</p>
+<p><strong>Windows Vista:</strong> 2-255</p></td>
 </tr>
 <tr class="even">
 <td><p>Umfang:</p></td>
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -205,7 +205,7 @@ Dieser Parameter gibt den Standardwert für die maximale tupellänge in einem Tu
 </tr>
 <tr class="odd">
 <td><p>Verfügbarkeit:</p></td>
-<td><p>Versionen von Windows XP und höher</p></td>
+<td><p>Windows XP und spätere Versionen</p></td>
 </tr>
 </tbody>
 </table>
@@ -214,9 +214,9 @@ Dieser Parameter gibt den Standardwert für die maximale tupellänge in einem Tu
 *JET_paramIndexTuplesLengthMin*  
 110  
 
-Dieser Parameter gibt den Standardwert für die minimale tupellänge in einem Tupelindex an. Weitere Informationen finden Sie unter [JET_TUPLELIMITS](./jet-tuplelimits-structure.md) .
+Dieser Parameter gibt den Standardwert für die minimale Tupellänge in einem Tupelindex an. Weitere [JET_TUPLELIMITS](./jet-tuplelimits-structure.md) finden Sie unter .
 
-**Windows Vista:**  Vor Windows Vista würde das Festlegen dieses Parameters auf NULL auf seinen Standardwert zurückgesetzt. Für Windows Vista wird dies nicht mehr unterstützt.
+**Windows Vista:**  Vor der Windows Vista würde das Festlegen dieses Parameters auf 0 (null) den Standardwert zurücksetzen. Für Windows Vista wird dies nicht mehr unterstützt.
 
 <table>
 <colgroup>
@@ -234,40 +234,40 @@ Dieser Parameter gibt den Standardwert für die minimale tupellänge in einem Tu
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
-<td><p><strong>Windows 2000, Windows XP und Windows Server 2003: </strong>  0, 2-255</p>
-<p><strong>Windows Vista:</strong>  2-255</p></td>
+<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong> 0, 2-255</p>
+<p><strong>Windows Vista:</strong> 2-255</p></td>
 </tr>
 <tr class="even">
 <td><p>Umfang:</p></td>
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
+<td><p>Wirkt sich auf die Leistung aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
+<td><p>Wirkt sich auf Ressourcen aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
 <td><p>Verfügbarkeit:</p></td>
-<td><p>Versionen von Windows XP und höher</p></td>
+<td><p>Windows XP und höhere Versionen</p></td>
 </tr>
 </tbody>
 </table>
@@ -276,9 +276,9 @@ Dieser Parameter gibt den Standardwert für die minimale tupellänge in einem Tu
 *JET_paramIndexTuplesToIndexMax*  
 112  
 
-Dieser Parameter gibt den Standardwert für die maximale Länge einer Quell Zeichenfolge an, um für einen Tupelindex in Tupel zu unterbrechen. Weitere Informationen finden Sie unter [JET_TUPLELIMITS](./jet-tuplelimits-structure.md) .
+Dieser Parameter gibt den Standardwert für die maximale Länge einer Quellzeichenfolge an, die in Tupel für einen Tupelindex unterteilt werden soll. Weitere Informationen finden Sie [unter JET_TUPLELIMITS.](./jet-tuplelimits-structure.md)
 
-**Windows Vista:**  Vor Windows Vista würde das Festlegen dieses Parameters auf NULL auf seinen Standardwert zurückgesetzt. Für Windows Vista wird dies nicht mehr unterstützt.
+**Windows Vista:**  Vor Windows Vista wurde der Standardwert zurückgesetzt, wenn dieser Parameter auf 0 festgelegt wurde. Für Windows Vista wird dies nicht mehr unterstützt.
 
 <table>
 <colgroup>
@@ -296,40 +296,40 @@ Dieser Parameter gibt den Standardwert für die maximale Länge einer Quell Zeic
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
-<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong>  0 – 32767</p>
-<p><strong>Windows Vista:</strong>  1 – 32767</p></td>
+<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong> 0 bis 32767</p>
+<p><strong>Windows Vista:</strong> 1 bis 32767</p></td>
 </tr>
 <tr class="even">
 <td><p>Umfang:</p></td>
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
+<td><p>Wirkt sich auf die Leistung aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
+<td><p>Wirkt sich auf Ressourcen aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
 <td><p>Verfügbarkeit:</p></td>
-<td><p>Versionen von Windows XP und höher</p></td>
+<td><p>Windows XP und höhere Versionen</p></td>
 </tr>
 </tbody>
 </table>
@@ -338,15 +338,15 @@ Dieser Parameter gibt den Standardwert für die maximale Länge einer Quell Zeic
 *JET_paramUnicodeIndexDefault*  
 72  
 
-Dieser Parameter steuert die Unicode-Standardparameter, die von einem beliebigen Index für eine Unicode-Schlüssel Spalte verwendet werden. Der Typ dieses Parameters ist [JET_UNICODEINDEX](./jet-unicodeindex-structure.md) und wird tatsächlich mithilfe eines Puffer Zeigers übergeben, der im Integer-Parameter von [jetgetsystemparameter](./jetgetsystemparameter-function.md) und [jetsetsystemparameter](./jetsetsystemparameter-function.md)gespeichert ist. Die Größe des Puffers muss der Größe des [JET_UNICODEINDEX](./jet-unicodeindex-structure.md) entsprechen und mithilfe des Parameters für die Zeichen folgen Puffergröße an [jetgetsystemparameter](./jetgetsystemparameter-function.md) übergeben werden. Dies ist eindeutig inkonsistent, aber das Verhalten dieses Parameters.
+Dieser Parameter steuert die Unicode-Standardparameter, die von jedem Index für eine Unicode-Schlüsselspalte verwendet werden. Der Typ dieses Parameters ist [JET_UNICODEINDEX](./jet-unicodeindex-structure.md) und wird tatsächlich mithilfe eines Pufferzeigers übergeben, der im ganzzahligen Parameter von [JetGetSystemParameter](./jetgetsystemparameter-function.md) und [JetSetSystemParameter](./jetsetsystemparameter-function.md)gespeichert ist. Die Größe des Puffers muss der Größe von [JET_UNICODEINDEX](./jet-unicodeindex-structure.md) entsprechen und mithilfe des Parameters für die Zeichenfolgenpuffergröße an [JetGetSystemParameter](./jetgetsystemparameter-function.md) übergeben werden. Dies ist eindeutig inkonsistent, aber das ist das Verhalten dieses Parameters.
 
-Der Standardwert dieses Parameters enthält eine LCID für das US-englische Gebiets Schema und die folgenden [lcmapstringw](/windows/win32/api/winnls/nf-winnls-lcmapstringa)-Flags: LCMAP_SORTKEY, NORM_IGNORECASE, NORM_IGNOREKANATYPE und NORM_IGNOREWIDTH.
+Der Standardwert dieses Parameters enthält eine LCID für das gebietsschema für Englisch (USA) und die folgenden [LCMapStringW-Flags:](/windows/win32/api/winnls/nf-winnls-lcmapstringa)LCMAP_SORTKEY, NORM_IGNORECASE, NORM_IGNOREKANATYPE und NORM_IGNOREWIDTH.
 
-**Windows 2000:**  Die Element-ID in der LCID wird ignoriert. Eine Element-ID von SORT_DEFAULT wird immer verwendet.
+**Windows 2000:**  Die SORTID in der LCID wird ignoriert. Eine SORTID von SORT_DEFAULT wird immer verwendet.
 
-**Windows 2000:**  Die [lcmapstringw](/windows/win32/api/winnls/nf-winnls-lcmapstringa) -Flags müssen die folgenden Flags enthalten: LCMAP_SORTKEY, NORM_IGNORECASE, NORM_IGNOREKANATYPE und NORM_IGNOREWIDTH. Außerdem können die [lcmapstringw](/windows/win32/api/winnls/nf-winnls-lcmapstringa)-Flags die folgenden Flags enthalten: NORM_IGNORENONSPACE.
+**Windows 2000:**  Die [LCMapStringW-Flags](/windows/win32/api/winnls/nf-winnls-lcmapstringa) müssen die folgenden Flags enthalten: LCMAP_SORTKEY, NORM_IGNORECASE, NORM_IGNOREKANATYPE und NORM_IGNOREWIDTH. Darüber hinaus können die [LCMapStringW-Flags](/windows/win32/api/winnls/nf-winnls-lcmapstringa)die folgenden Flags enthalten: NORM_IGNORENONSPACE.
 
-**Hinweis**  Wenn Ihre Anwendung Unicode-Daten speichern möchte, wird dringend empfohlen, nicht auf die standardmäßigen Unicode-Parameter für die Indizes zu vertrauen. Die Verwendung von US-Englisch ist gleichbedeutend mit der Verwendung des invarianten Gebiets Schemas, und die standardmäßigen [lcmapstringw](/windows/win32/api/winnls/nf-winnls-lcmapstringa)-Flags sind bekannt, dass einige Sprachen ernsthaft beeinträchtigt werden. Sie sollten mit [JET_INDEXCREATE](./jet-indexcreate-structure.md)immer eigene Einstellungen für die Unicode-Parameter für JetCreateIndex2 angeben.
+**Hinweis**  Wenn Ihre Anwendung Unicode-Daten speichern möchte, wird dringend empfohlen, sich nicht auf die Unicode-Standardparameter für Ihre Indizes zu verlassen. Die Verwendung von Englisch in den USA ist für die Verwendung des invarianten Gebietsschemas erforderlich, und es ist bekannt, dass die [LCMapStringW-Standardflags](/windows/win32/api/winnls/nf-winnls-lcmapstringa)einige Sprachen schwerwiegend beeinträchtigen. Sie sollten immer ihre eigenen Einstellungen für die Unicode-Parameter in JetCreateIndex2 angeben, indem [Sie JET_INDEXCREATE](./jet-indexcreate-structure.md)verwenden.
 
 <table>
 <colgroup>
@@ -360,7 +360,7 @@ Der Standardwert dieses Parameters enthält eine LCID für das US-englische Gebi
 </tr>
 <tr class="even">
 <td><p>Typ:</p></td>
-<td><p>JET_UNICODEINDEX * (JET_UNICODEINDEX)</p></td>
+<td><p>JET_UNICODEINDEX* (JET_UNICODEINDEX)</p></td>
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
@@ -371,27 +371,27 @@ Der Standardwert dieses Parameters enthält eine LCID für das US-englische Gebi
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
+<td><p>Wirkt sich auf die Leistung aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
+<td><p>Wirkt sich auf Ressourcen aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -420,7 +420,7 @@ Der Standardwert dieses Parameters enthält eine LCID für das US-englische Gebi
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 </tbody>
 </table>
@@ -431,7 +431,7 @@ Der Standardwert dieses Parameters enthält eine LCID für das US-englische Gebi
 [JET_INDEXCREATE](./jet-indexcreate-structure.md)  
 [JET_TUPLELIMITS](./jet-tuplelimits-structure.md)  
 [JET_UNICODEINDEX](./jet-unicodeindex-structure.md)  
-[Jetkreateingestance](./jetcreateinstance-function.md)  
-[Jetgetsystemparameter](./jetgetsystemparameter-function.md)  
+[JetCreateInstance](./jetcreateinstance-function.md)  
+[JetGetSystemParameter](./jetgetsystemparameter-function.md)  
 [JetInit](./jetinit-function.md)  
-[Jetsetsystemparameter](./jetsetsystemparameter-function.md)
+[JetSetSystemParameter](./jetsetsystemparameter-function.md)

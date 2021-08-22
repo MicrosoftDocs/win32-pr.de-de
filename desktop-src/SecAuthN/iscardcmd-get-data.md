@@ -1,7 +1,7 @@
 ---
-description: Ruft das Datenfeld aus der Application Protocol Data Unit (APDU) ab und platziert es in einem Byte Puffer Objekt.
+description: Ruft das Datenfeld aus der Anwendungsprotokoll-Dateneinheit (Application Protocol Data Unit, APDU) ab und platziert es in einem Bytepufferobjekt.
 ms.assetid: fbffeeeb-56e5-4484-b294-8b6f59c919eb
-title: 'Iscardcmd:: get_data-Methode (scarddat. h)'
+title: ISCardCmd::get_Data-Methode (Scarddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: feb6a8c28316bd4fd08160063606d3e15054fd87
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 97c3e8b5c28cf872d03406ca0e18fb3c895f4011b22a760534315780d2b795db
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530221"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119577680"
 ---
-# <a name="iscardcmdget_data-method"></a>Iscardcmd:: get- \_ Daten Methode
+# <a name="iscardcmdget_data-method"></a>ISCardCmd::get \_ Data-Methode
 
-\[Die Methode " **get \_ Data** " ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **Get \_ Data-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die Methode **get \_ Data** Ruft das Datenfeld aus der [*Anwendungsprotokoll Daten-Einheit*](../secgloss/a-gly.md) (APDU) ab und platziert es in einem Byte Puffer Objekt.
+Die **get \_ Data-Methode** ruft das Datenfeld aus der Anwendungsprotokoll-Dateneinheit (Application [*Protocol Data Unit,*](../secgloss/a-gly.md) APDU) ab und platziert es in einem Bytepufferobjekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,41 +41,41 @@ HRESULT get_Data(
 
 <dl> <dt>
 
-*ppData* \[ vorgenommen\]
+*ppData* \[ out\]
 </dt> <dd>
 
-Zeiger auf das Byte Puffer Objekt (**IStream**), das das APDU-Datenfeld enthält, wenn zurückgegeben wird.
+Zeiger auf das Bytepufferobjekt (**IStream**), das das APDU-Datenfeld bei der Rückgabe enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                      |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/>     |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *ppData* -Parameter ist ungültig.<br/>  |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Ein fehlerhafter Zeiger wurde in *ppData* übermittelt.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                        |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *ppData-Parameter* ist ungültig.<br/>  |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Ein fehlerhafter Zeiger wurde in *ppData übergeben.*<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um das Datenfeld des APDU festzulegen, nennen Sie [**Put \_ Data**](iscardcmd-put-data.md).
+Rufen Sie zum Festlegen des Datenfelds der APDU [**put \_ Data auf.**](iscardcmd-put-data.md)
 
-Eine Liste aller Methoden, die von dieser Schnittstelle bereitgestellt werden, finden Sie unter [**iscardcmd**](iscardcmd.md).
+Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardCmd**](iscardcmd.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die [*Smartcard*](../secgloss/s-gly.md) zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes [](../secgloss/s-gly.md) gibt diese Schnittstelle möglicherweise einen Smartcard-Fehlercode zurück, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung zu erfüllen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie das Datenfeld der [*Anwendungsprotokoll Daten-Einheit (Application Protocol Data Unit*](../secgloss/a-gly.md) , APDU) abgerufen wird. In diesem Beispiel wird davon ausgegangen, dass pibytedata ein gültiger Zeiger auf eine Instanz der [**ibytebuffer**](ibytebuffer.md) -Schnittstelle ist und dass "piscardcmd" ein gültiger Zeiger auf eine Instanz der [**iscardcmd**](iscardcmd.md) -Schnittstelle ist.
+Das folgende Beispiel zeigt, wie das Datenfeld der Anwendungsprotokoll-Dateneinheit (Application [*Protocol Data Unit,*](../secgloss/a-gly.md) APDU) abgerufen wird. Im Beispiel wird davon ausgegangen, dass pIByteData ein gültiger Zeiger auf eine Instanz der [**IByteBuffer-Schnittstelle**](ibytebuffer.md) und pISCardCmd ein gültiger Zeiger auf eine Instanz der [**ISCardCmd-Schnittstelle**](iscardcmd.md) ist.
 
 
 ```C++
@@ -99,14 +99,14 @@ if (FAILED(hr))
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scarddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scarddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardcmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
+| IID<br/>                      | IID \_ ISCardCmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
 
 
 
@@ -114,10 +114,10 @@ if (FAILED(hr))
 
 <dl> <dt>
 
-[**Iscardcmd**](iscardcmd.md)
+[**ISCardCmd**](iscardcmd.md)
 </dt> <dt>
 
-[**\_Daten einfügen**](iscardcmd-put-data.md)
+[**Put \_ Data**](iscardcmd-put-data.md)
 </dt> </dl>
 
  

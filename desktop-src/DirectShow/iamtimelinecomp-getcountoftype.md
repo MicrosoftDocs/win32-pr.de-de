@@ -1,7 +1,7 @@
 ---
-description: Die getzählto ftype-Methode ruft die Anzahl der Objekte eines angegebenen Typs, die in dieser Komposition enthalten ist, und alle zugehörigen virtuellen Spuren rekursiv ab.
+description: Die GetCountOfType-Methode ruft rekursiv die Anzahl der Objekte eines angegebenen Typs ab, die in dieser Komposition enthalten sind, sowie alle zugehörigen virtuellen Spuren.
 ms.assetid: 2d14ccf7-77bc-4095-bfb8-12a52b4b9595
-title: 'Iamtimelinecomp:: getzählype-Methode (qedit. h)'
+title: IAMTimelineComp::GetCountOfType-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 69c4c582a3883feedec962bfb88b4a833be3750b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b0504a7adb41a0d6a45714090a39aeefda9a3ef53b2d834540f600ec3ef871a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356049"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119756410"
 ---
-# <a name="iamtimelinecompgetcountoftype-method"></a>Iamtimelinecomp:: getzählype-Methode
+# <a name="iamtimelinecompgetcountoftype-method"></a>IAMTimelineComp::GetCountOfType-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die `GetCountOfType` -Methode ruft die Anzahl der Objekte eines angegebenen Typs, die in dieser Komposition enthalten ist, und alle zugehörigen virtuellen Spuren rekursiv ab.
+Die `GetCountOfType` -Methode ruft rekursiv die Anzahl der Objekte eines angegebenen Typs ab, die in dieser Komposition enthalten sind, sowie alle zugehörigen virtuellen Spuren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,43 +50,43 @@ HRESULT GetCountOfType(
 *pVal* 
 </dt> <dd>
 
-Empfängt rekursiv die Anzahl der Objekte des angegebenen Typs, die in dieser Komposition und allen virtuellen Spuren enthalten sind.
+Empfängt rekursiv die Anzahl der Objekte des angegebenen Typs, die in dieser Komposition enthalten sind, und alle zugehörigen virtuellen Spuren.
 
 </dd> <dt>
 
-*pvalwithcomps* 
+*pValWithComps* 
 </dt> <dd>
 
-Empfängt die Anzahl, die in *PVal* zurückgegeben wurde, sowie die Anzahl der durchsuchten Kompositionen, einschließlich dieses.
+Empfängt die in *pVal* zurückgegebene Anzahl sowie die Anzahl der gesuchten Kompositionen, einschließlich dieser.
 
 </dd> <dt>
 
-*Majortype* 
+*MajorType* 
 </dt> <dd>
 
-Member des enumerierten Typs der [**Zeitachse \_ \_**](timeline-major-type.md) , der den Typ des zu zählenden Objekts angibt.
+Member des enumerierten [**TIMELINE \_ MAJOR \_ TYPE-Typs,**](timeline-major-type.md) der den Typ des zu zählenden Objekts angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " \_ OK" zurück, wenn erfolgreich, andernfalls einen E- \_ Zeiger.
+Gibt bei Erfolg S \_ OK zurück, \_ andernfalls E POINTER.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der Regel Ruft eine Anwendung diese Methode nicht auf. Sie wird von der Rendering-Engine aufgerufen.
+In der Regel ruft eine Anwendung diese Methode nicht auf. Sie wird von der Render-Engine aufgerufen.
 
-Wenn Sie die Komposition zählen, ist der in *PVal* zurückgegebene Wert 0 (null), und der in *pvalwithcomps* zurückgegebene Wert ist die Anzahl der Kompositionen. Der Wert von *\* pvalwithcomps* enthält die Komposition, auf der Sie die Methode aufzurufen. Wenn Sie diese Methode z. b. für eine leere Komposition aufzurufen, ist *\* pvalwithcomps* gleich 1.
+Wenn Sie Kompositionen zählen, ist der in *pVal* zurückgegebene Wert 0 (null), und der in *pValWithComps* zurückgegebene Wert ist die Anzahl der Kompositionen. Der Wert von *\* pValWithComps* enthält die Komposition, für die Sie die -Methode aufrufen. Wenn Sie diese Methode beispielsweise für eine leere Komposition aufrufen, *\* entspricht pValWithComps* 1.
 
-Gruppen dürfen sich nicht innerhalb von Kompositionen befinden, daher können Sie diese Methode nicht zum zählen von Gruppen verwenden. (Die zurückgegebene Anzahl ist immer 0 (null).) Um Gruppen zu zählen, können Sie die [**iamtimeline:: getgroupcount**](iamtimeline-getgroupcount.md) -Methode aufrufen.
+Gruppen können sich nicht in Kompositionen befinden, sodass Sie diese Methode nicht zum Zählen von Gruppen verwenden können. (Die zurückgegebene Anzahl ist immer null.) Um Gruppen zu zählen, rufen Sie die [**IAMTimeline::GetGroupCount-Methode**](iamtimeline-getgroupcount.md) auf.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -96,8 +96,8 @@ Gruppen dürfen sich nicht innerhalb von Kompositionen befinden, daher können S
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -105,10 +105,10 @@ Gruppen dürfen sich nicht innerhalb von Kompositionen befinden, daher können S
 
 <dl> <dt>
 
-[**Iamtimelinecomp-Schnittstelle**](iamtimelinecomp.md)
+[**IAMTimelineComp-Schnittstelle**](iamtimelinecomp.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

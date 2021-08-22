@@ -1,19 +1,19 @@
 ---
-description: In diesem Abschnitt wird die Typdefinition für die Nummer der aufrufenden Partei aufgelistet.
+description: In diesem Abschnitt wird die Typdefinition für die Nummer der aufrufenden Partei aufgeführt.
 ms.assetid: eb930123-28cf-4857-b7ad-f3c1786da7cc
 title: Nummer der aufrufenden Partei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ba8fe232386448ba2fcffc38b285d7190c8192e0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b195c4c0f86dbe516d6487b0f3fc1b60958fd67ffbacc985f10f05ecf9822fad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119758470"
 ---
 # <a name="calling-party-number"></a>Nummer der aufrufenden Partei
 
-In diesem Abschnitt wird die Typdefinition für die Nummer der aufrufenden Partei aufgelistet.
+In diesem Abschnitt wird die Typdefinition für die Nummer der aufrufenden Partei aufgeführt.
 
 ``` syntax
 #include <windows.h>

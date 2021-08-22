@@ -1,7 +1,7 @@
 ---
-description: Ruft den literalstatus eines Parameters ab. Ein literalparameter weist einen Wert auf, der sich während der Lebensdauer eines Effekts nicht ändert.
+description: Ruft einen Literalstatus eines Parameters ab. Ein Literalparameter hat einen Wert, der sich während der Lebensdauer eines Effekts nicht ändert.
 ms.assetid: 417abbee-5193-462e-b0d1-b4928ad0a041
-title: 'ID3DXEffectCompiler:: getliteralmethode (D3DX9Shader. h)'
+title: ID3DXEffectCompiler::GetLiteral-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: c16e3798ab66a34e12812a3560572c45b9206b30
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d5c4fcb9b4eb3ee102d4e0676985945cfa227aa35cbd939c8dcd5b8d51da4826
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106364352"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493940"
 ---
-# <a name="id3dxeffectcompilergetliteral-method"></a>ID3DXEffectCompiler:: getliteralmethode
+# <a name="id3dxeffectcompilergetliteral-method"></a>ID3DXEffectCompiler::GetLiteral-Methode
 
-Ruft den literalstatus eines Parameters ab. Ein literalparameter weist einen Wert auf, der sich während der Lebensdauer eines Effekts nicht ändert.
+Ruft einen Literalstatus eines Parameters ab. Ein Literalparameter hat einen Wert, der sich während der Lebensdauer eines Effekts nicht ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetLiteral(
 
 <dl> <dt>
 
-*hparameter* \[ in\]
+*hParameter* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner für einen Parameter. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner für einen Parameter. Siehe [Handles (Direct3D 9)](handles.md).
 
 </dd> <dt>
 
-*pliteral* \[ vorgenommen\]
+*pLiteral* \[ out\]
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)\***
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)\***
 
-Gibt true zurück, wenn der-Parameter ein Literalwert ist, andernfalls false.
+Gibt True zurück, wenn der Parameter ein Literal ist, andernfalls FALSE.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Gibt true zurück, wenn der-Parameter ein Literalwert ist, andernfalls false.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methoden ändern nur, ob der Parameter ein Literalwert ist oder nicht. Um den Wert eines Parameters zu ändern, verwenden Sie eine Methode wie [**ID3DXBaseEffect:: SetBool**](id3dxbaseeffect--setbool.md) oder [**ID3DXBaseEffect:: SetValue**](id3dxbaseeffect--setvalue.md).
+Diese Methode ändert nur, ob der Parameter ein Literal ist oder nicht. Um den Wert eines Parameters zu ändern, verwenden Sie eine Methode wie [**ID3DXBaseEffect::SetBool**](id3dxbaseeffect--setbool.md) oder [**ID3DXBaseEffect::SetValue.**](id3dxbaseeffect--setvalue.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Diese Methoden ändern nur, ob der Parameter ein Literalwert ist oder nicht. Um 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
@@ -90,7 +90,7 @@ Diese Methoden ändern nur, ob der Parameter ein Literalwert ist oder nicht. Um 
 [Verwendungen und Literale (Direct3D 9)](usages-and-literals.md)
 </dt> <dt>
 
-[**ID3DXEffectCompiler:: setliteral**](id3dxeffectcompiler--setliteral.md)
+[**ID3DXEffectCompiler::SetLiteral**](id3dxeffectcompiler--setliteral.md)
 </dt> </dl>
 
  

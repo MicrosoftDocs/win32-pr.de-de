@@ -1,19 +1,19 @@
 ---
-description: Gibt den Kopier Generations-Management System-a-Schutz (CGMS-a) an.
+description: Gibt den CGMS-A-Schutz (Copy Generational Management System – A) an.
 ms.assetid: 40802859-711E-4531-948F-902E8735A977
-title: MFPROTECTION_CGMSA-Attribut (mspdl. h)
+title: MFPROTECTION_CGMSA-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b6ca190d3d306f5e3e342337966a5cfa53ccb77
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bd2767e2ee77eb2ff1dbe3df005db2242a095aaf695f0071832503210c9b3041
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130533"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119555170"
 ---
-# <a name="mfprotection_cgmsa-attribute"></a>MF Protection- \_ cgmsa-Attribut
+# <a name="mfprotection_cgmsa-attribute"></a>MFPROTECTION \_ CGMSA-Attribut
 
-Gibt den Kopier Generations-Management System-a-Schutz (CGMS-a) an.
+Gibt den CGMS-A-Schutz (Copy Generational Management System – A) an.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -25,9 +25,9 @@ Gibt den Kopier Generations-Management System-a-Schutz (CGMS-a) an.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 

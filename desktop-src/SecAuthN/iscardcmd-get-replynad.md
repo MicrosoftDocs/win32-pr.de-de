@@ -1,7 +1,7 @@
 ---
-description: Ruft die von der Smartcard verwendete Knotenadresse (nad) in der Antwortnachricht ab.
+description: Ruft die Knotenadresse ab, die von der Smartcard in der Antwortnachricht verwendet wird.
 ms.assetid: bf4f281c-d378-4abd-8f2e-e23c2f4e87a4
-title: 'Iscardcmd:: get_ReplyNad-Methode (scarddat. h)'
+title: ISCardCmd::get_ReplyNad-Methode (Ddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 2088aa208a97511fd53eecec5a8cdc473b612bc2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 22460acc80aae359b3d31a7e4bf592514dd5c559feb68117d7547a0cdbedf144
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119577540"
 ---
-# <a name="iscardcmdget_replynad-method"></a>Iscardcmd:: get \_ replynad-Methode
+# <a name="iscardcmdget_replynad-method"></a>ISCardCmd::get \_ ReplyNad-Methode
 
-\[Die **get \_ replynad** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **\_ methode get ReplyNad** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **get \_ replynad** -Methode ruft die von der [*Smartcard*](../secgloss/s-gly.md) verwendete Knotenadresse (nad) in der Antwortnachricht ab.
+Die **\_ get ReplyNad-Methode** ruft die Knotenadresse (Soll) ab, die von der [*Smartcard*](../secgloss/s-gly.md) in der Antwortnachricht verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,36 +41,36 @@ HRESULT get_ReplyNad(
 
 <dl> <dt>
 
-*pbnad* \[ vorgenommen\]
+*pbNad* \[ out\]
 </dt> <dd>
 
-Zeiger auf das Byte, das das von der Antwortnachricht verwendete nad bei der Rückgabe enthält.
+Zeiger auf das Byte, das bei der Rückgabe den von der Antwortnachricht verwendeten Erneuten enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                    | Beschreibung                                                        |
 |------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Der Vorgang wurde erfolgreich abgeschlossen.<br/>                   |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>   | Der *pbnad* -Parameter ist ungültig.<br/>                     |
-| <dl> <dt>**E \_ AccessDenied**</dt> </dl> | Bei internen aufrufen konnten die nad-Informationen nicht abgerufen werden.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>   | Der *pbNad-Parameter* ist ungültig.<br/>                     |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Interne Aufrufe konnten keine Informationen abrufen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Methode möglicherweise einen Fehlercode für die Smartcard zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Methode einen Smartcardfehlercode zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie die von der [*Smartcard*](../secgloss/s-gly.md) verwendete Knotenadresse (nad) in der Antwortnachricht abgerufen wird. Im Beispiel wird davon ausgegangen, dass "piscardcmd" ein gültiger Zeiger auf eine Instanz der [**iscardcmd**](iscardcmd.md) -Schnittstelle ist.
+Das folgende Beispiel zeigt, wie sie die Knotenadresse (Knotenadresse) abruft, die von der [*Smartcard*](../secgloss/s-gly.md) in der Antwortnachricht verwendet wird. Im Beispiel wird davon ausgegangen, dass pISCardCmd ein gültiger Zeiger auf eine Instanz der [**ISCardCmd-Schnittstelle**](iscardcmd.md) ist.
 
 
 ```C++
@@ -94,14 +94,14 @@ if (FAILED(hr))
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Ddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Ddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardcmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
+| IID<br/>                      | IID \_ ISCardCmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
 
 
 
@@ -109,7 +109,7 @@ if (FAILED(hr))
 
 <dl> <dt>
 
-[**Iscardcmd**](iscardcmd.md)
+[**ISCardCmd**](iscardcmd.md)
 </dt> </dl>
 
  

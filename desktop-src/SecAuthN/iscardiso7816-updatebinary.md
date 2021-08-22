@@ -1,7 +1,7 @@
 ---
-description: Die updatebinary-Methode erstellt einen APDU-Befehl (Application Protocol Data Unit), mit dem die Bits, die in einer elementaren Datei vorhanden sind, mit den im APDU-Befehl angegebenen Bits aktualisiert werden.
+description: Die UpdateBinary-Methode erstellt einen APDU-Befehl (Application Protocol Data Unit), der die in einer elementaren Datei vorhandenen Bits mit den Bits aktualisiert, die im APDU-Befehl angegeben sind.
 ms.assetid: 14ac6ad9-efcf-48ea-8712-19caeee47521
-title: 'ISCardISO7816:: updatebinary-Methode (scardssp. h)'
+title: ISCardISO7816::UpdateBinary-Methode (Scardssp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: d9651189cab228eaa5dacc9c2f5963201bbc65c8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 46f7bbc66d76fd9d07390e6d78f25cc96111801cea8f715d84b81e704518cbbc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348679"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119577010"
 ---
-# <a name="iscardiso7816updatebinary-method"></a>ISCardISO7816:: updatebinary-Methode
+# <a name="iscardiso7816updatebinary-method"></a>ISCardISO7816::UpdateBinary-Methode
 
-\[Die **updatebinary** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **UpdateBinary-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **updatebinary** -Methode erstellt einen APDU-Befehl ( [*Application Protocol Data Unit*](../secgloss/a-gly.md) ), mit dem die Bits, die in einer elementaren Datei vorhanden sind, mit den im APDU-Befehl angegebenen Bits aktualisiert werden.
+Die **UpdateBinary-Methode** erstellt einen APDU-Befehl [*(Application Protocol Data Unit),*](../secgloss/a-gly.md) der die in einer elementaren Datei vorhandenen Bits mit den im APDU-Befehl angegebenen Bits aktualisiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,64 +44,64 @@ HRESULT UpdateBinary(
 
 <dl> <dt>
 
-*byP1* \[ in\]
+*byP1* \[ In\]
 </dt> <dd>
 
-Offset bis zum Schreib Speicherort (Update) in der Binärdatei ab dem Anfang der Binärdatei. Wenn "B8 = 1" in P1 ist, dann wird B7 und B6 von P1 auf NULL (RFU Bits) festgelegt. der Wert von B5 bis B1 von P1 ist ein kurzer EF-Bezeichner, und P2 ist der Offset des ersten Bytes, das in den Dateneinheiten vom Anfang der Datei aktualisiert werden soll. Wenn "B8 = 0" in P1 \| \| ist, ist P1 P2 der Offset des ersten Bytes, das in den Dateneinheiten vom Anfang der Datei aktualisiert werden soll.
+Offset zum Schreibspeicherort (Update) in die Binärdatei ab dem Anfang der Binärdatei. Wenn b8=1 in P1, dann sind b7 und b6 von P1 auf 0 (RFU-Bits) festgelegt, b5 bis b1 von P1 sind ein kurzer EF-Bezeichner, und P2 ist der Offset des ersten Byte, das in Dateneinheiten vom Anfang der Datei aktualisiert werden soll. Wenn b8=0 in P1 ist, ist P1 \| \| P2 der Offset des ersten Byte, das in Dateneinheiten vom Anfang der Datei aktualisiert werden soll.
 
 </dd> <dt>
 
-*byP2* \[ in\]
+*byP2* \[ In\]
 </dt> <dd>
 
-Offset bis zum Schreib Speicherort (Update) in der Binärdatei ab dem Anfang der Binärdatei. Wenn "B8 = 1" in P1 ist, dann wird B7 und B6 von P1 auf NULL (RFU Bits) festgelegt. der Wert von B5 bis B1 von P1 ist ein kurzer EF-Bezeichner, und P2 ist der Offset des ersten Bytes, das in den Dateneinheiten vom Anfang der Datei aktualisiert werden soll. Wenn "B8 = 0" in P1 \| \| ist, ist P1 P2 der Offset des ersten Bytes, das in den Dateneinheiten vom Anfang der Datei aktualisiert werden soll.
+Offset zum Schreibspeicherort (Update) in die Binärdatei ab dem Anfang der Binärdatei. Wenn b8=1 in P1, dann sind b7 und b6 von P1 auf 0 (RFU-Bits) festgelegt, b5 bis b1 von P1 sind ein kurzer EF-Bezeichner, und P2 ist der Offset des ersten Byte, das in Dateneinheiten vom Anfang der Datei aktualisiert werden soll. Wenn b8=0 in P1 ist, ist P1 \| \| P2 der Offset des ersten Byte, das in Dateneinheiten vom Anfang der Datei aktualisiert werden soll.
 
 </dd> <dt>
 
-*pData* \[ in\]
+*pData* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die Zeichenfolge der zu aktualisierenden Dateneinheiten.
+Zeiger auf die Zeichenfolge der zu aktualisierenden Dateneinheiten.
 
 </dd> <dt>
 
-*ppcmd* \[ in, out\]
+*ppCmd* \[ in, out\]
 </dt> <dd>
 
-Bei der Eingabe ein Zeiger auf ein [**iscardcmd**](iscardcmd.md) -Schnittstellen Objekt oder **null**.
+Bei der Eingabe ein Zeiger auf ein [**ISCardCmd-Schnittstellenobjekt**](iscardcmd.md) oder **NULL.**
 
-Bei der Rückgabe wird der Befehl mit dem von diesem Vorgang erstellten APDU-Befehl ausgefüllt. Wenn *ppcmd* auf **null** festgelegt wurde, wird ein [*Smartcard*](../secgloss/s-gly.md) - [**iscardcmd**](iscardcmd.md) -Objekt intern erstellt und mit dem *ppcmd* -Zeiger zurückgegeben.
+Bei der Rückgabe wird er mit dem APDU-Befehl gefüllt, der von diesem Vorgang erstellt wurde. Wenn *ppCmd* auf **NULL** festgelegt wurde, wird intern ein [**ISCardCmd-Smartcardobjekt**](iscardcmd.md) erstellt und mit dem *ppCmd-Zeiger* zurückgegeben. [](../secgloss/s-gly.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                  |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/> |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Ungültiger Parameter.<br/>                |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Es wurde ein fehlerhafter Zeiger übermittelt.<br/>      |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ungültiger Parameter.<br/>                |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein ungültiger Zeiger wurde übergeben.<br/>      |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der gekapselte Befehl kann nur ausgeführt werden, wenn der Sicherheitsstatus der Smartcard den Sicherheits Attributen der zu verarbeitenden elementaren Datei entspricht.
+Der gekapselte Befehl kann nur ausgeführt werden, wenn der Sicherheitsstatus der Smartcard die Sicherheitsattribute der zu verarbeitenden elementaren Datei erfüllt.
 
 Wenn der Befehl einen gültigen kurzen elementaren Bezeichner enthält, wird die Datei als aktuelle elementare Datei festgelegt.
 
 Elementare Dateien ohne transparente Struktur können nicht gelöscht werden. Der gekapselte Befehl wird abgebrochen, wenn er auf eine elementare Datei ohne transparente Struktur angewendet wird.
 
-Eine Liste aller Methoden, die von dieser Schnittstelle bereitgestellt werden, finden Sie unter [**ISCardISO7816**](iscardiso7816.md).
+Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardISO7816**](iscardiso7816.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die Smartcard zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen Smartcardfehlercode zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -109,14 +109,14 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scardssp. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scardsrv. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scardssp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scardsrv.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ ISCardISO7816 ist als 53b6aa68-3F 56-11D0-916b-00aa00c18068 definiert<br/>        |
+| IID<br/>                      | IID \_ ISCardISO7816 ist als 53B6AA68-3F56-11D0-916B-00AA00C18068 definiert.<br/>        |
 
 
 
@@ -124,16 +124,16 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 <dl> <dt>
 
-[**Erasebinary**](iscardiso7816-erasebinary.md)
+[**EraseBinary**](iscardiso7816-erasebinary.md)
 </dt> <dt>
 
 [**ISCardISO7816**](iscardiso7816.md)
 </dt> <dt>
 
-[**"Read Binary"**](iscardiso7816-readbinary.md)
+[**ReadBinary**](iscardiso7816-readbinary.md)
 </dt> <dt>
 
-[**"Write Binary"**](iscardiso7816-writebinary.md)
+[**WriteBinary**](iscardiso7816-writebinary.md)
 </dt> </dl>
 
  

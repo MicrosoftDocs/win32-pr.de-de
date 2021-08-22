@@ -1,11 +1,11 @@
 ---
-title: Basicdevice. Icons (Eigenschaft)
-description: Ruft einen Vektor von ideviceicon-Schnittstellen ab.
+title: BasicDevice.Icons (Eigenschaft)
+description: Ruft einen Vektor von IDeviceIcon-Schnittstellen ab.
 ms.assetid: 54933FD0-27A6-48D8-A49A-200AD9214B9A
 keywords:
-- Symbol Eigenschaft Medien Streaming-API
-- Symbol Eigenschaft Medien Streaming-API, basicdevice-Schnittstelle
-- Basicdevice-Schnittstelle Medien Streaming-API, Symbol Eigenschaft
+- Symboleigenschaft Medienstreaming-API
+- Symboleigenschaft Media Streaming-API, BasicDevice-Schnittstelle
+- BasicGeräteschnittstelle Medienstreaming-API, Icons-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: bdd0235a2b07ea86cbace87defb92f44d6b42315
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 9807c41680c042ee74b2ddc659ad1558dd13ff8b4000d08cfa0591768c301bb0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119554660"
 ---
-# <a name="basicdeviceicons-property"></a>Basicdevice. Icons (Eigenschaft)
+# <a name="basicdeviceicons-property"></a>BasicDevice.Icons (Eigenschaft)
 
-Ruft einen Vektor von [**ideviceicon**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-ideviceicon) -Schnittstellen ab.
+Ruft einen Vektor von [**IDeviceIcon-Schnittstellen**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-ideviceicon) ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -33,7 +33,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 ```C++
 HRESULT get_Icons(
-  [out] IVector< IDeviceIcon > **value
+  [out] IVector< IDeviceIcon > **value
 );
 ```
 
@@ -41,15 +41,15 @@ HRESULT get_Icons(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Aufzähl Bare Auflistung von [**ideviceicon**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-ideviceicon) -Schnittstellen Zeigern.
+Eine aufzählbare Auflistung von [**IDeviceIcon-Schnittstellenzeigern.**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-ideviceicon)
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Basicdevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
+[**BasicDevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

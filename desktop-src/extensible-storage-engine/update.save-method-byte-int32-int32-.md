@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Update. Save-Methode (Byte, Int32, Int32)'
-title: Update. Save-Methode (Byte, Int32, Int32)
+description: 'Weitere Informationen zu: Update.Save-Methode (Byte, Int32, Int32)'
+title: Update.Save-Methode (Byte, Int32, Int32)
 TOCTitle: Save method (Byte , Int32, Int32)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Update.Save(System.Byte[],System.Int32,System.Int32@)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.update.save(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e2c798f22039ced1bab30ecaa9c3f650079be0f3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 17e586177075a34f3832486a9ace4a919abaad65dad21c0e54eba47b79f207be
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485155"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119603540"
 ---
-# <a name="updatesave-method-byte--int32-int32"></a>Update. Save-Methode (Byte, Int32, Int32)
+# <a name="updatesave-method-byte--int32-int32"></a>Update.Save-Methode (Byte, Int32, Int32)
 
-Aktualisieren Sie TableID.
+Aktualisieren Sie tableid.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,36 +64,36 @@ public void Save(
 #### <a name="parameters"></a>Parameter
 
   - Lesezeichen (bookmark)  
-    Sorte \[\]  
+    Typ: \[\]  
     
     Gibt das Lesezeichen des aktualisierten Datensatzes zurück. Diese kann NULL sein.
 
 <!-- end list -->
 
-  - bookmarksize  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - bookmarkSize  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Die Größe des Lesezeichen Puffers.
+    Die Größe des Lesezeichenpuffers.
 
 <!-- end list -->
 
-  - actualbookmarksize  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - actualBookmarkSize  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Gibt die tatsächliche Größe des Lesezeichens zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Speichern ist der letzte Schritt beim Ausführen einer INSERT-oder Update-Ausführung. Das Update wird zunächst durch Aufrufen eines Update Objekts und anschließendes Aufrufen von jetsetcolumn oder jetsetcolumns gestartet, um den Daten Satz Status festzulegen. Zum Schluss wird das Update aufgerufen, um den Aktualisierungs Vorgang abzuschließen. Indizes werden nur durch Update oder nicht von jetsetcolumn oder jetsetcolumns aktualisiert.
+Speichern ist der letzte Schritt beim Ausführen einer Einfügung oder eines Updates. Das Update wird gestartet, indem ein Update-Objekt erstellt und dann mindestens ein Mal JetSetColumns oder JetSetColumns aufgerufen wird, um den Datensatzzustand festzulegen. Schließlich wird Update aufgerufen, um den Updatevorgang abzuschließen. Indizes werden nur durch Update oder aktualisiert und nicht während JetSetColumns oder JetSetColumns.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Update-Klasse](./update-class.md)
 
-[Mitglieder aktualisieren](./update-members.md)
+[Aktualisieren von Membern](./update-members.md)
 
-[Überladung speichern](./update.save-method.md)
+[Speichern der Überladung](./update.save-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

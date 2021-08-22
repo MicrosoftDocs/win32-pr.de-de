@@ -1,10 +1,10 @@
 ---
-title: Zeichen folgen Syntax (SID)
-description: Eine Oktett-Zeichenfolge, die eine Sicherheits-ID (SID) enthält.
+title: String(Sid)-Syntax
+description: Eine Oktettzeichenfolge, die einen Sicherheitsbezeichner (SID) enthält.
 ms.assetid: 3eebe9af-57f0-48f3-8b66-973cc4f329d6
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema der Zeichen folgen-Syntax (SID)
+- String(Sid)-Syntax AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 128e92bfc396c1d1c22a2535e7f9f32f24456cac
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: fe7bad231327cd6a605dc07ea515f3ebb87e587744b5873c85a1c3aa51313a15
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106345943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119530060"
 ---
-# <a name="stringsid-syntax"></a>Zeichen folgen Syntax (SID)
+# <a name="stringsid-syntax"></a>String(Sid)-Syntax
 
-Eine Oktett-Zeichenfolge, die eine Sicherheits-ID (SID) enthält.
+Eine Oktettzeichenfolge, die einen Sicherheitsbezeichner (SID) enthält.
 
 
 
@@ -32,8 +32,8 @@ Eine Oktett-Zeichenfolge, die eine Sicherheits-ID (SID) enthält.
 | Syntax-ID    | 2.5.5.17                                                          |
 | OM-ID        | 4                                                                 |
 | MAPI-Typ    | BINARY                                                            |
-| ADS-Typ     | Zeichenfolge des adstype- \_ Oktetts \_                                            |
-| Varianttyp | VT \_ UI1 \| VT- \_ Array                                              |
+| ADS-Typ     | ADSTYPE \_ OCTET \_ STRING                                            |
+| Variant-Typ | VT \_ UI1 \| VT \_ ARRAY                                              |
 | SDS-Typ     | [System.Byte\[\]](/dotnet/api/system.byte) |
 
 

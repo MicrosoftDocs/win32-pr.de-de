@@ -1,5 +1,5 @@
 ---
-description: Bestimmt, ob ein Strahl das Volume des umgebenden Felds eines Felds schneidet.
+description: Bestimmt, ob ein Strahl das Volumen des Begrenzungsfelds eines Felds schneidet.
 ms.assetid: 45ff8540-ed5c-4f54-b3b7-3385087a6863
 title: D3DXBoxBoundProbe-Funktion (D3DX9Mesh.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 707ab21a3babe7d9a93f776f438cbaab7137849b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 197582c2f404124edd5a49c9d7780ce35cac61b15438a81d120839f283b82373
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104132353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119676390"
 ---
 # <a name="d3dxboxboundprobe-function"></a>D3DXBoxBoundProbe-Funktion
 
-Bestimmt, ob ein Strahl das Volume des umgebenden Felds eines Felds schneidet.
+Bestimmt, ob ein Strahl das Volumen des Begrenzungsfelds eines Felds schneidet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,53 +43,53 @@ BOOL D3DXBoxBoundProbe(
 
 <dl> <dt>
 
-*Pmin* \[ in\]
+*pMin* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die die linke untere Ecke des Begrenzungs Rahmens beschreibt. Siehe Hinweise.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die untere linke Ecke des Begrenzungsfelds beschreibt. Siehe Hinweise.
 
 </dd> <dt>
 
-*pmax* \[ in\]
+*pMax* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die die obere rechte Ecke des Begrenzungs Rahmens beschreibt. Siehe Hinweise.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die obere rechte Ecke des Begrenzungsfelds beschreibt. Siehe Hinweise.
 
 </dd> <dt>
 
-" *prayposition* \[ " in\]
+*pRayPosition* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die die Ursprungs Koordinate des Strahls angibt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur**](d3dxvector3.md) unter Angabe der Ursprungskoordinate des Strahls.
 
 </dd> <dt>
 
-" *praydirection* \[ " in\]
+*pRayDirection* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die die Richtung des Strahls angibt. Dieser Vektor sollte nicht (0, 0, 0) sein, muss jedoch nicht normalisiert werden.
+Zeiger auf eine [**D3DXVECTOR3-Struktur**](d3dxvector3.md) unter Angabe der Richtung des Strahls. Dieser Vektor sollte nicht (0,0,0) sein, muss aber nicht normalisiert werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Gibt " **true** " zurück, wenn der Strahl das Volume des umgebenden Felds der Box schneidet. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE zurück,** wenn der Strahl das Volumen des Begrenzungsfelds des Felds überschneidet. Andernfalls wird **FALSE zurückgegeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**D3DXboxBoundProbe** bestimmt, ob der Strahl das Volume des umgebenden Felds der Box, nicht nur die Oberfläche des Felds, schneidet.
+**D3DXboxBoundProbe** bestimmt, ob der Strahl das Volumen des Begrenzungsfelds des Felds überschneidet, nicht nur die Oberfläche des Felds.
 
-Die an **D3DXboxBoundProbe** über gebenden Werte sind xmin, xmax, ymin, ymax, zmin und zmax. Folglich werden im folgenden die Ecken des umgebenden Felds definiert.
+Die an **D3DXboxBoundProbe** übergebenen Werte sind xmin, xmax, ymin, ymax, zmin und zmax. Daher definiert Folgendes die Ecken des begrenzungsgebundenen Felds.
 
 
 ```
@@ -105,7 +105,7 @@ xmin, ymin, zmin
 
 
 
-Die Tiefe des umgebenden Felds in der z-Richtung ist zmax-zmin, in der y-Richtung ist ymax-ymin, und in der x-Richtung ist xmax-xmin. Beispielsweise wird mit den folgenden minimalen und maximalen Vektoren min (-1,-1,-1) und Max (1, 1, 1) das umgebende Feld wie folgt definiert.
+Die Tiefe des Begrenzungsfelds in z-Richtung ist zmax - zmin, in der y-Richtung ist ymax - ymin und in x-Richtung xmax - xmin. Bei den folgenden minimalen und maximalen Vektoren, min (-1, -1, -1) und max (1, 1, 1), wird das Begrenzungsfeld beispielsweise wie folgt definiert.
 
 
 ```
@@ -127,8 +127,8 @@ Die Tiefe des umgebenden Felds in der z-Richtung ist zmax-zmin, in der y-Richtun
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

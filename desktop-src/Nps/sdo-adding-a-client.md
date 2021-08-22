@@ -5,26 +5,26 @@ ms.assetid: 7e9e25af-e3b9-40ba-a89d-50b3874e3e68
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ccb2ecc6d92a387107dc473bc7c7844c106da43
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2e3ec37354fc65e498664f266b9ca7823b0c5ab739111fa09c728d6e329480a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390690"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119676250"
 ---
 # <a name="adding-a-client"></a>Hinzufügen eines Clients
 
-Der folgende Visual Basic Code fügt einen neuen RADIUS-Client hinzu und legt die Adresse und den gemeinsamen geheimen Schlüssel für den Client fest.
+Der folgende Visual Basic fügt einen neuen RADIUS-Client hinzu und legt die Adresse und den gemeinsamen geheimen Schlüssel für den Client fest.
 
 > [!Note]  
-> Ein COM-Verweis muss dem Visual Basic-Projekt hinzugefügt werden, damit er ordnungsgemäß erstellt werden kann. Ein Beispiel für die VB-Befehlssequenz sieht wie folgt aus: Add Reference-> com-> "IAS SDO 1,0 Type Library". Dies variiert je nach Version von VB.
+> Dem Projekt muss ein COM-Verweis hinzugefügt werden Visual Basic damit es ordnungsgemäß erstellen kann. Ein Beispiel für die VB-Befehlssequenz sieht wie im folgenden Beispiel aus: Verweis hinzufügen -> COM -> "IAS SDO 1.0 Type Library". Dies variiert je nach Ihrer Version VB.
 
- 
+ 
 
 > [!Note]  
 > Dieses Beispiel funktioniert nicht als VBScript-Code.
 
- 
+ 
 
 
 ```VB
@@ -175,24 +175,24 @@ End Class
 
 <dl> <dt>
 
-[**Clientproperties**](/windows/desktop/api/sdoias/ne-sdoias-clientproperties)
+[**CLIENTEIGENSCHAFTEN**](/windows/desktop/api/sdoias/ne-sdoias-clientproperties)
 </dt> <dt>
 
-[Auflisten von Objekten in einer Auflistung](/windows/desktop/Nps/sdo-enumerating-objects-in-a-collection)
+[Aufzählen von Objekten in einer Auflistung](/windows/desktop/Nps/sdo-enumerating-objects-in-a-collection)
 </dt> <dt>
 
-[**Iasproperties**](/windows/desktop/api/sdoias/ne-sdoias-iasproperties)
+[**IASPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-iasproperties)
 </dt> <dt>
 
-[**Isdo**](/windows/desktop/api/sdoias/nn-sdoias-isdo)
+[**ISdo**](/windows/desktop/api/sdoias/nn-sdoias-isdo)
 </dt> <dt>
 
-[**Isdomachine**](/windows/desktop/api/sdoias/nn-sdoias-isdomachine)
+[**ISdoMachine**](/windows/desktop/api/sdoias/nn-sdoias-isdomachine)
 </dt> <dt>
 
-[**Radiusproperties**](/windows/desktop/api/sdoias/ne-sdoias-radiusproperties)
+[**RADIUSPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-radiusproperties)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

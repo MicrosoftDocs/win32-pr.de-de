@@ -1,39 +1,39 @@
 ---
-title: Verwenden des aktiven Desktop Objekts
-description: Dieser Artikel enthält Informationen zum activedesktop-Objekt, das Teil der Windows-Shell-API ist. Mit diesem Objekt können Sie über die iactivedesktop-Schnittstelle Elemente auf dem Desktop hinzufügen, entfernen und ändern.
+title: Verwenden des Active Desktop-Objekts
+description: Dieser Artikel enthält Informationen zum ActiveDesktop-Objekt, das Teil der Windows Shell-API ist. Mit diesem Objekt können Sie über die IActiveDesktop-Schnittstelle Elemente auf dem Desktop hinzufügen, entfernen und ändern.
 ms.assetid: 68d72b0f-f5e9-4fff-bb13-4c60d1dd7009
 keywords:
-- Activedesktop-Objekt
-- Aktiver Desktop
-- Enumeration, Desktop Elemente
+- ActiveDesktop-Objekt
+- Active Desktop
+- Enumeration, Desktopelemente
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f7e61a4a9145386fc4c84a454aa79558b8d5df79
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: e6daf1b5fbc73286619f07c8af76fbbce53bcaa8962cc88cf20f5af74bbdec82
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104472805"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119610660"
 ---
-# <a name="using-the-active-desktop-object"></a>Verwenden des aktiven Desktop Objekts
+# <a name="using-the-active-desktop-object"></a>Verwenden des Active Desktop-Objekts
 
 \[Dieses Feature wird nur unter Windows XP oder früher unterstützt. \]
 
-Dieser Artikel enthält Informationen zum **activedesktop-** Objekt, das Teil der Windows-Shell-API ist. Mit diesem Objekt können Sie über die [**iactivedesktop**](/windows/win32/api/shlobj_core/nn-shlobj_core-iactivedesktop) -Schnittstelle Elemente auf dem Desktop hinzufügen, entfernen und ändern.
+Dieser Artikel enthält Informationen zum **ActiveDesktop-Objekt,** das Teil der Windows Shell-API ist. Mit diesem Objekt können Sie über die [**IActiveDesktop-Schnittstelle**](/windows/win32/api/shlobj_core/nn-shlobj_core-iactivedesktop) Elemente auf dem Desktop hinzufügen, entfernen und ändern.
 
-## <a name="overview-of-the-active-desktop-interface"></a>Übersicht über die aktive Desktop Schnittstelle
+## <a name="overview-of-the-active-desktop-interface"></a>Übersicht über die Active Desktop-Schnittstelle
 
--   [Zugreifen auf den aktiven Desktop](#accessing-the-active-desktop)
--   [Hinzufügen eines Desktop Elements](#adding-a-desktop-item)
--   [Auflisten der Desktop Elemente](#enumerating-the-desktop-items)
+-   [Zugreifen auf die Active Desktop](#accessing-the-active-desktop)
+-   [Hinzufügen eines Desktopelements](#adding-a-desktop-item)
+-   [Aufzählen der Desktopelemente](#enumerating-the-desktop-items)
 
-Der aktive Desktop ist eine in Microsoft Internet Explorer 4,0 eingeführte Funktion, mit der Sie HTML-Dokumente und-Elemente (z. b. Microsoft ActiveX-Steuerelemente und Java-Applets) direkt auf Ihren Desktop einbinden können. Die [**iactivedesktop-**](/windows/win32/api/shlobj_core/nn-shlobj_core-iactivedesktop) Schnittstelle, die Teil der Windows-Shell-API ist, wird verwendet, um die Elemente auf dem Desktop Programm gesteuert hinzuzufügen, zu entfernen und zu ändern. Aktive Desktop Elemente können auch mithilfe einer CDF-Datei (Channel Definition Format) hinzugefügt werden.
+Die Active Desktop ist ein Feature, das mit Microsoft Internet Explorer 4.0 eingeführt wurde und es Ihnen ermöglicht, HTML-Dokumente und -Elemente (z. B. Microsoft ActiveX Controls und Java-Applets) direkt in Ihren Desktop einzubinden. Die [**IActiveDesktop-Schnittstelle,**](/windows/win32/api/shlobj_core/nn-shlobj_core-iactivedesktop) die Teil der Windows Shell-API ist, wird verwendet, um die Elemente auf dem Desktop programmgesteuert hinzuzufügen, zu entfernen und zu ändern. Active Desktop Elemente können auch mithilfe einer CDF-Datei (Channel Definition Format) hinzugefügt werden.
 
-### <a name="accessing-the-active-desktop"></a>Zugreifen auf den aktiven Desktop
+### <a name="accessing-the-active-desktop"></a>Zugreifen auf die Active Desktop
 
-Um auf den aktiven Desktop zuzugreifen, muss eine Client Anwendung eine Instanz des activedesktop-Objekts (CLSID \_ activedesktop) mit der [cokreateinstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion erstellen und einen Zeiger auf die [**iactivedesktop**](/windows/win32/api/shlobj_core/nn-shlobj_core-iactivedesktop) -Schnittstelle des Objekts abrufen.
+Um auf die Active Desktop zugreifen zu können, muss eine Clientanwendung eine Instanz des ActiveDesktop-Objekts (CLSID \_ ActiveDesktop) mit der [CoCreateInstance-Funktion](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) erstellen und einen Zeiger auf die [**IActiveDesktop-Schnittstelle**](/windows/win32/api/shlobj_core/nn-shlobj_core-iactivedesktop) des Objekts abrufen.
 
-Im folgenden Beispiel wird gezeigt, wie ein Zeiger auf die [**iactivedesktop-**](/windows/win32/api/shlobj_core/nn-shlobj_core-iactivedesktop) Schnittstelle abgerufen wird.
+Das folgende Beispiel zeigt, wie ein Zeiger auf die [**IActiveDesktop-Schnittstelle**](/windows/win32/api/shlobj_core/nn-shlobj_core-iactivedesktop) abgerufen wird.
 
 
 ```
@@ -52,15 +52,15 @@ pActiveDesktop->Release();
 
 
 
-### <a name="adding-a-desktop-item"></a>Hinzufügen eines Desktop Elements
+### <a name="adding-a-desktop-item"></a>Hinzufügen eines Desktopelements
 
-Es gibt drei Methoden, mit denen Sie ein Desktop Element hinzufügen können: [**iactivedesktop:: adddesktopitem**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-adddesktopitem), [**iactivedesktop:: adddesktopitemwithui**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-adddesktopitemwithui)und [**iactivedesktop:: addurl**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-addurl). Jedes Desktop Element, das dem aktiven Desktop hinzugefügt wird, muss über eine andere Quell-URL verfügen.
+Es gibt drei Methoden, mit denen Sie ein Desktopelement hinzufügen können: [**IActiveDesktop::AddDesktopItem,**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-adddesktopitem) [**IActiveDesktop::AddDesktopItemWithUI**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-adddesktopitemwithui)und [**IActiveDesktop::AddUrl**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-addurl). Jedes Desktopelement, das dem Active Desktop hinzugefügt wird, muss eine andere Quell-URL aufweisen.
 
-Mit der [**iactivedesktop:: adddesktopitemwithui**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-adddesktopitemwithui) -Methode und der [**iactivedesktop:: addurl**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-addurl) -Methode können die verschiedenen Benutzeroberflächen angezeigt werden, die angezeigt werden können, bevor dem aktiven Desktop ein Desktop Element hinzugefügt wird. Überprüfen Sie, ob Benutzer das Desktop Element dem aktiven Desktop hinzufügen möchten. Die Schnittstellen Benachrichtigen auch Benutzer über etwaige Sicherheitsrisiken, die durch die Einstellungen der URL-Sicherheitszone gewährleistet werden, und Fragen Benutzer, ob Sie ein Abonnement für dieses Desktop Element erstellen möchten. Beide Methoden bieten auch eine Möglichkeit, die Benutzeroberflächen zu unterdrücken. Die [**iactivedesktop:: adddesktopitem**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-adddesktopitem) -Methode erfordert einen [**iactivedesktop:: ApplyChanges**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-applychanges) -Anrufe, um die Registrierung zu aktualisieren. Für **iactivedesktop:: adddesktopitemwithui** muss die Client Anwendung die [**iactivedesktop-**](/windows/win32/api/shlobj_core/nn-shlobj_core-iactivedesktop) Schnittstelle sofort freigeben und dann die [cokreateinstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion verwenden, um eine Schnittstelle zu einer Instanz des **activedesktop** -Objekts abzurufen, das das neu hinzugefügte Desktop Element enthält.
+Die Methoden [**IActiveDesktop::AddDesktopItemWithUI**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-adddesktopitemwithui) und [**IActiveDesktop::AddUrl**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-addurl) bieten beide die Möglichkeit, die verschiedenen Benutzeroberflächen anzuzeigen, die angezeigt werden können, bevor dem Active Desktop ein Desktopelement hinzugefügt wird. Die Schnittstellen überprüfen, ob Benutzer das Desktopelement ihrem Active Desktop hinzufügen möchten. Die Schnittstellen benachrichtigen Benutzer auch über alle Sicherheitsrisiken, die durch die Einstellungen der URL-Sicherheitszone garantiert werden, und fragen Benutzer, ob sie ein Abonnement für dieses Desktopelement erstellen möchten. Beide Methoden bieten auch eine Möglichkeit, die Benutzeroberflächen zu unterdrücken. Die [**IActiveDesktop::AddDesktopItem-Methode**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-adddesktopitem) erfordert einen Aufruf von [**IActiveDesktop::ApplyChanges,**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-applychanges) um die Registrierung zu aktualisieren. Für **IActiveDesktop::AddDesktopItemWithUI** muss die Clientanwendung sofort die [**IActiveDesktop-Schnittstelle**](/windows/win32/api/shlobj_core/nn-shlobj_core-iactivedesktop) freigeben und dann die [CoCreateInstance-Funktion](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) verwenden, um eine Schnittstelle zu einer Instanz des **ActiveDesktop-Objekts** abzurufen, das das neu hinzugefügte Desktopelement enthält.
 
-Die [**iactivedesktop:: adddesktopitem**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-adddesktopitem) -Methode fügt das angegebene Desktop Element dem aktiven Desktop ohne Benutzeroberfläche hinzu, es sei denn, die URL-Sicherheitszonen Einstellungen verhindern dies. Wenn die URL-Sicherheitszonen Einstellungen nicht zulassen, dass das Desktop Element hinzugefügt wird, ohne den Benutzer aufzufordern, schlägt die Methode fehl. **Iactivedesktop:: adddesktopitem** erfordert auch einen [**iactivedesktop:: ApplyChanges**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-applychanges) -Anrufe, um die Registrierung zu aktualisieren.
+Die [**IActiveDesktop::AddDesktopItem-Methode**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-adddesktopitem) fügt das angegebene Desktopelement dem Active Desktop ohne Benutzeroberfläche hinzu, es sei denn, die EINSTELLUNGEN der URL-Sicherheitszone verhindern dies. Wenn die Einstellungen der URL-Sicherheitszone nicht zulassen, dass das Desktopelement hinzugefügt wird, ohne den Benutzer dazu aufzufordern, schlägt die -Methode fehl. **IActiveDesktop::AddDesktopItem** erfordert auch einen Aufruf von [**IActiveDesktop::ApplyChanges,**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-applychanges) um die Registrierung zu aktualisieren.
 
-Im folgenden Beispiel wird veranschaulicht, wie Sie ein Desktop Element mit der [**iactivedesktop:: adddesktopitem**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-adddesktopitem) -Methode hinzufügen.
+Im folgenden Beispiel wird veranschaulicht, wie Sie ein Desktopelement mit der [**IActiveDesktop::AddDesktopItem-Methode**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-adddesktopitem) hinzufügen.
 
 
 ```
@@ -87,11 +87,11 @@ pActiveDesktop->ApplyChanges(AD_APPLY_ALL);
 
 
 
-### <a name="enumerating-the-desktop-items"></a>Auflisten der Desktop Elemente
+### <a name="enumerating-the-desktop-items"></a>Aufzählen der Desktopelemente
 
-Zum Auflisten der aktuell auf dem aktiven Desktop installierten Desktop Elemente muss die Client Anwendung die Gesamtzahl der mithilfe der [**iactivedesktop:: getdesktopitemcount**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-getdesktopitemcount) -Methode installierten Desktop Elemente abrufen und dann eine Schleife erstellen, die die [**Komponenten**](/windows/desktop/api/shlobj_core/ns-shlobj_core-component) Struktur für jedes Desktop Element abruft, indem die [**iactivedesktop:: getdesktopitem**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-getdesktopitem) -Methode mithilfe des Desktop Element Indexes aufgerufen wird.
+Um die desktop-Elemente aufzulisten, die derzeit auf dem Active Desktop installiert sind, muss die Clientanwendung die Gesamtzahl der Desktopelemente abrufen, die mit der [**IActiveDesktop::GetDesktopItemCount-Methode**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-getdesktopitemcount) installiert wurden, und dann eine Schleife erstellen, die die [**COMPONENT-Struktur**](/windows/desktop/api/shlobj_core/ns-shlobj_core-component) für jedes Desktopelement abruft, indem die [**IActiveDesktop::GetDesktopItem-Methode**](/windows/win32/api/shlobj_core/nf-shlobj_core-iactivedesktop-getdesktopitem) mithilfe des Desktopelementindexes aufgerufen wird.
 
-Im folgenden Beispiel wird eine Möglichkeit zum Auflisten der Desktop Elemente veranschaulicht.
+Im folgenden Beispiel wird eine Möglichkeit zum Aufzählen der Desktopelemente veranschaulicht.
 
 
 ```
@@ -128,6 +128,6 @@ pActiveDesktop->Release();
 
 
 
- 
+ 
 
- 
+ 

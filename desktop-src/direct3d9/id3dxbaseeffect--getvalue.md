@@ -1,7 +1,7 @@
 ---
-description: Den Wert eines beliebigen Parameters oder einer Anmerkung, einschließlich einfacher Typen, Strukturen, Arrays, Zeichen folgen, Shader und Texturen, erhalten. Diese Methode kann anstelle von fast allen GetXXX-aufrufen in ID3DXBaseEffect verwendet werden.
+description: Hier erhalten Sie den Wert eines beliebigen Parameters oder einer Anmerkung, einschließlich einfacher Typen, Strukturen, Arrays, Zeichenfolgen, Shader und Texturen. Diese Methode kann statt fast aller Getxxx-Aufrufe in ID3DXBaseEffect verwendet werden.
 ms.assetid: 41343922-99a7-486f-b4b0-1aa07f339664
-title: 'ID3DXBaseEffect:: GetValue-Methode (D3DX9Shader. h)'
+title: ID3DXBaseEffect::GetValue-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 166635b22875692da0396f1c7c2145f13ca08df3
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f957ae3b59f10a086f2326e82478afb6b0ba7fd85bbf6b3f78df5746b7fcb56f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119494700"
 ---
-# <a name="id3dxbaseeffectgetvalue-method"></a>ID3DXBaseEffect:: GetValue-Methode
+# <a name="id3dxbaseeffectgetvalue-method"></a>ID3DXBaseEffect::GetValue-Methode
 
-Den Wert eines beliebigen Parameters oder einer Anmerkung, einschließlich einfacher Typen, Strukturen, Arrays, Zeichen folgen, Shader und Texturen, erhalten. Diese Methode kann anstelle von fast allen GetXXX-aufrufen in [**ID3DXBaseEffect**](id3dxbaseeffect.md)verwendet werden.
+Hier erhalten Sie den Wert eines beliebigen Parameters oder einer Anmerkung, einschließlich einfacher Typen, Strukturen, Arrays, Zeichenfolgen, Shader und Texturen. Diese Methode kann statt fast aller Getxxx-Aufrufe in [**ID3DXBaseEffect verwendet werden.**](id3dxbaseeffect.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT GetValue(
 
 <dl> <dt>
 
-*hparameter* \[ in\]
+*hParameter* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9).](handles.md)
 
 </dd> <dt>
 
-*pData* \[ vorgenommen\]
+*pData* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPVOID**](../winprog/windows-data-types.md)**
@@ -60,12 +60,12 @@ Gibt einen Puffer zurück, der den Wert enthält.
 
 </dd> <dt>
 
-*Bytes* \[ in\]
+*Bytes* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-\[gibt \] die Anzahl der Bytes im Puffer an. Übergeben Sie D3DX \_ Default, wenn Sie wissen, dass der Puffer groß genug ist, um den gesamten Parameter zu enthalten, und Sie die Größenüberprüfung überspringen möchten.
+\[in \] Anzahl von Bytes im Puffer. Übergeben Sie D3DX DEFAULT, wenn Sie wissen, dass der Puffer groß genug ist, um den gesamten Parameter zu enthalten, und Sie \_ die Größenüberprüfung überspringen möchten.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Typ: **[ **uint**](../winprog/windows-data-types.md)**
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 

@@ -4,22 +4,22 @@ description: Datenformate und Übertragungsmedien
 ms.assetid: c6023c42-ce20-40e4-9d88-55fa1d2a4d38
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e6893fabd776d196cbc7354dde7c330f9caffb0a
-ms.sourcegitcommit: 89f99926f946dc6c5ea600fb7c41f6b19ceac516
+ms.openlocfilehash: 3ccbab96fbaca83330737521f253b3c625e67ea9a024d87d35276da2826a3964
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "104039829"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119501430"
 ---
 # <a name="data-formats-and-transfer-media"></a>Datenformate und Übertragungsmedien
 
-Die meisten Plattformen, einschließlich Windows, definieren ein Standardprotokoll für die Übertragung von Daten zwischen Anwendungen, basierend auf einem Satz von Funktionen, die als Zwischenablage bezeichnet werden. Anwendungen, die diese Funktionen verwenden, können Daten freigeben, auch wenn Ihre nativen Datenformate stark voneinander abweichen. Im Allgemeinen haben diese zwischen Ablagen zwei bedeutende Mängel, die com überwunden hat.
+Die meisten Plattformen, einschließlich Windows, definieren ein Standardprotokoll für die Übertragung von Daten zwischen Anwendungen, basierend auf einer Reihe von Funktionen, die als Zwischenablage bezeichnet werden. Anwendungen, die diese Funktionen verwenden, können Daten auch dann freigeben, wenn sich ihre nativen Datenformate stark unterscheiden. Im Allgemeinen weisen diese Zwischenablage zwei wesentliche Nachteile auf, die COM behoben hat.
 
-Zuerst verwenden Daten Beschreibungen nur einen Format Bezeichner, z. b. den einzelnen 16-Bit-Format Bezeichner für die Zwischenablage unter Windows. Dies bedeutet, dass die Zwischenablage nur die Struktur Ihrer Daten beschreiben kann, d. h. die Reihenfolge der Bits. Es kann berichtet werden: "Ich verfüge über eine Bitmap", oder ich habe Text, aber es kann nicht die Zielgeräte angeben, für die die Daten erstellt werden, welche Sichten oder Aspekte selbst die Daten bereitstellen können oder welche Speichermedien am besten für die Übertragung geeignet sind. Beispielsweise kann nicht berichtet werden: "Ich habe eine Text Zeichenfolge, die im globalen Speicher gespeichert ist und für die Präsentation entweder auf dem Bildschirm oder auf einem Drucker formatiert ist." oder "Ich habe eine Miniaturansicht der Miniaturansicht für einen 100 dpi-Punkt-Matrix-Drucker gerendert und als Datenträger Datei gespeichert."
+Zunächst verwenden Datenbeschreibungen nur einen Formatbezeichner, z. B. den einzelnen 16-Bit-Zwischenablageformatbezeichner für Windows. Dies bedeutet, dass die Zwischenablage nur die Struktur ihrer Daten beschreiben kann, d. h. die Reihenfolge der Bits. Sie kann "I have a bitmap" (Ich habe eine Bitmap) "or I have some text" (Ich habe eine Bitmap) melden, aber es können nicht die Zielgeräte angegeben werden, für die die Daten zusammengesetzt sind, welche Ansichten oder Aspekte von sich selbst die Daten bereitstellen können oder welche Speichermedien für die Übertragung am besten geeignet sind. Beispielsweise kann nicht angezeigt werden: "Ich habe eine Textzeichenfolge, die im globalen Speicher gespeichert und zur Darstellung entweder auf dem Bildschirm oder auf einem Drucker formatiert ist" oder "Ich habe eine Bitmap für Miniaturansichtszeichnungen, die für einen 100-dpi-Punktmatrixdrucker gerendert und als Datenträgerdatei gespeichert ist".
 
-Zweitens erfolgen alle Datenübertragungen, die die Zwischenablage verwenden, im Allgemeinen durch globalen Speicher. Die Verwendung des globalen Speichers ist für kleine Datenmengen, aber erschreckend ineffizient für große Mengen, z. b. ein Multimediaobjekt von 20 MB, ausreichend effizient. Der globale Arbeitsspeicher ist bei einem großen Datenobjekt langsam, dessen Größe einen beträchtlichen Austausch in den virtuellen Arbeitsspeicher auf dem Datenträger erfordert. In Fällen, in denen sich die ausgetauschten Daten größtenteils auf dem Datenträger befinden, ist das Erzwingen dieses virtuellen Arbeitsspeichers äußerst ineffizient. Eine bessere Möglichkeit würde den globalen Speicher vollständig überspringen und die Daten einfach direkt auf den Datenträger übertragen.
+Zweitens erfolgen alle Datenübertragungen, die die Zwischenablage verwenden, in der Regel über globalen Arbeitsspeicher. Die Verwendung des globalen Arbeitsspeichers ist für kleine Datenmengen relativ effizient, aber für große Mengen, z. B. ein 20 MB großes Multimediaobjekt, grauenhaft ineffizient. Der globale Arbeitsspeicher ist für ein großes Datenobjekt langsam, dessen Größe einen erheblichen Austausch des virtuellen Speichers auf dem Datenträger erfordert. In Fällen, in denen sich die ausgetauschten Daten ohnehin größtenteils auf dem Datenträger befinden, ist das Erzwingen dieses Engpasses im virtuellen Speicher äußerst ineffizient. Eine bessere Möglichkeit wäre, den globalen Arbeitsspeicher vollständig zu überspringen und die Daten einfach direkt auf den Datenträger zu übertragen.
 
-Um diese Probleme zu beheben, stellt com zwei Datenstrukturen bereit: [**formatusw**](/windows/win32/api/objidl/ns-objidl-formatetc) . und [**STGMEDIUM**](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1). Weitere Informationen finden Sie unter den folgenden Themen:
+Um diese Probleme zu beheben, stellt COM zwei Datenstrukturen bereit: [**FORMATETC**](/windows/win32/api/objidl/ns-objidl-formatetc) und [**STGMEDIUM**](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1). Weitere Informationen finden Sie in den folgenden Themen:
 
 -   [Die FORMATETC-Struktur](the-formatetc-structure.md)
 -   [Die STGMEDIUM-Struktur](the-stgmedium-structure.md)

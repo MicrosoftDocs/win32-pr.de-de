@@ -1,28 +1,28 @@
 ---
 title: Erstellen eines Auftrags
-description: Um einen Übertragungs Auftrag zu erstellen, rufen Sie die Methode ibackgroundcopymanager kreatejob auf.
+description: Rufen Sie zum Erstellen eines Übertragungsauftrags die CreateJob-Methode IBackgroundCopyManager auf.
 ms.assetid: a7d9feef-4beb-4ae5-9453-9157ee3ec0e8
 keywords:
-- Übertragen von Auftrags Bits
-- Übertragen von Auftrags Bits, erstellen
+- Bits für Übertragungsauftrag
+- BITS des Übertragungsauftrags , erstellen
 ms.topic: article
 ms.date: 11/29/2018
-ms.openlocfilehash: 8dddb2427fde43014a31e81f72711ca74e69de34
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0241d855d60178e87f28820f14b39e497f200fe5770933f293257e62b2d1b601
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470997"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119528889"
 ---
 # <a name="creating-a-job"></a>Erstellen eines Auftrags
 
-Um einen Übertragungs Auftrag zu erstellen, rufen Sie die [**ibackgroundcopymanager:: kreatejob**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopymanager-createjob) -Methode auf. Nachdem Bits den Auftrag erstellt hat, [fügen Sie dem Auftrag Dateien hinzu](adding-files-to-a-job.md) , und [Ändern Sie die Auftrags Eigenschaften](setting-and-retrieving-the-properties-of-a-job.md) entsprechend Ihrer Anwendung. Um den Auftrag in der Warteschlange zu aktivieren, müssen Sie die [**ibackgroundcopyjob:: Resume**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-resume) -Methode abrufen.
+Rufen Sie zum Erstellen eines Übertragungsauftrags die [**IBackgroundCopyManager::CreateJob-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopymanager-createjob) auf. Nachdem BITS den Auftrag erstellt hat, [](setting-and-retrieving-the-properties-of-a-job.md) fügen Sie dem Auftrag Dateien [hinzu,](adding-files-to-a-job.md) und ändern Sie die Eigenschaften des Auftrags entsprechend Ihrer Anwendung. Um den Auftrag in der Warteschlange zu aktivieren, rufen Sie die [**IBackgroundCopyJob::Resume-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-resume) auf.
 
-Die Methode " [**kreatejob**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopymanager-createjob) " erstellt eine GUID, die den Auftrag eindeutig identifiziert. Verwenden Sie die GUID, um [den Auftrag aus der Übertragungs Warteschlange abzurufen](/windows/desktop/api/Bits/nf-bits-ibackgroundcopymanager-getjob). Der Anzeige Name, den Sie beim Erstellen des Auftrags angeben, ist nicht eindeutig. mehrere Aufträge können denselben Namen verwenden.
+Die [**CreateJob-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopymanager-createjob) erstellt eine GUID, die den Auftrag eindeutig identifiziert. Sie verwenden die GUID, um [den Auftrag aus der Übertragungswarteschlange abzurufen.](/windows/desktop/api/Bits/nf-bits-ibackgroundcopymanager-getjob) Der Anzeigename, den Sie beim Erstellen des Auftrags angeben, ist nicht eindeutig. mehr als ein Auftrag kann denselben Namen verwenden.
 
-Bits schränkt die Anzahl der Aufträge in der Warteschlange auf 300 Aufträge und die Anzahl der Aufträge ein, die ein Benutzer in 60 Auftrag erstellen kann. Diese Grenzwerte gelten nicht für Administratoren oder Dienste. Informationen zum Ändern dieser Standard Limits finden Sie unter [Gruppenrichtlinien](group-policies.md).
+BITS beschränkt die Anzahl der Aufträge in der Warteschlange auf 300 Aufträge und die Anzahl der Aufträge, die ein Benutzer erstellen kann, auf 60 Aufträge. Diese Grenzwerte gelten nicht für Administratoren oder Dienste. Informationen zum Ändern dieser Standardgrenzwerte finden Sie unter [Gruppenrichtlinien.](group-policies.md)
 
-Im folgenden Beispiel wird gezeigt, wie ein Download Auftrag erstellt wird. Im Beispiel wird davon ausgegangen, dass die g \_ pbcm-Variable ein gültiger [**ibackgroundcopymanager**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) -Schnittstellen Zeiger ist. Ausführliche Informationen zum Erstellen des **ibackgroundcopymanager** -Schnittstellen Zeigers finden Sie unter [Herstellen einer Verbindung mit dem BITS-Dienst](connecting-to-the-bits-service.md).
+Das folgende Beispiel zeigt, wie Sie einen Downloadauftrag erstellen. Im Beispiel wird davon ausgegangen, dass die Variable g \_ pbcm ein gültiger [**IBackgroundCopyManager-Schnittstellenzeiger**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) ist. Weitere Informationen zum Erstellen des **IBackgroundCopyManager-Schnittstellenzeigers** finden Sie unter Herstellen einer Verbindung [mit dem BITS-Dienst.](connecting-to-the-bits-service.md)
 
 
 ```C++
@@ -44,7 +44,7 @@ if (SUCCEEDED(hr))
 
 
 
-Um die aktuelle [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Schnittstelle abzurufen, nennen Sie die **ibackgroundcopyjob:: QueryInterface** -Methode. Im folgenden Beispiel wird gezeigt, wie Sie die [**IBackgroundCopyJob5**](/windows/desktop/api/Bits5_0/nn-bits5_0-ibackgroundcopyjob5) -Schnittstelle erhalten.
+Um die neueste [**IBackgroundCopyJob-Schnittstelle zu**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) erhalten, rufen Sie die **IBackgroundCopyJob::QueryInterface-Methode** auf. Das folgende Beispiel zeigt, wie die [**IBackgroundCopyJob5-Schnittstelle erhalten**](/windows/desktop/api/Bits5_0/nn-bits5_0-ibackgroundcopyjob5) wird.
 
 
 ```C++
@@ -63,9 +63,9 @@ Um die aktuelle [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-iback
 
 
 
- 
+ 
 
- 
+ 
 
 
 

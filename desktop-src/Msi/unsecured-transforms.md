@@ -1,31 +1,31 @@
 ---
-description: Bei Transformationen, die nicht gesichert wurden, wie in gesicherte Transformationen beschrieben, handelt es sich standardmäßig um unsichere Transformationen.
+description: Transformationen, die nicht wie unter Sichere Transformationen beschrieben gesichert wurden, sind standardmäßig ungesicherte Transformationen.
 ms.assetid: feace6c3-7828-44d0-8d2b-482a02e8e0c0
-title: Unsichere Transformationen
+title: Ungesicherte Transformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6743898142197d87d4e3fef5d0f48778f6261ff4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d6bb234a0cdee852d3a5e1717642f5325283a571b740c9d7b4a5f6901afb52c1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352790"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119499610"
 ---
-# <a name="unsecured-transforms"></a>Unsichere Transformationen
+# <a name="unsecured-transforms"></a>Ungesicherte Transformationen
 
-Bei Transformationen, die nicht gesichert wurden, wie in [gesicherte Transformationen](secured-transforms.md) beschrieben, handelt es sich standardmäßig um unsichere Transformationen.
+Transformationen, die nicht wie unter Sichere [Transformationen](secured-transforms.md) beschrieben gesichert wurden, sind standardmäßig ungesicherte Transformationen.
 
-Wenn Sie bei der Installation eines Pakets eine unsichere Transformation anwenden möchten, übergeben Sie die Transformations Dateinamen in der [**Transformationen**](transforms.md) -Eigenschaft oder der Befehlszeilen Zeichenfolge. Beginnen Sie die Zeichenfolge nicht mit @ oder \| Zeichen, oder legen Sie die [transformssecure-Richtlinie](transformssecure-policy.md) oder die [**transformssecure**](transformssecure.md) -Eigenschaft fest. Beachten Sie, dass Sie unsichere Transformationen und [gesicherte Transformationen](secured-transforms.md) nicht in derselben Transformations Liste kombinieren können.
+Um eine ungesicherte Transformation beim Installieren eines Pakets anzuwenden, übergeben Sie die Transformationsdateinamen in der [**TRANSFORMS-Eigenschaft**](transforms.md) oder Befehlszeilenzeichenfolge. Beginnen Sie die Zeichenfolge nicht mit den Zeichen @ oder , oder legen \| Sie die [TransformsSecure-Richtlinie](transformssecure-policy.md) oder die [**TRANSFORMSSECURE-Eigenschaft**](transformssecure.md) fest. Beachten Sie, dass Sie keine ungesicherten Transformationen und [geschützten Transformationen](secured-transforms.md) in derselben Transformationsliste kombinieren können.
 
-Wenn das Paket im [Installations Kontext](installation-context.md)pro Benutzer installiert oder angekündigt wird und ungesicherte Transformationen aufweist, speichert das Installationsprogramm die Transformations Quelle im Ordner Anwendungsdaten im Profil des Benutzers. Dadurch kann ein Benutzer seine Anpassung eines Produkts während der Umstellung zwischen Computern beibehalten.
+Wenn das Paket im Benutzerinstallationskontext installiert [](installation-context.md)oder angekündigt wird und über ungesicherte Transformationen verfügt, speichert das Installationsprogramm die Transformationsquelle im Ordner Anwendungsdaten im Profil des Benutzers. Dies ermöglicht es einem Benutzer, seine Anpassung eines Produkts beim Wechsel zwischen Computern zu verwalten.
 
-Wenn das Paket im [Installations Kontext](installation-context.md)pro Computer installiert oder angekündigt wird und ungesicherte Transformationen verwendet, speichert das Installationsprogramm die Transformations Quelle im Ordner "% windir% \\ Installer".
+Wenn das Paket im Installationskontext pro Computer [](installation-context.md)installiert oder angekündigt wird und ungesicherte Transformationen verwendet, speichert das Installationsprogramm die Transformationsquelle im Ordner %windir% \\ Installer.
 
-Während der erstmaligen Installation des Pakets sucht der Installer zuerst nach der Transformation an der Quelle, die von der [**Transformationen**](transforms.md) -Eigenschaft oder der Befehlszeilen Zeichenfolge bereitgestellt wird. Wenn diese Quelle nicht verfügbar ist, sucht das Installationsprogramm an der Quelle des Pakets neben der MSI-Datei nach der Transformation.
+Während einer erstmaligen Installation des Pakets sucht das Installationsprogramm zunächst in der Quelle, die von der [**TRANSFORMS-Eigenschaft**](transforms.md) oder Befehlszeilenzeichenfolge bereitgestellt wird, nach der Transformation. Wenn diese Quelle nicht verfügbar ist, sucht das Installationsprogramm nach der Transformation in der Quelle des Pakets neben der .msi Datei.
 
-Während einer [Wartungs Installation](maintenance-installation.md)sucht das Installationsprogramm am Cache Speicherort nach der Transformation. Wenn die zwischengespeicherte Kopie der Transformation nicht verfügbar ist, sucht das Installationsprogramm an der Quelle des Pakets neben der MSI-Datei nach der Transformation.
+Während einer [Wartungsinstallation](maintenance-installation.md)sucht das Installationsprogramm am Cachespeicherort nach der Transformation. Wenn die zwischengespeicherte Kopie der Transformation nicht mehr verfügbar ist, sucht das Installationsprogramm in der Quelle des Pakets neben der .msi Transformation.
 
-Weitere Informationen finden Sie unter [Anwenden von Transformationen](applying-transforms.md) und [Quellen Resilienz](source-resiliency.md).
+Weitere Informationen finden Sie unter [Anwenden von Transformationen](applying-transforms.md) und [Quellresilienz.](source-resiliency.md)
 
  
 

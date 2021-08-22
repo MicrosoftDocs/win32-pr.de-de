@@ -1,10 +1,10 @@
 ---
-title: Iwmpnetwork (VB und C)-Schnittstelle (WMP. h)
-description: Stellt Eigenschaften und Methoden für den Zugriff auf Statistiken in Bezug auf die Qualität einer Netzwerkverbindung sowie zum angeben und Abrufen der Netzwerk Proxy Einstellungen bereit. Die iwmpnetwork-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+title: IWMPNetwork-Schnittstelle (VB und C ) (Wmp.h)
+description: Stellt Eigenschaften und Methoden für den Zugriff auf Statistiken im Zusammenhang mit der Qualität einer Netzwerkverbindung sowie zum Angeben und Abrufen der Netzwerkproxyeinstellungen zur Auswahl. Die IWMPNetwork-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: d385510f-11cf-4a2a-96be-b416cddc3d80
 keywords:
-- Iwmpnetwork (VB und C) Interface Windows Media Player
-- Iwmpnetwork (VB und C) Interface Windows Media Player, beschrieben
+- IWMPNetwork-Schnittstelle (VB und C) Windows Media Player
+- IWMPNetwork -Schnittstelle (VB und C) Windows Media Player , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,44 +15,44 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 301fe5c89d2eb5df3dd4c22927e75a5607e7abd0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 93110b25bd7d194c4f1d7c213228512fd8bc6000df15b726e3f32a6e6e79a62a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364700"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119572450"
 ---
-# <a name="iwmpnetwork-vb-and-c-interface"></a>Iwmpnetwork (VB und c#)-Schnittstelle
+# <a name="iwmpnetwork-vb-and-c-interface"></a>IWMPNetwork-Schnittstelle (VB und C#)
 
-Stellt Eigenschaften und Methoden für den Zugriff auf Statistiken in Bezug auf die Qualität einer Netzwerkverbindung sowie zum angeben und Abrufen der Netzwerk Proxy Einstellungen bereit.
+Stellt Eigenschaften und Methoden für den Zugriff auf Statistiken im Zusammenhang mit der Qualität einer Netzwerkverbindung sowie zum Angeben und Abrufen der Netzwerkproxyeinstellungen zur Auswahl.
 
-Die **iwmpnetwork** -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die **IWMPNetwork-Schnittstelle** macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="members"></a>Member
 
-Die **iwmpnetwork (VB und c#)** -Schnittstelle verfügt über diese Typen von Membern:
+Die **IWMPNetwork-Schnittstelle (VB und C#)** verfügt über diese Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmpnetwork (VB und c#)** -Schnittstelle verfügt über diese Methoden.
+Die **IWMPNetwork-Schnittstelle (VB und C#)** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                           | BESCHREIBUNG                                                                                                            |
+| Methode                                                                                           | Beschreibung                                                                                                            |
 |:-------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------|
-| [**getproxybypassforlocal**](iwmpnetwork-getproxybypassforlocal--vb-and-c.md)                   | Gibt einen Wert zurück, der angibt, ob der Proxy Server umgangen wird, wenn sich der Ursprungsserver in einem lokalen Netzwerk befindet.<br/> |
-| [**getproxyexceptionlist**](wmplibiwmpnetwork-iwmpnetwork-getproxyexceptionlist--vb-and-c.md)   | Gibt die Liste der Proxy Ausnahmen zurück.<br/>                                                                           |
-| [**getproxyname**](wmplibiwmpnetwork-iwmpnetwork-getproxyname--vb-and-c.md)                     | Gibt den Namen des verwendeten Proxy Servers zurück.<br/>                                                            |
-| [**getproxyport**](wmplibiwmpnetwork-iwmpnetwork-getproxyport--vb-and-c.md)                     | Gibt den verwendeten ProxyPort zurück.<br/>                                                                          |
-| [**getproxysettings**](wmplibiwmpnetwork-iwmpnetwork-getproxysettings--vb-and-c.md)             | Gibt Informationen zu den Proxy Einstellungen für ein Protokoll zurück.<br/>                                                |
-| [**setproxybypassforlocal**](wmplibiwmpnetwork-iwmpnetwork-setproxybypassforlocal--vb-and-c.md) | Gibt an, ob der Proxy Server umgangen wird, wenn sich der Ursprungsserver in einem lokalen Netzwerk befindet.<br/>                  |
-| [**setproxyexceptionlist**](wmplibiwmpnetwork-iwmpnetwork-setproxyexceptionlist--vb-and-c.md)   | Gibt die Proxy Ausnahmeliste an.<br/>                                                                         |
-| [**setproxyname**](wmplibiwmpnetwork-iwmpnetwork-setproxyname--vb-and-c.md)                     | Gibt den Namen des zu verwendenden Proxy Servers an.<br/>                                                              |
-| [**setproxyport**](wmplibiwmpnetwork-iwmpnetwork-setproxyport--vb-and-c.md)                     | Gibt den zu verwendenden ProxyPort an.<br/>                                                                            |
-| [**setProxySettings**](wmplibiwmpnetwork-iwmpnetwork-setproxysettings--vb-and-c.md)             | Gibt die Proxy Einstellungen für ein Protokoll an.<br/>                                                                |
+| [**getProxyBypassForLocal**](iwmpnetwork-getproxybypassforlocal--vb-and-c.md)                   | Gibt einen Wert zurück, der angibt, ob der Proxyserver umgangen wird, wenn sich der Ursprungsserver in einem lokalen Netzwerk befindet.<br/> |
+| [**getProxyExceptionList**](wmplibiwmpnetwork-iwmpnetwork-getproxyexceptionlist--vb-and-c.md)   | Gibt die Proxyausnahmeliste zurück.<br/>                                                                           |
+| [**getProxyName**](wmplibiwmpnetwork-iwmpnetwork-getproxyname--vb-and-c.md)                     | Gibt den Namen des verwendeten Proxyservers zurück.<br/>                                                            |
+| [**getProxyPort**](wmplibiwmpnetwork-iwmpnetwork-getproxyport--vb-and-c.md)                     | Gibt den verwendeten Proxyport zurück.<br/>                                                                          |
+| [**getProxySettings**](wmplibiwmpnetwork-iwmpnetwork-getproxysettings--vb-and-c.md)             | Gibt Informationen zu den Proxyeinstellungen für ein Protokoll zurück.<br/>                                                |
+| [**setProxyBypassForLocal**](wmplibiwmpnetwork-iwmpnetwork-setproxybypassforlocal--vb-and-c.md) | Gibt an, ob der Proxyserver umgangen wird, wenn sich der Ursprungsserver in einem lokalen Netzwerk befindet.<br/>                  |
+| [**setProxyExceptionList**](wmplibiwmpnetwork-iwmpnetwork-setproxyexceptionlist--vb-and-c.md)   | Gibt die Proxyausnahmeliste an.<br/>                                                                         |
+| [**setProxyName**](wmplibiwmpnetwork-iwmpnetwork-setproxyname--vb-and-c.md)                     | Gibt den Namen des zu verwendenden Proxyservers an.<br/>                                                              |
+| [**setProxyPort**](wmplibiwmpnetwork-iwmpnetwork-setproxyport--vb-and-c.md)                     | Gibt den zu verwendenden Proxyport an.<br/>                                                                            |
+| [**setProxySettings**](wmplibiwmpnetwork-iwmpnetwork-setproxysettings--vb-and-c.md)             | Gibt die Proxyeinstellungen für ein Protokoll an.<br/>                                                                |
 
 
 
@@ -60,34 +60,34 @@ Die **iwmpnetwork (VB und c#)** -Schnittstelle verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **iwmpnetwork (VB und c#)** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IWMPNetwork-Schnittstelle (VB und C#)** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                                          | Zugriffstyp           | BESCHREIBUNG                                                                                  |
+| Eigenschaft                                                                                          | Zugriffstyp           | Beschreibung                                                                                  |
 |:--------------------------------------------------------------------------------------------------|:----------------------|:---------------------------------------------------------------------------------------------|
-| [**Bandbreite**](wmplibiwmpnetwork-iwmpnetwork-bandwidth--vb-and-c.md)<br/>                 | Schreibgeschützt<br/>  | Ruft die aktuelle Bandbreite des Medien Elements ab.<br/>                                     |
+| [**Bandbreite**](wmplibiwmpnetwork-iwmpnetwork-bandwidth--vb-and-c.md)<br/>                 | Schreibgeschützt<br/>  | Ruft die aktuelle Bandbreite des Medienelements ab.<br/>                                     |
 | [**Bitrate**](wmplibiwmpnetwork-iwmpnetwork-bitrate--vb-and-c.md)<br/>                     | Schreibgeschützt<br/>  | Ruft die aktuelle Bitrate ab, die empfangen wird.<br/>                                         |
-| [**bufferingcount**](wmplibiwmpnetwork-iwmpnetwork-bufferingcount--vb-and-c.md)<br/>       | Schreibgeschützt<br/>  | Ruft ab, wie oft die Pufferung während der Wiedergabe aufgetreten ist.<br/>                      |
-| [**Pufferungs**](wmplibiwmpnetwork-iwmpnetwork-bufferingprogress--vb-and-c.md)<br/> | Schreibgeschützt<br/>  | Ruft den Prozentsatz der abgeschlossenen Pufferung ab.<br/>                                       |
-| [**BufferingTime**](wmplibiwmpnetwork-iwmpnetwork-bufferingtime--vb-and-c.md)<br/>         | Lesen/Schreiben<br/> | Ruft die Zeitspanne in Millisekunden ab, bevor die Wiedergabe beginnt, oder legt Sie fest.<br/> |
-| [**Download Fortschritt**](wmplibiwmpnetwork-iwmpnetwork-downloadprogress--vb-and-c.md)<br/>   | Schreibgeschützt<br/>  | Ruft den Prozentsatz des abgeschlossenen Downloads ab.<br/>                                     |
-| [**encodframerate**](wmplibiwmpnetwork-iwmpnetwork-encodedframerate--vb-and-c.md)<br/>   | Schreibgeschützt<br/>  | Ruft die vom Inhalts Autor angegebene Video Frame Rate ab.<br/>                        |
-| [**Framerate**](wmplibiwmpnetwork-iwmpnetwork-framerate--vb-and-c.md)<br/>                 | Schreibgeschützt<br/>  | Ruft die aktuelle Video Frame Rate ab.<br/>                                                |
-| [**framesskipped**](wmplibiwmpnetwork-iwmpnetwork-framesskipped--vb-and-c.md)<br/>         | Schreibgeschützt<br/>  | Ruft die Gesamtanzahl der während der Wiedergabe übersprungenen Frames ab.<br/>                          |
-| [**lostpakete**](wmplibiwmpnetwork-iwmpnetwork-lostpackets--vb-and-c.md)<br/>             | Schreibgeschützt<br/>  | Ruft die Anzahl der verlorenen Pakete ab.<br/>                                                  |
-| [**maxBandwidth**](wmplibiwmpnetwork-iwmpnetwork-maxbandwidth--vb-and-c.md)<br/>           | Lesen/Schreiben<br/> | Ruft die maximal zulässige Bandbreite ab oder legt Sie fest.<br/>                                       |
-| [**maxbitrate**](wmplibiwmpnetwork-iwmpnetwork-maxbitrate--vb-and-c.md)<br/>               | Schreibgeschützt<br/>  | Ruft die maximal mögliche Video Bitrate ab.<br/>                                         |
-| [**receivedpakete**](wmplibiwmpnetwork-iwmpnetwork-receivedpackets--vb-and-c.md)<br/>     | Schreibgeschützt<br/>  | Ruft die Anzahl der empfangenen Pakete ab.<br/>                                              |
-| [**"receptionquality"**](wmplibiwmpnetwork-iwmpnetwork-receptionquality--vb-and-c.md)<br/>   | Schreibgeschützt<br/>  | Ruft den Prozentsatz der in den letzten 30 Sekunden nicht verlorenen Pakete ab.<br/>                   |
-| [**wiederherstellbare Pakete**](wmplibiwmpnetwork-iwmpnetwork-recoveredpackets--vb-and-c.md)<br/>   | Schreibgeschützt<br/>  | Ruft die Anzahl der wiederhergestellten Pakete ab.<br/>                                             |
-| [**sourceprotocol**](wmplibiwmpnetwork-iwmpnetwork-sourceprotocol--vb-and-c.md)<br/>       | Schreibgeschützt<br/>  | Ruft das Quell Protokoll ab, das zum Empfangen von Daten verwendet wird.<br/>                                    |
+| [**bufferingCount**](wmplibiwmpnetwork-iwmpnetwork-bufferingcount--vb-and-c.md)<br/>       | Schreibgeschützt<br/>  | Ruft ab, wie oft die Pufferung während der Wiedergabe aufgetreten ist.<br/>                      |
+| [**bufferingProgress**](wmplibiwmpnetwork-iwmpnetwork-bufferingprogress--vb-and-c.md)<br/> | Schreibgeschützt<br/>  | Ruft den Prozentsatz der abgeschlossenen Pufferung ab.<br/>                                       |
+| [**bufferingTime**](wmplibiwmpnetwork-iwmpnetwork-bufferingtime--vb-and-c.md)<br/>         | Lesen/Schreiben<br/> | Ruft die Pufferzeit in Millisekunden ab, bevor die Wiedergabe beginnt, oder legt diese fest.<br/> |
+| [**downloadProgress**](wmplibiwmpnetwork-iwmpnetwork-downloadprogress--vb-and-c.md)<br/>   | Schreibgeschützt<br/>  | Ruft den Prozentsatz des abgeschlossenen Downloads ab.<br/>                                     |
+| [**encodedFrameRate**](wmplibiwmpnetwork-iwmpnetwork-encodedframerate--vb-and-c.md)<br/>   | Schreibgeschützt<br/>  | Ruft die vom Inhaltsautor angegebene Videobildrate ab.<br/>                        |
+| [**frameRate**](wmplibiwmpnetwork-iwmpnetwork-framerate--vb-and-c.md)<br/>                 | Schreibgeschützt<br/>  | Ruft die aktuelle Videobildrate ab.<br/>                                                |
+| [**framesSkipped**](wmplibiwmpnetwork-iwmpnetwork-framesskipped--vb-and-c.md)<br/>         | Schreibgeschützt<br/>  | Ruft die Gesamtanzahl der Frames ab, die während der Wiedergabe übersprungen wurden.<br/>                          |
+| [**lostPackets**](wmplibiwmpnetwork-iwmpnetwork-lostpackets--vb-and-c.md)<br/>             | Schreibgeschützt<br/>  | Ruft die Anzahl der verloren gegangenen Pakete ab.<br/>                                                  |
+| [**Maxbandwidth**](wmplibiwmpnetwork-iwmpnetwork-maxbandwidth--vb-and-c.md)<br/>           | Lesen/Schreiben<br/> | Ruft die maximal zulässige Bandbreite ab oder legt sie fest.<br/>                                       |
+| [**maxBitRate**](wmplibiwmpnetwork-iwmpnetwork-maxbitrate--vb-and-c.md)<br/>               | Schreibgeschützt<br/>  | Ruft die maximal mögliche Videobitrate ab.<br/>                                         |
+| [**receivedPackets**](wmplibiwmpnetwork-iwmpnetwork-receivedpackets--vb-and-c.md)<br/>     | Schreibgeschützt<br/>  | Ruft die Anzahl der empfangenen Pakete ab.<br/>                                              |
+| [**receptionQuality**](wmplibiwmpnetwork-iwmpnetwork-receptionquality--vb-and-c.md)<br/>   | Schreibgeschützt<br/>  | Ruft den Prozentsatz der Pakete ab, die in den letzten 30 Sekunden nicht verloren gegangen sind.<br/>                   |
+| [**recoveredPackets**](wmplibiwmpnetwork-iwmpnetwork-recoveredpackets--vb-and-c.md)<br/>   | Schreibgeschützt<br/>  | Ruft die Anzahl der wiederhergestellten Pakete ab.<br/>                                             |
+| [**sourceProtocol**](wmplibiwmpnetwork-iwmpnetwork-sourceprotocol--vb-and-c.md)<br/>       | Schreibgeschützt<br/>  | Ruft das Quellprotokoll ab, das zum Empfangen von Daten verwendet wird.<br/>                                    |
 
 
 
  
 
-Verwenden Sie die folgende Eigenschaft, um eine **iwmpnetwork** -Schnittstelle zu erhalten.
+Verwenden Sie die folgende Eigenschaft, um eine **IWMPNetwork-Schnittstelle** zu erhalten.
 
 
 
@@ -105,7 +105,7 @@ Verwenden Sie die folgende Eigenschaft, um eine **iwmpnetwork** -Schnittstelle z
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMP. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmp.h</dt> </dl> |
 
 
 
@@ -113,7 +113,7 @@ Verwenden Sie die folgende Eigenschaft, um eine **iwmpnetwork** -Schnittstelle z
 
 <dl> <dt>
 
-[**Schnittstellen für Visual Basic .net und C #**](interfaces-for-visual-basic--net-and-c.md)
+[**Schnittstellen für Visual Basic .NET und C #**](interfaces-for-visual-basic--net-and-c.md)
 </dt> </dl>
 
  

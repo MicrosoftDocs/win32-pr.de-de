@@ -1,7 +1,7 @@
 ---
-description: Die dynamikreconnect-Methode führt eine dynamische erneute Verbindung mit einem neuen Medientyp aus. Die erneute Verbindung kann auftreten, während das Filter Diagramm ausgeführt wird.
+description: Die DynamicReconnect-Methode führt eine dynamische erneute Verbindung mit einem neuen Medientyp aus. Die erneute Verbindung kann während der Ausführung des Filterdiagramms auftreten.
 ms.assetid: 1fe9f1cc-1f5d-407e-8c80-fea6cd1cb16f
-title: Cdynamicoutputpin. dynamikreconnect-Methode (amfilter. h)
+title: CDynamicOutputPin.DynamicReconnect-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: dd595748380a35f74e591283ed3d03273c683e97
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6abd453b328a22765a9649e69bbe0f5e3e4d4bc8e45148a0777fa23901447ab3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119688840"
 ---
-# <a name="cdynamicoutputpindynamicreconnect-method"></a>Cdynamicoutputpin. dynamikreconnect-Methode
+# <a name="cdynamicoutputpindynamicreconnect-method"></a>CDynamicOutputPin.DynamicReconnect-Methode
 
-Die- `DynamicReconnect` Methode führt eine dynamische erneute Verbindung mit einem neuen Medientyp aus. Die erneute Verbindung kann auftreten, während das Filter Diagramm ausgeführt wird.
+Die `DynamicReconnect` -Methode führt eine dynamische erneute Verbindung mit einem neuen Medientyp aus. Die erneute Verbindung kann während der Ausführung des Filterdiagramms auftreten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,33 +42,33 @@ HRESULT DynamicReconnect(
 
 <dl> <dt>
 
-*PMT* 
+*Pmt* 
 </dt> <dd>
 
-Zeiger auf eine [**am \_ - \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur, die den Medientyp angibt.
+Zeiger auf eine [**AM \_ MEDIA \_ TYPE-Struktur,**](/windows/win32/api/strmif/ns-strmif-am_media_type) die den Medientyp angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                            | Beschreibung                                                                                                                                         |
 |----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                                                                                                                                 |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Fehler. Möglicherweise hat der besitzende Filter die [**cdynamicoutputpin:: setconfiginfo**](cdynamicoutputpin-setconfiginfo.md) -Methode nicht aufgerufen.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Fehler. Möglicherweise hat der besitzende Filter die [**CDynamicOutputPin::SetConfigInfo-Methode**](cdynamicoutputpin-setconfiginfo.md) nicht aufgerufen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode muss vom gleichen Thread aufgerufen werden, der Daten an die PIN übergibt. Nachdem diese Methode aufgerufen wurde, können keine Beispiele mit dem alten Medientyp übermittelt werden. Der Aufrufer muss sicherstellen, dass keine alten Beispiele ausstehend sind.
+Diese Methode muss vom gleichen Thread aufgerufen werden, der Daten an den Pin übermittelt. Sobald diese Methode aufgerufen wurde, können Stichproben mit dem alten Medientyp nicht übermittelt werden. Der Aufrufer muss sicherstellen, dass keine alten Stichproben ausstehen.
 
-Rufen Sie [**cdynamicoutputpin:: startusingoutputpin**](cdynamicoutputpin-startusingoutputpin.md) auf, bevor Sie diese Methode aufrufen.
+Rufen Sie [**CDynamicOutputPin::StartUsingOutputPin**](cdynamicoutputpin-startusingoutputpin.md) auf, bevor Sie diese Methode aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,8 +76,8 @@ Rufen Sie [**cdynamicoutputpin:: startusingoutputpin**](cdynamicoutputpin-startu
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -85,7 +85,7 @@ Rufen Sie [**cdynamicoutputpin:: startusingoutputpin**](cdynamicoutputpin-startu
 
 <dl> <dt>
 
-[**Cdynamicoutputpin-Klasse**](cdynamicoutputpin.md)
+[**CDynamicOutputPin-Klasse**](cdynamicoutputpin.md)
 </dt> </dl>
 
  

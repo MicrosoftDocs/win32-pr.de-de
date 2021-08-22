@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie im Feld "vistacold. GUID".
-title: Feld "vistacolyp. GUID" (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen finden Sie unter: VistaColtyp.GUID-Feld'
+title: Feld "VistaColtyp.GUID" (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: GUID field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Vista.VistaColtyp.GUID
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistacoltyp.guid(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: bbf24d28179c4bf0d58d5a3fbdad602e1d2cf195
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d56fafd5a974a3e1aeb6405c7119743bc1247c9888176cad5cb4a4608fdd08c6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119559420"
 ---
-# <a name="vistacoltypguid-field"></a>Feld "vistacold. GUID"
+# <a name="vistacoltypguid-field"></a>VistaColtyp.GUID-Feld
 
 16-Byte-GUID.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,10 +55,10 @@ public const JET_coltyp GUID
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistacoltyp-Klasse](./vistacoltyp-class.md)
+[VistaColtyp-Klasse](./vistacoltyp-class.md)
 
-[Vistacolyp-Member](./vistacoltyp-members.md)
+[VistaColtyp-Member](./vistacoltyp-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

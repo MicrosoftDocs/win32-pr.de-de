@@ -1,5 +1,5 @@
 ---
-title: WorkingDirectory (exectype)-Element
+title: WorkingDirectory-Element (execType)
 description: Gibt das Verzeichnis an, in dem die ausführbare Datei oder die von der ausführbaren Datei verwendeten Dateien vorhanden sind.
 ms.assetid: 09e53748-6d21-42df-bbdd-f0fd9693aab0
 keywords:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e8c382d0e60b16d85fbc86f7579a0e700d3dd30b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5a91908d5cd774f19f32a182934688dc899179d1abba967b7871a646efcfe042
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119513740"
 ---
-# <a name="workingdirectory-exectype-element"></a>WorkingDirectory (exectype)-Element
+# <a name="workingdirectory-exectype-element"></a>WorkingDirectory-Element (execType)
 
 Gibt das Verzeichnis an, in dem die ausführbare Datei oder die von der ausführbaren Datei verwendeten Dateien vorhanden sind.
 
@@ -30,27 +30,27 @@ Gibt das Verzeichnis an, in dem die ausführbare Datei oder die von der ausführ
  />
 ```
 
-Das **WorkingDirectory** -Element wird durch den komplexen [**exectype**](taskschedulerschema-exectype-complextype.md) -Typ definiert.
+Das **WorkingDirectory-Element** wird durch den komplexen [**execType-Typ**](taskschedulerschema-exectype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                      | Abgeleitet von                                                 | BESCHREIBUNG                                                            |
+| Element                                                      | Abgeleitet von                                                 | Beschreibung                                                            |
 |--------------------------------------------------------------|--------------------------------------------------------------|------------------------------------------------------------------------|
-| [**Exec**](taskschedulerschema-exec-actiongroup-element.md) | [**exectype**](taskschedulerschema-exectype-complextype.md) | Gibt eine Aktion an, die einen Befehlszeilen Vorgang ausführt.<br/> |
+| [**Exec**](taskschedulerschema-exec-actiongroup-element.md) | [**execType**](taskschedulerschema-exectype-complextype.md) | Gibt eine Aktion an, die einen Befehlszeilenvorgang ausführt.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skript Entwicklung wird das Arbeitsverzeichnis von der [**execaction. WorkingDirectory**](execaction-workingdirectory.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird das Arbeitsverzeichnis durch die [**ExecAction.WorkingDirectory-Eigenschaft**](execaction-workingdirectory.md) angegeben.
 
-Bei der C++-Entwicklung wird das Arbeitsverzeichnis durch die [**IExecAction:: WorkingDirectory**](/windows/desktop/api/taskschd/nf-taskschd-iexecaction-get_workingdirectory) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird das Arbeitsverzeichnis durch die [**IExecAction::WorkingDirectory-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iexecaction-get_workingdirectory) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert eine Ausführungs Aktion.
+Der folgende XML-Code definiert eine Ausführungsaktion.
 
 
 ```XML
@@ -69,8 +69,8 @@ Der folgende XML-Code definiert eine Ausführungs Aktion.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -78,7 +78,7 @@ Der folgende XML-Code definiert eine Ausführungs Aktion.
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

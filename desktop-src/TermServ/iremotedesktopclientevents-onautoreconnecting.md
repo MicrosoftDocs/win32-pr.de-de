@@ -1,12 +1,12 @@
 ---
-title: Iremotedesktopclientevents onautoreconnecting-Methode
-description: Wird aufgerufen, wenn das Client Steuerelement versucht, eine Verbindung mit einer Remote Sitzung automatisch wiederherzustellen.
+title: IRemoteDesktopClientEvents OnAutoReconnecting-Methode
+description: Wird aufgerufen, wenn das Clientsteuersystem versucht, eine Verbindung mit einer Remotesitzung automatisch wiederhergestellt zu haben.
 ms.assetid: 299408A9-ED14-42F4-B324-AF4C86FEDABE
 ms.tgt_platform: multiple
 keywords:
-- Onautoreconnecting-Methode Remotedesktopdienste
-- Onautoreconnecting-Methode Remotedesktopdienste, iremotedesktopclientevents-Schnittstelle
-- Iremotedesktopclientevents-Schnittstelle Remotedesktopdienste, onautoreconnecting-Methode
+- OnAutoReconnecting-Remotedesktopdienste
+- OnAutoReconnecting-Methode Remotedesktopdienste , IRemoteDesktopClientEvents-Schnittstelle
+- IRemoteDesktopClientEvents-Schnittstelle Remotedesktopdienste , OnAutoReconnecting-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d74c37919384727fdf51aad004349478798a3ffd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7246b8822b3d3abed5d483f52c64eee88d67f99694bda44c5d8f72318cb2c04a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119511730"
 ---
-# <a name="iremotedesktopclienteventsonautoreconnecting-method"></a>Iremotedesktopclientevents:: onautoreconnecting-Methode
+# <a name="iremotedesktopclienteventsonautoreconnecting-method"></a>IRemoteDesktopClientEvents::OnAutoReconnecting-Methode
 
-Wird aufgerufen, wenn das Client Steuerelement versucht, eine Verbindung mit einer Remote Sitzung automatisch wiederherzustellen.
+Wird aufgerufen, wenn das Clientsteuersystem versucht, eine Verbindung mit einer Remotesitzung automatisch wiederhergestellt zu haben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,45 +48,45 @@ void OnAutoReconnecting(
 
 <dl> <dt>
 
-*disconnecverrat* \[ in\]
+*disconnectReason* \[ In\]
 </dt> <dd>
 
-Der Grund für das Trennungs Ereignis.
+Der Grund für das Disconnect-Ereignis.
 
 </dd> <dt>
 
-*Extendeddisconnecverrat* \[ in\]
+*ExtendedDisconnectReason* \[ In\]
 </dt> <dd>
 
 Erweiterte Informationen für das Disconnect-Ereignis.
 
 </dd> <dt>
 
-*disconnecterrormessage* \[ in\]
+*disconnectErrorMessage* \[ In\]
 </dt> <dd>
 
 Die Fehlermeldung für das Disconnect-Ereignis.
 
 </dd> <dt>
 
-*NetworkAvailable* \[ in\]
+*networkAvailable* \[ In\]
 </dt> <dd>
 
 Gibt an, ob das Netzwerk verfügbar ist.
 
 </dd> <dt>
 
-*Anzahl* \[ der Versuche in\]
+*attemptCount* \[ In\]
 </dt> <dd>
 
-Der Versuch, dies zu tun.
+Versuchen Sie, dies zu versuchen.
 
 </dd> <dt>
 
-*maxder-Anzahl* \[ in\]
+*maxAttemptCount* \[ In\]
 </dt> <dd>
 
-Die maximale Anzahl von Wiederholungs versuchen für die Verbindung wird ausgeführt.
+Die maximale Anzahl von Verbindungsversuchen wird ausgeführt.
 
 </dd> </dl>
 
@@ -104,7 +104,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                 |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>         |
-| IID<br/>                      | Diid \_ iremotedesktopclientevents ist als 079863b7-6d47-4105-8bfe-0cdcb360e67d definiert.<br/> |
+| IID<br/>                      | DIID \_ IRemoteDesktopClientEvents ist als 079863B7-6D47-4105-8BFE-0CDCB360E67D definiert.<br/> |
 
 
 
@@ -112,7 +112,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Iremotedesktopclientevents**](iremotedesktopclientevents.md)
+[**IRemoteDesktopClientEvents**](iremotedesktopclientevents.md)
 </dt> </dl>
 
  
