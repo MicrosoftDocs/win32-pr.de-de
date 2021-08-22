@@ -1,234 +1,234 @@
 ---
-title: Anhang G Active Accessibility Bridge zur Automatisierung der Benutzeroberfläche
-description: Dieser Anhang enthält Informationen über die Microsoft Active Accessibility Bridge.
+title: Anhang G Active Accessibility Bridge to Benutzeroberflächenautomatisierung
+description: Dieser Anhang enthält Informationen zur Microsoft Active Accessibility Bridge.
 ms.assetid: f19036c7-5a18-4faa-a98d-564e5e63a94f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: df5fdc1ebc4d6e17781e383463974f78bb9334aa
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 14991f869706a16c4def8fdaf49ae255e3ddf413eec416cefd1e151ee470cc02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341852"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119052968"
 ---
-# <a name="appendix-g-active-accessibility-bridge-to-ui-automation"></a>Anhang G: Active Accessibility Bridge zur Automatisierung der Benutzeroberfläche
+# <a name="appendix-g-active-accessibility-bridge-to-ui-automation"></a>Anhang G: Active Accessibility Bridge to Benutzeroberflächenautomatisierung
 
-Dieser Anhang enthält Informationen über die Microsoft Active Accessibility Bridge. Mit der Active Accessibility Bridge können Anwendungen, die Microsoft Active Accessibility implementieren, auf Anwendungen zugreifen, die die Microsoft-Benutzeroberflächen Automatisierung implementieren. Durch die Kombinieren von Microsoft Active Accessibility und der Benutzeroberflächen Automatisierung können Microsoft Active Accessibility-basierte Clients wie Screenreader unter Windows XP Programm gesteuert mit Benutzeroberflächenautomatisierungs-basierten Anbietern der Benutzeroberflächen Automatisierung interagieren, wie z. b. eine Windows Presentation Foundation Anwendung (WPF). Er ist Teil der systemeigenen Kern-API für die Benutzeroberflächen Automatisierung (UIAutomationCore.dll).
+Dieser Anhang enthält Informationen zur Microsoft Active Accessibility Bridge. Mit Active Accessibility Bridge können Anwendungen, die Microsoft Active Accessibility implementieren, auf Anwendungen zugreifen, die Microsoft-Benutzeroberflächenautomatisierung. Durch die Überbrückung von Microsoft Active Accessibility und Benutzeroberflächenautomatisierung können Microsoft Active Accessibility-basierte Clients, z. B. ein Bildschirmreader unter Windows XP, programmgesteuert mit Benutzeroberflächenautomatisierung-basierten Anbietern von Benutzeroberflächenautomatisierung interagieren, z. B. mit einer Windows Presentation Foundation-Anwendung (WPF). Sie ist Teil der Benutzeroberflächenautomatisierung Native Core-API (UIAutomationCore.dll).
 
-Mit der Active Accessibility Bridge werden Benutzeroberflächenautomatisierungs-Eigenschaften und-Ereignisse den Microsoft-Active Accessibility zugeordnet. In den folgenden Tabellen sind die Methoden und Eigenschaften der Microsoft Active Accessibility [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle der Benutzeroberflächen Automatisierung zugeordnet. Verwenden Sie diese Tabellen, um geeignete Programmierverfahren für die Entwicklung Ihres Microsoft Active Accessibility basierten Clients zu ermitteln.
+Die Active Accessibility Bridge ordnet Benutzeroberflächenautomatisierung Eigenschaften und Ereignisse denen der Microsoft Active Accessibility. In den folgenden Tabellen werden die Microsoft Active Accessibility [**IAccessible-Schnittstellenmethoden**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) und -Eigenschaften Benutzeroberflächenautomatisierung. Verwenden Sie diese Tabellen, um geeignete Codierungsmethoden für die Entwicklung Ihres Microsoft Active Accessibility-basierten Clients zu bestimmen.
 
-### <a name="navigation-and-hierarchy-properties"></a>Navigations-und Hierarchie Eigenschaften
+### <a name="navigation-and-hierarchy-properties"></a>Navigations- und Hierarchieeigenschaften
 
 
 
-| IAccessible-Eigenschaft                                                     | UI-Automatisierungs Eigenschaft          |
+| IAccessible-Eigenschaft                                                     | Benutzeroberflächenautomatisierung-Eigenschaft          |
 |--------------------------------------------------------------------------|---------------------------------|
-| [**\_accChild erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchild)           | Nicht implementiert                 |
-| [**get \_ accChildCount**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchildcount) | Abgeleitet aus Benutzeroberflächenautomatisierungs-Struktur |
-| [**\_accParent erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent)         | Abgeleitet aus Benutzeroberflächenautomatisierungs-Struktur |
+| [**get \_ accChild**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchild)           | Nicht implementiert                 |
+| [**get \_ accChildCount**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchildcount) | Abgeleitet von Benutzeroberflächenautomatisierung Struktur |
+| [**get \_ accParent**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent)         | Abgeleitet von Benutzeroberflächenautomatisierung Struktur |
 | [**accNavigate**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accnavigate)              | Nicht implementiert                 |
 
 
 
- 
+ 
 
 ### <a name="descriptive-properties-and-methods"></a>Beschreibende Eigenschaften und Methoden
 
 
 
-| IAccessible                                                                          | Benutzeroberflächenautomatisierung                                                                                                                                                                                                                                                                                                            |
+| Iaccessible                                                                          | Benutzeroberflächenautomatisierung                                                                                                                                                                                                                                                                                                            |
 |--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**accDoDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accdodefaultaction)            | Ausführliche Informationen finden Sie in den Steuerelement Typen und der accRole-Tabelle.                                                                                                                                                                                                                                                                     |
-| [**get \_ accdefaultaction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdefaultaction)       | Ausführliche Informationen finden Sie in den Steuerelement Typen und der accRole-Tabelle.                                                                                                                                                                                                                                                                     |
-| [**\_accKeyboardShortcut erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) | Accesskeypropertyor AcceleratorKeyProperty; Wenn beide vorhanden sind, hat AccessKeyProperty Vorrang.                                                                                                                                                                                                                         |
-| [**\_accName erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accname)                         | NameProperty                                                                                                                                                                                                                                                                                                             |
-| [**get- \_ Zugriffs Rolle**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)                         | ControlTypeProperty. Ausführliche Informationen finden Sie in den Steuerelement Typen und der accRole-Tabelle.                                                                                                                                                                                                                                                |
-| [**\_accState erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)                       | Ausführliche Informationen finden Sie in den Steuerelement Typen und der accRole-Tabelle.                                                                                                                                                                                                                                                                     |
-| [**\_accValue erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accvalue)                       | ValueProperty wird für Steuerelement Typen unterstützt, die das [value](uiauto-implementingvalue.md) -Steuerelement Muster oder das Steuerelement Muster des [RangeValue](uiauto-implementingrangevalue.md) -Steuer Elements RangeValue-Werte entsprechen dem Verhalten von Microsoft Active Accessibility (0 bis 100). Value-Elemente verwenden eine Zeichenfolge. |
-| [**Put- \_ Wert**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-put_accvalue)                       | ValueProperty Unterstützung für Steuerelement Typen, die das [value](uiauto-implementingvalue.md) -Steuerelement Muster oder das [RangeValue](uiauto-implementingrangevalue.md) -Steuerelement Muster                                                                                                                                      |
-| [**\_accHelp erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelp)                         | HelpTextProperty                                                                                                                                                                                                                                                                                                         |
-| [**get- \_ accdescription**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdescription)           | Nicht implementiert                                                                                                                                                                                                                                                                                                          |
-| [**\_accHelpTopic erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelptopic)               | Nicht implementiert                                                                                                                                                                                                                                                                                                          |
+| [**accDoDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accdodefaultaction)            | Weitere Informationen finden Sie in der Tabelle Control Types and accRole (Steuerelementtypen und accRole).                                                                                                                                                                                                                                                                     |
+| [**get \_ accDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdefaultaction)       | Weitere Informationen finden Sie in der Tabelle Control Types and accRole (Steuerelementtypen und accRole).                                                                                                                                                                                                                                                                     |
+| [**get \_ accKeyboardShortcut**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) | AccessKeyPropertyor AcceleratorKeyProperty; Wenn beide vorhanden sind, hat AccessKeyProperty Vorrang.                                                                                                                                                                                                                         |
+| [**get \_ accName**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accname)                         | NameProperty                                                                                                                                                                                                                                                                                                             |
+| [**get \_ accRole**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)                         | ControlTypeProperty. Weitere Informationen finden Sie in der Tabelle Control Types and accRole (Steuerelementtypen und accRole).                                                                                                                                                                                                                                                |
+| [**get \_ accState**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)                       | Weitere Informationen finden Sie in der Tabelle Control Types and accRole (Steuerelementtypen und accRole).                                                                                                                                                                                                                                                                     |
+| [**get \_ accValue**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accvalue)                       | ValueProperty; wird für Steuerelementtypen unterstützt, die das [Steuerelementmuster Value](uiauto-implementingvalue.md) oder [das Steuerelementmuster RangeValue](uiauto-implementingrangevalue.md) unterstützen. RangeValue-Werte sind konsistent mit Microsoft Active Accessibility Verhalten (0 bis 100). Value-Elemente verwenden eine Zeichenfolge. |
+| [**put \_ accValue**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-put_accvalue)                       | ValueProperty; wird für Steuerelementtypen unterstützt, die das [Value-Steuerelementmuster](uiauto-implementingvalue.md) oder [das RangeValue-Steuerelementmuster](uiauto-implementingrangevalue.md) unterstützen.                                                                                                                                      |
+| [**get \_ accHelp**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelp)                         | HelpTextProperty                                                                                                                                                                                                                                                                                                         |
+| [**get \_ accDescription**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdescription)           | Nicht implementiert                                                                                                                                                                                                                                                                                                          |
+| [**get \_ accHelpTopic**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelptopic)               | Nicht implementiert                                                                                                                                                                                                                                                                                                          |
 
 
 
- 
+ 
 
-### <a name="control-types-and-accrole"></a>Steuerelement Typen und Zugriffs Rolle
+### <a name="control-types-and-accrole"></a>Steuerelementtypen und accRole
 
-Die Standard Rolle von Microsoft Active Accessibility ist [**role \_ System \_ Client**](object-roles.md). Wenn für einen Steuer Objekttyp keine Standardaktion gefunden wird, werden von der Active Accessibility Bridge auch die folgenden verfügbaren Steuerelement Muster verwendet: " [aufrufen](uiauto-implementinginvoke.md)", " [ExpandCollapse](uiauto-implementingexpandcollapse.md)" und " [Umschalten](uiauto-implementingtoggle.md)". Beispielsweise verfügt ein GroupBox-Steuerelement nicht über eine Standardaktion. Wenn Sie ExpandCollapse unterstützt, wird diese von der Active Accessibility Bridge für die Standardaktion verwendet.
+Die Microsoft Active Accessibility ist ROLE [**\_ SYSTEM \_ CLIENT.**](object-roles.md) Wenn keine Standardaktion für einen Steuerelementtyp gefunden wird, verwendet die Active Accessibility Bridge auch die folgenden verfügbaren Steuerelementmuster: [Invoke](uiauto-implementinginvoke.md), [ExpandCollapse](uiauto-implementingexpandcollapse.md)und [Toggle](uiauto-implementingtoggle.md). Beispielsweise verfügt ein Groupbox-Steuerelement über keine Standardaktion. Wenn ExpandCollapse unterstützt wird, verwendet die Active Accessibility Bridge diese für die Standardaktion.
 
 
 
-| Benutzeroberflächenautomatisierungs-Steuerelement                              | accRole                                                                     | Standardaktion                                           |
+| Benutzeroberflächenautomatisierung Steuerelementtyp                              | accRole                                                                     | Standardaktion                                           |
 |---------------------------------------------------------|-----------------------------------------------------------------------------|----------------------------------------------------------|
-| [Schaltfläche](uiauto-supportbuttoncontroltype.md)           | [**\_ \_ Schaltfläche "Rollen System"**](object-roles.md)     | Tastenkombination                                                    |
-| [Kalender](uiauto-supportcalendarcontroltype.md)       | [**Rollen \_ System \_ Client**](object-roles.md)             | Keine                                                     |
-| [CheckBox](uiauto-supportcheckboxcontroltype.md)       | [**\_ \_ Kontrollkästchen für Rollen System**](object-roles.md)   | Aktivieren/deaktivieren (Umschalten)                                   |
-| [ComboBox](uiauto-supportcomboboxcontroltype.md)       | [**Kombinations \_ Feld "Rollen System" \_**](object-roles.md)         | Keine                                                     |
-| Benutzerdefiniert                                                  | [**Rollen \_ System \_ Client**](object-roles.md)             | Keine                                                     |
-| [DataGrid](uiauto-supportdatagridcontroltype.md)       | [**Liste der Rollen \_ Systeme \_**](object-roles.md)                 | Keine                                                     |
-| [DataItem](uiauto-supportdataitemcontroltype.md)       | [**Rollen \_ System ( \_ ListItem)**](object-roles.md)         | Keine                                                     |
-| [Dokument](uiauto-supportdocumentcontroltype.md)       | [**Rollen \_ System \_ Dokument**](object-roles.md)         | Keine                                                     |
-| [Bearbeiten](uiauto-supporteditcontroltype.md)               | [**Rollen \_ System \_ Text**](object-roles.md)                 | Keine                                                     |
-| [Gruppieren](uiauto-supportgroupcontroltype.md)             | [**Rollen \_ System \_ Gruppierung**](object-roles.md)         | Keine                                                     |
-| [Header](uiauto-supportheadercontroltype.md)           | [**Liste der Rollen \_ Systeme \_**](object-roles.md)                 | Keine                                                     |
-| [HeaderItem](uiauto-supportheaderitemcontroltype.md)   | [**Rollen \_ System- \_ ColumnHeader**](object-roles.md) | Klicken Sie auf                                                    |
-| [Link](uiauto-supporthyperlinkcontroltype.md)     | [**Rollen \_ System \_ Link**](object-roles.md)                 | Springen (Zuordnungen zum Aufrufen)                                    |
-| [Image](uiauto-supportimagecontroltype.md)             | [**Grafik zum Rollen \_ System \_**](object-roles.md)           | Keine                                                     |
-| [Liste](uiauto-supportlistcontroltype.md)               | [**Liste der Rollen \_ Systeme \_**](object-roles.md)                 | Keine                                                     |
-| [ListItem](uiauto-supportlistitemcontroltype.md)       | [**Rollen \_ System ( \_ ListItem)**](object-roles.md)         | Doppelklick                                             |
-| [Menü](uiauto-supportmenucontroltype.md)               | [**Rollen \_ System- \_ menupup**](object-roles.md)       | Keine                                                     |
-| [MenuBar](uiauto-supportmenubarcontroltype.md)         | [**Rollen \_ System- \_ Menüleiste**](object-roles.md)           | Keine                                                     |
-| [MenuItem](uiauto-supportmenuitemcontroltype.md)       | [**Rollen \_ System ( \_ MenuItem)**](object-roles.md)         | Ausführen oder öffnen/schließen für Menü Elemente mit untergeordneten Elementen. |
-| [Bereich](uiauto-supportpanecontroltype.md)               | [**Bereich "Rollen \_ System" \_**](object-roles.md)                 | Keine                                                     |
-| [ProgressBar](uiauto-supportprogressbarcontroltype.md) | [**Rollen \_ System- \_ ProgressBar**](object-roles.md)   | Keine                                                     |
-| [RadioButton](uiauto-supportradiobuttoncontroltype.md) | [**Optionsfeld "Rollen \_ System" \_**](object-roles.md)   | Azure Functions                                                    |
-| [Bild Lauf Leiste](uiauto-supportscrollbarcontroltype.md)     | [**Rollen \_ System- \_ Scrollleiste**](object-roles.md)       | Keine                                                     |
-| [Schieberegler](uiauto-supportslidercontroltype.md)           | [**\_ \_ Schieberegler für Rollen System**](object-roles.md)             | Keine                                                     |
-| [Spinner](uiauto-supportspinnercontroltype.md)         | [**\_SpinButton für Rollen System \_**](object-roles.md)     | Keine                                                     |
-| [SplitButton](uiauto-supportsplitbuttoncontroltype.md) | [**Rollen \_ System ( \_ SplitButton)**](object-roles.md)   | Keine                                                     |
-| [StatusBar](uiauto-supportstatusbarcontroltype.md)     | [**\_ \_ Statusleiste des Rollen Systems**](object-roles.md)       | Keine                                                     |
-| [TAB](uiauto-supporttabcontroltype.md)                 | [**\_ \_ pagetablist für Rollen System**](object-roles.md)   | Keine                                                     |
-| [TabItem](uiauto-supporttabitemcontroltype.md)         | [**Rollen \_ System- \_ pgetab**](object-roles.md)           | Schalter                                                   |
-| [Table](uiauto-supporttablecontroltype.md)             | [**Rollen \_ System \_ Tabelle**](object-roles.md)               | Keine                                                     |
-| [Text](uiauto-supporttextcontroltype.md)               | [**Rollen \_ System- \_ StaticText**](object-roles.md)     | Keine                                                     |
-| [Thumb](uiauto-supportthumbcontroltype.md)             | [**Rollen \_ System \_ Indikator**](object-roles.md)       | Keine                                                     |
-| [TitleBar](uiauto-supporttitlebarcontroltype.md)       | [**Rollen \_ System- \_ TitleBar**](object-roles.md)         | Keine                                                     |
-| [Suchfeld](uiauto-supporttoolbarcontroltype.md)         | [**Rollen \_ System- \_ Symbolleiste**](object-roles.md)           | Keine                                                     |
-| [ToolTip](uiauto-supporttooltipcontroltype.md)         | [**Rollen System-QuickInfo \_ \_**](object-roles.md)           | Keine                                                     |
-| [Struktur](uiauto-supporttreecontroltype.md)               | [**Rollen \_ System Gliederung \_**](object-roles.md)           | Keine                                                     |
-| [TreeItem](uiauto-supporttreeitemcontroltype.md)       | [**Rollen \_ System \_ outlineitem**](object-roles.md)   | Erweitern oder reduzieren                                       |
-| [Fenster](uiauto-supportwindowcontroltype.md)           | [**Rollen \_ System \_ Fenster**](object-roles.md)             | Keine                                                     |
+| [Schaltfläche](uiauto-supportbuttoncontroltype.md)           | [**\_ \_ ROLLENSYSTEM-PUSHBUTTON**](object-roles.md)     | Tastenkombination                                                    |
+| [Kalender](uiauto-supportcalendarcontroltype.md)       | [**\_ \_ ROLLENSYSTEMCLIENT**](object-roles.md)             | Keine                                                     |
+| [CheckBox](uiauto-supportcheckboxcontroltype.md)       | [**\_CHECKBUTTON DES \_ ROLLENSYSTEMS**](object-roles.md)   | Check/Uncheck (umschalten)                                   |
+| [ComboBox](uiauto-supportcomboboxcontroltype.md)       | [**KOMBINATIONSFELD \_ \_ "ROLLENSYSTEM"**](object-roles.md)         | Keine                                                     |
+| Benutzerdefiniert                                                  | [**\_ \_ ROLLENSYSTEMCLIENT**](object-roles.md)             | Keine                                                     |
+| [DataGrid](uiauto-supportdatagridcontroltype.md)       | [**\_ \_ ROLLENSYSTEMLISTE**](object-roles.md)                 | Keine                                                     |
+| [DataItem](uiauto-supportdataitemcontroltype.md)       | [**ROLE \_ SYSTEM \_ LISTITEM**](object-roles.md)         | Keine                                                     |
+| [Dokument](uiauto-supportdocumentcontroltype.md)       | [**ROLE \_ SYSTEM DOCUMENT (ROLLENSYSTEMDOKUMENT) \_**](object-roles.md)         | Keine                                                     |
+| [Bearbeiten](uiauto-supporteditcontroltype.md)               | [**\_ \_ ROLLENSYSTEMTEXT**](object-roles.md)                 | Keine                                                     |
+| [Gruppe](uiauto-supportgroupcontroltype.md)             | [**\_ \_ ROLLENSYSTEMGRUPPEN**](object-roles.md)         | Keine                                                     |
+| [Header](uiauto-supportheadercontroltype.md)           | [**\_ \_ ROLLENSYSTEMLISTE**](object-roles.md)                 | Keine                                                     |
+| [HeaderItem](uiauto-supportheaderitemcontroltype.md)   | [**ROLE \_ SYSTEM \_ COLUMNHEADER**](object-roles.md) | Klicken Sie auf                                                    |
+| [Link](uiauto-supporthyperlinkcontroltype.md)     | [**ROLE \_ SYSTEM \_ LINK**](object-roles.md)                 | Springen (zuordnung zu Invoke)                                    |
+| [Bild](uiauto-supportimagecontroltype.md)             | [**GRAFIK \_ ZUM \_ ROLLENSYSTEM**](object-roles.md)           | Keine                                                     |
+| [Liste](uiauto-supportlistcontroltype.md)               | [**\_ \_ ROLLENSYSTEMLISTE**](object-roles.md)                 | Keine                                                     |
+| [ListItem](uiauto-supportlistitemcontroltype.md)       | [**ROLE \_ SYSTEM \_ LISTITEM**](object-roles.md)         | Doppelklicken                                             |
+| [Menü](uiauto-supportmenucontroltype.md)               | [**MENÜ \_ \_ "ROLLENSYSTEM"POPUP**](object-roles.md)       | Keine                                                     |
+| [MenuBar](uiauto-supportmenubarcontroltype.md)         | [**MENÜLEISTE \_ \_ "ROLLENSYSTEM"**](object-roles.md)           | Keine                                                     |
+| [MenuItem](uiauto-supportmenuitemcontroltype.md)       | [**MENÜELEMENT \_ \_ "ROLLENSYSTEM"**](object-roles.md)         | Führen Sie oder Öffnen/Schließen für Menüelemente aus, die über children verfügen. |
+| [Bereich](uiauto-supportpanecontroltype.md)               | [**BEREICH \_ \_ "ROLLENSYSTEM"**](object-roles.md)                 | Keine                                                     |
+| [Progressbar](uiauto-supportprogressbarcontroltype.md) | [**STATUSLEISTE \_ DES \_ ROLLENSYSTEMS**](object-roles.md)   | Keine                                                     |
+| [RadioButton](uiauto-supportradiobuttoncontroltype.md) | [**\_RADIOBUTTON FÜR \_ ROLLENSYSTEM**](object-roles.md)   | Azure Functions                                                    |
+| [Scrollbar](uiauto-supportscrollbarcontroltype.md)     | [**\_ \_ ROLLENSYSTEM-BILDLAUFLEISTE**](object-roles.md)       | Keine                                                     |
+| [Schieberegler](uiauto-supportslidercontroltype.md)           | [**\_ \_ ROLLENSYSTEMSCHIEBEREGLER**](object-roles.md)             | Keine                                                     |
+| [Spinner](uiauto-supportspinnercontroltype.md)         | [**ROLE \_ SYSTEM \_ SPINBUTTON**](object-roles.md)     | Keine                                                     |
+| [SplitButton](uiauto-supportsplitbuttoncontroltype.md) | [**\_ \_ ROLLENSYSTEM-SPLITBUTTON**](object-roles.md)   | Keine                                                     |
+| [StatusBar](uiauto-supportstatusbarcontroltype.md)     | [**ROLE \_ SYSTEM \_ STATUSBAR**](object-roles.md)       | Keine                                                     |
+| [TAB](uiauto-supporttabcontroltype.md)                 | [**SEITE \_ \_ "ROLLENSYSTEM"TABLIST**](object-roles.md)   | Keine                                                     |
+| [TabItem](uiauto-supporttabitemcontroltype.md)         | [**SEITE \_ \_ "ROLLENSYSTEM"TAB**](object-roles.md)           | Switch                                                   |
+| [Tabelle](uiauto-supporttablecontroltype.md)             | [**ROLE \_ SYSTEM \_ TABLE**](object-roles.md)               | Keine                                                     |
+| [Text](uiauto-supporttextcontroltype.md)               | [**ROLE \_ SYSTEM \_ STATICTEXT**](object-roles.md)     | Keine                                                     |
+| [Daumen](uiauto-supportthumbcontroltype.md)             | [**\_ \_ ROLLENSYSTEMINDIKATOR**](object-roles.md)       | Keine                                                     |
+| [Titlebar](uiauto-supporttitlebarcontroltype.md)       | [**ROLE \_ SYSTEM \_ TITLEBAR**](object-roles.md)         | Keine                                                     |
+| [Symbolleiste](uiauto-supporttoolbarcontroltype.md)         | [**SYMBOLLEISTE \_ DES \_ ROLLENSYSTEMS**](object-roles.md)           | Keine                                                     |
+| [ToolTip](uiauto-supporttooltipcontroltype.md)         | [**QUICKINFO \_ FÜR \_ ROLLENSYSTEM**](object-roles.md)           | Keine                                                     |
+| [Struktur](uiauto-supporttreecontroltype.md)               | [**\_ \_ ROLLENSYSTEMGLIEDERUNG**](object-roles.md)           | Keine                                                     |
+| [TreeItem](uiauto-supporttreeitemcontroltype.md)       | [**GLIEDERUNG \_ DES \_ ROLLENSYSTEMSITEM**](object-roles.md)   | Erweitern oder Reduzieren                                       |
+| [Fenster](uiauto-supportwindowcontroltype.md)           | [**FENSTER \_ \_ "ROLLENSYSTEM"**](object-roles.md)             | Keine                                                     |
 
 
 
- 
+ 
 
-### <a name="ui-automation-properties-and-accstate"></a>Benutzeroberflächenautomatisierungs-Eigenschaften und accState
+### <a name="ui-automation-properties-and-accstate"></a>Benutzeroberflächenautomatisierung Eigenschaften und accState
 
 
 
-| accState                                                                                      | UI-Automatisierungs Eigenschaft                                                                                                                                                        | Löst Statusänderungen aus. |
+| accState                                                                                      | Benutzeroberflächenautomatisierung-Eigenschaft                                                                                                                                                        | Triggerstatusänderung |
 |-----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|
-| [**Zustands \_ System \_ aktiviert**](object-state-constants.md)                 | Verwenden Sie für ControlType = "CheckBox" den Befehl "degglestate. on". Verwenden Sie für "RadioButton" [ **SelectionItemPattern:: issgewählt**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationselectionitempattern-get_currentisselected) | Ja                   |
-| [**Zustands \_ System- \_ Fokus verwendbar**](object-state-constants.md)             | Iskeyboardfoc. ableproperty                                                                                                                                                   | Nein                    |
-| [**Zustands \_ System mit \_ Fokus**](object-state-constants.md)                 | Haskeyboardfocusproperty                                                                                                                                                      | Nein                    |
-| [**Zustands \_ System \_ geschützt**](object-state-constants.md)             | IsPasswordProperty                                                                                                                                                            | Nein                    |
-| [**Zustands \_ System schreibgeschützt \_**](object-state-constants.md)               | Isread onlyproperty (Value-Steuerelement Muster und RangeValue-Steuerelement Muster)                                                                                                     | Nein                    |
-| [**Zustands \_ System nicht \_ verfügbar**](object-state-constants.md)         | IsEnabledProperty                                                                                                                                                             | Ja                   |
-| [**\_ \_ verknüpftes Zustands System**](object-state-constants.md)                   | ControlTypeProperty = "Hyperlink"                                                                                                                                             | Nein                    |
-| [**\_auswählbares Zustands System \_**](object-state-constants.md)           | SelectionItemPattern wird unterstützt.                                                                                                                                             | Nein                    |
-| [**Zustands \_ System \_ ausgewählt**](object-state-constants.md)               | IsSelectedProperty (SelectionItem-Steuerelement Muster)                                                                                                                            | Nein                    |
-| [**Zustands \_ System \_ reduziert**](object-state-constants.md)             | Expandredusinstate = reduziert                                                                                                                                               | Ja                   |
-| [**Zustands \_ System \_ erweitert**](object-state-constants.md)               | Expandreduzstate = erweitert oder partiallyexpanded                                                                                                                           | Ja                   |
-| [**\_haspopup des Zustands Systems \_**](object-state-constants.md)               | Menü Elemente, die erweitern/reduzieren unterstützen                                                                                                                                       | Nein                    |
-| [**Zustands \_ System \_ gemischt**](object-state-constants.md)                     | "Zu" wechseln                                                                                                                                                   | Nein                    |
-| [**\_beträchtliche Zustands System \_**](object-state-constants.md)               | [**Iuiautomationtransformpattern:: CanResize**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationtransformpattern-get_currentcanresize)                                                                     | Nein                    |
-| [**Zustands \_ System kann nicht aktualisiert werden \_**](object-state-constants.md)               | [**Iuiautomationtransformpattern:: CanMove**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationtransformpattern-get_currentcanmove)                                                                         | Nein                    |
-| [**\_ \_ mehr wählbares Zustands System**](object-state-constants.md) | [**Iuiautomationselectionpattern:: CanSelectMultiple**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationselectionpattern-get_currentcanselectmultiple)                                                     | Nein                    |
+| [**STATE \_ SYSTEM \_ CHECKED**](object-state-constants.md)                 | Verwenden Sie für ControlType = "checkbox" ToggleState.On. Verwenden Sie für "radiobutton" [ **SelectionItemPattern::IsSelected.**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationselectionitempattern-get_currentisselected) | Ja                   |
+| [**STATUSSYSTEM \_ \_ FOKUSFÄHIG**](object-state-constants.md)             | IsKeyboardFocusableProperty                                                                                                                                                   | Nein                    |
+| [**\_ \_ ZUSTANDSSYSTEMORIENTIERTES**](object-state-constants.md)                 | HasKeyboardFocusProperty                                                                                                                                                      | Nein                    |
+| [**STATE \_ SYSTEM \_ PROTECTED**](object-state-constants.md)             | IsPasswordProperty                                                                                                                                                            | Nein                    |
+| [**STATE \_ SYSTEM \_ READONLY**](object-state-constants.md)               | IsReadOnlyProperty (Value-Steuerelementmuster und RangeValue-Steuerelementmuster)                                                                                                     | Nein                    |
+| [**ZUSTANDSSYSTEM \_ \_ NICHT VERFÜGBAR**](object-state-constants.md)         | IsEnabledProperty                                                                                                                                                             | Ja                   |
+| [**STATE \_ SYSTEM \_ LINKED**](object-state-constants.md)                   | ControlTypeProperty = "hyperlink"                                                                                                                                             | Nein                    |
+| [**STATE \_ SYSTEM \_ SELECTABLE**](object-state-constants.md)           | SelectionItemPattern wird unterstützt.                                                                                                                                             | Nein                    |
+| [**STATUSSYSTEM \_ \_ AUSGEWÄHLT**](object-state-constants.md)               | IsSelectedProperty (SelectionItem-Steuerelementmuster)                                                                                                                            | Nein                    |
+| [**ZUSTANDSSYSTEM \_ \_ REDUZIERT**](object-state-constants.md)             | ExpandCollapseState = Collapsed                                                                                                                                               | Ja                   |
+| [**ERWEITERTES \_ \_ ZUSTANDSSYSTEM**](object-state-constants.md)               | ExpandCollapseState = Expanded oder PartiallyExpanded                                                                                                                           | Ja                   |
+| [**STATE \_ SYSTEM \_ HASPOPUP**](object-state-constants.md)               | Menüelemente, die Erweitern/Reduzieren unterstützen                                                                                                                                       | Nein                    |
+| [**STATE \_ SYSTEM \_ MIXED**](object-state-constants.md)                     | ToggleState = Unbestimmt                                                                                                                                                   | Nein                    |
+| [**STATE \_ SYSTEM \_ SIZEABLE**](object-state-constants.md)               | [**IUIAutomationTransformPattern::CanResize**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationtransformpattern-get_currentcanresize)                                                                     | Nein                    |
+| [**STATE \_ SYSTEM \_ MOVEABLE**](object-state-constants.md)               | [**IUIAutomationTransformPattern::CanMove**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationtransformpattern-get_currentcanmove)                                                                         | Nein                    |
+| [**STATE \_ SYSTEM \_ MULTISELECTABLE**](object-state-constants.md) | [**IUIAutomationSelectionPattern::CanSelectMultiple**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationselectionpattern-get_currentcanselectmultiple)                                                     | Nein                    |
 
 
 
- 
+ 
 
 ### <a name="selection-and-focus"></a>Auswahl und Fokus
 
 
 
-| IAccessible                                                            | Benutzeroberflächenautomatisierung                                                                          |
+| Iaccessible                                                            | Benutzeroberflächenautomatisierung                                                                          |
 |------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| [**\_Zugriffs Fokus erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus)         | [**Iuiautomation:: focucements**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-getfocusedelement)        |
-| [**accSelect**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accselect)                | Weitere Informationen finden Sie in den Eigenschaften der Benutzeroberflächenautomatisierungs-Eigenschaft und der accSelect-Tabelle             |
-| [**\_Zugriffs Auswahl**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accselection) | [**SelectionPattern:: GetSelection**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationtextpattern-getselection) |
+| [**get \_ accFocus**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus)         | [**IUIAutomation::FocusedElement**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-getfocusedelement)        |
+| [**accSelect**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accselect)                | Weitere Informationen finden Benutzeroberflächenautomatisierung Tabelle Eigenschaften und accSelect SELFLAGs.             |
+| [**get \_ accSelection**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accselection) | [**SelectionPattern::GetSelection**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationtextpattern-getselection) |
 
 
 
- 
+ 
 
-### <a name="ui-automation-properties-and-accselect-selflags"></a>Benutzeroberflächenautomatisierungs-Eigenschaften und accSelect-selflags
+### <a name="ui-automation-properties-and-accselect-selflags"></a>Benutzeroberflächenautomatisierung Eigenschaften und accSelect SELFLAGs
 
 
 
-| Auswählen von selflags                                                  | UI-Automatisierungs Eigenschaft                                                                                                         |
+| accSelect SELFLAGs                                                  | Benutzeroberflächenautomatisierung-Eigenschaft                                                                                                         |
 |---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| [**selflag " \_ None"**](selflag.md)                       | Nicht verfügbar                                                                                                                  |
-| selflag " \_ takfocus"                                                   | [**Iuiautomationelement:: SetFocus**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-setfocus)                                                 |
-| [**selflag \_ TakeSelection**](selflag.md)     | [**Iuiautomationselectionitempattern:: SELECT**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationselectionitempattern-select)                           |
-| [**selflag \_ AddSelection**](selflag.md)       | [**Iuiautomationselectionitempattern:: addopselection**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationselectionitempattern-addtoselection)           |
-| selflag \_ takeremoveselection                                        | [**Iuiautomationselectionitempattern:: RemoveFromSelection**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationselectionitempattern-removefromselection) |
-| [**selflag- \_ ExtendSelection**](selflag.md) | Nicht verfügbar                                                                                                                  |
+| [**SELFLAG \_ NONE**](selflag.md)                       | Nicht verfügbar                                                                                                                  |
+| SELFLAG \_ TAKFOCUS                                                   | [**IUIAutomationElement::SetFocus**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-setfocus)                                                 |
+| [**SELFLAG \_ TAKESELECTION**](selflag.md)     | [**IUIAutomationSelectionItemPattern::Select**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationselectionitempattern-select)                           |
+| [**SELFLAG \_ ADDSELECTION**](selflag.md)       | [**IUIAutomationSelectionItemPattern::AddToSelection**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationselectionitempattern-addtoselection)           |
+| SELFLAG \_ TAKEREMOVESELECTION                                        | [**IUIAutomationSelectionItemPattern::RemoveFromSelection**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationselectionitempattern-removefromselection) |
+| [**SELFLAG \_ EXTENDSELECTION**](selflag.md) | Nicht verfügbar                                                                                                                  |
 
 
 
- 
+ 
 
 ### <a name="spatial-mapping"></a>Räumliche Zuordnung
 
 
 
-| IAccessible                                                 | Benutzeroberflächenautomatisierung                                                                                                                        |
+| Iaccessible                                                 | Benutzeroberflächenautomatisierung                                                                                                                        |
 |-------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| [**accLocation**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acclocation) | Boundingrechgleproperty                                                                                                            |
-| [**accHitTest**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acchittest)   | [**IRawElementProviderFragmentRoot:: elementproviderfrompoint**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irawelementproviderfragmentroot-elementproviderfrompoint) |
+| [**accLocation**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acclocation) | BoundingRectangleProperty                                                                                                            |
+| [**accHitTest**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acchittest)   | [**IRawElementProviderFragmentRoot::ElementProviderFromPoint**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irawelementproviderfragmentroot-elementproviderfrompoint) |
 
 
 
- 
+ 
 
 ### <a name="events"></a>Ereignisse
 
 
 
-| System-Level von Ereignis Konstanten                                                             | Benutzeroberflächenautomatisierung                                                                                                           |
+| System-Level-Ereigniskonst constants                                                             | Benutzeroberflächenautomatisierung                                                                                                           |
 |------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [**\_ \_ menupopupstart für das Ereignis System**](event-constants.md)     | [**UIA \_ Menuopenedeventid**](uiauto-event-ids.md) (Hinweis: muss überprüfen, ob es sich um ein Popup Fenster handelt.) |
-| [**\_ \_ menupopupend für das Ereignis System**](event-constants.md)         | [**UIA \_ menuclosedebug**](uiauto-event-ids.md)                                                |
-| [**MenuStart für das Ereignis \_ System \_**](event-constants.md)               | [**UIA \_ menumodestarteventid**](uiauto-event-ids.md)                                          |
-| [**MenuEnd für das Ereignis \_ System \_**](event-constants.md)                   | [**UIA \_ menumodeendeventid**](uiauto-event-ids.md)                                              |
-| [**Sound des Ereignis \_ Systems \_**](event-constants.md)                       |                                                                                                                         |
-| [**Ereignis \_ System \_ Warnung**](event-constants.md)                       |                                                                                                                         |
-| [**Event \_ System- \_ capturestart**](event-constants.md)         |                                                                                                                         |
-| [**Ereignis \_ System- \_ captureend**](event-constants.md)             |                                                                                                                         |
-| [**\_ \_ dialogstart des Ereignis Systems**](event-constants.md)           |                                                                                                                         |
-| [**dialogend für das Ereignis \_ System \_**](event-constants.md)               |                                                                                                                         |
-| [**Ereignis \_ System " \_ muvesizestart"**](event-constants.md)       |                                                                                                                         |
-| [**Ereignis \_ System-" \_ muvesizeend"**](event-constants.md)           |                                                                                                                         |
-| [**Ereignis \_ System \_ contexthelpstart**](event-constants.md) |                                                                                                                         |
-| [**Ereignis \_ System \_ contexthelpend**](event-constants.md)     | Nicht relevant                                                                                                            |
-| [**Ereignis \_ System \_ dragdropstart**](event-constants.md)       |                                                                                                                         |
-| [**Ereignis \_ System \_ dragdropend**](event-constants.md)           |                                                                                                                         |
-| [**\_Neustarts des Ereignis Systems \_**](event-constants.md)           | Nicht relevant                                                                                                            |
-| [**Umschaltung des Ereignis \_ Systems \_**](event-constants.md)               | Nicht relevant                                                                                                            |
-| [**Ereignis \_ System \_ minimizestart**](event-constants.md)       |                                                                                                                         |
-| [**Ereignis \_ System \_ minimizeend**](event-constants.md)           |                                                                                                                         |
-| [**\_ \_ Vordergrund des Ereignis Systems**](event-constants.md)             |                                                                                                                         |
-| [**Ereignis \_ System- \_ scrollingstart**](event-constants.md)     | Nicht verfügbar                                                                                                           |
-| [**\_ \_ ereignissystemscrollingend**](event-constants.md)         | Nicht verfügbar                                                                                                           |
+| [**\_ \_ EREIGNISSYSTEMMENÜPOPUPSTART**](event-constants.md)     | [**UIA \_ MenuOpenedEventId**](uiauto-event-ids.md) (Hinweis: Muss überprüfen, ob es sich um ein Popupfenster handelt.) |
+| [**\_ \_ EREIGNISSYSTEMMENÜPOPUPEND**](event-constants.md)         | [**UIA \_ MenuClosedEventId**](uiauto-event-ids.md)                                                |
+| [**\_ \_ EREIGNISSYSTEMMENÜSTART**](event-constants.md)               | [**UIA \_ MenuModeStartEventId**](uiauto-event-ids.md)                                          |
+| [**\_ \_ EREIGNISSYSTEMMENÜEND**](event-constants.md)                   | [**UIA \_ MenuModeEndEventId**](uiauto-event-ids.md)                                              |
+| [**EVENT \_ SYSTEM \_ SOUND**](event-constants.md)                       |                                                                                                                         |
+| [**\_ \_ EREIGNISSYSTEMWARNUNG**](event-constants.md)                       |                                                                                                                         |
+| [**EVENT \_ SYSTEM \_ CAPTURESTART**](event-constants.md)         |                                                                                                                         |
+| [**EVENT \_ SYSTEM \_ CAPTUREEND**](event-constants.md)             |                                                                                                                         |
+| [**EVENT \_ SYSTEM \_ DIALOGSTART**](event-constants.md)           |                                                                                                                         |
+| [**EVENT \_ SYSTEM \_ DIALOGEND**](event-constants.md)               |                                                                                                                         |
+| [**EVENT \_ SYSTEM \_ MOVESIZESTART**](event-constants.md)       |                                                                                                                         |
+| [**EVENT \_ SYSTEM \_ MOVESIZEEND**](event-constants.md)           |                                                                                                                         |
+| [**EVENT \_ SYSTEM \_ CONTEXTHELPSTART**](event-constants.md) |                                                                                                                         |
+| [**EVENT \_ SYSTEM \_ CONTEXTHELPEND**](event-constants.md)     | Nicht relevant                                                                                                            |
+| [**EVENT \_ SYSTEM \_ DRAGDROPSTART**](event-constants.md)       |                                                                                                                         |
+| [**EVENT \_ SYSTEM \_ DRAGDROPEND**](event-constants.md)           |                                                                                                                         |
+| [**EVENT \_ SYSTEM \_ SWITCHSTART**](event-constants.md)           | Nicht relevant                                                                                                            |
+| [**EVENT \_ SYSTEM \_ SWITCHEND**](event-constants.md)               | Nicht relevant                                                                                                            |
+| [**EVENT \_ SYSTEM \_ MINIMIZESTART**](event-constants.md)       |                                                                                                                         |
+| [**EVENT \_ SYSTEM \_ MINIMIZEEND**](event-constants.md)           |                                                                                                                         |
+| [**EVENT \_ SYSTEM \_ FOREGROUND**](event-constants.md)             |                                                                                                                         |
+| [**SCROLLEN \_ DES \_ EREIGNISSYSTEMSSTART**](event-constants.md)     | Nicht verfügbar                                                                                                           |
+| [**EVENT \_ SYSTEM \_ SCROLLINGEND**](event-constants.md)         | Nicht verfügbar                                                                                                           |
 
 
 
- 
+ 
 
 
 
-| Object-Level von Ereignis Konstanten                                                           | Benutzeroberflächenautomatisierung                                                                          |
+| Object-Level-Ereigniskonst constants                                                           | Benutzeroberflächenautomatisierung                                                                          |
 |----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| [**Ereignis \_ Objekt \_ Fokus**](event-constants.md)                     | Automationfocuschangede Vent                                                            |
-| [**\_ValueChange für das Ereignis Objekt \_**](event-constants.md)         | ValueProperty (Value-Steuerelement Muster und RangeValue-Steuerelement Muster)                   |
-| [**Ereignis \_ Objekt \_ Auswahl**](event-constants.md)             | ElementSelectedEvent (SelectionItem-Steuerelement Muster)                                   |
-| [**Ereignis \_ Objekt \_ selectionadd**](event-constants.md)       | ElementAddedToSelectionEvent (SelectionItem-Steuerelement Muster)                           |
-| [**Ereignis \_ Objekt \_ SelectionRemove**](event-constants.md) | ElementRemovedFromSelectionEvent                                                       |
-| [**\_ \_ ereignisobjektselectionwithin**](event-constants.md) | Eventsselectioninvalidatedevent                                                        |
-| [**Ereignis \_ Objekt \_ StateChange**](event-constants.md)         | Zustände, die eine Statusänderung auslöst, finden Sie unter Benutzeroberflächenautomatisierungs-Eigenschaften und accState-Tabelle |
+| [**\_ \_ EREIGNISOBJEKTFOKUS**](event-constants.md)                     | AutomationFocusChangedEvent                                                            |
+| [**EVENT \_ OBJECT \_ VALUECHANGE**](event-constants.md)         | ValueProperty (Value-Steuerelementmuster und RangeValue-Steuerelementmuster)                   |
+| [**\_ \_ EREIGNISOBJEKTAUSWAHL**](event-constants.md)             | ElementSelectedEvent (SelectionItem-Steuerelementmuster)                                   |
+| [**\_ \_ EREIGNISOBJEKTAUSWAHLADD**](event-constants.md)       | ElementAddedToSelectionEvent (SelectionItem-Steuerelementmuster)                           |
+| [**EVENT \_ OBJECT \_ SELECTIONREMOVE**](event-constants.md) | ElementRemovedFromSelectionEvent                                                       |
+| [**EVENT \_ OBJECT \_ SELECTIONWITHIN**](event-constants.md) | EventsSelectionInvalidatedEvent                                                        |
+| [**EVENT \_ OBJECT \_ STATECHANGE**](event-constants.md)         | Unter Benutzeroberflächenautomatisierung Eigenschaften und accState finden Sie Status, die eine Zustandsänderung auslösen. |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

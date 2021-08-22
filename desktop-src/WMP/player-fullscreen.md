@@ -1,9 +1,9 @@
 ---
-title: Player. Fullscreen
-description: Mit der FullScreen-Eigenschaft wird ein Wert angegeben oder abgerufen, der angibt, ob Videoinhalte im Vollbildmodus wiedergegeben werden.
+title: Player.fullScreen
+description: Die fullScreen-Eigenschaft gibt einen Wert an oder ruft einen Wert ab, der angibt, ob Der Videoinhalt im Vollbildmodus wiedergibt.
 ms.assetid: 43eeeddd-13a6-44d8-9cff-a60e976fc189
 keywords:
-- Player. Fullscreen-Fenster Media Player
+- Player.fullScreen-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,59 +14,59 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c3f71b4100c359effd95f79c574a52b5a5bae28c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f380dcbcaeedddd23c5e6ff42f9750ea8bcd2f552942e19ba7b847e725edc3b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358243"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054378"
 ---
-# <a name="playerfullscreen"></a>Player. Fullscreen
+# <a name="playerfullscreen"></a>Player.fullScreen
 
-Mit der **Fullscreen** -Eigenschaft wird ein Wert angegeben oder abgerufen, der angibt, ob Videoinhalte im Vollbildmodus wiedergegeben werden.
+Die **fullScreen-Eigenschaft** gibt einen Wert an oder ruft einen Wert ab, der angibt, ob Der Videoinhalt im Vollbildmodus wiedergibt.
 
 ## <a name="syntax"></a>Syntax
 
-*Player* . **Vollbild**
+*Player* . **fullScreen**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Diese Eigenschaft ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 
 
 | Wert | BESCHREIBUNG                                                    |
 |-------|----------------------------------------------------------------|
-| true  | Video Inhalte werden im Vollbildmodus wiedergegeben.              |
-| false | Standard. Video Inhalte werden im Vollbildmodus nicht wiedergegeben. |
+| true  | Videoinhalte werden im Vollbildmodus wiedergerufen.              |
+| false | Standard. Videoinhalte werden nicht im Vollbildmodus abgespielt. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Damit der Vollbildmodus beim Einbetten des Windows Media Player-Steuer Elements ordnungsgemäß funktioniert, muss der Videoanzeige Bereich eine Höhe und Breite von mindestens einem Pixel aufweisen. Wenn **uiMode** auf "Mini" oder "Full" festgelegt ist, muss die Höhe des Steuer Elements auf 65 oder höher festgelegt sein, um zusätzlich zur Benutzeroberfläche den Videoanzeige Bereich aufzunehmen.
+Damit der Vollbildmodus beim Einbetten des Windows Media Player-Steuerelements ordnungsgemäß funktioniert, muss der Videoanzeigebereich eine Höhe und Breite von mindestens einem Pixel haben. Wenn **uiMode** auf "mini" oder "full" festgelegt ist, muss die Höhe des Steuerelements selbst 65 oder höher sein, um den Videoanzeigebereich zusätzlich zur Benutzeroberfläche aufnehmen zu können.
 
-Wenn **uiMode** auf "unsichtbar" festgelegt ist, löst das Festlegen dieser Eigenschaft auf true einen Fehler aus und wirkt sich nicht auf das Verhalten des Steuer Elements aus.
+Wenn **uiMode** auf "invisible" festgelegt ist, löst das Festlegen dieser Eigenschaft auf TRUE einen Fehler aus und wirkt sich nicht auf das Verhalten des Steuerelements aus.
 
-Während der Vollbildwiedergabe blendet Windows Media Player den Mauszeiger aus, wenn **enablecontextmenu** den Wert false hat und **uiMode** den Wert "None" hat.
+Während der Vollbildwiedergabe blendet Windows Media Player Mauscursor aus, wenn **enableContextMenu** gleich false und **uiMode** gleich "none" ist.
 
-Wenn **uiMode** auf "Full" oder "Mini" festgelegt ist, zeigt Windows Media Player Transport Steuerelemente im Vollbildmodus an, wenn der Mauszeiger bewegt wird. Nach einem kurzen Intervall ohne Mausbewegung werden die Transport Steuerelemente ausgeblendet. Wenn **uiMode** auf "None" festgelegt ist, werden keine Steuerelemente im Vollbildmodus angezeigt.
-
-**Hinweis**
-
-Zum Anzeigen von Transport Steuerelementen im Vollbildmodus ist das Betriebssystem Windows XP erforderlich.
-
-Wenn Transport Steuerelemente nicht im Vollbildmodus angezeigt werden, beendet Windows Media Player den Vollbildmodus automatisch, wenn die Wiedergabe angehalten wird.
+Wenn **uiMode** auf "full" oder "mini" festgelegt ist, zeigt Windows Media Player Transportsteuerelemente im Vollbildmodus an, wenn sich der Mauszeiger bewegt. Nach einem kurzen Intervall ohne Mausbewegung werden die Transportsteuerelemente ausgeblendet. Wenn **uiMode** auf "none" festgelegt ist, werden keine Steuerelemente im Vollbildmodus angezeigt.
 
 **Hinweis**
 
-Stellen Sie sicher, dass Sie den Benutzer darüber informieren, wie Sie den Vollbildmodus zurückgeben.
+Das Anzeigen von Transportsteuerelementen im Vollbildmodus erfordert das Windows XP-Betriebssystem.
+
+Wenn Transportsteuerelemente nicht im Vollbildmodus angezeigt werden, beendet Windows Media Player automatisch den Vollbildmodus, wenn die Wiedergabe beendet wird.
+
+**Hinweis**
+
+Informieren Sie den Benutzer immer darüber, wie er aus dem Vollbildmodus zurückkehren soll.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird eine HTML-Eingabe Schaltfläche erstellt, die *Player* verwendet. **Vollbild** , um ein eingebettetes Player-Objekt in den Vollbildmodus zu wechseln. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird eine HTML-Eingabeschaltfläche erstellt, die *Player verwendet.* **FullScreen** zum Wechseln eines eingebetteten Playerobjekts in den Vollbildmodus. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```
@@ -88,7 +88,7 @@ Im folgenden Beispiel wird eine HTML-Eingabe Schaltfläche erstellt, die *Player
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 

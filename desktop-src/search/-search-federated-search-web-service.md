@@ -1,51 +1,51 @@
 ---
-description: In diesem Thema werden die Schritte zum Verbinden eines Webdiensts zwischen dem Datenspeicher und der Windows-Verbund Suche beschrieben, und es wird beschrieben, wie Sie Abfragen senden und Suchergebnisse in RSS oder Atom zurückgeben.
+description: In diesem Thema werden die Schritte zum Verbinden eines Webdiensts zwischen Ihrem Datenspeicher und Windows Federated Search beschrieben, und es wird beschrieben, wie Abfragen gesendet und Suchergebnisse in RSS oder Atom zurückgeben werden.
 ms.assetid: 4c8de310-49e6-4d90-a920-0c715351c86a
-title: Verbinden des Webdiensts in der Windows-Verbund Suche
+title: Verbinden Ihres Webdiensts in Windows Verbundsuche
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 45632d1d3c7b820ab1f39db0896c9f2927b24ccb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4980b2d62f766806cf89856b8ef9e5231284be0dfea3258d2e5d5155e7a46598
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128577"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119456720"
 ---
-# <a name="connecting-your-web-service-in-windows-federated-search"></a>Verbinden des Webdiensts in der Windows-Verbund Suche
+# <a name="connecting-your-web-service-in-windows-federated-search"></a>Verbinden Ihres Webdiensts in Windows Verbundsuche
 
-In diesem Thema werden die Schritte zum Verbinden eines Webdiensts zwischen dem Datenspeicher und der Windows-Verbund Suche beschrieben, und es wird beschrieben, wie Sie Abfragen senden und Suchergebnisse in RSS oder Atom zurückgeben.
+In diesem Thema werden die Schritte zum Verbinden eines Webdiensts zwischen Ihrem Datenspeicher und Windows Federated Search beschrieben, und es wird beschrieben, wie Abfragen gesendet und Suchergebnisse in RSS oder Atom zurückgeben werden.
 
 Dieses Thema ist wie folgt organisiert:
 
--   [Webdienst verbinden](#connect-your-web-service)
--   [Registrieren eines vorhandenen Remote Datenspeicher](#register-an-existing-remote-data-store)
+-   [Verbinden Ihr Webdienst](#connect-your-web-service)
+-   [Registrieren eines vorhandenen Remotedaten-Store](#register-an-existing-remote-data-store)
 -   [Weitere Ressourcen](#additional-resources)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="connect-your-web-service"></a>Webdienst verbinden
+## <a name="connect-your-web-service"></a>Verbinden Ihr Webdienst
 
-**Führen Sie die folgenden Schritte aus, um den Webdienst des Datenspeicher mit der Verbund Suche zu verbinden:**
+**Führen Sie die folgenden Schritte aus, um den Webdienst Ihres Datenspeichers mit der Verbundsuche zu verbinden:**
 
 1.  Erstellen Sie eine OSDX-Datei.
-2.  Stellen Sie die OSDX-Datei für Benutzer bereit, damit Sie den Dienst bei Bedarf hinzufügen können, indem Sie die OSDX-Datei öffnen.
-3.  Generieren Sie einen Suchconnector, und stellen Sie ihn aktiv in Ihrem Unternehmen bereit.
+2.  Stellen Sie die OSDX-Datei für Benutzer zur Verfügung, damit sie den Dienst bei Bedarf hinzufügen können, indem Sie die OSDX-Datei öffnen.
+3.  Generieren Sie einen Suchconnector, und stellen Sie ihn aktiv in Ihrem Unternehmen zur Anwendung.
 
-## <a name="register-an-existing-remote-data-store"></a>Registrieren eines vorhandenen Remote Datenspeicher
+## <a name="register-an-existing-remote-data-store"></a>Registrieren eines vorhandenen Remotedaten-Store
 
-Ein Benutzer registriert einen neuen Remote Datenspeicher bei der Windows-Verbund Suche, indem er eine OpenSearch-Beschreibungsdatei (OSDX-Datei) öffnet. Wenn der Benutzer dies tut, treten die folgenden Ereignisse auf:
+Ein Benutzer registriert einen neuen Remotedatenspeicher bei Windows Verbundsuche, indem er eine Datei OpenSearch Description (.osdx) öffnet. Wenn der Benutzer dies tut, treten die folgenden Ereignisse auf:
 
-1.  Eine searchconnector-MS-Datei (Search-Connector) wird im Ordner Windows-Suchvorgänge (% User Profile%/searches) erstellt.
-2.  Eine Verknüpfung mit der Datei. searchconnector-MS wird im Ordner Verknüpfungen erstellt (% User Profile%/links).
-3.  Im Windows Explorer-Navigations **Favoriten** Bereich wird eine Verknüpfung angezeigt, die es dem Benutzer ermöglicht, in den neuen Datenspeicher zu navigieren und den Webdienst abzufragen.
+1.  Eine SEARCHCONNECTOR-MS-Datei (Suchconnector) wird im Ordner Windows Search (%userprofile%/Searches) erstellt.
+2.  Eine Verknüpfung zur Datei .searchconnector-ms wird im Ordner Links (%userprofile%/Links) erstellt.
+3.  Im Navigationsfavoritenbereich Windows  Explorer wird eine Verknüpfung angezeigt, mit der der Benutzer zum neuen Datenspeicher navigieren und den Webdienst abfragen kann.
 
 > [!Note]  
-> Ein Datenspeicher, der bereits über einen [OpenSearch](https://github.com/dewitt/opensearch) -Webdienst verfügt, der mit der Windows-Verbund Suche kompatibel ist, kann Windows-Explorer hinzugefügt werden, wenn ein Benutzer eine OSDX-Datei öffnet.
+> Ein Datenspeicher, der bereits über einen [OpenSearch-Webdienst](https://github.com/dewitt/opensearch) verfügt, der mit Windows Federated Search kompatibel ist, kann dem Windows-Explorer hinzugefügt werden, wenn ein Benutzer eine OSDX-Datei öffnet.
 
  
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
-Weitere Informationen zum Implementieren eines Such Verbunds in Remote Datenspeicher mithilfe von OpenSearch-Technologien in Windows 7 und höher finden Sie unter "zusätzliche Ressourcen" bei der [Verbund Suche in Windows](/previous-versions//dd742958(v=vs.85)).
+Weitere Informationen zum Implementieren des Suchverbunds in Remotedatenspeicher mithilfe von OpenSearch-Technologien in Windows 7 und höher finden Sie unter "Zusätzliche Ressourcen" unter Verbundsuche [in Windows](/previous-versions//dd742958(v=vs.85)).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -54,19 +54,19 @@ Weitere Informationen zum Implementieren eines Such Verbunds in Remote Datenspei
 [Verbundsuche in Windows 10](-search-federated-search-overview.md)
 </dt> <dt>
 
-[Ersten Einstieg in die Verbund Suche in Windows](getting-started-with-federated-search-in-windows.md)
+[Erste Schritte mit Der Verbundsuche in Windows](getting-started-with-federated-search-in-windows.md)
 </dt> <dt>
 
-[Aktivieren des Datenspeicher in der Windows-Verbund Suche](-search-federated-search-data-store.md)
+[Aktivieren Ihrer Store in Windows Verbundsuche](-search-federated-search-data-store.md)
 </dt> <dt>
 
-[Erstellen einer OpenSearch-Beschreibungsdatei in der Windows-Verbund Suche](-search-federated-search-osdx-file.md)
+[Erstellen einer OpenSearch Beschreibungsdatei in Windows Verbundsuche](-search-federated-search-osdx-file.md)
 </dt> <dt>
 
-[Bewährte Methoden bei der Windows-Verbund Suche](-search-fedsearch-best.md)
+[Bewährte Methoden für die Windows Verbundsuche](-search-fedsearch-best.md)
 </dt> <dt>
 
-[Bereitstellen von Suchconnectors in der Windows-Verbund Suche](-search-federated-search-deploying.md)
+[Bereitstellen von Suchconnectors in Windows Verbundsuche](-search-federated-search-deploying.md)
 </dt> </dl>
 
  

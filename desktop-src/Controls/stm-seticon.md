@@ -1,9 +1,9 @@
 ---
-title: STM_SETICON Meldung (Winuser. h)
-description: Eine Anwendung sendet die STM \_ SetIcon-Nachricht, um ein Symbol einem Symbol Steuerelement zuzuordnen.
+title: STM_SETICON Meldung (Winuser.h)
+description: Eine Anwendung sendet die STM \_ SETICON-Nachricht, um ein Symbol einem Symbolsteuerelement zuzuordnen.
 ms.assetid: 105b0667-8e23-47ed-9fb1-0792a22d7100
 keywords:
-- Windows-Steuerelemente für STM_SETICON Meldung
+- STM_SETICON Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cb9c7e2a007c1f866a1c73b3a1c1a55b157add47
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 55ff1cbaa6a1083751b3619392fbb0d3b60695e829907c2dfe27fdb41170e167
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040160"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119281420"
 ---
-# <a name="stm_seticon-message"></a>STM- \_ Nachricht
+# <a name="stm_seticon-message"></a>STM \_ SETICON-Meldung
 
-Eine Anwendung sendet die **STM \_ SetIcon** -Nachricht, um ein Symbol einem Symbol Steuerelement zuzuordnen.
+Eine Anwendung sendet die **STM \_ SETICON-Nachricht,** um ein Symbol einem Symbolsteuerelement zuzuordnen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Eine Anwendung sendet die **STM \_ SetIcon** -Nachricht, um ein Symbol einem Sym
 *wParam* 
 </dt> <dd>
 
-Handle für das Symbol, das mit dem Symbol Steuerelement verknüpft werden soll.
+Handle für das Symbol, das dem Symbolsteuerelement zugeordnet werden soll.
 
 </dd> <dt>
 
@@ -45,7 +45,7 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein Handle für das Symbol, das zuvor dem Symbol Steuerelement zugeordnet wurde, oder 0 (null), wenn ein Fehler auftritt.
+Der Rückgabewert ist ein Handle für das Symbol, das zuvor dem Symbolsteuerelement zugeordnet war, oder 0 (null), wenn ein Fehler auftritt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,20 +53,20 @@ Der Rückgabewert ist ein Handle für das Symbol, das zuvor dem Symbol Steuerele
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**STM- \_ getIcon**](stm-geticon.md)
+[**STM \_ GETICON**](stm-geticon.md)
 </dt> <dt>
 
 **Andere Ressourcen**

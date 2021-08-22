@@ -1,7 +1,7 @@
 ---
-description: 'RemoveAssociatedData-Methode der Msvm_VirtualSystemReferencePointService Klasse: Entfernt das dem Verweispunkt zugeordnete Datenprotokoll.'
+description: 'RemoveAssociatedData-Methode der Msvm_VirtualSystemReferencePointService-Klasse: Entfernt das dem Verweispunkt zugeordnete Datenprotokoll.'
 ms.assetid: b6206bda-c195-4c6f-9b80-508c20b53ce5
-title: RemoveAssociatedData-Methode der Msvm_VirtualSystemReferencePointService Klasse
+title: RemoveAssociatedData-Methode der Msvm_VirtualSystemReferencePointService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: b5291e4e018edc89909ccde36ce0e420698af8e6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3f8cef79e55379df1f91a0e1291144a7f4fdf92378e44cd9ed3588c83b3a3d4a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119147903"
 ---
 # <a name="removeassociateddata-method-of-the-msvm_virtualsystemreferencepointservice-class"></a>RemoveAssociatedData-Methode der Msvm \_ VirtualSystemReferencePointService-Klasse
 
-Entfernt das dem Referenzpunkt zugeordnete Datenprotokoll.
+Entfernt das dem Verweispunkt zugeordnete Datenprotokoll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,20 +50,20 @@ Ein Verweis auf die [**Msvm \_ VirtualSystemReferencePoint-Instanz,**](msvm-virt
 *Auftrag* \[ out\]
 </dt> <dd>
 
-Ein optionaler Parameter zum Überwachen des Fortschritts des Vorgangs, der verwendet wird, wenn die Methode nicht synchron ausgeführt werden konnte. Wenn der Vorgang asynchron ausgeführt wird, ist der Rückgabewert 4096.
+Ein optionaler Parameter zum Überwachen des Vorgangsfortschritts, der verwendet wird, wenn die Methode nicht synchron ausgeführt werden konnte. Wenn der Vorgang asynchron ausgeführt wird, lautet der Rückgabewert 4096.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird 0 (Vollständig ohne Fehler) oder 4096 (Auftrag gestartet) zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
+Bei Erfolg wird 0 (Ohne Fehler abgeschlossen) oder 4096 (Auftrag gestartet) zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
 **Fehler** (32768)
@@ -81,7 +81,7 @@ Bei Erfolg wird 0 (Vollständig ohne Fehler) oder 4096 (Auftrag gestartet) zurü
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger** Parameter (32773)
+**Ungültiger Parameter** (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
@@ -103,9 +103,9 @@ Bei Erfolg wird 0 (Vollständig ohne Fehler) oder 4096 (Auftrag gestartet) zurü
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 10 \[ Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |

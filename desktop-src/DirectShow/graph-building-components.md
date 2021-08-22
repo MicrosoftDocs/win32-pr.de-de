@@ -4,36 +4,36 @@ ms.assetid: d803c56c-6fb1-4937-92e7-9ed2db2afc46
 title: Graph-Building Komponenten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ea3ba346356109d8080d887a510cfcb85b6a6c80
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 14aabcf31f55d0d42117e39cb22fa286b383641c94fe21f386345fd8db1cc890
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119564640"
 ---
 # <a name="graph-building-components"></a>Graph-Building Komponenten
 
-DirectShow stellt mehrere Komponenten bereit, die zum Erstellen von Filter Diagrammen verwendet werden können. Dabei handelt es sich z. B. um:
+DirectShow bietet mehrere Komponenten, die zum Erstellen von Filterdiagrammen verwendet werden können. Dabei handelt es sich z. B. um:
 
--   [Filtern](filter-graph-manager.md)Sie den Diagramm-Manager. Dieses Objekt steuert das Filter Diagramm. Sie unterstützt unter anderem die Schnittstellen [**igraphbuilder**](/windows/desktop/api/Strmif/nn-strmif-igraphbuilder), [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol)und [**imediaeventex**](/windows/desktop/api/Control/nn-control-imediaeventex) . Alle DirectShow-Anwendungen verwenden dieses Objekt zu einem bestimmten Zeitpunkt, obwohl in einigen Fällen ein anderes Objekt den Filter Graph-Manager für die Anwendung erstellt.
--   [Erfassungs Diagramm](capture-graph-builder.md)-Generator. Dieses Objekt stellt zusätzliche Methoden zum Entwickeln von Filter Diagrammen bereit. Sie wurde ursprünglich für das Erstellen von Diagrammen entwickelt, die eine Video Erfassung durchführen (daher der Name), ist aber für viele andere Arten von benutzerdefinierten Filter Diagrammen nützlich. Die [**ICaptureGraphBuilder2**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) -Schnittstelle wird unterstützt.
--   [Filtermapper](filter-mapper.md) und [System Geräte Enumerator](system-device-enumerator.md). Diese Objekte suchen Filter, die im System des Benutzers registriert sind oder Hardware Geräte darstellen.
--   [DVD-Diagramm](dvd-graph-builder.md)-Generator. Dieses Objekt erstellt Filter Diagramme für die DVD-Wiedergabe und-Navigation. Die [**idvdgraphbuilder**](/windows/desktop/api/Strmif/nn-strmif-idvdgraphbuilder) -Schnittstelle wird unterstützt.
+-   [Filtern Graph Manager](filter-graph-manager.md). Dieses Objekt steuert das Filterdiagramm. Sie unterstützt [**u.a. die Schnittstellen IGraphBuilder,**](/windows/desktop/api/Strmif/nn-strmif-igraphbuilder) [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol)und [**IMediaEventEx.**](/windows/desktop/api/Control/nn-control-imediaeventex) Alle DirectShow-Anwendungen verwenden dieses Objekt zu einem bestimmten Zeitpunkt, obwohl in einigen Fällen ein anderes Objekt den Filter Graph Manager für die Anwendung erstellt.
+-   [Capture Graph Builder](capture-graph-builder.md). Dieses Objekt bietet zusätzliche Methoden zum Erstellen von Filterdiagrammen. Es wurde ursprünglich für das Erstellen von Diagrammen entwickelt, die Videoaufnahmen (daher den Namen) ausführen, aber für viele andere Arten von benutzerdefiniertem Filterdiagramm nützlich sind. Es unterstützt die [**ICaptureGraphBuilder2-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2)
+-   [Filter Mapper](filter-mapper.md) und [System device Enumerator](system-device-enumerator.md). Diese Objekte suchen nach Filtern, die auf dem System des Benutzers registriert sind oder Hardwaregeräte darstellen.
+-   [DVD Graph Builder](dvd-graph-builder.md). Dieses Objekt erstellt Filterdiagramme für dvd-Wiedergabe und -Navigation. Es unterstützt die [**IDvdGraphBuilder-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-idvdgraphbuilder)
 
-### <a name="intelligent-connect"></a>Intelligent Connect
+### <a name="intelligent-connect"></a>Intelligente Verbinden
 
-Der Begriff "Intelligent Connect" umfasst eine Reihe von Algorithmen, die der Filter Graph-Manager verwendet, um den gesamten oder einen Teil eines Filter Diagramms zu erstellen. Wenn der Filter Graph-Manager zusätzliche Filter zum Vervollständigen des Diagramms erfordert, erfolgt ungefähr Folgendes:
+Der Begriff "Intelligent Verbinden" umfasst eine Reihe von Algorithmen, die der Filter Graph Manager verwendet, um einen Filtergraphen ganz oder teilweise zu erstellen. Wenn der Filter Graph-Manager zusätzliche Filter benötigt, um das Diagramm zu vervollständigen, führt er ungefähr Folgendes aus:
 
-1.  Wenn sich derzeit ein Filter im Diagramm befindet und mindestens eine nicht verbundene Eingabe-PIN vorhanden ist, versucht der Filter Graph-Manager, diesen Filter zu verwenden.
-2.  Andernfalls sucht der Filter Graph-Manager in der Registrierung nach Filtern, die den richtigen Medientyp für die Verbindung akzeptieren können. Jeder Filter hat einen Registrierungs Wert mit dem Namen "Verdienst", der ungefähr angibt, wie wahrscheinlich der Filter für das vervollständigen des Diagramms nützlich ist. Der Filter Graph-Manager versucht Filter in der Reihenfolge der Verdienst Werte zu filtern. Für jeden Streamtyp (z. b. Audiodatei, Video oder MIDI) hat der Standardrenderer einen hohen Vorteil. Decoders haben außerdem eine hohe Leistung. Filter für spezielle Zwecke haben eine geringe Leistung.
+1.  Wenn das Diagramm derzeit einen Filter mit mindestens einem nicht verbundenen Eingabepin auflistet, versucht der Graph-Manager, diesen Filter zu verwenden.
+2.  Andernfalls sucht Graph Filter-Manager in der Registrierung nach Filtern, die den richtigen Medientyp für die Verbindung akzeptieren können. Jeder Filter verfügt über einen Registrierungswert mit dem Namen " Standardwert", der ungefähr angibt, wie wahrscheinlich der Filter beim Abschließen des Diagramms sein wird. Der Filter Graph-Manager versucht Filter in der Reihenfolge des Werts. Für jeden Streamtyp (z. B. Audio, Video oderGUIDE) hat der Standardrenderer eine hohe Leistung. Decoder haben auch hohe Vorteile. Filter für spezielle Zwecke haben geringen Nutzen.
 
-Wenn der Filter Graph-Manager hängen bleibt, wird er zurückgesetzt, und es wird eine andere Kombination von Filtern ausprobiert. Die genauen Details finden Sie im Thema [Intelligent Connect](intelligent-connect.md).
+Wenn der Filter Graph-Manager hängen bleibt, wird er zurückgesetzt und versucht, eine andere Kombination von Filtern auszuprobieren. Die genauen Details finden Sie im Thema [Intelligent Verbinden](intelligent-connect.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Aufbauen des Filter Diagramms](building-the-filter-graph.md)
+[Erstellen des Graph](building-the-filter-graph.md)
 </dt> </dl>
 
  

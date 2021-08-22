@@ -1,30 +1,30 @@
 ---
-title: Mciwnd-Fenster Klasse
-description: Mciwnd-Fenster Klasse
+title: MCIWnd Window-Klasse
+description: MCIWnd Window-Klasse
 ms.assetid: 473ec6dc-f3a3-430e-83bc-642f476e45af
 keywords:
-- Mciwnd-Fenster Klasse, Informationen zu
-- Mciwnd-Fenster, Fenster Klasse
+- MCIWnd-Fensterklasse,about
+- MCIWnd-Fenster, Window-Klasse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 464e7f587255510712ab8f3efbeb5a5a3998a072
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f3c3f131c4efa81f32e338d321bb111bd24822351350d6abeefd8516f8b43f02
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119429830"
 ---
-# <a name="mciwnd-window-class"></a>Mciwnd-Fenster Klasse
+# <a name="mciwnd-window-class"></a>MCIWnd Window-Klasse
 
-Mciwnd ist eine Fenster Klasse zum Steuern von Multimedia-Geräten. Eine Bibliothek mit Funktionen, Meldungen und Makros, die mciwnd zugeordnet sind, stellt eine einfache Methode zum Hinzufügen von multimediewiedergabe-oder Aufzeichnungsfunktionen zu Ihren Anwendungen bereit.
+MCIWnd ist eine Fensterklasse zum Steuern von Multimediageräten. Eine Bibliothek von Funktionen, Nachrichten und Makros, die MCIWnd zugeordnet sind, bietet eine einfache Methode zum Hinzufügen von Multimediawiedergabe- oder Aufzeichnungsfunktionen zu Ihren Anwendungen.
 
--   [Informationen zur mciwnd-Fenster Klasse](about-the-mciwnd-window-class.md)
--   [Verwenden der mciwnd-Fenster Klasse](using-the-mciwnd-window-class.md)
--   [Mciwnd-Referenz](mciwnd-reference.md)
+-   [Informationen zur MCIWnd Window-Klasse](about-the-mciwnd-window-class.md)
+-   [Verwenden der MCIWnd Window-Klasse](using-the-mciwnd-window-class.md)
+-   [MCIWnd-Referenz](mciwnd-reference.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Zeiger auf das-Objekt, das Qualitäts Meldungen verarbeitet.
+description: Zeiger auf das Objekt, das Qualitätsnachrichten verarbeitet.
 ms.assetid: 86f29550-9ab0-48de-879d-afad0589a30c
-title: 'Cbasepin:: m_pQSink Member (amfilter. h)'
+title: CBasePin::m_pQSink-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 44e56eec6a05b98295d9d076fc9e2befb6502d87
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e74f0da8764a0eacf73d675a7e1e8e5960f642ecc9b0a014fcfebff423f5dc16
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119341350"
 ---
-# <a name="cbasepinm_pqsink-member"></a>Cbasepin:: m \_ pqsink-Element
+# <a name="cbasepinm_pqsink-member"></a>CBasePin::m \_ pQSink-Member
 
-Zeiger auf das-Objekt, das Qualitäts Meldungen verarbeitet.
+Zeiger auf das Objekt, das Qualitätsnachrichten verarbeitet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ IQualityControl *m_pQSink;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

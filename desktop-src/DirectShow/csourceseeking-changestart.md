@@ -1,7 +1,7 @@
 ---
-description: Die changestart-Methode wird aufgerufen, wenn sich die Startposition ändert.
+description: Die ChangeStart-Methode wird aufgerufen, wenn sich die Startposition ändert.
 ms.assetid: d0a5497e-43e9-4d1f-9106-1f4cd8fcb372
-title: Csourceseeking. changestart-Methode (ctlutil. h)
+title: CSourceSeeking.ChangeStart-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d0a2751cf0ad1ecc6fddeeffd97b97c32b4a31b1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7f7c0d9a86d33d13c95295c5ef1ef46a3e6c02371d1b6520572750450320b1f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367191"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073364"
 ---
-# <a name="csourceseekingchangestart-method"></a>Csourceseeking. changestart-Methode
+# <a name="csourceseekingchangestart-method"></a>CSourceSeeking.ChangeStart-Methode
 
-Die- `ChangeStart` Methode wird aufgerufen, wenn sich die Startposition ändert.
+Die `ChangeStart` -Methode wird aufgerufen, wenn sich die Startposition ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**csourceseeking:: setpositions**](csourceseeking-setpositions.md) -Methode ruft diese Methode auf, wenn sich die Startposition ändert. Diese Methode ist rein virtuell. Diese Klasse muss von der abgeleiteten Klasse implementiert werden. Nach einem Suchvorgang sollten Zeitstempel von Null neu gestartet werden. Medien Zeiten sollten die neue Startzeit widerspiegeln. Das folgende Beispiel zeigt eine mögliche Implementierung:
+Die [**CSourceSeeking::SetPositions-Methode**](csourceseeking-setpositions.md) ruft diese Methode auf, wenn sich die Startposition ändert. Diese Methode ist rein virtuell. die abgeleitete Klasse muss sie implementieren. Nach einem Suchvorgang sollten Zeitstempel von 0 (null) neu gestartet werden. Medienzeiten sollten die neue Startzeit widerspiegeln. Das folgende Beispiel zeigt eine mögliche Implementierung:
 
 
 ```C++
@@ -67,8 +67,8 @@ HRESULT CMyStream::ChangeStart( )
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -76,7 +76,7 @@ HRESULT CMyStream::ChangeStart( )
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  

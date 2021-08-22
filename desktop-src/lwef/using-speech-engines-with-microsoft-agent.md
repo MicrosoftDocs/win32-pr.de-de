@@ -1,38 +1,38 @@
 ---
-title: Verwenden von Sprach-Engines mit dem Microsoft-Agent
-description: Verwenden von Sprach-Engines mit dem Microsoft-Agent
+title: Verwenden von Speech-Engines mit dem Microsoft-Agent
+description: Verwenden von Speech-Engines mit dem Microsoft-Agent
 ms.assetid: f2687dd6-d38c-4ce7-9587-51e14614e767
 keywords:
-- Microsoft-Agent, Verwendung von Sprach-Engines
+- Microsoft-Agent mit Sprach-Engines
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d008a3cbfe41d94add85147b67b909549cec2a9b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8f2be5bd7dda77ad091641b40cfd935e80d8d28d38dfd2e32dbb6d80ffa1dfb1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310452"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119347660"
 ---
-# <a name="using-speech-engines-with-microsoft-agent"></a>Verwenden von Sprach-Engines mit dem Microsoft-Agent
+# <a name="using-speech-engines-with-microsoft-agent"></a>Verwenden von Speech-Engines mit dem Microsoft-Agent
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Microsoft stellt eine Reihe von Modulen für Spracheingabe (Erkennung) und Sprachausgabe (tex-zu-Sprache-oder TTS) bereit, die Sie mit Ihren Microsoft Agent-fähigen Anwendungen oder Webseiten verwenden können. Die Verwendung dieser Engines unterliegt dem Microsoft-Agent-Lizenzvertrag und dem ergänzenden Nachtrag, der bei der Installation der Module angezeigt wird. Diese Lizenz ist berechtigt, die Engines zu verteilen, aber nur, wenn Sie Sie über die Microsoft-Agent-API verwenden und ein sichtbares Zeichen verwenden.
+Microsoft stellt eine Reihe von Spracheingabe-Engines (Erkennungs-)Engines und Sprachausgabe-Engines (Tex-to-Speech oder TTS) bereit, die Sie mit Ihren Microsoft Agent-fähigen Anwendungen oder Webseiten verwenden können. Die Verwendung dieser Engines unterliegt dem Microsoft-Agent-Lizenzvertrag und dem zusätzlichen Nachtrag, der angezeigt wird, wenn Sie die Engines installieren. Diese Lizenz berechtigt Sie, die Engines zu verteilen, jedoch nur, wenn Sie sie über die Microsoft-Agent-API und mit einem sichtbaren Zeichen verwenden.
 
-In den folgenden Abschnitten wird beschrieben, wie Sie Sprach-Engines mit dem Microsoft-Agent verwenden.
+In den folgenden Abschnitten wird die Verwendung von Sprach-Engines mit microsoft-Agent beschrieben.
 
 -   [Zugreifen auf eine Sprach-Engine in Ihrem Code](accessing-a-speech-engine-in-your-code.md)
--   [Microsoft-Agent-Sprachausgabe Tags](microsoft-agent-speech-output-tags.md)
--   [Text Normalisierung für Text-zu-Sprache-Engines](text-to-speech-engines-text-normalization.md)
--   [Andere mit dem Microsoft-Agent kompatible Sprach-Engines](other-speech-engines-compatible-with-microsoft-agent.md)
+-   [Microsoft Agent Speech Output Tags](microsoft-agent-speech-output-tags.md)
+-   [Text-to-Speech-Engines: Textnormalisierung](text-to-speech-engines-text-normalization.md)
+-   [Andere Sprach-Engines, die mit Dem Microsoft-Agent kompatibel sind](other-speech-engines-compatible-with-microsoft-agent.md)
 
-Suchen Sie unter dem folgenden Link nach Änderungen an den Sprach-und sprach Erkennungs Features von Microsoft-Agents für Windows Vista.
+Suchen Sie unter dem folgenden Link nach Änderungen in den Sprach- und Spracherkennungsfunktionen des Microsoft-Agents für Windows Vista.
 
--   [Microsoft-Agent-Änderungen in Windows Vista](microsoft-agent-changes-in-windows-vista.md)
+-   [Änderungen am Microsoft-Agent in Windows Vista](microsoft-agent-changes-in-windows-vista.md)
 
- 
+ 
 
- 
+ 
 
 
 

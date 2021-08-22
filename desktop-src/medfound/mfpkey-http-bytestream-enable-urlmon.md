@@ -1,43 +1,43 @@
 ---
-description: Ermöglicht dem Microsoft Media Foundation http-Bytestream, URL-Moniker (auch Urlmon genannt) zu verwenden.
+description: Ermöglicht dem Microsoft Media Foundation HTTP-Bytestream die Verwendung von URL-Monikern (auch urlmon genannt).
 ms.assetid: 8B7D2FF7-D8A8-49E9-8CED-D37853B97A8F
-title: MFPKEY_HTTP_ByteStream_Enable_Urlmon-Eigenschaft (mspdl. h)
+title: MFPKEY_HTTP_ByteStream_Enable_Urlmon -Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1858f34a5f719caba1a48f049b95f2031b400240
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3ede2b9109a7345f3a0d764f6a8fa68952686c5ca05207d01bb0a2e54cea4d32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119344380"
 ---
-# <a name="mfpkey_http_bytestream_enable_urlmon-property"></a>Mfpkey \_ http \_ Bytestream \_ enable \_ URLMON (Eigenschaft)
+# <a name="mfpkey_http_bytestream_enable_urlmon-property"></a>MFPKEY \_ HTTP \_ ByteStream \_ Enable \_ Urlmon (Eigenschaft)
 
-Ermöglicht dem Microsoft Media Foundation http-Bytestream, URL-Moniker (auch *URLMON* genannt) zu verwenden.
+Ermöglicht dem Microsoft Media Foundation HTTP-Bytestream die Verwendung von URL-Monikern (auch *urlmon genannt).*
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
-**Variant \_ bool**
+**VARIANT \_ BOOL**
 
-VT \_ bool
+VT \_ BOOL
 
-**Boolesche Werte**
+**boolVal**
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Eigenschaft, um den Media Foundation http-Bytestream zu konfigurieren. Um die-Eigenschaft festzulegen, übergeben Sie einen [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) -Zeiger an den quellresolver. Weitere Informationen finden Sie unter [Konfigurieren einer Medienquelle](configuring-a-media-source.md).
+Verwenden Sie diese Eigenschaft, um Media Foundation HTTP-Bytestream zu konfigurieren. Übergeben Sie zum Festlegen der -Eigenschaft einen [**IPropertyStore-Zeiger**](/windows/win32/api/propsys/nn-propsys-ipropertystore) an den Quellre resolver. Weitere Informationen finden Sie unter [Konfigurieren einer Medienquelle.](configuring-a-media-source.md)
 
-Wenn der Wert **Variant \_ true** ist, verwendet der http-Bytestream Urlmon für den HTTP-Transport. Andernfalls verwendet der Bytestream WinHTTP, wenn der Wert **Variant \_ false** ist.
+Wenn der Wert **VARIANT \_ TRUE ist,** verwendet der HTTP-Bytestream Urlmon für den HTTP-Transport. Andernfalls verwendet der Bytestream WinHTTP, wenn der Wert **VARIANT \_ FALSE** ist.
 
-Der Standardwert ist **Variant \_ true** für Windows Store-Apps und **Variant \_ false** für Windows-Desktop Anwendung.
+Der Standardwert ist **VARIANT \_ TRUE für** Windows Store-Apps und VARIANT **\_ FALSE** für Windows Desktopanwendung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,15 +45,15 @@ Der Standardwert ist **Variant \_ true** für Windows Store-Apps und **Variant \
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Mspdl. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

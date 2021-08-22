@@ -1,23 +1,23 @@
 ---
-description: Alpha Blending einer Bitmap
+description: Alphablending einer Bitmap
 ms.assetid: 01ed3e2e-cfb3-42c9-9030-b64f9db088f1
-title: Alpha Blending einer Bitmap
+title: Alphablending einer Bitmap
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8410111477d312eab5eb94a170188400d3f4f263
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 54870ccf13ec27b982669dc43382c357a932ea9052e5855200f27825ab96eb35
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978832"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119038298"
 ---
-# <a name="alpha-blending-a-bitmap"></a>Alpha Blending einer Bitmap
+# <a name="alpha-blending-a-bitmap"></a>Alphablending einer Bitmap
 
-Im folgenden Codebeispiel wird ein Fenster in drei horizontale Bereiche unterteilt. Anschließend wird ein Alpha gemischtes Bitmap in jedem der Fensterbereiche wie folgt gezeichnet:
+Im folgenden Codebeispiel wird ein Fenster in drei horizontale Bereiche unterteilt. Anschließend zeichnet er wie folgt eine Bitmap mit Alphablending in jedem Der Fensterbereiche:
 
--   Im oberen Bereich ist Constant Alpha = 50%, aber es ist kein quellalpha vorhanden.
--   Im mittleren Bereich ist die Konstante Alpha = 100% (deaktiviert) und die Alpha Quelle 0 (transparent) in der Mitte der Bitmap und 0xFF (nicht transparent) an anderer Stelle.
--   Im unteren Bereich werden Konstante Alpha = 75% und quellalpha geändert.
+-   Im oberen Bereich beträgt die Konstante alpha =50 %, aber es gibt kein Quell alpha.
+-   Im mittleren Bereich ist das konstante Alpha = 100 % (deaktiviert) und das Quell alpha 0 (transparent) in der Mitte der Bitmap und 0xff (undurchsichtig) an anderer Stelle.
+-   Im unteren Bereich ändert sich die Konstante alpha = 75 %, und die Alphaquelle ändert sich.
 
 
 ```C++

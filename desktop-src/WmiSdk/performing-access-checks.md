@@ -1,30 +1,30 @@
 ---
-description: Eine Zugriffs Überprüfung bestimmt, ob eine Sicherheits Beschreibung einen angegebenen Satz von Zugriffsrechten für den Client oder Thread gewährt, der durch ein Zugriffs Token identifiziert wird.
+description: Eine Zugriffsüberprüfung bestimmt, ob ein Sicherheitsdeskriptor dem Client oder Thread, der durch ein Zugriffstoken identifiziert wird, einen angegebenen Satz von Zugriffsrechten gewährt.
 ms.assetid: d0259bb1-fd74-4440-ac2a-d6aa84a48d9b
 ms.tgt_platform: multiple
-title: Ausführen von Zugriffs Überprüfungen
+title: Durchführen von Zugriffsüberprüfungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b9af65605b6e96a5ad8b820de876d553f8d19202
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0e06f2bccab886b38b53ecc3592371555b8c93a0ed12cdad0a4f039b62d62752
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347700"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119050508"
 ---
-# <a name="performing-access-checks"></a>Ausführen von Zugriffs Überprüfungen
+# <a name="performing-access-checks"></a>Durchführen von Zugriffsüberprüfungen
 
-Eine Zugriffs Überprüfung bestimmt, ob eine Sicherheits Beschreibung einen angegebenen Satz von Zugriffsrechten für den Client oder Thread gewährt, der durch ein Zugriffs Token identifiziert wird. Sie können die Security-Funktion [**accescheck**](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-accesscheck) von WMI-Client Anwendungen oder-Anbietern, die in C++ oder c# geschrieben wurden, abrufen. Skripts und Visual Basic Anwendungen können mithilfe der hier beschriebenen Methode keine Zugriffs Überprüfungen durchführen.
+Eine Zugriffsüberprüfung bestimmt, ob ein Sicherheitsdeskriptor dem Client oder Thread, der durch ein Zugriffstoken identifiziert wird, einen angegebenen Satz von Zugriffsrechten gewährt. Sie können die Sicherheitsfunktion [**AccessCheck**](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-accesscheck) von WMI-Clientanwendungen oder -Anbietern aufrufen, die in C++ oder C# geschrieben sind. Skripts und Visual Basic Anwendungen können keine Zugriffsüberprüfungen mithilfe der hier beschriebenen Methode durchführen.
 
-Client Anwendungen sollten eine Zugriffs Überprüfung durchführen, um die Identität des Rückrufs zu ermitteln, wenn Ergebnisse an die Senke zurückgegeben werden, die durch den asynchronen Client aufgerufen wird.
+Clientanwendungen sollten eine Zugriffsüberprüfung durchführen, um die Identität des Rückrufs zu ermitteln, wenn Ergebnisse an die vom asynchronen Clientaufruf bereitgestellte Senke zurückgegeben werden.
 
-Wenn Anbieter die Identität der Client Anwendung oder des Skripts, das Daten anfordert, nicht annehmen können, sollten Sie in den folgenden Situationen Zugriffs Überprüfungen durchführen:
+Wenn Anbieter die Identität der Clientanwendung oder des Skripts, die Bzw. das Daten anfordert, nicht annehmen können, sollten sie Zugriffsüberprüfungen für die folgenden Situationen durchführen:
 
--   Beim Zugriff auf Ressourcen, die nicht durch Zugriffs Steuerungs Listen (Access Control Lists, ACL) geschützt sind.
--   Wenn der Client eine Verbindung mit der RPC-C-Ebene hergestellt hat, **\_ \_ \_ identifizieren** Sie die Identitätswechsel Ebene.
+-   Beim Zugriff auf Ressourcen, die nicht durch Zugriffssteuerungslisten (Access Control Lists, ACL) geschützt sind.
+-   Wenn der Client eine Verbindung auf **\_ RPC-C-EBENE hergestellt \_ \_ hat, identifizieren Sie** den Identitätswechsel.
 
 > [!Note]  
-> C++-und c#-Anwendungen können steuern, ob Zugriffs Überprüfungen von einem separaten Prozess ausgeführt werden. Skripts und Visual Basic Anwendungen können einen Registrierungsschlüssel lesen oder ändern, um sicherzustellen, dass WMI Zugriffs Überprüfungen ausführt. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen](setting-security-on-an-asynchronous-call.md)-Befehl.
+> C++- und C#-Anwendungen können steuern, ob Zugriffsüberprüfungen von einem separaten Prozess ausgeführt werden. Skripts und Visual Basic Anwendungen können einen Registrierungsschlüssel lesen oder ändern, um sicherzustellen, dass WMI Zugriffsüberprüfungen durchführt. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen Aufruf.](setting-security-on-an-asynchronous-call.md)
 
  
 
@@ -44,7 +44,7 @@ Das Codebeispiel in diesem Thema erfordert die folgenden Verweise und \# include
 
 
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie überprüfen, ob das Sicherheits Token eines Client Anwendungs Threads Berechtigungen enthält, die für eine angegebene Sicherheits Beschreibung geeignet sind. Die Funktion übernimmt die Zeichenfolge "Domain \\ User" und gibt die SID zurück. Wenn der Aufruf fehlschlägt, gibt die Funktion **null** zurück, andernfalls muss der Aufrufer den zurückgegebenen Zeiger freigeben.
+Das folgende Codebeispiel zeigt, wie Sie überprüfen, ob das Sicherheitstoken eines Clientanwendungsthreads Berechtigungen enthält, die für einen angegebenen Sicherheitsdeskriptor geeignet sind. Die Funktion verwendet die Zeichenfolge \\ "Domänenbenutzer" und gibt die SID zurück. Wenn der Aufruf fehlschlägt, gibt die Funktion **NULL** zurück, andernfalls muss der Aufrufer den zurückgegebenen Zeiger freigeben.
 
 
 ```C++
@@ -210,7 +210,7 @@ BOOL IsAllowed(LPWSTR pwsExpectedDomain,
 [Verwalten der WMI-Sicherheit](maintaining-wmi-security.md)
 </dt> <dt>
 
-[Sichern Ihres Anbieters](securing-your-provider.md)
+[Schützen Ihres Anbieters](securing-your-provider.md)
 </dt> <dt>
 
 [Zugriff auf WMI-Namespaces](access-to-wmi-namespaces.md)

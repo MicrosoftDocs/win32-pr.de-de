@@ -1,54 +1,54 @@
 ---
-title: Vordefinierte mittlere und Basis Typen
-description: In der Mitte werden die folgenden Basis-und vordefinierten Typen unterstützt.
+title: Vordefinierte MIDL- und Basistypen
+description: MIDL unterstützt die folgenden Basistypen und vordefinierten Typen.
 ms.assetid: 72da24b6-253d-4032-ba0c-58b2542701fc
 keywords:
-- Datentypen mittlerer l, vordefiniert und Basis
+- Datentypen MIDL, vordefiniert und Basis
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c1afaa479969d65f162a9d57935aa7fbc539701
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a6ecbc76b3f680f0fffbabcff38e8562475e26be8ae4ac583a78c614d1651151
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067080"
 ---
-# <a name="midl-predefined-and-base-types"></a>Vordefinierte mittlere und Basis Typen
+# <a name="midl-predefined-and-base-types"></a>Vordefinierte MIDL- und Basistypen
 
-In der Mitte werden die folgenden Basis-und vordefinierten Typen unterstützt.
+MIDL unterstützt die folgenden Basistypen und vordefinierten Typen.
 
 
 
-| Datentyp                                  | BESCHREIBUNG                                                                                                                                                                                             | Standard Zeichen     |
+| Datentyp                                  | Beschreibung                                                                                                                                                                                             | Standardzeichen     |
 |--------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
-| [**boolean**](boolean.md)                 | 8 Bits. Nicht kompatibel mit [**oleautomation**](oleautomation.md) -Schnittstellen. Verwenden Sie \_ stattdessen Variant bool.                                                                                               | Ohne Vorzeichen         |
-| [**Hobby**](byte.md)                       | 8 Bits.                                                                                                                                                                                                 | (–) |
+| [**Boolean**](boolean.md)                 | 8 Bits. Nicht kompatibel mit [**oleautomation-Schnittstellen;**](oleautomation.md) verwenden Sie stattdessen VARIANT \_ BOOL.                                                                                               | Ohne Vorzeichen         |
+| [**Byte**](byte.md)                       | 8 Bits.                                                                                                                                                                                                 | (–) |
 | [**Char**](char-idl.md)                   | 8 Bits.                                                                                                                                                                                                 | Ohne Vorzeichen         |
-| [**Maß**](double.md)                   | 64-Bit-Gleit Komma Zahl.                                                                                                                                                                           | (–) |
-| [**Fehler \_ Status \_ t**](error-status-t.md) | 32-Bit-Ganzzahl ohne Vorzeichen zum Zurückgeben von Status Werten für die Fehlerbehandlung.                                                                                                                                 | Ohne Vorzeichen         |
-| [**Hafen**](float.md)                     | 32-Bit-Gleit Komma Zahl.                                                                                                                                                                           | (–) |
-| [**Handle \_ t**](handle-t.md)              | Primitiver Handle-Typ für die Bindung.                                                                                                                                                                      | (–) |
+| [**Doppel**](double.md)                   | 64-Bit-Gleitkommazahl.                                                                                                                                                                           | (–) |
+| [**Fehlerstatus \_ \_ t**](error-status-t.md) | 32-Bit-Ganzzahl ohne Vorzeichen zum Zurückgeben von Statuswerten für die Fehlerbehandlung.                                                                                                                                 | Ohne Vorzeichen         |
+| [**schweben**](float.md)                     | 32-Bit-Gleitkommazahl.                                                                                                                                                                           | (–) |
+| [**handle \_ t**](handle-t.md)              | Primitiver Handletyp für die Bindung.                                                                                                                                                                      | (–) |
 | [**Hyper**](hyper.md)                     | 64-Bit-Ganzzahl.                                                                                                                                                                                         | Signiert           |
-| [**INT**](int.md)                         | 32-Bit-Ganzzahl. Auf 16-Bit-Plattformen kann nicht in Remote Funktionen ohne einen Größen Qualifizierer wie [**Short**](short.md), [**Small**](small.md), [**Long**](long.md) oder [**Hyper**](hyper.md)angezeigt werden. | Signiert           |
-| **\_\_int8**                               | 8-Bit-Ganzzahl. Äquivalent zu **klein**.                                                                                                                                                                 | Signiert           |
-| **\_\_Int16**                              | 16-Bit-Ganzzahl. Äquivalent zu **Short**.                                                                                                                                                                | Signiert           |
-| **\_\_Int32**                              | 32-Bit-Ganzzahl. Äquivalent zu [**Long**](long.md).                                                                                                                                                     | Signiert           |
-| [**\_\_int3264**](--int3264.md)           | Eine ganze Zahl, die auf 32-Bit-Plattformen 32-Bit ist und 64 Bit auf 64-Bit-Plattformen ist.                                                                                                                       | Signiert           |
-| [**\_\_Int64**](--int64.md)               | 64-Bit-Ganzzahl. Äquivalent zu [**Hyper**](hyper.md).                                                                                                                                                   | Signiert           |
-| [**lange**](long.md)                       | 32-Bit-Ganzzahl.                                                                                                                                                                                         | Signiert           |
-| [**short**](short.md)                     | 16-BT-Ganzzahl.                                                                                                                                                                                          | Signiert           |
-| [**zuletzt**](small.md)                     | 8-Bit-Ganzzahl.                                                                                                                                                                                          | Signiert           |
+| [**INT**](int.md)                         | 32-Bit-Ganzzahl. Auf 16-Bit-Plattformen kann nicht in Remotefunktionen ohne einen Größenqualifizierer wie [**short,**](short.md) [**small,**](small.md) [**long oder**](long.md) [**hyper angezeigt werden.**](hyper.md) | Signiert           |
+| **\_\_int8**                               | 8-Bit-Ganzzahl. Äquivalent zu **kleinem**.                                                                                                                                                                 | Signiert           |
+| **\_\_int16**                              | 16-Bit-Ganzzahl. Entspricht dem **kurzen**.                                                                                                                                                                | Signiert           |
+| **\_\_int32**                              | 32-Bit-Ganzzahl. Entspricht [**long**](long.md).                                                                                                                                                     | Signiert           |
+| [**\_\_int3264**](--int3264.md)           | Eine ganze Zahl, die auf 32-Bit-Plattformen 32-Bit ist und auf 64-Bit-Plattformen 64-Bit ist.                                                                                                                       | Signiert           |
+| [**\_\_int64**](--int64.md)               | 64-Bit-Ganzzahl. Entspricht [**Hyper**](hyper.md).                                                                                                                                                   | Signiert           |
+| [**long**](long.md)                       | 32-Bit-Ganzzahl.                                                                                                                                                                                         | Signiert           |
+| [**short**](short.md)                     | 16-Bt-Ganzzahl.                                                                                                                                                                                          | Signiert           |
+| [**klein**](small.md)                     | 8-Bit-Ganzzahl.                                                                                                                                                                                          | Signiert           |
 | [**void**](void.md)                       | Gibt an, dass die Prozedur keinen Wert zurückgibt.                                                                                                                                                   | (–) |
-| **Blutung \***                                | 32-Bit-Zeiger nur für Kontext Handles.                                                                                                                                                                | (–) |
-| [**WCHAR \_ t**](wchar-t.md)                | vordefinierter 16-Bit-Typ für breit Zeichen.                                                                                                                                                             | Ohne Vorzeichen         |
+| **Leere \***                                | 32-Bit-Zeiger nur für Kontexthandles.                                                                                                                                                                | (–) |
+| [**wchar \_ t**](wchar-t.md)                | Vordefinierter 16-Bit-Typ für Breitzeichen.                                                                                                                                                             | Ohne Vorzeichen         |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

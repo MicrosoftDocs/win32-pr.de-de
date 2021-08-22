@@ -1,7 +1,7 @@
 ---
 description: Lädt ein Volume aus einer Datei.
 ms.assetid: ea0fc588-094e-4488-bd82-54507ee0fc91
-title: D3DXLoadVolumeFromFile-Funktion (D3dx9tex. h)
+title: D3DXLoadVolumeFromFile-Funktion (D3dx9tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: ff427c58b62d99c2c4716081aab82bd94f146edd
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4b83a7e1e4dddfb4222c5d37a417500332f6c0d3cecf366729188b4dd040f459
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106351920"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119495240"
 ---
 # <a name="d3dxloadvolumefromfile-function"></a>D3DXLoadVolumeFromFile-Funktion
 
@@ -47,75 +47,75 @@ HRESULT D3DXLoadVolumeFromFile(
 
 <dl> <dt>
 
-*pdestvolume* \[ in\]
+*pDestVolume* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DVOLUME9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dvolume9)**
 
-Zeiger auf eine [**IDirect3DVolume9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dvolume9) -Schnittstelle. Gibt das Ziel Volume an.
+Zeiger auf eine [**IDirect3DVolume9-Schnittstelle.**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dvolume9) Gibt das Zielvolumen an.
 
 </dd> <dt>
 
-*pdestpalette* \[ in\]
+*pDestPalette* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) \***
+Typ: **const [**PALETTEENTRY**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) \***
 
-Zeiger auf eine [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) -Struktur, die Ziel Palette von 256 Farben oder **null**.
+Zeiger auf eine [**PALETTEENTRY-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) die Zielpalette mit 256 Farben oder **NULL.**
 
 </dd> <dt>
 
-*pdestbox* \[ in\]
+*pDestBox* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DBOX**](d3dbox.md) \***
+Typ: **const [**D3DBOX**](d3dbox.md) \***
 
-Zeiger auf eine [**D3DBOX**](d3dbox.md) -Struktur. Gibt das Zielfeld an. Legen Sie diesen Parameter auf **null** fest, um das gesamte Volume anzugeben.
+Zeiger auf eine [**D3DBOX-Struktur.**](d3dbox.md) Gibt das Zielfeld an. Legen Sie diesen Parameter auf **NULL fest,** um das gesamte Volume anzugeben.
 
 </dd> <dt>
 
-*psrcfile* \[ in\]
+*pSrcFile* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCTSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf eine Zeichenfolge, die den Dateinamen angibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der String-Datentyp in LPCSTR aufgelöst. Siehe Hinweise.
+Zeiger auf eine Zeichenfolge, die den Dateinamen angibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR auflösen. Andernfalls wird der Zeichenfolgendatentyp in LPCSTR auflösen. Siehe Hinweise.
 
 </dd> <dt>
 
-*psrcbox* \[ in\]
+*pSrcBox* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DBOX**](d3dbox.md) \***
+Typ: **const [**D3DBOX**](d3dbox.md) \***
 
-Zeiger auf eine [**D3DBOX**](d3dbox.md) -Struktur. Gibt das Quellfeld an. Legen Sie diesen Parameter auf **null** fest, um das gesamte Volume anzugeben.
+Zeiger auf eine [**D3DBOX-Struktur.**](d3dbox.md) Gibt das Quellfeld an. Legen Sie diesen Parameter auf **NULL fest,** um das gesamte Volume anzugeben.
 
 </dd> <dt>
 
-*Filter* \[ in\]
+*Filter* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Kombination aus einem oder mehreren [D3DX- \_ Filtern](d3dx-filter.md), um die Filterung des Bilds zu steuern. Die Angabe \_ von D3DX default für diesen Parameter entspricht der Angabe von D3DX \_ Filter \_ Dreieck \| D3DX \_ Filter \_ Dither.
+Kombination aus mindestens einem [D3DX-FILTER, \_ ](d3dx-filter.md)der steuert, wie das Bild gefiltert wird. Die Angabe von D3DX DEFAULT für diesen Parameter entspricht der Angabe von \_ D3DX \_ FILTER \_ TRIANGLE \| D3DX \_ FILTER \_ DITHER.
 
 </dd> <dt>
 
-*Colorkey* \[ in\]
+*ColorKey* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DCOLOR**](d3dcolor.md)**
 
-[**D3DCOLOR**](d3dcolor.md) -Wert, der durch transparente schwarze ersetzt werden soll, oder 0, um den Colorkey zu deaktivieren. Dabei handelt es sich immer um eine 32-Bit-ARGB-Farbe, die unabhängig vom Quell Bildformat ist. Alpha ist signifikant und sollte normalerweise für nicht transparente Farbtasten auf FF festgelegt werden. Daher wäre der Wert für den Wert "0xFF000000" gleich.
+[**D3DCOLOR-Wert,**](d3dcolor.md) der durch transparentes Schwarz ersetzt werden soll, oder 0, um den Colorkey zu deaktivieren. Dies ist immer eine 32-Bit-ARGB-Farbe, unabhängig vom Quellbildformat. Alpha ist wichtig und sollte für nicht transparente Farbtasten in der Regel auf FF festgelegt werden. Für nicht transparentes Schwarz wäre der Wert also gleich 0xFF000000.
 
 </dd> <dt>
 
-*psrcinfo* \[ in\]
+*pSrcInfo* \[ In\]
 </dt> <dd>
 
-Type: **[ **D3DXIMAGE \_ Info**](d3dximage-info.md)\***
+Typ: **[ **D3DXIMAGE \_ INFO**](d3dximage-info.md)\***
 
-Ein Zeiger auf eine [**D3DXIMAGE \_ Info**](d3dximage-info.md) -Struktur, die mit einer Beschreibung der Daten in der Quell Bilddatei gefüllt werden soll, oder **null**.
+Zeiger auf eine [**D3DXIMAGE \_ INFO-Struktur,**](d3dximage-info.md) die mit einer Beschreibung der Daten in der Quellbilddatei gefüllt werden soll, oder **NULL.**
 
 </dd> </dl>
 
@@ -123,15 +123,15 @@ Ein Zeiger auf eine [**D3DXIMAGE \_ Info**](d3dximage-info.md) -Struktur, die mi
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt auch die Funktions Version. Wenn Unicode definiert ist, wird der Funktions aufrufin D3DXLoadVolumeFromFileW aufgelöst. Andernfalls wird der Funktions Aufruhe in D3DXLoadVolumeFromFileA aufgelöst, da ANSI-Zeichen folgen verwendet werden.
+Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in D3DXLoadVolumeFromFileW auflösen. Andernfalls wird der Funktionsaufruf in D3DXLoadVolumeFromFileA auflösen, da ANSI-Zeichenfolgen verwendet werden.
 
-Diese Funktion verarbeitet die Konvertierung in und aus komprimierten Textur Formaten und unterstützt die folgenden Dateiformate: BMP,. DDS,. DIB,. HDR,. jpg,. PFM,. png,. ppm und. TGA. Siehe [**D3DXIMAGE \_ FileFormat**](./d3dximage-fileformat.md).
+Diese Funktion verarbeitet die Konvertierung in und aus komprimierten Texturformaten und unterstützt die folgenden Dateiformate: .bmp, .dds, .dib, .hdr, .jpg, .pfm, .png, .ppm und .tga. Siehe [**D3DXIMAGE \_ FILEFORMAT**](./d3dximage-fileformat.md).
 
-Das Schreiben auf eine Oberfläche ohne Ebene der volumetextur bewirkt nicht, dass das geänderte Rechteck aktualisiert wird. Wenn **D3DXLoadVolumeFromFile** aufgerufen wird und die Textur nicht bereits geändert wurde (Dies ist unwahrscheinlich in normalen Verwendungs Szenarien), muss die Anwendung [**IDirect3DVolumeTexture9:: adddirtybox**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dvolumetexture9-adddirtybox) explizit auf der volumetextur aufrufen.
+Das Schreiben auf eine Nichtebenenoberfläche der Volumetextur verursacht keine Aktualisierung des geänderten Rechtecks. Wenn **D3DXLoadVolumeFromFile** aufgerufen wird und die Textur noch nicht angepasst wurde (dies ist in normalen Verwendungsszenarien unwahrscheinlich), muss die Anwendung [**explizit IDirect3DVolumeTexture9::AddDirtyBox**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dvolumetexture9-adddirtybox) in der Volumetextur aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -139,8 +139,8 @@ Das Schreiben auf eine Oberfläche ohne Ebene der volumetextur bewirkt nicht, da
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
@@ -160,7 +160,7 @@ Das Schreiben auf eine Oberfläche ohne Ebene der volumetextur bewirkt nicht, da
 [**D3DXLoadVolumeFromVolume**](d3dxloadvolumefromvolume.md)
 </dt> <dt>
 
-[Textur Funktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
+[Texturfunktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
 </dt> </dl>
 
  

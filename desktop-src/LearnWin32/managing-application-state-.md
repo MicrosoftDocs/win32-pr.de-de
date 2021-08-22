@@ -1,34 +1,34 @@
 ---
 title: Managing Application State (Verwalten eines Anwendungszustands)
-description: Eine Fenster Prozedur ist nur eine Funktion, die für jede Nachricht aufgerufen wird, sodass Sie grundsätzlich zustandslos ist. Daher benötigen Sie eine Möglichkeit, den Status der Anwendung von einem Funktions Aufrufder nächsten zu verfolgen.
+description: Eine Fensterprozedur ist nur eine Funktion, die für jede Nachricht aufgerufen wird, sodass sie grundsätzlich zustandslos ist. Daher benötigen Sie eine Möglichkeit, den Zustand Ihrer Anwendung von einem Funktionsaufruf zum nächsten nachzuverfolgen.
 ms.assetid: 2f03961e-a886-4947-8f5d-62543c6b8815
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e275833c30c612b5b40ab29d089d07ed7794b429
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 6b0cde27195ba0dfc16668da11beac243821902995a9d01daa337f8962944343
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119068064"
 ---
 # <a name="managing-application-state"></a>Managing Application State (Verwalten eines Anwendungszustands)
 
-Eine Fenster Prozedur ist nur eine Funktion, die für jede Nachricht aufgerufen wird, sodass Sie grundsätzlich zustandslos ist. Daher benötigen Sie eine Möglichkeit, den Status der Anwendung von einem Funktions Aufrufder nächsten zu verfolgen.
+Eine Fensterprozedur ist nur eine Funktion, die für jede Nachricht aufgerufen wird, sodass sie grundsätzlich zustandslos ist. Daher benötigen Sie eine Möglichkeit, den Zustand Ihrer Anwendung von einem Funktionsaufruf zum nächsten nachzuverfolgen.
 
-Der einfachste Ansatz besteht darin, alles in globalen Variablen zu platzieren. Dies funktioniert gut für kleine Programme, und viele der SDK-Beispiele verwenden diesen Ansatz. In einem großen Programm führt dies jedoch zu einer Zunahme von globalen Variablen. Außerdem verfügen Sie möglicherweise über mehrere Fenster, die jeweils über eine eigene Fenster Prozedur verfügen. Es wird nachverfolgt, welches Fenster auf welche Variablen verwirrend und fehleranfällig wird.
+Der einfachste Ansatz besteht darin, alles einfach in globale Variablen zu setzen. Dies funktioniert gut genug für kleine Programme, und viele der SDK-Beispiele verwenden diesen Ansatz. In einem großen Programm führt dies jedoch zu einer Verbreitung globaler Variablen. Außerdem verfügen Sie möglicherweise über mehrere Fenster, von denen jedes über eine eigene Fensterprozedur verfügt. Nachverfolgen, welches Fenster auf welche Variablen zugreifen soll, wird verwirrend und fehleranfällig.
 
-Die Funktion "up- [**windowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " bietet eine Möglichkeit, eine beliebige Datenstruktur an ein Fenster zu übergeben. Wenn diese Funktion aufgerufen wird, sendet Sie die folgenden zwei Nachrichten an die Fenster Prozedur:
+Die [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) bietet eine Möglichkeit, jede Datenstruktur an ein Fenster zu übergeben. Wenn diese Funktion aufgerufen wird, sendet sie die folgenden beiden Nachrichten an Ihre Fensterprozedur:
 
-- [**WM- \_ nccreate**](/windows/desktop/winmsg/wm-nccreate)
-- [**WM \_ Erstellen**](/windows/desktop/winmsg/wm-create)
+- [**WM \_ NCCREATE**](/windows/desktop/winmsg/wm-nccreate)
+- [**WM \_ CREATE**](/windows/desktop/winmsg/wm-create)
 
-Diese Nachrichten werden in der aufgeführten Reihenfolge gesendet. (Hierbei handelt es sich nicht um die beiden nach [**richten, die**](/windows/desktop/api/winuser/nf-winuser-createwindowexa)während der Funktion "" von "" in "" von "" von "" in "" von ""
+Diese Nachrichten werden in der aufgeführten Reihenfolge gesendet. (Dies sind nicht die einzigen beiden Nachrichten, die während [**von CreateWindowEx**](/windows/desktop/api/winuser/nf-winuser-createwindowexa)gesendet werden, aber wir können die anderen für diese Diskussion ignorieren.)
 
-Die Meldung " [**WM \_ nccreate**](/windows/desktop/winmsg/wm-nccreate) " und " [**WM \_ Create**](/windows/desktop/winmsg/wm-create) " werden gesendet, bevor das Fenster sichtbar wird. Dadurch sind Sie ein guter Ausgangspunkt, um die Benutzeroberfläche zu initialisieren – beispielsweise, um das anfängliche Layout des Fensters zu bestimmen.
+Die [**WM \_ NCCREATE-**](/windows/desktop/winmsg/wm-nccreate) und [**WM \_ CREATE-Nachricht**](/windows/desktop/winmsg/wm-create) wird gesendet, bevor das Fenster sichtbar wird. Dies macht sie zu einem guten Ort zum Initialisieren Ihrer Benutzeroberfläche, z. B. zum Bestimmen des anfänglichen Layouts des Fensters.
 
-Der letzte Parameter von " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " ist ein Zeiger vom Typ " **void \***". Sie können jeden gewünschten Zeiger Wert in diesem Parameter übergeben. Wenn die Fenster Prozedur die " [**WM \_ nccreate**](/windows/desktop/winmsg/wm-nccreate) "-oder " [**WM \_ Create**](/windows/desktop/winmsg/wm-create) "-Meldung verarbeitet, kann Sie diesen Wert aus den Nachrichten Daten extrahieren.
+Der letzte Parameter von [**CreateWindowEx**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) ist ein Zeiger vom Typ **void \** _. Sie können einen beliebigen Zeigerwert in diesem Parameter übergeben. Wenn die Fensterprozedur die Meldung [_ *WM \_ NCCREATE* *](/windows/desktop/winmsg/wm-nccreate) oder [**WM \_ CREATE**](/windows/desktop/winmsg/wm-create) verarbeitet, kann sie diesen Wert aus den Nachrichtendaten extrahieren.
 
-Sehen wir uns nun an, wie Sie diesen Parameter verwenden, um Anwendungsdaten an Ihr Fenster zu übergeben. Definieren Sie zunächst eine Klasse oder Struktur, die Zustandsinformationen enthält.
+Sehen wir uns an, wie Sie diesen Parameter verwenden, um Anwendungsdaten an Ihr Fenster zu übergeben. Definieren Sie zunächst eine Klasse oder Struktur, die Zustandsinformationen enthält.
 
 ```C++
 // Define a structure to hold some state information.
@@ -38,7 +38,7 @@ struct StateInfo {
 };
 ```
 
-Wenn Sie " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa)" aufrufen, übergeben Sie einen Zeiger auf diese-Struktur im endgültigen **void \*** -Parameter.
+Wenn Sie [**CreateWindowEx**](/windows/desktop/api/winuser/nf-winuser-createwindowexa)aufrufen, übergeben Sie einen Zeiger auf diese Struktur im letzten **\* void-Parameter.**
 
 ```C++
 StateInfo *pState = new (std::nothrow) StateInfo;
@@ -66,36 +66,36 @@ HWND hwnd = CreateWindowEx(
     );
 ```
 
-Wenn Sie die Nachrichten " [**WM \_ nccreate**](/windows/desktop/winmsg/wm-nccreate) " und " [**WM \_ Create**](/windows/desktop/winmsg/wm-create) " erhalten, ist der *LPARAM* -Parameter jeder [**Nachricht ein Zeiger auf eine Struktur vom**](/windows/win32/api/winuser/ns-winuser-createstructa) Typ "Struktur". Die Struktur " **foratestruct** " wiederum enthält den Zeiger, den Sie an " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa)" übergeben haben.
+Wenn Sie die [**WM \_ NCCREATE-**](/windows/desktop/winmsg/wm-nccreate) und [**WM \_ CREATE-Nachrichten**](/windows/desktop/winmsg/wm-create) erhalten, ist der *lParam-Parameter* jeder Nachricht ein Zeiger auf eine [**CREATESTRUCT-Struktur.**](/windows/win32/api/winuser/ns-winuser-createstructa) Die **CREATESTRUCT-Struktur** enthält wiederum den Zeiger, den Sie an [**CreateWindowEx**](/windows/desktop/api/winuser/nf-winuser-createwindowexa)übergeben haben.
 
-![Diagramm, das das Layout der Struktur "Struktur erstellen" anzeigt](images/appstate01.png)
+![Diagramm, das das Layout der Struktur "create" zeigt](images/appstate01.png)
 
-Im folgenden wird erläutert, wie Sie den Zeiger auf die Datenstruktur extrahieren. Holen Sie zuerst die Struktur " [**foratestruct**](/windows/win32/api/winuser/ns-winuser-createstructa) " durch Umwandeln des *LPARAM* -Parameters.
+So extrahieren Sie den Zeiger auf Ihre Datenstruktur. Zunächst erhalten Sie die [**CREATESTRUCT-Struktur,**](/windows/win32/api/winuser/ns-winuser-createstructa) indem Sie den *lParam-Parameter* umwandeln.
 
 ```C++
 CREATESTRUCT *pCreate = reinterpret_cast<CREATESTRUCT*>(lParam);
 ```
 
-Der Member **lpkreateparameams** der Struktur " [**kreatestruct**](/windows/win32/api/winuser/ns-winuser-createstructa) " ist der ursprüngliche void-Zeiger, den Sie in " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa)" angegeben haben. Sie erhalten einen Zeiger auf Ihre eigene Datenstruktur durch Umwandeln von **lpkreateparametriams**.
+Der **lpCreateParams-Member** der [**CREATESTRUCT-Struktur**](/windows/win32/api/winuser/ns-winuser-createstructa) ist der ursprüngliche void-Zeiger, den Sie in [**CreateWindowEx**](/windows/desktop/api/winuser/nf-winuser-createwindowexa)angegeben haben. Erhalten Sie einen Zeiger auf Ihre eigene Datenstruktur, indem Sie **lpCreateParams** umwandeln.
 
 ```C++
 pState = reinterpret_cast<StateInfo*>(pCreate->lpCreateParams);
 ```
 
-Aufrufen Sie als nächstes die Funktion [**setwindowlongptr**](/windows/desktop/api/winuser/nf-winuser-setwindowlongptra) , und übergeben Sie den Zeiger auf die Datenstruktur.
+Rufen Sie als Nächstes die [**SetWindowLongPtr-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlongptra) auf, und übergeben Sie den Zeiger auf Ihre Datenstruktur.
 
 ```C++
 SetWindowLongPtr(hwnd, GWLP_USERDATA, (LONG_PTR)pState);
 ```
 
-Der Zweck dieses letzten Funktions Aufrufes ist, den *StatusInfo* -Zeiger in den Instanzdaten für das Fenster zu speichern. Nachdem Sie dies getan haben, können Sie den Zeiger immer wieder aus dem Fenster abrufen, indem Sie [**getwindowlongptr**](/windows/desktop/api/winuser/nf-winuser-getwindowlongptra)aufrufen:
+Der Zweck dieses letzten Funktionsaufrufs besteht darin, den *StateInfo-Zeiger* in den Instanzdaten für das Fenster zu speichern. Sobald Sie dies tun, können Sie den Zeiger immer aus dem Fenster abrufen, indem [**Sie GetWindowLongPtr**](/windows/desktop/api/winuser/nf-winuser-getwindowlongptra)aufrufen:
 
 ```C++
 LONG_PTR ptr = GetWindowLongPtr(hwnd, GWLP_USERDATA);
 StateInfo *pState = reinterpret_cast<StateInfo*>(ptr);
 ```
 
-Jedes Fenster verfügt über eigene Instanzdaten, sodass Sie mehrere Fenster erstellen und jedem Fenster eine eigene Instanz der Datenstruktur zuordnen können. Diese Vorgehensweise ist besonders nützlich, wenn Sie eine Klasse von Fenstern definieren und mehr als ein Fenster dieser Klasse erstellen, z. –. Wenn Sie eine benutzerdefinierte Steuerelement Klasse erstellen. Es ist praktisch, den [**getwindowlongptr**](/windows/desktop/api/winuser/nf-winuser-getwindowlongptra) -aufrufin eine kleine Hilfsfunktion einzubinden.
+Jedes Fenster verfügt über eigene Instanzdaten, sodass Sie mehrere Fenster erstellen und jedem Fenster eine eigene Instanz der Datenstruktur geben können. Dieser Ansatz ist besonders nützlich, wenn Sie eine Klasse von Fenstern definieren und mehr als ein Fenster dieser Klasse erstellen, z. B. wenn Sie eine benutzerdefinierte Steuerelementklasse erstellen. Es ist praktisch, den [**GetWindowLongPtr-Aufruf**](/windows/desktop/api/winuser/nf-winuser-getwindowlongptra) in einer kleinen Hilfsfunktion zu umschließen.
 
 ```C++
 inline StateInfo* GetAppState(HWND hwnd)
@@ -106,7 +106,7 @@ inline StateInfo* GetAppState(HWND hwnd)
 }
 ```
 
-Nun können Sie die Fenster Prozedur wie folgt schreiben.
+Nun können Sie die Fensterprozedur wie folgt schreiben.
 
 ```C++
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -134,11 +134,11 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 }
 ```
 
-## <a name="an-object-oriented-approach"></a>Ein Object-Oriented Ansatz
+## <a name="an-object-oriented-approach"></a>Ein Object-Oriented-Ansatz
 
-Dieser Ansatz kann weiter erweitert werden. Wir haben bereits eine Datenstruktur zum Speichern von Zustandsinformationen über das Fenster definiert. Es ist sinnvoll, diese Datenstruktur mit Element Funktionen (Methoden) bereitzustellen, die mit den Daten arbeiten. Dies führt natürlich zu einem Entwurf, bei dem die Struktur (oder Klasse) für alle Vorgänge im Fenster verantwortlich ist. Die Fenster Prozedur würde dann Teil der Klasse werden.
+Wir können diesen Ansatz weiter ausweiten. Wir haben bereits eine Datenstruktur definiert, die Zustandsinformationen zum Fenster enthalten soll. Es ist sinnvoll, diese Datenstruktur mit Memberfunktionen (Methoden) bereitzustellen, die mit den Daten arbeiten. Dies führt natürlich zu einem Entwurf, bei dem die Struktur (oder Klasse) für alle Vorgänge im Fenster verantwortlich ist. Die Fensterprozedur würde dann Teil der -Klasse werden.
 
-Das heißt, wir möchten Folgendes tun:
+Das heißt, wir möchten von diesem Beispiel aus gehen:
 
 ```C++
 // pseudocode
@@ -184,7 +184,7 @@ LRESULT MyWindow::WindowProc(UINT uMsg, WPARAM wParam, LPARAM lParam)
 }
 ```
 
-Das einzige Problem besteht darin, wie die- `MyWindow::WindowProc` Methode eingebunden wird. Die [**registerClass**](/windows/desktop/api/winuser/nf-winuser-registerclassa) -Funktion erwartet, dass die Fenster Prozedur ein Funktionszeiger ist. Sie können in diesem Kontext keinen Zeiger an eine (nicht statische) Member-Funktion übergeben. Sie können jedoch einen Zeiger an eine *statische* Member-Funktion übergeben und dann an die Member-Funktion delegieren. Im folgenden finden Sie eine Klassen Vorlage, die diese Vorgehensweise veranschaulicht:
+Das einzige Problem besteht darin, die -Methode zu `MyWindow::WindowProc` verknüpfen. Die [**RegisterClass-Funktion**](/windows/desktop/api/winuser/nf-winuser-registerclassa) erwartet, dass die Fensterprozedur ein Funktionszeiger ist. Sie können in diesem Kontext keinen Zeiger auf eine (nicht statische) Memberfunktion übergeben. Sie können jedoch einen Zeiger auf eine *statische* Memberfunktion übergeben und dann an die Memberfunktion delegieren. Im Folgenden finden Sie eine Klassenvorlage, die diesen Ansatz veranschaulicht:
 
 ```C++
 template <class DERIVED_TYPE> 
@@ -258,7 +258,7 @@ protected:
 };
 ```
 
-Bei der- `BaseWindow` Klasse handelt es sich um eine abstrakte Basisklasse, von der bestimmte Fenster Klassen abgeleitet werden. Hier ist z. b. die Deklaration einer einfachen, von abgeleiteten Klasse `BaseWindow` :
+Die `BaseWindow` -Klasse ist eine abstrakte Basisklasse, von der bestimmte Fensterklassen abgeleitet werden. Hier ist beispielsweise die Deklaration einer einfachen Klasse, die von abgeleitet `BaseWindow` wurde:
 
 ```C++
 class MainWindow : public BaseWindow<MainWindow>
@@ -269,7 +269,7 @@ public:
 };
 ```
 
-Rufen Sie zum Erstellen des Fensters Folgendes auf `BaseWindow::Create` :
+Rufen Sie auf, um das Fenster zu `BaseWindow::Create` erstellen:
 
 ```C++
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR pCmdLine, int nCmdShow)
@@ -296,7 +296,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR pCmdLine, int nCmdShow
 }
 ```
 
-Die pure-Virtual- `BaseWindow::HandleMessage` Methode wird verwendet, um die Fenster Prozedur zu implementieren. Beispielsweise entspricht die folgende Implementierung der Fenster Prozedur, die am Anfang von [Modul 1](your-first-windows-program.md)angezeigt wird.
+Die rein virtuelle `BaseWindow::HandleMessage` Methode wird verwendet, um die Fensterprozedur zu implementieren. Die folgende Implementierung entspricht beispielsweise der Fensterprozedur, die am Anfang von [Modul 1](your-first-windows-program.md)gezeigt wird.
 
 ```C++
 LRESULT MainWindow::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -323,14 +323,14 @@ LRESULT MainWindow::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
 }
 ```
 
-Beachten Sie, dass das Fenster Handle in einer Element Variablen (*m \_ HWND*) gespeichert ist, daher muss es nicht als Parameter an übergeben werden `HandleMessage` .
+Beachten Sie, dass das Fensterhandle in einer Membervariablen *(m \_ hwnd)* gespeichert ist, sodass wir es nicht als Parameter an übergeben `HandleMessage` müssen.
 
-Viele der vorhandenen Windows-Programmier Frameworks, wie z. b. Microsoft Foundation Classes (MFC) und Active Template Library (ATL), verwenden Ansätze, die im Grunde der hier gezeigten ähneln. Natürlich ist ein vollständig generalisiertes Framework, wie z. b. MFC, komplexer als dieses relativ vereinfachte Beispiel.
+Viele der vorhandenen Windows Programmierframeworks, z. B. Microsoft Foundation Classes (MFC) und Active Template Library (ATL), verwenden Ansätze, die im Grunde dem hier gezeigten ähneln. Natürlich ist ein vollständig generalisiertes Framework wie MFC komplexer als dieses relativ einfache Beispiel.
 
 ## <a name="next"></a>Nächste
 
-[Modul 2: Verwenden von com in Ihrem Windows-Programm](module-2--using-com-in-your-windows-program.md)
+[Modul 2: Verwenden von COM in Ihrem Windows-Programm](module-2--using-com-in-your-windows-program.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Basewindow-Beispiel](basewindow-sample.md)
+[BaseWindow-Beispiel](basewindow-sample.md)

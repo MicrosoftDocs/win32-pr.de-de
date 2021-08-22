@@ -1,11 +1,11 @@
 ---
-title: Start Service-Methode der MicrosoftDNS_Server-Klasse
-description: Mit der Start Service-Methode wird der DNS-Server gestartet.
+title: StartService-Methode der MicrosoftDNS_Server Klasse
+description: Die StartService-Methode startet den DNS-Server.
 ms.assetid: f6343a34-9d1b-4f82-897e-289650af6be9
 keywords:
-- Start Service-Methode (DNS)
-- Start Service-Methode (DNS), MicrosoftDNS_Server-Klasse
-- DNS-MicrosoftDNS_Server Klasse, StartService-Methode
+- Dns der StartService-Methode
+- StartService-Methode DNS , MicrosoftDNS_Server-Klasse
+- MicrosoftDNS_Server DNS-Klasse, StartService-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b2e103b3d2648bf2c061eb047090cfdfeb907518
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b5e74de96ad24ff16ea2c2effaef78003011f5d6bd5d421336084ac5c7701f79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338347"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119432640"
 ---
-# <a name="startservice-method-of-the-microsoftdns_server-class"></a>Start Service-Methode der MicrosoftDNS- \_ Server Klasse
+# <a name="startservice-method-of-the-microsoftdns_server-class"></a>StartService-Methode der \_ MicrosoftDNS-Serverklasse
 
-Mit der **Start Service** -Methode wird der DNS-Server gestartet.
+Die **StartService-Methode** startet den DNS-Server.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Fehler \_ Erfolg gibt an, dass der Dienst erfolgreich gestartet wurde. Jeder andere Wert ist ein Fehlercode.
+ERROR \_ SUCCESS gibt an, dass der Dienst erfolgreich gestartet wurde. Jeder andere Wert ist ein Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,24 +53,24 @@ Fehler \_ Erfolg gibt an, dass der Dienst erfolgreich gestartet wurde. Jeder and
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ Server**](microsoftdns-server.md)
+[**MicrosoftDNS-Server \_**](microsoftdns-server.md)
 </dt> <dt>
 
-[**Stop Service-Methode der MicrosoftDNS- \_ Server Klasse**](microsoftdns-server-stopservice.md)
+[**StopService-Methode der \_ MicrosoftDNS-Serverklasse**](microsoftdns-server-stopservice.md)
 </dt> <dt>
 
-[**Startscavenging-Methode der MicrosoftDNS- \_ Server Klasse**](microsoftdns-server-startscavenging.md)
+[**StartScavenging-Methode der \_ MicrosoftDNS-Serverklasse**](microsoftdns-server-startscavenging.md)
 </dt> <dt>
 
-[**Geterkennbar shedname-Methode der MicrosoftDNS- \_ Server Klasse**](microsoftdns-server-getdistinguishedname.md)
+[**GetDistinguishedName-Methode der \_ MicrosoftDNS-Serverklasse**](microsoftdns-server-getdistinguishedname.md)
 </dt> </dl>
 
  

@@ -1,32 +1,32 @@
 ---
-description: Ein WMI-Anbieter erstellt eine Gruppe unterstützter Klassen, Instanzen und Ereignisse, um Daten an WMI zu übergeben. Wiederum können von einer Verwaltungs Anwendung oder einem Skript Anbieter Methoden aufgerufen werden, um vom Anbieter bereitgestellte Daten zu bearbeiten.
+description: Ein WMI-Anbieter erstellt eine Gruppe unterstützter Klassen, Instanzen und Ereignisse, um Daten an WMI zu übergeben. Im Gegenzug kann eine Verwaltungsanwendung oder ein Skript Anbietermethoden aufrufen, um vom Anbieter bereitgestellte Daten zu bearbeiten.
 ms.assetid: 919dfa7c-4a36-4e59-8377-72cf9735eaec
 ms.tgt_platform: multiple
-title: Bereitstellen von Daten für WMI durch Schreiben eines Anbieters
+title: Bereitstellung von Daten für WMI durch Schreiben eines Anbieters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c8648eb2982dda3970cb87308ee92b6816297f6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9410fd26a830df1846dd62434dc85ffc9cb033c524c7b4e76ff6db93d64dd95e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119050142"
 ---
-# <a name="supplying-data-to-wmi-by-writing-a-provider"></a>Bereitstellen von Daten für WMI durch Schreiben eines Anbieters
+# <a name="supplying-data-to-wmi-by-writing-a-provider"></a>Bereitstellung von Daten für WMI durch Schreiben eines Anbieters
 
-Ein WMI-Anbieter erstellt eine Gruppe unterstützter Klassen, Instanzen und Ereignisse, um Daten an WMI zu übergeben. Wiederum können von einer Verwaltungs Anwendung oder einem Skript [*Anbieter Methoden*](gloss-p.md) aufgerufen werden, um vom Anbieter bereitgestellte Daten zu bearbeiten.
+Ein WMI-Anbieter erstellt eine Gruppe unterstützter Klassen, Instanzen und Ereignisse, um Daten an WMI zu übergeben. Im Gegenzug kann eine Verwaltungsanwendung oder ein Skript Anbietermethoden aufrufen, [*um*](gloss-p.md) vom Anbieter bereitgestellte Daten zu bearbeiten.
 
-Das folgende Diagramm veranschaulicht die Beziehung zwischen einem Anbieter, der mit WMI und der Anwendung gekoppelt ist.
+Das folgende Diagramm veranschaulicht die Beziehung zwischen einem Anbieter, der mit WMI gekoppelt ist, und der Anwendung.
 
-![Beziehung zwischen WMI, gekoppeltem Anbieter und Anwendung](images/coupledprov.png)
+![Beziehung zwischen wmi, dem gekoppelten Anbieter und der Anwendung](images/coupledprov.png)
 
-Im folgenden Verfahren wird beschrieben, wie ein einfacher Anbieter erstellt wird, der eine Reihe von-Instanzen unterstützt. Der hier beschriebene Anbieter ist für die Durchführung im WMI-Prozess registriert. In einigen Fällen sollten Sie einen [*entkoppelten Anbieter*](gloss-d.md) verwenden, der in einem anderen Prozess ausgeführt wird. Weitere Informationen zu Anbieter Hostingmodellen finden Sie unter [Anbieter Hosting und-Sicherheit](provider-hosting-and-security.md). Die Schritte 1 und 2 im folgenden Verfahren unterscheiden sich für entkoppelte Anbieter, aber in anderen Hinsicht verwenden Sie dieselben Schnittstellen wie in-Process-Anbieter. Weitere Informationen finden Sie unter [Einbinden eines Anbieters in eine Anwendung](incorporating-a-provider-in-an-application.md).
+Im folgenden Verfahren wird beschrieben, wie Sie einen einfachen Anbieter erstellen, der einen Satz von -Instanzen unterstützt. Der hier beschriebene Anbieter ist für die Ausführung innerhalb des WMI-Prozesses registriert. In einigen Fällen verwenden Sie einen [*entkoppelten Anbieter,*](gloss-d.md) der in einem anderen Prozess ausgeführt wird. Weitere Informationen zu Anbieterhostingmodellen finden Sie unter [Anbieterhosting und Sicherheit.](provider-hosting-and-security.md) Die Schritte 1 und 2 im folgenden Verfahren unterscheiden sich für entkoppelte Anbieter, aber in anderer Hinsicht verwenden sie dieselben Schnittstellen wie In-Process-Anbieter. Weitere Informationen finden Sie unter [Integrieren eines Anbieters in eine Anwendung.](incorporating-a-provider-in-an-application.md)
 
 **So erstellen Sie einen Instanzanbieter**
 
-1.  Erstellen Sie eine Instanz einer [**\_ \_ Win32Provider**](--win32provider.md) -Klasse mit [Managed Object Format (MOF)](managed-object-format--mof-.md) -Code, und geben Sie dabei den Namen und die **CLSID** des Anbieters an. Weitere Informationen finden Sie unter [Entwerfen von Managed Object Format-Klassen (MOF)](designing-managed-object-format--mof--classes.md).
+1.  Erstellen Sie eine Instanz einer [**\_ \_ Win32Provider-Klasse**](--win32provider.md) mit Managed Object Format [(MOF)-Code,](managed-object-format--mof-.md) und geben Sie den Namen und die **CLSID** des Anbieters an. Weitere Informationen finden Sie unter [Entwerfen Managed Object Format -Klassen (MOF).](designing-managed-object-format--mof--classes.md)
 
-    Im folgenden Codebeispiel wird gezeigt, wie eine Instanz einer [**\_ \_ Win32Provider**](--win32provider.md) -Klasse erstellt wird.
+    Das folgende Codebeispiel zeigt, wie eine Instanz einer [**\_ \_ Win32Provider-Klasse erstellt**](--win32provider.md) wird.
 
     ``` syntax
     Instance of __Win32Provider as $P   // $P is an alias
@@ -38,15 +38,15 @@ Im folgenden Verfahren wird beschrieben, wie ein einfacher Anbieter erstellt wir
     ```
 
     > [!Note]  
-    > Um sicherzustellen, dass alle ihre WMI-Klassendefinitionen für verwaltete Objekte im [*WMI-Repository*](gloss-w.md) wieder hergestellt werden, wenn WMI einen Fehler aufweist und neu gestartet wird, verwenden Sie die " [**\# pragma Auto Wiederherstellen**](pragma-autorecover.md) "-Anweisungs Präprozessoranweisung in der MOF-Datei.
+    > Um sicherzustellen, dass alle WMI-Klassendefinitionen für verwaltete Objekte im [*WMI-Repository*](gloss-w.md) wiederhergestellt werden, wenn WMI einen Fehler auftrat und neu gestartet wird, verwenden Sie die [**\# Präprozessoranweisung pragma autorecover**](pragma-autorecover.md) statement in Ihrer MOF-Datei.
 
      
 
-    Weitere Informationen finden Sie unter [Erstellen einer Instanz](creating-an-instance.md) und [Registrieren eines Instanzanbieters](registering-an-instance-provider.md).
+    Weitere Informationen finden Sie unter [Erstellen einer Instanz und](creating-an-instance.md) Registrieren eines [Instanzanbieters.](registering-an-instance-provider.md)
 
-2.  Erstellen Sie eine Instanz der [**\_ \_ instanceproviderregistration**](--instanceproviderregistration.md) -Klasse, die die Funktionen des Instanzanbieters beschreibt.
+2.  Erstellen Sie eine Instanz der [**\_ \_ InstanceProviderRegistration-Klasse,**](--instanceproviderregistration.md) die die Funktionen des Instanzanbieters beschreibt.
 
-    Im folgenden Codebeispiel wird gezeigt, wie eine Instanz der [**\_ \_ instanceproviderregistration**](--instanceproviderregistration.md) -Klasse erstellt wird.
+    Das folgende Codebeispiel zeigt, wie eine Instanz der [**\_ \_ InstanceProviderRegistration-Klasse erstellt**](--instanceproviderregistration.md) wird.
 
     ``` syntax
     instance of __InstanceProviderRegistration
@@ -59,15 +59,15 @@ Im folgenden Verfahren wird beschrieben, wie ein einfacher Anbieter erstellt wir
     };
     ```
 
-    Weitere Informationen zu den Eigenschaften in diesem Abschnitt von MOF-Code finden Sie unter [**\_ \_ instanceproviderregistration**](--instanceproviderregistration.md) und [**\_ \_ objectproviderregistration**](--objectproviderregistration.md).
+    Weitere Informationen zu den Eigenschaften in diesem Abschnitt des MOF-Codes finden Sie unter [**\_ \_ InstanceProviderRegistration**](--instanceproviderregistration.md) und [**\_ \_ ObjectProviderRegistration.**](--objectproviderregistration.md)
 
-    Weitere Informationen finden Sie unter [Registrieren eines Instanzanbieters](registering-an-instance-provider.md).
+    Weitere Informationen finden Sie unter [Registrieren eines Instanzanbieters.](registering-an-instance-provider.md)
 
-3.  Verwenden Sie den MOF-Code, um die dynamische Klasse zu erstellen, für die der Anbieter Instanzen bereitstellt.
+3.  Verwenden Sie MOF-Code, um die dynamische Klasse zu erstellen, für die der Anbieter Instanzen an stellt.
 
-    Eine dynamische Klasse ist eine Klasse, deren Instanzen Updates von einem Anbieter erhalten. Diese Updates können regelmäßig oder mit sporadischen Änderungen in den von den Instanzen dargestellten Objekten verknüpft werden. Sie können Änderungen an den dynamischen Klassen Instanzen über Ihre eigene Verwaltungs Anwendung oder die [WMI-Objektkatalog](further-information.md)anzeigen.
+    Eine dynamische Klasse ist eine Klasse, deren Instanzen Updates von einem Anbieter empfangen. Diese Updates können regelmäßig oder mit sporadischen Änderungen in den Objekten verknüpft sein, die die Instanzen darstellen. Sie können Änderungen an den dynamischen Klasseninstanzen über Ihre eigene Verwaltungsanwendung oder den [WMI-Objektbrowser anzeigen.](further-information.md)
 
-    Im folgenden Codebeispiel wird eine dynamische Klasse beschrieben, die vom Anbieter "instprovsamp" unterstützt wird.
+    Im folgenden Codebeispiel wird eine dynamische Klasse beschrieben, die vom Anbieter "InstProvSamp" unterstützt wird.
 
     ``` syntax
     [dynamic, provider("InstProvSamp"), // uses the InstProvSamp Provider
@@ -85,39 +85,39 @@ Im folgenden Verfahren wird beschrieben, wie ein einfacher Anbieter erstellt wir
     };
     ```
 
-4.  Registrieren Sie Ihre Klassen bei WMI über den MOF-Compiler.
+4.  Registrieren Sie Ihre Klassen mit WMI über den MOF-Compiler.
 
-    Geben Sie an der Eingabeaufforderung im Anbieter Verzeichnis Folgendes ein, um den MOF-Beispielcode bei WMI zu registrieren.
+    Geben Sie an der Eingabeaufforderung in Ihrem Anbieterverzeichnis Folgendes ein, um den MOF-Beispielcode bei WMI zu registrieren.
 
-    " **mumacomp** *instprov. MOF* "
+    **mofcomp** *instprov.mof*
 
-    Weitere Informationen finden Sie unter [Kompilieren von MOF-Dateien](compiling-mof-files.md).
+    Weitere Informationen finden Sie unter [Kompilieren von MOF-Dateien.](compiling-mof-files.md)
 
-5.  Definieren Sie ein COM-Objekt, das Ihren Anbieter enthalten soll. Der Beispielcode für diesen Schritt befindet sich in einem kompletten Beispiel am Ende dieses Themas.
+5.  Definieren Sie ein COM-Objekt, das Ihren Anbieter enthalten soll. Der Beispielcode für diesen Schritt befindet sich in einem vollständigen Beispiel am Ende dieses Themas.
 
-    1.  Wie bei jedem COM-Objekt müssen Sie einen Konstruktor und einen Dekonstruktor sowie die [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))-, [**adressf**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)-und [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) -Methoden implementieren.
+    1.  Wie bei jedem COM-Objekt müssen Sie einen Konstruktor und einen Dekonstruktor sowie die [**Methoden QueryInterface,**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) [**AddRef**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)und [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) implementieren.
 
-    2.  Implementieren Sie die [**iwbemproviderinit:: Initialize**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemproviderinit-initialize) -Methode in Ihrem com-Objekt.
+    2.  Implementieren Sie [**die IWbemProviderInit::Initialize-Methode**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemproviderinit-initialize) in Ihrem COM-Objekt.
 
-        Der Hauptzweck der [**Initialisierung**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemproviderinit-initialize) in diesem Beispiel besteht darin, den **m \_ pnamespace** -Member auf den aktuellen Namespace festzulegen. Weitere Informationen zu Namespaces finden Sie unter [Erstellen von Hierarchien in WMI](creating-hierarchies-within-wmi.md).
+        Der Hauptzweck von [**Initialize**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemproviderinit-initialize) in diesem Beispiel besteht im Festlegen des **m \_ pNamespace-Members** auf den aktuellen Namespace. Weitere Informationen zu Namespaces finden Sie unter [Erstellen von Hierarchien in WMI.](creating-hierarchies-within-wmi.md)
 
-        Eine Senke wird durch den *pinitsink* -Parameter in der [**iwbemproviderinit:: Initialize**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemproviderinit-initialize) -Methode übergeben, um zu bestimmen, dass der Anbieter erfolgreich initialisiert wurde. Weitere Informationen zu senken finden Sie unter [**iwbemjebjectsink**](iwbemobjectsink.md) und [Aufrufen einer Methode](calling-a-method.md).
+        Eine Senke wird über den *pInitSink-Parameter* in der [**IWbemProviderInit::Initialize-Methode**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemproviderinit-initialize) übergeben, um zu geben, dass der Anbieter erfolgreich initialisiert wurde. Weitere Informationen zu Senken finden Sie unter [**IWbemObjectSink und**](iwbemobjectsink.md) [Aufrufen einer Methode.](calling-a-method.md)
 
-    3.  Implementieren Sie die Methode " [**IWbemServices:: kreateinstanceenumasync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-createinstanceenumasync) " in Ihrem com-Objekt (obwohl Sie eine Vielzahl von [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Schnittstellen implementieren können, wird im Beispiel am Ende dieses Themas nur " **kreateinstanceenumasync**" implementiert). Insbesondere gibt " **kreateinstanceenumasync** " Instanzen von angegebenen Objekten an WMI zurück.
+    3.  Implementieren Sie die [**IWbemServices::CreateInstanceEnumAsync-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-createinstanceenumasync) in Ihrem COM-Objekt (Obwohl Sie eine Vielzahl von [**IWbemServices-Schnittstellen**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) implementieren können, implementiert das Beispiel am Ende dieses Themas nur **CreateInstanceEnumAsync**). Insbesondere gibt **CreateInstanceEnumAsync** Instanzen angegebener Objekte an WMI zurück.
 
-    4.  Implementieren Sie die [**GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) -Methode in Ihrem com-Objekt.
+    4.  Implementieren Sie die [**GetObjectAsync-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) in Ihrem COM-Objekt.
 
-        Im Beispiel am Ende dieses Themas prüft [**GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) die Parameter für das verwaltete Objekt, ruft das angegebene Objekt ab, führt die Fehlerüberprüfung durch und gibt die entsprechenden Codes an die Senke zurück.
+        Im Beispiel am Ende dieses Themas überprüft [**GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) die Parameter für das verwaltete Objekt, ruft das angegebene Objekt ab, führt eine Fehlerüberprüfung durch und gibt die entsprechenden Codes an die Senke zurück.
 
-6.  Registrieren Sie den Anbieter mithilfe von regsvr32 als COM-Objekt.
+6.  Registrieren Sie Ihren Anbieter mithilfe von RegSvr32 als COM-Objekt.
 
-    Geben Sie an der Eingabeaufforderung im Anbieter Verzeichnis Folgendes ein:
+    Geben Sie an der Eingabeaufforderung in Ihrem Anbieterverzeichnis Folgendes ein:
 
     **regsvr32** *InstProv.dll*
 
-Der Anbieter ist nun fertig. An diesem Punkt sollten Sie in der Lage sein, auf Instanzen der **instprovsamp** -Klasse von WMI aus zuzugreifen.
+Ihr Anbieter ist jetzt vollständig. An diesem Punkt sollten Sie über WMI auf Instanzen der **InstProvSamp-Klasse** zugreifen können.
 
-Im folgenden Codebeispiel wird ein COM-Objekt erstellt, das Ihren Anbieter enthält, wie in Schritt 5 oben beschrieben. Das gesamte Beispiel enthält Code aus der Header Datei "Sample. h" und Quelldateien mit dem Namen "instprov. cpp", "utils. cpp", "classfac. cpp" und "maindll. cpp".
+Im folgenden Codebeispiel wird ein COM-Objekt erstellt, das Ihren Anbieter enthält, wie in Schritt 5 oben beschrieben. Das vollständige Beispiel enthält Code aus der Headerdatei sample.h und Quelldateien mit den Titeln Instprov.cpp, Utils.cpp, Classfac.cpp und Maindll.cpp.
 
 
 ```C++
@@ -396,7 +396,7 @@ extern long glNumInst;
 
 
 
-Die Quelldatei "instpro. cpp" enthält Code, der die Funktionen für den Anbieter implementiert, der in der Header Datei "Sample. h" deklariert wurde.
+Die Instpro.cpp-Quelldatei enthält Code, der die Funktionen für den In der Sample.h-Headerdatei deklarierten Anbieter implementiert.
 
 
 ```C++
@@ -731,7 +731,7 @@ SCODE CInstPro::GetByPath(BSTR ObjectPath,
 
 
 
-Die Quelldatei "utils. cpp" enthält Code, der die Hilfsprogrammfunktionen für den Anbieter implementiert, der in der Header Datei "Sample. h" deklariert wurde.
+Die Quelldatei "Utils.cpp" enthält Code, der die Hilfsfunktionen für den In der Sample.h-Headerdatei deklarierten Anbieter implementiert.
 
 
 ```C++
@@ -891,7 +891,7 @@ DWORD GetCurrentImpersonationLevel ()
 
 
 
-Die Quelldatei classfac. cpp enthält Code, der Objekte erstellt, wenn Verbindungen angefordert werden.
+Die Quelldatei Classfac.cpp enthält Code, der Objekte erstellt, wenn Verbindungen angefordert werden.
 
 
 ```C++
@@ -1046,7 +1046,7 @@ STDMETHODIMP CProvFactory::LockServer(BOOL fLock)
 
 
 
-Die maindll. cpp-Quelldatei enthält Code, der steuert, wann die DLL entladen werden kann, indem die Anzahl der Objekte und Sperren nachverfolgt wird, sowie Routinen, die die Selbstregistrierung unterstützen.
+Die Quelldatei Maindll.cpp enthält Code, der steuert, wann die DLL entladen werden kann, indem die Anzahl der Objekte und Sperren sowie Routinen nachverfolgt werden, die die Selbstregistrierung unterstützen.
 
 
 ```C++
@@ -1289,10 +1289,10 @@ STDAPI DllUnregisterServer(void)
 
 <dl> <dt>
 
-[Festlegen von namepace-Sicherheits Deskriptoren](setting-namespace-security-descriptors.md)
+[Festlegen von Namepace-Sicherheitsdeskriptoren](setting-namespace-security-descriptors.md)
 </dt> <dt>
 
-[Sichern Ihres Anbieters](securing-your-provider.md)
+[Schützen Ihres Anbieters](securing-your-provider.md)
 </dt> <dt>
 
 [Entwickeln eines WMI-Anbieters](developing-a-wmi-provider.md)

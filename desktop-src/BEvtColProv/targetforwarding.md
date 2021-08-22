@@ -1,8 +1,8 @@
 ---
-description: Ruft Weiterleitungs Daten von einem Bereitstellungs Zielcomputer ab.
+description: Ruft Weiterleitungsdaten von einem Zielcomputer ab.
 ms.assetid: e9ed210d-09ad-4689-b6a0-f84c5cce86f5
 ms.tgt_platform: multiple
-title: Targetforwarding-Klasse
+title: TargetForwarding-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -24,19 +24,19 @@ api_type:
 - DllExport
 api_location:
 - BEvtCol.exe
-ms.openlocfilehash: aba0a40ccd5611cecfe7450e518620d4d41ec1e0
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a6025089d069504889d7b97d87a73b167746c3e594013acf58f0ed615162f787
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104522907"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119529690"
 ---
-# <a name="targetforwarding-class"></a>Targetforwarding-Klasse
+# <a name="targetforwarding-class"></a>TargetForwarding-Klasse
 
-Ruft Weiterleitungs Daten von einem Bereitstellungs Zielcomputer ab.
+Ruft Weiterleitungsdaten von einem Zielcomputer ab.
 
 > [!Note]  
-> Auf einem Bereitstellungs Zielcomputer können mehrere Weiterleitungen konfiguriert sein.
+> Auf einem Zielcomputer sind möglicherweise mehrere Weiterleitungen konfiguriert.
 
  
 
@@ -63,173 +63,173 @@ class TargetForwarding
 
 ## <a name="members"></a>Member
 
-Die **targetforwarding** -Klasse verfügt über diese Typen von Membern:
+Die **TargetForwarding-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **targetforwarding** -Klasse verfügt über diese Eigenschaften.
+Die **TargetForwarding-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Collector Endpoint**
+**CollectorEndpoint**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Die Endpunkt Informationen des Collector-Servers. Diese Eigenschaft ist als *Host*:*Port* Zeichenfolge formatiert.
+Die Endpunktinformationen des Collectorservers. Diese Eigenschaft ist als *Host* formatiert:*Portzeichenfolge.*
 
 </dd> <dt>
 
 **Computer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Der Computername des Ziel Computers.
+Der Computername des Zielcomputers.
 
 </dd> <dt>
 
-**Connectedsince**
+**ConnectedSince**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **DATETIME**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Der Zeitstempel, der angibt, wann die Verbindung für die Weiterleitungs Daten hergestellt wurde.
+Der Zeitstempel, der angibt, wann die Verbindung für die Weiterleitungsdaten hergestellt wurde.
 
 </dd> <dt>
 
 **Ziel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Das Ziel der Weiterleitungs Daten, z. b. ein Dateiname.
+Das Ziel der Weiterleitungsdaten, z. B. ein Dateiname.
 
 </dd> <dt>
 
-**Destinationpattern**
+**DestinationPattern**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Das Format, das verwendet wird, um das Ziel der Weiterleitungs Daten zu generieren.
+Das Format, das zum Generieren des Ziels der Weiterleitungsdaten verwendet wird.
 
 </dd> <dt>
 
 **Fehler**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Eine Fehlermeldung, in der ein aufgetretene Fehler beschrieben wird. Diese Eigenschaft ist leer, wenn kein Fehler aufgetreten ist.
+Eine Fehlermeldung, die einen aufgetretenen Fehler beschreibt. Diese Eigenschaft ist leer, wenn kein Fehler aufgetreten ist.
 
 </dd> <dt>
 
-**Weiterforwardertyp**
+**ForwarderType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Der Dateityp, der die Weiterleitungs Daten enthält, z. b. ETL.
+Der Dateityp, der die Weiterleitungsdaten enthält, z. B. ETL.
 
 </dd> <dt>
 
-**Targetendpoint**
+**TargetEndpoint**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Die Endpunkt Informationen des Ziel Computers in einem von menschenlesbaren Format. Diese Eigenschaft ist als *Host*:*Port* Zeichenfolge formatiert. Beispiel: "127.0.0.1:50000".
+Die Endpunktinformationen des Zielcomputers im für Menschen lesbaren Format. Diese Eigenschaft ist als *Host* formatiert:*Portzeichenfolge.* Beispiel: "127.0.0.1:50000".
 
 </dd> <dt>
 
-**Targetguid**
+**TargetGuid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Die SMBIOS- **GUID** des Ziel Computers.
+Die **SMBIOS-GUID** des Zielcomputers.
 
 </dd> <dt>
 
-**Targetmac**
+**TargetMac**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Die Mac-Adresse des Ziel Computers.
+Die MAC-Adresse des Zielcomputers.
 
 </dd> </dl>
 
@@ -241,8 +241,8 @@ Die Mac-Adresse des Ziel Computers.
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                       |
-| Namespace<br/>                | Stammverzeichnis von \\ Microsoft \\ Windows \\ booteventcollector<br/>                                              |
-| MOF<br/>                      | <dl> <dt>Booteventcollector WMI. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-Microsoft \\ Windows \\ BootEventCollector<br/>                                              |
+| MOF<br/>                      | <dl> <dt>BootEventCollectorWMI.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>BEvtCol.exe</dt> </dl>               |
 
 
@@ -251,7 +251,7 @@ Die Mac-Adresse des Ziel Computers.
 
 <dl> <dt>
 
-[WMI-Anbieter für Start Ereignis Sammler](boot-event-collector-wmi-provider-portal.md)
+[WMI-Anbieter für Startereignissammler](boot-event-collector-wmi-provider-portal.md)
 </dt> </dl>
 
  

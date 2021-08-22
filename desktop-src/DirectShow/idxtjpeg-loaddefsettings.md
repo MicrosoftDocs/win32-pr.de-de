@@ -1,7 +1,7 @@
 ---
-description: Die loaddefsettings-Methode stellt die Standardeinstellungen des Übergangs Übergangs wieder her.
+description: Die LoadDefSettings-Methode stellt die Standardeinstellungen des Zurücksetzen-Übergangs wieder auf.
 ms.assetid: 3f81002a-ecac-4d5a-8d2a-ada4d4884d7d
-title: 'Idxtjpeg:: loaddefsettings-Methode (qedit. h)'
+title: IDxtJpeg::LoadDefSettings-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 51438a21782d1a703a3b43134517e8337ce9f75e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3db1e8ba8f565cdc0917afffbc2cc4c4455cfa7f5e401fcc6c3abcf75d0c0ce6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371236"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119329980"
 ---
-# <a name="idxtjpegloaddefsettings-method"></a>Idxtjpeg:: loaddefsettings-Methode
+# <a name="idxtjpegloaddefsettings-method"></a>IDxtJpeg::LoadDefSettings-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `LoadDefSettings` Methode stellt die Standardeinstellungen des Übergangs Übergangs wieder her.
+Die `LoadDefSettings` -Methode stellt die Standardeinstellungen des Zurücksetzen-Übergangs wieder auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -65,16 +65,16 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Idxtjpeg-Schnittstelle**](idxtjpeg.md)
+[**IDxtJpeg-Schnittstelle**](idxtjpeg.md)
 </dt> </dl>
 
  

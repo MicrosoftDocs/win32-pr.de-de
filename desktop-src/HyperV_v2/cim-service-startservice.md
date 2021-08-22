@@ -1,7 +1,7 @@
 ---
-description: Versetzt den Dienst in den Zustand "gestartet".
+description: Platziert den Dienst in den Gestartet-Zustand.
 ms.assetid: 8977b806-150c-4ddc-a471-3fdafdcb4a55
-title: Start Service-Methode der CIM_Service-Klasse (Hyper-V-Verwaltung)
+title: StartService-Methode der CIM_Service -Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 73b89f7fc789639fb45acbde61da4c7962650177
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c0e30adbece838cb913f215abedc4aa86a2762d00f046a54bf2717eaeecdb56e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119561810"
 ---
-# <a name="startservice-method-of-the-cim_service-class-hyper-v-management"></a>Start Service-Methode der CIM_Service-Klasse (Hyper-V-Verwaltung)
+# <a name="startservice-method-of-the-cim_service-class-hyper-v-management"></a>StartService-Methode der CIM_Service -Klasse (Hyper-V-Verwaltung)
 
-Versetzt den Dienst in den Zustand "gestartet".
+Platziert den Dienst in den Gestartet-Zustand.
 
 > [!Note]
 >
-> Die Semantik dieser Methode überschneidet sich mit der **requestStateChange** -Methode, die von [**CIM \_ enabledlogicalelement**](cim-enabledlogicalelement.md)geerbt wird. Diese Methode wird beibehalten, da Sie weitgehend implementiert wurde und ihre einfache "Start"-Semantik praktisch verwendet werden kann.
+> Die Semantik dieser Methode überschneidet sich mit der **RequestStateChange-Methode,** die von [**CIM \_ EnabledLogicalElement geerbt wird.**](cim-enabledlogicalelement.md) Diese Methode wird beibehalten, da sie weit verbreitet implementiert wurde und ihre einfache "Start"-Semantik praktisch zu verwenden ist.
 
  
 
@@ -45,7 +45,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,7 +56,7 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -65,7 +65,7 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
-[**CIM- \_ Dienst**](cim-service.md)
+[**\_CIM-Dienst**](cim-service.md)
 </dt> </dl>
 
  

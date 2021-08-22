@@ -1,11 +1,11 @@
 ---
-title: Matrix5x4F Matrix5x4F (float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-Konstruktor \_
-description: Instanziiert eine neue Instanz einer Matrix5x4F-Klasse, die mit allen Gleit Komma-Matrix Werten initialisiert wird.
+title: Matrix5x4F Matrix5x4F(FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT) Konstruktor (D2d1 \_ helper.h)
+description: Instanziiert eine neue Instanz einer Matrix5x4F-Klasse, die mit allen Gleitkommamatrixwerten initialisiert wird.
 ms.assetid: 46C2741F-9E49-4ABD-9DA5-D4E6D3CA2B09
 keywords:
 - Matrix5x4F-Konstruktor Direct2D
 - Matrix5x4F-Konstruktor Direct2D, Matrix5x4F-Schnittstelle
-- Matrix5x4F Interface Direct2D, Matrix5x4F-Konstruktor
+- Matrix5x4F-Schnittstelle Direct2D, Matrix5x4F-Konstruktor
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2582e58f535ddf4f87d54e16dd2edaec2aa37e91
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3626e4af5e51555779a2d14c731fbeb4a2ad30ce542ce2ca9447116332c9faea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119430630"
 ---
-# <a name="matrix5x4fmatrix5x4ffloat-float-float-float-float-float-float-float-float-float-float-float-float-float-float-float-float-float-float-float-constructor"></a>Matrix5x4F:: Matrix5x4F (float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float
+# <a name="matrix5x4fmatrix5x4ffloat-float-float-float-float-float-float-float-float-float-float-float-float-float-float-float-float-float-float-float-constructor"></a>Matrix5x4F::Matrix5x4F(FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT)
 
-Instanziiert eine neue Instanz einer [**Matrix5x4F**](matrix5x4f.md) -Klasse, die mit allen Gleit Komma-Matrix Werten initialisiert wird.
+Instanziiert eine neue Instanz einer [**Matrix5x4F-Klasse,**](matrix5x4f.md) die mit allen Gleitkommamatrixwerten initialisiert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,37 +61,37 @@ inline Matrix5x4F(
 
 <dl> <dt>
 
-*quer* 
+*m11* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der ersten Zeile und ersten Spalte der Matrix.
 
 </dd> <dt>
 
-*M12* 
+*m12* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der ersten Zeile und zweiten Spalte der Matrix.
 
 </dd> <dt>
 
-*M13* 
+*m13* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der ersten Zeile und dritten Spalte der Matrix.
 
 </dd> <dt>
 
-*M14* 
+*m14* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der ersten Zeile und vierten Spalte der Matrix.
 
@@ -100,43 +100,43 @@ Der Wert in der ersten Zeile und vierten Spalte der Matrix.
 *m21* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der zweiten Zeile und ersten Spalte der Matrix.
 
 </dd> <dt>
 
-*M22* 
+*m22* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der zweiten Zeile und zweiten Spalte der Matrix.
 
 </dd> <dt>
 
-*M23* 
+*m23* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der zweiten Zeile und dritten Spalte der Matrix.
 
 </dd> <dt>
 
-*M24* 
+*m24* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der zweiten Zeile und vierten Spalte der Matrix.
 
 </dd> <dt>
 
-*M31* 
+*m31* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der dritten Zeile und ersten Spalte der Matrix.
 
@@ -145,7 +145,7 @@ Der Wert in der dritten Zeile und ersten Spalte der Matrix.
 *m32* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der dritten Zeile und zweiten Spalte der Matrix.
 
@@ -154,7 +154,7 @@ Der Wert in der dritten Zeile und zweiten Spalte der Matrix.
 *m33* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der dritten Zeile und dritten Spalte der Matrix.
 
@@ -163,25 +163,25 @@ Der Wert in der dritten Zeile und dritten Spalte der Matrix.
 *m34* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der dritten Zeile und vierten Spalte der Matrix.
 
 </dd> <dt>
 
-*M41* 
+*m41* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der vierten Zeile und ersten Spalte der Matrix.
 
 </dd> <dt>
 
-*M42* 
+*m42* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der vierten Zeile und zweiten Spalte der Matrix.
 
@@ -190,7 +190,7 @@ Der Wert in der vierten Zeile und zweiten Spalte der Matrix.
 *m43* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der vierten Zeile und dritten Spalte der Matrix.
 
@@ -199,16 +199,16 @@ Der Wert in der vierten Zeile und dritten Spalte der Matrix.
 *m44* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der vierten Zeile und vierten Spalte der Matrix.
 
 </dd> <dt>
 
-*M51* 
+*m51* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der fünften Zeile und ersten Spalte der Matrix.
 
@@ -217,7 +217,7 @@ Der Wert in der fünften Zeile und ersten Spalte der Matrix.
 *m52* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der fünften Zeile und zweiten Spalte der Matrix.
 
@@ -226,16 +226,16 @@ Der Wert in der fünften Zeile und zweiten Spalte der Matrix.
 *m53* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der fünften Zeile und dritten Spalte der Matrix.
 
 </dd> <dt>
 
-*M54* 
+*m54* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der fünften Zeile und vierten Spalte der Matrix.
 
@@ -247,17 +247,17 @@ Der Wert in der fünften Zeile und vierten Spalte der Matrix.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7, Windows Vista mit SP2 und Platt Form Update für Windows Vista \[ -Desktop-Apps\]<br/>                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Platt Form Update für Windows Server 2008 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8,1 \[ Windows Phone Silverlight 8,1 und Windows-Runtime apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7, Windows Vista mit SP2 und Plattformupdate nur für Windows \[ Vista-Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Plattformupdate nur für Windows Server \[ 2008-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1- und Windows Runtime-Apps\]<br/>                                           |
 | Namespace<br/>                | D2D1<br/>                                                                                                                   |
-| Header<br/>                   | <dl> <dt>D2d1 \_ Helper. h</dt> </dl>                                         |
-| Bibliothek<br/>                  | <dl> <dt>D2d1. lib</dt> </dl>                                               |
+| Header<br/>                   | <dl> <dt>D2d1 \_ helper.h</dt> </dl>                                         |
+| Bibliothek<br/>                  | <dl> <dt>D2d1.lib</dt> </dl>                                               |
 | DLL<br/>                      | <dl> <dt>D2d1.dll</dt> </dl>                                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

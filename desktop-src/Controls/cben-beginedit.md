@@ -1,9 +1,9 @@
 ---
-title: CBEN_BEGINEDIT Benachrichtigungs Code (kommctrl. h)
-description: Wird gesendet, wenn der Benutzer die Dropdown Liste aktiviert oder in das Bearbeitungsfeld des Steuer Elements klickt. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: CBEN_BEGINEDIT Benachrichtigungscode (Commctrl.h)
+description: Wird gesendet, wenn der Benutzer die Dropdownliste aktiviert oder auf das Bearbeitungsfeld des Steuerelements klickt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 77236471-b1c0-4679-b7b8-93e85867fe3b
 keywords:
-- Windows-Steuerelemente für CBEN_BEGINEDIT Benachrichtigungs
+- CBEN_BEGINEDIT Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c7d4cc80d12b01b9374173f413f0aee3701e5040
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 109af3e9ccfdd7d8679ac7a5d467cafa966de6faf76adbd06450fd6ba782e80d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344706"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119527900"
 ---
-# <a name="cben_beginedit-notification-code"></a>Cben \_ BeginEdit-Benachrichtigungs Code
+# <a name="cben_beginedit-notification-code"></a>CBEN \_ BEGINEDIT-Benachrichtigungscode
 
-Wird gesendet, wenn der Benutzer die Dropdown Liste aktiviert oder in das Bearbeitungsfeld des Steuer Elements klickt. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird gesendet, wenn der Benutzer die Dropdownliste aktiviert oder auf das Bearbeitungsfeld des Steuerelements klickt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,13 +41,13 @@ CBEN_BEGINEDIT
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die Informationen über den Benachrichtigungs Code enthält.
+Ein Zeiger auf eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) die Informationen zum Benachrichtigungscode enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anwendung, die diesen Benachrichtigungs Code verarbeitet, muss NULL zurückgeben.
+Die Anwendung, die diesen Benachrichtigungscode verarbeitet, muss 0 (null) zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Die Anwendung, die diesen Benachrichtigungs Code verarbeitet, muss NULL zurückg
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,19 +1,19 @@
 ---
 title: Herstellen einer Verbindung mit dem BITS-Dienst
-description: Zum Herstellen einer Verbindung mit dem BITS-Dienst erstellen Sie eine Instanz des backgroundcopymanager-Objekts, wie im folgenden Beispiel gezeigt.
+description: Um eine Verbindung mit dem BITS-Dienst herzustellen, erstellen Sie eine Instanz des BackgroundCopyManager-Objekts, wie im folgenden Beispiel gezeigt.
 ms.assetid: 2fa88277-c7a1-4f1c-a63c-e2d27a163249
 ms.topic: article
 ms.date: 11/29/2018
-ms.openlocfilehash: 8146fa0def8c9c7dfd976784a930f35f20c965eb
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5dacd97b78fa9c5d3a1e410a44e3c376368654e99a6f4ace9161d36b127d9a94
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101862"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119528940"
 ---
 # <a name="connecting-to-the-bits-service"></a>Herstellen einer Verbindung mit dem BITS-Dienst
 
-Zum Herstellen einer Verbindung mit dem Bits-Systemdienst erstellen Sie eine Instanz des backgroundcopymanager-Objekts, wie im folgenden Beispiel gezeigt. Der Bits-Systemdienst ist der Windows-Systemdienst, der auf dem Client Computer ausgeführt wird, der die Hintergrund Übertragungsfunktion implementiert.
+Um eine Verbindung mit dem BITS-Systemdienst herzustellen, erstellen Sie eine Instanz des BackgroundCopyManager-Objekts, wie im folgenden Beispiel gezeigt. Der BITS-Systemdienst ist der Windows, der auf dem Clientcomputer ausgeführt wird und die Hintergrundübertragungsfunktion implementiert.
 
 
 ```C++
@@ -42,9 +42,9 @@ if (SUCCEEDED(hr))
 
 
 
-Um auf eine bestimmte Version von Bits zu testen, verwenden Sie einen symbolischen Klassen Bezeichner für backgroundcopymanager, der auf der Version basiert, die Sie überprüfen möchten. Wenn Sie z. b. auf Bits 10,2 testen möchten, verwenden Sie CLSID \_ BackgroundCopyManager10 \_ 2.
+Um auf eine bestimmte Version von BITS zu testen, verwenden Sie einen symbolischen Klassenbezeichner für BackgroundCopyManager basierend auf der Version, die Sie überprüfen möchten. Verwenden Sie z. B. CLSID \_ BackgroundCopyManager10 2, um auf BITS 10.2 \_ zu testen.
 
-Im folgenden Beispiel wird gezeigt, wie Sie einen der symbolischen Klassen Bezeichner verwenden.
+Im folgenden Beispiel wird die Verwendung eines der symbolischen Klassenbezeichner veranschaulicht.
 
 
 ```C++
@@ -60,13 +60,13 @@ Im folgenden Beispiel wird gezeigt, wie Sie einen der symbolischen Klassen Bezei
 
 
 
-Verwenden Sie die Methoden der [**ibackgroundcopymanager**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) -Schnittstelle, um [Übertragungs Aufträge zu erstellen](creating-a-job.md), Aufträge in der Warteschlange [aufzuzählen](enumerating-jobs-in-the-transfer-queue.md) und [Aufträge abzurufen](/windows/desktop/api/Bits/nf-bits-ibackgroundcopymanager-getjob).
+Verwenden Sie die Methoden der [**IBackgroundCopyManager-Schnittstelle,**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) um Übertragungsaufträge zu [erstellen,](creating-a-job.md)Aufträge in der [Warteschlange](enumerating-jobs-in-the-transfer-queue.md) aufzählen und [Aufträge abzurufen.](/windows/desktop/api/Bits/nf-bits-ibackgroundcopymanager-getjob)
 
 
 
-Bits erfordert, dass die Schnittstellen Proxys des Clients entweder den Identitätswechsel oder die Identitätswechsel Ebene des Identitäts Wechsels verwenden. Wenn die Anwendung nicht [**CoInitializeSecurity**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity)aufruft, verwendet com standardmäßig die Identifizierung. Bits schlägt mit E \_ AccessDenied fehl, wenn die korrekte Identitätswechsel Ebene nicht festgelegt ist. Wenn Sie eine Bibliothek bereitstellen, die die Bits-Schnittstellen ausführt, und eine Anwendung, die Ihre Bibliothek aufruft, die Identitätswechsel Ebene unter Identifizieren festlegt, müssen Sie [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) aufrufen, um die korrekte Identitätswechsel Ebene für jede von Ihnen aufgerufenen Bits-Schnittstelle festzulegen.
+BITS erfordert, dass die Schnittstellenproxies des Clients entweder die IDENTITÄTSWECHSEL- oder IMPERSONATE-Ebene des Identitätswechsels verwenden. Wenn die Anwendung [**CoInitializeSecurity nicht aufruft,**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity)verwendet COM standardmäßig IDENTIFY. BITS schlägt mit E \_ ACCESSDENIED fehl, wenn die richtige Identitätswechselebene nicht festgelegt ist. Wenn Sie eine Bibliothek bereitstellen, die die BITS-Schnittstellen trainiert, und eine Anwendung, die Ihre Bibliothek aufruft, die Identitätswechselebene unter IDENTIFY legt, müssen Sie [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) aufrufen, um die richtige Identitätswechselebene für jede bits-Schnittstelle, die Sie aufrufen, festlegen.
 
-Bevor die Anwendung beendet wird, geben Sie Ihre Kopie des [**ibackgroundcopymanager**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) -Schnittstellen Zeigers frei, wie im folgenden Beispiel gezeigt.
+Bevor Ihre Anwendung beendet wird, geben Sie Ihre Kopie des [**IBackgroundCopyManager-Schnittstellenzeigers**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) frei, wie im folgenden Beispiel gezeigt.
 
 
 ```C++
@@ -84,9 +84,9 @@ CoUninitialize();
 
 <dl> <dt>
 
-[Aufrufen von Bits aus .net und c#](/windows/desktop/Bits/bits-dot-net) für Bits
+[Aufrufen von BITS aus .NET und C#](/windows/desktop/Bits/bits-dot-net) für BITS
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,33 +1,33 @@
 ---
 description: Die Drehung in einem vierdimensionalen Farbraum ist schwierig zu visualisieren.
 ms.assetid: 099f76a3-2da3-4f2b-8f8d-557d144451dc
-title: Drehen von Farben
+title: Rotieren von Farben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ea322179bd4a46021d181abedd1797d6bdda7cf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3fc09a84c4c51181c672c549369783ac476fa1d3c79f1598c1c29ca14604429d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119036428"
 ---
-# <a name="rotating-colors"></a>Drehen von Farben
+# <a name="rotating-colors"></a>Rotieren von Farben
 
-Die Drehung in einem vierdimensionalen Farbraum ist schwierig zu visualisieren. Wir können das Visualisieren der Rotation vereinfachen, indem wir akzeptieren, dass eine der Farbkomponenten korrigiert wird. Angenommen, die Alpha Komponente muss bei 1 (vollständig nicht transparent) korrigiert bleiben. Anschließend können wir einen dreidimensionalen Farbraum mit roten, grünen und blauen Achsen visualisieren, wie in der folgenden Abbildung dargestellt.
+Die Drehung in einem vierdimensionalen Farbraum ist schwierig zu visualisieren. Wir können die Visualisierung der Drehung vereinfachen, indem wir uns darauf einigen, eine der Farbkomponenten zu fixieren. Angenommen, wir stimmen zu, dass die Alphakomponente auf 1 (vollständig deckend) festgelegt ist. Anschließend können wir einen dreidimensionalen Farbraum mit roten, grünen und blauen Achsen visualisieren, wie in der folgenden Abbildung dargestellt.
 
-![Abbildung einer Perspektiven Ansicht eines dreidimensionalen Farbraum mit Achsen mit der Bezeichnung rot, grün und blau](images/recoloring03.png)
+![Abbildung einer Perspektivenansicht eines dreidimensionalen Farbraums mit Achsen mit den Bezeichnungen Rot, Grün und Blau](images/recoloring03.png)
 
-Eine Farbe kann sich als Punkt im 3D-Raum vorstellen. Der Punkt (1, 0, 0) im Raum stellt z. b. die Farbe rot dar, und der Punkt (0, 1, 0) im Raum stellt die Farbe grün dar.
+Eine Farbe kann als Punkt im 3D-Raum dargestellt werden. Beispielsweise stellt der Punkt (1, 0, 0) im Raum die Farbe Rot und der Punkt (0, 1, 0) im Raum die Farbe Grün dar.
 
-In der folgenden Abbildung wird gezeigt, was es bedeutet, die Farbe (1, 0, 0) durch einen Winkel von 60 Grad in der Red-Green Ebene zu drehen. Die Drehung in einer Ebene parallel zur Red-Green Ebene kann als Drehung der blauen Achse betrachtet werden.
+Die folgende Abbildung zeigt, was es bedeutet, die Farbe (1, 0, 0) um einen Winkel von 60 Grad in der Red-Green drehen. Die Drehung in einer Ebene parallel zur Red-Green ist als Drehung um die blaue Achse zu sehen.
 
-![Abbildung, die anzeigt, dass der Punkt (1, 0, 0) um 60 Grad gedreht wird (0,5, 0,866, 0)](images/recoloring04.png)
+![Abbildung des Punkts (1, 0, 0), der um 60 Grad nach (0,5, 0,866, 0) gedreht wurde](images/recoloring04.png)
 
-In der folgenden Abbildung wird gezeigt, wie eine Farbmatrix initialisiert wird, um Drehungen zu jeder der drei Koordinatenachsen (rot, grün, blau) auszuführen.
+Die folgende Abbildung zeigt, wie eine Farbmatrix initialisiert wird, um Drehungen über jede der drei Koordinatenachsen (rot, grün, blau) durchzuführen.
 
-![Abbildung der Farb Matrizen, die Drehungen zu jeder der drei Koordinatenachsen ausführen](images/recoloring05.png)
+![Abbildung mit Farbmatrizen, die Drehungen um jede der drei Koordinatenachsen ausführen](images/recoloring05.png)
 
-Im folgenden Beispiel wird ein Bild, das alle eine Farbe (1, 0, 0,6) ist, und eine 60-Grad-Drehung der blauen Achse angewendet. Der Winkel der Drehung wird in einer Ebene durchlaufen, die parallel zum Red-Green Ebene ist.
+Im folgenden Beispiel wird ein Bild mit einer Farbe (1, 0, 0,6) verwendet und eine Drehung um 60 Grad um die blaue Achse angewendet. Der Winkel der Drehung wird in einer Ebene herausgefegt, die parallel zur Red-Green ist.
 
 
 ```
@@ -65,13 +65,13 @@ graphics.DrawImage(
 
 
 
-Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und das Farb gedrehte Bild auf der rechten Seite.
+Die folgende Abbildung zeigt das originale Bild links und das farblich gedrehte Bild auf der rechten Seite.
 
-![Abbildung mit Rechtecke, die mit dem ursprünglichen Bild (violett rot) und einem Farb rotierten Bild (Meer grün) gefüllt sind](images/colortrans5.png)
+![Abbildung: Rechtecke, die mit dem originalen Bild gefüllt sind (violettes Rot) und farbrotes Bild (Seegrün)](images/colortrans5.png)
 
-Die im vorangehenden Codebeispiel ausgeführte Farb Drehung kann wie folgt visualisiert werden.
+Die im vorherigen Codebeispiel ausgeführte Farbrotation kann wie folgt visualisiert werden.
 
-![die Abbildung zeigt einen 3D-Farbraum, und der Punkt (1, 0, 0,6) gedreht 60 Grad nach (0,5, 0,866, 0,6).](images/recoloring06.png)
+![Abbildung eines 3d-Farbraums, und der Punkt (1, 0, 0,6) hat sich um 60 Grad bis (0,5, 0,866, 0,6) gedreht.](images/recoloring06.png)
 
  
 

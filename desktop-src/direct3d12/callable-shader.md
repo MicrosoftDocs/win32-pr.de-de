@@ -1,5 +1,5 @@
 ---
-description: Ein Shader, der von einem anderen Shader mit der systeminternen Funktion callshader aufgerufen wird.
+description: Ein Shader, der von einem anderen Shader mit der systeminternen CallShader-Eigenschaft aufgerufen wird.
 ms.assetid: ''
 title: Callable-Shader
 ms.date: 05/31/2018
@@ -12,21 +12,21 @@ api_name:
 - Callable Shader
 api_type:
 - NA
-ms.openlocfilehash: 65df547c5e40a46cc4c35361b88ceb797c2e8852
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b84ec6ea58fbc456db1747259f687a2fb6c8cb0fe3374b3d32396861dcd2f9b4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346629"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119461070"
 ---
 # <a name="callable-shader"></a>Callable-Shader
 
-Ein Shader, der von einem anderen Shader mit der systeminternen Funktion [**callshader**](callshader-function.md) aufgerufen wird.
+Ein Shader, der von einem anderen Shader mit der [**systeminternen CallShader-Eigenschaft**](callshader-function.md) aufgerufen wird.
 
-An der **callshader** -Aufruf Site wird eine Parameter Struktur bereitgestellt, die der in dem Aufruf baren Shader verwendeten Parameter Struktur entsprechen muss, auf die der angeforderte Index in die Aufruf Bare shadertabelle verweist, die durch die [**dispatchrays**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist4-dispatchrays) -Methode bereitgestellt wird.  Der Aufruf Bare Shader muss diesen Parameter als *INOUT* deklarieren.  Außerdem kann der Aufruf Bare Shader Start Index und Dimensions Eingaben lesen. Weitere Informationen finden Sie unter [**System eigene System Wert**](direct3d-12-raytracing-hlsl-system-value-intrinsics.md)Funktionen. 
+An der **CallShader-Aufrufwebsite** wird eine Parameterstruktur bereitgestellt, die mit der Parameterstruktur übereinstimmen muss, die im aufrufbaren Shader verwendet wird, auf den der angeforderte Index in der aufrufbaren Shadertabelle verweist, die über die [**DispatchRays-Methode**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist4-dispatchrays) bereitgestellt wird.  Der aufrufbare Shader muss diesen Parameter als *inout* deklarieren.  Darüber hinaus kann der aufrufbare Shader Startindex- und Dimensionseingaben lesen. Weitere Informationen finden Sie unter [**System value Intrinsics**](direct3d-12-raytracing-hlsl-system-value-intrinsics.md). 
 
 
-## <a name="shader-type-attribute"></a>Shader Type-Attribut
+## <a name="shader-type-attribute"></a>Shadertypattribut
 
 
 ```

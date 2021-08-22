@@ -1,5 +1,5 @@
 ---
-description: Ordnet zwei verwaltete Elemente zu, die unterschiedliche Aspekte der gleichen zugrunde liegenden Entität darstellen.
+description: Ordnet zwei verwaltete Elemente zu, die verschiedene Aspekte derselben zugrunde liegenden Entität darstellen.
 ms.assetid: 107A2B15-09F2-490A-8AB2-F9FE5F6FEE60
 title: Msvm_LogicalIdentity-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: c2f8d2ee522fde3769c08bcbb78611b99eed8e16
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 12ee48b85ae11b10a24bab35001baa45c8382105158050d110eb7448a8e883e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104529048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148363"
 ---
-# <a name="msvm_logicalidentity-class"></a>MSVM \_ logicalidentity-Klasse
+# <a name="msvm_logicalidentity-class"></a>Msvm \_ LogicalIdentity-Klasse
 
-Ordnet zwei verwaltete Elemente zu, die unterschiedliche Aspekte der gleichen zugrunde liegenden Entität darstellen. Diese Klasse wird von [**CIM \_ logicalidentity**](/windows/desktop/CIMWin32Prov/cim-logicalidentity)abgeleitet.
+Ordnet zwei verwaltete Elemente zu, die verschiedene Aspekte derselben zugrunde liegenden Entität darstellen. Diese Klasse wird von [**CIM \_ LogicalIdentity**](/windows/desktop/CIMWin32Prov/cim-logicalidentity)abgeleitet.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -41,13 +41,13 @@ class Msvm_LogicalIdentity : CIM_LogicalIdentity
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ logicalidentity** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ LogicalIdentity-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ logicalidentity** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ LogicalIdentity-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -60,11 +60,11 @@ Datentyp: **CIM \_ LogicalElement**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verweis auf einen alternativen Aspekt der System Entität.
+Verweis auf einen alternativen Aspekt der Systementität.
 
 </dd> <dt>
 
-**Systemelement**
+**SystemElement**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalElement**
@@ -83,22 +83,22 @@ Verweis auf einen Aspekt des logischen Elements.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ logikalidentität**](cim-logicalidentity.md)
+[**CIM \_ LogicalIdentity**](cim-logicalidentity.md)
 </dt> <dt>
 
-[**CIM- \_ logikalidentität**](/windows/desktop/CIMWin32Prov/cim-logicalidentity)
+[**CIM \_ LogicalIdentity**](/windows/desktop/CIMWin32Prov/cim-logicalidentity)
 </dt> </dl>
 
  

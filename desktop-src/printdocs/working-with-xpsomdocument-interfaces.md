@@ -1,26 +1,26 @@
 ---
-description: In diesem Thema werden die Schnittstellen beschrieben, die den Zugriff auf die Komponenten auf Dokument Ebene eines XPS-OMS ermöglichen.
+description: In diesem Thema werden die Schnittstellen beschrieben, die Zugriff auf die Komponenten einer XPS OM auf Dokumentebene ermöglichen.
 ms.assetid: 96b92480-cc28-4a57-a184-c52d3ddc9b05
-title: Arbeiten mit ixpsomdocument-Schnittstellen
+title: Arbeiten mit IXpsOMDocument-Schnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5299452195dc8f14ebd08508c3fd9a6e198781a7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ad7e8c0908382a731532f2697f03c8d67cb732ddf902f0c1ea181fe221d075fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360516"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119033758"
 ---
-# <a name="working-with-ixpsomdocument-interfaces"></a>Arbeiten mit ixpsomdocument-Schnittstellen
+# <a name="working-with-ixpsomdocument-interfaces"></a>Arbeiten mit IXpsOMDocument-Schnittstellen
 
-In diesem Thema werden die Schnittstellen beschrieben, die den Zugriff auf die Komponenten auf Dokument Ebene eines XPS-OMS ermöglichen.
+In diesem Thema werden die Schnittstellen beschrieben, die Zugriff auf die Komponenten einer XPS OM auf Dokumentebene ermöglichen.
 
 
 
-| Schnittstellen Name                                                                        | Logische untergeordnete Schnittstellen                                      | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                 |
+| Schnittstellenname                                                                        | Logische untergeordnete Schnittstellen                                      | Beschreibung                                                                                                                                                                                                                                                                                                                 |
 |---------------------------------------------------------------------------------------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Ixpsomdocument**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocument)<br/>                                   | [**Ixpsompagereferenzierung**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference)<br/> | Stellt einen einzelnen FixedDocument-Teil dar und bindet eine Auflistung von Seiten verweisen.<br/> [**Ixpsompagereferencecollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereferencecollection) ist die Sammlungs Schnittstelle, die zum Durchlaufen der [**ixpsompagereferenzierungsschnittstellen**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference) in einem Dokument verwendet wird.<br/> |
-| [**Ixpsomdocumentstructureresource**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentstructureresource)<br/> | Keine<br/>                                               | Stellt den DocumentStructure-Teil dar.<br/>                                                                                                                                                                                                                                                                           |
+| [**IXpsOMDocument**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocument)<br/>                                   | [**IXpsOMPageReference**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference)<br/> | Stellt einen einzelnen FixedDocument-Teil dar und bindet eine Auflistung von Seitenverweisen.<br/> [**IXpsOMPageReferenceCollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereferencecollection) ist die Sammlungsschnittstelle, die zum Durchlaufen der [**IXpsOMPageReference-Schnittstellen**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference) in einem Dokument verwendet wird.<br/> |
+| [**IXpsOMDocumentStructureResource**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentstructureresource)<br/> | Keine<br/>                                               | Stellt den DocumentStructure-Teil dar.<br/>                                                                                                                                                                                                                                                                           |
 
 
 
@@ -28,11 +28,11 @@ In diesem Thema werden die Schnittstellen beschrieben, die den Zugriff auf die K
 
 ## <a name="code-examples"></a>Codebeispiele
 
-Die Codebeispiele in diesem Abschnitt veranschaulichen, wie einige der Dokument Schnittstellen in einem Programm verwendet werden.
+Die Codebeispiele in diesem Abschnitt veranschaulichen, wie einige der Dokumentschnittstellen in einem Programm verwendet werden.
 
-### <a name="get-the-page-references-of-a-document"></a>Seiten Verweise eines Dokuments erhalten
+### <a name="get-the-page-references-of-a-document"></a>Abrufen der Seitenverweise eines Dokuments
 
-Im folgenden Codebeispiel wird ein Zeiger auf [**ixpsompagereferencecollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereferencecollection) abgerufen, das die Liste der [**ixpsompagereferenzierungsschnittstellen**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference) für das Dokument enthält, auf das vom *doc* -Parameter verwiesen wird.
+Das folgende Codebeispiel ruft einen Zeiger auf die [**IXpsOMPageReferenceCollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereferencecollection) ab, die die Liste der [**IXpsOMPageReference-Schnittstellen**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference) für das Dokument enthält, auf das vom *doc-Parameter* verwiesen wird.
 
 
 ```C++
@@ -72,9 +72,9 @@ Im folgenden Codebeispiel wird ein Zeiger auf [**ixpsompagereferencecollection**
 
 
 
-### <a name="get-the-document-structure-of-a-document"></a>Die Dokumentstruktur eines Dokuments erhalten.
+### <a name="get-the-document-structure-of-a-document"></a>Abrufen der Dokumentstruktur eines Dokuments
 
-Im folgenden Codebeispiel wird die Ressource abgerufen, die die Dokumentstruktur enthält.
+Das folgende Codebeispiel ruft die Ressource ab, die die Dokumentstruktur enthält.
 
 
 ```C++

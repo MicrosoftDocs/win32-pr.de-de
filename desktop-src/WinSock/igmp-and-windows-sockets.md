@@ -1,92 +1,92 @@
 ---
-description: Windows Sockets ermöglicht die Multicast-listenerermittlung (MLD) in IPv6 und das Internet Group Management-Protokoll (IGMP) auf IPv4 für Multicast Anwendungen durch die Verwendung von Socketoptionen und IOCTLs.
+description: Windows Sockets ermöglicht die Multicastlistenerermittlung (MLD) unter IPv6 und das Internet Group Management Protocol (IGMP) unter IPv4 für Multicastanwendungen mithilfe von Socketoptionen und IOCTLs.
 ms.assetid: a5de4273-e86e-4f13-b068-256cb38706d4
-title: MLD und IGMP mithilfe von Windows Sockets
+title: MLD und IGMP mit Windows Sockets
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e6cb9f9c345463e283adea0136037d7ccd03cebd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b2c550cf2c1463f5b646efc286c05010274d3cb44e13b9559302452bccb81c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214593"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051648"
 ---
-# <a name="mld-and-igmp-using-windows-sockets"></a>MLD und IGMP mithilfe von Windows Sockets
+# <a name="mld-and-igmp-using-windows-sockets"></a>MLD und IGMP mit Windows Sockets
 
-Windows Sockets ermöglicht die Multicast-listenerermittlung (MLD) in IPv6 und das Internet Group Management-Protokoll (IGMP) auf IPv4 für Multicast Anwendungen durch die Verwendung von Socketoptionen und IOCTLs. Auf dieser Seite werden die Socketoptionen beschrieben, die Multicast Programmierung ermöglichen, und es wird beschrieben, wie Sie verwendet werden. Informationen zu den Definitionen der einzelnen Socketoptionen finden Sie auf der Seite [Socketoptionen](socket-options.md) .
+Windows Sockets ermöglicht die Multicastlistenerermittlung (MLD) unter IPv6 und das Internet Group Management Protocol (IGMP) unter IPv4 für Multicastanwendungen mithilfe von Socketoptionen und IOCTLs. Auf dieser Seite werden die Socketoptionen beschrieben, die die Multicastprogrammierung ermöglichen, und ihre Verwendung beschrieben. Definitionen der einzelnen Socketoptionen finden Sie auf der Seite [Socketoptionen.](socket-options.md)
 
-Weitere Informationen zur Verwendung von IOCTLs für Multicast Programmierung finden Sie unter [Final-State-based Multicast Programming](final-state-based-multicast-programming.md) weiter unten in diesem Abschnitt.
+Informationen zur Verwendung von IOCTLs für die Multicastprogrammierung finden Sie unter [Final-State-Based Multicast Programming](final-state-based-multicast-programming.md) weiter unten in diesem Abschnitt.
 
-Unter Windows Vista und höher steht eine Reihe von Socketoptionen für Multicast Programmierung zur Verfügung, die IPv6-und IPv4-Adressen unterstützen. Diese Socketoptionen sind IP-agnostisch und können sowohl für IPv6 als auch für IPv4 verwendet werden. In IPv6 verwenden diese Socketoptionen MLDv2. Auf IPv4 verwenden diese Socketoptionen IGMPv3. Diese IP-agnostischen Optionen sind die bevorzugten Socketoptionen für Multicast Programmierung unter Windows Vista und höher. Windows Sockets verwendet die folgenden Socketoptionen: 
+Unter Windows Vista und höher ist eine Reihe von Socketoptionen für die Multicastprogrammierung verfügbar, die IPv6- und IPv4-Adressen unterstützen. Diese Socketoptionen sind IP-unabhängig und können sowohl für IPv6 als auch für IPv4 verwendet werden. Unter IPv6 verwenden diese Socketoptionen MLDv2. Unter IPv4 verwenden diese Socketoptionen IGMPv3. Diese ipunabhängigen Optionen sind die bevorzugten Socketoptionen für die Multicastprogrammierung Windows Vista und höher. Windows Sockets verwendet die folgenden Socketoptionen: 
 
 | Socketoption               | Argumenttyp                                            |
 |-----------------------------|----------------------------------------------------------|
-| mcast- \_ Block \_ Quelle        | [**Gruppe \_ \_Quellreq**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-group_source_req) -Struktur |
-| mcast \_ - \_ joingruppe          | [**Gruppe \_ Req**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-group_req) -Struktur                |
-| mcast \_ Join- \_ Quell \_ Gruppe  | [**Gruppe \_ \_Quellreq**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-group_source_req) -Struktur |
-| mcast \_ - \_ Gruppe verlassen         | [**Gruppe \_ Req**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-group_req) -Struktur                |
-| mcast \_ - \_ Quell \_ Gruppe verlassen | [**Gruppe \_ \_Quellreq**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-group_source_req) -Struktur |
-| mcast- \_ Quelle "Unblock" \_      | [**Gruppe \_ \_Quellreq**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-group_source_req) -Struktur |
+| \_MCAST-BLOCKQUELLE \_        | [**GROUP \_ SOURCE \_ REQ-Struktur**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-group_source_req) |
+| MCAST \_ JOIN \_ GROUP          | [**GROUP \_ REQ-Struktur**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-group_req)                |
+| MCAST \_ JOIN \_ SOURCE \_ GROUP  | [**GROUP \_ SOURCE \_ REQ-Struktur**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-group_source_req) |
+| MCAST \_ LEAVE \_ GROUP         | [**GROUP \_ REQ-Struktur**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-group_req)                |
+| \_MCAST– \_ QUELLGRUPPE \_ VERLASSEN | [**GROUP \_ SOURCE \_ REQ-Struktur**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-group_source_req) |
+| MCAST \_ UNBLOCK \_ SOURCE      | [**GROUP \_ SOURCE \_ REQ-Struktur**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-group_source_req) |
 
 
 
  
 
-Eine Reihe von Socketoptionen sind für Multicast Programmierung verfügbar, die nur IPv6-Adressen unterstützen. Diese Socketoptionen verwenden MLDv1 oder MLDv2. Die verwendete Version von MLD hängt von der Windows-Version ab. MLDv2 wird unter Windows Vista und höher unterstützt. Windows Sockets verwendet die folgenden Socketoptionen: 
+Für die Multicastprogrammierung, die nur IPv6-Adressen unterstützt, stehen verschiedene Socketoptionen zur Verfügung. Diese Socketoptionen verwenden MLDv1 oder MLDv2. Die verwendete MLD-Version hängt von der Version des Windows. MLDv2 wird unter Windows Vista und höher unterstützt. Windows Sockets verwendet die folgenden Socketoptionen: 
 
 | Socketoption          | Argumenttyp                             |
 |------------------------|-------------------------------------------|
-| IPv6 \_ - \_ Mitgliedschaft hinzufügen  | [**IPv6- \_ MREQ**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ipv6_mreq) -Struktur |
-| IPv6- \_ Drop- \_ Mitgliedschaft | [**IPv6- \_ MREQ**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ipv6_mreq) -Struktur |
+| IPV6– \_ MITGLIEDSCHAFT \_ HINZUFÜGEN  | [**ipv6 \_ mreq-Struktur**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ipv6_mreq) |
+| IPV6 \_ DROP \_ MEMBERSHIP | [**ipv6 \_ mreq-Struktur**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ipv6_mreq) |
 
 
 
  
 
-Eine Reihe von Socketoptionen sind für Multicast Programmierung verfügbar, die nur IPv4-Adressen unterstützen. Diese Socketoptionen verwenden IGMPv3 oder igmpv2. Die verwendete Version von IGMP hängt von der Windows-Version ab. IGMPv3 wird unter Windows Vista und höher unterstützt. Windows Sockets verwendet die folgenden Socketoptionen:
+Eine Reihe von Socketoptionen sind für die Multicastprogrammierung verfügbar, die nur IPv4-Adressen unterstützen. Diese Socketoptionen verwenden IGMPv3 oder IGMPv2. Die verwendete IGMP-Version hängt von der Version des Windows. IGMPv3 wird unter Windows Vista und höher unterstützt. Windows Sockets verwendet die folgenden Socketoptionen:
 
 | Socketoption                | Argumenttyp                                        |
 |------------------------------|------------------------------------------------------|
-| IP \_ - \_ Mitgliedschaft hinzufügen          | [**IP- \_ MREQ-**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ip_mreq) Struktur                |
-| IP \_ - \_ Quell \_ Mitgliedschaft hinzufügen  | [**IP- \_ MREQ- \_ Quell**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ip_mreq_source) Struktur |
-| IP- \_ Block \_ Quelle            | [**IP- \_ MREQ- \_ Quell**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ip_mreq_source) Struktur |
-| IP- \_ Drop- \_ Mitgliedschaft         | [**IP- \_ MREQ-**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ip_mreq) Struktur                |
-| IP- \_ Drop- \_ Quell \_ Mitgliedschaft | [**IP- \_ MREQ- \_ Quell**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ip_mreq_source) Struktur |
-| IP- \_ Block \_ Quelle          | [**IP- \_ MREQ- \_ Quell**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ip_mreq_source) Struktur |
+| \_IP-MITGLIEDSCHAFT \_ HINZUFÜGEN          | [**ip \_ mreq-Struktur**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ip_mreq)                |
+| \_IP-ADRESSE: \_ \_ QUELLMITGLIEDSCHAFT HINZUFÜGEN  | [**ip \_ mreq \_ source**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ip_mreq_source) structure |
+| \_ \_ IP-BLOCKQUELLE            | [**ip \_ mreq \_ source**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ip_mreq_source) structure |
+| IP \_ DROP \_ MEMBERSHIP         | [**ip \_ mreq-Struktur**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ip_mreq)                |
+| IP \_ DROP \_ SOURCE \_ MEMBERSHIP | [**ip \_ mreq \_ source**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ip_mreq_source) structure |
+| \_ \_ IP-ENTSPERRUNGSQUELLE          | [**ip \_ mreq \_ source**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-ip_mreq_source) structure |
 
 
 
  
 
-Wenn IGMPv3 verfügbar ist, werden die Optionen IP-Quell \_ \_ \_ Mitgliedschaft, IP- \_ Block \_ Quelle, IP-Ablage \_ \_ Quell \_ Mitgliedschaft und IP- \_ Blockierungs \_ Quelle effizienter behandelt, da der Router das Filtern verarbeiten kann. Wenn nur igmpv2 verfügbar ist, muss der Host das Filtern verarbeiten.
+Wenn IGMPv3 verfügbar ist, werden die Optionen IP \_ ADD \_ SOURCE \_ MEMBERSHIP, IP BLOCK SOURCE, IP DROP SOURCE MEMBERSHIP und IP UNBLOCK SOURCE effizienter verarbeitet, da der Router die Filterung verarbeiten \_ \_ \_ \_ \_ \_ \_ kann. Wenn nur IGMPv2 verfügbar ist, muss der Host die Filterung verarbeiten.
 
-Es gibt zwei Kategorien, in denen die meisten Anwendungen wahrscheinlich ausfallen: beliebige Quelle und kontrollierte Quelle.
+Es gibt zwei Kategorien, in die die meisten Anwendungen wahrscheinlich fallen: "any-source" und "controlled-source".
 
--   Alle **-Quell** Anwendungen akzeptieren standardmäßig alle Quellen, sodass einzelne Quellen bei Bedarf deaktiviert werden können. Ein Beispiel für eine beliebige Quell Anwendung ist ein Videokonferenz-Telefon, mit dem alle Empfänger teilnehmen können.
--   **Kontrollierte Quell** Anwendungen beschränken die Quellen auf eine bestimmte Liste, z. b. eine Internet Radio Station oder die Übertragung eines Ereignisses. Der Prozess der Verwendung von Socketoptionen unterscheidet sich geringfügig voneinander.
+-   **Alle Quellanwendungen** akzeptieren standardmäßig alle Quellen, sodass einzelne Quellen nach Bedarf deaktiviert werden können. Ein Beispiel für eine Any-Source-Anwendung ist ein Videokonferenzaufruf, der allen Empfängern die Teilnahme ermöglicht.
+-   **Anwendungen mit kontrollierter** Quelle beschränken Quellen auf eine bestimmte Liste, z. B. einen Internetsender oder die Übertragung eines wichtigen Ereignisses. Der Prozess der Verwendung von Socketoptionen ist für jede etwas anders.
 
-Unter Windows Vista und höher gelten die folgenden Schritte für alle-Quell Anwendungen:
+Unter Windows Vista und höher gelten die folgenden Schritte für Alle-Quellanwendungen:
 
-- Verwenden Sie die **\_ \_ Gruppe "mcast Join** ", um einer Gruppe beizutreten.  
-- Verwenden Sie die **mcast- \_ Block \_ Quelle** , um bei Bedarf eine bestimmte Quelle zu deaktivieren.  
-- Verwenden Sie die **mcast- \_ \_ Quelle zur Aufhebung der Blockierung** , um bei Bedarf eine blockierte Quelle erneut zuzulassen.  
-- Verwenden Sie die **mcast- \_ \_ Gruppe verlassen** , um die Gruppe zu verlassen.  
+- Verwenden **Sie MCAST \_ JOIN \_ GROUP,** um einer Gruppe bei beitritten.  
+- Verwenden **Sie MCAST \_ BLOCK \_ SOURCE,** um eine bestimmte Quelle bei Bedarf zu deaktivieren.  
+- Verwenden **Sie MCAST \_ UNBLOCK \_ SOURCE,** um eine blockierte Quelle bei Bedarf erneut zu erlauben.  
+- Verwenden **Sie MCAST \_ LEAVE \_ GROUP,** um die Gruppe zu verlassen.  
 
-Unter Windows Vista und höher gelten die folgenden Schritte für gesteuerte Quell Anwendungen:
+Unter Windows Vista und höher gelten die folgenden Schritte für Anwendungen mit kontrollierter Quelle:
 
-- Verwenden Sie die **mcast \_ Join- \_ Quell \_ Gruppe** , um jedem Gruppen-/Quell-paar beizutreten.  
-- Verwenden Sie die **mcast- \_ \_ Quell \_ Gruppe** , um die einzelnen Gruppen/Quellen zu verlassen, oder verwenden Sie die **mcast- \_ \_ Gruppe** , um alle Quellen zu verlassen, wenn die gleiche Gruppen Adresse von allen Quellen verwendet wird.  
+- Verwenden **Sie MCAST \_ JOIN SOURCE \_ \_ GROUP,** um jedes Gruppen-/Quellpaar zu verbinden.  
+- Verwenden **Sie MCAST \_ LEAVE SOURCE \_ \_ GROUP,** um jede Gruppe/Quelle zu verlassen, oder verwenden Sie **MCAST LEAVE \_ \_ GROUP,** um alle Quellen zu verlassen, wenn dieselbe Gruppenadresse von allen Quellen verwendet wird.  
 
-Die folgenden Schritte gelten für alle-Quell Anwendungen:
+Die folgenden Schritte gelten für Alle-Quellanwendungen:
 
-- Verwenden **Sie IP- \_ \_ Mitgliedschaft hinzufügen** , um einer Gruppe beizutreten (IPv6-Mitgliedschaft für IPv6 **\_ Hinzufügen \_** ).  
-- Verwenden Sie die **IP- \_ Block \_ Quelle** , um eine bestimmte Quelle zu deaktivieren, falls dies erforderlich ist.  
-- Verwenden Sie die **IP- \_ \_ Quell Quellen Quelle** , um bei Bedarf eine blockierte Quelle erneut zuzulassen.  
-- Verwenden Sie die **IP- \_ Drop- \_ Mitgliedschaft** , um die Gruppe zu verlassen (**IPv6- \_ Drop \_ Membership** für IPv6).  
+- Verwenden Sie **IP \_ ADD \_ MEMBERSHIP** zum Beitreten zu einer Gruppe (**IPV6 \_ ADD \_ MEMBERSHIP** for IPv6).  
+- Verwenden **Sie IP BLOCK \_ \_ SOURCE,** um eine bestimmte Quelle bei Bedarf zu deaktivieren.  
+- Verwenden **Sie IP \_ UNBLOCK \_ SOURCE,** um eine blockierte Quelle bei Bedarf erneut zu erlauben.  
+- Verwenden **Sie IP DROP \_ \_ MEMBERSHIP,** um die Gruppe **(IPV6 \_ DROP \_ MEMBERSHIP** für IPv6) zu verlassen.  
 
-Die folgenden Schritte gelten für gesteuerte Quell Anwendungen:
+Die folgenden Schritte gelten für Anwendungen mit kontrollierter Quelle:
 
-- Verwenden **Sie IP- \_ \_ Quell \_ Mitgliedschaft hinzufügen** , um jedem Gruppen-/quellpaar beizutreten.  
-- Verwenden Sie die **IP-Ablage \_ \_ Quell \_ Mitgliedschaft** , um jede Gruppe/Quelle zu verlassen, oder verwenden Sie die **IP- \_ Drop- \_ Mitgliedschaft** , um alle Quellen zu verlassen, wenn die gleiche Gruppen Adresse von allen Quellen verwendet wird.  
+- Verwenden Sie **IP \_ ADD SOURCE \_ \_ MEMBERSHIP,** um die einzelnen Gruppen-/Quellpaare zu verbinden.  
+- Verwenden **Sie IP DROP SOURCE \_ \_ \_ MEMBERSHIP,** um jede Gruppe/Quelle zu verlassen, oder verwenden Sie **IP DROP \_ \_ MEMBERSHIP,** um alle Quellen zu verlassen, wenn dieselbe Gruppenadresse von allen Quellen verwendet wird.  
 
-Die Reihenfolge, in der diese Socketoptionen festgelegt sind, hat Regeln zugeordnet. Informationen und Informationen zur Problembehandlung bei Multicast Socketoptionen finden Sie unter [Multicast-socketoptionsverhalten](multicast-socket-option-behavior.md).
+Der Reihenfolge, in der diese Socketoptionen festgelegt werden, sind Regeln zugeordnet. Informationen und Informationen zur Problembehandlung bei Multicastsocketoptionen finden Sie unter [Verhalten der Multicastsocketoption](multicast-socket-option-behavior.md).

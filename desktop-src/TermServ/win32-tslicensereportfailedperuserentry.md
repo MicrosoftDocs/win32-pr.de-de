@@ -1,11 +1,11 @@
 ---
 title: Win32_TSLicenseReportFailedPerUserEntry-Klasse
-description: Enthält Details über die Client Zugriffslizenz für fehlerhafte Remotedesktopdienste pro Benutzer (RDS \ 160; Pro Benutzer-CAL).
+description: Enthält Details zur fehlgeschlagenen Remotedesktopdienste Pro Benutzer-Clientzugriffslizenz (RDS \ 160; Pro Benutzer-CAL).
 ms.assetid: 27d155a4-938e-4bca-8d15-03c44740e506
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSLicenseReportFailedPerUserEntry-Klasse Remotedesktopdienste
-- Win32_TSLicenseReportFailedPerUserEntry Klasse Remotedesktopdienste, beschrieben
+- Win32_TSLicenseReportFailedPerUserEntry-Remotedesktopdienste
+- Win32_TSLicenseReportFailedPerUserEntry klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -21,16 +21,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 18098ce0510a39f6083edcf688a18c10a3e20278
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c02d56c1a7e2c715f068d808d45ac6ae3295b16bb7382179ec0e32c93beee096
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119420840"
 ---
-# <a name="win32_tslicensereportfailedperuserentry-class"></a>Win32-Klasse "-Klasse (Klasse)" \_
+# <a name="win32_tslicensereportfailedperuserentry-class"></a>Win32 \_ TSLicenseReportFailedPerUserEntry-Klasse
 
-Enthält Details zur Client Zugriffslizenz für die fehlerhafte Remotedesktopdienste pro Benutzer (RDS pro Benutzer-CAL).
+Enthält Details zur fehlgeschlagenen Remotedesktopdienste Clientzugriffslizenz pro Benutzer (RDS per User CAL).
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -50,44 +50,44 @@ class Win32_TSLicenseReportFailedPerUserEntry
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ zlicensereportfailedperuserentry** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSLicenseReportFailedPerUserEntry-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ slicensereportfailedperuserentry** " verfügt über diese Eigenschaften.
+Die **Win32 \_ TSLicenseReportFailedPerUserEntry-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Caltype**
+**CALType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Typ der ausgegebene Cal an. Dabei handelt es sich um einen der folgenden Werte.
+Gibt den Typ der ausgestellten CAL an. Dies ist einer der folgenden Werte.
 
-"Integrierte TS pro Gerät CAL"
+"Integrierte TS pro Geräte-CAL"
 
-"TS-CAL pro Gerät"
+"TS pro Geräte-CAL"
 
 "TS Internet Connector CAL"
 
-"TS pro Benutzer-CAL"
+"TS Pro Benutzer-CAL"
 
-"TS-oder RDS-CAL pro Gerät"
+"TS oder RDS pro Geräte-CAL"
 
-"TS-oder RDS-pro-Benutzer-CAL"
+"TS oder RDS pro Benutzer-CAL"
 
-"VDI Standard Suite pro Device Abonnement License"
+"Abonnementlizenz für VDI Standard Suite pro Gerät"
 
-"VDI Premium Suite pro Device Abonnement License"
+"Abonnementlizenz Premium VDI-Suite pro Gerät"
 
-"RDS pro Gerät CAL"
+"RDS pro Geräte-CAL"
 
 "RDS pro Benutzer-CAL"
 
@@ -96,20 +96,20 @@ Gibt den Typ der ausgegebene Cal an. Dabei handelt es sich um einen der folgende
 **ProductVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Version von Remotedesktopdienste, für die die RDS-Client Zugriffslizenz pro Benutzer ausgestellt wurde. Dabei handelt es sich um einen der folgenden Werte.
+Die Version von Remotedesktopdienste, für die die RDS-CAL pro Benutzer ausgestellt wurde. Dies ist einer der folgenden Werte.
 
 <dt>
 
 "Windows Server 2012"
 </dt> <dd>
 
-Nur Server, auf denen Windows Server 2012, Windows Server 2008 R2 oder Windows Server 2008 ausgeführt wird, werden mit dieser Lizenz unterstützt.
+Nur Server mit Windows Server 2012, Windows Server 2008 R2 oder Windows Server 2008 werden mit dieser Lizenz unterstützt.
 
 </dd> <dt>
 
@@ -123,22 +123,22 @@ Nur Server, auf denen Windows Server 2008 R2 oder Windows Server 2008 ausgeführ
 "Windows Server 2008"
 </dt> <dd>
 
-Nur Server, auf denen Windows Server 2008 ausgeführt wird, werden mit dieser Lizenz unterstützt.
+Nur Server mit Windows Server 2008 werden mit dieser Lizenz unterstützt.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Productversionid**
+**ProductVersionID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Produkt Versions Kennung für das Remotedesktopdienste License Key Pack.
+Produktversions-ID für Remotedesktopdienste Lizenzschlüsselpaket.
 
 <dt>
 
@@ -179,23 +179,23 @@ Wird nicht unterstützt.
 
 </dd> <dt>
 
-**Trieabanceon**
+**TriedIssuanceOn**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **DATETIME**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum, an dem die Lizenz Ausstellung versucht wurde.
+Das Datum, an dem die Lizenzausstellung versucht wurde.
 
 </dd> <dt>
 
 **Benutzer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -204,7 +204,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der Name des Benutzers, für den die Lizenz Ausstellung versucht wurde.
+Der Name des Benutzers, für den die Lizenzausstellung versucht wurde.
 
 </dd> </dl>
 
@@ -217,16 +217,16 @@ Der Name des Benutzers, für den die Lizenz Ausstellung versucht wurde.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Fetchreportfailedperuserentries**](fetchreportfailedperuserentries-win32-tslicensereport.md)
+[**FetchReportFailedPerUserEntries**](fetchreportfailedperuserentries-win32-tslicensereport.md)
 </dt> </dl>
 
  

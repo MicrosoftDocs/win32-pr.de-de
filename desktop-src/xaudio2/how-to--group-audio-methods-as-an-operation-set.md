@@ -1,25 +1,25 @@
 ---
-description: In diesem Thema erfahren Sie, wie Sie XAudio2-Methoden gruppieren, sodass Sie gleichzeitig wirksam werden.
+description: In diesem Thema erfahren Sie, wie Sie XAudio2-Methoden gruppiert werden können, damit sie gleichzeitig wirksam werden.
 ms.assetid: 1b50acc5-a6b2-e010-9e7e-0080a5ee4a58
 title: "So wird's gemacht: Gruppieren von Audiomethoden als Vorgangssatz"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5146c650ae6f89331c40f3e0db896f49484a6f0e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c9f5c1d27e33db4c0f7910761a7be574b72e9ac7aaa91b14329fa003792860d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866484"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082924"
 ---
 # <a name="how-to-group-audio-methods-as-an-operation-set"></a>So wird's gemacht: Gruppieren von Audiomethoden als Vorgangssatz
 
-In diesem Thema erfahren Sie, wie Sie XAudio2-Methoden gruppieren, sodass Sie gleichzeitig wirksam werden.
+In diesem Thema erfahren Sie, wie Sie XAudio2-Methoden gruppiert werden können, damit sie gleichzeitig wirksam werden.
 
-## <a name="to-group-audio-methods-as-an-operation-set"></a>So gruppieren Sie Audiomethoden als Vorgangs Satz
+## <a name="to-group-audio-methods-as-an-operation-set"></a>So gruppen Sie Audiomethoden als Vorgangssatz
 
-1.  Deklarieren Sie einen globalen Vorgangs Satz-Zählers.
+1.  Deklarieren Sie einen globalen Vorgangssatzzähler.
 
-    Der [Vorgangs Satz](operation-sets.md) -Counter stellt sicher, dass jeder Vorgangs Satz eindeutig ist.
+    Der [Vorgangssatzzähler](operation-sets.md) stellt sicher, dass jeder Vorgangssatz eindeutig ist.
 
     ```
     UINT32 OperationSetCounter = 0;
@@ -27,9 +27,9 @@ In diesem Thema erfahren Sie, wie Sie XAudio2-Methoden gruppieren, sodass Sie gl
 
     
 
-2.  Erhöhen Sie den globalen Counter.
+2.  Inkrementiert den globalen Zähler.
 
-    Jedes Mal, wenn Sie einen neuen [Vorgangs Satz](operation-sets.md)übermitteln, sollte der globale gegen Schritt erhöht werden, um sicherzustellen, dass jeder Satz eindeutig ist.
+    Jedes Mal, wenn Sie einen neuen [Vorgangssatz übermitteln,](operation-sets.md)sollte der globale Zähler erhöht werden, um sicherzustellen, dass jeder Satz eindeutig ist.
 
     ```
     UINT32 OperationID = UINT32(InterlockedIncrement(LPLONG(&OperationSetCounter)));
@@ -37,11 +37,11 @@ In diesem Thema erfahren Sie, wie Sie XAudio2-Methoden gruppieren, sodass Sie gl
 
     
 
-3.  Gruppieren Sie die Methodenaufrufe durch Festlegen der Parameter für den [Vorgangs Satz](operation-sets.md) .
+3.  Gruppieren Sie die Methodenaufrufe, indem Sie [ihre Vorgangssatzparameter](operation-sets.md) festlegen.
 
-4.  Legen Sie die Parameter des [Vorgangs Satzes](operation-sets.md) auf den aktuellen Wert des globalen Leistungs Zählers fest.
+4.  Legen Sie [die Parameter für den](operation-sets.md) Vorgangssatz auf den aktuellen Wert des globalen Leistungsindikators fest.
 
-    In diesem Fall werden vier Aufrufe von [**IXAudio2SourceVoice:: Start**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-start) als ein [Vorgangs Satz](operation-sets.md)gruppiert. Das Gruppieren der Aufrufe bewirkt, dass alle vier Sounds gleichzeitig gestartet werden.
+    In diesem Fall werden vier Aufrufe von [**IXAudio2SourceVoice::Start**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-start) als ein [Vorgangssatz gruppiert.](operation-sets.md) Das Gruppieren der Aufrufe bewirkt, dass alle vier Sounds genau zur gleichen Zeit beginnen.
 
     ```
     hr = pSFXSourceVoice1->Start( 0, OperationID );
@@ -52,9 +52,9 @@ In diesem Thema erfahren Sie, wie Sie XAudio2-Methoden gruppieren, sodass Sie gl
 
     
 
-5.  Starten Sie den [Vorgangs Satz](operation-sets.md).
+5.  Starten Sie den [Vorgangssatz](operation-sets.md).
 
-    Nachdem Sie alle Methoden im Satz aufgerufen haben, starten Sie den Satz durch Aufrufen von [**IXAudio2:: CommitChanges**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-commitchanges) mit dem aktuellen Wert des globalen Leistungs Zählers.
+    Nachdem Sie alle Methoden in der Menge aufruft, starten Sie den Satz, indem Sie [**IXAudio2::CommitChanges**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-commitchanges) mit dem aktuellen Wert des globalen Zählers aufrufen.
 
     ```
     pXAudio2->CommitChanges(OperationID);
@@ -66,13 +66,13 @@ In diesem Thema erfahren Sie, wie Sie XAudio2-Methoden gruppieren, sodass Sie gl
 
 <dl> <dt>
 
-[Vorgangs Sätze](operation-sets.md)
+[Vorgangssätze](operation-sets.md)
 </dt> <dt>
 
 [XAudio2-Programmieranleitung](programming-guide.md)
 </dt> <dt>
 
-[XAudio2-Vorgangs Sätze](xaudio2-operation-sets.md)
+[XAudio2-Vorgangssätze](xaudio2-operation-sets.md)
 </dt> </dl>
 
  

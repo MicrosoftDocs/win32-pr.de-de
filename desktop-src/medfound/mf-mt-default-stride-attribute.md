@@ -1,39 +1,39 @@
 ---
-description: Standard Oberflächen Stride für einen unkomprimierten Video Medientyp. Stride ist die Anzahl der Bytes, die erforderlich sind, um von einer Zeile aus Pixel zum nächsten zu wechseln.
+description: Standardoberflächenschritt für einen nicht komprimierten Videomedientyp. Stride ist die Anzahl der Bytes, die von einer Pixelzeile zur nächsten gesendet werden müssen.
 ms.assetid: 71fda231-3497-49db-b82e-2fd79f6ade66
-title: MF_MT_DEFAULT_STRIDE-Attribut (mfapi. h)
+title: MF_MT_DEFAULT_STRIDE -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7b2b9633e14c8d414355ca41be29a9c6c2f8886
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e130918f62d6ff986ced7dd6449dcc2d381a00fc0d7c0342eeb4afcc03833bef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215142"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119035238"
 ---
-# <a name="mf_mt_default_stride-attribute"></a>MF \_ MT- \_ Standard-Stride- \_ Attribut
+# <a name="mf_mt_default_stride-attribute"></a>MF \_ MT \_ DEFAULT \_ STRIDE-Attribut
 
-Standard Oberflächen Stride für einen unkomprimierten Video Medientyp. Stride ist die Anzahl der Bytes, die erforderlich sind, um von einer Zeile aus Pixel zum nächsten zu wechseln.
+Standardoberflächenschritt für einen nicht komprimierten Videomedientyp. Stride ist die Anzahl der Bytes, die von einer Pixelzeile zur nächsten gesendet werden müssen.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-Als **Int32** -Wert behandeln.
+Als **INT32-Wert** behandeln.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Attribut Wert wird als **UInt32** gespeichert, sollte jedoch in einen ganzzahligen Wert von 32-Bit-Ganzzahl umgewandelt werden. Stride kann negativ sein.
+Der Attributwert wird als **UINT32 gespeichert,** sollte jedoch in einen 32-Bit-Ganzzahlwert mit Vorzeichen konvertiert werden. Stride kann negativ sein.
 
-Stride ist für Top-Down-Bilder positiv und negativ für Bild von unten nach oben.
+Stride ist für Bilder von oben nach unten positiv und für Bilder von unten nach oben negativ.
 
-Dieses Attribut liefert den Schritt für eine zusammen *hängende* Darstellung des Bilds im Arbeitsspeicher. Das heißt, eine Darstellung ohne zusätzliche Auffüll Bytes nach jeder Zeile. Wenn ein Medien Puffer die [**IMF2DBuffer**](/windows/desktop/api/mfobjects/nn-mfobjects-imf2dbuffer) -Schnittstelle unterstützt, verwenden Sie die [**IMF2DBuffer:: Lock2D**](/windows/desktop/api/mfobjects/nf-mfobjects-imf2dbuffer-lock2d) -Methode, um den tatsächlichen Schritt der Oberfläche zu erhalten, der möglicherweise zusätzliche Leerzeichen enthält.
+Dieses Attribut gibt den Schritt für eine *zusammenhängende* Darstellung des Bilds im Arbeitsspeicher an. das heißt, eine Darstellung ohne zusätzliche Auf padding bytes nach jeder Zeile. Wenn ein Medienpuffer die [**BERD2DBuffer-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imf2dbuffer) unterstützt, verwenden Sie die [**METHODE DERT2DBuffer::Lock2D,**](/windows/desktop/api/mfobjects/nf-mfobjects-imf2dbuffer-lock2d) um den tatsächlichen Schritt der Oberfläche zu erhalten. Dies kann zusätzliche Bytes enthalten.
 
-Weitere Informationen zu Surface Stride finden Sie unter [Image Stride](image-stride.md).
+Weitere Informationen zum Oberflächenschritt finden Sie unter [Image Stride](image-stride.md).
 
-Ein Beispiel für die Berechnung des Standard Schrittes finden Sie unter [nicht komprimierte Video Puffer](uncompressed-video-buffers.md).
+Ein Beispiel zum Berechnen des Standardschritts finden Sie unter [Unkomprimierte Videopuffer.](uncompressed-video-buffers.md)
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,9 +41,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -51,22 +51,22 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEs::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEs::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**VERERBungstyp**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> <dt>
 
-[Bild Schritt](image-stride.md)
+[Bild-Stride](image-stride.md)
 </dt> </dl>
 
  

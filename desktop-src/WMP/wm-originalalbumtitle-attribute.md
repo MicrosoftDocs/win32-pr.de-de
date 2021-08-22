@@ -1,9 +1,9 @@
 ---
-title: WM/originalalbumtitle-Attribut
-description: Das WM/originalalbumtitle-Attribut ist der Name des Albums, auf dem der Titel zuerst angezeigt wurde.
+title: WM/Original FormatTitle-Attribut
+description: Das WM/OriginalTrackTitle-Attribut ist der Name des Albums, auf dem der Titel zum ersten Mal aufgetreten ist.
 ms.assetid: e670c793-bae3-4dc5-92a1-4407cb2a094b
 keywords:
-- WM/originalalbumtitle-Attribut, Windows Media Player
+- WM/Original FormatTitle-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f0dc2344c95bf3d0b09448277f1522baa879c80
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2fd025d78c5d4fb3a3fca20cdb6ba6bf092c45465e7e738ddd4c1921301c6899
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053857"
 ---
-# <a name="wmoriginalalbumtitle-attribute"></a>WM/originalalbumtitle-Attribut
+# <a name="wmoriginalalbumtitle-attribute"></a>WM/Original FormatTitle-Attribut
 
-Das **WM/originalalbumtitle-** Attribut ist der Name des Albums, auf dem der Titel zuerst angezeigt wurde.
+Das **WM/OriginalTrackTitle-Attribut** ist der Name des Albums, auf dem der Titel zum ersten Mal aufgetreten ist.
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Musikdateien](music-file-attributes.md)
+-   [Musik Dateien](music-file-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird nur in einer Musikdatei gespeichert, die nicht in der Bibliothek gespeichert ist.
+Dieses Attribut wird nur in einer Musikdatei gespeichert, die sich nicht in der Bibliothek befindet.
 
-Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist "g \_ wszwmoriginalalbumtitle".
+Die Windows Media Format SDK-Konstante für dieses Attribut ist g \_ wszWMOriginalWeitTitle.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,7 +49,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

@@ -1,27 +1,27 @@
 ---
-description: Das Swap Services-Objekt stellt die folgenden Methoden zur Verfügung.
+description: Das SWbemServices-Objekt macht die folgenden Methoden verfügbar.
 ms.assetid: B2F99840-702B-4C15-839E-5B038EACA1DC
 ms.tgt_platform: multiple
-title: Swap Services-Methoden
+title: SWbemServices-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b069f6b4725e4cf6a17a663a5cf532c9677fc14b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7a191c66131db0dd3bd13988d7c7ee53cc20cb9b0b44190add1cee46134ada37
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106367986"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119411490"
 ---
-# <a name="swbemservices-methods"></a>Swap Services-Methoden
+# <a name="swbemservices-methods"></a>SWbemServices-Methoden
 
-Das [**Swap Services**](swbemservices.md) -Objekt stellt die folgenden Methoden zur Verfügung.
+Das [**SWbemServices-Objekt**](swbemservices.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Associatorsof-Methode**](swbemservices-associatorsof.md)
--   [**Associatorsofasync-Methode**](swbemservices-associatorsofasync.md)
+-   [**AssociatorsOf-Methode**](swbemservices-associatorsof.md)
+-   [**AssociatorsOfAsync-Methode**](swbemservices-associatorsofasync.md)
 -   [**Delete-Methode**](swbemservices-delete.md)
--   [**Deleteasync-Methode**](swbemservices-deleteasync.md)
+-   [**DeleteAsync-Methode**](swbemservices-deleteasync.md)
 -   [**ExecMethod-Methode**](swbemservices-execmethod.md)
 -   [**ExecMethodAsync-Methode**](swbemservices-execmethodasync.md)
 -   [**ExecNotificationQuery-Methode**](swbemservices-execnotificationquery.md)
@@ -29,13 +29,13 @@ Das [**Swap Services**](swbemservices.md) -Objekt stellt die folgenden Methoden 
 -   [**ExecQuery-Methode**](swbemservices-execquery.md)
 -   [**ExecQueryAsync-Methode**](swbemservices-execqueryasync.md)
 -   [**Get-Methode**](swbemservices-get.md)
--   [**Getasync-Methode**](swbemservices-getasync.md)
+-   [**GetAsync-Methode**](swbemservices-getasync.md)
 -   [**InstancesOf-Methode**](swbemservices-instancesof.md)
--   [**Instancesofasync-Methode**](swbemservices-instancesofasync.md)
--   [**Referencesto-Methode**](swbemservices-referencesto.md)
--   [**Referencestoasync-Methode**](swbemservices-referencestoasync.md)
--   [**SubclassesOf-Methode**](swbemservices-subclassesof.md)
--   [**Subclassesofasync-Methode**](swbemservices-subclassesofasync.md)
+-   [**InstancesOfAsync-Methode**](swbemservices-instancesofasync.md)
+-   [**ReferencesTo-Methode**](swbemservices-referencesto.md)
+-   [**ReferencesToAsync-Methode**](swbemservices-referencestoasync.md)
+-   [**UnterklassenOf-Methode**](swbemservices-subclassesof.md)
+-   [**UnterklassenOfAsync-Methode**](swbemservices-subclassesofasync.md)
 
  
 

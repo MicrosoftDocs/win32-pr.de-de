@@ -1,9 +1,9 @@
 ---
-title: "\"errorf\"-Funktion"
-description: Sendet eine Fehlermeldung an die Informations Warteschlange.
+title: errorf-Funktion
+description: Übermittelt eine Fehlermeldung an die Informationswarteschlange.
 ms.assetid: bf4dc6dc-b36e-4b71-ad61-b7a5ba332879
 keywords:
-- "\"errorf\"-Funktion HLSL"
+- errorf-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,23 +13,23 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 76c8fbcd9b6cb15dbbb735296a3aada8f5e568cb
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 0651a27419a369721806e9aa4717a20088f8f5fbbaa0063628d2feb69648c7cf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037850"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119562680"
 ---
-# <a name="errorf-function"></a>"errorf"-Funktion
+# <a name="errorf-function"></a>errorf-Funktion
 
-Sendet eine Fehlermeldung an die Informations Warteschlange.
+Übermittelt eine Fehlermeldung an die Informationswarteschlange.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 void errorf(
-   string format,
-    argument ...
+   string format,
+    argument ...
 );
 ```
 
@@ -55,34 +55,34 @@ Optionale Argumente.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei Geräten, die den Vorgang nicht unterstützen, wird dieser Vorgang nicht unterstützt.
+Dieser Vorgang führt auf Geräten, die ihn nicht unterstützen, keine Aktion aus.
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                        | Unterstützt |
 |---------------------------------------------------------------------|-----------|
-| [Shader Model 4 (DirectX HLSL) oder höher.](dx-graphics-hlsl-sm3.md) | ja       |
+| [ShaderModell 4 (DirectX HLSL) oder höher.](dx-graphics-hlsl-sm3.md) | Ja       |
 
 
 
- 
+ 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

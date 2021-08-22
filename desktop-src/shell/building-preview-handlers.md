@@ -1,164 +1,164 @@
 ---
-description: In diesem Thema werden die spezifischen Schnittstellen und Methoden erläutert, die zum Erstellen eines Vorschau Handlers erforderlich sind.
+description: In diesem Thema werden die spezifischen Schnittstellen und Methoden erläutert, die zum Erstellen eines Vorschauhandlers erforderlich sind.
 ms.assetid: 6c240a63-c184-4b65-9483-794f5de4d695
-title: Entwickeln von Vorschau Handlern
+title: Erstellen von Vorschauhandlern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a309873cf082071d5f426ce0ba6d039107c59665
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: a810f15fed66d69bce32387249a2e0d678a1eb6c0dd918ec5df2e1ddbeb5be8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119032918"
 ---
-# <a name="building-preview-handlers"></a>Entwickeln von Vorschau Handlern
+# <a name="building-preview-handlers"></a>Erstellen von Vorschauhandlern
 
-In diesem Thema werden die spezifischen Schnittstellen und Methoden erläutert, die zum Erstellen eines Vorschau Handlers erforderlich sind.
+In diesem Thema werden die spezifischen Schnittstellen und Methoden erläutert, die zum Erstellen eines Vorschauhandlers erforderlich sind.
 
-Ein Vorschau Handler muss die folgenden Schnittstellen implementieren:
+Ein Vorschauhandler muss die folgenden Schnittstellen implementieren:
 
--   [IInitializeWithStream:: Initialize](#iinitializewithstreaminitialize) (stark bevorzugt), [**IInitializeWithFile**](/windows/desktop/api/Propsys/nn-propsys-iinitializewithfile)oder [**IInitializeWithItem**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinitializewithitem)
--   [IObjectWithSite](#iobjectwithsite)
+-   [IInitializeWithStream::Initialize](#iinitializewithstreaminitialize) (stark bevorzugt), [**IInitializeWithFile**](/windows/desktop/api/Propsys/nn-propsys-iinitializewithfile)oder [**IInitializeWithItem**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinitializewithitem)
+-   [Iobjectwithsite](#iobjectwithsite)
 -   [IOleWindow](#iolewindow)
 -   [IPreviewHandler](#ipreviewhandler)
 
-Wenn Ihr Vorschau Handler visuelle Einstellungen unterstützt, die vom Host bereitgestellt werden, z. b. Hintergrundfarbe und Schriftart, muss auch die folgende Schnittstelle implementiert werden:
+Wenn Ihr Vorschauhandler vom Host bereitgestellte visuelle Einstellungen wie Hintergrundfarbe und Schriftart unterstützt, muss er auch die folgende Schnittstelle implementieren:
 
 -   [IPreviewHandlerVisuals](#ipreviewhandlervisuals)
 
-In diesem Thema wird davon ausgegangen, dass der Vorschau Handler mit einem Stream initialisiert ist und für eine bestimmte Dateinamenerweiterung registriert ist.
+In diesem Thema wird davon ausgegangen, dass der Vorschauhandler mit einem Stream initialisiert und für eine bestimmte Dateierweiterung registriert ist.
 
-## <a name="iinitializewithstreaminitialize"></a>IInitializeWithStream:: Initialize
+## <a name="iinitializewithstreaminitialize"></a>IInitializeWithStream::Initialize
 
-Speichern Sie die Parameter [**IStream**](/windows/win32/api/objidl/nn-objidl-istream) und Mode, damit Sie die Daten des Elements lesen können, wenn Sie bereit sind, das Element in der Vorschau anzuzeigen. Laden Sie die Daten nicht in [**Initialize**](/windows/desktop/api/Propsys/nf-propsys-iinitializewithstream-initialize). Laden Sie die Daten in [**IPreviewHandler::D opreview**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-dopreview) direkt vor dem Rendering.
+Store [**IStream-**](/windows/win32/api/objidl/nn-objidl-istream) und Mode-Parameter, damit Sie die Daten des Elements lesen können, wenn Sie bereit sind, eine Vorschau des Elements anzuzeigen. Laden Sie die Daten nicht in [**Initialize**](/windows/desktop/api/Propsys/nf-propsys-iinitializewithstream-initialize). Laden Sie die Daten direkt vor dem Rendern in [**IPreviewHandler::D oPreview.**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-dopreview)
 
-## <a name="iobjectwithsite"></a>IObjectWithSite
+## <a name="iobjectwithsite"></a>Iobjectwithsite
 
--   [IObjectWithSite:: SetSite](#iobjectwithsitesetsite)
--   [IObjectWithSite:: GetSite](#iobjectwithsitegetsite)
+-   [IObjectWithSite::SetSite](#iobjectwithsitesetsite)
+-   [IObjectWithSite::GetSite](#iobjectwithsitegetsite)
 
-### <a name="iobjectwithsitesetsite"></a>IObjectWithSite:: SetSite
+### <a name="iobjectwithsitesetsite"></a>IObjectWithSite::SetSite
 
-Speichert den [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Zeiger für den späteren Zugriff.
+Store [**IUnknown-Zeiger**](/windows/win32/api/unknwn/nn-unknwn-iunknown) für den späteren Zugriff.
 
-Wenn Sie derzeit über einen Verweis auf ein [**IPreviewHandlerFrame**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ipreviewhandlerframe) -Objekt verfügen, geben Sie es frei. Verwenden Sie den gespeicherten [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Zeiger, um [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für einen neuen **IPreviewHandlerFrame** -Verweis auf der Website aufzurufen.
+Wenn Sie derzeit über einen Verweis auf ein [**IPreviewHandlerFrame-Objekt**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ipreviewhandlerframe) verfügen, geben Sie es frei. Verwenden Sie den [**gespeicherten IUnknown-Zeiger**](/windows/win32/api/unknwn/nn-unknwn-iunknown) zum Aufrufen [**von QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) auf der Website für einen neuen **IPreviewHandlerFrame-Verweis.**
 
-Wenn Sie derzeit über eine Zugriffstasten Tabelle verfügen, zerstören Sie Sie. Rufen Sie [**IPreviewHandlerFrame:: GetWindowContext**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandlerframe-getwindowcontext) auf, um eine neue Zugriffstasten Tabelle abzurufen. Speichern Sie diese Tabelle. Beachten Sie, dass Sie nur als Liste von Zugriffstasten verwendet wird, die vom Frame unterstützt werden. Befehle in den Zugriffstasten Einträgen werden ignoriert.
+Wenn Sie derzeit über eine Zugriffstastentabelle verfügen, zerstören Sie sie. Rufen [**Sie IPreviewHandlerFrame::GetWindowContext**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandlerframe-getwindowcontext) auf, um eine neue Zugriffstastentabelle zu erhalten. Store tabelle. Beachten Sie, dass es nur als Liste von Zugriffstasten verwendet wird, die der Frame unterstützt. Befehle in den Zugriffstasteneinträgen werden ignoriert.
 
-### <a name="iobjectwithsitegetsite"></a>IObjectWithSite:: GetSite
+### <a name="iobjectwithsitegetsite"></a>IObjectWithSite::GetSite
 
-Gibt den Website Zeiger zurück.
+Gibt den Standortzeiger zurück, unabhängig davon, was er ist.
 
 ## <a name="iolewindow"></a>IOleWindow
 
--   [IOleWindow:: ContextSensitiveHelp](#iolewindowcontextsensitivehelp)
--   [IOleWindow:: GetWindow](#iolewindowgetwindow)
+-   [IOleWindow::ContextSensitiveHelp](#iolewindowcontextsensitivehelp)
+-   [IOleWindow::GetWindow](#iolewindowgetwindow)
 
-### <a name="iolewindowcontextsensitivehelp"></a>IOleWindow:: ContextSensitiveHelp
+### <a name="iolewindowcontextsensitivehelp"></a>IOleWindow::ContextSensitiveHelp
 
-Gibt E \_ notimpl für diese Methode zurück.
+Gibt E \_ NOTIMPL für diese Methode zurück.
 
-### <a name="iolewindowgetwindow"></a>IOleWindow:: GetWindow
+### <a name="iolewindowgetwindow"></a>IOleWindow::GetWindow
 
-Wenn das Fenster des Vorschau Handlers aktuell vorhanden ist, geben Sie das **HWND** dieses Fensters und s \_ OK zurück. Wenn das Fenster nicht vorhanden ist, wird "E Fail" zurückgegeben \_ .
+Wenn das Fenster des Vorschauhandlers derzeit vorhanden ist, geben Sie **den HWND** dieses Fensters und S \_ OK zurück. Wenn das Fenster nicht vorhanden ist, geben Sie E \_ FAIL zurück.
 
 ## <a name="ipreviewhandler"></a>IPreviewHandler
 
--   [IPreviewHandler:: SetWindow](#ipreviewhandlersetwindow)
--   [IPreviewHandler:: SetRect](#ipreviewhandlersetrect)
--   [IPreviewHandler::D opreview](#ipreviewhandlerdopreview)
--   [IPreviewHandler:: SetFocus](#ipreviewhandlersetfocus)
--   [IPreviewHandler:: QueryFocus](#ipreviewhandlerqueryfocus)
--   [IPreviewHandler:: TranslateAccelerator](#ipreviewhandlertranslateaccelerator)
--   [IPreviewHandler:: entladen](#ipreviewhandlerunload)
+-   [IPreviewHandler::SetWindow](#ipreviewhandlersetwindow)
+-   [IPreviewHandler::SetRect](#ipreviewhandlersetrect)
+-   [IPreviewHandler::D oPreview](#ipreviewhandlerdopreview)
+-   [IPreviewHandler::SetFocus](#ipreviewhandlersetfocus)
+-   [IPreviewHandler::QueryFocus](#ipreviewhandlerqueryfocus)
+-   [IPreviewHandler::TranslateAccelerator](#ipreviewhandlertranslateaccelerator)
+-   [IPreviewHandler::Unload](#ipreviewhandlerunload)
 
-### <a name="ipreviewhandlersetwindow"></a>IPreviewHandler:: SetWindow
+### <a name="ipreviewhandlersetwindow"></a>IPreviewHandler::SetWindow
 
-Legen Sie den *HWND* -Parameter dieser Methode auf das übergeordnete Element des **HWND** Ihres Vorschau Handlers fest. Diese Methode kann mehrmals aufgerufen werden. Ändern Sie die Größe Ihrer Vorschau, sodass Sie nur in dem Bereich gerendert wird, der vom *PRC* -Parameter beschrieben wird
+Legen Sie *den hwnd-Parameter* dieser Methode auf das übergeordnete Element des **HWND-Elements Ihres Vorschauhandlers fest.** Diese Methode kann mehrmals aufgerufen werden. Ändern Sie die Größe Ihrer Vorschau, sodass sie nur in dem bereich gerendert wird, der durch den *prc-Parameter beschrieben* wird.
 
-Wenn der Vorschau gerade gerendert wird, verwenden Sie die [**IPreviewHandler:: SetWindow**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setwindow) -Methode, um das übergeordnete Element der Vorschau zu ändern. Ändern Sie auch den Bereich, in dem der Vorschau gerendert wird.
+Wenn die Vorschauversion gerendert wird, verwenden Sie die [**IPreviewHandler::SetWindow-Methode,**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setwindow) um das übergeordnete Element der Vorschau zu ändern. Ändern Sie auch den Bereich, in dem die Vorschau gerendert wird.
 
-### <a name="ipreviewhandlersetrect"></a>IPreviewHandler:: SetRect
+### <a name="ipreviewhandlersetrect"></a>IPreviewHandler::SetRect
 
-Ändern Sie die Größe Ihrer Vorschau, sodass Sie nur in dem von der Volks *Republik China* beschriebenen Bereich gerendert wird.
+Ändern Sie die Größe Ihrer Vorschau, sodass sie nur in dem Bereich gerendert wird, der vom PRC dieser *Methode beschrieben wird.*
 
-Wenn der Vorschau gerade gerendert wird, ändern Sie den Bereich, in dem der Vorschau gerendert wird.
+Wenn sich die Vorschauversion im Rendering befindet, ändern Sie den Bereich, in dem die Vorschau gerendert wird.
 
-### <a name="ipreviewhandlerdopreview"></a>IPreviewHandler::D opreview
+### <a name="ipreviewhandlerdopreview"></a>IPreviewHandler::D oPreview
 
-An dieser Stelle wird die eigentliche Arbeit erledigt. Da eine Vorschau dynamisch ist, sollte der Vorschau Inhalt nur geladen werden, wenn er benötigt wird. Laden Sie keinen Inhalt in die Initialisierung.
+Hier wird die eigentliche Arbeit erledigt. Da eine Vorschau dynamisch ist, sollte der Vorschauinhalt nur geladen werden, wenn er benötigt wird. Laden Sie keinen Inhalt in der Initialisierung.
 
-Wenn das vorschauhandlerfenster nicht vorhanden ist, erstellen Sie es. Die Fenster Ihres Vorschau Handlers sollten untergeordnete Elemente des Fensters sein, das von [**IPreviewHandler:: SetWindow**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setwindow)bereitgestellt wird. Sie sollten die Größe aufweisen, die von **IPreviewHandler:: SetWindow** und [**IPreviewHandler:: SetRect**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setrect) bereitgestellt wird (je nachdem, was zuletzt aufgerufen wurde).
+Wenn das Vorschauhandlerfenster nicht vorhanden ist, erstellen Sie es. Die Fenster des Vorschauhandlers sollten unter dem von [**IPreviewHandler::SetWindow**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setwindow)bereitgestellten Fenster sein. Sie sollten die Größe haben, die von **IPreviewHandler::SetWindow** und [**IPreviewHandler::SetRect**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setrect) bereitgestellt wird (was zuletzt aufgerufen wurde).
 
-Wenn Sie über ein Fenster verfügen, laden Sie die Daten aus dem [**IStream**](/windows/win32/api/objidl/nn-objidl-istream) , mit dem der Vorschau Handler initialisiert wurde, und Rendering Sie diese Daten im Fenster des Vorschau Handlers.
+Sobald Sie über ein Fenster verfügen, laden Sie die Daten aus dem [**IStream,**](/windows/win32/api/objidl/nn-objidl-istream) mit dem der Vorschauhandler initialisiert wurde, und rendern Sie diese Daten im Fenster Ihres Vorschauhandlers.
 
-### <a name="ipreviewhandlersetfocus"></a>IPreviewHandler:: SetFocus
+### <a name="ipreviewhandlersetfocus"></a>IPreviewHandler::SetFocus
 
-Diese Methode wird aufgerufen, wenn der Fokus über eine Tabstopp Aktion in den Lesebereich wechselt. Da es als vorwärts Registerkarte oder umgekehrte Registerkarte eingegeben werden kann, verwenden Sie den aktuellen Zustand der UMSCHALTTASTE, um zu entscheiden, ob der erste oder letzte Tabstopp im Lesebereich den Fokus erhalten soll.
+Diese Methode wird aufgerufen, wenn der Fokus über eine Registerkartenaktion in den Lesebereich eintritt. Da sie als Vorwärtsregisterkarte oder umgekehrte Registerkarte eingegeben werden kann, verwenden Sie den aktuellen Status der UMSCHALTTASTE, um zu entscheiden, ob die erste oder letzte Registerkartenstopp im Lesebereich den Fokus erhalten soll.
 
-### <a name="ipreviewhandlerqueryfocus"></a>IPreviewHandler:: QueryFocus
+### <a name="ipreviewhandlerqueryfocus"></a>IPreviewHandler::QueryFocus
 
-Diese Methode sollte die [**GetFocus**](/windows/win32/api/winuser/nf-winuser-getfocus) -Funktion aufrufen und das Ergebnis dieses Aufrufes im *phwnd* -Parameter zurückgeben.
+Diese Methode sollte die [**GetFocus-Funktion**](/windows/win32/api/winuser/nf-winuser-getfocus) aufrufen und das Ergebnis dieses Aufrufs im *phwnd-Parameter* zurückgeben.
 
-### <a name="ipreviewhandlertranslateaccelerator"></a>IPreviewHandler:: TranslateAccelerator
+### <a name="ipreviewhandlertranslateaccelerator"></a>IPreviewHandler::TranslateAccelerator
 
-Diese Methode wird von der Meldungs Pumpe des vorschauhandlerprozesses (unabhängig davon, ob prevhost.exe oder ein benutzerdefinierter lokaler Server) als Reaktion auf Benutzer Tastatureingaben aufgerufen wird. Vorschau Handler sollten diese Tastatureingaben verarbeiten oder entsprechend dem unten beschriebenen Algorithmus an Ihren Host weiterleiten.
+Diese Methode wird vom Nachrichtenpump des Prozesses des Vorschauhandlers (unabhängig davon, ob prevhost.exe oder ein benutzerdefinierter lokaler Server) als Reaktion auf Benutzertasteneingaben aufgerufen. Vorschauhandler sollten diese Tastatureingaben verarbeiten oder gemäß dem unten beschriebenen Algorithmus an ihren Host weitersennen.
 
-Da Vorschau Versionen jedoch schreibgeschützt sind, sollten Tastatureingaben minimal sein, und Optimierungen wie diese sind in vielen Fällen nicht erforderlich.
+Da Vorschauversionen jedoch schreibgeschützt sind, sollte die Tastatureingabe minimal sein, und Optimierungen wie diese sind in vielen Fällen nicht erforderlich.
 
-Wenn die Zugriffstaste, die an diese Methode über die Meldungs Pumpe übergeben wird, eine Zugriffstaste ist, die der Vorschau Handler annimmt, dann verarbeiten und S OK zurückgeben \_ . Wenn Ihr Handler diese Zugriffstaste nicht akzeptiert, kann die Zugriffstasten Meldung zurückgesendet werden, wenn der Frame behandelt wird.
+Wenn es sich bei der tastenbeschleunigung, die über die Meldungspumpe an diese Methode übergeben wird, um eine Zugriffstaste handelt, die ihr Vorschauhandler akzeptiert, verarbeiten Sie sie, und geben Sie S \_ OK zurück. Wenn ihr Handler diese Zugriffstaste nicht akzeptiert, kann die Zugriffstastennachricht bis zum zu behandelnden Frame zurück gesendet werden.
 
-Es gibt zwei Optionen für die Weiterleitung von Tastatur Accelerators an den Frame:
+Es gibt zwei Optionen zum Weiterleiten von Tastenkombinationen zurück an den Frame:
 
-Das einfachste Modell besteht darin, mithilfe von [**IPreviewHandlerFrame:: TranslateAccelerator**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandlerframe-translateaccelerator)alle Tastatureingaben an den Host weiterzuleiten. Dies erfolgt im Vorschau handlerbeispiel, das mit dem Windows Software Development Kit (SDK) bereitgestellt wird. Alle Vorschau Handler mit niedriger Integrität müssen dieses Modell verwenden. Wenn die Zugriffstaste nicht von Ihrem Vorschau Handler behandelt wird, rufen Sie **IPreviewHandlerFrame:: TranslateAccelerator** auf, und geben Sie das Ergebnis zurück.
+Das einfachste Modell besteht in der Weitergeleitet aller Tastaturanschläge an den Host mithilfe von [**IPreviewHandlerFrame::TranslateAccelerator**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandlerframe-translateaccelerator). Dies erfolgt im Vorschauhandlerbeispiel, das mit dem Windows Software Development Kit (SDK) bereitgestellt wird. Alle Vorschauhandler mit niedriger Integrität müssen dieses Modell verwenden. Wenn die Zugriffstaste nicht von Ihrem Vorschauhandler behandelt wird, rufen Sie **IPreviewHandlerFrame::TranslateAccelerator** auf, und geben Sie das Ergebnis zurück.
 
-Das andere Modell ist die Verwendung einer Zugriffstasten Tabelle als Optimierung, um zu vermeiden, dass zu viele Tastatureingaben über Prozess Grenzen hinweg gesendet werden:
+Das andere Modell besteht in der Verwendung einer Zugriffstastentabelle als Optimierung, um zu viele Tastatureingaben über Prozessgrenzen hinweg zu vermeiden:
 
-1.  Wenn [**IObjectWithSite:: SetSite**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) für Ihren Vorschau Handler aufgerufen wird, rufen Sie die Zugriffstasten Tabelle über [**IPreviewHandlerFrame:: GetWindowContext**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandlerframe-getwindowcontext)ab. (Achten Sie darauf, das Handle für die Zugriffstasten Tabelle freizugeben, wenn der Vorschau zerstört wird.)
-2.  Wenn die Zugriffstaste von Ihrem Vorschau Handler behandelt wird, behandeln Sie Sie, und geben Sie "S OK" zurück \_ .
-3.  Wenn die Zugriffstaste nicht von Ihrem Vorschau Handler behandelt wird, vergleichen Sie die Nachricht mithilfe von [**isaccelerator**](/windows/win32/api/ole2/nf-ole2-isaccelerator) mit der erworbenen Zugriffstasten Tabelle.
-4.  Wenn die Zugriffstaste mit einem Eintrag in der Zugriffstasten Tabelle übereinstimmt, rufen Sie [**IPreviewHandlerFrame:: TranslateAccelerator**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandlerframe-translateaccelerator) auf, und geben Sie das Ergebnis zurück.
-5.  Wenn die Zugriffstaste keinem Eintrag in der Zugriffstasten Tabelle entspricht, gibt S \_ false zurück.
+1.  Wenn [**IObjectWithSite::SetSite für Ihren**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) Vorschauhandler aufgerufen wird, erhalten Sie die Zugriffstastentabelle über [**IPreviewHandlerFrame::GetWindowContext**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandlerframe-getwindowcontext). (Achten Sie darauf, das Handle für die Zugriffstastentabelle frei zu geben, wenn Ihr Vorschauversionsfenster zerstört wird.)
+2.  Wenn die Zugriffstaste von Ihrem Vorschauhandler verarbeitet wird, behandeln Sie sie, und geben Sie S \_ OK zurück.
+3.  Wenn die Zugriffstaste nicht von Ihrem Vorschauhandler behandelt wird, vergleichen Sie die Nachricht mit [**IsAccelerator**](/windows/win32/api/ole2/nf-ole2-isaccelerator) mit der erhaltenen Zugriffstastentabelle.
+4.  Wenn die Zugriffstaste einem Eintrag in dieser Zugriffstastentabelle entspricht, rufen Sie [**IPreviewHandlerFrame::TranslateAccelerator**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandlerframe-translateaccelerator) auf, und geben Sie das Ergebnis zurück.
+5.  Wenn die Zugriffstaste nicht mit einem Eintrag in der Zugriffstastentabelle übereinstimmen soll, geben Sie S \_ FALSE zurück.
 
-### <a name="ipreviewhandlerunload"></a>IPreviewHandler:: entladen
+### <a name="ipreviewhandlerunload"></a>IPreviewHandler::Unload
 
-Wenn diese Methode aufgerufen wird, beenden Sie jedes Rendering, geben Sie alle Ressourcen frei, die durch das Lesen von Daten aus dem Stream zugeordnet sind, und geben Sie den [**IStream**](/windows/win32/api/objidl/nn-objidl-istream) selbst frei.
+Wenn diese Methode aufgerufen wird, beenden Sie jedes Rendering, geben Sie alle Ressourcen frei, die durch Lesen von Daten aus dem Stream zugeordnet sind, und geben Sie [**den IStream**](/windows/win32/api/objidl/nn-objidl-istream) selbst frei.
 
-Nachdem diese Methode aufgerufen wurde, muss der Handler erneut initialisiert werden, bevor versucht wird, [**IPreviewHandler::D opreview**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-dopreview) erneut aufzurufen.
+Nachdem diese Methode aufgerufen wurde, muss der Handler erneut initialisiert werden, bevor versucht wird, [**IPreviewHandler::D oPreview erneut**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-dopreview) aufrufen.
 
 ## <a name="ipreviewhandlervisuals"></a>IPreviewHandlerVisuals
 
--   [IPreviewHandlerVisuals:: SetBackgroundColor](#ipreviewhandlervisualssetbackgroundcolor)
--   [IPreviewHandlerVisuals:: SetFont](#ipreviewhandlervisualssetfont)
--   [IPreviewHandlerVisuals:: SetTextColor](#ipreviewhandlervisualssettextcolor)
+-   [IPreviewHandlerVisuals::SetBackgroundColor](#ipreviewhandlervisualssetbackgroundcolor)
+-   [IPreviewHandlerVisuals::SetFont](#ipreviewhandlervisualssetfont)
+-   [IPreviewHandlerVisuals::SetTextColor](#ipreviewhandlervisualssettextcolor)
 
-Diese Methoden sollten implementiert werden, wenn der Vorschau Handler so umgeleitet wird, dass er auf die Farb-und Schriftart Schemas des Hosts antwortet. Der Host fragt den Handler nach [**IPreviewHandlerVisuals**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ipreviewhandlervisuals)ab. Wenn die Unterstützung gefunden wird, stellt der Host die Farbe, die Schriftart und die Textfarbe bereit.
+Diese Methoden sollten implementiert werden, wenn sie den Vorschauhandler anweisen, auf die Farb- und Schriftartschemas des Hosts zu reagieren. Der Host fragt den Handler für [**IPreviewHandlerVisuals ab.**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ipreviewhandlervisuals) Wenn der Host unterstützt wird, stellt er Farbe, Schriftart und Textfarbe zur Anwendung.
 
-### <a name="ipreviewhandlervisualssetbackgroundcolor"></a>IPreviewHandlerVisuals:: SetBackgroundColor
+### <a name="ipreviewhandlervisualssetbackgroundcolor"></a>IPreviewHandlerVisuals::SetBackgroundColor
 
-Speichern Sie diese Farbe, und verwenden Sie Sie während des Renderings, wenn Sie eine Hintergrundfarbe bereitstellen möchten. Zum Beispiel, um das Fenster auszufüllen, wenn der Handler in einen Bereich gerendert wird, der kleiner als der von [**IPreviewHandler:: SetWindow**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setwindow) und [**IPreviewHandler:: SetRect**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setrect)bereitgestellte Bereich ist. Beachten Sie jedoch, dass Sie nicht außerhalb des Bereichs, der von diesen Methoden bereitgestellt wird, zeichnen sollten.
+Store diese Farbe, und verwenden Sie sie während des Renderings, wenn Sie eine Hintergrundfarbe bereitstellen möchten. So füllen Sie beispielsweise das Fenster aus, wenn der Handler in einem Bereich gerendert wird, der kleiner als der von [**IPreviewHandler::SetWindow**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setwindow) und [**IPreviewHandler::SetRect**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setrect)bereitgestellte Bereich ist. Beachten Sie jedoch, dass Sie nicht außerhalb des von diesen Methoden bereitgestellten Bereichs zeichnen sollten.
 
-Wenn diese Methode aufgerufen wird, während die Vorschau bereits gerendert wird, sollte das Rendering mit dieser Hintergrundfarbe neu gestartet werden.
+Wenn diese Methode aufgerufen wird, während die Vorschauversion bereits gerendert wird, sollte das Rendering mit dieser Hintergrundfarbe neu gestartet werden.
 
-### <a name="ipreviewhandlervisualssetfont"></a>IPreviewHandlerVisuals:: SetFont
+### <a name="ipreviewhandlervisualssetfont"></a>IPreviewHandlerVisuals::SetFont
 
-Speichern Sie diese Schriftart Informationen, und verwenden Sie Sie während des Renderings, wenn Sie Text in Übereinstimmung mit den aktuellen Windows Vista-Einstellungen anzeigen möchten.
+Store diese Schriftartinformationen, und verwenden Sie sie während des Renderings, wenn Sie Text anzeigen möchten, der mit den aktuellen Windows Vista-Einstellungen konsistent ist.
 
-### <a name="ipreviewhandlervisualssettextcolor"></a>IPreviewHandlerVisuals:: SetTextColor
+### <a name="ipreviewhandlervisualssettextcolor"></a>IPreviewHandlerVisuals::SetTextColor
 
-Speichern Sie diese Text Farbinformationen, und verwenden Sie Sie während des Renderings, wenn Sie Text in Übereinstimmung mit den aktuellen Windows Vista-Einstellungen anzeigen möchten.
+Store diese Textfarbinformationen, und verwenden Sie sie beim Rendern, wenn Sie Text konsistent mit den aktuellen Windows Vista-Einstellungen anzeigen möchten.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vorschau Handler und Shell-Vorschau Host](preview-handlers.md)
+[Vorschauhandler und Shell-Vorschauhost](preview-handlers.md)
 </dt> <dt>
 
-[Registrieren eines Vorschau Handlers](how-to-register-a-preview-handler.md)
+[Registrieren eines Vorschauhandlers](how-to-register-a-preview-handler.md)
 </dt> <dt>
 
-[Vorschau der handlerrichtlinien](preview-handler-guidelines.md)
+[Richtlinien für Vorschauhandler](preview-handler-guidelines.md)
 </dt> </dl>
 
  

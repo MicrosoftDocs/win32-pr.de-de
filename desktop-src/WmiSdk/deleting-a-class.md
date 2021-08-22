@@ -5,29 +5,29 @@ ms.tgt_platform: multiple
 title: Löschen einer Klasse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f3d9ce149b5eff0f5202cb25c5f7d16fdf44291
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aad3e44292aa1ca6b534151a82f36df50802e04db788d8cfb8aaeb477c23164f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355293"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119412090"
 ---
 # <a name="deleting-a-class"></a>Löschen einer Klasse
 
-Im Gegensatz zum Löschen einer dynamischen Instanz ist das Löschen einer Klasse eine einfache Prozedur. Wie bereits erläutert, werden Basisklassen oder abgeleitete Klassen jedoch nur selten gelöscht. Stattdessen wird eine Instanz häufiger gelöscht. Die [Skript-API für WMI](scripting-api-for-wmi.md) verwendet dieselben Methoden, um entweder ein Klassenobjekt oder eine Instanz zu löschen. Weitere Informationen finden Sie unter [Löschen einer Instanz](deleting-an-instance.md). Weitere Informationen zum Entfernen von Klassen und Instanzen aus dem WMI-Repository finden Sie im [**pragma deleteclass**](pragma-deleteclass.md) -Präprozessorbefehl.
+Im Gegensatz zum Löschen einer dynamischen Instanz ist das Löschen einer Klasse eine einfache Prozedur. Wie bereits erwähnt, werden Basisklassen oder abgeleitete Klassen jedoch nur selten gelöscht. Stattdessen wird eine -Instanz häufiger gelöscht. Die [Skripterstellungs-API für WMI](scripting-api-for-wmi.md) verwendet die gleichen Methoden, um entweder ein Klassenobjekt oder eine Instanz zu löschen. Weitere Informationen finden Sie unter [Löschen einer Instanz.](deleting-an-instance.md) Informationen zum Entfernen von Klassen und Instanzen aus dem WMI-Repository finden Sie im [**Pragma deleteclass-Präprozessorbefehl.**](pragma-deleteclass.md)
 
-Die [com-API für WMI](com-api-for-wmi.md) verfügt über verschiedene Methoden zum Löschen einer Instanz und zum Löschen eines Objekts.
+Die [COM-API für WMI](com-api-for-wmi.md) verfügt über verschiedene Methoden zum Löschen einer Instanz und zum Löschen eines Objekts.
 
-Im folgenden Verfahren wird beschrieben, wie Sie eine Basisklasse oder eine abgeleitete Klasse löschen.
+Im folgenden Verfahren wird beschrieben, wie eine Basisklasse oder abgeleitete Klasse gelöscht wird.
 
-**So löschen Sie eine Basisklasse oder eine abgeleitete Klasse**
+**So löschen Sie eine Basisklasse oder abgeleitete Klasse**
 
--   Entweder die [**IWbemServices::D eleteclass**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-deleteclass) -oder [**IWbemServices::D eleteclassasync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-deleteclassasync) -Methode aufrufen.
+-   Rufen Sie entweder die [**Methode IWbemServices::D eleteClass**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-deleteclass) oder [**IWbemServices::D eleteClassAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-deleteclassasync) auf.
 
-    Wie der Name vermuten lässt, löscht [**DeleteClassAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-deleteclassasync) eine Instanz asynchron, während [**deleteclass**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-deleteclass) eine Instanz synchron löscht. Um **DeleteClassAsync** verwenden zu können, müssen Sie auch ein [**iwbe"iwbejebjectsink**](iwbemobjectsink.md) "-Objekt implementieren.
+    Wie der Name schon sagt, löscht [**DeleteClassAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-deleteclassasync) eine Instanz asynchron, während [**DeleteClass**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-deleteclass) eine Instanz synchron löscht. Um **DeleteClassAsync** zu verwenden, müssen Sie auch ein [**IWbemObjectSink-Objekt**](iwbemobjectsink.md) implementieren.
 
 > [!Note]  
-> Da der Rückruf für die Senke möglicherweise nicht auf derselben Authentifizierungs Ebene wie der Client zurückgegeben wird, wird empfohlen, semisynchrone anstelle der asynchronen Kommunikation zu verwenden. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+> Da der Rückruf an die Senke möglicherweise nicht auf der gleichen Authentifizierungsebene zurückgegeben wird, die der Client erfordert, wird empfohlen, anstelle der asynchronen Kommunikation semisynchron zu verwenden. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
  
 

@@ -1,9 +1,9 @@
 ---
-title: CBEM_SETWINDOWTHEME Meldung (kommstrg. h)
-description: Legt den visuellen Stil eines ComboBoxEx-Steuer Elements fest.
+title: CBEM_SETWINDOWTHEME Nachricht (Commctrl.h)
+description: Legt den visuellen Stil eines ComboBoxEx-Steuerelements fest.
 ms.assetid: 064f9a24-42be-42f4-bee3-e7320fe8c366
 keywords:
-- Windows-Steuerelemente für CBEM_SETWINDOWTHEME Meldung
+- CBEM_SETWINDOWTHEME Windows-Steuerelementen für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0cda1e5c46bb6216c413737c44b5785ac26925f6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7e020c2bb73b2a2a58ee11916f589fb8b5bc1bf9268696f9ff3920ce99248aef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342445"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119527890"
 ---
-# <a name="cbem_setwindowtheme-message"></a>CBEM- \_ SetWindowTheme-Meldung
+# <a name="cbem_setwindowtheme-message"></a>CBEM \_ SETWINDOWTHEME-Nachricht
 
-Legt den visuellen Stil eines ComboBoxEx-Steuer Elements fest.
+Legt den visuellen Stil eines ComboBoxEx-Steuerelements fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,7 +35,7 @@ Legt den visuellen Stil eines ComboBoxEx-Steuer Elements fest.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine Unicode-Zeichenfolge, die den festzulegenden visuellen Stil des Steuer Elements enthält.
+Ein Zeiger auf eine Unicode-Zeichenfolge, die das festzulegende visuelle Steuerelementformat enthält.
 
 </dd> </dl>
 
@@ -43,10 +43,10 @@ Ein Zeiger auf eine Unicode-Zeichenfolge, die den festzulegenden visuellen Stil 
 
 Der Rückgabewert wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest angeben, in dem die Comclt32-Version 6,0 angegeben wird. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung zu verwenden, müssen Sie ein Manifest angeben, das Comclt32 Version 6.0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -56,9 +56,9 @@ Der Rückgabewert wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -4,16 +4,16 @@ description: Vorteile
 ms.assetid: 7f8c0510-1876-40fd-acb8-289bb073ac36
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f90f09b303ab83e68b711473a70ba1fc914a9738
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ecd2d329ce289b0bdbbf29b1fc1b35096d76ebbdb32e30a9df4a8c15d6de0640
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709546"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119048888"
 ---
 # <a name="advantages"></a>Vorteile
 
-Die Vorteile der Implementierung Ihrer Anwendung als Prozess interner Server sind die Geschwindigkeit und Kombination einiger Vorteile eines Objekt Handlers und eines lokalen Servers. Prozess interne Server sind aus verschiedenen Gründen schneller als lokale Server. Zuerst werden Sie schneller geladen, da Sie kleiner sind und im Prozessbereich der Containeranwendung ausgeführt werden. Zweitens sind Sie für die Ausführung bestimmter Aufgaben optimiert. Drittens ist die Kommunikation zwischen Container und Server nicht auf Remote Prozedur aufrufen angewiesen.
+Die Vorteile der Implementierung Ihrer Anwendung als In-Process-Server sind die Geschwindigkeit und die Kombination einiger Vorteile eines Objekthandlers und eines lokalen Servers. In-Process-Server sind aus verschiedenen Gründen schneller als lokale Server. Erstens: Da sie kleiner sind und im Prozessbereich der Containeranwendung ausgeführt werden, werden sie schneller geladen. Zweitens sind sie für bestimmte Aufgaben optimiert. Drittens: Die Kommunikation zwischen Container und Server hängt nicht von Remoteprozeduraufrufen ab.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -22,12 +22,12 @@ Die Vorteile der Implementierung Ihrer Anwendung als Prozess interner Server sin
 [Nachteile](disadvantages.md)
 </dt> <dt>
 
-[Prozess interne Server](in-process-servers.md)
+[In-Process-Server](in-process-servers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

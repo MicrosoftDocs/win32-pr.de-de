@@ -1,27 +1,27 @@
 ---
-title: Ivmdisplay-Methoden
-description: Die ivmdisplay-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: IVMDisplay-Methoden
+description: Die IVMDisplay-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: C1604FA0-D9FA-4071-B236-70ACE0AF7FEA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b1dd687ceb13baba40aa8a62e59305ae965c6a30
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 818c1ac62701e4df620865050a99075e20309b7ec45cbe09eae260cd863407ea
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119473500"
 ---
-# <a name="ivmdisplay-methods"></a>Ivmdisplay-Methoden
+# <a name="ivmdisplay-methods"></a>IVMDisplay-Methoden
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Die [**ivmdisplay**](ivmdisplay.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IVMDisplay-Schnittstelle**](ivmdisplay.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**\_Generatethbibnail-Methode**](ivmdisplay--generatethumbnail.md)
--   [**Setdimensions-Methode**](ivmdisplay-setdimensions.md)
+-   [**\_GenerateThumbnail-Methode**](ivmdisplay--generatethumbnail.md)
+-   [**SetDimensions-Methode**](ivmdisplay-setdimensions.md)
 
- 
+ 
 
- 
+ 

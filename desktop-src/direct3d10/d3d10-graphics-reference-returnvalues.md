@@ -1,40 +1,40 @@
 ---
-description: In der folgenden Tabelle sind Rückgabecodes von API-Funktionen enthalten.
+description: Die folgende Tabelle enthält Rückgabecodes von API-Funktionen.
 ms.assetid: 7b67d428-d000-4c3e-adc1-b5fc67a15a6a
-title: Direct3D 10-Rückgabe Codes
+title: Direct3D 10-Rückgabecodes
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d15a2fcdc4db5bd2d295b7cd3078ed80d401ce52
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 32c7e7bca25d240bf7775a6f4d6476148e3749e283ab4f8fb3511bf8b53bb711
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340116"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119282800"
 ---
-# <a name="direct3d-10-return-codes"></a>Direct3D 10-Rückgabe Codes
+# <a name="direct3d-10-return-codes"></a>Direct3D 10-Rückgabecodes
 
-In der folgenden Tabelle sind Rückgabecodes von API-Funktionen enthalten.
+Die folgende Tabelle enthält Rückgabecodes von API-Funktionen.
 
 
 
-| HRESULT                                         | BESCHREIBUNG                                                                                                                                           |
+| HRESULT                                         | Beschreibung                                                                                                                                           |
 |-------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| D3d10- \_ Fehler \_ Datei \_ nicht \_ gefunden.                  | Die Datei wurde nicht gefunden.                                                                                                                               |
-| D3d10 \_ Fehler \_ zu \_ viele \_ eindeutige \_ Zustands \_ Objekte | Es sind zu viele eindeutige Instanzen eines bestimmten [Zustands Objekt](d3d10-graphics-programming-guide-api-features-state-objects.md)Typs vorhanden.          |
-| D3DERR \_ invalidcall                             | Der Methoden Aufrufwert ist ungültig. Beispielsweise ist der-Parameter einer Methode möglicherweise kein gültiger Zeiger.                                                             |
-| D3DERR \_ wasstilldrawing                         | Der vorherige Blit-Vorgang, der Informationen an diese oder von dieser Oberfläche überträgt, ist unvollständig.                                                   |
-| E \_ fehlschlagen                                         | Es wurde versucht, ein Gerät mit aktivierter [debugschicht](d3d10-graphics-programming-guide-api-features-layers.md) zu erstellen, und die Ebene ist nicht installiert. |
-| E \_ invalidArg                                   | An die Rückgabe Funktion wurde ein ungültiger Parameter übergeben.                                                                                            |
-| E \_ outo-Memory                                  | Direct3D konnte nicht genügend Arbeitsspeicher zuordnen, um den-Vorgang abzuschließen.                                                                                   |
-| E \_ notimpl                                      | Der Methodenaufrufe wird nicht mit der übergebenen Parameter Kombination implementiert.                                                                              |
-| S \_ false                                        | Alternativer Erfolgs Wert, der einen erfolgreichen, aber nicht dem Standard entsprechende Abschluss angibt (die genaue Bedeutung hängt vom Kontext ab).                                 |
+| D3D10-FEHLERDATEI \_ \_ NICHT \_ \_ GEFUNDEN                  | Die Datei wurde nicht gefunden.                                                                                                                               |
+| D3D10-FEHLER: \_ ZU VIELE EINDEUTIGE \_ \_ \_ \_ \_ ZUSTANDSOBJEKTE | Es gibt zu viele eindeutige Instanzen eines bestimmten [Zustandsobjekttyps.](d3d10-graphics-programming-guide-api-features-state-objects.md)          |
+| D3DERR \_ INVALIDCALL                             | Der Methodenaufruf ist ungültig. Beispielsweise kann der Parameter einer Methode kein gültiger Zeiger sein.                                                             |
+| D3DERR \_ WAS BEGDRAWING                         | Der vorherige Blit-Vorgang, bei dem Informationen auf oder von dieser Oberfläche übertragen werden, ist unvollständig.                                                   |
+| E \_ FAIL                                         | Es wurde versucht, ein Gerät mit aktivierter [Debugebene](d3d10-graphics-programming-guide-api-features-layers.md) zu erstellen, und die Ebene ist nicht installiert. |
+| E \_ INVALIDARG                                   | Ein ungültiger Parameter wurde an die zurückgebende Funktion übergeben.                                                                                            |
+| E \_ OUTOFMEMORY                                  | Direct3D konnte nicht genügend Arbeitsspeicher zuordnen, um den Aufruf abschließen zu können.                                                                                   |
+| E \_ NOTIMPL                                      | Der Methodenaufruf wird nicht mit der übergebenen Parameterkombination implementiert.                                                                              |
+| S \_ FALSE                                        | Alternativer Erfolgswert, der eine erfolgreiche, aber nicht standardmäßige Vervollständigung angibt (die genaue Bedeutung hängt vom Kontext ab).                                 |
 | S \_ OK                                           | Kein Fehler ist aufgetreten.                                                                                                                                    |
 
 
 
  
 
-Um Code zu schreiben, der die [HRESULT-Werte](../winprog/windows-data-types.md) robuster verarbeitet, verwenden Sie die Makros erfolgreich (HR) und failed (HR).
+Verwenden Sie die Makros SUCCEEDED(hr) und FAILED(hr), um Code zu schreiben, der [HRESULT-Werte](../winprog/windows-data-types.md) robust verarbeitet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -43,7 +43,7 @@ Um Code zu schreiben, der die [HRESULT-Werte](../winprog/windows-data-types.md) 
 [Direct3D-Referenz](d3d10-graphics-reference-d3d10.md)
 </dt> <dt>
 
-[Referenz für Direct3D 10](d3d10-graphics-reference.md)
+[Referenz zu Direct3D 10](d3d10-graphics-reference.md)
 </dt> </dl>
 
  

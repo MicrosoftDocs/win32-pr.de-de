@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Ereignisse von ALPC-Empfangs Nachrichten. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für ALPC-Empfangsnachrichtenereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 6aa98240-e559-47b6-ae55-5a6379e08077
 title: ALPC_Receive_Message-Klasse
 ms.topic: reference
@@ -13,18 +13,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 886d3595caa283d5b09939a506952633d2350d41
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 98a565ea445ddd803ce217abca3993c2561d464829635bbb1a546824f27c3b8c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119070360"
 ---
-# <a name="alpc_receive_message-class"></a>ALPC- \_ Empfangs \_ Nachrichten Klasse
+# <a name="alpc_receive_message-class"></a>ALPC \_ Receive \_ Message-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Ereignisse von ALPC-Empfangs Nachrichten.
+Diese Klasse ist die Ereignistypklasse für ALPC-Empfangsnachrichtenereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,37 +38,37 @@ class ALPC_Receive_Message : ALPC
 
 ## <a name="members"></a>Member
 
-Die **ALPC- \_ Empfangs \_ Nachrichten** Klasse verfügt über diese Typen von Membern:
+Die **ALPC \_ Receive \_ Message-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **ALPC- \_ Empfangs \_ Nachrichten** Klasse verfügt über diese Eigenschaften.
+Die **ALPC \_ Receive \_ Message-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**MessageId**
+**MessageID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nachrichten-ID.
+Nachrichtenbezeichner.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

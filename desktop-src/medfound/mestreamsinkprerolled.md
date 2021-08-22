@@ -1,29 +1,29 @@
 ---
-description: Wird durch eine streamsenke ausgelöst, wenn der Stream genug vorab Rollendaten empfangen hat, um das Rendering zu beginnen. Dieses Ereignis wird von Medien senken ausgelöst, die die imfmediasinkpreroll-Schnittstelle unterstützen.
+description: Wird von einer Streamsenke ausgelöst, wenn der Stream genügend Vorabrolldaten empfangen hat, um mit dem Rendern zu beginnen. Dieses Ereignis wird von Mediensenken ausgelöst, die die INTERFACESMediaSinkPreroll-Schnittstelle unterstützen.
 ms.assetid: 1ecb1805-73ce-4741-b969-6eb88982ee26
-title: Mestreamsinkprerolled-Ereignis (mfobjects. h)
+title: MEStreamSinkPrerolled-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 312daa90c995ccbbe8667cfa5acdf47975248474
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d46c4c4e076651cb38318bb908df280c503c0880a256087f4192433ecdb5406a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103754289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119464800"
 ---
-# <a name="mestreamsinkprerolled-event"></a>Mestreamsinkprerolled-Ereignis
+# <a name="mestreamsinkprerolled-event"></a>MEStreamSinkPrerolled-Ereignis
 
-Wird durch eine streamsenke ausgelöst, wenn der Stream genug vorab Rollendaten empfangen hat, um das Rendering zu beginnen. Dieses Ereignis wird von Medien senken ausgelöst, die die [**imfmediasinkpreroll**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasinkpreroll) -Schnittstelle unterstützen.
+Wird von einer Streamsenke ausgelöst, wenn der Stream genügend Vorabrolldaten empfangen hat, um mit dem Rendern zu beginnen. Dieses Ereignis wird von Mediensenken ausgelöst, die die [**INTERFACESMediaSinkPreroll-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasinkpreroll) unterstützen.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -33,20 +33,20 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> <dt>
 
-[Medien senken](media-sinks.md)
+[Mediensenken](media-sinks.md)
 </dt> </dl>
 
  

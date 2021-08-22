@@ -1,12 +1,12 @@
-- name: Windows Connect jetzt
+- name: Windows-Sofortverbindung
   href: portal.md
   items:
-    - name: Informationen zu Windows Connect Now
+    - name: Informationen Windows-Sofortverbindung
       href: about-windows-connect-now.md
-    - name: Windows Connect Now-Referenz
+    - name: Windows-Sofortverbindung Verweis
       href: windows-connect-now-reference.md
       items:
-        - name: Windows Connect Now-Enumerationen
+        - name: Windows-Sofortverbindung Enumerationen
           href: windows-connect-now-enumerations.md
           items:
             - name: WCN_ATTRIBUTE_TYPE
@@ -37,43 +37,43 @@
               href: /windows/win32/api/wcntypes/ne-wcntypes-wcn_value_type_version
             - name: WCN_VALUE_TYPE_WI_FI_PROTECTED_SETUP_STATE
               href: /windows/win32/api/wcntypes/ne-wcntypes-wcn_value_type_wi_fi_protected_setup_state
-        - name: Windows Connect Now-Strukturen
+        - name: Windows-Sofortverbindung Strukturen
           href: windows-connect-now-structures.md
           items:
             - name: WCN_VALUE_TYPE_PRIMARY_DEVICE_TYPE
               href: /windows/win32/api/wcntypes/ns-wcntypes-wcn_value_type_primary_device_type
             - name: WCN_VENDOR_EXTENSION_SPEC
               href: /windows/win32/api/Wcndevice/ns-wcndevice-wcn_vendor_extension_spec
-        - name: Windows Connect Now-Schnittstelle
+        - name: Windows-Sofortverbindung Schnittstellen
           href: windows-connect-now-interfaces.md
           items:
-            - name: Iwcnconnectnotify
+            - name: IWCNConnectNotify
               href: /windows/desktop/api/WcnDevice/nn-wcndevice-iwcnconnectnotify
               items:
                 - name: ConnectFailed-Methode
                   href: /windows/desktop/api/WcnDevice/nf-wcndevice-iwcnconnectnotify-connectfailed
-                - name: Connectwar-Methode
+                - name: ConnectSucceededed-Methode
                   href: /windows/desktop/api/WcnDevice/nf-wcndevice-iwcnconnectnotify-connectsucceeded
-            - name: Iwcndevice
+            - name: IWCNDevice
               href: /windows/desktop/api/WcnDevice/nn-wcndevice-iwcndevice
               items:
-                - name: Connect-Methode
+                - name: Verbinden Methode
                   href: /windows/desktop/api/WcnDevice/nf-wcndevice-iwcndevice-connect
                 - name: GetAttribute-Methode
                   href: /windows/desktop/api/WcnDevice/nf-wcndevice-iwcndevice-getattribute
-                - name: Getintegerattribute-Methode
+                - name: GetIntegerAttribute-Methode
                   href: /windows/desktop/api/WcnDevice/nf-wcndevice-iwcndevice-getintegerattribute
-                - name: Getnetworkprofile-Methode
+                - name: GetNetworkProfile-Methode
                   href: /windows/desktop/api/WcnDevice/nf-wcndevice-iwcndevice-getnetworkprofile
-                - name: Getstringattribute-Methode
+                - name: GetStringAttribute-Methode
                   href: /windows/desktop/api/WcnDevice/nf-wcndevice-iwcndevice-getstringattribute
-                - name: Getvendorextension-Methode
+                - name: GetVendorExtension-Methode
                   href: /windows/desktop/api/WcnDevice/nf-wcndevice-iwcndevice-getvendorextension
-                - name: Setnetworkprofile-Methode
+                - name: SetNetworkProfile-Methode
                   href: /windows/desktop/api/WcnDevice/nf-wcndevice-iwcndevice-setnetworkprofile
                 - name: SetPassword-Methode
                   href: /windows/desktop/api/WcnDevice/nf-wcndevice-iwcndevice-setpassword
-                - name: Setvendorextension-Methode
+                - name: SetVendorExtension-Methode
                   href: /windows/desktop/api/WcnDevice/nf-wcndevice-iwcndevice-setvendorextension
-                - name: Unempfehlung-Methode
+                - name: Unadvise-Methode
                   href: /windows/desktop/api/WcnDevice/nf-wcndevice-iwcndevice-unadvise

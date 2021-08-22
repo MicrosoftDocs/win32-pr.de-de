@@ -1,7 +1,7 @@
 ---
-description: Identifiziert den Namen des Basis Anbieters für das angegebene SIM/Gerät.
+description: Identifiziert den Namen des Home-Anbieters für die bestimmte SIM/das Gerät.
 ms.assetid: 05d65091-5a1d-427a-8f51-1e1b9d189571
-title: Homeprovidername (mbnprofile)-Element
+title: HomeProviderName (MBNProfile)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,18 +11,18 @@ api_name:
 - HomeProviderName
 api_type:
 - Schema
-ms.openlocfilehash: 3d0af51e4873915838f2d55f683d07e9098aad3f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1868be18dc7acf9d5146f987658feb006714fbcc3db35883007afd01c308609e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119035828"
 ---
-# <a name="homeprovidername-mbnprofile-element"></a>Homeprovidername (mbnprofile)-Element
+# <a name="homeprovidername-mbnprofile-element"></a>HomeProviderName (MBNProfile)-Element
 
-Das Element **homeprovidername (mbnprofile)** identifiziert den Namen des Home-Anbieters für das angegebene SIM/Gerät.
+Das **HomeProviderName (MBNProfile)-Element** identifiziert den Namen des Home-Anbieters für die gegebene SIM/Das Gerät.
 
-Dieses Element ist optional und wird vom mobilen Breitbanddienst zur internen Verwendung festgelegt. Eine Anwendung sollte dieses Feld beim Erstellen oder Aktualisieren eines Profils nicht festlegen.
+Dieses Element ist optional und wird vom Mobilen Breitbanddienst für die interne Verwendung festgelegt. Eine Anwendung sollte dieses Feld beim Erstellen oder Aktualisieren eines Profils nicht festlegen.
 
 ``` syntax
 <xs:element name="HomeProviderName"
@@ -30,7 +30,7 @@ Dieses Element ist optional und wird vom mobilen Breitbanddienst zur internen Ve
  />
 ```
 
-Das **homeprovidername** -Element wird durch das [**mbnprofile**](schema-mbnprofile-element.md) -Element definiert.
+Das **HomeProviderName-Element** wird durch das [**MBNProfile-Element**](schema-mbnprofile-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,7 +38,7 @@ Das **homeprovidername** -Element wird durch das [**mbnprofile**](schema-mbnprof
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                         |
 
 
@@ -47,16 +47,16 @@ Das **homeprovidername** -Element wird durch das [**mbnprofile**](schema-mbnprof
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Mbnprofile**](schema-mbnprofile-element.md)
+[**MBNProfile**](schema-mbnprofile-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Mbnprofile**](schema-mbnprofile-element.md)
+[**MBNProfile**](schema-mbnprofile-element.md)
 </dt> </dl>
 
  

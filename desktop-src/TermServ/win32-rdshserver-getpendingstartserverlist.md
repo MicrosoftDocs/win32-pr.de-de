@@ -1,12 +1,12 @@
 ---
-title: Getpdingstartserverlist-Methode der Win32_RDSHServer-Klasse
+title: GetPendingStartServerList-Methode der Win32_RDSHServer-Klasse
 description: Ruft eine Liste der Server ab, die auf den Start warten.
 ms.assetid: 7af7a0e7-dc00-4e3a-8e0c-5987bd2bc3a2
 ms.tgt_platform: multiple
 keywords:
-- Getpdingstartserverlist-Methode Remotedesktopdienste
-- Getpdingstartserverlist-Methode Remotedesktopdienste, Win32_RDSHServer-Klasse
-- Win32_RDSHServer-Klasse Remotedesktopdienste, getpdingstartserverlist-Methode
+- GetPendingStartServerList-Methode Remotedesktopdienste
+- GetPendingStartServerList-Methode Remotedesktopdienste , Win32_RDSHServer-Klasse
+- Win32_RDSHServer-Klasse Remotedesktopdienste , GetPendingStartServerList-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 99b96453b33f931b18d89f13413513d3baf82bfb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 61bb46512414c7057d7ec9db5ff4b6fab859f8bb9e6aec5c537250b0baa24e9a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119422650"
 ---
-# <a name="getpendingstartserverlist-method-of-the-win32_rdshserver-class"></a>Getpdingstartserverlist-Methode der Win32 \_ rdshserver-Klasse
+# <a name="getpendingstartserverlist-method-of-the-win32_rdshserver-class"></a>GetPendingStartServerList-Methode der Win32 \_ RDSHServer-Klasse
 
 Ruft eine Liste der Server ab, die auf den Start warten.
 
@@ -44,23 +44,23 @@ uint32 GetPendingStartServerList(
 
 <dl> <dt>
 
-*maxservers* \[ in\]
+*maxServers* \[ In\]
 </dt> <dd>
 
 Die maximale Anzahl von Servern, die in der Liste zurückgegeben werden sollen.
 
 </dd> <dt>
 
-*Serverfqdns* \[ vorgenommen\]
+*ServerFQDNs* \[ out\]
 </dt> <dd>
 
-Bei Erfolg enthält eine Auflistung der voll qualifizierten Domänen Namen der Server, die auf den Start warten.
+Enthält bei Erfolg eine Sammlung vollqualifizierte Domänennamen der Server, die auf den Start warten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Liste der Server wird nach jedem-Rückruf zurückgesetzt, sodass der nächste-Rückruf keinen doppelten Server erhält.
+Die Liste der Server wird nach jedem Aufruf zurückgesetzt, sodass der nächste Aufruf keinen doppelten Server erhält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,17 +70,17 @@ Die Liste der Server wird nach jedem-Rückruf zurückgesetzt, sodass der nächst
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMV2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Win32- \_ rdshserver**](win32-rdshserver.md)
+[**Win32 \_ RDSHServer**](win32-rdshserver.md)
 </dt> </dl>
 
  

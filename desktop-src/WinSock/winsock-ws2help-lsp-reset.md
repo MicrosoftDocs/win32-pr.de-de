@@ -1,7 +1,7 @@
 ---
-description: Das Änderungs Ereignis für den Winsock-Katalog für einen Winsock-Katalog Zurücksetzungs Vorgang.
+description: Winsock-Katalogänderungsereignis für einen Winsock-Katalogzurücksetzungsvorgang.
 ms.assetid: BE8DC0DB-0F96-4015-87F5-ECF25AE164AA
-title: WINSOCK_WS2HELP_LSP_RESET Ereignis
+title: WINSOCK_WS2HELP_LSP_RESET-Ereignis
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,21 +12,21 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 219eb85dec0cdda77ca8741ae42df1f63d1a7dbc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3c9a638d962db908b24387d7baeb2f34d4e09ece561fdd1796a8a44930a5dfb1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364106"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051288"
 ---
-# <a name="winsock_ws2help_lsp_reset-event"></a>Winsock \_ WS2HELP \_ LSP \_ Reset-Ereignis
+# <a name="winsock_ws2help_lsp_reset-event"></a>WINSOCK \_ WS2HELP \_ LSP \_ RESET-Ereignis
 
 > [!Note]  
-> Mehrstufige Dienstanbieter sind veraltet. Ab Windows 8 und Windows Server 2012 verwenden Sie die [Windows-Filter Plattform](../fwp/windows-filtering-platform-start-page.md).
+> Mehrschichtige Dienstanbieter sind veraltet. Verwenden Sie ab Windows 8 Windows Server 2012 [Filterplattform Windows Filterplattform](../fwp/windows-filtering-platform-start-page.md).
 
  
 
-Das **Winsock \_ WS2HELP \_ LSP \_ Reset** -Ereignis ist ein Winsock-Katalog Änderungs Ereignis für einen Winsock-Katalog Zurücksetzungs Vorgang.
+Das **WINSOCK \_ WS2HELP \_ LSP \_ RESET-Ereignis** ist ein Winsock-Katalogänderungsereignis für einen Winsock-Katalogzurücksetzungsvorgang.
 
 
 ```C++
@@ -46,9 +46,9 @@ Der Winsock-Katalog (32-Bit oder 64-Bit), der zurückgesetzt wird. Dies ist ein 
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **Winsock \_ WS2HELP \_ LSP \_ Reset** -Ereignis wird für einen LSP-Vorgang (Winsock-Schicht-Dienstanbieter) nachverfolgt, wenn der Winsock-Katalog zurückgesetzt wird.
+Das **WINSOCK \_ WS2HELP \_ LSP \_ RESET-Ereignis** wird für einen Winsock Layered Service Provider-Vorgang (LSP) nachverfolgt, wenn der Winsock-Katalog zurückgesetzt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Das **Winsock \_ WS2HELP \_ LSP \_ Reset** -Ereignis wird für einen LSP-Vorgang
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -65,16 +65,16 @@ Das **Winsock \_ WS2HELP \_ LSP \_ Reset** -Ereignis wird für einen LSP-Vorgang
 
 <dl> <dt>
 
-[Kontrolle über die Winsock-Ablauf Verfolgung](control-of-winsock-tracing.md)
+[Steuerung der Winsock-Ablaufverfolgung](control-of-winsock-tracing.md)
 </dt> <dt>
 
-[Winsock-Ablauf Verfolgung](winsock-tracing.md)
+[Winsock-Ablaufverfolgung](winsock-tracing.md)
 </dt> <dt>
 
-[Winsock-Ablauf Verfolgungs Ebenen](winsock-tracing-levels.md)
+[Winsock-Ablaufverfolgungsebenen](winsock-tracing-levels.md)
 </dt> <dt>
 
-[Details zur Änderung der Winsock-Katalog Änderung](winsock-layered-service-provider-tracing-event-details.md)
+[Details zur Ablaufverfolgung für Winsock-Katalogänderung](winsock-layered-service-provider-tracing-event-details.md)
 </dt> </dl>
 
  

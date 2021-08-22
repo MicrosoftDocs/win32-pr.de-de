@@ -1,5 +1,5 @@
 ---
-description: Stellt die Replikations spezifischen Einstellungen für einen virtuellen Computer dar.
+description: Stellt die replikationsspezifischen Einstellungen für einen virtuellen Computer dar.
 ms.assetid: f6f6a413-a949-4aca-930b-37e39bdc1fdb
 title: Msvm_ReplicationSettingData-Klasse
 ms.topic: reference
@@ -55,16 +55,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 35bb97e531f8aca5f74801d55a71e5b3f2850c08
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 90e16e70f7b5bd0a075ffdef54cf0c591719d4993031f3abee19dd8186ec5996
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148253"
 ---
-# <a name="msvm_replicationsettingdata-class"></a>MSVM \_ replicationsettingdata-Klasse
+# <a name="msvm_replicationsettingdata-class"></a>Msvm \_ ReplicationSettingData-Klasse
 
-Stellt die Replikations spezifischen Einstellungen für einen virtuellen Computer dar. Der Client übergibt eine Instanz dieser Klasse an [**MSVM \_ replicationservice. kreatereplicationrelationship**](createreplicationrelationship-msvm-replicationservice.md) , um eine Replikations Beziehung zu erstellen. Der Client kann die Werte einer der Eigenschaften für diese Klasse nicht direkt ändern. Es muss die [**MSVM-Methode \_ replicationservice. modifyreplicationsettings**](modifyreplicationsettings-msvm-replicationservice.md) aufgerufen werden, um die Werte zu ändern. Jede Replikations Beziehung verfügt über eine einzelne Instanz von Einstellungen.
+Stellt die replikationsspezifischen Einstellungen für einen virtuellen Computer dar. Der Client übergibt eine Instanz dieser Klasse an [**Msvm \_ ReplicationService.CreateReplicationRelationship,**](createreplicationrelationship-msvm-replicationservice.md) um eine Replikationsbeziehung zu erstellen. Der Client kann die Werte der Eigenschaften für diese Klasse nicht direkt ändern. Sie muss die [**Msvm \_ ReplicationService.ModifyReplicationSettings-Methode**](modifyreplicationsettings-msvm-replicationservice.md) aufrufen, um die Werte zu ändern. Jede Replikationsbeziehung verfügt über eine einzelne Instanz von Einstellungen.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -121,54 +121,54 @@ class Msvm_ReplicationSettingData : CIM_VirtualSystemSettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ replicationsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ ReplicationSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM- \_ replicationsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ ReplicationSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Additionalsettings**
+**AdditionalSettings**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zusätzliche Replikationseinstellungen, die der Endpunkt Anbieter verwenden kann.
+Zusätzliche Replikationseinstellungen, die der Endpunktanbieter verwenden kann.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 </dd> <dt>
 
-**Applicationkonsistentsnapshotinterval**
+**ApplicationConsistentSnapshotInterval**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Zeitintervall zwischen Anwendungs konsistenten Momentaufnahmen (angegeben in Stunden). Gültige Werte liegen zwischen 1 Stunde und 12 Stunden.
+Das Zeitintervall zwischen anwendungs konsistenten Momentaufnahmen, angegeben in Stunden. Gültige Werte liegen zwischen 1 Stunde und 12 Stunden.
 
 </dd> <dt>
 
 **AuthenticationType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Hiermit wird der Authentifizierungsmodus für die Verbindung mit dem Wiederherstellungs Server definiert.
+Definieren Sie den Authentifizierungsmodus, der zum Herstellen einer Verbindung zum Wiederherstellen des Servers verwendet wird.
 
 <dt>
 
@@ -185,314 +185,314 @@ Kerberos-Authentifizierung.
 
 <span id="Certificate_based_authentication"></span><span id="certificate_based_authentication"></span><span id="CERTIFICATE_BASED_AUTHENTICATION"></span>
 
-<span id="Certificate_based_authentication"></span><span id="certificate_based_authentication"></span><span id="CERTIFICATE_BASED_AUTHENTICATION"></span>**Zertifikat basierte Authentifizierung** (2)
+<span id="Certificate_based_authentication"></span><span id="certificate_based_authentication"></span><span id="CERTIFICATE_BASED_AUTHENTICATION"></span>**Zertifikatbasierte Authentifizierung** (2)
 
 
 </dt> <dd>
 
-Zertifikat basierte Authentifizierung.
+Zertifikatbasierte Authentifizierung.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Automatikrecoveryaction**
+**AutomaticRecoveryAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
-Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
-**Automaticshutdownaction**
+**AutomaticShutdownAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
-Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
-**Automaticstartupaction**
+**AutomaticStartupAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
-Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
-**Automaticstartupactiondelay**
+**AutomaticStartupActionDelay**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Verzögerungszeit, bevor der virtuelle Computer automatisch gestartet wird. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt, wird jedoch nicht verwendet.
+Die Verzögerung bis zum automatischen Start des virtuellen Computers. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt,**](/previous-versions//cc136954(v=vs.85))aber nicht verwendet.
 
 </dd> <dt>
 
-**Automaticstartupactionsequencenumschlag**
+**AutomaticStartupActionSequenceNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zahl, die die relative Sequenz der Aktivierung virtueller Maschinen angibt, wenn das Host System gestartet wird. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt, wird jedoch nicht verwendet.
+Eine Zahl, die die relative Sequenz der Aktivierung virtueller Computer angibt, wenn das Hostsystem gestartet wird. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt,**](/previous-versions//cc136954(v=vs.85))aber nicht verwendet.
 
 </dd> <dt>
 
-**Autoresynchronizeaktivierte**
+**AutoResynchronizeEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob Vorgänge zur erneuten Synchronisierung automatisch ausgelöst werden, wenn ein Replikations Fehler aufgrund von Strom-und Hardwarefehlern auftritt. Vorgänge zur erneuten Synchronisierung werden nur ausgelöst, wenn der Fehler zwischen den von den Eigenschaften **autoresynchronizeintervalstart** und **autoresynchronizeintervalend** angegebenen Zeiten auftritt.
+Gibt an, ob Neusynchronisierungsvorgänge automatisch ausgelöst werden, wenn ein Replikationsfehler aufgrund von Strom- und Hardwarefehlern auftritt. Neusynchronisierungsvorgänge werden nur ausgelöst, wenn der Fehler zwischen den durch die **AutoResynchronizeIntervalStart-** und **AutoResynchronizeIntervalEnd-Eigenschaften** angegebenen Zeiten auftritt.
 
 Der Standardwert ist **False**.
 
 </dd> <dt>
 
-**Autoresynchronizzutervalend**
+**AutoResynchronizeIntervalEnd**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Endzeit für die automatische Neusynchronisierung an, die ausgelöst werden soll. Dieser Wert ist Ortszeit. Der Standardwert ist 06:00 (6:00 Uhr).
+Gibt die Endzeit für automatische Neusynchronisierungsvorgänge an, die ausgelöst werden sollen. Dieser Wert ist in Ortszeit. Der Standardwert ist 06:00 (6:00 Uhr).
 
-Vorgänge zur erneuten Synchronisierung werden nur ausgelöst, wenn der Fehler zwischen den von den Eigenschaften **autoresynchronizeintervalstart** und **autoresynchronizeintervalend** angegebenen Zeiten auftritt.
+Neusynchronisierungsvorgänge werden nur ausgelöst, wenn der Fehler zwischen den durch die **AutoResynchronizeIntervalStart-** und **AutoResynchronizeIntervalEnd-Eigenschaften** angegebenen Zeiten auftritt.
 
-Vorgänge zur erneuten Synchronisierung können auch geplant werden, damit Sie während des nächsten Intervalls ausgelöst werden.
+Neusynchronisierungsvorgänge können auch so geplant werden, dass sie während des nächsten Intervalls ausgelöst werden.
 
 </dd> <dt>
 
-**Autoresynchronizeingetervalstart**
+**AutoResynchronizeIntervalStart**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Startzeit für die automatische Neusynchronisierung an, die ausgelöst werden soll. Dieser Wert ist Ortszeit. Der Standardwert ist 18:30 (6:30 Uhr).
+Gibt die Startzeit für automatische Neusynchronisierungsvorgänge an, die ausgelöst werden sollen. Dieser Wert ist in Ortszeit. Der Standardwert ist 18:30 (18:30 Uhr).
 
-Vorgänge zur erneuten Synchronisierung werden nur ausgelöst, wenn der Fehler zwischen den von den Eigenschaften **autoresynchronizeintervalstart** und **autoresynchronizeintervalend** angegebenen Zeiten auftritt.
+Neusynchronisierungsvorgänge werden nur ausgelöst, wenn der Fehler zwischen den durch die **AutoResynchronizeIntervalStart-** und **AutoResynchronizeIntervalEnd-Eigenschaften** angegebenen Zeiten auftritt.
 
-Vorgänge zur erneuten Synchronisierung können auch geplant werden, damit Sie während des nächsten Intervalls ausgelöst werden.
+Neusynchronisierungsvorgänge können auch so geplant werden, dass sie während des nächsten Intervalls ausgelöst werden.
 
 </dd> <dt>
 
-**Bypassproxyserver**
+**BypassProxyServer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Proxy Server beim Herstellen einer Verbindung mit einem Wiederherstellungs Server umgangen werden soll.
+Gibt an, ob der Proxyserver beim Herstellen einer Verbindung mit einem Wiederherstellungsserver umgangen werden soll.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Replikationseinstellungen" festgelegt.
+Eine kurze Beschreibung des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Replication Einstellungen" festgelegt.
 
 </dd> <dt>
 
 **CertificateThumbPrint**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (128)
+Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (128)
 </dt> </dl>
 
-Der Zertifikat Fingerabdruck, der verwendet werden soll, wenn die **AuthenticationType** -Eigenschaft eine Zertifikat basierte Authentifizierung ist.
+Zertifikatfingerabdruck, der verwendet werden soll, wenn die **AuthenticationType-Eigenschaft** eine zertifikatbasierte Authentifizierung ist.
 
 </dd> <dt>
 
-**Compressionaktiviert**
+**CompressionEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob Replikations Daten beim Senden an den Wiederherstellungs Server komprimiert werden.
+Gibt an, ob Replikationsdaten komprimiert werden, während sie an den Wiederherstellungsserver gesendet werden.
 
 </dd> <dt>
 
-**Configurationdataroot**
+**ConfigurationDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
-Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
 **ConfigurationFile**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der relative Pfad und der Dateiname einer Datei, in der Informationen zur Konfiguration der virtuellen Maschine gespeichert werden. Dieser Pfad ist relativ zur **configurationdataroot** -Eigenschaft. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt, wird jedoch nicht verwendet.
+Der relative Pfad und Dateiname einer Datei, in der Informationen zur Konfiguration des virtuellen Computers gespeichert werden. Dieser Pfad ist relativ zur **ConfigurationDataRoot-Eigenschaft.** Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt,**](/previous-versions//cc136954(v=vs.85))aber nicht verwendet.
 
 </dd> <dt>
 
 **ConfigurationID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der eindeutige Bezeichner der Konfiguration der virtuellen Maschine. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt, wird jedoch nicht verwendet.
+Der eindeutige Bezeichner der Konfiguration des virtuellen Computers. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt,**](/previous-versions//cc136954(v=vs.85))aber nicht verwendet.
 
 </dd> <dt>
 
-**CreationTime**
+**Creationtime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit der Erstellung der Einstellungen für die virtuelle Maschine. Wenn dieses-Objekt die aktuellen Einstellungen für die virtuelle Maschine darstellt, ist dieser Wert die Zeit, zu der das System erstellt wurde. Wenn dieses-Objekt die Momentaufnahme Einstellungen für die virtuelle Maschine darstellt, ist dieser Wert die Zeit, zu der die Momentaufnahme erstellt wurde. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Das Datum und die Uhrzeit, zu der die Einstellungen für den virtuellen Computer erstellt wurden. Wenn dieses Objekt die aktuellen Einstellungen für den virtuellen Computer darstellt, wäre dieser Wert der Zeitpunkt, zu dem das System erstellt wurde. Wenn dieses Objekt die Momentaufnahmeeinstellungen für den virtuellen Computer darstellt, wäre dieser Wert der Zeitpunkt, zu dem die Momentaufnahme erstellt wurde. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifysystemsettings**](modifysystemsettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifySystemSettings-Methode**](modifysystemsettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
-Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Replikations Einstellungsdaten für virtuelle Computer" festgelegt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Virtual Machine Replication Einstellungen Data" festgelegt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und auf den anzeigen Amen für den virtuellen Computer festgelegt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt**](/previous-versions//cc136954(v=vs.85))und auf den Anzeigenamen für den virtuellen Computer festgelegt.
 
 </dd> <dt>
 
-**Enableschreiteorderkonservierungs ationacrossdisks**
+**EnableWriteOrderPreservationAcrossDisks**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("kein Wert")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("Kein Wert")
 </dt> </dl>
 
-Gibt an, ob alle replizierenden virtuellen Festplatten für die virtuelle Maschine auf denselben Zeitpunkt repliziert werden. Dadurch wird sichergestellt, dass die Replikation die Schreib Reihenfolge der Anwendungen auf dem virtuellen Computer berücksichtigt.
+Gibt an, ob alle replizierenden virtuellen Festplatten für den virtuellen Computer zum gleichen Zeitpunkt repliziert werden. Dadurch wird sichergestellt, dass bei der Replikation die Schreib reihenfolge der Anwendungen auf dem virtuellen Computer verwendet wird.
 
-**Windows 8.1:** Ab Windows 8.1 und Windows Server 2012 R2 ist diese Eigenschaft veraltet und wird immer auf " **true**" festgelegt.
+**Windows 8.1:** Ab Windows 8.1 und Windows Server 2012 R2 ist diese Eigenschaft veraltet und immer auf **TRUE festgelegt.**
 
 </dd> <dt>
 
-**Includdisks**
+**IncludedDisks**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **hypervembeddedinstance** ("CIM \_ storagezucationsettingdata"), [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: **HyperVEmbeddedInstance** ("CIM \_ StorageAllocationSettingData"), [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
-Die Liste der virtuellen Festplatten (VHDs), die mit dem System verbunden sind, das von der Replikations-Engine repliziert wird. Dabei handelt es sich um ein Array von Zeichen folgen, die jeweils die **InstanceId** der " [**MSVM \_ storagebereitungssettingdata**](msvm-storageallocationsettingdata.md) " enthalten, die die VHD darstellt.
+Die Liste der virtuellen Festplatten (VHDs), die an das System angefügt sind, das von der Replikations-Engine repliziert wird. Dies ist ein Array von Zeichenfolgen, die jeweils die **InstanceID** der [**Msvm \_ StorageAllocationSettingData**](msvm-storageallocationsettingdata.md) enthalten, die die VHD darstellt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -501,164 +501,164 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt. Für Windows 8 ist es immer auf "Microsoft:*Virtual Machine GUID* \\ HVR" festgelegt. Für Windows 8.1 ist die Einstellung "Microsoft:*GUID* \\ HVR \\<0/1>" für den virtuellen Computer. Im Windows 8.1 Wert gibt 0 den primär Wert und 1 die erweiterte Replikation an. Weitere Informationen zur erweiterten Replikation finden Sie unter [**MSVM \_ replicationrelationship**](msvm-replicationrelationship.md).
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData geerbt.**](/previous-versions//cc136911(v=vs.85)) Für Windows 8 ist dies immer auf "Microsoft:*Virtual Machine GUID* \\ HVR" festgelegt. Für Windows 8.1 ist dies auf "Microsoft:*Virtual Machine GUID* \\ HVR<\\ 0/1>" festgelegt. Im Windows 8.1 wert gibt 0 primär und 1 die erweiterte Replikation an. Weitere Informationen zur erweiterten Replikation finden Sie unter [**Msvm \_ ReplicationRelationship**](msvm-replicationrelationship.md).
 
 </dd> <dt>
 
-**Logdataroot**
+**LogDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad eines Verzeichnisses, in dem Protokollinformationen für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt, wird jedoch nicht verwendet.
+Der Pfad eines Verzeichnisses, in dem Protokollinformationen für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt,**](/previous-versions//cc136954(v=vs.85))aber nicht verwendet.
 
 </dd> <dt>
 
-**Hinweise**
+**Notizen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet und kann nicht festgelegt werden.
+Wird nicht verwendet und kann nicht festgelegt werden.
 
-Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
-**Primaryconnectionpoint**
+**PrimaryConnectionPoint**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name des primären Verbindungs Punkts. Bei einem primären Cluster ist dies der Name des Broker-Cap. Bei einem eigenständigen primären Server handelt es sich hierbei um den Namen des Host Systems.
+Der Name des primären Verbindungspunkts. Bei einem primären Cluster ist dies der Broker-CAP-Name. Bei einem eigenständigen primären Server ist dies der Hostsystemname.
 
 </dd> <dt>
 
-**Primaryhostsystem**
+**PrimaryHostSystem**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der voll qualifizierte Domänen Name des primären Host Systems, das den virtuellen Computer hostet.
+Der vollqualifizierte Domänenname des primären Hostsystems, das den virtuellen Computer hosten soll.
 
 </dd> <dt>
 
-**Wiederherstellungsconnectionpoint**
+**RecoveryConnectionPoint**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name des Wiederherstellungs Verbindungs Punkts. Bei einem Wiederherstellungs Cluster handelt es sich hierbei um den Broker-Cap-Namen. Bei einem eigenständigen Wiederherstellungs Server handelt es sich hierbei um den Namen des Host Systems.
+Der Name des Wiederherstellungsverbindungspunkts. Bei einem Wiederherstellungscluster ist dies der Broker-CAP-Name. Bei einem eigenständigen Wiederherstellungsserver ist dies der Hostsystemname.
 
 </dd> <dt>
 
-**Wiederherstellbare Datei**
+**RecoveryFile**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der vollständige Pfad einer Datei, in der Wiederherstellungs bezogene Informationen für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt, wird jedoch nicht verwendet.
+Der vollständige Pfad einer Datei, in der wiederherstellungsbezogene Informationen für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt,**](/previous-versions//cc136954(v=vs.85))aber nicht verwendet.
 
 </dd> <dt>
 
-**Parameter recoveryhistory einen**
+**RecoveryHistory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Anzahl von Wiederherstellungs Momentaufnahmen, die auf dem Wiederherstellungs Server gespeichert werden. Gültige Werte sind 0 bis 24.
+Die maximale Anzahl von Wiederherstellungsmomentaufnahmen, die auf dem Wiederherstellungsserver gespeichert werden. Gültige Werte liegen zwischen 0 und 24.
 
 </dd> <dt>
 
-**Wiederherstellunghostsystem**
+**RecoveryHostSystem**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der voll qualifizierte Domänen Name des Wiederherstellungs Host Systems, das den virtuellen Computer hostet.
+Der vollqualifizierte Domänenname des Wiederherstellungshostsystems, das den virtuellen Computer hosten soll.
 
 </dd> <dt>
 
-**Wiederherstellserverportnummer**
+**RecoveryServerPortNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Portnummer des Wiederherstellungs Servers, die beim Herstellen einer sicheren Verbindung für die Replikation verwendet werden soll.
+Die Portnummer des Wiederherstellungsservers, die beim Herstellen einer sicheren Verbindung für die Replikation verwendet werden soll.
 
 </dd> <dt>
 
-**Replicatehostkvpitems**
+**ReplicateHostKvpItems**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob nur Host- [**MSVM \_ kvpexchangedataitem**](msvm-kvpexchangedataitem.md)s vom primären virtuellen Computer auf den virtuellen Wiederherstellungs Computer repliziert werden soll.
+Gibt an, ob nur hostbasierte [**Msvm \_ KvpExchangeDataItem-Dateien**](msvm-kvpexchangedataitem.md)vom primären virtuellen Computer auf den virtuellen Wiederherstellungscomputer repliziert werden sollen.
 
 </dd> <dt>
 
 **ReplicationInterval**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Replikations Intervall einer Replikations Beziehung in Sekunden. Gültige Werte sind:
+Replikationsintervall einer Replikationsbeziehung in Sekunden. Gültige Werte sind:
 
 30
 
@@ -668,103 +668,103 @@ Replikations Intervall einer Replikations Beziehung in Sekunden. Gültige Werte 
 
 Der Standardwert ist 300 Sekunden.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 </dd> <dt>
 
-**Replicationprovider**
+**ReplicationProvider**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad zur Instanz der [**MSVM- \_ replicationprovider**](msvm-replicationprovider.md) -Klasse, die den Endpunkt des Replikations Anbieters identifiziert.
+Der Pfad zur Instanz der [**Msvm \_ ReplicationProvider-Klasse,**](msvm-replicationprovider.md) die den Replikationsanbieterendpunkt identifiziert.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 </dd> <dt>
 
-**Rootcertifialisiethumschlag-Print**
+**RootCertificateThumbPrint**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (128)
+Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (128)
 </dt> </dl>
 
-Der Fingerabdruck des Stamm Zertifikats des verwendeten Zertifikats, wenn " **AuthenticationType** " den Wert "2" hat (Zertifikat basierte Autorisierung).
+Stammzertifikatfingerabdruck des Zertifikats, das verwendet wird, **wenn AuthenticationType** 2 (zertifikatbasierte Autorisierung) ist.
 
 </dd> <dt>
 
-**Snapshotdataroot**
+**SnapshotDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad eines Verzeichnisses, in dem Informationen zu den Momentaufnahmen der virtuellen Maschine gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt, wird jedoch nicht verwendet.
+Der Pfad eines Verzeichnisses, in dem Informationen zu den Momentaufnahmen des virtuellen Computers gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt,**](/previous-versions//cc136954(v=vs.85))aber nicht verwendet.
 
 </dd> <dt>
 
-**Suspenddataroot**
+**SuspendDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad eines Verzeichnisses, in dem Informationen zu den Informationen zum Aussetzen der virtuellen Maschine gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt, wird jedoch nicht verwendet.
+Der Pfad eines Verzeichnisses, in dem Informationen zu den informationen zum Angehalten des virtuellen Computers gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt,**](/previous-versions//cc136954(v=vs.85))aber nicht verwendet.
 
 </dd> <dt>
 
-**Austauschen von Daten**
+**SwapFileDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad eines Verzeichnisses, in dem die Auslagerungs Dateien für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt, wird jedoch nicht verwendet.
+Der Pfad eines Verzeichnisses, in dem Auslagerungsdateien für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt,**](/previous-versions//cc136954(v=vs.85))aber nicht verwendet.
 
 </dd> <dt>
 
-**Virtualsystemidentifier**
+**VirtualSystemIdentifier**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Objekts, zu dem diese Einstellungsdaten gehören. Diese Eigenschaft ist eine außer Kraft Setzung von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85)).
+Der Name des [**\_ CIM-ComputerSystemobjekts,**](/windows/desktop/CIMWin32Prov/cim-computersystem) zu dem diese Einstellungsdaten gehören. Diese Eigenschaft ist eine Außerkraftsetzung [**von CIM \_ VirtualSystemSettingData**](/previous-versions//cc136954(v=vs.85)).
 
 </dd> <dt>
 
-**Virtualsystemtype**
+**VirtualSystemType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Typ der virtuellen Maschine an, die die Einstellungsdaten darstellen. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und ist immer auf "Microsoft: Hyper-V: Replica" festgelegt.
+Gibt den Typ des virtuellen Computers an, den die Einstellungsdaten darstellt. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt**](/previous-versions//cc136954(v=vs.85))und immer auf "Microsoft:Hyper-V:Replica" festgelegt.
 
 </dd> </dl>
 
@@ -774,22 +774,22 @@ Gibt den Typ der virtuellen Maschine an, die die Einstellungsdaten darstellen. D
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md)
+[**CIM \_ VirtualSystemSettingData**](cim-virtualsystemsettingdata.md)
 </dt> <dt>
 
-[**Modifyreplicationsettings**](modifyreplicationsettings-msvm-replicationservice.md)
+[**ModifyReplicationSettings**](modifyreplicationsettings-msvm-replicationservice.md)
 </dt> </dl>
 
  

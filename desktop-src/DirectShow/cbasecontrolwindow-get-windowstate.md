@@ -1,7 +1,7 @@
 ---
-description: Die get \_ WindowState-Methode ruft den aktuellen Fenster Zustand ab.
+description: Die \_ Methode "WindowState abrufen" ruft den aktuellen Fensterzustand ab.
 ms.assetid: 118b6710-b041-4a7d-8cdb-b96ae3dcbb09
-title: CBaseControlWindow.get_WindowState-Methode (ctlutil. h)
+title: CBaseControlWindow.get_WindowState-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5391a118e2ae860a37905c7ff94822ad7c422135
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5603e846fcf3357f01f896e6a0d34e34da6c355e5d41ab5d8f7b0c344c1a16dc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371515"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119586421"
 ---
-# <a name="cbasecontrolwindowget_windowstate-method"></a>Cbasecontrolwindow. get \_ WindowState-Methode
+# <a name="cbasecontrolwindowget_windowstate-method"></a>CBaseControlWindow.get \_ WindowState-Methode
 
-Die- `get_WindowState` Methode ruft den aktuellen Fenster Zustand ab.
+Die `get_WindowState` -Methode ruft den aktuellen Fensterzustand ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ HRESULT get_WindowState(
 
 <dl> <dt>
 
-*pwindowstate* 
+*pWindowState* 
 </dt> <dd>
 
-Zeiger auf den Fenster Zustand.
+Zeiger auf den Fensterzustand.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion gibt eine Teilmenge der Parameter der Microsoft Win32 **ShowWindow** -Funktion zurück. Vor allem gibt Sie in \_ \_ Abhängigkeit von der aktuellen Sichtbarkeit des Fensters "SW Show" und "SW Hide" zurück. Außerdem gibt es eine "SW \_ -minimieren" und "SW \_ maximieren" zurück, je nachdem, ob das Fenster ein Symbol ist oder erweitert
+Diese Memberfunktion gibt eine Teilmenge der Parameter der Microsoft Win32 **ShowWindow-Funktion** zurück. Insbesondere werden SW \_ SHOW und SW \_ HIDE zurückgegeben, abhängig von der aktuellen Sichtbarkeit des Fensters. Außerdem werden SW \_ MINIMIZE und SW MAXIMIZE \_ zurückgegeben, je nachdem, ob das Fenster ein Symbol ist oder erweitert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Member-Funktion gibt eine Teilmenge der Parameter der Microsoft Win32 **Sh
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Member-Funktion gibt eine Teilmenge der Parameter der Microsoft Win32 **Sh
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

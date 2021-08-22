@@ -1,9 +1,9 @@
 ---
-title: LB_GETSELCOUNT Meldung (Winuser. h)
-description: Ruft die Gesamtanzahl der ausgewählten Elemente in einem Listenfeld mit Mehrfachauswahl ab.
+title: LB_GETSELCOUNT Meldung (Winuser.h)
+description: Ruft die Gesamtzahl der ausgewählten Elemente in einem Listenfeld mit mehrfacher Auswahl ab.
 ms.assetid: 1597f6d0-e8f2-4e10-8a0e-ef76192e6238
 keywords:
-- Windows-Steuerelemente für LB_GETSELCOUNT Meldung
+- LB_GETSELCOUNT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ed73b387315d1b612241d41e47e6b613a3a75f12
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e8cacbf266931daaeba4a98c95c7c428630708d833af7603b0be09cef3071212
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103367"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119434110"
 ---
-# <a name="lb_getselcount-message"></a>LB- \_ getselcount-Nachricht
+# <a name="lb_getselcount-message"></a>LB \_ GETSELCOUNT-Nachricht
 
-Ruft die Gesamtanzahl der ausgewählten Elemente in einem Listenfeld mit Mehrfachauswahl ab.
+Ruft die Gesamtzahl der ausgewählten Elemente in einem Listenfeld mit mehrfacher Auswahl ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,7 +45,7 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist die Anzahl der ausgewählten Elemente im Listenfeld. Wenn das Listenfeld ein Listenfeld für die einfache Auswahl ist, lautet der Rückgabewert lb \_ Err.
+Der Rückgabewert ist die Anzahl der ausgewählten Elemente im Listenfeld. Wenn das Listenfeld ein Listenfeld mit nur einer Auswahl ist, lautet der Rückgabewert LB \_ ERR.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,17 +53,17 @@ Der Rückgabewert ist die Anzahl der ausgewählten Elemente im Listenfeld. Wenn 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**LB- \_ Sekunden**](lb-setsel.md)
+[**LB \_ SETSEL**](lb-setsel.md)
 </dt> </dl>
 
  

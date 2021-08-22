@@ -1,119 +1,119 @@
 ---
-title: Win32_TSSessionDirectory Methoden
-description: Die Win32 \_ tssessiondirectory-Klasse stellt die folgenden Methoden zur Verfügung.
+title: Win32_TSSessionDirectory-Methoden
+description: Die Win32 \_ TSSessionDirectory-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 5BABFB2B-4669-446F-B8F5-D06E44DD5E62
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eba033f1e4ebcdda74bed1d7c8f81cdcd788c46e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9883e3a1e2f8e4a704bef6c4bde32b4eec36b3c02fdc1b6b88883e2d47a8055e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340442"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137593"
 ---
-# <a name="win32_tssessiondirectory-methods"></a>Win32- \_ tssessiondirectory-Methoden
+# <a name="win32_tssessiondirectory-methods"></a>Win32 \_ TSSessionDirectory-Methoden
 
-Die [**Win32 \_ tssessiondirectory**](win32-tssessiondirectory.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**Win32 \_ TSSessionDirectory-Klasse**](win32-tssessiondirectory.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**Methode "| ateuserdisktemplate"**](createuserdisktemplate-win32-tssessiondirectory.md)
+[**CreateUserDiskTemplate-Methode**](createuserdisktemplate-win32-tssessiondirectory.md)
 </dt> <dd>
 
-Erstellt eine Vorlage für Benutzer Datenträger.
+Erstellt eine Benutzerdatenträgervorlage.
 
 </dd> <dt>
 
-[**Disableuservhd-Methode**](disableuservhd-win32-tssessiondirectory.md)
+[**DisableUserVhd-Methode**](disableuservhd-win32-tssessiondirectory.md)
 </dt> <dd>
 
 Deaktiviert eine Benutzerprofil-VHD.
 
 </dd> <dt>
 
-[**Enableuservhd-Methode**](enableuservhd-win32-tssessiondirectory.md)
+[**EnableUserVhd-Methode**](enableuservhd-win32-tssessiondirectory.md)
 </dt> <dd>
 
 Aktiviert eine Benutzerprofil-VHD auf einem RDSH-Server.
 
 </dd> <dt>
 
-[**Getcurrentredirectableadressen-Methode**](getcurrentredirectableaddresses-win32-tssessiondirectory.md)
+[**GetCurrentRedirectableAddresses-Methode**](getcurrentredirectableaddresses-win32-tssessiondirectory.md)
 </dt> <dd>
 
-Ruft die derzeit konfigurierte Liste der für die Umleitung verfügbaren Adressen ab, die für die Umleitung verwendet werden können.
+Ruft die derzeit konfigurierte Liste der für DNS geeigneten Adressen ab, die für die Umleitung verwendet werden können.
 
 </dd> <dt>
 
-[**Getredirectableadressen-Methode**](getredirectableaddresses-win32-tssessiondirectory.md)
+[**GetRedirectableAddresses-Methode**](getredirectableaddresses-win32-tssessiondirectory.md)
 </dt> <dd>
 
-Ruft die gesamte Liste der für den DNS berechtigten Adressen ab.
+Ruft die gesamte Liste der dns-berechtigten Adressen ab.
 
 </dd> <dt>
 
-[**Pingsessiondirectory-Methode**](pingsessiondirectory-win32-tssessiondirectory.md)
+[**PingSessionDirectory-Methode**](pingsessiondirectory-win32-tssessiondirectory.md)
 </dt> <dd>
 
 Überprüft, ob der Remotedesktopverbindung Broker-Server (RD-Verbindungsbroker) verfügbar ist.
 
 </dd> <dt>
 
-[**Setcurrentredirectableadressen-Methode**](setcurrentredirectableaddresses-win32-tssessiondirectory.md)
+[**SetCurrentRedirectableAddresses-Methode**](setcurrentredirectableaddresses-win32-tssessiondirectory.md)
 </dt> <dd>
 
-Legt die konfigurierte Liste der für die Umleitung zu verwendenden DNS-Adressen fest.
+Legt die konfigurierte Liste der FÜR DNS geeigneten Adressen fest, die für die Umleitung verwendet werden können.
 
 </dd> <dt>
 
-[**Setloadbalancingstate-Methode**](setloadbalancingstate-win32-tssessiondirectory.md)
+[**SetLoadBalancingState-Methode**](setloadbalancingstate-win32-tssessiondirectory.md)
 </dt> <dd>
 
-Legt den Wert fest, mit dem angegeben wird, ob der Server an RD-Verbindungsbroker Lastenausgleich beteiligt ist.
+Legt den Wert fest, um anzugeben, ob der Server am Lastenausgleich des RD-Verbindungsbrokers teilnimmt.
 
 </dd> <dt>
 
-[**Setserverweight-Methode**](setserverweight-win32-tssessiondirectory.md)
+[**SetServerWeight-Methode**](setserverweight-win32-tssessiondirectory.md)
 </dt> <dd>
 
-Legt den Server Gewichtungswert für RD-Verbindungsbroker Lastenausgleich fest.
+Legt den Servergewichtungswert für den Lastenausgleich des RD-Verbindungsbrokers fest.
 
 </dd> <dt>
 
-[**Die Methode "" der Methode ""**](win32-tssessiondirectory-setsessiondirectoryactive.md)
+[**SetSessionDirectoryActive-Methode**](win32-tssessiondirectory-setsessiondirectoryactive.md)
 </dt> <dd>
 
-Die **sezessiondirectoryactive** -Methode legt die **sessiondirectoryactive** -Eigenschaft fest.
+Die **SetSessionDirectoryActive-Methode** legt die **SessionDirectoryActive-Eigenschaft** fest.
 
 </dd> <dt>
 
-[**Die Methode "" der Methode ""**](win32-tssessiondirectory-setsessiondirectoryexposeserverip.md)
+[**SetSessionDirectoryExposeServerIP-Methode**](win32-tssessiondirectory-setsessiondirectoryexposeserverip.md)
 </dt> <dd>
 
-Legt die **sessiondirectoriyexposeserverip-** Eigenschaft fest.
+Legt die **SessionDirectoryExposeServerIP-Eigenschaft** fest.
 
 </dd> <dt>
 
-[**Methode ' ' der Methode ' '**](win32-tssessiondirectory-setsessiondirectoryproperty.md)
+[**SetSessionDirectoryProperty-Methode**](win32-tssessiondirectory-setsessiondirectoryproperty.md)
 </dt> <dd>
 
-Legt die **SessionDirectoryLocation** -Eigenschaft oder die **SessionDirectoryClusterName** -Eigenschaft für die-Klasse fest.
+Legt die **SessionDirectoryLocation-Eigenschaft** oder die **SessionDirectoryClusterName-Eigenschaft** für die -Klasse fest.
 
 </dd> <dt>
 
-[**Settsredirectormode-Methode**](settsredirectormode-win32-tssessiondirectory.md)
+[**SetTSRedirectorMode-Methode**](settsredirectormode-win32-tssessiondirectory.md)
 </dt> <dd>
 
-Legt den Wert fest, mit dem angegeben wird, ob der Server als Remotedesktopdienste Redirector fungiert.
+Legt den Wert fest, um anzugeben, ob der Server als Remotedesktopdienste Redirector fungiert.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

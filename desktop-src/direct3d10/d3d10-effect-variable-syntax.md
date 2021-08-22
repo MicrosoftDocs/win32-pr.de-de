@@ -1,44 +1,44 @@
 ---
-description: Eine Effekt Variable wird mit der folgenden Syntax deklariert.
+description: Eine Effect-Variable wird mit der folgenden Syntax deklariert.
 ms.assetid: 53939c65-3725-44cc-bec6-775c3b921770
-title: Syntax der Effekt Variablen (Direct3D 10)
+title: Effect-Variablensyntax (Direct3D 10)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8068571ff393e83ba0ae11eb2f9cb62f0bbb49df
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 2422ba2cebf18c72a14d621ef13a98700aefd2858169c6e96566b455ec21d2ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393101"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119497710"
 ---
-# <a name="effect-variable-syntax-direct3d-10"></a>Syntax der Effekt Variablen (Direct3D 10)
+# <a name="effect-variable-syntax-direct3d-10"></a>Effect-Variablensyntax (Direct3D 10)
 
-Eine Effekt Variable wird mit der folgenden Syntax deklariert.
+Eine Effect-Variable wird mit der folgenden Syntax deklariert.
 
 ## <a name="syntax"></a>Syntax
 
-*DataType* *VariableName* \[ : *semanticname* -Anmerkungen \]  <   >;
+*DataType* *VariableName* \[ : *SemanticName* \]  <  *Annotations* >;
 
 
 
-| Name         | BESCHREIBUNG                                                                                                                                                                                 |
+| Name         | Beschreibung                                                                                                                                                                                 |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DataType     | Ein beliebiger [Grund](../direct3dhlsl/dx-graphics-hlsl-variable-syntax.md) -oder [Textur](../direct3dhlsl/dx-graphics-hlsl-to-type.md) Datentyp.                                                                        |
-| VariableName | Eine ASCII-Zeichenfolge, die den Namen der Effekt Variablen eindeutig identifiziert.                                                                                                                   |
-| Semanticname | Eine ASCII-Zeichenfolge, die zusätzliche Informationen zur Verwendung einer Variablen angibt. Eine Semantik ist eine ASCII-Zeichenfolge, bei der es sich entweder um eine vordefinierte System-oder benutzerdefinierte Zeichenfolge handeln kann. |
-| Anmerkungen  | Ein oder mehrere Teile der vom Benutzer bereitgestellten Informationen (Metadaten), die vom Effektsystem ignoriert werden. Informationen zur Syntax finden Sie unter [Annotation-Syntax (Direct3D 10)](d3d10-effect-annotation-syntax.md).     |
+| DataType     | Ein [beliebiger Basis-](../direct3dhlsl/dx-graphics-hlsl-variable-syntax.md) oder [Texturtyp.](../direct3dhlsl/dx-graphics-hlsl-to-type.md)                                                                        |
+| VariableName | Eine ASCII-Zeichenfolge, die den Namen der Effektvariablen eindeutig identifiziert.                                                                                                                   |
+| SemanticName | Eine ASCII-Zeichenfolge, die zusätzliche Informationen zur Verwendung einer Variablen andementiert. Eine Semantik ist eine ASCII-Zeichenfolge, die entweder ein vordefinierter Systemwert oder eine benutzerdefinierte Zeichenfolge sein kann. |
+| Anmerkungen  | Eine oder mehrere vom Benutzer bereitgestellte Informationen (Metadaten), die vom Effektsystem ignoriert werden. Informationen zur Syntax finden Sie unter [Anmerkungssyntax (Direct3D 10).](d3d10-effect-annotation-syntax.md)     |
 
 
 
  
 
-Eine Effekt Variable, die außerhalb aller Funktionen deklariert ist, wird im Gültigkeitsbereich als Global betrachtet. innerhalb einer Funktion deklarierte Variablen sind für diese Funktion lokal.
+Eine Effektvariable, die außerhalb aller Funktionen deklariert wird, wird im Gültigkeitsbereich als global betrachtet. Variablen, die innerhalb einer Funktion deklariert werden, sind lokal für diese Funktion.
 
 ## <a name="example"></a>Beispiel
 
-Im [BasicHLSL10-Beispiel](https://msdn.microsoft.com/library/Ee416395(v=VS.85).aspx) werden globale Variablen ohne Semantik für Material Farben, helle Eigenschaften und Transformations Matrizen verwendet.
+Im [BasicHLSL10-Beispiel](https://msdn.microsoft.com/library/Ee416395(v=VS.85).aspx) werden globale Variablen ohne Semantik für Materialfarben, helle Eigenschaften und Transformationsmatrizen verwendet.
 
-In diesem Beispiel werden globale Effekt Variablen veranschaulicht.
+In diesem Beispiel werden globale Effektvariablen veranschaulicht.
 
 
 ```
@@ -50,7 +50,7 @@ float4x4 g_mWorld;                  // World matrix for object
 
 
 
-Dieses Beispiel veranschaulicht die Auswirkung von Variablen, die für eine Shader-Funktion lokal sind.
+In diesem Beispiel werden Effektvariablen veranschaulicht, die für eine Shaderfunktion lokal sind.
 
 
 ```
@@ -82,7 +82,7 @@ VS_OUTPUT RenderSceneVS( float4 vPos : SV_POSITION,
 
 
 
-In diesem Beispiel wird das Deklarieren einer Textur Variablen veranschaulicht.
+In diesem Beispiel wird das Deklarieren einer Texturvariablen veranschaulicht.
 
 
 ```
@@ -91,13 +91,13 @@ Texture2D g_MeshTexture;            // Color texture for mesh
 
 
 
-Die Stichprobenentnahme einer Textur erfolgt mit einem Textur Sampler. Informationen zum Einrichten eines Samplers in einem Effekt finden Sie unter dem [samplertyp](../direct3dhlsl/dx-graphics-hlsl-sampler.md).
+Das Sampling einer Textur erfolgt mit einem Textursampling. Informationen zum Einrichten eines Samplers in einem Effekt finden Sie im [Samplertyp](../direct3dhlsl/dx-graphics-hlsl-sampler.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Effekt Format](d3d10-effect-format.md)
+[Effektformat](d3d10-effect-format.md)
 </dt> </dl>
 
  
