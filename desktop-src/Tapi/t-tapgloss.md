@@ -56,21 +56,21 @@ Ein Datengerät für die Übertragung von codierten Signalen. In der Regel ist d
 <span id="tapi2.telephony_tapgloss"></span><span id="TAPI2.TELEPHONY_TAPGLOSS"></span>**Telefonie**
 </dt> <dd>
 
-Die Wissenschaft der Übertragung von Sprach-, Daten-, Video- oder Bildsignalen über eine Entfernung mithilfe von Technologie, die Computer in das Telefonnetzwerk integriert.
+Die Wissenschaft der Übertragung von Sprach-, Daten-, Video- oder Bildsignalen über eine Entfernung mithilfe von Technologie, die Computer in das Telefonnetz integriert.
 
 </dd> <dt>
 
 <span id="tapi2.telephony_application_programming_interface_tapi__tapgloss"></span><span id="TAPI2.TELEPHONY_APPLICATION_PROGRAMMING_INTERFACE_TAPI__TAPGLOSS"></span>**Telefonieanwendungsprogrammierschnittstelle (TAPI)**
 </dt> <dd>
 
-Eine Reihe von Funktionen, die die geräteunabhängige Programmierung von telefonnetzbasierten Geräten ermöglichen, um benutzern persönliche Telefonie zu bieten. TAPI unterstützt sowohl Sprach- als auch Datenübertragung, ermöglicht eine Vielzahl von Terminalgeräten und unterstützt komplexe Verbindungstypen und Anrufverwaltungstechniken wie Telefonanrufe, Anrufwarte- und Sprachnachrichten. TAPI ermöglicht es, alle Elemente der Telefonnutzung – vom einfachen Telefonanruf bis zur internationalen E-Mail – innerhalb von Anwendungen zu steuern, die für Microsoft Windows. Weitere Informationen finden [Sie in der Übersicht über die Microsoft-Telefonie.](./microsoft-telephony-overview.md)
+Eine Reihe von Funktionen, die die geräteunabhängige Programmierung von telefonnetzbasierten Geräten ermöglichen, um benutzern persönliche Telefonie zu bieten. TAPI unterstützt sowohl Sprach- als auch Datenübertragung, ermöglicht eine Vielzahl von Terminalgeräten und unterstützt komplexe Verbindungstypen und Anrufverwaltungstechniken wie Telefonanrufe, Anrufwarte- und Sprachnachrichten. TAPI ermöglicht die Kontrolle aller Elemente der Telefonnutzung – vom einfachen Telefonanruf bis zur internationalen E-Mail – innerhalb von Anwendungen, die für Microsoft Windows. Weitere Informationen finden [Sie in der Übersicht über die Microsoft-Telefonie.](./microsoft-telephony-overview.md)
 
 </dd> <dt>
 
 <span id="tapi2.telephony_service_provider_interface_tspi__tapgloss"></span><span id="TAPI2.TELEPHONY_SERVICE_PROVIDER_INTERFACE_TSPI__TAPGLOSS"></span>**Telefonie-Dienstanbieterschnittstelle (TSPI)**
 </dt> <dd>
 
-Tool zum Erstellen von Dienstanbietern für Microsoft Windows Betriebssysteme. TSPI definiert, wie das Netzwerk Informationen mit Windows Telefonie teilt, die wiederum mit der API spricht, die mit den Windows Telefonieanwendungen spricht. Weitere Informationen finden Sie unter [Telefonie-Dienstanbieterschnittstelle (TSPI).](./telephony-service-provider-interface-tspi-.md)
+Tool zum Erstellen von Dienstanbietern für Microsoft Windows Betriebssysteme. TSPI definiert, wie das Netzwerk Informationen mit Windows Telefonie teilt, die wiederum mit der API spricht, die mit Windows Telefonieanwendungen spricht. Weitere Informationen finden Sie unter [Telefonie-Dienstanbieterschnittstelle (TSPI).](./telephony-service-provider-interface-tspi-.md)
 
 </dd> <dt>
 
@@ -81,7 +81,7 @@ Ein Aufrufsteuerungsmodell einer Partei, das es einer Anwendung ermöglicht, ein
 
 </dd> <dt>
 
-<span id="tapi2.time_to_live_ttl__tapgloss"></span><span id="TAPI2.TIME_TO_LIVE_TTL__TAPGLOSS"></span>**Lebzeit (TTL)**
+<span id="tapi2.time_to_live_ttl__tapgloss"></span><span id="TAPI2.TIME_TO_LIVE_TTL__TAPGLOSS"></span>**Livezeit (TTL)**
 </dt> <dd>
 
 Ein Wert im Bereich von 0 bis 255, der den Bereich definiert, in dem Multicastpakete über ein Netzwerk mithilfe des Internetprotokolls (IP) gesendet werden sollen. Der Bereich wird in Bezug auf die Lokale oder Remoteadresse des Ziels eines Pakets definiert. Jeder Router dekrementiert die Tl um eins. Wenn der Wert eine vordefinierte Untergrenze erreicht, löst der Router das Paket aus. Die aktuellen Anforderungen an den Multicast-Backbone (MBONE), die am ftp://ftp.isi.edu/mbone/faq.txt-Standort verfügbar sind, definieren die folgenden Standardbereich: lokales Netzwerk, 1; lokaler Standort, 15; Region, 63; world, 127. Andere Einstellungen können eine lokale Bedeutung haben. 31 kann z. B. alle Standorte innerhalb einer bestimmten Organisation angeben.

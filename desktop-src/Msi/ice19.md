@@ -1,39 +1,39 @@
 ---
-description: ICE19 überprüft, ob angekündigte Komponenten auf eine Datei in der KEYPATH-Spalte der Component-Tabelle verweisen und ob eine angekündigte Verknüpfung auf ein Verzeichnis in dieser Spalte verweist.
+description: ICE19 überprüft, ob angekündigte Komponenten auf eine Datei in der KeyPath-Spalte der Component-Tabelle verweisen und dass eine angekündigte Verknüpfung auf ein Verzeichnis in dieser Spalte verweist.
 ms.assetid: 438153c1-bc4b-4ecf-ab85-d66ad69c987c
 title: ICE19
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a53aa3268a1c77f674d4a130c9de02c44b56243
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a1a706999744762a930a800326cb8d38487f19c1c4ea3e01b6b1f8aeae4ca2dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119529110"
 ---
 # <a name="ice19"></a>ICE19
 
-ICE19 überprüft, ob angekündigte Komponenten auf eine Datei in der KEYPATH-Spalte der [Component-Tabelle](component-table.md) verweisen und ob eine angekündigte Verknüpfung auf ein Verzeichnis in dieser Spalte verweist.
+ICE19 überprüft, ob angekündigte Komponenten auf eine Datei in der KeyPath-Spalte der [Component-Tabelle](component-table.md) verweisen und dass eine angekündigte Verknüpfung auf ein Verzeichnis in dieser Spalte verweist.
 
-ICE19 überprüft, ob angekündigte Komponenten oder Verknüpfungen über eine ComponentID verfügen. Komponenten in der [PublishComponent-Tabelle](publishcomponent-table.md), die nicht in einer anderen Tabelle angekündigt werden, werden nur geprüft, um festzustellen, ob Sie über eine ComponentID verfügen.
+ICE19 überprüft, ob angekündigte Komponenten oder Verknüpfungen über eine ComponentId verfügen. Komponenten in der [PublishComponent-Tabelle,](publishcomponent-table.md)die nicht in einer anderen Tabelle angekündigt werden, werden nur überprüft, um festzustellen, ob sie über eine ComponentId verfügen.
 
 ## <a name="result"></a>Ergebnis
 
-ICE19 gibt eine Fehlermeldung aus, wenn die KEYPATH-Spalte der Component-Tabelle nicht auf eine Datei im Fall einer angekündigten Komponente oder eines Verzeichnisses im Fall einer angekündigten Verknüpfung verweist. ICE19 gibt eine Fehlermeldung aus, wenn angekündigte Komponenten oder Verknüpfungen nicht über eine ComponentID verfügen.
+ICE19 gibt eine Fehlermeldung aus, wenn die KeyPath-Spalte der Tabelle Komponente im Fall einer angekündigten Komponente oder eines Verzeichnisses im Fall einer angekündigten Verknüpfung nicht auf eine Datei verweist. ICE19 sendet eine Fehlermeldung, wenn angekündigte Komponenten oder Verknüpfungen keine ComponentId aufweisen.
 
 ## <a name="example"></a>Beispiel
 
-ICE19 gibt die folgenden Fehlermeldungen für das gezeigte Beispiel aus:
+ICE19 sendet die folgenden Fehlermeldungen für das gezeigte Beispiel:
 
--   Die Erweiterungs-FLP verweist auf die Komponente Comp1, die in der [Komponenten Tabelle](component-table.md)nicht über eine ComponentID verfügt.
--   Die Erweiterungs-exe verweist auf die Komponente Comp4, die auf ein Verzeichnis als KEYPATH verweist. Der KEYPATH ist in der Komponenten Tabelle NULL.
--   Verknüpfung Shortcut2 verweist auf die Komponente Comp3, die auf einen Registrierungs Eintrag als Schlüssel Pfad verweist. Der Wert der Spalte Attribute in der Komponenten Tabelle ist 4.
+-   Extension flp verweist auf die Komponente Comp1, für die in der [Tabelle Component](component-table.md)keine ComponentId angegeben ist.
+-   Extension exe verweist auf die Komponente Comp4, die auf ein Verzeichnis als KeyPath verweist. KeyPath ist in der Component-Tabelle NULL.
+-   Shortcut2 verweist auf die Komponente Comp3, die auf einen Registrierungseintrag als Schlüsselpfad verweist. Der Wert der Attributes -Spalte in der Component-Tabelle ist 4.
 
-[Komponenten Tabelle](component-table.md) (partiell)
+[Komponententabelle](component-table.md) (teilweise)
 
 
 
-| Komponente | ComponentID                            | Attribute | KEYPATH |
+| Komponente | Componentid                            | Attribute | KeyPath |
 |-----------|----------------------------------------|------------|---------|
 | Comp1     | Null                                   | 0          | Datei1   |
 | Comp2     | {00000002-0003-0000-0000-624474736554} | 0          | Datei2   |
@@ -44,47 +44,47 @@ ICE19 gibt die folgenden Fehlermeldungen für das gezeigte Beispiel aus:
 
  
 
-[Erweiterungs Tabelle](extension-table.md) (partiell)
+[Erweiterungstabelle](extension-table.md) (teilweise)
 
 
 
-| Durchwahl | Komponente\_ |
+| Erweiterung | Komponente\_ |
 |-----------|-------------|
-| FLP       | Comp1       |
-| TST       | Comp2       |
+| Flp       | Comp1       |
+| Tst       | Comp2       |
 | exe       | Comp4       |
 
 
 
  
 
-Verknüpfungs [Tabelle](shortcut-table.md) (partiell)
+[Verknüpfungstabelle](shortcut-table.md) (partiell)
 
 
 
-| Abkürzung  | Komponente\_ | Funktion\_      |
+| Verknüpfung  | Komponente\_ | Feature\_      |
 |-----------|-------------|----------------|
-| Shortcut1 | Comp4       | Productfeature |
-| Shortcut2 | Comp3       | Productfeature |
+| Shortcut1 | Comp4       | ProductFeature |
+| Shortcut2 | Comp3       | ProductFeature |
 
 
 
  
 
-[Funktions Tabelle](feature-table.md) (partiell)
+[Featuretabelle](feature-table.md) (teilweise)
 
 
 
-| Funktion        |
+| Feature        |
 |----------------|
-| Productfeature |
+| ProductFeature |
 
 
 
  
 
 > [!Note]  
-> Wenn die Erweiterungs-FLP und die exe-Datei beide auf dieselbe Komponente verweisen, muss die exe-oder der com-Server, die Sie öffnet, identisch sein. Diese exe-Datei ist normalerweise der KEYPATH für die Komponente. Für Office können das Erweiterungs Dokument und XLS nicht auf dieselbe Komponente verweisen, da dieselbe exe nicht beide Erweiterungen öffnet. Sie müssen winword.exe, um doc-Erweiterungen zu öffnen, und Sie benötigen excel.exe, um XLS-Erweiterungen zu öffnen.
+> Wenn die Erweiterung flp und exe auf dieselbe Komponente verweisen, muss der EXE- oder COM-Server, der sie öffnet, identisch sein. Diese EXE ist normalerweise der KeyPath für die Komponente. Für OFFICE können die Erweiterungen doc und xls nicht auf dieselbe Komponente verweisen, da die gleiche EXE nicht beide Erweiterungen öffnet. Sie benötigen winword.exe, um Doc-Erweiterungen zu öffnen, und Sie benötigen excel.exe, um XLS-Erweiterungen zu öffnen.
 
  
 
@@ -92,7 +92,7 @@ Verknüpfungs [Tabelle](shortcut-table.md) (partiell)
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentfilesystembeschädigte tionexception-Klasse'
-title: Esentfilesystemkorruptionexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentFileSystemCorruptionException-Klasse'
+title: EsentFileSystemCorruptionException-Klasse
 TOCTitle: EsentFileSystemCorruptionException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentFileSystemCorruptionException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentfilesystemcorruptionexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 863766b5b4b768546ade161abf8c30659db1d720
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 53bdc2f80581b61e324639dba657614698357ab8a552d54fdbebbf88484e9afb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103758731"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119838740"
 ---
-# <a name="esentfilesystemcorruptionexception-class"></a>Esentfilesystemkorruptionexception-Klasse
+# <a name="esentfilesystemcorruptionexception-class"></a>EsentFileSystemCorruptionException-Klasse
 
-Basisklasse für JET_err. File System Corruption-Ausnahmen.
+Basisklasse für JET_err. FileSystemCorruption-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentdataexception](./esentdataexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentverdertionexception](./esentcorruptionexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentfilesystemkorruptionexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentDataException](./esentdataexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentCorruptionException](./esentcorruptionexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentFileSystemCorruptionException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentFileSystemCorruptionException : EsentCorruptionExceptio
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentfilesystemkorruptionexception-Member](./esentfilesystemcorruptionexception-members.md)
+[EsentFileSystemCorruptionException-Member](./esentfilesystemcorruptionexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

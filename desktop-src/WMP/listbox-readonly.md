@@ -1,9 +1,9 @@
 ---
-title: ListBox. schreibgeschützt
-description: Mit dem Attribut "schreibgeschützt" wird ein Wert angegeben oder abgerufen, der angibt, ob der Text schreibgeschützt ist oder vom Benutzer ausgewählt werden kann. Kann nur zur Entwurfszeit festgelegt werden.
+title: LISTBOX.readOnly
+description: Das readOnly-Attribut gibt einen Wert an, der angibt, ob Text schreibgeschützter Text ist oder vom Benutzer ausgewählt werden kann, oder ruft einen Wert ab. Kann nur zur Entwurfszeit festgelegt werden.
 ms.assetid: 2c76c486-c533-4583-8615-82876317a908
 keywords:
-- ListBox. schreibgeschützte Windows-Media Player
+- LISTBOX.readOnly-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ec6e926d69d9d2c504d33591d9a72d741911193c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 201cc8350b3fb248d85b1d57fc186c526a9f814a7f3411703834ce81ca176c4b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364692"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054648"
 ---
-# <a name="listboxreadonly"></a>ListBox. schreibgeschützt
+# <a name="listboxreadonly"></a>LISTBOX.readOnly
 
-Mit **dem Attribut "** schreibgeschützt" wird ein Wert angegeben oder abgerufen, der angibt, ob der Text schreibgeschützt ist oder vom Benutzer ausgewählt werden kann. Kann nur zur Entwurfszeit festgelegt werden.
+Das **readOnly-Attribut** gibt einen Wert an, der angibt, ob Text schreibgeschützter Text ist oder vom Benutzer ausgewählt werden kann, oder ruft einen Wert ab. Kann nur zur Entwurfszeit festgelegt werden.
 
 ``` syntax
         elementID.readOnly
@@ -29,14 +29,14 @@ Mit **dem Attribut "** schreibgeschützt" wird ein Wert angegeben oder abgerufen
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
 
 
 
 | Wert | BESCHREIBUNG                                |
 |-------|--------------------------------------------|
-| true  | Der Text ist schreibgeschützt.                         |
-| false | Standard. Der Benutzer kann Text auswählen. |
+| true  | Text ist schreibgeschützter Text.                         |
+| false | Standard. Text kann vom Benutzer ausgewählt werden. |
 
 
 
@@ -56,7 +56,7 @@ Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> </dl>
 
  

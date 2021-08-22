@@ -3,9 +3,9 @@ title: Videospeicherort
 description: Videospeicherort
 ms.assetid: d7785890-36a1-4077-b878-4845f2829101
 keywords:
-- Windows Media Player Mobile Skins,Video
-- Skins,Video
-- Referenz für Skins,Video
+- Windows Media Player Mobile Skins, Video
+- Skins, Video
+- Referenz für Skins, Video
 - Video in Skins, Informationen
 ms.topic: article
 ms.date: 05/31/2018
@@ -18,7 +18,7 @@ ms.locfileid: "119054158"
 ---
 # <a name="video-location"></a>Videospeicherort
 
-Sie müssen die Position des Videoanzeigebereichs in Ihrer Skin definieren. Sie müssen vier positive ganze Zahlen, getrennt durch Kommas, eingeben, die die linke, obere, Breite und Höhe der Videoanzeige in Pixel relativ zum Hintergrundbild definieren.
+Sie müssen die Position des Videoanzeigebereichs in Ihrer Skin definieren. Sie müssen vier positive ganze Zahlen durch Kommas getrennt eingeben, die die linke, obere, breite und höhe der Videoanzeige relativ zum Hintergrundbild in Pixel definieren.
 
 
 ```C++

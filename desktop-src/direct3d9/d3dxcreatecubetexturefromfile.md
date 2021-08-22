@@ -100,7 +100,7 @@ Die Filterung wird automatisch auf eine Textur angewendet, die mit dieser Method
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-description: Die Windows Sockets GUARANTEE-Enumeration wird nicht mehr verwendet. Informationen zur Windows Implementierung von Quality of Service und zur zugehörigen API finden Sie unter Quality of Service (QoS) im Platform Software Development Kit (SDK).
+description: Die Windows Sockets GUARANTEE-Enumeration wird nicht mehr verwendet. Informationen zur Windows Implementierung von Quality of Service und der zugehörigen API finden Sie unter Quality of Service (QoS) im Platform Software Development Kit (SDK).
 ms.assetid: 103e236f-79d7-4d8d-b23e-0cfe40fbd055
 title: Garantieren
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "119051658"
 ---
 # <a name="guarantee"></a>Garantieren
 
-Die Windows Sockets **GUARANTEE-Enumeration** wird nicht mehr verwendet. Informationen zur Windows Implementierung von Quality of Service und zur zugehörigen API finden Sie unter [Quality of Service (QoS)](/previous-versions/windows/desktop/qos/qos-start-page) im Platform Software Development Kit (SDK).
+Die Windows Sockets **GUARANTEE-Enumeration** wird nicht mehr verwendet. Informationen zur Windows Implementierung von Quality of Service und der zugehörigen API finden Sie unter [Quality of Service (QoS)](/previous-versions/windows/desktop/qos/qos-start-page) im Platform Software Development Kit (SDK).
 
  
 

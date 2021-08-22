@@ -1,28 +1,28 @@
 ---
-description: Befolgen Sie diese Richtlinien, wenn Sie eine Windows Installer benutzerdefinierte Aktion erstellen, um die Sicherheit einer Software Installation zu gewährleisten.
+description: Um die Sicherheit einer Softwareinstallation zu gewährleisten, befolgen Sie diese Richtlinien, wenn Sie eine benutzerdefinierte Aktion Windows Installer erstellen.
 ms.assetid: f7081b0c-bfa2-47a1-840b-28881ad97071
-title: Richtlinien zum Sichern von benutzerdefinierten Aktionen
+title: Richtlinien zum Schützen benutzerdefinierter Aktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 119c045833b165222756702244cf65bb2225a8f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 00b5ea12bd8d38025587cb09fd7a17d3e87739acedf31d85f72ff4b1b76b0432
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119649290"
 ---
-# <a name="guidelines-for-securing-custom-actions"></a>Richtlinien zum Sichern von benutzerdefinierten Aktionen
+# <a name="guidelines-for-securing-custom-actions"></a>Richtlinien zum Schützen benutzerdefinierter Aktionen
 
-Beachten Sie beim Erstellen eines Windows Installer Pakets mit benutzerdefinierten Aktionen die folgenden Richtlinien, um während der Installation eine sichere Umgebung zu gewährleisten:
+Die Einhaltung der folgenden Richtlinien beim Erstellen eines Pakets Windows Installer mit benutzerdefinierten Aktionen trägt dazu bei, eine sichere Umgebung während der Installation zu gewährleisten:
 
--   Sichern Sie alle zusätzlichen Dateien, die von der benutzerdefinierten Aktion geschrieben wurden.
--   Überprüfen Sie die Puffer Längen und die Gültigkeit aller von der benutzerdefinierten Aktion gelesenen Daten. Dies schließt Eigenschaften ein, die möglicherweise Daten für Ihre benutzerdefinierte Aktion bereitstellen, insbesondere solche, die von einem Benutzer bereitgestellte öffentliche Eigenschaften verwenden.
--   Verlassen Sie sich nicht auf externe DLLs, die vom System auf allen Plattformen, auf denen das Installationspaket ausgeführt werden soll, nicht als vertrauenswürdig eingestuft werden.
--   Überlegen Sie sorgfältig, ob benutzerdefinierte Aktionen verwendet werden sollen, die [*erhöhte*](e-gly.md) Rechte oder Identitätswechsel verwenden. Benutzerdefinierte Aktionen, wie z. b. "URL nach der Installation öffnen", "die Software nach Abschluss der Installation starten" oder "die Installation nach Abschluss der Installation starten" erfordert normalerweise keine erhöhten Berechtigungen. Wenn Ihre benutzerdefinierte Aktion mit *erhöhten* Rechten ausgeführt werden muss, müssen Sie sicherstellen, dass der Code der benutzerdefinierten Aktion vor Pufferüberläufen und unbeabsichtigtem Laden von unsicherem Code schützt. Beachten Sie, dass das Installationsprogramm während der Ausführungsphase der Installation Informationen an einen Prozess mit *erhöhten* rechten übergibt und das Skript ausführt. Alle benutzerdefinierten Aktionen, die während der Ausführungsphase ausgeführt werden, werden möglicherweise mit *erhöhten* Rechten ausgeführt.
--   Sammeln Sie alle Informationen, die vom Benutzer während der UI-Sequenz bereitgestellt werden. Fordern Sie den Benutzer nicht auf, Informationen einzugeben, die nicht mit einer öffentlichen Eigenschaft festgelegt werden können.
--   Wenn die benutzerdefinierte Skript Aktion Eigenschaften erweitert, ergreifen Sie Vorsichtsmaßnahmen, dass die benutzerdefinierte Aktion vor der Möglichkeit der Skript Injektion geschützt ist. Das Skript kann als Klartext protokolliert werden.
+-   Sichern Sie alle zusätzlichen Dateien, die von Ihrer benutzerdefinierten Aktion geschrieben wurden.
+-   Überprüfen Sie die Pufferlänge und -gültigkeit aller Daten, die von Ihrer benutzerdefinierten Aktion gelesen werden. Dies schließt Eigenschaften ein, die Möglicherweise Daten für Ihre benutzerdefinierte Aktion liefern, insbesondere solche, die öffentliche Eigenschaften verwenden, die von einem Benutzer bereitgestellt werden.
+-   Verlassen Sie sich nicht auf externe DLLs, die vom System nicht auf allen Plattformen als vertrauenswürdig eingestuft werden, auf denen Ihr Installationspaket ausgeführt werden soll.
+-   Überlegen Sie sorgfältig, ob Sie benutzerdefinierte Aktionen verwenden, [*die*](e-gly.md) erhöhte Rechte oder Identitätswechsel verwenden. Benutzerdefinierte Aktionen wie "Öffnen einer URL nach Abschluss der Installation", "Software nach Abschluss der Installation starten" oder "ReadMe nach Abschluss der Installation starten" erfordern in der Regel keine erhöhten Berechtigungen, um zu funktionieren. Wenn Ihre benutzerdefinierte  Aktion mit erhöhten Rechten ausgeführt werden muss, stellen Sie sicher, dass der code der benutzerdefinierten Aktion vor Pufferüberläufen und unbeabsichtigten Ladevorgang von unsicheren Code schutzt. Beachten Sie, dass das Installationsprogramm während der Ausführungsphase  der Installation Informationen an einen Prozess mit erhöhten Rechten übergibt und das Skript ausgibt. Alle benutzerdefinierten Aktionen, die während der Ausführungsphase ausgeführt werden, können mit erhöhten *Rechten* ausgeführt werden.
+-   Sammeln Sie alle Informationen, die vom Benutzer während der Benutzeroberflächensequenz bereitgestellt werden. Fragen Sie den Benutzer nicht nach Informationen, die nicht mithilfe einer öffentlichen Eigenschaft festgelegt werden können.
+-   Wenn ihre benutzerdefinierte Skriptaktion Eigenschaften erweitert, treffen Sie Vorsichtsmaßnahmen, um die benutzerdefinierte Aktion vor der Möglichkeit der Skriptinjektion zu sichern. Das Skript kann als Klartext protokolliert werden.
 
-Siehe auch [Sicherheit für benutzerdefinierte Aktionen](custom-action-security.md).
+Siehe auch [Benutzerdefinierte Aktionssicherheit](custom-action-security.md).
 
  
 

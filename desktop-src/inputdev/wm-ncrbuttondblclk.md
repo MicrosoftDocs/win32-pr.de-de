@@ -91,7 +91,7 @@ Wenn dies sinnvoll ist, sendet das System die [**\_ WM-SYSCOMMAND-Nachricht**](/
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

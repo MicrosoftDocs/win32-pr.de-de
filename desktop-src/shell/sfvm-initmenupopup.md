@@ -1,6 +1,6 @@
 ---
-description: 'Ermöglicht dem Rückruf Objekt das Ändern eines Windows-Explorer-Popup Menüs, bevor es angezeigt wird. Wird von ishellfolderviewcb:: messagesfvcb verwendet.'
-title: SFVM_INITMENUPOPUP Meldung (shlobj. h)
+description: Ermöglicht es dem Rückrufobjekt, ein Popupmenü Windows Explorer zu ändern, bevor es angezeigt wird. Wird von IShellFolderViewCB::MessageSFVCB verwendet.
+title: SFVM_INITMENUPOPUP (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 9d7e96e9-c52e-43bd-945b-05db33c8dfd0
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 1f9a2a169b232fe3ad16eeee8816536ed81c74dc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd69d19f753c1c72c1e0c143a0aface2cdb234cb2ace8c87d559834b97bbf0f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119592316"
 ---
-# <a name="sfvm_initmenupopup-message"></a>Sfvm- \_ initmenupopup-Meldung
+# <a name="sfvm_initmenupopup-message"></a>SFVM \_ INITMENUPOPUP-Meldung
 
-Ermöglicht dem Rückruf Objekt das Ändern eines Windows-Explorer-Popup Menüs, bevor es angezeigt wird. Wird von [**ishellfolderviewcb:: messagesfvcb**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
+Ermöglicht es dem Rückrufobjekt, ein Popupmenü Windows Explorer zu ändern, bevor es angezeigt wird. Wird von [**IShellFolderViewCB::MessageSFVCB verwendet.**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)
 
 
 ```C++
@@ -41,29 +41,29 @@ SFVM_INITMENUPOPUP
 
 <dl> <dt>
 
-*idcmd \_ nIndex* \[ in\]
+*idCmd \_ nIndex* \[ in\]
 </dt> <dd>
 
-Das nieder wertige Wort dieses Parameters enthält den Wert der ersten Befehls-ID, die für Client Befehle reserviert ist. Das hochwertige Wort enthält den Index des Menüs.
+Das niedrige Wort dieses Parameters enthält den Wert der ersten Befehls-ID, die für Clientbefehle reserviert ist. Das obere Wort enthält den Index des Menüs.
 
 </dd> <dt>
 
-*HMENU* \[ in, out\]
+*hmenu* \[ in, out\]
 </dt> <dd>
 
 Das Handle des Menüs.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Objekt "Systemordner Ansicht" sendet diese Nachricht, wenn ein Menü ausgewählt wird, aber bevor es angezeigt wird. Verarbeiten Sie diese Meldung, wenn Sie beispielsweise Menübefehle aktivieren oder deaktivieren müssen. Das Popup Menü kann wie folgt lauten:
+Das Objekt der Systemordneransicht sendet diese Meldung, wenn ein Menü ausgewählt ist, aber bevor es angezeigt wird. Verarbeiten Sie diese Meldung, wenn Sie z. B. Menübefehle aktivieren oder deaktivieren müssen. Das Popupmenü kann wie im folgenden Menü angezeigt werden:
 
--   Das Menü "Datei", "Bearbeiten" oder "Ansicht".
--   Ein Menü der obersten Ebene, das vom Client definiert wird.
--   Ein Client definiertes Untermenü.
+-   Das Menü Datei, Bearbeiten oder Ansicht.
+-   Ein vom Client definiertes Menü der obersten Ebene.
+-   Ein clientdefiniertes Untermenü.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -71,15 +71,15 @@ Das Objekt "Systemordner Ansicht" sendet diese Nachricht, wenn ein Menü ausgew�
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**sfvm \_ MergeMenu**](sfvm-mergemenu.md)
+[**SFVM \_ MERGEMENU**](sfvm-mergemenu.md)
 </dt> </dl>
 
  

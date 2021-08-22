@@ -62,7 +62,7 @@ public JET_BKINFO bkinfoIncPrev { get; internal set; }
 
 Typ: [Microsoft.Isam.Esent.Interop.JET_BKINFO](./jet-bkinfo-structure2.md)  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

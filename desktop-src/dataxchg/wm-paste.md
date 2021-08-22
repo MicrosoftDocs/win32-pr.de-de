@@ -1,9 +1,9 @@
 ---
-title: WM_PASTE Meldung (Winuser. h)
-description: Eine Anwendung sendet eine WM- \_ einfügenachricht an ein Bearbeitungs Steuerelement oder Kombinations Feld, um den aktuellen Inhalt der Zwischenablage an der aktuellen Position der Einfügemarke in das Bearbeitungs Steuerelement zu kopieren. Daten werden nur eingefügt, wenn die Zwischenablage Daten im CF- \_ Text Format enthält.
+title: WM_PASTE (Winuser.h)
+description: Eine Anwendung sendet eine WM PASTE-Nachricht an ein Bearbeitungssteuerfeld oder Kombinationsfeld, um den aktuellen Inhalt der Zwischenablage in das Bearbeitungssteuerfeld an der aktuellen Einfügeposition \_ zu kopieren. Daten werden nur eingefügt, wenn die Zwischenablage Daten im CF \_ TEXT-Format enthält.
 ms.assetid: 6830b511-986f-46ef-a977-7adedffe86ea
 keywords:
-- WM_PASTE Nachrichten Datenaustausch
+- WM_PASTE der Exchange
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 86b723830ecdd0f8b7e3faa9da9adcb51161b297
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1a3cc1815349a2194d5dd7e2a65eb1c9ae77a2947f41361a90e92bae73357f81
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392130"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119499120"
 ---
-# <a name="wm_paste-message"></a>WM- \_ Einfüge Nachricht
+# <a name="wm_paste-message"></a>WM \_ PASTE-Nachricht
 
-Eine Anwendung sendet eine **WM \_** -einfügenachricht an ein Bearbeitungs Steuerelement oder Kombinations Feld, um den aktuellen Inhalt der Zwischenablage an der aktuellen Position der Einfügemarke in das Bearbeitungs Steuerelement zu kopieren. Daten werden nur eingefügt, wenn die Zwischenablage Daten im [**CF- \_ Text**](standard-clipboard-formats.md) Format enthält.
+Eine Anwendung sendet eine **WM \_ PASTE-Nachricht** an ein Bearbeitungssteuerfeld oder Kombinationsfeld, um den aktuellen Inhalt der Zwischenablage in das Bearbeitungssteuerfeld an der aktuellen Einfügeposition zu kopieren. Daten werden nur eingefügt, wenn die Zwischenablage Daten im [**CF \_ TEXT-Format**](standard-clipboard-formats.md) enthält.
 
 
 ```C++
@@ -39,14 +39,14 @@ Eine Anwendung sendet eine **WM \_** -einfügenachricht an ein Bearbeitungs Steu
 *wParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet und muss NULL sein.
+Dieser Parameter wird nicht verwendet und muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet und muss NULL sein.
+Dieser Parameter wird nicht verwendet und muss 0 (null) sein.
 
 </dd> </dl>
 
@@ -54,9 +54,9 @@ Dieser Parameter wird nicht verwendet und muss NULL sein.
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Senden an ein Kombinations Feld wird die **WM- \_ Einfüge** Nachricht durch das Bearbeitungs Steuerelement behandelt. Diese Meldung hat keine Auswirkung, wenn Sie mit dem " [**CBS \_ DropDownList**](../controls/combo-box-styles.md) "-Stil an ein Kombinations Feld gesendet wird.
+Wenn die WM-PASTE-Nachricht an ein Kombinationsfeld gesendet wird, wird sie vom Bearbeitungssteuerfeld verarbeitet. **\_** Diese Meldung hat keine Auswirkungen, wenn sie an ein Kombinationsfeld mit dem [**CBS \_ DROPDOWNLIST-Format gesendet**](../controls/combo-box-styles.md) wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,7 +66,7 @@ Beim Senden an ein Kombinations Feld wird die **WM- \_ Einfüge** Nachricht durc
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -74,22 +74,22 @@ Beim Senden an ein Kombinations Feld wird die **WM- \_ Einfüge** Nachricht durc
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**WM \_ Clear**](wm-clear.md)
+[**WM \_ CLEAR**](wm-clear.md)
 </dt> <dt>
 
-[**WM- \_ Kopie**](wm-copy.md)
+[**WM \_ COPY**](wm-copy.md)
 </dt> <dt>
 
-[**WM \_ Ausschneiden**](wm-cut.md)
+[**WM \_ CUT**](wm-cut.md)
 </dt> <dt>
 
-[**WM \_ rückgängig machen**](/windows/desktop/Controls/wm-undo)
+[**WM \_ UNDO**](/windows/desktop/Controls/wm-undo)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Zwischenablage](clipboard.md)

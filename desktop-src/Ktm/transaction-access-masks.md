@@ -1,5 +1,5 @@
 ---
-description: KTM definiert die folgenden Transaktionszugriffsmasken, die beim Öffnen einer Transaktion verwendet werden sollen.
+description: BEI werden die folgenden Transaktionszugriffsmasken definiert, die beim Öffnen einer Transaktion verwendet werden sollen.
 ms.assetid: 93ef3098-b3cc-4b24-ae82-1c10d937f14f
 title: Transaktionszugriffsmasken (WinNT.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "119520640"
 ---
 # <a name="transaction-access-masks"></a>Transaktionszugriffsmasken
 
-KTM definiert die folgenden Transaktionszugriffsmasken, die beim Öffnen einer Transaktion verwendet werden sollen.
+BEI werden die folgenden Transaktionszugriffsmasken definiert, die beim Öffnen einer Transaktion verwendet werden sollen.
 
 <dl> <dt>
 
@@ -51,12 +51,12 @@ Der Aufrufer kann Transaktionsinformationen festlegen.
 
 
 
-Der Aufrufer kann sich in diese Transaktion einlisten.
+Der Aufrufer kann sich in diese Transaktion eintragen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_COMMIT"></span><span id="transaction_commit"></span>**TRANSACTION \_ COMMIT**
+<span id="TRANSACTION_COMMIT"></span><span id="transaction_commit"></span>**\_TRANSAKTIONSCOMMIT**
 </dt> <dd> <dl> <dt>
 
 0x000008
@@ -64,7 +64,7 @@ Der Aufrufer kann sich in diese Transaktion einlisten.
 
 
 
-Der Aufrufer kann diese Transaktion commiten.
+Der Aufrufer kann für diese Transaktion einen Commit durchführen.
 
 
 </dt> </dl> </dd> <dt>
@@ -77,7 +77,7 @@ Der Aufrufer kann diese Transaktion commiten.
 
 
 
-Der Aufrufer kann ein Rollback für diese Transaktion ausgeführt werden.
+Der Aufrufer kann ein Rollback für diese Transaktion durchführen.
 
 
 </dt> </dl> </dd> <dt>
@@ -90,12 +90,12 @@ Der Aufrufer kann ein Rollback für diese Transaktion ausgeführt werden.
 
 
 
-Der Aufrufer kann diese Transaktion an einen übergeordneten Ressourcen-Manager wie den Distributed Transaction Coordinator (DTC) weitersenden.
+Der Aufrufer kann diese Transaktion an einen übergeordneten Ressourcen-Manager, z. B. den Distributed Transaction Coordinator (DTC), weiterspähen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_GENERIC_READ"></span><span id="transaction_generic_read"></span>**GENERISCHER \_ \_ TRANSAKTIONSLESEDATENLESE-VORGANG**
+<span id="TRANSACTION_GENERIC_READ"></span><span id="transaction_generic_read"></span>**GENERISCHER \_ \_ TRANSAKTIONSLESEVORGANG**
 </dt> <dd> <dl> <dt>
 
 0x120001
@@ -108,7 +108,7 @@ Der Aufrufer verfügt über die folgenden Berechtigungen: **STANDARD \_ RIGHTS \
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_GENERIC_WRITE"></span><span id="transaction_generic_write"></span>**GENERISCHER \_ \_ TRANSAKTIONS-SCHREIBZUGRIFF**
+<span id="TRANSACTION_GENERIC_WRITE"></span><span id="transaction_generic_write"></span>**GENERISCHER \_ \_ TRANSAKTIONSSCHREIBVORGANG**
 </dt> <dd> <dl> <dt>
 
 0x12003E
@@ -142,12 +142,12 @@ Der Aufrufer verfügt über die folgenden Berechtigungen: **STANDARD \_ RIGHTS \
 
 
 
-Der Aufrufer verfügt über die folgenden Berechtigungen: **STANDARD \_ RIGHTS \_ REQUIRED,** **TRANSACTION GENERIC \_ \_ READ,** **TRANSACTION GENERIC \_ \_ WRITE** und **TRANSACTION GENERIC \_ \_ EXECUTE.**
+Der Aufrufer verfügt über die folgenden Berechtigungen: **STANDARD \_ RIGHTS \_ REQUIRED**, **TRANSACTION GENERIC \_ \_ READ**, **TRANSACTION GENERIC \_ \_ WRITE** und **TRANSACTION GENERIC \_ \_ EXECUTE**.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_RESOURCE_MANAGER_RIGHTS"></span><span id="transaction_resource_manager_rights"></span>**RESOURCE \_ \_ MANAGER-RECHTE FÜR \_ TRANSAKTIONEN**
+<span id="TRANSACTION_RESOURCE_MANAGER_RIGHTS"></span><span id="transaction_resource_manager_rights"></span>**RECHTE \_ DES TRANSAKTIONSRESSOURCEN-MANAGERS \_ \_**
 </dt> <dd> <dl> <dt>
 
 0x120037
@@ -155,14 +155,14 @@ Der Aufrufer verfügt über die folgenden Berechtigungen: **STANDARD \_ RIGHTS \
 
 
 
-Der Aufrufer verfügt über die folgenden Berechtigungen: **TRANSACTION \_ GENERIC \_ READ,** **STANDARD RIGHTS \_ \_ WRITE,** **TRANSACTION SET \_ \_ INFORMATION, TRANSACTION** **\_ ROLLBACK,** **TRANSACTION \_ ENLIST,** **TRANSACTION \_ PROPAGATE** und **SYNCHRONIZE**.
+Der Aufrufer verfügt über die folgenden Berechtigungen: **TRANSACTION \_ GENERIC \_ READ,** **STANDARD RIGHTS \_ \_ WRITE,** **TRANSACTION SET \_ \_ INFORMATION,** **TRANSACTION \_ ROLLBACK,** **TRANSACTION \_ ENLIST,** **TRANSACTION \_ PROPAGATE** und **SYNCHRONIZE**.
 
 
 </dt> </dl> </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Es wird empfohlen, dass Ressourcen-Manager bei der Eintragung in eine Transaktion **TRANSACTION \_ RESOURCE MANAGER \_ \_ RIGHTS** beim Öffnen einer Transaktion angeben.
+Es wird empfohlen, dass Ressourcen-Manager bei der Eintragung in eine Transaktion **TRANSACTION \_ RESOURCE MANAGER \_ \_ RIGHTS** angeben, wenn sie eine Transaktion öffnen.
 
 ## <a name="requirements"></a>Anforderungen
 

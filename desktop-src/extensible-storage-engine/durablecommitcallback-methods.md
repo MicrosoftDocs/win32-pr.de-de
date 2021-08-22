@@ -28,7 +28,7 @@ Der [DurableCommitCallback-Typ](./durablecommitcallback-class.md) macht die folg
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -103,7 +103,7 @@ Der [DurableCommitCallback-Typ](./durablecommitcallback-class.md) macht die folg
 
 Oben
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

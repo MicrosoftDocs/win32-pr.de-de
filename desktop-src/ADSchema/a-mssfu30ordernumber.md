@@ -4,8 +4,8 @@ description: Enthält einen Wert, der von NIS verwendet wird, um zu überprüfen
 ms.assetid: b2e83980-2de4-4001-b65a-8073c9258b27
 ms.tgt_platform: multiple
 keywords:
-- msSFU-30-Order-Number-Attribut, AD-Schema
-- msSFU30OrderNumber-Attribut AD-Schema
+- AD-Schema des msSFU-30-Order-Number-Attributs
+- AD-Schema des msSFU30OrderNumber-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af67f1b5d6fdff8ca4a7739276443d67fa35679f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 995064d10d16849e75da6cc2ab796a443d684dee68af4e1d73dedcf65b8c114c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119508860"
 ---
 # <a name="mssfu-30-order-number-attribute"></a>msSFU-30-Order-Number-Attribut
 
-Enthält einen Wert, der von NIS verwendet wird, um zu überprüfen, ob sich die Zuordnung geändert hat. Jedes Mal, wenn die im [**msSFU-30-Domain-Info**](c-mssfu30domaininfo.md) -Objekt gespeicherten Daten geändert werden, wird dieser Wert inkrementiert. Dieser Wert wird verwendet, um Datenänderungen zwischen **ypxfer** -aufrufen zu verfolgen.
+Enthält einen Wert, der von NIS verwendet wird, um zu überprüfen, ob sich die Zuordnung geändert hat. Jedes Mal, wenn sich die im [**msSFU-30-Domain-Info-Objekt**](c-mssfu30domaininfo.md) gespeicherten Daten ändern, wird dieser Wert erhöht. Mit diesem Wert werden Datenänderungen zwischen **ypxfer-Aufrufen** nachverfolgt.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | msSFU-30-Bestellnummer                       |
-| LDAP-Display-Name | msSFU30OrderNumber                          |
+| CN                | msSFU-30-Order-Number                       |
+| Ldap-Anzeigename | msSFU30OrderNumber                          |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.6.18.1.308                 |
-| System-ID-GUID    | 02625f 05-d1ee-4f-b366-55266becb95c        |
+| System-Id-Guid    | 02625f05-d1ee-4f9f-b366-55266becb95c        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -56,15 +56,15 @@ Enthält einen Wert, der von NIS verwendet wird, um zu überprüfen, ob sich die
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
+| Ist indiziert             | True                                                           |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
 | System-Flags           | 0x00000000                                                     |
-| In verwendete Klassen        | [**msSFU-30-Domäne-Info**](c-mssfu30domaininfo.md)<br/> |
+| In verwendete Klassen        | [**msSFU-30-Domain-Info**](c-mssfu30domaininfo.md)<br/> |
 
 
 
@@ -77,15 +77,15 @@ Enthält einen Wert, der von NIS verwendet wird, um zu überprüfen, ob sich die
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
+| Ist indiziert             | True                                                           |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
 | System-Flags           | 0x00000000                                                     |
-| In verwendete Klassen        | [**msSFU-30-Domäne-Info**](c-mssfu30domaininfo.md)<br/> |
+| In verwendete Klassen        | [**msSFU-30-Domain-Info**](c-mssfu30domaininfo.md)<br/> |
 
 
 
@@ -98,15 +98,15 @@ Enthält einen Wert, der von NIS verwendet wird, um zu überprüfen, ob sich die
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
+| Ist indiziert             | True                                                           |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
 | System-Flags           | 0x00000000                                                     |
-| In verwendete Klassen        | [**msSFU-30-Domäne-Info**](c-mssfu30domaininfo.md)<br/> |
+| In verwendete Klassen        | [**msSFU-30-Domain-Info**](c-mssfu30domaininfo.md)<br/> |
 
 
 
@@ -119,15 +119,15 @@ Enthält einen Wert, der von NIS verwendet wird, um zu überprüfen, ob sich die
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
+| Ist indiziert             | True                                                           |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
 | System-Flags           | 0x00000000                                                     |
-| In verwendete Klassen        | [**msSFU-30-Domäne-Info**](c-mssfu30domaininfo.md)<br/> |
+| In verwendete Klassen        | [**msSFU-30-Domain-Info**](c-mssfu30domaininfo.md)<br/> |
 
 
 

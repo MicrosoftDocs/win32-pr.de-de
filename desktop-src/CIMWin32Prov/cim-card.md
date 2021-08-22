@@ -1,5 +1,5 @@
 ---
-description: Die CIM Card-Klasse stellt einen physischen Containertyp dar, der an eine andere Karte oder ein Hostingboard angeschlossen werden kann oder selbst ein Hostingboard/eine Hauptplatine in einem \_ Gehäuse ist.
+description: Die CIM Card-Klasse stellt einen physischen Containertyp dar, der an eine andere Karte oder ein Hostingboard angeschlossen werden kann, oder ist selbst ein Hostingboard bzw. eine Hauptplatine \_ in einem Gehäuse.
 ms.assetid: edbbfe43-c8e8-4cde-9507-e0a248c15ca7
 ms.tgt_platform: multiple
 title: CIM_Card-Klasse
@@ -57,7 +57,7 @@ Die **CIM \_ Card-Klasse** stellt einen physischen Containertyp dar, der an eine
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -108,7 +108,7 @@ Die **CIM \_ Card-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                        | BESCHREIBUNG                                                                                                                                    |
+| Methode                                                        | Beschreibung                                                                                                                                    |
 |:--------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|
 | [**IsCompatible**](iscompatible-method-in-class-cim-card.md) | Überprüft, ob das physische Element, auf das verwiesen wird, im physischen Paket enthalten oder in dieses eingefügt werden kann. Nicht von WMI implementiert.<br/> |
 
@@ -125,7 +125,7 @@ Die **CIM \_ Card-Klasse** verfügt über diese Eigenschaften.
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -143,13 +143,13 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managed
 **CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**\_ CIM-Taste,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
 Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit anderen Schlüsseleigenschaften der -Klasse ermöglicht diese Eigenschaft, dass alle Instanzen der Klasse und deren Unterklassen eindeutig identifiziert werden.
@@ -179,7 +179,7 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalPackage geerbt.**](cim-physicalpack
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -234,7 +234,7 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True **gibt an,** dass das Paket im heißen Tausch verwendet werden kann. Ein physisches Paket kann ausgetauscht werden, wenn das Element durch ein physisch anderes (aber äquivalentes) ersetzt werden kann, während das enthaltende Paket aktiviert ist. Beispielsweise kann eine Lüfterkomponente so entworfen werden, dass sie hot-swaped ist. Alle Komponenten, die ausgetauscht werden können, sind grundsätzlich austauschbar und austauschbar.
+True **gibt an,** dass das Paket im heißen Tausch verwendet werden kann. Ein physisches Paket kann im Hot-Swap-Format ausgetauscht werden, wenn das Element durch ein physisch anderes (aber äquivalentes) ersetzt werden kann, während das enthaltende Paket aktiviert ist. Beispielsweise kann eine Lüfterkomponente so entworfen werden, dass sie hot-swaped ist. Alle Komponenten, die im Hot-Swap-System ausgetauscht werden können, sind grundsätzlich austauschbar und austauschbar.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalPackage geerbt.**](cim-physicalpackage.md)
 
@@ -249,7 +249,7 @@ Datentyp: **datetime**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installation date")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installationsdatum")
 </dt> </dl>
 
 Gibt an, wann das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
@@ -261,7 +261,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managed
 **Manufacturer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -279,7 +279,7 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelem
 **Modell**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -297,7 +297,7 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelem
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -315,7 +315,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managed
 **OtherIdentifyingInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -339,9 +339,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Teilenummer, die von der Organisation zugewiesen wird, die für die Produktion oder Herstellung des physischen Elements zuständig ist.
+Teilenummer, die von der Organisation zugewiesen wird, die für die Produktion oder Herstellung des physischen Elements verantwortlich ist.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
 </dd> <dt>
 
@@ -354,9 +354,9 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True **gibt an,** dass das physische Element eingeschaltet wird. Andernfalls ist sie derzeit deaktiviert.
+True gibt an, dass das physische Element eingeschaltet ist. Andernfalls ist sie derzeit deaktiviert.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
 </dd> <dt>
 
@@ -369,9 +369,9 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True **gibt** an, dass das Paket so konzipiert ist, dass es in den physischen Container aufgenommen und aus ihm herausgenommen wird, in dem es sich normalerweise befindet, ohne die Funktion der Gesamtpaketierung zu beeinträchtigen. Ein Paket gilt auch dann als wechselbar, wenn die Stromversorgung ausgeschaltet sein muss, um das Entfernen durchzuführen. Wenn die Stromversorgung ein- und das Paket entfernt werden kann, ist das Element wechselbar und kann mit dem Heißen ausgetauscht werden. Beispielsweise ist ein upgradefähiger Prozessorchip wechselbar.
+True gibt an, dass das Paket so konzipiert ist, dass es in den physischen Container, in dem es normalerweise gefunden wird, ein- und aus dem Paket aufgenommen wird, ohne die Funktion der gesamten Paketierung zu beeinträchtigen. Ein Paket gilt auch dann als wechselbar, wenn die Stromversorgung ausgeschaltet sein muss, um die Entfernung durchzuführen. Wenn die Stromversorgung eingeschaltet und das Paket entfernt werden kann, ist das Element wechselbar und kann im laufenden Betrieb ausgetauscht werden. Beispielsweise kann ein aktualisierbarer Prozessorchip entfernt werden.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalPackage geerbt.**](cim-physicalpackage.md)
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage**](cim-physicalpackage.md)geerbt.
 
 </dd> <dt>
 
@@ -384,9 +384,9 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True **gibt** an, dass das Element durch ein physisch anderes ersetzt werden kann. Einige Computersysteme ermöglichen beispielsweise das Upgrade des Hauptprozessorchips auf eine höhere Taktung. In diesem Fall wird der Prozessor als ersetzbar bezeichnet. Alle Wechselkomponenten können grundsätzlich ersetzt werden.
+True gibt an, dass das Element durch ein physisch anderes ersetzt werden kann. Einige Computersysteme ermöglichen beispielsweise das Upgrade des Hauptprozessorchips auf eine höhere Uhrbewertung. In diesem Fall wird der Prozessor als ersetzbar bezeichnet. Alle Wechselkomponenten sind grundsätzlich austauschbar.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalPackage geerbt.**](cim-physicalpackage.md)
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage**](cim-physicalpackage.md)geerbt.
 
 </dd> <dt>
 
@@ -402,7 +402,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Karte**.**SpecialRequirements**")
 </dt> </dl>
 
-Freiformzeichenfolge, die beschreibt, wie die Karte physisch von anderen Karten eindeutig ist. Diese Eigenschaft hat nur dann eine Bedeutung, wenn die entsprechende boolesche Eigenschaft **SpecialRequirements** auf **TRUE festgelegt ist.**
+Freiformzeichenfolge, die beschreibt, wie die Karte physisch von anderen Karten eindeutig ist. Diese Eigenschaft hat nur dann eine Bedeutung, wenn die entsprechende boolesche Eigenschaft **SpecialRequirements** auf **TRUE** festgelegt ist.
 
 </dd> <dt>
 
@@ -415,7 +415,7 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True **gibt an,** dass für eine ordnungsgemäße Funktionsweise mindestens eine Tafel oder eine Hilfskarte erforderlich ist.
+True gibt an, dass mindestens ein Brett oder eine Hilfskarte erforderlich ist, um ordnungsgemäß zu funktionieren.
 
 </dd> <dt>
 
@@ -433,7 +433,7 @@ Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 
 Vom Hersteller zugeordnete Nummer, die zum Identifizieren des physischen Elements verwendet wird.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
 </dd> <dt>
 
@@ -449,9 +449,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Lagerbestandseinheitennummer für dieses physische Element.
+Lagerhaltungseinheitennummer für dieses physische Element.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
 </dd> <dt>
 
@@ -464,7 +464,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Freiformzeichenfolge, die die Slotpositionierung, typische Verwendung, Einschränkungen, einzelne Slotabstande oder andere relevante Informationen für die Slots auf einer Karte beschreibt.
+Freiformzeichenfolge, die die Slotpositionierung, typische Nutzung, Einschränkungen, einzelne Slotabstande oder andere relevante Informationen für die Slots auf einer Karte beschreibt.
 
 </dd> <dt>
 
@@ -480,7 +480,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Karte**.**RequirementsDescription**")
 </dt> </dl>
 
-True **gibt** an, dass die Karte physisch von anderen Karten desselben Typs eindeutig ist und daher einen speziellen Slot erfordert. Für eine karte mit doppelter Breite sind z. B. zwei Slots erforderlich. Ein weiteres Beispiel ist, wenn eine bestimmte Karte für dieselbe allgemeine Funktion wie andere Karten verwendet werden kann, aber einen speziellen Slot erfordert (z. B. extra long). während andere Karten in einem beliebigen verfügbaren Slot platziert werden können. True **gibt** an, dass **die entsprechende RequirementsDescription-Eigenschaft** die Art der Eindeutigkeit oder des Zwecks der Karte angeben sollte.
+True gibt an, dass die Karte physisch von anderen Karten desselben Typs eindeutig ist und daher einen speziellen Slot erfordert. Beispielsweise erfordert eine karte mit doppelter Breite zwei Slots. Ein weiteres Beispiel ist, wenn eine bestimmte Karte für dieselbe allgemeine Funktion wie andere Karten verwendet werden kann, aber einen speziellen Slot erfordert (z. B. eine zusätzliche Länge). während andere Karten in einem beliebigen verfügbaren Slot platziert werden können. True gibt an, dass die entsprechende **RequirementsDescription-Eigenschaft** die Art der Eindeutigkeit oder des Zwecks der Karte angeben soll.
 
 </dd> <dt>
 
@@ -496,11 +496,11 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
-Eine Zeichenfolge, die den aktuellen Status des Objekts angibt. Betriebsstatus und nicht betriebsbereiter Status können definiert werden. Der Betriebsstatus kann "OK", "Heruntergestuft" und "Fehler vor dem Ausfall" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. B. eine SMART-fähige Festplatte).
+Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebsbereite Status können definiert werden. Der Betriebsstatus kann "OK", "Heruntergestuft" und "Fehler vor dem Fehler" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. B. ein SMART-fähiges Festplattenlaufwerk).
 
-Nicht betriebsbereite Status können "Error", "Starting", "Stopping" und "Service" sein. "Dienst" kann während der Spiegelung des Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen administrativen Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Nicht betriebsbereite Status können "Error", "Starting", "Stopping" und "Service" sein. "Dienst" kann während der Datenträgerspiegelung, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Administrativen Arbeiten angewendet werden. Nicht alle dieser Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 Folgende Werte sind gültig:
 
@@ -543,14 +543,14 @@ Folgende Werte sind gültig:
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-**Wird** gestartet ("Wird gestartet")
+**Wird gestartet** ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-**Wird beendet** ("Wird beendet")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -564,7 +564,7 @@ Folgende Werte sind gültig:
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Striche** ("Strich")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
@@ -585,7 +585,7 @@ Folgende Werte sind gültig:
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Lost Comm** ("Lost Comm")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
@@ -601,12 +601,12 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**\_ CIM-Taste,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Identifiziert das physische Element eindeutig und dient als Schlüssel des Elements. Diese Eigenschaft kann Informationen enthalten, z. B. Assettag- oder Seriennummerndaten. Der Schlüssel für [**CIM \_ PhysicalElement**](cim-physicalelement.md) wird in der Objekthierarchie sehr hoch platziert, um die Hardware oder Entität unabhängig von der physischen Platzierung in (oder auf) Schränken, Adaptern und so weiter zu identifizieren. Beispielsweise kann eine Wechseldatenträgerkomponente, die im hot-Austausch verwendet werden kann, aus dem enthaltenden Paket (Bereichspaket) übernommen und vorübergehend nicht verwendet werden. Das Objekt ist weiterhin vorhanden und kann sogar in einen anderen Bereichscontainer eingefügt werden. Der Schlüssel für ein physisches Element ist eine beliebige Zeichenfolge, die unabhängig von der Platzierung oder standortorientierten Hierarchie definiert wird.
+Identifiziert das physische Element eindeutig und dient als Schlüssel des Elements. Diese Eigenschaft kann Informationen enthalten, z. B. Assettag- oder Seriennummerndaten. Der Schlüssel für [**CIM \_ PhysicalElement**](cim-physicalelement.md) wird sehr hoch in der Objekthierarchie platziert, um die Hardware oder Entität unabhängig von der physischen Platzierung in Schränken, Adaptern usw. zu identifizieren. Beispielsweise kann eine Wechselkomponente, die im laufenden Betrieb ausgetauscht werden kann, aus dem enthaltenden Paket (Bereichspaket) entnommen und vorübergehend nicht verwendet werden. Das Objekt ist weiterhin vorhanden und kann sogar in einen anderen Bereichscontainer eingefügt werden. Der Schlüssel für ein physisches Element ist eine beliebige Zeichenfolge, die unabhängig von der Platzierung oder der standortorientierten Hierarchie definiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
 </dd> <dt>
 
@@ -686,7 +686,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von d
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
-title: glgetteximage-Funktion (GL. h)
-description: Die Funktion "glgetteximage" gibt ein Textur Bild zurück.
+title: glGetTexImage-Funktion (Gl.h)
+description: Die glGetTexImage-Funktion gibt ein Texturbild zurück.
 ms.assetid: d7235df4-2dd8-4537-aadd-284c130a3f99
 keywords:
-- glgetteximage-Funktion OpenGL
+- glGetTexImage-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: da38ca1d6605fdc3cd6cf73cdd017404b71961e7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b116bc4ae517d0767d794767ad5232d8537033d62a099a3906f9f2ca96a7166c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493750"
 ---
-# <a name="glgetteximage-function"></a>glgetteximage-Funktion
+# <a name="glgetteximage-function"></a>glGetTexImage-Funktion
 
-Die Funktion " **glgetteximage** " gibt ein Textur Bild zurück.
+Die **glGetTexImage-Funktion** gibt ein Texturbild zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,35 +47,35 @@ void WINAPI glGetTexImage(
 *Ziel* 
 </dt> <dd>
 
-Gibt an, welche Textur abgerufen werden soll. GL \_ Texture \_ 1D und GL \_ Texture \_ 2D werden akzeptiert.
+Gibt an, welche Textur erhalten werden soll. GL \_ TEXTURE \_ 1D und GL \_ TEXTURE \_ 2D werden akzeptiert.
 
 </dd> <dt>
 
 *level* 
 </dt> <dd>
 
-Die Detailstufe des gewünschten Bilds. Ebene 0 ist die Basis Image Ebene. Ebene *n* ist das *n*-te MipMap-Reduzierungs Bild.
+Die Detailebenennummer des gewünschten Bilds. Ebene 0 ist die Basisimageebene. Ebene *n* ist das *n-te* Mipmap-Reduzierungsbild.
 
 </dd> <dt>
 
 *format* 
 </dt> <dd>
 
-Ein Pixel Format für die zurückgegebenen Daten. Die unterstützten Formate sind GL \_ red, GL \_ Green, GL \_ Blue, GL \_ Alpha, GL \_ RGB, GL \_ RGBA, GL \_ Luminance, GL \_ BGR \_ ext, GL \_ BGRA \_ ext und GL \_ Luminance \_ alpha.
+Ein Pixelformat für die zurückgegebenen Daten. Die unterstützten Formate sind GL \_ RED, GL \_ \_ GREEN, GL BLUE, GL \_ ALPHA, GL \_ RGB, GL \_ RGBA, GL \_ LUMINANCE, GL \_ BGR \_ EXT, GL BGRA EXT und GL \_ \_ \_ LUMINANCE \_ ALPHA.
 
 </dd> <dt>
 
 *type* 
 </dt> <dd>
 
-Ein Pixeltyp für die zurückgegebenen Daten. Die unterstützten Typen sind GL \_ unsigned \_ Byte, GL \_ Byte, GL \_ unsigned \_ Short, GL \_ Short, GL \_ unsigned \_ int, GL \_ int und GL \_ float.
+Ein Pixeltyp für die zurückgegebenen Daten. Die unterstützten Typen sind GL \_ UNSIGNED \_ BYTE, GL \_ BYTE, GL \_ UNSIGNED \_ SHORT, GL \_ SHORT, GL \_ UNSIGNED \_ INT, GL \_ INT und GL \_ FLOAT.
 
 </dd> <dt>
 
 *Pixel* 
 </dt> <dd>
 
-Gibt das Textur Bild zurück. Muss ein Zeiger auf ein Array des Typs sein, der durch den- *Typ* angegeben wird.
+Gibt das Texturbild zurück. Sollte ein Zeiger auf ein Array des vom Typ angegebenen Typs *sein.*
 
 </dd> </dl>
 
@@ -85,45 +85,45 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                                |
 |-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *Ziel*, *Format* oder *Typ* war kein akzeptierter Wert.<br/>                                                                    |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | die *Ebene* ist kleiner als 0 (null) oder größer als *Log* 2 (*Max*), wobei *Max* der zurückgegebene Wert von GL \_ Max \_ Texture \_ size ist.<br/>      |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md) aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *target,* *format* oder *type* war kein akzeptierter Wert.<br/>                                                                    |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *level* ist kleiner als 0 (null) oder größer als *Protokoll* 2 (*max),* wobei *max* der zurückgegebene Wert von GL \_ MAX TEXTURE SIZE \_ \_ ist.<br/>      |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glgetteximage** " gibt ein Textur Bild in *Pixel* zurück. Der *target* -Parameter gibt an, ob das gewünschte Textur Bild durch [**glTexImage1D**](glteximage1d.md)**(** GL \_ Texture \_ 1D **)** oder durch [**glTexImage2D**](glteximage2d.md)**(** GL \_ Texture \_ 2D **)** angegeben wird. Der *Level* -Parameter gibt die Detailstufe des gewünschten Bilds an. Die *Format* -und *Typparameter* geben das Format und den Typ des gewünschten Bilds an. Eine Beschreibung der zulässigen Werte für die *Format* -und *Typparameter* finden Sie unter **glTexImage1D** und [**gldrawpixels**](gldrawpixels.md).
+Die **glGetTexImage-Funktion** gibt ein Texturbild in Pixel *zurück.* Der *Zielparameter* gibt an, ob das gewünschte Texturbild eins ist, das von [**glTexImage1D**](glteximage1d.md)**(** GL TEXTURE \_ \_ 1D )**oder** von [**glTexImage2D**](glteximage2d.md)**(** GL TEXTURE \_ \_ 2D **)** angegeben wird. Der *level-Parameter* gibt die Detailebenennummer des gewünschten Bilds an. Die *Format-* *und Typparameter* geben das Format und den Typ des gewünschten Bildarrays an. Eine Beschreibung der zulässigen  Werte  für die Format- bzw. Typparameter finden Sie unter **glTexImage1D** und [**glDrawPixels**](gldrawpixels.md).
 
-Der Vorgang von **glgetteximage** ist am besten zu verstehen, indem das ausgewählte, interne Textur Bild mit vier Komponenten als RGBA-Farb Puffer für die Größe des Bilds betrachtet wird. Die Semantik von **glgetteximage** ist dann identisch mit denen von [**glread Pixel**](glreadpixels.md) , die mit dem gleichen *Format* und *Typ* aufgerufen werden. Wenn *x* und *y* auf 0 (null) festgelegt sind, wird die *Breite* auf die Breite des Textur Bilds (einschließlich des Rahmens, falls angegeben) und die *Höhe* auf 1 für 1-d-Bilder festgelegt, oder auf die Höhe des Textur Bilds (einschließlich des Rahmens, sofern angegeben) für 2D-Bilder.
+Der Vorgang **von glGetTexImage** wird am besten verstanden, indem das ausgewählte interne Texturbild mit vier Komponenten als RGBA-Farbpuffer für die Größe des Bilds betrachtet wird. Die Semantik von **glGetTexImage** ist dann mit der von [**glReadPixels**](glreadpixels.md) identisch, die mit dem gleichen Format und Typ aufgerufen werden, bei denen  *x* und *y* auf 0 *festgelegt* sind, die Breite auf die Breite des Texturbilds festgelegt ist (einschließlich rahmen, falls eins angegeben wurde), und die Höhe für 2D-Bilder auf eins oder auf die Höhe des Texturbilds (einschließlich Rahmen, sofern angegeben).  
 
-Da es sich bei dem internen Textur Bild um ein RGBA-Bild handelt, werden die Pixel Formate "GL \_ Color \_ Index", "GL \_ Stencil \_ Index" und "GL- \_ tiefen Komponente" \_ nicht akzeptiert, und die Bitmap "Pixel Type GL" \_ wird
+Da das interne Texturbild ein RGBA-Bild ist, werden die Pixelformate GL \_ COLOR \_ INDEX, GL \_ STENCIL INDEX und GL DEPTH COMPONENT nicht \_ akzeptiert, \_ \_ und \_ der Pixeltyp GL BITMAP wird nicht akzeptiert.
 
-Wenn das ausgewählte Textur Bild keine vier Komponenten enthält, werden die folgenden Zuordnungen angewendet. Texturen mit einer einzelnen Komponente werden als RGBA-Puffer behandelt, wobei rot auf den Einzelkomponenten Wert festgelegt ist und grün, blau und Alpha auf 0 (null) festgelegt ist.
+Wenn das ausgewählte Texturbild nicht vier Komponenten enthält, werden die folgenden Zuordnungen angewendet. Einkomponententexturen werden als RGBA-Puffer behandelt, bei dem Rot auf den Einzelkomponentenwert und Grün, Blau und Alpha auf 0 (null) festgelegt sind.
 
-Texturen mit zwei Komponenten werden als RGBA-Puffer behandelt, wobei rot auf den Wert von Komponente NULL, Alpha auf den Wert von Komponente 1 und grün und blau auf NULL festgelegt ist. Schließlich werden drei komponententexturen als RGBA-Puffer behandelt, wobei rot auf Komponente 0 (null), grün auf Komponente 1, blau auf Komponente 2 und Alpha auf NULL festgelegt ist.
+Texturen mit zwei Komponenten werden als RGBA-Puffer behandelt. Rot wird auf den Wert der Komponente 0 festgelegt, Alpha auf den Wert von Komponente 1 und Grün und Blau auf 0 (null). Schließlich werden Texturen mit drei Komponenten als RGBA-Puffer behandelt, bei dem Rot auf Komponente 0 festgelegt ist, Grün auf Komponente 1, Blau auf Komponente 2 und Alpha auf 0 festgelegt ist.
 
-Um die erforderliche Größe von *Pixeln* zu ermitteln, verwenden Sie [**glgettexlevelparameter**](glgettexlevelparameter.md) , um die Dimensionen des internen Textur Bilds zu ermitteln, und Skalieren Sie dann die erforderliche Anzahl von Pixeln nach dem für die einzelnen Pixel erforderlichen Speicher, basierend auf *Format* und *Typ*. Stellen Sie sicher, dass die Parameter für die Pixel Speicherung berücksichtigt werden, insbesondere die Ausrichtung von GL \_ Pack \_ .
+Um die erforderliche Größe von Pixeln zu *bestimmen,* verwenden Sie [**glGetTexLevelParameter,**](glgettexlevelparameter.md) um die Abmessungen des internen Texturbilds  zu ermitteln, und skalieren Sie dann die erforderliche Anzahl von Pixeln anhand des für jedes Pixel erforderlichen Speichers basierend auf Format und *Typ*. Achten Sie darauf, die Pixelspeicherparameter zu berücksichtigen, insbesondere GL \_ PACK \_ ALIGNMENT.
 
-Wenn ein Fehler generiert wird, wird keine Änderung an dem Inhalt der *Pixel* vorgenommen.
+Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt von *Pixeln vorgenommen.*
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit " **glgetteximage**" abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glGetTexImage ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Pack \_ -Ausrichtung und anderen
+[**glGet mit**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) argument GL \_ PACK ALIGNMENT und \_ anderen
 
-[**glgettexlevelparameter**](glgettexlevelparameter.md) mit Argument GL \_ Textur \_ Width
+[**glGetTexLevelParameter**](glgettexlevelparameter.md) mit Argument GL \_ TEXTURE \_ WIDTH
 
-**glgettexlevelparameter** mit Argument GL \_ Textur \_ Height
+**glGetTexLevelParameter** mit Argument GL \_ TEXTURE \_ HEIGHT
 
-**glgettexlevelparameter** mit dem Argument "GL \_ Texture \_ Border"
+**glGetTexLevelParameter** mit Argument GL \_ TEXTURE \_ BORDER
 
-**glgettexlevelparameter** mit Argument GL- \_ Textur \_ Komponenten
+**glGetTexLevelParameter** mit Argument GL \_ TEXTURE \_ COMPONENTS
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -133,8 +133,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit " **glgett
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -146,16 +146,16 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit " **glgett
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**gldrawpixels**](gldrawpixels.md)
+[**glDrawPixels**](gldrawpixels.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glgettexlevelparameter**](glgettexlevelparameter.md)
+[**glGetTexLevelParameter**](glgettexlevelparameter.md)
 </dt> <dt>
 
-[**glread Pixels**](glreadpixels.md)
+[**glReadPixels**](glreadpixels.md)
 </dt> <dt>
 
 [**glTexImage1D**](glteximage1d.md)

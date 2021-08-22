@@ -27,7 +27,7 @@ Erstellt eine [**ID2D1EllipseGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1el
 
 
 
-| Methode                                                                                                                                                      | BESCHREIBUNG                                                                  |
+| Methode                                                                                                                                                      | Beschreibung                                                                  |
 |:------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------|
 | [**CreateEllipseGeometry(D2D1 \_ ELLIPSE&,ID2D1EllipseGeometry \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createellipsegeometry(constd2d1_ellipse__id2d1ellipsegeometry))  | Erstellt eine [**ID2D1EllipseGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1ellipsegeometry). <br/> |
 | [**CreateEllipseGeometry(D2D1 \_ ELLIPSE \* ,ID2D1EllipseGeometry \* \* )**](/previous-versions/windows/desktop/legacy/dd371265(v=vs.85)) | Erstellt eine [**ID2D1EllipseGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1ellipsegeometry). <br/> |
@@ -36,7 +36,7 @@ Erstellt eine [**ID2D1EllipseGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1el
 
 ## <a name="examples"></a>Beispiele
 
-Im Folgenden werden zwei [**ID2D1EllipseGeometry-Objekte**](/windows/win32/api/d2d1/nn-d2d1-id2d1ellipsegeometry) erstellt und mithilfe der verschiedenen Geometrie-Kombinationsmodi kombiniert.
+Im Folgenden werden zwei [**ID2D1EllipseGeometry-Objekte**](/windows/win32/api/d2d1/nn-d2d1-id2d1ellipsegeometry) erstellt und mithilfe der verschiedenen Geometry Combine-Modi kombiniert.
 
 
 ```C++
@@ -202,7 +202,7 @@ HRESULT DemoApp::CreateGeometryResources()
 
 Dieser Code erzeugt die in der folgenden Abbildung gezeigte Ausgabe.
 
-![Abbildung von zwei Ellipsen, kombiniert mit vier Geometrie-Kombinationsmodi (Union, Intersect, xor und exclude)](images/combine-modes.png)
+![Abbildung von zwei Ellipsen, die mithilfe von vier Geometry Combine-Modi kombiniert werden (Union, Intersect, xor und exclude)](images/combine-modes.png)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -216,7 +216,7 @@ Dieser Code erzeugt die in der folgenden Abbildung gezeigte Ausgabe.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

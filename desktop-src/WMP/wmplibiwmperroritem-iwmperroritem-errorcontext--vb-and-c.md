@@ -1,11 +1,11 @@
 ---
-title: Iwmperroritem errorcontext-Eigenschaft
-description: Die errorcontext-Eigenschaft ruft einen Wert ab, der den Kontext des Fehlers angibt.
+title: IWMPErrorItem errorContext-Eigenschaft
+description: Die errorContext-Eigenschaft ruft einen Wert ab, der den Kontext des Fehlers angibt.
 ms.assetid: e9ebd636-e611-49c6-9533-a02ff74db7bc
 keywords:
-- errorcontext-Eigenschaft, Windows-Media Player
-- errorcontext-Eigenschaft, Windows Media Player, iwmperroritem-Schnittstelle
-- Iwmperroritem-Schnittstelle Windows Media Player, errorcontext-Eigenschaft
+- errorContext-Windows Media Player
+- errorContext-Eigenschaft Windows Media Player , IWMPErrorItem-Schnittstelle
+- IWMPErrorItem-Schnittstelle Windows Media Player , errorContext-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 50f421a681708610a99f05eb7263660bb15b7dce
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 60320df74d139e1cba3802c664ebff96e4531f569cd3321ae8821fc89ea5b0fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369242"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053648"
 ---
-# <a name="iwmperroritemerrorcontext-property"></a>Iwmperroritem:: errorcontext-Eigenschaft
+# <a name="iwmperroritemerrorcontext-property"></a>IWMPErrorItem::errorContext-Eigenschaft
 
-Die **errorcontext** -Eigenschaft ruft einen Wert ab, der den Kontext des Fehlers angibt.
+Die **errorContext-Eigenschaft** ruft einen Wert ab, der den Kontext des Fehlers angibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,11 +46,11 @@ Public ReadOnly Property errorContext As System.Object
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Object** , das den Fehler Kontext ist.
+Ein **System.Object,** das der Fehlerkontext ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Fehler Kontext sind Informationen, die von Microsoft verwendet werden, um zusätzliche Informationen für den technischen Support zu erhalten.
+Der Fehlerkontext sind Informationen, die von Microsoft verwendet werden, um zusätzliche Informationen für das technische Supportpersonal zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Der Fehler Kontext sind Informationen, die von Microsoft verwendet werden, um zu
 
 <dl> <dt>
 
-[**Iwmperroritem-Schnittstelle (VB und c#)**](iwmperroritem--vb-and-c.md)
+[**IWMPErrorItem-Schnittstelle (VB und C#)**](iwmperroritem--vb-and-c.md)
 </dt> </dl>
 
  

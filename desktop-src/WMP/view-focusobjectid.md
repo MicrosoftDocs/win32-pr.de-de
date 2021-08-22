@@ -1,9 +1,9 @@
 ---
-title: View. focusobjectid
-description: Mit dem focusobjectid-Attribut wird ein Wert angegeben oder abgerufen, der angibt, welches Element den Tastaturfokus besitzt. Kann nur zur Laufzeit festgelegt werden.
+title: VIEW.focusObjectID
+description: Das focusObjectID-Attribut gibt einen Wert an, der angibt, welches Element den Tastaturfokus besitzt, oder ruft einen Wert ab. Kann nur zur Laufzeit festgelegt werden.
 ms.assetid: 74cc216f-2587-4dfd-bb95-e698ec49f185
 keywords:
-- View. focusobjectid-Windows-Media Player
+- VIEW.focusObjectID Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2fc052aa491d1de123aa4ad7d99e47c6cb9c28db
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 51fb8c3e4769985a01d451b11dfbe97081f2fd784c72a294c00ef02cba76f7a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358683"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054078"
 ---
-# <a name="viewfocusobjectid"></a>View. focusobjectid
+# <a name="viewfocusobjectid"></a>VIEW.focusObjectID
 
-Mit dem **focusobjectid** -Attribut wird ein Wert angegeben oder abgerufen, der angibt, welches Element den Tastaturfokus besitzt. Kann nur zur Laufzeit festgelegt werden.
+Das **focusObjectID-Attribut** gibt einen Wert an, der angibt, welches Element den Tastaturfokus besitzt, oder ruft einen Wert ab. Kann nur zur Laufzeit festgelegt werden.
 
 ``` syntax
         elementID.focusObjectID
@@ -29,7 +29,7 @@ Mit dem **focusobjectid** -Attribut wird ein Wert angegeben oder abgerufen, der 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzeichenfolge, die die **ID** des Elements angibt, das den Fokus besitzt.  Er besitzt keinen Standardwert.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die die **ID** des Elements angibt, das den Fokus besitzt. Er besitzt keinen Standardwert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Dieses Attribut ist eine Lese-/schreibzeichenfolge, die die **ID** des Elements 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,7 +45,7 @@ Dieses Attribut ist eine Lese-/schreibzeichenfolge, die die **ID** des Elements 
 
 <dl> <dt>
 
-[**View-Element**](view-element.md)
+[**VIEW-Element**](view-element.md)
 </dt> </dl>
 
  

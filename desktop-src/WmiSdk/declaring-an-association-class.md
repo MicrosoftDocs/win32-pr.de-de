@@ -16,7 +16,7 @@ ms.locfileid: "119244420"
 
 Eine Zuordnungsklasse ist ein spezieller Typ von Klasse, der eine Beziehung zwischen zwei anderen Klassen definiert.
 
-Im folgenden Verfahren wird beschrieben, wie Sie eine Zuordnungsklasse mit MOF-Code erstellen.
+Im folgenden Verfahren wird beschrieben, wie Sie eine Zuordnungsklasse mithilfe von MOF-Code erstellen.
 
 **So erstellen Sie eine Zuordnungsklasse mit MOF-Code**
 
@@ -65,7 +65,7 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine Zuordnungsklasse mit MOF-C
 
     Weitere Informationen finden Sie unter [Kompilieren von MOF-Dateien.](compiling-mof-files.md)
 
-Im Codebeispiel in Schritt 3 wird die **Zuordnungsklasse MyAssocClass** definiert. Die **MyAssocClass-Klasse** definiert eine Beziehung zwischen **ClassX** und **ClassY.** Die **Eigenschaften PathToClassX** und **PathToClassY** enthalten Objektpfade zu den Instanzen der klassen, die zugeordnet werden sollen. Das Schlüsselwort **ToInstance ist** eines von mehreren Flavor-Flags, die WMI definiert, um Informationen zur Verwendung eines Qualifizierers zu liefern. Das **ToInstance-Schlüsselwort** gibt an, dass WMI den Zuordnungsqualifizierer an alle Instanzen der Zuordnungsklasse weitergibt.  Durch Überprüfen dieses Instanzqualifizierers kann die Clientsoftware feststellen, dass eine Instanz zu einer Zuordnungsklasse gehört, ohne die Klassendefinition abrufen zu müssen, um nach dem Zuordnungsqualifizierer zu suchen.  Weitere Informationen finden Sie unter [Beschreiben eines Qualifizierers mit einer Qualifizierer-Variante und](describing-a-qualifier-with-a-qualifier-flavor.md) [Verweisen.](references.md)
+Im Codebeispiel in Schritt 3 wird die **Zuordnungsklasse MyAssocClass** definiert. Die **MyAssocClass-Klasse** definiert eine Beziehung zwischen **ClassX** und **ClassY.** Die **Eigenschaften PathToClassX** und **PathToClassY** enthalten Objektpfade zu den Instanzen der klassen, die zugeordnet werden sollen. Das Schlüsselwort **ToInstance ist** eines von mehreren Flavor-Flags, die WMI definiert, um Informationen zur Verwendung eines Qualifizierers zu liefern. Das **ToInstance-Schlüsselwort** gibt an, dass WMI den Zuordnungsqualifizierer an alle Instanzen der Zuordnungsklasse weitergibt.  Durch Überprüfen dieses Instanzqualifizierers kann die Clientsoftware feststellen, dass eine Instanz zu einer Zuordnungsklasse gehört, ohne die Klassendefinition abrufen zu müssen, um nach dem Association-Qualifizierer zu suchen.  Weitere Informationen finden Sie unter [Beschreiben eines Qualifizierers mit einer Qualifizierer-Variante und](describing-a-qualifier-with-a-qualifier-flavor.md) [Verweisen.](references.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

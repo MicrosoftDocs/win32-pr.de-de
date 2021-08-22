@@ -1,5 +1,5 @@
 ---
-description: Verweist auf die Kompatibilitätsinformationen für einen virtuellen Computer (VM) (bei Ausführen auf einem VM-Computersystem) oder einen Host (bei der auf einem Host Computersystem ausgeführt).
+description: Verweist auf die Kompatibilitätsinformationen für einen virtuellen Computer (VM) (wenn er auf einem VM-Computersystem ausgeführt wird) oder einen Host (bei Ausführung auf einem Hostcomputersystem).
 ms.assetid: A3DB75BF-91C8-444E-B273-25DF8A5BFA7B
 title: Msvm_CompatibilityVector-Klasse
 ms.topic: reference
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 66eba92daf420fb4bd332d3f7d537b7936618ca6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 976e6b7bd9bf69e483b987da4d8055ffc102e89c67ed83bab6aa09c4e586b1ac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866412"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119531840"
 ---
-# <a name="msvm_compatibilityvector-class"></a>MSVM \_ compatibilityvector-Klasse
+# <a name="msvm_compatibilityvector-class"></a>Msvm \_ CompatibilityVector-Klasse
 
-Verweist auf die Kompatibilitätsinformationen für einen virtuellen Computer (VM) (bei Ausführen auf einem VM-Computersystem) oder einen Host (bei der auf einem Host Computersystem ausgeführt).
+Verweist auf die Kompatibilitätsinformationen für einen virtuellen Computer (VM) (wenn er auf einem VM-Computersystem ausgeführt wird) oder einen Host (bei Ausführung auf einem Hostcomputersystem).
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -43,26 +43,26 @@ class Msvm_CompatibilityVector
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ compatibilityvector** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ CompatibilityVector-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ compatibilityvector** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ CompatibilityVector-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Compareoperation**
+**CompareOperation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Bezeichnet die Vergleichsoperation, bei der nur dann true zurückgegeben wird, wenn zwei Vektoren kompatibel sind. Die Daten des virtuellen Computers befinden sich auf der linken Seite des Vergleichs, und die Daten des Hosts befinden sich auf der rechten Seite.
+Identifiziert den Vergleichsvorgang, der "true" zurück gibt, wenn und nur dann, wenn zwei Vektoren kompatibel sind. Die Daten des virtuellen Computers werden auf der linken Seite des Vergleichs angezeigt, und die Daten des Hosts sind auf der rechten Seite.
 
 <dt>
 
@@ -75,7 +75,7 @@ Bezeichnet die Vergleichsoperation, bei der nur dann true zurückgegeben wird, w
 
 <span id="Superset"></span><span id="superset"></span><span id="SUPERSET"></span>
 
-**Superset** (1)
+**Obermenge** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -124,7 +124,7 @@ Bezeichnet die Vergleichsoperation, bei der nur dann true zurückgegeben wird, w
 
 <span id="Multiple"></span><span id="multiple"></span><span id="MULTIPLE"></span>
 
-**Mehrfach** (8)
+**Multiple** (8)
 
 
 </dt> <dd></dd> <dt>
@@ -138,89 +138,89 @@ Bezeichnet die Vergleichsoperation, bei der nur dann true zurückgegeben wird, w
 
 </dd> <dt>
 
-**Compatibilityinfo**
+**CompatibilityInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die tatsächlichen Kompatibilitäts Attributdaten, die für den Vergleich verwendet werden.
+Die tatsächlichen Kompatibilitätsattributdaten, die für den Vergleich verwendet werden.
 
 </dd> <dt>
 
-**Vectorid**
+**VectorId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Identifiziert einen Kompatibilitäts Vektor, der ein bestimmtes Attribut darstellt. Diese Eigenschaft wird verwendet, um die entsprechenden Vektoren zwischen einem Host und einem virtuellen Computer abzugleichen.
+Identifiziert einen Kompatibilitätsvektor, der ein bestimmtes Attribut darstellt. Diese Eigenschaft wird verwendet, um entsprechende Vektoren zwischen einem Host und einem virtuellen Computer zu verwenden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**getsystemcompatibilityvectors**](getsystemcompatibilityvectors-msvm-virtualsystemmigrationservice.md) -Methode der [**MSVM \_ virtualsystemmigrationservice**](msvm-virtualsystemmigrationservice.md) -Klasse gibt ein Array von **MSVM- \_ compatibilityvector** -Instanzen für den Host (wenn Sie auf dem Host ausgeführt werden) oder einen virtuellen Computer (wenn auf dem virtuellen Computer ausgeführt wird) zurück. Jeder **MSVM \_ compatibilityvector** -Eintrag in der Liste beschreibt einen Kompatibilitäts Attribut Vektor. Damit ein virtueller Computer mit einem Host kompatibel ist, müssen alle zugehörigen Kompatibilitäts Attribute mit den Attributen des Hosts kompatibel sein.
+Die [**GetSystemCompatibilityVectors-Methode**](getsystemcompatibilityvectors-msvm-virtualsystemmigrationservice.md) der [**Msvm \_ VirtualSystemMigrationService-Klasse**](msvm-virtualsystemmigrationservice.md) gibt ein Array von **Msvm \_ CompatibilityVector-Instanzen** für den Host (bei Ausführung auf dem Host) oder einen virtuellen Computer (bei Ausführung auf dem virtuellen Computer) zurück. Jeder **Msvm \_ CompatibilityVector-Eintrag** in der Liste beschreibt einen Kompatibilitätsattributvektor. Damit ein virtueller Computer mit einem Host kompatibel ist, müssen alle seine Kompatibilitätsattribute mit den Attributen des Hosts kompatibel sein.
 
-Jeder **MSVM \_ compatibilityvector** -Eintrag verfügt über folgende Eigenschaften:
+Jeder **Msvm \_ CompatibilityVector-Eintrag** verfügt über die folgenden Eigenschaften:
 
 <dl> <dt>
 
-**Vectorid**
+**VectorId**
 </dt> <dd>
 
-Identifiziert den Kompatibilitäts Vektor eindeutig. Diese wird verwendet, um die Vektoren für den Vergleich zwischen einem Host und einem virtuellen Computer abzugleichen.
+Identifiziert den Kompatibilitätsvektor eindeutig. Dies wird verwendet, um die Vektoren für den Vergleich zwischen einem Host und einem virtuellen Computer zu vergleichen.
 
 </dd> <dt>
 
-**Compareoperation**
+**CompareOperation**
 </dt> <dd>
 
-Identifiziert den Vergleichs Vorgang, der bestimmt, ob die Vektoren kompatibel sind.
+Identifiziert den Vergleichsvorgang, der bestimmt, ob die Vektoren kompatibel sind.
 
 </dd> <dt>
 
-**Compatibilityinfo**
+**CompatibilityInfo**
 </dt> <dd>
 
-Enthält das tatsächliche Kompatibilitäts Attribut. Dabei handelt es sich um die Attribut Nutzlast (z. b. Prozessor Funktions Maske, Größe von Cache Zeilen Leerung usw.).
+Enthält das tatsächliche Kompatibilitätsattribut. Dies ist effektiv die Attributnutzlast (z. B. Prozessorfunktionsmaske, Cachezeilenleergröße usw.).
 
 </dd> </dl>
 
-Der Satz von Vorgängen, der für **compareoperation** definiert ist, umfasst nur grundlegende ganzzahlige Vergleiche und bitweise Logik. Dies ermöglicht, dass der tatsächliche Inhalt von **compatibilityinfo** nicht transparent bleibt. Der Satz von Vorgängen umfasst Folgendes:
+Die für **CompareOperation** definierten Vorgänge umfassen lediglich einen einfachen Ganzzahlvergleich und eine bitweise Logik. Dadurch bleibt der tatsächliche Inhalt von **CompatibilityInfo** undurchsichtig. Der Satz von Vorgängen umfasst Folgendes:
 
 
 
-| Compareoperation | BESCHREIBUNG                                      | Pseudo Code Vergleich                |
+| CompareOperation | Beschreibung                                      | Pseudocodevergleich                |
 |------------------|--------------------------------------------------|--------------------------------------|
-| Vmccequal        | Vmattr muss auf "" gehostet werden.                       | If (vmattr = = gehostet)              |
-| Vmccsuperset     | Vmattr muss eine übergeordnete Gruppe von "sestattr" sein.            | If ((vmattr & "blau) = =" " |
-| Vmccsubset       | Vmattr muss eine Teilmenge von "sestattr" sein.              | If ((vmattr-&-Eigenschaft) = = vmattr)   |
-| Vmccdisjointset  | Bei vmattr muss es sich um eine zusammenhängende Gruppe von "hustattr" handeln      | If ((vmattr-&-Eigenschaft) = = 0)        |
-| Vmccgreater      | Vmattr muss höher sein als "".             | If (vmattr >-Eigenschaft)            |
-| Vmccgreaterequal | Vmattr muss größer als oder gleich "hustattr" sein. | If (vmattr >= gehostet)           |
-| Vmccless         | Vmattr muss kleiner sein als "".                | If (vmattr <-Eigenschaft)            |
-| Vmcclessequal    | "Vmattr" muss kleiner oder gleich "hustattr" sein.    | If (vmattr <= gehostet)           |
-| Vmccmultiple     | Vmattr muss ein Vielfaches von "".            | If ((vmattr% hustattr) = = 0)        |
-| Vmccdivisor      | Vmattr muss ein Divisor von "Host-r" sein.             | If (("", "% vmattr") = = 0)        |
+| VmCcEqual        | VmAttr muss HostAttr gleich sein.                       | If (VmAttr == HostAttr)              |
+| VmCcSuperSet     | VmAttr muss eine Obermenge von HostAttr sein.            | If ((VmAttr & HostAttr) == HostAttr) |
+| VmCcSubSet       | VmAttr muss eine Teilmenge von HostAttr sein.              | If ((VmAttr & HostAttr) == VmAttr)   |
+| VmCcDisjointSet  | "VmAttr" muss nicht mit HostAttr entiert sein.      | If ((VmAttr & HostAttr) == 0)        |
+| VmCcGreater      | VmAttr muss größer als HostAttr sein.             | If (VmAttr > HostAttr)            |
+| VmCcGreaterEqual | VmAttr muss größer oder gleich HostAttr sein. | If (VmAttr >= HostAttr)           |
+| VmCcLess         | VmAttr muss kleiner als HostAttr sein                | If (VmAttr < HostAttr)            |
+| VmCcLessEqual    | VmAttr muss kleiner oder gleich HostAttr sein.    | If (VmAttr <= HostAttr)           |
+| VmCcMultiple     | VmAttr muss ein Vielfaches von HostAttr sein.            | If ((VmAttr % HostAttr) == 0)        |
+| VmCcDivisor      | VmAttr muss ein Divisor von HostAttr sein.             | If ((HostAttr % VmAttr) == 0)        |
 
 
 
  
 
-SCVMM muss diese Schritte ausführen, um zu bestimmen, ob ein virtueller Computer mit einem Host kompatibel ist.
+SCVMM muss diese Schritte ausführen, um zu bestimmen, ob eine VM mit einem Host kompatibel ist.
 
-**So bestimmen Sie, ob ein virtueller Computer mit einem Host kompatibel ist**
+**So bestimmen Sie, ob eine VM mit einem Host kompatibel ist**
 
-1.  Iterieren Sie alle **MSVM \_ compatibilityvector** -Elemente für den virtuellen Computer.
-2.  Verwenden Sie für jedes **MSVM \_ compatibilityvector** -Element den in **compareoperation** angegebenen Kompatibilitäts Vorgang, um den Hardware Kompatibilitäts Vektor des virtuellen Computers mit dem entsprechenden Kompatibilitäts Vektor für den Host zu vergleichen.
-3.  Wenn alle **MSVM \_ compatibilityvector** -Elemente aus dem virtuellen Computer als kompatibel eingestuft werden, ist der virtuelle Computer mit dem Host kompatibel (aus Sicht des Prozessor Features).
+1.  Iterieren Sie alle **Msvm \_ CompatibilityVector-Elemente** für den virtuellen Computer.
+2.  Verwenden Sie **für jedes Msvm \_ CompatibilityVector-Element** den in **CompareOperation** angegebenen Kompatibilitätsvorgang, um den Hardwarekompatibilitätsvektor des virtuellen Computers mit dem entsprechenden Kompatibilitätsvektor für den Host zu vergleichen.
+3.  Wenn alle **Msvm \_ CompatibilityVector-Elemente** des virtuellen Computers als kompatibel angesehen werden, ist die VM mit dem Host kompatibel (aus Der Perspektive der Prozessorfunktion).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -228,10 +228,10 @@ SCVMM muss diese Schritte ausführen, um zu bestimmen, ob ein virtueller Compute
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -240,10 +240,10 @@ SCVMM muss diese Schritte ausführen, um zu bestimmen, ob ein virtueller Compute
 
 <dl> <dt>
 
-[**Getsystemcompatibilityvectors**](getsystemcompatibilityvectors-msvm-virtualsystemmigrationservice.md)
+[**GetSystemCompatibilityVectors**](getsystemcompatibilityvectors-msvm-virtualsystemmigrationservice.md)
 </dt> <dt>
 
-[**MSVM \_ virtualsystemmigrationservice**](msvm-virtualsystemmigrationservice.md)
+[**Msvm \_ VirtualSystemMigrationService**](msvm-virtualsystemmigrationservice.md)
 </dt> </dl>
 
  

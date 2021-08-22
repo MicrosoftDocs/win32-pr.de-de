@@ -1,11 +1,11 @@
 ---
-title: Extern. savecurrentviewylibrary-Methode
-description: Die savecurrentviewylibrary-Methode erstellt eine Wiedergabeliste aus den Medien Elementen in der aktuellen Ansicht und speichert die Wiedergabeliste in der lokalen Bibliothek.
+title: External.saveCurrentViewToLibrary-Methode
+description: Die saveCurrentViewToLibrary-Methode erstellt eine Wiedergabeliste aus den Medienelementen in der aktuellen Ansicht und speichert die Wiedergabeliste in der lokalen Bibliothek.
 ms.assetid: cd87e932-d599-4298-bbee-6755999dda15
 keywords:
-- savecurrentviewylibrary-Methode, Windows Media Player
-- savecurrentviewylibrary-Methode, Windows Media Player, externe Klasse
-- Externe Klasse, Windows Media Player, savecurrentviewylibrary-Methode
+- saveCurrentViewToLibrary-Windows Media Player
+- saveCurrentViewToLibrary-Methode Windows Media Player , Externe Klasse
+- Externe Klasse Windows Media Player , saveCurrentViewToLibrary-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 212f590f03c32821c0774c4898720c92558ecc73
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cf14a6f712a72116860e7251edae73c91c4ef1dfb70876fd5f80dc329591673a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369545"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648440"
 ---
-# <a name="externalsavecurrentviewtolibrary-method"></a>Extern. savecurrentviewylibrary-Methode
+# <a name="externalsavecurrentviewtolibrary-method"></a>External.saveCurrentViewToLibrary-Methode
 
-Die **savecurrentviewylibrary** -Methode erstellt eine Wiedergabeliste aus den Medien Elementen in der aktuellen Ansicht und speichert die Wiedergabeliste in der lokalen Bibliothek.
+Die **saveCurrentViewToLibrary-Methode** erstellt eine Wiedergabeliste aus den Medienelementen in der aktuellen Ansicht und speichert die Wiedergabeliste in der lokalen Bibliothek.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ External.saveCurrentViewToLibrary(
 
 <dl> <dt>
 
-*Friendlylistname* \[ in\]
+*FriendlyListName* \[ In\]
 </dt> <dd>
 
-Eine **Zeichenfolge** , die einen anzeigen Amen für die Wiedergabeliste angibt. In Windows Media Player wird dieser Name in der Benutzeroberfläche angezeigt.
+**Eine Zeichenfolge,** die einen Benutzerfreundlichen Namen für die Wiedergabeliste angibt. Windows Media Player zeigt diesen Namen auf der Benutzeroberfläche an.
 
 </dd> <dt>
 
-*Lokal* \[ in\]
+*Lokal* \[ In\]
 </dt> <dd>
 
-**Boolescher** Wert, der angibt, ob die Wiedergabeliste dynamisch oder statisch ist. **True** gibt Dynamic an, und **false** gibt Static an.
+**Boolescher Wert,** der angibt, ob die Wiedergabeliste dynamisch oder statisch ist. **TRUE** gibt dynamisch an, **und FALSE** gibt static an.
 
 </dd> </dl>
 
@@ -76,7 +76,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 1-Online Speicher**](external-object-for-type-1-online-stores.md)
+[**Externes Objekt für Onlinespeicher vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> </dl>
 
  

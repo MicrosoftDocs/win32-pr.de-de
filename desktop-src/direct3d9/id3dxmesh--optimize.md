@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: debec1c0ee54e612ab0de832dbc5c2481dcefad8
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e4ea03bcaaab492ec09dd24ec93c6a9c9ca393c1399b05e12096a8ba1f4f9aa3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493100"
 ---
 # <a name="id3dxmeshoptimize-method"></a>ID3DXMesh::Optimize-Methode
 
@@ -45,7 +45,7 @@ HRESULT Optimize(
 
 <dl> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
@@ -86,7 +86,7 @@ Ein Array von DWORDs pro Gesicht, das das ursprüngliche Gitternetzgesicht ident
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXBuffer-Schnittstelle,**](id3dxbuffer.md) die ein DWORD für jeden Scheitelpunkt enthält, der angibt, wie die neuen Scheitelpunkte den alten Scheitelpunkten zugeordnet werden. Diese Neuzuordnung ist nützlich, wenn Sie externe Daten basierend auf der neuen Scheitelpunktzuordnung ändern müssen.
+Adresse eines Zeigers auf eine [**ID3DXBuffer-Schnittstelle,**](id3dxbuffer.md) die ein DWORD für jeden Scheitelpunkt enthält, das angibt, wie die neuen Scheitelpunkte den alten Scheitelpunkte zuordnen. Diese Neuzuordnung ist nützlich, wenn Sie externe Daten basierend auf der neuen Scheitelpunktzuordnung ändern müssen.
 
 </dd> <dt>
 
@@ -103,26 +103,26 @@ Adresse eines Zeigers auf eine [**ID3DXMesh-Schnittstelle,**](id3dxmesh.md) die 
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode generiert ein neues Gitternetz. Vor dem Ausführen von Optimize muss eine Anwendung einen Adjazenzpuffer generieren, indem [**ID3DXBaseMesh::GenerateAdjaency**](id3dxbasemesh--generateadjacency.md)aufgerufen wird. Der Adjazenzpuffer enthält Adjazenzdaten, z. B. eine Liste von Kanten und den nebeneinander liegenden Gesichtern.
+Diese Methode generiert ein neues Gitter. Vor dem Ausführen von Optimize muss eine Anwendung durch Aufrufen von [**ID3DXBaseMesh::GenerateAdjacency einen Adjacency-Puffer generieren.**](id3dxbasemesh--generateadjacency.md) Der Adjacency-Puffer enthält Adjacency-Daten, z. B. eine Liste von Kanten und die nebeneinander liegenden Gesichter.
 
-Diese Methode ist der [**ID3DXBaseMesh::CloneMesh-Methode**](id3dxbasemesh--clonemesh.md) sehr ähnlich, mit der Ausnahme, dass sie beim Generieren des neuen Klons des Gitternetzes Optimierungen ausführen kann. Das Ausgabegitternetz erbt alle Erstellungsparameter des Eingabegitters.
+Diese Methode ist der [**ID3DXBaseMesh::CloneMesh-Methode**](id3dxbasemesh--clonemesh.md) sehr ähnlich, mit der Ausnahme, dass sie beim Generieren des neuen Klons des Gitters optimierungen kann. Das Ausgabegitternetz erbt alle Erstellungsparameter des Eingabegitters.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

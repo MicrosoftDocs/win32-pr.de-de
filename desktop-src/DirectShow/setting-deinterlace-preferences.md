@@ -1,34 +1,34 @@
 ---
-description: Einstellungen für deinterlace werden festgelegt
+description: Festlegen von Deinterlace-Einstellungen
 ms.assetid: 31d59f17-552b-46d1-89e4-751216f54280
-title: Einstellungen für deinterlace werden festgelegt
+title: Festlegen von Deinterlace-Einstellungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: be52ae3023c8e4bc83c3305a104c389f423cffd6
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 33dae356618653f501b56f8b7a7eeb98e24ee92eb196cac78466e8cd26c01610
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119072574"
 ---
-# <a name="setting-deinterlace-preferences"></a>Einstellungen für deinterlace werden festgelegt
+# <a name="setting-deinterlace-preferences"></a>Festlegen von Deinterlace-Einstellungen
 
-Der Video Mischungs-Renderer (VMR) unterstützt die hardwarebeschleunigte Deinterlacing, wodurch die renderingqualität für Zeilen Sprung Video verbessert wird. Welche Features genau verfügbar sind, hängt von der zugrunde liegenden Hardware ab. Die Anwendung kann die Deinterlacing-Hardwarefunktionen Abfragen und deinterlacingeinstellungen über die [**ivmrdeinterlacecontrol**](/windows/desktop/api/Strmif/nn-strmif-ivmrdeinterlacecontrol) -Schnittstelle (VMR-7) oder die [**IVMRDeinterlaceControl9**](/previous-versions/windows/desktop/api/Vmr9/nn-vmr9-ivmrdeinterlacecontrol9) -Schnittstelle (VMR-9) festlegen. Deinterlacing wird pro Stream ausgeführt.
+Der Video Mixing Renderer (VMR) unterstützt hardwarebeschleunigte Deinterlacing, wodurch die Renderingqualität für Interlacingvideo verbessert wird. Welche Features genau verfügbar sind, hängt von der zugrunde liegenden Hardware ab. Die Anwendung kann die Hardwaredeinterlacingfunktionen abfragen und Deinterlacingeinstellungen über die [**IVMRDeinterlaceControl-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ivmrdeinterlacecontrol) (VMR-7) oder [**die IVMRDeinterlaceControl9-Schnittstelle**](/previous-versions/windows/desktop/api/Vmr9/nn-vmr9-ivmrdeinterlacecontrol9) (VMR-9) festlegen. Deinterlacing wird pro Stream ausgeführt.
 
-Es gibt einen wichtigen Unterschied beim interlacingverhalten zwischen VMR-7 und VMR-9. Auf Systemen, auf denen die Grafikhardware erweiterte Deinterlacing nicht unterstützt, kann VMR-7 auf die Hardware Überlagerung zurückgreifen und Sie anweisen, eine Bob-Formatvorlage zu verwenden. In diesem Fall wird das Video tatsächlich bei 60 kippt pro Sekunde gerendert, obwohl der VMR 30 fps meldet.
+Es gibt einen wichtigen Unterschied beim Interlacingverhalten zwischen VMR-7 und VMR-9. Auf Systemen, in denen die Grafikhardware erweitertes Deinterlacing nicht unterstützt, kann VMR-7 auf die Hardwareüberlagerung zurückfallen und sie anweisen, eine Bob-Deinterlace zu verwenden. In diesem Fall wird das Video mit 60 Flips pro Sekunde gerendert, obwohl der VMR 30 Bps meldet.
 
-Außer im Fall von VMR-7 mit Hardware Überlagerung wird Deinterlacing vom Mixer von VMR ausgeführt. Der Mixer verwendet die DXVA (DirectX Video Acceleration) Deinterlacing-Gerätetreiber Schnittstelle (DDI), um die Deinterlacing-Datei auszuführen. Dieser DDI kann von Anwendungen nicht aufgerufen werden, und Anwendungen können die Deinterlacing-Funktionalität von VMR nicht ersetzen. Allerdings kann eine Anwendung den gewünschten Deinterlacing-Modus auswählen, wie in diesem Abschnitt beschrieben.
+Außer im Fall von VMR-7 mit Hardwareüberlagerung wird das Deinterlacing vom Mixer des virtuellen Computers durchgeführt. Der Mixer verwendet die DirectX-Videobeschleunigung (DXVA) deinterlacing device driver interface (DDI), um das Deinterlacing durchzuführen. Diese DDI kann von Anwendungen nicht aufrufbar sein, und Anwendungen können die Deinterlacing-Funktionalität des virtuellen Computers nicht ersetzen. Eine Anwendung kann jedoch den gewünschten Deinterlacingmodus auswählen, wie in diesem Abschnitt beschrieben.
 
 > [!Note]  
-> In diesem Abschnitt werden die **IVMRDeinterlaceControl9** -Methoden beschrieben, die Versionen von VMR-7 sind jedoch nahezu identisch.
+> In diesem Abschnitt werden die **IVMRDeinterlaceControl9-Methoden** beschrieben, aber die VMR-7-Versionen sind fast identisch.
 
  
 
-Gehen Sie folgendermaßen vor, um die Deinterlacing-Funktionen für einen Videostream zu erhalten:
+Gehen Sie wie folgt vor, um die Deinterlacingfunktionen für einen Videostream zu erhalten:
 
-1.  Füllen Sie eine [**VMR9VideoDesc**](/previous-versions/windows/desktop/api/Vmr9/ns-vmr9-vmr9videodesc) -Struktur mit einer Beschreibung des Videodaten Stroms aus. Details zum Ausfüllen dieser Struktur werden später angegeben.
-2.  Übergeben Sie die Struktur an die [**IVMRDeinterlaceControl9:: getnumofdeinterlacemodes**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrdeinterlacecontrol9-getnumberofdeinterlacemodes) -Methode. Ruft die-Methode zweimal auf. Der erste-Befehl gibt die Anzahl der Deinterlacing-Modi zurück, die von der Hardware für das angegebene Format unterstützt werden. Weisen Sie ein Array von GUIDs dieser Größe zu, und wenden Sie die-Methode erneut an, und übergeben Sie dabei die Adresse des-Arrays. Der zweite-Befehl füllt das Array mit GUIDs. Jeder GUID identifiziert einen deinterlacingmodus.
-3.  Um die Untertitel eines bestimmten Modus abzurufen, müssen Sie die [**IVMRDeinterlaceControl9:: getdeinterlacemodecaps**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrdeinterlacecontrol9-getdeinterlacemodecaps) -Methode aufrufen. Übergeben Sie dieselbe **VMR9VideoDesc** -Struktur zusammen mit einer der GUIDs aus dem Array. Die-Methode füllt eine [**VMR9DeinterlaceCaps**](/previous-versions/windows/desktop/api/Vmr9/ns-vmr9-vmr9deinterlacecaps) -Struktur mit den Funktionen des-Modus.
+1.  Füllen Sie eine [**VMR9VideoDesc-Struktur**](/previous-versions/windows/desktop/api/Vmr9/ns-vmr9-vmr9videodesc) mit einer Beschreibung des Videostreams aus. Details zum Ausfüllen dieser Struktur finden Sie später.
+2.  Übergeben Sie die -Struktur an die [**IVMRDeinterlaceControl9::GetNumberOfDeinterlaceModes-Methode.**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrdeinterlacecontrol9-getnumberofdeinterlacemodes) Rufen Sie die -Methode zweimal auf. Der erste Aufruf gibt die Anzahl der Deinterlace-Modi zurück, die die Hardware für das angegebene Format unterstützt. Ordnen Sie ein Array von GUIDs dieser Größe zu, und rufen Sie die Methode erneut auf, und übergeben Sie dabei die Adresse des Arrays. Der zweite Aufruf füllt das Array mit GUIDs. Jede GUID identifiziert einen Deinterlacingmodus.
+3.  Um die Funktionen eines bestimmten Modus zu erhalten, rufen Sie die [**IVMRDeinterlaceControl9::GetDeinterlaceModeCaps-Methode**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrdeinterlacecontrol9-getdeinterlacemodecaps) auf. Übergeben Sie die gleiche **VMR9VideoDesc-Struktur** zusammen mit einer der GUIDs aus dem Array. Die -Methode füllt eine [**VMR9DeinterlaceCaps-Struktur**](/previous-versions/windows/desktop/api/Vmr9/ns-vmr9-vmr9deinterlacecaps) mit den Modusfunktionen auf.
 
 Diese Schritte sind im folgenden Code dargestellt:
 
@@ -69,46 +69,46 @@ if (SUCCEEDED(hr) && (dwNumModes != 0))
 
 
 
-Nun kann die Anwendung den Deinterlacing-Modus für den Stream mit den folgenden Methoden festlegen:
+Nun kann die Anwendung den Deinterlacingmodus für den Stream mithilfe der folgenden Methoden festlegen:
 
--   Die [**setdeinterlacemode**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrdeinterlacecontrol9-setdeinterlacemode) -Methode legt den bevorzugten Modus fest. Verwenden \_ Sie die GUID NULL, um Deinterlacing zu deaktivieren.
--   Die [**setdeinterlaceprefs**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrdeinterlacecontrol9-setdeinterlaceprefs) -Methode gibt das Verhalten an, wenn der angeforderte Modus nicht verfügbar ist.
--   Die [**getdeinterlacemode**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrdeinterlacecontrol9-getdeinterlacemode) -Methode gibt den von Ihnen festgelegten bevorzugten Modus zurück.
--   Die [**getactualdeinterlacemode**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrdeinterlacecontrol9-getactualdeinterlacemode) -Methode gibt den tatsächlich verwendeten Modus zurück, bei dem es sich um einen Fall Back Modus handeln kann, wenn der bevorzugte Modus nicht verfügbar ist.
+-   Die [**SetDeinterlaceMode-Methode**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrdeinterlacecontrol9-setdeinterlacemode) legt den bevorzugten Modus fest. Verwenden Sie GUID \_ NULL, um das Deinterlacing zu deaktivieren.
+-   Die [**SetDeinterlacePrefs-Methode**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrdeinterlacecontrol9-setdeinterlaceprefs) gibt das Verhalten an, wenn der angeforderte Modus nicht verfügbar ist.
+-   Die [**GetDeinterlaceMode-Methode**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrdeinterlacecontrol9-getdeinterlacemode) gibt den bevorzugten Modus zurück, den Sie festlegen.
+-   Die [**GetActualDeinterlaceMode-Methode**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrdeinterlacecontrol9-getactualdeinterlacemode) gibt den tatsächlichen Modus zurück, der möglicherweise ein Fallbackmodus ist, wenn der bevorzugte Modus nicht verfügbar ist.
 
-Weitere Informationen finden Sie auf den Referenzseiten der Methode.
+Die Methodenverweisseiten enthalten weitere Informationen.
 
 **Verwenden der VMR9VideoDesc-Struktur**
 
-Im zuvor beschriebenen Verfahren besteht der erste Schritt darin, eine **VMR9VideoDesc** -Struktur mit einer Beschreibung des Videodaten Stroms auszufüllen. Beginnen Sie, indem Sie den Medientyp des Videodaten Stroms erhalten. Hierzu können Sie [**IPin:: connectionmediatype**](/windows/desktop/api/Strmif/nf-strmif-ipin-connectionmediatype) in der Eingabe-PIN des VMR-Filters aufrufen. Überprüfen Sie dann, ob der Videostream Zeilen Sprung ist. Nur [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) -Formate können mit Zeilen Sprung verknüpft werden. Wenn der Formatierungstyp Format \_ videoinfo ist, muss es sich um einen progressiven Frame handeln. Wenn der Formattyp Format \_ VideoInfo2 ist, überprüfen Sie das Feld **dwinterlaceflags** für das aminterlace- \_ Flag isinterlacing. Das vorhanden sein dieses Flags gibt an, dass das Video mit Zeilen Sprung versehen ist.
+In der zuvor beschriebenen Prozedur besteht der erste Schritt im Ausfüllen einer **VMR9VideoDesc-Struktur** mit einer Beschreibung des Videostreams. Beginnen Sie mit dem Abrufen des Medientyps des Videostreams. Rufen Sie hierzu [**IPin::ConnectionMediaType**](/windows/desktop/api/Strmif/nf-strmif-ipin-connectionmediatype) auf dem Eingabepin des VMR-Filters auf. Vergewissern Sie sich dann, dass der Videodatenstrom als Interlacing angezeigt wird. Nur [**VIDEOINFOHEADER2-Formate**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) können als Interlacing verwendet werden. Wenn der Formattyp FORMAT \_ VideoInfo ist, muss es sich um einen progressiven Frame handelt. Wenn der Formattyp FORMAT VideoInfo2 ist, überprüfen Sie das \_ **Feld dwInterlaceFlags** auf das AMINTERLACE \_ IsInterlaced-Flag. Das Vorhandensein dieses Flags gibt an, dass das Video als Interlacing angezeigt wird.
 
-Angenommen, die Variable **pbmi** ist ein Zeiger auf die [**BITMAPINFOHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) -Struktur im Format Block. Legen Sie die folgenden Werte in der **VMR9VideoDesc** -Struktur fest:
+Angenommen, die **Variable pBMI** ist ein Zeiger auf die [**BITMAPINFOHEADER-Struktur**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) im Formatblock. Legen Sie die folgenden Werte in der **VMR9VideoDesc-Struktur** fest:
 
--   **dwSize**: Legen Sie dieses Feld auf fest `sizeof(VMR9VideoDesc)` .
--   **dwsamplewidth**: Legen Sie dieses Feld auf fest `pBMI->biWidth` .
--   **dwsampleheight**: Legen Sie dieses Feld auf fest `abs(pBMI->biHeight)` .
--   **Sample Format**: Dieses Feld beschreibt die damit-Eigenschaften des Medientyps. Überprüfen Sie das Feld **dwinterlaceflags** in der **VIDEOINFOHEADER2** -Struktur, und legen Sie **Sampleformat** auf das entsprechende [**VMR9 \_ Sampleformat**](/previous-versions/windows/desktop/api/Vmr9/ne-vmr9-vmr9_sampleformat) -Flag fest. Eine Hilfsfunktion hierfür finden Sie unten.
--   **Inputsamplefreq**: Dieses Feld gibt die Eingabe Häufigkeit an, die aus dem **avgtimeperframe** -Feld in der **VIDEOINFOHEADER2** -Struktur berechnet werden kann. Legen Sie im allgemeinen Fall **dwzähler** auf 10 Millionen fest, und legen Sie für **dwnenner** den Wert **avgtimeperframe** fest. Sie können jedoch auch nach einigen bekannten Frameraten suchen:
+-   **dwSize:** Legen Sie dieses Feld auf `sizeof(VMR9VideoDesc)` fest.
+-   **dwSampleWidth:** Legen Sie dieses Feld auf `pBMI->biWidth` fest.
+-   **dwSampleHeight:** Legen Sie dieses Feld auf `abs(pBMI->biHeight)` fest.
+-   **SampleFormat:** Dieses Feld beschreibt die Interlace-Merkmale des Medientyps. Überprüfen Sie **das Feld dwInterlaceFlags** in der **VIDEOINFOHEADER2-Struktur,** und legen Sie **SampleFormat** auf das entsprechende [**VMR9 \_ SampleFormat-Flag**](/previous-versions/windows/desktop/api/Vmr9/ne-vmr9-vmr9_sampleformat) fest. Eine Hilfsfunktion hierzu finden Sie unten.
+-   **InputSampleFreq:** Dieses Feld gibt die Eingabehäufigkeit an, die aus dem **Feld AvgTimePerFrame** in der **VIDEOINFOHEADER2-Struktur berechnet werden** kann. Legen Sie im Allgemeinen **dwNumerator** auf 10000000 und **dwDenominator** auf **AvgTimePerFrame fest.** Sie können jedoch auch nach einigen bekannten Frameraten überprüfen:
 
-    | Durchschnittliche Zeit pro Frame | Frame Rate (fps) | Zähler | Vorzuschlagen |
+    | Durchschnittliche Zeit pro Frame | Framerate (fps) | Zähler | Nenner |
     |------------------------|------------------|-----------|-------------|
-    | 166833                 | 59,94 (NTSC)     | 60000     | 1001        |
-    | 333667                 | 29,97 (NTSC)     | 30.000     | 1001        |
-    | 417188                 | 23,97 (NTSC)     | 24.000     | 1001        |
-    | 200.000                 | 50,00 (PAL)      | 50        | 1           |
-    | 400000                 | 25,00 (PAL)      | 25        | 1           |
-    | 416667                 | 24,00 (Film)     | 24        | 1           |
+    | 166833                 | 59.94 (NTSC)     | 60000     | 1001        |
+    | 333667                 | 29.97 (NTSC)     | 30.000     | 1001        |
+    | 417188                 | 23.97 (NTSC)     | 24.000     | 1001        |
+    | 200.000                 | 50.00 (PAL)      | 50        | 1           |
+    | 400000                 | 25.00 (PAL)      | 25        | 1           |
+    | 416667                 | 24.00 (Film)     | 24        | 1           |
 
     
 
      
 
--   **Outputframefreq**: Dieses Feld gibt die Ausgabe Häufigkeit an, die anhand des **inputsamplefreq** -Werts und der überlappenden Merkmale des Eingabedaten Stroms berechnet werden kann:
-    -   Legen Sie **outputframefreq. dwnenner** auf **inputsamplefreq. dwnenner** fest.
-    -   Wenn das Eingabe Video verschachtelt ist, legen Sie **outputframefreq. dwnumerator** auf 2 x **inputsamplefreq. dwnumerator** fest. (Nach Deinterlacing wird die Framerate verdoppelt.) Legen Sie andernfalls den Wert auf **inputsamplefreq. dwnumerator** fest.
--   **dwfourcc**: Legen Sie dieses Feld auf fest `pBMI->biCompression` .
+-   **OutputFrameFreq:** Dieses Feld gibt die Ausgabehäufigkeit an, die aus dem **InputSampleFreq-Wert** und den überlappenden Merkmalen des Eingabestreams berechnet werden kann:
+    -   Legen **Sie OutputFrameFreq.dwDenominator** auf **InputSampleFreq.dwDenominator fest.**
+    -   Wenn das Eingabevideo übereinander liegt, legen Sie **OutputFrameFreq.dwNumerator** auf 2 x **InputSampleFreq.dwNumerator fest.** (Nach dem Deinterlacing wird die Bildfrequenz verdoppelt.) Legen Sie andernfalls den Wert auf **InputSampleFreq.dwNumerator fest.**
+-   **dwFourCC:** Legen Sie dieses Feld auf `pBMI->biCompression` fest.
 
-Die folgende Hilfsfunktion konvertiert aminterlace \_ *X* -Flags in [**VMR9 \_ Sampleformat**](/previous-versions/windows/desktop/api/Vmr9/ne-vmr9-vmr9_sampleformat) -Werte:
+Die folgende Hilfsfunktion konvertiert AMINTERLACE \_ *X-Flags* in [**VMR9 \_ SampleFormat-Werte:**](/previous-versions/windows/desktop/api/Vmr9/ne-vmr9-vmr9_sampleformat)
 
 
 ```C++

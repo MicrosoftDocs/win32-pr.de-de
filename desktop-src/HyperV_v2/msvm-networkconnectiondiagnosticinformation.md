@@ -1,5 +1,5 @@
 ---
-description: Enthält Informationen über die Netzwerk Konnektivität für eine virtuelle Maschine.
+description: Stellt Informationen zur Netzwerkkonnektivität für einen virtuellen Computer zur Verfügung.
 ms.assetid: 59503c1b-203b-46ec-8a65-f21a746f170f
 title: Msvm_NetworkConnectionDiagnosticInformation-Klasse
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 416392702e5bc06e54fe5a23b6784b87e98b7027
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d12109c562dff014a9864146f8ba27f4863d2249644708d550b308dbd5744a9b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960714"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119521020"
 ---
-# <a name="msvm_networkconnectiondiagnosticinformation-class"></a>MSVM \_ networkconnectiondiagnosticinformation-Klasse
+# <a name="msvm_networkconnectiondiagnosticinformation-class"></a>Msvm \_ NetworkConnectionDiagnosticInformation-Klasse
 
-Enthält Informationen über die Netzwerk Konnektivität für eine virtuelle Maschine.
+Stellt Informationen zur Netzwerkkonnektivität für einen virtuellen Computer zur Verfügung.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -39,26 +39,26 @@ class Msvm_NetworkConnectionDiagnosticInformation
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ networkconnectiondiagnosticinformation** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ NetworkConnectionDiagnosticInformation-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ networkconnectiondiagnosticinformation** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ NetworkConnectionDiagnosticInformation-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**RoundtripTime**
+**RoundTripTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Roundtripzeit für die Ping-Anforderung.
+Die Roundtripzeit für die Pinganforderung.
 
 </dd> </dl>
 
@@ -68,10 +68,10 @@ Die Roundtripzeit für die Ping-Anforderung.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1703 desktop apps only (Nur \[ Desktop-Apps der Version 1703)\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

@@ -1,25 +1,25 @@
 ---
-description: Normalerweise können die System Paletteneinträge, die das System für statische Farben reserviert, nicht geändert werden.
+description: Normalerweise können die Systempaletteneinträge, die das System für statische Farben reserviert, nicht geändert werden.
 ms.assetid: be258151-36cc-42ba-8005-ff9d8e59b894
-title: System Palette und statische Farben
+title: Systempalette und statische Farben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 537bdc87fecdd055334b83a56b0a53f9999be94c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3ffc555331ea7ad14675b4155a76d14cc61f3bef3fa7e92b331ad89449b97884
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979424"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119613380"
 ---
-# <a name="system-palette-and-static-colors"></a>System Palette und statische Farben
+# <a name="system-palette-and-static-colors"></a>Systempalette und statische Farben
 
-Normalerweise können die System Paletteneinträge, die das System für statische Farben reserviert, nicht geändert werden. Eine Anwendung kann dieses Standardverhalten überschreiben, indem Sie die [**setsystempaletteuse**](/windows/desktop/api/Wingdi/nf-wingdi-setsystempaletteuse) -Funktion verwendet, um die Anzahl der statischen Farbeinträge zu verringern und so die Anzahl der nicht verwendeten System Paletteneinträge zu erhöhen. Da das Ändern der statischen Farben jedoch eine unmittelbare und drastische Auswirkung auf alle Fenster auf der Anzeige haben kann, sollte eine Anwendung **setsystempaletteuse** nicht aufrufen, es sei denn, Sie verfügt über ein maximiertes Fenster und den Eingabefokus.
+Normalerweise können die Systempaletteneinträge, die das System für statische Farben reserviert, nicht geändert werden. Eine Anwendung kann dieses Standardverhalten überschreiben, indem sie die [**SetSystemPaletteUse-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-setsystempaletteuse) verwendet, um die Anzahl statischer Farbeinträge zu reduzieren und dadurch die Anzahl der nicht verwendeten Systempaletteneinträge zu erhöhen. Da das Ändern der statischen Farben jedoch sofortige und drastische Auswirkungen auf alle Fenster auf der Anzeige haben kann, sollte eine Anwendung **SetSystemPaletteUse** nur aufrufen, wenn sie über ein maximiertes Fenster und den Eingabefokus verfügt.
 
-Wenn eine Anwendung [**setsystempaletteuse**](/windows/desktop/api/Wingdi/nf-wingdi-setsystempaletteuse) mit dem nostatic-Wert syspal aufruft \_ , gibt das System alle bis auf zwei reservierte Einträge frei, sodass diese Einträge neue Farbwerte empfangen können, wenn die Anwendung anschließend die logische Palette erkennt. Die verbleibenden zwei statischen Farbeinträge bleiben reserviert und sind auf weiß und schwarz festgelegt. Eine Anwendung kann die reservierten Einträge wiederherstellen, indem **setsystempaletteuse** mit dem statischen syspal-Wert aufgerufen wird \_ . Sie kann die aktuelle Systempalette mithilfe der [**getsystempaletteuse**](/windows/desktop/api/Wingdi/nf-wingdi-getsystempaletteuse) -Funktion ermitteln.
+Wenn eine Anwendung [**SetSystemPaletteUse**](/windows/desktop/api/Wingdi/nf-wingdi-setsystempaletteuse) mit dem SYSPAL \_ NOSTATIC-Wert aufruft, gibt das System alle bis auf zwei der reservierten Einträge frei, sodass diese Einträge neue Farbwerte erhalten, wenn die Anwendung anschließend ihre logische Palette erkennt. Die verbleibenden beiden statischen Farbeinträge bleiben reserviert und sind auf Weiß und Schwarz festgelegt. Eine Anwendung kann die reservierten Einträge wiederherstellen, indem **Sie SetSystemPaletteUse** mit dem SYSPAL \_ STATIC-Wert aufrufen. Die aktuelle Systempalettenverwendung kann mithilfe der [**GetSystemPaletteUse-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-getsystempaletteuse) ermittelt werden.
 
-Außerdem müssen Sie nach dem Festlegen der System palettenverwendung auf syspal \_ nostatic die Anwendung muss die logische Palette sofort erkennen, die [**GetSysColor**](/windows/win32/api/winuser/nf-winuser-getsyscolor) -Funktion aufrufen, um die aktuellen System Farbeinstellungen zu speichern. Sie muss die [**SetSysColors**](/windows/win32/api/winuser/nf-winuser-setsyscolors) -Funktion aufrufen, um die Systemfarben mithilfe von schwarz und weiß auf sinnvolle Werte festzulegen, und schließlich die [**WM- \_ syscolorchange**](wm-syscolorchange.md) -Nachricht an andere Fenster der obersten Ebene senden, damit Sie mit den neuen Wenn Sie Systemfarben mithilfe von schwarz und weiß festlegen, sollte die Anwendung sicherstellen, dass angrenzende oder überlappende Elemente, wie z. b. Fensterrahmen und Rahmen, auf Schwarz bzw. weiß festgelegt sind.
+Darüber hinaus muss die Anwendung nach dem Festlegen der Systempalettenverwendung auf SYSPAL \_ NOSTATIC sofort ihre logische Palette erkennen, die [**GetSysColor-Funktion**](/windows/win32/api/winuser/nf-winuser-getsyscolor) aufrufen, um die aktuellen Systemfarbeinstellungen zu speichern, die [**SetSysColors-Funktion**](/windows/win32/api/winuser/nf-winuser-setsyscolors) aufrufen, um die Systemfarben mithilfe von Schwarz und Weiß auf sinnvolle Werte festzulegen, und schließlich die [**\_ WM-SYSCOLORCHANGE-Nachricht**](wm-syscolorchange.md) an andere Fenster der obersten Ebene senden, damit sie mit den neuen Systemfarben neu gezeichnet werden können. Beim Festlegen von Systemfarben mit Schwarz und Weiß sollte die Anwendung sicherstellen, dass angrenzende oder überlappende Elemente wie Fensterrahmen und Rahmen auf Schwarz bzw. Weiß festgelegt sind.
 
-Bevor die Anwendung den Eingabefokus verliert, das Fenster schließt oder beendet, muss Sie sofort [**setsystempaletteuse**](/windows/desktop/api/Wingdi/nf-wingdi-setsystempaletteuse) mit dem statischen Wert "syspal" aufrufen \_ , die logische Palette erkennen, die Systemfarben auf die vorherigen Werte zurücksetzen und die [**" \_ syscolorchange**](wm-syscolorchange.md) "-Meldung "WM" senden. Das System sendet eine [**WM \_**](wm-paint.md) -Zeichnungs Meldung an jedes Fenster, das von einer System Farbänderung betroffen ist. Anwendungen mit Pinseln, die die vorhandenen Systemfarben verwenden, sollten diese Pinsel löschen und mithilfe der neuen Systemfarben neu erstellen.
+Bevor die Anwendung den Eingabefokus verliert, ihr Fenster schließt oder beendet wird, muss sie [**SetSystemPaletteUse**](/windows/desktop/api/Wingdi/nf-wingdi-setsystempaletteuse) sofort mit dem SYSPAL \_ STATIC-Wert aufrufen, ihre logische Palette realisieren, die Systemfarben auf ihre vorherigen Werte wiederherstellen und die [**\_ WM-SYSCOLORCHANGE-Nachricht**](wm-syscolorchange.md) senden. Das System sendet eine [**WM \_ PAINT-Nachricht**](wm-paint.md) an ein beliebiges Fenster, das von einer Systemfarbänderung betroffen ist. Anwendungen mit Pinseln, die die vorhandenen Systemfarben verwenden, sollten diese Pinsel löschen und mit den neuen Systemfarben neu erstellen.
 
  
 

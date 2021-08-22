@@ -1,11 +1,11 @@
 ---
-title: ms-DS-optional-Feature-GUID-Attribut
+title: ms-DS-Optional-Feature-GUID-Attribut
 description: GUID eines optionalen Features.
 ms.assetid: 79736823-bfed-446f-8268-5ea2743ded7d
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-optional-Feature-GUID-Attribut AD-Schema
-- AD-Schema des msDS-optionalfeatureguid-Attributs
+- MS-DS-Optional-Feature-GUID-Attribut AD-Schema
+- AD-Schema des msDS-OptionalFeatureGUID-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 24883531b748bc81690f19eb4e40d201feba9d3c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 5e82e576fe7149764fa091ab0808ce88ae32f8aea634c5958ee290c6c9f63f0f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859842"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119294760"
 ---
-# <a name="ms-ds-optional-feature-guid-attribute"></a>ms-DS-optional-Feature-GUID-Attribut
+# <a name="ms-ds-optional-feature-guid-attribute"></a>ms-DS-Optional-Feature-GUID-Attribut
 
 GUID eines optionalen Features.
 
@@ -29,13 +29,13 @@ GUID eines optionalen Features.
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | ms-DS-optional-Feature-GUID                           |
-| LDAP-Display-Name | MSDS-optionalfeatureguid                              |
+| CN                | ms-DS-Optional-Feature-GUID                           |
+| Ldap-Anzeigename | msDS-OptionalFeatureGUID                              |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.2062                               |
-| System-ID-GUID    | 9b88bda8-dd82-4998-a91d-5t2d2baf1927                  |
+| System-ID-GUID    | 9b88bda8-dd82-4998-a91d-5f2d2baf1927                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -53,16 +53,16 @@ GUID eines optionalen Features.
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | Richtig                                                                |
-| Ist-einwertig       | Richtig                                                                |
-| Ist indiziert             | False                                                               |
-| Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| System-Only            | True                                                                |
+| Ist einwertig       | True                                                                |
+| Ist indiziert             | Falsch                                                               |
+| Im globalen Katalog      | Falsch                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | 16                                                                  |
 | Range-Upper            | 16                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**ms-DS-optional-Feature**](c-msds-optionalfeature.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Optional-Feature**](c-msds-optionalfeature.md)<br/> |
 
 
 
@@ -74,16 +74,16 @@ GUID eines optionalen Features.
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | Richtig                                                                |
-| Ist-einwertig       | Richtig                                                                |
-| Ist indiziert             | False                                                               |
-| Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| System-Only            | True                                                                |
+| Ist einwertig       | True                                                                |
+| Ist indiziert             | Falsch                                                               |
+| Im globalen Katalog      | Falsch                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | 16                                                                  |
 | Range-Upper            | 16                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**ms-DS-optional-Feature**](c-msds-optionalfeature.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Optional-Feature**](c-msds-optionalfeature.md)<br/> |
 
 
 

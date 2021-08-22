@@ -1,9 +1,9 @@
 ---
 title: size_is-Attribut
-description: Verwenden Sie das Attribut \size is\, um die Größe des Arbeitsspeichers in -Elementen anzugeben, die für Zeiger mit großer Größe, Zeiger mit größenspezifischen Zeigern und ein- oder mehrdimensionale Arrays \_ zugeordnet sind.
+description: Verwenden Sie das \_ \size is\-Attribut, um die Größe des Arbeitsspeichers in -Elementen anzugeben, die für Zeiger mit größenbemessener Größe zugeordnet sind, Zeiger mit größenvergrößerten Zeigern und ein- oder mehrdimensionale Arrays.
 ms.assetid: 1f3f3629-f668-460d-86fd-16ef22449973
 keywords:
-- size_is MIDL-Attribut
+- size_is-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "119066700"
 ---
 # <a name="size_is-attribute"></a>size \_ is attribute
 
-Verwenden Sie \[ **das Size \_ is-Attribut,** um die Größe des Arbeitsspeichers in Elementen anzugeben, die für Zeiger mit großer Größe, Zeiger auf Zeiger mit Größengröße und ein- oder mehrdimensionale Arrays zugeordnet \] sind.
+Verwenden Sie das Size \[ **\_ is-Attribut,** um die Größe des Arbeitsspeichers in Elementen anzugeben, die für Zeiger mit \] größenbemessener Größe zugeordnet sind, zeigergrößenbezogene Zeiger auf zeigergröße und ein- oder mehrdimensionale Arrays.
 
 ``` syntax
 [ size_is(limited-expression-list) ]
@@ -31,22 +31,22 @@ Verwenden Sie \[ **das Size \_ is-Attribut,** um die Größe des Arbeitsspeicher
 
 <dl> <dt>
 
-*limited-expression-list* 
+*eingeschränkte Ausdrucksliste* 
 </dt> <dd>
 
-Gibt einen oder mehrere C-Sprachausdrücke an. Jeder Ausdruck wird zu einer nicht negativen ganzen Zahl ausgewertet, die die Menge an Arbeitsspeicher darstellt, die einem Zeiger oder Array mit einer Größe zugeordnet ist. Im Fall eines Arrays gibt einen einzelnen Ausdruck an, der die Zuordnungsgröße der ersten Dimension dieses Arrays in Elementen darstellt. Der MIDL-Compiler unterstützt bedingte Ausdrücke, logische Ausdrücke, relationale Ausdrücke und arithmetische Ausdrücke. MIDL lässt keine Funktionsaufrufe in Ausdrücken zu und lässt keine Inkrement- und Dekrementoperatoren zu. Verwenden Sie Kommas als Platzhalter für implizite Parameter oder , um mehrere Ausdrücke zu trennen.
+Gibt einen oder mehrere C-Sprachausdrücke an. Jeder Ausdruck wird zu einer nicht negativen ganzzahligen Zahl ausgewertet, die die Menge an Arbeitsspeicher darstellt, die einem Zeiger der Größe oder einem Array zugeordnet ist. Im Fall eines Arrays gibt einen einzelnen Ausdruck an, der die Zuordnungsgröße in Elementen der ersten Dimension dieses Arrays darstellt. Der MIDL-Compiler unterstützt bedingte Ausdrücke, logische Ausdrücke, relationale Ausdrücke und arithmetische Ausdrücke. MIDL lässt keine Funktionsaufrufe in Ausdrücken und keine Inkrement- und Dekrementoperatoren zu. Verwenden Sie Kommas als Platzhalter für implizite Parameter oder zum Trennen mehrerer Ausdrücke.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie das Attribut size is verwenden, um Speicher für ein mehrdimensionales Array zu reservieren, und Sie die Array-Notation verwenden, denken Sie daran, dass nur die erste Dimension eines mehrdimensionalen Arrays zur Laufzeit dynamisch bestimmt werden \[ **\_** \] \[ \] kann. Die anderen Dimensionen müssen statisch angegeben werden. Weitere Informationen zur Verwendung des Size is-Attributs mit mehreren Zeigerebenen, damit ein Server ein Array von Daten mit dynamischer Größe an einen Client zurückgeben kann, wie im Beispiel Proc7 gezeigt, finden Sie unter Mehrere Ebenen von \[ **\_** \] [Zeigern.](/windows/desktop/Rpc/multiple-levels-of-pointers)
+Wenn Sie das \[ **Size \_ is-Attribut** \] verwenden, um Speicher für ein mehrdimensionales Array zuzuordnen, und Sie array \[ \] notation verwenden, denken Sie daran, dass nur die erste Dimension eines mehrdimensionalen Arrays zur Laufzeit dynamisch bestimmt werden kann. Die anderen Dimensionen müssen statisch angegeben werden. Weitere Informationen zur Verwendung des \[ **"size \_ is"-Attributs** \] mit mehreren Zeigerebenen, um einem Server das Zurückgeben eines Arrays von Daten mit dynamischer Größe an einen Client zu ermöglichen, wie im Beispiel Proc7 gezeigt, finden Sie unter [Mehrere Zeigerebenen.](/windows/desktop/Rpc/multiple-levels-of-pointers)
 
-Sie können entweder \[ **size \_ is** oder \] max [**\_ is**](max-is.md) (aber nicht beides in derselben Attributliste) verwenden, um die Größe eines Arrays anzugeben, dessen Obergrenzen zur Laufzeit bestimmt werden. Beachten Sie jedoch, dass \[ **die Größe attribut \_ ist,** \] nicht für arraydimensionen verwendet werden kann, die fest sind. Das \[ **max \_ is-Attribut** \] gibt den maximal gültigen Arrayindex an. Daher entspricht die Angabe \[ der Größe \_ is(n) der Angabe von max \] \[ \_ is(n-1). \]
+Sie können entweder \[ **size \_ is** \] oder max [**\_ is**](max-is.md) (aber nicht beide in derselben Attributliste) verwenden, um die Größe eines Arrays anzugeben, dessen Obergrenzen zur Laufzeit bestimmt werden. Beachten Sie jedoch, dass die \[ **Größe \_ des** \] Attributs nicht für feste Arraydimensionen verwendet werden kann. Das \[ **Attribut max \_ is** \] gibt den maximal gültigen Arrayindex an. Daher entspricht die Angabe der \[ Größe \_ is(n) \] der Angabe von max \[ \_ is(n-1). \]
 
-Ein \[ [**parameter in**](in.md) \] oder \[ in, [**out**](out-idl.md) \] conformant-array \[ [](string.md) \] \[ **\_** \] \[ [**\_**](max-is.md) mit dem \] Zeichenfolgenattribut muss nicht die Größe oder max is attribute haben. In diesem Fall wird die Größe der Zuordnung anhand des NULL-Abschlusszeichens der Eingabezeichenfolge bestimmt. Alle anderen konformen Arrays mit dem \[ \] Zeichenfolgenattribut müssen über das \[ **Attribut size \_ oder** \] max \[ **\_ is** \] verfügen.
+Ein \[ [**in-**](in.md) \] oder \[ in-, [**out**](out-idl.md) \] conformant-array-Parameter mit dem \[ [**Zeichenfolgenattribut**](string.md) muss nicht über die \] Größe oder das Attribut max \[ **\_** \] \[ [**\_ is**](max-is.md) \] verfügen. In diesem Fall wird die Größe der Zuordnung anhand des NULL-Abschlusszeichens der Eingabezeichenfolge bestimmt. Alle anderen konformen Arrays mit dem \[ \] Zeichenfolgenattribut müssen das \[ **Attribut size \_ oder** \] max \[ **\_ is** \] aufweisen.
 
-Es ist zwar legal, das Attribut size mit einer Konstante zu \[ **\_** \] verwenden, dies ist jedoch ineffizient und unnötig. Verwenden Sie beispielsweise ein Array fester Größe:
+Obwohl es zulässig ist, das \[ **Size \_ is-Attribut** mit einer Konstante zu \] verwenden, ist dies ineffizient und unnötig. Verwenden Sie beispielsweise ein Array mit fester Größe:
 
 ``` syntax
 HRESULT Proc3([in] short Arr[MAX_SIZE]);
@@ -59,9 +59,9 @@ Anstelle von:
 HRESULT Proc3([in size_is(MAX_SIZE)] short Arr[] );
 ```
 
-Sie können die Größe \[ **\_ verwenden, und** \] length \[ [**\_ ist**](length-is.md) \] Attribute zusammen. Wenn Sie dies tun, \[ **steuert das \_ Attribut** \] size die Menge des für die Daten zugeordneten Arbeitsspeichers. Das \[ **Length \_ is-Attribut** \] gibt an, wie viele Elemente übertragen werden. Die durch die Größe angegebene Arbeitsspeichermenge \[ **\_ ist ,** und die Länge ist Attribute müssen \] nicht identisch \[ **\_** \] sein. Ihr Client kann beispielsweise einen in,out-Parameter an einen Server übergeben und eine große Speicherbelegung mit der Größe angeben, obwohl er eine kleine Anzahl von Datenelementen angibt, die mit der Länge übergeben werden \[ \] \[ **\_** \] \[ **\_ sollen.** \] Dadurch kann der Server das Array mit mehr Daten füllen, als er empfangen hat, die er dann an den Client zurücksingen kann.
+Sie können die \[ **Attribute size \_ is** \] und length \[ [**\_ is**](length-is.md) \] zusammen verwenden. Wenn Sie dies tun, steuert die \[ **Größe \_ des** \] Attributs die Menge an Arbeitsspeicher, die den Daten zugeordnet ist. Das \[ **Attribut length \_ is** \] gibt an, wie viele Elemente übertragen werden. Die durch die Größe angegebene \[ **Arbeitsspeichermenge \_ ist** \] , und die Länge \[ **\_ der** \] Attribute muss nicht identisch sein. Beispielsweise kann Ihr Client einen \[ \] in,out-Parameter an einen Server übergeben und eine große Speicherbelegung mit \[ **der Größe \_** \] angeben, obwohl er eine kleine Anzahl von Datenelementen angibt, die mit der Länge übergeben werden \[ **\_** \] sollen. Dadurch kann der Server das Array mit mehr Daten füllen, als er empfangen hat, die er dann an den Client zurücksenden kann.
 
-Im Allgemeinen ist es nicht sinnvoll, sowohl size is als auch \[ **\_** \] length \[ [**\_ is**](length-is.md) \] on in or out parameters \[ \] \[ \] anzugeben. In beiden Fällen steuert \[ **die Größe \_ die** \] Speicherzuweisung. Ihre Anwendung könnte die \[ **Größe \_ verwenden, indem** sie mehr Arrayelemente zuteilen, als sie \] überträgt (gemäß \[ **der Länge \_ ist** \] ). Dies wäre jedoch ineffizient. Es wäre auch ineffizient, identische Werte für \[ **die Größe \_ anzugeben, und** die Länge \] \[ **\_ ist** \] . Dies würde zusätzlichen Mehraufwand beim Marshallen von Parametern verursachen. Wenn die Werte von \[ **size \_ und** length immer gleich \] \[ **\_** \] sind, lässt \[ **das length \_ is-Attribut** \] weg.
+Im Allgemeinen ist es nicht sinnvoll, sowohl die Größe als auch die Länge für \[ **\_** \] \[ [**\_**](length-is.md) \] \[ \] ein- oder \[ ausgehende \] Parameter anzugeben. In beiden Fällen \[ **\_ steuert die Größe** \] die Speicherbelegung. Ihre Anwendung kann \[ **die \_ Größe** \] verwenden, um mehr Arrayelemente zuzuordnen, als sie überträgt (wie durch length angegeben \[ **\_ ist).** \] Dies wäre jedoch ineffizient. Es wäre auch ineffizient, identische Werte für \[ **die Größe \_ anzugeben,** \] und die Länge \[ **\_ ist** \] . Dies würde zusätzlichen Mehraufwand beim Marshalling von Parametern verursachen. Wenn die Werte der \[ **Größe \_ gleich** \] sind und length immer gleich \[ **\_ ist,** sollten Sie das Attribut length \] \[ **\_ is** weglassen. \]
 
 ## <a name="examples"></a>Beispiele
 
@@ -115,25 +115,25 @@ HRESULT Proc6(
 [Feldattribute](/windows/desktop/Rpc/field-attributes)
 </dt> <dt>
 
-[**first \_ is**](first-is.md)
+[**\_first ist**](first-is.md)
 </dt> <dt>
 
 [IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**In**](in.md)
+[**in**](in.md)
 </dt> <dt>
 
-[**last \_ is**](last-is.md)
+[**last \_ ist**](last-is.md)
 </dt> <dt>
 
 [**length \_ ist**](length-is.md)
 </dt> <dt>
 
-[**max \_ is**](max-is.md)
+[**max \_ ist**](max-is.md)
 </dt> <dt>
 
-[**min \_ is**](min-is.md)
+[**min \_ ist**](min-is.md)
 </dt> <dt>
 
 [**out**](out-idl.md)

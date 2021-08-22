@@ -1,12 +1,12 @@
 ---
-title: Iremotedesktopclientevents-Methode (onkeycombinationpressed)
-description: Wird aufgerufen, wenn in der Remote Sitzung Sondertasten Kombinationen gedrückt werden.
+title: IRemoteDesktopClientEvents OnKeyCombinationPressed-Methode
+description: Wird aufgerufen, wenn in der Remotesitzung spezielle Tastenkombinationen gedrückt werden.
 ms.assetid: 0A4EAD6C-5DA9-4ED3-BA79-92AE5AE81C9F
 ms.tgt_platform: multiple
 keywords:
-- Onkeycombinationpressed-Methode Remotedesktopdienste
-- Onkeycombinationpressed-Methode Remotedesktopdienste, iremotedesktopclientevents-Schnittstelle
-- Iremotedesktopclientevents-Schnittstelle Remotedesktopdienste, onkeycombinationpressed-Methode
+- OnKeyCombinationPressed-Remotedesktopdienste
+- OnKeyCombinationPressed-Methode Remotedesktopdienste , IRemoteDesktopClientEvents-Schnittstelle
+- IRemoteDesktopClientEvents-Schnittstelle Remotedesktopdienste , OnKeyCombinationPressed-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 192cad6323578a9bde9fe38af1d2b1d2cf83473c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e175bc0d65126c11cbcb97d0b73accd48ff92b02e38cca6e3ac35ebcce1ae961
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119515100"
 ---
-# <a name="iremotedesktopclienteventsonkeycombinationpressed-method"></a>Iremotedesktopclientevents:: onkeycombinationpressed-Methode
+# <a name="iremotedesktopclienteventsonkeycombinationpressed-method"></a>IRemoteDesktopClientEvents::OnKeyCombinationPressed-Methode
 
-Wird aufgerufen, wenn in der Remote Sitzung Sondertasten Kombinationen gedrückt werden.
+Wird aufgerufen, wenn in der Remotesitzung spezielle Tastenkombinationen gedrückt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void OnKeyCombinationPressed(
 
 <dl> <dt>
 
-*Tastenkombination* \[ in\]
+*keyCombination* \[ In\]
 </dt> <dd></dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
@@ -60,7 +60,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                 |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>         |
-| IID<br/>                      | Diid \_ iremotedesktopclientevents ist als 079863b7-6d47-4105-8bfe-0cdcb360e67d definiert.<br/> |
+| IID<br/>                      | DIID \_ IRemoteDesktopClientEvents ist als 079863B7-6D47-4105-8BFE-0CDCB360E67D definiert.<br/> |
 
 
 
@@ -68,7 +68,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Iremotedesktopclientevents**](iremotedesktopclientevents.md)
+[**IRemoteDesktopClientEvents**](iremotedesktopclientevents.md)
 </dt> </dl>
 
  

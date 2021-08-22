@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Server2003Param-Klasse'
-title: Server2003Param-Klasse (Microsoft. ISAM. ESENT. Interop. Server2003)
+description: Weitere Informationen finden Sie unter Server2003Param-Klasse.
+title: Server2003Param-Klasse (Microsoft.Isam.Esent.Interop.Server2003)
 TOCTitle: Server2003Param class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Server2003.Server2003Param
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.server2003.server2003param(v=EXCHG.10)
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5f6437a378d14be73b60274114e79708b6a97f76
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b59a4621dff6e12e0c0b91f6c3c0caa78a2a6d38bfc213c3ce0d2c737ff2c4e1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344199"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119559570"
 ---
 # <a name="server2003param-class"></a>Server2003Param-Klasse
 
-System Parameter, die der Windows Server 2003-Version von ESENT hinzugefügt wurden.
+Systemparameter, die der version Windows Server 2003 von ESENT hinzugefügt wurden.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  Microsoft. ISAM. ESENT. Interop. Server2003. Server2003Param  
+  Microsoft.Isam.Esent.Interop.Server2003.Server2003Param  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Server2003](./microsoft.isam.esent.interop.server2003-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Server2003](./microsoft.isam.esent.interop.server2003-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,8 +62,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Server2003Param-Member](./server2003param-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Server2003-Namespace](./microsoft.isam.esent.interop.server2003-namespace.md)
+[Microsoft.Isam.Esent.Interop.Server2003-Namespace](./microsoft.isam.esent.interop.server2003-namespace.md)

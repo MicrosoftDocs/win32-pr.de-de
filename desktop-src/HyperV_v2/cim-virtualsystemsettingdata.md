@@ -1,5 +1,5 @@
 ---
-description: Beschreibt die virtuellen Aspekte eines virtuellen Systems durch eine Reihe von virtualisierungsspezifischen Eigenschaften. CIM \_ virtualsystemsettingdata wird auch als Klasse der obersten Ebene der virtuellen Systemkonfigurationen verwendet.
+description: Beschreibt die virtuellen Aspekte eines virtuellen Systems durch eine Reihe von virtualisierungsspezifischen Eigenschaften. CIM VirtualSystemSettingData wird auch als Klasse der obersten Ebene \_ von Konfigurationen des virtuellen Systems verwendet.
 ms.assetid: 501e659d-f190-41f9-aafa-447048a60e7c
 title: CIM_VirtualSystemSettingData-Klasse
 ms.topic: reference
@@ -30,16 +30,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: ff2c9725c8469b3e2c29d2e98a708d27e80378f1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1caed7797343eac9babd320af42fd6c9aaaffeff054211cc55bda0d437582d57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368921"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119068490"
 ---
-# <a name="cim_virtualsystemsettingdata-class"></a>CIM \_ virtualsystemsettingdata-Klasse
+# <a name="cim_virtualsystemsettingdata-class"></a>CIM \_ VirtualSystemSettingData-Klasse
 
-Beschreibt die virtuellen Aspekte eines virtuellen Systems durch eine Reihe von virtualisierungsspezifischen Eigenschaften. **CIM \_ Virtualsystemsettingdata** wird auch als Klasse der obersten Ebene der virtuellen Systemkonfigurationen verwendet.
+Beschreibt die virtuellen Aspekte eines virtuellen Systems durch eine Reihe von virtualisierungsspezifischen Eigenschaften. **CIM \_ VirtualSystemSettingData** wird auch als Klasse der obersten Ebene von Konfigurationen des virtuellen Systems verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,26 +69,26 @@ class CIM_VirtualSystemSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ virtualsystemsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ VirtualSystemSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ virtualsystemsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ VirtualSystemSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Automatikrecoveryaction**
+**AutomaticRecoveryAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die für das virtuelle System auszuführende Aktion, wenn die vom virtuellen System ausgeführte Software ausfällt. Zu den von dieser Eigenschaft behandelten Fehlern zählen nur solche, die von der Host Plattform erkannt werden, z. b. eine nicht unter brechbare Bedingung für den Wartezustand.
+Die Aktion, die für das virtuelle System ausgeführt werden soll, wenn die vom virtuellen System ausgeführte Software ausfällt. Die von dieser Eigenschaft behobenen Fehler umfassen nur diejenigen, die von der Hostplattform erkannt werden können, z. B. eine bedingung für einen nicht unterbrechbaren Wartezustand.
 
 <dt>
 
@@ -101,80 +101,80 @@ Die für das virtuelle System auszuführende Aktion, wenn die vom virtuellen Sys
 
 <span id="Restart"></span><span id="restart"></span><span id="RESTART"></span>
 
-**Neu starten** (3)
+**Neustart** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Revert_to_snapshot"></span><span id="revert_to_snapshot"></span><span id="REVERT_TO_SNAPSHOT"></span>
 
-**Momentaufnahme** wiederherstellen (4)
+**Wiederherstellen der Momentaufnahme** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Automaticshutdownaction**
+**AutomaticShutdownAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Aktion, die beim Herunterfahren des Hosts für das virtuelle System ausgeführt werden soll.
+Die Aktion, die für das virtuelle System ausgeführt werden soll, wenn der Host heruntergefahren wird.
 
 <dt>
 
 <span id="Turn_Off"></span><span id="turn_off"></span><span id="TURN_OFF"></span>
 
-**Ausschalten** (2)
+**Deaktivieren** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Save_state"></span><span id="save_state"></span><span id="SAVE_STATE"></span>
 
-**Zustand speichern** (3)
+**Speichern des Zustands** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Shutdown"></span><span id="shutdown"></span><span id="SHUTDOWN"></span>
 
-**Herunter** fahren (4)
+**Herunterfahren** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Automaticstartupaction**
+**AutomaticStartupAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Aktion, die beim Starten des Hosts auf dem virtuellen System ausgeführt werden soll.
+Die Aktion, die auf dem virtuellen System ausgeführt werden soll, wenn der Host gestartet wird.
 
 <dt>
 
@@ -187,7 +187,7 @@ Die Aktion, die beim Starten des Hosts auf dem virtuellen System ausgeführt wer
 
 <span id="Restart_if_previously_active"></span><span id="restart_if_previously_active"></span><span id="RESTART_IF_PREVIOUSLY_ACTIVE"></span>
 
-**Neu starten, wenn zuvor aktiv** (3)
+**Neustart, wenn er zuvor aktiv war** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -201,40 +201,40 @@ Die Aktion, die beim Starten des Hosts auf dem virtuellen System ausgeführt wer
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Automaticstartupactiondelay**
+**AutomaticStartupActionDelay**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Verzögerung für die Start Aktion. Dieser Wert ist eine Intervall Variante des **DateTime** -Datentyps.
+Die Verzögerung für die Startaktion. Dieser Wert ist eine Intervallvariante des **datetime-Datentyps.**
 
 </dd> <dt>
 
-**Automaticstartupactionsequencenumschlag**
+**AutomaticStartupActionSequenceNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Sequenznummer für die Aktivierung des virtuellen Systems, wenn das Host System gestartet wird. Eine niedrigere Zahl deutet auf eine frühere Aktivierung hin. Wenn eine oder mehrere Konfigurationen denselben Wert aufweisen, ist die Sequenz implementierungsabhängig. Der Wert "0" gibt an, dass die Sequenz implementierungsabhängig ist.
+Die Sequenznummer für die Aktivierung des virtuellen Systems, wenn das Hostsystem gestartet wird. Eine niedrigere Zahl gibt eine frühere Aktivierung an. Wenn eine oder mehrere Konfigurationen den gleichen Wert anzeigen, ist die Sequenz von der Implementierung abhängig. Der Wert "0" gibt an, dass die Sequenz von der Implementierung abhängig ist.
 
 </dd> <dt>
 
-**Configurationdataroot**
+**ConfigurationDataRoot**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -256,7 +256,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der relative Pfad der Datei, in der Informationen über die Konfiguration des virtuellen Systems gespeichert werden. Der relative Pfad wird an den Wert der **configurationdataroot** -Eigenschaft angefügt. Das Format dieser Eigenschaft ist ein URI, der auf RFC 2079 basiert.
+Der relative Pfad der Datei, in der Informationen zur Konfiguration des virtuellen Systems gespeichert werden. Der relative Pfad wird an den Wert der **ConfigurationDataRoot-Eigenschaft** angefügt. Das Format dieser Eigenschaft ist ein URI, der auf RFC 2079 basiert.
 
 </dd> <dt>
 
@@ -269,29 +269,29 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die eindeutige ID der virtuellen Systemkonfiguration.
+Die eindeutige ID der Konfiguration des virtuellen Systems.
 
 > [!Note]  
-> **Configurationid** unterscheidet sich von der **InstanceId** und wird von der Implementierung einem virtuellen System oder einer virtuellen Systemkonfiguration zugewiesen. **Configurationid** ist kein Schlüssel, und der gleiche Wert kann für mehr als eine Instanz auftreten.
+> **ConfigurationID** ist anders als **InstanceID** und wird von der Implementierung einem virtuellen System oder einer Konfiguration des virtuellen Systems zugewiesen. **ConfigurationID** ist kein Schlüssel, und der gleiche Wert kann für mehrere Instanzen auftreten.
 
  
 
 </dd> <dt>
 
-**CreationTime**
+**Creationtime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit der Erstellung der virtuellen Systemkonfiguration.
+Das Datum und die Uhrzeit der Erstellung der Konfiguration des virtuellen Systems.
 
 </dd> <dt>
 
-**Logdataroot**
+**LogDataRoot**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -300,14 +300,14 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der relative Dateipfad des Verzeichnisses, in dem die Protokollinformationen für das virtuelle System gespeichert werden. Der relative Pfad wird an den Wert der **configurationdataroot** -Eigenschaft angefügt. Das Format dieser Eigenschaft ist ein URI, der auf RFC 2079 basiert.
+Der relative Dateipfad des Verzeichnisses, in dem Protokollinformationen für das virtuelle System gespeichert werden. Der relative Pfad wird an den Wert der **ConfigurationDataRoot-Eigenschaft** angefügt. Das Format dieser Eigenschaft ist ein URI, der auf RFC 2079 basiert.
 
 </dd> <dt>
 
-**Hinweise**
+**Notizen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -317,7 +317,7 @@ Ein Array, das vom Benutzer bereitgestellte Notizen enthält, die mit dem virtue
 
 </dd> <dt>
 
-**Wiederherstellbare Datei**
+**RecoveryFile**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -326,11 +326,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad der Datei, in der Wiederherstellungs bezogene Informationen des virtuellen Systems gespeichert werden. Das Format dieser Eigenschaft ist ein URI, der auf RFC 2079 basiert.
+Der Pfad der Datei, in der wiederherstellungsbezogene Informationen des virtuellen Systems gespeichert werden. Das Format dieser Eigenschaft ist ein URI, der auf RFC 2079 basiert.
 
 </dd> <dt>
 
-**Snapshotdataroot**
+**SnapshotDataRoot**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -339,11 +339,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der relative Pfad des Verzeichnisses, in dem Informationen zu virtuellen System Momentaufnahmen gespeichert werden. Der relative Pfad wird an den Wert der **configurationdataroot** -Eigenschaft angefügt. Das Format dieser Eigenschaft ist ein URI, der auf RFC 2079 basiert.
+Der relative Pfad des Verzeichnisses, in dem Informationen zu Momentaufnahmen virtueller Systeme gespeichert werden. Der relative Pfad wird an den Wert der **ConfigurationDataRoot-Eigenschaft** angefügt. Das Format dieser Eigenschaft ist ein URI, der auf RFC 2079 basiert.
 
 </dd> <dt>
 
-**Suspenddataroot**
+**SuspendDataRoot**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -352,11 +352,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der relative Pfad des Verzeichnisses, in dem die zusammenhängenden Informationen zum virtuellen System gespeichert werden. Der relative Pfad wird an den Wert der **configurationdataroot** -Eigenschaft angefügt. Das Format dieser Eigenschaft ist ein URI, der auf RFC 2079 basiert.
+Der relative Pfad des Verzeichnisses, in dem angehaltene Informationen zum virtuellen System gespeichert werden. Der relative Pfad wird an den Wert der **ConfigurationDataRoot-Eigenschaft** angefügt. Das Format dieser Eigenschaft ist ein URI, der auf RFC 2079 basiert.
 
 </dd> <dt>
 
-**Austauschen von Daten**
+**SwapFileDataRoot**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -365,11 +365,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der relative Dateipfad des Verzeichnisses, in dem die Auslagerungs Dateien des virtuellen Systems gespeichert werden. Der relative Pfad wird an den Wert der **configurationdataroot** -Eigenschaft angefügt. Das Format dieser Eigenschaft ist ein URI, der auf RFC 2079 basiert.
+Der relative Dateipfad des Verzeichnisses, in dem Auslagerungsdateien des virtuellen Systems gespeichert werden. Der relative Pfad wird an den Wert der **ConfigurationDataRoot-Eigenschaft** angefügt. Das Format dieser Eigenschaft ist ein URI, der auf RFC 2079 basiert.
 
 </dd> <dt>
 
-**Virtualsystemidentifier**
+**VirtualSystemIdentifier**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -378,13 +378,13 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der eindeutige Name für das System innerhalb der Virtualisierungsplattform. **Virtualsystemtifier** ist nicht der Hostname, der der im virtuellen System laufenden Betriebssystem Instanz zugewiesen ist, oder es handelt sich um eine IP-Adresse oder Mac-Adresse, die einem der zugehörigen Netzwerkports zugewiesen ist.
+Der eindeutige Name für das System innerhalb der Virtualisierungsplattform. **VirtualSystemIdentifier** ist weder der Hostname, der der betriebssysteminstanz zugewiesen ist, die im virtuellen System ausgeführt wird, noch ist er eine IP-Adresse oder MAC-Adresse, die einem seiner Netzwerkports zugewiesen ist.
 
-Der **virtualsystemtifier** kann Implementierungs spezifische Regeln enthalten, z. b. einfache Muster oder einen regulären Ausdruck, der von der Implementierung beim Festlegen von **virtualsystemdentifier** interpretiert werden kann.
+**VirtualSystemIdentifier kann** implementierungsspezifische Regeln enthalten, z. B. einfache Muster oder einen regulären Ausdruck, der von der Implementierung interpretiert werden kann, wenn **VirtualSystemIdentifier festgelegt wird.**
 
 </dd> <dt>
 
-**Virtualsystemtype**
+**VirtualSystemType**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -396,23 +396,23 @@ Zugriffstyp: Schreibgeschützt
 Der Typ des virtuellen Systems.
 
 > [!Note]  
-> Wenn der Typ des virtuellen Systems unbekannt ist, muss dieser Wert auf "DMTF: Unknown" festgelegt werden.
+> Wenn der virtuelle Systemtyp unbekannt ist, muss dieser Wert auf "DMTF:unknown" festgelegt werden.
 
  
 
-Diese Eigenschaft wird mit dem folgenden Format der erweiterten Backus-Naur Form (ABNF) formatiert:
+Diese Eigenschaft wird im folgenden ABNF-Format (Augmented BackusFs) formatiert:
 
-vs-Type = DMTF-Value/other-org-Value/Legacy-Value; DMTF-Value = "DMTF:" definierende-org ":" org-vs-Type; Other-org-value = Definition-org ":" org-vs-Type;
+vs-type = dmtf-value / other-org-value / legacy-value; dmtf-value = "DMTF:" defining-org ":" org-vs-type; other-org-value = defining-org ":" org-vs-type;
 
-Der Wert des obigen ABNF-Formats lautet:
+Der Wert des oben genannten ABNF-Formats ist:
 
--   *DMTF: Wert*   ein durch DMTF definierter Eigenschafts Wert, der in der Beschreibung dieser Eigenschaft definiert ist.
--   *other-org-Value*   ist ein Eigenschafts Wert, der von einer anderen Geschäfts Entität als DMTF definiert wird und nicht in der Beschreibung dieser Eigenschaft definiert ist.
--   *Legacy-Wert*   ein Eigenschafts Wert, der von einer anderen Geschäfts Entität als DMTF definiert wird und nicht in der Beschreibung dieser Eigenschaft definiert ist. Diese Werte sind zulässig, werden jedoch im Laufe der Zeit als veraltet eingestuft.
--   *Definieren von-org ein Bezeichner*   für die Geschäfts Entität, die den virtuellen Systemtyp definiert. Er sollte ein urheberrechtlich geschütztes, mit einem oder einen mit einem Wert bezeichnetes oder einen eindeutigen Namen enthalten, der im Besitz der Geschäfts Entität Er darf nicht "DMTF" lauten und darf keinen Doppelpunkt enthalten.
--   *org-vs-geben Sie einen Bezeichner*   für den virtuellen Systemtyp innerhalb der definierenden Geschäfts Entität ein. Er sollte innerhalb von Definition-org eindeutig sein. "org-vs-Type" kann beliebige Zeichen verwenden, die für CIM-Zeichen folgen zulässig sind, mit Ausnahme der folgenden: U0000-U001F (Unicode-Steuerelemente), U0020 (Leerzeichen), U007F (Unicode-Steuerelemente) oder U0080-U009F (Unicode C1-Steuerelemente).
+-   *dmtf-value*   ein von DMTF definierter Eigenschaftswert, der in der Beschreibung dieser Eigenschaft definiert ist.
+-   *other-org-value*   ist ein Eigenschaftswert, der von einer anderen Geschäftsentität als DMTF definiert wird und nicht in der Beschreibung dieser Eigenschaft definiert ist.
+-   *legacy-value*   ein Eigenschaftswert, der von einer anderen Geschäftsentität als DMTF definiert wird und nicht in der Beschreibung dieser Eigenschaft definiert ist. Diese Werte sind zulässig, sollten aber im Laufe der Zeit als veraltet gelten.
+-   *definitioning-org ein*   Bezeichner für die Geschäftsentität, die den typ des virtuellen Systems definiert. Sie sollte einen urheberrechtlich geschützten, markenierten oder eindeutigen Namen enthalten, der im Besitz der Geschäftseinheit ist. Er sollte nicht "DMTF" sein und darf keinen Doppelpunkt enthalten.
+-   *org-vs-type einen*   Bezeichner für den virtuellen Systemtyp innerhalb der definierenden Geschäftsentität ein. Sie sollte innerhalb von defining-org eindeutig sein. org-vs-type kann beliebige Zeichen verwenden, die für CIM-Zeichenfolgen zulässig sind, mit Ausnahme der folgenden Zeichen: U0000-U001F (Unicode C0-Steuerelemente), U0020 (Leerzeichen), U007F (Unicode C0-Steuerelemente) oder U0080-U009F (Unicode C1-Steuerelemente).
 -   Wenn der Wert in Segmente strukturiert werden muss, sollten die Segmente durch einen einzelnen Doppelpunkt getrennt werden.
--   Die Werte dieser Eigenschaft sollten in der Groß-/Kleinschreibung verarbeitet werden. Sie sollen nicht als Anzeige Name, sondern Programm gesteuert verarbeitet werden, und es sollte kurz sein.
+-   Bei den Werten dieser Eigenschaft muss die Schreibung beachtet werden. Sie sollen programmgesteuert verarbeitet werden, anstatt ein Anzeigename zu sein, und sollten kurz sein.
 
 </dd> </dl>
 
@@ -425,7 +425,7 @@ Der Wert des obigen ABNF-Formats lautet:
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -434,7 +434,7 @@ Der Wert des obigen ABNF-Formats lautet:
 
 <dl> <dt>
 
-[**CIM- \_ SettingData**](cim-settingdata.md)
+[**CIM \_ SettingData**](cim-settingdata.md)
 </dt> </dl>
 
  

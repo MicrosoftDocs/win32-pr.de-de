@@ -1,26 +1,26 @@
 ---
-description: Die Windows GDI+-Regions Klasse ermöglicht es Ihnen, eine benutzerdefinierte Form zu definieren. Die Form kann aus Linien, Polygonen und Kurven bestehen.
+description: Mit der Windows GDI+ Region-Klasse können Sie eine benutzerdefinierte Form definieren. Die Form kann aus Linien, Polygonen und Kurven bestehen.
 ms.assetid: 29a779c8-a2a4-42d8-9084-bad50ef82522
 title: Verwenden von Regionen (GDI+)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c7f687c012b3587bd681a3ad023ceb8326c59389
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cbcc22da0760ee5f8d13f45cf036e75fd414e379b648a0eeae1ac5e6ae3073f2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215579"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119557110"
 ---
 # <a name="using-regions-gdi"></a>Verwenden von Regionen (GDI+)
 
-Die Windows GDI+- [**Regions**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-region) Klasse ermöglicht es Ihnen, eine benutzerdefinierte Form zu definieren. Die Form kann aus Linien, Polygonen und Kurven bestehen.
+Mit der Windows GDI+ [**Region-Klasse**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-region) können Sie eine benutzerdefinierte Form definieren. Die Form kann aus Linien, Polygonen und Kurven bestehen.
 
-Zwei häufige Verwendungsmöglichkeiten für Regionen sind Treffer Tests und Clipping. Treffer Tests bestimmen, ob in einem bestimmten Bereich des Bildschirms auf die Maus geklickt wurde. Durch Clipping wird das Zeichnen auf eine bestimmte Region eingeschränkt.
+Zwei häufige Verwendungsmöglichkeiten für Regionen sind Treffertests und Clipping. Treffertests bestimmen, ob in einem bestimmten Bereich des Bildschirms mit der Maus geklickt wurde. Clipping beschränkt das Zeichnen auf einen bestimmten Bereich.
 
-In den folgenden Themen werden die Bereiche ausführlicher behandelt:
+In den folgenden Themen werden Regionen ausführlicher behandelt:
 
--   [Treffer Tests mit einer Region](-gdiplus-hit-testing-with-a-region-use.md)
--   [Clipping mit einer Region](-gdiplus-clipping-with-a-region-use.md)
+-   [Treffertests mit einer Region](-gdiplus-hit-testing-with-a-region-use.md)
+-   [Beschneiden mit einem Bereich](-gdiplus-clipping-with-a-region-use.md)
 
  
 

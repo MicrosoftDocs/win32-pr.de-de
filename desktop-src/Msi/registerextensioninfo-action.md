@@ -1,42 +1,42 @@
 ---
-description: Mit der RegisterExtensionInfo-Aktion wird die Registrierung von Erweiterungs bezogenen Informationen im System verwaltet.
+description: Die RegisterExtensionInfo-Aktion verwaltet die Registrierung von Erweiterungsinformationen beim System.
 ms.assetid: 3c243ca3-9fa7-41ec-968e-7954d7d45432
 title: RegisterExtensionInfo-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0310344b6579ef65faac41238bb607ce98411b52
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c0541fc512c2300b0cb37f4a23305a3d312a4e60208890507fb7c6112e00c94
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119519380"
 ---
 # <a name="registerextensioninfo-action"></a>RegisterExtensionInfo-Aktion
 
-Mit der RegisterExtensionInfo-Aktion wird die Registrierung von Erweiterungs bezogenen Informationen im System verwaltet.
+Die RegisterExtensionInfo-Aktion verwaltet die Registrierung von Erweiterungsinformationen beim System.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die Aktion RegisterExtensionInfo muss nach der Aktion [InstallFiles](installfiles-action.md) und der [unregisterextensioninfo](unregisterextensioninfo-action.md) -Aktion erfolgen.
+Die RegisterExtensionInfo-Aktion muss nach der [InstallFiles-Aktion](installfiles-action.md) und der [UnregisterExtensionInfo-Aktion](unregisterextensioninfo-action.md) erfolgen.
 
-Die Sequenzierung der Aktionen in der folgenden Gruppe ist eingeschränkt. Wenn eine Teilmenge dieser Aktionen in einer Sequenz Tabelle enthalten ist, müssen Sie dieselbe relative Reihenfolge Reihenfolge aufweisen wie in der folgenden Abbildung:
+Die Sequenzierung der Aktionen in der folgenden Gruppe ist eingeschränkt. Wenn eine Teilmenge dieser Aktionen zusammen in einer Sequenztabelle auftritt, müssen sie die gleiche relative Sequenzreihenfolge aufweisen wie gezeigt:
 
--   [Unregisterclassinfo](unregisterclassinfo-action.md)
--   [Unregisterextensioninfo](unregisterextensioninfo-action.md)
--   [Unregisterprogidinfo](unregisterprogidinfo-action.md)
--   [Unregistermimeinfo](unregistermimeinfo-action.md)
+-   [UnregisterClassInfo](unregisterclassinfo-action.md)
+-   [UnregisterExtensionInfo](unregisterextensioninfo-action.md)
+-   [UnregisterProgIdInfo](unregisterprogidinfo-action.md)
+-   [UnregisterMIMEInfo](unregistermimeinfo-action.md)
 -   [RegisterClassInfo](registerclassinfo-action.md)
 -   RegisterExtensionInfo
--   [Registerprogidinfo](registerprogidinfo-action.md)
--   [Registermimeinfo](registermimeinfo-action.md)
+-   [RegisterProgIdInfo](registerprogidinfo-action.md)
+-   [RegisterMIMEInfo](registermimeinfo-action.md)
 
-So muss z. b. RegisterExtensionInfo in der Sequenz Tabelle auf [unregistermimeinfo](unregistermimeinfo-action.md) folgen.
+RegisterExtensionInfo muss beispielsweise nach [UnregisterMIMEInfo](unregistermimeinfo-action.md) in der Sequenztabelle enthalten sein.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
 
 
-| Feld | Beschreibung der Aktions Daten |
+| Feld | Beschreibung der Aktionsdaten |
 |-------|----------------------------|
 | \[1\] | Registrierte Erweiterung.      |
 
@@ -44,15 +44,15 @@ So muss z. b. RegisterExtensionInfo in der Sequenz Tabelle auf [unregistermimein
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das System die Installation bei Bedarf für Erweiterungs Server unterstützt, registriert RegisterExtensionInfo alle Erweiterungs Server in der [Erweiterungs Tabelle](extension-table.md) , die den Funktionen zugeordnet ist, die für die Installation oder Ankündigung festgelegt sind. Andernfalls werden durch diese Aktion nur Erweiterungs Server registriert, die den Funktionen von zugewiesen sind.
+Wenn das System installation-on-demand für Erweiterungsserver unterstützt, registriert RegisterExtensionInfo alle Erweiterungsserver in der [Erweiterungstabelle,](extension-table.md) die features zugeordnet sind, die für die Installation oder Ankündigung festgelegt wurden. Andernfalls registriert diese Aktion nur Erweiterungsserver, die features zugeordnet sind, die auf installation festgelegt sind.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Shelladvtsupport (Eigenschaft)**](shelladvtsupport.md)
+[**ShellAdvtSupport-Eigenschaft**](shelladvtsupport.md)
 </dt> </dl>
 
  

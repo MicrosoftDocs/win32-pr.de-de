@@ -1,10 +1,10 @@
 ---
-title: MPFASTPATH_DATA Struktur (mpclient. h)
-description: FastPath-Aktualisierungs Benachrichtigung.
+title: MPFASTPATH_DATA -Struktur (MpClient.h)
+description: FastPath-Updatebenachrichtigung.
 ms.assetid: E19F153D-DD46-4E27-9A4B-33586794DAC2
 keywords:
-- MPFASTPATH_DATA Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPFASTPATH_DATA Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPFASTPATH_DATA struktur Legacy Windows Umgebungsfeatures
+- PMPFASTPATH_DATA Strukturzeiger Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2850a48074fee6984564550683c7fe595d0779ff
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e138e9c45657cfc4ebeba1d1dbeed38070b6e07d09c512ec96835a04702d0c8a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119556150"
 ---
-# <a name="mpfastpath_data-structure"></a>Mpfastpath- \_ Datenstruktur
+# <a name="mpfastpath_data-structure"></a>\_MPFASTPATH-DATENstruktur
 
-FastPath-Aktualisierungs Benachrichtigung.
+FastPath-Updatebenachrichtigung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ typedef struct tagMPFASTPATH_DATA {
 **SignatureType**
 </dt> <dd>
 
-Typ: **[ **MP- \_ Signatur \_ Typen**](mp-signature-type.md)**
+Typ: **[ **MP \_ SIGNATURE \_ TYPE**](mp-signature-type.md)**
 
 </dd> <dd>
 
@@ -59,10 +59,10 @@ Signaturtyp.
 
 </dd> <dt>
 
-**Fastpathsignaturetype**
+**FastPathSignatureType**
 </dt> <dd>
 
-Typ: **[ **MP- \_ FastPath- \_ Typ**](mp-fastpath-type.md)**
+Typ: **[ **MP \_ FASTPATH \_ TYPE**](mp-fastpath-type.md)**
 
 </dd> <dd>
 
@@ -70,32 +70,32 @@ FastPath-Signaturtyp.
 
 </dd> <dt>
 
-**Fastpathsignatureversion**
+**FastPathSignatureVersion**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
-FastPath-Signatur Version (optional).
+FastPath-Signaturversion (optional).
 
 </dd> <dt>
 
-**Compilationtimestamp**
+**CompilationTimestamp**
 </dt> <dd>
 
-Typ: **ularge \_ Integer**
+Typ: **ULARGE \_ INTEGER**
 
 </dd> <dd>
 
-Kompilierungszeit Stempel (UTC).
+Kompilierungszeitstempel (UTC).
 
 </dd> <dt>
 
 **PersistenceType**
 </dt> <dd>
 
-Typ: **[ **MP \_ - \_ persistenzlimit- \_ Typ**](mp-persistence-limit-type.md)**
+Typ: **[ **MP \_ PERSISTENCE \_ LIMIT \_ TYPE**](mp-persistence-limit-type.md)**
 
 </dd> <dd>
 
@@ -103,10 +103,10 @@ Persistenztyp (optional).
 
 </dd> <dt>
 
-**Persistencevalue**
+**PersistenceValue**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
@@ -114,10 +114,10 @@ Persistenzwert (optional).
 
 </dd> <dt>
 
-**Persistencepath**
+**PersistencePath**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
@@ -128,7 +128,7 @@ Persistenzpfad (optional).
 **`Reason`**
 </dt> <dd>
 
-Typ: **[ **MP- \_ Entfernungs \_ Grund**](mp-removal-reason.md)**
+Typ: **[ **\_ MP-ENTFERNUNGSGRUND \_**](mp-removal-reason.md)**
 
 </dd> <dd>
 
@@ -142,9 +142,9 @@ Grund für das Entfernen der Signatur.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 
@@ -152,13 +152,13 @@ Grund für das Entfernen der Signatur.
 
 <dl> <dt>
 
-[**MP- \_ FastPath- \_ Typ**](mp-fastpath-type.md)
+[**MP \_ \_ FASTPATH-TYP**](mp-fastpath-type.md)
 </dt> <dt>
 
-[**MP \_ - \_ persistenzgrenzwert \_**](mp-persistence-limit-type.md)
+[**MP \_ PERSISTENCE \_ LIMIT \_ TYPE**](mp-persistence-limit-type.md)
 </dt> <dt>
 
-[**MP- \_ Signatur \_ Typen**](mp-signature-type.md)
+[**\_ \_ MP-SIGNATURTYP**](mp-signature-type.md)
 </dt> </dl>
 
  

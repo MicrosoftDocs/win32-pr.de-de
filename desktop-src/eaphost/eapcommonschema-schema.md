@@ -1,6 +1,6 @@
 ---
 title: eapcommon-Schema
-description: Erfahren Sie mehr über das eapcommon-Schema, das das eapmethodtype-Schema Element definiert. Anzeigen zusätzlicher Ressourcen für Schema Elemente und komplexe Typen.
+description: Erfahren Sie mehr über das eapcommon-Schema, das das EapMethodType-Schemaelement definiert. Zeigen Sie zusätzliche Ressourcen für Schemaelemente und komplexe Typen an.
 ms.assetid: ab7d1228-8472-49c9-85be-36c189470af7
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,30 +9,30 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 5ee6865703603305f057eef8cc477c7ddb7d38ff
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 0ef00b95d978277790958c5d1945b810ae366f1dc4bd6e408accc3151d69f040
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106337256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119561850"
 ---
 # <a name="eapcommon-schema"></a>eapcommon-Schema
 
-Das eapcommon-Schema definiert das eapmethodtype-Schema Element.
+Das eapcommon-Schema definiert das EapMethodType-Schemaelement.
 
--   [eapcommon-Schema Elemente](eapcommonschema-elements.md)
--   [komplexe Typen von eapcommon-Schemas](eapcommonschema-complex-types.md)
+-   [eapcommon-Schemaelemente](eapcommonschema-elements.md)
+-   [Komplexe Typen des eapcommon-Schemas](eapcommonschema-complex-types.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

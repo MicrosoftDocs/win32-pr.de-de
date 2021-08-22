@@ -44,7 +44,7 @@ Dieses Attribut ist ein **boolescher** Wert.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Rahmen wird als zwei pixelweiter, eingesenkter Rahmen um das Listenfeld-Steuerelement mit Systemfarben angezeigt.
+Der Rahmen wird als zwei Pixel breiter, abgesenkter Rahmen um das Listenfeld-Steuerelement mit Systemfarben angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,7 +56,7 @@ Der Rahmen wird als zwei pixelweiter, eingesenkter Rahmen um das Listenfeld-Steu
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

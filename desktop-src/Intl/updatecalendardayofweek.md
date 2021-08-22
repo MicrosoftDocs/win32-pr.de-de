@@ -1,7 +1,7 @@
 ---
-description: Veraltet. Ruft den Wochentag ab, der einem angegebenen Tag entspricht, und füllt den DayOfWeek-Member in der angegebenen caldatetime-Struktur mit diesem Wert auf.
+description: Veraltet. Ruft den Wochentag ab, der einem angegebenen Tag entspricht, und füllt das DayOfWeek-Element in der angegebenen CALDATETIME-Struktur mit diesem Wert auf.
 ms.assetid: b9ae250a-73bb-4ec2-bb0d-e1f8b25c173c
-title: Updatecalendardayosweek-Funktion
+title: UpdateCalendarDayOfWeek-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_location:
 - Kernel32.dll
 - API-MS-Win-Core-calendar-l1-1-0.dll
 - kernel32legacy.dll
-ms.openlocfilehash: 316af539e6ca0476f0f8d575a160fcd7c3219e90
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0e7060c03b06fe855c096e94469797dedb20d74ec1d9de43e11b866c3afb0ed3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106354852"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119560650"
 ---
-# <a name="updatecalendardayofweek-function"></a>Updatecalendardayosweek-Funktion
+# <a name="updatecalendardayofweek-function"></a>UpdateCalendarDayOfWeek-Funktion
 
-Veraltet. Ruft den Wochentag ab, der einem angegebenen Tag entspricht, und füllt den **DayOfWeek** -Member in der angegebenen [**caldatetime**](caldatetime.md) -Struktur mit diesem Wert auf.
+Veraltet. Ruft den Wochentag ab, der einem angegebenen Tag entspricht, und füllt das **DayOfWeek-Element** in der angegebenen [**CALDATETIME-Struktur**](caldatetime.md) mit diesem Wert auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ BOOL UpdateCalendarDayOfWeek(
 
 <dl> <dt>
 
-*lpcaldatetime* \[ in, out\]
+*lpCalDateTime* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf die [**caldatetime**](caldatetime.md) -Struktur, die das Datum enthält, für das der Wochentag festgelegt werden soll.
+Zeiger auf die [**CALDATETIME-Struktur,**](caldatetime.md) die das Datum enthält, für das der Wochentag festgelegt werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** . Um erweiterte Fehlerinformationen abzurufen, kann die Anwendung [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)aufrufen, die einen der folgenden Fehlercodes zurückgeben kann:
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.** Um erweiterte Fehlerinformationen abzurufen, kann die Anwendung [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)aufrufen, wodurch einer der folgenden Fehlercodes zurückgegeben werden kann:
 
--   das Fehler \_ Datum liegt \_ außerhalb des zulässigen \_ \_ Bereichs. Das angegebene Datum lag außerhalb des gültigen Bereichs.
--   Fehler \_ : Ungültiger \_ Parameter. Jeder Parameterwert war ungültig.
+-   FEHLERDATUM \_ \_ LIEGT AUßERHALB DES \_ \_ BEREICHS. Das angegebene Datum lag außerhalb des Bereichs.
+-   FEHLER: \_ UNGÜLTIGER \_ PARAMETER. Jeder der Parameterwerte war ungültig.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion verfügt über keine zugeordnete Header Datei oder Bibliotheksdatei. Die Anwendung kann [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) mit dem DLL-Namen (Kernel32.dll) aufzurufen, um ein Modul Handle zu erhalten. Anschließend kann [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) mit diesem Modul Handle und dem Namen dieser Funktion aufgerufen werden, um die Funktions Adresse abzurufen.
+Dieser Funktion ist keine Header- oder Bibliotheksdatei zugeordnet. Die Anwendung kann [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) mit dem DLL-Namen (Kernel32.dll) aufrufen, um ein Modulhandle abzurufen. Anschließend kann [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) mit diesem Modulhandle und dem Namen dieser Funktion aufgerufen werden, um die Funktionsadresse abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Diese Funktion verfügt über keine zugeordnete Header Datei oder Bibliotheksdat
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Kernel32.dll</dt> </dl> |
 
 
@@ -75,13 +75,13 @@ Diese Funktion verfügt über keine zugeordnete Header Datei oder Bibliotheksdat
 
 <dl> <dt>
 
-[Unterstützung für nationale Sprache](national-language-support.md)
+[Unterstützung für nationale Sprachen](national-language-support.md)
 </dt> <dt>
 
-[Funktionen zur Unterstützung der Landessprache](national-language-support-functions.md)
+[Unterstützungsfunktionen für nationale Sprachen](national-language-support-functions.md)
 </dt> <dt>
 
-[**Caldatetime**](caldatetime.md)
+[**CALDATETIME**](caldatetime.md)
 </dt> </dl>
 
  

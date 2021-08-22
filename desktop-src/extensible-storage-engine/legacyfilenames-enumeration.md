@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: legacyfile Ames-Enumeration'
-title: Legacyfile Ames-Enumeration (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen zu: LegacyFileNames-Enumeration'
+title: LegacyFileNames-Enumeration (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: LegacyFileNames enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Vista.LegacyFileNames
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.legacyfilenames(v=EXCHG.10)
@@ -28,19 +28,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d7f3cade11450bcfbad13dcdd114dca6701c5369
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8265724c8f69cc9b8e90e6f2d7c777940aa1251ac99f436b9976e2a3c13f03fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119614570"
 ---
-# <a name="legacyfilenames-enumeration"></a>Legacyfile Ames-Enumeration
+# <a name="legacyfilenames-enumeration"></a>LegacyFileNames-Enumeration
 
-Optionen für "legacyfile"-Namen
+Optionen für LegacyFileNames
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,19 +69,19 @@ public enum LegacyFileNames
 <tr class="odd">
 <td></td>
 <td>ESE98FileNames</td>
-<td>Wenn diese Option vorhanden ist, verwendet die Datenbank-Engine die folgenden Benennungs Konventionen für die zugehörigen Dateien: o Transaktionsprotokoll Dateien werden verwendet. Protokoll für ihre Dateierweiterung o-Prüf Punkt Dateien werden verwendet. CHK für die Dateierweiterung</td>
+<td>Wenn diese Option vorhanden ist, verwendet die Datenbank-Engine die folgenden Namenskonventionen für ihre Dateien: o Transaktionsprotokolldateien verwenden . LOG für die Dateierweiterung o Prüfpunktdateien verwendet . CHK für die Dateierweiterung</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Eightdotthreesoftcompat</td>
-<td>Behalten Sie die 8,3-Benennungs Syntax so lange wie möglich bei. (Dies sollte nicht geändert werden, und es wird sichergestellt, dass keine Protokolldateien vorhanden sind.)</td>
+<td>EightDotThreeSoftCompat</td>
+<td>Behalten Sie die Namenssyntax 8.3 so lange wie möglich bei. (Dies sollte nicht geändert werden, ohne sicherzustellen, dass keine Protokolldateien vorhanden sind.)</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

@@ -1,10 +1,10 @@
 ---
 title: Default-Security-Descriptor-Attribut
-description: Die Sicherheits Beschreibung, die dem-Objekt bei der ersten Erstellung zugewiesen werden soll.
+description: Der Sicherheitsdeskriptor, der dem Objekt zugewiesen werden soll, wenn es zum ersten Mal erstellt wird.
 ms.assetid: 22575883-2ef3-492b-9868-1eb350c4f547
 ms.tgt_platform: multiple
 keywords:
-- Standard-Security-Descriptor-Attribut AD-Schema
+- AD-Schema des Default-Security-Descriptor-Attributs
 - AD-Schema des defaultSecurityDescriptor-Attributs
 topic_type:
 - apiref
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9cd0b4a8dbe0c633a15b6a5167cb1171a14d1769
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b71610e0f970962e8145808d3e4038306dc955ea631f07112b8eb4b57c13e5f4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479735"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119509070"
 ---
 # <a name="default-security-descriptor-attribute"></a>Default-Security-Descriptor-Attribut
 
-Die Sicherheits Beschreibung, die dem-Objekt bei der ersten Erstellung zugewiesen werden soll.
+Der Sicherheitsdeskriptor, der dem Objekt zugewiesen werden soll, wenn es zum ersten Mal erstellt wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | Standard-Security-Descriptor                 |
-| LDAP-Display-Name | defaultSecurityDescriptor                   |
+| CN                | Default-Security-Descriptor                 |
+| Ldap-Anzeigename | defaultSecurityDescriptor                   |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Schema Administrator                        |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Schemaadministrator                        |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.224                      |
-| System-ID-GUID    | 807a6d30-1669-11D0-A064-00aa006c33ed        |
+| System-Id-Guid    | 807a6d30-1669-11d0-a064-00aa006c33ed        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Die Sicherheits Beschreibung, die dem-Objekt bei der ersten Erstellung zugewiese
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,19 +59,19 @@ Die Sicherheits Beschreibung, die dem-Objekt bei der ersten Erstellung zugewiese
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | 0                                                |
 | Range-Upper            | 32767                                            |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,15 +80,15 @@ Die Sicherheits Beschreibung, die dem-Objekt bei der ersten Erstellung zugewiese
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | 0                                                |
 | Range-Upper            | 32767                                            |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -101,15 +101,15 @@ Die Sicherheits Beschreibung, die dem-Objekt bei der ersten Erstellung zugewiese
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | 0                                                |
 | Range-Upper            | 32767                                            |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -122,15 +122,15 @@ Die Sicherheits Beschreibung, die dem-Objekt bei der ersten Erstellung zugewiese
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | 0                                                |
 | Range-Upper            | 32767                                            |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -143,15 +143,15 @@ Die Sicherheits Beschreibung, die dem-Objekt bei der ersten Erstellung zugewiese
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | 0                                                |
 | Range-Upper            | 32767                                            |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -164,15 +164,15 @@ Die Sicherheits Beschreibung, die dem-Objekt bei der ersten Erstellung zugewiese
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | 0                                                |
 | Range-Upper            | 32767                                            |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -185,15 +185,15 @@ Die Sicherheits Beschreibung, die dem-Objekt bei der ersten Erstellung zugewiese
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | 0                                                |
 | Range-Upper            | 32767                                            |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 

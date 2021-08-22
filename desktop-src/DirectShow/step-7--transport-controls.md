@@ -1,21 +1,21 @@
 ---
 description: Dieses Thema ist Schritt 7 des Tutorials Audio-/Videowiedergabe in DirectShow.
 ms.assetid: 2e542a2d-fc71-41d5-9abd-0dfa70719c0f
-title: 'Schritt 7: Transport Steuerelemente'
+title: 'Schritt 7: Transportsteuerelemente'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b974ccc8c186b1915d2a6564870a0b177073544e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e8253efab566f5dc14a0d0210a26e84cb0a50113389d54b7a871d818a17296ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351436"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119072414"
 ---
-# <a name="step-7-transport-controls"></a>Schritt 7: Transport Steuerelemente
+# <a name="step-7-transport-controls"></a>Schritt 7: Transportsteuerelemente
 
-Dieses Thema ist Schritt 7 des Tutorials [Audio-/Videowiedergabe in DirectShow](audio-video-playback-in-directshow.md). Der gesamte Code wird im Thema [DirectShow-Wiedergabe Beispiel](directshow-playback-example.md)dargestellt.
+Dieses Thema ist Schritt 7 des Tutorials [Audio-/Videowiedergabe in DirectShow](audio-video-playback-in-directshow.md). Der vollständige Code wird im Thema [DirectShow Playback Example (DirectShow-Wiedergabebeispiel)](directshow-playback-example.md)gezeigt.
 
-Der letzte Schritt besteht darin, Transport Steuerelemente hinzuzufügen (Wiedergabe, anhalten und anhalten). Um die Datei wiederzugeben, nennen Sie [**IMediaControl:: Run**](/windows/desktop/api/Control/nf-control-imediacontrol-run).
+Der letzte Schritt ist das Hinzufügen von Transportsteuerelementen (Wiedergeben, Anhalten und Beenden). Rufen Sie [**IMediaControl::Run**](/windows/desktop/api/Control/nf-control-imediacontrol-run)auf, um die Datei wiederzuspielen.
 
 
 ```C++
@@ -37,7 +37,7 @@ HRESULT DShowPlayer::Play()
 
 
 
-Um anzuhalten, nennen Sie [**IMediaControl::P ause**](/windows/desktop/api/Control/nf-control-imediacontrol-pause).
+Rufen Sie zum Anhalten [**IMediaControl::P ause auf.**](/windows/desktop/api/Control/nf-control-imediacontrol-pause)
 
 
 ```C++
@@ -59,7 +59,7 @@ HRESULT DShowPlayer::Pause()
 
 
 
-Um den Vorgang zu unterbinden, nennen Sie [**IMediaControl:: Beendigung**](/windows/desktop/api/Control/nf-control-imediacontrol-stop).
+Rufen Sie zum Beenden [**IMediaControl::Stop auf.**](/windows/desktop/api/Control/nf-control-imediacontrol-stop)
 
 
 ```C++
@@ -85,13 +85,13 @@ HRESULT DShowPlayer::Stop()
 
 <dl> <dt>
 
-[Audiowiedergabe und Video Wiedergabe in DirectShow](audio-video-playback-in-directshow.md)
+[Audio-/Videowiedergabe in DirectShow](audio-video-playback-in-directshow.md)
 </dt> <dt>
 
-[Beispiel zur DirectShow-Wiedergabe](directshow-playback-example.md)
+[Beispiel für DirectShow-Wiedergabe](directshow-playback-example.md)
 </dt> <dt>
 
-[Filter Zustände](filter-states.md)
+[Filterzustände](filter-states.md)
 </dt> </dl>
 
  

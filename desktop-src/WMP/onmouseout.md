@@ -1,6 +1,6 @@
 ---
 title: Onmouseout
-description: Der onmouseout-Ereignishandler behandelt ein Ereignis, das auftritt, wenn der Benutzer den Zeiger aus dem Element verschiebt.
+description: Der onmouseout-Ereignishandler behandelt ein Ereignis, das auftritt, wenn der Benutzer den Zeiger vom Element verschiebt.
 ms.assetid: 8d4c5aec-0d4e-4912-a5e6-9aa1cf3e0971
 keywords:
 - onmouseout Windows Media Player
@@ -22,7 +22,7 @@ ms.locfileid: "119616730"
 ---
 # <a name="onmouseout"></a>Onmouseout
 
-Der **onmouseout-Ereignishandler** behandelt ein Ereignis, das auftritt, wenn der Benutzer den Zeiger aus dem Element verschiebt.
+Der **onmouseout-Ereignishandler** behandelt ein Ereignis, das auftritt, wenn der Benutzer den Zeiger vom Element verschiebt.
 
 ``` syntax
 onmouseout
@@ -42,7 +42,7 @@ Dieser Ereignishandler gilt nicht für das **PLAYLIST-Element.**
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: cf745e22ffccb342d945a024760f8c72fdb35ce9
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 5bd3462da5b8403f4db8f4727c0baa0a825e0db62b95216801300442d5cc393c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119586270"
 ---
 # <a name="cbaselistcbaselisttchar-int-constructor"></a>CBaseList.CBaseList(TCHAR, \* INT)-Konstruktor
 
@@ -57,7 +57,7 @@ Größe des Knotencaches.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Zur Effizienz verwaltet `CBaseList` die -Klasse einen Cache von Listenknoten. Wenn Sie ungefähr wissen, wie viele Elemente die Liste enthalten wird, verwenden Sie diese Version des Konstruktors.
 
@@ -65,14 +65,14 @@ Zur Effizienz verwaltet `CBaseList` die -Klasse einen Cache von Listenknoten. We
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist.h (streams.h enthalten)</dt> </dl>                                                                                    |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

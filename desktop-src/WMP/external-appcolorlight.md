@@ -1,9 +1,9 @@
 ---
-title: Extern. appcolorlight
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Extern. appcolorlight
+title: External.appColorLight
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | External.appColorLight
 ms.assetid: d0fae7c2-ccda-4141-997f-bf861e358ed0
 keywords:
-- Externe. appcolorlight-Media Player
+- External.appColorLight-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 097b2a71cb8013bc4f39aaec86e7a5ac5bc71691
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 17db35cc1f683c581009135332c413c7c5e5379e3b3a1d9ad71abc8423f8c0cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119649600"
 ---
-# <a name="externalappcolorlight"></a>Extern. appcolorlight
+# <a name="externalappcolorlight"></a>External.appColorLight
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **appcolorlight** -Eigenschaft ruft die aktuelle helle schattierte Farbe der Windows Media Player-Benutzeroberfläche ab.
+Die **appColorLight-Eigenschaft** ruft die aktuelle hell schattierte Farbe der Windows Media Player Benutzeroberfläche ab.
 
 ``` syntax
 window.external.appColorLight
@@ -37,11 +37,11 @@ window.external.appColorLight
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge**.
+Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Benutzer können die Farbe der Windows Media Player-Benutzeroberfläche ändern. Sie können diese Eigenschaft verwenden, um die Darstellung der gehosteten Webseite so anzupassen, dass Sie dem Player entspricht.
+Benutzer können die Farbe der Windows Media Player Benutzeroberfläche ändern. Sie können diese Eigenschaft verwenden, um die Darstellung Ihrer gehosteten Webseite an den Player anzupassen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,7 +49,7 @@ Benutzer können die Farbe der Windows Media Player-Benutzeroberfläche ändern.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player serie 9 oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -58,7 +58,7 @@ Benutzer können die Farbe der Windows Media Player-Benutzeroberfläche ändern.
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 2-Online Speicher**](external-object-for-type-2-online-stores.md)
+[**Externes Objekt für Onlineshops vom Typ 2**](external-object-for-type-2-online-stores.md)
 </dt> </dl>
 
  

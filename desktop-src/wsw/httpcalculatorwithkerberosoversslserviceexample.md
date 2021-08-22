@@ -1,29 +1,29 @@
 ---
-title: Httpcalculatorwithkerberosoversslserviceexample
-description: In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines Rechner Diensts über HTTP mit Kerberos über SSL-Sicherheit im gemischten Modus verwendet wird.
+title: HttpCalculatorWithKerberosOverSslServiceExample
+description: In diesem Beispiel wird gezeigt, wie Sie einen Diensthost zum Hosten eines Rechnerdiensts über HTTP mit Kerberos über SSL-Sicherheit im gemischten Modus verwenden.
 ms.assetid: a006ce15-9470-49f7-80d6-8d40ffec8651
 keywords:
-- Httpcalculatorwithkerberosoversslserviceexample (Native Webdienste)
-- Wwsapi
+- HttpCalculatorWithKerberosOverSslServiceExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e0c970a66a0884f9a28ec7ab9157444be9ddcca6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6c69ccf64482368212d35ccbf93d234088b3e8516e7d9669c08bb321b4c91c04
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388791"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119590050"
 ---
-# <a name="httpcalculatorwithkerberosoversslserviceexample"></a>Httpcalculatorwithkerberosoversslserviceexample
+# <a name="httpcalculatorwithkerberosoversslserviceexample"></a>HttpCalculatorWithKerberosOverSslServiceExample
 
-In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines Rechner Diensts über HTTP mit Kerberos über SSL-Sicherheit im gemischten Modus verwendet wird. In diesem Setup wird die Transport Verbindung von SSL geschützt (signiert, verschlüsselt), der auch die Server Authentifizierung bereitstellt. Die Client Authentifizierung wird von einem Kerberos apreq-Ticket in einem WS-Security-Header in der Nachricht bereitgestellt.
+In diesem Beispiel wird gezeigt, wie Sie einen Diensthost zum Hosten eines Rechnerdiensts über HTTP mit Kerberos über SSL-Sicherheit im gemischten Modus verwenden. In diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird von einem Kerberos-APREQ-Ticket in einem WS-Security Header in der Nachricht bereitgestellt.
 
--   [Calculatorservicekerberosoverssl. cpp](#calculatorservicekerberosoversslcpp)
--   [CalculatorService. WSDL](#calculatorservicewsdl)
+-   [CalculatorServiceKerberosOverSsl.cpp](#calculatorservicekerberosoversslcpp)
+-   [CalculatorService.wsdl](#calculatorservicewsdl)
 -   [Makefile](#makefile)
 
-## <a name="calculatorservicekerberosoversslcpp"></a>Calculatorservicekerberosoverssl. cpp
+## <a name="calculatorservicekerberosoversslcpp"></a>CalculatorServiceKerberosOverSsl.cpp
 
 
 ```C++
@@ -271,7 +271,7 @@ Exit:
 
 
 
-## <a name="calculatorservicewsdl"></a>CalculatorService. WSDL
+## <a name="calculatorservicewsdl"></a>CalculatorService.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -396,9 +396,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

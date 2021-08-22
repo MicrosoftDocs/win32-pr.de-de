@@ -1,12 +1,12 @@
 ---
-title: Setprofilepath-Methode der Win32_TerminalServiceSetting-Klasse
-description: Die setprofilepath-Methode legt die ProfilePath-Eigenschaft für die-Klasse fest.
+title: SetProfilePath-Methode der Win32_TerminalServiceSetting Klasse
+description: Die SetProfilePath-Methode legt die ProfilePath-Eigenschaft für die -Klasse fest.
 ms.assetid: a0dfe6a4-929c-45ec-bd31-7e0ffb6ce5de
 ms.tgt_platform: multiple
 keywords:
-- Setprofilepath-Methode Remotedesktopdienste
-- Setprofilepath-Methode Remotedesktopdienste, Win32_TerminalServiceSetting-Klasse
-- Win32_TerminalServiceSetting-Klasse Remotedesktopdienste, setprofilepath-Methode
+- SetProfilePath-Remotedesktopdienste
+- SetProfilePath-Methode Remotedesktopdienste , Win32_TerminalServiceSetting-Klasse
+- Win32_TerminalServiceSetting klasse Remotedesktopdienste , SetProfilePath-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 434909471accc191e79c92287ab6e4ac427bf949
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0fafbd3c4556899ad2602f0b7ca1897a7aff4a4db98e4773ea56d2405b9423f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391854"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119514330"
 ---
-# <a name="setprofilepath-method-of-the-win32_terminalservicesetting-class"></a>Setprofilepath-Methode der Win32 \_ terminalservicesetts-Klasse
+# <a name="setprofilepath-method-of-the-win32_terminalservicesetting-class"></a>SetProfilePath-Methode der Win32 \_ TerminalServiceSetting-Klasse
 
-Die **setprofilepath** -Methode legt die **ProfilePath** -Eigenschaft für die-Klasse fest.
+Die **SetProfilePath-Methode** legt die **ProfilePath-Eigenschaft** für die -Klasse fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,20 +43,20 @@ uint32 SetProfilePath(
 
 <dl> <dt>
 
-*Profilpfad* \[ in\]
+*ProfilePath* \[ In\]
 </dt> <dd>
 
-Der neue Wert für die **ProfilePath** -Eigenschaft, die den Profilpfad des Computers angibt.
+Der neue Wert für die **ProfilePath-Eigenschaft,** der den Profilpfad für den Computer angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg Erfolg zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) .
+Gibt Success bei Erfolg zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Remotedesktopdienste finden Sie unter [Fehlercodes](terminal-services-wmi-provider-error-codes.md) für WMI-Anbieter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,8 +66,8 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
@@ -76,7 +76,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32 \_ terminalservicesetts**](win32-terminalservicesetting.md)
+[**Win32 \_ TerminalServiceSetting**](win32-terminalservicesetting.md)
 </dt> </dl>
 
  

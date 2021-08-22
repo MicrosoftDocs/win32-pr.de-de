@@ -36,7 +36,7 @@ Die **IScanProfileMgr-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                              | BESCHREIBUNG                                                                                                            |
+| Methode                                                                              | Beschreibung                                                                                                            |
 |:------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------|
 | [**CreateProfile**](-wia-iscanprofilemgr-createprofile.md)                         | Erstellt ein leeres Überprüfungsprofil und ordnet es einem Scanner oder einem anderen WIA 2.0-Element zu.<br/>                       |
 | [**DeleteAllProfiles**](-wia-iscanprofilemgr-deleteallprofiles.md)                 | Löscht alle Scanprofile, die dem angegebenen Gerät zugeordnet sind.<br/>                                         |
@@ -45,7 +45,7 @@ Die **IScanProfileMgr-Schnittstelle** verfügt über diese Methoden.
 | [**GetDefaultProfile**](-wia-iscanprofilemgr-getdefaultprofile.md)                 | Ruft das Standardscanprofil ab.<br/>                                                                              |
 | [**GetNumProfiles**](-wia-iscanprofilemgr-getnumprofiles.md)                       | Ruft die Anzahl der Scanprofile ab, die für den Benutzer im System erstellt wurden, unter dem Ihre Anwendung ausgeführt wird.<br/> |
 | [**GetNumProfilesforDeviceID**](-wia-iscanprofilemgr-getnumprofilesfordeviceid.md) | Ruft die Anzahl der Scanprofile für das Gerät ab.<br/>                                                            |
-| [**GetProfiles**](-wia-iscanprofilemgr-getprofiles.md)                             | Ruft alle Überprüfungsprofile ab, die für den Benutzer in dem System verfügbar sind, unter dem Ihre Anwendung ausgeführt wird.<br/>     |
+| [**GetProfiles**](-wia-iscanprofilemgr-getprofiles.md)                             | Ruft alle Scanprofile ab, die für den Benutzer in dem System verfügbar sind, unter dem Ihre Anwendung ausgeführt wird.<br/>     |
 | [**GetProfilesforDeviceID**](-wia-iscanprofilemgr-getprofilesfordeviceid.md)       | Ruft alle einem Gerät zugeordneten Scanprofile ab.<br/>                                                        |
 | [**OpenProfile**](-wia-iscanprofilemgr-openprofile.md)                             | Öffnet ein Überprüfungsprofil, das als XML-Datei auf dem Datenträger gespeichert wurde.<br/>                                            |
 | [**Aktualisieren**](-wia-iscanprofilemgr-refresh.md)                                     | Enumeriert alle Scanprofile im System neu.<br/>                                                          |
@@ -78,7 +78,7 @@ Wenn ein Überprüfungsprofil mit der [**IScanProfile::Save-Methode**](-wia-isca
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

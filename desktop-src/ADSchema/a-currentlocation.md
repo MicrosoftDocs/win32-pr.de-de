@@ -1,11 +1,11 @@
 ---
 title: Current-Location-Attribut
-description: Der Speicherort des Computers für ein Objekt, das verschoben wurde.
+description: Der Speicherort des Computers für ein objekt, das verschoben wurde.
 ms.assetid: b8767fcd-48f5-420c-9cbf-095ab1aee729
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Current-Location-Attribut
-- currentlocation-Attribut, AD-Schema
+- Current-Location AD-Schema
+- AD-Schema des currentLocation-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b37e2acb97806ad6cf72736d39e0c9a0e6c6d217
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ed3f5c805c72f83bfab28a9272448e87a7ec34053979e1066f06196584e18155
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343920"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119509280"
 ---
 # <a name="current-location-attribute"></a>Current-Location-Attribut
 
-Der Speicherort des Computers für ein Objekt, das verschoben wurde.
+Der Speicherort des Computers für ein objekt, das verschoben wurde.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | Current-Location                                      |
-| LDAP-Display-Name | currentLocation                                       |
+| Ldap-Anzeigename | currentLocation                                       |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.                      |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.                      |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.335                                |
-| System-ID-GUID    | 1F 0075fc-7E40-11D0-afd6-00c04f 930c9                  |
+| System-Id-Guid    | 1f0075fc-7e40-11d0-afd6-00c04fd930c9                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Der Speicherort des Computers für ein Objekt, das verschoben wurde.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Der Speicherort des Computers für ein Objekt, das verschoben wurde.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 32                                                             |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -70,7 +70,7 @@ Der Speicherort des Computers für ein Objekt, das verschoben wurde.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Der Speicherort des Computers für ein Objekt, das verschoben wurde.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 32                                                             |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -100,10 +100,10 @@ Der Speicherort des Computers für ein Objekt, das verschoben wurde.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 32                                                             |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -121,10 +121,10 @@ Der Speicherort des Computers für ein Objekt, das verschoben wurde.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 32                                                             |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -142,10 +142,10 @@ Der Speicherort des Computers für ein Objekt, das verschoben wurde.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 32                                                             |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -163,10 +163,10 @@ Der Speicherort des Computers für ein Objekt, das verschoben wurde.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 32                                                             |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000000                                                     |

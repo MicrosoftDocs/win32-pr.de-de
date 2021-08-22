@@ -1,9 +1,9 @@
 ---
-title: Allowstartondemand-Element (settingstype)
-description: Gibt an, dass der Task entweder über den Befehl ausführen oder über das Kontextmenü gestartet werden kann.
+title: AllowStartOnDemand (settingsType)-Element
+description: Gibt an, dass die Aufgabe mit dem Befehl Ausführen oder dem Kontextmenü gestartet werden kann.
 ms.assetid: 5a0f0842-9f09-4d52-bed2-45740945d9a5
 keywords:
-- Allowstartondemand-Element Taskplaner
+- AllowStartOnDemand-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ec396bf10efbd11024fe39e57bdf05025db0e610
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: be89197c4ae88188fc1d2a746c40d69e385edc7ba08aaf2d3bf29067ee5f4a9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949575"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119516990"
 ---
-# <a name="allowstartondemand-settingstype-element"></a>Allowstartondemand-Element (settingstype)
+# <a name="allowstartondemand-settingstype-element"></a>AllowStartOnDemand (settingsType)-Element
 
-Gibt an, dass der Task entweder über den Befehl ausführen oder über das Kontextmenü gestartet werden kann.
+Gibt an, dass die Aufgabe mit dem Befehl Ausführen oder dem Kontextmenü gestartet werden kann.
 
 ``` syntax
 <xs:element name="AllowStartOnDemand"
@@ -32,29 +32,29 @@ Gibt an, dass der Task entweder über den Befehl ausführen oder über das Konte
  />
 ```
 
-Das **allowstartondemand** -Element wird durch den komplexen [**settingstype**](taskschedulerschema-settingstype-complextype.md) -Typ definiert.
+Das **AllowStartOnDemand-Element** wird durch den komplexen [**settingsType-Typ**](taskschedulerschema-settingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                                                        |
+| Element                                                           | Abgeleitet von                                                         | Beschreibung                                                                        |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingstype**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.<br/> |
+| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingsType**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn dieses Element auf true festgelegt ist, kann der Task unabhängig von gestartet werden, wenn ein Trigger den Task startet.
+Wenn dieses Element auf True festgelegt ist, kann die Aufgabe unabhängig davon gestartet werden, wenn ein Trigger die Aufgabe startet.
 
-Informationen zur C++-Entwicklung finden Sie unter der [**allowdemandstart-Eigenschaft von itasksettings**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_allowdemandstart).
+Informationen zur C++-Entwicklung finden Sie unter [**der AllowDemandStart-Eigenschaft von ITaskSettings**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_allowdemandstart).
 
-Informationen zur Skript Entwicklung finden Sie unter [**tasksettings. allowdemandstart**](tasksettings-allowdemandstart.md).
+Informationen zur Skriptentwicklung finden Sie [**unter TaskSettings.AllowDemandStart**](tasksettings-allowdemandstart.md).
 
 ## <a name="examples"></a>Beispiele
 
-Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die den Start von Anforderungen ermöglicht, finden Sie unter [time-auslöserbeispiel (XML)](time-trigger-example--xml-.md).
+Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die den Bedarfsstart zulässt, finden Sie unter [Time Trigger Example (XML)](time-trigger-example--xml-.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,8 +62,8 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die den Start von 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -71,7 +71,7 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die den Start von 
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Beendet die Erfassung von Effekt-Parameter Zustandsänderungen.
+description: Beenden Sie die Erfassung von Änderungen am Auswirkungsparameterzustand.
 ms.assetid: b6ca2917-2df0-4f3a-9ee3-23e9d2501ff4
-title: 'ID3DXEffect:: endparameterblock-Methode (D3DX9Effect. h)'
+title: ID3DXEffect::EndParameterBlock-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 3359e3b923d05e003ffbda18791e497d18ba627e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b1d68aa1bd716ee106a5d1588a7a7060adb851185115e97d2f5f2a5d7f857c02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119494230"
 ---
-# <a name="id3dxeffectendparameterblock-method"></a>ID3DXEffect:: endparameterblock-Methode
+# <a name="id3dxeffectendparameterblock-method"></a>ID3DXEffect::EndParameterBlock-Methode
 
-Beendet die Erfassung von Effekt-Parameter Zustandsänderungen.
+Beenden Sie die Erfassung von Änderungen am Auswirkungsparameterzustand.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Gibt ein Handle für den Parameter Status Block zurück.
+Gibt ein Handle für den Parameterzustandsblock zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Effektparameter, die den Zustand ändern (nach dem Aufrufen von beginparameterblock und vor dem Aufrufen von endparameterblock), werden in einem Effektparameter-Zustands Block gespeichert. Verwenden Sie applyparameterblock, um diesen Block von Zustandsänderungen auf das Effektsystem anzuwenden. Wenn Sie mit einem Zustands Block fertig sind, verwenden Sie deleteparameterblock, um den Arbeitsspeicher freizugeben.
+Alle Effektparameter, die den Zustand ändern (nach dem Aufruf von BeginParameterBlock und vor dem Aufruf von EndParameterBlock), werden in einem Effect-Parameterzustandsblock gespeichert. Verwenden Sie ApplyParameterBlock, um diesen Block von Zustandsänderungen auf das Effektsystem anzuwenden. Sobald Sie mit einem Zustandsblock fertig sind, verwenden Sie DeleteParameterBlock, um den Arbeitsspeicher frei zu geben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Alle Effektparameter, die den Zustand ändern (nach dem Aufrufen von beginparame
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
@@ -66,13 +66,13 @@ Alle Effektparameter, die den Zustand ändern (nach dem Aufrufen von beginparame
 [ID3DXEffect](id3dxeffect.md)
 </dt> <dt>
 
-[**ID3DXEffect:: beginparameterblock**](id3dxeffect--beginparameterblock.md)
+[**ID3DXEffect::BeginParameterBlock**](id3dxeffect--beginparameterblock.md)
 </dt> <dt>
 
-[**ID3DXEffect:: applyparameterblock**](id3dxeffect--applyparameterblock.md)
+[**ID3DXEffect::ApplyParameterBlock**](id3dxeffect--applyparameterblock.md)
 </dt> <dt>
 
-[**ID3DXEffect::D eleteparameterblock**](id3dxeffect--deleteparameterblock.md)
+[**ID3DXEffect::D eleteParameterBlock**](id3dxeffect--deleteparameterblock.md)
 </dt> </dl>
 
  

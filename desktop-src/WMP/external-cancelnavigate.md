@@ -1,11 +1,11 @@
 ---
-title: Extern. cancelnavigate-Methode
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Extern. cancelnavigate-Methode
+title: External.cancelNavigate-Methode
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | External.cancelNavigate-Methode
 ms.assetid: e65d64fb-292c-4413-9727-b24609e78d68
 keywords:
-- cancelnavigate-Methode, Windows-Media Player
-- cancelnavigate-Methode, Windows Media Player, externe Klasse
-- Externe Klasse, Windows Media Player, cancelnavigate-Methode
+- cancelNavigate-Windows Media Player
+- cancelNavigate-Methode Windows Media Player , Externe Klasse
+- Externe Klasse Windows Media Player , cancelNavigate-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 55a6cbc0f749fd6ca33d78dfaed1d256634eb9c9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 152594a427282a27c493f33f648b8a889a855f40a5fb13de69b7cc342099eed2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119649430"
 ---
-# <a name="externalcancelnavigate-method"></a>Extern. cancelnavigate-Methode
+# <a name="externalcancelnavigate-method"></a>External.cancelNavigate-Methode
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **cancelnavigate** -Methode informiert Windows Media Player, dass eine neue Ermittlungs Seite auch dann nicht angezeigt werden soll, wenn sich die Ansicht im Player geändert hat.
+Die **cancelNavigate-Methode** informiert Windows Media Player, dass keine neue Ermittlungsseite angezeigt werden soll, obwohl sich die Ansicht im Player geändert hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,16 +49,16 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn sich die Ansicht in Windows Media Player ändert, ruft der Player das Plug-in des Online Stores auf, um zu bestimmen, welche Ermittlungs Seite als nächstes angezeigt werden soll. In einigen Fällen kann es jedoch sein, dass der Player im Online Shop weiterhin die vorhandene Ermittlungs Seite anzeigt. Der folgende Prozess bestimmt, ob der Spieler eine neue Ermittlungs Seite anzeigt:
+Wenn sich die Ansicht in Windows Media Player, ruft der Player das Plug-In des Onlineshops auf, um zu bestimmen, welche Ermittlungsseite als Nächstes angezeigt werden soll. In einigen Fällen möchte der Onlineshop jedoch möglicherweise, dass der Player weiterhin die vorhandene Ermittlungsseite anzeigen soll. Der folgende Prozess bestimmt, ob der Player eine neue Ermittlungsseite anzeigt:
 
-1.  Eine Aktion durch den Benutzer, entweder in der Benutzeroberfläche des Players oder auf der Ermittlungs Seite, fordert an, dass der Spieler seine Ansicht ändert.
-2.  Der Player Ruft die [GetTemplate](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-gettemplate) -Methode des Plug-Ins auf, um zu bestimmen, welche Ermittlungs Seite als nächstes angezeigt werden soll. Der Player speichert die URL der neuen Ermittlungs Seite, zeigt jedoch derzeit nicht die neue Ermittlungs Seite an.
-3.  Der Player löst das [OnViewChange](external-onviewchange-event.md) -Ereignis aus.
-4.  Wenn der **OnViewChange** -Ereignishandler auf der Ermittlungs Seite **cancelnavigate** aufruft, zeigt der Spieler nicht die neue Ermittlungs Seite an (in Schritt 2 festgelegt). Stattdessen wird die vorhandene Ermittlungs Seite weiterhin angezeigt. Wenn der **OnViewChange** -Ereignishandler nicht **cancelnavigate** aufruft, zeigt der Spieler die neue Ermittlungs Seite an.
+1.  Eine Aktion des Benutzers, entweder auf der Benutzeroberfläche des Players oder auf der Ermittlungsseite, fordert an, dass der Player seine Ansicht ändert.
+2.  Der Player ruft die [GetTemplate-Methode](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-gettemplate) des Plug-Ins auf, um zu bestimmen, welche Ermittlungsseite als Nächstes angezeigt werden soll. Der Player speichert die URL der neuen Ermittlungsseite, aber die neue Ermittlungsseite wird derzeit nicht angezeigt.
+3.  Der Player löst das [OnViewChange-Ereignis](external-onviewchange-event.md) aus.
+4.  Wenn der **OnViewChange-Ereignishandler** auf der Ermittlungsseite **cancelNavigate** aufruft, zeigt der Player die neue Ermittlungsseite (in Schritt 2 bestimmt) nicht an. Stattdessen wird weiterhin die vorhandene Ermittlungsseite angezeigt. Wenn der **OnViewChange-Ereignishandler** **cancelNavigate** nicht aufruft, zeigt der Player die neue Ermittlungsseite an.
 
-Angenommen, der Spieler zeigt derzeit die Ansicht eines Albums an, bei dem eine bestimmte Spur ausgewählt ist. Außerdem wird angenommen, dass es sich bei der aktuellen Ermittlungs Seite um die Seite handelt, die das gesamte Album darstellt. Wenn der Benutzer auf eine andere Spur desselben Albums klickt, wird die Ansicht des Players leicht geändert, um anzuzeigen, dass die neue Spur ausgewählt ist. Es ist jedoch nicht erforderlich, eine neue Ermittlungs Seite anzuzeigen. Die Suchseite, die das gesamte Album darstellt, ist immer noch die geeignete Seite, die der Player anzeigen kann.
+Angenommen, der Player zeigt derzeit die Ansicht eines Albums an, für das ein bestimmter Titel ausgewählt ist. Gehen Sie außerdem davon aus, dass die aktuelle Ermittlungsseite die Seite ist, die das gesamte Album darstellt. Wenn der Benutzer auf einen anderen Titel als dasselbe Album klickt, ändert sich die Ansicht des Players geringfügig, um zu zeigen, dass der neue Titel ausgewählt ist. Es ist jedoch nicht notwendig, eine neue Ermittlungsseite anzuzeigen. Die Ermittlungsseite, die das gesamte Album darstellt, ist immer noch die geeignete Seite, auf der der Player angezeigt werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,13 +75,13 @@ Angenommen, der Spieler zeigt derzeit die Ansicht eines Albums an, bei dem eine 
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 1-Online Speicher**](external-object-for-type-1-online-stores.md)
+[**Externes Objekt für Onlinespeicher vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> <dt>
 
-[**Extern. changeviewonlinelist**](external-changeviewonlinelist.md)
+[**External.changeViewOnlineList**](external-changeviewonlinelist.md)
 </dt> <dt>
 
-[**Extern. OnViewChange**](external-onviewchange-event.md)
+[**External.OnViewChange**](external-onviewchange-event.md)
 </dt> </dl>
 
  

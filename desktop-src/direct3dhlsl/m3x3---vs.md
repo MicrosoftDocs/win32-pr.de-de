@@ -1,6 +1,6 @@
 ---
-title: m3x3 – im Vergleich
-description: Multipliziert einen 3-Komponenten-Vektor mit einer 3x3-Matrix. | m3x3 – im Vergleich
+title: m3x3 – vs
+description: Multipliziert einen 3-Komponenten-Vektor mit einer 3x3-Matrix. | m3x3 – vs
 ms.assetid: 6a749ed0-097d-4354-bc70-fbcd879eafab
 ms.topic: reference
 ms.date: 05/31/2018
@@ -16,7 +16,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119562060"
 ---
-# <a name="m3x3---vs"></a>m3x3 – im Vergleich
+# <a name="m3x3---vs"></a>m3x3 – vs
 
 Multipliziert einen 3-Komponenten-Vektor mit einer 3x3-Matrix.
 
@@ -49,7 +49,7 @@ where
 
  
 
-Die xyz-Maske ist für das Zielregister erforderlich. Negate- und swizzle-Modifizierer sind für src0, aber nicht für src1 zulässig.
+Die xyz-Maske ist für das Zielregister erforderlich. Die Modifizierer Negate und swizzle sind für src0 zulässig, aber nicht für src1.
 
 Das folgende Codefragment zeigt die ausgeführten Vorgänge.
 
@@ -62,9 +62,9 @@ dest.z = (src0.x * src3.x) + (src0.y * src3.y) + (src0.z * src3.z);
 
 
 
-Der Eingabevektor befindet sich im Register src0. Die Eingabematrix 3x3 befindet sich im Register src1 und die nächsten beiden höheren Register, wie in der folgenden Erweiterung gezeigt. Ein 3D-Ergebnis wird erzeugt, sodass das andere Element des Zielregisters (dest.w) nicht betroffen ist.
+Der Eingabevektor befindet sich im Register src0. Die 3x3-Eingabematrix befindet sich im Register src1 und die nächsten beiden höheren Register, wie in der folgenden Erweiterung gezeigt. Ein 3D-Ergebnis wird erzeugt, ohne dass das andere Element des Zielregisters (dest.w) davon betroffen ist.
 
-Dieser Vorgang wird häufig zum Transformieren normaler Vektoren während Beleuchtungsberechnungen verwendet. Diese Anweisung wird wie unten gezeigt als Paar von Punktprodukten implementiert.
+Dieser Vorgang wird häufig zum Transformieren normaler Vektoren während Beleuchtungsberechnungen verwendet. Diese Anweisung wird wie unten gezeigt als Punktproduktepaar implementiert.
 
 
 ```
@@ -81,7 +81,7 @@ dp3   r0.z, r1, c2
 
 <dl> <dt>
 
-[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  

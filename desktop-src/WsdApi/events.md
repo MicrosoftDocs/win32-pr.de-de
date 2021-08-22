@@ -1,5 +1,5 @@
 ---
-description: Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.
+description: Gibt an, ob verknüpfte Ereignisse in den generierten Funktionen enthalten sind.
 ms.assetid: 23ca463c-b305-496b-a1e3-58dbb793f17e
 title: events-Element
 ms.topic: reference
@@ -13,9 +13,9 @@ ms.locfileid: "119049688"
 ---
 # <a name="events-element"></a>events-Element
 
-Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.
+Gibt an, ob verknüpfte Ereignisse in den generierten Funktionen enthalten sind.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <events/>
@@ -33,7 +33,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                                                                         | BESCHREIBUNG                                                                                                |
+| Element                                                                         | Beschreibung                                                                                                |
 |---------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
 | [**functionDeclarations**](functiondeclarations.md)<br/>                 | Generiert Implementierungsdeklarationen für Proxyfunktionen für Porttypvorgänge.<br/> <br/> |
 | [**idlFunctionDeclarations**](idlfunctiondeclarations.md)<br/>           | Generiert IDL-Deklarationen für Proxyfunktionen für Porttypvorgänge.<br/> <br/>            |
@@ -45,7 +45,7 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Mögliche Werte sind 1 (ereignisse eingeschlossen) und 0 (Standard, ausgeschlossene Ereignisse).
+Mögliche Werte sind 1 (eingeschlossene Ereignisse) und 0 (Standard, ausgeschlossene Ereignisse).
 
 ## <a name="element-information"></a>Elementinformationen
 

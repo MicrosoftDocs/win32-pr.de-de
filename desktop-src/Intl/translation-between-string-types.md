@@ -17,19 +17,19 @@ Die in der folgenden Tabelle aufgeführten Funktionen übersetzen Zeichenfolgen 
 
 
 
-| Funktion                                           | BESCHREIBUNG                                             |
+| Funktion                                           | Beschreibung                                             |
 |----------------------------------------------------|---------------------------------------------------------|
 | [**FoldString**](/windows/win32/api/stringapiset/nf-stringapiset-foldstringw)                   | Übersetzt eine Zeichenfolge in eine andere.             |
-| [**LCMapString**](/windows/desktop/api/Winnls/nf-winnls-lcmapstringa)                 | Karten eine Zeichenfolge nach Gebietsschema.                      |
-| [**ToUnicode**](/windows/win32/api/winuser/nf-winuser-tounicode)              | Übersetzt einen Virtuellen Schlüsselcode in ein Unicode-Zeichen. |
-| [**MultiByteToWideChar**](/windows/desktop/api/Stringapiset/nf-stringapiset-multibytetowidechar) | Karten eine Multibytezeichenfolge in eine Unicode-Zeichenfolge.            |
-| [**WideCharToMultiByte**](/windows/desktop/api/Stringapiset/nf-stringapiset-widechartomultibyte) | Karten eine Unicode-Zeichenfolge in eine Multibytezeichenfolge.            |
+| [**LCMapString**](/windows/desktop/api/Winnls/nf-winnls-lcmapstringa)                 | Karten Zeichenfolge nach Dem-Locale-Zeichen.                      |
+| [**ToUnicode**](/windows/win32/api/winuser/nf-winuser-tounicode)              | Übersetzt einen virtuellen Schlüsselcode in ein Unicode-Zeichen. |
+| [**MultiByteToWideChar**](/windows/desktop/api/Stringapiset/nf-stringapiset-multibytetowidechar) | Karten multibyte-Zeichenfolge in eine Unicode-Zeichenfolge.            |
+| [**WideCharToMultiByte**](/windows/desktop/api/Stringapiset/nf-stringapiset-widechartomultibyte) | Karten unicode-Zeichenfolge in eine Multibytezeichenfolge.            |
 
 
 
  
 
-Die Funktionen [**WideCharToMultiByte**](/windows/desktop/api/Stringapiset/nf-stringapiset-widechartomultibyte) und [**MultiByteToWideChar**](/windows/desktop/api/Stringapiset/nf-stringapiset-multibytetowidechar) sind besonders nützlich für Anwendungen, die mehrere Zeichenfolgentypen unterstützen. ANSI C definiert auch die Konvertierungsfunktionen **wcstombs** und **mbstowcs,** sie können jedoch nur in und aus dem Zeichensatz konvertiert werden, der von der C-Standardbibliothek unterstützt wird.
+Die [**Funktionen WideCharToMultiByte und**](/windows/desktop/api/Stringapiset/nf-stringapiset-widechartomultibyte) [**MultiByteToWideChar**](/windows/desktop/api/Stringapiset/nf-stringapiset-multibytetowidechar) sind besonders nützlich für Anwendungen, die mehrere Zeichenfolgentypen unterstützen. ANSI C definiert auch die **Konvertierungsfunktionen wcstombs** und **mbstowcs**. Sie können jedoch nur in den und aus dem Zeichensatz konvertieren, der von der C-Standardbibliothek unterstützt wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

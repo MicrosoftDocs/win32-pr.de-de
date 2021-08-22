@@ -1,10 +1,10 @@
 ---
-title: Change-Domain-Master erweitert rechts
-description: Erweiterte Rechte erforderlich, um den Domänen Namen-FSMO-Rollen Besitzer zu ändern.
+title: Erweitertes Recht "Change-Domain-Master"
+description: Erweitertes Recht erforderlich, um den FsMO-Rollenbesitzer zu ändern.
 ms.assetid: 17c849ca-1996-4114-afd5-a5f5997de37d
 ms.tgt_platform: multiple
 keywords:
-- AD-Domänen-Master Schema für erweiterte Rechte AD
+- Erweitertes rechtes AD-Schema für Change-Domain-Master
 topic_type:
 - apiref
 api_name:
@@ -13,31 +13,31 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5328b15d8cfa7e41102de82b42c5ccdda1027584
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 18254e42791c8e30c9e90ba96b65c4437f962f1a314ddef7942e3b9a88ff8f76
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106341082"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119532660"
 ---
-# <a name="change-domain-master-extended-right"></a>Change-Domain-Master erweitert rechts
+# <a name="change-domain-master-extended-right"></a>Erweitertes Recht "Change-Domain-Master"
 
-Erweiterte Rechte erforderlich, um den Domänen Namen-FSMO-Rollen Besitzer zu ändern.
+Erweitertes Recht erforderlich, um den FsMO-Rollenbesitzer zu ändern.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
 | CN           | Change-Domain-Master                 |
-| Anzeigename | Ändern des Domänen Masters                 |
-| Rights-GUID  | 014bf 69c-7b3b-11d1-85 be74fab |
+| Anzeigename | Ändern des Domänenmasters                 |
+| Rights-GUID  | 014bf69c-7b3b-11d1-85f6-08002be74fab |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -50,19 +50,19 @@ Erweiterte Rechte erforderlich, um den Domänen Namen-FSMO-Rollen Besitzer zu ä
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------|
-| Applies-To              | [**Cross-Ref-Container**](c-crossrefcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 36                                                            |
+| Applies-To              | [**Ref-übergreifender Container**](c-crossrefcontainer.md)<br/> |
+| Lokalisierungsanzeige-ID | 36                                                            |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------|
-| Applies-To              | [**Cross-Ref-Container**](c-crossrefcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 36                                                            |
+| Applies-To              | [**Ref-übergreifender Container**](c-crossrefcontainer.md)<br/> |
+| Lokalisierungsanzeige-ID | 36                                                            |
 
 
 
@@ -72,8 +72,8 @@ Erweiterte Rechte erforderlich, um den Domänen Namen-FSMO-Rollen Besitzer zu ä
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------|
-| Applies-To              | [**Cross-Ref-Container**](c-crossrefcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 36                                                            |
+| Applies-To              | [**Ref-übergreifender Container**](c-crossrefcontainer.md)<br/> |
+| Lokalisierungsanzeige-ID | 36                                                            |
 
 
 
@@ -83,8 +83,8 @@ Erweiterte Rechte erforderlich, um den Domänen Namen-FSMO-Rollen Besitzer zu ä
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------|
-| Applies-To              | [**Cross-Ref-Container**](c-crossrefcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 36                                                            |
+| Applies-To              | [**Ref-übergreifender Container**](c-crossrefcontainer.md)<br/> |
+| Lokalisierungsanzeige-ID | 36                                                            |
 
 
 
@@ -94,8 +94,8 @@ Erweiterte Rechte erforderlich, um den Domänen Namen-FSMO-Rollen Besitzer zu ä
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------|
-| Applies-To              | [**Cross-Ref-Container**](c-crossrefcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 36                                                            |
+| Applies-To              | [**Ref-übergreifender Container**](c-crossrefcontainer.md)<br/> |
+| Lokalisierungsanzeige-ID | 36                                                            |
 
 
 
@@ -105,8 +105,8 @@ Erweiterte Rechte erforderlich, um den Domänen Namen-FSMO-Rollen Besitzer zu ä
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------|
-| Applies-To              | [**Cross-Ref-Container**](c-crossrefcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 36                                                            |
+| Applies-To              | [**Ref-übergreifender Container**](c-crossrefcontainer.md)<br/> |
+| Lokalisierungsanzeige-ID | 36                                                            |
 
 
 
@@ -116,8 +116,8 @@ Erweiterte Rechte erforderlich, um den Domänen Namen-FSMO-Rollen Besitzer zu ä
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------|
-| Applies-To              | [**Cross-Ref-Container**](c-crossrefcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 36                                                            |
+| Applies-To              | [**Ref-übergreifender Container**](c-crossrefcontainer.md)<br/> |
+| Lokalisierungsanzeige-ID | 36                                                            |
 
 
 

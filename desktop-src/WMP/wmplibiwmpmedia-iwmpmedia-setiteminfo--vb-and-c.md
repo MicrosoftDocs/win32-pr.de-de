@@ -1,11 +1,11 @@
 ---
-title: Iwmpmedia-Methode "* titeminfo"
-description: Die setiteminfo-Methode legt den Wert des angegebenen Attributs für das Medien Element fest.
+title: IWMPMedia setItemInfo-Methode
+description: Die setItemInfo-Methode legt den Wert des angegebenen Attributs für das Medienelement fest.
 ms.assetid: 247bbba5-7d9b-489d-8e41-ae8ec6e266fd
 keywords:
-- Media Player der Methode "stiteminfo"
-- Methode "stiteminfo", Windows Media Player, iwmpmedia-Schnittstelle
-- Iwmpmedia Interface, Windows Media Player, Methode "stiteminfo"
+- setItemInfo-Methode Windows Media Player
+- setItemInfo-Methode Windows Media Player , IWMPMedia-Schnittstelle
+- IWMPMedia-Schnittstelle Windows Media Player , setItemInfo-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6702c80c13090a370e2922ccecade49bc06645de
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 24265e94880899df96aa954f2df30ca6e4f5ae1e5b4fc20c419085e3f9f0ab14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356499"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053638"
 ---
-# <a name="iwmpmediasetiteminfo-method"></a>Iwmpmedia:: abtiteminfo-Methode
+# <a name="iwmpmediasetiteminfo-method"></a>IWMPMedia::setItemInfo-Methode
 
-Die **setiteminfo** -Methode legt den Wert des angegebenen Attributs für das Medien Element fest.
+Die **setItemInfo-Methode** legt den Wert des angegebenen Attributs für das Medienelement fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,17 +55,17 @@ Implements IWMPMedia.setItemInfo
 
 <dl> <dt>
 
-*bstritemname* \[ in\]
+*bstrItemName* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Wert, der der Attribut Name ist.
+Eine **System.String,die** der Attributname ist.
 
 </dd> <dt>
 
-*bstrauval* \[ in\]
+*bstrVal* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Wert, der der neue Wert ist.
+Eine **System.String,die** der neue Wert ist.
 
 </dd> </dl>
 
@@ -73,21 +73,21 @@ Ein **System. String** -Wert, der der neue Wert ist.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **AttributeCount** -Eigenschaft ruft die Anzahl der für ein bestimmtes Medien Element verfügbaren Attribute ab. Index Nummern können dann mit der **GetAttributeName** -Methode verwendet werden, um die Namen der integrierten Attribute zu bestimmen, die mit dieser Methode verwendet werden können.
+Die **attributeCount-Eigenschaft** ruft die Anzahl von Attributen ab, die für ein bestimmtes Medienelement verfügbar sind. Indexnummern können dann mit der **getAttributeName-Methode** verwendet werden, um die Namen der integrierten Attribute zu bestimmen, die mit dieser Methode verwendet werden können.
 
-Verwenden Sie vor der Verwendung dieser Methode die **isread onlyitem** -Methode, um zu ermitteln, ob ein bestimmtes Attribut festgelegt werden kann.
+Verwenden Sie vor der Verwendung dieser Methode die **isReadOnlyItem-Methode,** um zu ermitteln, ob ein bestimmtes Attribut festgelegt werden kann.
 
-Vor dem Aufrufen dieser Methode müssen Sie über Vollzugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Vor dem Aufrufen dieser Methode benötigen Sie Vollzugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 Hinweis
 
-Wenn Sie das Windows Media Player-Steuerelement in Ihre Anwendung einbetten, werden Dateiattribute, die Sie ändern, erst dann in die digitale Mediendatei geschrieben, wenn der Benutzer Windows Media Player ausführt.
+Wenn Sie das Windows Media Player-Steuerelement in Ihre Anwendung einbetten, werden dateiattribute, die Sie ändern, erst in die digitale Mediendatei geschrieben, wenn der Benutzer Windows Media Player ausführt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird der Wert des Genre-Attributs für das aktuelle Medien Element mithilfe von " **sminfo** " geändert. Ein Textfeld ermöglicht dem Benutzer die Eingabe einer Zeichenfolge, die dann verwendet wird, um die Attributinformationen als Reaktion auf das Click-Ereignis einer Schaltfläche zu ändern. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **setItemInfo** verwendet, um den Wert des Genre-Attributs für das aktuelle Medienelement zu ändern. Mit einem Textfeld kann der Benutzer eine Zeichenfolge eingeben, die dann verwendet wird, um die Attributinformationen als Reaktion auf das Click-Ereignis einer Schaltfläche zu ändern. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -140,7 +140,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -150,16 +150,16 @@ End Sub
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. AttributeCount (VB und c#)**](wmplibiwmpmedia-iwmpmedia-attributecount--vb-and-c.md)
+[**IWMPMedia.attributeCount (VB und C#)**](wmplibiwmpmedia-iwmpmedia-attributecount--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. GetAttributeName (VB und c#)**](wmplibiwmpmedia-iwmpmedia-getattributename--vb-and-c.md)
+[**IWMPMedia.getAttributeName (VB und C#)**](wmplibiwmpmedia-iwmpmedia-getattributename--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. isleseronlyitem (VB und c#)**](wmplibiwmpmedia-iwmpmedia-isreadonlyitem--vb-and-c.md)
+[**IWMPMedia.isReadOnlyItem (VB und C#)**](wmplibiwmpmedia-iwmpmedia-isreadonlyitem--vb-and-c.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Erweitert den Bereich dieses ianalysisregion auf den Bereich, der durch die zugehörige Union mit dem angegebenen Rechteck erstellt wurde.
+description: Erweitert den Bereich dieser IAnalysisRegion auf den Bereich, der durch seine Vereinigung mit dem angegebenen Rechteck erstellt wurde.
 ms.assetid: 9b12f509-4f6a-43b0-9639-bef060fd6d50
-title: 'Ianalysisregion:: unionrechteck-Methode (iacom. h)'
+title: IAnalysisRegion::UnionRectangle-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 3a28a60eae95641225dd9c01791d89a9c38ada82
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: da3eefb3a527646ba416d62783421d6dfe9be5706c0527df7eb321d3945b6f92
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368101"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119596751"
 ---
-# <a name="ianalysisregionunionrectangle-method"></a>Ianalysisregion:: unionrechteck-Methode
+# <a name="ianalysisregionunionrectangle-method"></a>IAnalysisRegion::UnionRectangle-Methode
 
-Erweitert den Bereich dieses [**ianalysisregion**](ianalysisregion.md) auf den Bereich, der durch die zugehörige Union mit dem angegebenen Rechteck erstellt wurde.
+Erweitert den Bereich dieser [**IAnalysisRegion**](ianalysisregion.md) auf den Bereich, der durch seine Vereinigung mit dem angegebenen Rechteck erstellt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,22 +39,22 @@ HRESULT UnionRectangle(
 
 <dl> <dt>
 
-*prätangle* \[ in\]
+*pRectangle* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf das Rechteck, mit dem die Kombination in frei Hand Raumkoordinaten kombiniert werden soll.
+Ein Zeiger auf das Rechteck, mit dem kombiniert werden soll, in Freihandraumkoordinaten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Rechteck Koordinaten befinden sich in HIMETRIC-Einheiten.
+Die Rechteckkoordinaten befinden sich in HIMETRIC-Einheiten.
 
-Wenn einer der Bereiche unbegrenzt ist, ist der neue Bereich ebenfalls unendlich.
+Wenn einer der Bereiche unendlich ist, ist der neue Bereich ebenfalls unendlich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,9 +62,9 @@ Wenn einer der Bereiche unbegrenzt ist, ist der neue Bereich ebenfalls unendlich
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -73,25 +73,25 @@ Wenn einer der Bereiche unbegrenzt ist, ist der neue Bereich ebenfalls unendlich
 
 <dl> <dt>
 
-[**Ianalysisregion**](ianalysisregion.md)
+[**IAnalysisRegion**](ianalysisregion.md)
 </dt> <dt>
 
-[**Ianalysisregion:: excluderectangle**](ianalysisregion-excluderectangle.md)
+[**IAnalysisRegion::ExcludeRectangle**](ianalysisregion-excluderectangle.md)
 </dt> <dt>
 
-[**Ianalysisregion:: excluderegion-Methode**](ianalysisregion-excluderegion.md)
+[**IAnalysisRegion::ExcludeRegion-Methode**](ianalysisregion-excluderegion.md)
 </dt> <dt>
 
-[**Ianalysisregion:: intersectrechteck-Methode**](ianalysisregion-intersectrectangle.md)
+[**IAnalysisRegion::IntersectRectangle-Methode**](ianalysisregion-intersectrectangle.md)
 </dt> <dt>
 
-[**Ianalysisregion:: intersectregion-Methode**](ianalysisregion-intersectregion.md)
+[**IAnalysisRegion::IntersectRegion-Methode**](ianalysisregion-intersectregion.md)
 </dt> <dt>
 
-[**Ianalysisregion:: unionregion-Methode**](ianalysisregion-unionregion.md)
+[**IAnalysisRegion::UnionRegion-Methode**](ianalysisregion-unionregion.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

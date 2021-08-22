@@ -1,12 +1,12 @@
 ---
-title: Imstscaxevents onremotewindowview-Methode
+title: IMsTscAxEvents OnRemoteWindowDisplayed-Methode
 description: Wird aufgerufen, wenn ein RemoteApp-Fenster angezeigt wird.
 ms.assetid: B1E83486-50CB-4CA4-BD01-2C72938335AF
 ms.tgt_platform: multiple
 keywords:
-- Onremotewindowview-Methode Remotedesktopdienste
-- Onremotewindowview-Methode Remotedesktopdienste, imstscaxevents-Schnittstelle
-- Imstscaxevents-Schnittstelle Remotedesktopdienste, onremotewindowview-Methode
+- OnRemoteWindowDisplayed-Remotedesktopdienste
+- OnRemoteWindowDisplayed-Methode Remotedesktopdienste , IMsTscAxEvents-Schnittstelle
+- IMsTscAxEvents-Schnittstelle Remotedesktopdienste , OnRemoteWindowDisplayed-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f03029f31e1ce2133c74c92c0d6d57f192e4d85f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6985a71fe6351a81b2daef69401dfd5c65543e9984fd64c28a120704a34d5a8a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392023"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119512110"
 ---
-# <a name="imstscaxeventsonremotewindowdisplayed-method"></a>Imstscaxevents:: onremotewindowview-Methode
+# <a name="imstscaxeventsonremotewindowdisplayed-method"></a>IMsTscAxEvents::OnRemoteWindowDisplayed-Methode
 
 Wird aufgerufen, wenn ein RemoteApp-Fenster angezeigt wird.
 
@@ -45,16 +45,16 @@ void OnRemoteWindowDisplayed(
 
 <dl> <dt>
 
-*vbangezeigte* \[ in\]
+*vbDisplayed* \[ In\]
 </dt> <dd>
 
-Typ: **Variant \_ bool**
+Typ: **VARIANT \_ BOOL**
 
 Gibt an, ob das RemoteApp-Fenster angezeigt oder ausgeblendet wird.
 
 </dd> <dt>
 
-*HWND* \[ in\]
+*hwnd* \[ In\]
 </dt> <dd>
 
 Typ: **HWND**
@@ -63,12 +63,12 @@ Das Handle des angezeigten Fensters.
 
 </dd> <dt>
 
-*windowattribute* \[ in\]
+*windowAttribute* \[ In\]
 </dt> <dd>
 
-Typ: **[ **remotewindowdisplayedattribute**](remotewindowdisplayedattribute.md)**
+Typ: **[ **RemoteWindowDisplayedAttribute**](remotewindowdisplayedattribute.md)**
 
-Ein Wert der [**remotewindowdisplayedattribute**](remotewindowdisplayedattribute.md) -Enumeration, der weitere Informationen über das Ereignis angibt.
+Ein Wert der [**RemoteWindowDisplayedAttribute-Enumeration,**](remotewindowdisplayedattribute.md) der weitere Informationen zum Ereignis angibt.
 
 </dd> </dl>
 
@@ -93,10 +93,10 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Remotewindowdisplayedattribute**](remotewindowdisplayedattribute.md)
+[**RemoteWindowDisplayedAttribute**](remotewindowdisplayedattribute.md)
 </dt> <dt>
 
-[**Imstscaxevents**](imstscaxevents-interface.md)
+[**IMsTscAxEvents**](imstscaxevents-interface.md)
 </dt> </dl>
 
  
