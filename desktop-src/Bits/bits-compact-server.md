@@ -1,29 +1,29 @@
 ---
 title: BITS Compact Server
-description: Der Background Intelligent Transfer Service (Bits) Compact Server ist ein eigenständiger HTTP/HTTPS-Dateiserver, der die Möglichkeit bietet, eine begrenzte Anzahl von großen Dateien asynchron zwischen Computern zu übertragen.
+description: Der Background Intelligent Transfer Service Compact Server (BITS) ist ein eigenständiger HTTP/HTTPS-Dateiserver, der die Möglichkeit bietet, eine begrenzte Anzahl großer Dateien asynchron zwischen Computern zu übertragen.
 ms.assetid: ab4cf901-6d93-433c-b1b2-ffa54d10725c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b40e2840c24e15379fac11a5a12ed76c225e7be5
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 41cfbc18a8dc06bb474ab8df9df85fb7b8a96838db14bbc18aee4d94881985d3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858370"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119529190"
 ---
 # <a name="bits-compact-server"></a>BITS Compact Server
 
-Der Background Intelligent Transfer Service (Bits) Compact Server ist ein eigenständiger HTTP/HTTPS-Dateiserver, der die Möglichkeit bietet, eine begrenzte Anzahl von großen Dateien asynchron zwischen Computern zu übertragen. Der Compact Server wird als NT-Dienst erstellt und verwendet HTTP.SYS.
+Der Background Intelligent Transfer Service Compact Server (BITS) ist ein eigenständiger HTTP/HTTPS-Dateiserver, der die Möglichkeit bietet, eine begrenzte Anzahl großer Dateien asynchron zwischen Computern zu übertragen. Der Compact Server wird als NT-Dienst erstellt und verwendet HTTP.SYS.
 
-Der BITS Compact-Server ist für die Verwendung durch Kunden von Unternehmen und Kleinunternehmen unter folgenden Bedingungen bestimmt:
+Der BITS Compact Server ist für die Verwendung durch Unternehmenskunden und kleine Unternehmen unter den folgenden Bedingungen vorgesehen:
 
--   Die erwartete Verwendung beträgt maximal 25 URL-Gruppen, und jede URL-Gruppe unterstützt drei gleichzeitige Dateiübertragungen.
--   Dateiübertragungen erfolgen zwischen Computern in derselben Domäne oder in sich gegenseitig vertrauenswürdigen Domänen.
--   Dateiübertragungen sind nicht für Clients mit Internet Zugriff vorgesehen.
+-   Die erwartete Nutzung beträgt maximal 25 URL-Gruppen, und jede URL-Gruppe unterstützt drei gleichzeitige Dateiübertragungen.
+-   Dateiübertragungen erfolgen zwischen Computern in derselben Domäne oder gegenseitig vertrauenswürdigen Domänen.
+-   Dateiübertragungen sind nicht für Clients mit Internetanternetverbindung vorgesehen.
 
 ## <a name="installing-the-bits-compact-server"></a>Installieren des BITS Compact-Servers
 
-Der BITS Compact-Server ist eine optionale Serverkomponente. Sie können eine der folgenden Optionen verwenden, um den BITS Compact-Server zu installieren:
+Der BITS Compact Server ist eine optionale Serverkomponente. Sie können eine der folgenden Optionen verwenden, um den BITS Compact Server zu installieren:
 
 -   Server-Manager
 
@@ -31,20 +31,20 @@ Der BITS Compact-Server ist eine optionale Serverkomponente. Sie können eine de
 
 -   Paket-Manager
 
-**So installieren Sie den BITS Compact-Server mithilfe von Server-Manager**
+**So installieren Sie den BITS Compact Server mithilfe Server-Manager**
 
-1.  Klicken Sie im Abschnitt " **featurezusammenfassung** " des **Server-Manager** auf **Features hinzufügen**.
-2.  Wählen Sie im Assistenten zum Hinzufügen von Features **Background Intelligent Transfer Service (Bits)** und **Compact Server** aus.
+1.  Klicken Sie **im Abschnitt** Zusammenfassung der **Features** des Server-Manager auf **Features hinzufügen.**
+2.  Wählen Sie im Assistenten zum Hinzufügen von Features **Background Intelligent Transfer Service (BITS) und** **Compact Server aus.**
 3.  Befolgen Sie die Anweisungen des Assistenten, einschließlich der Installation der erforderlichen Software, falls angegeben.
 
-Weitere Informationen finden Sie in der **Server-Manager** -Online Hilfe.
+Weitere Informationen finden Sie in der **Server-Manager** Onlinehilfe.
 
-**So installieren Sie den BITS Compact-Server mithilfe von Windows PowerShell**
+**So installieren Sie den BITS Compact Server mithilfe Windows PowerShell**
 
-1.  Geben Sie an einer Windows PowerShell-Eingabeaufforderung den folgenden Befehl ein: **Import-Module Server Manager**. Drücken Sie dann die Eingabetaste.
-2.  Geben Sie den folgenden Befehl ein: **Add-Windows Feature BITS-Compact-Server**. Drücken Sie dann die Eingabetaste.
+1.  Geben Sie in Windows PowerShell Eingabeaufforderung den folgenden Befehl ein: **Import-Module ServerManager**. Drücken Sie dann die Eingabetaste.
+2.  Geben Sie den folgenden Befehl ein: **Add-WindowsFeature BITS-Compact-Server**. Drücken Sie dann die Eingabetaste.
 
-Im folgenden textbasierten Beispiel wird die Installation des BITS Compact-Servers mithilfe von Windows PowerShell-Cmdlets veranschaulicht.
+Das folgende textbasierte Beispiel veranschaulicht die Installation des BITS Compact-Servers mithilfe Windows PowerShell Cmdlets.
 
 ``` syntax
 PS C:\> Import-Module ServerManager
@@ -58,34 +58,34 @@ True    No             Success   {Compact Server}
 PS C:\>
 ```
 
-Weitere Informationen zur Verwendung von Cmdlets finden Sie in der [Windows PowerShell](https://msdn.microsoft.com/library/dd835506(v=vs.85).aspx) -Dokumentation.
+Informationen zur Verwendung von Cmdlets finden Sie in der [Windows PowerShell Dokumentation.](https://msdn.microsoft.com/library/dd835506(v=vs.85).aspx)
 
-Weitere Informationen zum Cmdlet "Import-Module" finden Sie unter " [Import-Module](/previous-versions//dd347701(v=technet.10)) " in der Microsoft TechNet-Bibliothek. Um Hilfe in der Befehlszeile zu erhalten, geben **Sie Get-Help Import-Module** ein.
+Weitere Informationen zum cmdlet Import-Module finden Sie unter [Import-Module](/previous-versions//dd347701(v=technet.10)) in der Microsoft TechNet Library. Um Hilfe an der Befehlszeile zu erhalten, geben **Sie get-help import-module ein.**
 
-Weitere Informationen zum Cmdlet "Add-WindowsFeature" finden [Sie unter Add-Windows Feature](/previous-versions//dd347701(v=technet.10)) in der Microsoft TechNet-Bibliothek. Um Hilfe in der Befehlszeile zu erhalten, geben **Sie Get-Help Add-Windows Feature** ein.
+Weitere Informationen zum Cmdlet Add-WindowsFeature finden Sie unter [Add-WindowsFeature](/previous-versions//dd347701(v=technet.10)) in der Microsoft TechNet Library. Um Hilfe über die Befehlszeile zu erhalten, geben **Sie get-help Add-WindowsFeature ein.**
 
-**So installieren Sie den BITS Compact-Server mithilfe des Paket-Managers**
+**So installieren Sie den BITS Compact-Server mithilfe Paket-Manager**
 
--   Geben Sie den folgenden Befehl ein: **PkgMgr.exe/IU: lightweightserver**.
+-   Geben Sie den folgenden Befehl ein: **PkgMgr.exe /iu:LightweightServer**.
 
 > [!Note]  
-> Die Einstellungen gehen verloren, wenn der Compact Server-Dienst neu gestartet wird oder wenn der Computer neu gestartet wird.
+> Die Einstellungen gehen verloren, wenn der Compact Server-Dienst neu gestartet oder der Computer neu gestartet wird.
 
- 
+ 
 
-## <a name="bits-compact-server-remote-management"></a>BITS Compact Server-Remote Verwaltung
+## <a name="bits-compact-server-remote-management"></a>BITS Compact Server-Remoteverwaltung
 
-Der BITS Compact-Server mit Bits-Remote Verwaltung ermöglicht sicherere Remote Dateiübertragungen. Die Bits-Remote Verwaltung verwendet einen Windows-Verwaltungsinstrumentation (WMI)-Anbieter, um einem Systemadministrator oder einer Controller Anwendung das Remote Erstellen von Bits-Übertragungs Aufträgen auf den Clients und das Veröffentlichen von Dateien für das Hosting auf dem BITS Compact-Server zu ermöglichen. Der Bits-Anbieter kann auch verwendet werden, um einer Anwendung die Remote Verwendung des BITS-Clients in Verbindung mit dem BITS Compact-Server zu ermöglichen, um Dateien von einem Remote Computer auf einen anderen Remote Computer zu übertragen.
+Der BITS Compact Server mit BITS-Remoteverwaltung ermöglicht sicherere Remotedateiübertragungen. Die BITS-Remoteverwaltung verwendet einen WMI-Anbieter (Windows Management Instrumentation), damit ein Systemadministrator oder eine Controlleranwendung BITS-Übertragungsaufträge remote auf den Clients erstellen und Dateien zum Hosten auf dem BITS Compact-Server veröffentlichen kann. Der BITS-Anbieter kann auch verwendet werden, um einer Anwendung die Remotenutzung des BITS-Clients in Verbindung mit dem BITS Compact Server zum Übertragen von Dateien von einem Remotecomputer auf einen anderen Remotecomputer zu ermöglichen.
 
-Weitere Informationen finden Sie in der Dokumentation zum [Bits-Anbieter](/previous-versions/windows/desktop/bitsprov/bits-provider) .
+Weitere Informationen finden Sie in der [Dokumentation zum BITS-Anbieter.](/previous-versions/windows/desktop/bitsprov/bits-provider)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Bits-Anbieter](/previous-versions/windows/desktop/bitsprov/bits-provider)
+[BITS-Anbieter](/previous-versions/windows/desktop/bitsprov/bits-provider)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

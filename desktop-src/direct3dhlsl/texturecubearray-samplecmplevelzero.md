@@ -27,14 +27,14 @@ Probieren Sie eine Textur nur auf Mipmapebene 0 aus, und verwenden Sie einen Ver
 
 
 
-| Methode                                                                                              | BESCHREIBUNG                                                                                                                            |
+| Methode                                                                                              | Beschreibung                                                                                                                            |
 |:----------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
 | [**SampleCmpLevelZero(S,float,float)**](dx-graphics-hlsl-to-samplecmplevelzero.md)                 | Probieren Sie eine Textur nur auf Mipmapebene 0 aus und vergleicht das Ergebnis mit einem Vergleichswert.<br/>                                     |
 | [**SampleCmpLevelZero(S,float,float,uint)**](tcubearray-samplecmplevelzero-s-float-float-uint-.md) | Probieren Sie eine Textur nur auf Mipmapebene 0 aus und vergleicht das Ergebnis mit einem Vergleichswert. Gibt den Status des Vorgangs zurück.<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

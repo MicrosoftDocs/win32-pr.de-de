@@ -1,17 +1,17 @@
 ---
-description: Windows-Runtime C++ Verweis
+description: Windows C++-Referenz zur Laufzeit
 ms.assetid: 0f8e8dc8-aafa-4f4f-a81a-42af5867fc5a
-title: Windows-Runtime C++ Verweis
+title: Windows C++-Referenz zur Laufzeit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 18d2e58837849d01c4fc2d59cc108492ec1eb49c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d835d3c3d34c80c9198765a373161034fb9dbb0bff4cc79b0114727a06248159
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350439"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119613270"
 ---
-# <a name="windows-runtime-c-reference"></a>Windows-Runtime C++ Verweis
+# <a name="windows-runtime-c-reference"></a>Windows C++-Referenz zur Laufzeit
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

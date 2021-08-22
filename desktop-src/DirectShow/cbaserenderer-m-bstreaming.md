@@ -1,7 +1,7 @@
 ---
-description: Flag, das angibt, ob der Filterdaten Streamingdaten ist.
+description: Flag, das angibt, ob der Filter Daten streamt.
 ms.assetid: d94a22bc-ed4b-460b-96e6-1fb006218cf4
-title: 'Cbaserenderer:: m_bStreaming Member (renbase. h)'
+title: CBaseRenderer::m_bStreaming-Member (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7f9a83fc053387b45ebc35773aab2d5a600607c4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 66d64700df8115acff1629beb52e311c9645cdc4ad134d4731104660298ad68f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364733"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119502730"
 ---
-# <a name="cbaserendererm_bstreaming-member"></a>Cbaserenderer:: m \_ bstreaming-Member
+# <a name="cbaserendererm_bstreaming-member"></a>CBaseRenderer::m \_ bStreaming-Member
 
-Flag, das angibt, ob der Filterdaten Streamingdaten ist.
+Flag, das angibt, ob der Filter Daten streamt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ BOOL m_bStreaming;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ BOOL m_bStreaming;
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

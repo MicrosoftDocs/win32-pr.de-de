@@ -1,5 +1,5 @@
 ---
-description: Ein Klassenobjektpfad beschreibt den Speicherort einer Klasse innerhalb eines Namespace.
+description: Ein Klassenobjektpfad beschreibt den Speicherort einer Klasse in einem Namespace.
 ms.assetid: 5ae95707-d023-4102-9b41-140c54b0c5b7
 ms.tgt_platform: multiple
 title: Beschreiben eines Klassenobjektpfads
@@ -14,13 +14,13 @@ ms.locfileid: "119244400"
 ---
 # <a name="describing-a-class-object-path"></a>Beschreiben eines Klassenobjektpfads
 
-Ein Klassenobjektpfad beschreibt den Speicherort einer Klasse innerhalb eines Namespace.
+Ein Klassenobjektpfad beschreibt den Speicherort einer Klasse in einem Namespace.
 
 Sie können die folgenden Methoden verwenden, um einen Objektpfad anzugeben:
 
 -   Ein vollständiger Objektpfad zu einer Klasse fügt den Klassennamen an einen Namespacepfad an.
 
-    Das folgende Beispiel zeigt den Speicherort der [**Win32 \_ LogicalDisk-Klasse**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) im \\ Cimv2-Stammnamespace auf \\ dem Server mit dem Namen Admin.
+    Das folgende Beispiel zeigt den Speicherort der [**Win32 \_ LogicalDisk-Klasse**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) innerhalb des \\ \\ cimv2-Stammnamespace auf dem Server mit dem Namen Admin.
 
     ``` syntax
     \\Admin\Root\CimV2:Win32_LogicalDisk
@@ -34,13 +34,13 @@ Sie können die folgenden Methoden verwenden, um einen Objektpfad anzugeben:
     Win32_LogicalDisk
     ```
 
-Wenn Sie einen Klassennamen abfragen, aber keine Instanzen angeben, gibt WMI die Klassendefinition zurück. Im folgenden Verfahren wird beschrieben, wie eine Klassendefinition in VBScript abgerufen wird.
+Wenn Sie einen Klassennamen abfragen, aber keine Instanzen angeben, gibt WMI die Klassendefinition zurück. Das folgende Verfahren beschreibt das Abrufen einer Klassendefinition in VBScript.
 
 **So rufen Sie eine Klassendefinition in VBScript ab**
 
--   Sie können die Monikerverbindung entweder mit einer Abfrage oder [**mit GetObject verwenden.**](https://msdn.microsoft.com/library/ebdktb00(v=VS.71).aspx) Sie können auch [**SWbemServices.Get verwenden.**](swbemservices-get.md)
+-   Sie können die Monikerverbindung entweder mit einer Abfrage oder [**mit GetObject**](https://msdn.microsoft.com/library/ebdktb00(v=VS.71).aspx)verwenden. Sie können auch [**SWbemServices.Get**](swbemservices-get.md)verwenden.
 
-    Das folgende Beispiel zeigt, wie [GetObject verwendet](/previous-versions//kdccchxa(v=vs.85)) wird, um eine Klassendefinition zu erhalten.
+    Das folgende Beispiel zeigt, wie [GetObject](/previous-versions//kdccchxa(v=vs.85)) verwendet wird, um eine Klassendefinition abzurufen.
 
     ```VB
     strComputer = "."
@@ -51,7 +51,7 @@ Wenn Sie einen Klassennamen abfragen, aber keine Instanzen angeben, gibt WMI die
 
     
 
-    Das folgende Beispiel zeigt, wie eine Klassendefinition abfragen kann.
+    Das folgende Beispiel zeigt, wie eine Klassendefinition abgefragt wird.
 
     ```VB
     strComputer = "."
@@ -64,13 +64,13 @@ Wenn Sie einen Klassennamen abfragen, aber keine Instanzen angeben, gibt WMI die
 
     
 
-Sie können eine Klassendefinition in C++ abrufen, indem Sie nur den Klassennamen und keinen Pfad zu einer bestimmten Instanz angeben. Im folgenden Verfahren wird beschrieben, wie eine Klassendefinition in C++ abgerufen wird.
+Sie können eine Klassendefinition in C++ abrufen, indem Sie nur den Klassennamen und keinen Pfad zu einer bestimmten Instanz angeben. Im folgenden Verfahren wird beschrieben, wie Sie eine Klassendefinition in C++ abrufen.
 
 **So rufen Sie eine Klassendefinition in C++ ab**
 
--   Rufen Sie die [**Funktionen IWbemServices::GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) oder [**IWbemServices::GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) auf.
+-   Rufen Sie die Funktionen [**IWbemServices::GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) oder [**IWbemServices::GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) auf.
 
-    Das folgende Beispiel zeigt, wie sie die [**IWbemServices::GetObject-Funktion**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) aufruft.
+    Das folgende Beispiel zeigt, wie die [**IWbemServices::GetObject-Funktion**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) aufgerufen wird.
 
     ```C++
     IWbemServices* pSvcs = 0;
@@ -82,7 +82,7 @@ Sie können eine Klassendefinition in C++ abrufen, indem Sie nur den Klassenname
 
     
 
-    Für das vorherige Codebeispiel ist die folgende \# include-Anweisung erforderlich, um ordnungsgemäß zu kompilieren.
+    Im vorherigen Codebeispiel muss die folgende \# include-Anweisung ordnungsgemäß kompiliert werden.
 
     ```C++
     #include <wbemidl.h>

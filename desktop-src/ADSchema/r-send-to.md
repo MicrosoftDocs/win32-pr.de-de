@@ -1,10 +1,10 @@
 ---
-title: Erweiterte Rechte Send-To
-description: Exchange right ermöglicht das Senden an ein Postfach.
+title: Send-To erweitertes Recht
+description: Exchange Recht ermöglicht das Senden an ein Postfach.
 ms.assetid: 25dfbfd7-dbeb-48fa-a7c6-63bde03db2f4
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für erweiterte Rechte Send-To
+- Send-To erweiterten rechten AD-Schemas
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0995f887f899eb31ec6d45210a07a849f1c50dde
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c3d6007cf9c222ac0ae52e75cbf79b63765ee14f46a976f761521c3b1740cbab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957310"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119021568"
 ---
-# <a name="send-to-extended-right"></a>Erweiterte Rechte Send-To
+# <a name="send-to-extended-right"></a>Send-To erweitertes Recht
 
-Exchange right: ermöglicht das Senden an ein Postfach.
+Exchange recht: Ermöglicht das Senden an ein Postfach.
 
 
 
@@ -37,7 +37,7 @@ Exchange right: ermöglicht das Senden an ein Postfach.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -50,18 +50,18 @@ Exchange right: ermöglicht das Senden an ein Postfach.
 | Eingabe | Wert |
 |-------------------------|-------------------------------------|
 | Applies-To              | [**Gruppe**](c-group.md)<br/> |
-| Lokalisierung-Display-ID | 6                                   |
+| Lokalisierungsanzeige-ID | 6                                   |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------|
 | Applies-To              | [**Gruppe**](c-group.md)<br/> |
-| Lokalisierung-Display-ID | 6                                   |
+| Lokalisierungsanzeige-ID | 6                                   |
 
 
 
@@ -72,7 +72,7 @@ Exchange right: ermöglicht das Senden an ein Postfach.
 | Eingabe | Wert |
 |-------------------------|-------------------------------------|
 | Applies-To              | [**Gruppe**](c-group.md)<br/> |
-| Lokalisierung-Display-ID | 6                                   |
+| Lokalisierungsanzeige-ID | 6                                   |
 
 
 
@@ -83,7 +83,7 @@ Exchange right: ermöglicht das Senden an ein Postfach.
 | Eingabe | Wert |
 |-------------------------|-------------------------------------|
 | Applies-To              | [**Gruppe**](c-group.md)<br/> |
-| Lokalisierung-Display-ID | 6                                   |
+| Lokalisierungsanzeige-ID | 6                                   |
 
 
 
@@ -94,7 +94,7 @@ Exchange right: ermöglicht das Senden an ein Postfach.
 | Eingabe | Wert |
 |-------------------------|-------------------------------------|
 | Applies-To              | [**Gruppe**](c-group.md)<br/> |
-| Lokalisierung-Display-ID | 6                                   |
+| Lokalisierungsanzeige-ID | 6                                   |
 
 
 
@@ -105,7 +105,7 @@ Exchange right: ermöglicht das Senden an ein Postfach.
 | Eingabe | Wert |
 |-------------------------|-------------------------------------|
 | Applies-To              | [**Gruppe**](c-group.md)<br/> |
-| Lokalisierung-Display-ID | 6                                   |
+| Lokalisierungsanzeige-ID | 6                                   |
 
 
 

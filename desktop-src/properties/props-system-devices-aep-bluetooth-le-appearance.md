@@ -1,19 +1,19 @@
 ---
-description: Erfahren Sie mehr über die Darstellung des Bluetooth LE-Geräts. Auf dieser Referenzseite wird die Eigenschaft System.Devices.Aep.Bluetooth.Le.Appearance beschrieben.
+description: Erfahren Sie mehr über die Darstellung Bluetooth LE-Geräts. Auf dieser Referenzseite wird System.Devices.Aep beschrieben. Bluetooth. Le.Appearance-Eigenschaft.
 ms.assetid: 03c10b03-5821-476c-a1f3-3387ee4d6318
-title: System.Devices.Aep.Bluetooth.Le.Appearance
+title: System.Devices.Aep. Bluetooth. Le.Appearance
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fd9bc2362c361f4e44d81a304d3fa0e49a4f5eec
-ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
+ms.openlocfilehash: f877f1d4b1cabbe9da282c476c491f8459d710145a72d86646abc662c257ca39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112262142"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119340850"
 ---
-# <a name="systemdevicesaepbluetoothleappearance"></a>System.Devices.Aep.Bluetooth.Le.Appearance
+# <a name="systemdevicesaepbluetoothleappearance"></a>System.Devices.Aep. Bluetooth. Le.Appearance
 
-Darstellung des Bluetooth LE-Geräts.
+Bluetooth Darstellung des LE-Geräts.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511
 
@@ -31,7 +31,7 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

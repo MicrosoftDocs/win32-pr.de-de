@@ -1,9 +1,9 @@
 ---
-title: STN_ENABLE Benachrichtigungs Code (Winuser. h)
-description: Der STN- \_ Benachrichtigungs Code aktivieren wird gesendet, wenn ein statisches Steuerelement aktiviert ist.
+title: STN_ENABLE Benachrichtigungscode (Winuser.h)
+description: Der STN \_ ENABLE-Benachrichtigungscode wird gesendet, wenn ein statisches Steuerelement aktiviert ist.
 ms.assetid: daac2ed3-c7cd-46f8-abfa-78754b277ef4
 keywords:
-- Windows-Steuerelemente für STN_ENABLE Benachrichtigungs
+- STN_ENABLE Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bfc9cc21e884a8a7e907054daa48a21678efa65e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4c1ffea3e3bf4deda67a0ea950ded7e4f16718ace502d16922e50d3750d90bc8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119642540"
 ---
-# <a name="stn_enable-notification-code"></a>STN- \_ Benachrichtigungs Code aktivieren
+# <a name="stn_enable-notification-code"></a>STN \_ ENABLE-Benachrichtigungscode
 
-Der STN- \_ Benachrichtigungs Code aktivieren wird gesendet, wenn ein statisches Steuerelement aktiviert ist. Das statische Steuerelement muss über den SS-Benachrichtigungs Stil verfügen, um diesen Benachrichtigungs Code zu erhalten. [**\_**](static-control-styles.md) Das übergeordnete Fenster des Steuer Elements empfängt diesen Benachrichtigungs Code über die [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Der STN \_ ENABLE-Benachrichtigungscode wird gesendet, wenn ein statisches Steuerelement aktiviert ist. Das statische Steuerelement muss über den [**SS \_ NOTIFY-Stil**](static-control-styles.md) verfügen, um diesen Benachrichtigungscode zu empfangen. Das übergeordnete Fenster des Steuerelements empfängt diesen Benachrichtigungscode über die [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -42,7 +42,7 @@ STN_ENABLE
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des statischen Steuer Elements. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des statischen Steuerelements. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungscode an.
 
 </dd> <dt>
 
@@ -59,9 +59,9 @@ Handle für das statische Steuerelement.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -69,13 +69,13 @@ Handle für das statische Steuerelement.
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[STN \_ Deaktivieren](stn-disable.md)
+[STN \_ DISABLE](stn-disable.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Statische Steuerelemente](static-controls.md)
@@ -90,7 +90,7 @@ Handle für das statische Steuerelement.
 [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

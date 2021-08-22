@@ -37,11 +37,11 @@ void CallShader(uint ShaderIndex, inout param_t Parameter);
 
 `ShaderIndex`
 
-Eine ganze Zahl ohne Vorzeichen, die den Index in der [aufrufbaren Shadertabelle](callable-shader.md) darstellt, die im Aufruf von [**DispatchRays**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist4-dispatchrays angegeben ist.
+Eine ganze Zahl ohne Vorzeichen, die den Index in der aufrufbaren [Shadertabelle](callable-shader.md) darstellt, die im Aufruf von [**DispatchRays**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist4-dispatchrays) angegeben ist.
 
 `Parameter`
 
-Die benutzerdefinierten Parameter, die an den aufrufbaren Shader übergeben werden sollen.  Diese Parameterstruktur muss mit der Parameterstruktur übereinstimmen, die im aufrufbaren Shader verwendet wird, auf den in der Shadertabelle gezeigt wird.
+Die benutzerdefinierten Parameter, die an den aufrufbaren Shader übergeben werden.  Diese Parameterstruktur muss mit der Parameterstruktur übereinstimmen, die im aufrufbaren Shader verwendet wird, auf den in der Shadertabelle verwiesen wird.
 
 
 ## <a name="return-value"></a>Rückgabewert
@@ -59,7 +59,7 @@ Diese Funktion kann von den folgenden Raytracing-Shadertypen aufgerufen werden:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

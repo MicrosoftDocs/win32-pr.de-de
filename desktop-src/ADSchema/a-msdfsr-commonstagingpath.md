@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-commonstagingpath-Attribut
+title: ms-DFSR-CommonStagingPath-Attribut
 description: Vollständiger Pfad des allgemeinen Stagingverzeichnisses.
 ms.assetid: 2471fc9c-b5b6-48d8-9504-617fd2b6cd3d
 ms.tgt_platform: multiple
 keywords:
-- MS-DFSR-commonstagingpath-Attribut, AD-Schema
-- "\"msdfsr-commonstagingpath\"-Attribut, AD-Schema"
+- MS-DFSR-CommonStagingPath-Attribut AD-Schema
+- MSDFSR-CommonStagingPath-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e5a5649f461c4725ae5b48cb258acb9d6cb289fc
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f4b3f420d2c6c6af11191bf9103f968500417b5a7891fd7e56834b41ddf888c5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119299140"
 ---
-# <a name="ms-dfsr-commonstagingpath-attribute"></a>MS-DFSR-commonstagingpath-Attribut
+# <a name="ms-dfsr-commonstagingpath-attribute"></a>ms-DFSR-CommonStagingPath-Attribut
 
 Vollständiger Pfad des allgemeinen Stagingverzeichnisses.
 
@@ -29,11 +29,11 @@ Vollständiger Pfad des allgemeinen Stagingverzeichnisses.
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-DFSR-commonstagingpath                   |
-| LDAP-Display-Name | msdfsr-commonstagingpath                    |
+| CN                | ms-DFSR-CommonStagingPath                   |
+| Ldap-Anzeigename | msDFSR-CommonStagingPath                    |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.38                  |
 | System-ID-GUID    | 936eac41-d257-4bb9-bd55-f310a3cf09ad        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -54,16 +54,16 @@ Vollständiger Pfad des allgemeinen Stagingverzeichnisses.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| System-Only            | Falsch                                                              |
+| Ist einwertig       | True                                                               |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 0                                                                  |
 | Range-Upper            | 32767                                                              |
 | Search-Flags           | 0x00000000                                                         |
 | System-Flags           | 0x00000000                                                         |
-| In verwendete Klassen        | [**MS-DFSR-LocalSettings**](c-msdfsr-localsettings.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-LocalSettings**](c-msdfsr-localsettings.md)<br/> |
 
 
 
@@ -75,16 +75,16 @@ Vollständiger Pfad des allgemeinen Stagingverzeichnisses.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| System-Only            | Falsch                                                              |
+| Ist einwertig       | True                                                               |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 0                                                                  |
 | Range-Upper            | 32767                                                              |
 | Search-Flags           | 0x00000000                                                         |
 | System-Flags           | 0x00000000                                                         |
-| In verwendete Klassen        | [**MS-DFSR-LocalSettings**](c-msdfsr-localsettings.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-LocalSettings**](c-msdfsr-localsettings.md)<br/> |
 
 
 
@@ -96,16 +96,16 @@ Vollständiger Pfad des allgemeinen Stagingverzeichnisses.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| System-Only            | Falsch                                                              |
+| Ist einwertig       | Richtig                                                               |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 0                                                                  |
 | Range-Upper            | 32767                                                              |
 | Search-Flags           | 0x00000000                                                         |
 | System-Flags           | 0x00000000                                                         |
-| In verwendete Klassen        | [**MS-DFSR-LocalSettings**](c-msdfsr-localsettings.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-LocalSettings**](c-msdfsr-localsettings.md)<br/> |
 
 
 

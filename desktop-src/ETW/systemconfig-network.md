@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Netzwerkereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Netzwerkereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: afa994ef-dd1c-4909-a6cd-7021be4fff40
 title: SystemConfig_Network-Klasse
 ms.topic: reference
@@ -16,18 +16,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 23b469c31645c6a5b04319f91b758ee19beb935c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6b196e8c1ad5a997642cc48491e9d1a4b5e73bc26db71d5ea5258f7cf162a00a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069690"
 ---
-# <a name="systemconfig_network-class"></a>SystemConfig- \_ Netzwerk Klasse
+# <a name="systemconfig_network-class"></a>SystemConfig \_ Network-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Netzwerkereignisse.
+Diese Klasse ist die Ereignistypklasse für Netzwerkereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,100 +44,100 @@ class SystemConfig_Network : SystemConfig
 
 ## <a name="members"></a>Member
 
-Die **\_ Netzwerk Klasse "SystemConfig** " verfügt über diese Typen von Membern:
+Die **SystemConfig \_ Network-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **SystemConfig- \_ Netzwerk** Klasse verfügt über diese Eigenschaften.
+Die **SystemConfig \_ Network-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **MaxHashTableSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
-Die Größe der Hash Tabelle, in der die TCP-Steuerungsblöcke (TCBS) gespeichert sind. TCP speichert Kontroll Blöcke in einer Hash Tabelle, sodass Sie Sie schnell finden können.
+Die Größe der Hashtabelle, in der TCP-Kontrollblöcke (TCBs) gespeichert werden. TCP speichert Kontrollblöcke in einer Hashtabelle, damit sie sehr schnell gefunden werden können.
 
 </dd> <dt>
 
 **MaxUserPort**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Die höchste Portnummer, die TCP zuweisen kann, wenn eine Anwendung einen verfügbaren Benutzerport vom System anfordert. Normalerweise werden kurzlebige Ports (die kurz verwendet) den Portnummern 1024 bis 5000 zugeordnet.
+Die höchste Portnummer, die TCP zuweisen kann, wenn eine Anwendung einen verfügbaren Benutzerport vom System anfordert. In der Regel werden kurzlebige Ports (kurz verwendete) portnummern 1024 bis 5000 zugeordnet.
 
-Der Wert für die höchste Benutzer Portnummer, die TCP zugewiesen werden kann, wird von einer Registrierungs Einstellung gesteuert. Weitere Informationen finden Sie unter [MaxUserPort](/previous-versions/windows/it-pro/windows-2000-server/cc938196(v=technet.10)).
+Der Wert für die höchste Benutzerportnummer, die TCP zuweisen kann, wird durch eine Registrierungseinstellung gesteuert. Weitere Informationen finden Sie unter [MaxUserPort](/previous-versions/windows/it-pro/windows-2000-server/cc938196(v=technet.10)).
 
 </dd> <dt>
 
-**Tcbtablepartitions**
+**TcbTablePartitions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1)
+Qualifizierer: WmiDataId(1)
 </dt> </dl>
 
-Die Anzahl der Partitionen in der Transport Steuerungs Block-Tabelle. Durch die Partitionierung der Transport Steuerungs Block Tabelle werden Konflikte für den Tabellen Zugriff minimiert. Dies ist besonders bei Multiprozessorsystemen von nutzen.
+Die Anzahl der Partitionen in der Tabelle Transport Control Block. Durch partitionieren der Transport Control Block-Tabelle werden Konflikte für den Tabellenzugriff minimiert. Dies ist besonders bei Multiprozessorsystemen nützlich.
 
 </dd> <dt>
 
 **TcpTimedWaitDelay**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4)
+Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
-Die Zeitspanne, die ververgehen muss, bevor TCP eine geschlossene Verbindung freigeben und deren Ressourcen wieder verwenden kann. Dieses Intervall zwischen Closure und Release wird als Zeit \_ Wartezeit oder 2MSL-Status bezeichnet. Während dieser Zeit kann die Verbindung auf dem Client und dem Server um kostengünstiger wieder geöffnet werden, als eine neue Verbindung herzustellen.
+Die Zeit, die verstreichen muss, bevor TCP eine geschlossene Verbindung freigeben und die zugehörigen Ressourcen wiederverwenden kann. Dieses Intervall zwischen Abschluss und Freigabe wird als TIME \_ WAIT-Status oder 2MSL-Status bezeichnet. Während dieser Zeit kann die Verbindung für client und server viel kostengünstiger erneut geöffnet werden als das Herstellen einer neuen Verbindung.
 
-Die vom IETF veröffentlichte RFC 793 erfordert, dass TCP eine geschlossene Verbindung für ein Intervall beibehält, das mindestens der doppelten Segment Lebensdauer (2MSL) des Netzwerks entspricht. Wenn eine Verbindung freigegeben wird, können das Socketpaar und der TCP-Kontroll Block (TCB) zur Unterstützung einer anderen Verbindung verwendet werden. Standardmäßig ist MSL auf 120 Sekunden festgelegt, und der Wert dieses Eintrags ist gleich 2 MSLs oder 4 Minuten. Weitere Informationen finden Sie unter [RFC 793](https://tools.ietf.org/html/rfc973).
+Rfc 793, veröffentlicht von der IETF, erfordert, dass TCP eine geschlossene Verbindung für ein Intervall beibehält, das mindestens der doppelten maximalen Segmentlebensdauer (2MSL) des Netzwerks entspricht. Wenn eine Verbindung freigegeben wird, können das Socketpaar und der TCP-Steuerungsblock (TCB) verwendet werden, um eine andere Verbindung zu unterstützen. Standardmäßig ist die MSL als 120 Sekunden definiert, und der Wert dieses Eintrags ist gleich zwei MSLs oder 4 Minuten. Weitere Informationen finden Sie unter [RFC 793](https://tools.ietf.org/html/rfc973).
 
-Wenn Sie den Wert dieses Eintrags mithilfe einer Registrierungs Einstellung verringern, kann TCP geschlossene Verbindungen schneller freigeben und damit mehr Ressourcen für neue Verbindungen bereitstellen. Wenn der Wert jedoch zu niedrig ist, gibt TCP möglicherweise Verbindungs Ressourcen frei, bevor die Verbindung hergestellt wird, sodass der Server zusätzliche Ressourcen zum erneuten Herstellen der Verbindung verwenden muss.
+Wenn Sie den Wert dieses Eintrags mithilfe einer Registrierungseinstellung reduzieren, kann TCP geschlossene Verbindungen schneller freigeben und so mehr Ressourcen für neue Verbindungen bereitstellen. Wenn der Wert jedoch zu niedrig ist, gibt TCP möglicherweise Verbindungsressourcen frei, bevor die Verbindung abgeschlossen ist, sodass der Server zusätzliche Ressourcen verwenden muss, um die Verbindung wiederherzustellen.
 
-Normalerweise gibt TCP keine geschlossenen Verbindungen frei, bis der Wert dieses Eintrags abläuft. TCP kann jedoch Verbindungen freigeben, bevor dieser Wert abläuft, wenn die TCP-Steuerungsblöcke (TCBS) nicht ausgeführt werden. Die Anzahl der vom System erstellten TCBS wird von einer Registrierungs Einstellung gesteuert. Weitere Informationen finden Sie unter [maxfreetcbs](/previous-versions/windows/it-pro/windows-2000-server/cc938178(v=technet.10)).
+Normalerweise gibt TCP keine geschlossenen Verbindungen frei, bis der Wert dieses Eintrags abläuft. TCP kann jedoch Verbindungen freigeben, bevor dieser Wert abläuft, wenn keine TCP-Kontrollblöcke (TCBs) mehr vorliegen. Die Anzahl der vom System erstellten TCBs wird durch eine Registrierungseinstellung gesteuert. Weitere Informationen finden Sie unter [MaxFreeTCBs.](/previous-versions/windows/it-pro/windows-2000-server/cc938178(v=technet.10))
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

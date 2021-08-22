@@ -1,27 +1,27 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_OPENTEMPORARYTABLE Member'
-title: JET_OPENTEMPORARYTABLE Mitglieder (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Erfahren Sie mehr über: JET_OPENTEMPORARYTABLE Mitglieder'
+title: JET_OPENTEMPORARYTABLE Mitglieder (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: JET_OPENTEMPORARYTABLE members
 ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.Vista.JET_OPENTEMPORARYTABLE
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_opentemporarytable_members(v=EXCHG.10)
 ms:contentKeyID: 55104223
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: af149ecba6858aca4b4877fc9446872386406838
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 934ea18663e2fd2de786bb44d32482f42fd45d38b9e6ec23e73caf815560b264
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104551253"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119560040"
 ---
-# <a name="jet_opentemporarytable-members"></a>Mitglieder JET_OPENTEMPORARYTABLE
+# <a name="jet_opentemporarytable-members"></a>JET_OPENTEMPORARYTABLE Mitglieder
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Eine Auflistung von Parametern für die jetopertemporarytable-Methode.
+Eine Auflistung von Parametern für die JetOpenTemporaryTable-Methode.
 
-Der [JET_OPENTEMPORARYTABLE](./jet-opentemporarytable-class.md) -Typ macht die folgenden Member verfügbar.
+Der [JET_OPENTEMPORARYTABLE](./jet-opentemporarytable-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="constructors"></a>Konstruktoren
 
@@ -30,7 +30,7 @@ Der [JET_OPENTEMPORARYTABLE](./jet-opentemporarytable-class.md) -Typ macht die f
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -52,49 +52,49 @@ Oben
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335290(v=exchg.10).md">cbkeymost</a></td>
-<td>Ruft die maximale Größe für einen Schlüssel ab, der eine angegebene Zeile darstellt, oder legt diese fest. Die maximale Schlüsselgröße kann festgelegt werden, um zu steuern, wie Schlüssel abgeschnitten werden. Das Abschneiden von Schlüsseln ist wichtig, da sich dies auf den Fall auswirkt, dass Zeilen als verschieden betrachtet werden. Wenn dieser Parameter auf 0 oder 255 festgelegt ist, bleiben die maximale Schlüsselgröße und ihre Semantik identisch mit der maximalen Schlüsselgröße, die von Windows Server 2003 unterstützt wird. Dieser Parameter kann auch auf einen größeren Wert als Funktion der Datenbankseiten Größe für die Instanz <a href="hh596135(v=exchg.10).md">databasepagesize</a>festgelegt werden. Weitere Informationen finden Sie unter <a href="dn335292(v=exchg.10).md">keymost</a> .</td>
+<td><a href="dn335290(v=exchg.10).md">cbKeyMost</a></td>
+<td>Ruft die maximale Größe für einen Schlüssel ab, der eine bestimmte Zeile darstellt, oder legt diese fest. Die maximale Schlüsselgröße kann festgelegt werden, um zu steuern, wie Schlüssel abgeschnitten werden. Das Abschneiden von Schlüsseln ist wichtig, da sie sich darauf auswirken kann, wenn Zeilen als eindeutig betrachtet werden. Wenn dieser Parameter auf 0 oder 255 festgelegt ist, bleiben die maximale Schlüsselgröße und ihre Semantik mit der maximalen Schlüsselgröße identisch, die von Windows Server 2003 unterstützt wird. Dieser Parameter kann auch als Funktion der Datenbankseitengröße für die <a href="hh596135(v=exchg.10).md">DatabasePageSize</a>-Instanz auf einen größeren Wert festgelegt werden. Weitere Informationen finden Sie unter <a href="dn335292(v=exchg.10).md">KeyMost.</a></td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351219(v=exchg.10).md">cbvarsegmac</a></td>
-<td>Ruft die maximale Datenmenge ab oder legt Sie fest, die von einer beliebigen Variablen Längen Spalte verwendet wird, um einen Schlüssel für eine bestimmte Zeile zu erstellen. Dieser Parameter kann verwendet werden, um die Menge des von einer bestimmten Schlüssel Spalte genutzten schlüsselplatzes zu steuern. Dieser Grenzwert ist in Bytes. Wenn dieser Parameter 0 (null) ist oder mit der <a href="dn335290(v=exchg.10).md">cbkeymost</a> -Eigenschaft identisch ist, ist kein Limit wirksam.</td>
+<td><a href="dn351219(v=exchg.10).md">cbVarSegMac</a></td>
+<td>Ruft die maximale Datenmenge ab, die aus einer variablen lengthcolumn verwendet wird, um einen Schlüssel für eine bestimmte Zeile zu erstellen, oder legt diese fest. Dieser Parameter kann verwendet werden, um die Menge des Schlüsselspeicherplatzes zu steuern, der von einer bestimmten Schlüsselspalte verbraucht wird. Dieser Grenzwert beträgt byte. Wenn dieser Parameter 0 (null) ist oder mit der <a href="dn335290(v=exchg.10).md">cbKeyMost-Eigenschaft</a> identisch ist, ist kein Grenzwert wirksam.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335287(v=exchg.10).md">CColumn</a></td>
-<td>Ruft die Anzahl der Spalten in <a href="dn351228(v=exchg.10).md">prgcolumndef</a>ab oder legt Sie fest.</td>
+<td><a href="dn335287(v=exchg.10).md">ccolumn</a></td>
+<td>Ruft die Anzahl der Spalten in <a href="dn351228(v=exchg.10).md">prgcolumndef</a>ab oder legt diese fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn351232(v=exchg.10).md">grbit</a></td>
-<td>Ruft Optionen für die temporäre Tabelle ab oder legt Sie fest.</td>
+<td>Ruft Optionen für die temporäre Tabelle ab oder legt sie fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn335288(v=exchg.10).md">pidxunicode</a></td>
-<td>Ruft die Gebiets Schema-ID und normalisierungs Flags ab, die zum Vergleichen von Unicode-Schlüssel Spaltendaten in der temporären Tabelle verwendet werden, oder legt diese fest Wenn dieser Parameter NULL ist, wird die Standard-LCID verwendet, um alle Unicode-Schlüssel Spalten in der temporären Tabelle zu vergleichen. Die Standard-LCID ist das US-englische Gebiets Schema. Wenn dieser Parameter NULL ist, werden die standardnormalisierungs-Flags verwendet, um alle Unicode-Schlüssel Spaltendaten in der temporären Tabelle zu vergleichen. Die standardnormalisierungs-Flags lauten: NORM_IGNORECASE, NORM_IGNOREKANATYPE und NORM_IGNOREWIDTH.</td>
+<td>Ruft die Locale ID und die Normalisierungsflags ab, die zum Vergleichen von Unicode-Schlüsselspaltendaten in der temporären Tabelle verwendet werden, oder legt diese fest. Wenn dieser Parameter NULL ist, wird die Standard-LCID verwendet, um alle Unicode-Schlüsselspalten in der temporären Tabelle zu vergleichen. Die Standard-LCID ist das us-englische Locale. Wenn dieser Parameter NULL ist, werden die Standardnormalisierungsflags verwendet, um alle Unicode-Schlüsselspaltendaten in der temporären Tabelle zu vergleichen. Die Standardnormalisierungsflags sind: NORM_IGNORECASE, NORM_IGNOREKANATYPE und NORM_IGNOREWIDTH.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn351228(v=exchg.10).md">prgcolumndef</a></td>
-<td>Ruft die Spaltendefinitionen für die in der temporären Tabelle erstellten Spalten ab oder legt Sie fest.</td>
+<td>Ruft die Spaltendefinitionen für die in der temporären Tabelle erstellten Spalten ab oder legt diese fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn351233(v=exchg.10).md">prgcolumnid</a></td>
-<td>Ruft den Ausgabepuffer ab, der das Array der Spalten-IDs empfängt, die während der Erstellung der temporären Tabelle generiert wurden, oder legt diesen fest. Die Spalten-IDs in diesem Array entsprechen exakt dem Eingabe Array von Spaltendefinitionen. Folglich muss die Größe dieses Puffers der Größe von <a href="dn351228(v=exchg.10).md">prgcolumndef</a>entsprechen.</td>
+<td>Ruft den Ausgabepuffer ab, der das Array von Spalten-IDs empfängt, die während der Erstellung der temporären Tabelle generiert wurden, oder legt diesen fest. Die Spalten-IDs in diesem Array entsprechen genau dem Eingabearray von Spaltendefinitionen. Daher muss die Größe dieses Puffers der Größe von <a href="dn351228(v=exchg.10).md">prgcolumndef entsprechen.</a></td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335293(v=exchg.10).md">TableID</a></td>
-<td>Ruft das Tabellen Handle für die temporäre Tabelle ab, die als Ergebnis eines erfolgreichen jetopumtemporarytable-Aufrufes erstellt wurde.</td>
+<td><a href="dn335293(v=exchg.10).md">tableid</a></td>
+<td>Ruft das Tabellenhand handle für die temporäre Tabelle ab, die als Ergebnis eines erfolgreichen Aufrufs von JetOpenTemporaryTable erstellt wurde.</td>
 </tr>
 </tbody>
 </table>
@@ -109,39 +109,39 @@ Oben
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Ist gleich</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
 <td><a href="/dotnet/api/system.object.finalize#System_Object_Finalize">Finalize</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">GetHashCode</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="/dotnet/api/system.object.gettype#System_Object_GetType">GetType</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td><a href="/dotnet/api/system.object.gettype#System_Object_GetType">Gettype</a></td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Mitgliedglieder Klon</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">MemberwiseClone</a></td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="dn335286(v=exchg.10).md">ToString</a></td>
-<td>Gibt eine <a href="/dotnet/api/system.string">Zeichenfolge</a> zurück, die den aktuellen <a href="dn351217(v=exchg.10).md">JET_OPENTEMPORARYTABLE</a>darstellt. (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.-Zeichenfolge ()</a>.)</td>
+<td>Gibt eine <a href="/dotnet/api/system.string">Zeichenfolge</a> zurück, die die <a href="dn351217(v=exchg.10).md">aktuelle</a>JET_OPENTEMPORARYTABLE. (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -151,8 +151,8 @@ Oben
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_OPENTEMPORARYTABLE-Klasse](./jet-opentemporarytable-class.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

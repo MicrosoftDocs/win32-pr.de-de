@@ -1,8 +1,8 @@
 ---
-description: Im Folgenden werden die WMI-Sicherheitskonst constants für Ereignisse veranschaulicht. Sie werden verwendet, um Zugriffssteuerungseinträge (Access Control Entries, ACEs) in Sicherheitsdeskriptoren für Ereignisse oder Senken festzuordnen.
+description: Das folgende Beispiel zeigt die WMI-Sicherheitskonstanten, die für Ereignisse verwendet werden. Sie werden verwendet, um Zugriffssteuerungseinträge (ACEs) in Sicherheitsbeschreibungen festzulegen, die für Ereignisse oder Senken verwendet werden.
 ms.assetid: 18318262-d948-4329-8d48-23664798fc58
 ms.tgt_platform: multiple
-title: Ereignissicherheitskonst constants (Wbemcli.h)
+title: Ereignissicherheitskonstanten (Wbemcli.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.openlocfilehash: d8ae26364c7edf6daaf9b70dcf769675c0a39966286b3b8f725fefe0af73ff8b
@@ -12,9 +12,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119244290"
 ---
-# <a name="event-security-constants"></a>Ereignissicherheitskonst constants
+# <a name="event-security-constants"></a>Ereignissicherheitskonstanten
 
-Im Folgenden werden die WMI-Sicherheitskonst constants für Ereignisse veranschaulicht. Sie werden verwendet, um Zugriffssteuerungseinträge (Access Control Entries, ACEs) in Sicherheitsdeskriptoren für Ereignisse oder Senken festzuordnen.
+Das folgende Beispiel zeigt die WMI-Sicherheitskonstanten, die für Ereignisse verwendet werden. Sie werden verwendet, um Zugriffssteuerungseinträge (ACEs) in Sicherheitsbeschreibungen festzulegen, die für Ereignisse oder Senken verwendet werden.
 
 <dl> <dt>
 
@@ -39,7 +39,7 @@ Gibt an, dass das Konto Ereignisse in der Instanz von [**\_ \_ EventFilter**](--
 
 
 
-Gibt an, dass ein Consumer die an eine Senke übermittelten Ereignisse abonnieren kann. Wird in [**IWbemEventSink::SetSinkSecurity verwendet.**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemeventsink-setsinksecurity) Verfügbar in wbemcli.h.
+Gibt an, dass ein Consumer die an eine Senke übermittelten Ereignisse abonnieren kann. Wird in [**IWbemEventSink::SetSinkSecurity**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemeventsink-setsinksecurity)verwendet. Verfügbar in wbemcli.h.
 
 
 </dt> </dl> </dd> <dt>
@@ -52,7 +52,7 @@ Gibt an, dass ein Consumer die an eine Senke übermittelten Ereignisse abonniere
 
 
 
-Der Ereignisanbieter gibt an, dass WMI die **SECURITY \_ DESCRIPTOR-Eigenschaft** in jedem Ereignis (geerbt von [**\_ \_ Ereignis**](--event.md)) überprüft und ereignisse nur an Benutzer mit den entsprechenden Zugriffsberechtigungen sendet. Verfügbar in wbemprov.h.
+Der Ereignisanbieter gibt an, dass WMI die **SECURITY \_ DESCRIPTOR-Eigenschaft** in jedem Ereignis überprüft (geerbt von [**\_ \_ Event)**](--event.md)und nur Ereignisse an Consumer mit den entsprechenden Zugriffsberechtigungen sendet. Verfügbar in wbemprov.h.
 
 
 </dt> </dl> </dd> </dl>
@@ -69,11 +69,11 @@ Der Ereignisanbieter gibt an, dass WMI die **SECURITY \_ DESCRIPTOR-Eigenschaft*
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[WMI-Sicherheitskonst constants](wmi-security-constants.md)
+[WMI-Sicherheitskonstanten](wmi-security-constants.md)
 </dt> <dt>
 
 [Verwalten der WMI-Sicherheit](maintaining-wmi-security.md)

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SIGNATURE Struktur'
-title: JET_SIGNATURE Struktur
+description: 'Weitere Informationen zu: JET_SIGNATURE-Struktur'
+title: JET_SIGNATURE-Struktur
 TOCTitle: JET_SIGNATURE Structure
 ms:assetid: 90d3fd56-be65-4126-b50c-b53e3c3f38f6
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269340(v=EXCHG.10)
@@ -15,21 +15,21 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d6210853e22fda5085980c2fb285411ba431bb43
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9d254a392ade9daa43382d8418f2dda90729eddc81f6c3bbd7013d89ae8f2e74
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343343"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119616190"
 ---
-# <a name="jet_signature-structure"></a>JET_SIGNATURE Struktur
+# <a name="jet_signature-structure"></a>JET_SIGNATURE-Struktur
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_signature-structure"></a>JET_SIGNATURE Struktur
+## <a name="jet_signature-structure"></a>JET_SIGNATURE-Struktur
 
-Die **JET_SIGNATURE** -Struktur enthält Informationen, mit denen eine Datenbank eindeutig identifiziert wird.
+Die **JET_SIGNATURE-Struktur** enthält Informationen, die eine Datenbank eindeutig identifizieren.
 
 ```cpp
     typedef struct {
@@ -41,21 +41,21 @@ Die **JET_SIGNATURE** -Struktur enthält Informationen, mit denen eine Datenbank
 
 ### <a name="members"></a>Member
 
-**ulrandom**
+**ulRandom**
 
 Eine zufällig zugewiesene Zahl.
 
-**logtimecreate**
+**logtimeCreate**
 
-Die [JET_LOGTIME](./jet-logtime-structure.md) zum Zeitpunkt der Ausführung von [jetkreatedatabase](./jetcreatedatabase-function.md) .
+Die [JET_LOGTIME](./jet-logtime-structure.md) zum Zeitpunkt der Ausführung von [JetCreateDatabase.](./jetcreatedatabase-function.md)
 
-**szcomputername**
+**szComputerName**
 
-Der optionale Zeichen folgen Wert des NetBIOS-Namens für den Computer. Dieser Wert kann nicht festgelegt werden.
+Der optionale Zeichenfolgenwert des NetBIOS-Namens für den Computer. Dieser Wert kann nicht festgelegt werden.
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Diese kann als Element von [JET_DBINFOMISC](./jet-dbinfomisc-structure.md)gefunden werden.
+Dies kann als Element von [JET_DBINFOMISC](./jet-dbinfomisc-structure.md)gefunden werden.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -75,7 +75,7 @@ Diese kann als Element von [JET_DBINFOMISC](./jet-dbinfomisc-structure.md)gefund
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 </tbody>
 </table>
@@ -85,4 +85,4 @@ Diese kann als Element von [JET_DBINFOMISC](./jet-dbinfomisc-structure.md)gefund
 
 [JET_DBINFOMISC](./jet-dbinfomisc-structure.md)  
 [JET_LOGTIME](./jet-logtime-structure.md)  
-[Jetkreatedatabase](./jetcreatedatabase-function.md)
+[JetCreateDatabase](./jetcreatedatabase-function.md)

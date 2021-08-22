@@ -1,21 +1,21 @@
 ---
-description: Das System ist nicht die einzige Quelle von WM \_ Paint-Nachrichten. Die invalidateruor InvalidateRgn-Funktion kann indirekt WM \_ Paint-Meldungen für Ihre Fenster generieren. Diese Funktionen markieren den gesamten oder einen Teil eines Client Bereichs als ungültig (der neu gezeichnet werden muss).
+description: Das System ist nicht die einzige Quelle für WM \_ PAINT-Nachrichten. Die InvalidateRect- oder InvalidateRgn-Funktion kann indirekt WM \_ PAINT-Meldungen für Ihre Fenster generieren. Diese Funktionen markieren einen Clientbereich ganz oder teilweise als ungültig (der neu gezeichnet werden muss).
 ms.assetid: 41c2bc07-768b-4d27-a869-69b072f3e033
-title: Der Client Bereich wird ungültig gemacht.
+title: Ungültig machen des Clientbereichs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 76fb02be44f600b80f87ec8f05c022fa3c35d827
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d94a3a5b4e6903c549331788f9e81947dca44e7a699bb1a633bce46525585b2d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104993959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119558660"
 ---
-# <a name="invalidating-the-client-area"></a>Der Client Bereich wird ungültig gemacht.
+# <a name="invalidating-the-client-area"></a>Ungültig machen des Clientbereichs
 
-Das System ist nicht die einzige Quelle von [**WM \_ Paint**](wm-paint.md) -Nachrichten. Die [**invalidateruor**](/windows/desktop/api/Winuser/nf-winuser-invalidaterect) [**InvalidateRgn**](/windows/desktop/api/Winuser/nf-winuser-invalidatergn) -Funktion kann indirekt **WM \_ Paint** -Meldungen für Ihre Fenster generieren. Diese Funktionen markieren den gesamten oder einen Teil eines Client Bereichs als ungültig (der neu gezeichnet werden muss).
+Das System ist nicht die einzige Quelle für [**WM \_ PAINT-Nachrichten.**](wm-paint.md) Die [**InvalidateRect-**](/windows/desktop/api/Winuser/nf-winuser-invalidaterect) oder [**InvalidateRgn-Funktion**](/windows/desktop/api/Winuser/nf-winuser-invalidatergn) kann indirekt **WM \_ PAINT-Meldungen** für Ihre Fenster generieren. Diese Funktionen markieren einen Clientbereich ganz oder teilweise als ungültig (der neu gezeichnet werden muss).
 
-Im folgenden Beispiel wird der gesamte Client Bereich bei der Verarbeitung von [**WM \_ char**](../inputdev/wm-char.md) -Nachrichten durch die Fenster Prozedur ungültig. Dadurch kann der Benutzer die Abbildung ändern, indem er eine Zahl eingibt und die Ergebnisse anzeigen kann. Diese Ergebnisse werden gezeichnet, sobald in der Nachrichten Warteschlange der Anwendung keine weiteren Meldungen vorhanden sind.
+Im folgenden Beispiel macht die Fensterprozedur den gesamten Clientbereich ungültig, wenn [**WM \_ CHAR-Nachrichten verarbeitet**](../inputdev/wm-char.md) werden. Dadurch kann der Benutzer die Abbildung ändern, indem er eine Zahl eintippen und die Ergebnisse anzeigen kann. Diese Ergebnisse werden gezeichnet, sobald keine anderen Nachrichten in der Nachrichtenwarteschlange der Anwendung enthalten sind.
 
 
 ```C++
@@ -57,7 +57,7 @@ case WM_PAINT:
 
 
 
-In diesem Beispiel gibt das von [**invalidaterierierten**](/windows/desktop/api/Winuser/nf-winuser-invalidaterect) **null** -Argument den gesamten Client Bereich an. Das **true** -Argument bewirkt, dass der Hintergrund gelöscht wird. Wenn Sie nicht möchten, dass die Anwendung wartet, bis die Nachrichten Warteschlange der Anwendung keine weiteren Nachrichten enthält, erzwingen Sie mithilfe der [**UpdateWindow**](/windows/desktop/api/Winuser/nf-winuser-updatewindow) -Funktion, dass die WM-Zeichnungs Nachricht sofort gesendet wird. [**\_**](wm-paint.md) Wenn ein ungültiger Teil des Client Bereichs vorhanden ist, sendet **UpdateWindow** die **WM \_** -Zeichnungs Nachricht für das angegebene Fenster direkt an die Fenster Prozedur.
+In diesem Beispiel gibt das von [**InvalidateRect**](/windows/desktop/api/Winuser/nf-winuser-invalidaterect) verwendete **NULL-Argument** den gesamten Clientbereich an. Das **TRUE-Argument** bewirkt, dass der Hintergrund gelöscht wird. Wenn Sie nicht möchten, dass die Anwendung wartet, bis die Nachrichtenwarteschlange der Anwendung keine anderen Nachrichten enthält, verwenden Sie die [**UpdateWindow-Funktion,**](/windows/desktop/api/Winuser/nf-winuser-updatewindow) um zu erzwingen, dass die [**WM \_ PAINT-Nachricht**](wm-paint.md) sofort gesendet wird. Wenn ein ungültiger Teil des Clientbereichs vor liegt, sendet **UpdateWindow** die **WM \_ PAINT-Nachricht** für das angegebene Fenster direkt an die Fensterprozedur.
 
  
 

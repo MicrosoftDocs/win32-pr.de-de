@@ -1,5 +1,5 @@
 ---
-description: 'Process_V0 Klasse: Diese Klasse ist die übergeordnete Klasse für Prozessereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
+description: 'Process_V0 Klasse: Diese Klasse ist die übergeordnete Klasse für Prozessereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 29ecf04c-4be1-451e-b140-4ffed337cfed
 title: Process_V0-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 0e284840a078b2dac782aecaacae5490f4a06b27
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: bb6cf5a36bc25763dd2bb05d57b3d6b9186b9dec95c903de40b58700f5859127
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119070020"
 ---
 # <a name="process_v0-class"></a>Process \_ V0-Klasse
 
 Diese Klasse ist die übergeordnete Klasse für Prozessereignisse.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,14 +42,14 @@ Die **Process \_ V0-Klasse** definiert keine Member.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>       |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

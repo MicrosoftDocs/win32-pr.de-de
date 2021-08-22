@@ -1,33 +1,33 @@
 ---
-title: Verwenden des Übertragungs Manifests
-description: Der Webpublishing-Assistent und der Assistent für die Online druckbestellung verwenden das Übertragungs Manifest, um Details der Datenübertragung zwischen dem Client Computer und dem Serverstandort zu kommunizieren.
+title: Verwenden des Übertragungsmanifests
+description: Der Webveröffentlichungs-Assistent und der Onlinedruckreihenfolge-Assistent verwenden das Übertragungsmanifest, um Details zur Datenübertragung zwischen dem Clientcomputer und dem Serverstandort zu kommunizieren.
 ms.assetid: b7bb541c-3bf4-4aab-ac70-c006517e772e
 keywords:
-- Webpublishing-Assistent, übertragen des Manifests
-- Online-druckstellungs-Assistent, übertragen des Manifests
-- Übertragungs Manifest
+- Webveröffentlichungs-Assistent,Übertragungsmanifest
+- Onlinedruckreihenfolge-Assistent,Übertragungsmanifest
+- Übertragungsmanifest
 - manifest
-- Window. extern, Übertragungs Manifest
+- window.external,Übertragungsmanifest
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 20fa7b3a35a6f06e2939b6c25f82d12c2b98a7f7
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 48d7f4ea3f9cd392f4b0bab50e1e558613fc7485d4f44a27472cd48ad898b3ba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103858245"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119555850"
 ---
-# <a name="using-the-transfer-manifest"></a>Verwenden des Übertragungs Manifests
+# <a name="using-the-transfer-manifest"></a>Verwenden des Übertragungsmanifests
 
-Der Webpublishing-Assistent und der Assistent für die Online druckbestellung verwenden das Übertragungs Manifest, um Details der Datenübertragung zwischen dem Client Computer und dem Serverstandort zu kommunizieren.
+Der Webveröffentlichungs-Assistent und der Onlinedruckreihenfolge-Assistent verwenden das Übertragungsmanifest, um Details zur Datenübertragung zwischen dem Clientcomputer und dem Serverstandort zu kommunizieren.
 
-## <a name="the-purpose-of-the-transfer-manifest"></a>Der Zweck des Übertragungs Manifests.
+## <a name="the-purpose-of-the-transfer-manifest"></a>Zweck des Übertragungsmanifests
 
-Das Übertragungs Manifest beschreibt die an der Übertragung beteiligten Dateien, einschließlich Details wie der Ziel Hierarchie und den Metadaten der Datei. Das Manifest kann durch ein Server seitiges Skript geändert werden, indem ungeeignete Dateien aus der Liste entfernt werden und Informationen darüber hinzugefügt werden, wie und wo die Dateien übertragen werden sollen.
+Das Übertragungsmanifest beschreibt dateien, die an der Übertragung beteiligt sind, einschließlich Details wie die Zielhierarchie und die Metadaten der Datei. Serverseitige Skripts können das Manifest ändern, indem ungeeignete Dateien aus der Liste entfernt und Informationen dazu hinzugefügt werden, wie und wo die Dateien übertragen werden sollen.
 
-Das Manifest wird als Eigenschaften **Fenster. extern. Property ("transfermanifest")**, ein XML-Dokumentobjektmodell Dokument (DOM) verfügbar gemacht. Weitere Informationen zum XML-DOM finden Sie in der MSDN-Dokumentation zu [IXMLDOMDocument/DOMDocument](/previous-versions/windows/desktop/ms756987(v=vs.85)).
+Das Manifest wird als **Eigenschaftendokument window.external.Property("TransferManifest")** verfügbar gemacht, ein DOM-Dokument (XML Dokumentobjektmodell). Weitere Informationen zum XML-DOM finden Sie in der MSDN-Dokumentation für [IXMLDOMDocument/DOMDocument.](/previous-versions/windows/desktop/ms756987(v=vs.85))
 
-Die Organisation der obersten Ebene des Übertragungs Manifests lautet wie folgt:
+Die Organisation des Übertragungsmanifests auf oberster Ebene sieht wie folgt aus:
 
 
 ```
@@ -40,22 +40,22 @@ Die Organisation der obersten Ebene des Übertragungs Manifests lautet wie folgt
 
 
 
-Die serverseitige HTML-Seite kann mithilfe der Knoten im Manifest bestimmte Informationen zu den zu kopierenden Dateien abrufen und dann die Benutzeroberfläche des dienstanders entsprechend ändern. Beispielsweise kann eine Foto Druck Site die Informationen verwenden, um Miniaturansichten der ausgewählten Images anzuzeigen, während ein Speicherort die Informationen verwenden könnte, um sicherzustellen, dass ausreichend Speicherplatz für diesen Benutzer verfügbar ist. Umfassende Informationen zu den Knoten und Attributen für das Übertragen von Manifests finden Sie unter [übertragen des manifest-Schemas](/windows/desktop/shell/interfaces)
+Die serverseitige HTML-Seite kann die Knoten im Manifest verwenden, um bestimmte Informationen zu den zu kopierenden Dateien abzurufen und dann die Benutzeroberfläche des Diensts entsprechend zu ändern. Beispielsweise kann eine Fotodruckwebsite die Informationen verwenden, um Miniaturansichten der ausgewählten Bilder anzuzeigen, während eine Speicherwebsite die Informationen verwenden kann, um sicherzustellen, dass genügend Speicherplatz für diesen Benutzer verfügbar ist. Vollständige Informationen zu den Knoten und Attributen des Übertragungsmanifests finden Sie unter Übertragen des [Manifestschemas.](/windows/desktop/shell/interfaces)
 
-Das Schema des Übertragungs Manifests wird als offenes Modell geschrieben, sodass Elemente, die nicht speziell im Schema definiert sind, im Übertragungs Manifest angezeigt werden können. Daher kann eine Anbieter Site proprietäre Elemente zur eigenen Verwendung hinzufügen, ohne die Gültigkeit des Manifests zu beeinträchtigen. Das Schema ist auch so definiert, dass die Reihenfolge der Elemente nicht eingeschränkt ist.
+Das Schema des Übertragungsmanifests wird als offenes Modell geschrieben, sodass Elemente, die nicht speziell im Schema definiert sind, im Übertragungsmanifest angezeigt werden können. Daher kann eine Anbieterwebsite proprietäre Elemente für die eigene Verwendung hinzufügen, ohne die Gültigkeit des Manifests zu beeinträchtigen. Das Schema wird auch so definiert, dass die Reihenfolge der Elemente nicht eingeschränkt wird.
 
 > [!Note]  
-> Das Manifest wird jedes Mal neu erstellt, wenn ein neuer Anbieter ausgewählt wird, damit der Anbieter die Möglichkeit hat, Site Informationen im Manifest zu speichern.
+> Das Manifest wird jedes Mal neu erstellt, wenn ein neuer Anbieter ausgewählt wird, sodass der Anbieter Standortinformationen im Manifest speichern kann.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Schema des Übertragungs Manifests](/windows/desktop/shell/interfaces)
+[Übertragen des Manifestschemas](/windows/desktop/shell/interfaces)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

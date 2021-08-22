@@ -1,7 +1,7 @@
 ---
 description: Enthält Formatinformationen für die intelligente Neukomprimierung.
 ms.assetid: 471a7b4a-e639-443b-a30e-870b747e072c
-title: SCompFmt0-Struktur (qedit. h)
+title: SCompFmt0-Struktur (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,17 +13,17 @@ api_type:
 - HeaderDef
 api_location:
 - Qedit.h
-ms.openlocfilehash: ad5a5277718e8d414d64a86b9c31739cf576736a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f02c9cda80acdd42d0687502834a9b2e66f1cf773d02b88eadabdd346850061e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119072704"
 ---
 # <a name="scompfmt0-structure"></a>SCompFmt0-Struktur
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
@@ -45,17 +45,17 @@ typedef struct _SCompFmt0 {
 
 <dl> <dt>
 
-**nformatid**
+**nFormatId**
 </dt> <dd>
 
-Bleiben muss 0 (null) sein.
+Reserviert; muss 0 (null) sein.
 
 </dd> <dt>
 
 **MediaType**
 </dt> <dd>
 
-[**Am \_ \_Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur, die das Komprimierungs Format beschreibt.
+[**AM \_ MEDIA \_ TYPE-Struktur,**](/windows/win32/api/strmif/ns-strmif-am_media_type) die das Komprimierungsformat beschreibt.
 
 </dd> </dl>
 
@@ -65,7 +65,7 @@ Bleiben muss 0 (null) sein.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>"Qedit. h"</dt> </dl> |
+| Header<br/> | <dl> <dt>Qedit.h</dt> </dl> |
 
 
 
@@ -73,10 +73,10 @@ Bleiben muss 0 (null) sein.
 
 <dl> <dt>
 
-[**Iamtimelinegroup:: gezmartrecompressformat**](iamtimelinegroup-getsmartrecompressformat.md)
+[**IAMTimelineGroup::GetSmartRecompressFormat**](iamtimelinegroup-getsmartrecompressformat.md)
 </dt> <dt>
 
-[**Iamtimelinegroup:: *-martrecompressformat**](iamtimelinegroup-setsmartrecompressformat.md)
+[**IAMTimelineGroup::SetSmartRecompressFormat**](iamtimelinegroup-setsmartrecompressformat.md)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
-title: WMDRM_ENCRYPT_SCATTER_INFO Struktur (wmdrmsdk. h)
-description: Die WMDRM- \_ Verschlüsselungs Punkt \_ \_ Info Struktur enthält Informationen, die erforderlich sind, um die zu verwendende iwmdrmencryptscatter-Schnittstelle zu konfigurieren.
+title: WMDRM_ENCRYPT_SCATTER_INFO -Struktur (Wmdrmsdk.h)
+description: Die WMDRM ENCRYPT SCATTER INFO-Struktur enthält Informationen, die zum Konfigurieren der \_ \_ \_ IWMDRMEncryptScatter-Schnittstelle für die Verwendung erforderlich sind.
 ms.assetid: 25e19511-56ac-441b-b521-5097dd792ead
 keywords:
-- WMDRM_ENCRYPT_SCATTER_INFO Struktur-Windows Media-Format
-- Struktur des Windows-Medien Formats
+- WMDRM_ENCRYPT_SCATTER_INFO struktur windows media format
+- Strukturfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 500012231f6860fd94038b240355eda9aa2aee44
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3ef766f40742713b01648348bedb4c1a35494fdc02d02843f8f2a41f133938a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364892"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083814"
 ---
-# <a name="wmdrm_encrypt_scatter_info-structure"></a>WMDRM- \_ Verschlüsselungs Punkt \_ Info- \_ Struktur
+# <a name="wmdrm_encrypt_scatter_info-structure"></a>WMDRM \_ ENCRYPT \_ SCATTER \_ INFO-Struktur
 
-Die **WMDRM- \_ Verschlüsselungs Punkt \_ \_ Info** Struktur enthält Informationen, die erforderlich sind, um die zu verwendende [**iwmdrmencryptscatter**](iwmdrmencryptscatter.md) -Schnittstelle zu konfigurieren.
+Die **WMDRM \_ ENCRYPT SCATTER \_ \_ INFO-Struktur** enthält Informationen, die zum Konfigurieren der [**IWMDRMEncryptScatter-Schnittstelle**](iwmdrmencryptscatter.md) für die Verwendung erforderlich sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,37 +44,37 @@ typedef struct WMDRM_ENCRYPT_SCATTER_INFO {
 
 <dl> <dt>
 
-**dwstreamid**
+**dwStreamID**
 </dt> <dd>
 
-Der Bezeichner des zu verschlüsselnden Streams.
+Bezeichner des zu verschlüsselnden Streams.
 
 </dd> <dt>
 
-**dwsampleschutzversion**
+**dwSampleProtectionVersion**
 </dt> <dd>
 
-Die Beispiel Schutz Version, die zum Codieren von Daten aus dem angegebenen Stream verwendet werden soll.
+Beispielschutzversion, die zum Codieren von Daten aus dem angegebenen Stream verwendet werden soll.
 
 </dd> <dt>
 
-**cbschutzinfo**
+**cbProtectionInfo**
 </dt> <dd>
 
-Größe des **pbschutzinfo** -Puffers in Bytes.
+Größe des **pbProtectionInfo-Puffers** in Bytes.
 
 </dd> <dt>
 
-**pbschutzinfo**
+**pbProtectionInfo**
 </dt> <dd>
 
-Puffer mit zusätzlichen Schutz Informationen.
+Puffer mit zusätzlichen Schutzinformationen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird von der [**iwmdrmencryptscatter:: initencryptscatter**](iwmdrmencryptscatter-initencryptscatter.md) -Methode verwendet.
+Diese Struktur wird von der [**IWMDRMEncryptScatter::InitEncryptScatter-Methode**](iwmdrmencryptscatter-initencryptscatter.md) verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,11 +82,11 @@ Diese Struktur wird von der [**iwmdrmencryptscatter:: initencryptscatter**](iwmd
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-description: 'Image_V1 Klasse: Diese Klasse ist die übergeordnete Klasse für Bildladeereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
+description: 'Image_V1 Klasse: Diese Klasse ist die übergeordnete Klasse für Bildladeereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 78c68080-90fc-4ebf-aa8a-4e03ce629d54
 title: Image_V1-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: aafb2b7307e72e97ba1508aa80638af7565f2867
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 7e5db8d6245ab332c6238a7053623580c16e93caa49e0ac2623cba61723dc1d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119070130"
 ---
 # <a name="image_v1-class"></a>Image \_ V1-Klasse
 
 Diese Klasse ist die übergeordnete Klasse für Bildladeereignisse.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,14 +42,14 @@ Die **Image \_ V1-Klasse** definiert keine Member.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

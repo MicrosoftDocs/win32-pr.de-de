@@ -52,15 +52,15 @@ Die folgenden Einschränkungen gelten für die Datagrammprotokolle **ncadg \_ ip
 -   Rückrufe werden nicht unterstützt. Alle Funktionen, die das **\[** [**Rückrufattribut**](callback.md) **\]** verwenden, führen zu einem Fehler.
 -   Die Verwendung des Pipetypkonstruktors [**wird**](pipe.md) nicht unterstützt.
 
-Bei Verwendung des **ncadg \_ ipx-Transports** ist der Servername genau derselbe wie der 32-Bit-Windows Servername. Da die Namen jedoch mithilfe von Protokollen von Werden verteilt werden, müssen sie den Benennungskonventionen von Bein entsprechen. Wenn es sich bei einem Servernamen nicht um einen gültigen Namen handelt, können Server keine Endpunkte mit dem **ncadg \_ ipx-Transport** erstellen. Im Folgenden finden Sie eine partielle Liste von Zeichen, die in Den-Servernamen unzulässig sind:
+Bei Verwendung des **ncadg-ipx-Transports \_** ist der Servername identisch mit dem 32-Bit-Windows Servernamen. Da die Namen jedoch mithilfe von Protokollen von Werden verteilt werden, müssen sie den Benennungskonventionen von Bein entsprechen. Wenn es sich bei einem Servernamen nicht um einen gültigen Namen handelt, können Server keine Endpunkte mit dem **ncadg \_ ipx-Transport** erstellen. Im Folgenden finden Sie eine partielle Liste von Zeichen, die in Den-Servernamen unzulässig sind:
 
 " \* + . / : ; < = > ? \[ \] \\ \|
 
 Der **ncadg \_ ipx-Transport** wird von der version of NWLink unterstützt, die mit MS Client 3.0 bereitgestellt wird.
 
-16-Bit-Windows-Clientanwendungen, die den **ncadg \_ ipx-Transport** verwenden, erfordern, dass die Datei Nwipxspx.dll installiert wird, um unter dem WOW-Subsystem ausgeführt zu werden. Wenden Sie sich an Den, um diese Datei zu erhalten.
+16-Bit-Windows-Clientanwendungen, die den **ncadg \_ ipx-Transport** verwenden, erfordern, dass die Datei Nwipxspx.dll installiert ist, um unter dem WOW-Subsystem ausgeführt zu werden. Wenden Sie sich an Den, um diese Datei zu erhalten.
 
-Um die Netzwerk- und Knotenadressen zu erhalten, verwenden Sie das **Comcheck-Hilfsprogramm** von Perl oder die von DerTegetInternetAddress definierte **API.** Auf Windows können Sie diese Adressen auch mit dem **Befehl ipxroute config** abrufen.
+Um die Netzwerk- und Knotenadressen zu erhalten, verwenden Sie das **Comcheck-Hilfsprogramm** von Perl oder die von DerTegetInternetAddress definierte **API.** Auf Windows können Sie diese Adressen auch mit dem Befehl **ipxroute config** abrufen.
 
 Die Syntax der TCP/IP-Transportportzeichenfolge wird wie alle Portzeichenfolgen unabhängig von der IDL-Spezifikation definiert. Der Compiler führt einige Syntaxüberprüfungen durch, garantiert jedoch nicht, dass die Endpunktspezifikation korrekt ist. Einige Fehler werden möglicherweise zur Laufzeit und nicht zur Kompilierzeit gemeldet.
 

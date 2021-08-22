@@ -1,9 +1,9 @@
 ---
-title: TTM_SETTIPTEXTCOLOR Meldung (kommstrg. h)
+title: TTM_SETTIPTEXTCOLOR Meldung (Commctrl.h)
 description: Legt die Textfarbe in einem QuickInfo-Fenster fest.
 ms.assetid: a6c6eb31-e6c4-47e2-b112-48e7cd21b778
 keywords:
-- Windows-Steuerelemente für TTM_SETTIPTEXTCOLOR Meldung
+- TTM_SETTIPTEXTCOLOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9fb4ead5374015c014a105056b63077779272535
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a593be5bc9bb3ba8d04b1a657785afb86824119fa8bbd5e027003f296230e99e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119642510"
 ---
-# <a name="ttm_settiptextcolor-message"></a>TTM-Setup \_ TextColor-Nachricht
+# <a name="ttm_settiptextcolor-message"></a>TTM \_ SETTIPTEXTCOLOR-Nachricht
 
 Legt die Textfarbe in einem QuickInfo-Fenster fest.
 
@@ -43,9 +43,9 @@ Neue Textfarbe.
 
 Der Rückgabewert für diese Nachricht wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn visuelle Stile aktiviert sind, hat diese Nachricht keine Auswirkung.
+Wenn visuelle Stile aktiviert sind, hat diese Meldung keine Auswirkungen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Wenn visuelle Stile aktiviert sind, hat diese Nachricht keine Auswirkung.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Wenn visuelle Stile aktiviert sind, hat diese Nachricht keine Auswirkung.
 
 <dl> <dt>
 
-[**TTM \_ gettiptextcolor**](ttm-gettiptextcolor.md)
+[**TTM \_ GETTIPTEXTCOLOR**](ttm-gettiptextcolor.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Die arpcomments-Eigenschaft stellt die System Steuerungs Kommentare der Software bereit, die unter dem Deinstallations Registrierungsschlüssel geschrieben sind. Diese Eigenschaft kann von der Befehlszeile oder einer Transformation festgelegt werden.
+description: Die Eigenschaft ARPCOMMENTS stellt die Option Programme hinzufügen oder entfernen Systemsteuerung kommentaren, die unter dem Registrierungsschlüssel deinstallieren geschrieben werden. Diese Eigenschaft kann über die Befehlszeile oder eine Transformation festgelegt werden.
 ms.assetid: 68c25703-a217-42cc-833e-0568216813a9
-title: Arpcomments-Eigenschaft
+title: ARPCOMMENTS-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b6ac8ed0d5fe1491e30564d6c982d81605f4d5d9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 616e172e1e863b452526ce4dedafb010c32388f99bee83c396b878972492e787
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358067"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119559150"
 ---
-# <a name="arpcomments-property"></a>Arpcomments-Eigenschaft
+# <a name="arpcomments-property"></a>ARPCOMMENTS-Eigenschaft
 
-Die **arpcomments** -Eigenschaft stellt die System Steuerungs Kommentare der Software bereit, die unter dem [Deinstallations Registrierungsschlüssel](uninstall-registry-key.md)geschrieben sind. Diese Eigenschaft kann von der Befehlszeile oder einer Transformation festgelegt werden.
+Die **Eigenschaft ARPCOMMENTS** stellt die Option Programme hinzufügen oder entfernen Systemsteuerung, die unter dem [Registrierungsschlüssel deinstallieren geschrieben werden.](uninstall-registry-key.md) Diese Eigenschaft kann über die Befehlszeile oder eine Transformation festgelegt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -21,7 +21,7 @@ Die **arpcomments** -Eigenschaft stellt die System Steuerungs Kommentare der Sof
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

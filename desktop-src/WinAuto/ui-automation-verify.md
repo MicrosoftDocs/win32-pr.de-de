@@ -18,9 +18,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119052388"
 ---
-# <a name="accessibility-tools---ui-automation-verify-uia-verify"></a>Barrierefreiheitstools – Benutzeroberflächenautomatisierung Überprüfen (UIA-Überprüfung)
+# <a name="accessibility-tools---ui-automation-verify-uia-verify"></a>Barrierefreiheitstools – Benutzeroberflächenautomatisierung Verify (UIA-Überprüfung)
 
-**Benutzeroberflächenautomatisierung Verify (UIA Verify)** ist ein Testframework zum manuellen und automatisierten Testen der Implementierung eines Steuerelements oder einer Anwendung von Microsoft Benutzeroberflächenautomatisierung. Die meisten Funktionen des Testframeworks stammen aus einer DLL namens WUIATestLibrary.dll. Diese DLL enthält den Code zum Testen bestimmter Benutzeroberflächenautomatisierung Funktionen und unterstützt auch die Protokollierung der Testergebnisse. Sie können Ihre Anwendung in den Testcode integrieren und regelmäßige, automatisierte Tests oder Spot-Überprüfungen Ihrer Benutzeroberflächenautomatisierung Szenarien durchführen.
+**Benutzeroberflächenautomatisierung Verify (UIA Verify)** ist ein Testframework zum manuellen und automatisierten Testen der Implementierung eines Steuerelements oder einer Anwendung von Microsoft Benutzeroberflächenautomatisierung. Die meisten Funktionen des Testframeworks stammen aus einer DLL namens WUIATestLibrary.dll. Diese DLL enthält den Code zum Testen bestimmter Benutzeroberflächenautomatisierung Funktionalität und unterstützt auch die Protokollierung der Testergebnisse. Sie können Ihre Anwendung in den Testcode integrieren und regelmäßige, automatisierte Tests oder Spot-Überprüfungen Ihrer Benutzeroberflächenautomatisierung Szenarien durchführen.
 
 **Die UIA-Überprüfung** wird mit dem Windows Software Development Kit (SDK) installiert. Sie befindet sich im \\ Ordner bin \\ < *version* > \\ < *platform* > \\ UIAVerify des SDK-Installationspfads (VisualUIAVerifyNative.exe).
 

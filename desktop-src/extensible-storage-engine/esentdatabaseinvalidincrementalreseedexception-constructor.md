@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdatabaseingevalidinkrementalreseedexception-Konstruktor'
-title: Esentdatabaseingevalidinkrementalreseedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentDatabaseInvalidIncrementalReseedException-Konstruktor'
+title: EsentDatabaseInvalidIncrementalReseedException-Konstruktor
 TOCTitle: 'EsentDatabaseInvalidIncrementalReseedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDatabaseInvalidIncrementalReseedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabaseinvalidincrementalreseedexception.esentdatabaseinvalidincrementalreseedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d4b6199118294c897a730078cdc4b16a7271dd75
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d3f799666c7b4480b46c697b75f7fb4fe2d6c587a1106771969a50307f883046
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355490"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119041498"
 ---
-# <a name="esentdatabaseinvalidincrementalreseedexception-constructor"></a>Esentdatabaseingevalidinkrementalreseedexception-Konstruktor
+# <a name="esentdatabaseinvalidincrementalreseedexception-constructor"></a>EsentDatabaseInvalidIncrementalReseedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdatabaseinvalidinkrementalreseedexception-Klasse.
+Initialisiert eine neue Instanz der EsentDatabaseInvalidIncrementalReseedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentDatabaseInvalidIncrementalReseedException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabaseingevalidinkrementalreseedexception-Klasse](./esentdatabaseinvalidincrementalreseedexception-class.md)
+[EsentDatabaseInvalidIncrementalReseedException-Klasse](./esentdatabaseinvalidincrementalreseedexception-class.md)
 
-[Esentdatabaseingevalidinkrementalreseedexception-Elemente](./esentdatabaseinvalidincrementalreseedexception-members.md)
+[EsentDatabaseInvalidIncrementalReseedException-Member](./esentdatabaseinvalidincrementalreseedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

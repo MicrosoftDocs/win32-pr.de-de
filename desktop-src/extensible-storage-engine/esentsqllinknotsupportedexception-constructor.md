@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentsqllinklotsupportedexception-Konstruktor'
-title: Esentsqllinklotsupportedexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentSQLLinkNotSupportedException-Konstruktor'
+title: EsentSQLLinkNotSupportedException-Konstruktor
 TOCTitle: 'EsentSQLLinkNotSupportedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSQLLinkNotSupportedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentsqllinknotsupportedexception.esentsqllinknotsupportedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a4e66be482931317d3e2759da2b40a4e0685ae56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d8ca38ec0fb99c1616ee99321436761993e7da379c8536dca16467dce952f250
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867583"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119619110"
 ---
-# <a name="esentsqllinknotsupportedexception-constructor"></a>Esentsqllinklotsupportedexception-Konstruktor
+# <a name="esentsqllinknotsupportedexception-constructor"></a>EsentSQLLinkNotSupportedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentsqllinklotsupportedexception-Klasse.
+Initialisiert eine neue Instanz der EsentSQLLinkNotSupportedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentSQLLinkNotSupportedException()
 public EsentSQLLinkNotSupportedException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentsqllinklotsupportedexception-Klasse](./esentsqllinknotsupportedexception-class.md)
+[EsentSQLLinkNotSupportedException-Klasse](./esentsqllinknotsupportedexception-class.md)
 
-[Esentsqllinklotsupportedexception-Elemente](./esentsqllinknotsupportedexception-members.md)
+[EsentSQLLinkNotSupportedException-Member](./esentsqllinknotsupportedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

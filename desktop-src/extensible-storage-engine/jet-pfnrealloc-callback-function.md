@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen über: JET_PFNREALLOC Callback-Funktion'
-title: JET_PFNREALLOC Callback-Funktion
+description: 'Weitere Informationen finden Sie unter: JET_PFNREALLOC-Rückruffunktion'
+title: JET_PFNREALLOC Rückruffunktion
 TOCTitle: JET_PFNREALLOC Callback Function
 ms:assetid: 443d0b7e-1c3b-4584-9bc3-938724527313
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269237(v=EXCHG.10)
@@ -15,21 +15,21 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 032c1edcfd18166b79f4c8b2868d53d0b84434d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 24e4bc43928d6b7ea25294a0163b3b35b1fa04391196e86c54554a785ed2429d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218594"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119616887"
 ---
-# <a name="jet_pfnrealloc-callback-function"></a>JET_PFNREALLOC Callback-Funktion
+# <a name="jet_pfnrealloc-callback-function"></a>JET_PFNREALLOC Rückruffunktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_pfnrealloc-callback-function"></a>JET_PFNREALLOC Callback-Funktion
+## <a name="jet_pfnrealloc-callback-function"></a>JET_PFNREALLOC Rückruffunktion
 
-Die JET_PFNREALLOC-Funktion ist ein [realloc](/cpp/c-runtime-library/reference/realloc?view=vs-2019) -kompatibler Rückruf, der von [jetenumeratecolumns](./jetenumeratecolumns-function.md) verwendet wird, um Speicher für die Ausgabepuffer zuzuweisen.
+Die JET_PFNREALLOC ist ein [realloc-kompatibler](/cpp/c-runtime-library/reference/realloc?view=vs-2019) Rückruf, der von [JetEnumerateColumns](./jetenumeratecolumns-function.md) verwendet wird, um Arbeitsspeicher für die Ausgabepuffer zu reservieren.
 
 ```cpp
     void * JET_API JET_PFNREALLOC(
@@ -41,21 +41,21 @@ Die JET_PFNREALLOC-Funktion ist ein [realloc](/cpp/c-runtime-library/reference/r
 
 ### <a name="parameters"></a>Parameter
 
-*pvcontext*
+*pvContext*
 
-Der für [jetenumeratecolumns](./jetenumeratecolumns-function.md)angegebene Kontext Zeiger. Dieser Kontext Zeiger kann verwendet werden, um den Zustand des Aufrufers von [jetenumeratecolumns](./jetenumeratecolumns-function.md) an die Implementierung dieses Rückrufs zu übermitteln.
+Der Kontextzeiger, der [JetEnumerateColumns gegeben wird.](./jetenumeratecolumns-function.md) Dieser Kontextzeiger kann verwendet werden, um den Zustand vom Aufrufer von [JetEnumerateColumns](./jetenumeratecolumns-function.md) an die Implementierung dieses Rückrufs zu übermitteln.
 
-*teuren*
+*Pv*
 
-Wenn der Wert ungleich NULL ist, wird ein Zeiger auf einen Speicherblock angegeben, der zuvor von diesem Rückruf zugeordnet wurde. Wenn der Wert NULL ist, wird ein neuer Speicherblock der angeforderten Größe zugeordnet.
+Wenn nicht NULL, gibt einen Zeiger auf einen Speicherblock an, der zuvor von diesem Rückruf zugeordnet wurde. Bei NULL wird ein neuer Speicherblock der angeforderten Größe zugeordnet.
 
-*betrieben*
+*Cb*
 
-Die neue Größe des Speicherblocks in Bytes. Wenn dieser Parameter 0 (null) ist und ein Speicherblock angegeben wird, wird dieser Speicherblock freigegeben.
+Die neue Größe des Speicherblocks in Bytes. Wenn dieser Parameter 0 (null) ist und ein Speicherblock angegeben wird, wird dieser Speicherblock frei.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Das System generiert möglicherweise Erfolgs-oder Fehlercodes, wenn diese Funktion aufgerufen wird. Informationen dazu, wie diese Codes als HRESULTs zurückgegeben werden, finden Sie unter [Fehler bei Extensible Storage Engine](./extensible-storage-engine-errors.md).
+Das System kann Erfolgs- oder Fehlercodes als Ergebnis eines Aufrufs dieser Funktion generieren. Informationen zum Zurückgeben dieser Codes als HRESULTs finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md).
 
 <table>
 <colgroup>
@@ -71,11 +71,11 @@ Das System generiert möglicherweise Erfolgs-oder Fehlercodes, wenn diese Funkti
 <tbody>
 <tr class="odd">
 <td><p>Erfolg</p></td>
-<td><p>Wenn ein zuvor zugewiesener Speicherblock angegeben wurde und eine neue Größe von 0 (null) angegeben wurde, wird der Block freigegeben, und es wird NULL zurückgegeben. Wenn ein zuvor zugewiesener Speicherblock angegeben wurde und eine neue Größe ungleich 0 (null) angegeben wurde, wird der neu zugeordnete Speicherblock zurückgegeben. Wenn kein Speicherblock angegeben wurde, wird ein neu zugeordneter Speicherblock der angegebenen Größe zurückgegeben.</p></td>
+<td><p>Wenn ein zuvor zugeordneter Speicherblock angegeben wurde und eine neue Größe von 0 angegeben wurde, wird dieser Block frei, und NULL wird zurückgegeben. Wenn ein zuvor zugeordneter Speicherblock angegeben wurde und eine neue Größe nicht 0 (null) angegeben wurde, wird der neu zugeordnete Speicherblock zurückgegeben. Wenn kein Speicherblock angegeben wurde, wird ein neu zugeordneter Speicherblock der angegebenen Größe zurückgegeben.</p></td>
 </tr>
 <tr class="even">
 <td><p>Fehler</p></td>
-<td><p>NULL wird zurückgegeben. Wenn ein zuvor zugeordneter Speicherblock bereitgestellt wurde, bleibt dieser Block reserviert.</p></td>
+<td><p>NULL wird zurückgegeben. Wenn ein zuvor zugeordneter Speicherblock bereitgestellt wurde, bleibt dieser Block zugeordnet.</p></td>
 </tr>
 </tbody>
 </table>
@@ -99,7 +99,7 @@ Das System generiert möglicherweise Erfolgs-oder Fehlercodes, wenn diese Funkti
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>
@@ -107,4 +107,4 @@ Das System generiert möglicherweise Erfolgs-oder Fehlercodes, wenn diese Funkti
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Jetenreeratecolumschlag](./jetenumeratecolumns-function.md)
+[JetEnumerateColumns](./jetenumeratecolumns-function.md)

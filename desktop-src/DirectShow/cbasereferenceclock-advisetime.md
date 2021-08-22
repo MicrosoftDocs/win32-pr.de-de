@@ -1,7 +1,7 @@
 ---
-description: 'Die adviantime-Methode erstellt eine One-Shot-anforderungsanforderung. Diese Methode implementiert die IReferenceClock:: adviabtime-Methode.'
+description: Die AdviseTime-Methode erstellt eine einmalige Empfehlungsanforderung. Diese Methode implementiert die IReferenceClock::AdviseTime-Methode.
 ms.assetid: 4849a04d-35f2-4a24-bf5d-f20e541f5e99
-title: Cbasereferenceclock. adviantime-Methode (Ref. h)
+title: CBaseReferenceClock.AdviseTime-Methode (Refclock.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 326fc5e0939803ab66e0466fbf32351387977019
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e50b864a63cdd021d82c0a2a73f4f9c3acb68d1afb1f6a2dcd8d8d575966a5fc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119502790"
 ---
-# <a name="cbasereferenceclockadvisetime-method"></a>Cbasereferenceclock. advientime-Methode
+# <a name="cbasereferenceclockadvisetime-method"></a>CBaseReferenceClock.AdviseTime-Methode
 
-Die `AdviseTime` -Methode erstellt eine One-Shot-anforderungsanforderung. Diese Methode implementiert die [**IReferenceClock:: adviabtime**](/windows/desktop/api/Strmif/nf-strmif-ireferenceclock-advisetime) -Methode.
+Die `AdviseTime` -Methode erstellt eine einmalige Empfehlungsanforderung. Diese Methode implementiert die [**IReferenceClock::AdviseTime-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ireferenceclock-advisetime)
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,53 +48,53 @@ HRESULT AdviseTime(
 *baseTime* 
 </dt> <dd>
 
-Basis Verweis Zeit in 100-Nanosecond-Einheiten.
+Basisreferenzzeit in Einheiten von 100 Nanosekunden.
 
 </dd> <dt>
 
-*streamtime* 
+*streamTime* 
 </dt> <dd>
 
-Streamoffset Zeit in 100-Nanosecond-Einheiten.
+Streamoffsetzeit in Einheiten von 100 Nanosekunden.
 
 </dd> <dt>
 
-*hevent* 
+*hEvent* 
 </dt> <dd>
 
-Handle für ein Ereignis, das vom Aufrufer erstellt wurde.
+Behandeln sie mit einem Ereignis, das vom Aufrufer erstellt wurde.
 
 </dd> <dt>
 
-*pdwadvistoken* 
+*pdwAdviseToken* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen Bezeichner für die Benachrichtigungs Anforderung empfängt.
+Zeiger auf eine Variable, die einen Bezeichner für die Empfehlungsanforderung empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                          |
 |-----------------------------------------------------------------------------------------------|--------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg<br/>                   |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Ungültige Zeitwerte.<br/>       |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Fehler<br/>                   |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | **Null** -Zeigerargument<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ungültige Zeitwerte<br/>       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Fehler<br/>                   |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | **NULL-Zeigerargument**<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode erstellt eine One-Shot-anforderungsanforderung für die Referenzzeit *baseTime*  +  *streamtime*. Die Summe muss größer als 0 (null) und kleiner als \_ die maximale Zeit sein, oder die Methode gibt E \_ invalidArg zurück. Die Uhr signalisiert zum angeforderten Zeitpunkt das Ereignis, das im *hevent* -Parameter angegeben ist.
+Diese Methode erstellt eine einmalige Empfehlungsanforderung für die *Referenzzeit baseTime*  +  *streamTime*. Die Summe muss größer als 0 (null) und kleiner als MAX \_ TIME sein, andernfalls gibt die Methode E \_ INVALIDARG zurück. Zum angeforderten Zeitpunkt signalisiert die Uhr das im *hEvent-Parameter* angegebene Ereignis.
 
-Um die Benachrichtigung abzubrechen, bevor die Zeit erreicht ist, rufen Sie die [**cbasereferenceclock:: unadvi-Methode**](cbasereferenceclock-unadvise.md) auf, und übergeben Sie den von diesem Aufruf zurückgegebenen *pdwadvistoken* -Wert. Nachdem die Benachrichtigung erfolgt ist, wird Sie von der Uhr automatisch gelöscht. Daher ist es nicht erforderlich, die **Empfehlung "nicht empfohlen**" aufzurufen. Dies ist jedoch kein Fehler.
+Um die Benachrichtigung abzubrechen, bevor die Zeit erreicht ist, rufen Sie die [**CBaseReferenceClock::Unadvise-Methode**](cbasereferenceclock-unadvise.md) auf, und übergeben Sie den *pdwAdviseToken-Wert,* der von diesem Aufruf zurückgegeben wird. Nachdem die Benachrichtigung aufgetreten ist, löscht die Uhr sie automatisch, sodass es nicht erforderlich ist, **Unadvise** aufzurufen. Dies ist jedoch kein Fehler.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -102,8 +102,8 @@ Um die Benachrichtigung abzubrechen, bevor die Zeit erreicht ist, rufen Sie die 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ref. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Refclock.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -111,7 +111,7 @@ Um die Benachrichtigung abzubrechen, bevor die Zeit erreicht ist, rufen Sie die 
 
 <dl> <dt>
 
-[**Cbasereferenceclock-Klasse**](cbasereferenceclock.md)
+[**CBaseReferenceClock-Klasse**](cbasereferenceclock.md)
 </dt> </dl>
 
  

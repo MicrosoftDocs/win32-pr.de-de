@@ -33,7 +33,7 @@ Der Administrator erstellt eine neue Partition und gibt dabei den gleichen Parti
 
 Wenn die Domänenpartition auf dem Anwendungsserver erstellt wurde, wird die Standardpartition eines Benutzers zur Standardpartition des Partitionssets in Active Directory. Schließlich kann der Administrator die COM+-Anwendung in der neu erstellten Partition auf dem Anwendungsserver installieren.
 
-Weitere Informationen zum Verwalten von Partitionen für den Zugriff durch Domänenbenutzer finden Sie in der Hilfe zum Active Directory-Benutzer und -Computer Verwaltungstools.
+Weitere Informationen zum Verwalten von Partitionen für den Zugriff durch Domänenbenutzer finden Sie in der Hilfe, die dem Active Directory-Benutzer und -Computer zugeordnet ist.
 
 ## <a name="mapping-user-identities-and-ous-to-partition-sets"></a>Zuordnen von Benutzeridentitäten und Organisationsgruppen zu Partitionssätzen
 

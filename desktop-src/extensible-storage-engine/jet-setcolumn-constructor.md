@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SETCOLUMN-Konstruktor'
-title: JET_SETCOLUMN-Konstruktor
+description: 'Weitere Informationen finden Sie unter: JET_SETCOLUMN Konstruktor'
+title: JET_SETCOLUMN Konstruktor
 TOCTitle: 'JET_SETCOLUMN constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_SETCOLUMN.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_setcolumn.jet_setcolumn(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4e60c7a1675fec6880587b0c178565e6e217c416
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5b766cd2f42717cf22e18ea38e1866c841e4c808219d80494e7e675e05f7ce9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862204"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119616470"
 ---
-# <a name="jet_setcolumn-constructor"></a>JET_SETCOLUMN-Konstruktor
+# <a name="jet_setcolumn-constructor"></a>JET_SETCOLUMN Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,10 +52,10 @@ public JET_SETCOLUMN()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_SETCOLUMN-Klasse](./jet-setcolumn-class.md)
 
-[Mitglieder JET_SETCOLUMN](./jet-setcolumn-members.md)
+[JET_SETCOLUMN Member](./jet-setcolumn-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

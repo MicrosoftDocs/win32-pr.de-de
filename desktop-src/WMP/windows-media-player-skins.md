@@ -17,7 +17,7 @@ ms.locfileid: "119053978"
 ---
 # <a name="windows-media-player-skins"></a>Windows Media Player Skins
 
-Windows Media Player stellt eine Programmierplattform zum Erstellen benutzerdefinierter Skins zur Verfügung. Skins sind Sätze von Skripts, Artefakten, Medien und Textdateien, die kombiniert werden können, um eine neue Darstellung für Windows Media Player. Mithilfe von Skins können Sie nicht nur die Windows Media Player, sondern auch die Funktionsweise ändern. Nicht nur, wo sich die Regler befinden und wie sie aussehen, sondern auch, was sie tun, angesichts der Grenzen der zugrunde liegenden Windows Media Player Core-Technologie.
+Windows Media Player stellt eine Programmierplattform zum Erstellen benutzerdefinierter Skins zur Verfügung. Skins sind Sätze von Skripts, Artefakten, Medien und Textdateien, die kombiniert werden können, um eine neue Darstellung für Windows Media Player. Mithilfe von Skins können Sie nicht nur die Windows Media Player, sondern auch die Funktionsweise ändern. Nicht nur, wo sich die Regler befinden und wie sie aussehen, sondern auch, was sie tun, angesichts der Grenzen der zugrunde liegenden Windows Media Player Kerntechnologie.
 
 Die Skintechnologie unterscheiden sich stark von anderen Arten der Programmierung. Im Wesentlichen werden Sie Programmierung und Technik zu gleichen Teilen kombinieren. Sie müssen kein erfahrener Programmierer sein (nicht viel mehr, als Sie bereits wissen, wenn Sie Webseiten erstellt und einfache Skripts erstellt haben) und auch kein Interpret sein (solange Sie eine Grafikbearbeitungsanwendung verwenden können). Sie verwenden XML (ähnlich wie HTML), Microsoft JScript und die von Ihnen unterstützten Programme.
 

@@ -1,10 +1,10 @@
 ---
-title: erweitertes Recht msmq-Peek
+title: msmq-Peek erweitert rechts
 description: Ermöglicht das Einsehen von Nachrichten in der Warteschlange.
 ms.assetid: bcf23dbe-79bf-441d-a795-f1a57451bba3
 ms.tgt_platform: multiple
 keywords:
-- msmq-Peek extended right AD Schema
+- msmq-Peek erweitertes rechtes AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119081154"
 ---
-# <a name="msmq-peek-extended-right"></a>erweitertes Recht msmq-Peek
+# <a name="msmq-peek-extended-right"></a>msmq-Peek erweitert rechts
 
 Ermöglicht das Einsehen von Nachrichten in der Warteschlange.
 
@@ -28,9 +28,9 @@ Ermöglicht das Einsehen von Nachrichten in der Warteschlange.
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
-| CN           | msmq-Peek                            |
+| CN           | msmq-peek                            |
 | Anzeigename | Nachricht einsehen                         |
-| Rechte-GUID  | 06bd3201-df3e-11d1-9c86-006008764d0e |
+| Rights-GUID  | 06bd3201-df3e-11d1-9c86-006008764d0e |
 
 
 

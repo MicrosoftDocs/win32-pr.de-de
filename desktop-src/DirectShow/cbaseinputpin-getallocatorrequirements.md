@@ -1,7 +1,7 @@
 ---
-description: Die getallocatorrequirements-Methode ruft die von der eingabepin angeforderten zuordnereigenschaften ab.
+description: Die GetAllocatorRequirements-Methode ruft die vom Eingabepin angeforderten Zuweisungseigenschaften ab.
 ms.assetid: 81564924-6d5b-4b2a-b549-e3f358f18371
-title: Cbaseinputpin. getalloovorrequirements-Methode (amfilter. h)
+title: CBaseInputPin.GetAllocatorRequirements-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f0239d226ea57ed5953fa65b925eeffaa0b13df1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 57b085cd82c45fd78ddaa4794084cba775e1c80cd8b9e3b8df4c9680379ba462
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352898"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119586370"
 ---
-# <a name="cbaseinputpingetallocatorrequirements-method"></a>Cbaseinputpin. getalloovorrequirements-Methode
+# <a name="cbaseinputpingetallocatorrequirements-method"></a>CBaseInputPin.GetAllocatorRequirements-Methode
 
-Die- `GetAllocatorRequirements` Methode ruft die von der eingabepin angeforderten zuordnereigenschaften ab.
+Die `GetAllocatorRequirements` -Methode ruft die vom Eingabepin angeforderten Zuweisungseigenschaften ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ HRESULT GetAllocatorRequirements(
 
 <dl> <dt>
 
-*p-Eigenschaften* 
+*pProps* 
 </dt> <dd>
 
-Zeiger auf eine [**\_ zuordnereigenschafts**](/windows/win32/api/strmif/ns-strmif-allocator_properties) -Struktur, die mit den Anforderungen ausgefüllt ist.
+Zeiger auf eine [**ALLOCATOR \_ PROPERTIES-Struktur,**](/windows/win32/api/strmif/ns-strmif-allocator_properties) die mit den Anforderungen gefüllt ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt "E \_ notimpl" zurück.
+Gibt E \_ NOTIMPL zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Ausgabe-PIN eine Speicherzuweisung initialisiert, kann diese Methode aufgerufen werden, um zu bestimmen, ob die Eingabe-PIN über Puffer Anforderungen verfügt. Weitere Informationen finden Sie unter [**cbaseoutputpin::D ecidezuordcator**](cbaseoutputpin-decideallocator.md).
+Wenn ein Ausgabepin eine Speicherzuweisung initialisiert, kann er diese Methode aufrufen, um zu bestimmen, ob der Eingabepin Pufferanforderungen hat. Weitere Informationen finden Sie unter [**CBaseOutputPin::D ecideAllocator**](cbaseoutputpin-decideallocator.md).
 
-Das Implementieren dieser Methode ist optional. Wenn der Filter bestimmte Ausrichtung oder Präfix Anforderungen aufweist, überschreiben Sie diese Methode.
+Die Implementierung dieser Methode ist optional. Wenn der Filter bestimmte Ausrichtungs- oder Präfixanforderungen hat, überschreiben Sie diese Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Das Implementieren dieser Methode ist optional. Wenn der Filter bestimmte Ausric
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Das Implementieren dieser Methode ist optional. Wenn der Filter bestimmte Ausric
 
 <dl> <dt>
 
-[**Cbaseingeputpin-Klasse**](cbaseinputpin.md)
+[**CBaseInputPin-Klasse**](cbaseinputpin.md)
 </dt> </dl>
 
  

@@ -121,7 +121,7 @@ Dieses Attribut enthält eine Reihe von Zertifikaten. Ein Benutzer kann ein Zert
 | Link-ID                | \-                                                                                            |
 | MAPI-Id                | \-                                                                                            |
 | System-Only            | False                                                                                         |
-| Ist einwertig       | True                                                                                          |
+| Is-Single-Valued       | True                                                                                          |
 | Ist indiziert             | False                                                                                         |
 | Im globalen Katalog      | True                                                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                  |
@@ -142,7 +142,7 @@ Dieses Attribut enthält eine Reihe von Zertifikaten. Ein Benutzer kann ein Zert
 | Link-ID                | \-                                                                                            |
 | MAPI-Id                | \-                                                                                            |
 | System-Only            | False                                                                                         |
-| Ist einwertig       | True                                                                                          |
+| Is-Single-Valued       | True                                                                                          |
 | Ist indiziert             | False                                                                                         |
 | Im globalen Katalog      | True                                                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                  |
@@ -163,7 +163,7 @@ Dieses Attribut enthält eine Reihe von Zertifikaten. Ein Benutzer kann ein Zert
 | Link-ID                | \-                                                                                            |
 | MAPI-Id                | \-                                                                                            |
 | System-Only            | False                                                                                         |
-| Ist einwertig       | True                                                                                          |
+| Is-Single-Valued       | True                                                                                          |
 | Ist indiziert             | False                                                                                         |
 | Im globalen Katalog      | True                                                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                  |

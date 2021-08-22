@@ -13,26 +13,26 @@ ms.locfileid: "119083464"
 ---
 # <a name="retrieving-the-content-types-supported-by-a-device"></a>Abrufen der von einem Gerät unterstützten Inhaltstypen
 
-Wie im Thema [Abrufen der von einem Gerät unterstützten Funktionskategorien](retrieving-the-functional-categories-supported-by-a-device.md) beschrieben, unterstützen Windows Portable Devices möglicherweise eine oder mehrere Funktionskategorien. Jede bestimmte Funktionskategorie unterstützt möglicherweise einen oder mehrere Inhaltstypen. Beispielsweise kann die Speicherkategorie Inhaltstypen von Ordnern, Audiodateien und Bildern unterstützen.
+Wie im Thema [Abrufen](retrieving-the-functional-categories-supported-by-a-device.md) der von einem Gerät unterstützten funktionalen Kategorien erwähnt, unterstützt Windows portable Geräte möglicherweise eine oder mehrere funktionale Kategorien. Jede funktionstüchtige Kategorie kann einen oder mehrere Inhaltstypen unterstützen. Beispielsweise kann die Speicherkategorie Inhaltstypen von Ordnern, Audiodateien und Bildern unterstützen.
 
-Eine Beschreibung der von WPD unterstützten Inhaltstypen finden Sie im Thema [**WPD \_ CONTENT TYPE \_ \_ ALL.**](wpd-content-type-all.md)
+Eine Beschreibung der von WPD unterstützten Inhaltstypen finden Sie im [**Thema WPD \_ CONTENT TYPE \_ \_ ALL.**](wpd-content-type-all.md)
 
-Die ListSupportedContentTypes-Funktion im Modul DeviceCapabilities.cpp veranschaulicht das Abrufen von Inhaltstypen für die Funktionskategorien, die von einem ausgewählten Gerät unterstützt werden.
+Die ListSupportedContentTypes-Funktion im DeviceCapabilities.cpp-Modul veranschaulicht das Abrufen von Inhaltstypen für die von einem ausgewählten Gerät unterstützten Funktionalen Kategorien.
 
-Ihre Anwendung kann die von einem Gerät unterstützten Funktionskategorien mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen abrufen.
+Ihre Anwendung kann die von einem Gerät unterstützten Funktionalen Kategorien mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen abrufen.
 
 
 
 | Schnittstelle                                                                                      | BESCHREIBUNG                                                   |
 |------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| [**IPortableDeviceCapabilities-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities)                   | Ermöglicht den Zugriff auf die Abrufmethoden der Funktionskategorie. |
-| [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Wird zum Aufzählen und Speichern von Funktionskategoriedaten verwendet.         |
+| [**IPortableDeviceCapabilities-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities)                   | Ermöglicht den Zugriff auf die Funktionskategorieabrufmethoden. |
+| [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Wird zum Aufzählen und Speichern von Daten der Funktionalen Kategorie verwendet.         |
 
 
 
  
 
-Der In der ListSupportedContentTypes-Funktion gefundene Code ist fast identisch mit dem Code in der ListFunctionalCategories-Funktion. (Weitere Informationen finden Sie im Thema [Abrufen von funktionalen Kategorien,](retrieving-the-functional-categories-supported-by-a-device.md) die von einem Gerät unterstützt werden.) Der einzige Unterschied ist der Aufruf der [**IPortableDeviceCapabilities::GetSupportedContentTypes-Methode,**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecapabilities-getsupportedcontenttypes) die innerhalb der Schleife angezeigt wird, die die Funktionskategorien durchläuft.
+Der Code in der ListSupportedContentTypes-Funktion ist fast identisch mit dem Code in der ListFunctionalCategories-Funktion. (Weitere Informationen finden [Sie im Thema Abrufen von funktionstüchtigen Kategorien, die von einem Gerät unterstützt](retrieving-the-functional-categories-supported-by-a-device.md) werden.) Der einzige Unterschied besteht im Aufruf der [**IPortableDeviceCapabilities::GetSupportedContentTypes-Methode,**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecapabilities-getsupportedcontenttypes) die innerhalb der Schleife angezeigt wird, die die funktionalen Kategorien durch iteriert.
 
 
 ```C++

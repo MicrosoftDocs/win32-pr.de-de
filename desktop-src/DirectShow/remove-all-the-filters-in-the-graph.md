@@ -1,21 +1,21 @@
 ---
-description: Alle Filter im Diagramm entfernen
+description: Entfernen Sie alle Filter im Graph
 ms.assetid: a11af581-c331-4607-be8b-5f65961bd422
-title: Alle Filter im Diagramm entfernen
+title: Entfernen Sie alle Filter im Graph
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 67d414ef7e532eaf5df9143a6b601a57e4a8bd45
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f10b76bb5f5bc3cff2bfb989c422f177ef0d2ee4d09acff3c2f895ef9984b7c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103746304"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119072734"
 ---
-# <a name="remove-all-the-filters-in-the-graph"></a>Alle Filter im Diagramm entfernen
+# <a name="remove-all-the-filters-in-the-graph"></a>Entfernen Sie alle Filter im Graph
 
-Die einfachste Möglichkeit, alle Filter in einem Filter Diagramm zu entfernen, besteht darin, den Filter Graph-Manager freizugeben und einen neuen zu erstellen. Stellen Sie sicher, dass Sie jeden Zeiger, den Ihre Anwendung besitzt, auf alle Schnittstellen der Filter-Diagramm-Manager und Zeiger auf Objekte im Diagramm, einschließlich Filter, Pins, der Referenzuhr usw., freigeben.
+Am einfachsten können Sie alle Filter in einem Filterdiagramm entfernen, indem Sie einfach den Filter Graph Manager veröffentlichen und einen neuen erstellen. Stellen Sie sicher, dass Sie jeden Zeiger, den Ihre Anwendung auf beliebige Schnittstellen in den Filter-Graph-Managern hat, sowie Zeiger auf Objekte im Diagramm, einschließlich Filtern, Stecknadeln, der Referenzuhr usw. frei geben.
 
-Alternativ können Sie die Filter einzeln entfernen, indem Sie die [**ifiltergraph:: RemoveFilter**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-removefilter) -Methode verwenden:
+Alternativ können Sie die Filter nach und nach mithilfe der [**IFilterGraph::RemoveFilter-Methode**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-removefilter) entfernen:
 
 
 ```C++
@@ -42,7 +42,7 @@ if (SUCCEEDED(hr))
 
 
 
-In diesem Beispiel wird die [**ifiltergraph:: enumfilters**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-enumfilters) -Methode verwendet, um die Filter im Diagramm aufzulisten. Das Entfernen eines Filters bewirkt, dass das Enumeratorobjekt nicht mehr mit dem Diagramm synchronisiert wird. Verwenden Sie die [**ienumfilters:: Reset**](/windows/desktop/api/Strmif/nf-strmif-ienumfilters-reset) -Methode, um den Enumerator zurückzusetzen. Andernfalls schlagen alle nachfolgenden Aufrufe von ' [**ienumfilters:: Next**](/windows/desktop/api/Strmif/nf-strmif-ienumfilters-next) ' fehl.
+In diesem Beispiel wird die [**IFilterGraph::EnumFilters-Methode**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-enumfilters) verwendet, um die Filter im Diagramm zu aufzählen. Das Entfernen eines Filters führt dazu, dass das Enumeratorobjekt nicht mehr mit dem Diagramm synchron ist. Verwenden Sie [**die IEnumFilters::Reset-Methode,**](/windows/desktop/api/Strmif/nf-strmif-ienumfilters-reset) um den Enumerator zurückzusetzen. Andernfalls wird jeder nachfolgende Aufruf von [**IEnumFilters::Next**](/windows/desktop/api/Strmif/nf-strmif-ienumfilters-next) fehlschlagen.
 
  
 

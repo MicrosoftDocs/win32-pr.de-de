@@ -1,11 +1,11 @@
 ---
-title: Iwmpmediacollection getbyauthor-Methode
-description: Die getbyauthor-Methode gibt eine iwmpwiedergabe-Schnittstelle zurück, die den Zugriff auf die Medienelemente durch den angegebenen Autor ermöglicht.
+title: IWMPMediaCollection getByAuthor-Methode
+description: Die getByAuthor-Methode gibt eine IWMPPlaylist-Schnittstelle zurück, die den Zugriff auf die Medienelemente durch den angegebenen Autor ermöglicht.
 ms.assetid: eb3793f6-bad1-4c80-991e-c6d0093ae57f
 keywords:
-- getbyauthor-Methode, Windows-Media Player
-- getbyauthor-Methode, Windows Media Player, iwmpmediacollection-Schnittstelle
-- Iwmpmediacollection-Schnittstelle, Windows Media Player, getbyauthor-Methode
+- getByAuthor-Windows Media Player
+- getByAuthor-Methode Windows Media Player , IWMPMediaCollection-Schnittstelle
+- IWMPMediaCollection-Schnittstelle Windows Media Player , getByAuthor-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e594de010a65c15088e2a31a3ccbac2ac5a1fc6e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 829232e6cd9fb64fec1d209991c3734ad435b4b69d0d7b66b135ab9cca1fe4a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358149"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053608"
 ---
-# <a name="iwmpmediacollectiongetbyauthor-method"></a>Iwmpmediacollection:: getbyauthor-Methode
+# <a name="iwmpmediacollectiongetbyauthor-method"></a>IWMPMediaCollection::getByAuthor-Methode
 
-Die- `getByAuthor` Methode gibt eine **iwmpwiedergabe** -Schnittstelle zurück, die den Zugriff auf die Medienelemente durch den angegebenen Autor ermöglicht.
+Die `getByAuthor` -Methode gibt eine **IWMPPlaylist-Schnittstelle** zurück, die den Zugriff auf die Medienelemente durch den angegebenen Autor ermöglicht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,26 +53,26 @@ Implements IWMPMediaCollection.getByAuthor
 
 <dl> <dt>
 
-*bstrauauthor* \[ in\]
+*bstrAuthor* \[ In\]
 </dt> <dd>
 
-Die **System. String** , die den Namen des Autors ist.
+Die **System.String,** die der Name des Autors ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **WMPLib. iwmpwiedergabe** -Schnittstelle für die abgerufenen Medienelemente.
+Eine **WMPLib.IWMPPlaylist-Schnittstelle** für die abgerufenen Medienelemente.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Methode aufrufen, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-Es gibt zwei Möglichkeiten, wie Sie eine **iwmpmediacollection** -Schnittstelle abrufen können, und das Verhalten der- `getByAuthor` Methode hängt davon ab, welche dieser beiden Methoden Sie verwenden. Wenn Sie die Schnittstelle abrufen, indem Sie [AxWindowsMediaPlayer. mediacollection](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)aufrufen, gibt die- `getByAuthor` Methode alle Medienelemente in der Bibliothek zurück. Wenn Sie jedoch die-Schnittstelle abrufen, indem Sie [iwmplibrary. mediacollection](wmplibiwmplibrary-iwmplibrary-mediacollection--vb-and-c.md)aufrufen, `getByAuthor` gibt die-Methode nur die Audioelemente in der Bibliothek zurück, die über das angegebene Attribut und den angegebenen Wert verfügen.
+Es gibt zwei Möglichkeiten, wie Sie eine **IWMPMediaCollection-Schnittstelle** abrufen können, und das Verhalten der Methode hängt davon ab, `getByAuthor` welche dieser beiden Methoden Sie verwenden. Wenn Sie die Schnittstelle durch Aufrufen von [AxWindowsMediaPlayer.mediaCollection](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)abrufen, gibt die Methode alle Medienelemente `getByAuthor` in der Bibliothek zurück. Wenn Sie die Schnittstelle jedoch durch Aufrufen von [IWMPLibrary.mediaCollection](wmplibiwmplibrary-iwmplibrary-mediacollection--vb-and-c.md)abrufen, gibt die Methode nur die Audioelemente in der Bibliothek zurück, die über das angegebene Attribut und `getByAuthor` den angegebenen Wert verfügen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird verwendet `getByAuthor` , um eine Wiedergabeliste von Medien Elementen zu erstellen, wenn der Benutzer auf eine Schaltfläche klickt. Die Wiedergabeliste enthält Elemente, die mit dem Namen des Autors übereinstimmen, der vom Benutzer in einem Textfeld angegeben wird. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird `getByAuthor` verwendet, um eine Wiedergabeliste von Medienelementen zu erstellen, wenn der Benutzer auf eine Schaltfläche klickt. Die Wiedergabeliste enthält Elemente, die mit dem vom Benutzer angegebenen Namen des Autors in einem Textfeld übereinstimmen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -136,10 +136,10 @@ End Sub
 
 <dl> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> </dl>
 
  

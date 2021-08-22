@@ -1,29 +1,29 @@
 ---
-description: Sie können den Schablonen Puffer für abstraktere Effekte verwenden, z. b. Gliederung und Silhouette.
+description: Sie können den Schablonenpuffer für abstraktere Effekte wie Lining und Silhouetting verwenden.
 ms.assetid: 8b9cd2b3-c1bf-4ac9-aae5-7fc0c9e049ff
-title: Kontur und Silhouetten (Direct3D 9)
+title: Konturen und Gliederungen (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 46a282b650b96cdbb36dc252e1f31cb81d91f0bb
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 45b5fcf26b3f3cbbe6e051e1a7d8517cc6d69044beb6eaed7f54baef3509a748
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745536"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119563410"
 ---
-# <a name="outlines-and-silhouettes-direct3d-9"></a>Kontur und Silhouetten (Direct3D 9)
+# <a name="outlines-and-silhouettes-direct3d-9"></a>Konturen und Gliederungen (Direct3D 9)
 
-Sie können den Schablonen Puffer für abstraktere Effekte verwenden, z. b. Gliederung und Silhouette.
+Sie können den Schablonenpuffer für abstraktere Effekte wie Lining und Silhouetting verwenden.
 
-Wenn Ihre Anwendung eine Schablone-Maske auf das Bild eines primitiven anwendet, das dieselbe Form aufweist, aber etwas kleiner ist, enthält das resultierende Bild nur den Umriss des primitiven. Die Anwendung kann dann den Bereich der Schablone maskiert mit einer voll Tonfarbe ausfüllen, wodurch dem primitiven ein geprägte Bild angezeigt wird.
+Wenn Ihre Anwendung eine Schablonenmaske auf das Bild eines Primitivs wendet, das dieselbe Form, aber etwas kleiner ist, enthält das resultierende Bild nur die Kontur des Primitivs. Die Anwendung kann dann den mit Schablonen maskierten Bereich des Bilds mit einer Volltonfarbe füllen, was dem Primitiv ein einbettes Aussehen gibt.
 
-Wenn die Schablone-Maske dieselbe Größe und Form wie das primitive-Format aufweist, das Sie rendern, enthält das resultierende Bild eine Lücke, in der der primitive entsprechen sollte. Die Anwendung kann dann das Loch mit Black auffüllen, um eine Silhouette des primitiven zu schaffen.
+Wenn die Schablonenmaske die gleiche Größe und Form wie die primitive Maske hat, die Sie rendern, enthält das resultierende Bild eine Lücke, in der sich das Primitive befinden sollte. Ihre Anwendung kann dann die Lücke mit Schwarz füllen, um eine Primprimitive zu erzeugen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Techniken für Schablonen Puffer](stencil-buffer-techniques.md)
+[Schablonenpuffertechniken](stencil-buffer-techniques.md)
 </dt> </dl>
 
  

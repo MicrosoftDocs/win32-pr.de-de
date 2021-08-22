@@ -1,72 +1,72 @@
 ---
-description: Klassische Anbieter sollten Managed Object Format (MOF) verwenden, um das Layout Ihrer Ereignisdaten zu veröffentlichen. Consumer können das veröffentlichte Layout dann zur Laufzeit aus WMI lesen und zum Lesen der Ereignisdaten verwenden.
+description: Klassische Anbieter sollten Managed Object Format (MOF) verwenden, um das Layout ihrer Ereignisdaten zu veröffentlichen. Consumer können dann das veröffentlichte Layout zur Laufzeit aus WMI lesen und zum Lesen der Ereignisdaten verwenden.
 ms.assetid: eb3d8422-2352-47cf-9825-cba9916791a9
-title: Veröffentlichen Ihres Ereignis Schemas für einen klassischen Anbieter
+title: Veröffentlichen des Ereignisschemas für einen klassischen Anbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 21f51cfd30d0c9d73841ca906fb81e9d544dec88
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6607e2e9b940df5afd6e8070e9235fe40566ef2b6d2b31b3c14656756835bab2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343879"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069820"
 ---
-# <a name="publishing-your-event-schema-for-a-classic-provider"></a>Veröffentlichen Ihres Ereignis Schemas für einen klassischen Anbieter
+# <a name="publishing-your-event-schema-for-a-classic-provider"></a>Veröffentlichen des Ereignisschemas für einen klassischen Anbieter
 
-[Klassische](about-event-tracing.md) Anbieter sollten [Managed Object Format](../wmisdk/managed-object-format--mof-.md) (MOF) verwenden, um das Layout Ihrer Ereignisdaten zu veröffentlichen. Consumer können das veröffentlichte Layout dann zur Laufzeit aus WMI lesen und zum Lesen der Ereignisdaten verwenden.
+[Klassische](about-event-tracing.md) Anbieter sollten [Managed Object Format](../wmisdk/managed-object-format--mof-.md) (MOF) verwenden, um das Layout ihrer Ereignisdaten zu veröffentlichen. Consumer können dann das veröffentlichte Layout zur Laufzeit aus WMI lesen und zum Lesen der Ereignisdaten verwenden.
 
-Wenn Sie MOF verwenden, um das Layout der Ereignisdaten in WMI zu veröffentlichen, erstellen Sie in der Regel die folgenden drei Typen von MOF-Klassen im Stamm- \\ WMI-Namespace:
+Wenn Sie MOF verwenden, um das Layout Ihrer Ereignisdaten in WMI zu veröffentlichen, erstellen Sie in der Regel die folgenden drei Typen von MOF-Klassen im \\ wmi-Stammnamespace:
 
--   [Eine MOF-Anbieter Klasse](#provider-mof-classes)
--   [Mindestens eine MOF-Ereignisklasse](#event-mof-classes)
--   [Mindestens eine MOF-Klasse für den Ereignistyp.](#event-type-mof-classes)
+-   [Eine MOF-Anbieterklasse](#provider-mof-classes)
+-   [Eine oder mehrere MOF-Ereignisklassen](#event-mof-classes)
+-   [Eine oder mehrere MOF-Ereignistypklassen](#event-type-mof-classes)
 
-## <a name="provider-mof-classes"></a>MOF-Anbieter Klassen
+## <a name="provider-mof-classes"></a>MOF-Anbieterklassen
 
-Wenn Sie das Layout der Ereignisdaten veröffentlichen, müssen Sie eine MOF-Klasse erstellen, die Ihren Anbieter identifiziert. Diese Klasse muss von der **EventTrace** MOF-Klasse abgeleitet werden und muss leer sein (keine Eigenschaften oder Methoden). Die Klasse muss auch den **GUID** -Qualifizierer enthalten, der den Anbieter eindeutig identifiziert. Dies ist dieselbe GUID, die Sie verwenden, wenn Sie die [**registertraceguids**](/windows/win32/api/evntrace/nf-evntrace-registertraceguidsa) -Funktion aufrufen, um den Anbieter zu registrieren.
+Wenn Sie das Layout Ihrer Ereignisdaten veröffentlichen, müssen Sie eine MOF-Klasse erstellen, die Ihren Anbieter identifiziert. Diese Klasse muss von der **EventTrace** MOF-Klasse abgeleitet sein und leer sein (keine Eigenschaften oder Methoden). Die -Klasse muss  auch den GUID-Qualifizierer enthalten, der den Anbieter eindeutig identifiziert. Dies ist die gleiche GUID, die Sie beim Aufrufen der [**RegisterTraceGuids-Funktion**](/windows/win32/api/evntrace/nf-evntrace-registertraceguidsa) zum Registrieren Ihres Anbieters verwenden.
 
-## <a name="event-mof-classes"></a>MOF-Ereignis Klassen
+## <a name="event-mof-classes"></a>MOF-Ereignisklassen
 
-Eine MOF-Ereignisklasse definiert eine Klasse von Ereignissen, die der Anbieter bereitstellt. Diese Klasse wird von der MOF-Klasse des Anbieters abgeleitet und muss leer sein (keine Eigenschaften oder Methoden). Die Klasse muss auch den **GUID** -Qualifizierer enthalten, der die Klasse der Ereignisse eindeutig identifiziert, die von den untergeordneten Klassen definiert werden. Der Anbieter verwendet dieselbe GUID, wenn der **GUID** -Member der Ereignis-Ablauf [**\_ Verfolgungs \_ Header**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) -Struktur festgelegt wird.
+Eine MOF-Ereignisklasse definiert eine Klasse von Ereignissen, die der Anbieter bereitstellt. Diese Klasse wird von der MOF-Anbieterklasse abgeleitet und muss leer sein (keine Eigenschaften oder Methoden). Die -Klasse muss  auch den GUID-Qualifizierer enthalten, der die Klasse der Ereignisse eindeutig identifiziert, die von den untergeordneten Klassen definiert werden. Der Anbieter verwendet dieselbe GUID, wenn er den **Guid-Member** der [**EVENT TRACE \_ \_ HEADER-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) festlegt.
 
-## <a name="event-type-mof-classes"></a>MOF-Ereignistyp Klassen
+## <a name="event-type-mof-classes"></a>MOF-Klassen des Ereignistyps
 
-Eine MOF-Klasse für den Ereignistyp definiert die tatsächlichen Ereignisdaten. Diese Klasse wird von der übergeordneten Ereignis-MOF-Klasse abgeleitet. Wenn Sie die MOF-Klasse für den Ereignistyp benennen, besteht die Konvention darin, den MOF-Ereignis Klassennamen am Anfang des MOF-Klassen namens des Ereignis Typs zu verwenden. Wenn z. b. der MOF-Klassenname des Ereignisses hwconfig ist und die MOF-Klasse des Ereignis Typs CPU-Informationen darstellt, sollten Sie den Ereignistyp MOF Class, hwconfig CPU, benennen \_ .
+Eine MOF-Ereignisklasse definiert die tatsächlichen Ereignisdaten. Diese Klasse wird von der MOF-Klasse des übergeordneten Ereignisses abgeleitet. Beim Benennen der MOF-Ereignisklasse wird der MOF-Ereignisklassenname am Anfang des MOF-Ereignistypklassennamens verwendet. Wenn der Mof-Ereignisklassenname beispielsweise HWConfig lautet und der Ereignistyp MOF-Klasse CPU-Informationen darstellt, sollten Sie den Ereignistyp MOF-Klasse, HWConfig \_ CPU, benennen.
 
-Verwenden Sie den **eventType** -Qualifizierer für die MOF-Ereignisklasse, um den Ereignistyp zu identifizieren. Wenn mehrere Ereignis Typen dieselben Ereignisdaten verwenden, können Sie dieselbe MOF-Klasse verwenden. Der Anbieter verwendet den gleichen Ereignistyp Wert, um das Ereignis zu identifizieren, wenn der **Class. Type** -Member der Ereignis-Ablauf [**\_ Verfolgungs \_ Header**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) -Struktur festgelegt wird.
+Verwenden Sie den **EventType-Qualifizierer** für die MOF-Ereignisklasse, um den Ereignistyp zu identifizieren. Wenn mehrere Ereignistypen dieselben Ereignisdaten verwenden, können sie dieselbe MOF-Klasse verwenden. Der Anbieter verwendet den gleichen Ereignistypwert, um das Ereignis beim Festlegen des **Class.Type-Members** der [**EVENT TRACE \_ \_ HEADER-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) zu identifizieren.
 
-Die MOF-Ereignistyp Klasse enthält Eigenschaften. Die Reihenfolge dieser Eigenschaften definiert das Layout der Ereignisdaten. In der folgenden Tabelle sind die Datentypen und Qualifizierer aufgeführt, die Sie zum Definieren der Eigenschaften verwenden können. Weitere Informationen zu den Eigenschaften und Klassen Qualifizierern, die Sie verwenden können, finden Sie unter [Ereignis Ablauf Verfolgung MOF-Qualifizierer](event-tracing-mof-qualifiers.md).
+Die MOF-Ereignisklasse enthält Eigenschaften. Die Reihenfolge dieser Eigenschaften definiert das Layout der Ereignisdaten. In der folgenden Tabelle sind die Datentypen und Qualifizierer aufgeführt, die Sie zum Definieren der Eigenschaften verwenden können. Weitere Informationen zu den Eigenschaften- und Klassenqualifizierern, die Sie verwenden können, finden Sie unter [MOF-Qualifizierer](event-tracing-mof-qualifiers.md)für die Ereignisablaufverfolgung.
 
 
 
 | Datentyp              | Qualifizierer                        | BESCHREIBUNG                                                                                                                                                                                                                                                                                                              |
 |------------------------|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **sint8**, **Uint8**   | **Format**                        | Deklariert eine 1-Byte-Ganzzahl mit Dezimalzahlen. Verwenden Sie zum Deklarieren eines ANSI-Zeichens den **Format** Qualifizierer, und legen Sie dessen Wert auf "c" fest.                                                                                                                                                                                                  |
-| **sint16**, **UInt16** | **Format**                        | Deklariert eine ganzzahlige 2-Byte-Ganzzahl. Um anzugeben, dass die Zahl eine hexadezimale Zahl ist, verwenden Sie den **Format** Qualifizierer. Beispiel: Format ("x").                                                                                                                                                                               |
-| **sint32**, **UInt32** | **Format**                        | Deklariert eine ganze 4-Byte-Ganzzahl. Um anzugeben, dass die Zahl eine hexadezimale Zahl ist, verwenden Sie den **Format** Qualifizierer, und legen Sie dessen Wert auf "x" fest.                                                                                                                                                                                |
-| **sint64**, **UInt64** | **Format**                        | Deklariert eine 8-Byte-Ganzzahl mit Dezimalzahlen. Um anzugeben, dass die Zahl eine hexadezimale Zahl ist, verwenden Sie den **Format** Qualifizierer, und legen Sie dessen Wert auf "x" fest.                                                                                                                                                                                |
-| **boolean**            |                                   | Deklariert einen booleschen Wert. Der Ereignisconsumer sollte den Wert als bool (4-Byte-Ganzzahl) interpretieren.                                                                                                                                                                                                                        |
-| **char16**             |                                   | Deklariert ein breit Zeichen. Der Ereignisconsumer sollte char16 Arrays in Kernel Ereignissen als breit Zeichen-Zeichen folgen interpretieren. (Verwenden Sie die Array Größe, um die Zeichenfolge zu kopieren. Einige Zeichen folgen können führende Null-Zeichen enthalten.)                                                                                                      |
-| **object**             | **Erweiterung**                     | Deklariert ein binäres Blob. Der **Erweiterungs** Qualifizierer gibt den Typ der Daten im BLOB an.                                                                                                                                                                                                                              |
-| **string**             | **Format**, **stringbeendigung** | Deklariert einen Zeichen folgen Wert. Um anzugeben, dass die Zeichenfolge eine Zeichenfolge mit breit Zeichen ist, verwenden Sie den **Format** Qualifizierer und legen den Wert auf "w" fest. Die Zeichenfolge wird als ANSI-Zeichenfolge betrachtet, wenn Sie nicht den **Format** Qualifizierer angeben. Um anzugeben, wie die Zeichenfolge beendet wird, verwenden Sie den **stringbeendigung** -Qualifizierer. <br/> |
+| **sint8**, **uint8**   | **Format**                        | Deklariert eine ganze Dezimalzahl von 1 Byte. Um ein ANSI-Zeichen  zu deklarieren, verwenden Sie den Formatqualifizierer, und legen Sie seinen Wert auf "c" fest.                                                                                                                                                                                                  |
+| **sint16**, **uint16** | **Format**                        | Deklariert eine dezimale 2-Byte-Ganzzahl. Um anzugeben, dass die Zahl eine Hexadezimalzahl ist, verwenden Sie den **Formatqualifizierer.** Beispiel: format("x").                                                                                                                                                                               |
+| **sint32**, **uint32** | **Format**                        | Deklariert eine ganze 4-Byte-Dezimalzahl. Um anzugeben, dass die Zahl eine Hexadezimalzahl ist, verwenden Sie den **Formatqualifizierer,** und legen Sie seinen Wert auf "x" fest.                                                                                                                                                                                |
+| **sint64**, **uint64** | **Format**                        | Deklariert eine dezimale 8-Byte-Ganzzahl. Um anzugeben, dass die Zahl eine Hexadezimalzahl ist, verwenden Sie den **Formatqualifizierer,** und legen Sie seinen Wert auf "x" fest.                                                                                                                                                                                |
+| **boolean**            |                                   | Deklariert einen booleschen Wert. Der Ereignisverbraucher sollte den Wert als BOOL (4-Byte-Ganzzahl) interpretieren.                                                                                                                                                                                                                        |
+| **char16**             |                                   | Deklariert ein Breitzeichen. Der Ereignisverbraucher sollte char16-Arrays in Kernelereignissen als Breitzeichenfolgen interpretieren. (Verwenden Sie die Arraygröße, um die Zeichenfolge zu kopieren. Einige Zeichenfolgen können führende NULL-Zeichen enthalten.)                                                                                                      |
+| **object**             | **Erweiterung**                     | Deklariert ein binäres Blob. Der  Erweiterungsqualifizierer gibt den Typ der Daten im Blob an.                                                                                                                                                                                                                              |
+| **string**             | **Format**, **StringTermination** | Deklariert einen Zeichenfolgenwert. Um anzugeben, dass es sich bei  der Zeichenfolge um eine Breitzeichenzeichenfolge handelt, verwenden Sie den Formatqualifizierer, und legen Sie dessen Wert auf "w" fest. Die Zeichenfolge gilt als ANSI-Zeichenfolge, wenn Sie den **Formatqualifizierer** nicht angeben. Verwenden Sie den **StringTermination-Qualifizierer,** um anzugeben, wie die Zeichenfolge beendet wird. <br/> |
 
 
 
  
 
-Zum Angeben eines Arrays können Sie eckige Klammern () verwenden \[ \] . Die eckigen Klammern können die Größe des Arrays einschließen. Beispiel:
+Um ein Array anzugeben, können Sie eckige Klammern verwenden, \[ \] . Die eckigen Klammern können die Größe des Arrays enthalten. Beispiel:
 
 `[WmiDataId(1), read] uint8 MyGuid[16];`
 
-Sie können auch den **Max** -Qualifizierer verwenden, um die Größe eines Arrays anzugeben. Beispiel:
+Sie können auch  den Max-Qualifizierer verwenden, um die Größe eines Arrays anzugeben. Beispiel:
 
 `[WmiDataId(1), Max(16), read] uint8 MyGuid[];`
 
-Wenn Sie die Größe des Arrays in die eckigen Klammern einschließen, generiert der MOF-Compiler den maximalen Qualifizierer für Sie.
+Wenn Sie die Größe des Arrays in eckige Klammern einschließen, generiert der MOF-Compiler den Max-Qualifizierer für Sie.
 
-Es ist wichtig, dass Sie für jede Eigenschaft den **Beschreibungs** Qualifizierer verwenden. Die Beschreibung sollte einen anzeigen Amen enthalten, der vom Consumer beim Anzeigen der Eigenschaftswerte verwendet werden kann.
+Es ist wichtig, dass Sie den **Description-Qualifizierer** für jede Eigenschaft verwenden. Die Beschreibung sollte einen Anzeigenamen enthalten, den der Consumer beim Anzeigen der Eigenschaftswerte verwenden kann.
 
-Das folgende Beispiel zeigt den Inhalt einer MOF-Datei, die einen Anbieter, ein Ereignis und eine MOF-Klasse für den Ereignistyp beschreibt.
+Das folgende Beispiel zeigt den Inhalt einer MOF-Datei, die einen Anbieter, ein Ereignis und eine MOF-Ereignisklasse beschreibt.
 
 ``` syntax
 #pragma namespace("\\\\.\\root\\wmi")
@@ -95,17 +95,17 @@ class MyCategory_MyEvent : MyCategory
 };
 ```
 
-Beachten Sie, dass die MOF-Klassennamen des Anbieters, des Ereignisses und des Ereignis Typs innerhalb des gesamten Namespace eindeutig sein müssen. Um Benennungs Konflikte zu vermeiden, sollten Sie einen eindeutigen und beschreibenden Namen für alle Klassennamen verwenden. Klasseneigenschaften sollten außerdem beschreibend und innerhalb der Klassenhierarchie eindeutig sein – eine untergeordnete Klasse, die denselben Eigenschaftsnamen wie eine übergeordnete Klasse enthält, überschreibt die-Eigenschaft der übergeordneten Klasse.
+Beachten Sie, dass anbieter-, ereignis- und ereignistyp-MOF-Klassennamen innerhalb des gesamten Namespace eindeutig sein müssen. Um Namenskonflikte zu vermeiden, sollten Sie einen eindeutigen und beschreibenden Namen für alle Klassennamen verwenden. Klasseneigenschaften sollten auch beschreibend und innerhalb ihrer Klassenhierarchie eindeutig sein. Eine untergeordnete Klasse, die den gleichen Eigenschaftennamen wie eine übergeordnete Klasse enthält, überschreibt die -Eigenschaft der übergeordneten Klasse.
 
-Nachdem Sie Ihre MOF-Klassen definiert haben, verwenden Sie den MOF-Compiler, um das Ereignis Schema zu generieren und es dem CIM-Repository hinzuzufügen. Consumer können dann das Schema aus dem Repository lesen und die Ereignisdaten Programm gesteuert lesen. Eine umfassende Beschreibung der MOF-Syntax und die Verwendung des MOF-Compilers (Mofcomp.exe) zum Hinzufügen der MOF-Klassen zum CIM-Repository finden Sie unter [Managed Object Format](../wmisdk/managed-object-format--mof-.md). Informationen zum Verwenden von Wbemtest.exe für den Zugriff auf das CIM-Repository finden Sie unter [Windows-Verwaltungsinstrumentation](../wmisdk/wmi-start-page.md) (WMI).
+Verwenden Sie nach dem Definieren der MOF-Klassen den MOF-Compiler, um das Ereignisschema zu generieren und dem CIM-Repository hinzuzufügen. Consumer können dann das Schema aus dem Repository lesen und die Ereignisdaten programmgesteuert lesen. Eine vollständige Beschreibung der MOF-Syntax und die Verwendung des MOF-Compilers (Mofcomp.exe) zum Hinzufügen Ihrer MOF-Klassen zum CIM-Repository finden Sie unter [Managed Object Format](../wmisdk/managed-object-format--mof-.md). Informationen zur Verwendung von Wbemtest.exe für den Zugriff auf das CIM-Repository finden Sie unter [Windows Management Instrumentation](../wmisdk/wmi-start-page.md) (WMI).
 
-## <a name="versioning-mof-class"></a>Versionierung der MOF-Klasse
+## <a name="versioning-mof-class"></a>MOF-Versionierungsklasse
 
-Wenn Sie eine MOF-Klasse für den Ereignistyp hinzufügen oder ändern, besteht die Konvention darin, sowohl die MOF-Ereignisklasse als auch die MOF-Klassen des untergeordneten Ereignis Typs zu Version Um die MOF-Klasse des aktuellen Ereignisses zu versionenden, fügen \_ Sie VN an den Klassennamen an, wobei n eine inkrementelle Zahl ist, beginnend bei 0 Wenn dies die erste Revision der-Klasse ist, fügen \_ Sie v0 an den Klassennamen an. Außerdem müssen Sie der-Klasse den **eventversion** -Qualifizierer hinzufügen. Verwenden Sie die gleiche Versionsnummer, die Sie im Klassennamen verwendet haben, für den Wert des **eventversion** -Qualifizierers.
+Wenn Sie eine MOF-Ereignisklasse hinzufügen oder ändern, besteht die Konvention darin, sowohl die MOF-Ereignisklasse als auch deren untergeordnete MOF-Ereignistypklassen zu versionieren. Fügen Sie Vn an den \_ Klassennamen an, wobei n eine inkrementelle Zahl ist, die bei 0 beginnt, um eine Version der aktuellen MOF-Ereignisklasse zu verwenden. Wenn dies die erste Revision der -Klasse ist, fügen Sie \_ V0 an den Klassennamen an. Sie müssen der Klasse auch den **EventVersion-Qualifizierer** hinzufügen. Verwenden Sie dieselbe Versionsnummer, die Sie im Klassennamen für den Wert des **EventVersion-Qualifizierers** verwendet haben.
 
-Die neue Version der MOF-Ereignisklasse muss denselben Namen und **GUID** -Qualifizierer wie die ursprüngliche Klasse verwenden. Die neue Klasse kann optional den **eventversion** -Qualifizierer hinzufügen. Die MOF-Ereignisklasse, die nicht den **eventversion** -Qualifizierer enthält, wird als neueste Version betrachtet, oder wenn alle Versionen der Klasse einen **eventversion** -Qualifizierer enthalten, wird die Klasse mit der höchsten Versionsnummer als die neueste Version betrachtet. Der Anbieter verwendet den **Class. Version** -Member der [**Ereignis Ablauf \_ Verfolgungs \_ Header**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) -Struktur, um die Version des Ereignisses zu identifizieren, das in der Ablauf Verfolgung enthalten ist.
+Die neue Version der MOF-Ereignisklasse muss  den gleichen Namen und guid-Qualifizierer wie die ursprüngliche Klasse verwenden. Die neue Klasse kann optional den **EventVersion-Qualifizierer** hinzufügen. Die MOF-Ereignisklasse, die den **EventVersion-Qualifizierer** nicht enthält, wird als neueste Version betrachtet, oder wenn alle Versionen der Klasse einen **EventVersion-Qualifizierer** enthalten, wird die Klasse mit der höchsten Versionsnummer als neueste Version betrachtet. Der Anbieter verwendet den **Class.Version-Member** der [**EVENT TRACE \_ \_ HEADER-Struktur,**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) um die Version des Ereignisses zu identifizieren, das in der Ablaufverfolgung enthalten ist.
 
-Im folgenden Beispiel wird gezeigt, wie eine MOF-Ereignisklasse in einer Version Versions
+Das folgende Beispiel zeigt, wie sie eine MOF-Ereignisklasse versionen.
 
 ``` syntax
 #pragma namespace("\\\\.\\root\\wmi")

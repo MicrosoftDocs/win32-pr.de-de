@@ -1,5 +1,5 @@
 ---
-description: Definiert ein einfaches Gitter. Das erste Array ist eine Liste von Scheitelpunkte, und das zweite Array definiert die Gesichter des Gitters durch Indizierung in das Scheitelpunktarray.
+description: Definiert ein einfaches Gitternetz. Das erste Array ist eine Liste von Scheitelpunkten, und das zweite Array definiert die Gesichter des Gitternetzes, indem es in das Scheitelpunktarray indiziert wird.
 ms.assetid: vs|directx_sdk|~\mesh.htm
 title: Mesh
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "119240740"
 ---
 # <a name="mesh"></a>Mesh
 
-Definiert ein einfaches Gitter. Das erste Array ist eine Liste von Scheitelpunkte, und das zweite Array definiert die Gesichter des Gitters durch Indizierung in das Scheitelpunktarray.
+Definiert ein einfaches Gitternetz. Das erste Array ist eine Liste von Scheitelpunkten, und das zweite Array definiert die Gesichter des Gitternetzes, indem es in das Scheitelpunktarray indiziert wird.
 
 ``` syntax
 template Mesh
@@ -29,13 +29,13 @@ template Mesh
 
 Hierbei gilt:
 
--   nVertices: Anzahl der Scheitelzeichen.
--   array Vector vertices \[ nVertices \] – Array von Scheitelungen, die jeweils vom Typ Vector sind. Siehe [**Vektor**](vector.md).
--   nFaces: Anzahl der Gesichter.
--   Array MeshFace faces \[ nFaces \] : Array von Gesichtern, die jeweils vom Typ MeshFace sind. Weitere Informationen [**finden Sie unter MeshFace**](meshface.md).
--   \[ ... \] – Hier kann eine beliebige X-Dateivorlage verwendet werden. Dadurch wird die Architektur erweiterbar. [**Material-**](material.md) [**und TextureFilename-Vorlagen**](texturefilename.md) werden in der Regel verwendet.
+-   nVertices: Anzahl der Scheitelpunkte.
+-   array Vector vertices \[ nVertices \] : Array von Scheitelpunkten, jeder vom Typ Vector. Weitere Informationen finden Sie unter [**Vektor**](vector.md).
+-   nFaces: Anzahl von Gesichtern.
+-   array MeshFace faces \[ nFaces \] : Array von Gesichtern vom Typ MeshFace. Weitere Informationen finden Sie unter [**MeshFace**](meshface.md).
+-   \[ ... \] – Hier kann eine beliebige X-Dateivorlage verwendet werden. Dadurch wird die Architektur erweiterbar. [**Material-**](material.md) und [**TextureFilename-Vorlagen**](texturefilename.md) werden in der Regel verwendet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

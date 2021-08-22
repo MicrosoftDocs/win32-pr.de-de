@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentmemoryexception-Klasse'
+description: 'Weitere Informationen zu: EsentMemoryException-Klasse'
 title: EsentMemoryException-Klasse
 TOCTitle: EsentMemoryException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentMemoryException
@@ -24,30 +24,30 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6a7090fdedee2969e5dd3658b7068fd8739e9365
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 67ae3f11109ec025c0b0b0c1d907c09be3ca9393e39bd56f7b7cd190bdbb9acc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "103869375"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119040778"
 ---
 # <a name="esentmemoryexception-class"></a>EsentMemoryException-Klasse
 
-Basisklasse für Speicher Ausnahmen.
+Basisklasse für Memory-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentoperationexception](./esentoperationexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentresourceexception](./esentresourceexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentmemoryexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentOperationException](./esentoperationexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentResourceException](./esentresourceexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentMemoryException  
               
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -71,27 +71,27 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentmemoryexception-Member](./esentmemoryexception-members.md)
+[EsentMemoryException-Member](./esentmemoryexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
 
 ## <a name="derived-types"></a>Abgeleitete Typen
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentoperationexception](./esentoperationexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentresourceexception](./esentresourceexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentmemoryexception  
-              [Microsoft. ISAM. ESENT. Interop. esentouesf buffersexception](./esentoutofbuffersexception-class.md)  
-              [Microsoft. ISAM. ESENT. Interop. esentouyscurrsorsexception](./esentoutofcursorsexception-class.md)  
-              [Microsoft. ISAM. ESENT. Interop. esentouesffilelenker sexception](./esentoutoffilehandlesexception-class.md)  
-              [Microsoft. ISAM. ESENT. Interop. esentouesf memoryexception](./esentoutofmemoryexception-class.md)  
-              [Microsoft. ISAM. ESENT. Interop. esentouyfsessionsexception](./esentoutofsessionsexception-class.md)  
-              [Microsoft. ISAM. ESENT. Interop. esentouesfthreadsexception](./esentoutofthreadsexception-class.md)  
-              [Microsoft. ISAM. ESENT. Interop. esentesomanymempoolentriesexception](./esenttoomanymempoolentriesexception-class.md)  
-              [Microsoft. ISAM. ESENT. Interop. esentesomanyopenindexesexception](./esenttoomanyopenindexesexception-class.md)  
-              [Microsoft. ISAM. ESENT. Interop. esentesomanysortsexception](./esenttoomanysortsexception-class.md)
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentOperationException](./esentoperationexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentResourceException](./esentresourceexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentMemoryException  
+              [Microsoft.Isam.Esent.Interop.EsentOutOfBuffersException](./esentoutofbuffersexception-class.md)  
+              [Microsoft.Isam.Esent.Interop.EsentOutOfCursorsException](./esentoutofcursorsexception-class.md)  
+              [Microsoft.Isam.Esent.Interop.EsentOutOfFileHandlesException](./esentoutoffilehandlesexception-class.md)  
+              [Microsoft.Isam.Esent.Interop.EsentOutOfMemoryException](./esentoutofmemoryexception-class.md)  
+              [Microsoft.Isam.Esent.Interop.EsentOutOfSessionsException](./esentoutofsessionsexception-class.md)  
+              [Microsoft.Isam.Esent.Interop.EsentOutOfThreadsException](./esentoutofthreadsexception-class.md)  
+              [Microsoft.Isam.Esent.Interop.EsentTooManyMempoolEntriesException](./esenttoomanymempoolentriesexception-class.md)  
+              [Microsoft.Isam.Esent.Interop.EsentTooManyOpenIndexesException](./esenttoomanyopenindexesexception-class.md)  
+              [Microsoft.Isam.Esent.Interop.EsentTooManySortsException](./esenttoomanysortsexception-class.md)
