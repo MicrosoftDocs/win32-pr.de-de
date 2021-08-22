@@ -1,54 +1,54 @@
 ---
-title: FontBold (Eigenschaft)
-description: FontBold (Eigenschaft)
+title: FontBold-Eigenschaft
+description: FontBold-Eigenschaft
 ms.assetid: abf735f9-fea2-4d02-a821-e28583a8bc39
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6439a7f6b7d6e3bf67620f27c77ce59f8402ce49
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c58706730c44a90729cb0d2d9f83eb16398b54ddc1072c66fef583d104073164
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342034"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119778210"
 ---
-# <a name="fontbold-property"></a>FontBold (Eigenschaft)
+# <a name="fontbold-property"></a>FontBold-Eigenschaft
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt den Schriftart Stil zurück, der zurzeit im Word-sprecherfenster für das angegebene Zeichen angezeigt wird.
+Gibt den Schriftschnitt zurück, der derzeit im Wortsprechblasenfenster für das angegebene Zeichen angezeigt wird.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent ***. Zeichen ("*** Merkmal-ID * * *"). Sprechblase. FontBold**
+*agent***. Zeichen ("**_CharacterID_*_"). Balloon.FontBold_*
 
 
 
 | Wert     | BESCHREIBUNG                   |
 |-----------|-------------------------------|
-| **True**  | Die Schriftart der Sprechblase ist fett formatiert.     |
-| **False** | Die Schriftart für die Sprechblase ist nicht fett formatiert. |
+| **True**  | Die Sprechblasenschriftart ist fett formatiert.     |
+| **False** | Die Sprechblasenschriftart ist nicht fett. |
 
 
 
- 
+ 
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Standardwert für die Schriftart Einstellungen der Word-Sprechblase eines Zeichens wird im Microsoft-Agent-Zeichen-Editor festgelegt. Außerdem kann der Benutzer die Schriftart Einstellungen für alle Zeichen auf dem Eigenschaften Blatt Microsoft-Agent überschreiben.
+Der Standardwert für die Schriftarteinstellungen der Wortsprechblase eines Zeichens wird im Microsoft Agent-Zeichen-Editor festgelegt. Darüber hinaus kann der Benutzer Schriftarteinstellungen für alle Zeichen im Microsoft Agent-Eigenschaftenblatt überschreiben.
 
- 
+ 
 
- 
+ 
 
 
 

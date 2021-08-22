@@ -1,39 +1,39 @@
 ---
 title: Erweiterte Abfragesyntax
-description: Die Erweiterte Abfrage Syntax (Advanced Query Syntax, AQS) wird von Microsoft Windows Desktop Search (WDS) verwendet, um Benutzern und Programmierern zu helfen, Ihre Suchvorgänge besser zu definieren und einzuschränken.
+description: Die erweiterte Abfragesyntax (Advanced Query Syntax, AQS) wird von Microsoft Windows Desktop Search (WDS) verwendet, um Benutzern und Programmierern zu helfen, ihre Suchvorgänge besser zu definieren und zu verengen.
 ms.assetid: 8e55bd40-c7cf-44a6-bc18-24bc7a267779
 ms.topic: article
 ms.date: 05/19/2020
-ms.openlocfilehash: bd00821e60c8d950a7ec384b62d7ff062066f224
-ms.sourcegitcommit: 8bba855bfee06d018edb16c1af70fa4d4344445b
+ms.openlocfilehash: 2daf552f8f750335abacea4b550f92bd71c91c9b2b688a387b035a8180a8b3dc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "106340255"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119601820"
 ---
 # <a name="advanced-query-syntax"></a>Erweiterte Abfragesyntax
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [Windows Search](../search/-search-3x-wds-overview.md) .
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren [Versionen Windows Search.](../search/-search-3x-wds-overview.md)
 
-Die Erweiterte Abfrage Syntax (Advanced Query Syntax, AQS) wird von Microsoft Windows Desktop Search (WDS) verwendet, um Benutzern und Programmierern zu helfen, Ihre Suchvorgänge besser zu definieren und einzuschränken. Die Verwendung von AQS ist eine einfache Möglichkeit zum Einschränken von Such Vorgängen und Bereitstellung besserer Resultsets. Suchvorgänge können mit den folgenden Parametern eingeschränkt werden:
+Die erweiterte Abfragesyntax (Advanced Query Syntax, AQS) wird von Microsoft Windows Desktop Search (WDS) verwendet, um Benutzern und Programmierern zu helfen, ihre Suchvorgänge besser zu definieren und zu verengen. Die Verwendung von AQS ist eine einfache Möglichkeit, Suchvorgänge ein- und bessere Ergebnisse zu liefern. Suchvorgänge können durch die folgenden Parameter eingeengt werden:
 
--   Dateitypen: Ordner, Dokumente, Präsentationen, Bilder usw.
+-   Dateiarten: Ordner, Dokumente, Präsentationen, Bilder und so weiter.
 -   Dateispeicher: bestimmte Datenbanken und Speicherorte.
--   Dateieigenschaften: Größe, Datum, Titel usw.
--   Dateiinhalt: Schlüsselwörter wie "Projektleistungen", "AQS", "Blue Suede-Schuhe" usw.
+-   Dateieigenschaften: Größe, Datum, Titel und so weiter.
+-   Dateiinhalte: Schlüsselwörter wie "Projekterstellbare", "AQS", "blaue Suede-Kinder" und so weiter.
 
-Außerdem können Suchparameter mithilfe von Such Operatoren kombiniert werden. Im restlichen Teil dieses Abschnitts werden die Abfrage Syntax, die Parameter und die Operatoren erläutert und erläutert, wie diese kombiniert werden können, um gezielte Suchergebnisse anzubieten. In den Tabellen wird die Syntax beschrieben, die mit WDS verwendet werden soll, sowie die Eigenschaften, die für die einzelnen im Fenster " **Windows-Desktop Such** Ergebnisse" angezeigten Dateitypen abgefragt werden können.
+Darüber hinaus können Suchparameter mithilfe von Suchoperatoren kombiniert werden. Im weiteren Verlauf dieses Abschnitts werden die Abfragesyntax, die Parameter und Operatoren sowie deren Kombination erläutert, um gezielte Suchergebnisse zu bieten. Die Tabellen beschreiben die Syntax, die mit WDS verwendet werden soll, sowie die  Eigenschaften, die für jede Dateiart abgefragt werden können, die im Windows Desktopsuchergebnisfenster angezeigt wird.
 
-## <a name="desktop-search-syntax"></a>Syntax der Desktop Suche
+## <a name="desktop-search-syntax"></a>Syntax der Desktopsuche
 
-Eine Suchabfrage kann ein oder mehrere Schlüsselwörter mit booleschen Operatoren und optionalen Kriterien enthalten. Diese optionalen Kriterien können eine Suche einschränken, die auf folgenden Bedingungen basiert:
+Eine Suchabfrage kann ein oder mehrere Schlüsselwörter mit booleschen Operatoren und optionalen Kriterien enthalten. Diese optionalen Kriterien können eine Suche anhand der folgenden Kriterien einengen:
 
 -   Bereich oder Datenspeicher, in dem sich Dateien befinden
 -   Arten von Dateien
 -   Verwaltete Eigenschaften von Dateien
 
-Die optionalen Kriterien, die nachfolgend ausführlicher beschrieben werden, verwenden die folgende Syntax:
+Die optionalen Kriterien, die im Folgenden ausführlicher beschrieben werden, verwenden die folgende Syntax:
 
 `<scope name>:<value>`
 
@@ -41,57 +41,57 @@ Die optionalen Kriterien, die nachfolgend ausführlicher beschrieben werden, ver
 
 `<property name>:<value>`
 
-Angenommen, ein Benutzer möchte nach einem Dokument suchen, das den Ausdruck "Letztes Quartal" enthält, der von John oder Joanne erstellt wurde, und der Benutzer im Ordner "MyDocuments" gespeichert hat. Die Abfrage könnte wie folgt aussehen:
+Angenommen, ein Benutzer möchte nach einem Dokument suchen, das den ausdruck "letztes Quartal" enthält, der von John oder Mire erstellt wurde, und das der Benutzer im Ordner mydocuments gespeichert hat. Die Abfrage kann wie die folgende aussehen:
 
 `"last quarter" author:(john OR joanne) foldername:mydocuments`
 
-### <a name="scope-locations-and-data-stores"></a>Bereich: Standorte und Datenspeicher
+### <a name="scope-locations-and-data-stores"></a>Bereich: Speicherorte und Datenspeicher
 
-Benutzer können den Suchbereich auf bestimmte Ordner Speicherorte oder Datenspeicher beschränken. Wenn Sie z. b. mehrere e-Mail-Konten verwenden und eine Abfrage entweder auf Microsoft Outlook oder Microsoft Outlook Express beschränken möchten, können Sie `store:outlook` oder verwenden `store:oe` .
+Benutzer können den Bereich ihrer Suchvorgänge auf bestimmte Ordnerspeicherorte oder Datenspeicher beschränken. Wenn Sie beispielsweise mehrere E-Mail-Konten verwenden und eine Abfrage entweder auf Microsoft Outlook oder Microsoft Outlook Express beschränken möchten, können Sie bzw. `store:outlook` `store:oe` verwenden.
 
 
 
-| Einschränken der Suche nach Datenspeicher | Verwendung              | Beispiel                                  |
+| Einschränken der Suche nach Store | Verwendung              | Beispiel                                  |
 |-------------------------------|------------------|------------------------------------------|
-| Desktop                       | Desktop          | Store: Desktop                            |
-| Dateien                         | files            | Speichern: Dateien                              |
-| Outlook                       | positiv          | Store: Outlook                            |
-| Outlook Express               | oe               | Store: OE                                 |
-| Bestimmter Ordner               | FolderName oder in | FolderName: MyDocuments oder in: MyDocuments |
+| Desktop                       | Desktop          | store:desktop                            |
+| Dateien                         | files            | store:files                              |
+| Outlook                       | Outlook          | store:outlook                            |
+| Outlook Express               | oe               | store:oe                                 |
+| Bestimmter Ordner               | foldername oder in | foldername:MyDocuments oder in:MyDocuments |
 
 
 
  
 
-Wenn Sie über einen Protokollhandler für die durch Forstung von benutzerdefinierten speichern verfügen (z. b. Lotus Notes), können Sie den Namen des Speichers oder Protokoll Handlers für den Speicher verwenden. Wenn Sie z. b. einen Protokollhandler implementiert haben, um einen Lotus Notes-Datenspeicher als "Notizen" einzuschließen, wäre die Abfrage Syntax `store:notes` .
+Wenn Sie über einen Protokollhandler verfügen, um benutzerdefinierte Speicher wie Lotus Notes zu durchforsten, können Sie den Namen des Speichers oder Protokollhandlers für den Speicher verwenden. Wenn Sie z. B. einen Protokollhandler implementiert haben, der einen Lotus Notes-Datenspeicher als "Notizen" enthält, wäre die Abfragesyntax `store:notes` .
 
-### <a name="common-file-kinds"></a>Allgemeine Dateitypen
+### <a name="common-file-kinds"></a>Allgemeine Dateiarten
 
-Benutzer können Ihre Suchvorgänge auch auf bestimmte Typen von Dateien beschränken, die als Dateitypen bezeichnet werden. In der folgenden Tabelle sind die Dateitypen und Beispiele für die Syntax aufgeführt, die für die Suche nach diesen Arten von Dateien verwendet wird.
+Benutzer können ihre Suchvorgänge auch auf bestimmte Dateitypen beschränken, die als Dateiarten bezeichnet werden. In der folgenden Tabelle sind die Dateitypen und Beispiele für die Syntax aufgeführt, mit der nach diesen Arten von Dateien gesucht wird.
 
 
 
-| So schränken Sie den Dateityp ein:       | Verwendung              | Beispiel                        |
+| So beschränken Sie nach Dateityp:       | Verwendung              | Beispiel                        |
 |---------------------------------|------------------|--------------------------------|
-| Alle Dateitypen                  | alles       | Art: alles                |
-| Kommunikation                  | Kommunikation   | Art: Kommunikation            |
-| Kontakte                        | Kontakte         | Art: Kontakte                  |
-| E-Mail                          | email            | Art: e-Mail                     |
-| Instant Messenger-Gespräche | im               | Art: im                        |
-| Besprechungen                        | t         | Art: Besprechungen                  |
-| Aufgaben                           | Tasks            | Art: Aufgaben                     |
-| Notizen                           | notes            | Kind: Hinweise                     |
-| Dokumente                       | Docs             | Kind: docs                      |
-| Text Dokumente                  | text             | Art: Text                      |
-| Kalkulationstabellen                    | Tabellen     | Kind: Kalkulations Tabellen              |
-| Präsentationen                   | Präsentationen    | Art: Präsentationen             |
-| Musik                           | music            | Art: Musik                     |
-| Bilder                        | Seht             | Kind: Bilder                      |
-| Videos                          | videos           | Art: Videos                    |
-| Ordner                         | Ordner          | Art: Ordner                   |
-| Ordnername                     | FolderName oder in | FolderName: MyDocs oder in: MyDocs |
-| Favoriten                       | Favoriten        | Kind: Favoriten                 |
-| Programs                        | Programme         | Art: Programme                  |
+| Alle Dateitypen                  | alles       | kind:everything                |
+| Kommunikation                  | Kommunikation   | kind:communications            |
+| Kontakte                        | Kontakte         | kind:contacts                  |
+| E-Mail                          | email            | kind:email                     |
+| Instant Messenger-Konversationen | im               | kind:im                        |
+| Besprechungen                        | Sitzungen         | kind:meetings                  |
+| Aufgaben                           | Tasks            | kind:tasks                     |
+| Hinweise                           | notes            | kind:notes                     |
+| Dokumente                       | Docs             | kind:docs                      |
+| Textdokumente                  | text             | kind:text                      |
+| Kalkulationstabellen                    | Tabellen     | kind:spreadsheets              |
+| Präsentationen                   | Präsentationen    | kind:presentations             |
+| Musik                           | music            | kind:music                     |
+| Bilder                        | Bilder             | kind:pics                      |
+| Videos                          | videos           | kind:videos                    |
+| Ordner                         | Ordner          | kind:folders                   |
+| Ordnername                     | foldername oder in | foldername:mydocs oder in:mydocs |
+| Favoriten                       | Favoriten        | kind:favorites                 |
+| Programme                        | Programme         | kind:programs                  |
 
 
 
@@ -99,20 +99,20 @@ Benutzer können Ihre Suchvorgänge auch auf bestimmte Typen von Dateien beschr�
 
 ### <a name="boolean-operators"></a>Boolesche Operatoren
 
-Such Schlüsselwörter und Dateieigenschaften können kombiniert werden, um eine Suche mit Operatoren zu erweitern oder einzuschränken. In der folgenden Tabelle werden allgemeine Operatoren erläutert, die in einer Suchabfrage verwendet werden.
+Suchbegriffe und Dateieigenschaften können kombiniert werden, um eine Suche mit Operatoren zu erweitern oder einzugrenzen. In der folgenden Tabelle werden allgemeine Operatoren erläutert, die in einer Suchabfrage verwendet werden.
 
 
 
 | Schlüsselwort/Symbol  | Beispiele                                              | Funktion                                                                                                       |
 |-----------------|-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| NICHT             | soziale Sicherheit, nicht Sicherheit<br/>                        | Sucht Elemente, die *soziale* Netzwerke enthalten, aber keine *Sicherheit*.<br/>                                              |
-|                 | soziale Sicherheit<br/>                           | Sucht nach Elementen, die *Social* und *Security* enthalten.<br/>                                              |
-| oder              | soziale Netzwerke oder Sicherheit<br/>                         | Sucht nach Elementen, die *Social* oder *Security* enthalten.<br/>                                                    |
-| Anführungszeichen | "soziale Sicherheit"<br/>                          | Sucht nach Elementen, die den exakten Ausdruck für *soziale Sicherheit* enthalten.<br/>                                        |
-| Klammern     | (soziale Sicherheit)<br/>                          | Sucht nach Elementen, die in beliebiger Reihenfolge *soziale* und *Sicherheits* Elemente enthalten.<br/>                                      |
-| >            | Datum: >11/05/04<br/> Größe: >500<br/>  | Sucht nach Elementen mit einem Datum nach 11/05/04. <br/> Sucht nach Elementen mit einer Größe von mehr als 500 Bytes.<br/> |
-| <            | Datum: <11/05/04 <br/> Größe: <500<br/> | Sucht nach Elementen mit einem Datum vor 11/05/04. <br/> Sucht nach Elementen mit einer Größe von weniger als 500 Bytes.<br/>   |
-| ..              | Datum: 11/05/04.. 11/10/04<br/>                    | Findet Elemente mit einem Datum, das am 11/05/04 beginnt und auf 11/10/04 endet.<br/>                               |
+| NICHT             | social NOT security<br/>                        | Sucht Nach Elementen, die *soziale Netzwerke* enthalten, aber keine *Sicherheitselemente.*<br/>                                              |
+|                 | Sozialversicherung<br/>                           | Sucht Nach Elementen, die *soziale Netzwerke* und *Sicherheitselemente* enthalten.<br/>                                              |
+| oder              | Social OR-Sicherheit<br/>                         | Sucht Nach Elementen, die *soziale Netzwerke* oder *Sicherheitselemente* enthalten.<br/>                                                    |
+| Anführungszeichen | "Soziale Sicherheit"<br/>                          | Sucht Nach Elementen, die den genauen Ausdruck *social security* enthalten.<br/>                                        |
+| Klammern     | (Sozialversicherung)<br/>                          | Sucht Nach Elementen, die *soziale Netzwerke* und *Sicherheit* in beliebiger Reihenfolge enthalten.<br/>                                      |
+| >            | date:>05.11.04<br/> size:>500<br/>  | Sucht Elemente mit einem Datum nach dem 05.11.04. <br/> Sucht Elemente mit einer Größe von mehr als 500 Byte.<br/> |
+| <            | date:<05.11.04 <br/> size:<500<br/> | Sucht Nach Elementen mit einem Datum vor dem 05.11.04. <br/> Sucht Elemente mit einer Größe von weniger als 500 Byte.<br/>   |
+| ..              | date:11/05/04...11/10/04<br/>                    | Sucht nach Elementen mit einem Datum, das am 04.11.05 beginnt und am 10.11.04 endet.<br/>                               |
 
 
 
@@ -120,26 +120,26 @@ Such Schlüsselwörter und Dateieigenschaften können kombiniert werden, um eine
 
 > [!Note]
 >
-> Die Operatoren **Not** and **or** müssen in Großbuchstaben angegeben werden und können nicht in einer Abfrage (z. b.) kombiniert werden `social OR security NOT retirement` .
+> Die Operatoren **NOT** und **OR** müssen groß geschrieben sein und können nicht in einer Abfrage kombiniert werden (z. B. `social OR security NOT retirement` ).
 
  
 
 ### <a name="boolean-properties"></a>Boolesche Eigenschaften
 
-Einige Dateitypen ermöglichen Benutzern das Suchen nach Dateien mithilfe von booleschen Eigenschaften, wie in der folgenden Tabelle beschrieben.
+Bei einigen Dateitypen können Benutzer mit booleschen Eigenschaften nach Dateien suchen, wie in der folgenden Tabelle beschrieben.
 
 
 
 | Eigenschaft       | Beispiel                   | Funktion                                                                                                        |
 |----------------|---------------------------|-----------------------------------------------------------------------------------------------------------------|
-| ist: Anhang  | Bericht ist: Anlage      | Sucht nach Elementen, die Anhänge enthalten, die einen *Bericht* enthalten. Wie in `isattachment:true`.                           |
-| IsOnline:      | Bericht IsOnline: true      | Sucht nach Elementen, die Online sind und *Berichte* enthalten.                                                         |
-| isperiodisch:   | Bericht "isperiodisch": true   | Sucht nach Elementen, die sich wiederholt und die *Berichte* enthalten.                                                       |
-| isflaging:     | Report isflaging: true     | Sucht nach Elementen, die gekennzeichnet sind (z. b. überprüfen, Nachverfolgung) und die einen *Bericht* enthalten.                       |
-| isDeleted     | Bericht "isDeleted": true     | Sucht nach Elementen, die als gelöscht gekennzeichnet sind (z. b. Papierkorb oder gelöschte Elemente) und die einen *Bericht* enthalten. |
-| IsCompleted   | Bericht "isabgeschlossen": false  | Sucht Elemente, die nicht als "Complete" gekennzeichnet sind und einen *Bericht* enthalten.                                        |
-| HasAttachment: | berichtshasattachment: true | Sucht Elemente, die einen *Bericht* enthalten und über Anlagen verfügen.                                                          |
-| hasflag       | berichtshasflag: true       | Sucht Elemente, die den *Bericht* enthalten und über Flags verfügen.                                                                |
+| is:attachment  | bericht is:attachment      | Sucht Nach Elementen mit Anlagen, die *Den Bericht* enthalten. Wie in `isattachment:true`.                           |
+| isonline:      | bericht isonline:true      | Sucht Nach Elementen, die online sind und *Den Bericht* enthalten.                                                         |
+| isrecurring:   | report isrecurring:true   | Sucht elemente, die sich wiederholen und *Berichts* enthalten.                                                       |
+| isflagged:     | bericht isflagged:true     | Sucht nach Elementen, die gekennzeichnet sind (z. B. Überprüfen, Nachverfolgung) und *den Bericht* enthalten.                       |
+| Isdeleted:     | bericht isdeleted:true     | Sucht nach Elementen, die als gelöscht gekennzeichnet sind (z. B. Papierkorb oder gelöschte Elemente), und die *den Bericht* enthalten. |
+| Iscompleted:   | report iscompleted:false  | Sucht Nach Elementen, die nicht als vollständig gekennzeichnet sind und *den Bericht* enthalten.                                        |
+| hasattachment: | report hasattachment:true | Sucht Nach Elementen, die *Berichte* enthalten und Anlagen enthalten                                                          |
+| hasflag:       | report hasflag:true       | Sucht Elemente, die *Berichte* enthalten und Flags enthalten.                                                                |
 
 
 
@@ -147,14 +147,14 @@ Einige Dateitypen ermöglichen Benutzern das Suchen nach Dateien mithilfe von bo
 
 ### <a name="dates"></a>Datumsangaben
 
-Neben der Suche nach bestimmten Datums-und Datumsbereichen mithilfe der zuvor beschriebenen Operatoren werden in AQS relative Datumswerte ( `today` z `tomorrow` . b.,, oder `next week` ) und die Werte für den Tag (wie `Tuesday` oder `Monday..Wednesday` ) und Month ( `February` ) ermöglicht.
+Zusätzlich zur Suche nach bestimmten Datums- und Datumsbereichen mithilfe der zuvor beschriebenen Operatoren lässt AQS relative Datumswerte (wie `today` , oder ) und `tomorrow` `next week` Tageswerte (wie `Tuesday` oder ) und `Monday..Wednesday` `February` Monatswerte () zu.
 
 
 
-| Relativ zu:    | Syntax Beispiel                                                                                                                         | Ergebnis                                                                                                                                                                                                                                                                                                                                                    |
+| Relativ zu:    | Syntaxbeispiel                                                                                                                         | Ergebnis                                                                                                                                                                                                                                                                                                                                                    |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Tag             | Datum: heute<br/> Datum: Morgen<br/> Datum: Gestern<br/>                                                               | Sucht nach Elementen mit dem heutigen Datum.<br/> Sucht nach Elementen mit dem Morgen.<br/> Sucht nach Elementen mit dem gestrigen Datum. <br/>                                                                                                                                                                                                                     |
-| Woche/Monat/Jahr | Datum: diese Woche<br/> Datum: Letzte Woche<br/> Datum: nächster Monat<br/> Datum: vergangener Monat<br/> Datum: das kommende Jahr <br/> | Findet Elemente mit einem Datum, das innerhalb der aktuellen Woche liegt.<br/> Findet Elemente mit einem Datum, das in der vorherigen Woche liegt.<br/> Findet Elemente mit einem Datum, das innerhalb der bevorstehenden Woche liegt.<br/> Findet Elemente mit einem Datum, das innerhalb des vorherigen Monats liegt.<br/> Sucht nach Elementen mit einem Datum, das in das bevorstehende Jahr fällt. <br/> |
+| Tag             | date:today<br/> date:tomorrow<br/> date:yesterday<br/>                                                               | Sucht Nach Elementen mit dem heutigen Datum.<br/> Sucht Nach Elementen mit dem Datum von morgen.<br/> Sucht Nach Elementen mit dem gestrigen Datum. <br/>                                                                                                                                                                                                                     |
+| Woche/Monat/Jahr | date:this week<br/> date:last week<br/> date:next month<br/> date:past month<br/> date:coming year <br/> | Sucht Elemente mit einem Datum, das innerhalb der aktuellen Woche liegen.<br/> Sucht Elemente mit einem Datum, das innerhalb der vorherigen Woche liegen.<br/> Sucht Nach Elementen mit einem Datum, das innerhalb der kommenden Woche liegen soll.<br/> Sucht Elemente mit einem Datum, das in den vorherigen Monat fällt.<br/> Sucht Elemente mit einem Datum, das innerhalb des nächsten Jahres liegen. <br/> |
 
 
 
@@ -162,40 +162,40 @@ Neben der Suche nach bestimmten Datums-und Datumsbereichen mithilfe der zuvor be
 
 ## <a name="properties-by-file-kind"></a>Eigenschaften nach Dateiart
 
-Benutzer können nach bestimmten Eigenschaften verschiedener Dateiarten suchen. Einige Eigenschaften (z. b. die Dateigröße) sind für alle Dateien üblich, während andere auf eine bestimmte Art beschränkt sind. Die Folien Anzahl ist beispielsweise spezifisch für Präsentationen. In den folgenden Tabellen sind diese Eigenschaften nach Dateiart aufgelistet.
+Benutzer können nach bestimmten Eigenschaften verschiedener Dateitypen suchen. Einige Eigenschaften (z. B. die Dateigröße) gelten für alle Dateien, während andere auf eine bestimmte Art beschränkt sind. Die Anzahl der Folien ist z. B. spezifisch für Präsentationen. In den folgenden Tabellen sind diese Eigenschaften nach Dateiart aufgeführt.
 
-### <a name="file-kind-everything"></a>Dateiart: alles
+### <a name="file-kind-everything"></a>Dateiart: Alles
 
-Dabei handelt es sich um Eigenschaften, die allen Dateitypen gemeinsam sind. Wenn Sie alle Dateitypen in eine Abfrage einschließen möchten, lautet die Syntax wie folgt:
+Dies sind Eigenschaften, die allen Dateitypen gemeinsam sind. Um alle Dateitypen in eine Abfrage einzufügen, lautet die Syntax:
 
 `kind:everything <property>:<value>`
 
-dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>` ist der vom Benutzer angegebene Suchbegriff.
+dabei `<property>` ist eine unten aufgeführte Eigenschaft und der vom Benutzer angegebene `<value>` Suchbegriff.
 
 
 
 | Eigenschaft       | Verwendung                      | Beispiel                        |
 |----------------|--------------------------|--------------------------------|
-| Titel          | Titel, Betreff oder info  | Title: "Quartals Finanz"    |
-| Status         | status                   | Status: Fertigstellen                |
-| Datum           | Datum                     | Datum: Letzte Woche                 |
-| Geändert am  | DateModified oder modified | geändert: Letzte Woche             |
-| Wichtigkeit     | Wichtigkeit oder Priorität   | Wichtigkeit: hoch                |
-| Size           | Größe                     | Größe: > 50                   |
-| Deleted        | gelöscht oder isDeleted     | IsDeleted: true                 |
-| Ist Anhang  | isattachment             | isattachment: true              |
-| Beschreibung             | zu oder ToName             | an: Bob                         |
-| Cc             | CC oder ccname             | cc: John                        |
-| Company        | company                  | Unternehmen: Microsoft              |
-| Standort       | location                 | Standort: "Konferenzraum 102" |
-| Category       | category                 | Kategorie: Business              |
-| Keywords       | keywords                 | Schlüsselwörter: "Sales Projektionen"   |
-| Aufzunehmen          | aufzunehmen                    | Album: "Fly by Nacht"           |
-| Dateiname      | Dateiname oder Datei         | Dateiname: myresume              |
-| Genre          | genre                    | Genre: Rock                     |
-| Autor         | Autor oder durch             | Autor: "Stephen King"          |
-| Personen         | Personen oder mit           | mit: (Sonja oder David)          |
-| Ordner         | Ordner, unter oder Pfad    | Ordner: Downloads               |
+| Titel          | title, subject oder about  | title:"Quarterly Financial"    |
+| Status         | status                   | status:complete                |
+| Datum           | Datum                     | date:last week                 |
+| Geändert am  | datemodified oder modified | modified:last week             |
+| Wichtigkeit     | Wichtigkeit oder Priorität   | importance:high                |
+| Size           | Größe                     | size:> 50                   |
+| Deleted        | gelöscht oder gelöscht     | isdeleted:true                 |
+| Ist anlage  | isattachment             | isattachment:true              |
+| Beschreibung             | to oder toname             | to:bob                         |
+| Cc             | cc oder ccname             | cc:john                        |
+| Company        | company                  | company:Microsoft              |
+| Standort       | location                 | location:"Conference Room 102" |
+| Category       | category                 | category:Business              |
+| Keywords       | keywords                 | keywords:"sales projections"   |
+| Album          | Album                    | album:"Fly by Night"           |
+| Dateiname      | Dateiname oder Datei         | dateiname:MyResume              |
+| Genre          | genre                    | genre:rock                     |
+| Autor         | autor oder von             | author:"Stephen King"          |
+| Personen         | Personen oder mit           | with:(sonja oder david)          |
+| Ordner         | Ordner, unter oder Pfad    | folder:downloads               |
 | Dateierweiterung | ext oder fileext           | ext:.txt                       |
 
 
@@ -204,17 +204,17 @@ dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>
 
 ### <a name="attachment"></a>Attachment
 
-Dies sind die Eigenschaften, die Anlagen gemeinsam haben. Um die Suche nur auf Anlagen einzuschränken, lautet die Syntax wie folgt:
+Dies sind Eigenschaften, die Anlagen gemeinsam sind. Um die Suche nur auf Anlagen zu beschränken, lautet die Syntax:
 
 `kind:attachment <property>:<value>`
 
-dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>` ist der vom Benutzer angegebene Suchbegriff.
+dabei `<property>` ist eine unten aufgeführte Eigenschaft und der vom Benutzer angegebene `<value>` Suchbegriff.
 
 
 
 | Eigenschaft | Verwendung            | Beispiel                  |
 |----------|----------------|--------------------------|
-| Personen   | Personen oder mit | Personen: John oder mit: John |
+| Personen   | Personen oder mit | people:john oder with:john |
 
 
 
@@ -222,41 +222,41 @@ dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>
 
 ### <a name="contacts"></a>Kontakte
 
-Dies sind Eigenschaften, die von Kontakten gemeinsam sind. Um die Suche nur auf Kontakte zu beschränken, lautet die Syntax wie folgt:
+Dies sind Eigenschaften, die kontaktverbreitet sind. Um die Suche nur auf Kontakte zu beschränken, lautet die Syntax:
 
 `kind:contacts <property>:<value>`
 
-dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>` ist der vom Benutzer angegebene Suchbegriff.
+dabei `<property>` ist eine unten aufgeführte Eigenschaft und der vom Benutzer angegebene `<value>` Suchbegriff.
 
 
 
 | Eigenschaft              | Verwendung                 | Beispiel                            |
 |-----------------------|---------------------|------------------------------------|
-| Berufsbezeichnung             | jobtitle            | JobTitle: CFO                       |
-| IM-Adresse            | IMAddress           | IMAddress: John\_doe@msn.com        |
-| Telefon des Assistenten     | assistantsphone     | assistantsphone: 555-3323           |
-| Name des Assistenten        | AssistantName       | AssistantName: Paul                 |
-| Profession            | Arzt          | Beruf: Plumber                 |
-| Spitzname              | nickname            | Spitzname: TeX                       |
-| Gat                | Gat              | Ehepartner: Debbie                      |
-| Geschäftstadt         | businesscity        | businesscity: Seattle               |
-| Geschäftliche Postleitzahl  | businesspostalcode  | businesspostalcode: 98006           |
-| Business-Homepage    | BusinessHomePage    | BusinessHomePage:www. Microsoft. com |
-| Rückruf Telefonnummer | callbackphonenumber | callbackphonenumber: 555-555-2121   |
-| Mobiltelefon             | Carphone            | Carphone: 555-555-2121              |
-| Children              | Untergeordnete            | untergeordnete Elemente: Timmy                     |
-| Vorname            | firstname           | FirstName: John                     |
-| Nachname             | lastname            | LastName: Doe                       |
-| Faxgerät              | homefax             | homefax: 555-555-2121               |
-| Name des Managers        | managersname        | managersname: John                  |
-| Pager                 | pager               | Pager: 555-555-2121                 |
-| Telefon (geschäftlich)        | Karte Businessphone erscheint       | Businessphone: 555-555-2121         |
-| Telefon (privat)            | homePhone           | HomePhone: 555-555-2121             |
-| Mobiltelefon          | MobilePhone         | MobilePhone: 555-555-2121           |
-| Office                | Office              | Office: Beispiel                      |
-| Jahr           | Jahr         | Jahrestag: 1/1/06                 |
-| Birthday              | geschenkt            | Geburtstag: 1/1/06                    |
-| Webseite              | Rewards             | Webseite:www. Microsoft. com          |
+| Berufsbezeichnung             | jobtitle            | jobtitle:CFO                       |
+| IM-Adresse            | imaddress           | imaddress:john\_doe@msn.com        |
+| Telefon des Assistenten     | assistantsphone     | assistantsphone:555-3323           |
+| Name des Assistenten        | Assistentname       | assistentname:Paul                 |
+| Profession            | Beruf          | bei:plumber                 |
+| Spitzname              | nickname            | spitzname:Tex                       |
+| Ehepartner                | Ehepartner              | vor: Debbie                      |
+| Geschäfts-Stadt         | businesscity        | businesscity:Seattle               |
+| Geschäftliche Postleitzahl  | businesspostalcode  | businesspostalcode:98006           |
+| Unternehmens-Homepage    | businesshomepage    | businesshomepage:www.microsoft.com |
+| Rückruftelefonnummer | callbackphonenumber | callbackphonenumber:555-555-2121   |
+| Autotelefon             | Carphone            | carphone:555-555-2121              |
+| Children              | Untergeordnete            | children:Timmy                     |
+| Vorname            | firstname           | firstname:John                     |
+| Nachname             | lastname            | lastname:Doe                       |
+| Homefax              | homefax             | homefax:555-555-2121               |
+| Name des Vorgesetzten        | managername        | managersname:John                  |
+| Pager                 | pager               | pager:555-555-2121                 |
+| Telefon (geschäftlich)        | businessphone       | businessphone:555-555-2121         |
+| Telefon (privat)            | homePhone           | homephone:555-555-2121             |
+| Mobiltelefon          | Handy         | mobilephone:555-555-2121           |
+| Office                | Office              | office:sample                      |
+| Jahrestag           | Jahrestag         | anniversary:1/1/06                 |
+| Birthday              | Geburtstag            | 06.1.2016                    |
+| Webseite              | Webseite             | webseite:www.microsoft.com          |
 
 
 
@@ -264,36 +264,36 @@ dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>
 
 > [!Note]
 >
-> Telefonnummern werden als eingegeben indiziert. Wenn ein Benutzer beispielsweise bei der Eingabe der Telefonnummer keinen Länder-oder flächencode enthielt, können Benutzer keinen Kontakt finden, wenn Sie in der Telefonnummer nach Land oder Region-Code suchen.
+> Telefon Zahlen werden wie eingegeben indiziert. Wenn ein Benutzer z. B. bei der Eingabe der Telefonnummer keine Landes- oder Ortsvorwahl verwendet hat, können Benutzer keinen Kontakt finden, wenn er mit Länder- oder Ortsvorwahl in der Telefonnummer sucht.
 
  
 
 ### <a name="communications"></a>Kommunikation
 
-Dies sind die Eigenschaften, die für die Kommunikation üblich sind. Um die Suche nur auf die Kommunikation einzuschränken, lautet die Syntax wie folgt:
+Dies sind Eigenschaften, die für die Kommunikation gelten. Um die Suche auf die Kommunikation zu beschränken, ist die Syntax:
 
 `kind:communications <property>:<value>`
 
-dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>` ist der vom Benutzer angegebene Suchbegriff.
+dabei `<property>` ist eine unten aufgeführte Eigenschaft und der vom Benutzer angegebene `<value>` Suchbegriff.
 
 
 
 | Eigenschaft       | Verwendung                           | Beispiel                         |
 |----------------|-------------------------------|---------------------------------|
-| From           | from-oder-Planer             | von: John                       |
-| Empfangen       | empfangen oder gesendet              | gesendet: Gestern                  |
-| Subject        | Betreff oder Titel              | Betreff: "Quartals Finanz"   |
-| Hat Anlage | hasattachments, HasAttachment | HasAttachment: true              |
-| Attachments    | Anlagen oder Anlage     | attachment:presentation.ppt     |
-| Bcc            | BCC, bccname oder bccaddress    | BCC: Dave                        |
-| CC-Adresse     | ccAddress oder CC               | ccAddress: John\_doe@outlook.com |
-| Flag für die Nachverfolgung | Follow-PFLAG                  | Follow-PFLAG: 2                  |
-| Fälligkeitsdatum       | DueDate oder Due                | Due: Letzte Woche                   |
-| Lesen           | Lesen oder isread                | ist: Lesen                         |
-| Ist abgeschlossen   | IsCompleted                   | ist: abgeschlossen                    |
-| Unvollständig     | unvollständig oder isincomplete    | ist: unvollständig                   |
-| Has-Flag       | hasflag oder isflaging          | has:-Flag                        |
-| Duration       | duration                      | Dauer: > 50                |
+| From           | von oder Organisator             | von:john                       |
+| Empfangen       | empfangen oder gesendet              | sent:yesterday                  |
+| Gegenstand        | Betreff oder Titel              | betreff:"Vierteljährliche Finanzlage"   |
+| Verfügt über eine Anlage | hasattachments, hasattachment | hasattachment:true              |
+| Attachments    | Anlagen oder Anlagen     | attachment:presentation.ppt     |
+| Bcc            | bcc, bccname oder bccaddress    | bcc:dave                        |
+| CC-Adresse     | ccaddress oder cc               | ccaddress:john\_doe@outlook.com |
+| Follow-up-Flag | followupflag                  | followupflag:2                  |
+| Fälligkeitsdatum       | duedate oder due                | due:letzte Woche                   |
+| Überwachungsdaten           | read oder isread                | is:read                         |
+| Abgeschlossen   | Iscompleted                   | is:completed                    |
+| Unvollständig     | incomplete oder isincomplete    | is:incomplete                   |
+| Has-Flag       | hasflag oder isflagged          | has:flag                        |
+| Duration       | duration                      | duration:> 50                |
 
 
 
@@ -301,18 +301,18 @@ dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>
 
 ### <a name="calendar"></a>Kalender
 
-Dies sind die Eigenschaften, die Kalender gemeinsam sind. Um die Suche nur auf Kalender einzuschränken, lautet die Syntax wie folgt:
+Dies sind Eigenschaften, die Kalendern gemeinsam sind. Um die Suche auf Kalender zu beschränken, ist die Syntax:
 
 `kind:calendar <property>:<value>`
 
-dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>` ist der vom Benutzer angegebene Suchbegriff.
+dabei `<property>` ist eine unten aufgeführte Eigenschaft und der vom Benutzer angegebene `<value>` Suchbegriff.
 
 
 
 | Eigenschaft  | Verwendung                      | Beispiel          |
 |-----------|--------------------------|------------------|
-| Wiederholt | wiederkehrende oder iswiederkehr Ende | ist: Wiederholung     |
-| Organizer | Planer, von oder von    | Planer: Debbie |
+| Wiederholt | wiederholt oder isrecurring | is:recurring     |
+| Organizer | Organisator, nach oder von    | organizer:debbie |
 
 
 
@@ -320,22 +320,22 @@ dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>
 
 ### <a name="documents"></a>Dokumente
 
-Dies sind die Eigenschaften, die von Dokumenten gemeinsam sind. Um die Suche nur auf Dokumente einzuschränken, lautet die Syntax wie folgt:
+Dies sind Eigenschaften, die für Dokumente gelten. Um die Suche nur auf Dokumente zu beschränken, ist die Syntax:
 
 `kind:documents <property>:<value>`
 
-dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>` ist der vom Benutzer angegebene Suchbegriff.
+dabei `<property>` ist eine unten aufgeführte Eigenschaft und der vom Benutzer angegebene `<value>` Suchbegriff.
 
 
 
 | Eigenschaft          | Verwendung             | Beispiel                       |
 |-------------------|-----------------|-------------------------------|
-| Kommentare          | comments        | Kommentare: "erfordert abschließende Überprüfung" |
-| Zuletzt gespeichert von     | LastSavedBy     | LastSavedBy: John              |
-| Dokument-Manager  | documentmanager enthält | documentmanager: John          |
-| Revisionsnummer   | RevisionNumber  | Revisionsnummer: 1.0.3          |
-| Dokumentformat   | documentformat  | documentformat: MimeType       |
-| Datum der letzten Druckausgabe | datelastprint | datelastprint: Letzte Woche     |
+| Kommentare          | comments        | comments:"needs final review" |
+| Zuletzt gespeichert von     | lastsavedby     | lastsavedby:john              |
+| Dokument-Manager  | documentmanager | documentmanager:john          |
+| Revisionsnummer   | Revisionnumber  | revisionnumber:1.0.3          |
+| Dokumentformat   | documentformat  | documentformat:MIMETYPE       |
+| Datum des letzten Drucks | datelastprinted | datelastprinted:letzte Woche     |
 
 
 
@@ -343,17 +343,17 @@ dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>
 
 ### <a name="presentation"></a>Präsentation
 
-Dies sind Eigenschaften, die von Präsentationen gemeinsam sind. Um die Suche nur auf Präsentationen einzuschränken, lautet die Syntax wie folgt:
+Dies sind Eigenschaften, die für Präsentationen üblich sind. Um die Suche auf Präsentationen zu beschränken, ist die Syntax:
 
 `kind:presentation <property>:<value>`
 
-dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>` ist der vom Benutzer angegebene Suchbegriff.
+dabei `<property>` ist eine unten aufgeführte Eigenschaft und der vom Benutzer angegebene `<value>` Suchbegriff.
 
 
 
 | Eigenschaft    | Verwendung        | Beispiel           |
 |-------------|------------|-------------------|
-| Folien Anzahl | Anzahl von diasas | Anzahl von diasas: >20 |
+| Anzahl der Folien | Slidecount | slidecount:>20 |
 
 
 
@@ -361,23 +361,23 @@ dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>
 
 ### <a name="music"></a>Musik
 
-Dies sind Eigenschaften, die von Musikdateien gemeinsam sind. Um die Suche nur auf Musik einzuschränken, lautet die Syntax wie folgt:
+Dies sind Eigenschaften, die musikdateien gemeinsam sind. Um die Suche nur auf Musik zu beschränken, ist die Syntax:
 
 `kind:music <property>:<value>`
 
-dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>` ist der vom Benutzer angegebene Suchbegriff.
+dabei `<property>` ist eine unten aufgeführte Eigenschaft und der vom Benutzer angegebene `<value>` Suchbegriff.
 
 
 
 | Eigenschaft | Verwendung                | Beispiel                  |
 |----------|--------------------|--------------------------|
-| Bitrate | Bitrate, Rate      | Bitrate: 192              |
-| Interpret   | Künstlerin, von oder von | Künstlerin: John Sänger       |
-| Duration | duration           | Dauer: 3               |
-| Aufzunehmen    | aufzunehmen              | Album: "größte Treffer"    |
-| Genre    | genre              | Genre: Rock               |
-| Track    | track              | Nachverfolgung: 12                 |
-| Year     | year               | Jahr: > 1980 < 1990 |
+| Bitrate | Bitrate, Rate      | bitrate:192              |
+| Künstler   | interpret, by oder from | interpret:John John John       |
+| Duration | duration           | duration:3               |
+| Album    | Album              | album:"greatest hits"    |
+| Genre    | genre              | genre:rock               |
+| Track    | track              | track:12                 |
+| Jahr     | year               | jahr:> 1980 < 1990 |
 
 
 
@@ -385,23 +385,23 @@ dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>
 
 ### <a name="picture"></a>Picture
 
-Dies sind Eigenschaften, die von Bildern gemeinsam sind. Um die Suche nur auf Bilder einzuschränken, lautet die Syntax wie folgt:
+Dies sind Eigenschaften, die bildern gemeinsam sind. Um die Suche nur auf Bilder zu beschränken, ist die Syntax:
 
 `kind:picture <property>:<value>`
 
-dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>` ist der vom Benutzer angegebene Suchbegriff.
+dabei `<property>` ist eine unten aufgeführte Eigenschaft und der vom Benutzer angegebene `<value>` Suchbegriff.
 
 
 
 | Eigenschaft     | Verwendung         | Beispiel               |
 |--------------|-------------|-----------------------|
-| Kamera machen  | cameramake  | cameramake: Beispiel     |
-| Kameramodell | CameraModel | CameraModel: Beispiel    |
-| Dimensionen   | dimensions  | Dimensionen: 8x10       |
-| Orientation  | orientation | Ausrichtung: Querformat |
-| Datum der Erstellung   | DateTaken   | DateTaken: Gestern   |
-| Breite        | width       | Breite: 1600            |
-| Höhe       | height      | Höhe: 1200           |
+| Kamera make  | cameramake  | cameramake:sample     |
+| Kameramodell | cameramodel | cameramodel:sample    |
+| Dimensionen   | dimensions  | Dimensionen:8X10       |
+| Orientation  | orientation | orientation:landscape |
+| Datum der Erstellung   | datetaken   | datetaken:yesterday   |
+| Width        | width       | width:1600            |
+| Height       | height      | height:1200           |
 
 
 
@@ -409,17 +409,17 @@ dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>
 
 ### <a name="video"></a>Video
 
-Dies sind Eigenschaften, die von Videos gemeinsam sind. Um die Suche nur auf Videos einzuschränken, lautet die Syntax wie folgt:
+Dies sind Eigenschaften, die videos gemeinsam sind. Um die Suche nur auf Videos zu beschränken, lautet die Syntax:
 
 `kind:video <property>:<value>`
 
-dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>` ist der vom Benutzer angegebene Suchbegriff.
+dabei `<property>` ist eine unten aufgeführte Eigenschaft und der vom Benutzer angegebene `<value>` Suchbegriff.
 
 
 
 | Eigenschaft | Verwendung           | Beispiel                                |
 |----------|---------------|----------------------------------------|
-| Name     | Name, Betreff | Name: "Family Vacation to the Beach 05" |
+| Name     | name, subject | name:"Family Vacation to the Beach 05" |
 | Durchw.      | ext, fileext  | ext:.avi                               |
 
 
@@ -436,13 +436,13 @@ dabei `<property>` ist eine Eigenschaft, die unten aufgeführt ist, und `<value>
 [Wahrgenommene Typen](-search-2x-wds-perceivedtype.md)
 </dt> <dt>
 
-[Schema Tabelle](-search-2x-wds-schematable.md)
+[SchemaTable](-search-2x-wds-schematable.md)
 </dt> <dt>
 
 [Aufrufen von WDS über die Befehlszeile](-search-2x-wds-fromcommandline.md)
 </dt> <dt>
 
-[Aufrufen von WDS von Webseiten](-search-2x-wds-browserhelpobject.md)
+[Aufrufen von WDS über Webseiten](-search-2x-wds-browserhelpobject.md)
 </dt> </dl>
 
  

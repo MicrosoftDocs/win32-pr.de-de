@@ -1,6 +1,6 @@
 ---
-title: STGM-Konstanten (objbase. h)
-description: Flags, die Bedingungen für das Erstellen und Löschen des Objekts und der Zugriffs Modi für das Objekt angeben.
+title: STGM-Konstanten (ObjBase.h)
+description: Flags, die Bedingungen zum Erstellen und Löschen des Objekts und zugriffsmodi für das Objekt angeben.
 ms.assetid: 15a35da9-332a-46e1-9190-500c95e26f59
 topic_type:
 - apiref
@@ -29,45 +29,45 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd283c2dfeddc48b6bd12f8317ec352cb62e4973
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 18248e862c3d5981e9c34b29522b1cd75d2b61cf78a52613b3d28a1d2c98b4fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119661970"
 ---
 # <a name="stgm-constants"></a>STGM-Konstanten
 
-Die STGM-Konstanten sind Flags, die die Bedingungen für das Erstellen und Löschen des Objekts und der Zugriffs Modi für das Objekt angeben. Die STGM-Konstanten sind in den [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage)-, [**IStream**](/windows/desktop/api/Objidl/nn-objidl-istream)-und [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) -Schnittstellen und in den Funktionen " [**stgforatedocfile**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfile)", " [**stgfoatestorageex**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatestorageex)", "stgforatedocfileonilockbytes", " [**StgOpenStorage**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorage)" und " [**stgopenstorageex**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorageex) " enthalten. [](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfileonilockbytes)
+Die STGM-Konstanten sind Flags, die Bedingungen zum Erstellen und Löschen des Objekts und zugriffsmodi für das Objekt angeben. Die STGM-Konstanten sind in den Schnittstellen [**IStorage,**](/windows/desktop/api/Objidl/nn-objidl-istorage) [**IStream**](/windows/desktop/api/Objidl/nn-objidl-istream)und [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) sowie in den Funktionen [**StgCreateDocfile,**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfile) [**StgCreateStorageEx,**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatestorageex) [**StgCreateDocfileOnILockBytes,**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfileonilockbytes) [**StgOpenStorage**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorage)und [**StgOpenStorageEx**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorageex) enthalten.
 
-Diese Elemente werden häufig mit einem **or**-Operator kombiniert. Sie werden in Gruppen wie in der folgenden Tabelle aufgeführt interpretiert. Es ist nicht zulässig, mehr als ein Element aus einer einzelnen Gruppe zu verwenden.
+Diese Elemente werden häufig mithilfe eines **OR-Operators** kombiniert. Sie werden in Gruppen interpretiert, wie in der folgenden Tabelle aufgeführt. Es ist nicht gültig, mehr als ein Element aus einer einzelnen Gruppe zu verwenden.
 
-Verwenden Sie ein Flag aus der Erstellungs Gruppe, wenn Sie ein Objekt erstellen, z. b. mit [**stgkreatestorageex**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatestorageex) oder [**IStorage:: foratestream**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream).
+Verwenden Sie beim Erstellen eines Objekts ein Flag aus der Erstellungsgruppe, z. B. mit [**StgCreateStorageEx**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatestorageex) oder [**IStorage::CreateStream.**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream)
 
-Weitere Informationen zum Transaktions Satz finden Sie im Abschnitt "Hinweise".
+Weitere Informationen zur Transaktion finden Sie im Abschnitt "Hinweise".
 
 
 
-| Gruppieren                      | Flag                         | Wert       |
+| Group                      | Flag                         | Wert       |
 |----------------------------|------------------------------|-------------|
-| Access                     | **STGM- \_ Lesevorgang**               | 0x00000000L |
-|                            | **STGM- \_ Schreibvorgang**              | 0x00000001L |
-|                            | **STGM- \_ Lesevorgang**          | 0x00000002L |
-| Freigabe                    | **STGM- \_ Freigabe \_ Deny " \_ None"**  | 0x00000040l |
-|                            | **STGM- \_ Freigabe \_ verweigern \_ Lesen**  | 0x00000030l |
-|                            | **STGM- \_ Freigabe \_ verweigern \_ schreiben** | 0x00000020l |
-|                            | **STGM- \_ Freigabe \_ exklusiv**   | 0x00000010L |
-|                            | **STGM- \_ Priorität**           | 0x00040000l |
-| Erstellung                   | **STGM \_ Erstellen**             | 0x00001000l |
-|                            | **STGM \_ konvertieren**            | 0x00020000l |
-|                            | **STGM \_ FailIf**        | 0x00000000L |
-| Wird transakiert             | **STGM \_ direkt**             | 0x00000000L |
-|                            | **STGM \_ transaktiv**         | 0x00010000l |
-| Transaktionsleistung | **STGM \_ noscratch**          | 0x00100000l |
-|                            | **STGM- \_ nosnapshot**         | 0x00200000l |
-| Direkte austauschen und einfache     | **STGM \_ Simple**             | 0x08000000l |
-|                            | **STGM \_ Direct- \_ Austausch**       | 0x00400000l |
-| Beim Release löschen          | **STGM \_ deleteonrelease**    | 0x04000000l |
+| Zugriff                     | **STGM \_ READ**               | 0x00000000L |
+|                            | **STGM \_ WRITE**              | 0x00000001L |
+|                            | **STGM \_ READWRITE**          | 0x00000002L |
+| Freigabe                    | **STGM \_ SHARE \_ DENY \_ NONE**  | 0x00000040L |
+|                            | **STGM \_ SHARE \_ DENY \_ READ**  | 0x00000030L |
+|                            | **STGM \_ SHARE \_ DENY \_ WRITE** | 0x00000020L |
+|                            | **STGM \_ SHARE \_ EXCLUSIVE**   | 0x00000010L |
+|                            | **STGM \_ PRIORITY**           | 0x00040000L |
+| Erstellung                   | **STGM \_ CREATE**             | 0x00001000L |
+|                            | **STGM \_ CONVERT**            | 0x00020000L |
+|                            | **STGM \_ FAILIFTHERE**        | 0x00000000L |
+| Transaktionen             | **STGM \_ DIRECT**             | 0x00000000L |
+|                            | **STGM \_ TRANSACTED**         | 0x00010000L |
+| Transaktionsleistung | **STGM \_ NOSCRATCH**          | 0x00100000L |
+|                            | **STGM \_ NOSNAPSHOT**         | 0x00200000L |
+| Direct SWMR und Simple     | **STGM \_ SIMPLE**             | 0x08000000L |
+|                            | **STGM \_ DIRECT \_ SWMR**       | 0x00400000L |
+| Bei Release löschen          | **STGM \_ DELETEONRELEASE**    | 0x04000000L |
 
 
 
@@ -75,7 +75,7 @@ Weitere Informationen zum Transaktions Satz finden Sie im Abschnitt "Hinweise".
 
 <dl> <dt>
 
-<span id="STGM_READ"></span><span id="stgm_read"></span>**STGM- \_ Lesevorgang**
+<span id="STGM_READ"></span><span id="stgm_read"></span>**STGM \_ READ**
 </dt> <dd> <dl> <dt>
 
 0x00000000L
@@ -83,12 +83,12 @@ Weitere Informationen zum Transaktions Satz finden Sie im Abschnitt "Hinweise".
 
 
 
-Gibt an, dass das Objekt schreibgeschützt ist, was bedeutet, dass keine Änderungen vorgenommen werden können. Wenn z. b. ein Stream-Objekt mit **STGM- \_ Lese** Vorgang geöffnet wird, kann die [**ISequentialStream:: Read**](/windows/desktop/api/Objidl/nf-objidl-isequentialstream-read) -Methode aufgerufen werden, die [**ISequentialStream:: Write**](/windows/desktop/api/Objidl/nf-objidl-isequentialstream-write) -Methode jedoch nicht. Ebenso kann, wenn ein Speicher Objekt, das mit **STGM- \_ Lese** Vorgang geöffnet wurde, die [**IStorage:: OpenStream**](/windows/desktop/api/Objidl/nf-objidl-istorage-openstream) -und [**IStorage:: OpenStorage**](/windows/desktop/api/Objidl/nf-objidl-istorage-openstorage) -Methode aufgerufen werden, aber die [**IStorage:: foatestream**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream) -Methode und die [**IStorage:: foratestorage**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstorage) -Methode.
+Gibt an, dass das Objekt schreibgeschützt ist, was bedeutet, dass keine Änderungen vorgenommen werden können. Wenn beispielsweise ein Streamobjekt mit **STGM \_ READ** geöffnet wird, kann die [**ISequentialStream::Read-Methode**](/windows/desktop/api/Objidl/nf-objidl-isequentialstream-read) aufgerufen werden, die [**ISequentialStream::Write-Methode**](/windows/desktop/api/Objidl/nf-objidl-isequentialstream-write) jedoch möglicherweise nicht. Wenn ein Speicherobjekt mit **STGM \_ READ** geöffnet wurde, können die Methoden [**IStorage::OpenStream**](/windows/desktop/api/Objidl/nf-objidl-istorage-openstream) und [**IStorage::OpenStorage**](/windows/desktop/api/Objidl/nf-objidl-istorage-openstorage) aufgerufen werden, die Methoden [**IStorage::CreateStream**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream) und [**IStorage::CreateStorage**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstorage) jedoch möglicherweise nicht.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_WRITE"></span><span id="stgm_write"></span>**STGM- \_ Schreibvorgang**
+<span id="STGM_WRITE"></span><span id="stgm_write"></span>**STGM \_ WRITE**
 </dt> <dd> <dl> <dt>
 
 0x00000001L
@@ -96,12 +96,12 @@ Gibt an, dass das Objekt schreibgeschützt ist, was bedeutet, dass keine Änderu
 
 
 
-Ermöglicht das Speichern von Änderungen am-Objekt, aber nicht den Zugriff auf seine Daten. Der schreibgeschützte Modus wird von den bereitgestellten Implementierungen der [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) -Schnittstelle und der [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) -Schnittstelle nicht unterstützt.
+Ermöglicht das Speichern von Änderungen am Objekt, lässt jedoch keinen Zugriff auf dessen Daten zu. Die bereitgestellten Implementierungen der Schnittstellen [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) und [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) unterstützen diesen Schreibmodus nicht.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_READWRITE"></span><span id="stgm_readwrite"></span>**STGM- \_ Lesevorgang**
+<span id="STGM_READWRITE"></span><span id="stgm_readwrite"></span>**STGM \_ READWRITE**
 </dt> <dd> <dl> <dt>
 
 0x00000002L
@@ -109,51 +109,51 @@ Ermöglicht das Speichern von Änderungen am-Objekt, aber nicht den Zugriff auf 
 
 
 
-Ermöglicht den Zugriff und die Änderung von Objektdaten. Wenn z. b. ein Stream-Objekt in diesem Modus erstellt oder geöffnet wird, ist es möglich, sowohl [**IStream:: Read**](/windows/desktop/api/Objidl/nn-objidl-istream) als auch **IStream:: Write** aufzurufen. Beachten Sie, dass diese Konstante keine einfache Binärdatei **oder** Operation der Read-und **STGM- \_ Lese** Elemente von **STGM \_** ist.
+Ermöglicht den Zugriff auf und die Änderung von Objektdaten. Wenn beispielsweise ein Streamobjekt in diesem Modus erstellt oder geöffnet wird, ist es möglich, sowohl [**IStream::Read**](/windows/desktop/api/Objidl/nn-objidl-istream) als auch **IStream::Write** aufzurufen. Beachten Sie, dass diese Konstante kein einfacher binärer **OR-Vorgang** der **STGM \_ WRITE-** und **STGM \_ READ-Elemente** ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_SHARE_DENY_NONE"></span><span id="stgm_share_deny_none"></span>**STGM- \_ Freigabe \_ Deny " \_ None"**
+<span id="STGM_SHARE_DENY_NONE"></span><span id="stgm_share_deny_none"></span>**STGM \_ SHARE \_ DENY \_ NONE**
 </dt> <dd> <dl> <dt>
 
-0x00000040l
+0x00000040L
 </dt> <dt>
 
 
 
-Gibt an, dass nachfolgende Öffnungen des Objekts keinen Lese-oder Schreibzugriff verweigert werden. Wenn kein Flag aus der Freigabe Gruppe angegeben wird, wird dieses Flag angenommen.
+Gibt an, dass nachfolgenden Öffnungen des -Objekts der Lese- oder Schreibzugriff nicht verweigert wird. Wenn kein Flag aus der Freigabegruppe angegeben ist, wird dieses Flag angenommen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_SHARE_DENY_READ"></span><span id="stgm_share_deny_read"></span>**STGM- \_ Freigabe \_ verweigern \_ Lesen**
+<span id="STGM_SHARE_DENY_READ"></span><span id="stgm_share_deny_read"></span>**STGM \_ SHARE \_ DENY \_ READ**
 </dt> <dd> <dl> <dt>
 
-0x00000030l
+0x00000030L
 </dt> <dt>
 
 
 
-Verhindert, dass andere das Objekt später im **STGM- \_ Lesemodus** öffnen. Sie wird in der Regel für ein Stamm Speicher Objekt verwendet.
+Verhindert, dass andere Benutzer das Objekt anschließend im **STGM \_ READ-Modus** öffnen. Sie wird in der Regel für ein Stammspeicherobjekt verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_SHARE_DENY_WRITE"></span><span id="stgm_share_deny_write"></span>**STGM- \_ Freigabe \_ verweigern \_ schreiben**
+<span id="STGM_SHARE_DENY_WRITE"></span><span id="stgm_share_deny_write"></span>**STGM \_ SHARE \_ DENY \_ WRITE**
 </dt> <dd> <dl> <dt>
 
-0x00000020l
+0x00000020L
 </dt> <dt>
 
 
 
-Verhindert, dass andere das Objekt später für den Zugriff auf **STGM- \_ Schreib** -oder **STGM- \_ Lese** Vorgänge öffnen. Im transaktiven Modus kann die Freigabe von " **STGM-Freigabe \_ \_ verweigern \_** " oder " **STGM \_ Freigabe \_ exklusiv** " die Leistung erheblich verbessern, da keine Momentaufnahmen erforderlich sind. Weitere Informationen zum Transaktions Satz finden Sie im Abschnitt "Hinweise".
+Verhindert, dass andere Benutzer das Objekt anschließend für den **STGM \_ WRITE-** oder **STGM \_ READWRITE-Zugriff** öffnen. Im Transaktionsmodus kann die Freigabe von **STGM \_ SHARE \_ DENY \_ WRITE** oder **STGM \_ SHARE \_ EXCLUSIVE** die Leistung erheblich verbessern, da keine Momentaufnahmen erforderlich sind. Weitere Informationen zur Transaktion finden Sie im Abschnitt "Hinweise".
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_SHARE_EXCLUSIVE"></span><span id="stgm_share_exclusive"></span>**STGM- \_ Freigabe \_ exklusiv**
+<span id="STGM_SHARE_EXCLUSIVE"></span><span id="stgm_share_exclusive"></span>**STGM \_ SHARE \_ EXCLUSIVE**
 </dt> <dd> <dl> <dt>
 
 0x00000010L
@@ -161,72 +161,59 @@ Verhindert, dass andere das Objekt später für den Zugriff auf **STGM- \_ Schre
 
 
 
-Verhindert, dass andere das Objekt später in einem beliebigen Modus öffnen. Beachten Sie, dass es sich bei diesem Wert nicht um eine einfache bitweise **or** -Operation der **STGM- \_ Freigabe \_ deny- \_ Lese** -und **STGM-Freigabe- \_ \_ \_ Schreib** Werte handelt. Im transaktiven Modus kann die Freigabe von " **STGM-Freigabe \_ \_ verweigern \_** " oder " **STGM \_ Freigabe \_ exklusiv** " die Leistung erheblich verbessern, da keine Momentaufnahmen erforderlich sind. Weitere Informationen zum Transaktions Satz finden Sie im Abschnitt "Hinweise".
+Verhindert, dass andere Benutzer das Objekt anschließend in einem beliebigen Modus öffnen. Beachten Sie, dass dieser Wert kein einfacher bitweiser **OR-Vorgang** der **WERTE STGM \_ SHARE \_ DENY \_ READ** und **STGM \_ SHARE \_ DENY \_ WRITE** ist. Im Transaktionsmodus kann die Freigabe von **STGM \_ SHARE \_ DENY \_ WRITE** oder **STGM \_ SHARE \_ EXCLUSIVE** die Leistung erheblich verbessern, da keine Momentaufnahmen erforderlich sind. Weitere Informationen zur Transaktion finden Sie im Abschnitt "Hinweise".
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_PRIORITY"></span><span id="stgm_priority"></span>**STGM- \_ Priorität**
+<span id="STGM_PRIORITY"></span><span id="stgm_priority"></span>**STGM \_ PRIORITY**
 </dt> <dd> <dl> <dt>
 
-0x00040000l
+0x00040000L
 </dt> <dt>
 
 
 
-Öffnet das Speicher Objekt mit exklusivem Zugriff auf die zuletzt zugesicherte Version. Folglich können andere Benutzer keine Änderungen an dem Objekt übertragen, während Sie es im Prioritäts Modus geöffnet haben. Sie profitieren von Leistungsvorteilen bei Kopier Vorgängen, aber Sie verhindern, dass andere Änderungen an Änderungen vornehmen. Beschränken Sie den Zeitraum, in dem Objekte im Prioritäts Modus geöffnet werden. Sie müssen **STGM \_ Direct** und STGM mit dem Prioritäts Modus **\_ Lesen** angeben, und Sie können **STGM \_ deleteonrelease** nicht angeben. **STGM \_ Deleteonrelease** ist nur gültig, wenn ein Stamm Objekt erstellt wird, z. b. mit [**stgkreatestorageex**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatestorageex). Dies ist nicht zulässig, wenn ein vorhandenes Stamm Objekt geöffnet wird, z. b. mit [**stgopenstorageex**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorageex). Dies ist auch beim Erstellen oder Öffnen eines untergeordneten Elements (z. b. bei [**IStorage:: OpenStorage**](/windows/desktop/api/Objidl/nf-objidl-istorage-openstorage)) nicht gültig.
+Öffnet das Speicherobjekt mit exklusivem Zugriff auf die zuletzt ausgeführte Version, für die ein Commit ausgeführt wurde. Daher können andere Benutzer keine Änderungen an dem Objekt committen, während es im Prioritätsmodus geöffnet ist. Sie profitieren von Leistungsvorteilen für Kopiervorgänge, verhindern jedoch, dass andere Änderungen committen. Begrenzen Sie die Zeit, in der Objekte im Prioritätsmodus geöffnet sind. Sie müssen **STGM \_ DIRECT** und **STGM \_ READ** im Prioritätsmodus angeben, und Sie können **STGM \_ DELETEONRELEASE** nicht angeben. **STGM \_ DELETEONRELEASE** ist nur beim Erstellen eines Stammobjekts gültig, z. B. mit [**StgCreateStorageEx.**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatestorageex) Sie ist beim Öffnen eines vorhandenen Stammobjekts ungültig, z. B. mit [**StgOpenStorageEx.**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorageex) Sie ist auch beim Erstellen oder Öffnen eines Unterelements ungültig, z. B. mit [**IStorage::OpenStorage.**](/windows/desktop/api/Objidl/nf-objidl-istorage-openstorage)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_CREATE"></span><span id="stgm_create"></span>**STGM \_ Erstellen**
+<span id="STGM_CREATE"></span><span id="stgm_create"></span>**STGM \_ CREATE**
 </dt> <dd> <dl> <dt>
 
-0x00001000l
+0x00001000L
 </dt> <dt>
 
 
 
-Gibt an, dass ein vorhandenes Speicher Objekt oder ein vorhandener Stream entfernt werden soll, bevor das neue Objekt es ersetzt. Ein neues-Objekt wird erstellt, wenn dieses Flag nur angegeben wird, wenn das vorhandene Objekt erfolgreich entfernt wurde.
+Gibt an, dass ein vorhandenes Speicherobjekt oder ein vorhandener Stream entfernt werden soll, bevor es durch das neue Objekt ersetzt wird. Ein neues -Objekt wird erstellt, wenn dieses Flag nur angegeben wird, wenn das vorhandene Objekt erfolgreich entfernt wurde.
 
-Dieses Flag wird verwendet, wenn versucht wird, Folgendes zu erstellen:
+Dieses Flag wird beim Erstellen von verwendet:
 
--   Ein Speicher Objekt auf einem Datenträger, aber eine Datei mit diesem Namen ist vorhanden.
--   Ein Objekt in einem Speicher Objekt, aber es ist ein Objekt mit dem angegebenen Namen vorhanden.
--   Ein Bytearray-Objekt, aber eine mit dem angegebenen Namen ist vorhanden.
+-   Ein Speicherobjekt auf einem Datenträger, aber eine Datei mit diesem Namen ist vorhanden.
+-   Ein Objekt in einem Speicherobjekt, aber ein Objekt mit dem angegebenen Namen ist vorhanden.
+-   Ein Bytearrayobjekt, aber es ist ein Objekt mit dem angegebenen Namen vorhanden.
 
-Dieses Flag kann nicht mit offenen Vorgängen verwendet werden, wie z. b. [**stgopenstorageex**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorageex) oder [**IStorage:: OpenStream**](/windows/desktop/api/Objidl/nf-objidl-istorage-openstream).
+Dieses Flag kann nicht mit offenen Vorgängen wie [**StgOpenStorageEx**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorageex) oder [**IStorage::OpenStream verwendet werden.**](/windows/desktop/api/Objidl/nf-objidl-istorage-openstream)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_CONVERT"></span><span id="stgm_convert"></span>**STGM \_ konvertieren**
+<span id="STGM_CONVERT"></span><span id="stgm_convert"></span>**STGM \_ CONVERT**
 </dt> <dd> <dl> <dt>
 
-0x00020000l
+0x00020000L
 </dt> <dt>
 
 
 
-Erstellt das neue-Objekt, während vorhandene Daten in einem Stream mit dem Namen "Content" beibehalten werden. Bei einem Speicher Objekt oder einem Bytearray werden die alten Daten in einen Stream formatiert, unabhängig davon, ob die vorhandene Datei oder das Bytearray derzeit ein mehrschichtiges Speicher Objekt enthält. Dieses Flag kann nur beim Erstellen eines Stamm Speicher Objekts verwendet werden. Sie kann nicht innerhalb eines Speicher Objekts verwendet werden. beispielsweise in [**IStorage:: foratestream**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream). Es ist auch ungültig, dieses Flag und das **STGM \_ deleteonrelease** -Flag gleichzeitig zu verwenden.
+Erstellt das neue -Objekt unter Beibehaltung vorhandener Daten in einem Stream mit dem Namen "Contents". Im Fall eines Speicherobjekts oder bytearrays werden die alten Daten in einen Stream formatiert, unabhängig davon, ob die vorhandene Datei oder das Bytearray derzeit ein mehrschichtiges Speicherobjekt enthält. Dieses Flag kann nur beim Erstellen eines Stammspeicherobjekts verwendet werden. Sie kann nicht innerhalb eines Speicherobjekts verwendet werden. Beispiel: in [**IStorage::CreateStream**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream). Es ist auch nicht zulässig, dieses Flag und das **STGM \_ DELETEONRELEASE-Flag** gleichzeitig zu verwenden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_FAILIFTHERE"></span><span id="stgm_failifthere"></span>**STGM \_ FailIf**
-</dt> <dd> <dl> <dt>
-
-0x00000000L
-</dt> <dt>
-
-
-
-Bewirkt, dass der Erstellungs Vorgang fehlschlägt, wenn ein vorhandenes Objekt mit dem angegebenen Namen vorhanden ist. In diesem Fall wird **STG \_ E \_ filealleseryist** zurückgegeben. Dies ist der Standard Erstellungs Modus. Das heißt, wenn kein anderes Create-Flag angegeben ist, wird **STGM \_ failisthere** impliziert.
-
-
-</dt> </dl> </dd> <dt>
-
-<span id="STGM_DIRECT"></span><span id="stgm_direct"></span>**STGM \_ direkt**
+<span id="STGM_FAILIFTHERE"></span><span id="stgm_failifthere"></span>**STGM \_ FAILIFTHERE**
 </dt> <dd> <dl> <dt>
 
 0x00000000L
@@ -234,96 +221,109 @@ Bewirkt, dass der Erstellungs Vorgang fehlschlägt, wenn ein vorhandenes Objekt 
 
 
 
-Gibt an, dass im direkten Modus jede Änderung an einem Speicher-oder streamelement geschrieben wird, wenn es auftritt. Dies ist die Standardeinstellung, wenn weder **STGM \_ Direct** noch **STGM \_ transaktiv** angegeben wird.
+Bewirkt, dass der Erstellungsvorgang fehlschlägt, wenn ein vorhandenes Objekt mit dem angegebenen Namen vorhanden ist. In diesem Fall wird **STG \_ E \_ FILEALREADYEXISTS** zurückgegeben. Dies ist der Standarderstellungsmodus. Das heißt, wenn kein anderes Erstellungsflag angegeben ist, **wird STGM \_ FAILIFTHERE** impliziert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_TRANSACTED"></span><span id="stgm_transacted"></span>**STGM \_ transaktiv**
+<span id="STGM_DIRECT"></span><span id="stgm_direct"></span>**STGM \_ DIRECT**
 </dt> <dd> <dl> <dt>
 
-0x00010000l
+0x00000000L
 </dt> <dt>
 
 
 
-Gibt an, dass Änderungen im transaktiven Modus nur gepuffert und geschrieben werden, wenn ein expliziter Commit-Vorgang aufgerufen wird. Um die Änderungen zu ignorieren, müssen Sie die [**Revert**](/windows/desktop/api/Objidl/nf-objidl-istream-revert) -Methode in der [**IStream**](/windows/desktop/api/Objidl/nn-objidl-istream)-, [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage)-oder [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) -Schnittstelle aufrufen. Die Implementierung der com-Verbund Datei von **IStorage** unterstützt keine transaktiven Streams. Dies bedeutet, dass Datenströme nur im direkten Modus geöffnet werden können, und Sie können keine Änderungen an diesen Datenströmen zurücksetzen. transaktive Speicher werden jedoch unterstützt. Die Verbund Datei-, eigenständige und NTFS-Dateisystem Implementierungen von [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) unterstützen auf ähnliche Weise keine transaktiven, einfachen Eigenschaften Sätze, da diese Eigenschaften Sätze in Datenströmen gespeichert werden. Das transaktionsset von nicht einfachen Eigenschafts Sätzen, das durch Angeben des **\_ nicht einfache-Flags propsetflag** im *grfFlags* -Parameter von [**IPropertySetStorage:: Create**](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-create)erstellt werden kann, wird jedoch unterstützt.
+Gibt an, dass jede Änderung an einem Speicher- oder Streamelement im direkten Modus geschrieben wird, während sie auftritt. Dies ist die Standardeinstellung, wenn **weder STGM \_ DIRECT** noch **STGM \_ TRANSACTED** angegeben ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_NOSCRATCH"></span><span id="stgm_noscratch"></span>**STGM \_ noscratch**
+<span id="STGM_TRANSACTED"></span><span id="stgm_transacted"></span>**STGM \_ TRANSACTED**
 </dt> <dd> <dl> <dt>
 
-0x00100000l
+0x00010000L
 </dt> <dt>
 
 
 
-Gibt an, dass im transaktiven Modus normalerweise eine temporäre Scratch-Datei verwendet wird, um Änderungen zu speichern, bis die **Commit** -Methode aufgerufen wird. Wenn Sie **STGM \_ noscratch** angeben, können Sie den nicht verwendeten Teil der ursprünglichen Datei als Arbeitsbereich verwenden, anstatt für diesen Zweck eine neue Datei zu erstellen. Dies wirkt sich nicht auf die Daten in der ursprünglichen Datei aus, und in bestimmten Fällen kann die Leistung verbessert werden. Es ist nicht zulässig, dieses Flag anzugeben, ohne auch **STGM \_ transaktiv** anzugeben, und dieses Flag kann nur in einem geöffneten Stamm verwendet werden. Weitere Informationen zum noscratch-Modus finden Sie im Abschnitt "Hinweise".
+Gibt an, dass Änderungen im Transaktionsmodus nur gepuffert und geschrieben werden, wenn ein expliziter Commitvorgang aufgerufen wird. Um die Änderungen zu ignorieren, rufen Sie die [**Revert-Methode**](/windows/desktop/api/Objidl/nf-objidl-istream-revert) in der [**IStream-,**](/windows/desktop/api/Objidl/nn-objidl-istream) [**IStorage-**](/windows/desktop/api/Objidl/nn-objidl-istorage)oder [**IPropertyStorage-Schnittstelle**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) auf. Die COM-Verbunddateiimplementierung von **IStorage** unterstützt keine transaktiven Datenströme. Das bedeutet, dass Streams nur im direkten Modus geöffnet werden können, und Sie können keine Änderungen daran rückgängig machen, aber transaktionsverwendete Speicher werden unterstützt. Die Verbunddatei-, eigenständigen und NTFS-Dateisystemimplementierung von [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) unterstützen ebenfalls keine transaktiven, einfachen Eigenschaftensätze, da diese Eigenschaftensätze in Streams gespeichert werden. Transaktionen von nicht einfachen Eigenschaftensätzen, die durch Angabe des **PROPSETFLAG \_ NONSIMPLE-Flags** im *grfFlags-Parameter* von [**IPropertySetStorage::Create**](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-create)erstellt werden können, werden jedoch unterstützt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_NOSNAPSHOT"></span><span id="stgm_nosnapshot"></span>**STGM- \_ nosnapshot**
+<span id="STGM_NOSCRATCH"></span><span id="stgm_noscratch"></span>**STGM \_ NOSCRATCH**
 </dt> <dd> <dl> <dt>
 
-0x00200000l
+0x00100000L
 </dt> <dt>
 
 
 
-Dieses Flag wird verwendet, wenn ein Speicher Objekt mit **STGM \_ transaktiv** und ohne **STGM- \_ Freigabe \_ exklusiv** oder **STGM- \_ Freigabe deny- \_ \_ Schreibvorgang** geöffnet wird. In diesem Fall verhindert die Angabe von **STGM \_ nosnapshot** , dass die vom System bereitgestellte Implementierung eine Momentaufnahme Kopie der Datei erstellt. Stattdessen werden Änderungen an der Datei an das Ende der Datei geschrieben. Nicht verwendeter Speicherplatz wird erst freigegeben, wenn die Konsolidierung während des Commit durchgeführt wird und nur ein aktueller Writer für die Datei vorhanden ist. Wenn die Datei im Modus keine Momentaufnahme geöffnet ist, kann kein anderer Öffnungsvorgang durchgeführt werden, ohne **STGM \_ nosnapshot** anzugeben. Dieses Flag kann nur in einem Stamm Öffnungsvorgang verwendet werden. Weitere Informationen zum nosnapshot-Modus finden Sie im Abschnitt "Hinweise".
+Gibt an, dass im Transaktionsmodus in der Regel eine temporäre Scratchdatei verwendet wird, um Änderungen zu speichern, bis die **Commit-Methode** aufgerufen wird. Wenn **Sie STGM \_ NOSCRATCH** angeben, kann der nicht verwendete Teil der ursprünglichen Datei als Arbeitsraum verwendet werden, anstatt zu diesem Zweck eine neue Datei zu erstellen. Dies wirkt sich nicht auf die Daten in der ursprünglichen Datei aus und kann in bestimmten Fällen zu einer verbesserten Leistung führen. Es ist nicht zulässig, dieses Flag anzugeben, ohne **auch STGM \_ TRANSACTED** anzugeben, und dieses Flag darf nur in einem geöffneten Stamm verwendet werden. Weitere Informationen zum NoScratch-Modus finden Sie im Abschnitt "Hinweise".
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_SIMPLE"></span><span id="stgm_simple"></span>**STGM \_ Simple**
+<span id="STGM_NOSNAPSHOT"></span><span id="stgm_nosnapshot"></span>**STGM \_ NOSNAPSHOT**
 </dt> <dd> <dl> <dt>
 
-0x08000000l
+0x00200000L
 </dt> <dt>
 
 
 
-Bietet eine schnellere Implementierung einer Verbund Datei in einer begrenzten, aber häufig verwendeten Groß-/Kleinschreibung. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+Dieses Flag wird verwendet, wenn ein Speicherobjekt mit **STGM \_ TRANSACTED** und ohne **STGM \_ SHARE \_ EXCLUSIVE** oder **STGM \_ SHARE \_ DENY WRITE geöffnet \_ wird.** In diesem Fall verhindert die Angabe **von STGM \_ NOSNAPSHOT,** dass die vom System bereitgestellte Implementierung eine Momentaufnahmekopie der Datei erstellt. Stattdessen werden Änderungen an der Datei an das Ende der Datei geschrieben. Nicht verwendeter Speicherplatz wird nur dann wieder freigefordert, wenn während des Commits eine Konsolidierung durchgeführt wird und nur ein aktueller Writer in der Datei vor sich geht. Wenn die Datei ohne Momentaufnahmemodus geöffnet wird, kann kein weiterer Geöffnetvorgang ohne Angabe von **STGM \_ NOSNAPSHOT ausgeführt werden.** Dieses Flag kann nur in einem Root-Open-Vorgang verwendet werden. Weitere Informationen zum NoSnapshot-Modus finden Sie im Abschnitt "Hinweise".
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_DIRECT_SWMR"></span><span id="stgm_direct_swmr"></span>**STGM \_ Direct- \_ Austausch**
+<span id="STGM_SIMPLE"></span><span id="stgm_simple"></span>**STGM \_ SIMPLE**
 </dt> <dd> <dl> <dt>
 
-0x00400000l
+0x08000000L
 </dt> <dt>
 
 
 
-Unterstützt den direkten Modus für Datei Vorgänge mit einem einzelnen Writer und mehreren Lesevorgängen. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+Ermöglicht eine schnellere Implementierung einer Verbunddatei in einem begrenzten, aber häufig verwendeten Fall. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="STGM_DELETEONRELEASE"></span><span id="stgm_deleteonrelease"></span>**STGM \_ deleteonrelease**
+<span id="STGM_DIRECT_SWMR"></span><span id="stgm_direct_swmr"></span>**STGM \_ DIRECT \_ SWMR**
 </dt> <dd> <dl> <dt>
 
-0x04000000l
+0x00400000L
 </dt> <dt>
 
 
 
-Gibt an, dass die zugrunde liegende Datei automatisch zerstört werden soll, wenn das Stamm Speicher Objekt freigegeben wird. Diese Funktion ist besonders nützlich für das Erstellen temporärer Dateien. Dieses Flag kann nur verwendet werden, wenn ein Stamm Objekt erstellt wird, z. b. mit [**stgkreatestorageex**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatestorageex). Dies ist nicht zulässig, wenn ein Stamm Objekt geöffnet wird, z. b. mit [**stgopenstorageex**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorageex), oder wenn ein Unterelement erstellt oder geöffnet wird, z. b. mit [**IStorage:: foatestream**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream). Es ist auch nicht zulässig, dieses Flag und das STGM- \_ Convert-Flag gleichzeitig zu verwenden.
+Unterstützt den direkten Modus für Dateivorgänge mit einzelnem Writer und mehrerenReadern. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+
+
+</dt> </dl> </dd> <dt>
+
+<span id="STGM_DELETEONRELEASE"></span><span id="stgm_deleteonrelease"></span>**STGM \_ DELETEONRELEASE**
+</dt> <dd> <dl> <dt>
+
+0x04000000L
+</dt> <dt>
+
+
+
+Gibt an, dass die zugrunde liegende Datei automatisch zerstört werden soll, wenn das Stammspeicherobjekt freigegeben wird. Diese Funktion ist am nützlichsten zum Erstellen temporärer Dateien. Dieses Flag kann nur beim Erstellen eines Stammobjekts verwendet werden, z. B. mit [**StgCreateStorageEx**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatestorageex). Er ist ungültig, wenn ein Stammobjekt geöffnet wird, z. B. mit [**StgOpenStorageEx,**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorageex)oder wenn ein Unterelement erstellt oder geöffnet wird, z. B. mit [**IStorage::CreateStream**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream). Es ist auch nicht zulässig, dieses Flag und das STGM \_ CONVERT-Flag gleichzeitig zu verwenden.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können diese Flags kombinieren, aber Sie können nur ein Flag aus jeder Gruppe verwandter Flags auswählen. In der Regel muss für alle Funktionen und Methoden, die diese Konstanten verwenden, ein Flag aus den einzelnen Zugriffs-und Freigabe Gruppen angegeben werden. Flags aus anderen Gruppen sind optional.
+Sie können diese Flags kombinieren, aber Sie können nur ein Flag aus jeder Gruppe verwandter Flags auswählen. In der Regel muss für alle Funktionen und Methoden, die diese Konstanten verwenden, ein Flag aus jeder Zugriffs- und Freigabegruppe angegeben werden. Flags aus anderen Gruppen sind optional.
 
-### <a name="transacted-mode"></a>Transaktiver Modus
+### <a name="transacted-mode"></a>Transaktionsmodus
 
-Wenn das " **STGM \_ Direct**"-Flag angegeben ist, kann nur eine der folgenden Kombinationen von Flags aus den Zugriffs-und Freigabe Gruppen angegeben werden.
+Wenn das **FLAG STGM \_ DIRECT** angegeben wird, kann nur eines der folgenden Flagkombinationen aus den Zugriffs- und Freigabegruppen angegeben werden.
 
 ``` syntax
     STGM_READ      | STGM_SHARE_DENY_WRITE
@@ -337,63 +337,63 @@ Wenn das " **STGM \_ Direct**"-Flag angegeben ist, kann nur eine der folgenden K
     STGM_READ      | STGM_PRIORITY
 ```
 
-Beachten Sie, dass der direkte Modus durch das Fehlen von **STGM- \_ Transaktionen** impliziert wird. Das heißt, wenn weder " **STGM \_ Direct** " noch " **STGM \_ transagiert** " angegeben wird, wird **STGM \_ Direct** angenommen.
+Beachten Sie, dass der direkte Modus durch das Fehlen von **STGM \_ TRANSACTED impliziert wird.** Wenn also weder **STGM \_ DIRECT** noch **STGM \_ TRANSACTED angegeben** ist, wird **STGM \_ DIRECT** angenommen.
 
-Wenn das **\_ transaktive STGM** -Flag angegeben wird, werden Objekte im transaktiven Modus erstellt oder geöffnet. In diesem Modus werden Änderungen an einem Objekt erst beibehalten, wenn ein Commit ausgeführt wird. Beispielsweise werden Änderungen an einem transaktiven Speicher Objekt nicht persistent gespeichert, bis die [**IStorage:: Commit**](/windows/desktop/api/Objidl/nf-objidl-istorage-commit) -Methode aufgerufen wird. Änderungen an einem solchen Speicher Objekt gehen verloren, wenn das Speicher Objekt freigegeben wird (endgültige Version), bevor die **Commit** -Methode aufgerufen wird, oder wenn die [**IStorage:: Revert**](/windows/desktop/api/Objidl/nf-objidl-istorage-revert) -Methode aufgerufen wird.
+Wenn das **STGM-TransactED-Flag \_** angegeben wird, werden Objekte im Transaktionsmodus erstellt oder geöffnet. In diesem Modus werden Änderungen an einem Objekt erst beibehalten, wenn ein Committed ausgeführt wurde. Beispielsweise werden Änderungen an einem transaktionsorientierten Speicherobjekt erst beibehalten, wenn die [**IStorage::Commit-Methode**](/windows/desktop/api/Objidl/nf-objidl-istorage-commit) aufgerufen wird. Änderungen an einem solchen Speicherobjekt gehen verloren, wenn das Speicherobjekt freigegeben wird (endgültiges Release), bevor die **Commit-Methode** aufgerufen wird, oder wenn die [**IStorage::Revert-Methode**](/windows/desktop/api/Objidl/nf-objidl-istorage-revert) aufgerufen wird.
 
-Wenn ein Objekt im transaktiven Modus erstellt oder geöffnet wird, muss die Implementierung sowohl die ursprünglichen Daten als auch die Updates für diese Daten beibehalten, damit Updates bei Bedarf wieder hergestellt werden können. Dies erfolgt in der Regel durch das Schreiben von Änderungen in einen Grundbereich, bis ein Commit ausgeführt wird, oder durch Erstellen einer Kopie, die als Momentaufnahme bezeichnet wird, der zuletzt ausgeführten Daten.
+Wenn ein Objekt im transaktionsorientierten Modus erstellt oder geöffnet wird, muss die Implementierung sowohl die ursprünglichen Daten als auch die Aktualisierungen dieser Daten behalten, damit Updates bei Bedarf rückgängig machen können. Dies erfolgt in der Regel durch Das Schreiben von Änderungen in einen Scratchbereich, bis ein Committed ausgeführt wird, oder durch Erstellen einer Kopie der zuletzt ausgeführten Daten, die als Momentaufnahme bezeichnet wird.
 
-Wenn ein Stamm Speicher Objekt im transaktiven Modus geöffnet wird, können der Speicherort und das Verhalten der Rohdaten und der Momentaufnahme Kopien gesteuert werden, um die Leistung mit den nosnapshot-Flags " **STGM \_ noscratch** " und " **STGM \_ nosnapshot** " zu optimieren. (Ein Stamm Speicher Objekt wird z. b. aus der [**stgopenstorageex**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorageex) -Funktion abgerufen; ein Speicher Objekt, das von der [**IStorage:: OpenStorage**](/windows/desktop/api/Objidl/nf-objidl-istorage-openstorage) -Methode abgerufen wurde, ist ein unter Speicher Objekt.) Normalerweise werden die Daten und Momentaufnahmen der Daten in temporären Dateien gespeichert, die vom Speicher getrennt sind.
+Wenn ein Stammspeicherobjekt im Transaktionsmodus geöffnet wird, können Speicherort und Verhalten der Scratchdaten und momentaufnahmekopien gesteuert werden, um die Leistung mit den **FLAGs STGM \_ NOSCRATCH** und **STGM \_ NOSNAPSHOT** zu optimieren. (Ein Stammspeicherobjekt wird beispielsweise von der [**StgOpenStorageEx-Funktion**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorageex) erhalten. Ein von der [**IStorage::OpenStorage-Methode**](/windows/desktop/api/Objidl/nf-objidl-istorage-openstorage) erhaltenes Speicherobjekt ist ein Unterspeicherobjekt.) In der Regel werden die Scratchdaten und Momentaufnahmen getrennt vom Speicher in temporären Dateien gespeichert.
 
-Die Auswirkung dieser Flags hängt von der Anzahl der Leser und/oder Writer ab, die auf den Stamm Speicher zugreifen.
+Die Auswirkung dieser Flags hängt von der Anzahl der Leser und/oder Writer ab, die auf den Stammspeicher zugreifen.
 
-Im "Single-Writer"-Fall wird ein Speicher Objekt im Transaktionsmodus für den Schreibzugriff geöffnet, und es kann kein anderer Zugriff auf die Datei vorhanden sein. Das heißt, die Datei wird mit **STGM \_ transaktiv** geöffnet, Zugriff auf **STGM- \_ Schreib** -oder **STGM- \_ Lese** Vorgänge und die Freigabe der **STGM- \_ Freigabe \_ exklusiv**. In diesem Fall werden Änderungen am Speicher Objekt in den Scratch-Bereich geschrieben. Wenn für diese Änderungen ein Commit ausgeführt wird, werden Sie in den ursprünglichen Speicher kopiert. Wenn keine Änderungen am Speicher Objekt tatsächlich vorgenommen werden, werden daher keine unnötigen Datenübertragungen übertragen.
+Im Fall von "Single Writer" wird ein Speicherobjekt im Transaktionsmodus für den Schreibzugriff geöffnet, und es kann kein anderer Zugriff auf die Datei möglich sein. Das heißt, die Datei wird mit **STGM \_ TRANSACTED,** dem Zugriff auf **STGM \_ WRITE** oder **STGM \_ READWRITE** und der Freigabe von **STGM \_ SHARE EXCLUSIVE \_ geöffnet.** In diesem Fall werden Änderungen am Speicherobjekt in den Ablagebereich geschrieben. Wenn für diese Änderungen ein Committed vorgenommen wird, werden sie in den ursprünglichen Speicher kopiert. Wenn also keine Änderungen am Speicherobjekt vorgenommen werden, erfolgt keine unnötige Datenübertragung.
 
-Im Fall von "Multiple-Writer" wird ein transaktives Speicher Objekt für den Schreibzugriff geöffnet, aber es wird in derartigen Form verwendet, um andere Writer zuzulassen. Das heißt, dass das Speicher Objekt mit **STGM \_ transaktiv** geöffnet wird, Zugriff auf **STGM- \_ Schreib** Vorgänge oder STGM-Lesevorgänge hat und die Freigabe von STGM-Freigaben **\_ \_ verweigern \_ gelesen** wird. **\_** Wenn stattdessen die Freigabe von **STGM- \_ Freigabe \_ deny \_** nicht angegeben wird, ist der Fall "Multiple-Writer, Multiple-Reader". In diesen Fällen wird während des Öffnungs Vorgangs eine Momentaufnahme der ursprünglichen Daten erstellt. Daher ist auch dann, wenn keine Änderungen am Speicher vorgenommen werden und/oder wenn er nicht gleichzeitig von einem anderen Writer geöffnet wird, die Datenübertragung während des Öffnens erforderlich. Demzufolge kann die beste Leistung bei der Leistung erreicht werden, indem das Speicher Objekt in der **STGM- \_ Freigabe \_ deny- \_ Schreib** -oder **STGM- \_ Freigabe \_ exklusiver** Modus geöffnet wird. Weitere Informationen darüber, wie für Änderungen ein Commit ausgeführt wird, wenn mehrere Writer vorhanden sind, finden Sie unter [**IStorage:: Commit**](/windows/desktop/api/Objidl/nf-objidl-istorage-commit).
+Im Fall von "multiple-writer" wird ein transaktives Speicherobjekt für den Schreibzugriff geöffnet, aber in freigegeben, um anderen Writern zu erlauben. Das heißt, das Speicherobjekt wird mit **STGM \_ TRANSACTED,** dem Zugriff auf **STGM \_ WRITE** oder **STGM \_ READWRITE** und der Freigabe von **STGM \_ SHARE \_ DENY \_ READ geöffnet.** Wenn stattdessen die Freigabe von **STGM \_ SHARE \_ DENY \_ NONE** angegeben wird, ist der Fall "multiple-writer, multiple-reader". In diesen Fällen wird während des Öffnens eine Momentaufnahme der ursprünglichen Daten erstellt. Daher ist auch dann eine Datenübertragung während des Öffnens erforderlich, wenn tatsächlich keine Änderungen am Speicher vorgenommen und/oder nicht von einem anderen Writer gleichzeitig geöffnet werden. Als Ergebnis kann die beste Open-Time-Leistung erzielt werden, indem das Speicherobjekt in **den Modi STGM \_ SHARE \_ DENY \_ WRITE** oder **STGM \_ SHARE EXCLUSIVE \_ geöffnet** wird. Weitere Informationen zum Commit von Änderungen bei mehreren Writern finden Sie unter [**IStorage::Commit**](/windows/desktop/api/Objidl/nf-objidl-istorage-commit).
 
-Im Fall von "Single-Writer, Multiple-Reader" wird ein transaktives Speicher Objekt für den Schreibzugriff geöffnet, aber für Leser freigegeben. Das heißt, das Speicher Objekt wird vom Writer mit **STGM- \_ Transaktionen**, den Zugriff auf **STGM- \_ Lese** -oder **STGM- \_ Schreib** Vorgänge und die Freigabe von STGM-Freigaben zum **Verweigern von \_ \_ \_ Schreib** Zugriff geöffnet. Der Speicher wird von Lesern mit **gegm- \_ transaktive**, dem Zugriff auf **STGM- \_ Lese** Vorgänge und der Freigabe der **STGM- \_ Freigabe \_ deny \_ None** geöffnet. In diesem Fall verwendet der Writer den Bereich Scratch zum Speichern von Änderungen, für die kein Commit ausgeführt wurde. Wie in den obigen Fällen gibt es bei dem Reader eine Öffnungszeit-Leistungs Einbuße, während eine Momentaufnahme Kopie der Daten erstellt wird.
+Im Fall von "single-writer, multiple-reader" wird ein transaktives Speicherobjekt für den Schreibzugriff geöffnet, aber für Leser freigegeben. Das heißt, das Speicherobjekt wird vom Writer mit **STGM \_ TRANSACTED,** dem Zugriff auf **STGM \_ READWRITE** oder **STGM \_ WRITE** und der Freigabe von **STGM \_ SHARE \_ DENY \_ WRITE geöffnet.** Der Speicher wird von Lesern mit **STGM \_ TRANSACTED,** Zugriff auf **STGM \_ READ** und Freigabe von **STGM \_ SHARE \_ DENY \_ NONE geöffnet.** In diesem Fall verwendet der Writer den Scratchbereich, um Nichtcommitted-Änderungen zu speichern. Wie in den obigen Fällen kommt es beim Reader zu einer Leistungssentität bei der Offenen Zeit, während eine Momentaufnahmekopie der Daten erstellt wird.
 
-In der Regel ist der Grundbereich eine temporäre Datei, getrennt von den ursprünglichen Daten. Wenn Änderungen an der ursprünglichen Datei vorgenommen werden, müssen die Daten aus der temporären Datei übertragen werden. Um diese Datenübertragung zu vermeiden, kann das Flag " **STGM \_ noscratch**" angegeben werden. Wenn dieses Flag angegeben wird, werden Teile der Speicher Objektdatei für den Bereich Scratch anstelle einer separaten temporären Datei verwendet. Folglich kann das Ausführen eines Commits für Änderungen schnell erfolgen, da nur wenige Datenübertragungen erforderlich sind. Der Nachteil ist, dass die Speicherdatei größer werden kann, als Sie andernfalls wäre, da Sie für die ursprünglichen Daten und den Grundbereich groß genug vergrößert werden muss. Um die Daten zu konsolidieren und diesen unnötigen Bereich zu entfernen, öffnen Sie den Stamm Speicher im transaktiven Modus erneut, ohne das Flag " **STGM \_ noscratch** " festzulegen. Nennen Sie dann [**IStorage:: Commit**](/windows/desktop/api/Objidl/nf-objidl-istorage-commit) , wobei das **stgc- \_ konsoliderflag** festgelegt ist.
+In der Regel handelt es sich bei dem Scratchbereich um eine temporäre Datei, die von den ursprünglichen Daten getrennt ist. Wenn änderungen an der ursprünglichen Datei übergeben werden, müssen die Daten aus der temporären Datei übertragen werden. Um diese Datenübertragung zu vermeiden, kann **das STGM \_ NOSCRATCH-Flag** angegeben werden. Wenn dieses Flag angegeben wird, werden Teile der Speicherobjektdatei für den Ablagebereich anstelle einer separaten temporären Datei verwendet. Daher kann das Committen von Änderungen schnell durchgeführt werden, da nur wenig Datenübertragung erforderlich ist. Der Nachteil ist, dass die Speicherdatei größer werden kann, als sie andernfalls wäre, da sie so vergrößert werden muss, dass sie sowohl für die ursprünglichen Daten als auch für den Ablagebereich groß genug ist. Um die Daten zu konsolidieren und diesen unnötigen Bereich zu entfernen, öffnen Sie den Stammspeicher im Transaktionsmodus erneut, aber ohne das **STGM \_ NOSCRATCH-Flag zu** setzen. Rufen Sie dann [**IStorage::Commit auf,**](/windows/desktop/api/Objidl/nf-objidl-istorage-commit) und legen Sie das **FLAG STGC \_ CONSOLIDATE** fest.
 
-Der momentaufnahmenbereich ist wie der Scratch-Bereich auch eine temporäre Datei. Dies kann auch mit einem STGM-Flag beeinträchtigt werden. Wenn das Flag " **STGM \_ nosnapshot** " angegeben wird, wird keine separate temporäre Momentaufnahme Datei erstellt. Stattdessen werden die ursprünglichen Daten nie geändert, auch wenn mindestens ein Writer pro Objekt vorhanden ist. Wenn für Änderungen ein Commit ausgeführt wird, werden Sie der Datei hinzugefügt, die ursprünglichen Daten bleiben jedoch intakt. Durch diesen Modus wird die Effizienz gesteigert, da die Laufzeit dadurch reduziert wird, dass während des Öffnungs Vorgangs keine Momentaufnahme erstellt werden muss. Wenn Sie diesen Modus verwenden, kann es jedoch zu einer sehr großen Speicherdatei kommen, da die Daten in der Datei nie überschrieben werden können. Dies gilt nicht für die Größe der Dateien, die im nosnapshot-Modus geöffnet werden.
+Der Momentaufnahmebereich ist wie der Scratchbereich in der Regel auch eine temporäre Datei. Dies kann auch durch ein STGM-Flag beeinträchtigt werden. Durch Angabe des **STGM \_ NOSNAPSHOT-Flags** wird keine separate temporäre Momentaufnahmedatei erstellt. Stattdessen werden die ursprünglichen Daten nie geändert, auch wenn es mindestens einen Writer pro Objekt gibt. Wenn ein Committed für Änderungen vorgenommen wird, werden sie der Datei hinzugefügt, die ursprünglichen Daten bleiben jedoch intakt. Dieser Modus erhöht die Effizienz, da er die Laufzeit reduziert, da während des Öffnens keine Momentaufnahme erstellt werden muss. Die Verwendung dieses Modus kann jedoch zu einer sehr großen Speicherdatei führen, da daten in der Datei nie überschrieben werden können. Dies ist keine Beschränkung für die Größe von Dateien, die im NoSnapshot-Modus geöffnet werden.
 
-### <a name="direct-single-writer-multiple-reader-mode"></a>Direkter Single-Writer, Multiple-Reader Modus
+### <a name="direct-single-writer-multiple-reader-mode"></a>Direct Single Writer, Multiple-Reader Modus
 
-Wie bereits beschrieben, ist es möglich, einen einzelnen Writer und mehrere Leser eines Speicher Objekts zu haben, wenn dieses Objekt im transaktiven Modus geöffnet wird. Es ist auch möglich, den Single Writer-multireader-Fall im direkten Modus zu erreichen, indem Sie das " **STGM \_ Direct \_ allemr** "-Flag angeben.
+Wie beschrieben, ist es möglich, einen einzelnen Writer und mehrere Reader eines Speicherobjekts zu verwenden, wenn dieses Objekt im Transaktionsmodus geöffnet wird. Es ist auch möglich, die Einzelwriter-Multireader-Schreibweise im direkten Modus zu erreichen, indem das **STGM \_ DIRECT \_ SWMR-Flag angegeben** wird.
 
-In **STGM \_ Direct- \_ taumr** -Modus ist es möglich, dass ein Aufrufer ein Objekt für den Lese-/Schreibzugriff öffnet, während andere Aufrufer gleichzeitig die Datei für den schreibgeschützten Zugriff geöffnet haben. Es ist nicht zulässig, dieses Flag in Kombination mit dem per **STGM \_ transaktiven** Flag zu verwenden. In diesem Modus öffnet der Writer das-Objekt mit den folgenden Flags:
+Im **STGM \_ DIRECT \_ SWMR-Modus** ist es möglich, dass ein Aufrufer ein Objekt für den Lese-/Schreibzugriff öffnet, während andere Aufrufer gleichzeitig die Datei für den schreibgeschützten Zugriff geöffnet haben. Es ist nicht zulässig, dieses Flag in Kombination mit dem **STGM \_ TRANSACTED-Flag zu** verwenden. In diesem Modus öffnet der Writer das -Objekt mit den folgenden Flags:
 
-**STGM \_ direkter \_ Austausch** von "STGM", "STGM"- \| **\_** \| **\_ Freigabe " \_ denywrite** "
+**STGM \_ DIRECT \_ SWMR** \| **STGM \_ READWRITE** \| **STGM \_ SHARE \_ DENYWRITE**
 
-und jeder Leser öffnet das Objekt mit den folgenden Flags:
+und jeder der Reader öffnet das -Objekt mit den folgenden Flags:
 
-**STGM \_ direkter \_ Austausch** von "STGM" \| **\_ Lesen** \| **STGM- \_ Freigabe \_ verweigern \_**
+**STGM \_ DIRECT \_ SWMR** \| **STGM \_ READ** \| **STGM \_ SHARE \_ DENY \_ NONE**
 
-In diesem Modus muss der Writer exklusiven Zugriff auf das Objekt erhalten, um das Speicher Objekt zu ändern. Dies ist möglich, wenn Sie von allen Lesern geschlossen wurden. Der Writer verwendet die [**idirectschreiterlock**](/windows/desktop/api/Objidl/nn-objidl-idirectwriterlock) -Schnittstelle, um diesen exklusiven Zugriff zu erhalten.
+In diesem Modus muss der Writer exklusiven Zugriff auf das Objekt erhalten, um das Speicherobjekt zu ändern. Dies ist möglich, wenn sie von allen Lesern geschlossen wurde. Der Writer verwendet die [**IDirectWriterLock-Schnittstelle,**](/windows/desktop/api/Objidl/nn-objidl-idirectwriterlock) um diesen exklusiven Zugriff zu erhalten.
 
 ### <a name="simple-mode"></a>Einfacher Modus
 
-Der einfache Modus (**STGM \_ Simple**) ist für Anwendungen nützlich, die vollständige Speichervorgänge ausführen. Es ist zwar effizient, weist jedoch die folgenden Einschränkungen auf:
+Der einfache Modus (**STGM \_ SIMPLE**) ist nützlich für Anwendungen, die vollständige Speichervorgänge ausführen. Sie ist effizient, hat jedoch die folgenden Einschränkungen:
 
--   Für substorages ist keine Unterstützung vorhanden.
--   Das Speicher Objekt und die Streamobjekte, die daraus abgerufen werden, können nicht gemarshallt werden.
--   Jeder Stream weist eine minimale Größe auf. Wenn beim Freigeben des Streams weniger als die minimalen Bytes in einen Stream geschrieben werden, wird der Datenstrom auf die minimale Größe erweitert. Die Mindestgröße für eine bestimmte [**IStream**](/windows/desktop/api/Objidl/nn-objidl-istream) -Implementierung beträgt z. b. 4 KB. Es wird ein Stream erstellt und 1 KB darin geschrieben. Bei der endgültigen Version dieses **IStream** wird die Streamgröße automatisch auf 4 KB erweitert. Wenn Sie anschließend den Stream öffnen und die [**IStream:: stat**](/windows/desktop/api/Objidl/nf-objidl-istream-stat) -Methode aufrufen, wird eine Größe von 4 KB angezeigt.
--   Nicht alle Methoden von [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) oder [**IStream**](/windows/desktop/api/Objidl/nn-objidl-istream) werden von der Implementierung unterstützt. Weitere Informationen finden Sie unter [IStorage-Verbund Datei Implementierung](istorage-compound-file-implementation.md)und [Implementierung der IStream-Verbund Datei](istream-compound-file-implementation.md).
+-   Es gibt keine Unterstützung für Unterstorages.
+-   Das Speicherobjekt und die daraus erhaltenen Streamobjekte können nicht gemarshallt werden.
+-   Jeder Stream hat eine Mindestgröße. Wenn weniger als die minimalen Bytes in einen Stream geschrieben werden, wenn der Stream freigegeben wird, wird der Stream auf die Mindestgröße erweitert. Die Mindestgröße für eine bestimmte [**IStream-Implementierung**](/windows/desktop/api/Objidl/nn-objidl-istream) beträgt beispielsweise 4 KB. Ein Stream wird erstellt, und 1 KB wird in ihn geschrieben. Bei der endgültigen Version dieses **IStreams** wird die Streamgröße automatisch auf 4 KB erweitert. Wenn Sie anschließend den Stream öffnen und die [**IStream::Stat-Methode**](/windows/desktop/api/Objidl/nf-objidl-istream-stat) aufrufen, wird eine Größe von 4 KB gezeigt.
+-   Nicht alle Methoden von [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) oder [**IStream**](/windows/desktop/api/Objidl/nn-objidl-istream) werden von der Implementierung unterstützt. Weitere Informationen finden Sie unter [IStorage – Verbunddateiimplementierung](istorage-compound-file-implementation.md)und [IStream – Verbunddateiimplementierung.](istream-compound-file-implementation.md)
 
-Das Marshalling [ist das](/windows/desktop/Midl/marshaling-ole-data-types) Verpacken, entpacken und Senden von Schnittstellen Methoden Parametern über Thread-oder Prozess Grenzen hinweg innerhalb eines Remote Prozedur Aufrufs (RPC). Weitere Informationen finden Sie unter Marshalling von [Details](../com/marshaling-details.md) und [Schnittstellen](../com/interface-marshaling.md)Marshalling.
+[Marshalling ist](/windows/desktop/Midl/marshaling-ole-data-types) der Prozess des Packens, Entpackens und Sendens von Schnittstellenmethode-Parametern über Thread- oder Prozessgrenzen hinweg innerhalb eines Remoteprozeduraufrufs (REMOTE Procedure Call, RPC). Weitere Informationen finden Sie unter [Marshallingdetails und](../com/marshaling-details.md) [Schnittstellen-Marshalling.](../com/interface-marshaling.md)
 
-Wenn ein Speicher Objekt von einem Create-Vorgang im einfachen Modus abgerufen wird:
+Wenn ein Speicherobjekt durch einen Erstellungsvorgang im einfachen Modus erhalten wird:
 
 -   Streamelemente können erstellt, aber nicht geöffnet werden.
--   Wenn ein Stream-Element durch Aufrufen von [**IStorage:: CreateStream**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream)erstellt wird, ist es nicht möglich, einen weiteren Stream zu erstellen, bis das Stream-Objekt freigegeben wird.
--   Nachdem alle Streams geschrieben wurden, wird [**IStorage:: Commit**](/windows/desktop/api/Objidl/nf-objidl-istorage-commit) aufgerufen, um die Änderungen zu leeren.
+-   Wenn ein Streamelement durch Aufrufen von [**IStorage::CreateStream**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream)erstellt wird, ist es nicht möglich, einen weiteren Stream zu erstellen, bis dieses Streamobjekt freigegeben wird.
+-   Nachdem alle Datenströme geschrieben wurden, rufen Sie [**IStorage::Commit auf,**](/windows/desktop/api/Objidl/nf-objidl-istorage-commit) um die Änderungen zu leeren.
 
-Wenn ein Speicher Objekt von einem Öffnungsvorgang im einfachen Modus abgerufen wird:
+Wenn ein Speicherobjekt durch einen Open-Vorgang im einfachen Modus erhalten wird:
 
--   Es ist möglich, jeweils nur ein streamelement zu öffnen.
--   Es ist nicht möglich, die Größe eines Streams zu ändern, indem Sie die [**IStream:: SetSize**](/windows/desktop/api/Objidl/nf-objidl-istream-setsize) -Methode aufrufen oder über das Ende des Streams hinaus suchen oder schreiben. Da allerdings alle Streams eine minimale Größe haben, ist es möglich, den Stream bis zu dieser Größe zu verwenden, auch wenn weniger Daten ursprünglich in den Datenstrom geschrieben wurden. Verwenden Sie die [**IStream:: stat**](/windows/desktop/api/Objidl/nf-objidl-istream-stat) -Methode, um die Größe eines Streams zu ermitteln.
+-   Es ist möglich, immer nur ein Streamelement gleichzeitig zu öffnen.
+-   Es ist nicht möglich, die Größe eines Streams durch Aufrufen der [**IStream::SetSize-Methode**](/windows/desktop/api/Objidl/nf-objidl-istream-setsize) oder durch Suchen oder Schreiben über das Ende des Streams hinaus zu ändern. Da jedoch alle Streams eine Mindestgröße haben, ist es möglich, den Stream bis zu dieser Größe zu verwenden, auch wenn ursprünglich weniger Daten in den Stream geschrieben wurden. Verwenden Sie die [**IStream::Stat-Methode,**](/windows/desktop/api/Objidl/nf-objidl-istream-stat) um die Größe eines Streams zu bestimmen.
 
-Wenn ein Speicher Element von einem Speicher Objekt geändert wird, das sich nicht im einfachen Modus befindet, ist es nicht mehr möglich, dieses Speicher Element im einfachen Modus zu öffnen.
+Beachten Sie, dass es nicht möglich ist, dieses Speicherelement im einfachen Modus zu öffnen, wenn ein Speicherelement von einem Speicherobjekt geändert wird, das sich nicht im einfachen Modus befindet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -403,7 +403,7 @@ Wenn ein Speicher Element von einem Speicher Objekt geändert wird, das sich nic
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Objbase. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>ObjBase.h</dt> </dl> |
 
 
 
@@ -411,25 +411,25 @@ Wenn ein Speicher Element von einem Speicher Objekt geändert wird, das sich nic
 
 <dl> <dt>
 
-[**ISequentialStream:: Read**](/windows/desktop/api/Objidl/nf-objidl-isequentialstream-read)
+[**ISequentialStream::Read**](/windows/desktop/api/Objidl/nf-objidl-isequentialstream-read)
 </dt> <dt>
 
-[**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage)
+[**Istorage**](/windows/desktop/api/Objidl/nn-objidl-istorage)
 </dt> <dt>
 
-[**Stgkreatedocfile**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfile)
+[**StgCreateDocfile**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfile)
 </dt> <dt>
 
-[**Stgkreatedocfileonilockbytes**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfileonilockbytes)
+[**StgCreateDocfileOnILockBytes**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfileonilockbytes)
 </dt> <dt>
 
-[**Stgkreatestorageex**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatestorageex)
+[**StgCreateStorageEx**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatestorageex)
 </dt> <dt>
 
 [**StgOpenStorage**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorage)
 </dt> <dt>
 
-[**Stgopenstorageex**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorageex)
+[**StgOpenStorageEx**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorageex)
 </dt> <dt>
 
 [**StgOpenStorageOnILockBytes**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorageonilockbytes)

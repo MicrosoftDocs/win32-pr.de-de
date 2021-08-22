@@ -1,10 +1,10 @@
 ---
-title: ms-net-IEEE-80211-GP-policyreserved-Attribut
-description: Für die zukünftige Verwendung reserviert. | ms-net-IEEE-80211-GP-policyreserved-Attribut
+title: ms-net-ieee-80211-GP-PolicyReserved-Attribut
+description: Für die zukünftige Verwendung reserviert. | ms-net-ieee-80211-GP-PolicyReserved-Attribut
 ms.assetid: 28381eaf-9f78-43b6-97e7-bdae5322cf39
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-net-IEEE-80211-GP-policyreserved\"-Attribut AD-Schema"
+- ms-net-ieee-80211-GP-PolicyReserved attribute AD Schema
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f59a2fde1114f22bfe68dd1275baba8538e09a27
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: a1b37a2c51115327ae004f1ed95e2644a6c58aa75fcf5547a088363ae9a467b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106350617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119583420"
 ---
-# <a name="ms-net-ieee-80211-gp-policyreserved-attribute"></a>ms-net-IEEE-80211-GP-policyreserved-Attribut
+# <a name="ms-net-ieee-80211-gp-policyreserved-attribute"></a>ms-net-ieee-80211-GP-PolicyReserved-Attribut
 
 Für die zukünftige Verwendung reserviert.
 
@@ -28,11 +28,11 @@ Für die zukünftige Verwendung reserviert.
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | ms-net-IEEE-80211-GP-policyreserved                   |
-| LDAP-Display-Name | ms-net-IEEE-80211-GP-policyreserved                   |
+| CN                | ms-net-ieee-80211-GP-PolicyReserved                   |
+| Ldap-Anzeigename | ms-net-ieee-80211-GP-PolicyReserved                   |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.1953                               |
 | System-ID-GUID    | 0f69c62e-088e-4ff5-a53a-e923cec07c0a                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
@@ -54,15 +54,15 @@ Für die zukünftige Verwendung reserviert.
 | Link-ID                | \-                                                                                  |
 | MAPI-Id                | \-                                                                                  |
 | System-Only            | False                                                                               |
-| Ist-einwertig       | Richtig                                                                                |
+| Ist einwertig       | True                                                                                |
 | Ist indiziert             | False                                                                               |
 | Im globalen Katalog      | False                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                        |
 | Range-Lower            | \-                                                                                  |
 | Range-Upper            | \-                                                                                  |
 | Search-Flags           | 0x00000000                                                                          |
 | System-Flags           | 0x00000010                                                                          |
-| In verwendete Klassen        | [**ms-net-IEEE-80211-GroupPolicy**](c-ms-net-ieee-80211-grouppolicy.md)<br/> |
+| In verwendete Klassen        | [**ms-net-ieee-80211-GroupPolicy**](c-ms-net-ieee-80211-grouppolicy.md)<br/> |
 
 
 
@@ -75,15 +75,15 @@ Für die zukünftige Verwendung reserviert.
 | Link-ID                | \-                                                                                  |
 | MAPI-Id                | \-                                                                                  |
 | System-Only            | False                                                                               |
-| Ist-einwertig       | Richtig                                                                                |
+| Ist einwertig       | True                                                                                |
 | Ist indiziert             | False                                                                               |
 | Im globalen Katalog      | False                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                        |
 | Range-Lower            | \-                                                                                  |
 | Range-Upper            | \-                                                                                  |
 | Search-Flags           | 0x00000000                                                                          |
 | System-Flags           | 0x00000010                                                                          |
-| In verwendete Klassen        | [**ms-net-IEEE-80211-GroupPolicy**](c-ms-net-ieee-80211-grouppolicy.md)<br/> |
+| In verwendete Klassen        | [**ms-net-ieee-80211-GroupPolicy**](c-ms-net-ieee-80211-grouppolicy.md)<br/> |
 
 
 
@@ -96,15 +96,15 @@ Für die zukünftige Verwendung reserviert.
 | Link-ID                | \-                                                                                  |
 | MAPI-Id                | \-                                                                                  |
 | System-Only            | False                                                                               |
-| Ist-einwertig       | Richtig                                                                                |
+| Ist einwertig       | True                                                                                |
 | Ist indiziert             | False                                                                               |
 | Im globalen Katalog      | False                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                        |
 | Range-Lower            | \-                                                                                  |
 | Range-Upper            | \-                                                                                  |
 | Search-Flags           | 0x00000000                                                                          |
 | System-Flags           | 0x00000010                                                                          |
-| In verwendete Klassen        | [**ms-net-IEEE-80211-GroupPolicy**](c-ms-net-ieee-80211-grouppolicy.md)<br/> |
+| In verwendete Klassen        | [**ms-net-ieee-80211-GroupPolicy**](c-ms-net-ieee-80211-grouppolicy.md)<br/> |
 
 
 

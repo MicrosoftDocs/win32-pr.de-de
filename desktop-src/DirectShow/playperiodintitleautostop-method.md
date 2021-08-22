@@ -1,24 +1,24 @@
 ---
-description: Die playperiodintitleautostoppt-Methode startet die Wiedergabe zum angegebenen Zeitpunkt im angegebenen Titel bis zur angegebenen Endzeit.
+description: Die PlayPeriodInTitleAutoStop-Methode startet die Wiedergabe zum angegebenen Zeitpunkt im angegebenen Titel bis zur angegebenen Beendigungszeit.
 ms.assetid: 0c4df76d-3991-4a6c-a8e5-5fd713eeffc2
-title: Playperiodintitleautostoppt-Methode
+title: PlayPeriodInTitleAutoStop-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d05899b66b7f1a11f8f5b177d311b9634a52595b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 93dbf0a5c157efcf4d22e7e5ba650bfdfebc57fe6a43d319e0be14958d732024
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860180"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119564060"
 ---
-# <a name="playperiodintitleautostop-method"></a>Playperiodintitleautostoppt-Methode
+# <a name="playperiodintitleautostop-method"></a>PlayPeriodInTitleAutoStop-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `PlayPeriodInTitleAutoStop` Methode startet die Wiedergabe zum angegebenen Zeitpunkt im angegebenen Titel bis zur angegebenen Endzeit.
+Die `PlayPeriodInTitleAutoStop` -Methode startet die Wiedergabe zum angegebenen Zeitpunkt im angegebenen Titel bis zur angegebenen Beendigungszeit.
 
 ``` syntax
 MSWebDVD.PlayPeriodInTitleAutoStop(iTitle, sStartTime, sEndTime)
@@ -28,24 +28,24 @@ MSWebDVD.PlayPeriodInTitleAutoStop(iTitle, sStartTime, sEndTime)
 
 <dl> <dt>
 
-<span id="iTitle"></span><span id="ititle"></span><span id="ITITLE"></span>*ititle*
+<span id="iTitle"></span><span id="ititle"></span><span id="ITITLE"></span>*iTitle*
 </dt> <dd>
 
-Gibt den Titel als Ganzzahl an.
+Gibt den Titel als ganze Zahl an.
 
 </dd> <dt>
 
-<span id="sStartTime"></span><span id="sstarttime"></span><span id="SSTARTTIME"></span>*sstarttime*
+<span id="sStartTime"></span><span id="sstarttime"></span><span id="SSTARTTIME"></span>*sStartTime*
 </dt> <dd>
 
-Gibt die Startzeit als Zeichenfolge im Format "hh: mm: SS: FF" an (Stunden, Minuten, Sekunden, Rahmen werden angegeben).
+Gibt die Startzeit als Zeichenfolge im Format "hh:mm:ss:ff" an (angabe von Stunden, Minuten, Sekunden, Frames).
 
 </dd> <dt>
 
-<span id="sEndTime"></span><span id="sendtime"></span><span id="SENDTIME"></span>*sendtime*
+<span id="sEndTime"></span><span id="sendtime"></span><span id="SENDTIME"></span>*sEndTime*
 </dt> <dd>
 
-Gibt die Endzeit als Zeichenfolge im Format "hh: mm: SS: FF" an.
+Gibt die Endzeit als Zeichenfolge im Format "hh:mm:ss:ff" an.
 
 </dd> </dl>
 
@@ -57,7 +57,7 @@ Kein Rückgabewert.
 
 <dl> <dt>
 
-[**Playchaptersauto-Beendigung**](playchaptersautostop-method.md)
+[**PlayChaptersAutoStop**](playchaptersautostop-method.md)
 </dt> </dl>
 
  

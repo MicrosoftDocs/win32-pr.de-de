@@ -1,9 +1,9 @@
 ---
-title: HDN_ENDDRAG Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Header-Steuerelement gesendet, wenn ein Zieh Vorgang auf einem seiner Elemente beendet wurde. Dieser Benachrichtigungs Code wird als WM-Benachrichtigungs \_ Meldung gesendet. Nur Header Steuerelemente, die auf den HDS DragDrop-Stil festgelegt sind, \_ senden diesen Benachrichtigungs Code.
+title: HDN_ENDDRAG Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Headersteuerelementen gesendet, wenn ein Ziehvorgang für eines seiner Elemente beendet wurde. Dieser Benachrichtigungscode wird als WM \_ NOTIFY-Nachricht gesendet. Nur Headersteuerelemente, die auf den HDS \_ DRAGDROP-Stil festgelegt sind, senden diesen Benachrichtigungscode.
 ms.assetid: a28df985-73f1-4fc7-a1db-81a86a131c06
 keywords:
-- Windows-Steuerelemente für HDN_ENDDRAG Benachrichtigungs
+- HDN_ENDDRAG Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8eef628dd8ff748829542ace76642e20ad97786f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 05df56beb0b5b4a75716723330711714b7db9f4f27100ffe3296626d2be5798a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119544618"
 ---
-# <a name="hdn_enddrag-notification-code"></a>Hdn- \_ EndDrag-Benachrichtigungs Code
+# <a name="hdn_enddrag-notification-code"></a>HDN \_ ENDDRAG-Benachrichtigungscode
 
-Wird von einem Header-Steuerelement gesendet, wenn ein Zieh Vorgang auf einem seiner Elemente beendet wurde. Dieser Benachrichtigungs Code wird als [**WM- \_ Benachrichtigungs**](wm-notify.md) Meldung gesendet. Nur Header Steuerelemente, die auf den [**HDS \_ DragDrop**](header-control-styles.md) -Stil festgelegt sind, senden diesen Benachrichtigungs Code.
+Wird von einem Headersteuerelementen gesendet, wenn ein Ziehvorgang für eines seiner Elemente beendet wurde. Dieser Benachrichtigungscode wird als [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet. Nur Headersteuerelemente, die auf den [**HDS \_ DRAGDROP-Stil**](header-control-styles.md) festgelegt sind, senden diesen Benachrichtigungscode.
 
 
 ```C++
@@ -41,17 +41,17 @@ HDN_ENDDRAG
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**NMHEADER**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) -Struktur, die Informationen über das Header Element enthält, das gezogen wurde.
+Ein Zeiger auf eine [**NMHEADER-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) die Informationen über das header-Element enthält, das gezogen wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Damit das Steuerelement das Element automatisch platzieren und neu anordnen kann, wird **false** zurückgegeben. Um zu verhindern, dass das Element platziert wird, wird **true** zurückgegeben.
+Damit das Steuerelement das Element automatisch platzieren und neu anordnen kann, geben Sie **FALSE zurück.** Um zu verhindern, dass das Element platziert wird, geben Sie **TRUE zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Besitzer eine externe (manuelle) Drag & Drop-Verwaltung durchführt, muss er **false** zurückgeben. Der Besitzer muss dann die Header Elemente manuell neu anordnen, indem er [**HDM \_**](hdm-setitem.md) -Server oder [**HDM-Server \_ Array**](hdm-setorderarray.md)sendet.
+If the owner is performing external (manual) drag-and-drop management, it must return **FALSE**. Der Besitzer muss Headerelemente dann manuell neu anordnen, indem er [**HDM \_ SETITEM**](hdm-setitem.md) oder [**HDM \_ SETORDERARRAY sendet.**](hdm-setorderarray.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Wenn der Besitzer eine externe (manuelle) Drag & Drop-Verwaltung durchführt, mu
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

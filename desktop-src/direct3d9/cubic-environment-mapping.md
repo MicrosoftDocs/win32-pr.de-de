@@ -1,41 +1,41 @@
 ---
-description: Kubische Umgebungs Zuordnungen (manchmal auch als Cubemaps bezeichnet) sind Texturen, die Bilddaten enthalten, die die Szene darstellen, die ein Objekt umgibt, als ob sich das Objekt in der Mitte eines Cubes befand.
+description: Kubische Umgebungskarten , die manchmal auch als Cubemaps bezeichnet werden, sind Texturen, die Bilddaten enthalten, die die Szene um ein Objekt darstellen, als ob sich das Objekt in der Mitte eines Cubes befing.
 ms.assetid: 4879d59b-e6d3-4811-ab2c-bcce8f214e1c
-title: Kubische Umgebungs Zuordnung (Direct3D 9)
+title: Kubische Umgebungszuordnung (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cecac83db067224195883485bcbd282aa82ae4b5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6b02f86528c52c2e8e9376eb92e4452735c2613cc9b7dda08a8a07e8473193ea
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393210"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119565338"
 ---
-# <a name="cubic-environment-mapping-direct3d-9"></a>Kubische Umgebungs Zuordnung (Direct3D 9)
+# <a name="cubic-environment-mapping-direct3d-9"></a>Kubische Umgebungszuordnung (Direct3D 9)
 
-Kubische Umgebungs Zuordnungen (manchmal auch als Cubemaps bezeichnet) sind Texturen, die Bilddaten enthalten, die die Szene darstellen, die ein Objekt umgibt, als ob sich das Objekt in der Mitte eines Cubes befand. Jedes Gesicht der kubischen Umgebungs Zuordnung deckt ein 90-Grad-Feld der Sicht in horizontaler und vertikaler Sicht ab, und es gibt sechs Gesichter pro cubemap. Die Ausrichtung der Flächen wird in der folgenden Abbildung dargestellt.
+Kubische Umgebungskarten , die manchmal auch als Cubemaps bezeichnet werden, sind Texturen, die Bilddaten enthalten, die die Szene um ein Objekt darstellen, als ob sich das Objekt in der Mitte eines Cubes befing. Jedes Gesicht der kubischen Umgebungskarte deckt ein 90-Grad-Sichtfeld in der horizontalen und vertikalen Ansicht ab, und es gibt sechs Gesichter pro Cubemap. Die Ausrichtung der Gesichter wird in der folgenden Abbildung dargestellt.
 
-![Abbildung eines Cubes mit zentralen Koordinatenachsen, der in den Cube-Gesichtern senkrecht ist](images/cubemap-cube.png)
+![Abbildung eines Cubes mit zentralen Koordinatenachsen perpendordiniert zu Würfelgesichter](images/cubemap-cube.png)
 
-Jedes Gesicht des Cubes ist senkrecht zur x/y-, y/z-oder x/z-Ebene im Raum der Welt ausgerichtet. In der folgenden Abbildung wird gezeigt, wie die einzelnen Ebenen einem Gesicht entsprechen.
+Jedes Gesicht des Würfels ist auf die x/y-, y/z- oder x/z-Ebene im Weltraum ausgerichtet. Die folgende Abbildung zeigt, wie jede Ebene einem Gesicht entspricht.
 
-![Abbildung der Cube-Gesichter mit Koordinaten Projektionen von Ebenen](images/cube-faces.png)
+![Abbildung von Würfelflächen mit Koordinatenprojektionen aus Ebenen](images/cube-faces.png)
 
-Kubische Umgebungs Zuordnungen werden als eine Reihe von Textur Objekten implementiert. Anwendungen können statische Bilder für die Zuordnung von kubischen Umgebungen verwenden, oder Sie können in die Flächen der cubemap hinein Rendering werden, um eine dynamische Umgebungs Zuordnung auszuführen. Diese Technik erfordert, dass die cubezuordnungs-Oberflächen gültige renderzieloberflächen darstellen, die mit dem \_ festgelegten Flag D3DUSAGE renderTarget erstellt werden.
+Kubische Umgebungszuordnungen werden als eine Reihe von Texturobjekten implementiert. Anwendungen können statische Bilder für die kubische Umgebungszuordnung verwenden, oder sie können in den Gesichtern der Cubemap gerendert werden, um eine dynamische Umgebungszuordnung durchzuführen. Diese Technik erfordert, dass es sich bei den Cubezuordnungsoberflächen um gültige Renderzieloberflächen handelt, die mit dem D3DUSAGE \_ RENDERTARGET-Flag erstellt wurden.
 
-Die Gesichter einer cubemap müssen keine äußerst detaillierten Renderings der umgebenden Szene enthalten. In den meisten Fällen werden Umgebungs Zuordnungen auf gekrümmte Oberflächen angewendet. Aufgrund der von den meisten Anwendungen verwendeten Krümmung wird die resultierende reflektierenden Verzerrung in der Umgebungs Zuordnung in Bezug auf Arbeitsspeicher und renderingaufwand in Bezug auf den Arbeitsspeicher verschwendet.
+Die Gesichter einer Cubemap müssen keine extrem detaillierten Renderings der umgebenden Szene enthalten. In den meisten Fällen werden Umgebungszuordnungen auf gekrümmte Oberflächen angewendet. Angesichts des Umfangs der Von den meisten Anwendungen verwendeten Krümmung macht die resultierende reflektierende Verzerrung extreme Details in der Umgebungszuordnung im Hinblick auf Arbeitsspeicher und Renderingaufwand überflüssig.
 
-## <a name="mipmapped-cubic-environment-maps"></a>Mipzugeordnete kubische Umgebungs Zuordnungen
+## <a name="mipmapped-cubic-environment-maps"></a>Mipmapped Kubische Umgebung Karten
 
-Cubemaps können mipzugeordnet werden. Legen Sie zum Erstellen einer mipzugeordneten cubemap den Levels-Parameter der Methode " [**kreatecubetexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createcubetexture) " auf die gewünschte Anzahl von Ebenen fest. Sie können die Topografie dieser Oberflächen wie in der folgenden Abbildung dargestellt sehen.
+Cubezuordnungen können mipmapped sein. Legen Sie zum Erstellen einer mipmapped-Cubezuordnung den Levels-Parameter der [**CreateCubeTexture-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createcubetexture) auf die gewünschte Anzahl von Ebenen fest. Sie können sich die Topografie dieser Oberflächen wie im folgenden Diagramm dargestellt vorstellen.
 
-![Diagramm einer mipzugeordneten cubemap mit n MIP-Ebenen](images/cubemap-mipped.png)
+![Diagramm einer mipmapped Cube Map mit n MIP-Ebenen](images/cubemap-mipped.png)
 
-Anwendungen, die mipzugeordnete kubische Umgebungs Zuordnungen erstellen, können auf jedes Gesicht zugreifen, indem Sie die [**getcubemapsurface**](/windows/desktop/api) -Methode aufrufen. Legen Sie zunächst den entsprechenden Wert aus dem enumerierten Typ [**D3DCUBEMAP \_ Gesichter**](./d3dcubemap-faces.md) fest, wie unter [Erstellen von kubischen Umgebungskarten Oberflächen (Direct3D 9)](creating-cubic-environment-map-surfaces.md)erläutert. Wählen Sie als nächstes die Ebene aus, die abgerufen werden soll, indem Sie den Parameter **getcubemapsurface** Level auf die gewünschte MipMap-Ebene festlegen. Beachten Sie, dass 0 dem Bild der obersten Ebene entspricht.
+Anwendungen, die mipmapped kubische Umgebungszuordnungen erstellen, können auf jedes Gesicht zugreifen, indem sie die [**GetCubeMapSurface-Methode**](/windows/desktop/api) aufrufen. Legen Sie zunächst den entsprechenden Wert des [**D3DCUBEMAP \_ FACES-Enumerationstyps**](./d3dcubemap-faces.md) fest, wie unter [Erstellen von kubischen Umgebungszuordnungsoberflächen (Direct3D 9)](creating-cubic-environment-map-surfaces.md)erläutert. Wählen Sie als Nächstes die abzurufende Ebene aus, indem Sie den **GetCubeMapSurface-Ebenenparameter** auf die gewünschte mipmap-Ebene festlegen. Denken Sie daran, dass 0 dem Bild der obersten Ebene entspricht.
 
-## <a name="texture-coordinates-for-cubic-environment-maps"></a>Texturkoordinaten für die Karten der kubischen Umgebung
+## <a name="texture-coordinates-for-cubic-environment-maps"></a>Texturkoordinaten für kubische Karten
 
-Texturkoordinaten, die eine kubische Umgebungs Zuordnung indizieren, sind keine einfachen u-, v-Stil Koordinaten, die verwendet werden, wenn Standard Texturen angewendet werden. In der Tat werden bei kubischen Umgebungs Zuordnungen überhaupt keine Texturkoordinaten verwendet. Anstelle eines Satzes von Texturkoordinaten benötigen kubische Umgebungs Zuordnungen einen 3D-Vektor. Sie müssen darauf achten, dass Sie ein ordnungsgemäßes Scheitelpunkt Format angeben. Zusätzlich zur Angabe des Systems, wie viele Sätze von Texturkoordinaten von der Anwendung verwendet werden, müssen Sie Informationen über die Anzahl der Elemente in jeder Gruppe bereitstellen. Direct3D bietet zu diesem Zweck den [**D3DFVF \_ texcoordsizen**](d3dfvf-texcoordsizen.md) -Satz von Makros. Diese Makros akzeptieren einen einzelnen Parameter, der den Index des Texturkoordinaten Satzes identifiziert, für den die Größe beschrieben wird. Im Fall eines 3D-Vektors fügen Sie das durch das D3DFVF TEXCOORDSIZE3-Makro erstellte Bitmuster ein \_ . Im folgenden Codebeispiel wird gezeigt, wie dieses Makro verwendet wird.
+Texturkoordinaten, die eine kubische Umgebungskarte indizieren, sind keine einfachen u-, v-Stilkoordinaten, die verwendet werden, wenn Standardtexturen angewendet werden. Kubische Umgebungskarten verwenden tatsächlich überhaupt keine Texturkoordinaten. Anstelle eines Satzes von Texturkoordinaten benötigen kubische Umgebungskarten einen 3D-Vektor. Sie müssen darauf achten, ein ordnungsgemäßes Scheitelpunktformat anzugeben. Sie müssen dem System nicht nur mitteilen, wie viele Sätze von Texturkoordinaten Ihre Anwendung verwendet, sie müssen auch Informationen darüber bereitstellen, wie viele Elemente in jeder Menge enthalten sind. Direct3D bietet den [**D3DFVF \_ TEXCOORDSIZEN-Makrosatz**](d3dfvf-texcoordsizen.md) für diesen Zweck. Diese Makros akzeptieren einen einzelnen Parameter, der den Index des Texturkoordinatensatzes identifiziert, für den die Größe beschrieben wird. Im Fall eines 3D-Vektors schließen Sie das Bitmuster ein, das vom Makro D3DFVF \_ TEXCOORDSIZE3 erstellt wurde. Das folgende Codebeispiel zeigt, wie dieses Makro verwendet wird.
 
 
 ```
@@ -47,9 +47,9 @@ DWORD dwFVF = D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_TEX1 | D3DFVF_TEXCOORDSIZE3(0)
 
 
 
-In einigen Fällen, z. b. bei der diffuses Licht Zuordnung, verwenden Sie den Vertex-Zeichenbereich für den Vektor. In anderen Fällen, z. b. in der Glanz Umgebungs Zuordnung, verwenden Sie einen Reflektionsvektor. Da transformierte Vertex-Normale weitgehend verstanden werden, konzentrieren sich die Informationen hier auf das Berechnen eines reflektionvevektors.
+In einigen Fällen, z. B. bei der Zuordnung von diffusem Licht, verwenden Sie die Vertexnorm des Kameraraums für den Vektor. In anderen Fällen, z. B. bei der Specular Environment Mapping, verwenden Sie einen Reflektionsvektor. Da transformierte Scheitelpunktnormen allgemein verstanden werden, konzentrieren sich die Informationen hier auf das Berechnen eines Reflektionsvektors.
 
-Wenn Sie einen reflektionvektor selbst berechnen, müssen Sie die Position der einzelnen Scheitel Punkte und einen Vektor vom Standpunkt bis zu diesem Scheitelpunkt verstehen. Direct3D kann die reflektionvektoren für Ihre Geometrie automatisch berechnen. Die Verwendung dieser Funktion spart Speicherplatz, da Sie keine Texturkoordinaten für die Umgebungs Zuordnung einschließen müssen. Außerdem wird die Bandbreite reduziert, und im Fall eines T&L HAL-Geräts kann es deutlich schneller sein als die Berechnungen, die Ihre Anwendung selbst durchführen kann. Um dieses Feature zu verwenden, legen Sie in der Textur Phase, in der die kubische Umgebungs Zuordnung enthalten ist, den \_ Status D3DTSS texcoordindex Textur Phase auf eine Kombination aus dem D3DTSS \_ TCI \_ cameraspacereflectionvector-Member von [**D3DTEXTURESTAGESTATETYPE**](./d3dtexturestagestatetype.md) und dem Index eines Texturkoordinaten Satzes fest. In einigen Situationen, z. b. bei der diffuses Licht Zuordnung, können Sie den D3DTSS \_ TCI \_ cameraspacenormale-Member von **D3DTEXTURESTAGESTATETYPE** verwenden, der bewirkt, dass das System den transformierten Scheitelpunkt (Scheitelpunkt) als Adressierungs Vektor für die Textur verwendet. Der Index wird nur vom System verwendet, um den Wrapping Modus für die Textur zu bestimmen.
+Das Berechnen eines Reflektionsvektors allein erfordert ein Verständnis der Position jedes Scheitelpunkts und eines Vektors vom Standpunkt bis zu diesem Scheitelpunkt. Direct3D kann die Reflektionsvektoren für Ihre Geometrie automatisch berechnen. Die Verwendung dieses Features spart Arbeitsspeicher, da Sie keine Texturkoordinaten für die Umgebungskarte einschließen müssen. Außerdem wird die Bandbreite reduziert, und im Fall eines T&L-GERÄTs kann es erheblich schneller sein als die Berechnungen, die Ihre Anwendung selbst vornehmen kann. Um dieses Feature zu verwenden, legen Sie in der Texturstufe, die die kubische Umgebungszuordnung enthält, den Texturzustand D3DTSS \_ TEXCOORDINDEX auf eine Kombination aus dem D3DTSS \_ TCI \_ CAMERASPACEREFLECTIONVECTOR-Member von [**D3DTEXTURESTAGESTATETYPE**](./d3dtexturestagestatetype.md) und dem Index eines Texturkoordinatensatzes fest. In einigen Situationen, z. B. bei der Diffuslichtzuordnung, können Sie den D3DTSS \_ TCI \_ CAMERASPACENORMAL-Member von **D3DTEXTURESTAGESTATETYPE** verwenden, wodurch das System den transformierten Kameraraum und den Scheitelpunkt normal als Adressierungsvektor für die Textur verwendet. Der Index wird nur vom System verwendet, um den Umbruchmodus für die Textur zu bestimmen.
 
 Das folgende Codebeispiel zeigt, wie dieser Wert verwendet wird.
 
@@ -68,32 +68,32 @@ m_d3dDevice->SetTextureStageState( 2, D3DTSS_TEXCOORDINDEX,
 
 
 
-Wenn Sie die automatische Generierung von Texturkoordinaten aktivieren, verwendet das System eines von zwei Formeln, um den reflektionvektor für jeden Scheitelpunkt zu berechnen. Wenn der D3DRS \_ localviewer-Rendering-Zustand auf **true** festgelegt ist, wird die folgende Formel verwendet.
+Wenn Sie die automatische Texturkoordinatengenerierung aktivieren, verwendet das System eine von zwei Formeln, um den Reflektionsvektor für jeden Scheitelpunkt zu berechnen. Wenn der D3DRS \_ LOCALVIEWER-Renderzustand auf **TRUE** festgelegt ist, wird die folgende Formel verwendet.
 
-![Formel des reflektionvevektors (r = 2 (EXN) n-e)](images/reflection-vector-local.png)
+![Formel des Reflektionsvektors (r = 2(exn)n-e)](images/reflection-vector-local.png)
 
-In der vorangehenden Formel ist R der zu berechnende reflektionvektor, E ist der normalisierte Positions-zu-Auge-Vektor, und N ist der Vertex-Raum des Kamera Raums.
+In der obigen Formel ist R der berechnete Reflektionsvektor, E der normalisierte Positions-zu-Auge-Vektor und N die Kameraraum-Vertexnorm.
 
-Wenn der D3DRS \_ localviewer-Rendering-Zustand auf **false** festgelegt ist, verwendet das System die folgende Formel.
+Wenn der D3DRS \_ LOCALVIEWER-Renderzustand auf **FALSE** festgelegt ist, verwendet das System die folgende Formel.
 
-![Formel des reflektionvevektors (r = 2nzn-i)](images/reflection-vector-nonlocal.png)
+![Formel des Reflektionsvektors (r = 2nzn-i)](images/reflection-vector-nonlocal.png)
 
-Die R-und N-Elemente in dieser Formel sind mit der vorherigen Formel identisch. Das N<sub>Z</sub> -Element ist der Raum z des Scheitel Punkts normal, und ich bin der Vektor (0, 0, 1) eines unendlich entfernten Standpunkts. Das System verwendet den reflektionvektor aus beiden Formeln, um die entsprechende Oberfläche der cubemap auszuwählen und zu adressieren.
+Die R- und N-Elemente in dieser Formel sind mit der vorherigen Formel identisch. Das N<sub>Z-Element</sub> ist der Weltraum z der Scheitelpunktnorm, und ich ist der Vektor (0,0,1) eines unendlich entfernten Blickpunkts. Das System verwendet den Reflektionsvektor aus beiden Formeln, um das entsprechende Gesicht der Cubemap auszuwählen und zu adressierung.
 
 > [!Note]  
-> In den meisten Fällen sollten Anwendungen die automatische Normalisierung von Scheitelpunkt normalen aktivieren. Legen Sie zu diesem Zweck D3DRS \_ normalizenormals auf **true** fest. Wenn Sie diesen renderzustand nicht aktivieren, unterscheidet sich die Darstellung der Umgebungs Zuordnung erheblich von dem, was Sie möglicherweise erwarten.
+> In den meisten Fällen sollten Anwendungen die automatische Normalisierung von Scheitelpunktnormalisierungen aktivieren. Legen Sie hierzu D3DRS \_ NORMALIZENORMALS auf **TRUE** fest. Wenn Sie diesen Renderzustand nicht aktivieren, unterscheidet sich die Darstellung der Umgebungszuordnung erheblich von der erwarteten Darstellung.
 
  
 
 Weitere Informationen finden Sie im folgenden Thema.
 
--   [Erstellen von kubischen Umgebungs Zuordnungs Oberflächen (Direct3D 9)](creating-cubic-environment-map-surfaces.md)
+-   [Erstellen kubischer Umgebungszuordnungsoberflächen (Direct3D 9)](creating-cubic-environment-map-surfaces.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Umgebungs Zuordnung](environment-mapping.md)
+[Umgebungszuordnung](environment-mapping.md)
 </dt> </dl>
 
  

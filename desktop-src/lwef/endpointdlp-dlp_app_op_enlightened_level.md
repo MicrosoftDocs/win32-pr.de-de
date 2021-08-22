@@ -1,5 +1,5 @@
 ---
-description: Ordnet eine DLP-Aktion (Data Loss Prevention) eines Endpunkts einer Erzwingungsebene zu.
+description: Ordnet eine Endpunktaktion zur Verhinderung von Datenverlust (Data Loss Prevention, DLP) einer Erzwingungsebene zu.
 title: DLP_APP_OP_ENLIGHTENED_LEVEL-Struktur (endpointdlp.h)
 ms.topic: reference
 ms.date: 03/18/2021
@@ -19,9 +19,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119610480"
 ---
-# <a name="dlp_app_op_enlightened_level-structure"></a>DLP_APP_OP_ENLIGHTENED_LEVEL Struktur
+# <a name="dlp_app_op_enlightened_level-structure"></a>DLP_APP_OP_ENLIGHTENED_LEVEL-Struktur
 
-Ordnet eine DLP-Aktion (Data Loss Prevention) eines Endpunkts einer Erzwingungsebene zu.
+Ordnet eine Endpunktaktion zur Verhinderung von Datenverlust (Data Loss Prevention, DLP) einer Erzwingungsebene zu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ typedef struct _DLP_APP_OP_ENLIGHTENED_LEVEL{
 *Vorgang* \[ In\]
 </dt> <dd>
 
-Ein Wert aus der [DlpActionType-Enumeration,](endpointdlp-dlpactiontype.md) der den DLP-Endpunktaktionstyp angibt.
+Ein Wert aus der [DlpActionType-Enumeration,](endpointdlp-dlpactiontype.md) der den Endpunkt-DLP-Aktionstyp an gibt.
 
 </dd> </dl>
 
@@ -50,7 +50,7 @@ Ein Wert aus der [DlpActionType-Enumeration,](endpointdlp-dlpactiontype.md) der 
 *AppEnforcementLevel* \[ In\]
 </dt> <dd>
 
-Ein Wert aus [DlpAppEnforceLevel,](endpointdlp-dlpappenforcelevel.md) der die Erzwingungsebene für den zugeordneten Endpunkt-DLP-Aktionstyp angibt.
+Ein Wert aus [DlpAppEnforceLevel,](endpointdlp-dlpappenforcelevel.md) der die Erzwingungsebene für den zugeordneten Endpunkt-DLP-Aktionstyp an gibt.
 
 </dd> </dl>
 
@@ -60,7 +60,7 @@ Ein Wert aus [DlpAppEnforceLevel,](endpointdlp-dlpappenforcelevel.md) der die Er
 
 ## <a name="remarks"></a>Hinweise
 
-Übergeben Sie ein Array dieser Strukturen an [DlpInitializeEnforcementMode,](endpointdlp-dlpinitializeenforcementmode.md) um den Erzwingungsmodus für eine Reihe von Endpunkt-DLP-Vorgängen festzulegen.
+Übergeben Sie ein Array dieser Strukturen an [DlpInitializeEnforcementMode,](endpointdlp-dlpinitializeenforcementmode.md) um den Erzwingungsmodus für eine Reihe von Endpunkt-DLP-Vorgängen zu festlegen.
 
 ## <a name="requirements"></a>Anforderungen
 

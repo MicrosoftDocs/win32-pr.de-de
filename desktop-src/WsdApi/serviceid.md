@@ -15,7 +15,7 @@ ms.locfileid: "119756740"
 
 Ein URI, der den Dienstbezeichner darstellt.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <ServiceID/>
@@ -33,9 +33,9 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                          |
+| Element                             | Beschreibung                                                                                                                                                                                                                                                                                                                          |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Host**](host.md)<br/>     | Definiert die **ServiceID-** und [**Types-Elemente**](types.md) für den Diensthost. Wenn dies nicht explizit erfolgt, stellt WSDAPI keine Standarddaten als Reaktion auf Metadatenanforderungen bereit.<br/> <br/>                                                                                                                     |
+| [**Host**](host.md)<br/>     | Definiert die **ServiceID-** und [**Types-Elemente**](types.md) für den Diensthost. Wenn dies nicht explizit erfolgt, stellt WSDAPI keine Standarddaten als Antwort auf Metadatenanforderungen bereit.<br/> <br/>                                                                                                                     |
 | [**Gehostet**](hosted.md)<br/> | Definiert die **ServiceID-** und [**Types-Elemente**](types.md) für die dienste, die von diesem Diensthost bereitgestellt werden. Jeder von diesem Diensthost bereitgestellte [](hosted.md) Dienst sollte über eigene gehostete Elementinformationen verfügen, um sicherzustellen, dass der Dienst ordnungsgemäß in Antworten auf Metadatenanforderungen veröffentlicht wird.<br/> <br/> |
 
 

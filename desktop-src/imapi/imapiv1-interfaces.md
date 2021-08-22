@@ -1,32 +1,32 @@
 ---
 title: IMAPIv1-Schnittstellen
-description: Im folgenden sind die IMAPI-Schnittstellen aufgeführt.
+description: Im Folgenden sind die IMAPI-Schnittstellen beschrieben.
 ms.assetid: 7840a349-91ef-44c5-8100-5a54d6cd862a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f52653d20d172056caa08fe0dc8a32451819112e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 957fd78282b37218a227da36a720f8730f1a4f9bd687299bef7dd2ff9ab1b605
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036606"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119611940"
 ---
 # <a name="imapiv1-interfaces"></a>IMAPIv1-Schnittstellen
 
-Im folgenden sind die IMAPI-Schnittstellen aufgeführt.
+Im Folgenden sind die IMAPI-Schnittstellen beschrieben.
 
 <dl>
 
-[**Idiscmaster**](/windows/desktop/api/Imapi/nn-imapi-idiscmaster)  
-[**Idiscrecorder**](/windows/desktop/api/Imapi/nn-imapi-idiscrecorder)  
-[**Iredbookdiscmaster**](/windows/desktop/api/Imapi/nn-imapi-iredbookdiscmaster)  
-[**Ijolietdiscmaster**](/windows/desktop/api/Imapi/nn-imapi-ijolietdiscmaster)  
-[**Idiscmasterprogressevents**](/windows/desktop/api/Imapi/nn-imapi-idiscmasterprogressevents)  
+[**IDiscMaster**](/windows/desktop/api/Imapi/nn-imapi-idiscmaster)  
+[**IDiscRecorder**](/windows/desktop/api/Imapi/nn-imapi-idiscrecorder)  
+[**IRedbookDiscMaster**](/windows/desktop/api/Imapi/nn-imapi-iredbookdiscmaster)  
+[**IJolietDiscMaster**](/windows/desktop/api/Imapi/nn-imapi-ijolietdiscmaster)  
+[**IDiscMasterProgressEvents**](/windows/desktop/api/Imapi/nn-imapi-idiscmasterprogressevents)  
 </dl>
 
- 
+ 
 
- 
+ 
 
 
 

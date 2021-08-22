@@ -1,11 +1,11 @@
 ---
 title: Print-Queue-Klasse
-description: Enthält Informationen über eine Druck Warteschlange.
+description: Enthält Informationen zu einer Druckwarteschlange.
 ms.assetid: 779eb37c-f94e-472a-9551-8a0f72fe0e2b
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema der Print-Queue-Klasse
-- PrintQueue-Klasse, AD-Schema
+- Print-Queue Ad-Schema der Klasse
+- printQueue-Klasse AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,25 +14,25 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7995598603af4cab7b4b9d6f150e92964f0ee616
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ecd05290bcac514607fa44370871d1ba94b5d2b89769d9da20b91c202deea760
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479511"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119753040"
 ---
 # <a name="print-queue-class"></a>Print-Queue-Klasse
 
-Enthält Informationen über eine Druck Warteschlange.
+Enthält Informationen zu einer Druckwarteschlange.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Print-Queue                          |
-| LDAP-Display-Name | Print Queue                           |
-| Berechtigung aktualisieren  | Jeder kann dieses Objekt aktualisieren.       |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Ldap-Anzeigename | Printqueue                           |
+| Aktualisieren von Berechtigungen  | Jeder kann dieses Objekt aktualisieren.       |
+| Updatehäufigkeit  | \-                                   |
 | Schema-ID-GUID    | bf967aa8-0de6-11d0-a285-00aa003049e2 |
 
 
@@ -40,7 +40,7 @@ Enthält Informationen über eine Druck Warteschlange.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -54,159 +54,159 @@ Enthält Informationen über eine Druck Warteschlange.
 
 | Eingabe | Wert |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| System-Only                 | False                                                                                                                                                                |
+| System-Only                 | Falsch                                                                                                                                                                |
 | Object-Category             | 1                                                                                                                                                                    |
 | Default-Object-Category     | \-                                                                                                                                                                   |
 | Governs-Id                  | 1.2.840.113556.1.5.23                                                                                                                                                |
-| Standard-ausblenden-Wert        | 0                                                                                                                                                                    |
-| RDN-ATT-ID                  | [**Gemeinsamer Name**](a-cn.md)<br/>                                                                                                                               |
+| Default-Hiding-Value        | 0                                                                                                                                                                    |
+| Rdn-Att-Id                  | [**Allgemeiner Name**](a-cn.md)<br/>                                                                                                                               |
 | Unterklasse von                 | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                                                                                             |
-| Mögliche Vorgesetzten          | [**Computer**](c-computer.md)[**Container**](c-container.md)[**Domäne-DNS**](c-domaindns.md)-[**Organisationseinheit**](c-organizationalunit.md)                   |
+| Mögliche Übergeordnete          | [**Computer**](c-computer.md)[**container**](c-container.md)[**domain-DNS**](c-domaindns.md)[**Organizational-Unit**](c-organizationalunit.md)                   |
 | Zusätzlich           | \-                                                                                                                                                                   |
-| NT-Security-Descriptor      | o:Bag: schlecht: S:                                                                                                                                                         |
-| Standard Sicherheits Beschreibung | D: (A;; rpwpcrccdclclorcwowdsddtsw;;;D a) (a;; Rpwpcrccdclclorcwowdsddtsw;;; SY) (A;; Rpwpcrccdclclorcwowdsddtsw;;; PO) (A;; Rpwpcrccdclclorcwowdsddtsw;;; Co) (A;; Rplclorc;;; Thaus |
+| NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                                                                                         |
+| Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; PO)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; CO)(A;; RPLCLORC;;; AU) |
 | System-Flags                | 0x00000010                                                                                                                                                           |
 
 
 
-## <a name="windows-2000-server-attributes"></a>Windows 2000-Server Attribute
+## <a name="windows-2000-server-attributes"></a>Windows 2000 Serverattribute
 
-Diese Klasse enthält die folgenden Attribute für Windows 2000 Server:
+Diese Klasse enthält die folgenden Attribute für Windows Server 2000:
 
 
 
-| Attribut                                                                 | Obligatorisch. | Abgeleitet von                                                                             |
+| attribute                                                                 | Obligatorisch. | Abgeleitet von                                                                             |
 |---------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------|
-| [**Administrator: Beschreibung**](a-admindescription.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Administrator-Anzeige Name**](a-admindisplayname.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige Attribute**](a-allowedattributes.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige Attribute-gültig**](a-allowedattributeseffective.md)      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige, untergeordnete Klassen**](a-allowedchildclasses.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässig-untergeordnete Klassen-gültig**](a-allowedchildclasseseffective.md) | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Assetnummer**](a-assetnumber.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bytes pro Minute**](a-bytesperminute.md)                              | False     | **Druck Warteschlange**                                                                          |
-| [**Kanonischer Name**](a-canonicalname.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Gemeinsamer Name**](a-cn.md)                                               | Richtig      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
-| [**Create-Zeitstempel**](a-createtimestamp.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Standard-Priorität**](a-defaultpriority.md)                             | False     | **Druck Warteschlange**                                                                          |
-| [**Beschreibung**](a-description.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeige Name**](a-displayname.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeige Name-druckdruck**](a-displaynameprintable.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Treiber Name**](a-drivername.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Treiber Version**](a-driverversion.md)                                 | False     | **Druck Warteschlange**                                                                          |
-| [**DSA-Signatur**](a-dsasignature.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**DS-Core-propagierungs Daten**](a-dscorepropagationdata.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Erweiterungs Name**](a-extensionname.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Fahren**](a-flags.md)                                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Aus-Eintrag**](a-fromentry.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**FRS-Computer-Reference-BL**](a-frscomputerreferencebl.md)             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**"F"-Rollen Besitzer**](a-fsmoroleowner.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Administratorbeschreibung**](a-admindescription.md)                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Admin-Display-Name**](a-admindisplayname.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Attributes**](a-allowedattributes.md)                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Child-Classes**](a-allowedchildclasses.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md) | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Assetnummer**](a-assetnumber.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bytes pro Minute**](a-bytesperminute.md)                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Kanonischer Name**](a-canonicalname.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allgemeiner Name**](a-cn.md)                                               | Richtig      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
+| [**Erstellen eines Zeitstempels**](a-createtimestamp.md)                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Standardpriorität**](a-defaultpriority.md)                             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Beschreibung**](a-description.md)                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Anzeigename**](a-displayname.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Anzeigename– druckbar**](a-displaynameprintable.md)                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Treibername**](a-drivername.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Treiberversion**](a-driverversion.md)                                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**DSA-Signature**](a-dsasignature.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Erweiterungsname**](a-extensionname.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Flaggen**](a-flags.md)                                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**From-Entry**](a-fromentry.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**FSMO-Role-Owner**](a-fsmoroleowner.md)                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Instanztyp**](a-instancetype.md)                                   | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-critical-System-Object**](a-iscriticalsystemobject.md)             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Ist-gelöscht**](a-isdeleted.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Member-of-DL**](a-memberof.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Privilege-Inhaber**](a-isprivilegeholder.md)                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Keywords**](a-keywords.md)                                            | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**Letztes-bekannt/übergeordnetes Element**](a-lastknownparent.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Hotels**](a-location.md)                                            | False     | **Druck Warteschlange**                                                                          |
-| [**Verwaltet von**](a-managedby.md)                                         | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**Verwaltete Objekte**](a-managedobjects.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Verwaltet von**](a-masteredby.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Modify-Zeitstempel**](a-modifytimestamp.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DS-Konsistenz-untergeordnet-Anzahl**](a-ms-ds-consistencychildcount.md)    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**NetBoot-SCP-BL**](a-netbootscpbl.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Nicht sicherheitsmitglied-BL**](a-nonsecuritymemberbl.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Deleted**](a-isdeleted.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Member-of-DL**](a-memberof.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Privilege-Holder**](a-isprivilegeholder.md)                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Keywords**](a-keywords.md)                                            | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**Last-Known-Parent**](a-lastknownparent.md)                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Location**](a-location.md)                                            | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Verwaltet von**](a-managedby.md)                                         | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**Verwaltete Objekte**](a-managedobjects.md)                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Mastered-By**](a-masteredby.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Modify-Time-Stamp**](a-modifytimestamp.md)                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**netboot-SCP-BL**](a-netbootscpbl.md)                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Non-Security-Member-BL**](a-nonsecuritymemberbl.md)                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                  | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Obj-Dist-Name**](a-distinguishedname.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-Kategorie**](a-objectcategory.md)                               | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Object-Klasse**](a-objectclass.md)                                     | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-GUID**](a-objectguid.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-Version**](a-objectversion.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Betriebs System**](a-operatingsystem.md)                             | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System-Hotfix**](a-operatingsystemhotfix.md)                | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System-Service Pack**](a-operatingsystemservicepack.md)     | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System Version**](a-operatingsystemversion.md)              | False     | **Druck Warteschlange**                                                                          |
-| [**Andere-bekannte Objekte**](a-otherwellknownobjects.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partial-Attribute-löschen-List**](a-partialattributedeletionlist.md) | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partiell-Attribut Satz**](a-partialattributeset.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Physical-Location-Object**](a-physicallocationobject.md)              | False     | **Druck Warteschlange**                                                                          |
-| [**Portname**](a-portname.md)                                           | False     | **Druck Warteschlange**                                                                          |
-| [**Mögliche-minderwertig**](a-possibleinferiors.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Print-Attribute**](a-printattributes.md)                             | False     | **Druck Warteschlange**                                                                          |
-| [**Print-bin-Names**](a-printbinnames.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Drucken-COLLATE**](a-printcollate.md)                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Druckfarbe**](a-printcolor.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Duplex-unterstützt**](a-printduplexsupported.md)                  | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Endzeit**](a-printendtime.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Drucker Name**](a-printername.md)                                     | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Print-Formular Name**](a-printformname.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Keep-Print-Jobs**](a-printkeepprintedjobs.md)                 | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Sprache**](a-printlanguage.md)                                 | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Mac-Adresse**](a-printmacaddress.md)                            | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Kopien**](a-printmaxcopies.md)                              | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Resolution wird unterstützt**](a-printmaxresolutionsupported.md)   | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-X-Block**](a-printmaxxextent.md)                           | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Y-Block**](a-printmaxyextent.md)                           | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Medien-bereit**](a-printmediaready.md)                            | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Media-supported**](a-printmediasupported.md)                    | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Arbeitsspeicher**](a-printmemory.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Print-min-X-Block**](a-printminxextent.md)                           | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-min-Y-Block**](a-printminyextent.md)                           | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Network-Address**](a-printnetworkaddress.md)                    | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Benachrichtigung**](a-printnotify.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Number-up**](a-printnumberup.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Ausrichtungen-unterstützt**](a-printorientationssupported.md)      | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Besitzer**](a-printowner.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Druckseiten pro Minute**](a-printpagesperminute.md)                   | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Rate**](a-printrate.md)                                         | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Raten Einheit**](a-printrateunit.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Trennzeichen-Datei**](a-printseparatorfile.md)                      | False     | **Druck Warteschlange**                                                                          |
-| [**Druckfreigabe Name**](a-printsharename.md)                              | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Spoolvorgang**](a-printspooling.md)                                 | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Stapling-supported**](a-printstaplingsupported.md)              | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Startzeit**](a-printstarttime.md)                              | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Status**](a-printstatus.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Priorität**](a-priority.md)                                            | False     | **Druck Warteschlange**                                                                          |
-| [**Proxy-Objekt Name**](a-proxiedobjectname.md)                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Proxy Adressen**](a-proxyaddresses.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Abfrage-Richtlinie-BL**](a-querypolicybl.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**RDN**](a-name.md)                                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**REPL-Property-Meta-Data**](a-replpropertymetadata.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**REPL-Update-Vector**](a-repluptodatevector.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Berichte**](a-directreports.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Reps-from**](a-repsfrom.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Reps-to**](a-repsto.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Novel**](a-revision.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**SD-Rechte**](a-sdrightseffective.md)                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Server Name**](a-servername.md)                                       | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Server-Reference-BL**](a-serverreferencebl.md)                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Short-Server-Name**](a-shortservername.md)                            | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Anzeigen-in-Advanced-nur anzeigen**](a-showinadvancedviewonly.md)            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Site-Object-BL**](a-siteobjectbl.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Sub-Refs**](a-subrefs.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Subschemasubentry**](a-subschemasubentry.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**SystemFlags**](a-systemflags.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**UNC-Name**](a-uncname.md)                                             | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Die Anwendung wurde geändert.**](a-usnchanged.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Von der Anwendung erstellte**](a-usncreated.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USA-DSA-letzte-obj-entfernt**](a-usndsalastobjremoved.md)                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Standort-und standortübergreifende standortübergreifende**](a-usnintersite.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**"An-Last-obj-REM"**](a-usnlastobjrem.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Quell Code Quelle**](a-usnsource.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Versionsnummer**](a-versionnumber.md)                                 | Richtig      | **Druck Warteschlange**                                                                          |
-| [**WBEM-Pfad**](a-wbempath.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bekannte Objekte**](a-wellknownobjects.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bei Änderung**](a-whenchanged.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bei Erstellung**](a-whencreated.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**WWW-Homepage**](a-wwwhomepage.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**WWW-Page-other**](a-url.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Obj-Dist-Name**](a-distinguishedname.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektkategorie**](a-objectcategory.md)                               | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektklasse**](a-objectclass.md)                                     | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objekt-GUID**](a-objectguid.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektversion**](a-objectversion.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Betriebssystem**](a-operatingsystem.md)                             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystem-Hotfix**](a-operatingsystemhotfix.md)                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Operating-System-Service-Pack**](a-operatingsystemservicepack.md)     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystemversion**](a-operatingsystemversion.md)              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Andere bekannte Objekte**](a-otherwellknownobjects.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Partial-Attribute-Deletion-List**](a-partialattributedeletionlist.md) | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Partial-Attribute-Set**](a-partialattributeset.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Physical-Location-Object**](a-physicallocationobject.md)              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Portname**](a-portname.md)                                           | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Mögliche 100000000000**](a-possibleinferiors.md)                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Print-Attributes**](a-printattributes.md)                             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Bin-Names**](a-printbinnames.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucken/Sortierung**](a-printcollate.md)                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Color**](a-printcolor.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckduplex unterstützt**](a-printduplexsupported.md)                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-End-Time**](a-printendtime.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckername**](a-printername.md)                                     | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Print-Form-Name**](a-printformname.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckaufträge**](a-printkeepprintedjobs.md)                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucksprache**](a-printlanguage.md)                                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-MAC-Address**](a-printmacaddress.md)                            | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Copies**](a-printmaxcopies.md)                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Resolution-Supported**](a-printmaxresolutionsupported.md)   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-X-Extent**](a-printmaxxextent.md)                           | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Y-Extent**](a-printmaxyextent.md)                           | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckmedienbereit**](a-printmediaready.md)                            | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Media-Supported**](a-printmediasupported.md)                    | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckspeicher**](a-printmemory.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Min-X-Extent**](a-printminxextent.md)                           | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Min-Y-Extent**](a-printminyextent.md)                           | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Network-Address**](a-printnetworkaddress.md)                    | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckbenachrichtigung**](a-printnotify.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Number-Up**](a-printnumberup.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckausrichtungen unterstützt**](a-printorientationssupported.md)      | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckbesitzer**](a-printowner.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckseiten pro Minute**](a-printpagesperminute.md)                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckrate**](a-printrate.md)                                         | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckrate-Einheit**](a-printrateunit.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucktrennzeichendatei**](a-printseparatorfile.md)                      | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Share-Name**](a-printsharename.md)                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckspooling**](a-printspooling.md)                                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckabdruck unterstützt**](a-printstaplingsupported.md)              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckstartzeit**](a-printstarttime.md)                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckstatus**](a-printstatus.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Priorität**](a-priority.md)                                            | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Proxied-Object-Name**](a-proxiedobjectname.md)                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Proxyadressen**](a-proxyaddresses.md)                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Query-Policy-BL**](a-querypolicybl.md)                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Rdn**](a-name.md)                                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Repl-Property-Meta-Data**](a-replpropertymetadata.md)                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Repl-UpToDate-Vector**](a-repluptodatevector.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Berichte**](a-directreports.md)                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Reps-From**](a-repsfrom.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Reps-To**](a-repsto.md)                                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Revision**](a-revision.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**SD-Rights-Effective**](a-sdrightseffective.md)                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Servername**](a-servername.md)                                       | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Server-Reference-BL**](a-serverreferencebl.md)                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Short-Server-Name**](a-shortservername.md)                            | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Show-In-Advanced-View-Only**](a-showinadvancedviewonly.md)            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Site-Object-BL**](a-siteobjectbl.md)                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Sub-Refs**](a-subrefs.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**SubSchemaSubEntry**](a-subschemasubentry.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Systemflags**](a-systemflags.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**UNC-Name**](a-uncname.md)                                             | Richtig      | **Druckwarteschlange**                                                                          |
+| [**USN-Changed**](a-usnchanged.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**VON USN erstellt**](a-usncreated.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-DSA-Last-Obj-Removed**](a-usndsalastobjremoved.md)                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Intersite**](a-usnintersite.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Quelle**](a-usnsource.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Versionsnummer**](a-versionnumber.md)                                 | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Wbem-Path**](a-wbempath.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bekannte Objekte**](a-wellknownobjects.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Wenn geändert**](a-whenchanged.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Wenn erstellt**](a-whencreated.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Homepage**](a-wwwhomepage.md)                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Page-Other**](a-url.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 -   [Attribute](#windows-server-2003-attributes)
 
@@ -214,17 +214,17 @@ Diese Klasse enthält die folgenden Attribute für Windows 2000 Server:
 
 | Eingabe | Wert |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| System-Only                 | False                                                                                                                                                                |
+| System-Only                 | Falsch                                                                                                                                                                |
 | Object-Category             | 1                                                                                                                                                                    |
 | Default-Object-Category     | \-                                                                                                                                                                   |
 | Governs-Id                  | 1.2.840.113556.1.5.23                                                                                                                                                |
-| Standard-ausblenden-Wert        | 0                                                                                                                                                                    |
-| RDN-ATT-ID                  | [**Gemeinsamer Name**](a-cn.md)<br/>                                                                                                                               |
+| Default-Hiding-Value        | 0                                                                                                                                                                    |
+| Rdn-Att-Id                  | [**Common-Name**](a-cn.md)<br/>                                                                                                                               |
 | Unterklasse von                 | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                                                                                             |
-| Mögliche Vorgesetzten          | [**Computer**](c-computer.md)[**Container**](c-container.md)[**Domäne-DNS**](c-domaindns.md)-[**Organisationseinheit**](c-organizationalunit.md)                   |
+| Mögliche Vorgesetzte          | [](c-computer.md)[](c-container.md)[**ComputercontainerDomäne-DNS-Organisationseinheit**](c-domaindns.md)[](c-organizationalunit.md)                   |
 | Zusätzlich           | \-                                                                                                                                                                   |
-| NT-Security-Descriptor      | o:Bag: schlecht: S:                                                                                                                                                         |
-| Standard Sicherheits Beschreibung | D: (A;; rpwpcrccdclclorcwowdsddtsw;;;D a) (a;; Rpwpcrccdclclorcwowdsddtsw;;; SY) (A;; Rpwpcrccdclclorcwowdsddtsw;;; PO) (A;; Rpwpcrccdclclorcwowdsddtsw;;; Co) (A;; Rplclorc;;; Thaus |
+| NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                                                                                         |
+| Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; PO)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; CO)(A;; RPLCLORC;;; AU) |
 | System-Flags                | 0x00000010                                                                                                                                                           |
 
 
@@ -235,153 +235,153 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2003:
 
 
 
-| Attribut                                                                   | Obligatorisch. | Abgeleitet von                                                                             |
+| attribute                                                                   | Obligatorisch. | Abgeleitet von                                                                             |
 |-----------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------|
-| [**Administrator: Beschreibung**](a-admindescription.md)                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Administrator-Anzeige Name**](a-admindisplayname.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige Attribute**](a-allowedattributes.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige Attribute-gültig**](a-allowedattributeseffective.md)        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige, untergeordnete Klassen**](a-allowedchildclasses.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässig-untergeordnete Klassen-gültig**](a-allowedchildclasseseffective.md)   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Assetnummer**](a-assetnumber.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bytes pro Minute**](a-bytesperminute.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Kanonischer Name**](a-canonicalname.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Gemeinsamer Name**](a-cn.md)                                                 | Richtig      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
-| [**Create-Zeitstempel**](a-createtimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Standard-Priorität**](a-defaultpriority.md)                               | False     | **Druck Warteschlange**                                                                          |
-| [**Beschreibung**](a-description.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeige Name**](a-displayname.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeige Name-druckdruck**](a-displaynameprintable.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Treiber Name**](a-drivername.md)                                         | False     | **Druck Warteschlange**                                                                          |
-| [**Treiber Version**](a-driverversion.md)                                   | False     | **Druck Warteschlange**                                                                          |
-| [**DSA-Signatur**](a-dsasignature.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**DS-Core-propagierungs Daten**](a-dscorepropagationdata.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Erweiterungs Name**](a-extensionname.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Fahren**](a-flags.md)                                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Aus-Eintrag**](a-fromentry.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**FRS-Computer-Reference-BL**](a-frscomputerreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**"F"-Rollen Besitzer**](a-fsmoroleowner.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Admin-Description**](a-admindescription.md)                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Administratoranzeigename**](a-admindisplayname.md)                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Attributes**](a-allowedattributes.md)                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Child-Classes**](a-allowedchildclasses.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Asset-Number**](a-assetnumber.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bytes pro Minute**](a-bytesperminute.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Kanonischer Name**](a-canonicalname.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Common-Name**](a-cn.md)                                                 | Richtig      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
+| [**Create-Time-Stamp**](a-createtimestamp.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Standardpriorität**](a-defaultpriority.md)                               | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Beschreibung**](a-description.md)                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Anzeigename**](a-displayname.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Display-Name-Printable**](a-displaynameprintable.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Treibername**](a-drivername.md)                                         | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Treiberversion**](a-driverversion.md)                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**DSA-Signature**](a-dsasignature.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Extension-Name**](a-extensionname.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Flaggen**](a-flags.md)                                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**From-Entry**](a-fromentry.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**FSMO-Role-Owner**](a-fsmoroleowner.md)                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Instanztyp**](a-instancetype.md)                                     | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-critical-System-Object**](a-iscriticalsystemobject.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Ist-gelöscht**](a-isdeleted.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Member-of-DL**](a-memberof.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Privilege-Inhaber**](a-isprivilegeholder.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Keywords**](a-keywords.md)                                              | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**Letztes-bekannt/übergeordnetes Element**](a-lastknownparent.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Hotels**](a-location.md)                                              | False     | **Druck Warteschlange**                                                                          |
-| [**Verwaltet von**](a-managedby.md)                                           | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**Verwaltete Objekte**](a-managedobjects.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Verwaltet von**](a-masteredby.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Modify-Zeitstempel**](a-modifytimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-com-partitionsetlink**](a-mscom-partitionsetlink.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-com-userlink**](a-mscom-userlink.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-ca-immed-untergeordnete Elemente**](a-msds-approx-immed-subordinates.md) | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DS-Konsistenz-untergeordnet-Anzahl**](a-ms-ds-consistencychildcount.md)      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-gemastert von**](a-msds-masteredby.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Members-für-AZ-Role-BL**](a-msds-membersforazrolebl.md)           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Cursor**](a-msds-ncreplcursors.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Inbound-Nachbarn**](a-msds-ncreplinboundneighbors.md)    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Outbound-Nachbarn**](a-msds-ncreploutboundneighbors.md)  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Operations-for-AZ-Role-BL**](a-msds-operationsforazrolebl.md)     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Operations-for-AZ-Task-BL**](a-msds-operationsforaztaskbl.md)     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Settings**](a-msds-settings.md)                                   | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**ms-DS-Tasks-für-AZ-Role-BL**](a-msds-tasksforazrolebl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Tasks-für-AZ-Task-BL**](a-msds-tasksforaztaskbl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-Exch-Owner-BL**](a-ownerbl.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**NetBoot-SCP-BL**](a-netbootscpbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Nicht sicherheitsmitglied-BL**](a-nonsecuritymemberbl.md)                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Deleted**](a-isdeleted.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Member-of-DL**](a-memberof.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Privilege-Holder**](a-isprivilegeholder.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Keywords**](a-keywords.md)                                              | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**Letztes bekanntes übergeordnetes Element**](a-lastknownparent.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Location**](a-location.md)                                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Verwaltet von**](a-managedby.md)                                           | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**Verwaltete Objekte**](a-managedobjects.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Mastered By**](a-masteredby.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Modify-Time-Stamp**](a-modifytimestamp.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-COM-PartitionSetLink**](a-mscom-partitionsetlink.md)                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-COM-UserLink**](a-mscom-userlink.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Approx-Immed-Subordinates**](a-msds-approx-immed-subordinates.md) | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Mastered-By**](a-msds-masteredby.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Members-For-Az-Role-BL**](a-msds-membersforazrolebl.md)           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Cursors**](a-msds-ncreplcursors.md)                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Inbound-Neighbors**](a-msds-ncreplinboundneighbors.md)    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Outbound-Neighbors**](a-msds-ncreploutboundneighbors.md)  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Operations-For-Az-Role-BL**](a-msds-operationsforazrolebl.md)     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Operations-For-Az-Task-BL**](a-msds-operationsforaztaskbl.md)     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Einstellungen**](a-msds-settings.md)                                   | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**ms-DS-Tasks-For-Az-Role-BL**](a-msds-tasksforazrolebl.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Tasks-For-Az-Task-BL**](a-msds-tasksforaztaskbl.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-Exch-Owner-BL**](a-ownerbl.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**netboot-SCP-BL**](a-netbootscpbl.md)                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Non-Security-Member-BL**](a-nonsecuritymemberbl.md)                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                    | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Obj-Dist-Name**](a-distinguishedname.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-Kategorie**](a-objectcategory.md)                                 | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Object-Klasse**](a-objectclass.md)                                       | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-GUID**](a-objectguid.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-Version**](a-objectversion.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Betriebs System**](a-operatingsystem.md)                               | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System-Hotfix**](a-operatingsystemhotfix.md)                  | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System-Service Pack**](a-operatingsystemservicepack.md)       | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System Version**](a-operatingsystemversion.md)                | False     | **Druck Warteschlange**                                                                          |
-| [**Andere-bekannte Objekte**](a-otherwellknownobjects.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partial-Attribute-löschen-List**](a-partialattributedeletionlist.md)   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partiell-Attribut Satz**](a-partialattributeset.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Physical-Location-Object**](a-physicallocationobject.md)                | False     | **Druck Warteschlange**                                                                          |
-| [**Portname**](a-portname.md)                                             | False     | **Druck Warteschlange**                                                                          |
-| [**Mögliche-minderwertig**](a-possibleinferiors.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Print-Attribute**](a-printattributes.md)                               | False     | **Druck Warteschlange**                                                                          |
-| [**Print-bin-Names**](a-printbinnames.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Drucken-COLLATE**](a-printcollate.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Druckfarbe**](a-printcolor.md)                                         | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Duplex-unterstützt**](a-printduplexsupported.md)                    | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Endzeit**](a-printendtime.md)                                    | False     | **Druck Warteschlange**                                                                          |
-| [**Drucker Name**](a-printername.md)                                       | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Print-Formular Name**](a-printformname.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Keep-Print-Jobs**](a-printkeepprintedjobs.md)                   | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Sprache**](a-printlanguage.md)                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Mac-Adresse**](a-printmacaddress.md)                              | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Kopien**](a-printmaxcopies.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Resolution wird unterstützt**](a-printmaxresolutionsupported.md)     | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-X-Block**](a-printmaxxextent.md)                             | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Y-Block**](a-printmaxyextent.md)                             | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Medien-bereit**](a-printmediaready.md)                              | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Media-supported**](a-printmediasupported.md)                      | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Arbeitsspeicher**](a-printmemory.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Print-min-X-Block**](a-printminxextent.md)                             | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-min-Y-Block**](a-printminyextent.md)                             | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Network-Address**](a-printnetworkaddress.md)                      | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Benachrichtigung**](a-printnotify.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Number-up**](a-printnumberup.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Ausrichtungen-unterstützt**](a-printorientationssupported.md)        | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Besitzer**](a-printowner.md)                                         | False     | **Druck Warteschlange**                                                                          |
-| [**Druckseiten pro Minute**](a-printpagesperminute.md)                     | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Rate**](a-printrate.md)                                           | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Raten Einheit**](a-printrateunit.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Trennzeichen-Datei**](a-printseparatorfile.md)                        | False     | **Druck Warteschlange**                                                                          |
-| [**Druckfreigabe Name**](a-printsharename.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Spoolvorgang**](a-printspooling.md)                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Stapling-supported**](a-printstaplingsupported.md)                | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Startzeit**](a-printstarttime.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Status**](a-printstatus.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Priorität**](a-priority.md)                                              | False     | **Druck Warteschlange**                                                                          |
-| [**Proxy-Objekt Name**](a-proxiedobjectname.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Proxy Adressen**](a-proxyaddresses.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Abfrage-Richtlinie-BL**](a-querypolicybl.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**RDN**](a-name.md)                                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**REPL-Property-Meta-Data**](a-replpropertymetadata.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**REPL-Update-Vector**](a-repluptodatevector.md)                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Berichte**](a-directreports.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Reps-from**](a-repsfrom.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Reps-to**](a-repsto.md)                                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Novel**](a-revision.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**SD-Rechte**](a-sdrightseffective.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Server Name**](a-servername.md)                                         | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Server-Reference-BL**](a-serverreferencebl.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Short-Server-Name**](a-shortservername.md)                              | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Anzeigen-in-Advanced-nur anzeigen**](a-showinadvancedviewonly.md)              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Site-Object-BL**](a-siteobjectbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Struktur-Objekt-Klasse**](a-structuralobjectclass.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Sub-Refs**](a-subrefs.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Subschemasubentry**](a-subschemasubentry.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**SystemFlags**](a-systemflags.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**UNC-Name**](a-uncname.md)                                               | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Die Anwendung wurde geändert.**](a-usnchanged.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Von der Anwendung erstellte**](a-usncreated.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USA-DSA-letzte-obj-entfernt**](a-usndsalastobjremoved.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Standort-und standortübergreifende standortübergreifende**](a-usnintersite.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**"An-Last-obj-REM"**](a-usnlastobjrem.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Quell Code Quelle**](a-usnsource.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Versionsnummer**](a-versionnumber.md)                                   | Richtig      | **Druck Warteschlange**                                                                          |
-| [**WBEM-Pfad**](a-wbempath.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bekannte Objekte**](a-wellknownobjects.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bei Änderung**](a-whenchanged.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bei Erstellung**](a-whencreated.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**WWW-Homepage**](a-wwwhomepage.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**WWW-Page-other**](a-url.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Obj-Dist-Name**](a-distinguishedname.md)                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektkategorie**](a-objectcategory.md)                                 | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Object-Class**](a-objectclass.md)                                       | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objekt-GUID**](a-objectguid.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Object-Version**](a-objectversion.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Betriebssystem**](a-operatingsystem.md)                               | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystem-Hotfix**](a-operatingsystemhotfix.md)                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Operating-System-Service-Pack**](a-operatingsystemservicepack.md)       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystemversion**](a-operatingsystemversion.md)                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Partial-Attribute-Deletion-List**](a-partialattributedeletionlist.md)   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Partial-Attribute-Set**](a-partialattributeset.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Physical-Location-Object**](a-physicallocationobject.md)                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Portname**](a-portname.md)                                             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Mögliche 100000000000**](a-possibleinferiors.md)                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Print-Attributes**](a-printattributes.md)                               | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Bin-Names**](a-printbinnames.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucken/Sortierung**](a-printcollate.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Color**](a-printcolor.md)                                         | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckduplex unterstützt**](a-printduplexsupported.md)                    | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-End-Time**](a-printendtime.md)                                    | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckername**](a-printername.md)                                       | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Print-Form-Name**](a-printformname.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Keep-Printed-Jobs**](a-printkeepprintedjobs.md)                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucksprache**](a-printlanguage.md)                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-MAC-Address**](a-printmacaddress.md)                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Copies**](a-printmaxcopies.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Resolution-Supported**](a-printmaxresolutionsupported.md)     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-X-Extent**](a-printmaxxextent.md)                             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Y-Extent**](a-printmaxyextent.md)                             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckmedienbereit**](a-printmediaready.md)                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckmedien unterstützt**](a-printmediasupported.md)                      | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckspeicher**](a-printmemory.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Min-X-Extent**](a-printminxextent.md)                             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Min-Y-Extent**](a-printminyextent.md)                             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Network-Address**](a-printnetworkaddress.md)                      | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckbenachrichtigung**](a-printnotify.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Number-Up**](a-printnumberup.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckausrichtungen unterstützt**](a-printorientationssupported.md)        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckbesitzer**](a-printowner.md)                                         | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckseiten pro Minute**](a-printpagesperminute.md)                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckrate**](a-printrate.md)                                           | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckrateneinheit**](a-printrateunit.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucktrennzeichendatei**](a-printseparatorfile.md)                        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Share-Name**](a-printsharename.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckspooling**](a-printspooling.md)                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckabdruck unterstützt**](a-printstaplingsupported.md)                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckstartzeit**](a-printstarttime.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckstatus**](a-printstatus.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Priorität**](a-priority.md)                                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Proxied-Object-Name**](a-proxiedobjectname.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Proxyadressen**](a-proxyaddresses.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Query-Policy-BL**](a-querypolicybl.md)                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Rdn**](a-name.md)                                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Repl-Property-Meta-Data**](a-replpropertymetadata.md)                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Repl-UpToDate-Vector**](a-repluptodatevector.md)                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Berichte**](a-directreports.md)                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Reps-From**](a-repsfrom.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Reps-To**](a-repsto.md)                                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Revision**](a-revision.md)                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**SD-Rights-Effective**](a-sdrightseffective.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Servername**](a-servername.md)                                         | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Server-Reference-BL**](a-serverreferencebl.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Short-Server-Name**](a-shortservername.md)                              | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Show-In-Advanced-View-Only**](a-showinadvancedviewonly.md)              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Site-Object-BL**](a-siteobjectbl.md)                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Structural-Object-Class**](a-structuralobjectclass.md)                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Sub-Refs**](a-subrefs.md)                                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**SubSchemaSubEntry**](a-subschemasubentry.md)                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Systemflags**](a-systemflags.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**UNC-Name**](a-uncname.md)                                               | Richtig      | **Druckwarteschlange**                                                                          |
+| [**USN-Changed**](a-usnchanged.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**VON USN erstellt**](a-usncreated.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-DSA-Last-Obj-Removed**](a-usndsalastobjremoved.md)                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Intersite**](a-usnintersite.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Quelle**](a-usnsource.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Versionsnummer**](a-versionnumber.md)                                   | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Wbem-Path**](a-wbempath.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bekannte Objekte**](a-wellknownobjects.md)                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Wenn geändert**](a-whenchanged.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Wenn erstellt**](a-whencreated.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Homepage**](a-wwwhomepage.md)                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Page-Other**](a-url.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 
 
 
@@ -393,17 +393,17 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2003:
 
 | Eingabe | Wert |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| System-Only                 | False                                                                                                                                                                |
+| System-Only                 | Falsch                                                                                                                                                                |
 | Object-Category             | 1                                                                                                                                                                    |
 | Default-Object-Category     | \-                                                                                                                                                                   |
 | Governs-Id                  | 1.2.840.113556.1.5.23                                                                                                                                                |
-| Standard-ausblenden-Wert        | 0                                                                                                                                                                    |
-| RDN-ATT-ID                  | [**Gemeinsamer Name**](a-cn.md)<br/>                                                                                                                               |
+| Default-Hiding-Value        | 0                                                                                                                                                                    |
+| Rdn-Att-Id                  | [**Allgemeiner Name**](a-cn.md)<br/>                                                                                                                               |
 | Unterklasse von                 | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                                                                                             |
-| Mögliche Vorgesetzten          | [**Computer**](c-computer.md)[**Container**](c-container.md)[**Domäne-DNS**](c-domaindns.md)-[**Organisationseinheit**](c-organizationalunit.md)                   |
+| Mögliche Übergeordnete          | [**Computer**](c-computer.md)[**container**](c-container.md)[**domain-DNS**](c-domaindns.md)[**Organizational-Unit**](c-organizationalunit.md)                   |
 | Zusätzlich           | \-                                                                                                                                                                   |
-| NT-Security-Descriptor      | o:Bag: schlecht: S:                                                                                                                                                         |
-| Standard Sicherheits Beschreibung | D: (A;; rpwpcrccdclclorcwowdsddtsw;;;D a) (a;; Rpwpcrccdclclorcwowdsddtsw;;; SY) (A;; Rpwpcrccdclclorcwowdsddtsw;;; PO) (A;; Rpwpcrccdclclorcwowdsddtsw;;; Co) (A;; Rplclorc;;; Thaus |
+| NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                                                                                         |
+| Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; PO)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; CO)(A;; RPLCLORC;;; AU) |
 | System-Flags                | 0x00000010                                                                                                                                                           |
 
 
@@ -414,156 +414,156 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2003 R2:
 
 
 
-| Attribut                                                                   | Obligatorisch. | Abgeleitet von                                                                             |
+| attribute                                                                   | Obligatorisch. | Abgeleitet von                                                                             |
 |-----------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------|
-| [**Administrator: Beschreibung**](a-admindescription.md)                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Administrator-Anzeige Name**](a-admindisplayname.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige Attribute**](a-allowedattributes.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige Attribute-gültig**](a-allowedattributeseffective.md)        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige, untergeordnete Klassen**](a-allowedchildclasses.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässig-untergeordnete Klassen-gültig**](a-allowedchildclasseseffective.md)   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Assetnummer**](a-assetnumber.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bytes pro Minute**](a-bytesperminute.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Kanonischer Name**](a-canonicalname.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Gemeinsamer Name**](a-cn.md)                                                 | Richtig      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
-| [**Create-Zeitstempel**](a-createtimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Standard-Priorität**](a-defaultpriority.md)                               | False     | **Druck Warteschlange**                                                                          |
-| [**Beschreibung**](a-description.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeige Name**](a-displayname.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeige Name-druckdruck**](a-displaynameprintable.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Treiber Name**](a-drivername.md)                                         | False     | **Druck Warteschlange**                                                                          |
-| [**Treiber Version**](a-driverversion.md)                                   | False     | **Druck Warteschlange**                                                                          |
-| [**DSA-Signatur**](a-dsasignature.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**DS-Core-propagierungs Daten**](a-dscorepropagationdata.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Erweiterungs Name**](a-extensionname.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Fahren**](a-flags.md)                                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Aus-Eintrag**](a-fromentry.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**FRS-Computer-Reference-BL**](a-frscomputerreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**"F"-Rollen Besitzer**](a-fsmoroleowner.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Administratorbeschreibung**](a-admindescription.md)                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Admin-Display-Name**](a-admindisplayname.md)                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Attributes**](a-allowedattributes.md)                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Child-Classes**](a-allowedchildclasses.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Assetnummer**](a-assetnumber.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bytes pro Minute**](a-bytesperminute.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Kanonischer Name**](a-canonicalname.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allgemeiner Name**](a-cn.md)                                                 | Richtig      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
+| [**Erstellen eines Zeitstempels**](a-createtimestamp.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Standardpriorität**](a-defaultpriority.md)                               | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Beschreibung**](a-description.md)                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Anzeigename**](a-displayname.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Anzeigename– druckbar**](a-displaynameprintable.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Treibername**](a-drivername.md)                                         | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Treiberversion**](a-driverversion.md)                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**DSA-Signature**](a-dsasignature.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Erweiterungsname**](a-extensionname.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Flaggen**](a-flags.md)                                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**From-Entry**](a-fromentry.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**FSMO-Role-Owner**](a-fsmoroleowner.md)                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Instanztyp**](a-instancetype.md)                                     | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-critical-System-Object**](a-iscriticalsystemobject.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Ist-gelöscht**](a-isdeleted.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Member-of-DL**](a-memberof.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Privilege-Inhaber**](a-isprivilegeholder.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Keywords**](a-keywords.md)                                              | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**Letztes-bekannt/übergeordnetes Element**](a-lastknownparent.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Hotels**](a-location.md)                                              | False     | **Druck Warteschlange**                                                                          |
-| [**Verwaltet von**](a-managedby.md)                                           | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**Verwaltete Objekte**](a-managedobjects.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Verwaltet von**](a-masteredby.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Modify-Zeitstempel**](a-modifytimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-com-partitionsetlink**](a-mscom-partitionsetlink.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-com-userlink**](a-mscom-userlink.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DFSR-computerreferencebl**](a-msdfsr-computerreferencebl.md)         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DFSR-mitgliedreferencebl**](a-msdfsr-memberreferencebl.md)             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-ca-immed-untergeordnete Elemente**](a-msds-approx-immed-subordinates.md) | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DS-Konsistenz-untergeordnet-Anzahl**](a-ms-ds-consistencychildcount.md)      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-gemastert von**](a-msds-masteredby.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Members-für-AZ-Role-BL**](a-msds-membersforazrolebl.md)           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Cursor**](a-msds-ncreplcursors.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Inbound-Nachbarn**](a-msds-ncreplinboundneighbors.md)    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Outbound-Nachbarn**](a-msds-ncreploutboundneighbors.md)  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Operations-for-AZ-Role-BL**](a-msds-operationsforazrolebl.md)     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Operations-for-AZ-Task-BL**](a-msds-operationsforaztaskbl.md)     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Settings**](a-msds-settings.md)                                   | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**ms-DS-Tasks-für-AZ-Role-BL**](a-msds-tasksforazrolebl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Tasks-für-AZ-Task-BL**](a-msds-tasksforaztaskbl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-Exch-Owner-BL**](a-ownerbl.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**msSFU-30-POSIX-Member-of**](a-mssfu30posixmemberof.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**NetBoot-SCP-BL**](a-netbootscpbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Nicht sicherheitsmitglied-BL**](a-nonsecuritymemberbl.md)                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Deleted**](a-isdeleted.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Member-of-DL**](a-memberof.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Privilege-Holder**](a-isprivilegeholder.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Keywords**](a-keywords.md)                                              | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**Letztes bekanntes übergeordnetes Element**](a-lastknownparent.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Location**](a-location.md)                                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Verwaltet von**](a-managedby.md)                                           | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**Verwaltete Objekte**](a-managedobjects.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Mastered By**](a-masteredby.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Modify-Time-Stamp**](a-modifytimestamp.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-COM-PartitionSetLink**](a-mscom-partitionsetlink.md)                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-COM-UserLink**](a-mscom-userlink.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DFSR-ComputerReferenceBL**](a-msdfsr-computerreferencebl.md)         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DFSR-MemberReferenceBL**](a-msdfsr-memberreferencebl.md)             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Approx-Immed-Subordinates**](a-msds-approx-immed-subordinates.md) | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Mastered-By**](a-msds-masteredby.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Members-For-Az-Role-BL**](a-msds-membersforazrolebl.md)           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Cursors**](a-msds-ncreplcursors.md)                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Inbound-Neighbors**](a-msds-ncreplinboundneighbors.md)    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Outbound-Neighbors**](a-msds-ncreploutboundneighbors.md)  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Operations-For-Az-Role-BL**](a-msds-operationsforazrolebl.md)     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Operations-For-Az-Task-BL**](a-msds-operationsforaztaskbl.md)     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Einstellungen**](a-msds-settings.md)                                   | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**ms-DS-Tasks-for-Az-Role-BL**](a-msds-tasksforazrolebl.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Tasks-for-Az-Task-BL**](a-msds-tasksforaztaskbl.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-Exch-Owner-BL**](a-ownerbl.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**msSFU-30-Posix-Member-Of**](a-mssfu30posixmemberof.md)                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**netboot-SCP-BL**](a-netbootscpbl.md)                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Non-Security-Member-BL**](a-nonsecuritymemberbl.md)                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                    | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Obj-Dist-Name**](a-distinguishedname.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-Kategorie**](a-objectcategory.md)                                 | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Object-Klasse**](a-objectclass.md)                                       | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-GUID**](a-objectguid.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-Version**](a-objectversion.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Betriebs System**](a-operatingsystem.md)                               | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System-Hotfix**](a-operatingsystemhotfix.md)                  | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System-Service Pack**](a-operatingsystemservicepack.md)       | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System Version**](a-operatingsystemversion.md)                | False     | **Druck Warteschlange**                                                                          |
-| [**Andere-bekannte Objekte**](a-otherwellknownobjects.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partial-Attribute-löschen-List**](a-partialattributedeletionlist.md)   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partiell-Attribut Satz**](a-partialattributeset.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Physical-Location-Object**](a-physicallocationobject.md)                | False     | **Druck Warteschlange**                                                                          |
-| [**Portname**](a-portname.md)                                             | False     | **Druck Warteschlange**                                                                          |
-| [**Mögliche-minderwertig**](a-possibleinferiors.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Print-Attribute**](a-printattributes.md)                               | False     | **Druck Warteschlange**                                                                          |
-| [**Print-bin-Names**](a-printbinnames.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Drucken-COLLATE**](a-printcollate.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Druckfarbe**](a-printcolor.md)                                         | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Duplex-unterstützt**](a-printduplexsupported.md)                    | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Endzeit**](a-printendtime.md)                                    | False     | **Druck Warteschlange**                                                                          |
-| [**Drucker Name**](a-printername.md)                                       | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Print-Formular Name**](a-printformname.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Keep-Print-Jobs**](a-printkeepprintedjobs.md)                   | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Sprache**](a-printlanguage.md)                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Mac-Adresse**](a-printmacaddress.md)                              | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Kopien**](a-printmaxcopies.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Resolution wird unterstützt**](a-printmaxresolutionsupported.md)     | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-X-Block**](a-printmaxxextent.md)                             | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Y-Block**](a-printmaxyextent.md)                             | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Medien-bereit**](a-printmediaready.md)                              | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Media-supported**](a-printmediasupported.md)                      | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Arbeitsspeicher**](a-printmemory.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Print-min-X-Block**](a-printminxextent.md)                             | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-min-Y-Block**](a-printminyextent.md)                             | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Network-Address**](a-printnetworkaddress.md)                      | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Benachrichtigung**](a-printnotify.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Number-up**](a-printnumberup.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Ausrichtungen-unterstützt**](a-printorientationssupported.md)        | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Besitzer**](a-printowner.md)                                         | False     | **Druck Warteschlange**                                                                          |
-| [**Druckseiten pro Minute**](a-printpagesperminute.md)                     | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Rate**](a-printrate.md)                                           | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Raten Einheit**](a-printrateunit.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Trennzeichen-Datei**](a-printseparatorfile.md)                        | False     | **Druck Warteschlange**                                                                          |
-| [**Druckfreigabe Name**](a-printsharename.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Spoolvorgang**](a-printspooling.md)                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Stapling-supported**](a-printstaplingsupported.md)                | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Startzeit**](a-printstarttime.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Status**](a-printstatus.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Priorität**](a-priority.md)                                              | False     | **Druck Warteschlange**                                                                          |
-| [**Proxy-Objekt Name**](a-proxiedobjectname.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Proxy Adressen**](a-proxyaddresses.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Abfrage-Richtlinie-BL**](a-querypolicybl.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**RDN**](a-name.md)                                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**REPL-Property-Meta-Data**](a-replpropertymetadata.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**REPL-Update-Vector**](a-repluptodatevector.md)                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Berichte**](a-directreports.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Reps-from**](a-repsfrom.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Reps-to**](a-repsto.md)                                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Novel**](a-revision.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**SD-Rechte**](a-sdrightseffective.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Server Name**](a-servername.md)                                         | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Server-Reference-BL**](a-serverreferencebl.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Short-Server-Name**](a-shortservername.md)                              | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Anzeigen-in-Advanced-nur anzeigen**](a-showinadvancedviewonly.md)              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Site-Object-BL**](a-siteobjectbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Struktur-Objekt-Klasse**](a-structuralobjectclass.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Sub-Refs**](a-subrefs.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Subschemasubentry**](a-subschemasubentry.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**SystemFlags**](a-systemflags.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**UNC-Name**](a-uncname.md)                                               | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Die Anwendung wurde geändert.**](a-usnchanged.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Von der Anwendung erstellte**](a-usncreated.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USA-DSA-letzte-obj-entfernt**](a-usndsalastobjremoved.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Standort-und standortübergreifende standortübergreifende**](a-usnintersite.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**"An-Last-obj-REM"**](a-usnlastobjrem.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Quell Code Quelle**](a-usnsource.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Versionsnummer**](a-versionnumber.md)                                   | Richtig      | **Druck Warteschlange**                                                                          |
-| [**WBEM-Pfad**](a-wbempath.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bekannte Objekte**](a-wellknownobjects.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bei Änderung**](a-whenchanged.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bei Erstellung**](a-whencreated.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**WWW-Homepage**](a-wwwhomepage.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**WWW-Page-other**](a-url.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Obj-Dist-Name**](a-distinguishedname.md)                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektkategorie**](a-objectcategory.md)                                 | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektklasse**](a-objectclass.md)                                       | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objekt-GUID**](a-objectguid.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektversion**](a-objectversion.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Betriebssystem**](a-operatingsystem.md)                               | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystem-Hotfix**](a-operatingsystemhotfix.md)                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystem-Service-Pack**](a-operatingsystemservicepack.md)       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystemversion**](a-operatingsystemversion.md)                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Teilattributlöschungsliste**](a-partialattributedeletionlist.md)   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Teilattributsatz**](a-partialattributeset.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Physical-Location-Object**](a-physicallocationobject.md)                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Portname**](a-portname.md)                                             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Mögliche Hindernisse**](a-possibleinferiors.md)                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Druckattribute**](a-printattributes.md)                               | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Bin-Names**](a-printbinnames.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucken/Sortieren**](a-printcollate.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckfarbe**](a-printcolor.md)                                         | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Duplex-Supported**](a-printduplexsupported.md)                    | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckendezeit**](a-printendtime.md)                                    | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckername**](a-printername.md)                                       | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Print-Form-Name**](a-printformname.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Keep-Printed-Jobs**](a-printkeepprintedjobs.md)                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucksprache**](a-printlanguage.md)                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-MAC-Address**](a-printmacaddress.md)                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Copies**](a-printmaxcopies.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Resolution-Supported**](a-printmaxresolutionsupported.md)     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-X-Extent**](a-printmaxxextent.md)                             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Y-Extent**](a-printmaxyextent.md)                             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckmedienbereit**](a-printmediaready.md)                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Media-Supported**](a-printmediasupported.md)                      | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckspeicher**](a-printmemory.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Min-X-Extent**](a-printminxextent.md)                             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Min-Y-Extent**](a-printminyextent.md)                             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Network-Address**](a-printnetworkaddress.md)                      | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckbenachrichtigung**](a-printnotify.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucknummer nach oben**](a-printnumberup.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Unterstützte Druckausrichtungen**](a-printorientationssupported.md)        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckbesitzer**](a-printowner.md)                                         | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckseiten pro Minute**](a-printpagesperminute.md)                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckrate**](a-printrate.md)                                           | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckrate-Einheit**](a-printrateunit.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucktrennzeichendatei**](a-printseparatorfile.md)                        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Share-Name**](a-printsharename.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckspooling**](a-printspooling.md)                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Stapling-Supported**](a-printstaplingsupported.md)                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckstartzeit**](a-printstarttime.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckstatus**](a-printstatus.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Priorität**](a-priority.md)                                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Proxied-Object-Name**](a-proxiedobjectname.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Proxyadressen**](a-proxyaddresses.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Query-Policy-BL**](a-querypolicybl.md)                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Rdn**](a-name.md)                                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Repl-Property-Meta-Data**](a-replpropertymetadata.md)                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Repl-UpToDate-Vector**](a-repluptodatevector.md)                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Berichte**](a-directreports.md)                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Reps-From**](a-repsfrom.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Reps-To**](a-repsto.md)                                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Revision**](a-revision.md)                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**SD-Rights-Effective**](a-sdrightseffective.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Servername**](a-servername.md)                                         | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Server-Reference-BL**](a-serverreferencebl.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Short-Server-Name**](a-shortservername.md)                              | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Show-In-Advanced-View-Only**](a-showinadvancedviewonly.md)              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Site-Object-BL**](a-siteobjectbl.md)                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Structural-Object-Class**](a-structuralobjectclass.md)                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Sub-Refs**](a-subrefs.md)                                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**SubSchemaSubEntry**](a-subschemasubentry.md)                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Systemflags**](a-systemflags.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**UNC-Name**](a-uncname.md)                                               | Richtig      | **Druckwarteschlange**                                                                          |
+| [**USN-Changed**](a-usnchanged.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**VON USN erstellt**](a-usncreated.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-DSA-Last-Obj-Removed**](a-usndsalastobjremoved.md)                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Intersite**](a-usnintersite.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Quelle**](a-usnsource.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Versionsnummer**](a-versionnumber.md)                                   | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Wbem-Path**](a-wbempath.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bekannte Objekte**](a-wellknownobjects.md)                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Wenn geändert**](a-whenchanged.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Wenn erstellt**](a-whencreated.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Homepage**](a-wwwhomepage.md)                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Page-Other**](a-url.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 
 
 
@@ -575,17 +575,17 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2003 R2:
 
 | Eingabe | Wert |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| System-Only                 | False                                                                                                                                                                |
+| System-Only                 | Falsch                                                                                                                                                                |
 | Object-Category             | 1                                                                                                                                                                    |
 | Default-Object-Category     | \-                                                                                                                                                                   |
 | Governs-Id                  | 1.2.840.113556.1.5.23                                                                                                                                                |
-| Standard-ausblenden-Wert        | 0                                                                                                                                                                    |
-| RDN-ATT-ID                  | [**Gemeinsamer Name**](a-cn.md)<br/>                                                                                                                               |
+| Default-Hiding-Value        | 0                                                                                                                                                                    |
+| Rdn-Att-Id                  | [**Common-Name**](a-cn.md)<br/>                                                                                                                               |
 | Unterklasse von                 | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                                                                                             |
-| Mögliche Vorgesetzten          | [**Computer**](c-computer.md)[**Container**](c-container.md)[**Domäne-DNS**](c-domaindns.md)-[**Organisationseinheit**](c-organizationalunit.md)                   |
+| Mögliche Vorgesetzte          | [](c-computer.md)[](c-container.md)[**ComputercontainerDomäne-DNS-Organisationseinheit**](c-domaindns.md)[](c-organizationalunit.md)                   |
 | Zusätzlich           | \-                                                                                                                                                                   |
-| NT-Security-Descriptor      | o:Bag: schlecht: S:                                                                                                                                                         |
-| Standard Sicherheits Beschreibung | D: (A;; rpwpcrccdclclorcwowdsddtsw;;;D a) (a;; Rpwpcrccdclclorcwowdsddtsw;;; SY) (A;; Rpwpcrccdclclorcwowdsddtsw;;; PO) (A;; Rpwpcrccdclclorcwowdsddtsw;;; Co) (A;; Rplclorc;;; Thaus |
+| NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                                                                                         |
+| Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; PO)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; CO)(A;; RPLCLORC;;; AU) |
 | System-Flags                | 0x00000010                                                                                                                                                           |
 
 
@@ -596,167 +596,167 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008:
 
 
 
-| Attribut                                                                      | Obligatorisch. | Abgeleitet von                                                                             |
+| attribute                                                                      | Obligatorisch. | Abgeleitet von                                                                             |
 |--------------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------|
-| [**Administrator: Beschreibung**](a-admindescription.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Administrator-Anzeige Name**](a-admindisplayname.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige Attribute**](a-allowedattributes.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige Attribute-gültig**](a-allowedattributeseffective.md)           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige, untergeordnete Klassen**](a-allowedchildclasses.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässig-untergeordnete Klassen-gültig**](a-allowedchildclasseseffective.md)      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Assetnummer**](a-assetnumber.md)                                          | False     | **Druck Warteschlange**                                                                          |
-| [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bytes pro Minute**](a-bytesperminute.md)                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Kanonischer Name**](a-canonicalname.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Gemeinsamer Name**](a-cn.md)                                                    | Richtig      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
-| [**Create-Zeitstempel**](a-createtimestamp.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Standard-Priorität**](a-defaultpriority.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Beschreibung**](a-description.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeige Name**](a-displayname.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeige Name-druckdruck**](a-displaynameprintable.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Treiber Name**](a-drivername.md)                                            | False     | **Druck Warteschlange**                                                                          |
-| [**Treiber Version**](a-driverversion.md)                                      | False     | **Druck Warteschlange**                                                                          |
-| [**DSA-Signatur**](a-dsasignature.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**DS-Core-propagierungs Daten**](a-dscorepropagationdata.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Erweiterungs Name**](a-extensionname.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Fahren**](a-flags.md)                                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Aus-Eintrag**](a-fromentry.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**FRS-Computer-Reference-BL**](a-frscomputerreferencebl.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**"F"-Rollen Besitzer**](a-fsmoroleowner.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Admin-Description**](a-admindescription.md)                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Administratoranzeigename**](a-admindisplayname.md)                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Attributes**](a-allowedattributes.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Child-Classes**](a-allowedchildclasses.md)                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Asset-Number**](a-assetnumber.md)                                          | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bytes pro Minute**](a-bytesperminute.md)                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Kanonischer Name**](a-canonicalname.md)                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Common-Name**](a-cn.md)                                                    | Richtig      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
+| [**Create-Time-Stamp**](a-createtimestamp.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Standardpriorität**](a-defaultpriority.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Beschreibung**](a-description.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Anzeigename**](a-displayname.md)                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Display-Name-Printable**](a-displaynameprintable.md)                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Treibername**](a-drivername.md)                                            | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Treiberversion**](a-driverversion.md)                                      | Falsch     | **Druckwarteschlange**                                                                          |
+| [**DSA-Signature**](a-dsasignature.md)                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Extension-Name**](a-extensionname.md)                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Flaggen**](a-flags.md)                                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**From-Entry**](a-fromentry.md)                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**FSMO-Role-Owner**](a-fsmoroleowner.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Instanztyp**](a-instancetype.md)                                        | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-critical-System-Object**](a-iscriticalsystemobject.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Ist-gelöscht**](a-isdeleted.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Member-of-DL**](a-memberof.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Privilege-Inhaber**](a-isprivilegeholder.md)                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Keywords**](a-keywords.md)                                                 | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**Letztes-bekannt/übergeordnetes Element**](a-lastknownparent.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Hotels**](a-location.md)                                                 | False     | **Druck Warteschlange**                                                                          |
-| [**Verwaltet von**](a-managedby.md)                                              | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**Verwaltete Objekte**](a-managedobjects.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Verwaltet von**](a-masteredby.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Modify-Zeitstempel**](a-modifytimestamp.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-com-partitionsetlink**](a-mscom-partitionsetlink.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-com-userlink**](a-mscom-userlink.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DFSR-computerreferencebl**](a-msdfsr-computerreferencebl.md)            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DFSR-mitgliedreferencebl**](a-msdfsr-memberreferencebl.md)                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-ca-immed-untergeordnete Elemente**](a-msds-approx-immed-subordinates.md)    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-authentieredto-accountlist**](a-msds-authenticatedtoaccountlist.md) | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DS-Konsistenz-untergeordnet-Anzahl**](a-ms-ds-consistencychildcount.md)         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-is-Domain-for**](a-msds-isdomainfor.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-is-full-Replica-for**](a-msds-isfullreplicafor.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-is-Partial-Replica-for**](a-msds-ispartialreplicafor.md)             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-krbtgt-Link-BL**](a-msds-krbtgtlinkbl.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-gemastert von**](a-msds-masteredby.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Members-für-AZ-Role-BL**](a-msds-membersforazrolebl.md)              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Cursor**](a-msds-ncreplcursors.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Inbound-Nachbarn**](a-msds-ncreplinboundneighbors.md)       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Outbound-Nachbarn**](a-msds-ncreploutboundneighbors.md)     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-RO-Replica-Locations-BL**](a-msds-nc-ro-replica-locations-bl.md)  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-Typ**](a-msds-nctype.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Operations-for-AZ-Role-BL**](a-msds-operationsforazrolebl.md)        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Operations-for-AZ-Task-BL**](a-msds-operationsforaztaskbl.md)        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Principal-Name**](a-msds-principalname.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-PSO-angewendet**](a-msds-psoapplied.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-offengelegt-DSAs**](a-msds-revealeddsas.md)                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-enthüllt-List-BL**](a-msds-revealedlistbl.md)                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Settings**](a-msds-settings.md)                                      | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**ms-DS-Tasks-für-AZ-Role-BL**](a-msds-tasksforazrolebl.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Tasks-für-AZ-Task-BL**](a-msds-tasksforaztaskbl.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-Exch-Owner-BL**](a-ownerbl.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**msSFU-30-POSIX-Member-of**](a-mssfu30posixmemberof.md)                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**NetBoot-SCP-BL**](a-netbootscpbl.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Nicht sicherheitsmitglied-BL**](a-nonsecuritymemberbl.md)                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Deleted**](a-isdeleted.md)                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Member-of-DL**](a-memberof.md)                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Privilege-Holder**](a-isprivilegeholder.md)                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Keywords**](a-keywords.md)                                                 | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**Letztes bekanntes übergeordnetes Element**](a-lastknownparent.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Location**](a-location.md)                                                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Verwaltet von**](a-managedby.md)                                              | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**Verwaltete Objekte**](a-managedobjects.md)                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Mastered By**](a-masteredby.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Modify-Time-Stamp**](a-modifytimestamp.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-COM-PartitionSetLink**](a-mscom-partitionsetlink.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-COM-UserLink**](a-mscom-userlink.md)                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DFSR-ComputerReferenceBL**](a-msdfsr-computerreferencebl.md)            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DFSR-MemberReferenceBL**](a-msdfsr-memberreferencebl.md)                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Approx-Immed-Subordinates**](a-msds-approx-immed-subordinates.md)    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-AuthenticatedTo-Accountlist**](a-msds-authenticatedtoaccountlist.md) | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-is-Domain-for**](a-msds-isdomainfor.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-is-full-replica-for**](a-msds-isfullreplicafor.md)                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-is-partial-replica-for**](a-msds-ispartialreplicafor.md)             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-KrbTgt-Link-BL**](a-msds-krbtgtlinkbl.md)                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Mastered-By**](a-msds-masteredby.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Members-For-Az-Role-BL**](a-msds-membersforazrolebl.md)              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Cursors**](a-msds-ncreplcursors.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Inbound-Neighbors**](a-msds-ncreplinboundneighbors.md)       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Outbound-Neighbors**](a-msds-ncreploutboundneighbors.md)     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-RO-Replica-Locations-BL**](a-msds-nc-ro-replica-locations-bl.md)  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Type**](a-msds-nctype.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Operations-For-Az-Role-BL**](a-msds-operationsforazrolebl.md)        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Operations-For-Az-Task-BL**](a-msds-operationsforaztaskbl.md)        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Principal-Name**](a-msds-principalname.md)                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-PSO-Applied**](a-msds-psoapplied.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Revealed-DSAs**](a-msds-revealeddsas.md)                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Revealed-List-BL**](a-msds-revealedlistbl.md)                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Einstellungen**](a-msds-settings.md)                                      | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**ms-DS-Tasks-for-Az-Role-BL**](a-msds-tasksforazrolebl.md)                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Tasks-for-Az-Task-BL**](a-msds-tasksforaztaskbl.md)                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-Exch-Owner-BL**](a-ownerbl.md)                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**msSFU-30-Posix-Member-Of**](a-mssfu30posixmemberof.md)                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**netboot-SCP-BL**](a-netbootscpbl.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Non-Security-Member-BL**](a-nonsecuritymemberbl.md)                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                       | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Obj-Dist-Name**](a-distinguishedname.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-Kategorie**](a-objectcategory.md)                                    | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Object-Klasse**](a-objectclass.md)                                          | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-GUID**](a-objectguid.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-Version**](a-objectversion.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Betriebs System**](a-operatingsystem.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System-Hotfix**](a-operatingsystemhotfix.md)                     | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System-Service Pack**](a-operatingsystemservicepack.md)          | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System Version**](a-operatingsystemversion.md)                   | False     | **Druck Warteschlange**                                                                          |
-| [**Andere-bekannte Objekte**](a-otherwellknownobjects.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partial-Attribute-löschen-List**](a-partialattributedeletionlist.md)      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partiell-Attribut Satz**](a-partialattributeset.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Physical-Location-Object**](a-physicallocationobject.md)                   | False     | **Druck Warteschlange**                                                                          |
-| [**Portname**](a-portname.md)                                                | False     | **Druck Warteschlange**                                                                          |
-| [**Mögliche-minderwertig**](a-possibleinferiors.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Print-Attribute**](a-printattributes.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Print-bin-Names**](a-printbinnames.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Drucken-COLLATE**](a-printcollate.md)                                        | False     | **Druck Warteschlange**                                                                          |
-| [**Druckfarbe**](a-printcolor.md)                                            | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Duplex-unterstützt**](a-printduplexsupported.md)                       | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Endzeit**](a-printendtime.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Drucker Name**](a-printername.md)                                          | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Print-Formular Name**](a-printformname.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Keep-Print-Jobs**](a-printkeepprintedjobs.md)                      | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Sprache**](a-printlanguage.md)                                      | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Mac-Adresse**](a-printmacaddress.md)                                 | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Kopien**](a-printmaxcopies.md)                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Resolution wird unterstützt**](a-printmaxresolutionsupported.md)        | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-X-Block**](a-printmaxxextent.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Y-Block**](a-printmaxyextent.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Medien-bereit**](a-printmediaready.md)                                 | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Media-supported**](a-printmediasupported.md)                         | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Arbeitsspeicher**](a-printmemory.md)                                          | False     | **Druck Warteschlange**                                                                          |
-| [**Print-min-X-Block**](a-printminxextent.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-min-Y-Block**](a-printminyextent.md)                                | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Network-Address**](a-printnetworkaddress.md)                         | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Benachrichtigung**](a-printnotify.md)                                          | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Number-up**](a-printnumberup.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Ausrichtungen-unterstützt**](a-printorientationssupported.md)           | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Besitzer**](a-printowner.md)                                            | False     | **Druck Warteschlange**                                                                          |
-| [**Druckseiten pro Minute**](a-printpagesperminute.md)                        | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Rate**](a-printrate.md)                                              | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Raten Einheit**](a-printrateunit.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Trennzeichen-Datei**](a-printseparatorfile.md)                           | False     | **Druck Warteschlange**                                                                          |
-| [**Druckfreigabe Name**](a-printsharename.md)                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Spoolvorgang**](a-printspooling.md)                                      | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Stapling-supported**](a-printstaplingsupported.md)                   | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Startzeit**](a-printstarttime.md)                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Status**](a-printstatus.md)                                          | False     | **Druck Warteschlange**                                                                          |
-| [**Priorität**](a-priority.md)                                                 | False     | **Druck Warteschlange**                                                                          |
-| [**Proxy-Objekt Name**](a-proxiedobjectname.md)                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Proxy Adressen**](a-proxyaddresses.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Abfrage-Richtlinie-BL**](a-querypolicybl.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**RDN**](a-name.md)                                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**REPL-Property-Meta-Data**](a-replpropertymetadata.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**REPL-Update-Vector**](a-repluptodatevector.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Berichte**](a-directreports.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Reps-from**](a-repsfrom.md)                                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Reps-to**](a-repsto.md)                                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Novel**](a-revision.md)                                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**SD-Rechte**](a-sdrightseffective.md)                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Server Name**](a-servername.md)                                            | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Server-Reference-BL**](a-serverreferencebl.md)                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Short-Server-Name**](a-shortservername.md)                                 | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Anzeigen-in-Advanced-nur anzeigen**](a-showinadvancedviewonly.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Site-Object-BL**](a-siteobjectbl.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Struktur-Objekt-Klasse**](a-structuralobjectclass.md)                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Sub-Refs**](a-subrefs.md)                                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Subschemasubentry**](a-subschemasubentry.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**SystemFlags**](a-systemflags.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**UNC-Name**](a-uncname.md)                                                  | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Die Anwendung wurde geändert.**](a-usnchanged.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Von der Anwendung erstellte**](a-usncreated.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USA-DSA-letzte-obj-entfernt**](a-usndsalastobjremoved.md)                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Standort-und standortübergreifende standortübergreifende**](a-usnintersite.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**"An-Last-obj-REM"**](a-usnlastobjrem.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Quell Code Quelle**](a-usnsource.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Versionsnummer**](a-versionnumber.md)                                      | Richtig      | **Druck Warteschlange**                                                                          |
-| [**WBEM-Pfad**](a-wbempath.md)                                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bekannte Objekte**](a-wellknownobjects.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bei Änderung**](a-whenchanged.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bei Erstellung**](a-whencreated.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**WWW-Homepage**](a-wwwhomepage.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**WWW-Page-other**](a-url.md)                                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Obj-Dist-Name**](a-distinguishedname.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektkategorie**](a-objectcategory.md)                                    | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektklasse**](a-objectclass.md)                                          | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objekt-GUID**](a-objectguid.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektversion**](a-objectversion.md)                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Betriebssystem**](a-operatingsystem.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystem-Hotfix**](a-operatingsystemhotfix.md)                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystem-Service-Pack**](a-operatingsystemservicepack.md)          | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystemversion**](a-operatingsystemversion.md)                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Teilattributlöschungsliste**](a-partialattributedeletionlist.md)      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Teilattributsatz**](a-partialattributeset.md)                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Physical-Location-Object**](a-physicallocationobject.md)                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Portname**](a-portname.md)                                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Mögliche Hindernisse**](a-possibleinferiors.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Druckattribute**](a-printattributes.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Bin-Names**](a-printbinnames.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucken/Sortieren**](a-printcollate.md)                                        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckfarbe**](a-printcolor.md)                                            | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Duplex-Supported**](a-printduplexsupported.md)                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckendezeit**](a-printendtime.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckername**](a-printername.md)                                          | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Print-Form-Name**](a-printformname.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Keep-Printed-Jobs**](a-printkeepprintedjobs.md)                      | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucksprache**](a-printlanguage.md)                                      | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-MAC-Address**](a-printmacaddress.md)                                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Copies**](a-printmaxcopies.md)                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Resolution-Supported**](a-printmaxresolutionsupported.md)        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-X-Extent**](a-printmaxxextent.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Y-Extent**](a-printmaxyextent.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckmedienbereit**](a-printmediaready.md)                                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Media-Supported**](a-printmediasupported.md)                         | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckspeicher**](a-printmemory.md)                                          | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Min-X-Extent**](a-printminxextent.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Min-Y-Extent**](a-printminyextent.md)                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Network-Address**](a-printnetworkaddress.md)                         | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckbenachrichtigung**](a-printnotify.md)                                          | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucknummer nach oben**](a-printnumberup.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Unterstützte Druckausrichtungen**](a-printorientationssupported.md)           | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckbesitzer**](a-printowner.md)                                            | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckseiten pro Minute**](a-printpagesperminute.md)                        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckrate**](a-printrate.md)                                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckrate-Einheit**](a-printrateunit.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucktrennzeichendatei**](a-printseparatorfile.md)                           | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Share-Name**](a-printsharename.md)                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckspooling**](a-printspooling.md)                                      | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Stapling-Supported**](a-printstaplingsupported.md)                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckstartzeit**](a-printstarttime.md)                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckstatus**](a-printstatus.md)                                          | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Priorität**](a-priority.md)                                                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Proxied-Object-Name**](a-proxiedobjectname.md)                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Proxyadressen**](a-proxyaddresses.md)                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Query-Policy-BL**](a-querypolicybl.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Rdn**](a-name.md)                                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Repl-Property-Meta-Data**](a-replpropertymetadata.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Repl-UpToDate-Vector**](a-repluptodatevector.md)                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Berichte**](a-directreports.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Reps-From**](a-repsfrom.md)                                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Reps-To**](a-repsto.md)                                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Revision**](a-revision.md)                                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**SD-Rights-Effective**](a-sdrightseffective.md)                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Servername**](a-servername.md)                                            | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Server-Reference-BL**](a-serverreferencebl.md)                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Short-Server-Name**](a-shortservername.md)                                 | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Nur in erweiterter Ansicht anzeigen**](a-showinadvancedviewonly.md)                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Site-Object-BL**](a-siteobjectbl.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Structural-Object-Class**](a-structuralobjectclass.md)                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Sub-Refs**](a-subrefs.md)                                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**SubSchemaSubEntry**](a-subschemasubentry.md)                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Systemflags**](a-systemflags.md)                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**UNC-Name**](a-uncname.md)                                                  | Richtig      | **Druckwarteschlange**                                                                          |
+| [**USN geändert**](a-usnchanged.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-erstellt**](a-usncreated.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-DSA-last-obj-removed**](a-usndsalastobjremoved.md)                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Intersite**](a-usnintersite.md)                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Quelle**](a-usnsource.md)                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Versionsnummer**](a-versionnumber.md)                                      | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Wbem-Pfad**](a-wbempath.md)                                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bekannte Objekte**](a-wellknownobjects.md)                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bei Änderung**](a-whenchanged.md)                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bei der Erstellung**](a-whencreated.md)                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Startseite**](a-wwwhomepage.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Page-Other**](a-url.md)                                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 
 
 
@@ -768,17 +768,17 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008:
 
 | Eingabe | Wert |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| System-Only                 | False                                                                                                                                                                |
+| System-Only                 | Falsch                                                                                                                                                                |
 | Object-Category             | 1                                                                                                                                                                    |
 | Default-Object-Category     | \-                                                                                                                                                                   |
 | Governs-Id                  | 1.2.840.113556.1.5.23                                                                                                                                                |
-| Standard-ausblenden-Wert        | 0                                                                                                                                                                    |
-| RDN-ATT-ID                  | [**Gemeinsamer Name**](a-cn.md)<br/>                                                                                                                               |
+| Default-Hiding-Value        | 0                                                                                                                                                                    |
+| Rdn-Att-Id                  | [**Allgemeiner Name**](a-cn.md)<br/>                                                                                                                               |
 | Unterklasse von                 | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                                                                                             |
-| Mögliche Vorgesetzten          | [**Computer**](c-computer.md)[**Container**](c-container.md)[**Domäne-DNS**](c-domaindns.md)-[**Organisationseinheit**](c-organizationalunit.md)                   |
+| Mögliche Übergeordnete          | [**Computer**](c-computer.md)[**container**](c-container.md)[**domain-DNS**](c-domaindns.md)[**Organizational-Unit**](c-organizationalunit.md)                   |
 | Zusätzlich           | \-                                                                                                                                                                   |
-| NT-Security-Descriptor      | o:Bag: schlecht: S:                                                                                                                                                         |
-| Standard Sicherheits Beschreibung | D: (A;; rpwpcrccdclclorcwowdsddtsw;;;D a) (a;; Rpwpcrccdclclorcwowdsddtsw;;; SY) (A;; Rpwpcrccdclclorcwowdsddtsw;;; PO) (A;; Rpwpcrccdclclorcwowdsddtsw;;; Co) (A;; Rplclorc;;; Thaus |
+| NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                                                                                         |
+| Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; PO)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; CO)(A;; RPLCLORC;;; AU) |
 | System-Flags                | 0x00000010                                                                                                                                                           |
 
 
@@ -789,174 +789,174 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008 R2:
 
 
 
-| Attribut                                                                        | Obligatorisch. | Abgeleitet von                                                                             |
+| attribute                                                                        | Obligatorisch. | Abgeleitet von                                                                             |
 |----------------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------|
-| [**Administrator: Beschreibung**](a-admindescription.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Administrator-Anzeige Name**](a-admindisplayname.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige Attribute**](a-allowedattributes.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige Attribute-gültig**](a-allowedattributeseffective.md)             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige, untergeordnete Klassen**](a-allowedchildclasses.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässig-untergeordnete Klassen-gültig**](a-allowedchildclasseseffective.md)        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Assetnummer**](a-assetnumber.md)                                            | False     | **Druck Warteschlange**                                                                          |
-| [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bytes pro Minute**](a-bytesperminute.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Kanonischer Name**](a-canonicalname.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Gemeinsamer Name**](a-cn.md)                                                      | Richtig      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
-| [**Create-Zeitstempel**](a-createtimestamp.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Standard-Priorität**](a-defaultpriority.md)                                    | False     | **Druck Warteschlange**                                                                          |
-| [**Beschreibung**](a-description.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeige Name**](a-displayname.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeige Name-druckdruck**](a-displaynameprintable.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Treiber Name**](a-drivername.md)                                              | False     | **Druck Warteschlange**                                                                          |
-| [**Treiber Version**](a-driverversion.md)                                        | False     | **Druck Warteschlange**                                                                          |
-| [**DSA-Signatur**](a-dsasignature.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**DS-Core-propagierungs Daten**](a-dscorepropagationdata.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Erweiterungs Name**](a-extensionname.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Fahren**](a-flags.md)                                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Aus-Eintrag**](a-fromentry.md)                                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**FRS-Computer-Reference-BL**](a-frscomputerreferencebl.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**"F"-Rollen Besitzer**](a-fsmoroleowner.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Administratorbeschreibung**](a-admindescription.md)                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Admin-Display-Name**](a-admindisplayname.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Attributes**](a-allowedattributes.md)                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Child-Classes**](a-allowedchildclasses.md)                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Assetnummer**](a-assetnumber.md)                                            | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bytes pro Minute**](a-bytesperminute.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Kanonischer Name**](a-canonicalname.md)                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allgemeiner Name**](a-cn.md)                                                      | Richtig      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
+| [**Erstellen eines Zeitstempels**](a-createtimestamp.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Standardpriorität**](a-defaultpriority.md)                                    | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Beschreibung**](a-description.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Anzeigename**](a-displayname.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Anzeigename– druckbar**](a-displaynameprintable.md)                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Treibername**](a-drivername.md)                                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Treiberversion**](a-driverversion.md)                                        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**DSA-Signature**](a-dsasignature.md)                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Erweiterungsname**](a-extensionname.md)                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Flaggen**](a-flags.md)                                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**From-Entry**](a-fromentry.md)                                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**FSMO-Role-Owner**](a-fsmoroleowner.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Instanztyp**](a-instancetype.md)                                          | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-critical-System-Object**](a-iscriticalsystemobject.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Ist-gelöscht**](a-isdeleted.md)                                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Member-of-DL**](a-memberof.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Privilege-Inhaber**](a-isprivilegeholder.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Ist-recycelt**](a-isrecycled.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Keywords**](a-keywords.md)                                                   | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**Letztes-bekannt/übergeordnetes Element**](a-lastknownparent.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Hotels**](a-location.md)                                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Verwaltet von**](a-managedby.md)                                                | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**Verwaltete Objekte**](a-managedobjects.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Verwaltet von**](a-masteredby.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Modify-Zeitstempel**](a-modifytimestamp.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-com-partitionsetlink**](a-mscom-partitionsetlink.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-com-userlink**](a-mscom-userlink.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DFSR-computerreferencebl**](a-msdfsr-computerreferencebl.md)              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DFSR-mitgliedreferencebl**](a-msdfsr-memberreferencebl.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-ca-immed-untergeordnete Elemente**](a-msds-approx-immed-subordinates.md)      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-authentieredto-accountlist**](a-msds-authenticatedtoaccountlist.md)   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DS-Konsistenz-untergeordnet-Anzahl**](a-ms-ds-consistencychildcount.md)           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-aktiviert-Feature-BL**](a-msds-enabledfeaturebl.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Host-Service-Account-BL**](a-msds-hostserviceaccountbl.md)             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-is-Domain-for**](a-msds-isdomainfor.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-is-full-Replica-for**](a-msds-isfullreplicafor.md)                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-is-Partial-Replica-for**](a-msds-ispartialreplicafor.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-krbtgt-Link-BL**](a-msds-krbtgtlinkbl.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Last-Known-RDN**](a-msds-lastknownrdn.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-local-Effective-Lösch Zeit**](a-msds-localeffectivedeletiontime.md) | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-local-Effective-Papier-Time**](a-msds-localeffectiverecycletime.md)   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-gemastert von**](a-msds-masteredby.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Members-für-AZ-Role-BL**](a-msds-membersforazrolebl.md)                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Cursor**](a-msds-ncreplcursors.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Inbound-Nachbarn**](a-msds-ncreplinboundneighbors.md)         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Outbound-Nachbarn**](a-msds-ncreploutboundneighbors.md)       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-RO-Replica-Locations-BL**](a-msds-nc-ro-replica-locations-bl.md)    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-Typ**](a-msds-nctype.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-oidtoidgruppe-Link-BL**](a-msds-oidtogrouplinkbl.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Operations-for-AZ-Role-BL**](a-msds-operationsforazrolebl.md)          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Operations-for-AZ-Task-BL**](a-msds-operationsforaztaskbl.md)          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Principal-Name**](a-msds-principalname.md)                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-PSO-angewendet**](a-msds-psoapplied.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-offengelegt-DSAs**](a-msds-revealeddsas.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-enthüllt-List-BL**](a-msds-revealedlistbl.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Settings**](a-msds-settings.md)                                        | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**ms-DS-Tasks-für-AZ-Role-BL**](a-msds-tasksforazrolebl.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Tasks-für-AZ-Task-BL**](a-msds-tasksforaztaskbl.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-Exch-Owner-BL**](a-ownerbl.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**msSFU-30-POSIX-Member-of**](a-mssfu30posixmemberof.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**NetBoot-SCP-BL**](a-netbootscpbl.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Nicht sicherheitsmitglied-BL**](a-nonsecuritymemberbl.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Deleted**](a-isdeleted.md)                                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Member-of-DL**](a-memberof.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Privilege-Holder**](a-isprivilegeholder.md)                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Wird wiederverwendet**](a-isrecycled.md)                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Keywords**](a-keywords.md)                                                   | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**Last-Known-Parent**](a-lastknownparent.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Location**](a-location.md)                                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Verwaltet von**](a-managedby.md)                                                | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**Verwaltete Objekte**](a-managedobjects.md)                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Mastered-By**](a-masteredby.md)                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Modify-Time-Stamp**](a-modifytimestamp.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-COM-PartitionSetLink**](a-mscom-partitionsetlink.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-COM-UserLink**](a-mscom-userlink.md)                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DFSR-ComputerReferenceBL**](a-msdfsr-computerreferencebl.md)              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DFSR-MemberReferenceBL**](a-msdfsr-memberreferencebl.md)                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Approx-Immed-Subordinates**](a-msds-approx-immed-subordinates.md)      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-AuthenticatedTo-Accountlist**](a-msds-authenticatedtoaccountlist.md)   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Enabled-Feature-BL**](a-msds-enabledfeaturebl.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Host-Service-Account-BL**](a-msds-hostserviceaccountbl.md)             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Is-Domain-For**](a-msds-isdomainfor.md)                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-is-full-replica-for**](a-msds-isfullreplicafor.md)                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-is-partial-replica-for**](a-msds-ispartialreplicafor.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-KrbTgt-Link-BL**](a-msds-krbtgtlinkbl.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Last-Known-RDN**](a-msds-lastknownrdn.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-local-Effective-Deletion-Time**](a-msds-localeffectivedeletiontime.md) | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-local-Effective-Recycle-Time**](a-msds-localeffectiverecycletime.md)   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Mastered-By**](a-msds-masteredby.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Members-for-Az-Role-BL**](a-msds-membersforazrolebl.md)                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Cursors**](a-msds-ncreplcursors.md)                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Inbound-Neighbors**](a-msds-ncreplinboundneighbors.md)         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Outbound-Neighbors**](a-msds-ncreploutboundneighbors.md)       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-RO-Replica-Locations-BL**](a-msds-nc-ro-replica-locations-bl.md)    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Type**](a-msds-nctype.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-OIDToGroup-Link-BL**](a-msds-oidtogrouplinkbl.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Operations-for-Az-Role-BL**](a-msds-operationsforazrolebl.md)          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Operations-for-Az-Task-BL**](a-msds-operationsforaztaskbl.md)          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Principal-Name**](a-msds-principalname.md)                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-PSO-Applied**](a-msds-psoapplied.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Revealed-DSAs**](a-msds-revealeddsas.md)                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Revealed-List-BL**](a-msds-revealedlistbl.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Einstellungen**](a-msds-settings.md)                                        | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**ms-DS-Tasks-for-Az-Role-BL**](a-msds-tasksforazrolebl.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Tasks-for-Az-Task-BL**](a-msds-tasksforaztaskbl.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-Exch-Owner-BL**](a-ownerbl.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**msSFU-30-Posix-Member-Of**](a-mssfu30posixmemberof.md)                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**netboot-SCP-BL**](a-netbootscpbl.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Non-Security-Member-BL**](a-nonsecuritymemberbl.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                         | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Obj-Dist-Name**](a-distinguishedname.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-Kategorie**](a-objectcategory.md)                                      | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Object-Klasse**](a-objectclass.md)                                            | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-GUID**](a-objectguid.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-Version**](a-objectversion.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Betriebs System**](a-operatingsystem.md)                                    | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System-Hotfix**](a-operatingsystemhotfix.md)                       | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System-Service Pack**](a-operatingsystemservicepack.md)            | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System Version**](a-operatingsystemversion.md)                     | False     | **Druck Warteschlange**                                                                          |
-| [**Andere-bekannte Objekte**](a-otherwellknownobjects.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partial-Attribute-löschen-List**](a-partialattributedeletionlist.md)        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partiell-Attribut Satz**](a-partialattributeset.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Physical-Location-Object**](a-physicallocationobject.md)                     | False     | **Druck Warteschlange**                                                                          |
-| [**Portname**](a-portname.md)                                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Mögliche-minderwertig**](a-possibleinferiors.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Print-Attribute**](a-printattributes.md)                                    | False     | **Druck Warteschlange**                                                                          |
-| [**Print-bin-Names**](a-printbinnames.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Drucken-COLLATE**](a-printcollate.md)                                          | False     | **Druck Warteschlange**                                                                          |
-| [**Druckfarbe**](a-printcolor.md)                                              | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Duplex-unterstützt**](a-printduplexsupported.md)                         | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Endzeit**](a-printendtime.md)                                         | False     | **Druck Warteschlange**                                                                          |
-| [**Drucker Name**](a-printername.md)                                            | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Print-Formular Name**](a-printformname.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Keep-Print-Jobs**](a-printkeepprintedjobs.md)                        | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Sprache**](a-printlanguage.md)                                        | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Mac-Adresse**](a-printmacaddress.md)                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Kopien**](a-printmaxcopies.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Resolution wird unterstützt**](a-printmaxresolutionsupported.md)          | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-X-Block**](a-printmaxxextent.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Y-Block**](a-printmaxyextent.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Medien-bereit**](a-printmediaready.md)                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Media-supported**](a-printmediasupported.md)                           | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Arbeitsspeicher**](a-printmemory.md)                                            | False     | **Druck Warteschlange**                                                                          |
-| [**Print-min-X-Block**](a-printminxextent.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-min-Y-Block**](a-printminyextent.md)                                  | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Network-Address**](a-printnetworkaddress.md)                           | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Benachrichtigung**](a-printnotify.md)                                            | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Number-up**](a-printnumberup.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Ausrichtungen-unterstützt**](a-printorientationssupported.md)             | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Besitzer**](a-printowner.md)                                              | False     | **Druck Warteschlange**                                                                          |
-| [**Druckseiten pro Minute**](a-printpagesperminute.md)                          | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Rate**](a-printrate.md)                                                | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Raten Einheit**](a-printrateunit.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Trennzeichen-Datei**](a-printseparatorfile.md)                             | False     | **Druck Warteschlange**                                                                          |
-| [**Druckfreigabe Name**](a-printsharename.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Spoolvorgang**](a-printspooling.md)                                        | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Stapling-supported**](a-printstaplingsupported.md)                     | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Startzeit**](a-printstarttime.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Status**](a-printstatus.md)                                            | False     | **Druck Warteschlange**                                                                          |
-| [**Priorität**](a-priority.md)                                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Proxy-Objekt Name**](a-proxiedobjectname.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Proxy Adressen**](a-proxyaddresses.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Abfrage-Richtlinie-BL**](a-querypolicybl.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**RDN**](a-name.md)                                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**REPL-Property-Meta-Data**](a-replpropertymetadata.md)                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**REPL-Update-Vector**](a-repluptodatevector.md)                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Berichte**](a-directreports.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Reps-from**](a-repsfrom.md)                                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Reps-to**](a-repsto.md)                                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Novel**](a-revision.md)                                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**SD-Rechte**](a-sdrightseffective.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Server Name**](a-servername.md)                                              | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Server-Reference-BL**](a-serverreferencebl.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Short-Server-Name**](a-shortservername.md)                                   | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Anzeigen-in-Advanced-nur anzeigen**](a-showinadvancedviewonly.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Site-Object-BL**](a-siteobjectbl.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Struktur-Objekt-Klasse**](a-structuralobjectclass.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Sub-Refs**](a-subrefs.md)                                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Subschemasubentry**](a-subschemasubentry.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**SystemFlags**](a-systemflags.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**UNC-Name**](a-uncname.md)                                                    | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Die Anwendung wurde geändert.**](a-usnchanged.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Von der Anwendung erstellte**](a-usncreated.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USA-DSA-letzte-obj-entfernt**](a-usndsalastobjremoved.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Standort-und standortübergreifende standortübergreifende**](a-usnintersite.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**"An-Last-obj-REM"**](a-usnlastobjrem.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Quell Code Quelle**](a-usnsource.md)                                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Versionsnummer**](a-versionnumber.md)                                        | Richtig      | **Druck Warteschlange**                                                                          |
-| [**WBEM-Pfad**](a-wbempath.md)                                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bekannte Objekte**](a-wellknownobjects.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bei Änderung**](a-whenchanged.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bei Erstellung**](a-whencreated.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**WWW-Homepage**](a-wwwhomepage.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**WWW-Page-other**](a-url.md)                                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Obj-Dist-Name**](a-distinguishedname.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektkategorie**](a-objectcategory.md)                                      | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektklasse**](a-objectclass.md)                                            | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objekt-GUID**](a-objectguid.md)                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektversion**](a-objectversion.md)                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Betriebssystem**](a-operatingsystem.md)                                    | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystem-Hotfix**](a-operatingsystemhotfix.md)                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystem-Service-Pack**](a-operatingsystemservicepack.md)            | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystemversion**](a-operatingsystemversion.md)                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Teilattributlöschungsliste**](a-partialattributedeletionlist.md)        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Teilattributsatz**](a-partialattributeset.md)                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Physical-Location-Object**](a-physicallocationobject.md)                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Portname**](a-portname.md)                                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Mögliche 100000000000**](a-possibleinferiors.md)                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Print-Attributes**](a-printattributes.md)                                    | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Bin-Names**](a-printbinnames.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucken/Sortierung**](a-printcollate.md)                                          | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Color**](a-printcolor.md)                                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckduplex unterstützt**](a-printduplexsupported.md)                         | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-End-Time**](a-printendtime.md)                                         | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckername**](a-printername.md)                                            | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Print-Form-Name**](a-printformname.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Keep-Printed-Jobs**](a-printkeepprintedjobs.md)                        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucksprache**](a-printlanguage.md)                                        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-MAC-Address**](a-printmacaddress.md)                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Copies**](a-printmaxcopies.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Resolution-Supported**](a-printmaxresolutionsupported.md)          | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-X-Extent**](a-printmaxxextent.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Y-Extent**](a-printmaxyextent.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckmedienbereit**](a-printmediaready.md)                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckmedien unterstützt**](a-printmediasupported.md)                           | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckspeicher**](a-printmemory.md)                                            | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Min-X-Extent**](a-printminxextent.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Min-Y-Extent**](a-printminyextent.md)                                  | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Network-Address**](a-printnetworkaddress.md)                           | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckbenachrichtigung**](a-printnotify.md)                                            | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Number-Up**](a-printnumberup.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckausrichtungen unterstützt**](a-printorientationssupported.md)             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckbesitzer**](a-printowner.md)                                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckseiten pro Minute**](a-printpagesperminute.md)                          | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckrate**](a-printrate.md)                                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckrate-Einheit**](a-printrateunit.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucktrennzeichendatei**](a-printseparatorfile.md)                             | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Share-Name**](a-printsharename.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckspooling**](a-printspooling.md)                                        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckabdruck unterstützt**](a-printstaplingsupported.md)                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckstartzeit**](a-printstarttime.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckstatus**](a-printstatus.md)                                            | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Priorität**](a-priority.md)                                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Proxied-Object-Name**](a-proxiedobjectname.md)                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Proxyadressen**](a-proxyaddresses.md)                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Query-Policy-BL**](a-querypolicybl.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Rdn**](a-name.md)                                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Repl-Property-Meta-Data**](a-replpropertymetadata.md)                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Repl-UpToDate-Vector**](a-repluptodatevector.md)                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Berichte**](a-directreports.md)                                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Reps-From**](a-repsfrom.md)                                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Reps-To**](a-repsto.md)                                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Revision**](a-revision.md)                                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**SD-Rights-Effective**](a-sdrightseffective.md)                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Servername**](a-servername.md)                                              | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Server-Reference-BL**](a-serverreferencebl.md)                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Short-Server-Name**](a-shortservername.md)                                   | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Show-In-Advanced-View-Only**](a-showinadvancedviewonly.md)                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Site-Object-BL**](a-siteobjectbl.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Structural-Object-Class**](a-structuralobjectclass.md)                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Sub-Refs**](a-subrefs.md)                                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**SubSchemaSubEntry**](a-subschemasubentry.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Systemflags**](a-systemflags.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**UNC-Name**](a-uncname.md)                                                    | Richtig      | **Druckwarteschlange**                                                                          |
+| [**USN-Changed**](a-usnchanged.md)                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**VON USN erstellt**](a-usncreated.md)                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-DSA-Last-Obj-Removed**](a-usndsalastobjremoved.md)                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Intersite**](a-usnintersite.md)                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Quelle**](a-usnsource.md)                                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Versionsnummer**](a-versionnumber.md)                                        | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Wbem-Path**](a-wbempath.md)                                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bekannte Objekte**](a-wellknownobjects.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bei Änderung**](a-whenchanged.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bei der Erstellung**](a-whencreated.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Startseite**](a-wwwhomepage.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Page-Other**](a-url.md)                                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 
 
 
@@ -968,201 +968,201 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008 R2:
 
 | Eingabe | Wert |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| System-Only                 | False                                                                                                                                                                |
+| System-Only                 | Falsch                                                                                                                                                                |
 | Object-Category             | 1                                                                                                                                                                    |
 | Default-Object-Category     | \-                                                                                                                                                                   |
 | Governs-Id                  | 1.2.840.113556.1.5.23                                                                                                                                                |
-| Standard-ausblenden-Wert        | 0                                                                                                                                                                    |
-| RDN-ATT-ID                  | [**Gemeinsamer Name**](a-cn.md)<br/>                                                                                                                               |
+| Default-Hiding-Value        | 0                                                                                                                                                                    |
+| Rdn-Att-Id                  | [**Allgemeiner Name**](a-cn.md)<br/>                                                                                                                               |
 | Unterklasse von                 | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                                                                                             |
-| Mögliche Vorgesetzten          | [**Computer**](c-computer.md)[**Container**](c-container.md)[**Domäne-DNS**](c-domaindns.md)-[**Organisationseinheit**](c-organizationalunit.md)                   |
+| Mögliche Übergeordnete          | [**Computer**](c-computer.md)[**container**](c-container.md)[**domain-DNS**](c-domaindns.md)[**Organizational-Unit**](c-organizationalunit.md)                   |
 | Zusätzlich           | \-                                                                                                                                                                   |
-| NT-Security-Descriptor      | o:Bag: schlecht: S:                                                                                                                                                         |
-| Standard Sicherheits Beschreibung | D: (A;; rpwpcrccdclclorcwowdsddtsw;;;D a) (a;; Rpwpcrccdclclorcwowdsddtsw;;; SY) (A;; Rpwpcrccdclclorcwowdsddtsw;;; PO) (A;; Rpwpcrccdclclorcwowdsddtsw;;; Co) (A;; Rplclorc;;; Thaus |
+| NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                                                                                         |
+| Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; PO)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; CO)(A;; RPLCLORC;;; AU) |
 | System-Flags                | 0x00000010                                                                                                                                                           |
 
 
 
-## <a name="windows-server-2012-attributes"></a>Windows Server 2012-Attribute
+## <a name="windows-server-2012-attributes"></a>Windows Server 2012 Attribute
 
 Diese Klasse enthält die folgenden Attribute für Windows Server 2012:
 
 
 
-| Attribut                                                                                    | Obligatorisch. | Abgeleitet von                                                                             |
+| attribute                                                                                    | Obligatorisch. | Abgeleitet von                                                                             |
 |----------------------------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------|
-| [**Administrator: Beschreibung**](a-admindescription.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Administrator-Anzeige Name**](a-admindisplayname.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige Attribute**](a-allowedattributes.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige Attribute-gültig**](a-allowedattributeseffective.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässige, untergeordnete Klassen**](a-allowedchildclasses.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Zulässig-untergeordnete Klassen-gültig**](a-allowedchildclasseseffective.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Assetnummer**](a-assetnumber.md)                                                        | False     | **Druck Warteschlange**                                                                          |
-| [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bytes pro Minute**](a-bytesperminute.md)                                                 | False     | **Druck Warteschlange**                                                                          |
-| [**Kanonischer Name**](a-canonicalname.md)                                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Gemeinsamer Name**](a-cn.md)                                                                  | Richtig      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
-| [**Create-Zeitstempel**](a-createtimestamp.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Standard-Priorität**](a-defaultpriority.md)                                                | False     | **Druck Warteschlange**                                                                          |
-| [**Beschreibung**](a-description.md)                                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeige Name**](a-displayname.md)                                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeige Name-druckdruck**](a-displaynameprintable.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Treiber Name**](a-drivername.md)                                                          | False     | **Druck Warteschlange**                                                                          |
-| [**Treiber Version**](a-driverversion.md)                                                    | False     | **Druck Warteschlange**                                                                          |
-| [**DSA-Signatur**](a-dsasignature.md)                                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**DS-Core-propagierungs Daten**](a-dscorepropagationdata.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Erweiterungs Name**](a-extensionname.md)                                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Fahren**](a-flags.md)                                                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Aus-Eintrag**](a-fromentry.md)                                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**FRS-Computer-Reference-BL**](a-frscomputerreferencebl.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**"F"-Rollen Besitzer**](a-fsmoroleowner.md)                                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Administratorbeschreibung**](a-admindescription.md)                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Admin-Display-Name**](a-admindisplayname.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Attributes**](a-allowedattributes.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Child-Classes**](a-allowedchildclasses.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Assetnummer**](a-assetnumber.md)                                                        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bytes pro Minute**](a-bytesperminute.md)                                                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Kanonischer Name**](a-canonicalname.md)                                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allgemeiner Name**](a-cn.md)                                                                  | Richtig      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
+| [**Erstellen eines Zeitstempels**](a-createtimestamp.md)                                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Standardpriorität**](a-defaultpriority.md)                                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Beschreibung**](a-description.md)                                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Anzeigename**](a-displayname.md)                                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Anzeigename– druckbar**](a-displaynameprintable.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Treibername**](a-drivername.md)                                                          | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Treiberversion**](a-driverversion.md)                                                    | Falsch     | **Druckwarteschlange**                                                                          |
+| [**DSA-Signature**](a-dsasignature.md)                                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Erweiterungsname**](a-extensionname.md)                                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Flaggen**](a-flags.md)                                                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**From-Entry**](a-fromentry.md)                                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**FSMO-Role-Owner**](a-fsmoroleowner.md)                                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Instanztyp**](a-instancetype.md)                                                      | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-critical-System-Object**](a-iscriticalsystemobject.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Ist-gelöscht**](a-isdeleted.md)                                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Member-of-DL**](a-memberof.md)                                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Privilege-Inhaber**](a-isprivilegeholder.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Ist-recycelt**](a-isrecycled.md)                                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Keywords**](a-keywords.md)                                                               | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**Letztes-bekannt/übergeordnetes Element**](a-lastknownparent.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Hotels**](a-location.md)                                                               | False     | **Druck Warteschlange**                                                                          |
-| [**Verwaltet von**](a-managedby.md)                                                            | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**Verwaltete Objekte**](a-managedobjects.md)                                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Verwaltet von**](a-masteredby.md)                                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Modify-Zeitstempel**](a-modifytimestamp.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-com-partitionsetlink**](a-mscom-partitionsetlink.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-com-userlink**](a-mscom-userlink.md)                                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DFSR-computerreferencebl**](a-msdfsr-computerreferencebl.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DFSR-mitgliedreferencebl**](a-msdfsr-memberreferencebl.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-ca-immed-untergeordnete Elemente**](a-msds-approx-immed-subordinates.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-authentieredto-accountlist**](a-msds-authenticatedtoaccountlist.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Claim-Shares-mögliche-values-with-BL**](a-msds-claimsharespossiblevalueswithbl.md) | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DS-Konsistenz-untergeordnet-Anzahl**](a-ms-ds-consistencychildcount.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-aktiviert-Feature-BL**](a-msds-enabledfeaturebl.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Host-Service-Account-BL**](a-msds-hostserviceaccountbl.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-is-Domain-for**](a-msds-isdomainfor.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-is-full-Replica-for**](a-msds-isfullreplicafor.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-is-Partial-Replica-for**](a-msds-ispartialreplicafor.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-is-Primary-Computer-für**](a-msds-isprimarycomputerfor.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-krbtgt-Link-BL**](a-msds-krbtgtlinkbl.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Last-Known-RDN**](a-msds-lastknownrdn.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-local-Effective-Lösch Zeit**](a-msds-localeffectivedeletiontime.md)             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-local-Effective-Papier-Time**](a-msds-localeffectiverecycletime.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-gemastert von**](a-msds-masteredby.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Members-für-AZ-Role-BL**](a-msds-membersforazrolebl.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Members-of-Resource-Property-List-BL**](a-msds-membersofresourcepropertylistbl.md) | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Cursor**](a-msds-ncreplcursors.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Inbound-Nachbarn**](a-msds-ncreplinboundneighbors.md)                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-repl-Outbound-Nachbarn**](a-msds-ncreploutboundneighbors.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-RO-Replica-Locations-BL**](a-msds-nc-ro-replica-locations-bl.md)                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-Typ**](a-msds-nctype.md)                                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-oidtoidgruppe-Link-BL**](a-msds-oidtogrouplinkbl.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Operations-for-AZ-Role-BL**](a-msds-operationsforazrolebl.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Operations-for-AZ-Task-BL**](a-msds-operationsforaztaskbl.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Principal-Name**](a-msds-principalname.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-PSO-angewendet**](a-msds-psoapplied.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-offengelegt-DSAs**](a-msds-revealeddsas.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-enthüllt-List-BL**](a-msds-revealedlistbl.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Settings**](a-msds-settings.md)                                                    | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**ms-DS-Tasks-für-AZ-Role-BL**](a-msds-tasksforazrolebl.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Tasks-für-AZ-Task-BL**](a-msds-tasksforaztaskbl.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-TDO-Egress-BL**](a-msds-tdoegressbl.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-TDO-Ingress-BL**](a-msds-tdoingressbl.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Value-Type-Reference-BL**](a-msds-valuetypereferencebl.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-Exch-Owner-BL**](a-ownerbl.md)                                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**msSFU-30-POSIX-Member-of**](a-mssfu30posixmemberof.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**NetBoot-SCP-BL**](a-netbootscpbl.md)                                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Nicht sicherheitsmitglied-BL**](a-nonsecuritymemberbl.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Deleted**](a-isdeleted.md)                                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Member-of-DL**](a-memberof.md)                                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Privilege-Holder**](a-isprivilegeholder.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Wird wiederverwendet**](a-isrecycled.md)                                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Keywords**](a-keywords.md)                                                               | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**Last-Known-Parent**](a-lastknownparent.md)                                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Location**](a-location.md)                                                               | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Verwaltet von**](a-managedby.md)                                                            | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**Verwaltete Objekte**](a-managedobjects.md)                                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Mastered-By**](a-masteredby.md)                                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Modify-Time-Stamp**](a-modifytimestamp.md)                                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-COM-PartitionSetLink**](a-mscom-partitionsetlink.md)                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-COM-UserLink**](a-mscom-userlink.md)                                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DFSR-ComputerReferenceBL**](a-msdfsr-computerreferencebl.md)                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DFSR-MemberReferenceBL**](a-msdfsr-memberreferencebl.md)                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Approx-Immed-Subordinates**](a-msds-approx-immed-subordinates.md)                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-AuthenticatedTo-Accountlist**](a-msds-authenticatedtoaccountlist.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Claim-Shares-Possible-Values-with-BL**](a-msds-claimsharespossiblevalueswithbl.md) | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Enabled-Feature-BL**](a-msds-enabledfeaturebl.md)                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Host-Service-Account-BL**](a-msds-hostserviceaccountbl.md)                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Is-Domain-For**](a-msds-isdomainfor.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-is-full-replica-for**](a-msds-isfullreplicafor.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-is-partial-replica-for**](a-msds-ispartialreplicafor.md)                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Is-Primary-Computer-for**](a-msds-isprimarycomputerfor.md)                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-KrbTgt-Link-BL**](a-msds-krbtgtlinkbl.md)                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Last-Known-RDN**](a-msds-lastknownrdn.md)                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-local-Effective-Deletion-Time**](a-msds-localeffectivedeletiontime.md)             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-local-Effective-Recycle-Time**](a-msds-localeffectiverecycletime.md)               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Mastered-By**](a-msds-masteredby.md)                                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Members-For-Az-Role-BL**](a-msds-membersforazrolebl.md)                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Members-of-Resource-Property-List-BL**](a-msds-membersofresourcepropertylistbl.md) | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Cursors**](a-msds-ncreplcursors.md)                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Inbound-Neighbors**](a-msds-ncreplinboundneighbors.md)                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Outbound-Neighbors**](a-msds-ncreploutboundneighbors.md)                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-RO-Replica-Locations-BL**](a-msds-nc-ro-replica-locations-bl.md)                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Type**](a-msds-nctype.md)                                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-OIDToGroup-Link-BL**](a-msds-oidtogrouplinkbl.md)                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Operations-For-Az-Role-BL**](a-msds-operationsforazrolebl.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Operations-For-Az-Task-BL**](a-msds-operationsforaztaskbl.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Principal-Name**](a-msds-principalname.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-PSO-Applied**](a-msds-psoapplied.md)                                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Revealed-DSAs**](a-msds-revealeddsas.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Revealed-List-BL**](a-msds-revealedlistbl.md)                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Einstellungen**](a-msds-settings.md)                                                    | Falsch     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**ms-DS-Tasks-For-Az-Role-BL**](a-msds-tasksforazrolebl.md)                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Tasks-For-Az-Task-BL**](a-msds-tasksforaztaskbl.md)                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-TDO-Egress-BL**](a-msds-tdoegressbl.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-TDO-Ingress-BL**](a-msds-tdoingressbl.md)                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Value-Type-Reference-BL**](a-msds-valuetypereferencebl.md)                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-Exch-Owner-BL**](a-ownerbl.md)                                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**msSFU-30-Posix-Member-Of**](a-mssfu30posixmemberof.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**netboot-SCP-BL**](a-netbootscpbl.md)                                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Non-Security-Member-BL**](a-nonsecuritymemberbl.md)                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                                     | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Obj-Dist-Name**](a-distinguishedname.md)                                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-Kategorie**](a-objectcategory.md)                                                  | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Object-Klasse**](a-objectclass.md)                                                        | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-GUID**](a-objectguid.md)                                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-Version**](a-objectversion.md)                                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Betriebs System**](a-operatingsystem.md)                                                | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System-Hotfix**](a-operatingsystemhotfix.md)                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System-Service Pack**](a-operatingsystemservicepack.md)                        | False     | **Druck Warteschlange**                                                                          |
-| [**Betriebs System Version**](a-operatingsystemversion.md)                                 | False     | **Druck Warteschlange**                                                                          |
-| [**Andere-bekannte Objekte**](a-otherwellknownobjects.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partial-Attribute-löschen-List**](a-partialattributedeletionlist.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partiell-Attribut Satz**](a-partialattributeset.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Physical-Location-Object**](a-physicallocationobject.md)                                 | False     | **Druck Warteschlange**                                                                          |
-| [**Portname**](a-portname.md)                                                              | False     | **Druck Warteschlange**                                                                          |
-| [**Mögliche-minderwertig**](a-possibleinferiors.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Print-Attribute**](a-printattributes.md)                                                | False     | **Druck Warteschlange**                                                                          |
-| [**Print-bin-Names**](a-printbinnames.md)                                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Drucken-COLLATE**](a-printcollate.md)                                                      | False     | **Druck Warteschlange**                                                                          |
-| [**Druckfarbe**](a-printcolor.md)                                                          | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Duplex-unterstützt**](a-printduplexsupported.md)                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Endzeit**](a-printendtime.md)                                                     | False     | **Druck Warteschlange**                                                                          |
-| [**Drucker Name**](a-printername.md)                                                        | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Print-Formular Name**](a-printformname.md)                                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Keep-Print-Jobs**](a-printkeepprintedjobs.md)                                    | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Sprache**](a-printlanguage.md)                                                    | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Mac-Adresse**](a-printmacaddress.md)                                               | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Kopien**](a-printmaxcopies.md)                                                 | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Resolution wird unterstützt**](a-printmaxresolutionsupported.md)                      | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-X-Block**](a-printmaxxextent.md)                                              | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Max-Y-Block**](a-printmaxyextent.md)                                              | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Medien-bereit**](a-printmediaready.md)                                               | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Media-supported**](a-printmediasupported.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Arbeitsspeicher**](a-printmemory.md)                                                        | False     | **Druck Warteschlange**                                                                          |
-| [**Print-min-X-Block**](a-printminxextent.md)                                              | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-min-Y-Block**](a-printminyextent.md)                                              | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Network-Address**](a-printnetworkaddress.md)                                       | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Benachrichtigung**](a-printnotify.md)                                                        | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Number-up**](a-printnumberup.md)                                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Ausrichtungen-unterstützt**](a-printorientationssupported.md)                         | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Besitzer**](a-printowner.md)                                                          | False     | **Druck Warteschlange**                                                                          |
-| [**Druckseiten pro Minute**](a-printpagesperminute.md)                                      | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Rate**](a-printrate.md)                                                            | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Raten Einheit**](a-printrateunit.md)                                                   | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Trennzeichen-Datei**](a-printseparatorfile.md)                                         | False     | **Druck Warteschlange**                                                                          |
-| [**Druckfreigabe Name**](a-printsharename.md)                                                 | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Spoolvorgang**](a-printspooling.md)                                                    | False     | **Druck Warteschlange**                                                                          |
-| [**Print-Stapling-supported**](a-printstaplingsupported.md)                                 | False     | **Druck Warteschlange**                                                                          |
-| [**Druck-Startzeit**](a-printstarttime.md)                                                 | False     | **Druck Warteschlange**                                                                          |
-| [**Druck Status**](a-printstatus.md)                                                        | False     | **Druck Warteschlange**                                                                          |
-| [**Priorität**](a-priority.md)                                                               | False     | **Druck Warteschlange**                                                                          |
-| [**Proxy-Objekt Name**](a-proxiedobjectname.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Proxy Adressen**](a-proxyaddresses.md)                                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Abfrage-Richtlinie-BL**](a-querypolicybl.md)                                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**RDN**](a-name.md)                                                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**REPL-Property-Meta-Data**](a-replpropertymetadata.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**REPL-Update-Vector**](a-repluptodatevector.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Berichte**](a-directreports.md)                                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Reps-from**](a-repsfrom.md)                                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Reps-to**](a-repsto.md)                                                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Novel**](a-revision.md)                                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**SD-Rechte**](a-sdrightseffective.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Server Name**](a-servername.md)                                                          | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Server-Reference-BL**](a-serverreferencebl.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Short-Server-Name**](a-shortservername.md)                                               | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Anzeigen-in-Advanced-nur anzeigen**](a-showinadvancedviewonly.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Site-Object-BL**](a-siteobjectbl.md)                                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Struktur-Objekt-Klasse**](a-structuralobjectclass.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Sub-Refs**](a-subrefs.md)                                                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Subschemasubentry**](a-subschemasubentry.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**SystemFlags**](a-systemflags.md)                                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**UNC-Name**](a-uncname.md)                                                                | Richtig      | **Druck Warteschlange**                                                                          |
-| [**Die Anwendung wurde geändert.**](a-usnchanged.md)                                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Von der Anwendung erstellte**](a-usncreated.md)                                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USA-DSA-letzte-obj-entfernt**](a-usndsalastobjremoved.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Standort-und standortübergreifende standortübergreifende**](a-usnintersite.md)                                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**"An-Last-obj-REM"**](a-usnlastobjrem.md)                                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Quell Code Quelle**](a-usnsource.md)                                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Versionsnummer**](a-versionnumber.md)                                                    | Richtig      | **Druck Warteschlange**                                                                          |
-| [**WBEM-Pfad**](a-wbempath.md)                                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bekannte Objekte**](a-wellknownobjects.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bei Änderung**](a-whenchanged.md)                                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bei Erstellung**](a-whencreated.md)                                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**WWW-Homepage**](a-wwwhomepage.md)                                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**WWW-Page-other**](a-url.md)                                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Obj-Dist-Name**](a-distinguishedname.md)                                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektkategorie**](a-objectcategory.md)                                                  | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Object-Class**](a-objectclass.md)                                                        | Richtig      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objekt-GUID**](a-objectguid.md)                                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Object-Version**](a-objectversion.md)                                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Betriebssystem**](a-operatingsystem.md)                                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystem-Hotfix**](a-operatingsystemhotfix.md)                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Operating-System-Service-Pack**](a-operatingsystemservicepack.md)                        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Betriebssystemversion**](a-operatingsystemversion.md)                                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Partial-Attribute-Deletion-List**](a-partialattributedeletionlist.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Partial-Attribute-Set**](a-partialattributeset.md)                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Physical-Location-Object**](a-physicallocationobject.md)                                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Portname**](a-portname.md)                                                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Mögliche 100000000000**](a-possibleinferiors.md)                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Print-Attributes**](a-printattributes.md)                                                | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Bin-Names**](a-printbinnames.md)                                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucken/Sortierung**](a-printcollate.md)                                                      | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Color**](a-printcolor.md)                                                          | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckduplex unterstützt**](a-printduplexsupported.md)                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-End-Time**](a-printendtime.md)                                                     | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckername**](a-printername.md)                                                        | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Print-Form-Name**](a-printformname.md)                                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckaufträge**](a-printkeepprintedjobs.md)                                    | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucksprache**](a-printlanguage.md)                                                    | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-MAC-Address**](a-printmacaddress.md)                                               | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Copies**](a-printmaxcopies.md)                                                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Resolution-Supported**](a-printmaxresolutionsupported.md)                      | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-X-Extent**](a-printmaxxextent.md)                                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Max-Y-Extent**](a-printmaxyextent.md)                                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckmedienbereit**](a-printmediaready.md)                                               | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Media-Supported**](a-printmediasupported.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckspeicher**](a-printmemory.md)                                                        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Min-X-Extent**](a-printminxextent.md)                                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Min-Y-Extent**](a-printminyextent.md)                                              | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Network-Address**](a-printnetworkaddress.md)                                       | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckbenachrichtigung**](a-printnotify.md)                                                        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucknummer nach oben**](a-printnumberup.md)                                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Unterstützte Druckausrichtungen**](a-printorientationssupported.md)                         | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckbesitzer**](a-printowner.md)                                                          | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckseiten pro Minute**](a-printpagesperminute.md)                                      | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckrate**](a-printrate.md)                                                            | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckrate-Einheit**](a-printrateunit.md)                                                   | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Drucktrennzeichendatei**](a-printseparatorfile.md)                                         | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Share-Name**](a-printsharename.md)                                                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckspooling**](a-printspooling.md)                                                    | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Print-Stapling-Supported**](a-printstaplingsupported.md)                                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckstartzeit**](a-printstarttime.md)                                                 | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Druckstatus**](a-printstatus.md)                                                        | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Priorität**](a-priority.md)                                                               | Falsch     | **Druckwarteschlange**                                                                          |
+| [**Proxied-Object-Name**](a-proxiedobjectname.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Proxyadressen**](a-proxyaddresses.md)                                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Query-Policy-BL**](a-querypolicybl.md)                                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Rdn**](a-name.md)                                                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Repl-Property-Meta-Data**](a-replpropertymetadata.md)                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Repl-UpToDate-Vector**](a-repluptodatevector.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Berichte**](a-directreports.md)                                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Reps-From**](a-repsfrom.md)                                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Reps-To**](a-repsto.md)                                                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Revision**](a-revision.md)                                                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**SD-Rights-Effective**](a-sdrightseffective.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Servername**](a-servername.md)                                                          | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Server-Reference-BL**](a-serverreferencebl.md)                                           | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Short-Server-Name**](a-shortservername.md)                                               | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Nur in erweiterter Ansicht anzeigen**](a-showinadvancedviewonly.md)                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Site-Object-BL**](a-siteobjectbl.md)                                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Structural-Object-Class**](a-structuralobjectclass.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Sub-Refs**](a-subrefs.md)                                                                | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**SubSchemaSubEntry**](a-subschemasubentry.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Systemflags**](a-systemflags.md)                                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**UNC-Name**](a-uncname.md)                                                                | Richtig      | **Druckwarteschlange**                                                                          |
+| [**USN geändert**](a-usnchanged.md)                                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-erstellt**](a-usncreated.md)                                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-DSA-last-obj-removed**](a-usndsalastobjremoved.md)                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Intersite**](a-usnintersite.md)                                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Quelle**](a-usnsource.md)                                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Versionsnummer**](a-versionnumber.md)                                                    | Richtig      | **Druckwarteschlange**                                                                          |
+| [**Wbem-Pfad**](a-wbempath.md)                                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bekannte Objekte**](a-wellknownobjects.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bei Änderung**](a-whenchanged.md)                                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bei der Erstellung**](a-whencreated.md)                                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Startseite**](a-wwwhomepage.md)                                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Page-Other**](a-url.md)                                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                          |
 
 
 

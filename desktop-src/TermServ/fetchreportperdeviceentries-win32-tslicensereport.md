@@ -1,12 +1,12 @@
 ---
-title: Fetchreportperdeviceentries-Methode der Win32_TSLicenseReport-Klasse
-description: Abrufen von Informationen zu ausgestellten Remotedesktopdienste pro Geräte-Client Zugriffs Lizenzen (RDS \ 160; Pro Gerät CALs) aus dem Bericht.
+title: FetchReportPerDeviceEntries-Methode der Win32_TSLicenseReport-Klasse
+description: Ruft Informationen zu ausgestellten Remotedesktopdienste Clientzugriffslizenzen pro Gerät ab (RDS \ 160; Pro Geräte-CALs) aus dem Bericht.
 ms.assetid: 3f632a65-d6e0-4efd-9498-d04a05f9ddec
 ms.tgt_platform: multiple
 keywords:
-- Die fetchreportperdeviceentries-Methode Remotedesktopdienste
-- Fetchreportperdeviceentries-Methode Remotedesktopdienste, Win32_TSLicenseReport-Klasse
-- Win32_TSLicenseReport-Klasse Remotedesktopdienste, fetchreportperdeviceentries-Methode
+- FetchReportPerDeviceEntries-Methode Remotedesktopdienste
+- FetchReportPerDeviceEntries-Methode Remotedesktopdienste , Win32_TSLicenseReport-Klasse
+- Win32_TSLicenseReport Klasse Remotedesktopdienste , FetchReportPerDeviceEntries-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cce77fce941dd0a24fb6ee17e0aeb67b4e78bdae
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bb3a5ef050002da069f7eda56352f204797cac521885248bc7e63dfd77f840f2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119737560"
 ---
-# <a name="fetchreportperdeviceentries-method-of-the-win32_tslicensereport-class"></a>Fetchreportperdeviceentries-Methode der Win32- \_ Klasse "zlicensereport"
+# <a name="fetchreportperdeviceentries-method-of-the-win32_tslicensereport-class"></a>FetchReportPerDeviceEntries-Methode der Win32 \_ TSLicenseReport-Klasse
 
-Ruft Informationen zu ausgestellten Remotedesktopdienste pro Geräte-Client Zugriffs Lizenzen (RDS pro Gerät CALs) aus dem Bericht ab.
+Ruft Informationen zu ausgestellten Remotedesktopdienste Clientzugriffslizenzen pro Gerät (RDS per Device CALs) aus dem Bericht ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ uint32 FetchReportPerDeviceEntries(
 
 <dl> <dt>
 
-*StartIndex* \[ in\]
+*StartIndex* \[ In\]
 </dt> <dd>
 
-Der Index des ersten Berichts Eintrags, der abgerufen werden soll. Der erste Berichts Eintrag weist einen Index von 0 (null) auf.
+Der Index des ersten abzurufenden Berichtseintrags. Der erste Berichtseintrag weist den Index 0 (null) auf.
 
 </dd> <dt>
 
 *Anzahl* \[ in, out\]
 </dt> <dd>
 
-Die Anzahl der Berichts Einträge, die aus dem Berichts Objekt abgerufen werden sollen. Der Wert 0 (null) gibt an, dass alle Berichts Einträge, die bei *startIndex* beginnen, abgerufen werden sollen. Enthält bei der Rückgabe die Anzahl der Einträge im *reportperdeviceentries* -Array.
+Die Anzahl der Berichtseinträge, die aus dem Berichtsobjekt abgerufen werden sollen. Der Wert 0 (null) gibt an, dass alle Berichtseinträge, die bei *StartIndex* beginnen, abgerufen werden sollen. Enthält bei der Rückgabe die Anzahl der Einträge im *ReportPerDeviceEntries-Array.*
 
 </dd> <dt>
 
-*Reportperdeviceentries* \[ vorgenommen\]
+*ReportPerDeviceEntries* \[ out\]
 </dt> <dd>
 
-Ein Array von Win32-Klassen vom Typ " [**\_ zlicensereportperdeviceentry**](win32-tslicensereportperdeviceentry.md) ", die die abgerufenen Lizenzeinträge darstellen. Der *count* -Parameter enthält die Anzahl der Elemente in diesem Array.
+Ein Array von [**Win32 \_ TSLicenseReportPerDeviceEntry-Klassen,**](win32-tslicensereportperdeviceentry.md) die die abgerufenen Lizenzeinträge darstellen. Der *Count-Parameter* enthält die Anzahl der Elemente in diesem Array.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,16 +79,16 @@ Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode ni
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-Datei- \_ /licensereport**](win32-tslicensereport.md)
+[**Win32 \_ TSLicenseReport**](win32-tslicensereport.md)
 </dt> </dl>
 
  

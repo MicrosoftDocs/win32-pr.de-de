@@ -4,12 +4,12 @@ ms.assetid: 0b322acb-3326-42a2-a852-07251585b314
 title: messageTypeDefinitions-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 54f1b6563254a93122960b4a990fe0bd18ab1453
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 7a94fabdd2ceb2d32052a692f6daa1abba0a52f16d5d1b7dd0a4cef07d33de09
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119757080"
 ---
 # <a name="messagetypedefinitions-element"></a>messageTypeDefinitions-Element
 
@@ -31,7 +31,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                                   | BESCHREIBUNG                                                                       |
+| Element                                   | Beschreibung                                                                       |
 |-------------------------------------------|-----------------------------------------------------------------------------------|
 | [**Vorgang**](operation.md)<br/> | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>  |
 | [**Porttype**](porttype.md)<br/>   | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/> |
@@ -51,7 +51,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                         | BESCHREIBUNG                                                    |
+| Element                         | Beschreibung                                                    |
 |---------------------------------|----------------------------------------------------------------|
 | [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
@@ -59,7 +59,7 @@ Es gibt keine Attribute.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieses Element wird im Allgemeinen in C-Quelldateien verwendet, um die Schematabellen zur Verfügung zu stellen, die von [**messageTypeDeclarations deklariert werden.**](messagetypedeclarations.md)
+Dieses Element wird im Allgemeinen in C-Quelldateien verwendet, um die von [**messageTypeDeclarations deklarierten Schematabellen**](messagetypedeclarations.md)bereitzustellen.
 
 ## <a name="element-information"></a>Elementinformationen
 

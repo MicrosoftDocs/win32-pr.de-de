@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der esentresource. resourcewasreleased-Methode.
-title: Esentresource. resourcewasreleased-Methode
+description: 'Weitere Informationen finden Sie unter: EsentResource.ResourceWasReleased-Methode'
+title: EsentResource.ResourceWasReleased-Methode
 TOCTitle: 'ResourceWasReleased method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentResource.ResourceWasReleased
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentresource.resourcewasreleased(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9e45d15b5b6154e2214507937c4b753def89d991
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3414a2bf62af61e74ee2d7e158c478124957f03408223d7d3151735753798416
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119781840"
 ---
-# <a name="esentresourceresourcewasreleased-method"></a>Esentresource. resourcewasreleased-Methode
+# <a name="esentresourceresourcewasreleased-method"></a>EsentResource.ResourceWasReleased-Methode
 
 Wird von einer Unterklasse aufgerufen, wenn eine Ressource freigegeben wird.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Me.ResourceWasReleased()
 protected void ResourceWasReleased()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentresource-Klasse](./esentresource-class.md)
+[EsentResource-Klasse](./esentresource-class.md)
 
-[Esentresource-Member](./esentresource-members.md)
+[EsentResource-Member](./esentresource-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

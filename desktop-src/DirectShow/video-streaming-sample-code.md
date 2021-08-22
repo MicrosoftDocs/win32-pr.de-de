@@ -14,11 +14,11 @@ ms.locfileid: "119755620"
 # <a name="video-streaming-sample-code"></a>Beispielcode für Videostreaming
 
 > [!Note]  
-> Diese APIs sind veraltet. Anwendungen sollten den [**Beispielgrabberfilter**](sample-grabber-filter.md) verwenden oder einen benutzerdefinierten Filter implementieren, um Daten aus einem DirectShow-Filterdiagramm abzurufen.
+> Diese APIs sind veraltet. Anwendungen sollten den [**Sample Grabber-Filter**](sample-grabber-filter.md) verwenden oder einen benutzerdefinierten Filter implementieren, um Daten aus einem DirectShow-Filterdiagramm zu erhalten.
 
  
 
-Dieser Beispielcode liest eine Datei und rendert sie auf einer primären DirectDraw-Oberfläche. Aus Gründen der Kürze führt dieses Beispiel eine minimale Fehlerüberprüfung durch.
+Dieser Beispielcode liest eine Datei und rendert sie auf einer primären DirectDraw-Oberfläche. Zur Besserung führt dieses Beispiel eine minimale Fehlerüberprüfung durch.
 
 
 ```C++

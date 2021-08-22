@@ -1,15 +1,15 @@
 ---
-description: Grundlegendes zu Sitzungsfunktionen in der Verwaltung von Netzwerkfreigaben. Diese Funktionen steuern Netzwerksitzungen, die zwischen Arbeitsstationen und Servern eingerichtet wurden.
+description: Grundlegendes zu Sitzungsfunktionen in der Verwaltung von Netzwerkfreigaben. Diese Funktionen steuern Netzwerksitzungen, die zwischen Arbeitsstationen und Servern eingerichtet werden.
 ms.assetid: 931455e3-1301-4a68-93c3-2674b3d4c491
 title: Sitzungsfunktionen (Netzwerkfreigabeverwaltung)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1cdde451eb2942171569b24c36aae5d5742208e5
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: fa914bd747f8b47e4bc4086245f425ba2d290fb9b0a6de256781a9fbca7e1516
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112409723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119580340"
 ---
 # <a name="session-functions-network-share-management"></a>Sitzungsfunktionen (Netzwerkfreigabeverwaltung)
 
@@ -29,7 +29,7 @@ Die Sitzungsfunktionen sind im Folgenden aufgeführt.
 
  
 
-Eine *Sitzung* ist eine Verknüpfung zwischen einer Arbeitsstation und einem Server. Wenn eine Arbeitsstation zum ersten Mal eine Verbindung mit einer freigegebenen Ressource auf dem Server herstellen soll, wird eine Sitzung eingerichtet. Bis zum Ende der Sitzung sind alle weiteren Verbindungen zwischen der Arbeitsstation und dem Server Teil derselben Sitzung. Um eine Sitzung zu beenden, ruft eine Anwendung auf dem Serverende einer Verbindung die [**NetSessionDel-Funktion**](/windows/desktop/api/Lmshare/nf-lmshare-netsessiondel) auf.
+Eine *Sitzung* ist eine Verknüpfung zwischen einer Arbeitsstation und einem Server. Beim ersten Herstellen einer Verbindung zwischen einer Arbeitsstation und einer freigegebenen Ressource auf dem Server wird eine Sitzung eingerichtet. Bis zum Ende der Sitzung sind alle weiteren Verbindungen zwischen der Arbeitsstation und dem Server Teil derselben Sitzung. Um eine Sitzung zu beenden, ruft eine Anwendung auf dem Serverende einer Verbindung die [**NetSessionDel-Funktion**](/windows/desktop/api/Lmshare/nf-lmshare-netsessiondel) auf.
 
 Die Netzwerkverwaltungssitzungsfunktionen verwalten Informationen pro Benutzer mit dem *Parameter username.* Da es mehrere Benutzer pro Sitzung geben kann, ist dieser Parameter erforderlich, um auf die benutzerspezifischen Informationen für die Sitzung zuzugreifen.
 

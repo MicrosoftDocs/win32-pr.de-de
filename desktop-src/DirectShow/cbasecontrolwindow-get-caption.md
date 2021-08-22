@@ -68,7 +68,7 @@ Den meisten Fenstern der obersten Ebene auf einem Windows desktopbasierten Deskt
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

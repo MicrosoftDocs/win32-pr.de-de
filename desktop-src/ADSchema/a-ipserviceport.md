@@ -1,10 +1,10 @@
 ---
-title: ipserviceport-Attribut
-description: Enthält den Abschnitt der Dienst Zuordnung, der den Port angibt, auf dem der UNIX-Dienst verfügbar ist.
+title: ipServicePort-Attribut
+description: Enthält den Abschnitt der Dienstzuordnung, der den Port angibt, an dem der UNIX Dienst verfügbar ist.
 ms.assetid: b3bb0bc6-b99f-4873-b1b0-da887468df09
 ms.tgt_platform: multiple
 keywords:
-- adschema des ipserviceport-Attributs
+- AD-Schema des ipServicePort-Attributs
 topic_type:
 - apiref
 api_name:
@@ -13,26 +13,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3aa8bf801fc33d2c8ab29fd1f41185f60b965ebd
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8670c8da9dc47340c7beda9b4e3f7f9eec380e6c5465d8400c7a695378b8f0e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957335"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119924900"
 ---
-# <a name="ipserviceport-attribute"></a>ipserviceport-Attribut
+# <a name="ipserviceport-attribute"></a>ipServicePort-Attribut
 
-Enthält den Abschnitt der Dienst Zuordnung, der den Port angibt, auf dem der UNIX-Dienst verfügbar ist.
+Enthält den Abschnitt der Dienstzuordnung, der den Port angibt, an dem der UNIX Dienst verfügbar ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ipserviceport                        |
-| LDAP-Display-Name | ipserviceport                        |
+| CN                | ipServicePort                        |
+| Ldap-Anzeigename | ipServicePort                        |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.3.6.1.1.1.1.15                     |
 | System-ID-GUID    | ff2daebf-f463-495a-8405-3e483641eaa2 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -54,16 +54,16 @@ Enthält den Abschnitt der Dienst Zuordnung, der den Port angibt, auf dem der UN
 |------------------------|---------------------------------------------|
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
-| System-Only            | False                                       |
-| Ist-einwertig       | Richtig                                        |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| System-Only            | Falsch                                       |
+| Ist einwertig       | Richtig                                        |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x00000000                                  |
-| In verwendete Klassen        | [**ipservice**](c-ipservice.md)<br/> |
+| In verwendete Klassen        | [**ipService**](c-ipservice.md)<br/> |
 
 
 
@@ -75,16 +75,16 @@ Enthält den Abschnitt der Dienst Zuordnung, der den Port angibt, auf dem der UN
 |------------------------|---------------------------------------------|
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
-| System-Only            | False                                       |
-| Ist-einwertig       | Richtig                                        |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| System-Only            | Falsch                                       |
+| Ist einwertig       | Richtig                                        |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x00000000                                  |
-| In verwendete Klassen        | [**ipservice**](c-ipservice.md)<br/> |
+| In verwendete Klassen        | [**ipService**](c-ipservice.md)<br/> |
 
 
 
@@ -96,16 +96,16 @@ Enthält den Abschnitt der Dienst Zuordnung, der den Port angibt, auf dem der UN
 |------------------------|---------------------------------------------|
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
-| System-Only            | False                                       |
-| Ist-einwertig       | Richtig                                        |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| System-Only            | Falsch                                       |
+| Ist einwertig       | Richtig                                        |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x00000000                                  |
-| In verwendete Klassen        | [**ipservice**](c-ipservice.md)<br/> |
+| In verwendete Klassen        | [**ipService**](c-ipservice.md)<br/> |
 
 
 
@@ -117,16 +117,16 @@ Enthält den Abschnitt der Dienst Zuordnung, der den Port angibt, auf dem der UN
 |------------------------|---------------------------------------------|
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
-| System-Only            | False                                       |
-| Ist-einwertig       | Richtig                                        |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| System-Only            | Falsch                                       |
+| Ist einwertig       | Richtig                                        |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x00000000                                  |
-| In verwendete Klassen        | [**ipservice**](c-ipservice.md)<br/> |
+| In verwendete Klassen        | [**ipService**](c-ipservice.md)<br/> |
 
 
 

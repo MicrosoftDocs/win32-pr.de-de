@@ -1,76 +1,76 @@
 ---
-title: Video Komprimierungs Makros
-description: Video Komprimierungs Makros
+title: Videokomprimierungsmakros
+description: Videokomprimierungsmakros
 ms.assetid: e8ee41fa-180a-432a-933b-b4a525b9df8c
 keywords:
-- Video für Windows (Vfw), VCM-Makros
-- VFW (Video für Windows), VCM-Makros
+- Video für Windows (VFW), VCM-Makros
+- VFW (Video für Windows),VCM-Makros
 - Videokomprimierungs-Manager (VCM), Makros
 - VCM (Videokomprimierungs-Manager), Makros
-- VCM-Referenz, Makros
+- VCM-Referenz,Makros
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6fe6b348a3a793e8cd2674b012f32fbb5c3e48f0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 44395d599436c5472895e3b5224fb557facf13468435d80a3dfd91ff6327b484
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119687530"
 ---
-# <a name="video-compression-macros"></a>Video Komprimierungs Makros
+# <a name="video-compression-macros"></a>Videokomprimierungsmakros
 
-Die folgenden Makros werden bei der Video Komprimierung verwendet.
+Die folgenden Makros werden bei der Videokomprimierung verwendet.
 
--   [**Icabout**](/windows/desktop/api/Vfw/nf-vfw-icabout)
--   [**Iccompressbegin**](/windows/desktop/api/Vfw/nf-vfw-iccompressbegin)
--   [**Iccompressend**](/windows/desktop/api/Vfw/nf-vfw-iccompressend)
--   [**Iccompressgetformat**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetformat)
--   [**Iccompressgetformatsize**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetformatsize)
--   [**Iccompressgetsize**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetsize)
--   [**Iccompressquery**](/windows/desktop/api/Vfw/nf-vfw-iccompressquery)
--   [**Icconfigure**](/windows/desktop/api/Vfw/nf-vfw-icconfigure)
--   [**ICDE compressbegin**](/windows/desktop/api/Vfw/nf-vfw-icdecompressbegin)
--   [**ICDE Compressend**](/windows/desktop/api/Vfw/nf-vfw-icdecompressend)
--   [**ICDE compressexend**](/windows/desktop/api/Vfw/nf-vfw-icdecompressexend)
--   [**Icdecompressgetformat**](/windows/desktop/api/Vfw/nf-vfw-icdecompressgetformat)
--   [**ICDE compressgetformatsize**](/windows/desktop/api/Vfw/nf-vfw-icdecompressgetformatsize)
--   [**ICDE compressgetpalette**](/windows/desktop/api/Vfw/nf-vfw-icdecompressgetpalette)
--   [**Icdebug**](/windows/desktop/api/Vfw/nf-vfw-icdecompressopen)
--   [**Icabcompressquery**](/windows/desktop/api/Vfw/nf-vfw-icdecompressquery)
--   [**ICDE compresssetpalette**](/windows/desktop/api/Vfw/nf-vfw-icdecompresssetpalette)
--   [**Icdrawchangepalette**](/windows/desktop/api/Vfw/nf-vfw-icdrawchangepalette)
--   [**Icdrawend**](/windows/desktop/api/Vfw/nf-vfw-icdrawend)
--   [**Icdrawflush**](/windows/desktop/api/Vfw/nf-vfw-icdrawflush)
--   [**Icdrawgettime**](/windows/desktop/api/Vfw/nf-vfw-icdrawgettime)
--   [**Icdrawopen**](/windows/desktop/api/Vfw/nf-vfw-icdrawopen)
--   [**Icdrawquery**](/windows/desktop/api/Vfw/nf-vfw-icdrawquery)
--   [**Icdraw-Erkenntnis**](/windows/desktop/api/Vfw/nf-vfw-icdrawrealize)
--   [**Icdrawrenderbuffer**](/windows/desktop/api/Vfw/nf-vfw-icdrawrenderbuffer)
--   [**Icdrawsettime**](/windows/desktop/api/Vfw/nf-vfw-icdrawsettime)
--   [**Icdrawstart**](/windows/desktop/api/Vfw/nf-vfw-icdrawstart)
--   [**Icdrawstartplay**](/windows/desktop/api/Vfw/nf-vfw-icdrawstartplay)
--   [**Icdraw-Vorgang**](/windows/desktop/api/Vfw/nf-vfw-icdrawstop)
--   [**Icdrawstopplay**](/windows/desktop/api/Vfw/nf-vfw-icdrawstopplay)
--   [**Icdrawwindow**](/windows/desktop/api/Vfw/nf-vfw-icdrawwindow)
--   [**Icgetbufferswanted**](/windows/desktop/api/Vfw/nf-vfw-icgetbufferswanted)
--   [**Icgetdefaultkeyframerate**](/windows/desktop/api/Vfw/nf-vfw-icgetdefaultkeyframerate)
--   [**Icgetdefaultquality**](/windows/desktop/api/Vfw/nf-vfw-icgetdefaultquality)
--   [**Icgetstate**](/windows/desktop/api/Vfw/nf-vfw-icgetstate)
--   [**Icgetstatus esize**](/windows/desktop/api/Vfw/nf-vfw-icgetstatesize)
--   [**Icqueryabout**](/windows/desktop/api/Vfw/nf-vfw-icqueryabout)
--   [**Icqueryconfigure**](/windows/desktop/api/Vfw/nf-vfw-icqueryconfigure)
--   [**Icsetstate**](/windows/desktop/api/Vfw/nf-vfw-icsetstate)
+-   [**ICAbout**](/windows/desktop/api/Vfw/nf-vfw-icabout)
+-   [**ICCompressBegin**](/windows/desktop/api/Vfw/nf-vfw-iccompressbegin)
+-   [**ICCompressEnd**](/windows/desktop/api/Vfw/nf-vfw-iccompressend)
+-   [**ICCompressGetFormat**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetformat)
+-   [**ICCompressGetFormatSize**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetformatsize)
+-   [**ICCompressGetSize**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetsize)
+-   [**ICCompressQuery**](/windows/desktop/api/Vfw/nf-vfw-iccompressquery)
+-   [**ICConfigure**](/windows/desktop/api/Vfw/nf-vfw-icconfigure)
+-   [**ICDecompressBegin**](/windows/desktop/api/Vfw/nf-vfw-icdecompressbegin)
+-   [**ICDecompressEnd**](/windows/desktop/api/Vfw/nf-vfw-icdecompressend)
+-   [**ICDecompressExEnd**](/windows/desktop/api/Vfw/nf-vfw-icdecompressexend)
+-   [**ICDecompressGetFormat**](/windows/desktop/api/Vfw/nf-vfw-icdecompressgetformat)
+-   [**ICDecompressGetFormatSize**](/windows/desktop/api/Vfw/nf-vfw-icdecompressgetformatsize)
+-   [**ICDecompressGetPalette**](/windows/desktop/api/Vfw/nf-vfw-icdecompressgetpalette)
+-   [**ICDecompressOpen**](/windows/desktop/api/Vfw/nf-vfw-icdecompressopen)
+-   [**ICDecompressQuery**](/windows/desktop/api/Vfw/nf-vfw-icdecompressquery)
+-   [**ICDecompressSetPalette**](/windows/desktop/api/Vfw/nf-vfw-icdecompresssetpalette)
+-   [**ICDrawChangePalette**](/windows/desktop/api/Vfw/nf-vfw-icdrawchangepalette)
+-   [**ICDrawEnd**](/windows/desktop/api/Vfw/nf-vfw-icdrawend)
+-   [**ICDrawFlush**](/windows/desktop/api/Vfw/nf-vfw-icdrawflush)
+-   [**ICDrawGetTime**](/windows/desktop/api/Vfw/nf-vfw-icdrawgettime)
+-   [**ICDrawOpen**](/windows/desktop/api/Vfw/nf-vfw-icdrawopen)
+-   [**ICDrawQuery**](/windows/desktop/api/Vfw/nf-vfw-icdrawquery)
+-   [**ICDrawRealize**](/windows/desktop/api/Vfw/nf-vfw-icdrawrealize)
+-   [**ICDrawRenderBuffer**](/windows/desktop/api/Vfw/nf-vfw-icdrawrenderbuffer)
+-   [**ICDrawSetTime**](/windows/desktop/api/Vfw/nf-vfw-icdrawsettime)
+-   [**ICDrawStart**](/windows/desktop/api/Vfw/nf-vfw-icdrawstart)
+-   [**ICDrawStartPlay**](/windows/desktop/api/Vfw/nf-vfw-icdrawstartplay)
+-   [**ICDrawStop**](/windows/desktop/api/Vfw/nf-vfw-icdrawstop)
+-   [**ICDrawStopPlay**](/windows/desktop/api/Vfw/nf-vfw-icdrawstopplay)
+-   [**ICDrawWindow**](/windows/desktop/api/Vfw/nf-vfw-icdrawwindow)
+-   [**ICGetBuffersWanted**](/windows/desktop/api/Vfw/nf-vfw-icgetbufferswanted)
+-   [**ICGetDefaultKeyFrameRate**](/windows/desktop/api/Vfw/nf-vfw-icgetdefaultkeyframerate)
+-   [**ICGetDefaultQuality**](/windows/desktop/api/Vfw/nf-vfw-icgetdefaultquality)
+-   [**ICGetState**](/windows/desktop/api/Vfw/nf-vfw-icgetstate)
+-   [**ICGetStateSize**](/windows/desktop/api/Vfw/nf-vfw-icgetstatesize)
+-   [**ICQueryAbout**](/windows/desktop/api/Vfw/nf-vfw-icqueryabout)
+-   [**ICQueryConfigure**](/windows/desktop/api/Vfw/nf-vfw-icqueryconfigure)
+-   [**ICSetState**](/windows/desktop/api/Vfw/nf-vfw-icsetstate)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Referenz zum Video Komprimierungs-Manager](video-compression-manager-reference.md)
+[Referenz zum Videokomprimierungs-Manager](video-compression-manager-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

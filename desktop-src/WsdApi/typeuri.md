@@ -4,18 +4,18 @@ ms.assetid: dd3894a8-1848-4ae0-ba6c-42ac4fe36ff3
 title: typeUri-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c9ef0a2482354fcfd962a7e41a7c2b94b54f5cb
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 0b746a8e301d6d76e0b6dc977c1595778663c8e20860f321fd0f6c8e61980b2d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119611550"
 ---
 # <a name="typeuri-element"></a>typeUri-Element
 
 Gibt einen Typ an, der aus einer XSD-Datei eingeschlossen werden soll.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <typeUri
@@ -27,7 +27,7 @@ Gibt einen Typ an, der aus einer XSD-Datei eingeschlossen werden soll.
 
 
 
-| Attribut           | type                         | Erforderlich       | BESCHREIBUNG                                                            |
+| attribute           | Typ                         | Erforderlich       | BESCHREIBUNG                                                            |
 |---------------------|------------------------------|----------------|------------------------------------------------------------------------|
 | **type**<br/> | Zeichenfolge \_<br/> | Ja<br/> | Der Name des Typs.<br/> <br/>                           |
 | **uri**<br/>  | Zeichenfolge \_<br/> | Ja<br/> | Der Namespace des Typs. Muss ein gültiger URI sein.<br/> <br/> |
@@ -42,7 +42,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                       | BESCHREIBUNG                                                                       |
+| Element                       | Beschreibung                                                                       |
 |-------------------------------|-----------------------------------------------------------------------------------|
 | [**Xsd**](xsd.md)<br/> | Gibt eine XSD-Datei an, die für Vertragsinformationen verarbeitet werden soll.<br/> <br/> |
 

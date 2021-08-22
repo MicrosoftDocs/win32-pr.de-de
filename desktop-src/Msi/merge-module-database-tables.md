@@ -1,84 +1,84 @@
 ---
-description: Die folgenden Tabellen sind in einem standardmäßigen Mergemodul erforderlich.
+description: Die folgenden Tabellen sind in einem Standardzusammenführungsmodul erforderlich.
 ms.assetid: 2af6cea0-6d93-4aa5-a708-d305f11986ef
-title: Modul Datenbanktabellen zusammenführen
+title: Zusammenführen von Moduldatenbanktabellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 17a58240c589297cf2540625bc12180252efa42d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 201b4af776ae0b68fd4330dca8240390e5731950fdaba5a734f48d887db5be84
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351432"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119580640"
 ---
-# <a name="merge-module-database-tables"></a>Modul Datenbanktabellen zusammenführen
+# <a name="merge-module-database-tables"></a>Zusammenführen von Moduldatenbanktabellen
 
-Die folgenden Tabellen sind in einem standardmäßigen Mergemodul erforderlich.
+Die folgenden Tabellen sind in einem Standardzusammenführungsmodul erforderlich.
 
 
 
 | Tabellenname                                       | Kommentar                                                                                          |
 |--------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| [Komponente](component-table.md)                 | Benötigten                                                                                       |
-| [Verzeichnis](directory-table.md)                 | Benötigten                                                                                       |
-| [FeatureComponents](featurecomponents-table.md) | Benötigten                                                                                       |
-| [File](file-table.md)                           | Benötigten                                                                                       |
-| [ModuleSignature](modulesignature-table.md)     | Benötigten In der Installer-Datenbank zusammengeführt. Listet die Informationen auf, die ein Mergemodul identifizieren. |
-| [Modulecomponents](modulecomponents-table.md)   | Benötigten In der Installer-Datenbank zusammengeführt. Listet alle Komponenten im Mergemodul auf.     |
+| [Komponente](component-table.md)                 | (ERFORDERLICH)                                                                                       |
+| [Verzeichnis](directory-table.md)                 | (ERFORDERLICH)                                                                                       |
+| [FeatureComponents](featurecomponents-table.md) | (ERFORDERLICH)                                                                                       |
+| [File](file-table.md)                           | (ERFORDERLICH)                                                                                       |
+| [Modulesignature](modulesignature-table.md)     | (ERFORDERLICH) Zusammengeführt mit der Installer-Datenbank. Listet die Informationen auf, die ein Mergemodul identifizieren. |
+| [ModuleComponents](modulecomponents-table.md)   | (ERFORDERLICH) Zusammengeführt mit der Installer-Datenbank. Listet alle Komponenten im Mergemodul auf.     |
 
 
 
  
 
-Die folgenden Tabellen treten nur in Mergemodulen oder anderen Installer-Datenbanken auf, die bereits mit einem Mergemodul kombiniert wurden.
+Die folgenden Tabellen treten nur in Mergemodulen oder anderen Installerdatenbanken auf, die bereits mit einem Mergemodul kombiniert wurden.
 
 
 
 | Tabellenname                                     | Kommentar                                                                                                     |
 |------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| [Moduleabhängigkeit](moduledependency-table.md) | In der Installer-Datenbank zusammengeführt. Listet andere für dieses Mergemodul erforderliche Mergemodule auf.                |
-| [Moduleausschluss](moduleexclusion-table.md)   | In der Installer-Datenbank zusammengeführt. Listet andere Mergemodule auf, die mit diesem Mergemodul nicht kompatibel sind. |
+| [ModuleDependency](moduledependency-table.md) | Zusammengeführt mit der Installer-Datenbank. Listet andere Mergemodule auf, die für dieses Mergemodul erforderlich sind.                |
+| [ModuleExclusion](moduleexclusion-table.md)   | Zusammengeführt mit der Installer-Datenbank. Listet andere Mergemodule auf, die mit diesem Mergemodul nicht kompatibel sind. |
 
 
 
  
 
-Die folgenden modulesequence-Tabellen treten nur in Mergemodulen auf.
+Die folgenden ModuleSequence-Tabellen treten nur in Mergemodulen auf.
 
 
 
 | Tabellenname                                                             | Kommentar                                                                                   |
 |------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [Moduleadminuisequence](moduleadminuisequence-table.md)               | Führt Aktionen in der [Tabelle AdminUISequence](adminuisequence-table.md)zusammen.               |
-| [Moduleadminexecutesequence](moduleadminexecutesequence-table.md)     | Führt Aktionen in der [AdminExecuteSequence-Tabelle](adminexecutesequence-table.md)zusammen.     |
-| [Moduleadvtuisequence](moduleadvtuisequence-table.md)                 | Verwenden Sie diese Tabelle nicht. Weitere Informationen finden Sie unter [advtuisequence Table](advtuisequence-table.md). |
-| [Moduleadvtexecutesequence](moduleadvtexecutesequence-table.md)       | Führt Aktionen in der [AdvtExecuteSequence-Tabelle](advtexecutesequence-table.md)zusammen.       |
-| [Moduleignoretable](moduleignoretable-table.md)                       | Listet die Tabellen im Modul auf, die nicht in der MSI-Datei zusammengeführt werden.                        |
-| [Moduleinstalluisequence](moduleinstalluisequence-table.md)           | Führt Aktionen in der [Tabelle "InstallUISequence](installuisequence-table.md)" aus.           |
-| [Moduleinstallexecutesequence](moduleinstallexecutesequence-table.md) | Führt Aktionen in der [InstallExecuteSequence-Tabelle](installexecutesequence-table.md)zusammen. |
+| [ModuleAdminUISequence](moduleadminuisequence-table.md)               | Führt Aktionen in der [AdminUISequence-Tabelle zusammen.](adminuisequence-table.md)               |
+| [ModuleAdminExecuteSequence](moduleadminexecutesequence-table.md)     | Führt Aktionen in der [AdminExecuteSequence-Tabelle zusammen.](adminexecutesequence-table.md)     |
+| [ModuleAdvtUISequence](moduleadvtuisequence-table.md)                 | Verwenden Sie diese Tabelle nicht. Weitere Informationen finden Sie in der [Tabelle AdvtUISequence.](advtuisequence-table.md) |
+| [ModuleAdvtExecuteSequence](moduleadvtexecutesequence-table.md)       | Führt Aktionen in der [Tabelle AdvtExecuteSequence zusammen.](advtexecutesequence-table.md)       |
+| [ModuleIgnoreTable](moduleignoretable-table.md)                       | Listet Tabellen im Modul auf, die nicht mit der .msi zusammengeführt werden.                        |
+| [ModuleInstallUISequence](moduleinstalluisequence-table.md)           | Führt Aktionen in der [InstallUISequence-Tabelle zusammen.](installuisequence-table.md)           |
+| [ModuleInstallExecuteSequence](moduleinstallexecutesequence-table.md) | Führt Aktionen in der [InstallExecuteSequence-Tabelle zusammen.](installexecutesequence-table.md) |
 
 
 
  
 
-Die folgenden Tabellen sind in jedem konfigurierbaren Mergemodul erforderlich. Zum Erstellen eines konfigurierbaren Mergemoduls ist Mergemod.dll 2,0 oder höher erforderlich. Weitere Informationen finden Sie unter [konfigurierbare Mergemodule](configurable-merge-modules.md).
+Die folgenden Tabellen sind in jedem konfigurierbaren Mergemodul erforderlich. Mergemod.dll 2.0 oder höher ist erforderlich, um ein konfigurierbares Mergemodul zu erstellen. Weitere Informationen finden Sie unter [Konfigurierbare Mergemodule.](configurable-merge-modules.md)
 
 
 
 | Tabellenname                                                 | Kommentar                                                                                                                                                                                          |
 |------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [ModuleSubstitution-Tabelle](modulesubstitution-table.md)   | Benötigten Diese Tabelle wird nicht in der Ziel Installations Datenbank zusammengeführt. Gibt die konfigurierbaren Felder in der Zieldatenbank an und stellt eine Vorlage für die Konfiguration der einzelnen Felder bereit. |
-| [ModuleConfiguration-Tabelle](moduleconfiguration-table.md) | Benötigten Diese Tabelle wird nicht in der Ziel Installations Datenbank zusammengeführt. Identifiziert die konfigurierbaren Attribute des Moduls.                                                                 |
+| [ModuleSubsmodultabelle](modulesubstitution-table.md)   | (ERFORDERLICH) Diese Tabelle wird nicht mit der Zielinstallationsdatenbank zusammengeführt. Gibt die konfigurierbaren Felder in der Zieldatenbank an und stellt eine Vorlage für die Konfiguration der einzelnen Felder zur Verfügung. |
+| [ModuleConfiguration-Tabelle](moduleconfiguration-table.md) | (ERFORDERLICH) Diese Tabelle wird nicht mit der Zielinstallationsdatenbank zusammengeführt. Identifiziert die konfigurierbaren Attribute des Moduls.                                                                 |
 
 
 
  
 
-Die folgenden Installer-Tabellen können nicht in einem standardmäßigen Mergemodul auftreten.
+Die folgenden Installationstabellen können nicht in einem Standardzusammenführungsmodul auftreten.
 
--   [Bbcontrol](bbcontrol-table.md)
+-   [BBControl](bbcontrol-table.md)
 -   [Billboard](billboard-table.md)
--   [Ccpsearch](ccpsearch-table.md)
+-   [CCPSearch](ccpsearch-table.md)
 -   [Fehler](error-table.md)
 -   [Feature](feature-table.md)
 -   [LaunchCondition-Tabelle](launchcondition-table.md)
@@ -86,62 +86,62 @@ Die folgenden Installer-Tabellen können nicht in einem standardmäßigen Mergem
 -   [Patch](patch-table.md)
 -   [Upgrade](upgrade-table.md)
 
-Die folgenden Installer-Tabellen sind optional in Mergemodulen.
+Die folgenden Installationstabellen sind in Mergemodulen optional.
 
--   [Action Text](actiontext-table.md)
--   ["AdminExecuteSequence"](adminexecutesequence-table.md)
+-   [ActionText](actiontext-table.md)
+-   [AdminExecuteSequence](adminexecutesequence-table.md)
 -   [AdminUISequence](adminuisequence-table.md)
 -   [AdvtExecuteSequence](advtexecutesequence-table.md)
--   [Advtuisequence](advtuisequence-table.md)
+-   [AdvtUISequence](advtuisequence-table.md)
 -   [AppId](appid-table.md)
 -   [AppSearch](appsearch-table.md)
 -   [BindImage](bindimage-table.md)
 -   [CheckBox](checkbox-table.md)
 -   [Klasse](class-table.md)
 -   [ComboBox](combobox-table.md)
--   [Complocator](complocator-table.md)
+-   [CompLocator](complocator-table.md)
 -   [Steuerung](control-table.md)
 -   [ControlCondition](controlcondition-table.md)
 -   [CreateFolder](createfolder-table.md)
 -   [CustomAction](customaction-table.md)
 -   [Dialogfeld](dialog-table.md)
--   [Drlocator](drlocator-table.md)
--   [Duplicatefile](duplicatefile-table.md)
+-   [DrLocator](drlocator-table.md)
+-   [DuplicateFile](duplicatefile-table.md)
 -   [Umgebung](environment-table.md)
--   [Tabelle EventMapping](eventmapping-table.md)
+-   [EventMapping](eventmapping-table.md)
 -   [Erweiterung](extension-table.md)
 -   [Schriftart](font-table.md)
 -   [Symbol:](icon-table.md)
--   [INIFILE](inifile-table.md)
--   [Inilocator](inilocator-table.md)
+-   [IniFile](inifile-table.md)
+-   [IniLocator](inilocator-table.md)
 -   [InstallExecuteSequence](installexecutesequence-table.md)
 -   [InstallUISequence](installuisequence-table.md)
 -   [ListBox](listbox-table.md)
 -   [ListView](listview-table.md)
--   [Medi](mime-table.md)
+-   [Mime](mime-table.md)
 -   [MoveFile](movefile-table.md)
--   [Odbcatcher Tribute](odbcattribute-table.md)
--   [ODBCDatasource](odbcdatasource-table.md)
--   [Odbcdriver](odbcdriver-table.md)
--   [Odbcsourceattribute](odbcsourceattribute-table.md)
--   [Odbctranslator](odbctranslator-table.md)
+-   [ODBCAttribute](odbcattribute-table.md)
+-   [ODBCDataSource](odbcdatasource-table.md)
+-   [ODBCDriver](odbcdriver-table.md)
+-   [ODBCSourceAttribute](odbcsourceattribute-table.md)
+-   [ODBCTranslator](odbctranslator-table.md)
 -   [ProgID-Tabelle](progid-table.md)
 -   [Eigenschaft](property-table.md)
 -   [PublishComponent](publishcomponent-table.md)
 -   [RadioButton](radiobutton-table.md)
--   [Registrierungs Tabelle](registry-table.md)
--   [Reglocator](reglocator-table.md)
--   [RemoveFile aktualisieren](removefile-table.md)
--   [Removeinifile](removeinifile-table.md)
--   [Removeregistry](removeregistry-table.md)
+-   [Registrierungstabelle](registry-table.md)
+-   [RegLocator](reglocator-table.md)
+-   [RemoveFile](removefile-table.md)
+-   [RemoveIniFile](removeinifile-table.md)
+-   [RemoveRegistry](removeregistry-table.md)
 -   [ReserveCost](reservecost-table.md)
--   [Selfreg](selfreg-table.md)
+-   [SelfReg](selfreg-table.md)
 -   [ServiceControl](servicecontrol-table.md)
--   [Serviceingestall](serviceinstall-table.md)
+-   [ServiceInstall](serviceinstall-table.md)
 -   [Tastenkombination](shortcut-table.md)
 -   [Signature](signature-table.md)
--   [Textart](textstyle-table.md)
--   [Export der Typbibliothek](typelib-table.md)
+-   [TextStyle](textstyle-table.md)
+-   [Typelib](typelib-table.md)
 -   [UIText](uitext-table.md)
 -   [Verb](verb-table.md)
 

@@ -1,10 +1,10 @@
 ---
-title: MPTHREAT_DETECTION-Enumeration (mpclient. h)
-description: Mögliche bekannte Typen fehlerhafter Bedrohungserkennung.
+title: MPTHREAT_DETECTION -Enumeration (MpClient.h)
+description: Mögliche bekannte Typen der Erkennung von bedrohungsbedrohungen.
 ms.assetid: 14FCA9BD-A9A1-488B-B8E8-88DE0DF18F27
 keywords:
-- MPTHREAT_DETECTION-Enumerationsfunktionen der Legacy-Windows-Umgebung
-- PMPTHREAT_DETECTION enumerationszeiger Legacy-Windows-Umgebungs Features
+- MPTHREAT_DETECTION enumeration Legacy Windows Environment Features
+- PMPTHREAT_DETECTION enumeration pointer Legacy Windows Environment Features
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 86edc0e1ca4ee130f2a2a4a678447771f1ae40ae
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6d362edbb7257f8be5577880a4390c5a2f5f5703504a5f7447154bebe5ada500
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119601180"
 ---
-# <a name="mpthreat_detection-enumeration"></a>Mpthreat- \_ Erkennungs Enumeration
+# <a name="mpthreat_detection-enumeration"></a>MPTHREAT \_ DETECTION-Enumeration
 
-Mögliche bekannte Typen fehlerhafter Bedrohungserkennung.
+Mögliche bekannte Typen der Erkennung von bedrohungsbedrohungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,38 +45,38 @@ typedef enum tagMPTHREAT_DETECTION {
 
 <dl> <dt>
 
-<span id="MP_THREAT_DETECTION_CONCRETE"></span><span id="mp_threat_detection_concrete"></span>**MP- \_ Bedrohungs \_ Erkennung \_ konkret**
+<span id="MP_THREAT_DETECTION_CONCRETE"></span><span id="mp_threat_detection_concrete"></span>**KONKRETE \_ \_ MP-BEDROHUNGSERKENNUNG \_**
 </dt> <dd>
 
-Die Bedrohung wurde über konkrete Signaturen erkannt.
+Bedrohungen wurden über konkrete Signaturen erkannt.
 
 </dd> <dt>
 
-<span id="MP_THREAT_DETECTION_HEURISTIC"></span><span id="mp_threat_detection_heuristic"></span>**MP- \_ Bedrohungs \_ Erkennung \_ heuristic**
+<span id="MP_THREAT_DETECTION_HEURISTIC"></span><span id="mp_threat_detection_heuristic"></span>**\_ \_ HEURISTISCHE \_ MP-BEDROHUNGSERKENNUNG**
 </dt> <dd>
 
-Die Bedrohung wurde über eine Heuristik erkannt.
+Bedrohung wurde über heuristisch erkannt.
 
 </dd> <dt>
 
-<span id="MP_THREAT_DETECTION_GENERIC"></span><span id="mp_threat_detection_generic"></span>**MP- \_ Bedrohungs \_ Erkennung \_ generisch**
+<span id="MP_THREAT_DETECTION_GENERIC"></span><span id="mp_threat_detection_generic"></span>**\_ \_ MP-BEDROHUNGSERKENNUNG \_ GENERISCH**
 </dt> <dd>
 
-Die Bedrohung wurde über generische Signaturen erkannt.
+Bedrohungen wurden über generische Signaturen erkannt.
 
 </dd> <dt>
 
-<span id="MP_THREAT_DETECTION_SUSPICIOUS"></span><span id="mp_threat_detection_suspicious"></span>**MP- \_ Bedrohungs \_ Erkennung \_ verdächtig**
+<span id="MP_THREAT_DETECTION_SUSPICIOUS"></span><span id="mp_threat_detection_suspicious"></span>**\_ \_ MP-BEDROHUNGSERKENNUNG \_ VERDÄCHTIG**
 </dt> <dd>
 
-Die Bedrohungserkennung wurde durch die Verhaltens Überwachung erkannt.
+Bedrohungen wurden über die Verhaltensüberwachung erkannt.
 
 </dd> <dt>
 
-<span id="MP_THREAT_DETECTION_FASTPATH"></span><span id="mp_threat_detection_fastpath"></span>**MP- \_ Bedrohungs \_ Erkennung \_ FastPath**
+<span id="MP_THREAT_DETECTION_FASTPATH"></span><span id="mp_threat_detection_fastpath"></span>**MP \_ THREAT \_ DETECTION \_ FASTPATH**
 </dt> <dd>
 
-Die Bedrohung wurde über FastPath erkannt.
+Die Bedrohung wurde über fastpath erkannt.
 
 </dd> </dl>
 
@@ -86,9 +86,9 @@ Die Bedrohung wurde über FastPath erkannt.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

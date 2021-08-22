@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentbackupdirectorynotemptyexception-Konstruktor'
-title: Esentbackupdirectorynotemptyexception-Konstruktor
+description: 'Weitere Informationen zu: EsentBackupDirectoryNotEmptyException-Konstruktor'
+title: EsentBackupDirectoryNotEmptyException-Konstruktor
 TOCTitle: 'EsentBackupDirectoryNotEmptyException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentBackupDirectoryNotEmptyException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentbackupdirectorynotemptyexception.esentbackupdirectorynotemptyexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 202761c708e96ac28fb705ad19e53bad60cfe041
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 10608d07dae0478a9e79d6813d2a7409bda746df7f917b05b2aed9ea86923055
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119737420"
 ---
-# <a name="esentbackupdirectorynotemptyexception-constructor"></a>Esentbackupdirectorynotemptyexception-Konstruktor
+# <a name="esentbackupdirectorynotemptyexception-constructor"></a>EsentBackupDirectoryNotEmptyException-Konstruktor
 
-Initialisiert eine neue Instanz der esentbackupdirectorynotemptyexception-Klasse.
+Initialisiert eine neue Instanz der EsentBackupDirectoryNotEmptyException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentBackupDirectoryNotEmptyException()
 public EsentBackupDirectoryNotEmptyException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentbackupdirectorynotemptyexception-Klasse](./esentbackupdirectorynotemptyexception-class.md)
+[EsentBackupDirectoryNotEmptyException-Klasse](./esentbackupdirectorynotemptyexception-class.md)
 
-[Esentbackupdirectoriynotemptyexception-Member](./esentbackupdirectorynotemptyexception-members.md)
+[EsentBackupDirectoryNotEmptyException-Member](./esentbackupdirectorynotemptyexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

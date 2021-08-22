@@ -32,7 +32,7 @@ Die **IDODownloadInternal-Schnittstelle** wird verwendet, um erweiterte Download
 
 Die **IDODownloadInternal-Schnittstelle** verfügt über diese Methoden.
 
-| Methode | BESCHREIBUNG |
+| Methode | Beschreibung |
 | ---- |:---- |
 | [IDODownloadInternal::GetPropertyEx](./nf-dodownloadinternal-idodownloadinternal-getpropertyex.md) | Ruft einen Zeiger auf eine **VARIANT-Datei** ab, die einen bestimmten erweiterten Downloadeigenschaftswert enthält. |
 | [IDODownloadInternal::SetPropertyEx](./nf-dodownloadinternal-idodownloadinternal-setpropertyex.md) | Legt eine erweiterte Downloadeigenschaft fest. Die -Methode akzeptiert  einen Zeiger auf eine VARIANT-Datei, die einen bestimmten Eigenschaftswert enthält, der auf den Download angewendet werden soll. |

@@ -1,6 +1,6 @@
 ---
 title: ICM_DECOMPRESS_END Meldung (Vfw.h)
-description: Die ICM \_ DECOMPRESS \_ END-Nachricht benachrichtigt einen Videodekomprimierungstreiber, um die Dekomprimierung zu beenden und Ressourcen frei zu machen, die für die Dekomprimierung zugeordnet sind. Sie können diese Nachricht explizit oder mithilfe des IcDecompressEnd-Makros senden.
+description: Die ICM \_ DECOMPRESS \_ END-Nachricht benachrichtigt einen Videodekomprimierungstreiber über die Enddekomprimierung und kostenlose Ressourcen, die für die Dekomprimierung zugeordnet sind. Sie können diese Nachricht explizit oder mithilfe des IcDecompressEnd-Makros senden.
 ms.assetid: 16ce2424-9606-455f-afbd-84326457538e
 keywords:
 - ICM_DECOMPRESS_END Nachricht Windows Multimedia
@@ -42,7 +42,7 @@ Gibt ICERR \_ OK zurück, wenn erfolgreich, oder andernfalls ein Fehler.
 
 Der Treiber sollte alle Ressourcen freigeben, die für die [**ICM \_ DECOMPRESS \_ BEGIN-Nachricht**](icm-decompress-begin.md) zugeordnet sind.
 
-[**ICM \_ DECOMPRESS \_ BEGIN**](icm-decompress-begin.md) und **ICM \_ DECOMPRESS \_ END** werden nicht geschachtelt. Wenn Ihr Treiber **ICM \_ DECOMPRESS \_ BEGIN** empfängt, bevor die Dekomprimierung mit **ICM \_ DECOMPRESS \_ END** beendet wird, sollte die Dekomprimierung mit neuen Parametern neu gestartet werden.
+[**ICM \_ DECOMPRESS \_ BEGIN**](icm-decompress-begin.md) und **ICM \_ DECOMPRESS \_ END** werden nicht geschachtelt. Wenn Ihr Treiber **ICM \_ DECOMPRESS \_ BEGIN** empfängt, bevor die Dekomprimierung mit ICM **\_ DECOMPRESS \_ END** beendet wird, sollte die Dekomprimierung mit neuen Parametern neu gestartet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,7 +56,7 @@ Der Treiber sollte alle Ressourcen freigeben, die für die [**ICM \_ DECOMPRESS 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

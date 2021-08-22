@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob Computer den integrierten automatischen Konfigurations Dienst zum Verwalten von Verbindungen mit verkabelten Netzwerken verwenden, die Layer 2-Authentifizierung erfordern (z. b. 802.1 x).
+description: Gibt an, ob Computer den integrierten automatischen Konfigurationsdienst verwenden, um Verbindungen mit kabelgebundenen Netzwerken zu verwalten, die eine Layer-2-Authentifizierung erfordern (z.B. 802.1X).
 ms.assetid: c7a0f6bc-4d42-4d95-8483-2c480f4d8db9
-title: enableautoconfig (globalflags)-Element (LAN_policy)
+title: enableAutoConfig-Element (globalFlags) (LAN_policy)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,20 +12,20 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: af1ca32f177140bbfc6563f74df5afc519ee0c75
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2842da69b07136df80d15ea84553aecdf2c62d417c73f7ec85d9c315b819a397
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103757800"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119780200"
 ---
-# <a name="enableautoconfig-globalflags-element-lan_policy"></a>enableautoconfig (globalflags)-Element (LAN_policy)
+# <a name="enableautoconfig-globalflags-element-lan_policy"></a>enableAutoConfig-Element (globalFlags) (LAN_policy)
 
-Das **enableautoconfig** (globalflags)-Element gibt an, ob Computer den integrierten automatischen Konfigurations Dienst zum Verwalten von Verbindungen mit Kabel Netzwerken verwenden, die Layer 2-Authentifizierung erfordern (z. b. 802.1 x).
+Das **element enableAutoConfig** (globalFlags) gibt an, ob Computer den integrierten automatischen Konfigurationsdienst verwenden, um Verbindungen mit kabelgebundenen Netzwerken zu verwalten, die eine Layer-2-Authentifizierung erfordern (z.B. 802.1X).
 
-Wenn **enableautoconfig** den Wert false aufweist, dürfen Computer den integrierten automatischen Konfigurations Dienst nicht zum Verwalten von Verbindungen verwenden, für die die Layer 2-Authentifizierung erforderlich ist. Stattdessen ist das im [**ProfileList**](lan-policyschema-profilelist-lanpolicy-element.md) -Element angegebene Netzwerk das einzige Netzwerk, das für die Verbindung verfügbar ist. Der Dienst für die automatische Konfiguration antwortet nur auf Anforderungen, um den Dienst zu aktivieren.
+Wenn **enableAutoConfig** den Wert FALSE auf hat, dürfen Computer keinen integrierten automatischen Konfigurationsdienst verwenden, um Verbindungen zu verwalten, die eine Layer-2-Authentifizierung erfordern. Stattdessen ist das im [**profileList-Element**](lan-policyschema-profilelist-lanpolicy-element.md) angegebene Netzwerk das einzige netzwerk, das für die Verbindung verfügbar ist. Der automatische Konfigurationsdienst antwortet nur auf Anforderungen, um den Dienst zu aktivieren.
 
-Wenn **enableautoconfig** den Wert true aufweist, können Computer den integrierten automatischen Konfigurations Dienst verwenden, um eine Verbindung mit Kabel Netzwerken herzustellen, für die Layer 2-Authentifizierung erforderlich ist.
+Wenn **enableAutoConfig** den Wert TRUE hat, können Computer den integrierten automatischen Konfigurationsdienst verwenden, um eine Verbindung mit kabelgebundenen Netzwerken herzustellen, die eine Layer-2-Authentifizierung erfordern.
 
 ``` syntax
 <xs:element name="enableAutoConfig"
@@ -33,7 +33,7 @@ Wenn **enableautoconfig** den Wert true aufweist, können Computer den integrier
  />
 ```
 
-Das **enableautoconfig** -Element wird durch das [**globalflags**](lan-policyschema-globalflags-lanpolicy-element.md) -Element definiert.
+Das **enableAutoConfig-Element** wird durch das [**globalFlags-Element**](lan-policyschema-globalflags-lanpolicy-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,25 +41,25 @@ Das **enableautoconfig** -Element wird durch das [**globalflags**](lan-policysch
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**globalflags**](lan-policyschema-globalflags-lanpolicy-element.md)
+[**globalFlags**](lan-policyschema-globalflags-lanpolicy-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**globalflags (lanpolicy)**](lan-policyschema-globalflags-lanpolicy-element.md)
+[**globalFlags (LANPolicy)**](lan-policyschema-globalflags-lanpolicy-element.md)
 </dt> </dl>
 
  

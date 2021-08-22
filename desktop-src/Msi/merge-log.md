@@ -1,7 +1,7 @@
 ---
-description: Die Log-Methode des Merge-Objekts schreibt eine Text Zeichenfolge in die aktuell geöffnete Protokolldatei.
+description: Die Log-Methode des Merge-Objekts schreibt eine Textzeichenfolge in die derzeit geöffnete Protokolldatei.
 ms.assetid: dbfc9be7-1b0b-417e-9e2b-bf191ea255b6
-title: Merge. Log-Methode (Mergemod. h)
+title: Merge.Log-Methode (Mergemod.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Mergemod.dll
-ms.openlocfilehash: ab5524535ea44694795ebe464774c01b339e42df
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 529df34e4110d675bafc70add3225d5f4066e4eb89d83fd0656d98159566e2ec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367151"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119926550"
 ---
-# <a name="mergelog-method"></a>Merge. Log-Methode
+# <a name="mergelog-method"></a>Merge.Log-Methode
 
-Die **Log** -Methode des [**Merge**](merge-object.md) -Objekts schreibt eine Text Zeichenfolge in die aktuell geöffnete Protokolldatei.
+Die **Log-Methode** des [**Merge-Objekts**](merge-object.md) schreibt eine Textzeichenfolge in die derzeit geöffnete Protokolldatei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ Merge.Log(
 *Meldung* 
 </dt> <dd>
 
-Die Text Zeichenfolge, die in die Protokolldatei geschrieben werden soll.
+Die Textzeichenfolge, die in die Protokolldatei geschrieben werden soll.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="c"></a>C++
 
-Siehe [**Log**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-log) function.
+Weitere Informationen finden Sie unter Log function [**(Protokollfunktion).**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-log)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Siehe [**Log**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-log) function.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | Mergemod.dll 1,0 oder höher<br/>                                                    |
-| Header<br/>  | <dl> <dt>Mergemod. h</dt> </dl>   |
+| Version<br/> | Mergemod.dll 1.0 oder höher<br/>                                                    |
+| Header<br/>  | <dl> <dt>Mergemod.h</dt> </dl>   |
 | DLL<br/>     | <dl> <dt>Mergemod.dll</dt> </dl> |
 
 

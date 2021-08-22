@@ -1,6 +1,6 @@
 ---
 title: ReadWriteXmlExample
-description: Überprüfen Sie ein XML-Beispiel für Lese-/Schreibzugriff, das die Windows-Webdienst-API (WWSAPI) verwendet. In diesem Beispiel wird XML in einen XML-Puffer schreibt und dann zurückgelesen.
+description: Überprüfen Sie ein XML-Lese-/Schreibbeispiel, das Windows Web Services-API (WWSAPI) verwendet. In diesem Beispiel wird XML in einen XML-Puffer geschrieben und anschließend zurückgelesen.
 ms.assetid: e9802e3c-c8a0-4b68-bba5-cdafb7250298
 keywords:
 - ReadWriteXmlExample-Webdienste für Windows
@@ -8,16 +8,16 @@ keywords:
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a3d83230f690098958ea396e830aaa54dace1f73
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: d10ce422a8a5406c13974404353166d695f82ff978d87e838c56d0ceda353381
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112404093"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119545790"
 ---
 # <a name="readwritexmlexample"></a>ReadWriteXmlExample
 
-In diesem Beispiel wird XML in einen XML-Puffer schreibt und dann zurückgelesen.
+In diesem Beispiel wird XML in einen XML-Puffer geschrieben und anschließend zurückgelesen.
 
 -   [ReadWriteXml.cpp](#readwritexmlcpp)
 -   [PurchaseOrder.wsdl](#purchaseorderwsdl)

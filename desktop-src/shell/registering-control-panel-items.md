@@ -50,7 +50,7 @@ Spezifische Anforderungen werden in den folgenden Themen erläutert:
 [Zuweisen Systemsteuerung Kategorien](assigning-control-panel-categories.md)
 </dt> <dt>
 
-[Erstellen durchsuchbarer Aufgabenlinks für ein Systemsteuerung Element](creating-searchable-task-links.md)
+[Erstellen durchsuchbarer Aufgabenlinks für Systemsteuerung Element](creating-searchable-task-links.md)
 </dt> <dt>
 
 [Zugreifen auf die Systemsteuerung im Tresor-Modus unter Windows Vista](accessing-the-cp-in-safe-mode-under-vista.md)

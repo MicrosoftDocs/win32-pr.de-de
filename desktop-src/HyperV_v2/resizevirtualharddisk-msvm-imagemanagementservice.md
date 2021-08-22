@@ -1,7 +1,7 @@
 ---
-description: Ändert die Größe einer vorhandenen virtuellen Festplatte.
+description: Ändern der Größe einer vorhandenen virtuellen Festplatte.
 ms.assetid: 54FDCA3B-E12B-4E68-B7EE-893C9CD97E1A
-title: Resizevirtualharddisk-Methode der Msvm_ImageManagementService-Klasse
+title: ResizeVirtualHardDisk-Methode der Msvm_ImageManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 5fcd88a9063dcbe4e19705245b36af33672dfc5e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b582a79757fdf5f27a3f71d260ec6ce7cb594c434422215fb898a2575691da39
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348207"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119754880"
 ---
-# <a name="resizevirtualharddisk-method-of-the-msvm_imagemanagementservice-class"></a>Resizevirtualharddisk-Methode der MSVM \_ imagemanagementservice-Klasse
+# <a name="resizevirtualharddisk-method-of-the-msvm_imagemanagementservice-class"></a>ResizeVirtualHardDisk-Methode der Msvm \_ ImageManagementService-Klasse
 
-Ändert die Größe einer vorhandenen virtuellen Festplatte. Die virtuelle Festplatte muss offline sein. Weitere Informationen zu Nutzungseinschränkungen für diese Methode finden Sie unter Hinweise.
+Ändern der Größe einer vorhandenen virtuellen Festplatte. Die virtuelle Festplatte muss offline sein. Weitere Informationen finden Sie unter Hinweise zu Nutzungseinschränkungen für diese Methode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,36 +41,36 @@ uint32 ResizeVirtualHardDisk(
 
 <dl> <dt>
 
-*Pfad* \[ in\]
+*Pfad* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Der voll qualifizierte Pfad der virtuellen Festplatten Datei.
+Der vollqualifizierte Pfad der virtuellen Festplattendatei.
 
 </dd> <dt>
 
-*Maxinternalsize* \[ in\]
+*MaxInternalSize* \[ In\]
 </dt> <dd>
 
-Typ: **UInt64**
+Typ: **uint64**
 
-Die maximale Größe der virtuellen Festplatte, die vom virtuellen Computer angezeigt werden kann (in Bytes). Der minimale *maxinternalsize* -Wert ist *disksize* + 512-(*disksize* mod 512). *Disksize* ist die Größe der virtuellen Festplatten Datei (in Bytes). Der invalidparameter-Fehler (32773) wird zurückgegeben, wenn der angegebene *maxinternalsize* -Wert kleiner als der minimale Wert ist.
+Die maximale Größe der virtuellen Festplatte in Byte, die vom virtuellen Computer angezeigt werden kann. *MaxInternalSize minimum* value is *DiskSize* + 512 - (*DiskSize* mod 512). *DiskSize ist* die Größe der virtuellen Festplattendatei in Bytes. Der InvalidParameter-Fehler (32773) wird zurückgegeben, wenn der angegebene *MaxInternalSize-Wert* kleiner als der Mindestwert ist.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Typ: **[ **CIM \_ bettejob**](/previous-versions//cc136808(v=vs.85))**
+Typ: **[ **CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))**
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
 Diese Methode kann einen der folgenden Werte zurückgeben.
 
@@ -79,10 +79,10 @@ Diese Methode kann einen der folgenden Werte zurückgeben.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -91,54 +91,54 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei dieser Methode können nur die folgenden Typen von virtuellen Festplatten verwendet werden, wenn die Größe der virtuellen Festplatte zunimmt:
+Mit dieser Methode können nur die folgenden Arten von virtuellen Festplatten verwendet werden, wenn die Größe der virtuellen Festplatte erhöht wird:
 
--   Festgelegte VHD
--   Festes vhdx
+-   Behobene VHD
+-   VHDX behoben
 -   Dynamische VHD
--   Dynamische vhdx-Datei
--   Differenzierende vhdx
+-   Dynamische VHDX
+-   Unterscheidende VHDX
 
-Mit dieser Methode können nur die folgenden Typen von virtuellen Festplatten verwendet werden, wenn die Größe der virtuellen Festplatte verringert wird:
+Mit dieser Methode können nur die folgenden Arten von virtuellen Festplatten verwendet werden, wenn die Größe der virtuellen Festplatte verringert wird:
 
--   Festes vhdx
--   Dynamische vhdx-Datei
--   Differenzierende vhdx
+-   VHDX behoben
+-   Dynamische VHDX
+-   Unterscheidende VHDX
 
-Der Zugriff auf die [**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md) -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ ImageManagementService-Klasse**](msvm-imagemanagementservice.md) kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden c#-Beispiel wird eine virtuelle Festplatten Datei erweitert. Die Dienstprogramme, auf die verwiesen wird, finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (v2)](common-utilities-for-the-virtualization-samples-v2.md).
+Im folgenden C#-Beispiel wird eine virtuelle Festplattendatei erweitert. Die referenzierten Hilfsprogramme finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (V2).](common-utilities-for-the-virtualization-samples-v2.md)
 
 
 ```CSharp
@@ -179,22 +179,22 @@ public static void ResizeVirtualHardDisk(string path, UInt64 maxInternalSize)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ concretejob**](/previous-versions//cc136808(v=vs.85))
+[**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))
 </dt> <dt>
 
-[**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md)
+[**Msvm \_ ImageManagementService**](msvm-imagemanagementservice.md)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
 title: Object-Category-Attribut
-description: Ein Objektklassen Name, der zum Gruppieren von Objekten dieser oder abgeleiteten Klassen verwendet wird.
+description: Ein Objektklassenname, der zum Gruppieren von Objekten dieser oder abgeleiteter Klassen verwendet wird.
 ms.assetid: 06fd0314-08b0-49eb-867c-463f7e0afee4
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Object-Category-Attribut
+- Object-Category AD-Schema
 - objectCategory-Attribut AD-Schema
 topic_type:
 - apiref
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b828e4d466b1013ab3854232859a69707553775f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ae88dfc20a2409d7fcb3e69dd19995c5c210a591c2192d5dacf5233ee5aea859
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119925335"
 ---
 # <a name="object-category-attribute"></a>Object-Category-Attribut
 
-Ein Objektklassen Name, der zum Gruppieren von Objekten dieser oder abgeleiteten Klassen verwendet wird.
+Ein Objektklassenname, der zum Gruppieren von Objekten dieser oder abgeleiteter Klassen verwendet wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------------------|
 | CN                | Object-Category                                  |
-| LDAP-Display-Name | objectCategory                                   |
-| Size              | Im Durchschnitt ungefähr 20 Bytes.                       |
-| Berechtigung aktualisieren  | Dieser Wert wird vom Designer des-Objekts festgelegt. |
-| Aktualisierungshäufigkeit  | Dieser Wert sollte sich nie ändern.                  |
+| Ldap-Anzeigename | objectCategory                                   |
+| Size              | Durchschnittlich ca. 20 Bytes.                       |
+| Aktualisieren von Berechtigungen  | Der Designer des -Objekts würde diesen Wert festlegen. |
+| Updatehäufigkeit  | Dieser Wert sollte sich nie ändern.                  |
 | Attribute-Id      | 1.2.840.113556.1.4.782                           |
-| System-ID-GUID    | 26d97369-6070-11d1-a9c6-0000b80367c1             |
+| System-Id-Guid    | 26d97369-6070-11d1-a9c6-0000f80367c1             |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md)          |
 
 
@@ -43,7 +43,7 @@ Ein Objektklassen Name, der zum Gruppieren von Objekten dieser oder abgeleiteten
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,11 +58,11 @@ Ein Objektklassen Name, der zum Gruppieren von Objekten dieser oder abgeleiteten
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
 | Ist indiziert             | Richtig                            |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000001                      |
@@ -71,7 +71,7 @@ Ein Objektklassen Name, der zum Gruppieren von Objekten dieser oder abgeleiteten
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,11 +79,11 @@ Ein Objektklassen Name, der zum Gruppieren von Objekten dieser oder abgeleiteten
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
 | Ist indiziert             | Richtig                            |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000001                      |
@@ -100,11 +100,11 @@ Ein Objektklassen Name, der zum Gruppieren von Objekten dieser oder abgeleiteten
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
 | Ist indiziert             | Richtig                            |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000001                      |
@@ -121,11 +121,11 @@ Ein Objektklassen Name, der zum Gruppieren von Objekten dieser oder abgeleiteten
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
 | Ist indiziert             | Richtig                            |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000001                      |
@@ -142,11 +142,11 @@ Ein Objektklassen Name, der zum Gruppieren von Objekten dieser oder abgeleiteten
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
 | Ist indiziert             | Richtig                            |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000001                      |
@@ -163,11 +163,11 @@ Ein Objektklassen Name, der zum Gruppieren von Objekten dieser oder abgeleiteten
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
 | Ist indiziert             | Richtig                            |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000001                      |
@@ -184,11 +184,11 @@ Ein Objektklassen Name, der zum Gruppieren von Objekten dieser oder abgeleiteten
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
 | Ist indiziert             | Richtig                            |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000001                      |

@@ -1,11 +1,11 @@
 ---
-title: MS-DNS-RFC5011-Key-Rollovers-Attribut
-description: Ein Attribut, das definiert, ob die DNS-Zone mit schlüsselrolloverprozeduren verwaltet werden soll, die in RFC 5011 definiert sind.
+title: ms-DNS-RFC5011-Key-Rollovers-Attribut
+description: Ein Attribut, das definiert, ob die DNS-Zone mithilfe der in RFC 5011 definierten Schlüsselrolloververfahren beibehalten werden soll.
 ms.assetid: 49ad29bb-63ea-4c69-9782-65c94d60569d
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des MS-DNS-RFC5011-Key-Rollovers-Attributs
-- MSDNs-RFC5011KeyRollovers-Attribut AD-Schema
+- MS-DNS-RFC5011-Key-Rollovers-Attribut AD-Schema
+- MSDNS-RFC5011KeyRollovers-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,29 +14,29 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f07300f1fe0696e3f53b5db9380126f280dd1fb3
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c9b0eead66ec13ca1f003f64eb0ffb0238b430c8c74576884bd54dd8896596e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104520199"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119552990"
 ---
-# <a name="ms-dns-rfc5011-key-rollovers-attribute"></a>MS-DNS-RFC5011-Key-Rollovers-Attribut
+# <a name="ms-dns-rfc5011-key-rollovers-attribute"></a>ms-DNS-RFC5011-Key-Rollovers-Attribut
 
-Ein Attribut, das definiert, ob die DNS-Zone mit schlüsselrolloverprozeduren verwaltet werden soll, die in RFC 5011 definiert sind.
+Ein Attribut, das definiert, ob die DNS-Zone mithilfe der in RFC 5011 definierten Schlüsselrolloververfahren beibehalten werden soll.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DNS-RFC5011-Key-Rollovers         |
-| LDAP-Display-Name | MSDNs-RFC5011KeyRollovers            |
+| CN                | ms-DNS-RFC5011-Key-Rollovers         |
+| Ldap-Anzeigename | msDNS-RFC5011KeyRollovers            |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2135              |
-| System-ID-GUID    | 27d93c40-065a-43c0-bdd8-cdf2c7d120aa |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-Id-Guid    | 27d93c40-065a-43c0-bdd8-cdf2c7d120aa |
+| Syntax            | [**Boolesch**](s-boolean.md)         |
 
 
 
@@ -53,10 +53,10 @@ Ein Attribut, das definiert, ob die DNS-Zone mit schlüsselrolloverprozeduren ve
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
+| Is-Single-Valued       | True                                     |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000008                               |

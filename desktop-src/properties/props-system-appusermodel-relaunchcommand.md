@@ -1,5 +1,5 @@
 ---
-description: Gibt einen Befehl an, der über ShellExecute ausgeführt werden kann, um eine Anwendung zu starten, wenn sie an die Taskleiste angeheftet ist oder wenn eine neue Instanz der Anwendung über die Anwendungsinstanz gestartet Sprungliste.
+description: Gibt einen Befehl an, der über ShellExecute ausgeführt werden kann, um eine Anwendung zu starten, wenn sie an die Taskleiste angeheftet wird oder wenn eine neue Instanz der Anwendung über die Sprungliste der Anwendung gestartet wird.
 ms.assetid: 83aab060-0629-48e3-a2db-9ba96a8631e5
 title: System.AppUserModel.NeustartCommand
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "119554520"
 ---
 # <a name="systemappusermodelrelaunchcommand"></a>System.AppUserModel.NeustartCommand
 
-Gibt einen Befehl an, der über [**ShellExecute**](/windows/win32/api/shellapi/nf-shellapi-shellexecutea) ausgeführt werden kann, um eine Anwendung zu starten, wenn sie an die Taskleiste angeheftet ist oder wenn eine neue Instanz der Anwendung über die Anwendungsinstanz gestartet Sprungliste.
+Gibt einen Befehl an, der über [**ShellExecute**](/windows/win32/api/shellapi/nf-shellapi-shellexecutea) ausgeführt werden kann, um eine Anwendung zu starten, wenn sie an die Taskleiste angeheftet wird oder wenn eine neue Instanz der Anwendung über die Sprungliste der Anwendung gestartet wird.
 
 Einige Beispiele dafür sind:
 
@@ -28,7 +28,7 @@ notepad.exe
 
 
 
-Diese Eigenschaft wird nur verwendet, wenn ein Fenster über eine explizite Anwendungsbenutzermodell-ID (AppUserModelID) verfügt ([System.AppUserModel.ID](./props-system-appusermodel-id.md), festgelegt durch [**SHGetPropertyStoreForWindow**](/windows/desktop/api/Shellapi/nf-shellapi-shgetpropertystoreforwindow)). Wenn das Fenster nicht über eine explizite AppUserModelID verfügt, wird diese Eigenschaft ignoriert, und das Fenster wird so gruppiert und angeheftet, als wäre es Teil des Prozesses, der es besitzt. Weitere Informationen zur Anwendung expliziter AppUserModelIDs und deren Auswirkungen auf das Anheften der Taskleiste finden Sie unter [Anwendungsbenutzermodell-IDs (AppUserModelIDs).](../shell/appids.md)
+Diese Eigenschaft wird nur verwendet, wenn ein Fenster über eine explizite Anwendungsbenutzermodell-ID (AppUserModelID) ([System.AppUserModel.ID](./props-system-appusermodel-id.md), festgelegt über [**SHGetPropertyStoreForWindow**](/windows/desktop/api/Shellapi/nf-shellapi-shgetpropertystoreforwindow)) verfügt. Wenn das Fenster nicht über eine explizite AppUserModelID verfügt, wird diese Eigenschaft ignoriert, und das Fenster wird gruppiert und angeheftet, als wäre es Teil des Prozesses, der es besitzt. Weitere Informationen zur Anwendung expliziter AppUserModelIDs und deren Auswirkungen auf das Anheften auf die Taskleiste finden Sie unter [Anwendungsbenutzermodell-IDs (AppUserModelIDs).](../shell/appids.md)
 
 Diese Eigenschaft soll von Anwendungen oder Fenstern verwendet werden, die nicht standardmäßige Neustartinformationen bereitstellen möchten.
 
@@ -37,14 +37,14 @@ Diese Eigenschaft soll von Anwendungen oder Fenstern verwendet werden, die nicht
 
  
 
-Diese Eigenschaft kann zusammen mit [System.AppUserModel.DisplayNameResource](./props-system-appusermodel-relaunchdisplaynameresource.md) und [System.AppUserModel.PersistentIconResource](./props-system-appusermodel-relaunchiconresource.md) verwendet werden, um ein Fenster visuell als Anwendung für den Benutzer zu definieren. Dies ist nützlich für Hostanwendungsszenarien, in denen eine einzelne Hostinstanz mehrere untergeordnete Anwendungen ausgeführt. Ein virtueller Computer, der mehrere virtualisierte Anwendungen hostet, möchte beispielsweise, dass diese virtualisierten Anwendungen dem Benutzer als einzelne Anwendungen angezeigt werden. Der virtuelle Computer könnte jedes Fenster mit einer expliziten AppUserModelID und den entsprechenden Neugestaltungseigenschaften beschriften, damit sie als Anwendungen angezeigt werden. Der Benutzer könnte sie dann an die Taskleiste anheften und die angeheftete Instanz "neu starten".
+Diese Eigenschaft kann zusammen mit [System.AppUserModel.UsernameDisplayNameResource](./props-system-appusermodel-relaunchdisplaynameresource.md) und [System.AppUserModel.IconResource](./props-system-appusermodel-relaunchiconresource.md) verwendet werden, um ein Fenster visuell als Anwendung für den Benutzer zu definieren. Dies ist nützlich für Hostanwendungsszenarien, in denen eine einzelne Hostinstanz mehrere untergeordnete Anwendungen ausführt. Beispielsweise könnte ein virtueller Computer, der mehrere virtualisierte Anwendungen hostet, möchten, dass diese virtualisierten Anwendungen dem Benutzer als einzelne Anwendungen angezeigt werden. Der virtuelle Computer kann jedes Fenster mit einer expliziten AppUserModelID und den entsprechenden Neustarteigenschaften bezeichnen, damit sie als Anwendungen angezeigt werden. Der Benutzer kann sie dann an die Taskleiste anheften und die angeheftete Instanz "neu starten".
 
 > [!Note]  
-> Diese Eigenschaft wird ignoriert, wenn [System.AppUserModel.PreventPinning](./props-system-appusermodel-preventpinning.md) festgelegt ist. Dadurch kann eine Anwendung die Gruppierung ihrer Fenster steuern, indem ihnen explizite AppUserModelIDs zugewiesen werden, diese Fenster jedoch nicht angeheftet werden.
+> Diese Eigenschaft wird ignoriert, wenn [System.AppUserModel.PreventPinning](./props-system-appusermodel-preventpinning.md) festgelegt ist. Dadurch kann eine Anwendung die Gruppierung ihrer Fenster steuern, indem sie ihnen explizite AppUserModelIDs zuweist, aber verhindert, dass diese Fenster angeheftet werden.
 
  
 
-Verwenden Sie zum Festlegen dieser Eigenschaft für ein Fenster [**SHGetPropertyStoreForWindow,**](/windows/desktop/api/Shellapi/nf-shellapi-shgetpropertystoreforwindow) um den Eigenschaftenspeicher des Fensters abzurufen, und verwenden Sie die Methoden des [**abgerufenen IPropertyStore-Objekts,**](/windows/win32/api/propsys/nn-propsys-ipropertystore) um die [System.AppUserModel.TargetingCommand-Eigenschaft]() dieses Fensters festlegen.
+Um diese Eigenschaft für ein Fenster festzulegen, verwenden Sie [**SHGetPropertyStoreForWindow,**](/windows/desktop/api/Shellapi/nf-shellapi-shgetpropertystoreforwindow) um den Eigenschaftenspeicher des Fensters abzurufen, und verwenden Sie die Methoden von , die das [**IPropertyStore-Objekt**](/windows/win32/api/propsys/nn-propsys-ipropertystore) abgerufen haben, um die [System.AppUserModel.GineCommand-Eigenschaft]() dieses Fensters festzulegen.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7
 

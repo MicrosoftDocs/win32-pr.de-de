@@ -1,19 +1,19 @@
 ---
-description: Der folgende Code entlädt ein Symbol Modul, auf das von der baseofdll-Modul Adresse mithilfe von SymUnloadModule64 verwiesen wird.
+description: Der folgende Code entlädt ein Symbolmodul, auf das von der BaseOfDll-Moduladresse verwiesen wird, mithilfe von SymUnloadModule64.
 ms.assetid: f185ae64-1de9-4139-acd5-7c3a108e1eba
-title: Entladen eines Symbol Moduls
+title: Entladen eines Symbolmoduls
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d84b6fad0177fce36865e90dadf04bd563130789
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 0da437fe0ce188e3559280d2bc347f3b976aba52adbf8e4a0306e4e469747435
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119929280"
 ---
-# <a name="unloading-a-symbol-module"></a>Entladen eines Symbol Moduls
+# <a name="unloading-a-symbol-module"></a>Entladen eines Symbolmoduls
 
-Der folgende Code entlädt ein Symbol Modul, auf das von der baseofdll-Modul Adresse mithilfe von [**SymUnloadModule64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symunloadmodule)verwiesen wird.
+Der folgende Code entlädt mithilfe von [**SymUnloadModule64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symunloadmodule)ein Symbolmodul, auf das von der Moduladresse BaseOfDll verwiesen wird.
 
 
 ```C++
@@ -35,7 +35,7 @@ else
 
 <dl> <dt>
 
-[Laden eines Symbol Moduls](loading-a-symbol-module.md)
+[Laden eines Symbolmoduls](loading-a-symbol-module.md)
 </dt> </dl>
 
  

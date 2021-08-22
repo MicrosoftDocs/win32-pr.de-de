@@ -1,6 +1,6 @@
 ---
 title: IBackgroundCopyJob GetNoProgressTimeout-Methode (Deliveryoptimization.h)
-description: Ruft die Zeitspanne ab, die der Dienst versucht, die Datei zu übertragen, nachdem ein vorübergehender Fehler auftritt. Wenn ein Fortschritt vorliegt, wird der Timer zurückgesetzt.
+description: Ruft die Zeitdauer ab, die der Dienst versucht, die Datei zu übertragen, nachdem ein vorübergehender Fehler aufgetreten ist. Wenn ein Fortschritt vor sich geht, wird der Timer zurückgesetzt.
 ms.assetid: 3C31A15B-62EF-4807-8EC3-78BAEA3E23AE
 keywords:
 - GetNoProgressTimeout-Methode
@@ -26,7 +26,7 @@ ms.locfileid: "119755430"
 ---
 # <a name="ibackgroundcopyjobgetnoprogresstimeout-method"></a>IBackgroundCopyJob::GetNoProgressTimeout-Methode
 
-Ruft die Zeitspanne ab, die der Dienst versucht, die Datei zu übertragen, nachdem ein vorübergehender Fehler auftritt. Wenn ein Fortschritt vorliegt, wird der Timer zurückgesetzt.
+Ruft die Zeitdauer ab, die der Dienst versucht, die Datei zu übertragen, nachdem ein vorübergehender Fehler aufgetreten ist. Wenn ein Fortschritt vor sich geht, wird der Timer zurückgesetzt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ HRESULT GetNoProgressTimeout(
 *pRetryPeriod* \[ In\]
 </dt> <dd>
 
-Die Zeitspanne in Sekunden, in der der Dienst versucht, die Datei nach einem vorübergehenden Fehler zu übertragen.
+Die Zeitdauer in Sekunden, die der Dienst versucht, die Datei zu übertragen, nachdem ein vorübergehender Fehler aufgetreten ist.
 
 </dd> </dl>
 
@@ -58,7 +58,7 @@ Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 | Rückgabecode                                                                              | Beschreibung                                     |
 |------------------------------------------------------------------------------------------|-------------------------------------------------|
-| <dl> <dt>S_OK</dt> </dl> | Das Time out wurde erfolgreich abgerufen.<br/> |
+| <dl> <dt>S_OK S_OK</dt> </dl> | Das Time out wurde erfolgreich abgerufen.<br/> |
 
 
 
@@ -70,8 +70,8 @@ Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur Desktop-Apps der Version 1709) \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
 | Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
@@ -80,7 +80,7 @@ Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

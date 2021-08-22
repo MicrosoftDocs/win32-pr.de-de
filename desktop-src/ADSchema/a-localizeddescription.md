@@ -121,7 +121,7 @@ Die Lokalisierungs-ID und der Anzeigename für ein Objekt.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist einwertig       | False                                                              |
+| Is-Single-Valued       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
@@ -142,7 +142,7 @@ Die Lokalisierungs-ID und der Anzeigename für ein Objekt.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist einwertig       | False                                                              |
+| Is-Single-Valued       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
@@ -163,7 +163,7 @@ Die Lokalisierungs-ID und der Anzeigename für ein Objekt.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist einwertig       | False                                                              |
+| Is-Single-Valued       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |

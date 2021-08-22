@@ -1,66 +1,66 @@
 ---
-description: Das NTFS-Dateisystem verwendet Lempel-Ziv Komprimierung, bei der es sich um einen Verlust losen Komprimierungs Algorithmus handelt.
+description: Das NTFS-Dateisystem verwendet Lempel-Ziv Komprimierung, bei der es sich um einen verlustlosen Komprimierungsalgorithmus handelt.
 ms.assetid: 35a9fb47-5a73-479c-8fe0-5a2b07705536
-title: Dateikomprimierung und-Dekomprimierung
+title: Dateikomprimierung und Dekomprimierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 73d1aa9d8d3540eff85413c03358fd1ba7e21300
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f61c19449d1bfb31dfdd6e55e8c5ffa204bda36af597c43204693c55b13254e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364225"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119927800"
 ---
-# <a name="file-compression-and-decompression"></a>Dateikomprimierung und-Dekomprimierung
+# <a name="file-compression-and-decompression"></a>Dateikomprimierung und Dekomprimierung
 
-Die NTFS-Dateisystemvolumes unterstützen die Dateikomprimierung auf einer einzelnen Datei Basis. Der vom NTFS-Dateisystem verwendete Datei Komprimierungs Algorithmus ist Lempel-Ziv Komprimierung. Dies ist ein *verlustfreier* Komprimierungs Algorithmus. Dies bedeutet, dass beim Komprimieren und Dekomprimieren der Datei keine Daten verloren gehen, und nicht im *Gegensatz zu* Verlusts-Komprimierungs Algorithmen wie JPEG, bei denen bei der Datenkomprimierung und-Dekomprimierung einige Daten verloren gehen.
+Die NTFS-Dateisystemvolumes unterstützen die Dateikomprimierung auf Einzeldateibasis. Der vom NTFS-Dateisystem verwendete Dateikomprimierungsalgorithmus ist Lempel-Ziv Komprimierung. Dies  ist ein verlustfreier Komprimierungsalgorithmus, der bedeutet, dass beim Komprimieren  und Dekomprimieren der Datei keine Daten verloren gehen, im Gegensatz zu verlustbehafteten Komprimierungsalgorithmen wie JPEG, bei denen einige Daten bei jeder Datenkomprimierung und Dekomprimierung verloren gehen.
 
-Durch die Datenkomprimierung wird die Größe einer Datei reduziert, indem redundante Daten minimiert werden. In einer Textdatei können redundante Daten häufig vorkommen, z. b. das Leerzeichen oder allgemeine Vokale, wie z. b. Buchstaben e und a. Es kann sich auch um häufig auftretende Zeichen folgen handeln. Durch die Datenkomprimierung wird eine komprimierte Version einer Datei erstellt, indem diese redundante Daten minimiert werden.
+Die Datenkomprimierung reduziert die Größe einer Datei, indem redundante Daten minimiert werden. In einer Textdatei können redundante Daten häufig vorkommende Zeichen sein, z. B. das Leerzeichen oder allgemeine Vokale, z. B. die Buchstaben e und a; es kann auch häufig vorkommende Zeichenfolgen sein. Die Datenkomprimierung erstellt eine komprimierte Version einer Datei, indem diese redundanten Daten minimiert werden.
 
-Jeder Typ von Daten Komprimierungs Algorithmus minimiert redundante Daten auf eindeutige Weise. Der *Huffman-Codierungs Algorithmus* weist z. b. Zeichen in einer Datei anhand der Häufigkeit, mit der diese Zeichen auftreten, einen Code zu. Ein anderer Komprimierungs Algorithmus, der als *Lauflängen Codierung* bezeichnet wird, generiert einen zweiteiligen Wert für wiederholte Zeichen: der erste Teil gibt an, wie oft das Zeichen wiederholt wird, und der zweite Teil gibt das Zeichen an. Ein anderer Komprimierungs Algorithmus, der als *Lempel-Ziv-Algorithmus* bezeichnet wird, konvertiert Zeichen folgen variabler Länge in Codes mit fester Länge, die weniger Speicherplatz als die ursprünglichen Zeichen folgen verbrauchen.
+Jeder Typ von Datenkomprimierungsalgorithmus minimiert redundante Daten auf einzigartige Weise. Beispielsweise weist der *Huffman-Codierungsalgorithmus* Zeichen in einer Datei basierend darauf, wie häufig diese Zeichen auftreten, einen Code zu. Ein anderer Komprimierungsalgorithmus, der als Codierung der Ausführungslänge bezeichnet *wird,* generiert einen zweiteilige Wert für wiederholte Zeichen: Der erste Teil gibt an, wie oft das Zeichen wiederholt wird, und der zweite Teil identifiziert das Zeichen. Ein weiterer Komprimierungsalgorithmus, der *auch als Algorithmus Fürpel-Ziv* bezeichnet wird, konvertiert Zeichenfolgen variabler Länge in Codes fester Länge, die weniger Speicherplatz als die ursprünglichen Zeichenfolgen verbrauchen.
 
-## <a name="the-ntfs-file-system-file-compression"></a>Dateikomprimierung des NTFS-Dateisystems
+## <a name="the-ntfs-file-system-file-compression"></a>Die NTFS-Dateisystemdateikomprimierung
 
-Auf dem NTFS-Dateisystem wird die Komprimierung transparent ausgeführt. Dies bedeutet, dass Sie ohne Änderungen an vorhandenen Anwendungen verwendet werden kann. Die komprimierten Bytes der Datei sind für Anwendungen nicht zugänglich. Es werden nur die unkomprimierten Daten angezeigt. Daher können Anwendungen, die eine komprimierte Datei öffnen, so funktionieren, als wäre sie nicht komprimiert. Diese Dateien können jedoch nicht in ein anderes Dateisystem kopiert werden.
+Im NTFS-Dateisystem erfolgt die Komprimierung transparent. Dies bedeutet, dass es ohne Änderungen an vorhandenen Anwendungen verwendet werden kann. Die komprimierten Bytes der Datei sind für Anwendungen nicht zugänglich. sie sehen nur die unkomprimierten Daten. Daher können Anwendungen, die eine komprimierte Datei öffnen, damit arbeiten, als wäre sie nicht komprimiert. Diese Dateien können jedoch nicht in ein anderes Dateisystem kopiert werden.
 
-Wenn Sie eine Datei mit einer Größe von mehr als 30 Gigabyte komprimieren, wird die Komprimierung möglicherweise nicht erfolgreich ausgeführt.
+Wenn Sie eine Datei komprimieren, die größer als 30 Gigabyte ist, ist die Komprimierung möglicherweise nicht erfolgreich.
 
-In den folgenden Themen wird die Dateikomprimierung des NTFS-Dateisystems identifiziert:
+In den folgenden Themen wird die NTFS-Dateisystemdateikomprimierung identifiziert:
 
--   [Komprimierungs Attribut](compression-attribute.md)
--   [Komprimierungs Status](compression-state.md)
+-   [Komprimierungsattribut](compression-attribute.md)
+-   [Komprimierungsstatus](compression-state.md)
 -   [Abrufen der Größe einer komprimierten Datei](obtaining-the-size-of-a-compressed-file.md)
 
-## <a name="file-compression-and-decompression-libraries"></a>Dateien zum Komprimieren und Dekomprimieren von Dateien
+## <a name="file-compression-and-decompression-libraries"></a>Dateikomprimierungs- und Dekomprimierungsbibliotheken
 
-Die Dateien für die Dateikomprimierung und-Dekomprimierung nehmen eine vorhandene Datei oder Dateien an und erstellen eine Datei oder Dateien, die komprimierte Versionen der Originalversionen sind. Die Komprimierung ist ebenfalls verlustfrei, aber die Komprimierung ist für Anwendungen nicht transparent. Eine Anwendung kann nur für solche Dateien mit Unterstützung einer Datei Komprimierungs Bibliothek verwendet werden. Darüber hinaus können Sie für solche Dateien nur eine komprimierte Datei aus einem Original erstellen und die ursprünglichen Daten der dekomprimierten Version wiederherstellen. Die Bearbeitung wird in der Regel nicht unterstützt, und die Suche ist begrenzt, wenn Sie überhaupt unterstützt wird
+Die Dateikomprimierungs- und Dekomprimierungsbibliotheken verwenden eine oder mehrere vorhandene Dateien und erzeugen eine oder mehrere Dateien, bei denen es sich um komprimierte Versionen der Originaldateien handelt. Die Komprimierung ist ebenfalls verlustfrei, aber die Komprimierung ist für Anwendungen nicht transparent. Eine Anwendung kann solche Dateien nur mithilfe einer Dateikomprimierungsbibliothek verwenden. Darüber hinaus sind die einzigen Vorgänge, die Sie für solche Dateien ausführen können, das Erstellen einer komprimierten Datei aus einem Original und das Wiederherstellen der ursprünglichen Daten aus der dekomprimierten Version. Die Bearbeitung wird in der Regel nicht unterstützt, und die Suchfunktionen sind eingeschränkt, wenn sie überhaupt unterstützt werden.
 
-In der Regel Ruft eine Anwendung Funktionen in Lz32.dll auf, um mit Compress.exe komprimierte Daten zu dekomprimieren. Die Funktionen können auch Dateien verarbeiten, ohne zu versuchen, Sie zu dekomprimieren.
+In der Regel ruft eine Anwendung Funktionen in Lz32.dll, um Daten zu dekomprimieren, die mithilfe von Compress.exe. Die Funktionen können auch Dateien verarbeiten, ohne zu versuchen, sie zu dekomprimieren.
 
-Sie können die Funktionen in Lz32.dll verwenden, um einzelne oder mehrere Dateien zu dekomprimieren. Sie können Sie auch verwenden, um komprimierte Dateien zu einem Teil gleichzeitig zu dekomprimieren.
+Sie können die Funktionen in Lz32.dll, um einzelne oder mehrere Dateien zu dekomprimieren. Sie können sie auch verwenden, um komprimierte Dateien nach und nach zu dekomprimieren.
 
-In den folgenden Themen wird die Datei Dekomprimierung identifiziert, die von den Funktionen in Lz32.dll bereitgestellt wird:
+In den folgenden Themen wird die Dateidekomprimierung identifiziert, die von den Funktionen in Lz32.dll:
 
 -   [Dekomprimieren einer einzelnen Datei](decompressing-a-single-file.md)
 -   [Dekomprimieren mehrerer Dateien](decompressing-multiple-files.md)
 -   [Lesen aus komprimierten Dateien](reading-from-compressed-files.md)
 
-## <a name="cabinets"></a>Schrank
+## <a name="cabinets"></a>Schränke
 
-Schränke werden von einer Komprimierungs Bibliothek erstellt, die Funktionen wie die Datenträger Aufteilung und die Komprimierung mit mehreren Dateien unterstützt. Weitere Informationen finden Sie unter CAB Software Development Kit: [https://msdn.microsoft.com/library/dncabsdk/html/cabdl.asp](/previous-versions/ms974336(v=msdn.10)) .
+Schränken werden von einer Komprimierungsbibliothek erstellt, die Features wie Datenträgerübergreifende und Multidateikomprimierung unterstützt. Weitere Informationen finden Sie im Cabinet Software Development Kit: [https://msdn.microsoft.com/library/dncabsdk/html/cabdl.asp](/previous-versions/ms974336(v=msdn.10)) .
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                             | BESCHREIBUNG                                                                                                                              |
+| Thema                                                                                             | Beschreibung                                                                                                                              |
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| [Komprimierungs Attribut](compression-attribute.md)<br/>                                     | Auf einem NTFS-Dateisystem Volume weist jede Datei und jedes Verzeichnis ein *Komprimierungs Attribut* auf.<br/>                                         |
-| [Komprimierungs Status](compression-state.md)<br/>                                             | Jede Datei und jedes Verzeichnis auf einem Volume, das die Komprimierung für einzelne Dateien und Verzeichnisse unterstützt, hat einen *Komprimierungs Status*.<br/> |
-| [Abrufen der Größe einer komprimierten Datei](obtaining-the-size-of-a-compressed-file.md)<br/> | Verwenden Sie die getcompressedfilesize-Funktion, um die komprimierte Größe einer Datei zu erhalten.<br/>                                               |
-| [Dekomprimieren einer einzelnen Datei](decompressing-a-single-file.md)<br/>                         | Eine Anwendung kann eine einzelne komprimierte Datei dekomprimieren, indem Sie die lzopenfile-, lzcopy-und lzclose-Funktionen verwendet.<br/>                |
-| [Dekomprimieren mehrerer Dateien](decompressing-multiple-files.md)<br/>                       | Eine Anwendung kann mehrere Dateien mithilfe der Funktionen lzopenfile, lzcopy und lzclose dekomprimieren.<br/>                          |
-| [Lesen aus komprimierten Dateien](reading-from-compressed-files.md)<br/>                     | Eine Anwendung kann eine komprimierte Datei Teil Weise dekomprimieren, indem Sie die lzseek-und lzread-Funktionen verwendet.<br/>                 |
+| [Komprimierungsattribut](compression-attribute.md)<br/>                                     | Auf einem NTFS-Dateisystem-Volume verfügt jede Datei und jedes Verzeichnis über das *Komprimierungsattribut*.<br/>                                         |
+| [Komprimierungsstatus](compression-state.md)<br/>                                             | Jede Datei und jedes Verzeichnis auf einem Volume, das die Komprimierung für einzelne Dateien und Verzeichnisse unterstützt, hat den *Komprimierungsstatus*.<br/> |
+| [Abrufen der Größe einer komprimierten Datei](obtaining-the-size-of-a-compressed-file.md)<br/> | Um die komprimierte Größe einer Datei zu erhalten, verwenden Sie die GetCompressedFileSize-Funktion.<br/>                                               |
+| [Dekomprimieren einer einzelnen Datei](decompressing-a-single-file.md)<br/>                         | Eine Anwendung kann eine einzelne komprimierte Datei mithilfe der Funktionen LZOpenFile, LZCopy und LZClose dekomprimieren.<br/>                |
+| [Dekomprimieren mehrerer Dateien](decompressing-multiple-files.md)<br/>                       | Eine Anwendung kann mehrere Dateien mithilfe der Funktionen LZOpenFile, LZCopy und LZClose dekomprimieren.<br/>                          |
+| [Lesen aus komprimierten Dateien](reading-from-compressed-files.md)<br/>                     | Eine Anwendung kann eine komprimierte Datei mithilfe der Funktionen LZSeek und LZRead nach und nach dekomprimieren.<br/>                 |
 
 
 

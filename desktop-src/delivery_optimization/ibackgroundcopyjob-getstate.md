@@ -46,7 +46,7 @@ HRESULT GetState(
 *pJobState* \[ out\]
 </dt> <dd>
 
-Der Status des Auftrags. Beispielsweise gibt der Zustand an, ob der Auftrag fehlerhaft ist, Daten überträgt oder angehalten wird. Eine Liste der Auftragszustände [](bg-job-state-.md) finden Sie in der BG_JOB_STATE-Enumeration.
+Der Status des Auftrags. Der Status gibt beispielsweise an, ob der Auftrag einen Fehler auft, Daten übertragen oder angehalten hat. Eine Liste der Auftragszustände finden Sie in [**der**](bg-job-state-.md) BG_JOB_STATE Enumeration.
 
 </dd> </dl>
 
@@ -58,7 +58,7 @@ Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 | Rückgabecode                                                                              | Beschreibung                                                 |
 |------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| <dl> <dt>S_OK</dt> </dl> | Der Status des Auftrags wurde erfolgreich abgerufen.<br/> |
+| <dl> <dt>S_OK S_OK</dt> </dl> | Der Status des Auftrags wurde erfolgreich abgerufen.<br/> |
 
 
 
@@ -66,7 +66,7 @@ Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie wissen möchten, wann ein Auftrag fehlerhaft ist oder alle Dateien im Auftrag übertragen hat, können Sie diese Methode verwenden, um den Status des Auftrags abzufragen, oder Sie können sich registrieren, um eine Benachrichtigung zu erhalten, wenn Ereignisse auftreten. Ausführliche Informationen zum Registrieren zum Empfangen von Ereignisbenachrichtigungen finden Sie in der [**IBackgroundCopyCallback-Schnittstelle.**](ibackgroundcopycallback.md)
+Wenn Sie wissen möchten, wann ein Auftrag einen Fehler aufwiesen oder alle Dateien im Auftrag übertragen hat, können Sie diese Methode verwenden, um den Status des Auftrags zu erhalten, oder Sie können sich registrieren, um Benachrichtigungen zu erhalten, wenn Ereignisse auftreten. Weitere Informationen zum Registrieren für den Empfang von Ereignisbenachrichtigungen finden Sie auf der [**IBackgroundCopyCallback-Schnittstelle.**](ibackgroundcopycallback.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,8 +74,8 @@ Wenn Sie wissen möchten, wann ein Auftrag fehlerhaft ist oder alle Dateien im A
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
 | Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |

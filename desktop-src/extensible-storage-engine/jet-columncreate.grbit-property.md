@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_COLUMNCREATE. grbit-Eigenschaft.
-title: JET_COLUMNCREATE. grbit-Eigenschaft
+description: 'Weitere Informationen finden Sie unter: JET_COLUMNCREATE.grbit-Eigenschaft'
+title: JET_COLUMNCREATE.grbit-Eigenschaft
 TOCTitle: 'grbit property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_COLUMNCREATE.grbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_columncreate.grbit(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 06afa36f343d6e0c1d0e0100f20aacc883d4c442
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0f60293060325d1b6e26e918b3febaba9374b5eb4590bc79a44e8838d54449d2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369087"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119780840"
 ---
-# <a name="jet_columncreategrbit-property"></a>JET_COLUMNCREATE. grbit-Eigenschaft
+# <a name="jet_columncreategrbit-property"></a>JET_COLUMNCREATE.grbit-Eigenschaft
 
-Ruft die Spalten Optionen ab oder legt Sie fest.
+Ruft die Spaltenoptionen ab oder legt sie fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public ColumndefGrbit grbit { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft. ISAM. ESENT. Interop. columndefgrbit](./columndefgrbit-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.ColumndefGrbit](./columndefgrbit-enumeration.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_COLUMNCREATE-Klasse](./jet-columncreate-class.md)
 
-[Mitglieder JET_COLUMNCREATE](./jet-columncreate-members.md)
+[JET_COLUMNCREATE Member](./jet-columncreate-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

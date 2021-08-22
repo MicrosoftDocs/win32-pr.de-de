@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Enumeratorobjekt ab, das wiederum zum Auflisten der geschützten Speicher Anbieter verwendet werden kann, die zurzeit auf dem System installiert sind.
+description: Ruft ein Enumeratorobjekt ab, das wiederum zum Aufzählen der geschützten Speicheranbieter verwendet werden kann, die derzeit auf dem System installiert sind.
 ms.assetid: df162086-caeb-427f-9db8-9722855cfbbf
-title: Pstoreenumproviders-Funktion (pstore. h)
+title: PStoreEnumProviders-Funktion (Pstore.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Pstorec.dll
-ms.openlocfilehash: f4f97bdae8646d3a4d683bb5b87bf72efb4c5a5a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d2e0b77e0c68864b068f9c5476ca117ca039224a709ebcad83b22f31f908c26d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371459"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119541560"
 ---
-# <a name="pstoreenumproviders-function"></a>Pstoreenumproviders-Funktion
+# <a name="pstoreenumproviders-function"></a>PStoreEnumProviders-Funktion
 
-\[Geschützter Speicher (pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie steht nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista zur Verfügung, ist aber möglicherweise in nachfolgenden Versionen nicht verfügbar. Pstore verwendet eine ältere Implementierung des Schutzes von Daten. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
+\[Protected Storage (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, aber in nachfolgenden Versionen möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den [**Funktionen CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData bereitgestellt**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) wird.\]
 
-Ruft ein Enumeratorobjekt ab, das wiederum zum Auflisten der geschützten Speicher Anbieter verwendet werden kann, die zurzeit auf dem System installiert sind.
+Ruft ein Enumeratorobjekt ab, das wiederum zum Aufzählen der geschützten Speicheranbieter verwendet werden kann, die derzeit auf dem System installiert sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ HRESULT PStoreEnumProviders(
 *dwFlags* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet und muss NULL sein.
+Dieser Parameter wird nicht verwendet und muss 0 (null) sein.
 
 </dd> <dt>
 
-*ppum* 
+*ppenum* 
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf eine [**ienumpstoreproviders**](ienumpstoreproviders.md) -Schnittstelle, die zum Aufzählen installierter Anbieter verwendet werden kann.
+Ein Zeiger auf einen Zeiger auf eine [**IEnumPStoreProviders-Schnittstelle,**](ienumpstoreproviders.md) mit der installierte Anbieter aufzählt werden können.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt ein **HRESULT** zurück.
+Diese Funktion gibt ein **HRESULT zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die geschützte Speicherkomponente verfügt über eine Anbieter basierte Architektur. Anwendungen, die geschützten Speicher nutzen, können angeben, welche der installierten Anbieter beim Speichern und Abrufen der Daten verwendet werden sollen.
+Die geschützte Speicherkomponente verfügt über eine anbieterbasierte Architektur. Anwendungen, die geschützten Speicher verwenden, können angeben, welche der installierten Anbieter beim Speichern und Abrufen ihrer Daten verwendet werden.
 
-Die **pstoreenumproviders** -Funktion wird zum Auflisten der installierten geschützten Speicher Anbieter verwendet. Jeder Anbieter wird durch einen Globally Unique Identifier (GUID) identifiziert.
+Die **PStoreEnumProviders-Funktion** wird verwendet, um die installierten geschützten Speicheranbieter aufzählen. Jeder Anbieter wird durch einen global eindeutigen Bezeichner (Globally Unique Identifier, GUID) identifiziert.
 
-Bis zu diesem Zeitpunkt wurde immer nur ein geschützter Speicher Anbieter geschrieben. Da der geschützte Speicherdienst zurzeit veraltet ist, ist es sehr unwahrscheinlich, dass jemals weitere Anbieter erstellt werden. Daher sollte diese Funktion nicht für beliebige Zwecke verwendet werden.
+Bis zu diesem Zeitpunkt wurde nur ein geschützter Speicheranbieter geschrieben. Da der geschützte Speicherdienst derzeit veraltet ist, ist es sehr unwahrscheinlich, dass weitere Anbieter erstellt werden. Daher sollte diese Funktion nicht für irgendeinen Zweck verwendet werden.
 
-Diese Funktion verfügt über keine zugeordnete Import Bibliothek. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,7 +76,7 @@ Diese Funktion verfügt über keine zugeordnete Import Bibliothek. Sie müssen i
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Pstore. h</dt> </dl>    |
+| Header<br/> | <dl> <dt>Pstore.h</dt> </dl>    |
 | DLL<br/>    | <dl> <dt>Pstorec.dll</dt> </dl> |
 
 
@@ -85,7 +85,7 @@ Diese Funktion verfügt über keine zugeordnete Import Bibliothek. Sie müssen i
 
 <dl> <dt>
 
-[**Ienumpstoreproviders**](ienumpstoreproviders.md)
+[**IEnumPStoreProviders**](ienumpstoreproviders.md)
 </dt> </dl>
 
  

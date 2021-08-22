@@ -1,24 +1,24 @@
 ---
-description: Die preferredsubpicturestream-Eigenschaft ruft den bevorzugten teilbildstream für die aktuelle Anzeige Sitzung ab.
+description: Die PreferredSubpictureStream-Eigenschaft ruft den bevorzugten Bildstrom für die aktuelle Anzeigesitzung ab.
 ms.assetid: 9c15dc6f-c016-41bf-b03d-e8e5415215ae
-title: Preferredsubpicturestream (Eigenschaft)
+title: PreferredSubpictureStream-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 23377d74d3632c665b001ae415dc151ca73bd148
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: e28b98163607e31a207bffb3974fee3b32505ff60ba3700b452b2dff2625f421
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119583540"
 ---
-# <a name="preferredsubpicturestream-property"></a>Preferredsubpicturestream (Eigenschaft)
+# <a name="preferredsubpicturestream-property"></a>PreferredSubpictureStream-Eigenschaft
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `PreferredSubpictureStream` Eigenschaft ruft den bevorzugten teilbildstream für die aktuelle Anzeige Sitzung ab.
+Die `PreferredSubpictureStream` -Eigenschaft ruft den bevorzugten Bildstrom für die aktuelle Anzeigesitzung ab.
 
 ``` syntax
 [iStream = ] MSWebDVD.PreferredSubpictureStream
@@ -26,11 +26,11 @@ Die- `PreferredSubpictureStream` Eigenschaft ruft den bevorzugten teilbildstream
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen ganzzahligen Wert zurück, der den aktuellen bevorzugten teilbildstream in der Systemregistrierung darstellt.
+Gibt einen Ganzzahlwert zurück, der den aktuellen bevorzugten Datenstrom in der Systemregistrierung darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der bevorzugte teilbildstream wird mit der [**defaultsubpicturelcid**](defaultsubpicturelcid-property.md)des [msdvdadm](msdvdadm-object.md) -Objekts festgelegt.
+Der bevorzugte Unterbilddatenstrom wird mit der [**DefaultSubpictureLCID**](defaultsubpicturelcid-property.md)des [MSDVDAdm-Objekts](msdvdadm-object.md) festgelegt.
 
  
 

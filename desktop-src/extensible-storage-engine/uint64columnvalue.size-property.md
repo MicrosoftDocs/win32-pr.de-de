@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: UInt64ColumnValue.Size-Eigenschaft'
-title: UInt64ColumnValue.Size-Eigenschaft
+description: Weitere Informationen finden Sie unter UInt64ColumnValue.Size (Eigenschaft).
+title: UInt64ColumnValue.Size (Eigenschaft)
 TOCTitle: 'Size property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.UInt64ColumnValue.Size
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.uint64columnvalue.size(v=EXCHG.10)
@@ -32,7 +32,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119603550"
 ---
-# <a name="uint64columnvaluesize-property"></a>UInt64ColumnValue.Size-Eigenschaft
+# <a name="uint64columnvaluesize-property"></a>UInt64ColumnValue.Size (Eigenschaft)
 
 Ruft die Größe des Werts in der Spalte ab. Dies gibt 0 für Spalten variabler Größe (d. h. binär und Zeichenfolge) zurück.
 
@@ -59,7 +59,7 @@ protected override int Size { get; }
 
 Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

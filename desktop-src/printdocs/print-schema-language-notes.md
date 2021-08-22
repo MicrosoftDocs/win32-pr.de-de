@@ -4,12 +4,12 @@ ms.assetid: a14462de-19bd-472d-a073-3a9810c0aee9
 title: Drucken von Schemasprachhinweisen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 69bd25354860abe1fe7cd92600482398a03d7e39
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 36a38fe5dfb1bd40546afa727acea09c7b0819be24d09b72cb4c4c8c0b627e6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113118985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119600790"
 ---
 # <a name="print-schema-language-notes"></a>Drucken von Schemasprachhinweisen
 
@@ -19,7 +19,7 @@ In dieser Spezifikation werden die Wörter, mit denen die Bedeutung der einzelne
 
 
 
-| Begriff                                                                | Beschreibung                                                                                                                                                                                                                                                                                         |
+| Begriff                                                                | BESCHREIBUNG                                                                                                                                                                                                                                                                                         |
 |---------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <span id="MUST"></span><span id="must"></span>muss<br/>       | Dieses Wort oder das Adjektiv REQUIRED bedeutet, dass das Element eine absolute Anforderung der Spezifikation ist.<br/>                                                                                                                                                                               |
 | <span id="SHOULD"></span><span id="should"></span>Sollten<br/> | Dieses Wort oder das Adjektiv RECOMMENDED bedeutet, dass es unter bestimmten Umständen gültige Gründe geben kann, dieses Element zu ignorieren, aber die vollständigen Auswirkungen sollten verstanden und der Fall sorgfältig abgewogen werden, bevor Sie einen anderen Kurs auswählen.<br/>                                     |

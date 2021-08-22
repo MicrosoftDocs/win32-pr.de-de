@@ -1,19 +1,19 @@
 ---
-title: Iagentcharacter setDescription
-description: Iagentcharacter setDescription
+title: IAgentCharacter SetDescription
+description: IAgentCharacter SetDescription
 ms.assetid: ae01b9e6-1616-4806-9125-ceb4cb54aab1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ce9815e5c0e01537c7db2b400326f86da37af003
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0d96765d3faddafef00a28826ec5a9fdd92acb6884ac3aa659ad88ba2c091a44
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388806"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119609820"
 ---
-# <a name="iagentcharactersetdescription"></a>Iagentcharacter:: setDescription
+# <a name="iagentcharactersetdescription"></a>IAgentCharacter::SetDescription
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT SetDescription(
@@ -27,21 +27,21 @@ Legt die Beschreibung des Zeichens fest.
 
 <dl> <dt>
 
-<span id="bszDescription"></span><span id="bszdescription"></span><span id="BSZDESCRIPTION"></span>*bszdescription*
+<span id="bszDescription"></span><span id="bszdescription"></span><span id="BSZDESCRIPTION"></span>*bszDescription*
 </dt> <dd>
 
-Ein BSTR, der die Beschreibung für das Zeichen festlegt. Die Standardbeschreibung eines Zeichens wird bei der Kompilierung mit dem Microsoft-Agent-Zeichen-Editor definiert. Die Beschreibungs Einstellung ist optional und kann nicht für alle Zeichen angegeben werden. Sie können die Beschreibung des Zeichens mithilfe von **iagentcharacter:: setDescription**; ändern. Dieser Wert ist jedoch nicht persistent (wird permanent gespeichert). Die Zeichen Beschreibung wird immer wieder auf die Standardeinstellung festgelegt, wenn das Zeichen zuerst von einem Client geladen wird.
+Ein BSTR, der die Beschreibung für das Zeichen fest legt. Die Standardbeschreibung eines Zeichens wird definiert, wenn es mit dem Microsoft Agent-Zeichen-Editor kompiliert wird. Die Beschreibungseinstellung ist optional und wird möglicherweise nicht für alle Zeichen angegeben. Sie können die Beschreibung des Zeichens mithilfe von **IAgentCharacter::setDescription ändern.** dieser Wert ist jedoch nicht persistent (dauerhaft gespeichert). Die Beschreibung des Zeichens wird auf die Standardeinstellung zurückverwendet, wenn das Zeichen zum ersten Mal von einem Client geladen wird.
 
 </dd> </dl>
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcharacter:: GetDescription**](iagentcharacter--getdescription.md)
+[**IAgentCharacter::GetDescription**](iagentcharacter--getdescription.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

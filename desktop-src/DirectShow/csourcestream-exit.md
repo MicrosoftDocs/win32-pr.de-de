@@ -25,7 +25,7 @@ ms.locfileid: "119687430"
 ---
 # <a name="csourcestreamexit-method"></a>CSourceStream.Exit-Methode
 
-Die `Exit` -Methode signalisiert dem Streamingthread, dass er beendet wird.
+Die `Exit` -Methode signalisiert dem Streamingthread das Beenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,11 +55,11 @@ Die [**CSourceStream::Inactive-Methode**](csourcestream-inactive.md) ruft diese 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

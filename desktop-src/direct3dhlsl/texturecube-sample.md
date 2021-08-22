@@ -1,9 +1,9 @@
 ---
-title: 'Texturecube:: texturecube-Beispiel Methoden'
-description: 'Stichproben eine Textur. | Texturecube:: texturecube-Beispiel Methoden'
+title: TextureCube::TextureCube Sample-Methoden
+description: Probieren Sie eine Textur aus. | TextureCube::TextureCube Sample-Methoden
 ms.assetid: 8A43006B-E7BB-4D4D-8D46-F611322B0882
 keywords:
-- Beispiel Methoden HLSL
+- HLSL-Beispielmethoden
 topic_type:
 - apiref
 api_type:
@@ -12,26 +12,26 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 1b8ef79ccd00240e09b97791045bfa0869d579dd
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 1fdd1533fd836c53afcb1a3242563fa1467ba58045ae573ded782b861688d94d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119742590"
 ---
-# <a name="texturecubesample-methods"></a>Texturecube:: Sample-Methoden
+# <a name="texturecubesample-methods"></a>TextureCube::Sample-Methoden
 
-Stichproben eine Textur.
+Probieren Sie eine Textur aus.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                 | BESCHREIBUNG                                                                                                                               |
+| Methode                                                                 | Beschreibung                                                                                                                               |
 |:-----------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Sample (S, float)**](dx-graphics-hlsl-to-sample.md)                  | Stichproben eine Textur.<br/>                                                                                                             |
-| [**Sample (S, float, float)**](tcube-sample-s-float-float-.md)           | Gibt eine Textur mit einem optionalen Wert aus, mit dem die Werte der Sample-Ebene (LOD) an eine Klammer angezeigt werden.<br/>                                      |
-| [**Sample (S, float, float, uint)**](tcube-sample-s-float-float-uint-.md) | Führt eine Stichprobe für eine Textur mit einem optionalen Wert aus, um die Samplingrate-Werte (LOD) zu binden, und gibt den Status des Vorgangs zurück.<br/> |
+| [**Sample(S, float)**](dx-graphics-hlsl-to-sample.md)                  | Probieren Sie eine Textur aus.<br/>                                                                                                             |
+| [**Sample(S,float,float)**](tcube-sample-s-float-float-.md)           | Stichproben einer Textur mit einem optionalen Wert zum Zusammenschnaufen von LOD-Werten (Sample Level of Detail).<br/>                                      |
+| [**Sample(S,float,float,uint)**](tcube-sample-s-float-float-uint-.md) | Stichproben einer Textur mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail) und Rückgabe des Status des Vorgangs.<br/> |
 
 
 
@@ -42,7 +42,7 @@ Stichproben eine Textur.
 [**TextureCube**](texturecube.md)
 </dt> <dt>
 
-[Texture-Objekt](dx-graphics-hlsl-to-type.md)
+[Texturobjekt](dx-graphics-hlsl-to-type.md)
 </dt> </dl>
 
  

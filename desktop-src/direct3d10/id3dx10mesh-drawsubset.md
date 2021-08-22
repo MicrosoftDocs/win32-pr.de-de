@@ -1,5 +1,5 @@
 ---
-description: 'ID3DX10Mesh::D rawSubset-Methode: Zeichnet eine Teilmenge eines Gitters.'
+description: 'ID3DX10Mesh::D rawSubset-Methode: Zeichnet eine Teilmenge eines Gitternetzes.'
 ms.assetid: e785949e-fcda-4ef9-b50a-193cd954e97d
 title: ID3DX10Mesh::D rawSubset-Methode (D3DX10.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "119753100"
 ---
 # <a name="id3dx10meshdrawsubset-method"></a>ID3DX10Mesh::D rawSubset-Methode
 
-Zeichnet eine Teilmenge eines Gitters.
+Zeichnet eine Teilmenge eines Gitternetzes.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ HRESULT DrawSubset(
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Gibt an, welche Teilmenge des Gitters ge zeichnen werden soll. Dieser Wert wird verwendet, um Gesichter in einem Gitternetz als einer oder mehrere Attributgruppen zu unterscheiden.
+Gibt an, welche Teilmenge des Gitternetzes gezeichnet werden soll. Dieser Wert wird verwendet, um Gesichter in einem Gitternetz als zu einer oder mehreren Attributgruppen gehörend zu unterscheiden.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Gibt an, welche Teilmenge des Gitters ge zeichnen werden soll. Dieser Wert wird 
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Attributtabelle wird verwendet, um Bereiche des Gitters zu identifizieren, die mit unterschiedlichen Texturen, Renderzuständen, Materialien und so weiter gezeichnet werden müssen. Darüber hinaus kann die Anwendung die Attributtabelle verwenden, um Teile eines Gitters auszublenden, indem beim Zeichnen des Rahmens kein angegebener Attributbezeichner (AttribId) gezeichnunget wird.
+Eine Attributtabelle wird verwendet, um Bereiche des Gitternetzes zu identifizieren, die mit unterschiedlichen Texturen, Renderzuständen, Materialien usw. gezeichnet werden müssen. Darüber hinaus kann die Anwendung die Attributtabelle verwenden, um Teile eines Gitternetzes auszublenden, indem beim Zeichnen des Rahmens kein angegebener Attributbezeichner (AttribId) gezeichnet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Eine Attributtabelle wird verwendet, um Bereiche des Gitters zu identifizieren, 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

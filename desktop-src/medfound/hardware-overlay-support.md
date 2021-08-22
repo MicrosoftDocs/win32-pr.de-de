@@ -1,90 +1,90 @@
 ---
-description: Beschreibt die Verwendung von Hardware Überlagerungen in Direct3D 9.
+description: Beschreibt die Verwendung von Hardwareüberlagerungen in Direct3D 9.
 ms.assetid: fa9d5bf5-4c0f-471a-b639-d329b0cd89a4
-title: Hardware-Overlay
+title: Hardwareüberlagerungsunterstützung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: adcae33cdf55de59bdcd074829d52b4c1c43ea5f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f537c91bc217344206c0a23cf5ca8a14254a9c983e4ae550e96457bbb055e5d7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350517"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119600400"
 ---
-# <a name="hardware-overlay-support"></a>Hardware-Overlay
+# <a name="hardware-overlay-support"></a>Hardwareüberlagerungsunterstützung
 
-Eine Hardware Überlagerung ist ein dedizierter Bereich von Videospeicher, der auf der primären Oberfläche überlastet werden kann. Wenn das Overlay angezeigt wird, wird kein Kopiervorgang durchgeführt. Der Überlagerungs Vorgang wird in Hardware ausgeführt, ohne die Daten auf der primären Oberfläche zu ändern.
+Eine Hardwareüberlagerung ist ein dedizierter Bereich des Videospeichers, der auf der primären Oberfläche überlagert werden kann. Es wird keine Kopie ausgeführt, wenn die Überlagerung angezeigt wird. Der Überlagerungsvorgang wird auf Hardware ausgeführt, ohne die Daten auf der primären Oberfläche zu ändern.
 
-Die Verwendung von Hardware Überlagerungen für die Videowiedergabe war in früheren Versionen von Windows üblich, da die Überlagerungen für Videoinhalte mit einer hohen Framerate effizient sind. Ab Windows 7 unterstützt Direct3D 9 Hardware Überlagerungen. Diese Unterstützung ist in erster Linie für die Videowiedergabe gedacht und unterscheidet sich in gewisser Hinsicht von früheren DirectDraw-APIs:
+Die Verwendung von Hardwareüberlagerungen für die Videowiedergabe war in früheren Versionen von Windows üblich, da Überlagerungen für Videoinhalte mit hoher Bildfrequenz effizient sind. Ab Windows 7 unterstützt Direct3D 9 Hardwareüberlagerungen. Diese Unterstützung ist in erster Linie für die Videowiedergabe vorgesehen und unterscheidet sich in einigen Punkten von früheren DirectDraw-APIs:
 
--   Das Overlay kann nicht verkleinert, gespiegelt oder Deinterlacing werden.
--   Quell Farben und Alpha Blending werden nicht unterstützt.
--   Überlagerungen können gestreckt werden, wenn die Überlagerungs Hardware diese unterstützt. Andernfalls wird die Streckung nicht unterstützt. In der Praxis unterstützen nicht alle Grafiktreiber das Stretching.
--   Jedes Gerät unterstützt höchstens ein Overlay.
--   Die Überlagerung wird mithilfe eines Ziel Farb Schlüssels ausgeführt, aber die Direct3D-Laufzeit wählt automatisch die Farbe aus und zeichnet das Ziel Rechteck. Direct3D verfolgt automatisch die Position des Fensters und aktualisiert die Überlagerungs Position, wenn der **presentex** aufgerufen wird.
+-   Die Überlagerung kann nicht verkleinert, gespiegelt oder deinterlaced werden.
+-   Quellfarbschlüssel und Alphablending werden nicht unterstützt.
+-   Überlagerungen können gestreckt werden, wenn die Überlagerungshardware dies unterstützt. Andernfalls wird Stretching nicht unterstützt. In der Praxis unterstützen nicht alle Grafiktreiber Stretching.
+-   Jedes Gerät unterstützt höchstens eine Überlagerung.
+-   Die Überlagerung erfolgt mithilfe eines Zielfarbschlüssels, aber die Direct3D-Runtime wählt automatisch die Farbe aus und zeichnet das Zielrechteck. Direct3D verfolgt automatisch die Position des Fensters und aktualisiert die Überlagerungsposition, sobald **PresentEx** aufgerufen wird.
 
-### <a name="creating-a-hardware-overlay-surface"></a>Erstellen einer Hardware Überlagerungs Oberfläche
+### <a name="creating-a-hardware-overlay-surface"></a>Erstellen einer Hardwareüberlagerungsoberfläche
 
-Um die Überlagerungs Unterstützung abzufragen, nennen Sie **IDirect3D9:: GetDeviceCaps**. Wenn der Treiber die Hardware Überlagerung unterstützt, wird das **D3DCAPS \_ Overlay** -Flag in D3DCAPS9 festgelegt **. Caps** -Member.
+Um Die Overlayunterstützung abzufragen, rufen **Sie IDirect3D9::GetDeviceCaps auf.** Wenn der Treiber Hardwareüberlagerungen unterstützt, wird das **D3DCAPS \_ OVERLAY-Flag** in **D3DCAPS9 festgelegt. Caps-Member.**
 
-Um herauszufinden, ob ein bestimmtes Überlagerungs Format für einen bestimmten Anzeigemodus unterstützt wird, müssen Sie [**IDirect3D9ExOverlayExtension:: checkdeviceoverlaytype**](/windows/desktop/api/d3d9/nf-d3d9-idirect3d9exoverlayextension-checkdeviceoverlaytype)aufrufen.
+Um herauszufinden, ob ein bestimmtes Überlagerungsformat für einen bestimmten Anzeigemodus unterstützt wird, rufen [**Sie IDirect3D9ExOverlayExtension::CheckDeviceOverlayType auf.**](/windows/desktop/api/d3d9/nf-d3d9-idirect3d9exoverlayextension-checkdeviceoverlaytype)
 
-Um das Overlay zu erstellen, rufen Sie **IDirect3D9Ex:: kreatedeviceex** auf, und geben Sie den **D3DSWAPEFFECT \_ Overlay** -Swap-Effekt an. Der Hintergrund Puffer kann ein nicht-RGB-Format verwenden, wenn es von der Hardware unterstützt wird.
+Um die Überlagerung zu erstellen, rufen Sie **IDirect3D9Ex::CreateDeviceEx** auf, und geben Sie den Swapeffekt **D3DSWAPEFFECT \_ OVERLAY an.** Der Hintergrundpuffer kann ein Nicht-RGB-Format verwenden, wenn die Hardware dies unterstützt.
 
-Überlagerungs Oberflächen weisen die folgenden Einschränkungen auf:
+Für Überlagerungsoberflächen gelten die folgenden Einschränkungen:
 
--   Die Anwendung kann nicht mehr als eine Überlagerungs Austausch Kette erstellen.
--   Das Overlay muss im Fenstermodus verwendet werden. Sie kann nicht im Vollbildmodus verwendet werden.
--   Der Überlagerungs Swap-Effekt muss mit der **IDirect3DDevice9Ex** -Schnittstelle verwendet werden. Sie wird für **IDirect3DDevice9** nicht unterstützt.
+-   Die Anwendung kann nicht mehr als eine Überlagerungstauschkette erstellen.
+-   Die Überlagerung muss im Fenstermodus verwendet werden. Sie kann nicht im Vollbildmodus verwendet werden.
+-   Der Overlayaustauscheffekt muss mit der **IDirect3DDevice9Ex-Schnittstelle** verwendet werden. Sie wird für **IDirect3DDevice9** nicht unterstützt.
 -   Multisampling kann nicht verwendet werden.
--   Die **D3DPRESENT \_ donotflip** -und **D3DPRESENT \_ fliprestart** -Flags werden nicht unterstützt.
--   Die Präsentations Statistik ist für die Überlagerungs Oberfläche nicht verfügbar.
+-   Die **Flags D3DPRESENT \_ DONOTFLIP** und **D3DPRESENT \_ FLIPRESTART** werden nicht unterstützt.
+-   Präsentationsstatistiken sind für die Überlagerungsoberfläche nicht verfügbar.
 
-Wenn die Hardware keine Streckung unterstützt, wird empfohlen, eine SwapChain so groß wie den Anzeigemodus zu erstellen, damit die Größe des Fensters in beliebige Dimensionen geändert werden kann. Das Neuerstellen der SwapChain ist nicht optimal geeignet, um die Größe des Fensters zu ändern, da es schwerwiegende Renderingartefakte verursachen kann. Aufgrund der Art und Weise, wie die GPU den Überlagerungs Speicher verwaltet, kann das Neuerstellen der Swapkette möglicherweise dazu führen, dass eine Anwendung nicht mehr über den Videospeicher verfügt.
+Wenn die Hardware stretching nicht unterstützt, wird empfohlen, eine Austauschkette so groß wie der Anzeigemodus zu erstellen, damit die Größe des Fensters in beliebige Dimensionen geändert werden kann. Das Erneute Erstellen der Swapkette ist keine optimale Möglichkeit, die Größe des Fensters zu ändern, da dies zu schwerwiegenden Renderingartefakten führen kann. Aufgrund der Art und Weise, wie die GPU den Überlagerungsspeicher verwaltet, kann die Neuerstellung der Swapkette dazu führen, dass der Videospeicher für eine Anwendung nicht mehr verfügbar ist.
 
-### <a name="new-d3dpresent_parameters-flags"></a>Neue D3DPRESENT \_ Parameter-Flags
+### <a name="new-d3dpresent_parameters-flags"></a>Neue \_ D3DPRESENT-PARAMETERflags
 
-Die folgenden **D3DPRESENT \_ Parameter** -Flags werden zum Erstellen von Überlagerungen definiert.
+Die folgenden **D3DPRESENT \_ PARAMETERS-Flags** werden zum Erstellen von Überlagerungen definiert.
 
 
 
 | Flag                                      | Beschreibung                                                                                                                                                                        |
 |-------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **D3DPRESENTFLAG \_ Overlay \_ limitedrgb**   | Der RGB-Bereich ist 16 – 235. Der Standardwert ist 0 – 255. <br/> Erfordert die **D3DOVERLAYCAPS \_ limitedranger GB** -Funktion.<br/>                                                 |
-| **D3DPRESENTFLAG \_ Overlay \_ YCbCr \_ BT709** | YUV-Farben verwenden die BT. 709-Definition. Der Standardwert ist "BT. 601". <br/> Erfordert die **D3DOVERLAYCAPS \_ YCbCr \_ BT709** -Funktion.<br/>                                      |
-| **D3DPRESENTFLAG \_ Overlay \_ YCbCr \_ xwycc** | Geben Sie die Daten mithilfe von Extended YCbCr (xwycc) aus.<br/> Erfordert die **D3DOVERLAYCAPS \_ YCbCr \_ BT601 \_ xvYCC** -oder **D3DOVERLAYCAPS \_ YCbCr \_ BT709 \_ xwycc** -Funktion.<br/> |
+| **D3DPRESENTFLAG \_ OVERLAY \_ LIMITEDRGB**   | Der RGB-Bereich beträgt 16 bis 235. Der Standardwert ist 0 bis 255. <br/> Erfordert die **D3DOVERLAYCAPS \_ LIMITEDRANGERGB-Funktion.**<br/>                                                 |
+| **D3DPRESENTFLAG \_ OVERLAY \_ YCbCr \_ BT709** | YUV-Farben verwenden die BT.709-Definition. Der Standardwert ist BT.601. <br/> Erfordert die **D3DOVERLAYCAPS \_ YCbCr \_ BT709-Funktion.**<br/>                                      |
+| **D3DPRESENTFLAG \_ OVERLAY \_ YCbCr \_ xvYCC** | Ausgabe der Daten mithilfe von erweitertem YCbCr (xvYCC).<br/> Erfordert die **Funktion D3DOVERLAYCAPS \_ YCbCr \_ BT601 \_ xvYCC** oder **D3DOVERLAYCAPS \_ YCbCr \_ BT709 \_ xvYCC.**<br/> |
 
 
 
  
 
-### <a name="using-hardware-overlays"></a>Verwenden von Hardware Überlagerungen
+### <a name="using-hardware-overlays"></a>Verwenden von Hardwareüberlagerungen
 
-Um die Überlagerungs Oberfläche anzuzeigen, ruft die Anwendung **IDirect3DDevice9Ex::P resentex** auf. Die Direct3D-Laufzeit zeichnet automatisch den Ziel Farbschlüssel.
+Um die Überlagerungsoberfläche anzuzeigen, ruft die Anwendung **IDirect3DDevice9Ex::P resentEx auf.** Die Direct3D-Runtime zeichnet automatisch den Zielfarbschlüssel.
 
-Die folgenden **presentex** -Flags werden für Überlagerungen definiert.
+Die folgenden **PresentEx-Flags** sind für Überlagerungen definiert.
 
 
 
 | Flag                              | Beschreibung                                                                                                                                                                                                                                                                           |
 |-----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **D3DPRESENT \_ updatecolorkey**    | Legen Sie dieses Flag fest, wenn die Komposition von Desktopfenster-Manager (DWM) deaktiviert ist. Dieses Flag bewirkt, dass Direct3D den Farbschlüssel neu zeichnet.<br/> Wenn DWM aktiviert ist, ist dieses Flag nicht erforderlich, da Direct3D den Farbschlüssel einmal auf der Oberfläche zeichnet, die DWM für die Umleitung verwendet.<br/> |
-| **D3DPRESENT \_ hideoverlay**       | Blendet die Überlagerung aus.                                                                                                                                                                                                                                                                    |
-| **D3DPRESENT \_ updateoverlayonly** | Aktualisiert das Overlay, ohne den Inhalt zu ändern.<br/> Dieses Flag ist nützlich, wenn das Fenster verschoben wird, während das Video angehalten wird.<br/>                                                                                                                                           |
+| **D3DPRESENT \_ UPDATECOLORKEY**    | Legen Sie dieses Flag fest, wenn Desktopfenster-Manager Komposition (DWM) deaktiviert ist. Dieses Flag bewirkt, dass Direct3D den Farbschlüssel neu gezeichnet.<br/> Wenn DWM aktiviert ist, ist dieses Flag nicht erforderlich, da Direct3D den Farbschlüssel einmal auf der Oberfläche zeichnet, die DWM für die Umleitung verwendet.<br/> |
+| **D3DPRESENT \_ HIDEOVERLAY**       | Blendet die Überlagerung aus.                                                                                                                                                                                                                                                                    |
+| **D3DPRESENT \_ UPDATEOVERLAYONLY** | Aktualisiert die Überlagerung, ohne den Inhalt zu ändern.<br/> Dieses Flag ist nützlich, wenn das Fenster verschoben wird, während das Video angehalten wird.<br/>                                                                                                                                           |
 
 
 
  
 
-Eine Anwendung sollte darauf vorbereitet sein, die folgenden Fälle zu behandeln:
+Eine Anwendung sollte darauf vorbereitet sein, die folgenden Fälle zu verarbeiten:
 
--   Wenn eine andere Anwendung das Overlay verwendet, gibt **presentex** **D3DERR \_ NotAvailable** zurück.
--   Wenn das Fenster auf einen anderen Monitor verschoben wird, muss die SwapChain von der Anwendung neu erstellt werden. Andernfalls gibt **presentex** **D3DERR \_ invaliddevice** zurück, wenn die Anwendung einen **presentex** aufruft, um die Überlagerung auf einem anderen Monitor anzuzeigen.
--   Wenn sich der Anzeigemodus ändert, versucht Direct3D, die Überlagerung wiederherzustellen. Wenn der neue Modus das Overlay nicht unterstützt, gibt **presentex** **D3DERR \_ unsupportedoverlay** zurück.
+-   Wenn eine andere Anwendung die Überlagerung verwendet, gibt **PresentEx** **D3DERR \_ NOTAVAILABLE zurück.**
+-   Wenn das Fenster auf einen anderen Monitor verschoben wird, muss die Anwendung die Swapkette neu erstellen. Andernfalls gibt **PresentEx** **D3DERR \_ INVALIDDEVICE** zurück, wenn die Anwendung **PresentEx** aufruft, um die Überlagerung auf einem anderen Monitor anzuzeigen.
+-   Wenn sich der Anzeigemodus ändert, versucht Direct3D, die Überlagerung wiederherzustellen. Wenn der neue Modus die Überlagerung nicht unterstützt, gibt **PresentEx** **D3DERR \_ UNSUPPORTEDOVERLAY** zurück.
 
 ### <a name="example-code"></a>Beispielcode
 
-Im folgenden Beispiel wird gezeigt, wie eine Überlagerungs Oberfläche erstellt wird.
+Im folgenden Beispiel wird gezeigt, wie eine Überlagerungsoberfläche erstellt wird.
 
 
 ```C++
@@ -185,7 +185,7 @@ HRESULT CreateHWOverlay(
 
 <dl> <dt>
 
-[Direct3D-Video-APIs](direct3d-video-apis.md)
+[Direct3D Video-APIs](direct3d-video-apis.md)
 </dt> </dl>
 
  

@@ -4,12 +4,12 @@ ms.assetid: aa072054-4699-495e-81ff-8d54f952462f
 title: System.Contact.HomeAddress1Country
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 846e001e978a68026f227ced096fea757d0dd927
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 5e1c42a9fdebc34db7a0edf21e9e412cca539f233deaab583b71532d5faf779d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108102348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119662230"
 ---
 # <a name="systemcontacthomeaddress1country"></a>System.Contact.HomeAddress1Country
 
@@ -28,7 +28,7 @@ propertyDescription
       type = String
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

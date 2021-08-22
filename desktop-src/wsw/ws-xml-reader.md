@@ -1,21 +1,21 @@
 ---
-title: WS_XML_READER (Webservices. h)
+title: WS_XML_READER (WebServices.h)
 description: Der nicht transparente Typ, der für einen Verweis auf einen XML-Reader verwendet wird.
 ms.assetid: 7acbe407-e91b-435a-82bc-acbbc13cfcfd
 keywords:
 - WS_XML_READER
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5199399a496d38ff0b2ae4a067d4b75fc2664282
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0a603ab3870abb015b6fdef05da27dbbbe807d9a23f0713f3f672b4823256554
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956647"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119707220"
 ---
-# <a name="ws_xml_reader"></a>WS- \_ XML- \_ Reader
+# <a name="ws_xml_reader"></a>\_ \_ WS-XML-READER
 
-Der nicht transparente Typ, der für einen Verweis auf einen [XML-Reader](xml-reader.md)verwendet wird.
+Der nicht transparente Typ, der für einen Verweis auf einen [XML-Reader verwendet wird.](xml-reader.md)
 
 
 ```C++
@@ -24,9 +24,9 @@ typedef struct _WS_XML_READER WS_XML_READER;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Objekt ist nicht Thread sicher. Weitere Informationen finden Sie unter [Thread Sicherheit](thread-safety.md).
+Dieses Objekt ist nicht threadsicher. Weitere Informationen finden Sie unter [Threadsicherheit.](thread-safety.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -34,9 +34,9 @@ Dieses Objekt ist nicht Thread sicher. Weitere Informationen finden Sie unter [T
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Webservices. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server 2008 \[ \| R2-Desktop-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>WebServices.h</dt> </dl> |
 
 
 

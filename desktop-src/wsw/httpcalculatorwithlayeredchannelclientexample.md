@@ -1,31 +1,31 @@
 ---
-title: Httpcalculatorwithlayeredchannelclieintexample
-description: In diesem Beispiel wird gezeigt, wie der Dienst Proxy verwendet wird, um mit einem HTTP-basierten Rechner Dienst über einen benutzerdefinierten Kanal zu kommunizieren. Der benutzerdefinierte Kanal ist ein überlagener Kanal, der einfach alle Funktionen an den vorhandenen HTTP-Kanal delegiert.
+title: HttpCalculatorWithLayeredChannelClientExample
+description: In diesem Beispiel wird gezeigt, wie der Dienstproxy verwendet wird, um mit einem HTTP-basierten Rechnerdienst über einen benutzerdefinierten Kanal zu kommunizieren. Der benutzerdefinierte Kanal ist ein mehrstufiger Kanal, der einfach alle Funktionen an den vorhandenen HTTP-Kanal delegiert.
 ms.assetid: 897673df-f3a3-4b38-8b79-c9f1119be6d5
 keywords:
-- Httpcalculatorwithlayeredchannelclieintexample Native-Web-Services
-- Wwsapi
+- HttpCalculatorWithLayeredChannelClientExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 39ad52294b86db729e858564fca557ebb44dc54c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2f5dcd9596eaff10d9415f6ffc1d6ba7a057aa47cc66b5ca2e63fca90ba8675f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119546000"
 ---
-# <a name="httpcalculatorwithlayeredchannelclientexample"></a>Httpcalculatorwithlayeredchannelclieintexample
+# <a name="httpcalculatorwithlayeredchannelclientexample"></a>HttpCalculatorWithLayeredChannelClientExample
 
-In diesem Beispiel wird gezeigt, wie der Dienst Proxy verwendet wird, um mit einem HTTP-basierten Rechner Dienst über einen benutzerdefinierten Kanal zu kommunizieren. Der benutzerdefinierte Kanal ist ein überlagener Kanal, der einfach alle Funktionen an den vorhandenen HTTP-Kanal delegiert.
+In diesem Beispiel wird gezeigt, wie der Dienstproxy verwendet wird, um mit einem HTTP-basierten Rechnerdienst über einen benutzerdefinierten Kanal zu kommunizieren. Der benutzerdefinierte Kanal ist ein mehrstufiger Kanal, der einfach alle Funktionen an den vorhandenen HTTP-Kanal delegiert.
 
--   [Httpcalculatorwithlayeredchannelclient. cpp](#httpcalculatorwithlayeredchannelclientcpp)
--   [CalculatorService. WSDL](#calculatorservicewsdl)
--   [Layeredchannel. h](#layeredchannelh)
--   [Layeredchannel. cpp](#layeredchannelcpp)
+-   [HttpCalculatorWithLayeredChannelClient.cpp](#httpcalculatorwithlayeredchannelclientcpp)
+-   [CalculatorService.wsdl](#calculatorservicewsdl)
+-   [LayeredChannel.h](#layeredchannelh)
+-   [LayeredChannel.cpp](#layeredchannelcpp)
 -   [Makefile](#makefile)
 
-## <a name="httpcalculatorwithlayeredchannelclientcpp"></a>Httpcalculatorwithlayeredchannelclient. cpp
+## <a name="httpcalculatorwithlayeredchannelclientcpp"></a>HttpCalculatorWithLayeredChannelClient.cpp
 
 
 ```C++
@@ -238,7 +238,7 @@ Exit:
 
 
 
-## <a name="calculatorservicewsdl"></a>CalculatorService. WSDL
+## <a name="calculatorservicewsdl"></a>CalculatorService.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -335,7 +335,7 @@ Exit:
 </wsdl:definitions>
 ```
 
-## <a name="layeredchannelh"></a>Layeredchannel. h
+## <a name="layeredchannelh"></a>LayeredChannel.h
 
 
 ```C++
@@ -368,7 +368,7 @@ extern WS_CUSTOM_CHANNEL_CALLBACKS layeredChannelCallbacks;
 
 
 
-## <a name="layeredchannelcpp"></a>Layeredchannel. cpp
+## <a name="layeredchannelcpp"></a>LayeredChannel.cpp
 
 
 ```C++
@@ -657,9 +657,9 @@ clean:
 
 ```
 
- 
+ 
 
- 
+ 
 
 
 

@@ -121,7 +121,7 @@ Sperrlisten für die Public Key-Infrastruktur.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist einwertig       | True                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
@@ -142,7 +142,7 @@ Sperrlisten für die Public Key-Infrastruktur.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist einwertig       | True                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
@@ -163,7 +163,7 @@ Sperrlisten für die Public Key-Infrastruktur.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist einwertig       | True                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
