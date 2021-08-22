@@ -1,7 +1,7 @@
 ---
 description: Gibt den externen Schlüssel aus einer Datei zurück.
 ms.assetid: b61b71fb-af6f-4fe3-859b-a9f2f42ca6d2
-title: Getexternalkeyfromfile-Methode der Win32_EncryptableVolume-Klasse
+title: GetExternalKeyFromFile-Methode der Win32_EncryptableVolume-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Root\CIMV2\Security\MicrosoftVolumeEncryption
-ms.openlocfilehash: ba0c2cf4744c12143090488d730a1d49bab9b431
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e2046e64340167a98d838fd5a64324a410b0d0418a740550f9336117e2f1d8d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355311"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118892428"
 ---
-# <a name="getexternalkeyfromfile-method-of-the-win32_encryptablevolume-class"></a>Getexternalkeyfromfile-Methode der Win32- \_ Klasse "verschlüsseltablevolume"
+# <a name="getexternalkeyfromfile-method-of-the-win32_encryptablevolume-class"></a>GetExternalKeyFromFile-Methode der Win32 \_ EncryptableVolume-Klasse
 
-Die **getexternalkeyfromfile** -Methode der Win32-Klasse " [**\_ verschlüsseltablevolume**](win32-encryptablevolume.md) " gibt den externen Schlüssel aus einer Datei zurück, die von [**saveexternalkeytofile**](saveexternalkeytofile-win32-encryptablevolume.md)erstellt wurde, wenn der Speicherort dieser Datei ist.
+Die **GetExternalKeyFromFile-Methode** der [**Win32 \_ EncryptableVolume-Klasse**](win32-encryptablevolume.md) gibt den externen Schlüssel aus einer Datei zurück, die von [**SaveExternalKeyToFile**](saveexternalkeytofile-win32-encryptablevolume.md)erstellt wurde, und gibt dabei den Speicherort dieser Datei zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ uint32 GetExternalKeyFromFile(
 
 <dl> <dt>
 
-*Pathwithfilename* \[ in\]
+*PathWithFileName* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
@@ -49,36 +49,36 @@ Eine Zeichenfolge, die den Speicherort der Datei angibt, die einen externen Schl
 
 </dd> <dt>
 
-*ExternalKey* \[ vorgenommen\]
+*ExternalKey* \[ out\]
 </dt> <dd>
 
-Typ: **Uint8 \[ \]**
+Typ: **uint8 \[ \]**
 
-Ein Bytearray, bei dem es sich um den in der Datei enthaltenen, externen 256-Bit-Schlüssel handelt, der zum Entsperren eines Volumes verwendet werden kann.
+Ein Bytearray, bei dem es sich um den externen 256-Bit-Schlüssel in der Datei handelt, der zum Entsperren eines Volumes verwendet werden kann.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurück, wenn ein Fehler auftritt.
+Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurück, wenn er fehlschlägt.
 
 
 
 | Rückgabecode/-wert                                                                                                                                                                   | BESCHREIBUNG                                            |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl>                                   | Die Methode war erfolgreich.<br/>                  |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>2147942487 (0x80070057)</dt> </dl>           | Die Datei enthält keinen externen Schlüssel.<br/>  |
-| <dl> <dt>**Fehler \_ Die Datei wurde \_ nicht \_ gefunden**</dt> <dt>2147942402 (0x80070002)</dt> . </dl> | Die Datei wurde am angegebenen Speicherort nicht gefunden.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> <dt>2147942487 (0x80070057)</dt> </dl>           | Die Datei enthält keinen externen Schlüssel.<br/>  |
+| <dl> <dt>**FEHLER \_ DATEI \_ NICHT \_ GEFUNDEN**</dt> <dt>2147942402 (0x80070002)</dt> </dl> | Die Datei wurde am angegebenen Speicherort nicht gefunden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,18 +86,18 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista Enterprise, Windows Vista Ultimate \[ Desktop-Apps\]<br/>                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | Root \\ CIMV2 \\ Sicherheit ( \\ microsoftvolumeencryption)<br/>                                             |
-| MOF<br/>                      | <dl> <dt>Win32 \_ verschlüsseltablevolume. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista Enterprise, nur Windows Vista \[ Ultimate-Desktop-Apps\]<br/>                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | \\CIMV2-Stammsicherheit \\ \\ MicrosoftVolumeEncryption<br/>                                             |
+| MOF<br/>                      | <dl> <dt>Win32 \_ encryptablevolume.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ verschlüsseltablevolume**](win32-encryptablevolume.md)
+[**Win32 \_ EncryptableVolume**](win32-encryptablevolume.md)
 </dt> </dl>
 
  

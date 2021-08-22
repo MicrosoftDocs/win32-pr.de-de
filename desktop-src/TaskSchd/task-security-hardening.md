@@ -1,50 +1,50 @@
 ---
-title: Sicherheitshärtung der Aufgabe
-description: Mithilfe der Funktion zum Sichern von Tasks können Aufgaben Besitzer ihre Aufgaben mit mindestens erforderlichen Berechtigungen ausführen.
+title: Tasksicherheitshärtung
+description: Die Verwendung der Sicherheitshärtungsfunktion "Tasks" ermöglicht Es Taskbesitzern, ihre Aufgaben mit minimal erforderlichen Berechtigungen auszuführen.
 ms.assetid: ba03add5-aa05-4bef-baec-684ca17363bd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ab70679d605a9ad56c6d26116245ae17d41a7a1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e41117b5317d4cd625ad991db1fdab1428d8748e86f372b2fc5c6e189112a1b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118858741"
 ---
-# <a name="task-security-hardening"></a>Sicherheitshärtung der Aufgabe
+# <a name="task-security-hardening"></a>Tasksicherheitshärtung
 
-Mithilfe der Funktion zum Sichern von Tasks können Aufgaben Besitzer ihre Aufgaben mit mindestens erforderlichen Berechtigungen ausführen. Beachten Sie, dass diese Funktion standardmäßig aktiviert ist und die Aufgaben Besitzer weitere Anpassungen vornehmen können, indem Sie das Array Task Process Token Security Identifier Type und Task required-Berechtigungen verwenden.
+Die Verwendung der Sicherheitshärtungsfunktion "Tasks" ermöglicht Es Taskbesitzern, ihre Aufgaben mit minimal erforderlichen Berechtigungen auszuführen. Beachten Sie, dass diese Funktion standardmäßig aktiviert ist und Taskbesitzer weitere Anpassungen vornehmen können, indem sie den Sicherheitsbezeichnertyp des Taskprozesses und das Array mit den erforderlichen Aufgabenberechtigungen verwenden.
 
-## <a name="task-process-token-sid-type-and-task-required-privileges-array"></a>Task Prozess Token SID-Typ und Task erforderliches Berechtigungs Array
+## <a name="task-process-token-sid-type-and-task-required-privileges-array"></a>Taskprozesstoken-SID-Typ und Array der erforderlichen Taskberechtigungen
 
-Durch die Angabe von **processtokensidtype** auf der Aufgaben Definitions Ebene können Aufgaben Besitzer einen Task Prozess anfordern, der mit dem SID-Typ "None" oder dem "uneingeschränkten" SID-Typ ausgeführt werden soll. Wenn das Feld in der Aufgabendefinition vorhanden ist, stellt die Überprüfung sicher, dass die Aufgabe UserID den Namen oder die entsprechende SID-Zeichenfolge für eines der integrierten Dienst Konten des Betriebssystems enthält: "Netzwerkdienst" oder "lokaler Dienst".
+Wenn **ProcessTokenSidType** auf Taskdefinitionsebene angegeben wird, können Taskbesitzer anfordern, dass ein Taskprozess mit dem SID-Typ "none" oder dem SID-Typ "unrestricted" ausgeführt wird. Wenn das Feld in der Aufgabendefinition vorhanden ist, stellt die Überprüfung sicher, dass die UserId des Tasks den Namen oder die entsprechende SID-Zeichenfolge für eines dieser integrierten Betriebssystemdienstkonten enthält: "NETWORK SERVICE" oder "LOCAL SERVICE".
 
-Der SID-Typ "None" bedeutet, dass der Task in einem Prozess ausgeführt wird, der keine Prozess Token-sid enthält (es werden keine Änderungen an der Liste der prozesstokengruppen vorgenommen). Die Task Prinzipal Konto-sid (LocalService/NetworkService) in diesem Fall hat vollen Zugriff auf das Prozess Token.
+Der SID-Typ "none" bedeutet, dass der Task in einem Prozess ausgeführt wird, der keine Prozesstoken-SID enthält (an der Liste der Prozesstokengruppen werden keine Änderungen vorgenommen). Die Sid des Aufgabenprinzipalkontos (LocalService/NetworkService) hat in diesem Fall Vollzugriff auf das Prozesstoken.
 
-Der "uneingeschränkte" SID-Typ bedeutet, dass eine Task-sid vom vollständigen Aufgaben Pfad abgeleitet wird und der Liste der prozesstokengruppen hinzugefügt wird. Beispiel: \\ Microsoft \\ Windows \\ RAC \\ RacTask, das im lokalen Dienst Konto ausgeführt wird, wird die Task-sid von dem Namen Microsoft-Windows-RAC-RACTask abgeleitet, wobei ein "-" ein \\ \\ Ungültiges Benutzernamens Zeichen ist. Der bekannte Gruppenname für die Task-sid wäre "NT Task \\ <modified full task path> " (Domain Name \\ username Format). Die standardmäßige Zugriffs Steuerungs Liste (DACL) des Prozess Tokens wird ebenfalls geändert, um die vollständige Kontrolle über die Task-sid und die SID des lokalen Systems zu ermöglichen, und die Lese Steuerung für die Task Prinzipal Konto-SID. "schtasks.exe/showsid/TN <full task path> " zeigt die Task-SID an, die dem Task entspricht.
+Der SID-Typ "unrestricted" bedeutet, dass eine Task-SID vom vollständigen Aufgabenpfad abgeleitet und der Liste der Prozesstokengruppen hinzugefügt wird. Beispielsweise wird die \\ Microsoft \\ Windows \\ \\ RAC-RACTask, die im lokalen Dienstkonto ausgeführt wird, die Task-SID vom Namen Microsoft-Windows-RAC-RACTask abgeleitet, wobei ein "-" durch "" ersetzt \\ wird, da " ein \\ ungültiges Benutzernamenzeichen ist. Der bekannte Gruppenname für die Task-SID lautet "NT \\ <modified full task path> TASK" \\ (Domänenname-Benutzernamenformat). Die standardmäßige DACL (Discretionary Access Control List) des Prozesstokens wird ebenfalls geändert, um die vollständige Kontrolle nur für die Task-SID und die lokale System-SID zu ermöglichen und die Steuerung auf die SID des Aufgabenprinzipalkontos zu lesen. "schtasks.exe /showsid /tn" <full task path> zeigt die Task-SID an, die der Aufgabe entspricht.
 
-Wenn eine nicht-com-Task Aktion gestartet wird, protokolliert die Planungs-Engine das Aufgaben Prinzipal Konto, ruft das Prozess Token ab und fragt die Liste der Berechtigungen ab, die das Token besitzt, und vergleicht dann mit der in "Requirements dprivileges" angegebenen Berechtigungs Liste. Wenn keine Berechtigung in der letzteren angegeben ist, wird diese als "SE- \_ Berechtigung entfernt" markiert \_ . Die ausführbare Aktion wird dann mit dem sich ergebenden Tokenhandle mithilfe der-API von "API" gestartet.
+Wenn eine Nicht-COM-Taskaktion gestartet wird, protokolliert die Planungs-Engine das Aufgabenprinzipalkonto, ruft das Prozesstoken ab und fragt die Liste der Berechtigungen ab, über die das Token verfügt, und vergleicht diese dann mit der unter RequiredPrivileges angegebenen Berechtigungsliste. Wenn in letzterem keine Berechtigung angegeben ist, wird dies als SE \_ PRIVILEGE \_ REMOVED markiert. Die ausführbare Aktion wird dann mit dem resultierenden Tokenhandle mithilfe der CreateProcessAsUser-API gestartet.
 
-Wenn eine com-Task Aktion gestartet wird, muss Sie durch den taskhost.exe Prozess aktiviert werden. Die Planungs-Engine fragt den Kontext Block der einzelnen laufenden taskhost.exe mit demselben Konto wie die Startaufgabe ab. Wenn festgestellt wird, dass ein Host Prozess mit einer übergeordneten Menge von Berechtigungen gestartet wurde, die der Start Task benötigt, wird dieser Task in diesem Prozess gehostet. Wenn ein solcher Prozess nicht gefunden wird, werden die Härtungs Informationen aller Aufgaben, die in den TasksHosts unter dem Aufgaben Prinzipal Konto ausgeführt werden, mit der angegebenen "Requirements dprivileges"-Maske kombiniert und eine neue Instanz von taskhost.exe gestartet.
+Wenn eine COM-Taskaktion gestartet wird, muss sie vom taskhost.exe Prozess aktiviert werden. Die Planungs-Engine fragt den Kontextblock jedes ausgeführten taskhost.exe mit demselben Konto wie die Startaufgabe ab. Wenn festgestellt wird, dass ein Hostprozess mit einer Übermenge von Berechtigungen gestartet wurde, die der Starttask benötigt, wird dieser Task in diesem Prozess gehostet. Wenn ein solcher Prozess nicht gefunden wird, kombiniert er die Härtungsinformationen aller Aufgaben, die in den taskhosts unter dem Aufgabenprinzipalkonto ausgeführt werden, mit der angegebenen RequiredPrivileges-Maske und startet dann eine neue Instanz von taskhost.exe.
 
-Wenn "Requirements dprivileges" in der Aufgabendefinition nicht vorhanden ist, werden die Standard Berechtigungen des Aufgaben Prinzipal Kontos ohne die "SeImpersonatePrivilege"-Berechtigung für den Task Prozess verwendet. Wenn **processtokensidtype** in der Aufgabendefinition nicht vorhanden ist, wird "uneingeschränkt" als Standard verwendet.
+Wenn RequiredPrivileges in der Aufgabendefinition nicht vorhanden ist, werden die Standardberechtigungen des Aufgabenprinzipalkontos ohne SeImpersonatePrivilege für den Taskprozess verwendet. Wenn **ProcessTokenSidType** in der Taskdefinition nicht vorhanden ist, wird "unrestricted" als Standard verwendet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Aufgaben Registrierungsinformationen](task-registration-information.md)
+[Informationen zur Aufgabenregistrierung](task-registration-information.md)
 </dt> <dt>
 
 [Informationen zum Taskplaner](about-the-task-scheduler.md)
 </dt> <dt>
 
-[Sicherheits Kontexte für Tasks](security-contexts-for-running-tasks.md)
+[Sicherheitskontexte für Aufgaben](security-contexts-for-running-tasks.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

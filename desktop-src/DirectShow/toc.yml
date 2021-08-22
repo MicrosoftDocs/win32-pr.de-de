@@ -4,7 +4,7 @@
     - name: Einführung in DirectShow
       href: introduction-to-directshow.md
       items:
-        - name: Neuerungen in DirectShow
+        - name: Neues in DirectShow
           href: whats-new-in-directshow.md
         - name: Unterstützte Formate in DirectShow
           href: supported-formats-in-directshow.md
@@ -15,41 +15,41 @@
       items:
         - name: Erstellen von DirectShow-Anwendungen
           href: setting-up-the-build-environment.md
-        - name: Einführung in die DirectShow-Anwendungsprogrammierung
+        - name: Einführung in DirectShow-Anwendungsprogrammierung
           href: introduction-to-directshow-application-programming.md
-        - name: Wiedergeben einer Datei
+        - name: Wiederspielen einer Datei
           href: how-to-play-a-file.md
     - name: Informationen zu DirectShow
       href: about-directshow.md
       items:
         - name: DirectShow-Systemübersicht
           href: directshow-system-overview.md
-        - name: Das Filterdiagramm und seine Komponenten
+        - name: Die Filter-Graph und deren Komponenten
           href: the-filter-graph-and-its-components.md
           items:
             - name: Informationen zu DirectShow-Filtern
               href: about-directshow-filters.md
-            - name: Informationen zum Filtergraph-Manager
+            - name: Informationen zum Filter Graph Manager
               href: about-the-filter-graph-manager.md
             - name: Informationen zu Medientypen
               href: about-media-types.md
             - name: Informationen zu Medienbeispielen und Zuweisungen
               href: about-media-samples-and-allocators.md
-            - name: Beteiligung von Hardwaregeräten am Filterdiagramm
+            - name: Teilnahme von Hardwaregeräten am Filter Graph
               href: how-hardware-devices-participate-in-the-filter-graph.md
-        - name: Erstellen des Filterdiagramms
+        - name: Erstellen des Graph
           href: building-the-filter-graph.md
           items:
-            - name: Graph-Building-Komponenten
+            - name: Graph-Building Komponenten
               href: graph-building-components.md
-            - name: Übersicht über die Grapherstellung
+            - name: Übersicht über Graph Building
               href: overview-of-graph-building.md
-            - name: Intelligent Connect
+            - name: Intelligente Verbinden
               href: intelligent-connect.md
-        - name: Datenfluss im Filterdiagramm
+        - name: Daten Flow im Filter-Graph
           href: data-flow-in-the-filter-graph.md
           items:
-            - name: Übersicht über Datenfluss in DirectShow
+            - name: Übersicht über data Flow in DirectShow
               href: overview-of-data-flow-in-directshow.md
             - name: Transportprotokolle
               href: transports.md
@@ -66,20 +66,20 @@
               href: overview-of-notification.md
             - name: Abrufen von Ereignissen
               href: retrieving-events.md
-            - name: 'Lernen, wenn ein Ereignis auftritt'
+            - name: Learning Wenn ein Ereignis auftritt
               href: learning-when-an-event-occurs.md
-        - name: Uhrzeit und Uhren in DirectShow
+        - name: Zeit und Uhren in DirectShow
           href: time-and-clocks-in-directshow.md
           items:
             - name: Referenzuhren
               href: reference-clocks.md
-            - name: Uhrzeiten
+            - name: Taktzeiten
               href: clock-times.md
             - name: Zeitstempel
               href: time-stamps.md
             - name: Livequellen
               href: live-sources.md
-        - name: Dynamische Grapherstellung
+        - name: Dynamic Graph Building
           href: dynamic-graph-building.md
           items:
             - name: Dynamische Wiederherstellung der Verbindung
@@ -91,14 +91,14 @@
     - name: Verwenden von DirectShow
       href: using-directshow.md
       items:
-        - name: Simulieren der Grapherstellung mit GraphEdit
+        - name: Simulieren von Graph Building mit GraphEdit
           href: simulating-graph-building-with-graphedit.md
           items:
             - name: Verwenden von GraphEdit
               href: using-graphedit.md
-            - name: Laden eines Graphen aus einem externen Prozess
+            - name: Laden einer Graph aus einem externen Prozess
               href: loading-a-graph-from-an-external-process.md
-            - name: Speichern eines Filterdiagramms in einer GraphEdit-Datei
+            - name: Speichern eines Filterfilters Graph in einer GraphEdit-Datei
               href: saving-a-filter-graph-to-a-graphedit-file.md
             - name: Programmgesteuertes Laden einer GraphEdit-Datei
               href: loading-a-graphedit-file-programmatically.md
@@ -127,7 +127,7 @@
                   href: using-the-system-device-enumerator.md
                 - name: Verwenden der Filterzuordnung
                   href: using-the-filter-mapper.md
-            - name: Aufzählen von Objekten in einem Filterdiagramm
+            - name: Aufzählen von Objekten in einer Filter-Graph
               href: enumerating-objects-in-a-filter-graph.md
               items:
                 - name: Aufzählen von Filtern
@@ -141,19 +141,19 @@
               items:
                 - name: Hinzufügen eines Filters nach CLSID
                   href: add-a-filter-by-clsid.md
-                - name: Suchen einer nicht verbundenen Stecknadel für einen Filter
+                - name: Suchen einer nicht verbundenen Stecknadel in einem Filter
                   href: find-an-unconnected-pin-on-a-filter.md
-                - name: Verbinden von zwei Filtern
+                - name: Verbinden Zwei Filter
                   href: connect-two-filters.md
                 - name: Suchen einer Schnittstelle für einen Filter oder eine Stecknadel
                   href: find-an-interface-on-a-filter-or-pin.md
                 - name: Suchen des Peers eines Filters
                   href: find-a-filters-peer.md
-                - name: Entfernen aller Filter im Diagramm
+                - name: Entfernen Sie alle Filter im Graph
                   href: remove-all-the-filters-in-the-graph.md
                 - name: Erstellen von Diagrammen mit dem Capture Graph Builder
                   href: building-graphs-with-the-capture-graph-builder.md
-            - name: Suchen des Filterdiagramms
+            - name: Suchen nach Graph
               href: seeking-the-filter-graph.md
               items:
                 - name: Abfragen von Suchfunktionen
@@ -166,14 +166,14 @@
                   href: time-formats-for-seek-commands.md
                 - name: Implementieren einer Suchleiste
                   href: implementing-a-seek-bar.md
-            - name: Festlegen der Graphuhr
+            - name: Festlegen der Graph Uhr
               href: setting-the-graph-clock.md
             - name: Debuggen in DirectShow
               href: debugging-in-directshow.md
               items:
                 - name: Debuggen von DirectShow-Filtern
                   href: debugging-directshow-filters.md
-                - name: Tipps zur Problembehandlung
+                - name: Hinweise zur Fehlerbehebung
                   href: troubleshooting-tips.md
                 - name: Ereignisablaufverfolgung in DirectShow
                   href: event-tracing-in-directshow.md
@@ -186,17 +186,17 @@
               href: step-1--declare-the-dshowplayer-class.md
             - name: 'Schritt 2: Deklarieren von CVideoRenderer und abgeleiteten Klassen'
               href: step-2--declare-cvideorenderer-and-derived-classes.md
-            - name: 'Schritt 3: Erstellen des Filterdiagramms'
+            - name: 'Schritt 3: Erstellen des Filter-Graph'
               href: step-3--build-the-filter-graph.md
             - name: 'Schritt 4: Hinzufügen des Videorenderers'
               href: step-4--add-the-video-renderer.md
             - name: 'Schritt 5: Hinzufügen von Videofunktionen'
               href: step-5--add-video-functionality.md
-            - name: 'Schritt 6: Behandeln von Graphereignissen'
+            - name: 'Schritt 6: Behandeln von Graph Ereignissen'
               href: step-6--handle-graph-events.md
             - name: 'Schritt 7: Transportsteuerelemente'
               href: step-7--transport-controls.md
-            - name: Beispiel für DirectShow-Wiedergabe
+            - name: DirectShow-Wiedergabebeispiel
               href: directshow-playback-example.md
               items:
                 - name: playback.h
@@ -216,16 +216,16 @@
               href: about-the-audio-capture-filter.md
             - name: Auswählen eines Erfassungsgeräts
               href: selecting-a-capture-device.md
-            - name: Erstellen eines Audioaufnahmegraphen
+            - name: Erstellen eines Audioaufnahme-Graph
               href: creating-an-audio-capture-graph.md
-            - name: Erstellen eines Audioaufnahmegraphen mit Vorschau
+            - name: Erstellen eines Audio capture-Graph mit Vorschauversion
               href: creating-an-audio-capture-graph-with-preview.md
             - name: Festlegen von Audioaufnahmeeigenschaften
               href: setting-audio-capture-properties.md
         - name: Videoaufnahme
           href: video-capture.md
           items:
-            - name: Informationen zur Videoaufnahme in DirectShow
+            - name: Informationen zur Videoerfassung in DirectShow
               href: about-video-capture-in-directshow.md
               items:
                 - name: Informationen zum Capture Graph Builder
@@ -243,7 +243,7 @@
               items:
                 - name: Aufzeichnen von Videos in einer AVI-Datei
                   href: capturing-video-to-an-avi-file.md
-                - name: Aufzeichnen von Videos in einer Windows-Mediendatei
+                - name: Aufzeichnen von Videos in einer Windows Mediendatei
                   href: capturing-video-to-a-windows-media-file.md
                 - name: Benutzerdefinierte Dateiformate
                   href: custom-file-formats.md
@@ -253,7 +253,7 @@
                   href: capturing-to-multiple-files.md
                 - name: Kombinieren von Videoaufnahme und Vorschau
                   href: combining-video-capture-and-preview.md
-            - name: Steuern eines Erfassungsdiagramms
+            - name: Steuern einer Erfassungs-Graph
               href: controlling-a-capture-graph.md
             - name: Videoaufnahmetasks
               href: video-capture-tasks.md
@@ -278,14 +278,14 @@
               items:
                 - name: Informationen zu digitalen Videos in DirectShow
                   href: about-digital-video-in-directshow.md
-                - name: DV AVI-Dateien vom Typ 1 und vom Typ 2
+                - name: Type-1 vs. Type-2 DV AVI Files
                   href: type-1-vs--type-2-dv-avi-files.md
                 - name: Dv in Datei erfassen
                   href: capture-dv-to-file.md
                   items:
                     - name: Erfassen einer DV-Datei vom Typ 1
                       href: capture-a-type-1-dv-file.md
-                    - name: Erfassen einer Dv-Datei vom Typ 2
+                    - name: Erfassen einer Typ-2-DV-Datei
                       href: capture-a-type-2-dv-file.md
                     - name: Aufnahme von DV in unkomprimierte RGB-Daten
                       href: capture-dv-to-uncompressed-rgb.md
@@ -298,7 +298,7 @@
                       href: transmit-from-type-2-file.md
                 - name: Arbeiten mit USB DV-Videogeräten
                   href: working-with-usb-dv-video-devices.md
-                - name: DVINFO-Feldeinstellungen im MSDV-Treiber
+                - name: DVINFO-Feld Einstellungen im MSDV-Treiber
                   href: dvinfo-field-settings-in-the-msdv-driver.md
                   items:
                     - name: AAUX-Quellpaket (AS)
@@ -312,7 +312,7 @@
             - name: Steuern eines DV-Dvds
               href: controlling-a-dv-camcorder.md
               items:
-                - name: Externe Geräteschnittstellen für DV-Dvds
+                - name: Externe Geräteschnittstellen für DV-Anschlüsse
                   href: external-device-interfaces-for-dv-camcorders.md
                 - name: Gerätemodus
                   href: device-mode.md
@@ -347,18 +347,18 @@
                   items:
                     - name: Anzeigen von Untertiteln
                       href: viewing-closed-captions.md
-                    - name: Anzeigen von World Standard Teletext
+                    - name: Viewing World Standard Teletext
                       href: viewing-world-standard-teletext.md
-            - name: Erweiterte Erfassungsthemen
+            - name: Themen zur erweiterten Erfassung
               href: advanced-capture-topics.md
               items:
                 - name: Behandeln von Repaintereignissen in Video Capture
                   href: handling-repaint-events-in-video-capture.md
-                - name: Arbeiten mit Stecknadelkategorien
+                - name: Arbeiten mit Pinkategorien
                   href: working-with-pin-categories.md
                 - name: Verwenden des Smart Tee-Filters
                   href: using-the-smart-tee-filter.md
-                - name: Verwenden des Overlay-Mixers in der Videoaufnahme
+                - name: Verwenden des Overlay-Mixer in Video Capture
                   href: using-the-overlay-mixer-in-video-capture.md
                 - name: Videoport-Pins
                   href: video-port-pins.md
@@ -377,7 +377,7 @@
               href: dvd-support-features-in-directshow.md
             - name: DVD-Grundlagen
               href: dvd-basics.md
-            - name: Erstellen des DVD-Filterdiagramms
+            - name: Erstellen der DVD-Filter-Graph
               href: building-the-dvd-filter-graph.md
             - name: Abrufen der DVD-Schnittstellenzeiger
               href: obtaining-the-dvd-interface-pointers.md
@@ -387,13 +387,13 @@
               href: identifying-valid-dvd-operations.md
             - name: Synchronisieren von DVD-Befehlen
               href: synchronizing-dvd-commands.md
-            - name: Datenfluss im DVD-Navigator
+            - name: Daten Flow im DVD-Navigator
               href: data-flow-in-the-dvd-navigator.md
             - name: Behandeln von DVD-Ereignisbenachrichtigungen
               href: handling-dvd-event-notifications.md
             - name: Arbeiten mit DVD-Menüs
               href: working-with-dvd-menus.md
-            - name: Audio- und Unterbildstreams
+            - name: Audio und Subpicture Streams
               href: audio-and-subpicture-streams.md
             - name: Erzwingen der Verwaltungsebenen von Eltern
               href: enforcing-parental-management-levels.md
@@ -401,13 +401,13 @@
               href: saving-and-restoring-dvdstate-objects.md
             - name: Arbeiten mit DVD-Textzeichenfolgen
               href: working-with-dvd-text-strings.md
-            - name: Wiedergeben von Streamingaudiostreams
+            - name: Wiedergeben von Audio Streams
               href: playing-karaoke-audio-streams.md
             - name: Behandeln von Auswerfen von Datenträgern
               href: handling-disc-ejections.md
             - name: Verbesserungen bei der DVD-Wiedergabe in Windows Vista
               href: dvd-playback-enhancements-in-windows-vista.md
-            - name: Konfiguration des DVD-Filterdiagramms
+            - name: KONFIGURATION DES DVD-Filters Graph
               href: dvd-filter-graph-configuration.md
             - name: Verknüpfungen zu C++-DVD-Referenzseiten
               href: shortcuts-to-c-dvd-reference-pages.md
@@ -433,7 +433,7 @@
               href: using-the-mpeg-2-splitter.md
             - name: MPEG-Beispieleigenschaften
               href: mpeg-sample-properties.md
-        - name: Verwenden von Windows Media in DirectShow
+        - name: Verwenden von Windows Medien in DirectShow
           href: using-windows-media-in-directshow.md
           items:
             - name: Lesen von ASF-Dateien in DirectShow
@@ -447,7 +447,7 @@
                   href: obtaining-a-pointer-to-the-reader-object.md
                 - name: ASF-Webstreamwiedergabe in DirectShow
                   href: asf-web-stream-playback-in-directshow.md
-                - name: ASF-Skriptstreams in DirectShow
+                - name: ASF-Streams in DirectShow
                   href: asf-script-streams-in-directshow.md
                 - name: Suchen in ASF-Dateien
                   href: seeking-in-asf-files.md
@@ -458,7 +458,7 @@
               items:
                 - name: Das DirectShow SDK und das Windows Media Format SDK
                   href: the-directshow-sdk-and-the-windows-media-format-sdk.md
-                - name: Konfigurieren des ASF Writer
+                - name: Konfigurieren des ASF-Writer
                   href: configuring-the-asf-writer.md
                 - name: Erstellen von Filterdiagrammen zum Schreiben von ASF-Dateien
                   href: building-filter-graphs-to-write-asf-files.md
@@ -466,10 +466,10 @@
                   href: configuring-profiles-and-other-asf-file-properties.md
                 - name: Entsperren des Windows Media Format SDK
                   href: unlocking-the-windows-media-format-sdk.md
-        - name: Verwenden des Videomischungsrenderers
+        - name: Verwenden des Renderers für das Mischen von Videos
           href: using-the-video-mixing-renderer.md
           items:
-            - name: Informationen zum Rendern von Videomischungen
+            - name: Informationen zum Rendern von Videos
               href: about-the-video-mixing-render.md
               items:
                 - name: Features der VMR
@@ -485,41 +485,41 @@
               items:
                 - name: VMR-Fenstermodus (Kompatibilität)
                   href: vmr-windowed--compatibility--mode.md
-                - name: VMR-Modus ohne Fenster
+                - name: FENSTERLOSER VMR-Modus
                   href: vmr-windowless-mode.md
                 - name: VMR mit mehreren Streams (Gemischter Modus)
                   href: vmr-with-multiple-streams--mixing-mode.md
-                - name: VMR Renderless Playback Mode (Custom Allocator-Presenters)
+                - name: Renderloser VMR-Wiedergabemodus (benutzerdefinierte Allocator-Presenter)
                   href: vmr-renderless-playback-mode--custom-allocator-presenters.md
                   items:
-                    - name: Bereitstellen eines benutzerdefinierten Allocator-Presenter für VMR-7
+                    - name: Bereitstellung eines benutzerdefinierten Allocator-Presenter für VMR-7
                       href: supplying-a-custom-allocator-presenter-for-vmr-7.md
-                    - name: Bereitstellen eines benutzerdefinierten Allocator-Presenter für VMR-9
+                    - name: Bereitstellung eines benutzerdefinierten Allocator-Presenter für VMR-9
                       href: supplying-a-custom-allocator-presenter-for-vmr-9.md
                     - name: Synchronisieren der VMR mit der Aktualisierungsrate des Monitors
                       href: synchronizing-the-vmr-to-the-monitors-refresh-rate.md
                 - name: Exklusiver DirectDraw-Modus
                   href: directdraw-exclusive-mode.md
-            - name: Erstellen eines VMR-9-Filterdiagramms
+            - name: Erstellen eines VMR-9-Graph
               href: building-a-vmr-9-filter-graph.md
             - name: Verwenden des VMR-Gemischtmodus
               href: using-vmr-mixing-mode.md
               items:
-                - name: Positionieren und Verschieben von Videorechtecke im Kompositionsbereich
+                - name: Positionieren und Verschieben von Videorechtecke im Kompositionsraum
                   href: positioning-and-moving-video-rectangles-in-composition-space.md
-                - name: Seitenverhältniskorrektur
+                - name: Korrektur des Seitenverhältnisses
                   href: aspect-ratio-correction.md
                 - name: Nicht quadratische Mischung
                   href: non-square-mixing.md
-                - name: Verwenden der Dezimierung zum Optimieren der Mischungsleistung
+                - name: Verwenden von Dezimation zum Optimieren der Mischen-Leistung
                   href: using-decimation-to-optimize-mixing-performance.md
-                - name: YUV-Gemischtmodus
+                - name: YUV-Mischungsmodus
                   href: yuv-mixing-mode.md
                 - name: Anzeigen einer von der App bereitgestellten Bitmap auf dem zusammengesetzten Bild
                   href: displaying-an-application-supplied-bitmap-on-the-composited-image.md
             - name: Festlegen von Deinterlace-Einstellungen
               href: setting-deinterlace-preferences.md
-            - name: Verwenden der VMR für DirectShow-Filterentwickler
+            - name: Verwenden von VMR für DirectShow-Filterentwickler
               href: using-the-vmr-for-directshow-filter-developers.md
               items:
                 - name: Anforderungen für Decoder
@@ -528,7 +528,7 @@
                   href: stream-control.md
                 - name: Koordinatenzuordnung in der VMR
                   href: coordinate-mapping-in-the-vmr.md
-                - name: Vorverarbeitungstransformationen des MPEG-Decoders
+                - name: Vorverarbeitungstransformationen für MPEG-Decoder
                   href: mpeg-decoder-preprocessing-transformations.md
                 - name: WHQL-Tests
                   href: whql-tests.md
@@ -540,7 +540,7 @@
                   href: working-with-direct3d-render-targets.md
                 - name: Per-Pixel Alphablending
                   href: per-pixel-alpha-blending.md
-            - name: Verwenden von Certified Output Protection Protocol (COPP)
+            - name: Verwenden des Certified Output Protection-Protokolls (COPP)
               href: using-certified-output-protection-protocol--copp.md
               items:
                 - name: Übersicht über COPP
@@ -572,10 +572,10 @@
               href: introduction-to-directshow-filter-development.md
             - name: Erstellen von DirectShow-Filtern
               href: building-directshow-filters.md
-            - name: Herstellen einer Verbindung mit Filtern
+            - name: Funktionsweise von Verbinden
               href: how-filters-connect.md
               items:
-                - name: Stecknadelverbindungen
+                - name: Anheften von Verbindungen
                   href: pin-connections.md
                 - name: Aushandeln von Medientypen
                   href: negotiating-media-types.md
@@ -585,7 +585,7 @@
                   href: providing-a-custom-allocator.md
                 - name: Erneutes Verbinden von Pins
                   href: reconnecting-pins.md
-            - name: Datenfluss für Filterentwickler
+            - name: Data Flow für Filterentwickler
               href: data-flow-for-filter-developers.md
               items:
                 - name: Bereitstellen von Beispielen
@@ -609,7 +609,7 @@
                       href: queryaccept--upstream.md
                     - name: ReceiveConnection
                       href: receiveconnection.md
-                    - name: Verarbeiten von Formatänderungen vom Videorenderer
+                    - name: Behandeln von Formatänderungen über den Videorenderer
                       href: handling-format-changes-from-the-video-renderer.md
             - name: Threads und kritische Abschnitte
               href: threads-and-critical-sections.md
@@ -618,9 +618,9 @@
                   href: the-streaming-and-application-threads.md
                 - name: Status „Wird angehalten“
                   href: pausing.md
-                - name: Empfangen und Übermitteln von Beispielen
+                - name: Empfangen und Bereitstellen von Beispielen
                   href: receiving-and-delivering-samples.md
-                - name: Bereitstellen des Endes von Stream
+                - name: Bereitstellen des Datenstromendes
                   href: delivering-the-end-of-stream.md
                 - name: Leeren von Daten
                   href: flushing-data.md
@@ -628,16 +628,16 @@
                   href: stopping.md
                 - name: Abrufen von Puffern
                   href: getting-buffers.md
-                - name: Streamingthreads und der Filtergraph-Manager
+                - name: Streamingthreads und der Graph-Manager
                   href: streaming-threads-and-the-filter-graph-manager.md
                 - name: Zusammenfassung des Filterthreadings
                   href: summary-of-filter-threading.md
-            - name: Quality-Control-Verwaltung
+            - name: Quality-Control Verwaltung
               href: quality-control-management.md
               items:
-                - name: Qualitätsmeldungen
+                - name: Qualitätsnachrichten
                   href: quality-messages.md
-                - name: Standardqualitätskontrolle
+                - name: Standardqualitätssteuerung
                   href: default-quality-control.md
             - name: DirectShow und COM
               href: directshow-and-com.md
@@ -652,7 +652,7 @@
                 - name: Erstellen einer DirectShow-Filter-DLL
                   href: how-to-create-a-dll.md
                   items:
-                    - name: Klassenfactorys und Factoryvorlagen
+                    - name: Klassen factorys und Factoryvorlagen
                       href: class-factories-and-factory-templates.md
                     - name: Factoryvorlagenarray
                       href: factory-template-array.md
@@ -687,7 +687,7 @@
                   href: step-1--choose-a-base-class.md
                 - name: "Schritt\_2: Deklarieren der Filter-Klasse"
                   href: step-2--declare-the-filter-class.md
-                - name: "Schritt\_3: Medientypaushandlung unterstützen"
+                - name: 'Schritt 3: Medientypaushandlung unterstützen'
                   href: step-3--support-media-type-negotiation.md
                   items:
                     - name: Schritt 3A. Implementieren der CheckInputType-Methode
@@ -736,11 +736,11 @@
                   href: step-1--define-a-mechanism-for-setting-the-property.md
                 - name: "Schritt\_2: Implementieren von ISpecifyPropertyPages"
                   href: step-2--implement-ispecifypropertypages.md
-                - name: "Schritt\_3: Unterstützung von QueryInterface"
+                - name: 'Schritt 3: Unterstützung von QueryInterface'
                   href: step-3--support-queryinterface.md
                 - name: Schritt 4. Erstellen der Eigenschaftenseite
                   href: step-4--create-the-property-page.md
-                - name: 'Schritt 5: Speichern eines Zeigers auf den Filter'
+                - name: 'Schritt 5: Store eines Zeigers auf den Filter'
                   href: step-5--store-a-pointer-to-the-filter.md
                 - name: 'Schritt 6: Initialisieren des Dialogfelds'
                   href: step-6--initialize-the-dialog.md
@@ -777,7 +777,7 @@
                   href: dvd-decoder-development-in-directshow.md
                 - name: Decoder-Volumesteuerung
                   href: decoder-volume-control.md
-            - name: Decodereinstellungen für Windows Media Center Edition
+            - name: Decoder Einstellungen für Windows Media Center Edition
               href: decoder-settings-for-windows-media-center-edition.md
         - name: Erneutes Dekomprimieren einer AVI-Datei
           href: recompressing-an-avi-file.md
@@ -786,7 +786,7 @@
               href: choosing-a-compression-filter.md
             - name: Festlegen von Videokomprimierungseigenschaften
               href: setting-video-compression-properties.md
-            - name: Erstellen des Rekomprimierungsdiagramms
+            - name: Erstellen der Neukomprimierungs Graph
               href: building-the-recompression-graph.md
             - name: Schreiben der Datei
               href: writing-the-file.md
@@ -801,7 +801,7 @@
           href: ball-filter-sample.md
         - name: CutScene-Beispiel
           href: cutscene-sample.md
-        - name: DMO-Demobeispiel
+        - name: DMO Demobeispiel
           href: dmo-demo-sample.md
         - name: DMOEnum-Beispiel
           href: dmoenum-sample.md
@@ -851,7 +851,7 @@
           href: push-source-filters-sample.md
         - name: Beispiel für Bereichsfilter
           href: scope-filter-sample.md
-        - name: Synth-Filterbeispiel
+        - name: Beispiel für Synth-Filter
           href: synth-filter-sample.md
         - name: Tickerbeispiel
           href: ticker-sample.md
@@ -869,15 +869,15 @@
           items:
             - name: ACM-Wrapperfilter
               href: acm-wrapper-filter.md
-            - name: Analog Video Crossbar Filter
+            - name: Analoger Video-Kreuzleistenfilter
               href: analog-video-crossbar-filter.md
             - name: Audioaufnahmefilter
               href: audio-capture-filter.md
-            - name: Audiorendererfilter (WaveOut)
+            - name: Filter für Audiorenderer (WaveOut)
               href: audio-renderer--waveout--filter.md
-            - name: AVI-Filter
+            - name: AVI-160-Filter
               href: avi-compressor-filter.md
-            - name: AVI-Dekomprimierungsfilter
+            - name: AVI-Dekomprimiererfilter
               href: avi-decompressor-filter.md
             - name: AVI Draw Filter
               href: avi-draw-filter.md
@@ -893,7 +893,7 @@
               href: color-space-converter-filter.md
             - name: DirectSound-Rendererfilter
               href: directsound-renderer-filter.md
-            - name: DMO-Wrapperfilter
+            - name: DMO Wrapperfilter
               href: dmo-wrapper-filter.md
             - name: DV Muxer-Filter
               href: dv-muxer-filter.md
@@ -907,19 +907,19 @@
               href: dvd-navigator-filter.md
             - name: Erweiterter Videorendererfilter
               href: enhanced-video-renderer-filter.md
-            - name: Dateiquellenfilter (asynchron)
+            - name: Dateiquellenfilter (Async)
               href: file-source--async--filter.md
             - name: Filter für Dateiquelle (URL)
               href: file-source--url--filter.md
-            - name: Dateistream-Rendererfilter
+            - name: Filter für den Dateistreamrenderer
               href: file-stream-renderer-filter.md
             - name: File Writer-Filter
               href: file-writer-filter.md
-            - name: Filter für Vollbildrenderer
+            - name: Vollbild-Rendererfilter
               href: full-screen-renderer-filter.md
-            - name: Unendlicher Pin Tee-Filter
+            - name: Filter für unendliche Pin-Tees
               href: infinite-pin-tee-filter.md
-            - name: Rendererfilter für internen Skriptbefehl
+            - name: Filter für internen Skriptbefehlsrenderer
               href: internal-script-command-renderer-filter.md
             - name: Zeilen-21-Decoderfilter
               href: line-21-decoder-filter.md
@@ -929,27 +929,27 @@
               href: microsoft-mpeg-1-dd-audio-decoder.md
             - name: Microsoft MPEG-2-Audioencoder
               href: microsoft-mpeg-2-audio-encoder.md
-            - name: Microsoft MPEG-2 Encoder
+            - name: Microsoft MPEG-2-Encoder
               href: microsoft-mpeg-2-encoder.md
             - name: Microsoft MPEG-2-Videodecoder
               href: microsoft-mpeg-2-video-decoder.md
             - name: Microsoft MPEG-2 Video Encoder
               href: microsoft-mpeg-2-video-encoder.md
-            - name: PARSER-Filter
+            - name: PARSE-Parserfilter
               href: midi-parser-filter.md
-            - name: RENDERING-Rendererfilter
+            - name: FILTERS-Rendererfilter
               href: midi-renderer-filter.md
-            - name: MJPEG-Filter "Filter für Filter"
+            - name: MJPEG-Filter
               href: mjpeg-compressor-filter.md
-            - name: MJPEG-Dekomprimierungsfilter
+            - name: MJPEG-Dekomprimiererfilter
               href: mjpeg-decompressor-filter.md
             - name: MPEG-1-Audiodecoderfilter
               href: mpeg-1-audio-decoder-filter.md
-            - name: MPEG-1 Stream Splitter Filter
+            - name: MPEG-1-Streamteilungsfilter
               href: mpeg-1-stream-splitter-filter.md
             - name: MPEG-1-Videodecoderfilter
               href: mpeg-1-video-decoder-filter.md
-            - name: MPEG-2-Demultiplexer
+            - name: MPEG-2 Demultiplexer
               href: mpeg-2-demultiplexer.md
             - name: MPEG-2-Splitter
               href: mpeg-2-splitter.md
@@ -957,49 +957,49 @@
               href: msdv-driver.md
             - name: MSTape-Treiber
               href: mstape-driver.md
-            - name: MSYUV-Farbraumkonvertercoder
+            - name: MSYUV-Farbraumkonvertercodec
               href: msyuv-color-space-converter-codec.md
             - name: Parserfilter mit mehreren Dateien
               href: multi-file-parser-filter.md
             - name: Filter für Überlagerungsmixer
               href: overlay-mixer-filter.md
-            - name: Overlay Mixer 2 Filter
+            - name: Überlagerungsfilter Mixer 2
               href: overlay-mixer-2-filter.md
-            - name: QT-Dekomprimierungsfilter
+            - name: QT-Dekomprimiererfilter
               href: qt-decompressor-filter.md
             - name: QuickTime Movie Parser-Filter
               href: quicktime-movie-parser-filter.md
             - name: SAMI-Parserfilter (CC)
               href: sami--cc--parser-filter.md
-            - name: Smart Tee Filter
+            - name: Smart Tee-Filter
               href: smart-tee-filter.md
             - name: Tee/Sink-to-Sink Converter
               href: tee-sink-to-sink-converter.md
             - name: TV-Audiofilter
               href: tv-audio-filter.md
-            - name: TV Tuner Filter
+            - name: TV-Tunerfilter
               href: tv-tuner-filter.md
-            - name: VBI-Oberflächenzuweisung
+            - name: VBI Surface Allocator
               href: vbi-surface-allocator.md
             - name: VFW-Erfassungsfilter
               href: vfw-capture-filter.md
             - name: VGA 16 Color Ditherer Filter
               href: vga-16-color-ditherer-filter.md
-            - name: VideoMischungsrenderer Filter 7
+            - name: Video Mixing Renderer Filter 7
               href: video-mixing-renderer-filter-7.md
-            - name: VideoMischungsrenderer Filter 9
+            - name: Filter für Videomischungsrenderer 9
               href: video-mixing-renderer-filter-9.md
             - name: Videoport-Manager
               href: video-port-manager.md
             - name: Videorendererfilter
               href: video-renderer-filter.md
-            - name: WAVE-Parserfilter
+            - name: WAVE Parser-Filter
               href: wave-parser-filter.md
-            - name: WDM-Videoerfassungsfilter
+            - name: WDM-Videoaufnahmefilter
               href: wdm-video-capture-filter.md
-            - name: Windows Media Source-Filter
+            - name: Windows Medienquellfilter
               href: windows-media-source-filter.md
-            - name: WM ASF-Readerfilter
+            - name: WM ASF-Leserfilter
               href: wm-asf-reader-filter.md
             - name: WM ASF Writer-Filter
               href: wm-asf-writer-filter.md
@@ -1012,7 +1012,7 @@
           items:
             - name: Schnittstellen zum Erstellen von Filterdiagrammen
               href: interfaces-for-building-filter-graphs.md
-            - name: Schnittstellen zum Steuern eines Filterdiagramms
+            - name: Schnittstellen zum Steuern eines Filter-Graph
               href: interfaces-for-controlling-a-filter-graph.md
             - name: Audioaufnahme- und Renderingschnittstellen
               href: audio-capture-and-rendering-interfaces.md
@@ -1020,9 +1020,9 @@
               href: dvd-interfaces.md
             - name: Videoaufnahmeschnittstellen
               href: video-capture-interfaces.md
-            - name: Dateicodierungs- und Decodierungsschnittstellen
+            - name: Schnittstellen für Dateicodierung und -decodierung
               href: file-encoding-and-decoding-interfaces.md
-            - name: Schnittstellen für Videorendering und -überlagerung
+            - name: Schnittstellen für Videorendering und Überlagerung
               href: interfaces-for-video-rendering-and-overlay.md
             - name: Externe Gerätesteuerungsschnittstellen
               href: external-device-control-interfaces.md
@@ -2380,19 +2380,19 @@
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol2-returnfromsubmenu
                 - name: SelectAndActivateButton
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol2-selectandactivatebutton
-                - name: Wählen SieAngle aus.
+                - name: Wählen SieVerschränken aus.
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol2-selectangle
                 - name: SelectAtPosition
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol2-selectatposition
-                - name: SelectAudioStream
+                - name: Wählen SieAudioStream aus.
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol2-selectaudiostream
                 - name: SelectButton
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol2-selectbutton
-                - name: SelectDefaultAudioLanguage
+                - name: Wählen SieDefaultAudioLanguage aus.
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol2-selectdefaultaudiolanguage
-                - name: SelectDefaultMenuLanguage
+                - name: Wählen SieDefaultMenuLanguage aus.
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol2-selectdefaultmenulanguage
-                - name: SelectDefaultSubpictureLanguage
+                - name: Wählen SieDefaultSubpictureLanguage aus.
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol2-selectdefaultsubpicturelanguage
                 - name: SelectKaraokeAudioPresentationMode
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol2-selectkaraokeaudiopresentationmode
@@ -2404,7 +2404,7 @@
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol2-selectrelativebutton
                 - name: SelectSubpictureStream
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol2-selectsubpicturestream
-                - name: Wählen SieVideoModePreference aus.
+                - name: Wählen SieVideoModeVorbereiten aus.
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol2-selectvideomodepreference
                 - name: SetDVDDirectory
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol2-setdvddirectory
@@ -4221,7 +4221,7 @@
               href: /previous-versions/dd757713(v=vs.85)
             - name: WAVEFORMATEXTENSIBLE
               href: /windows/desktop/api/mmreg/ns-mmreg-waveformatextensible
-        - name: DirectShow Enumerated Types
+        - name: DirectShow-Enumerationstypen
           href: directshow-enumerated-types.md
           items:
             - name: _AM_ASFWRITERCONFIG_PARAM
@@ -4678,7 +4678,7 @@
                   href: bda-media-types.md
                 - name: DVD-Medientypen
                   href: dvd-media-types.md
-                - name: Medientypen in Zeile 21
+                - name: Medientypen der Zeile 21
                   href: line-21-media-types.md
                 - name: MPEG-1-Medientypen
                   href: mpeg-1-media-types.md
@@ -4691,7 +4691,7 @@
                       href: mpeg-2-demultiplexer-media-types.md
                     - name: MPEG-2-Kernelmedientypen
                       href: mpeg-2-kernel-media-types.md
-                - name: Streamuntertypen
+                - name: Stream-Untertypen
                   href: stream-subtypes.md
                 - name: VBI-Medientypen
                   href: vbi-media-types.md
@@ -4700,7 +4700,7 @@
                   items:
                     - name: Analoge Videountertypen
                       href: analog-video-subtypes.md
-                    - name: Videountertypen der DirectX-Videobeschleunigung
+                    - name: DirectX-Videobeschleunigung – Videountertypen
                       href: directx-video-acceleration-video-subtypes.md
                     - name: DV Video-Untertypen
                       href: dv-video-subtypes.md
@@ -4716,11 +4716,11 @@
                       href: miscellaneous-video-subtypes.md
             - name: Verdienst
               href: merit.md
-            - name: Zeitformat-GUIDs
+            - name: GUIDs im Zeitformat
               href: time-format-guids.md
             - name: GUIDs für Ablaufverfolgungsereignisse
               href: trace-guids.md
-        - name: Functions
+        - name: Funktionen
           href: functions.md
           items:
             - name: AMGetErrorText
@@ -4744,7 +4744,7 @@
               href: reftime.md
             - name: SPRMARRAY
               href: sprmarray.md
-        - name: MSWebDVD-ActiveX-Steuerelement
+        - name: MSWebDVD ActiveX-Steuerelement
           href: mswebdvd-activex-control.md
           items:
             - name: MSWebDVD-Objekt
@@ -5101,7 +5101,7 @@
                   href: /previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-am_dvdcopy_titlekey
                 - name: DVD_REGION
                   href: /previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-dvd_region
-            - name: 'DVD-Dvd : Eigenschaftensatz'
+            - name: DVD-Eigenschaftssatz "Dvd- UndOke"
               href: dvd-karaoke-property-set.md
               items:
                 - name: AM_DvdKaraokeData
@@ -5117,28 +5117,28 @@
                   href: /previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-am_property_sphli
                 - name: AM_PROPERTY_SPPAL
                   href: /previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-am_property_sppal
-            - name: Transporteigenschaftssatz für externe Geräte
+            - name: Eigenschaftensatz für den Transport externer Geräte
               href: external-device-transport-property-set.md
               items:
                 - name: KSPROPERTY_EXTXPORT_ATN_SEARCH
                   href: ksproperty-extxport-atn-search.md
                 - name: KSPROPERTY_EXTXPORT_TIMECODE_SEARCH
                   href: ksproperty-extxport-timecode-search.md
-            - name: Frame Stepping Property Set
+            - name: Frame Stepping-Eigenschaftensatz
               href: frame-stepping-property-set.md
               items:
                 - name: AM_FRAMESTEP_STEP
                   href: /previous-versions/windows/desktop/api/amvideo/ns-amvideo-am_framestep_step
-            - name: Pin-Eigenschaftssatz
+            - name: Pin-Eigenschaftensatz
               href: pin-property-set.md
-            - name: Rate Change Property Set
+            - name: Ratenänderungseigenschaftensatz
               href: rate-change-property-set.md
               items:
-                - name: AM_RATE_CorrectTS -Eigenschaft
+                - name: AM_RATE_CorrectTS-Eigenschaft
                   href: am-rate-correctts-property.md
                 - name: AM_RATE_MaxFullDataRate-Eigenschaft
                   href: am-rate-maxfulldatarate-property.md
-                - name: AM_RATE_QueryFullFrameRate -Eigenschaft
+                - name: AM_RATE_QueryFullFrameRate-Eigenschaft
                   href: am-rate-queryfullframerate-property.md
                 - name: AM_RATE_QueryLastRateSegPTS-Eigenschaft
                   href: am-rate-querylastratesegpts-property.md
@@ -5146,13 +5146,13 @@
                   href: am-rate-resetontimedisc-property.md
                 - name: AM_RATE_ReverseMaxFullDataRate-Eigenschaft
                   href: am-rate-reversemaxfulldatarate-property.md
-                - name: AM_RATE_SimpleRateChange -Eigenschaft
+                - name: AM_RATE_SimpleRateChange-Eigenschaft
                   href: am-rate-simpleratechange-property.md
-                - name: AM_RATE_UseRateVersion -Eigenschaft
+                - name: AM_RATE_UseRateVersion-Eigenschaft
                   href: am-rate-userateversion-property.md
                 - name: AM_ExactRateChange-Struktur
                   href: /previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-am_exactratechange
-                - name: AM_QueryRate Struktur
+                - name: AM_QueryRate-Struktur
                   href: /previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-am_queryrate
                 - name: AM_SimpleRateChange-Struktur
                   href: /previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-am_simpleratechange
@@ -5214,7 +5214,7 @@
                   href: avdecvideoswpowerlevel-property.md
                 - name: AVDecVideoThumbnailGenerationMode
                   href: avdecvideothumbnailgenerationmode-property.md
-                - name: AVDSPCafdnessEqualization
+                - name: AVDSPLoudnessEqualization
                   href: avdsploudnessequalization-property.md
                 - name: AVDSPSpeakerFill
                   href: avdspspeakerfill-property.md
@@ -5574,7 +5574,7 @@
               href: capture-graph-builder.md
             - name: DVD Graph Builder
               href: dvd-graph-builder.md
-            - name: Filterdiagramm-Manager
+            - name: Filter Graph Manager
               href: filter-graph-manager.md
             - name: Filterzuordnung
               href: filter-mapper.md
@@ -5609,7 +5609,7 @@
                       href: camevent-camevent.md
                     - name: ~WEBCAMEvent
                       href: camevent--camevent.md
-                    - name: Prüfen
+                    - name: Azure Functions
                       href: camevent-check.md
                     - name: Reset
                       href: camevent-reset.md
@@ -6247,7 +6247,7 @@
                   items:
                     - name: CBasePin-Verbindungsprozess
                       href: cbasepin-connection-process.md
-                    - name: Benachrichtigen von CBasePin über Änderungen des Filterzustands
+                    - name: Benachrichtigen von CBasePin über Änderungen des Filterstatus
                       href: notifying-cbasepin-of-filter-state-changes.md
                     - name: Ableiten von CBasePin
                       href: deriving-from-cbasepin.md
@@ -6542,7 +6542,7 @@
                       href: cbaserenderer-inactive.md
                     - name: IsEndOfStream
                       href: cbaserenderer-isendofstream.md
-                    - name: IsEndOfStreamdelivered
+                    - name: IsEndOfStreamDelivered
                       href: cbaserenderer-isendofstreamdelivered.md
                     - name: IsStreaming
                       href: cbaserenderer-isstreaming.md
@@ -7338,7 +7338,7 @@
                       href: cmediatype-format.md
                     - name: FormatLength
                       href: cmediatype-formatlength.md
-                    - name: Formattype
+                    - name: FormatType
                       href: cmediatype-formattype.md
                     - name: GetSampleSize
                       href: cmediatype-getsamplesize.md
@@ -7378,7 +7378,7 @@
                       href: cmediatype-setvariablesize.md
                     - name: Subtype
                       href: cmediatype-subtype.md
-                    - name: Typ
+                    - name: type
                       href: cmediatype-type.md
                     - name: operator =
                       href: cmediatype-operator-.md
@@ -8009,7 +8009,7 @@
                       href: ctransformfilter-stop.md
                     - name: StopStreaming
                       href: ctransformfilter-stopstreaming.md
-                    - name: Transform
+                    - name: Transformieren
                       href: ctransformfilter-transform.md
                 - name: CTransformInputPin
                   href: ctransforminputpin.md
@@ -8100,7 +8100,7 @@
                       href: ctransinplacefilter-outputpin.md
                     - name: Empfangen
                       href: ctransinplacefilter-receive.md
-                    - name: Transform
+                    - name: Transformieren
                       href: ctransinplacefilter-transform.md
                     - name: TypesMatch
                       href: ctransinplacefilter-typesmatch.md
@@ -8354,7 +8354,7 @@
                       href: kassert.md
                     - name: KDbgBreak
                       href: kdbgbreak.md
-                - name: Debugfunktionen im kritischen Abschnitt
+                - name: Wichtige Funktionen für das Debuggen von Abschnitten
                   href: critical-section-debugging-functions.md
                   items:
                     - name: CritCheckIn
@@ -8363,7 +8363,7 @@
                       href: critcheckout.md
                     - name: DbgLockTrace
                       href: dbglocktrace.md
-                - name: Debuggen von Ausgabefunktionen
+                - name: Debugausgabefunktionen
                   href: debug-output-functions.md
                   items:
                     - name: DbgCheckModuleLevel
@@ -8409,7 +8409,7 @@
                       href: validatestringptrw.md
                     - name: ValidateWritePtr
                       href: validatewriteptr.md
-                - name: Wartedebuggen von Funktionen
+                - name: Wartedebuggingfunktionen
                   href: wait-debugging-functions.md
                   items:
                     - name: DbgSetWaitTimeout
@@ -8426,17 +8426,17 @@
           items:
             - name: Vorteile von DMOs
               href: benefits-of-dmos.md
-            - name: DMO-Architektur
+            - name: DMO Architektur
               href: dmo-architecture.md
         - name: Verwenden von DMOs
           href: using-dmos.md
           items:
-            - name: Direktes Hosten eines DMO
+            - name: Direktes Hosten DMO
               href: directly-hosting-a-dmo.md
               items:
-                - name: Festlegen von Medientypen in einem DMO
+                - name: Festlegen von Medientypen für DMO
                   href: setting-media-types-on-a-dmo.md
-                - name: Verarbeiten von Daten in einem DMO
+                - name: Verarbeiten von Daten in DMO
                   href: processing-data-in-a-dmo.md
                 - name: In-Place Verarbeitung
                   href: in-place-processing.md
@@ -8449,9 +8449,9 @@
         - name: Schreiben eines DMO
           href: writing-a-dmo.md
           items:
-            - name: DMO-Mindestanforderungen
+            - name: DMO Mindestanforderungen
               href: dmo-minimum-requirements.md
-            - name: DMO-Medientypen
+            - name: DMO Medientypen
               href: dmo-media-types.md
             - name: Registrieren eines DMO
               href: registering-a-dmo.md
@@ -8470,10 +8470,10 @@
               href: envelope-segments.md
             - name: Berechnen von Parameterwerten
               href: calculating-parameter-values.md
-        - name: DMO-Referenz
+        - name: DMO Verweis
           href: dmo-reference.md
           items:
-            - name: DMO-Schnittstellen
+            - name: DMO Schnittstellen
               href: dmo-interfaces.md
               items:
                 - name: IDMOQualityControl
@@ -8598,7 +8598,7 @@
                       href: /previous-versions/windows/desktop/api/medparam/nf-medparam-imediaparams-setparam
                     - name: SetTimeFormat
                       href: /previous-versions/windows/desktop/api/medparam/nf-medparam-imediaparams-settimeformat
-            - name: DMO-Strukturen
+            - name: DMO Strukturen
               href: dmo-structures.md
               items:
                 - name: DMO_MEDIA_TYPE
@@ -8611,7 +8611,7 @@
                   href: /previous-versions/windows/desktop/api/medparam/ns-medparam-mp_envelope_segment
                 - name: MP_PARAMINFO
                   href: /previous-versions/windows/desktop/api/medparam/ns-medparam-mp_paraminfo
-            - name: DMO-Enumerationstypen
+            - name: DMO Aufzählungstypen
               href: dmo-enumerated-types.md
               items:
                 - name: DMO_ENUM_FLAGS
@@ -8636,7 +8636,7 @@
                   href: /previous-versions/windows/desktop/api/medparam/ne-medparam-mp_curve_type
                 - name: MP_TYPE
                   href: /previous-versions/windows/desktop/api/medparam/ne-medparam-mp_type
-            - name: DMO-Funktionen
+            - name: DMO Funktionen
               href: dmo-functions.md
               items:
                 - name: DMOEnum
@@ -8661,14 +8661,14 @@
                   href: /previous-versions/windows/desktop/api/dmort/nf-dmort-mofreemediatype
                 - name: MoInitMediaType
                   href: /previous-versions/windows/desktop/api/dmort/nf-dmort-moinitmediatype
-            - name: DMO-Konstanten
+            - name: DMO Konstanten
               href: dmo-constants.md
               items:
-                - name: DMO-Fehlercodes
+                - name: DMO Fehlercodes
                   href: dmo-error-codes.md
-                - name: DMO-GUIDs
+                - name: DMO Guids
                   href: dmo-guids.md
-                - name: DMO-Zeitformat-GUIDs
+                - name: DMO GUIDs im Zeitformat
                   href: dmo-time-format-guids.md
                 - name: Parameterfunktionsflags
                   href: parameter-capabilities-flags.md
@@ -8727,14 +8727,14 @@
                   href: timeline-objects.md
                 - name: Unterobjekte
                   href: subobjects.md
-            - name: Laden eines Projekts und Anzeigen einer Vorschau
+            - name: Laden eines Project und Anzeigen einer Vorschau
               href: loading-and-previewing-a-project.md
               items:
-                - name: Laden einer Projektdatei
+                - name: Laden einer Project-Datei
                   href: loading-a-project-file.md
-                - name: Vorschau des Projekts
+                - name: Vorschau der Project
                   href: previewing-the-project.md
-                - name: 'Vorschau eines Projekts: Beispielcode'
+                - name: 'Vorschau einer Project: Beispielcode'
                   href: previewing-a-project--example-code.md
             - name: Erstellen einer Zeitachse
               href: constructing-a-timeline.md
@@ -8773,14 +8773,14 @@
                   href: setting-properties-on-effects-and-transitions.md
                 - name: Übergangsrichtung
                   href: transition-direction.md
-            - name: Rendern eines Projekts
+            - name: Rendern eines Project
               href: rendering-a-project.md
               items:
                 - name: Informationen zu Render-Engines
                   href: about-the-render-engines.md
-                - name: Vorschau eines Projekts
+                - name: Vorschau einer Project
                   href: previewing-a-project.md
-                - name: Schreiben eines Projekts in eine Datei
+                - name: Schreiben eines Project in eine Datei
                   href: writing-a-project-to-a-file.md
                 - name: Bereitstellen eines benutzerdefinierten Video resizer
                   href: providing-a-custom-video-resizer.md
@@ -8799,10 +8799,10 @@
                   href: setting-the-error-log.md
                 - name: 'DES-Fehlerprotokollierung: Beispielcode'
                   href: des-error-logging--example-code.md
-            - name: Verwenden von Windows-Medien mit DirectShow-Bearbeitungsdiensten
+            - name: Verwenden Windows Medien mit DirectShow-Bearbeitungsdiensten
               href: using-windows-media-with-directshow-editing-services.md
               items:
-                - name: Schreiben einer Windows-Mediendatei in DES
+                - name: Schreiben einer Windows Mediendatei in DES
                   href: writing-a-windows-media-file-in-des.md
             - name: Verwalten von Videobearbeitungsprojekten
               href: managing-video-editing-projects.md
@@ -8813,7 +8813,7 @@
             - name: Greifen eines Posterrahmens
               href: grabbing-a-poster-frame.md
               items:
-                - name: 'Schritt 1: Erstellen von Windows Framework'
+                - name: 'Schritt 1: Erstellen des Windows Frameworks'
                   href: step-1--create-the-windows-framework.md
                 - name: 'Schritt 2: Hinzufügen eines Menübefehls zum Greifen eines Posterrahmens'
                   href: step-2--add-a-menu-command-to-grab-a-poster-frame.md
@@ -9562,7 +9562,7 @@
                   href: sample-grabber-filter.md
                 - name: Intelligente Render-Engine
                   href: smart-render-engine.md
-                - name: '`Source`'
+                - name: Quelle
                   href: source.md
                 - name: Zeitachse
                   href: timeline.md
@@ -9653,7 +9653,7 @@
                       href: swapinputs-attribute.md
                     - name: time
                       href: time-attribute.md
-                    - name: Typ
+                    - name: Type
                       href: type-attribute.md
                     - name: Userdata
                       href: userdata-attribute.md
@@ -9673,7 +9673,7 @@
         - name: Arbeiten mit Videoframes
           href: working-with-video-frames.md
           items:
-            - name: Top-Down im Vergleich zu Bottom-Up DIBs
+            - name: Top-Down und Bottom-Up DIBs
               href: top-down-vs--bottom-up-dibs.md
             - name: Arbeiten mit 16-Bit-RGB
               href: working-with-16-bit-rgb.md
@@ -9694,14 +9694,14 @@
                   href: multimedia-streaming-object-and-interface-hierarchy.md
                 - name: Erstellen von Multimediastreamobjekten und Streambeispielen
                   href: creating-multimedia-stream-objects-and-stream-samples.md
-                - name: Verwenden von Multimediastreams in Anwendungen
+                - name: Verwenden von Multimedia-Streams in Anwendungen
                   href: using-multimedia-streams-in-applications.md
                 - name: Freigeben von Daten zwischen Streams
                   href: sharing-data-between-streams.md
             - name: Liste der Multimedia-Streamingschnittstellen
               href: list-of-multimedia-streaming-interfaces.md
               items:
-                - name: Basisschnittstellen für Multimediastreaming
+                - name: Multimedia-Basisstreamingschnittstellen
                   href: base-multimedia-streaming-interfaces.md
                 - name: DirectDraw-Streamingschnittstellen
                   href: directdraw-streaming-interfaces.md
@@ -9865,7 +9865,7 @@
                       href: /previous-versions/windows/desktop/api/amstream/nf-amstream-imediastreamfilter-getmediastream
                     - name: ReferenceTimeToStreamTime
                       href: /previous-versions/windows/desktop/api/amstream/nf-amstream-imediastreamfilter-referencetimetostreamtime
-                    - name: SupportErsuchen
+                    - name: SupportErmittelung
                       href: /previous-versions/windows/desktop/api/amstream/nf-amstream-imediastreamfilter-supportseeking
                     - name: WaitUntil
                       href: /previous-versions/windows/desktop/api/amstream/nf-amstream-imediastreamfilter-waituntil
@@ -9919,16 +9919,16 @@
                   href: /previous-versions/windows/desktop/api/mmstream/ne-mmstream-stream_state
                 - name: STREAM_TYPE
                   href: /previous-versions/windows/desktop/api/mmstream/ne-mmstream-stream_type
-            - name: Multimedia-Streamingdatentypen
+            - name: Multimediastreamingdatentypen
               href: multimedia-streaming-data-types.md
               items:
                 - name: MSPID
                   href: mspid.md
                 - name: STREAM_TIME
                   href: stream-time.md
-            - name: Multimedia-Streamingfehler und Erfolgscodes
+            - name: 'Multimediastreaming: Fehler- und Erfolgscodes'
               href: multimedia-streaming-error-and-success-codes.md
-            - name: Multimedia-Streamingobjekte
+            - name: Multimediastreamingobjekte
               href: multimedia-streaming-objects.md
             - name: Beispielcode für Multimediastreaming
               href: multimedia-streaming-sample-code.md
@@ -9937,10 +9937,10 @@
                   href: video-streaming-sample-code.md
                 - name: Beispielcode für Audiostreaming
                   href: audio-streaming-sample-code.md
-        - name: Internationale analoge TV-Optimierung
+        - name: Internationale Analog TV-Optimierung
           href: international-analog-tv-tuning.md
           items:
-            - name: Häufigkeitstabellen
+            - name: Frequency-Tabellen
               href: frequency-tables.md
             - name: Häufigkeitsüberschreibungen
               href: frequency-overrides.md
@@ -9951,27 +9951,27 @@
               items:
                 - name: Australien
                   href: australia.md
-                - name: Zuweisungen des Kanals "Channel"
+                - name: Zuweisungen von Sendern
                   href: austria-channel-assignments.md
-                - name: Zuweisungen des Kanals "Channel"
+                - name: Kanalzuweisungen
                   href: belgium-channel-assignments.md
                 - name: China
                   href: china.md
                 - name: Tschechische Republik
                   href: czech-republic.md
-                - name: Zuweisungen von Kanälen in Spanien
+                - name: Zuweisungen von Kanalzuweisungen in Deutschland
                   href: denmark-channel-assignments.md
                 - name: Osteuropa
                   href: eastern-europe.md
-                - name: Zuweisungen des Kanals "Channel"
+                - name: Zuweisungen von Kanalzuweisungen
                   href: finland-channel-assignments.md
                 - name: Frankreich
                   href: france.md
-                - name: Französische Gebiete
+                - name: Französisch(französisch) Gebiete
                   href: french-overseas-territories.md
                 - name: Sar-Kanalzuweisungen in Hongkong
                   href: hong-kong-sar-channel-assignments.md
-                - name: Kanalzuweisungen in Indien
+                - name: Indien – Kanalzuweisungen
                   href: india-channel-assignments.md
                 - name: Irland
                   href: ireland.md
@@ -9979,33 +9979,33 @@
                   href: italy.md
                 - name: Japan
                   href: japan.md
-                - name: Die Zuweisungen des Kanals "Niederlande"
+                - name: Die Kanalzuweisungen in Den Niederlande
                   href: the-netherlands-channel-assignments.md
                 - name: Neuseeland
                   href: new-zealand.md
                 - name: NTSC (USA)
                   href: ntsc--united-states.md
-                - name: Zuweisungen des Kanals in Norwegen
+                - name: Kanalzuweisungen in Norwegen
                   href: norway-channel-assignments.md
-                - name: Zuweisungen des Portugiesisch-Kanals
+                - name: Portugal– Kanalzuweisungen
                   href: portugal-channel-assignments.md
-                - name: Zuweisungen des Kanals in Russland
+                - name: Zuweisungen des Kanals in Russisch
                   href: russia-channel-assignments.md
-                - name: Zuweisungen des Singapur-Kanals
+                - name: Kanalzuweisungen in Singapur
                   href: singapore-channel-assignments.md
-                - name: Zuweisungen des Kanals
+                - name: Zuweisungen von Kanalzuweisungen
                   href: slovakia-channel-assignments.md
-                - name: Zuweisungen des Schweizkanals
+                - name: Kanalzuweisungen in der Schweiz
                   href: switzerland-channel-assignments.md
-                - name: Zuweisungen des Kanals "Channel"
+                - name: Zuweisungen von Sendern
                   href: turkey-channel-assignments.md
                 - name: United Kingdom
                   href: united-kingdom.md
                 - name: 'Europa, Westen'
                   href: western-europe.md
-                - name: Unicable Frequency Table
+                - name: Tabelle "Unicable Frequency" (Nicht ermittelbare Häufigkeit)
                   href: unicable-frequency-table.md
-                - name: Zuweisungen von Ländern/Regionen
+                - name: Länder-/Regionszuweisungen
                   href: country-region-assignments.md
         - name: Steuern von Filterdiagrammen mit C
           href: controlling-filter-graphs-using-c.md
@@ -10132,7 +10132,7 @@
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol-buttonselectandactivate
                 - name: ChapterPlay
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol-chapterplay
-                - name: KapitelPlayAutoStop
+                - name: ChapterPlayAutoStop
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol-chapterplayautostop
                 - name: ChapterSearch
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol-chaptersearch
@@ -10140,7 +10140,7 @@
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol-forwardscan
                 - name: GoUp
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol-goup
-                - name: SollaudioPresentationModeChange
+                - name: SollokeAudioPresentationModeChange
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol-karaokeaudiopresentationmodechange
                 - name: LeftButtonSelect
                   href: /windows/desktop/api/strmif/nf-strmif-idvdcontrol-leftbuttonselect
@@ -10278,10 +10278,10 @@
               href: avi-riff-file-reference.md
             - name: DV-Daten im AVI-Dateiformat
               href: dv-data-in-the-avi-file-format.md
-        - name: Unterstützung für Änderung der DVD-Region unter Windows
+        - name: Unterstützung für ÄNDERUNG DES DVD-Windows
           href: dvd-region-change-support-in-windows.md
           items:
-            - name: Quellen von DVD-Regioninformationen
+            - name: Quellen für INFORMATIONEN ZUM DVD-Bereich
               href: sources-of-dvd-region-information.md
             - name: Festlegen des anfänglichen DVD-Region
               href: setting-the-initial-dvd-region-in-windows-98-and-windows-2000.md
@@ -10289,7 +10289,7 @@
               href: how-microsoft-dvd-navigator-selects-the-dvd-region.md
             - name: Nachfolgende Änderung des DVD-Region
               href: subsequent-dvd-region-change.md
-            - name: Installieren der Unterstützungskomponenten für Windows-Regionenänderung
+            - name: Installieren der Unterstützungskomponenten Windows region change
               href: installing-the-windows-region-change-support-components.md
             - name: Hinzufügen Region-Change-Unterstützung zu einer Anwendung
               href: adding-region-change-support-to-an-application.md

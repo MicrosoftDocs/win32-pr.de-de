@@ -1,26 +1,26 @@
 ---
 description: Der Entwurf von SSPI ermöglicht das Schreiben und Hinzufügen zusätzlicher SSPs zum System.
 ms.assetid: 0d462340-e485-4746-b627-d823752462d9
-title: Schreiben und Installieren eines Security Support Provider
+title: Schreiben und Installieren eines Sicherheitssupportanbieters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e19f827ddf2b0352acc889df3ed1d5b3dfff52c2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 11ac7125c386314ec7772a5e6079f423af0aaf5c9f7dd820a24c042d99834d74
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118914749"
 ---
-# <a name="writing-and-installing-a-security-support-provider"></a>Schreiben und Installieren eines Security Support Provider
+# <a name="writing-and-installing-a-security-support-provider"></a>Schreiben und Installieren eines Sicherheitssupportanbieters
 
-Der Entwurf von SSPI ermöglicht das Schreiben und Hinzufügen zusätzlicher SSPs zum System. Ein [*SSP*](../secgloss/s-gly.md) , der für ein Sicherheitsmodell spezifisch ist, kann je nach Ebene der Integration mit dem Betriebssystem relativ einfach oder sehr komplex entwickelt werden. Ein Client-SSP, der Verbindungen mit einem neuen Servertyp zulässt, kann sehr schnell entwickelt werden, wohingegen ein vollständiger SSP, der einen lokalen Identitätswechsel bereitstellt, einen höheren Aufwand erfordert.
+Der Entwurf von SSPI ermöglicht das Schreiben und Hinzufügen zusätzlicher SSPs zum System. Ein für ein Sicherheitsmodell spezifischer [*SSP*](../secgloss/s-gly.md) kann je nach Grad der Integration mit dem Betriebssystem relativ einfach oder mit hoher Komplexität entwickelt werden. Ein Client-SSP, der Verbindungen mit einem neuen Servertyp zulässt, kann sehr schnell entwickelt werden, während ein vollständiger SSP, der einen lokalen Identitätswechsel ermöglicht, mehr Aufwand erfordern würde.
 
-SSPs werden durch Aktualisieren eines **reg \_ SZ** -Werts in der Registrierung installiert, der sich wie folgt befindet:
+SSPs werden installiert, indem ein **REG \_ SZ-Wert** in der Registrierung wie folgt aktualisiert wird:
 
-**HKEY \_ Lokales \_ Computer** \\ **System** \\ **CurrentControlSet**- \\ **Steuer** Element \\ **SecurityProviders**  =  *Provider1.dll, Provider2.dll*...    <dl> <dt>
+**HKEY \_ LOCAL \_ MACHINE** \\ **System** \\ **CurrentControlSet** \\ **Control** \\ **SecurityProviders**  =  *Provider1.dll, Provider2.dll,*...    <dl> <dt>
 
             Data type
-</dt> <dd>            REG- \_ SZ</dd> </dl>
+</dt> <dd>            REG \_ SZ</dd> </dl>
 
 Eine einzelne DLL kann mehrere SSPs enthalten.
 
@@ -28,7 +28,7 @@ Eine einzelne DLL kann mehrere SSPs enthalten.
 
 <dl> <dt>
 
-[Einschränkungen bei der Registrierung und Installation eines Sicherheitspakets](restrictions-around-registering-and-installing-a-security-package.md)
+[Einschränkungen beim Registrieren und Installieren eines Sicherheitspakets](restrictions-around-registering-and-installing-a-security-package.md)
 </dt> </dl>
 
  

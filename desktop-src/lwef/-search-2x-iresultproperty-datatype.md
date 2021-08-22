@@ -1,11 +1,11 @@
 ---
-title: Iresultproperty DataType-Eigenschaft (wdssharedidl. h)
-description: Ein Properties-Datentyp.
+title: IResultProperty DataType-Eigenschaft (WdsSharedIDL.h)
+description: Ein Eigenschaftendatentyp.
 ms.assetid: 2bf83256-0d69-48f2-aa7d-d34dcba17050
 keywords:
-- DataType-Eigenschaft Legacy-Windows-Umgebungs Features
-- DataType-Eigenschaft Legacy-Windows-Umgebungs Funktionen, iresultproperty-Schnittstelle
-- Iresultproperty-Schnittstelle Legacy Windows-Umgebungs Features, DataType-Eigenschaft
+- DataType-Eigenschaft Legacy Windows Umgebungsfeatures
+- DataType-Eigenschaft Legacy Windows Environment Features , IResultProperty-Schnittstelle
+- IResultProperty-Schnittstelle Legacy Windows Environment Features , DataType-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,19 +17,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d887642594ed5ac7f78de1d4eac76fb4709f0dfa
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7f669fdbb01459e99edb0ccc9ba75fed1cbd60ebfe789fdb4393d217239cdc1c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345906"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118755259"
 ---
-# <a name="iresultpropertydatatype-property"></a>Iresultproperty::D atatype-Eigenschaft
+# <a name="iresultpropertydatatype-property"></a>IResultProperty::D ataType-Eigenschaft
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API.](../search/-search-reference-entry-page.md) 
 
-Ein Properties-Datentyp.
+Ein Eigenschaftendatentyp.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -46,7 +46,7 @@ HRESULT get_DataType(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt einen Zeiger auf den Properties-Datentyp zurück.
+gibt einen Zeiger auf den Datentyp properties zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,10 +54,10 @@ Gibt einen Zeiger auf den Properties-Datentyp zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 mit SP1 \[ Desktop-Apps\]<br/>                             |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 2.6.5<br/>                                             |
-| Header<br/>                   | <dl> <dt>Wdssharedidl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2003 mit \[ SP1-Desktop-Apps\]<br/>                             |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 2.6.5<br/>                                             |
+| Header<br/>                   | <dl> <dt>WdsSharedIDL.h</dt> </dl> |
 
 
 

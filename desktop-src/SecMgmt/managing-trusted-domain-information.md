@@ -1,31 +1,31 @@
 ---
-description: Die LSA-Richtlinie bietet verschiedene Funktionen, mit denen Sie vertrauenswürdige Domänen erstellen, auflisten und löschen sowie Informationen zu vertrauenswürdigen Domänen festlegen und abrufen können.
+description: Die LSA-Richtlinie bietet mehrere Funktionen, mit denen Sie vertrauenswürdige Domänen erstellen, aufzählen und löschen sowie Informationen zu vertrauenswürdigen Domänen festlegen und abrufen können.
 ms.assetid: 0c7534d7-3372-49c4-992c-9b519279982d
-title: Verwalten von Informationen zur vertrauenswürdigen Domäne
+title: Verwalten von Informationen zu vertrauenswürdigen Domänen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b7df297b8c83ebe9054ca6f04b657905c21fae6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9a945705efaedf56920ee2170deeab9da0d01802259a57aca5cda2fac9d531aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118894090"
 ---
-# <a name="managing-trusted-domain-information"></a>Verwalten von Informationen zur vertrauenswürdigen Domäne
+# <a name="managing-trusted-domain-information"></a>Verwalten von Informationen zu vertrauenswürdigen Domänen
 
-Die LSA-Richtlinie bietet verschiedene Funktionen, mit denen Sie vertrauenswürdige Domänen erstellen, auflisten und löschen sowie Informationen zu vertrauenswürdigen Domänen festlegen und abrufen können.
+Die LSA-Richtlinie bietet mehrere Funktionen, mit denen Sie vertrauenswürdige Domänen erstellen, aufzählen und löschen sowie Informationen zu vertrauenswürdigen Domänen festlegen und abrufen können.
 
-Bevor Sie Informationen zu vertrauenswürdigen Domänen verwalten können, muss die Anwendung ein Handle für ein [**Richtlinien**](policy-object.md) Objekt erhalten, wie in [Öffnen eines Richtlinien Objekt Handles](opening-a-policy-object-handle.md)erläutert.
+Bevor Sie vertrauenswürdige Domäneninformationen verwalten können, muss Ihre Anwendung ein Handle für ein [**Richtlinienobjekt**](policy-object.md) abrufen, wie unter [Öffnen eines Richtlinienobjekthandle](opening-a-policy-object-handle.md)erläutert.
 
-Sie können die vertrauenswürdigen Domänen durch Aufrufen von [**lsaenumeratetrusteddomainsex**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaenumeratetrusteddomainsex)auflisten.
+Sie können die vertrauenswürdigen Domänen aufzählen, indem Sie [**LsaEnumerateTrustedDomainsEx**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaenumeratetrusteddomainsex)aufrufen.
 
-Rufen Sie zum Abrufen von Informationen zu einer vertrauenswürdigen Domäne entweder " [**lsaquerytrust ddomaininfo**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaquerytrusteddomaininfo) " oder " [**lsaquerytreuhänder ddomaininfobyname**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaquerytrusteddomaininfobyname)" auf. Beide Funktionen geben dieselben Informationen zurück. Allerdings identifiziert **lsaquerytrust ddomaininfo** die vertrauenswürdige Domäne nach SID, und **lsaquerytreuhänder ddomaininfobyname** identifiziert die vertrauenswürdige Domäne anhand des Namens.
+Um Informationen zu einer vertrauenswürdigen Domäne abzurufen, rufen Sie entweder [**LsaQueryTrustedDomainInfo**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaquerytrusteddomaininfo) oder [**LsaQueryTrustedDomainInfoByName**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaquerytrusteddomaininfobyname)auf. Beide Funktionen geben die gleichen Informationen zurück. **LsaQueryTrustedDomainInfo** identifiziert die vertrauenswürdige Domäne jedoch anhand der SID, und **LsaQueryTrustedDomainInfoByName** identifiziert die vertrauenswürdige Domäne anhand des Namens.
 
-Um Informationen für eine vertrauenswürdige Domäne festzulegen, wenden Sie entweder [**lsasettrusteddomaininformation**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsasettrusteddomaininformation) oder [**lsasettrusteddomaininfobyname**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsasettrusteddomaininfobyname)an. Wie bei den Abfragefunktionen identifiziert **lsasettrusteddomaininformation** die vertrauenswürdige Domäne nach SID, während **lsasettrusteddomaininfobyname** die vertrauenswürdige Domäne anhand des Namens identifiziert.
+Um Informationen für eine vertrauenswürdige Domäne festzulegen, rufen Sie entweder [**LsaSetTrustedDomainInformation**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsasettrusteddomaininformation) oder [**LsaSetTrustedDomainInfoByName**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsasettrusteddomaininfobyname)auf. Wie bei den Abfragefunktionen identifiziert **LsaSetTrustedDomainInformation** die vertrauenswürdige Domäne anhand der SID, während **LsaSetTrustedDomainInfoByName** die vertrauenswürdige Domäne anhand des Namens identifiziert.
 
-Die Anwendung kann eine Vertrauensstellung für eine vertrauenswürdige Domäne widerrufen, indem [**lsadeletetrustddomain**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsadeletetrusteddomain)aufgerufen wird.
+Ihre Anwendung kann eine Vertrauensstellung für eine vertrauenswürdige Domäne widerrufen, indem [**LsaDeleteTrustedDomain**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsadeletetrusteddomain)aufgerufen wird.
 
-Im folgenden Beispiel werden die vertrauenswürdigen Domänen für das lokale System aufgelistet.
+Im folgenden Beispiel werden die vertrauenswürdigen Domänen für das lokale System aufzählt.
 
 
 ```C++

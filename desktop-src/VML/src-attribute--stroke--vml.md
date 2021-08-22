@@ -1,50 +1,50 @@
 ---
-title: Src-Attribut (Strich) (VML)
-description: Src-Attribut (Strich) (VML)
+title: Src-Attribut (Stroke)(VML)
+description: Src-Attribut (Stroke)(VML)
 ms.assetid: dac6b5b7-2038-4534-97e9-a1340102777e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b5833b24abf0f16c6e17fa3319931565ee6c232
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 57bc71d7a36ee944a2352cde6bfa1ef33f0b5c480d78c7aada751ea67db9ca7f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103727544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118596626"
 ---
-# <a name="src-attribute-strokevml"></a>Src-Attribut (Strich) (VML)
+# <a name="src-attribute-strokevml"></a>Src-Attribut (Stroke)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert das Quell Bild, das für einen Strich Füllvorgang geladen werden soll. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert das Quellbild, das für eine Strichfüllung geladen werden soll. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
-[Stellung](msdn-online-vml-stroke-element.md)
+[Takt](msdn-online-vml-stroke-element.md)
 
 **Tagsyntax**
 
-<v: *Element* src = " *Expression* " >
+<v: *element* src=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . src = "*Ausdruck*"
+*element* .src="*expression*"
 
-*Ausdruck* = *Element*. src
+*expression* = *.src-Element*
 
 **Anmerkungen**
 
-Die URL zu einem Bild, das für Bild-und Muster Füllungen geladen werden soll. Dieses Attribut muss immer vorhanden sein und auf gültige Bilddaten zeigen, damit ein Bild angezeigt wird. Wenn dieses Attribut allein angezeigt wird, d. h. kein **href** oder **Title**, wird das Bild verknüpft.
+URL zu einem Bild, das für Bild- und Musterfüllungen geladen werden soll. Dieses Attribut muss immer vorhanden sein und auf gültige Bilddaten verweisen, damit ein Bild angezeigt wird. Wenn dieses Attribut allein angezeigt wird, d. h. keine **HRef-** oder **Title-Eigenschaft,** wird das Bild verknüpft.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Der Strich wird mit dem Bild erstellt, das von der cylinder.gif Datei angegeben wird.
+Der Strich wird mit dem von der cylinder.gif-Datei angegebenen Bild erstellt.
 
 
 ```HTML
@@ -60,6 +60,6 @@ Der Strich wird mit dem Bild erstellt, das von der cylinder.gif Datei angegeben 
 
 
 
- 
+ 
 
- 
+ 

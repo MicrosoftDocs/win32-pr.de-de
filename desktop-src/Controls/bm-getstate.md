@@ -1,9 +1,9 @@
 ---
-title: BM_GETSTATE Meldung (Winuser. h)
-description: Ruft den Zustand einer Schaltfläche oder eines Kontrollkästchens ab. Sie können diese Nachricht explizit senden oder das GetState-Makro der Schaltfläche verwenden \_ .
+title: BM_GETSTATE (Winuser.h)
+description: Ruft den Zustand einer Schaltfläche oder eines Kontrollkästchens ab. Sie können diese Nachricht explizit senden oder das Button \_ GetState-Makro verwenden.
 ms.assetid: ca4c2f1a-b657-490a-ac8b-5f0cfef64d76
 keywords:
-- Windows-Steuerelemente für BM_GETSTATE Meldung
+- BM_GETSTATE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a3b5e69f067acfc13cd8661be8a585fcfc8e6fe4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cd44921c61477e26cd5570fcbaa6f96a4e61f96ee22ad1c705bf553788d8cfba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949471"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118674840"
 ---
-# <a name="bm_getstate-message"></a>BM \_ GetState-Nachricht
+# <a name="bm_getstate-message"></a>BM \_ GETSTATE-Nachricht
 
-Ruft den Zustand einer Schaltfläche oder eines Kontrollkästchens ab. Sie können diese Nachricht explizit senden oder das [**\_ GetState**](/windows/desktop/api/Windowsx/nf-windowsx-button_getstate) -Makro der Schaltfläche verwenden.
+Ruft den Zustand einer Schaltfläche oder eines Kontrollkästchens ab. Sie können diese Nachricht explizit senden oder das [**Button \_ GetState-Makro**](/windows/desktop/api/Windowsx/nf-windowsx-button_getstate) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -51,13 +51,13 @@ Der Rückgabewert gibt den aktuellen Zustand der Schaltfläche an. Es handelt si
 
 | Rückgabecode                                                                                        | Beschreibung                                                                                                                                                                                                              |
 |----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**BST \_ aktiviert**</dt> </dl>        | Die Schaltfläche ist aktiviert.<br/>                                                                                                                                                                                        |
-| <dl> <dt>**BST \_ dropdownpushübertragung**</dt> </dl> | [Windows Vista](common-control-versions.md). Die Schaltfläche befindet sich im Dropdown Zustand. Gilt nur, wenn die Schaltfläche den [**tbstyle- \_ Dropdown**](toolbar-control-and-button-styles.md) Stil aufweist.<br/> |
-| <dl> <dt>**BST- \_ Fokus**</dt> </dl>          | Die Schaltfläche verfügt über den Tastaturfokus.<br/>                                                                                                                                                                            |
-| <dl> <dt>**BST \_ heiß**</dt> </dl>            | Die Schaltfläche ist "Hot". Das heißt, dass der Mauszeiger darüber bewegt wird.<br/>                                                                                                                                                    |
-| <dl> <dt>**BST \_ unbestimmt**</dt> </dl>  | Der Status der Schaltfläche ist unbestimmt. Gilt nur, wenn die Schaltfläche den Stil " [**\_ 3STATE**](button-styles.md) " oder " [**SB \_ AUTO3STATE**](button-styles.md) " aufweist.<br/>                    |
-| <dl> <dt>**BST per \_ pushübertragung**</dt> </dl>         | Die Schaltfläche wird im gedrückten Zustand angezeigt.<br/>                                                                                                                                                                |
-| <dl> <dt>**BST \_ deaktiviert**</dt> </dl>      | Kein spezieller Zustand. Entspricht 0 (null).<br/>                                                                                                                                                                         |
+| <dl> <dt>**BST \_ CHECKED**</dt> </dl>        | Die Schaltfläche ist überprüft.<br/>                                                                                                                                                                                        |
+| <dl> <dt>**\_BST-DROPDOWNLISTEPUSHED**</dt> </dl> | [Windows Vista](common-control-versions.md). Die Schaltfläche befindet sich im Dropdownzustand. Gilt nur, wenn die Schaltfläche den [**\_ TBSTYLE-DROPDOWN-Stil**](toolbar-control-and-button-styles.md) auflistet.<br/> |
+| <dl> <dt>**BST \_ FOCUS**</dt> </dl>          | Die Schaltfläche hat den Tastaturfokus.<br/>                                                                                                                                                                            |
+| <dl> <dt>**BST \_ HOT**</dt> </dl>            | Die Schaltfläche ist heiß. Das bedeutet, dass die Maus daraufzeigert.<br/>                                                                                                                                                    |
+| <dl> <dt>**BST \_ UNBESTIMMT**</dt> </dl>  | Der Zustand der Schaltfläche ist unbestimmt. Gilt nur, wenn die Schaltfläche den [**Stil BS \_ 3STATE**](button-styles.md) oder [**BS \_ AUTO3STATE**](button-styles.md) hat.<br/>                    |
+| <dl> <dt>**BST \_ PUSHED**</dt> </dl>         | Die Schaltfläche wird im Push-Zustand angezeigt.<br/>                                                                                                                                                                |
+| <dl> <dt>**BST \_ UNCHECKED**</dt> </dl>      | Kein besonderer Zustand. Entspricht 0 (null).<br/>                                                                                                                                                                         |
 
 
 
@@ -69,23 +69,23 @@ Der Rückgabewert gibt den aktuellen Zustand der Schaltfläche an. Es handelt si
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**BM \_ getcheck**](bm-getcheck.md)
+[**BM \_ GETCHECK**](bm-getcheck.md)
 </dt> <dt>
 
-[**BM \_ SetState**](bm-setstate.md)
+[**BM \_ SETSTATE**](bm-setstate.md)
 </dt> </dl>
 
  

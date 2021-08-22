@@ -1,21 +1,21 @@
 ---
-description: Wenn Sie die Anpassungs Transformation während einer Installation des Produkts anwenden möchten, müssen Sie der Transformations Datei mnptrans. MST, die beim Generieren einer Anpassungs Transformation generiert wurde, einen Zusammenfassungs Informationsdaten Strom hinzufügen.
+description: Um die Anpassungstransformation während einer Installation des Produkts anzuwenden, müssen Sie der Transformationsdatei MNPtrans.mst, die unter Generieren einer Anpassungstransformation generiert wurde, einen Zusammenfassungsinformationsstream hinzufügen.
 ms.assetid: 586f6c43-7449-4d06-9201-9b4b4919871e
-title: Hinzufügen von Zusammenfassungs Informationen zur Anpassungs Transformation
+title: Hinzufügen von Zusammenfassungsinformationen zur Anpassungstransformation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 64957fcf8f29ab8793517015c7018292ba9a6e69
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a4ea4c9aa505d425bfd06fe5cac1f45666e794624618db14100ee5f517dd3048
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118639470"
 ---
-# <a name="adding-summary-information-to-customization-transform"></a>Hinzufügen von Zusammenfassungs Informationen zur Anpassungs Transformation
+# <a name="adding-summary-information-to-customization-transform"></a>Hinzufügen von Zusammenfassungsinformationen zur Anpassungstransformation
 
-Wenn Sie die Anpassungs Transformation während einer Installation des Produkts anwenden möchten, müssen Sie der Transformations Datei mnptrans. MST, die beim [Generieren einer Anpassungs Transformation](generating-a-customization-transform.md)generiert wurde, einen [Zusammenfassungs Informationsdaten Strom](summary-information-stream.md) hinzufügen.
+Um die Anpassungstransformation während einer Installation des [](summary-information-stream.md) Produkts anzuwenden, müssen Sie der Transformationsdatei MNPtrans.mst, die unter Generieren einer Anpassungstransformation generiert wurde, einen Zusammenfassungsinformationsstream [hinzufügen.](generating-a-customization-transform.md)
 
-Sie können zusammenfassende Informationen für eine Transformation mithilfe von " [**msikreatetransformsummaryinfo**](/windows/desktop/api/Msiquery/nf-msiquery-msicreatetransformsummaryinfoa) " oder der [**Methode "kreatetransformsummaryinfo**](database-createtransformsummaryinfo.md)" generieren. Der folgende Code Ausschnitt, Sum.vbs, veranschaulicht die [**Methode**](database-createtransformsummaryinfo.md) "" der Methode "Methode" und "Windows Script Host". Beachten Sie, dass in diesem Beispiel keine Validierung durchführt und keine Fehlerbedingungen unterdrückt werden.
+Sie können zusammenfassungsinformationen für eine Transformation mit [**msiCreateTransformSummaryInfo**](/windows/desktop/api/Msiquery/nf-msiquery-msicreatetransformsummaryinfoa) oder der [**CreateTransformSummaryInfo-Methode generieren.**](database-createtransformsummaryinfo.md) Der folgende Codeausschnitt, Sum.vbs, veranschaulicht die [**CreateTransformSummaryInfo-Methode**](database-createtransformsummaryinfo.md) und ist für die Verwendung mit Windows Script Host. Beachten Sie, dass in diesem Beispiel keine Validierung und keine Fehlerbedingungen unterdrückt werden.
 
 
 ```VB
@@ -49,19 +49,19 @@ Dim transinfo : transinfo =
 
 
 
-Zum Erstellen und Hinzufügen von Zusammenfassungs Informationen zur Transformations Datei mnptrans. MST, die Sie beim Erstellen [einer Anpassungs Transformation](generating-a-customization-transform.md)erstellt haben, ändern Sie die Verzeichnisse in den Ordner, der Gen.vbs enthält, die ursprüngliche Datenbank, die aktualisierte Datenbank und die Transformation, und geben Sie die folgende Befehlszeile ein.
+Ändern Sie zum Erstellen und Hinzufügen von Zusammenfassungsinformationen zur Transformationsdatei MNPtrans.mst, die Sie [in](generating-a-customization-transform.md)Generieren einer Anpassungstransformation erstellt haben, die Verzeichnisse in den Ordner mit Gen.vbs, der ursprünglichen Datenbank, der aktualisierten Datenbank und der Transformation, und geben Sie die folgende Befehlszeile ein.
 
-**Cscript.exe Sum.vbs MNP2000.msi MNP2000t.msi mnptrans. MST**
+**Cscript.exe Sum.vbs MNP2000.msi MNP2000t.msi MNPtrans.mst**
 
-Klicken Sie auf das MNP2000.msi Symbol, um eine Installation zu starten, oder verwenden Sie die folgende Befehlszeile.
+Klicken Sie auf MNP2000.msi Symbol, um eine Installation zu starten oder die folgende Befehlszeile zu verwenden.
 
-**msiexec/i MNP2000.msi**
+**msiexec /i MNP2000.msi**
 
-Dadurch wird das Produkt ohne Anpassungen installiert. Um mit der Anpassung zu installieren, geben Sie die folgende Befehlszeile ein. Beachten Sie, dass sich der Wert der [**Transformationen**](transforms.md) -Eigenschaft auf die Transformations Datei bezieht, die sich in der Quelle befindet.
+Dadurch wird das Produkt ohne die Anpassungen installiert. Geben Sie die folgende Befehlszeile ein, um die Installation mit der Anpassung auszuführen. Beachten Sie, dass sich der Wert der [**TRANSFORMS-Eigenschaft**](transforms.md) auf die Transformationsdatei bezieht, die sich an der Quelle befindet.
 
-**msiexec/i MNP2000.msi Transformationen = mnptrans. MST**
+**msiexec /i MNP2000.msi TRANSFORMS=MNPtrans.mst**
 
-Das Gate-Feature wird nicht in der Funktionsauswahl Struktur angezeigt, und die Komponenten der Gate-Funktion werden nicht installiert, auch wenn auf der Benutzeroberfläche ein kompletter Installationstyp ausgewählt ist.
+Das Gate-Feature wird nicht in der Funktionsauswahlstruktur angezeigt, und die Komponenten des Gate-Features werden nicht installiert, auch wenn auf der Benutzeroberfläche der Installationstyp Vollständig ausgewählt ist.
 
 [Fortsetzen](embedding-customization-transforms-as-substorage.md)
 

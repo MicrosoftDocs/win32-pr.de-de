@@ -1,57 +1,57 @@
 ---
-description: Hashes sind besonders nützlich, um die Integrität der Daten zu überprüfen, wenn Sie mit einem asymmetrischen Signatur Algorithmus verwendet werden.
+description: Hashes sind besonders nützlich, um die Integrität der Daten zu überprüfen, wenn sie mit einem asymmetrischen Signaturalgorithmus verwendet werden.
 ms.assetid: f36b7e36-4377-4940-8951-6caba6e3ce8a
-title: Erstellen eines Hash mit CNG
+title: Erstellen eines Hashs mit CNG
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 735f95182b63facee687f408ea4a07e09399e562
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f57d56c4be7dc2f947dbb1869e63fb1789f57e9b4fe6b3a7a06e3cce15580ab8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106338949"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118907819"
 ---
-# <a name="creating-a-hash-with-cng"></a>Erstellen eines Hash mit CNG
+# <a name="creating-a-hash-with-cng"></a>Erstellen eines Hashs mit CNG
 
-Bei einem [*Hash*](/windows/desktop/SecGloss/h-gly) handelt es sich um einen unidirektionalen Vorgang, der für einen Datenblock ausgeführt wird, um einen eindeutigen Hashwert zu erstellen, der den Inhalt der Daten darstellt. Unabhängig von der Durchführung des Hashwerts erzeugt derselbe Hash Algorithmus, der für die gleichen Daten ausgeführt wird, immer denselben [*Hashwert*](/windows/desktop/SecGloss/h-gly) . Wenn eine der Daten geändert wird, ändert sich der Hashwert entsprechend.
+Ein [*Hash*](/windows/desktop/SecGloss/h-gly) ist ein unidirektionischer Vorgang, der für einen Datenblock ausgeführt wird, um einen eindeutigen Hashwert zu erstellen, der den Inhalt der Daten darstellt. Unabhängig davon, wann der Hash ausgeführt wird, erzeugt der gleiche [*Hashalgorithmus,*](/windows/desktop/SecGloss/h-gly) der für dieselben Daten ausgeführt wird, immer den gleichen Hashwert. Wenn sich eine der Daten ändert, ändert sich der Hashwert entsprechend.
 
-Hashes sind nicht für die Verschlüsselung von Daten nützlich, da Sie nicht zum Reproduzieren der ursprünglichen Daten aus dem Hashwert verwendet werden sollen. Hashes sind besonders nützlich, um die Integrität der Daten zu überprüfen, wenn Sie mit einem asymmetrischen Signatur Algorithmus verwendet werden. Wenn Sie z. b. einen Hashwert für eine Textnachricht, den Hash signiert und den Hashwert mit Vorzeichen mit der ursprünglichen Nachricht eingefügt haben, könnte der Empfänger den signierten Hash überprüfen, den Hashwert für die empfangene Nachricht erstellen und diesen Hashwert mit dem mit Vorzeichen signierten Hashwert vergleichen, der in der ursprünglichen Nachricht enthalten ist. Wenn die beiden Hashwerte identisch sind, kann der Empfänger sicher sein, dass die ursprüngliche Nachricht nicht geändert wurde.
+Hashes sind für die Verschlüsselung von Daten nicht nützlich, da sie nicht zum Reproduzieren der ursprünglichen Daten aus dem Hashwert verwendet werden sollen. Hashes sind besonders nützlich, um die Integrität der Daten zu überprüfen, wenn sie mit einem asymmetrischen Signaturalgorithmus verwendet werden. Wenn Sie beispielsweise einen Hash für eine Textnachricht erstellt, den Hash signiert und den signierten Hashwert in die ursprüngliche Nachricht eingeschlossen haben, könnte der Empfänger den signierten Hash überprüfen, den Hashwert für die empfangene Nachricht erstellen und diesen Hashwert dann mit dem in der ursprünglichen Nachricht enthaltenen signierten Hashwert vergleichen. Wenn die beiden Hashwerte identisch sind, kann der Empfänger sicher sein, dass die ursprüngliche Nachricht nicht geändert wurde.
 
-Die Größe des Hashwerts ist für einen bestimmten Hash Algorithmus korrigiert. Dies bedeutet, dass unabhängig davon, wie groß oder klein der Datenblock ist, der Hashwert immer dieselbe Größe hat. Der SHA256-Hash Algorithmus hat z. b. eine Hashwert-Größe von 256 Bits.
+Die Größe des Hashwerts wird für einen bestimmten Hashalgorithmus festgelegt. Dies bedeutet, dass der Hashwert immer die gleiche Größe hat, unabhängig davon, wie groß oder klein der Datenblock ist. Als Beispiel hat der SHA256-Hashalgorithmus eine Hashwertgröße von 256 Bits.
 
--   [Erstellen eines Hash Objekts](#creating-a-hashing-object)
--   [Erstellen eines wiederverwendbaren Hash Objekts](#creating-a-reusable-hashing-object)
--   [Duplizieren eines Hash Objekts](#duplicating-a-hash-object)
+-   [Erstellen eines Hashobjekts](#creating-a-hashing-object)
+-   [Erstellen eines wiederverwendbaren Hashobjekts](#creating-a-reusable-hashing-object)
+-   [Duplizieren eines Hashobjekts](#duplicating-a-hash-object)
 
-## <a name="creating-a-hashing-object"></a>Erstellen eines Hash Objekts
+## <a name="creating-a-hashing-object"></a>Erstellen eines Hashobjekts
 
-Führen Sie die folgenden Schritte aus, um einen Hash mithilfe von CNG zu erstellen:
+Führen Sie die folgenden Schritte aus, um einen Hash mit CNG zu erstellen:
 
-1.  Öffnen Sie einen Algorithmusanbieter, der den gewünschten Algorithmus unterstützt. Typische Hash Algorithmen sind MD2, MD4, MD5, SHA-1 und SHA256. Aufrufen der Funktion " [**BCryptOpenAlgorithmProvider**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptopenalgorithmprovider) " und angeben des entsprechenden Algorithmus-Bezeichners im *pszalgid* -Parameter. Die-Funktion gibt ein Handle für den Anbieter zurück.
-2.  Führen Sie die folgenden Schritte aus, um das Hash Objekt zu erstellen:
+1.  Öffnen Sie einen Algorithmusanbieter, der den gewünschten Algorithmus unterstützt. Typische Hashalgorithmen sind MD2, MD4, MD5, SHA-1 und SHA256. Rufen Sie die [**BCryptOpenAlgorithmProvider-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptopenalgorithmprovider) auf, und geben Sie den entsprechenden Algorithmusbezeichner im *parameter pszAlgId* an. Die Funktion gibt ein Handle an den Anbieter zurück.
+2.  Führen Sie die folgenden Schritte aus, um das Hashobjekt zu erstellen:
 
-    1.  Rufen Sie die Größe des Objekts ab, indem Sie die Funktion [**BCryptGetProperty**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgetproperty) aufrufen, um die Eigenschaft **bcrypt- \_ Objekt \_ Länge** abzurufen.
-    2.  Speicherplatz zum Speichern des Hash Objekts zuweisen.
-    3.  Erstellen Sie das-Objekt, indem Sie die Funktion " [**BCryptCreateHash**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptcreatehash) " aufrufen.
+    1.  Rufen Sie die Größe des Objekts ab, indem Sie die [**BCryptGetProperty-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgetproperty) aufrufen, um die **BCRYPT \_ OBJECT \_ LENGTH-Eigenschaft** abzurufen.
+    2.  Zuordnen von Arbeitsspeicher zum Speichern des Hashobjekts.
+    3.  Erstellen Sie das -Objekt, indem Sie die [**BCryptCreateHash-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptcreatehash) aufrufen.
 
-3.  Hash der Daten. Dies bedeutet, dass die Funktion " [**BCryptHashData**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcrypthashdata) " einmal oder mehrmals aufgerufen wird. Jeder-Befehl fügt die angegebenen Daten an den Hash an.
+3.  Hash der Daten. Dies umfasst das mehrmalige Aufrufen der [**BCryptHashData-Funktion.**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcrypthashdata) Jeder Aufruf fügt die angegebenen Daten an den Hash an.
 4.  Führen Sie die folgenden Schritte aus, um den Hashwert abzurufen:
 
-    1.  Rufen Sie die Größe des Werts ab, indem Sie die Funktion [**BCryptGetProperty**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgetproperty) aufrufen, um die Eigenschaft **bcrypt- \_ \_ Hashlänge** abzurufen.
-    2.  Speicherplatz zum Speichern des Werts zuweisen.
-    3.  Rufen Sie den Hashwert durch Aufrufen der [**BCryptFinishHash**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptfinishhash) -Funktion ab. Nachdem diese Funktion aufgerufen wurde, ist das Hash Objekt nicht mehr gültig.
+    1.  Rufen Sie die Größe des Werts ab, indem Sie die [**BCryptGetProperty-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgetproperty) aufrufen, um die **BCRYPT \_ HASH \_ LENGTH-Eigenschaft** abzurufen.
+    2.  Zuordnen von Arbeitsspeicher zum Speichern des Werts.
+    3.  Rufen Sie den Hashwert ab, indem Sie die [**BCryptFinishHash-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptfinishhash) aufrufen. Nachdem diese Funktion aufgerufen wurde, ist das Hashobjekt nicht mehr gültig.
 
-5.  Um dieses Verfahren abzuschließen, müssen Sie die folgenden Bereinigungs Schritte ausführen:
+5.  Um dieses Verfahren abzuschließen, müssen Sie die folgenden Bereinigungsschritte ausführen:
 
-    1.  Schließen Sie das Hash Objekt, indem Sie das Hashhandle an die Funktion " [**BCryptDestroyHash**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdestroyhash) " übergeben.
-    2.  Freigeben des Speichers, den Sie für das Hash Objekt zugewiesen haben.
-    3.  Wenn Sie keine weiteren Hash Objekte erstellen, schließen Sie den Algorithmusanbieter, indem Sie das Anbieter Handle an die Funktion " [**bcryptclosealgorithmprovider**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptclosealgorithmprovider) " übergeben.
+    1.  Schließen Sie das Hashobjekt, indem Sie das Hashhandle an die [**BCryptDestroyHash-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdestroyhash) übergeben.
+    2.  Freigeben des Arbeitsspeichers, den Sie für das Hashobjekt belegt haben.
+    3.  Wenn Sie keine weiteren Hashobjekte erstellen, schließen Sie den Algorithmusanbieter, indem Sie das Anbieterhandle an die [**BCryptCloseAlgorithmProvider-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptclosealgorithmprovider) übergeben.
 
-        Wenn Sie weitere Hash Objekte erstellen möchten, wird empfohlen, den Algorithmusanbieter wiederzuverwenden, anstatt denselben Algorithmusanbieter mehrmals zu erstellen und zu zerstören.
+        Wenn Sie weitere Hashobjekte erstellen, empfiehlt es sich, den Algorithmusanbieter wiederzuverwenden, anstatt denselben Algorithmusanbietertyp mehrmals zu erstellen und zu zerstören.
 
-    4.  Wenn Sie die Verwendung des Hash Wert Speichers abgeschlossen haben, können Sie ihn freigeben.
+    4.  Wenn Sie die Verwendung des Hashwertspeichers abgeschlossen haben, können Sie ihn freigeben.
 
-Im folgenden Beispiel wird gezeigt, wie ein Hashwert mithilfe von CNG erstellt wird.
+Das folgende Beispiel zeigt, wie Sie einen Hashwert mithilfe von CNG erstellen.
 
 
 ```C++
@@ -224,35 +224,35 @@ Cleanup:
 
 
 
-## <a name="creating-a-reusable-hashing-object"></a>Erstellen eines wiederverwendbaren Hash Objekts
+## <a name="creating-a-reusable-hashing-object"></a>Erstellen eines wiederverwendbaren Hashobjekts
 
-Ab Windows 8 und Windows Server 2012 können Sie ein wiederverwendbares Hash Objekt für Szenarien erstellen, in denen Sie mehrere Hashes oder HMACs in schneller Folge berechnen müssen. Geben Sie hierzu beim Aufrufen der Funktion " [**BCryptOpenAlgorithmProvider**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptopenalgorithmprovider) " das wieder **\_ \_ verwendbare \_ bcrypt-Hash-Flag** an. Alle Microsoft-Hash Algorithmus Anbieter unterstützen dieses Flag. Ein Hash Objekt, das mit diesem Flag erstellt wurde, kann sofort nach dem Aufruf von [**BCryptFinishHash**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptfinishhash) wieder verwendet werden, als ob es durch den Aufruf von [**BCryptCreateHash**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptcreatehash)erstellt wurde. Führen Sie die folgenden Schritte aus, um ein wiederverwendbares Hash Objekt zu erstellen:
+Ab Windows 8 und Windows Server 2012 können Sie ein wiederverwendbares Hashobjekt für Szenarien erstellen, in denen Sie mehrere Hashes oder HMACs in schneller Folge berechnen müssen. Geben Sie hierzu das **BCRYPT \_ HASH \_ REUSABLE \_ FLAG** an, wenn Sie die [**BCryptOpenAlgorithmProvider-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptopenalgorithmprovider) aufrufen. Dieses Flag wird von allen Microsoft-Hashalgorithmusanbietern unterstützt. Ein hashing-Objekt, das mit diesem Flag erstellt wurde, kann sofort nach dem Aufruf von [**BCryptFinishHash**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptfinishhash) wiederverwendet werden, so als ob es durch Aufrufen von [**BCryptCreateHash**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptcreatehash)neu erstellt worden wäre. Führen Sie die folgenden Schritte aus, um ein wiederverwendbares Hashobjekt zu erstellen:
 
-1.  Öffnen Sie einen Algorithmusanbieter, der den gewünschten Hash Algorithmus unterstützt. Aufrufen der Funktion " [**BCryptOpenAlgorithmProvider**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptopenalgorithmprovider) " und angeben des entsprechenden Algorithmus-Bezeichners im *pszalgid* -Parameter und des **bcrypt-Hash-wieder \_ \_ verwendbaren \_ Flags** im *dwFlags* -Parameter. Die-Funktion gibt ein Handle für den Anbieter zurück.
-2.  Führen Sie die folgenden Schritte aus, um das Hash Objekt zu erstellen:
+1.  Öffnen Sie einen Algorithmusanbieter, der den gewünschten Hashalgorithmus unterstützt. Rufen Sie die [**BCryptOpenAlgorithmProvider-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptopenalgorithmprovider) auf, und geben Sie den entsprechenden Algorithmusbezeichner im *parameter pszAlgId* und **das BCRYPT HASH \_ \_ REUSABLE \_ FLAG** im *dwFlags-Parameter* an. Die Funktion gibt ein Handle an den Anbieter zurück.
+2.  Führen Sie die folgenden Schritte aus, um das Hashobjekt zu erstellen:
 
-    1.  Rufen Sie die Größe des Objekts ab, indem Sie die Funktion [**BCryptGetProperty**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgetproperty) aufrufen, um die Eigenschaft **bcrypt- \_ Objekt \_ Länge** abzurufen.
-    2.  Speicherplatz zum Speichern des Hash Objekts zuweisen.
-    3.  Erstellen Sie das-Objekt, indem Sie die Funktion " [**BCryptCreateHash**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptcreatehash) " aufrufen. Geben Sie das **bcrypt- \_ Hash wieder \_ verwendbare \_ Flag** im *dwFlags* -Parameter an.
+    1.  Rufen Sie die Größe des Objekts ab, indem Sie die [**BCryptGetProperty-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgetproperty) aufrufen, um die **BCRYPT \_ OBJECT \_ LENGTH-Eigenschaft** abzurufen.
+    2.  Zuordnen von Arbeitsspeicher zum Speichern des Hashobjekts.
+    3.  Erstellen Sie das -Objekt, indem Sie die [**BCryptCreateHash-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptcreatehash) aufrufen. Geben Sie **BCRYPT \_ HASH \_ REUSABLE \_ FLAG** im *dwFlags-Parameter* an.
 
-3.  Hash der Daten durch Aufrufen der [**BCryptHashData**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcrypthashdata) -Funktion.
+3.  Hashen Sie die Daten, indem Sie die [**BCryptHashData-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcrypthashdata) aufrufen.
 4.  Führen Sie die folgenden Schritte aus, um den Hashwert abzurufen:
 
-    1.  Rufen Sie die Größe des Hashwerts ab, indem Sie die Funktion [**BCryptGetProperty**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgetproperty) aufrufen, um die Eigenschaft **bcrypt- \_ \_ Hashlänge** abzurufen.
-    2.  Speicherplatz zum Speichern des Werts zuweisen.
-    3.  Rufen Sie den Hashwert ab, indem Sie [**BCryptFinishHash**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptfinishhash)aufrufen.
+    1.  Rufen Sie die Größe des Hashwerts ab, indem Sie die [**BCryptGetProperty-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgetproperty) aufrufen, um die **BCRYPT \_ HASH \_ LENGTH-Eigenschaft** abzurufen.
+    2.  Zuordnen von Arbeitsspeicher zum Speichern des Werts.
+    3.  Rufen Sie den Hashwert ab, indem [**Sie BCryptFinishHash**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptfinishhash)aufrufen.
 
-5.  Wenn Sie das Hash Objekt mit neuen Daten wieder verwenden möchten, fahren Sie mit Schritt 3 fort.
-6.  Um dieses Verfahren abzuschließen, müssen Sie die folgenden Bereinigungs Schritte ausführen:
+5.  Um das Hashobjekt mit neuen Daten wiederzuverwenden, fahren Sie mit Schritt 3 fort.
+6.  Um dieses Verfahren abzuschließen, müssen Sie die folgenden Bereinigungsschritte ausführen:
 
-    1.  Schließen Sie das Hash Objekt, indem Sie das Hashhandle an die Funktion " [**BCryptDestroyHash**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdestroyhash) " übergeben.
-    2.  Freigeben des Speichers, den Sie für das Hash Objekt zugewiesen haben.
-    3.  Wenn Sie keine weiteren Hash Objekte erstellen, schließen Sie den Algorithmusanbieter, indem Sie das Anbieter Handle an die Funktion " [**bcryptclosealgorithmprovider**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptclosealgorithmprovider) " übergeben.
-    4.  Wenn Sie die Verwendung des Hash Wert Speichers abgeschlossen haben, können Sie ihn freigeben.
+    1.  Schließen Sie das Hashobjekt, indem Sie das Hashhandle an die [**BCryptDestroyHash-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdestroyhash) übergeben.
+    2.  Freigeben des Arbeitsspeichers, den Sie für das Hashobjekt belegt haben.
+    3.  Wenn Sie keine weiteren Hashobjekte erstellen, schließen Sie den Algorithmusanbieter, indem Sie das Anbieterhandle an die [**BCryptCloseAlgorithmProvider-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptclosealgorithmprovider) übergeben.
+    4.  Wenn Sie die Verwendung des Hashwertspeichers abgeschlossen haben, können Sie ihn freigeben.
 
-## <a name="duplicating-a-hash-object"></a>Duplizieren eines Hash Objekts
+## <a name="duplicating-a-hash-object"></a>Duplizieren eines Hashobjekts
 
-In einigen Fällen kann es nützlich sein, eine gewisse Menge an allgemeinen Daten zu Hashen und dann zwei separate Hash Objekte aus den gemeinsamen Daten zu erstellen. Um dies zu erreichen, müssen Sie nicht zwei separate Hash Objekte erstellen und die allgemeinen Daten zweimal hashten. Sie können ein einzelnes Hash Objekt erstellen und dem Hash Objekt alle allgemeinen Daten hinzufügen. Anschließend können Sie die Funktion " [**bcryptduplierehash**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptduplicatehash) " verwenden, um ein Duplikat des ursprünglichen Hash Objekts zu erstellen. Das doppelte Hash Objekt enthält die gleichen Zustandsinformationen und Hash Daten wie das ursprüngliche, aber es handelt sich um ein vollständig unabhängiges Hash Objekt. Sie können jetzt den einzelnen Hash Objekten die eindeutigen Daten hinzufügen und den Hashwert abrufen, wie im Beispiel gezeigt. Diese Vorgehensweise ist nützlich, wenn ein Hashwert für eine möglicherweise große Menge an allgemeinen Daten erfolgt. Sie müssen die allgemeinen Daten nur einmal zum ursprünglichen Hash hinzufügen. Anschließend können Sie das Hash Objekt duplizieren, um ein eindeutiges Hash Objekt zu erhalten.
+Unter bestimmten Umständen kann es hilfreich sein, eine bestimmte Menge allgemeiner Daten zu hashen und dann zwei separate Hashobjekte aus den gemeinsamen Daten zu erstellen. Sie müssen nicht zwei separate Hashobjekte erstellen und die gemeinsamen Daten zweimal hashen, um dies zu erreichen. Sie können ein einzelnes Hashobjekt erstellen und dem Hashobjekt alle allgemeinen Daten hinzufügen. Anschließend können Sie die [**BCryptDuplicateHash-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptduplicatehash) verwenden, um ein Duplikat des ursprünglichen Hashobjekts zu erstellen. Das doppelte Hashobjekt enthält alle Zustandsinformationen und Hashdaten wie das originale, es handelt sich jedoch um ein vollständig unabhängiges Hashobjekt. Sie können nun die eindeutigen Daten zu jedem der Hashobjekte hinzufügen und den Hashwert abrufen, wie im Beispiel gezeigt. Diese Technik ist beim Hashing einer möglicherweise großen Menge allgemeiner Daten nützlich. Sie müssen dem ursprünglichen Hash nur einmal die allgemeinen Daten hinzufügen, und dann können Sie das Hashobjekt duplizieren, um ein eindeutiges Hashobjekt zu erhalten.
 
  
 

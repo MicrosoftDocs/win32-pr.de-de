@@ -1,19 +1,19 @@
 ---
-description: Die Bit-Flag-Konstanten von phonelampmode beschreiben verschiedene Methoden, mit denen ein Telefon Lamp beleuchtet werden kann.
+description: Die PHONELAMPMODE-Bitflagkonst constants beschreiben verschiedene Möglichkeiten, wie eine Smartphones-Lampe entladt werden kann.
 ms.assetid: 4f6ed2fa-32c9-44b4-bfb5-2c1446ea84fe
-title: PHONELAMPMODE_ Konstanten (TAPI. h)
+title: PHONELAMPMODE_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d8df5920df79e6fc59eb12bf1f517b4070e617d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c0a39aa3437fa813b37bad74d9c42798d0151ea3ae17adee4dad90e19675e8db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372518"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118862246"
 ---
 # <a name="phonelampmode_-constants"></a>PHONELAMPMODE_ Konstanten
 
-Die **PHONELAMPMODE_** Bit-Flag-Konstanten beschreiben verschiedene Methoden, mit denen die Lamp eines Telefons beleuchtet werden können.
+Die **PHONELAMPMODE_** bit-flag-Konstanten beschreiben verschiedene Möglichkeiten, wie die Glühlampe eines Telefons leuchtet.
 
 <dl> <dt>
 
@@ -22,7 +22,7 @@ Die **PHONELAMPMODE_** Bit-Flag-Konstanten beschreiben verschiedene Methoden, mi
 
 
 
-Dieser Wert wird verwendet, um eine Schaltfläche/Lamp-Position zu beschreiben, die keine entsprechende Lamp hat.
+Dieser Wert wird verwendet, um eine Taste/Lampe-Position zu beschreiben, die keine entsprechende Lampe enthält.
 
 
 </dt> </dl> </dd> <dt>
@@ -32,7 +32,7 @@ Dieser Wert wird verwendet, um eine Schaltfläche/Lamp-Position zu beschreiben, 
 
 
 
-Ein fehlerhafter flutterwert ist die Superposition von Flash und Flutter.
+Ein gebrochener Flatter ist die Superposition von Flash und Flatter.
 
 
 </dt> </dl> </dd> <dt>
@@ -42,7 +42,7 @@ Ein fehlerhafter flutterwert ist die Superposition von Flash und Flutter.
 
 
 
-Flash bedeutet, dass ein-und ausgeschaltet wird.
+Flash bedeutet langsames Ein- und Ausschalten.
 
 
 </dt> </dl> </dd> <dt>
@@ -52,7 +52,7 @@ Flash bedeutet, dass ein-und ausgeschaltet wird.
 
 
 
-Flutter bedeutet ein schnelles Ein-und ausschalten.
+Flatter bedeutet schnell ein- und ausschalten.
 
 
 </dt> </dl> </dd> <dt>
@@ -62,7 +62,7 @@ Flutter bedeutet ein schnelles Ein-und ausschalten.
 
 
 
-Die Lamp ist deaktiviert.
+Die Lampe ist ausgeschaltet.
 
 
 </dt> </dl> </dd> <dt>
@@ -72,7 +72,7 @@ Die Lamp ist deaktiviert.
 
 
 
-"Konstant" bedeutet, dass der Lamp kontinuierlich beleuchtet wird.
+Stabil bedeutet, dass die Lampe kontinuierlich leuchtet.
 
 
 </dt> </dl> </dd> <dt>
@@ -82,7 +82,7 @@ Die Lamp ist deaktiviert.
 
 
 
-Der Lamp-Modus ist zurzeit unbekannt.
+Der Lampemodus ist derzeit unbekannt.
 
 
 </dt> </dl> </dd> <dt>
@@ -92,16 +92,16 @@ Der Lamp-Modus ist zurzeit unbekannt.
 
 
 
-Wink bedeutet, dass der normale Satz ein-und ausgeschaltet ist
+Wink bedeutet normal rate on and off( Normalrate ein und aus).
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die höherwertigen 16 Bits können für gerätespezifische Erweiterungen zugewiesen werden. Die nieder wertigen 16 Bits sind reserviert.
+Die hochwertigen 16 Bits können für gerätespezifische Erweiterungen zugewiesen werden. Die niedrigen 16 Bits sind reserviert.
 
-Wenn sich die genauen ein-und Nachteile von Telefon Sätzen von unterschiedlichen Anbietern unterscheiden können, sollte die Zuordnung der eigentlichen Lamp-Beleuchtungs Muster für die meisten Telefone auf die oben aufgeführten Werte ganz einfach sein.
+Wenn sich die genauen Ein- und Aus-Verhältnisse zwischen Denksätzen verschiedener Anbieter unterscheiden können, sollte die Zuordnung der tatsächlichen Beleuchtungsmuster für die meisten Smartphones zu den oben aufgeführten Werten unkompliziert sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -109,8 +109,8 @@ Wenn sich die genauen ein-und Nachteile von Telefon Sätzen von unterschiedliche
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

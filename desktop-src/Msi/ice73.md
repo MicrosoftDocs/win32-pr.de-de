@@ -1,23 +1,23 @@
 ---
-description: ICE73 überprüft, ob Paket Codes, upgradecodes oder Produktcodes der Windows Installer SDK-Beispiele von Ihrem Paket nicht wieder verwendet werden. Pakete sollten das Paket, das Upgrade oder die Produktcodes eines anderen Produkts niemals wieder verwenden.
+description: ICE73 überprüft, ob Ihr Paket keine Paketcodes, Upgradecodes oder Produktcodes der Windows Installer SDK-Beispiele wiederverwendet. Pakete sollten das Paket, das Upgrade oder die Produktcodes eines anderen Produkts nie wiederverwenden.
 ms.assetid: a04429c2-ff9e-4ec8-8d07-faf1479f4920
 title: ICE73
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 11ac0e192f7c2ab7fb6f6236e45e0e4da70157e0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f2e5beecbfc7b4345d3b0dd7a93b86c55acc1abde4cc4f99d72749368be9d303
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347826"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118635076"
 ---
 # <a name="ice73"></a>ICE73
 
-ICE73 überprüft, ob Paket Codes, upgradecodes oder Produktcodes der Windows Installer SDK-Beispiele von Ihrem Paket nicht wieder verwendet werden. Pakete sollten das Paket, das Upgrade oder die Produktcodes eines anderen Produkts niemals wieder verwenden.
+ICE73 überprüft, ob Ihr Paket keine Paketcodes, Upgradecodes oder Produktcodes der Windows Installer SDK-Beispiele wiederverwendet. Pakete sollten das Paket, das Upgrade oder die Produktcodes eines anderen Produkts nie wiederverwenden.
 
 ## <a name="result"></a>Ergebnis
 
-ICE73 gibt eine Warnung aus, wenn das Paket des Produkts ein Paket oder einen Produktcode eines Windows Installer SDK-Beispiels erneut verwendet.
+ICE73 gibt eine Warnung aus, wenn das Paket Ihres Produkts ein Paket oder einen Produktcode eines Windows Installer SDK-Beispiels wiederverwendet.
 
 ## <a name="example"></a>Beispiel
 
@@ -30,32 +30,32 @@ This package reuses the '{8FC7****-88A0-4b41-82B8-8905D4AA904C}' Upgrade Code of
 ```
 
 > [!Note]  
-> Die Sternchen ( \* \* \* \* ) in der GUID stellen den Bereich von GUIDs dar, der für nachfolgende Windows Installer SDK-Pakete reserviert ist.
+> Die Sternchen ( ) in der GUID stellen den Bereich von GUIDs dar, die für nachfolgende Installer SDK Windows pakete \* \* \* \* reserviert sind.
 
  
 
-Um die Fehler zu beheben, generieren Sie eine neue eindeutige GUID für das Produkt und die Paket Codes Ihres Pakets. Außerdem benötigen Sie eine neue eindeutige GUID für den UpgradeCode des Pakets.
+Um die Fehler zu beheben, generieren Sie eine neue eindeutige GUID für die Produkt- und Paketcodes Ihres Pakets. Außerdem benötigen Sie eine neue eindeutige GUID für den Upgradecode Ihres Pakets.
 
-[Zusammenfassungs Informationsdaten Strom](summary-information-stream.md) (teilweise)
+[Zusammenfassungsinformationsstream](summary-information-stream.md) (partiell)
 
 
 
 | Eigenschaft       | Wert                                  |
 |----------------|----------------------------------------|
-| PID- \_ revnumber | {000c1101-0000-0000-C000-000000000047} |
+| PID \_ REVNUMBER | {000C1101-0000-0000-C000-000000000047} |
 
 
 
  
 
-[Eigenschaften Tabelle](property-table.md) (partiell)
+[Eigenschaftentabelle](property-table.md) (partiell)
 
 
 
 | Eigenschaft                           | Wert                                  |
 |------------------------------------|----------------------------------------|
-| [**ProductCode**](productcode.md) | {80F 030-a751-11d2-A7D4-006097c99860} |
-| [**UpgradeCode auch**](upgradecode.md) | {8fc70000-88a0-4b41-82b8-8905d4aa904c} |
+| [**ProductCode**](productcode.md) | {80F7E030-A751-11D2-A7D4-006097C99860} |
+| [**Upgradecode**](upgradecode.md) | {8FC70000-88A0-4b41-82B8-8905D4AA904C} |
 
 
 
@@ -65,13 +65,13 @@ Um die Fehler zu beheben, generieren Sie eine neue eindeutige GUID für das Prod
 
 <dl> <dt>
 
-[Paket Codes](package-codes.md)
+[Paketcodes](package-codes.md)
 </dt> <dt>
 
-[Produkt Codes](product-codes.md)
+[Produktcodes](product-codes.md)
 </dt> <dt>
 
-[**Zusammenfassungs Eigenschaft der Revisionsnummer**](revision-number-summary.md)
+[**Zusammenfassungseigenschaft für Revisionsnummer**](revision-number-summary.md)
 </dt> <dt>
 
 [**UpgradeCode-Eigenschaft**](upgradecode.md)
@@ -80,7 +80,7 @@ Um die Fehler zu beheben, generieren Sie eine neue eindeutige GUID für das Prod
 [**ProductCode-Eigenschaft**](productcode.md)
 </dt> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

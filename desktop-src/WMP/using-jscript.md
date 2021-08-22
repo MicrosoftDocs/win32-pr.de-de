@@ -3,25 +3,25 @@ title: Verwenden von JScript
 description: Verwenden von JScript
 ms.assetid: c50983d8-aaec-46ff-a8e0-b05e5b75f6d1
 keywords:
-- Windows Media Player Skins, JScript-Dateien
-- Skins, JScript-Dateien
+- Windows Media Player von Skins, JScript Dateien
+- skins,JScript-Dateien
 - Dateien für Skins, JScript
-- JScript-Dateien für Skins, Informationen zu
-- Schreiben von Code für Skins, JScript
+- JScript Dateien für Skins, Informationen
+- Schreiben von Code für Skins,JScript
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5bf6b031d4a0828138e6c67767918a339b5df243
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f4b642a1af7a4634e04947ee57894886fe9a6899205669f002c18da788630fa0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118830818"
 ---
 # <a name="using-jscript"></a>Verwenden von JScript
 
-Für Windows Media Player ist Microsoft Internet Explorer Version 4 oder höher erforderlich. Gehen Sie beim Schreiben von Code nicht davon aus, dass der Computer des Benutzers eine Version von Microsoft JScript höher als 4,0 enthalten soll.
+Windows Media Player erfordert Microsoft Internet Explorer Version 4 oder höher. Gehen Sie beim Schreiben von Code nicht davon aus, dass der Computer des Benutzers eine Version von Microsoft JScript höher als 4.0 enthält.
 
-In den folgenden Abschnitten finden Sie Details zur Verwendung von JScript in Skins:
+Die folgenden Abschnitte enthalten Details zur Verwendung von JScript in Skins:
 
 -   [Arbeiten mit dem Player](working-with-the-player.md)
 -   [Ereignishandler](event-handlers.md)
@@ -34,9 +34,9 @@ In den folgenden Abschnitten finden Sie Details zur Verwendung von JScript in Sk
 [**Schreiben von Code**](writing-code.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

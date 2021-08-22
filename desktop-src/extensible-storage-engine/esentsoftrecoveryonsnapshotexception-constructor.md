@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentsoftrecoveryonsnapshotexception-Konstruktor'
-title: Esentsoftrecoveryonsnapshotexception-Konstruktor
+description: 'Weitere Informationen zu: EsentSoftRecoveryOnSnapshotException-Konstruktor'
+title: EsentSoftRecoveryOnSnapshotException-Konstruktor
 TOCTitle: 'EsentSoftRecoveryOnSnapshotException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSoftRecoveryOnSnapshotException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentsoftrecoveryonsnapshotexception.esentsoftrecoveryonsnapshotexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e8f19792ec5c60498a87175ac064a9af04560981
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec918e573e3ca1c98da77e7ef3fd2b6bc760d2c65a382bb087ef38cfa47de1f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118770768"
 ---
-# <a name="esentsoftrecoveryonsnapshotexception-constructor"></a>Esentsoftrecoveryonsnapshotexception-Konstruktor
+# <a name="esentsoftrecoveryonsnapshotexception-constructor"></a>EsentSoftRecoveryOnSnapshotException-Konstruktor
 
-Initialisiert eine neue Instanz der esentsoftrecoveryonsnapshotexception-Klasse.
+Initialisiert eine neue Instanz der EsentSoftRecoveryOnSnapshotException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentSoftRecoveryOnSnapshotException()
 public EsentSoftRecoveryOnSnapshotException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentsoftrecoveryonsnapshotexception-Klasse](./esentsoftrecoveryonsnapshotexception-class.md)
+[EsentSoftRecoveryOnSnapshotException-Klasse](./esentsoftrecoveryonsnapshotexception-class.md)
 
-[Esentsoftrecoveryonsnapshotexception-Member](./esentsoftrecoveryonsnapshotexception-members.md)
+[EsentSoftRecoveryOnSnapshotException-Member](./esentsoftrecoveryonsnapshotexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,53 +1,53 @@
 ---
-description: Bei der WMI-Hochleistungs-API handelt es sich um eine Reihe von Schnittstellen, die Daten aus Leistungs Leistungsdaten Klassen abrufen.
+description: Die WMI-Api für hohe Leistung ist eine Reihe von Schnittstellen, die Daten aus Leistungsindikatorklassen abrufen.
 ms.assetid: ee0a2ead-f53a-4651-a287-04a62eba3f84
 ms.tgt_platform: multiple
 title: Zugreifen auf Leistungsdaten in C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b076e1ab15b934f347ee491711d7d3d1b8fbbe0f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8e566fb5803e598e42fac06d8f04fe3e71935008668e397a47d0226a96560eec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352780"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118820327"
 ---
 # <a name="accessing-performance-data-in-c"></a>Zugreifen auf Leistungsdaten in C++
 
-Bei der WMI-Hochleistungs-API handelt es sich um eine Reihe von Schnittstellen, die Daten aus [Leistungs Leistungsdaten Klassen](/windows/desktop/CIMWin32Prov/performance-counter-classes)abrufen. Diese Schnittstellen erfordern die Verwendung [*eines Aktualisierungs Objekts,*](gloss-r.md) um die Samplingrate zu erhöhen. Weitere Informationen zur Verwendung des Aktualisierungs Objekts bei der Skripterstellung finden Sie unter [zugreifen auf Leistungsdaten in Skripts](accessing-performance-data-in-script.md) und [WMI-Tasks: Leistungsüberwachung](wmi-tasks--performance-monitoring.md).
+Die WMI-Api für hohe Leistung ist eine Reihe von Schnittstellen, die Daten aus [Leistungsindikatorklassen](/windows/desktop/CIMWin32Prov/performance-counter-classes)abrufen. Diese Schnittstellen erfordern [](gloss-r.md) die Verwendung eines Aktualisierungsobjekts, um die Samplingrate zu erhöhen. Weitere Informationen zur Verwendung des Aktualisierungsobjekts bei der Skripterstellung finden Sie unter [Zugreifen auf Leistungsdaten in Skript-](accessing-performance-data-in-script.md) und [WMI-Aufgaben: Leistungsüberwachung.](wmi-tasks--performance-monitoring.md)
 
-In diesem Thema werden die folgenden Abschnitte erläutert:
+Die folgenden Abschnitte werden in diesem Thema erläutert:
 
 -   [Aktualisieren von Leistungsdaten](#refreshing-performance-data)
--   [Hinzufügen von Enumeratoren zum WMI-Aktualisierungs Programm](#adding-enumerators-to-the-wmi-refresher)
+-   [Hinzufügen von Enumeratoren zur WMI-Aktualisierung](#adding-enumerators-to-the-wmi-refresher)
 -   [Beispiel](#example)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="refreshing-performance-data"></a>Aktualisieren von Leistungsdaten
 
-Ein Aktualisierungs Objekt erhöht die Datenanbieter-und Client Leistung, indem Daten abgerufen werden, ohne dass Prozess Grenzen überschritten werden. Wenn sich sowohl der Client als auch der Server auf demselben Computer befinden, lädt ein Aktualisierungs Programm den Hochleistungs Anbieter Prozess seitig in den Client und kopiert Daten direkt von Anbieter Objekten in Client Objekte. Wenn sich der Client und der Server auf unterschiedlichen Computern befinden, steigert das Aktualisierungs Programm die Leistung, indem Objekte auf dem Remote Computer zwischengespeichert werden und minimale Datasets an den Client übertragen werden.
+Ein Aktualisierungsobjekt erhöht die Datenanbieter- und Clientleistung, indem Daten abgerufen werden, ohne Prozessgrenzen zu überschreiten. Wenn sich sowohl der Client als auch der Server auf demselben Computer befinden, lädt eine Aktualisierung den prozessübergreifenden Hochleistungsanbieter auf den Client und kopiert Daten direkt aus Anbieterobjekten in Clientobjekte. Wenn sich der Client und der Server auf verschiedenen Computern befinden, erhöht die Aktualisierung die Leistung, indem Objekte auf dem Remotecomputer zwischengespeichert und minimale Datensätze an den Client übertragen werden.
 
-Ein Aktualisierungs Programm ist ebenfalls:
+Eine Aktualisierungs-Aktualisierer-Aktualisiererin:
 
--   Verbindet einen Client automatisch erneut mit einem WMI-Remote Dienst, wenn ein Netzwerkfehler auftritt oder der Remote Computer neu gestartet wird.
+-   Verbindet einen Client automatisch erneut mit einem WMI-Remotedienst, wenn ein Netzwerkfehler auftritt oder der Remotecomputer neu gestartet wird.
 
-    Standardmäßig versucht ein Aktualisierungs Programm, eine Verbindung zwischen der Anwendung und dem relevanten Hochleistungs Anbieter herzustellen, wenn eine Remote Verbindung zwischen den beiden Computern fehlschlägt. Um die erneute Verbindung zu verhindern, übergeben Sie im [**Aktualisierungs**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) Methoden aufrufsbefehl das **WBEM- \_ Flag \_ aktualisieren \_ No \_ Auto \_ Reconnect** . Skript Clients müssen die Eigenschaft " [**Swap. autoreconnetct**](swbemrefresher-autoreconnect.md) " auf " **false**" festlegen.
+    Standardmäßig versucht eine Aktualisierung, ihre Anwendung erneut mit dem relevanten Hochleistungsanbieter zu verbinden, wenn eine Remoteverbindung zwischen den beiden Computern fehlschlägt. Um eine erneute Verbindung zu verhindern, übergeben Sie das **Flag WBEM \_ FLAG REFRESH NO AUTO \_ \_ \_ \_ RECONNECT** im [**Refresh-Methodenaufruf.**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) Skriptclients müssen die [**SWbemRefresher.AutoReconnect-Eigenschaft**](swbemrefresher-autoreconnect.md) auf **FALSE** festlegen.
 
--   Lädt mehrere-Objekte und Enumeratoren, die von demselben oder unterschiedlichen Anbietern bereitgestellt werden.
+-   Lädt mehrere Objekte und Enumeratoren, die von denselben oder verschiedenen Anbietern bereitgestellt werden.
 
-    Ermöglicht es Ihnen, mehrere Objekte, Enumeratoren oder beides einem Aktualisierungs Programm hinzuzufügen.
+    Ermöglicht es Ihnen, einer Aktualisierung mehrere Objekte, Enumeratoren oder beides hinzuzufügen.
 
--   Listet-Objekte auf.
+-   Listet Objekte auf.
 
-    Wie bei anderen Anbietern kann ein Hochleistungs Anbieter Objekte aufzählen.
+    Wie andere Anbieter kann ein Hochleistungsanbieter Objekte aufzählen.
 
-Nachdem Sie den Hochleistungs Client geschrieben haben, möchten Sie möglicherweise die Reaktionszeit verbessern. Da die [**iwbefibjectaccess**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjectaccess) -Schnittstelle für die Geschwindigkeit optimiert ist, ist die Schnittstelle nicht intrinsisch Thread sicher. Daher können Sie während eines Aktualisierungs Vorgangs nicht auf das aktualisierbare Objekt oder die Aufzählung zugreifen. Verwenden Sie zum Schutz von Objekten während der **iwbemubjectaccess** -Methodenaufrufe die Methoden [**iwbemubjectaccess:: Lock**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectaccess-lock) und [**Unlock**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectaccess-unlock) . Synchronisieren Sie Ihre Threads, um die Leistung zu verbessern, sodass Sie keine einzelnen Threads Sperren müssen. Das Reduzieren von Threads und das Synchronisieren von Gruppen von Objekten für Aktualisierungs Vorgänge bietet die beste Gesamtleistung.
+Nachdem Sie das Schreiben Ihres Hochleistungsclients abgeschlossen haben, können Sie die Antwortzeit verbessern. Da die [**IWbemObjectAccess-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjectaccess) für geschwindigkeitsoptimiert ist, ist die Schnittstelle nicht systemintern threadsicher. Greifen Sie daher während eines Aktualisierungsvorgangs nicht auf das aktualisierbare Objekt oder die aktualisierbare Enumeration zu. Um Objekte während **IWbemObjectAccess-Methodenaufrufen** threadübergreifend zu schützen, verwenden Sie die [**Methoden IWbemObjectAccess::Lock**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectaccess-lock) und [**Unlock.**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectaccess-unlock) Synchronisieren Sie Ihre Threads, um die Leistung zu verbessern, sodass Sie keine einzelnen Threads sperren müssen. Das Reduzieren von Threads und Synchronisieren von Objektgruppen für Aktualisierungsvorgänge bietet die beste Gesamtleistung.
 
-## <a name="adding-enumerators-to-the-wmi-refresher"></a>Hinzufügen von Enumeratoren zum WMI-Aktualisierungs Programm
+## <a name="adding-enumerators-to-the-wmi-refresher"></a>Hinzufügen von Enumeratoren zur WMI-Aktualisierung
 
-Die Anzahl der Instanzen und Daten in jeder Instanz werden aktualisiert, indem dem Aktualisierungs Programm ein Enumerator hinzugefügt wird, sodass jeder [**callbemrefresh Sher:: Refresh**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) -Befehl eine komplette Enumeration ergibt.
+Sowohl die Anzahl der Instanzen als auch die Daten in jeder Instanz werden aktualisiert, indem der Aktualisierung ein Enumerator hinzugefügt wird, sodass jeder Aufruf von [**IWbemRefresher::Refresh**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) zu einer vollständigen Enumeration führt.
 
-Im folgenden C++-Codebeispiel werden die folgenden Verweise und \# include-Anweisungen für die ordnungsgemäße Kompilierung benötigt.
+Das folgende C++-Codebeispiel erfordert die folgenden Verweise und \# include-Anweisungen, um ordnungsgemäß zu kompilieren.
 
 
 ```C++
@@ -61,13 +61,13 @@ using namespace std;
 
 
 
-Im folgenden Verfahren wird gezeigt, wie ein Enumerator zu einem Aktualisierungs Programm hinzugefügt wird.
+Im folgenden Verfahren wird gezeigt, wie Sie einer Aktualisierung einen Enumerator hinzufügen.
 
-**So fügen Sie einem Aktualisierungs Programm einen Enumerator hinzu**
+**So fügen Sie einer Aktualisierung einen Enumerator hinzu**
 
-1.  Rufen Sie die [**iwbemconfigurerefresher:: AddEnum**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemconfigurerefresher-addenum) -Methode auf, indem Sie den Pfad zum aktualisierbaren Objekt und die [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Schnittstelle verwenden.
+1.  Rufen Sie die [**IWbemConfigureRefresher::AddEnum-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemconfigurerefresher-addenum) mithilfe des Pfads zum aktualisierbaren Objekt und der [**IWbemServices-Schnittstelle**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) auf.
 
-    Das Aktualisierungs Programm gibt einen Zeiger auf eine [**iwbemhiperfenum**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemhiperfenum) -Schnittstelle zurück. Sie können die **iwbemhiperferum** -Schnittstelle verwenden, um auf die Objekte in der-Enumeration zuzugreifen.
+    Die Aktualisierung gibt einen Zeiger auf eine [**IWbemHiPerfEnum-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemhiperfenum) zurück. Sie können die **IWbemHiPerfEnum-Schnittstelle** verwenden, um auf die Objekte in der Enumeration zuzugreifen.
 
     ```C++
     IWbemHiPerfEnum* pEnum = NULL;
@@ -92,17 +92,17 @@ Im folgenden Verfahren wird gezeigt, wie ein Enumerator zu einem Aktualisierungs
 
     
 
-2.  Erstellen Sie eine-Schleife, die die folgenden Aktionen ausführt:
+2.  Erstellen Sie eine Schleife, die die folgenden Aktionen ausführt:
 
-    -   Aktualisiert das-Objekt mithilfe eines Aufrufes von [**iwbemrefresh Sher:: Refresh**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh).
-    -   Stellt ein Array von [**iwbearbjectaccess**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjectaccess) -Schnittstellen Zeigern für die [**iwbemhiperferum:: GetObjects**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemhiperfenum-getobjects) -Methode bereit.
-    -   Greift auf die Eigenschaften des Enumerators zu, indem die [**iwbemubjectaccess**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjectaccess) -Methoden verwendet werden, die an [**GetObjects**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemhiperfenum-getobjects)übermittelt werden.
+    -   Aktualisiert das -Objekt mithilfe eines Aufrufs von [**IWbemRefresher::Refresh.**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh)
+    -   Stellt ein Array von [**IWbemObjectAccess-Schnittstellenzeigern**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjectaccess) auf die [**IWbemHiPerfEnum::GetObjects-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemhiperfenum-getobjects) bereit.
+    -   Greift mithilfe der [**IWbemObjectAccess-Methoden,**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjectaccess) die an [**GetObjects**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemhiperfenum-getobjects)übergeben werden, auf die Eigenschaften des Enumerators zu.
 
-        Ein Eigenschaften Handle kann an jede [**iwbemubjectaccess**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjectaccess) -Instanz übermittelt werden, um den aktualisierten Wert abzurufen. Der Client muss [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) aufrufen, um die von [**GetObjects**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemhiperfenum-getobjects)zurückgegebenen **iwbemubjectaccess** -Zeiger freizugeben.
+        Ein Eigenschaftenhandle kann an jede [**IWbemObjectAccess-Instanz**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjectaccess) übergeben werden, um den aktualisierten Wert abzurufen. Der Client muss [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) aufrufen, um die von [**GetObjects**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemhiperfenum-getobjects)zurückgegebenen **IWbemObjectAccess-Zeiger** freizugeben.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden C++-Codebeispiel wird eine Hochleistungs Klasse aufgelistet, bei der der Client ein Eigenschaften Handle aus dem ersten-Objekt abruft und das Handle für den Rest des Aktualisierungs Vorgangs erneut verwendet. Jeder Aufrufe der [**Refresh**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) -Methode aktualisiert die Anzahl von Instanzen und die Instanzdaten.
+Im folgenden C++-Codebeispiel wird eine Hochleistungsklasse aufgeführt, bei der der Client ein Eigenschaftenhandle aus dem ersten Objekt abruft und das Handle für den Rest des Aktualisierungsvorgangs wiederverwendet. Jeder Aufruf der [**Refresh-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) aktualisiert die Anzahl der Instanzen und die Instanzdaten.
 
 
 ```C++
@@ -380,25 +380,25 @@ int __cdecl wmain(int argc, wchar_t* argv[])
 
 <dl> <dt>
 
-[Leistungs Leistungsdaten-Klassen](/windows/desktop/CIMWin32Prov/performance-counter-classes)
+[Leistungsindikatorklassen](/windows/desktop/CIMWin32Prov/performance-counter-classes)
 </dt> <dt>
 
-[Zugreifen auf Leistungsdaten im Skript](accessing-performance-data-in-script.md)
+[Zugreifen auf Leistungsdaten in Skripts](accessing-performance-data-in-script.md)
 </dt> <dt>
 
 [Aktualisieren von WMI-Daten in Skripts](refreshing-wmi-data-in-scripts.md)
 </dt> <dt>
 
-[WMI-Tasks: Leistungsüberwachung](wmi-tasks--performance-monitoring.md)
+[WMI-Aufgaben: Leistungsüberwachung](wmi-tasks--performance-monitoring.md)
 </dt> <dt>
 
 [Überwachen von Leistungsdaten](monitoring-performance-data.md)
 </dt> <dt>
 
-[Eigenschafts Qualifizierer für formatierte Leistungs Objektklassen](property-qualifiers-for-performance-counter-classes.md)
+[Eigenschaftsqualifizierer für formatierte Leistungsindikatorklassen](property-qualifiers-for-performance-counter-classes.md)
 </dt> <dt>
 
-[WMI-Leistungsdaten Typen](wmi-performance-counter-types.md)
+[WMI-Leistungsindikatortypen](wmi-performance-counter-types.md)
 </dt> <dt>
 
 [**Wmiadap.exe**](wmiadap.md)

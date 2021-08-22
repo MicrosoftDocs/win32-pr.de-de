@@ -1,32 +1,32 @@
 ---
-description: Erläutert, wie Nachrichten mithilfe von Microsoft Digest geschützt werden.
+description: Erläutert, wie Nachrichten mithilfe von Microsoft Digest.
 ms.assetid: 15509d51-80c0-4d5c-aa24-4dc17de3f12c
 title: Schützen von Nachrichten mit Microsoft Digest
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 573eafcf66e23188546abd3acd316095ec100187
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dab0add351287b6c90cfe0781151c0378da56f309214b03ed12d1325a6e55d88
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118920739"
 ---
 # <a name="protecting-messages-using-microsoft-digest"></a>Schützen von Nachrichten mit Microsoft Digest
 
 ## <a name="http-and-sasl"></a>HTTP und SASL
 
-Um bestimmte Arten von Sicherheitsverletzungen zu erkennen, verwenden der Client und der Server die SSPI ( [Security Support Provider Interface](sspi.md) )-Nachrichten [*Integritäts*](../secgloss/i-gly.md) Funktionen [**makesignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature) und [**VerifySignature**](/windows/desktop/api/Sspi/nf-sspi-verifysignature) zum Schützen von Nachrichten.
+Um bestimmte Arten von Sicherheitsverstößen zu erkennen, verwenden Client und Server die [](../secgloss/i-gly.md) Nachrichtenintegritätsfunktionen [**MakeSignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature) und [**VerifySignature**](/windows/desktop/api/Sspi/nf-sspi-verifysignature) des Sicherheitsunterstützungsanbieters (Security [Support Provider Interface,](sspi.md) SSPI), um Nachrichten zu schützen.
 
-Ein Client ruft die [**makesignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature) -Funktion auf, um eine Nachricht mithilfe Ihres [*Sicherheits Kontexts*](../secgloss/s-gly.md)zu signieren. Der Server verwendet die [**VerifySignature**](/windows/desktop/api/Sspi/nf-sspi-verifysignature) -Funktion, um den Ursprung der Nachricht zu überprüfen. Zusätzlich zur Überprüfung der [*Signatur*](../secgloss/d-gly.md) , die die Nachricht begleitet, prüft die **VerifySignature** -Funktion auch, ob die [*Nonce*](../secgloss/n-gly.md) -Anzahl (angegeben durch die NC-Direktive) eine höhere als die letzte für die Nonce gesendete Anzahl ist. Wenn dies nicht der Fall ist, gibt die **VerifySignature** -Funktion einen SEK \_ . aus dem Sequenz- \_ \_ Fehlercode zurück.
+Ein Client ruft die [**MakeSignature-Funktion**](/windows/desktop/api/Sspi/nf-sspi-makesignature) auf, um eine Nachricht mithilfe des [*Sicherheitskontexts zu signieren.*](../secgloss/s-gly.md) Der Server verwendet die [**VerifySignature-Funktion,**](/windows/desktop/api/Sspi/nf-sspi-verifysignature) um den Ursprung der Nachricht zu überprüfen. Zusätzlich zur Überprüfung [](../secgloss/d-gly.md) der Signatur, die die Nachricht begleitet, überprüft die **VerifySignature-Funktion** auch, ob die [*Nonce-Anzahl*](../secgloss/n-gly.md) (durch die nc-Direktive angegeben) um eins größer als die letzte Anzahl ist, die für die Nonce gesendet wurde. Wenn dies nicht der Fall ist, gibt die **VerifySignature-Funktion** einen SEC \_ OUT OF \_ \_ SEQUENCE-Fehlercode zurück.
 
 ## <a name="sasl-only"></a>Nur SASL
 
-Die Funktionen [**verschlüsseltmessage (allgemein)**](/windows/win32/api/sspi/nf-sspi-encryptmessage) und [**DecryptMessage (allgemein)**](/windows/win32/api/sspi/nf-sspi-decryptmessage) geben Vertraulichkeit für Nachrichten nach der Authentifizierung zwischen Client und Server an.
+Die [**Funktionen EncryptMessage (General)**](/windows/win32/api/sspi/nf-sspi-encryptmessage) und [**DecryptMessage (General)**](/windows/win32/api/sspi/nf-sspi-decryptmessage) gewährleisten Vertraulichkeit für Nachrichten nach der Authentifizierung, die zwischen Client und Server ausgetauscht werden.
 
-Um die Nachrichten Vertraulichkeits Funktionen zu verwenden, muss der Server und der Client einen [*Sicherheitskontext*](../secgloss/s-gly.md) mit den folgenden Attributen eingerichtet haben:
+Um die Nachrichten vertraulichkeitsfunktionen verwenden zu können, müssen der Server und der Client einen [*Sicherheitskontext*](../secgloss/s-gly.md) mit den folgenden Attributen eingerichtet haben:
 
--   Die von der QoP-Direktive angegebene Qualität des Schutzes muss "auth-conf" lauten.
--   Ein Verschlüsselungsmechanismus muss mithilfe der Chiffre Direktive angegeben werden.
+-   Die durch die qop-Direktive angegebene Qualität des Schutzes muss "auth-conf" sein.
+-   Ein Verschlüsselungsmechanismus muss mit der Cipher-Direktive angegeben worden sein.
 
  
 

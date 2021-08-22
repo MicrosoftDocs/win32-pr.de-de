@@ -1,41 +1,41 @@
 ---
-description: Beschreibt, wie-Skripts,-Anwendungen und-Anbieter Verbindungen mit WMI auf Remote Computern herstellen können, um Daten abzurufen oder Hardware und Software zu steuern.
+description: Beschreibt, wie Skripts, Anwendungen und Anbieter Verbindungen mit WMI auf Remotecomputern herstellen können, um Daten zu erhalten oder Hardware und Software zu steuern.
 ms.assetid: 16b00ee3-f721-4912-9e8e-2fdbc897a813
 ms.tgt_platform: multiple
-title: Herstellen einer Verbindung mit WMI auf einem Remote Computer
+title: Herstellen einer Verbindung mit WMI auf einem Remotecomputer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 80d581d1be73013e57ef2193102f6e8afc287b05
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b1fd8c4b592353c10836e8dd5516d9c4f729aed5d968ef4c0e551a05a17c8a05
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118819716"
 ---
-# <a name="connecting-to-wmi-on-a-remote-computer"></a>Herstellen einer Verbindung mit WMI auf einem Remote Computer
+# <a name="connecting-to-wmi-on-a-remote-computer"></a>Herstellen einer Verbindung mit WMI auf einem Remotecomputer
 
-WMI kann zum Verwalten von und Zugreifen auf WMI-Daten auf Remote Computern verwendet werden. Remote Verbindungen in WMI werden von der [Windows-Firewall](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754274(v=ws.11)) und den DCOM-Einstellungen beeinflusst. Die [Benutzerkontensteuerung (User Account Control, UAC)](/previous-versions/aa905108(v=msdn.10)) erfordert möglicherweise auch Änderungen an einigen Einstellungen. Wenn Ihre Einstellungen jedoch richtig sind, ähnelt der Remote Systemaufrufe einem lokalen WMI-Rückruf. Sie können es jedoch mithilfe verschiedener Anmelde Informationen, alternativer Authentifizierungsprotokolle und anderer Sicherheitsfeatures komplexer gestalten.
+WMI kann verwendet werden, um WMI-Daten auf Remotecomputern zu verwalten und darauf zu zugreifen. Remoteverbindungen in WMI sind von den Einstellungen Windows [Firewall und](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754274(v=ws.11)) DCOM betroffen. [Die Benutzerkontensteuerung (User Account Control, UAC)](/previous-versions/aa905108(v=msdn.10)) erfordert möglicherweise auch Änderungen an einigen Einstellungen. Wenn Ihre Einstellungen jedoch korrekt sind, ähnelt der Aufruf eines Remotesystems einem lokalen WMI-Aufruf. Sie können es jedoch komplexer machen, indem Sie unterschiedliche Anmeldeinformationen, alternative Authentifizierungsprotokolle und andere Sicherheitsfeatures verwenden.
 
-## <a name="configuring-a-computer-for-a-remote-connection"></a>Konfigurieren eines Computers für eine Remote Verbindung
+## <a name="configuring-a-computer-for-a-remote-connection"></a>Konfigurieren eines Computers für eine Remoteverbindung
 
-Bevor Sie mit WMI auf ein Remote System zugreifen können, müssen Sie möglicherweise einige Sicherheitseinstellungen überprüfen, um zu bestätigen, dass Sie Zugriff haben. Dies gilt insbesondere in folgenden Fällen:
+Bevor Sie mit WMI auf ein Remotesystem zugreifen können, müssen Sie möglicherweise einige Sicherheitseinstellungen überprüfen, um zu bestätigen, dass Sie Zugriff haben. Dies gilt insbesondere in folgenden Fällen:
 
--   Windows enthält eine Reihe von Sicherheitsfunktionen, die den Zugriff auf Skripts auf Remote Systemen blockieren können. Daher müssen Sie möglicherweise die Active Directory-und Windows-Firewall-Einstellungen Ihres Systems ändern, bevor Sie einen WMI-Befehl ausführen. Weitere Informationen finden Sie unter [Einrichten einer Remote-WMI-Verbindung](connecting-to-wmi-remotely-starting-with-vista.md) und Problembehandlung für [eine Remote-WMI-Verbindung](troubleshooting-a-remote-wmi-connection.md).
+-   Windows enthält eine Reihe von Sicherheitsfeatures, die den Zugriff auf Skripts auf Remotesystemen blockieren können. Daher müssen Sie möglicherweise die Active Directory- und Windows-Firewalleinstellungen Ihres Systems ändern, bevor Sie einen WMI-Aufruf tätigen. Weitere Informationen finden Sie unter [Einrichten einer WMI-Remoteverbindung und](connecting-to-wmi-remotely-starting-with-vista.md) [Problembehandlung bei einer Remote-WMI-Verbindung.](troubleshooting-a-remote-wmi-connection.md)
 
--   Die richtigen DCOM-Einstellungen müssen aktiviert werden, damit eine Remote Verbindung funktioniert. Wenn Sie DCOM-Einstellungen ändern, können Benutzer mit geringen Rechten auf einen Computer für eine Remote Verbindung zugreifen. Weitere Informationen finden Sie unter [Sichern einer Remote-WMI-Verbindung](securing-a-remote-wmi-connection.md).
+-   Die richtigen DCOM-Einstellungen müssen aktiviert sein, damit eine Remoteverbindung funktioniert. Das Ändern der DCOM-Einstellungen kann Benutzern mit geringen Rechten den Zugriff auf einen Computer für eine Remoteverbindung ermöglichen. Weitere Informationen finden Sie unter [Sichern einer WMI-Remoteverbindung.](securing-a-remote-wmi-connection.md)
 
-Außerdem kann es Situationen geben, in denen Sie WMI als einen festgelegten Port ausführen möchten. Zu diesem Zweck müssen Sie auch Ihre Einstellungen ändern. Weitere Informationen finden Sie unter [Einrichten eines Fixed-Ports für WMI](setting-up-a-fixed-port-for-wmi.md).
+Darüber hinaus kann es unter bestimmten Umständen sein, dass Sie WMI über einen festen Port ausführen möchten. Dazu müssen Sie auch Ihre Einstellungen ändern. Weitere Informationen finden Sie unter [Einrichten eines festen Ports für WMI.](setting-up-a-fixed-port-for-wmi.md)
 
-## <a name="connecting-to-a-remote-computer"></a>Herstellen einer Verbindung mit einem Remote Computer
+## <a name="connecting-to-a-remote-computer"></a>Herstellen einer Verbindung mit einem Remotecomputer
 
-Das Herstellen einer Verbindung mit einem Remote System mit WMI besteht darin, sicherzustellen, dass Sie über die entsprechenden Berechtigungen für den Zugriff auf das System verfügen und dass die Verbindung ordnungsgemäß konfiguriert ist. Wenn Sie über diese beiden Elemente verfügen, ist die Verbindung selbst relativ einfach. Wenn Sie z. b. die standardmäßigen Sicherheits Anmelde Informationen verwenden, können Sie auf WMI auf einem Remote System zugreifen, indem Sie den folgenden Code verwenden:
+Im Kern besteht das Herstellen einer Verbindung mit einem Remotesystem mit WMI darin, sicherzustellen, dass Sie über die entsprechenden Berechtigungen für den Zugriff auf das System verfügen und ihre Verbindung ordnungsgemäß konfiguriert ist. Sobald Sie über diese beiden Elemente verfügen, ist die Verbindung selbst relativ einfach. Wenn Sie beispielsweise Ihre Standardsicherheitsanmeldeinformationen verwenden, können Sie mithilfe des folgenden Codes auf WMI auf einem Remotesystem zugreifen:
 
 <dl> <dt>
 
-<span id="Connecting_to_WMI_Remotely_with_PowerShell"></span><span id="connecting_to_wmi_remotely_with_powershell"></span><span id="CONNECTING_TO_WMI_REMOTELY_WITH_POWERSHELL"></span>[Remote Verbindung mit WMI mithilfe von PowerShell](connecting-to-wmi-on-a-remote-computer-by-using-powershell.md)
+<span id="Connecting_to_WMI_Remotely_with_PowerShell"></span><span id="connecting_to_wmi_remotely_with_powershell"></span><span id="CONNECTING_TO_WMI_REMOTELY_WITH_POWERSHELL"></span>[Herstellen einer Remoteverbindung mit WMI mitHilfe von PowerShell](connecting-to-wmi-on-a-remote-computer-by-using-powershell.md)
 </dt> <dd>
 
-Verwenden Sie den Parameter " *-Computername* ", der den meisten WMI-Cmdlets entspricht, z. b. [Get-WMIObject](/powershell/module/microsoft.powershell.management/get-wmiobject?view=powershell-5.1&preserve-view=true).
+Verwenden Sie *den Parameter -ComputerName,* der den meisten WMI-Cmdlets gemeinsam ist, z. [B. Get-WmiObject](/powershell/module/microsoft.powershell.management/get-wmiobject?view=powershell-5.1&preserve-view=true).
 
 
 ```PowerShell
@@ -47,10 +47,10 @@ $colSettings = Get-WmiObject Win32_OperatingSystem -ComputerName $strComputer
 
 </dd> <dt>
 
-<span id="Connecting_to_WMI_Remotely_with_VBScript"></span><span id="connecting_to_wmi_remotely_with_vbscript"></span><span id="CONNECTING_TO_WMI_REMOTELY_WITH_VBSCRIPT"></span>[Remote Verbindung mit WMI mit VBScript](connecting-to-wmi-remotely-with-vbscript.md)
+<span id="Connecting_to_WMI_Remotely_with_VBScript"></span><span id="connecting_to_wmi_remotely_with_vbscript"></span><span id="CONNECTING_TO_WMI_REMOTELY_WITH_VBSCRIPT"></span>[Herstellen einer Remoteverbindung mit WMI mit VBScript](connecting-to-wmi-remotely-with-vbscript.md)
 </dt> <dd>
 
-Verwenden Sie einen Moniker, der den Namen des Remote Systems im Aufruf von [**GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject)enthält.
+Verwenden Sie einen Moniker, der den Namen des Remotesystems im Aufruf von [**GetObject enthält.**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject)
 
 
 ```VB
@@ -63,10 +63,10 @@ Set colSettings = objWMIService.ExecQuery("Select * from Win32_OperatingSystem")
 
 </dd> <dt>
 
-<span id="Connecting_to_WMI_Remotely_with_C_"></span><span id="connecting_to_wmi_remotely_with_c_"></span><span id="CONNECTING_TO_WMI_REMOTELY_WITH_C_"></span>[Remote Verbindung mit WMI mit C #](connecting-to-wmi-remotely-with-c-.md)
+<span id="Connecting_to_WMI_Remotely_with_C_"></span><span id="connecting_to_wmi_remotely_with_c_"></span><span id="CONNECTING_TO_WMI_REMOTELY_WITH_C_"></span>[Herstellen einer Remoteverbindung mit WMI mit C #](connecting-to-wmi-remotely-with-c-.md)
 </dt> <dd>
 
-Verwenden Sie für die aktuelle Version der verwalteten WMI-Schnittstelle ([Microsoft. Management. Infrastructure](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832958(v=vs.85))) das [cimsession](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832509(v=vs.85)) -Objekt, um eine Verbindung mit einem Remote Host darzustellen.
+Verwenden Sie für die aktuelle Version der verwalteten WMI-Schnittstelle ([Microsoft.Management.Infrastructure](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832958(v=vs.85))) das [CimSession-Objekt,](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832509(v=vs.85)) um eine Verbindung mit einem Remotehost zu darstellen.
 
 
 ```CSharp
@@ -82,10 +82,10 @@ IEnumerable<CimInstance> queryInstance = mySession.QueryInstances(Namespace, "WQ
 
 </dd> <dt>
 
-<span id="Connecting_to_WMI_Remotely_with_C_"></span><span id="connecting_to_wmi_remotely_with_c_"></span><span id="CONNECTING_TO_WMI_REMOTELY_WITH_C_"></span>[Remote Verbindung mit WMI mit C #](connecting-to-wmi-remotely-with-c-.md)
+<span id="Connecting_to_WMI_Remotely_with_C_"></span><span id="connecting_to_wmi_remotely_with_c_"></span><span id="CONNECTING_TO_WMI_REMOTELY_WITH_C_"></span>[Herstellen einer Remoteverbindung mit WMI mit C #](connecting-to-wmi-remotely-with-c-.md)
 </dt> <dd>
 
-Verwenden Sie für die v1-Version der verwalteten WMI-Schnittstelle ([System. Management](/dotnet/api/system.management)) das [ManagementScope](/dotnet/api/system.management.managementscope) -Objekt, um eine Verbindung mit einem Remote Host darzustellen.
+Verwenden Sie für die v1-Version der von WMI verwalteten Schnittstelle ([System.Management](/dotnet/api/system.management)) das [ManagementScope-Objekt,](/dotnet/api/system.management.managementscope) um eine Verbindung mit einem Remotehost zu darstellen.
 
 
 ```CSharp
@@ -101,10 +101,10 @@ ManagementObjectSearcher searcher = new ManagementObjectSearcher(scope, query);
 
 </dd> <dt>
 
-<span id="Example__Getting_WMI_Data_from_a_Remote_Computer__C___"></span><span id="example__getting_wmi_data_from_a_remote_computer__c___"></span><span id="EXAMPLE__GETTING_WMI_DATA_FROM_A_REMOTE_COMPUTER__C___"></span>[Beispiel: erhalten von WMI-Daten von einem Remote Computer (C++)](example--getting-wmi-data-from-a-remote-computer.md)
+<span id="Example__Getting_WMI_Data_from_a_Remote_Computer__C___"></span><span id="example__getting_wmi_data_from_a_remote_computer__c___"></span><span id="EXAMPLE__GETTING_WMI_DATA_FROM_A_REMOTE_COMPUTER__C___"></span>[Beispiel: Abrufen von WMI-Daten von einem Remotecomputer (C++)](example--getting-wmi-data-from-a-remote-computer.md)
 </dt> <dd>
 
-Verwenden Sie die [**IWBEMLocator:: ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver) -Methode, um den Namen des Remote Computers im *Parameter "* " "" "" "".
+Verwenden Sie [**die IWbemLocator::ConnectServer-Methode,**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver) um den Namen des Remotecomputers im *parameter strNetworkResource* anzugeben.
 
 
 ```CSharp
@@ -124,17 +124,17 @@ Verwenden Sie die [**IWBEMLocator:: ConnectServer**](/windows/desktop/api/Wbemcl
 
 </dd> </dl>
 
-Die vorherigen Codebeispiele sind wohl die einfachste Remote Verbindung, die Sie mit WMI ausführen können. In den Beispielen wird Folgendes vorausgesetzt:
+Die vorherigen Codebeispiele sind wohl die grundlegendste Remoteverbindung, die Sie mit WMI ausführen können. In den Beispielen wird insbesondere Folgendes angenommen:
 
--   Sie sind ein Administrator auf dem Remote Computer. Aufgrund der [Benutzerkontensteuerung](/previous-versions/aa905108(v=msdn.10))muss das Konto auf dem Remote System ein Domänen Konto in der Gruppe "Administratoren" sein. Weitere Informationen finden Sie unter Benutzerkontensteuerung und WMI.
--   Das Kennwort auf dem aktuellen lokalen Computer ist nicht leer. Dabei handelt es sich im Wesentlichen um eine Windows-Sicherheitsanforderung, die Sie mit einem Kennwort bei Ihrem System angemeldet haben müssen.
--   Sowohl der lokale als auch der Remote Computer befinden sich in derselben Domäne. Wenn Sie Domänen übergreifende Grenzen benötigen, müssen Sie zusätzliche Informationen bereitstellen oder ein etwas anderes Programmiermodell verwenden.
--   Sie verwenden Ihr eigenes Konto, um auf den Remote Computer zuzugreifen. Wenn Sie versuchen, auf ein anderes Konto zuzugreifen, müssen Sie zusätzliche Anmelde Informationen angeben. (Beachten Sie, dass der Versuch, lokal mit anderen Anmelde Informationen als Ihrem aktuellen Konto auf WMI zuzugreifen, nicht zulässig ist.)
--   Auf beiden Computern wird IPv6 ausgeführt. WMI unterstützt Verbindungen mit Computern, auf denen IPv6 ausgeführt wird. Auf dem lokalen Computer und auf dem Computer \_ B muss jedoch IPv6 ausgeführt werden. Beide Computer können auch IPv4 ausführen. Weitere Informationen finden Sie [unter IPv6-und IPv4-Unterstützung in WMI](ipv6-and-ipv4-support-in-wmi.md).
--   Ihr Skript muss nicht delegiert werden, d. h., es ist nicht erforderlich, über den Ziel-Remote Computer auf zusätzliche Remote Computer zuzugreifen. Weitere Informationen finden Sie unter [delegieren mit WMI](connecting-to-a-3rd-computer-delegation.md).
--   Sie versuchen, einen bestimmten-Befehl zu erstellen, anstatt einen Remote Prozess zu erstellen. Weitere Informationen finden Sie unter [Erstellen von Prozessen per Remote Verbindung mithilfe von WMI](creating-processes-remotely.md).
+-   Sie sind Administrator auf dem Remotecomputer. Aufgrund der [Benutzerkontensteuerung muss](/previous-versions/aa905108(v=msdn.10))das Konto auf dem Remotesystem ein Domänenkonto in der Gruppe Administratoren sein. Weitere Informationen finden Sie unter Benutzerkontensteuerung und WMI.
+-   Das Kennwort auf Dem aktuellen lokalen Computer ist nicht leer. Dies ist im Wesentlichen Windows Sicherheitsanforderung, dass Sie sich mit einem Kennwort bei Ihrem System angemeldet haben müssen.
+-   Sowohl Ihr lokaler als auch der Remotecomputer befinden sich in derselben Domäne. Wenn Sie Domänengrenzen überschreiten müssen, müssen Sie zusätzliche Informationen liefern oder ein etwas anderes Programmiermodell verwenden.
+-   Sie verwenden Ihr eigenes Konto für den Zugriff auf den Remotecomputer. Wenn Sie versuchen, auf ein anderes Konto zu zugreifen, müssen Sie zusätzliche Anmeldeinformationen angeben. (Beachten Sie, dass der Versuch, lokal mit Anmeldeinformationen, die sich von Ihrem aktuellen Konto unterscheiden, auf WMI zu zugreifen, nicht zulässig ist.)
+-   Auf beiden Computern wird IPv6 ausgeführt. WMI unterstützt Verbindungen mit Computern, auf denen IPv6 ausgeführt wird. Allerdings muss sowohl auf Ihrem lokalen Computer als auch auf "Computer \_ B" IPv6 ausgeführt werden. Auf beiden Computern wird möglicherweise auch IPv4 ausgeführt. Weitere Informationen finden Sie unter [IPv6- und IPv4-Unterstützung in WMI.](ipv6-and-ipv4-support-in-wmi.md)
+-   Ihr Skript muss nicht delegieren. Das heißt, es muss nicht über den Ziel-Remotecomputer auf zusätzliche Remotecomputer zugreifen. Weitere Informationen finden Sie unter [Delegieren mit WMI.](connecting-to-a-3rd-computer-delegation.md)
+-   Sie versuchen, einen bestimmten Aufruf zu erstellen, anstatt einen Remoteprozess zu erstellen. Weitere Informationen finden Sie unter [Remote erstellen von Prozessen mit WMI.](creating-processes-remotely.md)
 
-Mit diesen Einschränkungen ist ein WMI-Remote Rückruf sehr ähnlich wie bei einem lokalen WMI-Rückruf. der einzige Unterschied besteht darin, dass Sie den Namen des Remote Systems angeben müssen. Sie haben jedoch die Möglichkeit, viele dieser Features zu ändern, indem Sie unterschiedliche Anmelde Informationen verwenden oder den Anrufen über einen Drittanbieter Computer weiterleiten oder auf eine andere Domäne zugreifen.
+Vor diesem Hintergrund ist ein Remote-WMI-Aufruf einem lokalen WMI-Aufruf sehr ähnlich. Der einzige Unterschied besteht in der Angabe des Namens des Remotesystems. Sie können jedoch viele dieser Features ändern: verwenden Sie unterschiedliche Anmeldeinformationen, weiterleiten Sie Ihren Anruf über einen Drittanbietercomputer, oder greifen Sie auf eine andere Domäne zu.
 
  
 

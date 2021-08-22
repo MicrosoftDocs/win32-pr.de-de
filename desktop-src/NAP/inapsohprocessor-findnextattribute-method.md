@@ -1,11 +1,11 @@
 ---
-title: Inapsohprocessor findnextattribute-Methode (napprotocol. h)
-description: Sucht den Speicherort (Index) des nächsten Attributs des Typs, der von sohattributetype angegeben wird.
+title: INapSoHProcessor FindNextAttribute-Methode (NapProtocol.h)
+description: Sucht den Speicherort (Index) des nächsten Attributs des durch SoHAttributeType angegebenen Typs.
 ms.assetid: 0ff94a32-ece8-4a89-9ee9-93c5e14dfb6c
 keywords:
-- Findnextattribute-Methode NAP
-- Findnextattribute-Methode NAP, inapsohprocessor-Schnittstelle
-- Inapsohprocessor-Schnittstelle NAP, findnextattribute-Methode
+- FindNextAttribute-Methode NAP
+- FindNextAttribute-Methode NAP, INapSoHProcessor-Schnittstelle
+- INapSoHProcessor-Schnittstelle NAP, FindNextAttribute-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e1a270e36f8254ed5dbfcd9776cf013f9d10d4a1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4425707487994904d1bd2a622cd1ab66f286469c93e80a8eb01e71c0319426ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118939577"
 ---
-# <a name="inapsohprocessorfindnextattribute-method"></a>Inapsohprocessor:: findnextattribute-Methode
+# <a name="inapsohprocessorfindnextattribute-method"></a>INapSoHProcessor::FindNextAttribute-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **inapsohprocessor:: findnextattribute** -Methode sucht den Speicherort (Index) des nächsten Attributs des Typs, der von *sohattributetype* angegeben wird.
+Die **INapSoHProcessor::FindNextAttribute-Methode** sucht den Speicherort (Index) des nächsten Attributs des Typs, der durch *SoHAttributeType angegeben wird.*
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,52 +49,52 @@ HRESULT FindNextAttribute(
 
 <dl> <dt>
 
-*fromlocation* \[ in\]
+*fromLocation* \[ In\]
 </dt> <dd>
 
-Der Start Speicherort (Index) im SoH-Paket (Statement of Health) zum Starten der Attribut Suche. Dieser Wert muss zwischen 0 und (**numatdreib** -1) liegen, wobei **numatdreib** mit [**inapsohprocessor:: getnumofattributes**](inapsohprocessor-getnumberofattributes-method.md)abgerufen wird.
+Der Startort (Index) im SoH-Paket (Statement of Health), um die Attributsuche zu starten. Dieser Wert muss im Bereich von 0 bis (**numAttrib** - 1) liegen, wobei **numAttrib** mithilfe von [**INapSoHProcessor::GetNumberOfAttributes**](inapsohprocessor-getnumberofattributes-method.md)abgerufen wird.
 
 > [!Note]  
-> Das SoH-Paket verwendet 0-basierte Attribut Indizes.
+> Das SoH-Paket verwendet 0-basierte Attributindizes.
 
  
 
 </dd> <dt>
 
-*Typ* \[ in\]
+*type* \[ In\]
 </dt> <dd>
 
-Eine [**sohattributetype**](sohattributetype-enum.md) -Struktur, die den zu suchenden Attributtyp enthält.
+Eine [**SoHAttributeType-Struktur,**](sohattributetype-enum.md) die den zu suchenden Attributtyp enthält.
 
 </dd> <dt>
 
-*attributelokation* \[ vorgenommen\]
+*attributeLocation* \[ out\]
 </dt> <dd>
 
-Ein Zeiger, der den Speicherort (Index) im SoH-Paket des ersten Attributs vom Typ *sohattributetype* aus dem Index *fromlocation* enthält.
+Ein Zeiger, der den Speicherort (Index) im SoH-Paket des ersten Attributs vom *Typ SoHAttributeType* aus dem Index *fromLocation enthält.*
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Es können auch andere COM-spezifische Fehlercodes zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                            | Beschreibung                                                        |
 |--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                  | Vorgang erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl>        | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>         | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
-| <dl> <dt>**Fehler \_ Datei \_ nicht \_ gefunden.**</dt> </dl> | Das Attribut wurde nicht gefunden.<br/>                                    |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl>        | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>         | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
+| <dl> <dt>**FEHLERDATEI \_ \_ NICHT \_ GEFUNDEN**</dt> </dl> | Das Attribut wurde nicht gefunden.<br/>                                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **findnextattribute** -Methode sucht nach Attributen vom Typ *sohattributetype* aus dem von *fromlocation* angegebenen Index und höher, bis eine Entsprechung gefunden wird. Wenn keine Entsprechung gefunden wird, wird die **Fehler \_ Datei \_ nicht \_ gefunden** .
+Die **FindNextAttribute-Methode** sucht nach Attributen des *Typs SoHAttributeType* aus dem von *fromLocation* angegebenen Index und höher, bis eine Übereinstimmung gefunden wird. Wenn keine Übereinstimmung gefunden wird, **wird ERROR FILE NOT \_ \_ \_ FOUND** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -102,10 +102,10 @@ Die **findnextattribute** -Methode sucht nach Attributen vom Typ *sohattributety
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Napprotocol. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napprotocol. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>NapProtocol.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapProtocol.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl>       |
 
 
@@ -114,7 +114,7 @@ Die **findnextattribute** -Methode sucht nach Attributen vom Typ *sohattributety
 
 <dl> <dt>
 
-[**Inapsohprocessor**](inapsohprocessor.md)
+[**INapSoHProcessor**](inapsohprocessor.md)
 </dt> </dl>
 
  

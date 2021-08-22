@@ -1,6 +1,6 @@
 ---
-title: WINBIO_ANSI_381_FORMAT Konstanten (winbio \_ types. h)
-description: Geben Sie den Format Besitzer und den Formattyp an.
+title: WINBIO_ANSI_381_FORMAT Konstanten (Winbio \_ types.h)
+description: Geben Sie den Formatbesitzer und den Formattyp an.
 ms.assetid: 5EFFF7EB-D998-4EE9-A23F-B17477F00863
 topic_type:
 - apiref
@@ -13,23 +13,23 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c79701560ad6256e91adcf8360e2ce5866df1e9e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 625731bfcf880de8dd78e6f3ca942edb2732612a7e4199cee8caed223043fe65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341385"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118911549"
 ---
-# <a name="winbio_ansi_381_format-constants"></a>Winbio \_ ANSI \_ 381- \_ Format Konstanten
+# <a name="winbio_ansi_381_format-constants"></a>WINBIO \_ ANSI \_ 381 \_ FORMAT-Konstanten
 
-Die folgenden Werte können in der Struktur des [**winbio- \_ registrierten \_ Formats**](winbio-registered-format.md) verwendet werden.
+Die folgenden Werte können in der [**WINBIO \_ REGISTERED \_ FORMAT-Struktur verwendet**](winbio-registered-format.md) werden.
 
 
 
 | Konstante                                                                                                                                                                                                      | BESCHREIBUNG                                                                                                           |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|
-| <span id="WINBIO_ANSI_381_FORMAT_OWNER"></span><span id="winbio_ansi_381_format_owner"></span><dl> <dt>**Winbio \_ ANSI \_ 381- \_ Format \_ Besitzer**</dt> </dl> | International Committee for Information Technology Standards (INCITS) Technical Committee M1 (Biometrics).<br/> |
-| <span id="WINBIO_ANSI_381_FORMAT_TYPE"></span><span id="winbio_ansi_381_format_type"></span><dl> <dt>**Winbio \_ ANSI \_ 381 \_ - \_ Formattyp**</dt> </dl>    | ANSI-Datenaustausch (381 fingerbild-basiertes Datenaustauschformat).<br/>                                                |
+| <span id="WINBIO_ANSI_381_FORMAT_OWNER"></span><span id="winbio_ansi_381_format_owner"></span><dl> <dt>**WINBIO \_ ANSI \_ 381 \_ FORMAT \_ OWNER**</dt> </dl> | InterNational Committee for Information Technology Standards (INCITS) Technical Committee M1 (biometrisch).<br/> |
+| <span id="WINBIO_ANSI_381_FORMAT_TYPE"></span><span id="winbio_ansi_381_format_type"></span><dl> <dt>**WINBIO \_ ANSI \_ 381-FORMATTYP \_ \_**</dt> </dl>    | Ansi INCITS 381 finger image based data interchange format(ANSI INCITS 381 Fingerbildbasiertes Datenaustauschformat).<br/>                                                |
 
 
 
@@ -39,20 +39,20 @@ Die folgenden Werte können in der Struktur des [**winbio- \_ registrierten \_ F
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (einschließlich Winbio.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Anwendungs Konstanten](client-application-constants.md)
+[Clientanwendungskonstant](client-application-constants.md)
 </dt> <dt>
 
-[**winbio- \_ registriertes \_ Format**](winbio-registered-format.md)
+[**WINBIO \_ REGISTERED \_ FORMAT**](winbio-registered-format.md)
 </dt> </dl>
 
  

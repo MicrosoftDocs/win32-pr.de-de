@@ -1,32 +1,32 @@
 ---
-title: Beispiel Code für die Benutzeroberfläche des benutzerdefinierten Protokoll Handlers
-description: Der folgende Beispielcode zeigt, wie Sie Benutzeroberflächen Erweiterungen für einen benutzerdefinierten Protokollhandler erstellen.
+title: Benutzerdefinierter Protokollhandler Benutzeroberfläche Beispielcode
+description: Der folgende Beispielcode zeigt, wie Benutzeroberflächenerweiterungen für einen benutzerdefinierten Protokollhandler erstellt werden.
 ms.assetid: b2d5bcdb-ad71-44db-9bea-486ffaad3655
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4da87609de9bb8572e9c4c607a7452abbe4eba10
-ms.sourcegitcommit: b9a94cea8f83153214af4c09509e1cc61a1bb616
+ms.openlocfilehash: eb33a63ff49309805a3dcf54a6ec19ecc42c66d3425d5f4e4921e46e7bc29a1d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "104390036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118753226"
 ---
-# <a name="custom-protocol-handler-user-interface-sample-code"></a>Beispiel Code für die Benutzeroberfläche des benutzerdefinierten Protokoll Handlers
+# <a name="custom-protocol-handler-user-interface-sample-code"></a>Benutzerdefinierter Protokollhandler Benutzeroberfläche Beispielcode
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [Windows Search](../search/-search-3x-wds-overview.md) .
+> Windows DesktopSuche 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [Windows Search.](../search/-search-3x-wds-overview.md)
 
-Der folgende Beispielcode zeigt, wie Sie Benutzeroberflächen Erweiterungen für einen benutzerdefinierten Protokollhandler erstellen.
+Der folgende Beispielcode zeigt, wie Benutzeroberflächenerweiterungen für einen benutzerdefinierten Protokollhandler erstellt werden.
 
 ## <a name="sample-code"></a>Beispielcode
 
 > [!Note]
 >
-> **Dieser Code und diese Informationen werden "wie immer" bereitgestellt, ohne jegliche Gewährleistungen jeglicher Art, entweder ausgedrückt oder impliziert, einschließlich, aber nicht beschränkt auf die impliziten Gewährleistungen der Handels Üblichkeit und/oder Eignung für einen bestimmten Zweck.**
+> **DIESER CODE UND DIE INFORMATIONEN WERDEN "WIE BEWESEND" OHNE JEGLICHE GEWÄHRLEISTUNG BEREITGESTELLT, ENTWEDER AUSDRÜCKLICH ODER KONKLUDENT, EINSCHLIEßLICH, ABER NICHT BESCHRÄNKT AUF DIE KONKLUDENTEN GEWÄHRLEISTUNGEN DER HANDELSÜBLICHKEIT UND/ODER EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.**
 >
 > Copyright (C) Microsoft. Alle Rechte vorbehalten.
 
- 
+ 
 
 
 ```
@@ -500,9 +500,9 @@ STDMETHODIMP CSampleShellFolder::SetNameOf(
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,73 +1,73 @@
 ---
-title: Steuerelement Muster ziehen
-description: Stellt Richtlinien und Konventionen für das Implementieren des Drag-Steuerelement Musters mithilfe von idragprovider bereit, einschließlich Informationen zu Eigenschaften und Methoden. Das Drag-Steuerelement Muster wird zur Unterstützung von dragfähigen Steuerelementen oder Steuerelementen mit dragfähigen Elementen verwendet.
+title: Drag-Steuerelementmuster
+description: Stellt Richtlinien und Konventionen für die Implementierung des Drag-Steuerelementmusters mithilfe von IDragProvider bereit, einschließlich Informationen zu Eigenschaften und Methoden. Das Drag-Steuerelementmuster wird verwendet, um ziehbare Steuerelemente oder Steuerelemente mit ziehbaren Elementen zu unterstützen.
 ms.assetid: 9853E9CB-D04B-4F67-8E9E-7F1F99BACEA7
 keywords:
-- Benutzeroberflächenautomatisierung, Implementieren eines Drag-Steuerelement Musters
-- UI-Automatisierung, Drag-Steuerelement Muster
-- UI-Automatisierung, idragprovider
+- Benutzeroberflächenautomatisierung,Implementieren des Drag-Steuerelementmusters
+- Benutzeroberflächenautomatisierung,Drag-Steuerelementmuster
+- Benutzeroberflächenautomatisierung,IDragProvider
 - IDragProvider
-- Implementieren von Drag-Steuerungs Mustern für Benutzeroberflächen Automatisierung
-- Ziehen von Steuerelement Mustern
-- Steuerelement Muster, idragprovider
-- Steuerelement Muster, Implementieren der Benutzeroberflächenautomatisierungs-Drag
-- Steuerelement Muster, ziehen
-- Schnittstellen, idragprovider
+- Implementieren Benutzeroberflächenautomatisierung Drag-Steuerelementmustern
+- Ziehen von Steuerelementmustern
+- Steuerelementmuster,IDragProvider
+- Steuerelementmuster,Implementieren von Benutzeroberflächenautomatisierung Drag
+- Steuerelementmuster,Ziehen
+- interfaces,IDragProvider
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 548f0212eca37e1890596143f27e9af70e1fb19a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 36b5e14edbeede46d210e109e63fff40ff0646d1b2ab14b42cf517ddc4e688aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039211"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118827204"
 ---
-# <a name="drag-control-pattern"></a>Steuerelement Muster ziehen
+# <a name="drag-control-pattern"></a>Drag-Steuerelementmuster
 
-Stellt Richtlinien und Konventionen für das Implementieren des **Drag** -Steuerelement Musters mithilfe von [**idragprovider**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-idragprovider)bereit, einschließlich Informationen zu Eigenschaften und Methoden. Das **Drag** -Steuerelement Muster wird zur Unterstützung von dragfähigen Steuerelementen oder Steuerelementen mit dragfähigen Elementen verwendet.
+Stellt Richtlinien und Konventionen für die Implementierung des Drag-Steuerelementmusters mithilfe von [**IDragProvider**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-idragprovider)bereit, einschließlich Informationen zu Eigenschaften und Methoden.  Das **Drag-Steuerelementmuster** wird verwendet, um ziehbare Steuerelemente oder Steuerelemente mit ziehbaren Elementen zu unterstützen.
 
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen
 
-Verwenden Sie die folgenden Richtlinien und Konventionen, wenn Sie das **Drag** -Steuerelement Muster implementieren:
+Verwenden Sie beim Implementieren des Drag-Steuerelementmusters die folgenden Richtlinien und Konventionen: 
 
--   Die [**idragprovider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-idragprovider) -Schnittstelle unterstützt zwei unterschiedliche Zieh Stile: den Quell-/Zielstil und den reinen Quell Stil. Sie müssen den Stil auswählen, der für Ihre Drag & Drop-Szenarien am besten geeignet ist:
-    -   **Quell-/Zielstil:** Jedes mögliche Ablage Ziel wird durch ein Element dargestellt, das die [**idroptargetprovider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-idroptargetprovider) -Schnittstelle implementiert. Während eines Zieh Vorgangs stammen Microsoft UI Automation-Ereignisse aus dem gezogenen Element und aus den Drop-Target-Elementen.
-    -   **Nur Quelle:** Drop-Ziele werden nicht durch Benutzeroberflächenautomatisierungs-Elemente dargestellt. Während eines Zieh Vorgangs stammen Ereignisse nur aus dem Element, das gezogen wird.
--   [**Idragprovider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-idragprovider) ist eine schreibgeschützte Schnittstelle, die zum Überwachen von Drag-Vorgängen vorgesehen ist. Sie können Sie nicht verwenden, um einen Zieh Vorgang zu steuern. Sie können Zieh Vorgänge automatisieren, indem Sie Maus Eingaben an ein-Steuerelement senden.
--   Die [**idragprovider:: isgrab**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed) -Eigenschaft ist erforderlich.
--   Die [**idragprovider::D ropeer ffect**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_dropeffect) -und [**idragprovider::D ropeer**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_dropeffects) -Eigenschaften sind für eine reine Quell Implementierung erforderlich und sind für eine Implementierung des Quell-/Zielstils unzulässig. In einer Implementierung des Quell-/Zielstils können Drop-Target-Elemente für Ihre Ablage Effekte abgefragt werden.
--   Die [**idragprovider:: grabbeditems**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-getgrabbeditems) -Eigenschaft stellt das Ziehen mehrerer Elemente dar. Wenn der Benutzer den Zieh Vorgang startet, müssen Sie ein neues Benutzeroberflächenautomatisierungs-Element erstellen, das als Ereignis Quell Element fungiert. Dieses neue Element löst alle Ereignisse aus, die das Quell Element im Quell-oder Ziel Modus ausgelöst hätte, während keines der Elemente, die tatsächlich gezogen werden, Ereignisse auslöst. Wenn der Zieh Vorgang beendet ist, zerstören Sie das Ereignis Quell Element.
--   Das-Element muss bei der Änderung Eigenschaften geänderte Ereignisse für die Eigenschaften **dropffect** ([**UIA \_ dragdropeer ffectpropertyid**](uiauto-control-pattern-propids.md)) und **dropeer** . ([**UIA \_ dragdropeer ffectspropertyid**](uiauto-control-pattern-propids.md)) auslösen. Eigenschaften geänderte Ereignisse für die anderen Eigenschaften sind zulässig, können jedoch von der erforderlichen **DragStart** ([**UIA \_ Drag \_ dragstarteventid**](uiauto-event-ids.md)), **dragcancel** ([**UIA \_ Drag \_ dragcanceleventid**](uiauto-event-ids.md)) und **dragcomplete** ([**UIA \_ Drag \_ dragcompleteeventid**](uiauto-event-ids.md)) abgeleitet werden.
+-   Die [**IDragProvider-Schnittstelle**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-idragprovider) unterstützt zwei verschiedene Ziehstile: den Quell-/Zielstil und den Stil nur für die Quelle. Sie müssen den Stil auswählen, der für Ihre Drag & Drop-Szenarien am besten funktioniert:
+    -   **Quell-/Zielstil:** Jedes mögliche Abbruchziel wird durch ein Element dargestellt, das die [**IDropTargetProvider-Schnittstelle**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-idroptargetprovider) implementiert. Während eines Ziehvorganges stammen Microsoft Benutzeroberflächenautomatisierung Ereignisse aus dem element, das gezogen wird, und aus den Drop-Target-Elementen.
+    -   **Nur Quellformat:** Abbruchziele werden nicht durch Benutzeroberflächenautomatisierung dargestellt. Während eines Ziehvorganges stammen Ereignisse nur aus dem Element, das gezogen wird.
+-   [**IDragProvider ist**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-idragprovider) eine schreibgeschützte Schnittstelle zum Überwachen von Ziehvorgängen. Sie können ihn nicht verwenden, um einen Ziehvorgang zu steuern. Sie können Ziehvorgänge automatisieren, indem Sie Mauseingaben an ein Steuerelement senden.
+-   Die [**IDragProvider::IsGrabbed-Eigenschaft**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed) ist erforderlich.
+-   Die [**IDragProvider::D ropEffect-**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_dropeffect) und [**IDragProvider::D ropEffects-Eigenschaften**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_dropeffects) sind für eine implementierung im Nur-Quell-Stil erforderlich und für eine Implementierung des Quell-/Zielstils nicht zulässig. In einer Implementierung des Quell-/Zielstils können Drop-Target-Elemente nach ihren Absturzeffekten abgefragt werden.
+-   Die [**IDragProvider::GrabbedItems-Eigenschaft**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-getgrabbeditems) stellt das Ziehen mehrerer Elemente dar. Wenn der Benutzer den Ziehvorgang startet, müssen Sie ein neues Benutzeroberflächenautomatisierung erstellen, das als Ereignisquellenelement dient. Dieses neue Element gibt alle Ereignisse aus, die das Quellelement entweder im Quell-/Zielmodus oder nur im Quellmodus ausgelöst hätte, während keines der Elemente, die tatsächlich gezogen werden, Ereignisse ausgelöst hat. Wenn der Ziehvorgang abgeschlossen ist, zerstören Sie das Ereignisquellenelement.
+-   Das -Element muss eigenschaftenveränderungsereignisse für die **Eigenschaften DropEffect** ([**UIA \_ DragDropEffectPropertyId**](uiauto-control-pattern-propids.md)) und **DropEffects** ([**UIA \_ DragDropEffectsPropertyId**](uiauto-control-pattern-propids.md)) bei derEnänderung aus. Eigenschaftenänderungsereignisse für die anderen Eigenschaften sind zulässig, können jedoch von den erforderlichen **DragStart-Ereignissen** ([**UIA \_ \_ DragStartEventId**](uiauto-event-ids.md)), **DragCancel** ([**UIA \_ \_ DragCancelEventId**](uiauto-event-ids.md)) und **DragComplete** ([**UIA \_ \_ DragCompleteEventId**](uiauto-event-ids.md)) abgeleitet werden.
 -   
 
-## <a name="required-members-for-idragprovider"></a>Erforderliche Member für **idragprovider**
+## <a name="required-members-for-idragprovider"></a>Erforderliche Member für **IDragProvider**
 
-Die folgenden Eigenschaften und Methoden sind für die Implementierung der [**idragprovider**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-idragprovider) -Schnittstelle erforderlich.
+Die folgenden Eigenschaften und Methoden sind für die Implementierung der [**IDragProvider-Schnittstelle**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-idragprovider) erforderlich.
 
 
 
 | Erforderliche Member                                                                        | Memberart | Hinweise                                                                         |
 |-----------------------------------------------------------------------------------------|-------------|-------------------------------------------------------------------------------|
-| [**Isgrab**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed)                                     | Eigenschaft    | Keine                                                                          |
-| [**Dropffect**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_dropeffect)                                   | Eigenschaft    | Erforderlich für eine Implementierung des reinen Quell Stils.                      |
-| [**Drof ffects**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_dropeffects)                                 | Eigenschaft    | Erforderlich, wenn mehrere mögliche Ablage Effekte für das eingepackte Element vorhanden sind. |
-| [**Getgrabbeditems**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-getgrabbeditems)                         | Methode      | Erforderlich für einen Drag-Vorgang mit mehreren Elementen.                                  |
-| [**UIA \_ Drag \_ dragstarteventid**](uiauto-event-ids.md)       | Ereignis       | Keine                                                                          |
-| [**UIA \_ Drag \_ dragcanceleventid**](uiauto-event-ids.md)     | Ereignis       | Keine                                                                          |
-| [**UIA \_ Drag \_ dragcompleteeventid**](uiauto-event-ids.md) | Ereignis       | Keine                                                                          |
+| [**IsGrabbed**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed)                                     | Eigenschaft    | Keine                                                                          |
+| [**DropEffect**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_dropeffect)                                   | Eigenschaft    | Erforderlich für eine Implementierung des Nur-Quell-Stils.                      |
+| [**DropEffects**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_dropeffects)                                 | Eigenschaft    | Erforderlich, wenn mehr als ein möglicher Absturzeffekt für das greifte Element vorlag. |
+| [**GetGrabbedItems**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-getgrabbeditems)                         | Methode      | Erforderlich für einen Ziehvorgang mit mehreren Elementen.                                  |
+| [**UIA \_ Drag \_ DragStartEventId**](uiauto-event-ids.md)       | Ereignis       | Keine                                                                          |
+| [**UIA \_ Drag \_ DragCancelEventId**](uiauto-event-ids.md)     | Ereignis       | Keine                                                                          |
+| [**UIA \_ Drag \_ DragCompleteEventId**](uiauto-event-ids.md) | Ereignis       | Keine                                                                          |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Steuerelement Typen und ihre unterstützten Steuerelement Muster](uiauto-controlpatternmapping.md)
+[Steuerelementtypen und ihre unterstützten Steuerelementmuster](uiauto-controlpatternmapping.md)
 </dt> <dt>
 
-[DropTarget-Steuerelement Muster](/windows/desktop/WinAuto/uiauto-implementingdroptarget)
+[DropTarget-Steuerelementmuster](/windows/desktop/WinAuto/uiauto-implementingdroptarget)
 </dt> <dt>
 
 [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](uiauto-controlpatternsoverview.md)
@@ -76,9 +76,9 @@ Die folgenden Eigenschaften und Methoden sind für die Implementierung der [**id
 [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](uiauto-treeoverview.md)
 </dt> <dt>
 
-[Benutzeroberflächenautomatisierungs-Unterstützung für Drag & Drop](ui-automation-support-for-drag-and-drop.md)
+[UI Automation Support for Drag-and-Drop](ui-automation-support-for-drag-and-drop.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

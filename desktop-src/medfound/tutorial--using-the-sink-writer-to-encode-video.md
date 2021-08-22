@@ -1,21 +1,21 @@
 ---
-description: In diesem Tutorial wird der senkwriter verwendet, um eine Videodatei zu codieren.
+description: In diesem Tutorial wird der Sink Writer verwendet, um eine Videodatei zu codieren.
 ms.assetid: 3E297366-0863-4E89-A0D5-438CD1FC5AF9
-title: 'Tutorial: Verwenden des senkwriter zum Codieren von Videos'
+title: 'Tutorial: Verwenden des Senkenwriters zum Codieren von Videos'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a3e6095355e18db6c8335cadcbc4afc56b35406
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5347a82fd40355c8006b15492a59543018ae5868cb02fcefeeb1812bd26930c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348297"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118972779"
 ---
-# <a name="tutorial-using-the-sink-writer-to-encode-video"></a>Tutorial: Verwenden des senkwriter zum Codieren von Videos
+# <a name="tutorial-using-the-sink-writer-to-encode-video"></a>Tutorial: Verwenden des Senkenwriters zum Codieren von Videos
 
-In diesem Tutorial wird der [senkwriter](sink-writer.md) verwendet, um eine Videodatei zu codieren.
+In diesem Tutorial wird [der Sink Writer verwendet,](sink-writer.md) um eine Videodatei zu codieren.
 
-## <a name="define-the-video-format"></a>Definieren des Video Formats
+## <a name="define-the-video-format"></a>Definieren des Videoformats
 
 Der Einfachheit halber wird in diesem Tutorial ein festes Videoformat verwendet, das durch die folgenden Konstanten definiert wird:
 
@@ -35,20 +35,20 @@ const UINT32 VIDEO_FRAME_COUNT = 20 * VIDEO_FPS;
 
 
 
-Diese Konstanten geben die folgenden Parameter des Video Formats an:
+Diese Konstanten geben die folgenden Parameter des Videoformats an:
 
--   Frame Größe (Breite und Höhe)
+-   Framegröße (Breite und Höhe)
 -   Frames pro Sekunde.
 -   Codierte Bitrate.
--   Codierungsformat, das Windows Media Video 9 ist (**MF-Format \_ WMV3**).
--   Das Eingabeformat (32-Bit-RGB).
--   Die Dauer der Ausgabedatei.
+-   Codierungsformat, das Windows Media Video 9 (**MFVideoFormat \_ WMV3 ) ist.**
+-   Eingabeformat, das 32-Bit-RGB ist.
+-   Dauer der Ausgabedatei.
 
-Das Programm verwendet diese Konstanten, um die Medientypen zu erstellen, die das Format beschreiben. In einer echten Anwendung würden Sie in der Regel eine Reihe von Codierungs Profilen unterstützen.
+Das Programm verwendet diese Konstanten, um die Medientypen zu erstellen, die das Format beschreiben. In einer echten Anwendung würden Sie in der Regel eine Reihe von Codierungsprofilen unterstützen.
 
-## <a name="create-an-uncompressed-video-frame"></a>Erstellen eines nicht komprimierten Video Rahmens
+## <a name="create-an-uncompressed-video-frame"></a>Erstellen eines unkomprimierten Videoframes
 
-Der Einfachheit halber wird in diesem Tutorial ein statischer Videorahmen als Eingabe verwendet. Der Videoframe enthält ein solides grünes Rechteck und wird Programm gesteuert generiert. Der Videoframe wird in einer globalen Variablen als Array von **DWORD** s gespeichert:
+Der Einfachheit halber wird in diesem Tutorial ein statischer Videoframe als Eingabe verwendet. Der Videoframe enthält ein vollgrünes Rechteck und wird programmgesteuert generiert. Der Videoframe wird in einer globalen Variablen als Array von **DWORD-s** gespeichert:
 
 
 ```C++
@@ -58,7 +58,7 @@ DWORD videoFrameBuffer[VIDEO_PELS];
 
 
 
-Mit dem folgenden Code wird jedes Pixel im Frame auf grün festgelegt:
+Der folgende Code legt jedes Pixel im Frame auf Grün fest:
 
 
 ```C++
@@ -71,17 +71,17 @@ Mit dem folgenden Code wird jedes Pixel im Frame auf grün festgelegt:
 
 
 
-## <a name="initialize-the-sink-writer"></a>Initialisieren des Senke Writers
+## <a name="initialize-the-sink-writer"></a>Initialisieren des Senkenwriters
 
-Führen Sie die folgenden Schritte aus, um den Senke-Writer zu initialisieren.
+Führen Sie die folgenden Schritte aus, um den Senkenwriter zu initialisieren.
 
-1.  Rufen Sie [**mfkreatesinkschreiterfromurl**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesinkwriterfromurl) auf, um eine neue Instanz des senkwriter zu erstellen.
+1.  Rufen [**Sie MFCreateSinkWriterFromURL auf,**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesinkwriterfromurl) um eine neue Instanz des Senkenwriters zu erstellen.
 2.  Erstellen Sie einen Medientyp, der das codierte Video beschreibt.
-3.  Übergeben Sie diesen Medientyp an die [**imfsinkwriter:: addstream**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsinkwriter-addstream) -Methode.
-4.  Erstellen Sie einen zweiten Medientyp, der die nicht komprimierte Eingabe beschreibt.
-5.  Übergeben Sie den unkomprimierten Medientyp an die Methode [**imfsinkwriter:: *-putmediatype**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsinkwriter-setinputmediatype) .
-6.  Aufrufen der [**imfsinkwriter:: BeginWrite**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsinkwriter-beginwriting) -Methode.
-7.  Der senderwriter ist nun bereit, Eingabe Beispiele zu akzeptieren.
+3.  Übergeben Sie diesen Medientyp an [**die METHODE BESinkWriter::AddStream.**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsinkwriter-addstream)
+4.  Erstellen Sie einen zweiten Medientyp, der die unkomprimierte Eingabe beschreibt.
+5.  Übergeben Sie den unkomprimierten Medientyp an die [**METHODE DURCHSinkWriter::SetInputMediaType.**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsinkwriter-setinputmediatype)
+6.  Rufen Sie [**die METHODE BESinkWriter::BeginWriting**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsinkwriter-beginwriting) auf.
+7.  Der Senkenwriter kann jetzt Eingabebeispiele akzeptieren.
 
 Der folgende Code zeigt diese Schritte.
 
@@ -194,16 +194,16 @@ HRESULT InitializeSinkWriter(IMFSinkWriter **ppWriter, DWORD *pStreamIndex)
 
 
 
-In den meisten Schritten des vorherigen Code Beispiels werden die Medientyp Attribute für die beiden Medientypen festgelegt. Die Details der Medientypen hängen vom Quell Inhalt und dem gewünschten Codierungs Profil ab.
+Die meisten Schritte im vorherigen Codebeispiel sind das Festlegen der Medientypattribute für die beiden Medientypen. Die Details der Medientypen hängen von Ihrem Quellinhalt und dem gewünschten Codierungsprofil ab.
 
-## <a name="send-video-frames-to-the-sink-writer"></a>Video Frames an den senkwriter senden
+## <a name="send-video-frames-to-the-sink-writer"></a>Senden von Videoframes an den Senkenwriter
 
-Um einen Videoframe an den senkwriter zu senden, müssen Sie die [**imfsinkwriter:: schreitesample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsinkwriter-writesample) -Methode abrufen. Die **beschreitesample** -Methode nimmt einen Zeiger auf die [**imfsample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) -Schnittstelle an, die ein *Medien Beispiel* Objekt darstellt. Das Medien Beispiel enthält ein *Medien Puffer* Objekt, das wiederum einen Zeiger auf den Videoframe enthält. Weitere Informationen zu Medien Beispielen und Puffern finden Sie in den folgenden Themen.
+Um einen Videoframe an den Senkenwriter zu senden, rufen Sie [**die METHODE VORRINKWriter::WriteSample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsinkwriter-writesample) auf. Die **WriteSample-Methode** verwendet einen Zeiger auf die [**NSSAMPLE-Schnittstelle,**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) die ein *Medienbeispielobjekt* darstellt. Das Medienbeispiel enthält ein *Medienpufferobjekt,* das wiederum einen Zeiger auf den Videoframe enthält. Weitere Informationen zu Medienbeispielen und Puffern finden Sie in den folgenden Themen.
 
--   [Medien Beispiele](media-samples.md)
--   [Medien Puffer](media-buffers.md)
+-   [Medienbeispiele](media-samples.md)
+-   [Medienpuffer](media-buffers.md)
 
-Abhängig von Ihrer Anwendung erhalten Sie möglicherweise die Medien Beispiele des [Quell Readers](source-reader.md). Alternativ können Sie die Medien Beispiele erstellen und die Daten im Puffer direkt bearbeiten. Der folgende Code zeigt den zweiten Ansatz. Er erstellt einen Arbeitsspeicher Puffer und schreibt einen einzelnen Videoframe in den Puffer. Anschließend wird dieser Puffer einem Medien Beispiel hinzugefügt, und das Medien Beispiel wird an den Senke-Writer gesendet.
+Abhängig von Ihrer Anwendung können Sie die Medienbeispiele vom [Quellleser erhalten.](source-reader.md) Alternativ können Sie die Medienbeispiele erstellen und die Daten im Puffer direkt bearbeiten. Der folgende Code zeigt den zweiten Ansatz. Er erstellt einen Speicherpuffer und schreibt einen einzelnen Videoframe in den Puffer. Anschließend fügt er diesen Puffer einem Medienbeispiel hinzu und sendet das Medienbeispiel an den Senkenwriter.
 
 
 ```C++
@@ -287,34 +287,34 @@ HRESULT WriteFrame(
 
 Dieser Code führt die folgenden Schritte aus.
 
-1.  Rufen Sie [**mfkreatememorybuffer**](/windows/desktop/api/mfapi/nf-mfapi-mfcreatememorybuffer) auf, um ein Medien Puffer Objekt zu erstellen. Mit dieser Funktion wird der Arbeitsspeicher für den Puffer zugewiesen.
-2.  Um den Puffer zu sperren und einen Zeiger auf den Speicher zu erhalten, wird [**imfmediabuffer:: Lock**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediabuffer-lock) aufgerufen.
-3.  [**Mfcopyimage**](/windows/desktop/api/mfapi/nf-mfapi-mfcopyimage) wird aufgerufen, um den Video Frame in den Puffer zu kopieren.
+1.  Rufen [**Sie MFCreateMemoryBuffer auf,**](/windows/desktop/api/mfapi/nf-mfapi-mfcreatememorybuffer) um ein Medienpufferobjekt zu erstellen. Diese Funktion weist den Arbeitsspeicher für den Puffer zu.
+2.  Rufen [**Sie DIEBMEDIABuffer::Lock auf,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediabuffer-lock) um den Puffer zu sperren und einen Zeiger auf den Arbeitsspeicher zu erhalten.
+3.  Rufen [**Sie MFCopyImage auf,**](/windows/desktop/api/mfapi/nf-mfapi-mfcopyimage) um den Videoframe in den Puffer zu kopieren.
     > [!Note]  
-    > In diesem speziellen Beispiel funktioniert die Verwendung von **memcpy** ebenfalls genauso. Die [**mfcopyimage**](/windows/desktop/api/mfapi/nf-mfapi-mfcopyimage) -Funktion behandelt jedoch den Fall, in dem der Stride des Quell Bilds nicht mit dem Ziel Puffer identisch ist, ordnungsgemäß. Weitere Informationen finden Sie unter [Image Stride](image-stride.md).
+    > In diesem speziellen Beispiel funktioniert **die Verwendung von memcpy** genauso gut. Die [**MFCopyImage-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfcopyimage) verarbeitet jedoch den Fall ordnungsgemäß, in dem der Schritt des Quellimages nicht mit dem Zielpuffer übereinstimmen kann. Weitere Informationen finden Sie unter [Image Stride](image-stride.md).
 
      
 
-4.  Zum Entsperren des Puffers muss [**imfmediabuffer:: Unlock**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediabuffer-unlock) aufgerufen werden.
-5.  Aufrufen von [**imfmediabuffer:: setcurrentlength**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediabuffer-setcurrentlength) zum Aktualisieren der Länge der gültigen Daten im Puffer. (Andernfalls ist dieser Wert standardmäßig auf 0 (null) gesetzt.)
-6.  Rufen Sie [**mfkreatesample**](/windows/desktop/api/mfapi/nf-mfapi-mfcreatesample) auf, um ein Beispiel Objekt für Medien zu erstellen.
-7.  Wenn Sie [**imfsample:: addbuffer**](/windows/desktop/api/mfobjects/nf-mfobjects-imfsample-addbuffer) hinzufügen, fügen Sie dem Medien Beispiel den Medien Puffer hinzu.
-8.  Aufrufen von [**imfsample:: setsampletime**](/windows/desktop/api/mfobjects/nf-mfobjects-imfsample-setsampletime) zum Festlegen des Zeitstempels für den Videoframe.
-9.  Aufrufen von [**imfsample:: setsampleduration**](/windows/desktop/api/mfobjects/nf-mfobjects-imfsample-setsampleduration) , um die Dauer des Video Frames festzulegen.
-10. Wenn Sie [**imfsinkwriter:: schreitesample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsinkwriter-writesample) aufzurufen, senden Sie das Medien Beispiel an den sendenden Writer.
+4.  Rufen [**Sie ZUM Entsperren des Puffers DIEMEDIABUFFER::Unlock-Sperre**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediabuffer-unlock) auf.
+5.  Rufen [**Sie DIEBMEDIABuffer::SetCurrentLength**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediabuffer-setcurrentlength) auf, um die Länge der gültigen Daten im Puffer zu aktualisieren. (Andernfalls wird dieser Wert standardmäßig auf 0 (null) festgelegt.)
+6.  Rufen [**Sie MFCreateSample auf,**](/windows/desktop/api/mfapi/nf-mfapi-mfcreatesample) um ein Medienbeispielobjekt zu erstellen.
+7.  Rufen [**Sie DEN MEDIENSAMPLE::AddBuffer auf,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfsample-addbuffer) um dem Medienbeispiel den Medienpuffer hinzuzufügen.
+8.  Rufen [**Sie DEN TIMESample::SetSampleTime**](/windows/desktop/api/mfobjects/nf-mfobjects-imfsample-setsampletime) auf, um den Zeitstempel für den Videoframe zu festlegen.
+9.  Rufen [**Sie DIEBSAMPLE::SetSampleDuration**](/windows/desktop/api/mfobjects/nf-mfobjects-imfsample-setsampleduration) auf, um die Dauer des Videoframes zu festlegen.
+10. Rufen [**Sie DEN BESCHRIFTUNGSinkWriter::WriteSample auf,**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsinkwriter-writesample) um das Medienbeispiel an den Senkenwriter zu senden.
 
-## <a name="write-the-main-function"></a>Schreiben der Main-Funktion
+## <a name="write-the-main-function"></a>Schreiben der main-Funktion
 
-Führen Sie in der- `main` Funktion die folgenden Schritte aus.
+Führen Sie `main` innerhalb der Funktion die folgenden Schritte aus.
 
-1.  [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) aufrufen, um die com-Bibliothek zu initialisieren.
-2.  [**MFStartup**](/windows/desktop/api/mfapi/nf-mfapi-mfstartup) wird aufgerufen, um Microsoft Media Foundation zu initialisieren.
-3.  Erstellen Sie den Senke-Writer.
-4.  Senden von Video Frames an den senkwriter.
-5.  Zum Abschließen der Ausgabedatei wird [**imfsink Writer:: Finalize**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsinkwriter-finalize) aufgerufen.
-6.  Geben Sie den Zeiger auf den Senke-Writer frei.
-7.  [**Mfshutdown**](/windows/desktop/api/mfapi/nf-mfapi-mfshutdown)aufruft.
-8.  [**CallInitialize**](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize)aufruft.
+1.  Rufen [**Sie CoInitializeEx auf,**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) um die COM-Bibliothek zu initialisieren.
+2.  Rufen Sie [**MFStartup auf,**](/windows/desktop/api/mfapi/nf-mfapi-mfstartup) um die Microsoft Media Foundation.
+3.  Erstellen Sie den Senkenwriter.
+4.  Senden von Videoframes an den Senkenwriter
+5.  Rufen [**Sie DEN BESCHRIFTUNGSinkWriter::Finalize auf,**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsinkwriter-finalize) um die Ausgabedatei zu finalisieren.
+6.  Geben Sie den Zeiger auf den Senkenwriter frei.
+7.  Rufen Sie [**MFShutdown auf.**](/windows/desktop/api/mfapi/nf-mfapi-mfshutdown)
+8.  Rufen Sie [**CoUninitialize auf.**](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize)
 
 
 ```C++
@@ -368,7 +368,7 @@ void main()
 
 ## <a name="example-code"></a>Beispielcode
 
-Der folgende Code zeigt das gesamte Programm.
+Der folgende Code zeigt das vollständige Programm.
 
 
 ```C++
@@ -636,7 +636,7 @@ void main()
 
 <dl> <dt>
 
-[Senke-Writer](sink-writer.md)
+[Sink Writer](sink-writer.md)
 </dt> </dl>
 
  

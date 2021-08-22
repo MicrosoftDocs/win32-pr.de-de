@@ -1,24 +1,24 @@
 ---
 title: Die PutEx-Methode
-description: Die IADs-PutEx-Methode verwendet den Namen einer Eigenschaft, um eine Eigenschaft mit einzelnen oder mehreren Werten im Eigenschaften Cache zu speichern.
+description: Die PutEx-Methode der IADs verwendet den Namen einer Eigenschaft, um eine Eigenschaft mit einem oder mehreren Werten im Eigenschaftencache zu speichern.
 ms.assetid: fb9a0610-e955-424b-a2b9-da4986d0ba5f
 ms.tgt_platform: multiple
 keywords:
-- PutEx ADSI, Info
-- ADSI ADSI, Beispielcode Visual Basic mit der PutEx-Methode
-- Eigenschaften-ADSI, Speichern einer einzelnen Eigenschaft oder einer mehrwertigen Eigenschaft im Eigenschafts Cache
+- PutEx ADSI , Informationen
+- ADSI ADSI, Beispielcode Visual Basic mithilfe der PutEx-Methode
+- ADSI-Eigenschaften, Speichern einer einwertigen oder mehrwertigen Eigenschaft im Eigenschaftencache
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ea698c2dd14f3ddf8f3ad97459fad598006db22
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 646c07fad5d22110d345b71a763add5483d7f0be5f6ae2c36557eb7f1563561c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855240"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119023168"
 ---
 # <a name="the-putex-method"></a>Die PutEx-Methode
 
-Die [**IADs::P utex**](/windows/desktop/api/Iads/nf-iads-iads-putex) -Methode verwendet den Namen einer Eigenschaft, um eine Eigenschaft mit einzelnen oder mehreren Werten im Eigenschaften Cache zu speichern. Dadurch wird ein beliebiger Wert überschrieben, der sich zurzeit im Eigenschaften Cache Die Werte im Cache werden erst in den zugrunde liegenden Verzeichnisdienst geschrieben, wenn ein [**IADs:: abtinfo**](/windows/desktop/api/Iads/nf-iads-iads-setinfo) auftritt. Das erste Argument von **PutEx** gibt an, ob Sie vorhandene Werte für die Eigenschaft ersetzen oder hinzufügen möchten. Im folgenden Beispiel werden alle vorhandenen Werte des **Description** -Attributs im Cache gelöscht, wenn **PutEx** aufgerufen wird, und auf dem Server gelöscht, wenn " **ctinfo** " aufgerufen wird.
+Die [**IADs::P utEx-Methode**](/windows/desktop/api/Iads/nf-iads-iads-putex) verwendet den Namen einer Eigenschaft, um eine Eigenschaft mit einem oder mehreren Werten im Eigenschaftencache zu speichern. Dadurch werden alle werte überschrieben, die sich derzeit im Eigenschaftencache befinden. Die Werte im Cache werden erst in den zugrunde liegenden Verzeichnisdienst geschrieben, wenn eine [**IADs::SetInfo**](/windows/desktop/api/Iads/nf-iads-iads-setinfo) auftritt. Das erste Argument von **PutEx** gibt an, ob Sie vorhandene Werte für die Eigenschaft ersetzen oder vorhandenen Werten hinzufügen möchten. Im folgenden Beispiel werden alle  vorhandenen Werte des description-Attributs im Cache gelöscht, wenn **PutEx** aufgerufen wird, und auf dem Server gelöscht, wenn **SetInfo** aufgerufen wird.
 
 
 ```VB
@@ -41,9 +41,9 @@ x.SetInfo              'Now the property has no value.
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Berechnet die Menge an Video Arbeitsspeicher, der für einen virtuellen remotefx-Computer erforderlich ist.
+description: Berechnet die Menge an Videospeicher, die für einen virtuellen Computer RemoteFX ist.
 ms.assetid: F8C30601-EDA3-47F1-A717-9FE7E9DB8F62
-title: Calculatevideomemoryrequirements-Methode der Msvm_Synth3dVideoPool-Klasse
+title: CalculateVideoMemoryRequirements-Methode der Msvm_Synth3dVideoPool-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 2a9fd80e777a9d166b896c2ce51d03bd91bbabfe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2fd1485cdd4e96155db6540a5f07344add5f413514a92c420fcac78a008e7aca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950079"
 ---
-# <a name="calculatevideomemoryrequirements-method-of-the-msvm_synth3dvideopool-class"></a>Calculatevideomemoryrequirements-Methode der MSVM \_ Synth3dVideoPool-Klasse
+# <a name="calculatevideomemoryrequirements-method-of-the-msvm_synth3dvideopool-class"></a>CalculateVideoMemoryRequirements-Methode der Msvm \_ Synth3dVideoPool-Klasse
 
-Berechnet die Menge an Video Arbeitsspeicher, der für einen virtuellen remotefx-Computer erforderlich ist.
+Berechnet die Menge an Videospeicher, die für einen virtuellen Computer RemoteFX ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ uint32 CalculateVideoMemoryRequirements(
 
 <dl> <dt>
 
-*Monitorauflösung* \[ in\]
+*monitorResolution* \[ In\]
 </dt> <dd>
 
-Die maximale Monitor Auflösung für den virtuellen Computer. Dabei muss es sich um einen der folgenden Werte handeln:
+Die maximale Monitorauflösung für den virtuellen Computer. Dies muss einer der folgenden Werte sein.
 
 
 
@@ -61,10 +61,10 @@ Die maximale Monitor Auflösung für den virtuellen Computer. Dabei muss es sich
 
 </dd> <dt>
 
-*anzahlüberwachungen* \[ in\]
+*numberOfMonitors* \[ In\]
 </dt> <dd>
 
-Die maximale Anzahl von Monitoren für die virtuelle Maschine. Die Mindestanzahl von Monitoren ist 1, und der Höchstwert hängt von der maximalen Bildschirmauflösung ab. In der folgenden Tabelle ist die maximale Anzahl von Monitoren definiert, die für unterschiedliche Auflösungen zulässig sind.
+Die maximale Anzahl von Monitoren für den virtuellen Computer. Die Mindestanzahl von Monitoren ist 1, und die maximale Anzahl hängt von der maximalen Bildschirmauflösung ab. In der folgenden Tabelle wird die maximale Anzahl von Monitoren definiert, die für verschiedene Auflösungen zulässig sind.
 
 
 
@@ -81,7 +81,7 @@ Die maximale Anzahl von Monitoren für die virtuelle Maschine. Die Mindestanzahl
 
 </dd> <dt>
 
-Requirements *dvideomemory* \[ vorgenommen\]
+*requiredVideoMemory* \[ out\]
 </dt> <dd>
 
 Empfängt die erforderliche Menge an Videospeicher in Bytes.
@@ -90,22 +90,22 @@ Empfängt die erforderliche Menge an Videospeicher in Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Statuscode zurück, bei dem es sich um einen der folgenden Werte handeln kann.
+Gibt einen Statuscode zurück, der einer der folgenden Werte sein kann.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                                | BESCHREIBUNG                                           |
+| Rückgabecode/-wert                                                                                                                                                                | Beschreibung                                           |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| <dl> <dt>**Abgeschlossen ohne Fehler**</dt> <dt>0</dt> </dl>                    | Erfolgreich.<br/>                                |
-| <dl> <dt>**Methoden Parameter aktiviert-Auftrag gestartet**</dt> <dt>4096</dt> </dl> | Der Auftrag wurde gestartet.<br/>                               |
-| <dl> <dt></dt> Fehler <dt>32768</dt> </dl>                                 | Fehler.<br/>                                    |
-| <dl> <dt>**Zugriff verweigert**</dt> <dt>32769</dt> </dl>                          | Zugriff verweigert.<br/>                             |
+| <dl> <dt>**Abgeschlossen ohne Fehler**</dt> <dt>0</dt> </dl>                    | Erfolgreiche.<br/>                                |
+| <dl> <dt>**Überprüfte Methodenparameter – Auftrag gestartet**</dt> <dt>4096</dt> </dl> | Auftrag wurde gestartet.<br/>                               |
+| <dl> <dt>**Fehler**</dt> <dt>32768</dt> </dl>                                 | Fehler.<br/>                                    |
+| <dl> <dt>**Zugriff verweigert**</dt> <dt>32769</dt> </dl>                          | Zugriff verweigert:<br/>                             |
 | <dl> <dt>**Nicht unterstützt**</dt> <dt>32770</dt> </dl>                          | Wird nicht unterstützt.<br/>                             |
-| <dl> <dt>**Status ist unbekannt**</dt> <dt>32771</dt> </dl>                      | Der Status ist unbekannt.<br/>                         |
+| <dl> <dt>**Der Status ist unbekannt**</dt> <dt>32771.</dt> </dl>                      | Der Status ist unbekannt.<br/>                         |
 | <dl> <dt>**Timeout**</dt> <dt>32772</dt> </dl>                                | Timeout<br/>                                   |
 | <dl> <dt>**Ungültiger Parameter**</dt> <dt>32773</dt> </dl>                      | Ein Parameter ist nicht gültig.<br/>                  |
-| <dl> Das <dt>**System wird in**</dt> <dt>32774</dt> verwendet. </dl>                      | Das System wird verwendet.<br/>                          |
-| <dl> <dt>**Ungültiger Status für diesen Vorgang**</dt> <dt>32775</dt> </dl>       | Der Status ist für diesen Vorgang ungültig.<br/> |
+| <dl> <dt>**System wird in**</dt> <dt>32774 verwendet</dt> </dl>                      | Das System wird verwendet.<br/>                          |
+| <dl> <dt>**Ungültiger Zustand für diesen Vorgang**</dt> <dt>32775</dt> </dl>       | Der Zustand ist für diesen Vorgang ungültig.<br/> |
 | <dl> <dt>**Falscher Datentyp**</dt> <dt>32776</dt> </dl>                    | Falscher Datentyp.<br/>                       |
 | <dl> <dt>**System ist nicht verfügbar**</dt> <dt>32777</dt> </dl>                | Das System ist nicht verfügbar.<br/>                   |
 | <dl> <dt>**Nicht genügend Arbeitsspeicher**</dt> <dt>32778</dt> </dl>                          | Nicht genügend Arbeitsspeicher.<br/>                             |
@@ -114,9 +114,9 @@ Gibt einen Statuscode zurück, bei dem es sich um einen der folgenden Werte hand
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird in der Regel auf dem Host System aufgerufen, um zu bestimmen, ob der Host über ausreichend verfügbaren Videospeicher zum Hosten eines virtuellen remotefx-Computers verfügt. Zu diesem Zweck vergleichen Sie die von dieser Methode berechnete Menge an Videospeicher mit der Eigenschaft [**MSVM \_ physicalgpuinfo. availablevideomemory**](msvm-physicalgpuinfo.md) , um zu bestimmen, ob der Host Computer über ausreichend verfügbaren Videospeicher verfügt. Anhand dieser Informationen können Sie feststellen, ob eine virtuelle Maschine auf das Host System verschoben werden kann.
+Diese Methode wird in der Regel auf dem Hostsystem aufgerufen, um zu bestimmen, ob der Host über genügend verfügbaren Videospeicher zum Hosten eines virtuellen computers RemoteFX verfügt. Hierzu vergleichen Sie die von dieser Methode berechnete Menge an Videospeicher mit der [**Eigenschaft Msvm \_ PhysicalGPUInfo.AvailableVideoMemory,**](msvm-physicalgpuinfo.md) um zu ermitteln, ob auf dem Hostcomputer genügend Videospeicher verfügbar ist. Sie können diese Informationen verwenden, um zu bestimmen, ob ein virtueller Computer in das Hostsystem verschoben werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -124,22 +124,22 @@ Diese Methode wird in der Regel auf dem Host System aufgerufen, um zu bestimmen,
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ physicalgpuinfo**](msvm-physicalgpuinfo.md)
+[**Msvm \_ PhysicalGPUInfo**](msvm-physicalgpuinfo.md)
 </dt> <dt>
 
-[**MSVM \_ Synth3dVideoPool**](msvm-synth3dvideopool.md)
+[**Msvm \_ Synth3dVideoPool**](msvm-synth3dvideopool.md)
 </dt> </dl>
 
  

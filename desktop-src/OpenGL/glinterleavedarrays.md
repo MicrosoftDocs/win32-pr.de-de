@@ -1,6 +1,6 @@
 ---
 title: glInterleavedArrays-Funktion (Gl.h)
-description: Die glInterleavedArrays-Funktion gibt gleichzeitig mehrere überlappte Arrays in einem größeren Aggregatarray an und aktiviert sie.
+description: Die glInterleavedArrays-Funktion gibt gleichzeitig mehrere verschachtelte Arrays in einem größeren Aggregatarray an und aktiviert sie.
 ms.assetid: f1133949-d755-43e3-bf29-8e4c7fb17980
 keywords:
 - glInterleavedArrays-Funktion OpenGL
@@ -23,7 +23,7 @@ ms.locfileid: "118938561"
 ---
 # <a name="glinterleavedarrays-function"></a>glInterleavedArrays-Funktion
 
-Die **glInterleavedArrays-Funktion** gibt gleichzeitig mehrere überlappte Arrays in einem größeren Aggregatarray an und aktiviert sie.
+Die **glInterleavedArrays-Funktion** gibt gleichzeitig mehrere verschachtelte Arrays in einem größeren Aggregatarray an und aktiviert sie.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ void WINAPI glInterleavedArrays(
 *format* 
 </dt> <dd>
 
-Der Typ des zu aktivierenden Arrays. Der Parameter kann einen der folgenden symbolischen Werte annehmen: GL \_ V2F, GL \_ V3F, GL \_ C4UB \_ V2F, GL \_ C4UB \_ V3F, GL \_ C3F \_ V3F, GL \_ N3F \_ V3F, GL \_ C4F \_ N3F \_ V3F, GL \_ T2F \_ V3F, GL \_ T4F \_ V4F, GL \_ T2F \_ C4UB \_ V3F, GL \_ T2F \_ C3F \_ V3F, GL \_ T2F \_ N3F \_ V3F, GL \_ T2F \_ C4F \_ N3F \_ V3F oder GL \_ \_ T4F C4F \_ N3F \_ V4F.
+Der Typ des zu aktivierende Arrays. Der Parameter kann einen der folgenden symbolischen Werte annehmen: GL \_ V2F, GL \_ V3F, GL \_ C4UB \_ V2F, GL \_ C4UB \_ V3F, GL \_ C3F \_ V3F, GL \_ N3F \_ V3F, GL \_ C4F \_ N3F \_ V3F, GL \_ T2F \_ V3F, GL \_ T4F \_ V4F, GL \_ T2F \_ C4UB \_ V3F, GL \_ T2F \_ C3F \_ V3F, GL \_ T2F \_ N3F \_ V3F, GL \_ T2F \_ C4F \_ N3F \_ V3F oder GL \_ T4F \_ C4F \_ N3F \_ V4F.
 
 </dd> <dt>
 
@@ -69,7 +69,7 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
@@ -77,36 +77,36 @@ Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](gl
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *format* war kein akzeptierter Wert.<br/>                                                                                        |
 | <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *stride* war ein negativer Wert.<br/>                                                                                             |
-| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
 ## <a name="remarks"></a>Hinweise
 
-Mit **der glInterleavedArrays-Funktion** können Sie gleichzeitig mehrere überlappte Farb-, Normal-, Textur- und Vertexarrays angeben und aktivieren, deren Elemente Teil eines größeren Aggregatarrayelements sind. Bei einigen Speicherarchitekturen ist dies effizienter, als die Arrays separat anzugeben.
+Mit der **glInterleavedArrays-Funktion** können Sie gleichzeitig mehrere verschachtelte Farb-, Normal-, Textur- und Scheitelpunktarrays angeben und aktivieren, deren Elemente Teil eines größeren Aggregatarrayelements sind. Bei einigen Speicherarchitekturen ist dies effizienter als die separate Angabe der Arrays.
 
-Wenn der *stride-Parameter* 0 (null) ist, werden die Aggregatarrayelemente nacheinander gespeichert. *Andernfalls treten Stridebytes* zwischen Aggregatarrayelementen auf.
+Wenn der *stride-Parameter* 0 (null) ist, werden die Aggregatarrayelemente nacheinander gespeichert. andernfalls *treten Aggregatarrayelemente* in Bytes auf.
 
-Der *Formatparameter* dient als Schlüssel, der beschreibt, wie einzelne Arrays aus dem Aggregatarray extrahiert werden:
+Der *format-Parameter* dient als Schlüssel, der beschreibt, wie einzelne Arrays aus dem Aggregatarray extrahiert werden:
 
--   Wenn *das Format* ein T enthält, werden Texturkoordinaten aus dem überlappten Array extrahiert.
+-   Wenn *das Format* ein T enthält, werden Texturkoordinaten aus dem verschachtelten Array extrahiert.
 -   Wenn C vorhanden ist, werden Farbwerte extrahiert.
 -   Wenn N vorhanden ist, werden normale Koordinaten extrahiert.
 -   Scheitelpunktkoordinaten werden immer extrahiert.
--   Die Ziffern 2, 3 und 4 geben an, wie viele Werte extrahiert werden.
+-   Die Ziffern 2, 3 und 4 kennzeichnen, wie viele Werte extrahiert werden.
 -   F gibt an, dass Werte als Gleitkommawerte extrahiert werden.
--   Wenn 4UB auf C folgt, können Farben auch als 4 Bytes ohne Vorzeichen extrahiert werden. Wenn eine Farbe als 4 Bytes ohne Vorzeichen extrahiert wird, befindet sich das folgende Vertexarrayelement an der ersten möglichen, an einem Gleitkomma ausgerichteten Adresse.
+-   Wenn 4UB dem C folgt, können Farben auch als 4 Bytes ohne Vorzeichen extrahiert werden. Wenn eine Farbe als 4 Bytes ohne Vorzeichen extrahiert wird, befindet sich das vertex-Arrayelement, das folgt, an der ersten möglichen an Gleitkomma ausgerichteten Adresse.
 
-Wenn Sie **glInterleavedArrays** beim Kompilieren einer Anzeigeliste aufrufen, wird sie nicht in die Liste kompiliert, sondern sofort ausgeführt.
+Wenn Sie beim Kompilieren einer Anzeigeliste **glInterleavedArrays** aufrufen, wird sie nicht in die Liste kompiliert, sondern sofort ausgeführt.
 
-Sie können keine Aufrufe von **glInterleavedArrays** in **glDisableClientState** zwischen Aufrufen von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf **von glEnd enthalten.**
+Sie können keine Aufrufe von **glInterleavedArrays** in **glDisableClientState** zwischen Aufrufen von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von **glEnd** einschließen.
 
 > [!Note]  
 > Die **glInterleavedArrays-Funktion** ist nur in OpenGL Version 1.1 oder höher verfügbar.
 
  
 
-Die **glInterleavedArrays-Funktion** wird auf clientseitiger Seite ohne Protokoll implementiert. Da die Vertexarrayparameter clientseitig sind, werden sie nicht durch [**glPushAttrib**](glpushattrib.md) und **glPopAttrib gespeichert oder wiederhergestellt.** Verwenden [**Sie stattdessen glPushClientAttrib**](glpushclientattrib.md) **und glPopClientAttrib.**
+Die **glInterleavedArrays-Funktion** wird auf clientseitiger Seite ohne Protokoll implementiert. Da die Vertexarrayparameter clientseitig sind, werden sie nicht von [**glPushAttrib**](glpushattrib.md) und **glPopAttrib** gespeichert oder wiederhergestellt. Verwenden Sie stattdessen [**glPushClientAttrib**](glpushclientattrib.md) und **glPopClientAttrib.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,7 +122,7 @@ Die **glInterleavedArrays-Funktion** wird auf clientseitiger Seite ohne Protokol
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,29 +1,29 @@
 ---
-description: Wird von einer audioerfassungs Quelle gesendet, wenn die Verbindung mit der Erfassungs Audiositzung getrennt wird, weil der Audioserver heruntergefahren wird.
+description: Wird von einer Audioaufnahmequelle gesendet, wenn die Aufzeichnungsaudiositzung aufgrund des Herunterfahrens des Audioservers getrennt wird.
 ms.assetid: 43284B3E-3018-44F3-8D6C-8C3041DCCD3E
-title: Mecaptureaudiosessionservershutdown-Ereignis (mfobjects. h)
+title: MECaptureAudioSessionServerShutdown-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ad934f6d60868c1db7c5b5b7907ff720312ea439
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: beb19d72a207866ceb405baacd11dbb3f91f059abb3d3855feba159040c27760
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359174"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974259"
 ---
-# <a name="mecaptureaudiosessionservershutdown-event"></a>Mecaptureaudiosessionservershutdown-Ereignis
+# <a name="mecaptureaudiosessionservershutdown-event"></a>MECaptureAudioSessionServerShutdown-Ereignis
 
-Wird von einer audioerfassungs Quelle gesendet, wenn die Verbindung mit der Erfassungs Audiositzung getrennt wird, weil der Audioserver heruntergefahren wird.
+Wird von einer Audioaufnahmequelle gesendet, wenn die Aufzeichnungsaudiositzung aufgrund des Herunterfahrens des Audioservers getrennt wird.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE               | BESCHREIBUNG                           |
+| VARTYPE               | Beschreibung                           |
 |-----------------------|---------------------------------------|
-| VT \_ leer <br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY <br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -33,17 +33,17 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                               |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

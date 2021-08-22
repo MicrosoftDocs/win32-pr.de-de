@@ -1,10 +1,10 @@
 ---
-title: MPTHREAT_INFOEX_NIS Struktur (mpclient. h)
+title: MPTHREAT_INFOEX_NIS-Struktur (MpClient.h)
 description: Enthält NIS-spezifische Informationen.
 ms.assetid: 3887C5BF-B1F6-4420-B40A-9585E44BE7A9
 keywords:
-- MPTHREAT_INFOEX_NIS Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPTHREAT_INFOEX_NIS Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPTHREAT_INFOEX_NIS struktur legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
+- PMPTHREAT_INFOEX_NIS Strukturzeiger Legacy Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b4ed68432a2d0ebe78535a139fcc7b0882b9ba7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8320070f80000ec5c2b235a815dc075f96f82ddd3c6d56c4022b9d60759c3e44
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118746899"
 ---
-# <a name="mpthreat_infoex_nis-structure"></a>Mpthreat \_ INFOEX \_ NIS-Struktur
+# <a name="mpthreat_infoex_nis-structure"></a>MPTHREAT \_ \_ INFOEX-NIS-Struktur
 
 Enthält NIS-spezifische Informationen.
 
@@ -49,25 +49,25 @@ typedef struct tagMPTHREAT_INFOEX_NIS {
 **SourceIP**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd></dd> <dt>
 
-**Destinationip**
+**DestinationIP**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd></dd> <dt>
 
-**dwsourceport**
+**dwSourceport**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd></dd> <dt>
 
-**dwdestinationport**
+**dwDestinationport**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -77,14 +77,14 @@ Typ: **DWORD**
 **Protokoll**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd></dd> <dt>
 
 **Link**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd></dd> </dl>
 
@@ -94,9 +94,9 @@ Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

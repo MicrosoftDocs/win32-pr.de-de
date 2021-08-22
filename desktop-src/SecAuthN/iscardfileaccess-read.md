@@ -1,7 +1,7 @@
 ---
-description: Die Read-Methode liest die angegebenen Daten aus einer angegebenen Datei und gibt Sie zurück.
+description: Die Read-Methode liest die angegebenen Daten aus einer bestimmten Datei und gibt sie zurück.
 ms.assetid: 697b8dfa-754b-46cf-ab5c-1ac1d8ae47f2
-title: 'Iscardfileaccess:: Read-Methode'
+title: ISCardFileAccess::Read-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: b3d66b5c6e314a4ef7a00a76fabc8660f3bf65eb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c44839b9916bdee999eb1fb54d689dd51761c35d71bc3ba828171dda62e05c42
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216213"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118923199"
 ---
-# <a name="iscardfileaccessread-method"></a>Iscardfileaccess:: Read-Methode
+# <a name="iscardfileaccessread-method"></a>ISCardFileAccess::Read-Methode
 
-\[Die **Read** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **Read-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **Read** -Methode liest die angegebenen Daten aus einer angegebenen Datei und gibt Sie zurück.
+Die **Read-Methode** liest die angegebenen Daten aus einer bestimmten Datei und gibt sie zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,59 +43,59 @@ HRESULT Read(
 
 <dl> <dt>
 
-*hFile* \[ in\]
+*hFile* \[ In\]
 </dt> <dd>
 
-Handle der geöffneten Datei, auf die zugegriffen werden soll.
+Handle der geöffneten Datei, auf die sie zugreifen soll.
 
 </dd> <dt>
 
-*lbytestoread* \[ in\]
+*lBytesToRead* \[ In\]
 </dt> <dd>
 
-Die Länge der zu lesenden Daten (in) oder die Anzahl der gelesenen Bytes (aus). Gibt eine Liste der Dateien als ein Array von bstrins zurück.
+Länge der zu lesenden Daten (in) oder Anzahl der gelesenen (out) Bytes. Gibt eine Liste von Dateien als Array von BSTRs zurück.
 
 </dd> <dt>
 
-*Flags* \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Gibt an, ob sicheres Messaging verwendet werden soll.
 
 <dl><span id="SC_FL_SECURE_MESSAGING"></span><span id="sc_fl_secure_messaging"></span><dt>
 
-**SC \_ FL \_ Secure \_ Messaging**
+**SC \_ FL \_ SECURE \_ MESSAGING**
 </dt> </dl> </dd> <dt>
 
-*ppbuffer* \[ vorgenommen\]
+*ppBuffer* \[ out\]
 </dt> <dd>
 
-Ein [**ibytebuffer**](ibytebuffer.md) -Objekt, das die gelesenen Daten enthält.
+Ein [**IByteBuffer-Objekt,**](ibytebuffer.md) das die gelesenen Daten enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                  |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/> |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Ungültiger Parameter.<br/>                |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Es wurde ein fehlerhafter Zeiger übermittelt.<br/>      |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ungültiger Parameter.<br/>                |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Ein fehlerhafter Zeiger wurde übergeben.<br/>      |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Liste aller Methoden, die durch diese Schnittstelle definiert werden, finden Sie unter [**iscardfileaccess**](iscardfileaccess.md).
+Eine Liste aller von dieser Schnittstelle definierten Methoden finden Sie unter [**ISCardFileAccess**](iscardfileaccess.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die [*Smartcard*](../secgloss/s-gly.md) zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes [](../secgloss/s-gly.md) gibt diese Schnittstelle möglicherweise einen Smartcardfehlercode zurück, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung zu erfüllen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,18 +103,18 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscardfileaccess**](iscardfileaccess.md)
+[**ISCardFileAccess**](iscardfileaccess.md)
 </dt> </dl>
 
  

@@ -1,17 +1,17 @@
 ---
 description: Gibt für die Neucodierung von Segmenten die Puffergröße an.
 ms.assetid: 4f8d3a29-e011-4dcb-8eed-23ccce03a66a
-title: MFPKEY_REENCENDBUFFERSIZE-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_REENCENDBUFFERSIZE-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 50cfb6587634ea3b70175102db371ed426184dcc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 56d28d16d748e6ec67224b71d8474102021c5925c6c72a2fc3fb99b945d27013
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973529"
 ---
-# <a name="mfpkey_reencendbuffersize-property"></a>Mfpkey \_ reencendbuffersize (Eigenschaft)
+# <a name="mfpkey_reencendbuffersize-property"></a>MFPKEY \_ REENCENDBUFFERSIZE-Eigenschaft
 
 Gibt für die Neucodierung von Segmenten die Puffergröße an.
 
@@ -30,7 +30,7 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Client<br/> | Windows Vista oder Windows 7<br/>                                                   |
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -38,7 +38,7 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
 description: Gibt das Quadrat der Länge eines 2D-Vektors zurück.
 ms.assetid: 0ecc40bb-7613-463a-a8a0-5e184feb441f
-title: D3DXVec2LengthSq-Funktion (D3dx9math. h)
+title: D3DXVec2LengthSq-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 9a7801832bf2c11798704e68d568eba3389fac08
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b05ad62f1a7ee26cfb25251b43c3df9dfe87314c5b1d92ac19f65e19416d3ed2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118804060"
 ---
 # <a name="d3dxvec2lengthsq-function"></a>D3DXVec2LengthSq-Funktion
 
@@ -40,20 +40,20 @@ FLOAT D3DXVec2LengthSq(
 
 <dl> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](d3dxvector2.md) \***
 
-Ein Zeiger auf die Quell- [**D3DXVECTOR2**](d3dxvector2.md) -Struktur.
+Zeiger auf die [**D3DXVECTOR2-Quellstruktur.**](d3dxvector2.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Die Quadrat Länge des Vektors.
+Die quadratische Länge des Vektors.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Die Quadrat Länge des Vektors.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

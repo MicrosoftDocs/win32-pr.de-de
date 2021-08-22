@@ -90,7 +90,7 @@
             - name: Smartcard-Resource Manager
               href: smart-card-resource-manager.md
               items:
-                - name: Resource Manager Implementierung
+                - name: Resource Manager-Implementierung
                   href: resource-manager-implementation.md
                 - name: Smartcard-Resource Manager-API
                   href: smart-card-resource-manager-api.md
@@ -224,12 +224,12 @@
                       items:
                         - name: Private Kommunikationstechnologie
                           href: private-communications-technology.md
-                        - name: Secure Sockets Layer Protokoll
+                        - name: Secure Sockets Layer Protocol
                           href: secure-sockets-layer-protocol.md
                         - name: TLS-Protokoll (Transport Layer Security)
                           href: transport-layer-security-protocol.md
                           items:
-                            - name: TLS-Handshakeprotokoll
+                            - name: TLS Handshake-Protokoll
                               href: tls-handshake-protocol.md
                             - name: TLS-Datensatzprotokoll
                               href: tls-record-protocol.md
@@ -274,7 +274,7 @@
                       items:
                         - name: 'TLS Elliptic Curves in Windows 10, Version 1607 und höher'
                           href: tls-elliptic-curves-in-windows-10-1607-and-later.md
-                        - name: 'TLS Elliptic Curves in Windows 10, Version 1507 und 1511'
+                        - name: 'TLS Elliptic Curves in Windows 10, Versionen 1507 und 1511'
                           href: tls-elliptic-curves-in-windows-10-1507-and-1511.md
                     - name: Schannel-Anmeldeinformationen
                       href: schannel-credentials.md
@@ -285,7 +285,7 @@
                       items:
                         - name: Zertifikatspeicher
                           href: certificate-stores.md
-                        - name: CryptoAPI 2.0 private Schlüssel
+                        - name: CryptoAPI 2.0 Private Schlüssel
                           href: cryptoapi-2-0-private-keys.md
             - name: Benutzerdefinierte Sicherheitspakete
               href: custom-security-packages.md
@@ -307,13 +307,13 @@
                 - name: Windows-Anmeldung
                   href: winlogon.md
                   items:
-                    - name: Initialisieren der Winlogon
+                    - name: Initialisieren von Winlogon
                       href: initializing-winlogon.md
                     - name: Winlogon-Zustände
                       href: winlogon-states.md
-                    - name: Unterstützte Time outvorgänge des Dialogfelddiensts
+                    - name: Unterstützte Time out-Vorgänge des Dialogfelddiensts
                       href: supported-dialog-box-service-time-out-operations.md
-                    - name: Senden von Nachrichten an GINA
+                    - name: Senden von Nachrichten an die GINA
                       href: sending-messages-to-the-gina.md
                 - name: Gina
                   href: gina.md
@@ -346,7 +346,7 @@
                       href: registering-a-winlogon-notification-package.md
                     - name: Winlogon-Benachrichtigungsereignisse
                       href: winlogon-notification-events.md
-                    - name: Referenz zum Winlogon-Benachrichtigungspaket
+                    - name: Winlogon Notification Package Reference
                       href: winlogon-notification-package-reference.md
                       items:
                         - name: Registrierungseinträge
@@ -366,15 +366,15 @@
           items:
             - name: Initialisierung des LSA-Modus
               href: lsa-mode-initialization.md
-            - name: Initialisierung des Benutzermodus
+            - name: Benutzermodusinitialisierung
               href: user-mode-initialization.md
             - name: Registrieren von SSP/AP-DLLs
               href: registering-ssp-ap-dlls.md
             - name: Verwenden von dreiteiligen Prinzipalnamen
               href: using-three-part-principal-names.md
-        - name: Anpassen der Winlogon
+        - name: Anpassen von Winlogon
           href: customizing-winlogon.md
-        - name: 'Anleitungen zu den ersten Schritte für Onlineanbieter, die in die Webauthentifizierungsbroker-APIs integriert sind'
+        - name: 'Leitfaden zu den ersten Schritte für Onlineanbieter, die in die Webauthentifizierungsbroker-APIs integriert sind'
           href: getting-started-guidance-for-online-providers-integrating-with-the-web-authentication-broker-apis.md
           items:
             - name: Überlegungen für die Webseitenentwicklung
@@ -388,7 +388,7 @@
                   href: authentication-for-web-pages.md
                 - name: Autorisierung für Webseiten
                   href: authorization-for-web-pages.md
-                - name: Bewährte Methoden für das Entwerfen von Authentifizierungswebseiten
+                - name: Bewährte Methoden zum Entwerfen von Authentifizierungswebseiten
                   href: best-practices-for-designing-authentication-web-pages.md
             - name: Webauthentifizierungsprobleme
               href: web-authentication-problems.md
@@ -411,12 +411,12 @@
               href: receiving-connection-notifications.md
             - name: Registrieren für den Empfang von Verbindungsbenachrichtigungen
               href: registering-to-receive-connection-notifications.md
-            - name: Überschreiben des STANDARDMÄßIGEN MPR-Time out-Intervalls
+            - name: Überschreiben des MpR-Standardtime out-Intervalls
               href: overriding-the-default-mpr-time-out-interval.md
         - name: Verwenden von SSPI
           href: using-sspi.md
           items:
-            - name: 'Verfahren, die mit den meisten Sicherheitspaketen und Protokollen verwendet werden'
+            - name: 'Prozeduren, die mit den meisten Sicherheitspaketen und Protokollen verwendet werden'
               href: procedures-used-with-most-security-packages-and-protocols.md
               items:
                 - name: Verwenden von SecBufferDesc und SecBuffer
@@ -435,17 +435,17 @@
                 - name: Herstellen einer sicheren Verbindung mit Authentifizierung
                   href: establishing-a-secure-connection-with-authentication.md
                   items:
-                    - name: Initialisierung des Clientkontexts
+                    - name: Clientkontextinitialisierung
                       href: client-context-initialization.md
                       items:
                         - name: Clientfortsetzung
                           href: client-continuation.md
-                    - name: Initialisierung des Serverkontexts
+                    - name: Serverkontextinitialisierung
                       href: server-context-initialization.md
                       items:
                         - name: Serverfortsetzung
                           href: server-continuation.md
-                - name: Sicherstellen der Kommunikationsintegrität während der Exchange
+                - name: Sicherstellen der Kommunikationsintegrität während Exchange
                   href: ensuring-communication-integrity-during-message-exchange.md
                 - name: Beenden einer SSPI-Sitzung
                   href: ending-an-sspi-session.md
@@ -474,25 +474,25 @@
             - name: SSPI mit Microsoft Digest SSP-Aufgaben
               href: sspi-with-microsoft-digest-ssp-tasks.md
               items:
-                - name: Abrufen Microsoft Digest SSP-Anmeldeinformationen
+                - name: Abrufen von Microsoft Digest SSP-Anmeldeinformationen
                   href: obtaining-microsoft-digest-ssp-credentials.md
                   items:
-                    - name: Abrufen von Standard-Digestanmeldeinformationen
+                    - name: Abrufen von Standardhestanmeldeinformationen
                       href: obtaining-default-digest-credentials.md
                     - name: Abrufen alternativer Digestanmeldeinformationen
                       href: obtaining-alternate-digest-credentials.md
                 - name: Generieren der Digest-Herausforderung
                   href: generating-the-digest-challenge.md
-                - name: Generieren der Digest-Challenge-Antwort
+                - name: Generieren der Antwort auf die Digest-Herausforderung
                   href: generating-the-digest-challenge-response.md
                   items:
-                    - name: Eingabepuffer für die Digest-Challenge-Antwort
+                    - name: Eingabepuffer für die Digest-Abfrageantwort
                       href: input-buffers-for-the-digest-challenge-response.md
-                - name: Schützen von Nachrichten mit Microsoft Digest
+                - name: Schützen von Nachrichten mithilfe von Microsoft Digest
                   href: protecting-messages-using-microsoft-digest.md
                 - name: Abfragen von Digestsicherheitskontextattributen
                   href: querying-digest-security-context-attributes.md
-            - name: Erstellen einer sicheren Verbindung mit Schannel
+            - name: Erstellen einer sicheren Verbindung mithilfe von Schannel
               href: creating-a-secure-connection-using-schannel.md
               items:
                 - name: Abrufen von Schannel-Anmeldeinformationen
@@ -507,7 +507,7 @@
                 - name: Erstellen eines Schannel-Sicherheitskontexts
                   href: creating-an-schannel-security-context.md
                   items:
-                    - name: Durchführen der Authentifizierung mit Schannel
+                    - name: Durchführen der Authentifizierung mithilfe von Schannel
                       href: performing-authentication-using-schannel.md
                     - name: Zuordnen von Zertifikaten
                       href: mapping-certificates.md
@@ -527,7 +527,7 @@
                       href: load-balancing-using-schannel.md
                     - name: Neuverhandlung einer Kanalverbindung
                       href: renegotiating-an-schannel-connection.md
-                    - name: Erkennen einer Anforderung zum erneuten Aushandeln einer Verbindung
+                    - name: Erkennen einer Anforderung zum Erneuten Aushandeln einer Verbindung
                       href: recognizing-a-request-to-renegotiate-a-connection.md
                     - name: Herunterfahren einer Schannel-Verbindung
                       href: shutting-down-an-schannel-connection.md
@@ -547,7 +547,7 @@
               href: /previous-versions/windows/desktop/legacy/hh707166(v=vs.85)
             - name: TpmVirtualSmartCardManager
               href: /previous-versions/windows/desktop/legacy/hh707171(v=vs.85)
-        - name: Authentifizierungskonst constants (Authentifizierungs
+        - name: Authentifizierungskonstanten
           href: authentication-constants.md
           items:
             - name: WLX_LOGON_OPTION_XXX
@@ -565,7 +565,7 @@
               href: sspi-status-codes.md
             - name: TimeStamp
               href: timestamp.md
-        - name: Authentifizierungsenumeration
+        - name: Authentifizierungsenumerationen
           href: authentication-enumerations.md
           items:
             - name: CRED_MARSHAL_TYPE
@@ -638,7 +638,7 @@
                   href: acceptsecuritycontext--ntlm.md
                 - name: AcceptSecurityContext (Schannel)
                   href: acceptsecuritycontext--schannel.md
-            - name: AcquireCredentialsHandle (Allgemein)
+            - name: AcquireCredentialsHandle (allgemein)
               href: acquirecredentialshandle--general.md
               items:
                 - name: AcquireCredentialsHandle (CredSSP)

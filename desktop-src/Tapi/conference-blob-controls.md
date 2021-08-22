@@ -1,29 +1,29 @@
 ---
-description: Das folgende Diagramm zeigt die Hauptobjekte, die an den BLOB-Steuerelementen der TAPI 3-Konferenz beteiligt sind Die angezeigten Schnittstellen sind mit den relevanten Referenzseiten hyperverknüpft.
+description: Das folgende Diagramm veranschaulicht die wichtigsten Objekte, die an TAPI 3-Konferenzblobsteuerelementen beteiligt sind. Die angezeigten Schnittstellen werden mit den relevanten Referenzseiten verknüpft.
 ms.assetid: 535bbb33-01cb-4484-b216-4808e47e4db5
-title: Konferenz-BLOB-Steuerelemente
+title: Konferenzblobsteuerelemente
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bacf13567abd46f56c399cefa732be97b081cfd3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1361951fcb830676e36acb4ec397832629dc5745983c654317a457a0d66ac336
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118867992"
 ---
-# <a name="conference-blob-controls"></a>Konferenz-BLOB-Steuerelemente
+# <a name="conference-blob-controls"></a>Konferenzblobsteuerelemente
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Das folgende Diagramm zeigt die Hauptobjekte, die an den BLOB-Steuerelementen der TAPI 3-Konferenz beteiligt sind Die angezeigten Schnittstellen sind mit den relevanten Referenzseiten hyperverknüpft.
+Das folgende Diagramm veranschaulicht die wichtigsten Objekte, die an TAPI 3-Konferenzblobsteuerelementen beteiligt sind. Die angezeigten Schnittstellen werden mit den relevanten Referenzseiten verknüpft.
 
-![Conference BLOB-Steuerelemente und-Schnittstellen](images/rendblob.png)
+![Steuerelemente und Schnittstellen für Konferenzblobs](images/rendblob.png)
 
-Das Konferenz-BLOB enthält anbieterspezifische Informationen zu einem Konferenz Objekt. Ein Zeiger auf das [**itconferenceblob**](itconferenceblob.md) -Schnittstellen-BLOB wird durch die Durchführung einer QueryInterface-Schnittstelle auf [**itdirectoryobjectconference**](/windows/desktop/api/Rend/nn-rend-itdirectoryobjectconference)abgerufen. Die **itconferenceblob** -Schnittstelle bietet Methoden für die grundlegende Bearbeitung eines generischen Konferenz-BLOBs. Eine Anwendung, die nicht-SDP-Konferenz-blobvorgänge verwendet, muss für die Detail Bearbeitung eigene Methoden implementieren.
+Das Konferenzblob enthält anbieterspezifische Informationen zu einem Konferenzobjekt. Ein Zeiger auf das [**ITConferenceBlob-Schnittstellenblob**](itconferenceblob.md) wird durch Ausführen einer QueryInterface für [**ITDirectoryObjectConference ermittelt.**](/windows/desktop/api/Rend/nn-rend-itdirectoryobjectconference) Die **ITConferenceBlob-Schnittstelle** stellt Methoden für die grundlegende Bearbeitung eines generischen Konferenzblobs bereit. Eine Anwendung, die Nicht-SDP-Konferenzblobs verwendet, muss eigene Methoden für die Detailbearbeitung implementieren.
 
-Rendezvous stellt die [**itsdp**](itsdp.md) -Schnittstelle zum Bearbeiten von SDP-Konferenz-blobden bereit. Der SDP ist ein Protokoll zum Beschreiben von Multimedia-Sitzungen und ihrer zugehörigen Zeit Planungsinformationen. Weitere Informationen zum SDP-Protokoll finden Sie unter Internet Engineering Task Force (IETF) RFC 2327 mit dem Titel "SDP: Sitzungs Beschreibungs Protokoll". Wenn die **itsdp** -Schnittstelle für ein bestimmtes Konferenz-BLOB vorhanden ist, können Sie einen Zeiger darauf abrufen, indem Sie eine **QueryInterface** für [**itconferenceblob**](itconferenceblob.md)durchgeführt haben.
+Rendezvous stellt die [**ITSdp-Schnittstelle**](itsdp.md) zum Bearbeiten von SDP-Konferenzblobs bereit. Der SDP ist ein Protokoll zum Beschreiben von Multimediasitzungen und deren zugehörigen Planungsinformationen. Weitere Informationen zum SDP-Protokoll finden Sie unter Internet Engineering Task Force (IETF) RFC 2327 mit dem Titel "SDP: Session Description Protocol". Wenn die **ITSDP-Schnittstelle** für ein bestimmtes Konferenzblob vorhanden ist, können Sie einen Zeiger darauf abrufen, indem Sie eine **QueryInterface** für [**ITConferenceBlob ausführen.**](itconferenceblob.md)
 
-Für SDP-Konferenz-blobspeicher ermöglichen die Schnittstellen [**ittimecollection**](ittimecollection.md), [**ittime**](ittime.md), [**itmediacollection**](itmediacollection.md)und [**ITmedia**](itmedia.md) eine ausführliche Steuerung der SDP-Konferenzzeit und der Medien Merkmale.
+Für SDP-Konferenzblobs ermöglichen die [**Schnittstellen ITTimeCollection,**](ittimecollection.md) [**ITTime,**](ittime.md) [**ITMediaCollection**](itmediacollection.md)und [**ITMedia**](itmedia.md) eine detaillierte Steuerung der SDP-Konferenzzeit und der Medienmerkmale.
 
  
 

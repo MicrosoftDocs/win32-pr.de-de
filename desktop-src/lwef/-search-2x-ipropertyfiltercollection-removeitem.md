@@ -1,11 +1,11 @@
 ---
-title: Ipropertyfiltercollection-RemoveItem-Eigenschaft (wdssharedidl. h)
-description: Entfernt einen bestimmten Filter für die Auflistung.
+title: IPropertyFilterCollection RemoveItem-Eigenschaft (WdsSharedIDL.h)
+description: Entfernt einen bestimmten Filter aus der Auflistung.
 ms.assetid: a8b8a1f7-d47a-45dc-81c9-f01ecf6c1560
 keywords:
-- RemoveItem-Eigenschaft Legacy Windows-Umgebungs Features
-- RemoveItem-Eigenschaft Legacy Windows-Umgebungs Funktionen, ipropertyfiltercollection-Schnittstelle
-- Ipropertyfiltercollection-Schnittstelle Legacy Windows-Umgebungs Features, RemoveItem-Eigenschaft
+- RemoveItem-Eigenschaft Legacy Windows Umgebungsfeatures
+- RemoveItem-Eigenschaft Legacy Windows Environment Features , IPropertyFilterCollection-Schnittstelle
+- IPropertyFilterCollection-Schnittstelle Legacy Windows Environment Features , RemoveItem-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,19 +17,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2994b636a7b8483d4b3f219648f137166b75790d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 54822e95e2ea7d6e10fdd5bbf833adb63b51cb01e8d860ce77f550432b41e926
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118755419"
 ---
-# <a name="ipropertyfiltercollectionremoveitem-property"></a>Ipropertyfiltercollection:: RemoveItem-Eigenschaft
+# <a name="ipropertyfiltercollectionremoveitem-property"></a>IPropertyFilterCollection::RemoveItem (Eigenschaft)
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API.](../search/-search-reference-entry-page.md) 
 
-Entfernt einen bestimmten Filter für die Auflistung.
+Entfernt einen bestimmten Filter aus der Auflistung.
 
 Diese Eigenschaft ist lesegeschützt.
 
@@ -46,7 +46,7 @@ HRESULT put_RemoveItem(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Akzeptiert einen Zeiger auf den Index für den zu entfernenden Filter.
+Akzeptiert einen Zeiger auf den Index, damit der Filter entfernt werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,10 +54,10 @@ Akzeptiert einen Zeiger auf den Index für den zu entfernenden Filter.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 mit SP1 \[ Desktop-Apps\]<br/>                             |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 2.6.5<br/>                                             |
-| Header<br/>                   | <dl> <dt>Wdssharedidl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2003 mit \[ SP1-Desktop-Apps\]<br/>                             |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 2.6.5<br/>                                             |
+| Header<br/>                   | <dl> <dt>WdsSharedIDL.h</dt> </dl> |
 
 
 

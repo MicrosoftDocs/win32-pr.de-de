@@ -1,26 +1,26 @@
 ---
-description: Anwendungen, die auf mobilen und Desktop Computern ausgeführt werden, können die von Sens bereitgestellten Bandbreiten-und Latenz Informationen verwenden, um die Netzwerkverfügbarkeit dynamisch zu optimieren.
+description: Anwendungen, die auf mobilen Computern und Desktopcomputern ausgeführt werden, können die von SENS bereitgestellten Bandbreiten- und Latenzinformationen nutzen, um die Netzwerkverfügbarkeit dynamisch zu optimieren.
 ms.assetid: 83defdc5-79f5-4727-a9b2-fc7422767873
-title: Mobile Computing-Konfigurationen für Sens
+title: Mobile Computing-Konfigurationen für SENS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e04f1844e84efb1b6247e5b9f7026c71d01e68fd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 56b51dfaf05f8babd85a921517289faa77916ccba5323703b87faa445af4adc8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368970"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118890686"
 ---
-# <a name="mobile-computing-configurations-for-sens"></a>Mobile Computing-Konfigurationen für Sens
+# <a name="mobile-computing-configurations-for-sens"></a>Mobile Computing-Konfigurationen für SENS
 
-Konnektivitätsfunktionen und-Benachrichtigungen sind nützlich für Computer, die wie folgt konfiguriert werden:
+Konnektivitätsfunktionen und Benachrichtigungen sind für Computer nützlich, die wie folgt konfiguriert sind:
 
--   Ein mobiler Computer, der in einer Docking Station in einem Netzwerk mit hoher Bandbreite verwendet wird, das gelegentlich eine DFÜ-Verbindung verwendet.
--   Ein mobiler Computer, der ausschließlich eine DFÜ-Verbindung verwendet.
--   Ein Desktop Computer, der ausschließlich eine DFÜ-Verbindung verwendet.
--   Ein Desktop Computer, der mit Latenzproblemen mit einem Netzwerk mit hoher Bandbreite verbunden ist.
+-   Ein mobiler Computer, der in einer Dockingstation in einem Netzwerk mit hoher Bandbreite verwendet wird und gelegentlich eine Einwahlverbindung verwenden kann.
+-   Ein mobiler Computer, der ausschließlich eine Einwählverbindung verwendet.
+-   Ein Desktopcomputer, der ausschließlich eine Einwählverbindung verwendet.
+-   Ein Desktopcomputer, der mit einem Netzwerk mit hoher Bandbreite mit Latenzproblemen verbunden ist.
 
-In jeder dieser Konfigurationen können die Verbindungs Bandbreite und Latenz Informationen von einer Anwendung verwendet werden, um die Vorgänge für die Netzwerkverfügbarkeit dynamisch zu optimieren.
+In jeder dieser Konfigurationen können die Verbindungsbandbreiten- und Latenzinformationen von einer Anwendung verwendet werden, um ihre Vorgänge dynamisch für die Netzwerkverfügbarkeit zu optimieren.
 
  
 

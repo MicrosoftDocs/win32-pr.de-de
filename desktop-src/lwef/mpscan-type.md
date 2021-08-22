@@ -1,10 +1,10 @@
 ---
-title: MPSCAN_TYPE-Enumeration (mpclient. h)
-description: Der Typ des ausgeführten Scans.
+title: MPSCAN_TYPE-Enumeration (MpClient.h)
+description: Typ der durchgeführten Überprüfung.
 ms.assetid: 980A80FD-FF02-4338-B7FB-DAA141F65E89
 keywords:
-- MPSCAN_TYPE-Enumerationsfunktionen der Legacy-Windows-Umgebung
-- PMPSCAN_TYPE enumerationszeiger Legacy-Windows-Umgebungs Features
+- MPSCAN_TYPE enumeration Legacy Windows Environment Features
+- PMPSCAN_TYPE enumeration pointer Legacy Windows Environment Features
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9eb89137dc9cfe5b8a4ff1f44a7a101239aa3a22
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 56906bfc9ad57f93bac4c8b8c27360b5ade9592ac33efe39574fe8890299e13a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118747131"
 ---
-# <a name="mpscan_type-enumeration"></a>Mpscan- \_ Typenumeration
+# <a name="mpscan_type-enumeration"></a>MPSCAN \_ TYPE-Enumeration
 
-Der Typ des ausgeführten Scans.
+Typ der durchgeführten Überprüfung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,38 +45,38 @@ typedef enum tagMPSCAN_TYPE {
 
 <dl> <dt>
 
-<span id="MPSCAN_TYPE_UNKNOWN"></span><span id="mpscan_type_unknown"></span>**mpscan- \_ Typ \_ unbekannt**
+<span id="MPSCAN_TYPE_UNKNOWN"></span><span id="mpscan_type_unknown"></span>**\_MPSCAN-TYP \_ UNBEKANNT**
 </dt> <dd>
 
 Nur interne Verwendung.
 
 </dd> <dt>
 
-<span id="MPSCAN_TYPE_QUICK"></span><span id="mpscan_type_quick"></span>**mpscan- \_ Typ \_ Quick**
+<span id="MPSCAN_TYPE_QUICK"></span><span id="mpscan_type_quick"></span>**\_MPSCAN-TYP \_ : SCHNELL**
 </dt> <dd>
 
-Scannt laufende Prozesse und verschiedene ASEP-Punkte im System, wo Schadsoftware normalerweise ausgeblendet wird.
+Scannt ausgeführte Prozesse und verschiedene ASEP-Punkte im System, wo Schadsoftware in der Regel ausblendet.
 
 </dd> <dt>
 
-<span id="MPSCAN_TYPE_FULL"></span><span id="mpscan_type_full"></span>**mpscan- \_ Typ \_ voll**
+<span id="MPSCAN_TYPE_FULL"></span><span id="mpscan_type_full"></span>**\_MPSCAN-TYP \_ FULL**
 </dt> <dd>
 
-Führt eine schnell Überprüfung durch, gefolgt von der Überprüfung aller Festplattenlaufwerke des Systems.
+Führt eine Schnellprüfung durch, gefolgt von einer Überprüfung aller Festplattenlaufwerke des Systems.
 
 </dd> <dt>
 
-<span id="MPSCAN_TYPE_RESOURCE"></span><span id="mpscan_type_resource"></span>**mpscan \_ - \_ typressource**
+<span id="MPSCAN_TYPE_RESOURCE"></span><span id="mpscan_type_resource"></span>**\_ \_ MPSCAN-TYPRESSOURCE**
 </dt> <dd>
 
-Scannt bestimmte Ressourcen, z. b. Dateien oder Ordner.
+Scannt bestimmte Ressourcen, z. B. Dateien oder Ordner.
 
 </dd> <dt>
 
-<span id="MPSCAN_TYPE_MAXVALUE"></span><span id="mpscan_type_maxvalue"></span>**mpscan- \_ Typ \_ MaxValue**
+<span id="MPSCAN_TYPE_MAXVALUE"></span><span id="mpscan_type_maxvalue"></span>**\_MPSCAN-TYP \_ MAXVALUE**
 </dt> <dd>
 
-Maximal möglicher Wert.
+Maximalwert möglich.
 
 </dd> </dl>
 
@@ -86,9 +86,9 @@ Maximal möglicher Wert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

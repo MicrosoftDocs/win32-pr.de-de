@@ -1,7 +1,7 @@
 ---
-description: Die OnSize-Methode verarbeitet \_ Nachrichten der WM-Größe.
+description: Die OnSize-Methode verarbeitet WM \_ SIZE-Nachrichten.
 ms.assetid: 21d867a4-4321-478a-9beb-5d3053569369
-title: Cbasewindow. OnSize-Methode (winutil. h)
+title: CBaseWindow.OnSize-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c9020510030d3b3d4b30e066adfe67367618fb3d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bf6c7793af3cb7866ddaaaae8823acd91ed10ac71d939af8bc9e71eff768d75f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118657655"
 ---
-# <a name="cbasewindowonsize-method"></a>Cbasewindow. OnSize-Methode
+# <a name="cbasewindowonsize-method"></a>CBaseWindow.OnSize-Methode
 
-Die- `OnSize` Methode verarbeitet \_ Nachrichten der WM-Größe.
+Die `OnSize` -Methode verarbeitet WM \_ SIZE-Meldungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,24 +46,24 @@ virtual BOOL OnSize(
 *Width* 
 </dt> <dd>
 
-Breite des Client Bereichs in Pixel.
+Breite des Clientbereichs in Pixel.
 
 </dd> <dt>
 
 *Height* 
 </dt> <dd>
 
-Die Höhe des Client Bereichs in Pixel.
+Höhe des Clientbereichs in Pixel.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück.
+Gibt **TRUE zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode speichert die neue Breite und Höhe. Um diese Werte abzurufen, rufen Sie die [**cbasewindow:: getwindowheight**](cbasewindow-getwindowheight.md) -Methode und die [**cbasewindow:: getwindowwidth**](cbasewindow-getwindowwidth.md) -Methode auf.
+Diese Methode speichert die neue Breite und Höhe. Rufen Sie zum Abrufen dieser Werte die [**Methoden CBaseWindow::GetWindowHeight**](cbasewindow-getwindowheight.md) und [**CBaseWindow::GetWindowWidth**](cbasewindow-getwindowwidth.md) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,16 +71,16 @@ Diese Methode speichert die neue Breite und Höhe. Um diese Werte abzurufen, ruf
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

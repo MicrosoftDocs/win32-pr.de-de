@@ -1,11 +1,11 @@
 ---
-title: Inapclientmanagement getregisteredenforcementclients-Methode (napmanagement. h)
-description: Ruft Informationen zu den registrierten Erzwingungs Clients ab.
+title: INapClientManagement GetRegisteredEnforcementClients-Methode (NapManagement.h)
+description: Ruft Informationen zu den registrierten Erzwingungsclients ab.
 ms.assetid: aae7c57c-a7fe-4cb2-94f6-53e501e38054
 keywords:
-- Getregisteredenforcementclients-Methode NAP
-- Getregisteredenforcementclients-Methode NAP, inapclientmanagement-Schnittstelle
-- Inapclientmanagement Interface NAP, getregisteredenforcementclients-Methode
+- NAP-Methode "GetRegisteredEnforcementClients"
+- GetRegisteredEnforcementClients-Methode NAP, INapClientManagement-Schnittstelle
+- INapClientManagement-Schnittstelle NAP , GetRegisteredEnforcementClients-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7767f96c9b5410b3de9cfef3695193c0d5572b2d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ae7854a36ffb1d313a1598764c5375a8146471c1b2fd930b4022948f147acc24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118940208"
 ---
-# <a name="inapclientmanagementgetregisteredenforcementclients-method"></a>Inapclientmanagement:: getregisteredenforcementclients-Methode
+# <a name="inapclientmanagementgetregisteredenforcementclients-method"></a>INapClientManagement::GetRegisteredEnforcementClients-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **getregisteredenforcementclients** -Methode ruft Informationen zu den registrierten Erzwingungs Clients ab.
+Die **GetRegisteredEnforcementClients-Methode** ruft Informationen zu den registrierten Erzwingungsclients ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,32 +48,32 @@ HRESULT GetRegisteredEnforcementClients(
 
 <dl> <dt>
 
-*Anzahl* \[ vorgenommen\]
+*count* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**enforcemententitycount**](nap-datatypes.md) , die die Anzahl der registrierten Erzwingungs Clients enthält.
+Ein Zeiger auf [**enforcementEntityCount,**](nap-datatypes.md) der die Anzahl der registrierten Erzwingungsclients enthält.
 
 </dd> <dt>
 
-*Enforcer* \[ vorgenommen\]
+*Erzwingen von* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf ein Array von [**napcomponentregistrationinfo**](/windows/win32/api/naptypes/ns-naptypes-napcomponentregistrationinfo) -Strukturen, die die registrierten Erzwingungs Clients beschreiben.
+Ein Zeiger auf ein Array von [**NapComponentRegistrationInfo-Strukturen,**](/windows/win32/api/naptypes/ns-naptypes-napcomponentregistrationinfo) die die registrierten Erzwingungsclients beschreiben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht beschränkt auf einen der folgenden.
+Die -Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht beschränkt auf einen der folgenden.
 
 
 
 | Rückgabecode                                                                                         | Beschreibung                                                        |
 |-----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                | Vorgang erfolgreich.<br/>                                   |
-| <dl> <dt>**E \_ AccessDenied**</dt> </dl>      | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>       | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
-| <dl> <dt>**RPC- \_ E \_ getrennt**</dt> </dl> | Der NAPAgent wird nicht ausgeführt.<br/>                            |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl>      | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>       | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
+| <dl> <dt>**RPC \_ E \_ DISCONNECTED**</dt> </dl> | NapAgent wird nicht ausgeführt.<br/>                            |
 
 
 
@@ -85,19 +85,19 @@ Die-Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht b
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                         |
-| Header<br/>                   | <dl> <dt>Napmanagement. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napmanagement. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                         |
+| Header<br/>                   | <dl> <dt>NapManagement.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapManagement.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapclientmanagement**](inapclientmanagement.md)
+[**INapClientManagement**](inapclientmanagement.md)
 </dt> </dl>
 
  

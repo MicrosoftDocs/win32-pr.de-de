@@ -1,6 +1,6 @@
 ---
-title: callps
-description: Führt einen Funktions Aufrufder Anweisung aus, die mit der angegebenen Bezeichnung gekennzeichnet ist. | callps
+title: call - ps
+description: Führt einen Funktionsaufruf der Anweisung aus, die mit der angegebenen Bezeichnung markiert ist. | call - ps
 ms.assetid: d5f5e5a1-f205-477d-a11b-ff9eeeec6c95
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 27be29c478afdf92c29fefd16a82319e0899d2ec
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 7ae1b8a19178b0a6633a98472814e225e9ac2f7de9e3e2f016720f2f5b1a9b3a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995494"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118794084"
 ---
-# <a name="call---ps"></a>callps
+# <a name="call---ps"></a>call - ps
 
-Führt einen Funktions Aufrufder Anweisung aus, die mit der angegebenen Bezeichnung gekennzeichnet ist.
+Führt einen Funktionsaufruf der Anweisung aus, die mit der angegebenen Bezeichnung markiert ist.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| l anrufen\# |
+| call l\# |
 |----------|
 
 
@@ -33,13 +33,13 @@ Führt einen Funktions Aufrufder Anweisung aus, die mit der angegebenen Bezeichn
 
 Hierbei gilt:
 
--   l \# ist eine [Bezeichnung-PS](label---ps.md) , die den Anfang der aufzurufenden Unterroutine markiert.
+-   l \# ist eine [Bezeichnung– ps,](label---ps.md) die den Anfang der aufzurufenden Unterroutine markiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | Aufruf                  |      |      |      |      |      | x    | x     | x    | x     |
 
@@ -47,10 +47,10 @@ Hierbei gilt:
 
  
 
-Diese Anweisung führt Folgendes aus:
+Diese Anweisung führt folgende Schritte aus:
 
-1.  Die pushadresse der nächsten Anweisung in den Rückgabe Adress Stapel.
-2.  Setzen Sie die Ausführung mit der von der Bezeichnung markierten Anweisung fort.
+1.  Pushadresse der nächsten Anweisung an den Rückgabeadressstapel.
+2.  Setzen Sie die Ausführung über die durch die Bezeichnung markierte Anweisung fort.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

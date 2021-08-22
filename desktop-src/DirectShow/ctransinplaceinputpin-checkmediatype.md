@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5de3cec87d740db42824b0d7abf1ee4bfc6aeecb
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 91a1889e9c8a4060b734449df9f73474c16d1aec09d6534de048359ced156958
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094798"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118654843"
 ---
 # <a name="ctransinplaceinputpincheckmediatype-method"></a>CTransInPlaceInputPin.CheckMediaType-Methode
 
@@ -53,7 +53,7 @@ Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den vorgeschlagenen M
 
 Gibt S \_ OK zurück, wenn der vorgeschlagene Medientyp akzeptabel ist. Andernfalls wird S \_ FALSE oder ein Fehlercode zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode überschreibt die [**CTransformInputPin::CheckMediaType-Methode.**](ctransforminputpin-checkmediatype.md) Sie ruft die [**CTransformFilter::CheckInputType-Methode**](ctransformfilter-checkinputtype.md) des Filters auf, um den Eingabetyp zu überprüfen. Wenn der Ausgabepin verbunden ist, ruft diese Methode auch die [**IPin::QueryAccept-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryaccept) auf dem Downstreameingabepin auf.
 
@@ -61,7 +61,7 @@ Diese Methode überschreibt die [**CTransformInputPin::CheckMediaType-Methode.**
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |

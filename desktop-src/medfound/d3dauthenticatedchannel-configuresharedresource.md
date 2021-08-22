@@ -1,7 +1,7 @@
 ---
-description: Enthält Eingabedaten für einen D3DAUTHENTICATEDCONFIGURE \_ SharedResource-Befehl.
+description: Enthält Eingabedaten für einen D3DAUTHENTICATEDCONFIGURE \_ SHAREDRESOURCE-Befehl.
 ms.assetid: bdeb0cc4-90f0-4174-a859-4b3fecb17bab
-title: D3DAUTHENTICATEDCHANNEL_CONFIGURESHAREDRESOURCE-Struktur (D3d9types. h)
+title: D3DAUTHENTICATEDCHANNEL_CONFIGURESHAREDRESOURCE-Struktur (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - d3d9types.h
-ms.openlocfilehash: 7cbbb1645b232195e1cdb12e859234339ddda287
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0dbff67921f2ec6ad634c20b11b86b0384923db5548bcef113128fe5ede6bdd2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344017"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118742906"
 ---
-# <a name="d3dauthenticatedchannel_configuresharedresource-structure"></a>D3DAUTHENTICATEDCHANNEL- \_ Struktur konfigurieren
+# <a name="d3dauthenticatedchannel_configuresharedresource-structure"></a>D3DAUTHENTICATEDCHANNEL \_ CONFIGURESHAREDRESOURCE-Struktur
 
-Enthält Eingabedaten für einen [**D3DAUTHENTICATEDCONFIGURE \_ SharedResource**](d3dauthenticatedconfigure-sharedresource.md) -Befehl.
+Enthält Eingabedaten für einen [**D3DAUTHENTICATEDCONFIGURE \_ SHAREDRESOURCE-Befehl.**](d3dauthenticatedconfigure-sharedresource.md)
 
-Um diese Abfrage zu senden, nennen Sie [**IDirect3DAuthenticatedChannel9:: Configure**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-configure).
+Rufen Sie [**IDirect3DAuthenticatedChannel9::Configure**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-configure)auf, um diese Abfrage zu senden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,25 +47,25 @@ typedef struct _D3DAUTHENTICATEDCHANNEL_CONFIGURESHAREDRESOURCE {
 **Parameter**
 </dt> <dd>
 
-Eine [**D3DAUTHENTICATEDCHANNEL \_ - \_ Eingabe**](d3dauthenticatedchannel-configure-input.md) Struktur, die die Befehls-GUID und andere Daten enthält.
+Eine [**D3DAUTHENTICATEDCHANNEL \_ CONFIGURE \_ INPUT-Struktur,**](d3dauthenticatedchannel-configure-input.md) die die Befehls-GUID und andere Daten enthält.
 
 </dd> <dt>
 
-**Processidentifertype**
+**ProcessIdentiferType**
 </dt> <dd>
 
-Ein [**D3DAUTHENTICATEDCHANNEL \_ processidentifiertype**](d3dauthenticatedchannel-processidentifiertype.md) -Wert, der den Typ des Prozesses angibt. Legen Sie diesen Member auf **processidtype \_ DWM** fest, um den Desktopfenster-Manager-Prozess (DWM) anzugeben. Legen Sie diesen Member andernfalls auf **processidtype \_ handle** fest, und legen Sie den **ProcessHandle** -Member auf ein gültiges Handle fest.
+Ein [**D3DAUTHENTICATEDCHANNEL \_ PROCESSIDENTIFIERTYPE-Wert,**](d3dauthenticatedchannel-processidentifiertype.md) der den Prozesstyp angibt. Legen Sie diesen Member auf PROCESSIDTYPE DWM fest, um den prozess Desktopfenster-Manager **\_ (DWM)** anzugeben. Legen Sie andernfalls diesen Member auf **PROCESSIDTYPE \_ HANDLE** und den **ProcessHandle-Member** auf ein gültiges Handle fest.
 
 </dd> <dt>
 
 **ProcessHandle**
 </dt> <dd>
 
-Ein Prozess handle. Wenn das **processidentifier** -Element **\_ mit dem processtidtype-handle** gleich ist, gibt das **ProcessHandle** -Member ein Handle für einen Prozess an. Andernfalls wird der Wert ignoriert.
+Ein Prozesshandle. Wenn der **ProcessIdentifier-Member** **dem PROCESSTIDTYPE \_ HANDLE** entspricht, gibt der **ProcessHandle-Member** ein Handle für einen Prozess an. Andernfalls wird der Wert ignoriert.
 
 </dd> <dt>
 
-**Allowaccess**
+**AllowAccess**
 </dt> <dd>
 
 **True** gibt an, dass der angegebene Prozess Zugriff auf eingeschränkte freigegebene Ressourcen hat.
@@ -78,20 +78,20 @@ Ein Prozess handle. Wenn das **processidentifier** -Element **\_ mit dem process
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>D3d9types. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Direct3D-Video Strukturen](direct3d-video-structures.md)
+[Direct3D-Videostrukturen](direct3d-video-structures.md)
 </dt> <dt>
 
-[**IDirect3DAuthenticatedChannel9:: Configure**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-configure)
+[**IDirect3DAuthenticatedChannel9::Configure**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-configure)
 </dt> </dl>
 
  

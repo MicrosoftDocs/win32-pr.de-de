@@ -1,28 +1,28 @@
 ---
-description: Der System Registrierungs Anbieter versucht, für jedes auftretende Ereignis eine Benachrichtigung zu senden.
+description: Der Systemregistrierungsanbieter versucht, eine Benachrichtigung für jedes auftretende Ereignis zu senden.
 ms.assetid: 51ef0ccb-02d5-4dac-9c71-a7f4e25a0d00
 ms.tgt_platform: multiple
-title: Empfangen von Registrierungs Ereignissen
+title: Empfangen von Registrierungsereignissen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 87f0da8c039f83e3d4eb1f51d6b6707d0edd6b3b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7d6f3c8f39be30beeb64e7c8d8ff7f1bacfba8a47b7f4bd0c70e7cf638bf726e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118817456"
 ---
-# <a name="receiving-registry-events"></a>Empfangen von Registrierungs Ereignissen
+# <a name="receiving-registry-events"></a>Empfangen von Registrierungsereignissen
 
-Der System Registrierungs Anbieter versucht, für jedes auftretende Ereignis eine Benachrichtigung zu senden. Der System Registrierungs Anbieter garantiert jedoch nicht, dass der Consumer ein oder alle Ereignisse empfängt. Die Ausnahme besteht darin, dass der System Registrierungs Anbieter sicherstellt, dass ein Consumer eine Benachrichtigung für jede Ereignis Registrierung erhält.
+Der Systemregistrierungsanbieter versucht, eine Benachrichtigung für jedes auftretende Ereignis zu senden. Der Systemregistrierungsanbieter garantiert jedoch nicht, dass der Consumer beliebige oder alle Ereignisse empfängt. Die Ausnahme besteht darin, dass der Systemregistrierungsanbieter sicherstellt, dass ein Consumer eine Benachrichtigung für jede Ereignisregistrierung erhält.
 
-Nehmen wir beispielsweise an, ein Consumer registriert sich für zwei Struktur Änderungs Ereignisse, die eine Benachrichtigung für [**RegistryTreeChangeEvent**](/previous-versions/windows/desktop/regprov/registrytreechangeevent) -Instanzen anfordern. Jede Registrierung hat denselben Hive-Wert (Unterstruktur), aber einen anderen RootPath-Wert. Wenn sich die Schlüssel in beiden Pfaden mehrmals ändern, stellt der System Registrierungs Anbieter sicher, dass der Consumer eine Benachrichtigung für jeden Pfad erhält. Abhängig von der Antwortzeit der Registrierung und des System Registrierungs Anbieters erhält der Consumer möglicherweise so viele Benachrichtigungen wie Ereignisse.
+Angenommen, ein Consumer registriert sich für zwei Strukturänderungsereignisse und fordert eine Benachrichtigung für [**RegistryTreeChangeEvent-Instanzen**](/previous-versions/windows/desktop/regprov/registrytreechangeevent) an. Jede Registrierung hat den gleichen Hive-Wert (Unterstruktur), aber einen anderen RootPath-Wert. Wenn schlüssel in beiden Pfaden mehrmals geändert werden, garantiert der Systemregistrierungsanbieter, dass der Consumer eine Benachrichtigung für jeden Pfad erhält. Abhängig von der Antwortzeit der Registrierung und des Systemregistrierungsanbieters erhält der Consumer möglicherweise so viele Benachrichtigungen, wie Ereignisse aufgetreten sind.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Registrierung für System Registrierungs Ereignisse](registering-for-system-registry-events.md)
+[Registrieren für Systemregistrierungsereignisse](registering-for-system-registry-events.md)
 </dt> </dl>
 
  

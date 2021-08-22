@@ -1,19 +1,19 @@
 ---
-title: Eigenschaften von "Peer AP-TLS-Verbindung"
-description: Erfahren Sie mehr über die Eigenschaften von "Peer AP-TLS". Sehen Sie sich ein Beispiel an, das eine Instanz des eaptlsconnectionpropertiesv1-Legacy Schemas ist.
+title: PEAP-TLS-Verbindungseigenschaften
+description: Erfahren Sie mehr über die PEAP-TLS-Verbindungseigenschaften. Sehen Sie sich ein Beispiel an, das eine Instanz des Legacyschemas eaptlsconnectionpropertiesv1 ist.
 ms.assetid: 1128b3f7-eba7-484e-a3d8-070d37e9c57f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: efa368ca49b93cff8fa3cd60620ec075bfb8d3a5
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: be661834c6a1053d34ba5c6a8cee7f7d491537ce0153011772c1b29cf78ef89f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "104517171"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118784808"
 ---
-# <a name="peap-tls-connection-properties"></a>Eigenschaften von "Peer AP-TLS-Verbindung"
+# <a name="peap-tls-connection-properties"></a>PEAP-TLS-Verbindungseigenschaften
 
-Bei diesem Beispiel handelt es sich um eine Instanz des [eaptlsconnectionpropertiesv1](eaptlsconnectionpropertiesv1schema-schema.md) -Legacy Schemas.
+Dieses Beispiel ist eine Instanz des [Legacyschemas eaptlsconnectionpropertiesv1.](eaptlsconnectionpropertiesv1schema-schema.md)
 
 ``` syntax
   <?xml version="1.0" ?> 
@@ -63,15 +63,15 @@ Bei diesem Beispiel handelt es sich um eine Instanz des [eaptlsconnectionpropert
 
 <dl> <dt>
 
-[Verbindungs Eigenschaften](connection-profiles.md)
+[Verbindungseigenschaften](connection-profiles.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

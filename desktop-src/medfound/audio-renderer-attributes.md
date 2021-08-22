@@ -4,26 +4,26 @@ ms.assetid: f0d119fa-8a0a-4650-814e-b3586302ff79
 title: Audiorendererattribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b01f9f2f3cadd63f31383537fd56cf7020ffef3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3ed2d44445311c8ac9f9f29a33106f0bdcd6d395dd83ba1d374eb93f4f82ab1d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106341162"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975019"
 ---
 # <a name="audio-renderer-attributes"></a>Audiorendererattribute
 
-Die folgenden Attribute können verwendet werden, um den audiorenderer zu konfigurieren.
+Die folgenden Attribute können verwendet werden, um den Audiorenderer zu konfigurieren.
 
 
 
-| Attribut                                                                                                     | BESCHREIBUNG                                                                                                 |
+| attribute                                                                                                     | BESCHREIBUNG                                                                                                 |
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| [**\_Endpunkt-ID für das MF- \_ audiorenderer- \_ Attribut \_ \_**](mf-audio-renderer-attribute-endpoint-id-attribute.md)     | Gibt den Bezeichner für das audioendpunkt-Gerät an.                                                     |
-| [**Endpunkt Rolle für das MF \_ - \_ audiorenderer- \_ Attribut \_ \_**](mf-audio-renderer-attribute-endpoint-role-attribute.md) | Gibt die audioendpunktrolle für den audiorenderer an.                                                   |
-| [**MF \_ - \_ \_ audiorendererattributflags \_**](mf-audio-renderer-attribute-flags-attribute.md)                  | Enthält Flags, um den audiorenderer zu konfigurieren.                                                             |
-| [**\_Sitzungs-ID für das MF- \_ audiorenderer- \_ Attribut \_ \_**](mf-audio-renderer-attribute-session-id-attribute.md)       | Gibt die audiorichtlinienklasse für den audiorenderer an.                                                    |
-| [Kategorie des MF \_ - \_ audiorendererattributstreams \_ \_ \_](mf-audio-renderer-attribute-stream-category.md)           | Gibt die audiostreamkategorie für den [streamingaudiorenderer](streaming-audio-renderer.md) (SAR) an. |
+| [**ENDPUNKT-ID DES \_ \_ MF-AUDIORENDERERATTRIBUTS \_ \_ \_**](mf-audio-renderer-attribute-endpoint-id-attribute.md)     | Gibt den Bezeichner für das Audioendpunktgerät an.                                                     |
+| [**ENDPUNKTROLLE DES \_ MF-AUDIORENDERERATTRIBUTS \_ \_ \_ \_**](mf-audio-renderer-attribute-endpoint-role-attribute.md) | Gibt die Audioendpunktrolle für den Audiorenderer an.                                                   |
+| [**\_ \_ \_ MF-AUDIORENDERERATTRIBUTFLAGS \_**](mf-audio-renderer-attribute-flags-attribute.md)                  | Enthält Flags zum Konfigurieren des Audiorenderers.                                                             |
+| [**SITZUNGS-ID \_ DES MF-AUDIORENDERERATTRIBUTS \_ \_ \_ \_**](mf-audio-renderer-attribute-session-id-attribute.md)       | Gibt die Audiorichtlinienklasse für den Audiorenderer an.                                                    |
+| [\_ATTRIBUTSTREAMKATEGORIE DES MF-AUDIORENDERERS \_ \_ \_ \_](mf-audio-renderer-attribute-stream-category.md)           | Gibt die Audiostreamkategorie für den [Streaming Audio Renderer](streaming-audio-renderer.md) (SAR) an. |
 
 
 

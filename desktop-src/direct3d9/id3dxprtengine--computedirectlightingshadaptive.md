@@ -1,7 +1,7 @@
 ---
-description: Berechnet den direkten Beleuchtungs Beitrag zu 3D-Objekten, bei denen die Quell Ausstrahlung mithilfe der adaptiven Stichprobenentnahme durch eine Glanz Näherung (SH) dargestellt wird.
+description: Berechnet den direkten Beleuchtungsbeitrag zu 3D-Objekten, bei denen die Quellausmaßung durch eine Sphärische Gleichung (SH) dargestellt wird, wobei adaptive Stichprobenentnahme verwendet wird.
 ms.assetid: 792d8460-d608-4384-ac1c-556435074580
-title: 'ID3DXPRTEngine:: computedirectlightingshadaptive-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::ComputeDirectLightingSHAdaptive-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 8abbcfd955fa909166b53f6e050b9aff5837508d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 991337b31b10c39cccb622c2838bd53bcb25ad534ae8f896b6ec8f4842072de3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762375"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118801280"
 ---
-# <a name="id3dxprtenginecomputedirectlightingshadaptive-method"></a>ID3DXPRTEngine:: computedirectlightingshadaptive-Methode
+# <a name="id3dxprtenginecomputedirectlightingshadaptive-method"></a>ID3DXPRTEngine::ComputeDirectLightingSHAdaptive-Methode
 
-Berechnet den direkten Beleuchtungs Beitrag zu 3D-Objekten, bei denen die Quell Ausstrahlung mithilfe der adaptiven Stichprobenentnahme durch eine Glanz Näherung (SH) dargestellt wird. Diese Methode generiert neue Scheitel Punkte und Gesichter im Mesh, um das PRT-Signal (precompuradiance-Übertragung) genauer zu berechnen.
+Berechnet den direkten Beleuchtungsbeitrag zu 3D-Objekten, bei denen die Quellausmaßung durch eine Sphärische Gleichung (SH) dargestellt wird, wobei adaptive Stichprobenentnahme verwendet wird. Diese Methode generiert neue Scheitelpunkte und Gesichter im Netz, um das PRT-Signal (Precomputed Radiance Transfer) genauer anzunähern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT ComputeDirectLightingSHAdaptive(
 
 <dl> <dt>
 
-*Reihenfolge* \[ in\]
+*Bestellung* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Reihenfolge der SH-Evaluierung. Muss im Bereich von [D3DXSH \_ minorder](other-d3dx-constants.md) bis D3DXSH \_ maxorder (einschließlich) liegen. Die Auswertung generiert die Koeffizienten der Bestellung. Der Bewertungs Grad ist Order-1.
+Reihenfolge der SH-Auswertung. Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order²-Koeffizienten. Der Grad der Auswertung ist "Order - 1".
 
 </dd> <dt>
 
-*Adaptivethresh* \[ in\]
+*AdaptiveThresh* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Schwellenwert für den PRT-Vektor, der für die Unterteilung von Mesh-Scheitel Punkten und Flächen verwendet wird Wenn kleiner als 1E-6f ist, wird ein Standardwert von 1E-6f angegeben.
+Schwellenwert für den PRT-Vektor, der zum Unterteilen von Gitternetzvertices und Gesichtern verwendet werden soll. Wenn kleiner als 1e-6f ist, wird der Standardwert 1e-6f angegeben.
 
 </dd> <dt>
 
-*Minedgelength* \[ in\]
+*MinEdgeLength* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimale Vorderseiten Länge, die bei der adaptiven Stichproben Erstellung generiert wird. Wenn die Methode ermittelt, dass der Wert zu klein ist, wird ein Modell abhängiger Wert angegeben. Wenn der Wert NULL ist, wird der Standardwert 4 angegeben.
+Minimale Länge des Gesichtsrands, die bei der adaptiven Stichprobenentnahme generiert wird. Wenn die -Methode feststellt, dass der Wert zu klein ist, wird ein modellabhängiger Wert angegeben. Bei 0 (null) wird der Standardwert 4 angegeben.
 
 </dd> <dt>
 
-*Maxsubdiv* \[ in\]
+*MaxSubdiv* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Maximale Ebene der Unterteilung einer Fläche, die bei der adaptiven Stichprobenentnahme verwendet wird.
+Maximale Unterteilungsebene eines Gesichts, die bei der adaptiven Stichprobenentnahme verwendet wird.
 
 </dd> <dt>
 
-*pdataout* \[ in, out\]
+*pDataOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein Output [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt. Dieser Puffer muss über die richtige Anzahl von Farbkanälen verfügen, die für die Simulation reserviert werden.
+Zeiger auf ein [**ID3DXPRTBuffer-Ausgabeobjekt.**](id3dxprtbuffer.md) Diesem Puffer muss die richtige Anzahl von Farbkanälen für die Simulation zugeordnet sein.
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Zeiger auf ein Output [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt. Dieser Pu
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,12 +101,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

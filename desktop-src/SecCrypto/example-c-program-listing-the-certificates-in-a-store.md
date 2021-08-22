@@ -1,36 +1,36 @@
 ---
-description: Listet alle Zertifikate in einem Systemzertifikat Speicher und den Namen des Subjekts sowie alle Zertifikat Kontexteigenschaften der einzelnen Zertifikate auf.
+description: Listet alle Zertifikate in einem Systemzertifikatspeicher und den Namen des Betreffs und alle Zertifikatkontexteigenschaften der einzelnen Zertifikate auf.
 ms.assetid: 4b5361f5-79b1-4b05-a133-1a394da7d6ee
-title: 'Beispiel-C-Programm: Auflisten der Zertifikate in einem Speicher'
+title: 'Beispiel C-Programm: Auflisten der Zertifikate in Store'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e504fe54bea81663957274844c4896b53a25217
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 47545d2a4c5b13df57dc4bae5490123c9423a9127f6f5e6dbe0b3a885651d9f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007598"
 ---
-# <a name="example-c-program-listing-the-certificates-in-a-store"></a>Beispiel-C-Programm: Auflisten der Zertifikate in einem Speicher
+# <a name="example-c-program-listing-the-certificates-in-a-store"></a>Beispiel C-Programm: Auflisten der Zertifikate in Store
 
-Der folgende Beispielcode listet alle Zertifikate in einem System [*Zertifikat Speicher*](../secgloss/c-gly.md) und den Namen des Subjekts sowie alle [*Zertifikat Kontext*](../secgloss/c-gly.md) Eigenschaften der einzelnen Zertifikate auf. Im Beispiel wird der Name des Zertifikat Speicher des Benutzers abgerufen und somit zum Auflisten des Inhalts eines beliebigen Systemzertifikat Speicher verwendet. Außerdem wird in diesem Beispiel die Verwendung von zwei neuen Benutzeroberflächen Funktionen veranschaulicht, von denen eine ein Zertifikat anzeigt, und die andere Benutzeroberfläche, die es dem Benutzer ermöglicht, ein Zertifikat aus einer Liste der Zertifikate in einem Speicher auszuwählen.
+Im folgenden Beispielcode werden alle Zertifikate [](../secgloss/c-gly.md) in einem Systemzertifikatspeicher sowie der [](../secgloss/c-gly.md) Name des Betreffs und alle Zertifikatkontexteigenschaften der einzelnen Zertifikate aufgeführt. Das Beispiel ruft den Namen des Zertifikatspeichers vom Benutzer ab und kann daher verwendet werden, um den Inhalt eines beliebigen Systemzertifikatspeichers aufzulisten. Darüber hinaus zeigt dieses Beispiel die Verwendung von zwei neuen Benutzeroberflächenfunktionen, eine, die ein Zertifikat anzeigt, und die andere benutzeroberfläche, die es dem Benutzer ermöglicht, ein Zertifikat aus einer Liste der Zertifikate in einem Speicher auszuwählen.
 
-In diesem Beispielcode werden die folgenden Aufgaben und [*kryptoapi*](../secgloss/c-gly.md) -Funktionen veranschaulicht:
+Dieser Beispielcode veranschaulicht die folgenden Aufgaben und [*CryptoAPI-Funktionen:*](../secgloss/c-gly.md)
 
--   Öffnen eines System Stores mithilfe von " [**certopdsystemstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopensystemstorea)".
--   In einer Schleife werden alle Zertifikate im geöffneten Speicher mithilfe von [**certenumcertifieresinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumcertificatesinstore)aufgelistet.
--   Anzeigen eines Zertifikats mithilfe von [**cryptuidlgviewcontext**](/windows/desktop/api/Cryptuiapi/nf-cryptuiapi-cryptuidlgviewcontext).
--   Der Name des Zertifikats wird mithilfe von " [**certgetnamestring**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa)" abgerufen.
--   Verwenden Sie in einer-Schleife [**certenumcertifiaseecontextproperties**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumcertificatecontextproperties) , um die Eigenschaften Bezeichner aller dem Zertifikat zugeordneten Eigenschaften zu erhalten.
--   Verwenden von [**certgetcertifiaseecontextproperty**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetcertificatecontextproperty) zum Aufrufen der einzelnen Eigenschaften.
--   Anzeigen einer Liste von Zertifikaten in einem Speicher und ermöglichen der Auswahl eines Benutzers mithilfe von [**cryptuidlgselectcertifikatefromstore**](/windows/desktop/api/Cryptuiapi/nf-cryptuiapi-cryptuidlgselectcertificatefromstore).
--   Schließen des Zertifikat Speicher mithilfe von " [**certclosestore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)".
+-   Öffnen eines Systemspeichers [**mithilfe von CertOpenSystemStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopensystemstorea)
+-   In einer -Schleife werden alle Zertifikate im geöffneten Speicher mithilfe von [**CertEnumCertificatesInStore aufzählt.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumcertificatesinstore)
+-   Anzeigen eines Zertifikats [**mithilfe von CryptUIDlgViewContext**](/windows/desktop/api/Cryptuiapi/nf-cryptuiapi-cryptuidlgviewcontext).
+-   Abrufen des Namens des Zertifikatssubjekts [**mithilfe von CertGetNameString**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa).
+-   Verwenden Sie in einer [**Schleife CertEnumCertificateContextProperties,**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumcertificatecontextproperties) um die Eigenschaftenbezeichner aller Eigenschaften zu erhalten, die dem Zertifikat zugeordnet sind.
+-   Verwenden [**sie CertGetCertificateContextProperty,**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetcertificatecontextproperty) um die einzelnen Eigenschaften zu erhalten.
+-   Anzeigen einer Liste von Zertifikaten in einem Speicher und Zulassen, dass ein Benutzer eines dieser Zertifikate mithilfe von [**CryptUIDlgSelectCertificateFromStore auswählt.**](/windows/desktop/api/Cryptuiapi/nf-cryptuiapi-cryptuidlgselectcertificatefromstore)
+-   Schließen des Zertifikatspeichers [**mithilfe von CertCloseStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)
 
-In diesem Beispiel wird die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist im Beispiel enthalten.
+In diesem Beispiel wird die [**MyHandleError-Funktion verwendet.**](myhandleerror.md) Code für diese Funktion ist im Beispiel enthalten.
 
-Der Code für dieses und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+Der Code für diese und andere Hilfsfunktionen ist auch unter Universell [Functions aufgeführt.](general-purpose-functions.md)
 
-Im folgenden Beispiel wird gezeigt, wie die Zertifikate in einem Speicher aufgelistet und angezeigt werden. Um dieses Beispiel zu kompilieren, müssen Sie den Compiler so konfigurieren, dass er einen Multibyte-Zeichensatz verwendet.
+Das folgende Beispiel zeigt das Aufzählen und Anzeigen der Zertifikate in einem Speicher. Um dieses Beispiel zu kompilieren, müssen Sie den Compiler so konfigurieren, dass er einen Mehr-Byte-Zeichensatz verwendet.
 
 
 ```C++

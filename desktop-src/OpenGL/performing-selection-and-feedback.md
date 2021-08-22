@@ -1,38 +1,38 @@
 ---
-title: Ausführen von Auswahl und Feedback
-description: Ausführen von Auswahl und Feedback
+title: Durchführen von Auswahl und Feedback
+description: Durchführen von Auswahl und Feedback
 ms.assetid: 908114b3-ac0e-4fd5-ad28-137e6af7ffc7
 keywords:
-- OpenGL, Auswahl
-- OpenGL, Feedback
-- OpenGL, Rendering
+- OpenGL,Auswahl
+- OpenGL,Feedback
+- OpenGL,Rendering
 - Auswahlmodus OpenGL
-- Feedback Modus OpenGL
+- Feedbackmodus OpenGL
 - Renderingmodus OpenGL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: be13ae103d33039c996851582823c23c30316731
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 95efe3f07e86056cd0364daaed1e6a9c0ef402afc18b14d74cca313c9835479f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118936285"
 ---
-# <a name="performing-selection-and-feedback"></a>Ausführen von Auswahl und Feedback
+# <a name="performing-selection-and-feedback"></a>Durchführen von Auswahl und Feedback
 
-Auswahl, Feedback und Rendering sind sich gegenseitig ausschließende Betriebsmodi. Rendering ist der normale Standardmodus, in dem Fragmente durch rasterization erstellt werden.
+Auswahl, Feedback und Rendering schließen sich gegenseitig aus. Rendering ist der normale Standardmodus, in dem Fragmente durch Rasterung erzeugt werden.
 
-Im Auswahl-und Feedback Modus werden keine Fragmente erzeugt. Daher findet keine Frame Puffer-Änderung statt. Im Auswahlmodus können Sie feststellen, welche primitiven in einem Fensterbereich gezeichnet werden. im Feedback Modus werden Informationen über primitive, die gerengt werden, an die Anwendung zurückgegeben.
+Im Auswahl- und Feedbackmodus werden keine Fragmente erzeugt. daher findet keine Framebuffer-Änderung statt. Im Auswahlmodus können Sie bestimmen, welche Primitive in einen Bereich eines Fensters gezeichnet werden. Im Feedbackmodus werden Informationen zu Primitiven, die rastert werden, an die Anwendung zurückgeführt.
 
-Mit [**glrendermode**](glrendermode.md)wählen Sie zwischen diesen drei Modi aus.
+Sie wählen mit [**glRenderMode**](glrendermode.md)einen dieser drei Modi aus.
 
 -   [Auswahl](selection.md)
 -   [Feedback](feedback.md)
--   [Auswahl-und Feedback Referenz](selection-and-feedback-reference.md)
+-   [Referenz zu Auswahl und Feedback](selection-and-feedback-reference.md)
 
- 
+ 
 
- 
+ 
 
 
 

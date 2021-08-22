@@ -1,25 +1,25 @@
 ---
-title: Wie sicher ist der RPC-Server jetzt?
-description: Nach der in diesem Abschnitt beschriebenen Sicherheit, die an anderer Stelle im RPC SDK bereitgestellt wird und in der Regel als ordnungsgemäße Sicherheitspraktiken akzeptiert wird, führt dies zu einem Server, der sehr sicher ist. Solche Server sind vor Penetrations Angriffen oder Datenschutzverletzungen geschützt.
+title: Wie sicher ist mein RPC-Server jetzt?
+description: Die In diesem Abschnitt beschriebene Sicherheit, die an anderer Stelle im RPC SDK bereitgestellt und allgemein als ordnungsgemäße Sicherheitsmethoden akzeptiert wird, führt zu einem Server, der sehr sicher ist. Solche Server sind vor Penetrationsangriffen oder Datenschutzverletzungen geschützt.
 ms.assetid: 528ff35c-f37c-43d8-8cc1-dbc36a9a826c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 34279e4fb8899db6b7e980a0e868e91c6edb8166
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 90647852d237f02a15db6900d234d7cc78979f7c7681c67cfe9620adf17634bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947767"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118929507"
 ---
-# <a name="how-secure-is-my-rpc-server-now"></a>Wie sicher ist jetzt der RPC-Server?
+# <a name="how-secure-is-my-rpc-server-now"></a>Wie sicher ist mein RPC-Server jetzt?
 
-Nach der in diesem Abschnitt beschriebenen Sicherheit, die an anderer Stelle im RPC SDK bereitgestellt wird und in der Regel als ordnungsgemäße Sicherheitspraktiken akzeptiert wird, führt dies zu einem Server, der sehr sicher ist. Solche Server sind vor Penetrations Angriffen oder Datenschutzverletzungen geschützt.
+Die In diesem Abschnitt beschriebene Sicherheit, die an anderer Stelle im RPC SDK bereitgestellt und allgemein als ordnungsgemäße Sicherheitsmethoden akzeptiert wird, führt zu einem Server, der sehr sicher ist. Solche Server sind vor Penetrationsangriffen oder Datenschutzverletzungen geschützt.
 
-Wenn der Status zwischen RPC-Aufrufen beibehalten wird, stellen Sie sicher, dass ein einzelner Client nicht die Zuordnung von übermäßigen Ressourcen verursacht, wodurch der Dienst für andere Clients möglicherweise verweigert wird.
+Wenn der Zustand zwischen RPC-Aufrufen beibehalten wird, stellen Sie sicher, dass ein einzelner Client nicht die Zuordnung übermäßiger Ressourcen verursacht, wodurch der Dienst möglicherweise anderen Clients verweigert wird.
 
- 
+ 
 
- 
+ 
 
 
 

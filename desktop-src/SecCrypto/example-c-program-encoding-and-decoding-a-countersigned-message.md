@@ -1,19 +1,19 @@
 ---
-description: Zeigt, wie Sie eine gegen signierte Nachricht codieren und decodieren. In diesem Beispiel wird die mylenker Error-Beispiel Funktion verwendet. Der Code für die mylenker Error-Funktion und andere Hilfsfunktionen ist auch unter universell Funktionen aufgeführt.
+description: Zeigt, wie eine Gegensignierte Nachricht codiert und decodiert wird. In diesem Beispiel wird die Beispielfunktion MyHandleError verwendet. Der Code für die MyHandleError-Funktion und andere Hilfsfunktionen ist ebenfalls unter Universell Aufgeführt.
 ms.assetid: 12930d4d-2ea5-4d95-b9cf-4f0dd351ce05
-title: 'Beispiel-C-Programm: Codieren und Decodieren einer gegen signierten Nachricht'
+title: 'Beispiel C-Programm: Codieren und Decodieren einer Nachricht mit Gegenzeichen'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eb5f0c87e861c9c9c85ce22624642318b841a13f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 47cc8ff4528029e868ea5472720f00ccd9e2373ea121eed07f6d726d17ec8d9f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369740"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007728"
 ---
-# <a name="example-c-program-encoding-and-decoding-a-countersigned-message"></a>Beispiel-C-Programm: Codieren und Decodieren einer gegen signierten Nachricht
+# <a name="example-c-program-encoding-and-decoding-a-countersigned-message"></a>Beispiel C-Programm: Codieren und Decodieren einer Nachricht mit Gegenzeichen
 
-Im folgenden Beispiel wird gezeigt, wie Sie eine gegen signierte Nachricht codieren und decodieren. In diesem Beispiel wird die [**mylenker Error**](myhandleerror.md) -Beispiel Funktion verwendet. Der Code für die **mylenker Error** -Funktion und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+Im folgenden Beispiel wird gezeigt, wie eine gegensignierte Nachricht codiert und decodiert wird. In diesem Beispiel wird die [**MyHandleError-Beispielfunktion**](myhandleerror.md) verwendet. Der Code für die **MyHandleError-Funktion** und andere Hilfsfunktionen ist auch unter Universell [Functions aufgeführt.](general-purpose-functions.md)
 
 
 ```C++

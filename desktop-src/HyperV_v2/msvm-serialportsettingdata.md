@@ -14,14 +14,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 21a1ab58608c5631a328795272d6a04aa56aedf2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c7365ee67cdcf3f9046ac162f36a909f54da5ab4b9683f801827213d43d0fb79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865512"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950559"
 ---
-# <a name="msvm_serialportsettingdata-class"></a>MSVM \_ serialportsettingdata-Klasse
+# <a name="msvm_serialportsettingdata-class"></a>Msvm \_ SerialPortSettingData-Klasse
 
 Beschreibt die Einstellungsdaten für einen virtuellen seriellen Anschluss.
 
@@ -39,26 +39,26 @@ class Msvm_SerialPortSettingData : CIM_ResourceAllocationSettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ serialportsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ SerialPortSettingData-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ serialportsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ SerialPortSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Debuggermode**
+**DebuggerMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-**true** , wenn der Debuggermodus auf einem virtuellen seriellen Anschluss aktiviert ist. andernfalls **false**. Der Debugger-Modus verbessert die Verwendung eines Microsoft Windows-Kernel Debuggers über einen virtuellen seriellen Anschluss.
+**TRUE,** wenn der Debuggermodus an einem virtuellen seriellen Port aktiviert ist. andernfalls **FALSE.** Der Debuggermodus verbessert die Verwendung eines Microsoft Windows Kerneldebuggers über einen virtuellen seriellen Port.
 
 </dd> </dl>
 
@@ -68,10 +68,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -80,7 +80,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[**CIM \_ resourcezubesettingdata**](cim-resourceallocationsettingdata.md)
+[**CIM \_ ResourceAllocationSettingData**](cim-resourceallocationsettingdata.md)
 </dt> </dl>
 
  

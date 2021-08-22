@@ -1,8 +1,8 @@
 ---
-description: Mit der DELETE WMI class-Methode wird die im Objekt Pfad angegebene logische Datei (oder das Verzeichnis) gelöscht.
+description: Die Delete WMI-Klassenmethode löscht die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist.
 ms.assetid: 5663b8a8-3089-475b-8a36-454a7315bfca
 ms.tgt_platform: multiple
-title: Delete-Methode der Win32_Directory-Klasse
+title: Delete-Methode der Win32_Directory Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 843583698c11c1b9ad8f08e83aa6e4b894b55db8
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 2966751c822213025d7107e4eff055900e6c8102711b66329e6f3c4fcbe1ed02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118676696"
 ---
-# <a name="delete-method-of-the-win32_directory-class"></a>Delete-Methode der Win32- \_ Verzeichnis Klasse
+# <a name="delete-method-of-the-win32_directory-class"></a>Delete-Methode der Win32 \_ Directory-Klasse
 
-Mit der **Delete** [WMI class](/windows/desktop/WmiSdk/retrieving-a-class) -Methode wird die im Objekt Pfad angegebene logische Datei (oder das Verzeichnis) gelöscht.
+Die **Delete** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) löscht die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert 0 (null) zurück, wenn die Datei erfolgreich gelöscht wurde, und jede andere Zahl gibt einen Fehler an.
+Gibt den Wert 0 (null) zurück, wenn die Datei erfolgreich gelöscht wurde, und eine beliebige andere Zahl, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -63,7 +63,7 @@ Der Zugriff wurde verweigert.
 **8**
 </dt> <dd>
 
-Ein nicht angegebener Fehler ist aufgetreten.
+Es ist ein nicht angegebener Fehler aufgetreten.
 
 </dd> <dt>
 
@@ -112,7 +112,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist eine Freigabe Verletzung aufgetreten.
+Es ist ein Freigabeverstoß vor worden.
 
 </dd> <dt>
 
@@ -126,7 +126,7 @@ Die angegebene Startdatei war ungültig.
 **17**
 </dt> <dd>
 
-Eine für den Vorgang erforderliche Berechtigung wird nicht aufrechterhalten.
+Für den Vorgang ist keine Berechtigung erforderlich.
 
 </dd> <dt>
 
@@ -137,17 +137,17 @@ Ein angegebener Parameter ist ungültig.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ordner sind nicht notwendigerweise permanente Ergänzungen zu einem Dateisystem. Manchmal müssen Ordner gelöscht werden, da Sie möglicherweise nicht mehr benötigt werden, da sich die Rolle des Computers geändert hat oder die Ordner versehentlich erstellt wurden.
+Ordner sind nicht unbedingt dauerhafte Ergänzungen zu einem Dateisystem. Zu einem bestimmten Zeitpunkt müssen Ordner möglicherweise gelöscht werden, z. B. weil sie nicht mehr benötigt werden, weil sich die Rolle des Computers geändert hat oder weil die Ordner aus Versehen erstellt wurden.
 
-Löschen ermöglicht es Ihnen, Ordner zu löschen: Sie binden einfach an den fraglichen Ordner und dann die Delete-Methode. Nachdem die Delete-Methode aufgerufen wurde, wird der Ordner dauerhaft aus dem Dateisystem entfernt. Er wird nicht an den Papierkorb gesendet. Außerdem wird keine Bestätigung angezeigt ("möchten Sie diesen Ordner wirklich löschen?"). Stattdessen wird der Ordner sofort entfernt.
+Mit delete können Sie Ordner löschen: Sie binden einfach an den in Frage gestellten Ordner und rufen dann die Delete-Methode auf. Nachdem die Delete-Methode aufgerufen wurde, wird der Ordner dauerhaft aus dem Dateisystem entfernt. es wird nicht an die Papierkorb. Darüber hinaus wird kein Bestätigungshinweis ("Möchten Sie diesen Ordner wirklich löschen?") ausgegeben. Stattdessen wird der Ordner sofort entfernt.
 
-Sie können schreibgeschützte Ordner nicht mithilfe von FileSystemObject löschen. Dies kann jedoch mithilfe von WMI erfolgen. Wenn das Skript WMI verwendet und Sie keinen schreibgeschützten Ordner entfernen möchten, müssen Sie die lesbare Eigenschaft verwenden, um den Ordner Status zu überprüfen, bevor Sie ihn löschen.
+Sie können schreibgeschützte Ordner nicht mit fileSystemObject löschen. Dies kann jedoch mithilfe von WMI erfolgen. Wenn Ihr Skript WMI verwendet und Sie keinen schreibgeschützten Ordner entfernen möchten, müssen Sie die Eigenschaft Lesbar verwenden, um den Ordnerstatus zu überprüfen, bevor Sie ihn löschen.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende VBScript-Codebeispiel löscht den Ordner C: \\ Scripts.
+Im folgenden VBScript-Codebeispiel wird der Ordner C: \\ Skripts gelöscht.
 
 
 ```VB
@@ -172,20 +172,20 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Verzeichnis**](win32-directory.md)
+[**Win32-Verzeichnis \_**](win32-directory.md)
 </dt> </dl>
 
  

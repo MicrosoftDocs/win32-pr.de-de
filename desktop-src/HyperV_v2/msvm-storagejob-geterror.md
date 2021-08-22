@@ -1,5 +1,5 @@
 ---
-description: 'GetError-Methode der Msvm_StorageJob Klasse: Ruft den Fehler ab.'
+description: 'GetError-Methode der Msvm_StorageJob-Klasse: Ruft den Fehler ab.'
 ms.assetid: 785b83c4-06f4-46b5-81f7-35c6fce16c92
 title: GetError-Methode der Msvm_StorageJob-Klasse
 ms.topic: reference
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 00434ef529b7f26755f52833ff6f37310c7dc210
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: fcce1fc0f854e0e40d62e6f9335412bb7b7c93fbc3f212cbdae27ddbc2f3e94b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950198"
 ---
 # <a name="geterror-method-of-the-msvm_storagejob-class"></a>GetError-Methode der Msvm \_ StorageJob-Klasse
 
@@ -70,7 +70,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger** Parameter (32773)
+**Ungültiger Parameter** (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
@@ -92,17 +92,17 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

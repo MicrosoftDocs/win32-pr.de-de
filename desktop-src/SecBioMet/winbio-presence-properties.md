@@ -1,10 +1,10 @@
 ---
-title: WINBIO_PRESENCE_PROPERTIES Union (winbio \_ types. h)
-description: Enthält biometrische Werte, die der Windows-Biometrieframework, um zu bestimmen, ob eine Person vorhanden war.
+title: WINBIO_PRESENCE_PROPERTIES Union (Winbio \_ types.h)
+description: Enthält biometrische Werte, die das Windows biometrische Framework verwendet hat, um zu bestimmen, ob eine Person vorhanden war.
 ms.assetid: 596CAA7F-35D2-442A-8041-BA1010DF5BAD
 keywords:
-- WINBIO_PRESENCE_PROPERTIES Union Windows-Biometrieframework-API
-- PWINBIO_PRESENCE_PROPERTIES Union-Zeiger Windows-Biometrieframework-API
+- WINBIO_PRESENCE_PROPERTIES union Windows Biometric Framework-API
+- PWINBIO_PRESENCE_PROPERTIES Union-Zeiger Windows Biometrieframework-API
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d0568008b870953c34205706acc90cb22a2c0e92
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6a3964883f5dcd5b00c6f3eb6929c9deec99e58db014d18e51a192180a4d11f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118909655"
 ---
-# <a name="winbio_presence_properties-union"></a>Winbio- \_ Anwesenheits \_ Eigenschaften Union
+# <a name="winbio_presence_properties-union"></a>WINBIO \_ PRESENCE \_ PROPERTIES union
 
-Enthält biometrische Werte, die der Windows-Biometrieframework, um zu bestimmen, ob eine Person vorhanden war.
+Enthält biometrische Werte, die das Windows biometrische Framework verwendet hat, um zu bestimmen, ob eine Person vorhanden war.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,70 +51,70 @@ typedef union _WINBIO_PRESENCE_PROPERTIES {
 
 <dl> <dt>
 
-**Fakialfeatures**
+**Gesichtsfeatures**
 </dt> <dd>
 
-Werte für den Speicherort der Gesichts Features, die der Windows-Biometrieframework, um zu bestimmen, ob eine Person vorhanden war.
+Werte für den Ort der Gesichtsfeatures, die das Windows biometrische Framework verwendet hat, um zu bestimmen, ob eine Person vorhanden war.
 
 <dl> <dt>
 
-**BoundingBox**
+**Boundingbox**
 </dt> <dd>
 
-Die Position innerhalb des Kamera Rahmens der Vorderseite der Person in Pixel. Die Größe des Kamera Rahmens bestimmt die Obergrenze für die Anzahl der Pixel für diese Position. Die Eigenschaft " **\_ \_ erweiterter \_ Sensor \_ Info" der winbio-Eigenschaft** zum Bestimmen der Größe des Kamera Rahmens. Ein Client, der den Anwesenheits Monitor verwendet, muss den Skalierungs Vorgang ausführen, um die Position dem Kamera Rahmen zuzuordnen.
+Die Position innerhalb des Kamerarahmens des Gesichts der Einzelperson in Pixel. Die Größe des Kamerarahmens bestimmt die Obergrenze für die Anzahl von Pixeln für diese Position. Verwenden Sie die **WINBIO \_ PROPERTY EXTENDED SENSOR \_ \_ \_ INFO-Eigenschaft,** um die Größe des Kamerarahmens zu bestimmen. Ein Client, der den Anwesenheitsmonitor verwendet, muss den Skalierungsvorgang ausführen, um die Position dem Kamerarahmen zuordnen zu können.
 
 </dd> <dt>
 
 **Entfernung**
 </dt> <dd>
 
-Der Abstand zwischen dem tatsächlichen Speicherort der Vorderseite und dem idealen Fokusabstand für das Gesicht. Dieser Wert liegt zwischen-100 und 100. 0 gibt die ideale Entfernung an, positive Werte geben an, dass der tatsächliche Speicherort der Fläche zu weit entfernt ist, und negative Werte geben an, dass der tatsächliche Speicherort zu nah ist.
+Der Abstand zwischen der tatsächlichen Position des Gesichts und dem idealen Fokusabstand für das Gesicht. Dieser Wert liegt zwischen -100 und 100. 0 gibt den idealen Abstand an, positive Werte geben an, dass die tatsächliche Position des Gesichts zu weit entfernt ist, und negative Werte zeigen an, dass die tatsächliche Position zu nah ist.
 
 </dd> </dl> </dd> <dt>
 
-**Augen**
+**Iris**
 </dt> <dd>
 
-Werte für Iris-Speicherort, die der Windows-Biometrieframework, um zu bestimmen, ob eine Person vorhanden war.
+Werte für den Iris-Standort, Windows biometrisches Framework verwendet wurde, um zu bestimmen, ob eine Person vorhanden war.
 
 <dl> <dt>
 
-**Eyeboundingbox \_ 1**
+**EyeBoundingBox \_ 1**
 </dt> <dd>
 
-Die Position innerhalb des Kamera Rahmens einer der Irises der zu registrierenden Person in Pixel. Wenn das Schwert Erkennungssystem nur ein Auge überwacht, liegt diese Position in der Schwert Position. Wenn das Schwert Erkennungssystem beide Augen überwacht, aber nur ein Auge im Kamera Rahmen ist, ist diese Position der Schwert im Kamera-Frame. Wenn das Schwert Erkennungssystem beide Augen überwacht und beide Augen im Kamera Rahmen sind, ist diese Position wahrscheinlich die Schwert Ecke der Person.
+Die Position innerhalb des Kamerarahmens einer der Iris der zu registrierenden Person in Pixel. Wenn das Iriserkennungssystem nur ein Auge überwacht, ist diese Position die Iris dieses Auges. Wenn das Iriserkennungssystem beide Augen überwacht, sich aber nur ein Auge im Kamerarahmen befindet, ist diese Position die Iris des Auges im Kamerarahmen. Wenn das Iriserkennungssystem beide Augen überwacht und sich beide Augen im Kamerarahmen befinden, ist diese Position wahrscheinlich die Iris des rechten Auges der Person.
 
-Die Größe des Kamera Rahmens bestimmt die Obergrenze für die Anzahl der Pixel für diese Position. Die Eigenschaft " **\_ \_ erweiterter \_ Sensor \_ Info" der winbio-Eigenschaft** zum Bestimmen der Größe des Kamera Rahmens. Ein Client, der den Anwesenheits Monitor verwendet, muss den Skalierungs Vorgang ausführen, um die Position dem Kamera Rahmen zuzuordnen.
+Die Größe des Kamerarahmens bestimmt die Obergrenze für die Anzahl von Pixeln für diese Position. Verwenden Sie die **WINBIO \_ PROPERTY EXTENDED SENSOR \_ \_ \_ INFO-Eigenschaft,** um die Größe des Kamerarahmens zu bestimmen. Ein Client, der den Anwesenheitsmonitor verwendet, muss den Skalierungsvorgang ausführen, um die Position dem Kamerarahmen zuordnen zu können.
 
 </dd> <dt>
 
-**Eyeboundingbox \_ 2**
+**EyeBoundingBox \_ 2**
 </dt> <dd>
 
-Die Position innerhalb des Kamera Rahmens einer der Irises der zu registrierenden Person in Pixel. Wenn das Schwert Erkennungssystem nur ein Auge überwacht oder sich nur ein Auge im Kamera Rahmen befindet, ist dieser Wert leer. Wenn das Schwert Erkennungssystem beide Augen überwacht und beide Augen im Kamera Rahmen sind, ist diese Position wahrscheinlich die Schwert Ecke der Person.
+Die Position innerhalb des Kamerarahmens einer der Iris der zu registrierenden Person in Pixel. Wenn das Iriserkennungssystem nur ein Auge überwacht oder sich nur ein Auge im Kamerarahmen befindet, ist dieser Wert leer. Wenn das Iriserkennungssystem beide Augen überwacht und sich beide Augen im Kamerarahmen befinden, ist diese Position wahrscheinlich die Iris des linken Auges der Person.
 
-Die Größe des Kamera Rahmens bestimmt die Obergrenze für die Anzahl der Pixel für diese Position. Die Eigenschaft " **\_ \_ erweiterter \_ Sensor \_ Info" der winbio-Eigenschaft** zum Bestimmen der Größe des Kamera Rahmens. Ein Client, der den Anwesenheits Monitor verwendet, muss den Skalierungs Vorgang ausführen, um die Position dem Kamera Rahmen zuzuordnen.
+Die Größe des Kamerarahmens bestimmt die Obergrenze für die Anzahl von Pixeln für diese Position. Verwenden Sie die **WINBIO \_ PROPERTY EXTENDED SENSOR \_ \_ \_ INFO-Eigenschaft,** um die Größe des Kamerarahmens zu bestimmen. Ein Client, der den Anwesenheitsmonitor verwendet, muss den Skalierungsvorgang ausführen, um die Position dem Kamerarahmen zuordnen zu können.
 
 </dd> <dt>
 
-**Pupilcenter \_ 1**
+**Center \_ 1**
 </dt> <dd>
 
-Die Position der Mitte eines der zu registrierenden Schüler und/oder der zu registrierenden Person. Wenn das Schwert Erkennungssystem nur ein Auge überwacht, liegt diese Position in der Mitte der Schülerin dieses Auges. Wenn das Schwert Erkennungssystem beide Augen überwacht, sich aber nur ein Auge im Kamera Rahmen befindet, liegt diese Position in der Mitte der Schülerin des Augen Bilds. Wenn das Schwert Erkennungssystem beide Augen überwacht und beide Augen sich im Kamera Rahmen befinden, liegt diese Position wahrscheinlich in der Mitte des Schülers der Person.
+Die Position des Mittelpunkts eines der zu registrierenden Personen. Wenn das Iriserkennungssystem nur ein Auge überwacht, befindet sich diese Position in der Mitte des Auges. Wenn das Iriserkennungssystem beide Augen überwacht, sich aber nur ein Auge im Kamerarahmen befindet, befindet sich diese Position in der Mitte des Auges im Kamerarahmen. Wenn das Iriserkennungssystem beide Augen überwacht und sich beide Augen im Kamerarahmen befinden, liegt diese Position wahrscheinlich in der Mitte des Rechten Auges des Einzelnen.
 
 </dd> <dt>
 
-**Pupilcenter \_ 2**
+**Center \_ 2**
 </dt> <dd>
 
-Die Position der Mitte eines der zu registrierenden Schüler und/oder der zu registrierenden Person. Wenn das Schwert Erkennungssystem nur ein Auge überwacht oder sich nur ein Auge im Kamera Rahmen befindet, ist dieser Wert leer. Wenn das Schwert Erkennungssystem beide Augen überwacht und beide Augen sich im Kamera Rahmen befinden, liegt diese Position wahrscheinlich in der Mitte der Schülerin des linken Auges der Person.
+Die Position des Mittelpunkts eines der zu registrierenden Personen. Wenn das Iriserkennungssystem nur ein Auge überwacht oder sich nur ein Auge im Kamerarahmen befindet, ist dieser Wert leer. Wenn das Iriserkennungssystem beide Augen überwacht und sich beide Augen im Kamerarahmen befinden, liegt diese Position wahrscheinlich in der Mitte des Linken Auges der Person.
 
 </dd> <dt>
 
 **Entfernung**
 </dt> <dd>
 
-Der Abstand zwischen dem tatsächlichen Speicherort der Iris und dem idealen Fokusabstand für die Iris. Dieser Wert liegt zwischen-100 und 100. 0 gibt die ideale Entfernung an, positive Werte geben an, dass der tatsächliche Speicherort der IRIS zu weit entfernt ist, und negative Werte geben an, dass der tatsächliche Speicherort zu nah ist.
+Der Abstand zwischen der tatsächlichen Position der Iris und dem idealen Fokusabstand für die Iris. Dieser Wert liegt zwischen -100 und 100. 0 gibt den idealen Abstand an, positive Werte geben an, dass die tatsächliche Position der Iris zu weit entfernt ist, und negative Werte zeigen an, dass die tatsächliche Position zu nah ist.
 
 </dd> </dl> </dd> </dl>
 
@@ -124,9 +124,9 @@ Der Abstand zwischen dem tatsächlichen Speicherort der Iris und dem idealen Fok
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                                                                                                     |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h für Client Anwendungen oder winbio \_ Adapters. h für Adapter)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                                                                                                     |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (winbio.h für Clientanwendungen oder Winbio \_ adapters.h für Adapter enthalten)</dt> </dl> |
 
 
 

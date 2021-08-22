@@ -1,23 +1,23 @@
 ---
-title: Dadd (SM5-ASM)
-description: Komponenten weises addieren mit doppelter Genauigkeit.
+title: dadd (sm5 - asm)
+description: Komponentenweises Hinzufügen mit doppelter Genauigkeit.
 ms.assetid: 416F1103-E27B-4AFC-9ED1-492FF8A93492
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0e217a03a5ba9e4da0d365bbfd15e4283f1a69cb
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 4e382ea2660b587a843ecca4c3bae93251a5f9434bd2cdca5899beaf25bb2fd7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389499"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118793528"
 ---
-# <a name="dadd-sm5---asm"></a>Dadd (SM5-ASM)
+# <a name="dadd-sm5---asm"></a>dadd (sm5 - asm)
 
-Komponenten weises addieren mit doppelter Genauigkeit.
+Komponentenweises Hinzufügen mit doppelter Genauigkeit.
 
 
 
-| Dadd \[ \_ Sat \] dest \[ . mask \] , \[ - \] src0 \[ \_ ABS \] \[ . Swizzle \] , \[ - \] Quelle1 \[ \_ ABS \] \[ . Swizzle\] |
+| dadd \[ \_ sat \] dest \[ .mask \] , \[ - \] src0 \[ \_ abs \] \[ .swizzle \] , \[ - \] src1 abs \[ \_ \] \[ .swizzle\] |
 |---------------------------------------------------------------------------------------------|
 
 
@@ -26,27 +26,27 @@ Komponenten weises addieren mit doppelter Genauigkeit.
 
 
 
-| Element                                                            | BESCHREIBUNG                                                   |
+| Element                                                            | Beschreibung                                                   |
 |-----------------------------------------------------------------|---------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[in \] der Adresse des Vorgangs Ergebnisses.<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] den Komponenten, die mit *Quelle1* hinzugefügt werden sollen.<br/>          |
-| <span id="src1"></span><span id="SRC1"></span>*Quelle1*<br/> | \[in \] den Komponenten, die mit *src0* hinzugefügt werden sollen<br/>           |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Die Adresse des Ergebnisses des Vorgangs.<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Komponenten, die mit *src1 hinzugefügt werden.*<br/>          |
+| <span id="src1"></span><span id="SRC1"></span>*src1*<br/> | \[in The components to add with src0 (Die \] komponenten, die mit *src0 hinzugefügt werden)*<br/>           |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die gültigen Werte für die Quellparameter lauten ". xyzw", ". xyxy", ". zwxy", ". zwzw". Die gültigen *dest* -Masken sind. XY,. zw und. xyzw. Die folgenden Zuordnungen sind Post-Swizzle:
+Die gültigen Swizzles für die Quellparameter sind .xyzw, .xyxy, .zwxy, .zwzw. Die *gültigen Destmasken* sind .xy, .zw und .xyzw. Die folgenden Zuordnungen sind post swizzle:
 
--   *dest* ist eine doppelte vec2 über (x 32lsb, y 32msb) und (z 32lsb, w 32msb).
--   *src0* ist ein doppeltes vec2 über (x 32lsb, y 32msb) und (z 32lsb, w 32msb).
--   *Quelle1* ist ein doppeltes vec2 über (x 32lsb, y 32msb) und (z 32lsb, w 32msb).
+-   *dest* ist ein double vec2 über (x 32LSB, y 32MSB) und (z 32LSB, w 32MSB).
+-   *src0* ist ein double vec2 über (x 32LSB, y 32MSB) und (z 32LSB, w 32MSB).
+-   *src1* ist ein double-vec2 zwischen (x 32LSB, y 32MSB) und (z 32LSB, w 32MSB).
 
-In der folgenden Tabelle werden die Ergebnisse angezeigt, die bei der Ausführung der Anweisung mit verschiedenen Klassen von Zahlen erzielt wurden, vorausgesetzt, dass weder ein Überlauf noch ein Unterlauf auftritt
+Die folgende Tabelle zeigt die Ergebnisse, die beim Ausführen der Anweisung mit verschiedenen Zahlenklassen erzielt werden, vorausgesetzt, dass weder ein Überlauf noch ein Unterlauf auftritt.
 
-F bedeutet eine endliche reelle Zahl.
+F bedeutet endliche reale Zahl.
 
 
 
@@ -54,18 +54,18 @@ F bedeutet eine endliche reelle Zahl.
 <tbody>
 <tr class="odd">
 <td><dl> <strong>src0</strong><br />
-<strong>Quelle1-></strong><br />
+<strong>src1-></strong><br />
 </dl></td>
-<td><strong>-INF</strong></td>
+<td><strong>-inf</strong></td>
 <td><strong>-F</strong></td>
 <td><strong>-0</strong></td>
 <td><strong>+0</strong></td>
-<td><strong>+ F</strong></td>
-<td><strong>+ INF</strong></td>
+<td><strong>+F</strong></td>
+<td><strong>+inf</strong></td>
 <td><strong>NaN</strong></td>
 </tr>
 <tr class="even">
-<td><strong>-INF</strong></td>
+<td><strong>-inf</strong></td>
 <td>-inf</td>
 <td>-inf</td>
 <td>-inf</td>
@@ -105,17 +105,17 @@ F bedeutet eine endliche reelle Zahl.
 <td>NaN</td>
 </tr>
 <tr class="even">
-<td><strong>+ F</strong></td>
+<td><strong>+F</strong></td>
 <td>-inf</td>
 <td>+-F oder +-0</td>
 <td>src0</td>
 <td>src0</td>
-<td>+ F</td>
+<td>+F</td>
 <td>+inf</td>
 <td>NaN</td>
 </tr>
 <tr class="odd">
-<td><strong>+ INF</strong></td>
+<td><strong>+inf</strong></td>
 <td>NaN</td>
 <td>+inf</td>
 <td>+inf</td>
@@ -141,11 +141,11 @@ F bedeutet eine endliche reelle Zahl.
 
  
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -153,20 +153,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -176,7 +176,7 @@ Diese Anweisung wird in den folgenden shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

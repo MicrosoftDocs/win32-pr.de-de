@@ -1,6 +1,6 @@
 ---
 title: RGBA-Modus und Windows Palettenverwaltung
-description: Während die meisten GDI-Anwendungen die Farbindizierung mit logischen Paletten verwenden, ist der RGBA-Modus in der Regel für OpenGL-Anwendungen vorzuziehen. Es funktioniert besser als die Farbzuordnung für verschiedene Effekte, z. B. Schattierung, Beleuchtung, Beleuchtung und Texturzuordnung.
+description: Während die meisten GDI-Anwendungen die Farbindizierung mit logischen Paletten verwenden, ist der RGBA-Modus für OpenGL-Anwendungen in der Regel vorzuziehen. Es funktioniert besser als die Farbzuordnung für verschiedene Effekte, z. B. Schattierung, Beleuchtung, Oberfläche und Texturzuordnung.
 ms.assetid: 68c35173-e792-4770-9404-5503344f475b
 keywords:
 - OpenGL im Windows,RGBA-Modus
@@ -18,19 +18,19 @@ ms.locfileid: "118932952"
 ---
 # <a name="rgba-mode-and-windows-palette-management"></a>RGBA-Modus und Windows Palettenverwaltung
 
-Während die meisten GDI-Anwendungen die Farbindizierung mit logischen Paletten verwenden, ist der RGBA-Modus in der Regel für OpenGL-Anwendungen vorzuziehen. Es funktioniert besser als die Farbzuordnung für verschiedene Effekte, z. B. Schattierung, Beleuchtung, Beleuchtung und Texturzuordnung.
+Während die meisten GDI-Anwendungen die Farbindizierung mit logischen Paletten verwenden, ist der RGBA-Modus für OpenGL-Anwendungen in der Regel vorzuziehen. Es funktioniert besser als die Farbzuordnung für verschiedene Effekte, z. B. Schattierung, Beleuchtung, Oberfläche und Texturzuordnung.
 
-Der RGBA-Modus verwendet Rot-, Grün- und Blau-Farbwerte (R, G und B), die zusammen die Farbe der einzelnen Pixel in der Anzeige angeben. Die R-, G- und B-Werte geben die Intensität jeder Farbe (Rot, Grün und Blau) an. Die Werte reichen von 0,0 (am wenigsten intensiv) bis 1,0 (am intensivsten). Die Anzahl der Bits für jede Komponente variiert je nach verwendeter Hardware (2, 3, 5, 6 und 8 Bits sind möglich). Die angezeigte Farbe ist ein Ergebnis der Summe der drei Farbwerte. Wenn alle drei Werte 0,0 sind, ist das Ergebnis schwarz. Wenn alle drei Werte 1,0 sind, ist das Ergebnis weiß. Andere Farben sind das Ergebnis einer Kombination von Werten von R, G und B, die zwischen 0 und 1,0 liegen. Das A-Bit (Alpha) wird nicht zum Angeben der Farbe verwendet.
+Der RGBA-Modus verwendet Farbwerte für Rot, Grün und Blau (R, G und B), die zusammen die Farbe der einzelnen Pixel in der Anzeige angeben. Die R-, G- und B-Werte geben die Intensität jeder Farbe (rot, grün und blau) an. die Werte reichen von 0,0 (am wenigsten intensiv) bis 1,0 (intensivsten). Die Anzahl der Bits für jede Komponente variiert je nach verwendeter Hardware (2, 3, 5, 6 und 8 Bits sind möglich). Die angezeigte Farbe ist ein Ergebnis der Summe der drei Farbwerte. Wenn alle drei Werte 0,0 sind, ist das Ergebnis schwarz. Wenn alle drei Werte 1,0 sind, ist das Ergebnis weiß. Andere Farben sind das Ergebnis einer Kombination von Werten von R, G und B, die zwischen 0 und 1,0 liegen. Das A-Bit (Alpha) wird nicht zum Angeben der Farbe verwendet.
 
-Die Standardmäßige Super-VGA-Anzeige verwendet Paletten mit acht Farbbits pro Pixel. Die acht Bits werden aus dem Puffer gelesen und als Index in der Systempalette verwendet, um die R-, G- und B-Werte zu erhalten. Wenn eine RGB-Palette ausgewählt und in einem Gerätekontext realisiert wird, kann OpenGL im RGBA-Modus gerendert werden.
+Die VGA-Standardanzeige verwendet Paletten mit acht Farbbits pro Pixel. Die acht Bits werden aus dem Puffer gelesen und als Index in der Systempalette verwendet, um die R-, G- und B-Werte abzurufen. Wenn eine RGB-Palette ausgewählt und in einem Gerätekontext realisiert wird, kann OpenGL im RGBA-Modus gerendert werden.
 
-Da es acht Farbbits pro Pixel gibt, hebt OpenGL die Verwendung einer RGBA-Palette mit drei drei zwei Pixeln hervor. "Drei-Drei-Zwei" bezieht sich darauf, wie die Farbbitdaten von der Hardware oder der physischen Palette verarbeitet werden. Rot (R) und Grün (G) werden jeweils durch drei Bits angegeben. blue (B) wird durch zwei Bits angegeben. Rot ist das am wenigsten signifikante Bit, und Blau ist das wichtigste Bit.
+Da es acht Farbbits pro Pixel gibt, hebt OpenGL die Verwendung einer RGBA-Palette mit drei bis drei Zwei hervor. "Three-three-two" bezieht sich darauf, wie die Farbbitdaten von der Hardware oder physischen Palette verarbeitet werden. Rot (R) und Grün (G) werden jeweils durch drei Bits angegeben. Blau (B) wird durch zwei Bits angegeben. Rot ist das am wenigsten signifikante Bit, und Blau ist das wichtigste Bit.
 
 Sie bestimmen die Farben der logischen Palette Ihrer Anwendung mit [PALETTEENTRY-Strukturen.](/previous-versions//dd162769(v=vs.85)) In der Regel erstellen Sie ein Array von **PALETTEENTRY-Strukturen,** um die gesamte Paletteneintragstabelle der logischen Palette anzugeben.
 
-## <a name="rgba-mode-palette-sample"></a>Beispiel für rgba-Moduspalette
+## <a name="rgba-mode-palette-sample"></a>Beispiel für RGBA-Moduspalette
 
-Das folgende Codefragment zeigt, wie Sie eine RGBA-Palette mit drei drei zwei Farben erstellen können.
+Das folgende Codefragment zeigt, wie Sie eine RGBA-Palette mit drei bis zwei Rgba erstellen können.
 
 
 ```C++

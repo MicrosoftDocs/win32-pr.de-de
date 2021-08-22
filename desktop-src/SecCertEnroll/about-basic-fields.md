@@ -1,23 +1,23 @@
 ---
-description: Ein X. 509-Zertifikat der Version 1 enthält die folgenden Felder. Die Felder der Version 2 werden in den Feldern der Version 2 behandelt. Die Felder der Version 3 werden in den Erweiterungen der Version 3 erläutert.
+description: Ein X.509-Zertifikat der Version 1 enthält die folgenden Felder. Felder der Version 2 werden unter Felder der Version 2 erläutert. Felder der Version 3 werden unter Erweiterungen der Version 3 erläutert.
 ms.assetid: d614130c-cf1b-4580-8903-064982ed738e
 title: Grundlegende Felder
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ad24afa21787227b3fe47ab187a97c7886c9c9ae
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d3dae9ceaa3ddd1c4ac8a8ce86425ec32eee45e82ca8b437ed0f0c27f44817ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118905085"
 ---
 # <a name="basic-fields"></a>Grundlegende Felder
 
-Ein X. 509-Zertifikat der Version 1 enthält die folgenden Felder. Die Felder der Version 2 werden in den [Feldern der Version 2](about-version-2-fields.md)behandelt. Die Felder der Version 3 werden in den [Erweiterungen der Version 3](about-version-3-extensions.md)erläutert.
+Ein X.509-Zertifikat der Version 1 enthält die folgenden Felder. Felder der Version 2 werden unter [Felder der Version 2 erläutert.](about-version-2-fields.md) Felder der Version 3 werden unter [Erweiterungen der Version 3 erläutert.](about-version-3-extensions.md)
 
 ## <a name="version"></a>Version
 
-Gibt die Versionsnummer des codierten Zertifikats an. Derzeit sind die möglichen Werte für dieses Feld "0", "1" oder "2". Dies kann jedoch in Zukunft erweitert werden.
+Gibt die Versionsnummer des codierten Zertifikats an. Derzeit sind die möglichen Werte dieses Felds 0, 1 oder 2, aber dies kann in Zukunft erweitert werden.
 
 ``` syntax
 ---------------------------------------------------------------------
@@ -39,7 +39,7 @@ CertificateSerialNumber ::= INTEGER
 
 ## <a name="signature-algorithm"></a>Signaturalgorithmus
 
-Enthält einen [*Objekt Bezeichner*](/windows/desktop/SecGloss/o-gly) (OID), der den Algorithmus angibt, der von der Zertifizierungsstelle zum Signieren des Zertifikats verwendet wird. 1.2.840.113549.1.1.5 gibt beispielsweise einen SHA-1-Hashalgorithmus an, der mit dem RSA-Verschlüsselungsalgorithmus von RSA Laboratories kombiniert ist.
+Enthält einen [*Objektbezeichner*](/windows/desktop/SecGloss/o-gly) (OID), der den Algorithmus angibt, der von der Zertifizierungsstelle zum Signieren des Zertifikats verwendet wird. 1.2.840.113549.1.1.5 gibt beispielsweise einen SHA-1-Hashalgorithmus an, der mit dem RSA-Verschlüsselungsalgorithmus von RSA Laboratories kombiniert ist.
 
 ``` syntax
 ---------------------------------------------------------------------
@@ -56,7 +56,7 @@ AlgorithmIdentifier ::= SEQUENCE
 
 ## <a name="issuer"></a>Issuer (Aussteller)
 
-Enthält den [*X. 500*](/windows/desktop/SecGloss/x-gly) Distinguished Name (DN) der Zertifizierungsstelle, die das Zertifikat erstellt und signiert hat.
+Enthält den [*X.500-Distinguished*](/windows/desktop/SecGloss/x-gly) Name (DN) der Zertifizierungsstelle, die das Zertifikat erstellt und signiert hat.
 
 ``` syntax
 ---------------------------------------------------------------------
@@ -75,7 +75,7 @@ AttributeTypeValue ::= SEQUENCE
 
 ## <a name="validity"></a>Gültigkeitsdauer
 
-Gibt die Zeitspanne an, für die das Zertifikat gültig ist. Datumsangaben bis zum Ende 2049 verwenden das koordinierte Weltzeit (Greenwich Mean Time)-Format (*yymmddhhmmssZ*). Datumsangaben ab dem 1. Januar 2050 verwenden das verallgemeinerte Zeitformat (*yyyymmddhhmmssZ*).
+Gibt die Zeitspanne an, für die das Zertifikat gültig ist. Datumsangaben bis Ende 2049 verwenden das format koordinierte Weltzeit (Greenwich Mean Time) (*yymmddhhmmssz*). Datumsangaben ab dem 1. Januar 2050 verwenden das generalisierte Zeitformat (*yyyymmddhhmmssz*).
 
 ``` syntax
 ---------------------------------------------------------------------
@@ -94,7 +94,7 @@ ChoiceOfTime ::= CHOICE
 }
 ```
 
-## <a name="subject"></a>Subject
+## <a name="subject"></a>Gegenstand
 
 Enthält einen X.500-Distinguished Name der Entität, die dem öffentlichen Schlüssel im Zertifikat zugeordnet ist.
 
@@ -144,7 +144,7 @@ AlgorithmIdentifier ::= SEQUENCE
 [Erweiterungen der Version 3](about-version-3-extensions.md)
 </dt> <dt>
 
-[X. 509-Zertifikate für öffentliche Schlüssel](about-x-509-public-key-certificates.md)
+[Zertifikate mit öffentlichem X.509-Schlüssel](about-x-509-public-key-certificates.md)
 </dt> </dl>
 
  

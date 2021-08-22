@@ -1,52 +1,52 @@
 ---
-description: Gibt die Frame Typen (I, P oder B) an, auf die der quantifizierungsparameter (QP) angewendet wird.
+description: Gibt die Frametypen (I, P oder B) an, auf die der Quantisierungsparameter (QP) angewendet wird.
 ms.assetid: 6331033F-7EEB-41B3-B166-29686D4AADB6
-title: CODECAPI_AVEncVideoEncodeFrameTypeQP-Eigenschaft (codecapi. h)
+title: CODECAPI_AVEncVideoEncodeFrameTypeQP (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 76e68e0cb6cbdc076dbf523f3ae9dfd7b5870f47
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7e9ebd4a25f3779ce1c721eb3cb1188b487be4d313ae5dbeb02dd41e494f4c17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127976"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118743851"
 ---
-# <a name="codecapi_avencvideoencodeframetypeqp-property"></a>Codecapi \_ avencvideoencodeframetypeqp (Eigenschaft)
+# <a name="codecapi_avencvideoencodeframetypeqp-property"></a>CODECAPI \_ AVEncVideoEncodeFrameTypeQP (Eigenschaft)
 
-Gibt die Frame Typen (I, P oder B) an, auf die der quantifizierungsparameter (QP) angewendet wird.
+Gibt die Frametypen (I, P oder B) an, auf die der Quantisierungsparameter (QP) angewendet wird.
 
 ## <a name="data-type"></a>Datentyp
 
-**Ulongulong** (VT \_ UI8)
+**ULONGULONG** (VT \_ UI8)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencvideoencodeframetypeqp**
+**CODECAPI \_ AVEncVideoEncodeFrameTypeQP**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei Encodern, die das Festlegen eines quantisierungsparameters (QP) für verschiedene Frame Typen (I, P, B) unterstützen, müssen Sie diese API zusätzlich zu [codecapi \_ avencvideoencodeqp](codecapi-avencvideoencodeqp.md)verfügbar machen. Wenn ein Encoder nur ein einzelnes QP für alle Frame Typen unterstützt, darf er nur codecapi \_ avencvideoencodeqp unterstützen.
+Für Encoder, die das Festlegen eines Quantisierungsparameters (QP) für verschiedene Frametypen (I, P, B) unterstützen, müssen sie diese API zusätzlich zu [CODECAPI \_ AVEncVideoEncodeQP](codecapi-avencvideoencodeqp.md)verfügbar machen. Wenn ein Encoder nur einen einzelnen QP für alle Frametypen unterstützt, sollte er nur CODECAPI \_ AVEncVideoEncodeQP unterstützen.
 
-Dies ist eine dynamische Codierungs Eigenschaft, die bedeutet, dass ein neuer Wert während der Codierungs Sitzung jederzeit festgelegt werden kann.
+Dies ist eine dynamische Codierungseigenschaft, was bedeutet, dass ein neuer Wert jederzeit während der Codierungssitzung festgelegt werden kann.
 
-**H. 264/AVC-Encoder:**
+**H.264/AVC-Encoder:**
 
-Der Encoder muss " [**GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue)", " [**SetValue**](/windows/desktop/api/strmif/nf-strmif-icodecapi-setvalue)" und " [**getparameterrange**](/windows/desktop/api/strmif/nf-strmif-icodecapi-getparameterrange)" unterstützen.
+Der Encoder muss [**GetValue,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) [**SetValue**](/windows/desktop/api/strmif/nf-strmif-icodecapi-setvalue)und [**GetParameterRange unterstützen.**](/windows/desktop/api/strmif/nf-strmif-icodecapi-getparameterrange)
 
-Ein Satz von 4 16-Bit-Feldern wird verwendet, um die Frame-QPS in der Fixed-QP-Codierung anzugeben. Die Felder lauten:
+Ein Satz von vier 16-Bit-Feldern wird verwendet, um die Frame-QPs in der Fixed QP-Codierung anzugeben. Die Felder sind:
 
--   **Bits 0-15:** Für I-Frames verwendeter QP, gültiger Bereich von \[ 0, 51 \] .
--   **Bits 16-31:** Für P-Frames verwendeter QP, gültiger Bereich von \[ 0, 51 \] .
--   **Bits 32-47:** Für B-Frames verwendeter QP, gültiger Bereich von \[ 0, 51\]
+-   **Bits 0-15:** QP für I-Frames, gültiger Bereich \[ 0, 51 \] .
+-   **Bits 16-31:** QP für P-Frames, gültiger Bereich \[ 0, 51 \] .
+-   **Bits 32-47:** QP für B-Frames, gültiger Bereich \[ 0, 51\]
 -   **Bits 48-63:** reserviert
 
-Wenn diese codecapi unterstützt wird, unterstützen Encoder die QP-Einstellungen für den Frame-Typ I, P und B.
+Wenn diese CodecAPI unterstützt wird, müssen Encoder die QP-Einstellung für den Frametyp I, P und B unterstützen.
 
-Der Standardwert muss 0x0000001a001a001a lauten. QP ist gleich 26 für I, P und B.
+Der Standardwert muss 0x0000001a001a001a. QP entspricht 26 für I, P und B.
 
-Wenn [codecapi \_ avencvideoselectlayer](codecapi-avencvideoselectlayer.md) eine bestimmte temporale Ebene auswählt, muss [**SetValue**](/windows/desktop/api/strmif/nf-strmif-icodecapi-setvalue) von codecapi \_ avencvideoencodeframetypeqp QP für I-, P-und B-Frames auf dieser temporalen Ebene festlegen. Standardmäßig wird QP für I-, P-und B-Frames auf der temporalen Ebene 0 für temporale Temporale Ebenen festgelegt.
+Wenn [CODECAPI \_ AVEncVideoSelectLayer](codecapi-avencvideoselectlayer.md) eine bestimmte temporale Ebene auswählt, muss [**SetValue**](/windows/desktop/api/strmif/nf-strmif-icodecapi-setvalue) von CODECAPI \_ AVEncVideoEncodeFrameTypeQP QP für I-, P- und B-Frames auf dieser temporalen Ebene festlegen. Standardmäßig wird QP für I-, P- und B-Frames auf temporaler Basisebene temporaler Ebene 0 festgelegt.
 
-[Codecapi \_ Mithilfe von "avencvideomaxqp](codecapi-avencvideomaxqp.md) " und " [codecapi \_ avencvideominqp](codecapi-avencvideominqp.md) " können Sie den QP-Bereich für QPS aller Bildtypen (I, P und B) definieren und begrenzen.
+[CODECAPI \_ AVEncVideoMaxQP](codecapi-avencvideomaxqp.md) und [CODECAPI \_ AVEncVideoMinQP](codecapi-avencvideominqp.md) müssen verwendet werden, um den QP-Bereich für QPs aller Bildtypen I, P und B zu definieren und zu beschränken.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,17 +54,17 @@ Wenn [codecapi \_ avencvideoselectlayer](codecapi-avencvideoselectlayer.md) eine
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>                                   |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Desktop-Apps \| UWP-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

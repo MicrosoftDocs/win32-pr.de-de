@@ -1,11 +1,11 @@
 ---
-title: Getstreampropertiesoperation. GetResults-Methode
-description: Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von getstreampropertiesasync gestartet wurde.
+title: GetStreamPropertiesOperation.GetResults-Methode
+description: Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von GetStreamPropertiesAsync gestartet wurde.
 ms.assetid: D09DCDF5-2B9E-4E03-908B-AEEC7DC228C1
 keywords:
-- GetResults-Methode Medien Streaming-API
-- GetResults-Methode Medien Streaming-API, getstreampropertiesoperation-Schnittstelle
-- Getstreampropertiesoperation-Schnittstelle Medien Streaming-API, GetResults-Methode
+- 'GetResults-Methode: Media Streaming-API'
+- 'GetResults-Methode: Media Streaming-API, GetStreamPropertiesOperation-Schnittstelle'
+- GetStreamPropertiesOperation-Schnittstelle Media Streaming-API, GetResults-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 312703c28f5cdbb888b46d6ccd312dd358aa6b6b
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: b3520cc44919e9c606c6625c75193b5f1ab54f4005cc098316bd8769ad0e0fe7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118735821"
 ---
-# <a name="getstreampropertiesoperationgetresults-method"></a>Getstreampropertiesoperation. GetResults-Methode
+# <a name="getstreampropertiesoperationgetresults-method"></a>GetStreamPropertiesOperation.GetResults-Methode
 
-Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von [**getstreampropertiesasync**](/previous-versions/windows/desktop/legacy/hh829001(v=vs.85))gestartet wurde.
+Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von [**GetStreamPropertiesAsync gestartet wurde.**](/previous-versions/windows/desktop/legacy/hh829001(v=vs.85))
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,12 +41,12 @@ HRESULT GetResults(
 
 <dl> <dt>
 
-*Wert* \[ Out, retval\]
+*value* \[ out, retval\]
 </dt> <dd></dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -58,11 +58,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Getstreampropertiesoperation**](getstreampropertiesoperation.md)
+[**GetStreamPropertiesOperation**](getstreampropertiesoperation.md)
 </dt> </dl>
 
  

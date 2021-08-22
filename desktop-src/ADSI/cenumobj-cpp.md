@@ -1,41 +1,41 @@
 ---
-title: Cenumubj. CPP
-description: In der Beispiel Anbieter Komponente verwendet die-Enumeration eines Container Objekts die Routinen aus "cenumubj. cpp", die in der folgenden Tabelle aufgeführt sind.
+title: CENUMOBJ. Cpp
+description: In der Beispielanbieterkomponente verwendet die Enumeration eines Containerobjekts die Routinen aus cenumobj.cpp, die in der folgenden Tabelle aufgeführt sind.
 ms.assetid: 7166230d-0bf8-4f7d-9781-72f125a3dd21
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b7859571c7136cf1f8a2895b69fe7cdcdf07604
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: fad1e91a58080dc11f7d8da11f3e3fd59dc2ce75431ee2998d8d4e11011bbb32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103730193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119023678"
 ---
-# <a name="cenumobjcpp"></a>Cenumubj. CPP
+# <a name="cenumobjcpp"></a>CENUMOBJ. Cpp
 
-In der Beispiel Anbieter Komponente verwendet die-Enumeration eines Container Objekts die Routinen aus "cenumubj. cpp", die in der folgenden Tabelle aufgeführt sind.
+In der Beispielanbieterkomponente verwendet die Enumeration eines Containerobjekts die Routinen aus cenumobj.cpp, die in der folgenden Tabelle aufgeführt sind.
 
 
 
 | Methode                                                 | BESCHREIBUNG                                                                                                                                                           |
 |--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Csampledsgenobjectenum:: Create**                     | Erstellen Sie ein-Objekt, um die Enumeration generischer Active Directory Objekte zu aktivieren.                                                                                           |
-| **Csampledsgenobjectenum:: csampledsgenobjectenum**     | Initialisierung.                                                                                                                                                       |
-| **Csampledsgenobjectenum:: enumgenericobjects**         | Verwalten des Abrufens von Objekten.                                                                                                                                          |
-| **Csampledsgenobjectenum:: fetchobjects**               | Ruft die Menge der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Zeiger ab, die dem Filter entsprechen.                                                             |
-| **Csampledsgenobjectenum:: fetchnextobject**            | Rufen Sie ein-Objekt ab, und vergleichen Sie den Filter. Wenn er übereinstimmt, binden Sie ihn in das generische Objekt ein, und geben Sie einen [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Zeiger zurück |
-| **Csampledsgenobjectenum:: enumgenericobjects**         | Verwalten des Abrufens der Objekte.                                                                                                                                        |
-| **Csampledsgenobjectenum:: Next**                       | Ruft die angegebene Anzahl von Elementen aus dem angegebenen Enumerationsobjekt ab.                                                                                      |
-| **Csampledsgenobjectenum:: isvaliddsfilter**            | Überprüfen Sie, ob die Objektklasse mit einer in der Filterliste übereinstimmt                                                                                                              |
-| **Csampledsgenobjectenum:: builddsfilterarray**         | Verwalten des Filter Arrays.                                                                                                                                              |
-| **Csampledsgenobjectenum:: kreateandappendfilterentry** | Fügen Sie dem Filter eine neue Objektklasse hinzu, und legen Sie den Filter als zusammenhängend fest.                                                                                                |
-| **Freifilterlist**                                     | Freigeben Sie den Filter.                                                                                                                                                      |
+| **CSampleDSGenObjectEnum::Create**                     | Erstellen Sie ein -Objekt, um die Enumeration generischer Active Directory-Objekte zu aktivieren.                                                                                           |
+| **CSampleDSGenObjectEnum::CSampleDSGenObjectEnum**     | Initialisierung.                                                                                                                                                       |
+| **CSampleDSGenObjectEnum::EnumGenericObjects**         | Verwalten des Abrufens von Objekten.                                                                                                                                          |
+| **CSampleDSGenObjectEnum::FetchObjects**               | Ruft den Satz von [**IDispatch-Zeigern**](/windows/win32/api/oaidl/nn-oaidl-idispatch) ab, die mit dem Filter übereinstimmen.                                                             |
+| **CSampleDSGenObjectEnum::FetchNextObject**            | Rufen Sie ein Objekt ab, und stimmen Sie mit dem Filter überein. Wenn eine Übereinstimmung vorüber ist, umschließen Sie sie in einem generischen Objekt, und geben Sie einen [**IDispatch-Zeiger**](/windows/win32/api/oaidl/nn-oaidl-idispatch) zurück. |
+| **CSampleDSGenObjectEnum::EnumGenericObjects**         | Verwalten sie das Abrufen der Objekte.                                                                                                                                        |
+| **CSampleDSGenObjectEnum::Next**                       | Rufen Sie die angegebene Anzahl von Elementen aus dem angegebenen Enumerationsobjekt ab.                                                                                      |
+| **CSampleDSGenObjectEnum::IsValidDSFilter**            | Stellen Sie sicher, dass die Objektklasse mit einer in der Filterliste entspricht.                                                                                                              |
+| **CSampleDSGenObjectEnum::BuildDSFilterArray**         | Verwalten Sie das Filterarray.                                                                                                                                              |
+| **CSampleDSGenObjectEnum::CreateAndAppendFilterEntry** | Fügen Sie dem Filter eine neue Objektklasse hinzu, und legen Sie den Filter als zusammenhängend fest.                                                                                                |
+| **FreeFilterList**                                     | Geben Sie den Filter frei.                                                                                                                                                      |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

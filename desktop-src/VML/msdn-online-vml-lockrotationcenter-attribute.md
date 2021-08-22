@@ -1,44 +1,44 @@
 ---
-title: VML-lockrotationcenter-Attribut
-description: VML-lockrotationcenter-Attribut
+title: VML LockRotationCenter-Attribut
+description: VML LockRotationCenter-Attribut
 ms.assetid: 80b822d3-9122-475b-88ca-7019daa5de77
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e49dd6ccada3f713f1cf2384a96f131c9a7714db
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 7ef0cfee24998cfa343265569274ace688a05f90a270b721317394e59589a51e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118598058"
 ---
-# <a name="vml-lockrotationcenter-attribute"></a>VML-lockrotationcenter-Attribut
+# <a name="vml-lockrotationcenter-attribute"></a>VML LockRotationCenter-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob die Drehung des extrudierten Objekts durch das [RotationAngle](msdn-online-vml-rotationangle-attribute.md) -Attribut angegeben wird. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob die Drehung des gekergten Objekts durch das [RotationAngle-Attribut](msdn-online-vml-rotationangle-attribute.md) angegeben wird. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
-[Schläuche](msdn-online-vml-extrusion-element.md)
+[Extrusion](msdn-online-vml-extrusion-element.md)
 
 **Tagsyntax**
 
-<o: *Element* lockrotationcenter = " *Expression* " >
+<o: *element* lockrotationcenter=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . lockrotationcenter = "*Ausdruck*"
+*element* .lockrotationcenter="*expression*"
 
-*Ausdruck* = *Element*. lockrotationcenter
+*expression* = *Element*.lockrotationcenter
 
 **Anmerkungen**
 
-Wenn der Wert **false** ist, wird die Drehung durch das [Orientation](msdn-online-vml-orientation-attribute.md) -Attribut angegeben. Der Standardwert ist **True**.
+**False** gibt an, dass die Drehung durch das [Orientation-Attribut](msdn-online-vml-orientation-attribute.md) angegeben wird. Der Standardwert ist **True**.
 
 Beachten Sie dabei Folgendes:
 
@@ -60,6 +60,6 @@ der gleiche wie:
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

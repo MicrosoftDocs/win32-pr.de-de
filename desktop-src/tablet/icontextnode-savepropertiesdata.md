@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Bytearray ab, das die anwendungsspezifischen und internen Eigenschaften Daten für diesen icontextnode enthält.
+description: Ruft ein Bytearray ab, das die anwendungsspezifischen und internen Eigenschaftsdaten für diesen IContextNode enthält.
 ms.assetid: f26d71a7-fe71-48a8-9c8f-9c4d99261df1
-title: 'Icontextnode:: savepropertiesdata-Methode (iacom. h)'
+title: IContextNode::SavePropertiesData-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: f2ac064632eb9e5dd2b94f6e75b9b2836c75996d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5b02f5df7526b429a65b2a0baf49bda4571dd718a9bff875c79b7e325de244ed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958974"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118719684"
 ---
-# <a name="icontextnodesavepropertiesdata-method"></a>Icontextnode:: savepropertiesdata-Methode
+# <a name="icontextnodesavepropertiesdata-method"></a>IContextNode::SavePropertiesData-Methode
 
-Ruft ein Bytearray ab, das die anwendungsspezifischen und internen Eigenschaften Daten für diesen [**icontextnode**](icontextnode.md)enthält.
+Ruft ein Bytearray ab, das die anwendungsspezifischen und internen Eigenschaftsdaten für diesen [**IContextNode**](icontextnode.md)enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,34 +40,34 @@ HRESULT SavePropertiesData(
 
 <dl> <dt>
 
-*pulpropertiesdatasize* \[ in, out\]
+*pulPropertiesDataSize* \[ in, out\]
 </dt> <dd>
 
-Die Größe des Daten Arrays, das die Eigenschaften Informationen enthält. Der Übergabe Wert wird nicht verwendet.
+Die Größe des Datenarrays, das die Eigenschafteninformationen enthält. Der übergebene Wert wird nicht verwendet.
 
 </dd> <dt>
 
-*ppbpropertiesdata* \[ vorgenommen\]
+*ppbPropertiesData* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf ein Array von 8-Bit-Ganzzahlen ohne Vorzeichen, das die anwendungsspezifischen und internen Eigenschaften Daten enthält.
+Ein Zeiger auf ein 8-Bit-Ganzzahlarray ohne Vorzeichen, das die anwendungsspezifischen und internen Eigenschaftsdaten enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, verwenden Sie " [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) ", um den Arbeitsspeicher von \* *ppbpropertiesdata* freizugeben, wenn Sie die Informationen nicht mehr benötigen.
+> Um einen Speicherverlust zu vermeiden, verwenden Sie [**CoTaskMemFree,**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) um den Arbeitsspeicher von \* *ppbPropertiesData* freizugeben, wenn Sie die Informationen nicht mehr benötigen.
 
  
 
-Verwenden Sie diese Methode, wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der von [**iinkanalyzer**](iinkanalyzer.md)synchronisiert wird. Diese Methode speichert die Eigenschafts Daten, die von **iinkanalyzer** auf dem [**icontextnode**](icontextnode.md)festgelegt wurden.
+Verwenden Sie diese Methode, wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der des [**IInkAnalyzer**](iinkanalyzer.md)synchronisiert wird. Diese Methode speichert die Eigenschaftendaten, die **IInkAnalyzer** für [**IContextNode**](icontextnode.md)festgelegt hat.
 
-Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyzer**](iinkanalyzer.md)finden Sie unter [Daten Proxy mit Ink-Analyse](data-proxy-with-ink-analysis.md).
+Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnalyzer**](iinkanalyzer.md)finden Sie unter [Datenproxy mit Freihandanalyse.](data-proxy-with-ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,39 +75,39 @@ Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyze
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Icontextnode:: loadpropertiesdata**](icontextnode-loadpropertiesdata.md)
+[**IContextNode::LoadPropertiesData**](icontextnode-loadpropertiesdata.md)
 </dt> <dt>
 
-[**Icontextnode:: AddPropertyData**](icontextnode-addpropertydata.md)
+[**IContextNode::AddPropertyData**](icontextnode-addpropertydata.md)
 </dt> <dt>
 
-[**Icontextnode:: GetPropertyData**](icontextnode-getpropertydata.md)
+[**IContextNode::GetPropertyData**](icontextnode-getpropertydata.md)
 </dt> <dt>
 
-[**Icontextnode:: RemovePropertyData**](icontextnode-removepropertydata.md)
+[**IContextNode::RemovePropertyData**](icontextnode-removepropertydata.md)
 </dt> <dt>
 
-[**Icontextnode:: GetPropertyDataIds**](icontextnode-getpropertydataids.md)
+[**IContextNode::GetPropertyDataIds**](icontextnode-getpropertydataids.md)
 </dt> <dt>
 
-[**Icontextnode:: ContainsPropertyData**](icontextnode-containspropertydata.md)
+[**IContextNode::ContainsPropertyData**](icontextnode-containspropertydata.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

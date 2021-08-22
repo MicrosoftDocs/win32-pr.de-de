@@ -1,104 +1,104 @@
 ---
-description: Ihre Anwendungen können uniwriter-API-Funktionen verwenden, um Typografiefunktionen und die Anzeige und Bearbeitung von internationalem Text zu unterstützen. Uniwriter verwendet den Absatz als Einheit für die Textanzeige, und die Funktion uniwriter muss für den gesamten Absatz verwendet werden.
+description: Ihre Anwendungen können Uniscribe-API-Funktionen verwenden, um Typografie und die Anzeige und Bearbeitung von internationalem Text zu unterstützen. Uniscribe verwendet den Absatz als Einheit für die Textanzeige, und die Uniscribe-Funktionalität muss für den gesamten Absatz verwendet werden.
 ms.assetid: e1adc567-0445-4deb-8634-25653f82127c
-title: Anzeigen von Text mit uniwriter
+title: Anzeigen von Text mit Uniscribe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: baeb9a2be4d00efaa2681097ddefe3a6de4c576b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 17caf7e7880a61bdf9afbaf6db5b60065b01d3d3960f2ed5629a007aa304b7b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118949605"
 ---
-# <a name="displaying-text-with-uniscribe"></a>Anzeigen von Text mit uniwriter
+# <a name="displaying-text-with-uniscribe"></a>Anzeigen von Text mit Uniscribe
 
-Ihre Anwendungen können uniwriter-API-Funktionen verwenden, um Typografiefunktionen und die Anzeige und Bearbeitung von internationalem Text zu unterstützen. Uniwriter verwendet den Absatz als Einheit für die Textanzeige, und die Funktion uniwriter muss für den gesamten Absatz verwendet werden.
+Ihre Anwendungen können Uniscribe-API-Funktionen verwenden, um Typografie und die Anzeige und Bearbeitung von internationalem Text zu unterstützen. Uniscribe verwendet den Absatz als Einheit für die Textanzeige, und die Uniscribe-Funktionalität muss für den gesamten Absatz verwendet werden.
 
-Wenn uniwriter für die Anzeige von Text verwendet wird, muss eine Anwendung einen Formatierungsprozess ("Layout") durchlaufen, der in der Regel "uniwriter" verwendet. Die Anwendung dividiert einen Text Absatz in Zeichen folgen mit dem gleichen Stil, der so genannten "runs". Der Stil wird von der jeweiligen Implementierung bestimmt, enthält jedoch in der Regel Attribute wie Schriftart, Größe und Farbe. Beim Definieren von Ausführungen kann die Anwendung auch andere Informationen anwenden, wie z. b. sprach-und Gebiets Schema Daten, die für die Verwendung mit lexikalischen Tools verwaltet werden. Eine Anwendung kann z. b. als separate Run a Passage in einem primär englischen Text behandeln, der in Französisch gerendert wird.
+Wenn Sie Uniscribe für die Anzeige von Text verwenden, muss eine Anwendung einen Formatierungsprozess ("Layout") durchgehen, der in der Regel Uniscribe verwendet. Die Anwendung unterteilt einen Text absatz in Zeichenfolgen mit dem gleichen Stil, der als "Runs" bezeichnet wird. Der Stil wird durch die bestimmte Implementierung bestimmt, enthält jedoch in der Regel Attribute wie Schriftart, Größe und Farbe. Beim Definieren von Läufen kann die Anwendung auch andere Informationen anwenden, z. B. Sprach- und Locale-Daten, die für die Verwendung mit lexikalischen Tools verwaltet werden. Eine Anwendung kann z. B. als separate Ausführung eine Stellung in einem hauptsächlich englischsprachigen Text behandeln, der auf Französisch gerendert wird.
 
-Nachdem die Ausführungen für alle Absätze ermittelt wurden, dividiert die Anwendung jeden Absatz in Zeichen folgen, die das gleiche Skript und die gleiche Richtung ("Items") aufweisen. Die Anwendung wendet die Element Informationen an, um in Skript und Richtung eindeutige Ausführungen zu erstellen, die vollständig innerhalb eines einzelnen Elements ("Bereiche") liegen.
+Nachdem die Ausführungen für alle Absätze bestimmt wurden, teilt die Anwendung jeden Absatz in Zeichenfolgen auf, die das gleiche Skript und dieselbe Richtung ("Elemente") haben. Die Anwendung wendet die Elementinformationen an, um Ausführungen zu erzeugen, die in Skript und Richtung eindeutig sind und vollständig in ein einzelnes Element ("Bereiche") fallen.
 
-Die Aufteilung eines Elements in Bereiche ist beliebig, obwohl ein Bereich aus einer oder mehreren aufeinander folgenden Skript definierten, unteilbaren Zeichen Gruppierungen bestehen muss, die als "Cluster" bezeichnet werden. Bei europäischen Sprachen entspricht ein Cluster in der Regel einem einzelnen Codepage-oder Unicode-Codepunkt und besteht aus einem einzelnen [Symbol.](uniscribe-glossary.md) In Sprachen wie Thai ist ein Cluster jedoch eine Gruppierung von Symbolen und entspricht mehreren aufeinander folgenden Zeichen oder Code Punkten. Ein thailändischer Cluster kann z. b. einen Konsonanten, einen vowel und ein Ton Zeichen enthalten. Damit Cluster nicht unterstützt werden, sollte die Anwendung normalerweise die längsten Bereiche verwenden, die Sie verwenden können, oder Ihre eigenen lexikalischen Informationen verwenden, um zwischen Bereichen an Orten zu unterbrechen, die nicht in der Mitte eines Clusters liegen.
+Die Aufschlüsselung eines Elements in Bereiche ist etwas willkürlich, obwohl ein Bereich aus einem oder mehreren aufeinander folgenden skriptdefinierten, unteilbaren Zeichengruppen bestehen sollte, die als "Cluster" bezeichnet werden. Bei europäischen Sprachen entspricht ein Cluster in der Regel einem einzelnen Codepagezeichen oder Unicode-Codepunkt und besteht aus einem [einzelnen Symbol.](uniscribe-glossary.md) In Sprachen wie thailändisch ist ein Cluster jedoch eine Gruppierung von Glyphen und entspricht mehreren aufeinander folgenden Zeichen oder Codepunkten. Beispielsweise kann ein thailändisch-Cluster einen Konsonanten, einen Vokal und eine Tonmarkung enthalten. Damit Cluster nicht unterbricht, sollte die Anwendung in der Regel entweder die längsten Bereiche verwenden, die sie haben kann, oder ihre eigenen lexikalischen Informationen verwenden, um zwischen Bereichen an Stellen zu unterbrechen, die sich nicht in der Mitte eines Clusters befinden.
 
-Wenn die Cluster in jedem Bereich identifiziert wurden, muss die Größe der einzelnen Cluster von der Anwendung bestimmt werden. Er verwendet uniscri, um die Cluster zusammenzufassen, um die Größe der einzelnen Bereiche zu bestimmen. Dann summiert die Anwendung die Größe der Bereiche, bis Sie eine Linie überschreiten, d. h., der Rand wird erreicht. Der Bereich, in dem die Linie überläuft, ist von der aktuellen Zeile und der nächsten Zeile getrennt. Für jede Zeile erstellt die Anwendung eine Zuordnung von der visuellen Position zur logischen Position für jeden Bereich. Dann formt die Anwendung die Code Punkte für jeden Bereich in Glyphen, die anschließend positioniert und dargestellt werden können.
+Wenn die Cluster in jedem Bereich identifiziert wurden, muss die Anwendung die Größe der einzelnen Cluster bestimmen. Uniscribe wird verwendet, um die Cluster zu summieren, um die Größe jedes Bereichs zu bestimmen. Anschließend summiert die Anwendung die Größen der Bereiche, bis sie eine Linie überlaufen, d.&a; den Rand erreichen. Der Bereich, der die Linie überläuft, wird zwischen der aktuellen zeile und der nächsten Zeile aufgeteilt. Für jede Zeile erstellt die Anwendung eine Karte von der visuellen Position zur logischen Position für jeden Bereich. Anschließend formt die Anwendung die Codepunkte für jeden Bereich in Glyphen, die sie anschließend positionieren und rendern kann.
 
-Eine Anwendung führt ein Text Layout nur ein Mal aus. Anschließend speichert Sie entweder die Symbole und Positionen zu Anzeige Zwecken oder generiert Sie jedes Mal, wenn der Text angezeigt wird, und der Nachteil ist Geschwindigkeit und Arbeitsspeicher. Eine typische Anwendung implementiert den Layoutprozess einmal und generiert dann die Symbole und Positionen jedes Mal, wenn der Text angezeigt wird.
+Eine Anwendung führt das Textlayout nur einmal aus. Anschließend werden die Glyphen und Positionen entweder zu Anzeigezwecken gespeichert oder jedes Mal generiert, wenn der Text angezeigt wird, und der Kompromiss ist Geschwindigkeit und Arbeitsspeicher. Eine typische Anwendung implementiert den Layoutprozess einmal und generiert dann jedes Mal die Glyphen und Positionen, wenn sie den Text anzeigt.
 
-Eine Anwendung, die [komplexe Skripts](uniscribe-glossary.md) verwendet, hat die folgenden Probleme mit einem einfachen Ansatz für Layout und Anzeige.
+Eine Anwendung, die [komplexe Skripts verwendet,](uniscribe-glossary.md) hat die folgenden Probleme mit einem einfachen Ansatz für Layout und Anzeige.
 
--   Die Breite eines komplexen Skript Zeichens hängt von seinem Kontext ab. Es ist nicht möglich, die breiten in einfachen Tabellen zu speichern.
--   Das Unterbrechen von Wörtern in Skripts, wie z. b. Thai, erfordert die Beispielsweise wird kein Trennzeichen zwischen thailändischen Wörtern verwendet.
--   Arabisch, Hebräisch, Persian, Urdu und andere [bidirektionale Text](uniscribe-glossary.md) Sprachen erfordern eine Neuanordnung vor der Anzeige.
--   Eine Form der Schriftart Zuordnung ist häufig erforderlich, um komplexe Skripts einfach zu verwenden.
+-   Die Breite eines komplexen Skriptzeichens hängt von seinem Kontext ab. Es ist nicht möglich, die Breite in einfachen Tabellen zu speichern.
+-   Das Aufbrechen von Wörtern in Skripts wie Thai erfordert Wörterbuchunterstützung. Beispielsweise wird kein Trennzeichen zwischen thailändisch-Wörtern verwendet.
+-   Arabisch, Hebräisch, Hebräisch, Urdu und andere [bidirektionale](uniscribe-glossary.md) Textsprachen erfordern eine Neuanordnung vor der Anzeige.
+-   Häufig ist eine Form der Schriftarten-Zuordnung erforderlich, um komplexe Skripts einfach verwenden zu können.
 
-Die Tatsache, dass unischreiber den Absatz als Anzeigeeinheit verwendet, hilft der Anwendung, diese komplexen Skript Probleme adäquat zu beheben.
+Die Tatsache, dass Uniscribe den Absatz als Anzeigeeinheit verwendet, hilft der Anwendung, diese komplexen Skriptprobleme angemessen zu behandeln.
 
 > [!Note]  
-> Unischreiber muss für einen gesamten Absatz verwendet werden, auch wenn Abschnitte des Absatzes keine komplexen Skripts sind.
+> Uniscribe muss für einen gesamten Absatz verwendet werden, auch wenn Abschnitte des Absatzes keine komplexen Skripts sind.
 
  
 
-Wie in der folgenden Tabelle gezeigt, unterstützt unischreiber, Version 1,6 oder höher, mehrere Funktionen, die OpenType-Tags nutzen. Sie können die entsprechenden regulären uniscriefunktionen ersetzen. Im Allgemeinen sollten Ihre Anwendungen vollständig mit Funktionen aus einem Satz oder dem anderen arbeiten und sollten nicht versuchen, Funktionen zu "mischen und abzugleichen".
+Wie in der folgenden Tabelle gezeigt, unterstützt Die Uniscribe-Version 1.6 oder höher mehrere Funktionen, die OpenType-Tags nutzen. Sie können durch die entsprechenden regulären Uniscribe-Funktionen ersetzt werden. Im Allgemeinen sollten Ihre Anwendungen vollständig mit Funktionen aus einer Gruppe oder der anderen gruppe arbeiten und nicht versuchen, Funktionen zu "mischen und zu kombinieren".
 
 
 
-| Reguläre uniscri-Funktion             | Äquivalente OpenType-Funktion                           |
+| Reguläre Uniscribe-Funktion             | Äquivalente OpenType-Funktion                           |
 |----------------------------------------|--------------------------------------------------------|
-| [**Scriptitemize**](/windows/desktop/api/Usp10/nf-usp10-scriptitemize) | [**Scriptitemizeopentype**](/windows/desktop/api/usp10/nf-usp10-scriptitemizeopentype) |
-| [**Scriptshape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape)     | [**Scriptshapeopentype**](/windows/desktop/api/Usp10/nf-usp10-scriptshapeopentype)     |
-| [**Scriptplace**](/windows/desktop/api/Usp10/nf-usp10-scriptplace)     | [**Scriptplaceopentype**](/windows/desktop/api/Usp10/nf-usp10-scriptplaceopentype)     |
+| [**ScriptItemize**](/windows/desktop/api/Usp10/nf-usp10-scriptitemize) | [**ScriptItemizeOpenType**](/windows/desktop/api/usp10/nf-usp10-scriptitemizeopentype) |
+| [**ScriptShape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape)     | [**ScriptShapeOpenType**](/windows/desktop/api/Usp10/nf-usp10-scriptshapeopentype)     |
+| [**ScriptPlace**](/windows/desktop/api/Usp10/nf-usp10-scriptplace)     | [**ScriptPlaceOpenType**](/windows/desktop/api/Usp10/nf-usp10-scriptplaceopentype)     |
 
 
 
  
 
-## <a name="lay-out-text-using-uniscribe"></a>Layout von Text mit uniwriter
+## <a name="lay-out-text-using-uniscribe"></a>Auslegen von Text mithilfe von Uniscribe
 
-Die Anwendung kann mithilfe der folgenden Schritte einen Text Absatz mit uniwriter aufstellen. Bei diesem Verfahren wird davon ausgegangen, dass die Anwendung den Absatz bereits in Ausführungen aufgeteilt hat.
+Ihre Anwendung kann die folgenden Schritte ausführen, um einen Textabdruck mit Uniscribe zu erstellen. Bei diesem Verfahren wird davon ausgegangen, dass die Anwendung den Absatz bereits in Läufe unterteilt hat.
 
-1.  [**Scriptrecorddigitsubstitution**](/windows/desktop/api/Usp10/nf-usp10-scriptrecorddigitsubstitution) wird nur beim Starten von oder beim Empfangen einer [**WM- \_ settingchange**](../winmsg/wm-settingchange.md) -Nachricht aufgerufen.
-2.  Optionale Wenden Sie [**scriptiscomplex**](/windows/desktop/api/Usp10/nf-usp10-scriptiscomplex) an, um zu bestimmen, ob der Absatz eine komplexe Verarbeitung erfordert.
-3.  Optionale Wenn uniwriter zum Verarbeiten von bidirektionalem Text und/oder Ziffern Ersetzung verwendet wird, wird [**scriptapplydigitsubstitution**](/windows/desktop/api/Usp10/nf-usp10-scriptapplydigitsubstitution) aufgerufen, um das [**Skript \_ Steuer**](/windows/win32/api/usp10/ns-usp10-script_control) Element und die [**Skript \_ Zustands**](/windows/win32/api/usp10/ns-usp10-script_state) Strukturen als Eingaben für [**scriptitemize**](/windows/desktop/api/Usp10/nf-usp10-scriptitemize)vorzubereiten. Wenn Sie diesen Schritt überspringen, aber trotzdem eine Ziffern Ersetzung benötigen, ersetzen Sie die Ziffern für Unicode U + 0030 bis u + 0039 (europäische Ziffern). Weitere Informationen zur Ziffern Ersetzung finden Sie unter [Ziffern Formen](digit-shapes.md).
-4.  Nennen Sie [**scriptitemize**](/windows/desktop/api/Usp10/nf-usp10-scriptitemize) , um den Absatz in Elemente aufzuteilen. Wenn Sie unischreiber nicht für die Ziffern Ersetzung verwenden und die bidirektionale Reihenfolge bekannt ist, z. b. aufgrund des zum Eingeben des Zeichens verwendeten Tastaturlayouts, nennen Sie **scriptitemize**. Geben Sie im-Befehl NULL-Zeiger für das [**Skript \_ Steuer**](/windows/win32/api/usp10/ns-usp10-script_control) Element und die [**Skript \_ Zustands**](/windows/win32/api/usp10/ns-usp10-script_state) Strukturen an. Bei dieser Methode werden Elemente nur mithilfe der Strukturierungs-Engine generiert, und die Elemente können mithilfe der Engine-Informationen neu angeordnet werden.
+1.  Rufen [**Sie ScriptRecordDigitSubsinformation**](/windows/desktop/api/Usp10/nf-usp10-scriptrecorddigitsubstitution) nur auf, wenn eine WM [**\_ SETTINGCHANGE-Nachricht**](../winmsg/wm-settingchange.md) gestartet oder empfangen wird.
+2.  (Optional) Rufen [**Sie ScriptIsComplex auf,**](/windows/desktop/api/Usp10/nf-usp10-scriptiscomplex) um zu ermitteln, ob der Absatz eine komplexe Verarbeitung erfordert.
+3.  (Optional) Wenn Sie Uniscribe verwenden, um bidirektionalen Text und/oder die Ziffernersetzung zu verarbeiten, rufen Sie [**ScriptApplyDigitSubs analog**](/windows/desktop/api/Usp10/nf-usp10-scriptapplydigitsubstitution) auf, um die [**SCRIPT \_ CONTROL-**](/windows/win32/api/usp10/ns-usp10-script_control) und [**SCRIPT \_ STATE-Strukturen**](/windows/win32/api/usp10/ns-usp10-script_state) als Eingaben für [**ScriptItemize vorzubereiten.**](/windows/desktop/api/Usp10/nf-usp10-scriptitemize) Wenn Sie diesen Schritt überspringen, aber trotzdem eine Ziffernersetzung erfordern, ersetzen Sie unicode U+0030 bis U+0039 (europäische Ziffern) durch nationale Ziffern. Informationen zur Ziffernersetzung finden Sie unter [Ziffernformen.](digit-shapes.md)
+4.  Rufen Sie [**ScriptItemize auf,**](/windows/desktop/api/Usp10/nf-usp10-scriptitemize) um den Absatz in Elemente zu unterteilen. Wenn Uniscribe nicht für die Ziffernersetzung verwendet wird und die bidirektionale Reihenfolge bekannt ist, z. B. aufgrund des Tastaturlayouts, das zum Eingeben des Zeichens verwendet wird, rufen Sie **ScriptItemize auf.** Geben Sie im -Aufruf NULL-Zeiger für die [**SCRIPT \_ CONTROL- und**](/windows/win32/api/usp10/ns-usp10-script_control) SCRIPT [**\_ STATE-Strukturen**](/windows/win32/api/usp10/ns-usp10-script_state) an. Bei dieser Technik werden Elemente nur mithilfe der -Engine generiert, und die Elemente können mithilfe der Engine-Informationen neu angeordnet werden.
     > [!Note]  
-    > Normalerweise sollten Anwendungen, die nur mit Skripts von links nach rechts und ohne Ziffern Ersetzung funktionieren, NULL-Zeiger für das [**Skript \_ Steuer**](/windows/win32/api/usp10/ns-usp10-script_control) Element und die [**Skript \_ Zustands**](/windows/win32/api/usp10/ns-usp10-script_state) Strukturen übergeben.
+    > In der Regel sollten Anwendungen, die nur mit Links-nach-Rechts-Skripts und ohne Ziffernersetzung arbeiten, NULL-Zeiger für die [**SCRIPT \_ CONTROL-**](/windows/win32/api/usp10/ns-usp10-script_control) und [**SCRIPT \_ STATE-Strukturen**](/windows/win32/api/usp10/ns-usp10-script_state) übergeben.
 
      
 
-5.  Zusammenführen der Element Informationen mit den laufinformationen, um Bereiche zu liefern.
-6.  Rufen Sie [**scriptshape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape) auf, um Cluster zu identifizieren und Symbole zu generieren.
-7.  Wenn [**scriptshape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape) das Code-USP \_ E- \_ Skript \_ nicht \_ in \_ der Schriftart oder in \_ der Ausgabe mit den fehlenden Glyphen zurückgibt, wählen Sie Zeichen aus einer anderen Schriftart aus. Ersetzen Sie entweder eine andere Schriftart, oder deaktivieren Sie die Strukturierung, indem Sie den **Escript** -Member der [**Skript \_ Analyse**](/windows/win32/api/usp10/ns-usp10-script_analysis) Struktur festlegen, die an **scriptshape** übergeben wurde \_ Weitere Informationen finden Sie unter [using Font Fallback](using-font-fallback.md).
-8.  Rufen Sie [**scriptplace**](/windows/desktop/api/Usp10/nf-usp10-scriptplace) auf, um die [voraus](uniscribe-glossary.md) setzungen und x-und y-Positionen für die Symbole in jedem aufeinander folgenden Bereich zu generieren. Dies ist der erste Schritt, bei dem die Textgröße berücksichtigt wird.
-9.  Addieren Sie die Bereichs Größen, bis die Zeile überläuft.
-10. Unterbrechen Sie den Bereich an einer Wort Grenze mithilfe der **fsoft Break** -und **fwhitespace** -Elemente in den logischen Attributen. Um einen einzelnen Zeichen Cluster während des Testlaufs zu unterbrechen, verwenden Sie die vom Aufruf von [**scriptbreak**](/windows/desktop/api/Usp10/nf-usp10-scriptbreak)zurückgegebenen Informationen.
+5.  Führen Sie die Elementinformationen mit den Ausführungsinformationen zusammen, um Bereiche zu erzeugen.
+6.  Rufen [**Sie ScriptShape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape) auf, um Cluster zu identifizieren und Glyphen zu generieren.
+7.  Wenn [**ScriptShape den**](/windows/desktop/api/Usp10/nf-usp10-scriptshape) Code USP E SCRIPT NOT IN FONT oder S OK mit der Ausgabe mit fehlenden \_ \_ \_ \_ \_ \_ Glyphen zurückgibt, wählen Sie Zeichen aus einer anderen Schriftart aus. Ersetzen Sie entweder eine andere Schriftart, oder deaktivieren Sie die Strukturierung, indem Sie das **eScript-Member** der [**SCRIPT \_ ANALYSIS-Struktur,**](/windows/win32/api/usp10/ns-usp10-script_analysis) das an **ScriptShape** übergeben wird, auf SCRIPT \_ UNDEFINED festlegen. Weitere Informationen finden Sie unter [Verwenden des Schriftartfallbacks.](using-font-fallback.md)
+8.  Rufen [**Sie ScriptPlace**](/windows/desktop/api/Usp10/nf-usp10-scriptplace) auf, um [höhere Breiten und](uniscribe-glossary.md) x- und y-Positionen für die Glyphen in jedem nachfolgenden Bereich zu generieren. Dies ist der erste Schritt, bei dem die Textgröße berücksichtigt wird.
+9.  Summiert die Bereichsgrößen, bis die Zeile überläuft.
+10. Unterbricht den Bereich an einer Wortgrenze mithilfe der **Elemente fSoftBreak** und **fWhiteSpace** in den logischen Attributen. Um einen Cluster mit nur einem Zeichen von der Ausführung abzubrechen, verwenden Sie die Informationen, die durch Aufrufen von [**ScriptBreak zurückgegeben werden.**](/windows/desktop/api/Usp10/nf-usp10-scriptbreak)
     > [!Note]  
-    > Entscheiden Sie, ob der erste Codepunkt eines Bereichs ein Wort Umbruch Punkt sein soll, da das letzte Zeichen des vorherigen Bereichs dies erfordert. Wenn z. b. ein Bereich mit einem Komma endet, sollten Sie das erste Zeichen des nächsten Bereichs als Wort Breakpoint in Erwägung gezogen.
+    > Entscheiden Sie, ob der erste Codepunkt eines Bereichs ein Wortbruchpunkt sein soll, da es für das letzte Zeichen des vorherigen Bereichs erforderlich ist. Wenn ein Bereich beispielsweise mit einem Komma endet, betrachten Sie das erste Zeichen des nächsten Bereichs als Wortbruchpunkt.
 
      
 
-11. Wiederholen Sie die Schritte 6 bis 10 für jede Zeile im Absatz. Wenn jedoch die letzte Run-Zeile in der Zeile unterbrochen wird, wird [**scriptshape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape) aufgerufen, um den verbleibenden Teil der Laufzeit als ersten Testlauf in der nächsten Zeile neu zu strukturieren.
+11. Wiederholen Sie die Schritte 6 bis 10 für jede Zeile im Absatz. Wenn sie jedoch die letzte Ausführung in der Zeile durchbrechen, rufen Sie [**ScriptShape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape) auf, um den verbleibenden Teil der Ausführung bei der ersten Ausführung in der nächsten Zeile umzugestalten.
 
-## <a name="display-text-using-uniscribe"></a>Anzeigen von Text mit uniwriter
+## <a name="display-text-using-uniscribe"></a>Anzeigen von Text mithilfe von Uniscribe
 
-Die Anwendung kann die folgenden Schritte ausführen, um einen Text Absatz anzuzeigen. Bei diesem Verfahren wird davon ausgegangen, dass die Anwendung den Text bereits angelegt hat und die Symbole und Positionen nicht aus dem Layoutprozess gespeichert hat. Wenn die Geschwindigkeit ein Problem ist, kann die Anwendung die Symbole und Positionen aus der layoutprozedur speichern und bei Schritt 2 in der Anzeige Prozedur beginnen.
+Ihre Anwendung kann die folgenden Schritte ausführen, um einen Text absatz anzuzeigen. Bei diesem Verfahren wird davon ausgegangen, dass die Anwendung den Text bereits festgelegt und die Glyphen und Positionen aus dem Layoutprozess nicht gespeichert hat. Wenn die Geschwindigkeit ein Problem ist, kann die Anwendung die Glyphen und Positionen aus der Layoutprozedur speichern und bei Schritt 2 in der Anzeigeprozedur beginnen.
 
 > [!Note]  
-> Die Anwendung kann Schritt 2 weglassen, wenn der Text keine Zeichen von von rechts nach links gerichteten Skripts enthält, keine bidirektionalen Steuerzeichen enthält und eine Basis Einbettungs Ebene von links nach rechts verwendet.
+> Die Anwendung kann Schritt 2 weglassen, wenn der Text keine Zeichen aus Skripts von rechts nach links enthält, keine bidirektionalen Steuerzeichen enthält und eine Basis-Einbettungsebene von links nach rechts verwendet.
 
  
 
-1.  Führen Sie für jede ausführen die folgenden Schritte aus:
-    1.  Wenn sich der Stil seit der letzten Durchführung geändert hat, aktualisieren Sie das Handle für den Gerätekontext, indem Sie es freigeben und wiederholen.
-    2.  Rufen Sie [**scriptshape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape) auf, um Symbole für den Testlauf zu generieren.
-    3.  Rufen Sie [**scriptplace**](/windows/desktop/api/Usp10/nf-usp10-scriptplace) auf, um für jedes Symbol eine Vorlauf Breite und einen x-, y-Offset zu generieren.
-2.  Gehen Sie folgendermaßen vor, um die richtige visuelle Reihenfolge für die Ausführungen in der Zeile zu erstellen:
-    1.  Extrahieren Sie ein Array von bidirektionalen [Einbettungs Ebenen](uniscribe-glossary.md), eine pro Bereich. Die Einbettungs Ebene wird durch (Skript \_ Element) Si () angegeben. ( Skript \_ Analyse) a. (Skript \_ State) s. ubidilevel.
-    2.  Übergeben Sie dieses Array an [**scriptlayout**](/windows/desktop/api/Usp10/nf-usp10-scriptlayout) , um eine Zuordnung von visuellen Positionen zu logischen Positionen zu generieren.
-3.  Optionale Um den Text zu rechtfertigen, nennen Sie entweder [**scriptrecht**](/windows/desktop/api/Usp10/nf-usp10-scriptjustify) , oder verwenden Sie spezielle Kenntnisse des Texts.
-4.  Verwenden Sie die Visualisierung für die visuelle Darstellung, um die Ausführungen in der visuellen Reihenfolge anzuzeigen. Wenn Sie am linken Ende der Zeile beginnen, nennen Sie [**scripttextout**](/windows/desktop/api/Usp10/nf-usp10-scripttextout) , um die vom ersten Eintrag in der Zuordnung angegebene Testlauf anzuzeigen. Nennen Sie für jeden nachfolgenden Eintrag in der Zuordnung **scripttextout** , um die angezeigte Laufzeit rechts von der zuvor angezeigten Testlauf anzuzeigen.
+1.  Führen Sie für jede Ausführung folgende Schritte aus:
+    1.  Wenn sich der Stil seit der letzten Ausführung geändert hat, aktualisieren Sie das Handle auf den Gerätekontext, indem Sie es freigeben und erneut abrufen.
+    2.  Rufen [**Sie ScriptShape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape) auf, um Glyphen für die Ausführung zu generieren.
+    3.  Rufen [**Sie ScriptPlace**](/windows/desktop/api/Usp10/nf-usp10-scriptplace) auf, um eine höhere Breite und einen x,y-Offset für jedes Glyphen zu generieren.
+2.  Gehen Sie wie folgt vor, um die richtige visuelle Reihenfolge für die In der Zeile zu erstellen:
+    1.  Extrahieren Sie ein Array von bidirektionalen [Einbettungsebenen](uniscribe-glossary.md), eine pro Bereich. Die Einbettungsebene wird durch (SCRIPT \_ ITEM) si. ( \_SKRIPTANALYSE) a. (SCRIPT \_ STATE) s.uBidiLevel.
+    2.  Übergeben Sie dieses Array an [**ScriptLayout,**](/windows/desktop/api/Usp10/nf-usp10-scriptlayout) um eine Zuordnung visueller Positionen zu logischen Positionen zu generieren.
+3.  (Optional) Um den Text zu rechtfertigen, rufen Sie [**entweder ScriptJustify**](/windows/desktop/api/Usp10/nf-usp10-scriptjustify) auf, oder verwenden Sie spezielle Kenntnisse des Texts.
+4.  Verwenden Sie die visual-zu-logical-Zuordnung, um die Läufe in visueller Reihenfolge anzuzeigen. Rufen Sie am linken Ende der Zeile [**ScriptTextOut**](/windows/desktop/api/Usp10/nf-usp10-scripttextout) auf, um die Ausführung anzuzeigen, die durch den ersten Eintrag in der Karte angegeben wird. Rufen Sie für jeden nachfolgenden Eintrag in der Zuordnung **ScriptTextOut** auf, um die angegebene Ausführung rechts neben der zuvor angezeigten Ausführung anzuzeigen.
 
-    Wenn Sie Schritt 2 weglassen, beginnen Sie am linken Ende der Zeile, und nennen Sie [**scripttextout**](/windows/desktop/api/Usp10/nf-usp10-scripttextout) , um die erste logische Testlauf anzuzeigen, und dann die einzelnen logischen Testlauf auf der rechten Seite der vorherigen Testlauf anzuzeigen.
+    Wenn Sie Schritt 2 weglassen, beginnen Sie am linken Ende der Zeile, und rufen Sie [**ScriptTextOut**](/windows/desktop/api/Usp10/nf-usp10-scripttextout) auf, um die erste logische Ausführung anzuzeigen und dann jede logische Ausführung rechts von der vorherigen Ausführung anzuzeigen.
 
 5.  Wiederholen Sie die obigen Schritte für alle Zeilen im Absatz.
 
@@ -106,7 +106,7 @@ Die Anwendung kann die folgenden Schritte ausführen, um einen Text Absatz anzuz
 
 <dl> <dt>
 
-[Verwenden von uniscri](using-uniscribe.md)
+[Verwenden von Uniscribe](using-uniscribe.md)
 </dt> </dl>
 
  

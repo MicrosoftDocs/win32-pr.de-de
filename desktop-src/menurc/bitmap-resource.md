@@ -1,9 +1,9 @@
 ---
-title: Bitmap-Ressource
-description: Definiert eine Bitmap, die von einer Anwendung in der Bildschirm Anzeige oder als Element in einem Menü oder Steuerelement verwendet wird.
+title: BITMAP-Ressource
+description: Definiert eine Bitmap, die eine Anwendung in der Bildschirmanzeige oder als Element in einem Menü oder Steuerelement verwendet.
 ms.assetid: 2db2f7f0-735f-4aac-9813-c04a2f7788b2
 keywords:
-- Bitmap-Ressourcen Menüs und andere Ressourcen
+- BITMAP-Ressourcenmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e5bed33fb66d9deb85e1f25165f3f7a0f664961
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: ff75f235e8aa1787e93f9420b4d7ed27f440cdc09510547295ebced4ec494bdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390211"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118734898"
 ---
-# <a name="bitmap-resource"></a>Bitmap-Ressource
+# <a name="bitmap-resource"></a>BITMAP-Ressource
 
-Definiert eine Bitmap, die von einer Anwendung in der Bildschirm Anzeige oder als Element in einem Menü oder Steuerelement verwendet wird.
+Definiert eine Bitmap, die eine Anwendung in der Bildschirmanzeige oder als Element in einem Menü oder Steuerelement verwendet.
 
 ``` syntax
 nameID BITMAP filename
@@ -31,21 +31,21 @@ nameID BITMAP filename
 
 <dl> <dt>
 
-<span id="nameID"></span><span id="nameid"></span><span id="NAMEID"></span>*NameID*
+<span id="nameID"></span><span id="nameid"></span><span id="NAMEID"></span>*nameID*
 </dt> <dd>
 
-Eindeutiger Name oder ein 16-Bit-Ganzzahl-Wert ohne Vorzeichen, der die Ressource identifiziert.
+Eindeutiger Name oder ein 16-Bit-Ganzzahlwert ohne Vorzeichen, der die Ressource identifiziert.
 
 </dd> <dt>
 
-<span id="filename"></span><span id="FILENAME"></span>*Einfügen*
+<span id="filename"></span><span id="FILENAME"></span>*Dateiname*
 </dt> <dd>
 
-Der Name der Datei, die die Ressource enthält. Der Name muss ein gültiger Dateiname sein. Es muss sich um einen vollständigen Pfad handeln, wenn sich die Datei nicht im aktuellen Arbeitsverzeichnis befindet. Der Pfad muss eine Zeichenfolge in Anführungszeichen sein.
+Name der Datei, die die Ressource enthält. Der Name muss ein gültiger Dateiname sein. es muss ein vollständiger Pfad sein, wenn sich die Datei nicht im aktuellen Arbeitsverzeichnis befindet. Der Pfad sollte eine Zeichenfolge in Anführungs zeichen sein.
 
 </dd> </dl>
 
-Bestimmte Attribute werden auch aus Gründen der Abwärtskompatibilität unterstützt. Weitere Informationen finden Sie unter [allgemeine Ressourcen Attribute](common-resource-attributes.md).
+Bestimmte Attribute werden auch aus Gründen der Abwärtskompatibilität unterstützt. Weitere Informationen finden Sie unter [Allgemeine Ressourcenattribute.](common-resource-attributes.md)
 
 ## <a name="examples"></a>Beispiele
 
@@ -56,7 +56,7 @@ disk1   BITMAP "disk.bmp"
 12      BITMAP "diskette.bmp"
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -66,9 +66,9 @@ disk1   BITMAP "disk.bmp"
 [**LoadBitmap**](/windows/desktop/api/winuser/nf-winuser-loadbitmapa)
 </dt> <dt>
 
-[**LoadImage**](/windows/desktop/api/Winuser/nf-winuser-loadimagea)
+[**Loadimage**](/windows/desktop/api/Winuser/nf-winuser-loadimagea)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
