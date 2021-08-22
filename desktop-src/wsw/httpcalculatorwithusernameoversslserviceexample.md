@@ -1,29 +1,29 @@
 ---
-title: Httpcalculatorwithusernameoversslserviceexample
-description: In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines Rechner Diensts über HTTP mit dem Benutzernamen über SSL-Sicherheit im gemischten Modus verwendet wird.
+title: HttpCalculatorWithUserNameOverSslServiceExample
+description: In diesem Beispiel wird gezeigt, wie Sie den Diensthost zum Hosten eines Rechnerdiensts über HTTP mit Benutzername über SSL-Sicherheit im gemischten Modus verwenden.
 ms.assetid: 92dfec48-2314-4e83-8fe9-9d25aa100043
 keywords:
-- Httpcalculatorwithusernameoversslserviceexample (Native Webdienste)
-- Wwsapi
+- HttpCalculatorWithUserNameOverSslServiceExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a281172b097c4b00a2a589c6a6bf528d79ce427
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d1f6eedd02e54590c991928576bebc7600be07f9f16c029f873f4d4fb4415de6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036582"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119590040"
 ---
-# <a name="httpcalculatorwithusernameoversslserviceexample"></a>Httpcalculatorwithusernameoversslserviceexample
+# <a name="httpcalculatorwithusernameoversslserviceexample"></a>HttpCalculatorWithUserNameOverSslServiceExample
 
-In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines Rechner Diensts über HTTP mit dem Benutzernamen über SSL-Sicherheit im gemischten Modus verwendet wird. In diesem Setup wird die Transport Verbindung von SSL geschützt (signiert, verschlüsselt), der auch die Server Authentifizierung bereitstellt. Die Client Authentifizierung wird von einem Paar aus Benutzername und Kennwort in einem WS-Security-Header in der Nachricht bereitgestellt.
+In diesem Beispiel wird gezeigt, wie Sie den Diensthost zum Hosten eines Rechnerdiensts über HTTP mit Benutzername über SSL-Sicherheit im gemischten Modus verwenden. Bei diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Benutzername-Kennwort-Paar in einem WS-Security-Header in der Nachricht bereitgestellt.
 
--   [Calculatorserviceusernameoverssl. cpp](#calculatorserviceusernameoversslcpp)
--   [CalculatorService. WSDL](#calculatorservicewsdl)
+-   [CalculatorServiceUserNameOverSsl.cpp](#calculatorserviceusernameoversslcpp)
+-   [CalculatorService.wsdl](#calculatorservicewsdl)
 -   [Makefile](#makefile)
 
-## <a name="calculatorserviceusernameoversslcpp"></a>Calculatorserviceusernameoverssl. cpp
+## <a name="calculatorserviceusernameoversslcpp"></a>CalculatorServiceUserNameOverSsl.cpp
 
 
 ```C++
@@ -355,7 +355,7 @@ Exit:
 
 
 
-## <a name="calculatorservicewsdl"></a>CalculatorService. WSDL
+## <a name="calculatorservicewsdl"></a>CalculatorService.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -480,9 +480,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

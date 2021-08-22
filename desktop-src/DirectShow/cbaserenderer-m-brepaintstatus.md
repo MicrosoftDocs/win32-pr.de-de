@@ -1,7 +1,7 @@
 ---
-description: Flag, das Repaint-Ereignisse aktiviert oder deaktiviert.
+description: Flag, das Neumalereignisse aktiviert oder deaktiviert.
 ms.assetid: ea5e5472-047f-4196-8637-e5e04b563d50
-title: 'Cbaserenderer:: m_bRepaintStatus Member (renbase. h)'
+title: CBaseRenderer::m_bRepaintStatus-Member (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b594309c56dfda4a99c89c6e17a26f76128cd393
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 757a008003a3d53258d4bb297d3f2089ceaed1350b5ae3901bd1598556bca80a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119502740"
 ---
-# <a name="cbaserendererm_brepaintstatus-member"></a>Cbaserenderer:: m \_ brepaintstatus-Member
+# <a name="cbaserendererm_brepaintstatus-member"></a>CBaseRenderer::m \_ bRepaintStatus-Member
 
-Flag, das Repaint-Ereignisse aktiviert oder deaktiviert.
+Flag, das Neumalereignisse aktiviert oder deaktiviert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ BOOL m_bRepaintStatus;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ BOOL m_bRepaintStatus;
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

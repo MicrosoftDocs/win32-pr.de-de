@@ -4,8 +4,8 @@ description: Gibt an, ob das Konto, auf das dieses Attribut verweist, gesperrt w
 ms.assetid: f9d9c98a-3c4f-4687-8133-4476aeec10e8
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-User-Account-Auto-Locked\"-Attribut AD-Schema"
-- AD-Schema des ms-DS-useraccountautolocked-Attributs
+- AD-Schema des ms-DS-User-Account-Auto-Locked-Attributs
+- AD-Schema des ms-DS-UserAccountAutoLocked-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,29 +14,29 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6623a1b348af14fecc8dab41a44439bf2d745bf9
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 7d1360b9169d5355ef23caf47fa56a283dc4e5267fb603aa08bd0600f126c69f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104041096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119300300"
 ---
 # <a name="ms-ds-user-account-auto-locked-attribute"></a>ms-DS-User-Account-Auto-Locked-Attribut
 
-Gibt an, ob das Konto, auf das dieses Attribut verweist, gesperrt wurde. True, wenn das Konto gesperrt ist. andernfalls false.
+Gibt an, ob das Konto, auf das dieses Attribut verweist, gesperrt wurde. TRUE, wenn das Konto gesperrt ist; andernfalls False.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-Benutzer-Konto-automatisch gesperrt       |
-| LDAP-Display-Name | ms-DS-useraccountautolocked          |
+| CN                | ms-DS-User-Account-Auto-Locked       |
+| Ldap-Anzeigename | ms-DS-UserAccountAutoLocked          |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1857              |
-| System-ID-GUID    | f2dd7bab-1f3b-47cf-89fa-143b56ad0a3d |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-Id-Guid    | f2dd7bab-1f3b-47cf-89fa-143b56ad0a3d |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
@@ -52,22 +52,22 @@ Gibt an, ob das Konto, auf das dieses Attribut verweist, gesperrt wurde. True, w
 |------------------------|-------------------------------------------------------------------|
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
-| System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
-| Ist indiziert             | False                                                             |
-| Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| System-Only            | Falsch                                                             |
+| Is-Single-Valued       | Richtig                                                              |
+| Ist indiziert             | Falsch                                                             |
+| Im globalen Katalog      | Falsch                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |
 | System-Flags           | 0x00000014                                                        |
-| In verwendete Klassen        | [**ms-DS-Bindable-Objekt**](c-msds-bindableobject.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Bindable-Object**](c-msds-bindableobject.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In Adam ersetzt dieses Attribut das [**ADS- \_ Lock- \_ Lock**](/windows/desktop/api/iads/ne-iads-ads_user_flag_enum) -Flag des [**userAccountControl**](a-useraccountcontrol.md) -Attributs.
+In ADAM ersetzt dieses Attribut das [**ADS \_ UF \_ LOCKOUT-Flag**](/windows/desktop/api/iads/ne-iads-ads_user_flag_enum) des [**userAccountControl-Attributs.**](a-useraccountcontrol.md)
 
  
 

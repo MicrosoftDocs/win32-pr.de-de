@@ -1,7 +1,7 @@
 ---
-description: Ruft die GUID der Kategorie des Windows-Abbild Erwerbs (WIA) 2,0-Elements ab, dem das Profil zugeordnet ist.
+description: Ruft die GUID der Kategorie des elements Windows Image Acquisition (WIA) 2.0 ab, dem das Profil zugeordnet ist.
 ms.assetid: 2c816789-ad66-4b06-9160-7a86289ff373
-title: 'Iscanprofile:: GetItem-Methode (Scanprofile. h)'
+title: IScanProfile::GetItem-Methode (Scanprofile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Scanprofile.h
-ms.openlocfilehash: 888a3bb5bcb6e6c4fc2fefff2d976eb7fc1c7f82
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5a7f52a2d89bbd35b59febb25528fe493c4b5646afc70251fc19978d6d6265db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119451040"
 ---
-# <a name="iscanprofilegetitem-method"></a>Iscanprofile:: GetItem-Methode
+# <a name="iscanprofilegetitem-method"></a>IScanProfile::GetItem-Methode
 
-Ruft die GUID der Kategorie des Windows-Abbild Erwerbs (WIA) 2,0-Elements ab, dem das Profil zugeordnet ist.
+Ruft die GUID der Kategorie des elements Windows Image Acquisition (WIA) 2.0 ab, dem das Profil zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ HRESULT GetItem(
 
 <dl> <dt>
 
-*pguidcategory* \[ vorgenommen\]
+*pguidCategory* \[ out\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **GUID \** _
+Typ: **GUID \***
 
-Ein Zeiger auf die GUID der Kategorie des WIA 2,0-Elements. Dabei handelt es sich immer um eine der WIA- \_ IPA- \_ Element \_ kategoriekonstanten.
+Ein Zeiger auf die GUID der Kategorie des WIA 2.0-Elements. Dies ist immer eine der WIA \_ IPA \_ ITEM \_ CATEGORY-Konstanten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,21 +60,21 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                        |
-| Header<br/>                   | <dl> <dt>Scanprofile. h</dt> </dl>    |
-| IDL<br/>                      | <dl> <dt>Scanprofiles. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Scanprofile.h</dt> </dl>    |
+| Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Iscanprofile**](-wia-iscanprofile.md)
+[**IScanProfile**](-wia-iscanprofile.md)
 </dt> <dt>
 
-[Profil Schema überprüfen](-wia-scan-profile-schema.md)
+[Scanprofilschema](-wia-scan-profile-schema.md)
 </dt> </dl>
 
  

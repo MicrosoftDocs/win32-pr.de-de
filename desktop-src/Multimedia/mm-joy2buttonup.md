@@ -1,9 +1,9 @@
 ---
-title: MM_JOY2BUTTONUP Meldung (MMSYSTEM. h)
-description: Die \_ Meldung mm JOY2BUTTONUP benachrichtigt das Fenster, das den Joystick aufgezeichnet hat JOYSTICKID2, dass eine Schaltfläche freigegeben wurde.
+title: MM_JOY2BUTTONUP Meldung (Mmsystem.h)
+description: Die \_ MM-NACHRICHT "MMMAKER2BUTTONUP" benachrichtigt das Fenster, das das Fenster erfasst hat, dass eine Schaltfläche losgelassen wurde.
 ms.assetid: da024466-7cd3-42ec-90a7-1468eb42841e
 keywords:
-- MM_JOY2BUTTONUP-Nachricht (Multimedia)
+- MM_JOY2BUTTONUP Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d7a4f2d23739fc72a6898e2b53fc3e1c330687f7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8f94a1761686bd2e3ac7c470268427a213d54cdb4b8a58d54fdd6961427c2377
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346772"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119557310"
 ---
-# <a name="mm_joy2buttonup-message"></a>MM \_ JOY2BUTTONUP Meldung
+# <a name="mm_joy2buttonup-message"></a>\_MM–NACHRICHT VOM 2.BUTTONUP
 
-Die Meldung **mm \_ JOY2BUTTONUP** benachrichtigt das Fenster, das den Joystick aufgezeichnet hat JOYSTICKID2, dass eine Schaltfläche freigegeben wurde.
+Die **\_ MM-NACHRICHT "MMMAKER2BUTTONUP"** benachrichtigt das Fenster, das das Fenster erfasst hat, dass eine Schaltfläche losgelassen wurde.
 
 
 ```C++
@@ -39,34 +39,34 @@ yPos = HIWORD(lParam);
 
 <dl> <dt>
 
-**Schaltflächen** 
+**fwButtons** 
 </dt> <dd>
 
-Gibt die Schaltfläche an, die den Zustand geändert hat, und die gedrückten Schaltflächen. Folgende Werte sind möglich:
+Identifiziert die Schaltfläche, deren Zustand geändert wurde, und die gedrückten Schaltflächen. Folgende Werte sind möglich:
 
 
 
 | Wert                                                                                                                                                            | Bedeutung                                              |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
-| <span id="JOY_BUTTON1CHG"></span><span id="joy_button1chg"></span><dl> <dt>**Freude \_ BUTTON1CHG**</dt> </dl> | Der erste Joystick Schaltfläche hat den Zustand geändert.<br/>  |
-| <span id="JOY_BUTTON2CHG"></span><span id="joy_button2chg"></span><dl> <dt>**Freude \_ BUTTON2CHG**</dt> </dl> | Die zweite Schaltfläche "Joystick" hat den Zustand geändert.<br/> |
-| <span id="JOY_BUTTON3CHG"></span><span id="joy_button3chg"></span><dl> <dt>**Freude \_ BUTTON3CHG**</dt> </dl> | Die dritte Schaltfläche "Joystick" hat den Zustand geändert.<br/>  |
-| <span id="JOY_BUTTON4CHG"></span><span id="joy_button4chg"></span><dl> <dt>**Freude \_ BUTTON4CHG**</dt> </dl> | Der vierte Joystick Schaltfläche hat den Zustand geändert.<br/> |
+| <span id="JOY_BUTTON1CHG"></span><span id="joy_button1chg"></span><dl> <dt>**JOY \_ BUTTON1CHG**</dt> </dl> | Der Zustand der ersten Schaltfläche wurde geändert.<br/>  |
+| <span id="JOY_BUTTON2CHG"></span><span id="joy_button2chg"></span><dl> <dt>**JOY \_ BUTTON2CHG**</dt> </dl> | Der Zustand der zweiten Schaltfläche hat sich geändert.<br/> |
+| <span id="JOY_BUTTON3CHG"></span><span id="joy_button3chg"></span><dl> <dt>**BUTTON \_ BUTTON3CHG**</dt> </dl> | Die dritte Schaltfläche "button" hat den Zustand geändert.<br/>  |
+| <span id="JOY_BUTTON4CHG"></span><span id="joy_button4chg"></span><dl> <dt>**JOY \_ BUTTON4CHG**</dt> </dl> | Der Zustand der vierten Schaltfläche hat sich geändert.<br/> |
 
 
 
  
 
-und eine oder mehrere der folgenden Aktionen:
+und mindestens eine der folgenden Angaben:
 
 
 
 | Wert                                                                                                                                                   | Bedeutung                                       |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| <span id="JOY_BUTTON1"></span><span id="joy_button1"></span><dl> <dt>**Freude \_ Button1**</dt> </dl> | Die erste Joystick Schaltfläche wird gedrückt.<br/>  |
-| <span id="JOY_BUTTON2"></span><span id="joy_button2"></span><dl> <dt>**Freude \_ Button2**</dt> </dl> | Die zweite Joystick Schaltfläche wird gedrückt.<br/> |
-| <span id="JOY_BUTTON3"></span><span id="joy_button3"></span><dl> <dt>**Freude \_ BUTTON3**</dt> </dl> | Die dritte Joystick Schaltfläche wird gedrückt.<br/>  |
-| <span id="JOY_BUTTON4"></span><span id="joy_button4"></span><dl> <dt>**Freude \_ BUTTON4**</dt> </dl> | Fourth Joystick Schaltfläche wird gedrückt.<br/> |
+| <span id="JOY_BUTTON1"></span><span id="joy_button1"></span><dl> <dt>**JOY \_ BUTTON1**</dt> </dl> | Die erste Schaltfläche wird gedrückt.<br/>  |
+| <span id="JOY_BUTTON2"></span><span id="joy_button2"></span><dl> <dt>**JOY \_ BUTTON2**</dt> </dl> | Die zweite Schaltfläche wird gedrückt.<br/> |
+| <span id="JOY_BUTTON3"></span><span id="joy_button3"></span><dl> <dt>**JOY \_ BUTTON3**</dt> </dl> | Die dritte Schaltfläche wird gedrückt.<br/>  |
+| <span id="JOY_BUTTON4"></span><span id="joy_button4"></span><dl> <dt>**JOY \_ BUTTON4**</dt> </dl> | Die vierte Schaltfläche wird gedrückt.<br/> |
 
 
 
@@ -74,17 +74,17 @@ und eine oder mehrere der folgenden Aktionen:
 
 </dd> <dt>
 
-**XPos** 
+**xPos** 
 </dt> <dd>
 
-Die x-Koordinaten des Joysticks in Relation zur oberen linken Ecke des Client Bereichs.
+Die x-Koordinaten des Bereichs relativ zur oberen linken Ecke des Clientbereichs.
 
 </dd> <dt>
 
-**YPos** 
+**yPos** 
 </dt> <dd>
 
-Die y-Koordinate des Joysticks in Relation zur oberen linken Ecke des Client Bereichs.
+Die y-Koordinate des Bereichs relativ zur oberen linken Ecke des Clientbereichs.
 
 </dd> </dl>
 
@@ -96,7 +96,7 @@ Die y-Koordinate des Joysticks in Relation zur oberen linken Ecke des Client Ber
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -104,10 +104,10 @@ Die y-Koordinate des Joysticks in Relation zur oberen linken Ecke des Client Ber
 
 <dl> <dt>
 
-[Joystick](joysticks.md)
+[Joysticks](joysticks.md)
 </dt> <dt>
 
-[Multimedia-Joystick Nachrichten](multimedia-joystick-messages.md)
+[Multimedia-Meldungen](multimedia-joystick-messages.md)
 </dt> </dl>
 
  

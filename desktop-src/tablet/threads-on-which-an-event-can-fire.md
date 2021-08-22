@@ -1,30 +1,30 @@
 ---
-description: Beschreibung der Threads, die von einem Ereignis ausgelöst werden können. API-Ereignisse (Tablet PC Platform Application Programming Interface) werden auf dem frei Hand Thread, dem Hintergrund Erkennungs Thread oder einem Anwendungs Thread ausgelöst.
+description: Beschreibung der Threads, für die ein Ereignis ausgeführt werden kann. API-Ereignisse (Application Programming Interface) der Tablet PC-Plattform werden im Ink-Thread, im Hintergrunderkennungsthread oder in einem Anwendungsthread ausgelöst.
 ms.assetid: d1a5ab9b-d474-4ed7-9aa8-b5bdb771934f
-title: Threads, auf die ein Ereignis ausgelöst werden kann
+title: Threads, für die ein Ereignis ausgeführt werden kann
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cd21f74c51b89ae91fd1a9fc4c1b34638c0a923f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 29d0dce21637213dbb993de0ce1224776bf0c26fa7bed09afa6d28dca228fb08
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119589510"
 ---
-# <a name="threads-on-which-an-event-can-fire"></a>Threads, auf die ein Ereignis ausgelöst werden kann
+# <a name="threads-on-which-an-event-can-fire"></a>Threads, für die ein Ereignis ausgeführt werden kann
 
-Beschreibung der Threads, die von einem Ereignis ausgelöst werden können.
+Beschreibung der Threads, für die ein Ereignis ausgeführt werden kann.
 
-API-Ereignisse (Tablet PC Platform Application Programming Interface) werden auf dem frei Hand Thread, dem Hintergrund Erkennungs Thread oder einem Anwendungs Thread ausgelöst. In den folgenden Tabellen werden Threads beschrieben, in denen Ereignisse für die einzelnen Objekte oder Steuerelemente ausgelöst werden können.
+API-Ereignisse (Application Programming Interface) der Tablet PC-Plattform werden im Ink-Thread, im Hintergrunderkennungsthread oder in einem Anwendungsthread ausgelöst. In den folgenden Tabellen werden Threads beschrieben, in denen Ereignisse für jedes Objekt oder Steuerelement ausgeführt werden können.
 
--   [Frei Hand Objekt Ereignisse](ink-object-events.md)
--   [InkCollector-Objekt Ereignisse](inkcollector-object-events.md)
--   [InkOverlay-Objekt Ereignisse](inkoverlay-object-events.md)
--   [Erkenzercontext-Objekt Ereignisse](recognizercontext-object-events.md)
--   [Striche-Sammlungs Ereignisse](strokes-collection-events.md)
--   [Ereignisse des InkEdit-Steuer Elements](inkedit-control-events.md)
--   [InkPicture-Steuerelement Ereignisse](inkpicture-control-events.md)
--   [Objekt Ereignisse von "pinputpanel"](peninputpanel-object-events.md)
+-   [Ink-Objektereignisse](ink-object-events.md)
+-   [InkCollector-Objektereignisse](inkcollector-object-events.md)
+-   [InkOverlay-Objektereignisse](inkoverlay-object-events.md)
+-   [RecognizerContext-Objektereignisse](recognizercontext-object-events.md)
+-   [Strichsammlungsereignisse](strokes-collection-events.md)
+-   [InkEdit-Steuerelementereignisse](inkedit-control-events.md)
+-   [InkPicture-Steuerelementereignisse](inkpicture-control-events.md)
+-   [PenInputPanel-Objektereignisse](peninputpanel-object-events.md)
 
  
 

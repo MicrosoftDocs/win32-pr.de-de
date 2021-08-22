@@ -1,7 +1,7 @@
 ---
-description: Wendet gespeicherte Textur Daten auf einen ID3DXPRTBuffer-Textur Puffer an.
+description: Wendet gespeicherte Textur-Gutterdaten auf einen ID3DXPRTBuffer-Texturpuffer an.
 ms.assetid: 05cc0709-543a-4df5-980a-8549451d396b
-title: 'ID3DXPRTBuffer:: evalgh-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTBuffer::EvalGH-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 23896ff2514db7b5e12b164ea0c0a763b5d1d3b1
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7c01eee9659bc650c6e914f17932fd12dca703150d69908511c37b4d7e0a41cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106373549"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493030"
 ---
-# <a name="id3dxprtbufferevalgh-method"></a>ID3DXPRTBuffer:: evalgh-Methode
+# <a name="id3dxprtbufferevalgh-method"></a>ID3DXPRTBuffer::EvalGH-Methode
 
-Wendet gespeicherte Textur Daten auf einen [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Textur Puffer an.
+Wendet gespeicherte Textur-Gutterdaten auf einen [**ID3DXPRTBuffer-Texturpuffer**](id3dxprtbuffer.md) an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, wird der folgende Wert zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode führt einen internen Aufrufen von [**ID3DXTextureGutterHelper:: applyguttersfloat**](id3dxtexturegutterhelper--applyguttersfloat.md) aus, um Textur bunddaten abzurufen und anzuwenden.
+Diese Methode führt einen internen Aufruf von [**ID3DXTextureGutterHelper::ApplyGuttersFloat**](id3dxtexturegutterhelper--applyguttersfloat.md) aus, um Textur-Gutterdaten abzurufen und anzuwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Methode führt einen internen Aufrufen von [**ID3DXTextureGutterHelper:: a
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

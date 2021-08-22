@@ -1,7 +1,7 @@
 ---
 description: Konvertiert eine vorhandene virtuelle Festplatte in einen anderen Typ oder ein anderes Format.
 ms.assetid: D4F3A030-D860-4569-B6CD-31661BD40D54
-title: Convertvirtualharddisk-Methode der Msvm_ImageManagementService-Klasse
+title: ConvertVirtualHardDisk-Methode der Msvm_ImageManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 766b117b69ecfebd13986d02ca21df3725981bb4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1da8a842f00af68d5fb07a23ec9d12a99d48b0669e00c1e1f2997bf7ef941767
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358571"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119532580"
 ---
-# <a name="convertvirtualharddisk-method-of-the-msvm_imagemanagementservice-class"></a>Convertvirtualharddisk-Methode der MSVM \_ imagemanagementservice-Klasse
+# <a name="convertvirtualharddisk-method-of-the-msvm_imagemanagementservice-class"></a>ConvertVirtualHardDisk-Methode der Msvm \_ ImageManagementService-Klasse
 
-Konvertiert eine vorhandene virtuelle Festplatte in einen anderen Typ oder ein anderes Format. Diese Methode erstellt eine neue virtuelle Festplatte und konvertiert die virtuelle Quell Festplatte nicht direkt. Weitere Informationen zu Nutzungseinschränkungen für diese Methode finden Sie unter Hinweise.
+Konvertiert eine vorhandene virtuelle Festplatte in einen anderen Typ oder ein anderes Format. Diese Methode erstellt eine neue virtuelle Festplatte und konvertiert die virtuelle Quellfestplatte nicht an Ort und Stelle. Informationen zu Verwendungseinschränkungen für diese Methode finden Sie unter Hinweise.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,40 +41,40 @@ uint32 ConvertVirtualHardDisk(
 
 <dl> <dt>
 
-*SourcePath* \[ in\]
+*SourcePath* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Der voll qualifizierte Pfad der zu konvertierenden Quelldatei für die virtuelle Festplatte. Diese Datei wird nicht als Ergebnis dieses Vorgangs geändert.
+Der vollqualifizierte Pfad der zu konvertierende virtuellen Quellfestplattedatei. Diese Datei wird aufgrund dieses Vorgangs nicht geändert.
 
 </dd> <dt>
 
-*Virtualdisksettingdata* \[ in\]
+*VirtualDiskSettingData* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Eine Zeichen folgen Darstellung der [**MSVM \_ virtualharddisksettingdata**](msvm-virtualharddisksettingdata.md) -Klasse, die die Attribute der neuen virtuellen Festplatte angibt. Der **Pfad**, der **Typ**, das **Format**, die Eigenschaften **Pfad**-, **BLOCKSIZE**-und **logicalsecorsize** -Eigenschaften müssen festgelegt werden. Die **Eigenschaft** "Eigenschaft" kann **null** sein, wenn Sie nicht benötigt wird. Legen Sie die **BLOCKSIZE** -Eigenschaft und die **logicalsector size** -Eigenschaft auf 0 fest, um die Standardwerte zu verwenden.
+Eine Zeichenfolgendarstellung der [**Msvm \_ VirtualHardDiskSettingData-Klasse,**](msvm-virtualharddisksettingdata.md) die die Attribute der neuen virtuellen Festplatte angibt. Die Eigenschaften **Path,** **Type,** **Format,** **ParentPath,** **BlockSize** und **LogicalSectorSize** müssen festgelegt werden. Die **ParentPath-Eigenschaft** kann **NULL** sein, wenn sie nicht benötigt wird. Legen Sie die Eigenschaften **BlockSize** und **LogicalSectorSize** auf 0 fest, um die Standardwerte zu verwenden.
 
-Um das Format (VHD oder vhdx) der neuen virtuellen Festplatte anzugeben, legen Sie die Erweiterung des **Pfads** auf den entsprechenden Wert (". VHD" oder ". vhdx") fest. Die **Format** -Eigenschaft muss mit der Dateinamenerweiterung im **Pfad** identisch sein.
+Um das Format (VHD oder VHDX) der neuen virtuellen Festplatte anzugeben, legen Sie die Erweiterung des **Pfads** auf den entsprechenden Wert (".vhd" oder ".vhdx") fest. Die **Format-Eigenschaft** muss mit der Dateinamenerweiterung im **Pfad** übereinstimmen.
 
-Die **logicalsector size** -Eigenschaft wird ignoriert.
+Die **LogicalSectorSize-Eigenschaft** wird ignoriert.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Typ: **[ **CIM \_ bettejob**](/previous-versions//cc136808(v=vs.85))**
+Typ: **[ **CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))**
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
 Diese Methode kann einen der folgenden Werte zurückgeben.
 
@@ -83,10 +83,10 @@ Diese Methode kann einen der folgenden Werte zurückgeben.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -95,7 +95,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -107,37 +107,37 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Methode können nur die folgenden Typen von virtuellen Festplatten verwendet werden:
+Mit dieser Methode können nur die folgenden Arten von virtuellen Festplatten verwendet werden:
 
--   Festgelegte VHD
--   Festes vhdx
+-   Korrigierte VHD
+-   VHDX korrigiert
 -   Dynamische VHD
--   Dynamische vhdx-Datei
+-   Dynamische VHDX
 -   Differenzierende VHD
--   Differenzierende vhdx
+-   Differenzierende VHDX
 
-Der Zugriff auf die [**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md) -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ ImageManagementService-Klasse**](msvm-imagemanagementservice.md) kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden c#-Beispiel wird eine virtuelle Festplatte konvertiert. Die Dienstprogramme, auf die verwiesen wird, finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (v2)](common-utilities-for-the-virtualization-samples-v2.md).
+Im folgenden C#-Beispiel wird eine virtuelle Festplatte konvertiert. Die referenzierten Hilfsprogramme finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (V2).](common-utilities-for-the-virtualization-samples-v2.md)
 
 
 ```CSharp
@@ -220,10 +220,10 @@ public static void ConvertVirtualHardDisk(string sourcePath, string destinationP
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -232,13 +232,13 @@ public static void ConvertVirtualHardDisk(string sourcePath, string destinationP
 
 <dl> <dt>
 
-[**Convertvirtualharddisk (v1)**](/previous-versions/windows/desktop/virtual/convertvirtualharddisk-msvm-imagemanagementservice)
+[**ConvertVirtualHardDisk (V1)**](/previous-versions/windows/desktop/virtual/convertvirtualharddisk-msvm-imagemanagementservice)
 </dt> <dt>
 
-[**CIM- \_ concretejob**](/previous-versions//cc136808(v=vs.85))
+[**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))
 </dt> <dt>
 
-[**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md)
+[**Msvm \_ ImageManagementService**](msvm-imagemanagementservice.md)
 </dt> </dl>
 
  

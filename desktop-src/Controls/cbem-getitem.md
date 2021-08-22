@@ -1,9 +1,9 @@
 ---
-title: CBEM_GETITEM Meldung (kommstrg. h)
-description: Ruft Element Informationen für ein bestimmtes ComboBoxEx-Element ab.
+title: CBEM_GETITEM Nachricht (Commctrl.h)
+description: Ruft Elementinformationen für ein bestimmtes ComboBoxEx-Element ab.
 ms.assetid: 2df07ae8-fa84-487c-a4a7-90244dfdb40e
 keywords:
-- Windows-Steuerelemente für CBEM_GETITEM Meldung
+- CBEM_GETITEM Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 940bbf7aea8ec93dd0f808937d959477c964df96
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dcf4dadf72a9f1fab679599c01c8fd0c6ca3541f2f77a5e8c52a740828966034
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342870"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119528060"
 ---
-# <a name="cbem_getitem-message"></a>CBEM \_ GetItem-Meldung
+# <a name="cbem_getitem-message"></a>CBEM \_ GETITEM-Nachricht
 
-Ruft Element Informationen für ein bestimmtes ComboBoxEx-Element ab.
+Ruft Elementinformationen für ein bestimmtes ComboBoxEx-Element ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,19 +37,19 @@ Ruft Element Informationen für ein bestimmtes ComboBoxEx-Element ab.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**COMBOBOXEXITEM**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) -Struktur, die die Element Informationen empfängt.
+Ein Zeiger auf eine [**COMBOBOXEXITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) die die Elementinformationen empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück. Andernfalls wird 0 (null) zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Nachricht gesendet wird, müssen die Member **iItem** und **Mask** der Struktur festgelegt werden, um den Index des Ziel Elements und den Typ der abzurufenden Informationen anzugeben. Andere Mitglieder werden nach Bedarf festgelegt. Zum Abrufen von Text müssen Sie z. b. das cbeif \_ -textflag in **Mask** festlegen und **cchtextmax** einen Wert zuweisen. Wenn Sie den **iItem** -Member auf-1 festlegen, wird das im Bearbeitungs Steuerelement angezeigte Element abgerufen.
+Wenn die Nachricht gesendet wird, müssen die **Elemente iItem** und **mask** der Struktur festgelegt werden, um den Index des Zielelements und den Typ der abzurufenden Informationen anzugeben. Andere Member werden nach Bedarf festgelegt. Um z. B. Text abzurufen, müssen Sie das CBEIF \_ TEXT-Flag in **der Maske** festlegen und **cchTextMax** einen Wert zuweisen. Wenn Sie das **iItem-Element** auf -1 festlegen, wird das im Bearbeitungssteuerelement angezeigte Element abgerufen.
 
-Wenn das cbeif- \_ textflag im **Mask** -Member der [**COMBOBOXEXITEM**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) -Struktur festgelegt ist, kann das Steuerelement den **pszText** -Member der Struktur so ändern, dass er auf den neuen Text verweist, anstatt den Puffer mit dem angeforderten Text zu füllen. Anwendungen sollten nicht davon ausgehen, dass der Text immer in den angeforderten Puffer eingefügt wird.
+Wenn das CBEIF \_ TEXT-Flag im **Maskenmember** der [**COMBOBOXEXITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) festgelegt ist, kann das Steuerelement den **pszText-Member** der -Struktur so ändern, dass er auf den neuen Text verweist, anstatt den Puffer mit dem angeforderten Text aufzufüllen. Anwendungen sollten nicht davon ausgehen, dass der Text immer im angeforderten Puffer platziert wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,10 +57,10 @@ Wenn das cbeif- \_ textflag im **Mask** -Member der [**COMBOBOXEXITEM**](/window
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **CBEM \_ Getitemw** (Unicode) und **CBEM \_ getitema** (ANSI)<br/>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **CBEM \_ GETITEMW** (Unicode) und **CBEM \_ GETITEMA** (ANSI)<br/>                 |
 
 
 

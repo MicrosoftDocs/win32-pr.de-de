@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - Wiadefd.h
-ms.openlocfilehash: 82ca6cba81101e577eed882ad45272ab81546fed
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 800f7ceb102cafcad8ddda5204990706b908a4a0137a16143af76a90345b472e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108089804"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119451190"
 ---
 # <a name="devicedialogdata2-structure"></a>DEVICEDIALOGDATA2-Struktur
 
@@ -121,7 +121,7 @@ Typ: **BSTR**
 
 </dd> <dd>
 
-Gibt die Dateinamenvorlage an, die für Dateien verwendet werden soll, die von WIA-Elementen in den durch **bstrFolderName festgelegten Zielordner übertragen werden.** Eine beliebige Anzahl eindeutiger Dateinamen kann durch Anfügen zusätzlicher Zeichen an die Dateinamenvorlage erstellt werden.
+Gibt die Dateinamenvorlage an, die für Dateien verwendet werden soll, die von WIA-Elementen in den durch **bstrFolderName festgelegten Zielordner übertragen werden.** Eine beliebige Anzahl eindeutiger Dateinamen kann erstellt werden, indem der Dateinamenvorlage zusätzliche Zeichen angefügt werden.
 
 </dd> <dt>
 
@@ -154,7 +154,7 @@ Typ: **[ **IWiaItem2**](-wia-iwiaitem2.md)\***
 
 </dd> <dd>
 
-Zeiger auf die [**IWiaItem2-Schnittstelle**](-wia-iwiaitem2.md) des WIA-Elements, das Daten in die Datei oder dateien überträgt, die im **pbstrFilePaths-Array benannt** sind.
+Zeiger auf die [**IWiaItem2-Schnittstelle**](-wia-iwiaitem2.md) des WIA-Elements, das Daten an die Im **pbstrFilePaths-Array** benannte Datei überträgt.
 
 </dd> </dl>
 
@@ -162,10 +162,10 @@ Zeiger auf die [**IWiaItem2-Schnittstelle**](-wia-iwiaitem2.md) des WIA-Elements
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
 | Header<br/>                   | <dl> <dt>Wiadefd.h</dt> </dl> |
 
 

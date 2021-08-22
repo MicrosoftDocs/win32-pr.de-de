@@ -1,7 +1,7 @@
 ---
-description: Die getsubtypame-Funktion Ruft den lesbaren Namen eines Video Untertyps ab.
+description: Die GetSubtypeName-Funktion ruft den für Menschen lesbaren Namen eines Videountertyps ab.
 ms.assetid: 493b434e-2d36-4897-a5b2-7be0eb0a560f
-title: Getsubtypame-Funktion (wxutil. h)
+title: GetSubtypeName-Funktion (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f5cae835a3a7f1b5510d85ecf3f2ae9d15251a45
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c676f3e08f55bd010e761853b777e0eb4b28933536ab7af09bd94e457032b583
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119564849"
 ---
-# <a name="getsubtypename-function"></a>Getsubtypame-Funktion
+# <a name="getsubtypename-function"></a>GetSubtypeName-Funktion
 
-Die `GetSubtypeName` -Funktion Ruft den lesbaren Namen eines Video Untertyps ab.
+Die `GetSubtypeName` Funktion ruft den für Menschen lesbaren Namen eines Videountertyps ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ TCHAR* GetSubtypeName(
 
 <dl> <dt>
 
-*psubtype* 
+*pSubtype* 
 </dt> <dd>
 
-Zeiger auf einen Video Untertyp- **GUID**.
+Zeiger auf eine **Videountertyp-GUID.**
 
 </dd> </dl>
 
@@ -59,8 +59,8 @@ Gibt eine Zeichenfolge zurück, die den Namen enthält.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt eine Zeichenfolge zurück, die den Namen enthält.
 
 <dl> <dt>
 
-[Video-und Bildfunktionen](video-and-image-functions.md)
+[Video- und Bildfunktionen](video-and-image-functions.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein Save-Objekt. Veraltet.
+description: Erstellt ein Speicherobjekt. Veraltet.
 ms.assetid: 50a7dbde-1dd4-4aae-a9ab-97d6f99618c0
-title: 'Idirectxfile:: kreatesaveobject-Methode (dxfile. h)'
+title: IDirectXFile::CreateSaveObject-Methode (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dxof.lib
 - D3dxof.dll
-ms.openlocfilehash: 848010a1f701b39f5cc77a126272bc019ed01f4f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c3646f54b1f232c6eec3e1b3d06441a8e6a7c090f784e3c4c016f7f1bcfc3b03
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365125"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119491850"
 ---
-# <a name="idirectxfilecreatesaveobject-method"></a>Idirectxfile:: erkreatesaveobject-Methode
+# <a name="idirectxfilecreatesaveobject-method"></a>IDirectXFile::CreateSaveObject-Methode
 
-Erstellt ein Save-Objekt. Veraltet.
+Erstellt ein Speicherobjekt. Veraltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT CreateSaveObject(
 
 <dl> <dt>
 
-*szFilename* \[ in\]
+*szFileName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
@@ -51,21 +51,21 @@ Zeiger auf den Namen der Datei, die zum Speichern von Daten verwendet werden sol
 
 </dd> <dt>
 
-*dwfileformat* \[ in\]
+*dwFileFormat* \[ In\]
 </dt> <dd>
 
-Typ: **[ **dxfileformat**](dxfile.md)**
+Typ: **[ **DXFILEFORMAT**](dxfile.md)**
 
-Gibt das Format an, das beim Speichern der DirectX-Datei verwendet werden soll. Bei diesem Wert kann es sich um eines der dxfileformat \_ xxx-Flags in [dxfile-Konstanten](dxfile.md)handeln. Weitere Informationen finden Sie in den Hinweisen.
+Gibt das Format an, das beim Speichern der DirectX-Datei verwendet werden soll. Dieser Wert kann eines der DXFILEFORMAT \_ xxx-Flags in [DXFILE-Konstanten sein.](dxfile.md) Weitere Informationen finden Sie in den Hinweisen.
 
 </dd> <dt>
 
-*ppsaveobj* \[ Out, retval\]
+*ppSaveObj* \[ out, retval\]
 </dt> <dd>
 
-Typ: **[ **lpdirectxfilesaveobject**](idirectxfilesaveobject.md)\***
+Typ: **[ **LPDIRECTXFILESAVEOBJECT**](idirectxfilesaveobject.md)\***
 
-Adresse eines Zeigers auf eine [**idirectxfilesaveobject**](idirectxfilesaveobject.md) -Schnittstelle, die das erstellte Save-Objekt darstellt.
+Adresse eines Zeigers auf eine [**IDirectXFileSaveObject-Schnittstelle,**](idirectxfilesaveobject.md) die das erstellte Speicherobjekt darstellt.
 
 </dd> </dl>
 
@@ -73,13 +73,13 @@ Adresse eines Zeigers auf eine [**idirectxfilesaveobject**](idirectxfilesaveobje
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \_ . Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: dxfileerr \_ badzuzuweisung, dxfileerr \_ BadFile, dxfileerr \_ badvalue.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert DXFILE \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: DXFILEERR \_ BADALLOC, DXFILEERR \_ BADFILE, DXFILEERR \_ BADVALUE.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem Sie diese Methode verwendet haben, verwenden Sie die Methoden der [**idirectxfilesaveobject**](idirectxfilesaveobject.md) -Schnittstelle zum Erstellen von Datenobjekten und zum Speichern von Vorlagen oder Daten.
+Verwenden Sie nach der Verwendung dieser Methode Methoden der [**IDirectXFileSaveObject-Schnittstelle,**](idirectxfilesaveobject.md) um Datenobjekte zu erstellen und Vorlagen oder Daten zu speichern.
 
-Der Standardwert für das Dateiformat lautet dxfileformat \_ Binary. Die Dateiformat Werte können mit einem logischen OR kombiniert werden, um komprimierten Text oder komprimierte Binärdateien zu erstellen. Wenn eine Datei sowohl als Binärdatei (0) als auch als Text (1) angegeben wird, wird Sie als Textdatei gespeichert, da der Wert nicht vom Textdatei-Format Wert (0 + 1 = 1) unterschieden werden kann. Wenn Sie angeben, dass das Dateiformat Text und Komprimierung sein soll, wird die Datei zunächst als Text geschrieben und dann komprimiert. Komprimierte Textdateien sind jedoch nicht so effizient wie binäre Textdateien. in den meisten Fällen sollten Sie Binär-und komprimierte Textdateien angeben. Wenn eine Datei festgelegt wird, die ohne Angabe eines Formats komprimiert werden soll, führt dies zu einer binären komprimierten Datei.
+Der Standardwert für das Dateiformat ist DXFILEFORMAT \_ BINARY. Die Dateiformatwerte können in einem logischen OR kombiniert werden, um komprimierten Text oder komprimierte Binärdateien zu erstellen. Wenn eine Datei sowohl als binär (0) als auch als text (1) angegeben wird, wird sie als Textdatei gespeichert, da der Wert nicht vom Formatwert der Textdatei (0 + 1 = 1) zu unterscheiden ist. Wenn Sie angeben, dass das Dateiformat text- und komprimiert sein soll, wird die Datei zuerst als Text geschrieben und dann komprimiert. Komprimierte Textdateien sind jedoch nicht so effizient wie Binärtextdateien, daher sollten Sie in den meisten Fällen binäre und komprimierte Textdateien angeben. Das Festlegen einer Zu komprimierenden Datei ohne Angabe eines Formats führt zu einer binären, komprimierten Datei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,8 +87,8 @@ Der Standardwert für das Dateiformat lautet dxfileformat \_ Binary. Die Dateifo
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 
 
 
@@ -96,10 +96,10 @@ Der Standardwert für das Dateiformat lautet dxfileformat \_ Binary. Die Dateifo
 
 <dl> <dt>
 
-[Idirectxfile](idirectxfile.md)
+[IDirectXFile](idirectxfile.md)
 </dt> <dt>
 
-[**Idirectxfilesaveobject**](idirectxfilesaveobject.md)
+[**IDirectXFileSaveObject**](idirectxfilesaveobject.md)
 </dt> </dl>
 
  

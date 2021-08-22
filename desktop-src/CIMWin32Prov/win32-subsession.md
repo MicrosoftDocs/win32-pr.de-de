@@ -1,5 +1,5 @@
 ---
-description: Die Zuordnung der Win32- \_ unter Sitzung definiert Beziehungen zwischen Sitzungen, in denen eine Sitzung ein Teil von ist oder eine andere Sitzung verwendet, z. b. Wenn eine Terminal Sitzung eine Anmelde Sitzung verwendet.
+description: Die Win32-SubSession-Zuordnung definiert Beziehungen zwischen Sitzungen, bei denen eine Sitzung Teil einer anderen Sitzung ist oder eine andere Sitzung nutzt, z. B. wenn eine Terminalsitzung eine \_ Anmeldesitzung verwendet.
 ms.assetid: 2269de22-b086-4f71-8b19-bc53e1c88dc7
 ms.tgt_platform: multiple
 title: Win32_SubSession-Klasse
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 api_location:
 - cimwin32.dll
-ms.openlocfilehash: 540cfb4c00b5df64e4ff11a1cc462eaed03be434
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e575fddd5d869d7670aa3e42bf3f948badd7fd1b24befdf8839045c788e59634
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119642650"
 ---
-# <a name="win32_subsession-class"></a>Win32- \_ unter Sitzungs Klasse
+# <a name="win32_subsession-class"></a>Win32 \_ SubSession-Klasse
 
-Die Zuordnung der Win32- \_ unter Sitzung definiert Beziehungen zwischen Sitzungen, in denen eine Sitzung ein Teil von ist oder eine andere Sitzung verwendet, z. b. Wenn eine Terminal Sitzung eine Anmelde Sitzung verwendet.
+Die Win32-SubSession-Zuordnung definiert Beziehungen zwischen Sitzungen, bei denen eine Sitzung Teil einer anderen Sitzung ist oder eine andere Sitzung nutzt, z. B. wenn eine Terminalsitzung eine \_ Anmeldesitzung verwendet.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -42,45 +42,45 @@ class Win32_SubSession : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ unter Sitzungs** Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ SubSession-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ unter Sitzungs** Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ SubSession-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32- \_ Sitzung**
+Datentyp: **Win32-Sitzung \_**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](../wmisdk/standard-qualifiers.md) Setzung (Vorgänger)
+Qualifizierer: [**Override**](../wmisdk/standard-qualifiers.md) (Antecedent)
 </dt> </dl>
 
-Eine [**Win32- \_ Sitzung**](win32-session.md) , die die Sitzung beschreibt, die über eine untergeordnete Sitzung verfügt.
+Eine [**\_ Win32-Sitzung,**](win32-session.md) die die Sitzung beschreibt, die über eine Untersitzung verfügt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32- \_ Sitzung**
+Datentyp: **Win32-Sitzung \_**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](../wmisdk/standard-qualifiers.md) (abhängig)
+Qualifizierer: [**Außerkraftsetzung**](../wmisdk/standard-qualifiers.md) (abhängig)
 </dt> </dl>
 
-Eine [**Win32- \_ Sitzung**](win32-session.md) , die die Sitzung beschreibt, die die unter Sitzung ist.
+Eine [**\_ Win32-Sitzung,**](win32-session.md) die die Sitzung beschreibt, die die Untersitzung ist.
 
 </dd> </dl>
 
@@ -92,8 +92,8 @@ Eine [**Win32- \_ Sitzung**](win32-session.md) , die die Sitzung beschreibt, die
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CimWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Cimwin32.dll</dt> </dl> |
 
 
@@ -102,7 +102,7 @@ Eine [**Win32- \_ Sitzung**](win32-session.md) , die die Sitzung beschreibt, die
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

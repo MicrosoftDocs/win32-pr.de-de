@@ -1,21 +1,21 @@
 ---
-description: Die StretchDIBits-Funktion kopiert die Farbdaten für ein Rechteck von Pixeln in einem DIB in das angegebene Ziel Rechteck.
+description: Die StretchDIBits-Funktion kopiert die Farbdaten für ein Pixelrechteck in einem DIB in das angegebene Zielrechteck.
 ms.assetid: d4e3f631-3852-4cee-8e97-2244c39b200e
-title: Größenanpassung eines JPEG-oder PNG-Bilds
+title: Dimensionieren eines JPEG- oder PNG-Bilds
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 28cd5bf3cbef8bab80d45536d90bfdd10174c26d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2380b03f562d950cf8ff9ca4ab03197b9da8eed02ac10652dcb120dce279895c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119613680"
 ---
-# <a name="sizing-a-jpeg-or-png-image"></a>Größenanpassung eines JPEG-oder PNG-Bilds
+# <a name="sizing-a-jpeg-or-png-image"></a>Dimensionieren eines JPEG- oder PNG-Bilds
 
-Die [**StretchDIBits**](/windows/desktop/api/Wingdi/nf-wingdi-stretchdibits) -Funktion kopiert die Farbdaten für ein Rechteck von Pixeln in einem DIB in das angegebene Ziel Rechteck. Wenn das Ziel Rechteck größer als das Quell Rechteck ist, werden die Zeilen und Spalten der Farbdaten von dieser Funktion auf das Ziel Rechteck gestreckt. Wenn das Ziel Rechteck kleiner als das Quell Rechteck ist, komprimiert **StretchDIBits** die Zeilen und Spalten, indem der angegebene Raster Vorgang verwendet wird.
+Die [**StretchDIBits-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-stretchdibits) kopiert die Farbdaten für ein Pixelrechteck in einem DIB in das angegebene Zielrechteck. Wenn das Zielrechteck größer als das Quellrechteck ist, streckt diese Funktion die Zeilen und Spalten der Farbdaten an das Zielrechteck. Wenn das Zielrechteck kleiner als das Quellrechteck ist, komprimiert **StretchDIBits** die Zeilen und Spalten mithilfe des angegebenen Rastervorgangs.
 
-[**StretchDIBits**](/windows/desktop/api/Wingdi/nf-wingdi-stretchdibits) wird so erweitert, dass ein JPEG-oder PNG-Bild als Quell Bild übergeben werden kann.
+[**StretchDIBits**](/windows/desktop/api/Wingdi/nf-wingdi-stretchdibits) wurde erweitert, damit ein JPEG- oder PNG-Bild als Quellbild übergeben werden kann.
 
 Beispiel:
 

@@ -1,11 +1,11 @@
 ---
-title: MS-TS-Remote-Control-Attribut
-description: Terminaldienste-Remotesteuerung gibt an, ob die Remote Überwachung oder die Remote Steuerung der Terminal Dienste-Sitzung des Benutzers zulässig ist.
+title: ms-TS-Remote-Control-Attribut
+description: Die Terminaldienste-Remotesteuerung gibt an, ob die Remoteüberwachung oder Remotesteuerung der Terminaldienstesitzung des Benutzers zugelassen werden soll.
 ms.assetid: 151e9327-c29e-413b-9485-4c408a67560f
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-TS-Remote-Control-Attribut
-- AD-Schema des mstsremotecontrol-Attributs
+- MS-TS-Remote-Control-Attribut AD-Schema
+- MSTSRemoteControl-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cfb2428b047ea06a8e0faa5eed390875cd0380be
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 342082e76a422b5ec136c7fc76a59dfd0f0aaf9405b7e56404e94c2516bd5768
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119507840"
 ---
-# <a name="ms-ts-remote-control-attribute"></a>MS-TS-Remote-Control-Attribut
+# <a name="ms-ts-remote-control-attribute"></a>ms-TS-Remote-Control-Attribut
 
-Terminaldienste-Remotesteuerung gibt an, ob die Remote Überwachung oder die Remote Steuerung der Terminal Dienste-Sitzung des Benutzers zulässig ist.
+Die Terminaldienste-Remotesteuerung gibt an, ob die Remoteüberwachung oder Remotesteuerung der Terminaldienstesitzung des Benutzers zugelassen werden soll.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-TS-Remote Steuerung                 |
-| LDAP-Display-Name | mstsremotecontrol                    |
+| CN                | ms-TS-Remote-Control                 |
+| Ldap-Anzeigename | msTSRemoteControl                    |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1980              |
 | System-ID-GUID    | 15177226-8642-468b-8c48-03ddfd004982 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -55,10 +55,10 @@ Terminaldienste-Remotesteuerung gibt an, ob die Remote Überwachung oder die Rem
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -76,10 +76,10 @@ Terminaldienste-Remotesteuerung gibt an, ob die Remote Überwachung oder die Rem
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -97,10 +97,10 @@ Terminaldienste-Remotesteuerung gibt an, ob die Remote Überwachung oder die Rem
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |

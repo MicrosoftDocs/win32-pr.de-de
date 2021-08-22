@@ -1,21 +1,21 @@
 ---
-title: DWRITE_COLOR_F (dwrite \_ 2. h)
-description: Beschreibt die Komponenten rot, grün, blau und Alpha einer Farbe. | DWRITE_COLOR_F (dwrite \_ 2. h)
+title: DWRITE_COLOR_F (Dwrite \_ 2.h)
+description: Beschreibt die Rot-, Grün-, Blau- und Alphakomponenten einer Farbe. | DWRITE_COLOR_F (Dwrite \_ 2.h)
 ms.assetid: cf51fa2f-234b-44bd-779f-564d63753dbe
 keywords:
 - DWRITE_COLOR_F
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8ccb62b26bc0b11639e82833d923668cf9a2ed38
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: ad82caae100e4d7ee9e91765e05d719abf5797b05fb0b0631ab7ca1cf1b8efa9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961314"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119290730"
 ---
-# <a name="dwrite_color_f"></a>dwrite- \_ Farbe \_ F
+# <a name="dwrite_color_f"></a>DWRITE \_ COLOR \_ F
 
-Beschreibt die Komponenten rot, grün, blau und Alpha einer Farbe.
+Beschreibt die Rot-, Grün-, Blau- und Alphakomponenten einer Farbe.
 
 
 ```C++
@@ -24,7 +24,7 @@ typedef D3DCOLORVALUE DWRITE_COLOR_F;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen finden Sie unter [**D3DCOLORVALUE**](../direct3d9/d3dcolorvalue.md).
 
@@ -34,10 +34,10 @@ Weitere Informationen finden Sie unter [**D3DCOLORVALUE**](../direct3d9/d3dcolor
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7, Windows Vista mit SP2 und Platt Form Update für Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Platt Form Update für Windows Server 2008 \[ Desktop Apps \| UWP-apps\]<br/> |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8,1 \[ Windows Phone Silverlight 8,1 und Windows-Runtime apps\]<br/>                                                  |
-| Header<br/>                   | <dl> <dt>Dwrite \_ 2. h</dt> </dl>                                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 Windows Vista mit SP2 und Plattformupdate für UWP-Apps für Windows \[ \| Vista-Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Plattformupdate für Windows Server \[ 2008-Desktop-Apps \| UWP-Apps\]<br/> |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1- und Windows Runtime-Apps\]<br/>                                                  |
+| Header<br/>                   | <dl> <dt>Dwrite \_ 2.h</dt> </dl>                                                   |
 
 
 

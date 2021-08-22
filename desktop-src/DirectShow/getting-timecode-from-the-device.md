@@ -1,23 +1,23 @@
 ---
-description: Erhalten von Timecode vom Gerät
+description: Abrufen von Timecode vom Gerät
 ms.assetid: e3d06e0c-a595-4bc3-be62-168bd5122397
-title: Erhalten von Timecode vom Gerät
+title: Abrufen von Timecode vom Gerät
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5787cf328214c1a266b7f129e4e517716b1d04f8
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 265769300c0134ec9f3b3635ada3e595205e8452ced262d4062f9fb6cdaaadc2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344562"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119564730"
 ---
-# <a name="getting-timecode-from-the-device"></a>Erhalten von Timecode vom Gerät
+# <a name="getting-timecode-from-the-device"></a>Abrufen von Timecode vom Gerät
 
-Wenn ein DV-Band wiedergegeben wird oder sich im Modus zum Anhalten des Datensatzes befindet, können Sie den SMPTE-Zeit Code oder die absolute Nachverfolgung abrufen. Um dies zu erreichen, müssen Sie die [**IAMTimecodeReader:: gettimecode**](/windows/desktop/api/Strmif/nf-strmif-iamtimecodereader-gettimecode) -Methode aufrufen. Diese Methode nimmt einen Zeiger auf eine [**Timecode- \_ Beispiel**](/windows/win32/api/strmif/ns-strmif-timecode_sample) Struktur, die den Zeit Code beschreibt. Initialisieren Sie vor dem Aufrufen der-Methode den **dwFlags** -Member der-Struktur. Verwenden Sie den Wert Ed \_ Devcap \_ Zeitcode \_ Read, um den Zeitcode abzurufen, oder den Wert Ed \_ Devcap \_ Atn \_ Read, um die absolute Nachverfolgung abzurufen.
+Während ein DV-Band wiedergegeben wird oder sich im Aufzeichnungspausenmodus befindet, können Sie den SMPTE-Zeitcode oder die absolute Tracknummer abrufen. Rufen Sie hierzu die [**IAMTimecodeReader::GetTimecode-Methode**](/windows/desktop/api/Strmif/nf-strmif-iamtimecodereader-gettimecode) auf. Diese Methode verwendet einen Zeiger auf eine [**TIMECODE \_ SAMPLE-Struktur,**](/windows/win32/api/strmif/ns-strmif-timecode_sample) die den Zeitcode beschreibt. Initialisieren Sie vor dem Aufrufen der -Methode den **dwFlags-Member** der -Struktur. Verwenden Sie den Wert ED \_ DEVCAP \_ TIMECODE \_ READ, um den Timecode abzurufen, oder den Wert ED \_ DEVCAP \_ ATN \_ READ, um die absolute Tracknummer abzurufen.
 
-Der **Zeitcode** -Member der **Zeitcode- \_ Beispiel** Struktur ist eine Zeit Code Struktur. Wenn die-Methode zurückgibt, enthält der **dwframes** -Member der Zeitcode-Struktur den Zeit Code oder die Nachverfolgung. Für Timecode werden die Stunden, Minuten, Sekunden und Frames in einem DWORD-Format als binäre codierte Dezimalwerte (BCD) mit dem Format *hhmmssff* verpackt. Verwenden Sie Bitmasken, um die einzelnen Werte zu extrahieren.
+Der **Timecodemember** der **TIMECODE \_ SAMPLE-Struktur** ist eine TIMECODE-Struktur. Wenn die Methode zurückgegeben wird, enthält der **dwFrames-Member** der TIMECODE-Struktur den Timecode oder die Tracknummer. Für timecode werden die Stunden, Minuten, Sekunden und Frames als binär codierte Dezimalwerte (Binary Coded Decimal, BCD) mit dem Format *hhmmssff* in ein DWORD gepackt. Verwenden Sie Bitmasken, um die einzelnen Werte zu extrahieren.
 
-Im folgenden Beispiel werden der Zeitcode und die Nachverfolgung abgerufen.
+Im folgenden Beispiel werden der Zeitcode und die Nachverfolgungsnummer abgerufen.
 
 
 ```C++
@@ -55,7 +55,7 @@ if (MyDevCap.bHasTimecode)
 
 <dl> <dt>
 
-[Steuern eines DV-Camcorder](controlling-a-dv-camcorder.md)
+[Steuern eines DV-Dvds](controlling-a-dv-camcorder.md)
 </dt> </dl>
 
  

@@ -1,50 +1,50 @@
 ---
-description: Windows Installer Entwickler die Richtlinien in diesem Thema verwenden können, um Windows Installer Pakete zu erstellen, die Assemblys enthalten.
+description: Windows Installer-Entwickler können die Richtlinien in diesem Thema verwenden, um Windows Installer-Pakete zu erstellen, die Assemblys enthalten.
 ms.assetid: 60687a4f-aaa4-4264-a3f7-0a16eb1fb336
-title: Hinzufügen von Assemblys zu Paketen
+title: Hinzufügen von Assemblys zu einem Paket
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ded0795003ae8faf1b7bb945671990767d3eefb7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 68a96c1b8c8d9b73fedf03fceeb82be62b8457556da02334ed7a224aefc2202a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215727"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119534870"
 ---
-# <a name="adding-assemblies-to-a-package"></a>Hinzufügen von Assemblys zu Paketen
+# <a name="adding-assemblies-to-a-package"></a>Hinzufügen von Assemblys zu einem Paket
 
-Windows Installer Entwickler die Richtlinien in diesem Thema verwenden können, um Windows Installer Pakete zu erstellen, die Assemblys enthalten.
+Windows Installer-Entwickler können die Richtlinien in diesem Thema verwenden, um Windows Installer-Pakete zu erstellen, die Assemblys enthalten.
 
-Die folgenden Richtlinien gelten für Win32-Assemblys und Assemblys, die die Common Language Runtime des Microsoft .NET Frameworks verwendet.
+Die folgenden Richtlinien gelten für Win32-Assemblys und -Assemblys, die von der Common Language Runtime des Microsoft-.NET Framework werden.
 
--   Eine Windows Installer Komponente sollte nicht mehr als eine Assembly enthalten.
--   Alle Dateien in der Assembly sollten sich in einer einzelnen Komponente befinden.
--   Jede Komponente, die eine Assembly enthält, muss über einen Eintrag in der [MsiAssembly](msiassembly-table.md) -Tabelle verfügen.
--   Der Name der starken Assemblycaches der einzelnen Assemblys sollte in der [MsiAssemblyName](msiassemblyname-table.md) -Tabelle erstellt werden.
--   Verwenden Sie die [Registrierungs](registry-table.md) Tabelle anstelle der [Klassen](class-table.md) Tabelle, wenn Sie COM-Interop für eine Assembly registrieren.
--   Assemblys mit demselben starken Namen sind dieselbe Assembly. Wenn dieselbe Assembly von verschiedenen Anwendungen installiert wird, sollten die Komponenten, die die Assembly enthalten, den gleichen Wert für die ComponentID in Ihren [Komponenten](component-table.md) Tabellen verwenden.
+-   Eine Windows Installer-Komponente sollte nicht mehr als eine Assembly enthalten.
+-   Alle Dateien in der Assembly sollten in einer einzelnen Komponente enthalten sein.
+-   Jede Komponente, die eine Assembly enthält, sollte über einen Eintrag in der [MsiAssembly-Tabelle](msiassembly-table.md) verfügen.
+-   Der starke Assemblycachename jeder Assembly sollte in der [MsiAssemblyName-Tabelle erstellt](msiassemblyname-table.md) werden.
+-   Verwenden Sie [die Tabelle Registry](registry-table.md) anstelle der Tabelle [Class,](class-table.md) wenn Sie COM Interop für eine Assembly registrieren.
+-   Assemblys mit demselben starken Namen sind dieselbe Assembly. Wenn dieselbe Assembly von verschiedenen Anwendungen installiert wird, sollten die Komponenten, die die Assembly enthalten, den gleichen Wert für componentId in ihren [Komponententabellen](component-table.md) verwenden.
 
 > [!Note]  
-> Produktankündigungen identifizieren Assemblys, die von verschiedenen Anwendungen installiert und verwendet werden können. Produktankündigungen identifizieren keine privaten Assemblys.
+> Produktanzeigen identifizieren Assemblys, die von verschiedenen Anwendungen installiert und verwendet werden können. Produktan ankündigungen identifizieren keine privaten Assemblys.
 
  
 
-## <a name="adding-win32-assemblies"></a>Win32-Assemblys
+## <a name="adding-win32-assemblies"></a>Hinzufügen von Win32-Assemblys
 
-Beachten Sie beim Einschließen von Win32-Assemblys die folgenden Richtlinien:
+Befolgen Sie die folgenden Richtlinien, wenn Sie Win32-Assemblys verwenden:
 
--   Der KEYPATH-Wert in der [Komponenten](component-table.md) Tabelle für eine Komponente, die eine Win32-Assembly enthält, darf nicht NULL sein.
--   Der KEYPATH-Wert in der [Komponenten](component-table.md) Tabelle für eine Komponente, die eine Win32-Richtlinienassembly enthält, sollte die Manifest-Datei sein.
--   Der KEYPATH-Wert in der [Komponenten](component-table.md) Tabelle für eine Komponente, die eine Win32-Assembly enthält, bei der es sich nicht um eine Richtlinienassembly handelt, sollte nicht die Manifestressource oder die Katalog Datei sein Dies sollte eine andere Datei in der Assembly sein.
--   Fügen Sie der [MsiAssemblyName](msiassemblyname-table.md) -Tabelle für jedes Name-Wert-Paar, das im Abschnitt " **assemblyIdentity" des Win32-Assemblymanifests** aufgeführt ist, eine Zeile hinzu.
+-   Der KeyPath-Wert in der [Component-Tabelle](component-table.md) für eine Komponente, die eine Win32-Assembly enthält, sollte nicht NULL sein.
+-   Der KeyPath-Wert in der [Component-Tabelle](component-table.md) für eine Komponente, die eine Win32-Richtlinien-Assembly enthält, sollte die Manifestdatei sein.
+-   Der KeyPath-Wert in der [Component-Tabelle](component-table.md) für eine Komponente, die eine Win32-Assembly enthält, die keine Richtlinien-Assembly ist, darf nicht die Manifestdatei oder Katalogdatei sein. Es sollte eine andere Datei in der Assembly sein.
+-   Fügen Sie der [Tabelle MsiAssemblyName](msiassemblyname-table.md) für jedes Name-Wert-Paar, das im Abschnitt **assemblyIdentity** des Manifests der Win32-Assembly aufgeführt ist, eine Zeile hinzu.
 
-## <a name="adding-assemblies-used-with-the-net-framework"></a>Hinzufügen von mit dem .NET Framework verwendeten Assemblys
+## <a name="adding-assemblies-used-with-the-net-framework"></a>Hinzufügen von Assemblys, die mit dem -.NET Framework
 
-Verwenden Sie die folgenden Richtlinien, wenn Sie Assemblys einschließen, die die Common Language Runtime des .NET Framework verwendet.
+Verwenden Sie die folgenden Richtlinien, wenn Sie Assemblys, die von der Common Language Runtime des -.NET Framework verwendet werden, verwenden.
 
--   Der KEYPATH-Wert in der [Komponenten](component-table.md) Tabelle für eine Komponente, die die Assembly enthält, darf nicht NULL sein.
--   Wenn Sie eine vom Common Language Runtime verwendete Assembly in den globalen Assemblycache installieren, muss der Wert in der Datei \_ Anwendungs Spalte der MsiAssembly-Tabelle den Wert NULL aufweisen.
--   Fügen Sie der Tabelle [MsiAssemblyName](msiassemblyname-table.md) für jedes Attribut des starken Namens der Assembly eine Zeile hinzu. Alle Assemblys müssen über die Attribute Name, Version und Culture verfügen, die in der Tabelle MsiAssemblyName angegeben sind. Ein PublicKeyToken-Attribut ist für eine globale Assembly erforderlich. Die folgende Tabelle ist ein Beispiel für die MsiAssemblyName-Tabelle für eine globale Assembly, die von der Common Language Runtime verwendet werden kann.
+-   Der KeyPath-Wert in der [Component-Tabelle](component-table.md) für eine Komponente, die die Assembly enthält, sollte nicht NULL sein.
+-   Wenn Sie eine von der Common Language Runtime verwendete Assembly im globalen Assemblycache installieren, muss der Wert in der Spalte Dateianwendung der \_ MsiAssembly-Tabelle NULL sein.
+-   Fügen Sie der [Tabelle MsiAssemblyName](msiassemblyname-table.md) für jedes Attribut des starken Namens der Assembly eine Zeile hinzu. Alle Assemblys müssen über die Attribute Name, Version und Culture verfügen, die in der MsiAssemblyName-Tabelle angegeben sind. Für eine globale Assembly ist ein publicKeyToken-Attribut erforderlich. Die folgende Tabelle ist ein Beispiel für die MsiAssemblyName-Tabelle für eine globale Assembly zur Verwendung durch die Common Language Runtime.
 
 [MsiAssemblyName-Tabelle](msiassemblyname-table.md)
 
@@ -52,10 +52,10 @@ Verwenden Sie die folgenden Richtlinien, wenn Sie Assemblys einschließen, die d
 
 | Komponente  | Name           | Wert            |
 |------------|----------------|------------------|
-| Componenta | Name           | Einfach           |
-| Componenta | version        | 1.0.0.0          |
-| Componenta | Kultur        | Neutral          |
-| Componenta | PublicKeyToken | 9d1ec8380b483-Dienst |
+| ComponentA | Name           | Einfach           |
+| ComponentA | version        | 1.0.0.0          |
+| ComponentA | culture        | Neutral          |
+| ComponentA | Publickeytoken | 9d1ec8380f483f5a |
 
 
 

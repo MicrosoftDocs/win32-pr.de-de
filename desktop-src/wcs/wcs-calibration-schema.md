@@ -1,33 +1,33 @@
 ---
 title: WCS-Kalibrierungsschema
-description: In diesem Thema wird das WCS-Kalibrierungs Schema beschrieben, das das WCS Color Device Model Profile erweitert.
+description: In diesem Thema wird das WCS-Kalibrierungsschema beschrieben, das das WCS-Farbgerätemodellprofil erweitert.
 ms.assetid: 99f3e9e3-15b7-4bca-87cc-a3bf3b6d0112
 keywords:
-- Windows Color System (WCS), Kalibrierung
+- Windows Farbsystem (WCS), Kalibrierung
 - WCS (Windows Color System), Kalibrierung
-- Bild Farbverwaltung, Kalibrierung
-- Farbverwaltung, Kalibrierung
+- Bildfarbverwaltung,Kalibrierung
+- Farbverwaltung,Kalibrierung
 - Farben, Kalibrierung
 - Schemas, Kalibrierung
 - WCS-Kalibrierung
-- Energie
+- Kalibrierung
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e859ab9d2b47355db063961004f17a8cc1537694
-ms.sourcegitcommit: 38954f8f0d70f44bff4a943784f468ebd7ef691a
+ms.openlocfilehash: 3744f8aa0190f09acf80b469ae01fddb035c48deda73d53871094ef9ece8e88b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "106354884"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119451420"
 ---
 # <a name="wcs-calibration-schema"></a>WCS-Kalibrierungsschema
 
-In diesem Thema wird das WCS-Kalibrierungs Schema beschrieben, das das [WCS Color Device Model Profile](wcs-color-device-model-profile-schema-and-algorithms.md)erweitert.
+In diesem Thema wird das WCS-Kalibrierungsschema beschrieben, das das [WCS-Farbgerätemodellprofil](wcs-color-device-model-profile-schema-and-algorithms.md)erweitert.
 
-## <a name="the-wcs-calibration-schema"></a>Das WCS-Kalibrierungs Schema
+## <a name="the-wcs-calibration-schema"></a>Das WCS-Kalibrierungsschema
 
-Die folgende Schema Definition wird verwendet, um die neuen Windows 7-Definitionen anzugeben, die die [WCS Color Device Model Profile](wcs-color-device-model-profile-schema-and-algorithms.md) -Kalibrierung unterstützen.
+Die folgende Schemadefinition wird verwendet, um die neuen Windows 7 Definitionen anzugeben, die die [WCS-Farbgerätemodellprofil-Kalibrierung](wcs-color-device-model-profile-schema-and-algorithms.md) unterstützen.
 
 
 ```C++
@@ -74,7 +74,7 @@ Die folgende Schema Definition wird verwendet, um die neuen Windows 7-Definition
 
 
 
-Aus Kompatibilitätsgründen mit Windows Vista sollten Profile, die Kalibrierungs Tags enthalten, das-Attribut enthalten `mc:Ignoreable="cdm_calibration"` .
+Zur Kompatibilität mit Windows Vista sollten Profile, die Kalibrierungstags enthalten, das Attribut `mc:Ignoreable="cdm_calibration"` enthalten.
 
  
 

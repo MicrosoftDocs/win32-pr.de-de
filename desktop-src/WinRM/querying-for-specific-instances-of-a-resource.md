@@ -1,6 +1,6 @@
 ---
-title: Abfragen für bestimmte Instanzen einer Ressource
-description: Der aufzurufende "Session. Enumerate" verfügt über optionale Parameter, die die Enumeration in eine Abfrage eingrenzen.
+title: Abfragen bestimmter Instanzen einer Ressource
+description: Der Aufruf von Session.Enumerate verfügt über optionale Parameter, die die Enumeration in eine Abfrage eingrenzen.
 ms.assetid: 69d2fe79-9aad-4c8c-a65e-c6bb0e51c063
 ms.tgt_platform: multiple
 ms.topic: article
@@ -10,26 +10,26 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 30ae068c712dd04ba892220657ad64820a890040
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f757b6392ec26f809004d599f6c5603629d23e8eb7a7f4b08a4f3a4ef18791a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106342345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119642850"
 ---
-# <a name="querying-for-specific-instances-of-a-resource"></a>Abfragen für bestimmte Instanzen einer Ressource
+# <a name="querying-for-specific-instances-of-a-resource"></a>Abfragen bestimmter Instanzen einer Ressource
 
-Der aufzurufende " [**Session. Enumerate**](session-enumerate.md) " verfügt über optionale Parameter, die die Enumeration in eine Abfrage eingrenzen. Da die [WinRM-Skript-API](winrm-scripting-api.md) und die [WinRM-C++-API](winrm-c---api.md) eng auf dem zugrunde liegenden WS-Management Protokoll modelliert sind, verwenden die Parameter dieselbe Terminologie für Abfragen wie das Protokoll –*Filter* und den *Filter Dialekt*.
+Der Aufruf von [**Session.Enumerate**](session-enumerate.md) verfügt über optionale Parameter, die die Enumeration in eine Abfrage eingrenzen. Da die [WinRM-Skripterstellungs-API](winrm-scripting-api.md) und die [WinRM C++-API](winrm-c---api.md) eng auf dem zugrunde liegenden WS-Management Protokoll modelliert sind, verwenden die Parameter dieselbe Terminologie für Abfragen wie das Protokoll–*Filter-* und *Filterdialekt*.
 
-Sie können entweder den Filter-und den Dialekt Parameter von [**Session. Enumerate**](session-enumerate.md) verwenden, oder Sie können ein [**ResourceLocator**](resourcelocator.md) -Objekt und die [**addselector**](resourcelocator-addselector.md) -Methode erstellen und bereitstellen, aber Sie können nicht beides tun.
+Sie können entweder die Filter- und Dialektparameter von [**Session.Enumerate**](session-enumerate.md) verwenden oder ein [**ResourceLocator-Objekt**](resourcelocator.md) und die [**AddSelector-Methode**](resourcelocator-addselector.md) erstellen und bereitstellen. Beides ist jedoch nicht möglich.
 
-Diese Prozedur führt eine Abfrage für Netzwerkadapter aus, bei denen TCP/IP gebunden und aktiviert ist. Die Abfrage fordert alle Instanzen von [**Win32 \_ networkadapterconfiguration**](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) an, deren **ipabled** -Eigenschaft auf **true** festgelegt ist. Die Abfrage wird wie eine einfache Enumeration behandelt, außer wenn Sie den *Filter* und den *Dialekt* hinzufügen.
+Diese Prozedur führt eine Abfrage für Netzwerkadapter aus, für die TCP/IP gebunden und aktiviert ist. Die Abfrage fordert alle Instanzen von [**Win32 \_ NetworkAdapterConfiguration**](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) an, für die die **IpEnabled-Eigenschaft** auf True festgelegt **ist.** Mit Ausnahme des Hinzufügens des *Filters* und *Dialekts* wird die Abfrage wie eine einfache Enumeration behandelt.
 
-In diesem Beispiel wird der Ressourcen Name für die Ressourcen Konstante durch ein Sternchen "" dargestellt, \* da der Klassenname [**Win32 \_ networkadapterconfiguration**](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration)bereits in der Zeichenfolge " *strinfilter* " erwähnt wird.
+In diesem Beispiel wird der Ressourcenname für die Ressourcenkonstante durch ein Sternchen \* "" dargestellt, da der Klassenname [**Win32 \_ NetworkAdapterConfiguration**](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration)bereits in der *strFilter-Zeichenfolge* erwähnt wird.
 
-**So Fragen Sie bestimmte Instanzen einer Ressource ab**
+**So fragen Sie bestimmte Instanzen einer Ressource ab**
 
-1.  Definieren Sie zum Vereinfachen des Lesens URIs als Konstanten.
+1.  Um das Lesen zu erleichtern, definieren Sie URIs als Konstanten.
 
     ```VB
     Const RemoteComputer = "servername.domain.com"
@@ -48,7 +48,7 @@ In diesem Beispiel wird der Ressourcen Name für die Ressourcen Konstante durch 
 
     
 
-3.  Erstellen Sie die Filter Zeichenfolge. Windows-Remoteverwaltung unterstützt [WQL](/windows/desktop/WmiSdk/wql-sql-for-wmi) als Filter Dialekt.
+3.  Erstellen Sie die Filterzeichenfolge. Windows Die Remoteverwaltung unterstützt [WQL](/windows/desktop/WmiSdk/wql-sql-for-wmi) als Filterdialekt.
 
     ```VB
     strFilter = "SELECT * FROM Win32_NetworkAdapterConfiguration WHERE IpEnabled=TRUE"
@@ -56,11 +56,11 @@ In diesem Beispiel wird der Ressourcen Name für die Ressourcen Konstante durch 
 
     
 
-4.  Legen Sie alle erforderlichen [**Enumerationskonstanten**](enumeration-constants.md) im *Flags* -Parameter fest.
+4.  Legen Sie alle erforderlichen [**Enumerationskonstanten**](enumeration-constants.md) im *flags-Parameter* fest.
 
-    Beachten Sie, dass der WinRM-Dienst den Fehlercode Fehler zurückgibt, wenn die Flags die [**Enumerationskonstanten**](enumeration-constants.md) **wsmanflaghierarchydeepbasepropsonly** oder **wsmanflaghierarchyflache** enthalten **\_ \_ \_ \_**.
+    Beachten Sie Folgendes: Wenn die Flags die [**Enumerationskonstanten**](enumeration-constants.md) **WSManFlagHierarchyDeepBasePropsOnly** oder **WSManFlagHierarchyShallow** enthalten, gibt der WinRM-Dienst den Fehlercode **ERROR \_ WSMAN \_ POLYMORPHISM \_ MODE \_ UNSUPPORTED zurück.**
 
-5.  Ruft die [**Session. Enumerate**](session-enumerate.md) -Methode auf. Dieser Befehl startet eine Enumeration. Die **Session. Enumerate** -Methode stellt einen WS-Management protokollenumerationskontext her, der im [**Enumeratorobjekt**](enumerator.md) verwaltet wird.
+5.  Rufen Sie die [**Session.Enumerate-Methode auf.**](session-enumerate.md) Dieser Aufruf startet eine Enumeration. Die **Session.Enumerate-Methode** erstellt einen WS-Management Im [**Enumeratorobjekt verwalteten**](enumerator.md) Protokollenumerationskontext.
 
     ```VB
     Set objResultSet = objSession.Enumerate(Resource, strFilter, Dialect)
@@ -68,7 +68,7 @@ In diesem Beispiel wird der Ressourcen Name für die Ressourcen Konstante durch 
 
     
 
-6.  Rufen Sie die [**Enumerator. ReadItem**](enumerator-readitem.md) -Methode auf, um das nächste Element der Ergebnisse zu erhalten. In WS-Management-Protokoll entspricht dies dem Pull-Vorgang. Verwenden Sie die [**Enumerator. AtEndOfStream**](enumerator-atendofstream.md) -Methode als Steuerelement, um zu erfahren, wann der Lesevorgang beendet werden soll.
+6.  Rufen Sie die [**Enumerator.ReadItem-Methode**](enumerator-readitem.md) auf, um das nächste Element der Ergebnisse abzurufen. In WS-Management Protokoll entspricht dies dem Pullvorgang. Verwenden Sie die [**Enumerator.AtEndOfStream-Methode**](enumerator-atendofstream.md) als Steuerelement, um zu wissen, wann das Lesen beendet werden soll.
 
     ```VB
     While Not objResultSet.AtEndOfStream
@@ -78,7 +78,7 @@ In diesem Beispiel wird der Ressourcen Name für die Ressourcen Konstante durch 
 
     
 
-Das folgende VBScript-Codebeispiel zeigt das komplette Skript.
+Das folgende VBScript-Codebeispiel zeigt das vollständige Skript.
 
 
 ```VB
@@ -116,15 +116,15 @@ End Sub
 
 <dl> <dt>
 
-[Verwenden von Windows-Remoteverwaltung](using-windows-remote-management.md)
+[Verwenden Windows Remoteverwaltung](using-windows-remote-management.md)
 </dt> <dt>
 
 [Auflisten oder Auflisten aller Instanzen einer Ressource](enumerating-or-listing-all-instances-of-a-resource.md)
 </dt> <dt>
 
-[**ResourceLocator**](resourcelocator.md)
+[**Resourcelocator**](resourcelocator.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

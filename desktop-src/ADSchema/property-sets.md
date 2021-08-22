@@ -1,43 +1,43 @@
 ---
-title: Eigenschaften Sätze (AD-Schema)
-description: Die folgenden Eigenschaften Sätze werden durch Active Directory definiert.
+title: Eigenschaftensätze (AD-Schema)
+description: Die folgenden Eigenschaftensätze werden von Active Directory definiert.
 ms.assetid: 8d8bc34c-bfeb-4730-8e54-4facdf445032
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ab3f4fe3c31a98b78412da2aeb44f07dd32f7af
-ms.sourcegitcommit: 8ea1a82717bd3dbb3457be0697329aa37fb13f08
+ms.openlocfilehash: d8f4c2fd002b3ec4eb80c62dc262c9a869f5738b663de5234f90f315ede0d2f0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "104038451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119532850"
 ---
-# <a name="property-sets-ad-schema"></a>Eigenschaften Sätze (AD-Schema)
+# <a name="property-sets-ad-schema"></a>Eigenschaftensätze (AD-Schema)
 
-Die folgenden Eigenschaften Sätze werden durch Active Directory definiert.
+Die folgenden Eigenschaftensätze werden von Active Directory definiert.
 
 <dl>
 
 [**DNS-Hostname-Attribute**](r-dns-host-name-attributes.md)  
-[**Domäne-andere Parameter**](r-domain-other-parameters.md)  
-[**Domäne: Kennwort**](r-domain-password.md)  
+[**Domain-Other-Parameters**](r-domain-other-parameters.md)  
+[**Domänenkennwort**](r-domain-password.md)  
 [**E-Mail-Informationen**](r-email-information.md)  
 [**Allgemeine Informationen**](r-general-information.md)  
-[**Mitglied**](r-membership.md)  
-[**MS-TS-gatewayaccess**](r-ms-ts-gatewayaccess.md)  
+[**Mitgliedschaft**](r-membership.md)  
+[**MS-TS-GatewayAccess**](r-ms-ts-gatewayaccess.md)  
 [**Persönliche Informationen**](r-personal-information.md)  
-[**Privat-Informationen**](r-private-information.md)  
-[**Öffentliche Informationen**](r-public-information.md)  
+[**Private-Information**](r-private-information.md)  
+[**Public-Information**](r-public-information.md)  
 [**RAS-Informationen**](r-ras-information.md)  
 [**Terminal-Server-License-Server**](r-terminal-server-license-server.md)  
-[**Einschränkungen für Benutzerkonten**](r-user-account-restrictions.md)  
+[**Benutzerkonteneinschränkungen**](r-user-account-restrictions.md)  
 [**Benutzeranmeldung**](r-user-logon.md)  
 [**Webinformationen**](r-web-information.md)  
 </dl>
 
- 
+ 
 
- 
+ 
 
 
 

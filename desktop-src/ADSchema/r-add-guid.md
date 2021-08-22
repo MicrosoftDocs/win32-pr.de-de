@@ -1,10 +1,10 @@
 ---
-title: Add-GUID erweitert rechts
-description: Erweiterte Rechte, die im NC-Stamm zum Hinzufügen eines Objekts mit einer bestimmten GUID erforderlich sind.
+title: Erweitertes Recht "Add-GUID"
+description: Erweitertes Recht, das am NC-Stamm erforderlich ist, um ein Objekt mit einer bestimmten GUID hinzuzufügen.
 ms.assetid: 33b3580f-6a3c-416d-9a64-c1d91a262641
 ms.tgt_platform: multiple
 keywords:
-- 'Add-GUID: AD-Schema für erweiterte Rechte'
+- AD-Schema mit erweiterter rechter Add-GUID
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 97b398d611cc832154898386e6faf547bd7b695c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ad0aa987f9c7b539da3332b89b672f181b7f41da6ebca64aaf22f33fc3503fb4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104123157"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119532830"
 ---
-# <a name="add-guid-extended-right"></a>Add-GUID erweitert rechts
+# <a name="add-guid-extended-right"></a>Erweitertes Recht "Add-GUID"
 
-Erweiterte Rechte, die im NC-Stamm zum Hinzufügen eines Objekts mit einer bestimmten GUID erforderlich sind.
+Erweitertes Recht, das am NC-Stamm erforderlich ist, um ein Objekt mit einer bestimmten GUID hinzuzufügen.
 
 
 
@@ -30,14 +30,14 @@ Erweiterte Rechte, die im NC-Stamm zum Hinzufügen eines Objekts mit einer besti
 |--------------|--------------------------------------|
 | CN           | Add-GUID                             |
 | Anzeigename | Hinzufügen der GUID                             |
-| Rights-GUID  | 440820ad-65b4-11d1-a3da-0000f 875ae0d |
+| Rights-GUID  | 440820ad-65b4-11d1-a3da-0000f875ae0d |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -49,19 +49,19 @@ Erweiterte Rechte, die im NC-Stamm zum Hinzufügen eines Objekts mit einer besti
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> |
-| Lokalisierung-Display-ID | 35                                           |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> |
+| Lokalisierungsanzeige-ID | 35                                           |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> |
-| Lokalisierung-Display-ID | 35                                           |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> |
+| Lokalisierungsanzeige-ID | 35                                           |
 
 
 
@@ -71,8 +71,8 @@ Erweiterte Rechte, die im NC-Stamm zum Hinzufügen eines Objekts mit einer besti
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> |
-| Lokalisierung-Display-ID | 35                                           |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> |
+| Lokalisierungsanzeige-ID | 35                                           |
 
 
 
@@ -82,8 +82,8 @@ Erweiterte Rechte, die im NC-Stamm zum Hinzufügen eines Objekts mit einer besti
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> |
-| Lokalisierung-Display-ID | 35                                           |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> |
+| Lokalisierungsanzeige-ID | 35                                           |
 
 
 
@@ -93,8 +93,8 @@ Erweiterte Rechte, die im NC-Stamm zum Hinzufügen eines Objekts mit einer besti
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> |
-| Lokalisierung-Display-ID | 35                                           |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> |
+| Lokalisierungsanzeige-ID | 35                                           |
 
 
 
@@ -104,8 +104,8 @@ Erweiterte Rechte, die im NC-Stamm zum Hinzufügen eines Objekts mit einer besti
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> |
-| Lokalisierung-Display-ID | 35                                           |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> |
+| Lokalisierungsanzeige-ID | 35                                           |
 
 
 

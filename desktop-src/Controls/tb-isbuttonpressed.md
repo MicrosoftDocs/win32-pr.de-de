@@ -1,9 +1,9 @@
 ---
-title: TB_ISBUTTONPRESSED Meldung (kommstrg. h)
-description: Bestimmt, ob die angegebene Schaltfläche in einer Symbolleiste gedrückt ist.
+title: TB_ISBUTTONPRESSED Meldung (Commctrl.h)
+description: Bestimmt, ob die angegebene Schaltfläche in einer Symbolleiste gedrückt wird.
 ms.assetid: b8e2434c-24c2-47eb-b243-ffdaf31d5b8f
 keywords:
-- Windows-Steuerelemente für TB_ISBUTTONPRESSED Meldung
+- TB_ISBUTTONPRESSED Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dfc2e6ec7b56ce205f3d89bc22a7c9dbbee90b1a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 187b7dd6c39fb972d53391dcbd67d7b45bb895a2e521fa8db22c2a7a411c05e4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103226"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119503640"
 ---
-# <a name="tb_isbuttonpressed-message"></a>TB \_ isbuttonpressed-Meldung
+# <a name="tb_isbuttonpressed-message"></a>\_TB ISBUTTONPRESSED-Nachricht
 
-Bestimmt, ob die angegebene Schaltfläche in einer Symbolleiste gedrückt ist.
+Bestimmt, ob die angegebene Schaltfläche in einer Symbolleiste gedrückt wird.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Bestimmt, ob die angegebene Schaltfläche in einer Symbolleiste gedrückt ist.
 *wParam* 
 </dt> <dd>
 
-Der Befehls Bezeichner der Schaltfläche.
+Befehlsbezeichner der Schaltfläche.
 
 </dd> <dt>
 
@@ -41,7 +41,7 @@ Der Befehls Bezeichner der Schaltfläche.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, wenn die Schaltfläche gedrückt wird, andernfalls 0
+Gibt einen Wert ungleich 0 (null) zurück, wenn die Schaltfläche gedrückt wird, andernfalls 0 (null).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt einen Wert ungleich 0 (null) zurück, wenn die Schaltfläche gedrückt wird
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

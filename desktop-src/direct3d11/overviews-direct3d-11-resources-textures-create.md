@@ -1,26 +1,26 @@
 ---
 title: Erstellen einer Textur
-description: In diesem Thema wird gezeigt, wie eine Textur erstellt wird.
+description: In diesem Thema wird gezeigt, wie Sie eine Textur erstellen.
 ms.assetid: dfe88635-b2c2-48f8-a21e-cce845b518fc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b3d3c4715bb4c790ea772dcbba4834051946747e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6539caec121f301dd89906f7cd78134d3b7cd79083c0d185af63d488ef1648eb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119565550"
 ---
-# <a name="how-to-create-a-texture"></a>Vorgehensweise: Erstellen einer Textur
+# <a name="how-to-create-a-texture"></a>How to: Create a Texture
 
-Die einfachste Möglichkeit zum Erstellen einer Textur besteht darin, die Eigenschaften zu beschreiben und die Textur Erstellungs-API aufzurufen. In diesem Thema wird gezeigt, wie eine Textur erstellt wird.
+Die einfachste Möglichkeit, eine Textur zu erstellen, besteht in der Beschreibung ihrer Eigenschaften und dem Aufrufen der Texturerstellungs-API. In diesem Thema wird gezeigt, wie Sie eine Textur erstellen.
 
 **So erstellen Sie eine Textur**
 
-1.  Füllen Sie eine [**D3D11 \_ TEXTURE2D \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_texture2d_desc) -Struktur mit einer Beschreibung der Textur Parameter aus.
-2.  Erstellen Sie die Textur durch Aufrufen von [**ID3D11Device:: CreateTexture2D**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createtexture2d) mit der Textur Beschreibung.
+1.  Füllen Sie eine [**D3D11 \_ TEXTURE2D \_ DESC-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_texture2d_desc) mit einer Beschreibung der Texturparameter aus.
+2.  Erstellen Sie die Textur, indem Sie [**ID3D11Device::CreateTexture2D mit**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createtexture2d) der Texturbeschreibung aufrufen.
 
-Dieses Beispiel erstellt eine 256 x 256-Textur mit [**dynamischer Verwendung**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage), die als [**Shaderressource**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_bind_flag) mit CPU- [**Schreibzugriff**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_cpu_access_flag)verwendet werden kann.
+In diesem Beispiel wird eine 256 x [](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage)256-Textur mit dynamischer Verwendung erstellt, die als [**Shaderressource**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_bind_flag) mit [**CPU-Schreibzugriff verwendet werden kann.**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_cpu_access_flag)
 
 
 ```
@@ -46,15 +46,15 @@ pd3dDevice->CreateTexture2D( &desc, NULL, &pTexture );
 
 <dl> <dt>
 
-[Verwendung von Direct3D 11](how-to-use-direct3d-11.md)
+[Verwenden von Direct3D 11](how-to-use-direct3d-11.md)
 </dt> <dt>
 
 [Texturen](overviews-direct3d-11-resources-textures.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

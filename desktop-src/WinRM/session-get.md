@@ -1,12 +1,12 @@
 ---
-title: Session. Get-Methode (WSManDisp. h)
-description: Ruft die vom URI angegebene Ressource ab und gibt eine XML-Darstellung der aktuellen Instanz der Ressource zurück.
+title: Session.Get-Methode (WSManDisp.h)
+description: Ruft die durch den URI angegebene Ressource ab und gibt eine XML-Darstellung der aktuellen Instanz der Ressource zurück.
 ms.assetid: 873242fd-9da3-42f4-a18e-258fedba77ec
 ms.tgt_platform: multiple
 keywords:
-- Get-Methode Windows-Remoteverwaltung
-- Get-Methode Windows-Remoteverwaltung, Session-Objekt
-- Sitzungs Objekt Windows-Remoteverwaltung, Get-Methode
+- Abrufen der Methode Windows Remoteverwaltung
+- Abrufen der Methode Windows Remoteverwaltung, Sitzungsobjekt
+- Sitzungsobjekt Windows Remoteverwaltung , Get-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e4ee84cc711db312389151d1dd95fb890474dcd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9c983c5f95ddfa3acc88b85b383ec85ddf85f885293031fe9bc4e4e07c90850a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119642560"
 ---
-# <a name="sessionget-method"></a>Session. Get-Methode
+# <a name="sessionget-method"></a>Session.Get-Methode
 
-Ruft die vom [*URI*](windows-remote-management-glossary.md) angegebene Ressource ab und gibt eine XML-Darstellung der aktuellen Instanz der Ressource zurück.
+Ruft die durch den [*URI*](windows-remote-management-glossary.md) angegebene Ressource ab und gibt eine XML-Darstellung der aktuellen Instanz der Ressource zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ Session.Get( _
 
 <dl> <dt>
 
-*resourceUri* \[ in\]
+*resourceUri* \[ In\]
 </dt> <dd>
 
 Der Bezeichner der abzurufenden Ressource.
 
-Dieser Parameter kann einen der folgenden Parameter enthalten:
+Dieser Parameter kann eine der folgenden Elemente enthalten:
 
--   Ein URI mit oder ohne [*Selektoren*](windows-remote-management-glossary.md). Wenn Sie die **Get** -Methode mit einem Selektor aufrufen, um eine WMI-Ressource abzurufen, verwenden Sie die Schlüsseleigenschaft oder die Eigenschaften des Objekts. Beispielsweise wird im folgenden Visual Basic Scripting Edition Codebeispiel (VBScript) der Schlüssel durch angegeben `Win32_Service?Name=winmgmt` . Bei Singleton-Klassen, wie z. b. [**Win32 \_ localtime**](/previous-versions/windows/desktop/wmitimepprov/win32-localtime), kann kein Selektor verwendet werden.
+-   Ein URI mit oder ohne [*Selektoren.*](windows-remote-management-glossary.md) Wenn Sie die **Get-Methode** mit einem Selektor aufrufen, um eine WMI-Ressource abzurufen, verwenden Sie die Schlüsseleigenschaft oder die Eigenschaften des Objekts. Im folgenden Codebeispiel Visual Basic Scripting Edition (VBScript) wird der Schlüssel beispielsweise durch `Win32_Service?Name=winmgmt` angegeben. Für Singletonklassen wie [**Win32 \_ LocalTime**](/previous-versions/windows/desktop/wmitimepprov/win32-localtime)können Sie keinen Selektor verwenden.
 
     ```VB
     strResourceUri = "http://schemas.microsoft.com/" _ 
@@ -63,8 +63,8 @@ Dieser Parameter kann einen der folgenden Parameter enthalten:
 
     
 
--   Ein [**ResourceLocator**](resourcelocator.md) -Objekt, das Selektoren, [*Fragmente*](windows-remote-management-glossary.md)oder [*Optionen*](windows-remote-management-glossary.md)enthalten kann.
--   Ein [*WS-adressierungsend*](windows-remote-management-glossary.md) Punkt Verweis, wie im WS-Management Protocol-Standard beschrieben. Weitere Informationen zur öffentlichen Spezifikation für [WS-Management-Protokoll](ws-management-protocol.md)finden Sie auf der [Seite Verwaltungs Spezifikationen Index](/previous-versions/dotnet/articles/ms951267(v=msdn.10)).
+-   Ein [**ResourceLocator-Objekt,**](resourcelocator.md) das [*Selektoren, Fragmente*](windows-remote-management-glossary.md)oder [*Optionen*](windows-remote-management-glossary.md)enthalten kann.
+-   Ein [*WS-Adressierungsendpunktverweis,*](windows-remote-management-glossary.md) wie im WS-Management-Protokollstandard beschrieben. Weitere Informationen zur öffentlichen Spezifikation für WS-Management-Protokoll finden [Sie](ws-management-protocol.md)unter Indexseite der [Verwaltungsspezifikationen.](/previous-versions/dotnet/articles/ms951267(v=msdn.10))
 
 </dd> <dt>
 
@@ -81,7 +81,7 @@ Eine XML-Darstellung der Ressource.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Codebeispiel wird die XML-Darstellung der [**Win32- \_ Dienst**](/windows/desktop/CIMWin32Prov/win32-service) Instanz abgerufen, die den WMI-WinMgmt-Dienst auf dem lokalen Computer darstellt.
+Im folgenden VBScript-Codebeispiel wird die XML-Darstellung der [**\_ Win32-Dienstinstanz**](/windows/desktop/CIMWin32Prov/win32-service) abgerufen, die den WMI-Winmgmt-Dienst auf dem lokalen Computer darstellt.
 
 
 ```VB
@@ -129,7 +129,7 @@ End Sub
 
 
 
-Im folgenden VBScript-Codebeispiel wird die WMI-WinMgmt-Dienst Instanz von einem Remote Computer abgerufen. Der Remote Computer wird durch den voll qualifizierten Domänen Namen (Servername.Domain.com) identifiziert. Der einzige Unterschied zwischen der lokalen Version und der Remote Version ist die Angabe des Remote Computers im [**WSMAN. kreatesession**](wsman-createsession.md)-aufrufen.
+Im folgenden VBScript-Codebeispiel wird die WMI Winmgmt-Dienstinstanz von einem Remotecomputer abgerufen. Der Remotecomputer wird durch den vollqualifizierten Domänennamen (servername.domain.com) identifiziert. Der einzige Unterschied zwischen der lokalen Version und der Remoteversion ist die Spezifikation des Remotecomputers im Aufruf von [**WSMan.CreateSession.**](wsman-createsession.md)
 
 
 ```VB
@@ -187,9 +187,9 @@ End Sub
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>WSManDisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WSManDisp. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WSManDisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WSManDisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WSManDisp.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>WSManDisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WSMAuto.dll</dt> </dl>   |
 
 

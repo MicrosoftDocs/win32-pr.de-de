@@ -1,85 +1,85 @@
 ---
-title: Benutzerdefinierte Schriftart Auflistungen (Windows 7/8)
-description: DirectWrite ermöglicht mithilfe der getsystemfontcollection-Methode von idschreitefactory den Zugriff auf die System Schriftart Auflistung.
+title: Benutzerdefinierte Schriftartauflistungen (Windows 7/8)
+description: DirectWrite ermöglicht den Zugriff auf die Systemschriftartauflistung mithilfe der IDWriteFactory GetSystemFontCollection-Methode.
 ms.assetid: ec892904-6778-4fbd-93b4-62d0db5b82ea
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 39aa764330f27b72051ef682c6ce5f1176c42c7d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ffc76214dda067b43c27c8e04e4419f147d0e33b7566b4dedc5ac3255a1c1dc9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728681"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119290760"
 ---
-# <a name="custom-font-collections-windows-78"></a>Benutzerdefinierte Schriftart Auflistungen (Windows 7/8)
+# <a name="custom-font-collections-windows-78"></a>Benutzerdefinierte Schriftartauflistungen (Windows 7/8)
 
-[DirectWrite](direct-write-portal.md) ermöglicht mithilfe der [**idwrite-Factory:: getsystemfontcollection**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-getsystemfontcollection) -Methode den Zugriff auf die System Schriftart Auflistung. Dies ist die am häufigsten verwendete Schriftart Auflistung. Einige Anwendungen müssen jedoch Schriftarten verwenden, die nicht auf dem System installiert sind, z. b. aus enthaltenen Schriftart Dateien oder Schriftart Dateien, die in die Anwendung eingebettet sind.
+[DirectWrite](direct-write-portal.md) ermöglicht den Zugriff auf die Systemschriftartauflistung mithilfe der [**IDWriteFactory::GetSystemFontCollection-Methode.**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-getsystemfontcollection) Dies ist die Schriftartenauflistung, die am häufigsten verwendet wird. Einige Anwendungen müssen jedoch Schriftarten verwenden, die nicht auf dem System installiert sind, z. B. aus eingeschlossenen Schriftartdateien oder in der Anwendung eingebetteten Schriftartdateien.
 
-Wenn sich die gewünschten Schriftarten nicht in der System Schriftart Auflistung befinden, können Sie eine benutzerdefinierte Schriftart Sammlung erstellen, die von " [**idschreitefontcollection**](/windows/win32/api/dwrite/nn-dwrite-idwritefontcollection)" abgeleitet ist.
+Wenn die gewünschten Schriftarten nicht in der Systemschriftartauflistung enthalten sind, können Sie eine benutzerdefinierte Schriftartsammlung erstellen, die von [**IDWriteFontCollection**](/windows/win32/api/dwrite/nn-dwrite-idwritefontcollection)abgeleitet wird.
 
 Diese Übersicht besteht aus den folgenden Teilen:
 
--   [Registrieren und Aufheben der Registrierung eines Schriftart Sammlungs Lade Moduls](#registering-and-unregistering-a-font-collection-loader)
--   [Idschreitefontcollectionloader](#idwritefontcollectionloader)
--   [Idschreitefontfileenumerator](#idwritefontfileenumerator)
--   ["Kreatecustomfontfilereferenzierung"](#createcustomfontfilereference)
--   [Idschreitefontfileloader](#idwritefontfileloader)
--   [Idschreitefontfilestream](#idwritefontfilestream)
+-   [Registrieren und Aufheben der Registrierung eines Schriftartauflistungsladeprogramm](#registering-and-unregistering-a-font-collection-loader)
+-   [IDWriteFontCollectionLoader](#idwritefontcollectionloader)
+-   [IDWriteFontFileEnumerator](#idwritefontfileenumerator)
+-   [CreateCustomFontFileReference](#createcustomfontfilereference)
+-   [IDWriteFontFileLoader](#idwritefontfileloader)
+-   [IDWriteFontFileStream](#idwritefontfilestream)
 
-## <a name="registering-and-unregistering-a-font-collection-loader"></a>Registrieren und Aufheben der Registrierung eines Schriftart Sammlungs Lade Moduls
+## <a name="registering-and-unregistering-a-font-collection-loader"></a>Registrieren und Aufheben der Registrierung eines Schriftartauflistungsladeprogramm
 
-Sie registrieren ein Schriftart Sammlungs Lade Tool mithilfe der [**idwrite-Factory:: registerfontcollectionloader**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-registerfontcollectionloader) -Methode, und übergeben Sie eine [**idschreitefontcollectionloader**](/windows/win32/api/dwrite/nn-dwrite-idwritefontcollectionloader) -Schnittstelle, die von der Anwendung als Singleton-Objekt implementiert wird. Dieses Objekt lädt die Schriftarten, wenn die benutzerdefinierte Auflistung angefordert wird. Sowohl die System Schriftart Auflistung als auch benutzerdefinierte Schriftart Sammlungen werden zwischengespeichert, sodass die Schriftarten nur einmal geladen werden.
+Sie registrieren ein Ladeprogramm für die Schriftartauflistung mithilfe der [**IDWriteFactory::RegisterFontCollectionLoader-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-registerfontcollectionloader) und übergeben ihm eine [**IDWriteFontCollectionLoader-Schnittstelle,**](/windows/win32/api/dwrite/nn-dwrite-idwritefontcollectionloader) die von der Anwendung als Singletonobjekt implementiert wird. Dieses Objekt lädt die Schriftarten, wenn die benutzerdefinierte Auflistung angefordert wird. Sowohl die Systemschriftartauflistung als auch benutzerdefinierte Schriftartauflistungen werden zwischengespeichert, sodass die Schriftarten nur einmal geladen werden.
 
-Das Schriftart Sammlungs Lade Tool muss schließlich mithilfe von [**idwrite-Factory:: unregisterfontcollectionloader**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-unregisterfontcollectionloader)entladen werden.
-
-> [!Note]  
-> Beim Registrieren des Lade Moduls für Schriftart Sammlungen wird der Verweis Zähler hinzugefügt. [**unregisterfontcollectionloader**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-unregisterfontcollectionloader) kann nicht innerhalb des Dekonstruktors aufgerufen werden, oder das Auflistungs Lade Objekt wird nie die Registrierung aufheben.
-
- 
-
-## <a name="idwritefontcollectionloader"></a>Idschreitefontcollectionloader
-
-Sie erstellen ein [**idwrite-fontfileenumerator**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfileenumerator) -Objekt, indem Sie die [**idwrite-Factory:: anatecustomfontcollection**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createcustomfontcollection) verwenden und ihr einen Anwendungs definierten Schlüssel übergeben. Der Schlüssel ist ein void-Zeiger, und der Datentyp, das Format und die Bedeutung werden von der Anwendung definiert und sind für das Schriftart System nicht transparent.
-
-Der Schlüssel kann ein beliebiger Schlüssel sein, aber für [DirectWrite](direct-write-portal.md) ist Folgendes erforderlich:
-
--   Eindeutig für eine einzelne Schriftart Auflistung innerhalb des Gültigkeits Bereichs des Lade Moduls.
--   Gültig, bis die Registrierung des Lade Moduls mithilfe der Factory aufgehoben wird.
-
-Wenn die Methode " [**samatecustomfontcollection**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createcustomfontcollection) " aufgerufen wird, ruft [DirectWrite](direct-write-portal.md) an eine [**idschreitefontcollectionloader**](/windows/win32/api/dwrite/nn-dwrite-idwritefontcollectionloader) -Schnittstelle zurück, die von der Anwendung als Singleton-Objekt implementiert wird. Die [**idwrite-fontcollectionloader::**](/windows/win32/api/dwrite/nf-dwrite-idwritefontcollectionloader-createenumeratorfromkey) -Rückruf Methode wird von DirectWrite zum Abrufen eines [**idwrite-fontfileenumerator**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfileenumerator) -Objekts verwendet, das von der Anwendung implementiert wird. Das [**idwrite-Factory**](/windows/win32/api/dwrite/nn-dwrite-idwritefactory) -Objekt, das zum Erstellen der Auflistung verwendet wird, wird an diese Methode übermittelt und sollte vom Schriftart Datei-Enumerator verwendet werden, um die [**idwrite-fontfile**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfile) -Objekte zu erstellen, die in die Auflistung eingeschlossen werden sollen.
-
-Der an diese Methode über gegebene Schlüssel identifiziert die Schriftart Auflistung und ist derselbe Schlüssel, der an die Datei " [**kreatecustomfontcollection**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createcustomfontcollection)" übergeben wird.
-
-## <a name="idwritefontfileenumerator"></a>Idschreitefontfileenumerator
-
-Das Anwendungs definierte [**idwrite-fontfileenumerator**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfileenumerator) -Objekt, das von der Methode " [**forateenumeratorfromkey**](/windows/win32/api/dwrite/nf-dwrite-idwritefontcollectionloader-createenumeratorfromkey) " erstellt wurde, wird zum Auflisten der Schriftart Dateien in einer Auflistung verwendet und erstellt ein [**idwrite-fontfile**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfile) -Objekt für jede Datei. Die [**idwrite-fontfileenumerator:: arvenext**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfileenumerator-movenext) -Methode ändert die Position in die nächste Schriftart Datei. Wenn an der Position eine Datei vorhanden ist, wird " *hascurrentfile* " auf " **true**" festgelegt. Andernfalls wird Sie auf " **false** " festgelegt, und die Methode gibt " **S \_ OK**" zurück.
+Das Ladeprogramm für die Schriftartauflistung muss schließlich mithilfe von [**IDWriteFactory::UnregisterFontCollectionLoader**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-unregisterfontcollectionloader)entladen werden.
 
 > [!Note]  
-> Der Enumerator für Schriftart Dateien muss vor dem ersten Element positioniert und beim ersten-Befehl von " [**muvenext**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfileenumerator-movenext)" erweitert werden.
+> Das Registrieren des Ladeprogramm für die Schriftartauflistung wird dem Verweiszähler hinzugefügt. Rufen [**Sie unregisterFontCollectionLoader**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-unregisterfontcollectionloader) nicht innerhalb des Destruktors auf, da die Registrierung des Auflistungsladeprogrammobjekts nicht aufgehoben wird.
 
- 
+ 
 
-Ein [**idwrite-fontfile**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfile) -Objekt wird von der [**idschreitefontfileenumerator:: getcurrentfontfile**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfileenumerator-getcurrentfontfile) -Methode ausgegeben. Wenn an der aktuellen Position keine Schriftart Datei vorhanden ist, da " [**muvenext**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfileenumerator-movenext) " noch nicht aufgerufen wurde oder hascurrentfile auf **false** festgelegt wurde, gibt **getcurrentfontfile** den Wert **E \_ Fail** zurück.
+## <a name="idwritefontcollectionloader"></a>IDWriteFontCollectionLoader
 
-## <a name="createcustomfontfilereference"></a>"Kreatecustomfontfilereferenzierung"
+Sie erstellen ein [**IDWriteFontFileEnumerator-Objekt,**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfileenumerator) indem Sie [**idWriteFactory::CreateCustomFontCollection**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createcustomfontcollection) verwenden und ihm einen anwendungsdefiniert Schlüssel übergeben. Der Schlüssel ist ein void-Zeiger, und der Datentyp, das Format und die Bedeutung werden von der Anwendung definiert und sind für das Schriftsystem nicht transparent.
 
-Das [**idwrite-fontfile**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfile) -Objekt, das von [**getcurrentfontfile**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfileenumerator-getcurrentfontfile) ausgegeben wird, kann durch Aufrufen von " [**idwrite tefactory:: createcustomfontfilereferenzierung**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createcustomfontfilereference)" erstellt werden. Der Verweis Schlüssel der Schriftart Datei identifiziert einen bestimmten Schriftart Datei Verweis und muss innerhalb des Schriftart Datei Lade Moduls eindeutig sein, das die Datei lädt.
+Während der Schlüssel alles sein kann, erfordert [DirectWrite,](direct-write-portal.md) dass jeder Schlüssel beide ist:
 
-## <a name="idwritefontfileloader"></a>Idschreitefontfileloader
+-   Eindeutig für eine einzelne Schriftartauflistung innerhalb des Ladeprogrammbereichs.
+-   Gültig, bis die Registrierung des Ladeprogramm mithilfe der Factory aufgehoben wird.
 
-Die Methode " [**kreatecustomfontfilereferenzierung**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createcustomfontfilereference) " nimmt ein von der Anwendung implementiertes [**idschreitefontfileloader**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfileloader) -Objekt an, das zum Laden der Schriftart verwendet wird. Der " [**idwrite:: deestreamfromkey**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfileloader-createstreamfromkey) "-Rückruf Methode wird der Schlüssel übergeben und ein " [**idschreitefontfilestream**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfilestream) "-Objekt ausgegeben.
+Wenn die [**CreateCustomFontCollection-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createcustomfontcollection) aufgerufen wird, [ruft DirectWrite](direct-write-portal.md) eine [**IDWriteFontCollectionLoader-Schnittstelle**](/windows/win32/api/dwrite/nn-dwrite-idwritefontcollectionloader) zurück, die von der Anwendung als Singletonobjekt implementiert wird. Die [**Rückrufmethode IDWriteFontCollectionLoader::CreateEnumeratorFromKey**](/windows/win32/api/dwrite/nf-dwrite-idwritefontcollectionloader-createenumeratorfromkey) wird von DirectWrite verwendet, um ein von der Anwendung [**implementiertes IDWriteFontFileEnumerator-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfileenumerator) abzurufen. Das [**IDWriteFactory-Objekt,**](/windows/win32/api/dwrite/nn-dwrite-idwritefactory) das zum Erstellen der Auflistung verwendet wird, wird an diese Methode übergeben und sollte vom Schriftartdatei-Enumerator verwendet werden, um die [**IDWriteFontFile-Objekte**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfile) zu erstellen, die in die Auflistung eingeschlossen werden sollen.
 
-## <a name="idwritefontfilestream"></a>Idschreitefontfilestream
+Der an diese Methode übergebene Schlüssel identifiziert die Schriftartauflistung und ist derselbe Schlüssel, der an [**CreateCustomFontCollection**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createcustomfontcollection)übergeben wird.
 
-Das von der Anwendung implementierte [**idschreitefontfilestream**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfilestream) -Objekt stellt die Schriftart Datei Daten für einen Schriftart Datei Verweis von einem benutzerdefinierten Schriftart Datei Lade Tool bereit. Zusammen mit der Dateigröße und dem Zeitpunkt des letzten Schreibvorgangs stellt Sie eine Methode ("[**infofilefragment**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfilestream-readfilefragment)") zum Abrufen von Datei Fragmenten bereit, die in ein " [**idschreitefontfile**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfile) "-Objekt kompiliert werden sollen.
+## <a name="idwritefontfileenumerator"></a>IDWriteFontFileEnumerator
+
+Das anwendungsdefinierte [**IDWriteFontFileEnumerator-Objekt,**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfileenumerator) das von der [**CreateEnumeratorFromKey-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritefontcollectionloader-createenumeratorfromkey) erstellt wurde, wird verwendet, um die Schriftartdateien in einer Auflistung aufzuzählen und ein [**IDWriteFontFile-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfile) für jede Datei zu erstellen. Die [**IDWriteFontFileEnumerator::MoveNext-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfileenumerator-movenext) ändert die Position in die nächste Schriftartdatei. Wenn eine Datei an der Position vorhanden ist, wird *hasCurrentFile* auf **TRUE** festgelegt. Andernfalls wird sie auf **FALSE** festgelegt, und die -Methode gibt **S \_ OK** zurück.
 
 > [!Note]  
-> Die Implementierung von "read [**filefragment**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfilestream-readfilefragment) " sollte einen Fehler zurückgeben, wenn das angeforderte Fragment außerhalb der Datei Begrenzungen liegt.
+> Der Schriftartdatei-Enumerator muss vor dem ersten Element positioniert und beim ersten Aufruf von [**MoveNext**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfileenumerator-movenext)erweitert werden.
 
- 
+ 
 
-Ein [**idwrite-fontfilestream**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfilestream) kann den Inhalt der Schriftart Datei von einem beliebigen Standort aus aufrufen, z. b. von der lokalen Festplatte oder von eingebetteten Ressourcen.
+Ein [**IDWriteFontFile-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfile) wird von der [**IDWriteFontFileEnumerator::GetCurrentFontFile-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfileenumerator-getcurrentfontfile) ausgegeben. Wenn an der aktuellen Position keine Schriftartdatei vorhanden ist, da [**MoveNext**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfileenumerator-movenext) noch nicht aufgerufen wurde oder hasCurrentFile auf **FALSE** festgelegt wurde, gibt **GetCurrentFontFile** **E \_ FAIL** zurück.
 
- 
+## <a name="createcustomfontfilereference"></a>CreateCustomFontFileReference
 
- 
+Die [**IDWriteFontFile-Objektausgabe**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfile) von [**GetCurrentFontFile**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfileenumerator-getcurrentfontfile) kann durch Aufrufen von [**IDWriteFactory::CreateCustomFontFileReference**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createcustomfontfilereference)erstellt werden. Der Verweisschlüssel für die Schriftartdatei identifiziert einen bestimmten Schriftartdateiverweis und muss innerhalb des Schriftartdateiladeprogramm, das die Datei lädt, eindeutig sein.
+
+## <a name="idwritefontfileloader"></a>IDWriteFontFileLoader
+
+Die [**CreateCustomFontFileReference-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createcustomfontfilereference) verwendet ein [**IDWriteFontFileLoader-Objekt,**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfileloader) das von der Anwendung implementiert wird, die zum Laden der Schriftart verwendet wird. Die [**Rückrufmethode IDWriteFontFileLoader::CreateStreamFromKey**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfileloader-createstreamfromkey) wird an den Schlüssel übergeben und gibt ein [**IDWriteFontFileStream-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfilestream) aus.
+
+## <a name="idwritefontfilestream"></a>IDWriteFontFileStream
+
+Das von der Anwendung [**implementierte IDWriteFontFileStream-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfilestream) stellt die Schriftartdateidaten für einen Schriftartdateiverweis aus einem benutzerdefinierten Schriftartdateiladeprogramm bereit. Zusammen mit der Dateigröße und der letzten Schreibzeit stellt sie eine Methode ([**ReadFileFragment**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfilestream-readfilefragment)) zum Abrufen von Dateifragmenten bereit, die in ein [**IDWriteFontFile-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfile) kompiliert werden sollen.
+
+> [!Note]  
+> [**ReadFileFragment-Implementierungen**](/windows/win32/api/dwrite/nf-dwrite-idwritefontfilestream-readfilefragment) sollten einen Fehler zurückgeben, wenn das angeforderte Fragment außerhalb der Dateigrenzen liegt.
+
+ 
+
+Ein [**IDWriteFontFileStream**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfilestream) kann den Inhalt der Schriftartdatei von einem beliebigen Ort abrufen, z. B. von der lokalen Festplatte oder eingebetteten Ressourcen.
+
+ 
+
+ 

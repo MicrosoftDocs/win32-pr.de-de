@@ -23,7 +23,7 @@ ms.locfileid: "119491790"
 ---
 # <a name="glscaled-function"></a>glScaled-Funktion
 
-Die Funktionen **glScaled** und [**glScalef**](glscalef.md) multiplizieren die aktuelle Matrix mit einer allgemeinen Skalierungsmatrix.
+Die **Funktionen glScaled** und [**glScalef multiplizieren**](glscalef.md) die aktuelle Matrix mit einer allgemeinen Skalierungsmatrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ void WINAPI glScaled(
 *x* 
 </dt> <dd>
 
-Skalierungsfaktoren  entlang der x-Achse.
+Skalierungsfaktoren entlang der *x-Achse.*
 
 </dd> <dt>
 
@@ -59,7 +59,7 @@ Skalierungsfaktoren entlang der *y-Achse.*
 *Z* 
 </dt> <dd>
 
-Skalierungsfaktoren  entlang der Z-Achse.
+Skalierungsfaktoren entlang der *Z-Achse.*
 
 </dd> </dl>
 
@@ -69,13 +69,13 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
@@ -85,21 +85,21 @@ Die **glScaled-Funktion** erzeugt eine allgemeine Skalierung entlang der *x-,* *
 
 ![Diagramm, das die Matrix der Skalierungsfaktoren entlang der x-, y- und z-Achse zeigt.](images/scale01.png)
 
-Die aktuelle Matrix (siehe [**glMatrixMode**](glmatrixmode.md)) wird mit dieser Skalierungsmatrix multipliziert, wobei das Produkt die aktuelle Matrix ersetzt. Das heißt, wenn M die aktuelle Matrix und S die Skalierungsmatrix ist, wird M durch M S ersetzt.
+Die aktuelle Matrix (siehe [**glMatrixMode**](glmatrixmode.md)) wird mit dieser Skalierungsmatrix multipliziert, während das Produkt die aktuelle Matrix ersetzt. Das heißt, wenn M die aktuelle Matrix und S die Skalierungsmatrix ist, wird M durch M S ersetzt.
 
-Wenn der Matrixmodus entweder GL \_ MODELVIEW oder GL \_ PROJECTION ist, werden alle Objekte skaliert, die nach dem Aufruf von **glScaled** gezeichnet wurden. Verwenden Sie [**glPushMatrix**](glpushmatrix.md) und [**glPopMatrix,**](glpopmatrix.md) um das nicht skalierte Koordinatensystem zu speichern und wiederherzustellen.
+Wenn der Matrixmodus GL MODELVIEW oder GL PROJECTION ist, werden alle Objekte skaliert, die nach dem Aufgerufenen \_ \_ von **glScaled** gezeichnet wurden. Verwenden [**Sie glPushMatrix**](glpushmatrix.md) und [**glPopMatrix,**](glpopmatrix.md) um das nicht skalierte Koordinatensystem zu speichern und wiederherzustellen.
 
-Wenn andere Skalierungsfaktoren als 1.0 auf die Modellansichtsmatrix angewendet werden und die Beleuchtung aktiviert ist, sollte wahrscheinlich auch die automatische Normalisierung von Normalwerten aktiviert werden ([**glEnable**](glenable.md) und [**glDisable**](gldisable.md) mit dem Argument GL \_ NORMALIZE).
+Wenn andere Skalierungsfaktoren als 1,0 auf die Modellansichtsmatrix angewendet werden und die Beleuchtung aktiviert ist, sollte wahrscheinlich auch die automatische Normalisierung von Normals aktiviert werden ([**glEnable**](glenable.md) und [**glDisable**](gldisable.md) mit dem Argument GL \_ NORMALIZE).
 
 Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glScaled ab:**
 
-[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ MATRIX \_ MODE
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ MATRIX \_ MODE
 
-[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ MODELVIEW \_ MATRIX
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ MODELVIEW \_ MATRIX
 
-[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ PROJECTION \_ MATRIX
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ PROJECTION \_ MATRIX
 
-[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ TEXTURE \_ MATRIX
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ TEXTURE \_ MATRIX
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,7 +115,7 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glScaled ab:*
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

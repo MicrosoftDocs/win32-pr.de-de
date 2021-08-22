@@ -1,11 +1,11 @@
 ---
 title: Lockout-Threshold-Attribut
-description: Die Anzahl der ungültigen Anmeldeversuche, die zulässig sind, bevor das Konto gesperrt wird.
+description: Die Anzahl ungültiger Anmeldeversuche, die zulässig sind, bevor das Konto gesperrt wird.
 ms.assetid: c4dcbbb6-0680-45f3-9b0b-f9c4bbf2b349
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Lockout-Threshold-Attribut
-- AD-Schema für LockoutThreshold-Attribut
+- Lockout-Threshold AD-Attributschema
+- lockoutThreshold-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 345977055597c48d70e30a20ce9bfbc9f07f3929
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: cbc16d010425c89b24fd77994f215b0baab929a702c42f57e5aa81e6c0046a38
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119301710"
 ---
 # <a name="lockout-threshold-attribute"></a>Lockout-Threshold-Attribut
 
-Die Anzahl der ungültigen Anmeldeversuche, die zulässig sind, bevor das Konto gesperrt wird.
+Die Anzahl ungültiger Anmeldeversuche, die zulässig sind, bevor das Konto gesperrt wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Lockout-Threshold                    |
-| LDAP-Display-Name | LockoutThreshold                     |
+| Ldap-Anzeigename | lockoutThreshold                     |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | Domänen Administrator                 |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                 |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.73                |
 | System-ID-GUID    | bf9679a6-0de6-11d0-a285-00aa003049e2 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -43,7 +43,7 @@ Die Anzahl der ungültigen Anmeldeversuche, die zulässig sind, bevor das Konto 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Die Anzahl der ungültigen Anmeldeversuche, die zulässig sind, bevor das Konto 
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
+| Ist einwertig       | True                                                                                                                                                  |
 | Ist indiziert             | False                                                                                                                                                 |
 | Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Die Anzahl der ungültigen Anmeldeversuche, die zulässig sind, bevor das Konto 
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
+| Ist einwertig       | True                                                                                                                                                  |
 | Ist indiziert             | False                                                                                                                                                 |
 | Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Die Anzahl der ungültigen Anmeldeversuche, die zulässig sind, bevor das Konto 
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
+| Ist einwertig       | True                                                                                                                                                  |
 | Ist indiziert             | False                                                                                                                                                 |
 | Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Die Anzahl der ungültigen Anmeldeversuche, die zulässig sind, bevor das Konto 
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
+| Is-Single-Valued       | True                                                                                                                                                  |
 | Ist indiziert             | False                                                                                                                                                 |
 | Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Die Anzahl der ungültigen Anmeldeversuche, die zulässig sind, bevor das Konto 
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
+| Is-Single-Valued       | True                                                                                                                                                  |
 | Ist indiziert             | False                                                                                                                                                 |
 | Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -163,23 +163,23 @@ Die Anzahl der ungültigen Anmeldeversuche, die zulässig sind, bevor das Konto 
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
+| Is-Single-Valued       | True                                                                                                                                                  |
 | Ist indiziert             | False                                                                                                                                                 |
 | Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Sperr Dauer**](a-lockoutduration.md)
+[**Sperrdauer**](a-lockoutduration.md)
 </dt> </dl>
 
  

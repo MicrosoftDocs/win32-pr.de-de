@@ -1,10 +1,10 @@
 ---
-title: Erweiterte Rechte Certificate-Enrollment
-description: Erweiterte Rechte, die zum Auslösen der Zertifikat Registrierung erforderlich sind.
+title: Certificate-Enrollment erweitertes Recht
+description: Erweitertes Recht erforderlich, um die Zertifikatregistrierung zu verursachen.
 ms.assetid: 12b8bab8-3b52-46a7-887a-28f6645311cc
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für erweiterte Rechte Certificate-Enrollment
+- Certificate-Enrollment AD-Schema mit erweiterten rechten Rechten
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c42d7c39cecc9796dddfebd981bb27353ed9594e
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 626892db9421d6c5cdf27e5085c13b2b80b4079e2c540c474dfd657e2a8442af
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119532760"
 ---
-# <a name="certificate-enrollment-extended-right"></a>Erweiterte Rechte Certificate-Enrollment
+# <a name="certificate-enrollment-extended-right"></a>Certificate-Enrollment erweitertes Recht
 
-Erweiterte Rechte, die zum Auslösen der Zertifikat Registrierung erforderlich sind.
+Erweitertes Recht erforderlich, um die Zertifikatregistrierung zu verursachen.
 
 
 
@@ -30,14 +30,14 @@ Erweiterte Rechte, die zum Auslösen der Zertifikat Registrierung erforderlich s
 |--------------|--------------------------------------|
 | CN           | Certificate-Enrollment               |
 | Anzeigename | Registrieren                               |
-| Rights-GUID  | 0e10c968-78b-11d2-90d4-00c04l79dc55 |
+| Rechte-GUID  | 0e10c968-78fb-11d2-90d4-00c04f79dc55 |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -49,19 +49,19 @@ Erweiterte Rechte, die zum Auslösen der Zertifikat Registrierung erforderlich s
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------|
-| Applies-To              | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
-| Lokalisierung-Display-ID | 54                                                                      |
+| Applies-To              | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
+| Lokalisierungsanzeige-ID | 54                                                                      |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------|
-| Applies-To              | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
-| Lokalisierung-Display-ID | 54                                                                      |
+| Applies-To              | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
+| Lokalisierungsanzeige-ID | 54                                                                      |
 
 
 
@@ -71,8 +71,8 @@ Erweiterte Rechte, die zum Auslösen der Zertifikat Registrierung erforderlich s
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------|
-| Applies-To              | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
-| Lokalisierung-Display-ID | 54                                                                      |
+| Applies-To              | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
+| Lokalisierungsanzeige-ID | 54                                                                      |
 
 
 
@@ -82,8 +82,8 @@ Erweiterte Rechte, die zum Auslösen der Zertifikat Registrierung erforderlich s
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------|
-| Applies-To              | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
-| Lokalisierung-Display-ID | 54                                                                      |
+| Applies-To              | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
+| Lokalisierungsanzeige-ID | 54                                                                      |
 
 
 
@@ -93,8 +93,8 @@ Erweiterte Rechte, die zum Auslösen der Zertifikat Registrierung erforderlich s
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------|
-| Applies-To              | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
-| Lokalisierung-Display-ID | 54                                                                      |
+| Applies-To              | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
+| Lokalisierungsanzeige-ID | 54                                                                      |
 
 
 
@@ -104,8 +104,8 @@ Erweiterte Rechte, die zum Auslösen der Zertifikat Registrierung erforderlich s
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------|
-| Applies-To              | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
-| Lokalisierung-Display-ID | 54                                                                      |
+| Applies-To              | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
+| Lokalisierungsanzeige-ID | 54                                                                      |
 
 
 

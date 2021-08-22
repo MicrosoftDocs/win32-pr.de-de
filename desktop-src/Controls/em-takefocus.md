@@ -1,9 +1,9 @@
 ---
-title: EM_TAKEFOCUS Meldung (kommstrg. h)
-description: Erzwingt, dass ein einzeilige Bearbeitungs Steuerelement den Tastaturfokus erhält. Sie können diese Nachricht explizit oder mithilfe des-Makros " \_ Take TakeFocus bearbeiten" senden.
+title: EM_TAKEFOCUS Meldung (Commctrl.h)
+description: Erzwingt, dass ein einzeiliges Bearbeitungssteuerelement den Tastaturfokus erhält. Sie können diese Nachricht explizit oder mithilfe des \_ TakeFocus-Makros bearbeiten senden.
 ms.assetid: 27470857-4219-4426-bc69-e1271afc6ffb
 keywords:
-- Windows-Steuerelemente für EM_TAKEFOCUS Meldung
+- EM_TAKEFOCUS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e4abdf926cdd337760b5cf151c3f8ee08cb418b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8283f2f9ea033439ef9ad7ec0ce40b08bb6396db8f5ebc7a9b1d513f29c209a1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476827"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119437140"
 ---
-# <a name="em_takefocus-message"></a>EM- \_ Fokus Meldung
+# <a name="em_takefocus-message"></a>EM \_ TAKEFOCUS-Nachricht
 
-\[Zur internen Verwendung vorgesehen. wird nicht für die Verwendung in Anwendungen empfohlen. Diese Meldung wird möglicherweise in zukünftigen Versionen von Windows nicht mehr unterstützt.\]
+\[Für die interne Verwendung vorgesehen; nicht für die Verwendung in Anwendungen empfohlen. Diese Meldung wird in zukünftigen Versionen von Windows möglicherweise nicht mehr unterstützt.\]
 
-Erzwingt, dass ein einzeilige Bearbeitungs Steuerelement den Tastaturfokus erhält. Sie können diese Nachricht explizit oder mithilfe des-Makros [**" \_ Take TakeFocus bearbeiten**](/windows/desktop/api/Commctrl/nf-commctrl-edit_takefocus) " senden.
+Erzwingt, dass ein einzeiliges Bearbeitungssteuerelement den Tastaturfokus erhält. Sie können diese Nachricht explizit oder mithilfe des [**\_ TakeFocus-Makros bearbeiten**](/windows/desktop/api/Commctrl/nf-commctrl-edit_takefocus) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -51,13 +51,13 @@ Der Rückgabewert wird nicht verwendet.
 
 ## <a name="security-considerations"></a>Überlegungen zur Sicherheit
 
-Die Verwendung dieser Nachricht kann die Sicherheit des Programms beeinträchtigen.
+Die Verwendung dieser Meldung kann die Sicherheit Ihres Programms gefährden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird ignoriert, wenn das Bearbeitungs Steuerelement kein einzeilige Bearbeitungs Steuerelement ist.
+Diese Meldung wird ignoriert, wenn das Bearbeitungssteuerelement kein einzeiliges Bearbeitungssteuerelement ist.
 
-Wenn das Bearbeitungs Steuerelement zuvor eine [**EM \_ nosetfocus**](em-nosetfocus.md) -Nachricht empfangen hat, scheint das Bearbeitungs Steuerelement den Fokus zu haben, ohne es tatsächlich zu haben. andernfalls erhält das Bearbeitungs Steuerelement den Fokus.
+Wenn das Bearbeitungssteuerelement zuvor eine [**EM \_ NOSETFOCUS-Meldung**](em-nosetfocus.md) empfangen hat, scheint das Bearbeitungssteuerelement den Fokus zu haben, ohne ihn tatsächlich zu haben. Andernfalls erhält das Bearbeitungssteuerelement den Fokus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,23 +65,23 @@ Wenn das Bearbeitungs Steuerelement zuvor eine [**EM \_ nosetfocus**](em-nosetfo
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**" \_ TakeFocus" Bearbeiten**](/windows/desktop/api/Commctrl/nf-commctrl-edit_takefocus)
+[**Bearbeiten von \_ TakeFocus**](/windows/desktop/api/Commctrl/nf-commctrl-edit_takefocus)
 </dt> <dt>
 
-[**EM \_ nosetfocus**](em-nosetfocus.md)
+[**EM \_ NOSETFOCUS**](em-nosetfocus.md)
 </dt> </dl>
 
  

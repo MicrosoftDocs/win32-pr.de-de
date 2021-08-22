@@ -1,8 +1,8 @@
 ---
-description: Die Namespace-Eigenschaft des "errbemubjectpath"-Objekts enthält den Namen des Namespace, der Teil des Objekt Pfads ist.
+description: Die Namespace-Eigenschaft des SWbemObjectPath-Objekts enthält den Namen des Namespace, der Teil des Objektpfads ist.
 ms.assetid: be88670d-6f0d-4b9d-886f-3e70bf4758ed
 ms.tgt_platform: multiple
-title: Errbemubjectpath. Namespace-Eigenschaft (wbemdisp. h)
+title: SWbemObjectPath.Namespace-Eigenschaft (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,22 +17,22 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 885f7069e901d1d4a490ad7539077463f6c1838c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f9daa9b74918c16d58546f6830bb474e40e449a8c596f61f7e27f03342c47b4e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216517"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119503760"
 ---
-# <a name="swbemobjectpathnamespace-property"></a>Errbemubjectpath. Namespace-Eigenschaft
+# <a name="swbemobjectpathnamespace-property"></a>SWbemObjectPath.Namespace-Eigenschaft
 
-Die **Namespace** -Eigenschaft des " [**errbemubjectpath**](swbemobjectpath.md) "-Objekts enthält den Namen des Namespace, der Teil des Objekt Pfads ist. Der folgende Pfad zeigt z. b. die Namespace-Eigenschaft, die root cimv2 zurückgibt \\ :
+Die **Namespace-Eigenschaft** des [**SWbemObjectPath-Objekts**](swbemobjectpath.md) enthält den Namen des Namespace, der Teil des Objektpfads ist. Der folgende Pfad zeigt beispielsweise die Namespaceeigenschaft, die root \\ cimv2 zurückgibt:
 
 ``` syntax
 \\computer\root\cimv2:win32_logicaldisk="a:"
 ```
 
-Die Syntax Erklärung finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Die Syntaxerklärung finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,7 +49,7 @@ SWbemObjectPath.Namespace As String
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie Sie den Namespace Namen aus Instanzen von [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) abrufen, bei denen es sich um Festplatten handelt. Das Skript stellt eine Verbindung mit dem Standard Namespace her.
+Im folgenden Beispiel wird gezeigt, wie Sie den Namespacenamen von [**Win32 \_ LogicalDisk-Instanzen**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) abrufen, bei denen es sich um Festplatten handelt. Das Skript stellt eine Verbindung mit dem Standardnamespace herstellt.
 
 
 ```VB
@@ -78,11 +78,11 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-Austausch Pfad<br/>                                                       |
-| IID<br/>                      | IID \_ iswbemubjectpath<br/>                                                        |
+| CLSID<br/>                    | CLSID \_ SWbemObjectPath<br/>                                                       |
+| IID<br/>                      | IID \_ ISWbemObjectPath<br/>                                                        |
 
 
 

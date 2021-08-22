@@ -1,10 +1,10 @@
 ---
 title: MDM_Policy_Config01_WirelessDisplay02-Klasse
-description: Die MDM- \_ Richtlinie \_ Config01 \_ WirelessDisplay02-Klasse stellt die verfügbaren drahtlos Anzeige Richtlinien dar.
+description: Die MDM \_ Policy \_ Config01 \_ WirelessDisplay02-Klasse stellt die verfügbaren Richtlinien für die drahtlose Anzeige dar.
 ms.assetid: 24b72ed9-cc14-4318-a9d1-597976083242
 keywords:
 - MDM_Policy_Config01_WirelessDisplay02-Klasse
-- MDM_Policy_Config01_WirelessDisplay02-Klasse, beschrieben
+- MDM_Policy_Config01_WirelessDisplay02-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 12b99183f8fdf599df8b5c1b4e82b9b536f47019
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 489b465a77ccd10aef2e7ec58f3ac17a2464db005cb114cb3fe2eae6a5869a8a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956532"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119587960"
 ---
-# <a name="mdm_policy_config01_wirelessdisplay02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ WirelessDisplay02-Klasse
+# <a name="mdm_policy_config01_wirelessdisplay02-class"></a>MDM \_ Policy \_ Config01 \_ WirelessDisplay02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ WirelessDisplay02** -Klasse stellt die verfügbaren drahtlos Anzeige Richtlinien dar.
+Die **MDM \_ Policy \_ Config01 \_ WirelessDisplay02-Klasse** stellt die verfügbaren Richtlinien für die drahtlose Anzeige dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -53,17 +53,17 @@ class MDM_Policy_Config01_WirelessDisplay02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ WirelessDisplay02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ WirelessDisplay02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ WirelessDisplay02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ WirelessDisplay02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowmdnsankündigung](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowmdnsadvertisement)
+[AllowMdnsAdvertisement](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowmdnsadvertisement)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -74,7 +74,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowmdnsdiscovery](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowmdnsdiscovery)
+[AllowMdnsDiscovery](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowmdnsdiscovery)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -85,7 +85,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowprojectionfrompc](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowprojectionfrompc)
+[AllowProjectionFromPC](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowprojectionfrompc)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -96,7 +96,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowprojectionfrompcoverinfrastructure](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowprojectionfrompcoverinfrastructure)
+[AllowProjectionFromPCOverInfrastructure](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowprojectionfrompcoverinfrastructure)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -107,7 +107,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowprojectiontopc](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowprojectiontopc)
+[AllowProjectionToPC](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowprojectiontopc)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -118,7 +118,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowprojectiontopcoverinfrastructure](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowprojectiontopcoverinfrastructure)
+[AllowProjectionToPCOverInfrastructure](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowprojectiontopcoverinfrastructure)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -129,7 +129,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Zuordnung von "zugeerteninputfromwirelessdisplayreceiver"](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowuserinputfromwirelessdisplayreceiver)
+[AllowUserInputFromWirelessDisplayReceiver](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowuserinputfromwirelessdisplayreceiver)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -143,36 +143,36 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "wirelessdisplay".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "WirelessDisplay".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/config".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/Policy/Config".
 
 </dd> <dt>
 
-[Requirements pinforkopplung](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-requirepinforpairing)
+[RequirePinForPairing](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-requirepinforpairing)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -189,11 +189,11 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                            |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl>       |
-| DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dllfür die \\</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl>       |
+| DLL<br/>                      | <dl> <dt>\\Mofs-DMWmiBridgeProv.dll</dt> </dl> |
 
 
 

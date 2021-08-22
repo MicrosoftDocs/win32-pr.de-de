@@ -1,59 +1,59 @@
 ---
-description: XAudio2 ist eine audioapi auf niedriger Ebene. Es bietet eine Signalverarbeitung und eine Mischung für Spiele, die den Vorgänger, DirectSound und xaudio ähneln.
+description: XAudio2 ist eine Low-Level-Audio-API. Es bietet eine Signalverarbeitungs- und Mischungs-Grundlage für Spiele, die den Vorgängern DirectSound und XAudio ähnelt.
 ms.assetid: c87be63a-58b5-9cd1-1f03-f32b5a858b2e
 title: XAudio2-Einführung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d7cde958256d9126746a07764dc0c792e88289c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a4a966e9682a7f605864c0374a588d4b7eb3724036fe284bd6d92c64080e9225
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119589900"
 ---
 # <a name="xaudio2-introduction"></a>XAudio2-Einführung
 
-XAudio2 ist eine audioapi auf niedriger Ebene. Es bietet eine Signalverarbeitung und eine Mischung für Spiele, die den Vorgänger, DirectSound und xaudio ähneln.
+XAudio2 ist eine Low-Level-Audio-API. Es bietet eine Signalverarbeitungs- und Mischungs-Grundlage für Spiele, die den Vorgängern DirectSound und XAudio ähnelt.
 
-XAudio2 ist die lang erwartete Ersetzung für DirectSound. Es werden mehrere ausstehende Probleme und Featureanforderungen behandelt.
+XAudio2 ist der lange erwartete Ersatz für DirectSound. Es werden mehrere ausstehende Probleme und Featureanforderungen behandelt.
 
 ## <a name="xaudio2-features"></a>XAudio2-Funktionen
 
-Im folgenden finden Sie eine Liste der XAudio2 Features und neuen Funktionen, mit denen Entwickler die Leistung Ihrer Spiele verbessern können.
+Im Folgenden finden Sie eine Liste mit XAudio2-Features und neuen Funktionen, mit denen Entwickler die Leistung in ihren Spielen verbessern können.
 
--   DSP-Effekte und sprach Filterung
+-   DSP-Effekte und Filterung pro Stimme
 
-    Die Auswirkungen digitaler Signal Verarbeitung (DSP) sind die Pixel-Shader von Audiodaten. Sie behandeln alles von der Transformation eines Sounds – das Umwandeln eines Pig-Klangs in ein niedriges, beängstigendes Monster – zum Platzieren von Sounds in der Spielumgebung mithilfe von Hall-und Okklusions-oder Hindernis filtern. XAudio2 bietet ein flexibles und leistungsfähiges DSP-Framework. Außerdem bietet es einen integrierten Filter für jede Stimme, um Filter Effekte mit geringem/hohem/banddurchlauf zu ermöglichen.
+    DSP-Effekte (Digital Signal Processing) sind die Pixel-Shader von Audio. Sie verarbeiten alles, von der Transformation eines Sounds – von der Umwandlung einer Pig-Queal in einen niedrigen, beängstigenden Sound bis hin zum Platzieren von Sounds in der Spielumgebung mit Hall und Okklusion oder Sperrfilterung. XAudio2 bietet ein flexibles und leistungsstarkes DSP-Framework. Außerdem bietet sie einen integrierten Filter für jede Stimme, um effiziente Filtereffekte für niedrige/hohe/Bandpassfilterung zu erzielen.
 
-    Weitere Informationen zu DSP-Effekten und zum Filtern pro Sprache finden Sie unter [XAudio2-Audioeffekte](xaudio2-audio-effects.md) und [**IXAudio2Voice:: setfilterparameters**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setfilterparameters) .
+    Weitere Informationen zu DSP-Effekten und zum Filtern pro Stimme finden Sie unter [XAudio2 Audio Effects](xaudio2-audio-effects.md) und [**IXAudio2Voice::SetFilterParameters.**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setfilterparameters)
 
--   Submischen
+-   Untermischung
 
-    Bei der submischung werden mehrere Sounds in einem einzelnen Audiostream kombiniert, z. –. ein Engine-Ton, der aus zusammengesetzten Teilen besteht, die alle gleichzeitig abgespielt werden. Außerdem können Sie die unter Mischung verwenden, um ähnliche Teile eines Spiels zu verarbeiten und zu kombinieren. Beispielsweise können Sie alle Spiel Soundeffekte kombinieren, damit eine Einstellung für das Benutzer Volume angewendet werden kann, während eine separate Einstellung das Musik Volume steuert. In Kombination mit DSP bietet die submischung den Typ der Datenweiterleitung und-Verarbeitung, die für die heutigen Spiele benötigt werden. XAudio2 ermöglicht das Erstellen komplexer Sounds und Spiel Mischungen und ermöglicht so die unter Mischung beliebiger Ebenen.
+    Bei der Untermischung werden mehrere Sounds zu einem einzelnen Audiostream kombiniert, z. B. ein Engine-Sound, der aus zusammengesetzten Teilen besteht, die alle gleichzeitig abspielt. Außerdem können Sie mithilfe von Untermischung ähnliche Teile eines Spiels verarbeiten und kombinieren. Beispielsweise können Sie alle Spielklangeffekte kombinieren, um die Anwendung einer Benutzer-Volumeeinstellung zu ermöglichen, während eine separate Einstellung die Musikvolumen steuert. In Kombination mit DSP bietet die Untermischung die Art des Datenroutings und der Verarbeitung, die für heutige Spiele erforderlich ist. XAudio2 ermöglicht eine beliebige Untermischung, sodass komplexe Sounds und Spielmischungen erstellt werden können.
 
-    Weitere Informationen zur unter Mischung finden Sie unter [XAudio2 audiograph](xaudio2-audio-graph.md) und [XAudio2 Voices](xaudio2-voices.md) .
+    Weitere [Informationen zum Untermixen finden](xaudio2-audio-graph.md) Graph XAudio2 Audio Graph und [XAudio2-Stimmen.](xaudio2-voices.md)
 
--   Komprimierte Audiounterstützung
+-   Unterstützung komprimierter Audiodaten
 
-    Eine der wichtigsten Funktionsanforderungen für DirectSound ist für komprimierte Audiounterstützung vorgesehen. XAudio2 unterstützt komprimierte Formate – ADPCM – nativ mit Lauf Zeit Komprimierung.
+    Eine der wichtigsten Featureanforderungen für DirectSound war die Unterstützung komprimierter Audiodaten. XAudio2 unterstützt komprimierte Formate – ADPCM – nativ mit Laufzeitdekomprimierung.
 
--   Erweiterte Unterstützung für Multichannel und Surround Sound
+-   Erweiterte Multichannel- und Surround Sound-Unterstützung
 
-    Die Unterstützung für Multichannel, 3D und Surround Sound ist erweitert. 3D-und umschließende Sounds sind nun viel flexibler und transparenter. XAudio2 entfernt das 6-Kanal-Limit für Multichannel-Sounds und unterstützt Multichannel-Audiodaten auf einer beliebigen Multichannel-fähigen Audiokarte. Die Karte muss nicht Hardware beschleunigt werden.
+    Die Unterstützung für Multichannel-, 3D- und Surround-Sound wird erweitert. 3D- und Umschließen-Sound sind jetzt viel flexibler und transparenter. XAudio2 entfernt die 6-Kanal-Grenze für Multichannel-Sounds und unterstützt Multichannel-Audio auf jeder Multichannel-fähigen Audiokarte. Die Karte muss nicht hardwarebeschleunigt sein.
 
--   Mehrstufige Verarbeitung
+-   Multirate Processing
 
-    Um die CPU-Auslastung zu minimieren, bietet XAudio2 die Technologie zum Erstellen mehrerer Audioverarbeitungs Diagramme mit geringem Geschwindigkeit. Dies kann die CPU-Auslastung erheblich verringern, indem es einem Spiel ermöglicht, Audiodaten mit der Geschwindigkeit des Quellmaterials zu verarbeiten, wenn die Rate kleiner als 48 kHz ist.
+    Um die CPU-Auslastung zu minimieren, stellt XAudio2 die Technologie zum Erstellen mehrerer Audioverarbeitungsdiagramme mit niedriger Rate zur Anwendung. Dies kann die CPU-Auslastung erheblich reduzieren, indem ein Spiel audio mit der Rate des Quellmaterials verarbeiten kann, wenn die Rate kleiner als 48 kHz ist.
 
--   Nicht blockierendes API-Modell
+-   API-Modell ohne Blockierung
 
-    Mit wenigen Ausnahmen wird die Audioverarbeitungs-Engine durch einen XAudio2-Methoden aufrufnicht blockiert. Dies bedeutet, dass ein Client jederzeit sicher einen Satz von Methoden aufrufen ausführen kann, ohne dass Aufrufe mit langer Ausführungszeit blockiert werden, die Verzögerungen verursachen. Ausnahmen sind die [**IXAudio2Voice::D estroyvoice**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-destroyvoice) -Methode (die die Engine blockieren kann, bis die Wiederherstellung der Stimme abgeschlossen ist) und die Methoden, die den audiothread beenden: [**IXAudio2:: stopengine**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-stopengine) und [**IXAudio2:: Release**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-release). Beachten Sie, dass die XAudio2-Methodenaufrufe die Audioverarbeitungs-Engine nicht blockieren, dass die XAudio2-Methoden kritische Abschnitte enthalten und in einigen Fällen blockiert werden können.
+    Mit wenigen Ausnahmen blockiert ein XAudio2-Methodenaufruf die Audioverarbeitungs-Engine nicht. Dies bedeutet, dass ein Client jederzeit sicher eine Reihe von Methodenaufrufen ausführen kann, ohne bei Aufrufen mit langer Ausführungszeit zu blockieren, was zu Verzögerungen führt. Ausnahmen sind die [**IXAudio2Voice::D esticeVoice-Methode**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-destroyvoice) (die die Engine blockieren kann, bis die zerstörte Stimme verarbeitet ist) und die Methoden, die den Audiothread beenden: [**IXAudio2::StopEngine**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-stopengine) und [**IXAudio2::Release**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-release). Beachten Sie, dass XAudio2-Methodenaufrufe zwar die Audioverarbeitungs-Engine nicht blockieren, die XAudio2-Methoden jedoch kritische Abschnitte enthalten und unter bestimmten Umständen selbst blockiert werden können.
 
-## <a name="when-to-use-xaudio2"></a>Verwendungszwecke von XAudio2
+## <a name="when-to-use-xaudio2"></a>Verwendung von XAudio2
 
-XAudio2 ist hauptsächlich für die Entwicklung Hochleistungs-audioengines für Spiele gedacht. Spieleentwicklern, die Soundeffekte und Hintergrundmusik zu ihren modernen Spielen hinzufügen möchten, bietet XAudio2 ein Modul für Audiodiagramme und zum Mischen mit geringer Latenz und Unterstützung für dynamische Puffer, synchrone Wiedergabe genau nach Beispiel und implizite Quellratenumwandlung. Im Vergleich zu WASAPI erfordert XAudio2 nur eine minimale Menge an Code, auch für komplexe Audiolösungen. Im Vergleich zur Media Foundation-Engine ist XAudio2 eine C++-API auf niedriger Ebene, die für die Verwendung in Spielen konzipiert ist.
+XAudio2 ist hauptsächlich für die Entwicklung leistungsstarker Audio-Engines für Spiele vorgesehen. Spieleentwicklern, die Soundeffekte und Hintergrundmusik zu ihren modernen Spielen hinzufügen möchten, bietet XAudio2 ein Modul für Audiodiagramme und zum Mischen mit geringer Latenz und Unterstützung für dynamische Puffer, synchrone Wiedergabe genau nach Beispiel und implizite Quellratenumwandlung. Im Vergleich zu WASAPI erfordert XAudio2 nur eine minimale Menge an Code, auch für komplexe Audiolösungen. Im Vergleich zur Media Foundation-Engine ist XAudio2 eine C++-API mit niedriger Latenz, die für die Verwendung in Spielen entwickelt wurde.
 
-Für Anwendungen, die nur eine reguläre Musikwiedergabe benötigen, ist die Media Foundation-Engine möglicherweise besser mit den Anforderungen der Anwendung zu vergleichen.
+Für Anwendungen, die einfach reguläre Musikwiedergabe benötigen, ist die Media Foundation-Engine möglicherweise eine bessere Übereinstimmung mit den Anforderungen der Anwendung.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

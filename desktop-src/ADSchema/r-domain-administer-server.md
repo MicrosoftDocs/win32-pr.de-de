@@ -1,10 +1,10 @@
 ---
-title: Domäne-verwalten-Server erweitert rechts
-description: Ältere Sam-Rechte.
+title: Erweitertes Recht "Domain-Administer-Server"
+description: Legacy-SAM-Recht.
 ms.assetid: 64055571-a491-4f94-a802-6a189995e6f0
 ms.tgt_platform: multiple
 keywords:
-- 'Active Directory-Schema für Domänen Verwaltung: Server erweitert'
+- AD-Schema für erweiterte rechte Domänenverwaltungsserver
 topic_type:
 - apiref
 api_name:
@@ -13,31 +13,31 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e1514a2b9bd9d290e1dc09f037ea01ed17cb053a
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: aed8b87904ff780169a02b8d4e5bf1666f0e8fb6995e216bc3439565c25a938e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104123128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119532440"
 ---
-# <a name="domain-administer-server-extended-right"></a>Domäne-verwalten-Server erweitert rechts
+# <a name="domain-administer-server-extended-right"></a>Erweitertes Recht "Domain-Administer-Server"
 
-Ältere Sam-Rechte.
+Legacy-SAM-Recht.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
-| CN           | Domäne-verwalten-Server             |
-| Anzeigename | Domänen Verwaltungs Server             |
-| Rights-GUID  | ab721a52-1e2f-11d0-9819-00aa0040529b |
+| CN           | Domain-Administer-Server             |
+| Anzeigename | Domänenverwaltungsserver             |
+| Rechte-GUID  | ab721a52-1e2f-11d0-9819-00aa0040529b |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -49,19 +49,19 @@ ms.locfileid: "104123128"
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**SAM-Server**](c-samserver.md)<br/> |
-| Lokalisierung-Display-ID | 1                                            |
+| Applies-To              | [**Sam-Server**](c-samserver.md)<br/> |
+| Lokalisierungsanzeige-ID | 1                                            |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**SAM-Server**](c-samserver.md)<br/> |
-| Lokalisierung-Display-ID | 1                                            |
+| Applies-To              | [**Sam-Server**](c-samserver.md)<br/> |
+| Lokalisierungsanzeige-ID | 1                                            |
 
 
 
@@ -71,8 +71,8 @@ ms.locfileid: "104123128"
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**SAM-Server**](c-samserver.md)<br/> |
-| Lokalisierung-Display-ID | 1                                            |
+| Applies-To              | [**Sam-Server**](c-samserver.md)<br/> |
+| Lokalisierungsanzeige-ID | 1                                            |
 
 
 
@@ -82,8 +82,8 @@ ms.locfileid: "104123128"
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**SAM-Server**](c-samserver.md)<br/> |
-| Lokalisierung-Display-ID | 1                                            |
+| Applies-To              | [**Sam-Server**](c-samserver.md)<br/> |
+| Lokalisierungsanzeige-ID | 1                                            |
 
 
 
@@ -93,8 +93,8 @@ ms.locfileid: "104123128"
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**SAM-Server**](c-samserver.md)<br/> |
-| Lokalisierung-Display-ID | 1                                            |
+| Applies-To              | [**Sam-Server**](c-samserver.md)<br/> |
+| Lokalisierungsanzeige-ID | 1                                            |
 
 
 
@@ -104,8 +104,8 @@ ms.locfileid: "104123128"
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**SAM-Server**](c-samserver.md)<br/> |
-| Lokalisierung-Display-ID | 1                                            |
+| Applies-To              | [**Sam-Server**](c-samserver.md)<br/> |
+| Lokalisierungsanzeige-ID | 1                                            |
 
 
 

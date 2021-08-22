@@ -1,30 +1,30 @@
 ---
 title: Zeichnen mit Direct2D
-description: Nachdem Sie Ihre Grafik Ressourcen erstellt haben, können Sie Sie zeichnen.
+description: Nachdem Sie Ihre Grafikressourcen erstellt haben, können Sie zeichnen.
 ms.assetid: a73f7043-dffc-4688-adfc-16ed9a9e12d2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 40f8f3cf82d3ce6f485a7c54700c32c9eb65d054
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: a2d8a346300b32fe1c716e51efe6bfb8fdbf6220fb2ff17df6de617de27ba1a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104472900"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119535075"
 ---
 # <a name="drawing-with-direct2d"></a>Zeichnen mit Direct2D
 
-Nachdem Sie Ihre Grafik Ressourcen erstellt haben, können Sie Sie zeichnen.
+Nachdem Sie Ihre Grafikressourcen erstellt haben, können Sie zeichnen.
 
 ## <a name="drawing-an-ellipse"></a>Zeichnen einer Ellipse
 
-Das [Circle](your-first-direct2d-program.md) -Programm führt eine sehr einfache Zeichnungs Logik durch:
+Das [Circle-Programm](your-first-direct2d-program.md) führt eine sehr einfache Zeichnungslogik aus:
 
-1.  Füllen Sie den Hintergrund mit einer voll Tonfarbe aus.
-2.  Zeichnen Sie einen gefüllten Kreis.
+1.  Füllen Sie den Hintergrund mit einer Volltonfarbe aus.
+2.  Zeichnen Sie einen ausgefüllten Kreis.
 
-![ein Screenshot des Kreises-Programms.](images/graphics08.png)
+![Ein Screenshot des Kreisprogramms.](images/graphics08.png)
 
-Da das Renderziel ein Fenster ist (im Gegensatz zu einer Bitmap oder einer anderen Offscreen-Oberfläche), erfolgt das Zeichnen als Reaktion auf WM-Zeichnungs Meldungen. [**\_**](/windows/desktop/gdi/wm-paint) Der folgende Code zeigt die Fenster Prozedur für das kreisprogramm.
+Da das Renderziel ein Fenster ist (im Gegensatz zu einer Bitmap oder einer anderen Offscreenoberfläche), erfolgt das Zeichnen als Reaktion auf [**WM \_ PAINT-Meldungen.**](/windows/desktop/gdi/wm-paint) Der folgende Code zeigt die Fensterprozedur für das Circle-Programm.
 
 
 ```C++
@@ -70,20 +70,20 @@ void MainWindow::OnPaint()
 
 
 
-Die [**ID2D1RenderTarget**](/windows/desktop/api/d2d1/nn-d2d1-id2d1rendertarget) -Schnittstelle wird für alle Zeichnungsvorgänge verwendet. Die-Methode des Programms `OnPaint` führt Folgendes aus:
+Die [**ID2D1RenderTarget-Schnittstelle**](/windows/desktop/api/d2d1/nn-d2d1-id2d1rendertarget) wird für alle Zeichnungsvorgänge verwendet. Die -Methode `OnPaint` des Programms führt Folgendes aus:
 
-1.  Die [**ID2D1RenderTarget:: beginDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) -Methode signalisiert den Anfang der Zeichnung.
-2.  Die [**ID2D1RenderTarget:: Clear**](/windows/desktop/Direct2D/id2d1rendertarget-clear) -Methode füllt das gesamte Renderziel mit einer voll Tonfarbe aus. Die Farbe wird als [**D2D1 \_ Color \_ F**](/windows/desktop/Direct2D/d2d1-color-f) -Struktur angegeben. Sie können die [**D2D1:: colorf**](/windows/desktop/api/d2d1helper/nl-d2d1helper-colorf) -Klasse verwenden, um die Struktur zu initialisieren. Weitere Informationen finden Sie unter [Verwenden von Color in Direct2D](using-color-in-direct2d.md).
-3.  Die [**ID2D1RenderTarget:: FillEllipse**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillellipse(constd2d1_ellipse__id2d1brush)) -Methode zeichnet eine gefüllte Ellipse mit dem angegebenen Pinsel für die Füllung. Eine Ellipse wird von einem Mittelpunkt und dem x-und y-Radii angegeben. Wenn x-und y-Radii identisch sind, ist das Ergebnis ein Kreis.
-4.  Die [**ID2D1RenderTarget:: EndDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) -Methode signalisiert den Abschluss der Zeichnung für diesen Frame. Alle Zeichnungsvorgänge müssen zwischen Aufrufen von [**beginDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) und **EndDraw** eingefügt werden.
+1.  Die [**ID2D1RenderTarget::BeginDraw-Methode**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) signalisiert den Beginn des Zeichnens.
+2.  Die [**ID2D1RenderTarget::Clear-Methode**](/windows/desktop/Direct2D/id2d1rendertarget-clear) füllt das gesamte Renderziel mit einer Volltonfarbe auf. Die Farbe wird als [**D2D1 \_ COLOR \_ F-Struktur**](/windows/desktop/Direct2D/d2d1-color-f) angegeben. Sie können die [**D2D1::ColorF-Klasse verwenden,**](/windows/desktop/api/d2d1helper/nl-d2d1helper-colorf) um die -Struktur zu initialisieren. Weitere Informationen finden Sie unter [Verwenden von Farben in Direct2D.](using-color-in-direct2d.md)
+3.  Die [**ID2D1RenderTarget::FillEllipse-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillellipse(constd2d1_ellipse__id2d1brush)) zeichnet eine gefüllte Ellipse unter Verwendung des angegebenen Pinsels für die Füllung. Eine Ellipse wird durch einen Mittelpunkt und die x- und y-radii angegeben. Wenn die x- und y-radii identisch sind, ist das Ergebnis ein Kreis.
+4.  Die [**ID2D1RenderTarget::EndDraw-Methode**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) signalisiert den Abschluss des Zeichnens für diesen Frame. Alle Zeichnungsvorgänge müssen zwischen Aufrufen von [**BeginDraw und**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) **EndDraw platziert werden.**
 
-Die [**beginDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw)-, [**Clear**](/windows/desktop/Direct2D/id2d1rendertarget-clear)-und [**FillEllipse**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillellipse(constd2d1_ellipse__id2d1brush)) -Methoden verfügen alle über einen **void** -Rückgabetyp. Wenn während der Ausführung einer dieser Methoden ein Fehler auftritt, wird der Fehler durch den Rückgabewert der [**EndDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) -Methode signalisiert. Die- `CreateGraphicsResources` Methode wird im Thema [Erstellen von Direct2D-Ressourcen](render-targets--devices--and-resources.md)gezeigt. Diese Methode erstellt das Renderziel und den Pinsel mit voll Tonfarbe.
+Die [**Methoden BeginDraw,**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) [**Clear**](/windows/desktop/Direct2D/id2d1rendertarget-clear)und [**FillEllipse haben**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillellipse(constd2d1_ellipse__id2d1brush)) alle einen **void-Rückgabetyp.** Wenn während der Ausführung einer dieser Methoden ein Fehler auftritt, wird der Fehler über den Rückgabewert der [**EndDraw-Methode**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) signalisiert. Die `CreateGraphicsResources` -Methode wird im Thema Creating [Direct2D Resources (Erstellen von Direct2D-Ressourcen) gezeigt.](render-targets--devices--and-resources.md) Diese Methode erstellt das Renderziel und den Volltonfarbpinsel.
 
-Das Gerät puffert möglicherweise die Zeichnungs Befehle und verzögert die Ausführung, bis [**EndDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) aufgerufen wird. Sie können erzwingen, dass das Gerät ausstehende Zeichnungs Befehle ausführt, indem Sie [**ID2D1RenderTarget:: Flush**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-flush)aufrufen. Das leeren kann jedoch die Leistung beeinträchtigen.
+Das Gerät kann die Zeichnungsbefehle puffern und deren Ausführung so lange zurückziehen, bis [**EndDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) aufgerufen wird. Sie können erzwingen, dass das Gerät alle ausstehenden Zeichnungsbefehle ausführt, indem Sie [**ID2D1RenderTarget::Flush aufrufen.**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-flush) Durch Leeren kann jedoch die Leistung reduziert werden.
 
-## <a name="handling-device-loss"></a>Behandeln von Geräte Verlusten
+## <a name="handling-device-loss"></a>Behandeln von Geräteverlusten
 
-Während das Programm ausgeführt wird, ist das verwendete Grafikgerät möglicherweise nicht mehr verfügbar. Beispielsweise kann das Gerät verloren gehen, wenn sich die Bildschirmauflösung ändert, oder wenn der Benutzer den Anzeige Adapter entfernt. Wenn das Gerät verloren geht, wird auch das Renderziel zusammen mit allen geräteabhängigen Ressourcen, die dem Gerät zugeordnet sind, ungültig. Direct2D signalisiert einem verlorenen Gerät durch das Zurückgeben des Fehlercodes **D2DERR " \_ \_ Ziel neu erstellen** " aus der [**EndDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) -Methode. Wenn Sie diesen Fehlercode erhalten, müssen Sie das Renderziel und alle geräteabhängigen Ressourcen neu erstellen.
+Während das Programm ausgeführt wird, ist das von Ihnen verwendete Grafikgerät möglicherweise nicht mehr verfügbar. Beispielsweise kann das Gerät verloren gehen, wenn sich die Anzeigeauflösung ändert, oder wenn der Benutzer den Adapter entfernt. Wenn das Gerät verloren geht, wird auch das Renderziel zusammen mit allen geräteabhängigen Ressourcen, die dem Gerät zugeordnet waren, ungültig. Direct2D signalisiert einem verloren gegangenen Gerät, indem der Fehlercode **D2DERR \_ RECREATE \_ TARGET** von der [**EndDraw-Methode zurückgegeben**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) wird. Wenn Sie diesen Fehlercode erhalten, müssen Sie das Renderziel und alle geräteabhängigen Ressourcen neu erstellen.
 
 Um eine Ressource zu verwerfen, geben Sie einfach die Schnittstelle für diese Ressource frei.
 
@@ -98,29 +98,29 @@ void MainWindow::DiscardGraphicsResources()
 
 
 
-Das Erstellen einer Ressource kann ein kostspieliger Vorgang sein. Erstellen Sie daher ihre Ressourcen nicht für jede WM-Zeichnungs Nachricht neu. [**\_**](/windows/desktop/gdi/wm-paint) Erstellen Sie eine Ressource einmal, und speichern Sie den Ressourcen Zeiger zwischen, bis die Ressource aufgrund eines Geräte Verlusts ungültig wird oder wenn Sie diese Ressource nicht mehr benötigen.
+Das Erstellen einer Ressource kann ein aufwendiger Vorgang sein, daher sollten Sie Ihre Ressourcen nicht für jede [**WM \_ PAINT-Nachricht neu**](/windows/desktop/gdi/wm-paint) erstellen. Erstellen Sie einmal eine Ressource, und speichern Sie den Ressourcenzeiger zwischen, bis die Ressource aufgrund eines Geräteverlusts ungültig wird oder Sie diese Ressource nicht mehr benötigen.
 
 ## <a name="the-direct2d-render-loop"></a>Die Direct2D-Renderschleife
 
-Unabhängig davon, was Sie zeichnen, sollte das Programm eine Schleife ähnlich der folgenden ausführen.
+Unabhängig davon, was Sie zeichnen, sollte Das Programm eine Schleife wie die folgende ausführen.
 
-1.  Geräteunabhängige Ressourcen erstellen.
-2.  Rendering der Szene.
-    1.  Prüfen Sie, ob ein gültiges Renderziel vorhanden ist. Wenn dies nicht der Wert ist, erstellen Sie das Renderziel und die geräteabhängigen Ressourcen.
-    2.  Aufrufen von [**ID2D1RenderTarget:: beginDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw).
-    3.  Ausstellen von Zeichnungs Befehlen.
-    4.  Aufrufen von [**ID2D1RenderTarget:: EndDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw).
-    5.  Wenn [**EndDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) das **D2DERR \_ - \_ Ziel neu erstellen** zurückgibt, verwerfen Sie das Renderziel und Geräte abhängige Ressourcen.
-3.  Wiederholen Sie Schritt 2, wenn Sie die Szene aktualisieren oder neu zeichnen müssen.
+1.  Erstellen Sie geräteunabhängige Ressourcen.
+2.  Rendern Sie die Szene.
+    1.  Überprüfen Sie, ob ein gültiges Renderziel vorhanden ist. Falls nicht, erstellen Sie das Renderziel und die geräteabhängigen Ressourcen.
+    2.  Rufen [**Sie ID2D1RenderTarget::BeginDraw auf.**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw)
+    3.  Problem beim Zeichnen von Befehlen.
+    4.  Rufen [**Sie ID2D1RenderTarget::EndDraw auf.**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw)
+    5.  Wenn [**EndDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) **D2DERR \_ RECREATE TARGET \_ zurückgibt,** verwerfen Sie das Renderziel und geräteabhängige Ressourcen.
+3.  Wiederholen Sie Schritt 2, wenn Sie die Szene aktualisieren oder neu gezeichnet haben.
 
-Wenn das Renderziel ein Fenster ist, tritt Schritt 2 auf, wenn das Fenster eine [**WM \_ Paint**](/windows/desktop/gdi/wm-paint) -Meldung empfängt.
+Wenn das Renderziel ein Fenster ist, wird Schritt 2 immer dann angezeigt, wenn das Fenster eine [**WM \_ PAINT-Nachricht**](/windows/desktop/gdi/wm-paint) empfängt.
 
-In der hier gezeigten Schleife werden Geräte Verluste behandelt, indem die geräteabhängigen Ressourcen verworfen und zu Beginn der nächsten Schleife neu erstellt werden (Schritt 2a).
+Die hier gezeigte Schleife behandelt den Geräteverlust, indem die geräteabhängigen Ressourcen verworfen und zu Beginn der nächsten Schleife neu erstellt werden (Schritt 2a).
 
 ## <a name="next"></a>Nächste
 
-[DPI-und Device-Independent Pixel](dpi-and-device-independent-pixels.md)
+[DPI und Device-Independent Pixel](dpi-and-device-independent-pixels.md)
 
- 
+ 
 
- 
+ 

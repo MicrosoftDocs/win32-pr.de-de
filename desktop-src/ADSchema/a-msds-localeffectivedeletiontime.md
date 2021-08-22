@@ -1,11 +1,11 @@
 ---
-title: ms-DS-local-Effective-Lösch-Time-Attribut
-description: Der Lösch Zeitpunkt des Objekts in der lokalen dit.
+title: ms-DS-local-Effective-Deletion-Time-Attribut
+description: Löschzeit des Objekts in der lokalen DIT.
 ms.assetid: ee980a2c-dcd1-4963-9956-85d5b0bf682d
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ms-DS-local-Effective-Lösch-Time-Attribut
-- adschema des msDS-localeffectivedeletiontime-Attributs
+- ms-DS-local-Effective-Deletion-Time-Attribut AD-Schema
+- msDS-LocalEffectiveDeletionTime-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d9dfa73e3bd1e55d2e64a6cffea41514d79f551
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c7aef9579e512daa7d9668eaea9136d80532972bf8030f60e49849404cda9034
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107817"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119295513"
 ---
-# <a name="ms-ds-local-effective-deletion-time-attribute"></a>ms-DS-local-Effective-Lösch-Time-Attribut
+# <a name="ms-ds-local-effective-deletion-time-attribute"></a>ms-DS-local-Effective-Deletion-Time-Attribut
 
-Der Lösch Zeitpunkt des Objekts in der lokalen dit.
+Löschzeit des Objekts in der lokalen DIT.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------------------------|
-| CN                | ms-DS-local-Effective-Lösch Zeit                           |
-| LDAP-Display-Name | MSDS-localeffectivedeletiontime                               |
+| CN                | ms-DS-local-Effective-Deletion-Time                           |
+| Ldap-Anzeigename | msDS-LocalEffectiveDeletionTime                               |
 | Size              | \-                                                            |
-| Berechtigung aktualisieren  | \-                                                            |
-| Aktualisierungshäufigkeit  | \-                                                            |
+| Aktualisieren von Berechtigungen  | \-                                                            |
+| Updatehäufigkeit  | \-                                                            |
 | Attribute-Id      | 1.2.840.113556.1.4.2059                                       |
-| System-ID-GUID    | 94f 2800c-531-4aeb-975d-48ac39f d8ca4                          |
+| System-ID-GUID    | 94f2800c-531f-4aeb-975d-48ac39fd8ca4                          |
 | Syntax            | [**String(Generalized-Time)**](s-string-generalized-time.md) |
 
 
@@ -53,11 +53,11 @@ Der Lösch Zeitpunkt des Objekts in der lokalen dit.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | Richtig         |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | True         |
+| Ist einwertig       | True         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -74,11 +74,11 @@ Der Lösch Zeitpunkt des Objekts in der lokalen dit.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | Richtig         |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | True         |
+| Ist einwertig       | True         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |

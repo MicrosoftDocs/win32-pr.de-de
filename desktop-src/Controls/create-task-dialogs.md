@@ -1,51 +1,51 @@
 ---
-title: Erstellen von Aufgaben Dialogfeldern
-description: Ein Aufgaben Dialogfeld wird erstellt und entweder mithilfe der taskdialog-Funktion oder der TaskDialogIndirect-Funktion angezeigt.
+title: Erstellen von Aufgabendialogfeldern
+description: Ein Aufgabendialogfeld wird mithilfe der TaskDialog-Funktion oder der TaskDialogIndirect-Funktion erstellt und angezeigt.
 ms.assetid: CCEFF52F-D501-4145-9799-0A9C529017E1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 76ea8e3097454505acccf60c7cba3ef56c637af0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7f6f74f1922330cae1550fda1a9ad6d451221452017f3856ae5e859948019828
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036536"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119504020"
 ---
-# <a name="how-to-create-task-dialogs"></a>Erstellen von Aufgaben Dialogfeldern
+# <a name="how-to-create-task-dialogs"></a>Erstellen von Aufgabendialogfeldern
 
-Ein Aufgaben Dialogfeld wird erstellt und entweder mithilfe der [**taskdialog**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialog) -Funktion oder der [**TaskDialogIndirect**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) -Funktion angezeigt.
+Ein Aufgabendialogfeld wird mithilfe der [**TaskDialog-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialog) oder der [**TaskDialogIndirect-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) erstellt und angezeigt.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="taskdialog"></a>Nenne
+### <a name="taskdialog"></a>TaskDialog
 
-Die **taskdialog** -Funktion eignet sich für einfache Dialogfelder, die Textinformationen darstellen und eine Standardauswahl anfordern. Diese Erstellungs Funktion unterstützt keine Status leisten, Kontrollkästchen, Fußzeilen, Schaltflächen zum erweitern/reduzieren, benutzerdefinierte Schaltflächen oder Options Felder.
+Die **TaskDialog-Funktion** eignet sich für einfache Dialogfelder, die Textinformationen darstellen und nach einer Standardauswahl fragen. Diese Erstellungsfunktion unterstützt keine Statusleisten, Kontrollkästchen, Fußzeilen, Schaltflächen zum Erweitern/Reduzieren, benutzerdefinierte Schaltflächen oder Optionsfelder.
 
 ### <a name="taskdialogindirect"></a>TaskDialogIndirect
 
-Die **TaskDialogIndirect** -Funktion ist leistungsfähiger und unterstützt alle verfügbaren Schnittstellen Elemente und ermöglicht es Ihnen, Ereignisse in einer Rückruf Prozedur zu erfassen, damit die Anwendung eine Statusanzeige aktualisieren oder auf einen Link oder eine Schaltfläche klicken kann.
+Die **TaskDialogIndirect-Funktion** ist leistungsfähiger und unterstützt alle verfügbaren Schnittstellenelemente und ermöglicht Es Ihnen auch, Ereignisse in einer Rückrufprozedur zu erfassen, sodass Ihre Anwendung eine Statusanzeige aktualisieren oder auf einen Klick auf einen Link oder eine Schaltfläche reagieren kann.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von Aufgaben Dialog](using-task-dialogs.md)
+[Verwenden von Aufgabendialogfeldern](using-task-dialogs.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

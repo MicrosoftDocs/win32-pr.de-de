@@ -1,11 +1,11 @@
 ---
-title: MS-WMI-int8Max-Attribut
-description: Der maximale Wert für ein WMI-64-Bit-Ganzzahl-Parameter Objekt.
+title: ms-WMI-int8Max-Attribut
+description: Der Höchstwert für ein WMI-64-Bit-Ganzzahlparameterobjekt.
 ms.assetid: f2e9949f-7ad6-4e4c-9335-8915062a89a5
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-WMI-int8Max-Attribut
-- AD-Schema für das mswap-Int8Max-Attribut
+- AD-Schema des ms-WMI-int8Max-Attributs
+- AD-Schema des msWMI-Int8Max-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d0e011881127785d52b4d993f713f6b371b5674f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 894a710419a8d1711900e0835ddcf940705b9e6f4e3019629f0ffd865b188a8b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859613"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119507640"
 ---
-# <a name="ms-wmi-int8max-attribute"></a>MS-WMI-int8Max-Attribut
+# <a name="ms-wmi-int8max-attribute"></a>ms-WMI-int8Max-Attribut
 
-Der maximale Wert für ein WMI-64-Bit-Ganzzahl-Parameter Objekt.
+Der Höchstwert für ein WMI-64-Bit-Ganzzahlparameterobjekt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-WMI-int8Max                       |
-| LDAP-Display-Name | mswap-Int8Max                        |
+| CN                | ms-WMI-int8Max                       |
+| Ldap-Anzeigename | msWMI-Int8Max                        |
 | Size              | 8 Bytes                              |
-| Berechtigung aktualisieren  | Gruppenrichtlinie-Administrator           |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Gruppenrichtlinie Administrator           |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1633              |
-| System-ID-GUID    | e3d8b547-003d-4946-a32b-dc7cedc96b74 |
+| System-Id-Guid    | e3d8b547-003d-4946-a32b-dc7cedc96b74 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,10 +57,10 @@ Der maximale Wert für ein WMI-64-Bit-Ganzzahl-Parameter Objekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -78,10 +78,10 @@ Der maximale Wert für ein WMI-64-Bit-Ganzzahl-Parameter Objekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -99,10 +99,10 @@ Der maximale Wert für ein WMI-64-Bit-Ganzzahl-Parameter Objekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -120,10 +120,10 @@ Der maximale Wert für ein WMI-64-Bit-Ganzzahl-Parameter Objekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -141,10 +141,10 @@ Der maximale Wert für ein WMI-64-Bit-Ganzzahl-Parameter Objekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |

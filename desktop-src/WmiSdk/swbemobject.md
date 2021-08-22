@@ -1,8 +1,8 @@
 ---
-description: Sie können die Methoden und Eigenschaften des Objekts "errbewbject" verwenden, um eine Windows-Verwaltungsinstrumentation (WMI)-Klassendefinition oder-Objektinstanz darzustellen.
+description: Sie können die Methoden und Eigenschaften des SWbemObject-Objekts verwenden, um eine WMI-Klassendefinition (Windows Management Instrumentation) oder eine Objektinstanz zu darstellen.
 ms.assetid: d303ec1a-5e0c-4a5e-8ed3-ed353a138755
 ms.tgt_platform: multiple
-title: Errbebobject-Objekt (wbemdisp. h)
+title: SWbemObject-Objekt (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,26 +15,26 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 287395b976177170c8bdffa0e1817a8755a4d397
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f8e33a3a0a5028292ce7cef7b44a37433b00f942ea9459ec18e6d53e1cf9a43c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360165"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119504050"
 ---
-# <a name="swbemobject-object"></a>Errbejebject-Objekt
+# <a name="swbemobject-object"></a>SWbemObject-Objekt
 
-Sie können die Methoden und Eigenschaften des Objekts " **errbewbject** " verwenden, um eine Windows-Verwaltungsinstrumentation (WMI)-Klassendefinition oder-Objektinstanz darzustellen. Dieses Objekt kann nicht durch den VBScript-Befehl "up- [Object](/previous-versions//xzysf6hc(v=vs.85)) " erstellt werden.
+Sie können die Methoden und Eigenschaften des **SWbemObject-Objekts** verwenden, um eine WMI-Klassendefinition (Windows Management Instrumentation) oder eine Objektinstanz zu darstellen. Dieses Objekt kann nicht durch den VBScript [CreateObject-Aufruf erstellt](/previous-versions//xzysf6hc(v=vs.85)) werden.
 
-Dieses Objekt unterstützt zwei Typen von Eigenschaften und Methoden. Die in diesem Abschnitt definierten generischen Eigenschaften und Methoden, die für alle WMI-Objekte gelten. Darüber hinaus macht dieses-Objekt die Eigenschaften und Methoden des zugrunde liegenden Objekts als dynamische Automatisierungs Eigenschaften und-Methoden von " **errbemubject**" verfügbar. Die Namen und Typen dieser Eigenschaften und Methoden hängen vom zugrunde liegenden WMI-Objekt ab. Weitere Informationen darüber, wie diese dynamischen Eigenschaften und Methoden verfügbar gemacht werden, finden Sie unter Bearbeiten von [Klassen-und Instanzinformationen](manipulating-class-and-instance-information.md).
+Dieses Objekt unterstützt zwei Typen von Eigenschaften und Methoden. Bei den in diesem Abschnitt definierten Eigenschaften und Methoden handelt es sich um generische Eigenschaften und Methoden, die für alle WMI-Objekte gelten. Darüber hinaus macht dieses Objekt die Eigenschaften und Methoden des zugrunde liegenden Objekts als dynamische Automatisierungseigenschaften und -methoden von **SWbemObject verfügbar.** Die Namen und Typen dieser Eigenschaften und Methoden hängen vom zugrunde liegenden WMI-Objekt ab. Weitere Informationen dazu, wie diese dynamischen Eigenschaften und Methoden verfügbar gemacht werden, finden Sie unter [Manipulating Class and Instance Information](manipulating-class-and-instance-information.md).
 
-In der WMI-Client Perspektive ist dieses Objekt immer in Verarbeitung. Schreibvorgänge wirken sich nur auf die lokale Kopie des Objekts aus, und Lesevorgänge rufen immer Werte aus der lokalen Kopie ab. Updates für WMI werden nur ausgeführt, wenn ganze Objekte mithilfe eines Aufrufes der Methode " [**errbemubject \_ . Put**](swbemobject-put-.md) " geschrieben werden. Wenn Sie die Eigenschaften oder Methoden in einem " **errbemubject** "-Objekt ändern, werden die Änderungen erst in WMI geschrieben, wenn Sie " **errbemubject. Put \_**" aufgerufen haben.
+Aus Sicht des WMI-Clients befindet sich dieses Objekt immer im Prozess. Schreibvorgänge wirken sich nur auf die lokale Kopie des Objekts aus, und Lesevorgänge rufen immer Werte aus der lokalen Kopie ab. Updates für WMI werden nur ausgeführt, wenn ganze Objekte mithilfe eines Aufrufs der [**SWbemObject.Put-Methode geschrieben \_**](swbemobject-put-.md) werden. Wenn Sie die Eigenschaften oder Methoden in einem **SWbemObject-Objekt** ändern, werden Ihre Änderungen erst in WMI geschrieben, wenn Sie **SWbemObject.Put aufrufen. \_**
 
-Die in diesem Abschnitt definierten generischen Methoden-und Eigenschaftsnamen enden immer mit einem nachfolgenden Unterstrich (" \_ "), um Sie von den dynamischen WMI-Methoden und-Eigenschaften des zugrunde liegenden Objekts zu unterscheiden.
+Die in diesem Abschnitt definierten generischen Methoden- und Eigenschaftsnamen enden immer mit einem nach unten liegenden Unterstrich (" "), um sie von den dynamischen WMI-Methoden und -Eigenschaften des zugrunde liegenden \_ Objekts zu unterscheiden.
 
-Beachten Sie **, dass das-** Objekt mit der VBScript-Methode " [**GetObject**](https://msdn.microsoft.com/library/e9waz863(v=VS.71).aspx). Method" nicht erstellt werden kann. Wenn Sie eine neue, leere Klasse erstellen möchten [**, verwenden Sie**](swbemservices-get.md) die-Klasse mit einem leeren path-Parameter. Dieser Befehl gibt ein leeres **errbejebject** -Objekt zurück, das eine Klasse werden kann. Sie können dann einen Klassennamen für die [**Class**](swbemobjectpath-class.md) -Eigenschaft des " [**errbemubjectpath**](swbemobjectpath.md) "-Objekts angeben, das vom [**path \_**](swbemobject-path-.md) -Befehl zurückgegeben wird. Fügen Sie der neuen Klasse mithilfe der [**Properties \_**](swbemobject-properties-.md) -Methode Eigenschaften hinzu. Um eine Instanz zu erstellen, rufen Sie **GetObject** für die neue Klasse auf.
+Beachten **Sie, dass SWbemObject nicht** mit der VBScript [**GetObject -Methode**](https://msdn.microsoft.com/library/e9waz863(v=VS.71).aspx)erstellt werden kann. Wenn Sie eine neue leere Klasse erstellen möchten, verwenden [**Sie SWbemServices.Get mit**](swbemservices-get.md) einem leeren Pfadparameter. Dieser Aufruf gibt ein leeres **SWbemObject-Objekt** zurück, das zu einer Klasse werden kann. Anschließend können Sie einen Klassennamen für die [**Class-Eigenschaft**](swbemobjectpath-class.md) des [**SWbemObjectPath-Objekts**](swbemobjectpath.md) angeben, das vom [**Path-Aufruf zurückgegeben \_**](swbemobject-path-.md) wird. Fügen Sie der neuen Klasse mit der [**Properties-Methode \_ Eigenschaften**](swbemobject-properties-.md) hinzu. Um eine -Instanz zu erstellen, rufen **Sie GetObject für** die neue Klasse auf.
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie eine neue Klasse abrufen und ihr eine Eigenschaft hinzufügen. Das-Objekt, das die-Klasse darstellt, muss durch einen- **Befehl** [**Put \_**](swbemobject-put-.md)zurück in das WMI-Repository geschrieben werden.
+Das folgende Codebeispiel zeigt, wie Sie eine neue Klasse abrufen und ihr eine -Eigenschaft hinzufügen. Das **SWbemObject-Objekt,** das die Klasse darstellt, muss durch einen Aufruf von Put in das WMI-Repository [**zurückgeschrieben werden. \_**](swbemobject-put-.md)
 
 
 ```VB
@@ -67,42 +67,42 @@ WScript.Echo objInstancePath.Path
 
 
 
-Sie können das Repository mit einem Anzeige Tool wie [CIM Studio](further-information.md) untersuchen, um zu überprüfen, ob die neue Klasse und Instanz angezeigt werden. Ein Beispiel für das Entfernen einer Klasse und einer Instanz aus dem Repository finden Sie unter " [**errbemservices. Delete**](swbemservices-delete.md) " oder " [**errbemubject. Delete \_**](swbemobject-delete-.md)".
+Sie können das Repository mit einem Anzeigetool wie [CIM Studio untersuchen,](further-information.md) um sicherzustellen, dass die neue Klasse und Instanz angezeigt werden. Ein Beispiel zum Entfernen einer Klasse und Instanz aus dem Repository finden Sie unter [**SWbemServices.Delete**](swbemservices-delete.md) oder [**SWbemObject.Delete. \_**](swbemobject-delete-.md)
 
 ## <a name="members"></a>Member
 
-Das " **errbemubject** "-Objekt verfügt über diese Typen von Membern:
+Das **SWbemObject-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Das Objekt " **errbemubject** " verfügt über diese Methoden.
+Das **SWbemObject-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                                        | BESCHREIBUNG                                                                                             |
+| Methode                                                        | Beschreibung                                                                                             |
 |:--------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|
-| [**ASSOCIATORS\_**](swbemobject-associators-.md)             | Ruft die assoziatoren des-Objekts ab.<br/>                                                     |
-| [**Associatorsasync\_**](swbemobject-associatorsasync-.md)   | Ruft die assoziatoren des-Objekts asynchron ab.<br/>                                      |
-| [**Klon\_**](swbemobject-clone-.md)                         | Erstellt eine Kopie des aktuellen-Objekts.<br/>                                                          |
-| [**CompareTo\_**](swbemobject-compareto-.md)                 | Testet zwei-Objekte auf Gleichheit.<br/>                                                              |
-| [**Lösch\_**](swbemobject-delete-.md)                       | Löscht das-Objekt aus WMI.<br/>                                                                 |
+| [**Associators\_**](swbemobject-associators-.md)             | Ruft die Assoziatoren des -Objekts ab.<br/>                                                     |
+| [**AssociatorsAsync\_**](swbemobject-associatorsasync-.md)   | Ruft die Assoziatoren des -Objekts asynchron ab.<br/>                                      |
+| [**Klon\_**](swbemobject-clone-.md)                         | Erstellt eine Kopie des aktuellen -Objekts.<br/>                                                          |
+| [**Compareto\_**](swbemobject-compareto-.md)                 | Testet zwei -Objekte auf Gleichheit.<br/>                                                              |
+| [**Löschen\_**](swbemobject-delete-.md)                       | Löscht das -Objekt aus WMI.<br/>                                                                 |
 | [**DeleteAsync\_**](swbemobject-deleteasync-.md)             | Löscht das Objekt asynchron aus WMI.<br/>                                                  |
-| [**ExecMethod\_**](swbemobject-execmethod-.md)               | Führt eine Methode aus, die von einem Methoden Anbieter exportiert wird.<br/>                                             |
-| [**ExecMethodAsync\_**](swbemobject-execmethodasync-.md)     | Führt eine Methode, die von einem Methoden Anbieter exportiert wurde, asynchron aus.<br/>                              |
-| [**Getobjecttext\_**](swbemobject-getobjecttext-.md)         | Ruft die Textdarstellung des-Objekts (MOF-Syntax) ab.<br/>                             |
-| [**Instanzen\_**](swbemobject-instances-.md)                 | Gibt eine Auflistung von Instanzen des-Objekts zurück (bei der es sich um eine WMI-Klasse handeln muss).<br/>                 |
-| [**Instancesasync\_**](swbemobject-instancesasync-.md)       | Gibt asynchron eine Auflistung von Instanzen des-Objekts zurück (bei der es sich um eine WMI-Klasse handeln muss).<br/>  |
-| [**Stellte\_**](swbemobject-put-.md)                             | Erstellt oder aktualisiert das Objekt in WMI.<br/>                                                        |
-| [**Putasync\_**](swbemobject-putasync-.md)                   | Erstellt oder aktualisiert das Objekt asynchron in WMI.<br/>                                         |
-| [**References\_**](swbemobject-references-.md)               | Gibt Verweise auf das-Objekt zurück.<br/>                                                            |
-| [**Referencesasync\_**](swbemobject-referencesasync-.md)     | Gibt Verweise auf das-Objekt asynchron zurück.<br/>                                             |
-| [**SpawnDerivedClass\_**](swbemobject-spawnderivedclass-.md) | Erstellt eine neue abgeleitete Klasse aus dem aktuellen-Objekt (das eine WMI-Klasse sein muss).<br/>             |
-| [**SpawnInstance\_**](swbemobject-spawninstance-.md)         | Erstellt eine neue-Instanz aus dem aktuellen-Objekt.<br/>                                              |
-| [**Unterklassen von  werden erstellt.\_**](swbemobject-subclasses-.md)               | Gibt eine Auflistung von Unterklassen des-Objekts zurück (bei dem es sich um eine WMI-Klasse handeln muss).<br/>                |
-| [**Subclassesasync\_**](swbemobject-subclassesasync-.md)     | Gibt asynchron eine Auflistung von Unterklassen des-Objekts zurück (bei der es sich um eine WMI-Klasse handeln muss).<br/> |
+| [**ExecMethod\_**](swbemobject-execmethod-.md)               | Führt eine Von einem Methodenanbieter exportierte Methode aus.<br/>                                             |
+| [**ExecMethodAsync\_**](swbemobject-execmethodasync-.md)     | Führt eine von einem Methodenanbieter exportierte Methode asynchron aus.<br/>                              |
+| [**GetObjectText\_**](swbemobject-getobjecttext-.md)         | Ruft die Textdarstellung des Objekts ab (MOF-Syntax).<br/>                             |
+| [**Instanzen\_**](swbemobject-instances-.md)                 | Gibt eine Auflistung von Instanzen des -Objekts zurück (das eine WMI-Klasse sein muss).<br/>                 |
+| [**InstancesAsync\_**](swbemobject-instancesasync-.md)       | Gibt eine Auflistung von Instanzen des -Objekts (das eine WMI-Klasse sein muss) asynchron zurück.<br/>  |
+| [**Put\_**](swbemobject-put-.md)                             | Erstellt oder aktualisiert das -Objekt in WMI.<br/>                                                        |
+| [**PutAsync\_**](swbemobject-putasync-.md)                   | Erstellt oder aktualisiert das Objekt asynchron in WMI.<br/>                                         |
+| [**Referenzen\_**](swbemobject-references-.md)               | Gibt Verweise auf das -Objekt zurück.<br/>                                                            |
+| [**ReferencesAsync\_**](swbemobject-referencesasync-.md)     | Gibt Verweise auf das -Objekt asynchron zurück.<br/>                                             |
+| [**SpawnDerivedClass\_**](swbemobject-spawnderivedclass-.md) | Erstellt eine neue abgeleitete Klasse aus dem aktuellen -Objekt (das eine WMI-Klasse sein muss).<br/>             |
+| [**SpawnInstance\_**](swbemobject-spawninstance-.md)         | Erstellt eine neue -Instanz aus dem aktuellen -Objekt.<br/>                                              |
+| [**Unterklassen von  werden erstellt.\_**](swbemobject-subclasses-.md)               | Gibt eine Auflistung von Unterklassen des -Objekts zurück (das eine WMI-Klasse sein muss).<br/>                |
+| [**UnterklassenAsync\_**](swbemobject-subclassesasync-.md)     | Gibt asynchron eine Auflistung von Unterklassen des -Objekts zurück (das eine WMI-Klasse sein muss).<br/> |
 
 
 
@@ -110,18 +110,18 @@ Das Objekt " **errbemubject** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das " **errbemubject** "-Objekt verfügt über diese Eigenschaften.
+Das **SWbemObject-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                   | Zugriffstyp          | BESCHREIBUNG                                                                                                                                |
+| Eigenschaft                                                   | Zugriffstyp          | Beschreibung                                                                                                                                |
 |:-----------------------------------------------------------|:---------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Ableitung\_**](swbemobject-derivation-.md)<br/> | Schreibgeschützt<br/> | Enthält ein Array von Zeichen folgen, das die abderivations Hierarchie für die-Klasse beschreibt.<br/>                                             |
-| [**Methoden\_**](swbemobject-methods-.md)<br/>       | Schreibgeschützt<br/> | Ein " [**taubemmethodset**](swbemmethodset.md) "-Objekt, das die Auflistung von Methoden für dieses-Objekt ist.<br/>                           |
-| [**ADS\_**](swbemobject-path-.md)<br/>             | Schreibgeschützt<br/> | Enthält ein " [**errbemubjectpath**](swbemobjectpath.md) "-Objekt, das den Objekt Pfad der aktuellen Klasse oder Instanz darstellt.<br/> |
-| [**Eigenschaften\_**](swbemobject-properties-.md)<br/> | Schreibgeschützt<br/> | Ein-Objekt, das die Auflistung von Eigenschaften für [**dieses Objekt ist**](swbempropertyset.md) .<br/>                    |
-| [**Qualifikation\_**](swbemobject-qualifiers-.md)<br/> | Schreibgeschützt<br/> | Ein " [**taubemqualifierset**](swbemqualifierset.md) "-Objekt, das die Auflistung der Qualifizierer für dieses Objekt ist.<br/>                  |
-| [**Sicherheit\_**](swbemobject-security-.md)<br/>     | Schreibgeschützt<br/> | Enthält ein " [**Swap Security**](swbemsecurity.md) "-Objekt, das zum Lesen oder Ändern der Sicherheitseinstellungen verwendet wird.<br/>                         |
+| [**Ableitung\_**](swbemobject-derivation-.md)<br/> | Schreibgeschützt<br/> | Enthält ein Array von Zeichenfolgen, das die Ableitungshierarchie für die -Klasse beschreibt.<br/>                                             |
+| [**Methoden\_**](swbemobject-methods-.md)<br/>       | Schreibgeschützt<br/> | Ein [**SWbemMethodSet-Objekt,**](swbemmethodset.md) das die Auflistung von Methoden für dieses Objekt ist.<br/>                           |
+| [**Pfad\_**](swbemobject-path-.md)<br/>             | Schreibgeschützt<br/> | Enthält ein [**SWbemObjectPath-Objekt,**](swbemobjectpath.md) das den Objektpfad der aktuellen Klasse oder Instanz darstellt.<br/> |
+| [**Eigenschaften\_**](swbemobject-properties-.md)<br/> | Schreibgeschützt<br/> | Ein [**SWbemPropertySet-Objekt,**](swbempropertyset.md) das die Auflistung von Eigenschaften für dieses Objekt ist.<br/>                    |
+| [**Qualifikation\_**](swbemobject-qualifiers-.md)<br/> | Schreibgeschützt<br/> | Ein [**SWbemQualifierSet-Objekt,**](swbemqualifierset.md) das die Auflistung von Qualifizierern für dieses Objekt ist.<br/>                  |
+| [**Sicherheit\_**](swbemobject-security-.md)<br/>     | Schreibgeschützt<br/> | Enthält ein [**SWbemSecurity-Objekt,**](swbemsecurity.md) das zum Lesen oder Ändern der Sicherheitseinstellungen verwendet wird.<br/>                         |
 
 
 
@@ -129,7 +129,7 @@ Das " **errbemubject** "-Objekt verfügt über diese Eigenschaften.
 
 ## <a name="examples"></a>Beispiele
 
-Die [Liste alle Eigenschaften und Methoden für ein WMI-Klassen](https://Gallery.TechNet.Microsoft.Com/f0666124-3b67-4254-8ff1-3b75ae15776d) -VBScript-Codebeispiel in der TechNet Gallery verwendet das "slibemubject", um alle Methoden und Eigenschaften für eine angegebene WMI-Klasse aufzulisten.
+Im VBScript-Codebeispiel List [All the Properties and Methods for a WMI Class](https://Gallery.TechNet.Microsoft.Com/f0666124-3b67-4254-8ff1-3b75ae15776d) (Alle Eigenschaften und Methoden für eine WMI-Klasse auflisten) im TechNet-Katalog wird das SWbemObject verwendet, um alle Methoden und Eigenschaften für eine angegebene WMI-Klasse auflisten zu können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -139,11 +139,11 @@ Die [Liste alle Eigenschaften und Methoden für ein WMI-Klassen](https://Gallery
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Austausch Objekt<br/>                                                           |
-| IID<br/>                      | IID \_ iswbemujekt<br/>                                                            |
+| CLSID<br/>                    | CLSID \_ SWbemObject<br/>                                                           |
+| IID<br/>                      | IID \_ ISWbemObject<br/>                                                            |
 
 
 
@@ -151,10 +151,10 @@ Die [Liste alle Eigenschaften und Methoden für ein WMI-Klassen](https://Gallery
 
 <dl> <dt>
 
-[**Austauschen von "errbemubjectex"**](swbemobjectex.md)
+[**SWbemObjectEx**](swbemobjectex.md)
 </dt> <dt>
 
-[API-Skript Objekte](scripting-api-objects.md)
+[Skripterstellung für API-Objekte](scripting-api-objects.md)
 </dt> </dl>
 
  

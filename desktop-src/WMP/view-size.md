@@ -1,9 +1,9 @@
 ---
-title: View. Size
-description: Die size-Methode ändert die Ansicht an einem angegebenen Rand.
+title: VIEW.size
+description: Mit der Size-Methode wird die Größe der VIEW-Ansicht an einem angegebenen Rand geändert.
 ms.assetid: c15a33b2-3618-41a7-bff1-9d48a566ed4f
 keywords:
-- Ansicht. Größen Fenster Media Player
+- VIEW.size Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: def9b416dfe5eda052ef430b587fa1c6017b4e5f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e0d9bd583b280f39bee38f0e109e6bb2bba6ce08ec0e7cea4c082b4a6db55739
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369450"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119615310"
 ---
-# <a name="viewsize"></a>View. Size
+# <a name="viewsize"></a>VIEW.size
 
-Die **size** -Methode ändert die **Ansicht** an einem angegebenen Rand.
+Mit der **Size-Methode** wird die Größe der **VIEW-Ansicht** an einem angegebenen Rand geändert.
 
 ``` syntax
         elementID.size(handle)
@@ -32,19 +32,19 @@ Die **size** -Methode ändert die **Ansicht** an einem angegebenen Rand.
 
 <dl> <dt>
 
-<span id="handle"></span><span id="HANDLE"></span>*bewältigen*
+<span id="handle"></span><span id="HANDLE"></span>*Behandeln*
 </dt> <dd>
 
-Eine Zeichenfolge, die den zu Verschieb nden Rand oder die Ecke angibt Diese Zeichenfolge muss einen der folgenden acht Werte aufweisen.
+Zeichenfolge, die den Rand oder die Ecke angibt, die beim Dimensionieren verschoben werden soll. Diese Zeichenfolge muss einen der folgenden acht Werte aufweisen.
 
 
 
 | Edge   | Ecke      |
 |--------|-------------|
-| top    | oberen rechten    |
-| Rechts  | BottomRight |
-| bottom | BottomLeft  |
-| Linker Join   | TopLeft     |
+| top    | Topright    |
+| Rechts  | unten rechts |
+| bottom | Bottomleft  |
+| Linker Join   | Topleft     |
 
 
 
@@ -56,9 +56,9 @@ Eine Zeichenfolge, die den zu Verschieb nden Rand oder die Ecke angibt Diese Zei
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird in der Regel innerhalb eines **onmouondown** -Handlers aufgerufen. Sie kümmert sich um die Größe der Größe, während der Mauszeiger gezogen wird, und beendet die Größe, wenn die Maustaste losgelassen wird. Wenn die Größe der **Ansicht** eingeschränkt ist, können Sie die Maus nicht ziehen, um die Größe der **Ansicht** über die eingeschränkten Begrenzungen hinaus zu ändern.
+Diese Methode wird in der Regel innerhalb eines **onmousedown-Handlers** aufgerufen. Sie übernimmt die Größenänderung, während die Maus gezogen wird, und beendet die Größenänderung, wenn die Maustaste losgelassen wird. Wenn die Größe der **VIEW-Ansicht** eingeschränkt ist, können Sie die Größe der **Ansicht** nicht mit der Maus über die eingeschränkten Grenzen hinaus ändern.
 
 ## <a name="examples"></a>Beispiele
 
@@ -82,7 +82,7 @@ Diese Methode wird in der Regel innerhalb eines **onmouondown** -Handlers aufger
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -90,7 +90,7 @@ Diese Methode wird in der Regel innerhalb eines **onmouondown** -Handlers aufger
 
 <dl> <dt>
 
-[**View-Element**](view-element.md)
+[**VIEW-Element**](view-element.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Definiert Schablonen Puffer Vorgänge.
+description: Definiert Schablonenpuffervorgänge.
 ms.assetid: 338a3b7f-236a-484f-96b8-1e6bfb014484
-title: D3DSTENCILOP-Enumeration (D3D9Types. h)
+title: D3DSTENCILOP-Enumeration (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 34784a57d3afd3862d380554040f3909ec905898
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 166f670e6e34edd6a3b05584c54e63be274e54161faea242fa701e771a90a771
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371900"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119564940"
 ---
 # <a name="d3dstencilop-enumeration"></a>D3DSTENCILOP-Enumeration
 
-Definiert Schablonen Puffer Vorgänge.
+Definiert Schablonenpuffervorgänge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,72 +47,72 @@ typedef enum D3DSTENCILOP {
 
 <dl> <dt>
 
-<span id="D3DSTENCILOP_KEEP"></span><span id="d3dstencilop_keep"></span>**D3DSTENCILOP \_ beibehalten**
+<span id="D3DSTENCILOP_KEEP"></span><span id="d3dstencilop_keep"></span>**D3DSTENCILOP \_ KEEP**
 </dt> <dd>
 
-Aktualisieren Sie den Eintrag nicht im Schablonen Puffer. Dies ist der Standardwert.
+Aktualisieren Sie den Eintrag im Schablonenpuffer nicht. Dies ist der Standardwert.
 
 </dd> <dt>
 
-<span id="D3DSTENCILOP_ZERO"></span><span id="d3dstencilop_zero"></span>**D3DSTENCILOP \_ 0**
+<span id="D3DSTENCILOP_ZERO"></span><span id="d3dstencilop_zero"></span>**D3DSTENCILOP \_ NULL**
 </dt> <dd>
 
-Legen Sie den Schablone-Puffer Eintrag auf 0 fest.
+Legen Sie den Schablonenpuffereintrag auf 0 fest.
 
 </dd> <dt>
 
-<span id="D3DSTENCILOP_REPLACE"></span><span id="d3dstencilop_replace"></span>**D3DSTENCILOP \_ ersetzen**
+<span id="D3DSTENCILOP_REPLACE"></span><span id="d3dstencilop_replace"></span>**D3DSTENCILOP \_ REPLACE**
 </dt> <dd>
 
-Ersetzen Sie den Stencil-Buffer-Eintrag durch einen Verweis Wert.
+Ersetzen Sie den Schablonenpuffereintrag durch einen Verweiswert.
 
 </dd> <dt>
 
-<span id="D3DSTENCILOP_INCRSAT"></span><span id="d3dstencilop_incrsat"></span>**D3DSTENCILOP \_ incrsat**
+<span id="D3DSTENCILOP_INCRSAT"></span><span id="d3dstencilop_incrsat"></span>**D3DSTENCILOP \_ INCRSAT**
 </dt> <dd>
 
-Erhöhen Sie den Schablone-Puffer Eintrag, und legen Sie auf den maximalen Wert an.
+Erhöhen Sie den Schablonenpuffereintrag, und klammern Sie sich an den Maximalwert.
 
 </dd> <dt>
 
-<span id="D3DSTENCILOP_DECRSAT"></span><span id="d3dstencilop_decrsat"></span>**D3DSTENCILOP \_ decrsat**
+<span id="D3DSTENCILOP_DECRSAT"></span><span id="d3dstencilop_decrsat"></span>**D3DSTENCILOP \_ DECRSAT**
 </dt> <dd>
 
-Dekrement der Schablone-Puffer Eintrag, der auf 0 (null) gesetzt wird.
+Dekrementieren Sie den Schablonenpuffereintrag, und klammern Sie an 0 (null).
 
 </dd> <dt>
 
-<span id="D3DSTENCILOP_INVERT"></span><span id="d3dstencilop_invert"></span>**D3DSTENCILOP \_ umkehren**
+<span id="D3DSTENCILOP_INVERT"></span><span id="d3dstencilop_invert"></span>**D3DSTENCILOP \_ INVERT**
 </dt> <dd>
 
-Umkehren Sie die Bits im Schablone-Puffer Eintrag.
+Invertiert die Bits im Schablonenpuffereintrag.
 
 </dd> <dt>
 
 <span id="D3DSTENCILOP_INCR"></span><span id="d3dstencilop_incr"></span>**D3DSTENCILOP \_ INCR**
 </dt> <dd>
 
-Erhöhen Sie den Schablonen Puffer Eintrag, wobei der Wert auf 0 (null) umwickelt wird, wenn der neue Wert den maximalen Wert überschreitet.
+Inkrementiert den Schablonenpuffereintrag und wird auf 0 (null) gesetzt, wenn der neue Wert den Maximalwert überschreitet.
 
 </dd> <dt>
 
-<span id="D3DSTENCILOP_DECR"></span><span id="d3dstencilop_decr"></span>**D3DSTENCILOP- \_ decr**
+<span id="D3DSTENCILOP_DECR"></span><span id="d3dstencilop_decr"></span>**D3DSTENCILOP \_ DECR**
 </dt> <dd>
 
-Verringert den Schablonen Puffer Eintrag und umwickelt ihn in den maximalen Wert, wenn der neue Wert kleiner als 0 (null) ist.
+Dekrementierung des Schablonenpuffereintrags und Umschließen bis zum höchstwert, wenn der neue Wert kleiner als 0 (null) ist.
 
 </dd> <dt>
 
-<span id="D3DSTENCILOP_FORCE_DWORD"></span><span id="d3dstencilop_force_dword"></span>**D3DSTENCILOP \_ Erzwingen von \_ DWORD**
+<span id="D3DSTENCILOP_FORCE_DWORD"></span><span id="d3dstencilop_force_dword"></span>**D3DSTENCILOP \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt die Kompilierung dieser Enumeration in 32 Bits. Ohne diesen Wert können einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Schablone-Puffer Einträge sind ganzzahlige Werte im Bereich von 0 bis 2 ⁿ-1, wobei n die Bittiefe des Schablonen Puffers ist.
+Schablonenpuffereinträge sind ganzzahlige Werte im Bereich von 0 bis 2ⁿ – 1, wobei n die Bittiefe des Schablonenpuffers ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -120,7 +120,7 @@ Schablone-Puffer Einträge sind ganzzahlige Werte im Bereich von 0 bis 2 ⁿ-1, 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 

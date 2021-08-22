@@ -1,27 +1,27 @@
 ---
-title: Suchen von UI-Elementen
-description: Dieses Thema enthält Beispielcode, in dem gezeigt wird, wie Sie ein UI-Element in der Benutzeroberflächenautomatisierungs-Struktur suchen.
+title: Suchen von Benutzeroberflächenelementen
+description: Dieses Thema enthält Beispielcode, der zeigt, wie Sie benutzeroberflächenelemente in der Benutzeroberflächenautomatisierung finden.
 ms.assetid: b613eb18-e14d-468e-833d-072bad29ba06
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 887ef914d7abcf5ed6dfc546f0930334f53215d6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 52998ad92fe1912a5159443642d95bbc14a28da595ddd2b2a255ebecaed8c74d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119505270"
 ---
-# <a name="how-to-find-ui-elements"></a>Suchen von UI-Elementen
+# <a name="how-to-find-ui-elements"></a>Suchen von Benutzeroberflächenelementen
 
-Dieses Thema enthält Beispielcode, in dem gezeigt wird, wie Sie ein UI-Element in der Benutzeroberflächenautomatisierungs-Struktur suchen.
+Dieses Thema enthält Beispielcode, der zeigt, wie Sie benutzeroberflächenelemente in der Benutzeroberflächenautomatisierung finden.
 
--   [Suchen nach einem Element anhand des Namens](#finding-an-element-by-name)
--   [Suchen nach verwandten Elementen](#finding-related-elements)
+-   [Suchen eines Elements nach Name](#finding-an-element-by-name)
+-   [Suchen verwandter Elemente](#finding-related-elements)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="finding-an-element-by-name"></a>Suchen nach einem Element anhand des Namens
+## <a name="finding-an-element-by-name"></a>Suchen eines Elements nach Name
 
-Im folgenden Beispiel wird das Microsoft UI Automation-Element gefunden, das über den angegebenen Namen verfügt und ein untergeordnetes Element des Desktop Fensters ist.
+Im folgenden Beispiel wird das Microsoft Benutzeroberflächenautomatisierung-Element gefunden, das über den angegebenen Namen verfügt und ein untergeordnetes Element des Desktopfensters ist.
 
 
 ```C++
@@ -70,9 +70,9 @@ cleanup:
 
 
 
-## <a name="finding-related-elements"></a>Suchen nach verwandten Elementen
+## <a name="finding-related-elements"></a>Suchen verwandter Elemente
 
-Die folgende Beispiel Funktion gibt eine Auflistung aller aktivierten Schaltflächen zurück, die untergeordnete Elemente des angegebenen Elements sind.
+Die folgende Beispielfunktion gibt eine Auflistung aller aktivierten Schaltflächen zurück, die dem angegebenen Element unter folgen.
 
 
 ```C++
@@ -131,18 +131,18 @@ cleanup:
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Abrufen von Benutzeroberflächenautomatisierungs-Elementen](uiauto-obtainingelements.md)
 </dt> <dt>
 
-[Themen zur Vorgehensweise für Benutzeroberflächenautomatisierungs-Clients](uiauto-howto-topics-for-uiautomation-clients.md)
+[How-To Topics for Benutzeroberflächenautomatisierung Clients (Themen zur Benutzeroberflächenautomatisierung Clients)](uiauto-howto-topics-for-uiautomation-clients.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

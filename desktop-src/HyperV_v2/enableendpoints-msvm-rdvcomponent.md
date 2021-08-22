@@ -1,7 +1,7 @@
 ---
-description: Fordert das virtuelle Remotedesktopdienste virtuellen Gerät auf, eine Pipe-Verbindung mit dem virtuellen Computer zu starten.
+description: Fordert die Remotedesktopdienste virtuellen Geräts an, eine Pipeverbindung mit dem virtuellen Computer zu starten.
 ms.assetid: e53238ee-8264-416b-8855-193c28089cfa
-title: Enableendpoints-Methode der Msvm_RdvComponent-Klasse
+title: EnableEndPoints-Methode der Msvm_RdvComponent-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: a668e6a2605a52c7021f630145d6e4897e1c76ec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8a23f39ee46cb41c5941be3d9632fbe15901dfffd35078e680ebe61d46fdb131
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119532530"
 ---
-# <a name="enableendpoints-method-of-the-msvm_rdvcomponent-class"></a>Enableendpoints-Methode der MSVM \_ rdvcomponent-Klasse
+# <a name="enableendpoints-method-of-the-msvm_rdvcomponent-class"></a>EnableEndPoints-Methode der Msvm \_ RdvComponent-Klasse
 
-Fordert das virtuelle Remotedesktopdienste virtuellen Gerät auf, eine Pipe-Verbindung mit dem virtuellen Computer zu starten.
+Fordert die Remotedesktopdienste virtuellen Geräts an, eine Pipeverbindung mit dem virtuellen Computer zu starten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,10 +46,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -58,7 +58,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -67,10 +67,10 @@ Der **Status ist "Unknown** " (32771).
 **Ungültiger Parameter** (32773)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32774)
+**Nicht genügend Arbeitsspeicher** (32774)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32775).
+**Datei nicht gefunden** (32775)
 </dt> <dt>
 
  (32776)
@@ -100,10 +100,10 @@ Die **Datei wurde nicht gefunden** (32775).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -112,7 +112,7 @@ Die **Datei wurde nicht gefunden** (32775).
 
 <dl> <dt>
 
-[**MSVM \_ rdvcomponent**](msvm-rdvcomponent.md)
+[**Msvm \_ RdvComponent**](msvm-rdvcomponent.md)
 </dt> </dl>
 
  

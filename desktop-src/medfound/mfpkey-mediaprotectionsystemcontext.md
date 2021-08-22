@@ -1,33 +1,33 @@
 ---
-description: Gibt ein BLOB an, das den Kontext enthält, der beim Initialisieren eines vertrauenswürdigen Eingabe Moduls für Medien Schutzsysteme verwendet werden soll.
+description: Gibt ein BLOB an, das den Kontext enthält, der beim Initialisieren eines vertrauenswürdigen Eingabemoduls für Medienschutzsysteme verwendet werden soll.
 ms.assetid: A1B1E088-72D3-4B5F-B868-64896AF04EF1
 title: MFPKEY_MediaProtectionSystemContext-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 130d8a42883acb2ca32870242a28e2ca6db8b320
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a64efadd5d0e3145a036236f7f173aae1c1fb4f4920102b428fccfabfd04bd0e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119663370"
 ---
-# <a name="mfpkey_mediaprotectionsystemcontext-property"></a>Mfpkey \_ mediaschutzsystemcontext-Eigenschaft
+# <a name="mfpkey_mediaprotectionsystemcontext-property"></a>MFPKEY \_ MediaProtectionSystemContext-Eigenschaft
 
-Gibt ein BLOB an, das den Kontext enthält, der beim Initialisieren des vertrauenswürdigen Eingabe Moduls eines Medien Schutzsystems verwendet werden soll.
+Gibt ein BLOB an, das den Kontext enthält, der beim Initialisieren des vertrauenswürdigen Eingabemoduls eines Medienschutzsystems verwendet werden soll.
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
-**BLOB**
+**Blob**
 
-VT- \_ BLOB
+\_VT-BLOB
 
-**BLOB**
+**Blob**
 
 
 
@@ -37,7 +37,7 @@ VT- \_ BLOB
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>MFI. idl</dt> </dl> |
+| Header<br/> | <dl> <dt>Mfidl.idl</dt> </dl> |
 
 
 
@@ -45,7 +45,7 @@ VT- \_ BLOB
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

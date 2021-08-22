@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_BKLOGTIME. Gleichheits Operator'
-title: JET_BKLOGTIME. Gleichheits Operator
+description: 'Weitere Informationen finden Sie unter: JET_BKLOGTIME. Gleichheitsoperator'
+title: JET_BKLOGTIME. Gleichheitsoperator
 TOCTitle: 'Equality operator '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_BKLOGTIME.op_Equality(Microsoft.Isam.Esent.Interop.JET_BKLOGTIME,Microsoft.Isam.Esent.Interop.JET_BKLOGTIME)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_bklogtime.op_equality(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f5a75a1fc55159fc5ea71dba09dc1ed54194b940
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a611dd5207d55fe820e03ac8fef08f0bfe44e89ba190a35eb109d1b3af5ba20d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362780"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119475790"
 ---
-# <a name="jet_bklogtimeequality-operator"></a>JET_BKLOGTIME. Gleichheits Operator
+# <a name="jet_bklogtimeequality-operator"></a>JET_BKLOGTIME. Gleichheitsoperator
 
-Bestimmt, ob zwei angegebene Instanzen von JET_BKLOGTIME gleich sind.
+Bestimmt, ob zwei angegebene Instanzen JET_BKLOGTIME gleich sind.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,29 +64,29 @@ public static bool operator ==(
 
 #### <a name="parameters"></a>Parameter
 
-  - LHS  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_BKLOGTIME](./jet-bklogtime-structure2.md)  
+  - Lhs  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_BKLOGTIME](./jet-bklogtime-structure2.md)  
     
     Die erste zu vergleichende Instanz.
 
 <!-- end list -->
 
   - rhs  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_BKLOGTIME](./jet-bklogtime-structure2.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_BKLOGTIME](./jet-bklogtime-structure2.md)  
     
     Die zweite zu vergleichende Instanz.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
-True, wenn die beiden Instanzen gleich sind.  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
+TRUE, wenn die beiden Instanzen gleich sind.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_BKLOGTIME Struktur](./jet-bklogtime-structure2.md)
+[JET_BKLOGTIME-Struktur](./jet-bklogtime-structure2.md)
 
-[Mitglieder JET_BKLOGTIME](./jet-bklogtime-members.md)
+[JET_BKLOGTIME Mitglieder](./jet-bklogtime-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

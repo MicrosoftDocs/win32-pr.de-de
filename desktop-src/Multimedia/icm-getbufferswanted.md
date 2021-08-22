@@ -1,9 +1,9 @@
 ---
-title: ICM_GETBUFFERSWANTED Meldung (VFW. h)
-description: Die ICM \_ getbufferswanted-Nachricht fragt einen Treiber nach der Anzahl der zuzuordnenden Puffer ab. Sie können diese Nachricht explizit oder mit dem icgetbufferswanted-Makro senden.
+title: ICM_GETBUFFERSWANTED (Vfw.h)
+description: Die ICM GETBUFFERSWANTED fragt einen Treiber nach der Anzahl der zu \_ reservierenden Puffer ab. Sie können diese Nachricht explizit oder mithilfe des Makros ICGetBuffersWanted senden.
 ms.assetid: 109e8627-7ed4-4f17-bf7f-e77f42dfc8c7
 keywords:
-- ICM_GETBUFFERSWANTED-Nachricht (Multimedia)
+- ICM_GETBUFFERSWANTED-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 06de8cc3bcfe463d0318651c8e2d51b269504769
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c4bd5fae6e9f008649366cf922ef117f5b6f7560a7764c4f8d81552a255de48a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119495870"
 ---
-# <a name="icm_getbufferswanted-message"></a>ICM \_ getbufferswanted-Nachricht
+# <a name="icm_getbufferswanted-message"></a>\_ICM GETBUFFERSWANTED-Nachricht
 
-Die **ICM \_ getbufferswanted** -Nachricht fragt einen Treiber nach der Anzahl der zuzuordnenden Puffer ab. Sie können diese Nachricht explizit oder mit dem [**icgetbufferswanted**](/windows/desktop/api/Vfw/nf-vfw-icgetbufferswanted) -Makro senden.
+Die **ICM \_ GETBUFFERSWANTED** fragt einen Treiber nach der Anzahl der zu reservierenden Puffer ab. Sie können diese Nachricht explizit oder mithilfe des [**Makros ICGetBuffersWanted**](/windows/desktop/api/Vfw/nf-vfw-icgetbufferswanted) senden.
 
 
 ```C++
@@ -38,20 +38,20 @@ lParam = 0;
 
 <dl> <dt>
 
-<span id="lpdwBuffers"></span><span id="lpdwbuffers"></span><span id="LPDWBUFFERS"></span>*lpdwbuffers*
+<span id="lpdwBuffers"></span><span id="lpdwbuffers"></span><span id="LPDWBUFFERS"></span>*lpdwBuffers*
 </dt> <dd>
 
-Adresse, die die Anzahl der Abtastungen enthält, die der Treiber zum effizienten Rendering der Daten benötigt.
+Adresse, die die Anzahl der Stichproben enthält, die der Treiber benötigt, um die Daten effizient zu rendern.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei erfolgreicher Ausführung von ICERR OK zurück, \_ andernfalls wird ICERR \_ nicht unterstützt.
+Gibt ICERR \_ OK zurück, wenn erfolgreich, andernfalls ICERR \_ UNSUPPORTED.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird von Treibern verwendet, die Hardware zum Rendering von Daten verwenden und eine minimale Zeitverzögerung sicherstellen möchten, die durch warten auf das Eintreffen von Puffern verursacht wird. Wenn ein Treiber z. b. ein Video Dekomprimierungs Board steuert, das 10 Videorahmen aufnehmen kann, kann es für diese Nachricht 10 zurückgeben. Dadurch werden Anwendungen angewiesen, 10 Frames vor dem Frame zu behalten, den Sie zurzeit benötigt.
+Diese Meldung wird von Treibern verwendet, die Hardware zum Rendern von Daten verwenden und eine minimale Zeitverzögerung sicherstellen möchten, die durch das Warten auf das Eintreffen von Puffern verursacht wird. Wenn ein Treiber beispielsweise ein Videodekomprimierungsboard steuert, das 10 Videoframes enthält, kann er für diese Nachricht 10 zurückgeben. Dadurch werden Anwendungen angewiesen, 10 Frames vor dem aktuell benötigten Frame zu halten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Diese Meldung wird von Treibern verwendet, die Hardware zum Rendering von Daten 
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Meldung wird von Treibern verwendet, die Hardware zum Rendering von Daten 
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

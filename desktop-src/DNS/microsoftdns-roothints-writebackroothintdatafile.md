@@ -1,11 +1,11 @@
 ---
-title: Write-backroothintdatafile-Methode der MicrosoftDNS_RootHints-Klasse
-description: Mit der Methode "Write-backroothintdatafile" werden die roothints zurück in die DNS-Cache Datei geschrieben.
+title: WriteBackRootHintDatafile-Methode der MicrosoftDNS_RootHints Klasse
+description: Die WriteBackRootHintDatafile-Methode schreibt die RootHints zurück in die DNS-Cachedatei.
 ms.assetid: 5c3d598b-ee84-4483-a434-2f24419847b2
 keywords:
-- Write-backroothintdatafile-Methode (DNS)
-- Write-backroothintdatafile-Methode (DNS), MicrosoftDNS_RootHints-Klasse
-- DNS-MicrosoftDNS_RootHints, Methode "Write-backroothintdatafile"
+- WriteBackRootHintDatafile-Methode DNS
+- WriteBackRootHintDatafile-Methode DNS , MicrosoftDNS_RootHints-Klasse
+- MicrosoftDNS_RootHints DNS-Klasse, WriteBackRootHintDatafile-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a721477c1cd6cbfdbb7161cc5cf8edc448c45369
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8318924105e9d4a95dc978103b4f312cf19cbbf8eb5cab34e5dd3a3ccff44369
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119587540"
 ---
-# <a name="writebackroothintdatafile-method-of-the-microsoftdns_roothints-class"></a>"Write-backroothintdatafile"-Methode der MicrosoftDNS- \_ Klasse "roothints"
+# <a name="writebackroothintdatafile-method-of-the-microsoftdns_roothints-class"></a>WriteBackRootHintDatafile-Methode der MicrosoftDNS \_ RootHints-Klasse
 
-Mit der Methode " **Write-backroothintdatafile** " werden die roothints zurück in die DNS-Cache Datei geschrieben.
+Die **WriteBackRootHintDatafile-Methode** schreibt die RootHints zurück in die DNS-Cachedatei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,18 +53,18 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ roothints**](microsoftdns-roothints.md)
+[**MicrosoftDNS \_ RootHints**](microsoftdns-roothints.md)
 </dt> <dt>
 
-[**Geterkennbar shedname-Methode der MicrosoftDNS- \_ Klasse "roothints"**](microsoftdns-roothints-getdistinguishedname.md)
+[**GetDistinguishedName-Methode der MicrosoftDNS \_ RootHints-Klasse**](microsoftdns-roothints-getdistinguishedname.md)
 </dt> </dl>
 
  

@@ -1,31 +1,31 @@
 ---
-description: Der Inhalt von IPv6-Routerankündigungen wird automatisch von den veröffentlichten Routen in der Routing Tabelle abgeleitet. Nicht veröffentlichte Routen werden für das Routing verwendet, werden jedoch beim Erstellen von Routerankündigungen ignoriert.
+description: Der Inhalt von IPv6-Routerankündigungen wird automatisch von den veröffentlichten Routen in der Routingtabelle abgeleitet. Nicht veröffentlichte Routen werden für das Routing verwendet, aber beim Erstellen von Routerankündigungen ignoriert.
 ms.assetid: 27b735db-4e87-497b-b39c-e464cf44f09e
 title: IPv6-Routerankündigungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 77a75b31a988595cba85d23dbafc1bd93ffff4ca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ef8a7be2139c03d94e8a84eae410e9f4f2e92da6059def1ef89997138009d351
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349143"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119612940"
 ---
 # <a name="ipv6-router-advertisements"></a>IPv6-Routerankündigungen
 
-Der Inhalt von IPv6-Routerankündigungen wird automatisch von den veröffentlichten Routen in der Routing Tabelle abgeleitet. Nicht veröffentlichte Routen werden für das Routing verwendet, werden jedoch beim Erstellen von Routerankündigungen ignoriert.
+Der Inhalt von IPv6-Routerankündigungen wird automatisch von den veröffentlichten Routen in der Routingtabelle abgeleitet. Nicht veröffentlichte Routen werden für das Routing verwendet, aber beim Erstellen von Routerankündigungen ignoriert.
 
-Routerankündigungen für IPv6 enthalten immer eine Quell Verbindungsschicht-Adress Option und eine MTU-Option. Der Wert für die MTU-Option wird von der aktuellen Link-MTU der Sende Schnittstelle entnommen. Dieser Wert kann mit dem IPv6-Befehl "IPMTU" geändert werden.
+Routerankündigungen für IPv6 enthalten immer eine Quelllinkebenen-Adressoption und eine MTU-Option. Der Wert für die MTU-Option wird aus der aktuellen Link-MTU der sendenden Schnittstelle übernommen. Dieser Wert kann mit dem Befehl ipv6 ifc mtu geändert werden.
 
-Die Routerankündigung hat nur eine routerlebensdauer, wenn eine veröffentlichte Standardroute vorhanden ist. Eine Standardroute ist eine Route für das Präfix mit der Länge 0 (null).
+Die Routerankündigung hat nur dann eine Routerlebensdauer ungleich 0 (null), wenn eine veröffentlichte Standardroute vorhanden ist. Eine Standardroute ist eine Route für das Präfix der Länge 0 (null).
 
-Veröffentlichte on-Link-Routen führen zu Präfix Informations Optionen in Routerankündigungen. Wenn das on-Link-Präfix 64 Bits hat, wird für die Option für die Präfix Informationen sowohl L als auch Bits festgelegt, und Hosts, die Sie empfangen, werden Adressen automatisch konfigurieren.
+Veröffentlichte On-Link-Routen führen zu Präfixinformationsoptionen in Routerankündigungen. Wenn das On-Link-Präfix 64 Bits enthält, ist für die Option "Präfixinformationen" sowohl das L- als auch das A-Bit festgelegt, und hosts, die es empfangen, werden Adressen automatisch konfiguriert.
 
-Eine Schnittstelle, die Routerankündigungen sendet, konfiguriert auch Adressen für sich selbst auf der Grundlage der von ihr gesendeten Optionen für Präfix Informationen automatisch.
+Eine Schnittstelle, die Routerankündigungen sendet, konfiguriert adressen auch automatisch für sich selbst basierend auf den von ihr gesendeten Präfixinformationsoptionen.
 
-Es wird empfohlen, eine begrenzte Dauer Lebensdauer für alle veröffentlichten Routen (z. b. 30 Minuten) zu erhalten. Wenn Sie eine Route zurückziehen möchten, können Sie die Route so ändern, dass Sie eine Alterungs Lebensdauer hat. Die Route wird im Verlauf mehrerer Routerankündigungen verwendet und verschwindet dann vom Router und allen Hosts, die die Routerankündigungen empfangen.
+Eine begrenzte Lebensdauer ohne Mittelwerte für alle veröffentlichten Routen (z. B. 30 Minuten) wird empfohlen. Wenn Sie eine Route zurücknehmen möchten, können Sie die Route so ändern, dass sie eine veraltete Lebensdauer hat. Die Route altert im Laufe mehrerer Routerankündigungen und verschwindet dann sowohl vom Router als auch von allen Hosts, die die Routerankündigungen erhalten.
 
-Routen, die Hosts über das Alter von Routerankündigungen suchen und nicht veröffentlicht werden. Adressen, die von Routerankündigungen ebenfalls automatisch konfiguriert werden.
+Routen, die Hosts über Routerankündigungen finden, altern und werden nicht veröffentlicht. Adressen, die aus dem Alter der Routerankündigungen automatisch konfiguriert werden.
 
  
 

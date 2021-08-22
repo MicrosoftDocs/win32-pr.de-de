@@ -1,5 +1,5 @@
 ---
-description: Eine Zuordnung, die verwendet wird, um Beziehungen zwischen einer Instanz von MSVM \_ emuatedethernetportsettingdata und einer oder mehreren Instanzen eines MSVM- \_ ethernetzwitchfeaturesettingdata herzustellen.
+description: Eine Zuordnung, die verwendet wird, um Beziehungen zwischen einer Instanz von Msvm \_ EmulatedEthernetPortSettingData und mindestens einer Instanz von Msvm \_ EthernetSwitchFeatureSettingData herzustellen.
 ms.assetid: A2929D81-ED86-4C5A-9280-276204EDE89B
 title: Msvm_EthernetPortFailoverSettingDataComponent-Klasse
 ms.topic: reference
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 50fff8688beea91495014dd75b1f1c33020869f2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 00653b19cffabeb658e7727332b7e6fe1b2e23be7ff0c4eba298ef198404234c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119531520"
 ---
-# <a name="msvm_ethernetportfailoversettingdatacomponent-class"></a>MSVM \_ ethernetportfailoversettingdatacomponent-Klasse
+# <a name="msvm_ethernetportfailoversettingdatacomponent-class"></a>Msvm \_ EthernetPortFailoverSettingDataComponent-Klasse
 
-Eine Zuordnung, die verwendet wird, um Beziehungen zwischen einer Instanz von [**MSVM \_ emuatedethernetportsettingdata**](msvm-emulatedethernetportsettingdata.md) und einer oder mehreren Instanzen eines [**MSVM- \_ ethernetzwitchfeaturesettingdata**](msvm-ethernetswitchfeaturesettingdata.md)herzustellen.
+Eine Zuordnung, die verwendet wird, um Beziehungen zwischen einer Instanz einer [**Msvm \_ EmulatedEthernetPortSettingData**](msvm-emulatedethernetportsettingdata.md) und einer oder mehreren Instanzen eines [**Msvm \_ EthernetSwitchFeatureSettingData**](msvm-ethernetswitchfeaturesettingdata.md)herzustellen.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,45 +41,45 @@ class Msvm_EthernetPortFailoverSettingDataComponent : CIM_Component
 
 ## <a name="members"></a>Member
 
-Die **MSVM-Klasse " \_ ethernetportfailoversettingdatacomponent** " verfügt über diese Typen von Membern:
+Die **Msvm \_ EthernetPortFailoverSettingDataComponent-Klasse** verfügt über folgende Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM-Klasse " \_ ethernetportfailoversettingdatacomponent** " verfügt über diese Eigenschaften.
+Die **Msvm \_ EthernetPortFailoverSettingDataComponent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ resourcezubesettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)**
+Datentyp: **[ **CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Aggregieren**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**MSVM-Klasse \_ emuatedethernetportsettingdata**](msvm-emulatedethernetportsettingdata.md) oder [**MSVM \_ syntheticethernetportsettingdata**](msvm-syntheticethernetportsettingdata.md) , die den Ethernet-Port darstellt.
+Ein Verweis auf eine Instanz der [**Klasse Msvm \_ EmulatedEthernetPortSettingData**](msvm-emulatedethernetportsettingdata.md) oder [**Msvm \_ SyntheticEthernetPortSettingData,**](msvm-syntheticethernetportsettingdata.md) die den Ethernetport darstellt.
 
 </dd> <dt>
 
 **PartComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ failovernetworkadaptersettingdata**](msvm-failovernetworkadaptersettingdata.md)**
+Datentyp: **[ **Msvm \_ FailoverNetworkAdapterSettingData**](msvm-failovernetworkadaptersettingdata.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**MSVM \_ failovernetworkadaptersettingdata**](msvm-failovernetworkadaptersettingdata.md) -Klasse, die die Konfiguration des Gastnetzwerk Adapters darstellt.
+Ein Verweis auf eine Instanz der [**Msvm \_ FailoverNetworkAdapterSettingData-Klasse,**](msvm-failovernetworkadaptersettingdata.md) die die Konfiguration des Gastnetzwerkadapters darstellt.
 
 </dd> </dl>
 
@@ -89,10 +89,10 @@ Ein Verweis auf eine Instanz der [**MSVM \_ failovernetworkadaptersettingdata**]
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

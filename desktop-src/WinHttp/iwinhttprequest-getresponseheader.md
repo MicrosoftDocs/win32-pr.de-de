@@ -1,7 +1,7 @@
 ---
 description: Ruft die HTTP-Antwortheader ab.
 ms.assetid: 3d59ee83-280c-4074-82e1-ded203fa1049
-title: 'Iwinhttprequest:: getresponsheader-Methode'
+title: IWinHttpRequest::GetResponseHeader-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Winhttp.dll
-ms.openlocfilehash: 6e51b0973c7b078c7de592565db19bf6e029c5a7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1566ea05f78f9e90a97db3a14c61f7c59cfc61ecdb1eb390823d99a32d4983ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119643880"
 ---
-# <a name="iwinhttprequestgetresponseheader-method"></a>Iwinhttprequest:: getresponsheader-Methode
+# <a name="iwinhttprequestgetresponseheader-method"></a>IWinHttpRequest::GetResponseHeader-Methode
 
-Die **getresponsheader** -Methode ruft die HTTP-Antwortheader ab.
+Die **GetResponseHeader-Methode** ruft die HTTP-Antwortheader ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,36 +41,36 @@ HRESULT GetResponseHeader(
 
 <dl> <dt>
 
-*Header* \[ in\]
+*Header* \[ In\]
 </dt> <dd>
 
-Gibt den Header Namen der Groß-/Kleinschreibung an.
+Gibt den Headernamen an, bei dem die Groß-/Kleinschreibung nicht beachtet wird.
 
 </dd> <dt>
 
-*Wert* \[ Out, retval\]
+*Wert* \[ out, retval\]
 </dt> <dd>
 
-Empfängt die resultierenden Header Informationen.
+Empfängt die resultierenden Headerinformationen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist bei Erfolg **S \_ OK** oder andernfalls ein Fehlerwert.
+Der Rückgabewert ist bei Erfolg **S \_ OK,** andernfalls ein Fehlerwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gibt den Wert des Antwort Headers namens in- *Header* zurück. Beachten Sie, dass Automatisierungs Clients, wie z. b. Skripts, die Header Daten als Rückgabewert des Funktions Aufrufes abrufen, nicht über einen Funktionsparameter. Rufen Sie diese Methode nur auf, nachdem die [**Send**](iwinhttprequest-send.md) -Methode aufgerufen wurde.
+Diese Methode gibt den Wert des Antwortheaders mit dem Namen in *Header* zurück. Beachten Sie, dass Automatisierungsclients wie skript die Headerdaten als Rückgabewert des Funktionsaufrufs abrufen, nicht über einen Funktionsparameter. Rufen Sie diese Methode erst auf, nachdem die [**Send-Methode**](iwinhttprequest-send.md) aufgerufen wurde.
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Lauf Zeitanforderungen](winhttp-start-page.md) auf der WinHTTP-Start Seite.
+> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Laufzeitanforderungen](winhttp-start-page.md) der WinHTTP-Startseite.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie eine HTTP-Verbindung geöffnet, eine HTTP-Anforderung gesendet und der Datums Header aus der Antwort erhalten wird. Dieses Beispiel muss von einer Eingabeaufforderung aus ausgeführt werden.
+Das folgende Beispiel zeigt, wie sie eine HTTP-Verbindung öffnen, eine HTTP-Anforderung senden und den Datumsheader aus der Antwort abrufen. Dieses Beispiel muss über eine Eingabeaufforderung ausgeführt werden.
 
 
 ```C++
@@ -169,7 +169,7 @@ int main()
 
 
 
-Im folgenden Skript Beispiel wird gezeigt, wie eine HTTP-Verbindung geöffnet, eine HTTP-Anforderung gesendet und der Datums Header aus der Antwort erhalten wird.
+Das folgende Skriptbeispiel zeigt, wie sie eine HTTP-Verbindung öffnen, eine HTTP-Anforderung senden und den Datumsheader aus der Antwort abrufen.
 
 
 ```JScript
@@ -196,11 +196,11 @@ WScript.Echo( WinHttpReq.GetResponseHeader("Date"));
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5,0 und Internet Explorer 5,01 oder höher unter Windows XP und Windows 2000.<br/> |
-| IDL<br/>                      | <dl> <dt>HttpRequest. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WinHTTP. lib</dt> </dl>     |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher auf Windows XP und Windows 2000.<br/> |
+| Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
@@ -209,13 +209,13 @@ WScript.Echo( WinHttpReq.GetResponseHeader("Date"));
 
 <dl> <dt>
 
-[**Iwinhttprequest**](iwinhttprequest-interface.md)
+[**IWinHttpRequest**](iwinhttprequest-interface.md)
 </dt> <dt>
 
 [**WinHttpRequest**](winhttprequest.md)
 </dt> <dt>
 
-[**Getallresponcheaders**](iwinhttprequest-getallresponseheaders.md)
+[**GetAllResponseHeaders**](iwinhttprequest-getallresponseheaders.md)
 </dt> <dt>
 
 [WinHTTP-Versionen](winhttp-versions.md)

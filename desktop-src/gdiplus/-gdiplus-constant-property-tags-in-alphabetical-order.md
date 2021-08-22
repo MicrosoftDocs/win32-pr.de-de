@@ -1,241 +1,241 @@
 ---
-description: In der folgenden Tabelle werden die Eigenschaften Tags für Windows GDI+-Bilder in alphabetischer Reihenfolge aufgelistet.
+description: In der folgenden Tabelle sind die Windows GDI+ Bildeigenschaftentags in alphabetischer Reihenfolge aufgeführt.
 ms.assetid: c6d196a8-b10f-4e09-bf43-0198d96e5f40
-title: Eigenschaften Tags in alphabetischer Reihenfolge
+title: Eigenschaftstags in alphabetischer Reihenfolge
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c7179fa936d5e0e934ea1d317c1d14c25c189ed8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 73ef09cbc65d1e52dbe466f0d151ecd6a17b7becedc3bc8c80e1b293a775cf43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979073"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119612510"
 ---
-# <a name="property-tags-in-alphabetical-order"></a>Eigenschaften Tags in alphabetischer Reihenfolge
+# <a name="property-tags-in-alphabetical-order"></a>Eigenschaftstags in alphabetischer Reihenfolge
 
-In der folgenden Tabelle werden die Eigenschaften Tags für Windows GDI+-Bilder in alphabetischer Reihenfolge aufgelistet.
+In der folgenden Tabelle sind die Windows GDI+ Bildeigenschaftentags in alphabetischer Reihenfolge aufgeführt.
 
 
 
-| Eigenschaftstag                                                                                                                            | Wert  |
+| Eigenschaftentag                                                                                                                            | Wert  |
 |-----------------------------------------------------------------------------------------------------------------------------------------|--------|
-| [Propertytagartist](-gdiplus-constant-property-item-descriptions.md)                                                 | 0x013b |
-| [Propertytagbitspersample](-gdiplus-constant-property-item-descriptions.md)                                   | 0x0102 |
-| [Propertytagcellheight](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0109 |
-| [Propertytagcellwidth](-gdiplus-constant-property-item-descriptions.md)                                           | 0x0108 |
-| [Propertytagchrominancetable](-gdiplus-constant-property-item-descriptions.md)                             | 0x5091 |
-| [Propertytagcolormap](-gdiplus-constant-property-item-descriptions.md)                                             | 0x0140 |
-| [Propertytagcolortransferfunction](-gdiplus-constant-property-item-descriptions.md)                   | 0x501a |
-| [Propertytagcompression](-gdiplus-constant-property-item-descriptions.md)                                       | 0x0103 |
-| [Propertytagcopyright](-gdiplus-constant-property-item-descriptions.md)                                           | 0x8298 |
-| [Propertytagdatetime](-gdiplus-constant-property-item-descriptions.md)                                             | 0x0132 |
-| [Propertytagdocumentname](-gdiplus-constant-property-item-descriptions.md)                                     | 0x010d |
-| [Propertytagdotrange](-gdiplus-constant-property-item-descriptions.md)                                             | 0x0150 |
-| [Propertytagequipmake](-gdiplus-constant-property-item-descriptions.md)                                           | 0x010F |
-| [Propertytagequipmodel](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0110 |
-| [Propertytagexifaperture](-gdiplus-constant-property-item-descriptions.md)                                     | 0x9202 |
-| [Propertytagexif-Helligkeit](-gdiplus-constant-property-item-descriptions.md)                                 | 0x9203 |
-| [Propertytagexifcfapattern](-gdiplus-constant-property-item-descriptions.md)                                 | 0xa302 |
-| [Propertytagexilecolorspace](-gdiplus-constant-property-item-descriptions.md)                                 | 0xa001 |
-| [Propertytagexibcompbpp](-gdiplus-constant-property-item-descriptions.md)                                       | 0x9102 |
-| [Propertytagexif compconfig](-gdiplus-constant-property-item-descriptions.md)                                 | 0x9101 |
-| [Propertytagexitdtdigit](-gdiplus-constant-property-item-descriptions.md)                               | 0x9004 |
-| [Propertytagexisdtdigss](-gdiplus-constant-property-item-descriptions.md)                                       | 0x9292 |
-| [Propertytagexiledtorig](-gdiplus-constant-property-item-descriptions.md)                                         | 0x9003 |
-| [Propertytagexisdtorigss](-gdiplus-constant-property-item-descriptions.md)                                     | 0x9291 |
-| [Propertytagexif-subsec](-gdiplus-constant-property-item-descriptions.md)                                     | 0x9290 |
-| [Propertytagexif exposurebias](-gdiplus-constant-property-item-descriptions.md)                             | 0x9204 |
-| [Propertytagexif exposureindex](-gdiplus-constant-property-item-descriptions.md)                           | 0xa215 |
-| [Propertytagexif exposureproduktionen](-gdiplus-constant-property-item-descriptions.md)                             | 0x8822 |
-| [Propertytagexif ExposureTime](-gdiplus-constant-property-item-descriptions.md)                             | 0x829a |
-| [Propertytagexiffilesource](-gdiplus-constant-property-item-descriptions.md)                                 | 0xa300 |
-| [Propertytagexifflash](-gdiplus-constant-property-item-descriptions.md)                                           | 0x9209 |
-| [Propertytagexifflashenergy](-gdiplus-constant-property-item-descriptions.md)                               | 0xa20b |
-| [Propertytagexiffnumber](-gdiplus-constant-property-item-descriptions.md)                                       | 0x829d |
-| [Propertytagexiffocallength](-gdiplus-constant-property-item-descriptions.md)                               | 0x920a |
-| [Propertytagexiffocalresunit](-gdiplus-constant-property-item-descriptions.md)                             | 0xa210 |
-| [Propertytagexiffocalxres](-gdiplus-constant-property-item-descriptions.md)                                   | 0xa20e |
-| [Propertytagexiffocalyres](-gdiplus-constant-property-item-descriptions.md)                                   | 0xa20f |
-| [Propertytagexiffpxver](-gdiplus-constant-property-item-descriptions.md)                                         | 0xa000 |
-| [Propertytagexififd](-gdiplus-constant-property-item-descriptions.md)                                               | 0x8769 |
-| [Propertytagexifinterop](-gdiplus-constant-property-item-descriptions.md)                                       | 0xa005 |
-| [Propertytagexisospeed](-gdiplus-constant-property-item-descriptions.md)                                     | 0x8827 |
-| [Propertytagexiflightsource](-gdiplus-constant-property-item-descriptions.md)                               | 0x9208 |
-| [Propertytagexif Makernote](-gdiplus-constant-property-item-descriptions.md)                                   | 0x927c |
-| [Propertytagexif-Aperture](-gdiplus-constant-property-item-descriptions.md)                               | 0x9205 |
-| [Propertytagexismeteringmode](-gdiplus-constant-property-item-descriptions.md)                             | 0x9207 |
-| [Propertytagexifoecf](-gdiplus-constant-property-item-descriptions.md)                                             | 0x8828 |
-| [Propertytagexif-xdim](-gdiplus-constant-property-item-descriptions.md)                                       | 0xa002 |
-| [Propertytagexif pixydim](-gdiplus-constant-property-item-descriptions.md)                                       | 0xa003 |
-| [Propertytagexifrelatedwav](-gdiplus-constant-property-item-descriptions.md)                                 | 0xa004 |
-| [Propertytagexilescenetype](-gdiplus-constant-property-item-descriptions.md)                                   | 0xa301 |
-| [Propertytagexif-singmethod](-gdiplus-constant-property-item-descriptions.md)                           | 0xa217 |
-| [Propertytagexifshutterspeed](-gdiplus-constant-property-item-descriptions.md)                             | 0x9201 |
-| [Propertytagexilespatialfr](-gdiplus-constant-property-item-descriptions.md)                                   | 0xa20c |
-| [Propertytagexif spectralsense](-gdiplus-constant-property-item-descriptions.md)                           | 0x8824 |
-| [Propertytagexilesubjetdist](-gdiplus-constant-property-item-descriptions.md)                               | 0x9206 |
-| [Propertytagexilosubjetloc](-gdiplus-constant-property-item-descriptions.md)                                 | 0xa214 |
-| [Propertytagexifusercomment](-gdiplus-constant-property-item-descriptions.md)                               | 0x9286 |
-| [Propertytagexifäver](-gdiplus-constant-property-item-descriptions.md)                                               | 0x9000 |
-| [Propertytagextrasamples](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0152 |
-| [Propertytagfillorder](-gdiplus-constant-property-item-descriptions.md)                                           | 0x010a |
-| [Propertytagframedelay](-gdiplus-constant-property-item-descriptions.md)                                         | 0x5100 |
-| [Propertytagfrebytecounts](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0121 |
-| [Propertytagfreoffset](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0120 |
-| [Propertytaggamma](-gdiplus-constant-property-item-descriptions.md)                                                   | 0x0301 |
-| [Propertytagglobalpalette](-gdiplus-constant-property-item-descriptions.md)                                   | 0x5102 |
-| [Propertytaggpsaltitude](-gdiplus-constant-property-item-descriptions.md)                                    | 0x0006 |
-| [Propertytaggpsaltituderef](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0005 |
-| [Propertytaggpsdestbear](-gdiplus-constant-property-item-descriptions.md)                                    | 0x0018 |
-| [Propertytaggpsdestbearref](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0017 |
-| [Propertytaggpsdestdist](-gdiplus-constant-property-item-descriptions.md)                                    | 0x001a |
-| [Propertytaggpsdestdistref](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0019 |
-| [Propertytaggpsdestlat](-gdiplus-constant-property-item-descriptions.md)                                      | 0x0014 |
-| [Propertytaggpsdestlatref](-gdiplus-constant-property-item-descriptions.md)                                   | 0x0013 |
-| [Propertytaggpsdestlong](-gdiplus-constant-property-item-descriptions.md)                                    | 0x0016 |
-| [Propertytaggpsdestlongref](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0015 |
-| [Propertytaggpsgpsdop](-gdiplus-constant-property-item-descriptions.md)                                           | 0x000B |
-| [Propertytaggpsgpsmessremode](-gdiplus-constant-property-item-descriptions.md)                           | 0x000A |
-| [Propertytaggpsgpssatellites](-gdiplus-constant-property-item-descriptions.md)                             | 0x0008 |
-| [Propertytaggpsgpsstatus](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0009 |
-| [Propertytaggpsgpstime](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0007 |
-| [Propertytaggpsifd](-gdiplus-constant-property-item-descriptions.md)                                                 | 0x8825 |
-| [Propertytaggpsimgdir](-gdiplus-constant-property-item-descriptions.md)                                        | 0x0011 |
-| [Propertytaggpsimgdirref](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0010 |
-| [Propertytaggpslatitude](-gdiplus-constant-property-item-descriptions.md)                                    | 0x0002 |
-| [Propertytaggpslatituderef](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0001 |
-| [Propertytaggpslängen Grad](-gdiplus-constant-property-item-descriptions.md)                                  | 0x0004 |
-| [Propertytaggpslängs](-gdiplus-constant-property-item-descriptions.md)                               | 0x0003 |
-| [Propertytaggpsmapdatum](-gdiplus-constant-property-item-descriptions.md)                                       | 0x0012 |
-| [Propertytaggpsspeed](-gdiplus-constant-property-item-descriptions.md)                                          | 0x000D |
-| [Propertytaggpsspeedref](-gdiplus-constant-property-item-descriptions.md)                                       | 0x000C |
-| [Propertytaggpstrack](-gdiplus-constant-property-item-descriptions.md)                                          | 0x000F |
-| [Propertytaggpstrackref](-gdiplus-constant-property-item-descriptions.md)                                       | 0x000e |
-| [Propertytaggpsver](-gdiplus-constant-property-item-descriptions.md)                                                 | 0x0000 |
-| [Propertytaggrayresponsecurve](-gdiplus-constant-property-item-descriptions.md)                           | 0x0123 |
-| [Propertytaggrayresponseunit](-gdiplus-constant-property-item-descriptions.md)                             | 0x0122 |
-| [Propertytaggridsize](-gdiplus-constant-property-item-descriptions.md)                                             | 0x5011 |
-| [Propertytaghalftonedegree](-gdiplus-constant-property-item-descriptions.md)                                 | 0x500.000 |
-| [Propertytaghalftonehints](-gdiplus-constant-property-item-descriptions.md)                                   | 0x0141 |
-| [Propertytaghalftonelpi](-gdiplus-constant-property-item-descriptions.md)                                       | 0x500a |
-| [Propertytaghalftonelpiunit](-gdiplus-constant-property-item-descriptions.md)                               | 0x500.000 b |
-| [Propertytaghalftonemisc](-gdiplus-constant-property-item-descriptions.md)                                     | 0x500e |
-| [Propertytaghalftonescreen](-gdiplus-constant-property-item-descriptions.md)                                 | 0x500.000 f |
-| [Propertytaghalftoneshape](-gdiplus-constant-property-item-descriptions.md)                                   | 0x500.000 d |
-| [Propertytaghostcomputer](-gdiplus-constant-property-item-descriptions.md)                                     | 0x013c |
-| [Propertytagiccprofile](-gdiplus-constant-property-item-descriptions.md)                               | 0x8773 |
-| [Propertytagiccprofiledescriptor](-gdiplus-constant-property-item-descriptions.md)                     | 0x0302 |
-| [Propertytagimagedescription](-gdiplus-constant-property-item-descriptions.md)                             | 0x010e |
-| [Propertytagimageheight](-gdiplus-constant-property-item-descriptions.md)                                       | 0x0101 |
-| [Propertytagimagetitle](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0320 |
+| [PropertyTagArtist](-gdiplus-constant-property-item-descriptions.md)                                                 | 0x013B |
+| [PropertyTagBitsPerSample](-gdiplus-constant-property-item-descriptions.md)                                   | 0x0102 |
+| [PropertyTagCellHeight](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0109 |
+| [PropertyTagCellWidth](-gdiplus-constant-property-item-descriptions.md)                                           | 0x0108 |
+| [PropertyTagColorinanceTable](-gdiplus-constant-property-item-descriptions.md)                             | 0x5091 |
+| [PropertyTagColorMap](-gdiplus-constant-property-item-descriptions.md)                                             | 0x0140 |
+| [PropertyTagColorTransferFunction](-gdiplus-constant-property-item-descriptions.md)                   | 0x501A |
+| [PropertyTagCompression](-gdiplus-constant-property-item-descriptions.md)                                       | 0x0103 |
+| [PropertyTagCopyright](-gdiplus-constant-property-item-descriptions.md)                                           | 0x8298 |
+| [PropertyTagDateTime](-gdiplus-constant-property-item-descriptions.md)                                             | 0x0132 |
+| [PropertyTagDocumentName](-gdiplus-constant-property-item-descriptions.md)                                     | 0x010D |
+| [PropertyTagDotRange](-gdiplus-constant-property-item-descriptions.md)                                             | 0x0150 |
+| [PropertyTagEquipMake](-gdiplus-constant-property-item-descriptions.md)                                           | 0x010F |
+| [PropertyTagEquipModel](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0110 |
+| [PropertyTagExifAperture](-gdiplus-constant-property-item-descriptions.md)                                     | 0x9202 |
+| [PropertyTagExifBrightness](-gdiplus-constant-property-item-descriptions.md)                                 | 0x9203 |
+| [PropertyTagExifCfaPattern](-gdiplus-constant-property-item-descriptions.md)                                 | 0xA302 |
+| [PropertyTagExifColorSpace](-gdiplus-constant-property-item-descriptions.md)                                 | 0xA001 |
+| [PropertyTagExifCompBPP](-gdiplus-constant-property-item-descriptions.md)                                       | 0x9102 |
+| [PropertyTagExifCompConfig](-gdiplus-constant-property-item-descriptions.md)                                 | 0x9101 |
+| [PropertyTagExifDTDigitized](-gdiplus-constant-property-item-descriptions.md)                               | 0x9004 |
+| [PropertyTagExifDTDigss](-gdiplus-constant-property-item-descriptions.md)                                       | 0x9292 |
+| [PropertyTagExifDTOrig](-gdiplus-constant-property-item-descriptions.md)                                         | 0x9003 |
+| [PropertyTagExifDTOrigss](-gdiplus-constant-property-item-descriptions.md)                                     | 0x9291 |
+| [PropertyTagExifDTSubsec](-gdiplus-constant-property-item-descriptions.md)                                     | 0x9290 |
+| [PropertyTagExifExposureBias](-gdiplus-constant-property-item-descriptions.md)                             | 0x9204 |
+| [PropertyTagExifExposureIndex](-gdiplus-constant-property-item-descriptions.md)                           | 0xA215 |
+| [PropertyTagExifExposureProg](-gdiplus-constant-property-item-descriptions.md)                             | 0x8822 |
+| [PropertyTagExifExposureTime](-gdiplus-constant-property-item-descriptions.md)                             | 0x829A |
+| [PropertyTagExifFileSource](-gdiplus-constant-property-item-descriptions.md)                                 | 0xA300 |
+| [PropertyTagExifFlash](-gdiplus-constant-property-item-descriptions.md)                                           | 0x9209 |
+| [PropertyTagExifFlashEnandro](-gdiplus-constant-property-item-descriptions.md)                               | 0xA20B |
+| [PropertyTagExifFNumber](-gdiplus-constant-property-item-descriptions.md)                                       | 0x829D |
+| [PropertyTagExifFocalLength](-gdiplus-constant-property-item-descriptions.md)                               | 0x920A |
+| [PropertyTagExifFocalResUnit](-gdiplus-constant-property-item-descriptions.md)                             | 0xA210 |
+| [PropertyTagExifFocalXRes](-gdiplus-constant-property-item-descriptions.md)                                   | 0xA20E |
+| [PropertyTagExifFocalYRes](-gdiplus-constant-property-item-descriptions.md)                                   | 0xA20F |
+| [PropertyTagExifFPXVer](-gdiplus-constant-property-item-descriptions.md)                                         | 0xA000 |
+| [PropertyTagExifIFD](-gdiplus-constant-property-item-descriptions.md)                                               | 0x8769 |
+| [PropertyTagExifInterop](-gdiplus-constant-property-item-descriptions.md)                                       | 0xA005 |
+| [PropertyTagExifISOSpeed](-gdiplus-constant-property-item-descriptions.md)                                     | 0x8827 |
+| [PropertyTagExifLightSource](-gdiplus-constant-property-item-descriptions.md)                               | 0x9208 |
+| [PropertyTagExifMakerNote](-gdiplus-constant-property-item-descriptions.md)                                   | 0x927C |
+| [PropertyTagExifMaxAperture](-gdiplus-constant-property-item-descriptions.md)                               | 0x9205 |
+| [PropertyTagExifMeteringMode](-gdiplus-constant-property-item-descriptions.md)                             | 0x9207 |
+| [PropertyTagExifOECF](-gdiplus-constant-property-item-descriptions.md)                                             | 0x8828 |
+| [PropertyTagExifPixXDim](-gdiplus-constant-property-item-descriptions.md)                                       | 0xA002 |
+| [PropertyTagExifPixYDim](-gdiplus-constant-property-item-descriptions.md)                                       | 0xA003 |
+| [PropertyTagExifRelatedWav](-gdiplus-constant-property-item-descriptions.md)                                 | 0xA004 |
+| [PropertyTagExifSceneType](-gdiplus-constant-property-item-descriptions.md)                                   | 0xA301 |
+| [PropertyTagExifSensingMethod](-gdiplus-constant-property-item-descriptions.md)                           | 0xA217 |
+| [PropertyTagExifShutterSpeed](-gdiplus-constant-property-item-descriptions.md)                             | 0x9201 |
+| [PropertyTagExifSpatialFR](-gdiplus-constant-property-item-descriptions.md)                                   | 0xA20C |
+| [PropertyTagExifSpectralSense](-gdiplus-constant-property-item-descriptions.md)                           | 0x8824 |
+| [PropertyTagExifSubjectDist](-gdiplus-constant-property-item-descriptions.md)                               | 0x9206 |
+| [PropertyTagExifSubjectLoc](-gdiplus-constant-property-item-descriptions.md)                                 | 0xA214 |
+| [PropertyTagExifUserComment](-gdiplus-constant-property-item-descriptions.md)                               | 0x9286 |
+| [PropertyTagExifVer](-gdiplus-constant-property-item-descriptions.md)                                               | 0x9000 |
+| [PropertyTagExtraSamples](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0152 |
+| [PropertyTagFillOrder](-gdiplus-constant-property-item-descriptions.md)                                           | 0x010A |
+| [PropertyTagFrameDelay](-gdiplus-constant-property-item-descriptions.md)                                         | 0x5100 |
+| [PropertyTagFreeByteCounts](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0121 |
+| [PropertyTagFreeOffset](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0120 |
+| [PropertyTagGamma](-gdiplus-constant-property-item-descriptions.md)                                                   | 0x0301 |
+| [PropertyTagGlobalPalette](-gdiplus-constant-property-item-descriptions.md)                                   | 0x5102 |
+| [PropertyTagGpsAltitude](-gdiplus-constant-property-item-descriptions.md)                                    | 0x0006 |
+| [PropertyTagGpsAltitudeRef](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0005 |
+| [PropertyTagGpsDestBear](-gdiplus-constant-property-item-descriptions.md)                                    | 0x0018 |
+| [PropertyTagGpsDestBearRef](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0017 |
+| [PropertyTagGpsDestDist](-gdiplus-constant-property-item-descriptions.md)                                    | 0x001A |
+| [PropertyTagGpsDestDistRef](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0019 |
+| [PropertyTagGpsDestLat](-gdiplus-constant-property-item-descriptions.md)                                      | 0x0014 |
+| [PropertyTagGpsDestLatRef](-gdiplus-constant-property-item-descriptions.md)                                   | 0x0013 |
+| [PropertyTagGpsDestLong](-gdiplus-constant-property-item-descriptions.md)                                    | 0x0016 |
+| [PropertyTagGpsDestLongRef](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0015 |
+| [PropertyTagGpsGpsDop](-gdiplus-constant-property-item-descriptions.md)                                           | 0x000B |
+| [PropertyTagGpsGpsMeasureMode](-gdiplus-constant-property-item-descriptions.md)                           | 0x000A |
+| [PropertyTagGpsGpsSatellites](-gdiplus-constant-property-item-descriptions.md)                             | 0x0008 |
+| [PropertyTagGpsGpsStatus](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0009 |
+| [PropertyTagGpsGpsTime](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0007 |
+| [PropertyTagGpsIFD](-gdiplus-constant-property-item-descriptions.md)                                                 | 0x8825 |
+| [PropertyTagGpsImgDir](-gdiplus-constant-property-item-descriptions.md)                                        | 0x0011 |
+| [PropertyTagGpsImgDirRef](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0010 |
+| [PropertyTagGpsL aber](-gdiplus-constant-property-item-descriptions.md)                                    | 0x0002 |
+| [PropertyTagGpsL unredref](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0001 |
+| [PropertyTagGpsLongitude](-gdiplus-constant-property-item-descriptions.md)                                  | 0x0004 |
+| [PropertyTagGpsLongitudeRef](-gdiplus-constant-property-item-descriptions.md)                               | 0x0003 |
+| [PropertyTagGpsMapDatum](-gdiplus-constant-property-item-descriptions.md)                                       | 0x0012 |
+| [PropertyTagGpsSpeed](-gdiplus-constant-property-item-descriptions.md)                                          | 0x000D |
+| [PropertyTagGpsSpeedRef](-gdiplus-constant-property-item-descriptions.md)                                       | 0x000C |
+| [PropertyTagGpsTrack](-gdiplus-constant-property-item-descriptions.md)                                          | 0x000F |
+| [PropertyTagGpsTrackRef](-gdiplus-constant-property-item-descriptions.md)                                       | 0x000E |
+| [PropertyTagGpsVer](-gdiplus-constant-property-item-descriptions.md)                                                 | 0x0000 |
+| [PropertyTagGrayResponseCurve](-gdiplus-constant-property-item-descriptions.md)                           | 0x0123 |
+| [PropertyTagGrayResponseUnit](-gdiplus-constant-property-item-descriptions.md)                             | 0x0122 |
+| [PropertyTagGridSize](-gdiplus-constant-property-item-descriptions.md)                                             | 0x5011 |
+| [PropertyTagHalftoneDegree](-gdiplus-constant-property-item-descriptions.md)                                 | 0x500C |
+| [PropertyTagHalftoneHints](-gdiplus-constant-property-item-descriptions.md)                                   | 0x0141 |
+| [PropertyTagHalftoneLPI](-gdiplus-constant-property-item-descriptions.md)                                       | 0x500A |
+| [PropertyTagHalftoneLPIUnit](-gdiplus-constant-property-item-descriptions.md)                               | 0x500B |
+| [PropertyTagHalftoneMisc](-gdiplus-constant-property-item-descriptions.md)                                     | 0x500E |
+| [PropertyTagHalftoneScreen](-gdiplus-constant-property-item-descriptions.md)                                 | 0x500F |
+| [PropertyTagHalftoneShape](-gdiplus-constant-property-item-descriptions.md)                                   | 0x500D |
+| [PropertyTagHostComputer](-gdiplus-constant-property-item-descriptions.md)                                     | 0x013C |
+| [PropertyTagICCProfile](-gdiplus-constant-property-item-descriptions.md)                               | 0x8773 |
+| [PropertyTagICCProfileDescriptor](-gdiplus-constant-property-item-descriptions.md)                     | 0x0302 |
+| [PropertyTagImageDescription](-gdiplus-constant-property-item-descriptions.md)                             | 0x010E |
+| [PropertyTagImageHeight](-gdiplus-constant-property-item-descriptions.md)                                       | 0x0101 |
+| [PropertyTagImageTitle](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0320 |
 | [PropertyTagImageWidth](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0100 |
-| [Propertytagindexbackground](-gdiplus-constant-property-item-descriptions.md)                               | 0x5103 |
-| [Propertytagindextransparent](-gdiplus-constant-property-item-descriptions.md)                             | 0x5104 |
-| [Propertytaginknames](-gdiplus-constant-property-item-descriptions.md)                                             | 0x014d |
-| [Propertytaginkset](-gdiplus-constant-property-item-descriptions.md)                                                 | 0x014c |
-| [Propertytagjpeer-Tabellen](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0209 |
-| [Propertytagjpeer dsctables](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0208 |
-| [Propertytagjpeer ginterformat](-gdiplus-constant-property-item-descriptions.md)                               | 0x0201 |
-| [Propertytagjpeer-interlength](-gdiplus-constant-property-item-descriptions.md)                               | 0x0202 |
-| [Propertytagjpeer glosslesendiktoren](-gdiplus-constant-property-item-descriptions.md)                 | 0x0205 |
-| [Propertytagjpgpointtransformationen](-gdiplus-constant-property-item-descriptions.md)                       | 0x0206 |
-| [Propertytagjpgproc](-gdiplus-constant-property-item-descriptions.md)                                             | 0x0200 |
-| [Propertytagjpgqtables](-gdiplus-constant-property-item-descriptions.md)                                       | 0x0207 |
-| [Propertytagjpgquality](-gdiplus-constant-property-item-descriptions.md)                                       | 0x5010 |
-| [Propertytagjggrestartinterval](-gdiplus-constant-property-item-descriptions.md)                       | 0x0203 |
-| [Propertytagloopcount](-gdiplus-constant-property-item-descriptions.md)                                           | 0x5101 |
-| [Propertytagluminancetable](-gdiplus-constant-property-item-descriptions.md)                                 | 0x5090 |
-| [Propertytagmaxsamplevalue](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0119 |
-| [Propertytagminsamplevalue](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0118 |
-| [Propertytagnewsubfiletype](-gdiplus-constant-property-item-descriptions.md)                                 | 0x00fe |
-| [Propertytagnumofinert](-gdiplus-constant-property-item-descriptions.md)                                     | 0x014e |
-| [Propertytagorientation](-gdiplus-constant-property-item-descriptions.md)                                       | 0x0112 |
-| [Propertytagpagename](-gdiplus-constant-property-item-descriptions.md)                                             | 0x011d |
-| [Propertytagpagenumber](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0129 |
-| [Propertytagpalettehistogram](-gdiplus-constant-property-item-descriptions.md)                             | 0x5113 |
-| [Propertytagphotomepackcinterp](-gdiplus-constant-property-item-descriptions.md)                           | 0x0106 |
-| [Propertytagpixelperunitx](-gdiplus-constant-property-item-descriptions.md)                                   | 0x5111 |
-| [Propertytagpixelperunity](-gdiplus-constant-property-item-descriptions.md)                                   | 0x5112 |
-| [Propertytagpixelunit](-gdiplus-constant-property-item-descriptions.md)                                           | 0x5110 |
-| [Propertytagplanarconfig](-gdiplus-constant-property-item-descriptions.md)                                     | 0x011c |
-| [Propertytagvorhertor](-gdiplus-constant-property-item-descriptions.md)                                           | 0x013d |
-| [Propertytagprimarychromaticities](-gdiplus-constant-property-item-descriptions.md)                   | 0x013f |
-| [Propertytagprintflags](-gdiplus-constant-property-item-descriptions.md)                                         | 0x5005 |
-| [Propertytagprintflagsbleedwidth](-gdiplus-constant-property-item-descriptions.md)                     | 0x5008 |
-| [Propertytagprintflagsbleedwidthscale](-gdiplus-constant-property-item-descriptions.md)           | 0x5009 |
-| [Propertytagprintflagscrop](-gdiplus-constant-property-item-descriptions.md)                                 | 0x5007 |
-| [Propertytagprintflagsversion](-gdiplus-constant-property-item-descriptions.md)                           | 0x5006 |
-| [Propertytagref BlackWhite](-gdiplus-constant-property-item-descriptions.md)                                   | 0x0214 |
-| [Propertytagresolutionunit](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0128 |
-| [Propertytagresolutionxlängen Unit](-gdiplus-constant-property-item-descriptions.md)                   | 0x5003 |
-| [Propertytagresolutionxunit](-gdiplus-constant-property-item-descriptions.md)                               | 0x5001 |
-| [Propertytagresolutionyverlängert-Einheit](-gdiplus-constant-property-item-descriptions.md)                   | 0x5004 |
-| [Propertytagresolutionyunit](-gdiplus-constant-property-item-descriptions.md)                               | 0x5002 |
-| [Propertytagrowsperstrip](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0116 |
-| [Propertytagsampleformat](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0153 |
-| [Propertytagsamplesperpixel](-gdiplus-constant-property-item-descriptions.md)                               | 0x0115 |
-| [Propertytagsmaxsamplevalue](-gdiplus-constant-property-item-descriptions.md)                               | 0x0155 |
-| [Propertytagsminsamplevalue](-gdiplus-constant-property-item-descriptions.md)                               | 0x0154 |
-| [Propertytagsoftwareused](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0131 |
-| [Propertytagsrgbrenderingintent](-gdiplus-constant-property-item-descriptions.md)                       | 0x0303 |
-| [Propertytagstripbytescount](-gdiplus-constant-property-item-descriptions.md)                               | 0x0117 |
-| [Propertytagstripoffsets](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0111 |
-| [Propertytagsubfiletype](-gdiplus-constant-property-item-descriptions.md)                                       | 0x00FF |
+| [PropertyTagIndexBackground](-gdiplus-constant-property-item-descriptions.md)                               | 0x5103 |
+| [PropertyTagIndexTransparent](-gdiplus-constant-property-item-descriptions.md)                             | 0x5104 |
+| [PropertyTagInkNames](-gdiplus-constant-property-item-descriptions.md)                                             | 0x014D |
+| [PropertyTagInkSet](-gdiplus-constant-property-item-descriptions.md)                                                 | 0x014C |
+| [PropertyTagJPEGACTables](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0209 |
+| [PropertyTagJPEGDCTables](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0208 |
+| [PropertyTagJPEGInterFormat](-gdiplus-constant-property-item-descriptions.md)                               | 0x0201 |
+| [PropertyTagJPEGInterLength](-gdiplus-constant-property-item-descriptions.md)                               | 0x0202 |
+| [PropertyTagJPEGLosslessPredictors](-gdiplus-constant-property-item-descriptions.md)                 | 0x0205 |
+| [PropertyTagJPEGPointTransforms](-gdiplus-constant-property-item-descriptions.md)                       | 0x0206 |
+| [PropertyTagJPEGProc](-gdiplus-constant-property-item-descriptions.md)                                             | 0x0200 |
+| [PropertyTagJPEGQTables](-gdiplus-constant-property-item-descriptions.md)                                       | 0x0207 |
+| [PropertyTagJPEGQuality](-gdiplus-constant-property-item-descriptions.md)                                       | 0x5010 |
+| [PropertyTagJPEGRestartInterval](-gdiplus-constant-property-item-descriptions.md)                       | 0x0203 |
+| [PropertyTagLoopCount](-gdiplus-constant-property-item-descriptions.md)                                           | 0x5101 |
+| [PropertyTagLuminanceTable](-gdiplus-constant-property-item-descriptions.md)                                 | 0x5090 |
+| [PropertyTagMaxSampleValue](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0119 |
+| [PropertyTagMinSampleValue](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0118 |
+| [PropertyTagNewSubfileType](-gdiplus-constant-property-item-descriptions.md)                                 | 0x00FE |
+| [PropertyTagNumberOfInks](-gdiplus-constant-property-item-descriptions.md)                                     | 0x014E |
+| [PropertyTagOrientation](-gdiplus-constant-property-item-descriptions.md)                                       | 0x0112 |
+| [PropertyTagPageName](-gdiplus-constant-property-item-descriptions.md)                                             | 0x011D |
+| [PropertyTagPageNumber](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0129 |
+| [PropertyTagPaletteHistogram](-gdiplus-constant-property-item-descriptions.md)                             | 0x5113 |
+| [PropertyTagPhotometricInterp](-gdiplus-constant-property-item-descriptions.md)                           | 0x0106 |
+| [PropertyTagPixelPerUnitX](-gdiplus-constant-property-item-descriptions.md)                                   | 0x5111 |
+| [PropertyTagPixelPerUnitY](-gdiplus-constant-property-item-descriptions.md)                                   | 0x5112 |
+| [PropertyTagPixelUnit](-gdiplus-constant-property-item-descriptions.md)                                           | 0x5110 |
+| [PropertyTagPlanarConfig](-gdiplus-constant-property-item-descriptions.md)                                     | 0x011C |
+| [PropertyTagPredictor](-gdiplus-constant-property-item-descriptions.md)                                           | 0x013D |
+| [PropertyTagPrimaryAktualitäten](-gdiplus-constant-property-item-descriptions.md)                   | 0x013F |
+| [PropertyTagPrintFlags](-gdiplus-constant-property-item-descriptions.md)                                         | 0x5005 |
+| [PropertyTagPrintFlagsBleedWidth](-gdiplus-constant-property-item-descriptions.md)                     | 0x5008 |
+| [PropertyTagPrintFlagsBleedWidthScale](-gdiplus-constant-property-item-descriptions.md)           | 0x5009 |
+| [PropertyTagPrintFlagsCrop](-gdiplus-constant-property-item-descriptions.md)                                 | 0x5007 |
+| [PropertyTagPrintFlagsVersion](-gdiplus-constant-property-item-descriptions.md)                           | 0x5006 |
+| [PropertyTagREFBlackWhite](-gdiplus-constant-property-item-descriptions.md)                                   | 0x0214 |
+| [PropertyTagResolutionUnit](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0128 |
+| [PropertyTagResolutionXLengthUnit](-gdiplus-constant-property-item-descriptions.md)                   | 0x5003 |
+| [PropertyTagResolutionXUnit](-gdiplus-constant-property-item-descriptions.md)                               | 0x5001 |
+| [PropertyTagResolutionYLengthUnit](-gdiplus-constant-property-item-descriptions.md)                   | 0x5004 |
+| [PropertyTagResolutionYUnit](-gdiplus-constant-property-item-descriptions.md)                               | 0x5002 |
+| [PropertyTagRowsPerStrip](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0116 |
+| [PropertyTagSampleFormat](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0153 |
+| [PropertyTagSamplesPerPixel](-gdiplus-constant-property-item-descriptions.md)                               | 0x0115 |
+| [PropertyTagSMaxSampleValue](-gdiplus-constant-property-item-descriptions.md)                               | 0x0155 |
+| [PropertyTagSMinSampleValue](-gdiplus-constant-property-item-descriptions.md)                               | 0x0154 |
+| [PropertyTagSoftwareUsed](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0131 |
+| [PropertyTagSRGBRenderingIntent](-gdiplus-constant-property-item-descriptions.md)                       | 0x0303 |
+| [PropertyTagStripBytesCount](-gdiplus-constant-property-item-descriptions.md)                               | 0x0117 |
+| [PropertyTagStripOffsets](-gdiplus-constant-property-item-descriptions.md)                                     | 0x0111 |
+| [PropertyTagSubfileType](-gdiplus-constant-property-item-descriptions.md)                                       | 0x00FF |
 | [PropertyTagT4Option](-gdiplus-constant-property-item-descriptions.md)                                             | 0x0124 |
 | [PropertyTagT6Option](-gdiplus-constant-property-item-descriptions.md)                                             | 0x0125 |
-| [Propertytagtargetprinter](-gdiplus-constant-property-item-descriptions.md)                                   | 0x0151 |
-| [Propertytagschwelle](-gdiplus-constant-property-item-descriptions.md)                                   | 0x0107 |
-| [Propertytagthumbnailartist](-gdiplus-constant-property-item-descriptions.md)                               | 0x5034 |
-| [Propertytagthumbnailbitspersample](-gdiplus-constant-property-item-descriptions.md)                 | 0x5022 |
-| [Propertytagthumbnailcolortiefe](-gdiplus-constant-property-item-descriptions.md)                       | 0x5015 |
-| [Propertytagthumbnailcompressedsize](-gdiplus-constant-property-item-descriptions.md)               | 0x5019 |
-| [Propertytagthumbnailcompression](-gdiplus-constant-property-item-descriptions.md)                     | 0x5023 |
-| [Propertytagthumbnailcopyright](-gdiplus-constant-property-item-descriptions.md)                         | 0x503b |
-| [Propertytagthumbnaildata](-gdiplus-constant-property-item-descriptions.md)                                   | 0x501b |
-| [Propertytagthumbnaildatetime](-gdiplus-constant-property-item-descriptions.md)                           | 0x5033 |
-| [Propertytagthumbnailequipmake](-gdiplus-constant-property-item-descriptions.md)                         | 0x5026 |
-| [Propertytagthumbnailequipmodel](-gdiplus-constant-property-item-descriptions.md)                       | 0x5027 |
-| [Propertytagthumbnailformat](-gdiplus-constant-property-item-descriptions.md)                               | 0x5012 |
-| [Propertytagthumbnailheight](-gdiplus-constant-property-item-descriptions.md)                               | 0x5014 |
-| [Propertytagthumbnailimagedescription](-gdiplus-constant-property-item-descriptions.md)           | 0x5025 |
-| [Propertytagthumbnailimageheight](-gdiplus-constant-property-item-descriptions.md)                     | 0x5021 |
+| [PropertyTagTargetPrinter](-gdiplus-constant-property-item-descriptions.md)                                   | 0x0151 |
+| [PropertyTagThreshHolding](-gdiplus-constant-property-item-descriptions.md)                                   | 0x0107 |
+| [PropertyTagThumbnailArtist](-gdiplus-constant-property-item-descriptions.md)                               | 0x5034 |
+| [PropertyTagThumbnailBitsPerSample](-gdiplus-constant-property-item-descriptions.md)                 | 0x5022 |
+| [PropertyTagThumbnailColorDepth](-gdiplus-constant-property-item-descriptions.md)                       | 0x5015 |
+| [PropertyTagThumbnailCompressedSize](-gdiplus-constant-property-item-descriptions.md)               | 0x5019 |
+| [PropertyTagThumbnailCompression](-gdiplus-constant-property-item-descriptions.md)                     | 0x5023 |
+| [PropertyTagThumbnailCopyRight](-gdiplus-constant-property-item-descriptions.md)                         | 0x503B |
+| [PropertyTagThumbnailData](-gdiplus-constant-property-item-descriptions.md)                                   | 0x501B |
+| [PropertyTagThumbnailDateTime](-gdiplus-constant-property-item-descriptions.md)                           | 0x5033 |
+| [PropertyTagThumbnailEquipMake](-gdiplus-constant-property-item-descriptions.md)                         | 0x5026 |
+| [PropertyTagThumbnailEquipModel](-gdiplus-constant-property-item-descriptions.md)                       | 0x5027 |
+| [PropertyTagThumbnailFormat](-gdiplus-constant-property-item-descriptions.md)                               | 0x5012 |
+| [PropertyTagThumbnailHeight](-gdiplus-constant-property-item-descriptions.md)                               | 0x5014 |
+| [PropertyTagThumbnailImageDescription](-gdiplus-constant-property-item-descriptions.md)           | 0x5025 |
+| [PropertyTagThumbnailImageHeight](-gdiplus-constant-property-item-descriptions.md)                     | 0x5021 |
 | [PropertyTagThumbnailImageWidth](-gdiplus-constant-property-item-descriptions.md)                       | 0x5020 |
-| [Propertytagthumbnailorientation](-gdiplus-constant-property-item-descriptions.md)                     | 0x5029 |
-| [Propertytagthumbnailphotomezcinterp](-gdiplus-constant-property-item-descriptions.md)         | 0x5024 |
-| [Propertytagthumbnailplanarconfig](-gdiplus-constant-property-item-descriptions.md)                   | 0x502f |
-| [Propertytagthumbnailplane](-gdiplus-constant-property-item-descriptions.md)                               | 0x5016 |
-| [Propertytagthumbnailprimarychromaticities](-gdiplus-constant-property-item-descriptions.md) | 0x5036 |
-| [Propertytagthumbnailrawbytes](-gdiplus-constant-property-item-descriptions.md)                           | 0x5017 |
-| [Propertytagthumbnailref BlackWhite](-gdiplus-constant-property-item-descriptions.md)                 | 0x503a |
-| [Propertytagthumbnailresolutionunit](-gdiplus-constant-property-item-descriptions.md)               | 0x5030 |
-| [Propertytagthumbnailresolutionx](-gdiplus-constant-property-item-descriptions.md)                     | 0x502d |
-| [Propertytagthumbnailresolutiony](-gdiplus-constant-property-item-descriptions.md)                     | 0x502e |
-| [Propertytagthumbnailrowsperstrip](-gdiplus-constant-property-item-descriptions.md)                   | 0x502b |
-| [Propertytagthumbnailsamplesperpixel](-gdiplus-constant-property-item-descriptions.md)             | 0x502a |
-| [Propertytagthumbnailsize](-gdiplus-constant-property-item-descriptions.md)                                   | 0x5018 |
-| [Propertytagthumbnailsoftwareused](-gdiplus-constant-property-item-descriptions.md)                   | 0x5032 |
-| [Propertytagthumbnailstripbytescount](-gdiplus-constant-property-item-descriptions.md)             | 0x502c |
-| [Propertytagthumbnailstripoffsets](-gdiplus-constant-property-item-descriptions.md)                   | 0x5028 |
-| [Propertytagthumbnailtransferfunction](-gdiplus-constant-property-item-descriptions.md)           | 0x5031 |
-| [Propertytagthumbnailwhitepoint](-gdiplus-constant-property-item-descriptions.md)                       | 0x5035 angezeigt |
-| [Propertytagthumbnailwidth](-gdiplus-constant-property-item-descriptions.md)                                 | 0x5013 |
-| [Propertytagthumbnailycbcrkoefficients](-gdiplus-constant-property-item-descriptions.md)         | 0x5037 |
-| [Propertytagthumbnailycbcrpositionierung](-gdiplus-constant-property-item-descriptions.md)           | 0x5039 |
-| [Propertytagthumbnailycbcrsubsampling](-gdiplus-constant-property-item-descriptions.md)           | 0x5038 |
-| [Propertytagtilebytecounts](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0145 |
-| [Propertytagtilelength](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0143 |
-| [Propertytagtileoffset](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0144 |
-| [Propertytagtilewidth](-gdiplus-constant-property-item-descriptions.md)                                           | 0x0142 |
-| [Propertytagtransferfunction](-gdiplus-constant-property-item-descriptions.md)                             | 0x012d |
-| [Propertytagtransferrange](-gdiplus-constant-property-item-descriptions.md)                                   | 0x0156 |
-| [Propertytagwhitepoint](-gdiplus-constant-property-item-descriptions.md)                                         | 0x013e |
-| [Propertytagxposition](-gdiplus-constant-property-item-descriptions.md)                                           | 0x011e |
-| [Propertytagxresolution](-gdiplus-constant-property-item-descriptions.md)                                       | 0x011a |
-| [Propertytagycbcrkoefficients](-gdiplus-constant-property-item-descriptions.md)                           | 0x0211 |
-| [Propertytagycbcrpositionierung](-gdiplus-constant-property-item-descriptions.md)                             | 0x0213 |
-| [Propertytagycbcrsubsampling](-gdiplus-constant-property-item-descriptions.md)                             | 0x0212 |
-| [Propertytagyposition](-gdiplus-constant-property-item-descriptions.md)                                           | 0x011f |
-| [Propertytagyresolution](-gdiplus-constant-property-item-descriptions.md)                                       | 0x011b |
+| [PropertyTagThumbnailOrientation](-gdiplus-constant-property-item-descriptions.md)                     | 0x5029 |
+| [PropertyTagThumbnailPhotometricInterp](-gdiplus-constant-property-item-descriptions.md)         | 0x5024 |
+| [PropertyTagThumbnailPlanarConfig](-gdiplus-constant-property-item-descriptions.md)                   | 0x502F |
+| [PropertyTagThumbnailPlanes](-gdiplus-constant-property-item-descriptions.md)                               | 0x5016 |
+| [PropertyTagThumbnailPrimary Enumerationen](-gdiplus-constant-property-item-descriptions.md) | 0x5036 |
+| [PropertyTagThumbnailRawBytes](-gdiplus-constant-property-item-descriptions.md)                           | 0x5017 |
+| [PropertyTagThumbnailRefBlackWhite](-gdiplus-constant-property-item-descriptions.md)                 | 0x503A |
+| [PropertyTagThumbnailResolutionUnit](-gdiplus-constant-property-item-descriptions.md)               | 0x5030 |
+| [PropertyTagThumbnailResolutionX](-gdiplus-constant-property-item-descriptions.md)                     | 0x502D |
+| [PropertyTagThumbnailResolutionY](-gdiplus-constant-property-item-descriptions.md)                     | 0x502E |
+| [PropertyTagThumbnailRowsPerStrip](-gdiplus-constant-property-item-descriptions.md)                   | 0x502B |
+| [PropertyTagThumbnailSamplesPerPixel](-gdiplus-constant-property-item-descriptions.md)             | 0x502A |
+| [PropertyTagThumbnailSize](-gdiplus-constant-property-item-descriptions.md)                                   | 0x5018 |
+| [PropertyTagThumbnailSoftwareUsed](-gdiplus-constant-property-item-descriptions.md)                   | 0x5032 |
+| [PropertyTagThumbnailStripBytesCount](-gdiplus-constant-property-item-descriptions.md)             | 0x502C |
+| [PropertyTagThumbnailStripOffsets](-gdiplus-constant-property-item-descriptions.md)                   | 0x5028 |
+| [PropertyTagThumbnailTransferFunction](-gdiplus-constant-property-item-descriptions.md)           | 0x5031 |
+| [PropertyTagThumbnailWhitePoint](-gdiplus-constant-property-item-descriptions.md)                       | 0x5035 |
+| [PropertyTagThumbnailWidth](-gdiplus-constant-property-item-descriptions.md)                                 | 0x5013 |
+| [PropertyTagThumbnailYCbCrCoefficients](-gdiplus-constant-property-item-descriptions.md)         | 0x5037 |
+| [PropertyTagThumbnailYCbCrPositioning](-gdiplus-constant-property-item-descriptions.md)           | 0x5039 |
+| [PropertyTagThumbnailYCbCrSubsampling](-gdiplus-constant-property-item-descriptions.md)           | 0x5038 |
+| [PropertyTagTileByteCounts](-gdiplus-constant-property-item-descriptions.md)                                 | 0x0145 |
+| [PropertyTagTileLength](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0143 |
+| [PropertyTagTileOffset](-gdiplus-constant-property-item-descriptions.md)                                         | 0x0144 |
+| [PropertyTagTileWidth](-gdiplus-constant-property-item-descriptions.md)                                           | 0x0142 |
+| [PropertyTagTransferFunction](-gdiplus-constant-property-item-descriptions.md)                             | 0x012D |
+| [PropertyTagTransferRange](-gdiplus-constant-property-item-descriptions.md)                                   | 0x0156 |
+| [PropertyTagWhitePoint](-gdiplus-constant-property-item-descriptions.md)                                         | 0x013E |
+| [PropertyTagXPosition](-gdiplus-constant-property-item-descriptions.md)                                           | 0x011E |
+| [PropertyTagXResolution](-gdiplus-constant-property-item-descriptions.md)                                       | 0x011A |
+| [PropertyTagYCbCrCoefficients](-gdiplus-constant-property-item-descriptions.md)                           | 0x0211 |
+| [PropertyTagYCbCrPositioning](-gdiplus-constant-property-item-descriptions.md)                             | 0x0213 |
+| [PropertyTagYCbCrSubsampling](-gdiplus-constant-property-item-descriptions.md)                             | 0x0212 |
+| [PropertyTagYPosition](-gdiplus-constant-property-item-descriptions.md)                                           | 0x011F |
+| [PropertyTagYResolution](-gdiplus-constant-property-item-descriptions.md)                                       | 0x011B |
 
 
 
@@ -245,16 +245,16 @@ In der folgenden Tabelle werden die Eigenschaften Tags für Windows GDI+-Bilder 
 
 <dl> <dt>
 
-[Bildeigenschaften-tagkonstanten](-gdiplus-constant-image-property-tag-constants.md)
+[Image-Eigenschaftentagkonst constants](-gdiplus-constant-image-property-tag-constants.md)
 </dt> <dt>
 
-[**Bildeigenschaften-Tagtyp Konstanten**](-gdiplus-constant-image-property-tag-type-constants.md)
+[**Konstanten des Image-Eigenschaftentagtyps**](-gdiplus-constant-image-property-tag-type-constants.md)
 </dt> <dt>
 
-[Eigenschaften Element Beschreibungen](-gdiplus-constant-property-item-descriptions.md)
+[Eigenschaftenelementbeschreibungen](-gdiplus-constant-property-item-descriptions.md)
 </dt> <dt>
 
-[Eigenschaften Tags in numerischer Reihenfolge](-gdiplus-constant-property-tags-in-numerical-order.md)
+[Eigenschaftstags in numerischer Reihenfolge](-gdiplus-constant-property-tags-in-numerical-order.md)
 </dt> <dt>
 
 [Lesen und Schreiben von Metadaten](-gdiplus-reading-and-writing-metadata-use.md)

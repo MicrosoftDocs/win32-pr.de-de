@@ -1,9 +1,9 @@
 ---
-title: glrorofunktion (GL. h)
-description: Die Funktion "glrotiert" multipliziert die aktuelle Matrix mit einer Rotations Matrix.
+title: glRotated-Funktion (Gl.h)
+description: Die glRotated-Funktion multipliziert die aktuelle Matrix mit einer Rotationsmatrix.
 ms.assetid: 9adfeb5b-8c2a-4acf-a251-6ba23cc4c3a6
 keywords:
-- glgedreht-Funktion OpenGL
+- glRotated-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d0678e9da6f0b68047708f45fda1c9da66d8139
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 32216eab9a7c7613f082470360d3f938bbdeaf8ae38cd875d84cd0338dfa78c4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119491770"
 ---
-# <a name="glrotated-function"></a>glrorofunktion
+# <a name="glrotated-function"></a>glRotated-Funktion
 
-Die Funktion " **glrotiert** " multipliziert die aktuelle Matrix mit einer Rotations Matrix.
+Die **glRotated-Funktion** multipliziert die aktuelle Matrix mit einer Rotationsmatrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,21 +53,21 @@ Der Drehwinkel in Grad.
 *x* 
 </dt> <dd>
 
-Die *x* -Koordinate eines Vektors.
+Die *x-Koordinate* eines Vektors.
 
 </dd> <dt>
 
 *y* 
 </dt> <dd>
 
-Die *y* -Koordinate eines Vektors.
+Die *y-Koordinate* eines Vektors.
 
 </dd> <dt>
 
-*z* 
+*Z* 
 </dt> <dd>
 
-Die *z* -Koordinate eines Vektors.
+Die *z-Koordinate* eines Vektors.
 
 </dd> </dl>
 
@@ -77,35 +77,35 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glrotiert** " berechnet eine Matrix, die eine Drehung gegen den Uhrzeigersinn in *Winkel* Graden um den Vektor vom Ursprung bis zum Punkt (*x*, *y*, *z*) ausführt.
+Die **glRotated-Funktion** berechnet eine Matrix, die eine  gegen den Uhrzeigersinn erfolgende Drehung von Winkelgraden um den Vektor vom Ursprung bis zum Punkt ausführt (*x*, *y*, *z*).
 
-Die aktuelle Matrix (siehe [**glMatrixMode**](glmatrixmode.md)) wird mit dieser Rotations Matrix multipliziert, und das Produkt ersetzt die aktuelle Matrix. Das heißt, wenn m die aktuelle Matrix und R die Übersetzungs Matrix ist, wird m durch m r ersetzt.
+Die aktuelle Matrix (siehe [**glMatrixMode**](glmatrixmode.md)) wird mit dieser Rotationsmatrix multipliziert, während das Produkt die aktuelle Matrix ersetzt. Das heißt, wenn M die aktuelle Matrix und R die Übersetzungsmatrix ist, wird M durch M R ersetzt.
 
-Wenn der Matrix Modus entweder eine GL \_ Modelview-oder GL- \_ Projektion ist, werden alle Objekte, die nach dem Aufruf von **glrotiert** gezeichnet werden, gedreht. Verwenden Sie zum Speichern und Wiederherstellen des ungedrehten Koordinatensystems [**glPushMatrix**](glpushmatrix.md) und [**glPopMatrix**](glpopmatrix.md) .
+Wenn der Matrixmodus entweder GL MODELVIEW oder GL PROJECTION ist, werden alle Objekte gedreht, die nach dem Aufgerufenen \_ \_ von **glRotated** gezeichnet wurden. Verwenden [**Sie glPushMatrix**](glpushmatrix.md) und [**glPopMatrix,**](glpopmatrix.md) um das nichtrotierte Koordinatensystem zu speichern und wiederherzustellen.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glrotiert** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glRotated ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL- \_ \_ Rendermodus
+[**glGet mit**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) Argument GL \_ RENDER \_ MODE
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem-Argument des GL- \_ Matrix \_ Modus
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ MATRIX \_ MODE
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Modelview \_ Matrix
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ MODELVIEW \_ MATRIX
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL- \_ Projektions \_ Matrix
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ PROJECTION \_ MATRIX
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL- \_ Textur \_ Matrix
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ TEXTURE \_ MATRIX
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,8 +115,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glrotier
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -134,7 +134,7 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glrotier
 [**glMatrixMode**](glmatrixmode.md)
 </dt> <dt>
 
-[**glmultmatrix**](glmultmatrix.md)
+[**glMultMatrix**](glmultmatrix.md)
 </dt> <dt>
 
 [**glPopMatrix**](glpopmatrix.md)
@@ -143,10 +143,10 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glrotier
 [**glPushMatrix**](glpushmatrix.md)
 </dt> <dt>
 
-[**glscale**](glscale.md)
+[**glScale**](glscale.md)
 </dt> <dt>
 
-[**gltranslate**](gltranslate.md)
+[**glTranslate**](gltranslate.md)
 </dt> </dl>
 
  

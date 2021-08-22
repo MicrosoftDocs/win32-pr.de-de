@@ -1,11 +1,11 @@
 ---
-title: Iwmplibrary (isidentical-Methode)
-description: Die isidentical-Methode gibt einen Wert zurück, der angibt, ob das angegebene Objekt mit dem aktuellen-Objekt identisch ist.
+title: IWMPLibrary isIdentical-Methode
+description: Die isIdentical-Methode gibt einen Wert zurück, der angibt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.
 ms.assetid: c4eebc46-6a5f-4f9a-8cd4-7421b156670c
 keywords:
-- isidentical-Methode, Windows Media Player
-- isidentical-Methode, Windows Media Player, iwmplibrary-Schnittstelle
-- Iwmplibrary-Schnittstelle, Windows Media Player, isidentical-Methode
+- isIdentical-Methode Windows Media Player
+- isIdentical-Methode Windows Media Player , IWMPLibrary-Schnittstelle
+- IWMPLibrary-Schnittstelle Windows Media Player , isIdentical-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 53071caa98b8f8e3ccb95e926969926cc68e7860
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d0ed37725bbda5b170ece8ce71c12499b42f0b361cbac3bbe65f1b875af06fc7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119506050"
 ---
-# <a name="iwmplibraryisidentical-method"></a>Iwmplibrary:: isidentical-Methode
+# <a name="iwmplibraryisidentical-method"></a>IWMPLibrary::isIdentical-Methode
 
-Die **isidentical** -Methode gibt einen Wert zurück, der angibt, ob das angegebene Objekt mit dem aktuellen-Objekt identisch ist.
+Die **isIdentical-Methode** gibt einen Wert zurück, der angibt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,16 +53,16 @@ Implements IWMPLibrary.isIdentical
 
 <dl> <dt>
 
-*piwmplibrary* \[ in\]
+*pIWMPLibrary* \[ In\]
 </dt> <dd>
 
-Eine **WMPLib. iwmplibrary** -Schnittstelle, die das Objekt darstellt, das mit dem aktuellen verglichen werden soll.
+Eine **WMPLib.IWMPLibrary-Schnittstelle,** die das Objekt darstellt, das mit der aktuellen verglichen werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **System. Boolean** -Wert, der das Ergebnis des Vergleichs ist. Der Wert **true** gibt an, dass die Objekte identisch sind.
+Ein **System.Boolean,** der das Ergebnis des Vergleichs ist. Der Wert **true** gibt an, dass die Objekte identisch sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Ein **System. Boolean** -Wert, der das Ergebnis des Vergleichs ist. Der Wert **t
 
 <dl> <dt>
 
-[**Iwmplibrary-Schnittstelle (VB und c#)**](iwmplibrary--vb-and-c.md)
+[**IWMPLibrary-Schnittstelle (VB und C#)**](iwmplibrary--vb-and-c.md)
 </dt> </dl>
 
  

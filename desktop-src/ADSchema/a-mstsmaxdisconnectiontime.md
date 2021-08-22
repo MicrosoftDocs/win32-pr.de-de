@@ -1,11 +1,11 @@
 ---
-title: MS-TS-Max-disconnection-Time-Attribut
-description: Die maximale Verbindungs Dauer der Terminaldienste-Sitzung ist die maximale Zeitspanne in Minuten, die eine getrennte Terminaldienste-Sitzung auf dem Terminal Server aktiv bleibt.
+title: ms-TS-Max-Disconnection-Time-Attribut
+description: Die maximale Trennungszeit der Terminaldienstesitzung ist die maximale Zeitspanne in Minuten, in der eine nicht verbundene Terminaldienstesitzung auf dem Terminalserver aktiv bleibt.
 ms.assetid: 2da72cf8-0be1-4766-a997-f540cd99e4e7
 ms.tgt_platform: multiple
 keywords:
-- MS-TS-Max-disconnection-Time-Attribut AD-Schema
-- AD-Schema für das mstsmaxdisconnectiontime-Attribut
+- MS-TS-Max-Disconnection-Time-Attribut AD-Schema
+- MSTSMaxDisconnectionTime-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 46a846454ab450968b854a815d546c33588a1afb
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 522201425122ebf525c2ba4bbcc3c4f20a43fafea894082c14aab4a71048ae06
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957476"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119508090"
 ---
-# <a name="ms-ts-max-disconnection-time-attribute"></a>MS-TS-Max-disconnection-Time-Attribut
+# <a name="ms-ts-max-disconnection-time-attribute"></a>ms-TS-Max-Disconnection-Time-Attribut
 
-Die maximale Verbindungs Dauer der Terminaldienste-Sitzung ist die maximale Zeitspanne in Minuten, die eine getrennte Terminaldienste-Sitzung auf dem Terminal Server aktiv bleibt.
+Die maximale Trennungszeit der Terminaldienstesitzung ist die maximale Zeitspanne in Minuten, in der eine nicht verbundene Terminaldienstesitzung auf dem Terminalserver aktiv bleibt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-TS-Max-disverbindungszeit         |
-| LDAP-Display-Name | mstsmaxdisconnectiontime             |
+| CN                | ms-TS-Max-Disconnection-Time         |
+| Ldap-Anzeigename | msTSMaxDisconnectionTime             |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1981              |
-| System-ID-GUID    | 3267089-53d8-4784-B814-46d8535110d2 |
+| System-ID-GUID    | 326f7089-53d8-4784-b814-46d8535110d2 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -55,10 +55,10 @@ Die maximale Verbindungs Dauer der Terminaldienste-Sitzung ist die maximale Zeit
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -76,10 +76,10 @@ Die maximale Verbindungs Dauer der Terminaldienste-Sitzung ist die maximale Zeit
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -97,10 +97,10 @@ Die maximale Verbindungs Dauer der Terminaldienste-Sitzung ist die maximale Zeit
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |

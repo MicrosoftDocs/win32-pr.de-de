@@ -1,8 +1,8 @@
 ---
-description: Gibt die Liste der gespeicherten Sicherungs Konfigurationsdateien zurück, die wieder hergestellt werden können.
+description: Gibt die Liste der gespeicherten Sicherungskonfigurationsdateien zurück, die wiederhergestellt werden können.
 ms.assetid: 9487c50e-ef3b-425f-92ef-0614290e9af4
 ms.tgt_platform: multiple
-title: Listbackups-Methode der Steuerelement Klasse
+title: ListBackups-Methode der Control-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - BEvtCol.exe
-ms.openlocfilehash: 858fb7ee38b7875426ae31172618ad8ac60510ed
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ba6a3f042a6bd8f01e4bede00e22bda95ca28ebe7cc2beb33a12c6b49deba6bf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104125839"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119589120"
 ---
-# <a name="listbackups-method-of-the-control-class"></a>Listbackups-Methode der Steuerelement Klasse
+# <a name="listbackups-method-of-the-control-class"></a>ListBackups-Methode der Control-Klasse
 
-Gibt die Liste der gespeicherten Sicherungs Konfigurationsdateien zurück, die wieder hergestellt werden können.
+Gibt die Liste der gespeicherten Sicherungskonfigurationsdateien zurück, die wiederhergestellt werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,38 +44,38 @@ void ListBackups(
 
 <dl> <dt>
 
-*Originaltimestamplow* \[ vorgenommen\]
+*OriginalTimestampLow* \[ out\]
 </dt> <dd>
 
-Der Zeitstempel, zu dem die aktuelle Konfiguration festgelegt wurde (wenn Sie von einer Sicherung wieder hergestellt wird, enthält den ursprünglichen Zeitstempel). Dies ist der niedrige Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
+Der Zeitstempel des Zeitpunkts, zu dem die aktuelle Konfiguration festgelegt wurde (wenn sie aus der Sicherung wiederhergestellt wurde, enthält den ursprünglichen Zeitstempel). Dies ist der untere Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
 
 </dd> <dt>
 
-*Originaltimestamphigh* \[ vorgenommen\]
+*OriginalTimestampHigh* \[ out\]
 </dt> <dd>
 
-Der Zeitstempel, zu dem die aktuelle Konfiguration festgelegt wurde (wenn Sie von einer Sicherung wieder hergestellt wird, enthält den ursprünglichen Zeitstempel). Dies ist der große Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
+Der Zeitstempel des Zeitpunkts, zu dem die aktuelle Konfiguration festgelegt wurde (wenn sie aus der Sicherung wiederhergestellt wurde, enthält den ursprünglichen Zeitstempel). Dies ist der hohe Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
 
 </dd> <dt>
 
-*Dateien* \[ vorgenommen\]
+*Dateien* \[ out\]
 </dt> <dd>
 
-Die Liste der verfügbaren Sicherungsdateien, von der neuesten zum ältesten.
+Die Liste der verfügbaren Sicherungsdateien in der Reihenfolge von der neuesten bis zur ältesten.
 
 </dd> <dt>
 
-*Filestimestamplow* \[ vorgenommen\]
+*FilesTimestampLow* \[ out\]
 </dt> <dd>
 
-Für jede Sicherungsdatei der Zeitstempel, zu dem die Konfiguration festgelegt wurde. Dies ist der niedrige Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
+Für jede Sicherungsdatei der Zeitstempel des Zeitpunkts, zu dem die Konfiguration festgelegt wurde. Dies ist der untere Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
 
 </dd> <dt>
 
-*Filestimestamphigh* \[ vorgenommen\]
+*FilesTimestampHigh* \[ out\]
 </dt> <dd>
 
-Für jede Sicherungsdatei der Zeitstempel, zu dem die Konfiguration festgelegt wurde. Dies ist der große Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
+Für jede Sicherungsdatei der Zeitstempel des Zeitpunkts, zu dem die Konfiguration festgelegt wurde. Dies ist der hohe Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
 
 </dd> </dl>
 
@@ -89,10 +89,10 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                       |
-| Namespace<br/>                | Stammverzeichnis von \\ Microsoft \\ Windows \\ booteventcollector<br/>                                              |
-| MOF<br/>                      | <dl> <dt>Booteventcollector WMI. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ Microsoft \\ Windows \\ BootEventCollector<br/>                                              |
+| MOF<br/>                      | <dl> <dt>BootEventCollectorWMI.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>BEvtCol.exe</dt> </dl>               |
 
 

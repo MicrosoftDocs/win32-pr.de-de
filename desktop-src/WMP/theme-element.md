@@ -1,75 +1,75 @@
 ---
-title: Design-Element
-description: Design-Element
+title: THEME-Element
+description: THEME-Element
 ms.assetid: fe7e793e-1774-412c-aed2-721ed2cf1bb3
 keywords:
-- Windows Media Player Skins, Theme-Element
-- Skins, Theme-Element
-- Design-Element
-- Verweis für Skins, Theme-Element
-- Elemente, Design
+- Windows Media Player Skins, THEME-Element
+- skins,THEME-Element
+- THEME-Element
+- Referenz für Skins, THEME-Element
+- elements,THEME
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b8cd0d40b4b020cf5416569417401af9e4f3a33b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0c15091ffa93e3ae64a06979580931c27bdf4c1cd2e26c7acc206d76de8b0fc4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119507390"
 ---
-# <a name="theme-element"></a>Design-Element
+# <a name="theme-element"></a>THEME-Element
 
-Das **Designelement ist das Element** auf der übergeordneten Ebene eines Skin und enthält mindestens ein **Ansichts** Element, das wiederum alle anderen Elemente in einer Skin enthält. Innerhalb von Skriptcode wird **auf das Design** Element über das **globale Design** -Attribut und nicht über einen durch ein **ID** -Attribut angegebenen Namen zugegriffen, der vom Design **-Element nicht** unterstützt wird.
+Das **THEME-Element** ist das Element auf übergeordneter Ebene einer Skin und enthält mindestens ein **VIEW-Element,** das wiederum alle anderen Elemente in einer Skin enthält. Innerhalb des Skriptcodes erfolgt der Zugriff auf das **THEME-Element** über das globale **Designattribut** und nicht über einen Namen, der durch ein **ID-Attribut** angegeben wird, was vom **THEME-Element** nicht unterstützt wird.
 
-Das **Theme** -Element unterstützt die folgenden Attribute.
+Das **THEME-Element** unterstützt die folgenden Attribute.
 
 
 
-| Attribut                                | BESCHREIBUNG                                                                                                                     |
+| attribute                                | Beschreibung                                                                                                                     |
 |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| [Schrift](theme-author.md)               | Gibt den Namen des Autors der Skin an oder ruft ihn ab.                                                                      |
-| [authorversion](theme-authorversion.md) | Gibt die vom Autor zugewiesene Versionsnummer der Skin an oder ruft diese ab.                                                |
-| [Copyright](theme-copyright.md)         | Gibt die Copyright Zeichenfolge für die Skin an oder ruft Sie ab.                                                                       |
-| [currentViewID](theme-currentviewid.md) | Gibt die aktuell angezeigte **Ansicht** an oder ruft Sie ab.                                                                        |
-| [title](theme-title.md)                 | Gibt den Titel der Skin an oder ruft ihn ab.                                                                                   |
-| [version](theme-version.md)             | Gibt die Windows Media Player-Versionsnummer an, für die die Skin erstellt wurde, oder ruft Sie ab. Kann nur zur Entwurfszeit festgelegt werden. |
+| [Autor](theme-author.md)               | Gibt den Namen des Erstellers der Skin an oder ruft den Namen ab.                                                                      |
+| [authorVersion](theme-authorversion.md) | Gibt die Versionsnummer der Skin an, die vom Autor zugewiesen wurde, oder ruft sie ab.                                                |
+| [Copyright](theme-copyright.md)         | Gibt die Copyrightzeichenfolge für die Skin an oder ruft sie ab.                                                                       |
+| [currentViewID](theme-currentviewid.md) | Gibt die aktuell angezeigte **VIEW** an oder ruft sie ab.                                                                        |
+| [title](theme-title.md)                 | Gibt den Titel der Skin an oder ruft sie ab.                                                                                   |
+| [version](theme-version.md)             | Gibt die Windows Media Player Versionsnummer an, für die die Skin erstellt wurde, oder ruft sie ab. Kann nur zur Entwurfszeit festgelegt werden. |
 
 
 
- 
+ 
 
-Das **Theme** -Element unterstützt die folgenden Methoden.
+Das **THEME-Element** unterstützt die folgenden Methoden.
 
 
 
-| Methode                                         | BESCHREIBUNG                                                                                                     |
+| Methode                                         | Beschreibung                                                                                                     |
 |------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| [Close View](theme-closeview.md)               | Schließt eine geöffnete **Ansicht**.                                                                                        |
-| [loadpreference](theme-loadpreference.md)     | Lädt eine Präferenz aus der Registrierung.                                                                           |
-| [logstring](theme-logstring.md)               | Protokolliert eine benutzerdefinierte Zeichenfolge in der Fehler Datei, wenn die Protokollierung aktiviert ist.                                            |
-| [OpenDialog](theme-opendialog.md)             | Öffnet ein Datei Dialogfeld.                                                                                        |
-| [OpenView –](theme-openview.md)                 | Öffnet eine **Ansicht** in einem neuen Fenster.                                                                               |
-| [openviewrelative](theme-openviewrelative.md) | Öffnet eine **Ansicht** in einem neuen Fenster an einer angegebenen Anfangsposition relativ zur oberen linken Ecke der Skin. |
-| [PlaySound](theme-playsound.md)               | Gibt die angegebene Audiodatei wieder.                                                                                 |
-| [savepreference](theme-savepreference.md)     | Speichert eine Einstellung in der Registrierung.                                                                             |
-| [showerrordialog](theme-showerrordialog.md)   | Zeigt das Dialogfeld Standardfehler an.                                                                         |
+| [closeView](theme-closeview.md)               | Schließt eine geöffnete **VIEW -Ansicht.**                                                                                        |
+| [loadPreference](theme-loadpreference.md)     | Lädt eine Einstellung aus der Registrierung.                                                                           |
+| [logString](theme-logstring.md)               | Protokolliert eine benutzerdefinierte Zeichenfolge in der Fehlerdatei, wenn die Protokollierung aktiviert ist.                                            |
+| [openDialog](theme-opendialog.md)             | Öffnet ein Dateidialogfeld.                                                                                        |
+| [Openview](theme-openview.md)                 | Öffnet eine **ANSICHT** in einem neuen Fenster.                                                                               |
+| [openViewRelative](theme-openviewrelative.md) | Öffnet eine **ANSICHT** in einem neuen Fenster an einer angegebenen Anfangsposition relativ zur oberen linken Ecke der Skin. |
+| [Playsound](theme-playsound.md)               | Gibt die angegebene Sounddatei wieder.                                                                                 |
+| [savePreference](theme-savepreference.md)     | Speichert eine Einstellung in der Registrierung.                                                                             |
+| [showErrorDialog](theme-showerrordialog.md)   | Zeigt das Standardfehlerdialogfeld an.                                                                         |
 
 
 
- 
+ 
 
-Das **Theme** -Element unterstützt keine Ereignishandler.
+Das **THEME-Element** unterstützt keine Ereignishandler.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Referenz zur Skin-Programmierung**](skin-programming-reference.md)
+[**Referenz zur Skinprogrammierung**](skin-programming-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: 'ID3DXMATRIXStack::TranslateLocal-Methode (D3dx9math.h): Bestimmt das Produkt der berechneten Übersetzungsmatrix, die durch die angegebenen Faktoren (x, y und z) und die aktuelle Matrix bestimmt wird.'
+description: 'ID3DXMATRIXStack::TranslateLocal-Methode (D3dx9math.h): Bestimmt das Produkt der berechneten Übersetzungsmatrix, das durch die angegebenen Faktoren (x, y und z) und die aktuelle Matrix bestimmt wird.'
 ms.assetid: d4752a6c-2114-4016-a69f-dcc561d2c76b
 title: ID3DXMATRIXStack::TranslateLocal-Methode (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: b9badd4b01d1245247766c750e2a2ea1f266d9e1
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 39984fa20ab0fa84d9b22b86fade2eb59277dd6a919c5bfa8d8a52efd33b1cee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108107368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493120"
 ---
 # <a name="id3dxmatrixstacktranslatelocal-method-d3dx9mathh"></a>ID3DXMATRIXStack::TranslateLocal-Methode (D3dx9math.h)
 
-Bestimmt das Produkt der berechneten Übersetzungsmatrix, die durch die angegebenen Faktoren (x, y und z) und die aktuelle Matrix bestimmt wird.
+Bestimmt das Produkt der berechneten Übersetzungsmatrix, das durch die angegebenen Faktoren (x, y und z) und die aktuelle Matrix bestimmt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,7 +56,7 @@ Der Übersetzungsfaktor in x-Richtung.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Der Übersetzungsfaktor in der y-Richtung.
+Der Übersetzungsfaktor in y-Richtung.
 
 </dd> <dt>
 
@@ -65,7 +65,7 @@ Der Übersetzungsfaktor in der y-Richtung.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Der Übersetzungsfaktor in der Z-Richtung.
+Der Übersetzungsfaktor in z-Richtung.
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Der Übersetzungsfaktor in der Z-Richtung.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode multipliziert die aktuelle Matrix mit der berechneten Übersetzungsmatrix (die Transformation bezieht sich auf den lokalen Ursprung des Objekts).
+Diese Methode multipliziert die aktuelle Matrix links mit der berechneten Übersetzungsmatrix (die Transformation geht um den lokalen Ursprung des Objekts).
 
 
 ```
@@ -93,14 +93,14 @@ m_stack[m_currentPos] = tmp * m_stack[m_currentPos];
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

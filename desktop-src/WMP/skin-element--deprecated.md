@@ -1,9 +1,9 @@
 ---
-title: Skin-Element (veraltet)
-description: Diese Seite dokumentiert eine Funktion, die in zukünftigen Versionen von Windows Media Player und dem Windows Media Player SDK möglicherweise nicht verfügbar ist.
+title: SKIN-Element (veraltet)
+description: Auf dieser Seite wird ein Feature dokumentiert, das in zukünftigen Versionen von Windows Media Player und des Windows Media Player SDK möglicherweise nicht verfügbar ist.
 ms.assetid: 593244c1-f850-46d7-8b84-14dcd59b024e
 keywords:
-- Skin-Element (veraltet) Windows-Media Player
+- SKIN-Element (veraltet) Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: abf503706dec131eef411ebaf3625071e2b31098
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b868b756ed190301c66987b6e26249762bac71842f4a5425d6d7c6d4b16816a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119507910"
 ---
-# <a name="skin-element-deprecated"></a>Skin-Element (veraltet)
+# <a name="skin-element-deprecated"></a>SKIN-Element (veraltet)
 
-Diese Seite dokumentiert eine Funktion, die in zukünftigen Versionen von Windows Media Player und dem Windows Media Player SDK möglicherweise nicht verfügbar ist.
+Auf dieser Seite wird ein Feature dokumentiert, das in zukünftigen Versionen von Windows Media Player und des Windows Media Player SDK möglicherweise nicht verfügbar ist.
 
-Das **Skin** -Element gibt eine URL zu einem Rahmen an.
+Das **SKIN-Element** gibt eine URL zu einem Rahmen an.
 
 ``` syntax
 <SKIN
@@ -34,17 +34,17 @@ Das **Skin** -Element gibt eine URL zu einem Rahmen an.
 
 ## <a name="attributes"></a>Attribute
 
-**Href** (erforderlich)
+**HREF** (erforderlich)
 
-URL für eine komprimierte Rahmen Datei mit der Dateinamenerweiterung. WMZ. Für Windows Media Player 9-Serie oder höher kann dieser Wert nur auf Border-Dateien auf der Festplatte des Benutzers verweisen, die sich im gleichen Verzeichnis wie die Metadatendatei-Wiedergabeliste befindet. Weitere Informationen finden Sie im Beispielcode.
+URL für eine komprimierte Rahmendatei mit der Dateinamenerweiterung .wmz. Für Windows Media Player Serie 9 oder höher kann dieser Wert nur auf Rahmendateien auf der Festplatte des Benutzers verweisen, die sich im gleichen Verzeichnis wie die Wiedergabeliste der Metadatei befinden. Sehen Sie sich den Beispielcode an.
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy       | Elemente |
 |-----------------|----------|
-| Übergeordnete Elemente | **ASX**  |
+| Übergeordnete Elemente | **Asx**  |
 | Untergeordnete Elemente  | Keine     |
 
 
@@ -53,17 +53,17 @@ URL für eine komprimierte Rahmen Datei mit der Dateinamenerweiterung. WMZ. Für
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das **Skin** -Element wird zum Erstellen eines Rahmens verwendet, der mit einer Skin vergleichbar ist, aber im Bereich **jetzt Wiedergabe** der Windows-Media Player im Vollmodus angezeigt wird. Das **Skin** -Element wird nur für Rahmen verwendet, die innerhalb des Windows-Media Player im Vollmodus angezeigt werden, und nicht für reguläre Skins, die den Windows-Media Player im Compact-Modus vollständig ersetzen.
+Das **SKIN-Element** wird verwendet, um einen Rahmen zu erstellen, der einer Skin ähnelt, aber im Bereich **Jetzt wiedergegeben** des vollständigen Modus Windows Media Player angezeigt wird. Das **SKIN-Element** wird nur für Rahmen verwendet, die im vollständigen Modus Windows Media Player angezeigt werden, und nicht für reguläre Skins, die den kompakten Modus vollständig ersetzen Windows Media Player.
 
-In einem Windows Media-Download Paket (mit der Dateinamenerweiterung ". WMD") ermöglicht das **Skin** -Element einem Rahmen, Inhalte zu erhalten und mit anderen Websites zu verknüpfen. Das Windows Media-Download Paket ist eine komprimierte Datei, die eine Rahmen Datei und eine Windows Media-Metadatendatei enthält. Die Rahmen Datei (mit der Dateinamenerweiterung. wmz) ist komprimiert und enthält eine Skin-Definitionsdatei (mit der Dateinamenerweiterung. WMS).
+In einem Windows Mediendownloadpaket (mit der Dateinamenerweiterung .wmd) ermöglicht das **SKIN-Element** einem Rahmen, Inhalte und Links zu anderen Websites zu erhalten. Das Windows Mediendownloadpaket ist eine komprimierte Datei, die eine Rahmendatei und eine Windows Media-Metadatei enthält. Die Rahmendatei (mit der Dateinamenerweiterung ".wmz") ist komprimiert und enthält eine Skindefinitionsdatei (mit der Dateinamenerweiterung WMS).
 
-Ein **Skin** -Element hat drei Komponenten:
+Ein **SKIN-Element** umfasst drei Komponenten:
 
--   Ein Skin
--   Inhalt
+-   Eine Skin
+-   Einige Inhalte
 -   Eine Metadatei
 
-In Windows Media-Download Paketen enthaltene Skins müssen rechteckig in Form sein. Das Erstellen von Rahmen mit nicht rechteckigen Skins kann zu unerwarteten Ergebnissen führen.
+Skins, die in Windows Mediendownloadpaketen enthalten sind, müssen rechteckig sein. Das Erstellen von Rahmen mit nicht rechteckigen Skins kann zu unerwarteten Ergebnissen führen.
 
 ## <a name="examples"></a>Beispiele
 
@@ -91,7 +91,7 @@ In Windows Media-Download Paketen enthaltene Skins müssen rechteckig in Form se
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 70 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 70 oder höher<br/> |
 
 
 
@@ -99,13 +99,13 @@ In Windows Media-Download Paketen enthaltene Skins müssen rechteckig in Form se
 
 <dl> <dt>
 
-[**Rahmen für Windows-Media Player (veraltet)**](borders-for-windows-media-player--deprecated.md)
+[**Rahmen für Windows Media Player (veraltet)**](borders-for-windows-media-player--deprecated.md)
 </dt> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Metadateien**](windows-media-metafile-reference.md)
+[**Windows Referenz zu Medienmetadateien**](windows-media-metafile-reference.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: gllinestippel-Funktion (GL. h)
-description: Die gllinestippel-Funktion gibt das Zeilen stippingmuster an.
+title: glLineStipple-Funktion (Gl.h)
+description: Die glLineStipple-Funktion gibt das Zeilenausschnittmuster an.
 ms.assetid: 256d968c-9e72-4aec-9faf-afe70f1087a8
 keywords:
-- gllinestippel-Funktion OpenGL
+- glLineStipple-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b47202b25c0779a3daa0bd801900b1d29e0b37b6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 33f350611afa0621c1bf883e8f2ac7dc24e50362912296f15d1443e2c638b7bf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739800"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493020"
 ---
-# <a name="gllinestipple-function"></a>gllinestippel-Funktion
+# <a name="gllinestipple-function"></a>glLineStipple-Funktion
 
-Die **gllinestippel** -Funktion gibt das Zeilen stippingmuster an.
+Die **glLineStipple-Funktion** gibt das Zeilenausschnittmuster an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ void WINAPI glLineStipple(
 
 <dl> <dt>
 
-*gebend* 
+*Faktor* 
 </dt> <dd>
 
-Ein Multiplikator für jedes Bit im Zeilen stippingmuster. Wenn der *Faktor* z. b. 3 ist, wird jedes Bit im Muster dreimal verwendet, bevor das nächste Bit im Muster verwendet wird. Der *Faktor* Parameter wird an den Bereich \[ 1, 256 und der \] Standardwert auf einen Wert gebunden.
+Ein Multiplikator für jedes Bit im Zeilenausschnittmuster. Wenn *der Faktor* beispielsweise 3 ist, wird jedes Bit im Muster dreimal verwendet, bevor das nächste Bit im Muster verwendet wird. Der *Factor-Parameter* ist an den Bereich \[ 1, 256 und \] standardmäßig auf 1 festgelegt.
 
 </dd> <dt>
 
 *pattern* 
 </dt> <dd>
 
-Eine 16-Bit-Ganzzahl, deren Bitmuster bestimmt, welche Fragmente einer Linie gezeichnet werden, wenn die Linie gerengt wird. Zuerst wird Bit 0 verwendet, und das Standardmuster ist.
+Eine 16-Bit-Ganzzahl, deren Bitmuster bestimmt, welche Fragmente einer Linie gezeichnet werden, wenn die Linie rastert wird. Bit 0 wird zuerst verwendet, und das Standardmuster ist alle.
 
 </dd> </dl>
 
@@ -61,33 +61,33 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **gllinestippel** -Funktion gibt das Zeilen stippingmuster an. Zeilen stippling maskiert bestimmte Fragmente, die von der rasterization erzeugt werden. Diese Fragmente werden nicht gezeichnet. Die Maskierung wird durch die Verwendung von drei Parametern erreicht: das Muster *Muster* für 16-Bit-Zeilen Stippel, der Wiederholungs Zähler *Faktor* und ein ganzzahliger stippingzähler *.*
+Die **glLineStipple-Funktion** gibt das Zeilenausschnittmuster an. Zeilenausschnitt maskiert bestimmte Fragmente, die durch Rasterung erzeugt werden. diese Fragmente werden nicht gezeichnet. Die Maskierung wird mithilfe von drei Parametern erreicht: dem 16-Bit-Muster des Zeilenausschnittmusters, dem Faktor für die Wiederholungsanzahl und einem ganzzahligen Ausschnittzähler *s*.  
 
-Der Wert für " *s* " wird auf 0 (null) zurückgesetzt, wenn " [**glBegin**](glbegin.md) " aufgerufen wird und bevor jedes Liniensegment einer **glBegin**(GL \_ Lines)/**glEnd** -Sequenz generiert wird. Sie wird inkrementiert, nachdem jedes Fragment eines Einheiten Bereichs mit einem einzelnen Zeilen Segment generiert wurde, oder nachdem die einzelnen *i* -Fragmente eines *i* -breiten Linien Segments generiert wurden. Die der Anzahl *s* zugeordneten *i* -Fragmente werden maskiert, wenn der *Pattern* -Bit (*s*-  /  *Faktor*) mod 16 0 (null) ist. Andernfalls werden diese Fragmente an den Framebuffer-Puffer gesendet. Bit 0 (null) des *Musters* ist das am wenigsten bedeutende Bit.
+Leistungsindikatoren *werden* immer dann auf 0 (null) zurückgesetzt, wenn [**glBegin**](glbegin.md) aufgerufen wird, und bevor jedes Liniensegment einer **glBegin**(GL \_ LINES)/glEnd-Sequenz generiert wird. Sie wird inkrementiert, nachdem jedes Fragment eines Liniensegments mit Einheitenbreite  mit Alias oder jedes *i-Fragment* eines Liniensegments mit i Breite generiert wurde. Die i-Fragmente, die count *s* zugeordnet sind, werden maskiert, wenn *pattern* bit (*s*   /  *factor*) mod 16 0 (null) ist. Andernfalls werden diese Fragmente an den Framepuffer gesendet. Bit 0 *(null)* des Musters ist das am wenigsten signifikante Bit.
 
-Antialiasing-Zeilen werden als Sequenz von 1X-*breiten* Rechtecke für stippling behandelt. Die *Rechtecke* sind rasterisiert oder nicht basierend auf der fragmentregel, die für Alias Zeilen beschrieben wird. Sie zählt anstelle von Gruppen von Fragmenten Rechtecke.
+Antialiasinglinien werden zum Ausschnitt als Sequenz von Rechtecke mit einer Breite von 1 x behandelt. *Rechtecksyntisieren* oder nicht basierend auf der für Aliaslinien beschriebenen Fragmentregel. sie zählt Rechtecke anstelle von Gruppen von Fragmenten.
 
-Das Zeilen stippling ist mit " [**glEnable**](glenable.md) " und " **glEnable** " mit dem Argument "GL \_ Line Stippel" aktiviert oder deaktiviert \_ . Wenn diese Option aktiviert ist, wird das Zeilen stippingmuster wie oben beschrieben angewendet. Wenn diese Option deaktiviert ist, ist es so, als ob es sich um das Muster handelt. Anfänglich ist das Zeilen stippling deaktiviert.
+Zeilenausschnitte werden mithilfe von [**glEnable**](glenable.md) und **glDisable** mit dem Argument GL \_ LINE \_ STIPPLE aktiviert oder deaktiviert. Wenn diese Option aktiviert ist, wird das Zeilenausschnittmuster wie oben beschrieben angewendet. Wenn sie deaktiviert ist, ist dies so, als ob es sich bei dem Muster um ein Muster handelte. Anfangs ist der Zeilenausschnitt deaktiviert.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **gllinestippel** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glLineStipple ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument-GL- \_ Zeilen \_ stippingmuster \_
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ LINE \_ STIPPLE \_ PATTERN
 
-**glget** mit dem Argument GL \_ Zeilen \_ Stippel \_ Wiederholen
+**glGet** mit Argument GL \_ LINE \_ STIPPLE \_ REPEAT
 
-[**glisenabled**](glisenabled.md) mit Argument GL- \_ Zeilen \_ Stippel
+[**glIsEnabled mit**](glisenabled.md) Argument GL \_ LINE \_ STIPPLE
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,8 +97,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **gllinest
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -116,7 +116,7 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **gllinest
 [**glLineWidth**](gllinewidth.md)
 </dt> <dt>
 
-[**glpolygonstippel**](glpolygonstipple.md)
+[**glPolygonStipple**](glpolygonstipple.md)
 </dt> </dl>
 
  
