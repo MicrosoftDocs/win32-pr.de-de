@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: bytescolumnvalue-Klasse'
-title: Bytescolumnvalue-Klasse
+description: Weitere Informationen finden Sie unter ByteColumnValue-Klasse.
+title: BytesColumnValue-Klasse
 TOCTitle: BytesColumnValue class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.BytesColumnValue
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.bytescolumnvalue(v=EXCHG.10)
@@ -24,25 +24,25 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8b430c4b619eb5c51576064aff20de03839b6cf4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 13e6ee735ba22027365681018182f72c94902605635c94230c843f1a9ff89644
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349582"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119366530"
 ---
-# <a name="bytescolumnvalue-class"></a>Bytescolumnvalue-Klasse
+# <a name="bytescolumnvalue-class"></a>BytesColumnValue-Klasse
 
 Ein Bytearray-Spaltenwert.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  [Microsoft. ISAM. ESENT. Interop. ColumnValue](./columnvalue-class.md)  
-    Microsoft. ISAM. ESENT. Interop. bytescolumnvalue  
+  [Microsoft.Isam.Esent.Interop.ColumnValue](./columnvalue-class.md)  
+    Microsoft.Isam.Esent.Interop.BytesColumnValue  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,10 +62,10 @@ public class BytesColumnValue : ColumnValue
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Bytescolumnvalue-Member](./bytescolumnvalue-members.md)
+[BytesColumnValue-Member](./bytescolumnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

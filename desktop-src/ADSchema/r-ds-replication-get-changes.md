@@ -1,10 +1,10 @@
 ---
-title: DS-Replication-Get-Changes Extended right
-description: Erweiterte Rechte, die zum Replizieren von Änderungen von einem bestimmten NC benötigt werden.
+title: DS-Replication-Get-Changes extended right
+description: Erweitertes Recht, das zum Replizieren von Änderungen von einem bestimmten NC erforderlich ist.
 ms.assetid: 83477f61-c14c-4304-88d2-e2f99ea486d9
 ms.tgt_platform: multiple
 keywords:
-- DS-Replication-Get-Changes Extended right AD Schema
+- DS-Replication-Get-Changes extended right AD Schema
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c14a91a0b0bc4792b162deb7992b8672afcc59da
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 1de99b14fb45501af0e10ab335f780f8c4527d46b3cf22e23fa174beafd12f86
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104123110"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119548670"
 ---
-# <a name="ds-replication-get-changes-extended-right"></a>DS-Replication-Get-Changes Extended right
+# <a name="ds-replication-get-changes-extended-right"></a>DS-Replication-Get-Changes extended right
 
-Erweiterte Rechte, die zum Replizieren von Änderungen von einem bestimmten NC benötigt werden.
+Erweitertes Recht, das zum Replizieren von Änderungen von einem bestimmten NC erforderlich ist.
 
 
 
@@ -30,14 +30,14 @@ Erweiterte Rechte, die zum Replizieren von Änderungen von einem bestimmten NC b
 |--------------|--------------------------------------|
 | CN           | DS-Replication-Get-Changes           |
 | Anzeigename | Replizieren von Verzeichnisänderungen        |
-| Rights-GUID  | 1131f -9c07-11d1-f c04fc2dcd2 |
+| Rechte-GUID  | 1131f6aa-9c07-11d1-f79f-00c04fc2dcd2 |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -50,19 +50,19 @@ Erweiterte Rechte, die zum Replizieren von Änderungen von einem bestimmten NC b
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 25                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 25                                                                                                                               |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 25                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 25                                                                                                                               |
 
 
 
@@ -72,8 +72,8 @@ Erweiterte Rechte, die zum Replizieren von Änderungen von einem bestimmten NC b
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 25                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 25                                                                                                                               |
 
 
 
@@ -83,8 +83,8 @@ Erweiterte Rechte, die zum Replizieren von Änderungen von einem bestimmten NC b
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 25                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 25                                                                                                                               |
 
 
 
@@ -94,8 +94,8 @@ Erweiterte Rechte, die zum Replizieren von Änderungen von einem bestimmten NC b
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 25                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 25                                                                                                                               |
 
 
 
@@ -105,8 +105,8 @@ Erweiterte Rechte, die zum Replizieren von Änderungen von einem bestimmten NC b
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 25                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 25                                                                                                                               |
 
 
 
@@ -116,8 +116,8 @@ Erweiterte Rechte, die zum Replizieren von Änderungen von einem bestimmten NC b
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 25                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 25                                                                                                                               |
 
 
 

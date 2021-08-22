@@ -1,12 +1,12 @@
 ---
-title: Delete-Methode der Win32_TSGatewayResourceAuthorizationPolicy-Klasse
-description: Löscht die aktuelle Remotedesktop-Ressourcenautorisierungsrichtlinie (RD \ 160; HIER WIRD DER 16.
+title: Delete-Methode der Win32_TSGatewayResourceAuthorizationPolicy Klasse
+description: Löscht die aktuelle Remotedesktop Ressourcenautorisierungsrichtlinie (RD \ 160; RAP).
 ms.assetid: cbabb997-63b8-4a4c-9e16-34f2638fca97
 ms.tgt_platform: multiple
 keywords:
-- Delete-Methode Remotedesktopdienste
+- Delete-Remotedesktopdienste
 - Delete-Methode Remotedesktopdienste , Win32_TSGatewayResourceAuthorizationPolicy-Klasse
-- Win32_TSGatewayResourceAuthorizationPolicy-Klasse Remotedesktopdienste , Delete-Methode
+- Win32_TSGatewayResourceAuthorizationPolicy klasse Remotedesktopdienste , Delete-Methode
 topic_type:
 - apiref
 api_name:
@@ -26,7 +26,7 @@ ms.locfileid: "119513486"
 ---
 # <a name="delete-method-of-the-win32_tsgatewayresourceauthorizationpolicy-class"></a>Delete-Methode der Win32 \_ TSGatewayResourceAuthorizationPolicy-Klasse
 
-Löscht die aktuelle Remotedesktop-Ressourcenautorisierungsrichtlinie (RDRAP).
+Löscht die aktuelle Remotedesktop Resource Authorization Policy (RD RD RD).
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,13 +43,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,13 +59,13 @@ Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Man
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
 | MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -4,20 +4,20 @@ ms.assetid: c969b9c6-3068-43ae-9c1d-d606df2a1d0b
 title: United Kingdom
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bf04d909787d38e494488dd365528e1301013e82
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4c47df8b0b2aa17794e07f8f555ff05a6e77de50db7669d52c8bf1799cda682e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350321"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119315700"
 ---
 # <a name="united-kingdom"></a>United Kingdom
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die Häufigkeits Indizes in den Tabellen im Vereinigten Königreich sind nicht für die Verwendung als Kanalnummern geeignet.
+Die Häufigkeitsindizes in den Tabellen im Vereinigten Königreich eignen sich nicht für die Verwendung als Kanalnummern.
 
-### <a name="united-kingdom-broadcast-assignments"></a>Broadcast Zuweisungen im Vereinigten Königreich
+### <a name="united-kingdom-broadcast-assignments"></a>Broadcastzuweisungen in Großbritannien
 
 
 ```C++
@@ -99,7 +99,7 @@ Die Häufigkeits Indizes in den Tabellen im Vereinigten Königreich sind nicht f
 
 
 
-### <a name="united-kingdom-cable-assignments"></a>Kabel Zuweisungen im Vereinigten Königreich
+### <a name="united-kingdom-cable-assignments"></a>Kabelzuweisungen in Großbritannien
 
 
 ```C++
@@ -223,7 +223,7 @@ Die Häufigkeits Indizes in den Tabellen im Vereinigten Königreich sind nicht f
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale Analog TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

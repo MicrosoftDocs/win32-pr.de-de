@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INDEXLIST. Methode "destring"'
-title: JET_INDEXLIST. Methode "destring"
+description: 'Erfahren Sie mehr über: JET_INDEXLIST. ToString-Methode'
+title: JET_INDEXLIST. ToString-Methode
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_INDEXLIST.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_indexlist.tostring(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 02d5d777f3408fd9ca14617020f906a320e52dd8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0a16ae6646315012c6e237501c147e32ac9a1887f479a2adba8feb62e37e361c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217085"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119401630"
 ---
-# <a name="jet_indexlisttostring-method"></a>JET_INDEXLIST. Methode "destring"
+# <a name="jet_indexlisttostring-method"></a>JET_INDEXLIST. ToString-Methode
 
-Gibt eine [Zeichenfolge](/dotnet/api/system.string) zurück, die den aktuellen [JET_INDEXLIST](./jet-indexlist-class.md)darstellt.
+Gibt eine [Zeichenfolge](/dotnet/api/system.string) zurück, die die aktuelle [JET_INDEXLIST](./jet-indexlist-class.md)darstellt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Eine [Zeichenfolge](/dotnet/api/system.string) , die den aktuellen [JET_INDEXLIST](./jet-indexlist-class.md)darstellt.  
+Typ: [System.String](/dotnet/api/system.string)  
+Eine [Zeichenfolge,](/dotnet/api/system.string) die die aktuelle [JET_INDEXLIST](./jet-indexlist-class.md)darstellt.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_INDEXLIST-Klasse](./jet-indexlist-class.md)
 
-[Mitglieder JET_INDEXLIST](./jet-indexlist-members.md)
+[JET_INDEXLIST-Member](./jet-indexlist-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

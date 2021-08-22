@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung zwischen einem logischen Gerät und einem Protokoll Controller dar, der mit dem Gerät verbunden ist.
+description: Stellt eine Zuordnung zwischen einem logischen Gerät und einem Protokollcontroller dar, der mit dem Gerät verbunden ist.
 ms.assetid: 1a1efc60-6108-4376-9f73-d2dd41443645
 title: CIM_ProtocolControllerForDevice-Klasse
 ms.topic: reference
@@ -18,16 +18,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 7d3ef7799cccc6e8fe8e219cddfba37cf12b8637
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0f525e3e1c3576c1e0e5b15b5eeb0fa81afafb8cdaa0129ffe0bc09374a7e9fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866735"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148423"
 ---
-# <a name="cim_protocolcontrollerfordevice-class"></a>CIM \_ protocolcontrollerfordevice-Klasse
+# <a name="cim_protocolcontrollerfordevice-class"></a>CIM \_ ProtocolControllerForDevice-Klasse
 
-Stellt eine Zuordnung zwischen einem logischen Gerät und einem Protokoll Controller dar, der mit dem Gerät verbunden ist.
+Stellt eine Zuordnung zwischen einem logischen Gerät und einem Protokollcontroller dar, der mit dem Gerät verbunden ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,39 +45,39 @@ class CIM_ProtocolControllerForDevice : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ protocolcontrollerfordevice** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ProtocolControllerForDevice-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ protocolcontrollerfordevice** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ProtocolControllerForDevice-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Accesspriority**
+**AccessPriority**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Zugriffs Priorität, die dem Gerät über den Protokoll Controller zugewiesen wird. Die höchste Priorität hat den niedrigsten Wert.
+Die Zugriffspriorität, die dem Gerät über den Protokollcontroller erteilt wird. Die höchste Priorität hat den niedrigsten Wert.
 
 </dd> <dt>
 
-**Accessstate**
+**AccessState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zugriff auf das logische Gerät über den Protokoll Controller
+Zugriff auf das logische Gerät über den Protokollcontroller
 
 <dt>
 
@@ -104,37 +104,37 @@ Der Zugriff auf das logische Gerät über den Protokoll Controller
 
 <span id="Replication_In_Progress"></span><span id="replication_in_progress"></span><span id="REPLICATION_IN_PROGRESS"></span>
 
-**Replikation** wird ausgeführt (4)
+**Replikation wird in Bearbeitung** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Mapping_Inconsistency"></span><span id="mapping_inconsistency"></span><span id="MAPPING_INCONSISTENCY"></span>
 
-**Mapping-Inkonsistenz** (5)
+**Zuordnungsinkonsistenz** (5)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ protocolcontroller**
+Datentyp: **CIM \_ ProtocolController**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
-Der Protokoll Controller in der Zuordnung.
+Der Protokollcontroller in der Zuordnung.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalDevice**
@@ -143,14 +143,14 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
 Das logische Gerät in der Zuordnung.
 
 </dd> <dt>
 
-**Devicengegen ber**
+**DeviceNumber**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -159,7 +159,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Adresse des zugeordneten Geräts im Kontext des Protokoll Controllers.
+Die Adresse des zugeordneten Geräts im Kontext des Protokollsteuerers.
 
 </dd> </dl>
 
@@ -172,16 +172,16 @@ Die Adresse des zugeordneten Geräts im Kontext des Protokoll Controllers.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Gibt die Vererbungs Beziehung für einen Dienst an.
+description: Gibt die Vererbungsbeziehung für einen Dienst an.
 ms.assetid: e7f5314a-75e8-4f36-8e18-d614eda7a097
-title: WPD_SERVICE_INHERITANCE_TYPES-Enumeration (portabledevice. h)
+title: WPD_SERVICE_INHERITANCE_TYPES -Enumeration (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: ad9115bf7bb0912362455986e77d5792cceec3b7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5a0e69986e7415a5a12eca7c450b0d7ff064c650d33c35997b9a166b01592c41
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369565"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119444800"
 ---
-# <a name="wpd_service_inheritance_types-enumeration"></a>\_ \_ Enumeration der Vererbungs \_ Typen für WPD-Dienste
+# <a name="wpd_service_inheritance_types-enumeration"></a>WPD \_ SERVICE \_ INHERITANCE \_ TYPES-Enumeration
 
-Der Enumerationstyp der **WPD- \_ Dienst \_ Vererbung \_** gibt die Vererbungs Beziehung für einen Dienst an.
+Der **WPD \_ SERVICE INHERITANCE \_ TYPES-Enumerationstyp \_** gibt die Vererbungsbeziehung für einen Dienst an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ typedef enum tagWPD_SERVICE_INHERITANCE_TYPES {
 
 <dl> <dt>
 
-<span id="WPD_SERVICE_INHERITANCE_IMPLEMENTATION"></span><span id="wpd_service_inheritance_implementation"></span>**Implementierung der WPD- \_ Dienst \_ Vererbung \_**
+<span id="WPD_SERVICE_INHERITANCE_IMPLEMENTATION"></span><span id="wpd_service_inheritance_implementation"></span>**\_ \_ WPD-DIENSTVERERBUNGSIMPLEMENTIERUNG \_**
 </dt> <dd>
 
-Der Dienst erbt, indem er eine abstrakte Dienst Definition implementiert.
+Der Dienst erbt durch Implementieren einer abstrakten Dienstdefinition.
 
 </dd> </dl>
 
@@ -52,15 +52,15 @@ Der Dienst erbt, indem er eine abstrakte Dienst Definition implementiert.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Iportabletviceservicecapabili:: getinheritedservices**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getinheritedservices)
+[**IPortableDeviceServiceCapabilities::GetInheritedServices**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getinheritedservices)
 </dt> </dl>
 
  

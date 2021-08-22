@@ -1,40 +1,40 @@
 ---
-title: VML-Attribut "startarrowlength"
-description: VML-Attribut "startarrowlength"
+title: VML-Attribut "StartArrowLength"
+description: VML-Attribut "StartArrowLength"
 ms.assetid: 7c108132-4f74-41cc-bfac-123f0259e6cb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 90a57e10c9cf7b9a8683f4b1856355232afc16be
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 25446737118c546727d769d54d98e4503faaadd063102fa98a417ebea13c976d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390586"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119395830"
 ---
-# <a name="vml-startarrowlength-attribute"></a>VML-Attribut "startarrowlength"
+# <a name="vml-startarrowlength-attribute"></a>VML-Attribut "StartArrowLength"
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die Pfeilspitzen Länge für den Anfang einer Zeile. Lese-/Schreibzugriff. **Vgarrowheadlength**.
+Definiert die Pfeilspitzenlänge für den Anfang einer Linie. Lese-/Schreibzugriff. **VgArrowheadLength**.
 
 **Gilt für**
 
-[Stellung](msdn-online-vml-stroke-element.md)
+[Takt](msdn-online-vml-stroke-element.md)
 
 **Tagsyntax**
 
-<v: *Element* startarrowlength = " *Ausdruck* " >
+<v: *element* startwlwlength="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . startarrowlength = "*Ausdruck*"
+*element* .startwlength="*expression*"
 
-*Ausdruck* = *Element*. startarrowlength
+*expression* = *Element*.startwlwlength
 
 **Anmerkungen**
 
@@ -44,7 +44,7 @@ Mögliche Werte:
 -   Mittel (Standard)
 -   Long
 
-VML-Standard Attribut
+VML-Standardattribut
 
 **Beispiel**
 
@@ -60,6 +60,6 @@ Eine Linie wird mit einer kurzen klassischen Pfeilspitze am Anfang des Strichs g
 
 
 
- 
+ 
 
- 
+ 

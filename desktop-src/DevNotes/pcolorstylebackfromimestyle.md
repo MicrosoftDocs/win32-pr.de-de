@@ -1,7 +1,7 @@
 ---
-description: Ruft den Hintergrund Farbstil des angegebenen Stils ab.
+description: Ruft den Hintergrundfarbstil des angegebenen Stils ab.
 ms.assetid: 1b0acac1-c36d-49b6-8154-f69bda008e9a
-title: Pcolorstylebackfromimestyle-Funktion
+title: PColorStyleBackFromIMEStyle-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Imeshare.dll
-ms.openlocfilehash: 33ff9072fc5e850654f932817cd4ecf0e9372aad
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 86f7c5774767cf410f67fe79a741872c32874cbb92aafcefc2b08dbdc2904989
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351357"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119386640"
 ---
-# <a name="pcolorstylebackfromimestyle-function"></a>Pcolorstylebackfromimestyle-Funktion
+# <a name="pcolorstylebackfromimestyle-function"></a>PColorStyleBackFromIMEStyle-Funktion
 
-Ruft den Hintergrund Farbstil des angegebenen Stils ab.
+Ruft den Hintergrundfarbstil des angegebenen Stils ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,22 +39,22 @@ const IMECOLORSTY* __cdecl PColorStyleBackFromIMEStyle(
 
 <dl> <dt>
 
-*pimestyle* \[ in\]
+*pimestyle* \[ In\]
 </dt> <dd>
 
-Eine **imestyle** -Struktur, die von der [**pimestylefromattr**](pimestylefromattr.md) -Funktion zurückgegeben wird.
+Eine **IMESTYLE-Struktur,** die von der [**PIMEStyleFromAttr-Funktion zurückgegeben**](pimestylefromattr.md) wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine **imecolorsty** -Struktur, die den Hintergrund Farbstil darstellt.
+Zeiger auf eine **IMECOLORSTY-Struktur,** die den Hintergrundfarbstil darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
-Die **imecolorsty** -Struktur ist wie folgt definiert:
+Die **IMECOLORSTY-Struktur** ist wie folgt definiert:
 
 ``` syntax
 typedef struct {
@@ -78,11 +78,11 @@ typedef struct {
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Pimestylefromattr**](pimestylefromattr.md)
+[**PIMEStyleFromAttr**](pimestylefromattr.md)
 </dt> </dl>
 
  

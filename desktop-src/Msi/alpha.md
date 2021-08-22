@@ -1,22 +1,22 @@
 ---
-description: Die Alpha-Eigenschaft wird nur definiert, wenn Sie auf einem Alpha Prozessor ausgeführt wird.
+description: Die Alpha-Eigenschaft wird nur definiert, wenn sie auf einem Alphaprozessor ausgeführt wird.
 ms.assetid: f242fd6f-ae73-4ea6-9650-f2661440f61f
 title: Alpha-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a699f5d48d7cc21e51862630ebb8c246453cff69
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b6827ede2e675253984626849f5e0321ef1f9c8179a1c4a380dcd1cca0866417
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119315490"
 ---
 # <a name="alpha-property"></a>Alpha-Eigenschaft
 
-Die **Alpha** -Eigenschaft wird nur definiert, wenn Sie auf einem Alpha Prozessor ausgeführt wird. Der Installer legt ihn auf den Wert der numerischen Prozessor Ebene fest.
+Die **Alpha-Eigenschaft** wird nur definiert, wenn sie auf einem Alphaprozessor ausgeführt wird. Das Installationsprogramm legt ihn auf den Wert der numerischen Prozessorebene fest.
 
 > [!Note]  
-> Die Alpha Plattform wird von Windows Installer nicht unterstützt.
+> Die Alphaplattform wird von Windows Installer nicht unterstützt.
 
  
 
@@ -26,7 +26,7 @@ Die **Alpha** -Eigenschaft wird nur definiert, wenn Sie auf einem Alpha Prozesso
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Unter [Windows Installer Run-Time Requirements (Anforderungen für](windows-installer-portal.md) Windows Installer) finden Sie Informationen zu den mindest erforderlichen Windows Service Packs für eine Windows Installer-Version.<br/> |
 
 
 
@@ -37,7 +37,7 @@ Die **Alpha** -Eigenschaft wird nur definiert, wenn Sie auf einem Alpha Prozesso
 [Eigenschaften](properties.md)
 </dt> <dt>
 
-[**Vorlagen Zusammenfassungs Eigenschaft**](template-summary.md)
+[**Template Summary-Eigenschaft**](template-summary.md)
 </dt> </dl>
 
  

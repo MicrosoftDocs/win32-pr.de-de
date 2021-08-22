@@ -1,38 +1,38 @@
 ---
-title: Erstellen eines Registerkarten-Steuer Elements im Hauptfenster
-description: Das Beispiel in diesem Abschnitt veranschaulicht, wie ein Registerkarten-Steuerelement erstellt und im Client Bereich des Hauptfensters der Anwendung angezeigt wird.
+title: Erstellen eines Registerkarten-Steuerelements im Hauptfenster
+description: Im Beispiel in diesem Abschnitt wird veranschaulicht, wie Sie ein Registerkarten-Steuerelement erstellen und es im Clientbereich des Hauptfensters der Anwendung anzeigen.
 ms.assetid: 24157B8B-177B-471C-9DA0-548D09EA5F89
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 686a9a4fe4f6be95ccdcf3bbcb597c2c48ff3b2d
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: d8b7d945b01c1e6409cf795d7f42f29999830ed1272bb661a9bb13e52cd1e293
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104474365"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119320010"
 ---
-# <a name="how-to-create-a-tab-control-in-the-main-window"></a>Erstellen eines Registerkarten-Steuer Elements im Hauptfenster
+# <a name="how-to-create-a-tab-control-in-the-main-window"></a>Erstellen eines Registerkarten-Steuerelements im Hauptfenster
 
-Das Beispiel in diesem Abschnitt veranschaulicht, wie ein Registerkarten-Steuerelement erstellt und im Client Bereich des Hauptfensters der Anwendung angezeigt wird. Die Anwendung zeigt ein drittes Fenster (ein statisches Steuerelement) im Anzeigebereich des Registerkarten-Steuer Elements an. Das übergeordnete Fenster positioniert und passt das Registerkarten-Steuerelement und das statische Steuerelement, wenn es die [**WM- \_ Größen**](/windows/desktop/winmsg/wm-size) Nachricht verarbeitet.
+Im Beispiel in diesem Abschnitt wird veranschaulicht, wie Sie ein Registerkarten-Steuerelement erstellen und es im Clientbereich des Hauptfensters der Anwendung anzeigen. Die Anwendung zeigt ein drittes Fenster (ein statisches Steuerelement) im Anzeigebereich des Registerkarten-Steuerelements an. Das übergeordnete Fenster positioniert und singt das Registerkarten-Steuerelement und das statische Steuerelement, wenn es die [**WM \_ SIZE-Meldung**](/windows/desktop/winmsg/wm-size) verarbeitet.
 
-In diesem Beispiel gibt es sieben Registerkarten, eine für jeden Tag der Woche. Wenn der Benutzer eine Registerkarte auswählt, zeigt die Anwendung den Namen des entsprechenden Tags im statischen Steuerelement an.
+In diesem Beispiel gibt es sieben Registerkarten, eine für jeden Tag der Woche. Wenn der Benutzer eine Registerkarte auswählt, zeigt die Anwendung den Namen des entsprechenden Tages im statischen Steuerelement an.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="create-a-tab-control-in-the-main-window"></a>Erstellen eines Registerkarten-Steuer Elements im Hauptfenster
+### <a name="create-a-tab-control-in-the-main-window"></a>Erstellen eines Registerkarten-Steuerelements im Hauptfenster
 
-Mit der folgenden Funktion wird das Registerkarten-Steuerelement erstellt und für jeden Wochentag eine Registerkarte hinzugefügt. Die Namen der Tage werden als Zeichen folgen Ressourcen definiert, beginnend mit IDs \_ Sunday (definiert in der Ressourcen Header Datei der Anwendung). Sowohl das übergeordnete als auch das Registerkarten-Steuerelement müssen den Fenster Stil " [**WS \_ clipparent**](/windows/desktop/winmsg/window-styles) " aufweisen. Die Initialisierungsfunktion der Anwendung ruft diese Funktion nach dem Erstellen des Hauptfensters auf.
+Die folgende Funktion erstellt das Registerkarten-Steuerelement und fügt eine Registerkarte für jeden Wochentag hinzu. Die Namen der Tage werden als Zeichenfolgenressourcen definiert, beginnend mit IDS SUNDAY (definiert in der Ressourcenheaderdatei \_ der Anwendung). Sowohl das übergeordnete Fenster als auch das Registerkarten-Steuerelement müssen das [**Fensterformat WS \_ CLIPSIBLINGS**](/windows/desktop/winmsg/window-styles) haben. Die Initialisierungsfunktion der Anwendung ruft diese Funktion nach dem Erstellen des Hauptfensters auf.
 
 
 ```C++
@@ -93,7 +93,7 @@ HWND DoCreateTabControl(HWND hwndParent)
 
 
 
-Die folgende Funktion erstellt das statische Steuerelement, das sich im Anzeigebereich des Registerkarten-Steuer Elements befindet. Die Initialisierungsfunktion der Anwendung ruft diese Funktion nach dem Erstellen des Hauptfensters und des Registerkarten-Steuer Elements auf.
+Die folgende Funktion erstellt das statische Steuerelement, das sich im Anzeigebereich des Registerkarten-Steuerelements befindet. Die Initialisierungsfunktion der Anwendung ruft diese Funktion auf, nachdem das Hauptfenster und das Registerkarten-Steuerelement erstellt wurden.
 
 
 ```C++
@@ -115,9 +115,9 @@ HWND DoCreateDisplayWindow(HWND hwndTab)
 
 
 
-Die folgenden Beispiel Funktionen werden aus der Fenster Prozedur der Anwendung aufgerufen. Die Anwendung ruft die- `OnSize` Funktion auf, wenn die [**WM- \_ Größen**](/windows/desktop/winmsg/wm-size) Nachricht verarbeitet und die Größe des Registerkarten-Steuer Elements an den Client Bereich des Hauptfensters angepasst wird.
+Die folgenden Beispielfunktionen werden über die Fensterprozedur der Anwendung aufgerufen. Die Anwendung ruft die -Funktion auf, wenn die WM SIZE-Nachricht verarbeitet wird, um das Registerkarten-Steuerelement so zu positionieren und zu formatieren, dass es dem Clientbereich `OnSize` des Hauptfensters [**\_**](/windows/desktop/winmsg/wm-size) passt.
 
-Wenn eine Registerkarte ausgewählt ist, sendet das Registerkarten-Steuerelement eine WM-Benachrichtigungs Meldung, die den [TCN \_ selChange](tcn-selchange.md) -Benachrichtigungs Code angibt. [**\_**](wm-notify.md) Die Funktion der Anwendung `OnNotify` verarbeitet diesen Benachrichtigungs Code, indem der Text des statischen Steuer Elements festgelegt wird.
+Wenn eine Registerkarte ausgewählt ist, sendet das Registerkarten-Steuerelement eine [**WM \_ NOTIFY-Nachricht**](wm-notify.md) und gibt den [TCN \_ SELCHANGE-Benachrichtigungscode](tcn-selchange.md) an. Die -Funktion der `OnNotify` Anwendung verarbeitet diesen Benachrichtigungscode durch Festlegen des Texts des statischen Steuerelements.
 
 
 ```C++
@@ -183,12 +183,12 @@ BOOL OnNotify(HWND hwndTab, HWND hwndDisplay, LPARAM lParam)
 
 <dl> <dt>
 
-[Verwenden von Register Steuerelementen](using-tab-controls.md)
+[Verwenden von Registerkartensteuerelementen](using-tab-controls.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Windows demo (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

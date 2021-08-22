@@ -1,7 +1,7 @@
 ---
-description: Fügt einer virtuellen Systemkonfiguration Start Quellen hinzu, wenn Sie auf die \# Konfiguration des virtuellen Systems "&0034; Status&0034;" angewendet wird \# .
+description: Fügt einer Konfiguration des virtuellen Systems Startquellen hinzu, wenn sie auf eine &\# 0034;Status&\# 0034; virtuelle Systemkonfiguration angewendet wird.
 ms.assetid: 2d091554-73d4-47c6-a0c2-97644fc9abe9
-title: Addbootsourcesettings-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: AddBootSourceSettings-Methode der Msvm_VirtualSystemManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 8e20a1184e11113ba25ac060ec19dab5d2391b84
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d52333f3118caa1cf437fabb536bb62f84b99dab01b3115e7f6a65c3f182a17e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128404"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148073"
 ---
-# <a name="addbootsourcesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Addbootsourcesettings-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="addbootsourcesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>AddBootSourceSettings-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Fügt einer virtuellen Systemkonfiguration Start Quellen hinzu, wenn diese auf eine virtuelle Systemkonfiguration vom Typ "State" angewendet werden.
+Fügt einer Konfiguration des virtuellen Systems Startquellen hinzu, wenn sie auf eine Zustandskonfiguration des virtuellen Systems angewendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,37 +42,37 @@ uint32 AddBootSourceSettings(
 
 <dl> <dt>
 
-*Affectedconfiguration* \[ in\]
+*AffectedConfiguration* \[ In\]
 </dt> <dd>
 
-Ein [**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md) mit der betroffenen Konfiguration.
+Eine [**CIM \_ VirtualSystemSettingData-Datei,**](cim-virtualsystemsettingdata.md) die die betroffene Konfiguration enthält.
 
 </dd> <dt>
 
-*Bootsourcesettings* \[ in\]
+*BootSourceSettings* \[ In\]
 </dt> <dd>
 
-Ein Array, das die Einstellungen für die Start Quelle enthält.
+Ein Array, das die Startquelleinstellungen enthält.
 
 </dd> <dt>
 
-*Resultingbootsourcesettings* \[ vorgenommen\]
+*ResultingBootSourceSettings* \[ out\]
 </dt> <dd>
 
-Bei Erfolg wird ein [**CIM- \_ SettingData**](cim-settingdata.md) mit den resultierenden Start Quell Einstellungen zurückgegeben.
+Bei Erfolg wird cim [**\_ settingData**](cim-settingdata.md) mit den resultierenden Startquelleinstellungen zurückgegeben.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird 0 oder 4096 zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg 0 oder 4096 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
@@ -82,7 +82,7 @@ Bei Erfolg wird 0 oder 4096 zurückgegeben. Andernfalls wird ein Fehler zurückg
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -91,16 +91,16 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -109,19 +109,19 @@ Fehler **(2** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

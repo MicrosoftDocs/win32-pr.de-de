@@ -1,27 +1,27 @@
 ---
-title: Wzlistenername (WtsApi32. h)
-description: Stellt den Namen einer Remotedesktopdienste Listener auf einem Remotedesktop-Sitzungshost (RD-Sitzungshost)-Server dar.
+title: WTSLISTENERNAME (WtsApi32.h)
+description: Stellt den Namen eines Remotedesktopdienste Listeners auf einem Remotedesktop-Sitzungshost (RD-Sitzungshost) dar.
 ms.assetid: 3C41F507-6A67-4244-860F-E89B0F9E33B0
 ms.tgt_platform: multiple
 keywords:
-- Wout-listenernamew
-- Wout-listenernamea
-- Wzlistenername
-- Pwzlistenername
-- Wzlistenername
-- Pwzlistenername
+- WTSLISTENERNAMEW
+- WTSLISTENERNAMEA
+- WTSLISTENERNAME
+- PWTSLISTENERNAME
+- WTSLISTENERNAME
+- PWTSLISTENERNAME
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a82576fc9f4490b133916852441c50dcf77e849d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ce0df52229670cd090dd900dda3c2284437297bedc25c69f12c980b9cc40d92c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119513840"
 ---
-# <a name="wtslistenername"></a>Wzlistenername
+# <a name="wtslistenername"></a>WTSLISTENERNAME
 
-Stellt den Namen einer Remotedesktopdienste Listener auf einem Remotedesktop-Sitzungshost (RD-Sitzungshost)-Server dar.
+Stellt den Namen eines Remotedesktopdienste Listeners auf einem Remotedesktop-Sitzungshost (RD-Sitzungshost) dar.
 
 
 ```C++
@@ -40,45 +40,45 @@ typedef PWTSLISTENERNAMEA PWTSLISTENERNAME;
 
 <dl> <dt>
 
-**Wout-listenernamew**
+**WTSLISTENERNAMEW**
 </dt> <dd>
 
-Der Unicode-Name des Listener.
+Der Unicode-Name des Listeners.
 
 </dd> <dt>
 
-**Wout-listenernamea**
+**WTSLISTENERNAMEA**
 </dt> <dd>
 
-Ein Zeiger auf den ANSI-Namen des Listener.
+Ein Zeiger auf den ANSI-Namen des Listeners.
 
 </dd> <dt>
 
-**Wzlistenername**
+**WTSLISTENERNAME**
 </dt> <dd>
 
 Der Name des Listeners.
 
 </dd> <dt>
 
-**Pwzlistenername**
+**PWTSLISTENERNAME**
 </dt> <dd>
 
-Ein Zeiger auf den Namen des Listener.
+Ein Zeiger auf den Namen des Listeners.
 
 </dd> <dt>
 
-**Wzlistenername**
+**WTSLISTENERNAME**
 </dt> <dd>
 
 Der Name des Listeners.
 
 </dd> <dt>
 
-**Pwzlistenername**
+**PWTSLISTENERNAME**
 </dt> <dd>
 
-Ein Zeiger auf den Namen des Listener.
+Ein Zeiger auf den Namen des Listeners.
 
 </dd> </dl>
 
@@ -90,7 +90,7 @@ Ein Zeiger auf den Namen des Listener.
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                        |
-| Header<br/>                   | <dl> <dt>WtsApi32. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WtsApi32.h</dt> </dl> |
 
 
 

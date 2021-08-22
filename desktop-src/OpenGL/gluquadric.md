@@ -1,9 +1,9 @@
 ---
-title: gluvierccallback-Funktion (glu. h)
-description: Die Funktion "gluvierccallback" definiert einen Rückruf für ein Quadric-Objekt.
+title: gluQuadricCallback-Funktion (Glu.h)
+description: Die gluQuadricCallback-Funktion definiert einen Rückruf für ein Quadric-Objekt.
 ms.assetid: 1f1e9fe9-7239-419c-92b6-af2534850ac5
 keywords:
-- gluvierccallback-Funktion OpenGL
+- gluQuadricCallback-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c0c92e3cd4e723b59ee9060c5e2f33b710e7f69
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 36ce32bf041a59f272b18ebe17916963c4e5fd8d208da9d739468c88b9286dfc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518413"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119488790"
 ---
-# <a name="gluquadriccallback-function"></a>gluvierccallback-Funktion
+# <a name="gluquadriccallback-function"></a>gluQuadricCallback-Funktion
 
-Die Funktion " **gluvierccallback** " definiert einen Rückruf für ein Quadric-Objekt.
+Die **gluQuadricCallback-Funktion** definiert einen Rückruf für ein Quadric-Objekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,20 +45,20 @@ void WINAPI gluQuadricCallback(
 *qobj* 
 </dt> <dd>
 
-Das Quadric-Objekt (mit [**glunewquadric**](glunewquadric.md)erstellt).
+Das Quadric-Objekt (erstellt mit [**gluNewQuadric**](glunewquadric.md)).
 
 </dd> <dt>
 
-*,* 
+*welche* 
 </dt> <dd>
 
-Der Rückruf, der definiert wird. Der einzige gültige Wert ist "glu \_ Error".
+Der Rückruf, der definiert wird. Der einzige gültige Wert ist GLU \_ ERROR.
 
 
 
 | Wert                                                                                                                                             | Bedeutung                                                                                                                                                                                                                                                                                                 |
 |---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GLU_ERROR"></span><span id="glu_error"></span><dl> <dt>**Glu- \_ Fehler**</dt> </dl> | Die Funktion " **gluvierccallback** " wird aufgerufen, wenn ein Fehler auftritt. Das einzige Argument ist vom Typ " **GLenum**" und gibt den spezifischen Fehler an, der aufgetreten ist. Zeichen folgen, die diese Fehler beschreiben, können mit dem " [**gluerrorstring**](gluerrorstring.md) "-Befehl abgerufen werden.<br/> |
+| <span id="GLU_ERROR"></span><span id="glu_error"></span><dl> <dt>**\_GLU-FEHLER**</dt> </dl> | Die **gluQuadricCallback-Funktion** wird aufgerufen, wenn ein Fehler auftritt. Das einzelne Argument ist vom Typ **GLenum** und gibt den spezifischen Aufgetretenen Fehler an. Zeichenfolgen, die diese Fehler beschreiben, können mit dem [**gluErrorString-Aufruf abgerufen**](gluerrorstring.md) werden.<br/> |
 
 
 
@@ -69,7 +69,7 @@ Der Rückruf, der definiert wird. Der einzige gültige Wert ist "glu \_ Error".
 *fn* 
 </dt> <dd>
 
-Die aufzurufende Funktion.
+Die funktion, die aufgerufen werden soll.
 
 </dd> </dl>
 
@@ -77,9 +77,9 @@ Die aufzurufende Funktion.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie " **gluvierccallback** ", um einen neuen Rückruf zu definieren, der von einem Quadric-Objekt verwendet werden soll. Wenn der angegebene Rückruf bereits definiert ist, wird er ersetzt. Wenn *FN* den Wert **null** hat, wird ein beliebiger vorhandener Rückruf gelöscht.
+Verwenden **Sie gluQuadricCallback,** um einen neuen Rückruf zu definieren, der von einem Quadric-Objekt verwendet werden soll. Wenn der angegebene Rückruf bereits definiert ist, wird er ersetzt. Wenn *fn* NULL **ist,** wird jeder vorhandene Rückruf gelöscht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,8 +89,8 @@ Verwenden Sie " **gluvierccallback** ", um einen neuen Rückruf zu definieren, d
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -99,10 +99,10 @@ Verwenden Sie " **gluvierccallback** ", um einen neuen Rückruf zu definieren, d
 
 <dl> <dt>
 
-[**gluerrorstring**](gluerrorstring.md)
+[**gluErrorString**](gluerrorstring.md)
 </dt> <dt>
 
-[**glunewquadric**](glunewquadric.md)
+[**gluNewQuadric**](glunewquadric.md)
 </dt> </dl>
 
  

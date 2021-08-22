@@ -1,9 +1,9 @@
 ---
-title: glusphere-Funktion (glu. h)
-description: Die Funktion "glusphere" zeichnet eine Kugel.
+title: gluSphere-Funktion (Glu.h)
+description: Die gluSphere-Funktion zeichnet eine Kugel.
 ms.assetid: 0f1919c6-0551-4d50-b782-767dacc088cb
 keywords:
-- glusphere-Funktion OpenGL
+- gluSphere-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 899ff4833c705aae34fdb7830c264fee91414116
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 590c4b7335fe0596c5b5b0f3dc709998fafc21f7be78f493a05f6520ed9fd368
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119488730"
 ---
-# <a name="glusphere-function"></a>glusphere-Funktion
+# <a name="glusphere-function"></a>gluSphere-Funktion
 
-Die Funktion " **glusphere** " zeichnet eine Kugel.
+Die **gluSphere-Funktion** zeichnet eine Kugel.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,28 +46,28 @@ void WINAPI gluSphere(
 *qobj* 
 </dt> <dd>
 
-Das Quadric-Objekt (mit [**glunewquadric**](glunewquadric.md)erstellt).
+Das Quadric-Objekt (erstellt mit [**gluNewQuadric**](glunewquadric.md)).
 
 </dd> <dt>
 
-*Kreises* 
+*Radius* 
 </dt> <dd>
 
 Der Radius der Kugel.
 
 </dd> <dt>
 
-*aufs* 
+*Scheiben* 
 </dt> <dd>
 
-Die Anzahl der Unterteilungen um die z-Achse (ähnlich wie Längengrad).
+Die Anzahl der Unterteilungen um die Z-Achse (ähnlich den Längengradzeilen).
 
 </dd> <dt>
 
-*Stöcke* 
+*Stacks* 
 </dt> <dd>
 
-Die Anzahl der untergeordneten Bereiche entlang der z-Achse (ähnlich wie bei breiten Linien).
+Die Anzahl der Unterteilungen entlang der Z-Achse (ähnlich den Breitengradlinien).
 
 </dd> </dl>
 
@@ -75,13 +75,13 @@ Die Anzahl der untergeordneten Bereiche entlang der z-Achse (ähnlich wie bei br
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glusphere** -Funktion zeichnet eine Kugel des angegebenen Radius, zentriert um den Ursprung. Die Kugel wird um die z-Achse in Slices und entlang der z-Achse in Stapel aufgeteilt (ähnlich wie Längen-und Breitengrad).
+Die **gluSphere-Funktion** zeichnet eine Kugel des angegebenen Radius, der um den Ursprung zentriert ist. Die Kugel wird um die Z-Achse in Slices und entlang der Z-Achse in Stapel unterteilt (ähnlich wie Längen- und Breitengradlinien).
 
-Wenn die Ausrichtung auf "glu \_ outside" (mit " **gluquadricorientation**") festgelegt ist, werden alle normalisierten Punkte vom Mittelpunkt der Kugel entfernt. Andernfalls zeigen Sie auf den Mittelpunkt der Kugel.
+Wenn die Ausrichtung auf GLU \_ OUTSIDE (mit **gluQuadricOrientation)** festgelegt ist, zeigen alle generierten Normals vom Mittelpunkt der Kugel ab. Andernfalls zeigen sie auf die Mitte der Kugel.
 
-Wenn die Texturierung aktiviert ist (mit " **gluquadrictexture**"), werden Texturkoordinaten generiert, sodass *t* von 0,0 bei *z* =-*RADIUS* bis 1,0 am *z*-  =  *RADIUS* reicht (*t* vergrößert sich linear entlang der Längenlinien); und *s* liegen zwischen 0,0 und der positiven y-Achse, bis 0,25 auf der positiven x-Achse, bis 0,5 auf der negativen y-Achse, bis 0,75 auf der negativen x-Achse und zurück zu 1,0 auf der positiven y-Achse.
+Wenn die Texturierung aktiviert ist (mit **gluQuadricTexture):** Texturkoordinaten werden generiert, sodass *t* von 0,0 bei *z* = –*Radius* bis 1,0 bei *z* Radius ( t erhöht sich linear entlang der Linienlinien) und s von 0,0 an der positiven  =   y-Achse, auf 0,25 an der positiven X-Achse, auf 0,5 an der negativen y-Achse, auf 0,75 an der negativen x-Achse und zurück zu 1,0 an der positiven y-Achse. 
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,8 +91,8 @@ Wenn die Texturierung aktiviert ist (mit " **gluquadrictexture**"), werden Textu
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -101,22 +101,22 @@ Wenn die Texturierung aktiviert ist (mit " **gluquadrictexture**"), werden Textu
 
 <dl> <dt>
 
-[**gluzylinder**](glucylinder.md)
+[**gluCylinder**](glucylinder.md)
 </dt> <dt>
 
-[**gludisk**](gludisk.md)
+[**gluDisk**](gludisk.md)
 </dt> <dt>
 
-[**glunewquadric**](glunewquadric.md)
+[**gluNewQuadric**](glunewquadric.md)
 </dt> <dt>
 
-[**glupartialdisk**](glupartialdisk.md)
+[**gluPartialDisk**](glupartialdisk.md)
 </dt> <dt>
 
-[**gluquadricorientation**](gluquadricorientation.md)
+[**gluQuadricOrientation**](gluquadricorientation.md)
 </dt> <dt>
 
-[**gluquadrictexture**](gluquadrictexture.md)
+[**gluQuadricTexture**](gluquadrictexture.md)
 </dt> </dl>
 
  

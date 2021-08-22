@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a4cdb503e934ca00b41482601b59266eee750365
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e93bc3f077d239fb93ac23898635dfc2fe5157ed5d78c32719fca6980606658c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119606940"
 ---
 # <a name="id3dxmeshsetattributetable-method"></a>ID3DXMesh::SetAttributeTable-Methode
 
@@ -65,7 +65,7 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn eine Anwendung die Informationen in einer Attributtabelle nachverfolgt und die Tabelle aufgrund von Änderungen an Attributen oder Gesichtern neu anordnt, ermöglicht diese Methode der Anwendung, die Attributtabellen zu aktualisieren, anstatt [**ID3DXMesh::Optimize**](id3dxmesh--optimize.md) erneut aufzurufen.
 
@@ -73,14 +73,14 @@ Wenn eine Anwendung die Informationen in einer Attributtabelle nachverfolgt und 
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

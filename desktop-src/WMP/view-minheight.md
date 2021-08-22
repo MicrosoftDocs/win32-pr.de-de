@@ -1,9 +1,9 @@
 ---
-title: View. MinHeight
-description: Das MinHeight-Attribut gibt die Mindesthöhe der Ansicht an oder ruft diese bei der Größenänderung ab.
+title: VIEW.minHeight
+description: Das minHeight-Attribut gibt beim Ändern der Größe die mindeste Höhe in Pixel der VIEW-Ansicht an oder ruft sie ab.
 ms.assetid: e9a29642-e09d-40f8-9c2b-86be9f509089
 keywords:
-- Ansicht. MinHeight-Fenster Media Player
+- VIEW.minHeight Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 580c263a7def0d98a56190e5e80abc8e6bcb864a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f326ae98cc8bd2970f05096ea167705270e12aabc93b91c7f517adca14ccb14b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119375160"
 ---
-# <a name="viewminheight"></a>View. MinHeight
+# <a name="viewminheight"></a>VIEW.minHeight
 
-Das **MinHeight** -Attribut gibt die Mindesthöhe der **Ansicht** an oder ruft diese bei der Größenänderung ab.
+Das **minHeight-Attribut** gibt beim Ändern der Größe die mindeste Höhe in Pixel der **VIEW-Ansicht** an oder ruft sie ab.
 
 ``` syntax
         elementID.minHeight
@@ -29,7 +29,7 @@ Das **MinHeight** -Attribut gibt die Mindesthöhe der **Ansicht** an oder ruft d
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**) mit einem Wert von 0 (null) oder größer.  Der Standardwert ist 0 (null), was bedeutet, dass keine Einschränkung für die Mindesthöhe der **Ansicht** vorliegt.
+Dieses Attribut ist eine  Lese-/Schreibnummer **(long**) mit einem Wert von 0 (null) oder größer. Er weist den Standardwert 0 (null) auf, d. h., es gibt keine Einschränkung für die Mindesthöhe von **VIEW**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,18 +37,18 @@ Dieses Attribut ist eine Lese-/schreibzahl (**Long**) mit einem Wert von 0 (null
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**View-Element**](view-element.md)
+[**VIEW-Element**](view-element.md)
 </dt> <dt>
 
-[**View. MaxHeight**](view-maxheight.md)
+[**VIEW.maxHeight**](view-maxheight.md)
 </dt> </dl>
 
  

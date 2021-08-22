@@ -1,44 +1,44 @@
 ---
 title: Verwenden von OLE in Rich Edit-Steuerelementen
-description: Dieser Abschnitt enthält Informationen zur Verwendung von Object Linking and Embedding (OLE) in Rich Edit-Steuerelementen.
+description: Dieser Abschnitt enthält Informationen zur Verwendung von Objektverknüpfung und -einbettung (OLE) in Rich-Edit-Steuerelementen.
 ms.assetid: bfcecbf5-cc35-47b8-a713-7e5fd03f60cc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e7868bd62044c87765a25f6033499460ed044e57
-ms.sourcegitcommit: f0ca63c18dc52c357d3398af7be766d2bdd40be7
+ms.openlocfilehash: 9d825a9876005cadb20e4fc7717f766582ab12224f4f86995319357875d24230
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "104101379"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119311680"
 ---
 # <a name="how-to-use-ole-in-rich-edit-controls"></a>Verwenden von OLE in Rich Edit-Steuerelementen
 
-Dieser Abschnitt enthält Informationen zur Verwendung von Object Linking and Embedding (OLE) in Rich Edit-Steuerelementen.
+Dieser Abschnitt enthält Informationen zur Verwendung von Objektverknüpfung und -einbettung (OLE) in Rich-Edit-Steuerelementen.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 ### <a name="use-a-rich-edit-interface"></a>Verwenden einer Rich Edit-Schnittstelle
 
-Rich Edit-Steuerelemente machen einige ihrer Funktionen über Component Object Model (com)-Schnittstellen verfügbar. Indem Sie eine Schnittstelle von einem Steuerelement erhalten, haben Sie die Möglichkeit, mit anderen Objekten innerhalb des Steuer Elements zu arbeiten. Sie können diese Schnittstelle abrufen, indem Sie die [**\_ getoleinterface**](em-getoleinterface.md) -Nachricht von EM senden. Von der [**iricheditole**](/windows/desktop/api/Richole/nn-richole-iricheditole) -Schnittstelle aus können Sie dann Schnittstellen abrufen, die im [Text Objektmodell](text-object-model.md)verwendet werden.
+Umfangreiche Bearbeitungssteuerelemente machen einige ihrer Funktionen über Component Object Model (COM)-Schnittstellen verfügbar. Durch das Abrufen einer Schnittstelle aus einem Steuerelement erhalten Sie die Möglichkeit, mit anderen Objekten innerhalb des Steuerelements zu arbeiten. Sie können diese Schnittstelle abrufen, indem Sie die [**EM \_ GETOLEINTERFACE-Nachricht**](em-getoleinterface.md) senden. Über die [**IRichEditOle-Schnittstelle**](/windows/desktop/api/Richole/nn-richole-iricheditole) können Sie dann Schnittstellen abrufen, die im [Textobjektmodell verwendet werden.](text-object-model.md)
 
-Eine weitere Schnittstelle, [**IRichEditOleCallback**](/windows/desktop/api/Richole/nn-richole-iricheditolecallback), wird von Anwendungen implementiert, um das Verhalten des Steuer Elements zu definieren, wenn es mit Objekten interagiert.
+Eine andere Schnittstelle, [**IRichEditOleCallback,**](/windows/desktop/api/Richole/nn-richole-iricheditolecallback)wird von Anwendungen implementiert, um das Verhalten des Steuerelements zu definieren, wenn es mit Objekten interagiert.
 
 ### <a name="insert-an-object-into-a-rich-edit-control"></a>Einfügen eines Objekts in ein Rich Edit-Steuerelement
 
-Im folgenden Codebeispiel wird ein Datei Objekt in ein Rich-Edit-Steuerelement eingefügt. Wenn ein Programm dem Dateityp auf dem Computer des Benutzers (z. b. Microsoft Excel für eine XLS-Datei) zugeordnet ist, wird der Inhalt der Datei im Steuerelement angezeigt. Andernfalls wird ein Symbol angezeigt.
+Im folgenden Codebeispiel wird ein Dateiobjekt in ein Rich-Edit-Steuerelement eingefügt. Wenn ein Programm dem Dateityp auf dem Computer des Benutzers zugeordnet ist (z. B. Microsoft Excel für eine .xls-Datei), wird der Inhalt der Datei im -Steuerelement angezeigt. Andernfalls wird ein Symbol angezeigt.
 
-1.  Holen Sie sich die [**iricheditole**](/windows/desktop/api/Richole/nn-richole-iricheditole) -Schnittstelle.
+1.  Erhalten Sie [**die IRichEditOle-Schnittstelle.**](/windows/desktop/api/Richole/nn-richole-iricheditole)
 
     ```
     BOOL InsertObject(HWND hRichEdit, LPCTSTR pszFileName)
@@ -53,7 +53,7 @@ Im folgenden Codebeispiel wird ein Datei Objekt in ein Rich-Edit-Steuerelement e
 
     
 
-2.  Erstellen Sie eine strukturierte Speicherung.
+2.  Erstellen Sie strukturierten Speicher.
 
     ```
         LPLOCKBYTES pLockBytes = NULL;
@@ -84,7 +84,7 @@ Im folgenden Codebeispiel wird ein Datei Objekt in ein Rich-Edit-Steuerelement e
 
     
 
-4.  Einen Zeiger auf die Anzeige Site erhalten.
+4.  Sie erhalten einen Zeiger auf die Anzeigewebsite.
 
     ```
         LPOLECLIENTSITE pClientSite;
@@ -95,7 +95,7 @@ Im folgenden Codebeispiel wird ein Datei Objekt in ein Rich-Edit-Steuerelement e
 
     
 
-5.  Erstellen Sie das Objekt, und rufen Sie die **IUnknown** -Schnittstelle ab
+5.  Erstellen Sie das -Objekt, und rufen Sie dessen **IUnknown-Schnittstelle** ab.
 
     ```
         LPUNKNOWN pUnk;
@@ -117,7 +117,7 @@ Im folgenden Codebeispiel wird ein Datei Objekt in ein Rich-Edit-Steuerelement e
 
     
 
-6.  Holen Sie sich die IOleObject-Schnittstelle für das-Objekt.
+6.  Sie können die IOleObject-Schnittstelle für das -Objekt erhalten.
 
     ```
         LPOLEOBJECT pObject;
@@ -131,7 +131,7 @@ Im folgenden Codebeispiel wird ein Datei Objekt in ein Rich-Edit-Steuerelement e
 
     
 
-7.  Um sicherzustellen, dass Verweise ordnungsgemäß gezählt werden, Benachrichtigen Sie das Objekt, dass es enthalten ist.
+7.  Um sicherzustellen, dass Verweise ordnungsgemäß gezählt werden, benachrichtigen Sie das Objekt, dass es enthalten ist.
 
     ```
         OleSetContainedObject(pObject, TRUE);
@@ -165,7 +165,7 @@ Im folgenden Codebeispiel wird ein Datei Objekt in ein Rich-Edit-Steuerelement e
 
     
 
-9.  Verschieben Sie die Einfügemarke an das Ende des Texts, und fügen Sie einen Wagen Rücklauf ein.
+9.  Verschieben Sie das Caret- an das Ende des Texts, und fügen Sie einen Wagenrücklauf hinzu.
 
     ```
         SendMessage(hRichEdit, EM_SETSEL, 0, -1);
@@ -181,7 +181,7 @@ Im folgenden Codebeispiel wird ein Datei Objekt in ein Rich-Edit-Steuerelement e
 
     
 
-10. Fügen Sie das-Objekt ein.
+10. Fügen Sie das -Objekt ein.
 
     ```
         hr = pRichEditOle->InsertObject(&reobject);
@@ -207,13 +207,13 @@ Im folgenden Codebeispiel wird ein Datei Objekt in ein Rich-Edit-Steuerelement e
 
 ### <a name="using-iricheditolecallback"></a>Verwenden von IRichEditOleCallback
 
-Anwendungen implementieren die [**IRichEditOleCallback**](/windows/desktop/api/Richole/nn-richole-iricheditolecallback) -Schnittstelle, um auf OLE-bezogene Abfragen oder Aktionen zu reagieren, die von einem Rich Edit-Steuerelement ausgeführt werden. Sie verknüpfen die Implementierung der-Schnittstelle mit dem-Steuerelement, indem Sie eine [**EM- \_**](em-setolecallback.md) Abmeldung senden. Das-Steuerelement ruft dann die Methoden für die Implementierung der-Schnittstelle nach Bedarf auf.
+Anwendungen implementieren die [**IRichEditOleCallback-Schnittstelle,**](/windows/desktop/api/Richole/nn-richole-iricheditolecallback) um auf OLE-bezogene Abfragen oder Aktionen zu reagieren, die von einem Rich-Edit-Steuerelement ausgeführt werden. Sie ordnen die Implementierung der -Schnittstelle dem -Steuerelement zu, indem Sie eine [**EM \_ SETOLECALLBACK-Nachricht**](em-setolecallback.md) senden. Das -Steuerelement ruft dann methoden für Ihre Implementierung der -Schnittstelle entsprechend auf.
 
-Beispielsweise wird [**queryaccept-Data**](/windows/desktop/api/Richole/nf-richole-iricheditolecallback-queryacceptdata) aufgerufen, wenn der Benutzer versucht, ein Objekt per Drag & amp; Drop in das Steuerelement einzufügen. Wenn die Anwendung die Daten akzeptieren kann, gibt die Implementierung der-Methode S \_ OK zurück; andernfalls wird ein Fehlercode zurückgegeben. Die-Methode kann auch andere Aktionen ausführen, z. b. den Benutzer warnen, dass Dateien dieses Typs nicht im Steuerelement abgelegt werden können.
+[**QueryAcceptData**](/windows/desktop/api/Richole/nf-richole-iricheditolecallback-queryacceptdata) wird beispielsweise aufgerufen, wenn der Benutzer versucht, ein Objekt zu ziehen oder in das Steuerelement einfüge. Wenn Ihre Anwendung die Daten akzeptieren kann, gibt Ihre Implementierung der -Methode S \_ OK zurück. Andernfalls wird ein Fehlercode zurückgegeben. Die -Methode kann auch eine andere Aktion ergreifen, z. B. den Benutzer warnen, dass Dateien dieses Typs nicht in das Steuerelement platziert werden können.
 
-## <a name="complete-insertobject-example-function"></a>Complete insertObject-Beispiel Funktion
+## <a name="complete-insertobject-example-function"></a>Vollständige InsertObject-Beispielfunktion
 
-Im folgenden Codebeispiel werden die vorherigen Code Ausschnitte veranschaulicht, die zu einer kompletten Funktion kombiniert werden, die die Fehlerbehandlung einschließt.
+Im folgenden Codebeispiel werden die vorherigen Codeausschnitte in einer vollständigen Funktion kombiniert, die die Fehlerbehandlung umfasst.
 
 
 ```C++
@@ -333,12 +333,12 @@ BOOL InsertObject(HWND hRichEdit, LPCTSTR pszFileName)
 [Verwenden von Rich Edit-Steuerelementen](using-rich-edit-controls.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Windows demo (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

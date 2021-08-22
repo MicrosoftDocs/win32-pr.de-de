@@ -1,50 +1,50 @@
 ---
-title: VML-Attribut "tdarrowwidth"
-description: VML-Attribut "tdarrowwidth"
+title: VML-EndArrowWidth-Attribut
+description: VML-EndArrowWidth-Attribut
 ms.assetid: a68854d2-33f8-44fb-a0be-830d2be3040f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 108d65fc1a06ace3d318d54a6416e0d98c0a4652
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 90270cfc554d7e2dea70b313507fd7f61bf3a073c0e27c03c82d8a696f2939a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103730153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119396080"
 ---
-# <a name="vml-endarrowwidth-attribute"></a>VML-Attribut "tdarrowwidth"
+# <a name="vml-endarrowwidth-attribute"></a>VML-EndArrowWidth-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert eine Pfeilspitzen Breite für das Ende einer Linie. Lese-/Schreibzugriff. **Vgarrowheadwidth**.
+Definiert eine Pfeilspitzenbreite für das Ende einer Linie. Lese-/Schreibzugriff. **VgArrowheadWidth**.
 
 **Gilt für**
 
-[Stellung](msdn-online-vml-stroke-element.md)
+[Takt](msdn-online-vml-stroke-element.md)
 
 **Tagsyntax**
 
-<v: *Element* endarrowwidth = " *Ausdruck* " >
+<v: *element* endarrowwidth="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . endarrowwidth = "*Ausdruck*"
+*element* .endarrowwidth="*expression*"
 
-*Ausdruck* = *Element*. endarrowwidth
+*expression* = *Element*.endarrowwidth
 
 **Anmerkungen**
 
 Mögliche Werte:
 
--   Verringern
+-   Schmalen
 -   Mittel (Standard)
 -   Breite
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
@@ -60,6 +60,6 @@ Eine Linie wird mit einer breiten klassischen Pfeilspitze am Ende des Strichs ge
 
 
 
- 
+ 
 
- 
+ 

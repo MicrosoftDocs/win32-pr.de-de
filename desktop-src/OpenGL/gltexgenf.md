@@ -1,9 +1,9 @@
 ---
-title: gltex-Funktion (GL. h)
-description: Steuert die Generierung von Texturkoordinaten. | gltex-Funktion (GL. h)
+title: glTexGenf-Funktion (Gl.h)
+description: Steuert die Generierung von Texturkoordinaten. | glTexGenf-Funktion (Gl.h)
 ms.assetid: 43439d34-46df-49c6-8c19-09db9f005520
 keywords:
-- gltex-Funktion OpenGL
+- glTexGenf-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 98829979037aecf49dfca91491dbc89bc7fa7951
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 1198da9d87e79f8e3abb923ac2f5ce48ad5afc8cb06d4d97bcf40a3153367e72
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104562180"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119490380"
 ---
-# <a name="gltexgenf-function"></a>gltex-Funktion
+# <a name="gltexgenf-function"></a>glTexGenf-Funktion
 
 Steuert die Generierung von Texturkoordinaten.
 
@@ -42,24 +42,24 @@ void WINAPI glTexGenf(
 
 <dl> <dt>
 
-*Koord* 
+*Coord* 
 </dt> <dd>
 
-Eine Textur Koordinate. Muss eines der folgenden sein: GL \_ S, GL \_ T, GL \_ R oder GL \_ Q.
+Eine Texturkoordinate. Dies muss einer der folgenden Sein: GL \_ S, GL \_ T, GL \_ R oder GL \_ Q.
 
 </dd> <dt>
 
-**pName** 
+**pname** 
 </dt> <dd>
 
-Der symbolische Name der Texturkoordinaten Generierungs Funktion.
+Der symbolische Name der Texturkoordinatengenerierungsfunktion.
 
 </dd> <dt>
 
 *param* 
 </dt> <dd>
 
-Ein einwertiger Parameter für die Textur Generierung, eines von GL- \_ Objekt \_ linear, GL \_ Eye \_ linear oder GL \_ Sphere \_ map.
+Ein einwertiger Texturgenerierungsparameter, einer von GL \_ OBJECT \_ LINEAR, GL \_ EYE LINEAR oder GL SPHERE \_ \_ \_ MAP.
 
 </dd> </dl>
 
@@ -69,63 +69,63 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                                                |
 |-------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *coord* oder *PName* war kein akzeptierter definierter Wert, oder *PName* war der \_ GL \_ -Textur gen \_ -Modus, und der Parameter war kein akzeptierter definierter Wert. <br/> |
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *PName* war der \_ GL \_ -Textur gen \_ -Modus, die Parameter "GL  \_ Sphere Map" und " \_ *coord* " war "GL \_ R" oder "GL \_ Q".<br/>                                     |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen. <br/>                 |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *coord* oder *pname* war kein akzeptierter definierter Wert, oder *pname* war GL TEXTURE GEN MODE, und \_ \_ \_ *params* waren kein akzeptierter definierter Wert.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *pname war* GL \_ TEXTURE GEN \_ \_ MODE, *params* war GL SPHERE MAP, und \_ \_ *coord* war \_ \_ entweder GL R oder GL Q<br/>                                     |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md) <br/>                 |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **gltexgen** -Funktion wählt eine Texturkoordinaten-Generierungs Funktion aus oder liefert Koeffizienten für eine der Funktionen. Der *coord* -Parameter benennt eine der (s, t, r, q)-Texturkoordinaten und muss eines der folgenden Symbole sein: GL \_ s, GL \_ t, GL \_ r oder GL \_ q. Der *PName* -Parameter muss eine von drei symbolischen Konstanten sein: GL \_ Texture \_ gen- \_ Modus, GL- \_ Objekt \_ Ebene oder GL- \_ Eye- \_ Ebene. Wenn " *PName* " der GL- \_ Textur \_ gen-Modus ist \_ , gibt *param* einen Modus, eines von GL- \_ Objekt \_ linear, GL \_ Eye \_ linear oder eine GL- \_ Kugel Karte an \_ . Wenn *PName* entweder eine GL- \_ Objekt \_ Ebene oder \_ eine GL-Augen Ebene ist \_ , enthält *param* Koeffizienten für die entsprechende Textur Generierungs Funktion.
+Die **glTexGen-Funktion** wählt eine Texturkoordinatengenerierungsfunktion aus oder stellt Koeffizienten für eine der Funktionen zur Verfügung. Der *koord-Parameter* benennt eine der Texturkoordinaten (s,t,r,q), und es muss eines der folgenden Symbole sein: GL \_ S, GL T, GL R oder GL \_ \_ \_ Q. Der *pname-Parameter* muss eine von drei symbolischen Konstanten sein: GL \_ TEXTURE GEN \_ \_ MODE, GL OBJECT PLANE oder GL \_ EYE \_ \_ \_ PLANE. Wenn *pname GL* TEXTURE GEN MODE ist, gibt param einen Modus an, einen von \_ GL OBJECT \_ \_  \_ \_ LINEAR, GL EYE LINEAR \_ oder GL SPHERE \_ \_ \_ MAP. Wenn *pname entweder* GL OBJECT PLANE oder GL EYE PLANE ist, enthält \_ \_ \_ \_ *param* Koeffizienten für die entsprechende Texturgenerierungsfunktion.
 
-Wenn die Textur Generierungs Funktion ein GL- \_ Objekt \_ linear ist, wird die Funktion
+Wenn die Texturgenerierungsfunktion GL \_ OBJECT \_ LINEAR ist, die Funktion
 
-! [Gleichung, die die gltexgen-Funktion anzeigt, wenn die Textur Generierungs Funktion GL_OBJECT_LINEAR ist.]
+! [Die Gleichung zeigt die glTexGen-Funktion, wenn die Texturgenerierungsfunktion GL_OBJECT_LINEAR.]
 
-wird verwendet, wobei g der Wert ist, der für die in coord benannte Koordinate berechnet wird. P1, P2, P3 und P4 sind die vier Werte, die in Parametern bereitgestellt werden. und x?, y?, z? und w? die Objekt Koordinaten des Scheitel Punkts. Sie können diese Funktion verwenden, um das Gelände mithilfe der Meeres Ebene als Bezugs Ebene (definiert durch P1, P2, P3 und P4) zu strukturieren. Die Funktion für die \_ \_ lineare Koordinaten Generierung von GL-Objekten berechnet die Höhe eines Gelände Scheitel Punkts als Abstand von der Meeres Ebene. diese Höhe wird zum Indizieren des Textur Bilds verwendet, um die Spitzen und das grüne Gras zum Rand zu ordnen.
+wird verwendet, wobei g der Wert ist, der für die koord benannte Koordinate berechnet wird. p1, p2, p3 und p4 sind die vier Werte, die in Parametern angegeben werden. und x?, y?, z? und w? sind die Objektkoordinaten des Scheitelpunkts. Sie können diese Funktion zum Strukturieren von Gelände verwenden, indem Sie den Seepegel als Referenzebene verwenden (definiert durch p1, p2, p3 und p4). Die GL OBJECT LINEAR-Koordinatengenerierungsfunktion berechnet die Höhe eines Geländevertex als Entfernung vom Seeniveau. Diese Höhe wird verwendet, um das Texturbild zu indizieren, um z. B. Weißen Schnee auf Spitzen und grünes Grünland auf Fußflächen zu \_ \_ ordnen.
 
-Wenn die Textur Generierungs Funktion "GL \_ Eye linear" ist \_ , wird die Funktion
+Wenn die Texturgenerierungsfunktion GL \_ EYE \_ LINEAR ist, die Funktion
 
-! [Gleichung, die die gltexgen-Funktion anzeigt, wenn die Textur Generierungs Funktion GL_EYE_LINEAR ist.]
+! [Die Gleichung zeigt die glTexGen-Funktion, wenn die Texturgenerierungsfunktion GL_EYE_LINEAR.]
 
 wird verwendet, wobei
 
-![Gleichung, die die Augen Koordinaten des Scheitel Punkts anzeigt.](images/tex03.png)
+![Gleichung, die die Augenkoordinaten des Scheitelpunkts zeigt.](images/tex03.png)
 
-und x?, y?, z? und w? die Augen Koordinaten des Scheitel Punkts, P1, P2, P3 und P4 sind die Werte, die in *param* angegeben werden, und M ist die Modelview-Matrix, wenn Sie **gltexgen** aufrufen. Wenn M unzureichend bedingt oder Singular ist, können die von der resultierenden Funktion generierten Texturkoordinaten ungenau oder undefiniert sein.
+und x?, y?, z? und w? sind die Augenkoordinaten des Scheitelpunkts, p1, p2, p3 und p4 sind die Werte, die im *Parameter* angegeben werden, und M ist die Modellansichtsmatrix, wenn Sie **glTexGen aufrufen.** Wenn M schlecht konditioniert oder singulär ist, können texturkoordinaten, die von der resultierenden Funktion generiert werden, ungenau oder nicht definiert sein.
 
-Beachten Sie, dass die Werte in *param* eine Verweis Ebene in den Augen Koordinaten definieren. Die Modelview-Matrix, die auf Sie angewendet wird, ist möglicherweise nicht identisch, wenn die Polygon Scheitel Punkte transformiert werden. Diese Funktion legt ein Feld von Texturkoordinaten fest, das dynamische Konturlinien für das Verschieben von Objekten erzeugt.
+Beachten Sie, dass die Werte im *Parameter* eine Verweisebene in Augenkoordinaten definieren. Die modelview-Matrix, die auf sie angewendet wird, ist möglicherweise nicht die gleiche, wenn die Polygonvertices transformiert werden. Diese Funktion richtet ein Feld von Texturkoordinaten ein, die dynamische Konturlinien für sich bewegende Objekte erzeugen können.
 
-Wenn " *PName* " den Wert "GL \_ Sphere \_ map" und " *coord* " entweder "GL \_ s" oder "GL t" ist \_ , werden die S-und T-Texturkoordinaten U. a. der Einheits Vektor, der vom Ursprung auf den Polygon Scheitelpunkt zeigt (in Augen Koordinaten). Let n ist die aktuelle normale, nach der Transformation zu den Augen Koordinaten. Let f = (FX () fy () FZ) T der reflektionvektor, damit
+Wenn *pname* GL \_ SPHERE MAP und \_ *coord* entweder GL S oder GL T ist, werden die Texturkoordinaten s und \_ t wie folgt \_ generiert. Lassen Sie uns den Einheitenvektor verwenden, der vom Ursprung auf den Polygonvertex (in Augenkoordinaten) zeigen soll. Lassen Sie uns nach der Transformation in Augenkoordinaten die aktuelle Normalität sein. Lassen Sie f = (fx ( ) fy ( ) fz)T der Reflektionsvektor sein, damit
 
-![Gleichung, die den Reflektionsvektor als Funktion des Einheits Vektors und des aktuellen normalen anzeigt.](images/tex05.png)
+![Gleichung, die den Reflektionsvektor als Funktion des Einheitenvektors und der aktuellen Normalität zeigt.](images/tex05.png)
 
-Und schließlich
+Lassen Sie abschließend
 
-![Gleichung, die m als Funktion des reflektionsvektors anzeigt.](images/tex07.png)
+![Gleichung, die m als Funktion des Reflektionsvektors zeigt.](images/tex07.png)
 
-Dann sind die den i-und t-Texturkoordinaten zugewiesenen Werte
+Dann sind die Werte, die den Texturkoordinaten i und t zugewiesen sind,
 
-![Gleichung, die den i-und t-Texturkoordinaten zugewiesene Werte anzeigt.](images/tex06.png)
+![Die Gleichung zeigt werte, die den Texturkoordinaten i und t zugewiesen sind.](images/tex06.png)
 
-Sie können eine Texturkoordinaten-Generierungs Funktion aktivieren oder deaktivieren, indem Sie [**glEnable**](glenable.md) oder [**gldeaktivieren**](gldisable.md) mit einem der symbolischen Texturkoordinaten Namen (GL \_ Texture \_ gen \_ S, GL \_ Texture \_ gen \_ T, GL \_ Texture \_ gen \_ R oder GL \_ Texture \_ gen \_ Q) als Argument verwenden. Wenn diese Funktion aktiviert ist, wird die angegebene Textur Koordinate entsprechend der der Koordinate zugeordneten Generierungs Funktion berechnet. Wenn diese Funktion deaktiviert ist, nehmen nachfolgende Vertices die angegebene Textur Koordinate aus dem aktuellen Satz von Texturkoordinaten an. Anfänglich werden alle Textur Generierungs Funktionen auf "GL Eye linear" festgelegt \_ \_ und sind deaktiviert. Beide s-Ebenen-Gleichungen sind (1, 0, 0, 0); Beide t-Ebenen-Gleichungen sind (0, 1, 0, 0); und alle Gleichungen der r-und q-Ebene sind (0, 0, 0, 0).
+Sie können eine Texturkoordinatengenerierungsfunktion aktivieren oder deaktivieren, indem Sie [**glEnable**](glenable.md) oder [**glDisable**](gldisable.md) mit einem der symbolischen Texturkoordinatennamen (GL \_ TEXTURE GEN \_ \_ S, GL TEXTURE GEN T, GL TEXTURE GEN R oder GL TEXTURE GEN Q) als Argument \_ \_ \_ \_ \_ \_ \_ \_ \_ verwenden. Wenn diese Funktion aktiviert ist, wird die angegebene Texturkoordinate gemäß der generierenden Funktion berechnet, die dieser Koordinate zugeordnet ist. Wenn diese Funktion deaktiviert ist, übernehmen nachfolgende Scheitelungen die angegebene Texturkoordinate aus dem aktuellen Satz von Texturkoordinaten. Anfänglich sind alle Texturgenerierungsfunktionen auf GL \_ EYE LINEAR festgelegt und \_ deaktiviert. Beide Gleichungen der Ebene sind (1,0,0,0); Beide Gleichungen der T-Ebene sind (0,1,0,0); und alle r- und q-Ebenengleichungen sind (0,0,0,0).
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit gltexgen abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit glTexGen ab:
 
 <dl>
 
-[**glgettexgen**](glgettexgen.md)  
-[**glisenabled**](glisenabled.md) mit Argument GL \_ Textur \_ gen \_ S  
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ Textur \_ gen \_ T  
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ Textur \_ gen \_ R  
-[**glisenabled**](glisenabled.md) mit Argument GL \_ Textur \_ gen \_ Q  
+[**glGetTexGen**](glgettexgen.md)  
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ TEXTURE GEN \_ \_ S  
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ TEXTURE GEN \_ \_ T  
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ TEXTURE GEN \_ \_ R  
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ TEXTURE GEN \_ \_ Q  
 </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -136,8 +136,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit gltexgen a
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -158,19 +158,19 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit gltexgen a
 [**glCopyTexSubImage2D**](glcopytexsubimage2d.md)
 </dt> <dt>
 
-[**glgettexgen**](glgettexgen.md)
+[**glGetTexGen**](glgettexgen.md)
 </dt> <dt>
 
-[**glisenabled**](glisenabled.md)
+[**glIsEnabled**](glisenabled.md)
 </dt> <dt>
 
-[gltexd](gltexenv-functions.md)
+[glTexEnv](gltexenv-functions.md)
 </dt> <dt>
 
 [**glTexImage1D**](glteximage1d.md)
 </dt> <dt>
 
-[gltexparameter](gltexparameter-functions.md)
+[glTexParameter](gltexparameter-functions.md)
 </dt> <dt>
 
 [**glTexSubImage1D**](gltexsubimage1d.md)

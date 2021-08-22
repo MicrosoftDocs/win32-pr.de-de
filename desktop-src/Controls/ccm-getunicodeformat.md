@@ -1,9 +1,9 @@
 ---
-title: CCM_GETUNICODEFORMAT Meldung (kommstrg. h)
-description: Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab.
+title: CCM_GETUNICODEFORMAT Meldung (Commctrl.h)
+description: Ruft das Unicode-Zeichenformatflag für das -Steuerelement ab.
 ms.assetid: 8a23cd1c-549e-4d48-891a-b37dbf5c524b
 keywords:
-- Windows-Steuerelemente für CCM_GETUNICODEFORMAT Meldung
+- CCM_GETUNICODEFORMAT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 095d49ccc57faa05e86d12df130b12ce3d542bf6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fa115ba341478990b46600bc76ee02e4ecf750d5a7ccde9f1110aa8856d30fa7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104516"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119438280"
 ---
-# <a name="ccm_getunicodeformat-message"></a>CCM \_ getunicodeformat-Meldung
+# <a name="ccm_getunicodeformat-message"></a>CCM \_ GETUNICODEFORMAT-Nachricht
 
-Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab.
+Ruft das Unicode-Zeichenformatflag für das -Steuerelement ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Unicode-formatflag für das-Steuerelement zurück. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
+Gibt das Unicode-Formatflag für das Steuerelement zurück. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,17 +45,17 @@ Gibt das Unicode-formatflag für das-Steuerelement zurück. Wenn dieser Wert ung
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CCM- \_ Code Format**](ccm-setunicodeformat.md)
+[**CCM \_ SETUNICODEFORMAT**](ccm-setunicodeformat.md)
 </dt> </dl>
 
  

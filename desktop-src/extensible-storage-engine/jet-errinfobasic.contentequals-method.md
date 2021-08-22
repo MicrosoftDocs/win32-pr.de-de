@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_ERRINFOBASIC. Contentequals-Methode'
-title: JET_ERRINFOBASIC. Contentequals-Methode (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen finden Sie unter: JET_ERRINFOBASIC. ContentEquals-Methode'
+title: JET_ERRINFOBASIC. ContentEquals-Methode (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: 'ContentEquals method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Windows8.JET_ERRINFOBASIC.ContentEquals(Microsoft.Isam.Esent.Interop.Windows8.JET_ERRINFOBASIC)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.jet_errinfobasic.contentequals(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e1f527fae20d24e97114afa1f07b427d799c26c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b86417db68b6e538e9a3a5ab4300a5f31fb0a2138d7158490c18d5877009c422
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119362410"
 ---
-# <a name="jet_errinfobasiccontentequals-method"></a>JET_ERRINFOBASIC. Contentequals-Methode
+# <a name="jet_errinfobasiccontentequals-method"></a>JET_ERRINFOBASIC. ContentEquals-Methode
 
 Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,26 +61,26 @@ public bool ContentEquals(
 
 #### <a name="parameters"></a>Parameter
 
-  - andere  
-    Typ: [Microsoft.ISAM.ESENT.Interop.Windows8.JET_ERRINFOBASIC](./jet-errinfobasic-class.md)  
+  - Sonstige  
+    Typ: [Microsoft.Isam.Esent.Interop.Windows8.JET_ERRINFOBASIC](./jet-errinfobasic-class.md)  
     
-    Eine-Instanz, die mit dieser Instanz verglichen werden soll.
+    Eine -Instanz, die mit dieser Instanz verglichen werden soll.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
-True, wenn die beiden Instanzen gleich sind.  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
+TRUE, wenn die beiden Instanzen gleich sind.  
 
 #### <a name="implements"></a>Implementiert
 
-[Icontentequatable \<T\> . Contentequals (T)](./icontentequatable-t-.contentequals-method.md)  
+[IContentEquatable \<T\> . ContentEquals(T)](./icontentequatable-t-.contentequals-method.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_ERRINFOBASIC-Klasse](./jet-errinfobasic-class.md)
 
-[Mitglieder JET_ERRINFOBASIC](./jet-errinfobasic-members.md)
+[JET_ERRINFOBASIC Mitglieder](./jet-errinfobasic-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

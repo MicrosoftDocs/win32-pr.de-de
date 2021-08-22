@@ -1,11 +1,11 @@
 ---
-title: FRS-Replikat-Set-type-Attribut
-description: Dies ist ein Code, der angibt, ob es sich um eine SYSVOL-Replikat Gruppe, eine DFS-Replikat Gruppe oder eine andere Replikat
+title: FRS-Replica-Set-Type-Attribut
+description: Dies ist ein Code, der angibt, ob es sich um eine sysvol-Replikatgruppe, eine DFS-Replikatgruppe oder eine andere Replikatgruppe handelt.
 ms.assetid: 687a854f-ffa1-41f4-a515-5224759696ab
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für FRS-Replikat-Set-Type
-- frsreplicasettype-Attribut AD-Schema
+- AD-Schema des FRS-Replica-Set-Type-Attributs
+- AD-Schema des fRSReplicaSetType-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 18046c9b4edb794687d275af52e35416419c7e2d
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 9ab742f3fc9886c298ce7dfd17343a881f17897943ba46d7fc2e3994cc4d9a27
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119323640"
 ---
-# <a name="frs-replica-set-type-attribute"></a>FRS-Replikat-Set-type-Attribut
+# <a name="frs-replica-set-type-attribute"></a>FRS-Replica-Set-Type-Attribut
 
-Dies ist ein Code, der angibt, ob es sich um eine SYSVOL-Replikat Gruppe, eine DFS-Replikat Gruppe oder eine andere Replikat
+Dies ist ein Code, der angibt, ob es sich um eine sysvol-Replikatgruppe, eine DFS-Replikatgruppe oder eine andere Replikatgruppe handelt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | FRS-Replikat-Set-Type                 |
-| LDAP-Display-Name | frsreplicasettype                    |
+| CN                | FRS-Replica-Set-Type                 |
+| Ldap-Anzeigename | fRSReplicaSetType                    |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.     |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.     |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.31                |
-| System-ID-GUID    | 26d9736b-6070-11d1-a9c6-0000t80367c1 |
+| System-Id-Guid    | 26d9736b-6070-11d1-a9c6-0000f80367c1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Dies ist ein Code, der angibt, ob es sich um eine SYSVOL-Replikat Gruppe, eine D
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Dies ist ein Code, der angibt, ob es sich um eine SYSVOL-Replikat Gruppe, eine D
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
 | System-Flags           | 0x00000010                                                |
-| In verwendete Klassen        | [**NTFRS-Replikat Satz**](c-ntfrsreplicaset.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Replica-Set**](c-ntfrsreplicaset.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Dies ist ein Code, der angibt, ob es sich um eine SYSVOL-Replikat Gruppe, eine D
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
 | System-Flags           | 0x00000010                                                |
-| In verwendete Klassen        | [**NTFRS-Replikat Satz**](c-ntfrsreplicaset.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Replica-Set**](c-ntfrsreplicaset.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Dies ist ein Code, der angibt, ob es sich um eine SYSVOL-Replikat Gruppe, eine D
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
 | System-Flags           | 0x00000010                                                |
-| In verwendete Klassen        | [**NTFRS-Replikat Satz**](c-ntfrsreplicaset.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Replica-Set**](c-ntfrsreplicaset.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Dies ist ein Code, der angibt, ob es sich um eine SYSVOL-Replikat Gruppe, eine D
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
 | System-Flags           | 0x00000010                                                |
-| In verwendete Klassen        | [**NTFRS-Replikat Satz**](c-ntfrsreplicaset.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Replica-Set**](c-ntfrsreplicaset.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Dies ist ein Code, der angibt, ob es sich um eine SYSVOL-Replikat Gruppe, eine D
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
 | System-Flags           | 0x00000010                                                |
-| In verwendete Klassen        | [**NTFRS-Replikat Satz**](c-ntfrsreplicaset.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Replica-Set**](c-ntfrsreplicaset.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Dies ist ein Code, der angibt, ob es sich um eine SYSVOL-Replikat Gruppe, eine D
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
 | System-Flags           | 0x00000010                                                |
-| In verwendete Klassen        | [**NTFRS-Replikat Satz**](c-ntfrsreplicaset.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Replica-Set**](c-ntfrsreplicaset.md)<br/> |
 
 
 

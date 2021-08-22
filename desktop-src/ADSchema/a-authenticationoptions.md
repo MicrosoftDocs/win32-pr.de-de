@@ -1,11 +1,11 @@
 ---
 title: Authentication-Options-Attribut
-description: Die Authentifizierungs Optionen, die in ADSI zum Binden an Verzeichnisdienst Objekte verwendet werden.
+description: Die Authentifizierungsoptionen, die in ADSI zum Binden an Verzeichnisdienstobjekte verwendet werden.
 ms.assetid: a6dc4591-d825-456a-8f77-78cb3c91af9f
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Authentication-Options-Attribut
-- AD-Schema des authenticationoptions-Attributs
+- Authentication-Options AD-Schema des Attributs
+- authenticationOptions-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5cfa9c422dfe196ab002c02c361759461f43965d
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 220438034793c4cae72ab730e8c9116edff69a0524c1dc135185da3ff8b6af73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107294"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119443010"
 ---
 # <a name="authentication-options-attribute"></a>Authentication-Options-Attribut
 
-Die Authentifizierungs Optionen, die in ADSI zum Binden an Verzeichnisdienst Objekte verwendet werden.
+Die Authentifizierungsoptionen, die in ADSI zum Binden an Verzeichnisdienstobjekte verwendet werden.
 
 
 
 | Eingabe | Wert |
 |-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | CN                | Authentication-Options                                                                                                                                                                                                                                                       |
-| LDAP-Display-Name | authenticationoptions                                                                                                                                                                                                                                                        |
-| Size              | 4 Bytes. In IADs. h: ADS \_ sichere \_ Authentifizierung 0x1 definierte Werte, ADS \_ verwenden \_ Verschlüsselung 0x2, ADS \_ verwenden \_ SSL 0x2, ADS Schreib geschützter \_ \_ Server 0x4, anzeigen \_ der \_ Anmelde Informationen 0x8, ADS \_ keine \_ Authentifizierung 0x10, ADS \_ schnelles \_ binden 0x20, anzeigen \_ \_ Signierung 0x40, anzeigen verwenden der \_ \_ Versiegelung 0x80 |
-| Berechtigung aktualisieren  | \-                                                                                                                                                                                                                                                                           |
-| Aktualisierungshäufigkeit  | \-                                                                                                                                                                                                                                                                           |
+| Ldap-Anzeigename | authenticationOptions                                                                                                                                                                                                                                                        |
+| Size              | 4 Bytes. In IADS.h definierte Werte: ADS SECURE AUTHENTICATION 0x1, ADS USE ENCRYPTION 0X2, ADS \_ USE \_ SSL \_ \_ \_ \_ 0x2, ADS \_ READONLY \_ SERVER 0X4, ADS PROMPT CREDENTIALS \_ \_ 0x8, ADS NO AUTHENTICATION \_ 0x10, ADS FAST BIND 0x20, ADS USE SIGNING \_ \_ \_ \_ \_ 0x40, ADS USE ADS USE \_ ADS USE ADS \_ 0X80 |
+| Aktualisieren von Berechtigungen  | \-                                                                                                                                                                                                                                                                           |
+| Updatehäufigkeit  | \-                                                                                                                                                                                                                                                                           |
 | Attribute-Id      | 1.2.840.113556.1.4.11                                                                                                                                                                                                                                                        |
-| System-ID-GUID    | bf967928-0de6-11d0-a285-00aa003049e2                                                                                                                                                                                                                                         |
+| System-Id-Guid    | bf967928-0de6-11d0-a285-00aa003049e2                                                                                                                                                                                                                                         |
 | Syntax            | [**Enumeration**](s-enumeration.md)                                                                                                                                                                                                                                         |
 
 
@@ -43,7 +43,7 @@ Die Authentifizierungs Optionen, die in ADSI zum Binden an Verzeichnisdienst Obj
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Die Authentifizierungs Optionen, die in ADSI zum Binden an Verzeichnisdienst Obj
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Is-Single-Valued       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Die Authentifizierungs Optionen, die in ADSI zum Binden an Verzeichnisdienst Obj
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Is-Single-Valued       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Die Authentifizierungs Optionen, die in ADSI zum Binden an Verzeichnisdienst Obj
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Is-Single-Valued       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Die Authentifizierungs Optionen, die in ADSI zum Binden an Verzeichnisdienst Obj
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Ist einwertig       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Die Authentifizierungs Optionen, die in ADSI zum Binden an Verzeichnisdienst Obj
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Ist einwertig       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Die Authentifizierungs Optionen, die in ADSI zum Binden an Verzeichnisdienst Obj
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Ist einwertig       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 

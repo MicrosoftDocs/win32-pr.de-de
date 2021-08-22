@@ -1,12 +1,12 @@
 ---
-title: Setsecuritylayer-Methode der Win32_TSGeneralSetting-Klasse
-description: Die setsecuritylayer-Methode legt die Sicherheitsebene fest.
+title: SetSecurityLayer-Methode der Win32_TSGeneralSetting Klasse
+description: Die SetSecurityLayer-Methode legt die Sicherheitsschicht fest.
 ms.assetid: 3b894494-2180-4f1d-8e67-a66c679d286c
 ms.tgt_platform: multiple
 keywords:
-- Setsecuritylayer-Methode Remotedesktopdienste
-- Setsecuritylayer-Methode Remotedesktopdienste, Win32_TSGeneralSetting-Klasse
-- Win32_TSGeneralSetting-Klasse Remotedesktopdienste, setsecuritylayer-Methode
+- SetSecurityLayer-Remotedesktopdienste
+- SetSecurityLayer-Methode Remotedesktopdienste , Win32_TSGeneralSetting-Klasse
+- Win32_TSGeneralSetting klasse Remotedesktopdienste , SetSecurityLayer-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b5e04c3f7e5a58ec8de345d570e36b35c7eb1e7e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0e01f761b63be028e2c507644f160b6742f9d781e517ea03ce549e3ac84419c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119513870"
 ---
-# <a name="setsecuritylayer-method-of-the-win32_tsgeneralsetting-class"></a>Setsecuritylayer-Methode der Win32- \_ Klasse "zgeneralsetting"
+# <a name="setsecuritylayer-method-of-the-win32_tsgeneralsetting-class"></a>SetSecurityLayer-Methode der Win32 \_ TSGeneralSetting-Klasse
 
-Die **setsecuritylayer** -Methode legt die Sicherheitsebene fest.
+Die **SetSecurityLayer-Methode** legt die Sicherheitsschicht fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,21 +43,21 @@ uint32 SetSecurityLayer(
 
 <dl> <dt>
 
-*Securitylayer* \[ in\]
+*SecurityLayer* \[ In\]
 </dt> <dd>
 
-Die festzulegende Sicherheitsebene. Wenn die aktuelle Verschlüsselungs Stufe 1 ist, ist der Wert 2 für *securitylayer* ungültig.
+Die sicherheitsschicht, die festgelegt werden soll. Wenn die aktuelle Verschlüsselungsstufe 1 ist, ist der Wert 2 für *SecurityLayer* ungültig.
 
 <dt>
 
 <span id="RDP_Security_Layer"></span><span id="rdp_security_layer"></span><span id="RDP_SECURITY_LAYER"></span>
 
-<span id="RDP_Security_Layer"></span><span id="rdp_security_layer"></span><span id="RDP_SECURITY_LAYER"></span>**RDP-Sicherheitsebene** (0)
+<span id="RDP_Security_Layer"></span><span id="rdp_security_layer"></span><span id="RDP_SECURITY_LAYER"></span>**RDP-Sicherheitsschicht** (0)
 
 
 </dt> <dd>
 
-Bei der Kommunikation zwischen dem Server und dem Client wird die Native RDP-Verschlüsselung verwendet.
+Für die Kommunikation zwischen dem Server und dem Client wird die native RDP-Verschlüsselung verwendet.
 
 </dd> <dt>
 
@@ -68,7 +68,7 @@ Bei der Kommunikation zwischen dem Server und dem Client wird die Native RDP-Ver
 
 </dt> <dd>
 
-Die sicherste Ebene, die vom Client unterstützt wird, wird verwendet. Wenn unterstützt, wird SSL (TLS 1,0) verwendet.
+Die sicherste Ebene, die vom Client unterstützt wird, wird verwendet. Falls unterstützt, wird SSL (TLS 1.0) verwendet.
 
 </dd> <dt>
 
@@ -79,17 +79,17 @@ Die sicherste Ebene, die vom Client unterstützt wird, wird verwendet. Wenn unte
 
 </dt> <dd>
 
-SSL (TLS 1,0) wird für die Server Authentifizierung sowie für die Verschlüsselung aller Daten verwendet, die zwischen dem Server und dem Client übertragen werden. Diese Einstellung erfordert, dass der Server über ein SSL-kompatibles Zertifikat verfügt. Diese Einstellung ist nicht kompatibel mit dem **minverschlüsseltionlevel** -Wert 1.
+SSL (TLS 1.0) wird für die Serverauthentifizierung sowie für die Verschlüsselung aller Daten verwendet, die zwischen dem Server und dem Client übertragen werden. Für diese Einstellung muss der Server über ein SSL-kompatibles Zertifikat verfügen. Diese Einstellung ist nicht mit dem **MinEncryptionLevel-Wert** 1 kompatibel.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg Erfolg zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) .
+Gibt Success bei Erfolg zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Remotedesktopdienste finden Sie unter [Fehlercodes](terminal-services-wmi-provider-error-codes.md) für WMI-Anbieter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -99,8 +99,8 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
@@ -109,10 +109,10 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32-Einstellung für "" \_**](win32-tsgeneralsetting.md)
+[**Win32 \_ TSGeneralSetting**](win32-tsgeneralsetting.md)
 </dt> <dt>
 
-[**Setencryptionlevel**](win32-tsgeneralsetting-setencryptionlevel.md)
+[**SetEncryptionLevel**](win32-tsgeneralsetting-setencryptionlevel.md)
 </dt> </dl>
 
  

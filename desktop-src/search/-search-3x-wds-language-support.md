@@ -4,28 +4,28 @@ ms.assetid: a800d2ac-3aee-4e74-a29a-a70355138ebc
 title: Von Windows Search unterstützte Sprachen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 350a8861a5817a8ac5710214ccd35c780f2c9dd5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 812252fa6815bb8f32df684b51d4f39bca4105d7997b07bd930ab761cb082f91
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750433"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119396540"
 ---
 # <a name="languages-supported-by-windows-search"></a>Von Windows Search unterstützte Sprachen
 
 In diesem Thema wird beschrieben, wie Windows Search mehrere Sprachen unterstützt.
 
-## <a name="tokenization-wordbreakers-and-language-resources"></a>Tokenisierung, wordtrennungen und Sprachressourcen
+## <a name="tokenization-wordbreakers-and-language-resources"></a>Tokenisierung, Wordbreakers und Sprachressourcen
 
-Windows Search ist sprachunabhängig, aber die Genauigkeit der Suche über Sprachen hinweg kann aufgrund der Art und Weise, wie Wörter Trennungen den Text mit Token versehen, variieren. Wordtrennungen implementieren verschiedene tokenisierungsregeln für Sprachen und unterbrechen Text in einzelne Token oder Wörter, die indiziert oder durchsucht werden sollen.
+Windows Die Suche ist sprachunabhängig, aber die Genauigkeit der Suche in verschiedenen Sprachen kann aufgrund der Art und Weise variieren, in der Wordbreaker Text tokenisieren. Wordbreaker implementieren verschiedene Tokenisierungsregeln für Sprachen und teilen Text in einzelne Token oder Wörter auf, die indiziert oder durchsucht werden sollen.
 
-Sowohl die Sprache des indizierten Texts als auch die Abfrage Zeichenfolge werden in Token unterteilt. Da tokenisierungsregeln je nach Sprache unterschiedlich sind, gibt es für jede Sprache oder Sprachen Familie separate Wörter Trennungen. Wenn die Abfragesprache und die indizierte Sprache nicht übereinstimmen, kann dies zu unvorhersehbaren Ergebnissen führen.
+Sowohl die Sprache des indizierten Texts als auch die Abfragezeichenfolge werden in Token unterteilt. Da Tokenisierungsregeln je nach Sprache variieren, gibt es separate Wörtertrennungen für jede Sprache oder Familie von Sprachen. Wenn zwischen der Abfragesprache und der indizierten Sprache ein Konflikt besteht, können die Ergebnisse unvorhersehbar sein.
 
-Windows Search ist mit einem klar definierten Satz von wordtrennungen ausgeliefert. Klassische Wörter Trennung-und Wort Stamm Erkennung-Komponenten werden in Windows Vista und höher unterstützt. Wenn die Sprache eines Dokuments nicht bestimmt werden kann, versucht Windows Search, die Sprache zu erkennen, um die geeignetste Wörter Trennung zu ermitteln. Windows Search versucht, die Sprache zu erkennen, indem die [**GetSystemPreferredUILanguages**](/windows/win32/api/winnls/nf-winnls-getsystempreferreduilanguages) -Funktion aufgerufen wird, um die erste MUI-Sprache (Multiple User Interface) zu ermitteln (in der Regel die Benutzeroberflächen Sprache des Systems, es sei denn, MUI Language Packs sind installiert). Wenn der Befehl erfolgreich ausgeführt wird, wird die Wörter Trennung für die erste MUI-Sprache verwendet. Wenn der Aufruf von **GetSystemPreferredUILanguages** fehlschlägt, ruft Windows Search das System Gebiets Schema durch Aufrufen der [**GetSystemDefaultLCID**](/windows/win32/api/winnls/nf-winnls-getsystemdefaultlcid) -Funktion ab und verwendet die Wörter Trennung, die diesem Gebiets Schema zugeordnet ist.
+Windows Die Suche enthält einen klar definierten Satz von Wörterbreakern. Klassische Wordbreaker- und Wortstammschutzkomponenten werden in Windows Vista und höher unterstützt. Wenn die Sprache eines Dokuments nicht bestimmt werden kann, versucht Windows Search, die Sprache zu erkennen, um den am besten geeigneten Wordbreaker zu identifizieren. Windows Bei der Suche wird versucht, die Sprache zu erkennen, indem die [**GetSystemPreferredUILanguages-Funktion**](/windows/win32/api/winnls/nf-winnls-getsystempreferreduilanguages) aufgerufen wird, um die erste LANGUAGE-Sprache (MULTIPLE Benutzeroberfläche) zu bestimmen (die in der Regel die Sprache der Systembenutzeroberfläche ist, es sei denn, DIE LANGUAGE Packs sind installiert). Wenn dieser Aufruf erfolgreich ist, wird der Wordbreaker für die erste LANGUAGE LANGUAGE verwendet. Wenn beim Aufruf von **GetSystemPreferredUILanguages** ein Fehler auftritt, ruft Windows Search das Systemschema ab, indem die [**GetSystemDefaultLCID-Funktion**](/windows/win32/api/winnls/nf-winnls-getsystemdefaultlcid) aufgerufen wird, und verwendet den wordbreaker, der diesem Gebietsschema zugeordnet ist.
 
-Wenn für eine Sprache keine Wörter Trennung installiert ist, wird die Windows-Suche in Leerraum mithilfe des **neutralen** Wörter Trennung unterbrochen.
+Wenn kein Wordbreaker für eine Sprache installiert ist, unterbricht Windows Suche den Leerraum mithilfe des **neutralen** Wortbreakers.
 
-Sie können eine Sprache durch die Registrierung entfernen, wie im folgenden Beispiel veranschaulicht.
+Sie können eine Sprache über die Registrierung entfernen, wie im folgenden Beispiel veranschaulicht.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -43,107 +43,107 @@ HKEY_LOCAL_MACHINE
 ```
 
 > [!TIP]
-> Wenn Sie Änderungen an der Registrierung vornehmen, starten Sie Windows Search neu.
+> Wenn Sie Änderungen an der Registrierung vornehmen, starten Sie Windows Suchen neu.
 
  
 
-Wenn für Windows Search eine neue Wörter Trennung-Klausel erforderlich ist, wird der Klassen Bezeichner (CLSID) gelesen, und die instanziierte Wörter Trennung wird zwischengespeichert.
+Wenn Windows Search einen neuen Wordbreaker erfordert, wird der Klassenbezeichner (CLSID) gelesen, und der instanziierte Wordbreaker wird zwischengespeichert.
 
-Sie können eine benutzerdefinierte Wörter Trennung für eine Sprache erstellen, indem Sie die [**iwordbreaker**](/windows/desktop/api/Indexsrv/nn-indexsrv-iwordbreaker) -Schnittstelle implementieren. Windows Search ruft dann die **iwordbreaker** -Methoden auf, wenn Inhalts Indizes erstellt und Abfragen ausgeführt werden.
+Sie können einen benutzerdefinierten Wordbreaker für eine Sprache erstellen, indem Sie die [**IWordBreaker-Schnittstelle**](/windows/desktop/api/Indexsrv/nn-indexsrv-iwordbreaker) implementieren. Windows Die Suche ruft dann die **IWordBreaker-Methoden** auf, wenn Inhaltsindizes erstellt und Abfragen ausgeführt werden.
 
-Gebiets Schema Informationen für indizierten Inhalt werden aus der Quelle des Inhalts abgerufen. Wenn der quellimplementierer das Gebiets Schema des indizierten Inhalts nicht kennt, sollte das Gebiets Schema auf Gebiets Schema [**\_ neutral**](../intl/locale-neutral.md)festgelegt werden.
+Gebietsschemainformationen für indizierten Inhalt werden aus der Quelle des Inhalts abgerufen. Wenn der Quell implementer das Gebietsschema des indizierten Inhalts nicht kennt, sollte das Gebietsschema auf [**LOCALE \_ NEUTRAL**](../intl/locale-neutral.md)festgelegt werden.
 
-Wenn Sie z. b. einen Filter Handler (eine Implementierung der [**IFilter**](https://www.bing.com/search?q=**IFilter**) -Schnittstelle), einen Eigenschafts Handler oder einen Protokollhandler implementieren, sollten Sie das Gebiets Schema für indizierten Inhalt auf Gebiets Schema [**\_ neutral**](../intl/locale-neutral.md) festlegen, es sei denn, Sie haben bestimmte Gebiets Schema Informationen und sind sicher von seiner Genauigkeit.
+Wenn Sie beispielsweise einen Filterhandler (eine Implementierung der [**IFilter-Schnittstelle),**](https://www.bing.com/search?q=**IFilter**) einen Eigenschaftenhandler oder einen Protokollhandler implementieren, sollten Sie das Gebietsschema für indizierten Inhalt auf [**LOCALE \_ NEUTRAL**](../intl/locale-neutral.md) festlegen, es sei denn, Sie verfügen über bestimmte Gebietsschemainformationen und sind sich dessen Genauigkeit sicher.
 
 > [!TIP]
-> Wenn eine Index Abfrage auf Benutzereingaben basiert, sollte das Gebiets Schema der Sprache entsprechen, in der der Benutzer die Eingabe durchläuft. Sie können dieses Gebiets Schema ermitteln, indem Sie die [**GetKeyboardLayout**](/windows/win32/api/winuser/nf-winuser-getkeyboardlayout) -Funktion aufrufen.
+> Wenn eine Indexabfrage auf Benutzereingaben basiert, sollte das Gebietsschema mit der Sprache übereinstimmen, in die der Benutzer eingibt. Sie können dieses Gebietsschema ermitteln, indem Sie die [**GetKeyboardLayout-Funktion**](/windows/win32/api/winuser/nf-winuser-getkeyboardlayout) aufrufen.
 
  
 
-## <a name="languages-supported-by-wordbreakers"></a>Von wordtrennungen unterstützte Sprachen
+## <a name="languages-supported-by-wordbreakers"></a>Von Wordbreakers unterstützte Sprachen
 
-Windows Search umfasst wordtrennungen zur Unterstützung der folgenden Sprachen.
+Windows Die Suche umfasst Wörterbreaker, um die folgenden Sprachen zu unterstützen.
 
 
 
-| Registrierungsschlüssel             | Sprache (unter Sprache)                            | LCID   |
+| Registrierungsschlüssel             | Sprache (Untersprache)                            | LCID   |
 |--------------------------|---------------------------------------------------|--------|
-| **Arabisch ( \_ Saudiarabien)**  | Arabisch (neutral)                                  | 0x0001 |
-| **Bengalischer \_ Standardwert**     | Bangla (neutral)                                  | 0x0045 |
-| **Bulgarischer \_ Standard**   | Bulgarisch (Bulgarien)                              | 0x0402 |
-| **Katalanisch \_ Standard**     | Katalanisch (Katalanisch)                                 | 0x0403 |
-| **Chinesisch ( \_ Hongkong)**    | Chinesisch (Hongkong SAR, VR China)                      | 0x0c04 |
-| **Chinesisch ( \_ vereinfacht)**  | Chinesisch (vereinfacht)                              | 0x0804 |
-| **Chinesisch ( \_ traditionell)** | Chinesisch (traditionell)                             | 0x0404 |
-| **Kroatisch \_ Standard**    | Kroatisch (Kroatien)                                | 0x041a |
-| **Tschechische \_ Standardeinstellung**       | Tschechisch (Tschechische Republik)                            | 0x0405 |
-| **Dänisch ( \_ Standard)**      | Dänisch (Dänemark)                                  | 0x0406 |
-| **Niederländisch \_ Niederländisch**         | Niederländisch (Niederlande)                               | 0x0413 |
-| **English \_ UK**          | Walisisch (Großbritannien)                          | 0x0809 |
-| **Englisch ( \_ USA)**          | Englisch (USA)                           | 0x0409 |
-| **Finnischer \_ Standard**     | Finnisch (Finnland)                                 | 0x040b |
-| **Französisch \_ Französisch**       | Französisch (Frankreich)                                   | 0x040c |
-| **Deutsch \_ Deutsch**       | Deutsch (Deutschland)                                  | 0x0407 |
-| **Griechisch ( \_ Standard)**       | Griechisch (Griechenland)                                    | 0x0408 |
-| **Standardwert von Gujarati \_**    | Gujarati (Indien)                                  | 0x0447 |
-| **Hebräisch ( \_ Standard)**      | Hebräisch (neutral)                                  | 0x000D |
-| **Hindi- \_ Standard**       | Hindi (Indien)                                     | 0x0439 |
-| **Ungarischer \_ Standard**   | Ungarisch (Ungarn)                               | 0x040e |
-| **Isländisch \_ Standard**   | Isländisch (Island)                               | 0x040f |
-| **Indonesischer \_ Standardwert**  | Indonesisch (Indonesien)                            | 0x0421 |
-| **Italienisch \_ Italienisch**     | Italienisch (Italien)                                   | 0x0410 |
-| **Japanischer \_ Standard**    | Japanisch (Japan)                                  | 0x0411 |
-| **Kannada- \_ Standard**     | Kannada (Indien)                                   | 0x044B |
-| **Koreanisch \_ Standard**      | Koreanisch (Korea)                                    | 0x0412 |
-| **Lettischer \_ Standardwert**     | Lettisch (Lettland)                                  | 0x0426 |
-| **Litauischer \_ Standardwert**  | Litauisch (Litauisch)                           | 0x0427 |
-| **Malaiisch, \_ Malaysia**      | Malaiisch (Malaysia)                                  | 0x043e |
-| **Malayalam ( \_ Standard)**   | Malayalam (neutral)                               | 0x004c |
-| **Marathi- \_ Standard**     | Marathi (Indien)                                   | 0x044e |
+| **\_Arabisch–ArabischArabia**  | Arabisch (neutral)                                  | 0x0001 |
+| **Default \_ (Standardwert)**     | Pausieren (neutral)                                  | 0x0045 |
+| **Standardeinstellung \_ "100"**   | Bulgarisch (Bulgarien)                              | 0x0402 |
+| **\_Default (Standardeinstellung)**     | Katalanisch (Katalanisch)                                 | 0x0403 |
+| **Chinesisch \_ (Hongkong)**    | Chinesisch (Hongkong SAR, VR China)                      | 0x0C04 |
+| **\_Chinesisch (vereinfacht)**  | Chinesisch (vereinfacht)                              | 0x0804 |
+| **\_Chinesisch (traditionell)** | Chinesisch (traditionell)                             | 0x0404 |
+| **Standardeinstellung \_ "100"**    | Kroatisch (Kroatien)                                | 0x041A |
+| **Tschechisch \_ (Standard)**       | Tschechisch (Tschechische Republik)                            | 0x0405 |
+| **Standard für Dänisch \_**      | Dänisch (Dänemark)                                  | 0x0406 |
+| **\_Niederländisch (Niederländisch)**         | Niederländisch (Niederlande)                               | 0x0413 |
+| **Englisch \_ (Vereinigtes Königreich)**          | Walisisch (Großbritannien)                          | 0x0809 |
+| **Englisch \_ (USA)**          | Englisch (USA)                           | 0x0409 |
+| **Default \_ (Finnisch, Standard)**     | Finnisch (Finnland)                                 | 0x040B |
+| **\_Französisch (Französisch)**       | Französisch (Frankreich)                                   | 0x040C |
+| **\_Deutsch**       | Deutsch (Deutschland)                                  | 0x0407 |
+| **Griechisch \_ (Standard)**       | Griechisch (Griechenland)                                    | 0x0408 |
+| **\_Gujarati-Standard**    | Gujarati (Indien)                                  | 0x0447 |
+| **Hebräische \_ Standardeinstellung**      | Hebräisch (neutral)                                  | 0x000D |
+| **\_Hindi-Standard**       | Hindi (Indien)                                     | 0x0439 |
+| **Ungarisch \_ (Standard)**   | Ungarisch (Ungarn)                               | 0x040E |
+| **Islandser \_ Standardwert**   | Isländisch (Island)                               | 0x040F |
+| **Indonesische \_ Standardeinstellung**  | Indonesisch (Indonesien)                            | 0x0421 |
+| **Italienisch \_ (Italienisch)**     | Italienisch (Italien)                                   | 0x0410 |
+| **Japanischer \_ Standardwert**    | Japanisch (Japan)                                  | 0x0411 |
+| **Kannada \_ Default**     | Kannada (Indien)                                   | 0x044B |
+| **Koreanisch \_ (Standard)**      | Koreanisch (Korea)                                    | 0x0412 |
+| **Standardmäßiger \_ Standardwert**     | Lettisch (Lettland)                                  | 0x0426 |
+| **Standardmäßiger \_ Standardwert**  | Litauisch (Litauisch)                           | 0x0427 |
+| **\_Malaiisch-Australien**      | Malaiisch (Malaysia)                                  | 0x043E |
+| **\_Mallam-Standardwert**   | Mallamlam (neutral)                               | 0x004C |
+| **Marathi \_ Default**     | Marathi (Indien)                                   | 0x044E |
 | **Norwegisch \_ Bokmal**    | Norwegisch, Bokmål (Norwegen)                        | 0x0414 |
-| **Polnisch ( \_ Standard)**      | Polnisch (Polen)                                   | 0x0415 |
-| **Portugiesisch ( \_ Portugal)** | Portugiesisch (Portugal)                             | 0x0816 |
-| **Portugiesisch ( \_ Brasilien)**   | Portugiesisch (Brasilien)                               | 0x0416 |
-| **Punjabi- \_ Standard**     | Punjabi (Indien)                                   | 0x0446 |
-| **Rumänischer \_ Standard**    | Rumänisch (Rumänien)                                | 0x0418 |
-| **Russischer \_ Standard**     | Russisch (neutral)                                 | 0x0019 |
-| **Serbisch \_ Kyrillisch**    | Serbisch (Serbien und Montenegro, ehemals, Kyrillisch) | 0x0c1a |
-| **Serbisch \_ lateinisch**       | Serbisch (Serbien und Montenegro, ehemals, lateinisch)    | 0x081a |
-| **Slowakisch \_ Standard**      | Slowakisch (Slowakei)                                 | 0x041b |
-| **Slowenisch \_ Standard**   | Slowenisch (Slowenien)                              | 0x0424 |
-| **Spanisch \_ modern**      | Spanisch (Spanien, modern Sort)                      | 0x0C0A |
-| **Schwedischer \_ Standard**     | Schwedisch (Schweden)                                  | 0x041d |
-| **Tamil- \_ Standard**       | Tamil (Indien)                                     | 0x0449 |
-| **Telugu- \_ Standard**      | Telugu (Indien)                                    | 0x044a |
-| **Thailändischer \_ Standard**        | Thai (Thailand)                                   | 0x041E |
-| **Türkisch ( \_ Standard)**     | Türkisch (Türkei)                                  | 0x041f |
-| **Ukrainischer \_ Standard**   | Ukrainisch (Ukraine)                               | 0x0422 |
-| **Urdu- \_ Standard**        | Urdu (Pakistan)                                   | 0x0420 |
-| **Vietnamesisch \_ Standard**  | Vietnamesisch (Vietnam)                              | 0x042a |
+| **Polnisch \_ (Standard)**      | Polnisch (Polen)                                   | 0x0415 |
+| **Portugiesisch \_ (Portugal)** | Portugiesisch (Portugal)                             | 0x0816 |
+| **Portugiesisch \_ (Brasilien)**   | Portugiesisch (Brasilien)                               | 0x0416 |
+| **Punjabi-Standard \_**     | Punjabi (Indien)                                   | 0x0446 |
+| **Standardmäßige \_ Standardeinstellungen**    | Rumänisch (Rumänien)                                | 0x0418 |
+| **Russisch \_ (Standard)**     | Russisch (neutral)                                 | 0x0019 |
+| **\_Kyrillisch (Kyrillisch)**    | Serbisch (Früher, Kyrillisch) | 0x0C1A |
+| **\_Lateinisch (Serbisch)**       | Serbisch (Früher, Serbisch, Lateinisch)    | 0x081A |
+| **Standardeinstellung \_ "Slowakisch"**      | Slowakisch (Slowakei)                                 | 0x041B |
+| **Standardmäßiger \_ Standardwert**   | Slowenisch (Slowenien)                              | 0x0424 |
+| **Spanisch \_ Modern**      | Spanisch (Spanien, Moderne Sortierung)                      | 0x0C0A |
+| **Standardwert \_ für "Schwedisch"**     | Schwedisch (Schweden)                                  | 0x041D |
+| **\_Standardeinstellung**       | Tamil (Indien)                                     | 0x0449 |
+| **Telugu-Standard \_**      | Telugu (Indien)                                    | 0x044A |
+| **\_Thailändisch Standard**        | Thai (Thailand)                                   | 0x041E |
+| **Türkisch \_ (Standardeinstellung)**     | Türkisch (Türkei)                                  | 0x041F |
+| **Standardmäßige \_ Standardeinstellungen**   | Ukrainisch (Ukraine)                               | 0x0422 |
+| **Urdu \_ Default**        | Urdu (Pakistan)                                   | 0x0420 |
+| **\_Standardeinstellung**  | Vietnamesisch (Vietnam)                              | 0x042A |
 
 
 
  
 
 > [!Note]  
-> LCIDs für einige Sprachen in der Tabelle werden mithilfe der Sprachen-ID, der unter Sprachen-ID und des Sortier Bezeichners generiert.
+> LCIDs für einige Sprachen in der Tabelle werden mithilfe des Sprachbezeichners, des Untersprachebezeichners und des Sortierbezeichners generiert.
 
  
 
-Weitere Informationen zu Sprachen und zugeordneten Bezeichnern finden Sie unter [sprach Bezeichner-Konstanten und-](../intl/language-identifier-constants-and-strings.md)Zeichen folgen.
+Weitere Informationen zu Sprachen und zugeordneten Bezeichnern finden Sie unter [Sprachbezeichnerkonst konstanten und Zeichenfolgen](../intl/language-identifier-constants-and-strings.md).
 
 > [!Note]  
-> Es gibt keine Garantie dafür, dass alle diese sprach Registrierungsschlüssel auf einem beliebigen Computer vorhanden sind. Die Wörter Trennung für eine bestimmte Sprache kann abhängig von den Benutzereinstellungen auf dem Computer installiert werden.
+> Es gibt keine Garantie, dass alle diese Sprachregistrierungsschlüssel auf einem bestimmten Computer vorhanden sind. Der Wordbreaker für eine beliebige Sprache kann je nach Benutzereinstellungen auf dem Computer installiert sein.
 
  
 
-**Ab Windows 8.1** ist die bevorzugte Methode für die Verwendung von wordtrennungen die WinRT-API [**wordssegmenter-Klasse**](/uwp/api/Windows.Data.Text.WordsSegmenter?view=winrt-19041).
+**Ab Windows 8.1** die bevorzugte Methode zur Verwendung von Wordbreakern über die WinRT-API-WordsSegmenter-Klasse . [](/uwp/api/Windows.Data.Text.WordsSegmenter?view=winrt-19041)
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
--   Informationen zum Implementieren und Verwenden von benutzerdefinierten Wörter Trennungen und Wort Stamm Erkennungen für weitere Sprachen und Gebiets Schemas finden Sie unter [Erweitern von Sprachressourcen in Windows Search](extending-language-resources-in-windows-search.md).
--   Wenn Sie die Sprache eines Texts identifizieren müssen, können Sie die automatische Erkennung von Sprachen (LAD) verwenden, die in Windows 7 und höher verfügbar ist. Weitere Informationen finden Sie unter [Erweiterte linguistische Dienste](../intl/extended-linguistic-services.md) (STS).
--   Informationen zum Verwalten, Abfragen und Erweitern des Indexes finden Sie im [Entwicklerhandbuch für Windows-Suche](-search-developers-guide-entry-page.md).
+-   Informationen zum Implementieren und Verwenden von benutzerdefinierten Wörterumbrüchen und Wortstammlern für zusätzliche Sprachen und Windows finden Sie unter Erweitern von [Sprachressourcen in Windows Search.](extending-language-resources-in-windows-search.md)
+-   Wenn Sie die Sprache eines Texts identifizieren müssen, können Sie die automatische Spracherkennung (Language Auto-Detection, LAD) verwenden, die in Windows 7 und höher verfügbar ist. Weitere Informationen finden Sie unter [Erweiterte linguistische Dienste](../intl/extended-linguistic-services.md) (ELS).
+-   Informationen zum Verwalten, Abfragen und Erweitern des Indexes finden Sie im Windows [Search Developer es Guide (Entwicklerhandbuch für die Suche).](-search-developers-guide-entry-page.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

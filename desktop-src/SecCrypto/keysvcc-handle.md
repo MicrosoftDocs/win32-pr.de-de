@@ -1,7 +1,7 @@
 ---
-description: Der keysvcc \_ handle-Datentyp definiert ein Schlüsseldienst handle. Ein keysvcc \_ handle-Handle wird von den Funktionen rkeyopenkeyservice und rkeyclosekeyservice verwendet.
+description: Der KEYSVCC \_ HANDLE-Datentyp definiert ein Schlüsseldiensthand handle. Ein KEYSVCC \_ HANDLE-Handle wird von den Funktionen RKeyOpenKeyService und RKeyCloseKeyService verwendet.
 ms.assetid: d0fd5184-5c8e-4f96-9ff1-8abd6f718d05
-title: KEYSVCC_HANDLE (rkeysvcc. h)
+title: KEYSVCC_HANDLE (Rkeysvcc.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 1427a4ffd4637e073e517e5df54af72191992d11
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 32e34285c6291cb7cb87aeb9095e5261b43999b0eefa82e33704719e7673f1b0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119515950"
 ---
-# <a name="keysvcc_handle"></a>keysvcc- \_ handle
+# <a name="keysvcc_handle"></a>KEYSVCC \_ HANDLE
 
-Der **keysvcc \_ handle** -Datentyp definiert ein Schlüsseldienst handle. Ein **keysvcc \_ handle** -Handle wird von den Funktionen [**rkeyopenkeyservice**](rkeyopenkeyservice.md) und [**rkeyclosekeyservice**](rkeyclosekeyservice.md) verwendet.
+Der **KEYSVCC \_ HANDLE-Datentyp** definiert ein Schlüsseldiensthand handle. Ein **KEYSVCC \_ HANDLE-Handle** wird von den [**Funktionen RKeyOpenKeyService**](rkeyopenkeyservice.md) und [**RKeyCloseKeyService**](rkeyclosekeyservice.md) verwendet.
 
 
 ```C++
@@ -34,8 +34,8 @@ typedef void* KEYSVCC_HANDLE;
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Rkeysvcc. h</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Rkeysvcc.h</dt> </dl> |
 
 
 
@@ -43,10 +43,10 @@ typedef void* KEYSVCC_HANDLE;
 
 <dl> <dt>
 
-[**Rkeyclosekeyservice**](rkeyclosekeyservice.md)
+[**RKeyCloseKeyService**](rkeyclosekeyservice.md)
 </dt> <dt>
 
-[**Rkeyopenkeyservice**](rkeyopenkeyservice.md)
+[**RKeyOpenKeyService**](rkeyopenkeyservice.md)
 </dt> </dl>
 
  

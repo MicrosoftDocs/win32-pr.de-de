@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ LogicalFile-Klasse stellt eine benannte Auflistung von Daten dar, bei der es sich um ausführbaren Code handeln kann, der sich in einem Dateisystem in einem Speicherblock befindet.
+description: Die KLASSE CIM LogicalFile stellt eine benannte Sammlung von Daten dar, bei der es sich um ausführbaren Code handelt, der sich in einem Dateisystem \_ in einem Speicher extent befindet.
 ms.assetid: 96bf95a1-c8d7-4035-8d5a-38cdb9c75cce
 ms.tgt_platform: multiple
 title: CIM_LogicalFile-Klasse
@@ -45,23 +45,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: a06d2abd1c4ad92d751afa6c8aa47c0cfaa8b1f9
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 457bf0e094e4196c2ff60b05581daf5dc6a51349530d3563119962e01c94c40d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340106"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119548270"
 ---
 # <a name="cim_logicalfile-class"></a>CIM \_ LogicalFile-Klasse
 
-Die **CIM \_ LogicalFile** -Klasse stellt eine benannte Auflistung von Daten dar, bei der es sich um ausführbaren Code handeln kann, der sich in einem Dateisystem in einem Speicherblock befindet.
+Die **KLASSE CIM \_ LogicalFile** stellt eine benannte Sammlung von Daten dar, bei der es sich um ausführbaren Code handelt, der sich in einem Dateisystem in einem Speicher extent befindet.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -105,33 +105,33 @@ class CIM_LogicalFile : CIM_LogicalElement
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ LogicalFile** -Klasse verfügt über diese Typen von Membern:
+Die **KLASSE CIM \_ LogicalFile** verfügt über diese Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **CIM \_ LogicalFile** -Klasse verfügt über diese Methoden.
+Die **KLASSE CIM \_ LogicalFile** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                             | BESCHREIBUNG                                                                                                                                              |
+| Methode                                                                                             | Beschreibung                                                                                                                                              |
 |:---------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Changesecurrityberechtigungen**](changesecuritypermissions-method-in-class-cim-logicalfile.md)     | Ändert die Sicherheits Berechtigungen für die logische Datei, die im Objekt Pfad angegeben ist. Wird nicht von WMI implementiert.<br/>                                   |
-| [**Changesecurritypermissionsex**](changesecuritypermissionsex-method-in-class-cim-logicalfile.md) | Ändert die Sicherheits Berechtigungen für die logische Datei, die im Objekt Pfad angegeben ist. Wird nicht von WMI implementiert.<br/>                                   |
-| [**Komprimieren**](compress-method-in-class-cim-logicalfile.md)                                       | Komprimiert die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist. Wird nicht von WMI implementiert.<br/>                                              |
-| [**CompressEx**](compressex-method-in-class-cim-logicalfile.md)                                   | Komprimiert die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist. Wird nicht von WMI implementiert.<br/>                                              |
-| [**Kopieren**](copy-method-in-class-cim-logicalfile.md)                                               | Kopiert die im Objekt Pfad angegebene logische Datei (oder das Verzeichnis) an den Speicherort, der durch den Eingabeparameter angegeben wird. Wird nicht von WMI implementiert.<br/> |
-| [**CopyEx**](copyex-method-in-class-cim-logicalfile.md)                                           | Kopiert die im Objekt Pfad angegebene logische Datei (oder das Verzeichnis) an den Speicherort, der durch den Eingabeparameter angegeben wird. Wird nicht von WMI implementiert.<br/> |
-| [**Lösch**](delete-method-in-class-cim-logicalfile.md)                                           | Löscht die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist. Wird nicht von WMI implementiert.<br/>                                                 |
-| [**DeleteEx**](deleteex-method-in-class-cim-logicalfile.md)                                       | Löscht die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist. Wird nicht von WMI implementiert.<br/>                                                 |
-| [**Geteffectiveberechtigung**](geteffectivepermission-method-in-class-cim-logicalfile.md)           | Bestimmt, ob der Aufrufer über die durch das **Berechtigungs** Argument angegebenen aggregierten Berechtigungen verfügt. Wird nicht von WMI implementiert.<br/>                |
-| [**Benen**](rename-method-in-class-cim-logicalfile.md)                                           | Benennt die logische Datei (oder das Verzeichnis) um, die im Objekt Pfad angegeben ist. Wird nicht von WMI implementiert.<br/>                                                 |
-| [**Take Ownership**](takeownership-method-in-class-cim-logicalfile.md)                             | Ruft den Besitz der logischen Datei (oder des Verzeichnisses) ab, die im Objekt Pfad angegeben ist. Wird nicht von WMI implementiert.<br/>                                    |
-| [**Takebesitzshipex**](takeownershipex-method-in-class-cim-logicalfile.md)                         | Ruft den Besitz der logischen Datei (oder des Verzeichnisses) ab, die im Objekt Pfad angegeben ist. Wird nicht von WMI implementiert.<br/>                                    |
-| [**Dekomprimieren**](uncompress-method-in-class-cim-logicalfile.md)                                   | Dekomprimiert die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist. Wird nicht von WMI implementiert.<br/>                                            |
-| [**Nicht CompressEx**](uncompressex-method-in-class-cim-logicalfile.md)                               | Dekomprimiert die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist. Wird nicht von WMI implementiert.<br/>                                            |
+| [**ChangeSecurityPermissions**](changesecuritypermissions-method-in-class-cim-logicalfile.md)     | Ändert die Sicherheitsberechtigungen für die logische Datei, die im Objektpfad angegeben ist. Nicht von WMI implementiert.<br/>                                   |
+| [**ChangeSecurityPermissionsEx**](changesecuritypermissionsex-method-in-class-cim-logicalfile.md) | Ändert die Sicherheitsberechtigungen für die logische Datei, die im Objektpfad angegeben ist. Nicht von WMI implementiert.<br/>                                   |
+| [**Komprimieren**](compress-method-in-class-cim-logicalfile.md)                                       | Komprimiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist. Nicht von WMI implementiert.<br/>                                              |
+| [**CompressEx**](compressex-method-in-class-cim-logicalfile.md)                                   | Komprimiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist. Nicht von WMI implementiert.<br/>                                              |
+| [**Kopieren**](copy-method-in-class-cim-logicalfile.md)                                               | Kopiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist, an den vom Eingabeparameter angegebenen Speicherort. Nicht von WMI implementiert.<br/> |
+| [**CopyEx**](copyex-method-in-class-cim-logicalfile.md)                                           | Kopiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist, an den vom Eingabeparameter angegebenen Speicherort. Nicht von WMI implementiert.<br/> |
+| [**Löschen**](delete-method-in-class-cim-logicalfile.md)                                           | Löscht die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist. Nicht von WMI implementiert.<br/>                                                 |
+| [**DeleteEx**](deleteex-method-in-class-cim-logicalfile.md)                                       | Löscht die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist. Nicht von WMI implementiert.<br/>                                                 |
+| [**GetEffectivePermission**](geteffectivepermission-method-in-class-cim-logicalfile.md)           | Bestimmt, ob der Aufrufer über die durch das Permission-Argument angegebenen **aggregierten Berechtigungen** verfügt. Nicht von WMI implementiert.<br/>                |
+| [**Umbenennen**](rename-method-in-class-cim-logicalfile.md)                                           | Benennt die logische Datei (oder das Verzeichnis) um, die im Objektpfad angegeben ist. Nicht von WMI implementiert.<br/>                                                 |
+| [**TakeOwnerShip**](takeownership-method-in-class-cim-logicalfile.md)                             | Erhält den Besitz der logischen Datei (oder des Verzeichnisses), die im Objektpfad angegeben ist. Nicht von WMI implementiert.<br/>                                    |
+| [**TakeOwnerShipEx**](takeownershipex-method-in-class-cim-logicalfile.md)                         | Erhält den Besitz der logischen Datei (oder des Verzeichnisses), die im Objektpfad angegeben ist. Nicht von WMI implementiert.<br/>                                    |
+| [**Dekomprimieren**](uncompress-method-in-class-cim-logicalfile.md)                                   | Dekomprimiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist. Nicht von WMI implementiert.<br/>                                            |
+| [**UncompressEx**](uncompressex-method-in-class-cim-logicalfile.md)                               | Dekomprimiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist. Nicht von WMI implementiert.<br/>                                            |
 
 
 
@@ -139,26 +139,26 @@ Die **CIM \_ LogicalFile** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ LogicalFile** -Klasse verfügt über diese Eigenschaften.
+Die **KLASSE CIM \_ LogicalFile** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**AccessMask**
+**Accessmask**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Zugriffsrechte")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Zugriffsrechte")
 </dt> </dl>
 
-Bitmaske, die die Zugriffsrechte darstellt, die für den Zugriff auf oder das Ausführen bestimmter Vorgänge in der Datei erforderlich sind. Informationen zu Bitwerten finden Sie unter [**Datei-und Verzeichniszugriffs Rechte Konstanten**](/windows/desktop/WmiSdk/file-and-directory-access-rights-constants).
+Bitmaske, die die Zugriffsrechte darstellt, die erforderlich sind, um auf die Datei zu zugreifen oder bestimmte Vorgänge für die Datei durchzuführen. Bitwerte finden Sie unter [**Konstanten für Datei- und Verzeichniszugriffsrechte.**](/windows/desktop/WmiSdk/file-and-directory-access-rights-constants)
 
 > [!Note]  
-> Auf FAT-Volumes wird stattdessen der **vollständige \_ Zugriffs** Wert zurückgegeben, der angibt, dass für das Objekt keine Sicherheit festgelegt wurde.
+> Auf FAT-Volumes wird stattdessen **der FULL \_ ACCESS-Wert** zurückgegeben, der angibt, dass keine Sicherheit für das Objekt festgelegt wurde.
 
  
 
@@ -166,98 +166,98 @@ Bitmaske, die die Zugriffsrechte darstellt, die für den Zugriff auf oder das Au
 
 <span id="FILE_READ_DATA__file__or_FILE_LIST_DIRECTORY__directory_"></span><span id="file_read_data__file__or_file_list_directory__directory_"></span><span id="FILE_READ_DATA__FILE__OR_FILE_LIST_DIRECTORY__DIRECTORY_"></span>
 
-**Datei \_ Lesen von \_ Daten (Datei) oder Datei \_ Listen \_ Verzeichnis (Verzeichnis)** (1)
+**FILE \_ READ \_ DATA (Datei) oder FILE \_ LIST DIRECTORY \_ (Verzeichnis)** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_WRITE_DATA__file__or_FILE_ADD_FILE__directory_"></span><span id="file_write_data__file__or_file_add_file__directory_"></span><span id="FILE_WRITE_DATA__FILE__OR_FILE_ADD_FILE__DIRECTORY_"></span>
 
-**Datei \_ Schreiben von \_ Daten (Datei) oder Datei \_ Hinzufügen \_ (Verzeichnis)** (2)
+**FILE \_ WRITE \_ DATA (Datei) oder FILE \_ ADD FILE \_ (Verzeichnis)** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_APPEND_DATA__file__or_FILE_ADD_SUBDIRECTORY__directory_"></span><span id="file_append_data__file__or_file_add_subdirectory__directory_"></span><span id="FILE_APPEND_DATA__FILE__OR_FILE_ADD_SUBDIRECTORY__DIRECTORY_"></span>
 
-**Datei \_ \_Daten anfügen (Datei) oder \_ \_ Unterverzeichnis für Datei hinzufügen (Verzeichnis)** (4)
+**FILE \_ APPEND \_ DATA (Datei) oder FILE \_ ADD \_ SUBDIRECTORY (Verzeichnis)** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_READ_EA"></span><span id="file_read_ea"></span>
 
-**Datei \_ Lesen von \_ EA** (8)
+**FILE \_ READ \_ EA** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_WRITE_EA"></span><span id="file_write_ea"></span>
 
-**Datei \_ Schreiben von \_ EA** (16)
+**FILE \_ WRITE \_ EA** (16)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_EXECUTE__file__or_FILE_TRAVERSE__directory_"></span><span id="file_execute__file__or_file_traverse__directory_"></span><span id="FILE_EXECUTE__FILE__OR_FILE_TRAVERSE__DIRECTORY_"></span>
 
-**Datei \_ Execute (File) oder file \_ Traversieren (Verzeichnis)** (32)
+**FILE \_ EXECUTE (File) oder FILE \_ TRAVERSE (Verzeichnis)** (32)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_DELETE_CHILD__directory_"></span><span id="file_delete_child__directory_"></span><span id="FILE_DELETE_CHILD__DIRECTORY_"></span>
 
-**Datei \_ Untergeordnetes Element \_ (Verzeichnis) löschen** (64)
+**FILE \_ DELETE \_ CHILD (Verzeichnis)** (64)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_READ_ATTRIBUTES"></span><span id="file_read_attributes"></span>
 
-**Datei \_ Lese \_ Attribute** (128)
+**FILE \_ LESEN \_ VON ATTRIBUTEN** (128)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_WRITE_ATTRIBUTES"></span><span id="file_write_attributes"></span>
 
-**Datei \_ \_Attribute schreiben** (256)
+**FILE \_ WRITE \_ ATTRIBUTES** (256)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DELETE"></span><span id="delete"></span>
 
-**Löschen** (65536)
+**DELETE** (65536)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="READ_CONTROL"></span><span id="read_control"></span>
 
-**Lesen Sie \_ Steuer** Element (131072)
+**READ \_ CONTROL** (131072)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WRITE_DAC"></span><span id="write_dac"></span>
 
-**Schreiben \_ DAC** (262144)
+**WRITE \_ DAC** (262144)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WRITE_OWNER"></span><span id="write_owner"></span>
 
-**Schreiben \_ Besitzer** (524288)
+**WRITE \_ OWNER** (524288)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SYNCHRONIZE"></span><span id="synchronize"></span>
 
-**Synchronisieren** (1048576)
+**SYNCHRONIZE** (1048576)
 
 
 </dt> <dd></dd> </dl>
@@ -267,16 +267,16 @@ Bitmaske, die die Zugriffsrechte darstellt, die für den Zugriff auf oder das Au
 **Archivieren**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("sollte archiviert werden")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Sollte archiviert werden")
 </dt> </dl>
 
-**True** gibt an, dass die Datei archiviert werden soll.
+True **gibt an,** dass die Datei archiviert werden soll.
 
 </dd> <dt>
 
@@ -289,28 +289,28 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
 </dt> </dl>
 
-Eine kurze Textbeschreibung des-Objekts.
+Eine kurze Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **Compressed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Compressed")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Compressed")
 </dt> </dl>
 
-**True** gibt an, dass die Datei komprimiert wird.
+True **gibt an,** dass die Datei komprimiert wird.
 
 </dd> <dt>
 
@@ -323,23 +323,23 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Komprimierungs Methode")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Compression Method")
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die den Algorithmus oder das Tool angibt, das zum Komprimieren der logischen Datei verwendet wird. Wenn das Komprimierungs Schema unbekannt oder nicht beschrieben ist, verwenden Sie "unknown". Wenn die logische Datei komprimiert ist, das Komprimierungs Schema jedoch unbekannt oder nicht beschrieben ist, verwenden Sie "komprimiert". Wenn die logische Datei nicht komprimiert ist, verwenden Sie "nicht komprimiert".
+Freiformzeichenfolge, die den Algorithmus oder das Tool zum Komprimieren der logischen Datei angibt. Wenn das Komprimierungsschema unbekannt oder nicht beschrieben ist, verwenden Sie "Unknown". Wenn die logische Datei komprimiert ist, das Komprimierungsschema jedoch unbekannt oder nicht beschrieben ist, verwenden Sie "Compressed". Wenn die logische Datei nicht komprimiert ist, verwenden Sie "Nicht komprimiert".
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**CIM \_ Key**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Class Name")
+Qualifizierer: [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Klassenname")
 </dt> </dl>
 
 Name der Klasse.
@@ -349,13 +349,13 @@ Name der Klasse.
 **CreationDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Erstellungsdatum")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Erstellungsdatum")
 </dt> </dl>
 
 Datum und Uhrzeit der Dateierstellung.
@@ -365,193 +365,193 @@ Datum und Uhrzeit der Dateierstellung.
 **CSCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM \_ File System**](cim-filesystem.md).**CSCreationClassName**"), [**CIM \_ Key**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Computer System-Klassenname ")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ FileSystem**](cim-filesystem.md).**CSCreationClassName**"), [**CIM \_ Key**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Computer System Class Name")
 </dt> </dl>
 
-Klasse des Computer Systems.
+Klasse des Computersystems.
 
 </dd> <dt>
 
 **CSName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM \_ File System**](cim-filesystem.md).**Csname**"), [**CIM \_ Key**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Computer System Name ")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ FileSystem**](cim-filesystem.md).**CSName**"), [**\_ CIM-Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Computersystemname")
 </dt> </dl>
 
-Der Name des Computer Systems.
+Name des Computersystems.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
 </dt> </dl>
 
-Eine Textbeschreibung des-Objekts.
+Eine Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **Laufwerk**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Fixed**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Drive")
+Qualifizierer: [**Behoben:**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Laufwerk")
 </dt> </dl>
 
-Laufwerk Buchstabe (einschließlich des Doppelpunkts, der auf den Laufwerk Buchstaben folgt) der Datei. Diese Eigenschaft wird von **CIM \_ LogicalFile** geerbt. Beispiel: "c:"
+Laufwerkbuchstaben (einschließlich des Doppelpunkts, der dem Laufwerkbuchstaben folgt) der Datei. Diese Eigenschaft wird von **CIM \_ LogicalFile geerbt.** Beispiel: "c:"
 
 </dd> <dt>
 
-**Eightdotdreidateiname**
+**EightDotThreeFileName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("8 Punkt 3 Dateiname")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Acht Punkte drei Dateiname")
 </dt> </dl>
 
-Der DOS-kompatible Dateiname. Beispiel: "c: \\ PROGRA ~ 1"
+DOS-kompatibler Dateiname. Beispiel: "c: \\ progra~1"
 
 </dd> <dt>
 
 **Verschlüsselt**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("verschlüsselt")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Encrypted")
 </dt> </dl>
 
-**True** gibt an, dass die Datei verschlüsselt ist.
+True **gibt an,** dass die Datei verschlüsselt ist.
 
 </dd> <dt>
 
-**Verschlüsselungsmethode**
+**Encryptionmethod**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Verschlüsselungsmethode")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Encryption Method")
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die den Algorithmus oder das Tool identifiziert, das zum Verschlüsseln einer logischen Datei verwendet wird. Wenn das Verschlüsselungsschema nicht verwendet wird (z. b. aus Sicherheitsgründen), verwenden Sie "unknown". Wenn die Datei verschlüsselt ist, das Verschlüsselungsschema jedoch unbekannt ist oder nicht offengelegt ist, verwenden Sie "verschlüsselt". Wenn die logische Datei nicht verschlüsselt ist, verwenden Sie "nicht verschlüsselt".
+Freiformzeichenfolge, die den Algorithmus oder das Tool zum Verschlüsseln einer logischen Datei identifiziert. Wenn das Verschlüsselungsschema nicht verschlüsselt ist (z. B. aus Sicherheitsgründen), verwenden Sie "Unknown". Wenn die Datei verschlüsselt ist, ihr Verschlüsselungsschema jedoch unbekannt oder nicht offengelegt ist, verwenden Sie "Encrypted". Wenn die logische Datei nicht verschlüsselt ist, verwenden Sie "Nicht verschlüsselt".
 
 </dd> <dt>
 
 **Erweiterung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Fixed**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dateierweiterung")
+Qualifizierer: [**Behoben:**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dateierweiterung")
 </dt> </dl>
 
-Dateinamenerweiterung ohne den vorangehenden Punkt (Punkt). Beispiel: "txt", "MOF", "MDB"
+Dateierweiterung ohne vorherigen Punkt (Punkt). Beispiel: "txt", "mof", "mdb"
 
 </dd> <dt>
 
 **FileName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Fixed**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dateiname")
+Qualifizierer: [**Behoben:**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dateiname")
 </dt> </dl>
 
-Dateiname ohne Dateinamenerweiterung. Beispiel: "mydatafile"
+Dateiname ohne Dateierweiterung. Beispiel: "MyDataFile"
 
 </dd> <dt>
 
 **FileSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("size"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bytes")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Size"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("bytes")
 </dt> </dl>
 
 Größe der Datei in Bytes.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **FileType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dateityp")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dateityp")
 </dt> </dl>
 
-Deskriptor, der den Dateityp darstellt, der von der **Erweiterungs** Eigenschaft angegeben wird.
+Deskriptor, der den durch die Extension-Eigenschaft **angegebenen Dateityp** darstellt.
 
 </dd> <dt>
 
-**"F"-Klassenname**
+**FSCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM \_ File System**](cim-filesystem.md).**"Kreationclassname**"), [**CIM- \_ Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Datei System-Klassenname")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ FileSystem**](cim-filesystem.md).**CreationClassName**"), [**CIM \_ Key**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("File System Class Name")
 </dt> </dl>
 
 Klasse des Dateisystems.
@@ -561,48 +561,48 @@ Klasse des Dateisystems.
 **FSName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM \_ File System**](cim-filesystem.md).**Name**"), [**CIM- \_ Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Datei System Name ")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ FileSystem**](cim-filesystem.md).**Name**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dateisystemname")
 </dt> </dl>
 
-Der Name des Dateisystems.
+Name des Dateisystems.
 
 </dd> <dt>
 
 **Hidden**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Hidden")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Hidden")
 </dt> </dl>
 
-**True** gibt an, dass die Datei ausgeblendet ist.
+True **gibt an,** dass die Datei ausgeblendet ist.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installationsdatum")
 </dt> </dl>
 
-Gibt an, wann das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Gibt an, wann das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -611,47 +611,47 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **InUseCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("aktuelle Datei öffnende Anzahl")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Current File Open Count")
 </dt> </dl>
 
-Anzahl von "Datei öffnen", die zurzeit für die Datei aktiv sind.
+Anzahl der "Datei wird geöffnet", die derzeit für die Datei aktiv sind.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
-**Letzter Zugriff**
+**LastAccessed**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Letzter Zugriff")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Letzter Zugriff")
 </dt> </dl>
 
 Datum und Uhrzeit des letzten Zugriffs auf die Datei.
 
 </dd> <dt>
 
-**LastModified**
+**Lastmodified**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Last modified")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Last Modified")
 </dt> </dl>
 
 Datum und Uhrzeit der letzten Änderung der Datei.
@@ -661,45 +661,45 @@ Datum und Uhrzeit der letzten Änderung der Datei.
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Name"), [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name"), [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Die Name-Eigenschaft ist eine Zeichenfolge, die den geerbten Namen darstellt, der als Schlüssel einer logischen Datei Instanz innerhalb eines Dateisystems fungiert. Vollständige Pfadnamen müssen angegeben werden. Beispiel: C: \\ Windows- \\ System \\win.ini
+Die Name-Eigenschaft ist eine Zeichenfolge, die den geerbten Namen darstellt, der als Schlüssel einer logischen Dateiinstanz in einem Dateisystem dient. Vollständige Pfadnamen sollten angegeben werden. Beispiel: C: \\ Windows \\ System \\win.ini
 
 </dd> <dt>
 
-**Pfad**
+**Path**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Fixed**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Path")
+Qualifizierer: [**Behoben:**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Pfad")
 </dt> </dl>
 
-Der Pfad der Datei, einschließlich der führenden und nachfolgenden umgekehrten Schrägstriche. Beispiel: " \\ Windows \\ System \\ "
+Pfad der Datei, einschließlich der führenden und nachgestellten umgekehrten Schrägstriche. Beispiel: " \\ \\ Windows-System \\ "
 
 </dd> <dt>
 
-**Lesbare**
+**Lesbar**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("lesbar")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Lesbar")
 </dt> </dl>
 
 **True** gibt an, dass die Datei gelesen werden kann.
@@ -709,18 +709,18 @@ Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
-Eine Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebliche Status können definiert werden. Der Betriebsstatus kann "OK", "heruntergestuft" und "pred Fail" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. b. ein intelligent-fähiges Festplattenlaufwerk).
+Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebsbereite Status können definiert werden. Der Betriebsstatus kann "OK", "Heruntergestuft" und "Fehler vor dem Fehler" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. B. ein SMART-fähiges Festplattenlaufwerk).
 
-Der nicht betriebliche Status kann "Error", "Starting", "Stop" und "Service" enthalten. "Service" kann während der Datenträger Spiegelung angewendet werden, indem eine Benutzer Berechtigungs Liste oder eine andere administrative Arbeit neu geladen wird. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Nicht betriebsbereite Status können "Error", "Starting", "Stopping" und "Service" sein. "Dienst" kann während der Datenträgerspiegelung, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Administrativen Arbeiten angewendet werden. Nicht alle dieser Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -744,35 +744,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird gestartet** ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -786,28 +786,28 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
@@ -817,13 +817,13 @@ Wird **beendet ("wird angehalten** ")
 **System**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("System Datei")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Systemdatei")
 </dt> </dl>
 
 **True** gibt an, dass die Datei eine Systemdatei ist.
@@ -833,26 +833,26 @@ Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32)
 **Schreibbar**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("beschreibbar")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Schreibbar")
 </dt> </dl>
 
 **True** gibt an, dass die Datei geschrieben werden kann.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ LogicalFile** -Klasse wird von [**CIM \_ LogicalElement**](cim-logicalelement.md)abgeleitet.
+Die **CIM \_ LogicalFile-Klasse** wird von [**CIM \_ LogicalElement**](cim-logicalelement.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert. Informationen zu Klassen, die von **CIM \_ LogicalFile** abgeleitet sind, finden Sie unter [Win32 Classes](win32-provider.md).
+WMI implementiert diese Klasse nicht. Informationen zu Klassen, die von **CIM \_ LogicalFile** abgeleitet werden, finden Sie unter [Win32-Klassen.](win32-provider.md)
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -862,8 +862,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

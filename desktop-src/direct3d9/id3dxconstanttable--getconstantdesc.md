@@ -1,7 +1,7 @@
 ---
-description: Ruft einen Zeiger auf ein Array konstanter Beschreibungen in der Konstanten Tabelle ab.
+description: Ruft einen Zeiger auf ein Array konstanter Beschreibungen in der Konstantentabelle ab.
 ms.assetid: bd407fd6-b1cc-4197-ae98-1c2ca74d2ad0
-title: 'ID3DXConstantTable:: getconstantdesc-Methode (D3DX9Shader. h)'
+title: ID3DXConstantTable::GetConstantDesc-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e5574c72fabd7561da0c60c903ae815faaebbfd5
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8462ccfbbf306da08c67d460584a470d82301a5bda5f95a1ad09b2062702ee62
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961624"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119607210"
 ---
-# <a name="id3dxconstanttablegetconstantdesc-method"></a>ID3DXConstantTable:: getconstantdesc-Methode
+# <a name="id3dxconstanttablegetconstantdesc-method"></a>ID3DXConstantTable::GetConstantDesc-Methode
 
-Ruft einen Zeiger auf ein Array konstanter Beschreibungen in der Konstanten Tabelle ab.
+Ruft einen Zeiger auf ein Array konstanter Beschreibungen in der Konstantentabelle ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT GetConstantDesc(
 
 <dl> <dt>
 
-*hconstant* \[ in\]
+*hConstant* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
@@ -51,21 +51,21 @@ Eindeutiger Bezeichner für eine Konstante. Siehe [D3DXHANDLE](dx9-graphics-refe
 
 </dd> <dt>
 
-*PDE SC* \[ in, out\]
+*pDesc* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXCONSTANT \_ DESC**](d3dxconstant-desc.md)\***
 
-Gibt einen Zeiger auf ein Array von Beschreibungen zurück. Weitere Informationen finden Sie unter [**D3DXCONSTANT \_**](d3dxconstant-desc.md).
+Gibt einen Zeiger auf ein Array von Beschreibungen zurück. Siehe [**D3DXCONSTANT \_ DESC**](d3dxconstant-desc.md).
 
 </dd> <dt>
 
-*pcount* \[ in, out\]
+*pCount* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Die angegebene Eingabe muss die maximale Größe des Arrays sein. Bei der Ausgabe handelt es sich um die Anzahl der Elemente, die im Array aufgefüllt werden, wenn die Funktion zurückgegeben wird.
+Die bereitgestellte Eingabe muss die maximale Größe des Arrays sein. Die Ausgabe ist die Anzahl der Elemente, die im Array aufgefüllt werden, wenn die Funktion zurückgegeben wird.
 
 </dd> </dl>
 
@@ -73,13 +73,13 @@ Die angegebene Eingabe muss die maximale Größe des Arrays sein. Bei der Ausgab
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**ID3DXConstantTable:: getconstantdesc** gibt manchmal einen [**D3DXCONSTANT- \_**](d3dxconstant-desc.md) Wert mit \_ der Register Anzahl 0 zurück. Dies geschieht, wenn eine Konstante in mehr als einem Register \_ Satz enthalten ist, aber keinen Platz in diesem zugeordneten Register Satz hat.
+**ID3DXConstantTable::GetConstantDesc** gibt manchmal einen [**D3DXCONSTANT \_ DESC**](d3dxconstant-desc.md) mit der \_ Registeranzahl 0 zurück. Dies geschieht, wenn eine Konstante in mehr als einem Registersatz angezeigt wird, aber kein Speicherplatz \_ in diesem Registersatz zugeordnet ist.
 
-Da ein Sampler mehrmals in einer Konstanten Tabelle vorkommen kann, kann diese Methode ein Array von Beschreibungen zurückgeben, von denen jedes einen anderen Registrierungs Index hat.
+Da ein Sampler in einer konstanten Tabelle mehr als einmal angezeigt werden kann, kann diese Methode ein Array von Beschreibungen zurückgeben, die jeweils einen anderen Registerindex haben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,8 +87,8 @@ Da ein Sampler mehrmals in einer Konstanten Tabelle vorkommen kann, kann diese M
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
@@ -99,7 +99,7 @@ Da ein Sampler mehrmals in einer Konstanten Tabelle vorkommen kann, kann diese M
 [ID3DXConstantTable](id3dxconstanttable.md)
 </dt> <dt>
 
-[**ID3DXConstantTable:: getdebug**](id3dxconstanttable--getdesc.md)
+[**ID3DXConstantTable::GetDesc**](id3dxconstanttable--getdesc.md)
 </dt> </dl>
 
  
