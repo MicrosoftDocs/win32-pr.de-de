@@ -1,7 +1,7 @@
 ---
 description: Startet einen Auftrag zum Hinzufügen von Ressourcen zu einem Ressourcenpool.
 ms.assetid: b163619a-19bd-43d7-ba35-ec4bd8192100
-title: AddResourcesToResourcePool-Methode der CIM_ResourcePoolConfigurationService Klasse
+title: AddResourcesToResourcePool-Methode der CIM_ResourcePoolConfigurationService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119980930"
 ---
-# <a name="addresourcestoresourcepool-method-of-the-cim_resourcepoolconfigurationservice-class"></a>AddResourcesToResourcePool-Methode der \_ CIM-Klasse "ResourcePoolConfigurationService"
+# <a name="addresourcestoresourcepool-method-of-the-cim_resourcepoolconfigurationservice-class"></a>AddResourcesToResourcePool-Methode der CIM \_ ResourcePoolConfigurationService-Klasse
 
 Startet einen Auftrag zum Hinzufügen von Ressourcen zu einem Ressourcenpool.
 
@@ -44,31 +44,31 @@ uint32 AddResourcesToResourcePool(
 *HostResources* \[ In\]
 </dt> <dd>
 
-Array von [**CIM \_ LogicalDevice-Instanzen,**](cim-logicaldevice.md) die dem Pool hinzugefügt werden.
+Array von [**CIM \_ LogicalDevice-Instanzen,**](cim-logicaldevice.md) die dem Pool hinzugefügt werden sollen.
 
 </dd> <dt>
 
 *Pool* \[ In\]
 </dt> <dd>
 
-Ein [**\_ CIM-Ressourcenpool,**](cim-resourcepool.md) der den Pool darstellt, dem die Ressourcen hinzugefügt werden.
+Ein [**\_ CIM-Ressourcenpool,**](cim-resourcepool.md) der den Pool darstellt, dem die Ressourcen hinzugefügt werden sollen.
 
 </dd> <dt>
 
 *Auftrag* \[ out\]
 </dt> <dd>
 
-Ein [**CIM \_ ConcreteJob,**](cim-concretejob.md) der auf den Auftrag verweist (kann **NULL sein,** wenn der Auftrag abgeschlossen ist).
+Ein [**CIM \_ ConcreteJob,**](cim-concretejob.md) der auf den Auftrag verweist (kann **NULL** sein, wenn der Auftrag abgeschlossen ist).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
+Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
-**Auftrag ohne Fehler** abgeschlossen (0)
+**Auftrag ohne Fehler abgeschlossen** (0)
 </dt> <dt>
 
 **Nicht unterstützt** (1)
@@ -86,7 +86,7 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 **Ungültiger Parameter** (5)
 </dt> <dt>
 
-**Wird verwendet** (6)
+**In Verwendung** (6)
 </dt> <dt>
 
 **Falscher ResourceType für den Pool** (7)
@@ -95,10 +95,10 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 **DMTF Reserved** (..)
 </dt> <dt>
 
-**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Größe nicht unterstützt** (4097)
+**Größe wird nicht unterstützt** (4097)
 </dt> <dt>
 
 **Reservierte Methode** (4098..32767)
@@ -115,7 +115,7 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 

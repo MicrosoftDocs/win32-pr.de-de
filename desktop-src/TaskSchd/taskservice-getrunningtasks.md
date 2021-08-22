@@ -1,11 +1,11 @@
 ---
-title: TaskService. getrunningtasks-Methode
-description: Ruft bei der Skripterstellung eine Auflistung von laufenden Tasks ab.
+title: TaskService.GetRunningTasks-Methode
+description: Ruft für die Skripterstellung eine Auflistung ausgeführter Aufgaben ab.
 ms.assetid: bae3c035-a6b2-4ca5-970b-d4bc808068ad
 keywords:
-- Getrunningtasks-Methode Taskplaner
-- Getrunningtasks-Methode Taskplaner, Task Service-Objekt
-- Task Service-Objekt Taskplaner, getrunningtasks-Methode
+- GetRunningTasks-Taskplaner
+- GetRunningTasks-Methode Taskplaner , TaskService-Objekt
+- TaskService-Taskplaner , GetRunningTasks-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,19 +16,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dec585b9ed46af9a283e337c8f200687c512cd36
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9ecbc52451a4ed3dcc5f3ecc9984009e94dd9bf18b4c8dc667c0b040c43cc68c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743737"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120072420"
 ---
-# <a name="taskservicegetrunningtasks-method"></a>TaskService. getrunningtasks-Methode
+# <a name="taskservicegetrunningtasks-method"></a>TaskService.GetRunningTasks-Methode
 
-Ruft bei der Skripterstellung eine Auflistung von laufenden Tasks ab.
+Ruft für die Skripterstellung eine Auflistung ausgeführter Aufgaben ab.
 
 > [!Note]  
-> **TaskService. getrunningtasks** gibt nur eine Auflistung von ausgeführte Tasks zurück, die unter oder unterhalb des Sicherheits Kontexts eines Benutzers ausgeführt werden. Für Mitglieder der Gruppe "Administratoren" gibt **getrunningtasks** beispielsweise eine Sammlung aller ausgelaufenden Aufgaben zurück, aber für Mitglieder der Gruppe "Benutzer" gibt **getrunningtasks** nur eine Auflistung von Aufgaben zurück, die unter dem Sicherheitskontext der Benutzergruppe ausgeführt werden.
+> **TaskService.GetRunningTasks gibt** nur eine Sammlung ausgeführter Aufgaben zurück, die im oder unter dem Sicherheitskontext eines Benutzers ausgeführt werden. Beispielsweise gibt **GetRunningTasks** für Mitglieder der Gruppe Administratoren eine Sammlung aller ausgeführten Aufgaben zurück. Für Mitglieder der Gruppe Benutzer gibt **GetRunningTasks** jedoch nur eine Sammlung von Aufgaben zurück, die im Sicherheitskontext der Gruppe Benutzer ausgeführt werden.
 
  
 
@@ -47,26 +47,26 @@ TaskService.GetRunningTasks( _
 
 <dl> <dt>
 
-*Flags* \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Übergeben Sie 1, um alle laufenden Tasks, einschließlich ausgeblendeter Tasks, zurückzugeben. Übergeben Sie 0, um eine Auflistung von Aufgaben zurückzugeben, die keine ausgeblendeten Tasks sind.
+Übergeben Sie 1, um alle ausgeführten Aufgaben, einschließlich ausgeblendeter Aufgaben, zurück zu geben. Übergeben Sie 0, um eine Auflistung ausgeführter Aufgaben zurück zu geben, die keine ausgeblendeten Aufgaben sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein [**runningtaskcollection**](runningtaskcollection.md) -Objekt, das die derzeit laufenden Tasks enthält.
+Ein [**RunningTaskCollection-Objekt,**](runningtaskcollection.md) das die derzeit ausgeführten Aufgaben enthält.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

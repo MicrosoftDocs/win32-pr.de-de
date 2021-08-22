@@ -1,10 +1,10 @@
 ---
-title: Update-Schema-Cache Recht erweitert
-description: Erweiterte Rechte zum Erzwingen eines Schema Cache Updates.
+title: Erweitertes Recht "Update-Schema-Cache"
+description: Erweitertes Recht zum Erzwingen eines Schemacacheupdates.
 ms.assetid: 92f97bb3-81c0-4d56-a184-a5f16672693b
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema-Cache-AD-Schema für erweiterte Rechte
+- Ad-Schema mit erweiterter rechtem Update-Schema-Cache
 topic_type:
 - apiref
 api_name:
@@ -13,23 +13,23 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c5c14e5183e30ade71bde29c4d5887ed08085a63
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 42fed5b1df69a155a53353b06bf901c1ca5f353e2604c205e65aaa3d2ef1830a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104106719"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119580550"
 ---
-# <a name="update-schema-cache-extended-right"></a>Update-Schema-Cache Recht erweitert
+# <a name="update-schema-cache-extended-right"></a>Erweitertes Recht "Update-Schema-Cache"
 
-Erweiterte Rechte zum Erzwingen eines Schema Cache Updates.
+Erweitertes Recht zum Erzwingen eines Schemacacheupdates.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
 | CN           | Update-Schema-Cache                  |
-| Anzeigename | Schema Cache aktualisieren                  |
+| Anzeigename | Aktualisieren des Schemacaches                  |
 | Rights-GUID  | be2bb760-7f46-11d2-b9ad-00c04f79f805 |
 
 
@@ -37,7 +37,7 @@ Erweiterte Rechte zum Erzwingen eines Schema Cache Updates.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -50,19 +50,19 @@ Erweiterte Rechte zum Erzwingen eines Schema Cache Updates.
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------|
-| Applies-To              | [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 51                              |
+| Applies-To              | [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 51                              |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------|
-| Applies-To              | [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 51                              |
+| Applies-To              | [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 51                              |
 
 
 
@@ -72,8 +72,8 @@ Erweiterte Rechte zum Erzwingen eines Schema Cache Updates.
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------|
-| Applies-To              | [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 51                              |
+| Applies-To              | [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 51                              |
 
 
 
@@ -83,8 +83,8 @@ Erweiterte Rechte zum Erzwingen eines Schema Cache Updates.
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------|
-| Applies-To              | [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 51                              |
+| Applies-To              | [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 51                              |
 
 
 
@@ -94,8 +94,8 @@ Erweiterte Rechte zum Erzwingen eines Schema Cache Updates.
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------|
-| Applies-To              | [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 51                              |
+| Applies-To              | [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 51                              |
 
 
 
@@ -105,8 +105,8 @@ Erweiterte Rechte zum Erzwingen eines Schema Cache Updates.
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------|
-| Applies-To              | [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 51                              |
+| Applies-To              | [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 51                              |
 
 
 
@@ -116,8 +116,8 @@ Erweiterte Rechte zum Erzwingen eines Schema Cache Updates.
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------|
-| Applies-To              | [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 51                              |
+| Applies-To              | [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 51                              |
 
 
 

@@ -1,19 +1,19 @@
 ---
-description: Der folgende Code veranschaulicht, wie die symfromname-Funktion aufgerufen wird.
+description: Der folgende Code veranschaulicht das Aufrufen der SymFromName-Funktion.
 ms.assetid: d3a9d73e-fb77-4be3-a881-c258bcc587fe
-title: Abrufen von Symbol Informationen nach Name
+title: Abrufen von Symbolinformationen nach Name
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 28f5f4477be4f494383c7d9c1ca462f3beb69690
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 76ec0a04ef2cac9dcd8256f8d00ff59b00bec449cdb4b5661566e7087e782cdc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076364"
 ---
-# <a name="retrieving-symbol-information-by-name"></a>Abrufen von Symbol Informationen nach Name
+# <a name="retrieving-symbol-information-by-name"></a>Abrufen von Symbolinformationen nach Name
 
-Der folgende Code veranschaulicht, wie die [**symfromname**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfromname) -Funktion aufgerufen wird. Diese Funktion füllt eine [**Symbol \_ Informations**](/windows/desktop/api/DbgHelp/ns-dbghelp-symbol_info) Struktur aus. Da der Name eine Variable Länge hat, müssen Sie einen Puffer bereitstellen, der groß genug ist, um den am Ende der **Symbol \_ Informations** Struktur gespeicherten Namen zu speichern. Außerdem muss der **maxnamelen** -Member auf die Anzahl der für den Namen reservierten Bytes festgelegt werden. In diesem Beispiel ist szsymbolname ein Puffer, in dem der Name des angeforderten Symbols gespeichert wird. Im Beispiel wird davon ausgegangen, dass Sie den Symbol Handler initialisiert haben, indem Sie den Code zum [Initialisieren des Symbol Handlers](initializing-the-symbol-handler.md)verwenden.
+Der folgende Code veranschaulicht das Aufrufen der [**SymFromName-Funktion.**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfromname) Diese Funktion füllt eine [**SYMBOL \_ INFO-Struktur**](/windows/desktop/api/DbgHelp/ns-dbghelp-symbol_info) aus. Da der Name eine variable Länge hat, müssen Sie einen Puffer angeben, der groß genug ist, um den Namen zu speichern, der am Ende der **SYMBOL \_ INFO-Struktur gespeichert** ist. Außerdem muss das **MaxNameLen-Member** auf die Anzahl von Bytes festgelegt werden, die für den Namen reserviert sind. In diesem Beispiel ist szSymbolName ein Puffer, der den Namen des angeforderten Symbols speichert. Im Beispiel wird davon ausgegangen, dass Sie den Symbolhandler mithilfe des Codes in [Initialisieren des Symbolhandlers initialisiert haben.](initializing-the-symbol-handler.md)
 
 
 ```C++
@@ -42,7 +42,7 @@ else
 
 
 
-Wenn eine Anwendung über einen Modul-oder Quell Dateinamen sowie über Zeilennummern Informationen verfügt, kann [**SymGetLineFromName64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetlinefromname) verwendet werden, um eine virtuelle Code Adresse abzurufen. Diese Funktion erfordert einen Zeiger auf eine [**imagehlp \_ LINE64**](/windows/desktop/api/DbgHelp/ns-dbghelp-imagehlp_line) -Struktur, um die Adresse des virtuellen Codes zu erhalten. Beachten Sie, dass der Symbol Handler Zeilennummern Informationen nur abrufen kann, \_ Wenn \_ die Option für die Verwendung von symopt-Zeilen mithilfe der [**symsetoptions**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetoptions) -Funktion festgelegt wird Diese Option muss vor dem Laden des Moduls festgelegt werden. Der szModuleName-Parameter enthält den Namen des Quell Moduls. Er ist optional und kann **null** sein. Der szFilename-Parameter sollte den Quell Dateinamen enthalten, und der dwlinenumber-Parameter sollte die Zeilennummer enthalten, für die die virtuelle Adresse abgerufen wird.
+Wenn eine Anwendung über einen Modul- oder Quelldateinamen sowie Zeilennummerinformationen verfügt, kann sie [**SymGetLineFromName64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetlinefromname) verwenden, um eine virtuelle Codeadresse abzurufen. Diese Funktion erfordert einen Zeiger auf eine [**IMAGEHLP \_ LINE64-Struktur,**](/windows/desktop/api/DbgHelp/ns-dbghelp-imagehlp_line) um die virtuelle Codeadresse zu empfangen. Beachten Sie, dass der Symbolhandler Zeilennummerinformationen nur abrufen kann, wenn die SYMOPT LOAD LINES-Option mithilfe der \_ \_ [**SymSetOptions-Funktion festgelegt**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetoptions) wird. Diese Option muss vor dem Laden des Moduls festgelegt werden. Der szModuleName-Parameter enthält den Namen des Quellmoduls. sie ist optional und kann NULL **sein.** Der szFileName-Parameter sollte den Namen der Quelldatei enthalten, und der dwLineNumber-Parameter sollte die Zeilennummer enthalten, für die die virtuelle Adresse abgerufen wird.
 
 
 ```C++

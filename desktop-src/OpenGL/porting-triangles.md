@@ -1,48 +1,48 @@
 ---
-title: Portieren von Dreiecken
-description: Sie können drei Arten von Dreiecken in OpenGL zeichnen, indem Sie die Dreiecke, Dreiecks Streifen und Dreiecks Lüfter trennen.
+title: Portierende Dreiecke
+description: Sie können drei Arten von Dreiecken in separaten OpenGL-Dreiecken, Dreiecksstreifen und Dreiecksfächern zeichnen.
 ms.assetid: 48617892-c9a0-4c67-b42e-afa4243023e7
 keywords:
-- IRIS GL portieren, Dreiecke
+- IRIS GL-Portierung, Dreiecke
 - Portieren von IRIS GL, Dreiecke
-- Portieren auf OpenGL von IRIS GL, Dreiecke
-- OpenGL-Portierung von IRIS GL, Dreiecke
+- Portieren von IRIS GL zu OpenGL, Dreiecke
+- OpenGL-Portierung von IRIS GL,Dreiecke
 - Zeichnungsfunktionen, Dreiecke
 - Dreiecke
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ad0c7a0af4b538bb951cf0d1c5f2e12b2e1badda
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 85acc650a709650495b93cdd00176400f00168cc8fe6445a23505f12b332abf9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310535"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011998"
 ---
-# <a name="porting-triangles"></a>Portieren von Dreiecken
+# <a name="porting-triangles"></a>Portierende Dreiecke
 
-Sie können drei Arten von Dreiecken in OpenGL zeichnen: separate Dreiecke, Dreiecks Streifen und Dreiecks Lüfter.
+Sie können drei Arten von Dreiecken in OpenGL zeichnen: separate Dreiecke, Dreiecksstreifen und Dreiecksfächer.
 
-OpenGL hat keine Entsprechung für die Iris **GL-** Funktion "". Sie können denselben Effekt erzielen, indem Sie eine Kombination aus Dreiecke, Dreiecks Streifen und Dreiecks Lüfter verwenden.
+OpenGL verfügt über keine Entsprechung für die IRIS GL **swaptmesh-Funktion.** Sie können den gleichen Effekt erzielen, indem Sie eine Kombination aus Dreiecken, Dreiecksstreifen und Dreiecksfächern verwenden.
 
-In der folgenden Tabelle sind die Iris GL-Funktionen zum Zeichnen von Dreiecken und ihre entsprechenden OpenGL-Funktionen aufgeführt.
+In der folgenden Tabelle sind die IRIS GL-Funktionen zum Zeichnen von Dreiecken und die entsprechenden OpenGL-Funktionen aufgeführt.
 
 
 
 | IRIS GL-Funktion           | Äquivalenter glBegin-Parameter | Bedeutung                                       |
 |----------------------------|------------------------------|-----------------------------------------------|
-|                            | GL- \_ Dreiecke                | Die als Dreiecke interpretierten Scheitel Punkte. |
-| **bgntmesh**, **endtmesh** | GL- \_ Dreiecks \_ Streifen          | Verknüpfte Streifen von Dreiecken.                   |
-|                            | GL- \_ Dreiecks \_ Lüfter            | Verknüpfte Fans von Dreiecken.                     |
+|                            | GL \_ TRIANGLES                | Triples von Scheitelpunkten, die als Dreiecke interpretiert werden. |
+| **bgntmesh**, **endtmesh** | GL \_ TRIANGLE \_ STRIP          | Verknüpfte Dreiecksstreifen.                   |
+|                            | GL \_ TRIANGLE \_ FAN            | Verknüpfte Lüfter von Dreiecken.                     |
 
 
 
- 
+ 
 
 ??
 
- 
+ 
 
- 
+ 
 
 
 

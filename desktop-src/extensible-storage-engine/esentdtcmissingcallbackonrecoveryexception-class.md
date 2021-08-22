@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdtcmissingcallbackonherstellyexception-Klasse'
-title: Esentdtcmissingcallbackonherstellyexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentDTCMissingCallbackOnRecoveryException-Klasse'
+title: EsentDTCMissingCallbackOnRecoveryException-Klasse
 TOCTitle: EsentDTCMissingCallbackOnRecoveryException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentDTCMissingCallbackOnRecoveryException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdtcmissingcallbackonrecoveryexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5dc8e2a33a3482afff5f492a3886ea1aa13256e4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d71baf2c5b82dd59bd06ffdc02b11a747111a6c88fb2c9e123c9e6e6b10d5059
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960429"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119839503"
 ---
-# <a name="esentdtcmissingcallbackonrecoveryexception-class"></a>Esentdtcmissingcallbackonherstellyexception-Klasse
+# <a name="esentdtcmissingcallbackonrecoveryexception-class"></a>EsentDTCMissingCallbackOnRecoveryException-Klasse
 
-Basisklasse für JET_err. Dtcmissingcallbackonrecovery-Ausnahmen.
+Basisklasse für JET_err. DTCMissingCallbackOnRecovery-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentobsoleteexception](./esentobsoleteexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentdtcmissingcallbackonherstellyexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentObsoleteException](./esentobsoleteexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentDTCMissingCallbackOnRecoveryException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentDTCMissingCallbackOnRecoveryException : EsentObsoleteEx
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdtcmissingcallbackonwiederherstellungsexception-Member](./esentdtcmissingcallbackonrecoveryexception-members.md)
+[EsentDTCMissingCallbackOnRecoveryException-Member](./esentdtcmissingcallbackonrecoveryexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

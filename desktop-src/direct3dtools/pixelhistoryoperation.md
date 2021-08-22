@@ -1,10 +1,10 @@
 ---
-description: Stellt Informationen über den Pixel Verlauf dar.
+description: Stellt Informationen zum Pixelverlauf dar.
 MS-HAID: vspixengine.PixelHistoryOperation
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Pixelhistoryoperation-Struktur
+title: PixelHistoryOperation-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 59DC72FC-3865-48D3-9F92-9BE93DCA093B
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: c02a6725f588aaa4c7d72c48d03d921503d4e6a6
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 15cae4986b7dc109c08011d2cc23e1b6133de9e5
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346402"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122625186"
 ---
-# <a name="span-idvspixenginepixelhistoryoperationspanpixelhistoryoperation-structure"></a><span id="vspixengine.pixelhistoryoperation"></span>Pixelhistoryoperation-Struktur
+# <a name="span-idvspixenginepixelhistoryoperationspanpixelhistoryoperation-structure"></a><span id="vspixengine.pixelhistoryoperation"></span>PixelHistoryOperation-Struktur
 
-Stellt Informationen über den Pixel Verlauf dar.
+Stellt Informationen zum Pixelverlauf dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,141 +37,141 @@ Stellt Informationen über den Pixel Verlauf dar.
 
 ## <a name="members"></a>Member
 
-**VEI**  
-Die ID des Grafik Ereignisses, das diesem Vorgang zugeordnet ist.
+**eid**  
+Die ID des Grafikereignis, das diesem Vorgang zugeordnet ist.
 
 **PCP**  
-Diesem Vorgang zugeordnete gepackte Aufrufe.
+Gepackte Aufrufe, die diesem Vorgang zugeordnet sind.
 
-**rendertargetptr**  
-Das Renderziel, das ursprünglich (innerhalb der erfassten Anwendung) mit diesem Vorgang zugeordnet wurde.
+**renderTargetPtr**  
+Das Renderziel, das ursprünglich (innerhalb der erfassten Anwendung) diesem Vorgang zugeordnet wurde.
 
-**iprim**  
-Der Index des eigentlichen primitiven, dem der Vorgang zugeordnet ist.
+**iPrim**  
+Der Index des tatsächlichen Primitiven, der seiner Operation zugeordnet ist.
 
-**numprims**  
-Die Gesamtanzahl der diesem Vorgang zugeordneten primitiver.
+**numPrims**  
+Die Gesamtzahl der primitiven Typen, die diesem Vorgang zugeordnet sind.
 
-**numvertsperprim**  
-Die Anzahl der Vertices pro primitiver.
+**numVertsPerPrim**  
+Die Anzahl der Scheitelzeichen pro Primitiv.
 
-**iinstance**  
-Beim Rendern von Instanzen die Instanznummer der eigentlichen Instanz, die diesem Vorgang zugeordnet ist.
+**iInstance**  
+Beim Rendern von -Instanzen die Instanznummer der tatsächlichen Instanz, die diesem Vorgang zugeordnet ist.
 
-**iinstancecount**  
-Beim Rendern von Instanzen die Gesamtzahl der diesem Vorgang zugeordneten Instanzen.
+**iInstanceCount**  
+Beim Rendern von -Instanzen die Gesamtzahl der Instanzen, die diesem Vorgang zugeordnet sind.
 
-**bassemblerstagegeneratesinstanceid**  
-true, wenn der Eingabe Assembler Instanz-IDs generiert. andernfalls false.
+**bAssemblerStageGenerratesInstanceID**  
+TRUE, wenn der Eingabe-Assembler Instanz-IDs generiert; andernfalls FALSE.
 
 **flags**  
-Eine Kombination von pixelhistoryflags-Werten. Weitere Informationen finden Sie unter der pixelhistoryflags-Enumeration.
+Eine Kombination aus PIXELHISTORYFLAGS-Werten. Weitere Informationen finden Sie unter der PIXELHISTORYFLAGS-Enumeration.
 
-**pvsfile**  
-Ein "fleptr" für den Pixel-Shader-Bytestream. Dies wird zurückgegeben, um zu debuggen.
+**pVSFile**  
+Eine FILEPTR für den Bytestream des Pixels shader. Dies wird zum Debuggen zurück übergeben.
 
-**pgsfile**  
-Ein "fleptr" für den Geometry-Shader-Bytestream. Dies wird zurückgegeben, um zu debuggen.
+**pGSFile**  
+Eine FILEPTR für den Bytestream des Geometrie-Shaders. Dies wird zum Debuggen zurück übergeben.
 
-**ppsfile**  
-Ein "fleptr" für den Pixel-Shader-Bytestream. Dies wird zurückgegeben, um zu debuggen.
+**pPSFile**  
+Eine FILEPTR für den Bytestream des Pixels shader. Dies wird zum Debuggen zurück übergeben.
 
-**phsfile**  
-Ein "fleptr" für den Hull-Shader-Bytestream. Dies wird zurückgegeben, um zu debuggen.
+**pHSFile**  
+Eine FILEPTR für den Hüllen-Shader-Bytestream. Dies wird zum Debuggen zurück übergeben.
 
-**pdsfile**  
-Ein "fleptr" für den Domänen-Shader-Bytestream. Dies wird zurückgegeben, um zu debuggen.
+**pDSFile**  
+Eine FILEPTR für den Domänen-Shader-Bytestream. Dies wird zum Debuggen zurück übergeben.
 
-**pcsfile**  
-Ein "fleptr" für den Compute-Shader-Bytestream. Dies wird zurückgegeben, um zu debuggen.
+**pCSFile**  
+Eine FILEPTR für den Compute-Shader-Bytestream. Dies wird zum Debuggen zurück übergeben.
 
-**Vertexshaderfile**  
-Eine com-Zeichenfolge, die den filePath der Vertex-Shader-Quelldatei enthält.
+**VertexShaderFile**  
+Eine COM-Zeichenfolge, die den Dateipfad der Vertex-Shader-Quelldatei enthält.
 
-**Pixelshaderfile**  
-Eine com-Zeichenfolge, die den filePath der Pixelshader-Quelldatei enthält.
+**PixelShaderFile**  
+Eine COM-Zeichenfolge, die den Dateipfad der Pixel-Shader-Quelldatei enthält.
 
-**Geometryshaderfile**  
-Eine com-Zeichenfolge, die den filePath der Geometry-Shader-Quelldatei enthält.
+**GeometryShaderFile**  
+Eine COM-Zeichenfolge, die den Dateipfad der Quelldatei des Geometrie-Shaders enthält.
 
-**Hullshaderfile**  
-Eine com-Zeichenfolge, die den filePath der Hull-Shader-Quelldatei enthält.
+**HullShaderFile**  
+Eine COM-Zeichenfolge, die den Dateipfad der Quelldatei des Hüllen-Shaders enthält.
 
-**Domainshaderfile**  
-Eine com-Zeichenfolge, die den filePath der Domänen-Shader-Quelldatei enthält.
+**DomainShaderFile**  
+Eine COM-Zeichenfolge, die den Dateipfad der Domänen-Shader-Quelldatei enthält.
 
-**psred**  
-Pixel-Shader-Ausgabe: Wert der roten Farbkomponente.
+**psRed**  
+Pixel-Shaderausgabe: Der Wert der Komponente roter Farbe.
 
-**psgrün**  
-Pixel-Shader-Ausgabe: Wert der grünen Farbkomponente.
+**psGreen**  
+Pixel-Shaderausgabe: Wert der Komponente für grüne Farbe.
 
-**psblue**  
-Pixel-Shader-Ausgabe: Wert der blauen Farbkomponente
+**psBlue**  
+Pixel-Shaderausgabe: Wert der Blaufarbkomponente
 
-**psalpha**  
-Pixel-Shader-Ausgabe: Wert der Alpha Farbkomponente
+**psAlpha**  
+Pixel-Shaderausgabe: Wert der Alphafarbkomponente
 
-**Labelpsred**  
-Eine com-Zeichenfolge mit dem Namen der Bezeichnung, die der Komponente der roten Farbe der Pixel-Shader-Ausgabe zugeordnet ist.
+**LabelPSRed**  
+Eine COM-Zeichenfolge, die den Namen der Bezeichnung enthält, die der roten Farbkomponente der Pixel-Shaderausgabe zugeordnet ist.
 
-**Labelpsgreen**  
-Eine com-Zeichenfolge mit dem Namen der Bezeichnung, die der grünen Farbkomponente der Pixel-Shader-Ausgabe zugeordnet ist.
+**LabelPSGreen**  
+Eine COM-Zeichenfolge, die den Namen der Bezeichnung enthält, die der grünen Farbkomponente der Pixel-Shaderausgabe zugeordnet ist.
 
-**Labelpsblue**  
-Eine com-Zeichenfolge mit dem Namen der Bezeichnung, die der blauen Farbkomponente der Pixel-Shader-Ausgabe zugeordnet ist.
+**LabelPSBlue**  
+Eine COM-Zeichenfolge, die den Namen der Bezeichnung enthält, die der Blaufarbkomponente der Pixel-Shaderausgabe zugeordnet ist.
 
-**Labelpsalpha**  
-Eine com-Zeichenfolge mit dem Namen der Bezeichnung, die der Alpha Farbkomponente der Pixel-Shader-Ausgabe zugeordnet ist.
+**LabelPSAlpha**  
+Eine COM-Zeichenfolge, die den Namen der Bezeichnung enthält, die der Alphafarbkomponente der Pixel-Shaderausgabe zugeordnet ist.
 
-**pixelkillreason**  
-Pixel-Shader-Ausgabe: Grund, warum die Pixel Ausgabe abgebrochen wurde.
+**pixelKillReason**  
+Pixel-Shaderausgabe: Grund für den Abbruch der Pixelausgabe.
 
-**Pixel-okkluded**  
-true, wenn das Pixel ausgeblendet ist. andernfalls false.
+**pixelOccluded**  
+TRUE, wenn das Pixel okcluded ist; andernfalls FALSE.
 
-**mit dem Namen**  
-Frame Puffer: Wert der roten Farbkomponente von Frame Puffer, bevor die Pixel-Shader-Ausgabe zusammengeführt wird.
+**fbRed**  
+Framebuffer: Der Wert der roten Farbkomponente von framebuffer, bevor die Pixel-Shaderausgabe zusammengeführt wird.
 
-**bgrün**  
-Frame Puffer: Wert der grünen Farbkomponente von Frame Puffer, bevor die Pixel-Shader-Ausgabe zusammengeführt wird.
+**fbGreen**  
+Framebuffer: Der Wert der grünen Farbkomponente von framebuffer, bevor die Pixel-Shaderausgabe zusammengeführt wird.
 
-**"f"**  
-Frame Puffer: Wert der blauen Farbkomponente von Frame Puffer, bevor die Pixel-Shader-Ausgabe zusammengeführt wird.
+**fbBlue**  
+Framebuffer: Der Wert der Blaufarbkomponente von framebuffer, bevor die Pixel-Shaderausgabe zusammengeführt wird.
 
-**"f"**  
-Frame Puffer: Wert der Alpha Farbkomponente von Frame Puffer, bevor die Pixel-Shader-Ausgabe zusammengeführt wird.
+**fbAlpha**  
+Framebuffer: Der Wert der Alphafarbkomponente von framebuffer, bevor die Pixel-Shaderausgabe zusammengeführt wird.
 
-**Labelfgezüchtet**  
-Eine com-Zeichenfolge mit dem Namen der Bezeichnung, die der roten Farbkomponente des Framebuffer zugeordnet ist.
+**LabelFBRed**  
+Eine COM-Zeichenfolge, die den Namen der Bezeichnung enthält, die der roten Farbkomponente des Framepuffers zugeordnet ist.
 
-**Labelfbgrün**  
-Eine com-Zeichenfolge mit dem Namen der Bezeichnung, die der grünen Farbkomponente des Framebuffer zugeordnet ist.
+**LabelFBGreen**  
+Eine COM-Zeichenfolge, die den Namen der Bezeichnung enthält, die der grünen Farbkomponente des Framepuffers zugeordnet ist.
 
-**Labelfbblue**  
-Eine com-Zeichenfolge mit dem Namen der Bezeichnung, die der blauen Farbkomponente des Framebuffer zugeordnet ist.
+**LabelFBBlue**  
+Eine COM-Zeichenfolge, die den Namen der Bezeichnung enthält, die der Blaufarbkomponente des Framepuffers zugeordnet ist.
 
-**Labelfbalpha**  
-Eine com-Zeichenfolge mit dem Namen der Bezeichnung, die der Alpha Farbkomponente des Framebuffer zugeordnet ist.
+**LabelFBAlpha**  
+Eine COM-Zeichenfolge, die den Namen der Bezeichnung enthält, die der Alphafarbkomponente des Framepuffers zugeordnet ist.
 
 **Topologie**  
-Die Vertex-Topologie der Draw-Aufrufe (Dreiecks Liste, Dreiecks Streifen usw.).
+Die Vertextopologie der Zeichnen-Aufrufe (Dreiecksliste, Dreiecksstreifen usw.).
 
-**Vertices**  
-Eine com-Zeichenfolge, die den Scheitelpunkt Puffer enthält, beginnend bei diesem primitiven. Der Vertex-Puffer folgt dem Eingabe Layout-Format, das in der Pipeline Stufe angegeben wurde.
+**Scheitelpunkte**  
+Eine COM-Zeichenfolge, die den Scheitelpunktpuffer enthält, der bei diesem Primitiven beginnt. Der Scheitelpunktpuffer folgt dem in der Pipelinephase angegebenen Eingabelayoutformat.
 
-**vertexsize**  
-Die Größe eines einzelnen Scheitel Punkts in Bytes.
+**vertexSize**  
+Die Größe eines einzelnen Scheitelpunkts in Bytes.
 
-**Input Layout**  
-Eine com-Zeichenfolge, die eine Sequenz von inputlayoutstruct-Strukturen enthält, die dem Draw-Befehl zugeordnet sind.
+**InputLayout**  
+Eine COM-Zeichenfolge, die eine Sequenz von InputLayoutStruct-Strukturen enthält, die dem Zeichnen-Aufruf zugeordnet sind.
 
-**HRESULT**  
-Das DirectX HRESULT. Im Fall eines Problems kann dies zum Anzeigen des Fehlers verwendet werden.
+**Hresult**  
+Das DirectX Hresult. Im Falle eines Problems kann dies verwendet werden, um den Fehler anzuzeigen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

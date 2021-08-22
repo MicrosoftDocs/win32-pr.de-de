@@ -1,7 +1,7 @@
 ---
-description: Mit der RemoveAll-Methode werden alle Knoten aus der Liste entfernt.
+description: Die RemoveAll-Methode entfernt alle Knoten aus der Liste.
 ms.assetid: f6a6ebfe-5f53-4acd-8bfa-93680f5d40fd
-title: Cbaselist. RemoveAll-Methode (wxlist. h)
+title: CBaseList.RemoveAll-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9ef6984a871dc13b0f50d748f67ceaac79937d2e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 697a2c4463194b5fdfa079857b91ec255071a4d0fbb14e2672301df2a72341f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119793250"
 ---
-# <a name="cbaselistremoveall-method"></a>Cbaselist. RemoveAll-Methode
+# <a name="cbaselistremoveall-method"></a>CBaseList.RemoveAll-Methode
 
-Die- `RemoveAll` Methode entfernt alle Knoten aus der Liste.
+Die `RemoveAll` -Methode entfernt alle Knoten aus der Liste.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es ist Aufgabe des Aufrufers, die Elemente zu löschen, die in allen Knoten enthalten sind.
+Es liegt in der Verantwortung des Aufrufers, die in allen Knoten enthaltenen Elemente zu löschen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Es ist Aufgabe des Aufrufers, die Elemente zu löschen, die in allen Knoten enth
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Es ist Aufgabe des Aufrufers, die Elemente zu löschen, die in allen Knoten enth
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

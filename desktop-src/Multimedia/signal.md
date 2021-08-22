@@ -1,9 +1,9 @@
 ---
-title: Signal Befehl
-description: Der Signal-Befehl identifiziert eine angegebene Position im Arbeitsbereich, indem die Anwendung eine mm \_ mcisignal-Nachricht sendet. Dieser Befehl wird von Digital-Video-Geräten erkannt. MCIAVI unterstützt jeweils nur ein aktives Signal.
+title: signal-Befehl
+description: Der Signalbefehl identifiziert eine angegebene Position im Arbeitsbereich, indem er der Anwendung eine MM \_ MCISIGNAL-Nachricht sendet. Digitalvideogeräte erkennen diesen Befehl. MCIAVI unterstützt jeweils nur ein aktives Signal.
 ms.assetid: 3d10eac0-fd1a-41ee-98fa-2518642c7339
 keywords:
-- Signal Befehl Windows Multimedia
+- Signalbefehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4fd96b8970ebbb6502306c6d2d5fd8c49f172cad
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0db007a03738f13bb9acc0733b67bcd38de4b97f2b194bb16cdfcd85f798cfdc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339977"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037180"
 ---
-# <a name="signal-command"></a>Signal Befehl
+# <a name="signal-command"></a>signal-Befehl
 
-Der Signal-Befehl identifiziert eine angegebene Position im Arbeitsbereich, indem die Anwendung eine [mm \_ mcisignal](mm-mcisignal.md) -Nachricht sendet. Dieser Befehl wird von Digital-Video-Geräten erkannt. MCIAVI unterstützt jeweils nur ein aktives Signal.
+Der Signalbefehl identifiziert eine angegebene Position im Arbeitsbereich, indem er der Anwendung eine [MM \_ MCISIGNAL-Nachricht](mm-mcisignal.md) sendet. Digitalvideogeräte erkennen diesen Befehl. MCIAVI unterstützt jeweils nur ein aktives Signal.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion mit dem festgelegten *lpszcommand* -Parameter wie folgt an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) auf, wobei der *lpszCommand-Parameter* wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -39,14 +39,14 @@ _stprintf_s(
 
 <dl> <dt>
 
-<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszde viceid*
+<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszDeviceID*
 </dt> <dd>
 
-Der Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
+Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
 
 </dd> <dt>
 
-<span id="lpszSignalFlags"></span><span id="lpszsignalflags"></span><span id="LPSZSIGNALFLAGS"></span>*lpszsignalflags*
+<span id="lpszSignalFlags"></span><span id="lpszsignalflags"></span><span id="LPSZSIGNALFLAGS"></span>*lpszSignalFlags*
 </dt> <dd>
 
 Eines der folgenden Flags.
@@ -55,11 +55,11 @@ Eines der folgenden Flags.
 
 | Wert            | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| an Position      | Gibt den Frame zum Aufrufen eines Signals an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| cancel           | Entfernt Signale aus dem Arbeitsbereich. Ein einzelnes Signal wird mit dem Flag "uservalue" angegeben. Wenn das Flag "uservalue" nicht mit "Abbrechen" angegeben wird, bricht das Gerät alle Signale ab. Das Flag "Abbrechen" ist nicht mit den Flags "at", "All" und "Return Position" kompatibel.                                                                                                                                                                                                                                                                                          |
-| Jedes *Intervall* | Gibt den Zeitraum der Signale an. Der *Intervall* Wert wird im aktuellen Zeitformat angegeben. Bei Verwendung mit der *Position*"an" werden Signale im gesamten Arbeitsbereich platziert, wobei eine Signal Markierung an der *Position* platziert wird.<br/> Ohne das Flag "at" werden Signale im gesamten Arbeitsbereich mit einem Signal an der aktuellen Position platziert.<br/> Wenn dieses Flag weggelassen wird, wird nur die durch das Flag "at" bezeichnete Position als markiert.<br/> Wenn der *Intervall* Wert niedriger als die von einem Gerät unterstützte Mindestfrequenz ist, wird der Mindestwert verwendet.<br/> |
-| Rückgabe Position  | Gibt an, dass das Gerät den Positionswert anstelle des Bezeichners "uservalue" in der Signalisierungs Nachricht senden soll. Der Bezeichner "uservalue" kann weiterhin verwendet werden, um die Signal Markierungen abzubrechen oder neu zu definieren.                                                                                                                                                                                                                                                                                                                                                                      |
-| *ID* des Benutzer Werts   | Gibt einen Bezeichner an, der mit der Signal Meldung zurückgemeldet wird. Dieser Bezeichner fungiert als Bezeichner, der mit anderen **Signal** Befehlen verwendet werden kann, um auf diese **Signal** Einstellung zu verweisen. Wenn keine Angabe erfolgt, ist der Standardwert 0 (null).                                                                                                                                                                                                                                                                                                                                     |
+| an Position      | Gibt den Frame an, um ein Signal aufzurufen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| cancel           | Entfernt Signale aus dem Arbeitsbereich. Ein einzelnes Signal wird mithilfe des Flags "uservalue" angegeben. Wenn das Flag "uservalue" nicht mithilfe von "cancel" angegeben wird, bricht das Gerät alle Signale ab. Das Flag "cancel" ist nicht mit den Flags "at", "every" und "return position" kompatibel.                                                                                                                                                                                                                                                                                          |
+| jedes *Intervall* | Gibt den Zeitraum der Signale an. Der *Intervallwert* wird im aktuellen Zeitformat angegeben. Bei Verwendung mit der *Position*"at" werden Signale im gesamten Arbeitsbereich mit einer Signalmarkierung an *position* platziert.<br/> Ohne das Flag "at" werden Signale im gesamten Arbeitsbereich mit einem Signal an der aktuellen Position platziert.<br/> Wenn dieses Flag ausgelassen wird, wird nur die Position markiert, die durch das Flag "at" angegeben wird.<br/> Wenn der *Intervallwert* kleiner als die von einem Gerät unterstützte Mindesthäufigkeit ist, wird der Mindestwert verwendet.<br/> |
+| Rückgabeposition  | Gibt an, dass das Gerät den Positionswert anstelle des Bezeichners "uservalue" in der Signalisierungsmeldung senden soll. Der Bezeichner "uservalue" kann weiterhin verwendet werden, um die Signalmarkierungen abzubrechen oder neu zu definieren.                                                                                                                                                                                                                                                                                                                                                                      |
+| uservalue *id*   | Gibt einen Bezeichner an, der mit der Signalisierungsmeldung gemeldet wird. Dieser Bezeichner fungiert als Bezeichner, der mit anderen **Signalbefehlen** verwendet werden kann, um auf diese **Signaleinstellung** zu verweisen. Wenn keine Angabe erfolgt, ist der Standardwert 0 (null).                                                                                                                                                                                                                                                                                                                                     |
 
 
 
@@ -67,20 +67,20 @@ Eines der folgenden Flags.
 
 </dd> <dt>
 
-<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszflags*
+<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify", "Test" oder eine Kombination daraus sein. Weitere Informationen zu diesen Flags finden Sie [unter warte-, Benachrichtigungs-und testflags](the-wait-notify-and-test-flags.md).
+Kann "wait", "notify", "test" oder eine Kombination dieser sein. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Fenster Handle, das für die Benachrichtigung über Befehls Vervollständigungs Meldungen verwendet wird, wird auch zur Signalisierung verwendet.
+Das Fensterhandle, das für die Benachrichtigung von Befehlsabschlussmeldungen verwendet wird, wird auch für die Signalisierung verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,13 +97,13 @@ Das Fenster Handle, das für die Benachrichtigung über Befehls Vervollständigu
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
-[MCI-Befehls Zeichenfolgen](mci-command-strings.md)
+[MCI-Befehlszeichenfolgen](mci-command-strings.md)
 </dt> <dt>
 
-[MM- \_ mcisignal](mm-mcisignal.md)
+[MM \_ MCISIGNAL](mm-mcisignal.md)
 </dt> </dl>
 
  

@@ -1,12 +1,12 @@
 ---
-title: Uninstalllicenabkeypackwithid-Methode der Win32_TSLicenseKeyPack-Klasse
-description: Deinstalliert das Remotedesktopdienste License Key Pack mit der angegebenen Key Pack-Kennung.
+title: UninstallLicenseKeyPackWithId-Methode der Win32_TSLicenseKeyPack-Klasse
+description: Deinstalliert das Remotedesktopdienste Lizenzschlüsselpaket mit dem angegebenen Schlüsselpaketbezeichner.
 ms.assetid: ECB622AB-FAB4-4C5D-A007-E3ABA8E1D3E7
 ms.tgt_platform: multiple
 keywords:
-- Uninstalllicenabkeypackwithid-Methode Remotedesktopdienste
-- Uninstalllicenabkeypackwithid-Methode Remotedesktopdienste, Win32_TSLicenseKeyPack-Klasse
-- Win32_TSLicenseKeyPack-Klasse Remotedesktopdienste, uninstalllicenabkeypackwithid-Methode
+- UninstallLicenseKeyPackWithId-Remotedesktopdienste
+- UninstallLicenseKeyPackWithId-Methode Remotedesktopdienste , Win32_TSLicenseKeyPack-Klasse
+- Win32_TSLicenseKeyPack klasse Remotedesktopdienste , UninstallLicenseKeyPackWithId-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 583c7d56f5aacde57a1b683e988646e7e30b62d4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1218ce51beac9e20dd04e2a56d9075b6732d65e17689afaba5ce4d8f6669b1ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475471"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120008440"
 ---
-# <a name="uninstalllicensekeypackwithid-method-of-the-win32_tslicensekeypack-class"></a>Uninstalllicenabkeypackwithid-Methode der Win32- \_ Klasse "keylicenabkeypack"
+# <a name="uninstalllicensekeypackwithid-method-of-the-win32_tslicensekeypack-class"></a>UninstallLicenseKeyPackWithId-Methode der Win32 \_ TSLicenseKeyPack-Klasse
 
-Deinstalliert das Remotedesktopdienste License Key Pack mit der angegebenen Key Pack-Kennung.
+Deinstalliert das Remotedesktopdienste Lizenzschlüsselpaket mit dem angegebenen Schlüsselpaketbezeichner.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ uint32 UninstallLicenseKeyPackWithId(
 
 <dl> <dt>
 
-*Keypackid* \[ in\]
+*KeyPackId* \[ In\]
 </dt> <dd>
 
-Der Bezeichner des zu deinstallierenden Schlüssel Pakets.
+Der Bezeichner des zu deinstallierenden Schlüsselpakets.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode ni
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
@@ -72,7 +72,7 @@ Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode ni
 
 <dl> <dt>
 
-[**Win32-Schlüssel-Lizenz-Schlüssel \_ ACK**](win32-tslicensekeypack.md)
+[**Win32 \_ TSLicenseKeyPack**](win32-tslicensekeypack.md)
 </dt> </dl>
 
  

@@ -1,47 +1,47 @@
 ---
-description: Die itmediacollection-Schnittstelle ermöglicht den Zugriff auf den Satz von Medieninformationen in einer SDP-Konferenzbeschreibung (RFC 2327).
+description: Die ITMediaCollection-Schnittstelle bietet Zugriff auf den Satz von Medieninformationen in einer SDP-Konferenzbeschreibung (RFC 2327).
 ms.assetid: a7e7a07d-239e-432e-9984-7763f11c59ce
-title: Itmediacollection-Schnittstelle (sdpblb. h)
+title: ITMediaCollection-Schnittstelle (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 21305e1d1729437b53c380b7712feee3827b3ba8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2425ae89f376d5cb2d7cc23e70abd33f87750d3d1b5343a17c8ecb05d7de760d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120034610"
 ---
-# <a name="itmediacollection-interface"></a>Itmediacollection-Schnittstelle
+# <a name="itmediacollection-interface"></a>ITMediaCollection-Schnittstelle
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **itmediacollection** -Schnittstelle ermöglicht den Zugriff auf den Satz von Medieninformationen in einer SDP-Konferenzbeschreibung (RFC 2327). Jede Medien Beschreibung im SDP wird durch eine [**ITmedia**](itmedia.md) -Schnittstelle beschrieben. **Itmediacollection** ermöglicht die Bearbeitung des Satzes von **ITmedia** -Informationen für den SDP, einschließlich:
+Die **ITMediaCollection-Schnittstelle** bietet Zugriff auf den Satz von Medieninformationen in einer SDP-Konferenzbeschreibung (RFC 2327). Jede Medienbeschreibung im SDP wird von einer [**ITMedia-Schnittstelle**](itmedia.md) beschrieben. **ITMediaCollection** ermöglicht die Bearbeitung des Satzes von **ITMedia-Informationen** für den SDP, einschließlich:
 
--   Ermöglicht den Medien Zugriff nach Index.
+-   Ermöglicht den Medienzugriff nach Index.
 -   Ermöglicht das Erstellen und Löschen von Medien.
 
-Die [**itsdp:: get \_ mediacollection**](itsdp-get-mediacollection.md) -Methode erstellt die **itmediacollection** -Schnittstelle.
+Die [**ITSdp::get \_ MediaCollection-Methode**](itsdp-get-mediacollection.md) erstellt die **ITMediaCollection-Schnittstelle.**
 
 ## <a name="members"></a>Member
 
-Die **itmediacollection** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Itmediacollection** verfügt auch über die folgenden Typen von Membern:
+Die **ITMediaCollection-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **ITMediaCollection** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **itmediacollection** -Schnittstelle verfügt über diese Methoden.
+Die **ITMediaCollection-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                            | BESCHREIBUNG                                                            |
 |:------------------------------------------------------------------|:-----------------------------------------------------------------------|
-| [**Stelle**](itmediacollection-create.md)                        | Erstellt ein neues Medium mit Standardeigenschaften und gibt dieses zurück.<br/> |
-| [**Lösch**](itmediacollection-delete.md)                        | Löscht das Medium, das dem angegebenen Index entspricht.<br/>     |
-| [**" \_ \_ netwenum"**](itmediacollection-get--newenum.md)          | Gibt einen Enumerator für die Auflistung zurück.<br/>                   |
-| [**get- \_ Anzahl**](itmediacollection-get-count.md)                 | Ruft die Anzahl der Medien in der Sitzung ab.<br/>                    |
-| [**\_enumerationif erhalten**](itmediacollection-get-enumerationif.md) | Ruft den Zeiger auf die Enumerationsschnittstelle ab.<br/>                      |
-| [**\_Element erhalten**](itmediacollection-get-item.md)                   | Gibt das Medium zurück, das dem angegebenen Index entspricht.<br/>     |
+| [**Erstellen**](itmediacollection-create.md)                        | Erstellt ein neues Medium mit Standardeigenschaften und gibt es zurück.<br/> |
+| [**Löschen**](itmediacollection-delete.md)                        | Löscht die Medien, die dem angegebenen Index entsprechen.<br/>     |
+| [**get \_ \_ NewEnum**](itmediacollection-get--newenum.md)          | Gibt einen Enumerator für die Auflistung zurück.<br/>                   |
+| [**get \_ Count**](itmediacollection-get-count.md)                 | Ruft die Anzahl der Medien in der Sitzung ab.<br/>                    |
+| [**get \_ EnumerationIf**](itmediacollection-get-enumerationif.md) | Ruft einen Zeiger auf die Enumerationsschnittstelle ab.<br/>                      |
+| [**get \_ Item**](itmediacollection-get-item.md)                   | Gibt die Medien zurück, die dem angegebenen Index entsprechen.<br/>     |
 
 
 
@@ -53,9 +53,9 @@ Die **itmediacollection** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 

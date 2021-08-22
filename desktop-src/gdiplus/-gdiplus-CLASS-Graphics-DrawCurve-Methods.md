@@ -1,19 +1,19 @@
 ---
-description: In diesem Thema werden die DrawCurve-Methoden der Grafikklasse aufgelistet. Eine umfassende Liste der Methoden für die Grafikklasse finden Sie unter Grafiken.
+description: In diesem Thema werden die DrawCurve-Methoden der Graphics-Klasse aufgelistet. Eine vollständige Liste der Methoden für die Graphics-Klasse finden Sie unter Grafiken.
 ms.assetid: 3b29e150-26ac-46c6-8aa5-984aeb03392a
-title: Graphics. DrawCurve-Methoden (gdipl"-Grafiken. h")
+title: Graphics.DrawCurve-Methoden (Gdiplusgraphics.h)
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 9d9d9c044955700d7c442c1e9081419c8a47aa21
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 95365a11cc28aace7e16046e3b39ef8517e625f52ff0fb29f07f8736fe81c4ce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104983109"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119888840"
 ---
-# <a name="graphicsdrawcurve-methods"></a>Graphics. DrawCurve-Methoden
+# <a name="graphicsdrawcurve-methods"></a>Graphics.DrawCurve-Methoden
 
-In diesem Thema werden die DrawCurve-Methoden der [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse aufgelistet. Eine umfassende Liste der Methoden für die **Grafik** Klasse finden Sie unter [**Grafiken**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
+In diesem Thema werden die DrawCurve-Methoden der [**Graphics-Klasse**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) aufgelistet. Eine vollständige Liste der Methoden für die **Graphics-Klasse** finden Sie unter [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -21,22 +21,22 @@ In diesem Thema werden die DrawCurve-Methoden der [**Grafik**](/windows/win32/ap
 
 | Methode                                                                                                                                                     | BESCHREIBUNG                                                                                                                                                                        |
 |:-----------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**DrawCurve (Stift \* , Punkt \* , int)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpoint_inint))                                                  | Die [**Grafik::D rawcurve**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpoint_inint)) -Methode zeichnet einen kardinalspline.<br/>                                    |
-| [**DrawCurve (Stift \* , PointF \* , int)**](/previous-versions//ms536070(v=vs.85))                                                | Die [**Grafik::D rawcurve**](/previous-versions//ms536070(v=vs.85)) -Methode zeichnet einen kardinalspline.<br/>                                   |
-| [**DrawCurve (Stift \* , Punkt \* , int, Real)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpoint_inint_inreal))                                | Die [**Grafik::D rawcurve**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpoint_inint_inreal)) -Methode zeichnet einen kardinalspline. <br/>                      |
-| [**DrawCurve (Stift \* , PointF \* , int, Real)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpointf_inint_inreal))                              | Die [**Grafik::D rawcurve**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpointf_inint_inreal)) -Methode zeichnet einen kardinalspline.<br/>                      |
-| [**DrawCurve (Pen \* , Point \* , int, int, int, Real)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpoint_inint_inint_inint_inreal))  | Die [**Grafik::D rawcurve**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpoint_inint_inint_inint_inreal)) -Methode zeichnet einen kardinalspline.<br/> |
-| [**DrawCurve (Stift \* , PointF \* , int, int, int, Real)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpointf_inint_inint_inint_inreal)) | Die [**Grafik::D rawcurve**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpointf_inint_inint_inint_inreal)) -Methode zeichnet einen kardinalspline.<br/> |
+| [**DrawCurve(Pen \* , Point , \* INT)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpoint_inint))                                                  | Die [**Graphics::D rawCurve-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpoint_inint)) zeichnet einen Kardinal-Spline.<br/>                                    |
+| [**DrawCurve(Pen \* , PointF \* , INT)**](/previous-versions//ms536070(v=vs.85))                                                | Die [**Graphics::D rawCurve-Methode**](/previous-versions//ms536070(v=vs.85)) zeichnet einen Kardinal-Spline.<br/>                                   |
+| [**DrawCurve(Pen \* , Point , \* INT, REAL)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpoint_inint_inreal))                                | Die [**Graphics::D rawCurve-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpoint_inint_inreal)) zeichnet einen Kardinal-Spline. <br/>                      |
+| [**DrawCurve(Pen \* , PointF \* , INT, REAL)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpointf_inint_inreal))                              | Die [**Graphics::D rawCurve-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpointf_inint_inreal)) zeichnet einen Kardinal-Spline.<br/>                      |
+| [**DrawCurve(Pen \* , Point , \* INT, INT, INT, REAL)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpoint_inint_inint_inint_inreal))  | Die [**Graphics::D rawCurve-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpoint_inint_inint_inint_inreal)) zeichnet einen Kardinal-Spline.<br/> |
+| [**DrawCurve(Pen \* , PointF \* , INT, INT, INT, REAL)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpointf_inint_inint_inint_inreal)) | Die [**Graphics::D rawCurve-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawcurve(inconstpen_inconstpointf_inint_inint_inint_inreal)) zeichnet einen Kardinal-Spline.<br/> |
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Gdipl-Grafik. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Gdiplusgraphics.h</dt> </dl> |
 
 
 

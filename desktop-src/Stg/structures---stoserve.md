@@ -1,23 +1,23 @@
 ---
-title: Strukturen-stoservice
-description: Copaper verpackt die Stift Farbe, die Breite und die Koordinaten in inkdata-Strukturen und speichert Sie in einem dynamisch zugeordneten Array, das im Arbeitsspeicher verwaltet wird.
+title: Strukturen – StoServe
+description: COPaper packt die Stiftfarbe, Breite und Koordinaten in INKDATA-Strukturen und speichert sie in einem dynamisch zugeordneten Array, das im Arbeitsspeicher verwaltet wird.
 ms.assetid: 25e68c39-5306-4ad6-85dd-a8a5e256abf0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a9868f38d7915185b8d3511bd1bf6faa9c7a1e1b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3f81b46f2f0a992f27ed405361734fe53db98cf9272697b88866451ef1d7d4b4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119796890"
 ---
-# <a name="structures---stoserve"></a>Strukturen-stoservice
+# <a name="structures---stoserve"></a>Strukturen – StoServe
 
-Copaper verpackt die Stift Farbe, die Breite und die Koordinaten in **inkdata** -Strukturen und speichert Sie in einem dynamisch zugeordneten Array, das im Arbeitsspeicher verwaltet wird.
+COPaper packt die Stiftfarbe, Breite und Koordinaten in **INKDATA-Strukturen** und speichert sie in einem dynamisch zugeordneten Array, das im Arbeitsspeicher verwaltet wird.
 
-## <a name="inkdata-structure"></a>Inkdata-Struktur
+## <a name="inkdata-structure"></a>INKDATA-Struktur
 
-Im folgenden finden Sie die Deklarationen für die **inkdata** -Struktur aus "Paper. H".
+Im Folgenden finden Sie die Deklarationen für die **INKDATA-Struktur** von PAPER.H.
 
 ``` syntax
 // The types of Ink Data.
@@ -37,17 +37,17 @@ Im folgenden finden Sie die Deklarationen für die **inkdata** -Struktur aus "Pa
   } INKDATA;
 ```
 
-Auf das dynamische Array dieser **inkdata** -Pakete wird durch m \_ painkdata, ein Member der [**iPaper**](ipaper-methods.md) -Implementierungs Klasse, verwiesen. Das Array wird in der **iPaper:: initpaper** -Methode mit einer anfänglichen Zuordnung erstellt. Weitere Informationen finden Sie in der **initpaper** -Methode und in der privaten nextlot-hilfsprogrammmethode der cimpipaper-Implementierung in Paper. H. Die [**inkstart**](inkstart-method.md)-, [**inkdraw**](inkdraw-method.md)-und [**inkstoppt**](cguipaper-methods.md) -Methoden verwenden nextslot, um neue Slots im Array abzurufen. Das Array wird nach Bedarf dynamisch erweitert.
+Auf das dynamische Array dieser **INKDATA-Pakete** verweist m paInkData, ein Member der \_ [**IPaper-Implementierungsklasse.**](ipaper-methods.md) Das Array wird in der **IPaper::InitPaper-Methode** mit einer anfänglichen Zuordnung erstellt. Weitere Informationen finden Sie unter **der InitPaper-Methode** und der privaten NextSlot-Hilfsprogrammmethode der CImpIPaper-Implementierung in PAPER.H. Die [**Methoden InkStart,**](inkstart-method.md) [**InkDraw**](inkdraw-method.md)und [**InkStop**](cguipaper-methods.md) verwenden NextSlot, um neue Slots im Array zu erhalten. Das Array wird bei Bedarf dynamisch durch NextSlot erweitert.
 
-Der Client ruft die [**iPaper:: Erase**](ipaper-methods.md) -Methode auf, um die aktuelle Zeichnung zu löschen. Diese Methode weist das Array nicht neu zu. Es werden einfach alle aktuellen frei Hand Daten als inktype \_ None gekennzeichnet und der Dateiende-Index des Arrays auf Null zurückgesetzt.
+Der Client ruft die [**IPaper::Erase-Methode auf,**](ipaper-methods.md) um die aktuelle Zeichnung zu löschen. Mit dieser Methode wird das Array nicht neu zugewiesen. Es markiert einfach alle aktuellen Ink-Daten als INKTYPE NONE und setzt den \_ End-of-Data-Index des Arrays auf 0 (null) zurück.
 
-Der Client ruft die [**iPaper:: Lock**](ipaper-methods.md) -Methode und die **Unlock** -Methode auf, um den Besitz des copaper zum Zeichnen zu verwalten. Diese Methoden werden bereitgestellt, um den Zugriff auf mehrere Clients auf die Zeichnung zu organisieren, die in einem freigegebenen copaper aufbewahrt wird.
+Der Client ruft die [**IPaper::Lock- und Unlock-Methoden**](ipaper-methods.md) **auf,** um den Besitz von COPaper für das Zeichnen zu verwalten. Diese Methoden werden bereitgestellt, um den Zugriff auf die Zeichnung in einem freigegebenen COPaper zwischen mehreren Clients zu organisieren.
 
-## <a name="paper_properties-structure"></a>Struktur der Papier \_ Eigenschaften
+## <a name="paper_properties-structure"></a>PAPER \_ PROPERTIES-Struktur
 
-Der Client ruft die [**iPaper:: Resize**](ipaper-methods.md) -Methode auf, um copaper mitzuteilen, dass der Benutzer die Größe des aktuellen Zeichnungs Papier Rechtecks geändert hat. Diese Koordinatendaten werden in einer **Papier \_ Eigenschafts** Struktur aufbewahrt, die mit den frei Hand Daten gespeichert wird, wenn alle Papier Daten in einer Verbund Datei gespeichert werden.
+Der Client ruft die [**IPaper::Resize-Methode**](ipaper-methods.md) auf, um COPaper zu informieren, dass der Benutzer die Größe des aktuellen Zeichnungsdokumentrechtecks geändert hat. Diese Koordinatendaten werden in einer **PAPER \_ PROPERTIES-Struktur** gespeichert, die mit den Ink-Daten gespeichert wird, wenn alle Papierdaten in einer Verbunddatei gespeichert werden.
 
-Im folgenden finden Sie die Deklaration der **Papier \_ Eigenschaften** aus Paper. H.
+Im Folgenden finden Sie die **PAPER \_ PROPERTIES-Deklaration** von PAPER.H.
 
 ``` syntax
 #define PAPER_TITLE_SIZE 64
@@ -64,19 +64,19 @@ Im folgenden finden Sie die Deklaration der **Papier \_ Eigenschaften** aus Pape
   } PAPER_PROPERTIES;
 ```
 
-Die Struktur der **Papier \_ Eigenschaften** ist so konzipiert, dass jederzeit neue frei Hand Datenformate hinzugefügt werden können, wenn die Komponente dllpaper weiterentwickelt wird. Die [**iPaper**](ipaper-methods.md) -Schnittstelle ist allgemein genug, dass eine nachfolgende Version der dllpaper-Komponente ein anderes frei Hand Datenformat speichern kann, während dieselbe **iPaper** -Schnittstelle implementiert wird. Da die Methoden von **iPaper** nicht von einem bestimmten Freihand-Datenformat abhängen, kann eine neue Version der dllpaper-Komponente, die ein anderes frei Hand Datenformat unterstützt, dieselbe Schnittstelle verwenden.
+Die **PAPER \_ PROPERTIES-Struktur** ist so konzipiert, dass jederzeit neue Ink-Datenformate hinzugefügt werden können, wenn die DllPaper-Komponente weiterentwickelt wird. Die [**IPaper-Schnittstelle**](ipaper-methods.md) ist so allgemein, dass eine nachfolgende Version der DllPaper-Komponente ein anderes Ink-Datenformat speichern kann, während die gleiche **IPaper-Schnittstelle implementiert** wird. Da die Methoden von **IPaper** nicht von einem bestimmten Ink-Datenformat abhängen, kann eine neue Version der DllPaper-Komponente, die ein anderes Ink-Datenformat unterstützt, dieselbe Schnittstelle verwenden.
 
-Die in einer Verbund Datei gespeicherten Papiereigenschaften zeichnen die aktuelle Größe des frei Hand Daten Arrays auf. Die richtige Array Größe kann dann zugewiesen werden, um die aus der Datei gelesenen frei Hand Daten zu unterstützen.
+Die in einer Verbunddatei gespeicherten Papiereigenschaften zeichnen die aktuelle Größe des Ink-Datenarrays auf. Die richtige Arraygröße kann dann zugeordnet werden, um die aus der Datei gelesenen Ink-Daten zu verarbeiten.
 
-In der Struktur der **Papier \_ Eigenschaften** werden auch die Zeichnungs Rechtecke-Größe und Hintergrund Fenster Farbe der Papieroberfläche gespeichert.
+In **der \_ PAPER PROPERTIES-Struktur** werden auch die Zeichnungsrechteckgröße und die Hintergrundfensterfarbe der Papieroberfläche gespeichert.
 
-Obwohl Sie nicht in den **stoservice** / -Beispielen von **stoservice** verwendet werden, können auch ein Zeichnungs Titel und ein Autorenname gespeichert werden.
+Obwohl in den **StoServe** / **StoClien-Beispielen** nicht verwendet, können auch ein Zeichnungstitel und ein Autorenname gespeichert werden.
 
-Erstellungsdatum und Datum der letzten Änderung sind nicht in diesen Papiereigenschaften enthalten, da die [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) -Schnittstelle, die für den Zugriff auf Verbund Dateien verwendet wird, diese Informationen verwaltet.
+Erstellungsdatum und Datum der letzten Änderung sind in diesen Papiereigenschaften nicht enthalten, da diese Informationen von der [**IStorage-Schnittstelle**](/windows/desktop/api/Objidl/nn-objidl-istorage) verwaltet werden, die für den Zugriff auf Verbunddateien verwendet wird.
 
- 
+ 
 
- 
+ 
 
 
 

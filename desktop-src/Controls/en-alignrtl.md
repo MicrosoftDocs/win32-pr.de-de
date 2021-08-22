@@ -1,9 +1,9 @@
 ---
-title: EN_ALIGNRTL Benachrichtigungs Code (RichEdit. h)
-description: Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements, dass die Absatz Richtung von rechts nach links geändert wurde. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer WM- \_ Befehls Meldung.
+title: EN_ALIGNRTL Benachrichtigungscode (Richedit.h)
+description: Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuerelements, dass die Absatzrichtung von rechts nach links geändert wurde. Dieses Benachrichtigungscode wird von einem Rich-Edit-Steuerelement in Form einer WM \_ COMMAND-Nachricht gesendet.
 ms.assetid: 2db5fd49-9ecd-49d7-8199-1706648255ca
 keywords:
-- Windows-Steuerelemente für EN_ALIGNRTL Benachrichtigungs
+- EN_ALIGNRTL Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fac2adaa629d00ef940f02f1ed69eb778cdc7813
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 179b9a610d2d834081ddd246ea4d649c099a8df3a62d21815c825bd55701dad2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476095"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119799850"
 ---
-# <a name="en_alignrtl-notification-code"></a>EN \_ alignrtl-Benachrichtigungs Code
+# <a name="en_alignrtl-notification-code"></a>EN \_ ALIGNRTL-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements, dass die Absatz Richtung von rechts nach links geändert wurde. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuerelements, dass die Absatzrichtung von rechts nach links geändert wurde. Dieses Benachrichtigungscode wird von einem Rich-Edit-Steuerelement in Form einer [**WM \_ COMMAND-Nachricht**](/windows/desktop/menurc/wm-command) gesendet.
 
 
 ```C++
@@ -42,20 +42,20 @@ EN_ALIGNRTL
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Rich Edit-Steuer Elements. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+Das [**LOWORD enthält**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) den Bezeichner des Rich-Edit-Steuerelements. Das [**HIWORD gibt**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) den Benachrichtigungscode an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Handle für das Rich Edit-Steuerelement.
+Handle für das Rich-Edit-Steuerelement.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Dieser Benachrichtigungs Code gibt keinen Wert zurück.
+Dieser Benachrichtigungscode gibt keinen Wert zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ Dieser Benachrichtigungs Code gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -73,10 +73,10 @@ Dieser Benachrichtigungs Code gibt keinen Wert zurück.
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EN \_ alignltr**](en-alignltr.md)
+[**EN \_ ALIGNLTR**](en-alignltr.md)
 </dt> <dt>
 
 **Andere Ressourcen**
@@ -88,7 +88,7 @@ Dieser Benachrichtigungs Code gibt keinen Wert zurück.
 [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

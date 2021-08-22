@@ -1,7 +1,7 @@
 ---
-description: Sucht die nächste Instanz der Eigenschaft, die durch den hproperty-Parameter angegeben wird.
+description: Sucht die nächste Instanz der -Eigenschaft, die durch den hProperty-Parameter angegeben wird.
 ms.assetid: f77cb92b-5936-4349-bf66-643c16e9e0df
-title: Findpropertyinstancerestart-Funktion (Netmon. h)
+title: FindPropertyInstanceRestart-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: d1e731bb00b28bb62862dd18fbd6031fa973fe38
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0699cb37165e9181bf78bc3a86ad68c07dbbd589469e3e0bca6a1cd0228573f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119890810"
 ---
-# <a name="findpropertyinstancerestart-function"></a>Findpropertyinstancerestart-Funktion
+# <a name="findpropertyinstancerestart-function"></a>FindPropertyInstanceRestart-Funktion
 
-Die **findpropertyinstancerestart** -Funktion sucht die nächste Instanz der Eigenschaft, die durch den *hproperty* -Parameter angegeben wird.
+Die **FindPropertyInstanceRestart-Funktion** sucht die nächste Instanz der Eigenschaft, die durch den *hProperty-Parameter angegeben* wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,45 +42,45 @@ LPPROPERTYINST WINAPI FindPropertyInstanceRestart(
 
 <dl> <dt>
 
-*hframe* \[ in\]
+*hFrame* \[ In\]
 </dt> <dd>
 
-Ein Handle für den Frame. Das Frame Handle kann durch einen Aufrufen der [GetFrame](getframe.md) -Funktion abgerufen werden.
+Ein Handle für den Frame. Das Framehand handle kann durch einen Aufruf der [GetFrame-Funktion abgerufen](getframe.md) werden.
 
 </dd> <dt>
 
-*hproperty* \[ in\]
+*hProperty* \[ In\]
 </dt> <dd>
 
-Ein Handle für die zu suchende Eigenschaft. Das Eigenschafts Handle kann durch einen Aufrufen der [GetProperty](getproperty.md) -Funktion abgerufen werden.
+Ein Handle für die zu suchende Eigenschaft. Das Eigenschaftenhand handle kann durch einen Aufruf der [GetProperty-Funktion abgerufen](getproperty.md) werden.
 
 </dd> <dt>
 
-*lprestartkey* \[ in\]
+*lpRestartKey* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die Eigenschaften Instanz, die als Ausgangspunkt für die Suche verwendet wird. Wenn der *lprestartkey* -Parameter auf **null** festgelegt ist, beginnt die Suche am Anfang des Frames oder am Ende des Frames, abhängig vom Wert des *dirforward* -Parameters.
+Ein Zeiger auf die Eigenschafteninstanz, die als Ausgangspunkt der Suche verwendet wird. Wenn *der lpRestartKey-Parameter* auf **NULL** festgelegt ist, beginnt die Suche am Anfang des Frames oder am Ende des Frames, abhängig vom Wert des *DirForward-Parameters.*
 
-Wenn *lprestartkey* auf **null** zeigt, beginnt die Suche am Anfang des Frames, wenn *dirforward* den Wert **true** hat, oder am Ende des Frames, wenn der-Parameter **false** ist.
+Wenn *lpRestartKey* auf **NULL** zeigt, beginnt die Suche am Anfang des Frames, wenn *DirForward* **TRUE** ist, oder am Ende des Frames, wenn der Parameter **FALSE ist.**
 
 </dd> <dt>
 
-*Dirforward* \[ in\]
+*DirForward* \[ In\]
 </dt> <dd>
 
-Ein Indikator der Suchrichtung. Wenn der Wert **true** ist, wechselt die Suche von der aktuellen Position bis zum Ende des Frames. Wenn der Wert **false** ist, wird die Suche von der aktuellen Position bis zum Anfang des Frames verschoben.
+Ein Indikator für die Suchrichtung. Wenn der Wert **TRUE ist,** wird die Suche von der aktuellen Position an das Ende des Frames bewegt. Wenn der Wert **FALSE ist,** wird die Suche von der aktuellen Position an den Anfang des Frames bewegt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert das nächste gültige **lppropertyinst**.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert der nächste gültige **LPPROPERTYINST**.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **null**.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **NULL.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[*Experten*](e.md) und [*Parser*](p.md) können die **findpropertyinstancerestart** -Funktion aufrufen.
+[*Experten*](e.md) und [*Parser*](p.md) können die **Funktion FindPropertyInstanceRestart** aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,8 +90,8 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **null**.
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 
@@ -100,7 +100,7 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **null**.
 
 <dl> <dt>
 
-[GetFrame](getframe.md)
+[Getframe](getframe.md)
 </dt> <dt>
 
 [GetProperty](getproperty.md)

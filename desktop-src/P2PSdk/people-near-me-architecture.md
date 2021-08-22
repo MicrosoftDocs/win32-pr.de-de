@@ -1,25 +1,25 @@
 ---
-description: Architektur "Personen in meiner Umgebung"
+description: Personen in meiner Umgebung-Architektur
 ms.assetid: f8ef613a-74d1-4bc3-8f13-36679856ce4c
-title: Architektur "Personen in meiner Umgebung"
+title: Personen in meiner Umgebung-Architektur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9dad198453978f24e8f63935e50d199d9bfa5315
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8191bd60fa63487d38d9178d3de9228c388f5ea1a93ad11fd338fb59d25be529
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120034400"
 ---
-# <a name="people-near-me-architecture"></a>Architektur "Personen in meiner Umgebung"
+# <a name="people-near-me-architecture"></a>Personen in meiner Umgebung-Architektur
 
-Die [Architektur "Personen in meiner](about-people-near-me.md) Umgebung" in Windows Vista bietet Funktionen zum Veröffentlichen und ermitteln von Namen, Interessen und Anwendungen, zum Senden und akzeptieren von Einladungen, zum Hinzufügen ermittelter Peers als Kontakt und zum Schutz der Kommunikation mit ermittelten Peers.
+Die [Personen in meiner Umgebung-Architektur](about-people-near-me.md) in Windows Vista bietet Funktionen zum Veröffentlichen und Ermitteln von Namen, Interessen, Anwendungen, Senden und Akzeptieren von Einladungen, Hinzufügen ermittelter Peers als Kontakt und Schützen der Kommunikation mit ermittelten Peers.
 
-In den folgenden Abschnitten wird die Architektur "Personen in meiner Umgebung" in Bezug auf die folgenden Komponenten beschrieben:
+In den folgenden Abschnitten wird die Personen in meiner Umgebung-Architektur im Hinblick auf die folgenden Komponenten beschrieben:
 
 -   [APIs](people-near-me-apis.md)
--   [Speichert](people-near-me-stores.md)
--   [Windows-Peer Komponenten](windows-peer-components-for-people-near-me.md)
+-   [Läden](people-near-me-stores.md)
+-   [Windows Peerkomponenten](windows-peer-components-for-people-near-me.md)
 -   [Windows Vista-Komponenten](windows-vista-components-for-people-near-me.md)
 
  

@@ -1,26 +1,26 @@
 ---
-description: Listet die Systemzertifikat Speicherorte, die Systemzertifikat Speicher und die physischen Speicher auf, die den einzelnen Systemspeicher zugeordnet sind.
+description: Enumeriert die Systemzertifikatspeicherorte, die Systemzertifikatspeicher und die physischen Speicher, die den einzelnen Systemspeichern zugeordnet sind.
 ms.assetid: bc4268ea-f657-4789-9d0a-6e5354508f86
-title: 'Beispiel-C-Programm: Auflisten von System-und physischen Speichern'
+title: 'Beispiel C-Programm: Auflisten von System- und physischen Speichern'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a94fb8d4a6b7d20735b6918d78119796379e16d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f98242d6ae5fd1c7af8732646786a8370a45108c446b051d0e7e7513c7faecae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364063"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007638"
 ---
-# <a name="example-c-program-listing-system-and-physical-stores"></a>Beispiel-C-Programm: Auflisten von System-und physischen Speichern
+# <a name="example-c-program-listing-system-and-physical-stores"></a>Beispiel C-Programm: Auflisten von System- und physischen Speichern
 
-Im folgenden Beispiel werden die Speicherorte der System [*Zertifikate*](../secgloss/c-gly.md) , die Systemzertifikat Speicher und die physischen Speicher aufgelistet, die den einzelnen Systemspeicher zugeordnet sind. Dieses Beispiel veranschaulicht die Erstellung von Rückruf Funktionen und Rückruf Funktionen, die andere Rückruf Funktionen aufzurufen.
+Im folgenden Beispiel werden die [](../secgloss/c-gly.md) Systemzertifikatspeicherorte, die Systemzertifikatspeicher und die physischen Speicher, die den einzelnen Systemspeichern zugeordnet sind, aufzählt. In diesem Beispiel wird die Erstellung von Rückruffunktionen und Rückruffunktionen veranschaulicht, die andere Rückruffunktionen aufrufen.
 
-In diesem Beispiel werden die folgenden [*CryptoAPI*](../secgloss/c-gly.md) -Funktionen veranschaulicht:
+Dieses Beispiel veranschaulicht die folgenden [*CryptoAPI-Funktionen:*](../secgloss/c-gly.md)
 
--   [**Certenumschlag systemstoreloation**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumsystemstorelocation)
--   [**Certenumschlag System Store**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumsystemstore)
+-   [**CertEnumSystemStoreLocation**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumsystemstorelocation)
+-   [**CertEnumSystemStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumsystemstore)
 
-In diesem Beispiel wird auch die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist im Beispiel enthalten. Der Code für dieses und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+In diesem Beispiel wird auch die [**Funktion MyHandleError verwendet.**](myhandleerror.md) Code für diese Funktion ist im Beispiel enthalten. Der Code für diese und andere Hilfsfunktionen ist auch unter Universell [Functions aufgeführt.](general-purpose-functions.md)
 
 
 ```C++

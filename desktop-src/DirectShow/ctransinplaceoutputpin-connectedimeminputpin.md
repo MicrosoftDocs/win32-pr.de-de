@@ -1,7 +1,7 @@
 ---
-description: 'Die connectedimeminputpin-Methode ruft einen Zeiger auf die nachgelagerte Eingabe-PIN ab. Diese Methode gibt die cbaseoutputpin:: m \_ pinputpin-Member-Variable zurück.'
+description: Die ConnectedIMemInputPin-Methode ruft einen Zeiger auf den Downstreameingabepin ab. Diese Methode gibt die Membervariable CBaseOutputPin::m \_ pInputPin zurück.
 ms.assetid: 39a12603-7768-43c3-9558-7caaa8f55108
-title: Ctransinplaceoutputpin. connectedimeminputpin-Methode (transip. h)
+title: CTransInPlaceOutputPin.ConnectedIMemInputPin-Methode (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 83f92472e67e1d37a51cd2526b8be65ea9bdbc6d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 180cce9bc0d52c6e11bbd90b64cfe7d57d4dcc99eada3a794f924df6857c4698
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357595"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076180"
 ---
-# <a name="ctransinplaceoutputpinconnectedimeminputpin-method"></a>Ctransinplaceoutputpin. connectedimeminputpin-Methode
+# <a name="ctransinplaceoutputpinconnectedimeminputpin-method"></a>CTransInPlaceOutputPin.ConnectedIMemInputPin-Methode
 
-Die- `ConnectedIMemInputPin` Methode ruft einen Zeiger auf die nachgelagerte Eingabe-PIN ab. Diese Methode gibt die [**cbaseoutputpin:: m \_ pinputpin**](cbaseoutputpin-m-pinputpin.md) -Member-Variable zurück.
+Die `ConnectedIMemInputPin` -Methode ruft einen Zeiger auf den Downstreameingabepin ab. Diese Methode gibt die [**Membervariable CBaseOutputPin::m \_ pInputPin**](cbaseoutputpin-m-pinputpin.md) zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf die [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) -Schnittstelle der nachgeschalteten Eingabe-PIN zurück.
+Gibt einen Zeiger auf die [**IMemInputPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) auf dem Downstreameingabepin zurück.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt einen Zeiger auf die [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strm
 
 <dl> <dt>
 
-[**Ctransinplaceoutputpin-Klasse**](ctransinplaceoutputpin.md)
+[**CTransInPlaceOutputPin-Klasse**](ctransinplaceoutputpin.md)
 </dt> </dl>
 
  

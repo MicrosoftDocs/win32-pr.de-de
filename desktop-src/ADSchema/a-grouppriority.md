@@ -1,11 +1,11 @@
 ---
 title: Group-Priority-Attribut
-description: Das Group-Priority attribut wird derzeit nicht verwendet.
+description: Das Group-Priority Attribut wird derzeit nicht verwendet.
 ms.assetid: b16f644b-b9ef-4382-930b-344cf3de0190
 ms.tgt_platform: multiple
 keywords:
-- Group-Priority AD-Schema des Attributs
-- groupPriority-Attribut AD-Schema
+- Group-Priority AD-Attributschema
+- GroupPriority-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118961319"
 ---
 # <a name="group-priority-attribute"></a>Group-Priority-Attribut
 
-Das **Group-Priority-Attribut** wird derzeit nicht verwendet.
+Das **Attribut Gruppenpriorität** wird derzeit nicht verwendet.
 
 
 
@@ -35,7 +35,7 @@ Das **Group-Priority-Attribut** wird derzeit nicht verwendet.
 | Aktualisieren von Berechtigungen  | \-                                          |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.345                      |
-| System-Id-Guid    | – 65905-8ac6-11d0-afda-00c04fd930c9        |
+| System-ID-GUID    | schluss65905-8ac6-11d0-afda-00c04fd930c9        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -58,7 +58,7 @@ Das **Group-Priority-Attribut** wird derzeit nicht verwendet.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Is-Single-Valued       | False                             |
+| Ist einwertig       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
@@ -79,7 +79,7 @@ Das **Group-Priority-Attribut** wird derzeit nicht verwendet.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Is-Single-Valued       | False                             |
+| Ist einwertig       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
@@ -100,7 +100,7 @@ Das **Group-Priority-Attribut** wird derzeit nicht verwendet.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Is-Single-Valued       | False                             |
+| Ist einwertig       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
@@ -121,7 +121,7 @@ Das **Group-Priority-Attribut** wird derzeit nicht verwendet.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist einwertig       | False                             |
+| Is-Single-Valued       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
@@ -142,7 +142,7 @@ Das **Group-Priority-Attribut** wird derzeit nicht verwendet.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist einwertig       | False                             |
+| Is-Single-Valued       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
@@ -163,7 +163,7 @@ Das **Group-Priority-Attribut** wird derzeit nicht verwendet.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist einwertig       | False                             |
+| Is-Single-Valued       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |

@@ -1,58 +1,58 @@
 ---
-title: Bewährte Methoden für die Verwendung von sicheren Arrays
-description: Viele Schnittstellen Methoden der Microsoft UI Automation \ 32; API übernimmt Argumente, die als sichere Arrays bezeichnet werden, des SAFEARRAY-Datentyps. In diesem Thema werden die bewährten Methoden für die Verwendung von sicheren Arrays in Benutzeroberflächenautomatisierungs-Anwendungen beschrieben.
+title: Bewährte Methoden für die Verwendung Tresor Arrays
+description: Viele Schnittstellenmethoden des Microsoft Benutzeroberflächenautomatisierung \ 32; API-Take-Argumente, die als sichere Arrays bezeichnet werden, des SAFEARRAY-Datentyps. In diesem Thema werden die bewährten Methoden für die Verwendung sicherer Arrays in einer Benutzeroberflächenautomatisierung beschrieben.
 ms.assetid: 07e87cfd-d565-41b5-a68d-b99dd191fa95
 keywords:
-- Benutzeroberflächen Automatisierung, sichere Arrays
-- Benutzeroberflächen Automatisierung, Anbieter
-- Benutzeroberflächen Automatisierung, Clients
-- Automatisierung der Benutzeroberfläche, umrechnen zwischen Datentypen
-- Clients, sichere Arrays
-- Anbieter, Benutzeroberflächen Automatisierung
-- sichere Arrays
+- Benutzeroberflächenautomatisierung,sichere Arrays
+- Benutzeroberflächenautomatisierung,providers
+- Benutzeroberflächenautomatisierung,Clients
+- Benutzeroberflächenautomatisierung,Konvertieren zwischen Datentypen
+- Clients,sichere Arrays
+- providers,Benutzeroberflächenautomatisierung
+- Sichere Arrays
 - Datentypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b12ade30398f8fbeb43336707f66a0709dfab83d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 39ea76358f3a547b4364d01f56e850d0cbb523fc35dfbaa2870448f70c6ad5ae
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337453"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120098120"
 ---
-# <a name="best-practices-for-using-safe-arrays"></a>Bewährte Methoden für die Verwendung von sicheren Arrays
+# <a name="best-practices-for-using-safe-arrays"></a>Bewährte Methoden für die Verwendung Tresor Arrays
 
-Viele Schnittstellen Methoden der Microsoft UI Automation API akzeptieren Argumente, die als sichere Arrays bezeichnet werden, des [**SAFEARRAY**](/windows/win32/api/oaidl/ns-oaidl-safearray) -Datentyps. In diesem Thema werden die bewährten Methoden für die Verwendung von sicheren Arrays in Benutzeroberflächenautomatisierungs-Anwendungen beschrieben.
+Viele Schnittstellenmethoden der Microsoft Benutzeroberflächenautomatisierung-API verwenden Argumente, die als sichere Arrays bezeichnet werden, des [**SAFEARRAY-Datentyps.**](/windows/win32/api/oaidl/ns-oaidl-safearray) In diesem Thema werden die bewährten Methoden für die Verwendung sicherer Arrays in einer Benutzeroberflächenautomatisierung beschrieben.
 
 ## <a name="clients"></a>Clients
 
-Alle sicheren Arrays, die mit den Benutzeroberflächenautomatisierungs-Client-API-Methoden verwendet werden, sind null basierte, eindimensionale Arrays. Um ein sicheres Array für eine Benutzeroberflächenautomatisierungs-Client Methode zu erstellen, verwenden Sie die [**safearraykreatevector**](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraycreatevector) -Funktion, und verwenden Sie zum Lesen und Schreiben in ein sicheres Array die Funktionen [**safearraygetelement**](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraygetelement) und [**safearrayputelement**](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayputelement) . Wenn Sie die Verwendung eines sicheren Arrays abgeschlossen haben, sollten Sie es immer mit der [**SafeArrayDestroy**](/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy) -Funktion zerstören, unabhängig davon, ob Sie das sichere Array erstellt oder von einer Benutzeroberflächenautomatisierungs-Client Methode empfangen haben.
+Alle sicheren Arrays, die mit den Benutzeroberflächenautomatisierung-API-Methoden verwendet werden, sind nullbasierte, eindimensionale Arrays. Um ein sicheres Array für eine Benutzeroberflächenautomatisierung-Clientmethode zu erstellen, verwenden Sie die [**SafeArrayCreateVector-Funktion**](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraycreatevector) und zum Lesen und Schreiben in ein sicheres Array die [**SafeArrayGetElement-**](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraygetelement) und [**SafeArrayPutElement-Funktionen.**](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayputelement) Wenn Sie die Verwendung eines sicheren Arrays abgeschlossen haben, zerstören Sie es immer mithilfe der [**SafeArrayDestroy-Funktion,**](/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy) unabhängig davon, ob Sie das sichere Array erstellt oder von einer Benutzeroberflächenautomatisierung erhalten haben.
 
-Mehrere Methoden zur Benutzeroberflächen Automatisierung, einschließlich Eigenschaften Abruf Methoden wie z. b. [**GetCurrentPropertyValue**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-getcurrentpropertyvalue), rufen [**Variant**](/windows/win32/api/oaidl/ns-oaidl-variant)s ab, die [**Punkt**](/previous-versions//dd162805(v=vs.85)) -oder [**uiarect**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiarect) -Strukturen enthalten können. Ein **Punkt** wird in eine **Variante** als sicheres Array von Doubles (VT \_ R8) mit dem **x** -Member an Index 0 und dem **y** -Element bei Index 1 verpackt. Analog dazu wird **ein uiarect** in eine **Variante** als sicheres Array von Double-Elementen mit den Elementen **left**, **Top**, **Width** und **height** bei den Indizes 0 bis 3 verpackt. Für ein Array von **uiarect** -Strukturen enthält das sichere Array ein sequenzielles Array von vier Doubles für jeden **uiarect**. Die Elemente **left**, **Top**, **Width** und **height** des ersten **uiarect** belegen den Index 0 bis 3, die Elemente des zweiten Rechtecks belegen den Index 4 bis 7 usw.
+Mehrere Benutzeroberflächenautomatisierung, einschließlich Methoden zum Abrufen von Eigenschaften wie [**GetCurrentPropertyValue,**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-getcurrentpropertyvalue)rufen [**VARIANT-Elemente**](/windows/win32/api/oaidl/ns-oaidl-variant)ab, die [**POINT-**](/previous-versions//dd162805(v=vs.85)) oder [**UiaRect-Strukturen enthalten**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiarect) können. Ein **POINT** wird als sicheres Array von Doubles (VT R8) mit dem x-Member bei Index 0 und dem y-Member an Index 1 in eine  \_ VARIANT-Datei gepackt.   Ebenso wird  ein **UiaRect** als sicheres Array von Doubles mit den  **linken,** oberen, breiten und Höhenmitgliedern an den Indizes 0 bis 3 in eine VARIANT-Gepackt.  Für ein Array von **UiaRect-Strukturen** enthält das sichere Array ein sequenzielles Array von vier Doubles für jedes **UiaRect-.** Die **linken,** **oberen,**  **Breiten-** und Höhenmitglieder des ersten **UiaRect** belegen Index 0 bis 3, die Elemente des zweiten Rechtecks belegen Index 4 bis 7 und so weiter.
 
-Die [**iuiautomation**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomation) -Schnittstelle umfasst die folgenden Methoden für die Typumwandlung zwischen [**SAFEARRAY**](/windows/win32/api/oaidl/ns-oaidl-safearray) und verschiedenen anderen Datentypen.
+Die [**IUIAutomation-Schnittstelle**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomation) enthält die folgenden Methoden zum Konvertieren zwischen [**SAFEARRAY**](/windows/win32/api/oaidl/ns-oaidl-safearray) und verschiedenen anderen Datentypen.
 
 
 
 | Methode                                                                                               | BESCHREIBUNG                                                                                                     |
 |------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| [**Iuiautomation:: intnativearrayto SAFEARRAY**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-intnativearraytosafearray)   | Konvertiert ein Array von ganzen Zahlen in ein [**SAFEARRAY**](/windows/win32/api/oaidl/ns-oaidl-safearray).                                          |
-| [**Iuiautomation:: inzafearraytonativearray**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-intsafearraytonativearray)   | Konvertiert ein [**SAFEARRAY**](/windows/win32/api/oaidl/ns-oaidl-safearray) von ganzen Zahlen in ein Array.                                          |
-| [**Iuiautomation:: safearraytor ectnativearray**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-safearraytorectnativearray) | Konvertiert ein [**SAFEARRAY**](/windows/win32/api/oaidl/ns-oaidl-safearray) , das Rechteck Koordinaten enthält, in ein Array vom Typ " **Rect**". |
+| [**IUIAutomation::IntNativeArrayToSafeArray**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-intnativearraytosafearray)   | Konvertiert ein Array von ganzen Zahlen in [**safearray**](/windows/win32/api/oaidl/ns-oaidl-safearray).                                          |
+| [**IUIAutomation::IntSafeArrayToNativeArray**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-intsafearraytonativearray)   | Konvertiert ein [**SAFEARRAY von**](/windows/win32/api/oaidl/ns-oaidl-safearray) ganzen Zahlen in ein Array.                                          |
+| [**IUIAutomation::SafeArrayToRectNativeArray**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-safearraytorectnativearray) | Konvertiert ein [**SAFEARRAY-Objekt,**](/windows/win32/api/oaidl/ns-oaidl-safearray) das Rechteckkoordinaten enthält, in ein Array vom **Typ RECT.** |
 
 
 
- 
+ 
 
 ## <a name="providers"></a>Anbieter
 
-Ein Anbieter muss eine Reihe von Schnittstellen Methoden implementieren, die von der Benutzeroberflächen Automatisierung aufgerufen werden, um Informationen vom Anbieter abzurufen. Viele Male bestehen diese Informationen aus einem Array von Werten. Zum Zurückgeben eines Arrays an die Benutzeroberflächen Automatisierung muss der Anbieter das Array in eine [**SAFEARRAY**](/windows/win32/api/oaidl/ns-oaidl-safearray) -Struktur packen. Die Array Elemente müssen den erwarteten Datentyp aufweisen und müssen in der erwarteten Reihenfolge angezeigt werden.
+Ein Anbieter muss eine Reihe von Schnittstellenmethoden implementieren, Benutzeroberflächenautomatisierung aufrufen, um Informationen vom Anbieter abzurufen. Diese Informationen bestehen oft aus einem Array von Werten. Um ein Array an Benutzeroberflächenautomatisierung zurücksingen zu können, muss der Anbieter das Array in eine [**SAFEARRAY-Struktur**](/windows/win32/api/oaidl/ns-oaidl-safearray) packen. Die Arrayelemente müssen den erwarteten Datentyp haben und in der erwarteten Reihenfolge angezeigt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über die Benutzeroberflächenautomatisierungs-Eigenschaften](uiauto-propertiesoverview.md)
@@ -61,6 +61,6 @@ Ein Anbieter muss eine Reihe von Schnittstellen Methoden implementieren, die von
 [Grundlagen der Benutzeroberflächenautomatisierung](entry-uiautocore-overview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

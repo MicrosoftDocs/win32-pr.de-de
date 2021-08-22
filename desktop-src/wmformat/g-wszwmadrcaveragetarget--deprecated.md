@@ -1,9 +1,9 @@
 ---
-title: g_wszWMADRCAverageTarget (wmcodecdsp. h)
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | g_wszWMADRCAverageTarget (wmcodecdsp. h)
+title: g_wszWMADRCAverageTarget (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | g_wszWMADRCAverageTarget (Wmcodecdsp.h)
 ms.assetid: a4e1c99a-9211-4271-af86-5906e9d84e56
 keywords:
-- g_wszWMADRCAverageTarget Windows Media-Format
+- g_wszWMADRCAverageTarget Windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8590563643df202d83bfe9e3c164ce11a7e802cc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cef2c59f7e08b9b93e59f9daa2a66bbb9590389e41eba171c50d62f075f19d37
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360268"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120006830"
 ---
-# <a name="g_wszwmadrcaveragetarget"></a>g \_ wszwmadrcaveragetarget
+# <a name="g_wszwmadrcaveragetarget"></a>g \_ wszWMADRCAverageTarget
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und Digitalsignalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,7 +31,7 @@ Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren f
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 

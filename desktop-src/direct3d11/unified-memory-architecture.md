@@ -1,34 +1,34 @@
 ---
 title: Einheitliche Speicherarchitektur
-description: Die Abfrage, ob eine einheitliche Speicherarchitektur (UMA) unterstützt wird, kann Ihnen dabei helfen zu bestimmen, wie einige Ressourcen behandelt werden.
+description: Die Abfrage, ob Unified Memory Architecture (UMA) unterstützt wird, kann dabei helfen, zu bestimmen, wie einige Ressourcen behandelt werden.
 ms.assetid: E43892F9-E7CD-4D18-BDDE-3C4F03F8F4EA
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 99baeab51838b9b3382884a681ec9b579fa700a0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 09648c69f312f16d1301b6c9b5cad21d544bd456f244950486cf9d6871079c96
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947467"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119375670"
 ---
 # <a name="unified-memory-architecture"></a>Einheitliche Speicherarchitektur
 
-Die Abfrage, ob eine einheitliche Speicherarchitektur (UMA) unterstützt wird, kann Ihnen dabei helfen zu bestimmen, wie einige Ressourcen behandelt werden.
+Die Abfrage, ob Unified Memory Architecture (UMA) unterstützt wird, kann dabei helfen, zu bestimmen, wie einige Ressourcen behandelt werden.
 
-Ein boolescher Wert, der vom Treiber festgelegt wird, kann aus der [**D3D11 \_ Feature \_ Data \_ D3D11 \_ OPTIONS2**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_d3d11_options2) -Struktur gelesen werden, um zu bestimmen, ob die Hardware "Uma" unterstützt.
+Ein vom Treiber festgelegter boolescher Wert kann aus der [**D3D11 \_ FEATURE \_ DATA \_ D3D11 \_ OPTIONS2-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_d3d11_options2) gelesen werden, um zu bestimmen, ob die Hardware UMA unterstützt.
 
-Anwendungen, die in einer anderen Sprache ausgeführt werden, benötigen möglicherweise mehr Ressourcen mit aktiviertem CPU-Zugriff, als wenn Sie nicht verfügbar sind. Mit Uma können Anwendungen nicht mehr Ressourcen Daten kopieren, sondern nur für nicht-Uma-Grafikadapter. [Direct3D 11,3-Features](direct3d-11-3-features.md)
+Anwendungen, die unter UMA ausgeführt werden, möchten möglicherweise mehr Ressourcen mit aktivierten CPU-Zugriff haben, als wenn er nicht verfügbar ist. UMA ermöglicht es Anwendungen, das Kopieren von Ressourcendaten zu vermeiden, anstatt nur für Nicht-UMA-Grafikkarten effizient zu bleiben. [Direct3D 11.3-Features](direct3d-11-3-features.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Direct3D 11,3-Features](direct3d-11-3-features.md)
+[Direct3D 11.3-Features](direct3d-11-3-features.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

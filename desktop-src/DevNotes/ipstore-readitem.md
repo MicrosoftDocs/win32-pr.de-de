@@ -1,7 +1,7 @@
 ---
 description: Liest das angegebene Datenelement aus dem geschützten Speicher.
 ms.assetid: e565a0ea-5d8e-4706-a176-2305a95f0d67
-title: 'Ipstore:: ReadItem-Methode (pstore. h)'
+title: IPStore::ReadItem-Methode (Pstore.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Pstorec.dll
-ms.openlocfilehash: 0464ef06bc7c2842d0c8f9ff76e8174f05338919
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 516eb55772e375d09d3b134dee456c090cf11d6ef0d10905f99a822b1df0d9e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120001489"
 ---
-# <a name="ipstorereaditem-method"></a>Ipstore:: ReadItem-Methode
+# <a name="ipstorereaditem-method"></a>IPStore::ReadItem-Methode
 
-\[Geschützter Speicher (pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie steht nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista zur Verfügung, ist aber möglicherweise in nachfolgenden Versionen nicht verfügbar. Pstore verwendet eine ältere Implementierung des Schutzes von Daten. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
+\[Protected Storage (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, ist aber in nachfolgenden Versionen möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den verstärkten Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
 
 Liest das angegebene Datenelement aus dem geschützten Speicher.
 
@@ -48,17 +48,17 @@ HRESULT ReadItem(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
-Der Speicherbereich des Anbieters.
+Der Anbieterspeicherbereich.
 
 
 
 | Wert                                                                                                                                                                                                                                                   | Bedeutung                                                                            |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| <span id="PST_KEY_CURRENT_USER"></span><span id="pst_key_current_user"></span><dl> <dt>**PST \_ Schlüssel \_ aktueller \_ Benutzer**</dt> <dt>0x00000000</dt> </dl>    | Der Speicher wird im Abschnitt Aktueller Benutzer der Registrierung verwaltet.<br/>  |
-| <span id="PST_KEY_LOCAL_MACHINE"></span><span id="pst_key_local_machine"></span><dl> <dt>**PST \_ Key \_ local \_ Machine**</dt> <dt>0x00000001</dt> </dl> | Der Speicher wird im Abschnitt lokaler Computer der Registrierung verwaltet.<br/> |
+| <span id="PST_KEY_CURRENT_USER"></span><span id="pst_key_current_user"></span><dl> <dt>**PST \_ KEY \_ CURRENT \_ USER**</dt> <dt>0x00000000</dt> </dl>    | Der Speicher wird im aktuellen Benutzerabschnitt der Registrierung verwaltet.<br/>  |
+| <span id="PST_KEY_LOCAL_MACHINE"></span><span id="pst_key_local_machine"></span><dl> <dt>**PST \_ KEY \_ LOCAL \_ MACHINE**</dt> <dt>0x00000001</dt> </dl> | Der Speicher wird im Abschnitt lokaler Computer der Registrierung verwaltet.<br/> |
 
 
 
@@ -66,52 +66,52 @@ Der Speicherbereich des Anbieters.
 
 </dd> <dt>
 
-*pitemtype* \[ in\]
+*pItemType* \[ In\]
 </dt> <dd>
 
 Ein Zeiger auf eine GUID, die den Datentyp des zu lesenden Elements identifiziert.
 
 </dd> <dt>
 
-*pitemsubtype* \[ in\]
+*pItemSubtype* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine GUID, die den Daten Untertyp des zu lesenden Elements identifiziert.
+Ein Zeiger auf eine GUID, die den Datenuntertyp des zu lesenden Elements identifiziert.
 
 </dd> <dt>
 
-" *szitemname* \[ " in\]
+*szItemName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Zeichenfolge, die den Namen enthält, der dem gespeicherten Datenelement zugewiesen ist.
+Ein Zeiger auf eine Zeichenfolge, die den dem gespeicherten Datenelement zugewiesenen Namen enthält.
 
 </dd> <dt>
 
-*cbData* \[ in\]
+*cbData* \[ In\]
 </dt> <dd>
 
-Ein **DWORD** , das die Größe des Puffers angibt, der das gespeicherte Datenelement enthält.
+Ein **DWORD,** das die Größe des Puffers angibt, der das gespeicherte Datenelement enthält.
 
 </dd> <dt>
 
-*pbData* \[ in\]
+*pbData* \[ In\]
 </dt> <dd>
 
 Ein Zeiger auf einen Puffer, der das gespeicherte Datenelement enthält.
 
 </dd> <dt>
 
-*ppromptinfo* \[ in\]
+*pPromptInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**PST- \_ promptinfo**](pst-promptinfo.md) -Struktur.
+Ein Zeiger auf eine [**PST \_ PROMPTINFO-Struktur.**](pst-promptinfo.md)
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Gibt die Benutzeroberfläche und das Sicherheits Verhalten für den Lesevorgang an.
+Gibt die Benutzeroberfläche und das Sicherheitsverhalten für den Lesevorgang an.
 
 Die Flagwerte können mit einem logischen OR kombiniert werden.
 
@@ -119,9 +119,9 @@ Die Flagwerte können mit einem logischen OR kombiniert werden.
 
 | Wert                                                                                                                                                                                                                                                              | Bedeutung                                                                                                                                                                                                                                |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="PST_UNRESTRICTED_ITEMDATA"></span><span id="pst_unrestricted_itemdata"></span><dl> <dt>**PST \_ Uneingeschränktes \_ ItemData**</dt> <dt>0x00000004</dt> </dl> | Gibt an, dass der Datenstrom nicht sicher ist. Standardmäßig sind Element Aufrufe sicher.<br/>                                                                                                                                             |
-| <span id="PST_PROMPT_QUERY"></span><span id="pst_prompt_query"></span><dl> <dt>**PST \_ \_Abfrage der Abfrage**</dt> <dt>0x00000008</dt> </dl>                            | Gibt an, dass die Bestätigung bei Erfolg zurückgegeben wird. Wenn die Benutzeroberfläche aktiviert ist, wird der Erfolg **PST \_ E \_ OK** zurückgegeben. Wenn die Benutzeroberfläche nicht aktiviert ist, wird der Wert **" \_ PST \_ E \_ Item** " zurückgegeben.<br/> |
-| <span id="PST_NO_UI_MIGRATION"></span><span id="pst_no_ui_migration"></span><dl> <dt>**PST \_ Keine \_ UI- \_ Migration**</dt> <dt>0x00000010</dt> </dl>                  | Zeigen Sie die Benutzeroberfläche nur an, wenn ein benutzerdefiniertes Kennwort erforderlich ist.<br/>                                                                                                                                                            |
+| <span id="PST_UNRESTRICTED_ITEMDATA"></span><span id="pst_unrestricted_itemdata"></span><dl> <dt>**PST \_ UNRESTRICTED \_ ITEMDATA**</dt> <dt>0x00000004</dt> </dl> | Gibt an, dass der Datenstrom unsicher ist. Standardmäßig sind Elementaufrufe sicher.<br/>                                                                                                                                             |
+| <span id="PST_PROMPT_QUERY"></span><span id="pst_prompt_query"></span><dl> <dt>**PST \_ PROMPT \_ QUERY**</dt> <dt>0x00000008</dt> </dl>                            | Gibt an, dass die Bestätigung bei Erfolg zurückgegeben wird. Wenn die Benutzeroberfläche aktiviert ist, wird der Erfolg von **PST \_ E \_ OK** zurückgegeben. Wenn die Benutzeroberfläche nicht aktiviert ist, wird der Wert **PST \_ E ITEM \_ \_ EXISTS** zurückgegeben.<br/> |
+| <span id="PST_NO_UI_MIGRATION"></span><span id="pst_no_ui_migration"></span><dl> <dt>**PST \_ KEINE \_ \_ BENUTZEROBERFLÄCHENMIGRATION**</dt> <dt>0x00000010</dt> </dl>                  | Zeigen Sie die Benutzeroberfläche nur an, wenn ein benutzerdefiniertes Kennwort erforderlich ist.<br/>                                                                                                                                                            |
 
 
 
@@ -131,11 +131,11 @@ Die Flagwerte können mit einem logischen OR kombiniert werden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein **HRESULT** -Wert. Der Wert **PST \_ E \_ OK** gibt an, dass die Funktion erfolgreich war.
+Der Rückgabewert ist ein **HRESULT-Wert.** Der Wert **PST \_ E \_ OK** gibt an, dass die Funktion erfolgreich war.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn **ReadItem** erfolgreich abgeschlossen wird, ist die Anwendung dafür verantwortlich, den zurückgegebenen Datenpuffer mithilfe der [**CoTaskMemFree**](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) -Funktion freizugeben.
+Wenn **ReadItem** erfolgreich abgeschlossen wird, ist die Anwendung für die Freigabe des zurückgegebenen Datenpuffers mithilfe der [**CoTaskMemFree-Funktion**](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) verantwortlich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -143,7 +143,7 @@ Wenn **ReadItem** erfolgreich abgeschlossen wird, ist die Anwendung dafür veran
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Pstore. h</dt> </dl>    |
+| Header<br/> | <dl> <dt>Pstore.h</dt> </dl>    |
 | DLL<br/>    | <dl> <dt>Pstorec.dll</dt> </dl> |
 
 
@@ -152,10 +152,10 @@ Wenn **ReadItem** erfolgreich abgeschlossen wird, ist die Anwendung dafür veran
 
 <dl> <dt>
 
-[**Ipstore**](ipstore.md)
+[**IPStore**](ipstore.md)
 </dt> <dt>
 
-[**PST \_ promptinfo**](pst-promptinfo.md)
+[**PST \_ PROMPTINFO**](pst-promptinfo.md)
 </dt> </dl>
 
  

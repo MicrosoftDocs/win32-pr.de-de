@@ -3,24 +3,24 @@ title: Registrierungsflags
 description: Registrierungsflags
 ms.assetid: ba1709c2-0fe5-4168-9aed-613d01eff21f
 keywords:
-- Windows Media Player-Plug-ins, Registrierungsflags
-- Plug-ins, Registrierungsflags
-- Benutzerschnittstellen-Plug-ins, Registrierungsflags
-- UI-Plug-ins, Registrierungsflags
-- Flags, Benutzerschnittstellen-Plug-ins
-- Registrierung, UI-Plug-ins
+- Windows Media Player-Plug-Ins,Registrierungsflags
+- Plug-Ins, Registrierungsflags
+- Benutzeroberflächen-Plug-Ins, Registrierungsflags
+- Benutzeroberflächen-Plug-Ins, Registrierungsflags
+- Flags, Benutzeroberflächen-Plug-Ins
+- Registrierung, Benutzeroberflächen-Plug-Ins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ac609b45866cd5f18edf61dffc2d3b7ac3c397ac
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: afbd34ed98236f8a02c936d52b092b82be60b986fb7b16edce1f3b1cbb91d6a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104038567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120002810"
 ---
 # <a name="registration-flags"></a>Registrierungsflags
 
-Wenn der Assistent für den Windows Media Player-Plug-in ein neues Plug-in-Projekt für die Benutzeroberfläche erstellt, erstellt er einen Schlüssel in der Registrierung, der Informationen zum Plug-in enthält. Dieser Schlüssel wird am folgenden Speicherort erstellt:
+Wenn der Windows Media Player-Plug-In-Assistent ein neues Benutzeroberflächen-Plug-In-Projekt erstellt, wird ein Schlüssel in der Registrierung erstellt, der Informationen zum Plug-In enthält. Dieser Schlüssel wird an folgendem Speicherort erstellt:
 
 
 ```C++
@@ -29,70 +29,70 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MediaPlayer\UIPlugins\{ClassId}
 
 
 
-*ClassID* ist die Klassen-ID des Plug-ins.
+*ClassId* ist die Klassen-ID des Plug-Ins.
 
-Dieser Schlüssel umfasst die folgenden Werte:
+Dieser Schlüssel enthält die folgenden Werte.
 
 
 
 | Name                     | type       | BESCHREIBUNG                                                                                                                                                                               |
 |--------------------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Funktionen             | REG \_ DWORD | Ein DWORD-Wert, der aus mindestens einem Plug-in-Typflag besteht, das mit einem oder mehreren Plug-in-Funktionen-Flags mithilfe von binären-oder-Vorgängen kombiniert werden kann.                             |
-| BESCHREIBUNG              | REG- \_ SZ    | Eine Zeichenfolge, die die Beschreibung des Plug-Ins enthält. Der Plug-in-Assistent erstellt eine Zeichen folgen Ressource und stellt die URL der Ressource (mit dem res-Protokoll) für diesen Wert bereit.         |
-| FriendlyName             | REG- \_ SZ    | Eine Zeichenfolge, die den vom Benutzer lesbaren Namen für das Plug-in enthält. Der Plug-in-Assistent erstellt eine Zeichen folgen Ressource und stellt die URL der Ressource (mit dem res-Protokoll) für diesen Wert bereit. |
-| Uninstallpath (optional) | REG- \_ SZ    | Eine Zeichenfolge, die den Pfad zu einer ausführbaren Datei enthält, die das Plug-in deinstalliert.                                                                                                        |
+| Funktionen             | REG \_ DWORD | Ein DWORD-Wert, der aus mindestens einem Plug-In-Typflag besteht, das mithilfe binärer OR-Vorgänge mit einem oder mehreren Plug-In-Funktionenflags kombiniert werden kann.                             |
+| BESCHREIBUNG              | REG \_ SZ    | Eine Zeichenfolge, die die Beschreibung des Plug-Ins enthält. Der Plug-In-Assistent erstellt eine Zeichenfolgenressource und stellt die URL der Ressource (mithilfe des res-Protokolls) für diesen Wert zur Seite.         |
+| FriendlyName             | REG \_ SZ    | Eine Zeichenfolge, die den für den Benutzer lesbaren Namen für das Plug-In enthält. Der Plug-In-Assistent erstellt eine Zeichenfolgenressource und stellt die URL der Ressource (mithilfe des res-Protokolls) für diesen Wert zur Seite. |
+| UninstallPath (optional) | REG \_ SZ    | Eine Zeichenfolge, die den Pfad zu einer ausführbaren Datei enthält, die das Plug-In deinstalliert.                                                                                                        |
 
 
 
  
 
-Weitere Informationen zum res-Protokoll finden Sie unter Internet Development SDK.
+Weitere Informationen zum Res-Protokoll finden Sie im Internet Development SDK.
 
-In der folgenden Tabelle werden die Plug-in-typanflags ausführlich erläutert.
+In der folgenden Tabelle werden die Plug-In-Typflags aufgeführt.
 
 
 
-| Plug-in-Typ-Flag                | Wert | BESCHREIBUNG                                       |
+| Plug-In-Typflag                | Wert | BESCHREIBUNG                                       |
 |----------------------------------|-------|---------------------------------------------------|
-| **Hintergrund des Plug-Ins \_ \_**     | 0x1   | Im UI-Plug-in wird keine Benutzeroberfläche angezeigt. |
-| **Plug-in- \_ Typ \_ trennfenster** | 0x2   | Das UI-Plug-in ist ein separates Fenster-Plug-in.      |
-| **Anzeigebereich des Plug-Ins \_ \_**    | 0x3   | Das UI-Plug-in ist ein Anzeige Bereichs-Plug-in.         |
-| **Einstellungsart des Plug-Ins \_ \_**   | 0x4   | Das UI-Plug-in ist ein Einstellungsbereich-Plug-in.        |
-| **Plug-in- \_ \_ METADATAAREA**   | 0x5   | Das UI-Plug-in ist ein Metadatenbereich-Plug-in.        |
+| **HINTERGRUND DES \_ PLUG-IN-TYPS \_**     | 0x1   | Das Benutzeroberflächen-Plug-In zeigt keine Benutzeroberfläche an. |
+| **\_ \_ PLUG-IN-TYP SEPARATEWINDOW** | 0x2   | Das Benutzeroberflächen-Plug-In ist ein separates Fenster-Plug-In.      |
+| **\_ \_ PLUG-IN-TYP DISPLAYAREA**    | 0x3   | Das Benutzeroberflächen-Plug-In ist ein Anzeigebereichs-Plug-In.         |
+| **\_ \_ PLUG-IN-TYPEINSTELLUNGENBEREICH**   | 0x4   | Das Benutzeroberflächen-Plug-In ist ein Einstellungsbereichs-Plug-In.        |
+| **\_ \_ PLUG-IN-TYP METADATAAREA**   | 0x5   | Das Benutzeroberflächen-Plug-In ist ein Metadatenbereich-Plug-In.        |
 
 
 
  
 
-In der folgenden Tabelle werden die Flags für Plug-in-Funktionen erläutert.
+In der folgenden Tabelle werden die Plug-In-Funktionenflags aufgeführt.
 
 
 
-| Flag für Plug-in-Funktionen             | Wert      | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Flag für Plug-In-Funktionen             | Wert      | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                         |
 |---------------------------------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Plug-in- \_ Flags- \_ Annahmen**       | 0x10000000 | Das UI-Plug-in kann **Medien** Objekt-Zeiger Arrays akzeptieren, wenn Windows Media Player " [**iwmppluginui:: SetProperty**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-setproperty) " aufruft.                                                                                                                                                                                                                                                           |
-| **Plug-in- \_ Flags " \_ akzeptsplaylists"**   | 0x8000000  | Das UI-Plug-in kann **Listen Objekt-** Zeiger Arrays akzeptieren, wenn Windows Media Player " [**iwmppluginui:: SetProperty**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-setproperty) " aufruft.                                                                                                                                                                                                                                                        |
-| **Plug-Ins für Plug-Ins \_ \_**         | 0x4000000  | Das UI-Plug-in verwendet Voreinstellungen. Wenn das Plug-in dieses Flag angibt, fragt Windows Media Player das Plug-in nach voreingestellten Informationen ab, indem [**iwmppluginui:: GetProperty**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-getproperty) aufgerufen wird.                                                                                                                                                                                                      |
-| **Plug-in- \_ Flags \_ haspropertypage**    | 0x80000000 | Das UI-Plug-in enthält ein Dialogfeld für eine Eigenschaften Seite. Windows Media Player ruft [**iwmppluginui::D isplaypropertypage**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-displaypropertypage) auf, wenn dieses Flag festgelegt wird, wenn die Eigenschaften Seite aufgerufen wird.                                                                                                                                                                                                 |
-| **\_ \_ ausgeblendet**             | 0x02000000 | Das Plug-in für die Benutzeroberfläche für die Benutzeroberfläche wird nicht im Menü **Plug-ins** angezeigt, auf das Sie über die Menüs **Ansicht** oder **Tools** oder die Schaltfläche **jetzt Wiedergabe Optionen auswählen** in der Wiedergabeliste zugreifen. Er wird im Dialogfeld Optionen auf der Registerkarte **Plug-ins** angezeigt. Dies bewirkt, dass das Plug-in für die Hintergrund Ausführung in der Statusleiste angezeigt wird. Dieses Flag hat keine Auswirkung auf Plug-ins, die keine background-UI-Plug-ins sind.<br/> |
-| **Plug \_ \_ -in-Flags installautorun**     | 0x40000000 | Windows Media Player führt das UI-Plug-in automatisch aus, wenn das Plug-in installiert ist.                                                                                                                                                                                                                                                                                                                               |
-| **Plug-in- \_ Flags \_ launchpropertypage** | 0x20000000 | Windows Media Player ruft [**iwmppluginui::D isplaypropertypage**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-displaypropertypage) auf, wenn das UI-Plug-in zum ersten Mal ausgeführt wird. Wenn dieses Flag angegeben ist, sollten die Plug-in- **\_ Flags \_ haspropertypage** ebenfalls angegeben werden.<br/>                                                                                                                                                             |
+| **\_PLUG-IN-FLAGS \_ ACCEPTSMEDIA**       | 0x10000000 | Das Benutzeroberflächen-Plug-In kann Medienobjektzeigerarrays akzeptieren, wenn Windows Media Player [**IWMPPluginUI::SetProperty aufruft.**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-setproperty)                                                                                                                                                                                                                                                            |
+| **\_PLUG-IN-FLAGS \_ AKZEPTIERENPLAYLISTS**   | 0x8000000  | Das Benutzeroberflächen-Plug-In kann Playlist-Objektzeigerarrays akzeptieren, wenn Windows Media Player [**IWMPPluginUI::SetProperty aufruft.**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-setproperty)                                                                                                                                                                                                                                                         |
+| **\_PLUG-IN-FLAGS \_ HASPRESETS**         | 0x4000000  | Das Benutzeroberflächen-Plug-In verwendet Voreinstellungen. Wenn das Plug-In dieses Flag angibt, Windows Media Player das Plug-In auf voreingestellte Informationen durch Aufrufen [**von IWMPPluginUI::GetProperty abfragen.**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-getproperty)                                                                                                                                                                                                      |
+| **\_PLUG-IN-FLAGS \_ HASPROPERTYPAGE**    | 0x80000000 | Das Benutzeroberflächen-Plug-In stellt ein Eigenschaftenseitendialogfeld zur Verfügung. Windows Media Player ruft [**IWMPPluginUI::D isplayPropertyPage**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-displaypropertypage) auf, wenn dieses Flag festgelegt wird, wenn die Eigenschaftenseite aufgerufen wird.                                                                                                                                                                                                 |
+| **\_PLUG-IN-FLAGS \_ AUSGEBLENDET**             | 0x02000000 | Das Benutzeroberflächen-Plug-In für den Hintergrund wird nicht im  **Plug-In-Menü**  angezeigt, auf das über die Menüs Ansicht oder **Extras** oder über die Schaltfläche Jetzt abspielte Optionen auswählen in Jetzt abspielt zugegriffen wird. Er wird auf der **Registerkarte Plug-Ins des Dialogfelds** Optionen angezeigt. Dies führt dazu, dass das Symbol Ausgeführtes Hintergrund-Plug-In in der Statusleiste angezeigt wird. Dieses Flag hat keine Auswirkungen auf Plug-Ins, die keine Hintergrund-UI-Plug-Ins sind.<br/> |
+| **\_PLUG-IN-FLAGS \_ INSTALLAUTORUN**     | 0x40000000 | Windows Media Player das Benutzeroberflächen-Plug-In automatisch ausgeführt, wenn das Plug-In installiert wird.                                                                                                                                                                                                                                                                                                                               |
+| **\_PLUG-IN-FLAGS \_ LAUNCHPROPERTYPAGE** | 0x20000000 | Windows Media Player [**aufruft IWMPPluginUI::D isplayPropertyPage,**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-displaypropertypage) wenn das Benutzeroberflächen-Plug-In zum ersten Mal ausgeführt wird. Wenn dieses Flag angegeben wird, **sollte AUCH \_ PLUG-IN-FLAGS \_ HASPROPERTYPAGE** angegeben werden.<br/>                                                                                                                                                             |
 
 
 
  
 
-Die folgenden Konstanten sind in wmpplug. h definiert. Ändern Sie nicht die Werte, die diesen Konstanten zugeordnet sind.
+Die folgenden Konstanten sind in wmpplug.h definiert. Ändern Sie nicht die Werte, die diesen Konstanten zugeordnet sind.
 
 
 
 | Name                                    | BESCHREIBUNG                               |
 |-----------------------------------------|-------------------------------------------|
-| **Plug-in- \_ installregkey**               | Der Speicherort des Plug-in-Registrierungsschlüssels. |
-| **Plug-in \_ installregkey \_ FriendlyName** | Der Name des benutzerfreundlichen namens Werts.      |
-| **Plug-in- \_ installregkey \_**  | Der Name des Beschreibungs Werts.        |
-| **installregkey-Plug-in \_ \_** | Der Name des Funktions Werts.       |
-| **Plug-in \_ installregkey \_ deinstallieren**    | Der Name des Deinstallations Pfad Werts.     |
+| **\_PLUG-IN INSTALLREGKEY**               | Der Speicherort des Plug-In-Registrierungsschlüssels. |
+| **PLUGIN \_ INSTALLREGKEY \_ FRIENDLYNAME** | Der Name des Werts für den Benutzerfreundlichen Namen.      |
+| **PLUGIN \_ INSTALLREGKEY \_ DESCRIPTION**  | Der Name des Beschreibungswerts.        |
+| **\_PLUG-IN-INSTALLATIONREGKEY-FUNKTIONEN \_** | Der Name des Werts der Funktionen.       |
+| **\_PLUG-IN: \_ INSTALLREGKEY-DEINSTALLATION**    | Der Name des Deinstallationspfadwerts.     |
 
 
 
@@ -102,16 +102,16 @@ Die folgenden Konstanten sind in wmpplug. h definiert. Ändern Sie nicht die Wer
 
 <dl> <dt>
 
-[**Iwmppluginui::D isplaypropertypage**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-displaypropertypage)
+[**IWMPPluginUI::D isplayPropertyPage**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-displaypropertypage)
 </dt> <dt>
 
-[**Iwmppluginui:: GetProperty**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-getproperty)
+[**IWMPPluginUI::GetProperty**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-getproperty)
 </dt> <dt>
 
-[**Iwmppluginui:: SetProperty**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-setproperty)
+[**IWMPPluginUI::SetProperty**](/previous-versions/windows/desktop/api/wmpplug/nf-wmpplug-iwmppluginui-setproperty)
 </dt> <dt>
 
-[**Programmier Referenz zu Benutzeroberflächen-Plug-ins**](user-interface-plug-ins-programming-reference.md)
+[**Benutzeroberfläche Plug-Ins – Programmierreferenz**](user-interface-plug-ins-programming-reference.md)
 </dt> </dl>
 
  

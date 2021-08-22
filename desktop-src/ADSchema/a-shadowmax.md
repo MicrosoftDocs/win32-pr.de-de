@@ -1,10 +1,10 @@
 ---
-title: shadowmax-Attribut
-description: Enthält die maximale Anzahl von Tagen, die ein Kennwort gültig sein kann.
+title: shadowMax-Attribut
+description: Enthält die maximale Anzahl von Tagen, für die ein Kennwort gültig sein kann.
 ms.assetid: 66a5f9d3-8a61-42eb-9d39-50c305844ba3
 ms.tgt_platform: multiple
 keywords:
-- shadowmax-Attribut AD-Schema
+- shadowMax-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa97b49bd55e0d509784eee744ee5cd032941df6
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 5e0bc2207571865a8c0b7683c94de79c93866d1070e480e7c764580af3b5c12f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119836560"
 ---
-# <a name="shadowmax-attribute"></a>shadowmax-Attribut
+# <a name="shadowmax-attribute"></a>shadowMax-Attribut
 
-Enthält die maximale Anzahl von Tagen, die ein Kennwort gültig sein kann.
+Enthält die maximale Anzahl von Tagen, für die ein Kennwort gültig sein kann.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | shadowmax                            |
-| LDAP-Display-Name | shadowmax                            |
+| CN                | shadowMax                            |
+| Ldap-Anzeigename | shadowMax                            |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.3.6.1.1.1.1.7                      |
-| System-ID-GUID    | f285c952-50dd-449e-9160-3b880d99988d |
+| System-Id-Guid    | f285c952-50dd-449e-9160-3b880d99988d |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -54,11 +54,11 @@ Enthält die maximale Anzahl von Tagen, die ein Kennwort gültig sein kann.
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -75,11 +75,11 @@ Enthält die maximale Anzahl von Tagen, die ein Kennwort gültig sein kann.
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -96,11 +96,11 @@ Enthält die maximale Anzahl von Tagen, die ein Kennwort gültig sein kann.
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -117,11 +117,11 @@ Enthält die maximale Anzahl von Tagen, die ein Kennwort gültig sein kann.
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -130,7 +130,7 @@ Enthält die maximale Anzahl von Tagen, die ein Kennwort gültig sein kann.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

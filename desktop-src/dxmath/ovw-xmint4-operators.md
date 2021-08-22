@@ -26,7 +26,7 @@ Die [**XMINT4-Struktur**](/windows/win32/api/directxmath/ns-directxmath-xmint4) 
 
 | Methoden                                             | BESCHREIBUNG                                                                                                     |
 |-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| [**operator =**](/windows/win32/api/directxmath/nf-directxmath-xmint4-operator-assign)<br/> | Weist die Vektorkomponentendaten aus einer Instanz von `XMINT4` der aktuellen Instanz von `XMINT4` zu.<br/> |
+| [**operator =**](/windows/win32/api/directxmath/nf-directxmath-xmint4-operator-assign)<br/> | Weist der aktuellen Instanz von die Vektorkomponentendaten von `XMINT4` einer Instanz von `XMINT4` zu.<br/> |
 
 
 

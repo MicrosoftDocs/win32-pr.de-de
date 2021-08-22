@@ -1,32 +1,32 @@
 ---
-title: Auswahl Steuerelement Muster
-description: Beschreibt Richtlinien und Konventionen für das Implementieren von ISelectionProvider, einschließlich Informationen zu Eigenschaften, Methoden und Ereignissen.
+title: Auswahlsteuerelementmuster
+description: Beschreibt Richtlinien und Konventionen für die Implementierung von ISelectionProvider, einschließlich Informationen zu Eigenschaften, Methoden und Ereignissen.
 ms.assetid: 9371e656-6f93-4a43-bd0c-c6977348b16a
 keywords:
-- Benutzeroberflächen Automatisierung, Implementieren eines Auswahl Steuerelement Musters
-- UI-Automatisierung, Auswahl Steuerelement Muster
-- UI-Automatisierung, ISelectionProvider
+- Benutzeroberflächenautomatisierung,Implementieren des Selection-Steuerelementmusters
+- Benutzeroberflächenautomatisierung,Auswahlsteuerelementmuster
+- Benutzeroberflächenautomatisierung,ISelectionProvider
 - ISelectionProvider
-- Implementieren von Auswahl Steuerelement Mustern für Benutzeroberflächen Automatisierung
-- Auswahl Steuerelement Muster
-- Steuerelement Muster, ISelectionProvider
-- Steuerelement Muster, Implementieren der Benutzeroberflächenautomatisierungs-Auswahl
-- Steuerelement Muster, Auswahl
-- Schnittstellen, ISelectionProvider
+- Implementieren von Benutzeroberflächenautomatisierung Selection-Steuerelementmustern
+- Auswahlsteuerelementmuster
+- Steuerelementmuster,ISelectionProvider
+- Steuerelementmuster,Implementieren von Benutzeroberflächenautomatisierung Selection
+- Steuerelementmuster,Auswahl
+- interfaces,ISelectionProvider
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ad6950302373494f307c91c0aadaeab1db0132a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a2d0578dcdcfa9d381272afaa474338a54caa1f4b17989f2461f9aec5086bc18
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037021"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120098320"
 ---
-# <a name="selection-control-pattern"></a>Auswahl Steuerelement Muster
+# <a name="selection-control-pattern"></a>Auswahlsteuerelementmuster
 
-Beschreibt Richtlinien und Konventionen für das Implementieren von [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider), einschließlich Informationen zu Eigenschaften, Methoden und Ereignissen. Das **Auswahl** Steuerelement Muster wird zur Unterstützung von Steuerelementen verwendet, die als Container für eine Auflistung von auswählbaren untergeordneten Elementen fungieren. Die untergeordneten Elemente dieses Elements müssen [**ISelectionItemProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionitemprovider)implementieren.
+Beschreibt Richtlinien und Konventionen für die Implementierung von [**ISelectionProvider,**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider)einschließlich Informationen zu Eigenschaften, Methoden und Ereignissen. Das  Auswahlsteuerelementmuster wird verwendet, um Steuerelemente zu unterstützen, die als Container für eine Auflistung auswählbarer untergeordneter Elemente fungieren. Die untergeordneten Elemente dieses Elements müssen [**ISelectionItemProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionitemprovider)implementieren.
 
-Beispiele für Steuerelemente, die dieses Steuerelement Muster implementieren, finden Sie [unter Steuerelement Typen und ihre unterstützten Steuerelement Muster](uiauto-controlpatternmapping.md).
+Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren, finden Sie unter [Steuerelementtypen und deren unterstützte Steuerelementmuster.](uiauto-controlpatternmapping.md)
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -36,19 +36,19 @@ Dieses Thema enthält folgende Abschnitte:
 
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen
 
-Beachten Sie beim Implementieren des **Selection** -Steuerelement Musters die folgenden Richtlinien und Konventionen:
+Beachten Sie beim Implementieren des **Selection-Steuerelementmusters** die folgenden Richtlinien und Konventionen:
 
--   Bei Steuerelementen, die [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider) implementieren, kann entweder ein oder mehrere untergeordnete Elemente ausgewählt werden. Listenfelder, Listenansichten und Struktur Ansichten unterstützen z. b. Mehrfachauswahl, während Kombinations Felder, Schieberegler und Optionsfeld Gruppen die einfache Auswahl unterstützen.
--   Steuerelemente, die einen minimalen, maximalen und kontinuierlichen Bereich aufweisen, wie z. b. das **Volume** Slider-Steuerelement eines Media Players, sollten [**IRangeValueProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irangevalueprovider) anstelle von [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider)implementieren.
--   Steuerelemente mit einfacher Auswahl, die untergeordnete Steuerelemente verwalten, die [**IRawElementProviderFragmentRoot**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementproviderfragmentroot)implementieren, z. b. den Schieberegler **Bildschirmauflösung** im Dialogfeld **Anzeigeeigenschaften** für Windows oder das **Farb** Auswahl-Auswahl Steuerelement von Microsoft Word (siehe folgende Abbildung), sollte [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider); implementieren. die untergeordneten Elemente sollten sowohl " [**IRawElementProviderFragment**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementproviderfragment) " als auch " [**ISelectionItemProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionitemprovider)" implementieren.
+-   Steuerelemente, die [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider) implementieren, ermöglichen die Auswahl einzelner oder mehrerer untergeordneter Elemente. Listenfelder, Listenansichten und Strukturansichten unterstützen beispielsweise mehrere Auswahlmöglichkeiten, während Kombinationsfelder, Schieberegler und Optionsfeldgruppen eine einzelne Auswahl unterstützen.
+-   Steuerelemente, die über einen minimalen, maximalen und kontinuierlichen Bereich verfügen, z. B. das Schieberegler-Steuerelement **Volume** eines Medienplayers, sollten [**IRangeValueProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irangevalueprovider) anstelle von [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider)implementieren.
+-   Steuerelemente mit nur einer Auswahl, die untergeordnete Steuerelemente verwalten, die [**IRawElementProviderFragmentRoot**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementproviderfragmentroot)implementieren, z. B. den **Bildschirmauflösungsschieberegler** im **dialogfeld Anzeigeeigenschaften** für Windows oder das **Farbwähler** Auswahlsteuerelement aus Microsoft Word (siehe folgende Abbildung), sollten [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider)implementieren. ihre untergeordneten Elemente sollten sowohl [**IRawElementProviderFragment**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementproviderfragment) als [**auch ISelectionItemProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionitemprovider)implementieren.
 
-    ![Bild mit einem Beispiel für Zeichen folgen Zuordnung von Farbmustern](images/uia-valuepattern-colorpicker.jpg)
+    ![Abbildung eines Beispiels für die Zuordnung von Farbwatchzeichenfolgen](images/uia-valuepattern-colorpicker.jpg)
 
--   Menüs unterstützen das **Auswahl** Steuerelement Muster nicht. Wenn Sie mit Menü Elementen arbeiten, die Grafiken und Text enthalten (z. b. die Elemente im **Vorschau** Bereich im Menü **Ansicht** in Microsoft Outlook) und den Zustand übermitteln müssen, sollten Sie [**ideggleprovider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itoggleprovider)implementieren.
+-   Menüs unterstützen das  Auswahlsteuerelementmuster nicht. Wenn Sie mit Menüelementen arbeiten, die sowohl Grafiken als auch Text enthalten (z. B. die Elemente des **Vorschaubereichs** im Menü **Ansicht** in Microsoft Outlook) und den Zustand vermitteln müssen, sollten Sie [**IToggleProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itoggleprovider)implementieren.
 
 ## <a name="required-members-for-iselectionprovider"></a>Erforderliche Member für **ISelectionProvider**
 
-Die folgenden Eigenschaften, Methoden und Ereignisse sind für die Implementierung der [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider) -Schnittstelle erforderlich.
+Die folgenden Eigenschaften, Methoden und Ereignisse sind für die Implementierung der [**ISelectionProvider-Schnittstelle**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider) erforderlich.
 
 
 
@@ -57,22 +57,22 @@ Die folgenden Eigenschaften, Methoden und Ereignisse sind für die Implementieru
 | [**CanSelectMultiple**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iselectionprovider-get_canselectmultiple)                        | Eigenschaft    | Keine                                                                        |
 | [**IsSelectionRequired**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iselectionprovider-get_isselectionrequired)                    | Eigenschaft    | Keine                                                                        |
 | [**GetSelection**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iselectionprovider-getselection)                                  | Methode      | Keine                                                                        |
-| [**UIA- \_ Auswahl \_ invalidatedeventid**](uiauto-event-ids.md) | Ereignis       | Dieses Ereignis wird durch eine deutliche Änderung einer Auswahl in einem Container angehoben. |
+| [**UIA \_ Selection \_ InvalidatedEventId**](uiauto-event-ids.md) | Ereignis       | Auslösen dieses Ereignisses, wenn sich eine Auswahl in einem Container erheblich geändert hat. |
 
 
 
- 
+ 
 
-Die Eigenschaften " [**ISelectionProvider:: IsSelectionRequired**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iselectionprovider-get_isselectionrequired) " und " [**CanSelectMultiple**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iselectionprovider-get_canselectmultiple) " können dynamisch sein. Beispielsweise können für den ursprünglichen Zustand eines Steuer Elements keine Elemente standardmäßig ausgewählt werden, was darauf hinweist, dass **IsSelectionRequired** false ist. Nach dem Auswählen eines Elements muss für das Steuerelement jedoch immer mindestens ein Element ausgewählt sein. Auf ähnliche Weise kann ein Steuerelement in seltenen Fällen bei der Initialisierung die Mehrfachauswahl von Elementen gestatten, während anschließend nur noch die Einfachauswahl zulässig ist.
+Die Eigenschaften [**ISelectionProvider::IsSelectionRequired**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iselectionprovider-get_isselectionrequired) und [**CanSelectMultiple**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iselectionprovider-get_canselectmultiple) können dynamisch sein. Für den Anfangszustand eines Steuerelements sind möglicherweise standardmäßig keine Elemente ausgewählt, was bedeutet, dass **IsSelectionRequired** false ist. Nach dem Auswählen eines Elements muss für das Steuerelement jedoch immer mindestens ein Element ausgewählt sein. Auf ähnliche Weise kann ein Steuerelement in seltenen Fällen bei der Initialisierung die Mehrfachauswahl von Elementen gestatten, während anschließend nur noch die Einfachauswahl zulässig ist.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Steuerelement Typen und ihre unterstützten Steuerelement Muster](uiauto-controlpatternmapping.md)
+[Steuerelementtypen und deren unterstützte Steuerelementmuster](uiauto-controlpatternmapping.md)
 </dt> <dt>
 
-[SelectionItem-Steuerelement Muster](uiauto-implementingselectionitem.md)
+[SelectionItem-Steuerelementmuster](uiauto-implementingselectionitem.md)
 </dt> <dt>
 
 [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](uiauto-controlpatternsoverview.md)
@@ -81,9 +81,9 @@ Die Eigenschaften " [**ISelectionProvider:: IsSelectionRequired**](/windows/desk
 [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](uiauto-treeoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

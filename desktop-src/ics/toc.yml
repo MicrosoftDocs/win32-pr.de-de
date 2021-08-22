@@ -28,7 +28,7 @@
               href: /windows/win32/api/netfw/nc-netfw-pfn_fwfreedynamickeywordaddressdata0
             - name: PFN_FWUPDATEDYNAMICKEYWORDADDRESS0
               href: /windows/win32/api/netfw/nc-netfw-pfn_fwupdatedynamickeywordaddress0
-        - name: Dynamische Firewallschlüsselwortstrukturen
+        - name: Dynamische Firewallschlüsselwörterstrukturen
           href: firewall-dynamic-keywords-structures.md
           items:
             - name: FW_DYNAMIC_KEYWORD_ADDRESS_DATA0

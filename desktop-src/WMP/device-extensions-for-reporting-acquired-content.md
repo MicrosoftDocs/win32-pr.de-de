@@ -1,87 +1,87 @@
 ---
-title: Geräte Erweiterungen für die Berichterstellung über den Inhalt
-description: Geräte Erweiterungen für die Berichterstellung über den Inhalt
+title: Geräteerweiterungen für die Berichterstellung für erworbene Inhalte
+description: Geräteerweiterungen für die Berichterstellung für erworbene Inhalte
 ms.assetid: 597d872e-9105-4edb-afa3-9f4407de0f73
 keywords:
-- Windows Media Player, Geräte Erweiterungen
-- Windows-Media Player, Erweiterungen
-- Windows Media Player, von der Berichterstellung erworbene Inhalte
-- Geräte Erweiterungen, von der Berichterstellung erworbene Inhalte
-- Erweiterungen, von der Berichterstellung erworbene Inhalte
-- Bericht erfassten Inhalte
+- Windows Media Player,Geräteerweiterungen
+- Windows Media Player,Erweiterungen
+- Windows Media Player, Melden von erworbenen Inhalten
+- Geräteerweiterungen, Melden von erworbenen Inhalten
+- Erweiterungen,Melden von erworbenen Inhalten
+- Melden von erworbenen Inhalten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 831312457427cc9fe4ceed004772f3b174f77989
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3389f5b35cedc853d66e6f450836195497628972ea6ae15642d75155d8b83b6c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902060"
 ---
-# <a name="device-extensions-for-reporting-acquired-content"></a>Geräte Erweiterungen für die Berichterstellung über den Inhalt
+# <a name="device-extensions-for-reporting-acquired-content"></a>Geräteerweiterungen für die Berichterstellung für erworbene Inhalte
 
-Mit Windows Media Player 11 werden neue Funktionen eingeführt, die es tragbaren Geräten ermöglichen, den Player über Inhalte zu informieren, die seit der letzten Synchronisierung zum Gerät hinzugefügt wurden. Windows Media Player 11 kann diese Informationen verwenden, um neu erworbenen Inhalt vom Gerät auf den Computer des Benutzers zu kopieren. Gerätehersteller sollten die folgenden Anforderungen beachten, um diese Funktionalität zu unterstützen:
+Windows Media Player 11 führt neue Funktionen ein, die es portablen Geräten ermöglichen, den Player über Inhalte zu informieren, die dem Gerät seit der letzten Synchronisierung hinzugefügt wurden. Windows Media Player 11 können diese Informationen verwenden, um neu erworbene Inhalte vom Gerät auf den Computer des Benutzers zu kopieren. Gerätehersteller sollten die folgenden Anforderungen für die Unterstützung dieser Funktionalität beachten:
 
--   Diese Funktion wird nur für MTP-aktivierte Geräte unterstützt.
--   Diese Funktion funktioniert nur mit Geräten, die eine Partnerschaft mit Windows Media Player haben.
--   Geräte dürfen nur Inhalt melden, den das Gerät erstellt oder heruntergeladen hat. Dies schließt Fotos ein, die vom Gerät entnommen werden. vom Gerät erstellte Sprachaufzeichnungen; Voicemail-Aufzeichnungen; Downloads von einer Speicherkarte und werden aus dem Internet heruntergeladen. Inhalte, die als Ergebnis der Synchronisierung mit einem anderen Gerät oder einer anderen Partnerschaft auf dem Gerät gespeichert wurden, dürfen nicht gemeldet werden.
+-   Dieses Feature wird nur für MTP-fähige Geräte unterstützt.
+-   Dieses Feature funktioniert nur mit Geräten, die eine Partnerschaft mit Windows Media Player haben.
+-   Geräte dürfen nur Inhalte melden, die vom Gerät erstellt oder heruntergeladen wurden. Dies schließt Fotos ein, die vom Gerät aufgenommen wurden. Sprachaufzeichnungen, die vom Gerät erstellt wurden; Voicemailaufzeichnungen; downloads from a storage card; (Downloads von einer Kreditkarte; und werden aus dem Internet heruntergeladen. Inhalte, die aufgrund der Synchronisierung mit einem anderen Gerät oder einer anderen Partnerschaft auf dem Gerät gespeichert wurden, dürfen nicht gemeldet werden.
 
-Die Header Datei "wmpdevices. h", die als Teil des Windows Media Player SDK installiert wird, definiert die Strukturen und Konstanten, die für die Unterstützung von Windows Media Player-Geräte Erweiterungen erforderlich sind.
+Die Headerdatei mit dem Namen wmpdevices.h, die als Teil des Windows Media Player SDK installiert wird, definiert die Strukturen und Konstanten, die zur Unterstützung Windows Media Player Geräteerweiterungen erforderlich sind.
 
-Damit ein Gerät als Unterstützung für die Berichterstellung von erworbenen Inhalten über den Windows Media Player MTP-Geräte Erweiterungs Satz erkannt wird, muss es die folgenden Informationen in das deviceInfo-DataSet einschließen. (Weitere Informationen zu diesem Dataset finden Sie im Abschnitt 4.6.1 der MTP-Spezifikation.)
+Damit ein Gerät die Berichterstellung von erworbenen Inhalten über den Windows Media Player MTP-Geräteerweiterungssatz unterstützt, muss es die folgenden Informationen im DeviceInfo-Dataset enthalten. (Weitere Informationen zu diesem Dataset finden Sie in Abschnitt 4.6.1 der MTP-Spezifikation.)
 
 
 
-| Datasetfeld          | Feld Reihenfolge | Datentyp  | Wert                       |
+| Datasetfeld          | Feldreihenfolge | Datentyp  | Wert                       |
 |------------------------|-------------|------------|-----------------------------|
-| Vendorextensionid      | 2           | **UINT32** | 0x00000006                  |
-| Vendorextensionversion | 3           | **UINT16** | 0x0064 (100)                |
-| Vendorextensiondesc    | 4           | **String** | "Microsoft.com/WMPPD: 11,0" |
+| VendorExtensionID      | 2           | **UINT32** | 0x00000006                  |
+| VendorExtensionVersion | 3           | **UINT16** | 0x0064 (100)                |
+| VendorExtensionDesc    | 4           | **String** | "microsoft.com/WMPPD: 11.0" |
 
 
 
- 
+ 
 
-In der folgenden Tabelle finden Sie Details zum MTP-Vorgang für den Bericht erfassten Inhalt.
+Die folgende Tabelle enthält Details zum MTP-Vorgang zum Melden von erworbenen Inhalten.
 
 
 
 | Element                  | BESCHREIBUNG                                                                                                                                                                                                                     |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Vorgangs Code        | 0x9202                                                                                                                                                                                                                          |
-| Vorgangs Parameter 1 | Die Transaktions-ID, die während der letzten Sitzung vom Gerät bereitgestellt wurde. Dieser Wert ist für die erste Sitzung 0 (null).                                                                                                                |
-| Vorgangs Parameter 2 | Start Index. Dieser Wert ist beim ersten Aufrufe einer Sitzung immer 0 (null). Bei nachfolgenden Aufrufen innerhalb derselben Synchronisierungs Sitzung erhöht sich dieser Wert um die Anzahl der Elemente, die von den vorherigen Antwortdaten zurückgegeben wurden. |
-| Vorgangs Parameter 3 | 0x10000. Diese Konstante, die in wmpdevices. h definiert ist, ist die maximale Anzahl von puoids, die in der Antwort zurückgegeben werden können. Beachten Sie, dass der Wert dieser Konstante in zukünftigen Versionen dieser Header Datei möglicherweise überarbeitet wird.              |
-| Vorgangs Parameter 4 | 0                                                                                                                                                                                                                               |
-| Vorgangs Parameter 5 | 0                                                                                                                                                                                                                               |
-| Daten                  | Das Gerät gibt ein MTP-Array mit den puoids zurück, die abgerufen wurden. Das Array beginnt mit einem **DWORD** -Wert, der die Anzahl der Elemente im Array angibt, gefolgt vom Array von Elementen.                               |
-| Daten Richtung        | R->I                                                                                                                                                                                                                         |
-| Antwort Code Optionen | **MTP \_ Antwort \_ OK** (0x2001) oder gültiger Fehler Antwort Code.                                                                                                                                                                    |
-| Antwort Parameter 1  | Die aktuelle Transaktions-ID.                                                                                                                                                                                                     |
-| Antwort Parameter 2  | Die Anzahl der puoids, die von zukünftigen Anforderungen abgerufen werden.                                                                                                                                                            |
-| Antwort Parameter 3  | **DWORD** , das Statusinformationen enthält. Der Status wird auf bitweise angegeben. Informationen zu den zu verwendenden Flags finden Sie unter "Hinweise".                                                                                              |
-| Antwort Parameter 4  | 0                                                                                                                                                                                                                               |
-| Antwort Parameter 5  | 0                                                                                                                                                                                                                               |
+| Vorgangscode        | 0x9202                                                                                                                                                                                                                          |
+| Vorgangsparameter 1 | Die Transaktions-ID, die vom Gerät während der vorherigen Sitzung angegeben wurde. Dieser Wert ist 0 (null) für die erste Sitzung.                                                                                                                |
+| Vorgangsparameter 2 | Startindex. Dieser Wert ist beim ersten Aufruf einer Sitzung immer 0 (null). Bei nachfolgenden Aufrufen innerhalb derselben Synchronisierungssitzung erhöht sich dieser Wert um die Anzahl der Elemente, die aus den vorherigen Antwortdaten zurückgegeben wurden. |
+| Vorgangsparameter 3 | 0x10000. Diese Konstante, die in wmpdevices.h definiert ist, ist die maximale Anzahl von PUOIDs, die in der Antwort zurückgegeben werden können. Beachten Sie, dass der Wert dieser Konstante möglicherweise in zukünftigen Versionen dieser Headerdatei überarbeitet wird.              |
+| Vorgangsparameter 4 | 0                                                                                                                                                                                                                               |
+| Vorgangsparameter 5 | 0                                                                                                                                                                                                                               |
+| Daten                  | Das Gerät gibt ein MTP-Array zurück, das die erworbenen PUOIDs enthält. Das Array beginnt mit einem **DWORD-Wert,** der die Anzahl der Elemente im Array angibt, gefolgt vom Array der Elemente.                               |
+| Datenrichtung        | R->I                                                                                                                                                                                                                         |
+| Antwortcodeoptionen | **MTP \_ ANTWORT \_ OK** (0x2001) oder gültiger Fehlerantwortcode.                                                                                                                                                                    |
+| Antwortparameter 1  | Die aktuelle Transaktions-ID.                                                                                                                                                                                                     |
+| Antwortparameter 2  | Die Anzahl der PUOIDs, die von zukünftigen Anforderungen abgerufen werden müssen.                                                                                                                                                            |
+| Antwortparameter 3  | **DWORD** mit Statusinformationen. Der Status wird bitweise angegeben. Informationen zu zu verwendenden Flags finden Sie unter Hinweise.                                                                                              |
+| Antwortparameter 4  | 0                                                                                                                                                                                                                               |
+| Antwortparameter 5  | 0                                                                                                                                                                                                                               |
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Status wird durch den Antwort Parameter 3 in einer bitweisen Vorgehensweise mit dem folgenden Flag angegeben.
+Der Status wird durch den Antwortparameter 3 bitweise mithilfe des folgenden Flags angegeben.
 
 
 
 | Flag                                              | Wert | BESCHREIBUNG                                                                                                                                                                                                                             |
 |---------------------------------------------------|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **WMP- \_ MDRT- \_ Flags \_ nicht gemeldete \_ erfassten \_ Elemente** | 0x1   | Das Gerät enthält einige erworbene Elemente, die in der Liste der puoids nicht zurückgegeben werden können. Beachten Sie, dass dieses Flag mit dem Antwort Parameter 2 nicht redundant ist. Legen Sie dieses Flag nur fest, wenn angeforderte Elemente vorhanden sind, die das Gerät nicht zurückgeben kann. |
+| **WMP \_ MDRT \_ FLAGS \_ UNREPORTED \_ ACQUIRED \_ ITEMS** | 0x1   | Das Gerät enthält einige erworbene Elemente, die nicht in der Liste der PUOIDS zurückgegeben werden können. Beachten Sie, dass dieses Flag mit Dem Antwortparameter 2 nicht redundant ist. Legen Sie dieses Flag nur fest, wenn angeforderte Elemente vorhanden sind, die das Gerät nicht zurückgeben kann. |
 
 
 
- 
+ 
 
-Bits 1 bis 31 sind für die zukünftige Verwendung reserviert. Diese Bits sollten auf 0 (null) festgelegt werden.
+Die Bits 1 bis 31 sind für die zukünftige Verwendung reserviert. Diese Bits sollten auf 0 (null) festgelegt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -90,9 +90,9 @@ Bits 1 bis 31 sind für die zukünftige Verwendung reserviert. Diese Bits sollte
 [**Windows Media Player**](windows-media-player.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

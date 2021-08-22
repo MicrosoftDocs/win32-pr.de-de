@@ -1,5 +1,5 @@
 ---
-description: Lädt eine Reihe von Glyphen in den Videospeicher, um die Effizienz des Renderns auf dem Gerät zu verbessern.
+description: Lädt eine Reihe von Glyphen in den Videospeicher, um die Effizienz des Renderings auf dem Gerät zu verbessern.
 ms.assetid: df023359-bcb3-4c05-950b-19cdeba97c85
 title: ID3DXFont::P reloadGlyphs-Methode (D3dx9core.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "119563930"
 ---
 # <a name="id3dxfontpreloadglyphs-method"></a>ID3DXFont::P reloadGlyphs-Methode
 
-Lädt eine Reihe von Glyphen in den Videospeicher, um die Effizienz des Renderns auf dem Gerät zu verbessern.
+Lädt eine Reihe von Glyphen in den Videospeicher, um die Effizienz des Renderings auf dem Gerät zu verbessern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,16 +46,16 @@ HRESULT PreloadGlyphs(
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-ID des ersten Glyphens, das in den Videospeicher geladen werden soll.
+ID des ersten Glyphen, das in den Videospeicher geladen werden soll.
 
 </dd> <dt>
 
-*Zuletzt* \[ In\]
+*Letzte* \[ In\]
 </dt> <dd>
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-ID des letzten Glyphens, das in den Videospeicher geladen werden soll.
+ID des letzten Glyphen, das in den Videospeicher geladen werden soll.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ ID des letzten Glyphens, das in den Videospeicher geladen werden soll.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode generiert Texturen, die die Eingabeglyphen enthalten. Die Glyphen werden als eine Reihe von Dreiecken gezeichnet.
+Diese Methode generiert Texturen, die die Eingabe-Glyphen enthalten. Die Glyphen werden als eine Reihe von Dreiecken gezeichnet.
 
 Glyphen werden nicht auf dem Gerät gerendert. [**DrawText**](id3dxfont--drawtext.md) muss weiterhin aufgerufen werden, um die Glyphen zu rendern. Durch das Vorabladen von Glyphen in den Videospeicher verwendet **DrawText** jedoch deutlich weniger CPU-Ressourcen.
 
@@ -82,7 +82,7 @@ Glyphen werden nicht auf dem Gerät gerendert. [**DrawText**](id3dxfont--drawtex
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

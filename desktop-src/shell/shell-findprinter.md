@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 17d04b60de2b52ca3d2f17fbdccf7de93ac095b3
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3c3208d001f501371245e578ca691267604be691076f858b0a9f8bb7eeb36279
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108104308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120111150"
 ---
 # <a name="shellfindprinter-method"></a>Shell.FindPrinter-Methode
 
-Zeigt das **Dialogfeld Drucker suchen** an.
+Zeigt das Dialogfeld **Drucker suchen** an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -80,17 +80,17 @@ Eine **Zeichenfolge,** die das Druckermodell enthält.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie einem oder mehrere der optionalen Parameter Zeichenfolgen zuweisen, werden sie  als Standardwerte im zugeordneten Bearbeitungssteuerfeld angezeigt, wenn das Dialogfeld Drucker suchen angezeigt wird. Der Benutzer kann diese Werte entweder akzeptieren oder überschreiben. Wenn einem Parameter kein Wert zugewiesen wird, ist das zugeordnete Bearbeitungsfeld leer, und der Benutzer muss einen Wert eingeben.
+Wenn Sie einem oder mehreren optionalen Parametern Zeichenfolgen zuweisen, werden diese im zugeordneten Bearbeitungssteuerelement als Standardwerte angezeigt, wenn das Dialogfeld **Drucker suchen** angezeigt wird. Der Benutzer kann diese Werte entweder akzeptieren oder überschreiben. Wenn einem Parameter kein Wert zugewiesen wird, ist das zugeordnete Bearbeitungsfeld leer, und der Benutzer muss einen Wert eingeben.
 
-Diese Methode ist derzeit in Microsoft Visual Basic.
+Diese Methode ist derzeit in Microsoft Visual Basic nicht verfügbar.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung **von FindPrinter** zum Anzeigen **des** Dialogfelds Drucker suchen für eine bestimmte Anwendung gezeigt. Die Verwendung wird für JScript, VBScript und Visual Basic.
+In den folgenden Beispielen wird die Verwendung von **FindPrinter** zum Anzeigen des Dialogfelds **Drucker suchen** für eine bestimmte Anwendung gezeigt. Die Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -129,10 +129,10 @@ Vbscript:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |

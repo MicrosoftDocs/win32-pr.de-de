@@ -1,36 +1,36 @@
 ---
-title: Erstellen eines Befehls Links
-description: In diesem Thema wird eine Möglichkeit zum Erstellen eines Befehls Links beschrieben.
+title: Erstellen eines Befehlslinks
+description: In diesem Thema wird eine Möglichkeit zum Erstellen eines Befehlslinks beschrieben.
 ms.assetid: F342075B-2D3B-40E0-B657-E1C57EDC2E3A
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c8024a7f060a7bae3779b9ec9ebec40bd81c74bb
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 9c61888921f06e017ec1ea625730c3cc52de5ab364db22fc01fd021ce5629c63
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104474461"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920900"
 ---
-# <a name="how-to-create-a-command-link"></a>Erstellen eines Befehls Links
+# <a name="how-to-create-a-command-link"></a>Erstellen eines Befehlslinks
 
-In diesem Thema wird eine Möglichkeit zum Erstellen eines Befehls Links beschrieben.
+In diesem Thema wird eine Möglichkeit zum Erstellen eines Befehlslinks beschrieben.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-create-an-instance-of-the-command-link-button"></a>Schritt 1: Erstellen Sie eine Instanz der Befehls Link Schaltfläche.
+### <a name="step-1-create-an-instance-of-the-command-link-button"></a>Schritt 1: Erstellen Sie eine Instanz der Befehlslinkschaltfläche.
 
-Im folgenden C++-Codebeispiel gibt der "Format Bezeichner" ( [**\_ CommandLink**](button-styles.md) ) die Schaltfläche als Befehls Link Schaltfläche an.
+Im folgenden C++-Codebeispiel gibt die Formatkonstant [**BS \_ COMMANDLINK**](button-styles.md) die Schaltfläche als Befehlslinkschaltfläche an.
 
 
 ```C++
@@ -50,9 +50,9 @@ HWND hwndCommandLink = CreateWindow(
 
 
 
-### <a name="step-2-set-the-command-link-label-and-explanation-text"></a>Schritt 2: Festlegen der Bezeichnung für den Befehls Link und den Erläuterungstext
+### <a name="step-2-set-the-command-link-label-and-explanation-text"></a>Schritt 2: Festlegen der Befehlslinkbezeichnung und des Erklärungstexts
 
-Verwenden Sie die [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-sendmessage) -Funktion, um die Bezeichnung für den Befehls Link und ergänzenden Text über die [**WM- \_ SetText**](/windows/desktop/winmsg/wm-settext) -Nachricht und die [**BCM- \_ setnote**](bcm-setnote.md) -Nachricht festzulegen.
+Verwenden Sie [**die SendMessage-Funktion,**](/windows/desktop/api/winuser/nf-winuser-sendmessage) um die Befehlslinkbezeichnung und den ergänzenden Text über die [**WM \_ SETTEXT-Nachricht**](/windows/desktop/winmsg/wm-settext) bzw. die [**BCM \_ SETNOTE-Nachricht**](bcm-setnote.md) zu festlegen.
 
 
 ```C++
@@ -69,7 +69,7 @@ SendMessage(hwndCommandLink, BCM_SETNOTE, 0, (LPARAM)L"with note");
 [Informationen zu Schaltflächen](about-buttons.md)
 </dt> <dt>
 
-[Button-Steuerelement Verweis](bumper-button-button-control-reference.md)
+[Referenz zum Schaltflächensteuerfeld](bumper-button-button-control-reference.md)
 </dt> <dt>
 
 [Verwenden von Schaltflächen](using-buttons.md)
@@ -78,6 +78,6 @@ SendMessage(hwndCommandLink, BCM_SETNOTE, 0, (LPARAM)L"with note");
 [Schaltfläche](buttons.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

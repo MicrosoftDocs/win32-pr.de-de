@@ -1,76 +1,76 @@
 ---
-description: Windows-Verwaltungsinstrumentation (WMI) definiert eine Gruppe von Systemeigenschaften, die allen Klassen und Klassen Instanzen zugeordnet sind.
+description: Windows Die Verwaltungsinstrumentation (Management Instrumentation, WMI) definiert einen Satz von Systemeigenschaften, die allen Klassen und Instanzen von Klassen zugeordnet sind.
 ms.assetid: e812c0cb-3e08-4cac-8d05-2cd7abc922d1
 ms.tgt_platform: multiple
-title: WMI-System Eigenschaften
+title: WMI-Systemeigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b3ee541d9de0d37c9aa1eae4ded07d3cb70ff1bf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d3471665e2e818037bb831c8d8ab39bbe0d56e01912afb1a3399b4055d3670a1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120120660"
 ---
-# <a name="wmi-system-properties"></a>WMI-System Eigenschaften
+# <a name="wmi-system-properties"></a>WMI-Systemeigenschaften
 
-Windows-Verwaltungsinstrumentation (WMI) definiert eine Gruppe von Systemeigenschaften, die allen Klassen und Klassen Instanzen zugeordnet sind. Wie bei System Klassen beginnen System Eigenschaftsnamen mit einem doppelten Unterstrich und unterscheiden sich von Eigenschaften, die von Anwendungen oder Anbietern erstellt werden, die nicht mit einem einzelnen oder einem doppelten Unterstrich beginnen dürfen. Eine andere Möglichkeit, eine System Eigenschaft zu identifizieren, ist die Verwendung der [**IWbemClassObject:: Get**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-get) -Methode.
+Windows Die Verwaltungsinstrumentation (Management Instrumentation, WMI) definiert einen Satz von Systemeigenschaften, die allen Klassen und Instanzen von Klassen zugeordnet sind. Wie bei Systemklassen beginnen Systemeigenschaftennamen mit einem doppelten Unterstrich und unterscheiden sie von Eigenschaften, die von Anwendungen oder Anbietern erstellt wurden, die nicht mit einem einzelnen oder doppelten Unterstrich beginnen dürfen. Eine weitere Möglichkeit zum Identifizieren einer Systemeigenschaft ist die Verwendung der [**IWbemClassObject::Get-Methode.**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-get)
 
-System Eigenschaften sind jederzeit verfügbar, Werte sind jedoch möglicherweise **null**. **Null** gibt an, dass eine Eigenschaft nicht für ein bestimmtes Objekt gilt. Systemeigenschaften sind jedoch möglicherweise nicht immer für alle Klassen oder Instanzen verfügbar.
+Systemeigenschaften sind jederzeit verfügbar, werte können jedoch **NULL** sein. **NULL** gibt an, dass eine Eigenschaft nicht für ein bestimmtes Objekt gilt. Systemeigenschaften sind jedoch möglicherweise nicht für alle Klassen oder Instanzen jederzeit verfügbar.
 
 ## <a name="system-properties"></a>Systemeigenschaften
 
-In der folgenden Liste werden die WMI-Systemeigenschaften beschrieben. Die angegebenen Beispiele stammen aus den Systemeigenschaften der [**Win32 \_ optionalfeature**](/windows/desktop/CIMWin32Prov/win32-optionalfeature) -Klasse, die unten in diesem Thema beschrieben wird.
+In der folgenden Liste werden die WMI-Systemeigenschaften beschrieben. Die angegebenen Beispiele stammen aus den Systemeigenschaften der [**Win32 \_ OptionalFeature-Klasse,**](/windows/desktop/CIMWin32Prov/win32-optionalfeature) die am Ende dieses Themas beschrieben wird.
 
 <dl> <dt>
 
-<span id="__Class"></span><span id="__class"></span><span id="__CLASS"></span>**\_\_Klassi**
+<span id="__Class"></span><span id="__class"></span><span id="__CLASS"></span>**\_\_Klasse**
 </dt> <dd>
 
-Datentyp: **CIM- \_ Zeichenfolge**
+Datentyp: **CIM \_ STRING**
 
-Zugriffstyp: schreibgeschützt für Instanzen; Lese-/Schreibzugriff für Klassen
+Zugriffstyp: Schreibgeschützt für Instanzen; Lesen/Schreiben für Klassen
 
 Der Name der Klasse.
 
-Beispiel: Win32 \_ optionalfeature
+Beispiel: Win32 \_ OptionalFeature
 
 </dd> <dt>
 
 <span id="__Derivation"></span><span id="__derivation"></span><span id="__DERIVATION"></span>**\_\_Ableitung**
 </dt> <dd>
 
-Datentyp: **CIM- \_ Zeichen** folgen Array
+Datentyp: **CIM \_ STRING-Array**
 
-Zugriffstyp: schreibgeschützt sowohl für Instanzen als auch für Klassen
+Zugriffstyp: Schreibgeschützt für Instanzen und Klassen
 
-Klassenhierarchie der aktuellen Klasse oder Instanz. Das erste Element ist die unmittelbar übergeordnete Klasse, das nächste ist das übergeordnete Element, usw. das letzte Element ist die Basisklasse.
+Klassenhierarchie der aktuellen Klasse oder Instanz. Das erste Element ist die unmittelbar übergeordnete Klasse, das nächste ist das übergeordnete Element usw. Das letzte Element ist die Basisklasse.
 
 Beispiel: {CIM \_ LogicalElement, CIM \_ ManagedSystemElement}
 
 </dd> <dt>
 
-<span id="__Dynasty"></span><span id="__dynasty"></span><span id="__DYNASTY"></span>**\_\_Els**
+<span id="__Dynasty"></span><span id="__dynasty"></span><span id="__DYNASTY"></span>**\_\_Dynastie**
 </dt> <dd>
 
-Datentyp: **CIM- \_ Zeichenfolge**
+Datentyp: **CIM \_ STRING**
 
 Zugriffstyp: Schreibgeschützt
 
-Der Name der Klasse der obersten Ebene, von der die Klasse oder Instanz abgeleitet wird. Wenn diese Klasse oder Instanz die Klasse der obersten Ebene ist, sind die Werte von " **\_ \_ Dynastie** " und " **\_ \_ Class** " identisch.
+Name der Klasse der obersten Ebene, von der die Klasse oder Instanz abgeleitet wird. Wenn es sich bei dieser Klasse oder Instanz um die Klasse der obersten Ebene handelt, sind die Werte von **\_ \_ Sucht** und **\_ \_ Klasse** identisch.
 
 Beispiel: CIM \_ ManagedSystemElement
 
 </dd> <dt>
 
-<span id="__Genus"></span><span id="__genus"></span><span id="__GENUS"></span>**\_\_Umgeleitet**
+<span id="__Genus"></span><span id="__genus"></span><span id="__GENUS"></span>**\_\_Gattung**
 </dt> <dd>
 
 Datentyp: **CIM \_ SINT32**
 
 Zugriffstyp: Schreibgeschützt
 
-Der Wert, der verwendet wird, um zwischen Klassen und Instanzen zu unterscheiden. Dieser Wert ist die **WBEM- \_ \_ Klasse Class** (1) für Klassen und die **WBEM- \_ \_ Typinstanz** (2) für-Instanzen und-Ereignisse.
+Wert, der verwendet wird, um zwischen Klassen und Instanzen zu unterscheiden. Dieser Wert ist **WBEM \_ GENUS \_ CLASS** (1) für Klassen und **WBEM \_ GENUS \_ INSTANCE** (2) für Instanzen und Ereignisse.
 
 Beispiel: 2
 
@@ -79,82 +79,82 @@ Beispiel: 2
 <span id="__Namespace"></span><span id="__namespace"></span><span id="__NAMESPACE"></span>[**\_\_Namespace**](--namespace.md)
 </dt> <dd>
 
-Datentyp: **CIM- \_ Zeichenfolge**
+Datentyp: **CIM \_ STRING**
 
 Zugriffstyp: Schreibgeschützt
 
-Der Name des [*Namespace*](gloss-n.md) der Klasse oder Instanz.
+Name des [*Namespace*](gloss-n.md) der Klasse oder Instanz.
 
-Beispiel: root \\ CIMV2
+Beispiel: root \\ cimv2
 
 </dd> <dt>
 
-<span id="__Path"></span><span id="__path"></span><span id="__PATH"></span>**\_\_ADS**
+<span id="__Path"></span><span id="__path"></span><span id="__PATH"></span>**\_\_Pfad**
 </dt> <dd>
 
-Datentyp: **CIM- \_ Zeichenfolge**
+Datentyp: **CIM \_ STRING**
 
 Zugriffstyp: Schreibgeschützt
 
-Vollständiger Pfad zur Klasse oder Instanz – einschließlich Server und Namespace.
+Vollständiger Pfad zur Klasse oder Instanz, einschließlich Server und Namespace.
 
-Beispiel: \\ \\ myserver \\ root \\ CIMV2: Win32 \_ optionalfeature. Name = "Telnetclient"
+Beispiel: \\ \\ MyServer \\ root \\ cimv2:Win32 \_ OptionalFeature.Name="TelnetClient"
 
 </dd> <dt>
 
-<span id="__Property_Count"></span><span id="__property_count"></span><span id="__PROPERTY_COUNT"></span>**\_\_Anzahl von Eigenschaften \_**
+<span id="__Property_Count"></span><span id="__property_count"></span><span id="__PROPERTY_COUNT"></span>**\_\_\_Eigenschaftsanzahl**
 </dt> <dd>
 
 Datentyp: **CIM \_ SINT32**
 
 Zugriffstyp: Schreibgeschützt
 
-Anzahl der nicht-Systemeigenschaften, die für die Klasse oder Instanz definiert sind.
+Anzahl der für die Klasse oder Instanz definierten Nichtsystemeigenschaften.
 
 Beispiel: 6
 
 </dd> <dt>
 
-<span id="__Relpath"></span><span id="__relpath"></span><span id="__RELPATH"></span>**\_\_RelPath**
+<span id="__Relpath"></span><span id="__relpath"></span><span id="__RELPATH"></span>**\_\_Relpath**
 </dt> <dd>
 
-Datentyp: **CIM- \_ Zeichenfolge**
+Datentyp: **CIM \_ STRING**
 
 Zugriffstyp: Schreibgeschützt
 
-Relativer Pfad zur-Klasse oder-Instanz.
+Relativer Pfad zur Klasse oder Instanz.
 
-Beispiel: Win32 \_ optionalfeature. Name = "Telnetclient"
+Beispiel: Win32 \_ OptionalFeature.Name="TelnetClient"
 
 </dd> <dt>
 
-<span id="__Server"></span><span id="__server"></span><span id="__SERVER"></span>**\_\_Servers**
+<span id="__Server"></span><span id="__server"></span><span id="__SERVER"></span>**\_\_Server**
 </dt> <dd>
 
-Datentyp: **CIM- \_ Zeichenfolge**
+Datentyp: **CIM \_ STRING**
 
 Zugriffstyp: Schreibgeschützt
 
-Der Name des Servers, der die Klasse oder Instanz bereitstellt.
+Name des Servers, der die Klasse oder Instanz an die -Klasse oder -Instanz liefert.
 
 Beispiel: MyServer
 
 </dd> <dt>
 
-<span id="__Superclass"></span><span id="__superclass"></span><span id="__SUPERCLASS"></span>**\_\_Übergeordneten Klasse**
+<span id="__Superclass"></span><span id="__superclass"></span><span id="__SUPERCLASS"></span>**\_\_Oberklasse**
 </dt> <dd>
 
-Datentyp: **CIM- \_ Zeichenfolge**
+Datentyp: **CIM \_ STRING**
 
 Zugriffstyp: Schreibgeschützt
 
-Der Name der unmittelbaren übergeordneten Klasse der Klasse oder Instanz.
+Name der unmittelbar übergeordneten Klasse der Klasse oder Instanz.
 
 Beispiel: CIM \_ LogicalElement
 
 </dd> </dl>
 
-Mit dem folgenden PowerShell-Code werden die Eigenschaften der [**Win32- \_ Funktion "optionalfeature**](/windows/desktop/CIMWin32Prov/win32-optionalfeature) " abgerufen, die die Systemeigenschaften enthält.
+Der folgende PowerShell-Code ruft die Eigenschaften der [**Win32 \_ OptionalFeature-Klasse**](/windows/desktop/CIMWin32Prov/win32-optionalfeature) ab, die die Systemeigenschaften enthält.
 
 
 ```PowerShell

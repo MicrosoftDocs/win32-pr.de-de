@@ -1,19 +1,19 @@
 ---
-description: Im folgenden Codebeispiel wird ein Ereignishandler für Adress-und Telefongeräte Ereignisse veranschaulicht. Der Code für jedes Ereignis zeigt, wie die Ereignis Schnittstelle erstellt wird und wie die Ereignisdaten abgerufen werden.
+description: Das folgende Codebeispiel veranschaulicht einen Ereignishandler für Adress- und Telefongeräteereignisse. Der Code für jedes Ereignis zeigt, wie die Ereignisschnittstelle erstellt und die Ereignisdaten abgerufen werden.
 ms.assetid: 236d4e7f-865f-4b26-8da6-c86476588c47
-title: Gerätespezifische Ereignisse per Telefon und adressieren
+title: Telefon und Adressen gerätespezifischer Ereignisse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 40cf4c45eb7c7b933a36814f8eba8cd5cc39d8cc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c69a8dd5bd941946d6d4b904e8bc367b9949d6782f350a1e065eb672b2db57ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120034540"
 ---
-# <a name="phone-and-address-device-specific-events"></a>Gerätespezifische Ereignisse per Telefon und adressieren
+# <a name="phone-and-address-device-specific-events"></a>Telefon und Adressen gerätespezifischer Ereignisse
 
-Im folgenden Codebeispiel wird ein Ereignishandler für Adress-und Telefongeräte Ereignisse veranschaulicht. Der Code für jedes Ereignis zeigt, wie die Ereignis Schnittstelle erstellt wird und wie die Ereignisdaten abgerufen werden.
+Das folgende Codebeispiel veranschaulicht einen Ereignishandler für Adress- und Telefongeräteereignisse. Der Code für jedes Ereignis zeigt, wie die Ereignisschnittstelle erstellt und die Ereignisdaten abgerufen werden.
 
 ``` syntax
 HRESULT STDMETHODCALLTYPE CMyEventNotification::Event(

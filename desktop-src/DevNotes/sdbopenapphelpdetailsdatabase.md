@@ -1,7 +1,7 @@
 ---
-description: Öffnet die angegebene AppHelp-Detail Datenbank.
+description: Öffnet die angegebene Apphelp-Detaildatenbank.
 ms.assetid: c3b07c00-a3c6-419c-94c6-34c573a04d6d
-title: Sdbopenapphelpdetailsdatabase-Funktion
+title: SdbOpenApphelpDetailsDatabase-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 2810b0bbe1f10f013f39570aecda448a4ceeea6c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: d6bd0bc7cbd1404c3bcf5459254f53e62a777d0936b89a0f7a282dd8d0094227
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104125623"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120045160"
 ---
-# <a name="sdbopenapphelpdetailsdatabase-function"></a>Sdbopenapphelpdetailsdatabase-Funktion
+# <a name="sdbopenapphelpdetailsdatabase-function"></a>SdbOpenApphelpDetailsDatabase-Funktion
 
-Öffnet die angegebene AppHelp-Detail Datenbank.
+Öffnet die angegebene Apphelp-Detaildatenbank.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ PDB WINAPI SdbOpenApphelpDetailsDatabase(
 
 <dl> <dt>
 
-*pwsdetailsdatabasepath* \[ in, optional\]
+*pwsDetailsDatabasePath* \[ in, optional\]
 </dt> <dd>
 
-Der Daten Bank Pfad. Wenn dieser Parameter **null** ist, wird die lokale Systemdatenbank geöffnet.
+Der Datenbankpfad. Wenn dieser Parameter **NULL** ist, wird die lokale Systemdatenbank geöffnet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt ein Handle für die AppHelp-Detail Datenbank zurück.
+Die Funktion gibt ein Handle für die Apphelp-Detaildatenbank zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Die-Funktion gibt ein Handle für die AppHelp-Detail Datenbank zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 

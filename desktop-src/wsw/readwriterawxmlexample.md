@@ -1,6 +1,6 @@
 ---
 title: ReadWriteRawXmlExample
-description: Dieses Beispiel zeigt das Lesen und Schreiben von XML mithilfe der rohen Codierung.
+description: Dieses Beispiel zeigt das Lesen und Schreiben von XML mithilfe der unformatierten Codierung.
 ms.assetid: e13e6add-f58b-468a-a472-f0aa29d030b3
 keywords:
 - ReadWriteRawXmlExample Windows Web Services-API
@@ -17,7 +17,7 @@ ms.locfileid: "118962999"
 ---
 # <a name="readwriterawxmlexample"></a>ReadWriteRawXmlExample
 
-Dieses Beispiel zeigt das Lesen und Schreiben von XML mithilfe der rohen Codierung.
+Dieses Beispiel zeigt das Lesen und Schreiben von XML mithilfe der unformatierten Codierung.
 
 ## <a name="readwriterawxmlcpp"></a>ReadWriteRawXml.cpp
 

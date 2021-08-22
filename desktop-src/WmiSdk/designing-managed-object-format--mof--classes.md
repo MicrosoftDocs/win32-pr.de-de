@@ -1,8 +1,8 @@
 ---
-description: Ein WMI-Anbieter besteht aus einer Managed Object Format Datei (MOF) und einer DLL-Datei. Die MOF-Datei definiert die Klassen, für die die Anbieter Implementierung Daten bereitstellt.
+description: Ein WMI-Anbieter besteht aus einer MOF-Datei (Managed Object Format) und einer DLL-Datei. Die MOF-Datei definiert die Klassen, für die die Anbieterimplementierungen Daten liefern.
 ms.assetid: 20ef6b88-2aaa-4e86-bc4a-bebc34069672
 ms.tgt_platform: multiple
-title: Entwerfen von Managed Object Format-Klassen (MOF)
+title: Entwerfen von MOF-Klassen (Managed Object Format)
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,73 +10,73 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 201f8c45f7a247fbca5695baa6dd440fc5dc323f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 78e761b5fe0b7eeee80dc3188ba952812fb1d7f0bad963452a23e9073bb34282
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216901"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119374670"
 ---
-# <a name="designing-managed-object-format-mof-classes"></a>Entwerfen von Managed Object Format-Klassen (MOF)
+# <a name="designing-managed-object-format-mof-classes"></a>Entwerfen von MOF-Klassen (Managed Object Format)
 
-Ein [*WMI-Anbieter*](gloss-p.md) besteht aus einer Managed Object Format Datei (MOF) und einer DLL-Datei. Die MOF-Datei definiert die Klassen, für die die Anbieter Implementierung Daten bereitstellt.
+Ein [*WMI-Anbieter*](gloss-p.md) besteht aus einer MOF-Datei (Managed Object Format) und einer DLL-Datei. Die MOF-Datei definiert die Klassen, für die die Anbieterimplementierungen Daten liefern.
 
-Die MOF-Klassendefinitionen werden vom Hilfsprogramm [**Mofcomp**](mofcomp.md) kompiliert und im [*WMI-Repository*](gloss-w.md)gespeichert, das auch als Common Information Model (CIM)-Repository bezeichnet wird. Eine weniger gängige Methode zum Erstellen von Klassen ist die Methode der [com-API für WMI](com-api-for-wmi.md).
+Die MOF-Klassendefinitionen werden vom [**mofcomp-Hilfsprogramm**](mofcomp.md) kompiliert und im [*WMI-Repository*](gloss-w.md)gespeichert, das auch als CIM-Repository (Common Information Model) bezeichnet wird. Eine weniger gängige Methode zum Erstellen von Klassen sind die Methoden der [COM-API für WMI.](com-api-for-wmi.md)
 
 > [!Note]  
-> Um sicherzustellen, dass alle ihre WMI-Klassendefinitionen für verwaltete Objekte im [*WMI-Repository*](gloss-w.md) wieder hergestellt werden, wenn WMI einen Fehler aufweist und neu gestartet wird, verwenden Sie die " [**\# pragma Auto Wiederherstellen**](pragma-autorecover.md) "-Präprozessoranweisung in der MOF-Datei.
+> Um sicherzustellen, dass alle WMI-Klassendefinitionen für verwaltete Objekte im [*WMI-Repository*](gloss-w.md) wiederhergestellt werden, wenn WMI ausfällt und neu gestartet wird, verwenden Sie die Präprozessoranweisung [**\# pragma autorecover**](pragma-autorecover.md) in Ihrer MOF-Datei.
 
  
 
-In diesem Thema werden die folgenden Abschnitte erläutert:
+Die folgenden Abschnitte werden in diesem Thema erläutert:
 
 -   [Definieren der zu verwaltenden Objekte](#defining-the-objects-to-manage)
 -   [Definieren von Eigenschaften oder Methoden](#defining-properties-or-methods)
--   [Beziehung zwischen Objekten](#relating-objects-to-each-other)
+-   [Miteinander in Beziehung stehende Objekte](#relating-objects-to-each-other)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="defining-the-objects-to-manage"></a>Definieren der zu verwaltenden Objekte
 
-Nachdem Sie den Teil Ihres Unternehmens für die Verwaltung identifiziert haben, definieren Sie die zu verwaltenden Objekte. Die Definition muss die erforderlichen Daten enthalten und die genaue Implementierung der relevanten Geschäftsregeln ermöglichen. Sie können Objekte auf granularer Ebene definieren, aber es empfiehlt sich, zwischen der Detailebene zu entscheiden, die in der Definition enthalten ist, und die Notwendigkeit, genügend Details bereitzustellen, um nützlich zu sein. Verknüpfungen können frühzeitig im Prozesszeit sparen, können jedoch in Zukunft zu weiteren Aufgaben führen.
+Nachdem Sie den zu verwaltende Teil Ihres Unternehmens identifiziert haben, definieren Sie die zu verwaltende Objekte. Die Definition muss die erforderlichen Daten enthalten und ihnen ermöglichen, die relevanten Geschäftsregeln genau zu implementieren. Sie können Objekte auf einer präzisen Ebene definieren, aber es ist am besten, zwischen der Detailebene in der Definition und der Notwendigkeit zu entscheiden, genügend Details bereitzustellen, um nützlich zu sein. Verknüpfungen zu einem frühen Zeitpunkt des Prozesses können Zwar Zeit sparen, aber in Zukunft zu mehr Arbeit führen.
 
-Das CIM-Tutorial auf der DMTF-Website (verteilte Verwaltungs Task Force) enthält hervorragende Informationen zum Entwurfsprozess. Weitere Informationen finden Sie unter [www.DMTF.org](https://www.dmtf.org/).
+Das CIM-Tutorial auf der DMTF-Website (Distributed Management Task Force) enthält hervorragende Informationen zum Entwurfsprozess. Weitere Informationen finden Sie unter [www.dmtf.org](https://www.dmtf.org/).
 
-Berücksichtigen Sie die folgenden Faktoren, wenn Sie einen Schema Entwurf entwickeln und implementieren:
+Berücksichtigen Sie beim Entwickeln und Implementieren eines Schemaentwurfs die folgenden Faktoren:
 
 -   Qualifizierer
 
-    Qualifizierer stellen Informationen zum Beschreiben von Klassen, Objekten, Eigenschaften, Methoden und Parametern bereit. und werden auf Klassen-und Eigenschafts Definitionen angewendet. In MOF-Code werden Qualifizierer in eckige Klammern eingeschlossen und können einen Schlüssel oder eine Zuordnung enthalten \[ \] \[ \] . Weitere Informationen finden Sie unter [Hinzufügen von Qualifizierern](adding-a-qualifier.md) und [WMI-Qualifizierern](wmi-qualifiers.md).
+    Qualifizierer bieten Informationen zum Beschreiben von Klassen, Objekten, Eigenschaften, Methoden und Parametern. und werden auf Klassen- und Eigenschaftendefinitionen angewendet. In MOF-Code werden Qualifizierer in eckige Klammern eingeschlossen und können \[ Schlüssel \] oder Zuordnung \[ \] enthalten. Weitere Informationen finden Sie unter [Hinzufügen eines Qualifizierers](adding-a-qualifier.md) und [WMI-Qualifizierer.](wmi-qualifiers.md)
 
 -   Namespace
 
-    Ein Namespace ist eine logische Einheit zum Gruppieren von Klassen und Objekten sowie zum Steuern des Gültigkeits Bereichs und der Sichtbarkeit. In der Regel enthält ein Namespace einen Satz von Klassen und Objekten, die verwaltete Objekte in einer bestimmten Umgebung darstellen. Weitere Informationen finden Sie unter [Erstellen von Hierarchien in WMI](creating-hierarchies-within-wmi.md).
+    Ein Namespace ist eine logische Einheit zum Gruppieren von Klassen und Objekten sowie zum Steuern des Gültigkeitsbereichs und der Sichtbarkeit. In der Regel enthält ein Namespace eine Reihe von Klassen und Objekten, die verwaltete Objekte in einer bestimmten Umgebung darstellen. Weitere Informationen finden Sie unter [Creating Hierarchies Within WMI (Erstellen von Hierarchien innerhalb von WMI).](creating-hierarchies-within-wmi.md)
 
 -   Object
 
-    Ein modelliertes Objekt kann ein physisches oder logisches Element des Schemas sein. Beispielsweise können Sie ein physisches Laufwerk (z. b. ein Festplattenlaufwerk) oder einen logischen Datenträger modellieren, der eine Partition auf einem physischen Datenträger sein kann. Ein Entwurf, der eine Klasse zum Modellieren eines physischen Laufwerks verwendet und dann diese Klasse erweitert, um einen logischen Datenträger zu modellieren, ist erweiterbar als eine Klasse, die versucht, eine separate Klasse für jeden Typ von Datenträger zu erstellen.
+    Ein modelliertes Objekt kann ein physisches oder logisches Element des Schemas sein. Beispielsweise können Sie ein physisches Laufwerk modellieren, z. B. ein Festplattenlaufwerk oder einen logischen Datenträger, der eine Partition auf einem physischen Datenträger sein kann. Ein Entwurf, der eine Klasse zum Modellieren eines physischen Laufwerks verwendet und diese Klasse dann erweitert, um einen logischen Datenträger zu modellieren, ist erweiterbarer als eine, die versucht, für jeden Datenträgertyp eine separate Klasse zu erstellen.
 
 -   Daten
 
-    Die Daten können dynamisch oder statisch sein. Wenn die Daten dynamisch sind, müssen Sie einen Klassen Anbieter dafür erstellen.
+    Daten können dynamisch oder statisch sein. Wenn die Daten dynamisch sind, müssen Sie dafür einen Klassenanbieter erstellen.
 
-    Um dem Benutzer das Ändern von Daten zu ermöglichen, müssen Sie bestimmen, ob eine Eigenschaft nur mit einer vom Benutzer aufgerufenen Methode direkt geschrieben oder geändert werden soll.
+    Damit der Benutzer Daten ändern kann, müssen Sie bestimmen, ob eine Eigenschaft nur mithilfe einer methode, die der Benutzer aufruft, direkt beschreibbar oder änderbar sein soll.
 
 ## <a name="defining-properties-or-methods"></a>Definieren von Eigenschaften oder Methoden
 
-Im Allgemeinen ähnelt eine WMI-Klassen Eigenschaft einer Eigenschaft in einer C++-Klasse. Wenn die einzige Aktion, die der Code für das Datenelement implementiert, den Wert erhält oder den Wert festgelegt wird, sollten die Daten als Eigenschaft der WMI-Klasse definiert werden.
+Im Allgemeinen ähnelt eine WMI-Klasseneigenschaft einer Eigenschaft in einer C++-Klasse. Wenn der Code nur aktionen implementiert, um den Wert abzurufen oder festzulegen, sollten die Daten als Eigenschaft der WMI-Klasse definiert werden.
 
-Eine WMI-Methode führt im Allgemeinen eine Aktion aus, die den Status eines verwalteten Objekts ändert. Wenn beispielsweise die Aktion zum Aktivieren oder Deaktivieren des Vorgangs eines Hardware Objekts dient, ist es wahrscheinlich besser, eine Eigenschaft mit Lese-/Schreibzugriff zu erstellen. Sie können auch eine Eigenschaft erstellen, die den Status der Hardware anzeigt.
+Eine WMI-Methode führt im Allgemeinen eine Aktion aus, die den Zustand eines verwalteten Objekts ändert. Wenn die Aktion z. B. darin besteht, den Betrieb eines Hardwareobjekts zu aktivieren oder zu deaktivieren, ist eine Methode wahrscheinlich dem Erstellen einer Lese-/Schreibeigenschaft vorzuziehen. Sie können auch eine Eigenschaft erstellen, die den Status der Hardware anzeigt.
 
-Wenn Sie eine Klasse oder eine Instanz erstellen, können Sie Kommentare einschließen. Verwenden Sie dieses Verfahren, um Ihre Klasse zu dokumentieren oder Ihre Programmiertechniken zu erläutern. Weitere Informationen finden Sie unter [Erstellen eines Kommentars](creating-a-comment.md). Außerdem können Sie Daten hinzufügen, um den Zweck eines Datenobjekts zu qualifizieren. Weitere Informationen finden Sie unter [Hinzufügen eines Qualifizierers](adding-a-qualifier.md).
+Wenn Sie eine Klasse oder eine Instanz erstellen, können Sie Kommentare einfügen. Verwenden Sie diese Technik, um Ihre Klasse zu dokumentieren oder Ihre Programmiertechniken zu erläutern. Weitere Informationen finden Sie unter [Erstellen eines Kommentars.](creating-a-comment.md) Darüber hinaus können Sie Daten hinzufügen, um den Zweck eines Datenobjekts zu qualifizieren. Weitere Informationen finden Sie unter [Hinzufügen eines Qualifizierers.](adding-a-qualifier.md)
 
-## <a name="relating-objects-to-each-other"></a>Beziehung zwischen Objekten
+## <a name="relating-objects-to-each-other"></a>Miteinander in Beziehung stehende Objekte
 
-Es gibt zwei Möglichkeiten, Objekte miteinander zu verknüpfen: durch Erstellen separater Objekte und eines Zuordnungs Objekts, das Sie miteinander verknüpft, oder durch Einbetten eines Objekts in das andere. CIM bietet keine Unterstützung für eingebettete Objekte. Daher müssen Sie die erste Methode verwenden, um CIM-kompatibel zu sein. WMI unterstützt jedoch eingebettete Objekte. verwenden Sie daher beide Methoden, um eine Beziehung zwischen Objekten darzustellen. Beispiele für eingebettete Objekte finden Sie in den [Win32-Klassen](/windows/desktop/CIMWin32Prov/win32-provider). Beispielsweise verfügt [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) über den eingebetteten Objekt- [**Win32- \_ ACE**](/previous-versions/windows/desktop/secrcw32prov/win32-ace), der über ein anderes eingebettetes Objekt, [**Win32- \_ Treuhänder**](/previous-versions/windows/desktop/secrcw32prov/win32-trustee)verfügt.
+Es gibt zwei Möglichkeiten, Objekte miteinander in Beziehung zu setzen: durch Erstellen separater Objekte und eines Zuordnungsobjekts, das sie verknüpft, oder durch Einbetten eines Objekts in das andere Objekt. CIM unterstützt keine eingebetteten Objekte, daher müssen Sie die erste Methode verwenden, um CIM-kompatibel zu sein. WMI unterstützt jedoch eingebettete Objekte. Verwenden Sie daher beide Methoden, um eine Beziehung zwischen Objekten darzustellen. Beispiele für eingebettete Objekte finden Sie in den [Win32-Klassen.](/windows/desktop/CIMWin32Prov/win32-provider) [**Win32 \_ SecurityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) verfügt beispielsweise über das eingebettete [**Objekt Win32 \_ ACE**](/previous-versions/windows/desktop/secrcw32prov/win32-ace), das ein weiteres eingebettetes Objekt, [**Win32-Vertrauensnehmer, \_**](/previous-versions/windows/desktop/secrcw32prov/win32-trustee)enthält.
 
-Berücksichtigen Sie bei der Entscheidung, wie Beziehungen zwischen Objekten dargestellt werden sollen, Folgendes:
+Berücksichtigen Sie Bei der Entscheidung, wie Beziehungen zwischen Objekten dargestellt werden sollen, Folgendes:
 
--   Wenn eine-Instanz selbst nützlich ist, funktioniert eine Zuordnung am besten. Beispielsweise [**Win32- \_ Prozess**](/windows/desktop/CIMWin32Prov/win32-process) und [**Win32- \_ Benutzerkonto**](/windows/desktop/CIMWin32Prov/win32-useraccount). Weitere Informationen finden Sie unter [Deklarieren einer Association-Klasse](declaring-an-association-class.md).
--   Wenn eine Instanz nicht außerhalb des übergeordneten Objekts vorhanden ist, funktioniert ein eingebettetes Objekt am besten. Beispielsweise [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) und [**Win32 \_ ACE**](/previous-versions/windows/desktop/secrcw32prov/win32-ace). Weitere Informationen finden Sie unter [Einbetten von Objekten in einer Klasse](embedded-objects.md).
+-   Wenn eine Instanz allein nützlich ist, funktioniert eine Zuordnung am besten. Beispiel: [**Win32 \_ Process**](/windows/desktop/CIMWin32Prov/win32-process) und [**Win32 \_ UserAccount.**](/windows/desktop/CIMWin32Prov/win32-useraccount) Weitere Informationen finden Sie unter [Deklarieren einer Zuordnungsklasse.](declaring-an-association-class.md)
+-   Wenn eine Instanz außerhalb des übergeordneten Objekts nicht vorhanden ist, funktioniert ein eingebettetes Objekt am besten. Beispielsweise [**Win32 \_ SecurityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) und [**Win32 \_ ACE**](/previous-versions/windows/desktop/secrcw32prov/win32-ace). Weitere Informationen finden Sie unter [Einbetten von Objekten in eine Klasse.](embedded-objects.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

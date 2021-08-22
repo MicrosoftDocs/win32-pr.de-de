@@ -1,9 +1,9 @@
 ---
-title: DRV_OPEN Meldung (MMSYSTEM. h)
-description: Weist den Treiber an, eine neue-Instanz zu öffnen.
+title: DRV_OPEN Meldung (Mmsystem.h)
+description: Weist den Treiber an, eine neue Instanz zu öffnen.
 ms.assetid: 6b5e21e3-dc29-4f0f-84cb-bd2d2e3c54e9
 keywords:
-- DRV_OPEN-Nachricht (Multimedia)
+- DRV_OPEN nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,56 +14,56 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 53c56e62cb85f09a3846c6d95d723b9fa05d95a7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 537d3067c85cf3f92eaf2fae81cd392490ff9fa728ed8377d8241c7204cf64e1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106221"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119691580"
 ---
-# <a name="drv_open-message"></a>DRV- \_ Open-Nachricht
+# <a name="drv_open-message"></a>DRV \_ OPEN-Nachricht
 
-Weist den Treiber an, eine neue-Instanz zu öffnen.
+Weist den Treiber an, eine neue Instanz zu öffnen.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-<span id="dwDriverId"></span><span id="dwdriverid"></span><span id="DWDRIVERID"></span>*dwdriverid*
+<span id="dwDriverId"></span><span id="dwdriverid"></span><span id="DWDRIVERID"></span>*dwDriverId*
 </dt> <dd>
 
-Der Bezeichner des installierbaren Treibers.
+Bezeichner des installierbaren Treibers.
 
 </dd> <dt>
 
 <span id="hdrvr"></span><span id="HDRVR"></span>*hdrvr*
 </dt> <dd>
 
-Handle der installierbaren Treiber Instanz.
+Handle der installierbaren Treiberinstanz.
 
 </dd> <dt>
 
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-Adresse einer null-terminierten Zeichenfolge mit breit Zeichen, die Konfigurationsinformationen angibt, die zum Öffnen der-Instanz verwendet werden. Wenn keine Konfigurationsinformationen verfügbar sind, ist entweder diese Zeichenfolge leer, oder der-Parameter ist **null**.
+Adresse einer auf NULL endenden Zeichenfolge mit Breitzeichen, die Konfigurationsinformationen angibt, die zum Öffnen der Instanz verwendet werden. Wenn keine Konfigurationsinformationen verfügbar sind, ist diese Zeichenfolge entweder leer, oder der Parameter ist **NULL.**
 
 </dd> <dt>
 
 <span id="lParam2"></span><span id="lparam2"></span><span id="LPARAM2"></span>*lParam2*
 </dt> <dd>
 
-32-Bit-Treiber spezifische Daten.
+32-Bit-Treiberspezifische Daten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, wenn erfolgreich, andernfalls NULL.
+Gibt einen Wert ungleich 0 (null) zurück, wenn erfolgreich oder 0 (null) andernfalls .
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Treiber einen Wert ungleich 0 (null) zurückgibt, verwendet das System diesen Wert als Treiber Bezeichner (den *dwdriverid* -Parameter) in Nachrichten, die er anschließend an die Treiber Instanz sendet. Der Treiber kann jeden Werttyp als Bezeichner zurückgeben. Einige Treiber geben z. b. Speicheradressen zurück, die auf instanzspezifische Informationen verweisen. Die Verwendung dieser Methode zum Angeben von bezeichern für eine Treiber Instanz ermöglicht den Treibern den Zugriff auf die Informationen, während diese Nachrichten verarbeiten.
+Wenn der Treiber einen Wert ungleich 0 (null) zurückgibt, verwendet das System diesen Wert als Treiberbezeichner *(dwDriverId-Parameter)* in Nachrichten, die es anschließend an die Treiberinstanz sendet. Der Treiber kann einen beliebigen Werttyp als Bezeichner zurückgeben. Einige Treiber geben beispielsweise Speicheradressen zurück, die auf instanzspezifische Informationen verweisen. Wenn Sie diese Methode zum Angeben von Bezeichnern für eine Treiberinstanz verwenden, können die Treiber während der Verarbeitung von Nachrichten auf die Informationen zugreifen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,7 +73,7 @@ Wenn der Treiber einen Wert ungleich 0 (null) zurückgibt, verwendet das System 
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -84,7 +84,7 @@ Wenn der Treiber einen Wert ungleich 0 (null) zurückgibt, verwendet das System 
 [Installierbare Treiber](installable-drivers.md)
 </dt> <dt>
 
-[Installierbare Treiber Meldungen](installable-driver-messages.md)
+[Installierbare Treibermeldungen](installable-driver-messages.md)
 </dt> </dl>
 
  

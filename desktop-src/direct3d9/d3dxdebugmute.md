@@ -1,7 +1,7 @@
 ---
-description: Schaltet alle D3DX-Debugausgaben ein bzw. aus.
+description: Aktiviert oder deaktiviert alle D3DX-Debugausgabe.
 ms.assetid: e35cbfd2-401e-47ec-9f5b-e2ed63ea1fcd
-title: D3DXDebugMute-Funktion (D3dx9core. h)
+title: D3DXDebugMute-Funktion (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 9259fa43a6a64829e42cbaa661aa7223a958f22d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c2bde5446e6e41568c1f9d6aa8408dacc276ab82112a176cf8a038536dd4d992
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219519"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119045078"
 ---
 # <a name="d3dxdebugmute-function"></a>D3DXDebugMute-Funktion
 
-Schaltet alle D3DX-Debugausgaben ein bzw. aus.
+Aktiviert oder deaktiviert alle D3DX-Debugausgabe.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,20 +40,20 @@ BOOL D3DXDebugMute(
 
 <dl> <dt>
 
-*Stumm schalten* \[ in\]
+*Stummschalten* \[ In\]
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-**True** gibt an, dass die Debugger-Ausgabe angehalten wird. **false** gibt an, dass die Debugausgabe aktiviert ist.
+True **gibt an,** dass die Debuggerausgabe angehalten wird. false **gibt an,** dass die Debugausgabe aktiviert ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Gibt den vorherigen Wert von "stumm" zurück.
+Gibt den vorherigen Wert von Mute zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Gibt den vorherigen Wert von "stumm" zurück.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -70,7 +70,7 @@ Gibt den vorherigen Wert von "stumm" zurück.
 
 <dl> <dt>
 
-[Universell Funktionen](dx9-graphics-reference-d3dx-functions-general-purpose.md)
+[Universell Functions](dx9-graphics-reference-d3dx-functions-general-purpose.md)
 </dt> </dl>
 
  

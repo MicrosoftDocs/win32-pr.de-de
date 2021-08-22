@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 0771bb1dffc006abf8e02e6c391278f7d0b03f11
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e4ebba4d72b7bc79f2aaefccfa2d71e57abd82aa06efb09abc2e83cebdb513f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108084228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033530"
 ---
 # <a name="csymboltype-simple-type-performance-counters"></a>Einfacher CSymbolType-Typ (Leistungsindikatoren)
 
@@ -34,20 +34,20 @@ Definiert einen gültigen C/C++-Symbolnamen.
 
 ## <a name="patterns"></a>Muster
 
-Der einfache **CSymbolType-Typ** ist eine **xs:string-Zeichenfolge,** die durch das folgende Muster eingeschränkt ist:
+Der **einfache CSymbolType-Typ** ist ein **xs:string-Objekt,** das durch das folgende Muster eingeschränkt ist:
 
 -   `()|([_a-zA-Z][_0-9a-zA-Z]*)`
 
-    Der Symbolname kann leer sein oder alphanumerische Zeichen und Unterstriche enthalten. Wenn Sie einen Namen angeben, muss der Name mit einem Unterstrich \_ () oder einem alphabetischen Zeichen beginnen.
+    Der Symbolname kann leer sein oder alphanumerische Zeichen und Unterstriche enthalten. Wenn Sie einen Namen angeben, muss der Name mit einem Unterstrich ( ) oder einem \_ alphabetischen Zeichen beginnen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

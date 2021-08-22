@@ -1,9 +1,9 @@
 ---
-title: Pxeproviderinitialize-Rückruffunktion
-description: Ein Export aus einer Anbieter-DLL (Dynamic Link Library), mit der der Anbieter initialisiert und für den Empfang von Client Anforderungen vorbereitet wird.
+title: PxeProviderInitialize-Rückruffunktion
+description: Ein Export aus einer Anbieter-DLL (Dynamic Link Library), die den Anbieter initialisiert und für den Empfang von Clientanforderungen vorbereitet.
 ms.assetid: 433b051c-9fde-4589-92e2-58d3774826ac
 keywords:
-- Pxeproviderinitialize-Rückruffunktion Windows-Bereitstellungs Dienste
+- PxeProviderInitialize-Rückruffunktion Windows Bereitstellungsdienste
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2b8d8fed4c1cc91c2090b957894b4f6641adad32
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6eb7ba32049dc3ef70085a489b499d90b92ec6155323b650df0e2b2f839bbdf9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120098660"
 ---
-# <a name="pxeproviderinitialize-callback-function"></a>Pxeproviderinitialize-Rückruffunktion
+# <a name="pxeproviderinitialize-callback-function"></a>PxeProviderInitialize-Rückruffunktion
 
-Ein Export aus einer Anbieter-DLL (Dynamic Link Library), mit der der Anbieter initialisiert und für den Empfang von Client Anforderungen vorbereitet wird. Anbieter müssen die *pxeproviderinitialize* -Funktion exportieren. Alle Rückrufe für den Anbieter müssen bei der Verarbeitung von *pxeproviderinitialize* mit einem Aufruf der [**pxeregistercallback**](/windows/desktop/api/WdsPxe/nf-wdspxe-pxeregistercallback) -Funktion registriert werden. Bei der Rückgabe dieser Funktion muss der Anbieter vollständig initialisiert und bereit sein, Client Anforderungen zu verarbeiten.
+Ein Export aus einer Anbieter-DLL (Dynamic Link Library), die den Anbieter initialisiert und für den Empfang von Clientanforderungen vorbereitet. Anbieter sind erforderlich, um die *PxeProviderInitialize-Funktion* zu exportieren. Alle Rückrufe an den Anbieter müssen während der Verarbeitung von *PxeProviderInitialize* mit einem Aufruf der [**PxeRegisterCallback-Funktion**](/windows/desktop/api/WdsPxe/nf-wdspxe-pxeregistercallback) registriert werden. Bei der Rückgabe dieser Funktion muss der Anbieter vollständig initialisiert und für die Verarbeitung von Clientanforderungen bereit sein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ DWORD PXEAPI PxeProviderInitialize(
 
 <dl> <dt>
 
-*hprovider* \[ in\]
+*hProvider* \[ In\]
 </dt> <dd>
 
-Handle für die Anbieter Instanz. Dieses Handle muss vom Anbieter gespeichert und bei nachfolgenden Aufrufen verwendet werden. Dieses Handle ist gültig, bis die Rückruffunktion [*pxeprovidershutdown*](pxeprovidershutdown.md) aufgerufen wird.
+Handle für die Anbieterinstanz. Dieses Handle muss vom Anbieter gespeichert und in allen nachfolgenden Aufrufen verwendet werden. Dieses Handle ist gültig, bis die [*Rückruffunktion PxeProviderShutdown*](pxeprovidershutdown.md) aufgerufen wird.
 
 </dd> <dt>
 
-*hproviderkey* \[ in\]
+*hProviderKey* \[ In\]
 </dt> <dd>
 
-Handle für einen Registrierungsschlüssel, in dem Anbieter Konfigurationsinformationen gespeichert werden sollen.
+Handle für einen Registrierungsschlüssel, in dem Anbieterkonfigurationsinformationen gespeichert werden sollen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Anbieter Initialisierung erfolgreich ist, sollte der Rückruf einen **Fehler \_ Erfolg** zurückgeben. Im Falle eines Fehlers sollte ein entsprechender Fehlercode zurückgegeben werden.
+Wenn die Anbieterinitialisierung erfolgreich ist, sollte der Rückruf **ERROR \_ SUCCESS** zurückgeben. Im Falle eines Fehlers sollte ein geeigneter Fehlercode zurückgegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,7 +65,7 @@ Wenn die Anbieter Initialisierung erfolgreich ist, sollte der Rückruf einen **F
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008, Windows Server 2003 mit SP2 \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008, Windows Server 2003 mit \[ nur SP2-Desktop-Apps\]<br/> |
 
 
 
@@ -73,10 +73,10 @@ Wenn die Anbieter Initialisierung erfolgreich ist, sollte der Rückruf einen **F
 
 <dl> <dt>
 
-[Server Funktionen der Windows-Bereitstellungs Dienste](windows-deployment-services-server-functions.md)
+[Windows Serverfunktionen für Bereitstellungsdienste](windows-deployment-services-server-functions.md)
 </dt> <dt>
 
-[*Pxeprovidershutdown*](pxeprovidershutdown.md)
+[*PxeProviderShutdown*](pxeprovidershutdown.md)
 </dt> </dl>
 
  

@@ -1,39 +1,39 @@
 ---
-title: Enumerationshilfsobjekte
-description: Es gibt drei enumeratorhilfsfunktionen, die von C/C++ verwendet werden können, um die Navigation von Active Directory-Objekten zu unterstützen. Dabei handelt es sich um ADsBuildEnumerator, adsenumeratenext und adsfreenumerator.
+title: Enumerationshilfsfunktionen
+description: Es gibt drei Enumeratorhilfsfunktionen, die von C/C++ verwendet werden können, um die Navigation von Active Directory-Objekten zu unterstützen. Dabei handelt es sich um ADsBuildEnumerator, ADsEnumerateNext und ADsFreeEnumerator.
 ms.assetid: 019958c8-5bf5-45eb-871c-796ff3750cdc
 ms.tgt_platform: multiple
 keywords:
-- Adsbuildenumschlag ADSI, using
-- Adseneneratenext ADSI, using
-- Adsfreenumerator ADSI, using
-- ADSI ADSI, Beispielcode C/C++, mit ADsBuildEnumerator adsenumeratenext und adsfreenumerator
+- ADsBuildEnumerator ADSI mit
+- ADsEnumerateNext ADSI mit
+- ADsFreeEnumerator ADSI mit
+- ADSI ADSI, Beispielcode C/C++ mit ADsBuildEnumerator ADsEnumerateNext und ADsFreeEnumerator
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: af9597787202adf183435262eab9341957e19457
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: c110fbc4fddd420bf8205d6c2d894c7d4f4daf8287312c2d0d86002f5520310b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104102338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082654"
 ---
-# <a name="enumeration-helper-functions"></a>Enumerationshilfsobjekte
+# <a name="enumeration-helper-functions"></a>Enumerationshilfsfunktionen
 
-Es gibt drei enumeratorhilfsfunktionen, die von C/C++ verwendet werden können, um die Navigation von Active Directory-Objekten zu unterstützen. Dabei handelt es sich um [**ADsBuildEnumerator**](/windows/desktop/api/Adshlp/nf-adshlp-adsbuildenumerator), [**adsenumeratenext**](/windows/desktop/api/Adshlp/nf-adshlp-adsenumeratenext)und [**adsfreenumerator**](/windows/desktop/api/Adshlp/nf-adshlp-adsfreeenumerator).
+Es gibt drei Enumeratorhilfsfunktionen, die von C/C++ verwendet werden können, um die Navigation von Active Directory-Objekten zu unterstützen. Dabei handelt [**es sich um ADsBuildEnumerator,**](/windows/desktop/api/Adshlp/nf-adshlp-adsbuildenumerator) [**ADsEnumerateNext**](/windows/desktop/api/Adshlp/nf-adshlp-adsenumeratenext)und [**ADsFreeEnumerator.**](/windows/desktop/api/Adshlp/nf-adshlp-adsfreeenumerator)
 
-## <a name="adsbuildenumerator"></a>Adsbuildenzuerator
+## <a name="adsbuildenumerator"></a>ADsBuildEnumerator
 
-Die [**ADsBuildEnumerator**](/windows/desktop/api/Adshlp/nf-adshlp-adsbuildenumerator) -Hilfsfunktion kapselt den Code, der zum Erstellen eines Enumeratorobjekts erforderlich ist. Die [**IADsContainer:: get \_ \_ NewEnum**](/windows/desktop/api/Iads/nf-iads-iadscontainer-get__newenum) -Methode wird aufgerufen, um ein Enumeratorobjekt zu erstellen, und anschließend wird die [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Methode von [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) aufgerufen, um einen Zeiger auf die [**IEnumVARIANT**](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) -Schnittstelle für dieses Objekt zu erhalten. Das Enumerationsobjekt ist der Automatisierungs Mechanismus zum Aufzählen von Containern. Verwenden Sie die [**adsfreenumerator**](/windows/desktop/api/Adshlp/nf-adshlp-adsfreeenumerator) -Funktion, um dieses Enumeratorobjekt freizugeben.
+Die [**Hilfsfunktion ADsBuildEnumerator**](/windows/desktop/api/Adshlp/nf-adshlp-adsbuildenumerator) kapselt den Code, der zum Erstellen eines Enumeratorobjekts erforderlich ist. Sie ruft die [**IADsContainer::get \_ \_ NewEnum-Methode**](/windows/desktop/api/Iads/nf-iads-iadscontainer-get__newenum) auf, um ein Enumeratorobjekt zu erstellen, und ruft dann die [**QueryInterface-Methode**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) von [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) auf, um einen Zeiger auf die [**IEnumVARIANT-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) für dieses Objekt abzurufen. Das Enumerationsobjekt ist der Automatisierungsmechanismus zum Aufzählen von Containern. Verwenden Sie die [**ADsFreeEnumerator-Funktion,**](/windows/desktop/api/Adshlp/nf-adshlp-adsfreeenumerator) um dieses Enumeratorobjekt freizugeben.
 
-## <a name="adsenumeratenext"></a>Adsenzueratenext
+## <a name="adsenumeratenext"></a>ADsEnumerateNext
 
-Die Hilfsfunktion [**adsenumeratenext**](/windows/desktop/api/Adshlp/nf-adshlp-adsenumeratenext) füllt ein Variant-Array mit Elementen, die aus einem Enumeratorobjekt abgerufen werden. Die Anzahl der abgerufenen Elemente kann kleiner sein als die angeforderte Anzahl.
+Die [**Hilfsfunktion ADsEnumerateNext**](/windows/desktop/api/Adshlp/nf-adshlp-adsenumeratenext) füllt ein VARIANT-Array mit Elementen auf, die aus einem Enumeratorobjekt abgerufen werden. Die Anzahl der abgerufenen Elemente kann kleiner als die angeforderte Anzahl sein.
 
-## <a name="adsfreeenumerator"></a>Adsfreenumerator
+## <a name="adsfreeenumerator"></a>ADsFreeEnumerator
 
-Gibt ein Enumeratorobjekt frei, das zuvor über die [**ADsBuildEnumerator**](/windows/desktop/api/Adshlp/nf-adshlp-adsbuildenumerator) -Funktion erstellt wurde.
+Gibt ein Enumeratorobjekt frei, das zuvor über die [**ADsBuildEnumerator-Funktion**](/windows/desktop/api/Adshlp/nf-adshlp-adsbuildenumerator) erstellt wurde.
 
-Das folgende Codebeispiel zeigt eine Funktion, die enumeratorhilfsobjekte in C++ verwendet.
+Das folgende Codebeispiel zeigt eine Funktion, die Enumeratorhilfsfunktionen in C++ verwendet.
 
 
 ```C++
@@ -145,6 +145,6 @@ exitpoint:
 
 
 
- 
+ 
 
- 
+ 

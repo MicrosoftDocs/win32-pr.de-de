@@ -1,29 +1,29 @@
 ---
-title: Auswirkung der Verschiebungs Zuordnung
-description: Verwenden Sie den Verschiebungs Zuordnungs Effekt, um die Pixel des Eingabe Bilds anhand der Intensität der Werte eines zweiten Eingabe Bilds zu übertragen.
+title: Effekt der Verschiebungszuordnung
+description: Verwenden Sie den Verschiebungszuordnungseffekt, um die Pixel des Eingabebilds durch die Intensitätswerte eines zweiten Eingabebilds zu verfängigen.
 ms.assetid: 07AA64B1-B570-428E-924F-D7DF3E4DB3F8
 keywords:
-- Auswirkung der Verschiebungs Zuordnung
+- Verschiebungszuordnungseffekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bd0ad2deb0c584ccc9c55faebd60f803d66efa42
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 73888d8168e411bf0f8daee1f2e04801353ee8358d27ba4d5cc9b1f71630a762
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102951"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119833014"
 ---
-# <a name="displacement-map-effect"></a>Auswirkung der Verschiebungs Zuordnung
+# <a name="displacement-map-effect"></a>Effekt der Verschiebungszuordnung
 
-Verwenden Sie den Verschiebungs Zuordnungs Effekt, um die Pixel des Eingabe Bilds anhand der Intensität der Werte eines zweiten Eingabe Bilds zu übertragen.
+Verwenden Sie den Verschiebungszuordnungseffekt, um die Pixel des Eingabebilds durch die Intensitätswerte eines zweiten Eingabebilds zu verfängigen.
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1DisplacementMap.
 
--   [Beispiel Bild](#example-image)
--   [Effekt Eigenschaften](#effect-properties)
+-   [Beispielbild](#example-image)
+-   [Effect-Eigenschaften](#effect-properties)
 -   [Farbkanäle](#color-channels)
--   [Ausgabe Bitmap](#output-bitmap)
--   [Anforderungen](#requirements)
+-   [Ausgabebitmap](#output-bitmap)
+-   [Requirements](#requirements)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="example-image"></a>Beispielbild
@@ -33,7 +33,7 @@ Die CLSID für diesen Effekt ist CLSID \_ D2D1DisplacementMap.
 | Vorher                                                           |
 |------------------------------------------------------------------|
 | ![das Bild vor dem Effekt.](images/default-before.jpg)       |
-| Nach                                                            |
+| Danach                                                            |
 | ![das Bild nach der Transformation.](images/19-displacementmap.png) |
 
 
@@ -61,30 +61,30 @@ m_d2dContext->EndDraw();
 
 
 
-Die Speicherorte der Pixel in der Ausgabe werden mithilfe der folgenden Formel bestimmt:
+Die Positionen der Pixel in der Ausgabe werden mithilfe dieser Formel bestimmt:
 
-C ' (x, y) = c (x + Skala \* (xchannelselector (Verschiebungs Bitmap (x, y))-0,5), y + Skala \* (ychannelselector (Verschiebungs Bitmap (x, y))-0,5))
+C' (x,y)=C(x+ scale \* (XChannelSelector(Bitmap für Verschiebung (x,y))-0,5),y+ scale \* (YChannelSelector(Bitmap für Verschiebung (x,y))-0.5))
 
-Hierbei gilt:<dl> *C (x, y)* ist das Ausgabe Pixel bei (x, y).  
-*C (x, y)* ist das Eingabe Pixel bei (x, y).  
-Die *Verschiebungs Bitmap (x, y)* ist die Verschiebungs Pixel Intensität an den angegebenen Koordinaten.  
-*Xchannelselector* die Intensität des ausgewählten RGBA-Kanals aus der Verschiebungs Bitmap, die das Eingabebild in der X-Richtung verschiebt.  
-*Ychannelselector* die Intensität des ausgewählten RGBA-Kanals aus der Verschiebungs Bitmap, die das Eingabebild in der Y-Richtung verschiebt.  
+Hierbei gilt:<dl> *C (x, y)* ist das Ausgabepixel bei (x, y).  
+*C (x, y)* ist das Eingabepixel bei (x, y).  
+*Verschiebungsbitmap (x, y)* ist die Intensität des Verschiebungspixels an den angegebenen Koordinaten.  
+*XChannelSelector die* Intensität des ausgewählten RGBA-Kanals aus der Verschiebungsbitmap, die das Eingabebild in X-Richtung zurückdrängt.  
+*YChannelSelector die* Intensität des ausgewählten RGBA-Kanals aus der Verschiebungsbitmap, die das Eingabebild in Y-Richtung zurückdrängt.  
 </dl>
 
-Der Effekt zeigt das Eingabebild anhand der Skalierungs Eigenschaft und der Intensität des Verschiebungs Bilds neu an. Sie verwendet die bilineare interpolung, wenn eine Stichprobenentnahme zwischen Pixeln im Eingabebild erfolgt.
+Der Effekt verwendet das Eingabebild entsprechend der Skalierungseigenschaft und der Intensität des Verschiebungsbilds neu. Sie verwendet die bilineare Interpolation, wenn die Stichprobenentnahme zwischen Pixeln im Eingabebild durchgeführt wird.
 
-Dieser Effekt kann bei geraden und vorab multiplizierten Alpha Bildern verwendet werden. Das Alpha Format der Ausgabe ist mit dem Eingabeformat identisch.
+Dieser Effekt funktioniert bei geraden und prämultipliierten Alphabildern. Das Ausgabe alpha-Format ist mit dem Eingabeformat identisch.
 
-## <a name="effect-properties"></a>Effekt Eigenschaften
+## <a name="effect-properties"></a>Effect-Eigenschaften
 
 
 
-| Anzeige Name und indexenumeration                                                   | Typ und Standardwert                                                   | BESCHREIBUNG                                                                                                                                                                               |
+| Anzeigename und Indexenumeration                                                   | Typ und Standardwert                                                   | BESCHREIBUNG                                                                                                                                                                               |
 |--------------------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Skalieren<br/> D2D1 \_ Verschiebungen der Verschiebungen \_ \_<br/>                       | GLEITKOMMAZAHL<br/> 0,0 f<br/>                                         | Multipliziert die Intensität des ausgewählten Kanals vom Verschiebungs Bild. Je höher Sie diese Eigenschaft festlegen, desto mehr werden die Pixel durch die Auswirkung verlagert.<br/>                       |
-| Xchannelselect<br/> D2D1 \_ Verschiebungen in der \_ X- \_ Kanal-Prop \_ \_ auswählen<br/> | D2D1 \_ - \_ kanalselektor<br/> D2D1 \_ \_ kanalselektor \_ A<br/> | Der Effekt extrahiert die Intensität aus diesem Farbkanal und verwendet diese, um das Bild in der X-Richtung räumlich zu verzahnen. Weitere Informationen finden Sie unter [Color Channels](#color-channels) .<br/> |
-| Ychannelselect<br/> D2D1 \_ Verschiebungen der Zuordnung für \_ Y- \_ \_ Kanal \_ auswählen<br/> | D2D1 \_ - \_ kanalselektor<br/> D2D1 \_ \_ kanalselektor \_ A<br/> | Der Effekt extrahiert die Intensität aus diesem Farbkanal und verwendet diese, um das Bild in der Y-Richtung räumlich zu verzahnen. Weitere Informationen finden Sie unter [Color Channels](#color-channels) .<br/> |
+| Skalieren<br/> D2D1– \_ \_ VERLAGERUNGMAP–PROP-SKALIERUNG \_<br/>                       | GLEITKOMMAZAHL<br/> 0,0f<br/>                                         | Multipliziert die Intensität des ausgewählten Kanals mit dem Verschiebungsbild. Je höher Sie diese Eigenschaft festlegen, desto stärker wirkt sich der Effekt auf die Pixel aus.<br/>                       |
+| XChannelSelect<br/> D2D1 \_ – VERLAGERUNGMAP \_ PROP X KANAL \_ \_ \_ AUSWÄHLEN<br/> | \_D2D1-KANALAUSWAHL \_<br/> \_D2D1-KANALAUSWAHL \_ \_ A<br/> | Der Effekt extrahiert die Intensität aus diesem Farbkanal und verwendet sie, um das Bild räumlich in X-Richtung zu überdrängen. Weitere [Informationen finden Sie unter](#color-channels) Farbkanäle.<br/> |
+| YChannelSelect<br/> D2D1– \_ 2D1 – PROP \_ \_ \_ Y-KANAL – \_ AUSWÄHLEN<br/> | \_D2D1-KANALAUSWAHL \_<br/> \_D2D1-KANALAUSWAHL \_ \_ A<br/> | Der Effekt extrahiert die Intensität aus diesem Farbkanal und verwendet sie, um das Bild räumlich in Y-Richtung zu überdrängen. Weitere [Informationen finden Sie unter](#color-channels) Farbkanäle.<br/> |
 
 
 
@@ -96,22 +96,22 @@ Dieser Effekt kann bei geraden und vorab multiplizierten Alpha Bildern verwendet
 
 | Enumeration                | Beschreibung                                                      |
 |----------------------------|------------------------------------------------------------------|
-| D2D1 \_ - \_ kanalselektor \_ R | Der Effekt extrahiert die Intensität der Ausgabe des roten Kanals.   |
-| D2D1 \_ Kanal \_ Auswahl \_ G | Der Effekt extrahiert die Intensität der Ausgabe aus dem grünen Kanal. |
-| D2D1 \_ - \_ kanalselektor \_ B | Der Effekt extrahiert die Intensität der Ausgabe aus dem blauen Kanal.  |
-| D2D1 \_ \_ kanalselektor \_ A | Der Effekt extrahiert die Intensität der Ausgabe aus dem Alphakanal. |
+| \_D2D1-KANALAUSWAHL \_ \_ R | Der Effekt extrahiert die Intensitätsausgabe aus dem roten Kanal.   |
+| \_D2D1-KANALAUSWAHL \_ \_ G | Der Effekt extrahiert die Intensitätsausgabe aus dem grünen Kanal. |
+| \_D2D1-KANALAUSWAHL \_ \_ B | Der Effekt extrahiert die Intensitätsausgabe aus dem blauen Kanal.  |
+| \_D2D1-KANALAUSWAHL \_ \_ A | Der Effekt extrahiert die Intensitätsausgabe aus dem Alphakanal. |
 
 
 
  
 
-## <a name="output-bitmap"></a>Ausgabe Bitmap
+## <a name="output-bitmap"></a>Ausgabebitmap
 
-Sie können die maximale Größe der Ausgabe Bitmap mit den folgenden Gleichungen ermitteln:
+Sie können die maximale Größe der Ausgabebitmap mit den folgenden Gleichungen bestimmen:
 
-Ausgabe Bitmap? Pixel = (Eingabe Bitmapgröße?) ( Dips) + Skalierung \* (Benutzer dpi/96)
+Ausgabebitmap? Pixels=(Input Bitmap Size?( DIPs)+Scale) \* (Benutzer-DPI/96)
 
-Ausgabe Bitmap<sub>y</sub> Pixel = (Eingabe Bitmapgröße<sub>y</sub>(Dips) + Skala) \* (Benutzer dpi/96)
+<sub>Ausgabebitmap y</sub> Pixels=(Input Bitmap Size<sub>y</sub>(DIPs) + Scale) \* (User DPI/96)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -119,10 +119,10 @@ Ausgabe Bitmap<sub>y</sub> Pixel = (Eingabe Bitmapgröße<sub>y</sub>(Dips) + Sk
 
 | Anforderung | Wert |
 |--------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Header                   | d2d1effects. h                                                                      |
-| Bibliothek                  | d2d1. lib, dxguid. lib                                                               |
+| Unterstützte Mindestversion (Client) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Header                   | d2d1effects.h                                                                      |
+| Bibliothek                  | d2d1.lib, dxguid.lib                                                               |
 
 
 

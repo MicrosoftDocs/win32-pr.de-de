@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_TblInfo-Enumeration'
-title: JET_TblInfo-Enumeration
+description: 'Weitere Informationen finden Sie unter: JET_TblInfo Enumeration'
+title: JET_TblInfo Enumeration
 TOCTitle: JET_TblInfo enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_TblInfo
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_tblinfo(v=EXCHG.10)
@@ -40,19 +40,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ad43dcecf65fdc9fb8dd53bdf686a077e6bdfa8a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b2af9bfd69f81b518eba42f435a457c9baaa0d0ce8ddbac1424b997329a3ef0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832680"
 ---
-# <a name="jet_tblinfo-enumeration"></a>JET_TblInfo-Enumeration
+# <a name="jet_tblinfo-enumeration"></a>JET_TblInfo Enumeration
 
-Informationsebenen zum Abrufen von Tabellen Informationen mit jetgettableinfo.
+Infoebenen zum Abrufen von Tabelleninformationen mit JetGetTableInfo.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -81,42 +81,42 @@ public enum JET_TblInfo
 <tr class="odd">
 <td></td>
 <td>Standard</td>
-<td>Standardoption Ruft ein <a href="dn335219(v=exchg.10).md">JET_OBJECTINFO</a> ab, das Informationen zur Tabelle enthält. Verwenden Sie diese Option mit <a href="dn292198(v=exchg.10).md">jetgettableinfo (JET_SESID, JET_TABLEID, JET_OBJECTINFO, JET_TblInfo)</a>.</td>
+<td>Standardoption Ruft einen <a href="dn335219(v=exchg.10).md">-JET_OBJECTINFO,</a> der Informationen über die Tabelle enthält. Verwenden Sie diese Option <a href="dn292198(v=exchg.10).md">mit JetGetTableInfo(JET_SESID, JET_TABLEID, JET_OBJECTINFO, JET_TblInfo).</a></td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Name</td>
-<td>Ruft den Namen der Tabelle ab. Verwenden Sie diese Option mit <a href="dn292204(v=exchg.10).md">jetgettableinfo (JET_SESID, JET_TABLEID, String, JET_TblInfo)</a>.</td>
+<td>Ruft den Namen der Tabelle ab. Verwenden Sie diese Option <a href="dn292204(v=exchg.10).md">mit JetGetTableInfo(JET_SESID, JET_TABLEID, String, JET_TblInfo).</a></td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>Dbid</td>
-<td>Ruft den <a href="hh596176(v=exchg.10).md">JET_DBID</a> der Datenbank ab, die die Tabelle enthält. Verwenden Sie diese Option mit <a href="dn292197(v=exchg.10).md">jetgettableinfo (JET_SESID, JET_TABLEID, JET_DBID, JET_TblInfo)</a>.</td>
+<td>Ruft die <a href="hh596176(v=exchg.10).md">JET_DBID</a> der Datenbank ab, die die Tabelle enthält. Verwenden Sie diese Option <a href="dn292197(v=exchg.10).md">mit JetGetTableInfo(JET_SESID, JET_TABLEID, JET_DBID, JET_TblInfo).</a></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Spaceusage</td>
-<td>Das Verhalten der-Methode hängt von der Größe des Arrays ab, das an die-Methode weitergegeben wird. Das Array muss mindestens zwei Einträge enthalten. Der erste Eintrag enthält die Anzahl der im Besitz befindlichen Blöcke in der Tabelle. Der zweite Eintrag enthält die Anzahl der verfügbaren Blöcke in der Tabelle. Wenn das Array mehr als zwei Einträge enthält, bestehen die verbleibenden Bytes des Puffers aus einem Array von-Strukturen, die eine Liste von Blöcken darstellen. Diese Struktur enthält zwei Member: die letzte Seitenzahl im Block und die Anzahl der Seiten im Wertebereich. Verwenden Sie diese Option mit <a href="dn292202(v=exchg.10).md">jetgettableinfo (JET_SESID, JET_TABLEID, [], JET_TblInfo)</a>.</td>
+<td>SpaceUsage</td>
+<td>Das Verhalten der -Methode hängt davon ab, wie groß das Array ist, das an die -Methode übergeben wird. Das Array muss mindestens zwei Einträge enthalten. Der erste Eintrag enthält die Anzahl der eigenen Extents in der Tabelle. Der zweite Eintrag enthält die Anzahl der verfügbaren Extents in der Tabelle. Wenn das Array mehr als zwei Einträge enthält, bestehen die verbleibenden Bytes des Puffers aus einem Array von -Strukturen, die eine Liste von Extents darstellen. Diese Struktur enthält zwei Elemente: die letzte Seitenzahl im -Bereich und die Anzahl der Seiten im -Bereich. Verwenden Sie diese Option <a href="dn292202(v=exchg.10).md">mit JetGetTableInfo(JET_SESID, JET_TABLEID, [], JET_TblInfo).</a></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Spacezuweisung</td>
-<td>Das an jetgettableinfo über gegebene Array muss über zwei Einträge verfügen. Der erste Eintrag wird auf die Anzahl der Seiten in der Tabelle festgelegt. Der zweite Eintrag wird auf die zieldichte von Seiten für die Tabelle festgelegt. Verwenden Sie diese Option mit <a href="dn292202(v=exchg.10).md">jetgettableinfo (JET_SESID, JET_TABLEID, [], JET_TblInfo)</a>.</td>
+<td>SpaceAlloc</td>
+<td>Das an JetGetTableInfo übergebene Array muss zwei Einträge enthalten. Der erste Eintrag wird auf die Anzahl der Seiten in der Tabelle festgelegt. Der zweite Eintrag wird auf die Zieldichte der Seiten für die Tabelle festgelegt. Verwenden Sie diese Option <a href="dn292202(v=exchg.10).md">mit JetGetTableInfo(JET_SESID, JET_TABLEID, [], JET_TblInfo).</a></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Leerraum</td>
-<td>Ruft die Anzahl der eigenen Seiten in der Tabelle ab. Verwenden Sie diese Option mit <a href="dn292201(v=exchg.10).md">jetgettableinfo (JET_SESID, JET_TABLEID, Int32, JET_TblInfo)</a>.</td>
+<td>SpaceOwned</td>
+<td>Ruft die Anzahl der eigenen Seiten in der Tabelle ab. Verwenden Sie diese Option <a href="dn292201(v=exchg.10).md">mit JetGetTableInfo(JET_SESID, JET_TABLEID, Int32, JET_TblInfo).</a></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Leerraum verfügbar</td>
-<td>Ruft die Anzahl der verfügbaren Seiten in der Tabelle ab. Verwenden Sie diese Option mit <a href="dn292201(v=exchg.10).md">jetgettableinfo (JET_SESID, JET_TABLEID, Int32, JET_TblInfo)</a>.</td>
+<td>SpaceAvailable</td>
+<td>Ruft die Anzahl der verfügbaren Seiten in der Tabelle ab. Verwenden Sie diese Option <a href="dn292201(v=exchg.10).md">mit JetGetTableInfo(JET_SESID, JET_TABLEID, Int32, JET_TblInfo).</a></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Templatetablename</td>
-<td>Wenn die Tabelle eine abgeleitete Tabelle ist, wird das Ergebnis mit dem Namen der Tabelle ausgefüllt, von der die abgeleitete Tabelle Ihre DDL geerbt hat. Wenn die Tabelle keine abgeleitete Tabelle ist, wird für den Puffer eine leere Zeichenfolge verwendet. Verwenden Sie diese Option mit <a href="dn292204(v=exchg.10).md">jetgettableinfo (JET_SESID, JET_TABLEID, String, JET_TblInfo)</a>.</td>
+<td>TemplateTableName</td>
+<td>Wenn die Tabelle eine abgeleitete Tabelle ist, wird das Ergebnis mit dem Namen der Tabelle gefüllt, von der die abgeleitete Tabelle ihre DDL geerbt hat. Wenn die Tabelle keine abgeleitete Tabelle ist, ist der Puffer eine leere Zeichenfolge. Verwenden Sie diese Option <a href="dn292204(v=exchg.10).md">mit JetGetTableInfo(JET_SESID, JET_TABLEID, String, JET_TblInfo).</a></td>
 </tr>
 </tbody>
 </table>
@@ -124,6 +124,6 @@ public enum JET_TblInfo
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,47 +1,47 @@
 ---
-description: Die removeodbc-Aktion entfernt die Datenquellen, Konvertierer und Treiber, die während der Installation zum Entfernen aufgeführt sind.
+description: Mit der Aktion RemoveODBC werden die Datenquellen, Translator und Treiber entfernt, die während der Installation entfernt werden.
 ms.assetid: 548984fd-e4f7-4db8-a625-87b4a0a4bdb2
-title: Removeodbc-Aktion
+title: RemoveODBC-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d1234ed736a8cb8258bccf3085de92bfb1b324cf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6619bc5b8a18cff2ee33dbe45261764c682953bad75a17cb9d6e93cbe487147b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119580430"
 ---
-# <a name="removeodbc-action"></a>Removeodbc-Aktion
+# <a name="removeodbc-action"></a>RemoveODBC-Aktion
 
-Die removeodbc-Aktion entfernt die Datenquellen, Konvertierer und Treiber, die während der Installation zum Entfernen aufgeführt sind. Mit dieser Aktion werden die [ODBCDatasource-Tabelle](odbcdatasource-table.md), die [odbctranslator-Tabelle](odbctranslator-table.md)und die [odbcdriver-Tabelle](odbcdriver-table.md) für jede Datenquelle, jeden Konvertierer oder Treiber, der zum Entfernen geplant ist, abgefragt.
+Mit der Aktion RemoveODBC werden die Datenquellen, Translator und Treiber entfernt, die während der Installation entfernt werden. Diese Aktion fragt die [ODBCDataSource-Tabelle,](odbcdatasource-table.md)die [ODBCTranslator-Tabelle](odbctranslator-table.md)und die [ODBCDriver-Tabelle](odbcdriver-table.md) für jede Datenquelle, jeden Translator oder Treiber ab, die entfernt werden sollen.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Es gibt keine Sequenz Einschränkungen.
+Es gibt keine Sequenzeinschränkungen.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
 Für jeden installierten Treiber.
 
 
 
-| Feld | Beschreibung der Aktions Daten               |
+| Feld | Beschreibung der Aktionsdaten               |
 |-------|------------------------------------------|
-| \[1\] | Treiber Beschreibung. Der Schlüssel des ODBC-Treibers. |
-| \[2\] | ComponentID                              |
+| \[1\] | Beschreibung des Treibers. Der ODBC-Treiberschlüssel. |
+| \[2\] | Componentid                              |
 
 
 
  
 
-Für jeden installierten Konvertierer.
+Für jeden installierten Translator.
 
 
 
-| Feld | Beschreibung der Aktions Daten               |
+| Feld | Beschreibung der Aktionsdaten               |
 |-------|------------------------------------------|
-| \[1\] | Treiber Beschreibung. Der Schlüssel des ODBC-Treibers. |
-| \[2\] | ComponentID                              |
+| \[1\] | Beschreibung des Treibers. Der ODBC-Treiberschlüssel. |
+| \[2\] | Componentid                              |
 
 
 
@@ -51,19 +51,19 @@ Für jede installierte Datenquelle.
 
 
 
-| Feld | Beschreibung der Aktions Daten                              |
+| Feld | Beschreibung der Aktionsdaten                              |
 |-------|---------------------------------------------------------|
-| \[1\] | Treiber Beschreibung. Der Schlüssel des ODBC-Treibers.                |
-| \[2\] | ComponentID                                             |
-| \[3\] | Registrierung: SQL \_ Remove \_ DSN oder SQL \_ Remove \_ sys \_ DSN |
+| \[1\] | Beschreibung des Treibers. Der ODBC-Treiberschlüssel.                |
+| \[2\] | Componentid                                             |
+| \[3\] | Registrierung: SQL \_ REMOVE \_ DSN oder SQL \_ REMOVE SYS \_ \_ DSN |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn sowohl die ODBC-Verwendungs Anzahl als auch die Datei Verwendungs Anzahl 0 (null) betragen, wird die Datei entfernt. Die Registrierung ist abhängig von der Verwendung von ODBC-Verwendungs Anzahlen, und das Entfernen von Dateien basiert auf freigegebenen DLLs-Schlüssel Verweis
+Wenn sowohl die ODBC-Nutzungsanzahl als auch die Dateiverwendungsanzahl 0 (null) werden, wird die Datei entfernt. Die Registrierung hängt von der ODBC-Nutzungsanzahl ab, und das Entfernen von Dateien basiert auf der Schlüsselverweisanzahl für freigegebene DLLs.
 
  
 

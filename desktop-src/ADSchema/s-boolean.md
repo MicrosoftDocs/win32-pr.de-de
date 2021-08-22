@@ -4,7 +4,7 @@ description: Stellt einen booleschen Wert dar.
 ms.assetid: 16251217-1489-42fd-a27f-87f15d13a279
 ms.tgt_platform: multiple
 keywords:
-- Boolesche Syntax, AD-Schema
+- 'Boolesche Syntax: AD-Schema'
 topic_type:
 - apiref
 api_name:
@@ -13,12 +13,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 98956a367ff7241fb7ff350efa406e88d3388573
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 38325b2b374c3e21ffc5d59e86cdf2ca67b175b71cdbbeba2f622d9d49cce76c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859411"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119580310"
 ---
 # <a name="boolean-syntax"></a>Boolesche Syntax
 
@@ -28,19 +28,19 @@ Stellt einen booleschen Wert dar.
 
 | Eingabe | Wert |
 |--------------|--------------------------------------------------------------------------|
-| Name         | Boolean                                                                  |
+| Name         | Boolesch                                                                  |
 | Syntax-ID    | 2.5.5.8                                                                  |
 | OM-ID        | 1                                                                        |
 | MAPI-Typ    | BOOLEAN                                                                  |
-| ADS-Typ     | boolescher Wert von adstype \_                                                         |
-| Varianttyp | VT \_ bool                                                                 |
+| ADS-Typ     | ADSTYPE \_ BOOLEAN                                                         |
+| Variant-Typ | VT \_ BOOL                                                                 |
 | SDS-Typ     | [System.Boolean](/dotnet/api/system.boolean) |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für Abfragen, die Attribute der booleschen Syntax in einem Filter einschließen, geben Sie "true" oder "false" an (z. b. "myboolattr = true").
+Geben Sie für Abfragen, die Attribute der booleschen Syntax in einem Filter enthalten, "TRUE" oder "FALSE" an (z. B. "myboolattr=TRUE").
 
 ## <a name="see-also"></a>Siehe auch
 
