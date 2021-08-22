@@ -1,9 +1,9 @@
 ---
 title: Öffentliches Attribut
-description: Das \ Public \-Attribut enthält einen Alias, der mit dem typedef-Schlüsselwort in der Typbibliothek deklariert wurde.
+description: Das \public\-Attribut enthält einen Alias, der mit dem typedef-Schlüsselwort in der Typbibliothek deklariert wurde.
 ms.assetid: d4e90165-8b0d-47bb-998d-e515226be935
 keywords:
-- öffentliches Attribut, Mittel l
+- öffentliches MidL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8451ddf77b5074dbea609bfed144340dc877c00
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 9f8e4944404bccc734594f3847c0ff9de17e54d0b5bcc444a56abe9b8f1e0eaf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106338255"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119328720"
 ---
 # <a name="public-attribute"></a>Öffentliches Attribut
 
-Das **\[ Public \]** -Attribut enthält einen Alias, der mit dem [**typedef**](typedef.md) -Schlüsselwort in der Typbibliothek deklariert wurde.
+Das **\[ öffentliche \]** Attribut enthält einen Alias, der mit dem [**typedef-Schlüsselwort**](typedef.md) in der Typbibliothek deklariert wurde.
 
 ``` syntax
 typedef [public] data-type identifier;
@@ -34,25 +34,25 @@ typedef [public] data-type identifier;
 *Datentyp* 
 </dt> <dd>
 
-Der Datentyp, für den der Bezeichner als Alias verwendet wird.
+Der Datentyp, für den der Bezeichner ein Alias sein soll.
 
 </dd> <dt>
 
 *identifier* 
 </dt> <dd>
 
-Ein weiterer Name, nach dem der *Datentyp* in der Software bekannt ist.
+Ein anderer Name, mit dem der *Datentyp* in der Software bekannt ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig wird ein Alias, der mit [**typedef**](typedef.md) deklariert wird und keine anderen Attribute hat, als **\# define** behandelt und ist nicht in der Typbibliothek enthalten. Durch die Verwendung des **\[ Public \]** -Attributs wird sichergestellt, dass der Alias Teil der Typbibliothek ist.
+Standardmäßig wird ein Alias, der mit [**typedef**](typedef.md) deklariert wird und über keine anderen Attribute verfügt, als **\# definiert** behandelt und ist nicht in der Typbibliothek enthalten. Die Verwendung des **\[ \] public-Attributs** stellt sicher, dass der Alias Teil der Typbibliothek wird.
 
 > [!Note]  
-> Der mittlerer l-Compiler erfordert, dass Sie das **\[ öffentliche \]** Attribut explizit auf jede typedef anwenden, die öffentlich sein soll.
+> Der MIDL-Compiler erfordert, dass Sie das **\[ \] public-Attribut** explizit auf jede Typedef anwenden, die öffentlich sein soll.
 
- 
+ 
 
 ## <a name="examples"></a>Beispiele
 
@@ -64,21 +64,21 @@ typedef [public] long MEMBERID;
 
 <dl> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[**berfläche**](interface.md)
+[**Schnittstelle**](interface.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[**typedef**](typedef.md)
+[**Typedef**](typedef.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

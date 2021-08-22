@@ -1,5 +1,5 @@
 ---
-description: RequestStateChange-Methode der Msvm_VirtualSystemReferencePointExportJob - Fordert eine Zustandsänderung an.
+description: 'RequestStateChange-Methode der Msvm_VirtualSystemReferencePointExportJob Klasse : Fordert eine Zustandsänderung an.'
 ms.assetid: 53c24e17-2b59-4439-a6d1-e971c189d223
 title: RequestStateChange-Methode der Msvm_VirtualSystemReferencePointExportJob-Klasse
 ms.topic: reference
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: bd12d7cd5b79e38260e671bf1408304390985dac
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 520fb0d50c503da1fcacbd7fef8469e483f030b3567f229a1ca442f62d0d72ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119531140"
 ---
 # <a name="requeststatechange-method-of-the-msvm_virtualsystemreferencepointexportjob-class"></a>RequestStateChange-Methode der Msvm \_ VirtualSystemReferencePointExportJob-Klasse
 
@@ -76,7 +76,7 @@ Beendet den Auftrag vorübergehend. Anschließend soll der Auftrag mit "Start" n
 
 </dt> <dd>
 
-Beendet den Auftrag sauber, speichert Daten, behält den Zustand bei und fährt alle zugrunde liegenden Prozesse in einer geordneten Weise herunter.
+Beendet den Auftrag sauber, speichert Daten, behält den Zustand bei und fährt alle zugrunde liegenden Prozesse geordnet herunter.
 
 </dd> <dt>
 
@@ -104,7 +104,7 @@ Versetzt den Auftrag in einen anbieterspezifischen Dienststatus. Möglicherweise
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (7..32767)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (7..32767)
 
 
 </dt> <dd></dd> <dt>
@@ -119,13 +119,13 @@ Versetzt den Auftrag in einen anbieterspezifischen Dienststatus. Möglicherweise
 *TimeoutPeriod* \[ In\]
 </dt> <dd>
 
-Ein Timeoutzeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervallformat muss verwendet werden, um den Timeoutzeitraum anzugeben. Der Wert 0 oder **NULL** gibt an, dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **NULL** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (**Use Of Timeout Parameter Not Supported**) zurückgegeben werden.
+Ein Timeoutzeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervallformat muss verwendet werden, um den Timeoutzeitraum anzugeben. Der Wert 0 oder **NULL gibt an,** dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **NULL** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (**Use Of Timeout Parameter Not Supported**) zurückgegeben werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -169,9 +169,9 @@ Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1703 \[\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
@@ -179,7 +179,7 @@ Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,33 +1,33 @@
 ---
-description: Gibt an, ob das Audioformat in Dolby Surround codiert ist.
+description: Gibt an, ob die Audiodaten in Dolby Surround codiert sind.
 ms.assetid: b33839c8-4829-4d90-94de-e461772d3e94
-title: Avddsurroundmode-Eigenschaft (codecapi. h)
+title: AVDDSurroundMode-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ac2bfe34d55f3ab7b45d936f5842e46188d5452
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 06b0f4be094861b8bd84b7c1fe0d801bbdcde6284d8f6d5985fffd294db302ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119503170"
 ---
-# <a name="avddsurroundmode-property"></a>Avddsurroundmode (Eigenschaft)
+# <a name="avddsurroundmode-property"></a>AVDDSurroundMode-Eigenschaft
 
-Gibt an, ob das Audioformat in Dolby Surround codiert ist.
+Gibt an, ob die Audiodaten in Dolby Surround codiert sind.
 
 Diese Eigenschaft ist schreibgeschützt.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avddsurroundmode**
+**CODECAPI \_ AVDDSurroundMode**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavddsurroundmode**](/windows/desktop/api/codecapi/ne-codecapi-eavddsurroundmode) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVDDSurroundMode-Enumeration.**](/windows/desktop/api/codecapi/ne-codecapi-eavddsurroundmode)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavddsurroundmode**](/windows/
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -45,10 +45,10 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavddsurroundmode**](/windows/
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

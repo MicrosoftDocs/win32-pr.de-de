@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "modifyframe" ändert einen vorhandenen Frame mit neuen Daten.
+description: Die ModifyFrame-Funktion ändert einen vorhandenen Frame mit neuen Daten.
 ms.assetid: ebd248e4-b248-4f4a-8b94-a6d1c331d12a
-title: Modifyframe-Funktion (Netmon. h)
+title: ModifyFrame-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: af3ef6c2c5ccae2b6410ac8fc81c815f790b17a6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 04bc22af11d83078ecf98d0386b061b520fbf9a8dcab6f6beb360c45b1c6fe96
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345754"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119555820"
 ---
-# <a name="modifyframe-function"></a>Modifyframe-Funktion
+# <a name="modifyframe-function"></a>ModifyFrame-Funktion
 
-Die Funktion " **modifyframe** " ändert einen vorhandenen Frame mit neuen Daten.
+Die **ModifyFrame-Funktion** ändert einen vorhandenen Frame mit neuen Daten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,38 +43,38 @@ HFRAME WINAPI ModifyFrame(
 
 <dl> <dt>
 
-*hcapture* \[ in\]
+*hCapture* \[ In\]
 </dt> <dd>
 
-Handle für die Erfassung. Weitere Informationen zum Abrufen des Aufzeichnungs Handles finden Sie im Abschnitt "Hinweise" in diesem Thema zu **modifyframe** .
+Handle für die Erfassung. Informationen zum Abrufen des Erfassungshandle finden Sie im Abschnitt "Hinweise" dieses **ModifyFrame-Themas.**
 
 </dd> <dt>
 
-*Framengegen ber* \[ in\]
+*FrameNumber* \[ In\]
 </dt> <dd>
 
-Die Rahmen Indexnummer.
+Frameindexnummer.
 
 </dd> <dt>
 
-*FrameData* \[ in\]
+*FrameData* \[ In\]
 </dt> <dd>
 
-Zeiger auf ein Bytearray, das die neuen Frame Daten enthält.
+Zeiger auf ein Bytearray, das die neuen Framedaten enthält.
 
 </dd> <dt>
 
-*Framelength* \[ in\]
+*FrameLength* \[ In\]
 </dt> <dd>
 
 Länge der neuen Daten in Bytes.
 
 </dd> <dt>
 
-*Zeitstempel* \[ vorgenommen\]
+*TimeStamp* \[ out\]
 </dt> <dd>
 
-Zeitstempel, der angibt, wann der Rahmen geändert wurde.
+Zeitstempel, der angibt, wann der Frame geändert wurde.
 
 </dd> </dl>
 
@@ -82,13 +82,13 @@ Zeitstempel, der angibt, wann der Rahmen geändert wurde.
 
 Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Handle für einen neuen Frame.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **null**.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **NULL.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der-Befehl erfolgreich ausgeführt wurde, zerstört die **modifyframe** -Funktion den ursprünglichen Frame.
+Wenn der Aufruf erfolgreich ist, zerstört die **ModifyFrame-Funktion** den ursprünglichen Frame.
 
-[*Experten*](e.md) und [*Parser*](p.md) können die Funktion " **modifyframe** " aufzurufen.
+[*Experten*](e.md) und [*Parser*](p.md) können die **ModifyFrame-Funktion** aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,8 +98,8 @@ Wenn der-Befehl erfolgreich ausgeführt wurde, zerstört die **modifyframe** -Fu
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

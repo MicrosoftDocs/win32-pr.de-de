@@ -1,34 +1,34 @@
 ---
 title: Informationen zur Steuerungspunkt-API
-description: Die UPnP-Technologie ermöglicht das dynamische Netzwerk von intelligenten Geräten, PCs und anderen Steuerungs Punkten.
+description: UPnP-Technologie ermöglicht dynamische Netzwerke von intelligenten Geräten, PCs und anderen Kontrollpunkten.
 ms.assetid: d81a654f-e92b-41dc-a5ff-27923c1313e0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 24e43205a503b7347d4047777b5d93ce2eadd8e7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: dd74b1a1c6f630d6d96a5100e4b2ca5e3284caf3a1c251d131070cd7008694f0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119418250"
 ---
 # <a name="about-the-control-point-api"></a>Informationen zur Steuerungspunkt-API
 
-Die UPnP-Technologie ermöglicht das dynamische Netzwerk von intelligenten Geräten, PCs und anderen Steuerungs Punkten. Das dynamische Netzwerk ist über eine Vielzahl physischer Medien verfügbar. Die Microsoft-Implementierung der Steuerungspunkt-API mit der UPnP-Technologie besteht aus einem Satz von COM-Objekten, die zum Schreiben von Anwendungen und Webseiten verwendet werden, die UPnP-basierte Geräte suchen und steuern. Beispielsweise kann ein UPnP-fähiger VCR von einer Webseite gesteuert werden, die speziell darauf ausgelegt ist, Sie zu steuern. Um dieses Konzept zu erweitern, können Entwickler viele Appliances von einem zentralen, Remote-oder Peer Standort aus steuern.
+UPnP-Technologie ermöglicht dynamische Netzwerke von intelligenten Geräten, PCs und anderen Kontrollpunkten. Das dynamische Netzwerk ist über eine Vielzahl von physischen Medien verfügbar. Die Microsoft-Implementierung der Steuerungspunkt-API mit UPnP-Technologie besteht aus einer Reihe von COM-Objekten, die zum Schreiben von Anwendungen und Webseiten verwendet werden, die UPnP-basierte Geräte suchen und steuern. Beispielsweise kann ein UPnP-fähiger VCR über eine Webseite gesteuert werden, die speziell für die Steuerung entwickelt wurde. Um dieses Konzept zu erweitern, können Entwickler viele Appliances von einem zentralen, Remote- oder Peerstandort aus steuern.
 
-Anwendungen, die mit der Steuerungspunkt-API mit UPnP-Technologie erstellt wurden, reichen von Skripts, die in HTML-Seiten eingebettet sind, in vollwertige C++ Die Steuerungspunkt-API mit der UPnP-Technologie unterstützt Microsoft Visual Basic Development System, Microsoft Visual Basic Scripting Edition (VBScript) und C++.
+Anwendungen, die mit der Steuerungspunkt-API mit UPnP-Technologie erstellt wurden, reichen von Skripts, die in HTML-Seiten eingebettet sind, bis hin zu vollständigen C++-Programmen. Die Control Point-API mit UPnP-Technologie unterstützt das Microsoft Visual Basic-Entwicklungssystem, Microsoft Visual Basic Scripting Edition (VBScript) und C++.
 
-In den folgenden Abschnitten wird die Funktionsweise der Steuerungspunkt-API mit der UPnP-Technologie im allgemeinen erläutert:
+In den folgenden Abschnitten wird im Allgemeinen erläutert, wie die Steuerungspunkt-API mit UPnP-Technologie funktioniert:
 
--   [Grundlagen der Steuerungs Punkte](control-point-basics.md)
--   [Suchen nach Geräten](finding-devices.md)
+-   [Grundlagen zu Kontrollpunkt](control-point-basics.md)
+-   [Suchen von Geräten](finding-devices.md)
 -   [Beschreiben von Geräten](describing-devices.md)
 -   [Steuern von Geräten](controlling-devices.md)
 
-Alle Beispiele in der Steuerungspunkt-API mit der UPnP-Technologie Dokumentation beziehen sich auf fiktive Geräte, Gerätetypen und Zeichen folgen.
+Alle Beispiele in der Dokumentation zur Steuerungspunkt-API mit UPnP-Technologie beziehen sich auf fiktive Geräte, Gerätetypen und Zeichenfolgen.
 
- 
+ 
 
- 
+ 
 
 
 

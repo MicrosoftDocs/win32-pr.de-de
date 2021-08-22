@@ -1,30 +1,30 @@
 ---
-description: In diesem Thema werden die IsVisible-Methoden der GraphicsPath-Klasse aufgelistet. Eine umfassende Liste der Methoden für die GraphicsPath-Klasse finden Sie unter GraphicsPath.
+description: In diesem Thema werden die IsVisible-Methoden der GraphicsPath-Klasse aufgelistet. Eine vollständige Liste der Methoden für die GraphicsPath-Klasse finden Sie unter GraphicsPath.
 ms.assetid: d686ed98-9633-46f5-90f2-cb128b2b7e1c
-title: GraphicsPath. IsVisible-Methoden
+title: GraphicsPath.IsVisible-Methoden
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 05e2bbdf10bf61e1a9e79daae8a15798a5074435
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9aceac4cf2c6e75d213a42be721c2bf5954fb9a46842afdec594636b622306ec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994502"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119557860"
 ---
-# <a name="graphicspathisvisible-methods"></a>GraphicsPath. IsVisible-Methoden
+# <a name="graphicspathisvisible-methods"></a>GraphicsPath.IsVisible-Methoden
 
-In diesem Thema werden die IsVisible-Methoden der [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath) -Klasse aufgelistet. Eine umfassende Liste der Methoden für die **GraphicsPath** -Klasse finden Sie unter [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath).
+In diesem Thema werden die IsVisible-Methoden der [**GraphicsPath-Klasse**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath) aufgelistet. Eine vollständige Liste der Methoden für die **GraphicsPath-Klasse** finden Sie unter [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath).
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                     | BESCHREIBUNG                                                                                                                                                                                                                                                                                     |
+| Methode                                                                                                     | Beschreibung                                                                                                                                                                                                                                                                                     |
 |:-----------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**IsVisible (Point&, Grafiken \* )**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-isvisible(inconstpoint__inconstgraphics))      | Die [**GraphicsPath:: IsVisible**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-isvisible(inconstpoint__inconstgraphics)) -Methode bestimmt, ob ein angegebener Punkt in dem Bereich liegt, der ausgefüllt wird, wenn dieser Pfad von einem angegebenen [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt gefüllt wird.<br/>   |
-| [**IsVisible (int, int, Graphics \* )**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-isvisible(inint_inint_inconstgraphics))     | Das [**GraphicsPath:: IsVisible**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-isvisible(inint_inint_inconstgraphics))-[**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt.<br/>                                                                                                                        |
-| [**IsVisible (PointF-&, Grafiken \* )**](/previous-versions//ms535574(v=vs.85))    | Das [**GraphicsPath:: IsVisible**](/previous-versions//ms535574(v=vs.85))-[**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt.<br/>                                                                                                                       |
-| [**IsVisible (Real, Real, Graphics \* )**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-isvisible(inreal_inreal_inconstgraphics)) | Die [**GraphicsPath:: IsVisible**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-isvisible(inreal_inreal_inconstgraphics)) -Methode bestimmt, ob ein angegebener Punkt in dem Bereich liegt, der ausgefüllt wird, wenn dieser Pfad von einem angegebenen [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt gefüllt wird.<br/> |
+| [**IsVisible(Point&,Graphics \* )**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-isvisible(inconstpoint__inconstgraphics))      | Die [**GraphicsPath::IsVisible-Methode**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-isvisible(inconstpoint__inconstgraphics)) bestimmt, ob ein angegebener Punkt in dem Bereich liegt, der ausgefüllt wird, wenn dieser Pfad von einem angegebenen [**Graphics-Objekt**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) gefüllt wird.<br/>   |
+| [**IsVisible(INT,INT,Graphics \* )**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-isvisible(inint_inint_inconstgraphics))     | Das [**GraphicsPath::IsVisible**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-isvisible(inint_inint_inconstgraphics))[**Graphics-Objekt.**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics)<br/>                                                                                                                        |
+| [**IsVisible(PointF&,Graphics \* )**](/previous-versions//ms535574(v=vs.85))    | Das [**GraphicsPath::IsVisible**](/previous-versions//ms535574(v=vs.85))[**Graphics-Objekt.**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics)<br/>                                                                                                                       |
+| [**IsVisible(REAL,REAL,Graphics \* )**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-isvisible(inreal_inreal_inconstgraphics)) | Die [**GraphicsPath::IsVisible-Methode**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-isvisible(inreal_inreal_inconstgraphics)) bestimmt, ob ein angegebener Punkt in dem Bereich liegt, der ausgefüllt wird, wenn dieser Pfad von einem angegebenen [**Graphics-Objekt**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) gefüllt wird.<br/> |
 
 
 

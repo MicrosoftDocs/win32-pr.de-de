@@ -1,40 +1,40 @@
 ---
-description: Die cwbemproviderglue-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CWbemProviderGlue-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: E09290AF-1C2E-458A-811E-5357D470D3DF
 ms.tgt_platform: multiple
-title: Cwbemproviderglue-Methoden
+title: CWbemProviderGlue-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dea54ffdeaa6b74cda3b830ea65fdc17f8ffa129
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: db9099528d76efe1aa165881462bc12a0e30493ce5b817da350c6feefc7297e3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103959909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119244510"
 ---
-# <a name="cwbemproviderglue-methods"></a>Cwbemproviderglue-Methoden
+# <a name="cwbemproviderglue-methods"></a>CWbemProviderGlue-Methoden
 
-\[Die [**cwbemproviderglue**](/windows/desktop/api/WbemGlue/nl-wbemglue-cwbemproviderglue) -Klasse ist Teil des WMI-Anbieter-Frameworks, das jetzt als Endzustand betrachtet wird, und keine weiteren Entwicklungen, Verbesserungen oder Updates werden für nicht sicherheitsrelevante Probleme verfügbar sein, die diese Bibliotheken betreffen. Die [Mi-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
+\[Die [**CWbemProviderGlue-Klasse**](/windows/desktop/api/WbemGlue/nl-wbemglue-cwbemproviderglue) ist Teil des WMI-Anbieterframework, das jetzt als endgültiger Zustand betrachtet wird, und es sind keine weiteren Entwicklungen, Erweiterungen oder Updates für nicht sich sicherheitsbezogene Probleme verfügbar, die sich auf diese Bibliotheken betreffen. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
 
-Die [**cwbemproviderglue**](/windows/desktop/api/WbemGlue/nl-wbemglue-cwbemproviderglue) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CWbemProviderGlue-Klasse**](/windows/desktop/api/WbemGlue/nl-wbemglue-cwbemproviderglue) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Frameworklogindll-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-frameworklogindll(lpcwstr_plong))
--   [**Frameworklogoffdll-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-frameworklogoffdll(lpcwstr_plong))
--   [**Getallderivedinhaltungen-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getallderivedinstances(lpcwstr_trefpointercollection_cinstance__methodcontext_lpcwstr))
--   [**Getallderivedinstancesasynch-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getallderivedinstancesasynch)
--   [**Getallinstance-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getallinstances)
--   [**Getallinstancesasynch-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getallinstancesasynch)
--   [**Getemptyinstance-Methoden**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getemptyinstance(methodcontext_lpcwstr_cinstance_lpcwstr))
--   [**Getinstancebypath-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getinstancebypath(lpcwstr_cinstance_methodcontext))
--   [**Getinstancekeysbypath-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getinstancekeysbypath)
--   [**Getinstancepropertiesbypath-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getinstancepropertiesbypath)
--   [**Getinstancesbyquery-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getinstancesbyquery(lpcwstr_trefpointercollection_cinstance__methodcontext_lpcwstr))
--   [**Getinstancesbyqueryasynch-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getinstancesbyqueryasynch)
--   [**Getnamespaceconnetction-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getnamespaceconnection(lpcwstr_methodcontext))
+-   [**FrameworkLoginDLL-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-frameworklogindll(lpcwstr_plong))
+-   [**FrameworkLogoffDLL-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-frameworklogoffdll(lpcwstr_plong))
+-   [**GetAllDerivedInstances-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getallderivedinstances(lpcwstr_trefpointercollection_cinstance__methodcontext_lpcwstr))
+-   [**GetAllDerivedInstancesAsynch-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getallderivedinstancesasynch)
+-   [**GetAllInstances-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getallinstances)
+-   [**GetAllInstancesAsynch-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getallinstancesasynch)
+-   [**GetEmptyInstance-Methoden**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getemptyinstance(methodcontext_lpcwstr_cinstance_lpcwstr))
+-   [**GetInstanceByPath-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getinstancebypath(lpcwstr_cinstance_methodcontext))
+-   [**GetInstanceKeysByPath-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getinstancekeysbypath)
+-   [**GetInstancePropertiesByPath-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getinstancepropertiesbypath)
+-   [**GetInstancesByQuery-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getinstancesbyquery(lpcwstr_trefpointercollection_cinstance__methodcontext_lpcwstr))
+-   [**GetInstancesByQueryAsynch-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getinstancesbyqueryasynch)
+-   [**GetNameSpaceConnection-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-getnamespaceconnection(lpcwstr_methodcontext))
 -   [**IsDerivedFrom-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-isderivedfrom(lpcwstr_lpcwstr_methodcontext_lpcwstr))
--   [**SetStatus usobject-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-setstatusobject)
+-   [**SetStatusObject-Methode**](/windows/desktop/api/WbemGlue/nf-wbemglue-cwbemproviderglue-setstatusobject)
 
  
 

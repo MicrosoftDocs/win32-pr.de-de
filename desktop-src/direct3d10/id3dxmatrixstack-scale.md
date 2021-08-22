@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: a7b4aceb53659fc2b1a4a95f964d068e6d7d2554
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 788c26f129bbd5078a63827653f0ec9b053321f1ca609f6cb1bda032f37c371c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108107788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119461494"
 ---
 # <a name="id3dxmatrixstackscale-method-d3dx10h"></a>ID3DXMATRIXStack::Scale-Methode (D3DX10.h)
 
@@ -75,7 +75,7 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode multipliziert die aktuelle Matrix mit der berechneten Skalierungsmatrix. Bei der Transformation geht es um den aktuellen Ursprung der Welt.
 
@@ -92,7 +92,7 @@ m_stack[m_currentPos] = m_stack[m_currentPos] * tmp;
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |

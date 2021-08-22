@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: jejessnapshotabort-Funktion'
-title: Jejessnapshotabort-Funktion
+description: Weitere Informationen finden Sie unter JetOSSnapshotAbort-Funktion.
+title: JetOSSnapshotAbort-Funktion
 TOCTitle: JetOSSnapshotAbort Function
 ms:assetid: 629455af-b526-4366-9b9a-112757f72c32
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269265(v=EXCHG.10)
@@ -18,23 +18,23 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d976f027a940bcf0199016d0e617d515273183ec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 70f4a7cc3db5b5c6ef90c59de05cd9c0acea9d1dfb4ac1eeeba119ded5e89c14
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349998"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119559810"
 ---
-# <a name="jetossnapshotabort-function"></a>Jejessnapshotabort-Funktion
+# <a name="jetossnapshotabort-function"></a>JetOSSnapshotAbort-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetossnapshotabort-function"></a>Jejessnapshotabort-Funktion
+## <a name="jetossnapshotabort-function"></a>JetOSSnapshotAbort-Funktion
 
-Die **jedessnapshotabort** -Funktion benachrichtigt die Engine, dass Sie normale e/a-Vorgänge fortsetzen kann, nachdem eine Sperrfrist mit einem fehlerhaften Snapshot erreicht wurde.
+Die **JetOSSnapshotAbort-Funktion** benachrichtigt die Engine, dass sie normale E/A-Vorgänge fortsetzen kann, nachdem ein Einfrierenzeitraum mit einer fehlerhaften Momentaufnahme beendet wurde.
 
-**Windows Server 2003:**  **jedessnapshotabort** wurde in Windows Server 2003 eingeführt.
+**Windows Server 2003:****JetOSSnapshotAbort** wird in Windows Server 2003 eingeführt.  
 
 ```cpp
     JET_ERR JET_API JetOSSnapshotAbort(
@@ -45,17 +45,17 @@ Die **jedessnapshotabort** -Funktion benachrichtigt die Engine, dass Sie normale
 
 ### <a name="parameters"></a>Parameter
 
-*snapid*
+*snapId*
 
-Der Bezeichner der Momentaufnahme Sitzung.
+Der Bezeichner der Momentaufnahmesitzung.
 
 *grbit*
 
-Die Optionen für diesen-Befehl. Dieser Parameter ist für die zukünftige Verwendung reserviert, und der einzige gültige Wert ist 0 (null).
+Die Optionen für diesen Aufruf. Dieser Parameter ist für die zukünftige Verwendung reserviert, und der einzige unterstützte gültige Wert ist 0 (null).
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR-Datentyp](./jet-err.md) mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -75,23 +75,23 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 </tr>
 <tr class="even">
 <td><p>JET_errInvalidParameter</p></td>
-<td><p>Die Momentaufnahme Sitzung ist ungültig, oder der grbit-Parameter ist ungültig.</p></td>
+<td><p>Die Momentaufnahmesitzung ist ungültig, oder der grbit-Parameter ist ungültig.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errOSSnapshotInvalidSnapId</p></td>
-<td><p>Der Bezeichner für die Momentaufnahme Sitzung ist ungültig.</p></td>
+<td><p>Der Bezeichner für die Momentaufnahmesitzung ist ungültig.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-Wenn diese Funktion erfolgreich ausgeführt wird, wird die Momentaufnahme Sitzung beendet, und das normale Engine-Verhalten wird fortgesetzt. Eine neue Momentaufnahme Sitzung kann zu einem späteren Zeitpunkt gestartet werden.
+Wenn diese Funktion erfolgreich ist, wird die Momentaufnahmesitzung beendet, und das normale Engine-Verhalten wird fortgesetzt. Eine neue Momentaufnahmesitzung kann zu einem späteren Zeitpunkt gestartet werden.
 
-Wenn diese Funktion fehlschlägt, wird die Momentaufnahme Sitzung nicht abgebrochen.
+Wenn diese Funktion fehlschlägt, wird die Momentaufnahmesitzung nicht abgebrochen.
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Diese Funktion sollte anstelle von [jedessnapshotthaw](./jetossnapshotthaw-function.md) aufgerufen werden, um die Engine darüber zu informieren, dass die Momentaufnahme aus Gründen, die nicht mit der Engine in Beziehung stehen, abgebrochen wurde. Diese Informationen können später verwendet werden, um Ereignisprotokoll Meldungen über die Momentaufnahme Sitzung auszugeben oder um andere geeignete Aktionen zu bestimmen.
+Diese Funktion sollte anstelle von [JetOSSnapshotThaw](./jetossnapshotthaw-function.md) aufgerufen werden, um die Engine darüber zu informieren, dass die Momentaufnahme aus Gründen abgebrochen wurde, die sich nicht auf die Engine beziehen. Diese Informationen können später verwendet werden, um Ereignisprotokollmeldungen zur Momentaufnahmesitzung ausausgaben oder andere geeignete Aktionen zu bestimmen.
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -111,14 +111,14 @@ Diese Funktion sollte anstelle von [jedessnapshotthaw](./jetossnapshotthaw-funct
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 </tbody>
@@ -129,6 +129,6 @@ Diese Funktion sollte anstelle von [jedessnapshotthaw](./jetossnapshotthaw-funct
 
 [JET_ERR](./jet-err.md)  
 [JET_OSSNAPID](./jet-ossnapid.md)  
-[Jeto ssnapshotfreeze](./jetossnapshotfreeze-function.md)  
-[Jejessnapshotprepare](./jetossnapshotprepare-function.md)  
-[Jejessnapshotthaw](./jetossnapshotthaw-function.md)
+[JetOSSnapshotFreeze](./jetossnapshotfreeze-function.md)  
+[JetOSSnapshotPrepare](./jetossnapshotprepare-function.md)  
+[JetOSSnapshotThaw](./jetossnapshotthaw-function.md)

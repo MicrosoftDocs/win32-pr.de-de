@@ -1,38 +1,38 @@
 ---
-description: Das System stellt sechs Aktien Schriftarten bereit.
+description: Das System bietet sechs Stockfonts.
 ms.assetid: 349ea57f-dd25-4e33-bbdf-63a320eae3a0
-title: Verwenden einer Kurs Schriftart zum Zeichnen von Text
+title: Verwenden einer Stock Font zum Zeichnen von Text
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 56a7e580175956185bcc26a7ebbae8d46dfff078
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e9bd140a931a13f6232235036fb7b9cf3de1a20505666e869f214219b7a60a95
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960517"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119468330"
 ---
-# <a name="using-a-stock-font-to-draw-text"></a>Verwenden einer Kurs Schriftart zum Zeichnen von Text
+# <a name="using-a-stock-font-to-draw-text"></a>Verwenden einer Stock Font zum Zeichnen von Text
 
-Das System stellt sechs Aktien Schriftarten bereit. Eine Aktien Schriftart ist eine logische Schriftart, die eine Anwendung abrufen kann, indem Sie die [GetStockObject](/windows/desktop/api/Wingdi/nf-wingdi-getstockobject) -Funktion aufrufen und die angeforderte Schriftart angibt. Die folgende Liste enthält die Werte, die Sie angeben können, um eine Aktien Schriftart zu erhalten.
+Das System bietet sechs Stockfonts. Eine Stock-Schriftart ist eine logische Schriftart, die eine Anwendung durch Aufrufen der [GetStockObject-Funktion](/windows/desktop/api/Wingdi/nf-wingdi-getstockobject) und Angeben der angeforderten Schriftart abrufen kann. Die folgende Liste enthält die Werte, die Sie angeben können, um eine Kursschriftart zu erhalten.
 
 
 
 | Wert                 | Bedeutung                                                                                                                                                                                                                                                                                         |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ANSI \_ - \_ Schriftart     | Gibt eine fest breiten-Schriftart an, die auf dem Windows-Zeichensatz basiert. In der Regel wird eine Courier Schriftart verwendet.                                                                                                                                                                                                |
-| ANSI \_ var- \_ Schriftart       | Gibt eine proportionale Schriftart basierend auf dem Windows-Zeichensatz an. MS Sans Serif wird normalerweise verwendet.                                                                                                                                                                                              |
-| \_Standard \_ Schriftart des Geräts | Gibt die bevorzugte Schriftart für das angegebene Gerät an. Dies ist in der Regel die System Schriftart für Anzeigegeräte. bei einigen Punktmatrix Druckern ist dies jedoch eine Schriftart, die sich auf dem Gerät befindet. (Das Drucken mit dieser Schriftart ist in der Regel schneller als das Drucken mit einer heruntergeladenen Bitmapschriftart).    |
-| \_Schriftart für festes OEM \_      | Gibt eine fest breiten-Schriftart an, die auf einem OEM-Zeichensatz basiert. Bei IBM-Computern und-Kompatibilitäten basiert die OEM-Schriftart auf dem IBM-PC-Zeichensatz.                                                                                                                                                 |
-| System \_ Schriftart          | Gibt die System Schriftart an. Dabei handelt es sich um eine proportionale Schriftart, die auf dem Windows-Zeichensatz basiert und vom Betriebssystem verwendet wird, um Fenstertitel, Menü Namen und Text in Dialogfeldern anzuzeigen. Die System Schriftart ist immer verfügbar. Andere Schriftarten sind nur verfügbar, wenn Sie installiert wurden. |
-| \_Schriftart des fixierten Systems \_   | Gibt eine fest breiten-Schriftart an, die in frühen Versionen von Windows mit der System Schriftart kompatibel ist.                                                                                                                                                                                                        |
+| ANSI \_ FIXED \_ FONT     | Gibt eine Monospaceschriftart basierend auf dem zeichenbasierten Windows an. In der Regel wird eine Courier-Schriftart verwendet.                                                                                                                                                                                                |
+| SCHRIFTART "ANSI \_ \_ VAR"       | Gibt eine proportionale Schriftart basierend auf dem zeichenbasierten Windows an. MS Sans Serif wird in der Regel verwendet.                                                                                                                                                                                              |
+| \_STANDARDSCHRIFTART DES \_ GERÄTS | Gibt die bevorzugte Schriftart für das angegebene Gerät an. Dies ist in der Regel die Schriftart System für Anzeigegeräte. Bei einigen Punktmatrixdruckern ist dies jedoch eine Schriftart, die sich auf dem Gerät befindet. (Das Drucken mit dieser Schriftart ist in der Regel schneller als das Drucken mit einer heruntergeladenen Bitmapschriftart.)    |
+| FESTE \_ \_ OEM-SCHRIFTART      | Gibt eine Monospaceschriftart basierend auf einem OEM-Zeichensatz an. Bei IBM-Computern und -Kompatiblen basiert die OEM-Schriftart auf dem IBM PC-Zeichensatz.                                                                                                                                                 |
+| \_SYSTEMSCHRIFTART          | Gibt die Schriftart System an. Dies ist eine proportionale Schriftart, die auf Windows Zeichensatz basiert und vom Betriebssystem verwendet wird, um Fenstertitel, Menünamen und Text in Dialogfeldern anzuzeigen. Die Schriftart System ist immer verfügbar. Andere Schriftarten sind nur verfügbar, wenn sie installiert wurden. |
+| FESTE \_ \_ SYSTEMSCHRIFTART   | Gibt eine Monospaceschriftart an, die mit der Schriftart System in frühen Versionen von Windows.                                                                                                                                                                                                        |
 
 
 
  
 
-Weitere Informationen zu Schriftarten finden Sie unter Informationen [zu Schriftarten](about-fonts.md).
+Weitere Informationen zu Schriftarten finden Sie unter [Informationen zu Schriftarten.](about-fonts.md)
 
-Im folgenden Beispiel wird ein Handle der Variablen Aktien Schriftart abgerufen, in einen Gerätekontext ausgewählt und dann mithilfe der Schriftart eine Zeichenfolge geschrieben:
+Im folgenden Beispiel wird ein Handle für die Stockschriftart der Variablen abgerufen, in einen Gerätekontext ausgewählt und dann eine Zeichenfolge mit dieser Schriftart schreibt:
 
 
 ```C++
@@ -54,7 +54,7 @@ if (hOldFont = (HFONT)SelectObject(hdc, hFont))
 
 
 
-Wenn keine anderen Aktien Schriftarten verfügbar sind, gibt [GetStockObject](/windows/desktop/api/Wingdi/nf-wingdi-getstockobject) ein Handle für die System Schriftart (System \_ Schriftart) zurück. Sie sollten nur dann Stock Fonts verwenden, wenn der Kartenmodus für den Gerätekontext der Anwendung mm- \_ Text ist.
+Wenn andere Stockfonts nicht verfügbar sind, [gibt GetStockObject](/windows/desktop/api/Wingdi/nf-wingdi-getstockobject) ein Handle an die Schriftart System (SYSTEM \_ FONT) zurück. Sie sollten stock fonts nur verwenden, wenn der Zuordnungsmodus für den Gerätekontext Ihrer Anwendung MM \_ TEXT ist.
 
  
 

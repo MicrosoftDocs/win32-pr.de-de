@@ -1,7 +1,7 @@
 ---
-description: Enthält ein Array von BLOB.
+description: Enthält ein Array von BLOBs.
 ms.assetid: e87f493b-f160-4316-b369-75d20c735213
-title: BLOB_TABLE Struktur (Netmon. h)
+title: BLOB_TABLE-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 32bacc925381f1c7ed30aa66247671b67e31b7e4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e0615ad9c11657a47d9eaa87035207cb499634cd4ded6ae484d6f5d256c23e15
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215893"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144343"
 ---
-# <a name="blob_table-structure"></a>BLOB- \_ Tabellenstruktur
+# <a name="blob_table-structure"></a>BLOB \_ TABLE-Struktur
 
-Die **BLOB- \_ Tabellen** Struktur enthält ein Array von BLOBs.
+Die **BLOB \_ TABLE-Struktur** enthält ein Array von BLOBs.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,14 +40,14 @@ typedef struct {
 
 <dl> <dt>
 
-**dwnumblosb**
+**dwNumBlobs**
 </dt> <dd>
 
-Indikator, dem viele blobdie folgen.
+Indikator, dem viele BLOBs folgen.
 
 </dd> <dt>
 
-**hblob**
+**hBlobs**
 </dt> <dd>
 
 Handle für das BLOB-Array.
@@ -62,7 +62,7 @@ Handle für das BLOB-Array.
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

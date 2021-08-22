@@ -1,11 +1,11 @@
 ---
-title: MS-SQL-allowsnapshotfilesftpdownload-Attribut
-description: True, wenn die Veröffentlichung das Herunterladen von Momentaufnahme Dateien über FTP zulässt.
+title: MS-SQL-AllowSnapshotFilesFTPDownloading-Attribut
+description: TRUE, wenn die Veröffentlichung das Herunterladen von Momentaufnahmedateien über FTP zulässt.
 ms.assetid: 227e1438-db8d-4e8f-b2dd-ffc6ef50e0d1
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-SQL-allowsnapshotfilesftpdownload\"-Attribut, AD-Schema"
-- "\"MS-SQL-allowsnapshotfilesftpdownload\"-Attribut, AD-Schema"
+- MS-SQL-AllowSnapshotFilesFTPAttribut AD-Schema herunterladen
+- mS-SQL-AllowSnapshotFilesFTPAttribut AD-Schema herunterladen
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ed32d824f4832294b3484da4e871303b31820878
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c4c0f78de1eee1b69b838feadcdbdf3e3390870332b0f53ceecfab3d365cb7e9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104123061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119300040"
 ---
-# <a name="ms-sql-allowsnapshotfilesftpdownloading-attribute"></a>MS-SQL-allowsnapshotfilesftpdownload-Attribut
+# <a name="ms-sql-allowsnapshotfilesftpdownloading-attribute"></a>MS-SQL-AllowSnapshotFilesFTPDownloading-Attribut
 
-True, wenn die Veröffentlichung das Herunterladen von Momentaufnahme Dateien über FTP zulässt.
+TRUE, wenn die Veröffentlichung das Herunterladen von Momentaufnahmedateien über FTP zulässt.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | MS-SQL-allowsnapshotfilesftpdownload |
-| LDAP-Display-Name | MS-SQL-allowsnapshotfilesftpdownload |
+| CN                | MS-SQL-AllowSnapshotFilesFTPDownloading |
+| Ldap-Anzeigename | mS-SQL-AllowSnapshotFilesFTPDownloading |
 | Size              | 4 Bytes                                 |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.        |
-| Aktualisierungshäufigkeit  | Wenn die Replikation eingerichtet ist.              |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.        |
+| Updatehäufigkeit  | Wenn die Replikation eingerichtet ist.              |
 | Attribute-Id      | 1.2.840.113556.1.4.1406                 |
-| System-ID-GUID    | c49b8be8-d34b-11d2-999a-0000f87a57d4    |
-| Syntax            | [**Booleschen**](s-boolean.md)            |
+| System-Id-Guid    | c49b8be8-d34b-11d2-999a-0000f87a57d4    |
+| Syntax            | [**Boolean**](s-boolean.md)            |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ True, wenn die Veröffentlichung das Herunterladen von Momentaufnahme Dateien ü
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
-| Ist indiziert             | False                                                               |
-| Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| System-Only            | Falsch                                                               |
+| Is-Single-Valued       | Richtig                                                                |
+| Ist indiziert             | Falsch                                                               |
+| Im globalen Katalog      | Falsch                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**MS-SQL-sqlpublication**](c-ms-sql-sqlpublication.md)<br/> |
+| In verwendete Klassen        | [**MS-SQL-SQLPublication**](c-ms-sql-sqlpublication.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ True, wenn die Veröffentlichung das Herunterladen von Momentaufnahme Dateien ü
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
-| Ist indiziert             | False                                                               |
-| Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| System-Only            | Falsch                                                               |
+| Is-Single-Valued       | Richtig                                                                |
+| Ist indiziert             | Falsch                                                               |
+| Im globalen Katalog      | Falsch                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**MS-SQL-sqlpublication**](c-ms-sql-sqlpublication.md)<br/> |
+| In verwendete Klassen        | [**MS-SQL-SQLPublication**](c-ms-sql-sqlpublication.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ True, wenn die Veröffentlichung das Herunterladen von Momentaufnahme Dateien ü
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
-| Ist indiziert             | False                                                               |
-| Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| System-Only            | Falsch                                                               |
+| Is-Single-Valued       | Richtig                                                                |
+| Ist indiziert             | Falsch                                                               |
+| Im globalen Katalog      | Falsch                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**MS-SQL-sqlpublication**](c-ms-sql-sqlpublication.md)<br/> |
+| In verwendete Klassen        | [**MS-SQL-SQLPublication**](c-ms-sql-sqlpublication.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ True, wenn die Veröffentlichung das Herunterladen von Momentaufnahme Dateien ü
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
-| Ist indiziert             | False                                                               |
-| Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| System-Only            | Falsch                                                               |
+| Ist einwertig       | Richtig                                                                |
+| Ist indiziert             | Falsch                                                               |
+| Im globalen Katalog      | Falsch                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**MS-SQL-sqlpublication**](c-ms-sql-sqlpublication.md)<br/> |
+| In verwendete Klassen        | [**MS-SQL-SQLPublication**](c-ms-sql-sqlpublication.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ True, wenn die Veröffentlichung das Herunterladen von Momentaufnahme Dateien ü
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
-| Ist indiziert             | False                                                               |
-| Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| System-Only            | Falsch                                                               |
+| Ist einwertig       | Richtig                                                                |
+| Ist indiziert             | Falsch                                                               |
+| Im globalen Katalog      | Falsch                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**MS-SQL-sqlpublication**](c-ms-sql-sqlpublication.md)<br/> |
+| In verwendete Klassen        | [**MS-SQL-SQLPublication**](c-ms-sql-sqlpublication.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ True, wenn die Veröffentlichung das Herunterladen von Momentaufnahme Dateien ü
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
-| Ist indiziert             | False                                                               |
-| Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| System-Only            | Falsch                                                               |
+| Ist einwertig       | Richtig                                                                |
+| Ist indiziert             | Falsch                                                               |
+| Im globalen Katalog      | Falsch                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**MS-SQL-sqlpublication**](c-ms-sql-sqlpublication.md)<br/> |
+| In verwendete Klassen        | [**MS-SQL-SQLPublication**](c-ms-sql-sqlpublication.md)<br/> |
 
 
 

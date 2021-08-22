@@ -1,11 +1,11 @@
 ---
-title: IPSec-NFA-Reference-Attribut
-description: Das IPSec-NFA-Reference-Attribut ist nur für die interne Verwendung vorgesehen.
+title: Ipsec-NFA-Reference-Attribut
+description: Das Ipsec-NFA-Reference-Attribut ist nur zur internen Verwendung.
 ms.assetid: 660bb1a1-c953-4768-afe5-006f436ef0cf
 ms.tgt_platform: multiple
 keywords:
-- IPSec-NFA-Verweis Attribut AD-Schema
-- ipsecnfareferenzierungsattribut AD-Schema
+- AD-Schema des Ipsec-NFA-Reference-Attributs
+- AD-Schema des ipsecNFAReference-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9717364dbd2317da35a6e25e80ebd9d8f37a7c6b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 57ee5131e6bbd2181cf64c4b87627d4903f9fc8301b4bb0d7970f6003125dbb6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346566"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119322520"
 ---
-# <a name="ipsec-nfa-reference-attribute"></a>IPSec-NFA-Reference-Attribut
+# <a name="ipsec-nfa-reference-attribute"></a>Ipsec-NFA-Reference-Attribut
 
-Das **IPSec-NFA-Reference-** Attribut ist nur für die interne Verwendung vorgesehen.
+Das **Ipsec-NFA-Reference-Attribut** ist nur zur internen Verwendung.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | IPSec-NFA-Referenz                     |
-| LDAP-Display-Name | ipsecnfare-Referenz                       |
+| CN                | Ipsec-NFA-Reference                     |
+| Ldap-Anzeigename | ipsecNFAReference                       |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.627                  |
-| System-ID-GUID    | b40ff821-427a-11d1-a9c2-0000f80367c1    |
+| System-Id-Guid    | b40ff821-427a-11d1-a9c2-0000f80367c1    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -43,7 +43,7 @@ Das **IPSec-NFA-Reference-** Attribut ist nur für die interne Verwendung vorges
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Das **IPSec-NFA-Reference-** Attribut ist nur für die interne Verwendung vorges
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Falsch                                            |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
@@ -70,7 +70,7 @@ Das **IPSec-NFA-Reference-** Attribut ist nur für die interne Verwendung vorges
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Das **IPSec-NFA-Reference-** Attribut ist nur für die interne Verwendung vorges
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Falsch                                            |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
@@ -99,11 +99,11 @@ Das **IPSec-NFA-Reference-** Attribut ist nur für die interne Verwendung vorges
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Falsch                                            |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
@@ -120,11 +120,11 @@ Das **IPSec-NFA-Reference-** Attribut ist nur für die interne Verwendung vorges
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Falsch                                            |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
@@ -141,11 +141,11 @@ Das **IPSec-NFA-Reference-** Attribut ist nur für die interne Verwendung vorges
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Falsch                                            |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
@@ -162,11 +162,11 @@ Das **IPSec-NFA-Reference-** Attribut ist nur für die interne Verwendung vorges
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Falsch                                            |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |

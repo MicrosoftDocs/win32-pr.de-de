@@ -1,7 +1,7 @@
 ---
-description: Mit der Methode "-Methode" des Microsoft. Windows. ActCtx-Objekts wird ein Objekt im Kontext des aktuellen Manifests erstellt.
+description: Die CreateObject-Methode von Microsoft. Windows. Das ActCtx-Objekt erstellt ein -Objekt im Kontext des aktuellen Manifests.
 ms.assetid: 531e6501-bb68-472b-b483-1f52815ba9d7
-title: ActCtx. kreateobject-Methode
+title: ActCtx.CreateObject-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Sxsoa.dll
-ms.openlocfilehash: 2b4c4393d59ea5ab711dbf4bb1f4c88d906b6582
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4161ccdcc2562405123d8cb5276aa1f849121c0271b6c6e3f23a32551f6f3dda
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216545"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119142393"
 ---
-# <a name="actctxcreateobject-method"></a>ActCtx. kreateobject-Methode
+# <a name="actctxcreateobject-method"></a>ActCtx.CreateObject-Methode
 
-Mit **der Methode "** -Methode" des [**Microsoft. Windows. ActCtx**](microsoft-windows-actctx-object.md) -Objekts wird ein Objekt im Kontext des aktuellen Manifests erstellt.
+Die **CreateObject-Methode** der [**Microsoft.Windows. Das ActCtx-Objekt**](microsoft-windows-actctx-object.md) erstellt ein -Objekt im Kontext des aktuellen Manifests.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ ActCtx.CreateObject(
 
 <dl> <dt>
 
-*ObjectID* 
+*Objectid* 
 </dt> <dd>
 
 Eine Zeichenfolge, die den Typ des zu erstellenden Objekts angibt. Beispielsweise eine COM-ProgID.
@@ -56,14 +56,14 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                 |
 | DLL<br/>                      | <dl> <dt>Sxsoa.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iactctx ist als 8fa7728f-b69b-4ee5-99f 2-e2aa021bef 28 definiert.<br/>           |
+| IID<br/>                      | IID \_ IActCtx ist als 8FA7728F-B69B-4EE5-99F2-E2AA021BEF28 definiert.<br/>           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

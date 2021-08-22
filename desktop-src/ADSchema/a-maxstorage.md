@@ -1,11 +1,11 @@
 ---
 title: Max-Storage-Attribut
-description: Die maximale Menge an Speicherplatz, die der Benutzer verwenden kann. Verwenden Sie den in Benutzer \_ maxstorage unbegrenzt angegebenen Wert \_ , um den gesamten verfügbaren Speicherplatz zu verwenden.
+description: Die maximale Menge an Speicherplatz, die der Benutzer verwenden kann. Verwenden Sie den in USER \_ MAXSTORAGE UNLIMITED angegebenen \_ Wert, um den gesamten verfügbaren Speicherplatz zu verwenden.
 ms.assetid: 69302641-ecfc-4b0f-81f8-f69b48c6faa7
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Max-Storage-Attribut
-- maxstorage-Attribut, AD-Schema
+- Max-Storage AD-Attributschema
+- MAXStorage-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac6caff3f85de7073818096324445b63a3c1c9be
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 1217d507f67fe2e629d2c5fc55b7bdf345d20c267ea968f0e1949fcc33cbe1fd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859719"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119301030"
 ---
 # <a name="max-storage-attribute"></a>Max-Storage-Attribut
 
-Die maximale Menge an Speicherplatz, die der Benutzer verwenden kann. Verwenden Sie den in Benutzer \_ maxstorage unbegrenzt angegebenen Wert \_ , um den gesamten verfügbaren Speicherplatz zu verwenden.
+Die maximale Menge an Speicherplatz, die der Benutzer verwenden kann. Verwenden Sie den in USER \_ MAXSTORAGE UNLIMITED angegebenen \_ Wert, um den gesamten verfügbaren Speicherplatz zu verwenden.
 
 
 
 | Eingabe | Wert |
 |-------------------|------------------------------------------------------------|
 | CN                | Max-Storage                                                |
-| LDAP-Display-Name | maxstorage                                                 |
-| Size              | 8 Bytes: Benutzer \_ maxstorage \_ unbegrenzt ((unsigned long)-1L) |
-| Berechtigung aktualisieren  | Domänen Administrator                                       |
-| Aktualisierungshäufigkeit  | Jedes Mal, wenn das Datenträger Kontingent geändert werden muss.                   |
+| Ldap-Anzeigename | maxStorage                                                 |
+| Size              | 8 Bytes: USER \_ MAXSTORAGE \_ UNLIMITED ((unsigned long) -1L) |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                                       |
+| Updatehäufigkeit  | Immer dann, wenn das Datenträgerkontingent geändert werden muss.                   |
 | Attribute-Id      | 1.2.840.113556.1.4.76                                      |
 | System-ID-GUID    | bf9679bd-0de6-11d0-a285-00aa003049e2                       |
 | Syntax            | [**Intervall**](s-interval.md)                             |
@@ -43,7 +43,7 @@ Die maximale Menge an Speicherplatz, die der Benutzer verwenden kann. Verwenden 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Die maximale Menge an Speicherplatz, die der Benutzer verwenden kann. Verwenden 
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -70,7 +70,7 @@ Die maximale Menge an Speicherplatz, die der Benutzer verwenden kann. Verwenden 
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Die maximale Menge an Speicherplatz, die der Benutzer verwenden kann. Verwenden 
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -100,10 +100,10 @@ Die maximale Menge an Speicherplatz, die der Benutzer verwenden kann. Verwenden 
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -121,10 +121,10 @@ Die maximale Menge an Speicherplatz, die der Benutzer verwenden kann. Verwenden 
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -142,10 +142,10 @@ Die maximale Menge an Speicherplatz, die der Benutzer verwenden kann. Verwenden 
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -163,10 +163,10 @@ Die maximale Menge an Speicherplatz, die der Benutzer verwenden kann. Verwenden 
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |

@@ -1,7 +1,7 @@
 ---
-description: Identifiziert Ressourcen Daten.
+description: Identifiziert Ressourcendaten.
 ms.assetid: f2ace2ad-228f-4f76-ab31-16e045e09331
-title: D3DXF_FILELOADRESOURCE-Struktur (D3dx9xof. h)
+title: D3DXF_FILELOADRESOURCE -Struktur (D3dx9xof.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9xof.h
-ms.openlocfilehash: ee5dc27b551382a5fa5d1c7f4833c94b205e5521
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: ddc105d3df7732e1572e41c3d9cb47a285caf69cba0a24f6ea65090706394592
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106366465"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119564930"
 ---
-# <a name="d3dxf_fileloadresource-structure"></a>D3DXF \_ fileloadresource-Struktur
+# <a name="d3dxf_fileloadresource-structure"></a>D3DXF \_ FILELOADRESOURCE-Struktur
 
-Identifiziert Ressourcen Daten.
+Identifiziert Ressourcendaten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,42 +41,42 @@ typedef struct D3DXF_FILELOADRESOURCE {
 
 <dl> <dt>
 
-**HMODULE**
+**hModule**
 </dt> <dd>
 
 Typ: **[ **HMODULE**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Handle des Moduls, das die zu ladende Ressource enthält. Wenn dieser Member **null** ist, muss die Ressource an die ausführbare Datei angefügt werden, von der Sie verwendet wird.
+Handle des Moduls, das die zu ladende Ressource enthält. Wenn dieser Member **NULL ist,** muss die Ressource an die ausführbare Datei angefügt werden, die sie verwendet.
 
 </dd> <dt>
 
-**lpname**
+**lpName**
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Ein Zeiger auf eine Zeichenfolge, die den Namen der zu ladenden Ressource angibt. Wenn die Ressource z. b. ein Mesh ist, sollte dieser Member den Namen der Mesh-Datei angeben.
+Zeiger auf eine Zeichenfolge, die den Namen der zu ladenden Ressource angibt. Wenn die Ressource beispielsweise ein Gitternetz ist, sollte dieser Member den Namen der Meshdatei angeben.
 
 </dd> <dt>
 
-**lptype**
+**lpType**
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Ein Zeiger auf eine Zeichenfolge, die den benutzerdefinierten Typ angibt, der die Ressource identifiziert.
+Zeiger auf eine Zeichenfolge, die den benutzerdefinierten Typ angibt, der die Ressource identifiziert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur identifiziert eine Ressource, die geladen werden soll, wenn eine Anwendung die Methode " [**kreateenumubject**](id3dxfile--createenumobject.md) " verwendet und das Flag " [D3DXF \_ fileload \_ FromResource](d3dxf.md) " angibt.
+Diese Struktur identifiziert eine zu ladende Ressource, wenn eine Anwendung die [**CreateEnumObject-Methode**](id3dxfile--createenumobject.md) verwendet, und gibt das [Flag D3DXF \_ FILELOAD \_ FROMRESOURCE](d3dxf.md) an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,7 +84,7 @@ Diese Struktur identifiziert eine Ressource, die geladen werden soll, wenn eine 
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9xof. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9xof.h</dt> </dl> |
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Gruppe von Controllern dar, die den Betrieb und die Funktion von Geräten steuern, von denen Protokolle initiiert werden.
+description: Stellt eine Gruppe von Controllern dar, die den Betrieb und die Funktion von Geräten steuern, die Protokolle initiieren.
 ms.assetid: fb6b65d4-3a1a-47b1-afc7-9b10e8eeaa32
 title: CIM_ProtocolController-Klasse
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 27372bc57ad36f37689d75b3963ec0c4b1106956
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7dcd0f0ca1891914e2c4fc3fedbc0012d930dbaec99926f9db8e013435367f36
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148510"
 ---
-# <a name="cim_protocolcontroller-class"></a>CIM \_ protocolcontroller-Klasse
+# <a name="cim_protocolcontroller-class"></a>CIM \_ ProtocolController-Klasse
 
-Stellt eine Gruppe von Controllern dar, die den Betrieb und die Funktion von Geräten steuern, von denen Protokolle initiiert werden.
+Stellt eine Gruppe von Controllern dar, die den Betrieb und die Funktion von Geräten steuern, die Protokolle initiieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,26 +37,26 @@ class CIM_ProtocolController : CIM_LogicalDevice
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ protocolcontroller** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ProtocolController-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ protocolcontroller** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ProtocolController-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Maxunitiongesteuert**
+**MaxUnitsControlled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Anzahl von Einheiten, die durch den Protokoll Controller gesteuert oder darauf zugegriffen werden kann.
+Die maximale Anzahl von Einheiten, die über den Protokollcontroller gesteuert oder darauf zugegriffen werden kann.
 
 </dd> </dl>
 
@@ -69,12 +69,12 @@ Die maximale Anzahl von Einheiten, die durch den Protokoll Controller gesteuert 
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

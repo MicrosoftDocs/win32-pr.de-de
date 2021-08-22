@@ -1,7 +1,7 @@
 ---
 description: Erstellt eine Momentaufnahme eines virtuellen Systems.
 ms.assetid: cad4cb4f-523f-4fda-ac88-8cece7abc227
-title: Kreatesnapshot-Methode der CIM_VirtualSystemSnapshotService-Klasse
+title: CreateSnapshot-Methode der CIM_VirtualSystemSnapshotService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: ee96098477501123cffc1fd59a52734bbbea35d5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8ee1a2e66745ceac50cc00ba6e625a171f18c7d2b54d4e51af2c86f6711675ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356930"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119532750"
 ---
-# <a name="createsnapshot-method-of-the-cim_virtualsystemsnapshotservice-class"></a>Kreatesnapshot-Methode der CIM \_ virtualsystemsnapshotservice-Klasse
+# <a name="createsnapshot-method-of-the-cim_virtualsystemsnapshotservice-class"></a>CreateSnapshot-Methode der CIM \_ VirtualSystemSnapshotService-Klasse
 
 Erstellt eine Momentaufnahme eines virtuellen Systems.
 
@@ -43,24 +43,24 @@ uint32 CreateSnapshot(
 
 <dl> <dt>
 
-*Affectedsystem* \[ in\]
+*AffectedSystem* \[ In\]
 </dt> <dd>
 
-Ein [**CIM \_ Computersystem**](cim-computersystem.md) -Verweis auf das betroffene virtuelle System.
+Ein [**\_ CIM-ComputerSystemverweis**](cim-computersystem.md) auf das betroffene virtuelle System.
 
 </dd> <dt>
 
-*Snapshotsettings* \[ in\]
+*SnapshotSettings* \[ In\]
 </dt> <dd>
 
-Parameter Einstellungen.
+Parametereinstellungen.
 
 </dd> <dt>
 
-*Snapshottype* \[ in\]
+*SnapshotType* \[ In\]
 </dt> <dd>
 
-Angeforderter snapshottyp:
+Angeforderter Momentaufnahmetyp:
 
 <dt>
 
@@ -71,49 +71,49 @@ Angeforderter snapshottyp:
 
 </dt> <dd>
 
-Vervollständigen Sie die Momentaufnahme des virtuellen Systems.
+Vollständige Momentaufnahme des virtuellen Systems.
 
 </dd> <dt>
 
 <span id="Disk_Snapshot"></span><span id="disk_snapshot"></span><span id="DISK_SNAPSHOT"></span>
 
-<span id="Disk_Snapshot"></span><span id="disk_snapshot"></span><span id="DISK_SNAPSHOT"></span>Datenträger **Momentaufnahme** (3)
+<span id="Disk_Snapshot"></span><span id="disk_snapshot"></span><span id="DISK_SNAPSHOT"></span>**Datenträgermomentaufnahme** (3)
 
 
 </dt> <dd>
 
-Momentaufnahme von virtuellen System Datenträgern.
+Momentaufnahme virtueller Systemdatenträger.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Specific"></span><span id="vendor_specific"></span><span id="VENDOR_SPECIFIC"></span>
 
-<span id="Vendor_Specific"></span><span id="vendor_specific"></span><span id="VENDOR_SPECIFIC"></span>**Hersteller spezifisch** (32768.65535)
+<span id="Vendor_Specific"></span><span id="vendor_specific"></span><span id="VENDOR_SPECIFIC"></span>**Herstellerspezifisch** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*Resultingsnapshot* \[ in, out\]
+*ResultingSnapshot* \[ in, out\]
 </dt> <dd>
 
-Ein [**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md) -Verweis auf die resultierende virtuelle System Momentaufnahme.
+Ein [**CIM \_ VirtualSystemSettingData-Verweis**](cim-virtualsystemsettingdata.md) auf die resultierende Momentaufnahme des virtuellen Systems.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang lange ausgeführt wird, kann optional ein Auftrag zurückgegeben werden. In diesem Fall gilt: die Instanz der [**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md) -Klasse, die die neue Momentaufnahme des virtuellen Systems darstellt, wird über die [**CIM \_ affectedjobelate**](cim-affectedjobelement.md) -Zuordnung mit dem Wert der **affectedelta** -Eigenschaft präsentiert, die auf die neue Instanz der **CIM \_ virtualsystemsettingdata** -Klasse verweist, die  die Momentaufnahme des virtuellen Systems darstellt
+Wenn der Vorgang lange ausgeführt wird, kann optional ein Auftrag zurückgegeben werden. In diesem Fall wird die Instanz der [**CIM \_ VirtualSystemSettingData-Klasse,**](cim-virtualsystemsettingdata.md) die die neue Momentaufnahme des virtuellen Systems darstellt, über die [**CIM \_ AffectedJobElement-Zuordnung**](cim-affectedjobelement.md) mit dem Wert der **AffectedElement-Eigenschaft** dargestellt, die auf die neue Instanz der **CIM \_ VirtualSystemSettingData-Klasse** verweist, die die Momentaufnahme des virtuellen Systems darstellt, und den Wert der **ElementEffects,** die auf 5 (Create) festgelegt sind.
 
 > [!Note]  
-> Dieser Parameter war in Windows 8.1 mit Lese-/Schreibzugriff.
+> Dieser Parameter wurde in der -Windows 8.1.
 
  
 
@@ -121,7 +121,7 @@ Wenn der Vorgang lange ausgeführt wird, kann optional ein Auftrag zurückgegebe
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird 0 zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
+Bei Erfolg gibt 0 zurück. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -131,7 +131,7 @@ Bei Erfolg wird 0 zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -140,22 +140,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
 **Ungültiger Typ** (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -167,7 +167,7 @@ Fehler **(2** )
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -176,7 +176,7 @@ Fehler **(2** )
 
 <dl> <dt>
 
-[**CIM \_ virtualsystemsnapshotservice**](cim-virtualsystemsnapshotservice.md)
+[**CIM \_ VirtualSystemSnapshotService**](cim-virtualsystemsnapshotservice.md)
 </dt> </dl>
 
  

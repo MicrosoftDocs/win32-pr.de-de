@@ -1,25 +1,25 @@
 ---
-description: Übersicht über die Verwendung von aktivem Barrierefreiheit zum verfügbar machen von Text.
+description: Übersicht über die Verwendung der aktiven Barrierefreiheit zum Verfügbar machen von Text.
 ms.assetid: c04ade90-5f17-4e16-b82b-c99230000954
-title: Verwenden von Active Accessibility zur Offenlegung von Text
+title: Verwenden von Active Accessibility zum Verfügbar machen von Text
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 52d475a8c576e109f47be7b5a3d61cddf543038d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 247d78149b82d15eb7c2dbd4ac2b2463d53c5d454dcb7877906197661de36ce4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119334790"
 ---
-# <a name="using-active-accessibility-to-expose-text"></a>Verwenden von Active Accessibility zur Offenlegung von Text
+# <a name="using-active-accessibility-to-expose-text"></a>Verwenden von Active Accessibility zum Verfügbar machen von Text
 
-Anwendungen können mit Microsoft Active Accessibility Text verfügbar machen. Die [**IAccessible**](/windows/win32/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle, die in früheren Versionen von Active Accessibility definiert ist, ist jedoch nicht für das verfügbar machen großer Mengen an Rich-Text optimiert. Spätere Versionen definieren Schnittstellen, die für die Bereitstellung großer Mengen von Text-und Textattributen optimiert sind.
+Anwendungen können Microsoft Active Accessibility verwenden, um Text verfügbar zu machen. Die [**IAccessible-Schnittstelle,**](/windows/win32/api/oleacc/nn-oleacc-iaccessible) die von früheren Versionen von Active Accessibility definiert wurde, ist jedoch nicht für das Verfügbarmachen großer Mengen von Rich Text optimiert. Höhere Versionen definieren Schnittstellen, die für das Verfügbarmachen großer Mengen von Text- und Textattributen optimiert sind.
 
-Um große Mengen an Text verfügbar zu machen, erstellen Sie separate Component Object Model (com)-Objekte, die [**IAccessible**](/windows/win32/api/oleacc/nn-oleacc-iaccessible)-und untergeordnete Elemente unterstützen, um die einzelnen Textelemente darzustellen. Ein Run ist eine Zeile oder ein Teil einer Zeile, die dieselbe Formatierung hat.
+Um große Mengen an Text verfügbar zu machen, erstellen Sie separate Component Object Model (COM)-Objekte, die [**IAccessible**](/windows/win32/api/oleacc/nn-oleacc-iaccessible)oder untergeordnete Elemente unterstützen, um jede Ausführung von Text darzustellen. Eine Ausführung ist eine Zeile oder ein Teil einer Zeile, die die gleiche Formatierung hat.
 
-Active Accessibility macht nur den Text und seinen Speicherort verfügbar, verfügt aber über keinen Mechanismus, um die Formatierung des Texts verfügbar zu machen. Trotz dieser Einschränkungen verwenden einige Programme Active Accessibility, um Text verfügbar zu machen. Beispielsweise verwenden Microsoft Internet Explorer und Microsoft Visual Studio Active Accessibility, um große Mengen von Text verfügbar zu machen.
+Active Accessibility macht nur den Text und seine Position verfügbar, verfügt aber nicht über einen Mechanismus zum Verfügbarmachen der Formatierung des Texts. Trotz dieser Einschränkungen verwenden einige Programme Active Accessibility, um Text verfügbar zu machen. Microsoft Internet Explorer und Microsoft Visual Studio verwenden beispielsweise Active Accessibility, um große Mengen an Text verfügbar zu machen.
 
-Weitere Informationen zum verfügbar machen von Text mithilfe Active Accessibility finden Sie unter [Barrierefreiheit](../accessibility/accessibility.md).
+Weitere Informationen zum Verfügbarmachen von Text mit Active Accessibility finden Sie unter [Barrierefreiheit.](../accessibility/accessibility.md)
 
  
 

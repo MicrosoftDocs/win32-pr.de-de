@@ -1,9 +1,9 @@
 ---
-title: NM_RELEASEDCAPTURE (auf-ab-) Benachrichtigungs Code (kommstrg. h)
-description: Benachrichtigt das übergeordnete Fenster eines auf-ab-Steuer Elements, dass das Steuerelement die Maus Aufzeichnung freigibt. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_RELEASEDCAPTURE (nach oben) Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines up-down-Steuerelements, dass das Steuerelement die Mauserfassung freigibt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 88a4a9a2-ba7f-4ccc-b5bf-749f49dc666b
 keywords:
-- Windows-Steuerelemente für die NM_RELEASEDCAPTURE von Benachrichtigungs Code
+- NM_RELEASEDCAPTURE -Benachrichtigungscode (nach oben) Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b94f2a61727861cbf47720a41c7255763992b54
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 54e0adb7ace7f5a185cf7f0231622d4931c22af6932cf5547a7e9365bbca8669
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119344210"
 ---
-# <a name="nm_releasedcapture-up-down-notification-code"></a>NM \_ releasedcapture (auf-ab-) Benachrichtigungs Code
+# <a name="nm_releasedcapture-up-down-notification-code"></a>NM \_ RELEASEDCAPTURE-Benachrichtigungscode (nach oben)
 
-Benachrichtigt das übergeordnete Fenster eines auf-ab-Steuer Elements, dass das Steuerelement die Maus Aufzeichnung freigibt. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines up-down-Steuerelements, dass das Steuerelement die Mauserfassung freigibt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,13 +41,13 @@ NM_RELEASEDCAPTURE
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die zusätzliche Informationen zu dieser Benachrichtigung enthält.
+Zeiger auf eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) die zusätzliche Informationen zu dieser Benachrichtigung enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das-Steuerelement ignoriert den Rückgabewert aus diesem Benachrichtigungs Code.
+Das Steuerelement ignoriert den Rückgabewert dieses Benachrichtigungscodes.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Das-Steuerelement ignoriert den Rückgabewert aus diesem Benachrichtigungs Code.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

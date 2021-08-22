@@ -1,10 +1,10 @@
 ---
-title: DS-Check-stale-Phantoms erweitert rechts
-description: Erweiterte Rechte erforderlich, um die Überprüfung veralteter Phantom Objekte durch DS zu erzwingen.
+title: Erweiterte Rechte für DS-Check-Stale-Phantoms
+description: Erweitertes Recht erforderlich, um DS zu zwingen, veraltete Phantomobjekte zu überprüfen.
 ms.assetid: 5f3e5b05-ebc4-4e79-acc0-0e4f7cf53098
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema "DS-Check-stale-Phantoms Extended right"
+- DS-Check-Stale-Phantoms erweitertes rechtes AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,31 +13,31 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7f280d04a60b539d6559d9e5df830947742663b1
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c2dcdec83da65117b0f04b7de08f4cd83abb589cc63fd1b8cfb053d3878e5196
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119532360"
 ---
-# <a name="ds-check-stale-phantoms-extended-right"></a>DS-Check-stale-Phantoms erweitert rechts
+# <a name="ds-check-stale-phantoms-extended-right"></a>Erweiterte Rechte für DS-Check-Stale-Phantoms
 
-Erweiterte Rechte erforderlich, um die Überprüfung veralteter Phantom Objekte durch DS zu erzwingen.
+Erweitertes Recht erforderlich, um DS zu zwingen, veraltete Phantomobjekte zu überprüfen.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
-| CN           | DS-Check-stale-Phantoms              |
+| CN           | DS-Check-Stale-Phantoms              |
 | Anzeigename | Überprüfen veralteter Phantome                 |
-| Rights-GUID  | 69ae6200-7F 46-11d2-b9ad-00c04f 79F 805 |
+| Rights-GUID  | 69ae6200-7f46-11d2-b9ad-00c04f79f805 |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -50,18 +50,18 @@ Erweiterte Rechte erforderlich, um die Überprüfung veralteter Phantom Objekte 
 | Eingabe | Wert |
 |-------------------------|------------------------------------------|
 | Applies-To              | [**NTDS-DSA**](c-ntdsdsa.md)<br/> |
-| Lokalisierung-Display-ID | 53                                       |
+| Lokalisierungsanzeige-ID | 53                                       |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|------------------------------------------|
 | Applies-To              | [**NTDS-DSA**](c-ntdsdsa.md)<br/> |
-| Lokalisierung-Display-ID | 53                                       |
+| Lokalisierungsanzeige-ID | 53                                       |
 
 
 
@@ -72,7 +72,7 @@ Erweiterte Rechte erforderlich, um die Überprüfung veralteter Phantom Objekte 
 | Eingabe | Wert |
 |-------------------------|------------------------------------------|
 | Applies-To              | [**NTDS-DSA**](c-ntdsdsa.md)<br/> |
-| Lokalisierung-Display-ID | 53                                       |
+| Lokalisierungsanzeige-ID | 53                                       |
 
 
 
@@ -83,7 +83,7 @@ Erweiterte Rechte erforderlich, um die Überprüfung veralteter Phantom Objekte 
 | Eingabe | Wert |
 |-------------------------|------------------------------------------|
 | Applies-To              | [**NTDS-DSA**](c-ntdsdsa.md)<br/> |
-| Lokalisierung-Display-ID | 53                                       |
+| Lokalisierungsanzeige-ID | 53                                       |
 
 
 
@@ -94,7 +94,7 @@ Erweiterte Rechte erforderlich, um die Überprüfung veralteter Phantom Objekte 
 | Eingabe | Wert |
 |-------------------------|------------------------------------------|
 | Applies-To              | [**NTDS-DSA**](c-ntdsdsa.md)<br/> |
-| Lokalisierung-Display-ID | 53                                       |
+| Lokalisierungsanzeige-ID | 53                                       |
 
 
 
@@ -105,7 +105,7 @@ Erweiterte Rechte erforderlich, um die Überprüfung veralteter Phantom Objekte 
 | Eingabe | Wert |
 |-------------------------|------------------------------------------|
 | Applies-To              | [**NTDS-DSA**](c-ntdsdsa.md)<br/> |
-| Lokalisierung-Display-ID | 53                                       |
+| Lokalisierungsanzeige-ID | 53                                       |
 
 
 

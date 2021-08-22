@@ -1,9 +1,9 @@
 ---
-title: MCM_GETMONTHDELTA Meldung (kommstrg. h)
-description: Ruft die Bild Lauf Rate für ein Monatskalender-Steuerelement ab. Die Scrollrate entspricht der Anzahl von Monaten, die das Steuerelement seine Anzeige verschiebt, wenn der Benutzer auf eine Bild Lauf Schaltfläche klickt. Sie können diese Nachricht explizit oder mit dem monthcal \_ getmonthdelta-Makro senden.
+title: MCM_GETMONTHDELTA (Commctrl.h)
+description: Ruft die Bildlaufrate für ein Monatskalender-Steuerelement ab. Die Bildlaufrate ist die Anzahl der Monate, die das Steuerelement seine Anzeige verschiebt, wenn der Benutzer auf eine Bildlaufschaltfläche klickt. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ GetMonthDelta-Makros senden.
 ms.assetid: 6db02993-b22c-430f-8928-8bd5768b2151
 keywords:
-- Windows-Steuerelemente für MCM_GETMONTHDELTA Meldung
+- MCM_GETMONTHDELTA von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 01eaa40b930e6317cc2be6b674f0cea58115ae40
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c13a13d75a1655c1082b4b4611517915be14e27b0fb1c5f94fb5a17f6db973e2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106659"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119319610"
 ---
-# <a name="mcm_getmonthdelta-message"></a>MCM \_ getmonthdelta-Meldung
+# <a name="mcm_getmonthdelta-message"></a>MCM \_ GETMONTHDELTA-Nachricht
 
-Ruft die Bild Lauf Rate für ein Monatskalender-Steuerelement ab. Die Scrollrate entspricht der Anzahl von Monaten, die das Steuerelement seine Anzeige verschiebt, wenn der Benutzer auf eine Bild Lauf Schaltfläche klickt. Sie können diese Nachricht explizit oder mit dem [**monthcal \_ getmonthdelta**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getmonthdelta) -Makro senden.
+Ruft die Bildlaufrate für ein Monatskalender-Steuerelement ab. Die Bildlaufrate ist die Anzahl der Monate, die das Steuerelement seine Anzeige verschiebt, wenn der Benutzer auf eine Bildlaufschaltfläche klickt. Sie können diese Nachricht explizit oder mithilfe des [**MonthCal \_ GetMonthDelta-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getmonthdelta) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft die Bild Lauf Rate für ein Monatskalender-Steuerelement ab. Die Scrollrate
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Monat Delta zuvor mithilfe der [**MCM- \_ setmonthdelta**](mcm-setmonthdelta.md) -Nachricht festgelegt wurde, gibt einen int-Wert zurück, der die aktuelle Scrollrate des Monats Kalenders darstellt. Wenn das Delta für den Monat nicht zuvor mithilfe der **MCM- \_ setmonthdelta** -Nachricht festgelegt wurde, oder wenn der Monat Delta auf den Standardwert zurückgesetzt wurde, gibt einen int-Wert zurück, der die aktuelle Anzahl der sichtbaren Monate darstellt.
+Wenn das Monatsdelta zuvor mithilfe der [**MCM \_ SETMONTHDELTA-Nachricht**](mcm-setmonthdelta.md) festgelegt wurde, gibt einen INT-Wert zurück, der die aktuelle Bildlaufrate des Monatskalenders darstellt. Wenn das Monatsdelta zuvor nicht mithilfe der **MCM \_ SETMONTHDELTA-Nachricht** festgelegt wurde oder das Monatsdelta auf den Standardwert zurückgesetzt wurde, gibt einen INT-Wert zurück, der die aktuelle Anzahl der sichtbaren Monate darstellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Wenn der Monat Delta zuvor mithilfe der [**MCM- \_ setmonthdelta**](mcm-setmonth
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,19 +1,19 @@
 ---
 title: Verwenden des Tunnel Modus
-description: Der folgende Beispielcode veranschaulicht, wie ein Punkt-zu-Punkt-IPSec-Tunnel mithilfe der Windows-Filter Plattform (WFP)-API konfiguriert wird.
+description: Im folgenden Beispielcode wird veranschaulicht, wie Sie einen Punkt-zu-Punkt-IPsec-Tunnel mithilfe der Windows Filtering Platform-API (WFP) konfigurieren.
 ms.assetid: 6bbe7e94-6a5f-4984-ac61-b187dcf25366
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6727203a201c51f88558451fcd620d1a1be0c7f7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9f90a4c2068b32ce265054dc2d75e75c39622cc9745d8e320fc73aefd9c2739a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119535340"
 ---
 # <a name="using-tunnel-mode"></a>Verwenden des Tunnel Modus
 
-Der folgende Beispielcode veranschaulicht, wie ein Punkt-zu-Punkt-IPSec-Tunnel mithilfe der Windows-Filter Plattform (WFP)-API konfiguriert wird.
+Der folgende Beispielcode veranschaulicht, wie Sie einen Punkt-zu-Punkt-IPsec-Tunnel mithilfe der Windows Filtering Platform(WFP)-API konfigurieren.
 
 
 ```C++
@@ -189,9 +189,9 @@ CLEANUP:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

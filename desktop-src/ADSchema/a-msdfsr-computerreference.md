@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-computerreference-Attribut
-description: Enthält einen Forward-Link zu einem Computer Objekt.
+title: ms-DFSR-ComputerReference-Attribut
+description: Enthält einen Vorwärtslink zu einem Computerobjekt.
 ms.assetid: 0e247ab7-7ed1-4813-9ba0-bb8cffacd8c8
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-DFSR-Computer Reference\"-Attribut, AD-Schema"
-- "\"msdfsr-Computer Reference\"-Attribut, AD-Schema"
+- MS-DFSR-ComputerReference-Attribut AD-Schema
+- MSDFSR-ComputerReference-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 62bc46fc4419e80f2baf8ffebc284beeceef41e7
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c790f8e2dd896e1d0115f1b3f017bd391abcb115dcb5e667b59b49fd09d0d564
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119299040"
 ---
-# <a name="ms-dfsr-computerreference-attribute"></a>MS-DFSR-computerreference-Attribut
+# <a name="ms-dfsr-computerreference-attribute"></a>ms-DFSR-ComputerReference-Attribut
 
-Enthält einen Forward-Link zu einem [**Computer**](c-computer.md) Objekt.
+Enthält einen Vorwärtslink zu einem [**Computerobjekt.**](c-computer.md)
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | MS-DFSR-computerreference               |
-| LDAP-Display-Name | msdfsr-Computer Referenz                |
+| CN                | ms-DFSR-ComputerReference               |
+| Ldap-Anzeigename | msDFSR-ComputerReference                |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.101             |
-| System-ID-GUID    | 6c7b5785-3d21-41bf -8a8a-627941544d5a    |
+| System-ID-GUID    | 6c7b5785-3d21-41bf-8a8a-627941544d5a    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -55,16 +55,16 @@ Enthält einen Forward-Link zu einem [**Computer**](c-computer.md) Objekt.
 |------------------------|------------------------------------------------------|
 | Link-ID                | 2050                                                 |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | True                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
 | System-Flags           | 0x00000000                                           |
-| In verwendete Klassen        | [**MS-DFSR-Member**](c-msdfsr-member.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Member**](c-msdfsr-member.md)<br/> |
 
 
 
@@ -76,16 +76,16 @@ Enthält einen Forward-Link zu einem [**Computer**](c-computer.md) Objekt.
 |------------------------|------------------------------------------------------|
 | Link-ID                | 2050                                                 |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | True                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
 | System-Flags           | 0x00000000                                           |
-| In verwendete Klassen        | [**MS-DFSR-Member**](c-msdfsr-member.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Member**](c-msdfsr-member.md)<br/> |
 
 
 
@@ -97,16 +97,16 @@ Enthält einen Forward-Link zu einem [**Computer**](c-computer.md) Objekt.
 |------------------------|------------------------------------------------------|
 | Link-ID                | 2050                                                 |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | True                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
 | System-Flags           | 0x00000000                                           |
-| In verwendete Klassen        | [**MS-DFSR-Member**](c-msdfsr-member.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Member**](c-msdfsr-member.md)<br/> |
 
 
 
@@ -118,22 +118,22 @@ Enthält einen Forward-Link zu einem [**Computer**](c-computer.md) Objekt.
 |------------------------|------------------------------------------------------|
 | Link-ID                | 2050                                                 |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | True                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
 | System-Flags           | 0x00000000                                           |
-| In verwendete Klassen        | [**MS-DFSR-Member**](c-msdfsr-member.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Member**](c-msdfsr-member.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **MS-DFSR-computerreference-** Attribut ist Teil der Unterstützung für den verteiltes Dateisystem (DFS)-Replikations Dienst.
+Das **ms-DFSR-ComputerReference-Attribut** ist Teil der Unterstützung des replikationsdiensts verteiltes Dateisystem (DFS).
 
  
 

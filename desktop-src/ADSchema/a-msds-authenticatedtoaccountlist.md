@@ -1,11 +1,11 @@
 ---
-title: ms-DS-authentialisiedto-accountlist-Attribut
-description: Abwärts Verknüpfung für ms-DS-authentikatedat-DC. Gibt an, welche Benutzer sich bei diesem Computer authentifiziert haben.
+title: ms-DS-AuthenticatedTo-Accountlist-Attribut
+description: Abwärtslink für ms-DS-AuthenticatedAt-DC. Identifiziert, welche Benutzer sich bei diesem Computer authentifiziert haben.
 ms.assetid: d3f4d53d-7c44-4d1c-b6ec-f504057c6e8d
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-authenticedto-accountlist\"-Attribut AD-Schema"
-- adschema für das msDS-authentitoredtoaccountlist-Attribut
+- MS-DS-AuthenticatedTo-Accountlist-Attribut AD-Schema
+- AD-Schema des msDS-AuthenticatedToAccountlist-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cbd77c5da7b63d01263fc7a804ef661349c86fdf
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 699ce0a0fb884ac540986c2ef0db8bb2266ce33b438b34ccfc23df9a17cbadc4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344553"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119296960"
 ---
-# <a name="ms-ds-authenticatedto-accountlist-attribute"></a>ms-DS-authentialisiedto-accountlist-Attribut
+# <a name="ms-ds-authenticatedto-accountlist-attribute"></a>ms-DS-AuthenticatedTo-Accountlist-Attribut
 
-Abwärts Verknüpfung für [**ms-DS-authentikatedat-DC**](a-msds-authenticatedatdc.md). Gibt an, welche Benutzer sich bei diesem Computer authentifiziert haben.
+Abwärtslink für [**ms-DS-AuthenticatedAt-DC**](a-msds-authenticatedatdc.md). Identifiziert, welche Benutzer sich bei diesem Computer authentifiziert haben.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-authentieredto-accountlist       |
-| LDAP-Display-Name | MSDS-authentialisiedtoaccountlist         |
+| CN                | ms-DS-AuthenticatedTo-Accountlist       |
+| Ldap-Anzeigename | msDS-AuthenticatedToAccountlist         |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.1957                 |
-| System-ID-GUID    | e8b2c971-a6df-47bc-8d6f-62770d527aa5    |
+| System-Id-Guid    | e8b2c971-a6df-47bc-8d6f-62770d527aa5    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -54,11 +54,11 @@ Abwärts Verknüpfung für [**ms-DS-authentikatedat-DC**](a-msds-authenticatedat
 |------------------------|---------------------------------|
 | Link-ID                | 2113                            |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -75,11 +75,11 @@ Abwärts Verknüpfung für [**ms-DS-authentikatedat-DC**](a-msds-authenticatedat
 |------------------------|---------------------------------|
 | Link-ID                | 2113                            |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -96,11 +96,11 @@ Abwärts Verknüpfung für [**ms-DS-authentikatedat-DC**](a-msds-authenticatedat
 |------------------------|---------------------------------|
 | Link-ID                | 2113                            |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

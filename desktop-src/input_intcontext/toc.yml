@@ -1,14 +1,14 @@
-- name: Interaktions Kontext
+- name: Interaktionskontext
   href: interaction-context-portal.md
   items:
-    - name: Interaktions Kontext Verweis
+    - name: Referenz zum Interaktionskontext
       href: interaction-context-reference.md
       items:
-        - name: Hinteraktionskontext
+        - name: HINTERACTIONCONTEXT
           href: hinteractioncontext.md
         - name: INTERACTION_CONTEXT_OUTPUT_CALLBACK
           href: /windows/win32/api/interactioncontext/nc-interactioncontext-interaction_context_output_callback
-        - name: Interaktions Kontext Enumerationen
+        - name: Interaktionskontextenumeration
           href: enumerations.md
           items:
             - name: CROSS_SLIDE_FLAGS
@@ -31,56 +31,56 @@
               href: /windows/win32/api/interactioncontext/ne-interactioncontext-manipulation_rails_state
             - name: MOUSE_WHEEL_PARAMETER
               href: /windows/win32/api/interactioncontext/ne-interactioncontext-mouse_wheel_parameter
-        - name: Interaktions Kontextfunktionen
+        - name: Interaktionskontextfunktionen
           href: functions.md
           items:
-            - name: Addpointerinteraktioncontext
+            - name: AddPointerInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-addpointerinteractioncontext
-            - name: Bufferpointerpacketsinteraction Context
+            - name: BufferPointerPacketsInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-bufferpointerpacketsinteractioncontext
-            - name: '"Erstellungs Kontext"'
+            - name: CreateInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-createinteractioncontext
-            - name: Destroyinteraktioncontext
+            - name: DestroyInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-destroyinteractioncontext
-            - name: Getcrossdiasparameterinteraction Context
+            - name: GetCrossSlideParameterInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-getcrossslideparameterinteractioncontext
-            - name: Getinertiaparameterinteraction Context
+            - name: GetInertiaParameterInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-getinertiaparameterinteractioncontext
-            - name: Getinteraktionconfigurationinteraktioncontext
+            - name: GetInteractionConfigurationInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-getinteractionconfigurationinteractioncontext
-            - name: Getmouswheelparameterinteraction Context
+            - name: GetMouseWheelParameterInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-getmousewheelparameterinteractioncontext
-            - name: Getpropertyinteraktioncontext
+            - name: GetPropertyInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-getpropertyinteractioncontext
-            - name: Getstatueingeteraction Context
+            - name: GetStateInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-getstateinteractioncontext
-            - name: Processbufferedpacketsinteraction Context
+            - name: ProcessBufferedPacketsInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-processbufferedpacketsinteractioncontext
-            - name: Processinertiainteraktioncontext
+            - name: ProcessInertiaInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-processinertiainteractioncontext
-            - name: Processpointerframesinteraktioncontext
+            - name: ProcessPointerFramesInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-processpointerframesinteractioncontext
-            - name: Registeroutputcallbackinteraction Context
+            - name: RegisterOutputCallbackInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-registeroutputcallbackinteractioncontext
-            - name: Removepointerinteraktioncontext
+            - name: RemovePointerInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-removepointerinteractioncontext
-            - name: Resetinteraktioncontext
+            - name: ResetInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-resetinteractioncontext
-            - name: Setcrossdiasparametersinteraction Context
+            - name: SetCrossSlideParametersInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-setcrossslideparametersinteractioncontext
-            - name: '"" "".'
+            - name: SetInertiaParameterInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-setinertiaparameterinteractioncontext
-            - name: Setinteraktionconfigurationinteraktioncontext
+            - name: SetInteractionConfigurationInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-setinteractionconfigurationinteractioncontext
-            - name: '"Stmouswheelparameterinteraction Context"'
+            - name: SetMouseWheelParameterInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-setmousewheelparameterinteractioncontext
-            - name: Setpivotinteraktioncontext
+            - name: SetPivotInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-setpivotinteractioncontext
-            - name: Setpropertyinteraktioncontext
+            - name: SetPropertyInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-setpropertyinteractioncontext
-            - name: Stopinteraktioncontext
+            - name: StopInteractionContext
               href: /windows/win32/api/interactioncontext/nf-interactioncontext-stopinteractioncontext
-        - name: Interaktions Kontext Strukturen
+        - name: Interaktionskontextstrukturen
           href: structures.md
           items:
             - name: CROSS_SLIDE_PARAMETER

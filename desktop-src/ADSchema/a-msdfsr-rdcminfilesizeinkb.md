@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-rdcminfilesizeinkb-Attribut
-description: Enthält die minimale Dateigröße in Kilobyte, auf die RDC angewendet werden soll.
+title: ms-DFSR-RdcMinFileSizeInKb-Attribut
+description: Enthält die Minimale Dateigröße in Kilobyte, auf die RDC angewendet werden soll.
 ms.assetid: af19d3e8-046b-4500-86ea-9f8467aba069
 ms.tgt_platform: multiple
 keywords:
-- MS-DFSR-rdcminfilesizeinkb-Attribut AD-Schema
-- msdfsr-rdcminfilesizeinkb-Attribut AD-Schema
+- MS-DFSR-RdcMinFileSizeInKb-Attribut AD-Schema
+- MSDFSR-RdcMinFileSizeInKb-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bbd1f660eef1df49499b8da279e6b2f6deb15b15
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 727f70425126d6a7e29289c92facca89c3ee857be9f6f1dc0d94d3ee00e0d204
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104123002"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119298420"
 ---
-# <a name="ms-dfsr-rdcminfilesizeinkb-attribute"></a>MS-DFSR-rdcminfilesizeinkb-Attribut
+# <a name="ms-dfsr-rdcminfilesizeinkb-attribute"></a>ms-DFSR-RdcMinFileSizeInKb-Attribut
 
-Enthält die minimale Dateigröße in Kilobyte, auf die RDC angewendet werden soll.
+Enthält die Minimale Dateigröße in Kilobyte, auf die RDC angewendet werden soll.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DFSR-rdcminfilesizeinkb           |
-| LDAP-Display-Name | msdfsr-rdcminfilesizeinkb            |
+| CN                | ms-DFSR-RdcMinFileSizeInKb           |
+| Ldap-Anzeigename | msDFSR-RdcMinFileSizeInKb            |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.20           |
-| System-ID-GUID    | f402a330-ace5-4dc1-8cc9-74d900bf8ae0 |
+| System-Id-Guid    | f402a330-ace5-4dc1-8cc9-74d900bf8ae0 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -55,16 +55,16 @@ Enthält die minimale Dateigröße in Kilobyte, auf die RDC angewendet werden so
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | True                                                         |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000000                                                   |
-| In verwendete Klassen        | [**MS-DFSR-Verbindung**](c-msdfsr-connection.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Connection**](c-msdfsr-connection.md)<br/> |
 
 
 
@@ -76,16 +76,16 @@ Enthält die minimale Dateigröße in Kilobyte, auf die RDC angewendet werden so
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | True                                                         |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000000                                                   |
-| In verwendete Klassen        | [**MS-DFSR-Verbindung**](c-msdfsr-connection.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Connection**](c-msdfsr-connection.md)<br/> |
 
 
 
@@ -97,16 +97,16 @@ Enthält die minimale Dateigröße in Kilobyte, auf die RDC angewendet werden so
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | True                                                         |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000000                                                   |
-| In verwendete Klassen        | [**MS-DFSR-Verbindung**](c-msdfsr-connection.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Connection**](c-msdfsr-connection.md)<br/> |
 
 
 
@@ -118,22 +118,22 @@ Enthält die minimale Dateigröße in Kilobyte, auf die RDC angewendet werden so
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Ist einwertig       | Richtig                                                         |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000000                                                   |
-| In verwendete Klassen        | [**MS-DFSR-Verbindung**](c-msdfsr-connection.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Connection**](c-msdfsr-connection.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **MS-DFSR-rdcminfilesizeinkb-** Attribut ist ein Teil der Unterstützung für den verteiltes Dateisystem (DFS)-Replikations Dienst.
+Das Attribut **ms-DFSR-RdcMinFileSizeInKb** ist Teil der Unterstützung des replikationsdiensts verteiltes Dateisystem (DFS).
 
  
 

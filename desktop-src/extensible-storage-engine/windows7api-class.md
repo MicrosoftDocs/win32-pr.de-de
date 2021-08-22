@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Windows7Api-Klasse'
-title: Windows7Api-Klasse (Microsoft. ISAM. ESENT. Interop. Windows7)
+description: Weitere Informationen finden Sie unter Windows7Api-Klasse.
+title: Windows7Api-Klasse (Microsoft.Isam.Esent.Interop.Windows7)
 TOCTitle: Windows7Api class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Windows7.Windows7Api
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows7.windows7api(v=EXCHG.10)
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c6651c5a97b1fac85621918a6805f406cc31df69
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3129d2db4424b54ccdf840ef454d7154bc4c0037e141c209547e9c2d6118b3a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119106648"
 ---
 # <a name="windows7api-class"></a>Windows7Api-Klasse
 
-ESENT-APIs, die zuerst in Windows 7 unterstützt werden (Windows Server 2008 R2).
+ESENT-APIs, die erstmals in Windows 7 (Windows Server 2008 R2) unterstützt wurden.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  Microsoft. ISAM. ESENT. Interop. Windows7. Windows7Api  
+  Microsoft.Isam.Esent.Interop.Windows7.Windows7Api  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows7](./microsoft.isam.esent.interop.windows7-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows7](./microsoft.isam.esent.interop.windows7-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,10 +60,10 @@ public static class Windows7Api
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows7Api-Member](./windows7api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows7-Namespace](./microsoft.isam.esent.interop.windows7-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows7-Namespace](./microsoft.isam.esent.interop.windows7-namespace.md)

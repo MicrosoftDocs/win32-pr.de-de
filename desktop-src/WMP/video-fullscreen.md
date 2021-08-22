@@ -1,9 +1,9 @@
 ---
-title: Video. Fullscreen
-description: Mit dem Fullscreen-Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Video im Vollbildmodus angezeigt wird.
+title: VIDEO.fullScreen
+description: Das fullScreen-Attribut gibt einen Wert an, der angibt, ob das Video im Vollbildmodus angezeigt wird, oder ruft einen Wert ab.
 ms.assetid: de74d95a-31a2-4f65-811c-4e8018ee484a
 keywords:
-- Video. Fullscreen-Fenster Media Player
+- VIDEO.fullScreen-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c27fa1bde6437b55689494751410145995862d8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e8150843ab14148d398b11cba82aa52711621c15962976ca37d5332a6ae58f24
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368634"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119465692"
 ---
-# <a name="videofullscreen"></a>Video. Fullscreen
+# <a name="videofullscreen"></a>VIDEO.fullScreen
 
-Mit dem **Fullscreen** -Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Video im Vollbildmodus angezeigt wird.
+Das **fullScreen-Attribut** gibt einen Wert an, der angibt, ob das Video im Vollbildmodus angezeigt wird, oder ruft einen Wert ab.
 
 ``` syntax
         elementID.fullScreen
@@ -29,22 +29,22 @@ Mit dem **Fullscreen** -Attribut wird ein Wert angegeben oder abgerufen, der ang
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 
 
 | Wert | BESCHREIBUNG                                          |
 |-------|------------------------------------------------------|
 | true  | Video wird im Vollbildmodus angezeigt.                  |
-| false | Standard. Video wird nicht im Vollbildmodus angezeigt. |
+| false | Standard. Das Video wird nicht im Vollbildmodus angezeigt. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft kann nur zur Laufzeit angegeben werden, nachdem eine Datei geladen wurde. Daher muss Sie in einem Skript Ereignishandler festgelegt werden. Die Schaltfläche "Escape" wird verwendet, um zur normalen Anzeige zurückzukehren.
+Diese Eigenschaft kann nur zur Laufzeit angegeben werden, nachdem eine Datei geladen wurde. Sie muss daher innerhalb eines Skriptereignishandlers festgelegt werden. Die Escapeschaltfläche wird verwendet, um zur normalen Anzeige zurückzukehren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,24 +52,24 @@ Diese Eigenschaft kann nur zur Laufzeit angegeben werden, nachdem eine Datei gel
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Video-Element**](video-element.md)
+[**VIDEO-Element**](video-element.md)
 </dt> <dt>
 
-[**Video. wart AspectRatio**](video-maintainaspectratio.md)
+[**VIDEO.maintainAspectRatio**](video-maintainaspectratio.md)
 </dt> <dt>
 
-[**Video. ShrinkToFit**](video-shrinktofit.md)
+[**VIDEO.shrinkToFit**](video-shrinktofit.md)
 </dt> <dt>
 
-[**Video. stretchdefit**](video-stretchtofit.md)
+[**VIDEO.stretchToFit**](video-stretchtofit.md)
 </dt> </dl>
 
  

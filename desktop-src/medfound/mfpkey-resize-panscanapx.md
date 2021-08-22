@@ -1,23 +1,23 @@
 ---
-description: Gibt die x-Koordinate der oberen linken Ecke des Pan/Scan-Bereichs an.
+description: Gibt die x-Koordinate der oberen linken Ecke des Schwenk-/Scanbereichs an.
 ms.assetid: 1aed8614-d856-4885-80fe-c3f2bf3304ad
-title: MFPKEY_RESIZE_PANSCANAPX-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_RESIZE_PANSCANAPX-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 37a30f1bb97e1c21b651f975b43ad8bf871ff066
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 22e127601764a9131a5dd494e3c8d6fddc2692106275ad5912bbfdd3b8026951
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106367865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119463220"
 ---
-# <a name="mfpkey_resize_panscanapx-property"></a>Eigenschaft "mfpkey \_ Resize \_ panscanapx"
+# <a name="mfpkey_resize_panscanapx-property"></a>MFPKEY \_ RESIZE \_ PANSCANAPX-Eigenschaft
 
-Gibt die x-Koordinate der oberen linken Ecke des Pan/Scan-Bereichs an.
+Gibt die x-Koordinate der oberen linken Ecke des Schwenk-/Scanbereichs an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mit [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,9 +27,9 @@ VT \_ I4
 
 -   [Video Resizer DSP](videoresizer.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert ist eine reelle reelle Zahl. Der ganzzahlige Teil der Zahl wird in den höheren 2 Bytes gespeichert, und der Bruch Teil wird in den unteren 2 Bytes gespeichert.
+Der Wert ist eine Feste Punkt-Realzahl. Der ganzzahlige Teil der Zahl wird in den höheren 2 Bytes gespeichert, und der Bruchteil wird in den unteren 2 Bytes gespeichert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,17 +37,17 @@ Der Wert ist eine reelle reelle Zahl. Der ganzzahlige Teil der Zahl wird in den 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

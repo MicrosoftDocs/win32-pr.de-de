@@ -1,24 +1,24 @@
 ---
-title: Bluetooth und BIND
-description: Bluetooth verwendet die Bind-Funktion, um eine Bindung an einen Socket herzustellen.
+title: Bluetooth und Binden
+description: Bluetooth verwendet die Bind-Funktion zum Binden an einen Socket.
 ms.assetid: 308d2680-de51-49e6-a0da-7aba494d9572
 keywords:
 - bind
 - Bluetooth
 - Bluetooth
-- Bluetooth und BIND
+- Bluetooth und Binden
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 12ccbd088ab61edcfa3dfc511ea591593d0cf781
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 49d7e7571e8d8a2c1a6dee29dc5f4839af5f1064bc5351cd3a13937f5750dd04
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119588490"
 ---
-# <a name="bluetooth-and-bind"></a>Bluetooth und BIND
+# <a name="bluetooth-and-bind"></a>Bluetooth und Binden
 
-Bluetooth verwendet die [**Bind**](/windows/desktop/api/winsock/nf-winsock-bind) -Funktion, um eine Bindung an einen Socket herzustellen. Um einen Bluetooth-Socket zu binden, können Sie die **Bind** -Funktion mithilfe der [**sockaddr- \_ BTH**](/windows/desktop/api/Ws2bth/ns-ws2bth-sockaddr_bth) -Struktur abrufen. Verwenden Sie die **sockaddr- \_ BTH** -Struktur mit den folgenden Einstellungen:
+Bluetooth verwendet die [**Bind-Funktion**](/windows/desktop/api/winsock/nf-winsock-bind) zum Binden an einen Socket. Um einen Bluetooth Socket zu binden, rufen Sie die **Bind-Funktion** mithilfe der [**SOCKADDR \_ BTH-Struktur**](/windows/desktop/api/Ws2bth/ns-ws2bth-sockaddr_bth) auf. Verwenden Sie die **SOCKADDR \_ BTH-Struktur** mit den folgenden Einstellungen:
 
 ``` syntax
 name.addressFamily = AF_BTH;
@@ -27,13 +27,13 @@ name.serviceClassId = GUID_NULL;
 name.port = number of service channel, 0 or BT_PORT_ANY;
 ```
 
-Bei Client Anwendungen muss der portmember NULL sein, damit ein geeigneter lokaler Endpunkt zugewiesen werden kann. Bei Server Anwendungen muss es sich bei dem Porttyp um eine gültige Portnummer oder einen BT-Port handeln, und \_ \_ Ports, die mithilfe des BT-Ports automatisch zugewiesen \_ werden, \_ können anschließend mit einem Aufrufen der [**getsockname**](bluetooth-and-getsockname.md) -Funktion abgefragt werden. Der gültige Bereich für die Anforderung eines bestimmten RFCOMM-Ports liegt zwischen 1 und 30. Server Kanäle sind globale Ressourcen, und für RFCOMM sind nur 30 Server Kanäle auf allen Bluetooth-Geräten verfügbar, die von allen Windows-Sockets gemeinsam genutzt werden müssen, die zur Bluetooth-Adressfamilie gehören. Wenn kein Serverchannel verfügbar ist oder der angegebene Serverchannel bereits reserviert ist, schlägt der [**Bindungs**](/windows/desktop/api/winsock/nf-winsock-bind) Befehl fehl.
+In Clientanwendungen muss das Portmitglied 0 (null) sein, damit ein geeigneter lokaler Endpunkt zugewiesen werden kann. In Serveranwendungen muss der Portmember eine gültige Portnummer oder BT \_ PORT \_ ANY sein. Ports, die automatisch über BT PORT ANY zugewiesen werden, \_ können anschließend mit einem Aufruf der \_ [**getsockname-Funktion**](bluetooth-and-getsockname.md) abgefragt werden. Der gültige Bereich für die Anforderung eines bestimmten RFCOMM-Ports beträgt 1 bis 30. Serverkanäle sind globale Ressourcen, und nur 30 Serverkanäle sind für RFCOMM auf allen Bluetooth Geräten verfügbar, die von allen Windows Sockets gemeinsam genutzt werden müssen, die zur Bluetooth-Adressfamilie gehören. Wenn kein Serverkanal verfügbar ist oder der angegebene Serverkanal bereits reserviert ist, schlägt der [**Bindungsaufruf**](/windows/desktop/api/winsock/nf-winsock-bind) fehl.
 
-Nach erfolgreicher Rückgabe von BIND wird der Serverchannel reserviert, bis der Socket geschlossen wird. Verwenden Sie die Funktion [**getsockname**](bluetooth-and-getsockname.md) , um die Kanalnummer für die SDP-Registrierung abzurufen.
+Nach erfolgreicher Rückgabe aus der Bindung wird der Serverkanal reserviert, bis der Socket geschlossen wird. Verwenden Sie die [**Getsockname-Funktion,**](bluetooth-and-getsockname.md) um die Kanalnummer für die SDP-Registrierung abzurufen.
 
-Anwendungen sollten die automatische Zuordnung für den Serverchannel verwenden.
+Anwendungen sollten die automatische Zuordnung für den Serverkanal verwenden.
 
-Die [**Bind**](/windows/desktop/api/winsock/nf-winsock-bind) -Funktion kündigt die Serveranwendung nicht automatisch mit dem Bluetooth-SDP an. Anwendungen müssen die [**wsasetservice**](/windows/desktop/api/winsock2/nf-winsock2-wsasetservicea) -Funktion abrufen, die von Bluetooth-Remote Anwendungen gefunden werden soll.
+Die [**Bind-Funktion**](/windows/desktop/api/winsock/nf-winsock-bind) kündigt die Serveranwendung nicht automatisch mithilfe des Bluetooth-SDP an. -Anwendungen müssen die [**WSASetService-Funktion**](/windows/desktop/api/winsock2/nf-winsock2-wsasetservicea) aufrufen, um von Remoteanwendungen Bluetooth gefunden zu werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -42,9 +42,9 @@ Die [**Bind**](/windows/desktop/api/winsock/nf-winsock-bind) -Funktion kündigt 
 [Windows-Sockets](/windows/desktop/WinSock/windows-sockets-start-page-2)
 </dt> <dt>
 
-[**Zwick**](/windows/desktop/api/winsock/nf-winsock-bind)
+[**Binden**](/windows/desktop/api/winsock/nf-winsock-bind)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

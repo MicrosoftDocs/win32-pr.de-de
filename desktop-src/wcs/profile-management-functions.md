@@ -3,83 +3,83 @@ title: Profilverwaltungsfunktionen
 description: Profilverwaltungsfunktionen
 ms.assetid: 185863b7-0b74-4c65-97c3-3c60b86d37fd
 keywords:
-- Windows Color System (WCS), Funktionen
-- WCS (Windows Color System), Funktionen
-- Bild Farbverwaltung, Funktionen
-- Farbverwaltung, Funktionen
+- Windows Farbsystem (WCS), Funktionen
+- WCS (Windows Color System), Functions
+- Bildfarbverwaltung,Funktionen
+- Farbverwaltung,Funktionen
 - Farben, Funktionen
 - WCS-Referenz, Funktionen
-- Referenz für WCs, Funktionen
-- Windows Color System (WCS), profile
-- WCS (Windows Color System), profile
-- Bildfarben Verwaltung, profile
-- Farbverwaltung, profile
-- Farben, profile
-- WCS-Referenz, profile
-- Referenz für WCs, profile
+- Referenz für WCS, Functions
+- Windows Farbsystem (WCS), Profile
+- WCS (Windows Color System), Profiles
+- Bildfarbverwaltung,Profile
+- Farbverwaltung,Profile
+- Farben,Profile
+- WCS-Referenz,Profile
+- Referenz für WCS, Profile
 - Profilverwaltung
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a0e80e300532b20148eef6d9dc362438b6714a3
-ms.sourcegitcommit: 3f366316c02c411c4c5e14620a699f6f30608634
+ms.openlocfilehash: d9f047c2dee199800fad976dd7b959fbbb54d585fd252fb8b5390c3223415db4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "106371802"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119587770"
 ---
 # <a name="profile-management-functions"></a>Profilverwaltungsfunktionen
 
 ## <a name="profile-management-functions"></a>Profilverwaltungsfunktionen
 
-Die folgenden API-Funktionen sind für die Profilverwaltung nützlich.
+Die folgenden API-Funktionen sind bei der Profilverwaltung nützlich.
 
 
 
-| Funktion                                                                               | BESCHREIBUNG                                                                                                                                          |
+| Funktion                                                                               | Beschreibung                                                                                                                                          |
 |----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Associatecolorprofilewithdevicew**](/windows/win32/api/icm/nf-icm-associatecolorprofilewithdevicew)             | Ordnet ein angegebenes Farbprofil einem angegebenen Gerät zu.                                                              |
-| [**Erkreateprofilefromlogcolorspacew**] ((/windows/win32/api/icm/nf-icm-createprofilefromlogcolorspacew) | Konvertiert einen logischen [Farbraum](c.md) in ein [Geräte Profil](d.md). |
-| [**Disassociatecolorprofilefromdevicew**](/windows/win32/api/icm/nf-icm-disassociatecolorprofilefromdevicew) | Trennt ein angegebenes Farbprofil einem angegebenen Gerät auf einem angegebenen Computer. |
-| [**Enumcolorprofilesw**](/windows/win32/api/icm/nf-icm-enumcolorprofilesw) | Listet alle Profile auf, die die angegebenen enumerationskriterien erfüllen. |
-| [**Getcolordirector**](/windows/win32/api/icm/nf-icm-getcolordirectoryw) | Ruft den Pfad des Windows-Farb Verzeichnisses auf einem angegebenen Computer ab. |
-| [**Getde vicegammaramp**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicegammaramp)                                       | Ruft die Gamma-Rampe von der direkten Farbanzeige Boards ab.                                                                                                |
-| [**Getstandardcolorspaceprofilew**](/windows/win32/api/icm/nf-icm-getstandardcolorspaceprofilew) | Ruft das Farbprofil ab, das für den angegebenen Standard [Farbraum](c.md)registriert ist. |
-| [**Installcolorprofilew**](/windows/win32/api/icm/nf-icm-installcolorprofilew) | Installiert ein bestimmtes Profil für die Verwendung auf einem angegebenen Computer. Das Profil wird auch in das Farb Verzeichnis kopiert. |
-| [**Registercmmw**](/windows/win32/api/icm/nf-icm-registercmmw) | Ordnet einen angegebenen Identifikations Wert der angegebenen CMM-dll (Dynamic Link Library) des Farb Verwaltungs Moduls zu. Wenn diese ID in einem Farbprofil angezeigt wird, kann Windows den entsprechenden CMM-Code suchen, um eine Transformation zu erstellen. |
-| [**Setde vicegammaramp**](/windows/desktop/api/Wingdi/nf-wingdi-setdevicegammaramp)                                       | Legt die Gamma-Rampe für die Anzeige Boards der direkten Farbe fest.                                                                                                  |
-| [**Setstandardcolorspaceprofilew**](/windows/win32/api/icm/nf-icm-setstandardcolorspaceprofilew) | Registriert ein angegebenes Profil für einen angegebenen Standard [Farbraum](c.md). Das Profil kann mithilfe von [getstandardcolorspaceprofilew](/windows/win32/api/icm/nf-icm-getstandardcolorspaceprofilew)abgefragt werden. |
-| [**Uninstallcolorprofilew**](/windows/win32/api/icm/nf-icm-uninstallcolorprofilew) | Entfernt ein angegebenes Farbprofil von einem angegebenen Computer. Zugehörige Dateien werden optional aus dem System gelöscht. |
-| [**Unregistercmmw**](/windows/win32/api/icm/nf-icm-unregistercmmw) | Trennt einen angegebenen ID-Wert aus einer angegebenen Dynamic Link Library (CMM-dll) des Farb Verwaltungs Moduls. |
-| [**Wcsassociatecolorprofilewithdevice**](/windows/win32/api/icm/nf-icm-wcsassociatecolorprofilewithdevice)       | Ordnet ein angegebenes WCS-Farbprofil einem angegebenen Gerät zu.                                                                                    |
-| [**Wcscreateiccprofile**](/windows/win32/api/icm/nf-icm-wcscreateiccprofile)                                     | Konvertiert ein WCS-Profil in ein-ICC-Profil.                                                                                                          |
-| [**Wcsdisassociatecolorprofilefromdevice**](/windows/win32/api/icm/nf-icm-wcsdisassociatecolorprofilefromdevice) | Trennt ein angegebenes WCS-Farbprofil einem angegebenen Gerät auf einem angegebenen Computer.                                                         |
-| [**Wcsenaufcolorprofiles**](/windows/win32/api/icm/nf-icm-wcsenumcolorprofiles)                                   | Listet alle Farbprofile auf, die die enumerationskriterien im angegebenen Profil Verwaltungsbereich erfüllen.                                       |
-| [**Wcsenaufcolorprofilessize**](/windows/win32/api/icm/nf-icm-wcsenumcolorprofilessize)                           | Gibt die Größe (in Bytes) des Puffers zurück, der von der Funktion [**wcsenumcolorprofiles**](/windows/win32/api/icm/nf-icm-wcsenumcolorprofiles) zum Auflisten von Farbprofilen benötigt wird. |
-| [**Wcsgetdefaultcolorprofile**](/windows/win32/api/icm/nf-icm-wcsgetdefaultcolorprofile)                         | Ruft das Standard Farbprofil für ein Gerät oder den geräteunabhängigen Standardwert ab, wenn das Gerät nicht angegeben ist.                                  |
-| [**Wcsgetdefaultcolorprofilesize**](/windows/win32/api/icm/nf-icm-wcsgetdefaultcolorprofilesize) | Gibt die Größe (in Bytes) des standardmäßigen Farbprofil namens für ein Gerät zurück, einschließlich des **null** -Terminator.                                       |
-| [**Wcsgetdefaultrenderingintent**](/windows/win32/api/icm/nf-icm-wcsgetdefaultrenderingintent) | Ruft die standardmäßige renderabsicht im angegebenen Profil Verwaltungsbereich ab.                                                                    |
-| [**Wcsgetuseperuserprofiles**](/windows/win32/api/icm/nf-icm-wcsgetdefaultrenderingintent) | Bestimmt, ob der Benutzer eine benutzerspezifische Profil Zuordnungs Liste für das angegebene Gerät verwendet hat.                                          |
-| [**Wcsopeincolorprofilew**](/windows/win32/api/icm/nf-icm-wcsopencolorprofilew) | Erstellt ein Handle für ein angegebenes Farbprofil.                                                                                                       |
-| [**Wcssetdefaultcolorprofile**](/windows/win32/api/icm/nf-icm-wcssetdefaultcolorprofile) | Legt den Standardnamen des Farbprofils für den angegebenen Profiltyp im angegebenen Profil Verwaltungsbereich fest.                                         |
-| [**Wcssetdefaultrenderingintent**](/windows/win32/api/icm/nf-icm-wcssetdefaultrenderingintent) | Legt die Standard-renderabsicht im angegebenen Profil Verwaltungsbereich fest.                                                                         |
-| [**Wcssetuseperuserprofiles**](/windows/win32/api/icm/nf-icm-wcssetuseperuserprofiles)                           | Ermöglicht es dem Benutzer anzugeben, ob eine Profil Zuordnungs Liste pro Benutzer für das angegebene Gerät verwendet werden soll.                                              |
+| [**AssociateColorProfileWithDeviceW**](/windows/win32/api/icm/nf-icm-associatecolorprofilewithdevicew)             | Ordnet einem angegebenen Gerät ein angegebenes Farbprofil zu.                                                              |
+| [**CreateProfileFromLogColorSpaceW**] ((/windows/win32/api/icm/nf-icm-createprofilefromlogcolorspacew) | Konvertiert einen logischen [Farbraum in](c.md) ein [Geräteprofil.](d.md) |
+| [**DisassociateColorProfileFromDeviceW**](/windows/win32/api/icm/nf-icm-disassociatecolorprofilefromdevicew) | Die Zuordnung eines angegebenen Farbprofils zu einem angegebenen Gerät auf einem angegebenen Computer wird eingestellt. |
+| [**EnumColorProfilesW**](/windows/win32/api/icm/nf-icm-enumcolorprofilesw) | Enumeriert alle Profile, die die angegebenen Enumerationskriterien erfüllen. |
+| [**GetColorDirectoryW**](/windows/win32/api/icm/nf-icm-getcolordirectoryw) | Ruft den Pfad des Verzeichnisses Windows COLOR auf einem angegebenen Computer ab. |
+| [**GetDeviceGammaRamp**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicegammaramp)                                       | Ruft die Gamma-Rampe aus direkten Farbanzeigeboards ab.                                                                                                |
+| [**GetStandardColorSpaceProfileW**](/windows/win32/api/icm/nf-icm-getstandardcolorspaceprofilew) | Ruft das für den angegebenen Standardfarbraum registrierte [Farbprofil ab.](c.md) |
+| [**InstallColorProfileW**](/windows/win32/api/icm/nf-icm-installcolorprofilew) | Installiert ein bestimmtes Profil für die Verwendung auf einem angegebenen Computer. Das Profil wird auch in das Verzeichnis COLOR kopiert. |
+| [**RegisterCMMW**](/windows/win32/api/icm/nf-icm-registercmmw) | Ordnet der angegebenen CmM-DLL (Dynamic Link Library) des Farbverwaltungsmoduls einen angegebenen Identifikationswert zu. Wenn diese ID in einem Farbprofil angezeigt wird, Windows dann das entsprechende CMM suchen, um eine Transformation zu erstellen. |
+| [**SetDeviceGammaRamp**](/windows/desktop/api/Wingdi/nf-wingdi-setdevicegammaramp)                                       | Legt die Gamma-Rampe auf direkten Farbanzeigeboards fest.                                                                                                  |
+| [**SetStandardColorSpaceProfileW**](/windows/win32/api/icm/nf-icm-setstandardcolorspaceprofilew) | Registriert ein angegebenes Profil für einen angegebenen [Standardfarbraum.](c.md) Das Profil kann mit [GetStandardColorSpaceProfileW abgefragt werden.](/windows/win32/api/icm/nf-icm-getstandardcolorspaceprofilew) |
+| [**UninstallColorProfileW**](/windows/win32/api/icm/nf-icm-uninstallcolorprofilew) | Entfernt ein angegebenes Farbprofil von einem angegebenen Computer. Zugeordnete Dateien werden optional aus dem System gelöscht. |
+| [**UnregisterCMMW**](/windows/win32/api/icm/nf-icm-unregistercmmw) | Entfernt einen angegebenen ID-Wert von einer angegebenen Dynamic Link Library (CMM-DLL) eines Farbverwaltungsmoduls. |
+| [**WcsAssociateColorProfileWithDevice**](/windows/win32/api/icm/nf-icm-wcsassociatecolorprofilewithdevice)       | Ordnet einem angegebenen Gerät ein angegebenes WCS-Farbprofil zu.                                                                                    |
+| [**WcsCreateIccProfile**](/windows/win32/api/icm/nf-icm-wcscreateiccprofile)                                     | Konvertiert ein WCS-Profil in einCS-Profil.                                                                                                          |
+| [**WcsDisassociateColorProfileFromDevice**](/windows/win32/api/icm/nf-icm-wcsdisassociatecolorprofilefromdevice) | Die Zuordnung eines angegebenen WCS-Farbprofils zu einem angegebenen Gerät auf einem angegebenen Computer wird eingestellt.                                                         |
+| [**WcsEnumColorProfiles**](/windows/win32/api/icm/nf-icm-wcsenumcolorprofiles)                                   | Enumeriert alle Farbprofile, die die Enumerationskriterien im angegebenen Profilverwaltungsbereich erfüllen.                                       |
+| [**WcsEnumColorProfilesSize**](/windows/win32/api/icm/nf-icm-wcsenumcolorprofilessize)                           | Gibt die Größe des Puffers in Bytes zurück, der von der [**WcsEnumColorProfiles-Funktion**](/windows/win32/api/icm/nf-icm-wcsenumcolorprofiles) zum Aufzählen von Farbprofilen benötigt wird. |
+| [**WcsGetDefaultColorProfile**](/windows/win32/api/icm/nf-icm-wcsgetdefaultcolorprofile)                         | Ruft das Standardfarbprofil für ein Gerät oder den geräteunabhängigen Standard ab, wenn das Gerät nicht angegeben ist.                                  |
+| [**WcsGetDefaultColorProfileSize**](/windows/win32/api/icm/nf-icm-wcsgetdefaultcolorprofilesize) | Gibt die Größe des Standardfarbprofilnamens für ein  Gerät in Bytes zurück, einschließlich des NULL-Abschlusszeichens.                                       |
+| [**WcsGetDefaultRenderingIntent**](/windows/win32/api/icm/nf-icm-wcsgetdefaultrenderingintent) | Ruft die Standardrenderingabsicht im angegebenen Profilverwaltungsbereich ab.                                                                    |
+| [**WcsGetUsePerUserProfiles**](/windows/win32/api/icm/nf-icm-wcsgetdefaultrenderingintent) | Bestimmt, ob der Benutzer eine Benutzerprofil-Zuordnungsliste für das angegebene Gerät verwendet hat.                                          |
+| [**WcsOpenColorProfileW**](/windows/win32/api/icm/nf-icm-wcsopencolorprofilew) | Erstellt ein Handle für ein angegebenes Farbprofil.                                                                                                       |
+| [**WcsSetDefaultColorProfile**](/windows/win32/api/icm/nf-icm-wcssetdefaultcolorprofile) | Legt den Standardfarbprofilnamen des angegebenen Profiltyps im angegebenen Profilverwaltungsbereich fest.                                         |
+| [**WcsSetDefaultRenderingIntent**](/windows/win32/api/icm/nf-icm-wcssetdefaultrenderingintent) | Legt die Standardrenderingabsicht im angegebenen Profilverwaltungsbereich fest.                                                                         |
+| [**WcsSetUsePerUserProfiles**](/windows/win32/api/icm/nf-icm-wcssetuseperuserprofiles)                           | Ermöglicht dem Benutzer anzugeben, ob eine Benutzerprofil-Zuordnungsliste für das angegebene Gerät verwendet werden soll.                                              |
 
 
 
  
 
-## <a name="profile-consumption-functions"></a>Profil Nutzungs Funktionen
+## <a name="profile-consumption-functions"></a>Profilverbrauchsfunktionen
 
-Bei den APIs für die Profil Nutzung handelt es sich um APIs in ICM2, die die XML-Profile, Profil Handles oder renderingintents von ICC oder WCS als Parameter und eine Reihe neuer APIs für die WCS-Profil Unterstützung für den Anwendungs Farb Verwaltungs Code verwenden.
+Die Profilverbrauchs-APIs sind die APIs in ICM2, die COD- oder WCS-XML-Profile, Profilhandles oder Renderingabsichten als Parameter und eine Reihe neuer APIs für wcs-Profilunterstützung für Anwendungsfarbverwaltungscode verwenden.
 
  
 
-## <a name="profiles-and-profile-management-functions"></a>Profile und Profil Verwaltungsfunktionen
+## <a name="profiles-and-profile-management-functions"></a>Profile und Profilverwaltungsfunktionen
 
-Der Profil Verwaltungs Workflow basiert auf vorhandenen ICM2-APIs, die erweitert werden, um zusätzliche Funktionen zum Überarbeiten von Anwendungscode bereitzustellen.
+Der Workflow für die Profilverwaltung basiert auf vorhandenen ICM2-APIs, die erweitert wurden, um zusätzliche Funktionen für die Überarbeitung von Anwendungscode zu bieten.
 
-Profile enthalten Informationen, die von Farb Verarbeitungsalgorithmen verwendet werden, um die Farbe zwischen verschiedenen Farbräumen zu übersetzen. Mit der Profilverwaltung können Sie Abfragen und angeben, welche Profile in verschiedenen Phasen vom Farb Verarbeitungsmodell verwendet werden, um die Farbausgabe verschiedener Peripheriegeräte mit unterschiedlichen Farb Merkmalen zu verwalten.
+Profile enthalten Informationen, die von Farbverarbeitungsalgorithmen verwendet werden, um Farben zwischen verschiedenen Farbräumen zu übersetzen. Die Profilverwaltung bietet eine Möglichkeit zum Abfragen und Angeben der Profile, die vom Farbverarbeitungsmodell in verschiedenen Phasen verwendet werden, um die Farbausgabe verschiedener Peripheriegeräte mit unterschiedlichen Farbmerkmalen zu verwalten.
 
 Die Profilverwaltung bietet die folgenden Funktionen:
 
@@ -89,209 +89,209 @@ Die Profilverwaltung bietet die folgenden Funktionen:
 
  
 
-2. Zuordnen eines oder mehrerer installierter Farbprofile zu einem bestimmten Gerät.
+2. Zuordnen eines oder mehrere installierter Farbprofile zu einem bestimmten Gerät.
 
  
 
-3. Auswählen eines Standard Farbprofils eines bestimmten Typs in den Profilen, die in einer bestimmten Phase der Farbverarbeitung zur Verwendung verfügbar sind. Dies kann für ein Gerät in den zugeordneten Profilen oder zwischen den Profilen, die im System installiert sind, und nicht für gerätespezifisch sein.
+3. Auswählen eines Standardfarbprofils eines bestimmten Typs unter den Profilen, die für die Verwendung in einer bestimmten Phase der Farbverarbeitung verfügbar sind. Dies kann für ein Gerät unter den zugeordneten Profilen oder unter den im System installierten Profilen und nicht gerätespezifisch sein.
 
  
 
-4. Auflisten von Farbprofilen, die bestimmte Kriterien zwischen den im System installierten Profilen erfüllen.
+4. Aufzählen von Farbprofilen, die bestimmte Kriterien unter den im System installierten Profilen erfüllen.
 
-Die Dateinamen Erweiterungen für WCS-Profile sind ". CDMP" für DMPs, ". Camp" für CAMPs und ". GMMP" für gmmps.
-
- 
-
-**Profilverwaltung pro Benutzer und Aktivierung der Ausführung im Lua-Kontext**
-
-Das Ziel des im aktuellen Dokument beschriebenen Entwurfs ist Folgendes:
+Die Dateierweiterungen des WCS-Profils sind ".cdmp" für DMPs, ".sollen" für NAPPs und ".gmmp" für GMMPs sein.
 
  
 
-1. Die Legacy-ICM2-Implementierung bietet keine Unterstützung für die Profilverwaltung pro Benutzer. Verschiedene Benutzer können nicht über eigene Profileinstellungen verfügen. In Vista ermöglicht die WCS-Profil Verwaltungsinfrastruktur Benutzern, individuelle Profileinstellungen für die meisten Funktionen zu konfigurieren.
+**Profilverwaltung pro Benutzer und Aktivieren der Ausführung im LUA-Kontext**
+
+Das Ziel des im aktuellen Dokument beschriebenen Entwurfs lautet wie folgt:
 
  
 
-2. Alle veralteten ICM2-Profilverwaltungs-APIs ändern systemweite Einstellungen und erfordern Administratorrechte. In Windows Vista führen alle Benutzer in den meisten Fällen die Einstellungen mit den geringsten Berechtigungen für Benutzerkonten (LUA) aus, und Administratoren können die Berechtigung selektiv erhöhen, um Anwendungen auszuführen, die systemweite Einstellungen ändern. In der WCS-Profilverwaltung können alle Profileinstellungen pro Benutzer im Lua-Kontext konfiguriert werden. Profil Verwaltungs Anwendungen können als Lua-Einstellungen ausgeführt werden, wodurch der Verwendungs Umfang erhöht und sichergestellt wird, dass die Sicherheit des Systems nicht beeinträchtigt wird.
-
-Die Profilverwaltung in Vista bietet die folgenden Verbesserungen gegenüber der Legacy-ICM2-Infrastruktur:
+1. Die ICM2-Legacyimplementierung bietet keine Unterstützung für die Profilverwaltung pro Benutzer. Verschiedene Benutzer können keine eigenen Profileinstellungen haben. In Vista können Benutzer mit der WCS-Profilverwaltungsinfrastruktur individuelle Profileinstellungen für die meisten Funktionen konfigurieren.
 
  
 
-1. Sie ermöglicht die Zuordnung von Profilen zu Geräten, Standardprofil Einstellungen und die Enumeration von Profilen sowohl im Benutzer-als auch im systemweiten Bereich.
+2. Alle älteren ICM2-Profilverwaltungs-APIs ändern Einstellungen systemweit und erfordern Administratorrechte. In Windows Vista werden in den meisten Jahren alle Benutzer in den LUA-Einstellungen (Least-Privileged User Account) ausgeführt, und Administratoren können die Berechtigungen selektiv erhöhen, um Anwendungen ausführen zu können, die systemweite Einstellungen ändern. In der WCS-Profilverwaltung können alle Benutzerprofileinstellungen im LUA-Kontext konfiguriert werden. Profilverwaltungsanwendungen können als LUA-Einstellungen ausgeführt werden, um ihren Umfang zu erhöhen und sicherzustellen, dass die Sicherheit des Systems nicht beeinträchtigt wird.
+
+Die Profilverwaltung in Vista bietet die folgenden Verbesserungen gegenüber der älteren ICM2-Infrastruktur:
 
  
 
-2. Die Installation eines Profils bleibt systemweit und erfordert Administratorrechte. Dies ist mit der Profil Installation während der Geräteinstallation konsistent, da die Geräteinstallation systemweit ist und Administratorrechte erfordert.
+1. Sie ermöglicht die Profilzuordnung mit Geräten, Standardprofileinstellungen und die Enumeration von Profilen im benutzer- und systemweiten Bereich.
 
  
 
-Ob Geräte aus dem Lua-Kontext installiert werden können, ist besonders für die unterstützte Geräteklasse von Bedeutung. In Vista ist es beispielsweise möglich, die Drucker Installation aus dem Lua-Kontext durchzuführen, wenn dem Benutzer die Berechtigung erteilt wurde, Dateien von einem Domänen Administrator mithilfe von Treiber Speicher Richtlinien in den Treiber Speicher zu kopieren. Die Infrastruktur für die Farbprofilverwaltung muss in diesem Zusammenhang nichts Besonderes tun, da die Installation im spoolerkontext erfolgt.
+2. Die Installation eines Profils bleibt systemweit und erfordert Administratorrechte. Dies entspricht der Profilinstallation während der Geräteinstallation, da die Geräteinstallation systemweit erfolgt und Administratorrechte erfordert.
 
  
 
-3. Das Ändern von Profileinstellungen im Benutzer bezogenen Bereich kann im Lua-Kontext erfolgen. systemweite Änderungen erforderten Administratorrechte. Profil Verwaltungsvorgänge, die das Lesen von Konfigurationsinformationen erfordern, können im Lua-Kontext sowohl für benutzerspezifische als auch für systemweite Einstellungen durchgeführt werden.
+Ob Geräte aus dem LUA-Kontext installiert werden können, hängt davon ab, was für diese Geräteklasse unterstützt wird. In Vista ist es beispielsweise möglich, eine Druckerinstallation aus dem LUA-Kontext durchzuführen, wenn dem Benutzer berechtigungen zum Kopieren von Dateien in den Treiberspeicher von einem Domänenadministrator mithilfe von Treiberspeicherrichtlinien gewährt wurden. Die Infrastruktur für die Farbprofilverwaltung muss in dieser Hinsicht nichts Besonderes tun, da die Installation im Spoolerkontext erfolgt.
 
-Profil Verwaltungsbereich gibt den Umfang der durchgeführten Vorgänge an. entweder pro Benutzer oder systemweit.
+ 
 
-Für jeden Vorgang wird angegeben, ob Sie über den Lua-Kontext ausgeführt werden kann. Wenn ein Vorgang im Lua-Kontext nicht ausgeführt werden kann, gibt die entsprechende Profilverwaltungs-API einen Fehler mit dem Zugriff verweigert zurück. Anwendungen, die die API verwenden, z. b. die System Steuerungs Option "Farbverwaltung", können es Benutzern ermöglichen, die Rechte auf den administrativen Kontext zu erhöhen (mithilfe von OTS oder der Zustimmungs Benutzeroberfläche), und dann die API aus dem erweiterten Kontext aufzurufen, damit der Vorgang erfolgreich
+3. Das Ändern von Profileinstellungen im Benutzerbereich kann im LUA-Kontext erfolgen. Systemweite Änderungen erforderten Administratorrechte. Profilverwaltungsvorgänge, die das Lesen von Konfigurationsinformationen erfordern, können sowohl für benutzer- als auch systemweite Einstellungen im LUA-Kontext ausgeführt werden.
+
+Der Profilverwaltungsbereich gibt den Umfang der ausgeführten Vorgänge an. entweder pro Benutzer oder systemweit.
+
+Für jeden Vorgang wird angegeben, ob dies über den LUA-Kontext erfolgen kann. Wenn ein Vorgang im LUA-Kontext nicht ausgeführt werden kann, gibt die entsprechende Profilverwaltungs-API einen Fehler zurück, bei dem der Zugriff verweigert wurde. Anwendungen, die die API verwenden, z. B. Color Management Systemsteuerung, können es dem Benutzer ermöglichen, einen Erhöhten Aufschluss über den Administratorkontext zu geben (über OTS oder Consent UI), und dann die API aus dem Kontext mit erhöhten Rechten aufrufen, damit der Vorgang erfolgreich ist.
 
 
 
 Vorgang
 
-Profil Verwaltungsbereich
+Profilverwaltungsbereich
 
-Voraussetzung
+Vorbedingung
 
-Nach Bedingung
+Nachbedingung
 
-Ausführbare Datei im Lua-Kontext
+Ausführbare Datei im LUA-Kontext
 
-$ {ROWSPAN2} $install Profil $ {Remove} $  
+${ROWSPAN2}$Install Profil${REMOVE}$  
 
-System weit
+Systemweit
 
-Das Profil wurde kopiert, im System installiert und ist zur Verwendung verfügbar. Das Profil kann im systemweiten und aktuellen Benutzerbereich für alle Benutzer aufgelistet werden.
+Profil kopiert, in das System installiert und zur Verwendung verfügbar. Das Profil ist im systemweiten und aktuellen Benutzerbereich für alle Benutzer aufzählbar.
 
-Bei der Installation des Gerätetreibers unterliegen Richtlinien für die Treiberinstallation. Andernfalls nein.
-
-Aktueller Benutzer
-
-Nicht unterstützt
-
-$ {ROWSPAN2} $Uninstall Profil $ {Remove} $  
-
-System weit
-
-Das Profil ist im System installiert.
-
-Das Profil wurde vom System deinstalliert und optional aus dem Profil Speicher gelöscht. Das Profil ist nicht mehr zur Verwendung verfügbar und kann in keinem Bereich aufgelistet werden.
-
-Nein
+Während der Installation des Gerätetreibers, gesteuert durch Treiberinstallationsrichtlinien. Andernfalls nein.
 
 Aktueller Benutzer
 
 Nicht unterstützt
 
-$ {ROWSPAN2} $Associate Profil mit Gerät $ {Remove} $  
+${ROWSPAN2}$Uninstall Profil${REMOVE}$  
 
-System weit
+Systemweit
 
-Profil ist installiert und hat den Typ "ICC" oder "CDMP".
+Das Profil wird im System installiert.
 
-Das Profil ist für die Verwendung mit dem Gerät durch alle Benutzer verfügbar. Sie ist für alle Benutzer, die dem Gerät zugeordnet sind, im systemweiten Bereich und auch im Gültigkeitsbereich des aktuellen Benutzers Aufzähl Bar.
+Das Profil wurde vom System deinstalliert und optional aus dem Profilspeicher gelöscht. Das Profil ist nicht mehr für die Verwendung verfügbar und in keinem Bereich aufzählbar.
 
 Nein
 
 Aktueller Benutzer
 
-Das Profil ist installiert. Es spielt keine Rolle, ob das Profil bereits dem Gerät im systemweiten Gültigkeitsbereich zugeordnet ist und den Typ "ICC" oder "CDMP" hat.
+Nicht unterstützt
 
-Das Profil ist für die Verwendung mit dem Gerät durch den aktuellen Benutzer verfügbar. Es ist nur im Gültigkeitsbereich des aktuellen Benutzers Aufzähl Bar (es sei denn, es gibt auch eine systemweite Zuordnung), die dem Gerät zugeordnet ist.
+${ROWSPAN2}$Associate Profil mit Gerät${REMOVE}$  
+
+Systemweit
+
+Das Profil ist installiert und hat den Typ "STAMP" oder "CDMP".
+
+Das Profil ist für die Verwendung mit dem Gerät durch alle Benutzer verfügbar. Es ist aufzählbar, im systemweiten Bereich und auch im aktuellen Benutzerbereich für alle Benutzer, wie dem Gerät zugeordnet.
+
+Nein
+
+Aktueller Benutzer
+
+Das Profil ist installiert. Es spielt keine Rolle, ob das Profil dem Gerät bereits im systemweiten Bereich zugeordnet ist und vom Typ CAB oder CDMP ist.
+
+Das Profil ist für die Verwendung mit dem Gerät durch den aktuellen Benutzer verfügbar. Sie ist nur im Aktuelle-Benutzer-Bereich aufzählbar (es sei denn, es gibt auch eine systemweite Zuordnung), die dem Gerät zugeordnet ist.
 
 Ja
 
-$ {ROWSPAN2} $Disassociate Profil von Gerät $ {Remove} $  
+${ROWSPAN2}$Disassociate Profil von Gerät${REMOVE}$  
 
-System weit
+Systemweit
 
-Das Profil ist dem Gerät im systemweiten Gültigkeitsbereich zugeordnet und hat den Typ "ICC" oder "CDMP".
+Das Profil ist dem Gerät im systemweiten Bereich zugeordnet und hat den Typ "STAMP" oder "CDMP".
 
-Das Profil ist nicht mehr zur Verwendung verfügbar (mit Ausnahme von Benutzern, die diese Zuordnung in Ihrem aktuellen Benutzerbereich aufweisen). Sie kann nicht im systemweiten Gültigkeitsbereich aufgelistet werden. Sie kann jedoch im Gültigkeitsbereich des aktuellen Benutzers aufgeführt werden, für einen Benutzer, der diese Zuordnung im Gültigkeitsbereich hat.
+Das Profil ist nicht mehr für die Verwendung verfügbar (mit Ausnahme von Benutzern, die diese Zuordnung auch in ihrem aktuellen Benutzerbereich haben). Sie ist im systemweiten Bereich nicht aufzählbar. Dies kann jedoch im Aktuelle-Benutzer-Bereich für einen Benutzer aufzählbar sein, der über diese Zuordnung in seinem Bereich verfügt.
 
 Nein
 
 Aktueller Benutzer
 
-Das Profil ist dem Gerät im Gültigkeitsbereich des aktuellen Benutzers zugeordnet (unabhängig davon, ob es im systemweiten Gültigkeitsbereich zugeordnet ist) und hat den Typ "ICC" oder "CDMP".
+Das Profil ist dem Gerät im Aktuelle-Benutzer-Bereich zugeordnet (unabhängig davon, ob es dem systemweiten Bereich zugeordnet ist) und ist vom Typ CSV oder CDMP.
 
-Das Profil kann nicht mehr verwendet werden, oder es kann vom aktuellen Benutzer als dem Gerät zugeordnetes Element nicht mehr verwendet werden (es sei denn, es ist auch im systemweiten Gültigkeitsbereich des Geräts zugeordnet).
+Das Profil ist für den aktuellen Benutzer nicht mehr für die Verwendung oder aufzählbar, wie es dem Gerät zugeordnet ist (es sei denn, es ist auch im systemweiten Bereich des Geräts zugeordnet).
 
 Ja
 
-$ {ROWSPAN2} $Set Profil für einen Typ (DMP oder ICC) als Standardwert für ein Gerät $ {Remove} $  
+${ROWSPAN2}$Set Profil für einen Typ (DMP oder STAMP) als Standard für ein Gerät${REMOVE}$  
 
-System weit
+Systemweit
 
-Profil ist vom Typ "ICC" oder "CDMP"
+Profil vom Typ "STAMP" oder "CDMP"
 
-Das Profil wird standardmäßig für den jeweiligen Typ mit dem Gerät für alle Benutzer verwendet, mit Ausnahme derjenigen, die diese Einstellung im aktuellen Benutzerbereich überschrieben haben. (Das Profil wird installiert und dem Gerätesystem breit zugeordnet, wenn dies nicht bereits der Fall ist.)
+Das Profil wird standardmäßig für den jeweiligen Typ mit dem Gerät für alle Benutzer verwendet, mit Ausnahme von Benutzern, die diese Einstellung in ihrem aktuellen Benutzerbereich überschrieben haben. (Das Profil wird installiert und dem Gerätesystem zugeordnet, sofern dies nicht bereits der Fall ist.)
 
 Nein
 
 Aktueller Benutzer
 
-Profil ist vom Typ "ICC" oder "CDMP"
+Profil vom Typ "STAMP" oder "CDMP"
 
-Das Profil wird standardmäßig für den jeweiligen Typ mit dem Gerät im Falle des aktuellen Benutzers verwendet, und zwar unabhängig vom systemweiten Standardwert für diesen. (Das Profil wird installiert und dem Gerät für den aktuellen Benutzer zugeordnet, wenn dies nicht bereits der Fall ist.)
+Das Profil wird standardmäßig für den jeweiligen Typ mit dem Gerät im Fall des aktuellen Benutzers verwendet, unabhängig von der systemweiten Standardeinstellung für diesen. (Das Profil wird installiert und dem Gerät für den aktuellen Benutzer zugeordnet, wenn dies nicht bereits der Fall ist.)
 
 Ja, wenn das Profil bereits installiert ist
 
-$ {ROWSPAN2} $Set Profil für einen Typ ("ICC", "DMP", "Camp", "GMMP") und eine Untertyp Kombination als globaler Standardwert $ {Remove} $  
+${ROWSPAN2}$Set Profil für einen Typ (KOMBIN, DMP, MIX, GMMP) und eine Untertypkombination als globaler Standardwert${REMOVE}$  
 
-System weit
+Systemweit
 
-Geräte können nur die "ICC"-und "CDMP"-Profile zugeordnet werden.
+Geräte können nur MIT DEM- und CDMP-Profilen verknüpft werden.
 
-Das Profil wird standardmäßig für den jeweiligen Typ verwendet. Benutzer können diese Einstellung im Gültigkeitsbereich des aktuellen Benutzers außer Kraft setzen. (Das Profil ist installiert, wenn dies nicht bereits der Fall ist.)
+Das Profil wird standardmäßig für den jeweiligen Typ verwendet. Benutzer können diese Einstellung im Aktuelle-Benutzer-Bereich überschreiben. (Das Profil wird installiert, wenn dies noch nicht der Fall ist.)
 
 Nein
 
 Aktueller Benutzer
 
-Geräte können nur die "ICC"-und "CDMP"-Profile zugeordnet werden.
+Geräte können nur MIT DEM- und CDMP-Profilen verknüpft werden.
 
-Das Profil wird standardmäßig für den jeweiligen Typ des aktuellen Benutzers verwendet. (Das Profil ist installiert, wenn dies nicht bereits der Fall ist.)
+Das Profil wird standardmäßig für den jeweiligen Typ des aktuellen Benutzers verwendet. (Das Profil wird installiert, wenn dies noch nicht der Fall ist.)
 
 Ja, wenn das Profil bereits installiert ist.
 
-$ {ROWSPAN2} $Erase die Überschreibung des aktuellen Benutzers für eine bestimmte Standardprofil Einstellung, sodass der System Standard immer als Fallback für den aktuellen Benutzerbereich verwendet wird. $ {Remove} $  
+${ROWSPAN2}$Erase die Aktuelle-Benutzer-Außerkraftsetzung für eine bestimmte Standardprofileinstellung, sodass die Standardeinstellung des Systems immer verwendet wird (als Fallback) auch für den Aktuelle-Benutzer-Bereich.${REMOVE}$  
 
-System weit
+Systemweit
 
 Nicht verfügbar
 
 Aktueller Benutzer
 
-Auch für aktuelle Benutzer Abfragen von Standardprofil Einstellungen werden systemweite Einstellungen zur Verwendung zurückgegeben.
+Selbst für Abfragen von aktuellen Benutzern für Standardprofileinstellungen werden systemweite Einstellungen zur Verwendung zurückgegeben.
 
 Ja
 
-$ {ROWSPAN2} $Enumerate installierte Profile, die bestimmte Kriterien erfüllen (z. b. Geräteklasse, Profilklasse usw.) $ {Remove} $  
+${ROWSPAN2}$Enumerate installierte Profile, die bestimmte Kriterien erfüllen (z. B. Geräteklasse, Profilklasse usw.). ${REMOVE}$  
 
-System weit
+Systemweit
 
-Nur die "ICC"-und "CDMP"-Profile können für Geräte zugeordnet und aufgelistet werden.
+Für Geräte können nur DIE PROFILE UND CDMP zugeordnet und aufzählt werden.
 
-Profile, die installiert sind und die angegebenen Kriterien im systemweiten Gültigkeitsbereich erfüllen, werden aufgezählt.
-
-Ja
-
-Aktueller Benutzer
-
-Den Geräten können nur die-und-CDMP-Profile zugeordnet und somit für Geräte aufgelistet werden.
-
-Profile, die installiert sind und die angegebenen Kriterien im systemweiten Gültigkeitsbereich erfüllen, werden aufgezählt.
-
-Ja
-
-$ {ROWSPAN2} $Enumerate Profile, die einem bestimmten Gerät zugeordnet sind, das bestimmte Kriterien erfüllt, z. b. Geräteklasse und Profilklasse $ {Remove} $  
-
-System weit
-
-Nur die "ICC"-und "CDMP"-Profile können für Geräte zugeordnet und aufgelistet werden.
-
-Profile, die dem Gerät im systemweiten Gültigkeitsbereich zugeordnet sind und die angegebenen Kriterien im systemweiten Gültigkeitsbereich erfüllen, werden aufgezählt.
+Profile, die installiert sind und die angegebenen Kriterien im systemweiten Bereich erfüllen, werden aufzählt.
 
 Ja
 
 Aktueller Benutzer
 
-Nur die "ICC"-und "CDMP"-Profile können für Geräte zugeordnet und aufgelistet werden.
+Geräte können nur MIT UNDM-Profilen verknüpft und daher für Geräte aufzählt werden.
 
-Profile, die dem Gerät im Gültigkeitsbereich des aktuellen Benutzers zugeordnet sind, einschließlich der systemweiten Zuordnungen, die die angegebenen Kriterien im aktuellen Benutzerbereich erfüllen, werden aufgezählt.
+Profile, die installiert sind und die angegebenen Kriterien im systemweiten Bereich erfüllen, werden aufzählt.
+
+Ja
+
+${ROWSPAN2}$Enumerate Profile, die einem bestimmten Gerät zugeordnet sind, das bestimmte Kriterien erfüllt, z. B. Geräteklasse und Profilklasse${REMOVE}$  
+
+Systemweit
+
+Für Geräte können nur DIE PROFILE UND CDMP zugeordnet und aufzählt werden.
+
+Profile, die dem Gerät im systemweiten Bereich zugeordnet sind und die angegebenen Kriterien im systemweiten Bereich erfüllen, werden aufzählt.
+
+Ja
+
+Aktueller Benutzer
+
+Für Geräte können nur DIE PROFILE UND CDMP zugeordnet und aufzählt werden.
+
+Profile, die als dem Gerät zugeordnet im Aktuelle-Benutzer-Bereich verfügbar sind, die die systemweiten Zuordnungen enthalten und die angegebenen Kriterien im Aktuelle-Benutzer-Bereich erfüllen, werden aufzählt.
 
 Ja
 
@@ -299,19 +299,19 @@ Ja
 
  
 
-Die gültigen Farbprofil Typen werden von der colorprofiletype-Enumeration bereitgestellt.
+Die gültigen Farbprofiltypen werden von der COLORPROFILETYPE-Enumeration bereitgestellt.
 
-Die gültigen Farbprofil-Untertypen werden von der colorprofilesubtype-Enumeration bereitgestellt.
+Die gültigen Farbprofiluntertypen werden von der COLORPROFILESUBTYPE-Enumeration bereitgestellt.
 
-In der folgenden Tabelle sind die gültigen Profiltyp-/Untertyp Kombinationen aufgeführt.
+Die gültigen Kombinationen aus Profiltyp und Untertyp sind in der folgenden Tabelle dargestellt.
 
 
 
 COLORPROFILETYPE 
 
-Gültiger colorprofilesubtype
+Gültige COLORPROFILESUBTYPE-DATEI
 
-Notizen
+Hinweise
 
 Gerätestandard
 
@@ -321,66 +321,66 @@ Beabsichtigte Verwendung
 
 Beabsichtigte Verwendung
 
-CPT- \_ ICC
+\_CPT- UND CPT-CPT-
 
-CPST \_ None
+CPST \_ NONE
 
-Mit einem Gerät verknüpften Standard-ICC-Profil erhalten/festlegen
+Abrufen/Festlegen des einem Gerät zugeordneten DEFAULT-PROFILs
 
-CPST \_ rgbworkingspace oder CPST \_ customworkingspace
+CPST \_ RGBWorkingSpace oder CPST \_ CustomWorkingSpace
 
-Sie sollten das ICC-Profil als globales RGB-oder benutzerdefiniertes Arbeitsplatz Profil festlegen. Siehe Hinweis.
+Dient zum Abrufen/Festlegen des RGB-Profils als globales RGB- oder benutzerdefiniertes Arbeitsbereichsprofil. Siehe Hinweis.
 
-Der colorprofiletype CPT \_ -ICC und der CPT- \_ DMP schließen sich gegenseitig aus. Das Standard Farbprofil, das Sie für einen bestimmten Arbeitsbereich festlegen (RGB oder Custom), kann entweder ein ICC-Profil oder ein DMP-Profil sein, aber nicht beides.
+Die COLORPROFILETYPE \_ CPT- und \_ CPT-DMP-Dateien schließen sich gegenseitig aus. Das Standardfarbprofil, das Sie für einen bestimmten Arbeitsbereich (RGB oder Benutzerdefiniert) festlegen, kann entweder ein RGB-Profil oder ein DMP-Profil sein, aber nicht beides.
 
-CPT- \_ DMP
+CPT \_ DMP
 
-CPST \_ None
+CPST \_ NONE
 
-Standard-DMP-Profil, das einem Gerät zugeordnet ist, erhalten/festlegen
+Abrufen/Festlegen des einem Gerät zugeordneten DMP-Standardprofils
 
-CPST \_ rgbworkingspace oder CPST \_ customworkingspace
+CPST \_ RGBWorkingSpace oder CPST \_ CustomWorkingSpace
 
-Legen Sie das DMP-Profil als globales RGB-oder benutzerdefiniertes Arbeitsplatz Profil fest. Siehe Hinweis.
+Abrufen/Festlegen des DMP-Profils als globales RGB- oder benutzerdefiniertes Arbeitsbereichsprofil. Siehe Hinweis.
 
-Der colorprofiletype CPT \_ -ICC und der CPT- \_ DMP schließen sich gegenseitig aus. Das Standard Farbprofil, das Sie für einen bestimmten Arbeitsbereich festlegen (RGB oder Custom), kann entweder ein ICC-Profil oder ein DMP-Profil sein, aber nicht beides.
+Die COLORPROFILETYPE \_ CPT- und \_ CPT-DMP-Dateien schließen sich gegenseitig aus. Das Standardfarbprofil, das Sie für einen bestimmten Arbeitsbereich (RGB oder Benutzerdefiniert) festlegen, kann entweder ein RGB-Profil oder ein DMP-Profil sein, aber nicht beides.
 
 
 
  
 
 > [!Note]  
-> Wenn wcssetdefaultcolorprofile aufgerufen wird, um ein DMP-Profil als Standardprofil für den RGB-Arbeitsbereich oder einen benutzerdefinierten Arbeitsbereich festzulegen, ist nur ein DMP-Profil vom Typ rgbvirtualdevice, LCD oder CRT gültig.
+> Wenn WcsSetDefaultColorProfile aufgerufen wird, um ein DMP-Profil als Standardprofil für den RGB-Arbeitsbereich oder einen benutzerdefinierten Arbeitsbereich festzulegen, ist nur ein DMP-Profil vom Typ RGBVirtualDevice, RGB oder CRT gültig.
 >
 >  
 >
-> Wenn wcssetdefaultcolorprofile aufgerufen wird, um ein ICC-Profil als Standardprofil für den RGB-Arbeitsbereich oder einen benutzerdefinierten Arbeitsbereich festzulegen, ist nur ein ICC-Profil, dessen Klasse "SPAC" oder "DISP" ist und dessen Farbraum "RGB" ist, gültig.
+> Wenn WcsSetDefaultColorProfile aufgerufen wird, um ein RGB-Profil als Standardprofil für den RGB-Arbeitsbereich oder einen benutzerdefinierten Arbeitsbereich festzulegen, ist nur einWK-Profil gültig, dessen Klasse "spac" oder "disp" ist und dessen Farbraum "RGB" ist.
 
  
 
-Die Architektur basiert auf den Anforderungen der Vorgänge, die in den obigen Enumerationen und Tabellen erwähnt wurden.
+Die Architektur wurde gemäß den Anforderungen der Vorgänge entworfen, die in den obigen Enumerationen und Tabellen erwähnt werden.
 
-### <a name="profile-management-public-api-layer"></a>Ebene der öffentlichen API der Profilverwaltung
+### <a name="profile-management-public-api-layer"></a>Öffentliche API-Ebene für die Profilverwaltung
 
-Da der Profil Verwaltungsbereich von Legacy-ICM2-APIs nicht unterstützt wird, ist ein neuer Satz von WCS-Profilverwaltungs-APIs erforderlich, der den Profil Verwaltungsbereich als systemweit oder aktueller Benutzer definiert. ? Ältere ICM2-APIs werden weiterhin aus Gründen der Abwärtskompatibilität unterstützt und arbeiten im Profil Verwaltungsbereich, der für den-Befehl implizit ist. o ICM2-APIs, die im Gültigkeitsbereich des aktuellen Benutzers funktionieren? Dies gilt für Vorgänge, die für den systemweiten und aktuellen Benutzerbereich in der WCS-Profilverwaltung unterstützt werden. Ältere ICM2-APIs werden für neue WCS-APIs mit Profil Verwaltungsbereich als aktueller Benutzer aufgerufen. Dies ergibt sich aus der Sicht des Benutzers, da dies benutzerspezifische Einstellungen von Legacy Anwendungen und die meisten Vorgänge im Lua-Kontext ermöglicht. o ICM2-APIs, die im systemweiten Bereich funktionieren? Dies gilt für Vorgänge (Installations Profile und Deinstallations Profile), die nur den systemweiten Bereich unterstützen. Es werden keine neuen APIs für die WCS-Profilverwaltung erstellt, und vorhandene APIs können nicht geändert werden.
+Da der Profilverwaltungsbereich von älteren ICM2-APIs nicht unterstützt wird, ist ein neuer Satz von WCS-Profilverwaltungs-APIs erforderlich, der den Profilverwaltungsbereich als systemweiten oder aktuellen Benutzer definiert. ? Legacy-ICM2-APIs werden aus Gründen der Abwärtskompatibilität weiterhin unterstützt und arbeiten mit dem Profilverwaltungsbereich, der für den Aufruf implizit ist. o ICM2-APIs, die im Aktuelle-Benutzer-Bereich funktionieren? Dies gilt für Vorgänge, die sowohl für den systemweiten als auch für den aktuellen Benutzerbereich in der WCS-Profilverwaltung unterstützt werden. Legacy-ICM2-APIs rufen neue WCS-APIs mit Profilverwaltungsbereich als aktueller Benutzer auf. Dies ist aus Benutzersicht sinnvoll, da dies benutzerspezifische Einstellungen von Legacyanwendungen ermöglicht und auch die meisten Vorgänge im LUA-Kontext ausführt. o ICM2-APIs, die im systemweiten Bereich funktionieren? Dies gilt für Vorgänge (Installieren von Profilen und Deinstallieren von Profilen), die nur den systemweiten Bereich unterstützen. Es werden keine neuen WCS-Profilverwaltungs-APIs erstellt, und vorhandene APIs können geändert werden.
 
-Die zugrunde liegenden Implementierungen der Profil Verwaltungsvorgänge funktionieren in den folgenden Konfigurationsdaten Entitäten, um den Kontext für farbverarbeitungs Algorithmen zum Bereitstellen von Farb Verwaltungsfunktionen zu erstellen. Sie sind entweder gerätespezifische oder globale (geräteunabhängige) Einstellungen. gerätespezifische Konfigurationsdaten:? Liste der Profile, die einem bestimmten Gerät zugeordnet sind. ? Standardprofil für verschiedene Profiltypen, die einem Gerät zugeordnet sind. ? Abgleichsmodus für die Enumeration. Globale Konfigurationsdaten:? Liste der im System installierten Profile. ? Globales Standardprofil für verschiedene Profiltypen. ? Die zugrunde liegenden Implementierungen der Konfigurationsdaten Speicherung übernehmen den Speicherbereich für Konfigurationsdaten (entweder Geräte unabhängig oder gerätespezifisch), bei denen es sich entweder um systemweite oder den aktuellen Benutzer handeln kann. Dies unterscheidet sich vom Profil Verwaltungsbereich. Ein Vorgang mit dem Profil Verwaltungsbereich aktueller Benutzer kann einen Lesevorgang aus einem systemweiten Speicherbereich bewirken, wenn die aktuelle Benutzereinstellung für diesen Vorgang nicht vorhanden ist. ? Die ICM2/WCS-API-Schicht ruft in dieser Speicher Ebene auf, um Daten mit dem entsprechenden Speicherbereich zu erhalten und festzulegen. Die Speicher Ebene ist für den Profil Verwaltungsbereich transparent. Die Logik für das Kombinieren von Daten aus aktuellen Benutzer-und systemweiten Speicherbereichen zum Erstellen oder Aktualisieren einer Konfiguration gemäß dem Profil Verwaltungsbereich, der vom API-Aufrufer festgelegt wird. Diese Logik ist in der ICM2/WCS-API-Ebene vorhanden.
+Die zugrunde liegenden Implementierungen der Profilverwaltungsvorgänge arbeiten mit den folgenden Konfigurationsdatenentitäten, um den Kontext für Farbverarbeitungsalgorithmen zu erstellen, um Farbverwaltungsfunktionen bereitzustellen. Dabei handelt es sich entweder um gerätespezifische oder globale (geräteunabhängige) Einstellungen. o Gerätespezifische Konfigurationsdaten: ? Liste der Profile, die einem bestimmten Gerät zugeordnet sind. ? Standardprofil für verschiedene Profiltypen, die einem Gerät zugeordnet sind. ? Abgleichsmodus von Profilen, die für die Enumeration verwendet werden. o Globale Konfigurationsdaten: ? Liste der im System installierten Profile. ? Globales Standardprofil für verschiedene Profiltypen. ? Die zugrunde liegenden Implementierungen des Konfigurationsdatenspeichers übernehmen den Speicherbereich für Konfigurationsdaten (geräteunabhängig oder gerätespezifisch), die entweder systemweit oder aktuell sein können. Dies unterscheidet sich vom Bereich der Profilverwaltung. Ein Vorgang mit dem Verwaltungsbereich des aktuellen Benutzerprofils kann dazu führen, dass ein Lesevorgang aus einem systemweiten Speicherbereich durchgeführt wird, wenn die aktuelle Benutzereinstellung für diesen Vorgang nicht vorhanden ist. ? Die ICM2/WCS-API-Schicht ruft in dieser Speicherebene zum Abrufen und Festlegen von Daten mit entsprechendem Speicherbereich auf. Die Speicherebene ist für den Profilverwaltungsbereich transparent. Die Logik zum Kombinieren von Daten aus aktuellen und systemweiten Speicherbereichen, um eine Konfiguration entsprechend dem vom API-Aufrufer angegebenen Profilverwaltungsbereich zu erstellen oder zu aktualisieren. Diese Logik ist in der ICM2/WCS-API-Ebene vorhanden.
 
-### <a name="device-specific-storage-layer"></a>Gerätespezifische Speicher Ebene
+### <a name="device-specific-storage-layer"></a>Gerätespezifische Speicherebene
 
-Der Speicher für verschiedene Klassen von Geräten, wie z. b. Print, Capture oder Display, kann sich voneinander unterscheiden. Beispielsweise müssen Konfigurationsdaten für ein Druck Gerät mithilfe von standardmäßigen Druck-APIs, wie z. b. setprinterdataex und getprinterdataex, gespeichert werden, damit die Profile kopiert werden können und Einstellungen während der Point-and-Print-Verbindung an einen Client Computer übertragen werden. ? Diese Schicht exportiert Funktionen zum Öffnen von speichern, Abrufen von Daten, Festlegen von Daten und Schließen des Speichers mithilfe allgemeiner vordefinierter Schnittstellen, sodass die Speicher Ebene der Profil Verwaltungs Konfiguration aufgerufen werden kann, während Sie transparent ist, wie die Daten für das Gerät gespeichert werden.
+Der Speicher für verschiedene Geräteklassen wie Drucken, Erfassen oder Anzeigen kann sich voneinander unterscheiden. Konfigurationsdaten für ein Druckgerät müssen beispielsweise mithilfe von Standarddruck-APIs wie SetPrinterDataEx und GetPrinterDataEx gespeichert werden, damit die Profile kopiert und Einstellungen während der Point-and-Print-Verbindung auf einen Clientcomputer übertragen werden können. ? Diese Ebene exportiert Funktionen zum Öffnen des Speichers, Abrufen von Daten, Festlegen von Daten und Schließen des Speichers mithilfe allgemeiner vordefinierter Schnittstellen, sodass die Speicherebene der Profilverwaltungskonfiguration sie aufrufen kann, während sie transparent für die Art und Weise sind, wie die Daten für dieses Gerät gespeichert werden.
 
 Diese Architektur wird anhand des folgenden Diagramms veranschaulicht.
 
 
 
-Ebene der öffentlichen API der Profilverwaltung
+Öffentliche API-Ebene für die Profilverwaltung
 
-$ {ROWSPAN2} $Legacy ICM2-APIs für Vorgänge, die nur den systemweiten Profil Verwaltungsbereich in Vista unterstützen (installieren, deinstallieren und das Farb Verzeichnis erhalten). Die Konfigurations Speicher Ebene wird mit dem entsprechenden Speicherbereich aufgerufen. $ {Remove} $  
+${ROWSPAN2}$Legacy ICM2-APIs für Vorgänge, die nur den systemweiten Profilverwaltungsbereich in Vista unterstützen (Installieren, Deinstallieren und Abrufen des Farbverzeichnisses). Sie rufen die Konfigurationsspeicherebene mit dem entsprechenden Speicherbereich auf.${REMOVE}$  
 
-Ältere ICM2-API für Vorgänge, die sowohl den systemweiten als auch den aktuellen Profil Verwaltungsbereich in Vista unterstützen (alle Vorgänge außer "Install", "Uninstall" und "Get Color Directory"). Sie arbeiten implizit mit dem aktuellen Benutzerbereich und wenden eine neue WCS-API mit Profil Verwaltungsbereich als aktueller Benutzer an.
+Legacy-ICM2-API für Vorgänge, die sowohl den systemweiten als auch den aktuellen Benutzerprofilverwaltungsbereich in Vista unterstützen (alle Vorgänge außer installation, uninstall und get color directory). Sie funktionieren implizit für den Aktuelle-Benutzer-Bereich und rufen eine neue WCS-API mit Profilverwaltungsbereich als aktueller Benutzer auf.
 
-Neue WCS-API mit Unterstützung für systemweite und aktuelle Profil Verwaltungsbereiche. Sie bezeichnen die Konfigurations Speicher Ebene mit dem entsprechenden Speicherbereich.
+Neue WCS-API mit systemweiter und Unterstützung der Profilverwaltung für aktuelle Benutzer. Sie rufen die Konfigurationsspeicherebene mit entsprechendem Speicherbereich auf.
 
 
 
@@ -388,17 +388,17 @@ Neue WCS-API mit Unterstützung für systemweite und aktuelle Profil Verwaltungs
 
 
 
-Speicher Ebene für die Profil Verwaltungs Konfiguration
+Profilverwaltungskonfiguration Storage Ebene
 
-Geräteunabhängige globale Konfigurations Routinen
+Geräteunabhängige globale Konfigurationsroutinen
 
-Gerätespezifische Konfigurations Routinen
+Gerätespezifische Konfigurationsroutinen
 
-$ {ROWSPAN3} $profile Installation und geräteunabhängige Standardprofil Einstellungen-Verwaltung, unterstützt im systemweiten und aktuellen Benutzerspeicher Bereich. $ {Remove} $  
+${ROWSPAN3}$Profile Installation und geräteunabhängige Verwaltung von Standardprofileinstellungen, unterstützt im systemweiten und aktuellen Benutzerspeicherbereich.${REMOVE}$  
 
-Geräte Zuordnung und gerätespezifische Standardprofil Einstellungen-Verwaltung, unterstützt im systemweiten und aktuellen Benutzerspeicher Bereich.
+Gerätezuordnung und gerätespezifische Verwaltung von Standardprofileinstellungen, die im systemweiten und aktuellen Benutzerspeicherbereich unterstützt werden.
 
-Device-Specific-Speicher Ebene
+Device-Specific Storage Ebene
 
 Drucken eines bestimmten Speichers
 
@@ -410,9 +410,9 @@ Erfassen eines bestimmten Speichers
 
  
 
-Ältere ICM2-APIs für Vorgänge, die nur den systemweiten Profil Verwaltungsbereich in Vista unterstützen, weisen keine Verhaltensänderungen auf. Installations-und Deinstallations Vorgänge fallen in diese Kategorie.
+Legacy-ICM2-APIs für Vorgänge, die nur den systemweiten Profilverwaltungsbereich in Vista unterstützen, haben keine Verhaltensänderungen. Installations- und Deinstallationsvorgänge fallen in diese Kategorie.
 
-Ältere ICM2-APIs für Vorgänge, die sowohl den systemweiten als auch den aktuellen Profil Verwaltungsbereich unterstützen, haben das Verhalten geändert, um die aktuellen Benutzereinstellungen abzufragen und zu konfigurieren. Alle Vorgänge außer Installation und Deinstallation fallen in diese Kategorie.
+Ältere ICM2-APIs für Vorgänge, die sowohl den systemweiten als auch den Verwaltungsbereich für aktuelle Benutzerprofile unterstützen, haben ihr Verhalten geändert, um Einstellungen für aktuelle Benutzer abzufragen und zu konfigurieren. Alle Vorgänge außer der Installation und Deinstallation fallen in diese Kategorie.
 
  
 

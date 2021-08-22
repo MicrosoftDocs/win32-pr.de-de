@@ -1,39 +1,39 @@
 ---
-description: Die druckspoolerapi bietet eine Schnittstelle zum Druck Spooler für Anwendungen zum Verwalten von Druckern und Druckaufträgen.
+description: Die Druckspooler-API bietet eine Schnittstelle zum Druckspooler für Anwendungen zum Verwalten von Druckern und Druckaufträgen.
 ms.assetid: b6cc0c9d-9f28-4e80-b847-39c72d98bed6
-title: Druckspoolerapi
+title: Druckspooler-API
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: be7287b9da3ac19d2ab9c39152d5917960e465e2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 64eaa89e0f28aa3bc5479e9b1bb872d0a114678ce3e641394c3919b28f37f4df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119460495"
 ---
-# <a name="print-spooler-api"></a>Druckspoolerapi
+# <a name="print-spooler-api"></a>Druckspooler-API
 
-Die druckspoolerapi bietet eine Schnittstelle zum Druck Spooler für Anwendungen zum Verwalten von Druckern und Druckaufträgen.
+Die Druckspooler-API bietet eine Schnittstelle zum Druckspooler für Anwendungen zum Verwalten von Druckern und Druckaufträgen.
 
-Die druckspoolerapi wird von einer Anwendung als Teil der Programmierung und nicht direkt von Endbenutzern verwendet.
+Die Druckspooler-API wird von einer Anwendung im Rahmen der Programmierung und nicht direkt von Endbenutzern verwendet.
 
 Dieser Abschnitt enthält Informationen zu den folgenden Themen.
 
 
 
-| Thema                                                                                             | BESCHREIBUNG                                                                                                                                                                                                             |
+| Thema                                                                                             | Beschreibung                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Referenz zur Druck Spooler-API](printing-and-print-spooler-reference.md)<br/>                | Ausführliche Informationen zu den Funktionen, Strukturen und anderen Elementen der druckspoolerapi.<br/>                                                                                                           |
-| [Asynchrone Druck Benachrichtigungs Referenz](asynchronous-printing-notification.md)<br/> | Beschreibungen der Funktionen, Schnittstellen und Enumerationen, die bei der asynchronen Kommunikation zwischen Anwendungen und Druck Spoolern (z. b. Druckertreibern und Port Monitore) verwendet werden.<br/> |
-| [Referenz zur Druckertreiber Installation](printer-driver-installation-reference.md)<br/>     | Beschreibt die Funktionen, mit denen Druckertreiber auf einem Computer installiert und konfiguriert werden.<br/>                                                                                                                            |
+| [Referenz zur Druck-Spooler-API](printing-and-print-spooler-reference.md)<br/>                | Ausführliche Informationen zu den Funktionen, Strukturen und anderen Elementen der Druckspooler-API.<br/>                                                                                                           |
+| [Benachrichtigungsreferenz zum asynchronen Drucken](asynchronous-printing-notification.md)<br/> | Beschreibungen der Funktionen, Schnittstellen und Enumerationen, die bei der asynchronen Kommunikation zwischen Anwendungen und druckspoolergehosteten Komponenten wie Druckertreibern und Portmonitoren verwendet werden.<br/> |
+| [Referenz zur Installation des Druckertreibers](printer-driver-installation-reference.md)<br/>     | Beschreibt die Funktionen, die Druckertreiber auf einem Computer installieren und konfigurieren.<br/>                                                                                                                            |
 
 
 
  
 
-Das folgende Diagramm zeigt die Beziehung der druckspoolerapi zu den anderen Druck-APIs, die von einer systemeigenen Windows-Anwendung verwendet werden können.
+Das folgende Diagramm zeigt die Beziehung zwischen der Druckspooler-API und den anderen Druck-APIs, die eine native Windows Anwendung verwenden kann.
 
-![ein Diagramm, das die Beziehung der druckspoolerapi zu den anderen Druck-APIs anzeigt, die eine systemeigene Windows-Anwendung verwenden kann](images/print-apis-ps.png)
+![Diagramm, das die Beziehung zwischen der Druckspooler-API und den anderen Druck-APIs zeigt, die von einer nativen Windows-Anwendung verwendet werden können](images/print-apis-ps.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -42,7 +42,7 @@ Das folgende Diagramm zeigt die Beziehung der druckspoolerapi zu den anderen Dru
 [XPS-Druck-API](xps-printing.md)
 </dt> <dt>
 
-[Print Ticket-API](print-ticket-api.md)
+[Druckticket-API](print-ticket-api.md)
 </dt> <dt>
 
 [GDI-Druck-API](gdi-printing.md)

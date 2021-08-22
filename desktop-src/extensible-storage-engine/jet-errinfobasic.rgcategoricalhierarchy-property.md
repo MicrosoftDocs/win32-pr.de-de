@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_ERRINFOBASIC. rgcategoricalhierarchy-Eigenschaft'
-title: JET_ERRINFOBASIC. rgcategoricalhierarchy-Eigenschaft (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen zu: JET_ERRINFOBASIC.rgCategoricalHierarchy-Eigenschaft'
+title: JET_ERRINFOBASIC.rgCategoricalHierarchy-Eigenschaft (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: 'rgCategoricalHierarchy property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Windows8.JET_ERRINFOBASIC.rgCategoricalHierarchy
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.jet_errinfobasic.rgcategoricalhierarchy(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 37034ca35427c9470d69f5e90dd43a4640601574
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a64c043ccd63cfc8c60bd89e38b1b2bfa4c3cbb3f300144c4a6d436e7c67f2fc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119232750"
 ---
-# <a name="jet_errinfobasicrgcategoricalhierarchy-property"></a>JET_ERRINFOBASIC. rgkategoricalhierarchy (Eigenschaft)
+# <a name="jet_errinfobasicrgcategoricalhierarchy-property"></a>JET_ERRINFOBASIC.rgCategoricalHierarchy-Eigenschaft
 
-Ruft die Hierarchie von Fehlern ab oder legt Sie fest. Position 0 ist die höchste Ebene in der Hierarchie, und der Rest wird JET_errcatUnknown.
+Ruft die Fehlerhierarchie ab oder legt sie fest. Position 0 ist die höchste Ebene in der Hierarchie, und der Rest ist JET_errcatUnknown.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public JET_ERRCAT[] rgCategoricalHierarchy { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Sorte \[\]  
+Typ: \[\]  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_ERRINFOBASIC-Klasse](./jet-errinfobasic-class.md)
 
-[Mitglieder JET_ERRINFOBASIC](./jet-errinfobasic-members.md)
+[JET_ERRINFOBASIC-Member](./jet-errinfobasic-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

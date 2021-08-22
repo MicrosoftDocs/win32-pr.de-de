@@ -22,18 +22,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 8cab3dc8679c606076eca2f5cf704867aa9833c9
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 47312acde8f346ac4ac3b2260fe06a2a5270610f9b7265da2b627a4c92fb4b8f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126260"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119294030"
 ---
-# <a name="win32_computersystemproduct-class"></a>Win32 \_ computersystemproduct-Klasse
+# <a name="win32_computersystemproduct-class"></a>Win32 \_ ComputerSystemProduct-Klasse
 
-Die **Win32 \_ computersystemproduct** [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) stellt ein Produkt dar. Dies schließt Software und Hardware ein, die auf diesem Computersystem verwendet wird.
+Die **WMI-Klasse \_ Win32 ComputerSystemProduct** stellt ein Produkt dar. [](/windows/desktop/WmiSdk/retrieving-a-class) Dies schließt Software und Hardware ein, die auf diesem Computersystem verwendet wird.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,13 +54,13 @@ class Win32_ComputerSystemProduct : CIM_Product
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ Computersystem Product** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ ComputerSystemProduct-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ Computersystem Product** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ ComputerSystemProduct-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -73,12 +73,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
 Kurze Textbeschreibung für das Produkt.
 
-Diese Eigenschaft wird vom [**CIM- \_ Produkt**](cim-product.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Produkt geerbt.**](cim-product.md)
 
 </dd> <dt>
 
@@ -91,9 +91,9 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Textbeschreibung des Produkts.
+Textbeschreibung des Produkts.
 
-Diese Eigenschaft wird vom [**CIM- \_ Produkt**](cim-product.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Produkt geerbt.**](cim-product.md)
 
 </dd> <dt>
 
@@ -106,12 +106,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,4 ")
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.4")
 </dt> </dl>
 
-Produktidentifizierung, z. b. Seriennummer auf Software, eine Nummer auf einem Hardware Chip oder (bei nicht kommerziellen Produkten) eine Projekt Nummer.
+Produktidentifikation, z. B. eine Seriennummer für Software, eine Die-Nummer auf einem Hardwarechip oder (bei nicht kommerziellen Produkten) eine Projektnummer.
 
-Diese Eigenschaft wird vom [**CIM- \_ Produkt**](cim-product.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Produkt geerbt.**](cim-product.md)
 
 </dd> <dt>
 
@@ -124,12 +124,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,2 ")
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.2")
 </dt> </dl>
 
 Häufig verwendeter Produktname.
 
-Diese Eigenschaft wird vom [**CIM- \_ Produkt**](cim-product.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Produkt geerbt.**](cim-product.md)
 
 </dd> <dt>
 
@@ -142,12 +142,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-SKU-Informationen (Stock-Keeping Unit) des Produkts.
+Informationen zur Lagerbestandseinheit (Stock Keeping Unit, SKU) des Produkts.
 
-Diese Eigenschaft wird vom [**CIM- \_ Produkt**](cim-product.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Produkt geerbt.**](cim-product.md)
 
 </dd> <dt>
 
@@ -160,12 +160,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS- \| Typ 1 \| UUID")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 1 \| UUID")
 </dt> </dl>
 
-Universelle eindeutige Kennung (UUID) für dieses Produkt. Eine UUID ist ein 128-Bit-Bezeichner, der sich garantiert von anderen generierten UUIDs unterscheidet. Wenn eine UUID nicht verfügbar ist, wird eine UUID aller Nullen verwendet.
+Universally Unique Identifier (UUID) für dieses Produkt. Eine UUID ist ein 128-Bit-Bezeichner, der sich garantiert von anderen generierten UUIDs unterscheiden kann. Wenn keine UUID verfügbar ist, wird eine UUID aller Nullen verwendet.
 
-Dieser Wert stammt aus dem **UUID** -Member der **System Informations** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **UUID-Member** der Systeminformationen **struktur** in den SMBIOS-Informationen.
 
 </dd> <dt>
 
@@ -178,12 +178,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**CIM \_ Key**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,1 ")
+Qualifizierer: [**\_ CIM-Taste,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.1")
 </dt> </dl>
 
-Der Name des Lieferanten des Produkts oder die Entität, die das Produkt verkauft (Hersteller, Reseller, OEM usw.).
+Der Name des Lieferanten des Produkts oder die Entität, die das Produkt verkauft (Hersteller, Handelspartner, OEM und so weiter).
 
-Diese Eigenschaft wird vom [**CIM- \_ Produkt**](cim-product.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Produkt geerbt.**](cim-product.md)
 
 </dd> <dt>
 
@@ -196,22 +196,22 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,3 ")
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.3")
 </dt> </dl>
 
-Informationen zur Produktversion.
+Produktversionsinformationen.
 
-Diese Eigenschaft wird vom [**CIM- \_ Produkt**](cim-product.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Produkt geerbt.**](cim-product.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32- \_ computersystemproduct** -Klasse wird vom [**CIM- \_ Produkt**](cim-product.md)abgeleitet.
+Die **Win32 \_ ComputerSystemProduct-Klasse** wird von [**CIM Product \_ abgeleitet.**](cim-product.md)
 
 ## <a name="examples"></a>Beispiele
 
-Das [Get-BrokenHardware.ps1](https://Gallery.TechNet.Microsoft.Com/dbb678f4-b95b-45c3-bc8b-2ae2d052448e) PowerShell-Beispiel in der TechNet Gallery verwendet zum **Win32 \_ computersystemproduct** , um eine Liste der nicht funktionierenden Hardware mithilfe von WMI abzurufen.
+Im [Get-BrokenHardware.ps1](https://Gallery.TechNet.Microsoft.Com/dbb678f4-b95b-45c3-bc8b-2ae2d052448e) PowerShell-Beispiel im TechNet-Katalog wird **win32 \_ ComputerSystemProduct** verwendet, um eine Liste nicht funktionierender Hardware mithilfe von WMI abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -221,17 +221,17 @@ Das [Get-BrokenHardware.ps1](https://Gallery.TechNet.Microsoft.Com/dbb678f4-b95b
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Produkt**](cim-product.md)
+[**\_CIM-Produkt**](cim-product.md)
 </dt> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))

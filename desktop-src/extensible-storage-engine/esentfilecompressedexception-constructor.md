@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentfilecompressedexception-Konstruktor'
-title: Esentfilecompressedexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentFileCompressedException-Konstruktor'
+title: EsentFileCompressedException-Konstruktor
 TOCTitle: 'EsentFileCompressedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentFileCompressedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentfilecompressedexception.esentfilecompressedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 55dd38a7d9b58f44533d929d071271057c26bca8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0fdfd6a74bd9513ef39627759f880418874e60ad52eb3922e1b02404f39f3c9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119236795"
 ---
-# <a name="esentfilecompressedexception-constructor"></a>Esentfilecompressedexception-Konstruktor
+# <a name="esentfilecompressedexception-constructor"></a>EsentFileCompressedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentfilecompressedexception-Klasse.
+Initialisiert eine neue Instanz der EsentFileCompressedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentFileCompressedException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentfilecompressedexception-Klasse](./esentfilecompressedexception-class.md)
+[EsentFileCompressedException-Klasse](./esentfilecompressedexception-class.md)
 
-[Esentfilecompressedexception-Elemente](./esentfilecompressedexception-members.md)
+[EsentFileCompressedException-Member](./esentfilecompressedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

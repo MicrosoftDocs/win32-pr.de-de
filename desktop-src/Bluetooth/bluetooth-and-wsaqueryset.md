@@ -1,27 +1,27 @@
 ---
-title: Bluetooth und wsaqueryset
-description: Die wsaqueryset-Struktur wird in Vorgängen verwendet, einschließlich der Geräte Anfrage, der Dienst Anfrage und der Festlegung des Dienstanbieter.
+title: Bluetooth und WSAQUERYSET
+description: Die WSAQUERYSET-Struktur wird in Vorgängen wie Geräteabfragen, Dienstabfragen und Festlegen des Diensts verwendet.
 ms.assetid: 6c9913a6-4429-4c50-be4a-17555f67e855
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: db4640e4b69591f29901212b9fdadf85de7ae420
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b454d44d315257dd9b83f5c0614cd8b8cc668c067becb4b21c308fd9b3711ac4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119588400"
 ---
-# <a name="bluetooth-and-wsaqueryset"></a>Bluetooth und wsaqueryset
+# <a name="bluetooth-and-wsaqueryset"></a>Bluetooth und WSAQUERYSET
 
-Die [**wsaqueryset**](/windows/desktop/api/winsock2/ns-winsock2-wsaquerysetw) -Struktur wird in Vorgängen verwendet, einschließlich der Geräte Anfrage, der Dienst Anfrage und der Festlegung des Dienstanbieter.
+Die [**WSAQUERYSET-Struktur**](/windows/desktop/api/winsock2/ns-winsock2-wsaquerysetw) wird in Vorgängen wie Geräteabfragen, Dienstabfragen und Festlegen des Diensts verwendet.
 
-In den folgenden Themen wird die Verwendung der wsaqueryset-Struktur in den einzelnen Vorgängen beschrieben:
+In den folgenden Themen wird die Verwendung der WSAQUERYSET-Struktur in jedem dieser Vorgänge beschrieben:
 
--   [Bluetooth und wsaqueryset für Geräte Anfrage](bluetooth-and-wsaqueryset-for-device-inquiry.md)
--   [Bluetooth und wsaqueryset für die Dienst Anfrage](bluetooth-and-wsaqueryset-for-service-inquiry.md)
--   [Bluetooth und wsaqueryset für Set Service](bluetooth-and-wsaqueryset-for-set-service.md)
+-   [Bluetooth und WSAQUERYSET für Geräteabfragen](bluetooth-and-wsaqueryset-for-device-inquiry.md)
+-   [Bluetooth und WSAQUERYSET für Dienstabfragen](bluetooth-and-wsaqueryset-for-service-inquiry.md)
+-   [Bluetooth und WSAQUERYSET für Set Service](bluetooth-and-wsaqueryset-for-set-service.md)
 
-Weitere Informationen und eine komplette [**wsaqueryset**](/windows/desktop/api/winsock2/ns-winsock2-wsaquerysetw) -Referenz oder andere Windows Sockets-Elemente finden Sie im Abschnitt Windows Sockets des Platform Software Development Kit (SDK).
+Weitere Informationen und eine vollständige [**WSAQUERYSET-Referenz**](/windows/desktop/api/winsock2/ns-winsock2-wsaquerysetw) oder andere Windows Sockets-Elemente finden Sie im Abschnitt Windows Sockets des Platform Software Development Kit (SDK).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -30,6 +30,6 @@ Weitere Informationen und eine komplette [**wsaqueryset**](/windows/desktop/api/
 [Windows-Sockets](/windows/desktop/WinSock/windows-sockets-start-page-2)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,17 +1,17 @@
 ---
 description: Gibt an, ob alle Streamingprotokolle aktiviert sind.
 ms.assetid: cf072572-58f7-429a-954a-8808d05248f0
-title: MFNETSOURCE_ENABLE_STREAMING-Eigenschaft (mspdl. h)
+title: MFNETSOURCE_ENABLE_STREAMING -Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 29fc8ae10dedd5cb904e43ee79ff64e8f451e37f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5fae2b127a52bbea9e8d122ec9ad219c61010068b07696b44cce49cc7546c9fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527377"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119463700"
 ---
-# <a name="mfnetsource_enable_streaming-property"></a>MF-Quell \_ Eigenschaft "Streaming aktivieren" \_
+# <a name="mfnetsource_enable_streaming-property"></a>MFNETSOURCE \_ ENABLE \_ STREAMING (Eigenschaft)
 
 Gibt an, ob alle Streamingprotokolle aktiviert sind.
 
@@ -19,23 +19,23 @@ Gibt an, ob alle Streamingprotokolle aktiviert sind.
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
-Boolescher Wert (**Long**)
+Boolescher Wert (**LONG**)
 
 VT \_ I4
 
-**LVAL**
+**lVal**
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Konstante " **MF NetSource \_ enable \_ Streaming** " definiert die GUID für diesen Eigenschafts Schlüssel. Der Eigenschaften Bezeichner (PID) ist 0 (null).
+Die Konstante **MFNETSOURCE \_ ENABLE \_ STREAMING** definiert die GUID für diesen Eigenschaftsschlüssel. Der Eigenschaftenbezeichner (PID) ist 0 (null).
 
-Anwendungen können diese Eigenschaft verwenden, um die Netzwerkquelle zu konfigurieren. Um die-Eigenschaft festzulegen, übergeben Sie einen **IPropertyStore** -Zeiger an die [Konfiguration einer Medienquelle](configuring-a-media-source.md).
+Anwendungen können diese Eigenschaft verwenden, um die Netzwerkquelle zu konfigurieren. Übergeben Sie zum Festlegen der -Eigenschaft einen **IPropertyStore-Zeiger** auf [das -Objekt Configuring a Media Source](configuring-a-media-source.md)(Konfigurieren einer Medienquelle).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,17 +43,17 @@ Anwendungen können diese Eigenschaft verwenden, um die Netzwerkquelle zu konfig
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
 [Netzwerk in Media Foundation](networking-in-media-foundation.md)

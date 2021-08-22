@@ -1,8 +1,8 @@
 ---
-description: Die Methode "Swap. Refresh" aktualisiert alle Elemente, die im "Swap-Refresh Sher"-Objekt enthalten sind. Das Swap-Aktualisierungs Objekt.
+description: Die SWbemRefresher.Refresh-Methode aktualisiert alle Elemente, die im SWbemRefresher-Objekt enthalten sind. SWbemRefresher-Objekt.
 ms.assetid: 85a4777a-4be7-44f2-b7a6-e18b5e57f7af
 ms.tgt_platform: multiple
-title: Methode ' Swap. Refresh ' (wbemdisp. h)
+title: SWbemRefresher.Refresh-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: d8b2522227041858770c7256d7d2520cc661948e
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: da92a9bc0de6667b80a74945adb23f1a4f5e4b18e2d614ec130990f3bcddaa69
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106364284"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119503290"
 ---
-# <a name="swbemrefresherrefresh-method"></a>Taubemrefresh Sher. Refresh-Methode
+# <a name="swbemrefresherrefresh-method"></a>SWbemRefresher.Refresh-Methode
 
-Die Methode " **Swap. Refresh** " aktualisiert alle Elemente, die im "Swap-Refresh [**Sher**](swbemrefresher.md) "-Objekt enthalten sind.
+Die **SWbemRefresher.Refresh-Methode** aktualisiert alle Elemente, die im [**SWbemRefresher-Objekt enthalten**](swbemrefresher.md) sind.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ SWbemRefresher.Refresh( _
 
 <dl> <dt>
 
-*IFlags* \[ optionale\]
+*iFlags* \[ Optional\]
 </dt> <dd>
 
 Flags müssen auf 0 (null) festgelegt werden.
@@ -63,11 +63,11 @@ Diese Methode gibt keinen Wert zurück.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Austauschprogramm<br/>                                                        |
-| IID<br/>                      | IID \_ iswbemfreshsher<br/>                                                         |
+| CLSID<br/>                    | CLSID \_ SWbemRefresher<br/>                                                        |
+| IID<br/>                      | IID \_ ISWbemRefresher<br/>                                                         |
 
 
 
@@ -75,7 +75,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Swap-Aktualisierungs Programm**](swbemrefresher.md)
+[**SWbemRefresher**](swbemrefresher.md)
 </dt> </dl>
 
  

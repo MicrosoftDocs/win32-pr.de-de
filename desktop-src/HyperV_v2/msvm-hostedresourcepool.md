@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Spezialisierung der Systemkomponenten Zuordnung dar, die festlegt, dass der Ressourcenpool im Kontext des Systems definiert ist.
+description: Stellt eine Spezialisierung der Systemkomponentenzuordnung dar, die anklickt, dass der Ressourcenpool im Kontext des Systems definiert ist.
 ms.assetid: 72b68687-2b5f-4fef-bdca-a5c0bbfa3564
 title: Msvm_HostedResourcePool-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: d64488a845e8d51bfe27829b01ebcf0ac7d944c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ce61d5ee2c0b676e9c4ab6099bd592533e7821ae5cd529499c111f4c5349221e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119531280"
 ---
-# <a name="msvm_hostedresourcepool-class"></a>MSVM- \_ Klasse "hustedresourcepool"
+# <a name="msvm_hostedresourcepool-class"></a>Msvm \_ HostedResourcePool-Klasse
 
-Stellt eine Spezialisierung der Systemkomponenten Zuordnung dar, die festlegt, dass der Ressourcenpool im Kontext des Systems definiert ist.
+Stellt eine Spezialisierung der Systemkomponentenzuordnung dar, die anklickt, dass der Ressourcenpool im Kontext des Systems definiert ist.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,26 +41,26 @@ class Msvm_HostedResourcePool : CIM_SystemComponent
 
 ## <a name="members"></a>Member
 
-Die **MSVM-Klasse " \_ hustedresourcepool** " verfügt über diese Typen von Membern:
+Die **Msvm \_ HostedResourcePool-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM-Klasse " \_ hustedresourcepool** " verfügt über diese Eigenschaften.
+Die **Msvm \_ HostedResourcePool-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ Computersystem**](msvm-computersystem.md)**
+Datentyp: **[ **Msvm \_ ComputerSystem**](msvm-computersystem.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
 Das übergeordnete System in der Zuordnung.
@@ -70,16 +70,16 @@ Das übergeordnete System in der Zuordnung.
 **PartComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ resourcepool**](/previous-versions//cc136903(v=vs.85))**
+Datentyp: **[ **CIM \_ ResourcePool**](/previous-versions//cc136903(v=vs.85))**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Der Ressourcenpool, bei dem es sich um eine Komponente des Systems handelt.
+Der Ressourcenpool, der eine Komponente des Systems ist.
 
 </dd> </dl>
 
@@ -89,10 +89,10 @@ Der Ressourcenpool, bei dem es sich um eine Komponente des Systems handelt.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

@@ -1,5 +1,5 @@
 ---
-description: Enthält eine Zusammenfassung der Informationen zum angegebenen virtuellen Computersystem.
+description: Enthält eine Informationszusammenfassung zum angegebenen virtuellen Computersystem.
 ms.assetid: ab31d5db-a8d3-47bc-a024-0f4c4b93a34b
 title: Msvm_ComputerSystemSummaryInformation-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 35248bcfa14609e8db25b148088b6feb8d161116
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 78ac2b89336a415bedd23e0ca4ecd6589abdefbf75a54900d716c78152d34d4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862652"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119531760"
 ---
-# <a name="msvm_computersystemsummaryinformation-class"></a>MSVM \_ computersystemsummaryinformation-Klasse
+# <a name="msvm_computersystemsummaryinformation-class"></a>Msvm \_ ComputerSystemSummaryInformation-Klasse
 
-Enthält eine Zusammenfassung der Informationen zum angegebenen virtuellen Computersystem.
+Enthält eine Informationszusammenfassung zum angegebenen virtuellen Computersystem.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -41,55 +41,55 @@ class Msvm_ComputerSystemSummaryInformation : CIM_ElementView
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ computersystemsummaryinformation** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ ComputerSystemSummaryInformation-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ computersystemsummaryinformation** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ ComputerSystemSummaryInformation-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Computersystem**
+Datentyp: **CIM \_ ComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Ein [**CIM \_ Computersystem**](cim-computersystem.md) -Objekt, bei dem es sich um eine Instanz in der normalisierten Darstellung der verwalteten Ressource handelt.
+Ein [**CIM \_ ComputerSystem-Objekt,**](cim-computersystem.md) das eine Instanz in der normalisierten Darstellung der verwalteten Ressource ist.
 
 > [!Note]
 >
-> DataType, aktualisiert von [**MSVM \_ Computersystem**](msvm-computersystem.md) in Windows 10, Version 1703.
+> Datatype upgraded from [**Msvm \_ ComputerSystem**](msvm-computersystem.md) in Windows 10, Version 1703.
 
  
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MSVM \_ summaryinformationbase**
+Datentyp: **Msvm \_ SummaryInformationBase**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent")
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("abhängig")
 </dt> </dl>
 
-Eine Instanz von [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) , die eine entnormalisierte oder aggregierte Ansicht der verwalteten Ressource darstellt, die durch das [**MSVM \_ Computersystem**](msvm-computersystem.md) dargestellt wird, auf das von der Vorgänger Eigenschaft verwiesen wird.
+Eine Instanz von [**Msvm \_ SummaryInformation,**](msvm-summaryinformation.md) die eine denormierte oder aggregierte Ansicht der verwalteten Ressource darstellt, die durch das [**Msvm \_ ComputerSystem**](msvm-computersystem.md) dargestellt wird, auf das von der Vorgängereigenschaft verwiesen wird.
 
 > [!Note]
 >
-> DataType wurde aus [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) in Windows 10, Version 1703, aktualisiert.
+> Datatype updated from [**Msvm \_ SummaryInformation**](msvm-summaryinformation.md) in Windows 10, Version 1703.
 
  
 
@@ -101,10 +101,10 @@ Eine Instanz von [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) , 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -113,7 +113,7 @@ Eine Instanz von [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) , 
 
 <dl> <dt>
 
-[**CIM- \_ Element Ansicht**](cim-elementview.md)
+[**CIM \_ ElementView**](cim-elementview.md)
 </dt> </dl>
 
  

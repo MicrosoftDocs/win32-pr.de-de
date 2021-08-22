@@ -1,10 +1,10 @@
 ---
-title: MACAddress-Attribut
-description: Enthält die Mac-Adresse in maximaler, durch Doppelpunkt getrennter hexadezimal Notation.
+title: macAddress-Attribut
+description: Enthält die MAC-Adresse in maximaler Hexadezimal notation mit Doppelpunkttrennung.
 ms.assetid: 332cd4f7-cdad-44ab-90b3-60b7d7b4fecb
 ms.tgt_platform: multiple
 keywords:
-- Schema für das MACAddress-Attribut AD
+- macAddress-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,26 +13,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 17be059be5aec041436393f9c9f251d8f15556de
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 374eb0078c172fd51507891c7e4fea5cdf8ad1b15529b6a318edf8be38355ddc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479767"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119301490"
 ---
-# <a name="macaddress-attribute"></a>MACAddress-Attribut
+# <a name="macaddress-attribute"></a>macAddress-Attribut
 
-Enthält die Mac-Adresse in maximaler, durch Doppelpunkt getrennter hexadezimal Notation.
+Enthält die MAC-Adresse in maximaler Hexadezimal notation mit Doppelpunkttrennung.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | macAddress                           |
-| LDAP-Display-Name | macAddress                           |
+| Ldap-Anzeigename | macAddress                           |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.3.6.1.1.1.1.22                     |
 | System-ID-GUID    | e6a522dd-9770-43e1-89de-1de5044328f7 |
 | Syntax            | [**String(IA5)**](s-string-ia5.md)  |
@@ -55,10 +55,10 @@ Enthält die Mac-Adresse in maximaler, durch Doppelpunkt getrennter hexadezimal 
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
+| Ist einwertig       | False                                               |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -76,10 +76,10 @@ Enthält die Mac-Adresse in maximaler, durch Doppelpunkt getrennter hexadezimal 
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
+| Ist einwertig       | False                                               |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -97,10 +97,10 @@ Enthält die Mac-Adresse in maximaler, durch Doppelpunkt getrennter hexadezimal 
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
+| Ist einwertig       | False                                               |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -118,10 +118,10 @@ Enthält die Mac-Adresse in maximaler, durch Doppelpunkt getrennter hexadezimal 
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
+| Ist einwertig       | False                                               |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -130,7 +130,7 @@ Enthält die Mac-Adresse in maximaler, durch Doppelpunkt getrennter hexadezimal 
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

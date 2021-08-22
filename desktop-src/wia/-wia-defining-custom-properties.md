@@ -1,23 +1,23 @@
 ---
 description: Definieren von benutzerdefinierten Eigenschaften.
 ms.assetid: 6adcf414-2c5a-451c-b30a-d1c161886c9a
-title: Definieren von benutzerdefinierten Eigenschaften
+title: Definieren benutzerdefinierter Eigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dd91ee4d4e657ce0d6c01330d85e8df4ef57a36d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3b78516913c898e3b3d814e96a40d227cc3cc1cc70c13a290949f91eb9f447c6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119348050"
 ---
-# <a name="defining-custom-properties"></a>Definieren von benutzerdefinierten Eigenschaften
+# <a name="defining-custom-properties"></a>Definieren benutzerdefinierter Eigenschaften
 
-**Definieren von benutzerdefinierten Eigenschaften**.
+**Definieren benutzerdefinierter Eigenschaften**.
 
-Wenn es erforderlich ist, dass der Windows-Abbild Erfassungs Dienst (WIA) benutzerdefinierte Eigenschaften definiert, sollte die WIA \_ private \_ devprop-Eigenschaft für benutzerdefinierte Stamm Element Eigenschaften verwendet werden, und die WIA \_ private \_ ItemProp-Eigenschaft sollte für andere Element Eigenschaften verwendet werden. Diese Konstanten werden in *wiadef. h* definiert.
+Wenn der WIA-Minitreiber (Windows Image Acquisition) benutzerdefinierte Eigenschaften definieren muss, sollte die WIA PRIVATE DEVPROP-Eigenschaft für benutzerdefinierte Stammelementeigenschaften und die \_ \_ WIA \_ PRIVATE ITEMPROP"-Eigenschaft für andere Elementeigenschaften verwendet \_ werden. Diese Konstanten werden in *wiadef.h definiert.*
 
-Der folgende Beispielcode zeigt Definitionen für drei Stamm Element Eigenschaften. Die Eigenschaften-ID für die erste benutzerdefinierte root-Element Eigenschaft, die benutzerdefinierte Stamm-Prop-Eigenschaft \_ \_ \_ 1, wird in Form von WIA \_ private \_ devprop definiert. Eigenschaften-IDs für zusätzliche Stamm Element Eigenschaften werden in Form von WIA \_ private \_ devprop + 1, WIA \_ private \_ devprop + 2 usw. definiert. Das Muster kann fortgesetzt werden, wenn zusätzliche benutzerdefinierte Stamm Element Eigenschaften benötigt werden.
+Der folgende Beispielcode zeigt Definitionen für drei Stammelementeigenschaften. Die Eigenschaften-ID für die erste benutzerdefinierte Stammelementeigenschaft, CUSTOM ROOT PROP 1, wird in Bezug \_ \_ auf \_ WIA PRIVATE \_ \_ DEVPROP definiert. Eigenschaften-IDs für zusätzliche Stammelementeigenschaften werden in Bezug auf WIA \_ PRIVATE \_ DEVPROP + 1, WIA \_ PRIVATE \_ DEVPROP + 2 und so weiter definiert. Das Muster kann fortgesetzt werden, wenn zusätzliche benutzerdefinierte Stammelementeigenschaften erforderlich sind.
 
 
 ```
@@ -28,7 +28,7 @@ Der folgende Beispielcode zeigt Definitionen für drei Stamm Element Eigenschaft
 
 
 
-Das nächste Beispiel zeigt Definitionen für drei benutzerdefinierte untergeordnete Element Eigenschaften und Eigenschaften-IDs. Die Eigenschaften-ID für die erste benutzerdefinierte untergeordnete Element Eigenschaft, benutzerdefinierte untergeordnete \_ \_ Prop \_ 1, wird in Form von WIA \_ private \_ ItemProp definiert. Eigenschaften-IDs für zusätzliche untergeordnete Element Eigenschaften werden in Form von WIA \_ private \_ ItemProp + 1 usw. definiert. Wie zuvor kann das Muster fortgesetzt werden, wenn mehr dieser Eigenschaften für ein benutzerdefiniertes untergeordnetes Element benötigt wird.
+Das nächste Beispiel zeigt Definitionen für drei benutzerdefinierte untergeordnete Elementeigenschaften und Eigenschaften-IDs. Die Eigenschaften-ID für die erste benutzerdefinierte untergeordnete Elementeigenschaft, CUSTOM CHILD PROP 1, wird in Bezug \_ \_ auf \_ WIA PRIVATE \_ \_ ITEMPROP definiert. Eigenschaften-IDs für zusätzliche untergeordnete Elementeigenschaften werden in Bezug auf WIA \_ PRIVATE \_ ITEMPROP + 1 definiert, und so weiter. Wie zuvor kann das Muster fortgesetzt werden, wenn weitere dieser benutzerdefinierten untergeordneten Elementeigenschaften erforderlich sind.
 
 
 ```
@@ -39,7 +39,7 @@ Das nächste Beispiel zeigt Definitionen für drei benutzerdefinierte untergeord
 
 
 
-Benutzerdefinierte WIA-Eigenschaften müssen benutzerdefinierte Eigenschaftsnamen aufweisen, die den benutzerdefinierten Eigenschaften-IDs zugeordnet sind. Der folgende Beispielcode zeigt Definitionen für drei benutzerdefinierte Stamm Element-Eigenschaften Namen. (Diese Eigenschaftsnamen werden mit den benutzerdefinierten Eigenschaften-IDs verwendet, die in einem vorherigen Beispiel erstellt wurden, wobei der Name der benutzerdefinierten Eigenschaft in Custom \_ Root \_ Prop \_ 1 \_ str ist der benutzerdefinierten Stamm-ID des Stamm Elements \_ root \_ Prop \_ 1 zugeordnet.)
+Benutzerdefinierte WIA-Eigenschaften müssen benutzerdefinierte Eigenschaftennamen aufweisen, die den benutzerdefinierten Eigenschaften-IDs zugeordnet sind. Der folgende Beispielcode zeigt Definitionen für drei benutzerdefinierte Stammelementeigenschaftsnamen. (Diese Eigenschaftennamen werden mit den benutzerdefinierten Eigenschaften-IDs verwendet, die in einem vorherigen Beispiel erstellt wurden, wobei der benutzerdefinierte Eigenschaftsname in CUSTOM enthalten ist. \_ ROOT \_ PROP \_ 1 STR ist der \_ benutzerdefinierten Stammelementeigenschafts-ID CUSTOM \_ ROOT PROP \_ \_ 1 zugeordnet.)
 
 
 ```
@@ -51,7 +51,7 @@ Benutzerdefinierte WIA-Eigenschaften müssen benutzerdefinierte Eigenschaftsname
 
 
 > [!Note]  
-> WIA-Eigenschaften Namen sind in mehreren Sprachen *nicht* lokalisiert. Dies liegt daran, dass WIA-Eigenschaften von Anwendungen gelesen werden können, die die Eigenschaften-ID oder den Eigenschaften Namen verwenden. Wenn der Name verwendet wird, muss er eine Konstante sein, ebenso wie die eigen schafts-ID.
+> WIA-Eigenschaftennamen *werden nicht* in mehreren Sprachen lokalisiert. Dies liegt daran, dass WIA-Eigenschaften von Anwendungen mithilfe der Eigenschaften-ID oder des Eigenschaftennamens gelesen werden können. Wenn der Name verwendet wird, muss er eine Konstante sein, genau wie die Eigenschaften-ID.
 
  
 

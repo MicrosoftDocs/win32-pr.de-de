@@ -1,9 +1,9 @@
 ---
-title: importchannel-Element (channelellisttype)
+title: importChannel -Element (ChannelListType)
 description: Identifiziert einen Kanal, der von einem anderen Anbieter definiert wurde.
 ms.assetid: 62b1ea5c-0994-4bd1-b73e-6b6e0f2ead7a
 keywords:
-- importchannel-Element EventLog
+- importChannel-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 442d9c54fb785828efecf3f304fc8b170b1fefa0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7b3ae7d7a825e7322bd039cc4b251bba7eb0e1668abf03a33fbf7bccc4c786fc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476530"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119247920"
 ---
-# <a name="importchannel-channellisttype-element"></a>importchannel-Element (channelellisttype)
+# <a name="importchannel-channellisttype-element"></a>importChannel -Element (ChannelListType)
 
 Identifiziert einen Kanal, der von einem anderen Anbieter definiert wurde.
 
@@ -30,7 +30,7 @@ Identifiziert einen Kanal, der von einem anderen Anbieter definiert wurde.
  />
 ```
 
-Das **importchannel** -Element wird durch den komplexen Typ " [**channelellisttype**](eventmanifestschema-channellisttype-complextype.md) " definiert.
+Das **importChannel-Element** wird durch den komplexen [**ChannelListType-Typ**](eventmanifestschema-channellisttype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,22 +38,22 @@ Das **importchannel** -Element wird durch den komplexen Typ " [**channelellistty
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Übergeordnete Elemente**
 </dt> <dt>
 
-[**Kanäle (ProviderType)**](eventmanifestschema-channels-providertype-element.md)
+[**channels (ProviderType)**](eventmanifestschema-channels-providertype-element.md)
 </dt> <dt>
 
-[**Kanäle (metadataType)**](eventmanifestschema-channels-metadatatype-element.md)
+[**channels (MetadataType)**](eventmanifestschema-channels-metadatatype-element.md)
 </dt> </dl>
 
  

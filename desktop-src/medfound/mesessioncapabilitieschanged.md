@@ -1,42 +1,42 @@
 ---
-description: Wird von der Medien Sitzung ausgelöst, wenn sich die Sitzungs Funktionen ändern.
+description: Wird von der Mediensitzung ausgelöst, wenn sich die Sitzungsfunktionen ändern.
 ms.assetid: d59fd3a0-29db-434c-b6ba-d9beb33bd965
-title: Mesessioncapabilitieschangi-Ereignis (mfobjects. h)
+title: MESessionCapabilitiesChanged-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d0612b705571c50a6adcbde4afe93b42a524a950
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bc97cb5168957f34cc029a982447c6d4775075ea6f9b9b250ce7b9fd7f1791d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357453"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119464870"
 ---
-# <a name="mesessioncapabilitieschanged-event"></a>Mesessioncapabilitieschangi-Ereignis
+# <a name="mesessioncapabilitieschanged-event"></a>MESessionCapabilitiesChanged-Ereignis
 
-Wird von der Medien Sitzung ausgelöst, wenn sich die Sitzungs Funktionen ändern.
+Wird von der Mediensitzung ausgelöst, wenn sich die Sitzungsfunktionen ändern.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
 | VARTYPE              | BESCHREIBUNG                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Ereignis enthält die folgenden Attribute.
+Das -Ereignis enthält die folgenden Attribute.
 
 
 
-| Attribut                                                                     | BESCHREIBUNG                                      |
+| attribute                                                                     | BESCHREIBUNG                                      |
 |-------------------------------------------------------------------------------|--------------------------------------------------|
-| [**MF- \_ Ereignis \_ sessioncaps**](mf-event-sessioncaps-attribute.md)              | Neue sitzungsfunktions-Flags.                  |
-| [**\_Delta-Ereignis \_ sessioncaps- \_ Delta**](mf-event-sessioncaps-delta-attribute.md) | Gibt an, welche Funktionen Flags geändert wurden. |
+| [**\_SESSIONCAPS FÜR MF-EREIGNISSE \_**](mf-event-sessioncaps-attribute.md)              | Neue Flags für Sitzungsfunktionen.                  |
+| [**MF \_ EVENT \_ SESSIONCAPS \_ DELTA**](mf-event-sessioncaps-delta-attribute.md) | Gibt an, welche Funktionenflags geändert wurden. |
 
 
 
@@ -48,17 +48,17 @@ Das Ereignis enthält die folgenden Attribute.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

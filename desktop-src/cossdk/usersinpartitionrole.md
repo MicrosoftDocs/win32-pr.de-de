@@ -1,7 +1,7 @@
 ---
-description: 'UsersInPartitionRole-Auflistung: Enthält ein Objekt für jeden Benutzer in der Rolle, mit der die Auflistung verknüpft ist.'
+description: 'UsersInPartitionRole-Auflistung: Enthält ein -Objekt für jeden Benutzer in der Rolle, mit der die Sammlung verknüpft ist.'
 ms.assetid: c6aebf7a-04d1-4c7c-a015-bc6fb4841c4a
-title: UsersInPartitionRole-Auflistung
+title: UsersInPartitionRole-Sammlung
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,24 +12,24 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 2a4c134ebead08ef576337528a8ef75d8b8be21a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d07c62fc6c6cc871f803b1f752201bd500e2705c3cfca272ff350ffd018f6018
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119499645"
 ---
-# <a name="usersinpartitionrole-collection"></a>UsersInPartitionRole-Auflistung
+# <a name="usersinpartitionrole-collection"></a>UsersInPartitionRole-Sammlung
 
 Enthält ein -Objekt für jeden Benutzer in der Rolle, mit der die Auflistung verknüpft ist.
 
-Diese Auflistung unterstützt die [**Add-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) und [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
+Diese Sammlung unterstützt die [**Add- und**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
 ## <a name="members"></a>Member
 
-Die **UsersInPartitionRole-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
+Die **UsersInPartitionRole-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
-## <a name="related-collections"></a>Verwandte Auflistungen
+## <a name="related-collections"></a>Verwandte Sammlungen
 
 Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 
@@ -37,7 +37,7 @@ Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 -   [**Propertyinfo**](propertyinfo.md)
 -   [**RelatedCollectionInfo**](relatedcollectioninfo.md)
 
-Sie können aus den folgenden Sammlungen zu dieser Sammlung navigieren:
+Sie können von den folgenden Sammlungen zu dieser Sammlung navigieren:
 
 -   [**RolesForPartition**](rolesforpartition.md)
 
@@ -47,23 +47,23 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 -   [Benutzer](#usersinpartitionrole-collection)
 
-### <a name="user"></a>Benutzer
+### <a name="user"></a>User
 
 
 
 | Eingabe | Wert |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Der Benutzername. Diese Eigenschaft wird zurückgegeben, wenn die [**Key-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) oder [**Name-Eigenschaftsmethode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) für ein Objekt dieser Auflistung aufgerufen wird. |
-| Access         | WriteOnce                                                                                                                                                                             |
+| Beschreibung    | Der Benutzername. Diese Eigenschaft wird zurückgegeben, wenn die [**Key-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) oder [**Name-Eigenschaftsmethode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) für ein Objekt dieser Auflistung aufgerufen wird. |
+| Zugriff         | WriteOnce                                                                                                                                                                             |
 | type           | String                                                                                                                                                                                |
 | Standard        | "Neuer Benutzer"                                                                                                                                                                            |
-| Mindestsystem | Windows Server 2003                                                                                                                                                                   |
+| Mindestsystem | Windows Server 2003                                                                                                                                                                   |
 
 
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

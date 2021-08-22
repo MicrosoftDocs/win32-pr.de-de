@@ -1,21 +1,21 @@
 ---
-description: Die Textausrichtung für einen Gerätekontext kann mithilfe der Funktionen gettextalign und setTextAlign abgefragt und festgelegt werden.
+description: Sie können die Textausrichtung für einen Gerätekontext abfragen und festlegen, indem Sie die Funktionen GetTextAlign und SetTextAlign verwenden.
 ms.assetid: 7fdfbadb-827a-4b42-9b9a-b9e46389e13c
-title: Festlegen der Text Ausrichtung
+title: Festlegen der Textausrichtung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 538a8da060f9d854890ea004c855e2317986fd19
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 78edffa9febaee0fd624cc97c4a908da349ad65526799e1c4bd3450137b62a47
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119468420"
 ---
-# <a name="setting-the-text-alignment"></a>Festlegen der Text Ausrichtung
+# <a name="setting-the-text-alignment"></a>Festlegen der Textausrichtung
 
-Die Textausrichtung für einen Gerätekontext kann mithilfe der Funktionen [**gettextalign**](/windows/desktop/api/Wingdi/nf-wingdi-gettextalign) und [**setTextAlign**](/windows/desktop/api/Wingdi/nf-wingdi-settextalign) abgefragt und festgelegt werden. Die Text Ausrichtungs Einstellungen legen fest, wie Text relativ zu einer angegebenen Position positioniert wird. Text kann am rechten oder linken Rand der Position ausgerichtet oder zentriert werden. Sie kann auch oberhalb oder unterhalb des Punkts ausgerichtet werden.
+Sie können die Textausrichtung für einen Gerätekontext abfragen und festlegen, indem Sie die [**Funktionen GetTextAlign**](/windows/desktop/api/Wingdi/nf-wingdi-gettextalign) und [**SetTextAlign**](/windows/desktop/api/Wingdi/nf-wingdi-settextalign) verwenden. Die Textausrichtungseinstellungen bestimmen, wie Text relativ zu einer angegebenen Position positioniert wird. Text kann rechts oder links von der Position ausgerichtet oder um ihn zentriert werden. sie kann auch oberhalb oder unterhalb des Punkts ausgerichtet werden.
 
-Das folgende Beispiel zeigt eine Methode, mit der bestimmt wird, welches Flag für die horizontale Ausrichtung festgelegt ist:
+Das folgende Beispiel zeigt eine Methode zum Bestimmen, welches Flag für die horizontale Ausrichtung festgelegt ist:
 
 
 ```C++
@@ -38,7 +38,7 @@ switch ((TA_LEFT | TA_RIGHT | TA_CENTER) & GetTextAlign(hdc))
 
 
 
-Sie können auch die [**setTextAlign**](/windows/desktop/api/Wingdi/nf-wingdi-settextalign) -Funktion verwenden, um die aktuelle Position zu aktualisieren, wenn eine Textausgabe Funktion aufgerufen wird. Im folgenden Beispiel wird z. b. die [**setTextAlign**](/windows/win32/api/wingdi/nf-wingdi-settextalign) -Funktion verwendet, um die aktuelle Position zu aktualisieren, wenn die [**TextOut**](/windows/desktop/api/Wingdi/nf-wingdi-textouta) -Funktion aufgerufen wird. In diesem Beispiel ist der *carial* -Parameter eine ganze Zahl, die die Anzahl der Arial-Schriftarten angibt.
+Sie können auch die [**SetTextAlign-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-settextalign) verwenden, um die aktuelle Position zu aktualisieren, wenn eine Textausgabefunktion aufgerufen wird. Im folgenden Beispiel wird beispielsweise die [**SetTextAlign-Funktion**](/windows/win32/api/wingdi/nf-wingdi-settextalign) verwendet, um die aktuelle Position zu aktualisieren, wenn die [**TextOut-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-textouta) aufgerufen wird. In diesem Beispiel ist der *cArial-Parameter* eine ganze Zahl, die die Anzahl der Arial-Schriftarten angibt.
 
 
 ```C++
@@ -65,7 +65,7 @@ SetTextAlign(hdc, uAlignPrev);
 
 
 > [!Note]  
-> Sie sollten [**setTextAlign**](/windows/win32/api/wingdi/nf-wingdi-settextalign) nicht mit TA \_ updatecp verwenden, wenn Sie [**scriptstringout**](/windows/win32/api/usp10/nf-usp10-scriptstringout)verwenden, da ausgewählter Text nicht ordnungsgemäß gerendert wird. Wenn Sie dieses Flag verwenden müssen, können Sie es bei Bedarf zurücksetzen und zurücksetzen, um das Problem zu vermeiden.
+> Sie sollten [**SetTextAlign nicht mit**](/windows/win32/api/wingdi/nf-wingdi-settextalign) TA UPDATECP verwenden, wenn \_ Sie [**ScriptStringOut**](/windows/win32/api/usp10/nf-usp10-scriptstringout)verwenden, da ausgewählter Text nicht ordnungsgemäß gerendert wird. Wenn Sie dieses Flag verwenden müssen, können Sie es nach Bedarf zurücksetzen, um das Problem zu vermeiden.
 
  
 

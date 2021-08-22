@@ -1,9 +1,9 @@
 ---
 title: DRM_DRMHeader_ContentDistributor
-description: Das Attribut "DRM \_ drmHeader \_ contentdistributor" enthält eine Zeichenfolge, die den Inhalts Verteiler Bezeichner.
+description: Das DRM \_ DRMHeader \_ ContentDistributor-Attribut enthält eine Zeichenfolge, die den Inhaltsverteiler identifiziert.
 ms.assetid: ea9ae7ba-35cc-4e86-995c-9abcdae48f9c
 keywords:
-- DRM_DRMHeader_ContentDistributor Windows Media-Format
+- DRM_DRMHeader_ContentDistributor Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2494f80e612e03f9d25372d38e875c1df814fd7d
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 7a82e570c43acbe065ec20e1d7296cff701853591759e9187e2b9329ffed8efe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "106342112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119586460"
 ---
-# <a name="drm_drmheader_contentdistributor"></a>DRM- \_ drmHeader- \_ contentdistributor
+# <a name="drm_drmheader_contentdistributor"></a>DRM \_ DRMHeader \_ ContentDistributor
 
-Das Attribut " **DRM \_ drmHeader \_ contentdistributor** " enthält eine Zeichenfolge, die den Inhalts Verteiler Bezeichner.
+Das **DRM \_ DRMHeader \_ ContentDistributor-Attribut** enthält eine Zeichenfolge, die den Inhaltsverteiler identifiziert.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmdrm \_ drmHeader- \_ contentdistributor
+g \_ wszWMDRM \_ DRMHeader \_ ContentDistributor
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Inhalts-ID ist optional und wird nur vom Ersteller des Inhalts bestimmt. Das Writer-Objekt hat nichts mit diesem Attribut. Dieses Attribut ist nur für den DRM-Inhalt von DRM Version 7 vorhanden. Sie kann mithilfe von [**iwmdrmwriter:: setdrmattribute**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmwriter-setdrmattribute) festgelegt werden und kann mit " [**iwmdrmreader:: getdrmproperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)" abgerufen werden.
+Die Inhalts-ID ist optional und wird ausschließlich vom Inhaltsersteller bestimmt. Das Writer-Objekt führt keineRlei Mit diesem Attribut aus. Dieses Attribut ist nur mit DRM Version 7-Inhalt vorhanden. Sie kann mit [**IWMDRMWriter::SetDRMAttribute**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmwriter-setdrmattribute) festgelegt und mit [**IWMDRMReader::GetDRMProperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)abgerufen werden.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -42,9 +42,9 @@ Die Inhalts-ID ist optional und wird nur vom Ersteller des Inhalts bestimmt. Das
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

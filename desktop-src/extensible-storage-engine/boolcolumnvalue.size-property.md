@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der boolcolumnvalue. Size-Eigenschaft.
-title: Boolcolumnvalue. Size-Eigenschaft
+description: 'Weitere Informationen zu: BoolColumnValue.Size-Eigenschaft'
+title: BoolColumnValue.Size-Eigenschaft
 TOCTitle: 'Size property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.BoolColumnValue.Size
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.boolcolumnvalue.size(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 95458e02780b1a0a96c46c857dc168be3125a816
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c06c1645ddca2461122477ff07a963bb9e0727967983c5e76ee82ef060a3200c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119275280"
 ---
-# <a name="boolcolumnvaluesize-property"></a>Boolcolumnvalue. Size-Eigenschaft
+# <a name="boolcolumnvaluesize-property"></a>BoolColumnValue.Size-Eigenschaft
 
-Ruft die Größe des Werts in der Spalte ab. Dadurch wird 0 für Spalten variabler Größen (z. b. Binär und Zeichenfolge) zurückgegeben.
+Ruft die Größe des Werts in der Spalte ab. Dies gibt 0 für Spalten variabler Größe (d. h. binär und Zeichenfolge) zurück.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,14 +57,14 @@ protected override int Size { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Boolcolumnvalue-Klasse](./boolcolumnvalue-class.md)
+[BoolColumnValue-Klasse](./boolcolumnvalue-class.md)
 
-[Boolcolumnvalue-Member](./boolcolumnvalue-members.md)
+[BoolColumnValue-Member](./boolcolumnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

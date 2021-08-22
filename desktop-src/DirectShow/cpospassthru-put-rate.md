@@ -1,7 +1,7 @@
 ---
-description: Die Put \_ Rate-Methode legt die Wiedergabe Rate fest. Diese Methode implementiert die imediaposition::p UT- \_ Raten Methode.
+description: Die put \_ Rate-Methode legt die Wiedergaberate fest. Diese Methode implementiert die IMediaPosition::p \_ Rate-Methode.
 ms.assetid: c077f344-de34-4f8a-8e08-6d7086a5a4f1
-title: CPosPassThru.put_Rate-Methode (ctlutil. h)
+title: CPosPassThru.put_Rate -Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 21e7e654233f78adcda2addf73b87a178654872e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 90c89c9730ee057bea3bc776f551061c0e828385fe3c6ae054f4161bdb705ab1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369366"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119565501"
 ---
-# <a name="cpospassthruput_rate-method"></a>Cpospassthru. Put \_ Rate-Methode
+# <a name="cpospassthruput_rate-method"></a>CPosPassThru.put \_ Rate-Methode
 
-Die- `put_Rate` Methode legt die Wiedergabe Rate fest. Diese Methode implementiert die [**imediaposition::p UT- \_ Raten**](/windows/desktop/api/Control/nf-control-imediaposition-put_rate) Methode.
+Die `put_Rate` -Methode legt die Wiedergaberate fest. Diese Methode implementiert die [**IMediaPosition::p ut \_ Rate-Methode.**](/windows/desktop/api/Control/nf-control-imediaposition-put_rate)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ HRESULT put_Rate(
 
 <dl> <dt>
 
-*drate* 
+*dRate* 
 </dt> <dd>
 
-Wiedergabe Rate. Darf nicht NULL sein.
+Wiedergaberate. Darf nicht 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt E \_ invalidArg zurück, wenn *drate* 0 (null) ist. Andernfalls wird der **HRESULT** -Wert aus der verbundenen Pin zurückgegeben.
+Gibt E \_ INVALIDARG zurück, wenn *dRate* 0 (null) ist. Andernfalls wird der **HRESULT-Wert** vom verbundenen Pin zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Negative Raten weisen auf die umgekehrte Wiedergabe hin. Nicht alle Medien unterstützen die umgekehrte Wiedergabe.
+Negative Raten geben reverse play an. Nicht alle Medien unterstützen reverseplay.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Negative Raten weisen auf die umgekehrte Wiedergabe hin. Nicht alle Medien unter
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Negative Raten weisen auf die umgekehrte Wiedergabe hin. Nicht alle Medien unter
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

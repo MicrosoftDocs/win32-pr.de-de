@@ -1,5 +1,5 @@
 ---
-description: Enthält Informationen über die idständigkeit des Systems.
+description: Enthält Informationen zur Leerlaufzeit des Systems.
 ms.assetid: f6349b7c-1835-4492-95e3-9ce142628804
 title: SYSTEM_POWER_INFORMATION Struktur
 ms.topic: reference
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: c32a8ad86b71ea680bd2961c9196a0896b055e5e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 665c19a99bffae46cf20af8c5c634e2e9594ecd07d02f003f56d42277ce9a46f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119143303"
 ---
-# <a name="system_power_information-structure"></a>Struktur der System \_ Energie \_ Informationen
+# <a name="system_power_information-structure"></a>SYSTEM \_ POWER \_ INFORMATION-Struktur
 
-Enthält Informationen über die idständigkeit des Systems.
+Enthält Informationen zur Leerlaufzeit des Systems.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,39 +41,39 @@ typedef struct _SYSTEM_POWER_INFORMATION {
 
 <dl> <dt>
 
-**Maxidleness Allowed**
+**MaxIdlenessAllowed**
 </dt> <dd>
 
-Der Leerlauf, bei dem das System als im Leerlauf befindlich betrachtet wird und das Leerlauf Timeout beginnt, wird als Prozentsatz ausgedrückt. Das Ablegen unterhalb dieser Zahl bewirkt, dass der Timer abgebrochen wird.
+Die Leerlaufzeit, bei der das System als im Leerlauf befindliches System betrachtet wird, und der Leerlauftime out beginnt mit der Zählung, ausgedrückt als Prozentsatz. Wenn sie unter diese Zahl fallen, wird der Timer abgebrochen.
 
 </dd> <dt>
 
 **Leerlauf**
 </dt> <dd>
 
-Die aktuelle Leerlauf Ebene, ausgedrückt als Prozentsatz.
+Die aktuelle Leerlaufebene, ausgedrückt als Prozentsatz.
 
 </dd> <dt>
 
 **TimeRemaining**
 </dt> <dd>
 
-Die verbleibende Zeit im Leerlaufzeit Geber in Sekunden.
+Die verbleibende Zeit im Leerlauftimer in Sekunden.
 
 </dd> <dt>
 
-**Coolingmode**
+**CoolingMode**
 </dt> <dd>
 
-Der aktuelle systemkühlungs Modus. Dieser Member muss einen der folgenden Werte haben.
+Der aktuelle Systemkühlungsmodus. Dieser Member muss einen der folgenden Werte aufweisen.
 
 
 
 | Wert                                                                                                                                                                                                                                 | Bedeutung                                                                                                   |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| <span id="PO_TZ_ACTIVE"></span><span id="po_tz_active"></span><dl> <dt>**Po \_ TZ \_ aktiv**</dt> <dt>0</dt> </dl>                    | Das System befindet sich derzeit im aktiven kühl Modus.<br/>                                                |
-| <span id="PO_TZ_INVALID_MODE"></span><span id="po_tz_invalid_mode"></span><dl> <dt>**Po \_ TZ \_ ungültiger \_ Modus**</dt> <dt>2</dt> </dl> | Das System unterstützt keine CPU-Drosselung, oder im System ist keine thermische Zone definiert.<br/> |
-| <span id="PO_TZ_PASSIVE"></span><span id="po_tz_passive"></span><dl> <dt>**Po \_ TZ \_ passiv**</dt> <dt>1</dt> </dl>                 | Das System befindet sich zurzeit im passiven kühl Modus.<br/>                                               |
+| <span id="PO_TZ_ACTIVE"></span><span id="po_tz_active"></span><dl> <dt>**PO \_ TZ \_ ACTIVE**</dt> <dt>0</dt> </dl>                    | Das System befindet sich derzeit im Aktiven Kühlmodus.<br/>                                                |
+| <span id="PO_TZ_INVALID_MODE"></span><span id="po_tz_invalid_mode"></span><dl> <dt>**PO \_ UNGÜLTIGER \_ \_ TZ-MODUS**</dt> <dt>2</dt> </dl> | Das System unterstützt keine CPU-Drosselung, oder es ist keine wärmende Zone im System definiert.<br/> |
+| <span id="PO_TZ_PASSIVE"></span><span id="po_tz_passive"></span><dl> <dt>**PO \_ TZ \_ PASSIVE**</dt> <dt>1</dt> </dl>                 | Das System befindet sich derzeit im passiven Kühlmodus.<br/>                                               |
 
 
 
@@ -81,9 +81,9 @@ Der aktuelle systemkühlungs Modus. Dieser Member muss einen der folgenden Werte
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass diese Struktur Definition versehentlich aus "Winnt. h" weggelassen wurde. Dieser Fehler wird in Zukunft korrigiert. Fügen Sie in der Zwischenzeit die Struktur Definition, die in diesem Thema enthalten ist, in Ihren Quellcode ein, um die Anwendung zu kompilieren.
+Beachten Sie, dass diese Strukturdefinition versehentlich aus WinNT.h weggelassen wurde. Dieser Fehler wird in Zukunft behoben. Fügen Sie in der Zwischenzeit die in diesem Thema enthaltene Strukturdefinition in Ihren Quellcode ein, um Ihre Anwendung zu kompilieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,16 +91,16 @@ Beachten Sie, dass diese Struktur Definition versehentlich aus "Winnt. h" weggel
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Callntpowerinformation**](/windows/desktop/api/Powerbase/nf-powerbase-callntpowerinformation)
+[**CallNtPowerInformation**](/windows/desktop/api/Powerbase/nf-powerbase-callntpowerinformation)
 </dt> </dl>
 
  

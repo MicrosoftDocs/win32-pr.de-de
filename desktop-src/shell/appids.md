@@ -1,110 +1,110 @@
 ---
-description: App-Benutzer Modell-IDs (appusermudelids) werden von der Taskleiste in Windows 7-Systemen und späteren Systemen ausgiebig verwendet, um Prozesse, Dateien und Fenster einer bestimmten Anwendung zuzuordnen.
+description: Anwendungsbenutzermodell-IDs (AppUserModelIDs) werden von der Taskleiste in systemen mit Windows 7 und höher umfassend verwendet, um Prozesse, Dateien und Fenster einer bestimmten Anwendung zuzuordnen.
 ms.assetid: ebce2d99-6f20-4545-9f12-d79cd8d0828f
-title: Anwendungs Benutzer Modell-IDs (appusermudelids)
+title: Anwendungsbenutzermodell-IDs (AppUserModelIDs)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 46b79f0bdd7fb5e6c4d5c41caa3cd6be3f4fb57e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: acd0835af241a36e4d9c95237890cb63790f7fe9031476dfa8ec21254266ffd7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525415"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119351470"
 ---
-# <a name="application-user-model-ids-appusermodelids"></a>Anwendungs Benutzer Modell-IDs (appusermudelids)
+# <a name="application-user-model-ids-appusermodelids"></a>Anwendungsbenutzermodell-IDs (AppUserModelIDs)
 
-App-Benutzer Modell-IDs (appusermudelids) werden von der Taskleiste in Windows 7-Systemen und späteren Systemen ausgiebig verwendet, um Prozesse, Dateien und Fenster einer bestimmten Anwendung zuzuordnen. In einigen Fällen ist es ausreichend, die interne appusermodelid zu verlassen, die einem Prozess vom System zugewiesen wird. Allerdings muss eine Anwendung, die über mehrere Prozesse oder eine Anwendung verfügt, die in einem Host Prozess ausgeführt wird, möglicherweise explizit identifiziert werden, damit Sie die ansonsten ungleichen Fenster unter einer einzigen Task leisten Schaltfläche gruppieren und den Inhalt der Sprung Liste der Anwendung steuern kann.
+Anwendungsbenutzermodell-IDs (AppUserModelIDs) werden von der Taskleiste in systemen mit Windows 7 und höher umfassend verwendet, um Prozesse, Dateien und Fenster einer bestimmten Anwendung zuzuordnen. In einigen Fällen ist es ausreichend, sich auf die interne AppUserModelID zu verlassen, die einem Prozess vom System zugewiesen wird. Eine Anwendung, die mehrere Prozesse besitzt, oder eine Anwendung, die in einem Hostprozess ausgeführt wird, muss sich jedoch möglicherweise explizit identifizieren, damit sie ihre ansonsten unterschiedlichen Fenster unter einer einzigen Taskleistenschaltfläche gruppieren und den Inhalt der Sprungliste der Anwendung steuern kann.
 
--   [Anwendungs definierte und System-Defined appusermudelids](#application-defined-and-system-defined-appusermodelids)
--   [So erstellen Sie eine Application-Defined "appusermodelid"](#how-to-form-an-application-defined-appusermodelid)
--   [Wo eine appusermodelid zugewiesen werden soll](#where-to-assign-an-appusermodelid)
--   [Registrieren einer Anwendung als Host Prozess](#registering-an-application-as-a-host-process)
--   [Ausschluss Listen für das Anheften und aktuelle/häufige Listen der Taskleiste](#exclusion-lists-for-taskbar-pinning-and-recentfrequent-lists)
+-   [Anwendungsdefiniert und System-Defined AppUserModelIDs](#application-defined-and-system-defined-appusermodelids)
+-   [Erstellen einer Application-Defined AppUserModelID](#how-to-form-an-application-defined-appusermodelid)
+-   [Zuweisen einer AppUserModelID](#where-to-assign-an-appusermodelid)
+-   [Registrieren einer Anwendung als Hostprozess](#registering-an-application-as-a-host-process)
+-   [Ausschlusslisten für Taskleisten-Anheften und Zuletzt durchgeführte/häufige Listen](#exclusion-lists-for-taskbar-pinning-and-recentfrequent-lists)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="application-defined-and-system-defined-appusermodelids"></a>Application-Defined und System-Defined appusermudelids
+## <a name="application-defined-and-system-defined-appusermodelids"></a>Application-Defined und System-Defined AppUserModelIDs
 
-Einige Anwendungen deklarieren keine explizite appusermodelid. Sie sind optional. In diesem Fall verwendet das System eine Reihe von Heuristik, um eine interne appusermodelid zuzuweisen. Es gibt jedoch einen Leistungsvorteil, wenn diese Berechnungen vermieden werden und eine explizite appusermodelid die einzige Möglichkeit ist, eine exakte Benutzererfahrung zu gewährleisten. Daher wird dringend empfohlen, eine explizite ID festzulegen. Anwendungen können keine vom System zugewiesene appusermodelid abrufen.
+Einige Anwendungen deklarieren keine explizite AppUserModelID. Sie sind optional. In diesem Fall verwendet das System eine Reihe von Heuristiken, um eine interne AppUserModelID zuzuweisen. Es gibt jedoch einen Leistungsvorteil bei der Vermeidung dieser Berechnungen, und eine explizite AppUserModelID ist die einzige Möglichkeit, eine genaue Benutzererfahrung zu gewährleisten. Daher wird dringend empfohlen, eine explizite ID festzulegen. Anwendungen können keine vom System zugewiesene AppUserModelID abrufen.
 
-Wenn eine Anwendung eine explizite appusermodelid verwendet, muss Sie auch allen laufenden Fenstern oder Prozessen, Verknüpfungen und Dateizuordnungen dieselbe appusermodelid zuweisen. Außerdem muss diese appusermodelid verwendet werden, wenn die Sprung Liste über [**ICustomDestinationList**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icustomdestinationlist)und in allen Aufrufen von " [**SHAddToRecentDocs**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs)" angepasst wird.
+Wenn eine Anwendung eine explizite AppUserModelID verwendet, muss sie allen ausgeführten Fenstern oder Prozessen, Verknüpfungen und Dateizuordnungen dieselbe AppUserModelID zuweisen. Sie muss diese AppUserModelID auch beim Anpassen der Sprungliste über [**ICustomDestinationList**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icustomdestinationlist)und in allen Aufrufen von [**SHAddToRecentDocs**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs)verwenden.
 
 > [!Note]  
-> Wenn Anwendungen nicht über eine explizite appusermodelid verfügen, müssen Sie die Methoden " [**iapplicationdestination**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdestinations)", " [**iapplicationdocumentlists**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdocumentlists)" und " [**ICustomDestinationList**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icustomdestinationlist) " sowie " [**SHAddToRecentDocs**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs) " innerhalb der Anwendung abrufen. Wenn diese Methoden von einem anderen Prozess aufgerufen werden, z. b. einem Installationsprogramm oder einem Deinstallationsprogramm, kann das System nicht die richtige appusermodelid generieren, und diese Aufrufe haben keine Auswirkung.
+> Wenn Anwendungen nicht über eine explizite AppUserModelID verfügen, müssen sie die Methoden [**IApplicationDestinations**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdestinations), [**IApplicationDocumentLists**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdocumentlists)und [**ICustomDestinationList**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icustomdestinationlist) sowie [**SHAddToRecentDocs**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs) aus der Anwendung aufrufen. Wenn diese Methoden von einem anderen Prozess wie einem Installationsprogramm oder Deinstallationsprogramm aufgerufen werden, kann das System nicht die richtige AppUserModelID generieren, und diese Aufrufe haben keine Auswirkungen.
 
  
 
-Die folgenden Elemente beschreiben allgemeine Szenarien, die eine explizite appusermodelid erfordern. Außerdem zeigen Sie auf Fälle, in denen mehrere explizite appusermudelids verwendet werden sollen.
+Die folgenden Elemente beschreiben häufige Szenarien, die eine explizite AppUserModelID erfordern. Sie verweisen auch auf Fälle, in denen mehrere explizite AppUserModelIDs verwendet werden sollten.
 
--   Bei einer einzelnen ausführbaren Datei mit einer Benutzeroberfläche mit mehreren Modi, die dem Benutzer als separate Anwendungen angezeigt wird, sollten jedem Modus unterschiedliche appusermudelids zugewiesen werden. Beispielsweise sollte ein Teil einer Anwendung, der Benutzern als unabhängige Umgebung angezeigt wird, die Sie an die Taskleiste anheften und von der restlichen Anwendung aus starten können, über eine eigene appusermodelid verfügen, die von der Haupterfahrung getrennt ist.
--   Mehrere Verknüpfungen mit unterschiedlichen Argumenten, die dazu führen, dass der Benutzer als dieselbe Anwendung angezeigt wird, sollten eine appusermodelid für alle Tastenkombinationen verwenden. Windows Internet Explorer verfügt beispielsweise über unterschiedliche Verknüpfungen für verschiedene Modi (z. b. das Starten ohne Add-ons), aber Sie sollten für den Benutzer als eine einzelne Internet Explorer-Instanz angezeigt werden.
--   Eine ausführbare Datei, die als Host Prozess fungiert und Ziel Inhalt ausführt, da sich eine Anwendung als [Host Anwendung registrieren](#registering-an-application-as-a-host-process)muss. Anschließend kann Sie jeder erkannten Erfahrung, die Sie hostet, unterschiedliche appusermudelids zuweisen. Alternativ kann der Host Prozess dem gehosteten Programm ermöglichen, seine appusermudelids festzulegen. In jedem Fall muss der Host Prozess einen Datensatz der Quelle der appusermudelids (entweder selbst oder die gehostete Anwendung) beibehalten. In diesem Fall gibt es keine primäre Benutzer Darstellung des Host Prozesses ohne den Ziel Inhalt. Beispiele hierfür sind lokale Windows-Remote Anwendungen (Rail), die Java-Laufzeit, RunDLL32.exe oder DLLHost.exe.
+-   Eine einzelne ausführbare Datei mit einer Benutzeroberfläche mit mehreren Modi, die dem Benutzer als separate Anwendungen angezeigt werden, sollte jedem Modus unterschiedliche AppUserModelIDs zuweisen. Beispielsweise sollte ein Teil einer Anwendung, den Benutzer als unabhängige Benutzeroberfläche betrachten, an die sie sich anheften und von der Taskleiste getrennt von der restlichen Anwendung starten können, über eine eigene AppUserModelID verfügen, die von der Haupterfahrung getrennt ist.
+-   Mehrere Verknüpfungen mit unterschiedlichen Argumenten, die alle zu dem führen, was der Benutzer als dieselbe Anwendung betrachtet, sollten eine AppUserModelID für alle Verknüpfungen verwenden. Beispielsweise verfügt Windows Internet Explorer über unterschiedliche Tastenkombinationen für verschiedene Modi (z. B. das Starten ohne Add-Ons), aber alle sollten dem Benutzer als einzelne Internet Explorer-Instanz angezeigt werden.
+-   Eine ausführbare Datei, die als Hostprozess fungiert und Zielinhalte als Anwendung ausführt, muss [sich als Hostanwendung registrieren.](#registering-an-application-as-a-host-process)Danach kann sie jeder wahrgenommenen Benutzeroberfläche, die sie hostet, unterschiedliche AppUserModelIDs zuweisen. Alternativ kann der Hostprozess dem gehosteten Programm erlauben, seine AppUserModelIDs festzulegen. In beiden Fällen muss der Hostprozess die Quelle der AppUserModelIDs aufzeichnen, entweder sich selbst oder die gehostete Anwendung. In diesem Fall gibt es keine primäre Benutzeroberfläche des Hostprozesses ohne den Zielinhalt. Beispiele sind Windows Lokal integrierte Remoteanwendungen (RAIL), die Java-Runtime, RunDLL32.exe oder DLLHost.exe.
 
-    Im Fall vorhandener gehosteter Anwendungen versucht das System, individuelle Erfahrungen zu identifizieren, aber neue Anwendungen sollten explizite appusermudelids verwenden, um die gewünschte Benutzererfahrung zu gewährleisten.
+    Bei vorhandenen gehosteten Anwendungen versucht das System, einzelne Benutzeroberflächen zu identifizieren, neue Anwendungen sollten jedoch explizite AppUserModelIDs verwenden, um die gewünschte Benutzererfahrung zu gewährleisten.
 
--   Kooperative oder verkettete Prozesse, die an den Benutzer Teil derselben Anwendung sind, sollten die gleiche appusermodelid für jeden Prozess anwenden. Beispiele hierfür sind Spiele mit einem Start Programmprozess (verkettete) und Microsoft Windows-Media Player, die in einem einzigen Prozess ausgeführt werden können, und die Hauptanwendung, die in einem anderen Prozess ausgeführt wird (kooperativ).
--   Eine Erweiterung des Shell-Namespace, die als separate Anwendung für mehr als das Durchsuchen und Verwalten von Inhalten in Windows-Explorer fungiert, sollte in den Ordnereigenschaften eine appusermodelid zuweisen. Ein Beispiel hierfür ist die Systemsteuerung.
--   In einer Virtualisierungsumgebung, wie z. b. einem Bereitstellungs Framework, sollte die Virtualisierungsumgebung jeder verwalteten Anwendung verschiedene appusermudelids zuweisen. In diesen Fällen verwendet ein Anwendungs Starter einen Vermittler Prozess zum Einrichten der Umgebung und übergibt dann den Vorgang an einen anderen Prozess zum Ausführen der Anwendung. Beachten Sie, dass das System dazu führt, dass der laufende Ziel Prozess nicht wieder mit der Verknüpfung verknüpft wird, da die Verknüpfung auf den Vermittler Prozess verweist.
+-   Kooperative oder verkettete Prozesse, die für den Benutzer Teil derselben Anwendung sind, sollten auf jeden Prozess die gleiche AppUserModelID anwenden. Beispiele hierfür sind Spiele mit einem Startprogrammprozess (verkettet) und Microsoft Windows Media Player, die über eine Erste-Ausführungs-/Setuperfahrung verfügen, die in einem Prozess ausgeführt wird, und die Hauptanwendung, die in einem anderen Prozess ausgeführt wird (kooperativ).
+-   Eine Shellnamespaceerweiterung, die als separate Anwendung für mehr als das Durchsuchen und Verwalten von Inhalten in Windows Explorer fungiert, sollte eine AppUserModelID in ihren Ordnereigenschaften zuweisen. Ein Beispiel ist die Systemsteuerung.
+-   In einer Virtualisierungsumgebung wie einem Bereitstellungsframework sollte die Virtualisierungsumgebung jeder verwalteten Anwendung unterschiedliche AppUserModelIDs zuweisen. In diesen Fällen verwendet ein Anwendungsstarter einen Zwischenprozess, um die Umgebung einzurichten, und übergibt den Vorgang dann an einen anderen Prozess, um die Anwendung auszuführen. Beachten Sie, dass das System dadurch nicht in der Lage ist, den ausgeführten Zielprozess mit der Verknüpfung in Beziehung zu setzen, da die Verknüpfung auf den Zwischenprozess verweist.
 
-    Wenn eine Anwendung über mehrere Fenster, Verknüpfungen oder Prozesse verfügt, sollte die zugewiesene appusermodelid der Anwendung auch auf jedes dieser Teile von der Virtualisierungsumgebung angewendet werden.
+    Wenn eine Anwendung über mehrere Fenster, Verknüpfungen oder Prozesse verfügt, sollte die zugewiesene AppUserModelID dieser Anwendung auch von der Virtualisierungsumgebung auf jedes dieser Teile angewendet werden.
 
-    Ein Beispiel für diese Situation ist das ClickOnce-Framework, das appusermudelids ordnungsgemäß für die von ihm verwalteten Anwendungen zuweist. Wie in allen solchen Umgebungen sollten Anwendungen, die von ClickOnce bereitgestellt und verwaltet werden, keine expliziten appusermudelids selbst zuweisen, da dies mit den von ClickOnce zugewiesenen appusermudelids in Konflikt steht und zu unerwarteten Ergebnissen führt.
+    Ein Beispiel für diese Situation ist das ClickOnce Framework, das AppUserModelIDs ordnungsgemäß im Namen der von ihm verwalteten Anwendungen zuweist. Wie in allen umgebungen sollten anwendungen, die von ClickOnce bereitgestellt und verwaltet werden, selbst keine expliziten AppUserModelIDs zuweisen, da dies zu Konflikten mit den appUserModelIDs führt, die von ClickOnce zugewiesen werden, und zu unerwarteten Ergebnissen führen.
 
-## <a name="how-to-form-an-application-defined-appusermodelid"></a>So erstellen Sie eine Application-Defined "appusermodelid"
+## <a name="how-to-form-an-application-defined-appusermodelid"></a>Erstellen einer Application-Defined AppUserModelID
 
-Eine Anwendung muss Ihre appusermodelid in der folgenden Form bereitstellen. Er darf nicht mehr als 128 Zeichen enthalten und darf keine Leerzeichen enthalten. Jeder Abschnitt sollte mit Pascal-Schreib-und Schreib vor.
+Eine Anwendung muss ihre AppUserModelID im folgenden Format angeben. Er darf nicht mehr als 128 Zeichen enthalten und darf keine Leerzeichen enthalten. Jeder Abschnitt sollte in Pascal-Fall sein.
 
 `CompanyName.ProductName.SubProduct.VersionInformation`
 
-`CompanyName` und `ProductName` sollten immer verwendet werden, während die `SubProduct` `VersionInformation` Teile und optional sind und abhängig von den Anforderungen der Anwendung sind. `SubProduct` ermöglicht einer Hauptanwendung, die aus mehreren untergeordneten Anwendungen besteht, eine separate Task leisten Schaltfläche für jede unter Anwendung und die zugehörigen Fenster bereitzustellen. `VersionInformation` ermöglicht die Koexistenz zweier Versionen einer Anwendung, während Sie als diskrete Entitäten betrachtet werden. Wenn eine Anwendung nicht auf diese Weise verwendet werden soll, `VersionInformation` sollte ausgelassen werden, damit eine aktualisierte Version die gleiche appusermodelid wie die von ihr ersetzte Version verwenden kann.
+`CompanyName` und `ProductName` sollten immer verwendet werden, während die Teile und optional sind und von den Anforderungen der Anwendung `SubProduct` `VersionInformation` abhängen. `SubProduct` ermöglicht einer Hauptanwendung, die aus mehreren Unteranwendungen besteht, eine separate Taskleistenschaltfläche für jede Unteranwendung und die zugehörigen Fenster bereitzustellen. `VersionInformation` ermöglicht, dass zwei Versionen einer Anwendung gleichzeitig vorhanden sind, während sie als diskrete Entitäten betrachtet werden. Wenn eine Anwendung nicht auf diese Weise verwendet werden soll, `VersionInformation` sollte ausgelassen werden, damit eine aktualisierte Version dieselbe AppUserModelID wie die version verwenden kann, die sie ersetzt hat.
 
-## <a name="where-to-assign-an-appusermodelid"></a>Wo eine appusermodelid zugewiesen werden soll
+## <a name="where-to-assign-an-appusermodelid"></a>Zuweisen einer AppUserModelID
 
-Wenn eine Anwendung eine oder mehrere explizite appusermudelids verwendet, sollte diese appusermudelids an den folgenden Orten und Situationen angewendet werden:
+Wenn eine Anwendung eine oder mehrere explizite AppUserModelIDs verwendet, sollte sie diese AppUserModelIDs an den folgenden Speicherorten und Situationen anwenden:
 
--   In der [System.AppUserModel.ID](../properties/props-system-appusermodel-id.md) -Eigenschaft der Verknüpfungs Datei der Anwendung. Eine Verknüpfung (als [**IShellLink**](/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ishelllinka), CLSID \_ shelllink oder eine LNK-Datei) unterstützt Eigenschaften über [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) und andere in der Shell verwendete Mechanismen für die Eigenschafts Einstellung. Dadurch kann die Taskleiste die richtige Verknüpfung zum Anheften identifizieren und sicherstellen, dass Windows, das zum Prozess gehört, ordnungsgemäß mit der Schaltfläche der Taskleiste verknüpft ist.
+-   In der [System.AppUserModel.ID](../properties/props-system-appusermodel-id.md) Eigenschaft der Verknüpfungsdatei der Anwendung. Eine Verknüpfung (als [**IShellLink,**](/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ishelllinka)CLSID \_ ShellLink oder LNK-Datei) unterstützt Eigenschaften über [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) und andere Eigenschafteneinstellungsmechanismen, die in der gesamten Shell verwendet werden. Dadurch kann die Taskleiste die richtige Verknüpfung zum Anheften identifizieren und sicherstellen, dass die zum Prozess gehörenden Fenster dieser Taskleistenschaltfläche entsprechend zugeordnet sind.
     > [!Note]  
-    > Die [System.AppUserModel.ID](../properties/props-system-appusermodel-id.md) -Eigenschaft sollte auf eine Verknüpfung angewendet werden, wenn diese Verknüpfung erstellt wird. Bei Verwendung der Microsoft Windows Installer (MSI) zum Installieren der Anwendung ermöglicht die [msishortcutproperty](../msi/msishortcutproperty-table.md) -Tabelle, dass appusermodelid auf die Verknüpfung angewendet wird, wenn Sie während der Installation erstellt wird.
+    > Die [System.AppUserModel.ID-Eigenschaft](../properties/props-system-appusermodel-id.md) sollte auf eine Verknüpfung angewendet werden, wenn diese Verknüpfung erstellt wird. Wenn Sie den Microsoft Windows Installer (MSI) zum Installieren der Anwendung verwenden, ermöglicht die [MsiShortcutProperty-Tabelle,](../msi/msishortcutproperty-table.md) dass die AppUserModelID auf die Verknüpfung angewendet wird, wenn sie während der Installation erstellt wird.
 
      
 
--   Als Eigenschaft eines beliebigen Windows-Betriebs in der Anwendung. Dies kann auf zwei Arten festgelegt werden:
+-   Als Eigenschaft eines der ausgeführten Fenster der Anwendung. Dies kann auf zwei Arten festgelegt werden:
 
-    1.  Wenn verschiedene Fenster, die im Besitz eines Prozesses sind, unterschiedliche appusermudelids zum Steuern der Task leisten Gruppierung benötigen, verwenden Sie [**SHGetPropertyStoreForWindow**](/windows/win32/api/shellapi/nf-shellapi-shgetpropertystoreforwindow)), um den Eigenschaften Speicher des Fensters abzurufen und appusermodelid als Fenster Eigenschaft festzulegen.
-    2.  Wenn alle Fenster im Prozess die gleiche appusermodelid verwenden, legen Sie die appusermodelid für den Prozess fest, aber [**SetCurrentProcessExplicitAppUserModelID**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-setcurrentprocessexplicitappusermodelid). Eine Anwendung muss **SetCurrentProcessExplicitAppUserModelID** aufrufen, um Ihre appusermodelid während der anfänglichen Start Routine einer Anwendung festzulegen, bevor die Anwendung eine Benutzeroberfläche anzeigt, eine Bearbeitung der Sprung Listen durchführt oder das System veranlasst, jeden beliebigen Aufrufe von " [**SHAddToRecentDocs**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs)" auszuführen.
+    1.  Wenn verschiedene Fenster im Besitz eines Prozesses unterschiedliche AppUserModelIDs zum Steuern der Taskleistengruppierung erfordern, verwenden Sie [**SHGetPropertyStoreForWindow**](/windows/win32/api/shellapi/nf-shellapi-shgetpropertystoreforwindow)), um den Eigenschaftenspeicher des Fensters abzurufen und appUserModelID als Fenstereigenschaft festzulegen.
+    2.  Wenn alle Fenster im Prozess dieselbe AppUserModelID verwenden, legen Sie die AppUserModelID für den Prozess über [**SetCurrentProcessExplicitAppUserModelID fest.**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-setcurrentprocessexplicitappusermodelid) Eine Anwendung muss **SetCurrentProcessExplicitAppUserModelID** aufrufen, um ihre AppUserModelID während der anfänglichen Startroutine einer Anwendung festzulegen, bevor die Anwendung eine Benutzeroberfläche präsentiert, änderungen ihrer Sprunglisten vornimmt oder einen Aufruf von [**SHAddToRecentDocs**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs)vornimmt (oder bewirkt, dass das System dies bewirkt).
 
-    Eine appusermodelid auf Fenster Ebene überschreibt eine appusermodelid auf Prozessebene.
+    Eine AppUserModelID auf Fensterebene überschreibt eine AppUserModelID auf Prozessebene.
 
-    Wenn eine Anwendung eine explizite appusermodelid auf der Fenster Ebene festlegt, kann die Anwendung die Besonderheiten des Befehls zum Neustarten für die zugehörige Task leisten Schaltfläche bereitstellen. Um diese Informationen bereitzustellen, werden die folgenden Eigenschaften verwendet:
+    Wenn eine Anwendung eine explizite AppUserModelID auf Fensterebene festlegt, kann die Anwendung die Besonderheiten ihres Neustartbefehls für die Taskleistenschaltfläche angeben. Um diese Informationen zur Verfügung zu stellen, werden die folgenden Eigenschaften verwendet:
 
-    -   [System. appusermodel. relaunchcommand](../properties/props-system-appusermodel-relaunchcommand.md)
-    -   [System. appusermodel. relaunchdisplaynameresource](../properties/props-system-appusermodel-relaunchdisplaynameresource.md)
-    -   [System. appusermodel. relaunchienresource](../properties/props-system-appusermodel-relaunchiconresource.md)
+    -   [System.AppUserModel.CsvCommand](../properties/props-system-appusermodel-relaunchcommand.md)
+    -   [System.AppUserModel.CsvDisplayNameResource](../properties/props-system-appusermodel-relaunchdisplaynameresource.md)
+    -   [System.AppUserModel.IconResource](../properties/props-system-appusermodel-relaunchiconresource.md)
 
     > [!Note]  
-    > Wenn eine Verknüpfung vorhanden ist, um die Anwendung zu starten, sollte eine Anwendung appusermodelid als Eigenschaft der Verknüpfung anwenden, anstatt die Neustart Eigenschaften zu verwenden. In diesem Fall werden die Befehlszeile, das Symbol und der Text der Verknüpfung verwendet, um dieselben Informationen wie die Neustart Eigenschaften bereitzustellen.
+    > Wenn eine Verknüpfung zum Starten der Anwendung vorhanden ist, sollte eine Anwendung die AppUserModelID als Eigenschaft der Verknüpfung anwenden, anstatt die Neustarteigenschaften zu verwenden. In diesem Fall werden die Befehlszeile, das Symbol und der Text der Verknüpfung verwendet, um die gleichen Informationen wie die Neustarteigenschaften zu liefern.
 
      
 
-    Eine explizite appusermodelid auf Fenster Ebene kann auch die [System. appusermodel. preventpinning](../properties/props-system-appusermodel-preventpinning.md) -Eigenschaft verwenden, um anzugeben, dass Sie nicht zum Fixieren oder Neusenden verfügbar sein soll.
+    Eine explizite AppUserModelID auf Fensterebene kann auch die [System.AppUserModel.PreventPinning-Eigenschaft](../properties/props-system-appusermodel-preventpinning.md) verwenden, um anzugeben, dass sie nicht zum Anheften oder Neustarten verfügbar sein soll.
 
--   Rufen Sie in einem Aufruf von anpassen oder aktualisieren ([**ICustomDestinationList**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icustomdestinationlist)) die Sprung Liste der Anwendung ab ([**iapplicationdocumentlists**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdocumentlists)), oder löschen Sie Sie ([**iapplicationdestination**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdestinations)).
--   In der Datei Zuordnungs Registrierung (über die [ProgID](fa-progids.md)), wenn die Anwendung die automatisch generierten **aktuellen** oder **häufigen** Ziellisten des Systems verwendet. Auf diese Zuordnungs Informationen wird von " [**shaddtor ecentdocs**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs)" verwiesen. Diese Informationen werden auch verwendet, wenn [**IShellItem**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem) -Ziele mithilfe von [**ICustomDestinationList:: AppendCategory**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icustomdestinationlist-appendcategory)zu benutzerdefinierten Sprung Listen hinzugefügt werden.
--   In jedem beliebigen-Befehl stellt die Anwendung " [**SHAddToRecentDocs**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs)" direkt zur Anwendung. Wenn die Anwendung vom allgemeinen Datei Dialogfeld abhängig ist, um in Ihrem Auftrag Aufrufe an " **SHAddToRecentDocs** " auszuführen, können diese Aufrufe nur dann die explizite appusermodelid ableiten, wenn die appusermodelid für den gesamten Prozess festgelegt ist. Wenn die Anwendung appuserwdelids in Ihrem Fenster anstelle von für den Prozess festlegt, muss die Anwendung alle Aufrufe von " **SHAddToRecentDocs** " selbst mit ihrer expliziten appusermodelid ausführen, und es wird verhindert, dass das allgemeine Datei Dialogfeld eigene Aufrufe durchführen kann. Dies muss jedes Mal erfolgen, wenn ein Element geöffnet wird, um sicherzustellen, dass die **aktuellen** oder **häufigen** Abschnitte der Sprung Liste der Anwendung korrekt sind.
+-   Rufen Sie in einem Aufruf zum Anpassen oder Aktualisieren ([**ICustomDestinationList**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icustomdestinationlist)) ([**IApplicationDocumentLists**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdocumentlists)) ab, oder löschen Sie ([**IApplicationDestinations**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdestinations)) die Sprungliste der Anwendung.
+-   Bei der Dateizuordnungsregistrierung (über ihre [ProgID),](fa-progids.md)wenn die Anwendung die automatisch generierten Ziellisten **Zuletzt verwendet** oder **Häufig** verwendet. Auf diese Zuordnungsinformationen wird von [**SHAddToRecentDocs**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs)verwiesen. Diese Informationen werden auch beim Hinzufügen von [**IShellItem-Zielen**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem) zu benutzerdefinierten Sprunglisten über [**ICustomDestinationList::AppendCategory**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icustomdestinationlist-appendcategory)verwendet.
+-   Bei jedem Aufruf übergibt die Anwendung direkt an [**SHAddToRecentDocs.**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs) Wenn die Anwendung vom allgemeinen Dateidialogfeld abhängig ist, um AUFRUFE an **SHAddToRecentDocs** in ihrem Namen durchzuführen, können diese Aufrufe die explizite AppUserModelID nur dann ableiten, wenn die AppUserModelID für den gesamten Prozess festgelegt ist. Wenn die Anwendung AppUserModelIDs in ihren Fenstern und nicht im Prozess festlegt, muss die Anwendung alle Aufrufe von **SHAddToRecentDocs** selbst mit ihrer expliziten AppUserModelID ausführen und verhindern, dass der allgemeine Dateidialog eigene Aufrufe vornimmt. Dies muss jedes Mal erfolgen, wenn ein Element geöffnet wird, um sicherzustellen, dass die Abschnitte **Recent (Zuletzt)** oder **Frequent (Häufig)** der Sprungliste der Anwendung korrekt sind.
 
-In den folgenden Abschnitten werden häufige Szenarien beschrieben, und es wird erläutert, wo explizite appusermudelids in diesen Szenarien angewendet werden.
+Die folgenden Elemente beschreiben häufige Szenarien und die Anwendung expliziter AppUserModelIDs in diesen Szenarien.
 
--   Wenn ein einzelner Prozess mehrere Anwendungen enthält, rufen Sie mit [**SHGetPropertyStoreForWindow**](/windows/win32/api/shellapi/nf-shellapi-shgetpropertystoreforwindow) den Eigenschaften Speicher des Fensters ab, und legen Sie appusermodelid als Fenster Eigenschaft fest.
--   Wenn eine Anwendung mehrere Prozesse verwendet, wenden Sie die appusermodelid auf jeden Prozess an. Ob Sie für jeden Prozess dieselbe appusermodelid verwenden, hängt davon ab, ob jeder Prozess als Teil der Hauptanwendung oder als einzelne Entitäten angezeigt werden soll.
--   Wenn Sie bestimmte Fenster von einem Satz im gleichen Prozess trennen möchten, verwenden Sie den Eigenschaften Speicher des Fensters, um eine einzelne appusermodelid auf die Fenster anzuwenden, die Sie trennen möchten, und wenden Sie dann eine andere appusermodelid auf den Prozess an. Jedes Fenster in diesem Prozess, das nicht explizit mit der appusermodelid auf Fenster Ebene gekennzeichnet war, erbt die appusermodelid des Prozesses.
--   Wenn ein Dateityp einer Anwendung zugeordnet ist, weisen Sie die appusermodelid in der [ProgID](fa-progids.md) -Registrierung des Dateityps zu. Wenn eine einzelne ausführbare Datei in verschiedenen Modi gestartet wird, die dem Benutzer als unterschiedliche Anwendungen angezeigt werden, ist für jeden Modus eine separate appusermodelid erforderlich. In diesem Fall müssen mehrere ProgID-Registrierungen für den Dateityp vorhanden sein, die jeweils über eine andere appusermodelid verfügen.
--   Wenn mehrere Verknüpfungs Orte vorhanden sind, von denen ein Benutzer eine Anwendung starten kann (im **Startmenü** auf dem Desktop oder an einem anderen Ort), rufen Sie den Eigenschafts Speicher der Verknüpfung ab, um eine einzelne appusermodelid auf alle Verknüpfungen als Verknüpfungs Eigenschaften anzuwenden.
--   Wenn von einer Anwendung ein expliziter Rückruf an " [**SHAddToRecentDocs**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs) " erfolgt, verwenden Sie die appusermodelid im-Befehl. Wenn das Dialogfeld "common file" verwendet wird, um Dateien zu öffnen oder zu speichern, wird " **shaddtor ecentdocs** " im Auftrag der Anwendung vom Dialog aufgerufen. Dieser Befehl kann die explizite appusermodelid aus dem Prozess ableiten. Wenn jedoch eine explizite appusermodelid als Fenster Eigenschaft angewendet wird, kann das allgemeine Datei Dialogfeld die richtige appusermodelid nicht ermitteln. In diesem Fall muss die Anwendung selbst den Namen " **SHAddToRecentDocs** " explizit abrufen und die richtige "appusermodelid" bereitstellen. Darüber hinaus muss die Anwendung verhindern, dass das Dialogfeld für die gemeinsame Datei in Ihrem Auftrag " **SHAddToRecentDocs** " aufrufen kann, indem das Flag "Fos \_ dontaddtorecent" in der **GetOptions** -Methode von [**IFileOpenDialog**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog) oder [**IFileSaveDialog**](/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ifilesavedialog)angegeben wird.
+-   Wenn ein einzelner Prozess mehrere Anwendungen enthält, verwenden Sie [**SHGetPropertyStoreForWindow,**](/windows/win32/api/shellapi/nf-shellapi-shgetpropertystoreforwindow) um den Eigenschaftenspeicher des Fensters abzurufen und appUserModelID als Fenstereigenschaft festzulegen.
+-   Wenn eine Anwendung mehrere Prozesse verwendet, wenden Sie die AppUserModelID auf jeden Prozess an. Ob Sie die gleiche AppUserModelID für jeden Prozess verwenden, hängt davon ab, ob jeder Prozess als Teil der Hauptanwendung oder als einzelne Entitäten angezeigt werden soll.
+-   Um bestimmte Fenster von einer Gruppe im gleichen Prozess zu trennen, verwenden Sie den Eigenschaftenspeicher des Fensters, um eine einzelne AppUserModelID auf die Fenster anzuwenden, die Sie trennen möchten, und wenden Sie dann eine andere AppUserModelID auf den Prozess an. Jedes Fenster in diesem Prozess, das nicht explizit mit der AppUserModelID auf Fensterebene bezeichnet wurde, erbt die AppUserModelID des Prozesses.
+-   Wenn einer Anwendung ein Dateityp zugeordnet ist, weisen Sie die AppUserModelID in der [ProgID-Registrierung](fa-progids.md) des Dateityps zu. Wenn eine einzelne ausführbare Datei in verschiedenen Modi gestartet wird, die dem Benutzer als unterschiedliche Anwendungen angezeigt werden, ist für jeden Modus eine separate AppUserModelID erforderlich. In diesem Fall müssen mehrere ProgID-Registrierungen für den Dateityp vorhanden sein, die jeweils eine andere AppUserModelID aufweisen.
+-   Wenn es mehrere Verknüpfungsspeicherorte gibt, von denen ein Benutzer eine Anwendung starten kann (im **Startmenü,** auf dem Desktop oder an anderer Stelle), rufen Sie den Eigenschaftenspeicher der Verknüpfung ab, um eine einzelne AppUserModelID auf alle Verknüpfungen als Verknüpfungseigenschaften anzuwenden.
+-   Wenn [**SHAddToRecentDocs**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs) von einer Anwendung explizit aufgerufen wird, verwenden Sie die AppUserModelID im Aufruf. Wenn das allgemeine Dateidialogfeld zum Öffnen oder Speichern von Dateien verwendet wird, wird **SHAddToRecentDocs** vom Dialogfeld im Namen der Anwendung aufgerufen. Dieser Aufruf kann die explizite AppUserModelID aus dem Prozess ableiten. Wenn jedoch eine explizite AppUserModelID als Fenstereigenschaft angewendet wird, kann das allgemeine Dateidialogfeld nicht die richtige AppUserModelID bestimmen. In diesem Fall muss die Anwendung selbst **SHAddToRecentDocs** explizit aufrufen und ihr die richtige AppUserModelID bereitstellen. Darüber hinaus muss die Anwendung verhindern, dass der allgemeine Dateidialog **SHAddToRecentDocs** in ihrem Namen aufruft, indem das \_ FOS-Flag DONTADDTORECENT in der **GetOptions-Methode** von [**IFileOpenDialog**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog) oder [**IFileSaveDialog**](/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ifilesavedialog)festgelegt wird.
 
-## <a name="registering-an-application-as-a-host-process"></a>Registrieren einer Anwendung als Host Prozess
+## <a name="registering-an-application-as-a-host-process"></a>Registrieren einer Anwendung als Hostprozess
 
-Eine Anwendung kann den ishostapp-Registrierungs Eintrag so festlegen, dass der Prozess dieser ausführbaren Datei von der Taskleiste als Host Prozess angesehen wird. Dies wirkt sich auf die Gruppierungs-und Standard Sprung Listeneinträge aus.
+Eine Anwendung kann den IsHostApp-Registrierungseintrag so festlegen, dass der Prozess dieser ausführbaren Datei von der Taskleiste als Hostprozess betrachtet wird. Dies wirkt sich auf die Gruppierung und die Standardeinträge Sprungliste aus.
 
-Das folgende Beispiel zeigt den erforderlichen Registrierungs Eintrag. Beachten Sie, dass dem Eintrag kein Wert zugewiesen ist. Das vorhanden sein ist alles, was erforderlich ist. Dabei handelt es sich um einen reg- \_ NULL-Wert.
+Das folgende Beispiel zeigt den erforderlichen Registrierungseintrag. Beachten Sie, dass dem Eintrag kein Wert zugewiesen ist. dies ist alles, was erforderlich ist. Es handelt sich um einen REG \_ NULL-Wert.
 
 ```
 HKEY_CLASSES_ROOT
@@ -113,15 +113,15 @@ HKEY_CLASSES_ROOT
          IsHostApp
 ```
 
-Wenn entweder der Prozess selbst oder die zum Starten des Prozesses verwendete Verknüpfungs Datei über eine explizite appusermodelid verfügt, wird die Host Prozessliste ignoriert, und die Anwendung wird von der Taskleiste als normale Anwendung behandelt. Die Betriebs Fenster der Anwendung werden in einer einzigen Task leisten Schaltfläche zusammengefasst, und die Anwendung kann an die Taskleiste angeheftet werden.
+Wenn entweder der Prozess selbst oder die Zum Starten des Prozesses verwendete Verknüpfungsdatei über eine explizite AppUserModelID verfügt, wird die Hostprozessliste ignoriert, und die Anwendung wird von der Taskleiste als normale Anwendung behandelt. Die ausgeführten Fenster der Anwendung werden unter einer einzigen Taskleistenschaltfläche gruppiert, und die Anwendung kann an die Taskleiste angeheftet werden.
 
-Wenn nur der ausführbare Name des ausführenden Prozesses ohne explizite appusermodelid bekannt ist und diese ausführbare Datei in der Liste der Host Prozesse enthalten ist, wird jede Instanz des Prozesses als separate Entität für die Task leisten Gruppierung behandelt. In der Task leisten Schaltfläche, die einer bestimmten Instanz des Prozesses zugeordnet ist, wird keine PIN/unpin-Option oder ein Start Symbol für eine neue Instanz des Prozesses angezeigt. Der Prozess kann auch nicht in die Liste der am häufigsten verwendeten (MFU) **Startmenüs** eingefügt werden. Wenn der Prozess jedoch über eine Verknüpfung gestartet wurde, die Start Argumente enthält (in der Regel der Ziel Inhalt, der als "Anwendung" gehostet wird), kann das System die Identität ermitteln, und die Anwendung kann fixiert und neu gestartet werden.
+Wenn nur der Name der ausführbaren Datei des ausgeführten Prozesses ohne explizite AppUserModelID bekannt ist und diese ausführbare Datei in der Liste des Hostprozesses enthalten ist, wird jede Instanz des Prozesses als separate Entität für die Taskleistengruppierung behandelt. Die Taskleistenschaltfläche, die einer bestimmten Instanz des Prozesses zugeordnet ist, zeigt keine Option zum Anheften/Lösen oder ein Startsymbol für eine neue Instanz des Prozesses an. Der Prozess kann auch nicht in die Liste der am häufigsten verwendeten (MFU) des **Startmenüs** aufgenommen werden. Wenn der Prozess jedoch über eine Verknüpfung gestartet wurde, die Startargumente enthält (in der Regel der Zielinhalt, der als "Anwendung" hostet), kann das System die Identität bestimmen, und die Anwendung kann angeheftet und neu gestartet werden.
 
-## <a name="exclusion-lists-for-taskbar-pinning-and-recentfrequent-lists"></a>Ausschluss Listen für das Anheften und aktuelle/häufige Listen der Taskleiste
+## <a name="exclusion-lists-for-taskbar-pinning-and-recentfrequent-lists"></a>Ausschlusslisten für Taskleisten-Anheften und Zuletzt durchgeführte/häufige Listen
 
-Anwendungen, Prozesse und Windows können auswählen, dass Sie sich selbst nicht für das **anheften** an die Taskleiste oder die Einbindung in die MFU-Liste des Start Menüs entscheiden. Hierfür gibt es drei Mechanismen:
+Anwendungen, Prozesse und Fenster können festlegen, dass sie für das Anheften an die Taskleiste oder für die Aufnahme in die MFU-Liste des **Startmenüs** nicht verfügbar sind. Hierfür gibt es drei Mechanismen:
 
-1.  Fügen Sie den NoStartPage-Eintrag zur Registrierung der Anwendung hinzu, wie hier gezeigt:
+1.  Fügen Sie der Registrierung der Anwendung den Eintrag NoStartPage hinzu, wie hier gezeigt:
 
     ```
     HKEY_CLASSES_ROOT
@@ -130,12 +130,12 @@ Anwendungen, Prozesse und Windows können auswählen, dass Sie sich selbst nicht
              NoStartPage
     ```
 
-    Die dem NoStartPage-Eintrag zugeordneten Daten werden ignoriert. Nur das vorhanden sein des Eintrags ist erforderlich. Daher ist der ideale Typ für NoStartPage "reg \_ None".
+    Die dem NoStartPage-Eintrag zugeordneten Daten werden ignoriert. Nur das Vorhandensein des Eintrags ist erforderlich. Daher ist der ideale Typ für NoStartPage REG \_ NONE.
 
-    Beachten Sie, dass jede Verwendung einer expliziten appusermodelid den NoStartPage-Eintrag überschreibt. Wenn eine explizite appusermodelid auf eine Verknüpfung, einen Prozess oder ein Fenster angewendet wird, wird Sie gepinckbar und ist für die MFU-Liste des **Start** Menüs geeignet.
+    Beachten Sie, dass jede Verwendung einer expliziten AppUserModelID den NoStartPage-Eintrag überschreibt. Wenn eine explizite AppUserModelID auf eine Verknüpfung, einen Prozess oder ein Fenster angewendet wird, kann sie angeheftet werden und ist für die MFU-Liste des **Startmenüs** geeignet.
 
-2.  Legen Sie die [System. appusermodel. preventpinning](../properties/props-system-appusermodel-preventpinning.md) -Eigenschaft unter Windows und Verknüpfungen fest. Diese Eigenschaft muss in einem Fenster vor der Eigenschaft [pkey \_ appusermodel \_ ID](../properties/props-system-appusermodel-id.md) festgelegt werden.
-3.  Fügen Sie eine explizite appusermodelid als Wert unter dem folgenden Registrierungs Unterschlüssel hinzu, wie hier gezeigt:
+2.  Legen Sie die [System.AppUserModel.PreventPinning-Eigenschaft](../properties/props-system-appusermodel-preventpinning.md) für Fenster und Verknüpfungen fest. Diese Eigenschaft muss in einem Fenster vor der [PKEY \_ AppUserModel \_ ID-Eigenschaft](../properties/props-system-appusermodel-id.md) festgelegt werden.
+3.  Fügen Sie eine explizite AppUserModelID als Wert unter dem folgenden Registrierungsunterschlüssel hinzu, wie hier gezeigt:
 
     ```
     HKEY_LOCAL_MACHINE
@@ -151,30 +151,30 @@ Anwendungen, Prozesse und Windows können auswählen, dass Sie sich selbst nicht
                             AppUserModelID3
     ```
 
-    Jeder Eintrag ist ein reg- \_ NULL-Wert mit dem Namen der appusermodelid. Alle in dieser Liste gefundenen appusermodelid-Werte können nicht in die MFU-Liste des **Start** Menüs aufgenommen werden.
+    Jeder Eintrag ist ein REG \_ NULL-Wert mit dem Namen der AppUserModelID. AppUserModelID in dieser Liste kann nicht angeheftet werden und kann nicht in die MFU-Liste des **Startmenüs** aufgenommen werden.
 
-Beachten Sie, dass bestimmte ausführbare Dateien und Verknüpfungen, die bestimmte Zeichen folgen in Ihrem Namen enthalten, automatisch vom anhechern und einschließen in die MFU-Liste ausgeschlossen werden.
+Beachten Sie, dass bestimmte ausführbare Dateien sowie Verknüpfungen, die bestimmte Zeichenfolgen im Namen enthalten, automatisch vom Anheften und Einschließen in die MFU-Liste ausgeschlossen werden.
 
 > [!Note]  
-> Dieser automatische Ausschluss kann überschrieben werden, indem eine explizite appusermodelid angewendet wird.
+> Dieser automatische Ausschluss kann durch Anwenden einer expliziten AppUserModelID überschrieben werden.
 
  
 
-Wenn eine der folgenden Zeichen folgen, unabhängig von der Groß-/Kleinschreibung, im Verknüpfungs Namen enthalten ist, kann das Programm nicht festgelegt werden und wird nicht in der am häufigsten verwendeten Liste angezeigt (gilt nicht für Windows 10):
+Wenn eine der folgenden Zeichenfolgen unabhängig von der Schreibung im Kontextnamen enthalten ist, kann das Programm nicht angeheftet werden und wird nicht in der Liste der am häufigsten verwendeten Zeichenfolgen angezeigt (gilt nicht für Windows 10):
 
 -   Dokumentation
 -   Hilfe
 -   Installieren
 -   Weitere Informationen
--   Lesezugriff
--   Zuerst lesen
+-   Lesen Sie mich.
+-   Lesen sie zuerst.
 -   Infodatei
--   Remove (Entfernen)
+-   Entfernen
 -   Einrichten
 -   Support
 -   Neuerungen
 
-Die folgende Liste der Programme ist nicht pinckbar und wird aus der Liste der am häufigsten verwendeten Programme ausgeschlossen.
+Die folgende Liste von Programmen kann nicht angeheftet werden und ist von der Liste der am häufigsten verwendeten Programme ausgeschlossen.
 
 -   Applaunch.exe
 -   Control.exe
@@ -199,10 +199,10 @@ Die folgende Liste der Programme ist nicht pinckbar und wird aus der Liste der a
 -   Wlrmdr.exe
 -   Wuapp.exe
 
-Die vorangehenden Listen werden in den folgenden Registrierungs Werten gespeichert.
+Die obigen Listen werden in den folgenden Registrierungswerten gespeichert.
 
 > [!Note]  
-> Diese Listen sollten nicht von Anwendungen geändert werden. Verwenden Sie eine der zuvor aufgeführten Methoden der Ausschlussliste für die gleiche Funktion.
+> Diese Listen sollten nicht von Anwendungen geändert werden. Verwenden Sie eine der zuvor aufgeführten Ausschlusslistenmethoden für dieselbe Benutzeroberfläche.
 
  
 
@@ -225,19 +225,19 @@ HKEY_LOCAL_MACHINE
 [**SetCurrentProcessExplicitAppUserModelID**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-setcurrentprocessexplicitappusermodelid)
 </dt> <dt>
 
-[**Getcurrentprocessexplicitappusermodelid**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-getcurrentprocessexplicitappusermodelid)
+[**GetCurrentProcessExplicitAppUserModelID**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-getcurrentprocessexplicitappusermodelid)
 </dt> <dt>
 
-[Task leisten Erweiterungen](taskbar-extensions.md)
+[Taskleistenerweiterungen](taskbar-extensions.md)
 </dt> <dt>
 
-[**ICustomDestinationList:: "abtappid"**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icustomdestinationlist-setappid)
+[**ICustomDestinationList::SetAppID**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icustomdestinationlist-setappid)
 </dt> <dt>
 
-[**Iapplicationdocumentlists:: abtappid**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationdocumentlists-setappid)
+[**IApplicationDocumentLists::SetAppID**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationdocumentlists-setappid)
 </dt> <dt>
 
-[**Iapplicationdestination:: abtappid**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationdestinations-setappid)
+[**IApplicationDestinations::SetAppID**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationdestinations-setappid)
 </dt> <dt>
 
 [**SHGetPropertyStoreForWindow**](/windows/win32/api/shellapi/nf-shellapi-shgetpropertystoreforwindow)

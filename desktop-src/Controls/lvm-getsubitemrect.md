@@ -1,9 +1,9 @@
 ---
-title: LVM_GETSUBITEMRECT Meldung (kommstrg. h)
-description: Ruft Informationen über das umgebende Rechteck für ein Unterelement in einem Listenansicht-Steuerelement ab.
+title: LVM_GETSUBITEMRECT (Commctrl.h)
+description: Ruft Informationen über das umgebundene Rechteck für ein Unterem in einem Listenansicht-Steuerelement ab.
 ms.assetid: 985876b2-6eb3-4c96-88ea-ddec67ef5b5a
 keywords:
-- Windows-Steuerelemente für LVM_GETSUBITEMRECT Meldung
+- LVM_GETSUBITEMRECT von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd1184c52d60b86e008685b87c9f5555cf801b35
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 651be72c23113940fc30adb2e7a9de581289a8f4ddf580f27d01e2edf337c053
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119293890"
 ---
-# <a name="lvm_getsubitemrect-message"></a>LVM \_ getsubitemrect-Meldung
+# <a name="lvm_getsubitemrect-message"></a>LVM \_ GETSUBITEMRECT-Nachricht
 
-Ruft Informationen über das umgebende Rechteck für ein Unterelement in einem Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ getsubitemrect**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getsubitemrect) -Makros (empfohlen) senden. Diese Nachricht soll nur mit Listenansicht-Steuerelementen verwendet werden, die den [**LVS- \_ Berichts**](list-view-window-styles.md) Stil verwenden.
+Ruft Informationen über das umgebundene Rechteck für ein Unterem in einem Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des [**\_ ListView-Makros GetSubItemRect**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getsubitemrect) senden (empfohlen). Diese Meldung ist nur für die Verwendung mit Listenansichtssteuerelementen vorgesehen, die den [**LVS \_ REPORT-Stil**](list-view-window-styles.md) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,21 +32,21 @@ Ruft Informationen über das umgebende Rechteck für ein Unterelement in einem L
 *wParam* 
 </dt> <dd>
 
-Der Index des übergeordneten Elements des unter Elements.
+Index des übergeordneten Elements des Unterelements.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, die die Informationen zu umschließenden Rechtecks des unter Elements empfängt. Seine Member müssen gemäß den folgenden Element-/Wert-Beziehungen initialisiert werden:
+Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die die Informationen des untergeordneten begrenzungsgebundenen Rechtecks erhält. Die Member müssen gemäß den folgenden Member-Wert-Beziehungen initialisiert werden:
 
 
 
 | Wert                                                                                                                             | Bedeutung                                                                                                                           |
 |-----------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| <span id="top"></span><span id="TOP"></span><dl> <dt>**top**</dt> </dl>    | Der einbasierte Index des unter Elements.<br/>                                                                                    |
-| <span id="left"></span><span id="LEFT"></span><dl> <dt>**linken**</dt> </dl> | Flagwert (siehe Hinweise). Gibt den Teil des Listen Ansichts unter Elements an, für das das umgebende Rechteck abgerufen werden soll.<br/> |
+| <span id="top"></span><span id="TOP"></span><dl> <dt>**Nach oben**</dt> </dl>    | Der 1-basierte Index des Unteremems.<br/>                                                                                    |
+| <span id="left"></span><span id="LEFT"></span><dl> <dt>**Links**</dt> </dl> | Flagwert (siehe Hinweise). Gibt den Teil des Listenansichtsunteritems an, für den das umgebundene Rechteck abgerufen werden soll.<br/> |
 
 
 
@@ -56,20 +56,20 @@ Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur,
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im folgenden finden Sie die Flagwerte, die festgelegt werden können.
+Im Folgenden finden Sie die Flagwerte, die festgelegt werden können.
 
 
 
 | Anforderung | Wert |
 |----------------|---------------------------------------------------------------------------------------------------------------------|
 | **Flagwert** | **Bedeutung**                                                                                                         |
-| lvir- \_ Begrenzungen   | Gibt das umgebende Rechteck des gesamten Elements zurück, einschließlich des Symbols und der Bezeichnung.                                    |
-| lvir- \_ Symbol     | Gibt das umgebende Rechteck des Symbols oder des kleinen Symbols zurück.                                                           |
-| lvir- \_ Bezeichnung    | Gibt das umgebende Rechteck des gesamten Elements zurück, einschließlich des Symbols und der Bezeichnung. Dies ist mit lvir- \_ Begrenzungen identisch. |
+| \_LVIR-GRENZEN   | Gibt das umgebundene Rechteck des gesamten Elements zurück, einschließlich des Symbols und der Bezeichnung.                                    |
+| \_LVIR-SYMBOL     | Gibt das umgebundene Rechteck des Symbols oder kleinen Symbols zurück.                                                           |
+| \_LVIR-BEZEICHNUNG    | Gibt das umgebundene Rechteck des gesamten Elements zurück, einschließlich des Symbols und der Bezeichnung. Dies ist identisch mit LVIR \_ BOUNDS. |
 
 
 
@@ -81,9 +81,9 @@ Im folgenden finden Sie die Flagwerte, die festgelegt werden können.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Mit der get \_ windowstyleex-Methode werden die erweiterten Fenster Stile abgerufen.
+description: Die \_ Methode "WindowStyleEx abrufen" ruft die erweiterten Fensterstile ab.
 ms.assetid: 72955958-bbda-4b8f-9c28-6d3f5eb56a82
-title: CBaseControlWindow.get_WindowStyleEx-Methode (ctlutil. h)
+title: CBaseControlWindow.get_WindowStyleEx-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c59336ab57e92e99366494a272f2b995191b494b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 082b541c9f04122616f4f96548f1b1e58d940a6060fb4af1ac0fe51fa4887bb8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371740"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119331210"
 ---
-# <a name="cbasecontrolwindowget_windowstyleex-method"></a>Cbasecontrolwindow. get \_ windowstyleex-Methode
+# <a name="cbasecontrolwindowget_windowstyleex-method"></a>CBaseControlWindow.get \_ WindowStyleEx-Methode
 
-Die- `get_WindowStyleEx` Methode ruft die erweiterten Fenster Stile ab.
+Die `get_WindowStyleEx` -Methode ruft die erweiterten Fensterstile ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ HRESULT get_WindowStyleEx(
 
 <dl> <dt>
 
-*pwindowstyleex* 
+*pWindowStyleEx* 
 </dt> <dd>
 
-Zeiger auf Erweiterte Fenster Stile.
+Zeiger auf erweiterte Fensterstile.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion Ruft die erweiterten Fenster Stile ab. Die [**cbasecontrolwindow::D ogetwindowstyle**](cbasecontrolwindow-dogetwindowstyle.md) -Member-Funktion wird aufgerufen.
+Diese Memberfunktion ruft die erweiterten Fensterstile ab. Sie ruft die [**Memberfunktion CBaseControlWindow::D oGetWindowStyle**](cbasecontrolwindow-dogetwindowstyle.md) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Diese Member-Funktion Ruft die erweiterten Fenster Stile ab. Die [**cbasecontrol
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

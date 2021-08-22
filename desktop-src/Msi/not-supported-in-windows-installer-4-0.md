@@ -1,78 +1,78 @@
 ---
-description: Die auf dieser Seite aufgeführten Windows Installer Funktionen, Tabellen und Eigenschaften werden von Windows Installer&\# 160; 4.0 und früheren Versionen nicht unterstützt.
+description: Die auf dieser Seite aufgeführten Windows Installer-Funktionen, -Tabellen und -Eigenschaften werden von Windows Installer&\# 160;4.0 und früheren Versionen nicht unterstützt.
 ms.assetid: 7256b759-3fb5-4195-b0e4-a1631327ebb7
-title: Wird in Windows Installer 4,0 nicht unterstützt.
+title: Nicht unterstützt in Windows Installer 4.0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4307422c71976057948759078dc321e38dc543b7
-ms.sourcegitcommit: 7b8f6151ebe247536304866459b2973276271d4d
+ms.openlocfilehash: 444040fca716b6bd64c8598d2d2e36013fe19cc62971483507756a66f3e961bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "106364308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119558800"
 ---
-# <a name="not-supported-in-windows-installer-40"></a>Wird in Windows Installer 4,0 nicht unterstützt.
+# <a name="not-supported-in-windows-installer-40"></a>Nicht unterstützt in Windows Installer 4.0
 
-Die auf dieser Seite aufgeführten Windows Installer Funktionen, Tabellen und Eigenschaften werden von Windows Installer 4,0 und früheren Versionen nicht unterstützt. Das Fehlen eines Features aus dieser Liste garantiert nicht, dass das Feature unterstützt wird. In der Haupt Dokumentation finden Sie Informationen dazu, welche Windows Installer Version für eine bestimmte Funktion erforderlich ist. Weitere Informationen zu anderen Windows Installer Versionen finden Sie [unter What es New in Windows Installer](what-s-new-in-windows-installer.md).
+Die auf dieser Seite aufgeführten Windows Installer-Funktionen, -Tabellen und -Eigenschaften werden von Windows Installer 4.0 und früheren Versionen nicht unterstützt. Das Fehlen eines Features in dieser Liste garantiert nicht, dass das Feature unterstützt wird. In der Hauptdokumentation erfahren Sie, welche Windows Installer-Version für ein bestimmtes Feature erforderlich ist. Informationen zu anderen Windows Installer-Versionen finden Sie unter [Neuerungen in Windows Installer.](what-s-new-in-windows-installer.md)
 
-Windows Installer 4,0 ist für Microsoft Windows Server 2008 und Windows Vista verfügbar. Eine vollständige Liste aller Windows Installer Versionen und verteilbaren Komponenten finden Sie unter [veröffentlichte Versionen von Windows Installer](released-versions-of-windows-installer.md).
+Windows Installer 4.0 ist für Microsoft Windows Server 2008 und Windows Vista verfügbar. Eine vollständige Liste aller Windows Installer-Versionen und verteilbaren Versionen finden Sie unter [Veröffentlichte Versionen von Windows Installer.](released-versions-of-windows-installer.md)
 
-Die folgenden Funktionen werden in Windows Installer 4,0 und früheren Versionen nicht unterstützt.
+Die folgenden Features werden in Windows Installer 4.0 und früheren Versionen nicht unterstützt.
 
-[Installer-Funktionen](installer-functions.md)
+[Installerfunktionen](installer-functions.md)
 
--   [**Msibegintransaction**](/windows/desktop/api/Msi/nf-msi-msibegintransactiona)
--   [**Msiendtransaction**](/windows/desktop/api/Msi/nf-msi-msiendtransaction)
--   [**Msijointransaction**](/windows/desktop/api/Msi/nf-msi-msijointransaction)
+-   [**MsiBeginTransaction**](/windows/desktop/api/Msi/nf-msi-msibegintransactiona)
+-   [**MsiEndTransaction**](/windows/desktop/api/Msi/nf-msi-msiendtransaction)
+-   [**MsiJoinTransaction**](/windows/desktop/api/Msi/nf-msi-msijointransaction)
 
 [Eigenschaften](properties.md)
 
--   [**Msidisableeeui**](msidisableeeui.md)
--   [**Msiuninstallablösung dedcomponents**](msiuninstallsupersededcomponents.md)
+-   [**MSIDISABLEEEUI**](msidisableeeui.md)
+-   [**MSIUNINSTALLSUPERSEDEDCOMPONENTS**](msiuninstallsupersededcomponents.md)
 
 [Datenbanktabellen](database-tables.md)
 
--   [Msiembeddecodchainer-Tabelle](msiembeddedchainer-table.md)
--   [Msiembeddedui-Tabelle](msiembeddedui-table.md)
--   [Msipackagecertificate-Tabelle](msipackagecertificate-table.md)
--   [Komponenten Tabelle](component-table.md)
-- **msidbcomponentattributesuninstallonablösung**  
-    **msidbcomponentattributesshared**  
+-   [MsiEmbeddedChainer-Tabelle](msiembeddedchainer-table.md)
+-   [MsiEmbeddedUI-Tabelle](msiembeddedui-table.md)
+-   [MsiPackageCertificate-Tabelle](msipackagecertificate-table.md)
+-   [Komponententabelle](component-table.md)
+- **msidbComponentAttributesUninstallOnSupersedence**  
+    **msidbComponentAttributesShared**  
     
--   [CustomAction](customaction-table.md) Spalte "extendedtype"  
+-   [CustomAction](customaction-table.md) ExtendedType-Spalte  
     
 
-[Option zum Deinstallieren von benutzerdefinierten Aktionen](custom-action-patch-uninstall-option.md)
+[Deinstallationsoption für benutzerdefinierte Aktionspatches](custom-action-patch-uninstall-option.md)
 
 
 
-[Msitransformview\<PatchGUID\>](msitransformview.md)  
+[MsiTransformView\<PatchGUID\>](msitransformview.md)  
 
-**msidbcustomaktiontypepatchuninstall**  
+**msidbCustomActionTypePatchUninstall**  
 
 
 [Systemrichtlinie](system-policy.md)
 
--   [Disablesharedcomponent](disablesharedcomponent.md)
--   [Msidisableembeddedui](msidisableembeddedui.md)
+-   [DisableSharedComponent](disablesharedcomponent.md)
+-   [MsiDisableEmbeddedUI](msidisableembeddedui.md)
 
-Rückruf Funktionsprototypen
+Rückruffunktionsprototypen
 
--   *Embeddeduihandler*
--   *Initializeembeddedui*
--   *Shutdownembeddedui*
+-   *EmbeddedUIHandler*
+-   *InitializeEmbeddedUI*
+-   *ShutdownEmbeddedUI*
 
-[Interne Konsistenz Auswertung-ICES](internal-consistency-evaluators-ices.md)
+[Interne Konsistenzauswertungen – ICEs](internal-consistency-evaluators-ices.md)
 
--   [ICE92](ice92.md) überprüft, ob keine Komponente sowohl das **msidbcomponentattributespermanent** -Attribut als auch das **msidbcomponentattributesuninstallonabgelöst** -Attribut aufweist.
+-   [ICE92](ice92.md) überprüft, ob keine Komponente über die Attribute **msidbComponentAttributesPermanent** und **msidbComponentAttributesUninstallOnSupersedence verfügt.**
 
-## <a name="notes"></a>Notizen
+## <a name="notes"></a>Hinweise
 
-Windows Installer 4,0 kann nicht [mehrere Paketinstallationen](multiple-package-installations.md) mithilfe der [*Transaktionsverarbeitung*](t-gly.md)durchführen.
+Windows Installer 4.0 kann [mehrere Paketinstallationen](multiple-package-installations.md) nicht mithilfe der [*Transaktionsverarbeitung*](t-gly.md)ausführen.
 
-Wenn Sie Windows Installer 4,0 oder frühere Versionen des Installers verwenden, kann es bei kleinen Updates und geringfügigen Upgrades zu Fehlern kommen, wenn die [enforceupgradecomponentrules](enforceupgradecomponentrules.md) -Richtlinie oder die [**msienforceupgradecomponentrules**](msienforceupgradecomponentrules.md) -Eigenschaft verwendet wird, da das Update eine Komponente entfernt.
+Mit Windows Installer 4.0 oder früheren Versionen des Installationsprogramms können kleine Updates und kleinere Upgrades fehlschlagen, wenn die [EnforceUpgradeComponentRules-Richtlinie](enforceupgradecomponentrules.md) oder die [**MSIENFORCEUPGRADECOMPONENTRULES-Eigenschaft**](msienforceupgradecomponentrules.md) verwendet wird, da das Update eine Komponente entfernt.
 
-Eine benutzerdefinierte Benutzeroberfläche kann nicht mit der unter [Verwendung einer eingebetteten](using-an-embedded-ui.md)Benutzeroberfläche beschriebenen Methode in das Windows Installer Paket eingebettet werden.
+Eine benutzerdefinierte Benutzeroberfläche kann nicht mithilfe der unter Verwenden [einer eingebetteten Benutzeroberfläche](using-an-embedded-ui.md)beschriebenen Methode in das paket Windows Installer eingebettet werden.
 
  
 

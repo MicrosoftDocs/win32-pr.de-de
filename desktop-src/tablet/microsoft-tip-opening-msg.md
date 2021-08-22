@@ -1,19 +1,19 @@
 ---
-description: Benachrichtigt das Fenster, wenn der Text Eingabebereich geöffnet wird.
+description: Benachrichtigt das Fenster, wenn der Texteingabebereich geöffnet wird.
 ms.assetid: 6eadd648-bffb-4227-bdcd-cd733f692734
-title: MICROSOFT_TIP_OPENING_MSG Meldung ("Pendel Panel. h")
+title: MICROSOFT_TIP_OPENING_MSG Nachricht (Peninputpanel.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f0938b8a00e39f54817b8ec52e86e00aae52111
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0e183cc426cd5d73e52c6aaef007bc5579ceb3eb0f4ceaf3f9f4084677b7a556
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372492"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119335900"
 ---
-# <a name="microsoft_tip_opening_msg-message"></a>\_Meldung zum \_ Öffnen der \_ Nachricht von Microsoft Tip
+# <a name="microsoft_tip_opening_msg-message"></a>MICROSOFT \_ TIP \_ OPENING \_ MSG message
 
-Benachrichtigt das Fenster, wenn der Text Eingabebereich geöffnet wird.
+Benachrichtigt das Fenster, wenn der Texteingabebereich geöffnet wird.
 
 ## <a name="parameters"></a>Parameter
 
@@ -22,27 +22,27 @@ Benachrichtigt das Fenster, wenn der Text Eingabebereich geöffnet wird.
 *wParam* 
 </dt> <dd>
 
-Wird derzeit nicht verwendet, sollte **null** sein.
+Derzeit nicht verwendet, sollte **NULL** sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Wird derzeit nicht verwendet, sollte **null** sein.
+Derzeit nicht verwendet, sollte **NULL** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Anwendungen sollten [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) nach der Verarbeitung dieser Nachricht anrufen. Weitere Informationen zu den Rückgabe Werten finden Sie unter **defwindowproc** .
+Anwendungen sollten [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) aufrufen, nachdem diese Meldung verarbeitet wurde. Informationen zu den Rückgabewerten finden Sie unter **DefWindowProc.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Benachrichtigung informiert Sie, wenn der Eingabebereich geöffnet wird. Wenn Sie in diesem Fall eine Aktion durchführen möchten, behandeln Sie die Nachricht, führen Sie den Vorgang im Handler aus, und übergeben Sie die Nachricht dann an [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca).
+Diese Benachrichtigung informiert Sie, wenn der Eingabebereich geöffnet wird. Wenn Sie in diesem Fall eine Aktion ausführen möchten, behandeln Sie die Nachricht, führen Sie den Vorgang im Handler aus, und übergeben Sie die Nachricht dann an [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca).
 
 > [!Note]  
-> Diese Meldung wird auch gesendet, wenn der Text Eingabebereich bereits sichtbar ist und der Benutzer von der Tastatur zur Handschrift Skin wechselt.
+> Diese Meldung wird auch gesendet, wenn der Texteingabebereich bereits sichtbar ist und der Benutzer von der Tastatur zur Handschrift wechselt.
 
  
 
@@ -53,7 +53,7 @@ Diese Benachrichtigung informiert Sie, wenn der Eingabebereich geöffnet wird. W
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------|
 | Client<br/> | Windows Vista<br/>                                                                   |
-| Header<br/> | <dl> <dt>"Pendel Panel. h"</dt> </dl> |
+| Header<br/> | <dl> <dt>Peninputpanel.h</dt> </dl> |
 
 
 

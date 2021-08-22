@@ -1,11 +1,11 @@
 ---
-title: Letztes Inhalt indiziertes Attribut
-description: Der Zeitpunkt, zu dem dieses Volume zuletzt indiziert wurde.
+title: Zuletzt inhaltsindiziertes Attribut
+description: Der Zeitpunkt, zu dem dieses Volume zuletzt inhaltsindiziert wurde.
 ms.assetid: b2089fef-6dc1-4ba8-81ea-3ffd50c3326c
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das zuletzt mit Inhalt indizierte Attribut
-- lastcontentindiziert-Attribut AD-Schema
+- AD-Schema des zuletzt inhaltsindizierten Attributs
+- ad-Schema des lastContentIndexed-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 34d2d1c9432a650845229b05e04eb22079e87e10
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 7913490178de46843d31f1cefb08e363228a7b7727d28453e975f89de4fa610e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859475"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119302270"
 ---
-# <a name="last-content-indexed-attribute"></a>Letztes Inhalt indiziertes Attribut
+# <a name="last-content-indexed-attribute"></a>Zuletzt inhaltsindiziertes Attribut
 
-Der Zeitpunkt, zu dem dieses Volume zuletzt indiziert wurde.
+Der Zeitpunkt, zu dem dieses Volume zuletzt inhaltsindiziert wurde.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Zuletzt mit Inhalt indiziert                 |
-| LDAP-Display-Name | lastcontentindiziert                   |
+| CN                | Zuletzt inhaltsindiziert                 |
+| Ldap-Anzeigename | lastContentIndexed                   |
 | Size              | 8 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.50                |
-| System-ID-GUID    | bf967995-0de6-11d0-a285-00aa003049e2 |
+| System-Id-Guid    | bf967995-0de6-11d0-a285-00aa003049e2 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -43,7 +43,7 @@ Der Zeitpunkt, zu dem dieses Volume zuletzt indiziert wurde.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Der Zeitpunkt, zu dem dieses Volume zuletzt indiziert wurde.
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
+| Is-Single-Valued       | True                                  |
 | Ist indiziert             | False                                 |
 | Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Lautstärke**](c-volume.md)<br/> |
+| In verwendete Klassen        | [**Volume**](c-volume.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Der Zeitpunkt, zu dem dieses Volume zuletzt indiziert wurde.
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
+| Is-Single-Valued       | True                                  |
 | Ist indiziert             | False                                 |
 | Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Lautstärke**](c-volume.md)<br/> |
+| In verwendete Klassen        | [**Volume**](c-volume.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Der Zeitpunkt, zu dem dieses Volume zuletzt indiziert wurde.
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
+| Is-Single-Valued       | True                                  |
 | Ist indiziert             | False                                 |
 | Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Lautstärke**](c-volume.md)<br/> |
+| In verwendete Klassen        | [**Volume**](c-volume.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Der Zeitpunkt, zu dem dieses Volume zuletzt indiziert wurde.
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
+| Ist einwertig       | True                                  |
 | Ist indiziert             | False                                 |
 | Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Lautstärke**](c-volume.md)<br/> |
+| In verwendete Klassen        | [**Volume**](c-volume.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Der Zeitpunkt, zu dem dieses Volume zuletzt indiziert wurde.
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
+| Ist einwertig       | True                                  |
 | Ist indiziert             | False                                 |
 | Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Lautstärke**](c-volume.md)<br/> |
+| In verwendete Klassen        | [**Volume**](c-volume.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Der Zeitpunkt, zu dem dieses Volume zuletzt indiziert wurde.
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
+| Ist einwertig       | True                                  |
 | Ist indiziert             | False                                 |
 | Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Lautstärke**](c-volume.md)<br/> |
+| In verwendete Klassen        | [**Volume**](c-volume.md)<br/> |
 
 
 

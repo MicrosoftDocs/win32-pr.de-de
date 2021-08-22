@@ -1,9 +1,9 @@
 ---
-title: Fastreconnect (eaptype)-Element
-description: Erfahren Sie mehr über das fastreconnect (eaptype)-Element. Dieses Element gibt an, ob eine schnelle erneute Verbindungs Herstellung durchgeführt werden soll.
+title: FastReconnect(EapType)-Element
+description: Erfahren Sie mehr über das FastReconnect-Element (EapType). Dieses Element gibt an, ob eine schnelle wiederherzustellende Verbindung ausgeführt werden soll.
 ms.assetid: 075285b0-7b1b-4d3c-af27-a718f3c20394
 keywords:
-- Fastreconnect-Element EAPHost
+- FastReconnect-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2214519db68b8c95b0e0efa91d68a7cd667b5f87
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 1bda956d698ebefef956e85557c6d940baa02f6bcc9ef7cca0081fd668107e18
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106342375"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119238720"
 ---
-# <a name="fastreconnect-eaptype-element"></a>Fastreconnect (eaptype)-Element
+# <a name="fastreconnect-eaptype-element"></a>FastReconnect(EapType)-Element
 
-Das **fastreconnect (eaptype)** -Element gibt an, ob eine schnelle erneute Verbindungs Herstellung durchgeführt werden soll.
+Das **Element FastReconnect (EapType)** gibt an, ob eine schnelle erneute Verbindung ausgeführt werden soll.
 
 ``` syntax
 <xs:element name="FastReconnect"
@@ -31,49 +31,49 @@ Das **fastreconnect (eaptype)** -Element gibt an, ob eine schnelle erneute Verbi
  />
 ```
 
-Das **fastreconnect** -Element wird durch das [**eaptype**](mspeapconnectionpropertiesv1schema-eaptype-element.md) -Element definiert.
+Das **FastReconnect-Element** wird durch das [**EapType-Element**](mspeapconnectionpropertiesv1schema-eaptype-element.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das **fastreconnect** -Element "true" ist, versucht die Peer-APP, eine schnelle erneute Verbindungs Herstellung auszuführen. der Wert false gibt an, dass die vollständige Authentifizierung von Peer-App Das **fastreconnect** -Element ist optional.
+Wenn das **FastReconnect-Element** TRUE ist, versucht PEAP, eine schnelle wiederherzustellende Verbindung durchzuführen. False gibt an, dass PEAP die vollständige Authentifizierung ausführt. Das **FastReconnect-Element** ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eaptype**](mspeapconnectionpropertiesv1schema-eaptype-element.md)
+[**EapType**](mspeapconnectionpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Eaptype**](mspeapconnectionpropertiesv1schema-eaptype-element.md)
+[**EapType**](mspeapconnectionpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
 
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [mspeapconnectionpropertiesv1-Schema](mspeapconnectionpropertiesv1schema-schema.md)
 </dt> <dt>
 
-[mspeapconnectionpropertiesv1-Schema Elemente](mspeapconnectionpropertiesv1schema-elements.md)
+[mspeapconnectionpropertiesv1-Schemaelemente](mspeapconnectionpropertiesv1schema-elements.md)
 </dt> </dl>
 
  

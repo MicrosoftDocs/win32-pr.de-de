@@ -1,62 +1,62 @@
 ---
-title: Portieren von Textur Funktionen
-description: Portieren von Textur Funktionen
+title: Portieren von Texturfunktionen
+description: Portieren von Texturfunktionen
 ms.assetid: 03e0b0fc-3812-4744-a0f1-3dcb466d679d
 keywords:
-- IRIS GL portieren, Textur
+- IRIS GL-Portierung, Textur
 - Portieren von IRIS GL, Textur
-- Portieren auf OpenGL von IRIS GL, Texture
-- OpenGL-Portierung von IRIS GL, Textur
+- Portieren von IRIS GL zu OpenGL, Textur
+- OpenGL-Portierung aus IRIS GL,Textur
 - Struktur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b2cba8b105089553084a93f997517d19cf371e8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a17cd79aaf8e7e5b90d0f171ddcec4b49b6d15b3615ccc1f5e44a04b3e16fae9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119339240"
 ---
-# <a name="porting-texture-functions"></a>Portieren von Textur Funktionen
+# <a name="porting-texture-functions"></a>Portieren von Texturfunktionen
 
-Beachten Sie beim Portieren von IRIS GL-Textur Funktionen in OpenGL die folgenden Punkte:
+Beachten Sie beim Portieren von IRIS GL-Texturfunktionen zu OpenGL die folgenden Punkte:
 
--   OpenGL verwaltet keine Tabellen mit Texturen. Sie verwendet entweder eine 1-d-Textur und eine 2D-Textur. Um die Texturen aus dem IRIS GL-Code wiederzuverwenden, platzieren Sie Sie in einer Anzeigeliste.
--   OpenGL generiert nicht automatisch Mipmaps. Wenn Sie Mipmaps verwenden, müssen Sie zuerst die [**gluBuild2DMipmaps**](glubuild2dmipmaps.md) -Funktion aufzurufen.
--   In OpenGL verwenden Sie [**glEnable**](glenable.md) und [**gldeaktiviert**](gldisable.md) , um die Funktionen für die Texturierung zu aktivieren und zu deaktivieren.
--   In OpenGL ist die Textur Größe strenger geregelt als in IRIS GL. Die Größe einer OpenGL-Textur muss wie folgt lauten:
+-   OpenGL verwaltet keine Tabellen mit Texturen. Sie verwendet entweder eine 1D-Textur und nur eine 2D-Textur. Um die Texturen aus Ihrem IRIS GL-Code wiederzuverwenden, legen Sie sie in einer Anzeigeliste ab.
+-   OpenGL generiert nicht automatisch Mipmaps. Wenn Sie mipmaps verwenden, müssen Sie zuerst die [**Funktion gluBuild2DMipmaps**](glubuild2dmipmaps.md) aufrufen.
+-   In OpenGL verwenden Sie [**glEnable**](glenable.md) und [**glDisable,**](gldisable.md) um Texturfunktionen zu aktivieren und zu deaktivieren.
+-   In OpenGL ist die Texturgröße strikter reguliert als in IRIS GL. Die Größe einer OpenGL-Textur muss wie die folgenden sein:
 
     2 *n* + 2 *b*
 
-    Dabei ist *n* eine ganze Zahl, und *b* ist:
+    Wobei *n* eine ganze Zahl und *b* ist:
 
-    -   0, wenn die Textur keinen Rahmen hat.
-    -   1, wenn die Textur einen Rahmen Pixel aufweist (OpenGL-Texturen können 1-Pixel-Rahmen aufweisen).
+    -   0, wenn die Textur keinen Rahmen hat
+    -   1, wenn die Textur über ein Rahmenpixel verfügt (OpenGL-Texturen können 1-Pixel-Rahmen aufweisen.)
 
-In der folgenden Tabelle werden die Textur Funktionen von IRIS GL und ihre allgemeinen OpenGL-Entsprechungen aufgelistet.
+In der folgenden Tabelle sind die IRIS GL-Texturfunktionen und ihre allgemeinen OpenGL-Entsprechungen aufgeführt.
 
 
 
 | IRIS GL-Funktion | OpenGL-Funktion                                                                                                                                                                                                                                                       | Bedeutung                                                                                     |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| **textdef2d**    | [**glTexImage2D**](glteximage2d.md)[**gltexparameter**](gltexparameter-functions.md)<br/> [**gluBuild2DMipmaps**](glubuild2dmipmaps.md)<br/>                                                                                                           | Gibt ein 2D-Textur Bild an.                                                              |
-| **textbind**     | **glTexImage2DglTexParameter**<br/> **gluBuild2DMipmaps**<br/>                                                                                                                                                                                            | Wählt eine Textur Funktion aus.                                                                 |
-| **tevdef**       | [**gltexd**](gltexenv-functions.md)                                                                                                                                                                                                                                | Definiert eine Textur Mapping-Umgebung.                                                      |
-| **tevbind**      | **gltexd**[**glTexImage1D**](glteximage1d.md)<br/>                                                                                                                                                                                                           | Wählt eine Textur Umgebung aus.                                                              |
-| **T2**           | [**gltexcoord**](gltexcoord-functions.md)                                                                                                                                                                                                                            | Legt die aktuellen Texturkoordinaten fest.                                                       |
-| **TEXGEN**       | [**gltexgen**](gltexgen-functions.md)[**glgettexparameter**](glgettexparameter.md)<br/> [**gluBuild1DMipmaps**](glubuild1dmipmaps.md)<br/> [**gluBuild2DMipmaps**](glubuild2dmipmaps.md)<br/> [**gluscaleimage**](gluscaleimage.md)<br/> | Steuert die Generierung von Texturkoordinaten. Skaliert ein Bild auf eine beliebige Größe.<br/> |
+| **textdef2d**    | [**glTexImage2D**](glteximage2d.md)[**glTexParameter**](gltexparameter-functions.md)<br/> [**gluBuild2DMipmaps**](glubuild2dmipmaps.md)<br/>                                                                                                           | Gibt ein 2D-Texturbild an.                                                              |
+| **textbind**     | **glTexImage2DglTexParameter**<br/> **gluBuild2DMipmaps**<br/>                                                                                                                                                                                            | Wählt eine Texturfunktion aus.                                                                 |
+| **tevdef**       | [**glTexEnv**](gltexenv-functions.md)                                                                                                                                                                                                                                | Definiert eine Texturzuordnungsumgebung.                                                      |
+| **tevbind**      | **glTexEnv**[**glTexImage1D**](glteximage1d.md)<br/>                                                                                                                                                                                                           | Wählt eine Texturumgebung aus.                                                              |
+| **t2**           | [**glTexCoord**](gltexcoord-functions.md)                                                                                                                                                                                                                            | Legt die aktuellen Texturkoordinaten fest.                                                       |
+| **texgen**       | [**glTexGen**](gltexgen-functions.md)[**glGetTexParameter**](glgettexparameter.md)<br/> [**gluBuild1DMipmaps**](glubuild1dmipmaps.md)<br/> [**gluBuild2DMipmaps**](glubuild2dmipmaps.md)<br/> [**gluScaleImage**](gluscaleimage.md)<br/> | Steuert die Generierung von Texturkoordinaten. Skaliert ein Bild auf eine beliebige Größe.<br/> |
 
 
 
  
 
-Weitere Informationen zum Texturierung finden Sie im *OpenGL-Programmier Handbuch*.
+Weitere Informationen zur Texturierung finden Sie im *OpenGL-Programmierhandbuch.*
 
-Dieses Thema enthält Informationen zu den folgenden Themen.
+Dieses Thema enthält Informationen zu folgenden Themen.
 
 -   [Übersetzen von tevdef](translating-tevdef.md)
 -   [Übersetzen von texdef](translating-texdef.md)
--   [Übersetzen von TEXGEN](translating-texgen.md)
+-   [Übersetzen von Texgen](translating-texgen.md)
 
  
 

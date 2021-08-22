@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectShaderVariable GetPatchConstantSignatureElementDesc-Methode (D3dx11effect. h)
-description: Hier erhalten Sie eine Beschreibung für eine patchkonstante Signatur.
+title: ID3DX11EffectShaderVariable GetPatchConstantSignatureElementDesc-Methode (D3dx11effect.h)
+description: Hier finden Sie eine Beschreibung der Patchkonst konstanten Signatur.
 ms.assetid: 72a86cf6-ace2-4306-ac5c-37d888c087f7
 keywords:
 - GetPatchConstantSignatureElementDesc-Methode Direct3D 11
 - GetPatchConstantSignatureElementDesc-Methode Direct3D 11, ID3DX11EffectShaderVariable-Schnittstelle
-- ID3DX11EffectShaderVariable-Schnittstelle Direct3D 11, GetPatchConstantSignatureElementDesc-Methode
+- ID3DX11EffectShaderVariable-Schnittstelle Direct3D 11 , GetPatchConstantSignatureElementDesc-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f4fcbc8f7c1bc34b0da42dd08c255a04a6d2fc83
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 85adc4a022c0f897a2e228aab670ccae60de0ec256e5f88e033991b137863fe1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104996162"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119565870"
 ---
-# <a name="id3dx11effectshadervariablegetpatchconstantsignatureelementdesc-method"></a>ID3DX11EffectShaderVariable:: GetPatchConstantSignatureElementDesc-Methode
+# <a name="id3dx11effectshadervariablegetpatchconstantsignatureelementdesc-method"></a>ID3DX11EffectShaderVariable::GetPatchConstantSignatureElementDesc-Methode
 
-Hier erhalten Sie eine Beschreibung für eine patchkonstante Signatur.
+Hier finden Sie eine Beschreibung der Patchkonst konstanten Signatur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ HRESULT GetPatchConstantSignatureElementDesc(
 
 <dl> <dt>
 
-*Shaderindex* 
+*ShaderIndex* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Ein NULL basierter shaderindex.
+Ein nullbasierter Shaderindex.
 
 </dd> <dt>
 
 *Element* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Ein NULL basierter Element Index.
+Ein nullbasierter Elementindex.
 
 </dd> <dt>
 
-*PDE SC* 
+*pDesc* 
 </dt> <dd>
 
-Type: **[ **D3D11 \_ Signature \_ Parameter \_ DESC**](/windows/desktop/api/D3D11Shader/ns-d3d11shader-d3d11_signature_parameter_desc)\***
+Typ: **[ **D3D11 \_ SIGNATURE \_ PARAMETER \_ DESC**](/windows/desktop/api/D3D11Shader/ns-d3d11shader-d3d11_signature_parameter_desc)\***
 
-Ein Zeiger auf eine Parameter Beschreibung (siehe [**D3D11 \_ Signature \_ Parameter \_ DESC**](/windows/desktop/api/D3D11Shader/ns-d3d11shader-d3d11_signature_parameter_desc)).
+Ein Zeiger auf eine Parameterbeschreibung (siehe [**D3D11 \_ SIGNATURE \_ PARAMETER \_ DESC**](/windows/desktop/api/D3D11Shader/ns-d3d11shader-d3d11_signature_parameter_desc)).
 
 </dd> </dl>
 
@@ -76,27 +76,27 @@ Ein Zeiger auf eine Parameter Beschreibung (siehe [**D3D11 \_ Signature \_ Param
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

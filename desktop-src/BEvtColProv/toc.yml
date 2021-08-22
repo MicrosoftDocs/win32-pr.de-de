@@ -1,34 +1,34 @@
-- name: WMI-Anbieter für Start Ereignis Sammler
+- name: WMI-Anbieter für den Startereignissammler
   href: boot-event-collector-wmi-provider-portal.md
   items:
-    - name: Targetforwarding
+    - name: TargetForwarding
       href: targetforwarding.md
-    - name: Targetforwardingdestination
+    - name: TargetForwardingDestination
       href: targetforwardingdestination.md
-    - name: Targetforwardinghistory
+    - name: TargetForwardingHistory
       href: targetforwardinghistory.md
     - name: Control
       href: control.md
       items:
-        - name: Checkpoint-Methode
+        - name: Prüfpunktmethode
           href: control-checkpoint.md
-        - name: Dumpdiagnostics-Methode
+        - name: DumpDiagnostics-Methode
           href: control-dumpdiagnostics.md
-        - name: Fastshutdown-Methode
+        - name: FastShutdown-Methode
           href: control-fastshutdown.md
         - name: Flush-Methode
           href: control-flush.md
         - name: GetConfiguration-Methode
           href: control-getconfiguration.md
-        - name: Isconfigurationequal-Methode
+        - name: IsConfigurationEqual-Methode
           href: control-isconfigurationequal.md
-        - name: Listbackups-Methode
+        - name: ListBackups-Methode
           href: control-listbackups.md
         - name: Redo-Methode
           href: control-redo.md
-        - name: Restorefile-Methode
+        - name: RestoreFile-Methode
           href: control-restorefile.md
-        - name: Restorefromtime-Methode
+        - name: RestoreFromTime-Methode
           href: control-restorefromtime.md
         - name: SetConfiguration-Methode
           href: control-setconfiguration.md
@@ -36,5 +36,5 @@
           href: control-shutdown.md
         - name: Undo-Methode
           href: control-undo.md
-        - name: Validateconfiguration-Methode
+        - name: ValidateConfiguration-Methode
           href: control-validateconfiguration.md

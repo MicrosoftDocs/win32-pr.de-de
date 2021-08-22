@@ -1,7 +1,7 @@
 ---
-description: 'Mit der SetCutPoint2-Methode wird die Zeit festgelegt, zu der der Übergang von einer Quelle zum nächsten schneidet, wenn der Übergang als Ausschneiden gerendert wird. Diese Methode entspricht iamtimelinetrans:: setcutpoint, aber nimmt einen reftime-Wert an.'
+description: Die SetCutPoint2-Methode legt die Zeit fest, zu der der Übergang von einer Quelle zur nächsten schneidet, wenn der Übergang als Schnitt gerendert wird. Diese Methode entspricht IAMTimelineTrans::SetCutPoint, verwendet jedoch einen REFTIME-Wert.
 ms.assetid: d06d3ee7-04a2-4266-9995-bfabea24aef9
-title: 'Iamtimelinetrans:: SetCutPoint2-Methode (qedit. h)'
+title: IAMTimelineTrans::SetCutPoint2-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 117ec522416f0d5722c8ef7aa17cd6e81720b4c4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a9d4dedfb31efab45f56229e2dd4db10fc9e43defe822662bc2d7be06f0c1a02
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371998"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119502340"
 ---
-# <a name="iamtimelinetranssetcutpoint2-method"></a>Iamtimelinetrans:: SetCutPoint2-Methode
+# <a name="iamtimelinetranssetcutpoint2-method"></a>IAMTimelineTrans::SetCutPoint2-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `SetCutPoint2` Methode legt die Zeit fest, zu der der Übergang von einer Quelle zum nächsten abbricht, wenn der Übergang als Ausschneiden gerendert wird. Diese Methode entspricht [**iamtimelinetrans:: setcutpoint**](iamtimelinetrans-setcutpoint.md), aber nimmt einen [**reftime**](reftime.md) -Wert an.
+Die `SetCutPoint2` -Methode legt die Zeit fest, zu der der Übergang von einer Quelle zur nächsten schneidet, wenn der Übergang als Schnitt gerendert wird. Diese Methode entspricht [**IAMTimelineTrans::SetCutPoint,**](iamtimelinetrans-setcutpoint.md)verwendet jedoch einen [**REFTIME-Wert.**](reftime.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,26 +45,26 @@ HRESULT SetCutPoint2(
 
 <dl> <dt>
 
-*Tltime* 
+*TLTime* 
 </dt> <dd>
 
-Der Ausschneide Punkt relativ zum Anfang des Übergangs in Sekunden.
+Schnittpunkt relativ zum Beginn des Übergangs in Sekunden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,8 +74,8 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -83,10 +83,10 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Iamtimelinetrans-Schnittstelle**](iamtimelinetrans.md)
+[**IAMTimelineTrans-Schnittstelle**](iamtimelinetrans.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  
