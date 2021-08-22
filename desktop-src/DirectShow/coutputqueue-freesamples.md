@@ -1,7 +1,7 @@
 ---
-description: Die freesamples-Methode gibt alle ausstehenden Beispiele frei.
+description: Die FreeSamples-Methode gibt alle ausstehenden Beispiele frei.
 ms.assetid: 61b7fe6e-41cc-4d5e-b083-bbc400d04e39
-title: Coutputqueue. freesamples-Methode (outputq. h)
+title: COutputQueue.FreeSamples-Methode (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 70d0680d2a1a3ac020be84f244e1cc02bb6efad0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2cc87047d6dc48494fc225b5a0b4c4ad7bcb69f0f7341580f8c48c1440470bae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369149"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954159"
 ---
-# <a name="coutputqueuefreesamples-method"></a>Coutputqueue. freesamples-Methode
+# <a name="coutputqueuefreesamples-method"></a>COutputQueue.FreeSamples-Methode
 
-Die- `FreeSamples` Methode gibt alle ausstehenden Beispiele frei.
+Die `FreeSamples` -Methode gibt alle ausstehenden Beispiele frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Methode werden alle ausstehenden Beispiele aus der Warteschlange und aus dem Beispiel Array entfernt.
+Diese Methode entfernt alle ausstehenden Stichproben aus der Warteschlange und aus dem Beispielarray.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Mit dieser Methode werden alle ausstehenden Beispiele aus der Warteschlange und 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Mit dieser Methode werden alle ausstehenden Beispiele aus der Warteschlange und 
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

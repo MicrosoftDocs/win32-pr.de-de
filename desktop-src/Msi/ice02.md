@@ -1,39 +1,39 @@
 ---
-description: ICE02 überprüft, ob bestimmte Verweise zwischen der Komponente, der Datei und den Registrierungs Tabellen einander unterliegen. Diese Verweise müssen einander gegenseitig sein, damit das Installationsprogramm den Installationsstatus von Komponenten ordnungsgemäß bestimmen konnte.
+description: ICE02 überprüft, ob bestimmte Verweise zwischen den Tabellen Component, File und Registry reziprok sind. Diese Verweise müssen reziprok sein, damit das Installationsprogramm den Installationsstatus von Komponenten ordnungsgemäß bestimmen kann.
 ms.assetid: 864404f1-439d-49a2-973d-4e6e1618863e
 title: ICE02
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1975203825d079d5eeb1ec5e4183767dd68625bc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b97696ee4a8f93d49237dbac8661b6bfc72e478922c87b9095620bc5c29dc546
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118946654"
 ---
 # <a name="ice02"></a>ICE02
 
-ICE02 überprüft, ob bestimmte Verweise zwischen der [Komponente](component-table.md), der [Datei](file-table.md)und den [Registrierungs](registry-table.md) Tabellen einander unterliegen. Diese Verweise müssen einander gegenseitig sein, damit das Installationsprogramm den Installationsstatus von Komponenten ordnungsgemäß bestimmen konnte.
+ICE02 überprüft, ob bestimmte Verweise zwischen den Tabellen [Component,](component-table.md) [File](file-table.md)und [Registry](registry-table.md) reziprok sind. Diese Verweise müssen reziprok sein, damit das Installationsprogramm den Installationsstatus von Komponenten ordnungsgemäß bestimmen kann.
 
-Das Installationsprogramm verwendet die KEYPATH-Spalte der Component-Tabelle, um zu erkennen, ob die in der Component-Spalte aufgeführte Komponente vorhanden ist. Die KEYPATH-Spalte enthält einen Schlüssel in die Registrierungs-oder Datei Tabellen. Beide Tabellen haben eine Komponenten \_ Spalte, die einen Schlüssel zurück in die Komponenten Tabelle enthält, der auf die Komponente verweist, die den Registrierungs Eintrag bzw. die Registrierungsdatei steuert. Diese Verweise müssen einander gegenseitig sein.
+Das Installationsprogramm verwendet die KeyPath-Spalte der Component -Tabelle, um das Vorhandensein der komponente zu erkennen, die in der Spalte Komponente aufgeführt ist. Die KeyPath -Spalte enthält einen Schlüssel in der Registrierungs- oder Dateitabelle. Beide Tabellen verfügen über eine Component-Spalte, die einen Schlüssel zurück in die Component-Tabelle enthält, der auf die Komponente zeigt, die den Registrierungseintrag oder die \_ Datei steuert. Diese Verweise müssen reziprok sein.
 
 ## <a name="result"></a>Ergebnis
 
-ICE02 gibt eine Fehlermeldung aus, wenn ein Verweis gefunden wird, der gegenseitig sein soll und nicht ist.
+ICE02 gibt eine Fehlermeldung aus, wenn ein Verweis gefunden wird, der reziprok sein sollte und nicht ist.
 
 ## <a name="example"></a>Beispiel
 
-ICE02 würde die folgende Fehlermeldung für eine MSI-Datei mit den angezeigten Datenbankeinträgen veröffentlichen.
+ICE02 würde die folgende Fehlermeldung für eine Datei .msi, die die angezeigten Datenbankeinträge enthält.
 
 ``` syntax
 File: 'Red_File' cannot be the key file for Component: 'Blue'. The file belongs to Component: 'Red'
 ```
 
-[Komponenten Tabelle](component-table.md) (partiell)
+[Komponententabelle](component-table.md) (partiell)
 
 
 
-| Komponente | KEYPATH   |
+| Komponente | KeyPath   |
 |-----------|-----------|
 | Red       | Rote \_ Datei |
 | Blau      | Rote \_ Datei |
@@ -46,7 +46,7 @@ File: 'Red_File' cannot be the key file for Component: 'Blue'. The file belongs 
 
 
 
-| Datei Spalte | Komponente\_ |
+| Dateispalte | Komponente\_ |
 |-------------|-------------|
 | Rote \_ Datei   | Red         |
 | Blaue \_ Datei  | Blau        |
@@ -55,13 +55,13 @@ File: 'Red_File' cannot be the key file for Component: 'Blue'. The file belongs 
 
  
 
-Die Komponente blau verweist \_ auf die rote Datei, aber \_ die rote Datei wird nicht von der Komponente blau gesteuert und kann daher nicht die KEYPATH-Datei sein. Wenn das Installationsprogramm aufgerufen wurde, um den Installationsstatus blau zu erhalten, würde fälschlicherweise überprüft, ob die rote \_ Datei installiert wurde. Wenn Sie das Feld "KEYPATH" für Blau in der Komponenten Tabelle in die blaue Datei ändern, wird \_ der Fehler behoben.
+Component Blue verweist auf Red File, aber Red File wird nicht von Component Blue gesteuert und kann daher nicht \_ \_ die KeyPath-Datei sein. Wenn das Installationsprogramm aufgerufen wird, um den Installationsstatus Blau zu erhalten, wird fälschlicherweise überprüft, ob die \_ rote Datei installiert wurde. Wenn Sie das Feld KeyPath für Blau in der Komponententabelle in Blaue Datei ändern, \_ wird der Fehler behoben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

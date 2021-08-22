@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ bootserviceaccessbysap-Klasse ordnet einen Start Dienst und seine Zugriffspunkte zu.
+description: Die CIM \_ BootServiceAccessBySAP-Klasse ordnet einen Startdienst und seine Zugriffspunkte zu.
 ms.assetid: 993469dd-fb9c-4d21-99e0-03c4b19eb7fd
 ms.tgt_platform: multiple
 title: CIM_BootServiceAccessBySAP-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 90548be52defbcf3419d6c7defc21395da5cfbfe
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 78ea24cb3140d50552884887d66fa2607c00b51635ea38af2150295b0c516ef1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118959089"
 ---
-# <a name="cim_bootserviceaccessbysap-class"></a>CIM \_ bootserviceaccessbysap-Klasse
+# <a name="cim_bootserviceaccessbysap-class"></a>CIM \_ BootServiceAccessBySAP-Klasse
 
-Die **CIM \_ bootserviceaccessbysap** -Klasse ordnet einen Start Dienst und seine Zugriffspunkte zu.
+Die **CIM \_ BootServiceAccessBySAP-Klasse** ordnet einen Startdienst und seine Zugriffspunkte zu.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,55 +47,55 @@ class CIM_BootServiceAccessBySAP : CIM_ServiceAccessBySAP
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ bootserviceaccessbysap** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ BootServiceAccessBySAP-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ bootserviceaccessbysap** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ BootServiceAccessBySAP-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Bootservice**
+Datentyp: **CIM \_ BootService**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
-Ein [**CIM- \_ Bootservice**](cim-bootservice.md) , der den Start Dienst beschreibt.
+Ein [**\_ CIM-Startdienst,**](cim-bootservice.md) der den Startdienst beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ bootsap**
+Datentyp: **CIM \_ BootSAP**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM- \_ bootsap**](cim-bootsap.md) , das einen Zugriffspunkt für den Start Dienst beschreibt.
+Eine [**\_ CIM-BootSAP,**](cim-bootsap.md) die einen Zugriffspunkt für den Startdienst beschreibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ bootserviceaccessbysap** -Klasse wird von [**CIM \_ serviceaccessbysap**](cim-serviceaccessbysap.md)abgeleitet.
+Die **CIM \_ BootServiceAccessBySAP-Klasse** wird von [**CIM \_ ServiceAccessBySAP abgeleitet.**](cim-serviceaccessbysap.md)
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,17 +105,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ serviceaccessbysap**](cim-serviceaccessbysap.md)
+[**CIM \_ ServiceAccessBySAP**](cim-serviceaccessbysap.md)
 </dt> </dl>
 
  

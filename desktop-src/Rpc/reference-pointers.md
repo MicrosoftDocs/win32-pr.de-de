@@ -1,32 +1,32 @@
 ---
-title: Verweis Zeiger
-description: Verweis Zeiger sind die einfachsten Zeiger und erfordern die geringste Menge an Verarbeitung durch den Clientstub.
+title: Verweiszeiger
+description: Verweiszeiger sind die einfachsten Zeiger und erfordern die geringste Verarbeitung durch den Clientstub.
 ms.assetid: 393aec84-8e8f-41b9-956f-d28a80d3a8c4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 427605f330b1a73c541c95019f8ca4bdd6cc8ef4
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6338b1017f05bdf004fee2b288c4eae1ee9775eaa2ad225d5f4b6afa3e74d8ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039490"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118927035"
 ---
-# <a name="reference-pointers"></a>Verweis Zeiger
+# <a name="reference-pointers"></a>Verweiszeiger
 
-Verweis Zeiger sind die einfachsten Zeiger und erfordern die geringste Menge an Verarbeitung durch den Clientstub. Wenn ein Client Programm einen Verweis Zeiger an eine Remote Prozedur übergibt, enthält der Verweis Zeiger immer die Adresse eines gültigen Speicherblocks. Es wird immer noch auf denselben Speicherblock verwiesen, wenn die Remote Prozedur abgeschlossen ist. Diese Zeiger werden hauptsächlich verwendet, um Verweis Semantik zu implementieren und \[ [**out**](/windows/desktop/Midl/out-idl) - \] Parameter in C zuzulassen.
+Verweiszeiger sind die einfachsten Zeiger und erfordern die geringste Verarbeitung durch den Clientstub. Wenn ein Clientprogramm einen Verweiszeiger an eine Remoteprozedur übergibt, enthält der Verweiszeiger immer die Adresse eines gültigen Speicherblocks. Sie verweist nach Abschluss der Remoteprozedur weiterhin auf denselben Speicherblock. Diese Zeiger werden hauptsächlich verwendet, um Verweissemantik zu implementieren und \[ [**out-Parameter**](/windows/desktop/Midl/out-idl) \] in C zuzulassen.
 
-Im folgenden Beispiel ändert sich der Wert des-Zeigers während des-Aufrufes nicht, obwohl sich der Inhalt der Daten an der durch den Zeiger gekennzeichneten Adresse ändern kann.
+Im folgenden Beispiel ändert sich der Wert des Zeigers während des Aufrufs nicht, obwohl sich der Inhalt der Daten an der vom Zeiger angegebenen Adresse ändern kann.
 
-![Daten, die sich an einer statischen Verweis Zeiger Adresse ändern](images/prog-a07.png)
+![Daten, die an einer statischen Verweiszeigeradresse geändert werden](images/prog-a07.png)
 
-Ein Verweis Zeiger hat die folgenden Eigenschaften:
+Ein Verweiszeiger weist die folgenden Merkmale auf:
 
--   Er verweist immer auf einen gültigen Speicher und hat nie den Wert **null**.
--   Sie ändert sich nie während eines Aufrufes und zeigt immer auf denselben Speicher vor und nach dem-Befehl.
--   Daten, die von der Remote Prozedur zurückgegeben werden, werden in den vorhandenen Speicher geschrieben.
--   Auf den Speicher, auf den von einem Verweis Zeiger verwiesen wird, kann nicht von einem anderen Zeiger oder einem anderen Namen in der Funktion zugegriffen werden.
+-   Sie verweist immer auf gültigen Speicher und hat nie den Wert **NULL**.
+-   Sie ändert sich nie während eines Aufrufs und verweist vor und nach dem Aufruf immer auf denselben Speicher.
+-   Von der Remoteprozedur zurückgegebene Daten werden in den vorhandenen Speicher geschrieben.
+-   Auf den Speicher, auf den ein Verweiszeiger zeigt, kann von keinem anderen Zeiger oder einem anderen Namen in der Funktion zugegriffen werden.
 
-Verwenden Sie das \[ [**ref**](/windows/desktop/Midl/ref) - \] Attribut, um Verweis Zeiger in Schnittstellendefinitionen anzugeben, wie im folgenden Beispiel gezeigt.
+Verwenden Sie das \[ [](/windows/desktop/Midl/ref) \] ref-Attribut, um Verweiszeiger in Schnittstellendefinitionen anzugeben, wie im folgenden Beispiel gezeigt.
 
 ``` syntax
 /* IDL file */
@@ -40,8 +40,8 @@ interface RefPtrInterface
 }
 ```
 
-In diesem Beispiel wird der Parameter *PChar* als Zeiger auf ein einzelnes Zeichen, nicht auf ein Array von Zeichen definiert. Dabei handelt es sich um einen \[ **out** \] -Parameter und einen Verweis Zeiger, der auf den Arbeitsspeicher verweist, der von der Server Routine remotefn mit Daten aufgefüllt wird.
+In diesem Beispiel wird der *Parameter pChar* als Zeiger auf ein einzelnes Zeichen und nicht als Array von Zeichen definiert. Es handelt sich um einen \[ **out-Parameter** \] und einen Verweiszeiger, der auf den Arbeitsspeicher verweist, den die Serverroutine RemoteFn mit Daten auffüllt.
 
- 
+ 
 
- 
+ 

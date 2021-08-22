@@ -1,5 +1,5 @@
 ---
-description: Richten Sie eine Beziehung zwischen einer Instanz der MSVM- \_ emulatedethernetportsettingdata-Klasse oder der MSVM \_ syntheticethernetportsettingdata-Klasse mit einer Instanz der MSVM \_ guestnetworkadapterconfiguration-Klasse ein.
+description: Richten Sie eine Beziehung zwischen einer Instanz der Msvm \_ EmulatedEthernetPortSettingData- oder Msvm \_ SyntheticEthernetPortSettingData-Klasse mit einer Instanz der Msvm \_ GuestNetworkAdapterConfiguration-Klasse ein.
 ms.assetid: 82262e67-1e72-4bad-974e-f18d00a94c3d
 title: Msvm_SettingDataComponent-Klasse
 ms.topic: reference
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 18ed2d4f37b88509a7517861a9b9d842be86bd97
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c96ad2d24291226934e50b338f2a0a4d77e9d966d2a821b73ad38d671b50fa04
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960070"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950479"
 ---
-# <a name="msvm_settingdatacomponent-class"></a>MSVM \_ settingdatacomponent-Klasse
+# <a name="msvm_settingdatacomponent-class"></a>Msvm \_ SettingDataComponent-Klasse
 
-Richten Sie eine Beziehung zwischen einer Instanz der [**MSVM- \_ emulatedethernetportsettingdata**](msvm-emulatedethernetportsettingdata.md) -Klasse oder der [**MSVM \_ syntheticethernetportsettingdata**](msvm-syntheticethernetportsettingdata.md) -Klasse mit einer Instanz der [**MSVM \_ guestnetworkadapterconfiguration**](msvm-guestnetworkadapterconfiguration.md) -Klasse ein.
+Richten Sie eine Beziehung zwischen einer Instanz der [**Msvm \_ EmulatedEthernetPortSettingData-**](msvm-emulatedethernetportsettingdata.md) oder [**Msvm \_ SyntheticEthernetPortSettingData-Klasse**](msvm-syntheticethernetportsettingdata.md) mit einer Instanz der [**Msvm \_ GuestNetworkAdapterConfiguration-Klasse**](msvm-guestnetworkadapterconfiguration.md) ein.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,45 +41,45 @@ class Msvm_SettingDataComponent : CIM_Component
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ settingdatacomponent** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ SettingDataComponent-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ settingdatacomponent** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ SettingDataComponent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ resourcezubesettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)**
+Datentyp: **[ **CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Aggregieren**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**MSVM-Klasse \_ emuatedethernetportsettingdata**](msvm-emulatedethernetportsettingdata.md) oder [**MSVM \_ syntheticethernetportsettingdata**](msvm-syntheticethernetportsettingdata.md) , die einen Ethernet-Port darstellt.
+Ein Verweis auf eine Instanz der [**Msvm \_ EmulatedEthernetPortSettingData-**](msvm-emulatedethernetportsettingdata.md) oder [**Msvm \_ SyntheticEthernetPortSettingData-Klasse,**](msvm-syntheticethernetportsettingdata.md) die einen Ethernet-Port darstellt.
 
 </dd> <dt>
 
 **PartComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ guestnetworkadapterconfiguration**](msvm-guestnetworkadapterconfiguration.md)**
+Datentyp: **[ **Msvm \_ GuestNetworkAdapterConfiguration**](msvm-guestnetworkadapterconfiguration.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**MSVM \_ guestnetworkadapterconfiguration**](msvm-guestnetworkadapterconfiguration.md) -Klasse, die die Konfiguration eines Gastnetzwerk Adapters darstellt.
+Ein Verweis auf eine Instanz der [**Msvm \_ GuestNetworkAdapterConfiguration-Klasse,**](msvm-guestnetworkadapterconfiguration.md) die eine Konfiguration eines Gastnetzwerkadapters darstellt.
 
 </dd> </dl>
 
@@ -89,10 +89,10 @@ Ein Verweis auf eine Instanz der [**MSVM \_ guestnetworkadapterconfiguration**](
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

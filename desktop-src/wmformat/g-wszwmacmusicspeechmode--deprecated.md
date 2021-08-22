@@ -1,9 +1,9 @@
 ---
-title: g_wszWMACMusicSpeechMode (wmcodecdsp. h)
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | g_wszWMACMusicSpeechMode (wmcodecdsp. h)
+title: g_wszWMACMusicSpeechMode (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | g_wszWMACMusicSpeechMode (Wmcodecdsp.h)
 ms.assetid: 7cd57741-ee32-47ce-a390-b6663b5e158b
 keywords:
-- g_wszWMACMusicSpeechMode Windows Media-Format
+- g_wszWMACMusicSpeechMode Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c48270c935c93b1be50acb50db75afde978d2e68
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: df44fc6f760f8b2e24acf33637295fcdccca9b6535f3bb6db81bbf502c2a2c3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118703764"
 ---
-# <a name="g_wszwmacmusicspeechmode"></a>g \_ wszwmacmusicsprech Modus
+# <a name="g_wszwmacmusicspeechmode"></a>g \_ wszWMACModeSpeechMode
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,7 +31,7 @@ Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren f
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 

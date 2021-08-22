@@ -1,20 +1,20 @@
 ---
 title: Erstellen einer neuen Gruppe
-description: Joe von, der Unternehmens Administrator, muss eine neue Gruppe erstellen.
+description: Joe Worden, der Unternehmensadministrator, muss eine neue Gruppe erstellen.
 ms.assetid: a1bea695-d43f-47e6-af74-ba5abb0116a2
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 03a4f46d595aa892ac75aa67d14bbc0356122271
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 9e3f778e9eb953b60ca45665bcd92ff30efb9c111c959e78cf1824407d0a459c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103949121"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962009"
 ---
 # <a name="creating-a-new-group"></a>Erstellen einer neuen Gruppe
 
-Joe von, der Unternehmens Administrator, muss eine neue Gruppe erstellen. Er möchte einige Ressourcen, z. b. Datei, Active Directory Objekte oder andere Objekte, basierend auf der Mitgliedschaft dieser Gruppe sichern. Im folgenden Codebeispiel wird gezeigt, wie eine neue Gruppe erstellt wird.
+Joe Worden, der Unternehmensadministrator, muss eine neue Gruppe erstellen. Er möchte einige Ressourcen, z. B. Datei, Active Directory-Objekte oder andere Objekte, basierend auf der Mitgliedschaft in dieser Gruppe schützen. Das folgende Codebeispiel zeigt, wie Sie eine neue Gruppe erstellen.
 
 
 ```VB
@@ -27,17 +27,17 @@ grp.SetInfo
 
 
 
-Diese Gruppe, Verwaltung, wird in der Organisationseinheit "Sales" erstellt. Zunächst muss Joe ein ADSI-Objekt für die Vertriebs Organisationseinheit erstellen. Zweitens muss er das [**sAMAccountName**](/windows/desktop/AD/group-objects) -Attribut für dieses Objekt festlegen, da es sich um ein obligatorisches Attribut für die Abwärtskompatibilität handelt. Wenn **sAMAccountName** festgelegt ist, wird das Attribut in Windows NT 4,0-Tools wie z. b. Benutzer-Manager als **Mgmt** anstelle der **Verwaltung** angezeigt.
+Diese Gruppe,Verwaltung, wird in der Organisationseinheit Vertrieb erstellt. Zunächst muss Joe ein ADSI-Objekt für die Organisationseinheit Sales erstellen. Zweitens muss er das [**samAccountName-Attribut**](/windows/desktop/AD/group-objects) für dieses Objekt festlegen, da es ein obligatorisches Attribut für die Abwärtskompatibilität ist. Wenn **samAccountName** für dieses Beispiel festgelegt ist, wird Windows NT 4.0-Tools wie User Manager das Attribut als **mgmt** anstelle von **Management** angezeigt.
 
-Drittens muss Joe den Typ der Gruppe angeben. In einer Windows 2000-Domäne gibt es drei Arten von Gruppen: Global, lokale Domäne und Universal. Außerdem verfügt die Gruppe über die Sicherheitsmerkmale. Bei einer Gruppe kann es sich entweder um eine aktivierte oder nicht gesicherte Gruppe handeln. Sicherheits aktivierte Gruppen sind im Wesentlichen diejenigen, denen die Zugriffsrechte für Ressourcen ähnlich wie bei einem Benutzer erteilt oder verweigert werden können. Wenn Sie z. b. einer Gruppe Zugriff auf eine Dateifreigabe gewähren, bedeutet dies, dass alle Mitglieder der Gruppe auf die Dateifreigabe zugreifen können. Verteilerlisten können nicht auf ähnliche Weise verwendet werden – Sie können z. b. eine Verteilerliste nicht für den Zugriff auf eine Dateifreigabe erteilen. Während des Upgrades werden Windows NT 4,0-Gruppen als Gruppen mit aktivierter Sicherheit migriert. Nicht gesicherte Gruppen in Active Directory ähneln Verteilerlisten in Exchange. Daher sind das Erstellen von Gruppen oder Verteilerlisten ähnliche Vorgänge in Windows 2000. Im einheitlichen Modus von Windows 2000 (einheitlicher Modus bedeutet dies, dass alle Domänen Controller in einer Domäne Computer mit Windows 2000 Server sind). die Gruppen können auf jede beliebige Ebene eingebettet werden.
+Drittens muss Joe den Typ der Gruppe angeben. In einer Windows 2000-Domäne gibt es drei Arten von Gruppen: Global, Domain Local und Universal. Darüber hinaus weist die Gruppe ihr Sicherheitsmerkmal auf. Eine Gruppe kann entweder eine sicherheitsfähige oder eine nicht gesicherte Gruppe sein. Im Wesentlichen handelt es sich bei sicherheitsfähigen Gruppen um Gruppen, denen Zugriffsrechte für Ressourcen gewährt oder verweigert werden können, ähnlich wie bei einem Benutzer. Das Gewähren von Gruppenzugriff auf eine Dateifreigabe bedeutet beispielsweise, dass alle Mitglieder der Gruppe auf die Dateifreigabe zugreifen können. Verteilerlisten können nicht auf ähnliche Weise verwendet werden. Beispielsweise können Sie einer Verteilerliste nicht das Recht gewähren, auf eine Dateifreigabe zuzugreifen. Während des Upgrades werden Windows NT 4.0-Gruppen als sicherheitsfähige Gruppen migriert. Nicht gesicherte Gruppen in Active Directory ähneln Verteilerlisten in Exchange. Daher sind das Erstellen von Gruppen oder Verteilerlisten ähnliche Vorgänge in Windows 2000. Im einheitlichen Modus Windows 2000 (der native Modus bedeutet, dass alle Domänencontroller in einer Domäne Computer sind, auf denen Windows Server 2000 ausgeführt wird) können die Gruppen auf eine beliebige Ebene geschachtelt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Auflisten von Objekten](enumerating-objects.md)
+[Aufzählen von Objekten](enumerating-objects.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,7 @@
 ---
-description: Abonniert die Dienststatus-Änderungs Benachrichtigungen.
+description: Kündigen von Dienststatusänderungsbenachrichtigungen.
 ms.assetid: 8c04ebf7-4d61-4617-b120-dbe26b2f9ad2
-title: Unabonneatchangenotifications-Funktion (winsvcp. h)
+title: UnsubscribeServiceChangeNotifications-Funktion (Winsvcp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,16 +17,16 @@ api_location:
 - API-MS-Win-Service-Private-L1-1-1.dll
 - Advapi32.dll
 - API-MS-Win-Service-Private-L1-1-2.dll
-ms.openlocfilehash: ebecfb133172c9c7a56ed6d28f7ad6b395d8afce
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3e37f2b786d32ab9f42738e6a8522c6f4593aa6b21a490a6fdd969233b4a6dff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866627"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118888169"
 ---
-# <a name="unsubscribeservicechangenotifications-function"></a>Unabonneanservicechangenotifications-Funktion
+# <a name="unsubscribeservicechangenotifications-function"></a>UnsubscribeServiceChangeNotifications-Funktion
 
-Abonniert die Dienststatus-Änderungs Benachrichtigungen. Diese Funktion verwendet Abonnements, die von [**abonbeservicechangenotifications**](subscribeservicechangenotifications.md)zurückgegeben werden.
+Kündigen von Dienststatusänderungsbenachrichtigungen. Diese Funktion verwendet Abonnements, die von [**SubscribeServiceChangeNotifications zurückgegeben werden.**](subscribeservicechangenotifications.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ Abonniert die Dienststatus-Änderungs Benachrichtigungen. Diese Funktion verwend
 
 <dl> <dt>
 
-*pabonnement* \[ in\]
+*pSubscription* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf das Abonnement, das abonniert werden soll.
+Ein Zeiger auf das Abonnement, für das das Abonnement gekündigt werden soll.
 
 </dd> </dl>
 
@@ -54,9 +54,9 @@ Ein Zeiger auf das Abonnement, das abonniert werden soll.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nicht **abonniert beservicechangenotifications** gibt erst zurück, wenn ausstehende Prozess interne Rückrufe beendet sind. Daher ist es nicht möglich, nicht **abonniert beservicechangenotifications** innerhalb des Rückrufs aufzurufen, ohne einen Deadlock zu verursachen.
+**UnsubscribeServiceChangeNotifications gibt** erst dann zurück, wenn ausstehende In-Process-Rückrufe abgeschlossen sind. Daher können Sie **UnsubscribeServiceChangeNotifications** nicht innerhalb des Rückrufs aufrufen, ohne einen Deadlock zu verursachen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,30 +64,30 @@ Nicht **abonniert beservicechangenotifications** gibt erst zurück, wenn aussteh
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Winsvcp. h</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Winsvcp.h</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>SecHost.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**CreateService**](/windows/desktop/api/Winsvc/nf-winsvc-createservicea)
 </dt> <dt>
 
-[**OpenService**](/windows/desktop/api/Winsvc/nf-winsvc-openservicea)
+[**Openservice**](/windows/desktop/api/Winsvc/nf-winsvc-openservicea)
 </dt> <dt>
 
 [**OpenSCManager**](/windows/desktop/api/Winsvc/nf-winsvc-openscmanagera)
 </dt> <dt>
 
-[**Abonniert-servicechangenotifications**](subscribeservicechangenotifications.md)
+[**SubscribeServiceChangeNotifications**](subscribeservicechangenotifications.md)
 </dt> <dt>
 
-[**Queryservicedynamicinformation**](/windows/desktop/api/Winsvc/nf-winsvc-queryservicedynamicinformation)
+[**QueryServiceDynamicInformation**](/windows/desktop/api/Winsvc/nf-winsvc-queryservicedynamicinformation)
 </dt> </dl>
 
  

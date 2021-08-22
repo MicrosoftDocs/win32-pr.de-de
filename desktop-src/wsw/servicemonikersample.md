@@ -1,10 +1,10 @@
 ---
-title: Servicemonikersample
+title: ServiceMonikerSample
 description: Dieses Beispiel zeigt einen Client, der mit dem TCP MetadataExchange-Beispiel verwendet werden kann. Er verwendet den WCF-Dienstmoniker.
 ms.assetid: cfcff5ee-c0e1-4694-831e-fed0bd0e9855
 keywords:
-- Servicemonikersample-Windows-Webdienste-API
-- Wwsapi
+- ServiceMonikerSample Windows Web Services-API
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,14 +13,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 3188b41df830f55e77e151c5be9413a986a5dcf5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: dffac8b7eb4c9bdb92d4622452c15d56f53a514ba94fa908d38e1232dfec95f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309939"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026168"
 ---
-# <a name="servicemonikersample"></a>Servicemonikersample
+# <a name="servicemonikersample"></a>ServiceMonikerSample
 
 Dieses Beispiel zeigt einen Client, der mit dem TCP MetadataExchange-Beispiel verwendet werden kann. Er verwendet den WCF-Dienstmoniker.
 
@@ -41,9 +41,9 @@ Next
 
 
 
- 
+ 
 
- 
+ 
 
 
 

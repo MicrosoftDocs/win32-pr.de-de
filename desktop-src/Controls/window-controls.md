@@ -1,49 +1,49 @@
 ---
-title: Windows-Steuerelemente
-description: Ein-Steuerelement ist ein untergeordnetes Fenster, das von einer Anwendung in Verbindung mit einem anderen Fenster zum Aktivieren der Benutzerinteraktion verwendet wird.
+title: Windows Steuerelemente
+description: Ein Steuerelement ist ein untergeordnetes Fenster, das eine Anwendung in Verbindung mit einem anderen Fenster verwendet, um die Benutzerinteraktion zu ermöglichen.
 ms.assetid: 0a6eb481-d94e-40c5-afec-46354520f08f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 814bf14f3c93f6f38ba787cba463977a4dca9eda
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 54bbf1c7ebf33b5665b086b34dd7134cdebadc299f4e2010710ddf4ae519dc24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957539"
 ---
-# <a name="windows-controls"></a>Windows-Steuerelemente
+# <a name="windows-controls"></a>Windows Steuerelemente
 
 ## <a name="purpose"></a>Zweck
 
-Ein-Steuerelement ist ein untergeordnetes Fenster, das von einer Anwendung in Verbindung mit einem anderen Fenster zum Aktivieren der Benutzerinteraktion verwendet wird. Steuerelemente werden am häufigsten in Dialogfeldern verwendet, Sie können jedoch auch in anderen Fenstern verwendet werden. Steuerelemente in Dialogfeldern bieten dem Benutzer die Möglichkeit, Text einzugeben, Optionen auszuwählen und Aktionen zu initiieren. Steuerelemente in anderen Fenstern bieten eine Vielzahl von Diensten, z. b. das Auswählen von Befehlen, Anzeigen von Status und anzeigen und Bearbeiten von Text. Diese Dokumentation beschreibt die von Windows bereitgestellten Steuerelemente und die Programmier Elemente, die verwendet werden, um Sie zu erstellen und zu bearbeiten.
+Ein Steuerelement ist ein untergeordnetes Fenster, das eine Anwendung in Verbindung mit einem anderen Fenster verwendet, um die Benutzerinteraktion zu ermöglichen. Steuerelemente werden am häufigsten in Dialogfeldern verwendet, können aber auch in anderen Fenstern verwendet werden. Steuerelemente in Dialogfeldern bieten dem Benutzer die Möglichkeit, Text ein- und auswählen und Aktionen initiieren zu können. Steuerelemente in anderen Fenstern bieten eine Vielzahl von Diensten, z. B. die Auswahl von Befehlen, das Anzeigen des Status und das Anzeigen und Bearbeiten von Text. In dieser Dokumentation werden die steuerelemente, die von Windows bereitgestellt werden, und die Programmierelemente beschrieben, mit deren Hilfe sie erstellt und bearbeitet werden.
 
-Eine Liste aller Windows-Steuerelemente, einschließlich eines Links zu umfassenden Übersichts-und Referenzinformationen für die einzelnen Steuerelemente, finden Sie unter [Steuerelement Bibliothek](individual-control-info.md).
+Eine Liste aller Steuerelemente Windows, einschließlich eines Links zu einer umfassenden Übersicht und Referenzinformationen für jedes Steuerelement, finden Sie unter [Control Library](individual-control-info.md).
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
-Steuerelemente sind für die Verwendung durch C/C++-Entwickler und Benutzeroberflächen-Designer konzipiert. Im Allgemeinen benötigen Entwickler einen mittleren Einblick in die Programmier Konzepte der Benutzeroberfläche, die Windows-API-Programmierung und Unicode.
+Steuerelemente sind für die Verwendung durch C/C++-Entwickler und Benutzeroberflächen-Designer konzipiert. Im Allgemeinen benötigen Entwickler ein mittleres Maß an Kenntnissen zu Konzepten der Benutzeroberflächenprogrammierung, Windows API-Programmierung und Unicode.
 
 ## <a name="run-time-requirements"></a>Laufzeitanforderungen
 
-Die Unterstützung für Steuerelemente wird von User32.dll und Comctl32.dll bereitgestellt. Weitere Informationen finden Sie unter [allgemeine Steuerelement Versionen](common-control-versions.md).
+Unterstützung für Steuerelemente wird von User32.dll und Comctl32.dll. Weitere Informationen finden Sie unter [Allgemeine Steuerelementversionen.](common-control-versions.md)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                             | BESCHREIBUNG                                                                                                                                     |
+| Thema                                                                             | Beschreibung                                                                                                                                     |
 |-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Informationen zu allgemeinen Steuerelementen](common-controls-intro.md)<br/>                     | Bietet allgemeine Informationen, die allen Steuerelementen gemeinsam sind, die von Comctl32.dll unterstützt werden.<br/>                                      |
-| [Steuern von Meldungen](control-messages.md)<br/>                               | Erläutert, wie Windows-Meldungen verwendet werden, um mit Steuerelementen zu kommunizieren.<br/>                                                                 |
-| [Benutzerdefinierte Steuerelemente](user-controls-intro.md)<br/>                             | Beschreibt verschiedene Methoden zum Erstellen von benutzerdefinierten Steuerelementen. <br/>                                                                                 |
-| [Subclassingsteuerelemente](subclassing-overview.md)<br/>                       | Beschreibt, wie Sie ein Steuerelement anpassen können, indem Sie seine Features ändern oder neue hinzufügen. <br/>                                                 |
-| [Benutzerdefiniertes Zeichnen](custom-draw.md)<br/>                                         | Beschreibt einen Dienst, der von einigen Steuerelementen bereitgestellt wird und die Anwendungen verwenden können, um verschiedene Aspekte der Darstellung des Steuer Elements anzupassen. <br/> |
-| [Überlegungen zur Sicherheit: Microsoft Windows-Steuerelemente](sec-comctls.md)<br/> | Enthält Informationen zu Sicherheitsüberlegungen im Zusammenhang mit den Windows-Steuerelementen. <br/>                                                 |
-| [Steuerelementbibliothek](individual-control-info.md)<br/>                         | Stellt Übersichten und Referenzinformationen zu jedem Steuerelement bereit, das von User32.dll und Comctl32.dll unterstützt wird.<br/>                            |
-| [Allgemeine Steuerungs Referenz](common-control-reference.md)<br/>              | Bietet Referenzinformationen zu Programmier Elementen, die für mehrere Steuerelemente gelten, nicht nur für ein bestimmtes Steuerelement.<br/>           |
-| [Control Spy v 2.0](control-spy.md)<br/>                                    | Beschreibt das Steuerelement Spy, ein Tool, das Entwicklern hilft, allgemeine Steuerelemente zu verstehen. <br/>                                                     |
-| [Visuelle Stile](themes-overview.md)<br/>                                   | Beschreibt, wie die Darstellung von Steuerelementen je nach dem vom Benutzer ausgewählten visuellen Stil geändert werden kann. <br/>                               |
-| [Designdatei Format](themesfileformat-overview.md)<br/>                     | Erläutert das Format der Designdateien (. Theme), die in Windows 7 und Windows Vista verwendet werden.<br/>                                                    |
+| [Informationen zu allgemeinen Steuerelementen](common-controls-intro.md)<br/>                     | Stellt allgemeine Informationen zur Verfügung, die allen Steuerelementen gemeinsam sind, die von der Comctl32.dll.<br/>                                      |
+| [Steuern von Nachrichten](control-messages.md)<br/>                               | Erläutert, Windows Nachrichten für die Kommunikation mit Steuerelementen verwendet werden.<br/>                                                                 |
+| [Benutzerdefinierte Steuerelemente](user-controls-intro.md)<br/>                             | Beschreibt verschiedene Möglichkeiten zum Erstellen benutzerdefinierter Steuerelemente. <br/>                                                                                 |
+| [Steuerelemente für Unterklassen](subclassing-overview.md)<br/>                       | Beschreibt eine Möglichkeit, ein Steuerelement anzupassen, indem seine Features geändert oder neue hinzugefügt werden. <br/>                                                 |
+| [Benutzerdefiniertes Zeichnen](custom-draw.md)<br/>                                         | Beschreibt einen Dienst, der von einigen Steuerelementen bereitgestellt wird und mit dem Anwendungen verschiedene Aspekte der Darstellung des Steuerelements anpassen können. <br/> |
+| [Sicherheitsüberlegungen: Microsoft Windows Controls](sec-comctls.md)<br/> | Enthält Informationen zu Sicherheitsüberlegungen im Zusammenhang mit den Windows Steuerelementen. <br/>                                                 |
+| [Steuerelementbibliothek](individual-control-info.md)<br/>                         | Stellt Übersichten und Referenzinformationen zu den einzelnen Steuerelementen zur Verfügung, die von User32.dll und Comctl32.dll.<br/>                            |
+| [Allgemeine Steuerelementreferenz](common-control-reference.md)<br/>              | Stellt Referenzinformationen zu Programmierelementen zur Verfügung, die nicht nur für ein bestimmtes Steuerelement, sondern auch für mehrere Steuerelemente gelten.<br/>           |
+| [Steuern von Spy v2.0](control-spy.md)<br/>                                    | Beschreibt Control Spy, ein Tool, das Entwicklern hilft, allgemeine Steuerelemente zu verstehen. <br/>                                                     |
+| [Visuelle Stile](themes-overview.md)<br/>                                   | Beschreibt, wie sich die Darstellung von Steuerelementen je nach dem vom Benutzer ausgewählten visuellen Stil ändern kann. <br/>                               |
+| [Designdateiformat](themesfileformat-overview.md)<br/>                     | Erläutert das Format von Designdateien (.theme), die in Windows 7 und Windows Vista verwendet werden.<br/>                                                    |
 
 
 

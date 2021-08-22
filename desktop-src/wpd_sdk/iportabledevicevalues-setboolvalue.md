@@ -1,7 +1,7 @@
 ---
-description: Die SetBoolValue-Methode fügt einen neuen booleschen Wert (Typ VT \_ bool) hinzu oder überschreibt eine vorhandene.
+description: Die SetBoolValue-Methode fügt einen neuen booleschen Wert (Typ VT BOOL) hinzu oder überschreibt \_ einen vorhandenen.
 ms.assetid: add30665-78f7-4037-801e-af51a4ab2f60
-title: 'Iportabledevicevalues:: SetBoolValue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::SetBoolValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 7adf311e863c08873aa8300f9e940d4a5b49417f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a4829d1c7f54042864dc4f54f26a17fcf4b0f84daab9352961d775d97adb45cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026778"
 ---
-# <a name="iportabledevicevaluessetboolvalue-method"></a>Iportabledevicevalues:: SetBoolValue-Methode
+# <a name="iportabledevicevaluessetboolvalue-method"></a>IPortableDeviceValues::SetBoolValue-Methode
 
-Die **SetBoolValue** -Methode fügt einen neuen **booleschen** Wert (Typ VT \_ bool) hinzu oder überschreibt eine vorhandene.
+Die **SetBoolValue-Methode** fügt einen neuen **booleschen** Wert (Typ VT BOOL) hinzu oder überschreibt \_ einen vorhandenen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ HRESULT SetBoolValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** , der das Element angibt, das erstellt oder überschrieben werden soll.
+Ein **REFPROPERTYKEY-Objekt,** das das zu erstellende oder zu überschreibende Element angibt.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*Wert* \[ In\]
 </dt> <dd>
 
-Ein **boolescher** Wert, der den neuen Wert angibt.
+Eine **BOOL,** die den neuen Wert angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -69,9 +69,9 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Schlüssel* Parameter angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben. Der vorhandene Schlüsselspeicher wird entsprechend freigegeben.
+Wenn ein vorhandener Wert über  den gleichen Schlüssel verfügt, der vom Schlüsselparameter angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben. Der vorhandene Schlüsselspeicher wird entsprechend freigegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Sc
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
@@ -88,10 +88,10 @@ Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Sc
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportablede vicevalues:: GetBoolValue**](iportabledevicevalues-getboolvalue.md)
+[**IPortableDeviceValues::GetBoolValue**](iportabledevicevalues-getboolvalue.md)
 </dt> </dl>
 
  

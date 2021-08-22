@@ -1,19 +1,19 @@
 ---
-description: Benachrichtigt die Anwendung, wenn ein IME im Begriff ist, den Inhalt des Kandidaten Fensters zu ändern. Die Anwendung empfängt diesen Befehl über die WM- \_ IME- \_ Benachrichtigungs Meldung mit den Parametereinstellungen, wie unten gezeigt.
+description: Benachrichtigt die Anwendung, wenn ein IME den Inhalt des Kandidatenfensters ändern wird. Die Anwendung empfängt diesen Befehl über die WM \_ IME \_ NOTIFY-Nachricht mit Parametereinstellungen, wie unten dargestellt.
 ms.assetid: 0a276f9c-cece-4fa6-b71a-ba0daad5ca05
-title: IMN_CHANGECANDIDATE Benachrichtigungs Code (IMM. h)
+title: IMN_CHANGECANDIDATE Benachrichtigungscode (Imm.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 197380c3cf6369e0dbfd7dbca76bb3b84334eb6e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 599f064b05f4fa0bda205825d623d13eec39334683fbe2b69f1c8b7b2997026b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131740"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118949251"
 ---
-# <a name="imn_changecandidate-notification-code"></a>IMN \_ changecandidate-Benachrichtigungs Code
+# <a name="imn_changecandidate-notification-code"></a>IMN \_ CHANGECANDIDATE-Benachrichtigungscode
 
-Benachrichtigt die Anwendung, wenn ein IME im Begriff ist, den Inhalt des Kandidaten Fensters zu ändern. Die Anwendung empfängt diesen Befehl über die [**WM- \_ IME- \_ Benachrichtigungs**](wm-ime-notify.md) Meldung mit den Parametereinstellungen, wie unten gezeigt.
+Benachrichtigt die Anwendung, wenn ein IME den Inhalt des Kandidatenfensters ändern wird. Die Anwendung empfängt diesen Befehl über die [**WM \_ IME \_ NOTIFY-Nachricht**](wm-ime-notify.md) mit Parametereinstellungen, wie unten dargestellt.
 
 
 ```C++
@@ -26,29 +26,29 @@ IMN_CHANGECANDIDATE
 
 <dl> <dt>
 
-<span id="wParam"></span><span id="wparam"></span><span id="WPARAM"></span>*wParam*
+<span id="wParam"></span><span id="wparam"></span><span id="WPARAM"></span>*Wparam*
 </dt> <dd>
 
-Legen Sie auf IMN \_ changecandidate fest.
+Legen Sie auf IMN \_ CHANGECANDIDATE fest.
 
 </dd> <dt>
 
-<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*LParam*
+<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*Lparam*
 </dt> <dd>
 
-Flag der Kandidatenliste. Jedes Bit entspricht einer Kandidatenliste: Bit 0 bis zur ersten Liste, Bit 1 zur zweiten Liste usw. Wenn ein angegebenes Bit 1 ist, wird das entsprechende Kandidaten Fenster geändert.
+Kandidatenlistenflag. Jedes Bit entspricht einer Kandidatenliste: Bit 0 für die erste Liste, Bit 1 bis zur zweiten Liste und so weiter. Wenn ein angegebenes Bit 1 ist, wird das entsprechende Kandidatenfenster geändert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Dieser Befehl weist keinen Rückgabewert auf.
+Dieser Befehl hat keinen Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung sollte diesen Befehl verarbeiten, wenn Sie Kandidaten selbst anzeigt.
+Eine Anwendung sollte diesen Befehl verarbeiten, wenn sie Kandidaten selbst anzeigt.
 
-Das IME-Fenster ändert die Darstellung des Kandidaten Fensters, wenn es diesen Befehl verarbeitet. Eine Anwendung kann Informationen über das System Fenster mit " [**immgetcandidatelistcount**](/windows/desktop/api/Imm/nf-imm-immgetcandidatelistcounta) " und " [**immgetcandidatelist**](/windows/desktop/api/Imm/nf-imm-immgetcandidatelista) " erhalten.
+Das IME-Fenster ändert die Darstellung des Kandidatenfensters, wenn es diesen Befehl verarbeitet. Eine Anwendung kann Mit [**immGetCandidateListCount**](/windows/desktop/api/Imm/nf-imm-immgetcandidatelistcounta) und [**ImmGetCandidateList Informationen zum Systemfenster erhalten.**](/windows/desktop/api/Imm/nf-imm-immgetcandidatelista)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,27 +58,27 @@ Das IME-Fenster ändert die Darstellung des Kandidaten Fensters, wenn es diesen 
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Imm. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Imm.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eingabemethoden-Manager](input-method-manager.md)
+[Eingabemethode-Manager](input-method-manager.md)
 </dt> <dt>
 
-[Eingabemethoden-Manager-Befehle](input-method-manager-commands.md)
+[Befehle des Eingabemethode-Managers](input-method-manager-commands.md)
 </dt> <dt>
 
-[**Immgetcandidatelist**](/windows/desktop/api/Imm/nf-imm-immgetcandidatelista)
+[**ImmGetCandidateList**](/windows/desktop/api/Imm/nf-imm-immgetcandidatelista)
 </dt> <dt>
 
-[**Immgetcandidatelistcount**](/windows/desktop/api/Imm/nf-imm-immgetcandidatelistcounta)
+[**ImmGetCandidateListCount**](/windows/desktop/api/Imm/nf-imm-immgetcandidatelistcounta)
 </dt> <dt>
 
-[**WM- \_ IME \_ Benachrichtigen**](wm-ime-notify.md)
+[**WM \_ IME \_ NOTIFY**](wm-ime-notify.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die havecurrentsample-Methode bestimmt, ob der Filter ein Beispiel enthält.
+description: Die HaveCurrentSample-Methode bestimmt, ob der Filter über ein Beispiel verfügt.
 ms.assetid: cd20aea8-bb0b-4aa5-8d06-2733652fde08
-title: Cbaserderderer. havecurrentsample-Methode (renbase. h)
+title: CBaseRenderer.HaveCurrentSample-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fc7a594ce23f2e015a9c74864308e2e42528e145
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ea807ffc68fc27a3c276de1fabcd7eb3591311a3896acfd5b0d4f91cb7f1ed7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372573"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954949"
 ---
-# <a name="cbaserendererhavecurrentsample-method"></a>Cbaserderderer. havecurrentsample-Methode
+# <a name="cbaserendererhavecurrentsample-method"></a>CBaseRenderer.HaveCurrentSample-Methode
 
-Die- `HaveCurrentSample` Methode bestimmt, ob der Filter über ein Beispiel verfügt.
+Die `HaveCurrentSample` -Methode bestimmt, ob der Filter über ein Beispiel verfügt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn der Filter über ein Beispiel verfügt, andernfalls **false** .
+Gibt **TRUE zurück,** wenn der Filter über ein Beispiel verfügt, andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,16 +50,16 @@ Gibt **true** zurück, wenn der Filter über ein Beispiel verfügt, andernfalls 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

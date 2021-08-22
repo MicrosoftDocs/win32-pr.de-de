@@ -1,21 +1,21 @@
 ---
-description: Abrufen einer leeren mergemoduldatenbank. Sie können die Datei Schema. msm verwenden, die mit dem Windows Installer SDK bereitgestellt wird, als Start Datenbank für das Mergemodul. Weitere Informationen finden Sie unter Windows SDK Komponenten für Windows Installer Entwickler.
+description: Abrufen einer leeren Mergemoduldatenbank. Sie können die Datei Schema.msm, die mit dem Windows Installer SDK bereitgestellt wird, als Startdatenbank für Ihr Mergemodul verwenden. Weitere Informationen finden Sie unter Windows SDK-Komponenten für Windows Installer-Entwickler.
 ms.assetid: 8408e892-adc6-4ef5-ad36-4d04c021c899
-title: Abrufen von leeren mergemoduldatenbanken
+title: Abrufen leerer Mergemoduldatenbanken
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ba75d55763d30b0ab545d2dbddbc19c1b0c279d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 87b5da0a9ad108ab320458934a26b5ec22727d7f11cabee9d870dd7fc01dc84c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343804"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118943300"
 ---
-# <a name="obtaining-blank-merge-module-databases"></a>Abrufen von leeren mergemoduldatenbanken
+# <a name="obtaining-blank-merge-module-databases"></a>Abrufen leerer Mergemoduldatenbanken
 
-Abrufen einer leeren mergemoduldatenbank. Sie können die Datei Schema. msm verwenden, die mit dem Windows Installer SDK bereitgestellt wird, als Start Datenbank für das Mergemodul. Weitere Informationen finden Sie unter [Windows SDK Komponenten für Windows Installer Entwickler](platform-sdk-components-for-windows-installer-developers.md).
+Abrufen einer leeren Mergemoduldatenbank. Sie können die Datei Schema.msm, die mit dem Windows Installer SDK bereitgestellt wird, als Startdatenbank für Ihr Mergemodul verwenden. Weitere Informationen finden Sie unter [Windows SDK Components for Windows Installer Developers](platform-sdk-components-for-windows-installer-developers.md).
 
-Entwickler sollten Mergemodule mithilfe des einfachsten Datenbankschemas erstellen, das Ihre Komponenten installiert. Durch die Verwendung eines einfachen Schemas wird die höchste Kompatibilität für das Mergemodul sichergestellt. Das Zusammenführen eines Mergemoduls in ein Installationspaket mit einem anderen Datenbankschema führt in der Regel zu Mergekonflikten.
+Entwickler sollten Mergemodule mit dem einfachsten Datenbankschema erstellen, das ihre Komponenten installiert. Durch die Verwendung eines einfachen Schemas wird die größtmögliche Kompatibilität für das Mergemodul sichergestellt. Das Zusammenführen eines Mergemoduls in einem Installationspaket mit einem anderen Datenbankschema führt in der Regel zu Mergekonflikten.
 
 Eine vollständige Liste aller erforderlichen und optionalen Tabellen in Mergemodulen finden Sie unter [Merge Module Database Tables](merge-module-database-tables.md).
 

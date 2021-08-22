@@ -1,27 +1,27 @@
 ---
-title: Der aktuelle Neustart-Manager-Vorgang wird abgebrochen.
-description: Wenn eine Benutzeraktion den Installer anweist, eine andere Aktion auszuführen, kann die folgende Methode verwendet werden, um den aktuellen Neustart-Manager-Vorgang abzubrechen.
+title: Abbrechen des aktuellen Neustart-Manager-Vorgangs
+description: Wenn eine Benutzeraktion das Installationsprogramm anweise, eine andere Aktion durchzuführen, kann die folgende Methode verwendet werden, um den aktuellen Neustart-Manager-Vorgang abzubricht.
 ms.assetid: 87c8cf27-cd77-46fb-8298-cccbf4b1071a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 633882cc723f19823c6b832ee6927c5a3aacaab7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6c745a76ab8c72acaff0b9f1ae85ded380e1113c3687822e916b422cad9ef51f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103714658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119010248"
 ---
-# <a name="canceling-the-current-restart-manager-operation"></a>Der aktuelle Neustart-Manager-Vorgang wird abgebrochen.
+# <a name="canceling-the-current-restart-manager-operation"></a>Abbrechen des aktuellen Neustart-Manager-Vorgangs
 
-Wenn eine Benutzeraktion den Installer anweist, eine andere Aktion auszuführen, kann die folgende Methode verwendet werden, um den aktuellen Neustart-Manager-Vorgang abzubrechen.
+Wenn eine Benutzeraktion das Installationsprogramm anweise, eine andere Aktion durchzuführen, kann die folgende Methode verwendet werden, um den aktuellen Neustart-Manager-Vorgang abzubricht.
 
 **So brechen Sie den aktuellen Neustart-Manager-Vorgang ab**
 
--   Das Installationsprogramm kann die [**rmcancelcurrenttask**](/windows/desktop/api/RestartManager/nf-restartmanager-rmcancelcurrenttask) -Funktion von einem anderen Thread aus abrufen, um den aktuellen [**rmshutdown**](/windows/desktop/api/RestartManager/nf-restartmanager-rmshutdown) -oder [**rmrestart**](/windows/desktop/api/RestartManager/nf-restartmanager-rmrestart) -Vorgang abzubrechen. Der Neustart-Manager kann den Vorgang abhängig davon abbrechen, in welchem Umfang der Vorgang abgeschlossen ist, wenn die **rmcancelcurrenttask** -Funktion aufgerufen wird.
+-   Das Installationsprogramm kann die [**RMCancelCurrentTask-Funktion**](/windows/desktop/api/RestartManager/nf-restartmanager-rmcancelcurrenttask) aus einem anderen Thread aufrufen, um den aktuellen [**RmShutdown-**](/windows/desktop/api/RestartManager/nf-restartmanager-rmshutdown) oder [**RmRestart-Vorgang**](/windows/desktop/api/RestartManager/nf-restartmanager-rmrestart) abzubruchen. Der Neustart-Manager kann den Vorgang abhängig davon abbrechen, in welchem Umfang der Vorgang abgeschlossen wurde, wenn die **RMCancelCurrentTask-Funktion** aufgerufen wird.
 
- 
+ 
 
- 
+ 
 
 
 

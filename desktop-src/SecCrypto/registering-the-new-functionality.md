@@ -1,21 +1,21 @@
 ---
-description: Die Unterstützung für das Registrieren der neuen Funktionalität in einer Systemregistrierung muss zusammen mit der neuen Funktion in der neuen DLL bereitgestellt werden.
+description: Unterstützung für die Registrierung der neuen Funktionalität in einer Systemregistrierung muss in der neuen DLL zusammen mit der neuen Funktion bereitgestellt werden.
 ms.assetid: 7a6af325-4891-40db-8d33-c9782bd438e5
 title: Registrieren der neuen Funktionalität
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 470541ed9b832ad5eaa914c1a35805dbd861a843
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ff5d56153199542c11f00a3ec23d90d35a682c5fe93f91d2978dcd4f72628219
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350895"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118900595"
 ---
 # <a name="registering-the-new-functionality"></a>Registrieren der neuen Funktionalität
 
-Die Unterstützung für das Registrieren der neuen Funktionalität in einer Systemregistrierung muss zusammen mit der neuen Funktion in der neuen DLL bereitgestellt werden. [OID-Unterstützungsfunktionen](cryptography-functions.md) bieten Unterstützung bei dieser Registrierung. Regsvr32.exe registriert neue Funktionen. Dieses Tool ist in Windows enthalten.
+Unterstützung für die Registrierung der neuen Funktionalität in einer Systemregistrierung muss in der neuen DLL zusammen mit der neuen Funktion bereitgestellt werden. [OID-Supportfunktionen](cryptography-functions.md) bieten Unterstützung bei dieser Registrierung. Regsvr32.exe registriert neue Funktionen. Dieses Tool ist in Windows enthalten.
 
-Die neue dll muss [**DllRegisterServer**](/windows/win32/api/olectl/nf-olectl-dllregisterserver) -und [**DllUnregisterServer**](/windows/win32/api/olectl/nf-olectl-dllunregisterserver) -Einstiegspunkte zur Verwendung durch Regsvr32.exe bereitstellen. [*Kryptoapi*](../secgloss/c-gly.md) -Funktionen wie [**cryptregisteroidfunction**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptregisteroidfunction) oder [**cryptunregisteroidfunction**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptunregisteroidfunction)können innerhalb dieser Einstiegspunkte verwendet werden, wie im folgenden Beispiel gezeigt.
+Die neue DLL muss [**DllRegisterServer-**](/windows/win32/api/olectl/nf-olectl-dllregisterserver) und [**DllUnregisterServer-Einstiegspunkte**](/windows/win32/api/olectl/nf-olectl-dllunregisterserver) für die Verwendung durch Regsvr32.exe bereitstellen. [*CryptoAPI-Funktionen*](../secgloss/c-gly.md) wie [**CryptRegisterOIDFunction**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptregisteroidfunction) oder [**CryptUnregisterOIDFunction**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptunregisteroidfunction)können innerhalb dieser Einstiegspunkte verwendet werden, wie im folgenden Beispiel gezeigt.
 
 
 ```C++
@@ -58,9 +58,9 @@ STDAPI DllUnregisterServer(void)
 
 
 
-Dieses Beispiel muss kompiliert und mit der neuen DLL verknüpft werden. Diese beiden Einstiegspunkte müssen zusammen mit dem Funktions Einstiegspunkt exportiert werden.
+Dieses Beispiel muss kompiliert und mit der neuen DLL verknüpft werden. Diese beiden Einstiegspunkte müssen zusammen mit dem Funktionseinstiegspunkt exportiert werden.
 
-Um die neuen Funktionen auf einem Computer zu installieren, führen Sie Regsvr32.exe über eine Eingabeaufforderung aus, und geben Sie dabei den Namen und den Pfad der neuen DLL an. Regsvr32.exe auf die Funktion " [**cryptregisteroidfunction**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptregisteroidfunction) " über den Einstiegspunkt der [**DllRegisterServer**](/previous-versions/windows/desktop/legacy/aa369359(v=vs.85)) -Funktion zugreift und die neue Funktion und dll registriert.
+Um die neue Funktionalität auf einem Computer zu installieren, führen Sie Regsvr32.exe über eine Eingabeaufforderung aus, und geben Sie den Namen und Pfad der neuen DLL an. Regsvr32.exe greift über den Einstiegspunkt der [**DllRegisterServer-Funktion**](/previous-versions/windows/desktop/legacy/aa369359(v=vs.85)) auf die [**CryptRegisterOIDFunction-Funktion**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptregisteroidfunction) zu und registriert die neue Funktion und DLL.
 
  
 

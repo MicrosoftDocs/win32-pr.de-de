@@ -1,7 +1,7 @@
 ---
-description: Definiert eine einzelne Rückruf Methode.
+description: Definiert eine einzelne Rückrufmethode.
 ms.assetid: 579f7a29-cd98-4d97-9f8e-9b786897df1c
-title: Iconnectionrequestcallback-Schnittstelle (devpkey. h)
+title: IConnectionRequestCallback-Schnittstelle (Devpkey.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,32 +14,32 @@ api_type:
 api_location:
 - PortableDeviceGuids.lib
 - PortableDeviceGuids.dll
-ms.openlocfilehash: aca827de068ce221f013f03b35f88fd76a030dd4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 53e1549767c8577507b3126b3a293dfe4e523612809c144ff24c04dce4ab1ff4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118697418"
 ---
-# <a name="iconnectionrequestcallback-interface"></a>Iconnectionrequestcallback-Schnittstelle
+# <a name="iconnectionrequestcallback-interface"></a>IConnectionRequestCallback-Schnittstelle
 
-Die **iconnectionrequestcallback** -Schnittstelle definiert eine einzelne Rückruf Methode. Eine Windows Portable Devices (WPD)-Anwendung implementiert diese optionale Component Object Model (com)-Schnittstelle zum Empfangen von Benachrichtigungen zu abgeschlossenen Anforderungen und zum Abbrechen ausstehender Anforderungen. Die Anforderungen werden mithilfe der [**iportabledeviceconnector:: Connect**](/windows/desktop/api/portabledeviceconnectapi/nf-portabledeviceconnectapi-iportabledeviceconnector-connect) -Methode und der [**iportabledeviceconnector::D isconnect**](/windows/desktop/api/portabledeviceconnectapi/nf-portabledeviceconnectapi-iportabledeviceconnector-disconnect) -Methode gesendet.
+Die **IConnectionRequestCallback-Schnittstelle** definiert eine einzelne Rückrufmethode. Eine Windows Portable Devices (WPD) implementiert diese optionale Component Object Model-Schnittstelle (COM), um Benachrichtigungen über abgeschlossene Anforderungen zu empfangen und ausstehende Anforderungen abzubricht. Die Anforderungen werden mithilfe der [**Methoden IPortableDeviceConnector::Verbinden**](/windows/desktop/api/portabledeviceconnectapi/nf-portabledeviceconnectapi-iportabledeviceconnector-connect) und [**IPortableDeviceConnector::D isconnect**](/windows/desktop/api/portabledeviceconnectapi/nf-portabledeviceconnectapi-iportabledeviceconnector-disconnect) gesendet.
 
 ## <a name="members"></a>Member
 
-Die **iconnectionrequestcallback** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iconnectionrequestcallback** verfügt auch über die folgenden Typen von Membern:
+Die **IConnectionRequestCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IConnectionRequestCallback** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iconnectionrequestcallback** -Schnittstelle verfügt über diese Methoden.
+Die **IConnectionRequestCallback-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                      | BESCHREIBUNG                                                                           |
+| Methode                                                      | Beschreibung                                                                           |
 |:------------------------------------------------------------|:--------------------------------------------------------------------------------------|
-| [**OnComplete**](iconnectionrequestcallback-oncomplete.md) | Benachrichtigt eine Anwendung, dass eine zuvor geplante Anforderung abgeschlossen wurde.<br/> |
+| [**Oncomplete**](iconnectionrequestcallback-oncomplete.md) | Benachrichtigt eine Anwendung, dass eine zuvor geplante Anforderung abgeschlossen wurde.<br/> |
 
 
 
@@ -51,11 +51,11 @@ Die **iconnectionrequestcallback** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                                                                             |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                                                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                                                                              |
-| Header<br/>                   | <dl> <dt>Devpkey. h; </dt> <dt>Portablede viceconnectapi. h</dt> </dl> |
-| IDL<br/>                      | <dl> <dt>Portablede viceconnectapi. idl</dt> </dl>                                                                |
-| Bibliothek<br/>                  | <dl> <dt>Portabledeviceguids. lib</dt> </dl>                                                                     |
+| Header<br/>                   | <dl> <dt>Devpkey.h; </dt> <dt>Portabledeviceconnectapi.h</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>Portabledeviceconnectapi.idl</dt> </dl>                                                                |
+| Bibliothek<br/>                  | <dl> <dt>PortableDeviceGuids.lib</dt> </dl>                                                                     |
 
 
 

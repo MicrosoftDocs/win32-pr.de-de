@@ -1,11 +1,11 @@
 ---
-title: MS-DNS-MAINTAIN-Trust-Anchor-Attribut
-description: Ein Attribut, das verwendet wird, um den Typ des Vertrauens Ankers zu definieren, der im Gesamtstruktur weiten Vertrauensanker Speicher automatisch veröffentlicht werden soll, wenn die DNS-Zone signiert ist.
+title: ms-DNS-Maintain-Trust-Anchor-Attribut
+description: Ein Attribut, das verwendet wird, um den Typ des Vertrauensankers zu definieren, der automatisch im gesamtstrukturweiten Vertrauensankerspeicher veröffentlicht wird, wenn die DNS-Zone signiert ist.
 ms.assetid: 8a658e54-b3cc-4cb6-be5c-933b6fdfea70
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-DNS-MAINTAIN-Trust-Anchor\"-Attribut AD-Schema"
-- AD-Schema des MSDNs-wart trustanchor-Attributs
+- AD-Schema des ms-DNS-Maintain-Trust-Anchor-Attributs
+- AD-Schema des msDNS-MaintainTrustAnchor-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 962000aad2c9aad80147c742a4c811321bd31d42
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: dd0159fec89eb2898311338c0ffebd5de25c37a788fd4540101ae603ae5f7881
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480127"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022618"
 ---
-# <a name="ms-dns-maintain-trust-anchor-attribute"></a>MS-DNS-MAINTAIN-Trust-Anchor-Attribut
+# <a name="ms-dns-maintain-trust-anchor-attribute"></a>ms-DNS-Maintain-Trust-Anchor-Attribut
 
-Ein Attribut, das verwendet wird, um den Typ des Vertrauens Ankers zu definieren, der im Gesamtstruktur weiten Vertrauensanker Speicher automatisch veröffentlicht werden soll, wenn die DNS-Zone signiert ist.
+Ein Attribut, das verwendet wird, um den Typ des Vertrauensankers zu definieren, der automatisch im gesamtstrukturweiten Vertrauensankerspeicher veröffentlicht wird, wenn die DNS-Zone signiert ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DNS-MAINTAIN-Trust-Anchor         |
-| LDAP-Display-Name | MSDNs-wart trustanchor            |
+| CN                | ms-DNS-Maintain-Trust-Anchor         |
+| Ldap-Anzeigename | msDNS-MaintainTrustAnchor            |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2133              |
-| System-ID-GUID    | 0dc063c1-52d9-4456-9e15-9c2434aafd94 |
+| System-Id-Guid    | 0dc063c1-52d9-4456-9e15-9c2434aafd94 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -52,11 +52,11 @@ Ein Attribut, das verwendet wird, um den Typ des Vertrauens Ankers zu definieren
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000008                               |

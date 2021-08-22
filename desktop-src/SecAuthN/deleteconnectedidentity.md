@@ -1,7 +1,7 @@
 ---
-description: Löscht die Benutzer Anmelde Informationen, die für die verbundene Identität verwendet werden.
+description: Löscht die Benutzer-Anmeldeinformationen, die für die verbundene Identität verwendet werden.
 ms.assetid: EB32832D-9A8C-4CEB-897A-7E9D24FF84DD
-title: Deleteconnectedidentity-Funktion (indentitystore. h)
+title: DeleteConnectedIdentity-Funktion (Indentitystore.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Indentitystore.h
-ms.openlocfilehash: 8079985f916e996a56b4203ad6ad065c1b7664e3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7e59beeb17f7d6d0cced96daaceef7440523c3ce603d759f18cc69a93c0ab05c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041610"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119008468"
 ---
-# <a name="deleteconnectedidentity-function"></a>Deleteconnectedidentity-Funktion
+# <a name="deleteconnectedidentity-function"></a>DeleteConnectedIdentity-Funktion
 
-Löscht die Benutzer Anmelde Informationen, die für die verbundene Identität verwendet werden.
+Löscht die Benutzer-Anmeldeinformationen, die für die verbundene Identität verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,28 +42,28 @@ SEC_ENTRY DeleteConnectedIdentity(
 
 <dl> <dt>
 
-*ProviderHandle* \[ in\]
+*ProviderHandle* \[ In\]
 </dt> <dd>
 
-Handle des Identitäts Anbieters.
+Identitätsanbieterhand handle.
 
 </dd> <dt>
 
 *UserToken* \[ in, optional\]
 </dt> <dd>
 
-Token des verbundenen Benutzers, dessen Konto in ein lokales Konto konvertiert werden soll. Wenn *userToken* nicht **null** ist, verwendet der Identitäts Anbieter dieses Token, um das Benutzerprofil zu laden und verbundene Zustände zu bereinigen. Wenn *userToken* auf **null** festgelegt ist, erzwingt LSA die Trennung der Verbindung. Der Identitäts Anbieter sollte alle globalen verbundenen Zustände für diesen Benutzer bereinigen, aber der Anbieter muss keine verbundenen Zustände im Benutzerprofil bereinigen.
+Token des verbundenen Benutzers, dessen Konto in ein lokales Konto konvertiert werden soll. Wenn *UserToken* nicht **NULL ist,** verwendet der Identitätsanbieter dieses Token, um das Benutzerprofil zu laden und verbundene Zustände zu bereinign. Wenn *UserToken* NULL **ist,** erzwingt LSA die Trennung. Der Identitätsanbieter sollte alle globalen verbundenen Zustände für diesen Benutzer bereinigt, der Anbieter muss jedoch keine verbundenen Zustände im Benutzerprofil bereinigt.
 
 </dd> <dt>
 
-*UserSID* \[ in\]
+*UserSid* \[ In\]
 </dt> <dd>
 
-Die primäre SID des verbundenen Benutzers. Wenn *userToken* nicht **null** ist, ist dieser Parameter die Benutzer-SID des Tokens. Wenn *userToken* **null** ist, wird dieser Parameter zum Identifizieren des verbundenen Benutzers und zum Bereinigen der Global verbundenen Zustände dieses Benutzers verwendet.
+Die primäre SID des verbundenen Benutzers. Wenn *UserToken* nicht **NULL ist,** ist dieser Parameter die Benutzer-SID des Tokens. Wenn *UserToken* **NULL ist,** wird dieser Parameter verwendet, um den verbundenen Benutzer zu identifizieren und globale verbundene Zustände dieses Benutzers zu bereinign.
 
 </dd> <dt>
 
-*Identityusername* \[ in\]
+*IdentityUserName* \[ In\]
 </dt> <dd>
 
 Der Benutzername der Identität.
@@ -72,7 +72,7 @@ Der Benutzername der Identität.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion sec \_ E \_ OK zurück.
+Wenn die Funktion erfolgreich ist, gibt die Funktion SEC \_ E \_ OK zurück.
 
 Wenn die Funktion fehlschlägt, gibt die Funktion möglicherweise einen der folgenden Fehlercodes zurück.
 
@@ -80,9 +80,9 @@ Wenn die Funktion fehlschlägt, gibt die Funktion möglicherweise einen der folg
 
 | Rückgabewert                                                                                               | BESCHREIBUNG                                                                                                                                                 |
 |------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>\_ungültiger \_ Parameter.</dt> </dl>      | Ein Parameter ist nicht gültig.<br/>                                                                                                                        |
-| <dl> <dt>Status " \_ kein \_ solcher \_ Benutzer"</dt> </dl>          | Der von *UserSID* identifizierte Benutzer ist nicht vorhanden, ist zurzeit nicht verbunden, oder es ist keine Identität vorhanden, deren Benutzername mit *identityusername* übereinstimmt.<br/> |
-| <dl> <dt>\_nicht genügend \_ Ressourcen.</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um die Anforderung zu verarbeiten.<br/>                                                                                               |
+| <dl> <dt>STATUS \_ UNGÜLTIGER \_ PARAMETER</dt> </dl>      | Ein Parameter ist nicht gültig.<br/>                                                                                                                        |
+| <dl> <dt>STATUS \_ KEIN \_ SOLCHER \_ BENUTZER</dt> </dl>          | Der von *UserSid identifizierte* Benutzer ist nicht vorhanden, ist derzeit nicht verbunden, oder es ist keine Identität vorhanden, deren Benutzername *IdentityUserName entspricht.*<br/> |
+| <dl> <dt>STATUS \_ UNZUREICHENDE \_ RESSOURCEN</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um die Anforderung zu verarbeiten.<br/>                                                                                               |
 
 
 
@@ -94,9 +94,9 @@ Wenn die Funktion fehlschlägt, gibt die Funktion möglicherweise einen der folg
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                  |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                        |
-| Header<br/>                   | <dl> <dt>Indentitystore. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                  |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Indentitystore.h</dt> </dl> |
 
 
 

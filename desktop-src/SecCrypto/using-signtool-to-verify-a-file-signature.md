@@ -4,20 +4,20 @@ ms.assetid: 9c40a397-19ea-4600-97ee-987dd10f4ef8
 title: Verwenden von SignTool zum Überprüfen einer Dateisignatur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 85e91df7a64a8db48d04ceba9df5fbc3fd358058
-ms.sourcegitcommit: 7024106e3420607420bb04c3f88d9bb4827038c8
+ms.openlocfilehash: 137a4117b64ca5d62ee2ffe5fb80a7e0751d91f840ce1270482d9e114f4dd61b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "107954923"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118896693"
 ---
 # <a name="using-signtool-to-verify-a-file-signature"></a>Verwenden von SignTool zum Überprüfen einer Dateisignatur
 
-Der folgende Befehl überprüft die Signatur einer Datei mit dem Namen *MyControl.exe*:
+Der folgende Befehl überprüft die Signatur einer Datei namens *MyControl.exe*:
 
 **SignTool verify** *MyControl.exe*
 
-Wenn im vorherigen Beispiel ein Fehler auftritt, könnte es sein, dass die Signatur ein Codesignaturzertifikat verwendet hat. [SignTool](signtool.md) verwendet zur Überprüfung standardmäßig die Windows-Treiberrichtlinie.
+Wenn im vorherigen Beispiel ein Fehler auftritt, könnte es sein, dass die Signatur ein Codesignaturzertifikat verwendet hat. [SignTool](signtool.md) verwendet standardmäßig die Windows Treiberrichtlinie für die Überprüfung.
 
 Der folgende Befehl überprüft die Signatur mithilfe der Standardauthentifizierungsüberprüfungsrichtlinie:
 

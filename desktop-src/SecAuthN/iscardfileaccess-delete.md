@@ -1,7 +1,7 @@
 ---
-description: Mit der Delete-Methode wird eine Datei an einem bestimmten Speicherort innerhalb des Smartcard-Dateisystems gelöscht.
+description: Die Delete-Methode löscht eine Datei an einem bestimmten Speicherort im Smartcarddateisystem.
 ms.assetid: f51b0329-c5dc-4f70-a92e-19dc0dbc55f8
-title: Iscardfileaccess::D Elete-Methode
+title: ISCardFileAccess::D elete-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 6331225cd3baf105682e2d275ad6be53f16f5b64
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 721830ea3d446585e7f52c699642b1534c78d34826722b5737e191dfce94c817
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343599"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119008048"
 ---
-# <a name="iscardfileaccessdelete-method"></a>Iscardfileaccess::D Elete-Methode
+# <a name="iscardfileaccessdelete-method"></a>ISCardFileAccess::D elete-Methode
 
-\[Die **Delete** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **Delete-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Mit der **Delete** -Methode wird eine Datei an einem bestimmten Speicherort innerhalb des [*Smartcard*](../secgloss/s-gly.md) -Dateisystems gelöscht.
+Die **Delete-Methode** löscht eine Datei an einem bestimmten Speicherort im [*Smartcarddateisystem.*](../secgloss/s-gly.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,66 +42,66 @@ HRESULT Delete(
 
 <dl> <dt>
 
-*RefType* \[ in\]
+*refType* \[ In\]
 </dt> <dd>
 
-Der Referenztyp, der in *bstrinpathspec* verwendet wird.
+Typ des Verweises, der in *bstrPathSpec* verwendet wird.
 
 <dl><span id="SC_TYPE_BY_NAME"></span><span id="sc_type_by_name"></span><dt>
 
-**SC- \_ Typ \_ nach \_ Name**
+**SC \_ TYPE \_ BY \_ NAME**
 </dt><span id="SC_TYPE_BY_ID"></span><span id="sc_type_by_id"></span><dt>
 
-**SC- \_ Typ \_ nach \_ ID**
+**SC \_ TYPE \_ BY \_ ID**
 </dt><span id="SC_TYPE_BY_SHORT"></span><span id="sc_type_by_short"></span><dt>
 
-**SC \_ - \_ Typ \_ kurz**
+**SC \_ TYPE \_ BY \_ SHORT**
 </dt><span id="SC_TYPE_BY_ANY"></span><span id="sc_type_by_any"></span><dt>
 
-**SC- \_ Typ \_ nach \_ beliebigen**
+**SC \_ TYPE \_ BY \_ ANY**
 </dt> </dl> </dd> <dt>
 
-*bstrinpathspec* \[ in\]
+*bstrPathSpec* \[ In\]
 </dt> <dd>
 
-Der Bezeichner der zu löschenden Datei.
+Bezeichner der zu löschenden Datei.
 
 </dd> <dt>
 
-*Flags* \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Gibt an, ob sicheres Messaging verwendet werden muss und welche Daten vorab zugeordnet werden sollen.
+Gibt an, ob sicheres Messaging verwendet und Daten vorab zugeordnet werden müssen.
 
 <dl><span id="SC_FL_SECURE_MESSAGING"></span><span id="sc_fl_secure_messaging"></span><dt>
 
-**SC \_ FL \_ Secure \_ Messaging**
+**SC \_ FL \_ SECURE \_ MESSAGING**
 </dt><span id="SC_FL_PREALLOCATED"></span><span id="sc_fl_preallocated"></span><dt>
 
-**SC \_ FL, \_ vorab zugeordnet**
+**\_SC FL VORAB \_ ZUGEORDNET**
 </dt> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                               |
 |----------------------------------------------------------------------------------------------|-----------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Der Vorgang wurde erfolgreich abgeschlossen.<br/>          |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Ungültiger Parameter.<br/>                             |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>    | Diese Methode wurde von der-Schnittstelle nicht implementiert.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Ungültiger Parameter.<br/>                             |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>    | Die -Schnittstelle hat diese Methode nicht implementiert.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Liste aller Methoden, die durch diese Schnittstelle definiert werden, finden Sie unter [**iscardfileaccess**](iscardfileaccess.md).
+Eine Liste aller von dieser Schnittstelle definierten Methoden finden Sie unter [**ISCardFileAccess.**](iscardfileaccess.md)
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die Smartcard zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen Smartcardfehlercode zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -109,10 +109,10 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
 
 
 
@@ -120,10 +120,10 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 <dl> <dt>
 
-[**Stelle**](iscardfileaccess-create.md)
+[**Erstellen**](iscardfileaccess-create.md)
 </dt> <dt>
 
-[**Iscardfileaccess**](iscardfileaccess.md)
+[**ISCardFileAccess**](iscardfileaccess.md)
 </dt> </dl>
 
  

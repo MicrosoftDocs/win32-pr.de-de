@@ -1,7 +1,7 @@
 ---
-description: Statische Zeichenfolge, die den Namen der Fenster Klasse enthält.
+description: Statische Zeichenfolge, die den Namen der Fensterklasse enthält.
 ms.assetid: a1edf252-23d1-4ee2-96b0-643b80259f38
-title: 'Cbasewindow:: m_pClassName Member (winutil. h)'
+title: CBaseWindow::m_pClassName-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4265c2289e517dc0b677c9a25a3727d5683856f2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 13cc59e79a230f51b02f10433225ae9672f2c6df10d37ed9ef18c1eb2a2557cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954561"
 ---
-# <a name="cbasewindowm_pclassname-member"></a>Cbasewindow:: m \_ pclassname-Member
+# <a name="cbasewindowm_pclassname-member"></a>CBaseWindow::m \_ pClassName-Member
 
-Statische Zeichenfolge, die den Namen der Fenster Klasse enthält.
+Statische Zeichenfolge, die den Namen der Fensterklasse enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ LPTSTR m_pClassName;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ LPTSTR m_pClassName;
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

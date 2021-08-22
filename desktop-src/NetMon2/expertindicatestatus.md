@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "Expertenstatus" gibt den Prozentsatz des Abschlusses der Expertenanalyse der Erfassungs Datei an.
+description: Die ExpertIndicateStatus-Funktion gibt den Prozentsatz des Abschlusses der Expertenanalyse der Erfassungsdatei an.
 ms.assetid: 6dbaa6d3-6068-4a28-9d9f-bcc7a25da407
-title: Funktion "expertphestatus" (Netmon. h)
+title: ExpertIndicateStatus-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: ac707a774b667b96a4d612e9eaf7da2c779c0327
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f9f40e339b450496ec4b0aff1f3e951c4d7468fa22f7b2ff3dd2f84de6b92354
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128356"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119012268"
 ---
-# <a name="expertindicatestatus-function"></a>Funktion "expertindikatestatus"
+# <a name="expertindicatestatus-function"></a>ExpertIndicateStatus-Funktion
 
-Die Funktion " **Expertenstatus** " gibt den Prozentsatz des Abschlusses der Analyse der Erfassungs Datei des Experten an.
+Die **ExpertIndicateStatus-Funktion** gibt den Prozentsatz des Abschlusses der Analyse der Erfassungsdatei durch den Experten an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,28 +43,28 @@ DWORD WINAPI ExpertIndicateStatus(
 
 <dl> <dt>
 
-*hexpertkey* \[ in\]
+*hExpertKey* \[ In\]
 </dt> <dd>
 
-Eindeutige expertenkennung. Netzwerkmonitor übergibt *hexpertkey* an den Experten, wenn die Funktion [Run](run.md) aufgerufen wird.
+Eindeutiger Expertenbezeichner. Netzwerkmonitor *hExpertKey* an den Experten übergeben, wenn er die [Run-Funktion](run.md) aufruft.
 
 </dd> <dt>
 
-*Status* \[ in\]
+*Status* \[ In\]
 </dt> <dd>
 
-Aktueller Status der Analyse. Geben Sie einen der folgenden Werte für " [Expertenstatus" umeration](expertstatusenumeration.md) an.
+Aktueller Status der Analyse. Geben Sie einen der folgenden [EXPERTSTATUSENUMERATION-Werte](expertstatusenumeration.md) an.
 
 
 
 | Wert                                                                                                                                                                                 | Bedeutung                                                                        |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| <span id="EXPERTSTATUS_INACTIVE"></span><span id="expertstatus_inactive"></span><dl> <dt>**Profil Status \_ inaktiv**</dt> </dl> | Der Experte wurde nie gestartet. <br/>                                          |
-| <span id="EXPERTSTATUS_STARTING"></span><span id="expertstatus_starting"></span><dl> <dt>**Profil Status wird \_ gestartet**</dt> </dl> | Der Experte wird gestartet. <br/>                                            |
-| <span id="EXPERTSTATUS_RUNNING"></span><span id="expertstatus_running"></span><dl> <dt>**Profil Status wird \_ ausgeführt**</dt> </dl>    | Der Experte wird normal ausgeführt. <br/>                                    |
-| <span id="EXPERTSTATUS_PROBLEM"></span><span id="expertstatus_problem"></span><dl> <dt>**expertstatus- \_ Problem**</dt> </dl>    | Ein im unter Status Parameter angegebenes Problem hat den Experten beendet. <br/> |
-| <span id="EXPERTSTATUS_ABORTED"></span><span id="expertstatus_aborted"></span><dl> <dt>**der Expertenstatus wurde \_ abgebrochen.**</dt> </dl>    | Netzwerkmonitor den Experten beendet. <br/>                                |
-| <span id="EXPERTSTATUS_DONE"></span><span id="expertstatus_done"></span><dl> <dt>**Profil Status \_ abgeschlossen**</dt> </dl>             | Der Experte hat die Analyse erfolgreich abgeschlossen. <br/>                     |
+| <span id="EXPERTSTATUS_INACTIVE"></span><span id="expertstatus_inactive"></span><dl> <dt>**EXPERTSTATUS \_ INACTIVE**</dt> </dl> | Der Experte hat nie begonnen. <br/>                                          |
+| <span id="EXPERTSTATUS_STARTING"></span><span id="expertstatus_starting"></span><dl> <dt>**EXPERTSTATUS \_ WIRD GESTARTET**</dt> </dl> | Der Experte beginnt. <br/>                                            |
+| <span id="EXPERTSTATUS_RUNNING"></span><span id="expertstatus_running"></span><dl> <dt>**EXPERTSTATUS \_ WIRD AUSGEFÜHRT**</dt> </dl>    | Der Experte wird normal ausgeführt. <br/>                                    |
+| <span id="EXPERTSTATUS_PROBLEM"></span><span id="expertstatus_problem"></span><dl> <dt>**\_EXPERTSTATUS-PROBLEM**</dt> </dl>    | Ein im SubStatus-Parameter angegebenes Problem hat den Experten beendet. <br/> |
+| <span id="EXPERTSTATUS_ABORTED"></span><span id="expertstatus_aborted"></span><dl> <dt>**EXPERTSTATUS \_ ABGEBROCHEN**</dt> </dl>    | Netzwerkmonitor hat den Experten beendet. <br/>                                |
+| <span id="EXPERTSTATUS_DONE"></span><span id="expertstatus_done"></span><dl> <dt>**EXPERTSTATUS \_ DONE**</dt> </dl>             | Der Experte hat die Analyse erfolgreich abgeschlossen. <br/>                     |
 
 
 
@@ -72,40 +72,40 @@ Aktueller Status der Analyse. Geben Sie einen der folgenden Werte für " [Expert
 
 </dd> <dt>
 
-*Unter Status* \[ in\]
+*SubStatus* \[ In\]
 </dt> <dd>
 
-Erweiterung oder Erläuterung der Informationen, die vom *Status* Parameter bereitgestellt werden.
+Erweiterung oder Erläuterung der vom *Status-Parameter bereitgestellten* Informationen.
 
 </dd> <dt>
 
-*szText* \[ in\]
+*sztext* \[ In\]
 </dt> <dd>
 
-Optionaler Text Status Indikator.
+Optionaler Textstatusindikator.
 
-Dieser Parameterwert kann **null** sein.
+Dieser Parameterwert kann NULL **sein.**
 
 </dd> <dt>
 
-*Prozentuabgeschlossen* \[ vorgenommen\]
+*PercentDone* \[ out\]
 </dt> <dd>
 
-Der Prozentsatz der Erfassungsdaten, die der Experte verarbeitet hat.
+Prozentsatz der Erfassungsdaten, die der Experte verarbeitet hat.
 
-Wenn der Experte die Analyse einer Erfassungs Datei erfolgreich abgeschlossen hat, legt das System den Prozentsatz auf 100 fest. Jede Zahl, die größer als 99 ist, wird ignoriert.
+Wenn der Experte die Analyse einer Erfassungsdatei erfolgreich abgeschlossen hat, legt das System den Prozentsatz auf 100 fest. Jede Zahl, die größer als 99 ist, wird ignoriert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, wird der Rückgabewert nmerr- \_ Experte \_ beendet. der Experte muss sofort bereinigen und zurückkehren, ohne die Erfassung abzuschließen.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert NMERR EXPERT TERMINATE. Der Experte muss sofort bereinigt und zurückkehren, \_ ohne die Erfassung abschließen zu \_ müssen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion "-Funktion" kann nur von Experten aufgerufen werden **, die die** Exportfunktion " [Run](run.md) " oder " [configure](configure.md) " implementieren.
+Die **ExpertIndicateStatus-Funktion** kann nur von Experten aufgerufen werden, die die [Exportfunktion Ausführen](run.md) [oder Konfigurieren](configure.md) implementieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,6 +115,6 @@ Die Funktion "-Funktion" kann nur von Experten aufgerufen werden **, die die** E
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |

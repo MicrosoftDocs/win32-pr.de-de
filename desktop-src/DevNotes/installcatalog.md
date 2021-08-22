@@ -1,7 +1,7 @@
 ---
 description: Installiert einen Katalog in einem Verzeichnis.
 ms.assetid: 9741f8e3-d9db-46cd-886d-587f332b0ab8
-title: Installcatalog-Funktion
+title: InstallCatalog-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - Setupapi.dll
-ms.openlocfilehash: 57b2a9d29b72db6c04673f30f41f26c44701c69c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 240754024135b5bd5aa48529d49080afbdb04e170987102346cdda2c59b12427
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955929"
 ---
-# <a name="installcatalog-function"></a>Installcatalog-Funktion
+# <a name="installcatalog-function"></a>InstallCatalog-Funktion
 
 \[Diese Funktion wird nicht unterstützt und sollte nicht verwendet werden.\]
 
@@ -43,34 +43,34 @@ DWORD InstallCatalog(
 
 <dl> <dt>
 
-*Catalogfullpath* \[ in\]
+*CatalogFullPath* \[ In\]
 </dt> <dd>
 
 Ein Zeiger auf eine Zeichenfolge, die den vollständigen Pfad des Katalogs vor der Installation darstellt.
 
 </dd> <dt>
 
-*Newbasename* \[ in, optional\]
+*NewBaseName* \[ in, optional\]
 </dt> <dd>
 
 Ein Zeiger auf den neuen Basisnamen.
 
 </dd> <dt>
 
-*Newcatalogfullpath* \[ Out, optional\]
+*NewCatalogFullPath* \[ out, optional\]
 </dt> <dd>
 
-Ein Zeiger auf eine Zeichenfolge, die den vollständigen Pfad des Katalogs nach der Installation darstellt.
+Ein Zeiger auf eine Zeichenfolge, die den vollständigen Pfad des Katalogs nach der Installation darstellen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktion ist zurzeit nicht implementiert, sodass Sie keinen tatsächlichen Wert zurückgibt.
+Diese Funktion ist derzeit nicht implementiert und gibt daher keinen tatsächlichen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

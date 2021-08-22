@@ -1,36 +1,36 @@
 ---
-title: Ausführen des asynchronen Aufrufes
-description: Bevor ein asynchroner Remote-Befehl durchgeführt werden kann, muss der Client das asynchrone handle initialisieren. Client-und Serverprogramme verwenden Zeiger auf die RPC- \_ Async- \_ Zustands Struktur für asynchrone Handles.
+title: Ausführen des asynchronen Aufrufs
+description: Bevor ein asynchroner Remoteaufruf ausgeführt werden kann, muss der Client das asynchrone Handle initialisieren. Client- und Serverprogramme verwenden Zeiger auf die RPC \_ ASYNC \_ STATE-Struktur für asynchrone Handles.
 ms.assetid: b40308ef-88ae-4c80-9118-29c5ffee77ad
 keywords:
-- Remote Prozedur Aufruf RPC, Tasks, Ausführen von asynchronen Aufrufen
+- Remoteprozeduraufruf RPC , Aufgaben, asynchrone Aufrufe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fa06f60b43a7dff3a29223ff1d8e9ad726c0e938
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 93d8399071cae6ea39aaac3f966e7e799b2c93b32a152048a7d18282b465f929
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338077"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118928376"
 ---
-# <a name="making-the-asynchronous-call"></a>Ausführen des asynchronen Aufrufes
+# <a name="making-the-asynchronous-call"></a>Ausführen des asynchronen Aufrufs
 
-Bevor ein asynchroner Remote-Befehl durchgeführt werden kann, muss der Client das asynchrone handle initialisieren. Client-und Serverprogramme verwenden Zeiger auf die [**RPC- \_ Async- \_ Zustands**](/windows/desktop/api/Rpcasync/ns-rpcasync-rpc_async_state) Struktur für asynchrone Handles.
+Bevor ein asynchroner Remoteaufruf ausgeführt werden kann, muss der Client das asynchrone Handle initialisieren. Client- und Serverprogramme verwenden Zeiger auf die [**RPC \_ ASYNC \_ STATE-Struktur**](/windows/desktop/api/Rpcasync/ns-rpcasync-rpc_async_state) für asynchrone Handles.
 
-Jeder ausstehende-Rückruf muss über ein eigenes, eindeutiges asynchrones handle verfügen. Der Client erstellt das Handle und übergibt es an die Funktion [**rpcasyncinitializehandle**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasyncinitializehandle) . Damit der-Befehl ordnungsgemäß ausgeführt wird, muss der Client sicherstellen, dass der Arbeitsspeicher für das Handle erst freigegeben wird, wenn die asynchrone Antwort des Servers empfangen wird. Bevor ein anderer asynchroner Handle aufgerufen wird, muss der Client das Handle erneut initialisieren. Wenn dies nicht der Fall ist, kann der Clientstub eine Ausnahme während des Aufrufes auslösen. Außerdem muss der Client sicherstellen, dass die Puffer, die er für \[ [**out**](/windows/desktop/Midl/out-idl) \] -Parameter und \[ [**in**](/windows/desktop/Midl/in)- **out** - \] Parameter für eine asynchrone Remote Prozedur bereitstellt, zugewiesen bleiben, bis er die Antwort vom Server empfangen hat.
+Jeder ausstehende Aufruf muss über ein eigenes eindeutiges asynchrones Handle verfügen. Der Client erstellt das Handle und übergibt es an die [**RpcAsyncInitializeHandle-Funktion.**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasyncinitializehandle) Damit der Aufruf ordnungsgemäß abgeschlossen wird, muss der Client sicherstellen, dass der Arbeitsspeicher für das Handle erst freigegeben wird, wenn er die asynchrone Antwort des Servers empfängt. Außerdem muss der Client das Handle erneut initialisieren, bevor ein weiterer Aufruf für ein vorhandenes asynchrones Handle erfolgt. Wenn dies nicht der Fall ist, kann der Clientstub während des Aufrufs eine Ausnahme auslösen. Der Client muss außerdem sicherstellen, dass die Puffer, die er für out-Parameter und in anfing, einer asynchronen Remoteprozedur zugeordnet bleiben, bis er die Antwort vom \[ [](/windows/desktop/Midl/out-idl) \] Server empfangen \[ [](/windows/desktop/Midl/in)  \] hat.
 
-Wenn eine asynchrone Remote Prozedur aufgerufen wird, muss der Client die Methode auswählen, die von der RPC-Lauf Zeit Bibliothek verwendet wird, um Sie über den Abschluss des Aufrufs zu benachrichtigen. Der Client kann diese Benachrichtigung auf eine der folgenden Arten empfangen:
+Wenn eine asynchrone Remoteprozedur aufgerufen wird, muss der Client die Methode auswählen, die die RPC-Laufzeitbibliothek verwendet, um sie über den Abschluss des Aufrufs zu benachrichtigen. Der Client kann diese Benachrichtigung auf eine der folgenden Arten empfangen:
 
--   Veranstalter. Der Client kann ein Ereignis angeben, das bei Abschluss des Aufrufes ausgelöst werden soll. Weitere Informationen finden Sie unter [Event Objects](/windows/desktop/Sync/event-objects).
--   Abrufvorgang Der Client kann [**rpcasyncgetcallstatus**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasyncgetcallstatus)wiederholt aufrufen. Wenn der Rückgabewert etwas anderes als der RPC-asynchrone \_ \_ \_ Aufruf steht \_ aus, ist der Aufruf abgeschlossen. Diese Methode verwendet mehr CPU-Zeit als die anderen hier beschriebenen Methoden.
--   APC: Der Client kann einen [asynchronen Prozedur Aufruf (APC)](/windows/desktop/Sync/asynchronous-procedure-calls) angeben, der aufgerufen wird, wenn der Aufruf abgeschlossen wird. Informationen zum Prototyp der APC-Funktion finden Sie unter [**rpcnotification- \_ Routine**](/previous-versions/aa375808(v=vs.80)). Der APC wird aufgerufen, wenn der Ereignis Parameter auf rpccallcomplete festgelegt ist. Damit APCs gesendet werden, muss sich der Client Thread in einem wartewartewartestatus befinden.
+-   Ereignis. Der Client kann ein Ereignis angeben, das ausgelöst werden soll, wenn der Aufruf abgeschlossen ist. Weitere Informationen finden Sie unter [Ereignisobjekte.](/windows/desktop/Sync/event-objects)
+-   Abrufvorgang Der Client kann [**rpcAsyncGetCallStatus wiederholt aufrufen.**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasyncgetcallstatus) Wenn der Rückgabewert ein anderer Wert als RPC \_ S \_ ASYNC \_ CALL PENDING \_ ist, ist der Aufruf abgeschlossen. Diese Methode verwendet mehr CPU-Zeit als die anderen hier beschriebenen Methoden.
+-   Apc. Der Client kann einen [asynchronen Prozeduraufruf (APC)](/windows/desktop/Sync/asynchronous-procedure-calls) angeben, der aufgerufen wird, wenn der Aufruf abgeschlossen ist. Den Prototyp der APC-Funktion finden Sie unter [**RPCNOTIFICATION \_ ROUTINE**](/previous-versions/aa375808(v=vs.80)). Der APC wird aufgerufen, dessen Event-Parameter auf RpcCallComplete festgelegt ist. Damit APCs versendet werden können, muss sich der Clientthread in einem wartbaren Wartezustand befindet.
 
-    Wenn das **hThread** -Feld im asynchronen Handle auf 0 festgelegt ist, werden die APCs auf dem Thread in die Warteschlange eingereiht, der den asynchronen-Befehl durchgeführt hat. Wenn Sie ungleich NULL ist, werden die APCs in den durch m angegebenen Thread eingereiht.
+    Wenn das **Feld hThread** im asynchronen Handle auf 0 festgelegt ist, werden die APCs in der Warteschlange des Threads gespeichert, der den asynchronen Aufruf ausgeführt hat. Wenn der Wert ungleich 0 (null) ist, werden die APCs in der Warteschlange für den von m angegebenen Thread gespeichert.
 
--   Bucht. Der e/a-Abschlussport wird mit den im asynchronen handle angegebenen Parametern benachrichtigt. Weitere Informationen finden Sie unter " [**kreateiocompletionport**](/windows/desktop/FileIO/createiocompletionport)".
--   Windows-handle. Eine Nachricht wird an das angegebene Fenster Handle (HWND) gesendet.
+-   Ioc. Der E/A-Abschlussport wird mit den im asynchronen Handle angegebenen Parametern benachrichtigt. Weitere Informationen finden Sie unter [**CreateIoCompletionPort**](/windows/desktop/FileIO/createiocompletionport).
+-   Windows Handle. Eine Nachricht wird an das angegebene Fensterhand handle (HWND) gesendet.
 
-Das folgende Code Fragment zeigt die wesentlichen Schritte, die erforderlich sind, um ein asynchrones Handle zu initialisieren und dieses zum Ausführen eines asynchronen Remote Prozedur Aufrufes zu verwenden.
+Das folgende Codefragment zeigt die wesentlichen Schritte, die erforderlich sind, um ein asynchrones Handle zu initialisieren und es für einen asynchronen Remoteprozeduraufruf zu verwenden.
 
 
 ```C++
@@ -88,13 +88,13 @@ RpcEndExcept
 
 
 
-Wie in diesem Beispiel veranschaulicht, kann Ihr Client Programm synchrone Remote Prozedur Aufrufe ausführen, während ein asynchroner Prozedur Aufruf noch aussteht. Dieser Client erstellt ein Ereignis Objekt für die RPC-Lauf Zeit Bibliothek, das verwendet wird, um es zu benachrichtigen, wenn der asynchrone Aufruf abgeschlossen wird.
+Wie in diesem Beispiel veranschaulicht, kann Ihr Clientprogramm synchrone Remoteprozeduraufrufe ausführen, während ein asynchroner Prozeduraufruf noch aussteht. Dieser Client erstellt ein Ereignisobjekt für die RPC-Laufzeitbibliothek, um es zu benachrichtigen, wenn der asynchrone Aufruf abgeschlossen ist.
 
 > [!Note]  
-> Die Benachrichtigung über den Abschluss wird von einer asynchronen RPC-Routine nicht zurückgegeben, wenn während eines asynchronen Aufrufs eine RPC-Ausnahme ausgelöst wird.
+> Die Abschlussbenachrichtigung wird nicht von einer asynchronen RPC-Routine zurückgegeben, wenn während eines asynchronen Aufrufs eine RPC-Ausnahme ausgelöst wird.
 
- 
+ 
 
- 
+ 
 
- 
+ 

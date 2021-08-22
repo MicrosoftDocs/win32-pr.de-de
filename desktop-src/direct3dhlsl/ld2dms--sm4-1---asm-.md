@@ -1,23 +1,23 @@
 ---
-title: ld2dms (SM 4.1-ASM)
-description: Liest einzelne Beispiele aus zweidimensionalen Multisample-Texturen.
+title: ld2dms (sm4.1 – asm)
+description: Liest einzelne Stichproben aus zweidimensionalen Mehrstichprobentexturen.
 ms.assetid: 8D92BFA8-4B22-46F3-876D-8D84BB3A96E7
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e9dd03b7c07f3fb25294dd0ad6aa382eb203560
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 17d00b3d6cdc3640f0b8d5266bd6dc8fd6dafefaf10cf47b500011cfe952d4ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104101090"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119043788"
 ---
-# <a name="ld2dms-sm41---asm"></a>ld2dms (SM 4.1-ASM)
+# <a name="ld2dms-sm41---asm"></a>ld2dms (sm4.1 – asm)
 
-Liest einzelne Beispiele aus zweidimensionalen Multisample-Texturen.
+Liest einzelne Stichproben aus zweidimensionalen Mehrstichprobentexturen.
 
 
 
-| ld2dms \[ \_ aoffimmi (u, v) \] dest \[ . mask \] , srcaddress \[ . Swizzle \] , srkresource \[ . Swizzle \] , sampleindex (skalare Operand) |
+| ld2dms \[ \_ aoffimmi(u,v) \] dest \[ .mask \] , srcAddress \[ .swizzle \] , srcResource \[ .swizzle \] , sampleIndex (Skalaroperand) |
 |------------------------------------------------------------------------------------------------------------------------|
 
 
@@ -26,77 +26,77 @@ Liest einzelne Beispiele aus zweidimensionalen Multisample-Texturen.
 
 
 
-| Element                                                                                                               | BESCHREIBUNG                                                                                                                |
+| Element                                                                                                               | Beschreibung                                                                                                                |
 |--------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/>                                                    | \[in \] der Adresse des Ergebnis des Vorgangs. <br/>                                                                 |
-| <span id="srcAddress"></span><span id="srcaddress"></span><span id="SRCADDRESS"></span>*srcaddress*<br/>     | \[in \] den Texturkoordinaten, die zum Ausführen des Beispiels erforderlich sind.<br/>                                                    |
-| <span id="srcResource"></span><span id="srcresource"></span><span id="SRCRESOURCE"></span>*srkresource*<br/> | \[in \] einem Textur Register (t \# ), das deklariert werden muss, um zu ermitteln, welche Textur oder welcher Puffer abgerufen werden soll.<br/> |
-| <span id="sampleIndex"></span><span id="sampleindex"></span><span id="SAMPLEINDEX"></span>*Sample Index*<br/> | \[in werden \] die Beispiele zum Lesen aus *srkresource* unterschieden.<br/>                                                       |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/>                                                    | \[in \] Die Adresse des Ergebnisses des Vorgangs. <br/>                                                                 |
+| <span id="srcAddress"></span><span id="srcaddress"></span><span id="SRCADDRESS"></span>*srcAddress*<br/>     | \[in \] Die Texturkoordinaten, die zum Ausführen des Beispiels erforderlich sind.<br/>                                                    |
+| <span id="srcResource"></span><span id="srcresource"></span><span id="SRCRESOURCE"></span>*srcResource*<br/> | \[in \] einem Texturregister (t \# ), das deklariert worden sein muss, um die Textur oder den Puffer zu identifizieren, aus der abgerufen werden soll.<br/> |
+| <span id="sampleIndex"></span><span id="sampleindex"></span><span id="SAMPLEINDEX"></span>*sampleIndex*<br/> | \[in \] Idendifies the samples to read from *srcResource*.<br/>                                                       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung ist eine vereinfachte Alternative zur [Beispiel](sample--sm4---asm-.md) Anweisung. Er ruft Daten aus der angegebenen Textur ohne Filter (z. b. Punkt Stichproben) mithilfe der angegebenen Ganzzahl *srcaddress* und *sampleindex* ab.
+Diese Anweisung ist eine vereinfachte [](sample--sm4---asm-.md) Alternative zur Beispielanweisung. Sie ruft Daten aus der angegebenen Textur ohne Filterung (z. B. Punktsampling) mithilfe der bereitgestellten ganzzahligen *Werte srcAddress* und *sampleIndex* ab.
 
-*srcaddress* bietet den Satz von Texturkoordinaten, die zum Ausführen des Beispiels in Form von Ganzzahlen ohne Vorzeichen benötigt werden. Wenn *srcaddress* außerhalb des Bereichs \[ 0... liegt ( \# texeln in Dimension-1) \] , **ld2dms** gibt immer 0 (null) in allen Komponenten zurück, die im Format der Ressource vorhanden sind, und die Standardwerte (0, 0, 0, 1.0 f/0x00000001) für fehlende Komponenten.
+*srcAddress* stellt den Satz von Texturkoordinaten bereit, die zum Ausführen der Stichprobe in Form von ganzzahligen Zahlen ohne Vorzeichen erforderlich sind. Wenn *srcAddress* den Bereich \[ 0... ( \# Texel in Dimension -1) \] , **ld2dms** gibt immer 0 in allen Komponenten zurück, die im Format der Ressource vorhanden sind, und Standardwerte (0,0,0,1,0f/0x00000001) für fehlende Komponenten.
 
-*sampleingedex* muss kein Literalwert sein. Der Zähler für mehrere Stichproben muss nicht für die Textur Ressource angegeben werden, und er kann mit tiefen-oder Schablonen Ansichten verwendet werden.
+*sampleIndex* muss kein Literal sein. Die Anzahl mehrerer Stichproben muss nicht für die Texturressource angegeben werden und funktioniert mit Tiefen- oder Schablonenansichten.
 
-Eine Anwendung, die eine flexiblere Kontrolle über das Adress Verhalten außerhalb des gültigen Bereichs hat, sollte stattdessen die **Beispiel** Anweisung verwenden, da Sie das als samplerzustand definierte Adress Umbruch-/Spiegelungs-/einspannen/Rahmen Verhalten berücksichtigt.
+Eine Anwendung, die eine flexiblere Kontrolle über das Adressverhalten außerhalb des Bereichs wünschen, sollte stattdessen die Beispielanweisung verwenden, da sie das als Samplerzustand definierte Verhalten von Adressumbruch/Spiegelung/Klammer/Rahmen berücksichtigt. 
 
-*srcaddress. b* (Post-Swizzle) wird für Texture2Ds ignoriert. , Wenn der Wert außerhalb des Bereichs der verfügbaren Array Indizes \[ 0 (null) liegt. Array Größe-1) \] , dann gibt **ld2dms** immer 0 (null) in allen Komponenten zurück, die im Format der Ressource vorhanden sind, und die Standardwerte (0, 0, 0, 1.0 f/0x00000001) für fehlende Komponenten.
+*srcAddress.b* (post-swizzle) wird für Texture2Ds ignoriert. Wenn der Wert außerhalb des Bereichs der verfügbaren Arrayindizes \[ liegt, 0...( array size-1) \] , dann gibt **ld2dms** immer 0 in allen Komponenten zurück, die im Format der Ressource vorhanden sind, und standardwertt (0,0,0,1,0f/0x00000001) für fehlende Komponenten.
 
-Für Texture2D Arrays stellt *srcaddress. b* (Post-Swizzle) den Array Index bereit. Es hat das gleiche Verhalten wie Texture2D.
+Für Texture2D-Arrays stellt *srcAddress.b* (post-swizzle) den Arrayindex bereit. Oherwise hat das gleiche Verhalten wie Texture2D.
 
-*srcaddress. a* (Post-Swizzle) wird immer ignoriert. Der HLSL-Compiler gibt nichts an dieser Ausgabe aus.
+*srcAddress.a* (post-swizzle) wird immer ignoriert. Der HLSL-Compiler gibt dort nie etwas aus.
 
-*srkresource* ist ein Textur Register (t \# ), das deklariert werden muss (22.3.11), und identifiziert, welche Textur abgerufen werden soll.
+*srcResource* ist ein Texturregister (t \# ), das deklariert worden sein muss (22.3.11), das angibt, von welcher Textur abgerufen werden soll.
 
-Wenn Sie von t abrufen \# , an das nichts gebunden ist, wird 0 für alle Komponenten zurückgegeben.
+Beim Abrufen von aus \# t, an das nichts gebunden ist, wird für alle Komponenten 0 zurückgegeben.
 
-### <a name="address-offset"></a>Adress Offset
+### <a name="address-offset"></a>Adressoffset
 
-Das optionale \[ \_ aoffimmi (u, v, w)- \] Suffix (Address Offset by immediate Integer) gibt an, dass die Texturkoordinaten für die **ld2dms** durch eine Menge von bereitgestellten ganzzahligen ganzzahligen Werten für den unmittelbaren texspace versetzt werden. Bei den Literalwerten handelt es sich um einen Satz von 4 Bit 2-Komplement Nummern mit einem ganzzahligen Bereich von \[ 8, 7 \] .
+Das optionale \[ \_ Suffix aoffimmi(u,v,w) \] (Adressoffset durch sofortige ganzzahlige Zahl) gibt an, dass die Texturkoordinaten für die **ld2dms** durch einen Satz von angegebenen unmittelbaren integer-Werten für den Texelraum versetzt werden sollen. Die Literalwerte sind eine Gruppe von Komplementzahlen von 4 Bit 2 mit einem ganzzahligen Bereich \[ von -8,7 \] .
 
-Die Offsets werden den Texturkoordinaten in texspace hinzugefügt.
+Die Offsets werden den Texturkoordinaten im Texelbereich hinzugefügt.
 
-Adress Offsets werden nicht an der Array Achse von Texture1D/2D-Arrays angewendet.
+Adressoffsets werden nicht entlang der Arrayachse von Texture1D/2D-Arrays angewendet.
 
-Die Komponenten " *\_ aoffimmi v" und "w* " werden bei Texture1Ds ignoriert.
+Die Komponenten *\_ aoffimmi v,w* werden für Texture1Ds ignoriert.
 
-Die Komponente " *\_ aoffimmi w* " wird für Texture2Ds ignoriert.
+Die *\_ Komponente aoffimmi w* wird für Texture2Ds ignoriert.
 
-Da die Texturkoordinaten für **ld2dms** eine ganze Zahl ohne Vorzeichen sind, wird der Offset, wenn der Offset bewirkt, dass die Adresse unter 0 (null) wechselt, in eine große Adresse umschlossen und einen Out-of-Limit-Zugriff zur Folge hat, wie z. b. **LD** gibt 0 (null) in allen Komponenten zurück, die im Format der Ressource vorhanden sind
+Da die Texturkoordinaten für **ld2dms** ganze Zahlen ohne Vorzeichen sind und der Offset bewirkt, dass die Adresse unter 0 (null) fällt, wird sie mit einer großen Adresse umbrochen und führt zu einem Zugriff außerhalb der Grenzen, der wie **ld** in allen Komponenten im Format der Ressource 0 zurückgibt, und die Standardwerte (0,0,0,1,0f/0x00000001) für fehlende Komponenten.
 
-### <a name="sample-number"></a>Stichproben Nummer
+### <a name="sample-number"></a>Beispielnummer
 
-**ld2dms** ist für die Verwendung in einer beliebigen Ressource verfügbar. **ld2dms** arbeitet mit Ausnahme von 2D-Multisample-Ressourcen identisch mit **LD** , indem der zusätzliche (0-basierte) *sampleindex* -Operand verwendet wird, um zu ermitteln, welches Beispiel aus der Ressource gelesen werden soll.
+**ld2dms** steht für jede Ressource zur Verfügung. **ld2dms** funktioniert mit ausnahme von 2D-Multisampleressourcen identisch mit **ld,** indem der zusätzliche (0-basierte) *sampleIndex-Operand* verwendet wird, um zu identifizieren, welches Beispiel aus der Ressource gelesen werden soll.
 
-Das Ergebnis der Angabe eines *samplindex* , der die Anzahl der Stichproben in der Ressource überschreitet, ist nicht definiert, aber es können keine Daten außerhalb des Adressraums des Geräte Kontexts zurückgegeben werden.
+Das Ergebnis der Angabe eines *sampleIndex,* der die Anzahl der Stichproben in der Ressource überschreitet, ist nicht definiert, kann jedoch keine Daten außerhalb des Adressraums des Gerätekontexts zurückgeben.
 
-### <a name="return-type-control"></a>Rückgabe-typsteuer Element
+### <a name="return-type-control"></a>Rückgabetyp-Steuerelement
 
-Das Datenformat, das von **ld2dms** an das Ziel Register zurückgegeben wird, wird auf die gleiche Weise wie für die **Beispiel** Anweisung festgelegt. Sie basiert auf dem Format, das an den *srkresource* -Parameter (t) gebunden ist \# .
+Das datenformat, das von **ld2dms** an das Zielregister zurückgegeben wird, wird auf die gleiche Weise bestimmt wie für die Beispielanweisung beschrieben.  Sie basiert auf dem Format, das an den *srcResource-Parameter* (t) gebunden \# ist.
 
-Wie bei der **Beispiel** Anweisung sind die zurückgegebenen Werte für **ld2dms** 4 Vektoren mit Format spezifischen Standardwerten für Komponenten, die nicht im-Format vorhanden sind. Der Wert für " *srkresource* " hängt davon ab, wie das aus der Textur Auslastung zurückgegebene Ergebnis der 4-Komponente durch die Verwendung von ". Mask" unter " *dest* " bestimmt wird, welche Komponenten in *dest* aktualisiert werden.
+Wie bei  der Beispielanweisung sind die zurückgegebenen Werte für **ld2dms** vier Vektoren mit formatspezifischen Standardwerten für Komponenten, die nicht im -Format vorhanden sind. Die Swizzle auf *srcResource* bestimmt, wie das Ergebnis mit vier Komponenten aus der Texturlast swizzle wird. Danach bestimmt .mask on *dest,* welche Komponenten in *dest* aktualisiert werden.
 
-Wenn ein 32-Bit-Float-Wert von **ld2dms** in ein 32-Bit-Register gelesen wird, sind die Bits unverändert. Das heißt, die DENORMAL-Werte bleiben DENORMAL. Dies ist anders als bei der **Beispiel** Anweisung.
+Wenn ein 32-Bit-Gleitkommawert von **ld2dms** in ein 32-Bit-Register gelesen wird, bleiben die Bits unverändert. Das heißt, denormale Werte bleiben denormal. Dies unterscheidet  sich von der Beispielanweisung.
 
 ### <a name="miscellaneous-details"></a>Sonstige Details
 
-Da dieser Anweisung keine Filterung zugeordnet ist, gelten keine Konzepte wie Lod-Bias. Dementsprechend gibt es keinen *Sampler \#* -Parameter.
+Da dieser Anweisung keine Filterung zugeordnet ist, gelten Konzepte wie LOD-Voreingenommenheit nicht. Entsprechend gibt es keinen *\# Sampler-s-Parameter.*
 
 ### <a name="restrictions"></a>Beschränkungen
 
--   *srkresource* muss ein t \# -Register und kein texturecube, Texture1D oder Texture1DArray sein. *srkresource* kann kein constantbuffer-Wert sein, der nicht an t-Register gebunden werden kann \# .
--   Die relative Adressierung in *srkresource* ist nicht zulässig.
--   *srcaddress* und *sampleindex* müssen ein Temp-(r \# /x \# ), konstantes (CB \# ) oder Eingabe (v \# )-Register sein.
--   *dest* muss ein Temp-(r \# /x \# ) oder Output (o \* \# )-Register sein.
+-   *srcResource* muss ein t \# register und kein TextureCube, Texture1D oder Texture1DArray sein. *srcResource* kann kein ConstantBuffer sein, der nicht an t-Register gebunden werden \# kann.
+-   Die relative Adressierung für *srcResource* ist nicht zulässig.
+-   *srcAddress* und *sampleIndex* müssen ein temp-Register (r \# /x), eine Konstante \# (cb) oder ein \# Eingaberegister \# (v) sein.
+-   *dest* muss ein temp-Register (r \# \# /x) oder eine Ausgabe (o ) \* \# sein.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -108,20 +108,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -131,7 +131,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

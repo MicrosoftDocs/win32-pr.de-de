@@ -1,9 +1,9 @@
 ---
-title: Gatherblue (S, float, int2, int2, int2, int2)-Funktion (HLSL-Referenz)
-description: Gibt die blauen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden. | Gatherblue (S, float, int2, int2, int2, int2)-Funktion (HLSL-Referenz)
+title: GatherBlue(S,float,int2,int2,int2,int2)-Funktion (HLSL-Referenz)
+description: Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden. | GatherBlue(S,float,int2,int2,int2,int2)-Funktion (HLSL-Referenz)
 ms.assetid: 0DDD3235-4F12-4D74-975A-F70A271C1FC0
 keywords:
-- Gatherblue-Funktion HLSL
+- GatherBlue-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a5676d9d6b25c6e67123c59dac14efa234386d4e
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 8d23ae18d403f83145b5746fa33b56fbadb9ea5d9a4b3f5b3ca79e13e5da7eb4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119043658"
 ---
-# <a name="gatherbluesfloatint2int2int2int2-function-hlsl-reference"></a>Gatherblue (S, float, int2, int2, int2, int2)-Funktion (HLSL-Referenz)
+# <a name="gatherbluesfloatint2int2int2int2-function-hlsl-reference"></a>GatherBlue(S,float,int2,int2,int2,int2)-Funktion (HLSL-Referenz)
 
-Gibt die blauen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.
+Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,72 +47,72 @@ TemplateType GatherBlue(
 *S* \[ in\]
 </dt> <dd>
 
-Typ: **samplerstate**
+Typ: **SamplerState**
 
-Der null basierte samplerindex.
+Der nullbasierte Samplerindex.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Die Beispiel Koordinaten (u, v).
+Die Beispielkoordinaten (u,v).
 
 </dd> <dt>
 
-*Offset1* \[ in\]
+*Offset1* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die erste Offset-Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die erste Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset2* \[ in\]
+*Offset2* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die zweite Offset Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die zweite Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset3* \[ in\]
+*Offset3* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die dritte Offset Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die dritte Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset4* \[ in\]
+*Offset4* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die vierte Offset-Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die vierte Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **TemplateType**
+Typ: **TemplateType**
 
-Ein vier komponentenwert, dessen Typ mit dem Vorlagentyp identisch ist.
+Ein Wert mit vier Komponenten, dessen Typ mit dem Vorlagentyp identisch ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Textur Beispiele können für bilineare Interpolationen verwendet werden.
+Die Texturbeispiele können für die bilineare Interpolation verwendet werden.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -120,11 +120,11 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Gatherblue-Methoden](texture2darray-gatherblue.md)
+[GatherBlue-Methoden](texture2darray-gatherblue.md)
 </dt> </dl>
 
  

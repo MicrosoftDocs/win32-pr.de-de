@@ -1,46 +1,46 @@
 ---
-description: Smartcardauthentifizierung
+description: Smartcard-Authentifizierung
 ms.assetid: cb5c80ea-c15e-4f68-a94b-b458d69ff474
-title: Smartcardauthentifizierung
+title: Smartcard-Authentifizierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6241d323f4c5e982fee96f44002da316d5d645d8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 78bccfa9e762c137e332c26b5375584658c22718d336800b6dc73cf056ebde1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118918006"
 ---
-# <a name="smart-card-authentication"></a>Smartcardauthentifizierung
+# <a name="smart-card-authentication"></a>Smartcard-Authentifizierung
 
-Die grundlegenden Teile des [*Smartcard-Subsystems*](../secgloss/s-gly.md) basieren auf PCs/SC-Standards (siehe Spezifikationen unter [https://www.pcscworkgroup.com/](https://www.pcscworkgroup.com/) ). Diese grundlegenden Teile umfassen Folgendes:
+Die grundlegenden Teile des [*Smartcard-Subsystems*](../secgloss/s-gly.md) basieren auf PC/SC-Standards (siehe Spezifikationen unter [https://www.pcscworkgroup.com/](https://www.pcscworkgroup.com/) ). Zu diesen grundlegenden Teilen gehören:
 
--   Ein [*Ressourcen-Manager*](../secgloss/r-gly.md) , der eine Windows-API verwendet.
--   Eine [*Benutzeroberfläche*](../secgloss/u-gly.md) (UI), die mit dem Ressourcen-Manager verwendet werden kann.
--   Mehrere Basis [*Dienstanbieter*](../secgloss/s-gly.md) , die Zugriff auf bestimmte Dienste ermöglichen. Im Gegensatz zur Windows-API des Ressourcen-Managers verwenden Dienstanbieter ein COM-Schnittstellen Modell, um [*smartcarddienste*](../secgloss/s-gly.md) bereitzustellen.
+-   Ein [*Ressourcen-Manager,*](../secgloss/r-gly.md) der eine Windows-API verwendet.
+-   Eine [*Benutzeroberfläche,*](../secgloss/u-gly.md) die mit dem Ressourcen-Manager funktioniert.
+-   Mehrere [*Basisdienstanbieter,*](../secgloss/s-gly.md) die Zugriff auf bestimmte Dienste bereitstellen. Im Gegensatz zur Windows-API des Ressourcen-Managers verwenden Dienstanbieter ein COM-Schnittstellenmodell, um [*Smartcarddienste*](../secgloss/s-gly.md) bereitzustellen.
 
-Die folgende Abbildung zeigt die Beziehungen dieser Teile in der gesamten smartcardarchitektur.
+Die folgende Abbildung zeigt die Beziehungen dieser Teile in der gesamten Smartcardarchitektur.
 
-![smartcardarchitektur](images/smartovr2a.png)
+![Smartcardarchitektur](images/smartovr2a.png)
 
-Informationen dazu, wie das [*Smartcard-Subsystem*](../secgloss/s-gly.md) mit anderen im Microsoft Internet Security Framework verfügbaren Diensten funktioniert, finden [Sie unter Relation zu anderen Diensten](relation-to-other-services.md).
+Informationen zur Funktionsweise des [*Smartcardsubsystems*](../secgloss/s-gly.md) mit anderen Diensten, die im Microsoft Internet Security Framework verfügbar sind, finden Sie unter [Beziehung zu anderen Diensten.](relation-to-other-services.md)
 
-Informationen zur Smartcardauthentifizierung finden Sie in den folgenden Themen.
+Informationen zur Smartcard-Authentifizierung finden Sie in den folgenden Themen.
 
 
 
 | Themen                                                                      | Inhalte                                                                                                                                                                                                                                           |
 |-----------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Smartcardkonzepte](smart-card-concepts.md)<br/>                   | Grundlegende Konzepte und Beschreibungen der Interaktion zwischen Benutzern und Smartcards.<br/>                                                                                                                                                        |
-| [Smartcard-Ressourcen-Manager](smart-card-resource-manager.md)<br/>   | Informationen zur Resource Manager-API, die den Zugriff auf [*Leser*](../secgloss/r-gly.md) und [*Smartcards*](../secgloss/s-gly.md)verwaltet.<br/> |
-| [Smartcard-Benutzeroberfläche](smart-card-user-interface.md)<br/>       | Informationen zum [*Dialogfeld "Smartcard-allgemein*](../secgloss/s-gly.md)".<br/>                                                                                   |
-| [Smartcarddienstanbieter](smart-card-service-providers.md)<br/> | Informationen zu Schnittstellen, Befehlen und Wrappern, die Smartcardfunktionen bereitstellen.<br/>                                                                                                                                              |
+| [Smartcardkonzepte](smart-card-concepts.md)<br/>                   | Grundlegende Konzepte und Beschreibung der Interaktion zwischen Benutzern und Smartcards.<br/>                                                                                                                                                        |
+| [Smartcard-Resource Manager](smart-card-resource-manager.md)<br/>   | Informationen zur Resource Manager-API, die den Zugriff auf [*Leser*](../secgloss/r-gly.md) und [*Smartcards*](../secgloss/s-gly.md)verwaltet.<br/> |
+| [Smartcard-Benutzeroberfläche](smart-card-user-interface.md)<br/>       | Informationen zum [*allgemeinen Smartcarddialogfeld*](../secgloss/s-gly.md).<br/>                                                                                   |
+| [Smartcard-Dienstanbieter](smart-card-service-providers.md)<br/> | Informationen zu Schnittstellen, Befehlen und Wrappern, die Smartcardfunktionen bereitstellen.<br/>                                                                                                                                              |
 
 
 
  
 
-Darüber hinaus finden Sie aktuelle Microsoft-smartcardentwicklungen unter [https://www.microsoft.com/whdc/device/input/smartcard/default.mspx](https://www.microsoft.com/whdc/device/input/smartcard/default.mspx) .
+Darüber hinaus finden Sie die aktuellen Entwicklungen bei Microsoft-Smartcards unter [https://www.microsoft.com/whdc/device/input/smartcard/default.mspx](https://www.microsoft.com/whdc/device/input/smartcard/default.mspx) .
 
  
 

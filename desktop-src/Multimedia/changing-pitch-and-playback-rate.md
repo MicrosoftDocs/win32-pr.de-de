@@ -1,53 +1,53 @@
 ---
-title: Ändern der Tonhöhe und der Wiedergabe Rate
-description: Ändern der Tonhöhe und der Wiedergabe Rate
+title: Ändern der Tonhöhe und Wiedergaberate
+description: Ändern der Tonhöhe und Wiedergaberate
 ms.assetid: f0f5249b-ae2a-4f17-80ee-575f9f7963a7
 keywords:
-- Wellenform-Audiodaten, Tonhöhe
+- Waveform-Audio, Tonhöhe
 - Waveform-Audioschnittstelle, Tonhöhe
-- Wellenform-Audiodatei, Wiedergabe Rate
-- Waveform-Audioschnittstelle, Wiedergabe Rate
-- Wellenform-Audiodaten, Ändern der Tonhöhe
-- Waveform-Audioschnittstelle, Ändern der Tonhöhe
-- Wellenform-Audiodatei, Ändern der Wiedergabe Rate
-- Waveform-Audioschnittstelle, Ändern der Wiedergabe Rate
-- Ändern der Geschwindigkeit der Waveform-Audiowiedergabe
-- Ändern der Waveform-audiotonhöhe
+- Waveform-Audio, Wiedergaberate
+- Waveform-Audioschnittstelle, Wiedergaberate
+- Waveform-Audio, Ändern der Tonhöhe
+- Waveform-Audio-Schnittstelle, Ändern der Tonhöhe
+- Waveform-Audio, Ändern der Wiedergaberate
+- Waveform-Audioschnittstelle, Ändern der Wiedergaberate
+- Ändern der Wiedergaberate von Waveform-Audio
+- Ändern der Tonhöhe von Waveform-Audio
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 99eec4e29ec1c38cddb5a5f92f27643e2c9c3e6c
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 006788c286476434a7ca2a3d5b79dbd6c4d8af431d74ffb4a00e03a7357777f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104473124"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118941278"
 ---
-# <a name="changing-pitch-and-playback-rate"></a>Ändern der Tonhöhe und der Wiedergabe Rate
+# <a name="changing-pitch-and-playback-rate"></a>Ändern der Tonhöhe und Wiedergaberate
 
-Einige Waveform-Audioausgabegeräte können die Tonhöhe und die Wiedergabe Rate von Waveform-Audiodaten variieren. Nicht alle Waveform-Audiogeräte unterstützen Änderungen an der Tonhöhe und der Wiedergabe Rate. Informationen dazu, wie Sie feststellen können, ob ein bestimmtes Waveform-Audiogerät Änderungen an der Tonhöhe und Wiedergabe Rate unterstützt, finden Sie unter [Geräte und Datentypen](devices-and-data-types.md).
+Einige Waveform-Audio-Ausgabegeräte können die Tonhöhe und die Wiedergaberate von Waveform-Audiodaten variieren. Nicht alle Waveform-Audiogeräte unterstützen Änderungen an Tonhöhe und Wiedergaberate. Informationen dazu, wie Sie bestimmen können, ob ein bestimmtes Waveform-Audio-Gerät Änderungen an Tonhöhe und Wiedergaberate unterstützt, finden Sie unter [Geräte und Datentypen.](devices-and-data-types.md)
 
-Die Unterschiede zwischen dem Ändern der Tonhöhe und der Wiedergabe Rate lauten wie folgt:
+Die Unterschiede zwischen der Änderung der Tonhöhe und der Wiedergaberate lauten wie folgt:
 
--   Das Ändern der Wiedergabe Rate wird vom Gerätetreiber durchgeführt, und es ist keine spezielle Hardware erforderlich. Die Samplingrate wird nicht geändert, aber der Treiber interpoliert, indem er Beispiele übersprungen oder synthegiert. Wenn die Wiedergabe Rate z. b. um den Faktor 2 geändert wird, überspringt der Treiber alle anderen Stichproben.
--   Zum Ändern der Tonhöhe ist spezielle Hardware erforderlich. Die Wiedergabe Rate und die Stichprobenrate werden nicht geändert.
+-   Die Wiedergaberate wird vom Gerätetreiber geändert und erfordert keine spezielle Hardware. Die Abtastrate wird nicht geändert, aber der Treiber interpoliert, indem Stichproben übersprungen oder synthetisiert werden. Wenn die Wiedergaberate beispielsweise um den Faktor 2 geändert wird, überspringt der Treiber alle anderen Stichproben.
+-   Zum Ändern der Tonhöhe ist spezielle Hardware erforderlich. Die Wiedergaberate und die Abtastrate werden nicht geändert.
 
-Windows stellt die folgenden Funktionen zum Abfragen und Festlegen von Waveform-Audiodarstellung und Wiedergabe Raten bereit.
+Windows stellt die folgenden Funktionen zum Abfragen und Festlegen von Waveform-Audio-Tonhöhe und Wiedergaberaten zur Verfügung.
 
 
 
-| Funktion                                                 | BESCHREIBUNG                                                                 |
+| Funktion                                                 | Beschreibung                                                                 |
 |----------------------------------------------------------|-----------------------------------------------------------------------------|
-| [**waveoutgetpitch**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutgetpitch)               | Ruft die Tonhöhe für das angegebene Waveform-Audioausgabegerät ab.         |
-| [**waveoutgetplaybackrate**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutgetplaybackrate) | Ruft die Wiedergabe Rate für das angegebene Waveform-Audioausgabegerät ab. |
-| [**waveoutsetpitch**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutsetpitch)               | Legt die Tonhöhe für das angegebene Waveform-Audioausgabegerät fest.              |
-| [**waveoutsetplaybackrate**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutsetplaybackrate) | Legt die Wiedergabe Rate für das angegebene Waveform-Audioausgabegerät fest.      |
+| [**waveOutGetPitch**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutgetpitch)               | Ruft die Tonhöhe für das angegebene Waveform-Audio-Ausgabegerät ab.         |
+| [**waveOutGetPlaybackRate**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutgetplaybackrate) | Ruft die Wiedergaberate für das angegebene Waveform-Audio-Ausgabegerät ab. |
+| [**waveOutSetPitch**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutsetpitch)               | Legt die Tonhöhe für das angegebene Waveform-Audio-Ausgabegerät fest.              |
+| [**waveOutSetPlaybackRate**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutsetplaybackrate) | Legt die Wiedergaberate für das angegebene Waveform-Audio-Ausgabegerät fest.      |
 
 
 
- 
+ 
 
-Die Tonhöhe und die Wiedergabe Raten werden um einen Faktor geändert, der durch eine in einen Double Word-Wert gepackte fest Komma Zahl angegeben ist. Die oberen 16 Bits geben den ganzzahligen Teil der Zahl an. die unteren 16 Bits geben den Bruch Teil an. Beispielsweise wird der Wert 1,5 als 0x00018000l dargestellt. Der Wert 0,75 wird als 0x0000c000l dargestellt. Der Wert 1,0 (0x00010000 bis) bedeutet, dass die Tonhöhe oder Wiedergabe Rate unverändert ist.
+Die Tonhöhen- und Wiedergaberaten werden durch einen Faktor geändert, der mit einer festen Punktzahl angegeben wird, die in einen Doublewordwert gepackt ist. Die oberen 16 Bits geben den ganzzahligen Teil der Zahl an. Die unteren 16 Bits geben den Bruchteil an. Beispielsweise wird der Wert 1.5 als 0x00018000L dargestellt. Der Wert 0,75 wird als 0x0000C000L dargestellt. Der Wert 1,0 (0x00010000) bedeutet, dass die Tonhöhe oder Wiedergaberate unverändert bleibt.
 
- 
+ 
 
- 
+ 

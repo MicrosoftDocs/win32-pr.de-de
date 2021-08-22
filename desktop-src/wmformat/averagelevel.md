@@ -1,9 +1,9 @@
 ---
-title: Averagelevel
-description: Das averagelevel-Attribut enthält einen 16-Bit-Amplitude-Wert, der die durchschnittliche Volumeebene von Audioinhalten festlegt.
+title: AverageLevel
+description: Das AverageLevel-Attribut enthält einen 16-Bit-Amplitudenwert, der die durchschnittliche Lautstärke des Audioinhalts bezeichnet.
 ms.assetid: e6270ac8-5de3-4dee-824c-ba25fdd272c8
 keywords:
-- Averagelevel-Windows Media-Format
+- AverageLevel-Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,30 +12,30 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 632379e42fa6c64e44018173b9d40340add4ee61
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 7fd8745c5983eca67a02506b6cdeeabaca0a61a4c3f8b2a6993a73359d87adba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037963"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119028158"
 ---
-# <a name="averagelevel"></a>Averagelevel
+# <a name="averagelevel"></a>AverageLevel
 
-Das **averagelevel** -Attribut enthält einen 16-Bit-Amplitude-Wert, der die durchschnittliche Volumeebene von Audioinhalten festlegt. Mit " [**Peer Value**](peakvalue.md)" wird dieses Attribut für die Normalisierung verwendet. Normalisierung ist der Prozess, bei dem die Wiedergabe Volume-Ebene von Audiodateien angepasst wird, sodass die laugsten Teile der Dateien wiedergegeben werden, die auf derselben Ebene wiedergegeben werden, und das durchschnittliche Volume.
+Das **AverageLevel-Attribut** enthält einen 16-Bit-Amplitudenwert, der die durchschnittliche Lautstärke des Audioinhalts bezeichnet. Mit [**PeakValue**](peakvalue.md)wird dieses Attribut für die Normalisierung verwendet. Bei der Normalisierung wird die Wiedergabevolumenebene von Audiodateien so angepasst, dass die lautesten Teile der Dateien auf der gleichen Ebene und die durchschnittliche Lautstärke für jede Datei identisch sind.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszaveragelevel
+g \_ wszAverageLevel
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT- \_ Typ \_ DWORD**
+**WMT \_ TYPE \_ DWORD**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird durch das Writer-Objekt auf der Grundlage von Informationen aus dem Codec festgelegt. Nur mit einem der Windows Media Audio Codecs komprimierte Streams haben einen automatisch festgelegten Wert.
+Dieses Attribut wird vom Writer-Objekt basierend auf Informationen aus dem Codec festgelegt. Nur Streams, die mit einem der Windows Medienaudiocodecs komprimiert sind, verfügen über einen automatisch festgelegten Wert.
 
-**Averagelevel** ist nicht schreibgeschützt. Wenn die Datei jedoch vom Windows-Media Player abgespielt wird, sollten Sie diesen Wert nicht ändern. Der Windows-Media Player verwendet diese, um die Ebenen von Dateien in einer Wiedergabeliste zu normalisieren.
+**AverageLevel** ist nicht schreibgeschützt. Wenn die Datei jedoch vom -Windows Media Player abgespielt wird, sollten Sie diesen Wert nicht ändern. Die Windows Media Player verwendet diese zum Normalisieren der Ebenen von Dateien in einer Wiedergabeliste.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -44,9 +44,9 @@ Dieses Attribut wird durch das Writer-Objekt auf der Grundlage von Informationen
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

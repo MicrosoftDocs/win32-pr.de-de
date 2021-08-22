@@ -1,31 +1,31 @@
 ---
-description: Eine Anlage-Snap-in-Erweiterung bietet eine Schnittstelle, mit der Benutzer Dienst spezifische Konfigurationseinstellungen ändern können.
+description: Eine Erweiterung für das Anfüge-Snap-In stellt eine Schnittstelle bereit, die Benutzer verwenden können, um dienstspezifische Konfigurationseinstellungen zu ändern.
 ms.assetid: 6f2dc372-dee4-4793-b943-395c0587ed5e
-title: Erstellen einer Anlagen-Snap-in-Erweiterung
+title: Erstellen einer Erweiterung für das Anfüge-Snap-In
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 513c982acc7e5285f3b4d1510f18b7eb6c9fe1d9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e1a4cd4ccecf7fba6e33062fd2bb4df810316f2d66d42165ca207d855a14f961
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347712"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118894830"
 ---
-# <a name="creating-an-attachment-snap-in-extension"></a>Erstellen einer Anlagen-Snap-in-Erweiterung
+# <a name="creating-an-attachment-snap-in-extension"></a>Erstellen einer Erweiterung für das Anfüge-Snap-In
 
-Eine Anlage-Snap-in-Erweiterung bietet eine Schnittstelle, mit der Benutzer Dienst spezifische Konfigurationseinstellungen ändern können. Die Erweiterungs-Snap-in-Erweiterung muss die MMC-Anforderungen erfüllen, damit Sie eine gültige Snap-in-Erweiterung ist. Weitere Informationen zu diesen Anforderungen finden Sie in der Dokumentation zur [Microsoft Management Console](/previous-versions/windows/desktop/mmc/microsoft-management-console-start-page) .
+Eine Erweiterung für das Anfüge-Snap-In stellt eine Schnittstelle bereit, die Benutzer verwenden können, um dienstspezifische Konfigurationseinstellungen zu ändern. Die Erweiterung für das Anfüge-Snap-In muss die MMC-Anforderungen erfüllen, um eine gültige Snap-In-Erweiterung zu sein. Weitere Informationen zu diesen Anforderungen [](/previous-versions/windows/desktop/mmc/microsoft-management-console-start-page) finden Sie in der Microsoft Management Console-Dokumentation.
 
-Zusätzlich zu den von der MMC benötigten Schnittstellen muss die COM-Schnittstelle " [**iscesvplattachmentpersistinfo**](/windows/desktop/api/Scesvc/nn-scesvc-iscesvcattachmentpersistinfo)" implementiert werden. Mit den Sicherheits Konfigurations-Snap-Ins werden Methoden dieser Schnittstelle aufgerufen, um zu bestimmen, ob die Konfigurationsdaten geändert wurden, und wenn ja, um die Sicherheitsdatenbank zu aktualisieren. Das Anlagen-Snap-in muss alle Konfigurationsänderungen speichern, bis die Sicherheits Konfigurations-Snap-ins diese Daten abrufen.
+Zusätzlich zu den schnittstellen, die für MMC erforderlich sind, muss eine Erweiterung für das Anfügen die COM-Schnittstelle [**ISceSvcAttachmentPersistInfo**](/windows/desktop/api/Scesvc/nn-scesvc-iscesvcattachmentpersistinfo)implementieren. Die Sicherheitskonfigurations-Snap-Ins rufen Methoden dieser Schnittstelle auf, um zu bestimmen, ob sich die Konfigurationsdaten geändert haben, und wenn ja, um die Sicherheitsdatenbank zu aktualisieren. Das Anlagen-Snap-In muss alle Konfigurationsänderungen speichern, bis die Sicherheitskonfigurations-Snap-Ins diese Daten abrufen.
 
-Eine Anlage-Snap-in-Erweiterung muss die folgenden Funktionen bereitstellen:
+Eine Erweiterung für das Anfüge-Snap-In muss die folgenden Funktionen bereitstellen:
 
--   [Konfigurations-und Analyse Informationen anzeigen](displaying-configuration-and-analysis-information.md)
--   [Ändern der Konfigurationsinformationen in der Benutzeroberfläche](modifying-configuration-information-in-the-user-interface.md)
--   [Ändern der Konfigurationsinformationen in der Sicherheitsdatenbank](modifying-configuration-information-in-the-database.md)
+-   [Anzeigen von Konfigurations- und Analyseinformationen](displaying-configuration-and-analysis-information.md)
+-   [Ändern von Konfigurationsinformationen im Benutzeroberfläche](modifying-configuration-information-in-the-user-interface.md)
+-   [Ändern von Konfigurationsinformationen in der Sicherheitsdatenbank](modifying-configuration-information-in-the-database.md)
 
-Um Ihre Snap-in-Erweiterung bei der Ausführung dieser Aufgaben zu unterstützen, implementieren die Sicherheitskonfigurations-Snap-Ins eine COM-Schnittstelle, [**iscesvasetachmentdata**](/windows/desktop/api/Scesvc/nn-scesvc-iscesvcattachmentdata), die Methoden bereitstellt, die Ihre Snap-in-Erweiterung zum Initialisieren und Abfragen von Informationen aus der Sicherheitsdatenbank aufruft.
+Um Ihre Snap-In-Erweiterung bei der Ausführung dieser Aufgaben zu unterstützen, implementieren die Sicherheitskonfigurations-Snap-Ins eine COM-Schnittstelle [**ISceSvcAttachmentData,**](/windows/desktop/api/Scesvc/nn-scesvc-iscesvcattachmentdata)die Methoden bereitstellt, die Ihre Snap-In-Erweiterung aufrufen kann, um sich selbst zu initialisieren und Informationen aus der Sicherheitsdatenbank abzufragen.
 
-Nachdem Sie die Erweiterungs-Snap-in-Erweiterung erstellt haben, müssen Sie Sie mit den Snap-Ins für die Sicherheitskonfiguration registrieren, wie unter [Registrieren einer Anlage-Snap-in-Erweiterung](registering-an-attachment-snap-in-extension.md)beschrieben.
+Nachdem Sie die Erweiterung für das Anfüge-Snap-In erstellt haben, müssen Sie sie mit den Sicherheitskonfigurations-Snap-Ins registrieren, wie unter Registrieren einer Erweiterung für [das Anlagen-Snap-In](registering-an-attachment-snap-in-extension.md)beschrieben.
 
  
 

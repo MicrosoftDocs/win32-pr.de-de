@@ -1,36 +1,36 @@
 ---
-title: Auswählen von Sicherheits-QoS-Optionen
-description: Die sicherheitsqos-Optionen werden als Teil des securityqos-Parameters übergeben, der an die rpcbindingsetauthinfoex-Funktion übergeben wird. Verwenden Sie die folgenden bewährten Methoden.
+title: Auswählen von QOS-Sicherheitsoptionen
+description: Die QOS-Sicherheitsoptionen werden als Teil des SecurityQOS-Parameters übergeben, der an die RpcBindingSetAuthInfoEx-Funktion übergeben wird. Verwenden Sie die folgenden bewährten Methoden.
 ms.assetid: 43befe3d-079a-4389-a1ff-6bda90935769
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c286b516438eae78117ef8d73939c3b4bed396d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 44c943fd9e2b4104de87a24c6078499fa38acdf1b6d1ea2122bf9d3063cd80f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118932196"
 ---
-# <a name="choosing-security-qos-options"></a>Auswählen von Sicherheits-QoS-Optionen
+# <a name="choosing-security-qos-options"></a>Auswählen von QOS-Sicherheitsoptionen
 
-Die sicherheitsqos-Optionen werden als Teil des *securityqos* -Parameters übergeben, der an die [**rpcbindingsetauthinfoex**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingsetauthinfoexa) -Funktion übergeben wird. Verwenden Sie die folgenden bewährten Methoden.
+Die QOS-Sicherheitsoptionen werden als Teil des *SecurityQOS-Parameters* übergeben, der an die [**RpcBindingSetAuthInfoEx-Funktion**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingsetauthinfoexa) übergeben wird. Verwenden Sie die folgenden bewährten Methoden.
 
-## <a name="use-mutual-authentication"></a>Gegenseitige Authentifizierung verwenden
+## <a name="use-mutual-authentication"></a>Verwenden der gegenseitigen Authentifizierung
 
-Die echte gegenseitige Authentifizierung ist nur für bestimmte Sicherheitsanbieter verfügbar: Aushandeln (bei Aushandlung von Kerberos), Kerberos und Schannel. NTLM unterstützt keine gegenseitige Authentifizierung. Für die Verwendung der gegenseitigen Authentifizierung muss ein wohlgeformter Server Prinzipal Name angegeben werden. Viele Entwickler verwenden die folgende fehlerhafte Sicherheitsübung: der Server wird aufgerufen, um nach seinem Prinzipal Namen ([**RpcMgmtInqServerPrincName**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtinqserverprincname)) zu Fragen, und dann Fragen Sie mithilfe dieses Prinzipal namens Blind die gegenseitige Authentifizierung. Diese Vorgehensweise unterbricht die gesamte Idee der gegenseitigen Authentifizierung. die Idee der gegenseitigen Authentifizierung besteht darin, dass nur bestimmte Server aufgerufen werden, da sie vertrauenswürdig sind, Ihre Daten zu analysieren und zu verarbeiten. Mithilfe der soeben beschriebenen fehlerhaften Sicherheitsübung geben Entwickler Ihre Daten an alle intelligenten genug, um Ihren Namen zurückzugeben.
+Die echte gegenseitige Authentifizierung ist nur für bestimmte Sicherheitsanbieter verfügbar: Aushandeln (beim Aushandeln von Kerberos), Kerberos und Schannel. NTLM unterstützt keine gegenseitige Authentifizierung. Die Verwendung der gegenseitigen Authentifizierung erfordert, dass ein wohlgeformte Serverprinzipalname angegeben wird. Viele Entwickler verwenden die folgende fehlerhafte Sicherheitsmethode: Der Server wird aufgerufen, um nach seinem Prinzipalnamen [**(RpcMgmtInqServerPrincName**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtinqserverprincname)) zu fragen, und dann wird blind nach gegenseitiger Authentifizierung mit diesem Prinzipalnamen gefragt. Dieser Ansatz unterbricht die gesamte Idee der gegenseitigen Authentifizierung. Die Idee der gegenseitigen Authentifizierung besteht darin, dass nur bestimmte Server aufgerufen werden, da sie als vertrauenswürdig eingestuft werden, um Ihre Daten zu analysieren und zu verarbeiten. Mithilfe der soeben beschriebenen fehlerhaften Sicherheitsmaßnahmen geben Entwickler ihre Daten an alle Benutzer weiter, die intelligent genug sind, um ihren Namen zurückzugeben.
 
-Wenn die Client Software z. b. nur einen Server aufrufen soll, der unter den Konten Joe, Pete oder Alice ausgeführt wird, sollte die [**RpcMgmtInqServerPrincName**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtinqserverprincname) -Funktion aufgerufen werden, und der zurück gesendete Name sollte geprüft werden. Wenn er Joe, Pete oder Alice ist, muss die gegenseitige Authentifizierung mit dem Server Prinzipal Namen angefordert werden. Dadurch wird sichergestellt, dass beide Hälften der Konversation zum gleichen Prinzipal wechseln.
+Wenn die Clientsoftware beispielsweise nur einen Server aufrufen soll, der unter den Konten von Joe, Pete oder Alice ausgeführt wird, sollte die [**RpcMgmtInqServerPrincName-Funktion**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtinqserverprincname) aufgerufen und der zurückgesendete Name überprüft werden. Wenn es sich um Joe, Pete oder Alice handelt, sollte die gegenseitige Authentifizierung mit dem Serverprinzipalnamen angefordert werden. Dadurch wird sichergestellt, dass beide Hälften der Konversation an denselben Prinzipal gehen.
 
-Wenn die Client Software einen Dienst anrufen soll, der nur unter dem Joe-Konto ausgeführt wird, verfassen Sie den Server Prinzipal Namen von Joe direkt, und nehmen Sie den- Wenn der Server nicht Joe ist, kann der-Befehl einfach nicht ausgeführt werden.
+Wenn die Clientsoftware einen Dienst aufrufen soll, der nur unter dem Konto von Joe ausgeführt wird, erstellen Sie den Serverprinzipalnamen von Joe direkt, und führen Sie den Aufruf aus. Wenn der Server nicht Joe ist, schlägt der Aufruf einfach fehl.
 
-Häufig werden Dienste als Windows-Systemdienste ausgeführt. Dies bedeutet, dass Sie unter dem Computer Konto ausgeführt werden. Die gegenseitige Authentifizierung und Erstellung eines Server Prinzipal namens wird weiterhin empfohlen.
+Häufig werden Dienste als Windows Systemdienste ausgeführt, was bedeutet, dass sie unter dem Computerkonto ausgeführt werden. Die gegenseitige Authentifizierung und Erstellung eines Serverprinzipalnamens wird weiterhin empfohlen.
 
-## <a name="use-the-lowest-impersonationtype-that-allows-the-call-to-go-through"></a>Verwenden Sie den niedrigsten Identitäts ationstyp, mit dem der Aufruf durchlaufen werden kann.
+## <a name="use-the-lowest-impersonationtype-that-allows-the-call-to-go-through"></a>Verwenden Sie den niedrigsten Identitätswechseltyp, der dem Aufruf das Durchlaufen ermöglicht.
 
-Diese bewährte Vorgehensweise ist recht selbsterklärend. Selbst wenn die gegenseitige Authentifizierung verwendet wird, sollten Sie dem Server nicht mehr Rechte als notwendig einräumen. Möglicherweise wurde ein legitimer Server kompromittiert, und auch wenn die von Ihnen gesendeten Daten in diesen Fällen in die falschen Hände geraten, kann zumindest der Server in Ihrem Namen nicht auf andere Daten im Netzwerk zugreifen. Einige Server lehnen einen Aufruf ab, der nicht über genügend Informationen zum Ermitteln und ggf. annehmen des Aufrufers verfügt. Beachten Sie außerdem, dass einige Protokoll Sequenzen die Sicherheit auf Transport Ebene ([**ncacn \_ NP**](/windows/desktop/Midl/ncacn-np) und [**Ncalrpc**](/windows/desktop/Midl/ncalrpc)) unterstützen. In solchen Fällen kann der Server jederzeit einen Identitätswechsel durchführen, wenn Sie eine ausreichend hohe Identitätswechsel Ebene durch den *networkoptions* -Parameter angeben, wenn Sie das Bindungs Handle erstellen.
+Diese bewährte Methode ist relativ selbsterklärend. Auch wenn die gegenseitige Authentifizierung verwendet wird, erteilen Sie dem Server nicht mehr Rechte als nötig. Ein legitimer Server wurde möglicherweise kompromittiert, und obwohl die von Ihnen gesendeten Daten in solchen Fällen in die falschen Hände fallen, kann zumindest der Server nicht in Ihrem Namen auf andere Daten im Netzwerk zugreifen. Einige Server lehnt einen Aufruf ab, der nicht über ausreichende Informationen verfügt, um den Aufrufer zu bestimmen und möglicherweise die Identität zu annehmen. Beachten Sie außerdem, dass einige Protokollsequenzen die Sicherheit auf Transportebene unterstützen ([**ncacn \_ np**](/windows/desktop/Midl/ncacn-np) und [**ncalrpc**](/windows/desktop/Midl/ncalrpc)). In solchen Fällen kann der Server immer die Identität von Ihnen annehmen, wenn Sie beim Erstellen des Bindungshandle über den *Parameter NetworkOptions* eine ausreichend hohe Identitätswechselebene angeben.
 
-Schließlich können einige Sicherheitsanbieter oder Transporte den Identitäts ationstyp transparent auf eine höhere Ebene als die angegebene Ebene über stoßen. Wenn Sie ein Programm entwickeln, stellen Sie sicher, dass Sie versuchen, Aufrufe mit dem vorgesehenen Identitäts ationstyp auszuführen, und prüfen Sie, ob Sie einen höheren Identitäts ationstyp auf dem Server erhalten.
+Schließlich können einige Sicherheitsanbieter oder Transporte impersonationType transparent auf eine höhere Ebene als die angegebene erhöhen. Stellen Sie beim Entwickeln eines Programms sicher, dass Sie versuchen, Aufrufe mit dem beabsichtigten ImpersonationType-Wert vorzunehmen, und überprüfen Sie, ob sie auf dem Server einen höheren ImpersonationType-Wert erhalten.
 
- 
+ 
 
- 
+ 

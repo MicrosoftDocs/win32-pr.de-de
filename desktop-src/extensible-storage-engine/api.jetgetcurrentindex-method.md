@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetgetcurrentindex-Methode.
-title: API. jetgetcurrentindex-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetGetCurrentIndex-Methode'
+title: Api.JetGetCurrentIndex-Methode
 TOCTitle: 'JetGetCurrentIndex method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetGetCurrentIndex(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,System.String@,System.Int32)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgetcurrentindex(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: bacc6973b1a105e128533a1116abdeb4c6cfafa4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 920c65f623d71656331a72ea0ab42d507c3498f585d93e903fa677866d92a1e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340175"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042608"
 ---
-# <a name="apijetgetcurrentindex-method"></a>API. jetgetcurrentindex-Methode
+# <a name="apijetgetcurrentindex-method"></a>Api.JetGetCurrentIndex-Methode
 
-Dlegt den Namen des aktuellen Indexes eines angegebenen Cursors fest. Dieser Name wird auch verwendet, um den Index später mithilfe von [jetsetcurrentindex (JET_SESID, JET_TABLEID, String)](./api.jetsetcurrentindex-method.md)als aktuellen Index erneut auszuwählen. Sie kann auch verwendet werden, um die Eigenschaften dieses Indexes mithilfe von jetgettableindexinfo zu ermitteln.
+Bestimmt den Namen des aktuellen Indexes eines angegebenen Cursors. Dieser Name wird auch verwendet, um diesen Index später mit [jetSetCurrentIndex(JET_SESID, JET_TABLEID, String)](./api.jetsetcurrentindex-method.md)erneut als aktuellen Index auszuwählen. Sie kann auch verwendet werden, um die Eigenschaften dieses Indexes mithilfe von JetGetTableIndexInfo zu ermitteln.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,38 +67,38 @@ public static void JetGetCurrentIndex(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der Cursor, für den der Indexname angezeigt werden soll.
+    Der Cursor, für den der Indexname abgerufen werden soll.
 
 <!-- end list -->
 
   - indexName  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Gibt den Namen des Indexes zurück.
 
 <!-- end list -->
 
   - maxNameLength  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Die maximale Länge des Index namens. Indexnamen sind nicht mehr als [namemost](./systemparameters.namemost-field.md) -Zeichen.
+    Die maximale Länge des Indexnamens. Indexnamen sind nicht mehr als [NameMost-Zeichen.](./systemparameters.namemost-field.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

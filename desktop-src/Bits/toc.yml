@@ -8,15 +8,15 @@
       items:
         - name: Benutzer und Netzwerkverbindungen
           href: users-and-network-connections.md
-        - name: Dienst Konten und Bits
+        - name: Dienstkonten und BITS
           href: service-accounts-and-bits.md
-        - name: Lebenszyklus eines Bits-Auftrags
+        - name: Lebenszyklus eines BITS-Auftrags
           href: life-cycle-of-a-bits-job.md
         - name: Netzwerkbandbreite
           href: network-bandwidth.md
-        - name: Peer Caching
+        - name: Peerzwischenspeicherung
           href: peer-caching.md
-        - name: HTTP-Anforderungen für Bits-Downloads
+        - name: HTTP-Anforderungen für BITS-Downloads
           href: http-requirements-for-bits-downloads.md
         - name: IIS-Anforderungen für BITS-Uploads
           href: iis-requirements-for-bits-uploads.md
@@ -24,30 +24,30 @@
           href: authentication.md
         - name: Gruppenrichtlinien
           href: group-policies.md
-        - name: Datei Übertragungs Konsistenz
+        - name: Dateiübertragungskonsistenz
           href: file-transfer-consistency.md
         - name: Gemeinsame Nutzung der Internetverbindung
           href: internet-connection-sharing.md
-        - name: Bits und System Wiederherstellung
+        - name: BITS und Systemwiederherstellung
           href: bits-and-system-restore.md
-        - name: Bits-Starttyp
+        - name: BITS-Starttyp
           href: bits-startup-type.md
-        - name: 'Bits-Sicherheit,-Token und-Administrator Konten'
+        - name: 'BITS-Sicherheit, Token und Administratorkonten'
           href: user-account-control-and-bits.md
-        - name: Hilfstoken für Bits-Übertragungs Aufträge
+        - name: Hilfstoken für BITS-Übertragungsaufträge
           href: helper-tokens-for-bits-transfer-jobs.md
         - name: BITS Compact Server
           href: bits-compact-server.md
-    - name: Verwenden von Bits
+    - name: Verwenden von BITS
       href: using-bits.md
       items:
-        - name: Aufrufen von Bits aus .net und c# mithilfe von Verweis-DLLs
+        - name: Aufrufen von BITS aus .NET und C# mithilfe von Verweis-DLLs
           href: bits-dot-net.md
-        - name: Steuern eines Bits-Downloads über eine teure Verbindung
+        - name: Steuern eines BITS-Downloads über eine teure Verbindung
           href: how-to-block-a-bits-job-from-downloading-over-an-expensive-connection.md
-        - name: 'So erhalten Sie den letzten Satz von HTTP-Headern, die für jede Datei in einem Bits-Download Auftrag empfangen wurden'
+        - name: 'Abrufen des letzten Satzes von HTTP-Headern, die für jede Datei in einem BITS-Downloadauftrag empfangen wurden'
           href: how-to-get-the-last-set-of-http-headers-received-for-each-file-in-a-bits-download-job.md
-        - name: Bewährte Methoden bei der Verwendung von Bits
+        - name: Bewährte Methoden bei der Verwendung von BITS
           href: best-practices-when-using-bits.md
         - name: Herstellen einer Verbindung mit dem BITS-Dienst
           href: connecting-to-the-bits-service.md
@@ -57,24 +57,24 @@
           href: adding-files-to-a-job.md
         - name: Festlegen und Abrufen der Eigenschaften eines Auftrags
           href: setting-and-retrieving-the-properties-of-a-job.md
-        - name: Abrufen der Antwort von einem Upload-Reply Auftrag
+        - name: Abrufen der Antwort aus einem Upload-Reply-Auftrag
           href: retrieving-the-reply-from-an-upload-reply-job.md
         - name: Bestimmen des Status eines Auftrags
           href: determining-the-status-of-a-job.md
           items:
-            - name: Abrufen des Auftrags Status
+            - name: Abfragen des Auftragsstatus
               href: polling-for-the-status-of-the-job.md
-            - name: Registrieren eines com-Rückrufs
+            - name: Registrieren eines COM-Rückrufs
               href: registering-a-com-callback.md
             - name: Registrieren zum Ausführen eines Programms
               href: registering-to-execute-a-program.md
-            - name: Bestimmen des Fortschritts eines Auftrags
+            - name: Bestimmen des Status eines Auftrags
               href: determining-the-progress-of-a-job.md
         - name: Abschließen und Abbrechen eines Auftrags
           href: completing-and-canceling-a-job.md
-        - name: Auflisten von Aufträgen in der Übertragungs Warteschlange
+        - name: Auflisten von Aufträgen in der Übertragungswarteschlange
           href: enumerating-jobs-in-the-transfer-queue.md
-        - name: Auflisten von Dateien in einem Auftrag
+        - name: Aufzählen von Dateien in einem Auftrag
           href: enumerating-files-in-a-job.md
         - name: Behandeln von Fehlern
           href: handling-errors.md
@@ -89,26 +89,26 @@
               href: using-the-iis-ui-to-configure-the-virtual-directory.md
             - name: Verhindern mehrerer Uploads
               href: preventing-multiple-uploads.md
-            - name: Cleanup des virtuellen Verzeichnisses
+            - name: Bereinigung virtueller Verzeichnisse
               href: virtual-directory-cleanup.md
-            - name: Bewährte Methoden für den Upload
+            - name: Hochladen Bewährte Methoden
               href: upload-best-practices.md
-            - name: Uploadlimits
+            - name: Hochladen Grenzen
               href: upload-limits.md
-        - name: Verwenden von Bits-Benachrichtigungs Anforderung/Antwort-Headern
+        - name: Verwenden von BITS-Benachrichtigungsanforderungs-/Antwortheadern
           href: using-bits-notification-request-response-headers.md
-        - name: Behandeln von Server Anwendungsfehlern
+        - name: Behandeln von Serveranwendungsfehlern
           href: handling-server-application-errors.md
         - name: Erstellen von BITS-Übertragungsaufträgen mithilfe von Windows PowerShell
           href: using-windows-powershell-to-create-bits-transfer-jobs.md
         - name: Verwenden von WinRM Windows PowerShell-Cmdlets zum Verwalten von BITS-Übertragungsaufträgen
           href: using-winrm-windows-powershell-cmdlets-to-manage-bits-transfer-jobs.md
-        - name: Verwenden von WMI-Windows PowerShell-Cmdlets zum Verwalten des BITS Compact-Servers
+        - name: Verwenden von WMI Windows PowerShell Cmdlets zum Verwalten des BITS Compact-Servers
           href: using-wmi-windows-powershell-cmdlets-to-manage-the-bits-compact-server.md
     - name: BITS-Referenz
       href: bits-reference.md
       items:
-        - name: Bits-Enumerationen
+        - name: BITS-Enumerationen
           href: bits-enumerations.md
           items:
             - name: BG_AUTH_SCHEME
@@ -135,34 +135,34 @@
               href: /windows/win32/api/bits5_0/ne-bits5_0-bits_job_property_id
             - name: BITS_JOB_TRANSFER_POLICY
               href: /windows/win32/api/bits5_0/ne-bits5_0-bits_job_transfer_policy
-        - name: Bits-Schnittstellen
+        - name: BITS-Schnittstellen
           href: bits-interfaces.md
           items:
-            - name: Ibackgroundcopycallback
+            - name: IBackgroundCopyCallback
               href: /windows/win32/api/Bits/nn-bits-ibackgroundcopycallback
               items:
-                - name: Joberror-Methode
+                - name: JobError-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopycallback-joberror
-                - name: Jobänderungs-Methode
+                - name: JobModification-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopycallback-jobmodification
-                - name: Jobübertragene Methode
+                - name: JobTransferred-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopycallback-jobtransferred
             - name: IBackgroundCopyCallback2
               href: /windows/win32/api/Bits3_0/nn-bits3_0-ibackgroundcopycallback2
               items:
-                - name: Filetransfer-Methode
+                - name: FileTransferred-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibackgroundcopycallback2-filetransferred
             - name: IBackgroundCopyCallback3
               href: /windows/win32/api/Bits10_1/nn-bits10_1-ibackgroundcopycallback3
               items:
-                - name: Filerangestransferred-Methode
+                - name: FileRangesTransferred-Methode
                   href: /windows/win32/api/Bits10_1/nf-bits10_1-ibackgroundcopycallback3-filerangestransferred
-            - name: Ibackgroundcopyerror
+            - name: IBackgroundCopyError
               href: /windows/win32/api/Bits/nn-bits-ibackgroundcopyerror
               items:
                 - name: GetError-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyerror-geterror
-                - name: Geterrorcontextdescription-Methode
+                - name: GetErrorContextDescription-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyerror-geterrorcontextdescription
                 - name: GetErrorDescription-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyerror-geterrordescription
@@ -170,37 +170,37 @@
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyerror-getfile
                 - name: GetProtocol-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyerror-getprotocol
-            - name: Ibackgroundcopyfile
+            - name: IBackgroundCopyFile
               href: /windows/win32/api/Bits/nn-bits-ibackgroundcopyfile
               items:
                 - name: GetLocalName-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyfile-getlocalname
                 - name: GetProgress-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyfile-getprogress
-                - name: Getremutename-Methode
+                - name: GetRemoteName-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyfile-getremotename
             - name: IBackgroundCopyFile2
               href: /windows/win32/api/Bits2_0/nn-bits2_0-ibackgroundcopyfile2
               items:
-                - name: Getfileranges-Methode
+                - name: GetFileRanges-Methode
                   href: /windows/win32/api/Bits2_0/nf-bits2_0-ibackgroundcopyfile2-getfileranges
-                - name: Methode "Setup Name"
+                - name: SetRemoteName-Methode
                   href: /windows/win32/api/Bits2_0/nf-bits2_0-ibackgroundcopyfile2-setremotename
             - name: IBackgroundCopyFile3
               href: /windows/win32/api/Bits3_0/nn-bits3_0-ibackgroundcopyfile3
               items:
-                - name: Gettemporaryname-Methode
+                - name: GetTemporaryName-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibackgroundcopyfile3-gettemporaryname
-                - name: Getvalidationstate-Methode
+                - name: GetValidationState-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibackgroundcopyfile3-getvalidationstate
-                - name: Isdownloader-dfrompeer-Methode
+                - name: IsDownloadedFromPeer-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibackgroundcopyfile3-isdownloadedfrompeer
-                - name: Setvalidationstate-Methode
+                - name: SetValidationState-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibackgroundcopyfile3-setvalidationstate
             - name: IBackgroundCopyFile4
               href: /windows/win32/api/Bits4_0/nn-bits4_0-ibackgroundcopyfile4
               items:
-                - name: GetPeer Download stats-Methode
+                - name: GetPeerDownloadStats-Methode
                   href: /windows/win32/api/Bits4_0/nf-bits4_0-ibackgroundcopyfile4-getpeerdownloadstats
             - name: IBackgroundCopyFile5
               href: /windows/win32/api/Bits5_0/nn-bits5_0-ibackgroundcopyfile5
@@ -212,18 +212,18 @@
             - name: IBackgroundCopyFile6
               href: /windows/win32/api/bits10_1/nn-bits10_1-ibackgroundcopyfile6
               items:
-                - name: Updatedownloadposition-Methode
+                - name: UpdateDownloadPosition-Methode
                   href: /windows/win32/api/Bits10_1/nf-bits10_1-ibackgroundcopyfile6-updatedownloadposition
-                - name: Requestfileranges-Methode
+                - name: RequestFileRanges-Methode
                   href: /windows/win32/api/Bits10_1/nf-bits10_1-ibackgroundcopyfile6-requestfileranges
-                - name: Getfilledfileranges-Methode
+                - name: GetFilledFileRanges-Methode
                   href: /windows/win32/api/Bits10_1/nf-bits10_1-ibackgroundcopyfile6-getfilledfileranges
             - name: IBackgroundCopyJob
               href: /windows/win32/api/Bits/nn-bits-ibackgroundcopyjob
               items:
                 - name: AddFile-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-addfile
-                - name: ADDFILESET-Methode
+                - name: AddFileSet-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-addfileset
                 - name: Cancel-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-cancel
@@ -241,13 +241,13 @@
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-geterrorcount
                 - name: GetId-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-getid
-                - name: Getminimumretrydelay-Methode
+                - name: GetMinimumRetryDelay-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-getminimumretrydelay
-                - name: Getnoprogresstimeout-Methode
+                - name: GetNoProgressTimeout-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-getnoprogresstimeout
-                - name: Getnotifyflags-Methode
+                - name: GetNotifyFlags-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-getnotifyflags
-                - name: Getnotifyinterface-Methode
+                - name: GetNotifyInterface-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-getnotifyinterface
                 - name: GetOwner-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-getowner
@@ -255,11 +255,11 @@
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-getpriority
                 - name: GetProgress-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-getprogress
-                - name: Getproxysettings-Methode
+                - name: GetProxySettings-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-getproxysettings
                 - name: GetState-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-getstate
-                - name: Gettimes-Methode
+                - name: GetTimes-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-gettimes
                 - name: GetType-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-gettype
@@ -267,19 +267,19 @@
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-resume
                 - name: SetDescription-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-setdescription
-                - name: Setdisplayname-Methode
+                - name: SetDisplayName-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-setdisplayname
-                - name: Setminimumretrydelay-Methode
+                - name: SetMinimumRetryDelay-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-setminimumretrydelay
-                - name: Setnoprogresstimeout-Methode
+                - name: SetNoProgressTimeout-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-setnoprogresstimeout
-                - name: Setnotifyflags-Methode
+                - name: SetNotifyFlags-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyflags
-                - name: Setnotifyinterface-Methode
+                - name: SetNotifyInterface-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyinterface
                 - name: SetPriority-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-setpriority
-                - name: Setproxysettings-Methode
+                - name: SetProxySettings-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-setproxysettings
                 - name: Suspend-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopyjob-suspend
@@ -288,47 +288,47 @@
             - name: IBackgroundCopyJob2
               href: /windows/win32/api/Bits1_5/nn-bits1_5-ibackgroundcopyjob2
               items:
-                - name: Getnotifycmdline-Methode
+                - name: GetNotifyCmdLine-Methode
                   href: /windows/win32/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getnotifycmdline
-                - name: Getreplydata-Methode
+                - name: GetReplyData-Methode
                   href: /windows/win32/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplydata
-                - name: Getreplyfilename-Methode
+                - name: GetReplyFileName-Methode
                   href: /windows/win32/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplyfilename
-                - name: Getreplyprogress-Methode
+                - name: GetReplyProgress-Methode
                   href: /windows/win32/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplyprogress
-                - name: Removecreden-Methode
+                - name: RemoveCredentials-Methode
                   href: /windows/win32/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-removecredentials
-                - name: Setanmelde-Methode
+                - name: SetCredentials-Methode
                   href: /windows/win32/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-setcredentials
-                - name: Setnotifycmdline-Methode
+                - name: SetNotifyCmdLine-Methode
                   href: /windows/win32/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-setnotifycmdline
-                - name: Methode "-Methode"
+                - name: SetReplyFileName-Methode
                   href: /windows/win32/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-setreplyfilename
             - name: IBackgroundCopyJob3
               href: /windows/win32/api/Bits2_0/nn-bits2_0-ibackgroundcopyjob3
               items:
-                - name: ADDFILEWITHRANGES-Methode
+                - name: AddFileWithRanges-Methode
                   href: /windows/win32/api/Bits2_0/nf-bits2_0-ibackgroundcopyjob3-addfilewithranges
-                - name: Getfileaclflags-Methode
+                - name: GetFileACLFlags-Methode
                   href: /windows/win32/api/Bits2_0/nf-bits2_0-ibackgroundcopyjob3-getfileaclflags
-                - name: REPLACEREMOTEPREFIX-Methode
+                - name: ReplaceRemotePrefix-Methode
                   href: /windows/win32/api/Bits2_0/nf-bits2_0-ibackgroundcopyjob3-replaceremoteprefix
-                - name: Setfileaclflags-Methode
+                - name: SetFileACLFlags-Methode
                   href: /windows/win32/api/Bits2_0/nf-bits2_0-ibackgroundcopyjob3-setfileaclflags
             - name: IBackgroundCopyJob4
               href: /windows/win32/api/Bits3_0/nn-bits3_0-ibackgroundcopyjob4
               items:
-                - name: Getmaximumdownloadtime-Methode
+                - name: GetMaximumDownloadTime-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibackgroundcopyjob4-getmaximumdownloadtime
-                - name: Getownerelevationstate-Methode
+                - name: GetOwnerElevationState-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibackgroundcopyjob4-getownerelevationstate
-                - name: Getownerintegritylevel-Methode
+                - name: GetOwnerIntegrityLevel-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibackgroundcopyjob4-getownerintegritylevel
-                - name: GetPeer Cache Service Flags-Methode
+                - name: GetPeerCachingFlags-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibackgroundcopyjob4-getpeercachingflags
-                - name: Setmaximumdownloadtime-Methode
+                - name: SetMaximumDownloadTime-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibackgroundcopyjob4-setmaximumdownloadtime
-                - name: Setupdatercachingflags-Methode
+                - name: SetPeerCachingFlags-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibackgroundcopyjob4-setpeercachingflags
             - name: IBackgroundCopyJob5
               href: /windows/win32/api/Bits5_0/nn-bits5_0-ibackgroundcopyjob5
@@ -337,43 +337,43 @@
                   href: /windows/win32/api/Bits5_0/nf-bits5_0-ibackgroundcopyjob5-getproperty
                 - name: SetProperty-Methode
                   href: /windows/win32/api/Bits5_0/nf-bits5_0-ibackgroundcopyjob5-setproperty
-            - name: Ibackgroundcopyjobhttpoptions
+            - name: IBackgroundCopyJobHttpOptions
               href: /windows/win32/api/Bits2_5/nn-bits2_5-ibackgroundcopyjobhttpoptions
               items:
-                - name: Getclientcertificate-Methode
+                - name: GetClientCertificate-Methode
                   href: /windows/win32/api/Bits2_5/nf-bits2_5-ibackgroundcopyjobhttpoptions-getclientcertificate
-                - name: Getcustomheaders-Methode
+                - name: GetCustomHeaders-Methode
                   href: /windows/win32/api/Bits2_5/nf-bits2_5-ibackgroundcopyjobhttpoptions-getcustomheaders
-                - name: Getsecurityflags-Methode
+                - name: GetSecurityFlags-Methode
                   href: /windows/win32/api/Bits2_5/nf-bits2_5-ibackgroundcopyjobhttpoptions-getsecurityflags
-                - name: Removeclientcertificate-Methode
+                - name: RemoveClientCertificate-Methode
                   href: /windows/win32/api/Bits2_5/nf-bits2_5-ibackgroundcopyjobhttpoptions-removeclientcertificate
-                - name: Setclientcertificatebyid-Methode
+                - name: SetClientCertificateByID-Methode
                   href: /windows/win32/api/Bits2_5/nf-bits2_5-ibackgroundcopyjobhttpoptions-setclientcertificatebyid
-                - name: Setclientcertificatebyname-Methode
+                - name: SetClientCertificateByName-Methode
                   href: /windows/win32/api/Bits2_5/nf-bits2_5-ibackgroundcopyjobhttpoptions-setclientcertificatebyname
-                - name: Setcustomheaders-Methode
+                - name: SetCustomHeaders-Methode
                   href: /windows/win32/api/Bits2_5/nf-bits2_5-ibackgroundcopyjobhttpoptions-setcustomheaders
-                - name: Setsecurityflags-Methode
+                - name: SetSecurityFlags-Methode
                   href: /windows/win32/api/Bits2_5/nf-bits2_5-ibackgroundcopyjobhttpoptions-setsecurityflags
             - name: IBackgroundCopyJobHttpOptions2
               href: /windows/win32/api/Bits10_2/nn-bits10_2-ibackgroundcopyjobhttpoptions2
               items:
-                - name: Gethttpmethod-Methode
+                - name: GetHttpMethod-Methode
                   href: /windows/win32/api/Bits10_2/nf-bits10_2-ibackgroundcopyjobhttpoptions2-gethttpmethod
-                - name: Setup Method-Methode
+                - name: SetHttpMethod-Methode
                   href: /windows/win32/api/Bits10_2/nf-bits10_2-ibackgroundcopyjobhttpoptions2-sethttpmethod
             - name: IBackgroundCopyJobHttpOptions3
               href: /windows/win32/api/Bits10_3/nn-bits10_3-ibackgroundcopyjobhttpoptions3
               items:
-                - name: Makecustomheadersschreiteonly-Methode
+                - name: MakeCustomHeadersWriteOnly-Methode
                   href: /windows/win32/api/Bits10_3/nf-bits10_3-ibackgroundcopyjobhttpoptions3-makecustomheaderswriteonly
-                - name: Setservercertifigatevalidationinterface-Methode
+                - name: SetServerCertificateValidationInterface-Methode
                   href: /windows/win32/api/Bits10_3/nf-bits10_3-ibackgroundcopyjobhttpoptions3-setservercertificatevalidationinterface
-            - name: Ibackgroundcopymanager
+            - name: IBackgroundCopyManager
               href: /windows/win32/api/Bits/nn-bits-ibackgroundcopymanager
               items:
-                - name: Methode "kreatejob"
+                - name: CreateJob-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopymanager-createjob
                 - name: EnumJobs-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopymanager-enumjobs
@@ -381,82 +381,82 @@
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopymanager-geterrordescription
                 - name: GetJob-Methode
                   href: /windows/win32/api/Bits/nf-bits-ibackgroundcopymanager-getjob
-            - name: Ibackgroundcopyservercertifigatevalidationcallback
+            - name: IBackgroundCopyServerCertificateValidationCallback
               href: /windows/win32/api/Bits10_3/nn-bits10_3-ibackgroundcopyservercertificatevalidationcallback
               items:
                 - name: ValidateServerCertificate
                   href: /windows/win32/api/Bits10_3/nf-bits10_3-ibackgroundcopyservercertificatevalidationcallback-validateservercertificate
-            - name: Ibitspeer
+            - name: IBitsPeer
               href: /windows/win32/api/Bits3_0/nn-bits3_0-ibitspeer
               items:
-                - name: GetPeer Name-Methode
+                - name: GetPeerName-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeer-getpeername
                 - name: IsAuthenticated-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeer-isauthenticated
                 - name: IsAvailable-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeer-isavailable
-            - name: Ibitspeercacheadministration
+            - name: IBitsPeerCacheAdministration
               href: /windows/win32/api/Bits3_0/nn-bits3_0-ibitspeercacheadministration
               items:
-                - name: Clearpeers-Methode
+                - name: ClearPeers-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-clearpeers
-                - name: Clearrecords-Methode
+                - name: ClearRecords-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-clearrecords
                 - name: DeleteRecord-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-deleterecord
                 - name: DeleteUrl-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-deleteurl
-                - name: Discoverpeers-Methode
+                - name: DiscoverPeers-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-discoverpeers
-                - name: Enumpeers-Methode
+                - name: EnumPeers-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-enumpeers
-                - name: Enumrecords-Methode
+                - name: EnumRecords-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-enumrecords
-                - name: Getconfigurationflags-Methode
+                - name: GetConfigurationFlags-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-getconfigurationflags
-                - name: Getmaximumcachesize-Methode
+                - name: GetMaximumCacheSize-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-getmaximumcachesize
-                - name: Getmaximumcontentage-Methode
+                - name: GetMaximumContentAge-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-getmaximumcontentage
-                - name: GETRECORD-Methode
+                - name: GetRecord-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-getrecord
-                - name: Setconfigurationflags-Methode
+                - name: SetConfigurationFlags-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-setconfigurationflags
-                - name: Setmaximumcachesize-Methode
+                - name: SetMaximumCacheSize-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-setmaximumcachesize
-                - name: Setmaximumcontentage-Methode
+                - name: SetMaximumContentAge-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-setmaximumcontentage
-            - name: Ibitspeercacherecord
+            - name: IBitsPeerCacheRecord
               href: /windows/win32/api/Bits3_0/nn-bits3_0-ibitspeercacherecord
               items:
                 - name: GetId-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacherecord-getid
-                - name: Getfilemodificationtime-Methode
+                - name: GetFileModificationTime-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacherecord-getfilemodificationtime
-                - name: Getfileranges-Methode
+                - name: GetFileRanges-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacherecord-getfileranges
                 - name: GetFileSize-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacherecord-getfilesize
                 - name: GetLastAccessTime-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacherecord-getlastaccesstime
-                - name: Getoriginurl-Methode
+                - name: GetOriginUrl-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacherecord-getoriginurl
-                - name: Ismelevaliveralteten-Methode
+                - name: IsFileValidated-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ibitspeercacherecord-isfilevalidated
-            - name: Ibitstokenoptions
+            - name: IBitsTokenOptions
               href: /windows/win32/api/Bits4_0/nn-bits4_0-ibitstokenoptions
               items:
-                - name: Die Methode "sthelperflkenflags"
+                - name: SetHelperTokenFlags-Methode
                   href: /windows/win32/api/Bits4_0/nf-bits4_0-ibitstokenoptions-sethelpertokenflags
-                - name: Gethelperdekenflags-Methode
+                - name: GetHelperTokenFlags-Methode
                   href: /windows/win32/api/Bits4_0/nf-bits4_0-ibitstokenoptions-gethelpertokenflags
-                - name: Methode "-Methode"
+                - name: SetHelperToken-Methode
                   href: /windows/win32/api/Bits4_0/nf-bits4_0-ibitstokenoptions-sethelpertoken
-                - name: Clearhelpertoken-Methode
+                - name: ClearHelperToken-Methode
                   href: /windows/win32/api/Bits4_0/nf-bits4_0-ibitstokenoptions-clearhelpertoken
-                - name: Gethelperthkensid-Methode
+                - name: GetHelperTokenSid-Methode
                   href: /windows/win32/api/Bits4_0/nf-bits4_0-ibitstokenoptions-gethelpertokensid
-            - name: Ienumbackgroundcopyfiles
+            - name: IEnumBackgroundCopyFiles
               href: /windows/win32/api/Bits/nn-bits-ienumbackgroundcopyfiles
               items:
                 - name: Clone-Methode
@@ -469,7 +469,7 @@
                   href: /windows/win32/api/Bits/nf-bits-ienumbackgroundcopyfiles-reset
                 - name: Skip-Methode
                   href: /windows/win32/api/Bits/nf-bits-ienumbackgroundcopyfiles-skip
-            - name: Ienumbackgroundcopyjobs
+            - name: IEnumBackgroundCopyJobs
               href: /windows/win32/api/Bits/nn-bits-ienumbackgroundcopyjobs
               items:
                 - name: Clone-Methode
@@ -482,7 +482,7 @@
                   href: /windows/win32/api/Bits/nf-bits-ienumbackgroundcopyjobs-reset
                 - name: Skip-Methode
                   href: /windows/win32/api/Bits/nf-bits-ienumbackgroundcopyjobs-skip
-            - name: Ienumbitspeercacherecords
+            - name: IEnumBitsPeerCacheRecords
               href: /windows/win32/api/Bits3_0/nn-bits3_0-ienumbitspeercacherecords
               items:
                 - name: Clone-Methode
@@ -495,7 +495,7 @@
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ienumbitspeercacherecords-reset
                 - name: Skip-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ienumbitspeercacherecords-skip
-            - name: Ienumbitspeer
+            - name: IEnumBitsPeers
               href: /windows/win32/api/Bits3_0/nn-bits3_0-ienumbitspeers
               items:
                 - name: Clone-Methode
@@ -508,51 +508,51 @@
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ienumbitspeers-reset
                 - name: Skip-Methode
                   href: /windows/win32/api/Bits3_0/nf-bits3_0-ienumbitspeers-skip
-        - name: Bits-Rückgabewerte
+        - name: BITS-Rückgabewerte
           href: bits-return-values.md
-        - name: Bits-Beispiele und-Tools
+        - name: BITS-Beispiele und -Tools
           href: bits-samples-and-tools.md
           items:
-            - name: Bits C++ Anwendungsbeispiele
+            - name: BITS C++-Anwendungsbeispiele
               href: bits-c---application-examples.md
               items:
-                - name: 'Beispiel: allgemeine Klassen'
+                - name: 'Beispiel: Allgemeine Klassen'
                   href: common-classes.md
-                - name: Angeben von Anmelde Informationen für die Server Authentifizierung für einen Bits-Übertragungs Auftrag
+                - name: Angeben von Anmeldeinformationen für die Serverauthentifizierung für einen BITS-Übertragungsauftrag
                   href: example-specifying-server-authentication-credentials-for-a-bits-transfer-job-.md
-                - name: 'Beispiel: Verwenden der SSPI-Authentifizierungs Codierung mit Bits'
+                - name: 'Beispiel: Verwenden der SSPI-Authentifizierungscodierung mit BITS'
                   href: example-using-sspi-authentication-encoding-with-bits.md
-                - name: 'Beispiel: Hinzufügen eines Hilfsobjekts zu einem Bits-Übertragungs Auftrag'
+                - name: 'Beispiel: Hinzufügen eines Hilfstokens zu einem BITS-Übertragungsauftrag'
                   href: example-adding-a-helper-token-to-a-bits-transfer-job-.md
-            - name: Bitadmin-Tool
+            - name: BITSAdmin-Tool
               href: bitsadmin-tool.md
-        - name: BITS-Server Einstellungen für Upload-Aufträge
+        - name: BITS-Server-Einstellungen für Hochladen Aufträge
           href: bits-server-settings-for-upload-jobs.md
           items:
             - name: BITS IIS-Erweiterung (Eigenschaften)
               href: bits-iis-extension-properties.md
-            - name: Benachrichtigungs Protokoll für Server Anwendungen
+            - name: Benachrichtigungsprotokoll für Serveranwendungen
               href: notification-protocol-for-server-applications.md
-            - name: Bits ADSI-Erweiterung
+            - name: BITS ADSI-Erweiterung
               href: bits-adsi-extension.md
               items:
-                - name: Ibitsextensionsetup
+                - name: IBITSExtensionSetup
                   href: /windows/win32/api/Bitscfg/nn-bitscfg-ibitsextensionsetup
                   items:
-                    - name: Disablebitsuploads-Methode
+                    - name: DisableBITSUploads-Methode
                       href: /windows/win32/api/Bitscfg/nf-bitscfg-ibitsextensionsetup-disablebitsuploads
-                    - name: Enablebitsuploads-Methode
+                    - name: EnableBITSUploads-Methode
                       href: /windows/win32/api/Bitscfg/nf-bitscfg-ibitsextensionsetup-enablebitsuploads
-                    - name: Getcleanuptask-Methode
+                    - name: GetCleanupTask-Methode
                       href: /windows/win32/api/Bitscfg/nf-bitscfg-ibitsextensionsetup-getcleanuptask
-                    - name: Getcleanuptaskname-Methode
+                    - name: GetCleanupTaskName-Methode
                       href: /windows/win32/api/Bitscfg/nf-bitscfg-ibitsextensionsetup-getcleanuptaskname
-                - name: Ibitsextensionsetupfactory
+                - name: IBITSExtensionSetupFactory
                   href: /windows/win32/api/Bitscfg/nn-bitscfg-ibitsextensionsetupfactory
                   items:
                     - name: GetObject-Methode
                       href: /windows/win32/api/Bitscfg/nf-bitscfg-ibitsextensionsetupfactory-getobject
-        - name: Bits-Strukturen und Unions
+        - name: BITS-Strukturen und -Unions
           href: bits-c---structures-and-unions.md
           items:
             - name: BG_AUTH_CREDENTIALS
@@ -577,10 +577,10 @@
               href: /windows/win32/api/Bits5_0/ns-bits5_0-bits_file_property_value
             - name: BITS_JOB_PROPERTY_VALUE
               href: /windows/win32/api/Bits5_0/ns-bits5_0-bits_job_property_value
-        - name: Bits-Upload-Protokoll
+        - name: BITS Hochladen Protocol
           href: bits-upload-protocol.md
           items:
-            - name: Bits-Anforderungs Pakete
+            - name: BITS-Anforderungspakete
               href: bits-request-packets.md
               items:
                 - name: Cancel-Session
@@ -591,30 +591,30 @@
                   href: create-session.md
                 - name: Fragment
                   href: fragment.md
-                - name: Ping
+                - name: Pingen
                   href: ping.md
-            - name: Bits-Antwort Pakete
+            - name: BITS-Antwortpakete
               href: bits-response-packets.md
               items:
-                - name: Bestätigung für Cancel-Session
+                - name: Ack für Cancel-Session
                   href: ack-for-cancel-session.md
-                - name: Bestätigung für Close-Session
+                - name: Ack für Close-Session
                   href: ack-for-close-session.md
-                - name: Bestätigung für Create-Session
+                - name: Ack für Create-Session
                   href: ack-for-create-session.md
-                - name: Bestätigung für Fragment
+                - name: Ack für Fragment
                   href: ack-for-fragment.md
-                - name: Bestätigung für Ping
+                - name: Ack für Ping
                   href: ack-for-ping.md
         - name: Warteschlangen-Manager
           href: queue-manager.md
           items:
-            - name: Qmgr-Enumerationen
+            - name: QMGR-Enumerationen
               href: qmgr-enumerations.md
               items:
-                - name: Groupprop
+                - name: GROUPPROP
                   href: /windows/win32/api/Qmgr/ne-qmgr-groupprop
-            - name: Qmgr-Schnittstellen
+            - name: QMGR-Schnittstellen
               href: qmgr-interfaces.md
               items:
                 - name: IBackgroundCopyCallback1
@@ -622,12 +622,12 @@
                   items:
                     - name: OnStatus-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopycallback1-onstatus
-                - name: Ibackgroundcopygroup
+                - name: IBackgroundCopyGroup
                   href: /windows/win32/api/Qmgr/nn-qmgr-ibackgroundcopygroup
                   items:
-                    - name: Cancelgroup-Methode
+                    - name: CancelGroup-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopygroup-cancelgroup
-                    - name: Methode "kreatejob"
+                    - name: CreateJob-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopygroup-createjob
                     - name: EnumJobs-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopygroup-enumjobs
@@ -635,7 +635,7 @@
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopygroup-getjob
                     - name: GetProgress-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopygroup-getprogress
-                    - name: Getprop-Methode
+                    - name: GetProp-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopygroup-getprop
                     - name: GetStatus-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopygroup-getstatus
@@ -643,13 +643,13 @@
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopygroup-get_groupid
                     - name: get_Size-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopygroup-get_size
-                    - name: Resumegroup-Methode
+                    - name: ResumeGroup-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopygroup-resumegroup
-                    - name: Setprop-Methode
+                    - name: SetProp-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopygroup-setprop
-                    - name: Suspendgroup-Methode
+                    - name: SuspendGroup-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopygroup-suspendgroup
-                    - name: SwitchTo Vordergrund-Methode
+                    - name: SwitchToForeground-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopygroup-switchtoforeground
                 - name: IBackgroundCopyJob1
                   href: /windows/win32/api/Qmgr/nn-qmgr-ibackgroundcopyjob1
@@ -658,7 +658,7 @@
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopyjob1-addfiles
                     - name: GetFile-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopyjob1-getfile
-                    - name: Getfilecount-Methode
+                    - name: GetFileCount-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopyjob1-getfilecount
                     - name: GetProgress-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopyjob1-getprogress
@@ -666,16 +666,16 @@
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopyjob1-getstatus
                     - name: get_JobID-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopyjob1-get_jobid
-                - name: Ibackgroundcopyqmgr
+                - name: IBackgroundCopyQMgr
                   href: /windows/win32/api/Qmgr/nn-qmgr-ibackgroundcopyqmgr
                   items:
-                    - name: Methode "kreategroup"
+                    - name: CreateGroup-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopyqmgr-creategroup
-                    - name: Enumgroups-Methode
+                    - name: EnumGroups-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopyqmgr-enumgroups
                     - name: GetGroup-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ibackgroundcopyqmgr-getgroup
-                - name: Ienumbackgroundcopygroups
+                - name: IEnumBackgroundCopyGroups
                   href: /windows/win32/api/Qmgr/nn-qmgr-ienumbackgroundcopygroups
                   items:
                     - name: Clone-Methode
@@ -701,10 +701,10 @@
                       href: /windows/win32/api/Qmgr/nf-qmgr-ienumbackgroundcopyjobs1-reset
                     - name: Skip-Methode
                       href: /windows/win32/api/Qmgr/nf-qmgr-ienumbackgroundcopyjobs1-skip
-            - name: Qmgr-Strukturen
+            - name: QMGR-Strukturen
               href: qmgr-structures.md
               items:
-                - name: '"Flesetinfo"'
+                - name: FILESETINFO
                   href: /windows/win32/api/Qmgr/ns-qmgr-filesetinfo
         - name: Managed Reference for BITS PowerShell Commands
           href: bits-powershell-commands.md

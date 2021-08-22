@@ -1,19 +1,19 @@
 ---
-description: Der ASN. 1 UTF8String-Datentyp wird in ein TLV-Dreieck codiert, das mit dem Tag-Byte 0x0c beginnt.
+description: Der ASN.1-UTF8String-Datentyp wird in ein TLV-Triplet codiert, das mit einem Tag-Byte von 0x0C.
 ms.assetid: e30737d3-8294-48d8-9e42-f21918acc73c
 title: UTF8String
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 26048a46689d27b68e8cacfa4af13b37cde4d613
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 451b51a42d8c2b296b6c3c98c224b0052a7d89d95dbfe92483b852f6a0167b5f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118903456"
 ---
 # <a name="utf8string"></a>UTF8String
 
-Der ASN. 1 **UTF8String** -Datentyp wird in ein TLV-Dreieck codiert, das mit dem **Tag** -Byte 0x0c beginnt. Im folgenden Beispiel wird aus dem Thema " [CMC-codierte ASN. 1](cmc-encoded-asn-1.md) " gezeigt, wie das **ClientID-** Attribut als Integer-und drei **UTF8String** -Typen codiert wird. Der Objekt Bezeichner für das Attribut ist 1.3.6.1.4.1.311.21.20. Die Informationen, die mithilfe der [**IX509AttributeClientId**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributeclientid) -Schnittstelle angegeben werden können, enthalten eine Client-ID, den Domain Name System (DNS)-Computernamen, den Sam-Benutzernamen (Security Accounts Manager) und den Namen der Anwendung, die die Zertifikat Anforderung erstellt hat.
+Der ASN.1-UTF8String-Datentyp wird in ein TLV-Triplet codiert, das mit einem **Tag-Byte** 0x0C.  Das folgende Beispiel aus dem [THEMA CMC-codierte ASN.1](cmc-encoded-asn-1.md) zeigt, wie das **ClientId-Attribut** als ganze Zahl und drei **UTF8String-Typen codiert** wird. Der Objektbezeichner für das Attribut ist 1.3.6.1.4.1.311.21.20. Die Informationen, die mithilfe der [**IX509AttributeClientId-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributeclientid) angegeben werden können, umfassen eine Client-ID-Nummer, den Domain Name System-Computernamen (DNS), den SAM-Benutzernamen (Security Accounts Manager) und den Namen der Anwendung, die die Zertifikatanforderung erstellt hat.
 
 ``` syntax
 06 09                                ; OBJECT_ID (9 Bytes)
@@ -36,16 +36,16 @@ Der ASN. 1 **UTF8String** -Datentyp wird in ein TLV-Dreieck codiert, das mit dem
          63 65 72 74 72 65 71        ;   certreq
 ```
 
-Wenn die Zeichenfolge weniger als 128 Bytes enthält, benötigt das **Längen** Feld des TLV-Dreiecks nur ein Byte, um die Inhalts Länge anzugeben. Wenn die Zeichenfolge mehr als 127 Bytes beträgt, wird Bit 7 des **Längen** Felds auf 1 festgelegt, und Bits 6 bis 0 geben Sie die Anzahl zusätzlicher Bytes an, die zum Identifizieren der Inhalts Länge verwendet werden. Weitere Informationen finden Sie unter [codierte Länge und Wert Bytes](about-encoded-length-and-value-bytes.md).
+Wenn die Zeichenfolge weniger als 128 Bytes enthält, benötigt das **Feld Length** des TLV-Triplets nur ein Byte, um die Inhaltslänge anzugeben. Wenn die Zeichenfolge mehr als 127 Bytes beträgt, wird Bit 7 des **Felds Length** auf 1 festgelegt, und die Bits 6 bis 0 geben die Anzahl zusätzlicher Bytes an, die zum Identifizieren der Inhaltslänge verwendet werden. Weitere Informationen finden Sie unter [Codierte Länge und Wertbytes.](about-encoded-length-and-value-bytes.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[ASN. 1-Typsystem](about-asn-1-type-system.md)
+[ASN.1-Typsystem](about-asn-1-type-system.md)
 </dt> <dt>
 
-[Der-Codierung von ASN. 1-Typen](about-der-encoding-of-asn-1-types.md)
+[DER-Codierung von ASN.1-Typen](about-der-encoding-of-asn-1-types.md)
 </dt> </dl>
 
  

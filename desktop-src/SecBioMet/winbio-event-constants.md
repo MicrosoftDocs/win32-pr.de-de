@@ -1,6 +1,6 @@
 ---
-title: WINBIO_EVENT Konstanten (winbio \_ types. h)
-description: Geben Sie die zu überwachenden Ereignis Benachrichtigungs Typen für Dienstanbieter an.
+title: WINBIO_EVENT Konstanten (Winbio \_ types.h)
+description: Geben Sie die Typen von Dienstanbieterereignisbenachrichtigungen an, die überwacht werden sollen.
 ms.assetid: 73805413-a8d9-4682-aa21-7032451d750a
 topic_type:
 - apiref
@@ -13,23 +13,23 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 182a4ffe254e946f1b8deca2c5034e665a58f7ca
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a871022c51a906bd078125ae6aa6aa30c2e97024279f3309ca4ece58c00a88f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517474"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118910658"
 ---
-# <a name="winbio_event-constants"></a>Winbio- \_ Ereignis Konstanten
+# <a name="winbio_event-constants"></a>WINBIO \_ EVENT-Konstanten
 
-Die folgenden Konstanten können in der [**winbioregistereventmonitor**](/windows/desktop/api/Winbio/nf-winbio-winbioregistereventmonitor) -Funktion verwendet werden, um die Typen der zu überwachenden Ereignis Benachrichtigungen für den Dienstanbieter anzugeben.
+Die folgenden Konstanten können in der [**WinBioRegisterEventMonitor-Funktion**](/windows/desktop/api/Winbio/nf-winbio-winbioregistereventmonitor) verwendet werden, um die Typen der zu überwachenden Dienstanbieterereignisbenachrichtigungen anzugeben.
 
 
 
 | Konstante                                                                                                                                                                                                                        | BESCHREIBUNG                                                                                                                                                                                                                                                                                     |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="WINBIO_EVENT_FP_UNCLAIMED"></span><span id="winbio_event_fp_unclaimed"></span><dl> <dt>**winbio- \_ Ereignis \_ FP \_ nicht beansprucht**</dt> </dl>                             | Der Sensor hat einen Fingerring erkannt, der nicht von der Anwendung angefordert wurde, oder das Fenster, das gerade den Fokus besitzt. Der Windows-Biometrieframework Ruft die Rückruffunktion auf, um anzugeben, dass ein Finger schwenken aufgetreten ist, aber nicht versucht, den Fingerabdruck zu identifizieren.<br/> |
-| <span id="WINBIO_EVENT_FP_UNCLAIMED_IDENTIFY"></span><span id="winbio_event_fp_unclaimed_identify"></span><dl> <dt>**winbio- \_ Ereignis \_ FP \_ nicht beansprucht- \_ Identifizierung**</dt> </dl> | Der Sensor hat einen Fingerring erkannt, der nicht von der Anwendung angefordert wurde, oder das Fenster, das gerade den Fokus besitzt. Der Windows-Biometrieframework versucht, den Fingerabdruck zu identifizieren, und übergibt das Ergebnis dieses Prozesses an Ihre Rückruffunktion.<br/>                        |
+| <span id="WINBIO_EVENT_FP_UNCLAIMED"></span><span id="winbio_event_fp_unclaimed"></span><dl> <dt>**WINBIO \_ EVENT \_ FP \_ UNCLAIMED**</dt> </dl>                             | Der Sensor hat eine Fingerwischbewegung erkannt, die von der Anwendung oder dem Fenster, das derzeit den Fokus besitzt, nicht angefordert wurde. Der Windows Biometric Framework ruft Ihre Rückruffunktion auf, um anzugeben, dass ein Fingerwischen aufgetreten ist, aber nicht versucht, den Fingerabdruck zu identifizieren.<br/> |
+| <span id="WINBIO_EVENT_FP_UNCLAIMED_IDENTIFY"></span><span id="winbio_event_fp_unclaimed_identify"></span><dl> <dt>**WINBIO \_ EVENT \_ FP \_ UNCLAIMED \_ IDENTIFY**</dt> </dl> | Der Sensor hat eine Fingerwischbewegung erkannt, die von der Anwendung oder dem Fenster, das derzeit den Fokus besitzt, nicht angefordert wurde. Der Windows Biometric Framework versucht, den Fingerabdruck zu identifizieren, und übergibt das Ergebnis dieses Prozesses an Ihre Rückruffunktion.<br/>                        |
 
 
 
@@ -39,17 +39,17 @@ Die folgenden Konstanten können in der [**winbioregistereventmonitor**](/window
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (winbio.h einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Anwendungs Konstanten](client-application-constants.md)
+[Clientanwendungskonstanten](client-application-constants.md)
 </dt> </dl>
 
  

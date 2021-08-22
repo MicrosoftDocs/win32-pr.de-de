@@ -1,19 +1,19 @@
 ---
-description: Das Konzept eines-Datentyps ist für die abstrakte Syntax Notation One (ASN. 1) Standard wichtig.
+description: Das Konzept eines Datentyps ist für den ASN.1-Standard (Abstract Syntax Notation One) von grundlegender Bedeutung.
 ms.assetid: 85e88e0b-057b-42c7-a3c8-017a30195d1e
-title: ASN. 1-Typsystem
+title: ASN.1-Typsystem
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: abbf60bf61e32c5fca882f2e40c946c043ef93e3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1e0b5b9780057229d301bbabcdf2484c66bf06b4313587b0e70a68070885a179
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366240"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118905075"
 ---
-# <a name="asn1-type-system"></a>ASN. 1-Typsystem
+# <a name="asn1-type-system"></a>ASN.1-Typsystem
 
-Das Konzept eines-Datentyps ist für die abstrakte Syntax Notation One (ASN. 1) Standard wichtig. Jedes Feld einer Zertifikat Anforderungs Struktur ist einem Typ zugeordnet. Beachten Sie beispielsweise die \# im folgenden Beispiel gezeigte Zertifikat Syntax PKCS 10 ASN. 1.
+Das Konzept eines Datentyps ist für den ASN.1-Standard (Abstract Syntax Notation One) von grundlegender Bedeutung. Jedes Feld einer Zertifikatanforderungsstruktur ist einem Typ zugeordnet. Betrachten Sie beispielsweise die IM FOLGENDEN Beispiel gezeigte PKCS \# 10 ASN.1-Zertifikatssyntax.
 
 ``` syntax
 --------------------------------------------------------------------
@@ -74,34 +74,34 @@ Attribute ::= SEQUENCE
 AttributeSetValue ::= SET OF ANY
 ```
 
-Die Anforderungs Struktur auf hoher Ebene, **certificationrequestinfo**, ist ein Typ, der aus einer Sequenz anderer Typen besteht. Wenn ein Typ ist oder nur grundlegende Typen, Zeichen folgen Typen oder **beliebige** enthält, kann er nicht weiter aufgeschlüsselt werden. Das Feld **Version** ist beispielsweise ein **certificationrequestinfoversion** -Typ, der wiederum ein **ganzzahliger** Typ ist, d. h. ein grundlegender ASN. 1-Typ, der nicht aus anderen Typen besteht.
+Die Anforderungsstruktur auf hoher Ebene, **CertificationRequestInfo,** ist ein Typ, der aus einer Sequenz anderer Typen besteht. Wenn ein Typ ist oder nur grundlegende Typen, Zeichenfolgentypen oder **ANY** enthält, kann er nicht weiter unterteilt werden. Beispielsweise ist  das Versionsfeld ein **CertificationRequestInfoVersion-Typ,** der wiederum ein **INTEGER-Typ** ist, ein grundlegender ASN.1-Typ, der nicht aus anderen Typen besteht.
 
-Ein Typsystem ermöglicht der visuellen Darstellung der Syntax einer Anforderung auf eine Weise, die von Entwicklern bereitgestellt werden kann, und ermöglicht die konsistente Codierung der Anforderung für die Übertragung über ein Netzwerk. Weitere Informationen zur Codierung finden Sie unter [Distinguished Encoding Rules](distinguished-encoding-rules.md). Weitere Informationen zu ASN. 1-Typen finden Sie in den folgenden Themen.
+Ein Typsystem ermöglicht es, die Syntax einer Anforderung visuell auf eine Weise zu präsentieren, die von Entwicklern leicht verstanden wird, und ermöglicht es, die Anforderung konsistent für die Übertragung über ein Netzwerk zu codieren. Weitere Informationen zur Codierung finden Sie unter [Distinguished Encoding Rules](distinguished-encoding-rules.md). Weitere Informationen zu ASN.1-Typen finden Sie in den folgenden Themen.
 
 [Standardtypen](about-basic-types.md)
 
 Erläutert die folgenden Datentypen:
 
-* **Bitzeichenfolge**
-* **Booleschen**
+* **BIT STRING**
+* **Boolean**
 * **INTEGER**
 * **NULL**
-* **Objekt Bezeichner**
-* **Oktett-Zeichenfolge**
+* **OBJEKTBEZEICHNER**
+* **OKTETT-ZEICHENFOLGE**
 
-[Zeichen folgen Typen](about-string-types.md)
+[Zeichenfolgentypen](about-string-types.md)
 
-Erläutert die folgenden Zeichen folgen Typen:
+Erläutert die folgenden Zeichenfolgentypen:
 
-* **Bmpstring**
+* **BMPString**
 * **IA5String**
 * **PrintableString**
-* **Teletexstring**
+* **TeletexString**
 * **UTF8String**
 
 [Konstruierte Typen](about-constructed-types.md)
 
-Erläutert ASN. 1-Datentypen, die grundlegende Typen, Zeichen folgen Typen oder andere konstruierte Typen enthalten können.
+Erläutert ASN.1-Datentypen, die grundlegende Typen, Zeichenfolgentypen oder andere konstruierte Typen enthalten können.
 
 
 
@@ -112,16 +112,16 @@ Erläutert ASN. 1-Datentypen, die grundlegende Typen, Zeichen folgen Typen oder 
 
 <dl> <dt>
 
-[Zertifikat Anforderungs Codierung](about-certificate-request-encoding.md)
+[Zertifikatanforderungscodierung](about-certificate-request-encoding.md)
 </dt> <dt>
 
-[Der-Codierung von ASN. 1-Typen](about-der-encoding-of-asn-1-types.md)
+[DER-Codierung von ASN.1-Typen](about-der-encoding-of-asn-1-types.md)
 </dt> <dt>
 
 [Distinguished Encoding Rules](distinguished-encoding-rules.md)
 </dt> <dt>
 
-[Einführung in die ASN. 1-Syntax und-Codierung](about-introduction-to-asn-1-syntax-and-encoding.md)
+[Einführung in ASN.1-Syntax und -Codierung](about-introduction-to-asn-1-syntax-and-encoding.md)
 </dt> </dl>
 
  

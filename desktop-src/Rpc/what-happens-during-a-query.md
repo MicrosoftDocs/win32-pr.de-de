@@ -1,49 +1,49 @@
 ---
 title: Was geschieht während einer Abfrage?
-description: In diesem Abschnitt wird beschrieben, wie das Netzwerk die Abfrage behandelt, wenn ein 32-Bit-Client in seiner eigenen Domäne nach einem Namen sucht.
+description: In diesem Abschnitt wird beschrieben, wie das Netzwerk die Abfrage verarbeitet, wenn ein 32-Bit-Client in seiner eigenen Domäne nach einem Namen sucht.
 ms.assetid: a8a88743-a245-4258-af05-9261c214ab50
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6e26fb9aaef0aac2ff66260d51f756725566dee
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e7377df4ced562bc166fedbf489724a2a4a042855391db45841b5de5cf5af906
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206816"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119010428"
 ---
 # <a name="what-happens-during-a-query"></a>Was geschieht während einer Abfrage?
 
-In diesem Abschnitt wird beschrieben, wie das Netzwerk die Abfrage behandelt, wenn ein 32-Bit-Client in seiner eigenen Domäne nach einem Namen sucht.
+In diesem Abschnitt wird beschrieben, wie das Netzwerk die Abfrage verarbeitet, wenn ein 32-Bit-Client in seiner eigenen Domäne nach einem Namen sucht.
 
-Wenn Ihre Client Anwendung [**rpcnsbindingimportbegin**](/windows/desktop/api/Rpcnsi/nf-rpcnsi-rpcnsbindingimportbegina)aufruft, versucht der Serverlocatorpunkt, der sich auf dem Client Computer befindet, diese Anforderung zu erfüllen. Wenn im Cache nichts vorhanden ist, wird die Anforderung von RPC an einen masterlocator weiterleiten. Wenn der Master Serverlocatorpunkt nichts im Cache findet, sendet er die Anforderung mithilfe einer e-Mail-Slot-Übertragung an alle Computer in der Domäne. Wenn eine Entsprechung vorliegt, antwortet der Serverlocatorpunkt auf jedem Computer durch einen gerichteten e-Mail-Slot. (Z. b. Wenn ein Prozess auf diesem Computer die Schnittstelle exportiert hat.) Die Antworten werden sortiert, und der RPC-Vorgang wird vom Prozess Locator des Clients abgeschlossen, der dem Client Prozess selbst antwortet.
+Wenn Ihre Clientanwendung [**RpcNsBindingImportBegin**](/windows/desktop/api/Rpcnsi/nf-rpcnsi-rpcnsbindingimportbegina)aufruft, versucht der Locator, der sich auf Ihrem Clientcomputer befindet, diese Anforderung zu erfüllen. Wenn im Cache nichts vorhanden ist, wird die Anforderung von RPC an einen Masterlocator weitergeleitet. Wenn der Masterlocator nichts im Cache findet, sendet er die Anforderung mithilfe einer Mailslotübertragung an alle Computer in der Domäne. Wenn eine Übereinstimmung vorliegt, antwortet der Locator auf jedem Computer durch einen gerichteten E-Mail-Slot. (Beispiel: Ein Prozess auf diesem Computer hat die Schnittstelle exportiert.) Die Antworten werden sortiert, und der RPC wird über den Prozesslocator des Clients abgeschlossen, der auf den Clientprozess selbst antwortet.
 
-In einer Domäne sucht der clientlocator an den folgenden Stellen nach einem hauptlocator:
+In einer Domäne sucht der Clientlocator an den folgenden Stellen nach einem Masterlocator:
 
--   Auf dem primären Domänen Controller
--   Auf jedem Sicherungs Domänen Controller
+-   Auf dem primären Domänencontroller
+-   Auf jedem Sicherungsdomänencontroller
 
-Wenn keine Entsprechung gefunden wird, deklariert sich der clientlocator als hauptlocator. Daher werden Abfragen gesendet, wenn Sie nicht lokal erfüllt werden können.
+Wenn keine Übereinstimmung gefunden wird, deklariert sich der Clientlocator selbst als Masterlocator. Daher werden Abfragen übertragen, wenn sie lokal nicht erfüllt werden können.
 
-In einer Arbeitsgruppe behält der clientlocator einen Cache der Computer bei, deren Locators übertragen werden. Er verwendet den, der den längsten als hauptlocator ausgeführt hat. Wenn der Computer nicht verfügbar ist, wird der nächste, längste Broadcast Computer verwendet usw. Wenn der Client einen Master-Serverlocatorpunkt benötigt und der Cache leer ist, wird der Cache durch das Senden einer speziellen e-Mail-Slot-Übertragung aufgefüllt, die die Master-Locators anfordert, Antworten zu erhalten. Wenn keine Antworten vorhanden sind, deklariert sich der clientlocator als hauptlocator und sendet Abfragen, wenn Sie nicht lokal erfüllt werden können.
+In einer Arbeitsgruppe verwaltet der Clientlocator einen Cache der Computer, deren Locators übertragen wurden. Sie verwendet die , die am längsten als Masterlocator ausgeführt wurde. Wenn dieser Computer nicht verfügbar ist, wird der nächste Computer mit der längsten Übertragung verwendet usw. Wenn der Client einen Masterlocator benötigt und der Cache leer ist, füllt er den Cache auf, indem er eine spezielle E-Mail-Slotübertragung sendet, die Masterlocators anfordert, um zu antworten. Wenn keine Antworten vorhanden sind, deklariert sich der Clientlocator selbst als Masterlocator und überträgt Abfragen, wenn sie lokal nicht erfüllt werden können.
 
-Dies ändert sich, wenn die Client Anwendung ein 16-Bit-oder MS-DOS-basiertes Programm ist. In diesem Fall wird kein Serverlocatorpunkt auf dem Client Computer ausgeführt, und Rpcns1.dll oder rpcnslm. RPC enthält den Code für die Suche nach einem masterlocator. Alle Anforderungen werden direkt an den masterlocator weitergeleitet.
+Dies ändert sich, wenn ihre Clientanwendung ein 16-Bit- oder MS-DOS-basiertes Programm ist. In diesem Fall wird kein Locator auf dem Clientcomputer ausgeführt, und Rpcns1.dll oder Rpcnslm.rpc enthält den Code zum Suchen eines Masterlocators. Alle Anforderungen werden direkt an den Masterlocator weitergeleitet.
 
-Diese Richtlinien gelten für Namen in der Domäne des Clients, z. b. Namen für "/.:/ entryname ". Wenn der Client einen Namen aus einer anderen Domäne durch die Verwendung von "/.../Domain/entryname;" anfordert, leitet der clientlocator die Anforderung an die angegebene Domäne weiter, die Sie überträgt, wenn Sie nicht über die Antwort verfügt. Wenn die Domäne nicht ausgeführt wird oder tatsächlich eine Arbeitsgruppe ist, tritt bei der Anforderung ein Fehler auf.
+Diese Richtlinien gelten für Namen in der Domäne des Clients, z. B. Namen für "/.:/". entryname". Wenn der Client mithilfe von "/.../DOMAIN/entryname;" einen Namen von einer anderen Domäne anfordert, leitet der Clientlocator die Anforderung an die angegebene Domäne weiter, die sie überträgt, wenn sie nicht über die Antwort verfügt. Wenn die Domäne ausfällt oder tatsächlich eine Arbeitsgruppe ist, schlägt die Anforderung fehl.
 
 > [!Note]  
-> Beachten Sie beim Arbeiten mit Einträgen im Namensdienst Folgendes:
+> Beachten Sie Folgendes, wenn Sie mit Einträgen im Namensdienst arbeiten:
 
- 
+ 
 
--   Ein Client kann die Syntax "/.../Domain/entryname" nicht verwenden, um einen Eintrag in seiner eigenen Domäne zu finden. Verwenden Sie die Syntax "/.:/ entryname ". Sie können jedoch "/.../Domain/entryname" verwenden, um einen Eintrag in einer anderen Domäne zu finden.
--   Der Domänen Name in "/.../Domain/entryname" muss in Großbuchstaben angegeben werden. Wenn Sie nach einer Entsprechung suchen, wird die Groß-/Kleinschreibung beachtet.
--   Bei Locator-Eintrags Namen wird ebenfalls die Groß-/Kleinschreibung beachtet
--   Wenn der Client "/.:/" verwendet. entryname "-Syntax, der Serverlocatorpunkt sucht nicht nach Einträgen in anderen Domänen, auch wenn Sie über eine Vertrauensstellung mit der Anmelde Domäne verfügen.
--   Sendungen überschreiten keine LAN-Segmente (z. b. Subnetze). Daher ist die Nützlichkeit des Locators in einer Organisation mit mehreren Subnetzen eingeschränkt.
+-   Ein Client kann die Syntax "/.../DOMAIN/entryname" nicht verwenden, um einen Eintrag in seiner eigenen Domäne zu finden. Verwenden Sie die Syntax "/.:/". entryname". Sie können jedoch "/.../DOMAIN/entryname" verwenden, um einen Eintrag in einer anderen Domäne zu suchen.
+-   Der Domänenname in "/.../DOMAIN/entryname" muss groß geschrieben werden. Bei der Suche nach einer Übereinstimmung wird beim Locator die Groß-/Kleinschreibung beachtet.
+-   Bei Locator-Eintragsnamen wird auch die Groß-/Kleinschreibung beachtet, es darf jedoch kein Groß-/Kleinschreibung sein.
+-   Wenn der Client "/.:/" verwendet entryname"-Syntax, sucht der Locator nicht nach Einträgen in anderen Domänen, auch wenn sie über eine Vertrauensstellung mit der Anmeldedomäne verfügen.
+-   Broadcasts sind nicht lanübergreifend segmentübergreifend (z. B. Subnetze). Daher ist die Nützlichkeit des Locators in einer Organisation mit mehreren Subnetzen eingeschränkt.
 
- 
+ 
 
- 
+ 
 
 
 

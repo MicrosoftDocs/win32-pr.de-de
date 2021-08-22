@@ -1,72 +1,72 @@
 ---
-title: Grundlegendes zu Threading Problemen
-description: In diesem Thema werden häufige Threading Szenarios für Microsoft Benutzeroberflächenautomatisierungs-Client Implementierungen beschrieben und erläutert, wie Probleme vermieden werden, die auftreten können, wenn ein Client fälschlicherweise Threading verwendet.
+title: Grundlegendes zu Threadingproblemen
+description: In diesem Thema werden allgemeine Threadingszenarien für Microsoft Benutzeroberflächenautomatisierung-Clientimplementierungen beschrieben, und es wird erläutert, wie Probleme vermieden werden, die auftreten können, wenn ein Client threading falsch verwendet.
 ms.assetid: 0772969a-da55-488e-8b21-7368434df8a9
 keywords:
-- Clients, Benutzeroberflächenautomatisierungs-Threading Probleme
-- Clients, Threading Probleme
-- Clients, ereignishandlerthreading-Modell
-- Clients, Benutzeroberflächenautomatisierungs-ereignishandlerthreading Modell
-- Clients, Benutzeroberflächenautomatisierungs-Affinität
+- Clients, Benutzeroberflächenautomatisierung Threadingprobleme
+- Clients, Threadingprobleme
+- Clients, Ereignishandler-Threadingmodell
+- Clients,Benutzeroberflächenautomatisierung Ereignishandler-Threadingmodell
+- Clients, Benutzeroberflächenautomatisierung Affinität
 - Clients, Affinität
-- Benutzeroberflächenautomatisierungs, Threading Probleme
-- UI-Automatisierung, ereignishandlerthreading-Modell
-- Benutzeroberflächen Automatisierung, Affinität
+- Benutzeroberflächenautomatisierung,Threadingprobleme
+- Benutzeroberflächenautomatisierung,Ereignishandler-Threadingmodell
+- Benutzeroberflächenautomatisierung,Affinity
 - Threadingprobleme
-- ereignishandlerthreading-Modell
+- Threadingmodell für Ereignishandler
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a002132efe4055bb247c7d7290e271e153ac297e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 7b096df24034e6ed61f9629a49b47a40a95a36792dc9cfe1836a72266ac7a583
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039043"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118824529"
 ---
-# <a name="understanding-threading-issues"></a>Grundlegendes zu Threading Problemen
+# <a name="understanding-threading-issues"></a>Grundlegendes zu Threadingproblemen
 
-In diesem Thema werden häufige Threading Szenarios für Microsoft Benutzeroberflächenautomatisierungs-Client Implementierungen beschrieben und erläutert, wie Probleme vermieden werden, die auftreten können, wenn ein Client fälschlicherweise Threading verwendet.
+In diesem Thema werden allgemeine Threadingszenarien für Microsoft Benutzeroberflächenautomatisierung-Clientimplementierungen beschrieben, und es wird erläutert, wie Probleme vermieden werden, die auftreten können, wenn ein Client threading falsch verwendet.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Benutzeroberflächen Automatisierung und der UI-Thread](#ui-automation-and-the-ui-thread)
--   [Threading Modell für Ereignishandler](#threading-model-for-event-handlers)
--   [COM-Apartment Affinität auf 64-Bit-Windows](#com-apartment-affinity-on-64-bit-windows)
+-   [Benutzeroberflächenautomatisierung und der UI-Thread](#ui-automation-and-the-ui-thread)
+-   [Threadingmodell für Ereignishandler](#threading-model-for-event-handlers)
+-   [COM-Apartmentaffinität auf 64-Bit-Windows](#com-apartment-affinity-on-64-bit-windows)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="ui-automation-and-the-ui-thread"></a>Benutzeroberflächen Automatisierung und der UI-Thread
+## <a name="ui-automation-and-the-ui-thread"></a>Benutzeroberflächenautomatisierung und der UI-Thread
 
-Aufgrund der Art und Weise, wie die Benutzeroberflächen Automatisierung Windows-Meldungen verwendet, können Konflikte auftreten, wenn eine Client Anwendung versucht, mit ihrer eigenen Benutzeroberfläche im UI-Thread zu interagieren. Diese Konflikte können zu einer sehr langsamen Leistung führen oder sogar dazu führen, dass die Anwendung nicht mehr reagiert.
+Aufgrund der Art und Weise, wie Benutzeroberflächenautomatisierung Windows Nachrichten verwendet, können Konflikte auftreten, wenn eine Clientanwendung versucht, mit ihrer eigenen Benutzeroberfläche im UI-Thread zu interagieren. Diese Konflikte können zu einer sehr langsamen Leistung führen oder sogar dazu führen, dass die Anwendung nicht mehr reagiert.
 
-Wenn Ihre Client Anwendung mit allen Elementen auf dem Desktop interagieren soll, einschließlich der eigenen Benutzeroberfläche, sollten Sie alle Aufrufe der Benutzeroberflächen Automatisierung von einem separaten Thread ausführen. Dies umfasst das Auffinden von Elementen, z. b. durch die Verwendung von [**iuiautomationtreewalker**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationtreewalker) oder der [**iuiautomationelement:: FindAll**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-findall) -Methode und die Verwendung von Steuerelement Mustern. Dieser Thread sollte keine Fenster besitzen und sollte ein Component Object Model (com) Multithread-Apartment (MTA)-Modell Thread sein (einer, der com initialisiert, indem er [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) mit dem **coinit- \_ multithreadflag** aufruft).
+Wenn Ihre Clientanwendung mit allen Elementen auf dem Desktop interagieren soll, einschließlich der eigenen Benutzeroberfläche, sollten Sie alle Benutzeroberflächenautomatisierung Aufrufe von einem separaten Thread ausführen. Dies schließt das Suchen von Elementen ein, z. B. mithilfe von [**IUIAutomationTreeWalker**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationtreewalker) oder der [**IUIAutomationElement::FindAll-Methode**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-findall) und der Verwendung von Steuerelementmustern. Dieser Thread sollte keine Fenster besitzen und ein Component Object Model (COM) Multithread-Apartment-Modellthread (MTA) sein (ein Thread, der COM initialisiert, indem [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) mit dem **COINIT \_ MULTITHREADED-Flag** aufgerufen wird).)
 
-Es ist sicher, Benutzeroberflächenautomatisierungs-Aufrufe in einem Benutzeroberflächenautomatisierungs-Ereignishandler durchzuführen, da der Ereignishandler immer für einen nicht-UI-Thread aufgerufen wird. Wenn Sie jedoch Ereignisse abonnieren, die von der Benutzeroberfläche der Client Anwendung stammen können, müssen Sie den Aufruf von [**iuiautomation:: AddAutomationEventHandler**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-addautomationeventhandler)oder einer verknüpften Methode in einem nicht-UI-Thread durchführen (der auch ein MTA-Thread sein sollte). Entfernen Sie Ereignishandler im gleichen Thread.
+Es ist sicher, Benutzeroberflächenautomatisierung Aufrufe in einem Benutzeroberflächenautomatisierung Ereignishandler vorzunehmen, da der Ereignishandler immer für einen Nicht-UI-Thread aufgerufen wird. Wenn Sie jedoch Ereignisse abonnieren, die von der Benutzeroberfläche Ihrer Clientanwendung stammen können, müssen Sie [**IUIAutomation::AddAutomationEventHandler**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-addautomationeventhandler)oder eine verwandte Methode in einem Nicht-UI-Thread aufrufen (der auch ein MTA-Thread sein sollte). Entfernen Sie Ereignishandler im gleichen Thread.
 
-Ein Benutzeroberflächenautomatisierungs-Client sollte nicht mehrere Threads verwenden, um Ereignishandler hinzuzufügen oder zu entfernen. Unerwartetes Verhalten kann auftreten, wenn ein Ereignishandler hinzugefügt oder entfernt wird, während ein anderer in demselben Client Prozess hinzugefügt oder entfernt wird.
+Ein Benutzeroberflächenautomatisierung Client sollte nicht mehrere Threads verwenden, um Ereignishandler hinzuzufügen oder zu entfernen. Unerwartetes Verhalten kann auftreten, wenn ein Ereignishandler hinzugefügt oder entfernt wird, während ein anderer im selben Clientprozess hinzugefügt oder entfernt wird.
 
-## <a name="threading-model-for-event-handlers"></a>Threading Modell für Ereignishandler
+## <a name="threading-model-for-event-handlers"></a>Threadingmodell für Ereignishandler
 
-Ein Benutzeroberflächenautomatisierungs-Client sollte das com MTA-Threading Modell für Threads verwenden, die Ereignishandler implementieren. Das STA-Modell (Single Thread-Apartment) kann Probleme verursachen, z. b. das Entfernen von Ereignis Handlern durch Clients aus dem Thread.
+Ein Benutzeroberflächenautomatisierung Client sollte das COM MTA-Threadingmodell für Threads verwenden, die Ereignishandler implementieren. Die Verwendung des STA-Modells (Singlethreaded Apartment) kann Probleme verursachen, z. B. das Entfernen von Ereignishandlern aus dem Thread durch Clients verhindern.
 
-## <a name="com-apartment-affinity-on-64-bit-windows"></a>COM-Apartment Affinität auf 64-Bit-Windows
+## <a name="com-apartment-affinity-on-64-bit-windows"></a>COM-Apartmentaffinität auf 64-Bit-Windows
 
-Gemäß der com-Spezifikation wird die Lebensdauer eines Remote Objekts von der Lebensdauer des Apartment gesteuert, in dem die [cokreateinstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion aufgerufen wird, um das Objekt zu erstellen. Wenn das Original Apartment heruntergefahren wird, wird auch das Remote Objekt freigegeben.
+Gemäß der COM-Spezifikation wird die Lebensdauer eines Remoteobjekts durch die Lebensdauer des Apartment gesteuert, in dem die [CoCreateInstance-Funktion](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) aufgerufen wird, um das Objekt zu erstellen. Wenn das ursprüngliche Apartment heruntergefahren wird, wird auch das Remoteobjekt freigegeben.
 
-Für Benutzeroberflächenautomatisierungs-Clients kann dieses com-Verhalten bedeuten, dass die Lebensdauer des von einem 32-Bit-Element verwendeten Remote-32/64-Hilfsprogramms (von UIAutomationCore.dll) von der Lebensdauer des Threads gesteuert wird, der das Element erstellt hat. Wenn der Benutzeroberflächenautomatisierungs-Client das Element an einen anderen Thread marshundiert, kann das Element ungültig werden, wenn das ursprüngliche Apartment heruntergefahren wird. Der Benutzeroberflächenautomatisierungs-Client sollte diese Probleme durch Abfangen von Fehlern bei der Verwendung von gemarshallten Automatisierungs Elementen ordnungsgemäß behandeln.
+Für Benutzeroberflächenautomatisierung Clients kann dieses COM-Verhalten bedeuten, dass die Lebensdauer des Remotehilfselements 32/64 (erstellt von UIAutomationCore.dll), das von einem 32-Bit-Element verwendet wird, von der Apartmentlebensdauer des Threads gesteuert wird, der das Element erstellt hat. Wenn der Benutzeroberflächenautomatisierung Client das Element an einen anderen Thread marshallt, kann das Element ungültig werden, wenn das ursprüngliche Apartment heruntergefahren wird. Der Benutzeroberflächenautomatisierung-Client sollte diese Probleme ordnungsgemäß behandeln, indem er Fehler abfängt, während gemarshallte Automatisierungselemente verwendet werden.
 
-Das gleiche Problem kann bei einem 32-Bit-Benutzeroberflächenautomatisierungs-Client auftreten, der 64-Bit-Elemente aufweist.
+Das gleiche Problem kann bei einem 32-Bit-Benutzeroberflächenautomatisierung-Client auftreten, der über 64-Bit-Elemente verfügt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Abrufen von Benutzeroberflächenautomatisierungs-Elementen](uiauto-obtainingelements.md)
 </dt> <dt>
 
-[Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](uiauto-eventsforclients.md)
+[Abonnieren von Benutzeroberflächenautomatisierung Ereignissen](uiauto-eventsforclients.md)
 </dt> <dt>
 
 [Übersicht über Benutzeroberflächenautomatisierungs-Ereignisse](uiauto-eventsoverview.md)
@@ -75,9 +75,9 @@ Das gleiche Problem kann bei einem 32-Bit-Benutzeroberflächenautomatisierungs-C
 **Andere Ressourcen**
 </dt> <dt>
 
-[Info: Beschreibungen und Funktionsweise von OLE Threading-Modellen](https://support.microsoft.com/kb/150777)
+[INFO: Beschreibungen und Funktionsweisen von OLE-Threadingmodellen](https://support.microsoft.com/kb/150777)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

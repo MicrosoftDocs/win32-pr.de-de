@@ -1,7 +1,7 @@
 ---
-description: 'RequestStateChange-Methode der Msvm_SyntheticEthernetPort Klasse : Fordert eine Zustandsänderung an.'
+description: RequestStateChange-Methode der Msvm_SyntheticEthernetPort - Fordert eine Zustandsänderung an.
 ms.assetid: 9aea3a8e-8b62-48c3-bbdb-49f24aeeca22
-title: RequestStateChange-Methode der Msvm_SyntheticEthernetPort Klasse
+title: RequestStateChange-Methode der Msvm_SyntheticEthernetPort-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 7a751ba40be7ddeb6d71f104036487dd8acb209a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1c39bb9f97a398e566f68fda72ce71b174ea49cfd4b56dcb4848b06aebd7f159
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108111308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118949869"
 ---
 # <a name="requeststatechange-method-of-the-msvm_syntheticethernetport-class"></a>RequestStateChange-Methode der Msvm \_ SyntheticEthernetPort-Klasse
 
@@ -120,7 +120,7 @@ Der neue Zustand. Die Informationen werden in der **RequestedState-Eigenschaft**
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Reservierter Anbieter** (32768..65535)
+**Anbieter reserviert** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
@@ -155,7 +155,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
@@ -165,7 +165,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

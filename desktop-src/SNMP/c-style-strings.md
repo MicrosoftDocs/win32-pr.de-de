@@ -1,30 +1,30 @@
 ---
-title: Zeichen folgen im C-Stil
-description: Eine WinSNMP-Anwendung kann mit NULL endende Zeichen folgen im C-Stil zum Konvertieren von Entitäts-und objektbezeichnerobjekten (OID) in und aus ihren Zeichen folgen Darstellungen verwenden.
+title: Zeichenfolgen im C-Format
+description: Eine WinSNMP-Anwendung kann NULL-terminierte Zeichenfolgen im C-Stil verwenden, um Entitäts- und Objektbezeichnerobjekte (OID) in und aus ihren Zeichenfolgendarstellungen zu konvertieren.
 ms.assetid: df04071c-df46-410b-ad92-6adecbfcd454
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 878398b6d8691982aa90b9f1376a38214030e52e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6449514d4c08baae638d950a42f7f553e0037efe6bdc45b8045dbd315c1a2c65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855215"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119009749"
 ---
-# <a name="c-style-strings"></a>Zeichen folgen im C-Stil
+# <a name="c-style-strings"></a>Zeichenfolgen im C-Format
 
-Eine WinSNMP-Anwendung kann mit **null** endende Zeichen folgen im C-Stil zum Konvertieren von Entitäts-und objektbezeichnerobjekten (OID) in und aus ihren Zeichen folgen Darstellungen verwenden.
+Eine WinSNMP-Anwendung kann NULL-terminierte Zeichenfolgen im C-Stil verwenden, um Entitäts- und Objektbezeichnerobjekte (OID) in und aus ihren Zeichenfolgendarstellungen zu konvertieren.
 
-Zu den WinSNMP-Funktionen, die Zeichen folgen im C-Stil bearbeiten, gehören [**snmpstreinentity**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtoentity), [**snmpentitydestr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpentitytostr), [**snmpstrdeoid**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtooid)und [**snmpoiddestr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidtostr). Da [**snmpentitydestr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpentitytostr) und [**snmpoidesstr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidtostr) einen Zeiger auf eine Zeichen folgen Variable im C-Format zurückgeben, muss die WinSNMP-Anwendung einen entsprechenden Wert im *size* -Parameter übergeben, wenn diese Funktionen aufgerufen werden. Weitere Informationen finden Sie auf den Referenzseiten für diese Funktionen.
+Zu den WinSNMP-Funktionen, die Zeichenfolgen im C-Stil bearbeiten, gehören [**SnmpStrToEntity,**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtoentity) [**SnmpEntityToStr,**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpentitytostr) [**SnmpStrToOid**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtooid)und [**SnmpOidToStr.**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidtostr) Da [**SnmpEntityToStr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpentitytostr) und [**SnmpOidToStr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidtostr) einen Zeiger auf eine Zeichenfolgenvariable im C-Stil zurückgeben, muss die WinSNMP-Anwendung beim Aufrufen dieser Funktionen einen entsprechenden Wert im *Size-Parameter* übergeben. Weitere Informationen finden Sie auf den Referenzseiten für diese Funktionen.
 
 > [!Note]  
-> Der *Kontext* Parameter der [**snmpstrautcontext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtocontext) -Funktion und der [**snmpcontextdestr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcontexttostr) -Funktion muss eine Oktett-Zeichen folgen Struktur sein, d. h. eine [**smioctets**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioctets) -Struktur. Der *Kontext* Parameter darf keine Zeichenfolge im C-Format sein. Die in einer **smioctets** -Struktur enthaltene Zeichenfolge erfordert kein Byte, das **null** endet.
+> Der *Kontextparameter* der Funktionen [**SnmpStrToContext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtocontext) und [**SnmpContextToStr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcontexttostr) muss eine Oktettzeichenfolgenstruktur sein, d. h. eine [**smiOCTETS-Struktur.**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioctets) Der *Kontextparameter* darf keine Zeichenfolge im C-Stil sein. Die in einer **smiOCTETS-Struktur** enthaltene Zeichenfolge erfordert kein **Byte** mit NULL-Abbruch.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

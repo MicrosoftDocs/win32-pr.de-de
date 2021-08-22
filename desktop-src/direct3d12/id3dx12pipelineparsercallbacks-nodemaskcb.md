@@ -1,11 +1,11 @@
 ---
-title: ID3DX12PipelineParserCallbacks nodemaskcb-Methode (D3DX12. h)
-description: Ruft den nodemask-untergeordneten Rückruf eines Objekts auf, das diese Schnittstelle implementiert.
+title: ID3DX12PipelineParserCallbacks NodemaskCb-Methode (D3DX12.h)
+description: Ruft den Rückruf des Knotenmaskenunterobjekts eines Objekts auf, das diese Schnittstelle implementiert.
 ms.assetid: F5A408B7-A777-4BBC-A2A3-1BC3551E65ED
 keywords:
-- Nodemaskcb-Methode
-- Nodemaskcb-Methode, ID3DX12PipelineParserCallbacks-Schnittstelle
-- ID3DX12PipelineParserCallbacks Interface, nodemaskcb-Methode
+- NodemaskCb-Methode
+- NodemaskCb-Methode, ID3DX12PipelineParserCallbacks-Schnittstelle
+- ID3DX12PipelineParserCallbacks-Schnittstelle, NodemaskCb-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fdf1cc03f60259c395ca8c459ddd5a308e3dcd6c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 356ddf6ea86980ee882ad7544096811db420ae0cf8224f315801b708b95ae98d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119045448"
 ---
-# <a name="id3dx12pipelineparsercallbacksnodemaskcb-method"></a>ID3DX12PipelineParserCallbacks:: nodemaskcb-Methode
+# <a name="id3dx12pipelineparsercallbacksnodemaskcb-method"></a>ID3DX12PipelineParserCallbacks::NodemaskCb-Methode
 
-Ruft den nodemask-untergeordneten Rückruf eines Objekts auf, das diese Schnittstelle implementiert.
+Ruft den Rückruf des Knotenmaskenunterobjekts eines Objekts auf, das diese Schnittstelle implementiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,12 +45,12 @@ void NodemaskCb(
 
 <dl> <dt>
 
-*Nodemask* 
+*Knotenmaske* 
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Details zum nodemask-unter Objekt, das aus einem Pipeline Status-Stream analysiert wurde.
+Details des Knotenmasken-Unterobjekts, das aus einem Pipelinezustandsstream analysiert wird.
 
 </dd> </dl>
 
@@ -64,8 +64,8 @@ Gibt nichts zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX12. h</dt> </dl>  |
-| Bibliothek<br/> | <dl> <dt>D3D12. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX12.h</dt> </dl>  |
+| Bibliothek<br/> | <dl> <dt>D3D12.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D3D12.dll</dt> </dl> |
 
 

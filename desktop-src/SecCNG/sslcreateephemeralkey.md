@@ -1,7 +1,7 @@
 ---
 description: Erstellt einen kurzlebigen Schlüssel zur Verwendung während der Authentifizierung, die während des SSL-Handshakes (Secure Sockets Layer Protocol) auftritt.
 ms.assetid: faad9b3b-e476-4e61-b978-bcb517ecaeb7
-title: Sslkreatekurzlealkey-Funktion (sslprovider. h)
+title: SslCreateEphemeralKey-Funktion (Sslprovider.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ncrypt.dll
-ms.openlocfilehash: 452b0166da367bb6b1530f5669e55b7ca909e13e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a6a54de2865df805af51b054c22d455d52914a5b00514767d432ceda28c16a39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347113"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118907097"
 ---
-# <a name="sslcreateephemeralkey-function"></a>Sslkreatekurzlealkey-Funktion
+# <a name="sslcreateephemeralkey-function"></a>SslCreateEphemeralKey-Funktion
 
-Die **sslkreatekurzlealkey** -Funktion erstellt einen kurzlebigen Schlüssel zur Verwendung während der Authentifizierung, die während des [*Secure Sockets Layer Protokoll*](/windows/desktop/SecGloss/s-gly) -Handshake (SSL) auftritt.
+Die **SslCreateEphmeralKey-Funktion** erstellt einen kurzlebigen Schlüssel zur Verwendung während der Authentifizierung, die während des SSL-Handshakes (Secure Sockets Layer [*Protocol)*](/windows/desktop/SecGloss/s-gly) auftritt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,63 +47,63 @@ SECURITY_STATUS WINAPI SslCreateEphemeralKey(
 
 <dl> <dt>
 
-*hsslprovider* \[ in\]
+*hSslProvider* \[ In\]
 </dt> <dd>
 
-Das Handle der SSL-Protokoll Anbieter Instanz.
+Das Handle der SSL-Protokollanbieterinstanz.
 
 </dd> <dt>
 
-*phphemeralkey* \[ vorgenommen\]
+*phEphemeralKey* \[ out\]
 </dt> <dd>
 
 Das Handle des kurzlebigen Schlüssels.
 
 </dd> <dt>
 
-*dwprotocol* \[ in\]
+*dwProtocol* \[ In\]
 </dt> <dd>
 
-Einer der [**CNG-SSL-Anbieter Protokoll-Bezeichnerwerte**](https://msdn.microsoft.com/library/Hh971257(v=VS.85).aspx) .
+Einer der [**CNG SSL Provider Protocol Identifier-Werte.**](https://msdn.microsoft.com/library/Hh971257(v=VS.85).aspx)
 
 </dd> <dt>
 
-*dwciphersuite* \[ in\]
+*dwCipherSuite* \[ In\]
 </dt> <dd>
 
-Einer der [**Cipher Suite-Bezeichnerwerte des CNG-SSL-Anbieters**](https://msdn.microsoft.com/library/Hh971253(v=VS.85).aspx) .
+Einer der [**CNG SSL Provider Cipher Suite Identifier-Werte.**](https://msdn.microsoft.com/library/Hh971253(v=VS.85).aspx)
 
 </dd> <dt>
 
-*dwkeytype* \[ in\]
+*dwKeyType* \[ In\]
 </dt> <dd>
 
-Einer der [**Schlüsseltyp-Bezeichnerwerte des CNG-SSL-Anbieters**](https://msdn.microsoft.com/library/Hh971256(v=VS.85).aspx) . Legen Sie diesen Parameter für Schlüsseltypen, die keine [*Kryptografie (Elliptic Curve Kryptografie*](/windows/desktop/SecGloss/e-gly) , ECC) sind, auf NULL fest.
+Einer der [**CNG SSL Provider Key Type Identifier-Werte.**](https://msdn.microsoft.com/library/Hh971256(v=VS.85).aspx) Legen Sie diesen Parameter für Schlüsseltypen, die keine ECC [*(Elliptic Curve Cryptography)*](/windows/desktop/SecGloss/e-gly) sind, auf 0 fest.
 
 </dd> <dt>
 
-*dwkeybitlen* \[ in\]
+*dwKeyBitLen* \[ In\]
 </dt> <dd>
 
 Die Länge des Schlüssels in Bits.
 
 </dd> <dt>
 
-*pbparameams* \[ in\]
+*pbParams* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der Parameter für den Schlüssel enthalten soll, der erstellt werden soll. Wenn ein [*Diffie-Hellman (kurzlebiger) Key-Exchange-Algorithmus*](/windows/desktop/SecGloss/d-gly) (DHE) Verschlüsselungs Suite nicht verwendet wird, legen Sie den *pbparser* -Parameter auf **null** und den *cbparameams* -Parameter auf 0 (null) fest.
+Ein Zeiger auf einen Puffer, der Parameter für den schlüssel enthält, der erstellt werden soll. Wenn keine Cipher Suite für den [*Diffie-Hellman-Schlüsselaustauschalgorithmus*](/windows/desktop/SecGloss/d-gly) (DHE) verwendet wird, legen Sie den *pbParams-Parameter* auf **NULL** und den *cbParams-Parameter* auf 0 (null) fest.
 
 </dd> <dt>
 
-*cbparametriams* \[ in\]
+*cbParams* \[ In\]
 </dt> <dd>
 
-Die Länge der Daten im *pbparameams* -Puffer in Bytes.
+Die Länge der Daten im *pbParams-Puffer* in Bytes.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Dieser Parameter ist für die zukünftige Verwendung reserviert.
@@ -112,27 +112,27 @@ Dieser Parameter ist für die zukünftige Verwendung reserviert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt Sie 0 (null) zurück.
+Wenn die Funktion erfolgreich ist, gibt sie 0 (null) zurück.
 
-Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgegeben.
+Wenn die Funktion fehlschlägt, gibt sie einen Fehlerwert ungleich 0 (null) zurück.
 
 
 
 | Rückgabecode/-wert                                                                                                                                                       | BESCHREIBUNG                                                     |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
-| <dl> <dt>**Ernte \_ Kein Arbeits \_ Speicher**</dt> <dt>0x8009000el</dt> </dl>         | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Puffer zuzuordnen.<br/> |
-| <dl> <dt>**Ernte \_ Ungültiges \_ handle**</dt> <dt>0x80090026l</dt> </dl>    | Das *hsslprovider* -Handle ist ungültig.<br/>              |
-| <dl> <dt>**Ernte \_ Ungültiger \_ Parameter**</dt> <dt>0x80090027l</dt> </dl> | Einer der angegebenen Parameter ist ungültig.<br/>         |
+| <dl> <dt>**NTE \_ NO \_ MEMORY**</dt> <dt>0x8009000EL</dt> </dl>         | Es ist nicht genügend Arbeitsspeicher zum Zuordnen des Puffers verfügbar.<br/> |
+| <dl> <dt>**NTE \_ UNGÜLTIGES \_ HANDLE**</dt> <dt>0x80090026L</dt> </dl>    | Das *hSslProvider-Handle* ist ungültig.<br/>              |
+| <dl> <dt>**NTE \_ UNGÜLTIGER \_ PARAMETER**</dt> <dt>0x80090027L</dt> </dl> | Einer der angegebenen Parameter ist ungültig.<br/>         |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine dit-Verschlüsselungs Sammlung verwendet wird, übergibt die interne SSL-Implementierung Server- *p* -und *g* -Parameter an die **sslkreatekurzlealkey** -Funktion in den Parametern *pbpara AMS* und *cbparameame.*
+Bei Verwendung einer DHE-Verschlüsselungssammlung übergibt die interne SSL-Implementierung die Parameter *p* und *g* des Servers an die **SslCreateEphmeralKey-Funktion** in den *Parametern pbParams* und *cbParams.*
 
-Das Format der Daten im *pbparameams* -Puffer ist mit dem Format identisch, das beim Festlegen der [**bcrypt \_ dh- \_ Parameter**](cng-property-identifiers.md) Eigenschaft verwendet wird, und beginnt mit einer [**bcrypt \_ dh- \_ Parameter \_ Header**](/windows/desktop/api/Bcrypt/ns-bcrypt-bcrypt_dh_parameter_header) Struktur.
+Das Format der Daten im *pbParams-Puffer* ist das gleiche wie beim Festlegen der [**BCRYPT \_ DH \_ PARAMETERS-Eigenschaft**](cng-property-identifiers.md) und beginnt mit einer [**BCRYPT \_ DH PARAMETER \_ \_ HEADER-Struktur.**](/windows/desktop/api/Bcrypt/ns-bcrypt-bcrypt_dh_parameter_header)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -140,9 +140,9 @@ Das Format der Daten im *pbparameams* -Puffer ist mit dem Format identisch, das 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Sslprovider. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Sslprovider.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ncrypt.dll</dt> </dl>    |
 
 

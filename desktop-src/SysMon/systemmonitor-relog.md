@@ -1,11 +1,11 @@
 ---
-title: Systemmonitor. relog-Methode
-description: Protokolliert die Daten des Zählers erneut in einer neuen Datei. Sie können diese Methode auch verwenden, um einen neuen Dateityp anzugeben und die Anzahl der in der Protokolldatei enthaltenen Beispiele zu verringern.
+title: SystemMonitor.Relog-Methode
+description: Erfasst die Indikatordaten erneut in einer neuen Datei. Sie können diese Methode auch verwenden, um einen neuen Dateityp anzugeben und die Anzahl der in der Protokolldatei enthaltenen Beispiele zu reduzieren.
 ms.assetid: 4439f9ef-99e0-47d4-8f6f-d08afcba672d
 keywords:
-- Relog-Methode (Sysmon)
-- Relog-Methode (Sysmon), Systemmonitor-Objekt
-- Systemmonitor-Objekt "sysmon", Methode "relog"
+- Relog-Methode SysMon
+- Relog-Methode SysMon , SystemMonitor-Objekt
+- SystemMonitor-Objekt SysMon , Relog-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 109d0a6e44ef73652bd563099929ce601670610b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 73025a352ba3ec2e9ed113c59a7e04f98084495da834f83bf052c697833dd13f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103418"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118881727"
 ---
-# <a name="systemmonitorrelog-method"></a>Systemmonitor. relog-Methode
+# <a name="systemmonitorrelog-method"></a>SystemMonitor.Relog-Methode
 
-Protokolliert die Daten des Zählers erneut in einer neuen Datei. Sie können diese Methode auch verwenden, um einen neuen Dateityp anzugeben und die Anzahl der in der Protokolldatei enthaltenen Beispiele zu verringern.
+Erfasst die Indikatordaten erneut in einer neuen Datei. Sie können diese Methode auch verwenden, um einen neuen Dateityp anzugeben und die Anzahl der in der Protokolldatei enthaltenen Beispiele zu reduzieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,24 +44,24 @@ SystemMonitor.Relog( _
 
 <dl> <dt>
 
-*Dateiname* \[ in\]
+*fileName* \[ In\]
 </dt> <dd>
 
-Dateipfad der Protokolldatei. Sie können den Pfad als absoluten, relativen oder UNC-Pfad angeben. Die Namen Erweiterung der Protokolldatei muss entweder ". BLG", ". TSV" oder ". csv" lauten. Wenn ein Ordner im Pfad nicht vorhanden ist, wird er von sysmon erstellt. Wenn die Datei vorhanden ist, wird die Datei überschrieben. Sysmon wendet die Standard-ACLs aus dem übergeordneten Verzeichnis an.
+Dateipfad der Protokolldatei. Sie können den Pfad als absoluten, relativen oder UNC-Pfad angeben. Die Protokolldateinamenerweiterung muss entweder .blg, .tsv oder .csv sein. Wenn ein Ordner im Pfad nicht vorhanden ist, erstellt SYSMON ihn. Wenn die Datei vorhanden ist, wird die Datei überschrieben. SYSMON wendet die Standard-ACLs aus dem übergeordneten Verzeichnis an.
 
 </dd> <dt>
 
-*filetype* \[ in\]
+*fileType* \[ In\]
 </dt> <dd>
 
-Das Format der in der Protokolldatei gespeicherten Counter-Daten. Sie können entweder [**SysmonFileType.sysmonfileblg**](/windows/win32/api/isysmon/ne-isysmon-sysmonfiletype), **SysmonFileType.sysmonfilecsv** oder **SysmonFileType.sysmonfiletsv** angeben.
+Format der in der Protokolldatei gespeicherten Indikatordaten. Sie können entweder [**SysmonFileType.sysmonFileBlg,**](/windows/win32/api/isysmon/ne-isysmon-sysmonfiletype) **SysmonFileType.sysmonFileCsv** oder **SysmonFileType.sysmonFileTsv** angeben.
 
 </dd> <dt>
 
-*Filter* \[ in\]
+*Filter* \[ In\]
 </dt> <dd>
 
-Anzahl der Abtastungen aus den alten Protokolldateien, die in der neuen Protokolldatei gespeichert werden sollen. Geben Sie 1 an, um jedes Beispiel aus den alten Dateien in den neuen Dateien zu speichern. Geben Sie 2 an, um eine von allen zwei Beispielen aus der alten Datei zu speichern. Geben Sie 3 an, um eine von allen drei Beispielen aus der alten Datei zu speichern. Und so weiter.
+Anzahl der Beispiele aus den alten Protokolldateien, die in der neuen Protokolldatei gespeichert werden sollen. Geben Sie 1 an, um jedes Beispiel aus den alten Dateien in den neuen Dateien zu speichern. Geben Sie 2 an, um eines von zwei Stichproben aus der alten Datei zu speichern. Geben Sie 3 an, um eines von drei Beispielen aus der alten Datei zu speichern. Und so weiter.
 
 </dd> </dl>
 
@@ -69,9 +69,9 @@ Anzahl der Abtastungen aus den alten Protokolldateien, die in der neuen Protokol
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode verwendet die Protokolldateien, die in der [**System Monitor. Logfiles**](systemmonitor-logfiles.md) -Auflistung enthalten sind, um die zählungdaten erneut zu protokollieren.
+Diese Methode verwendet die Protokolldateien, die in der [**SystemMonitor.LogFiles-Auflistung**](systemmonitor-logfiles.md) enthalten sind, um die Indikatordaten neu zu protokollieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,20 +79,20 @@ Diese Methode verwendet die Protokolldateien, die in der [**System Monitor. Logf
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**System Monitor**](systemmonitor.md)
+[**SystemMonitor**](systemmonitor.md)
 </dt> <dt>
 
-[**Systemmonitor. SaveAs**](systemmonitor-saveas.md)
+[**SystemMonitor.SaveAs**](systemmonitor-saveas.md)
 </dt> </dl>
 
  

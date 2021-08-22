@@ -1,7 +1,7 @@
 ---
-description: Links zur Dokumentation für die iazapplicationgroups-Interoperabilitäts Wrapper Methoden und-Eigenschaften.
+description: Links zur Dokumentation für die IAzApplicationGroups-Interoperabilitäts-Wrappermethoden und -Eigenschaften.
 ms.assetid: dab61aee-46b0-4e5a-8e56-63e485bca659
-title: Microsoft. Interop. Security. azrollen. iazapplicationgroups-Schnittstelle
+title: Microsoft.Interop.Security.AzRoles.IAzApplicationGroups-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -23,33 +23,33 @@ api_type:
 - COM
 api_location:
 - Microsoft.Interop.Security.Azroles.dll
-ms.openlocfilehash: 48f44dfbc4c1b9708ed0310e1518a3157467b599
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 11a460e06eb4d6e43fc7dbcf8c7cb00dbea1c34347ce15ce90f13264d79c3c22
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358311"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118913115"
 ---
-# <a name="microsoftinteropsecurityazrolesiazapplicationgroups-interface"></a>Microsoft. Interop. Security. azrollen. iazapplicationgroups-Schnittstelle
+# <a name="microsoftinteropsecurityazrolesiazapplicationgroups-interface"></a>Microsoft.Interop.Security.AzRoles.IAzApplicationGroups-Schnittstelle
 
-Die **Microsoft. Interop. Security. azrollen. iazapplicationgroups** -interoperationswrapper-Methoden und-Eigenschaften sind unter der com-Version der-Methode oder der-Eigenschaft dokumentiert. Ein Link zur korrelierenden com-Dokumentation folgt den einzelnen Elementnamen.
+Die Interoperabilitäts-Wrappermethoden und -eigenschaften von **Microsoft.Interop.Security.Azroles.IAzApplicationGroups** sind in der COM-Version der Methode oder Eigenschaft dokumentiert. Auf jeden Membernamen folgt ein Link zur korrelierenden COM-Dokumentation.
 
 ## <a name="members"></a>Member
 
-Die **Microsoft. Interop. Security. azrollen. iazapplicationgroups** -Schnittstelle verfügt über diese Typen von Membern:
+Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzApplicationGroups** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Microsoft. Interop. Security. azrollen. iazapplicationgroups** -Schnittstelle verfügt über diese Methoden.
+Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzApplicationGroups** verfügt über diese Methoden.
 
 
 
 | Methode                                                                    | BESCHREIBUNG                                                                        |
 |:--------------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
-| **Microsoft. Interop. Security. azrollen. iazapplicationgroups. getenreerator** | [**Iazapplicationgroups:: \_ netwenum**](/windows/desktop/api/Azroles/nf-azroles-iazapplicationgroups-get__newenum)<br/> |
+| **Microsoft.Interop.Security.Azroles.IAzApplicationGroups.GetEnumerator** | [**IAzApplicationGroups:: \_ NewEnum**](/windows/desktop/api/Azroles/nf-azroles-iazapplicationgroups-get__newenum)<br/> |
 
 
 
@@ -57,14 +57,14 @@ Die **Microsoft. Interop. Security. azrollen. iazapplicationgroups** -Schnittste
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Microsoft. Interop. Security. azrollen. iazapplicationgroups** -Schnittstelle verfügt über diese Eigenschaften.
+Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzApplicationGroups** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                                     | Zugriffstyp          | BESCHREIBUNG                                                                             |
 |:-----------------------------------------------------------------------------|:---------------------|:----------------------------------------------------------------------------------------|
-| **Microsoft. Interop. Security. azrollen. iazapplicationgroups. Count**<br/> | Schreibgeschützt<br/> | [**Count-Eigenschaft von iazapplicationgroups**](/windows/desktop/api/Azroles/nf-azroles-iazapplicationgroups-get_count)<br/> |
-| **Microsoft. Interop. Security. azrollen. iazapplicationgroups. Item**<br/>  | Schreibgeschützt<br/> | [**Item-Eigenschaft von iazapplicationgroups**](/windows/desktop/api/Azroles/nf-azroles-iazapplicationgroups-get_item)<br/>   |
+| **Microsoft.Interop.Security.Azroles.IAzApplicationGroups.Count**<br/> | Schreibgeschützt<br/> | [**Count-Eigenschaft von IAzApplicationGroups**](/windows/desktop/api/Azroles/nf-azroles-iazapplicationgroups-get_count)<br/> |
+| **Microsoft.Interop.Security.Azroles.IAzApplicationGroups.Item**<br/>  | Schreibgeschützt<br/> | [**Item-Eigenschaft von IAzApplicationGroups**](/windows/desktop/api/Azroles/nf-azroles-iazapplicationgroups-get_item)<br/>   |
 
 
 

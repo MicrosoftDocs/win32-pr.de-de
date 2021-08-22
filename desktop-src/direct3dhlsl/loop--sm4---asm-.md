@@ -1,19 +1,19 @@
 ---
-title: Schleife (SM4-ASM)
-description: Gibt eine Schleife an, die bis zu einer Break-Anweisung iteriert.
+title: loop (sm4 - asm)
+description: Gibt eine Schleife an, die iteriert, bis eine Breakanweisung gefunden wird.
 ms.assetid: 0BEFADF4-036E-4FDA-9681-10965D6BA9FC
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 243bdf3b370d3505d787451162c22340acef3a45
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
-ms.translationtype: HT
+ms.openlocfilehash: 8dfc3090e71c1101e2c2748924de24f5443363ede76b86130cf63c3a319c76ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104993103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119043768"
 ---
-# <a name="loop-sm4---asm"></a>Schleife (SM4-ASM)
+# <a name="loop-sm4---asm"></a>loop (sm4 - asm)
 
-Gibt eine Schleife an, die bis zu einer Break-Anweisung iteriert.
+Gibt eine Schleife an, die iteriert, bis eine Breakanweisung gefunden wird.
 
 
 
@@ -22,17 +22,17 @@ Gibt eine Schleife an, die bis zu einer Break-Anweisung iteriert.
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-die **Schleife** kann unbegrenzt durchlaufen werden, obwohl die allgemeine Ausführung des Shaders erzwungen werden kann, nachdem eine Reihe von Anweisungen ausgeführt wurden.
+**-Schleife** kann unbegrenzt iterieren, obwohl die gesamte Ausführung des Shaders möglicherweise gezwungen wird, zu beenden, nachdem einige Anweisungen ausgeführt wurden.
 
-Fluss Kontroll Blöcke können bis zu 64 tief pro Unterroutine und Main verschachteln. Der HLSL-Compiler generiert keine Unterroutinen, die diesen Grenzwert überschreiten. Das Verhalten von Ablauf Steuerungs Anweisungen, die eine Tiefe von 64 Ebenen überschreiten, ist nicht definiert.
+Flow Steuerblöcke können bis zu 64 Tiefe pro Unterroutine und Main schachteln. Der HLSL-Compiler generiert keine Unterroutinen, die diesen Grenzwert überschreiten. Das Verhalten von Ablaufsteuerungsanweisungen über 64 Ebenen hinaus pro Unterroutine ist nicht definiert.
 
-Das tokenformat enthält den Offset der entsprechenden [ENDLOOP](endloop--sm4---asm-.md) -Anweisung im Shader.
+Das Tokenformat enthält der Einfachheit halber den Offset der entsprechenden [Endloopanweisung](endloop--sm4---asm-.md) im Shader.
 
-Im folgenden Beispiel wird gezeigt, wie die-Schleifen Anweisung verwendet wird.
+Im folgenden Beispiel wird die Verwendung der Schleifenanweisung veranschaulicht.
 
 ``` syntax
                 loop
@@ -44,7 +44,7 @@ Im folgenden Beispiel wird gezeigt, wie die-Schleifen Anweisung verwendet wird.
                 endloop
 ```
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -54,26 +54,26 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
 
 
- 
+ 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -82,9 +82,9 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 [Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

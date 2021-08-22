@@ -1,9 +1,9 @@
 ---
-title: TVN_SETDISPINFO Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuer Elements, dass die Informationen, die für ein Element verwaltet werden, aktualisiert werden müssen. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TVN_SETDISPINFO Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Strukturansichtssteuerelements, dass es die Informationen aktualisieren muss, die es über ein Element verwaltet. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 40fa61bc-c043-4001-ada9-b627d68bd737
 keywords:
-- Windows-Steuerelemente für TVN_SETDISPINFO Benachrichtigungs
+- TVN_SETDISPINFO Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b03e60ba7d8e6d7851c62fac030bd252cf957d3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e88a9b5fed4260fa88f5f40431113456950d99985ad2f2e0e97c2e951dce96bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338125"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957769"
 ---
-# <a name="tvn_setdispinfo-notification-code"></a>TVN \_ setdispinfo-Benachrichtigungs Code
+# <a name="tvn_setdispinfo-notification-code"></a>TVN \_ SETDISPINFO-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuer Elements, dass die Informationen, die für ein Element verwaltet werden, aktualisiert werden müssen. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Strukturansichtssteuerelements, dass es die Informationen aktualisieren muss, die es über ein Element verwaltet. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,7 +43,7 @@ TVN_SETDISPINFO
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMTVDISPINFO**](/windows/win32/api/commctrl/ns-commctrl-nmtvdispinfoa) -Struktur, die das zu Aktualisier Ende Element beschreibt. Der **Hitem** -Member der [**tvitem**](/windows/win32/api/commctrl/ns-commctrl-tvitema) -Struktur gibt das Element an, das aktualisiert wird, und der **Mask** -Member gibt an, welche Attribute des Elements aktualisiert werden.
+Zeiger auf eine [**NMTVDISPINFO-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmtvdispinfoa) die das zu aktualisierende Element beschreibt. Der **hItem-Member** der [**TVITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-tvitema) gibt das zu aktualisierende Element an, und der **Maskenmember** gibt an, welche Attribute des Elements aktualisiert werden.
 
 </dd> </dl>
 
@@ -51,11 +51,11 @@ Zeiger auf eine [**NMTVDISPINFO**](/windows/win32/api/commctrl/ns-commctrl-nmtvd
 
 Der Rückgabewert wird ignoriert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der **pszText** -Member der [**tvitem**](/windows/win32/api/commctrl/ns-commctrl-tvitema) -Struktur des Elements der LPSTR- \_ textcallback-Wert ist, sendet das Steuerelement diese Benachrichtigung, um den Text des Elements festzulegen. In diesem Fall wird für das **Mask** -Member von *LPARAM* das tvif- \_ textflag festgelegt.
+Wenn der **pszText-Member** der [**TVITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-tvitema) des Elements der LPSTR \_ TEXTCALLBACK-Wert ist, sendet das Steuerelement diese Benachrichtigung, um den Text des Elements festzulegen. In diesem Fall wird für den **Maskenmember** von *lParam* das TVIF \_ TEXT-Flag festgelegt.
 
-Wenn das **iImage** -oder **iSelectedImage** -Element der [**tvitem**](/windows/win32/api/commctrl/ns-commctrl-tvitema) -Struktur des Elements der I \_ imagecallback-Wert ist, sendet das Steuerelement diese Benachrichtigung, um den Index des anzuzeigenden Symbol Bilds abzurufen. In diesem Fall wird für das **Masken** Element von *LPARAM* das tvif- \_ Image oder das tvif \_ SelectedImage-Flag festgelegt.
+Wenn der **iImage-** oder **iSelectedImage-Member** der [**TVITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-tvitema) des Elements der I \_ IMAGECALLBACK-Wert ist, sendet das Steuerelement diese Benachrichtigung, um den Index des anzuzeigende Symbolbilds abzurufen. In diesem Fall wird für den **Maskenmember** von *lParam* das FLAG TVIF \_ IMAGE oder TVIF \_ SELECTEDIMAGE festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,24 +63,24 @@ Wenn das **iImage** -oder **iSelectedImage** -Element der [**tvitem**](/windows/
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TVN \_ Setdispinfow** (Unicode) und **TVN \_ setdispinfoa** (ANSI)<br/>           |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TVN \_ SETDISPINFOW** (Unicode) und **TVN \_ SETDISPINFOA** (ANSI)<br/>           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Tvitem**](/windows/win32/api/commctrl/ns-commctrl-tvitema)
+[**TVITEM**](/windows/win32/api/commctrl/ns-commctrl-tvitema)
 </dt> <dt>
 
-[**Tvitemex**](/windows/win32/api/commctrl/ns-commctrl-tvitemexa)
+[**TVITEMEX**](/windows/win32/api/commctrl/ns-commctrl-tvitemexa)
 </dt> <dt>
 
-[TVN \_ getdispinfo](tvn-getdispinfo.md)
+[TVN \_ GETDISPINFO](tvn-getdispinfo.md)
 </dt> </dl>
 
  

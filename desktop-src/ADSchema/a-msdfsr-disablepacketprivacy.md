@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-disablepacketprivacy-Attribut
-description: Deaktivieren Sie den Paket Datenschutz für eine Verbindung.
+title: ms-DFSR-DisablePacketPrivacy-Attribut
+description: Deaktivieren sie den Paketschutz für eine Verbindung.
 ms.assetid: 7a8e209a-0337-422a-bece-b5c7adf713b7
 ms.tgt_platform: multiple
 keywords:
-- MS-DFSR-disablepacketprivacy-Attribut, AD-Schema
-- msdfsr-disablepacketprivacy-Attribut AD-Schema
+- MS-DFSR-DisablePacketPrivacy-Attribut AD-Schema
+- AD-Schema des msDFSR-DisablePacketPrivacy-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,29 +14,29 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f4b562acf05219684b754381d3e1d4747f6011e
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8a544bea1277c174b5c46b5ce0e45ecee9382ce66b6c073a8ab611515a4ffa65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344307"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960949"
 ---
-# <a name="ms-dfsr-disablepacketprivacy-attribute"></a>MS-DFSR-disablepacketprivacy-Attribut
+# <a name="ms-dfsr-disablepacketprivacy-attribute"></a>ms-DFSR-DisablePacketPrivacy-Attribut
 
-Deaktivieren Sie den Paket Datenschutz für eine Verbindung.
+Deaktivieren sie den Paketschutz für eine Verbindung.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DFSR-disablepacketprivacy         |
-| LDAP-Display-Name | msdfsr-disablepacketprivacy          |
+| CN                | ms-DFSR-DisablePacketPrivacy         |
+| Ldap-Anzeigename | msDFSR-DisablePacketPrivacy          |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.32           |
-| System-ID-GUID    | 6a84ede5-741e-43F DD6-aa0f 61578621 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-Id-Guid    | 6a84ede5-741e-43fd-9dd6-aa0f61578621 |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
@@ -54,16 +54,16 @@ Deaktivieren Sie den Paket Datenschutz für eine Verbindung.
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Richtig                                                         |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000000                                                   |
-| In verwendete Klassen        | [**MS-DFSR-Verbindung**](c-msdfsr-connection.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Connection**](c-msdfsr-connection.md)<br/> |
 
 
 
@@ -75,16 +75,16 @@ Deaktivieren Sie den Paket Datenschutz für eine Verbindung.
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Richtig                                                         |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000000                                                   |
-| In verwendete Klassen        | [**MS-DFSR-Verbindung**](c-msdfsr-connection.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Connection**](c-msdfsr-connection.md)<br/> |
 
 
 
@@ -96,16 +96,16 @@ Deaktivieren Sie den Paket Datenschutz für eine Verbindung.
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Richtig                                                         |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000000                                                   |
-| In verwendete Klassen        | [**MS-DFSR-Verbindung**](c-msdfsr-connection.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Connection**](c-msdfsr-connection.md)<br/> |
 
 
 
