@@ -1,52 +1,52 @@
 ---
-description: Der SNMP-Anbieter verwendet bei der Zuordnung von MIB-Objekt Definitionen zu CIM-Klassendefinitionen die folgenden CIM-Eigenschaften Qualifizierer.
+description: Der SNMP-Anbieter verwendet beim Zuordnen von MIB-Objektdefinitionen zu CIM-Klassendefinitionen die folgenden CIM-Eigenschaftsqualifizierer.
 ms.assetid: 6e858e7e-5c46-4350-9696-c5efa1252c00
 ms.tgt_platform: multiple
-title: CIM-Eigenschaften Qualifizierer für MIB-Objekte
+title: CIM-Eigenschaftsqualifizierer für MIB-Objekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 34f2a25edf9c15930202d3c8cf79d3d62b0d1dd9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8a2fd45f250b603fcea97040a35faf43f6343311094e97a52ca06823e99bfcac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119131712"
 ---
-# <a name="cim-property-qualifiers-for-mib-objects"></a>CIM-Eigenschaften Qualifizierer für MIB-Objekte
+# <a name="cim-property-qualifiers-for-mib-objects"></a>CIM-Eigenschaftsqualifizierer für MIB-Objekte
 
-Der SNMP-Anbieter verwendet bei der Zuordnung von MIB-Objekt Definitionen zu CIM-Klassendefinitionen die folgenden CIM-Eigenschaften Qualifizierer. Ein obligatorischer Qualifizierer muss vorhanden sein, damit der SNMP-Anbieter ein MIB-Objekt vollständig auflösen muss. Wenn Sie keinen obligatorischen Qualifizierer definieren, wird ein Fehler zurückgegeben. Wenn Sie einen ungültigen qualifiziererwert angeben, wird auch ein Fehler
+Der SNMP-Anbieter verwendet beim Zuordnen von MIB-Objektdefinitionen zu CIM-Klassendefinitionen die folgenden CIM-Eigenschaftsqualifizierer. Ein obligatorischer Qualifizierer muss vorhanden sein, damit der SNMP-Anbieter ein MIB-Objekt vollständig auflösen kann. Fehler beim Definieren eines obligatorischen Qualifizierers gibt einen Fehler zurück. Wenn Sie einen ungültigen Qualifiziererwert angeben, wird auch ein Fehler zurückgegeben.
 
 > [!Note]  
-> Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung](setting-up-the-wmi-snmp-environment.md).
+> Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung.](setting-up-the-wmi-snmp-environment.md)
 
  
 
 
 
-| Qualifizierer                          | BESCHREIBUNG                                                                                                                                                                                            |
+| Qualifizierer                          | Beschreibung                                                                                                                                                                                            |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Bits**                           | **Zeichenfolge** Obligatorisch, wenn der **Text \_ Konventionen** -Qualifizierer nicht gleich Bits ist.<br/> Enumerationswerte für die Untertyp Definition eines Bits.<br/>                                        |
-| **CimType**                        | **Zeichenfolge** Verpflich<br/> CIM-Textdarstellung, die einen zugrunde liegenden CIM-Protokoll Wert formatiert.<br/>                                                                                    |
-| **Defval**                         | **Zeichenfolge** Optionale<br/> Der Standardwert des Objekts.<br/>                                                                                                                                       |
-| **Beschreibung**                    | **Zeichenfolge** Optionale<br/> Eine Beschreibung des Objekts.<br/>                                                                                                                                    |
-| **Anzeige \_ Hinweis**                  | **Zeichenfolge** Optionale<br/> Die Art und Weise, in der die Daten des Objekts für einen Benutzer angezeigt werden sollen.<br/>                                                                                                    |
-| **Codieren**                       | **Zeichenfolge** Optionale<br/> Der beim Codieren von SNMPv1-und SNMPv2C-Protokoll Rahmen verwendete SNMP-Typ.<br/>                                                                                              |
-| **Enumeration**                    | **Zeichenfolge** Obligatorisch, wenn der **Text \_ Konventionen** -Qualifizierer nicht gleich enumeratedinteger ist.<br/> Enumerationswerte für eine enumerierte ganzzahlige unter Typdefinition.<br/>                  |
-| **Länge mit fester \_ Länge**                  | **UInt32** Optionale<br/> Wert mit fester Länge.<br/>                                                                                                                                           |
-| [**Wichtigen**](standard-qualifiers.md) | **Bool** Optionale<br/> Schlüsseleigenschaft einer Klassendefinition.<br/>                                                                                                                             |
-| **Schlüssel \_ Reihenfolge**                     | **UInt32** Optional, es sei denn, [**Key**](standard-qualifiers.md) wird angegeben.<br/> Die Reihenfolge der Schlüsseleigenschaft in der Klassendefinition.<br/>                                                   |
-| **Name**                           | **Zeichenfolge** Verpflich<br/> Impliziter Name der Eigenschaft. Beachten Sie, dass dieser Qualifizierer nicht explizit definiert ist.<br/>                                                                           |
-| **Objekt \_ Bezeichner**             | **Zeichenfolge** Verpflich<br/> Der MIB-Objekt Bezeichner des Objekts.<br/>                                                                                                                              |
-| **Objekt \_ Syntax**                 | **Zeichenfolge** Optionale<br/> Die benannte Typdefinition des Objekts.<br/>                                                                                                                               |
-| **Lesen**                           | **Bool** Optional (mindestens ein **Lese** -oder **Schreibvorgang** muss angegeben werden)<br/> Gewährt Lesezugriff auf das-Objekt.<br/>                                                                     |
-| **Verweis**                      | **Zeichenfolge** Optionale<br/> Verweist auf ein anderes Dokument, das weitere Informationen zum-Objekt enthält.<br/>                                                                                   |
-| **Status**                         | **Zeichenfolge** Optionale<br/> Gibt an, ob das Objekt unterstützt werden muss.<br/>                                                                                                               |
-| **Text \_ Konvention**            | **Zeichenfolge** Verpflich<br/> Textdarstellung der Syntax Klausel des MIB [-ObjektType-](object-type-macro.md) Makros.<br/>                                                           |
-| **Einheiten**                          | **Zeichenfolge** Optionale<br/> Genaue Definition des Objekts, das das Objekt darstellt.<br/>                                                                                                             |
-| **Variable \_ Länge**               | **Zeichenfolge** Optionale<br/> Minimale, maximale und Werte fester Länge, die der Typdefinition des Objekts zugeordnet sind.<br/>                                                                       |
-| **Variablen \_ Wert**                | **Zeichenfolge** Optionale<br/> Bereichs-und Fixed-Werte, die der Typdefinition des Objekts zugeordnet sind.<br/>                                                                                         |
-| **Virtueller \_ Schlüssel**                   | **Bool** Optionale<br/> Gibt an, dass der Wert der Eigenschaft auf der supermenge der Instanzinformationen basieren soll, die allen zugänglichen MIB-Objekten in der Klassendefinition zugeordnet sind.<br/> |
-| **Schreiben**                          | **Bool** Optional (mindestens ein **Lese** -oder **Schreibvorgang** muss angegeben werden)<br/> Gewährt Schreibzugriff auf das-Objekt.<br/>                                                                    |
+| **Bits**                           | **Zeichenfolge** Obligatorisch, wenn der **Textkonventionenqualifizierer \_** nicht bits entspricht.<br/> Enumerationswerte für die Untertypdefinition eines Bits.<br/>                                        |
+| **Cimtype**                        | **Zeichenfolge** Obligatorisch<br/> CIM-Textdarstellung, die einen zugrunde liegenden CIM-Protokollwert formatiert.<br/>                                                                                    |
+| **Defval**                         | **Zeichenfolge** Optional<br/> Der Standardwert des Objekts.<br/>                                                                                                                                       |
+| **Beschreibung**                    | **Zeichenfolge** Optional<br/> Eine Beschreibung des Objekts.<br/>                                                                                                                                    |
+| **\_Anzeigehinweis**                  | **Zeichenfolge** Optional<br/> Art und Weise, in der die Daten des Objekts einem Benutzer angezeigt werden sollen.<br/>                                                                                                    |
+| **Codieren**                       | **Zeichenfolge** Optional<br/> SNMP-Typ, der beim Codieren von SNMPv1- und SNMPv2C-Protokollframes verwendet wird.<br/>                                                                                              |
+| **Enumeration**                    | **Zeichenfolge** Obligatorisch, wenn der **Textual \_ Convention-Qualifizierer** nicht gleich ENUMERATEDINTEGER ist.<br/> Aufzählte Werte für eine aufzählte Ganzzahl-Untertypdefinition.<br/>                  |
+| **Feste \_ Länge**                  | **uint32** Optional<br/> Wert fester Länge.<br/>                                                                                                                                           |
+| [**Key**](standard-qualifiers.md) | **Bool** Optional<br/> Schlüsseleigenschaft einer Klassendefinition.<br/>                                                                                                                             |
+| **\_Schlüsselreihenfolge**                     | **uint32** Optional, es sei denn, [**Key**](standard-qualifiers.md) ist angegeben.<br/> Reihenfolge der Schlüsseleigenschaft in der Klassendefinition.<br/>                                                   |
+| **Name**                           | **Zeichenfolge** Obligatorisch<br/> Impliziter Name der Eigenschaft. Beachten Sie, dass dieser Qualifizierer nicht explizit definiert ist.<br/>                                                                           |
+| **\_Objektbezeichner**             | **Zeichenfolge** Obligatorisch<br/> Der MIB-Objektbezeichner des Objekts.<br/>                                                                                                                              |
+| **\_Objektsyntax**                 | **Zeichenfolge** Optional<br/> Die definition des benannten Typs des Objekts.<br/>                                                                                                                               |
+| **Lesen**                           | **Bool** Optional (mindestens ein **Lese-** oder **Schreibvorgang** muss angegeben werden)<br/> Gewährt Lesezugriff auf das Objekt.<br/>                                                                     |
+| **Referenz**                      | **Zeichenfolge** Optional<br/> Bezieht sich auf ein anderes Dokument, das weitere Informationen zum -Objekt enthält.<br/>                                                                                   |
+| **Status**                         | **Zeichenfolge** Optional<br/> Gibt an, ob das -Objekt unterstützt werden muss.<br/>                                                                                                               |
+| **Textkonvention \_**            | **Zeichenfolge** Obligatorisch<br/> Textdarstellung der SYNTAX-Klausel des MIB [OBJECT-TYPE-Makros.](object-type-macro.md)<br/>                                                           |
+| **Einheiten**                          | **Zeichenfolge** Optional<br/> Genaue Definition, was das -Objekt darstellt.<br/>                                                                                                             |
+| **Variable \_ Länge**               | **Zeichenfolge** Optional<br/> Minimale, maximale und feste Werte, die der Typdefinition des Objekts zugeordnet sind.<br/>                                                                       |
+| **\_Variablenwert**                | **Zeichenfolge** Optional<br/> Bereichs- und feste Werte, die der Typdefinition des Objekts zugeordnet sind.<br/>                                                                                         |
+| **Virtueller \_ Schlüssel**                   | **Bool** Optional<br/> Gibt an, dass der Wert der Eigenschaft auf der Obermenge der Instanzinformationen basieren soll, die allen barrierefreien MIB-Objekten in der Klassendefinition zugeordnet sind.<br/> |
+| **Schreiben**                          | **Bool** Optional (mindestens ein **Lese-** oder **Schreibvorgang** muss angegeben werden)<br/> Gewährt Schreibzugriff auf das Objekt.<br/>                                                                    |
 
 
 

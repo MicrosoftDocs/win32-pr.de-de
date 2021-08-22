@@ -1,10 +1,10 @@
 ---
-title: IADs-Eigenschaften Methoden (IADs. h)
-description: Mit den Eigenschafts Methoden der IADs-Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen zu Eigenschafts Methoden finden Sie unter Interface Property Methods.
+title: IADs-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADs-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen zu Eigenschaftenmethoden finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: d2f6f686-a35a-4a9a-9b57-2ceb2f26ef12
 ms.tgt_platform: multiple
 keywords:
-- IADs-Eigenschaften Methoden ADSI
+- IADs-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -27,16 +27,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d1134260c780958bcdba8d1f14eac535ddbf4ab
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3326bbbf5ea7c2d2a98a6224f9b0a83a738c76a206d343a8629138d4d45e73b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517432"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082524"
 ---
-# <a name="iads-property-methods"></a>IADs-Eigenschaften Methoden
+# <a name="iads-property-methods"></a>IADs-Eigenschaftenmethoden
 
-Mit den Eigenschafts Methoden der [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) -Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen zu Eigenschafts Methoden finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADs-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iads) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen zu Eigenschaftenmethoden finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -45,14 +45,14 @@ Mit den Eigenschafts Methoden der [**IADs**](/windows/desktop/api/Iads/nn-iads-i
 **ADsPath**
 </dt> <dd> <dl>
 
-Die ADsPath-Zeichenfolge dieses-Objekts. Die Zeichenfolge identifiziert dieses Objekt eindeutig in einer Netzwerkumgebung. Das Objekt kann immer mit diesem Pfad abgerufen werden.
+Die ADsPath-Zeichenfolge dieses Objekts. Die Zeichenfolge identifiziert dieses Objekt in einer Netzwerkumgebung eindeutig. Das -Objekt kann immer mit diesem Pfad abgerufen werden.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -70,14 +70,14 @@ HRESULT get_ADsPath(
 **Klasse**
 </dt> <dd> <dl>
 
-Der Name der Objekt Schema Klasse.
+Der Name der Objektschemaklasse.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -95,14 +95,14 @@ HRESULT get_Class(
 **GUID**
 </dt> <dd> <dl>
 
-Die Globally Unique Identifier des Verzeichnis Objekts. Die [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) -Schnittstelle konvertiert die **GUID** aus einer Oktett-Zeichenfolge, die auf einem Verzeichnisserver gespeichert ist, in ein Zeichen folgen Format.
+Der global eindeutige Bezeichner des Verzeichnisobjekts. Die [**IADs-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iads) konvertiert die **GUID** aus einer Oktettzeichenfolge, die auf einem Verzeichnisserver gespeichert ist, in ein Zeichenfolgenformat.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -120,14 +120,14 @@ HRESULT get_GUID(
 **Name**
 </dt> <dd> <dl>
 
-Der relative Name des-Objekts, das im zugrunde liegenden Verzeichnisdienst benannt ist. Dieser Name unterscheidet dieses Objekt von seinen gleich geordneten Elementen.
+Der relative Name des Objekts, wie im zugrunde liegenden Verzeichnisdienst benannt. Dieser Name unterscheidet dieses Objekt von seinen gleichgeordneten Objekten.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -145,14 +145,14 @@ HRESULT get_Name(
 **Parent**
 </dt> <dd> <dl>
 
-Die ADsPath-Zeichenfolge des übergeordneten Containers. Active Directory lässt die Erstellung des ADsPath eines bestimmten Objekts nicht zu, indem die über **geordneten** Eigenschaften und die **Name** -Eigenschaft verkettet werden. Dieser Vorgang kann zwar bei manchen Anbietern funktionieren, aber es ist nicht gewährleistet, dass er für alle Implementierungen funktioniert. Der ADsPath ist garantiert gültig und sollte immer zum Abrufen des Schnittstellen Zeigers eines Objekts verwendet werden.
+Die ADsPath-Zeichenfolge des übergeordneten Containers. Active Directory lässt die Bildung des ADsPath eines bestimmten Objekts nicht zu, indem die Eigenschaften **Parent** und **Name verkettet** werden. Obwohl dieser Vorgang bei einigen Anbietern funktionieren kann, ist es nicht garantiert, dass er für alle Implementierungen funktioniert. Der ADsPath ist garantiert gültig und sollte immer zum Abrufen des Schnittstellenzeigers eines Objekts verwendet werden.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -170,14 +170,14 @@ HRESULT get_Parent(
 **Schema**
 </dt> <dd> <dl>
 
-Die ADsPath-Zeichenfolge des Schema Klassen Objekts dieses Objekts.
+Die ADsPath-Zeichenfolge des Schemaklassenobjekts dieses Objekts.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -194,9 +194,9 @@ HRESULT get_Schema(
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In Active Directory ist die **GUID** , die von GUID zurückgegeben wird, eine Zeichenfolge von hexadedezimalen. Verwenden Sie die resultierende **GUID** , um direkt an das Objekt zu binden.
+In Active Directory ist die **von GUID** zurückgegebene GUID eine Zeichenfolge mit Hexadezimalen. Verwenden Sie die resultierende **GUID,** um eine direkte Bindung an das Objekt zu erstellen.
 
 
 ```VB
@@ -206,28 +206,28 @@ Set x = GetObject("LDAP://servername/<GUID=xxx>")
 
 
 
-Dabei ist xxx der Wert, der von der GUID-Eigenschaft zurückgegeben wird. Weitere Informationen finden Sie unter [Verwenden von objectGUID für die Bindung an ein-Objekt](/windows/desktop/AD/using-objectguid-to-bind-to-an-object). Beachten Sie, dass die **ADsPath** -Eigenschaften Methode, wenn Sie eine GUID für die Bindung an ein Objekt verwenden, Werte zurückgibt, die sich von den normalen Werten unterscheiden, die zurückgegeben werden, wenn Sie einen Distinguished Name (DN) zum Binden an dasselbe Objekt verwendet haben. In der folgenden Tabelle sind z. b. die Werte aufgeführt, die zurückgegeben werden, wenn die beiden unterschiedlichen Bindungsmethoden zum Binden an dasselbe Benutzerobjekt verwendet werden.
+Wobei xxx der wert ist, der von der GUID-Eigenschaft zurückgegeben wird. Weitere Informationen finden Sie unter [Verwenden von objectGUID zum Binden an ein Objekt.](/windows/desktop/AD/using-objectguid-to-bind-to-an-object) Beachten Sie, dass bei Verwendung einer GUID zum Binden an ein Objekt die **ADsPath-Eigenschaftsmethode** Werte zurückgibt, die sich von den normalen Werten unterscheiden, die zurückgegeben werden, wenn Sie einen Distinguished Name (DN) zum Binden an dasselbe Objekt verwendet haben. In der folgenden Tabelle werden beispielsweise die Werte aufgeführt, die zurückgegeben werden, wenn die beiden verschiedenen Bindungsmethoden zum Binden an dasselbe Benutzerobjekt verwendet werden.
 
 
 
-|             | Binden mithilfe von DN                                           | Bindung mithilfe der GUID                                             |
+|             | Binden mithilfe von DN                                           | Binden mithilfe der GUID                                             |
 |-------------|---------------------------------------------------------|-------------------------------------------------------------|
-| **Name**    | CN = Jeff Smith                                           | CN = Jeff Smith                                               |
+| **Name**    | CN=Jeff Smith                                           | CN=Jeff Smith                                               |
 | **Parent**  | LDAP://server/CN=Users,DC=Fabrikam,DC=com               | LDAP://server/CN=Users,DC=Fabrikam,DC=com                   |
-| **ADsPath** | LDAP://Server/CN=Jeff Smith, CN = Users, DC = fabrikam, DC = com | LDAP://Server/<GUID = c0f59dfcf507d311a99e0000f879f7c7> |
+| **ADsPath** | LDAP://server/CN=Jeff Smith,CN=Users,DC=Fabrikam,DC=com | LDAP://server/<GUID=c0f59dfcf507d311a99e0000f879f7c7> |
 
 
 
  
 
 > [!Note]  
-> Der WinNT-Anbieter unterstützt keine Bindung mithilfe der Objekt- **GUID** und gibt die **GUID** -Eigenschaft in einem etwas anderen Zeichen folgen Format zurück.
+> Der WinNT-Anbieter unterstützt keine Bindung mithilfe der **Objekt-GUID** und gibt die **GUID-Eigenschaft** in einem etwas anderen Zeichenfolgenformat zurück.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird gezeigt, wie Objektdaten mithilfe von Eigenschaften Methoden der [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) -Schnittstelle abgerufen werden.
+Das folgende Codebeispiel zeigt, wie Objektdaten mithilfe von Eigenschaftsmethoden der [**IADs-Schnittstelle abgerufen**](/windows/desktop/api/Iads/nn-iads-iads) werden.
 
 
 ```VB
@@ -261,7 +261,7 @@ Cleanup:
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie Objektdaten mithilfe von Eigenschaften Methoden der [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) -Schnittstelle abgerufen werden.
+Das folgende Codebeispiel zeigt, wie Objektdaten mithilfe von Eigenschaftsmethoden der [**IADs-Schnittstelle abgerufen**](/windows/desktop/api/Iads/nn-iads-iads) werden.
 
 
 ```VB
@@ -292,7 +292,7 @@ Next op
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie mit den Eigenschaften Methoden der [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) -Schnittstelle arbeiten.
+Das folgende Codebeispiel zeigt, wie sie mit den Eigenschaftenmethoden der [**IADs-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iads) arbeiten.
 
 
 ```C++
@@ -373,9 +373,9 @@ int main(int argc, char* argv[])
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IADs ist als FD8256D0-FD15-11CE-ABC4-02608C9E7553 definiert.<br/>                 |
+| IID<br/>                      | \_IID-IADs sind als FD8256D0-FD15-11CE-ABC4-02608C9E7553 definiert.<br/>                 |
 
 
 
@@ -383,7 +383,7 @@ int main(int argc, char* argv[])
 
 <dl> <dt>
 
-[**IADs**](/windows/desktop/api/Iads/nn-iads-iads)
+[**Iads**](/windows/desktop/api/Iads/nn-iads-iads)
 </dt> <dt>
 
 [**IADsContainer**](/windows/desktop/api/Iads/nn-iads-iadscontainer)

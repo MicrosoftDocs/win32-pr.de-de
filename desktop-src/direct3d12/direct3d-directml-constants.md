@@ -14,24 +14,24 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 11/04/2020
-ms.openlocfilehash: ad4ff8c409f79a03cb4021974fe374498926c3e2
-ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
+ms.openlocfilehash: 5f2d95d0eef67309ef1e5902ed6b968616b38bc081bd259d77418e950e4e028f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107803405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118989600"
 ---
 # <a name="directml-constants"></a>DirectML-Konstanten
 
 Die folgenden Konstanten werden in `DirectML.h` deklariert.
 
-| Konstante | Wert | Beschreibung |
+| Konstante | Wert | BESCHREIBUNG |
 |-|-|-|
-| DML_TENSOR_DIMENSION_COUNT_MAX | 5 | DirectML-Tensors unterstützen maximal 5 Dimensionen für DML_TARGET_VERSION < DML_FEATURE_LEVEL_3_0. |
+| DML_TENSOR_DIMENSION_COUNT_MAX | 5 | DirectML-Tensoren unterstützen maximal 5 Dimensionen für DML_TARGET_VERSION < DML_FEATURE_LEVEL_3_0. |
 | DML_TENSOR_DIMENSION_COUNT_MAX1 | 8 | DirectML-Tensoren unterstützen maximal 8 Dimensionen für DML_TARGET_VERSION >= DML_FEATURE_LEVEL_3_0. |
 | DML_TEMPORARY_BUFFER_ALIGNMENT | 256 | Temporäre und persistente Puffer müssen über eine Basisadresse verfügen, die auf 256 Bytes ausgerichtet ist. |
 | DML_PERSISTENT_BUFFER_ALIGNMENT | 256 | Temporäre und persistente Puffer müssen über eine Basisadresse verfügen, die auf 256 Bytes ausgerichtet ist. |
-| DML_MINIMUM_BUFFER_TENSOR_ALIGNMENT | 16 | Puffer tensors haben eine Mindestanforderung an die Ausrichtung der Basisadresse von 16 Bytes. |
+| DML_MINIMUM_BUFFER_TENSOR_ALIGNMENT | 16 | Puffertensoren haben eine Mindestanforderung für die Ausrichtung der Basisadresse von 16 Byte. |
 
 ## <a name="requirements"></a>Anforderungen
 

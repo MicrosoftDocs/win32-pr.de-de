@@ -1,36 +1,36 @@
 ---
-title: Vorgehensweise bei der Unterklasse eines Kombinations Felds
-description: In diesem Thema wird die Unterklasse von Kombinations Feldern veranschaulicht.
+title: Unterstufen eines Kombinationsfelds
+description: In diesem Thema wird veranschaulicht, wie Kombinationsfelder untergliedert werden.
 ms.assetid: 9897EA94-1BF7-4711-AED6-5E9C863C287A
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b48301309597c53f02ca87d1d1748ab1fe05139
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: ea674cfecf3c84ce4a1fa2abb1f23f8f208a8b8fd220736bbcec61bea7880b34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104039707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078444"
 ---
-# <a name="how-to-subclass-a-combo-box"></a>Vorgehensweise bei der Unterklasse eines Kombinations Felds
+# <a name="how-to-subclass-a-combo-box"></a>Unterstufen eines Kombinationsfelds
 
-In diesem Thema wird die Unterklasse von Kombinations Feldern veranschaulicht. Die C++-Beispielanwendung erstellt ein Symbolleisten Fenster, das zwei Kombinations Felder enthält. Durch die Unterklassen der Bearbeitungs Steuerelemente innerhalb der Kombinations Felder fängt das Symbolleisten Fenster die Tab-Taste, die EINGABETASTE und die ESC-Taste ab, die andernfalls ignoriert werden.
+In diesem Thema wird veranschaulicht, wie Kombinationsfelder untergliedert werden. Die C++-Beispielanwendung erstellt ein Symbolleistenfenster, das zwei Kombinationsfelder enthält. Durch Unterklassen der Bearbeitungssteuerelemente in den Kombinationsfeldern fängt das Symbolleistenfenster TAB-, EINGABE- und ESC-Schlüssel ab, die andernfalls ignoriert würden.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="process-the-wm_create-message"></a>Verarbeiten der "WM Create"- \_ Nachricht
+### <a name="process-the-wm_create-message"></a>Verarbeiten der WM \_ CREATE-Nachricht
 
-Die Anwendung verarbeitet die [**WM \_ Create**](/windows/desktop/winmsg/wm-create) -Nachricht, um zwei Kombinations Feld-Steuerelemente als untergeordnete Fenster zu erstellen.
+Die Anwendung verarbeitet die [**WM \_ CREATE-Nachricht,**](/windows/desktop/winmsg/wm-create) um zwei Kombinationsfeldsteuerelemente als untergeordnete Fenster zu erstellen.
 
 
 ```C++
@@ -56,11 +56,11 @@ hwndCombo2 = CreateWindow(L"COMBOBOX", L"",
 
 
 
-Die Anwendung unterteilt dann die Bearbeitungs Steuerelemente (Auswahlfelder) in jedem Kombinations Feld, da Sie die Zeicheneingabe für einfaches und Dropdown-Kombinations Feld erhalten. Zum Schluss ruft Sie die [**childwindowfrompoint**](/windows/desktop/api/winuser/nf-winuser-childwindowfrompoint) -Funktion auf, um das Handle für jedes Bearbeitungs Steuerelement abzurufen.
+Die Anwendung untergliedert dann die Bearbeitungssteuerelemente (Auswahlfelder) in jedem Kombinationsfeld, da sie die Zeicheneingabe für einfache und Dropdown-Kombinationsfelder erhalten. Schließlich wird die [**ChildWindowFromPoint-Funktion**](/windows/desktop/api/winuser/nf-winuser-childwindowfrompoint) aufgerufen, um das Handle für jedes Bearbeitungssteuerelement abzurufen.
 
-Um die Bearbeitungs Steuerelemente zu unterteilen, ruft die Anwendung die [**SetWindowLong**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) -Funktion auf und ersetzt den Zeiger auf die Klassen Fenster Prozedur durch einen Zeiger auf die Anwendungs definierte **subclassproc** -Funktion. Der Zeiger auf die ursprüngliche Fenster Prozedur wird in der globalen Variablen *lpfnditwndproc* gespeichert.
+Um die Bearbeitungssteuerelemente zu untergliedern, ruft die Anwendung die [**SetWindowLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) auf und ersetzt den Zeiger auf die Klassenfensterprozedur durch einen Zeiger auf die anwendungsdefinierte **SubClassProc-Funktion.** Der Zeiger auf die ursprüngliche Fensterprozedur wird in der globalen Variablen *lpfnEditWndProc* gespeichert.
 
-**Subclassproc** fängt die Tab-Taste, die EINGABETASTE und die ESC-Taste ein und benachrichtigt das Symbolleisten Fenster, indem Anwendungs definierte Meldungen ( \_ Registerkarte WM, WM \_ ESC und WM \_ Enter) gesendet werden. **Subclassproc** verwendet die [**callwindowproc**](/windows/desktop/api/winuser/nf-winuser-callwindowproca) -Funktion, um die meisten Nachrichten an die ursprüngliche Fenster Prozedur *lpfnditwndproc* zu übergeben.
+**SubClassProc** fängt TAB-, EINGABE- und ESC-Schlüssel ab und benachrichtigt das Symbolleistenfenster durch Senden von anwendungsdefinierten Nachrichten (WM \_ TAB, WM \_ ESC und WM \_ ENTER). **SubClassProc** verwendet die [**CallWindowProc-Funktion,**](/windows/desktop/api/winuser/nf-winuser-callwindowproca) um die meisten Nachrichten an die ursprüngliche Fensterprozedur *lpfnEditWndProc* zu übergeben.
 
 
 ```C++
@@ -80,9 +80,9 @@ SetWindowLongPtr(hwndEdit2, GWLP_WNDPROC, (LONG_PTR) SubClassProc);
 
 
 
-### <a name="process-the-wm_setfocus-message"></a>Verarbeiten der WM- \_ SetFocus-Nachricht
+### <a name="process-the-wm_setfocus-message"></a>Verarbeiten der WM \_ SETFOCUS-Nachricht
 
-Wenn das Symbolleisten Fenster den Eingabefokus erhält, wird der Fokus sofort auf das erste Kombinations Feld auf der Symbolleiste festgelegt. Zu diesem Zweck wird im Beispiel die [**SetFocus**](/windows/desktop/api/winuser/nf-winuser-setfocus) -Funktion als Reaktion auf die [**WM- \_ SetFocus**](/windows/desktop/inputdev/wm-setfocus) -Nachricht aufgerufen.
+Wenn das Symbolleistenfenster den Eingabefokus erhält, wird der Fokus sofort auf das erste Kombinationsfeld in der Symbolleiste festgelegt. Zu diesem Zweck ruft das Beispiel die [**SetFocus-Funktion**](/windows/desktop/api/winuser/nf-winuser-setfocus) als Reaktion auf die [**WM \_ SETFOCUS-Nachricht**](/windows/desktop/inputdev/wm-setfocus) auf.
 
 
 ```C++
@@ -93,11 +93,11 @@ case WM_SETFOCUS:
 
 
 
-### <a name="process-application-defined-messages"></a>Verarbeiten von Application-Defined Meldungen
+### <a name="process-application-defined-messages"></a>Verarbeiten Application-Defined Nachrichten
 
-Die **subclassproc** -Funktion sendet Anwendungs definierte Meldungen an das Symbolleisten Fenster, wenn der Benutzer die Tab-Taste, die EINGABETASTE oder die ESC-Taste in einem Kombinations Feld drückt. Die **\_ Registerkarte "WM** " wird für die Tab-Taste, die **WM- \_ ESC** -Nachricht für die ESC-Taste und die **WM- \_ Eingabe** Nachricht für die EINGABETASTE gesendet.
+Die **SubClassProc-Funktion** sendet anwendungsdefinierte Nachrichten an das Symbolleistenfenster, wenn der Benutzer die TAB-, EINGABE- oder ESC-TASTE in einem Kombinationsfeld drückt. Die **\_ WM-TAB-Nachricht** wird für die TAB-TASTE, die **WM \_ ESC-Nachricht** für die ESC-Taste und die **\_ WM-EINGABE-Meldung** für die EINGABETASTE gesendet.
 
-Im Beispiel wird die **WM- \_ Register** Karten Nachricht verarbeitet, indem der Fokus auf das nächste Kombinations Feld auf der Symbolleiste festgelegt wird. Die WM- **\_ ESC** -Nachricht wird verarbeitet, indem der Fokus auf das Hauptanwendungsfenster festgelegt wird.
+Im Beispiel wird die **\_ WM-TAB-Meldung** verarbeitet, indem der Fokus auf das nächste Kombinationsfeld in der Symbolleiste festgelegt wird. Die **WM \_ ESC-Nachricht** wird verarbeitet, indem der Fokus auf das Hauptanwendungsfenster festgelegt wird.
 
 
 ```C++
@@ -122,7 +122,7 @@ Im Beispiel wird die **WM- \_ Register** Karten Nachricht verarbeitet, indem der
 
 
 
-Als Antwort auf die **WM \_ Enter** -Nachricht stellt das Beispiel sicher, dass die aktuelle Auswahl für das Kombinations Feld gültig ist, und legt dann den Fokus auf das Hauptanwendungsfenster fest. Wenn das Kombinations Feld keine aktuelle Auswahl enthält, wird im Beispiel die [**CB \_ FindStringExact**](cb-findstringexact.md) -Nachricht verwendet, um nach einem Listenelement zu suchen, das mit dem Inhalt des Auswahl Felds übereinstimmt. Wenn eine Entsprechung vorhanden ist, wird im Beispiel die aktuelle Auswahl festgelegt. Andernfalls wird ein neues Listenelement hinzugefügt.
+Als Reaktion auf die **\_ WM-EINGABEMELDUNG** stellt das Beispiel sicher, dass die aktuelle Auswahl für das Kombinationsfeld gültig ist, und legt dann den Fokus auf das Hauptanwendungsfenster fest. Wenn das Kombinationsfeld keine aktuelle Auswahl enthält, wird im Beispiel die [**CB \_ FINDSTRINGEXACT-Nachricht**](cb-findstringexact.md) verwendet, um nach einem Listenelement zu suchen, das dem Inhalt des Auswahlfelds entspricht. Wenn eine Übereinstimmung vorhanden ist, wird im Beispiel die aktuelle Auswahl festgelegt. Andernfalls wird ein neues Listenelement hinzugefügt.
 
 
 ```C++
@@ -163,7 +163,7 @@ default:
 
 ## <a name="complete-example"></a>Vollständiges Beispiel
 
-Im folgenden finden Sie die Fenster Prozedur für die Symbolleiste und die Unterklassen Prozedur für die beiden Kombinations Felder.
+Im Folgenden sind die Fensterprozedur für die Symbolleiste und die Unterklassenprozedur für die beiden Kombinationsfelder aufgeführt.
 
 
 ```C++
@@ -343,18 +343,18 @@ LRESULT CALLBACK SubClassProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 <dl> <dt>
 
-[Informationen zu Kombinations Feldern](about-combo-boxes.md)
+[Informationen zu Kombinationsfeldern](about-combo-boxes.md)
 </dt> <dt>
 
-[Referenz für ComboBox-Steuerelement](bumper-combobox-combobox-control-reference.md)
+[ComboBox-Steuerelementreferenz](bumper-combobox-combobox-control-reference.md)
 </dt> <dt>
 
-[Verwenden von Kombinations Feldern](using-combo-boxes.md)
+[Verwenden von Kombinationsfeldern](using-combo-boxes.md)
 </dt> <dt>
 
 [ComboBox](combo-boxes.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

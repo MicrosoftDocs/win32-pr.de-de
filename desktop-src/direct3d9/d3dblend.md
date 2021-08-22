@@ -1,5 +1,5 @@
 ---
-description: Definiert den unterstützten Überblendmodus.
+description: Definiert den unterstützten Blendmodus.
 ms.assetid: 60ff384c-15a0-4c6f-9e2c-59fdea76b7a1
 title: D3DBLEND-Enumeration (D3D9Types.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 55edb432913720f58860d4f5cb87d8da9b9a8681
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: 7ca88dd267ba2d70558347f999ad8d735e999a4d0197692f1e5d546f503b0a3d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110343385"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118989230"
 ---
 # <a name="d3dblend-enumeration"></a>D3DBLEND-Enumeration
 
-Definiert den unterstützten Überblendmodus.
+Definiert den unterstützten Blendmodus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,56 +59,56 @@ typedef enum D3DBLEND {
 <span id="D3DBLEND_ZERO"></span><span id="d3dblend_zero"></span>**D3DBLEND \_ ZERO**
 </dt> <dd>
 
-Der Überblendfaktor ist (0, 0, 0, 0).
+Der Blend-Faktor ist (0, 0, 0, 0).
 
 </dd> <dt>
 
 <span id="D3DBLEND_ONE"></span><span id="d3dblend_one"></span>**D3DBLEND \_ ONE**
 </dt> <dd>
 
-Der Überblendfaktor ist (1, 1, 1, 1).
+Der Blend-Faktor ist (1, 1, 1, 1).
 
 </dd> <dt>
 
 <span id="D3DBLEND_SRCCOLOR"></span><span id="d3dblend_srccolor"></span>**D3DBLEND \_ SRCCOLOR**
 </dt> <dd>
 
-Der Überblendfaktor ist (Rs, Gs, Bs, As).
+Der Blend-Faktor ist (Rs, Gs, Bs, As).
 
 </dd> <dt>
 
 <span id="D3DBLEND_INVSRCCOLOR"></span><span id="d3dblend_invsrccolor"></span>**D3DBLEND \_ INVSRCCOLOR**
 </dt> <dd>
 
-Der Überblendfaktor ist (1 – Rs, 1 – Gs, 1 – Bs, 1 – As).
+Der Blend-Faktor ist (1 – Rs, 1 – Gs, 1 – Bs, 1 – As).
 
 </dd> <dt>
 
 <span id="D3DBLEND_SRCALPHA"></span><span id="d3dblend_srcalpha"></span>**D3DBLEND \_ SRCALPHA**
 </dt> <dd>
 
-Der Überblendfaktor ist (As, As, As, As).
+Der Blend-Faktor ist (As, As, As, As).
 
 </dd> <dt>
 
 <span id="D3DBLEND_INVSRCALPHA"></span><span id="d3dblend_invsrcalpha"></span>**D3DBLEND \_ INVSRCALPHA**
 </dt> <dd>
 
-Der Überblendfaktor ist ( 1 - As, 1 - As, 1 - As, 1 - As).
+Der Blend-Faktor ist ( 1 – As , 1 – As, 1 – As, 1 – As).
 
 </dd> <dt>
 
 <span id="D3DBLEND_DESTALPHA"></span><span id="d3dblend_destalpha"></span>**D3DBLEND \_ DESTALPHA**
 </dt> <dd>
 
-Der Überblendfaktor ist (A<sub>d</sub> A<sub>d</sub> A<sub>d</sub> A<sub>d</sub>).
+Der Blend-Faktor ist (A<sub>d</sub> A<sub>d</sub> A<sub>d</sub> A<sub>d</sub>).
 
 </dd> <dt>
 
 <span id="D3DBLEND_INVDESTALPHA"></span><span id="d3dblend_invdestalpha"></span>**D3DBLEND \_ INVDESTALPHA**
 </dt> <dd>
 
-Der Überblendfaktor ist (1 – A<sub>d</sub> 1 – A<sub>d</sub> 1 – A<sub>d</sub> 1 – A<sub>d</sub>).
+Der Mischungsfaktor ist (1 – A<sub>d</sub> 1 – A<sub>d</sub> 1 – A<sub>d</sub> 1 – A<sub>d</sub>).
 
 </dd> <dt>
 
@@ -164,7 +164,7 @@ Invertierter konstanter Farbmischungsfaktor, der vom Framepufferblender verwende
 <span id="D3DBLEND_SRCCOLOR2"></span><span id="d3dblend_srccolor2"></span>**D3DBLEND \_ SRCCOLOR2**
 </dt> <dd>
 
-Der Überblendfaktor ist (PSOutColor \[ 1 \] <sub>r,</sub>PSOutColor \[ 1 \] <sub>g,</sub>PSOutColor \[ 1 \] <sub>b,</sub>nicht verwendet). Weitere Informationen finden [Sie unter Renderzielmischung.](#render-target-blending)
+Der Blend-Faktor ist (PSOutColor \[ 1 \] <sub>r</sub>, PSOutColor \[ 1 \] <sub>g</sub>, PSOutColor \[ 1 \] <sub>b</sub>, nicht verwendet). Weitere Informationen finden Sie unter [Renderzielmischung.](#render-target-blending)
 
 Unterschiede zwischen Direct3D 9 und Direct3D 9Ex:
 
@@ -179,7 +179,7 @@ Unterschiede zwischen Direct3D 9 und Direct3D 9Ex:
 <span id="D3DBLEND_INVSRCCOLOR2"></span><span id="d3dblend_invsrccolor2"></span>**D3DBLEND \_ INVSRCCOLOR2**
 </dt> <dd>
 
-Der Überblendfaktor ist (1 - PSOutColor \[ 1 \] <sub>r</sub>, 1 - PSOutColor \[ 1 \] <sub>g</sub>, 1 - PSOutColor \[ 1 \] <sub>b</sub>, nicht verwendet)). Weitere Informationen finden [Sie unter Renderzielmischung.](#render-target-blending)
+Der Blend-Faktor ist (1 – PSOutColor \[ 1 \] <sub>r</sub>, 1 – PSOutColor \[ 1 \] <sub>g</sub>, 1 – PSOutColor \[ 1 \] <sub>b</sub>, nicht verwendet)). Weitere Informationen finden Sie unter [Renderzielmischung.](#render-target-blending)
 
 
 Unterschiede zwischen Direct3D 9 und Direct3D 9Ex:
@@ -195,15 +195,15 @@ Unterschiede zwischen Direct3D 9 und Direct3D 9Ex:
 <span id="D3DBLEND_FORCE_DWORD"></span><span id="d3dblend_force_dword"></span>**D3DBLEND \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration in eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-In den obigen Memberbeschreibungen werden die RGBA-Werte der Quelle und des Ziels durch die Inskripts s und d angegeben.
+In den vorangehenden Memberbeschreibungen werden die RGBA-Werte der Quelle und des Ziels durch die s- und d-Unterskripte angegeben.
 
-Die Werte in diesem aufzählten Typ werden von den folgenden Renderzuständen verwendet:
+Die Werte in diesem enumerationsierten Typ werden von den folgenden Renderzuständen verwendet:
 
 -   D3DRS \_ DESTBLEND
 -   D3DRS \_ SRCBLEND
@@ -212,7 +212,7 @@ Die Werte in diesem aufzählten Typ werden von den folgenden Renderzuständen ve
 
 Siehe [ **D3DRENDERSTATETYPE**](./d3drenderstatetype.md)
 
-### <a name="render-target-blending"></a>Renderzielblending
+### <a name="render-target-blending"></a>Renderzielmischung
 
 Direct3D 9Ex verfügt über verbesserte Funktionen zum Rendern von Text. Für das Rendern von Schriftarten vom Typ "Klartext" sind normalerweise zwei Durchläufe erforderlich. Um den zweiten Durchlauf zu vermeiden, kann ein Pixel-Shader verwendet werden, um zwei Farben auszugeben, die wir ALS PSOutColor \[ 0 \] und PSOutColor 1 bezeichnen \[ \] können. Die erste Farbe würde die standardmäßigen drei Farbkomponenten (RGB) enthalten. Die zweite Farbe enthält drei Alphakomponenten (eine für jede Komponente der ersten Farbe).
 

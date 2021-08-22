@@ -1,11 +1,11 @@
 ---
 title: Win32_TSLicenseKeyPack-Klasse
-description: Stellt Methoden und Eigenschaften zum Anzeigen und installieren Remotedesktopdienste Lizenzschlüssel Packs bereit.
+description: Stellt Methoden und Eigenschaften zum Anzeigen und Installieren Remotedesktopdienste Lizenzschlüsselpaketen zur Auswahl.
 ms.assetid: 27450646-c51f-4911-bb42-410794e32003
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSLicenseKeyPack-Klasse Remotedesktopdienste
-- Win32_TSLicenseKeyPack Klasse Remotedesktopdienste, beschrieben
+- Win32_TSLicenseKeyPack der Remotedesktopdienste
+- Win32_TSLicenseKeyPack klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -28,16 +28,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9d78af398ebf7c137be5b31c9db427691a66a7a2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7927270f262d0a66722660bf4b2c8f15cf75f49bb807abcff604af9edf58d99b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517402"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137813"
 ---
-# <a name="win32_tslicensekeypack-class"></a>Win32- \_ Klasse "slicenabkeypack"
+# <a name="win32_tslicensekeypack-class"></a>Win32 \_ TSLicenseKeyPack-Klasse
 
-Stellt Methoden und Eigenschaften zum Anzeigen und installieren Remotedesktopdienste Lizenzschlüssel Packs bereit.
+Stellt Methoden und Eigenschaften zum Anzeigen und Installieren Remotedesktopdienste Lizenzschlüsselpaketen zur Auswahl.
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,35 +62,35 @@ class Win32_TSLicenseKeyPack
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ zlicentarkeypack** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSLicenseKeyPack-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ zlicenabkeypack** " verfügt über diese Methoden.
+Die **Win32 \_ TSLicenseKeyPack-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                        | BESCHREIBUNG                                                                                                                                                                                                                               |
+| Methode                                                                                                        | Beschreibung                                                                                                                                                                                                                               |
 |:--------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Convertlicenses**](convertlicenses-win32-tslicensekeypack.md)                                             | Konvertiert die Lizenzen im aktuellen Schlüssel Paket.<br/>                                                                                                                                                                                 |
-| [**Importagreementlicenskeypack**](win32-tslicensekeypack-importagreementlicensekeypack.md)                 | Importe von einem anderen Remotedesktop Lizenzserver, ein Remotedesktopdienste Lizenzschlüssel Paket, das über einen Lizenzvertrag gekauft wurde, und die automatische Verbindung über das Internet, um die Key Pack-Lizenz zu überprüfen.<br/> |
-| [**Importlicenabkeypackoffline**](win32-tslicensekeypack-importlicensekeypackoffline.md)                     | Importe von einem anderen Remotedesktop Lizenzserver, ein Remotedesktopdienste License Key Pack, das eine Lizenz-ID verwendet, die über das Internet oder das Telefon empfangen wurde.<br/>                                               |
-| [**Importopenpurchaselicenabkeypack**](win32-tslicensekeypack-importopenpurchaselicensekeypack.md)           | Importe von einem anderen Remotedesktop Lizenzserver, einem Open License Remotedesktopdienste License Key Pack.<br/>                                                                                                                 |
-| [**Importretailpurchaselicenzkeypack**](win32-tslicensekeypack-importretailpurchaselicensekeypack.md)       | Importe von einem anderen Remotedesktop Lizenzserver, ein Remotedesktopdienste Lizenzschlüssel Paket, das über einen einzelhandelskanal gekauft wurde.<br/>                                                                                   |
-| [**Installagreementlicenskeypack**](installagreementlicensekeypack-win32-tslicensekeypack.md)               | Installiert ein Remotedesktopdienste Lizenzschlüssel Paket, das über eine Vertrags Lizenz erworben wurde.<br/>                                                                                                                           |
-| [**Installlicenskeypack**](installlicensekeypack-win32-tslicensekeypack.md)                                 | Installiert ein Remotedesktopdienste Lizenzschlüssel Paket, das eine Lizenzschlüssel Paket-ID verwendet, die über das Internet oder das Telefon empfangen wurde.<br/>                                                                                          |
-| [**Installopenlicenskeypack**](installopenlicensekeypack-win32-tslicensekeypack.md)                         | Installiert ein Remotedesktopdienste Lizenzschlüssel Paket, das über einen offenen Lizenzvertrag gekauft wurde.<br/>                                                                                                                      |
-| [**Installretailpurchaselicen\keypack**](installretailpurchaselicensekeypack-win32-tslicensekeypack.md)     | Installiert ein Remotedesktopdienste Lizenzschlüssel Paket, das über einen Einzelhandels Speicher gekauft wurde.<br/>                                                                                                                                 |
-| [**Reinstallagreementlicenskeypack**](win32-tslicensekeypack-reinstallagreementlicensekeypack.md)           | Installiert ein Remotedesktopdienste Lizenzschlüssel Paket neu, das über einen Lizenzvertrag gekauft wurde, und stellt automatisch eine Verbindung über das Internet her, um die Key Pack-Lizenz zu überprüfen.<br/>                                           |
-| [**Reinstalllicenumkeypackoffline**](win32-tslicensekeypack-reinstalllicensekeypackoffline.md)               | Installiert ein Remotedesktopdienste Lizenzschlüssel Paket, das die über das Internet oder das Telefon empfangene Lizenz-ID verwendet.<br/>                                                                                       |
-| [**Reinstallopenpurchaselicenskeypack**](win32-tslicensekeypack-reinstallopenpurchaselicensekeypack.md)     | Installiert ein Open License Remotedesktopdienste License Key Pack neu.<br/>                                                                                                                                                           |
-| [**Reinstallretailpurchaselicen\keypack**](win32-tslicensekeypack-reinstallretailpurchaselicensekeypack.md) | Neuinstallation eines Remotedesktopdienste Lizenzschlüssel Pakets, das über einen einzelhandelskanal gekauft wurde.<br/>                                                                                                                             |
-| [**Removelicenseswithidcount**](win32-tslicensekeypack-removelicenseswithidcount.md)                         | Entfernt die angegebene Anzahl von Remotedesktopdienste Lizenzen aus dem angegebenen Schlüssel Paket.<br/>                                                                                                                                  |
-| [**Uninstalllicenabkeypack**](win32-tslicensekeypack-uninstalllicensekeypack.md)                             | Deinstalliert ein Remotedesktopdienste License Key Pack.<br/>                                                                                                                                                                         |
-| [**Uninstalllicenabkeypackwithid**](win32-tslicensekeypack-uninstalllicensekeypackwithid.md)                 | Deinstalliert das Remotedesktopdienste License Key Pack mit der angegebenen Key Pack-Kennung.<br/>                                                                                                                                |
+| [**ConvertLicenses**](convertlicenses-win32-tslicensekeypack.md)                                             | Konvertiert die Lizenzen im aktuellen Schlüsselpaket.<br/>                                                                                                                                                                                 |
+| [**ImportAgreementLicenseKeyPack**](win32-tslicensekeypack-importagreementlicensekeypack.md)                 | Importiert von einem anderen Remotedesktop-Lizenzserver ein Remotedesktopdienste-Lizenzschlüsselpaket, das über einen Lizenzvertrag erworben wurde, und stellt automatisch eine Verbindung über das Internet zur Überprüfung der Key Pack-Lizenz sicher.<br/> |
+| [**ImportLicenseKeyPackOffline**](win32-tslicensekeypack-importlicensekeypackoffline.md)                     | Importiert von einem anderen Remotedesktop-Lizenzserver ein Remotedesktopdienste-Lizenzschlüsselpaket, das eine Lizenz-ID verwendet, die über das Internet oder das Telefon empfangen wurde.<br/>                                               |
+| [**ImportOpenPurchaseLicenseKeyPack**](win32-tslicensekeypack-importopenpurchaselicensekeypack.md)           | Importiert von einem anderen Remotedesktop-Lizenzserver ein Open License Remotedesktopdienste License Key Pack.<br/>                                                                                                                 |
+| [**ImportRetailPurchaseLicenseKeyPack**](win32-tslicensekeypack-importretailpurchaselicensekeypack.md)       | Importiert von einem anderen Remotedesktop-Lizenzserver ein Remotedesktopdienste Lizenzschlüsselpaket, das über einen Einzelhandelskanal erworben wurde.<br/>                                                                                   |
+| [**InstallAgreementLicenseKeyPack**](installagreementlicensekeypack-win32-tslicensekeypack.md)               | Installiert ein Remotedesktopdienste Lizenzschlüsselpaket, das über eine Vertragslizenz erworben wurde.<br/>                                                                                                                           |
+| [**InstallLicenseKeyPack**](installlicensekeypack-win32-tslicensekeypack.md)                                 | Installiert ein Remotedesktopdienste Lizenzschlüsselpaket, das eine Lizenzschlüsselpaket-ID verwendet, die über das Internet oder das Telefon empfangen wurde.<br/>                                                                                          |
+| [**InstallOpenLicenseKeyPack**](installopenlicensekeypack-win32-tslicensekeypack.md)                         | Installiert ein Remotedesktopdienste Lizenzschlüsselpaket, das über einen offenen Lizenzvertrag erworben wurde.<br/>                                                                                                                      |
+| [**InstallRetailPurchaseLicenseKeyPack**](installretailpurchaselicensekeypack-win32-tslicensekeypack.md)     | Installiert ein Remotedesktopdienste Lizenzschlüsselpaket, das über einen Einzelhandelsgeschäft erworben wurde.<br/>                                                                                                                                 |
+| [**ReinstallAgreementLicenseKeyPack**](win32-tslicensekeypack-reinstallagreementlicensekeypack.md)           | Installiert ein Remotedesktopdienste Lizenzschlüsselpaket neu, das über einen Lizenzvertrag erworben wurde, und stellt automatisch eine Verbindung über das Internet zur Überprüfung der Key Pack-Lizenz herstellen.<br/>                                           |
+| [**ReinstallLicenseKeyPackOffline**](win32-tslicensekeypack-reinstalllicensekeypackoffline.md)               | Installiert ein Remotedesktopdienste Lizenzschlüsselpaket neu, das die Lizenz-ID verwendet, die über das Internet oder das Telefon empfangen wurde.<br/>                                                                                       |
+| [**ReinstallOpenPurchaseLicenseKeyPack**](win32-tslicensekeypack-reinstallopenpurchaselicensekeypack.md)     | Installiert ein Open License Remotedesktopdienste Lizenzschlüsselpaket neu.<br/>                                                                                                                                                           |
+| [**ReinstallRetailPurchaseLicenseKeyPack**](win32-tslicensekeypack-reinstallretailpurchaselicensekeypack.md) | Neuinstallation eines Remotedesktopdienste Lizenzschlüsselpakets, das über einen Einzelhandelskanal erworben wurde.<br/>                                                                                                                             |
+| [**RemoveLicensesWithIdCount**](win32-tslicensekeypack-removelicenseswithidcount.md)                         | Entfernt die angegebene Anzahl Remotedesktopdienste Lizenzen aus dem angegebenen Key Pack.<br/>                                                                                                                                  |
+| [**UninstallLicenseKeyPack**](win32-tslicensekeypack-uninstalllicensekeypack.md)                             | Deinstalliert ein Remotedesktopdienste Lizenzschlüsselpaket.<br/>                                                                                                                                                                         |
+| [**UninstallLicenseKeyPackWithId**](win32-tslicensekeypack-uninstalllicensekeypackwithid.md)                 | Deinstalliert das Remotedesktopdienste Lizenzschlüsselpaket mit dem angegebenen Schlüsselpaketbezeichner.<br/>                                                                                                                                |
 
 
 
@@ -98,36 +98,36 @@ Die Win32-Klasse " **\_ zlicenabkeypack** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ slicenabkeypack** " verfügt über diese Eigenschaften.
+Die **Win32 \_ TSLicenseKeyPack-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AccessRights**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Bitmap**](/windows/desktop/WmiSdk/standard-qualifiers) ("0", "1", "2", "3"), [**BitValues**](/windows/desktop/WmiSdk/standard-qualifiers) ("RD-Sitzung", "VDI-Sitzung", "Calista", "VDI-Partner")
+Qualifizierer: [**BitMap**](/windows/desktop/WmiSdk/standard-qualifiers) ("0", "1", "2", "3"), [**BitValues**](/windows/desktop/WmiSdk/standard-qualifiers) ("RD Session", "VDI Session", "Calzuordnung", "VDI Partners")
 </dt> </dl>
 
-Qualifizierer für Terminaldienstelizenzierungs-Schlüssel Paket
+Qualifizierer für ZUGRIFFsrechte des TS-Lizenzierungsschlüsselpakets
 
 </dd> <dt>
 
-**Availablelicenses**
+**AvailableLicenses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtanzahl der verfügbaren Lizenzen im Remotedesktopdienste License Key Pack.
+Gesamtanzahl der verfügbaren Lizenzen im Remotedesktopdienste Lizenzschlüsselpaket.
 
 </dd> <dt>
 
@@ -140,40 +140,40 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Beschreibung des Remotedesktopdienste License Key Pack.
+Beschreibung des Remotedesktopdienste Lizenzschlüsselpakets.
 
 </dd> <dt>
 
 **ExpirationDate**
 </dt> <dd> <dl> <dt>
 
-**[Datentyp: DateTime](/windows/desktop/WmiSdk/datetime)**
+Datentyp: **[DATETIME](/windows/desktop/WmiSdk/datetime)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Ablaufdatum des Remotedesktopdienste License Key Pack.
+Das Ablaufdatum des Remotedesktopdienste Lizenzschlüsselpakets.
 
 </dd> <dt>
 
-**Issuedlicenses**
+**IssuedLicenses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtanzahl der ausgestellten Lizenzen im Remotedesktopdienste License Key Pack.
+Gesamtanzahl der ausgestellten Lizenzen im Remotedesktopdienste Lizenzschlüsselpaket.
 
 </dd> <dt>
 
-**Keypackid**
+**KeyPackId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -182,77 +182,77 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Bezeichner für das Remotedesktopdienste License Key Pack.
+Bezeichner für das Remotedesktopdienste Lizenzschlüsselpaket.
 
 </dd> <dt>
 
-**Keypacktype**
+**KeyPackType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ des Schlüssel Pakets für den Remotedesktop-Lizenzserver.
+Typ des Schlüsselpakets für den Remotedesktop Lizenzserver.
 
-| Wert | BESCHREIBUNG |
+| Wert | Beschreibung |
 |-------|-------------|
-| 0 | Der Typ Remotedesktopdienste License Key Pack ist unbekannt. |
-| 1 | Der Typ der Remotedesktopdienste License Key Pack ist ein Einzelhandels Einkauf. |
-| 2 | Der Typ Remotedesktopdienste License Key Pack ist ein Volume Purchase. |
-| 3 | Der Remotedesktopdienste License Key Pack-Typ ist eine gleichzeitige Lizenz. |
-| 4 | Der Typ Remotedesktopdienste License Key Pack ist temporär. |
-| 5 | Der Remotedesktopdienste License Key Pack-Typ ist eine offene Lizenz. |
+| 0 | Der Remotedesktopdienste Lizenzschlüsselpakettyp ist unbekannt. |
+| 1 | Der Remotedesktopdienste Lizenzschlüsselpakettyp ist ein Einzelhandelskauf. |
+| 2 | Der Remotedesktopdienste Lizenzschlüsselpakettyp ist ein Volumenkauf. |
+| 3 | Der Remotedesktopdienste Lizenzschlüsselpakettyp ist eine gleichzeitige Lizenz. |
+| 4 | Der Remotedesktopdienste Lizenzschlüsselpakettyp ist temporär. |
+| 5 | Der Remotedesktopdienste Lizenzschlüsselpakettyp ist eine offene Lizenz. |
 | 6 | Wird nicht unterstützt. |
 
 **ProductType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Produkttyp des Remotedesktopdienste License Key Pack.
+Produkttyp des Remotedesktopdienste Lizenzschlüsselpakets.
 
-| Wert | BESCHREIBUNG |
+| Wert | Beschreibung |
 |-------|-------------|
-| 0 | Der Produkttyp Remotedesktopdienste License Key Pack ist pro Gerät. Daher muss jedes Gerät, das eine Verbindung mit dem RD-Sitzungshost Server herstellt, über eine Lizenz verfügen. |
-| 1 | Der Product Type für Remotedesktopdienste License Key Pack ist pro Benutzer. Daher muss jeder Benutzer, der eine Verbindung mit dem RD-Sitzungshost Server herstellt, über eine Lizenz verfügen. |
-| 2 | Der Produkttyp ist ungültig. |
+| 0 | Der Produkttyp Remotedesktopdienste Lizenzschlüsselpakets ist pro Gerät. Daher muss jedes Gerät, das eine Verbindung mit dem RD-Sitzungshost-Server herstellt, über eine Lizenz verfügen. |
+| 1 | Der Produkttyp Remotedesktopdienste Lizenzschlüsselpakets ist pro Benutzer. Daher muss jeder Benutzer, der eine Verbindung mit dem RD-Sitzungshost-Server herstellt, über eine Lizenz verfügen. |
+| 2 | Dieser Produkttyp ist ungültig. |
 
 **ProductVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Produktversion für das Remotedesktopdienste License Key Pack.
+Produktversion für das Remotedesktopdienste Lizenzschlüsselpaket.
 
-| Wert | BESCHREIBUNG |
+| Wert | Beschreibung |
 |-------|-------------|
-| "Windows Server 2012" | Nur Server, auf denen Windows Server 2012, Windows Server 2008 R2 oder Windows Server 2008 ausgeführt wird, werden mit dieser Lizenz unterstützt. |
-| "Windows Server 7" | Nur Server, auf denen Windows Server 2008 R2 oder Windows Server 2008 ausgeführt wird, werden mit dieser Lizenz unterstützt. |
-| "Windows Server 2008" | Nur Server, auf denen Windows Server 2008 ausgeführt wird, werden von diesem Schlüssel Paket unterstützt. |
+| "Windows Server 2012" | Mit dieser Lizenz werden nur Server unterstützt, auf denen Windows Server 2012, Windows Server 2008 R2 oder Windows Server 2008 ausgeführt wird. |
+| "Windows Server 7" | Mit dieser Lizenz werden nur Server unterstützt, auf denen Windows Server 2008 R2 oder Windows Server 2008 ausgeführt wird. |
+| "Windows Server 2008" | Dieses Schlüsselpaket unterstützt nur Server, auf denen Windows Server 2008 ausgeführt wird. |
 
-**Productversionid**
+**ProductVersionID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Produkt Versions Kennung für das Remotedesktopdienste License Key Pack.
+Produktversionsbezeichner für das Remotedesktopdienste Lizenzschlüsselpaket.
 
-| Wert | BESCHREIBUNG |
+| Wert | Beschreibung |
 |-------|-------------|
 | 0 | Nicht unterstützt |
 | 1 | Nicht unterstützt |
@@ -262,37 +262,37 @@ Die Produkt Versions Kennung für das Remotedesktopdienste License Key Pack.
 | 5 | Windows Server 2016 |
 | 6 | Windows Server 2019 |
 
-**Totallicenses**
+**TotalLicenses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtanzahl der Lizenzen im Remotedesktopdienste License Key Pack.
+Gesamtzahl der Lizenzen im Remotedesktopdienste-Lizenzschlüsselpaket.
 
 </dd> <dt>
 
-**Typeandmodel**
+**TypeAndModel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Qualifizierer für Terminaldienstelizenzierungs-Key Pack-Typ Beispiele: VDI pro Geräte Abonnementlizenz, TS pro Benutzer-CAL
+Qualifizierer für Schlüsselpakettyp und -modell der TS-Lizenzierung. Beispiele: VDI-Abonnementlizenz pro Gerät, TS pro Benutzer-CAL
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Klasse verwenden zu können.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Klasse verwenden zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -303,25 +303,25 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-" \_ tsissuedlicense"**](win32-tsissuedlicense.md)
+[**Win32 \_ TSIssuedLicense**](win32-tsissuedlicense.md)
 </dt> <dt>
 
-[**Win32-Datei- \_ /licensereport**](win32-tslicensereport.md)
+[**Win32 \_ TSLicenseReport**](win32-tslicensereport.md)
 </dt> <dt>
 
-[**Win32-Wert für "- \_ Lizenzserver"**](win32-tslicensereportentry.md)
+[**Win32 \_ TSLicenseReportEntry**](win32-tslicensereportentry.md)
 </dt> <dt>
 
-[**Win32- \_ Lizenznehmer**](win32-tslicenseserver.md)
+[**Win32 \_ TSLicenseServer**](win32-tslicenseserver.md)
 </dt> </dl>
 
  

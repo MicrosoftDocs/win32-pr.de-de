@@ -1,29 +1,29 @@
 ---
-description: In diesem Thema werden die Anforderungen für die Implementierung einer Ausgabepin für einen DirectShow-Erfassungs Filter beschrieben.
+description: In diesem Thema werden die Anforderungen für die Implementierung eines Ausgabepins für einen DirectShow-Erfassungsfilter beschrieben.
 ms.assetid: cb9cda1c-efa2-4abb-934b-21ba8cb80f30
-title: PIN-Anforderungen für Erfassungs Filter
+title: Anforderungen für Erfassungsfilter anheften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e2a97d3e5c0f7fe0f5a9a341899651685df1cdd3
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7e72c74f06970bf6124d0e5dffea458bb41bcd0a19db44acc71a51615aa2fee8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344160"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119316110"
 ---
-# <a name="pin-requirements-for-capture-filters"></a>PIN-Anforderungen für Erfassungs Filter
+# <a name="pin-requirements-for-capture-filters"></a>Anforderungen für Erfassungsfilter anheften
 
-In diesem Thema werden die Anforderungen für die Implementierung einer Ausgabepin für einen DirectShow-Erfassungs Filter beschrieben.
+In diesem Thema werden die Anforderungen für die Implementierung eines Ausgabepins für einen DirectShow-Erfassungsfilter beschrieben.
 
 ## <a name="pin-name"></a>Pin-Name
 
-Sie können eine PIN mit einem beliebigen Namen versehen. Wenn der PIN-Name mit dem Tildezeichen (~) beginnt, wird diese PIN vom Filter Diagramm-Manager nicht automatisch renderserver, wenn eine Anwendung [**igraphbuilder:: RenderFile**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-renderfile)aufruft. Wenn der Filter beispielsweise über eine Erfassungs-PIN und eine Vorschau-Pin verfügt, können Sie Sie mit "~ Capture" bzw. "Preview" benennen. Wenn eine Anwendung diesen Filter in einem Diagramm rendert, stellt die Vorschau-Pin eine Verbindung mit dem Standard-Renderer her, und es wird keine Verbindung mit der Erfassungs-Pin hergestellt, was ein vernünftiges Standardverhalten ist. Dies gilt auch für Pins, die Informationsdaten liefern, die nicht gerendert werden sollen, oder für Pins, für die benutzerdefinierte Eigenschaften festgelegt werden müssen. Beachten Sie, dass Pins mit dem Tilde (~)-Präfix weiterhin manuell von der Anwendung verbunden werden können.
+Sie können einen beliebigen Namen für eine Stecknadel vergeben. Wenn der Pinname mit dem Tildezeichen (~) beginnt, rendert der Filter Graph Manager diesen Pin nicht automatisch, wenn eine Anwendung [**IGraphBuilder::RenderFile**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-renderfile)aufruft. Wenn der Filter beispielsweise über einen Erfassungspin und einen Vorschaupin verfügt, können Sie ihnen den Namen "~Capture" bzw. "Preview" geben. Wenn eine Anwendung diesen Filter in einem Diagramm rendert, stellt der Vorschaupin eine Verbindung mit dem Standardrenderer her, und es wird keine Verbindung mit dem Erfassungspin hergestellt. Dies ist ein angemessenes Standardverhalten. Dies kann auch für Pins gelten, die Informationsdaten liefern, die nicht gerendert werden sollen, oder für Stecknadeln, für die benutzerdefinierte Eigenschaften festgelegt werden müssen. Beachten Sie, dass Stecknadeln mit dem Tildepräfix (~) weiterhin manuell von der Anwendung verbunden werden können.
 
-## <a name="pin-category"></a>PIN-Kategorie
+## <a name="pin-category"></a>Kategorie anheften
 
-Ein Erfassungs Filter hat immer eine Aufzeichnungs-PIN und verfügt möglicherweise über eine Vorschau-PIN. Einige Erfassungs Filter verfügen möglicherweise über andere Ausgabe Pins, um andere Arten von Daten, z. b. Steuerungsinformationen, bereitzustellen. Jede Ausgabepin muss die Schnittstelle " [**ikspropertyset**](ikspropertyset.md) " verfügbar machen. Anwendungen verwenden diese Schnittstelle, um die PIN-Kategorie zu bestimmen. Die PIN gibt in der Regel entweder Pin \_ Category \_ Capture oder PIN \_ Category \_ Preview zurück. Weitere Informationen finden Sie unter [PIN-Eigenschaften Satz](pin-property-set.md).
+Ein Erfassungsfilter verfügt immer über einen Erfassungspin und kann über einen Vorschaupin verfügen. Einige Erfassungsfilter verfügen möglicherweise über andere Ausgabepins, um andere Arten von Daten bereitzustellen, z. B. Steuerelementinformationen. Jeder Ausgabepin muss die [**IKsPropertySet-Schnittstelle**](ikspropertyset.md) verfügbar machen. Anwendungen verwenden diese Schnittstelle, um die Stecknadelkategorie zu bestimmen. Der Pin gibt in der Regel entweder PIN \_ CATEGORY CAPTURE oder PIN CATEGORY PREVIEW \_ \_ \_ zurück. Weitere Informationen finden Sie unter [Anheften von Eigenschaftensatz.](pin-property-set.md)
 
-Im folgenden Beispiel wird gezeigt, wie " [**ikspropertyset**](ikspropertyset.md) " implementiert wird, um die PIN-Kategorie für eine Aufzeichnungs-Pin zurückzugeben:
+Das folgende Beispiel zeigt, wie [**IKsPropertySet**](ikspropertyset.md) implementiert wird, um die Pinkategorie auf einem Erfassungspin zurückzugeben:
 
 
 ```C++
@@ -83,7 +83,7 @@ HRESULT CMyCapturePin::QuerySupported(REFGUID guidPropSet, DWORD dwPropID,
 
 <dl> <dt>
 
-[Schreiben von Erfassungs Filtern](writing-capture-filters.md)
+[Schreiben von Erfassungsfiltern](writing-capture-filters.md)
 </dt> </dl>
 
  

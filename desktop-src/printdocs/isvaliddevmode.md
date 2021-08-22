@@ -1,7 +1,7 @@
 ---
-description: Die isvaliddevmode-Funktion überprüft, ob der Inhalt einer DEVMODE-Struktur gültig ist.
+description: Die IsValidDevmode-Funktion überprüft, ob der Inhalt einer DEVMODE-Struktur gültig ist.
 ms.assetid: 8b4e32cc-5eeb-4a0d-a1b7-f6edb99ed8d8
-title: Isvaliddevmode-Funktion (winspool. h)
+title: IsValidDevmode-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - Winspool.drv
-ms.openlocfilehash: 0b8a940fd08e1ab19b18969a763448b65fffd9d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4c3a5cd33a6a5584ea9373df22df51a09e3e763d284a0f979f0b24e3651dc3d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119100528"
 ---
-# <a name="isvaliddevmode-function"></a>Isvaliddevmode-Funktion
+# <a name="isvaliddevmode-function"></a>IsValidDevmode-Funktion
 
-Die **isvaliddevmode** -Funktion überprüft, ob der Inhalt einer DEVMODE-Struktur gültig ist.
+Die **IsValidDevmode-Funktion** überprüft, ob der Inhalt einer DEVMODE-Struktur gültig ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,33 +42,33 @@ BOOL IsValidDevmode(
 
 <dl> <dt>
 
-*pdevmode* \[ in\]
+*pDevmode* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den zu validierenden [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) .
+Ein Zeiger auf den [**zu überprüfenden DEVMODE.**](/windows/win32/api/wingdi/ns-wingdi-devmodea)
 
 </dd> <dt>
 
-*Devmudesize* 
+*DevmodeSize* 
 </dt> <dd>
 
-Die Größe des Eingabe Byte Puffers in Bytes.
+Die Größe des Eingabebytepuffers in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-**True**, wenn der [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) -Wert strukturell gültig ist. Wenn kleinere Fehler gefunden werden, werden Sie von der Funktion behoben und **true** zurückgegeben.
+**TRUE**, wenn [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) strukturell gültig ist. Wenn kleinere Fehler gefunden werden, werden sie von der Funktion behoben und **TRUE zurückgeben.**
 
-**False**, wenn der [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) ein oder mehrere bedeutende strukturellen Probleme aufweist. Beispielsweise ist der **dmsize** -Member falsch ausgerichtet oder gibt einen zu kleinen Puffer an. Außerdem **false** , wenn **pdevmode** **null** ist.
+**FALSE**, wenn [**DEVMODE ein**](/windows/win32/api/wingdi/ns-wingdi-devmodea) oder mehrere signifikante strukturelle Probleme aufthält. Beispielsweise ist der **dmSize-Member** falsch ausgerichtet oder gibt einen puffer an, der zu klein ist. False, **wenn** **pDevmode** NULL **ist.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es werden keine privaten Druckertreiber Felder des [**DEVMODE-Modus**](/windows/win32/api/wingdi/ns-wingdi-devmodea) geprüft, sondern nur die öffentlichen Felder.
+Es werden keine privaten Druckertreiberfelder von [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) überprüft, sondern nur die öffentlichen Felder.
 
-Aufrufer sollten **dmsize** + **dmdriverextra** für **devmudesize** nur verwenden, wenn Sie sicherstellen können, dass die Eingabepuffergröße mindestens so groß ist. Da es sich bei [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) im Allgemeinen um nicht vertrauenswürdige Daten handelt, sind die Werte, die im Eingabepuffer in den Offsets **dmsize** und **dmdriverextra** liegen, ebenfalls nicht vertrauenswürdig.
+Aufrufer sollten **dmSize** + **dmDriverExtra** nur für **DevmodeSize** verwenden, wenn sie garantieren können, dass die Eingabepuffergröße mindestens so groß ist. Da [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) im Allgemeinen nicht vertrauenswürdige Daten sind, sind die Werte im Eingabepuffer am **dmSize-** und **dmDriverExtra-Offset** ebenfalls nicht vertrauenswürdig.
 
-Diese Funktion ist im Lua-Kontext (Least-Privileged User Account) ausführbare Datei.
+Diese Funktion ist im Kontext Least-Privileged Benutzerkontos (USER Account, LUA) ausführbare Datei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,16 +76,16 @@ Diese Funktion ist im Lua-Kontext (Least-Privileged User Account) ausführbare D
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Winspool. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl> |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Isvaliddevmodew** (Unicode) und **isvaliddevmodea** (ANSI)<br/>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Winspool.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **IsValidDevmodeW** (Unicode) und **IsValidDevmodeA** (ANSI)<br/>                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -95,7 +95,7 @@ Diese Funktion ist im Lua-Kontext (Least-Privileged User Account) ausführbare D
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea)
+[**Devmode**](/windows/win32/api/wingdi/ns-wingdi-devmodea)
 </dt> </dl>
 
  

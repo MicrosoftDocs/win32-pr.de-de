@@ -1,11 +1,11 @@
 ---
 title: IMsRdpCameraRedirConfigCollection ByIndex-Eigenschaft
-description: Gibt ein imsrdpcameraredirconfig-Objekt nach dem Index in der Auflistung zurück.
+description: Gibt ein IMsRdpCameraRedirConfig-Objekt nach seinem Index in der Auflistung zurück.
 ms.tgt_platform: multiple
 keywords:
-- Byindex-Eigenschaft Remotedesktopdienste
-- Byindex-Eigenschaft Remotedesktopdienste, imsrdpcameraredirconfigcollection-Schnittstelle
-- Imsrdpcameraredirconfigcollection-Schnittstelle Remotedesktopdienste, byindex-Eigenschaft
+- ByIndex-Remotedesktopdienste
+- ByIndex-Remotedesktopdienste , IMsRdpCameraRedirConfigCollection-Schnittstelle
+- IMsRdpCameraRedirConfigCollection-Schnittstelle Remotedesktopdienste , ByIndex-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 12/16/2020
-ms.openlocfilehash: 68c179023e93295ee846da22357d5f8efb75b15c
-ms.sourcegitcommit: 04e801237156e90b48111d60bddf437f87f5cdfe
+ms.openlocfilehash: 375c0b110975c6ca791bbbe1f61a5b597b00316242484cd68ef018b7ef4ea88b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "106344559"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119138963"
 ---
-# <a name="imsrdpcameraredirconfigcollectionbyindex-property"></a>Imsrdpcameraredirconfigcollection:: byindex-Eigenschaft
+# <a name="imsrdpcameraredirconfigcollectionbyindex-property"></a>IMsRdpCameraRedirConfigCollection::ByIndex (Eigenschaft)
 
-Gibt ein [imsrdpcameraredirconfig](imsrdpcameraredirconfig.md) -Objekt nach dem Index in der Auflistung zurück.
+Gibt ein [IMsRdpCameraRedirConfig-Objekt](imsrdpcameraredirconfig.md) nach seinem Index in der Auflistung zurück.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -41,7 +41,7 @@ HRESULT get_ByIndex(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Das [imsrdpcameraredirconfig](imsrdpcameraredirconfig.md) -Objekt, das dem angegebenen Index entspricht.
+Das [IMsRdpCameraRedirConfig-Objekt,](imsrdpcameraredirconfig.md) das dem angegebenen Index entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,9 +50,9 @@ Das [imsrdpcameraredirconfig](imsrdpcameraredirconfig.md) -Objekt, das dem angeg
 | Unterstützte Mindestversion (Client)| Windows 10, Version 1803 (Build 17134)      |
 | Typbibliothek            | MsTscAx.dll                        |
 | DLL                  | MsTscAx.dll     |
-| IID                      | IID \_ imsrdpcameraredirconfigcollection ist als AE45252B-aaab-4504-B681-649d6073a37a definiert.          |
+| IID                      | IID \_ IMsRdpCameraRedirConfigCollection ist als AE45252B-AAAB-4504-B681-649D6073A37A definiert.          |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

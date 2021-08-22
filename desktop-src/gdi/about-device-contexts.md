@@ -1,31 +1,31 @@
 ---
 description: Die Geräteunabhängigkeit ist eines der wichtigsten Features von Microsoft Windows.
 ms.assetid: f2a4c4cf-55e9-4129-8067-256552af49d2
-title: Informationen zu Geräte Kontexten
+title: Informationen zu Gerätekontexten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c3b686ec8b48492658f19531cb42161c043f178d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9439e3091b3138917e24ab4a49ff89c21a1e1b53480d4a138bd2bbad3288fcd0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119105875"
 ---
-# <a name="about-device-contexts"></a>Informationen zu Geräte Kontexten
+# <a name="about-device-contexts"></a>Informationen zu Gerätekontexten
 
-Die Geräteunabhängigkeit ist eines der wichtigsten Features von Microsoft Windows. Anwendungen können die Ausgabe auf einer Vielzahl von Geräten zeichnen und drucken. Die Software, die diese Geräteunabhängigkeit unterstützt, ist in zwei Dynamic-Link-Bibliotheken enthalten. Der erste, Gdi.dll, wird als Grafikgeräte Schnittstelle (Graphics Device Interface, GDI) bezeichnet. die zweite wird als Gerätetreiber bezeichnet. Der Name der zweiten hängt von dem Gerät ab, auf dem die Anwendung die Ausgabe zeichnet. Wenn die Anwendung z. b. die Ausgabe im Client Bereich des Fensters auf einer VGA-Anzeige zeichnet, wird diese Bibliothek Vga.dll. Wenn die Anwendung die Ausgabe auf einem Epson FX-80-Drucker ausgibt, wird diese Bibliothek Epson9.dll.
+Die Geräteunabhängigkeit ist eines der wichtigsten Features von Microsoft Windows. Anwendungen können Ausgaben auf einer Vielzahl von Geräten zeichnen und drucken. Die Software, die diese Geräteunabhängigkeit unterstützt, ist in zwei Dynamic Link-Bibliotheken enthalten. Die erste , Gdi.dll, wird als Grafikgeräteschnittstelle (GDI) bezeichnet. die zweite wird als Gerätetreiber bezeichnet. Der Name des zweiten hängt von dem Gerät ab, auf dem die Anwendung die Ausgabe zeichnet. Wenn die Anwendung beispielsweise die Ausgabe im Clientbereich ihres Fensters auf einer VGA-Anzeige zeichnet, wird diese Bibliothek Vga.dll; Wenn die Anwendung die Ausgabe auf einem Fx-80-Drucker druckt, wird diese Bibliothek Epson9.dll.
 
-Eine Anwendung muss GDI darüber informieren, dass ein bestimmter Gerätetreiber geladen und der Treiber geladen wird, um das Gerät auf Zeichnungsvorgänge vorzubereiten (z. b. das Auswählen einer Linien Farbe und-Breite, eines Pinsel Musters und einer Farbe, einer Schriftart Schriftart, eines Clippingbereichs usw.). Diese Aufgaben werden durch das Erstellen und Verwalten eines Geräte Kontexts (DC) erreicht. Ein Domänen Controller ist eine Struktur, die eine Reihe von Grafikobjekten und deren zugeordneten Attributen definiert, sowie die Grafikmodi, die die Ausgabe beeinflussen. Die Grafik Objekte enthalten einen Stift für das Zeichnen von Zeilen, einen Pinsel zum Zeichnen und Auffüllen, eine Bitmap zum Kopieren oder Scrollen von Teilen des Bildschirms, eine Palette zum Definieren des Satzes verfügbarer Farben, eine Region für das Abschneiden und andere Vorgänge sowie einen Pfad für Zeichnungs-und Zeichnungsvorgänge. Im Gegensatz zu den meisten Strukturen hat eine Anwendung keinen direkten Zugriff auf den DC. Stattdessen wird die Struktur indirekt durch Aufrufen verschiedener Funktionen betrieben.
+Eine Anwendung muss GDI anleiten, einen bestimmten Gerätetreiber zu laden und das Gerät nach dem Laden für Zeichnungsvorgänge vorzubereiten (z. B. auswählen einer Linienfarbe und -breite, eines Pinselmusters und einer Farbe, einer Schriftart, eines Ausschneidebereichs und so weiter). Diese Aufgaben werden durch Erstellen und Verwalten eines Gerätekontexts (DC) ausgeführt. Ein DC ist eine -Struktur, die eine Reihe von grafischen Objekten und deren zugeordnete Attribute sowie die Grafikmodi definiert, die sich auf die Ausgabe auswirken. Zu den Grafikobjekten gehören ein Stift für die Linienzeichnung, ein Pinsel zum Zeichnen und Füllen, eine Bitmap zum Kopieren oder Scrollen von Teilen des Bildschirms, eine Palette zum Definieren der Verfügbaren Farben, ein Bereich zum Ausschneiden und andere Vorgänge sowie ein Pfad für Zeichnungs- und Zeichnungsvorgänge. Im Gegensatz zu den meisten Strukturen hat eine Anwendung nie direkten Zugriff auf den Domänencontroller. stattdessen wird die Struktur indirekt durch Aufrufen verschiedener Funktionen verwendet.
 
 Diese Übersicht enthält Informationen zu den folgenden Themen:
 
--   [Grafik Objekte](graphic-objects.md)
+-   [Grafische Objekte](graphic-objects.md)
 -   [Grafikmodi](graphic-modes.md)
--   [Gerätekontext Typen](device-context-types.md)
--   [Gerätekontext Vorgänge](device-context-operations.md)
--   [ICM-aktivierte Gerätekontext Funktionen](icm-enabled-device-context-functions.md)
+-   [Gerätekontexttypen](device-context-types.md)
+-   [Gerätekontextvorgänge](device-context-operations.md)
+-   [ICM-aktivierte Gerätekontextfunktionen](icm-enabled-device-context-functions.md)
 
-Ein wichtiges Konzept ist das Layout eines DC oder Fensters, in dem die Reihenfolge beschrieben wird, in der GDI-Objekte und Text angezeigt werden (von links nach rechts oder von rechts nach links). Weitere Informationen finden Sie unter "Fenster Layout und Spiegelung" [**in den Funktionen "Window"**](../winmsg/window-features.md) und " [**getLayout**](/windows/desktop/api/Wingdi/nf-wingdi-getlayout) " und " [**setLayout**](/windows/desktop/api/Wingdi/nf-wingdi-setlayout) ".
+Ein wichtiges Konzept ist das Layout eines Domänencontrollers oder Fensters, das die Reihenfolge beschreibt, in der GDI-Objekte und Text (von links nach rechts oder von rechts nach links) angezeigt werden. Weitere Informationen finden Sie unter "Fensterlayout [](../winmsg/window-features.md) und -spiegelung" in Fensterfeatures und den [**Funktionen GetLayout**](/windows/desktop/api/Wingdi/nf-wingdi-getlayout) und [**SetLayout.**](/windows/desktop/api/Wingdi/nf-wingdi-setlayout)
 
  
 

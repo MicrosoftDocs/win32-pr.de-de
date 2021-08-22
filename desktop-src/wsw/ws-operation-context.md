@@ -1,21 +1,21 @@
 ---
-title: WS_OPERATION_CONTEXT (Webservices. h)
-description: Ein nicht transparenter Typ, der zum Verweisen auf einen Kontext verwendet wird.
+title: WS_OPERATION_CONTEXT (WebServices.h)
+description: Ein nicht transparenter Typ, der verwendet wird, um auf einen Kontext zu verweisen.
 ms.assetid: 5c9b5906-15f0-4339-a4ad-39977d28ce5b
 keywords:
 - WS_OPERATION_CONTEXT
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e5454146bac2941f76df646bb58e71ca2cdfd6e1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1fc355a3c594cb89d26f4f4312af93474e3bd2c2fd948cdadfab790fa6e6ee92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477352"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082994"
 ---
-# <a name="ws_operation_context"></a>WS- \_ Vorgangs \_ Kontext
+# <a name="ws_operation_context"></a>\_WS-VORGANGSKONTEXT \_
 
-Ein nicht transparenter Typ, der zum Verweisen auf einen [Kontext](context.md)verwendet wird.
+Ein nicht transparenter Typ, der verwendet wird, um auf einen [Kontext](context.md)zu verweisen.
 
 
 ```C++
@@ -24,9 +24,9 @@ typedef struct _WS_OPERATION_CONTEXT WS_OPERATION_CONTEXT;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Objekt ist nicht Thread sicher. Weitere Informationen finden Sie unter [Thread Sicherheit](thread-safety.md).
+Dieses Objekt ist nicht threadsicher. Weitere Informationen finden Sie unter [Threadsicherheit.](thread-safety.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -34,9 +34,9 @@ Dieses Objekt ist nicht Thread sicher. Weitere Informationen finden Sie unter [T
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Webservices. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>WebServices.h</dt> </dl> |
 
 
 

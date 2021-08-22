@@ -1,33 +1,33 @@
 ---
-description: Windows Installer enthält Funktionen zum Anzeigen einer Statusanzeige in einem Aktions Anzeige Dialogfeld.
+description: Windows Das Installationsprogramm enthält Funktionen zum Anzeigen einer Statusanzeige in einem Aktionsanzeigedialogfeld.
 ms.assetid: cfc2d974-4f2d-4f52-9835-eab1dc091c9b
-title: Erstellen eines ProgressBar-Steuer Elements
+title: Erstellen eines ProgressBar-Steuerelements
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b872ed2dd36fb8ed04ee48fd69e4680fce002a18
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1074744220bde8734fe0cd1f65aa1037ff1f0cb26763a11845a7ea7f1b58e507
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864459"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119066160"
 ---
-# <a name="authoring-a-progressbar-control"></a>Erstellen eines ProgressBar-Steuer Elements
+# <a name="authoring-a-progressbar-control"></a>Erstellen eines ProgressBar-Steuerelements
 
-Windows Installer enthält Funktionen zum Anzeigen einer Statusanzeige in einem Aktions Anzeige Dialogfeld. Das [ProgressBar-Steuer](progressbar-control.md) Element stellt die Installation einzelner Komponenten grafisch dar und meldet entweder die insgesamt verstrichene Zeit relativ zur verbleibenden Zeit oder die ungefähre gesamte Zeit, die bis zum Abschluss der Installation verbleiben.
+Windows Das Installationsprogramm enthält Funktionen zum Anzeigen einer Statusanzeige in einem Aktionsanzeigedialogfeld. Das [ProgressBar-Steuerelement](progressbar-control.md) stellt die Installation einzelner Komponenten grafisch dar und meldet entweder die gesamt verstrichene Zeit relativ zur verbleibenden Zeit oder die ungefähre Gesamtzeit, die bis zum Abschluss der Installation verbleibt.
 
-Um die Gesamtzeit zu bestimmen, die für die Installation geplant ist, verfolgt das Installationsprogramm die gesamten Status Ticks, die von den einzelnen Aktionen während der Generierung des Ausführungs Skripts erwartet werden. Wenn die Skript Generierung abgeschlossen ist, wird der Status Tick Total (Gesamtwert) gespeichert, und die Installation beginnt.
+Um die für die Installation erwartete Gesamtzeit zu ermitteln, verfolgt das Installationsprogramm die gesamten Fortschritts-Ticks nach, die von jeder Aktion während der Generierung des Ausführungsskripts erwartet werden. Wenn die Skriptgenerierung abgeschlossen ist, wird die Fortschritts-Tick-Summe gespeichert, und die Installation beginnt.
 
-Fortschrittsmeldungen mit der verstrichenen Anzahl von Status Ticks werden an den aktiven Nachrichten Handler gesendet, wenn jede Aktion im Skript ausgeführt wird. Bei jeder Statusmeldung überträgt das Installationsprogramm einen [setProgress-ControlEvent](setprogress-controlevent.md) an das momentan aktive Dialogfeld. Die UI-Sequenz sollte erstellt werden, um das Dialogfeld Aktions Anzeige während der Skriptausführung zu erstellen, um die setProgress ControlEvent-Meldungen vom Installationsprogramm zu empfangen.
+Statusmeldungen, die die verstrichene Anzahl von Fortschritts-Ticks beschreiben, werden an den aktiven Meldungshandler gesendet, wenn jede Aktion im Skript ausgeführt wird. Bei jeder Statusmeldung überträgt das Installationsprogramm ein [SetProgress ControlEvent](setprogress-controlevent.md) an das derzeit aktive Dialogfeld. Die Benutzeroberflächensequenz sollte erstellt werden, um das Aktionsanzeigedialogfeld während der Skriptausführung zu erstellen, um die SetProgress ControlEvent-Meldungen vom Installationsprogramm zu empfangen.
 
-Wenn das Dialogfeld Aktions Anzeige ein setProgress ControlEvent empfängt, überprüft es die [EventMapping-Tabelle](eventmapping-table.md) auf alle Steuerelemente, die das ControlEvent-Element abonniert haben. Das ProgressBar-Steuerelement im Dialogfeld Aktions Anzeige wird mit dem in der Spalte Attribute angegebenen Attribut für die Fortschritts Steuerung abonniert. Das Progress Control-Attribut gibt an, dass das ProgressBar-Steuerelement zusammen mit dem setProgress ControlEvent die Werte "tickssofar" und "totalticks" übergeben wird. Das Statusanzeige-Steuerelement verwendet diese Informationen, um die grafische Leiste von links nach rechts für eine-Installation und von rechts nach Links für einen [Rollback](rollback-installation.md) -Vorgang zu verschieben.
+Wenn das Aktionsanzeigedialogfeld ein SetProgress ControlEvent empfängt, wird die [EventMapping-Tabelle](eventmapping-table.md) auf Steuerelemente überprüft, die ControlEvent abonnieren. Das ProgressBar-Steuerelement im Dialogfeld aktionsanzeige wird mit dem in der Spalte Attribute angegebenen Statussteuersteuerattribut abonniert. Das Progress Control-Attribut gibt an, dass dem ProgressBar-Steuerelement die Werte "ticksSoFar" und "totalTicks" zusammen mit dem SetProgress ControlEvent übergeben werden. Das Statusleisten-Steuerelement verwendet diese Informationen, um die grafische Leiste für eine Installation von links nach rechts und für einen [Rollbackvorgang](rollback-installation.md) von rechts nach links zu schreitet.
 
-Außerdem überträgt das Installationsprogramm für jede Statusmeldung ein [timeremainung-ControlEvent](timeremaining-controlevent.md) . Die gesamte verbleibende Zeit für die Installation wird durch die erste Berechnung der Ausführungsrate bestimmt, d. h. die Gesamtanzahl der verstrichenen Ticks, dividiert durch die Gesamtzeit seit Beginn der Installation. Die verbleibenden Ticks, die durch die Ausführungsrate geteilt werden, geben die ungefähre verbleibende Zeit an.
+Darüber hinaus überträgt das Installationsprogramm für jede Statusmeldung ein [TimeRemaining ControlEvent.](timeremaining-controlevent.md) Die verbleibende Gesamtzeit für die Installation wird durch die berechnung der Ausführungsrate bestimmt. Dies ist die Gesamtanzahl der Ticks, die geteilt durch die Gesamtzeit seit Beginn der Installation verstrichen sind. Die verbleibenden Gesamtteilstriche dividiert durch die Ausführungsrate geben die ungefähre verbleibende Zeit an.
 
-Wenn das Dialogfeld Aktions Anzeige das timeremaindingcontrolevent empfängt, sucht es erneut in der Tabelle EventMapping nach den abonnierenden Steuerelementen. Um die verbleibende Zeit anzuzeigen, muss ein [Text Steuer](text-control.md) Element für das timeremainingcontrolevent-Steuerelement mit dem [timeremainung-Steuer](timeremaining-control-attribute.md) Element, das in der Attribut Spalte angegeben ist, abonniert werden.
+Wenn das Aktionsanzeigedialogfeld das TimeRemaining ControlEvent empfängt, sucht es erneut in der EventMapping-Tabelle nach steuerelementen, die abonniert sind. Um die verbleibende Zeit anzuzeigen, muss ein [Text-Steuerelement](text-control.md) das TimeRemaining ControlEvent mit dem in der Spalte Attribute angegebenen [TimeRemaining-Steuerelementattribut](timeremaining-control-attribute.md) abonniert werden.
 
-Das abonnierte Text Steuerelement fragt die [UIText-Tabelle](uitext-table.md) nach einer parametrisierten Vorlagen Zeichenfolge mit dem Namen "timeremainung" ab. Diese Zeichenfolge hat zwei Parameter: \[ 1 \] für Minuten und \[ 2 \] für Sekunden. Das Text Steuerelement konvertiert jeden Wert in Minuten und Sekunden, wertet die timeremainung-Vorlagen Zeichenfolge aus und aktualisiert das Text Steuerelement mit den neuen Informationen.
+Das abonnierte Text-Steuerelement fragt die [UIText-Tabelle](uitext-table.md) nach einer parametrisierten Vorlagenzeichenfolge namens "TimeRemaining" ab. Diese Zeichenfolge verfügt über zwei Parameter: \[ 1 \] für Minuten und \[ 2 für \] Sekunden. Das Text-Steuerelement konvertiert jeden Wert in Minuten und Sekunden, wertet die TimeRemaining-Vorlagenzeichenfolge aus und aktualisiert das Textsteuerfeld mit den neuen Informationen.
 
-Wenn die Anzeige Ebene für die Benutzeroberfläche auf Basic oder niedriger festgelegt ist, zeigt das Installationsprogramm ein Standard Dialogfeld an, das eine Statusanzeige und ein timeremainung-Textfeld enthält. Weitere Informationen finden Sie unter [Benutzeroberflächen Ebenen](user-interface-levels.md).
+Wenn die Anzeigeebene der Benutzeroberfläche auf "Basic" oder "Lower" festgelegt ist, zeigt das Installationsprogramm ein Standarddialogfeld mit einer Statusanzeige und einem TimeRemaining-Textfeld an. Weitere Informationen finden Sie unter [Benutzeroberfläche Levels](user-interface-levels.md).
 
  
 

@@ -1,19 +1,19 @@
 ---
-description: Die wsalookupservicebegin-Abfrage verwendet den svcid- \_ Hostnamen als Dienst Klassen-GUID.
+description: Die WSALookupServiceBegin-Abfrage verwendet SVCID \_ HOSTNAME als Dienstklassen-GUID.
 ms.assetid: 6f073e1a-2985-4e94-8174-94b1fcaf13d1
-title: GetHostName-Funktion in der SPI
+title: gethostname-Funktion in der SPI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b9aef10be48b264eb607184caf38bd687a5fe307
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b610016222ab8a06ed874377be9ae447ad1d194ab9605a6e07b3cf829f520093
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343297"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119132263"
 ---
-# <a name="gethostname-function-in-the-spi"></a>GetHostName-Funktion in der SPI
+# <a name="gethostname-function-in-the-spi"></a>gethostname-Funktion in der SPI
 
-Die [**wsalookupservicebegin**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicebegina) -Abfrage verwendet den svcid- \_ Hostnamen als Dienst Klassen-GUID. , Wenn *lpszserviceingestancename* NULL ist oder auf eine NULL-Zeichenfolge verweist (d. h.. ""), muss der lokale Host aufgelöst werden. Andernfalls sollte eine Suche nach einem angegebenen Hostnamen erfolgen. Im Rahmen der emueration von [**GetHostName**](/windows/desktop/api/winsock/nf-winsock-gethostname) gibt Ws2 \_32.dll einen NULL-Zeiger für *lpszserviceinstancename* an und \_ gibt den \_ luprückgabenamen an, sodass der Hostname im *lpszserviceinstancename* -Parameter zurückgegeben wird. Wenn eine Anwendung diese Abfrage verwendet und eine "Lup \_ Return addr" angibt, \_ wird die Host Adresse in einer **csaddr- \_ Informations** Struktur bereitgestellt. Die PPS- \_ Rückgabe- \_ BLOB-Aktion ist für diese Abfrage nicht definiert. Die Port Informationen werden standardmäßig auf 0 (null) festgelegt, es sei denn, die *lpszquerystring* verweist auf einen Dienst wie FTP. in diesem Fall wird die gesamte Transport Adresse des angegebenen Dienstanbieter bereitgestellt.
+Die [**WSALookupServiceBegin-Abfrage**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicebegina) verwendet SVCID \_ HOSTNAME als Dienstklassen-GUID. Wenn *lpszServiceInstanceName* NULL ist oder auf eine NULL-Zeichenfolge verweist (d. h. . ""), der lokale Host aufgelöst werden soll. Andernfalls muss eine Suche nach einem angegebenen Hostnamen erfolgen. Zum Emulieren von [**gethostname**](/windows/desktop/api/winsock/nf-winsock-gethostname) gibt der Ws2-32.dll \_ einen NULL-Zeiger für *lpszServiceInstanceName* und LUP \_ RETURN NAME \_ an, sodass der Hostname im *lpszServiceInstanceName-Parameter* zurückgegeben wird. Wenn eine Anwendung diese Abfrage verwendet und LUP \_ RETURN \_ ADDR angibt, wird die Hostadresse in einer **CSADDR \_ INFO-Struktur** bereitgestellt. Die LUP \_ RETURN \_ BLOB-Aktion ist für diese Abfrage nicht definiert. Portinformationen werden standardmäßig auf 0 festgelegt, es sei denn, *lpszQueryString* verweist auf einen Dienst wie ftp. In diesem Fall wird die vollständige Transportadresse des angegebenen Diensts angegeben.
 
  
 

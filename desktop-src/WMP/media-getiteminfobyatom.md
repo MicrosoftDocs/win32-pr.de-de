@@ -1,11 +1,11 @@
 ---
-title: Media. getiteminfobyatom-Methode
-description: Die getiteminfobyatom-Methode ruft den Wert des Attributs mit der angegebenen Indexnummer ab.
+title: Media.getItemInfoByAtom-Methode
+description: Die getItemInfoByAtom-Methode ruft den Wert des Attributs mit der angegebenen Indexnummer ab.
 ms.assetid: 6e2dea0c-c722-4737-9e8e-f5cb74156cea
 keywords:
-- getiteminfobyatom-Methode, Windows Media Player
-- getiteminfobyatom-Methode, Windows Media Player, Medienklasse
-- Medienklasse, Windows Media Player, getiteminfobyatom-Methode
+- getItemInfoByAtom-Methode Windows Media Player
+- getItemInfoByAtom-Methode Windows Media Player , Media-Klasse
+- Medienklasse Windows Media Player , getItemInfoByAtom-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cf54d2ae177a65e1a71b5726090bba90f4ee4e5e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 26db8e87a52c0d8c8236b5e4b8b5e7325fb3bb0a995dcbd81da668ea760df660
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372462"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135133"
 ---
-# <a name="mediagetiteminfobyatom-method"></a>Media. getiteminfobyatom-Methode
+# <a name="mediagetiteminfobyatom-method"></a>Media.getItemInfoByAtom-Methode
 
-Die **getiteminfobyatom** -Methode ruft den Wert des Attributs mit der angegebenen Indexnummer ab.
+Die **getItemInfoByAtom-Methode** ruft den Wert des Attributs mit der angegebenen Indexnummer ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,28 +42,28 @@ strRetVal = Media.getItemInfoByAtom(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-**Number** (**Long**), der den Index angibt, an dem sich ein bestimmtes Attribut innerhalb des Satzes verfügbarer Attribute befindet.
+**Number** (**long**), die den Index angibt, an dem sich ein bestimmtes Attribut innerhalb des Satzes verfügbarer Attribute befindet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zeichenfolge** zurück, die den Wert des angegebenen Attributs darstellt. Bei Attributen, deren zugrunde liegender Wert **boolescher** Wert ist, wird die Zeichenfolge "true" oder "false" zurückgegeben.
+Diese Methode gibt eine **Zeichenfolge** zurück, die den Wert des angegebenen Attributs darstellt. Für Attribute, deren zugrunde liegender Wert **boolesch** ist, wird die Zeichenfolge "true" oder "false" zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kann verwendet werden, um Metadaten für ein bestimmtes digitales Medien Element mithilfe einer Attribut Indexnummer abzurufen. Die **AttributeCount** -Eigenschaft kann verwendet werden, um die Anzahl der für das Medien Element verfügbaren Attribute zu bestimmen.
+Diese Methode kann verwendet werden, um Metadaten für ein bestimmtes digitales Medienelement mithilfe einer Attributindexnummer abzurufen. Die **attributeCount-Eigenschaft** kann verwendet werden, um die Anzahl der für das Medienelement verfügbaren Attribute zu bestimmen.
 
-Die **getmediaatom** -Methode des **mediacollection** -Objekts kann auch verwendet werden, um den Index eines bestimmten Attributs abzurufen. Diese Technik ist im Allgemeinen effizienter als die **getiteminfo** -Methode oder die **getItemInfoByType** -Methode bei der Arbeit mit großen Wiedergabelisten.
+Die **getMediaAtom-Methode** des **MediaCollection-Objekts** kann auch verwendet werden, um den Index eines bestimmten Attributs abzurufen. Diese Technik ist im Allgemeinen effizienter als die **getItemInfo-** oder **getItemInfoByType-Methoden** bei der Arbeit mit großen Wiedergabelisten.
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Referenz](attribute-reference.md)zu Windows Media Player-Attributen.
+Informationen zu den attributen, die von Windows Media Player unterstützt werden, finden Sie unter Windows Media Player [Attributverweis.](attribute-reference.md)
 
-**Windows Media Player 10 Mobile:** Attribute für ein Medien Element sind nur während der Wiedergabe verfügbar, es sei denn, Sie werden über die Medien Auflistung aus dem Element abgerufen.
+**Windows Media Player 10 Mobile:** Attribute für ein Medienelement sind nur während der Wiedergabe verfügbar, es sei denn, sie werden über die Medienauflistung aus dem Element abgerufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,40 +71,40 @@ Informationen zu den Attributen, die von Windows Media Player unterstützt werde
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Medienobjekt**](media-object.md)
 </dt> <dt>
 
-[**Media. AttributeCount**](media-attributecount.md)
+[**Media.attributeCount**](media-attributecount.md)
 </dt> <dt>
 
-[**Media. getiteminfo**](media-getiteminfo.md)
+[**Media.getItemInfo**](media-getiteminfo.md)
 </dt> <dt>
 
-[**Media. getItemInfoByType**](media-getiteminfobytype.md)
+[**Media.getItemInfoByType**](media-getiteminfobytype.md)
 </dt> <dt>
 
-[**"Media. mentiteminfo"**](media-setiteminfo.md)
+[**Media.setItemInfo**](media-setiteminfo.md)
 </dt> <dt>
 
-[**Mediacollection. getmediaatom**](mediacollection-getmediaatom.md)
+[**MediaCollection.getMediaAtom**](mediacollection-getmediaatom.md)
 </dt> <dt>
 
 [**Lesen von Attributwerten**](reading-attribute-values.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

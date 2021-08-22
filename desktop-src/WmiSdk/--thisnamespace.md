@@ -1,5 +1,5 @@
 ---
-description: Enthält die Sicherheitsrechte für den Namespace in Form einer Sicherheits Beschreibung.
+description: Enthält die Sicherheitsrechte für den Namespace in Form eines Sicherheitsdeskriptors.
 ms.assetid: 84e514f5-b114-4bfc-ab0b-9745f249168b
 ms.tgt_platform: multiple
 title: __thisNAMESPACE-Klasse
@@ -15,18 +15,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 440ccdf0eda794b5d648cae756f9a9c808eb2db6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 02e92bd8cb1c1827af86d23320e7347baa08c395d32def8c9b8adea2fcfd35bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368967"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119132023"
 ---
-# <a name="__thisnamespace-class"></a>\_\_thisNamespace-Klasse
+# <a name="__thisnamespace-class"></a>\_\_thisNAMESPACE-Klasse
 
-Die **\_ \_ thisNamespace** -System Klasse enthält die Sicherheitsrechte für den-Namespace in Form einer Sicherheits Beschreibung. Diese Klasse und eine einzelne Instanz befinden sich in allen Namespaces.
+Die **\_ \_ ThisNAMESPACE-Systemklasse** enthält die Sicherheitsrechte für den Namespace in Form eines Sicherheitsdeskriptors. Diese Klasse und eine einzelne Instanz befinden sich in allen Namespaces.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,32 +40,32 @@ class __thisNAMESPACE : __SystemClass
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ thisNamespace** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ thisNAMESPACE-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ thisNamespace** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ thisNAMESPACE-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Sicherheits \_ Beschreibung**
+**\_SICHERHEITSDESKRIPTOR**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Sicherheits Deskriptor, der beschreibt, wer auf den Namespace zugreifen kann und wer in den Namespace lesen oder in diesen schreiben kann. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt. Weitere Informationen zum Format von Sicherheits Deskriptoren finden Sie unter [Sicherheits Deskriptoren](/windows/desktop/SecAuthZ/security-descriptors) im Abschnitt "Sicherheit" des Windows SDK.
+Sicherheitsdeskriptor, der beschreibt, wer auf den Namespace zugreifen kann und wer aus dem Namespace lesen oder in diesen schreiben kann. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md) Weitere Informationen zum Format von Sicherheitsdeskriptoren finden Sie unter [Sicherheitsdeskriptoren](/windows/desktop/SecAuthZ/security-descriptors) im Abschnitt Sicherheit des Windows SDK.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Singleton-Instanz von **\_ \_ thisNamespace** ist schreibgeschützt. Verwenden Sie die Methoden der [**\_ \_ SystemSecurity**](--systemsecurity.md) -Klasse, um die Einstellungen der sicherheitsbeschreibungenschaft zu ändern. Die **\_ \_ thisNamespace** -Klasse wird von [**\_ \_ System Class**](--systemclass.md)abgeleitet.
+Die Singletoninstanz **\_ \_ von thisNAMESPACE** ist schreibgeschützt. Verwenden Sie die Methoden der [**\_ \_ SystemSecurity-Klasse,**](--systemsecurity.md) um die Einstellungen der Sicherheitsbeschreibungseigenschaft zu ändern. Die **\_ \_ thisNAMESPACE-Klasse** wird von [**\_ \_ SystemClass ableiten.**](--systemclass.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,14 +79,14 @@ Die Singleton-Instanz von **\_ \_ thisNamespace** ist schreibgeschützt. Verwend
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_\_System Class**](/windows/desktop/WmiSdk/--systemclass)
+[**\_\_SystemClass**](/windows/desktop/WmiSdk/--systemclass)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

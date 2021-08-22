@@ -1,9 +1,9 @@
 ---
-title: Column. ColumnName
-description: Das ColumnName-Attribut gibt einen Spaltennamen im Wiedergabelisten-Steuerelement an oder ruft ihn ab.
+title: COLUMN.columnName
+description: Das columnName-Attribut gibt einen Spaltennamen im PLAYLIST-Steuerelement an oder ruft den Namen ab.
 ms.assetid: 1d127678-2223-4597-84f4-66a1eaa55eba
 keywords:
-- Column. ColumnName Windows Media Player
+- COLUMN.columnName Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 54f10b4ef9e42da7bf6d921bf706fa5c6e219c70
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ed410678d9c810709ec1489990b9184b707d671f80d0bb9815250776fc78b5d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135773"
 ---
-# <a name="columncolumnname"></a>Column. ColumnName
+# <a name="columncolumnname"></a>COLUMN.columnName
 
-Das **ColumnName** -Attribut gibt einen Spaltennamen im **Wiedergabe** Listen-Steuerelement an oder ruft ihn ab.
+Das **columnName-Attribut** gibt einen Spaltennamen im PLAYLIST-Steuerelement an oder **ruft den Namen** ab.
 
 ``` syntax
         elementID.columnName
@@ -29,11 +29,11 @@ Das **ColumnName** -Attribut gibt einen Spaltennamen im **Wiedergabe** Listen-St
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Spaltenname ist der Anzeige Name, der im Header der Spalte angezeigt wird.
+Der Spaltenname ist der Angezeigte, der in der Kopfzeile der Spalte angezeigt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,11 +45,11 @@ Der Spaltenname ist der Anzeige Name, der im Header der Spalte angezeigt wird.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Column-Element**](column-element.md)
+[**COLUMN-Element**](column-element.md)
 </dt> </dl>
 
  

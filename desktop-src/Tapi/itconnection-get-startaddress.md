@@ -1,21 +1,21 @@
 ---
-description: Die get \_ STARTADDRESS-Methode ruft die erste Adresse ab, die für die Sitzung verwendet werden soll.
+description: Die \_ Get StartAddress-Methode ruft die erste Adresse ab, die für die Sitzung verwendet werden soll.
 ms.assetid: 3c4fec19-1b7d-4052-afd8-7aaf095907d0
-title: 'Itconnection:: get_StartAddress-Methode (sdpblb. h)'
+title: ITConnection::get_StartAddress-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 84266d1874e7d04acb594bcfb9d99b440b0390b2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f0c21f704d734c1d0cdccd7f796898e3770cfab19e0f3ab7ee728e86810b2a2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119140353"
 ---
-# <a name="itconnectionget_startaddress-method"></a>Itconnection:: get \_ STARTADDRESS-Methode
+# <a name="itconnectionget_startaddress-method"></a>ITConnection::get \_ StartAddress-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **get \_ STARTADDRESS** -Methode ruft die erste Adresse ab, die für die Sitzung verwendet werden soll.
+Die **\_ Get StartAddress-Methode** ruft die erste Adresse ab, die für die Sitzung verwendet werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT get_StartAddress(
 
 <dl> <dt>
 
-*ppstartaddress* \[ vorgenommen\]
+*ppStartAddress* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen **BSTR** -Wert, der die Anfangsadresse für die Sitzung enthält.
+Zeiger auf einen **BSTR,** der die Startadresse für die Sitzung enthält.
 
 </dd> </dl>
 
@@ -48,18 +48,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                       |
 |-----------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                      |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *ppstartaddress* -Parameter ist kein gültiger Zeiger.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/>   |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                     |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                    |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Der *ppStartAddress-Parameter* ist kein gültiger Zeiger.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/>   |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                     |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung muss [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) verwenden, um den für den *ppstartaddress* -Parameter zugewiesenen Arbeitsspeicher freizugeben.
+Die Anwendung muss [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) verwenden, um den für den *ppStartAddress-Parameter* belegten Arbeitsspeicher freizugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,18 +67,18 @@ Die Anwendung muss [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sys
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itconnection**](itconnection.md)
+[**ITConnection**](itconnection.md)
 </dt> </dl>
 
  

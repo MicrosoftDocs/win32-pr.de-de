@@ -4,16 +4,16 @@ ms.assetid: b1ad0f13-fb4d-421f-b054-a99c8ad9c83a
 title: 'C-Beispielprogramm: Verwenden von CryptEncryptMessage und CryptDecryptMessage'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b776ea1e0286717da94ed1b92caccfc19652e70
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 6ab2398b24e183d62844e716cc50247f38882b61421b55f661741890bb937dc3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112410033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119140788"
 ---
 # <a name="example-c-program-using-cryptencryptmessage-and-cryptdecryptmessage"></a>C-Beispielprogramm: Verwenden von CryptEncryptMessage und CryptDecryptMessage
 
-[**CryptEncryptMessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptencryptmessage) ist der einzige Funktionsaufruf, der erforderlich ist, um alle Unter [Verschlüsseln einer Nachricht aufgeführten Aufgaben auszuführen.](../secauthn/encrypting-a-message.md) Die Initialisierung von Datenstrukturen ist erforderlich. Die folgende Abbildung zeigt die Beziehung zwischen diesen Funktionsparametern, die auf Strukturen oder Arrays verweisen, und ihren initialisierten Daten. In diesem Beispiel wird die Nachricht auch mithilfe von [**CryptDecryptMessage entschlüsselt.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdecryptmessage)
+[**CryptEncryptMessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptencryptmessage) ist der einzige Funktionsaufruf, der erforderlich ist, um alle aufgaben auszuführen, die unter [Verschlüsseln einer Nachricht aufgeführt sind.](../secauthn/encrypting-a-message.md) Die Initialisierung von Datenstrukturen ist erforderlich. Die folgende Abbildung zeigt die Beziehung zwischen diesen Funktionsparametern, die auf Strukturen oder Arrays verweisen, und ihren initialisierten Daten. In diesem Beispiel wird die Nachricht auch mithilfe von [**CryptDecryptMessage entschlüsselt.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdecryptmessage)
 
 ![Initialisierungszuordnung für einen Aufruf von cryptencryptmessage](images/crypenc.png)
 

@@ -6,16 +6,16 @@ keywords:
 - mciSendString-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d1db4cb4b3d02a93adecc82d6ce95de436fb2e7
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 4efeb5801c46d89686ed3fe9fcf25b311d57d4d553c220902907ac0e70a5b7e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948612"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144793"
 ---
 # <a name="converting-strings"></a>Konvertieren von Zeichenfolgen
 
-Wenn Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion verwenden, sind alle mit dem-Befehl übergebenen Werte und alle Rückgabewerte Text Zeichenfolgen, sodass die Anwendung Konvertierungs Routinen benötigt, um von Variablen in Zeichen folgen oder wieder zurück zu übersetzen. Im folgenden Beispiel wird das Quell Rechteck abgerufen und die zurückgegebene Zeichenfolge in Rechteck Koordinaten konvertiert.
+Wenn Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) verwenden, sind alle mit dem Befehl übergebenen Werte und alle Rückgabewerte Textzeichenfolgen, sodass Ihre Anwendung Konvertierungsroutinen benötigt, um aus Variablen in Zeichenfolgen oder wieder zurück zu übersetzen. Im folgenden Beispiel wird das Quellrechteck abgerufen und die zurückgegebene Zeichenfolge in Rechteckkoordinaten konvertiert.
 
 
 ```C++
@@ -85,10 +85,10 @@ BOOL GetSourceRect(LPTSTR lpstrAlias, LPRECT lprc)
 
 
 > [!Note]  
-> **Rect** -Strukturen werden in MCI anders behandelt als in anderen Teilen von Windows. in MCI enthält das **Rechte** Element die Breite des Rechtecks, und der **untere** Member enthält seine Höhe. In der Zeichen folgen Schnittstelle wird ein Rechteck als *x1*, *Y1*, *x2* und *Y2* angegeben. Die Koordinaten *x1* und *Y1* geben die linke obere Ecke des Rechtecks an, und die Koordinaten *x2* und *Y2* geben die Breite und Höhe an.
+> **RECT-Strukturen** werden in MCI anders behandelt als in anderen Teilen von Windows. in MCI enthält das **rechte** Element die Breite des Rechtecks, und das **untere** Element enthält seine Höhe. In der Zeichenfolgenschnittstelle wird ein Rechteck als *X1,* *Y1,* *X2* und *Y2* angegeben. Die Koordinaten *X1* und *Y1* geben die obere linke Ecke des Rechtecks an, und die Koordinaten *X2* und *Y2* geben die Breite und Höhe an.
 
- 
+ 
 
- 
+ 
 
- 
+ 

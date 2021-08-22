@@ -1,22 +1,22 @@
 ---
-title: Objekt-sid (WinNT-Anbieter)
-description: Die Benutzer Sicherheits-ID (SID) kann mithilfe des Attributs "objectSID" abgerufen werden. Die objectSID wird als ein Variant-Array von Zeichen zurückgegeben, die die SID-Zeichenfolge bilden.
+title: Objekt-SID (WinNT-Anbieter)
+description: Die Benutzersicherheits-ID (SID) kann mithilfe des objectSID-Attributs abgerufen werden. Die objectSID wird als VARIANT-Array von Zeichen zurückgegeben, die die SID-Zeichenfolge bilden.
 ms.assetid: 15845e6d-ea30-4d6c-9f35-b2abc1a564ba
 ms.tgt_platform: multiple
 keywords:
-- WinNT-Anbieter ADSI, Beispiele für die Benutzerverwaltung, Objekt-sid
+- WinNT-Anbieter ADSI , Benutzerverwaltungsbeispiele, Objekt-SID
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d5d47e939770b9584a85e4e628c5c168901fc1f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 331d1214e97ec6c751171f77e625a40395283b14d941ac1bb0775ea0c9efe27a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036310"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119391820"
 ---
-# <a name="object-sid-winnt-provider"></a>Objekt-sid (WinNT-Anbieter)
+# <a name="object-sid-winnt-provider"></a>Objekt-SID (WinNT-Anbieter)
 
-Die Benutzer Sicherheits-ID (SID) kann mithilfe des Attributs " **objectSID** " abgerufen werden. Die **objectSID** wird als ein **Variant** -Array von Zeichen zurückgegeben, die die SID-Zeichenfolge bilden.
+Die Benutzersicherheits-ID (SID) kann mithilfe des **objectSID-Attributs abgerufen** werden. Die **objectSID wird** als **VARIANT-Array** von Zeichen zurückgegeben, die die SID-Zeichenfolge bilden.
 
 ## <a name="example-code"></a>Beispielcode
 
@@ -30,9 +30,9 @@ Next
 
 
 
- 
+ 
 
- 
+ 
 
 
 

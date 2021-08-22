@@ -1,61 +1,61 @@
 ---
-title: Verwenden des Windows Media Player-Steuer Elements in einer .NET Framework-Lösung
-description: Verwenden des Windows Media Player-Steuer Elements in einer .NET Framework-Lösung
+title: Verwenden des Windows Media Player-Steuerelements in einer .NET Framework Lösung
+description: Verwenden des Windows Media Player-Steuerelements in einer .NET Framework Lösung
 ms.assetid: f1cc2ef0-a341-402f-bf7c-2ba07eea1f6a
 keywords:
-- Windows Media Player, Einbetten des ActiveX-Steuer Elements
-- Windows Media Player Objektmodell, Einbetten des ActiveX-Steuer Elements
-- Objektmodell, Einbetten des ActiveX-Steuer Elements
-- Windows Media Player Mobile, Einbetten des ActiveX-Steuer Elements
-- Windows Media Player ActiveX-Steuerelement, einbetten
-- Windows Media Player Mobile ActiveX-Steuerelement, einbetten
-- ActiveX-Steuerelement, einbetten
-- Windows Media Player,. NET-Framework
-- Windows Media Player-Objektmodell,. NET-Framework
-- Objektmodell,. NET-Framework
-- Windows Media Player Mobile,. NET-Framework
-- Windows Media Player ActiveX-Steuerelement,. NET-Framework
-- Windows Media Player Mobile ActiveX-Steuerelement,. NET-Framework
-- ActiveX-Steuerelement,. NET-Framework
-- .NET Framework zum Einbetten des ActiveX-Steuer Elements
-- Einbetten von. NET Framework-Lösungen
+- Windows Media Player,einbetten ActiveX Steuerelements
+- Windows Media Player-Objektmodell, Einbetten ActiveX Steuerelement
+- Objektmodell,Einbetten ActiveX Steuerelement
+- Windows Media Player Mobil,einbetten ActiveX Steuerelement
+- Windows Media Player ActiveX,Einbetten
+- Windows Media Player Mobile ActiveX-Steuerelement,Einbetten
+- ActiveX,Einbetten
+- Windows Media Player,.NET Framework
+- Windows Media Player-Objektmodell,.NET Framework
+- Objektmodell,.NET Framework
+- Windows Media Player Mobil,.NET Framework
+- Windows Media Player ActiveX,.NET Framework
+- Windows Media Player Mobile ActiveX-Steuerelement,.NET Framework
+- ActiveX,.NET Framework
+- .NET Framework,Informationen zum Einbetten ActiveX Steuerelements
+- Einbetten, .NET Framework Lösungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: af0e6b09474c9340733cf45fb7c49a57100a1b11
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7b443bab0d48301062df502252a70538dd04457db87ccd31430cbcea09418639
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134313"
 ---
-# <a name="using-the-windows-media-player-control-in-a-net-framework-solution"></a>Verwenden des Windows Media Player-Steuer Elements in einer .NET Framework-Lösung
+# <a name="using-the-windows-media-player-control-in-a-net-framework-solution"></a>Verwenden des Windows Media Player-Steuerelements in einer .NET Framework Lösung
 
-Das ActiveX-Steuerelement Windows Media Player 9 oder höher unterstützt das Einbetten in .NET Framework Anwendungen. Die folgenden Abschnitte enthalten Informationen, die für die Verwendung des Windows Media Player-Steuer Elements mit dem .NET Framework spezifisch sind.
+Das Windows Media Player der 9er-Serie ActiveX unterstützt das Einbetten in .NET Framework Anwendungen. Die folgenden Abschnitte enthalten Spezifische Informationen zur Verwendung des Windows Media Player-Steuerelements mit .NET Framework.
 
 
 
 | `Section`                                                                                                                                                      | BESCHREIBUNG                                                                                                                  |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| [Verwenden des Windows Media Player-Steuer Elements mit Microsoft Visual Studio](using-the-windows-media-player-control-with-microsoft-visual-studio.md)               | Bietet ausführliche Informationen zum Hinzufügen des Steuer Elements Windows Media Player 9 oder höher zu einer Visual Studio-Projekt Mappe.                |
-| [Einbetten des Windows Media Player-Steuer Elements in eine c#-Lösung](embedding-the-windows-media-player-control-in-a-c--solution.md)                              | Enthält Anweisungen zum Erstellen einer einfachen c#-Anwendung, die das Windows Media Player-Steuerelement verwendet.                      |
-| [Einbetten des Windows Media Player-Steuer Elements in eine Visual Basic .net-Lösung](embedding-the-windows-media-player-control-in-a-visual-basic--net-solution.md) | Enthält Anweisungen zum Erstellen einer einfachen Visual Basic .NET-Anwendung, die das Windows Media Player-Steuerelement verwendet.        |
-| [Programm gesteuertes Erstellen des Windows Media Player-Steuer Elements](creating-the-windows-media-player-control-programmatically.md)                                 | Beschreibt das Erstellen eines Windows Media Player-Steuer Elements in einer Anwendung ohne Verwendung der Visual Studio-Toolbox.            |
-| [Informationen zu .NET Framework-Datentypen](about--net-framework-data-types.md)                                                                                       | Stellt die Informationen bereit, die zum Übersetzen des Skript orientierten Objektmodell Verweises in .NET Framework Basis Datentypen erforderlich sind. |
+| [Verwenden des Windows Media Player-Steuerelements mit Microsoft Visual Studio](using-the-windows-media-player-control-with-microsoft-visual-studio.md)               | Enthält Details zum Hinzufügen des steuerelements Windows Media Player 9-Serie oder höher zu einer Visual Studio Lösung.                |
+| [Einbetten des Windows Media Player-Steuerelements in eine C#-Projektmappe](embedding-the-windows-media-player-control-in-a-c--solution.md)                              | Enthält Anweisungen zum Erstellen einer einfachen C#-Anwendung, die das Windows Media Player verwendet.                      |
+| [Einbetten des Windows Media Player-Steuerelements in eine Visual Basic .NET-Projektmappe](embedding-the-windows-media-player-control-in-a-visual-basic--net-solution.md) | Enthält Anweisungen zum Erstellen einer einfachen Visual Basic .NET-Anwendung, die das Windows Media Player verwendet.        |
+| [Programmgesteuertes Erstellen Windows Media Player-Steuerelements](creating-the-windows-media-player-control-programmatically.md)                                 | Beschreibt, wie sie ein Windows Media Player-Steuerelement in einer Anwendung erstellen, ohne die toolbox Visual Studio verwenden.            |
+| [Informationen .NET Framework Datentypen](about--net-framework-data-types.md)                                                                                       | Stellt die Informationen zur Verfügung, die zum Übersetzen des skriptorientierten Objektmodellverweises in .NET Framework Basisdatentypen erforderlich sind. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Player-Steuerelement Handbuch**](player-control-guide.md)
+[**Leitfaden zum Player-Steuerelement**](player-control-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

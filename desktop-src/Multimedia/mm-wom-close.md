@@ -1,9 +1,9 @@
 ---
-title: MM_WOM_CLOSE Meldung (MMSYSTEM. h)
-description: Die \_ Meldung mm WOM \_ Close wird an ein Fenster gesendet, wenn ein Waveform-Audioausgabegerät geschlossen wird. Das Geräte Handle ist nicht mehr gültig, nachdem diese Nachricht gesendet wurde.
+title: MM_WOM_CLOSE (Mmsystem.h)
+description: Die MM \_ WOM \_ CLOSE-Nachricht wird an ein Fenster gesendet, wenn ein Waveform-Audio-Ausgabegerät geschlossen wird. Das Gerätehandy ist nach dem Senden dieser Nachricht nicht mehr gültig.
 ms.assetid: 6505b688-88a1-43b2-ad4e-2f88e496430a
 keywords:
-- MM_WOM_CLOSE-Nachricht (Multimedia)
+- MM_WOM_CLOSE-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b9dccdae49efc107a513e047282922f3a6de73e8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e7624c85554fca997ce9542170e370711f8b3c3cefc22cf0e8d2fe9ea3e88687
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343070"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119065450"
 ---
-# <a name="mm_wom_close-message"></a>Meldung zum Schließen von mm \_ WOM \_
+# <a name="mm_wom_close-message"></a>MM \_ WOM \_ CLOSE-Meldung
 
-Die Meldung **mm \_ WOM \_ Close** wird an ein Fenster gesendet, wenn ein Waveform-Audioausgabegerät geschlossen wird. Das Geräte Handle ist nicht mehr gültig, nachdem diese Nachricht gesendet wurde.
+Die **MM \_ WOM \_ CLOSE-Nachricht** wird an ein Fenster gesendet, wenn ein Waveform-Audio-Ausgabegerät geschlossen wird. Das Gerätehandy ist nach dem Senden dieser Nachricht nicht mehr gültig.
 
 
 ```C++
@@ -38,17 +38,17 @@ lParam = reserved
 
 <dl> <dt>
 
-<span id="hOutputDev"></span><span id="houtputdev"></span><span id="HOUTPUTDEV"></span>*houtputdev*
+<span id="hOutputDev"></span><span id="houtputdev"></span><span id="HOUTPUTDEV"></span>*hOutputDev*
 </dt> <dd>
 
-Handle für das Gerät, das geschlossen wurde.
+Handle für das gerät, das geschlossen wurde.
 
 </dd> <dt>
 
-<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*LParam*
+<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*Lparam*
 </dt> <dd>
 
-Bleiben muss 0 (null) sein.
+Reserviert; muss 0 (null) sein.
 
 </dd> </dl>
 
@@ -64,18 +64,18 @@ Diese Meldung gibt keinen Wert zurück.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Waveform-Audiodatei](waveform-audio.md)
+[Waveform-Audio](waveform-audio.md)
 </dt> <dt>
 
-[Wellenform Meldungen](waveform-messages.md)
+[Waveform-Nachrichten](waveform-messages.md)
 </dt> </dl>
 
  

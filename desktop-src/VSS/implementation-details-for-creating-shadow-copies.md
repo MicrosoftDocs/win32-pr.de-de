@@ -1,22 +1,22 @@
 ---
-description: 'In den folgenden Themen werden Implementierungsdetails zum Erstellen von Schatten Kopien bereitgestellt:'
+description: 'Die folgenden Themen enthalten Implementierungsdetails zum Erstellen von Schattenkopien:'
 ms.assetid: de5f1a5b-6e90-4abc-a232-aea93636772f
-title: Implementierungs Details zum Erstellen von Schatten Kopien
+title: Implementierungsdetails zum Erstellen von Schattenkopien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 96b7a0c547d9af39a580fa9a60a7257f331fe0a9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 87f2d80f53a0fa662ef177ba4b2dbd6c595214df7543fa4d6884a3f3014de13e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106367874"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136383"
 ---
-# <a name="implementation-details-for-creating-shadow-copies"></a>Implementierungs Details zum Erstellen von Schatten Kopien
+# <a name="implementation-details-for-creating-shadow-copies"></a>Implementierungsdetails zum Erstellen von Schattenkopien
 
-In den folgenden Themen werden Implementierungsdetails zum Erstellen von Schatten Kopien bereitgestellt:
+Die folgenden Themen enthalten Implementierungsdetails zum Erstellen von Schattenkopien:
 
--   [Einfache Erstellung von Schatten Kopien für die Sicherung](simple-shadow-copy-creation-for-backup.md)
--   [Details zur Erstellung von Schatten Kopien](shadow-copy-creation-details.md)
+-   [Einfache Erstellung von Schattenkopien für die Sicherung](simple-shadow-copy-creation-for-backup.md)
+-   [Details zur Erstellung von Schattenkopien](shadow-copy-creation-details.md)
 -   [Auswählen von Anbietern](selecting-providers.md)
 
  

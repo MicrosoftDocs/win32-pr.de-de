@@ -1,47 +1,47 @@
 ---
 title: Strukturen (COM)
 ms.assetid: 07f65855-f529-4d57-81fe-150167a03901
-description: 'Weitere Informationen zu: Strukturen (com)'
+description: 'Weitere Informationen zu: Strukturen (COM)'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb4926110161f103e3cdac9f55c17945e58d03fa
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 638d1f4421a5fe70ec8a4ab1fd499f9a6f3c4f7d2883b5e7638edf4687bca8e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119129652"
 ---
 # <a name="structures-com"></a>Strukturen (COM)
 
-Die folgenden Strukturen werden von com bereitgestellt:
+Die folgenden Strukturen werden von COM bereitgestellt:
 
--   [**actrl- \_ Zugriff**](/windows/win32/api/accctrl/ns-accctrl-actrl_accessa)
--   [**actrl- \_ Zugriffs \_ Eintrag**](/windows/desktop/api/AccCtrl/ns-accctrl-actrl_access_entrya)
--   [**Zugriffsliste für actrl- \_ Zugriff \_ \_**](/windows/desktop/api/AccCtrl/ns-accctrl-actrl_access_entry_lista)
--   [**actrl- \_ Eigenschaften \_ Eintrag**](/windows/desktop/api/AccCtrl/ns-accctrl-actrl_property_entrya)
--   [**Binden von \_ OPTS**](/windows/win32/api/objidl/ns-objidl-bind_opts)
--   [**Binden von \_ OPTS2**](/windows/win32/api/objidl/ns-objidl-bind_opts2~r1)
--   [**Binden von \_ OPTS3**](/windows/win32/api/objidl/ns-objidl-bind_opts3~r1)
--   [**callframe- \_ marshalcontext**](/windows/win32/api/callobj/ns-callobj-callframe_marshalcontext)
--   [**Callframeinfo**](/windows/win32/api/callobj/ns-callobj-callframeinfo)
--   [**Callframeparaminfo**](/windows/win32/api/callobj/ns-callobj-callframeparaminfo)
+-   [**\_ACTRL-ZUGRIFF**](/windows/win32/api/accctrl/ns-accctrl-actrl_accessa)
+-   [**\_ACTRL-ZUGRIFFSEINTRAG \_**](/windows/desktop/api/AccCtrl/ns-accctrl-actrl_access_entrya)
+-   [**\_ \_ ACTRL-ZUGRIFFSEINTRAGSLISTE \_**](/windows/desktop/api/AccCtrl/ns-accctrl-actrl_access_entry_lista)
+-   [**\_ \_ ACTRL-EIGENSCHAFTSEINTRAG**](/windows/desktop/api/AccCtrl/ns-accctrl-actrl_property_entrya)
+-   [**BIND \_ OPTS**](/windows/win32/api/objidl/ns-objidl-bind_opts)
+-   [**BIND \_ OPTS2**](/windows/win32/api/objidl/ns-objidl-bind_opts2~r1)
+-   [**BIND \_ OPTS3**](/windows/win32/api/objidl/ns-objidl-bind_opts3~r1)
+-   [**CALLFRAME \_ MARSHALCONTEXT**](/windows/win32/api/callobj/ns-callobj-callframe_marshalcontext)
+-   [**CALLFRAMEINFO**](/windows/win32/api/callobj/ns-callobj-callframeinfo)
+-   [**CALLFRAMEPARAMINFO**](/windows/win32/api/callobj/ns-callobj-callframeparaminfo)
 -   [**CATEGORYINFO**](/windows/win32/api/comcat/ns-comcat-categoryinfo)
 -   [**COAUTHIDENTITY**](/windows/desktop/api/wtypesbase/ns-wtypesbase-coauthidentity)
--   [**Coauthinfo**](/windows/desktop/api/wtypesbase/ns-wtypesbase-coauthinfo)
--   [**CONNECTDATA**](/windows/win32/api/ocidl/ns-ocidl-connectdata)
+-   [**COAUTHINFO**](/windows/desktop/api/wtypesbase/ns-wtypesbase-coauthinfo)
+-   [**Connectdata**](/windows/win32/api/ocidl/ns-ocidl-connectdata)
 -   [**COSERVERINFO**](/windows/win32/api/objidlbase/ns-objidlbase-coserverinfo)
--   [**Csplatform**](/windows/win32/api/wtypes/ns-wtypes-csplatform)
--   [**Interfacetten Info**](/windows/win32/api/objidl/ns-objidl-interfaceinfo)
--   [**\_multiqi**](/windows/win32/api/objidlbase/ns-objidlbase-multi_qi)
--   [**ORPC \_ dbg \_ alle**](orpc-dbg-all.md)
--   [**ORPC \_ dbg- \_ Puffer**](orpc-dbg-all.md)
--   [**ORPC-init-Argumente \_ \_**](orpc-init-args.md)
--   [**QueryContext**](/windows/win32/api/wtypes/ns-wtypes-querycontext)
--   [**Rpcolemess Age**](/windows/win32/api/objidlbase/ns-objidlbase-rpcolemessage)
--   [**Informationen zur alleinigen \_ Authentifizierung \_**](/windows/win32/api/objidlbase/ns-objidlbase-sole_authentication_info)
--   [**einzige \_ Authentifizierungs \_ Liste**](/windows/win32/api/objidlbase/ns-objidlbase-sole_authentication_list)
--   [**einziger \_ Authentifizierungs \_ Dienst**](/windows/win32/api/objidlbase/ns-objidlbase-sole_authentication_service)
--   [**Soletlsdata**](/previous-versions/windows/desktop/legacy/ms690269(v=vs.85))
+-   [**CSPLATFORM**](/windows/win32/api/wtypes/ns-wtypes-csplatform)
+-   [**INTERFACEINFO**](/windows/win32/api/objidl/ns-objidl-interfaceinfo)
+-   [**\_MULTI-QI**](/windows/win32/api/objidlbase/ns-objidlbase-multi_qi)
+-   [**ORPC \_ DBG \_ ALL**](orpc-dbg-all.md)
+-   [**\_ORPC-DBG-PUFFER \_**](orpc-dbg-all.md)
+-   [**ORPC \_ INIT \_ ARGS**](orpc-init-args.md)
+-   [**Querycontext**](/windows/win32/api/wtypes/ns-wtypes-querycontext)
+-   [**RPCOLEMESSAGE**](/windows/win32/api/objidlbase/ns-objidlbase-rpcolemessage)
+-   [**EINZIGE \_ \_ AUTHENTIFIZIERUNGSINFORMATIONEN**](/windows/win32/api/objidlbase/ns-objidlbase-sole_authentication_info)
+-   [**LISTE DER EINZIGEN \_ \_ AUTHENTIFIZIERUNGEN**](/windows/win32/api/objidlbase/ns-objidlbase-sole_authentication_list)
+-   [**EINZIGER \_ \_ AUTHENTIFIZIERUNGSDIENST**](/windows/win32/api/objidlbase/ns-objidlbase-sole_authentication_service)
+-   [**SOleTlsData**](/previous-versions/windows/desktop/legacy/ms690269(v=vs.85))
 
  
 

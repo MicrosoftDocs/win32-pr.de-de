@@ -1,9 +1,9 @@
 ---
-title: gledgeflagpointer-Funktion (GL. h)
-description: Die Funktion gledgeflagpointer definiert ein Array von Edge-Flags.
+title: glEdgeFlagPointer-Funktion (Gl.h)
+description: Die glEdgeFlagPointer-Funktion definiert ein Array von Edgeflags.
 ms.assetid: e0e7e442-533d-4c41-addd-a215ce0b1c56
 keywords:
-- gledgeflagpointer-Funktion OpenGL
+- glEdgeFlagPointer-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4390a9838fef418763aa4bcafbf815ab0cdf3466
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fa648a15542a3f3f2f35f577760991da74bc978c0464c1373c8eddea38941a62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061638"
 ---
-# <a name="gledgeflagpointer-function"></a>gledgeflagpointer-Funktion
+# <a name="gledgeflagpointer-function"></a>glEdgeFlagPointer-Funktion
 
-Die Funktion **gledgeflagpointer** definiert ein Array von Edge-Flags.
+Die **glEdgeFlagPointer-Funktion** definiert ein Array von Edgeflags.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ void WINAPI glEdgeFlagPointer(
 *Schritt* 
 </dt> <dd>
 
-Der Byte Offset zwischen aufeinander folgenden Edge-Flags. Wenn *Stride* 0 (null) ist, werden die Edge-Flags im Array eng verpackt.
+Der Byteoffset zwischen aufeinander folgenden Edgeflags. Wenn *stride* 0 (null) ist, werden die Edgeflags eng in das Array gepackt.
 
 </dd> <dt>
 
 *Zeiger* 
 </dt> <dd>
 
-Ein Zeiger auf das erste Edge-Flag im Array.
+Ein Zeiger auf das erste Edgeflag im Array.
 
 </dd> </dl>
 
@@ -61,39 +61,39 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                             | Bedeutung                                      |
 |--------------------------------------------------------------------------------------------------|----------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl> | " *Stride* " oder " *count* " war negativ.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl> | *stride* oder *count* war negativ.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion **gledgeflagpointer** gibt den Speicherort und die Daten eines Arrays von booleschen Edge-Flags an, die beim Rendern verwendet werden sollen. Der *Stride* -Parameter bestimmt den Byte Offset von einem edgeflag zum nächsten, das das Packen von Vertices und Attributen in einem einzelnen Array oder Speicher in separaten Arrays ermöglicht. In einigen Implementierungen können das Speichern der Scheitel Punkte und Attribute in einem einzelnen Array effizienter als die Verwendung von separaten Arrays sein.
+Die **glEdgeFlagPointer-Funktion** gibt den Speicherort und die Daten eines Arrays von booleschen Edgeflags an, die beim Rendering verwendet werden. Der *stride-Parameter* bestimmt den Byteoffset von einem Edgeflag zum nächsten, wodurch das Packen von Scheitelzeichen und Attributen in einem einzelnen Array oder Speicher in separaten Arrays ermöglicht wird. In einigen Implementierungen kann das Speichern der Scheitelungen und Attribute in einem einzelnen Array effizienter sein als die Verwendung separater Arrays.
 
-Ein Edge-Flag-Array wird aktiviert, wenn Sie die GL- \_ Edge- \_ Flag- \_ Array Konstante mit [**glenableclientstate**](glenableclientstate.md)angeben. Wenn diese Option aktiviert ist, verwendet [**gldrawarrays**](gldrawarrays.md) oder [**glarrayelement**](glarrayelement.md) das Edge-Flag-Array. Standardmäßig ist das Edge-Flag-Array deaktiviert.
+Ein Edgeflagarray wird aktiviert, wenn Sie die GL \_ EDGE FLAG ARRAY-Konstante mit \_ \_ [**glEnableClientState angeben.**](glenableclientstate.md) Bei Aktivierung verwendet [**glDrawArrays**](gldrawarrays.md) oder [**glArrayElement**](glarrayelement.md) das Edgeflagarray. Standardmäßig ist das Edgeflagarray deaktiviert.
 
-Verwenden Sie **gldrawarrays** , um eine Sequenz von primitiven (alle desselben Typs) aus den vorspezifizierten Vertex-und Vertex-Attribut Arrays zu erstellen. Verwenden Sie " **glarrayelement** ", um primitive durch Indizierung von Vertices und Scheitelpunkt Attributen anzugeben, und [**gldrawelements**](gldrawelements.md) zum Erstellen einer Sequenz von primitiven durch Indizierung von Vertices und Vertex-Attributen.
+Verwenden **Sie glDrawArrays,** um eine Sequenz von Primitiven (alle desselben Typs) aus vorab angegebenen Vertex- und Vertexattributarrays zu erstellen. Verwenden **Sie glArrayElement,** um Primitive anzugeben, indem Sie Scheitelpunkte und Scheitelpunktattribute indizieren, und [**glDrawElements,**](gldrawelements.md) um eine Sequenz von Primitiven zu erstellen, indem Scheitelpunkte und Scheitelpunktattribute indiziert werden.
 
-Sie können **gledgeflagpointer** nicht in Anzeigelisten einschließen.
+**GlEdgeFlagPointer kann nicht in Anzeigelisten** enthalten sein.
 
-Wenn Sie ein Edge-Flag-Array mit **gledgeflagpointer** angeben, werden die Werte aller Edge-Flag-Array Parameter der Funktion in einem Client seitigen Zustand gespeichert, und statische Array Elemente können zwischengespeichert werden. Da sich die Parameter des Edge-Flag-Arrays in einem Client seitigen Zustand [**befinden, speichern**](glpushattrib.md) oder Wiederherstellen [**Sie Ihre Werte nicht.**](glpopattrib.md)
+Wenn Sie ein Edgeflagarray mit **glEdgeFlagPointer** angeben, werden die Werte aller Edgeflag-Arrayparameter der Funktion in einem clientseitigen Zustand gespeichert, und statische Arrayelemente können zwischengespeichert werden. Da sich die Arrayparameter des Edgeflags in einem clientseitigen Zustand befinden, speichern und wiederherstellen [**glPushAttrib**](glpushattrib.md) und [**glPopAttrib**](glpopattrib.md) ihre Werte nicht.
 
-Obwohl das Aufrufen von **gledgeflagpointer** innerhalb eines [**glBegin**](glbegin.md)- / [**glEnd**](glend.md) -Paars keinen Fehler generiert, sind die Ergebnisse nicht definiert.
+Obwohl der **Aufruf von glEdgeFlagPointer** in einem [**glBegin-gekoppelten**](glbegin.md)Paar keinen Fehler generiert, sind die Ergebnisse / [](glend.md) nicht definiert.
 
-Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **gledgeflagpointer** -Funktion ab:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **glEdgeFlagPointer-Funktion** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Edge- \_ Flag \_ array \_ Stride
+[**glGet mit**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) argument GL \_ EDGE FLAG ARRAY \_ \_ \_ STRIDE
 
-**glget** mit dem Argument GL \_ Edge \_ Flag \_ array \_ count
+**glGet mit** argument GL \_ EDGE FLAG ARRAY \_ \_ \_ COUNT
 
-[**glgetpointerv**](glgetpointerv.md) mit Argument GL \_ Edge- \_ Flag \_ array \_ Zeiger
+[**glGetPointerv mit**](glgetpointerv.md) Argument GL \_ EDGE FLAG ARRAY \_ \_ \_ POINTER
 
-[**glisenabled**](glisenabled.md) mit Argument GL \_ Edge- \_ Flag- \_ Array
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ EDGE FLAG \_ \_ ARRAY
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,62 +103,62 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **gledgefla
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glarrayelement**](glarrayelement.md)
+[**glArrayElement**](glarrayelement.md)
 </dt> <dt>
 
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glcolorpointer**](glcolorpointer.md)
+[**glColorPointer**](glcolorpointer.md)
 </dt> <dt>
 
-[**gldrawarrays**](gldrawarrays.md)
+[**glDrawArrays**](gldrawarrays.md)
 </dt> <dt>
 
-[**glenableclientstate**](glenableclientstate.md)
+[**glEnableClientState**](glenableclientstate.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glgetpointerv**](glgetpointerv.md)
+[**glGetPointerv**](glgetpointerv.md)
 </dt> <dt>
 
-[**glgetstring**](glgetstring.md)
+[**glGetString**](glgetstring.md)
 </dt> <dt>
 
-[**glindexpointer**](glindexpointer.md)
+[**glIndexPointer**](glindexpointer.md)
 </dt> <dt>
 
-[**glisenabled**](glisenabled.md)
+[**glIsEnabled**](glisenabled.md)
 </dt> <dt>
 
-[**glnormalpointer**](glnormalpointer.md)
+[**glNormalPointer**](glnormalpointer.md)
 </dt> <dt>
 
-[**glpopattenb**](glpopattrib.md)
+[**glPopAttrib**](glpopattrib.md)
 </dt> <dt>
 
-[**glpushatpub**](glpushattrib.md)
+[**glPushAttrib**](glpushattrib.md)
 </dt> <dt>
 
-[**gltexcoordpointer**](gltexcoordpointer.md)
+[**glTexCoordPointer**](gltexcoordpointer.md)
 </dt> <dt>
 
-[**glvertexpointer**](glvertexpointer.md)
+[**glVertexPointer**](glvertexpointer.md)
 </dt> </dl>
 
  

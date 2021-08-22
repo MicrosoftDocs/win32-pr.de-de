@@ -1,7 +1,7 @@
 ---
 description: Die Remove-Methode entfernt das Element an der angegebenen Position.
 ms.assetid: a7b8f6fb-f13a-4c24-aa18-463446602e29
-title: Cgenericlist. Remove-Methode (wxlist. h)
+title: CGenericList.Remove-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d5fc3d0cd76cd78c83fa210d8b91ba97b93b92f7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 40b00d0772f391978fa6e581623446c67c2f37deabb1737e2602d7da7382fbaf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358624"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119317760"
 ---
-# <a name="cgenericlistremove-method"></a>Cgenericlist. Remove-Methode
+# <a name="cgenericlistremove-method"></a>CGenericList.Remove-Methode
 
-Die- `Remove` Methode entfernt das Element an der angegebenen Position.
+Die `Remove` -Methode entfernt das Element an der angegebenen Position.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,19 +45,19 @@ OBJECT* Remove(
 *pos* 
 </dt> <dd>
 
-Positionswert, der das zu entfern gende Element angibt.
+POSITION-Wert, der das zu entfernende Element angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf ein Objekt vom Typ " **Object** " (der Vorlagentyp) zurück.
+Gibt einen Zeiger auf ein Objekt vom Typ **OBJECT** (vorlagentyp) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode löscht den Knoten aus der Liste, löscht jedoch nicht das Element, das in diesem Knoten enthalten ist.
+Diese Methode löscht den Knoten aus der Liste, aber nicht das in diesem Knoten enthaltene Element.
 
-Wenn *POS* **null** ist, gibt die Methode **null** zurück.
+Wenn *pos* **NULL** ist, gibt die Methode **NULL** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,16 +65,16 @@ Wenn *POS* **null** ist, gibt die Methode **null** zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cgenericlist-Klasse**](cgenericlist.md)
+[**CGenericList-Klasse**](cgenericlist.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die getdllversion-Funktion Ruft die Versionsnummer Cabinet.dll ab.
+description: Die GetDllVersion-Funktion ruft die Versionsnummer von Cabinet.dll ab.
 ms.assetid: b324d5cd-1ede-473e-a10f-249c95eda057
-title: Getdllversion-Funktion
+title: GetDllVersion-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Cabinet.dll
-ms.openlocfilehash: 1b1142bd2ece965a3f2fc58b6bb2f90586a8b391
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 14f2da8c6f8c786042c2abd5f41e02bdfab6f33d9b8aa42a5b5f90a6c4357103
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351264"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119390710"
 ---
-# <a name="getdllversion-function"></a>Getdllversion-Funktion
+# <a name="getdllversion-function"></a>GetDllVersion-Funktion
 
-\[Diese Funktion wird nicht mehr unterstützt, sodass Ihr Verhalten nicht garantiert werden kann. \]
+\[Diese Funktion wird nicht mehr unterstützt, sodass ihr Verhalten nicht garantiert werden kann. \]
 
-Die **getdllversion** -Funktion Ruft die Versionsnummer Cabinet.dll ab.
+Die **GetDllVersion-Funktion** ruft die Versionsnummer von Cabinet.dll ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,9 +43,9 @@ Diese Funktion besitzt keine Parameter.
 
 Die Versionsnummer der Datei (siehe [VERSIONINFO-Ressource](../menurc/versioninfo-resource.md)).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 <dl> <dt>
 
-[**Dllgetversion**](dllgetversion.md)
+[**DllGetVersion**](dllgetversion.md)
 </dt> </dl>
 
  

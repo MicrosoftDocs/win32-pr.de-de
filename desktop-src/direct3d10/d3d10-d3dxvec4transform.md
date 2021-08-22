@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVec4Transform-Funktion (D3DX10Math.h): Transformiert einen 4D-Vektor durch eine bestimmte Matrix.'
+description: 'D3DXVec4Transform-Funktion (D3DX10Math.h): Transformiert einen 4D-Vektor durch eine angegebene Matrix.'
 ms.assetid: ccbf33bc-1f94-4cf8-b048-220d54516e00
 title: D3DXVec4Transform-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 737e1901a514a3940790ce83c7e9bc1f6f471371
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a8dd14e196640b39b21acb680c642756a5d3ffa0d436897ffa95af930a83e0c7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108102918"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119128452"
 ---
 # <a name="d3dxvec4transform-function-d3dx10mathh"></a>D3DXVec4Transform-Funktion (D3DX10Math.h)
 
-Transformiert einen 4D-Vektor durch eine bestimmte Matrix.
+Transformiert einen 4D-Vektor durch eine angegebene Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -74,7 +74,7 @@ Typ: **[ **D3DXVECTOR4**](../direct3d9/d3dxvector4.md)\***
 
 Zeiger auf eine D3DXVECTOR4-Struktur, die der transformierte 4D-Vektor ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXVec4Transform-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -82,7 +82,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 

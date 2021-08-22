@@ -1,19 +1,19 @@
 ---
 title: DXCoreAdapterMemoryBudgetNodeSegmentGroup
-description: Beschreibt eine Speichersegment Gruppe für einen Adapter.
+description: Beschreibt eine Speichersegmentgruppe für einen Adapter.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 06/20/2019
-ms.openlocfilehash: c583b746b304232fc65c4281f67b0190b2d24c3c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b39557226034e9462e8d51c79aa9b8276659cfe296138df2a3a57f279106f5bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390460"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119118654"
 ---
-# <a name="dxcoreadaptermemorybudgetnodesegmentgroup-structure"></a>Dxcoreadaptermemorybudgetnoentsegmentgroup-Struktur
+# <a name="dxcoreadaptermemorybudgetnodesegmentgroup-structure"></a>DXCoreAdapterMemoryBudgetNodeSegmentGroup-Struktur
 
-Beschreibt eine Speichersegment Gruppe für einen Adapter.
+Beschreibt eine Speichersegmentgruppe für einen Adapter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,19 +27,19 @@ struct DXCoreAdapterMemoryBudgetNodeSegmentGroup
 
 ## <a name="members"></a>Member
 
-### <a name="nodeindex"></a>nodeindex
+### <a name="nodeindex"></a>nodeIndex
 
 Typ: **uint32_t**
 
-Gibt den physischen Adapter des Geräts an, für den die Adapter Speicherinformationen abgefragt werden. Legen Sie für den Einzel Adapter Vorgang den Wert auf 0 (null) fest. Wenn mehrere Adapter Knoten vorhanden sind, legen Sie diese auf den Index des Knotens (den physischen Adapter des Geräts) fest, für den Sie die Informationen zum Adapter Speicher Abfragen möchten (siehe [multiadaptersysteme](../../direct3d12/multi-engine.md)).
+Gibt den physischen Adapter des Geräts an, für den die Adapterspeicherinformationen abgefragt werden. Legen Sie für den Einzeladaptervorgang diesen Wert auf 0 (null) fest. Wenn mehrere Adapterknoten verfügbar sind, legen Sie diese auf den Index des Knotens (den physischen Adapter des Geräts) fest, für den Sie Adapterspeicherinformationen abfragen möchten (siehe Systeme mit mehreren [Adaptern).](../../direct3d12/multi-engine.md)
 
-### <a name="segmentgroup"></a>segmentgroup
+### <a name="segmentgroup"></a>segmentGroup
 
-Typ: **[dxcoresegmentgroup](./ne-dxcore_interface-dxcoresegmentgroup.md)**
+Typ: **[DXCoreSegmentGroup](./ne-dxcore_interface-dxcoresegmentgroup.md)**
 
-Gibt die Gruppe der Adapter Speichersegmente an, die Sie Abfragen möchten.
+Gibt die Adapterspeichersegment-Gruppierung an, die Sie abfragen möchten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [DXCore-Referenz](../dxcore-reference.md)
 

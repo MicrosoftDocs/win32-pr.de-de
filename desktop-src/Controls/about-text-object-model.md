@@ -1,45 +1,45 @@
 ---
-title: Informationen zum Text Objektmodell
-description: Dieses Thema enthält eine allgemeine Übersicht über das Tom.
+title: Informationen zum Textobjektmodell
+description: Dieses Thema bietet eine umfassende Übersicht über tom.
 ms.assetid: e304ec18-ec2e-4ea7-91c6-6f6ab63b72ae
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b934aab1cbd3dca932b58e4aa99498843cb8cc97
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 5ec5c2f4156e7afce8765626a475a9b922ec428826d90789752c86f51bd69513
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104039720"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119079448"
 ---
-# <a name="about-text-object-model"></a>Informationen zum Text Objektmodell
+# <a name="about-text-object-model"></a>Informationen zum Textobjektmodell
 
-Das Textobjekt Modell (Tom) definiert einen Satz von Text Bearbeitungs Schnittstellen, die von mehreren Microsoft-Textlösungen, einschließlich des Rich Edit-Steuer Elements, unterschiedlich unterstützt werden. Dieses Thema enthält eine allgemeine Übersicht über das Tom. In diesem Thema werden die folgenden Themen behandelt.
+Das Textobjektmodell (Text Object Model, TOM) definiert eine Reihe von Textbearbeitungsschnittstellen, die von mehreren Microsoft-Textlösungen in unterschiedlichem Grad unterstützt werden, einschließlich des Rich-Edit-Steuerelements. Dieses Thema bietet eine umfassende Übersicht über tom. Es werden die folgenden Themen erläutert.
 
--   [Tom-Version 2-Objekte](#tom-version-2-objects)
--   [Tom-Schnittstellen Konventionen](#tom-interface-conventions)
--   [Der tombool-Typ](#the-tombool-type)
--   [Mathematische Erstellung und Buildvorgang](#math-buildup-and-build-down)
--   [Tom RTF](#tom-rtf)
--   [Suchen von reichem Text](#finding-rich-text)
--   [Tom-Barrierefreiheit](#tom-accessibility)
-    -   [Schnittstelle aus der Ausführung der Objekttabelle](#interface-from-running-object-table)
-    -   [Schnittstelle von Fenster Meldungen](#interface-from-window-messages)
-    -   [Barrierefreiheits orientierte Methoden](#accessibility-oriented-methods)
--   [Zeichen Übereinstimmungs Sätze](#character-match-sets)
+-   [TOM-Objekte der Version 2](#tom-version-2-objects)
+-   [TOM-Schnittstellenkonventionen](#tom-interface-conventions)
+-   [Der tomBool-Typ](#the-tombool-type)
+-   [Mathematischer BuildUp und Build Down](#math-buildup-and-build-down)
+-   [TOM RTF](#tom-rtf)
+-   [Suchen von Rich Text](#finding-rich-text)
+-   [TOM-Barrierefreiheit](#tom-accessibility)
+    -   [Schnittstelle aus ausgeführter Objekttabelle](#interface-from-running-object-table)
+    -   [Schnittstelle aus Fenstermeldungen](#interface-from-window-messages)
+    -   [Barrierefreiheitsorientierte Methoden](#accessibility-oriented-methods)
+-   [Zeichen-Übereinstimmungssätze](#character-match-sets)
 
-## <a name="tom-version-2-objects"></a>Tom-Version 2-Objekte
+## <a name="tom-version-2-objects"></a>TOM-Objekte der Version 2
 
-Tom Version 2 (Tom 2) erweitert das ursprüngliche Textobjekt Modell. die neuen Schnittstellen werden von den alten abgeleitet. Die aktualisierte Tom-API umfasst Unterstützung für neue Zeichen-und Absatzformat Eigenschaften, ein Tabellen Modell, Mehrfachauswahl und Unterstützung von Inline Objekten für Math und Ruby.
+TOM Version 2 (TOM 2) erweitert das ursprüngliche Textobjektmodell. die neuen Schnittstellen werden von den alten abgeleitet. Die aktualisierte TOM-API bietet Unterstützung für neue Zeichen- und Absatzformateigenschaften, ein Tabellenmodell, Mehrfachauswahl und Inlineobjektunterstützung für Mathematik und Ruby.
 
-Das Tom 2-Objekt der obersten Ebene wird von der [**ITextDocument2**](/windows/desktop/api/Tom/nn-tom-itextdocument2) -Schnittstelle definiert, die über Methoden zum Erstellen und Abrufen von Objekten in der Objekthierarchie verfügt. Für die einfache Textverarbeitung können Sie ein [**ITextRange2**](/windows/desktop/api/Tom/nn-tom-itextrange2) -Objekt aus einem **ITextDocument2** -Objekt abrufen und die meisten Aufgaben mit diesem ausführen. Wenn Sie Rich-Text-Formatierung hinzufügen müssen, können Sie [**ITextFont2**](/windows/desktop/api/Tom/nn-tom-itextfont2) -und [**ITextPara2**](/windows/desktop/api/Tom/nn-tom-itextpara2) -Objekte von einem **ITextRange2** -Objekt abrufen. **ITextFont2** stellt das Programmier Äquivalent des Dialog Felds "Format-Schriftart" von Microsoft Word bereit, und **ITextPara2** stellt die Entsprechung des Dialog Felds "Word-Format-Absatz" bereit.
+Das TOM 2-Objekt der obersten Ebene wird von der [**ITextDocument2-Schnittstelle**](/windows/desktop/api/Tom/nn-tom-itextdocument2) definiert, die Methoden zum Erstellen und Abrufen von Objekten weiter unten in der Objekthierarchie enthält. Für die einfache Nur-Text-Verarbeitung können Sie ein [**ITextRange2-Objekt**](/windows/desktop/api/Tom/nn-tom-itextrange2) aus einem **ITextDocument2-Objekt** abrufen und damit die meisten Schritte unternehmen. Wenn Sie Rich-Text-Formatierung hinzufügen müssen, können Sie [**ITextFont2-**](/windows/desktop/api/Tom/nn-tom-itextfont2) und [**ITextPara2-Objekte**](/windows/desktop/api/Tom/nn-tom-itextpara2) aus einem **ITextRange2-Objekt** abrufen. **ITextFont2 stellt** die Programmierentsprechung des Dialogfelds Microsoft Word Formatschriftart und **ITextPara2** das Äquivalent zum Dialogfeld "Word-Format-Absatz" zur Verfügung.
 
-Zusätzlich zu diesen drei Objekten auf niedrigerer Ebene hat Tom 2 ein Selection-Objekt ([**ITextSelection2**](/windows/win32/api/tom/nn-tom-itextselection2)), bei dem es sich um ein [**ITextRange2**](/windows/desktop/api/Tom/nn-tom-itextrange2) -Objekt mit Auswahl Hervorhebung und einigen Benutzeroberflächen orientierten Methoden handelt.
+Zusätzlich zu diesen drei Objekten auf niedrigerer Ebene verfügt TOM 2 über ein Auswahlobjekt ([**ITextSelection2**](/windows/win32/api/tom/nn-tom-itextselection2)), bei dem es sich um ein [**ITextRange2-Objekt**](/windows/desktop/api/Tom/nn-tom-itextrange2) mit Auswahlhervorhebung und einigen uiorientierten Methoden handelt.
 
-Die Bereich-und Auswahl Objekte enthalten Bildschirm orientierte Methoden, mit denen Programme Text auf dem Bildschirm oder Text untersuchen können, der auf dem Bildschirm angezeigt werden kann. Diese Funktionen helfen dem Zugriff auf Text für Personen mit eingeschränkter Sehfähigkeit, z. b..
+Die Bereichs- und Auswahlobjekte enthalten bildschirmorientierte Methoden, mit denen Programme Text auf dem Bildschirm oder Text untersuchen können, der auf den Bildschirm gescrollt werden kann. Diese Funktionen helfen z.B., Personen mit sehbehinderter Sehbehinderung Text zugänglich zu machen.
 
-Jede Schnittstelle mit dem Suffix 2 erbt von der entsprechenden Schnittstelle ohne das Suffix 2. [**ITextDocument2**](/windows/desktop/api/Tom/nn-tom-itextdocument2) erbt z. b. von [**ITextDocument**](/windows/desktop/api/Tom/nn-tom-itextdocument).
+Jede Schnittstelle mit dem Suffix 2 erbt von der entsprechenden Schnittstelle ohne das Suffix 2. Beispielsweise erbt [**ITextDocument2**](/windows/desktop/api/Tom/nn-tom-itextdocument2) von [**ITextDocument**](/windows/desktop/api/Tom/nn-tom-itextdocument).
 
-Die Tom 2-Objekte haben die folgende Hierarchie.
+Die TOM 2-Objekte verfügen über die folgende Hierarchie.
 
 ``` syntax
 ITextDocument2         Top-level editing object
@@ -54,132 +54,132 @@ ITextDocument2         Top-level editing object
     ITextStoryRanges2  Enumerator for stories in document
 ```
 
-Ein [**ITextDocument2**](/windows/desktop/api/Tom/nn-tom-itextdocument2) -Objekt beschreibt einen oder mehrere zusammenhängende Textbereiche, die als *Stories* bezeichnet werden. Stories stellen verschiedene Teile eines Dokuments dar, z. b. den Haupttext des Dokuments, Kopf-und Fußzeilen, Fußnoten, Anmerkungen und Rich-Text-Ablage Pads. Bei der Übersetzung zwischen Inline formatierten mathematischen Ausdrücken und einem integrierten Formular wird ein Scratch-Pad verwendet. Beim Speichern des Inhalts eines Bereichs, bei dem es sich um die aktuelle Kopier Quelle handelt, wird auch eine Scratch-Pad-Story verwendet, wenn der Inhalt geändert wird.
+Ein [**ITextDocument2-Objekt**](/windows/desktop/api/Tom/nn-tom-itextdocument2) beschreibt einen oder mehrere zusammenhängende Textbereiche, die als Storys *bezeichnet werden.* Storys stellen verschiedene Teile eines Dokuments dar, z. B. den Haupttext des Dokuments, Kopf- und Fußzeilen, Fußnoten, Anmerkungen und Rich-Text-Scratchpads. Bei der Übersetzung zwischen linear formatierten mathematischen Ausdrücken und einer integrierten Form wird ein Scratchpad-Story verwendet. Ein Scratchpad-Story wird auch verwendet, wenn der Inhalt eines Bereichs, der die aktuelle Kopierquelle ist, beim Ändern des Inhalts speichern wird.
 
-Ein [**ITextRange2**](/windows/desktop/api/Tom/nn-tom-itextrange2) -Objekt wird durch seine Start-und End-Zeichen Positions Offsets und ein Story-Objekt definiert. Er ist nicht unabhängig von seinem übergeordneten Story-Objekt vorhanden, obwohl der Text in die Zwischenablage oder andere Ziele kopiert werden kann. Ein Text Bereichs Objekt unterscheidet sich von der Kalkulations Tabelle und anderen Bereichs Objekten, die durch andere Arten von Offsets definiert werden. beispielsweise Zeilen-/Spalten-oder Grafik Position (x, y). Ein Text Bereichs Objekt kann sich auf verschiedene Weise ändern, kann ein Duplikat von sich selbst zurückgeben, und es kann befohlen werden, seine Start-und Endzeichen Positionen und den Story-Zeiger auf die aktuelle Auswahl zu kopieren.
+Ein [**ITextRange2-Objekt**](/windows/desktop/api/Tom/nn-tom-itextrange2) wird durch seine Offsets für Start- und Endzeichenposition und ein Story-Objekt definiert. Sie ist nicht unabhängig vom übergeordneten Storyobjekt vorhanden, obwohl ihr Text in die Zwischenablage oder in andere Ziele kopiert werden kann. Ein Textbereichsobjekt ist anders als tabellen- und andere Bereichsobjekte, die durch andere Arten von Offsets definiert werden. Beispiel: Zeile/Spalte oder Grafikposition (x, y). Ein Textbereichsobjekt kann sich auf verschiedene Weise selbst ändern, ein Duplikat von sich selbst zurückgeben, und es kann befehlet werden, seine Start- und Endzeichenpositionen und seinen Storyzeiger auf die aktuelle Auswahl zu kopieren.
 
-Ein explizites Story-Objekt ist nicht erforderlich, da ein [**itextrange**](/windows/desktop/api/Tom/nn-tom-itextrange) -Objekt immer erstellt werden kann, um eine bestimmte Story darzustellen. Insbesondere das [**ITextDocument**](/windows/desktop/api/Tom/nn-tom-itextdocument) -Objekt kann ein [**itextstoryranges**](/windows/desktop/api/Tom/nn-tom-itextstoryranges) -Objekt erstellen, um die Textabschnitte im Dokument in Bezug auf Bereiche mit Anfangs-und Endzeichen-Positions Werten aufzulisten, die komplette Textabschnitte (z. b. 0 und **tomforward**) beschreiben.
+Ein explizites Story-Objekt ist nicht erforderlich, da ein [**ITextRange-Objekt**](/windows/desktop/api/Tom/nn-tom-itextrange) immer erstellt werden kann, um eine bestimmte Geschichte zu repräsentieren. Insbesondere kann das [**ITextDocument-Objekt**](/windows/desktop/api/Tom/nn-tom-itextdocument) ein [**ITextStoryRanges-Objekt**](/windows/desktop/api/Tom/nn-tom-itextstoryranges) erstellen, um die Storys im Dokument in Bezug auf Bereiche mit Werten für die Start- und Endzeichenposition zu aufzählen, die vollständige Storys beschreiben (z. B. 0 und **tomForward).**
 
-Bei einem [**ITextStoryRanges2**](/windows/desktop/api/Tom/nn-tom-itextstoryranges2) -Objekt wird kein explizites Story-Objekt benötigt, da jede Story von einem [**ITextRange2**](/windows/desktop/api/Tom/nn-tom-itextrange2) -Objekt beschrieben wird. Insbesondere kann das [**ITextDocument2**](/windows/desktop/api/tom/nn-tom-itextdocument2) -Objekt ein [**ITextStoryRanges2**](/windows/desktop/api/tom/nn-tom-itextstoryranges2) -Objekt erstellen, um die Textabschnitte im Dokument in Bezug auf Bereiche mit Anfangs-und Endzeichen-Positions Werten aufzulisten, die komplette Storys beschreiben (z. b. 0 und **tomforward**).
+Bei einem [**ITextStoryRanges2-Objekt**](/windows/desktop/api/Tom/nn-tom-itextstoryranges2) ist kein explizites Story-Objekt erforderlich, da jede Story von einem [**ITextRange2-Objekt beschrieben**](/windows/desktop/api/Tom/nn-tom-itextrange2) wird. Insbesondere kann das [**ITextDocument2-Objekt**](/windows/desktop/api/tom/nn-tom-itextdocument2) ein [**ITextStoryRanges2-Objekt**](/windows/desktop/api/tom/nn-tom-itextstoryranges2) erstellen, um die Storys im Dokument in Bezug auf Bereiche mit Werten für die Start- und Endzeichenposition aufzählen zu können, die vollständige Storys beschreiben (z. B. 0 und **tomForward).**
 
-Die [**itextrow**](/windows/desktop/api/Tom/nn-tom-itextrow) -Schnittstelle in Verbindung mit den Methoden [**itextrange:: Move**](/windows/desktop/api/Tom/nf-tom-itextrange-move) und [**itextrange:: Expand**](/windows/desktop/api/Tom/nf-tom-itextrange-expand) bietet die Möglichkeit, Tabellen einzufügen, abzufragen und zu ändern.
+Die [**ITextRow-Schnittstelle**](/windows/desktop/api/Tom/nn-tom-itextrow) bietet zusammen mit den [**Methoden ITextRange::Move**](/windows/desktop/api/Tom/nf-tom-itextrange-move) und [**ITextRange::Expand**](/windows/desktop/api/Tom/nf-tom-itextrange-expand) die Möglichkeit zum Einfügen, Abfragen und Ändern von Tabellen.
 
-## <a name="tom-interface-conventions"></a>Tom-Schnittstellen Konventionen
+## <a name="tom-interface-conventions"></a>TOM-Schnittstellenkonventionen
 
-Alle Tom-Methoden geben **HRESULT** -Werte zurück. Im Allgemeinen geben die Tom-Methoden die folgenden Standardwerte zurück.
+Alle TOM-Methoden geben **HRESULT-Werte** zurück. Im Allgemeinen geben die TOM-Methoden die folgenden Standardwerte zurück.
 
--   E \_ outo-Memory
--   E \_ invalidArg
--   E \_ notimpl
--   E file \_ Topics
--   E \_ AccessDenied
--   E \_ fehlschlagen
--   Co \_ E \_ veröffentlicht
--   NoError (identisch mit S \_ OK)
--   S \_ false
+-   E \_ OUTOFMEMORY
+-   E \_ INVALIDARG
+-   E \_ NOTIMPL
+-   E \_ FILENOTFOUND
+-   E \_ ACCESSDENIED
+-   E \_ FAIL
+-   CO \_ E \_ VERÖFFENTLICHT
+-   NOERROR (identisch mit S \_ OK)
+-   S \_ FALSE
 
-Beachten Sie, dass das Tom-Objekt nutzlos ist, wenn die einem Tom-Objekt zugeordnete Bearbeitungs Instanz, z. b. [**itextrange**](/windows/desktop/api/Tom/nn-tom-itextrange) , gelöscht wird \_ \_ .
+Beachten Sie, dass das TOM-Objekt nicht mehr verwendet werden kann, wenn die bearbeitungsinstanz, die einem TOM-Objekt wie [**ITextRange**](/windows/desktop/api/Tom/nn-tom-itextrange) zugeordnet ist, gelöscht wird und alle zugehörigen Methoden CO \_ E RELEASED \_ zurückgeben.
 
-Zusätzlich zu den **HRESULT** -Rückgabe Werten enthalten viele Methoden out-Parameter, bei denen es sich um Zeiger handelt, die zum Zurückgeben von Werten verwendet werden. Für alle Schnittstellen sollten Sie alle Zeiger Parameter überprüfen, um sicherzustellen, dass Sie nicht NULL sind, bevor Sie Sie verwenden. Wenn Sie einen NULL-Wert an eine Methode übergeben, die einen gültigen Zeiger erfordert, gibt die Methode E \_ invalidArg zurück. Optionale out-Zeiger mit NULL-Werten werden ignoriert.
+Zusätzlich zu den **HRESULT-Rückgabewerten** enthalten viele Methoden Out-Parameter, die Zeiger sind, die zum Zurückgeben von Werten verwendet werden. Für alle Schnittstellen sollten Sie alle Zeigerparameter überprüfen, um sicherzustellen, dass sie ungleich 0 (null) sind, bevor Sie sie verwenden. Wenn Sie einen NULL-Wert an eine Methode übergeben, die einen gültigen Zeiger erfordert, gibt die Methode E \_ INVALIDARG zurück. Optionale Out-Zeiger mit NULL-Werten werden ignoriert.
 
-Verwenden Sie Methoden mit Get-und Set-Präfixen, um Eigenschaften zu erhalten und festzulegen. Boolesche Variablen verwenden **tomfalse** (0) für **false** und **tomtrue** (-1) für **true**.
+Verwenden Sie Methoden mit Get- und Set-Präfixen, um Eigenschaften zu erhalten und zu festlegen. Boolesche Variablen verwenden **tomFalse** (0) für **FALSE** und **tomTrue** (-1) für **TRUE.**
 
-Tom-Konstanten werden im [**tomconstants**](/windows/win32/api/tom/ne-tom-tomconstants) -Enumerationstyp definiert und beginnen mit dem Präfix *Tom*(z. b. **tomword**).
+TOM-Konstanten werden im [**TomConstants-Enumerationstyp**](/windows/win32/api/tom/ne-tom-tomconstants) definiert und beginnen mit dem Präfix *tom*, z. B. **tomWord**.
 
-## <a name="the-tombool-type"></a>Der tombool-Typ
+## <a name="the-tombool-type"></a>Der tomBool-Typ
 
-Viele Tom-Methoden verwenden eine besondere Art von Variable namens "tombool" für Rich-Text-Attribute, die über binäre Zustände verfügen. Der tombool-Typ unterscheidet sich vom **booleschen** Typ, da er vier Werte annehmen kann: **tomtrue**, **tomfalse**, **tomtoggle** und **tomunundefiniert**. Die Werte **tomtrue** und **tomfalse** geben "true" und "false" an. Der **tomtoggle** -Wert wird verwendet, um eine Eigenschaft zu wechseln. Der **tomunundefinierte** Wert, der üblicherweise als ninch bezeichnet wird, ist ein spezieller No-Input-und No-Change-Wert, der mit Longs, float und **COLORREF** s funktioniert. Für Zeichen folgen wird **tomundefiniert** (oder ninch) durch die NULL-Zeichenfolge dargestellt. Bei Eigenschafts Einstellungs Vorgängen wird durch die Verwendung von **tomundefinierter** die Ziel Eigenschaft nicht geändert. Bei Eigenschafts Einfügevorgängen bedeutet **tomundefiniert** , dass die Zeichen im Bereich unterschiedliche Werte aufweisen (das Kontrollkästchen wird in den Eigenschaften Dialogfeldern angezeigt).
+Viele TOM-Methoden verwenden einen speziellen Variablentyp namens "tomBool" für Rich-Text-Attribute, die binäre Zustände haben. Der tomBool-Typ ist  anders als der boolesche Typ, da er vier Werte verwenden kann: **tomTrue,** **tomFalse,** **tomToggle** und **tomUndefined.** Die **Werte tomTrue** und **tomFalse geben** true und false an. Der **tomToggle-Wert** wird verwendet, um eine Eigenschaft umzuschalten. Der **tomUndefined-Wert,** der eher als NINCH bezeichnet wird, ist ein spezieller Wert ohne Eingabe und ohne Änderung, der mit longs, floats und **COLORREF-s** funktioniert. Bei **Zeichenfolgen wird tomUndefined** (oder NINCH) durch die NULL-Zeichenfolge dargestellt. Bei Eigenschafteneinstellungsvorgängen ändert **die Verwendung von tomUndefined** nicht die Zieleigenschaft. Bei Vorgängen zum Abrufen von Eigenschaften bedeutet **tomUndefined,** dass die Zeichen im Bereich unterschiedliche Werte haben (das graue Kontrollkästchen wird in Eigenschaftendialogfeldern angezeigt).
 
-## <a name="math-buildup-and-build-down"></a>Mathematische Erstellung und Buildvorgang
+## <a name="math-buildup-and-build-down"></a>Mathematischer BuildUp und Build Down
 
-Sie können die [**ITextRange2:: buildupmath**](/windows/desktop/api/Tom/nf-tom-itextrange2-buildupmath) -Methode verwenden, um linear formatierte mathematische Ausdrücke in integrierte Versionen zu konvertieren. Die [**ITextRange2:: Linearize**](/windows/desktop/api/Tom/nf-tom-itextrange2-linearize) -Methode führt die umgekehrte Konvertierung, die sogenannte Linearisierung oder den Buildvorgang, aus, um integrierte Versionen von mathematischen Ausdrücken zurück in das lineare Format zu konvertieren. Die mathematische Funktion "Build downdown" ist nützlich, wenn Sie nur-Text exportieren oder bestimmte Bearbeitungs Typen aktivieren müssen.
+Sie können die [**ITextRange2::BuildUpMath-Methode**](/windows/desktop/api/Tom/nf-tom-itextrange2-buildupmath) verwenden, um linear formatierte mathematische Ausdrücke in integrierte Versionen zu konvertieren. Die [**ITextRange2::Linearize-Methode**](/windows/desktop/api/Tom/nf-tom-itextrange2-linearize) führt die umgekehrte Konvertierung aus, die als Linearisierung oder Build down bezeichnet wird, um integrierte Versionen von mathematischen Ausdrücken zurück in das lineare Format zu konvertieren. Die Mathematische Erstellungsfunktion ist nützlich, wenn Sie Nur-Text exportieren oder bestimmte Bearbeitungstypen aktivieren müssen.
 
-## <a name="tom-rtf"></a>Tom RTF
+## <a name="tom-rtf"></a>TOM RTF
 
-In Tom kann Rich-Text-Austausch durch Sätze expliziter Methodenaufrufe oder durch Übertragungen von Rich-Text im RTF-Format (Rich Text Format) erreicht werden. Dieser Abschnitt enthält Tabellen mit RTF-Steuer Wörtern für Absatz Eigenschaften und für Zeichen Eigenschaften.
+In TOM kann der Rich-Text-Austausch durch Sätze von expliziten Methodenaufrufen oder durch Übertragungen von Rich-Text im Rich-Text-Format (RTF) erfolgen. Dieser Abschnitt enthält Tabellen mit RTF-Steuerwörtern für Absatzeigenschaften und Zeicheneigenschaften.
 
-**Tom RTF-Absatz Steuer Wörter**
+**TOM RTF Paragraph Control Words**
 
 | Steuerwort   | Bedeutung                                                                                                                                                                                                                                                                        |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \\ fi *n*      | Einzug in der ersten Zeile (der Standardwert ist 0 (null)).                                                                                                                                                                                                                                       |
-| \\ halten        | Speichern Sie den Absatz unverändert.                                                                                                                                                                                                                                                         |
+| \\ fi *n*      | Einrückung in die erste Zeile (Der Standardwert ist 0 (null).                                                                                                                                                                                                                                       |
+| \\ Halten        | Lassen Sie den Absatz intakt.                                                                                                                                                                                                                                                         |
 | \\ keepn       | Behalten Sie den nächsten Absatz bei.                                                                                                                                                                                                                                                  |
-| \\ Li *n*      | Linker Einzug (der Standardwert ist 0 (null)).                                                                                                                                                                                                                                             |
-| \\ NoLine      | Keine Zeilennummerierung.                                                                                                                                                                                                                                                             |
-| \\ nowidctlpar | Deaktivieren Sie das Steuerelement für das Witwen-/verwaisten                                                                                                                                                                                                                                                 |
-| \\ Rück Belastung      | Seitenumbruch vor Absatz.                                                                                                                                                                                                                                                   |
-| \\ Durchschnittlicher         | Neuer Absatz.                                                                                                                                                                                                                                                                 |
-| \\ par        | Setzt auf Standard Absatz Eigenschaften zurück.                                                                                                                                                                                                                                        |
-| \\ zuzugreifen          | Linksbündig (Standard).                                                                                                                                                                                                                                                    |
-| \\ QR-          | Rechtsbündig ausgerichtet.                                                                                                                                                                                                                                                                 |
-| \\ QJ          | Blocksatz.                                                                                                                                                                                                                                                                     |
-| \\ anzubieten          | Zentriert.                                                                                                                                                                                                                                                                      |
-| \\ RI *n*      | Rechter Einzug (der Standardwert ist 0 (null)).                                                                                                                                                                                                                                            |
-| \\ s *n*       | Stil *n*.                                                                                                                                                                                                                                                                     |
-| \\ Sa *n*      | Leerzeichen nach (der Standardwert ist 0 (null)).                                                                                                                                                                                                                                             |
-| \\ SB *n*      | Leerzeichen vor (der Standardwert ist 0 (null)).                                                                                                                                                                                                                                            |
-| \\ SL *n*      | Wenn der Wert fehlt oder wenn *n*= 1000, wird der Zeilenabstand durch das höchste Zeichen in der Zeile (einzeiligen Abstand) bestimmt. Wenn *n*> NULL ist, wird mindestens diese Größe verwendet. Wenn *n* < NULL ist, wird genau \| *n* \| verwendet. Der Zeilenabstand ist ein mehrzeiligen Abstand, wenn \\ slmult 1 folgt. |
-| \\ slmult *m*  | Folgt auf \\ SL. *m* = NULL: mindestens oder genau der Zeilenabstand, wie von \\ SL *n* beschrieben. *m* = 1: Zeilenabstand = *n*/240 mal einzeilige Abstände.                                                                                                                              |
-| \\ TB *n*      | Position der Balken Registerkarte, in Twips, vom linken Rand.                                                                                                                                                                                                                              |
-| \\ tldot       | Registerkarten-Spitzen Punkte.                                                                                                                                                                                                                                                               |
-| \\ f        | Registerkarten-gleich Zeichen.                                                                                                                                                                                                                                                         |
-| \\ tlhyph      | Registerkarten-Bindestriche.                                                                                                                                                                                                                                                            |
-| \\ tlth        | Linie mit fester Linie für die Registerkarte                                                                                                                                                                                                                                                         |
-| \\ tlul        | Tab-Taste unterstrichen.                                                                                                                                                                                                                                                          |
-| \\ TQC         | Registerkarte zentriert.                                                                                                                                                                                                                                                                  |
-| \\ tqdec       | Dezimaltrennzeichen.                                                                                                                                                                                                                                                                   |
-| \\ tqr         | Registerkarte "leeren".                                                                                                                                                                                                                                                               |
-| \\ TX *n*      | Registerkarten Position in Twips vom linken Rand.                                                                                                                                                                                                                                  |
+| \\ li *n*      | Linker Einzug (Der Standardwert ist 0 (null).                                                                                                                                                                                                                                             |
+| \\ noline      | Keine Zeilennummerierung.                                                                                                                                                                                                                                                             |
+| \\ nowidctlpar | Deaktivieren Sie die Steuerung für verwaiste/verwaiste Daten.                                                                                                                                                                                                                                                 |
+| \\ pagebb      | Seite vor Absatz umbrechen.                                                                                                                                                                                                                                                   |
+| \\ Par         | Neuer Absatz.                                                                                                                                                                                                                                                                 |
+| \\ pard        | Setzt auf standardmäßige Absatzeigenschaften zurück.                                                                                                                                                                                                                                        |
+| \\ Ql          | Linksbündig ausgerichtet (Standard).                                                                                                                                                                                                                                                    |
+| \\ Qr          | Rechtsbündig ausgerichtet.                                                                                                                                                                                                                                                                 |
+| \\ Qj          | Blocksatz.                                                                                                                                                                                                                                                                     |
+| \\ Qc          | Zentriert.                                                                                                                                                                                                                                                                      |
+| \\ ri *n*      | Rechter Einzug (Der Standardwert ist 0 (null).                                                                                                                                                                                                                                            |
+| \\ s *n*       | Format *n*.                                                                                                                                                                                                                                                                     |
+| \\ sa *n*      | Leerzeichen nach (der Standardwert ist 0 (null).                                                                                                                                                                                                                                             |
+| \\ sb *n*      | Leerzeichen vor (der Standardwert ist 0 (null).                                                                                                                                                                                                                                            |
+| \\ sl *n*      | Wenn der Zeilenabstand fehlt oder *n*=1000, wird der Zeilenabstand durch das höchste Zeichen in der Zeile bestimmt (einzeiler Abstand). Wenn *n*> null ist, wird mindestens diese Größe verwendet. Wenn *n* gleich < null ist, wird genau \| *n* \| verwendet. Der Zeilenabstand ist ein mehrzeiler Abstand, wenn \\ slmult 1 folgt. |
+| \\ slmult *m*  | Folgt \\ sl. *m* = null: Mindestens oder exakter Zeilenabstand, wie von \\ sl *n beschrieben.* *m* = 1: Zeilenabstand = *n*/240-mal einzeiler Abstand.                                                                                                                              |
+| \\ TB *n*      | Position der Balkenregisterkarte in Twips vom linken Rand.                                                                                                                                                                                                                              |
+| \\ tldot       | Registerkarten-Leaderpunkte.                                                                                                                                                                                                                                                               |
+| \\ tleq        | Tabstopp-Leader: Gleichheitszeichen.                                                                                                                                                                                                                                                         |
+| \\ tlhyph      | Bindestriche für Tabstopps.                                                                                                                                                                                                                                                            |
+| \\ tlth        | Spitzenlinie der Tabulatoren.                                                                                                                                                                                                                                                         |
+| \\ tlul        | Registerkartenleiter unterstrichen.                                                                                                                                                                                                                                                          |
+| \\ Tqc         | Zentrierte Registerkarte.                                                                                                                                                                                                                                                                  |
+| \\ tqdec       | Registerkarte "Dezimal".                                                                                                                                                                                                                                                                   |
+| \\ tqr         | Registerkarte "Rechts leeren".                                                                                                                                                                                                                                                               |
+| \\ tx *n*      | Tabstoppposition in Twips vom linken Rand.                                                                                                                                                                                                                                  |
 
 
 
- 
+ 
 
-**Zeichen Format-Steuer Wörter für Tom RTF**
+**TOM RTF Character Format Control Words**
 
 | Steuerwort     | Bedeutung                                                                                                                                                                                                                                  |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \\ Animation *n* | Legt den Animationstyp auf *n* fest.                                                                                                                                                                                                              |
-| \\ b             | Fettdruck                                                                                                                                                                                                                                    |
-| \\ Deck          | Alle Großbuchstaben.                                                                                                                                                                                                                            |
-| \\ CF *n*        | Vordergrundfarbe (Standardwert ist **tomautocolor**).                                                                                                                                                                                      |
-| \\ CS *n*        | Zeichenstil *n*.                                                                                                                                                                                                                     |
-| \\ DN *n*        | Die Indexposition in halben Punkten (der Standardwert ist 6).                                                                                                                                                                                    |
-| \\ EMBO          | Geprägt.                                                                                                                                                                                                                                |
-| \\ f *n*         | Schriftart Nummer, *n* bezieht sich auf einen Eintrag in der Schriftart Tabelle.                                                                                                                                                                                   |
-| \\ FS *n*        | Schrift Grad in halben Punkten (der Standardwert ist 24).                                                                                                                                                                                            |
-| \\ Hervorhebung von *n* | Hintergrundfarbe (Standardwert ist **tomautocolor**).                                                                                                                                                                                      |
-| \\ Ich             | Kursiv.                                                                                                                                                                                                                                  |
-| \\ Impr          | Lösch.                                                                                                                                                                                                                                 |
-| \\ lang *n*      | Wendet eine Sprache auf ein Zeichen an. *n* ist eine Zahl, die einer Sprache entspricht. Das \\ einfache Steuerwort setzt die Language-Eigenschaft auf die Sprache zurück, die \\ in den Dokumenteigenschaften von deflang *n* definiert wurde.                             |
-| \\ nosupersub    | Deaktiviert das hoch gestellt-oder-Abonnement.                                                                                                                                                                                                      |
-| \\ Outl          | Risses.                                                                                                                                                                                                                                 |
-| \\ Lin         | Setzt Zeichen Formatierungs Eigenschaften auf einen Standardwert zurück, der von der Anwendung definiert wird. Die zugehörigen Zeichen Formatierungs Eigenschaften (die im Abschnitt zugehörige Zeichen Eigenschaften in der RTF-Spezifikation beschrieben werden) werden ebenfalls zurückgesetzt. |
-| \\ scaps         | Kleine Hauptstädte.                                                                                                                                                                                                                          |
-| \\ Shad          | Schattet.                                                                                                                                                                                                                                  |
-| \\ Tag        | Durchgestrichen.                                                                                                                                                                                                                           |
-| \\ nationale           | Wendet den Index auf Text an und reduziert die Größe des Punkts entsprechend der Schriftart Informationen.                                                                                                                                                          |
-| \\ Super         | Wendet hoch gestellt auf Text an und reduziert die Größe des Punkts gemäß den Schriftart Informationen.                                                                                                                                                        |
-| \\ nützlichen            | Fortlaufender unterstrich. \\ ul0 deaktiviert alle Unterstreichung.                                                                                                                                                                                  |
-| \\ ULD           | Gepunktete Unterstreichung                                                                                                                                                                                                                        |
-| \\ ULDB          | Doppelter unterstrich.                                                                                                                                                                                                                        |
-| \\ ulnone        | Beendet alle Unterstreichung.                                                                                                                                                                                                                   |
-| \\ ulW           | Word-Unterstreichung.                                                                                                                                                                                                                          |
-| \\ aufwärts *n*        | Superscript-Position in halb Punkten (der Standardwert ist 6).                                                                                                                                                                                  |
-| \\ Ramelow             | Versteckter Text.                                                                                                                                                                                                                             |
+| \\ Animation *n* | Legt den Animationstyp auf *n fest.*                                                                                                                                                                                                              |
+| \\ B             | Fettdruck                                                                                                                                                                                                                                    |
+| \\ Caps          | Alle Groß- und Groß-                                                                                                                                                                                                                            |
+| \\ cf *n*        | Vordergrundfarbe (der Standardwert ist **tomAutocolor**).                                                                                                                                                                                      |
+| \\ cs *n*        | Zeichenformat *n*.                                                                                                                                                                                                                     |
+| \\ dn *n*        | Unterskriptposition in Halbpunkten (Der Standardwert ist 6).                                                                                                                                                                                    |
+| \\ Embo          | Geprägt.                                                                                                                                                                                                                                |
+| \\ f *n*         | Schriftartnummer, *n* bezieht sich auf einen Eintrag in der Schriftarttabelle.                                                                                                                                                                                   |
+| \\ fs *n*        | Schriftgrad in Halbpunkten (Der Standardwert ist 24).                                                                                                                                                                                            |
+| \\ Highlight *n* | Hintergrundfarbe (der Standardwert ist **tomAutocolor**).                                                                                                                                                                                      |
+| \\ Ich             | Italic.                                                                                                                                                                                                                                  |
+| \\ Impr          | Impressum.                                                                                                                                                                                                                                 |
+| \\ lang *n*      | Wendet eine Sprache auf ein Zeichen an. *n* ist eine Zahl, die einer Sprache entspricht. Das einfache Steuerelementwort setzt die Spracheigenschaft auf die Sprache zurück, die durch \\ \\ deflang *n* in den Dokumenteigenschaften definiert wird.                             |
+| \\ nosupersub    | Deaktiviert hoch- oder untergestellt.                                                                                                                                                                                                      |
+| \\ outl          | Umriss.                                                                                                                                                                                                                                 |
+| \\ einfach         | Setzt Zeichenformatierungseigenschaften auf einen standardwert zurück, der von der Anwendung definiert wird. Die zugeordneten Zeichenformatierungseigenschaften (beschrieben im Abschnitt Zugeordnete Zeicheneigenschaften in der RTF-Spezifikation) werden ebenfalls zurückgesetzt. |
+| \\ SCAPS         | Kleine Groß- und Klein groß.                                                                                                                                                                                                                          |
+| \\ Shad          | Schatten.                                                                                                                                                                                                                                  |
+| \\ Schlag        | Durchgestrichen.                                                                                                                                                                                                                           |
+| \\ Sub           | Wendet einen Inskript auf Text an und reduziert den Punktgröße entsprechend den Schriftartinformationen.                                                                                                                                                          |
+| \\ Super         | Wendet hochgestellt auf Text an und reduziert den Punktgröße entsprechend den Schriftartinformationen.                                                                                                                                                        |
+| \\ Ul            | Kontinuierliche Unterstreichung. \\ ul0 deaktiviert alle Unterstreichungen.                                                                                                                                                                                  |
+| \\ Uld           | Gepunktete Unterstreichung.                                                                                                                                                                                                                        |
+| \\ uldb          | Doppelte Unterstreichung.                                                                                                                                                                                                                        |
+| \\ ulnone        | Beendet alle Unterlinings.                                                                                                                                                                                                                   |
+| \\ ulw           | Wort unterstrichen.                                                                                                                                                                                                                          |
+| \\ bis *n*        | Superscriptposition in Halbpunkten (Der Standardwert ist 6).                                                                                                                                                                                  |
+| \\ V             | Ausgeblendeter Text.                                                                                                                                                                                                                             |
 
 
 
- 
+ 
 
-## <a name="finding-rich-text"></a>Suchen von reichem Text
+## <a name="finding-rich-text"></a>Suchen von Rich Text
 
-Sie können Tom-Methoden verwenden, um Rich-Text zu finden, wie durch einen Textbereich definiert. Das Auffinden eines solchen umfangreichen Texts ist häufig bei der Verarbeitung von Wörtern erforderlich, obwohl er nie in einem "was Sie sehen, was Sie sehen" (WYSIWYG) Word-Prozessor ist. Es gibt deutlich eine größere Domäne der Rich-Text-Übereinstimmung, mit der einige Zeichen Formatierungs Eigenschaften ignoriert werden können (oder um die Absatz Formatierung und/oder den Objekt Inhalt einzuschließen). solche Verallgemeinerungen gehen jedoch über den Rahmen dieses Abschnitts hinaus.
+Sie können TOM-Methoden verwenden, um Rich-Text zu finden, wie durch einen Textbereich definiert. Solche Umfangreichen Text zu finden, ist häufig bei der Textverarbeitung erforderlich, obwohl sie noch nie in einem WISIWYG-Textverarbeitungsprogramm (WHAT You See Is What You Get) erfüllt wurde. Es gibt eindeutig einen größeren Bereich des Rich-Text-Abgleichs, der es ermöglicht, einige Zeichenformatierungseigenschaften zu ignorieren (oder Absatzformatierung und/oder Objektinhalte einzubeziehen), aber solche Verallgemeinerungen gehen über den Rahmen dieses Abschnitts hinaus.
 
-Ein Zweck für diese Funktionalität ist die Verwendung eines Rich-Text-Such Dialogfelds, um den Rich **-Text zu** definieren, den Sie in einem Dokument suchen möchten. Das Dialogfeld wird mithilfe eines Rich-Edit-Steuer Elements implementiert, und Tom-Methoden werden verwendet, um die Suche durch das Dokument durchzuführen. Sie können entweder den gewünschten Rich-Text aus dem Dokument in das Dialogfeld **Suchen** kopieren oder direkt im Dialogfeld **Suchen** eingeben und formatieren.
+Ein Zweck dieser Funktionalität ist die  Verwendung eines Rich-Text-Suchdialogfelds, um den Rich-Text zu definieren, den Sie in einem Dokument suchen möchten. Das Dialogfeld wird mithilfe eines Rich-Edit-Steuerelements implementiert, und TOM-Methoden werden verwendet, um die Suche im Dokument durchzuführen. Sie können entweder den gewünschten Rich Text aus dem Dokument in das Dialogfeld **Suchen** kopieren oder ihn direkt im Dialogfeld **Suchen** eingeben und formatieren.
 
-Im folgenden Beispiel wird gezeigt, wie Sie mithilfe von Tom-Methoden nach Text suchen, der Kombinationen aus der exakten Zeichen Formatierung enthält. Der Algorithmus sucht nach dem reinen Text im Übereinstimmungs Bereich mit dem Namen `pr1` . Wenn der Klartext gefunden wird, wird auf einen Testbereich mit dem Namen verwiesen `pr2` . Anschließend werden zwei einfügepunktbereiche ( `prip1` und `prip2` ) verwendet, um den Testbereich zu durchlaufen, der die Zeichen Formatierung mit der von vergleicht `pr1` . Wenn Sie genau übereinstimmen, wird der Eingabebereich (angegeben durch `ppr` ) aktualisiert, um auf den Text des Testbereichs zu verweisen, und die Funktion gibt die Anzahl der Zeichen im übereinstimmenden Bereich zurück. Zwei [**itextfont**](/windows/desktop/api/Tom/nn-tom-itextfont) -Objekte, `pf1` und `pf2` , werden beim Zeichen Formatierungs Vergleich verwendet. Sie werden an die einfügepunktbereiche `prip1` und angefügt `prip2` .
+Im folgenden Beispiel wird gezeigt, wie Tom-Methoden verwendet werden, um Text zu suchen, der Kombinationen der genauen Zeichenformatierung enthält. Der Algorithmus sucht nach dem Nur-Text im Übereinstimmungsbereich mit dem Namen `pr1` . Wenn der Nur-Text gefunden wird, wird auf ihn durch einen Testbereich mit dem Namen `pr2` verwiesen. Anschließend werden zwei Einfügemarkebereiche ( `prip1` und `prip2` ) verwendet, um den Testbereich zu durchlaufen und dessen Zeichenformatierung mit der von zu `pr1` vergleichen. Wenn sie genau übereinstimmen, wird der Eingabebereich (angegeben von `ppr` ) aktualisiert, um auf den Text des Testbereichs zu verweisen, und die Funktion gibt die Anzahl der Zeichen im übereinstimmende Bereich zurück. Zwei [**ITextFont-Objekte,**](/windows/desktop/api/Tom/nn-tom-itextfont) `pf1` und , werden im `pf2` Zeichenformatierungsvergleich verwendet. Sie werden an die Einfügemarkebereiche `prip1` und `prip2` angefügt.
 
 
 ```
@@ -265,20 +265,20 @@ LONG FindRichText (
 
 
 
-## <a name="tom-accessibility"></a>Tom-Barrierefreiheit
+## <a name="tom-accessibility"></a>TOM-Barrierefreiheit
 
-Tom bietet Barrierefreiheits Unterstützung über die Schnittstellen [**itextselection**](/windows/desktop/api/Tom/nn-tom-itextselection) und [**itextrange**](/windows/desktop/api/Tom/nn-tom-itextrange) . In diesem Abschnitt werden Methoden beschrieben, die für die Barrierefreiheit nützlich sind, und wie ein Programm die *x*-, *y* -Bildschirmposition eines Objekts bestimmen kann.
+TOM bietet Barrierefreiheitsunterstützung über die Schnittstellen [**ITextSelection**](/windows/desktop/api/Tom/nn-tom-itextselection) und [**ITextRange.**](/windows/desktop/api/Tom/nn-tom-itextrange) In diesem Abschnitt werden Methoden beschrieben, die für die Barrierefreiheit nützlich sind, und wie ein Programm die *x-, y-Bildschirmposition* eines Objekts bestimmen kann. 
 
-Da Benutzeroberflächen basierte Barrierefreiheits Programme in der Regel mit dem Bildschirm und der Maus funktionieren, ist es häufig von Bedeutung, die entsprechende [**ITextDocument**](/windows/desktop/api/Tom/nn-tom-itextdocument) -Schnittstelle für die aktuelle Mausposition (in Bildschirm Koordinaten) zu finden. In den folgenden Abschnitten finden Sie zwei Möglichkeiten, die richtige Schnittstelle zu bestimmen:
+Da benutzeroberflächenbasierte Barrierefreiheitsprogramme in der Regel mit dem Bildschirm und der Maus funktionieren, besteht ein häufiges Problem darin, die entsprechende [**ITextDocument-Schnittstelle**](/windows/desktop/api/Tom/nn-tom-itextdocument) für die aktuelle Mausposition (in Bildschirmkoordinaten) zu finden. In den folgenden Abschnitten werden zwei Möglichkeiten zum Bestimmen der richtigen Schnittstelle beschrieben:
 
--   [Durch die Tabelle "Running-Object"](#interface-from-running-object-table)
--   Durch die [**EM \_ getoleinterface**](em-getoleinterface.md) -Nachricht, die für Fenster reiche Bearbeitungs Instanzen funktioniert, vorausgesetzt, der Client befindet sich im gleichen Prozessbereich *(kein* Marshalling erforderlich)
+-   [Durch die Tabelle running-object](#interface-from-running-object-table)
+-   Über die [**EM \_ GETOLEINTERFACE-Nachricht,**](em-getoleinterface.md) die für Rich Edit-Instanzen mit Fenstern funktioniert, vorausgesetzt, der Client befindet sich im selben Prozessbereich (es ist kein *Marshalling* erforderlich).
 
-Weitere Informationen finden Sie in der Microsoft Active Accessibility-Spezifikation. Nachdem Sie ein Objekt von einer Bildschirmposition abgerufen haben, können Sie für eine [**ITextDocument**](/windows/desktop/api/Tom/nn-tom-itextdocument) -Schnittstelle verwenden und die [**RangeFromPoint**](/windows/desktop/api/Tom/nf-tom-itextdocument-rangefrompoint) -Methode aufrufen, um ein leeres Bereichs Objekt auf dem CP abzurufen, das der Bildschirmposition entspricht.
+Weitere Informationen finden Sie in der Microsoft Active Accessibility-Spezifikation. Nachdem Sie ein Objekt von einer Bildschirmposition erhalten haben, können Sie für eine [**ITextDocument-Schnittstelle**](/windows/desktop/api/Tom/nn-tom-itextdocument) verwenden und die [**RangeFromPoint-Methode**](/windows/desktop/api/Tom/nf-tom-itextdocument-rangefrompoint) aufrufen, um ein leeres Bereichsobjekt an der cp abzurufen, das der Bildschirmposition entspricht.
 
-### <a name="interface-from-running-object-table"></a>Schnittstelle aus der Ausführung der Objekttabelle
+### <a name="interface-from-running-object-table"></a>Schnittstelle aus ausgeführter Objekttabelle
 
-Eine aktive Objekttabelle (rot) teilt mit, welche Objektinstanzen aktiv sind. Wenn Sie diese Tabelle Abfragen, können Sie den Prozess der Verbindungs Herstellung eines Clients mit einem Objekt beschleunigen, wenn das Objekt bereits ausgeführt wird. Bevor Programme über die laufende Objekttabelle auf Tom-Schnittstellen zugreifen können, muss sich eine Tom-Instanz mit einem Fenster mithilfe eines Monikers in der rot registrieren. Sie erstellen den Moniker aus einer Zeichenfolge, die den Hexadezimalwert des [**HWND**](/windows/desktop/WinProg/windows-data-types)enthält. Das folgende Codebeispiel zeigt, wie dies geschieht.
+Eine ausgeführte Objekttabelle (ROT) gibt an, welche Objektinstanzen aktiv sind. Durch Abfragen dieser Tabelle können Sie den Vorgang zum Verbinden eines Clients mit einem Objekt beschleunigen, wenn das Objekt bereits ausgeführt wird. Bevor Programme über die ausgeführte Objekttabelle auf TOM-Schnittstellen zugreifen können, muss sich eine TOM-Instanz mit einem Fenster mithilfe eines Monikers im ROT registrieren. Sie erstellen den Moniker aus einer Zeichenfolge, die den Hexadezimalwert des [**HWND**](/windows/desktop/WinProg/windows-data-types)enthält. Im folgenden Codebeispiel wird dies veranschaulicht.
 
 
 ```
@@ -330,11 +330,11 @@ if( pDoc )
 
 
 
-### <a name="interface-from-window-messages"></a>Schnittstelle von Fenster Meldungen
+### <a name="interface-from-window-messages"></a>Schnittstelle aus Fenstermeldungen
 
-Die [**\_ getoleinterface**](em-getoleinterface.md) -Nachricht von EM bietet eine weitere Möglichkeit zum Abrufen einer [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle für ein Objekt an einer bestimmten Bildschirmposition. Wie unter [Interface from Running Object Table](#interface-from-running-object-table)beschrieben, erhalten Sie ein [**HWND**](/windows/desktop/WinProg/windows-data-types) für die Bildschirmposition und senden diese Nachricht dann an dieses **HWND**. Die **\_ getoleinterface** -Nachricht von EM ist umfangreich bearbeitet und gibt einen Zeiger auf eine [**iricheditole**](/windows/desktop/api/Richole/nn-richole-iricheditole) -Schnittstelle in der von *LPARAM* adressierten Variablen zurück.
+Die [**EM \_ GETOLEINTERFACE-Nachricht**](em-getoleinterface.md) bietet eine weitere Möglichkeit, eine [**IUnknown-Schnittstelle**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) für ein Objekt an einer bestimmten Bildschirmposition abzurufen. Wie unter [Schnittstelle aus ausgeführter Objekttabelle](#interface-from-running-object-table)beschrieben, erhalten Sie einen [**HWND**](/windows/desktop/WinProg/windows-data-types) für die Bildschirmposition und senden diese Nachricht dann an das **HWND.** Die **EM \_ GETOLEINTERFACE-Nachricht** ist rich edit-specific und gibt einen Zeiger auf eine [**IRichEditOle-Schnittstelle**](/windows/desktop/api/Richole/nn-richole-iricheditole) in der Variablen zurück, die von *lParam* adressiert wird.
 
-**Tipp** Wenn ein Zeiger zurückgegeben wird (stellen Sie sicher, dass das Objekt, auf das *LPARAM* verweist, vor dem Senden der Nachricht auf NULL festgelegt wird), können Sie die [**IUnknown:: QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Methode zum Abrufen einer [**ITextDocument**](/windows/desktop/api/Tom/nn-tom-itextdocument) -Schnittstelle abrufen. Das folgende Codebeispiel veranschaulicht diese Vorgehensweise.
+**Tipp** Wenn ein Zeiger zurückgegeben wird (achten Sie darauf, das Objekt festzulegen, auf das *lParam* vor dem Senden der Nachricht auf NULL zeigt), können Sie die [**IUnknown::QueryInterface-Methode**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) aufrufen, um eine [**ITextDocument-Schnittstelle**](/windows/desktop/api/Tom/nn-tom-itextdocument) abzurufen. Das folgende Codebeispiel veranschaulicht diese Vorgehensweise.
 
 
 ```
@@ -357,166 +357,166 @@ Die [**\_ getoleinterface**](em-getoleinterface.md) -Nachricht von EM bietet ein
 
 
 
-### <a name="accessibility-oriented-methods"></a>Barrierefreiheits orientierte Methoden
+### <a name="accessibility-oriented-methods"></a>Barrierefreiheitsorientierte Methoden
 
-Einige Tom-Methoden sind besonders nützlich, um auf dem Bildschirm zu navigieren, während andere Tom-Methoden das tun, was Sie tun können, wenn Sie zu interessanten Orten gelangen. In der folgenden Tabelle werden die nützlichsten Methoden beschrieben.
+Einige TOM-Methoden sind besonders nützlich für die Navigation auf dem Bildschirm, während andere TOM-Methoden die Möglichkeiten verbessern, wenn Sie an interessanten Orten eintreffen. In der folgenden Tabelle werden die nützlichsten Methoden beschrieben.
 
 
 
-| Methode                                                 | Herauf Stufen der Barrierefreiheit                                                                                                                                                                 |
+| Methode                                                 | Fördern der Barrierefreiheit                                                                                                                                                                 |
 |--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**GetSelection**](/windows/desktop/api/Tom/nf-tom-itextdocument-getselection)     | Diese Methode ruft die aktive Auswahl ab, die für eine Vielzahl von Ansichts orientierten Zwecken verwendet werden kann, z. b. zum Markieren von Text und scrollen.                                                      |
-| [**RangeFromPoint**](/windows/desktop/api/Tom/nf-tom-itextdocument-rangefrompoint) | Bei Verwendung für eine aktive Auswahl wird sichergestellt, dass diese Methode einen Bereich erhält, der einer bestimmten Ansicht zugeordnet ist.                                                                                 |
-| [**Expand**](/windows/desktop/api/Tom/nf-tom-itextrange-expand)                    | Vergrößert einen Textbereich, sodass alle darin enthaltenen partiellen Einheiten vollständig enthalten sind. Beispielsweise `Expand(tomWindow)` erweitert den Bereich, um den sichtbaren Teil der Story des Bereichs einzubeziehen. |
-| [**Getduplicate**](/windows/desktop/api/Tom/nf-tom-itextrange-getduplicate)        | Bei Verwendung für eine aktive Auswahl wird sichergestellt, dass diese Methode einen Bereich erhält, der einer bestimmten Ansicht zugeordnet ist. Weitere Informationen finden Sie in der Beschreibung von [**RangeFromPoint**](/windows/desktop/api/Tom/nf-tom-itextdocument-rangefrompoint).  |
-| [**GetPoint**](/windows/desktop/api/Tom/nf-tom-itextrange-getpoint)                | Ruft die Bildschirm Koordinaten für die Position des Anfangs-oder Endzeichens im Textbereich ab.                                                                                                        |
-| [**ScrollIntoView**](/windows/desktop/api/Tom/nf-tom-itextrange-scrollintoview)    | Scrollt einen Textbereich in die Ansicht.                                                                                                                                                               |
-| [**SetPoint**](/windows/desktop/api/Tom/nf-tom-itextrange-setpoint)                | Wählt Text von bis zu einem angegebenen Punkt aus.                                                                                                                                              |
+| [**GetSelection**](/windows/desktop/api/Tom/nf-tom-itextdocument-getselection)     | Diese Methode ruft die aktive Auswahl ab, die für eine Vielzahl von ansichtsorientierten Zwecken verwendet werden kann, z. B. hervorheben von Text und Scrollen.                                                      |
+| [**RangeFromPoint**](/windows/desktop/api/Tom/nf-tom-itextdocument-rangefrompoint) | Bei Verwendung für eine aktive Auswahl erhält diese Methode garantiert einen Bereich, der einer bestimmten Ansicht zugeordnet ist.                                                                                 |
+| [**Expand**](/windows/desktop/api/Tom/nf-tom-itextrange-expand)                    | Vergrößert einen Textbereich, sodass alle enthaltenen Teileinheiten vollständig enthalten sind. `Expand(tomWindow)`Beispielsweise erweitert den Bereich um den sichtbaren Teil der Geschichte des Bereichs. |
+| [**GetDuplicate**](/windows/desktop/api/Tom/nf-tom-itextrange-getduplicate)        | Bei Verwendung für eine aktive Auswahl erhält diese Methode garantiert einen Bereich, der einer bestimmten Ansicht zugeordnet ist. Weitere Informationen finden Sie in der Beschreibung von [**RangeFromPoint.**](/windows/desktop/api/Tom/nf-tom-itextdocument-rangefrompoint)  |
+| [**GetPoint**](/windows/desktop/api/Tom/nf-tom-itextrange-getpoint)                | Ruft die Bildschirmkoordinaten für die Anfangs- oder Endzeichenposition im Textbereich ab.                                                                                                        |
+| [**ScrollIntoView**](/windows/desktop/api/Tom/nf-tom-itextrange-scrollintoview)    | Führt einen Bildlauf für einen Textbereich in die Ansicht durch.                                                                                                                                                               |
+| [**Sollwert**](/windows/desktop/api/Tom/nf-tom-itextrange-setpoint)                | Wählt Text an oder nach oben bis zu einem angegebenen Punkt aus.                                                                                                                                              |
 
 
 
- 
+ 
 
-## <a name="character-match-sets"></a>Zeichen Übereinstimmungs Sätze
+## <a name="character-match-sets"></a>Zeichen übereinstimmungssätze
 
-Der *Variant* -Parameter **der verschiedenen Verschiebungs** \* Methoden in [**itextrange**](/windows/desktop/api/Tom/nn-tom-itextrange)(z. b. [**MoveWhile**](/windows/desktop/api/Tom/nf-tom-itextrange-movewhile) und [**MoveUntil**](/windows/desktop/api/Tom/nf-tom-itextrange-moveuntil)) kann eine explizite Zeichenfolge oder einen Zeichen-Match-Satz mit 32-Bit-Index annehmen. Die Indizes werden entweder durch Unicode-Bereiche oder [**getstringtypeex**](/windows/win32/api/stringapiset/nf-stringapiset-getstringtypeexw) -Zeichensätze definiert. Der Unicode-Bereich, beginnend bei *n* und der Länge *l* (< 32768), wird durch den Index *n* + (*l <*< 16) + 0x80000000 angegeben. Beispielsweise werden die grundlegenden griechischen Buchstaben durch CR \_ Greek = 0x805f0370 definiert, und druckbare ASCII-Zeichen werden durch CR \_ asciiprint = 0x805e0020 definiert. Darüber hinaus können Sie mit den Methoden " **muvewhile** " und " **muveuntil** " schnell eine Spanne von Zeichen in einem beliebigen **getstringtypeex** -Zeichensatz oder in einer Spanne von Zeichen, die sich nicht in einem dieser Zeichensätze befindet, umgehen.
+Der *Variant-Parameter* der verschiedenen  \* Move-Methoden in [**ITextRange,**](/windows/desktop/api/Tom/nn-tom-itextrange)z. [**B. MoveWhile**](/windows/desktop/api/Tom/nf-tom-itextrange-movewhile) und [**MoveUntil,**](/windows/desktop/api/Tom/nf-tom-itextrange-moveuntil)kann eine explizite Zeichenfolge oder einen 32-Bit-Zeichensatz-Satz annehmen. Die Indizes werden entweder durch Unicode-Bereiche oder [**GetStringTypeEx-Zeichensätze**](/windows/win32/api/stringapiset/nf-stringapiset-getstringtypeexw) definiert. Der Unicode-Bereich ab *n* und der Länge *l* (< 32768) wird durch den Index *n* + (*l <*< 16) + 0x80000000 angegeben. Einfache griechisch-Buchstaben werden z. B. durch CR Griechisch = 0x805f0370 definiert, \_ und druckbare ASCII-Zeichen werden durch CR \_ ASCIIPrint = 0x805e0020 definiert. Darüber hinaus können Sie mit den Methoden **MoveWhile** und **MoveUntil** schnell eine Zeichenspanne in einem **beliebigen GetStringTypeEx-Zeichensatz** oder in einer Zeichenspanne umgehen, die sich nicht in einem dieser Zeichensätze befindet.
 
-Die [**getstringtypeex**](/windows/win32/api/stringapiset/nf-stringapiset-getstringtypeexw) -Sätze werden durch die Werte für *Ctype1*, *Ctype2* und *Ctype3* angegeben und wie folgt definiert.
+Die [**GetStringTypeEx-Mengen**](/windows/win32/api/stringapiset/nf-stringapiset-getstringtypeexw) werden durch die Werte für *Ctype1,* *Ctype2* und *Ctype3* angegeben und wie folgt definiert.
 
 
 
 | Cset                 | Bedeutung                          |
 |----------------------|----------------------------------|
-| *Ctype1*             | Kombination von CT- \_ CTYPE1-Typen. |
-| *Ctype2* + tomCType2 | Beliebiger CT- \_ CTYPE2-Typ.             |
-| *Ctype3* + tomCType3 | Kombination von CT- \_ CTYPE3-Typen. |
+| *Ctype1*             | Kombination von CT \_ CTYPE1-Typen. |
+| *Ctype2* + tomCType2 | Beliebiger CT \_ CTYPE2-Typ.             |
+| *Ctype3* + tomCType3 | Kombination von CT \_ CTYPE3-Typen. |
 
 
 
- 
+ 
 
-*Ctype1* kann eine beliebige Kombination der folgenden sein.
+Insbesondere kann *Ctype1* eine beliebige Kombination der folgenden Sein.
 
 
 
-| Ctype1 | Wert  | Bedeutung                                                           |
+| Ctype1-Name | Wert  | Bedeutung                                                           |
 |-------------|--------|-------------------------------------------------------------------|
-| C1 ( \_ oben)   | 0x0001 | Großbuchstaben.                                                        |
-| C1 ( \_ niedriger)   | 0x0002 | Kleinbuchstaben.                                                        |
-| C1- \_ Ziffer   | 0x0004 | Dezimalziffern.                                                   |
-| C1- \_ Speicherplatz   | 0x0008 | Leerzeichen.                                                 |
-| C1- \_ punct   | 0x0010 | Interpunktions.                                                      |
-| C1- \_ CNTRL   | 0x0020 | Steuerzeichen.                                               |
-| C1 \_ leer   | 0x0040 | Leerzeichen.                                                 |
-| C1- \_ xdigit  | 0x0080 | Hexadezimale Ziffern.                                               |
-| C1- \_ Alpha   | 0x0100 | Beliebiges linguistisches Zeichen (alphabetisch, silabär oder ideografisch). |
-| C1 \_ definiert | 0x0200 | Ein definiertes Zeichen, aber nicht einer der anderen C1- \_ \* Typen.       |
+| C1 \_ UPPER   | 0x0001 | Großbuchstaben.                                                        |
+| C1 \_ LOWER   | 0x0002 | Kleinbuchstaben.                                                        |
+| C1 \_ DIGIT   | 0x0004 | Dezimalstellen.                                                   |
+| C1 \_ SPACE   | 0x0008 | Leerzeichen.                                                 |
+| C1 \_ PUNCT   | 0x0010 | Interpunktion.                                                      |
+| C1 \_ CNTRL   | 0x0020 | Steuerzeichen.                                               |
+| C1 \_ BLANK   | 0x0040 | Leere Zeichen.                                                 |
+| C1 \_ XDIGIT  | 0x0080 | Hexadezimalziffern.                                               |
+| C1 \_ ALPHA   | 0x0100 | Beliebiges linguistisches Zeichen (alphabetisch, syllabary oder ideographic). |
+| C1 \_ DEFINIERT | 0x0200 | Ein definiertes Zeichen, aber keiner der anderen \_ \* C1-Typen.       |
 
 
 
- 
+ 
 
-Die *Ctype2* -Typen unterstützen das ordnungsgemäße Layout von Unicode-Text. Die Direction-Attribute werden zugewiesen, sodass der von Unicode standardisierte bidirektionale layouthmus genaue Ergebnisse liefert. Diese Typen schließen sich gegenseitig aus. Weitere Informationen zur Verwendung dieser Attribute finden Sie unter Unicode- *Standard: weltweite Zeichencodierung, Volumes 1 und 2*, Addison-Wesley Publishing Company: 1991, 1992.
+Die *Ctype2-Typen* unterstützen das richtige Layout von Unicode-Text. Die Richtungsattribute werden zugewiesen, sodass der bidirektionale Layoutalgorithmus, der durch Unicode standardisiert ist, genaue Ergebnisse liefert. Diese Typen schließen sich gegenseitig aus. Weitere Informationen zur Verwendung dieser Attribute finden Sie unter *The Unicode Standard: Worldwide Character Encoding, Volumes 1 and 2*, Addison-Wesley Publishing Company: 1991, 1992.
 
 
 
-| CType2          | Wert | Bedeutung                          |
+| CType2-Name          | Wert | Bedeutung                          |
 |----------------------|-------|----------------------------------|
-| Starke              |       |                                  |
-| C2 \_ LeftToRight      | 0x1   | Von links nach rechts.                   |
-| C2 \_ RightToLeft      | 0x2   | Von rechts nach links.                   |
-| Weak                |       |                                  |
-| C2- \_ europenumber     | 0x3   | Europäische Zahl, Europäische Ziffer. |
-| C2- \_ europeseparser  | 0x4   | Europäisches numerisches Trennzeichen.      |
-| C2-Abschluss Zeichen \_ | 0x5   | Europäisches numerisches Terminator.     |
-| C2 \_ arabicnumber     | 0x6   | Arabische Zahl.                   |
-| C2 \_ commonseparator  | 0x7   | Gängiges numerisches Trennzeichen.        |
-| Neutrale             |       |                                  |
-| C2- \_ blockseparator   | 0x8   | Block Trennzeichen.                 |
-| C2 \_ segmentseparator | 0x9   | Segment Trennzeichen.               |
-| C2- \_ Whitespace       | 0xa   | Leerraum.                     |
-| C2 \_ otherneutral     | 0xB   | Andere neutrale.                  |
+| Stark:              |       |                                  |
+| C2 \_ LEFTTORIGHT      | 0x1   | Von links nach rechts.                   |
+| C2 \_ RIGHTTOLEFT      | 0x2   | Von rechts nach links.                   |
+| Schwach:                |       |                                  |
+| C2 \_ EUROPENUMBER     | 0x3   | Europäische Zahl, europäische Ziffer. |
+| C2 \_ EUROPESEPARATOR  | 0x4   | Europäisches numerisches Trennzeichen.      |
+| C2 \_ EUROPETERMINATOR | 0x5   | Europäisches numerisches Abschlusszeichen.     |
+| C2 \_ ARABICNUMBER     | 0x6   | Arabische Zahl.                   |
+| C2 \_ COMMONSEPARATOR  | 0x7   | Allgemeines numerisches Trennzeichen.        |
+| Neutral:             |       |                                  |
+| C2 \_ BLOCKSEPARATOR   | 0x8   | Blocktrennzeichen.                 |
+| C2 \_ SEGMENTSEPARATOR | 0x9   | Segmenttrennzeichen.               |
+| \_C2-LEERRAUM       | 0xA   | Leerraum.                     |
+| C2 \_ OTHERNEUTRAL     | 0xB   | Andere Neutrale.                  |
 | Nicht zutreffend:      |       |                                  |
-| C2 \_ NotApplicable    | 0x0   | Keine implizite Richtung.           |
+| C2 \_ NOTAPPLICABLE    | 0x0   | Keine implizite Richtung.           |
 
 
 
- 
+ 
 
-Die *Ctype3* -Typen dienen als Platzhalter für Erweiterungen der POSIX-Typen, die für die allgemeine Textverarbeitung oder für die Standard-C-Bibliotheksfunktionen erforderlich sind.
+Die *Ctype3-Typen* sollen Platzhalter für Erweiterungen der POSIX-Typen sein, die für die allgemeine Textverarbeitung oder für die C-Standardbibliotheksfunktionen erforderlich sind.
 
 
 
-| CType3       | Wert  | Bedeutung                                                             |
+| CType3-Name       | Wert  | Bedeutung                                                             |
 |-------------------|--------|---------------------------------------------------------------------|
-| \_Nicht Abstände von C3    | 0x1    | Nicht-Abstands Markierung.                                                    |
-| C3- \_ diakritisch     | 0x2    | Zeichen für diakritische nicht Abstände.                                          |
-| C3- \_ vowelmark     | 0x4    | Zeichen für die nicht-Abstände-vowel.                                              |
-| C3- \_ Symbol        | 0x8    | Tick.                                                             |
-| C3 \_ Katakana      | 0x10   | Katakana-Zeichen.                                                 |
-| C3- \_ Hiragana      | 0x20   | Hiragana-Zeichen.                                                 |
-| C3 \_ Halfwidth     | 0x40   | Zeichen halber Breite.                                               |
-| C3 \_ Fullwidth     | 0x80   | Zeichen mit voller Breite.                                               |
-| C3 \_ ideograph     | 0x100  | Ideografisches Zeichen.                                              |
-| C3 \_ Kashida       | 0x200  | Arabisches Kashida-Zeichen.                                           |
-| C3 \_ Alpha         | 0x8000 | Alle linguistischen Zeichen (alphabetisch, silabär und ideografisch). |
-| C3 \_ NotApplicable | 0x0    | Nicht zutreffend                                                     |
+| C3 \_ NONSPACING    | 0x1    | Nicht-Pacingmarkierung.                                                    |
+| C3 \_ DIACRITIC     | 0x2    | Diakritische Nonspacingmarkierung.                                          |
+| C3 \_ VOWELMARK     | 0x4    | Vokal-Nonspacingmarkierung.                                              |
+| \_C3-SYMBOL        | 0x8    | Symbol.                                                             |
+| C3 \_ KATAKANA      | 0x10   | Katakana-Zeichen.                                                 |
+| C3 \_ HIRAGANA      | 0x20   | Hiragana-Zeichen.                                                 |
+| C3 \_ HALFWIDTH     | 0x40   | Zeichen halber Breite.                                               |
+| C3 \_ FULLWIDTH     | 0x80   | Zeichen mit voller Breite.                                               |
+| \_C3-IDEOGRAMM     | 0x100  | Ideografisches Zeichen.                                              |
+| C3 \_ KASHIDA       | 0x200  | Arabisches Kashida-Zeichen.                                           |
+| C3 \_ ALPHA         | 0x8000 | Alle linguistischen Zeichen (alphabetisch, syllabary und ideographic). |
+| C3 \_ NOTAPPLICABLE | 0x0    | Nicht zutreffend                                                     |
 
 
 
- 
+ 
 
-Ein Edit Development Kit (EDK) kann *pvar* -Index Definitionen für die folgenden Bereiche enthalten, die im Unicode-Standard beschrieben werden.
+Ein Edit Development Kit (EDK) kann *pVar-Indexdefinitionen* für die folgenden Bereiche enthalten, die im Unicode-Standard beschrieben werden.
 
 
 
 | Zeichensatz         | Unicode-Bereich | Zeichensatz             | Unicode-Bereich |
 |-----------------------|---------------|---------------------------|---------------|
-| ASCII                 | 0x0 – 0x7F      | ANSI                      | 0x0 – 0xFF      |
-| Asciiprint            | 0x20 – 0x7E     | Latin1                    | 0x20 – 0xFF     |
-| Latin1Supp            | 0xa0 – 0xFF     | Latinxa                   | 0x100 – 0x17f   |
-| Latinxb               | 0x180 – 0x24f   | Ipax                      | 0x250 – 0x2af   |
-| Spacemod              | 0x2b0 – 0x2ff   | Kombinierte                 | 0x300 – 0x36f   |
-| Griechisch                 | 0x370 – 0x3ff   | Basicgreek                | 0x370 – 0x3cf   |
-| Greeksymbols          | 0x3d0 – 0x3ff   | Kyrillisch                  | 0x400 – 0x4ff   |
+| ASCII                 | 0x0 – 0x7f      | ANSI                      | 0x0 – 0xff      |
+| ASCIIPrint            | 0x20– 0x7e     | Latin1                    | 0x20 – 0xff     |
+| Latin1Supp            | 0xa0 – 0xff     | LatinXA                   | 0x100 – 0x17f   |
+| LatinXB               | 0x180 – 0x24f   | IPAX                      | 0x250 – 0x2af   |
+| SpaceMod              | 0x2b0 – 0x2ff   | Kombination                 | 0x300 – 0x36f   |
+| Griechisch                 | 0x370 – 0x3ff   | BasicGreek                | 0x370 – 0x3cf   |
+| GriechischSymbole          | 0x3d0 – 0x3ff   | Kyrillisch                  | 0x400 – 0x4ff   |
 | Armenisch              | 0x530 – 0x58f   | Hebräisch                    | 0x590 – 0x5ff   |
-| Basichebrew           | 0x5d0 – 0x5ea   | Hebrewxa                  | 0x590 – 0x5cf   |
-| Hebrewxb              | 0x5eb – 0x5ff   | Arabisch                    | 0x600 – 0x6ff   |
-| Basicarabic           | 0x600 – 0x652   | Arabicx                   | 0x653 – 0x6ff   |
-| "De vangari"             | 0x900 – 0x97f   | Bangla (ehemals Bengalisch) | 0x980 – 0x9ff   |
-| Gurmukhi              | 0xa00 – 0xa7f   | Gujarati                  | 0xa80 – 0xaff   |
-| Odia (früher Oriya) | 0xb00 – 0xb7f   | Tamilisch                     | 0xb80 – 0xbff   |
+| BasicHebrew           | 0x5d0 – 0x5ea   | HebräischXA                  | 0x590 – 0x5cf   |
+| HebräischXB              | 0x5eb – 0x5ff   | Arabisch                    | 0x600 – 0x6ff   |
+| BasicArabic           | 0x600 – 0x652   | ArabischX                   | 0x653 – 0x6ff   |
+| Devangari             | 0x900 – 0x97f   | Pausieren (vormals :) | 0x980 – 0x9ff   |
+| Gurmukhi              | 0xa00 – 0xa7f   | Gujarati                  | 0xa80– 0xaff   |
+| Odia (ehemals Oriya) | 0xb00 – 0xb7f   | Tamilisch                     | 0xb80 – 0xbff   |
 | Teluga                | 0xc00 – 0xc7f   | Kannada                   | 0xc80 – 0xcff   |
 | Malayalam             | 0xd00 – 0xd7f   | Thailändisch                      | 0xe00 – 0xe7f   |
-| Laotisch                   | 0xe80 – 0xeff   | Georgianx                 | 0x10a0 – 0xa0cf |
-| Bascgeorgian          | 0x10d0 – 0x10ff | Jamo                      | 0x1100 – 0x11ff |
-| Latinxadd             | 0x1E00 – 0x1EFF | Greekx                    | 0x1f00 – 0x1fff |
-| Genpunct              | 0x2000 – 0x206f | Hochgestellt               | 0x2070 – 0x207f |
-| Tiefgestellt             | 0x2080 – 0x208f | Superabonniert            | 0x2070 – 0x209f |
-| Währung              | 0x20a0 – 0x20cf | Combmarksym               | 0x20d0 – 0x20ff |
-| Letterlike            | 0x2100 – 0x214f | Anzahlformulare               | 0x2150 – 0x218 f |
-| Pfeile                | 0x2190 – 0x21ff | Mathops                   | 0x2200 – 0x22ff |
-| Falsch Tech              | 0x2300 – 0x23ff | Ctrlpictures              | 0x2400 – 0x243f |
-| Optcharrecog          | 0x2440 – 0x245f | Umclalpha-Anum              | 0x2460 – x24ff  |
-| Boxdrawing            | 0x2.500 – 0x257f | Block Element              | 0x2580 – 0x259f |
-| Geometshapes          | 0x25a0 – 0x25ff | Falsch Symbole               | 0x2600 – 0x26ff |
-| Dingbats              | 0x2700 – 0x27bf | Cjksympunct               | 0x3000 – 0x303f |
+| Laotisch                   | 0xe80 – 0xeff   | AtlantanX                 | 0x10a0 – 0xa0cf |
+| BascGeoroan          | 0x10d0 – 0x10ff | Jamo                      | 0x1100 – 0x11ff |
+| LatinXAdd             | 0x1e00 – 0x1eff | GriechischX                    | 0x1f00 – 0x1fff |
+| GenPunct              | 0x2000 – 0x206f | Hochgestellt               | 0x2070 – 0x207f |
+| Tiefgestellt             | 0x2080 – 0x208f | SuperSubscript            | 0x2070 – 0x209f |
+| Währung              | 0x20a0 – 0x20cf | CombMarkSym               | 0x20d0 – 0x20ff |
+| Letterlike            | 0x2100 – 0x214f | NumberForms               | 0x2150 – 0x218f |
+| Pfeile                | 0x2190 – 0x21ff | MathOps                   | 0x2200 – 0x22ff |
+| MiscTech              | 0x2300 – 0x23ff | STRGBild              | 0x2400 – 0x243f |
+| OptCharRecog          | 0x2440 – 0x245f | EnclAlphaNum              | 0x2460 – x24ff  |
+| BoxDrawing            | 0x2500 – 0x257f | BlockElement              | 0x2580 – 0x259f |
+| GeometShapes          | 0x25a0 – 0x25ff | MiscSymbols               | 0x2600 – 0x26ff |
+| Dingbats              | 0x2700 – 0x27bf | CJKSymPunct               | 0x3000 – 0x303f |
 | Hiragana              | 0x3040 – 0x309f | Katakana                  | 0x30a0 – 0x30ff |
-| Bopomofo              | 0x3100 – 0x312f | Hanguljamo                | 0x3130 – 0x318f |
-| Cjlmisc               | 0x3190 – 0x319f | Umclcjk                   | 0x3200 – 0x32ff |
-| Cjkcompatibl          | 0x3300 – 0x33ff | Nachrichten                       | 0x3400 – 0xabff |
-| Hangul                | 0xac00 – 0xd7ff | UTF16Lead                 | 0xD800 – 0xDBFF |
-| UTF16Trail            | 0xDC00 – 0xDFFF | Privateuse                | 0xE000 – 0xF 800 |
-| Cjkcompideog          | 0xF 900 – 0xF. | Alphapres                 | 0xF B00 – 0xF b4f |
-| Arabicpresa           | 0xF B50 – 0xbdff | Combhalfmark              | 0xfe20 – 0xfe2f |
-| Cjkcompform           | 0xfe30 – 0xfe4f | Smallformvar              | 0xfe50 – 0xfe6f |
-| Arabicpresb           | 0xfe70 – 0xfefe | Halffullform              | 0xFF00 – 0xffef |
-| Spezi              | 0xfff0 – 0xFFFD |                           |               |
+| Bopomofo              | 0x3100 – 0x312f | HangulJamo                | 0x3130 – 0x318f |
+| CJLMisc               | 0x3190 – 0x319f | EnclCJK                   | 0x3200 – 0x32ff |
+| CJKCompatibl          | 0x3300 – 0x33ff | Han                       | 0x3400 – 0xabff |
+| Hangul                | 0xac00 – 0xd7ff | UTF16Lead                 | 0xd800 – 0xdbff |
+| UTF16Trail            | 0xdc00 – 0xdfff | PrivateUse                | 0xe000 – 0xf800 |
+| CJKCompIdeog          | 0xf900 – 0xfaff | AlphaPres                 | 0xfb00 – 0xfb4f |
+| ArabicPresA           | 0xfb50 – 0xfdff | CombHalfMark              | 0xfe20 – 0xfe2f |
+| CJKCompForm           | 0xfe30 – 0xfe4f | SmallFormVar              | 0xfe50 – 0xfe6f |
+| ArabicPresB           | 0xfe70 – 0xfefe | HalfFullForm              | 0xff00 – 0xffef |
+| Specials              | 0xfff0 – 0xfffd |                           |               |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

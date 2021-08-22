@@ -1,5 +1,5 @@
 ---
-description: 'D3DXSHEvalConeLight-Funktion (D3DX10.h): Wertet ein Licht aus, das ein Kegel mit konstanter Intensität ist, und gibt SH-Daten (Pherical Imaging) zurück.'
+description: 'D3DXSHEvalConeLight-Funktion (D3DX10.h): Wertet ein Licht aus, das ein Kegel konstanter Intensität ist und shherische (Sh)-Daten zurückgibt.'
 ms.assetid: ad2b9c86-cf1a-426e-88e6-4c543519e002
 title: D3DXSHEvalConeLight-Funktion (D3DX10.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: fc11e7bab4cbbd6c8a685b289d4bde476cd465ca
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f3dd506c8349bd4b8648e2670baf815fcc7bb946d8996e196cd4a9a1fc8e8067
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990900"
 ---
 # <a name="d3dxshevalconelight-function-d3dx10h"></a>D3DXSHEvalConeLight-Funktion (D3DX10.h)
 
-Wertet ein Licht aus, das ein Kegel mit konstanter Intensität ist, und gibt SH-Daten (Pherical Imaging) zurück.
+Wertet ein Licht aus, das ein Kegel konstanter Intensität ist, und gibt SH-Daten zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,7 +53,7 @@ HRESULT D3DXSHEvalConeLight(
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order Koeffizienten. Der Grad der Auswertung ist Order - 1.
+Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order²-Koeffizienten. Der Grad der Auswertung ist "Order - 1".
 
 </dd> <dt>
 
@@ -62,7 +62,7 @@ Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH
 
 Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf den Hemi-Achsenrichtungsrichtungsvektor (x, y, z), in dem die SH-Basisfunktionen ausgewertet werden. Siehe Hinweise.
+Zeiger auf den Hemisphärenrichtungsvektor (x, y, z), in dem die SH-Basisfunktionen ausgewertet werden sollen. Siehe Hinweise.
 
 </dd> <dt>
 
@@ -71,7 +71,7 @@ Zeiger auf den Hemi-Achsenrichtungsrichtungsvektor (x, y, z), in dem die SH-Basi
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Radius des Kegels im Bogenmaß.
+Kegelradius im Bogenmaß.
 
 </dd> <dt>
 
@@ -133,17 +133,17 @@ Zeiger auf den SH-Ausgabevektor für die blaue Komponente.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wertet ein Licht aus, das ein Kegel mit konstanter Intensität ist und sh-Daten zurückgibt. Der Ausgabevektor wird so berechnet, dass, wenn das Intensitätsverhältnis R/G/B gleich 1 ist, die Beendigungsausgabe eines Punkts direkt unter dem Licht (ausgerichtet in der Kegelrichtung bei einem diffusen Objekt mit einem Albedo von 1) 1,0 wäre. Dadurch werden drei Beispielbeispiele berechnet. pROut wird zurückgegeben, während pGOut und pBOut zurückgegeben werden können.
+Wertet ein Licht aus, bei dem es sich um einen Kegel konstanter Intensität handelt, und gibt rekonsistente SH-Daten zurück. Der Ausgabevektor wird so berechnet, dass bei einem Intensitätsverhältnis von R/G/B gleich 1 die Ausgangsstärke eines Punkts direkt unter dem Licht (in Kegelrichtung an einem diffusen Objekt mit einem Albedo von 1 ausgerichtet) 1,0 wäre. Dadurch werden drei Testbeispiele berechnet: pROut wird zurückgegeben, während pGOut und pBOut zurückgegeben werden können.
 
 Auf der Kugel mit Einheitenradius kann die Richtung wie in der folgenden Abbildung dargestellt einfach mit theta, dem Winkel um die Z-Achse in der rechtshändigen Richtung und phi, dem Winkel von z, angegeben werden.
 
 ![Abbildung einer Kugel mit Einheitenradius](images/spherical-coordinates.png)
 
-Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen (x, y, z) und sphärischen Koordinaten (Theta, Phi) auf der Einheitenkugel. Der Winkel theta variiert im Bereich von 0 bis 2 Pi, während phi von 0 bis Pi variiert.
+Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen Koordinaten (x, y, z) und sphärischen Koordinaten (Theta, Phi) auf der Einheitenkugel. Der Winkel theta variiert über den Bereich von 0 bis 2 Pi, während phi von 0 bis pi variiert.
 
 ![Gleichungen der Beziehung zwischen kartesischen und sphärischen Koordinaten](images/spherical-coordinates-equations.png)
 
@@ -151,7 +151,7 @@ Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen (x, y, z) u
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |

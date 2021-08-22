@@ -1,9 +1,9 @@
 ---
-title: MCM_SETMAXSELCOUNT Meldung (kommstrg. h)
-description: Legt die maximale Anzahl von Tagen fest, die in einem Monatskalender-Steuerelement ausgewählt werden können. Sie können diese Nachricht explizit oder mit dem monthcal \_ setmaxselcount-Makro senden.
+title: MCM_SETMAXSELCOUNT (Commctrl.h)
+description: Legt die maximale Anzahl von Tagen fest, die in einem Monatskalender-Steuerelement ausgewählt werden können. Sie können diese Nachricht explizit oder mithilfe des \_ MonthCal-Makros SetMaxSelCount senden.
 ms.assetid: 190453ab-e53b-4db7-82c1-f9d50188ad39
 keywords:
-- Windows-Steuerelemente für MCM_SETMAXSELCOUNT Meldung
+- MCM_SETMAXSELCOUNT von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c67bcb7191bb20b9688c2fe1ffc2b458ecb7b8a8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 491e28f9af1e01a97ccbdb0d2928d35117939b82d9acc1e91ea8078aae337bcd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859243"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078974"
 ---
-# <a name="mcm_setmaxselcount-message"></a>MCM \_ setmaxselcount-Nachricht
+# <a name="mcm_setmaxselcount-message"></a>MCM \_ SETMAXSELCOUNT-Meldung
 
-Legt die maximale Anzahl von Tagen fest, die in einem Monatskalender-Steuerelement ausgewählt werden können. Sie können diese Nachricht explizit oder mit dem [**monthcal \_ setmaxselcount**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_setmaxselcount) -Makro senden.
+Legt die maximale Anzahl von Tagen fest, die in einem Monatskalender-Steuerelement ausgewählt werden können. Sie können diese Nachricht explizit oder mithilfe des [**\_ MonthCal-Makros SetMaxSelCount**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_setmaxselcount) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt die maximale Anzahl von Tagen fest, die in einem Monatskalender-Steuereleme
 *wParam* 
 </dt> <dd>
 
-Der Wert vom Typ **int** , der so festgelegt wird, dass die maximale Anzahl von Tagen, die ausgewählt werden können, dargestellt wird.
+Der Wert vom **Typ int,** der auf die maximale Anzahl von Tagen festgelegt wird, die ausgewählt werden können.
 
 </dd> <dt>
 
@@ -41,7 +41,7 @@ Der Wert vom Typ **int** , der so festgelegt wird, dass die maximale Anzahl von 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL. Diese Nachricht schlägt fehl, wenn Sie auf ein Monatskalender-Steuerelement angewendet wird, das den [**MCS- \_ MultiSelect**](month-calendar-control-styles.md) -Stil nicht verwendet.
+Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück. Diese Meldung wird nicht angezeigt, wenn sie auf ein Monatskalender-Steuerelement angewendet wird, das nicht das [**MCS \_ MULTISELECT-Format**](month-calendar-control-styles.md) verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL. Diese Na
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

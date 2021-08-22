@@ -1,28 +1,28 @@
 ---
-title: Ändern der e/a-Puffergröße
-description: Ändern der e/a-Puffergröße
+title: Ändern der E/A-Puffergröße
+description: Ändern der E/A-Puffergröße
 ms.assetid: eff97399-143e-477b-bb16-7305e83a2317
 keywords:
-- Multimedia-Datei-e/a, Ändern der Puffergröße
-- Datei-e/a, Ändern der Puffergröße
-- Eingabe und Ausgabe (e/a), Ändern der Puffergröße
-- E/a (Eingabe und Ausgabe), Ändern der Puffergröße
-- Ändern der e/a-Puffergröße
-- nicht gepufferte e/a
-- gepufferte e/a
-- mmiosetbuffer-Funktion
+- Multimediadatei-E/A, Ändern der Puffergröße
+- Datei-E/A, Ändern der Puffergröße
+- Eingabe und Ausgabe (E/A), Ändern der Puffergröße
+- E/A (Eingabe und Ausgabe), Ändern der Puffergröße
+- Ändern der E/A-Puffergröße
+- Ungepufferte E/A
+- Gepufferte E/A
+- mmioSetBuffer-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ad2171f4f09b933a3de5ec1e99750261fdda2f80
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 826fabfb7e51b80bf406721b3d5e7b094f83c1c3fe2061f7edea0810a41dc639
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038997"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119145083"
 ---
-# <a name="changing-the-io-buffer-size"></a>Ändern der e/a-Puffergröße
+# <a name="changing-the-io-buffer-size"></a>Ändern der E/A-Puffergröße
 
-Im folgenden Beispiel wird eine Datei mit dem Namen SAMPLE.TXT für nicht gepufferte e/a-Vorgänge geöffnet. Anschließend wird die gepufferte e/a mit einem internen 16K-Puffer mithilfe der [**mmiosetbuffer**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiosetbuffer) -Funktion aktiviert.
+Im folgenden Beispiel wird eine Datei mit dem Namen SAMPLE.TXT für nicht gepufferte E/A geöffnet und dann gepufferte E/A mit einem internen 16K-Puffer mithilfe der [**mmioSetBuffer-Funktion**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiosetbuffer) aktiviert.
 
 
 ```C++
@@ -42,6 +42,6 @@ else
 
 
 
- 
+ 
 
- 
+ 

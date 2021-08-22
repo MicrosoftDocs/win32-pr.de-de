@@ -1,23 +1,23 @@
 ---
-description: Damit ein Client in einem Netzwerk kommunizieren kann, muss eine Verbindung mit einem Server hergestellt werden.
+description: Damit ein Client in einem Netzwerk kommunizieren kann, muss er eine Verbindung mit einem Server herstellen.
 ms.assetid: fb52d2b7-70fa-497a-bbb4-42b25ea9d136
 title: Herstellen einer Verbindung mit einem Socket
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 03aa4461e1b00ba073320529d03e3b0fe32cdae1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 59a5a81c18089bdf5f35e96aa55a8ede87dc88598a98acd3bc5ab8338afb1208
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347171"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119132673"
 ---
 # <a name="connecting-to-a-socket"></a>Herstellen einer Verbindung mit einem Socket
 
-Damit ein Client in einem Netzwerk kommunizieren kann, muss eine Verbindung mit einem Server hergestellt werden.
+Damit ein Client in einem Netzwerk kommunizieren kann, muss er eine Verbindung mit einem Server herstellen.
 
-## <a name="to-connect-to-a-socket"></a>So verbinden Sie eine Verbindung mit einem Socket
+## <a name="to-connect-to-a-socket"></a>So stellen Sie eine Verbindung mit einem Socket her
 
-Ruft die [**Connect**](/windows/desktop/api/Winsock2/nf-winsock2-connect) -Funktion auf und übergibt den erstellten Socket und die [**sockaddr**](sockaddr-2.md) -Struktur als Parameter. Suchen Sie nach allgemeinen Fehlern.
+Rufen Sie die [**connect-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-connect) auf, und übergeben Sie den erstellten Socket und die [**Sockaddr-Struktur**](sockaddr-2.md) als Parameter. Suchen Sie nach allgemeinen Fehlern.
 
 
 ```C++
@@ -44,23 +44,23 @@ if (ConnectSocket == INVALID_SOCKET) {
 
 
 
-Die [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) -Funktion wird verwendet, um die Werte in der [**sockaddr**](sockaddr-2.md) -Struktur zu bestimmen. In diesem Beispiel wird die erste IP-Adresse, die von der **getaddrinfo** -Funktion zurückgegeben wird, verwendet, um die **sockaddr** -Struktur anzugeben, die an die [**Connect**](/windows/desktop/api/Winsock2/nf-winsock2-connect)-Klasse Wenn der **Connect** -Befehl die erste IP-Adresse nicht erfüllt, versuchen Sie die nächste [**addrinfo**](/windows/win32/api/ws2def/ns-ws2def-addrinfoa) -Struktur in der verknüpften Liste, die von der **getaddrinfo** -Funktion zurückgegeben wird.
+Die [**getaddrinfo-Funktion**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) wird verwendet, um die Werte in der [**sockaddr-Struktur**](sockaddr-2.md) zu bestimmen. In diesem Beispiel wird die erste IP-Adresse, die von der **getaddrinfo-Funktion** zurückgegeben wird, verwendet, um die **sockaddr-Struktur** anzugeben, die an die [**Verbindung**](/windows/desktop/api/Winsock2/nf-winsock2-connect)übergeben wird. Wenn beim **Verbindungsaufruf** ein Fehler bei der ersten IP-Adresse auftritt, versuchen Sie es mit der nächsten [**addrinfo-Struktur**](/windows/win32/api/ws2def/ns-ws2def-addrinfoa) in der verknüpften Liste, die von der **getaddrinfo-Funktion** zurückgegeben wird.
 
-Die in der [**sockaddr**](sockaddr-2.md) -Struktur angegebenen Informationen umfassen Folgendes:
+Die in der [**Sockaddr-Struktur angegebenen**](sockaddr-2.md) Informationen umfassen Folgendes:
 
--   die IP-Adresse des Servers, mit dem der Client eine Verbindung herstellen soll.
--   die Portnummer auf dem Server, mit der der Client eine Verbindung herstellt. Dieser Port wurde als Port 27015 angegeben, als der Client die [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) -Funktion aufgerufen hat.
+-   die IP-Adresse des Servers, mit dem der Client versucht, eine Verbindung herzustellen.
+-   Die Portnummer auf dem Server, mit dem der Client eine Verbindung herstellt. Dieser Port wurde als Port 27015 angegeben, als der Client die [**getaddrinfo-Funktion**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) aufgerufen hat.
 
-Nächster Schritt: [senden und empfangen von Daten auf dem Client](sending-and-receiving-data-on-the-client.md)
+Nächster Schritt: [Senden und Empfangen von Daten auf dem Client](sending-and-receiving-data-on-the-client.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Einstieg in Winsock](getting-started-with-winsock.md)
+[Erste Schritte mit Winsock](getting-started-with-winsock.md)
 </dt> <dt>
 
-[WinSock-Client Anwendung](winsock-client-application.md)
+[Winsock-Clientanwendung](winsock-client-application.md)
 </dt> <dt>
 
 [Erstellen eines Sockets für den Client](creating-a-socket-for-the-client.md)

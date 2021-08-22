@@ -3,7 +3,7 @@ title: GroupSizeDefinition-Element
 description: Stellt eine Layoutgröße für eine Gruppe von Steuerelementen in einer benutzerdefinierten Vorlage dar.
 ms.assetid: c0e20c80-16af-41d5-81e1-0dc32e92e3fa
 keywords:
-- GroupSizeDefinition-Element im Windows-Menüband
+- GroupSizeDefinition-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 650301a29ace2c6df9316a315d4cdbad448e5573
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 7e4076730f249695cc37c473643d8f0dc20d24f79fb48ec822afaf9b8d4234b1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119393090"
 ---
 # <a name="groupsizedefinition-element"></a>GroupSizeDefinition-Element
 
 Stellt eine Layoutgröße für eine Gruppe von Steuerelementen in einer benutzerdefinierten Vorlage dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <GroupSizeDefinition
@@ -47,7 +47,7 @@ Stellt eine Layoutgröße für eine Gruppe von Steuerelementen in einer benutzer
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -90,7 +90,7 @@ Stellt eine Layoutgröße für eine Gruppe von Steuerelementen in einer benutzer
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann bis zu dreimal für jedes [**SizeDefinition-Element**](windowsribbon-element-sizedefinition.md) auftreten (einmal für jede *Größe*).
 
@@ -193,7 +193,7 @@ Das folgende Codebeispiel veranschaulicht eine einfache benutzerdefinierte Vorla
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

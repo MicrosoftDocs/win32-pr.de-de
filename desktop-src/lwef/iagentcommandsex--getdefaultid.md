@@ -1,19 +1,19 @@
 ---
-title: Iagentcommandsex getdefaultid
-description: Iagentcommandsex getdefaultid
+title: IAgentCommandsEx GetDefaultID
+description: IAgentCommandsEx GetDefaultID
 ms.assetid: 14079ae0-ad2c-4f38-9371-9914f8402e49
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e4380eca62a65758979a94fb23511348b11acdf
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 7e4dabfb1c957031b353303775921a352bf40d984ac5de1ee9c933f79a5e02cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390316"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119105226"
 ---
-# <a name="iagentcommandsexgetdefaultid"></a>Iagentcommandsex:: getdefaultid
+# <a name="iagentcommandsexgetdefaultid"></a>IAgentCommandsEx::GetDefaultID
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT GetDefaultID(
@@ -21,28 +21,28 @@ HRESULT GetDefaultID(
 );
 ```
 
-Ruft die ID des Standard Befehls in einer [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung ab.
+Ruft die ID des Standardbefehls in einer [**Commands-Auflistung**](/windows/desktop/lwef/the-commands-collection-object) ab.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="pdwID"></span><span id="pdwid"></span><span id="PDWID"></span>*pdwid*
+<span id="pdwID"></span><span id="pdwid"></span><span id="PDWID"></span>*pdwID*
 </dt> <dd>
 
-Adresse einer Variablen, die die ID des [**Befehls**](/windows/desktop/lwef/the-command-object) Satzes als Standardwert empfängt.
+Adresse einer Variablen, die die ID des [**Befehlssatzes**](/windows/desktop/lwef/the-command-object) als Standard empfängt.
 
 </dd> </dl>
 
-Diese Eigenschaft gibt das aktuelle Standard [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt in der [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung zurück. Der Standardbefehl ist im Popupmenü des Zeichens fett formatiert. Wenn Sie jedoch den Standardbefehl festlegen, werden die Befehle zur Behandlung von Befehlen oder zum Doppelklicken nicht geändert.
+Diese Eigenschaft gibt das aktuelle [**Command-Standardobjekt**](/windows/desktop/lwef/the-command-object) in Ihrer [**Commands-Auflistung zurück.**](/windows/desktop/lwef/the-commands-collection-object) Der Standardbefehl ist im Popupmenü des Zeichens fett formatiert. Das Festlegen des Standardbefehls ändert jedoch keine Befehlsbehandlung oder Doppelklickereignisse.
 
-Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch die Client Anwendung. Diese Einstellung wirkt sich nicht auf andere Clients des Zeichens oder andere Zeichen ihrer Client Anwendung aus.
+Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch Ihre Clientanwendung. Die Einstellung wirkt sich nicht auf andere Clients des Zeichens oder anderer Zeichen Ihrer Clientanwendung aus.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcommandsex:: setdefaultid**](iagentcommandsex--setdefaultid.md)
+[**IAgentCommandsEx::SetDefaultID**](iagentcommandsex--setdefaultid.md)
 
 
- 
+ 
 
- 
+ 

@@ -1,37 +1,37 @@
 ---
-description: Client kontextinitialisierung
+description: Clientkontextinitialisierung
 ms.assetid: 0c8aad3e-e726-49ce-8fc9-94dbd60cc5cb
-title: Client kontextinitialisierung
+title: Clientkontextinitialisierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 615ce5c157371f1ebfec685d6227bd11a1d76531
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a0c0f2912de57487c1f30fdac1ef40740553947b993ef6f5179a028625f132af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119141183"
 ---
-# <a name="client-context-initialization"></a>Client kontextinitialisierung
+# <a name="client-context-initialization"></a>Clientkontextinitialisierung
 
-Zum Herstellen einer sicheren Verbindung ruft der Client ein Handle für ausgehende [*Anmelde*](/windows/desktop/SecGloss/c-gly) Informationen ab, bevor eine Authentifizierungsanforderung an den Server gesendet wird. Der Server erstellt in der Authentifizierungsanforderung einen Sicherheitskontext für den Client. Es gibt zwei Client seitige SSPI-Funktionen, die an der Authentifizierungs Einrichtung beteiligt sind:
+Um eine sichere Verbindung herzustellen, erhält der Client ein ausgehendes [*Anmeldeinformationshandle,*](/windows/desktop/SecGloss/c-gly) bevor eine Authentifizierungsanforderung an den Server gesendet wird. Der Server erstellt einen Sicherheitskontext für den Client aus der Authentifizierungsanforderung. An der Einrichtung der Authentifizierung sind zwei clientseitige SSPI-Funktionen beteiligt:
 
--   [**AcquireCredentialsHandle**](/windows/win32/api/sspi/nf-sspi-acquirecredentialshandlea) erhält einen Verweis auf zuvor [*erhaltene Anmelde Informationen.*](/windows/desktop/SecGloss/c-gly)
--   [**InitializeSecurityContext (allgemein)**](/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta) erstellt die anfänglichen Authentifizierungs Anforderungs-Sicherheits Token.
+-   [**AcquireCredentialsHandle**](/windows/win32/api/sspi/nf-sspi-acquirecredentialshandlea) ruft einen Verweis auf zuvor abgerufene [*Anmeldeinformationen*](/windows/desktop/SecGloss/c-gly)ab.
+-   [**InitializeSecurityContext (Allgemein)**](/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta) erstellt die anfänglichen Sicherheitstoken für Authentifizierungsanforderungen.
 
-Code für diesen Prozess kann in der **genclientcontext** -Funktion in verwendet werden, [indem SSPI mit einem Windows Sockets-Client verwendet](using-sspi-with-a-windows-sockets-client.md)wird.
+Code für diesen Prozess finden Sie in der **GenClientContext-Funktion** unter [Verwenden von SSPI mit einem Windows Sockets Client.](using-sspi-with-a-windows-sockets-client.md)
 
-Wenn ein Client Programm zusätzlich zu seinen eigenen Anmelde Informationen, wie z. b. einem anderen Benutzernamen, einem anderen Domänen Namen und einem Kennwort, Anmelde Informationen verwenden muss, werden diese im [**AcquireCredentialsHandle**](/windows/win32/api/sspi/nf-sspi-acquirecredentialshandlea) -Befehl mit einer [**sec- \_ Winnt-Authentifizierungs \_ \_ Identitäts**](/windows/win32/api/sspi/ns-sspi-sec_winnt_auth_identity_a) Struktur, die die zusätzlichen Anmelde Informationen angibt, bereitgestellt. Weitere Informationen zu Anmelde Informationsfunktionen finden Sie unter [Verwaltung](authentication-functions.md)von Anmelde Informationen.
+Wenn ein Clientprogramm anmeldeinformationen zusätzlich zu seinen eigenen Anmeldeinformationen wie einem anderen Benutzernamen, Domänennamen und Kennwort verwenden muss, stellt es diese im [**AcquireCredentialsHandle-Aufruf**](/windows/win32/api/sspi/nf-sspi-acquirecredentialshandlea) mit einer [**SEC \_ WINNT-AUTH \_ \_ IDENTITY-Struktur**](/windows/win32/api/sspi/ns-sspi-sec_winnt_auth_identity_a) bereit, die die zusätzlichen Anmeldeinformationen angibt. Weitere Informationen zu Anmeldeinformationsfunktionen finden Sie unter [Credential Management](authentication-functions.md).
 
 > [!Note]  
-> Der **Flags** -Member der [**sec- \_ Winnt-Authentifizierungs \_ \_ Identitäts**](/windows/win32/api/sspi/ns-sspi-sec_winnt_auth_identity_a) Struktur kann auf sec \_ Winnt \_ auth Identity ANSI festgelegt werden, \_ \_ Wenn es sich bei den Zeichen folgen in der Struktur um ASCI oder OEM handelt. ANSI-Zeichen folgen können mit dem **Flags** -Member der **sec \_ Winnt \_ auth- \_ Identitäts** Struktur verwendet werden, die auf sec \_ Winnt \_ auth \_ Identity Unicode festgelegt ist, \_ Wenn Sie zunächst mithilfe der [**multibytetewidechar**](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) -Funktion in [*Unicode*](/windows/desktop/SecGloss/u-gly) konvertiert werden.
+> Der **Flags-Member** der [**SEC \_ WINNT \_ AUTH \_ IDENTITY-Struktur**](/windows/win32/api/sspi/ns-sspi-sec_winnt_auth_identity_a) kann auf SEC \_ WINNT \_ AUTH IDENTITY ANSI festgelegt \_ \_ werden, wenn Zeichenfolgen in der Struktur ASCI oder OEM sind. ANSI-Zeichenfolgen können mit dem **Flags-Member** der **SEC \_ WINNT \_ AUTH \_ IDENTITY-Struktur** verwendet werden, die auf SEC \_ WINNT AUTH IDENTITY UNICODE festgelegt \_ \_ \_ ist, wenn sie zum ersten Mal mithilfe der [**MultiByteToWideChar-Funktion**](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) in [*Unicode*](/windows/desktop/SecGloss/u-gly) konvertiert werden.
 
  
 
-Um den ersten Teil der Authentifizierung zu initiieren, ruft der Client [**InitializeSecurityContext (allgemein)**](/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta) auf, um ein erstes Sicherheits Token zu erhalten, das in einer Verbindungs Anforderungs Nachricht an den Server gesendet wird.
+Um den ersten Abschnitt der Authentifizierung zu initiieren, ruft der Client [**InitializeSecurityContext (Allgemein)**](/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta) auf, um ein anfängliches Sicherheitstoken abzurufen, das in einer Verbindungsanforderungsnachricht an den Server gesendet werden soll.
 
-Der Client verwendet die Sicherheitstokeninformationen, die im Ausgabepuffer Deskriptor empfangen werden, um eine Nachricht zu generieren, die an den Server gesendet wird. Die Erstellung der Nachricht im Hinblick auf die Platzierung verschiedener Puffer und so weiter ist Teil des [*Anwendungs Protokolls*](/windows/desktop/SecGloss/a-gly) und muss von beiden Parteien verstanden werden.
+Der Client verwendet die im Ausgabepufferdeskriptor empfangenen Sicherheitstokeninformationen, um eine Nachricht zu generieren, die an den Server gesendet werden soll. Die Erstellung der Nachricht in Bezug auf die Platzierung verschiedener Puffer usw. ist Teil des [*Anwendungsprotokolls*](/windows/desktop/SecGloss/a-gly) und muss von beiden Parteien verstanden werden.
 
-Der Client überprüft den Rückgabestatus von [**InitializeSecurityContext (allgemein)**](/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta) , um zu überprüfen, ob die Authentifizierung in einem einzelnen-Befehl durchgeführt wird. Der Rückgabestatus "SEK \_ \_ ." \_ , der fortgesetzt wird, gibt an, dass das Sicherheitsprotokoll mehrere Authentifizierungs Nachrichten erfordert. Weitere Informationen zu Kontextfunktionen finden Sie unter [Context Management (Kontext Verwaltung](authentication-functions.md)).
+Der Client überprüft den Rückgabestatus von [**InitializeSecurityContext (Allgemein),**](/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta) um festzustellen, ob die Authentifizierung in einem einzigen Aufruf abgeschlossen wird. Der Rückgabestatus SEC \_ I CONTINUE NEEDED gibt \_ \_ an, dass das Sicherheitsprotokoll mehrere Authentifizierungsmeldungen erfordert. Weitere Informationen zu Kontextfunktionen finden Sie unter [Kontextverwaltung.](authentication-functions.md)
 
  
 

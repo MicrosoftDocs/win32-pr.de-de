@@ -1,7 +1,7 @@
 ---
-description: Überprüft Parameter zur volumetextur Erstellung.
+description: Überprüft die Parameter für die Volumetexturerstellung.
 ms.assetid: 1a02cb99-2582-4d8f-aacf-67ed75f6deb8
-title: D3DXCheckVolumeTextureRequirements-Funktion (D3dx9tex. h)
+title: D3DXCheckVolumeTextureRequirements-Funktion (D3dx9tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 4940cab936ed14c847e7224c9f619244c6e422a9
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3fb285df29400ce71c439454f96e984f4fa5f53bb9c24e897d1d687778bb2044
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988830"
 ---
 # <a name="d3dxcheckvolumetexturerequirements-function"></a>D3DXCheckVolumeTextureRequirements-Funktion
 
-Überprüft Parameter zur volumetextur Erstellung.
+Überprüft die Parameter für die Volumetexturerstellung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,75 +47,75 @@ HRESULT D3DXCheckVolumeTextureRequirements(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das Gerät darstellt, das der volumetextur zugeordnet werden soll.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das Gerät darstellt, das der Volumetextur zugeordnet werden soll.
 
 </dd> <dt>
 
 *pWidth* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die angeforderte Breite in Pixel oder **null**. Gibt die korrigierte Größe zurück.
+Zeiger auf die angeforderte Breite in Pixel oder **NULL.** Gibt die korrigierte Größe zurück.
 
 </dd> <dt>
 
 *pHeight* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die angeforderte Höhe in Pixel oder **null**. Gibt die korrigierte Größe zurück.
+Zeiger auf die angeforderte Höhe in Pixel oder **NULL**. Gibt die korrigierte Größe zurück.
 
 </dd> <dt>
 
-*ptiefe* \[ in, out\]
+*pDepth* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die angeforderte Tiefe in Pixel oder **null**. Gibt die korrigierte Größe zurück.
+Zeiger auf die angeforderte Tiefe in Pixel oder **NULL.** Gibt die korrigierte Größe zurück.
 
 </dd> <dt>
 
-*pnummiplevels* \[ in, out\]
+*pNumMipLevels* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die Anzahl der angeforderten MipMap-Ebenen oder **null**. Gibt die korrigierte Anzahl von MipMap-Ebenen zurück.
+Zeiger auf die Anzahl der angeforderten Mipmapebenen oder **NULL.** Gibt die korrigierte Anzahl von Mipmapebenen zurück.
 
 </dd> <dt>
 
-*Verwendung* \[ in\]
+*Nutzung* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Wird derzeit nicht verwendet, auf 0 festgelegt.
+Wird derzeit nicht verwendet, legen Sie auf 0 fest.
 
 </dd> <dt>
 
-*pformat* \[ in, out\]
+*pFormat* \[ in, out\]
 </dt> <dd>
 
 Typ: **[D3DFORMAT](d3dformat.md)\***
 
-Zeiger auf einen Member des [D3DFORMAT](d3dformat.md) -enumerierten Typs. Gibt das gewünschte Pixel Format oder **null** an. Gibt das korrigierte Format zurück.
+Zeiger auf einen Member des [D3DFORMAT-Enumerationstyps.](d3dformat.md) Gibt das gewünschte Pixelformat oder **NULL** an. Gibt das korrigierte Format zurück.
 
 </dd> <dt>
 
-*Pool* \[ in\]
+*Pool* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DPOOL**](./d3dpool.md)**
 
-Member des [**D3DPOOL**](./d3dpool.md) -Enumerationstyps, der die Speicher Klasse beschreibt, in die die volumetextur eingefügt werden soll.
+Member des [**D3DPOOL-Enumerationstyps,**](./d3dpool.md) der die Speicherklasse beschreibt, in der die Volumetextur platziert werden soll.
 
 </dd> </dl>
 
@@ -123,11 +123,11 @@ Member des [**D3DPOOL**](./d3dpool.md) -Enumerationstyps, der die Speicher Klass
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ NotAvailable, D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ NOTAVAILABLE, D3DERR \_ INVALIDCALL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Parameter dieser Funktion ungültig sind, gibt diese Funktion korrigierte Parameter zurück.
+Wenn Parameter für diese Funktion ungültig sind, gibt diese Funktion korrigierte Parameter zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -135,8 +135,8 @@ Wenn die Parameter dieser Funktion ungültig sind, gibt diese Funktion korrigier
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
@@ -144,7 +144,7 @@ Wenn die Parameter dieser Funktion ungültig sind, gibt diese Funktion korrigier
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
+[Texturfunktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
 </dt> </dl>
 
  

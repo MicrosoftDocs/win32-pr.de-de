@@ -1,67 +1,67 @@
 ---
-title: Direct2D-Fehler Behandlungsrichtlinien
-description: In diesem Thema werden die Direct2D-Fehler Behandlungsrichtlinien beschrieben. Der Abschnitt ist wie folgt gegliedert.
+title: Richtlinien für die Direct2D-Fehlerbehandlung
+description: In diesem Thema werden die Direct2D-Fehlerbehandlungsrichtlinien beschrieben. Der Abschnitt ist wie folgt gegliedert.
 ms.assetid: b5fa327a-a315-46fa-aa78-8a5733faae01
 keywords:
 - Direct2D, Fehlerbehandlung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8fc930e7ee9e5b73b5f676103f45ffe25e4d4e61
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b3be48c5d80cbbd971f63392efaf6b902ff6187e0a2687df25ccc728efafbfab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103949025"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119318030"
 ---
-# <a name="direct2d-error-handling-policies"></a>Direct2D-Fehler Behandlungsrichtlinien
+# <a name="direct2d-error-handling-policies"></a>Richtlinien für die Direct2D-Fehlerbehandlung
 
-In diesem Thema werden die Direct2D-Fehler Behandlungsrichtlinien beschrieben. Der Abschnitt ist wie folgt gegliedert.
+In diesem Thema werden die Direct2D-Fehlerbehandlungsrichtlinien beschrieben. Der Abschnitt ist wie folgt gegliedert.
 
 -   [Verwendung von HRESULT](#use-of-hresult)
--   [Rückgabewert von Batch Funktionen](#return-value-of-batched-functions)
+-   [Rückgabewert von Batchfunktionen](#return-value-of-batched-functions)
 -   [Ungültige Eingabe](#invalid-input)
-    -   [Ausgabe Zeiger](#output-pointer)
+    -   [Ausgabezeiger](#output-pointer)
     -   [Erforderlicher Parameter](#required-parameter)
--   ["NaN" und "schlecht geordnete Eingabe"](#nan-and-poorly-ordered-input-rects)
-    -   [Nan als Eingabe](#nan-as-input)
-    -   [Nicht ordnungs eine schlechte geordnete Eingabe](#poorly-ordered-input-rects)
+-   [NaN- und Schlecht geordnete Eingabe-RECTs](#nan-and-poorly-ordered-input-rects)
+    -   [NaN als Eingabe](#nan-as-input)
+    -   [Schlecht geordnete Eingabe-RECTs](#poorly-ordered-input-rects)
 
 ## <a name="use-of-hresult"></a>Verwendung von HRESULT
 
-Wenn eine Funktion nicht in einem Batch verarbeitet wird und einen Laufzeitfehler verursachen kann, sollte **HRESULT** zurückgegeben werden, um einen Fehler anzugeben. Bei einem Laufzeitfehler handelt es sich um einen Fehler, der zur Entwurfszeit nicht vermieden werden kann, z. b. nicht genügend Arbeitsspeicher.
+Wenn eine Funktion nicht batchweise ausgeführt wird und einen Laufzeitfehler haben kann, sollte **sie HRESULT** zurückgeben, um einen Fehler anzugeben. Ein Laufzeitfehler ist jeder Fehler, der zur Entwurfszeit nicht vermieden werden kann, z. B. nicht genügend Arbeitsspeicher.
 
-## <a name="return-value-of-batched-functions"></a>Rückgabewert von Batch Funktionen
+## <a name="return-value-of-batched-functions"></a>Rückgabewert von Batchfunktionen
 
-Batch Funktionen in Direct2D sind die Funktionen, die als einzelne Einheit verarbeitet werden, wenn [**EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) oder [**Close**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-close) aufgerufen wird. Dabei handelt es sich um die Zeichnungs Befehle zwischen [**beginDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) und **EndDraw** oder Befehlen in [**geometrysink**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometrysink). Für diese Funktionen werden Fehler zu dem Zeitpunkt gemeldet, zu dem der Batch abgeschlossen ist. Der Fehler wird nach " **EndDraw** " für Zeichnungs Befehle und nach " **Close** " für " **geometrysink**" zurückgegeben.
+Batchfunktionen in Direct2D sind die Funktionen, die als einzelne Einheit verarbeitet werden, wenn [**EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) oder [**Close**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-close) aufgerufen wird. Dies sind die Zeichnungsbefehle zwischen [**BeginDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) und **EndDraw oder** Befehle in [**GeometrySink.**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometrysink) Für diese Funktionen werden Fehler beim Abschluss des Batches gemeldet. Der Fehler wird nach **EndDraw für** Zeichnungsbefehle und nach **Close** für **GeometrySink zurückgegeben.**
 
-Rendertargets stoppt das Zeichnen, wenn ein Fehlerzustand festgelegt ist. eine Anwendung kann jedoch eine leeren [**aufzurufen,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) um den Fehlerzustand zurückzusetzen und das Zeichnen fortzusetzen.
+RenderTargets beenden das Zeichnen, wenn ein Fehlerzustand festgelegt ist, aber eine Anwendung kann [**Flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) aufrufen, um den Fehlerzustand zurückzusetzen und das Zeichnen wieder aufzunehmen.
 
-**Get** -und **set** -Funktionen haben keinen Rückgabewert. Wenn eine **Set** -Funktion jedoch über eine ungültige Eingabe verfügt, generiert die debugschicht eine Meldung. In diesem Fall wird kein Fehlerzustand festgelegt, und die **Set** -Funktion führt keine Aktion aus.
+**Die Funktionen Get** **und Set** haben keinen Rückgabewert. Wenn eine **Set-Funktion** jedoch über eine ungültige Eingabe verfügt, generiert die Debugebene eine Meldung. In diesem Fall wird kein Fehlerzustand festgelegt, und die **Set-Funktion** führt nichts aus.
 
 ## <a name="invalid-input"></a>Ungültige Eingabe
 
-Direct2D dereferenziert Ausgabe Zeiger und erforderliche Parameter, die zu Zugriffs Verstößen führen, wenn die Zeiger ungültig sind oder **null** sind.
+Direct2D dereferenziert Ausgabezeder und erforderliche Parameter, die zu Zugriffsverletzungen führen, wenn die Zeiger ungültig oder **NULL sind.**
 
-### <a name="output-pointer"></a>Ausgabe Zeiger
+### <a name="output-pointer"></a>Ausgabezeiger
 
-Direct2D dereferenziert einen Ausgabe Zeiger und weist ihn sofort nach der Eingabe der Funktion **null** zu. Dies führt zu einer Zugriffsverletzung, wenn ein Aufrufer **null** als Zeiger auf den Rückgabewert übergibt. Diese Richtlinie gilt auch für Arrays von Zeigern. Bei anderen Ausgabeparametern, z. b. einer Struktur, erfolgt die Dereferenzierung später und führt ebenfalls zu einer Zugriffsverletzung. Es gibt jedoch einige Methoden mit optionalen Ausgabe Zeigern (d. h. [**EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw), [**Flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush)), die keine Zugriffsverletzung verursachen.
+Direct2D dereferenziert einen Ausgabezeiger und  weist ihn sofort nach dem Eingeben der Funktion NULL zu. Dies verursacht eine Zugriffsverletzung, wenn ein Aufrufer **NULL** als Zeiger auf den Rückgabewert übergibt. Diese Richtlinie gilt auch für Arrays von Zeigern. Bei anderen Ausgabeparametern, z. B. einer Struktur, erfolgt die Dereferenzierung später und führt auch zu einer Zugriffsverletzung. Es gibt jedoch einige Methoden mit optionalen Ausgabezedern (d. h. [**EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw), [**Flush),**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush)die keine Zugriffsverletzung verursachen.
 
 ### <a name="required-parameter"></a>Erforderlicher Parameter
 
-Wenn **null** an eine Funktion übermittelt wird, die einen gültigen Wert erfordert, dereferenziert die Funktion den ungültigen Zeiger frühzeitig und führt zu einer Zugriffsverletzung. Bei optionalen Eingabe Parametern ist **null** ein gültiger Wert, der einen angemessenen Standardwert ergibt.
+Wenn **NULL** an eine Funktion übergeben wird, die einen gültigen Wert erfordert, dereferenziert die Funktion den ungültigen Zeiger frühzeitig, was zu einer Zugriffsverletzung führt. Bei optionalen **Eingabeparametern ist NULL** ein gültiger Wert, der zu einem angemessenen Standardwert führt.
 
-## <a name="nan-and-poorly-ordered-input-rects"></a>"NaN" und "schlecht geordnete Eingabe"
+## <a name="nan-and-poorly-ordered-input-rects"></a>NaN- und Schlecht geordnete Eingabe-RECTs
 
-In Direct2D wird NaN als gültige Eingabe betrachtet, und eine nicht ordnungsgemäß geordnete Eingabe wird sortiert.
+In Direct2D gilt NaN als gültige Eingabe, und schlecht sortierte Eingabe-RECTs werden sortiert.
 
-### <a name="nan-as-input"></a>Nan als Eingabe
+### <a name="nan-as-input"></a>NaN als Eingabe
 
-NaN wird als gültige Eingabe betrachtet, obwohl es in der Regel zu der primitiven führt, die das Nan-Zeichen nicht zeichnet. Die Direct2D-API bietet keine explizite Filterung von Nan zum Validieren von Eingaben.
+NaN wird als gültige Eingabe betrachtet, führt jedoch in der Regel dazu, dass das Primitive, das das NaN enthält, nicht gezeichnen wird. Die Direct2D-API bietet keine explizite Filterung von NaN zum Überprüfen der Eingabe.
 
-### <a name="poorly-ordered-input-rects"></a>Nicht ordnungs eine schlechte geordnete Eingabe
+### <a name="poorly-ordered-input-rects"></a>Schlecht geordnete Eingabe-RECTs
 
-Nicht ordnungsgemäß sortierte Eingabe-rects werden so sortiert, dass die oberen, linken und unteren, rechten Ecken richtig angegeben werden. Bei der Ausgabe sehen leere Rechtecke wie folgt aus: {unendlich, unendlich, Floatmax, Floatmax}.
+Schlecht sortierte Eingabe-RECTs werden so sortiert, dass die oberen, linken und unteren, rechten Ecken richtig angegeben werden. Für die Ausgabe sehen leere Rechtecke wie dies aus: {Infinity, Infinity, FloatMax, FloatMax}.
 
- 
+ 
 
- 
+ 

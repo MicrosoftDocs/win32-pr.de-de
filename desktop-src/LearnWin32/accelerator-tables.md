@@ -4,16 +4,16 @@ description: Zugriffstastentabellen
 ms.assetid: 4F2CFD7C-90D3-4C3F-9A42-05B915914EF6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2951ee99a31a977e0909de5639fa3110cea10e0b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 504749b6fad794f5f587e035f0dbc81662aa8b5faaf9b9eb13de365dd9a8d312
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108090818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146443"
 ---
 # <a name="accelerator-tables"></a>Zugriffstastentabellen
 
-Anwendungen definieren häufig Tastenkombinationen, z. B. STRG+O für den Befehl Datei öffnen. Sie können Tastenkombinationen implementieren, indem Sie einzelne [**WM \_ KEYDOWN-Nachrichten**](/windows/desktop/inputdev/wm-keydown) behandeln, aber Zugriffstastentabellen bieten eine bessere Lösung für:
+Anwendungen definieren häufig Tastenkombinationen, z. B. STRG+O für den Befehl Datei öffnen. Sie können Tastenkombinationen implementieren, indem Sie einzelne [**WM \_ KEYDOWN-Nachrichten**](/windows/desktop/inputdev/wm-keydown) behandeln. Zugriffstastentabellen bieten jedoch eine bessere Lösung für:
 
 -   Erfordert weniger Codierung.
 -   Konsolidiert alle Tastenkombinationen in einer Datendatei.
@@ -23,7 +23,7 @@ Anwendungen definieren häufig Tastenkombinationen, z. B. STRG+O für den Befehl
 Eine *Zugriffstastentabelle* ist eine Datenressource, die Tastenkombinationen wie STRG+O Anwendungsbefehlen zu ordnet. Bevor wir sehen, wie sie eine Zugriffstastentabelle verwenden, benötigen wir eine kurze Einführung in Ressourcen. Eine *Ressource* ist ein Datenblob, das in eine Anwendungsbin binär (EXE oder DLL) integriert ist. Ressourcen speichern Daten, die von der Anwendung benötigt werden, z. B. Menüs, Cursor, Symbole, Bilder, Textzeichenfolgen oder benutzerdefinierte Anwendungsdaten. Die Anwendung lädt die Ressourcendaten zur Laufzeit aus der Binärdatei. Gehen Sie wie folgt vor, um Ressourcen in eine Binärdatei ein-/aus zu schließen:
 
 1.  Erstellen Sie eine Ressourcendefinitionsdatei (RC). Diese Datei definiert die Ressourcentypen und deren Bezeichner. Die Ressourcendefinitionsdatei kann Verweise auf andere Dateien enthalten. Beispielsweise wird eine Symbolressource in der RC-Datei deklariert, aber das Symbolbild wird in einer separaten Datei gespeichert.
-2.  Verwenden Sie den Microsoft Windows-Ressourcencompiler (RC), um die Ressourcendefinitionsdatei in eine kompilierte Ressourcendatei (.res) zu kompilieren. Der RC-Compiler wird mit Visual Studio und auch dem Windows SDK.
+2.  Verwenden Sie den Microsoft Windows Resource Compiler (RC), um die Ressourcendefinitionsdatei in eine kompilierte Ressourcendatei (RES) zu kompilieren. Der RC-Compiler wird mit Visual Studio und dem Windows SDK bereitgestellt.
 3.  Verknüpfen Sie die kompilierte Ressourcendatei mit der Binärdatei.
 
 Diese Schritte entsprechen in etwa dem Kompilierungs-/Linkprozess für Codedateien. Visual Studio stellt eine Reihe von Ressourcen-Editoren zur Verfügung, die das Erstellen und Ändern von Ressourcen ermöglichen. (Diese Tools sind in den Express-Editionen von Visual Studio.) Eine RC-Datei ist jedoch einfach eine Textdatei, und die Syntax ist auf MSDN dokumentiert, sodass es möglich ist, eine RC-Datei mit einem beliebigen Text-Editor zu erstellen. Weitere Informationen finden Sie unter [Informationen zu Ressourcendateien.](/windows/desktop/menurc/about-resource-files)
@@ -40,7 +40,7 @@ Die Zugriffstastentabelle selbst verfügt über einen numerischen Bezeichner, de
 
 
 
-| Verknüpfung | Get-Help                   |
+| Verknüpfung | Befehl                   |
 |----------|---------------------------|
 | STRG+M   | Umschalten zwischen Modi.     |
 | F1       | Wechseln Sie in den Zeichnen-Modus.      |
@@ -62,7 +62,7 @@ Definieren Sie zunächst numerische Bezeichner für die Tabelle und für die Anw
 
 
 
-In diesem Beispiel identifiziert der Wert `IDR_ACCEL1` die Zugriffstastentabelle, und die nächsten drei Konstanten definieren die Anwendungsbefehle. Standardmäßig wird eine Headerdatei, die Ressourcenkonstanten definiert, häufig resource.h genannt. In der nächsten Auflistung wird die Ressourcendefinitionsdatei angezeigt.
+In diesem Beispiel identifiziert der `IDR_ACCEL1` -Wert die Accelerator-Tabelle, und die nächsten drei Konstanten definieren die Anwendungsbefehle. Standardmäßig wird eine Headerdatei, die Ressourcenkonst constants definiert, häufig als resource.h bezeichnet. In der nächsten Auflistung wird die Ressourcendefinitionsdatei angezeigt.
 
 
 ```C++
@@ -78,16 +78,16 @@ IDR_ACCEL1 ACCELERATORS
 
 
 
-Die Tastenkombinationen werden innerhalb der geschweiften Klammern definiert. Jede Verknüpfung enthält die folgenden Einträge.
+Die Tastenkombinationen werden in geschweiften Klammern definiert. Jede Verknüpfung enthält die folgenden Einträge.
 
--   Der Code mit virtuellem Schlüssel oder ASCII-Zeichen, das die Verknüpfung aufruft.
--   Der Anwendungsbefehl. Beachten Sie, dass im Beispiel symbolische Konstanten verwendet werden. Die Ressourcendefinitionsdatei enthält resource.h, wobei diese Konstanten definiert sind.
--   Das Schlüsselwort **VIRTKEY** bedeutet, dass der erste Eintrag ein Virtueller Schlüsselcode ist. Die andere Option ist die Verwendung von ASCII-Zeichen.
+-   Der Virtuelle Schlüsselcode oder das ASCII-Zeichen, das die Verknüpfung aufruft.
+-   Der Anwendungsbefehl. Beachten Sie, dass symbolische Konstanten im Beispiel verwendet werden. Die Ressourcendefinitionsdatei enthält resource.h, in der diese Konstanten definiert sind.
+-   Das Schlüsselwort **VIRTKEY bedeutet,** dass der erste Eintrag ein Virtueller Schlüsselcode ist. Die andere Option ist die Verwendung von ASCII-Zeichen.
 -   Optionale Modifizierer: ALT, CONTROL oder SHIFT.
 
-Wenn Sie ASCII-Zeichen für Tastenkombinationen verwenden, ist ein Kleinbuchstaben eine andere Verknüpfung als ein Großbuchstaben. (Wenn Sie z. B. "a" eingeben, kann ein anderer Befehl als die Eingabe von "A" aufgerufen werden.) Das kann benutzerverwendigend sein. Daher ist es im Allgemeinen besser, Codes mit virtuellen Schlüsseln anstelle von ASCII-Zeichen für Tastenkombinationen zu verwenden.
+Wenn Sie ASCII-Zeichen für Tastenkombinationen verwenden, ist ein Kleinbuchstaben eine andere Verknüpfung als ein Großbuchstaben. (Wenn Sie beispielsweise "a" eingeben, kann ein anderer Befehl als die Eingabe von "A" aufgerufen werden.) Dies kann benutzerverwirrend sein, daher ist es im Allgemeinen besser, für Tastenkombinationen Anstelle von ASCII-Zeichen Codes mit virtuellen Schlüsseln zu verwenden.
 
-## <a name="loading-the-accelerator-table"></a>Laden der Zugriffstastentabelle
+## <a name="loading-the-accelerator-table"></a>Laden der Accelerator-Tabelle
 
 Die Ressource für die Zugriffstastentabelle muss geladen werden, bevor das Programm sie verwenden kann. Um eine Zugriffstastentabelle zu laden, rufen Sie die [**LoadAccelerators-Funktion**](/windows/desktop/api/winuser/nf-winuser-loadacceleratorsa) auf.
 
@@ -121,9 +121,9 @@ Eine Zugriffstastentabelle übersetzt Schlüsselstriche in [**WM \_ COMMAND-Meld
 
 
 
-Dieser Code fügt einen Aufruf der [**TranslateAccelerator-Funktion**](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) innerhalb der Nachrichtenschleife hinzu. Die **TranslateAccelerator-Funktion** untersucht jede Fenstermeldung und sucht nach Key-Down-Meldungen. Wenn der Benutzer eine der in der Zugriffstastentabelle aufgeführten Tastenkombinationen drückt, sendet **TranslateAccelerator** eine [**WM \_ COMMAND-Meldung**](/windows/desktop/menurc/wm-command) an das Fenster. Die Funktion sendet **WM \_ COMMAND,** indem sie die Fensterprozedur direkt aufruft. Wenn **TranslateAccelerator** einen Schlüsselstrich erfolgreich übersetzt, gibt die Funktion einen Wert ungleich 0 (null) zurück. Das bedeutet, dass Sie die normale Verarbeitung für die Nachricht überspringen sollten. Andernfalls gibt **TranslateAccelerator** 0 (null) zurück. Übergeben Sie in diesem Fall die Fenstermeldung wie gewohnt an [**TranslateMessage**](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [**DispatchMessage.**](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)
+Dieser Code fügt einen Aufruf der [**TranslateAccelerator-Funktion**](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) innerhalb der Nachrichtenschleife hinzu. Die **TranslateAccelerator-Funktion** untersucht jede Fenstermeldung und sucht nach Key-Down-Meldungen. Wenn der Benutzer eine der in der Zugriffstastentabelle aufgeführten Tastenkombinationen drückt, sendet **TranslateAccelerator** eine [**WM \_ COMMAND-Meldung**](/windows/desktop/menurc/wm-command) an das Fenster. Die Funktion sendet **WM \_ COMMAND,** indem sie die Fensterprozedur direkt aufruft. Wenn **TranslateAccelerator** einen Schlüsselstrich erfolgreich übersetzt, gibt die Funktion einen Wert zurück, der nicht 0 (null) ist. Das bedeutet, dass Sie die normale Verarbeitung für die Nachricht überspringen sollten. Andernfalls **gibt TranslateAccelerator** 0 (null) zurück. Übergeben Sie in diesem Fall die Fensternachricht wie gewohnt [**an TranslateMessage**](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [**DispatchMessage.**](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)
 
-Im Folgenden wird erläutert, wie das Zeichnungsprogramm die [**WM \_ COMMAND-Meldung**](/windows/desktop/menurc/wm-command) behandeln kann:
+So könnte das Zeichnungsprogramm die [**WM \_ COMMAND-Meldung**](/windows/desktop/menurc/wm-command) behandeln:
 
 
 ```C++
@@ -155,7 +155,7 @@ Im Folgenden wird erläutert, wie das Zeichnungsprogramm die [**WM \_ COMMAND-Me
 
 
 
-In diesem Code wird davon ausgegangen, dass `SetMode` eine funktion ist, die von der Anwendung definiert wird, um zwischen den beiden Modi zu wechseln. Die Details dazu, wie Sie jeden Befehl behandeln würden, hängen natürlich von Ihrem Programm ab.
+In diesem Code wird davon ausgegangen, `SetMode` dass eine funktion ist, die von der Anwendung definiert wird, um zwischen den beiden Modi zu wechseln. Die Details zur Handhabung der einzelnen Befehle hängen natürlich von Ihrem Programm ab.
 
 ## <a name="next"></a>Nächste
 

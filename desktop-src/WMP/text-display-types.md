@@ -1,6 +1,6 @@
 ---
-title: Text Anzeigetypen
-description: Text Anzeigetypen
+title: Textanzeigetypen
+description: Textanzeigetypen
 ms.assetid: 6aa3fc89-e5f5-420f-82e0-c605676078cb
 keywords:
 - Windows Media Player Mobile Skins, Text
@@ -8,46 +8,46 @@ keywords:
 - Skins, Text
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4fa8871d889a271bcbc59ce7b3118bc05be2eb7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 01826f35db0d3877a3ecd34c351315872760b1b9b0713a36955bb3161ed6ba8f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709564"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134603"
 ---
-# <a name="text-display-types"></a>Text Anzeigetypen
+# <a name="text-display-types"></a>Textanzeigetypen
 
-Es ist nicht erforderlich, Text anzeigen in den Skin aufzunehmen, aber es gibt viele Instanzen, die Sie möglicherweise verwenden möchten. Beispielsweise können Sie eine Such Trackleiste einschließen, um dem Benutzer zu ermöglichen, zu einer beliebigen Position im Medien Element zu wechseln, aber Sie können auch eine Textanzeige einschließen, in der die Anzahl der Sekunden angezeigt wird, die seit dem Start der Wiedergabe des aktuellen Medien Elements verstrichen sind.
+Sie müssen keine Textanzeigen in Ihre Skin einfügen, aber es gibt viele Instanzen, in denen Sie dies möglicherweise wünschen. Sie können z. B. eine Seek-Trackleiste einschließen, damit der Benutzer zu einer beliebigen Position im Medienelement wechseln kann. Sie können aber auch eine Textanzeige einschließen, die die Anzahl der Sekunden anzeigt, die seit der Wiedergabe des aktuellen Medienelements verstrichen sind.
 
 **Anzeigefelder**
 
-Im folgenden finden Sie mehrere Attribute, die ein Textelement anzeigen kann:
+Es folgen mehrere Attribute, die ein Textelement anzeigen kann:
 
 -   Time
--   Abspielen
--   Nachverfolgen\#
+-   Wiedergabeliste
+-   Track\#
 -   \#Spuren
 -   Titel
 -   Autor
 -   Copyright
 -   Dateiname
--   Dateinameext
+-   DateinameExt
 -   Bitrate
 -   Häufigkeit
 -   Status
--   Volprozent
+-   VolPercent
 
-Weitere Informationen zu Textanzeige Typen finden Sie im [Text](text.md) Abschnitt der Skin-Referenz.
+Weitere Informationen zu Textanzeigetypen finden Sie im Abschnitt [Text](text.md) der Skin Reference.
 
-**Scrollen im Marquee**
+**Scrollen in Marquee**
 
-Zusätzlich zur Verwendung der einzelnen Textelemente können Sie ein oder mehrere Attribute in einem Scrolltext-Marquee kombinieren. Dies ist hilfreich, wenn Sie in einem kleinen Bereich eine Gruppierung verwandter Textinformationen anzeigen möchten. Beispielsweise können Sie Titel, Autor und Copyright Informationen in einem Marquee anzeigen.
+Zusätzlich zur Verwendung der einzelnen Textelemente können Sie ein oder mehrere Attribute in einem scrollenden Textzelt kombinieren. Dies ist nützlich, wenn Sie eine Gruppierung verwandter Textinformationen in einem kleinen Bereich anzeigen möchten. Beispielsweise können Sie Titel-, Autor- und Copyrightinformationen in einer Marquee anzeigen.
 
-Weitere Informationen zum Erstellen eines Text-Marquee finden Sie im Abschnitt " [Marquee](marquee.md) " der Skin-Referenz.
+Weitere Informationen zum Erstellen eines Textzeltes finden Sie im Abschnitt ["Marquee"](marquee.md) der Skin Reference.
 
-**Status Anzeige**
+**Statusanzeige**
 
-Eine andere Art von Textanzeige ist die Statusanzeige. Auf diese Weise können Sie automatisch Informationen über den aktuellen Status von Windows Media Player Mobile anzeigen. Beispielsweise wird der Benutzer mit der Statusanzeige informiert, wenn ein Medien Element gepuffert wird, sodass es offensichtlich ist, dass der Spieler funktioniert.
+Ein anderer Textanzeigetyp ist die Statusanzeige. Dadurch können Sie automatisch Informationen zum aktuellen Status von Windows Media Player Mobile anzeigen. Beispielsweise informiert die Statusanzeige den Benutzer, wenn ein Medienelement gepuffert wird, sodass offensichtlich ist, dass der Player funktioniert.
 
 Die folgenden Meldungen werden in der Statusanzeige angezeigt:
 
@@ -59,22 +59,22 @@ Die folgenden Meldungen werden in der Statusanzeige angezeigt:
 -   Beendet
 
 > [!Note]  
-> Wenn ein Medien Element abgespielt wird, wird die Statusanzeige durch Untertitel, Interpret, Album, Genre und aktuelle Bitrate gedreht.
+> Wenn ein Medienelement wiedergegeben wird, wird die Statusanzeige durch Untertitel, Interpret, Album, Genre und aktuelle Bitrate gedreht.
 
- 
+ 
 
-Weitere Informationen zum Erstellen einer Statusanzeige mit dem Status-Element finden Sie im Abschnitt " [Status](status.md) " der Skin-Referenz. Es wird jedoch empfohlen, dass Sie das Status-Attribut im Text-Element anstelle des Status-Elements verwenden.
+Informationen zum Erstellen einer Statusanzeige über das Status-Element finden Sie im Abschnitt [Status](status.md) der Skin Reference. Es wird jedoch bevorzugt, das Statusattribut im Text-Element anstelle des Status-Elements zu verwenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Windows Media Player Mobile-Funktionalität**](windows-media-player-mobile-functionality.md)
+[**Windows Media Player Mobile Funktionalität**](windows-media-player-mobile-functionality.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

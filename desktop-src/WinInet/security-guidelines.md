@@ -4,52 +4,52 @@ description: Es ist wichtig, den Benutzer über mögliche Sicherheitsprobleme au
 ms.assetid: f0c041fd-3cc5-491e-b088-6c93fcd61def
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b3d4214ba4582394ed555bafd58551e8b047493
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0870ecb13e195b226fbbd6e69c3c81fec256d7b35edcf2304167877e154a1dde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102110"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119386140"
 ---
 # <a name="security-guideline"></a>Sicherheitsrichtlinie
 
 Es ist wichtig, den Benutzer über mögliche Sicherheitsprobleme auf dem Laufenden zu halten.
 
-## <a name="notify-the-user-of-security-related-events"></a>Benachrichtigen des Benutzers über Security-Related-Ereignisse
+## <a name="notify-the-user-of-security-related-events"></a>Benachrichtigen des Benutzers über Security-Related Ereignisse
 
-Benachrichtigen Sie den Benutzer stets über jegliche Änderung der Sicherheit, ob es sich um einen sicherheitsbezogenen Fehler wie einen Zertifikat Fehler oder eine Änderung der Sicherheit des zugrunde liegenden Protokolls handelt, z. b. eine Änderung von einer HTTPS-Site zu einer HTTP-Site.
+Benachrichtigen Sie den Benutzer immer über jede Sicherheitsänderung, unabhängig davon, ob es sich um einen sicherheitsbezogenen Fehler handelt, z. B. einen Zertifikatfehler oder eine Änderung der Sicherheit des zugrunde liegenden Protokolls, z. B. eine Änderung von einer HTTPS-Website zu einer HTTP-Website.
 
 ## <a name="notify-the-user-of-security-related-errors"></a>Benachrichtigen des Benutzers über Security-Related Fehler
 
-Wenn Ihre Anwendung eine Fehlermeldung empfängt, die möglicherweise auf ein Sicherheitsproblem hinweist, stellt die **internetterrordlg** -Funktion eine standardmäßige, vertraute Schnittstelle zum Benachrichtigen des Benutzers in den meisten Fällen bereit.
+Wenn Ihre Anwendung eine Fehlermeldung empfängt, die auf ein Sicherheitsproblem hindeuten kann, stellt die **InternetErrorDlg-Funktion** eine standardmäßige, vertraute Schnittstelle zum Benachrichtigen des Benutzers in den meisten Fällen bereit.
 
-Zu den Fehlern, die in diese Kategorie fallen, zählen die folgenden:
+Zu den Fehlern, die in diese Kategorie fallen, zählen:
 
-**Fehler " \_ Internet \_ http \_ zu https" \_ \_ beim \_ redir**
+**FEHLER \_ INTERNET HTTP TO HTTPS ON \_ \_ \_ \_ \_ REDIR**
 
-**Fehler beim \_ Internet \_ ungültige Zertifizierungsstelle \_**
+**FEHLER \_ INTERNET \_ UNGÜLTIGE \_ ZERTIFIZIERUNGSSTELLE**
 
-**Fehler " \_ Internet \_ Post" \_ ist \_ nicht \_ sicher.**
+**FEHLER \_ \_ INTERNETBEITRAG \_ IST \_ NICHT \_ SICHER**
 
-**Fehler \_ Internet \_ Sek. \_ CERT- \_ Fehler**
+**FEHLER \_ INTERNET \_ SEC \_ CERT \_ ERRORS**
 
-**Fehler \_ Internet \_ sec \_ CERT \_ CN ist \_ ungültig.**
+**FEHLER \_ INTERNET \_ SEC \_ CERT \_ CN \_ INVALID**
 
-**Fehler \_ Internet \_ Sek. \_ CERT- \_ Datum \_ ungültig**
+**FEHLER \_ INTERNET \_ SEC \_ CERT DATE \_ \_ INVALID**
 
-Ein Fehler bei der Benachrichtigung des Benutzers über Fehler, wie z. b. diese, kann den Benutzer für verschiedene Arten von Sicherheitsverletzungen verfügbar machen, einschließlich Spoofing-Angriffe oder unfreiwilligen Offenlegung von Informationen.
+Wenn der Benutzer nicht über solche Fehler informiert wird, kann dies dazu führen, dass der Benutzer verschiedene Arten von Sicherheitsverletzungen aussetzen kann, z. B. Spoofingangriffe oder unfreiwillige Offenlegung von Informationen.
 
-## <a name="notify-the-user-when-connection-security-changes"></a>Benutzer benachrichtigen, wenn sich die Verbindungssicherheit ändert
+## <a name="notify-the-user-when-connection-security-changes"></a>Benachrichtigen des Benutzers, wenn sich die Verbindungssicherheit ändert
 
-Benachrichtigen Sie den Benutzer immer, wenn die Sicherheit der Verbindung geändert wird, z. b. von HTTPS zu http. Andernfalls verbergen Sie die Risiken der Offenlegung unfreiwilliger Informationen, es sei denn, der Benutzer hat explizit entschieden, nicht über solche Änderungen benachrichtigt zu werden.
+Benachrichtigen Sie den Benutzer immer, wenn sich die Sicherheit der Verbindung ändert, z. B. von HTTPS in HTTP. Andernfalls verbergen Sie das Risiko einer unfreiwilligen Veröffentlichung von Informationen, es sei denn, der Benutzer hat sich explizit dafür entschieden, nicht über solche Änderungen benachrichtigt zu werden.
 
-Zu den Funktionen, die eine solche Änderung der Verbindungssicherheit melden, gehören die **Internetstatus Callback** -Rückruffunktion und die **internetconfirmzonecrossing** -Funktion.
+Zu den Funktionen, die eine solche Änderung der Verbindungssicherheit melden, gehören die **Rückruffunktion InternetStatusCallback** und die **InternetConfirmZoneCrossing-Funktion.**
 
 > [!Note]  
-> WinInet unterstützt keine Server Implementierungen. Außerdem sollte Sie nicht von einem Dienst verwendet werden. Verwenden Sie für Server Implementierungen oder-Dienste [Microsoft Windows HTTP-Dienste (WinHTTP)](/windows/desktop/WinHttp/winhttp-start-page).
+> WinINet unterstützt keine Serverimplementierung. Darüber hinaus sollte sie nicht von einem Dienst verwendet werden. Verwenden Sie für Serverimplementierungen oder -dienste [Microsoft Windows HTTP Services (WinHTTP).](/windows/desktop/WinHttp/winhttp-start-page)
 
- 
+ 
 
- 
+ 
 
- 
+ 

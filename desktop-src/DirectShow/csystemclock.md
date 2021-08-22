@@ -1,7 +1,7 @@
 ---
-description: Die csystemclock-Klasse implementiert eine Uhr, die die Systemzeit zurückgibt.
+description: Die CSystemClock-Klasse implementiert eine Uhr, die die Systemzeit zurückgibt.
 ms.assetid: 22f8b641-6472-433f-bff4-4e62eae25c9b
-title: Csystemclock-Klasse
+title: CSystemClock-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,31 +12,31 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: e9cc5e0bde8983cfd8c544d3898d4af628e10f87
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c608b1d3f44a82d7aa964e803dec147a7216a71e85c6d797135713cf28af3fa0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104570079"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119317224"
 ---
-# <a name="csystemclock-class"></a>Csystemclock-Klasse
+# <a name="csystemclock-class"></a>CSystemClock-Klasse
 
 ![csystemclock-Klassenhierarchie](images/sclock01.png)
 
-Die- `CSystemClock` Klasse implementiert eine Uhr, die die Systemzeit zurückgibt.
+Die `CSystemClock` -Klasse implementiert eine Uhr, die die Systemzeit zurückgibt.
 
-Diese Klasse wird von der [**cbasereferenceclock**](cbasereferenceclock.md) -Klasse abgeleitet und fügt Unterstützung für die **ipersistent** -und [**iamclockadjust**](/windows/desktop/api/Strmif/nn-strmif-iamclockadjust) -Schnittstellen hinzu.
+Diese Klasse wird von der [**CBaseReferenceClock-Klasse**](cbasereferenceclock.md) ableiten und fügt Unterstützung für die **Schnittstellen IPersist** und [**IAMClockAdjust**](/windows/desktop/api/Strmif/nn-strmif-iamclockadjust) hinzu.
 
 
 
-| Öffentliche Methoden                                        | BESCHREIBUNG                                         |
+| Öffentliche Methoden                                        | Beschreibung                                         |
 |-------------------------------------------------------|-----------------------------------------------------|
 | [**CreateInstance**](csystemclock-createinstance.md) | Erstellt eine neue Instanz dieses Objekts.              |
-| [**Csystemclock**](csystemclock-csystemclock.md)     | Konstruktormethode.                                 |
-| Iamclockadjust-Methoden                                | BESCHREIBUNG                                         |
-| [**Setclockdelta**](csystemclock-setclockdelta.md)   | Passt die Uhrzeit an.                             |
-| Ipersistent-Methoden                                      | BESCHREIBUNG                                         |
-| [**GetClassID**](csystemclock-getclassid.md)         | Gibt den Klassen Bezeichner (CLSID) des-Objekts zurück. |
+| [**CSystemClock**](csystemclock-csystemclock.md)     | Konstruktormethode.                                 |
+| IAMClockAdjust-Methoden                                | Beschreibung                                         |
+| [**SetClockDelta**](csystemclock-setclockdelta.md)   | Passt die Uhrzeit an.                             |
+| IPersist-Methoden                                      | Beschreibung                                         |
+| [**Getclassid**](csystemclock-getclassid.md)         | Gibt den Klassenbezeichner (CLSID) des -Objekts zurück. |
 
 
 

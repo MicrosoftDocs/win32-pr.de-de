@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ -Akku Klasse stellt die Funktionen und die Verwaltung des logischen Akku Geräts dar. Diese Klasse gilt für Akkus in Laptop Systemen und anderen internen und externen Akkus.
+description: Die CIM \_ Battery-Klasse stellt die Funktionen und die Verwaltung des logischen Akkugeräts dar. Diese Klasse gilt für Akkus in Laptopsystemen und anderen internen und externen Akkus.
 ms.assetid: af127b7a-021b-4cd8-af1b-176aff760858
 ms.tgt_platform: multiple
 title: CIM_Battery-Klasse
@@ -45,23 +45,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 3719b2700c69cfa58921bed1242aa8a6de158466
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: f43e25e072ef645168d68e40283ee344e038d2502081b4a4a531fd26793159ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119080904"
 ---
-# <a name="cim_battery-class"></a>CIM- \_ Akku Klasse
+# <a name="cim_battery-class"></a>CIM \_ Battery-Klasse
 
-Die **CIM- \_ Akku** Klasse stellt die Funktionen und die Verwaltung des logischen Akku Geräts dar. Diese Klasse gilt für Akkus in Laptop Systemen und anderen internen und externen Akkus.
+Die **CIM \_ Battery-Klasse** stellt die Funktionen und die Verwaltung des logischen Akkugeräts dar. Diese Klasse gilt für Akkus in Laptopsystemen und anderen internen und externen Akkus.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -105,21 +105,21 @@ class CIM_Battery : CIM_LogicalDevice
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ Akku** Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ Battery-Klasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **CIM- \_ Akku** Klasse verfügt über diese Methoden.
+Die **CIM \_ Battery-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                             | BESCHREIBUNG                                                                                                                                |
+| Methode                                                             | Beschreibung                                                                                                                                |
 |:-------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Zurücksetzen**](reset-method-in-class-cim-battery.md)                 | Fordert eine zurück setzung des logischen Geräts an. Wird nicht von WMI implementiert.<br/>                                                                 |
-| [**SetPowerState**](setpowerstate-method-in-class-cim-battery.md) | Definiert den gewünschten Energiezustand für ein logisches Gerät und den Zeitpunkt, zu dem das Gerät in diesen Zustand versetzt werden soll. Wird nicht von WMI implementiert.<br/> |
+| [**Zurücksetzen**](reset-method-in-class-cim-battery.md)                 | Fordert eine Zurücksetzung des logischen Geräts an. Nicht von WMI implementiert.<br/>                                                                 |
+| [**SetPowerState**](setpowerstate-method-in-class-cim-battery.md) | Definiert den gewünschten Energiezustand für ein logisches Gerät und wann das Gerät in diesen Zustand versetzt werden soll. Nicht von WMI implementiert.<br/> |
 
 
 
@@ -127,20 +127,20 @@ Die **CIM- \_ Akku** Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ Akku** Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ Battery-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Verfügbarkeit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| Betriebsstatus \| 003,5 "," MIB. IETF \| Host-Resources-MIB. hrdevicestatus ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Operational State \| 003.5", "MIB. IETF \| HOST-RESOURCES-MIB.hrDeviceStatus")
 </dt> </dl>
 
 Verfügbarkeit und Status des Geräts.
@@ -151,7 +151,7 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -165,7 +165,7 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 <span id="Running_Full_Power"></span><span id="running_full_power"></span><span id="RUNNING_FULL_POWER"></span>
 
-<span id="Running_Full_Power"></span><span id="running_full_power"></span><span id="RUNNING_FULL_POWER"></span>**Running/Full Power** (3)
+<span id="Running_Full_Power"></span><span id="running_full_power"></span><span id="RUNNING_FULL_POWER"></span>Running/Full Power (3) **(Ausführen/Vollbetrieb** (3))
 
 
 </dt> <dd></dd> <dt>
@@ -200,7 +200,7 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 <span id="Off_Line"></span><span id="off_line"></span><span id="OFF_LINE"></span>
 
-<span id="Off_Line"></span><span id="off_line"></span><span id="OFF_LINE"></span>**Offline** (8)
+<span id="Off_Line"></span><span id="off_line"></span><span id="OFF_LINE"></span>**Off Line** (8)
 
 
 </dt> <dd></dd> <dt>
@@ -214,7 +214,7 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-<span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>Herunter **gestuft (10** )
+<span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>**Heruntergestuft** (10)
 
 
 </dt> <dd></dd> <dt>
@@ -235,63 +235,63 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 <span id="Power_Save_-_Unknown"></span><span id="power_save_-_unknown"></span><span id="POWER_SAVE_-_UNKNOWN"></span>
 
-<span id="Power_Save_-_Unknown"></span><span id="power_save_-_unknown"></span><span id="POWER_SAVE_-_UNKNOWN"></span>**Energiespeicher-unbekannt** (13)
+<span id="Power_Save_-_Unknown"></span><span id="power_save_-_unknown"></span><span id="POWER_SAVE_-_UNKNOWN"></span>**Energiesparen – Unbekannt** (13)
 
 
 </dt> <dd>
 
-Es ist bekannt, dass sich das Gerät in einem Energiesparmodus befindet, aber der genaue Status ist unbekannt.
+Das Gerät befindet sich bekanntermaßen im Energiesparmodus, aber sein genauer Status ist unbekannt.
 
 </dd> <dt>
 
 <span id="Power_Save_-_Low_Power_Mode"></span><span id="power_save_-_low_power_mode"></span><span id="POWER_SAVE_-_LOW_POWER_MODE"></span>
 
-<span id="Power_Save_-_Low_Power_Mode"></span><span id="power_save_-_low_power_mode"></span><span id="POWER_SAVE_-_LOW_POWER_MODE"></span>**Energiesparmodus-niedriger Energie Modus** (14)
+<span id="Power_Save_-_Low_Power_Mode"></span><span id="power_save_-_low_power_mode"></span><span id="POWER_SAVE_-_LOW_POWER_MODE"></span>**Energiesparmodus – Energiesparmodus** (14)
 
 
 </dt> <dd>
 
-Das Gerät befindet sich in einem Energiespar Zustand, funktioniert jedoch weiterhin und kann eine Beeinträchtigung der Leistung aufweisen.
+Das Gerät befindet sich im Energiesparzustand, funktioniert aber weiterhin und kann eine beeinträchtigte Leistung aufweisen.
 
 </dd> <dt>
 
 <span id="Power_Save_-_Standby"></span><span id="power_save_-_standby"></span><span id="POWER_SAVE_-_STANDBY"></span>
 
-<span id="Power_Save_-_Standby"></span><span id="power_save_-_standby"></span><span id="POWER_SAVE_-_STANDBY"></span>**Energiesparmodus-Standby** (15)
+<span id="Power_Save_-_Standby"></span><span id="power_save_-_standby"></span><span id="POWER_SAVE_-_STANDBY"></span>**Energiesparmodus – Standby** (15)
 
 
 </dt> <dd>
 
-Das Gerät funktioniert nicht, kann jedoch schnell in den vollständigen Energiespar Betrieb versetzt werden.
+Das Gerät funktioniert nicht, kann aber schnell voll ausgepowert werden.
 
 </dd> <dt>
 
 <span id="Power_Cycle"></span><span id="power_cycle"></span><span id="POWER_CYCLE"></span>
 
-<span id="Power_Cycle"></span><span id="power_cycle"></span><span id="POWER_CYCLE"></span>**Energie Zyklen** (16)
+<span id="Power_Cycle"></span><span id="power_cycle"></span><span id="POWER_CYCLE"></span>**Stromzyklus** (16)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power_Save_-_Warning"></span><span id="power_save_-_warning"></span><span id="POWER_SAVE_-_WARNING"></span>
 
-<span id="Power_Save_-_Warning"></span><span id="power_save_-_warning"></span><span id="POWER_SAVE_-_WARNING"></span>**Energiespar Speicher-Warnung** (17)
+<span id="Power_Save_-_Warning"></span><span id="power_save_-_warning"></span><span id="POWER_SAVE_-_WARNING"></span>**Energiesparen – Warnung** (17)
 
 
 </dt> <dd>
 
-Das Gerät befindet sich in einem Warn Status, auch wenn es sich im Energiesparmodus befindet.
+Das Gerät befindet sich in einem Warnungszustand, aber auch im Energiesparmodus.
 
 </dd> <dt>
 
 <span id="Paused"></span><span id="paused"></span><span id="PAUSED"></span>
 
-<span id="Paused"></span><span id="paused"></span><span id="PAUSED"></span>**Angeh** alten (18)
+<span id="Paused"></span><span id="paused"></span><span id="PAUSED"></span>**Angehalten** (18)
 
 
 </dt> <dd>
 
-Das Gerät wurde angehalten.
+Das Gerät wird angehalten.
 
 </dd> <dt>
 
@@ -319,12 +319,12 @@ Das Gerät ist nicht konfiguriert.
 
 <span id="Quiesced"></span><span id="quiesced"></span><span id="QUIESCED"></span>
 
-<span id="Quiesced"></span><span id="quiesced"></span><span id="QUIESCED"></span>Inaktiven **Status (21** )
+<span id="Quiesced"></span><span id="quiesced"></span><span id="QUIESCED"></span>**Still** (21)
 
 
 </dt> <dd>
 
-Das Gerät ist in Ruhe.
+Das Gerät ist still.
 
 </dd> </dl>
 
@@ -333,22 +333,22 @@ Das Gerät ist in Ruhe.
 **BatteryStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| Portable Akku \| 002,14 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Portable Battery \| 002.14")
 </dt> </dl>
 
-Die Beschreibung des Ladestatus der Batterie. Der Wert 10 ist im CIM-Schema ungültig, was bedeutet, dass kein Akku in der Desktop Verwaltungsschnittstelle (Desktop Management Interface, DMI) installiert ist. In diesem Fall sollte das Objekt nicht instanziiert werden.
+Beschreibung des Akkuladestatus. Der Wert 10 ist im CIM-Schema ungültig, das darstellt, dass in der Desktop Management Interface (DMI) kein Akku installiert wird. In diesem Fall sollte das -Objekt nicht instanziiert werden.
 
 <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
 
 
 </dt> <dd>
@@ -370,12 +370,12 @@ Unbekannt
 
 <span id="Fully_Charged"></span><span id="fully_charged"></span><span id="FULLY_CHARGED"></span>
 
-<span id="Fully_Charged"></span><span id="fully_charged"></span><span id="FULLY_CHARGED"></span>**Vollständig abgerechnet** (3)
+<span id="Fully_Charged"></span><span id="fully_charged"></span><span id="FULLY_CHARGED"></span>**Vollständig in Rechnung gestellt** (3)
 
 
 </dt> <dd>
 
-Vollständig abgerechnet.
+Vollständig in Rechnung gestellt.
 
 </dd> <dt>
 
@@ -403,51 +403,51 @@ Kritisch.
 
 <span id="Charging"></span><span id="charging"></span><span id="CHARGING"></span>
 
-<span id="Charging"></span><span id="charging"></span><span id="CHARGING"></span>Wird **berechnet** (6)
+<span id="Charging"></span><span id="charging"></span><span id="CHARGING"></span>**Gebühren** (6)
 
 
 </dt> <dd>
 
-Verlangen.
+Laden.
 
 </dd> <dt>
 
 <span id="Charging_and_High"></span><span id="charging_and_high"></span><span id="CHARGING_AND_HIGH"></span>
 
-<span id="Charging_and_High"></span><span id="charging_and_high"></span><span id="CHARGING_AND_HIGH"></span>**Abrechnung und hoch** (7)
+<span id="Charging_and_High"></span><span id="charging_and_high"></span><span id="CHARGING_AND_HIGH"></span>**Aufladen und Hoch** (7)
 
 
 </dt> <dd>
 
-Abrechnung und hoch.
+Aufladen und hoch.
 
 </dd> <dt>
 
 <span id="Charging_and_Low"></span><span id="charging_and_low"></span><span id="CHARGING_AND_LOW"></span>
 
-<span id="Charging_and_Low"></span><span id="charging_and_low"></span><span id="CHARGING_AND_LOW"></span>**Abrechnung und niedrig** (8)
+<span id="Charging_and_Low"></span><span id="charging_and_low"></span><span id="CHARGING_AND_LOW"></span>**Gebühren und Niedrig** (8)
 
 
 </dt> <dd>
 
-Abrechnung und niedrig.
+Aufladen und niedrig.
 
 </dd> <dt>
 
 <span id="Charging_and_Critical"></span><span id="charging_and_critical"></span><span id="CHARGING_AND_CRITICAL"></span>
 
-<span id="Charging_and_Critical"></span><span id="charging_and_critical"></span><span id="CHARGING_AND_CRITICAL"></span>**Abrechnung und kritisch** (9)
+<span id="Charging_and_Critical"></span><span id="charging_and_critical"></span><span id="CHARGING_AND_CRITICAL"></span>**Gebühren und kritisch** (9)
 
 
 </dt> <dd>
 
-Abrechnung und kritisch.
+Gebühren und kritisch.
 
 </dd> <dt>
 
 <span id="Undefined"></span><span id="undefined"></span><span id="UNDEFINED"></span>
 
-<span id="Undefined"></span><span id="undefined"></span><span id="UNDEFINED"></span>Nicht **definiert** (10)
+<span id="Undefined"></span><span id="undefined"></span><span id="UNDEFINED"></span>**Nicht definiert** (10)
 
 
 </dt> <dd>
@@ -458,7 +458,7 @@ Nicht definiert.
 
 <span id="Partially_Charged"></span><span id="partially_charged"></span><span id="PARTIALLY_CHARGED"></span>
 
-<span id="Partially_Charged"></span><span id="partially_charged"></span><span id="PARTIALLY_CHARGED"></span>**Teilweise abgerechnet** (11)
+<span id="Partially_Charged"></span><span id="partially_charged"></span><span id="PARTIALLY_CHARGED"></span>**Teilweise in Rechnung gestellt** (11)
 
 
 </dt> <dd>
@@ -472,31 +472,31 @@ Teilweise in Rechnung gestellt.
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
 </dt> </dl>
 
-Eine kurze Textbeschreibung des-Objekts.
+Eine kurze Textbeschreibung des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**Chemi**
+**Chemie**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| Portable Akku \| 002,7 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Portable Battery \| 002.7")
 </dt> </dl>
 
 Enumeration, die die Chemie des Akkus beschreibt.
@@ -527,34 +527,34 @@ Unbekannt
 
 <span id="Lead_Acid"></span><span id="lead_acid"></span><span id="LEAD_ACID"></span>
 
-<span id="Lead_Acid"></span><span id="lead_acid"></span><span id="LEAD_ACID"></span>**Führende Acid** (3)
+<span id="Lead_Acid"></span><span id="lead_acid"></span><span id="LEAD_ACID"></span>**Lead acid** (3)
 
 
 </dt> <dd>
 
-Führende Acid.
+Lead acid.
 
 </dd> <dt>
 
 <span id="Nickel_Cadmium"></span><span id="nickel_cadmium"></span><span id="NICKEL_CADMIUM"></span>
 
-<span id="Nickel_Cadmium"></span><span id="nickel_cadmium"></span><span id="NICKEL_CADMIUM"></span>**Nickel-Cadmium** (4)
+<span id="Nickel_Cadmium"></span><span id="nickel_cadmium"></span><span id="NICKEL_CADMIUM"></span>**Über uns** (4)
 
 
 </dt> <dd>
 
-Nickel-Kadmium.
+Über die 10000-Jahre-
 
 </dd> <dt>
 
 <span id="Nickel_Metal_Hydride"></span><span id="nickel_metal_hydride"></span><span id="NICKEL_METAL_HYDRIDE"></span>
 
-<span id="Nickel_Metal_Hydride"></span><span id="nickel_metal_hydride"></span><span id="NICKEL_METAL_HYDRIDE"></span>**Nickel-Metal-Hydride** (5)
+<span id="Nickel_Metal_Hydride"></span><span id="nickel_metal_hydride"></span><span id="NICKEL_METAL_HYDRIDE"></span>**Legierung Metal Hydride** (5)
 
 
 </dt> <dd>
 
-Nickel-Metal-Hydride.
+Ig-Metal-Hydride.
 
 </dd> <dt>
 
@@ -565,38 +565,38 @@ Nickel-Metal-Hydride.
 
 </dt> <dd>
 
-Lithium-Ionen.
+Lisenoen.
 
 </dd> <dt>
 
 <span id="Zinc_air"></span><span id="zinc_air"></span><span id="ZINC_AIR"></span>
 
-<span id="Zinc_air"></span><span id="zinc_air"></span><span id="ZINC_AIR"></span>**Zink Luft** (7)
+<span id="Zinc_air"></span><span id="zinc_air"></span><span id="ZINC_AIR"></span>**Luft in Der Luft** (7)
 
 
 </dt> <dd>
 
-Zink Luft.
+Luft in der Luft.
 
 </dd> <dt>
 
 <span id="Lithium_Polymer"></span><span id="lithium_polymer"></span><span id="LITHIUM_POLYMER"></span>
 
-<span id="Lithium_Polymer"></span><span id="lithium_polymer"></span><span id="LITHIUM_POLYMER"></span>**Lithium-Polymer** (8)
+<span id="Lithium_Polymer"></span><span id="lithium_polymer"></span><span id="LITHIUM_POLYMER"></span>**Lisen** (8)
 
 
 </dt> <dd>
 
-Lithium-Polymer.
+Limote.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Configmanagererrorcode**
+**ConfigManagerErrorCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -605,9 +605,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32")
 </dt> </dl>
 
-Win32-Configuration Manager Fehlercode.
+Win32 Konfigurations-Manager Fehlercode.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 <dt>
 
@@ -627,28 +627,28 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 <span id="Windows_cannot_load_the_driver_for_this_device."></span><span id="windows_cannot_load_the_driver_for_this_device."></span><span id="WINDOWS_CANNOT_LOAD_THE_DRIVER_FOR_THIS_DEVICE."></span>
 
-**Der Treiber für dieses Gerät kann nicht geladen werden.** (2)
+**Windows kann den Treiber für dieses Gerät nicht laden.** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="The_driver_for_this_device_might_be_corrupted__or_your_system_may_be_running_low_on_memory_or_other_resources."></span><span id="the_driver_for_this_device_might_be_corrupted__or_your_system_may_be_running_low_on_memory_or_other_resources."></span><span id="THE_DRIVER_FOR_THIS_DEVICE_MIGHT_BE_CORRUPTED__OR_YOUR_SYSTEM_MAY_BE_RUNNING_LOW_ON_MEMORY_OR_OTHER_RESOURCES."></span>
 
-**Der Treiber für dieses Gerät ist möglicherweise beschädigt, oder das System verfügt über wenig Arbeitsspeicher oder andere Ressourcen.** (3)
+**Der Treiber für dieses Gerät ist möglicherweise beschädigt, oder ihr System hat möglicherweise nicht genügend Arbeitsspeicher oder andere Ressourcen.** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="This_device_is_not_working_properly._One_of_its_drivers_or_your_registry_might_be_corrupted."></span><span id="this_device_is_not_working_properly._one_of_its_drivers_or_your_registry_might_be_corrupted."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY._ONE_OF_ITS_DRIVERS_OR_YOUR_REGISTRY_MIGHT_BE_CORRUPTED."></span>
 
-**Dieses Gerät funktioniert nicht ordnungsgemäß. Einer der Treiber oder die Registrierung ist möglicherweise beschädigt.** (4)
+**Dieses Gerät funktioniert nicht ordnungsgemäß. Einer der Treiber oder Ihre Registrierung ist möglicherweise beschädigt.** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="The_driver_for_this_device_needs_a_resource_that_Windows_cannot_manage."></span><span id="the_driver_for_this_device_needs_a_resource_that_windows_cannot_manage."></span><span id="THE_DRIVER_FOR_THIS_DEVICE_NEEDS_A_RESOURCE_THAT_WINDOWS_CANNOT_MANAGE."></span>
 
-**Der Treiber für dieses Gerät benötigt eine Ressource, die von Windows nicht verwaltet werden kann.** (5)
+**Der Treiber für dieses Gerät benötigt eine Ressource, die Windows verwaltet werden kann.** (5)
 
 
 </dt> <dd></dd> <dt>
@@ -669,14 +669,14 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 <span id="The_driver_loader_for_the_device_is_missing."></span><span id="the_driver_loader_for_the_device_is_missing."></span><span id="THE_DRIVER_LOADER_FOR_THE_DEVICE_IS_MISSING."></span>
 
-**Das Treiber Lade Modul für das Gerät fehlt.** (8)
+**Das Treiberlader für das Gerät fehlt.** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="This_device_is_not_working_properly_because_the_controlling_firmware_is_reporting_the_resources_for_the_device_incorrectly."></span><span id="this_device_is_not_working_properly_because_the_controlling_firmware_is_reporting_the_resources_for_the_device_incorrectly."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_THE_CONTROLLING_FIRMWARE_IS_REPORTING_THE_RESOURCES_FOR_THE_DEVICE_INCORRECTLY."></span>
 
-**Dieses Gerät funktioniert nicht ordnungsgemäß, da die Steuerungs Firmware die Ressourcen für das Gerät falsch meldet.** (9)
+**Dieses Gerät funktioniert nicht ordnungsgemäß, da die steuernde Firmware die Ressourcen für das Gerät falsch berichtet.** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -690,42 +690,42 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 <span id="This_device_failed."></span><span id="this_device_failed."></span><span id="THIS_DEVICE_FAILED."></span>
 
-**Dieses Gerät ist fehlgeschlagen.** (11)
+**Fehler bei diesem Gerät.** (11)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="This_device_cannot_find_enough_free_resources_that_it_can_use."></span><span id="this_device_cannot_find_enough_free_resources_that_it_can_use."></span><span id="THIS_DEVICE_CANNOT_FIND_ENOUGH_FREE_RESOURCES_THAT_IT_CAN_USE."></span>
 
-**Auf diesem Gerät können nicht genügend kostenfreie Ressourcen gefunden werden.** (12)
+**Dieses Gerät kann nicht genügend freie Ressourcen finden, die es verwenden kann.** (12)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Windows_cannot_verify_this_device_s_resources."></span><span id="windows_cannot_verify_this_device_s_resources."></span><span id="WINDOWS_CANNOT_VERIFY_THIS_DEVICE_S_RESOURCES."></span>
 
-**Die Ressourcen dieses Geräts können von Windows nicht überprüft werden.** (13)
+**Windows können die Ressourcen dieses Geräts nicht überprüfen.** (13)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="This_device_cannot_work_properly_until_you_restart_your_computer."></span><span id="this_device_cannot_work_properly_until_you_restart_your_computer."></span><span id="THIS_DEVICE_CANNOT_WORK_PROPERLY_UNTIL_YOU_RESTART_YOUR_COMPUTER."></span>
 
-**Dieses Gerät funktioniert erst ordnungsgemäß, wenn Sie den Computer neu starten.** (14)
+**Dieses Gerät funktioniert erst dann ordnungsgemäß, wenn Sie Ihren Computer neu starten.** (14)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="This_device_is_not_working_properly_because_there_is_probably_a_re-enumeration_problem."></span><span id="this_device_is_not_working_properly_because_there_is_probably_a_re-enumeration_problem."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_THERE_IS_PROBABLY_A_RE-ENUMERATION_PROBLEM."></span>
 
-**Dieses Gerät funktioniert nicht ordnungsgemäß, da wahrscheinlich ein Problem mit der erneuten Aufzählung vorliegt.** (15)
+**Dieses Gerät funktioniert nicht ordnungsgemäß, da wahrscheinlich ein Problem mit der erneuten Enumeration vor liegt.** (15)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Windows_cannot_identify_all_the_resources_this_device_uses."></span><span id="windows_cannot_identify_all_the_resources_this_device_uses."></span><span id="WINDOWS_CANNOT_IDENTIFY_ALL_THE_RESOURCES_THIS_DEVICE_USES."></span>
 
-**Es können nicht alle von diesem Gerät verwendeten Ressourcen identifiziert werden.** (16)
+**Windows können nicht alle Ressourcen identifizieren, die dieses Gerät verwendet.** (16)
 
 
 </dt> <dd></dd> <dt>
@@ -746,21 +746,21 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 <span id="Failure_using_the_VxD_loader."></span><span id="failure_using_the_vxd_loader."></span><span id="FAILURE_USING_THE_VXD_LOADER."></span>
 
-**Fehler bei Verwendung des VXD-Lade Moduls.** (19)
+**Fehler beim Verwenden des VxD-Ladeers.** (19)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Your_registry_might_be_corrupted."></span><span id="your_registry_might_be_corrupted."></span><span id="YOUR_REGISTRY_MIGHT_BE_CORRUPTED."></span>
 
-**Möglicherweise ist die Registrierung beschädigt.** (20)
+**Ihre Registrierung ist möglicherweise beschädigt.** (20)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="System_failure__Try_changing_the_driver_for_this_device._If_that_does_not_work__see_your_hardware_documentation._Windows_is_removing_this_device."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_does_not_work__see_your_hardware_documentation._windows_is_removing_this_device."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOES_NOT_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION._WINDOWS_IS_REMOVING_THIS_DEVICE."></span>
 
-**System Fehler: versuchen Sie, den Treiber für dieses Gerät zu ändern. Wenn dies nicht funktioniert, finden Sie weitere Informationen in der Hardware Dokumentation. Dieses Gerät wird von Windows entfernt.** (21)
+**Systemfehler: Versuchen Sie, den Treiber für dieses Gerät zu ändern. Wenn dies nicht funktioniert, lesen Sie ihre Hardwaredokumentation. Windows entfernt dieses Gerät.** (21)
 
 
 </dt> <dd></dd> <dt>
@@ -774,35 +774,35 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 <span id="System_failure__Try_changing_the_driver_for_this_device._If_that_doesn_t_work__see_your_hardware_documentation."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_doesn_t_work__see_your_hardware_documentation."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOESN_T_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION."></span>
 
-**System Fehler: versuchen Sie, den Treiber für dieses Gerät zu ändern. Wenn dies nicht funktioniert, finden Sie weitere Informationen in der Hardware Dokumentation.** (23)
+**Systemfehler: Versuchen Sie, den Treiber für dieses Gerät zu ändern. Wenn dies nicht funktioniert, lesen Sie Ihre Hardwaredokumentation.** (23)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="This_device_is_not_present__is_not_working_properly__or_does_not_have_all_its_drivers_installed."></span><span id="this_device_is_not_present__is_not_working_properly__or_does_not_have_all_its_drivers_installed."></span><span id="THIS_DEVICE_IS_NOT_PRESENT__IS_NOT_WORKING_PROPERLY__OR_DOES_NOT_HAVE_ALL_ITS_DRIVERS_INSTALLED."></span>
 
-**Dieses Gerät ist nicht vorhanden, funktioniert nicht ordnungsgemäß, oder es sind nicht alle Treiber installiert.** (24)
+**Dieses Gerät ist nicht vorhanden, funktioniert nicht ordnungsgemäß oder verfügt nicht über alle installierten Treiber.** (24)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Windows_is_still_setting_up_this_device."></span><span id="windows_is_still_setting_up_this_device."></span><span id="WINDOWS_IS_STILL_SETTING_UP_THIS_DEVICE."></span>
 
-**Das Gerät wird weiterhin von Windows eingerichtet.** (25)
+**Windows wird dieses Gerät weiterhin eingerichtet.** (25)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Windows_is_still_setting_up_this_device."></span><span id="windows_is_still_setting_up_this_device."></span><span id="WINDOWS_IS_STILL_SETTING_UP_THIS_DEVICE."></span>
 
-**Das Gerät wird weiterhin von Windows eingerichtet.** (26)
+**Windows wird dieses Gerät weiterhin eingerichtet.** (26)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="This_device_does_not_have_valid_log_configuration."></span><span id="this_device_does_not_have_valid_log_configuration."></span><span id="THIS_DEVICE_DOES_NOT_HAVE_VALID_LOG_CONFIGURATION."></span>
 
-**Dieses Gerät verfügt nicht über eine gültige Protokoll Konfiguration.** (27)
+**Dieses Gerät verfügt nicht über eine gültige Protokollkonfiguration.** (27)
 
 
 </dt> <dd></dd> <dt>
@@ -816,31 +816,31 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 <span id="This_device_is_disabled_because_the_firmware_of_the_device_did_not_give_it_the_required_resources."></span><span id="this_device_is_disabled_because_the_firmware_of_the_device_did_not_give_it_the_required_resources."></span><span id="THIS_DEVICE_IS_DISABLED_BECAUSE_THE_FIRMWARE_OF_THE_DEVICE_DID_NOT_GIVE_IT_THE_REQUIRED_RESOURCES."></span>
 
-**Dieses Gerät ist deaktiviert, da die Firmware des Geräts ihm nicht die erforderlichen Ressourcen erteilt hat.** (29)
+**Dieses Gerät ist deaktiviert, da die Firmware des Geräts ihm nicht die erforderlichen Ressourcen zur Verfügung hat.** (29)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="This_device_is_using_an_Interrupt_Request__IRQ__resource_that_another_device_is_using."></span><span id="this_device_is_using_an_interrupt_request__irq__resource_that_another_device_is_using."></span><span id="THIS_DEVICE_IS_USING_AN_INTERRUPT_REQUEST__IRQ__RESOURCE_THAT_ANOTHER_DEVICE_IS_USING."></span>
 
-**Dieses Gerät verwendet eine interruptanforderungs-Ressource (UNQ), die von einem anderen Gerät verwendet wird.** (30)
+**Dieses Gerät verwendet eine IrQ-Ressource (Interrupt Request), die von einem anderen Gerät verwendet wird.** (30)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="This_device_is_not_working_properly_because_Windows_cannot_load_the_drivers_required_for_this_device."></span><span id="this_device_is_not_working_properly_because_windows_cannot_load_the_drivers_required_for_this_device."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_WINDOWS_CANNOT_LOAD_THE_DRIVERS_REQUIRED_FOR_THIS_DEVICE."></span>
 
-**Dieses Gerät funktioniert nicht ordnungsgemäß, da Windows die für dieses Gerät erforderlichen Treiber nicht laden kann.** 31,5
+**Dieses Gerät funktioniert nicht ordnungsgemäß, da Windows die für dieses Gerät erforderlichen Treiber nicht laden können.** (31)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Configmanageruserconfig**
+**ConfigManagerUserConfig**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -849,25 +849,25 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32")
 </dt> </dl>
 
-**True** gibt an, dass das Gerät eine benutzerdefinierte Konfiguration verwendet.
+True **gibt an,** dass das Gerät eine benutzerdefinierte Konfiguration verwendet.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **\_ CIM-Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Der Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Wenn diese Eigenschaft mit anderen Schlüsseleigenschaften der-Klasse verwendet wird, können alle Instanzen der-Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit anderen Schlüsseleigenschaften der -Klasse ermöglicht diese Eigenschaft, dass alle Instanzen der Klasse und deren Unterklassen eindeutig identifiziert werden.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
@@ -876,83 +876,83 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Beschreibung")
 </dt> </dl>
 
-Eine Textbeschreibung des-Objekts.
+Eine Textbeschreibung des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**Design Capacity**
+**DesignCapacity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| Portable Akku \| 002,8 "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Milliwatt Stunden ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Portable Battery \| 002.8"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("milliwatt-hours")
 </dt> </dl>
 
-Die Kapazität der Akkukapazität in Milliwatt Stunden. Wenn diese Eigenschaft nicht unterstützt wird, geben Sie 0 ein.
+Entworfene Kapazität des Akkus in Milliwattstunden. Wenn diese Eigenschaft nicht unterstützt wird, geben Sie 0 ein.
 
 </dd> <dt>
 
-**Design Spannung**
+**DesignVoltage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| Portable Akku \| 002,9 "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Millivolt ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Portable Battery \| 002.9"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("millivolts")
 </dt> </dl>
 
-Entwickelte Spannung des Akkus in Millivolt. Wenn dieses Attribut nicht unterstützt wird, geben Sie 0 ein.
+Entworfene Stromversorgung des Akkus in Millivolt. Wenn dieses Attribut nicht unterstützt wird, geben Sie 0 ein.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
-**DeviceID**
+**Deviceid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **\_ CIM-Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Adresse oder andere identifizierende Informationen, um das logische Gerät eindeutig zu benennen.
+Adresse oder andere identifizierende Informationen, um dem logischen Gerät einen eindeutigen Namen zu geben.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
 </dd> <dt>
 
-**Errorgelöscht**
+**ErrorCleared**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn der Wert **true** ist, wird der in der Eigenschaft **LastErrorCode** gemeldete Fehler nun gelöscht.
+True gibt an, dass der in der **LastErrorCode-Eigenschaft** gemeldete Fehler jetzt gelöscht wird.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
@@ -961,22 +961,22 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 **ErrorDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die Informationen über den Fehler bereitstellt, der in der **LastErrorCode** -Eigenschaft aufgezeichnet wurde, sowie die auszuführenden Maßnahmen.
+Eine Freiformzeichenfolge, die Informationen über den in der **LastErrorCode-Eigenschaft** aufgezeichneten Fehler und die auszuführenden Korrekturmaßnahmen enthält.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
 </dd> <dt>
 
-**Estimatedchargeremainung**
+**EstimatedChargeRemaining**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -985,30 +985,30 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Prozent")
 </dt> </dl>
 
-Geschätzter Prozentsatz der verbleibenden vollen Abrechnung.
+Geschätzter Prozentsatz der verbleibenden vollständigen Gebühr.
 
 </dd> <dt>
 
 **EstimatedRunTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| Portable Akku \| 002,15 "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Minuten ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Portable Battery \| 002.15"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Minuten")
 </dt> </dl>
 
-Geschätzte Zeit (in Minuten), bis die Akku Belastung unter den aktuellen Ladebedingungen erschöpft ist, wenn die Stromversorgung ausfällt, verloren geht und ausfällt, oder wenn ein Laptop von einer Stromquelle getrennt ist.
+Geschätzte Zeit in Minuten, bis der Akkustand unter den aktuellen Lastbedingungen erschöpft ist, wenn der Netzbetrieb ausgeschaltet ist, verloren geht und ausgeschaltet bleibt oder wenn ein Laptop von einer Stromquelle getrennt wird.
 
 </dd> <dt>
 
-**Expectedlife**
+**ExpectedLife**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1017,39 +1017,39 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Minuten")
 </dt> </dl>
 
-Erwartete Lebensdauer des Akkus (in Minuten), vorausgesetzt, dass der Akku vollständig abgerechnet wird. Diese Eigenschaft stellt die erwartete Gesamtlebensdauer des Akkus dar, nicht die aktuelle verbleibende Lebensdauer, die durch die **EstimatedRunTime** -Eigenschaft angegeben wird.
+Die erwartete Lebensdauer des Akkus in Minuten unter der Annahme, dass der Akku vollständig geladen ist. Diese Eigenschaft stellt die erwartete Gesamtlebensdauer des Akkus dar, nicht die aktuelle verbleibende Lebensdauer, die durch die **EstimatedRunTime-Eigenschaft** angegeben wird.
 
 </dd> <dt>
 
 **FullChargeCapacity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| Portable Akku \| 002,11 "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Milliwatt Stunden ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Portable Battery \| 002.11"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("milliwatt-hours")
 </dt> </dl>
 
-Die gesamte Ladekapazität des Akkus in Milliwatt Stunden. Vergleichen Sie diesen Wert mit der **DesignCapacity** -Eigenschaft, um zu bestimmen, wann der Akku ersetzt werden muss. Die Lebensdauer eines Akkus ist in der Regel der Fall, wenn die **FullChargeCapacity** -Eigenschaft unter 80 Prozent der **DesignCapacity** -Eigenschaft liegt. Wenn diese Eigenschaft nicht unterstützt wird, geben Sie 0 ein.
+Die vollständige Ladekapazität des Akkus in Milliwattstunden. Vergleichen Sie diesen Wert mit der **DesignCapacity-Eigenschaft,** um zu bestimmen, wann der Akku ausgetauscht werden muss. Die Lebensdauer eines Akkus ist in der Regel, wenn die **FullChargeCapacity-Eigenschaft** unter 80 Prozent der **DesignCapacity-Eigenschaft** fällt. Wenn diese Eigenschaft nicht unterstützt wird, geben Sie 0 ein.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installationsdatum")
 </dt> </dl>
 
-Gibt an, wann das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Gibt an, wann das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -1058,7 +1058,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **LastErrorCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1070,10 +1070,10 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 </dd> <dt>
 
-**Maxakku Zeit**
+**MaxRechargeTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1082,23 +1082,23 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Minuten")
 </dt> </dl>
 
-Maximale Zeit in Minuten, um den Akku vollständig zu berechnen. Diese Eigenschaft stellt die Zeit dar, die eine vollständig abgelegte Akkukapazität wieder auflädt, nicht die derzeit verbleibende Ladezeit, die in der **Timeto fullgebühr** -Eigenschaft angegeben ist.
+Maximale Zeit in Minuten, um den Akku vollständig aufzuladen. Diese Eigenschaft stellt die Zeit dar, um einen vollständig erschöpften Akku zu leeren, nicht die aktuelle verbleibende Ladezeit, die in der **TimeToFullCharge-Eigenschaft** angegeben ist.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
 </dt> </dl>
 
-Die Bezeichnung, nach der das-Objekt bekannt ist. Bei einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden.
+Bezeichnung, mit der das Objekt bekannt ist. Bei Einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -1107,7 +1107,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **PNPDeviceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1116,18 +1116,18 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32")
 </dt> </dl>
 
-Gibt den Win32-Plug & Play Geräte Bezeichner des logischen Geräts an.
+Gibt den Win32-Plug & Play Gerätebezeichner des logischen Geräts an.
 
-Beispiel: " \* PNP030b"
+Beispiel: \* "PNP030b"
 
 Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
 </dd> <dt>
 
-**Powermanagementfunktionen**
+**PowerManagementCapabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1179,104 +1179,104 @@ Energiebezogene Kapazitäten wurden deaktiviert.
 
 </dt> <dd>
 
-Die Energie Verwaltungsfunktionen sind zurzeit aktiviert, aber der genaue Featuresatz ist unbekannt, oder die Informationen sind nicht verfügbar.
+Die Energieverwaltungsfunktionen sind derzeit aktiviert, aber der genaue Featuresatz ist unbekannt, oder die Informationen sind nicht verfügbar.
 
 </dd> <dt>
 
 <span id="Power_Saving_Modes_Entered_Automatically"></span><span id="power_saving_modes_entered_automatically"></span><span id="POWER_SAVING_MODES_ENTERED_AUTOMATICALLY"></span>
 
-<span id="Power_Saving_Modes_Entered_Automatically"></span><span id="power_saving_modes_entered_automatically"></span><span id="POWER_SAVING_MODES_ENTERED_AUTOMATICALLY"></span>**Automatisch eingegebene Energiespar Modi** (4)
+<span id="Power_Saving_Modes_Entered_Automatically"></span><span id="power_saving_modes_entered_automatically"></span><span id="POWER_SAVING_MODES_ENTERED_AUTOMATICALLY"></span>**Automatisch eingegebene Energiesparmodi** (4)
 
 
 </dt> <dd>
 
-Das Gerät kann seinen Energiezustand basierend auf der Verwendung oder anderen Kriterien ändern.
+Das Gerät kann seinen Energiezustand basierend auf der Nutzung oder anderen Kriterien ändern.
 
 </dd> <dt>
 
 <span id="Power_State_Settable"></span><span id="power_state_settable"></span><span id="POWER_STATE_SETTABLE"></span>
 
-<span id="Power_State_Settable"></span><span id="power_state_settable"></span><span id="POWER_STATE_SETTABLE"></span>**Einsetzbaren Energiezustand** (5)
+<span id="Power_State_Settable"></span><span id="power_state_settable"></span><span id="POWER_STATE_SETTABLE"></span>**Power State Settable** (5)
 
 
 </dt> <dd>
 
-Die **SetPowerState** -Methode wird unterstützt. Diese Methode wird in der übergeordneten [**CIM \_ LogicalDevice**](cim-logicaldevice.md) -Klasse gefunden und kann implementiert werden. Weitere Informationen finden Sie unter [Entwerfen von Managed Object Format-Klassen (MOF)](/windows/desktop/WmiSdk/designing-managed-object-format--mof--classes).
+Die **SetPowerState-Methode** wird unterstützt. Diese Methode befindet sich in der übergeordneten [**CIM \_ LogicalDevice-Klasse**](cim-logicaldevice.md) und kann implementiert werden. Weitere Informationen finden Sie unter [Entwerfen von MOF-Klassen (Managed Object Format).](/windows/desktop/WmiSdk/designing-managed-object-format--mof--classes)
 
 </dd> <dt>
 
 <span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>
 
-<span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>**Unterstützung für Power Cycling** (6)
+<span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>**PowerCycling unterstützt** (6)
 
 
 </dt> <dd>
 
-Die **SetPowerState** -Methode kann aufgerufen werden, wenn der *PowerState* -Parameter auf 5 festgelegt ist ("Power Cycle").
+Die **SetPowerState-Methode** kann aufgerufen werden, wobei der *PowerState-Parameter* auf 5 ("Power Cycle") festgelegt ist.
 
 </dd> <dt>
 
 <span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>
 
-<span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>**Unterstützte Unterstützung** (7)
+<span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>Timed Power On Supported (7) **(Zeitiertes Einschalten unterstützt** (7)
 
 
 </dt> <dd>
 
-Die **SetPowerState** -Methode kann aufgerufen werden, wenn der *PowerState* -Parameter auf 5 ("Power Cycle") festgelegt ist und der *Zeit* Parameter auf ein bestimmtes Datum und eine bestimmte Uhrzeit bzw. ein bestimmtes Intervall festgelegt ist.
+Die **SetPowerState-Methode** kann aufgerufen werden, wobei der *PowerState-Parameter* auf 5 ("Power Cycle") und der *Time-Parameter* für das Einschalten auf ein bestimmtes Datum und eine bestimmte Uhrzeit oder ein bestimmtes Intervall festgelegt ist.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Powermanagementsupported**
+**PowerManagementSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass das Gerät Energie verwaltet werden kann, d. h. in einen Energiespar Status versetzt wird. Wenn **false**, sollte der ganzzahlige Wert 1 ("nicht unterstützt") der einzige Eintrag im **powermanagementfunktionalitäten** -Array sein.
+True gibt an, dass das Gerät mit Strom verwaltet werden kann, d.h. in einen Energiesparzustand versetzt werden kann. **False** gibt an, dass der ganzzahlige Wert 1 ("Nicht unterstützt") der einzige Eintrag im **PowerManagementCapabilities-Array** sein sollte.
 
-Diese Eigenschaft gibt nicht an, ob die Energie Verwaltungsfunktionen derzeit aktiviert sind oder ob Sie aktiviert sind, welche Features unterstützt werden. Weitere Informationen finden Sie im **powermanagementarrays** -Array.
+Diese Eigenschaft gibt nicht an, ob energieverwaltungsfeatures derzeit aktiviert sind oder welche Features unterstützt werden. Weitere Informationen finden Sie im **PowerManagementCapabilities-Array.**
 
 Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
 </dd> <dt>
 
-**Smartbatteryversion**
+**SmartBatteryVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| Portable Akku \| 002,10 ")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Portable Battery \| 002.10")
 </dt> </dl>
 
-Die Versionsnummer der Smart Akku-Daten Spezifikation, die von diesem Akku unterstützt wird. Wenn der Akku diese Funktion nicht unterstützt, sollte der Wert leer gelassen werden.
+Die Von diesem Akku unterstützte Datenspezifikationsnummer für intelligente Akkus. Wenn der Akku diese Funktion nicht unterstützt, sollte der Wert leer gelassen werden.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
-Eine Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebliche Status können definiert werden. Der Betriebsstatus kann "OK", "heruntergestuft" und "pred Fail" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. b. ein intelligent-fähiges Festplattenlaufwerk).
+Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebsbereite Status können definiert werden. Der Betriebsstatus kann "OK", "Heruntergestuft" und "Fehler vor dem Fehler" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. B. ein SMART-fähiges Festplattenlaufwerk).
 
-Der nicht betriebliche Status kann "Error", "Starting", "Stop" und "Service" enthalten. "Service" kann während der Datenträger Spiegelung angewendet werden, indem eine Benutzer Berechtigungs Liste oder eine andere administrative Arbeit neu geladen wird. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Nicht betriebsbereite Status können "Error", "Starting", "Stopping" und "Service" sein. "Dienst" kann während der Datenträgerspiegelung, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Administrativen Arbeiten angewendet werden. Nicht alle dieser Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -1300,35 +1300,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird gestartet** ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -1342,28 +1342,28 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
@@ -1373,16 +1373,16 @@ Wird **beendet ("wird angehalten** ")
 **StatusInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". \|Betriebsstatus DMTF \| 003,3 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Operational State \| 003.3")
 </dt> </dl>
 
-Der Status des logischen Geräts. Wenn diese Eigenschaft nicht für das logische Gerät gilt, sollte der Wert 5 ("nicht zutreffend") verwendet werden.
+Status des logischen Geräts. Wenn diese Eigenschaft nicht für das logische Gerät gilt, sollte der Wert 5 ("Nicht zutreffend") verwendet werden.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
@@ -1390,7 +1390,7 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -1425,19 +1425,19 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer [**: weiter**](/windows/desktop/WmiSdk/standard-qualifiers) gegeben ("[**CIM- \_ System**](cim-system.md).**"Kreationclassname**"), [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-System**](cim-system.md).**CreationClassName**"), [**\_ CIM-Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des Bereichs Systems.
+Der Name der Erstellungsklasse des Bereichssystems.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
@@ -1446,25 +1446,25 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer [**: weiter**](/windows/desktop/WmiSdk/standard-qualifiers) gegeben ("[**CIM- \_ System**](cim-system.md).**Name**"), [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-System**](cim-system.md).**Name**"), [**\_ CIM-Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Der Name des Bereichs Systems.
+Der Name des Bereichssystems.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
 </dd> <dt>
 
-**Timeonakku**
+**TimeOnBattery**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1473,33 +1473,33 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Sekunden")
 </dt> </dl>
 
-Verstrichene Zeit (in Sekunden) seit dem letzten Neustart des Computer Systems auf die Akkuleistung oder die Zeitspanne seit dem letzten Neustart des Systems oder der UPS, je nachdem, welcher Wert kleiner ist. Der Wert 0 wird zurückgegeben, wenn der Akku "Online" ist.
+Verstrichene Zeit in Sekunden, seit die USV des Computersystems zuletzt in den Akkubetrieb gewechselt hat, oder die Zeitspanne seit dem letzten Neustart des Systems oder der USV, je nachdem, welcher Wert kleiner ist. Der Wert 0 wird zurückgegeben, wenn der Akku "online" ist.
 
 </dd> <dt>
 
-**Timeto fullladung**
+**TimeToFullCharge**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| Portable Akku \| 002,16 "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Minuten ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Portable Battery \| 002.16"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Minuten")
 </dt> </dl>
 
-Verbleibende Zeit in Minuten, um den Akku vollständig zum aktuellen Abrechnungs Preis zu berechnen und zu verwenden.
+Verbleibende Zeit in Minuten, um den Akku vollständig mit der aktuellen Laderate zu laden und zu verwenden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM- \_ Akku** Klasse wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)abgeleitet.
+Die **CIM \_ Battery-Klasse** wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert. Weitere Informationen zu Klassen, die von **CIM- \_ Akku** abgeleitet sind, finden Sie unter [Win32-Klassen](win32-provider.md).
+WMI implementiert diese Klasse nicht. Weitere Informationen zu Klassen, die von **CIM \_ Battery** abgeleitet wurden, finden Sie unter [Win32-Klassen.](win32-provider.md)
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -1509,8 +1509,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

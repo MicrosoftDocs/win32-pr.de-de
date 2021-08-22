@@ -1,10 +1,10 @@
 ---
 title: Template-Roots2-Attribut
-description: Dieses Attribut wird im Exchange-Konfigurations Container verwendet, um anzugeben, wo die Vorlagen Container gespeichert werden.
+description: Dieses Attribut wird auf dem Exchange Konfigurationscontainer verwendet, um anzugeben, wo die Vorlagencontainer gespeichert werden.
 ms.assetid: ad9607c7-fd7b-48b3-abdb-1340ef357bd0
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Template-Roots2-Attribut
+- Template-Roots2 AD-Attributschema
 - templateRoots2-Attribut AD-Schema
 topic_type:
 - apiref
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 83c8e47b2b7ff9bd4a37b0a0ab86976a6515e4e2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e4cebe83ba530d4b620f8d46449d0168b99bd8b2b8e040a4c1e6cad8eba33342
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022058"
 ---
 # <a name="template-roots2-attribute"></a>Template-Roots2-Attribut
 
-Dieses Attribut wird im Exchange-Konfigurations Container verwendet, um anzugeben, wo die Vorlagen Container gespeichert werden. Diese Informationen werden vom Active Directory MAPI-Anbieter verwendet.
+Dieses Attribut wird auf dem Exchange Konfigurationscontainer verwendet, um anzugeben, wo die Vorlagencontainer gespeichert werden. Diese Informationen werden vom Active Directory MAPI-Anbieter verwendet.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
 | CN                | Template-Roots2                         |
-| LDAP-Display-Name | templateRoots2                          |
+| Ldap-Anzeigename | templateRoots2                          |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.2048                 |
 | System-ID-GUID    | b1cba91a-0682-4362-a659-153e201ef069    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
@@ -54,11 +54,11 @@ Dieses Attribut wird im Exchange-Konfigurations Container verwendet, um anzugebe
 |------------------------|--------------------------------------------------------------------------------------|
 | Link-ID                | 2126                                                                                 |
 | MAPI-Id                | \-                                                                                   |
-| System-Only            | False                                                                                |
-| Ist-einwertig       | False                                                                                |
-| Ist indiziert             | False                                                                                |
-| Im globalen Katalog      | False                                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                         |
+| System-Only            | Falsch                                                                                |
+| Ist einwertig       | Falsch                                                                                |
+| Ist indiziert             | Falsch                                                                                |
+| Im globalen Katalog      | Falsch                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                         |
 | Range-Lower            | \-                                                                                   |
 | Range-Upper            | \-                                                                                   |
 | Search-Flags           | 0x00000000                                                                           |
@@ -75,11 +75,11 @@ Dieses Attribut wird im Exchange-Konfigurations Container verwendet, um anzugebe
 |------------------------|--------------------------------------------------------------------------------------|
 | Link-ID                | 2126                                                                                 |
 | MAPI-Id                | \-                                                                                   |
-| System-Only            | False                                                                                |
-| Ist-einwertig       | False                                                                                |
-| Ist indiziert             | False                                                                                |
-| Im globalen Katalog      | False                                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                         |
+| System-Only            | Falsch                                                                                |
+| Ist einwertig       | Falsch                                                                                |
+| Ist indiziert             | Falsch                                                                                |
+| Im globalen Katalog      | Falsch                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                         |
 | Range-Lower            | \-                                                                                   |
 | Range-Upper            | \-                                                                                   |
 | Search-Flags           | 0x00000000                                                                           |
@@ -96,11 +96,11 @@ Dieses Attribut wird im Exchange-Konfigurations Container verwendet, um anzugebe
 |------------------------|--------------------------------------------------------------------------------------|
 | Link-ID                | 2126                                                                                 |
 | MAPI-Id                | \-                                                                                   |
-| System-Only            | False                                                                                |
-| Ist-einwertig       | False                                                                                |
-| Ist indiziert             | False                                                                                |
-| Im globalen Katalog      | False                                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                         |
+| System-Only            | Falsch                                                                                |
+| Ist einwertig       | Falsch                                                                                |
+| Ist indiziert             | Falsch                                                                                |
+| Im globalen Katalog      | Falsch                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                         |
 | Range-Lower            | \-                                                                                   |
 | Range-Upper            | \-                                                                                   |
 | Search-Flags           | 0x00000000                                                                           |

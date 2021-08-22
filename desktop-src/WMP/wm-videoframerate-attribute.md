@@ -1,9 +1,9 @@
 ---
-title: WM/Videoframerate-Attribut
-description: Das WM/Videoframerate-Attribut ist ein Dezimalwert, der die Framerate (in Frames pro Sekunde) für eine Videodatei angibt.
+title: WM/VideoFrameRate-Attribut
+description: Das WM/VideoFrameRate-Attribut ist ein Dezimalwert, der die Bildfrequenz (in Frames pro Sekunde) für eine Videodatei angibt.
 ms.assetid: 6eec6e64-68b2-443c-b88a-ce87c708ab57
 keywords:
-- WM/Videoframerate-Attribut, Windows Media Player
+- WM/VideoFrameRate-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,26 +12,26 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a5baa2af39a6f12b75f847d226fb15a48c35994c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 13598199ccee156ab45481ac0a3f65dde160337e8ad1e20aade134405993987f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053778"
 ---
-# <a name="wmvideoframerate-attribute"></a>WM/Videoframerate-Attribut
+# <a name="wmvideoframerate-attribute"></a>WM/VideoFrameRate-Attribut
 
-Das **WM/Videoframerate-** Attribut ist ein Dezimalwert, der die Framerate (in Frames pro Sekunde) für eine Videodatei angibt.
+Das **WM/VideoFrameRate-Attribut** ist ein Dezimalwert, der die Bildfrequenz (in Frames pro Sekunde) für eine Videodatei angibt.
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist g \_ wszwmvideoframerate.
+Die Windows Media Format SDK-Konstante für dieses Attribut ist g \_ wszWMVideoFrameRate.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,7 +47,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

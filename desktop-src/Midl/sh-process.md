@@ -1,8 +1,8 @@
 ---
 title: sh_process-Schlüsselwort
-description: Das \ SH \_ Process \-Schlüsselwort gibt an, dass das Systemobjekt ein Handle für einen Prozess ist.
+description: Das Schlüsselwort \sh \_ process\ gibt an, dass das Systemobjekt ein Handle für einen Prozess ist.
 keywords:
-- sh_process-Schlüsselwort-Mittel l
+- sh_process MIDL-Schlüsselwort
 topic_type:
 - apiref
 api_name:
@@ -11,16 +11,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 02/05/2021
-ms.openlocfilehash: 3652c6889c687173bbf7b397cddff4659c0329f1
-ms.sourcegitcommit: af9983bab40fe0b042f177ce7ca79f2eb0f9d0e8
+ms.openlocfilehash: 3dc11f2980e5124bbc76d0b57fce21d8007b0c09905ca47707d5be6fbb112d41
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "106362804"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146273"
 ---
-# <a name="sh_process-keyword"></a>SH \_ Process-Schlüsselwort
+# <a name="sh_process-keyword"></a>sh \_ process-Schlüsselwort
 
-Das **SH \_ Process** -Schlüsselwort gibt an, dass ein ein `system_handle` Handle für einen Prozess enthält.
+Das **sh \_ process-Schlüsselwort** gibt an, dass `system_handle` ein ein Handle für einen Prozess enthält.
 
 ``` syntax
 [system_handle(sh_process)]
@@ -32,11 +32,11 @@ Das **SH \_ Process** -Schlüsselwort gibt an, dass ein ein `system_handle` Hand
 
 Dieses Schlüsselwort ist ein Parameter für [**system_handle**](system-handle.md).
 
-Die [**system_handle**](system-handle.md) Dokumentation enthält auch Details zur optionalen Verwendung des *Zugriffsrechte* Parameters. Das Standardverhalten entspricht den `DUPLICATE_SAME_ACCESS` Spezifikationen für [ **Duplikat-andle** -Funktionen](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle) .
+Die [**system_handle**](system-handle.md) dokumentation enthält auch Details zur optionalen Verwendung des *Access Rights-Parameters.* Das Standardverhalten entspricht `DUPLICATE_SAME_ACCESS` den [ **Spezifikationen der DuplicateHandle-Funktion.**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Schlüsselwort mit dem-Attribut zu verwenden `system_handle` , `-target` muss das-Flag `NT100` beim Ausführen von midl.exe auf (oder höher) festgelegt werden.
+Um dieses Schlüsselwort mit dem -Attribut verwenden zu können, muss das Flag auf (oder höher) festgelegt werden, `system_handle` `-target` wenn sie `NT100` midl.exe.
 
 ## <a name="examples"></a>Beispiele
 
@@ -56,7 +56,7 @@ interface MyInterface : IUnknown
 | Unterstützte Mindestversion (Client) | Windows 10 Anniversary Update (Version 1607, Build 14393) |
 | Unterstützte Mindestversion (Server) | Windows Server 2016 (Build 14393) |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -69,8 +69,8 @@ interface MyInterface : IUnknown
 [Prozesssicherheit und Zugriffsrechte](../procthread/process-security-and-access-rights.md)
 </dt> <dt>
 
-[Funktion " **deateprocess** "](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa)
+[**CreateProcess-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa)
 </dt> <dt>
 
-[**OpenProcess** -Funktion](/win32/api/processthreadsapi/nf-processthreadsapi-openprocess)
+[**OpenProcess-Funktion**](/win32/api/processthreadsapi/nf-processthreadsapi-openprocess)
 </dt> </dl>

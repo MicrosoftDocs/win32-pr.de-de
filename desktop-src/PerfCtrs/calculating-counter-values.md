@@ -1,21 +1,21 @@
 ---
-description: Die meisten Leistungs Zählers verwenden eine Formel zum Berechnen eines anzeigbaren Werts für den Leistungs Bewert.
+description: Die meisten Indikatortypen verwenden eine Formel zum Berechnen eines sichtbaren Werts für den Zähler.
 ms.assetid: b65a6874-fffb-41af-8620-27d4036cc7b2
 title: Berechnen von Leistungsindikatorwerten
 ms.topic: article
 ms.date: 08/17/2020
-ms.openlocfilehash: c37c5cf128d31011f184baaa6b8543ecfa8c48c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 466c4e4066b0e45fa36a2822ef1439617be545585fd56a5cba8fb664e91f5cc5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348017"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061248"
 ---
 # <a name="calculating-counter-values"></a>Berechnen von Leistungsindikatorwerten
 
-Die meisten Leistungs Zählers verwenden eine Formel zum Berechnen eines anzeigbaren Werts für den Leistungs Bewert. Eine Liste der-Typen und ihrer Formeln finden Sie im Abschnitt Counter Types des [Windows Server 2003 Deployment Kits](/previous-versions/windows/it-pro/windows-server-2003/cc776490(v=ws.10)). Wenn der Leistungs Besatz zwei Samplings erfordert, um den anzeigbaren Wert zu berechnen, wird das Flag des Zählers `PERF_DELTA_COUNTER` festgelegt.
+Die meisten Indikatortypen verwenden eine Formel zum Berechnen eines sichtbaren Werts für den Zähler. Eine Liste der Indikatortypen und deren Formeln finden Sie im Abschnitt Indikatortypen des [Windows Server 2003 Deployment Kit.](/previous-versions/windows/it-pro/windows-server-2003/cc776490(v=ws.10)) Wenn der Indikator zwei Stichproben benötigt, um den anzeigebaren Wert zu berechnen, wird das Flag des Indikatortyps `PERF_DELTA_COUNTER` festgelegt.
 
-Im folgenden Beispiel wird gezeigt, wie die Rohdaten zum Berechnen eines anzeigbaren Werts für jeden zähtertyp verwendet werden. Dieses Beispiel baut auf dem Beispiel zum [Abrufen von Daten aus dem Datenstrom](retrieving-counter-data.md)auf.
+Im folgenden Beispiel wird gezeigt, wie die Rohdaten verwendet werden, um einen anzeigebaren Wert für jeden Indikatortyp zu berechnen. Dieses Beispiel baut auf dem Beispiel unter [Abrufen von Indikatordaten](retrieving-counter-data.md)auf.
 
 ```C
 // Contains the elements required to calculate a counter value.

@@ -1,48 +1,48 @@
 ---
-title: Beispiel für den täglichen Auslösung (C++)
-description: Dieses C++-Beispiel zeigt, wie Sie eine Aufgabe erstellen, die für die tägliche Ausführung von Notepad geplant ist.
+title: Beispiel für einen täglichen Trigger (C++)
+description: In diesem C++-Beispiel wird gezeigt, wie Sie eine Aufgabe erstellen, die täglich Editor ausgeführt werden soll.
 ms.assetid: f1038142-b83e-4159-9a7b-db2ae4ed3bd2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 05778de5740b30f3a7593873e3c9d09c209b807a
-ms.sourcegitcommit: 4834b022f93dae550cfc43068fe9e2c63d86e364
+ms.openlocfilehash: 251ef89dec6955f7a205748589f506635565ce6bf876a3d204e66ebcba37bca6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "106342117"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119139553"
 ---
-# <a name="daily-trigger-example-c"></a>Beispiel für den täglichen Auslösung (C++)
+# <a name="daily-trigger-example-c"></a>Beispiel für einen täglichen Trigger (C++)
 
-Dieses C++-Beispiel zeigt, wie Sie eine Aufgabe erstellen, die für die tägliche Ausführung von Notepad geplant ist. Der Task enthält einen täglichen-Vorgang, der eine Start Grenze und ein Tages Intervall für den Start der Aufgabe angibt. Das Beispiel zeigt auch, wie Sie ein Wiederholungsmuster für den-Vorgang festlegen, um die Aufgabe zu wiederholen. Der Task enthält auch eine Aktion, die den Task zum Ausführen von Notepad angibt.
+In diesem C++-Beispiel wird gezeigt, wie Sie eine Aufgabe erstellen, die täglich Editor ausgeführt werden soll. Die Aufgabe enthält einen täglichen Trigger, der eine Startgrenze und ein Tagesintervall für den Start der Aufgabe angibt. Das Beispiel zeigt auch, wie ein Wiederholungsmuster für den Trigger festgelegt wird, um die Aufgabe zu wiederholen. Der Task enthält auch eine Aktion, die den Task angibt, der Editor ausgeführt werden soll.
 
-Im folgenden Verfahren wird beschrieben, wie Sie eine Aufgabe planen, täglich eine ausführbare Datei zu starten.
+Im folgenden Verfahren wird beschrieben, wie eine Aufgabe so geplant wird, dass eine ausführbare Datei täglich gestartet wird.
 
-**So planen Sie den Start von Notepad täglich**
+**So planen Sie Editor täglich**
 
-1.  Initialisieren Sie com, und legen Sie allgemeine com-Sicherheit fest.
-2.  Erstellen Sie das [**ITaskService**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice) -Objekt.
+1.  Initialisieren Sie COM, und legen Sie die allgemeine COM-Sicherheit fest.
+2.  Erstellen Sie das [**ITaskService-Objekt.**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice)
 
     Mit diesem Objekt können Sie Aufgaben in einem angegebenen Ordner erstellen.
 
-3.  Rufen Sie einen Aufgaben Ordner ab, in dem eine Aufgabe erstellt werden soll.
+3.  Abrufen eines Aufgabenordners zum Erstellen einer Aufgabe.
 
-    Verwenden Sie die [**ITaskService:: GetFolder**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-getfolder) -Methode, um den Ordner zu erhalten, und die [**ITaskService:: newtask**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-newtask) -Methode zum Erstellen des [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Objekts.
+    Verwenden Sie die [**ITaskService::GetFolder-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-getfolder) um den Ordner abzurufen, und die [**ITaskService::NewTask-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-newtask) um das [**ITaskDefinition-Objekt**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) zu erstellen.
 
-4.  Definieren von Informationen über den Task mithilfe des [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Objekts, z. b. Registrierungsinformationen für den Task.
+4.  Definieren Sie Informationen zur Aufgabe mithilfe des [**ITaskDefinition-Objekts,**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) z. B. die Registrierungsinformationen für die Aufgabe.
 
-    Verwenden Sie die [**RegistrationInfo-Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_registrationinfo) und andere Eigenschaften der [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Schnittstelle, um die Aufgabeninformationen zu definieren.
+    Verwenden Sie die [**RegistrationInfo-Eigenschaft von ITaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_registrationinfo) und andere Eigenschaften der [**ITaskDefinition-Schnittstelle,**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) um die Taskinformationen zu definieren.
 
-5.  Erstellen Sie einen täglichen Trigger mithilfe der Triggers- [**Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_triggers) , um auf die [**ITriggerCollection**](/windows/desktop/api/taskschd/nn-taskschd-itriggercollection) -Schnittstelle für den Task zuzugreifen.
+5.  Erstellen Sie mithilfe der [**Triggers-Eigenschaft von ITaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_triggers) einen täglichen Trigger, um auf die [**ITriggerCollection-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-itriggercollection) für die Aufgabe zuzugreifen.
 
-    Verwenden Sie die [**ITriggerCollection:: Create**](/windows/desktop/api/taskschd/nf-taskschd-itriggercollection-create) -Methode, um anzugeben, dass Sie einen täglichen Trigger erstellen möchten. Sie können die Start Grenze und das Tage Intervall für den-Befehl festlegen, sodass die Aktionen der Aufgabe zu einem bestimmten Zeitpunkt an bestimmten Tagen ausgeführt werden. Das Beispiel zeigt auch, wie Sie ein Wiederholungsmuster für den-Vorgang festlegen, um die Aufgabe zu wiederholen.
+    Verwenden Sie die [**ITriggerCollection::Create-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itriggercollection-create) um anzugeben, dass Sie einen täglichen Trigger erstellen möchten. Sie können die Startgrenze und das Tageintervall für den Trigger festlegen, sodass die Ausführung der Aufgabenaktionen zu einem bestimmten Zeitpunkt an bestimmten Tagen geplant wird. Das Beispiel zeigt auch, wie ein Wiederholungsmuster für den Trigger festgelegt wird, um die Aufgabe zu wiederholen.
 
-6.  Erstellen Sie eine Aktion für die Ausführung der Aufgabe mithilfe der [**Actions-Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_actions) , um auf die [**IAction Collection**](/windows/desktop/api/taskschd/nn-taskschd-iactioncollection) -Schnittstelle für den Task zuzugreifen.
+6.  Erstellen Sie eine Aktion für die auszuführende Aufgabe, indem Sie die [**Actions-Eigenschaft von ITaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_actions) verwenden, um auf die [**IActionCollection-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-iactioncollection) für die Aufgabe zuzugreifen.
 
-    Verwenden Sie die [**IAction Collection:: Create**](/windows/desktop/api/taskschd/nf-taskschd-iactioncollection-create) -Methode, um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**IExecAction**](/windows/desktop/api/taskschd/nn-taskschd-iexecaction) -Objekt verwendet, das eine Aktion darstellt, die einen Befehlszeilen Vorgang ausführt.
+    Verwenden Sie die [**IActionCollection::Create-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-iactioncollection-create) um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**IExecAction-Objekt**](/windows/desktop/api/taskschd/nn-taskschd-iexecaction) verwendet, das eine Aktion darstellt, die einen Befehlszeilenvorgang ausführt.
 
-7.  Registrieren Sie die Aufgabe mit der [**ITaskFolder:: RegisterTaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertaskdefinition) -Methode.
+7.  Registrieren Sie die Aufgabe mithilfe der [**ITaskFolder::RegisterTaskDefinition-Methode.**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertaskdefinition)
 
-Im folgenden Beispiel wird gezeigt, wie eine Aufgabe für die tägliche Ausführung von Notepad geplant wird.
+Das folgende C++-Beispiel zeigt, wie Sie eine Aufgabe für die tägliche Ausführung Editor planen.
 
 
 ```C++
@@ -429,12 +429,12 @@ int __cdecl wmain()
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

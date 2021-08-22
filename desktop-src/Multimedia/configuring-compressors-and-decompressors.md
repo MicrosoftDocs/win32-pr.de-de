@@ -1,23 +1,23 @@
 ---
-title: Konfigurieren von Kompressoren und Debug
-description: Konfigurieren von Kompressoren und Debug
+title: Konfigurieren von Ausstellern und Dekomprimierern
+description: Konfigurieren von Ausstellern und Dekomprimierern
 ms.assetid: 9cd63470-1591-4de0-b011-d7979539d936
 keywords:
-- Videokomprimierungs-Manager (VCM), Konfigurieren von Kompressoren
-- VCM (Videokomprimierungs-Manager), Konfigurieren von Kompressoren
-- Icqueryconfigure-Makro
+- Videokomprimierungs-Manager (VCM), Konfigurieren von Patienten
+- VCM (Videokomprimierungs-Manager),Konfigurieren von Patienten
+- ICQueryConfigure-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 88d388a52047a1aea7936cc494dafc0d1a2d6dec
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 073a9ac7eb56c0870d7a08d8ed9fd221a2626bb6be83cc4683cd86c4bfa907db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388232"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144923"
 ---
-# <a name="configuring-compressors-and-decompressors"></a>Konfigurieren von Kompressoren und Debug
+# <a name="configuring-compressors-and-decompressors"></a>Konfigurieren von Ausstellern und Dekomprimierern
 
-Im folgenden Beispiel wird das [**icqueryconfigure**](/windows/desktop/api/Vfw/nf-vfw-icqueryconfigure) -Makro verwendet, um zu veranschaulichen, wie getestet wird, ob ein-Kompressor das Konfigurations Dialogfeld unterstützt, und ob es angezeigt wird.
+Im folgenden Beispiel wird das [**ICQueryConfigure-Makro**](/windows/desktop/api/Vfw/nf-vfw-icqueryconfigure) verwendet, um zu veranschaulichen, wie getestet wird, ob ein Zeuge das Konfigurationsdialogfeld unterstützt, und um es anzuzeigen, wenn dies der Fall ist.
 
 
 ```C++
@@ -30,7 +30,7 @@ if (ICQueryConfigure(hIC)) ICConfigure(hIC, hwndApp);
 
 
 
-Im folgenden Beispiel wird gezeigt, wie die Zustandsdaten mit dem [**icgetstate**](/windows/desktop/api/Vfw/nf-vfw-icgetstate) -Makro abgerufen werden.
+Das folgende Beispiel zeigt, wie Sie die Zustandsdaten mithilfe des [**ICGetState-Makros**](/windows/desktop/api/Vfw/nf-vfw-icgetstate) abrufen.
 
 
 ```C++
@@ -44,7 +44,7 @@ ICGetState(hIC, (LPVOID)lpData, dwStateSize);  // gets the state data
 
 
 
-Im folgenden Beispiel wird gezeigt, wie Zustandsdaten mit dem [**icsetstate**](/windows/desktop/api/Vfw/nf-vfw-icsetstate) -Makro wieder hergestellt werden. Von Anwendungen wiederhergestellte Zustandsdaten sollten keine Änderungen an den Zustandsdaten enthalten, die von einem Treiber abgerufen werden.
+Das folgende Beispiel zeigt, wie Zustandsdaten mithilfe des [**ICSetState-Makros**](/windows/desktop/api/Vfw/nf-vfw-icsetstate) wiederhergestellt werden. Zustandsdaten, die von Anwendungen wiederhergestellt werden, dürfen keine Änderungen an den Zustandsdaten enthalten, die von einem Treiber abgerufen wurden.
 
 
 ```C++
@@ -54,9 +54,9 @@ ICSetState(hIC, (LPVOID)lpData, dwStateSize); // sets new state data
 
 
 
- 
+ 
 
- 
+ 
 
 
 

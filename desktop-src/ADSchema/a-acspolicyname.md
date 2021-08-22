@@ -1,11 +1,11 @@
 ---
-title: ACS-Policy-Name-Attribut
-description: Der Zeichen folgen Name einer ACS-Richtlinie, die für diesen Benutzer gilt.
+title: ATTRIBUT "ACS-Policy-Name"
+description: Zeichenfolgenname einer ACS-Richtlinie, die für diesen Benutzer gilt.
 ms.assetid: bfba5d58-5928-439d-896c-6d0f34b6d551
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ACS-Richtlinien Name-Attribut
-- acspolicyname-Attribut, AD-Schema
+- AD-Schema des ACS-Policy-Name-Attributs
+- AD-Schema des aCSPolicyName-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e63b7dc8b1e05d778f48229d13d387e3f2c07bd
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 23c8cdd13178405e70fcde52a5fc139049039ea946c160238a551f7d58fb9e18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480503"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119081974"
 ---
-# <a name="acs-policy-name-attribute"></a>ACS-Policy-Name-Attribut
+# <a name="acs-policy-name-attribute"></a>ATTRIBUT "ACS-Policy-Name"
 
-Der Zeichen folgen Name einer ACS-Richtlinie, die für diesen Benutzer gilt.
+Zeichenfolgenname einer ACS-Richtlinie, die für diesen Benutzer gilt.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | ACS-Richtlinien Name                             |
-| LDAP-Display-Name | acspolicyname                               |
+| CN                | ACS-Policy-Name                             |
+| Ldap-Anzeigename | aCSPolicyName                               |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.772                      |
-| System-ID-GUID    | 1cb3559a-56d0-11d1-a9c6-0000b80367c1        |
+| System-ID-GUID    | 1cb3559a-56d0-11d1-a9c6-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Der Zeichen folgen Name einer ACS-Richtlinie, die für diesen Benutzer gilt.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Der Zeichen folgen Name einer ACS-Richtlinie, die für diesen Benutzer gilt.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -70,7 +70,7 @@ Der Zeichen folgen Name einer ACS-Richtlinie, die für diesen Benutzer gilt.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Der Zeichen folgen Name einer ACS-Richtlinie, die für diesen Benutzer gilt.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -100,10 +100,10 @@ Der Zeichen folgen Name einer ACS-Richtlinie, die für diesen Benutzer gilt.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -121,10 +121,10 @@ Der Zeichen folgen Name einer ACS-Richtlinie, die für diesen Benutzer gilt.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -142,10 +142,10 @@ Der Zeichen folgen Name einer ACS-Richtlinie, die für diesen Benutzer gilt.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -163,10 +163,10 @@ Der Zeichen folgen Name einer ACS-Richtlinie, die für diesen Benutzer gilt.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |

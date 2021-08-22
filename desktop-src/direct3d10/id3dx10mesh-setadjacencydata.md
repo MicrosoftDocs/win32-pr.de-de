@@ -1,7 +1,7 @@
 ---
-description: Legen Sie die Daten des Mesh fest.
+description: Legen Sie die Adjacency-Daten des Gitters fest.
 ms.assetid: 67d51ce0-7fe2-484d-9874-f1fa59632d59
-title: 'ID3DX10Mesh:: stadjacencydata-Methode (d3dx10. h)'
+title: ID3DX10Mesh::SetAdjacencyData-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 6fabced002caf424fa1fcbcefcb3b326b0c71f7c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8e183fb6fad07b92d8bca15654456ca1d31a11839af033222803044f8207a14f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990380"
 ---
-# <a name="id3dx10meshsetadjacencydata-method"></a>ID3DX10Mesh:: stadjacencydata-Methode
+# <a name="id3dx10meshsetadjacencydata-method"></a>ID3DX10Mesh::SetAdjacencyData-Methode
 
-Legen Sie die Daten des Mesh fest.
+Legen Sie die Adjacency-Daten des Gitters fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT SetAdjacencyData(
 
 <dl> <dt>
 
-*padjacency* \[ in\]
+*pAdjacency* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**uint**](../winprog/windows-data-types.md) \***
+Typ: **const [**UINT**](../winprog/windows-data-types.md) \***
 
-Die festzulegenden festzulegenden Daten.
+Die adjacency-Daten, die festgelegt werden.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Die festzulegenden festzulegenden Daten.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

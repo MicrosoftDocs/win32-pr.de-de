@@ -1,7 +1,7 @@
 ---
-description: 'Die GetClassID-Methode ruft den Klassen Bezeichner (CLSID) des-Objekts ab. Diese Methode implementiert die ipersistent:: GetClassID-Methode.'
+description: Die GetClassID-Methode ruft den Klassenbezeichner (CLSID) des Objekts ab. Diese Methode implementiert die IPersist::GetClassID-Methode.
 ms.assetid: 3d2cc6a3-67d1-4dd9-916b-7c350ce6a542
-title: Csystemclock. GetClassID-Methode (sysclock. h)
+title: CSystemClock.GetClassID-Methode (Sysclock.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a2f83d3e3c2efcbcb5d4604bc5c50a37dc020f0a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2afb141c3a79255504eb13dadb39cc0fb5094c19e0979db04c251f1e2fe75133
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365845"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119317190"
 ---
-# <a name="csystemclockgetclassid-method"></a>Csystemclock. GetClassID-Methode
+# <a name="csystemclockgetclassid-method"></a>CSystemClock.GetClassID-Methode
 
-Die- `GetClassID` Methode ruft den Klassen Bezeichner (CLSID) des-Objekts ab. Diese Methode implementiert die **ipersistent:: GetClassID-** Methode.
+Die `GetClassID` -Methode ruft den Klassenbezeichner (CLSID) des -Objekts ab. Diese Methode implementiert die **IPersist::GetClassID-Methode.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT GetClassID(
 
 <dl> <dt>
 
-*pclsid* 
+*pClsID* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die den Wert CLSID \_ systemclock empfängt.
+Zeiger auf eine Variable, die den Wert CLSID \_ SystemClock empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den S \_ OK-oder E- \_ Zeiger zurück.
+Gibt S \_ OK oder E \_ POINTER zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Gibt den S \_ OK-oder E- \_ Zeiger zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Csystemclock-Klasse<br/>                                                                                                                                                              |
-| Header<br/>  | <dl> <dt>Sysclock. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Version<br/> | CSystemClock-Klasse<br/>                                                                                                                                                              |
+| Header<br/>  | <dl> <dt>Sysclock.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

@@ -3,39 +3,39 @@ title: URL-Flipping
 description: URL-Flipping
 ms.assetid: 2921dff1-f740-491c-9b5e-79b7638e2065
 keywords:
-- Windows Media Player, webbasierte Präsentationen
-- Windows Media Player-Objektmodell, webbasierte Präsentationen
+- Windows Media Player,Webbasierte Präsentationen
+- Windows Media Player Objektmodell, webbasierte Präsentationen
 - Objektmodell, webbasierte Präsentationen
 - Windows Media Player Mobile, webbasierte Präsentationen
 - Windows Media Player ActiveX-Steuerelement, webbasierte Präsentationen
-- Windows Media Player Mobile ActiveX-Steuerelement, webbasierte Präsentationen
-- ActiveX-Steuerelement, webbasierte Präsentationen
-- Windows Media Player, URL-kippen
-- Windows Media Player-Objektmodell, URL-kippen
-- Objektmodell, URL-kippen
-- Windows Media Player Mobile, URL-kippen
-- Windows Media Player ActiveX-Steuerelement, URL-kippen
-- Windows Media Player Mobile ActiveX-Steuerelement, URL-kippen
-- ActiveX-Steuerelement, URL-kippen
-- Webbasierte Präsentationen, URL-kippen
-- Erstellen von webbasierten Präsentationen, URL-kippen
-- URL-kippen
+- Windows Media Player Mobile ActiveX-Steuerelement,Webbasierte Präsentationen
+- ActiveX,Webbasierte Präsentationen
+- Windows Media Player,URL-Flipping
+- Windows Media Player-Objektmodell, URL-Flipping
+- Objektmodell, URL-Flipping
+- Windows Media Player Mobil, URL-Flipping
+- Windows Media Player ActiveX,URL-Flipping
+- Windows Media Player Mobile ActiveX-Steuerelement, URL-Flipping
+- ActiveX,URL-Flipping
+- Webbasierte Präsentationen, URL-Flipping
+- Erstellen webbasierter Präsentationen, URL-Flipping
+- URL-Flipping
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 141fdd6b4a7ffc57288a08ffa2f6760cfb029847
-ms.sourcegitcommit: e22adfb0dd3bb989e59455baedb4d905a877a240
+ms.openlocfilehash: a4471045506447b93621578f27e2f156bb214016b3fa8ec114a689b919314d10
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "103714723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134523"
 ---
 # <a name="url-flipping"></a>URL-Flipping
 
-Die Verwendung von Webseiten für Folien anzeigen wird als URL-Flipping bezeichnet und automatisch von Windows Media Player behandelt, wenn URL-Skript Befehle gefunden werden, die in den digitalen Mediendaten Strom eingebettet sind, der wiedergegeben wird. Sie können einen Zielframe für Ihre Seiten in jedem Skript Befehl angeben. Sie können ihn auch angeben, indem Sie die Eigenschaft **Settings. defaultframe** festlegen. Sie können diese Eigenschaft im Skriptcode oder mit einem param-Element innerhalb des Object-Elements festlegen, das das Windows Media Player-Steuerelement einbettet.
+Die Verwendung von Webseiten für Bildschirmpräsentationen wird als URL-Flipping bezeichnet und wird automatisch von Windows Media Player verarbeitet, wenn URL-Skriptbefehle in den abspielten digitalen Medienstream eingebettet sind. Sie können in jedem Skriptbefehl einen Zielframe für Ihre Seiten angeben, oder Sie können ihn angeben, indem Sie die eigenschaft **Einstellungen.defaultFrame** festlegen. Sie können diese Eigenschaft im Skriptcode oder mithilfe eines PARAM-Elements innerhalb des OBJECT-Elements festlegen, das das Windows Media Player einbettet.
 
-Sie können die URL-Skript Befehle in Ihrem JScript-Code genauso wie benutzerdefinierte Skript Befehle verarbeiten. Wenn Sie möchten, dass das Windows Media Player-Steuerelement URL-Skript Befehle ignoriert, damit Sie sie vollständig selbst verarbeiten können, legen Sie die *Einstellungen* fest. die **invokeurls** -Eigenschaft ist entweder im Skriptcode oder bei Verwendung eines Param-Elements wie zuvor beschrieben zu false.
+Sie können die URL-Skriptbefehle in Ihrem JScript wie benutzerdefinierte Skriptbefehle verarbeiten. Wenn das Windows Media Player-Steuerelement URL-Skriptbefehle ignorieren soll, damit Sie sie vollständig selbst *verarbeiten* können, legen Sie die Einstellungen. **invokeURLs-Eigenschaft** auf FALSE entweder im Skriptcode oder mithilfe eines PARAM-Elements, wie zuvor beschrieben.
 
-Das folgende Beispiel veranschaulicht ein typisches Frameset für das URL-Flipping. Erstellen Sie zunächst eine Seite, die das Frameset beschreibt:
+Im folgenden Beispiel wird ein typisches Frameset zum Kippen von URLs veranschaulicht. Erstellen Sie zunächst eine Seite, die das Frameset beschreibt:
 
 
 ```HTML
@@ -50,7 +50,7 @@ Das folgende Beispiel veranschaulicht ein typisches Frameset für das URL-Flippi
 
 
 
-Erstellen Sie als nächstes die player.html-Datei, auf die im Frameset verwiesen wird, indem Sie den folgenden Code verwenden (es wird angenommen, dass die Datei "Video. wmv" im gleichen Verzeichnis wie die HTML-Dateien vorhanden ist):
+Erstellen Sie als Nächstes die player.html-Datei, auf die im Frameset verwiesen wird, mithilfe des folgenden Codes (die Datei video.wmv wird angenommen, dass sie im gleichen Verzeichnis wie die HTML-Dateien vorhanden ist):
 
 
 ```HTML
@@ -67,26 +67,26 @@ Erstellen Sie als nächstes die player.html-Datei, auf die im Frameset verwiesen
 
 
 
-Wenn Ihre Webseiten so klein sind, dass Sie schnell geladen werden können, genügt diese Einrichtung ggf. für Ihre Anforderungen. Wenn andererseits ihre Webseiten komplex sind, kann das umfangreiche Medien Streaming abhängig von der Verbindungsgeschwindigkeit Ihrer Zielgruppe effektiver sein.
+Wenn Ihre Webseiten klein genug sind, um schnell geladen zu werden, kann diese Einrichtung für Ihre Anforderungen ausreichen. Wenn Ihre Webseiten hingegen komplex sind, kann rich media streaming je nach Verbindungsgeschwindigkeit Ihrer Zielgruppe effektiver sein.
 
 > [!Note]  
-> Das URL-kippen funktioniert nicht ordnungsgemäß mit Seiten, die im Netscape Navigator angezeigt werden. Anstatt in dem von **defaultframe** angegebenen Frame angezeigt zu werden, zeigt jeder im Navigator empfangene URL-Skript Befehl die URL in einem neuen Browserfenster an.
+> Url-Flipping funktioniert nicht ordnungsgemäß mit Seiten, die in der Netscape Navigator. Anstatt in dem durch **defaultFrame** angegebenen Frame zu erscheinen, zeigt jeder im Navigator empfangene URL-Skriptbefehl die URL in einem neuen Browserfenster an.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Erstellen von Web-Based Präsentationen**](creating-web-based-presentations.md)
+[**Erstellen Web-Based Präsentationen**](creating-web-based-presentations.md)
 </dt> <dt>
 
-[**Verwenden von Skripts zum Steuern von URL-Flipping**](using-script-to-control-url-flipping.md)
+[**Verwenden des Skripts zum Steuern des URL-Flippings**](using-script-to-control-url-flipping.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

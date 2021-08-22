@@ -1,54 +1,54 @@
 ---
-title: Drawdib-Funktionen
-description: Drawdib-Funktionen
+title: DrawDib-Funktionen
+description: DrawDib-Funktionen
 ms.assetid: 9ba47b8d-5328-477e-9272-21e897e54348
 keywords:
-- Windows Multimedia, drawdib-Funktionen
-- Multimedia-, drawdib-Funktionen
-- Video für Windows (Vfw), drawdib-Funktionen
-- VFW (Video für Windows), drawdib-Funktionen
-- Drawdib, Funktionen
-- Drawdib-Referenz, Funktionen
-- Verweis für drawdib, Funktionen
+- Windows multimedia,DrawDib-Funktionen
+- multimedia,DrawDib-Funktionen
+- Video für Windows (VFW), DrawDib-Funktionen
+- VFW (Video für Windows),DrawDib-Funktionen
+- DrawDib, Functions
+- DrawDib-Referenz, Funktionen
+- Referenz für DrawDib, Functions
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f27d33581775f38383d72adcf6a1776c5fe6530b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a179a6102f3ec2f5e891d22d817a51af26ef7a5db4d031841ceef6152eb655c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144443"
 ---
-# <a name="drawdib-functions"></a>Drawdib-Funktionen
+# <a name="drawdib-functions"></a>DrawDib-Funktionen
 
-Die folgenden Funktionen werden mit drawdib verwendet.
+Die folgenden Funktionen werden mit DrawDib verwendet.
 
--   [**Drawdibbegin**](/windows/desktop/api/Vfw/nf-vfw-drawdibbegin)
--   [**Drawdibchangepalette**](/windows/desktop/api/Vfw/nf-vfw-drawdibchangepalette)
--   [**Drawdibclose**](/windows/desktop/api/Vfw/nf-vfw-drawdibclose)
--   [**Drawdibdraw**](/windows/desktop/api/Vfw/nf-vfw-drawdibdraw)
--   [**Drawdibend**](/windows/desktop/api/Vfw/nf-vfw-drawdibend)
--   [**Drawdibgetbuffer**](/windows/desktop/api/Vfw/nf-vfw-drawdibgetbuffer)
--   [**Drawdibgetpalette**](/windows/desktop/api/Vfw/nf-vfw-drawdibgetpalette)
--   [**Drawdibopen**](/windows/desktop/api/Vfw/nf-vfw-drawdibopen)
--   [**Drawdibprofiledisplay**](/windows/desktop/api/Vfw/nf-vfw-drawdibprofiledisplay)
--   [**Drawdibrealize**](/windows/desktop/api/Vfw/nf-vfw-drawdibrealize)
--   [**Drawdibsetpalette**](/windows/desktop/api/Vfw/nf-vfw-drawdibsetpalette)
--   [**Drawdibstart**](/windows/desktop/api/Vfw/nf-vfw-drawdibstart)
--   [**Drawdibstoppt**](/windows/desktop/api/Vfw/nf-vfw-drawdibstop)
--   [**Drawdibtime**](/windows/desktop/api/Vfw/nf-vfw-drawdibtime)
--   [**Stretchdib**](/windows/desktop/api/Vfw/nf-vfw-stretchdib)
+-   [**DrawDibBegin**](/windows/desktop/api/Vfw/nf-vfw-drawdibbegin)
+-   [**DrawDibChangePalette**](/windows/desktop/api/Vfw/nf-vfw-drawdibchangepalette)
+-   [**DrawDibClose**](/windows/desktop/api/Vfw/nf-vfw-drawdibclose)
+-   [**DrawDibDraw**](/windows/desktop/api/Vfw/nf-vfw-drawdibdraw)
+-   [**DrawDibEnd**](/windows/desktop/api/Vfw/nf-vfw-drawdibend)
+-   [**DrawDibGetBuffer**](/windows/desktop/api/Vfw/nf-vfw-drawdibgetbuffer)
+-   [**DrawDibGetPalette**](/windows/desktop/api/Vfw/nf-vfw-drawdibgetpalette)
+-   [**DrawDibOpen**](/windows/desktop/api/Vfw/nf-vfw-drawdibopen)
+-   [**DrawDibProfileDisplay**](/windows/desktop/api/Vfw/nf-vfw-drawdibprofiledisplay)
+-   [**DrawDibRealize**](/windows/desktop/api/Vfw/nf-vfw-drawdibrealize)
+-   [**DrawDibSetPalette**](/windows/desktop/api/Vfw/nf-vfw-drawdibsetpalette)
+-   [**DrawDibStart**](/windows/desktop/api/Vfw/nf-vfw-drawdibstart)
+-   [**DrawDibStop**](/windows/desktop/api/Vfw/nf-vfw-drawdibstop)
+-   [**DrawDibTime**](/windows/desktop/api/Vfw/nf-vfw-drawdibtime)
+-   [**StretchDIB**](/windows/desktop/api/Vfw/nf-vfw-stretchdib)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Drawdib-Referenz](drawdib-reference.md)
+[DrawDib-Referenz](drawdib-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die mxdc \_ S0PAGE \_ Passthrough \_ - \_ escapestruktur ist eine mxdc-Escape-Header-t-Struktur, die \_ \_ \_ mit einer mxdc \_ S0PAGE \_ Data T-Struktur verkettet ist \_ .
+description: Die MXDC S0PAGE PASSTHROUGH ESCAPE T-Struktur ist eine MXDC ESCAPE HEADER T-Struktur, die mit einer \_ \_ \_ \_ \_ \_ \_ MXDC \_ S0PAGE \_ DATA \_ T-Struktur verkettet ist.
 ms.assetid: 949c1ed4-92d5-4c11-a7da-f9d94bafe3f8
-title: MXDC_S0PAGE_PASSTHROUGH_ESCAPE_T-Struktur (mxdc. h)
+title: MXDC_S0PAGE_PASSTHROUGH_ESCAPE_T -Struktur (Mxdc.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - mxdc.h
-ms.openlocfilehash: 7c1a8370d2cfa1ada9fda2d2d99b9fe500b79d31
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f8e0a46766f38aec16758a1efc9c0cbc775c2131b1279dcc47f92ed41e77c0e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119099054"
 ---
-# <a name="mxdc_s0page_passthrough_escape_t-structure"></a>Mxdc \_ S0PAGE \_ Passthrough \_ - \_ escapestruktur
+# <a name="mxdc_s0page_passthrough_escape_t-structure"></a>MXDC \_ S0PAGE \_ PASSTHROUGH \_ ESCAPE \_ T-Struktur
 
-Die **mxdc \_ S0PAGE \_ Passthrough \_ \_** -escapestruktur ist eine [**mxdc- \_ Escape-Header- \_ \_ t**](mxdcescapeheader.md) -Struktur, die mit einer [**mxdc \_ S0PAGE \_ Data \_ T**](mxdcs0pagedata.md) -Struktur verkettet ist.
+Die **MXDC \_ S0PAGE \_ PASSTHROUGH \_ ESCAPE \_ T-Struktur** ist eine [**MXDC ESCAPE HEADER \_ \_ \_ T-Struktur,**](mxdcescapeheader.md) die mit einer [**MXDC \_ S0PAGE \_ DATA \_ T-Struktur verkettet**](mxdcs0pagedata.md) ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,25 +40,25 @@ typedef struct tagMxdcS0PagePassthroughEscape {
 
 <dl> <dt>
 
-**mxdcescape**
+**mxdcEscape**
 </dt> <dd>
 
-Eine [**mxdc- \_ Escape- \_ Header- \_ T**](mxdcescapeheader.md) -Struktur, deren **Opcode** -Member auf **mxdcop \_ Set \_ S0PAGE** festgelegt ist.
+Eine [**MXDC \_ ESCAPE HEADER \_ \_ T-Struktur,**](mxdcescapeheader.md) deren **opCode-Member** auf **MXDCOP \_ SET \_ S0PAGE festgelegt ist.**
 
 </dd> <dt>
 
 **xpsS0PageData**
 </dt> <dd>
 
-Eine [**MxdcS0PageData**](mxdcs0pagedata.md) -Struktur, die eine XPS-Dokument Seite darstellt.
+Eine [**MxdcS0PageData-Struktur,**](mxdcs0pagedata.md) die eine XPS-Dokumentseite darstellt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird in den *lpszindata* -Parameter der [**extescape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) -Funktion übergeben, wenn Sie mit dem Escapezeichen für [**mxdc \_**](mxdc-escape.md) aufgerufen wird und der **Opcode** -Member der [**mxdc- \_ Escape-Header- \_ \_ T**](mxdcescapeheader.md) -Struktur **mxdcop \_ Set \_ S0PAGE** ist. Das Ergebnis ist, dass der Microsoft XML Document Converter (mxdc) die Seite an den Drucker übergibt, ohne Sie zu verarbeiten.
+Diese Struktur wird im *lpszInData-Parameter* der [**ExtEscape-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) übergeben, wenn sie mit dem ESCAPE-Escape-Element [**MXDC \_**](mxdc-escape.md) aufgerufen wird und der **opCode-Member** der [**MXDC \_ ESCAPE HEADER \_ \_ T-Struktur**](mxdcescapeheader.md) **MXDCOP \_ SET \_ S0PAGE** ist. Das Ergebnis ist, dass der Microsoft XML Document Converter (MXDC) die Seite an den Drucker weitergibt, ohne sie zu verarbeiten.
 
-Weisen Sie der Escapesequenz wie unten gezeigt den Speicher zu, legen Sie die Felder nach Bedarf fest, und nennen Sie dann [**extescape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape).
+Ordnen Sie arbeitsspeicher für das Escape-Escapefeld zu, wie unten gezeigt, legen Sie die Felder nach Bedarf fest, und rufen Sie [**dann ExtEscape auf.**](/windows/desktop/api/Wingdi/nf-wingdi-extescape)
 
 
 ```C++
@@ -78,11 +78,11 @@ P_MXDC_S0PAGE_PASSTHROUGH_ESCAPE_T pS0PageEscapeData =
 
 
 
-Der [**extescape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) -aufrufsausdruck muss zwischen einem Aufrufen von [**Startpage**](/windows/desktop/api/Wingdi/nf-wingdi-startpage) und einem Aufrufen von [**EndPage**](/windows/desktop/api/Wingdi/nf-wingdi-endpage)liegen.
+Der Aufruf von [**ExtEscape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) muss zwischen einem Aufruf von [**StartPage**](/windows/desktop/api/Wingdi/nf-wingdi-startpage) und einem Aufruf von [**EndPage liegen.**](/windows/desktop/api/Wingdi/nf-wingdi-endpage)
 
-Die aufrufende Anwendung ist für die Validierung des XML-Codes der XPS-Dokument Seite verantwortlich.
+Die aufrufende Anwendung ist für die Validierung des XML-Code der XPS-Dokumentseite verantwortlich.
 
-Der Streamingverbrauch ist effizienter, wenn Sie [**extescape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) mit **mxdcop \_ Set \_ S0PAGE \_ Resource** als **Opcode** für jede Ressource auf der Seite aufruft, bevor Sie Sie mit **mxdcop \_ Set \_ S0PAGE** aufzurufen.
+Die Streamingnutzung ist effizienter, wenn Sie [**ExtEscape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) mit **MXDCOP \_ SET \_ S0PAGE \_ RESOURCE** als **opCode** für jede Ressource auf der Seite aufrufen, bevor Sie sie mit **MXDCOP \_ SET \_ S0PAGE aufrufen.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,29 +90,29 @@ Der Streamingverbrauch ist effizienter, wenn Sie [**extescape**](/windows/deskto
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>Mxdc. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Mxdc.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
-[Escapefunktionen für GDI-Drucker](/previous-versions/windows/desktop/legacy/dd162843(v=vs.85))
+[GDI-Drucker-Escapefunktionen](/previous-versions/windows/desktop/legacy/dd162843(v=vs.85))
 </dt> <dt>
 
-[**Extescape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape)
+[**ExtEscape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape)
 </dt> <dt>
 
-[**mxdc-Escapezeichen \_**](mxdc-escape.md)
+[**MXDC \_ ESCAPE**](mxdc-escape.md)
 </dt> </dl>
 
  

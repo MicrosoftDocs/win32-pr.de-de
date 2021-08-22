@@ -1,61 +1,61 @@
 ---
-title: hs_fork_phase (SM5-ASM)
-description: Startet die Verzweigungs Phase in einem Hull-Shader.
+title: hs_fork_phase (sm5 - asm)
+description: Starten Sie die Forkphase in einem Hüllen-Shader.
 ms.assetid: 13D6A06C-F001-45BE-8AB4-D7ACA73BF535
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9316cc92c1bf5683afa620927b3c6f38432c3c4e
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 9b97a4c7fee351377dd080c0eb51411356454fcb1fe646f7181cca20930ddf6f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119494"
 ---
-# <a name="hs_fork_phase-sm5---asm"></a>HS \_ -Verzweigungs \_ Phase (SM5-ASM)
+# <a name="hs_fork_phase-sm5---asm"></a>hs \_ fork \_ phase (sm5 - asm)
 
-Startet die Verzweigungs Phase in einem Hull-Shader.
+Starten Sie die Forkphase in einem Hüllen-Shader.
 
 
 
-| HS- \_ Verzweigungs \_ Phase |
+| hs \_ fork \_ phase |
 |-----------------|
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        | X    |        |          |       |         |
 
 
 
- 
+ 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -64,9 +64,9 @@ Diese Anweisung wird in den folgenden shadermodellen unterstützt:
 [Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

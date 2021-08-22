@@ -1,9 +1,9 @@
 ---
-title: LVM_SETBKCOLOR Meldung (kommstrg. h)
-description: Legt die Hintergrundfarbe eines Listenansicht-Steuer Elements fest. Sie können diese Nachricht explizit oder mithilfe des ListView \_ SetBkColor-Makros senden.
+title: LVM_SETBKCOLOR Meldung (Commctrl.h)
+description: Legt die Hintergrundfarbe eines Listenansicht-Steuerelements fest. Sie können diese Nachricht explizit oder mithilfe des ListView \_ SetBkColor-Makros senden.
 ms.assetid: d579249d-421d-4e7e-8992-4c7fd7277593
 keywords:
-- Windows-Steuerelemente für LVM_SETBKCOLOR Meldung
+- LVM_SETBKCOLOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 80977ed6c95a1353889265e52cfc05c26aaa2a5f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1b8acfb07a91fae470d893facf6af051397fac2f0d9f4f6990ab4ff67744d8ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956720"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119391610"
 ---
-# <a name="lvm_setbkcolor-message"></a>LVM- \_ SetBkColor-Nachricht
+# <a name="lvm_setbkcolor-message"></a>LVM \_ SETBKCOLOR-Meldung
 
-Legt die Hintergrundfarbe eines Listenansicht-Steuer Elements fest. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ SetBkColor**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setbkcolor) -Makros senden.
+Legt die Hintergrundfarbe eines Listenansicht-Steuerelements fest. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ SetBkColor-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setbkcolor) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Legt die Hintergrundfarbe eines Listenansicht-Steuer Elements fest. Sie können 
 *lParam* 
 </dt> <dd>
 
-Die festzulegende Hintergrundfarbe oder der CLR \_ None-Wert für keine Hintergrundfarbe. Listenansicht-Steuerelemente mit Hintergrundfarben zeichnen sich deutlich schneller aus als solche ohne Hintergrundfarben.
+Die festzulegende Hintergrundfarbe oder der CLR \_ NONE-Wert für keine Hintergrundfarbe. Listenansichtssteuerelemente mit Hintergrundfarben zeichnen sich deutlich schneller neu als Steuerelemente ohne Hintergrundfarben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

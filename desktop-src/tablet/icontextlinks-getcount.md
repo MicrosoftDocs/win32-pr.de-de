@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der icontextlink-Objekte in dieser Auflistung ab.
+description: Ruft die Anzahl der IContextLink-Objekte in dieser Auflistung ab.
 ms.assetid: c3becacd-2df0-401c-88c8-5fad3e9f8c02
-title: 'Icontextlinks:: GetCount-Methode (iacom. h)'
+title: IContextLinks::GetCount-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: c12fae76eb41bf05d60712cf9f69639c713066c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c622e3b222aacb2b05b56a4fbe933d0578ee6649b3a5f5d84a3c5d9b6382c629
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214671"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119092281"
 ---
-# <a name="icontextlinksgetcount-method"></a>Icontextlinks:: GetCount-Methode
+# <a name="icontextlinksgetcount-method"></a>IContextLinks::GetCount-Methode
 
-Ruft die Anzahl der [**icontextlink**](icontextlink.md) -Objekte in dieser Auflistung ab.
+Ruft die Anzahl der [**IContextLink-Objekte**](icontextlink.md) in dieser Auflistung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ HRESULT GetCount(
 
 <dl> <dt>
 
-*pulCount* \[ Out, retval\]
+*pulCount* \[ out, retval\]
 </dt> <dd>
 
-Die Anzahl der [**icontextlink**](icontextlink.md) -Objekte, die in dieser Auflistung enthalten sind.
+Die Anzahl der [**IContextLink-Objekte,**](icontextlink.md) die in dieser Auflistung enthalten sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,21 +56,21 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Icontextlinks**](icontextlinks.md)
+[**IContextLinks**](icontextlinks.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

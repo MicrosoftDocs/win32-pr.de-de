@@ -1,5 +1,5 @@
 ---
-description: Ein Shader, der aufgerufen wird, wenn Ray-Schnittmengen nicht deckend sind.
+description: Ein Shader, der aufgerufen wird, wenn Die Schnittpunkte des Strahls nicht deckend sind.
 ms.assetid: ''
 title: Any Hit-Shader
 ms.date: 05/31/2018
@@ -12,30 +12,30 @@ api_name:
 - RAY_FLAG
 api_type:
 - NA
-ms.openlocfilehash: aad2f8b94f6ea53d500d285cac3555f5ff8b95f4
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 127c12c6d87ca76ddac5b5c5e013414c96651e56ee762156e7435811ff275a05
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346634"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119124385"
 ---
 # <a name="any-hit-shader"></a>Any Hit-Shader
 
-Ein Shader, der aufgerufen wird, wenn Ray-Schnittmengen nicht deckend sind. 
+Ein Shader, der aufgerufen wird, wenn Die Schnittpunkte des Strahls nicht deckend sind. 
 
-Alle Treffer-Shader müssen einen Nutz Last Parameter, gefolgt von einem Attribute-Parameter, deklarieren. Jeder dieser Parameter muss ein benutzerdefinierter Strukturtyp sein, der mit den Typen übereinstimmt, die für [**traceray**](traceray-function.md) bzw. [**reporthit**](reporthit-function.md) verwendet werden, oder die [**Struktur der Schnittstellen Attribute**](intersection-attributes.md) bei Verwendung einer Schnittmenge mit festem Funktions Dreieck.
+Alle Treffer-Shader müssen einen Nutzlastparameter gefolgt von einem attributes-Parameter deklarieren. Jeder dieser Parameter muss ein benutzerdefinierter Strukturtyp sein, der mit Typen abgleicht, die für [**TraceRay**](traceray-function.md) bzw. [**ReportHit**](reporthit-function.md) verwendet werden, oder die [**Schnittmengenattribute-Struktur,**](intersection-attributes.md) wenn eine feste Funktionsdreieck-Schnittmenge verwendet wird.
 
 Alle Treffer-Shader können die folgenden Arten von Vorgängen ausführen:
 
-*   Lesen und Ändern der Ray-Nutzlast: (INOUT payload_t raypayload)
-*   Lesen der Schnittstellen Attribute: (in attr_t Attributen)
-*   Aufrufen von " [**Accept thitandendsearch**](accepthitandendsearch-function.md)", das den aktuellen Treffer annimmt, den [beliebigen Treffer-Shader](any-hit-shader.md)beendet, den [Schnittstellen-Shader](intersection-shader.md) beendet, wenn ein solcher vorhanden ist, und führt den [nächstgelegenen Treffer-Shader](closest-hit-shader.md) am nächstgelegenen Treffer aus, wenn er aktiv ist.
-*   " [**Ignorehit**](ignorehit-function.md)" aufrufen, der den beliebigen Treffer-Shader beendet und das System anweist, die Suche nach Treffern fortzusetzen, einschließlich der Rückgabe der Steuerung an einen Schnittstellen-Shader, wenn er gerade ausgeführt wird und "false" von der [**reporthit**](reporthit-function.md)*-Website aufgerufen wird. 
-*   Geben Sie zurück, ohne eine dieser systeminternen Funktionen aufzurufen, die den aktuellen Treffer akzeptiert und das System anweist, weiterhin nach Treffern zu suchen, einschließlich der Rückgabe der Steuerung an den Schnittstellen-Shader, falls vorhanden. gibt true auf der [**reporthit**](reporthit-function.md) -Aufruf Site zurück, um anzugeben, dass der Treffer akzeptiert wurde.
+*   Lesen und Ändern der Raynutzlast: (inout payload_t rayPayload)
+*   Lesen der Schnittmengenattribute: (in attr_t Attributen)
+*   Rufen Sie [**AcceptHitAndEndSearch**](accepthitandendsearch-function.md)auf, das den aktuellen Treffer akzeptiert, den beliebigen Treffer-Shader beendet, den Schnittpunkt-Shader beendet, sofern vorhanden, und führt den nächstgelegenen Treffer-Shader für den nächstgelegenen Treffer aus, sofern er aktiv ist. [](any-hit-shader.md) [](intersection-shader.md) [](closest-hit-shader.md)
+*   Rufen [**Sie IgnoreHit**](ignorehit-function.md)auf, wodurch der beliebige Treffer-Shader beendet wird, und weist das System an, weiterhin nach Treffern zu suchen, einschließlich der Rückgabe der Steuerung an einen Schnittpunkt-Shader, sofern er gerade ausgeführt wird, und gibt false von der [**ReportHit**](reporthit-function.md)*-Aufrufsite zurück. 
+*   Kehren Sie zurück, ohne eine dieser systeminternen Systeminternen zu aufrufen. Diese akzeptiert den aktuellen Treffer und weist das System an, weiterhin nach Treffern zu suchen, einschließlich der Rückgabe der Steuerung an den Schnittpunkt-Shader, sofern eine solche ist, und die Rückgabe von TRUE an der [**ReportHit-Aufrufsite,**](reporthit-function.md) um anzugeben, dass der Treffer akzeptiert wurde.
 
-Selbst wenn ein beliebiger Treffer-Shader-Aufruf durch [**ignorehit**](ignorehit-function.md) oder [**Accept thitandendsearch**](accepthitandendsearch-function.md)beendet wird, müssen alle Änderungen, die an der Strahl Nutzlast bisher vorgenommen wurden, trotzdem beibehalten werden.
+Auch wenn ein Treffer-Shaderaufruf durch [**IgnoreHit**](ignorehit-function.md) oder [**AcceptHitAndEndSearch**](accepthitandendsearch-function.md)beendet wird, müssen alle änderungen, die bisher an der Raynutzlast vorgenommen wurden, weiterhin beibehalten werden.
 
-## <a name="shader-type-attribute"></a>Shader Type-Attribut
+## <a name="shader-type-attribute"></a>Shadertypattribut
 
 ```
 [shader("anyhit")]

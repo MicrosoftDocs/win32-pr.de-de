@@ -1,19 +1,19 @@
 ---
-title: Iagentnotifysink verschieben
-description: Iagentnotifysink verschieben
+title: IAgentNotifySink Move
+description: IAgentNotifySink Move
 ms.assetid: d1809fdb-df4b-4884-b9e8-2877a814dc9a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 52563ff3838348b7bf8e6a2bcdfdf20a51c79723
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a16f32df3058a5b5c8e0a4e02a98f9a97afdbff56f349a63fceb5d70a9001391
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103948020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119105174"
 ---
-# <a name="iagentnotifysinkmove"></a>Iagentnotifysink:: Move
+# <a name="iagentnotifysinkmove"></a>IAgentNotifySink::Move
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT Move(
@@ -24,47 +24,47 @@ HRESULT Move(
 );                          
 ```
 
-Benachrichtigt eine Client Anwendung, wenn das Zeichen verschoben wurde.
+Benachrichtigt eine Clientanwendung, wenn das Zeichen verschoben wurde.
 
 -   Kein Rückgabewert.
 
 <dl> <dt>
 
-<span id="dwCharID"></span><span id="dwcharid"></span><span id="DWCHARID"></span>*dwcharid*
+<span id="dwCharID"></span><span id="dwcharid"></span><span id="DWCHARID"></span>*dwCharID*
 </dt> <dd>
 
-Der Bezeichner des Zeichens, das verschoben wurde.
+Bezeichner des verschobenen Zeichens.
 
 </dd> <dt>
 
-<span id="x"></span><span id="X"></span>*Stuben*
+<span id="x"></span><span id="X"></span>*X*
 </dt> <dd>
 
-Die x-Koordinate der neuen Position in Pixel relativ zum Bildschirm Ursprung (oben links). Der Speicherort eines Zeichens basiert auf der linken oberen Ecke des Animations Rahmens.
+Die x-Koordinate der neuen Position in Pixel relativ zum Bildschirmursprung (oben links). Die Position eines Zeichens basiert auf der oberen linken Ecke des Animationsrahmens.
 
 </dd> <dt>
 
-<span id="y"></span><span id="Y"></span>*Teenie*
+<span id="y"></span><span id="Y"></span>*Y*
 </dt> <dd>
 
-Die y-Koordinate der neuen Position in Pixel relativ zum Bildschirm Ursprung (oben links). Der Speicherort eines Zeichens basiert auf der linken oberen Ecke des Animations Rahmens.
+Die y-Koordinate der neuen Position in Pixel relativ zum Bildschirmursprung (oben links). Die Position eines Zeichens basiert auf der oberen linken Ecke des Animationsrahmens.
 
 </dd> <dt>
 
-<span id="dwCause"></span><span id="dwcause"></span><span id="DWCAUSE"></span>*dwcause*
+<span id="dwCause"></span><span id="dwcause"></span><span id="DWCAUSE"></span>*dwCause*
 </dt> <dd>
 
-Die Ursache für die Zeichen Verschiebung. Der Parameter kann eines der folgenden sein:
+Die Ursache des Zeichenverschiebens. Der -Parameter kann eine der folgenden Sein:
 
 
 
-| Wert                                                          | BESCHREIBUNG                                                                          |
+| Wert                                                          | Beschreibung                                                                          |
 |----------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| Konstante **Ganzzahl ohne Vorzeichen Short neververschost** **= 0;**<br/>        | Das Zeichen wurde nicht verschoben.                                                        |
-| " **Ganzzahl ohne Vorzeichen Short userverschost** " **= 1;**<br/>         | Der Benutzer hat das Zeichen gezogen.                                                          |
-| " **Ganzzahl ohne Vorzeichen Short Program verschost** " **= 2;**<br/>      | Die Anwendung hat das Zeichen verschoben.                                                |
-| Konstante **Ganzzahl ohne Vorzeichen Short** **otherprogrambewegt = 3;**<br/> | Das Zeichen wurde von einer anderen Anwendung verschoben.                                             |
-| **Ganzzahl ohne Vorzeichen Short** **systemverschost = 4**<br/>        | Der Server hat das Zeichen verschoben, um es nach einer Änderung der Bildschirmauflösung auf dem Bildschirm aufzubewahren. |
+| **const unsigned short** **NeverMoved = 0;**<br/>        | Das Zeichen wurde nicht verschoben.                                                        |
+| **const unsigned short** **UserMoved = 1;**<br/>         | Der Benutzer hat das Zeichen gezogen.                                                          |
+| **const unsigned short** **ProgramMoved = 2;**<br/>      | Die Anwendung hat das Zeichen verschoben.                                                |
+| **const unsigned short** **OtherProgramMoved = 3;**<br/> | Eine andere Anwendung hat das Zeichen verschoben.                                             |
+| **const unsigned short** **SystemMoved = 4**<br/>        | Der Server hat das Zeichen verschoben, damit es nach einer Änderung der Bildschirmauflösung auf dem Bildschirm angezeigt wird. |
 
 
 
@@ -76,7 +76,7 @@ Dieses Ereignis wird an alle Clients des Zeichens gesendet.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcharacter:: getmuvecause**](iagentcharacter--getmovecause.md), [ **iagentcharacter:: muveto**](iagentcharacter--moveto.md)
+[**IAgentCharacter::GetMoveCause**](iagentcharacter--getmovecause.md), [ **IAgentCharacter::MoveTo**](iagentcharacter--moveto.md)
 
 
  

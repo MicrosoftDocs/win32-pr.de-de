@@ -1,6 +1,6 @@
 ---
-title: Level-Konstante (ADOMD. h)
-description: Enthält den Wert der Ebene, die in den Ereignissen zum Starten und Abbrechen der Aktivität verwendet wird.
+title: Ebenenkonstante (Adomd.h)
+description: Enthält den Wert der Ebene, die in den Start- und Beendigungsereignissen der Aktivität verwendet wird.
 ms.assetid: DBBBE6C8-B952-493F-AE98-89D54536F1E5
 topic_type:
 - apiref
@@ -12,20 +12,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0350aadc74eaf16a6dbe493d64e941453a67a145
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d9b87db1e3c12f23d0df959664638f707388d0458895d755879ed69a9fefddd9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344694"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119091351"
 ---
-# <a name="level-constant"></a>Level-Konstante
+# <a name="level-constant"></a>Ebenenkonstante
 
-Enthält den Wert der Ebene, die in den Ereignissen zum Starten und Abbrechen der Aktivität verwendet wird.
+Enthält den Wert der Ebene, die in den Start- und Beendigungsereignissen der Aktivität verwendet wird.
 
 <dl> <dt>
 
-<span id="Level"></span><span id="level"></span><span id="LEVEL"></span>**Geringen**
+<span id="Level"></span><span id="level"></span><span id="LEVEL"></span>**Ebene**
 </dt> <dd> <dl> <dt>
 
 UINT8
@@ -33,7 +33,7 @@ UINT8
 
 
 
-Der Wert der Ebene, die in den Ereignissen zum Starten und Abbrechen der Aktivität verwendet wird.
+Der Wert der Ebene, die in den Start- und Beendigungsereignissen der Aktivität verwendet wird.
 
 
 </dt> </dl> </dd> </dl>
@@ -46,7 +46,7 @@ Der Wert der Ebene, die in den Ereignissen zum Starten und Abbrechen der Aktivit
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                                   |
-| Header<br/>                   | <dl> <dt>ADOMD. h ("traceloggingactivity. h" einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Adomd.h (einschließlich Traceloggingactivity.h)</dt> </dl> |
 
 
 

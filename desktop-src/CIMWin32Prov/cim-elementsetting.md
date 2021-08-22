@@ -1,8 +1,8 @@
 ---
-description: Die CIM \_ -ElementSetting-Klasse stellt die Zuordnung zwischen verwalteten Systemelementen und der Einstellungs Klasse dar, die für Sie definiert ist.
+description: Die CIM \_ ElementSetting-Klasse stellt die Zuordnung zwischen verwalteten Systemelementen und der für sie definierten Einstellungsklasse dar.
 ms.assetid: e9b7c43f-7539-48c3-8679-568fb4b036bb
 ms.tgt_platform: multiple
-title: CIM_ElementSetting-Klasse (cimwin32-WMI-Anbieter)
+title: CIM_ElementSetting-Klasse (CIMWin32-WMI-Anbieter)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 2c1ea52648728397e811cfae35e7a83e272ab8d3
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 706e1d1c4745586e902c5fe527c7153e77eb88c34201b39bf2da001c365421c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119080674"
 ---
-# <a name="cim_elementsetting-class-cimwin32-wmi-providers"></a>CIM_ElementSetting-Klasse (cimwin32-WMI-Anbieter)
+# <a name="cim_elementsetting-class-cimwin32-wmi-providers"></a>CIM_ElementSetting-Klasse (CIMWin32-WMI-Anbieter)
 
-Die **CIM- \_ ElementSetting** -Klasse stellt die Zuordnung zwischen verwalteten Systemelementen und der Einstellungs Klasse dar, die für Sie definiert ist.
+Die **CIM \_ ElementSetting-Klasse** stellt die Zuordnung zwischen verwalteten Systemelementen und der für sie definierten Einstellungsklasse dar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,13 +47,13 @@ class CIM_ElementSetting
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ ElementSetting** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ElementSetting-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ ElementSetting** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ElementSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -66,28 +66,28 @@ Datentyp: **CIM \_ ManagedSystemElement**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verweis auf die Rolle des [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md) -Objekts der **CIM \_ Element Setting** -Zuordnung. Das zugeordnete verwaltete System Element stellt das Element bereit, das die-Element Einstellung implementiert.
+Verweis auf die Rolle des [**CIM \_ ManagedSystemElement-Objekts**](cim-managedsystemelement.md) der **CIM \_ ElementSetting-Zuordnung.** Das zugeordnete verwaltete Systemelement stellt das Element bereit, das die Elementeinstellung implementiert.
 
 </dd> <dt>
 
 **Einstellung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Einstellung**
+Datentyp: **\_ CIM-Einstellung**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verweis auf die Rolle des [**CIM- \_ Einstellungs**](cim-setting.md) Objekts der **CIM- \_ ElementSetting** -Zuordnung. Die zugehörige Einstellung gibt die Einstellung an, die die-Element Einstellung implementiert.
+Verweis auf die Rolle des [**CIM \_ Setting-Objekts**](cim-setting.md) der **\_ CIM-ElementSetting-Zuordnung.** Die zugeordnete Einstellung stellt die Einstellung bereit, die die Elementeinstellung implementiert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert. Informationen zu Klassen, die von **CIM \_ Element Setting** abgeleitet sind, finden Sie unter [Win32-Klassen](win32-provider.md)
+WMI implementiert diese Klasse nicht. Informationen zu Klassen, die von **CIM \_ ElementSetting** abgeleitet werden, finden Sie unter [Win32-Klassen.](win32-provider.md)
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,8 +97,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
