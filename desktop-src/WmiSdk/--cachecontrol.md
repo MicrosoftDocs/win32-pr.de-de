@@ -1,5 +1,5 @@
 ---
-description: Class ist die abstrakte Basisklasse für Klassen, mit denen bestimmt wird, wann WMI ein Component Object Model (com)-Objekt freigeben soll.
+description: Class ist die abstrakte Basisklasse für Klassen, die verwendet werden, um zu bestimmen, wann WMI ein Component Object Model -Objekt (COM) freigeben soll.
 ms.assetid: 32631610-8c0e-4f04-b0b2-62e5f8e23ef4
 ms.tgt_platform: multiple
 title: __CacheControl-Klasse
@@ -14,18 +14,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: fe5358630a7ac5eb48751135d39c2fd998196bf7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 429e973d83e1f213b011998c75dfbfabd81fb7bb4921f0f8b9f61bcedd6080c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051098"
 ---
 # <a name="__cachecontrol-class"></a>\_\_CacheControl-Klasse
 
-Die **\_ \_ CacheControl** -System Klasse ist die abstrakte Basisklasse für Klassen, mit denen bestimmt wird, wann WMI ein Component Object Model (com)-Objekt freigeben soll. Instanzen dieser Klasse werden nie erstellt. Die **\_ \_ CacheControl** -Klasse befindet sich nur im Root-Namespace. Weitere Informationen zum Verwenden dieser Klasse finden Sie unter [Entladen eines Anbieters](unloading-a-provider.md).
+Die **\_ \_ CacheControl-Systemklasse** ist die abstrakte Basisklasse für Klassen, die verwendet werden, um zu bestimmen, wann WMI ein Component Object Model -Objekt (COM) freigeben soll. Instanzen dieser Klasse werden nie erstellt. Die **\_ \_ CacheControl-Klasse** befindet sich nur im Stammnamespace. Weitere Informationen zur Verwendung dieser Klasse finden Sie unter [Entladen eines Anbieters.](unloading-a-provider.md)
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,11 +38,11 @@ class __CacheControl : __SystemClass
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ CacheControl** -Klasse definiert keine Member.
+Die **\_ \_ CacheControl-Klasse** definiert keine Member.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ CacheControl** -Klasse wird von [**\_ \_ systemclass**](--systemclass.md)abgeleitet.
+Die **\_ \_ CacheControl-Klasse** wird von [**\_ \_ SystemClass**](--systemclass.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,25 +60,25 @@ Die **\_ \_ CacheControl** -Klasse wird von [**\_ \_ systemclass**](--systemclas
 
 <dl> <dt>
 
-[**\_\_System Class**](/windows/desktop/WmiSdk/--systemclass)
+[**\_\_SystemClass**](/windows/desktop/WmiSdk/--systemclass)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> <dt>
 
-[**\_\_Eventconsumerprovidercachecontrol**](--eventconsumerprovidercachecontrol.md)
+[**\_\_EventConsumerProviderCacheControl**](--eventconsumerprovidercachecontrol.md)
 </dt> <dt>
 
-[**\_\_Eventprovidercachecontrol**](--eventprovidercachecontrol.md)
+[**\_\_EventProviderCacheControl**](--eventprovidercachecontrol.md)
 </dt> <dt>
 
-[**\_\_EventSink Cache econtrol**](--eventsinkcachecontrol.md)
+[**\_\_EventSinkCacheControl**](--eventsinkcachecontrol.md)
 </dt> <dt>
 
-[**\_\_Objectprovidercachecontrol**](--objectprovidercachecontrol.md)
+[**\_\_ObjectProviderCacheControl**](--objectprovidercachecontrol.md)
 </dt> <dt>
 
-[\_\_Propertyprovidercachecontrol](--propertyprovidercachecontrol.md)
+[\_\_PropertyProviderCacheControl](--propertyprovidercachecontrol.md)
 </dt> <dt>
 
 [Entladen eines Anbieters](unloading-a-provider.md)

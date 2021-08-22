@@ -1,76 +1,76 @@
 ---
 title: Farbige Schriftarten
-description: In diesem Thema werden Farb Schriftarten, ihre Unterstützung in DirectWrite und Direct2D und deren Verwendung in Ihrer APP beschrieben.
+description: In diesem Thema werden Farbschriftarten, ihre Unterstützung in DirectWrite und Direct2D und deren Verwendung in Ihrer App beschrieben.
 ms.assetid: 74e096c4-9d1c-8854-e9ee-f8b11ac1c71a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6774089cc1f0bed1349edc940c6a1ae715d052c7
-ms.sourcegitcommit: 3d9dce1bd6c84e2b51759e940aa95aa9b459cd20
+ms.openlocfilehash: a5c0154e528ab8471d40f4771db5479ca9233320177386adbbd849162dbcd598
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "104556367"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119329524"
 ---
 # <a name="color-fonts"></a>Farbige Schriftarten
 
-In diesem Thema werden Farb Schriftarten, ihre Unterstützung in DirectWrite und Direct2D und deren Verwendung in Ihrer APP beschrieben.
+In diesem Thema werden Farbschriftarten, ihre Unterstützung in DirectWrite und Direct2D und deren Verwendung in Ihrer App beschrieben.
 
 Dieses Dokument enthält die folgenden Teile:
 
--   [Was sind Farb Schriftarten?](#what-are-color-fonts)
--   [Gründe für die Verwendung von Farb Schriftarten](#why-use-color-fonts)
--   [Welche Arten von Farb Schriftarten werden von Windows unterstützt?](#what-kinds-of-color-fonts-does-windows-support)
--   [Verwenden von Farb Schriftarten](#using-color-fonts)
-    -   [Verwenden von Farb Schriftarten in einer XAML-App](#using-color-fonts-in-a-xaml-app)
-    -   [Verwenden von Farb Schriftarten in Microsoft Edge](#using-color-fonts-in-microsoft-edge)
-    -   [Verwenden von Color-Schriftarten mit DirectWrite und Direct2D](#using-color-fonts-with-directwrite-and-direct2d)
-    -   [Verwenden von Color Fonts mit Win2D](#using-color-fonts-with-win2d)
+-   [Was sind Farbschriftarten?](#what-are-color-fonts)
+-   [Gründe für die Verwendung von Farbschriftarten](#why-use-color-fonts)
+-   [Welche Arten von Farbschriftarten werden Windows unterstützt?](#what-kinds-of-color-fonts-does-windows-support)
+-   [Verwenden von Farbschriftarten](#using-color-fonts)
+    -   [Verwenden von Farbschriftarten in einer XAML-App](#using-color-fonts-in-a-xaml-app)
+    -   [Verwenden von Farbschriftarten in Microsoft Edge](#using-color-fonts-in-microsoft-edge)
+    -   [Verwenden von Farbschriftarten mit DirectWrite und Direct2D](#using-color-fonts-with-directwrite-and-direct2d)
+    -   [Verwenden von Farbschriftarten mit Win2D](#using-color-fonts-with-win2d)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="what-are-color-fonts"></a>Was sind Farb Schriftarten?
+## <a name="what-are-color-fonts"></a>Was sind Farbschriftarten?
 
-Farb Schriftarten, auch als mehrfarbige Schriftarten oder als chromatische Schriftarten bezeichnet, sind eine Schriftart Technologie, mit der Schriftart Designer in jedem Symbol mehrere Farben verwenden können. Farb Schriftarten ermöglichen mehrfarbige Text Szenarien in apps und Websites mit weniger Code und stabiler Betriebssystemunterstützung als Ad-hoc-Techniken, die oberhalb des Text Rendering-Systems implementiert werden.
+Farbschriftarten, die auch als mehrfarbige schriftarten odertic-Schriftarten bezeichnet werden, sind eine Schriftarttechnologie, die es Schriftart-Designern ermöglicht, mehrere Farben in jedem Glyphen zu verwenden. Farbschriftarten ermöglichen mehrfarbige Textszenarien in Apps und Websites mit weniger Code und stabilerer Betriebssystemunterstützung als Ad-hoc-Techniken, die über dem Textrenderingsystem implementiert sind.
 
-Die Schriftarten, mit denen Sie wahrscheinlich am besten vertraut sind, sind keine Farb Schriftarten. Diese Schriftarten definieren nur die Form der Symbole, die Sie enthalten, entweder mit Vektor Umschlägen oder monochromen Bitmaps. Zur zeichnungszeit füllt ein TextRenderer die Form "Symbol" mit einer einzelnen Farbe (der Schriftfarbe), die durch die zu rendernde APP oder das gerenderte Dokument angegeben wird. Farb Schriftarten enthalten dagegen neben Form Informationen auch Farbinformationen. Bei manchen Ansätzen können Schriftarten Designer mehrere Farbpaletten anbieten, sodass Sie die Farbe für die künstlerische Flexibilität bereitstellen.
+Die Schriftarten, mit der Sie wahrscheinlich am besten vertraut sind, sind keine Farbschriftarten. Diese Schriftarten definieren nur die Form der Glyphen, die sie enthalten, entweder mit Vektorgliederungen oder monoischen Bitmaps. Zur Zeichnen-Zeit füllt ein Textrenderer die Glyphenform mit einer einzelnen Farbe (die Schriftfarbe) aus, die von der app oder dem Dokument angegeben wird, die gerendert wird. Farbschriftarten enthalten dagegen zusätzlich zu Forminformationen Farbinformationen. Bei einigen Ansätzen können Schriftart-Designer mehrere Farbpaletten anbieten, was der Farbschriftart Flexibilität gibt.
 
-Das folgende Beispiel zeigt ein Symbol aus der Segoe UI Emoji Color-Schriftart. Das Symbol wird auf der linken Seite in Monochrom und in Farbe auf der rechten Seite gerendert.
+Das folgende Beispiel zeigt ein Glyphen aus der Segoe UI Emoji-Farbschriftart. Das Glyphen wird links monofarbig und rechts in Farbe gerendert.
 
-![Zeigt parallele Symbole an, das linke Symbol, das in Monochrom gerendert wird, das Recht in der Schriftart "Bild-auf-der-Farbe I I Emoji Color".](images/color-font-cat.png)
+![Zeigt nebeneinander glyphen, das linke Glyph in monofarbig gerendert, die rechte in der Segoe U I Emoji-Farbschriftart.](images/color-font-cat.png)
 
-Farb Schriftarten enthalten in der Regel Fall Back Informationen für Plattformen, die keine Farb Schriftarten unterstützen, oder für Szenarios, in denen die Farb Funktionalität deaktiviert wurde. Auf diesen Plattformen werden Farb Schriftarten als reguläre, monochrome Schriftarten gerendert.
+Farbschriftarten enthalten in der Regel Fallbackinformationen für Plattformen, die keine Farbschriftarten unterstützen, oder für Szenarien, in denen die Farbfunktionalität deaktiviert wurde. Auf diesen Plattformen werden Farbschriftarten als reguläre monotone Schriftarten gerendert.
 
-## <a name="why-use-color-fonts"></a>Gründe für die Verwendung von Farb Schriftarten
+## <a name="why-use-color-fonts"></a>Gründe für die Verwendung von Farbschriftarten
 
-In der Vergangenheit haben Designer und Entwickler eine Reihe von Techniken zum Erreichen von mehrfarbigem Text verwendet. Websites verwenden z. b. häufig Rasterbilder anstelle von Text, um umfangreiche Header anzuzeigen. Diese Vorgehensweise ermöglicht die künstlerische Flexibilität, aber Rastergrafiken können nicht für alle Anzeige Größen skaliert werden, und Sie bieten nicht dieselben Barrierefreiheits Funktionen wie echten Text. Eine andere gängige Methode besteht darin, mehrere monochrome Schriftarten in unterschiedlichen Schriftfarben zu überlagern, dies erfordert jedoch in der Regel zusätzlichen Layoutcode zur Verwaltung.
+In der Vergangenheit haben Designer und Entwickler eine Vielzahl von Techniken verwendet, um mehrfarbigen Text zu erzielen. Websites verwenden z. B. häufig Rasterbilder anstelle von Text, um umfangreiche Header anzuzeigen. Dieser Ansatz ermöglicht flexibilität, aber Rastergrafiken werden nicht gut auf alle Anzeigegrößen skaliert und bieten auch nicht die gleichen Barrierefreiheitsfeatures wie echter Text. Eine weitere gängige Methode ist das Überlagern mehrerer monotoner Schriftarten in verschiedenen Schriftfarben, aber dies erfordert in der Regel zusätzlichen Layoutcode für die Verwaltung.
 
-Farb Schriftarten bieten eine Möglichkeit, diese visuellen Effekte mit der Einfachheit und Funktionalität regulärer Schriftarten zu erzielen. Text, der in einer Farb Schriftart gerendert wird, ist identisch mit dem anderen Text: er kann kopiert und eingefügt werden, er kann durch Barrierefreiheits Tools analysiert werden usw.
+Farbschriftarten bieten eine Möglichkeit, diese visuellen Effekte mit der Einfachheit und Funktionalität regulärer Schriftarten zu erzielen. Text, der in einer Farbschriftart gerendert wird, ist identisch mit anderem Text: Er kann kopiert und eingefügt, von Barrierefreiheitstools analysiert werden usw.
 
-## <a name="what-kinds-of-color-fonts-does-windows-support"></a>Welche Arten von Farb Schriftarten werden von Windows unterstützt?
+## <a name="what-kinds-of-color-fonts-does-windows-support"></a>Welche Arten von Farbschriftarten werden Windows unterstützt?
 
-Die [OpenType-Spezifikation](https://www.microsoft.com/Typography/OpenTypeSpecification.aspx) definiert mehrere Möglichkeiten, Farbinformationen in eine Schriftart einzubetten. Ab Windows 10 Anniversary Update unterstützen DirectWrite und Direct2D (und die darauf basierenden Windows-Frameworks) all diese Ansätze. Sie werden in der folgenden Tabelle zusammengefasst:
+Die [OpenType-Spezifikation](https://www.microsoft.com/Typography/OpenTypeSpecification.aspx) definiert mehrere Möglichkeiten zum Einbetten von Farbinformationen in eine Schriftart. Ab Windows 10 Anniversary Update unterstützen DirectWrite und Direct2D (und die darauf erstellten Windows-Frameworks) alle diese Ansätze. Sie sind in der folgenden Tabelle zusammengefasst:
 
 
 
 | Verfahren                                                                                                                        | Beschreibung                                                                                                                                                                                                                                                                                                       |
 |----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Colr](/typography/opentype/spec/colr) / [CPAL](/typography/opentype/spec/cpal) -Tabellen | Verwendet Schichten farbiger Vektoren, deren Formen auf die gleiche Weise definiert sind wie Symbole mit einem Farben Symbol. **Hinweis:** Unterstützt ab Windows 8.1. <br/>                                                                                                                                                 |
-| [SVG](/typography/opentype/spec/svg) -Tabelle                                                                 | Verwendet Vektorbilder, die im skalierbaren Vektorgrafik Format erstellt wurden. **Hinweis:** Ab Windows 10 Anniversary Update unterstützt DirectWrite eine Teilmenge der vollständigen SVG-Spezifikation. Nicht alle SVG-Inhalte werden garantiert in einer OpenType SVG-Schriftart dargestellt. Weitere Informationen finden Sie [unter SVG-Unterstützung](../direct2d/svg-support.md) . <br/> |
-| [Cbdt](/typography/opentype/spec/cbdt) / [CBLC](/typography/opentype/spec/cblc) -Tabellen | Verwendet eingebettete Farb Bitmap-Bilder.                                                                                                                                                                                                                                                                                |
-| [sbix](/typography/opentype/spec/sbix) -Tabelle                                                               | Verwendet eingebettete Farb Bitmap-Bilder.                                                                                                                                                                                                                                                                                |
+| [COLR](/typography/opentype/spec/colr) / [CPAL-Tabellen](/typography/opentype/spec/cpal) | Verwendet Ebenen von farbigen Vektoren, deren Formen auf die gleiche Weise definiert werden wie einfarbige Glyphengliederungen. **Hinweis:** Unterstützt ab Windows 8.1. <br/>                                                                                                                                                 |
+| [SVG-Tabelle](/typography/opentype/spec/svg)                                                                 | Verwendet Vektorbilder, die im Format Scalable Vector Graphics erstellt wurden. **Hinweis:** Ab dem Windows 10 Anniversary Update unterstützt DirectWrite eine Teilmenge der vollständigen SVG-Spezifikation. Nicht alle SVG-Inhalte werden garantiert in einer OpenType SVG-Schriftart gerendert. Weitere [Informationen finden Sie unter SVG-Unterstützung.](../direct2d/svg-support.md) <br/> |
+| [BESENT](/typography/opentype/spec/cbdt) / [CBLC-Tabellen](/typography/opentype/spec/cblc) | Verwendet eingebettete Farbbitmapbilder.                                                                                                                                                                                                                                                                                |
+| [sbix-Tabelle](/typography/opentype/spec/sbix)                                                               | Verwendet eingebettete Farbbitmapbilder.                                                                                                                                                                                                                                                                                |
 
 
 
  
 
-## <a name="using-color-fonts"></a>Verwenden von Farb Schriftarten
+## <a name="using-color-fonts"></a>Verwenden von Farbschriftarten
 
-Aus Sicht des Benutzers sind Farb Schriftarten nur Schriftarten. Sie können z. b. normalerweise auf die gleiche Weise wie Mono basierte Schriftarten vom System installiert und deinstalliert werden, und Sie werden als regulärer, auswählbarer Text gerendert.
+Aus Sicht des Benutzers sind Farbschriftarten nur Schriftarten. Beispielsweise können sie in der Regel auf die gleiche Weise wie monotone Schriftarten installiert und aus dem System deinstalliert werden, und sie werden als regulärer, auswählbarer Text gerendert.
 
-Aus der Perspektive des Entwicklers werden Farb Schriftarten in der Regel auf dieselbe Weise wie Mono basierte Schriftarten verwendet. In den XAML-und Microsoft Edge-Frameworks können Sie Ihren Text mit Farb Schriftarten auf die gleiche Weise wie reguläre Schriftarten formatieren, und der Text wird standardmäßig in Farbe gerendert. Wenn Ihre APP jedoch Direct2D-APIs (oder Win2D-APIs) direkt zum Rendern von Text aufruft, muss Sie explizit das Farb Schriftart Rendering anfordern.
+Auch aus Entwicklersicht werden Farbschriftarten in der Regel auf die gleiche Weise wie monotone Schriftarten verwendet. In den XAML- und Microsoft Edge-Frameworks können Sie Ihren Text mit Farbschriftarten auf die gleiche Weise formatieren wie reguläre Schriftarten, und Ihr Text wird standardmäßig in Farbe gerendert. Wenn Ihre App jedoch Direct2D-APIs (oder Win2D-APIs) direkt aufruft, um Text zu rendern, muss sie explizit Farbschriftartrendering anfordern.
 
-### <a name="using-color-fonts-in-a-xaml-app"></a>Verwenden von Farb Schriftarten in einer XAML-App
+### <a name="using-color-fonts-in-a-xaml-app"></a>Verwenden von Farbschriftarten in einer XAML-App
 
-Die Textelemente der XAML-Plattform (z. b. [TextBlock](/uwp/api/windows.ui.xaml.controls.textblock), [TextBox](/uwp/api/windows.ui.xaml.controls.textbox), [richeditbox](/uwp/api/windows.ui.xaml.controls.richeditbox), [Glyphen](/uwp/api/windows.ui.xaml.documents.glyphs?f=255&MSPPError=-2147217396)und [fonticon](/uwp/api/windows.ui.xaml.controls.fonticon)) unterstützen standardmäßig Farb Schriftarten. Formatieren Sie einfach den Text mit einer Farb Schriftart, und alle Farbsymbole werden in Farbe gerendert. Das folgende Codebeispiel zeigt eine Möglichkeit, einen TextBlock mit einer Farb Schriftart zu formatieren, die mit Ihrer APP verpackt ist. Dasselbe Verfahren gilt für reguläre Schriftarten.
+Die Textelemente der XAML-Plattform (z. B. [TextBlock,](/uwp/api/windows.ui.xaml.controls.textblock) [TextBox,](/uwp/api/windows.ui.xaml.controls.textbox) [RichEditBox,](/uwp/api/windows.ui.xaml.controls.richeditbox) [Glyphen](/uwp/api/windows.ui.xaml.documents.glyphs?f=255&MSPPError=-2147217396)und [FontIcon)](/uwp/api/windows.ui.xaml.controls.fonticon)unterstützen standardmäßig Farbschriftarten. Formatieren Sie Ihren Text einfach mit einer Farbschriftart, und alle Farbstriche werden in Farbe gerendert. Das folgende Codebeispiel zeigt eine Möglichkeit zum Formatieren eines TextBlock mit einer Farbschriftart, die mit Ihrer App gepackt ist. Das gleiche Verfahren gilt für reguläre Schriftarten.
 
 
 ```XML
@@ -79,17 +79,17 @@ Die Textelemente der XAML-Plattform (z. b. [TextBlock](/uwp/api/windows.ui.xaml.
 
 
 
-Wenn Sie nicht möchten, dass das XAML-Textelement mehrfarbigen Text darstellt, legen Sie dessen [iscolorfontenabledproperty](/uwp/api/windows.ui.xaml.controls.textblock.iscolorfontenabledproperty) -Eigenschaft auf false fest.
+Wenn Ihr XAML-Textelement niemals mehrfarbigen Text rendern soll, legen Sie dessen [IsColorFontEnabledProperty-Eigenschaft](/uwp/api/windows.ui.xaml.controls.textblock.iscolorfontenabledproperty) auf FALSE fest.
 
-### <a name="using-color-fonts-in-microsoft-edge"></a>Verwenden von Farb Schriftarten in Microsoft Edge
+### <a name="using-color-fonts-in-microsoft-edge"></a>Verwenden von Farbschriftarten in Microsoft Edge
 
-Farb Schriftarten werden standardmäßig in Websites und Web-Apps gerendert, die auf Microsoft Edge ausgeführt werden, einschließlich des XAML- [WebView](/uwp/api/windows.ui.xaml.controls.webview) -Steuer Elements Verwenden Sie einfach HTML und CSS, um Ihren Text mit einer Farb Schriftart zu formatieren, und alle Farbsymbole werden in Farbe gerendert.
+Farbschriftarten werden standardmäßig in Websites und Web-Apps gerendert, die auf Microsoft Edge ausgeführt werden, einschließlich des [XAML-WebView-Steuerelements.](/uwp/api/windows.ui.xaml.controls.webview) Verwenden Sie einfach HTML und CSS, um Ihren Text mit einer Farbschriftart zu formatieren, und alle Farbstriche werden in Farbe gerendert.
 
-### <a name="using-color-fonts-with-directwrite-and-direct2d"></a>Verwenden von Color-Schriftarten mit DirectWrite und Direct2D
+### <a name="using-color-fonts-with-directwrite-and-direct2d"></a>Verwenden von Farbschriftarten mit DirectWrite und Direct2D
 
-Ihre APP kann Direct2D s auf höherer Ebene Text Zeichnungs Methoden ([**DrawText**](../direct2d/id2d1devicecontext4-drawtext-overload.md) und [**drawtextlayout**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1devicecontext4-drawtextlayout)) verwenden, oder es können Methoden auf niedrigerer Ebene verwendet werden, um Glyphe direkt zu zeichnen. In beiden Fällen ist für Ihre APP Codeänderungen erforderlich, damit Farbsymbole ordnungsgemäß verarbeitet werden. Wenn Ihre APP Direct2D s **DrawText** -und **drawtextlayout** -APIs verwendet, beachten Sie, dass diese standardmäßig keine Farbsymbole darstellen. Dadurch werden unerwartete Verhaltensänderungen bei Text Rendering-apps vermieden, die vor der Farb Schriftart Unterstützung entworfen wurden.
+Ihre App kann direct2D-Textzeichnungsmethoden auf höherer Ebene ([**DrawText**](../direct2d/id2d1devicecontext4-drawtext-overload.md) und [**DrawTextLayout**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1devicecontext4-drawtextlayout)) oder Techniken auf niedrigerer Ebene verwenden, um Glyphenläufe direkt zu zeichnen. In beiden Fällen erfordert Ihre App Codeänderungen, um Farbglyphen ordnungsgemäß zu behandeln. Wenn Ihre App Die **DrawText-** und **DrawTextLayout-APIs** von Direct2D verwendet, beachten Sie, dass diese standardmäßig keine Farbstriche rendern. Dadurch werden unerwartete Verhaltensänderungen in Textrendering-Apps vermieden, die vor der Unterstützung der Farbschriftart entworfen wurden.
 
-Um das Farb Symbol Rendering zu aktivieren, übergeben Sie das Flag " [**D2D1 \_ Draw \_ Text \_ Optionen \_ enable \_ Color \_ Font**](/windows/win32/api/d2d1/ne-d2d1-d2d1_draw_text_options) Options" an die Zeichnungs Methode. Im folgenden Codebeispiel wird gezeigt, wie die DrawText-Methode Direct2D s aufgerufen wird, um eine Zeichenfolge in einer Farb Schriftart zu erzeugen:
+Um das Farbglyphenrendering zu aktivieren, übergeben Sie das [**Optionsflag D2D1 \_ DRAW TEXT OPTIONS ENABLE COLOR \_ \_ \_ \_ \_ FONT**](/windows/win32/api/d2d1/ne-d2d1-d2d1_draw_text_options) an die Zeichnungsmethode. Das folgende Codebeispiel zeigt, wie die DrawText-Methode von Direct2D zum Rendern einer Zeichenfolge in einer Farbschriftart aufruft:
 
 
 ```C++
@@ -109,16 +109,16 @@ m_deviceContext->DrawText(
 
 
 
-Wenn Ihre APP APIs auf niedrigerer Ebene verwendet, um Glyphe direkt zu verarbeiten, funktioniert Sie weiterhin, wenn Farb Schriftarten vorhanden sind, aber es ist nicht möglich, Farbsymbole ohne zusätzliche Logik zu zeichnen.
+Wenn Ihre App APIs auf niedrigerer Ebene verwendet, um Glyphenläufe direkt zu verarbeiten, funktioniert sie weiterhin bei Vorhandensein von Farbschriftarten, kann aber ohne zusätzliche Logik keine Farbglyphen zeichnen.
 
-Um Farbsymbole ordnungsgemäß zu verarbeiten, sollte Ihre APP folgende Aktionen ausführen:
+Um farbliche Glyphen ordnungsgemäß zu verarbeiten, sollte Ihre App:
 
-1.  Übergeben Sie die Symbol laufinformationen an [**translatecolorglyphrun**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory4-translatecolorglyphrun), zusammen mit einem [**dwrite-Symbol für \_ \_ Bild \_ Formate**](/windows/win32/api/dcommon/ne-dcommon-dwrite_glyph_image_formats) , das angibt, welche Typen von Farbsymbolen von der APP verarbeitet werden sollen. Wenn beliebige Farbsymbole vorhanden sind (basierend auf der Schriftart und den angeforderten **dwrite- \_ Glyphe- \_ Bild \_ Formaten**), teilt DirectWrite die Ausführung des primären Symbols in einzelne farbglyphe auf, auf die über das zurückgegebene [**idwrite-colorglyphrunenumerator**](idwritecolorglyphrunenumerator.md) -Objekt in Schritt 4 zugegriffen werden kann.
-2.  Überprüfen Sie das von [**translatecolorglyphrun**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory4-translatecolorglyphrun) zurückgegebene HRESULT, um zu bestimmen, ob farbglyphe erkannt wurden. Ein **HRESULT** von **dwrite \_ E \_ nocolor** gibt an, dass kein anwendbares Farb Symbol ausgeführt werden darf.
-3.  Wenn [**translatecolorglyphrun**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory4-translatecolorglyphrun) gemeldet hat, dass keine Farb Glyphe ausgeführt wird (durch Zurückgeben von **dwrite \_ E \_ nocolor**), wird die ganze Symbol Ausführung als Mono-basiert behandelt, und Ihre APP sollte Sie wie gewünscht zeichnen (z. b. mithilfe von [**ID2D1DeviceContext::D rawglyphrun**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-drawglyphrun)).
-4.  Wenn [**translatecolorglyphrun**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory4-translatecolorglyphrun) das vorhanden sein von Farb Glyphe meldet, sollte Ihre APP das primäre Symbol ausführen und stattdessen die von translatecolorglyphrun zurückgegebenen Farb Symbol Ausführungen verwenden. Zu diesem Zweck durchlaufen Sie das zurückgegebene [**IDWriteColorGlyphRunEnumerator1**](/windows/win32/api/dwrite_3/nn-dwrite_3-idwritecolorglyphrunenumerator1) -Objekt, wobei jedes ausgeführte Farb Symbol abgerufen und nach Bedarf für sein Symbolbild Format gezeichnet wird (Sie können z. b. [**drawcolorbitmapglyphrun**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1devicecontext4-drawcolorbitmapglyphrun) und [**drawsvgglyphrun**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1devicecontext4-drawsvgglyphrun) verwenden, um Farb Bitmap-Symbole bzw. SVG-Symbole zu zeichnen).
+1.  Übergeben Sie die Ausführungsinformationen des Glyphen an [**TranslateColorGlyphRun**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory4-translatecolorglyphrun)zusammen mit einem [**DWRITE \_ GLYPH \_ IMAGE \_ FORMATS-Parameter,**](/windows/win32/api/dcommon/ne-dcommon-dwrite_glyph_image_formats) der angibt, für welche Typen von Farbglyphen die App vorbereitet ist. Wenn Farbglyphen vorhanden sind (basierend auf der Schriftart und den angeforderten **\_ DWRITE-GLYPH-BILDFORMATen), \_ \_** teilt DirectWrite die primäre Glyphe in einzelne Farbglyphenläufe auf, auf die über das zurückgegebene [**IDWriteColorGlyphRunEnumerator-Objekt**](idwritecolorglyphrunenumerator.md) in Schritt 4 zugegriffen werden kann.
+2.  Überprüfen Sie das von [**TranslateColorGlyphRun**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory4-translatecolorglyphrun) zurückgegebene HRESULT, um zu ermitteln, ob Farbglyphenläufe erkannt wurden. Ein **HRESULT von** **DWRITE E \_ \_ NOCOLOR** gibt an, dass keine anwendbaren Farbstriche ausgeführt werden.
+3.  Wenn [**TranslateColorGlyphRun**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory4-translatecolorglyphrun) keine Farbglyphenläufe gemeldet hat (durch Zurückgeben von **DWRITE \_ E \_ NOCOLOR**), wird die gesamte Glyphen-Ausführung als monolypisch behandelt, und Ihre App sollte sie wie gewünscht zeichnen (z. B. mit [**ID2D1DeviceContext::D rawGlyphRun).**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-drawglyphrun)
+4.  Wenn [**TranslateColorGlyphRun**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory4-translatecolorglyphrun) das Vorhandensein von Farbglyphenläufen berichtet, sollte Ihre App die Ausführung des primären Glyphen ignorieren und stattdessen die von TranslateColorGlyphRun zurückgegebenen Farbglyphenläufe verwenden. Iterieren Sie dazu das zurückgegebene [**IDWriteColorGlyphRunEnumerator1-Objekt,**](/windows/win32/api/dwrite_3/nn-dwrite_3-idwritecolorglyphrunenumerator1) indem Sie die einzelnen Farbglyphenläufe abrufen und entsprechend dem Glyphenbildformat zeichnen (Sie können z. B. [**DrawColorBitmapGlyphRun**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1devicecontext4-drawcolorbitmapglyphrun) und [**DrawSvgGlyphRun**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1devicecontext4-drawsvgglyphrun) verwenden, um Farbbitmap-Glyphen bzw. SVG-Glyphen zu zeichnen).
 
-Das folgende Codebeispiel zeigt die allgemeine Struktur dieses Verfahrens:
+Das folgende Codebeispiel zeigt die allgemeine Struktur dieser Prozedur:
 
 
 ```C++
@@ -199,9 +199,9 @@ HRESULT DrawGlyphRun(
 
 
 
-### <a name="using-color-fonts-with-win2d"></a>Verwenden von Color Fonts mit Win2D
+### <a name="using-color-fonts-with-win2d"></a>Verwenden von Farbschriftarten mit Win2D
 
-Ähnlich wie Direct2D werden in Win2D s Text Zeichnungs-APIs standardmäßig keine Farbsymbole dargestellt. Um das Farb Symbol Rendering zu aktivieren, legen Sie das Optionen-Flag [enablecolorfont](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Text_CanvasDrawTextOptions.htm) im Textformat-Objekt fest, das Ihre APP an die Text Zeichnungs Methode übergibt. Im folgenden Codebeispiel wird gezeigt, wie eine Zeichenfolge in einer Farb Schriftart mithilfe von Win2D dargestellt wird:
+Ähnlich wie Direct2D rendern Die Textzeichnungs-APIs von Win2D standardmäßig keine Farbstriche. Um das Farbglyphenrendering zu aktivieren, legen Sie das [Optionsflag EnableColorFont](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Text_CanvasDrawTextOptions.htm) im Textformatobjekt fest, das Ihre App an die Textzeichnungsmethode übergibt. Das folgende Codebeispiel zeigt, wie sie eine Zeichenfolge mit win2D in einer Farbschriftart rendert:
 
 
 ```C++
@@ -225,16 +225,16 @@ args.DrawingSession.DrawText(
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Beispiel für das farbige DirectWrite-Symbol](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DWriteColorGlyph)
+[DirectWrite eines farbigen Glyphenbeispiels](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DWriteColorGlyph)
 
 
 [**IDWriteFontFace4-Schnittstelle**](/windows/win32/api/dwrite_3/nn-dwrite_3-idwritefontface4)
 
 
-[**IDWriteFactory4:: translatecolorglyphrun-Methode**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory4-translatecolorglyphrun)
+[**IDWriteFactory4::TranslateColorGlyphRun-Methode**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory4-translatecolorglyphrun)
 
 
-[**ID2D1DeviceContext4::D rawtext-Methode**](../direct2d/id2d1devicecontext4-drawtext-overload.md)
+[**ID2D1DeviceContext4::D rawText-Methode**](../direct2d/id2d1devicecontext4-drawtext-overload.md)
 
 
  

@@ -1,9 +1,9 @@
 ---
-title: MENUEX_TEMPLATE_HEADER Struktur
-description: Definiert den Header für eine erweiterte Menüvorlage. Diese Struktur Definition dient lediglich der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+title: MENUEX_TEMPLATE_HEADER-Struktur
+description: Definiert den Header für eine erweiterte Menüvorlage. Diese Strukturdefinition wird nur zur Erklärung verwendet. sie ist in einer Standardheaderdatei nicht vorhanden.
 ms.assetid: df763349-7127-482e-8613-74e68addde5d
 keywords:
-- MENUEX_TEMPLATE_HEADER Struktur Menüs und andere Ressourcen
+- MENUEX_TEMPLATE_HEADER Strukturmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: caa255ccdbe76c3959d9c730bcaa52ec07428742
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 31e52661e04a036cf7a49791be96af002b801af0e0ed1c4b6ad3ddebf971c2c4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341783"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119226120"
 ---
-# <a name="menuex_template_header-structure"></a>Menuex- \_ Vorlagen \_ Header Struktur
+# <a name="menuex_template_header-structure"></a>MENUEX \_ TEMPLATE \_ HEADER structure
 
-Definiert den Header für eine erweiterte Menüvorlage. Diese Struktur Definition dient lediglich der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+Definiert den Header für eine erweiterte Menüvorlage. Diese Strukturdefinition wird nur zur Erklärung verwendet. sie ist in einer Standardheaderdatei nicht vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,42 +41,42 @@ typedef struct {
 
 <dl> <dt>
 
-**wversion**
+**wVersion**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Versionsnummer der Vorlage. Dieser Member muss für erweiterte Menü Vorlagen 1 sein.
+Die Versionsnummer der Vorlage. Dieser Member muss für erweiterte Menüvorlagen 1 sein.
 
 </dd> <dt>
 
-**woffset**
+**wOffset**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Der Offset zur ersten [**menuex- \_ Vorlagen \_ Element**](menuex-template-item.md) Struktur, relativ zum Ende dieses Strukturmembers. Wenn die erste Element Definition direkt auf den **dwhelpid** -Member folgt, sollte dieser Member 4 sein.
+Der Offset zur ersten [**MENUEX \_ TEMPLATE \_ ITEM-Struktur**](menuex-template-item.md) relativ zum Ende dieses Strukturelements. Wenn die erste Elementdefinition unmittelbar auf das **dwHelpId-Element** folgt, sollte dieser Member 4 sein.
 
 </dd> <dt>
 
-**dwhelpid**
+**dwHelpId**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Der Hilfe Bezeichner der Menüleiste.
+Der Hilfebezeichner der Menüleiste.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine erweiterte Menüvorlage besteht aus einer **menuex- \_ Vorlagen \_ Header** Struktur, gefolgt von einer oder mehreren zusammenhängenden [**menuex- \_ Vorlagen \_ Element**](menuex-template-item.md) Strukturen. Die **menuex- \_ Vorlagen \_ Element** Strukturen, die eine Variable Länge haben, werden an den **DWORD** -Grenzen ausgerichtet. Verwenden Sie die [**loadmenuindirekte**](/windows/desktop/api/Winuser/nf-winuser-loadmenuindirecta) -Funktion, um ein Menü aus einer erweiterten Menüvorlage im Arbeitsspeicher zu erstellen.
+Eine erweiterte Menüvorlage besteht aus einer **MENUEX \_ TEMPLATE \_ HEADER-Struktur,** gefolgt von einer oder mehreren zusammenhängenden [**MENUEX TEMPLATE \_ \_ ITEM-Strukturen.**](menuex-template-item.md) Die **MENUEX \_ TEMPLATE \_ ITEM-Strukturen,** die eine variable Länge haben, werden an **DWORD-Grenzen** ausgerichtet. Um ein Menü aus einer erweiterten Menüvorlage im Arbeitsspeicher zu erstellen, verwenden Sie die [**LoadMenuIndirect-Funktion.**](/windows/desktop/api/Winuser/nf-winuser-loadmenuindirecta)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,20 +89,20 @@ Eine erweiterte Menüvorlage besteht aus einer **menuex- \_ Vorlagen \_ Header**
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Loadmenuindirekte**](/windows/desktop/api/Winuser/nf-winuser-loadmenuindirecta)
+[**LoadMenuIndirect**](/windows/desktop/api/Winuser/nf-winuser-loadmenuindirecta)
 </dt> <dt>
 
-[**menuex- \_ Vorlagen \_ Element**](menuex-template-item.md)
+[**\_MENUEX-VORLAGENELEMENT \_**](menuex-template-item.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Menüs](menus.md)

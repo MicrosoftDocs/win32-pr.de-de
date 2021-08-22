@@ -1,9 +1,9 @@
 ---
-title: Delay (boottriggertype)-Element
-description: Gibt den Zeitraum zwischen dem Start des Systems und dem Start der Aufgabe an.
+title: Delay (bootTriggerType)-Element
+description: Gibt die Zeitspanne zwischen dem Start des Systems und dem Start des Tasks an.
 ms.assetid: 2a583069-ad38-43b4-bcf2-f7c9101f1927
 keywords:
-- Verzögertes Element Taskplaner
+- Delay-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1ab28da8e9c739d3deff52572fe6a5d37f862119
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 91789b22b992af163e9676ef156a2a72f4316ac49b9b47b30ae5599446918bed
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957205"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119334600"
 ---
-# <a name="delay-boottriggertype-element"></a>Delay (boottriggertype)-Element
+# <a name="delay-boottriggertype-element"></a>Delay (bootTriggerType)-Element
 
-Gibt den Zeitraum zwischen dem Start des Systems und dem Start der Aufgabe an. Das Format dieser Zeichenfolge lautet pnynmndtnhnmns. dabei ist "NY" die Anzahl der Jahre, "nm" die Anzahl von Monaten, "ND" die Anzahl der Tage, "t" ist das Trennzeichen für Datum/Uhrzeit, "NH" die Anzahl von Stunden, "nm" die Anzahl der Minuten und "NS" die Anzahl von Sekunden (z Weitere Informationen zum Duration-Typ finden Sie unter <https://go.microsoft.com/fwlink/p/?linkid=106886> .
+Gibt die Zeitspanne zwischen dem Start des Systems und dem Start des Tasks an. Das Format für diese Zeichenfolge lautet PnYnMnDTnHnMnS, wobei nY die Anzahl der Jahre, nM die Anzahl der Monate, nD die Anzahl der Tage, "T" das Datums-/Uhrzeittrennzeichen, nH die Anzahl der Stunden, nM die Anzahl der Minuten und nS die Anzahl von Sekunden ist (z. B. PT5M gibt 5 Minuten an, und P1M4DT2H5M gibt einen Monat, vier Tage, zwei Stunden und fünf Minuten an). Weitere Informationen zum Dauertyp finden Sie unter <https://go.microsoft.com/fwlink/p/?linkid=106886> .
 
 ``` syntax
 <xs:element name="Delay"
@@ -30,23 +30,23 @@ Gibt den Zeitraum zwischen dem Start des Systems und dem Start der Aufgabe an. D
  />
 ```
 
-Das **Delay** -Element wird durch den komplexen [**boottriggertype**](taskschedulerschema-boottriggertype-complextype.md) -Typ definiert.
+Das **Delay-Element** wird vom komplexen [**BootTriggerType-Typ**](taskschedulerschema-boottriggertype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                     | Abgeleitet von                                                               | BESCHREIBUNG                                                                  |
+| Element                                                                     | Abgeleitet von                                                               | Beschreibung                                                                  |
 |-----------------------------------------------------------------------------|----------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| [**Boottrigger**](taskschedulerschema-boottrigger-triggergroup-element.md) | [**boottriggertype**](taskschedulerschema-boottriggertype-complextype.md) | Gibt einen-Fehler an, mit dem eine Aufgabe gestartet wird, wenn das System gestartet wird.<br/> |
+| [**BootTrigger**](taskschedulerschema-boottrigger-triggergroup-element.md) | [**bootTriggerType**](taskschedulerschema-boottriggertype-complextype.md) | Gibt einen Trigger an, der eine Aufgabe startet, wenn das System gestartet wird.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skript Entwicklung wird die Verzögerung des Ereignis Auslösers durch die [**boottrigger. Delay**](boottrigger-delay.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird die Ereignistriggerverzögerung durch die [**BootTrigger.Delay-Eigenschaft**](boottrigger-delay.md) angegeben.
 
-Bei der C++-Entwicklung wird die Verzögerung des Ereignis Auslösers durch die [**iboottrigger::D Elay**](/windows/desktop/api/taskschd/nf-taskschd-iboottrigger-get_delay) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird die Ereignistriggerverzögerung durch die [**IBootTrigger::D elay-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iboottrigger-get_delay) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Bei der C++-Entwicklung wird die Verzögerung des Ereignis Auslösers durch die 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 09781c5c11560c3497a5af57528cf478f6259816
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 90c36ee9c414b6ae34058b255ad2e7a642f13ef49ee91b586ca974009d4e6b7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108113328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119498490"
 ---
 # <a name="d3dxcoloradjustcontrast-function-d3dx10mathh"></a>D3DXColorAdjustContrast-Funktion (D3DX10Math.h)
 
@@ -75,13 +75,13 @@ Typ: **[ **D3DXCOLOR**](../direct3d9/d3dxcolor.md)\***
 
 Diese Funktion gibt einen Zeiger auf eine D3DXCOLOR-Struktur zurück, die das Ergebnis der Kontrastanpassung ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Eingabe-Alphakanal wird unverändert in den Alphakanal der Ausgabe kopiert.
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann diese Funktion als Parameter für eine andere Funktion verwendet werden.
 
-Diese Funktion interpoliert die Rot-, Grün- und Blau-Farbkomponenten einer D3DXCOLOR-Struktur zwischen 50 Prozent Grau und einem angegebenen Kontrastwert, wie im folgenden Beispiel gezeigt.
+Diese Funktion interpoliert die Rot-, Grün- und Blau-Farbkomponenten einer D3DXCOLOR-Struktur zwischen 10 Prozent Grau und einem angegebenen Kontrastwert, wie im folgenden Beispiel gezeigt.
 
 
 ```
@@ -96,14 +96,14 @@ Wenn c größer als 0 und kleiner als 1 ist, wird der Kontrast verringert. Wenn 
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

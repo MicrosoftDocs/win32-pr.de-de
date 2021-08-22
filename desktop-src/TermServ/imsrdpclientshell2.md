@@ -1,11 +1,11 @@
 ---
 title: IMsRdpClientShell2-Schnittstelle
-description: Macht Eigenschaften verfügbar, die den Remotedesktopverbindung Client über Remotedesktop Webzugriff (RD-Webzugriff) oder andere Webportale starten.
+description: Macht Eigenschaften verfügbar, die den Remotedesktopverbindung Client über Remotedesktop Webzugriff (RD-Webzugriff) oder über andere Webportale starten.
 ms.assetid: cc8ef78f-b7d6-42cd-bb67-8a8e1f33be08
 ms.tgt_platform: multiple
 keywords:
 - IMsRdpClientShell2-Schnittstelle Remotedesktopdienste
-- IMsRdpClientShell2 Interface Remotedesktopdienste, beschrieben
+- IMsRdpClientShell2-Schnittstelle Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,35 +16,35 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bb93fd938602b195f60877be884dbe0bd458a598
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 561e9a63e631ca88575f4b632def5e47b29b68da414d48af95d42e757dcb2da6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119138653"
 ---
 # <a name="imsrdpclientshell2-interface"></a>IMsRdpClientShell2-Schnittstelle
 
-Macht Eigenschaften verfügbar, die den Remotedesktopverbindung Client über Remotedesktop Webzugriff (RD-Webzugriff) oder andere Webportale starten.
+Macht Eigenschaften verfügbar, die den Remotedesktopverbindung Client über Remotedesktop Webzugriff (RD-Webzugriff) oder über andere Webportale starten.
 
-Diese Schnittstelle wird durch das Remotedesktopdienste Webzugriff-Steuerelement implementiert. Hierbei handelt es sich um einen Wrapper um den Remotedesktopverbindung Client (MsTscAx.dll) und den Lauf Zeit Proxy für RemoteApp-und Desktop Verbindungen (Tswbprxy.exe).
+Diese Schnittstelle wird von der Remotedesktopdienste Webzugriff Control implementiert. Dabei handelt es sich um einen Wrapper um den Remotedesktopverbindung-Client (MsTscAx.dll) und den Laufzeitproxy für RemoteApp- und Desktopverbindungen (Tswbprxy.exe).
 
 ## <a name="members"></a>Member
 
-Die **IMsRdpClientShell2** -Schnittstelle erbt von **imsrdpclientshell**. **IMsRdpClientShell2** verfügt auch über die folgenden Typen von Membern:
+Die **IMsRdpClientShell2-Schnittstelle** erbt von **IMsRdpClientShell.** **IMsRdpClientShell2** verfügt auch über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **IMsRdpClientShell2** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IMsRdpClientShell2-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                               | Zugriffstyp          | BESCHREIBUNG                                                                                                                                                                       |
+| Eigenschaft                                                                               | Zugriffstyp          | Beschreibung                                                                                                                                                                       |
 |:---------------------------------------------------------------------------------------|:---------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Msrdpworkspace**](imsrdpclientshell2-msrdpworkspace.md)<br/>                 | Schreibgeschützt<br/> | Ruft einen Zeiger auf die [**imsrdpworkspace**](imsrdpworkspace.md) -Schnittstelle ab, die zum Verwalten von RemoteApp-und Desktopverbindung Anmelde Informationen und Verbindungen verwendet wird.<br/> |
-| [**Securedsettingsenabled**](imsrdpclientshell2-securedsettingsenabled.md)<br/> | Schreibgeschützt<br/> | Ruft einen Wert ab, der angibt, ob sich die aktuelle Webseite in einer vertrauenswürdigen Internet Explorer-URL-Sicherheitszone befindet.<br/>                                                      |
+| [**MsRdpWorkspace**](imsrdpclientshell2-msrdpworkspace.md)<br/>                 | Schreibgeschützt<br/> | Ruft einen Zeiger auf die [**IMsRdpWorkspace-Schnittstelle**](imsrdpworkspace.md) ab, die zum Verwalten RemoteApp- und Desktopverbindung Anmeldeinformationen und Verbindungen verwendet wird.<br/> |
+| [**SecuredSettingsEnabled**](imsrdpclientshell2-securedsettingsenabled.md)<br/> | Schreibgeschützt<br/> | Ruft einen Wert ab, der angibt, ob sich die aktuelle Webseite in einer vertrauenswürdigen Internet Explorer URL-Sicherheitszone befindet.<br/>                                                      |
 
 
 
@@ -62,11 +62,11 @@ Die **IMsRdpClientShell2** -Schnittstelle verfügt über diese Eigenschaften.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpworkspace**](imsrdpworkspace.md)
+[**IMsRdpWorkspace**](imsrdpworkspace.md)
 </dt> </dl>
 
  

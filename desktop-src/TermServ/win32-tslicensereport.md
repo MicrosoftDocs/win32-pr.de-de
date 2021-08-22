@@ -1,11 +1,11 @@
 ---
 title: Win32_TSLicenseReport-Klasse
-description: Stellt Instanzen von Remotedesktopdienste pro Benutzer-Client Zugriffslizenz bereit (RDS \ 160; Pro Benutzer-CAL) Verwendungs Berichte, die auf dem Remotedesktop-Lizenzserver generiert werden, sowie Methoden zum generieren, abrufen und Löschen von Lizenz Berichten.
+description: Stellt Instanzen der Clientzugriffslizenz Remotedesktopdienste pro Benutzer bereit (RDS \ 160; Nutzungsberichte pro Benutzer-CAL), die auf dem Remotedesktop Lizenzserver generiert werden, sowie Methoden zum Generieren, Abrufen und Löschen von Lizenzberichten.
 ms.assetid: 8d67f158-cda3-4cf4-a766-09d08c21c49e
 ms.tgt_platform: multiple
 keywords:
 - Win32_TSLicenseReport-Klasse Remotedesktopdienste
-- Win32_TSLicenseReport Klasse Remotedesktopdienste, beschrieben
+- Win32_TSLicenseReport-Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -23,16 +23,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: de997056222c1b525253f320f6fe191f017614f9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 93280c00cbd20993907901e1f9b8c16330863a47bddd4e08bc86d51b4b837233
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858696"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137833"
 ---
-# <a name="win32_tslicensereport-class"></a>Win32-Klasse "" \_
+# <a name="win32_tslicensereport-class"></a>Win32 \_ TSLicenseReport-Klasse
 
-Stellt Instanzen von Remotedesktopdienste Client Zugriffslizenz-Verwendungs Berichte pro Benutzer (RDS pro Benutzer) bereit, die auf dem Remotedesktop-Lizenzserver generiert werden, sowie Methoden zum generieren, abrufen und Löschen von Lizenz Berichten.
+Stellt Instanzen von Nutzungsberichten Remotedesktopdienste Clientzugriffslizenz pro Benutzer (RDS per User CAL) bereit, die auf dem Remotedesktop Lizenzserver generiert werden, sowie Methoden zum Generieren, Abrufen und Löschen von Lizenzberichten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,27 +52,27 @@ class Win32_TSLicenseReport
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ zlicensereport** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSLicenseReport-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ zlicensereport** " verfügt über diese Methoden.
+Die **Win32 \_ TSLicenseReport-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                         | BESCHREIBUNG                                                                                                                                                                                     |
+| Methode                                                                                                         | Beschreibung                                                                                                                                                                                     |
 |:---------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**DeleteReport**](deletereport-win32-tslicensereport.md)                                                     | Löscht ein Berichts Objekt auf dem Remotedesktop-Lizenzserver. Dabei handelt es sich nicht um eine statische Methode.<br/>                                                                                           |
-| [**Fetchreportentries**](fetchreportentries-win32-tslicensereport.md)                                         | Ruft Einträge im Berichts Objekt ab.<br/>                                                                                                                                              |
-| [**Fetchreportfailedperuserentries**](fetchreportfailedperuserentries-win32-tslicensereport.md)               | Ruft Details der fehlerhaften Remotedesktopdienste pro Benutzer-Client Zugriffs Lizenzen (RDS pro Benutzer-CALs) aus dem Bericht ab.<br/>                                                             |
-| [**Fetchreportfailedperusersummaryentries**](fetchreportfailedperusersummaryentries-win32-tslicensereport.md) | Hiermit werden zusammenfassende Informationen zu fehlerhaften Remotedesktopdienste pro Benutzer-Client Zugriffs Lizenzen (RDS pro Benutzer-CALs) aus dem Bericht abgerufen.<br/>                                                 |
-| [**Fetchreportperdeviceentries**](fetchreportperdeviceentries-win32-tslicensereport.md)                       | Ruft Informationen zu ausgestellten Remotedesktopdienste pro Geräte-Client Zugriffs Lizenzen (RDS pro Gerät CALs) aus dem Bericht ab.<br/>                                                     |
-| [**Fetchreportsummaryentries**](win32-tslicensereport-fetchreportsummaryentries.md)                           | Ruft Lizenz Zusammenfassungen aus dem Berichts Objekt ab.<br/>                                                                                                                                  |
-| [**GenerateReport**](generatereport-win32-tslicensereport.md)                                                 | Diese Methode wird nicht unterstützt.<br/> **Windows Server 2008 R2 und Windows Server 2008:** Generiert einen aktuellen Bericht pro Benutzer-Lizenz Verwendung auf dem Remotedesktop-Lizenzserver.<br/> |
-| [**Generatereportex**](generatereportex-win32-tslicensereport.md)                                             | Generiert einen aktuellen Bericht pro Benutzer-Lizenz Verwendung auf dem Remotedesktop-Lizenzserver.<br/>                                                                                              |
+| [**DeleteReport**](deletereport-win32-tslicensereport.md)                                                     | Löscht ein Berichtsobjekt auf dem Remotedesktop Lizenzserver. Dies ist keine statische Methode.<br/>                                                                                           |
+| [**FetchReportEntries**](fetchreportentries-win32-tslicensereport.md)                                         | Ruft Einträge im Berichtsobjekt ab.<br/>                                                                                                                                              |
+| [**FetchReportFailedPerUserEntries**](fetchreportfailedperuserentries-win32-tslicensereport.md)               | Ruft Details zu fehlgeschlagenen Remotedesktopdienste Clientzugriffslizenzen pro Benutzer (RDS pro Benutzer-CALs) aus dem Bericht ab.<br/>                                                             |
+| [**FetchReportFailedPerUserSummaryEntries**](fetchreportfailedperusersummaryentries-win32-tslicensereport.md) | Ruft zusammenfassende Informationen zu fehlgeschlagenen Remotedesktopdienste Clientzugriffslizenzen pro Benutzer (RDS pro Benutzer-CALs) aus dem Bericht ab.<br/>                                                 |
+| [**FetchReportPerDeviceEntries**](fetchreportperdeviceentries-win32-tslicensereport.md)                       | Ruft Informationen zu ausgestellten Remotedesktopdienste Clientzugriffslizenzen pro Gerät (RDS per Device CALs) aus dem Bericht ab.<br/>                                                     |
+| [**FetchReportSummaryEntries**](win32-tslicensereport-fetchreportsummaryentries.md)                           | Ruft Lizenzzusammenfassungen aus dem Berichtsobjekt ab.<br/>                                                                                                                                  |
+| [**GenerateReport**](generatereport-win32-tslicensereport.md)                                                 | Diese Methode wird nicht unterstützt.<br/> **Windows Server 2008 R2 und Windows Server 2008:** Generiert einen aktuellen Benutzerlizenznutzungsbericht auf dem Remotedesktop Lizenzserver.<br/> |
+| [**GenerateReportEx**](generatereportex-win32-tslicensereport.md)                                             | Generiert einen aktuellen Benutzerlizenznutzungsbericht auf dem Remotedesktop Lizenzserver.<br/>                                                                                              |
 
 
 
@@ -80,131 +80,131 @@ Die Win32-Klasse " **\_ zlicensereport** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ slicensereport** " verfügt über diese Eigenschaften.
+Die **Win32 \_ TSLicenseReport-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **FileName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der Name des Berichts.
+Der Berichtsname.
 
 </dd> <dt>
 
-**Generationdatetime**
+**GenerationDateTime**
 </dt> <dd> <dl> <dt>
 
-**[Datentyp: DateTime](/windows/desktop/WmiSdk/datetime)**
+Datentyp: **[DATETIME](/windows/desktop/WmiSdk/datetime)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-RD-Lizenzierung Datum und Uhrzeit der Berichtsgenerierung.
+Datum und Uhrzeit der Erstellung des RD-Lizenzierungsberichts.
 
 </dd> <dt>
 
-**Installedlicenses**
+**InstalledLicenses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **VERALTET**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
 Diese Eigenschaft wird nicht unterstützt.
 
-**Windows Server 2008 R2 und Windows Server 2008:** Anzahl der installierten RDS-pro-Benutzer-CALs.
+**Windows Server 2008 R2 und Windows Server 2008:** Anzahl der installierten RDS-CALs pro Benutzer.
 
 </dd> <dt>
 
-**Licenseusagecount**
+**LicenseUsageCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **VERALTET**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
 Diese Eigenschaft wird nicht unterstützt.
 
-**Windows Server 2008 R2 und Windows Server 2008:** Anzahl der RDS-Client Zugriffs Lizenzen pro Benutzer, die zurzeit verwendet werden.
+**Windows Server 2008 R2 und Windows Server 2008:** Anzahl der RDS-CALs pro Benutzer, die derzeit verwendet werden.
 
 </dd> <dt>
 
 **ScopeType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **VERALTET**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
 Diese Eigenschaft wird nicht unterstützt.
 
-**Windows Server 2008 R2 und Windows Server 2008:** RD-Lizenzierung Berichts Bereichstyp.
+**Windows Server 2008 R2 und Windows Server 2008:** Bereichstyp des RD-Lizenzierungsberichts.
 
 </dd> <dt>
 
-**Bereich**
+**ScopeValue**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **VERALTET**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
 Diese Eigenschaft wird nicht unterstützt.
 
-**Windows Server 2008 R2 und Windows Server 2008:** RD-Lizenzierung Berichts Bereichs Wert.
+**Windows Server 2008 R2 und Windows Server 2008:** Wert des Rd-Lizenzierungsberichtsbereichs.
 
 </dd> <dt>
 
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-RD-Lizenzierung Berichts Version.
+Version des RD-Lizenzierungsberichts.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Berichte, die mithilfe von WMI generiert werden, werden in RD-Lizenzierungs-Manager angezeigt. Berichte, die mithilfe von WMI gelöscht werden, werden auch aus RD-Lizenzierungs-Manager gelöscht.
+Berichte, die mithilfe von WMI generiert werden, werden im RD-Lizenzierungs-Manager angezeigt. Berichte, die mithilfe von WMI gelöscht werden, werden ebenfalls aus dem RD-Lizenzierungs-Manager gelöscht.
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Klasse verwenden zu können.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Klasse verwenden zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -215,25 +215,25 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-" \_ tsissuedlicense"**](win32-tsissuedlicense.md)
+[**Win32 \_ TSIssuedLicense**](win32-tsissuedlicense.md)
 </dt> <dt>
 
-[**Win32-Schlüssel-Lizenz-Schlüssel \_ ACK**](win32-tslicensekeypack.md)
+[**Win32 \_ TSLicenseKeyPack**](win32-tslicensekeypack.md)
 </dt> <dt>
 
-[**Win32-Wert für "- \_ Lizenzserver"**](win32-tslicensereportentry.md)
+[**Win32 \_ TSLicenseReportEntry**](win32-tslicensereportentry.md)
 </dt> <dt>
 
-[**Win32- \_ Lizenznehmer**](win32-tslicenseserver.md)
+[**Win32 \_ TSLicenseServer**](win32-tslicenseserver.md)
 </dt> </dl>
 
  

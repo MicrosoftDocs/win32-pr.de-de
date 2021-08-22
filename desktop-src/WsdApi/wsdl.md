@@ -4,18 +4,18 @@ ms.assetid: d8f630cd-0541-431b-86a8-792846a85ea0
 title: wsdl-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5ef4bc7b76ce22184e4c2f1ceaa2131ef163a26d
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 158141fb8afdc216c47639f6bbb50c1d399e25f202ebbdd2f0a2c045859bffb5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107994707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119049518"
 ---
 # <a name="wsdl-element"></a>wsdl-Element
 
 Gibt eine WSDL-Datei an, die für Vertragsinformationen verarbeitet werden soll.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <wsdl>
@@ -31,7 +31,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                                           | BESCHREIBUNG                                                                                                                                       |
+| Element                                           | Beschreibung                                                                                                                                       |
 |---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**excludeImport**](excludeimport.md)<br/> | Verhindert die Generierung von Importanweisungen für angegebene Ziele, die in einem \<wsdl:import> -Element in einer WSDL-Datei benannt sind. <br/> <br/> |
 | [**importHint**](importhint.md)<br/>       | Gibt den Downloadspeicherort für eine \<wsdl:import> -Direktive an, die nicht explizit einen Speicherort angibt.<br/> <br/>           |
@@ -53,7 +53,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                                     | BESCHREIBUNG                                                                          |
+| Element                                     | Beschreibung                                                                          |
 |---------------------------------------------|--------------------------------------------------------------------------------------|
 | [**wsdCodeGen**](wsdcodegen.md)<br/> | Das Stammelement einer WSDAPI-Codegenerator-XML-Skriptdatei.<br/> <br/> |
 

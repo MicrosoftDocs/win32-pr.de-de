@@ -1,140 +1,140 @@
 ---
-title: Anhang E Text Attribute für Active Accessibility Text Dienste-Wörterbuch
-description: Dieser Anhang enthält Informationen zu Textattributen, die in iaccdictionary definiert sind.
+title: Anhang E Textattribute für Active Accessibility Text Services-Wörterbuch
+description: Dieser Anhang enthält Informationen zu Textattributen, die in IAccDictionary definiert sind.
 ms.assetid: 9e405140-c151-4f00-91c5-777c84c41806
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 588c827764d17c2576efaa5e3117527e23d1da26
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 539583f05e5140d96594490b0038b1a629f7760b13e4de223f6a8a3304c3901b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039554"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134063"
 ---
-# <a name="appendix-e-text-attributes-for-active-accessibility-text-services-dictionary"></a>Anhang E: Text Attribute für Active Accessibility Text Dienste-Wörterbuch
+# <a name="appendix-e-text-attributes-for-active-accessibility-text-services-dictionary"></a>Anhang E: Textattribute für Active Accessibility Text Services-Wörterbuch
 
-Dieser Anhang enthält Informationen zu Textattributen, die in [**iaccdictionary**](/windows/desktop/api/msaatext/nn-msaatext-iaccdictionary)definiert sind. Es ist als eine Reihe von Tabellen organisiert. Jede Tabelle enthält Informationen zu einer bestimmten Kategorie von Attributen. Diese Kategorien sind tatsächlich gescht, sind aber unten getrennt, sodass Sie die Attribute sehen können.
+Dieser Anhang enthält Informationen zu Textattributen, die in [**IAccDictionary**](/windows/desktop/api/msaatext/nn-msaatext-iaccdictionary)definiert sind. Sie ist als eine Reihe von Tabellen organisiert. Jede Tabelle enthält Informationen zu einer bestimmten Kategorie von Attributen. Diese Kategorien sind tatsächlich geschachtelt, aber unten getrennt, sodass Sie die Attribute sehen können.
 
 > [!Note]  
-> Active Accessibility Text Dienste sind veraltet. Weitere Informationen zu erweiterten Text Eingaben und Technologien für natürliche Sprache finden Sie im [Microsoft Windows-Text Dienst-Framework](../tsf/text-services-framework.md) .
+> Active Accessibility Text services ist veraltet. Weitere Informationen zu erweiterten Texteingaben und Technologien für natürliche Sprache finden Sie unter [Microsoft Windows Textdienstframework.](../tsf/text-services-framework.md)
 
  
 
-Jeder Eintrag in einer Tabelle enthält einen Attributnamen und anzeigen Amen, einen Typ, Cascading Stylesheets (CSS) äquivalent, ein entsprechendes Text Objektmodell (Tom) und ggf. weitere Kommentare. Die entsprechende Tom-Spalte enthält Informationen über die Tom-Methode, die mit dem-Attribut verwendet wird (Teil der Schnittstellen [**itextfont**](/windows/desktop/api/tom/nn-tom-itextfont), [**itextrange**](/windows/desktop/api/tom/nn-tom-itextrange)oder [**itextpara**](/windows/desktop/api/tom/nn-tom-itextpara) ). Die Informationen vor jeder Tabelle gibt an, welche Schnittstelle die Attribute unterstützt. die Informationen in der entsprechenden Tom-Tabelle gibt den Namen der Methode an. Jeder Eintrag in der Spalte "Tom äquivalente" ist zwei Methoden zugeordnet. Der Namenseintrag ist beispielsweise mit den Methoden **GetName** und **SetName** verknüpft.
+Jeder Eintrag in einer Tabelle stellt einen Attributnamen und Anzeigenamen, einen Typ, Cascading Stylesheets (CSS)-Entsprechung, eine TOM-Entsprechung (Text Object Model) und ggf. zusätzliche Kommentare bereit. Die entsprechende TOM-Spalte enthält Informationen über die TOM-Methode, die mit dem -Attribut (Teil der [**Schnittstellen ITextFont,**](/windows/desktop/api/tom/nn-tom-itextfont) [**ITextRange**](/windows/desktop/api/tom/nn-tom-itextrange)oder [**ITextPara)**](/windows/desktop/api/tom/nn-tom-itextpara) verwendet wird. Die Informationen vor jeder Tabelle geben an, welche Schnittstelle die Attribute unterstützt. die Informationen in der TOM-äquivalenten Tabelle geben den Namen der Methode an. Jeder Eintrag in der TOM-äquivalenten Spalte ist zwei Methoden zugeordnet. Beispielsweise ist der Name-Eintrag den **Methoden GetName** und **SetName** zugeordnet.
 
-Weitere Informationen zu diesen Schnittstellen finden Sie in der Dokumentation zum [Text Objektmodell](../controls/text-object-model.md) im Windows Software Development Kit (SDK).
+Weitere Informationen zu diesen Schnittstellen finden Sie in der Dokumentation [zum Textobjektmodell](../controls/text-object-model.md) im Windows Software Development Kit (SDK).
 
 ## <a name="font"></a>Schriftart
 
-Die Attribute in der folgenden Tabelle sind allgemeinen Schriftart Attributen zugeordnet. Die Tom-Entsprechung ist die [**itextfont**](/windows/desktop/api/tom/nn-tom-itextfont) -Schnittstelle.
+Die Attribute in der folgenden Tabelle sind allgemeinen Schriftartattributen zugeordnet. Die TOM-Entsprechung ist die [**ITextFont-Schnittstelle.**](/windows/desktop/api/tom/nn-tom-itextfont)
 
 
 
-| Attribut Name, Anzeige Name       | type     | CSS-Entsprechung       | Tom-Entsprechung | Kommentar           |
+| Attributname, Anzeigename       | type     | CSS-Entsprechung       | TOM-Entsprechung | Kommentar           |
 |-------------------------------------|----------|----------------------|----------------|-------------------|
-| Font- \_ fakename, fakename<br/> | VT \_ BSTR | Font-Family: Verdana | Name           |                   |
-| Schriftart- \_ sizepts, sizepts<br/>   | VT \_ I4   | Font-size: XPT       | Size           | Größe ist in Punkten |
+| \_Schriftart FaceName, facename<br/> | VT \_ BSTR | Schriftfamilie: Verdana | Name           |                   |
+| Font \_ SizePts, sizePts<br/>   | VT \_ I4   | Schriftgrad: Xpt       | Size           | Die Größe ist in Punkten |
 
 
 
  
 
-## <a name="font_style"></a>Schriftart \_ Stil
+## <a name="font_style"></a>\_Schriftschnitt
 
-Die Attribute in der folgenden Tabelle berücksichtigen Schriftart Format Attribute (z. b., ob der Text fett oder kursiv festgelegt ist). Die Tom-Entsprechung ist die [**itextfont**](/windows/desktop/api/tom/nn-tom-itextfont) -Schnittstelle.
+Die Attribute in der folgenden Tabelle beziehen sich auf Schriftschnittattribute (z. B. ob der Text fett oder kursiv festgelegt ist). Die TOM-Entsprechung ist die [**ITextFont-Schnittstelle.**](/windows/desktop/api/tom/nn-tom-itextfont)
 
 
 
-| Attribut Name, Anzeige Name                             | type     | CSS-Entsprechung              | Tom-Entsprechung                                            | Kommentar                   |
+| Attributname, Anzeigename                             | type     | CSS-Entsprechung              | TOM-Entsprechung                                            | Kommentar                   |
 |-----------------------------------------------------------|----------|-----------------------------|-----------------------------------------------------------|---------------------------|
-| Schriftart \_ fett formatiert \_ , fett formatiert<br/>                        | VT \_ bool | Schriftart-Gewichtung: Fett           | Fett                                                      |                           |
-| Schrift \_ Schnitt \_ kursiv kursiv, kursiv<br/>                    | VT \_ bool | Schriftart Stil: kursiv          | Kursiv                                                    |                           |
-| SmallCaps im Schrift Schnitt \_ \_ , SmallCaps<br/>              | VT \_ bool | Schriftart-Variant: Small-Caps    | Kapitälchen                                                 |                           |
-| Schrift Schnitt groß geschrieben \_ \_ , Großbuchstaben<br/>             | VT \_ bool | Text-Transform: Großbuchstaben  | Nicht unterstützt                                             |                           |
-| Schriftart \_ Stil \_ Großbuchstaben, Großbuchstaben<br/>               | VT \_ bool | Text-Transform: Großbuchstaben   | Großbuchstaben                                                   |                           |
-| Schriftart \_ Stil \_ Kleinbuchstaben, Kleinbuchstaben<br/>               | VT \_ bool | Text-Transform: Kleinbuchstaben   | Nicht unterstützt                                             |                           |
-| \_Schriftstil \_ Prägung, Prägung<br/>                     | VT \_ bool | Nicht unterstützt               | Emboss                                                    |                           |
-| Schrift \_ Schnitt \_ , engrab<br/>                   | VT \_ bool | Nicht unterstützt               | Umschließen                                                   |                           |
-| Schriftart \_ Stil \_ ausgeblendet                                       | VT \_ bool | Nicht unterstützt               | Ausgeblendet                                                    |                           |
-| Schriftart \_ Stil \_ : Kerning, Kerning<br/>                   | VT \_ R4   | Nicht unterstützt               | Unterschneidungen                                                   | Dieselben Werte wie getkerning |
-| Stil der Schriftart \_ \_ , beschrieben<br/>                 | VT \_ bool | Nicht unterstützt               | Umriss                                                  |                           |
-| Schriftart \_ \_ , Position, Position<br/>                 | VT \_ R4   | Nicht unterstützt               | Position                                                  |                           |
-| Schriftart \_ Stil \_ geschützt                                    | VT \_ bool | Nicht unterstützt               | Protected                                                 |                           |
-| Schrift \_ Schnitt \_ Schatten, Schatten<br/>                     | VT \_ bool | Zeilenhöhe (Minuszahlen) | Shadow                                                    |                           |
-| Abstand zwischen Schriftart \_ \_ und Abstand<br/>                   | VT \_ R4   | Buchstabe-Abstand              | Abstand                                                   | In Punkten                 |
-| Schrift \_ Arten \_ Gewichtung, Gewichtung<br/>                     | VT \_ I4   | Schrift Breite                 | Gewichtsgewichtungs-und getweight-Werte<br/> |                           |
-| Schrift \_ Schnitt \_ Höhe, Höhe<br/>                     | VT \_ R4   | line-height                 | Nicht unterstützt                                             | In Punkten                 |
-| Schriftart \_ Stil \_ blinken, blinken<br/>                       | VT \_ bool | Text-Dekoration: blinken      | Nicht unterstützt                                             |                           |
-| Schrift \_ Schnitt \_ , Index, Index<br/>               | VT \_ bool | Vertikale Ausrichtung: Sub         | Index (auch Position)                                 |                           |
-| Schrift \_ Schnitt \_ SuperScript, SuperScript<br/>           | VT \_ bool | Vertikale Ausrichtung: Super       | Superscript (auch Position)                               |                           |
-| Schriftart \_ \_ Farbe, Farbe<br/>                       | VT \_ I4   | Color                       | ForeColor                                                 | RBG COLORREF-Stil        |
-| \_Hintergrundfarbe für Schriftart Stil \_ , Hintergrund \_ Farbe<br/> | VT \_ I4   | Hintergrundfarbe            | BackColor                                                 | RBG COLORREF-Stil        |
+| Schriftschnitt \_ \_ fett, fett<br/>                        | VT \_ BOOL | Schriftbreite: fett           | Fett                                                      |                           |
+| Schriftschnitt \_ \_ italisch, italisch<br/>                    | VT \_ BOOL | Schriftschnitt: italisch          | Kursiv                                                    |                           |
+| \_ \_ Schriftschnitt SmallCaps, smallcaps<br/>              | VT \_ BOOL | Font-variant: small-caps    | Kapitälchen                                                 |                           |
+| \_ \_ Schriftschnitt Großschreibung,Großschreibung<br/>             | VT \_ BOOL | Texttransformation: Groß-/Großschreibung  | Nicht unterstützt                                             |                           |
+| Schriftschnitt \_ \_ Großbuchstaben, Großbuchstaben<br/>               | VT \_ BOOL | Texttransformation: Großbuchstaben   | Großbuchstaben                                                   |                           |
+| Schriftschnitt \_ \_ Kleinbuchstaben, Kleinbuchstaben<br/>               | VT \_ BOOL | Texttransformation: Kleinbuchstaben   | Nicht unterstützt                                             |                           |
+| \_ \_ Schriftschnitt- Emboss, emboss<br/>                     | VT \_ BOOL | Nicht unterstützt               | Emboss                                                    |                           |
+| Schriftschnitt \_ \_ : 1600000000000<br/>                   | VT \_ BOOL | Nicht unterstützt               | Gravieren                                                   |                           |
+| Schriftschnitt \_ \_ ausgeblendet                                       | VT \_ BOOL | Nicht unterstützt               | Ausgeblendet                                                    |                           |
+| Kerning \_ im \_ Schriftschnitt, Kerning<br/>                   | VT \_ R4   | Nicht unterstützt               | Kerning                                                   | Gleiche Werte wie GetKerning |
+| Gliederung des \_ Schriftschnitts, \_ umranden<br/>                 | VT \_ BOOL | Nicht unterstützt               | Gliederung                                                  |                           |
+| \_ \_ Schriftschnittposition, Position<br/>                 | VT \_ R4   | Nicht unterstützt               | Position                                                  |                           |
+| Geschützter \_ Schriftschnitt \_                                    | VT \_ BOOL | Nicht unterstützt               | Protected                                                 |                           |
+| \_ \_ Schriftschnittschatten, Schatten<br/>                     | VT \_ BOOL | Zeilenhöhe (minus Zahlen) | Shadow                                                    |                           |
+| \_ \_ Schriftschnittabstand,Abstand<br/>                   | VT \_ R4   | Buchstabenabstand              | Abstand                                                   | In Punkten                 |
+| \_ \_ Schriftschnittgewichtung, Gewichtung<br/>                     | VT \_ I4   | Schriftgrad                 | WeightSame-Werte als Schriftgrad und GetWeight<br/> |                           |
+| \_ \_ Schriftschnitthöhe, Höhe<br/>                     | VT \_ R4   | line-height                 | Nicht unterstützt                                             | In Punkten                 |
+| Schriftschnitt \_ \_ Blink,blink<br/>                       | VT \_ BOOL | Textdekoration: blink      | Nicht unterstützt                                             |                           |
+| Font \_ Style \_ Subscript,subscript<br/>               | VT \_ BOOL | Vertikale Ausrichtung: sub         | Subscript (auch Position)                                 |                           |
+| \_ \_ Schriftschnitt– Hochgestellt, hochgestellt<br/>           | VT \_ BOOL | Vertikale Ausrichtung: super       | Hochgestellt (auch Position)                               |                           |
+| \_ \_ Schriftschnittfarbe, Farbe<br/>                       | VT \_ I4   | Color                       | ForeColor                                                 | RBG-COLORREF-Stil        |
+| Font \_ Style \_ BackgroundColor,background \_ color<br/> | VT \_ I4   | Hintergrundfarbe            | Backcolor                                                 | RBG-COLORREF-Stil        |
 
 
 
  
 
-## <a name="font_style_animation"></a>Animation im Schriftart \_ Stil \_
+## <a name="font_style_animation"></a>\_ \_ Schriftartstilanimation
 
-Die Attribute in der folgenden Tabellen Adress Animation. Die Tom-Entsprechung ist die [**itextfont**](/windows/desktop/api/tom/nn-tom-itextfont) -Schnittstelle.
+Die Attribute in der folgenden Tabelle adressieren die Schriftartanimation. Das TOM-Äquivalent ist die [**ITextFont-Schnittstelle.**](/windows/desktop/api/tom/nn-tom-itextfont)
 
 
 
-| Attribut Name, Anzeige Name                                              | type     | CSS-Entsprechung | Tom-Entsprechung |
+| Attributname, Benutzername                                              | type     | CSS-Entsprechung | TOM-Entsprechung |
 |----------------------------------------------------------------------------|----------|----------------|----------------|
-| Schriftart \_ Stil \_ Animation \_ lasvegaslights, LasVegas- \_ Leuchten<br/>         | VT \_ bool | Nicht unterstützt  | Animation      |
-| Animation des Schriftart \_ Stils \_ \_ blinkingbackground, Blinken des \_ Hintergrunds<br/> | VT \_ bool | Nicht unterstützt  | Animation      |
-| Animation für Schriftart \_ Stil \_ \_ , sparkletext, Glanz \_ Text<br/>               | VT \_ bool | Nicht unterstützt  | Animation      |
-| Schriftart \_ Stil \_ Animation \_ marchingblackants, marschierende \_ schwarze \_ Ameisen<br/> | VT \_ bool | Nicht unterstützt  | Animation      |
-| Animation des Schrift \_ Stils \_ \_ marchingredants, marschierende \_ Rote \_ Ameisen<br/>     | VT \_ bool | Nicht unterstützt  | Animation      |
-| \_ \_ Animationshimmer für Schriftart Stil \_ , Shimmer<br/>                         | VT \_ bool | Nicht unterstützt  | Animation      |
-| \_ \_ Wipindown-Animation für Schriftart Stil \_ , wipindown<br/>                       | VT \_ bool | Nicht unterstützt  | Animation      |
-| Schriftart \_ Stil \_ Animation \_ wiperight, wiperight<br/>                     | VT \_ bool | Nicht unterstützt  | Animation      |
+| \_ \_ Schriftartanimation \_ LasVegasLights,LasVegas lights \_<br/>         | VT \_ BOOL | Nicht unterstützt  | Animation      |
+| \_ \_ Schriftartanimation \_ BlinkingBackground,blinkender \_ Hintergrund<br/> | VT \_ BOOL | Nicht unterstützt  | Animation      |
+| \_ \_ Schriftartanimation \_ SparkleText,Sparkle-Text \_<br/>               | VT \_ BOOL | Nicht unterstützt  | Animation      |
+| Font \_ Style \_ Animation \_ MarchingBlackAnts,marching \_ black \_ ants<br/> | VT \_ BOOL | Nicht unterstützt  | Animation      |
+| Font \_ Style \_ Animation \_ MarchingRedAnts,marching \_ red \_ ants<br/>     | VT \_ BOOL | Nicht unterstützt  | Animation      |
+| Font \_ Style \_ Animation \_ Shyl, Shyl<br/>                         | VT \_ BOOL | Nicht unterstützt  | Animation      |
+| Font \_ Style \_ Animation \_ WipeDown,wipeDown<br/>                       | VT \_ BOOL | Nicht unterstützt  | Animation      |
+| \_ \_ Schriftartanimation \_ WipeRight,wipeRight<br/>                     | VT \_ BOOL | Nicht unterstützt  | Animation      |
 
 
 
  
 
-## <a name="font_style_underline"></a>Unter \_ Streichung des Schrift Stils \_
+## <a name="font_style_underline"></a>Schriftschnitt \_ \_ unterstrichen
 
-Die Attribute in der folgenden Tabellen Adresse unterstreichen Stile für Schriftarten. Die Tom-Entsprechung ist die [**itextfont**](/windows/desktop/api/tom/nn-tom-itextfont) -Schnittstelle.
+Die Attribute in der folgenden Tabelle adressieren Unterstreichungsstile für Schriftarten. Das TOM-Äquivalent ist die [**ITextFont-Schnittstelle.**](/windows/desktop/api/tom/nn-tom-itextfont)
 
 
 
-| Attribut Name, Anzeige Name                     | type     | CSS-Entsprechung                | Tom-Entsprechung |
+| Attributname, Benutzername                     | type     | CSS-Entsprechung                | TOM-Entsprechung |
 |---------------------------------------------------|----------|-------------------------------|----------------|
-| Schriftart \_ Stil \_ \_ : Single, Single<br/>  | VT \_ bool | Text-Dekoration: Unterstreichung    | Underline      |
-| Schriftart \_ Stil \_ \_ unterstrichen Double, Double<br/> | VT \_ bool | Text-Dekoration: durch Leitung | Durchgestrichen  |
+| Schriftschnitt \_ \_ Unterstrichen \_ Single,single<br/>  | VT \_ BOOL | Textdekoration: Unterstrichen    | Underline      |
+| Schriftschnitt \_ \_ Unterstrichen \_ Double,double<br/> | VT \_ BOOL | Textdekoration: Durchgestrichen | Durchgestrichen  |
 
 
 
  
 
-## <a name="font_style_strikethrough"></a>Schriftart \_ Stil \_ durchgestrichen
+## <a name="font_style_strikethrough"></a>\_Durchstreichen des \_ Schriftschnitts
 
-Die Attribute in der folgenden Tabelle adressieren die Stile für Schriftarten durchgestrichen.
+Die Attribute in der folgenden Tabelle adressieren Durchlaufstile für Schriftarten.
 
 
 
-| Attribut Name, Anzeige Name                                         | type     | CSS-Entsprechung | Tom-Entsprechung |
+| Attributname, Benutzername                                         | type     | CSS-Entsprechung | TOM-Entsprechung |
 |-----------------------------------------------------------------------|----------|----------------|----------------|
-| Schrift \_ Schnitt \_ \_ : einzeln durchgestrichen, \_ durch \_ Einzel Schlag<br/> | VT \_ bool | Nicht unterstützt  | Nicht unterstützt  |
-| Schriftart \_ Stil \_ durchgestrichen \_ , Double, Schlag \_ durch \_ Double<br/> | VT \_ bool | Nicht unterstützt  | Nicht unterstützt  |
+| Font \_ Style \_ Strikethrough \_ Single,strike \_ through \_ single<br/> | VT \_ BOOL | Nicht unterstützt  | Nicht unterstützt  |
+| \_Durchstreichen \_ des \_ Schriftschnitts "Double", \_ "Durchschlagen durch \_ double"<br/> | VT \_ BOOL | Nicht unterstützt  | Nicht unterstützt  |
 
 
 
  
 
-## <a name="font_style_overline"></a>Schriftart für Schriftart \_ Stil \_
+## <a name="font_style_overline"></a>\_ \_ Schriftschnittüberlinie
 
-Die Attribute in der folgenden Tabelle behandeln Überschriften Stile für Schriftarten.
+Die Attribute in der folgenden Tabelle adressieren Overlinestile für Schriftarten.
 
 
 
-| Attribut Name, Anzeige Name                             | type     | CSS-Entsprechung            | Tom-Entsprechung |
+| Attributname, Benutzername                             | type     | CSS-Entsprechung            | TOM-Entsprechung |
 |-----------------------------------------------------------|----------|---------------------------|----------------|
-| Schrift \_ Schnitt \_ über line \_ , Single, Overline \_ Single<br/> | VT \_ bool | Text-Dekoration: über Linie | Nicht unterstützt  |
-| Schrift \_ Schnitt \_ über Zeile \_ Double, Overline \_ Double<br/> | VT \_ bool | Text-Dekoration: über Linie | Nicht unterstützt  |
+| Font \_ Style \_ Overline \_ Single,overline \_ single<br/> | VT \_ BOOL | Textdekoration: Überlinie | Nicht unterstützt  |
+| Schriftschnitt \_ \_ Überlinie \_ Double,Overline double \_<br/> | VT \_ BOOL | Textdekoration: Überlinie | Nicht unterstützt  |
 
 
 
@@ -142,74 +142,74 @@ Die Attribute in der folgenden Tabelle behandeln Überschriften Stile für Schri
 
 ## <a name="text"></a>Text
 
-Die Attribute in der folgenden Tabelle behandeln allgemeine Text Formatierungs Attribute.
+Die Attribute in der folgenden Tabelle adressieren allgemeine Textformatierungsattribute.
 
 
 
-| Attribut Name, Anzeige Name                     | type        | CSS-Entsprechung | Tom-Entsprechung                                       | Kommentar                                                                               |
+| Attributname, Benutzername                     | type        | CSS-Entsprechung | TOM-Entsprechung                                       | Kommentar                                                                               |
 |---------------------------------------------------|-------------|----------------|------------------------------------------------------|---------------------------------------------------------------------------------------|
-| \_Textverticalwriting, vertikales schreiben<br/> | VT \_ bool    | Nicht unterstützt  | Nicht unterstützt                                        | Wie von Chinesisch/Japanisch verwendet                                                           |
-| Text \_ RightToLeft, RightToLeft<br/>          | VT \_ bool    | Richtung      | Nicht unterstützt                                        |                                                                                       |
-| Text schreibgeschützt, schreibgeschützt \_<br/>               | VT \_ bool    | Nicht unterstützt  | Itextfont:: canchange, itextrange:: CanEdit            | Die bearbeitet-Eigenschaft des Dokuments hat Vorrang.                                     |
-| Text \_ Sprache, Sprache<br/>                | VT \_ I4      | Nicht unterstützt  | Itextfont:: getlanguageid, itextfont:: setlanguageid   | LANGID                                                                                |
-| Text \_ Ausrichtung, Ausrichtung<br/>          | VT \_ I4      | Nicht unterstützt  | Nicht unterstützt                                        | 10??? eines gewissen Grades                                                                     |
-| Text \_ embedtodobject, eingebettetes \_ Objekt<br/>  | VT \_ bool    | Nicht unterstützt  | Nicht unterstützt                                        | Ermöglicht das Suchen nach eingebetteten Objekten                                                 |
-| \_Textlink, Link<br/>                        | VT \_ unbekannt | Link           | Nicht unterstützt                                        | Ein Schnittstellen Zeiger auf das-Objekt. QueryInterface für jede beliebige Schnittstelle aufzurufen |
-| Text- \_ Bindestriche, Bindestriche<br/>          | VT \_ bool    | Nicht unterstützt  | Itextpara:: gethyphenations, itextpara:: Abschnitt Zeichen |                                                                                       |
+| Text \_ VerticalWriting, vertikales Schreiben<br/> | VT \_ BOOL    | Nicht unterstützt  | Nicht unterstützt                                        | Wie von Chinesisch/Japanisch verwendet                                                           |
+| Text \_ RightToLeft,righttoleft<br/>          | VT \_ BOOL    | Direction      | Nicht unterstützt                                        |                                                                                       |
+| Text \_ ReadOnly, schreibgeschützt<br/>               | VT \_ BOOL    | Nicht unterstützt  | ITextFont::CanChange, ITextRange::CanEdit            | Die bearbeitbare Eigenschaft des Dokuments hat Vorrang.                                     |
+| \_Textsprache, Sprache<br/>                | VT \_ I4      | Nicht unterstützt  | ITextFont::GetLanguageID, ITextFont::SetLanguageID   | Langid                                                                                |
+| \_Textausrichtung,Ausrichtung<br/>          | VT \_ I4      | Nicht unterstützt  | Nicht unterstützt                                        | 10??? eines Grads                                                                     |
+| Text \_ EmbeddedObject,eingebettetes \_ Objekt<br/>  | VT \_ BOOL    | Nicht unterstützt  | Nicht unterstützt                                        | Ermöglicht die Suche nach eingebetteten Objekten.                                                 |
+| \_Textlink, Link<br/>                        | VT \_ UNKNOWN | Link           | Nicht unterstützt                                        | Ein Schnittstellenzeiger auf das Objekt; Aufrufen von QueryInterface für eine beliebige Schnittstelle von Interesse |
+| \_Text-Bindestriche,Bindestriche<br/>          | VT \_ BOOL    | Nicht unterstützt  | ITextPara::GetHyphenation, ITextPara::SetHyphenation |                                                                                       |
 
 
 
  
 
-## <a name="text_alignment"></a>Text \_ Ausrichtung
+## <a name="text_alignment"></a>\_Textausrichtung
 
-Die Attribute in der folgenden Tabelle behandeln die Textausrichtung. Die Tom-Entsprechung ist die [**itextpara**](/windows/desktop/api/tom/nn-tom-itextpara) -Schnittstelle.
+Die Attribute in der folgenden Tabelle adressiert die Textausrichtung. Das TOM-Äquivalent ist die [**ITextPara-Schnittstelle.**](/windows/desktop/api/tom/nn-tom-itextpara)
 
 
 
-| Attribut Name, Anzeige Name               | type     | CSS-Entsprechung | Tom-Entsprechung |
+| Attributname, Benutzername               | type     | CSS-Entsprechung | TOM-Entsprechung |
 |---------------------------------------------|----------|----------------|----------------|
-| Text \_ Ausrichtung \_ Links, Links<br/>       | VT \_ bool | Text-align     | Ausrichtung      |
-| Text \_ Ausrichtung \_ Rechts, rechts<br/>     | VT \_ bool | Text-align     | Ausrichtung      |
-| Text \_ Ausrichtungs \_ zentrieren, zentrieren<br/>   | VT \_ bool | Text-align     | Ausrichtung      |
-| Text \_ Ausrichtung \_ rechtfertigen, rechtfertigen<br/> | VT \_ bool | Text-align     | Ausrichtung      |
+| \_ \_ Textausrichtung Links,links<br/>       | VT \_ BOOL | Text ausrichten     | Ausrichtung      |
+| \_Textausrichtung \_ rechts, rechts<br/>     | VT \_ BOOL | Text ausrichten     | Ausrichtung      |
+| \_ \_ Textausrichtungscenter, Mitte<br/>   | VT \_ BOOL | Text ausrichten     | Ausrichtung      |
+| \_Textausrichtung, \_ Begründung<br/> | VT \_ BOOL | Text ausrichten     | Ausrichtung      |
 
 
 
  
 
-## <a name="text_para"></a>Text- \_ para
+## <a name="text_para"></a>Text \_ Para
 
-Die Attribute in der folgenden Tabelle behandeln die Formatierung für Absätze. Die Tom-Entsprechung ist die [**itextpara**](/windows/desktop/api/tom/nn-tom-itextpara) -Schnittstelle.
+Die Attribute in der folgenden Tabelle enthalten die Adressformatierung für Absätze. Das TOM-Äquivalent ist die [**ITextPara-Schnittstelle.**](/windows/desktop/api/tom/nn-tom-itextpara)
 
 
 
-| Attribut Name, Anzeige Name                              | type   | CSS-Entsprechung | Tom-Entsprechung  | Kommentar |
+| Attributname, Benutzername                              | type   | CSS-Entsprechung | TOM-Entsprechung  | Kommentar |
 |------------------------------------------------------------|--------|----------------|-----------------|---------|
-| Text \_ para \_ FirstLineIndent, erste \_ Zeilen \_ Einzug<br/> | VT \_ R4 | Nicht unterstützt  | Firstlineingedent | In PTS  |
-| Text \_ para \_ LeftIndent, Linker \_ Einzug<br/>             | VT \_ R4 | Nicht unterstützt  | Lefteinzug      | In PTS  |
-| Text \_ para \_ RightIndent, rechter \_ Einzug<br/>           | VT \_ R4 | Nicht unterstützt  | RightIndent     | In PTS  |
-| Text \_ para \_ SpaceAfter, Leerzeichen \_ nach<br/>             | VT \_ R4 | Nicht unterstützt  | Leerraum      | In PTS  |
-| Text \_ para \_ SpaceBefore, Leerzeichen \_ nach<br/>            | VT \_ R4 | Nicht unterstützt  | Leerraum      | In PTS  |
+| Text \_ Para \_ FirstLineIndent,erster \_ \_ Zeileneinzug<br/> | VT \_ R4 | Nicht unterstützt  | FirstLineIndent | In pts  |
+| Text \_ Para \_ LeftIndent,linker \_ Einzug<br/>             | VT \_ R4 | Nicht unterstützt  | LeftIndent      | In pts  |
+| Text \_ para \_ RightIndent,right \_ indent<br/>           | VT \_ R4 | Nicht unterstützt  | RightIndent     | In pts  |
+| Text \_ Para \_ SpaceAfter,Leerzeichen \_ nach<br/>             | VT \_ R4 | Nicht unterstützt  | SpaceAfter      | In pts  |
+| Text \_ Para \_ SpaceBefore,space \_ after<br/>            | VT \_ R4 | Nicht unterstützt  | SpaceAfter      | In pts  |
 
 
 
  
 
-## <a name="text_para_linespacing"></a>Text- \_ para \_ LineSpacing
+## <a name="text_para_linespacing"></a>Text \_ para \_ lineSpacing
 
-Die Attribute in der folgenden Tabelle behandeln den Zeilenabstand in Absätzen. Die Tom-Entsprechung ist die [**itextpara**](/windows/desktop/api/tom/nn-tom-itextpara) -Schnittstelle.
+Die Attribute in der folgenden Tabelle adressieren den Zeilenabstand in Absätzen. Die TOM-Entsprechung ist die [**ITextPara-Schnittstelle.**](/windows/desktop/api/tom/nn-tom-itextpara)
 
 
 
-| Attribut Name, Anzeige Name                               | type     | CSS-Entsprechung | Tom-Entsprechung | Kommentar  |
+| Attributname, Anzeigename                               | type     | CSS-Entsprechung | TOM-Entsprechung | Kommentar  |
 |-------------------------------------------------------------|----------|----------------|----------------|----------|
-| Text \_ para \_ linespacung \_ Single, Single<br/>           | VT \_ bool | Nicht unterstützt  | Zeilenabstand    |          |
-| Text \_ para \_ \_ linespacingoneptfive, One \_ PT \_ Five<br/> | VT \_ bool | Nicht unterstützt  | Zeilenabstand    |          |
-| Text \_ para \_ linespacung \_ Double, Double<br/>           | VT \_ bool | Nicht unterstützt  | Zeilenabstand    |          |
-| Text \_ para \_ linespacat mindestens \_ , \_ mindestens<br/>       | VT \_ R4   | Nicht unterstützt  | Zeilenabstand    | In Zeilen |
-| Text- \_ para \_ linespacingexakt \_ , genau<br/>         | VT \_ R4   | Nicht unterstützt  | Zeilenabstand    | In Zeilen |
-| Text \_ para \_ \_ linespacingmutiple, Multiple<br/>        | VT \_ R4   | Nicht unterstützt  | Zeilenabstand    | In Zeilen |
+| Text \_ para \_ lineSpacing \_ Single, single<br/>           | VT \_ BOOL | Nicht unterstützt  | Zeilenabstand    |          |
+| Text \_ para \_ lineSpacing \_ OnePtFive,one \_ pt \_ five<br/> | VT \_ BOOL | Nicht unterstützt  | Zeilenabstand    |          |
+| Text \_ Para \_ lineSpacing \_ Double,double<br/>           | VT \_ BOOL | Nicht unterstützt  | Zeilenabstand    |          |
+| Text \_ para \_ lineSpacing \_ AtLeast,least \_<br/>       | VT \_ R4   | Nicht unterstützt  | Zeilenabstand    | In Zeilen |
+| Text \_ Para \_ lineSpacing \_ Exactly,exactly<br/>         | VT \_ R4   | Nicht unterstützt  | Zeilenabstand    | In Zeilen |
+| Text \_ Para \_ lineSpacing \_ Mutiple,multiple<br/>        | VT \_ R4   | Nicht unterstützt  | Zeilenabstand    | In Zeilen |
 
 
 
@@ -217,32 +217,32 @@ Die Attribute in der folgenden Tabelle behandeln den Zeilenabstand in Absätzen.
 
 ## <a name="text_list"></a>\_Textliste
 
-Die Attribute in der folgenden Tabelle Adresslisten und Ebenen von Text Listen. Die Tom-Entsprechung ist die [**itextpara**](/windows/desktop/api/tom/nn-tom-itextpara) -Schnittstelle.
+Die Attribute in der folgenden Tabelle adressiert Listen und Ebenen von Textlisten. Die TOM-Entsprechung ist die [**ITextPara-Schnittstelle.**](/windows/desktop/api/tom/nn-tom-itextpara)
 
 
 
-| Attribut Name, Anzeige Name | type   | CSS-Entsprechung | Tom-Entsprechung | Kommentar                                                       |
+| Attributname, Anzeigename | type   | CSS-Entsprechung | TOM-Entsprechung | Kommentar                                                       |
 |-------------------------------|--------|----------------|----------------|---------------------------------------------------------------|
-| \_Textliste \_ levelindex,       | VT \_ I4 | Nicht unterstützt  | Listlevelindex | 1 steht für die äußerste Liste, 2 für die nächste Ebene usw. |
+| Text \_ List \_ LevelIndex,       | VT \_ I4 | Nicht unterstützt  | ListLevelIndex | Wobei 1 die äußerste Liste ist, 2 die nächste Ebene usw. |
 
 
 
  
 
-## <a name="text_list_type"></a>Text \_ \_ Auflistungstyp
+## <a name="text_list_type"></a>\_ \_ Textlistentyp
 
-Die Attribute in der folgenden Tabelle Adresslisten Stile für Text. Die Tom-Entsprechung ist die [**itextpara**](/windows/desktop/api/tom/nn-tom-itextpara) -Schnittstelle.
+Die Attribute in der folgenden Tabelle enthalten Adresslistenstile für Text. Die TOM-Entsprechung ist die [**ITextPara-Schnittstelle.**](/windows/desktop/api/tom/nn-tom-itextpara)
 
 
 
-| Attribut Name, Anzeige Name                          | type     | CSS-Entsprechung  | Tom-Entsprechung |
+| Attributname, Anzeigename                          | type     | CSS-Entsprechung  | TOM-Entsprechung |
 |--------------------------------------------------------|----------|-----------------|----------------|
-| Text \_ \_ Auflistungstyp, Aufzählungs Zeichen \_<br/>             | VT \_ bool | List-Type       | ListType       |
-| Text \_ \_ Listentyp \_ Arabisch, Arabisch<br/>             | VT \_ bool | List-Style-Type | ListType       |
-| Text \_ List \_ Type \_ lowerletter, Lower \_ Letter<br/> | VT \_ bool | List-Style-Type | ListType       |
-| Text \_ \_ Auflistungstyp \_ Großbuchstabe, oberer \_ Buchstabe<br/> | VT \_ bool | List-Style-Type | ListType       |
-| Text \_ \_ Auflistungstyp \_ LowerRoman, niedrigerer \_ Roman<br/>   | VT \_ bool | List-Style-Type | ListType       |
-| \_Textliste \_ Typ \_ UpperRoman, Upper \_ Roman<br/>   | VT \_ bool | List-Style-Type | ListType       |
+| \_ \_ Textlistentyp \_ Aufzählungszeichen, Aufzählungszeichen<br/>             | VT \_ BOOL | Listentyp       | ListType       |
+| \_ \_ Textlistentyp \_ Arabisch, Arabisch<br/>             | VT \_ BOOL | List-style-type | ListType       |
+| \_ \_ Textlistentyp \_ LowerLetter,Kleinbuchstabe \_<br/> | VT \_ BOOL | List-style-type | ListType       |
+| \_ \_ Textlistentyp \_ UpperLetter, \_ Großbuchstabe<br/> | VT \_ BOOL | List-style-type | ListType       |
+| \_ \_ Textlistentyp \_ LowerBuchstaben,lower \_ roman<br/>   | VT \_ BOOL | List-style-type | ListType       |
+| \_ \_ Textlistentyp \_ UpperStufe, \_ Oberer Roman<br/>   | VT \_ BOOL | List-style-type | ListType       |
 
 
 
@@ -252,10 +252,10 @@ Die Attribute in der folgenden Tabelle Adresslisten Stile für Text. Die Tom-Ent
 
 
 
-| Attribut Name, Anzeige Name                         | type     | CSS-Entsprechung | Tom-Entsprechung |
+| Attributname, Anzeigename                         | type     | CSS-Entsprechung | TOM-Entsprechung |
 |-------------------------------------------------------|----------|----------------|----------------|
-| \_Inkorrigier Ende APP, falsche \_ Schreibweise<br/> | VT \_ bool |                | Nicht unterstützt  |
-| \_Incorrectgrammar der APP, falsche \_ Grammatik<br/>   | VT \_ bool |                | Nicht unterstützt  |
+| App \_ IncorrectSpelling, falsche \_ Schreibweise<br/> | VT \_ BOOL |                | Nicht unterstützt  |
+| App \_ IncorrectGrammar, falsche \_ Grammatik<br/>   | VT \_ BOOL |                | Nicht unterstützt  |
 
 
 

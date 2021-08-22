@@ -1,23 +1,23 @@
 ---
-title: imm_atomic_consume (SM5-ASM)
-description: Verringert den ausgeblendeten 32-Bit-Leistungs Zähler atomisch, der mit einer Anzahl oder angefügenter Zugriffs Ansicht (UAV) gespeichert wird, und gibt den neuen Wert zurück.
+title: imm_atomic_consume (sm5 – asm)
+description: Dekrementieren Sie den ausgeblendeten 32-Bit-Indikator atomisch, der mit einer Unordered Access View (UAV) count oder Append gespeichert ist, und geben Sie den neuen Wert zurück.
 ms.assetid: 1115C318-2F86-4161-AC5C-2A61A262DC28
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a1c6fe01ddb92b2ce870b16254f75c52cadd341
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 0244b885d9d2c46b734994d5e101f79147839d0cf76e2bab5669e52700cf59e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104993127"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119314"
 ---
-# <a name="imm_atomic_consume-sm5---asm"></a>imm \_ Atomic \_ -Verbrauch (SM5-ASM)
+# <a name="imm_atomic_consume-sm5---asm"></a>imm \_ atomic \_ consume (sm5 – asm)
 
-Verringert den ausgeblendeten 32-Bit-Leistungs Zähler atomisch, der mit einer Anzahl oder angefügenter Zugriffs Ansicht (UAV) gespeichert wird, und gibt den neuen Wert zurück.
+Dekrementieren Sie den ausgeblendeten 32-Bit-Indikator atomisch, der mit einer Unordered Access View (UAV) count oder Append gespeichert ist, und geben Sie den neuen Wert zurück.
 
 
 
-| "imm \_ Atomic" \_ dst0 \[ . \_ einzelkomponentenmaske \_ \] , dstuav |
+| imm \_ atomic \_ consume dst0 \[ .single component mask , \_ \_ \] dstUAV |
 |---------------------------------------------------------------|
 
 
@@ -26,30 +26,30 @@ Verringert den ausgeblendeten 32-Bit-Leistungs Zähler atomisch, der mit einer A
 
 
 
-| Element                                                                                           | BESCHREIBUNG                                                               |
+| Element                                                                                           | Beschreibung                                                               |
 |------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| <span id="dst0"></span><span id="DST0"></span>*dst0*<br/>                                | \[in \] enthält den zurückgegebenen ursprünglichen Leistungs Zählers.<br/>           |
-| <span id="dstUAV"></span><span id="dstuav"></span><span id="DSTUAV"></span>*dstuav*<br/> | \[in \] einem strukturierten Puffer-UAV mit dem count-oder Append-Flag. <br/> |
+| <span id="dst0"></span><span id="DST0"></span>*dst0*<br/>                                | \[in \] Enthält den zurückgegebenen ursprünglichen Indikatorwert.<br/>           |
+| <span id="dstUAV"></span><span id="dstuav"></span><span id="DSTUAV"></span>*dstUAV*<br/> | \[in \] Einem strukturierten Puffer-UAV mit dem Count- oder Append-Flag. <br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Erläuterung zur Gültigkeit des zurückgegebenen zählungs Werts finden Sie unter " [imm \_ Atomic \_ zuordnungszahl](imm-atomic-alloc--sm5---asm-.md) ", je nachdem, ob die UAV "count" oder "append" ist Das gleiche gilt für **den \_ atomischen Atomic- \_ Verbrauch**.
+Unter [imm \_ atomic \_ alloc](imm-atomic-alloc--sm5---asm-.md) finden Sie eine Erläuterung der Gültigkeit des zurückgegebenen Count-Werts, je nachdem, ob der UAV Count oder Append ist. Dasselbe gilt für **imm \_ atomic \_ consume**.
 
-der unteilbare Wert für " **imm \_ Atomic \_** " führt einen atomaren Dekrement des Leistungs Zählers durch und gibt den neuen Wert an *dst0* zurück.
+**imm \_ atomic \_ consume** führt eine atomische Dekrementierung des Indikatorwerts aus und gibt den neuen Wert an *dst0* zurück.
 
-Es gibt keine Klammer für die Anzahl, daher wird Sie bei einem Unterlauf umschlossen.
+Es gibt keine Klammer der Anzahl, sodass sie sich nach Unterlauf umschließt.
 
-Der gleiche Shader kann nicht gleichzeitig sowohl einen " **imm \_ Atomic- \_ Zuweisungen** " als auch einen " **imm Atomic"- \_ \_ Verbrauch** auf derselben UAV Darüber hinaus kann die GPU nicht mehrere shaderaufrufe zulassen, um die Verwendung von " **imm \_ Atomic \_ zugc** " und " **imm \_ Atomic \_** " in derselben UAV zu mischen.
+Der gleiche Shader kann nicht versuchen, sowohl **imm \_ atomic \_ alloc** als auch imm atomic consume auf demselben UAV zu **\_ \_ nutzen.** Darüber hinaus kann die GPU nicht zulassen, dass mehrere Shaderaufrufe **imm \_ atomic \_ alloc** und **imm \_ atomic \_ consume** auf demselben UAV kombinieren.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | X     | X       |
 
@@ -57,11 +57,11 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-Da UAVs in allen Shader-Phasen für Direct3D 11,1 verfügbar sind, gilt diese Anweisung für alle Shader-Phasen für die Direct3D 11,1-Laufzeit, die ab Windows 8 verfügbar ist.
+Da UAVs in allen Shaderstufen für Direct3D 11.1 verfügbar sind, gilt diese Anweisung für alle Shaderstufen für die Direct3D 11.1-Runtime, die ab Windows 8 verfügbar ist.
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -69,20 +69,20 @@ Da UAVs in allen Shader-Phasen für Direct3D 11,1 verfügbar sind, gilt diese An
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -92,7 +92,7 @@ Diese Anweisung wird in den folgenden shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

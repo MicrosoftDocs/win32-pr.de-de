@@ -1,5 +1,5 @@
 ---
-description: 'UdpIp_V1_TypeGroup1 Klasse: Diese Klasse ist die Ereignistypklasse für UDP/IP-Ereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
+description: 'UdpIp_V1_TypeGroup1-Klasse: Diese Klasse ist die Ereignistypklasse für UDP/IP-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: c0ef6679-3852-4992-9fc2-114620eae14e
 title: UdpIp_V1_TypeGroup1-Klasse
 ms.topic: reference
@@ -18,18 +18,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: d7dadaac3d418d2351f9e27c694309deb373615e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 2c4a16dc8e0d08ab70a15b1d6a887ff8863a1b81c46c4318421df2169fd5d196
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069340"
 ---
 # <a name="udpip_v1_typegroup1-class"></a>UdpIp \_ V1 \_ TypeGroup1-Klasse
 
 Diese Klasse ist die Ereignistypklasse für UDP/IP-Ereignisse.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ class UdpIp_V1_TypeGroup1 : UdpIp_V1
 
 ## <a name="members"></a>Member
 
-Die **Klasse UdpIp \_ V1 \_ TypeGroup1** verfügt über die folgenden Membertypen:
+Die **UdpIp \_ V1 \_ TypeGroup1-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -61,7 +61,7 @@ Die **Klasse UdpIp \_ V1 \_ TypeGroup1** verfügt über diese Eigenschaften.
 daddr
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Objekt**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -77,7 +77,7 @@ Ziel-IP-Adresse.
 dport
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Objekt**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -158,10 +158,10 @@ Quellportnummer.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

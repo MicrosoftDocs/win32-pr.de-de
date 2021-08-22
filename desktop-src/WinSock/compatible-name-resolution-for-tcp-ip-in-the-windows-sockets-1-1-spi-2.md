@@ -1,25 +1,25 @@
 ---
-description: 'Windows Sockets 1,1 hat eine Reihe von Routinen definiert, die für die IPv4-Namensauflösung mit TCP/IP-Netzwerken verwendet wurden. Diese werden in der Regel als getxbyy-Funktionen bezeichnet und umfassen Folgendes:'
+description: Windows Sockets 1.1 definierten eine Reihe von Routinen, die für die IPv4-Namensauflösung mit TCP/IP-Netzwerken verwendet wurden. Diese werden üblicherweise als GetXbyY-Funktionen bezeichnet und enthalten Folgendes.
 ms.assetid: 7a3ff7f3-d4b9-4900-8fd8-708a89c78c0a
-title: Kompatible Namensauflösung für TCP/IP in Windows Sockets 1,1 SPI
+title: Kompatible Namensauflösung für TCP/IP im Windows Sockets 1.1 SPI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f3ca58f8868c17c9dad7c67fed083e9460272944
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ea355eb85d41a507e4970bf0c8d925a41ed81ca51c08b9c77955ad702a62d27c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347172"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051678"
 ---
-# <a name="compatible-name-resolution-for-tcpip-in-the-windows-sockets-11-spi"></a>Kompatible Namensauflösung für TCP/IP in Windows Sockets 1,1 SPI
+# <a name="compatible-name-resolution-for-tcpip-in-the-windows-sockets-11-spi"></a>Kompatible Namensauflösung für TCP/IP im Windows Sockets 1.1 SPI
 
-Windows Sockets 1,1 hat eine Reihe von Routinen definiert, die für die IPv4-Namensauflösung mit TCP/IP-Netzwerken verwendet wurden. Diese werden in der Regel als **getxbyy** -Funktionen bezeichnet und umfassen Folgendes:
+Windows Sockets 1.1 definierten eine Reihe von Routinen, die für die IPv4-Namensauflösung mit TCP/IP-Netzwerken verwendet wurden. Diese werden üblicherweise als **GetXbyY-Funktionen** bezeichnet und enthalten Folgendes.
 
-[**GetHostName**](/windows/desktop/api/winsock/nf-winsock-gethostname)
+[**Gethostname**](/windows/desktop/api/winsock/nf-winsock-gethostname)
 
 [**gethostbyaddr**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyaddr)
 
-[**gethostbyname**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname)
+[**Gethostbyname**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname)
 
 [**getprotobyname**](/windows/desktop/api/winsock/nf-winsock-getprotobyname)
 
@@ -31,21 +31,21 @@ Windows Sockets 1,1 hat eine Reihe von Routinen definiert, die für die IPv4-Nam
 
 Asynchrone Versionen dieser Funktionen wurden ebenfalls definiert.
 
-[**Wsaasyncgethostbyaddr**](/windows/win32/api/winsock/nf-winsock-wsaasyncgethostbyaddr)
+[**WSAAsyncGetHostByAddr**](/windows/win32/api/winsock/nf-winsock-wsaasyncgethostbyaddr)
 
-[**Wsaasyncgethostbyname**](/windows/win32/api/winsock/nf-winsock-wsaasyncgethostbyname)
+[**WSAAsyncGetHostByName**](/windows/win32/api/winsock/nf-winsock-wsaasyncgethostbyname)
 
-[**Wsaasyncgetprotobyname**](/windows/desktop/api/winsock/nf-winsock-wsaasyncgetprotobyname)
+[**WSAAsyncGetProtoByName**](/windows/desktop/api/winsock/nf-winsock-wsaasyncgetprotobyname)
 
-[**Wsaasyncgetprotobynumber**](/windows/desktop/api/winsock/nf-winsock-wsaasyncgetprotobynumber)
+[**WSAAsyncGetProtoByNumber**](/windows/desktop/api/winsock/nf-winsock-wsaasyncgetprotobynumber)
 
-[**Wsaasyncgetservbyname**](/windows/desktop/api/winsock/nf-winsock-wsaasyncgetservbyname)
+[**WSAAsyncGetServByName**](/windows/desktop/api/winsock/nf-winsock-wsaasyncgetservbyname)
 
-[**Wsaasyncgetservbyport**](/windows/desktop/api/winsock/nf-winsock-wsaasyncgetservbyport)
+[**WSAAsyncGetServByPort**](/windows/desktop/api/winsock/nf-winsock-wsaasyncgetservbyport)
 
-Diese Funktionen sind spezifisch für TCP/IP-Netzwerke. Entwickler von Protokoll unabhängigen Anwendungen werden davon abgeraten, diese Transport spezifischen Funktionen weiterhin zu verwenden. Um jedoch eine strikte Abwärtskompatibilität mit Windows Sockets 1,1 beizubehalten, werden die vorangehenden Funktionen weiterhin unterstützt, solange mindestens ein Namespace Anbieter vorhanden ist, der die AF \_ inet-Adressfamilie unterstützt.
+Diese Funktionen sind spezifisch für TCP/IP-Netzwerke. Entwickler von protokollunabhängigen Anwendungen werden davon abgeraten, diese transportspezifischen Funktionen weiterhin zu nutzen. Um jedoch die strikte Abwärtskompatibilität mit Windows Sockets 1.1 beizubehalten, werden die vorherigen Funktionen weiterhin unterstützt, solange mindestens ein Namespaceanbieter vorhanden ist, der die AF \_ INET-Adressfamilie unterstützt.
 
-Die *Ws2- \_32.dll* implementiert diese Kompatibilitätsfunktionen in Bezug auf die neuen, Protokoll unabhängigen namens Auflösungs Funktionen mit einer entsprechenden Sequenz von [**wsalookupservicebegin**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicebegina), [**WSALookupServiceNext**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicenexta)und [**WSALookupServiceEnd**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupserviceend) -Funktionsaufrufen. Die Details zur Zuordnung der **getxbyy** -Funktionen zu namens Auflösungs Funktionen finden Sie unten. Der Ws2 \_ -32.dll behandelt die Unterschiede zwischen den asynchronen und synchronen Versionen der **getxbyy** -Funktionen, sodass nur die Implementierung der synchronen **getxbyy** -Funktionen erläutert wird.
+Der *\_ Ws2-32.dll* implementiert diese Kompatibilitätsfunktionen in Bezug auf die neuen, protokollunabhängigen Namensauflösungsfunktionen mithilfe einer entsprechenden Sequenz von [**WSALookupServiceBegin-,**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicebegina) [**WSALookupServiceNext-,**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicenexta) [**WSALookupServiceEnd-Funktionsaufrufen.**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupserviceend) Die Details zur Zuordnung der **GetXbyY-Funktionen** zu Funktionen zur Namensauflösung sind unten angegeben. Die \_ Ws2-32.dll behandelt die Unterschiede zwischen den asynchronen und synchronen Versionen der **GetXbyY-Funktionen,** sodass nur die Implementierung der synchronen **GetXbyY-Funktionen** erläutert wird.
 
  
 

@@ -4,12 +4,12 @@ ms.assetid: 3754BBDB-3CBE-4C79-897D-15359B90AC82
 title: Sicherheit (Windows-Eigenschaftensystem)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 51f9aa9a536bb42fb3d08d6a3efb0ef092af29aa
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 1a3fe03196ebba9360d27f84304f7b61b536e4b82049ccf1439dbe09c4af80b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112405603"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119033158"
 ---
 # <a name="security-windows-property-system"></a>Sicherheit (Windows-Eigenschaftensystem)
 

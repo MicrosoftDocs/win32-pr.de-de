@@ -3,12 +3,12 @@ title: Metafile-Wiedergabelisten
 description: Metafile-Wiedergabelisten
 ms.assetid: a3370f90-fb83-4062-abf4-f2c32a1b559c
 keywords:
-- Windows Media Metadatei-Wiedergabelisten, Informationen zu
+- Windows Wiedergabelisten von Medienmetadateien, Informationen
 - Wiedergabelisten, Informationen
-- Metadatei-Wiedergabelisten, Informationen
-- Windows Media Metadatei-Wiedergabelisten, Vorteile
-- Wiedergabelisten, Vorteile
-- Metadatei-Wiedergabelisten, Vorteile
+- Metafile-Wiedergabelisten, Informationen
+- Windows Wiedergabelisten von Medienmetadateien,Vorteile
+- Wiedergabelisten,Vorteile
+- Metafile-Wiedergabelisten,Vorteile
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -16,22 +16,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 3646b35909e3058833455d6a08d253fab22355f9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cd5f4023209ac5728baf7fc84c16675302f4161fba73cc4203572d9ccb9fb63d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207029"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134983"
 ---
 # <a name="metafile-playlists"></a>Metafile-Wiedergabelisten
 
-Windows Media Metadatei-Wiedergabelisten werden verwendet, um streaminhalte und-Präsentationen zu organisieren. Eine Wiedergabeliste kann Windows-Media Player einfach an den Inhalt umleiten, der gestreamt werden soll, aber im Allgemeinen wird eine Liste der Dateien bereitgestellt, die sequenziell abgespielt werden. Eine komplexere Wiedergabeliste kann Wiederholungen, kommerzielle Einfügungen und Informationen zu den Elementen in der Liste enthalten.
+Windows Wiedergabelisten von Medienmetadateien werden verwendet, um Streaminhalte und -präsentationen zu organisieren. Eine Wiedergabeliste kann einfach Windows Media Player inhalt umleiten, der gestreamt werden soll, aber in der Regel wird eine Liste von Dateien zur Sequenzwiedergabe zur Verfügung gestellt. Eine komplexere Wiedergabeliste kann Wiederholungen, kommerzielle Einfügungen und Informationen zu den Elementen in der Liste enthalten.
 
-Ein weiterer Vorteil von Wiedergabelisten besteht darin, dass statt eines Streams, beenden, Starten des nächsten Streams und anschließendes warten darauf, dass die Pufferung abgeschlossen wird, Windows Media Services und Windows Media Player zusammenarbeiten, um die Clips nacheinander mit minimaler Pufferzeit oder Unterbrechung wiederzugeben.
+Ein weiterer Vorteil von Wiedergabelisten besteht in der Zusammenarbeit von Windows Media-Dienste und Windows Media Player, um die Clips nacheinander mit minimaler Pufferzeit oder Unterbrechung wieder zu spielen, anstatt einen Stream wieder zu spielen, den nächsten Stream zu beenden, zu starten und dann darauf zu warten, dass die Pufferung abgeschlossen ist.
 
-In den folgenden Abschnitten finden Sie weitere Informationen zu Metadatei-Wiedergabelisten:
+Die folgenden Abschnitte enthalten weitere Informationen zu Metadateiwiedergabelisten:
 
--   [Kontrolle über Wiedergabelisten](control-of-playlists.md)
+-   [Steuerung von Wiedergabelisten](control-of-playlists.md)
 -   [Benutzerdefinierte Grafiken in Windows Media Player](custom-graphics-in-windows-media-player.md)
 -   [Anzeigen von Webseiten in Windows Media Player](displaying-web-pages-in-windows-media-player.md)
 -   [Protokollieren von Streamdaten](logging-stream-data.md)
@@ -41,12 +41,12 @@ In den folgenden Abschnitten finden Sie weitere Informationen zu Metadatei-Wiede
 
 <dl> <dt>
 
-[**Leitfaden für Windows Media-Metadateien**](windows-media-metafile-guide.md)
+[**Windows Leitfaden zur Medienmetadatei**](windows-media-metafile-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

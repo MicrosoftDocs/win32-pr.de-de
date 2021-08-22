@@ -1,9 +1,9 @@
 ---
-title: Librarydisconnect-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das librarydisconnect-Ereignis tritt auf, wenn eine Bibliothek nicht mehr verfügbar ist.
+title: LibraryDisconnect-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das LibraryDisconnect-Ereignis tritt auf, wenn eine Bibliothek nicht mehr verfügbar ist.
 ms.assetid: 053d914a-dcd9-4fd6-a789-10c26147d08a
 keywords:
-- Librarydisconnect-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- LibraryDisconnect-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 058c75ed0d1173661b16baa6e4b4394ba4d0c38f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a032dc95a68430768b0f2aa109a56dae80cdaecb14b67eb5dbf6b2657cdd5107
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136003"
 ---
-# <a name="librarydisconnect-event-of-the-axwindowsmediaplayer-object"></a>Librarydisconnect-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="librarydisconnect-event-of-the-axwindowsmediaplayer-object"></a>LibraryDisconnect-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das librarydisconnect-Ereignis tritt auf, wenn eine Bibliothek nicht mehr verfügbar ist.
+Das LibraryDisconnect-Ereignis tritt auf, wenn eine Bibliothek nicht mehr verfügbar ist.
 
 ``` syntax
 [C#]
@@ -41,19 +41,19 @@ Private Sub player_LibraryDisconnect(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ librarydisconnecteventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ librarydisconnectevent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ LibraryDisconnectEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ LibraryDisconnectEvent**, die die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft | BESCHREIBUNG                                                                                   |
+| Eigenschaft | Beschreibung                                                                                   |
 |----------|-----------------------------------------------------------------------------------------------|
-| plibrary | **WMPLib. iwmplibrary** Die-Schnittstelle, die die getrennte Bibliothek darstellt.<br/> |
+| pLibrary | **WMPLib.IWMPLibrary** Die Schnittstelle, die die bibliothek darstellt, die getrennt wurde.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Ereignis tritt nicht für die lokale Bibliothek auf.
 
@@ -69,14 +69,14 @@ Dieses Ereignis tritt nicht für die lokale Bibliothek auf.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmplibrary-Schnittstelle (VB und c#)**](iwmplibrary--vb-and-c.md)
+[**IWMPLibrary-Schnittstelle (VB und C#)**](iwmplibrary--vb-and-c.md)
 </dt> </dl>
 
  

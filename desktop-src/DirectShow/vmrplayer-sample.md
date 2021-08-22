@@ -1,39 +1,39 @@
 ---
-description: Vmrplayer-Beispiel
+description: VMRPlayer-Beispiel
 ms.assetid: 7fc893a6-afa5-4ada-9295-29122b43b21e
-title: Vmrplayer-Beispiel
+title: VMRPlayer-Beispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e2214d94628a90daf0dd543f4e3a7f0166f4968a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 85c6281147e2c140541ade480e5b2a5e0f0a1d4146dde59b4871441b68fec6f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863399"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119071914"
 ---
-# <a name="vmrplayer-sample"></a>Vmrplayer-Beispiel
+# <a name="vmrplayer-sample"></a>VMRPlayer-Beispiel
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Dieses Beispiel verwendet den Filter Video Mischungs-Renderer 9 (VMR-9), um ein oder zwei laufende Videos und ein statisches Bild zu Alpha mischen.
+In diesem Beispiel wird der Filter Video Mixing Renderer 9 (VMR-9) verwendet, um ein oder zwei ausgeführte Videos und ein statisches Bild alphaneinzublenden.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
-Um das erste Video zu öffnen, wählen Sie im Menü **Datei** die Option **primären Stream öffnen** aus. Wenn Sie ein zweites Video öffnen möchten, wählen Sie im Menü **Datei** den Befehl **sekundären Stream öffnen** aus (Sie müssen zuerst den primären Stream öffnen). Um das Video wiederzugeben, klicken Sie auf die Schaltfläche wieder **Gabe** .
+Um das erste Video zu öffnen, wählen Sie im Menü **Datei** die Option **Primären Stream öffnen** aus. Um ein zweites Video zu öffnen, wählen Sie im Menü **Datei** die Option **Sekundären Stream** öffnen aus (Sie müssen zuerst den primären Stream öffnen). Um das Video wiederzuspielen, klicken Sie auf die Schaltfläche **Wiedergeben.**
 
-Sie können die Position, Größe und Alpha Werte der Videos festlegen, indem Sie im **VMR-Eigenschaften** Menü den **primären** oder den **sekundären Stream** auswählen.
+Sie können die Position, Größe und Alphawerte der Videos festlegen, indem Sie im **VmR-Eigenschaftenmenü** **Primary Stream** oder **Secondard Stream** auswählen.
 
-Wenn Sie ein statisches Bitmap über das Video hinzufügen möchten, wählen Sie im **VMR-Eigenschaften** Menü die Option **static App Image** aus, und klicken Sie auf das Feld **App-Image** Sie können das gleiche Dialogfeld verwenden, um die Position, Größe und den Alpha Wert der Bitmap zu steuern.
+Um eine statische Bitmap über dem Video hinzuzufügen, wählen Sie **statisches App-Image** aus dem **VMR-Eigenschaftenmenü** aus, und klicken Sie auf das Feld **App-Image anzeigen.** Sie können dasselbe Dialogfeld verwenden, um position, size und alpha value der Bitmap zu steuern.
 
-Um das gemischte Video Bild zu erfassen, wählen Sie im **VMR-Eigenschaften** Menü die Option **Bitmapbild erfassen** aus.
+Wählen Sie zum Erfassen des gemischten Videobilds im **VMR-Menü Eigenschaften** die Option **Bitmapbild erfassen** aus.
 
-Sie können den primären Bildstream auch über die Befehlszeile angeben:
+Sie können den primären Imagestream auch über die Befehlszeile angeben:
 
-**Vmrplayer** **/P** *Dateiname*
+**VMRPlayer** **/P** *filename*
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Zum Herunterladen der DirectShow SDK-Beispiele installieren Sie die neueste Version der [Windows SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx).
+Um die DirectShow SDK-Beispiele herunterzuladen, installieren Sie die neueste Version des [Windows SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,5 +1,5 @@
 ---
-description: Ordnet einen Video Kopf dem Videocontroller zu, der ihn enthält.
+description: Ordnet dem Videocontroller, der ihn enthält, einen Videokopf zu.
 ms.assetid: D072DF7C-D55B-4203-9FE5-B395D1EC1632
 title: Msvm_VideoHeadOnController-Klasse
 ms.topic: reference
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 11065c7b7a9e23b786697c3d4f0dbd63e67d6b17
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a184f8d07be87839ef6a4d438b87953128d16d5c91b9c5e461b11e3b1312c28c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119068440"
 ---
-# <a name="msvm_videoheadoncontroller-class"></a>MSVM \_ videoheadoncontroller-Klasse
+# <a name="msvm_videoheadoncontroller-class"></a>Msvm \_ VideoHeadOnController-Klasse
 
-Ordnet einen Video Kopf dem Videocontroller zu, der ihn enthält.
+Ordnet dem Videocontroller, der ihn enthält, einen Videokopf zu.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,51 +41,51 @@ class Msvm_VideoHeadOnController : CIM_VideoHeadOnController
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ videoheadoncontroller** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VideoHeadOnController-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ videoheadoncontroller** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VideoHeadOnController-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ Display Controller**](/previous-versions//cc136810(v=vs.85))**
+Datentyp: **[ **CIM \_ DisplayController**](/previous-versions//cc136810(v=vs.85))**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**Min(**](/windows/desktop/WmiSdk/standard-qualifiers) 1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
 Der Videocontroller, der den Kopf enthält.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ videohead**](msvm-videohead.md)**
+Datentyp: **[ **Msvm \_ VideoHead**](msvm-videohead.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig"), [**Min.**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Die Kopfzeile des Videogeräts.
+Der Kopf auf dem Videogerät.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM \_ videoheadoncontroller** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ VideoHeadOnController-Klasse** kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,25 +93,25 @@ Der Zugriff auf die **MSVM \_ videoheadoncontroller** -Klasse kann durch die UAC
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ videoheadoncontroller**](cim-videoheadoncontroller.md)
+[**CIM \_ VideoHeadOnController**](cim-videoheadoncontroller.md)
 </dt> <dt>
 
-[**CIM- \_ videoheadoncontroller**](/previous-versions//cc136950(v=vs.85))
+[**CIM \_ VideoHeadOnController**](/previous-versions//cc136950(v=vs.85))
 </dt> <dt>
 
-[Video Klassen](video-classes.md)
+[Videoklassen](video-classes.md)
 </dt> </dl>
 
  

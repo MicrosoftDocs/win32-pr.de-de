@@ -1,7 +1,7 @@
 ---
-description: Ruft die System Zertifikate auf einem Host System ab.
+description: Ruft die Systemzertifikate auf einem Hostsystem ab.
 ms.assetid: d470a57d-85b9-4d31-bb2c-9b6f21e2860d
-title: Getsystemzertifikate-Methode der Msvm_ReplicationService-Klasse
+title: GetSystemCertificates-Methode der Msvm_ReplicationService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 5464d420b7fc019a0829d7255dafb1716e5e9f5d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bdc3fe1e2a12809dceb14a23e087d3e844f5e1a51401171b68dfe41303739c2d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119253620"
 ---
-# <a name="getsystemcertificates-method-of-the-msvm_replicationservice-class"></a>Getsystemzertifikate-Methode der MSVM \_ replicationservice-Klasse
+# <a name="getsystemcertificates-method-of-the-msvm_replicationservice-class"></a>GetSystemCertificates-Methode der Msvm \_ ReplicationService-Klasse
 
-Ruft die System Zertifikate auf einem Host System ab.
+Ruft die Systemzertifikate auf einem Hostsystem ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ uint32 GetSystemCertificates(
 
 <dl> <dt>
 
-*Encodzertifikate* \[ vorgenommen\]
+*EncodedCertificates* \[ out\]
 </dt> <dd>
 
-Bei erfolgreicher Ausführung empfängt die Zertifikate, die im persönlichen Speicher für den lokalen Computer verfügbar sind. Jeder Eintrag ist eine Basis 64-codierte Zertifikat Zeichenfolge. Diese Zeichenfolge kann in ein Bytearray konvertiert werden, indem ein X509Certificate2-Objekt erstellt wird.
+Falls erfolgreich, empfängt die Zertifikate, die aus dem persönlichen Speicher für den lokalen Computer verfügbar sind. Jeder Eintrag ist eine Base64-codierte Zertifikatzeichenfolge. Diese Zeichenfolge kann durch Erstellen eines X509Certificate2-Objekts in ein Bytearray konvertiert werden.
 
 </dd> </dl>
 
@@ -55,10 +55,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -67,31 +67,31 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -100,19 +100,19 @@ Die **Datei wurde nicht gefunden** (32779).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ replicationservice**](msvm-replicationservice.md)
+[**Msvm \_ ReplicationService**](msvm-replicationservice.md)
 </dt> </dl>
 
  

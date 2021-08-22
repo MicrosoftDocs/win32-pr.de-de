@@ -1,31 +1,31 @@
 ---
-title: Bits-Upload-Protokoll
-description: In diesem Abschnitt wird das Netzwerkprotokoll für die Auftrags Typen "Bits Upload" und "Upload-Reply" beschrieben.
+title: BITS Hochladen Protocol
+description: In diesem Abschnitt wird das Netzwerkprotokoll für bits upload- und upload-reply-Auftragstypen beschrieben.
 ms.assetid: d0706ab1-1bf4-4b17-9321-ec3e00dd25e2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 642426decd0bc37390fa9fdd9b1ad2be11a0aa84
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a01fea1ff4703dba9a0429c0b37e9c34ebe0d0099016af788c972dd8ee9fddef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708142"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119021237"
 ---
-# <a name="bits-upload-protocol"></a>Bits-Upload-Protokoll
+# <a name="bits-upload-protocol"></a>BITS Hochladen Protocol
 
-In diesem Abschnitt wird das Netzwerkprotokoll für die Auftrags Typen "Bits Upload" und "Upload-Reply" beschrieben. Das Bits-uploadprotokoll wird über HTTP 1,1 geschichtet und verwendet viele der vorhandenen HTTP-Header und definiert neue Header. Das Bits-uploadprotokoll unterstützt eine einzelne Uploaddatei pro Sitzung.
+In diesem Abschnitt wird das Netzwerkprotokoll für bits upload- und upload-reply-Auftragstypen beschrieben. Das BITS-Uploadprotokoll basiert auf HTTP 1.1 und verwendet viele der vorhandenen HTTP-Header und definiert neue Header. Das BITS-Uploadprotokoll unterstützt eine einzelne Uploaddatei pro Sitzung.
 
-Bits verwendet Pakete, um Client Anforderungen und Server Antworten zu beschreiben. Der Bits-Packet-Type-Header gibt den Typ des zu sendenden Pakets an. Jedes Paket enthält bestimmte Header. Bits verwendet das Bits \_ Post-Verb, um Bits-Uploadpakete zu identifizieren. Antwort Pakete verwenden immer den ACK-Pakettyp, der für Bestätigungen steht. Das ACK-Paket wird im Kontext der vorherigen Anforderung gesendet. Es darf nur eine ausstehende Anforderung gleichzeitig vorhanden sein.
+BITS verwendet Pakete, um Clientanforderungen und Serverantworten zu beschreiben. Der BITS-Packet-Type-Header gibt den Typ des gesendeten Pakets an. Jedes Paket enthält bestimmte Header. BITS verwendet das BITS \_ POST-Verb, um BITS-Uploadpakete zu identifizieren. Antwortpakete verwenden immer den Pakettyp "Ack", der für "bestätigen" steht. Das Ack-Paket wird im Kontext der vorherigen Anforderung gesendet. Es kann nur eine ausstehende Anforderung gleichzeitig vorhanden sein.
 
-Für Upload-Antwort-Aufträge verwendet Bits dieses Protokoll, um die Datei hochzuladen, verwendet jedoch dieses Protokoll nicht, um die Antwort an den Client zu senden. Stattdessen sendet der BITS-Server den Speicherort der Antwortdatei an den Client, und der Client erstellt einen Bits-Download Auftrag zum Herunterladen der Antwortdatei.
+Bei Upload-Antwort-Aufträgen verwendet BITS dieses Protokoll, um die Datei hochzuladen, aber nicht dieses Protokoll, um die Antwort an den Client zu senden. Stattdessen sendet der BITS-Server den Speicherort der Antwortdatei an den Client, und der Client erstellt einen BITS-Downloadauftrag, um die Antwortdatei herunterzuladen.
 
-Verwenden Sie das uploadprotokoll, um den Bits-Client oder die Server Software durch ihre eigene Implementierung zu ersetzen. Eine Liste der vom BITS-Client gesendeten Anforderungs Pakete finden Sie unter [Bits-Anforderungs Pakete](bits-request-packets.md). Eine Liste der vom BITS-Server gesendeten Antwort Pakete finden Sie unter [Bits-Antwort Pakete](bits-response-packets.md).
+Verwenden Sie das Uploadprotokoll, um den BITS-Client oder die Serversoftware durch Ihre eigene Implementierung zu ersetzen. Eine Liste der vom BITS-Client gesendeten Anforderungspakete finden Sie unter [BITS-Anforderungspakete.](bits-request-packets.md) Eine Liste der vom BITS-Server gesendeten Antwortpakete finden Sie unter [BITS-Antwortpakete.](bits-response-packets.md)
 
-Der Client bestimmt, wie er auf Fehler oder unerwartete Pakete vom BITS-Server reagiert. Wenn der Server ein Paket empfängt, das er nicht erwartet, sollte der Server ein ACK-Paket mit dem Rückgabecode 400 (ungültige Anforderung) senden.
+Der Client bestimmt, wie er auf Fehler oder unerwartete Pakete vom BITS-Server reagiert. Wenn der Server ein Paket empfängt, das nicht erwartet wird, sollte der Server ein Ack-Paket mit dem Rückgabecode 400 (Ungültige Anforderung) senden.
 
- 
+ 
 
- 
+ 
 
 
 

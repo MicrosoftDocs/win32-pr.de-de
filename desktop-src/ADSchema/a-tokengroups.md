@@ -1,11 +1,11 @@
 ---
 title: Token-Groups-Attribut
-description: Ein berechnetes Attribut, das die Liste der SIDs aufgrund eines transitiven Gruppen Mitgliedschafts Erweiterungs Vorgangs für einen bestimmten Benutzer oder Computer enthält. Tokengruppen können nicht abgerufen werden, wenn kein globaler Katalog vorhanden ist, um die transitiven umgekehrten Mitgliedschaften abzurufen.
+description: Ein berechnetes Attribut, das die Liste der SIDs aufgrund einer transitiven Erweiterung der Gruppenmitgliedschaft auf einem bestimmten Benutzer oder Computer enthält. Tokengruppen können nicht abgerufen werden, wenn kein globaler Katalog vorhanden ist, um die transitiven umgekehrten Mitgliedschaften abzurufen.
 ms.assetid: bb430c9f-20b7-4f21-804d-fbd4864b6505
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Token-Groups-Attribut
-- Schema Gruppen-Attribut AD-Schema
+- Token-Groups AD-Schema
+- tokenGroups-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5342d1ff2bf549796340532b0514d5c5b060c2c1
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 6b8971f9ba5baead73b7704760dcc86430f5ce1a318ac6bcbd9dfaf4125a21af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022068"
 ---
 # <a name="token-groups-attribute"></a>Token-Groups-Attribut
 
-Ein berechnetes Attribut, das die Liste der SIDs aufgrund eines transitiven Gruppen Mitgliedschafts Erweiterungs Vorgangs für einen bestimmten Benutzer oder Computer enthält. Tokengruppen können nicht abgerufen werden, wenn kein globaler Katalog vorhanden ist, um die transitiven umgekehrten Mitgliedschaften abzurufen.
+Ein berechnetes Attribut, das die Liste der SIDs aufgrund einer transitiven Erweiterung der Gruppenmitgliedschaft auf einem bestimmten Benutzer oder Computer enthält. Tokengruppen können nicht abgerufen werden, wenn kein globaler Katalog vorhanden ist, um die transitiven umgekehrten Mitgliedschaften abzurufen.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Token-Groups                         |
-| LDAP-Display-Name | tokenGroups                          |
+| Ldap-Anzeigename | tokenGroups                          |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.     |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.     |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1301              |
-| System-ID-GUID    | b7c69e6d-2cc7-11d2-854e-00a0c983f608 |
-| Syntax            | [**Zeichenfolge (SID)**](s-string-sid.md)  |
+| System-Id-Guid    | b7c69e6d-2cc7-11d2-854e-00a0c983f608 |
+| Syntax            | [**String(Sid)**](s-string-sid.md)  |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,20 +58,20 @@ Ein berechnetes Attribut, das die Liste der SIDs aufgrund eines transitiven Grup
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Falsch                                                        |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x08000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,16 +79,16 @@ Ein berechnetes Attribut, das die Liste der SIDs aufgrund eines transitiven Grup
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Falsch                                                        |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x08000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -100,16 +100,16 @@ Ein berechnetes Attribut, das die Liste der SIDs aufgrund eines transitiven Grup
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Falsch                                                        |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x08000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -121,16 +121,16 @@ Ein berechnetes Attribut, das die Liste der SIDs aufgrund eines transitiven Grup
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Falsch                                                        |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x08000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -142,16 +142,16 @@ Ein berechnetes Attribut, das die Liste der SIDs aufgrund eines transitiven Grup
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Falsch                                                        |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x08000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -163,16 +163,16 @@ Ein berechnetes Attribut, das die Liste der SIDs aufgrund eines transitiven Grup
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Falsch                                                        |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x08000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -184,16 +184,16 @@ Ein berechnetes Attribut, das die Liste der SIDs aufgrund eines transitiven Grup
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Falsch                                                        |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x08000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 

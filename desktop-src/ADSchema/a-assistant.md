@@ -1,11 +1,11 @@
 ---
 title: Assistant-Attribut
-description: Der Distinguished Name des Verwaltungs-Assistenten eines Benutzers.
+description: Der Distinguished Name des Administratorassistenten eines Benutzers.
 ms.assetid: f4eec883-3678-422e-a9b9-753352c8c849
 ms.tgt_platform: multiple
 keywords:
-- Adschema des Assistant-Attributs
-- adschema des Assistant-Attributs
+- Ad-Schema des Assistentenattributs
+- Ad-Schema des Assistentenattributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0cf90dd069e276a9b73f4e5b0e667d51edcb88b8
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b6f56d496a3e2286db1dd330fb2da8a9c0f1b278b5c2c6a9fbb06340e8474070
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119081944"
 ---
 # <a name="assistant-attribute"></a>Assistant-Attribut
 
-Der Distinguished Name des Verwaltungs-Assistenten eines Benutzers.
+Der Distinguished Name des Administratorassistenten eines Benutzers.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
 | CN                | Assistant                               |
-| LDAP-Display-Name | assistant                               |
+| Ldap-Anzeigename | assistant                               |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.652                  |
-| System-ID-GUID    | 0296c11c-40DA-11d1-a9c0-0000b80367c1    |
+| System-Id-Guid    | 0296c11c-40da-11d1-a9c0-0000f80367c1    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -43,7 +43,7 @@ Der Distinguished Name des Verwaltungs-Assistenten eines Benutzers.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Der Distinguished Name des Verwaltungs-Assistenten eines Benutzers.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Is-Single-Valued       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000010                                                         |
@@ -70,7 +70,7 @@ Der Distinguished Name des Verwaltungs-Assistenten eines Benutzers.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Der Distinguished Name des Verwaltungs-Assistenten eines Benutzers.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Is-Single-Valued       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000010                                                         |
@@ -100,10 +100,10 @@ Der Distinguished Name des Verwaltungs-Assistenten eines Benutzers.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Is-Single-Valued       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000010                                                         |
@@ -121,10 +121,10 @@ Der Distinguished Name des Verwaltungs-Assistenten eines Benutzers.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Is-Single-Valued       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000010                                                         |
@@ -142,10 +142,10 @@ Der Distinguished Name des Verwaltungs-Assistenten eines Benutzers.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Is-Single-Valued       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000010                                                         |
@@ -163,10 +163,10 @@ Der Distinguished Name des Verwaltungs-Assistenten eines Benutzers.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Is-Single-Valued       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000010                                                         |

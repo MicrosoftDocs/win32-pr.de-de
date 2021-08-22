@@ -1,43 +1,43 @@
 ---
-title: Boundingrectnothittestable
-description: Boundingrectnothittestable
+title: BoundingRectNotHitTestable
+description: BoundingRectNotHitTestable
 ms.assetid: E728F250-6D92-4C8A-BAA3-C7D8F64C50FB
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c956035803c1e6748c66e44ffedb3d934e5300a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 647f681ab1645dc2a0678dad463a3ceb9d51466d77222f3560f940c3e565bfe4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206772"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119052948"
 ---
-# <a name="boundingrectnothittestable"></a>Boundingrectnothittestable
+# <a name="boundingrectnothittestable"></a>BoundingRectNotHitTestable
 
 ## <a name="text"></a>Text
 
-Das gemeldete Rechteck enthält anscheinend keinen Punkt, an dem dieses Element mit Treffer Tests abgerufen werden kann.
+Das gemeldete Rechteck scheint keinen Punkt zu enthalten, an dem dieses Element mit Treffertests abgerufen werden kann.
 
-## <a name="type"></a>type
+## <a name="type"></a>Typ
 
 Warnung
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Das umgebende Rechteck des Elements ist durch Treffer Tests nicht erreichbar. Er befindet sich z. b. außerhalb der physischen Bildschirm Koordinaten (oder sichtbaren Bereichs) des Desktops.
+Das umschließende Rechteck des Elements ist durch Treffertests nicht erreichbar. Er befindet sich beispielsweise außerhalb der physischen Bildschirmkoordinaten (oder des anzeigebaren Bereichs) des Desktops.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**IAccessible:: accHitTest**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acchittest)
+[**IAccessible::accHitTest**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acchittest)
 </dt> <dt>
 
-[**Accessibleobjectfrompoint**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfrompoint)
+[**AccessibleObjectFromPoint**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfrompoint)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,19 +1,19 @@
 ---
-description: Nachdem der Benutzer im Menü auf Clip geklickt hat, verwendet die Anwendung die Koordinaten des Rechtecks, das der Benutzer erstellt hat, um einen Clippingbereich zu definieren.
+description: Nachdem der Benutzer im Menü auf Clip geklickt hat, verwendet die Anwendung die Koordinaten des Rechtecks, das der Benutzer erstellt hat, um einen Ausschneidebereich zu definieren.
 ms.assetid: 5ae60181-c72e-4a28-99eb-e23d35c46685
-title: Clipping-Ausgabe
+title: Ausschneiden der Ausgabe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bdc0181340b03421815ebe0f5cd8328d4793a406
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7a683fd276165b8c4556881f6aab47931978048b4699496a0f996abd888dbab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959315"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119038138"
 ---
-# <a name="clipping-output"></a>Clipping-Ausgabe
+# <a name="clipping-output"></a>Ausschneiden der Ausgabe
 
-Nachdem der Benutzer im Menü auf Clip geklickt hat, verwendet die Anwendung die Koordinaten des Rechtecks, das der Benutzer erstellt hat, um einen Clippingbereich zu definieren. Nachdem der Clippingbereich definiert und in den Gerätekontext der Anwendung ausgewählt wurde, zeichnet die Anwendung das Bitmap-Bild neu. Die Anwendung führt diese Aufgaben wie folgt aus.
+Nachdem der Benutzer im Menü auf Clip geklickt hat, verwendet die Anwendung die Koordinaten des Rechtecks, das der Benutzer erstellt hat, um einen Ausschneidebereich zu definieren. Nachdem der Clippingbereich definiert und im Gerätekontext der Anwendung ausgewählt wurde, wird das Bitmapbild neu gezeichnet. Die Anwendung führt diese Aufgaben wie folgt aus.
 
 
 ```C++

@@ -1,7 +1,7 @@
 ---
-description: Ruft die Standardkontext Einstellungen für das Tablet ab.
+description: Ruft die Standardkontexteinstellungen für das Tablet ab.
 ms.assetid: 59d1bab0-a8b8-4e23-9311-2921f9035dc4
-title: 'ITablet:: getdefaultcontextsettings-Methode'
+title: ITablet::GetDefaultContextSettings-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: 7e2f0977257553d8405b337dcc1f22d8b0fdff5a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 646756a924bd9b848f2141b796205f2cf2374140811b7dd87f8ffd64c69ee8d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103757350"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119336260"
 ---
-# <a name="itabletgetdefaultcontextsettings-method"></a>ITablet:: getdefaultcontextsettings-Methode
+# <a name="itabletgetdefaultcontextsettings-method"></a>ITablet::GetDefaultContextSettings-Methode
 
-Ruft die Standardkontext Einstellungen für das Tablet ab.
+Ruft die Standardkontexteinstellungen für das Tablet ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ HRESULT GetDefaultContextSettings(
 
 <dl> <dt>
 
-*PPTCs* \[ vorgenommen\]
+*ppTCS* \[ out\]
 </dt> <dd>
 
-Die Standardkontext Einstellungen für das Tablet.
+Die Standardkontexteinstellungen für das Tablet.
 
 </dd> </dl>
 
@@ -56,15 +56,15 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es ist Aufgabe des Aufrufers, den von dieser Methode zurückgegebenen Speicher mithilfe von " [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)" freizugeben.
+Es liegt in der Verantwortung des Aufrufers, den von dieser Methode zurückgegebenen Arbeitsspeicher mithilfe von [**CoTaskMemFree frei zu geben.**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,13 +72,13 @@ Es ist Aufgabe des Aufrufers, den von dieser Methode zurückgegebenen Speicher m
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

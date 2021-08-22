@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: enumeratecolumnsgrbit-Enumeration'
-title: Enumeratecolumnsgrbit-Enumeration
+description: Weitere Informationen finden Sie unter EnumerateColumnsGrbit-Enumeration.
+title: EnumerateColumnsGrbit-Enumeration
 TOCTitle: EnumerateColumnsGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EnumerateColumnsGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.enumeratecolumnsgrbit(v=EXCHG.10)
@@ -36,21 +36,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5e27e6810b37b513d550bbafce509b2815ccea2c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6267bb254101d4c470b3e496e2996a97edc3b817f226e1c78cc226237e56a9b8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119366330"
 ---
-# <a name="enumeratecolumnsgrbit-enumeration"></a>Enumeratecolumnsgrbit-Enumeration
+# <a name="enumeratecolumnsgrbit-enumeration"></a>EnumerateColumnsGrbit-Enumeration
 
-Optionen für jetenreeratecolumschlag.
+Optionen für JetEnumerateColumns.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -90,40 +90,40 @@ public enum EnumerateColumnsGrbit
 </tr>
 <tr class="even">
 <td></td>
-<td>Enumeratecompressoutput</td>
-<td>Beim Aufzählen von Spaltenwerten können alle Spalten, für die wir alle Werte abrufen und nur einen nicht-NULL-Spaltenwert aufweisen, in einem komprimierten Format zurückgegeben werden. Der Status dieser Spalten wird auf <a href="hh557250(v=exchg.10).md">columnsinglevalue</a> festgelegt, und die Größe des Spaltenwerts und der Arbeitsspeicher, der den Spaltenwert enthält, werden direkt in der <a href="dn335081(v=exchg.10).md">JET_ENUMCOLUMN</a> Struktur zurückgegeben. Es ist nicht sichergestellt, dass alle berechtigten Spalten auf diese Weise komprimiert werden. Weitere Informationen finden Sie unter <a href="dn335081(v=exchg.10).md">JET_ENUMCOLUMN</a> .</td>
+<td>EnumerateCompressOutput</td>
+<td>Beim Aufzählen von Spaltenwerten können alle Spalten, für die alle Werte abgerufen werden und die nur einen Nicht-NULL-Spaltenwert haben, in einem komprimierten Format zurückgegeben werden. Der Status für solche Spalten wird auf <a href="hh557250(v=exchg.10).md">ColumnSingleValue</a> festgelegt, und die Größe des Spaltenwerts und der Arbeitsspeicher, der den Spaltenwert enthält, werden direkt in der JET_ENUMCOLUMN <a href="dn335081(v=exchg.10).md">zurückgegeben.</a> Es ist nicht garantiert, dass alle berechtigten Spalten auf diese Weise komprimiert werden. Weitere <a href="dn335081(v=exchg.10).md">JET_ENUMCOLUMN</a> finden Sie unter .</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Enumeratecopy</td>
-<td>Diese Option gibt an, dass die geänderten Spaltenwerte des Datensatzes anstelle der ursprünglichen Spaltenwerte aufgezählt werden sollen. Wenn ein Spaltenwert nicht geändert wurde, wird der ursprüngliche Spaltenwert aufgelistet. Auf diese Weise kann ein Spaltenwert, der noch nicht eingefügt oder aktualisiert wurde, beim Einfügen oder Aktualisieren eines Datensatzes aufgezählt werden.
-<p>Diese Option ist mit " <a href="hh578120(v=exchg.10).md">retrievecopy</a>" identisch.</p></td>
+<td>EnumerateCopy</td>
+<td>Diese Option gibt an, dass die geänderten Spaltenwerte des Datensatzes und nicht die ursprünglichen Spaltenwerte aufzählt werden sollen. Wenn ein Spaltenwert nicht geändert wurde, wird der ursprüngliche Spaltenwert aufzählt. Auf diese Weise kann ein Spaltenwert, der noch nicht eingefügt oder aktualisiert wurde, beim Einfügen oder Aktualisieren eines Datensatzes aufzählt werden.
+<p>Diese Option ist identisch mit <a href="hh578120(v=exchg.10).md">RetrieveCopy.</a></p></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Enumerateignoredefault</td>
-<td>Wenn eine bestimmte Spalte nicht im Datensatz vorhanden ist, wird kein Spaltenwert zurückgegeben. Normalerweise würde der Standardwert für die Spalte, sofern vorhanden, in diesem Fall zurückgegeben werden. Wenn die Spalte auf einen anderen Wert als den Standardwert festgelegt ist, wird ein anderer Wert zurückgegeben (d. h., wenn eine Spalte mit einem Standardwert explizit auf NULL festgelegt ist, wird ein NULL-Wert als Wert für diese Spalte zurückgegeben). Auch wenn diese Option angefordert wird, ist es weiterhin möglich, einen Spaltenwert anzuzeigen, der dem Standardwert entspricht. Es wird nicht versucht, Spaltenwerte zu entfernen, die ihren Standardwerten entsprechen. Beachten Sie, dass sich diese Option auf die Ausgabe von <a href="dn292148(v=exchg.10).md">jetenumeratecolumns (JET_SESID JET_TABLEID, Int32, [], Int32, [], JET_PFNREALLOC, IntPtr, Int32, enumeratecolumnsgrbit)</a> auswirkt, wenn Sie mit enumeratepresenceonly oder enumeratetaggedonly verwendet wird.</td>
+<td>EnumerateIgnoreDefault</td>
+<td>Wenn eine bestimmte Spalte nicht im Datensatz vorhanden ist, wird kein Spaltenwert zurückgegeben. Normalerweise wird in diesem Fall der Standardwert für die Spalte zurückgegeben, sofern dieser enthalten ist. Es ist garantiert, dass, wenn die Spalte auf einen anderen Wert als den Standardwert festgelegt ist, dieser andere Wert zurückgegeben wird (d. h., wenn eine Spalte mit einem Standardwert explizit auf NULL festgelegt ist, wird ein NULL-Wert als Wert für diese Spalte zurückgegeben). Auch wenn diese Option angefordert wird, ist es weiterhin möglich, einen Spaltenwert zu sehen, der dem Standardwert entspricht. Es wird kein Aufwand unternommen, Spaltenwerte zu entfernen, die mit ihren Standardwerten übereinstimmen. Beachten Sie, dass diese Option die Ausgabe von <a href="dn292148(v=exchg.10).md">JetEnumerateColumns(JET_SESID, JET_TABLEID, Int32, [], Int32, [], JET_PFNREALLOC, IntPtr, Int32, EnumerateColumnsGrbit)</a> beeinflusst, wenn sie mit EnumeratePresenceOnly oder EnumerateTaggedOnly verwendet wird.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Enumeratepresenceonly</td>
-<td>Wenn ein nicht-NULL-Wert für den angeforderten Spalten-oder Spaltenwert vorhanden ist, werden die zugehörigen Daten nicht zurückgegeben. Stattdessen wird der zugehörige Status für diesen Spalten-oder Spaltenwert auf <a href="hh557250(v=exchg.10).md">columnpresent</a>festgelegt. Wenn der Spalten-oder Spaltenwert NULL ist, wird <a href="hh557250(v=exchg.10).md">columnnull</a> wie gewohnt zurückgegeben.</td>
+<td>EnumeratePresenceOnly</td>
+<td>Wenn ein Nicht-NULL-Wert für die angeforderte Spalte oder den angeforderten Spaltenwert vorhanden ist, werden die zugeordneten Daten nicht zurückgegeben. Stattdessen wird der zugeordnete Status für diesen Spalten- oder Spaltenwert auf <a href="hh557250(v=exchg.10).md">ColumnPresent festgelegt.</a> Wenn der Spalten- oder Spaltenwert NULL ist, wird <a href="hh557250(v=exchg.10).md">ColumnNull</a> wie gewohnt zurückgegeben.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Enumeratetaggedonly</td>
-<td>Wenn alle Spaltenwerte im Datensatz aufgelistet werden (z. b. wenn numcolumnids NULL ist), werden nur markierte Spaltenwerte zurückgegeben. Diese Option ist beim Auflisten eines bestimmten Arrays von Spalten-IDs nicht zulässig.</td>
+<td>EnumerateTaggedOnly</td>
+<td>Beim Aufzählen aller Spaltenwerte im Datensatz (z. B. wenn numColumnids null ist), werden nur markierte Spaltenwerte zurückgegeben. Diese Option ist beim Aufzählen eines bestimmten Arrays von Spalten-IDs nicht zulässig.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
 
-[Enumerateignoreuserdefineddefault](./server2003grbits.enumerateignoreuserdefineddefault-field.md)
+[EnumerateIgnoreUserDefinedDefault](./server2003grbits.enumerateignoreuserdefineddefault-field.md)
 
-[Enumerateingerecordonly](./windows7grbits.enumerateinrecordonly-field.md)
+[EnumerateInRecordOnly](./windows7grbits.enumerateinrecordonly-field.md)

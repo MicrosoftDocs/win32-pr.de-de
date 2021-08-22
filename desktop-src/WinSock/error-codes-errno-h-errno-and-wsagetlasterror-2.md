@@ -1,27 +1,27 @@
 ---
-description: In Winsock-Anwendungen werden Fehlercodes mithilfe der WSAGetLastError-Funktion abgerufen, der Windows Sockets-Ersatz für die Windows GetLastError-Funktion.
+description: In Winsock-Anwendungen werden Fehlercodes mithilfe der WSAGetLastError-Funktion abgerufen, wobei die Windows Sockets die Windows GetLastError-Funktion ersetzen.
 ms.assetid: cb73fc92-74bd-4c8b-a1c0-6daf4d298aa1
-title: 'Fehler Codes: errno, h_errno und WSAGetLastError'
+title: 'Fehlercodes: errno, h_errno und WSAGetLastError'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 31b547e0b580599aaec27a0b77bfad0ffaa8966e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b2e9c4372bd479ee4b94bd3226128737dae3d5637be94046eb013716590ac285
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344440"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119132633"
 ---
-# <a name="error-codes---errno-h_errno-and-wsagetlasterror"></a>Fehler Codes: errno, h \_ errno und WSAGetLastError
+# <a name="error-codes---errno-h_errno-and-wsagetlasterror"></a>Fehlercodes: errno, h \_ errno und WSAGetLastError
 
-In Winsock-Anwendungen werden Fehlercodes mithilfe der [**WSAGetLastError**](/windows/desktop/api/winsock/nf-winsock-wsagetlasterror) -Funktion abgerufen, der Windows Sockets-Ersatz für die Windows [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) -Funktion. Die von Windows Sockets zurückgegebenen Fehlercodes ähneln den UNIX-socketfehlercode-Konstanten, aber die Konstanten haben alle den Präfix WSA. In Winsock-Anwendungen würde der WSAEWOULDBLOCK-Fehlercode zurückgegeben werden, während in UNIX-Anwendungen der EWOULDBLOCK-Fehlercode zurückgegeben wird.
+In Winsock-Anwendungen werden Fehlercodes mithilfe der [**WSAGetLastError-Funktion**](/windows/desktop/api/winsock/nf-winsock-wsagetlasterror) abgerufen. Die Windows Sockets ersetzen die Windows [**GetLastError-Funktion.**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) Die von Windows Sockets zurückgegebenen Fehlercodes ähneln UNIX Socketfehlercodekonstanten, aber allen Konstanten wird das Präfix WSA vorangestellt. In Winsock-Anwendungen würde der WSAEW DLLDBLOCK-Fehlercode zurückgegeben, während in UNIX Anwendungen der Fehlercode EWOULDBLOCK zurückgegeben würde.
 
-Fehlercodes, die von Windows Sockets festgelegt werden, werden nicht über die *errno* -Variable zur Verfügung gestellt. Außerdem werden Fehlercodes für die **getxbyy** -Klasse von Functions nicht durch die *h \_ errno* -Variable zur Verfügung gestellt. Die [**WSAGetLastError**](/windows/desktop/api/winsock/nf-winsock-wsagetlasterror) -Funktion soll eine zuverlässige Methode für einen Thread in einem Multithreadprozess bereitstellen, um Fehlerinformationen pro Thread abzurufen.
+Fehlercodes, die von Windows Sockets festgelegt werden, werden nicht über die *errno-Variable* verfügbar gemacht. Darüber hinaus werden fehlercodes für die **getXbyY-Klasse** von Funktionen nicht über die *h \_ errno-Variable* verfügbar gemacht. Die [**WSAGetLastError-Funktion**](/windows/desktop/api/winsock/nf-winsock-wsagetlasterror) soll einem Thread in einem Multithreadprozess eine zuverlässige Möglichkeit bieten, pro Thread Fehlerinformationen abzurufen.
 
-Aus Kompatibilitätsgründen mit Berkeley Unix (BSD) wurden in früheren Versionen von Windows (z. b. Windows 95 mit dem Windows-Socket 2-Update und Windows 98) neudefinierte reguläre Berkeley-Fehler Konstanten normalerweise in *errno. h* auf BSD als die entsprechenden Windows Sockets WSA-Fehler festgestellt. Beispielsweise wurde "econnabgelehnte" in der Header Datei " *Winsock. h* " als " **wsaeconnabgelehnte** " definiert. In nachfolgenden Versionen von Windows (Windows NT 3,1 und höher) wurden diese Definitionen auskommentiert, um Konflikte mit *errno. h* zu vermeiden, die mit Microsoft C/C++ und Visual Studio verwendet werden.
+Aus Gründen der Kompatibilität mit UNIX Windows Socket 2 Update und Windows 98 definierten frühe Versionen von Windows (Windows 95 mit Windows Socket 2 Update und Windows 98) reguläre Fehlerkonstanten in Der Regel in *errno.h* auf BSD als entsprechende Windows Sockets WSA-Fehler neu. So wurde beispielsweise ECONNREFUSED in der *Headerdatei "Winsock.h"* als **WSAECONNREFUSED** definiert. In nachfolgenden Versionen von Windows (Windows NT 3.1 und höher) wurden diese Definitionen auskommentiert, um Konflikte mit *errno.h* zu vermeiden, die mit Microsoft C/C++ und Visual Studio verwendet werden.
 
-Die Header Datei " *Winsock2. h* ", die im Microsoft Windows Software Development Kit (SDK), im Platform Software Development Kit (SDK) und in Visual Studio enthalten ist, enthält immer noch einen auskommentierten Block von Definitionen innerhalb eines \# ifdef 0-und \# EndIf-Blocks, die die BSD-Socket-Fehlercodes für die WSA-Fehler Konstanten definieren. Diese können verwendet werden, um die Kompatibilität mit der UNIX-, BSD-und Linux-Socketprogrammierung zu gewährleisten. Aus Kompatibilitätsgründen kann eine Anwendung die *Winsock2. h* ändern und die Auskommentierung dieses Blocks aufheben. Anwendungsentwickler werden jedoch dringend davon abgeraten, diesen Block aufgrund von unvermeidlichen Konflikten mit *errno. h* in den meisten Anwendungen zu entkommentieren. Außerdem werden die BSD-Socketfehler für sehr unterschiedliche Werte definiert als in UNIX-, BSD-und Linux-Programmen verwendet werden. Anwendungsentwicklern wird dringend empfohlen, die WSA-Fehler Konstanten in Socketanwendungen zu verwenden.
+Die *Winsock2.h-Headerdatei,* die im Microsoft Windows Software Development Kit (SDK), Im Platform Software Development Kit (SDK) enthalten ist, und Visual Studio enthält weiterhin einen auskommentierten Block von defines in einem \# ifdef 0- und \# endif-Block, der die Fehlercodes des BSD-Sockets so definiert, dass sie mit den WSA-Fehlerkonstanten identisch sind. Diese können verwendet werden, um eine gewisse Kompatibilität mit UNIX, BSD und Linux-Socketprogrammierung bereitzustellen. Aus Gründen der Kompatibilität mit BSD kann eine Anwendung die *Winsock2.h-Datei* ändern und die Auskommentierung dieses Blocks aufheben. Anwendungsentwickler werden jedoch dringend davon abgeraten, diesen Block aufgrund von unvermeidlichen Konflikten mit *errno.h* in den meisten Anwendungen auskommentieren zu lassen. Außerdem werden die BSD-Socketfehler in sehr unterschiedlichen Werten definiert, als in UNIX-, BSD- und Linux-Programmen verwendet werden. Anwendungsentwicklern wird dringend empfohlen, die WSA-Fehlerkonstanten in Socketanwendungen zu verwenden.
 
-Diese Definitionen bleiben im " *Winsock2. h* "-Header innerhalb eines \# ifdef 0-und eines " \# SDIF"-Blocks auskommentiert. Wenn ein Anwendungsentwickler auf die Kompatibilität mit den BSD-Fehlercodes wartet, kann eine Anwendung eine Zeile in der Form einschließen:
+Diese Definitionen bleiben im *Winsock2.h-Header* innerhalb eines \# ifdef 0- und \# endif-Blocks auskommentiert. Wenn ein Anwendungsentwickler die Verwendung der BSD-Fehlercodes aus Gründen der Kompatibilität befürchtet, kann eine Anwendung eine Zeile des Formulars einschließen:
 
 
 ```C++
@@ -32,7 +32,7 @@ Diese Definitionen bleiben im " *Winsock2. h* "-Header innerhalb eines \# ifdef 
 
 
 
-Dadurch kann der Netzwerkcode, der für die Verwendung des globalen *errno* geschrieben wurde, in einer Single Thread-Umgebung ordnungsgemäß funktionieren. Es gibt einige ernsthafte Nachteile. Wenn eine Quelldatei Code enthält, der *errno* sowohl für Socketfunktionen als auch für nicht-Socket-Funktionen überprüft, kann dieser Mechanismus nicht verwendet werden. Außerdem ist es nicht möglich, dass eine Anwendung *errno* einen neuen Wert zuweist. (In Windows Sockets kann die [**wsasetlasterror**](/windows/desktop/api/winsock/nf-winsock-wsasetlasterror) -Funktion zu diesem Zweck verwendet werden.)
+Dadurch kann Netzwerkcode, der für die Verwendung des globalen *Errno* geschrieben wurde, in einer Singlethreadumgebung ordnungsgemäß funktionieren. Es gibt einige sehr schwerwiegende Nachteile. Wenn eine Quelldatei Code enthält, der *errno* sowohl für Socketfunktionen als auch für Nicht-Socketfunktionen überprüft, kann dieser Mechanismus nicht verwendet werden. Darüber hinaus ist es nicht möglich, dass eine Anwendung *errno* einen neuen Wert zuweist. (In Windows Sockets kann die Funktion [**WSASetLastError**](/windows/desktop/api/winsock/nf-winsock-wsasetlasterror) für diesen Zweck verwendet werden.)
 
 Typischer BSD-Stil
 
@@ -58,7 +58,7 @@ if (r == -1       /* (but see below) */
 
 
 
-Obwohl mit Berkeley Sockets 4,3 konsistente Fehler Konstanten aus Kompatibilitätsgründen bereitgestellt werden, wird dringend empfohlen, die WSA-Fehlercode Definitionen zu verwenden. Dies liegt daran, dass Fehlercodes, die von bestimmten Windows Sockets-Funktionen zurückgegeben werden, in den Standardbereich von Fehlercodes fallen, wie von Microsoft C © definiert. Daher ist eine bessere Version des vorangehenden Quell Code Fragments:
+Obwohl Fehlerkonstanten, die mit Sockets 4.3 von Sockets 4.3 konsistent sind, zu Kompatibilitätszwecken bereitgestellt werden, wird Anwendungen dringend empfohlen, die WSA-Fehlercodedefinitionen zu verwenden. Dies liegt daran, dass fehlercodes, die von bestimmten Windows Sockets-Funktionen zurückgegeben werden, in den Standardbereich von Fehlercodes fallen, wie von Microsoft C© definiert. Daher ist eine bessere Version des vorangehenden Quellcodefragments:
 
 
 ```C++
@@ -70,9 +70,9 @@ if (r == -1       /* (but see below) */
 
 
 
-Die ursprüngliche in 1995 definierte Winsock 1,1-Spezifikation hat eine Reihe von Fehlercodes empfohlen und listet die möglichen Fehler auf, die als Ergebnis der einzelnen Funktionen zurückgegeben werden können. Windows Sockets 2 hat zusätzlich zu den in der ursprünglichen Winsock-Spezifikation aufgeführten Windows Sockets-Fehlercodes Funktionen und Features hinzugefügt. Im Laufe der Zeit wurden zusätzliche Funktionen hinzugefügt, um Winsock für die Verwendung durch Entwickler zu verbessern. Beispielsweise wurden neue Namensdienst Funktionen (z. b.[**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) und [**GetNameInfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfo)) hinzugefügt, die sowohl IPv6 als auch IPv4 unter Windows XP und höher unterstützen. Einige der älteren reinen IPv4-Namensdienst Funktionen (z. b. die **getxbyy** -Klasse von Functions) sind veraltet.
+Die ursprüngliche Winsock 1.1-Spezifikation, die in 1995 definiert wurde, hat eine Reihe von Fehlercodes empfohlen und die möglichen Fehler aufgelistet, die als Ergebnis jeder Funktion zurückgegeben werden können. Windows Sockets 2 hat Funktionen und Features mit anderen Windows Sockets-Fehlercodes hinzugefügt, die zusätzlich zu den in der ursprünglichen Winsock-Spezifikation aufgeführten zurückgegeben werden. Im Laufe der Zeit wurden zusätzliche Funktionen hinzugefügt, um Winsock für die Verwendung durch Entwickler zu verbessern. Beispielsweise wurden neue Name-Dienstfunktionen (z. B.[**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) und [**getnameinfo)**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfo)hinzugefügt, die sowohl IPv6 als auch IPv4 auf Windows XP und höher unterstützen. Einige der älteren reinen IPv4-Namensdienstfunktionen (z.B. die **getXbyY-Funktionsklasse)** sind veraltet.
 
-Eine komplette Liste der möglichen Fehlercodes, die von den Windows Sockets-Funktionen zurückgegeben werden, finden Sie im Abschnitt zu [Windows Sockets-Fehlercodes](windows-sockets-error-codes-2.md).
+Eine vollständige Liste der möglichen Fehlercodes, die von Windows Sockets-Funktionen zurückgegeben werden, finden Sie im Abschnitt zu [Windows Sockets-Fehlercodes.](windows-sockets-error-codes-2.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -81,10 +81,10 @@ Eine komplette Liste der möglichen Fehlercodes, die von den Windows Sockets-Fun
 [Behandeln von Winsock-Fehlern](handling-winsock-errors.md)
 </dt> <dt>
 
-[Portieren von Socketanwendungen auf Winsock](porting-socket-applications-to-winsock.md)
+[Portieren von Socketanwendungen in Winsock](porting-socket-applications-to-winsock.md)
 </dt> <dt>
 
-[Windows Sockets-Fehler Codes](windows-sockets-error-codes-2.md)
+[Windows Sockets-Fehlercodes](windows-sockets-error-codes-2.md)
 </dt> <dt>
 
 [Überlegungen zur Winsock-Programmierung](winsock-programming-considerations.md)

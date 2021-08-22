@@ -1,10 +1,10 @@
 ---
-title: shadowmin-Attribut
-description: Enthält die Mindestanzahl von Tagen zwischen Schatten Änderungen.
+title: shadowMin-Attribut
+description: Enthält die Mindestanzahl von Tagen zwischen Schattenänderungen.
 ms.assetid: 10b54fb7-edd3-4700-a0ed-e4d8591968d3
 ms.tgt_platform: multiple
 keywords:
-- shadowmin-Attribut, AD-Schema
+- shadowMin-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,26 +13,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b87822d5348bb5aa889685e48a21043c849761a7
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 94afe98986fc0ff8cd36e64d1633f01f4f4aa3307421dda91a81d30e4b62fbaa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859757"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022158"
 ---
-# <a name="shadowmin-attribute"></a>shadowmin-Attribut
+# <a name="shadowmin-attribute"></a>shadowMin-Attribut
 
-Enthält die Mindestanzahl von Tagen zwischen Schatten Änderungen.
+Enthält die Mindestanzahl von Tagen zwischen Schattenänderungen.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | shadowmin                            |
-| LDAP-Display-Name | shadowmin                            |
+| CN                | shadowMin                            |
+| Ldap-Anzeigename | shadowMin                            |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.3.6.1.1.1.1.6                      |
 | System-ID-GUID    | a76b8737-e5a1-4568-b057-dc12e04be4b2 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -54,11 +54,11 @@ Enthält die Mindestanzahl von Tagen zwischen Schatten Änderungen.
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -75,11 +75,11 @@ Enthält die Mindestanzahl von Tagen zwischen Schatten Änderungen.
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -96,11 +96,11 @@ Enthält die Mindestanzahl von Tagen zwischen Schatten Änderungen.
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -117,11 +117,11 @@ Enthält die Mindestanzahl von Tagen zwischen Schatten Änderungen.
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |

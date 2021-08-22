@@ -1,27 +1,27 @@
 ---
-description: ICE56 überprüft, ob die Verzeichnisstruktur der MSI-Datei ein einzelnes Stammverzeichnis, das Stammverzeichnis der TARGETDIR-Eigenschaft und der SourceDir-Eigenschafts Wert in der DefaultDir-Spalte der Verzeichnis Tabelle ist.
+description: ICE56 überprüft, ob die Verzeichnisstruktur der .msi-Datei über ein einzelnes Stammverzeichnis verfügt, dass der Stamm die TARGETDIR-Eigenschaft ist und dass sich der SourceDir-Eigenschaftswert in der DefaultDir-Spalte der Directory-Tabelle befindet.
 ms.assetid: 6fbb51ff-64fc-40b7-852f-490c93e592c0
 title: ICE56
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c0b83dc20c8463b80375d325dd9225de8524742
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 70c1feb3e3dbab84a58809496b28a60d3a2436c3041d3a2d58f0ac8f2b5e47a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119528220"
 ---
 # <a name="ice56"></a>ICE56
 
-ICE56 überprüft, ob die Verzeichnisstruktur der MSI-Datei ein einzelnes Stammverzeichnis, das Stammverzeichnis der [**TARGETDIR**](targetdir.md) -Eigenschaft und der [**SourceDir**](sourcedir.md) -Eigenschafts Wert in der DefaultDir-Spalte der [Verzeichnis Tabelle](directory-table.md)ist.
+ICE56 überprüft, ob die Verzeichnisstruktur der .msi-Datei über ein einzelnes Stammverzeichnis verfügt, dass der Stamm die [**TARGETDIR-Eigenschaft**](targetdir.md) ist und dass sich der [**SourceDir-Eigenschaftswert**](sourcedir.md) in der DefaultDir-Spalte der [Verzeichnistabelle](directory-table.md)befindet.
 
-Wenn eine MSI-Datei mehrere Stämme aufweist oder einen anderen Stamm als [**TARGETDIR**](targetdir.md)angibt, wird bei einer [administrativen Installation](administrative-installation.md) kein korrektes administratives Abbild erstellt.
+Wenn eine .msi Datei mehrere Stammdateien enthält oder einen anderen Stamm als [**TARGETDIR**](targetdir.md)angibt, wird bei einer [Administratorinstallation](administrative-installation.md) kein korrektes Administratorimage erstellt.
 
-Beachten Sie, dass leere Verzeichnisse von ICE56 nicht geprüft werden. Die Verzeichnisstruktur übergibt die Validierung mit mehreren Stamm Verzeichnissen, wenn die zusätzlichen Verzeichnisse leer sind.
+Beachten Sie, dass leere Verzeichnisse nicht von ICE56 überprüft werden. Die Verzeichnisstruktur besteht die Überprüfung mit mehreren Stammverzeichnissen, wenn die zusätzlichen Verzeichnisse leer sind.
 
 ## <a name="result"></a>Ergebnis
 
-ICE56 gibt einen Fehler aus, wenn die MSI-Dateien nicht über einen einzelnen Stamm ( [**TARGETDIR**](targetdir.md)) verfügt, oder wenn [**SourceDir**](sourcedir.md) nicht in der DefaultDir-Spalte der [Verzeichnis Tabelle](directory-table.md)angegeben ist.
+ICE56 gibt einen Fehler aus, wenn die .msi keinen einzelnen Stamm ( [**TARGETDIR**](targetdir.md)) hat oder [**wenn SourceDir**](sourcedir.md) nicht in der DefaultDir-Spalte der [Directory-Tabelle](directory-table.md)angegeben ist.
 
 ## <a name="example"></a>Beispiel
 
@@ -32,28 +32,28 @@ Directory 'TARGETDIR' has a bad DefaultDir value.
 Directory 'Root2' is an invalid root Directory.
 ```
 
-[Verzeichnis Tabelle](directory-table.md)
+[Verzeichnistabelle](directory-table.md)
 
 
 
-| Verzeichnis | Über \_ geordnetes Verzeichnis | DefaultDir |
+| Verzeichnis | \_Übergeordnetes Verzeichnis | DefaultDir |
 |-----------|-------------------|------------|
-| TARGETDIR |                   | Temp       |
+| Targetdir |                   | Temp       |
 | Root2     | Root2             | SourceDir  |
 
 
 
  
 
-Um den ersten Fehler zu beheben, sollte der [**TARGETDIR**](targetdir.md) -Stamm einen DefaultDir-Wert von [**SourceDir**](sourcedir.md)aufweisen. SourceDir wird ebenfalls akzeptiert. Möglicherweise ist es möglich, **TARGETDIR** das übergeordnete Element des zweiten Stamms zu machen und den Wert "." in der Spalte "DefaultDir" zu verwenden. Weitere Informationen finden Sie in der [Verzeichnis Tabelle](directory-table.md) .
+Um den ersten Fehler zu beheben, sollte der [**TARGETDIR-Stamm**](targetdir.md) den DefaultDir-Wert [**SourceDir**](sourcedir.md)aufweisen. SOURCEDIR wird ebenfalls akzeptiert. Es kann möglich sein, **TARGETDIR** zum übergeordneten Element des zweiten Stamms zu machen und den Wert "." in der DefaultDir-Spalte zu verwenden. Weitere Informationen finden Sie in der [Tabelle Verzeichnis.](directory-table.md)
 
-Um den zweiten Fehler zu beheben, sollte die Verzeichnisstruktur nur einen Stamm namens [**TARGETDIR**](targetdir.md)aufweisen.
+Um den zweiten Fehler zu beheben, sollte die Verzeichnisstruktur nur über einen Stamm namens [**TARGETDIR**](targetdir.md)verfügen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

@@ -17,14 +17,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 19811b224a4e93e85420539248b7d010491335aa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ab2d2d5652f2969ad20ee70077d23375371e3507991a16b6d5e6dda2245678ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119068430"
 ---
-# <a name="msvm_virtualizationcomponent-class"></a>MSVM- \_ virtualizationcomponent-Klasse
+# <a name="msvm_virtualizationcomponent-class"></a>Msvm \_ VirtualizationComponent-Klasse
 
 Stellt einen Dienst der Microsoft Windows Hyper-V-Plattform dar.
 
@@ -45,17 +45,17 @@ class Msvm_VirtualizationComponent
 
 ## <a name="members"></a>Member
 
-Die **MSVM- \_ virtualizationcomponent** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualizationComponent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM- \_ virtualizationcomponent** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualizationComponent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**CLSID**
+**Clsid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -64,36 +64,36 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine **GUID** , die den Klassen Bezeichner des COM-Objekts des dienstanders darstellt.
+Eine **GUID,** die den Klassenbezeichner des COM-Objekts des Diensts darstellt.
 
 </dd> <dt>
 
 **Context**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **experimentell**
+Qualifizierer: **Experimentell**
 </dt> </dl>
 
-Der Kontext, in dem das neu erstellte-Objekt ausgeführt wird. Dieser Wert wird im *dwClsContext* -Parameter an [**cokreateingestance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)übergeben. Diese Eigenschaft ist immer auf 1 festgelegt.
+Der Kontext, in dem das neu erstellte Objekt ausgeführt wird. Dieser Wert wird im *dwClsContext-Parameter* an [**CoCreateInstance übergeben.**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) Diese Eigenschaft ist immer auf 1 festgelegt.
 
 </dd> <dt>
 
 **Aktiviert**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass diese Instanz aktiviert ist und verwendet werden kann, um Client Anforderungen abzuschließen. andernfalls **false**. Diese Eigenschaft ist immer auf " **true**" festgelegt.
+**True** ist, dass diese Instanz aktiviert ist und zum Abschließen von Clientanforderungen verwendet werden kann. andernfalls **False.** Diese Eigenschaft ist immer auf **True festgelegt.**
 
 </dd> <dt>
 
@@ -109,13 +109,13 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Eine sprachneutrale Zeichenfolge, die den Dienst eindeutig identifiziert. Das folgende Format wird vorgeschlagen, um Namenskonflikte zu vermeiden: "Hersteller \| Komponenten \| Version". Dieser Name repräsentiert beispielsweise Version 1,0 der Microsoft emulierten Netzwerk Port Komponente: "Microsoft \| emulatednetworkportcomponent \| v 1.0".
+Eine sprachneutrale Zeichenfolge, die den Dienst eindeutig identifiziert. Das folgende Format wird empfohlen, um Namenskonflikte zu vermeiden: \| \| "Herstellerkomponentenversion". Dieser Name stellt beispielsweise Version 1.0 der Microsoft Emulated Network Port Component dar: "Microsoft \| EmulatedNetworkPortComponent \| V1.0".
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM- \_ virtualizationcomponent** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ VirtualizationComponent-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -123,12 +123,12 @@ Der Zugriff auf die **MSVM- \_ virtualizationcomponent** -Klasse kann durch die 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
 | Ende des Supports (Client)<br/>    | Windows 8.1<br/>                                                                                  |
 | Ende des Supports (Server)<br/>    | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

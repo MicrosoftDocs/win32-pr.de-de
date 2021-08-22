@@ -1,19 +1,19 @@
 ---
-description: XMFLOAT2 beschreibt einen 2D-Vektor, der aus zwei Gleit Komma Werten mit einfacher Genauigkeit besteht.
+description: XMFLOAT2 beschreibt einen 2D-Vektor, der aus zwei Gleitkommawerten mit einfacher Genauigkeit besteht.
 ms.assetid: 6d3f0a7a-051b-4057-9ca8-87e4d9f2524d
 title: XMFLOAT2-Erweiterungen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 80c547856d5adbe5c46a61a0576e31cc769a6db9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5cba6868dd02a2539ab25da4d71ef936bc79af9dfdfd5477afecbe60dd0caed6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119118487"
 ---
 # <a name="xmfloat2-extensions"></a>XMFLOAT2-Erweiterungen
 
-[**XMFLOAT2**](/windows/win32/api/directxmath/ns-directxmath-xmfloat2) beschreibt einen 2D-Vektor, der aus zwei Gleit Komma Werten mit einfacher Genauigkeit besteht.
+[**XMFLOAT2**](/windows/win32/api/directxmath/ns-directxmath-xmfloat2) beschreibt einen 2D-Vektor, der aus zwei Gleitkommawerten mit einfacher Genauigkeit besteht.
 
 > [!Note]  
 > Die hier aufgeführten Features sind nur bei der Entwicklung mit C++ verfügbar.
@@ -24,10 +24,10 @@ ms.locfileid: "106347873"
 
 
 
-| Thema                                                       | BESCHREIBUNG                                    |
+| Thema                                                       | Beschreibung                                    |
 |-------------------------------------------------------------|------------------------------------------------|
-| [**XMFLOAT2-Konstruktoren**](/windows/win32/api/directxmath/nf-directxmath-xmfloat2-xmfloat2(constfloat))<br/>   | Von verfügbar gemachte Konstruktoren `XMFLOAT2` .<br/> |
-| [XMFLOAT2-Operatoren](ovw-xmfloat2-operators.md)<br/> | Von verfügbar gemachte Operatoren `XMFLOAT2` .<br/>    |
+| [**XMFLOAT2-Konstruktoren**](/windows/win32/api/directxmath/nf-directxmath-xmfloat2-xmfloat2(constfloat))<br/>   | Konstruktoren, die von verfügbar gemacht `XMFLOAT2` werden.<br/> |
+| [XMFLOAT2-Operatoren](ovw-xmfloat2-operators.md)<br/> | Operatoren, die von verfügbar gemacht `XMFLOAT2` werden.<br/>    |
 
 
 

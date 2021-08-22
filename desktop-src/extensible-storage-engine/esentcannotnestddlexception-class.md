@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentcannotnestddlexception-Klasse'
-title: Esentcannotnestddlexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentCannotNestDDLException-Klasse'
+title: EsentCannotNestDDLException-Klasse
 TOCTitle: EsentCannotNestDDLException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentCannotNestDDLException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcannotnestddlexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 83984532bc51cc457a727800f9e52da69e8ae810
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca852d4ebf90b133a8475b5ff14a32f5b4002b8f509d60bf68cafbce318ae403
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352225"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119365720"
 ---
-# <a name="esentcannotnestddlexception-class"></a>Esentcannotnestddlexception-Klasse
+# <a name="esentcannotnestddlexception-class"></a>EsentCannotNestDDLException-Klasse
 
-Basisklasse für JET_err. Cannotnestddl-Ausnahmen.
+Basisklasse für JET_err. CannotNestDDL exceptions.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentusageexception](./esentusageexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentcannotnestddlexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentUsageException](./esentusageexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentCannotNestDDLException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentCannotNestDDLException : EsentUsageException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcannotnestddlexception-Elemente](./esentcannotnestddlexception-members.md)
+[EsentCannotNestDDLException-Member](./esentcannotnestddlexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

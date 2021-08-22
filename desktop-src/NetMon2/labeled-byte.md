@@ -1,7 +1,7 @@
 ---
-description: Die bezeichnete \_ Byte Struktur definiert ein bitpaar mit Bezeichnung. Die Bezeichnung des gekennzeichneten bitpaars wird angezeigt, wenn ein bestimmter Byte-Eigenschafts Wert erkannt wird.
+description: Die LABELED \_ BYTE-Struktur definiert ein bezeichnetes BIT-Paar. Die Bezeichnung des bezeichneten BIT-Paars wird angezeigt, wenn ein bestimmter Byteeigenschaftswert erkannt wird.
 ms.assetid: 6dc6a773-da75-4ffe-878f-b30ceef2acb1
-title: LABELED_BYTE Struktur (Netmon. h)
+title: LABELED_BYTE -Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 4768e605892b9bfe2a3df67fbdea862f67dc1a16
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 05aa29942768c0c40816eafce112f12a95cd0a713bebe612d2e5ad32776a33a7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357933"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119494980"
 ---
-# <a name="labeled_byte-structure"></a>Bezeichnete \_ Byte Struktur
+# <a name="labeled_byte-structure"></a>LABELED \_ BYTE-Struktur
 
-Die **bezeichnete \_ Byte** Struktur definiert ein bitpaar mit Bezeichnung. Die **Bezeichnung des gekennzeichneten** bitpaars wird angezeigt, wenn ein bestimmter Byte-Eigenschafts Wert erkannt wird.
+Die **LABELED \_ BYTE-Struktur** definiert ein bezeichnetes BIT-Paar. Die **Bezeichnung** des bezeichneten BIT-Paars wird angezeigt, wenn ein bestimmter Byteeigenschaftswert erkannt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,20 +43,20 @@ typedef struct _LABELED_BYTE {
 **Wert**
 </dt> <dd>
 
-Der Bytewert der Eigenschaft, die Sie erkennen möchten.
+BYTE-Wert der Eigenschaft, die Sie erkennen möchten.
 
 </dd> <dt>
 
 **Label**
 </dt> <dd>
 
-Die Textbeschreibung oder Bezeichnung, die angezeigt wird, wenn der im **Wertmember** angegebene Wert erkannt wird.
+Textbeschreibung oder Bezeichnung, die angezeigt wird, wenn der im **Value-Member** angegebene Wert erkannt wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **lplabeledbytetable** -Member der [set](set.md) -Struktur verweist auf ein Array von **set** -Strukturen, die ein **oder mehrere** Bezeichnungs Member der Byte-Wert-Paare definieren. Diese Paare werden verwendet, wenn Sie eine Bezeichnung anstelle eines bestimmten Bytewerts anzeigen möchten, der im Protokoll Paket enthalten ist.
+Der **lpLabeledByteTable-Member** der [SET-Struktur](set.md) zeigt auf ein Array von **SET-Strukturen,** die einen oder mehrere **Label-Member** der BYTE-Wertpaare definieren. Diese Paare werden verwendet, wenn Sie eine Bezeichnung statt eines bestimmten BYTE-Werts anzeigen möchten, der im Protokollpaket gefunden wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,7 +66,7 @@ Der **lplabeledbytetable** -Member der [set](set.md) -Struktur verweist auf ein 
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

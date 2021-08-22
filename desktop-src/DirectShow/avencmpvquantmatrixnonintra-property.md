@@ -1,19 +1,19 @@
 ---
-description: Gibt die Luma-quantisierungsmatrix für nicht-Inner-Makroblocks an. Diese Eigenschaft gilt für MPEG-Video Encoder.
+description: Gibt die Luma-Quantisierungsmatrix für nicht-interne Makroblocks an. Diese Eigenschaft gilt für MPEG-Videoencoder.
 ms.assetid: 087e47c1-2a8a-4687-85c1-ac18708174e1
-title: Avencmpvquantmatrixnonintra-Eigenschaft (codecapi. h)
+title: AVEncMPVQuantMatrixNonIntra-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fb70fa38d263365d9de2890be9756b46e09547ec
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c4bf5898240e2504e3219d419732993b68784fd4c3848ee1928ff1db9262ea02
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104480950"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119258250"
 ---
-# <a name="avencmpvquantmatrixnonintra-property"></a>Avencmpvquantmatrixnonintra (Eigenschaft)
+# <a name="avencmpvquantmatrixnonintra-property"></a>AVEncMPVQuantMatrixNonIntra-Eigenschaft
 
-Gibt die Luma-quantisierungsmatrix für nicht-Inner-Makroblocks an. Diese Eigenschaft gilt für MPEG-Video Encoder.
+Gibt die Luma-Quantisierungsmatrix für nicht-interne Makroblocks an. Diese Eigenschaft gilt für MPEG-Videoencoder.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -23,11 +23,11 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencmpvquantmatrixnonintra**
+**CODECAPI \_ AVEncMPVQuantMatrixNonIntra**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist eine Zeichenfolge, die die 64 8-Bit-Koeffizienten enthält, die als Zeichenfolge von hexadezimalen Werten (128 Zeichen) codiert sind.
+Der Wert dieser Eigenschaft ist eine Zeichenfolge, die die 64 8-Bit-Koeffizienten enthält, die als Zeichenfolge mit Hexadezimalwerten (128 Zeichen) codiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,20 +35,20 @@ Der Wert dieser Eigenschaft ist eine Zeichenfolge, die die 64 8-Bit-Koeffiziente
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

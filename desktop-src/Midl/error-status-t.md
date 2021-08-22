@@ -1,9 +1,9 @@
 ---
 title: error_status_t-Attribut
-description: Das Error \_ Status \_ t-Schlüsselwort kennzeichnet einen Typ für ein Objekt, das Informationen zum Kommunikations Status oder zum Fehlerstatus enthält.
+description: Das \_ t-Schlüsselwort für den Fehlerstatus \_ legt einen Typ für ein Objekt fest, das Kommunikationsstatus- oder Fehlerstatusinformationen enthält.
 ms.assetid: 7eff0d20-c058-4f16-a3db-0b4c82303135
 keywords:
-- error_status_t Attribut-Mittel l
+- error_status_t-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c0d017b4eaf460b5d5b7ecb8a0bd79201ac8bdee
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: b02e404992e8fca98eba41f5ea85571160582827816a945d7ab8db505b28ba0c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067270"
 ---
-# <a name="error_status_t-attribute"></a>Fehler \_ Status- \_ t-Attribut
+# <a name="error_status_t-attribute"></a>Error \_ Status t attribute \_ (Fehlerstatus-t-Attribut)
 
-Das **Error \_ Status \_ t** -Schlüsselwort kennzeichnet einen Typ für ein Objekt, das Informationen zum Kommunikations Status oder zum Fehlerstatus enthält.
+Das t-Schlüsselwort für **den \_ Fehlerstatus \_** legt einen Typ für ein Objekt fest, das Kommunikationsstatus- oder Fehlerstatusinformationen enthält.
 
 ``` syntax
 [ [ , ACF-function-attributes ] ] error_status_t function-name(
@@ -37,70 +37,70 @@ Das **Error \_ Status \_ t** -Schlüsselwort kennzeichnet einen Typ für ein Obj
 
 <dl> <dt>
 
-*ACF-Function-Attribute* 
+*ACF-funktionsattribute* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr ACF-Funktions Attribute an, z. b. den **\[** [**comm- \_ Status**](comm-status.md) **\]** , den **\[** [**Fehler \_ Status**](fault-status.md) **\]** oder **\[** [**NoCode**](nocode.md) **\]** Funktions Attribute werden in eckige Klammern eingeschlossen. NULL oder mehr Attribute können auf eine Funktion angewendet werden. Trennen Sie mehrere Funktions Attribute durch Kommas.
+Gibt 0 (null) oder mehr ACF-Funktionsattribute an, z. B. **\[** [**\_ comm-Status,**](comm-status.md) **\]** **\[** [**\_ Fehlerstatus**](fault-status.md) **\]** oder **\[** [**Nocode.**](nocode.md) **\]** Funktionsattribute werden in eckige Klammern eingeschlossen. Null oder mehr Attribute können auf eine Funktion angewendet werden. Trennen Sie mehrere Funktionsattribute durch Kommas.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
 Gibt den Namen der Funktion an, wie in der IDL-Datei definiert.
 
 </dd> <dt>
 
-*ACF-Parameter-Attribute* 
+*ACF-parameter-attributes* 
 </dt> <dd>
 
-Gibt Attribute an, die auf einen Parameter angewendet werden. Beachten Sie, dass 0 (null), ein oder mehrere Attribute auf den Parameter angewendet werden können. Trennen Sie mehrere Parameter Attribute durch Kommas. Parameter Attribute werden in eckige Klammern eingeschlossen. IDL-Parameter Attribute, z. b. direktionale Attribute, sind in der ACF nicht zulässig.
+Gibt Attribute an, die auf einen Parameter angewendet werden. Beachten Sie, dass null, ein oder mehrere Attribute auf den Parameter angewendet werden können. Trennen Sie mehrere Parameterattribute durch Kommas. Parameterattribute werden in eckige Klammern eingeschlossen. IDL-Parameterattribute, z. B. richtungsale Attribute, sind in ACF nicht zulässig.
 
 </dd> <dt>
 
-*Parameter Name* 
+*Parametername* 
 </dt> <dd>
 
-Gibt den Parameter für die Funktion an, wie in der IDL-Datei definiert. Jeder Parameter für die Funktion muss in derselben Reihenfolge angegeben werden. dabei wird derselbe Name verwendet, der in der IDL-Datei definiert ist.
+Gibt den Parameter für die Funktion an, wie in der IDL-Datei definiert. Jeder Parameter für die Funktion muss in derselben Sequenz angegeben werden, wobei der gleiche Name wie in der IDL-Datei definiert wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Typ " **Fehler \_ Status \_ t** " wird als Teil der Ausnahme Behandlungs Architektur in IDL verwendet. Dieser Typ wird einem [**Ganzzahl ohne Vorzeichen**](unsigned.md) [**Long**](long.md)-Typ zugeordnet. Anwendungen, die Fehlersituationen erfassen, verfügen über einen **\[** [**out**](out-idl.md) - **\]** Parameter oder einen Rückgabetyp einer Prozedur, der als **Fehler \_ Status \_ t** angegeben ist, und qualifizieren den **Fehler \_ Status \_ t** mit den **\[** [**\_ Status**](comm-status.md) Attributen "comm" oder " **\]** **\[** [**Fault \_ Status**](fault-status.md) " **\]** in der ACF. Wenn der Parameter oder der Rückgabetyp nicht mit den Status Attributen " **\[ comm \_ \]** " oder " **\[ Fault \_ \]** " gekennzeichnet wurde, verhält sich der Parameter so, als ob er "Ganzzahl ohne Vorzeichen long" wäre.
+Der **\_ Fehlerstatus \_ t-Typ** wird als Teil der Ausnahmebehandlungsarchitektur in IDL verwendet. Dieser Typ wird einem [**nicht signierten**](unsigned.md) [**langen**](long.md)zugeordnet. Anwendungen, die Fehlersituationen abfangen, verfügen über einen **\[** [**out-Parameter**](out-idl.md) **\]** oder einen Rückgabetyp einer Prozedur, die als **\_ Fehlerstatus \_ t** angegeben ist, und qualifizieren den **\_ Fehlerstatus \_ t** mit dem **\[** [**Comm-Status \_**](comm-status.md) oder den **\]** **\[** [**\_ Fehlerstatusattributen**](fault-status.md) **\]** in der ACF. Wenn der Parameter oder Rückgabetyp nicht mit den Attributen **\[ comm \_ status \]** oder **\[ fault \_ status \]** qualifiziert wurde, funktioniert der Parameter so, als wäre er ein long-Attribut ohne Vorzeichen.
 
-Ab Version 2,0 generiert der-Mittelwert Compiler stubzeichen, die die richtige Fehler Behandlungs Architektur enthalten. Frühere Versionen des compl-Compilers haben jedoch einen Parameter oder einen Rückgabetyp mit dem **Fehler \_ Status \_ t** behandelt, als ob die Attribute " **\[** [**comm \_ Status**](comm-status.md) " **\]** und " **\[** [**Fehler \_ Status**](fault-status.md) " **\]** angewendet wurden, auch wenn dies nicht der Fall war. Mit mittlerer l 2,0 oder höher müssen Sie explizit die Attribute " **\[ comm \_ Status \]** " und " **\[ Fehler \_ Status \]** " auf den Parameter oder die Prozedur in der ACF anwenden.
+Ab Version 2.0 generiert der MIDL-Compiler Stubs, die die richtige Fehlerbehandlungsarchitektur enthalten. Frühere Versionen des MIDL-Compilers behandelten jedoch einen Parameter oder Rückgabetyp des **\_ Fehlerstatus \_ t** so, als ob die Attribute **\[** [**comm \_ status**](comm-status.md) **\]** und fault **\[** [**\_ status**](fault-status.md) **\]** angewendet wurden, auch wenn sie dies nicht waren. Mit MIDL 2.0 oder höher müssen Sie die Attribute **\[ comm \_ status \]** und **\[ fault \_ status \]** explizit auf den Parameter oder die Prozedur im ACF anwenden.
 
-Der Typ " **Fehler \_ Status \_ t** " ist einer der vordefinierten Typen der Schnittstellen Definitions Sprache. Vordefinierte Typen können als Typspezifizierer in [**typedef**](typedef.md) -Deklarationen, in allgemeinen Deklarationen und in Funktionsdeklaratoren (entweder als Funktions Rückgabetyp oder als Parametertyp Spezifizierer) angezeigt werden.
+Der **\_ Fehlerstatus \_ t** type ist einer der vordefinierten Typen der Schnittstellendefinitionssprache. Vordefinierte Typen können als Typspezifizierer in typedef-Deklarationen, in allgemeinen Deklarationen und in Funktionsdeklaratoren (entweder als Funktionsrückgabetyp oder als Parametertypspezifizierer) angezeigt werden. [](typedef.md)
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Kommunikations \_ Status**](comm-status.md)
+[**\_comm-Status**](comm-status.md)
 </dt> <dt>
 
-[**Fehler \_ Status**](fault-status.md)
+[**\_Fehlerstatus**](fault-status.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**lange**](long.md)
+[**long**](long.md)
 </dt> <dt>
 
-[**vorgenommen**](out-idl.md)
+[**out**](out-idl.md)
 </dt> <dt>
 
-[**typedef**](typedef.md)
+[**Typedef**](typedef.md)
 </dt> <dt>
 
-[**Ganzzahl ohne Vorzeichen**](unsigned.md)
+[**Unsigned**](unsigned.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

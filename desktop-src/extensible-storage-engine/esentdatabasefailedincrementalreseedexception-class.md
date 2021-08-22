@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdatabasefailedinkrementalreseedexception-Klasse'
-title: Esentdatabasefailedinkrementalreseedexception-Klasse
+description: 'Weitere Informationen zu: EsentDatabaseFailedIncrementalReseedException-Klasse'
+title: EsentDatabaseFailedIncrementalReseedException-Klasse
 TOCTitle: EsentDatabaseFailedIncrementalReseedException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentDatabaseFailedIncrementalReseedException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabasefailedincrementalreseedexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cfa0f4a82e3a8936ee3e7a262f8079396b95a54a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 99da00f211530f231ad1ebcb6e6a6147fc2978b51b111a9648f45f608843f5a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129596"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119116370"
 ---
-# <a name="esentdatabasefailedincrementalreseedexception-class"></a>Esentdatabasefailedinkrementalreseedexception-Klasse
+# <a name="esentdatabasefailedincrementalreseedexception-class"></a>EsentDatabaseFailedIncrementalReseedException-Klasse
 
-Basisklasse für JET_err. Databasefailedinkrementalreseed-Ausnahmen.
+Basisklasse für JET_err. DatabaseFailedIncrementalReseed-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentstateexception](./esentstateexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentdatabasefailedinkrementalreseedexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentStateException](./esentstateexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentDatabaseFailedIncrementalReseedException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentDatabaseFailedIncrementalReseedException : EsentStateEx
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabasefailedinkrementalreseedexception-Elemente](./esentdatabasefailedincrementalreseedexception-members.md)
+[EsentDatabaseFailedIncrementalReseedException-Member](./esentdatabasefailedincrementalreseedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

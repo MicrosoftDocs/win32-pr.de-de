@@ -1,19 +1,19 @@
 ---
-description: Der hcryptkey-Datentyp wird verwendet, um Handles für kryptografische Schlüssel darzustellen.
+description: Der HCRYPTKEY-Datentyp wird verwendet, um Handles für kryptografische Schlüssel darzustellen.
 ms.assetid: d62f1d40-4f42-4684-96d7-de88db67dceb
-title: Hcryptkey (Wincrypt. h)
+title: HCRYPTKEY (Wincrypt.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 56bda14169aa2f4d7c6e502d3444473ea0f00408
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c78d50f7fb005d877f6520172631b4546b8d498c415de58502defd26831c65fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119006438"
 ---
-# <a name="hcryptkey"></a>Hcryptkey
+# <a name="hcryptkey"></a>HCRYPTKEY
 
-Der **hcryptkey** -Datentyp wird verwendet, um Handles für [*kryptografische Schlüssel*](../secgloss/c-gly.md)darzustellen. Diese Handles werden verwendet, um das CSP-Modul anzugeben, welcher Schlüssel in einem bestimmten Vorgang verwendet wird. Das CSP-Modul ermöglicht keinen direkten Zugriff auf die Schlüsselwerte. Stattdessen führt der Benutzer Funktionen mithilfe des Schlüssel Werts über das Schlüssel Handle aus.
+Der **HCRYPTKEY-Datentyp** wird verwendet, um Handles für [*kryptografische Schlüssel*](../secgloss/c-gly.md)darzustellen. Diese Handles werden verwendet, um dem CSP-Modul anzugeben, welcher Schlüssel in einem bestimmten Vorgang verwendet wird. Das CSP-Modul ermöglicht keinen direkten Zugriff auf die Schlüsselwerte. Stattdessen führt der Benutzer Funktionen aus, indem er den Schlüsselwert über das Schlüsselhandle verwendet.
 
 
 ```C++
@@ -28,9 +28,9 @@ typedef ULONG_PTR HCRYPTKEY;
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>WinCrypt. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Wincrypt.h</dt> </dl> |
 
 
 

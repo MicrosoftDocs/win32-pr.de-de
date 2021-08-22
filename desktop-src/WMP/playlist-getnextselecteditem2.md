@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. getNextSelectedItem2
+title: PLAYLIST.getNextSelectedItem2
 description: Die getNextSelectedItem2-Methode ruft den Index des nächsten ausgewählten Elements in der Wiedergabeliste nach dem angegebenen Index ab.
 ms.assetid: 18acf95c-ab79-4b5c-b904-e13ef9a034dc
 keywords:
-- Wiedergabeliste. getNextSelectedItem2 Windows Media Player
+- PLAYLIST.getNextSelectedItem2 Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 27d166887bb2fa98e184e1f64f4aaceb89930d00
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e6d1f98a418da1d8b21345598999f847cbf2142e9ca575bcfdc7047e2f9fd524
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373607"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119415280"
 ---
-# <a name="playlistgetnextselecteditem2"></a>Wiedergabeliste. getNextSelectedItem2
+# <a name="playlistgetnextselecteditem2"></a>PLAYLIST.getNextSelectedItem2
 
-Die **getNextSelectedItem2** -Methode ruft den Index des nächsten ausgewählten Elements in der Wiedergabeliste nach dem angegebenen Index ab.
+Die **getNextSelectedItem2-Methode** ruft den Index des nächsten ausgewählten Elements in der Wiedergabeliste nach dem angegebenen Index ab.
 
 ``` syntax
         elementID.getNextSelectedItem2(item)
@@ -32,20 +32,20 @@ Die **getNextSelectedItem2** -Methode ruft den Index des nächsten ausgewählten
 
 <dl> <dt>
 
-<span id="item"></span><span id="ITEM"></span>*Position*
+<span id="item"></span><span id="ITEM"></span>*Artikel*
 </dt> <dd>
 
-**Zahl** (**Long**), die den Index des Elements angibt, nach dem gesucht werden soll.
+**Zahl** (**long**), die den Index des Elements angibt, nach dem gesucht werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zahl** (**Long**) zurück.
+Diese Methode gibt eine **Zahl** **(long) zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kann mit geschachtelte-Wiedergabelisten arbeiten und ersetzt die **getnextselecteditem** -Methode, die nicht. Übergeben Sie 1 in den *Element* Parameter, um das erste ausgewählte Element zu suchen. Wenn keine weiteren ausgewählten Elemente vorhanden sind, wird-1 zurückgegeben.
+Diese Methode kann mit geschachtelten Wiedergabelisten arbeiten und ersetzt die **getNextSelectedItem-Methode,** was nicht möglich ist. Übergeben Sie 1 im *Elementparameter,* um das erste ausgewählte Element zu finden. Wenn keine weiteren ausgewählten Elemente angezeigt werden, wird -1 zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,14 +57,14 @@ Diese Methode kann mit geschachtelte-Wiedergabelisten arbeiten und ersetzt die *
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> <dt>
 
-[**Wiedergabeliste. getnextselecteditem**](playlist-getnextselecteditem.md)
+[**PLAYLIST.getNextSelectedItem**](playlist-getnextselecteditem.md)
 </dt> </dl>
 
  

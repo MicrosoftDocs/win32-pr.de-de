@@ -1,37 +1,37 @@
 ---
-description: Die iocspcaconfiguration-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+description: Die IOCSPCAConfiguration-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 55F0245D-FC56-449E-A4D8-0DB9F1930393
-title: Iocspcaconfiguration-Eigenschaften
+title: IOCSPCAConfiguration-Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2076b1b031848a51dd35f43736f2936f500d5662
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 34ff840e5af24650958fec9a8e8def9abdc13bf7e60b1f0b43c5245b6f235667
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119005268"
 ---
-# <a name="iocspcaconfiguration-properties"></a>Iocspcaconfiguration-Eigenschaften
+# <a name="iocspcaconfiguration-properties"></a>IOCSPCAConfiguration-Eigenschaften
 
-Die [**iocspcaconfiguration**](/windows/desktop/api/Certadm/nn-certadm-iocspcaconfiguration) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**IOCSPCAConfiguration-Schnittstelle**](/windows/desktop/api/Certadm/nn-certadm-iocspcaconfiguration) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**CACertificate (Eigenschaft)**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_cacertificate)
--   [**Caconfig (Eigenschaft)**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_caconfig)
--   [**Cspname-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_cspname)
+-   [**CACertificate-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_cacertificate)
+-   [**CAConfig-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_caconfig)
+-   [**CSPName-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_cspname)
 -   [**ErrorCode-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_errorcode)
--   [**HashAlgorithm (Eigenschaft)**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_hashalgorithm)
+-   [**HashAlgorithm-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_hashalgorithm)
 -   [**Identifier-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_identifier)
 -   [**KeySpec-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_keyspec)
--   [**Localrevocationinformation (Eigenschaft)**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_localrevocationinformation)
+-   [**LocalRevocationInformation-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_localrevocationinformation)
 -   [**Geänderte Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_modified)
--   [**Providerclsid (Eigenschaft)**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_providerclsid)
--   [**Providerproperties (Eigenschaft)**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_providerproperties)
--   [**Reminderduration (Eigenschaft)**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_reminderduration)
--   [**SigningCertificate (Eigenschaft)**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_signingcertificate)
--   [**Signingcertificatetemplate (Eigenschaft)**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_signingcertificatetemplate)
--   [**Signingflags (Eigenschaft)**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_signingflags)
+-   [**ProviderCLSID-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_providerclsid)
+-   [**ProviderProperties-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_providerproperties)
+-   [**ReminderDuration-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_reminderduration)
+-   [**SigningCertificate-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_signingcertificate)
+-   [**SigningCertificateTemplate-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_signingcertificatetemplate)
+-   [**SigningFlags-Eigenschaft**](/windows/desktop/api/Certadm/nf-certadm-iocspcaconfiguration-get_signingflags)
 
  
 

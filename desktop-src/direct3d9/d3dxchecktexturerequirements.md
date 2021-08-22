@@ -1,7 +1,7 @@
 ---
-description: Überprüft die Parameter für die Textur Erstellung.
+description: Überprüft Texturerstellungsparameter.
 ms.assetid: f8e788f3-02a9-4ee7-b74d-9e781a2fb39f
-title: D3DXCheckTextureRequirements-Funktion (D3dx9tex. h)
+title: D3DXCheckTextureRequirements-Funktion (D3dx9tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d4fdc0998bfda2144e900c099919bc75c01e8ee3
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4c7166f981c0351054a2a6c359127a4ce1959b45a6e71c44db9e2546825bc5f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119496100"
 ---
 # <a name="d3dxchecktexturerequirements-function"></a>D3DXCheckTextureRequirements-Funktion
 
-Überprüft die Parameter für die Textur Erstellung.
+Überprüft Texturerstellungsparameter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,66 +46,66 @@ HRESULT D3DXCheckTextureRequirements(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das Gerät darstellt, das der Textur zugeordnet werden soll.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das Gerät darstellt, das der Textur zugeordnet werden soll.
 
 </dd> <dt>
 
 *pWidth* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die angeforderte Breite in Pixel oder **null**. Gibt die korrigierte Größe zurück.
+Zeiger auf die angeforderte Breite in Pixel oder **NULL.** Gibt die korrigierte Größe zurück.
 
 </dd> <dt>
 
 *pHeight* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die angeforderte Höhe in Pixel oder **null**. Gibt die korrigierte Größe zurück.
+Zeiger auf die angeforderte Höhe in Pixel oder **NULL.** Gibt die korrigierte Größe zurück.
 
 </dd> <dt>
 
-*pnummiplevels* \[ in, out\]
+*pNumMipLevels* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die Anzahl der angeforderten MipMap-Ebenen oder **null**. Gibt die korrigierte Anzahl von MipMap-Ebenen zurück.
+Zeiger auf die Anzahl der angeforderten Mipmapebenen oder **NULL.** Gibt die korrigierte Anzahl von Mipmapebenen zurück.
 
 </dd> <dt>
 
-*Verwendung* \[ in\]
+*Verwendung* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-0 oder [**D3DUSAGE \_ renderTarget**](d3dusage.md). Wenn dieses Flag auf D3DUSAGE \_ renderTarget festgelegt wird, wird angegeben, dass die Oberfläche als Renderziel verwendet werden soll. Die Ressource kann dann an den pnewrendertarget-Parameter der Methode "Setup [**target**](/windows/desktop/api) " übergeben werden. Wenn **D3DUSAGE \_ renderTarget** angegeben ist, muss die Anwendung überprüfen, ob das Gerät diesen Vorgang durch Aufrufen von [**CheckDeviceFormat**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-checkdeviceformat)unterstützt.
+0 oder [**D3DUSAGE \_ RENDERTARGET**](d3dusage.md). Das Festlegen dieses Flags auf D3DUSAGE RENDERTARGET gibt an, dass die Oberfläche \_ als Renderziel verwendet werden soll. Die Ressource kann dann an den pNewRenderTarget-Parameter der [**SetRenderTarget-Methode übergeben**](/windows/desktop/api) werden. Wenn **D3DUSAGE \_ RENDERTARGET** angegeben ist, sollte die Anwendung überprüfen, ob das Gerät diesen Vorgang unterstützt, indem [**CheckDeviceFormat aufruft.**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-checkdeviceformat)
 
 </dd> <dt>
 
-*pformat* \[ in, out\]
+*pFormat* \[ in, out\]
 </dt> <dd>
 
 Typ: **[D3DFORMAT](d3dformat.md)\***
 
-Zeiger auf einen Member des [D3DFORMAT](d3dformat.md) -enumerierten Typs. Gibt das gewünschte Pixel Format oder **null** an. Gibt das korrigierte Format zurück.
+Zeiger auf einen Member des [aufzählten D3DFORMAT-Typs.](d3dformat.md) Gibt das gewünschte Pixelformat oder **NULL an.** Gibt das korrigierte Format zurück.
 
 </dd> <dt>
 
-*Pool* \[ in\]
+*Pool* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DPOOL**](./d3dpool.md)**
 
-Member des [**D3DPOOL**](./d3dpool.md) -Enumerationstyps, der die Speicher Klasse beschreibt, in der die Textur platziert werden soll.
+Member des [**aufzählten D3DPOOL-Typs,**](./d3dpool.md) der die Speicherklasse beschreibt, in der die Textur platziert werden soll.
 
 </dd> </dl>
 
@@ -113,19 +113,19 @@ Member des [**D3DPOOL**](./d3dpool.md) -Enumerationstyps, der die Speicher Klass
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcallable, D3DERR \_ NotAvailable.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, D3DERR \_ NOTAVAILABLE.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Parameter dieser Funktion ungültig sind, gibt diese Funktion korrigierte Parameter zurück.
+Wenn Parameter für diese Funktion ungültig sind, gibt diese Funktion korrigierte Parameter zurück.
 
-Diese Funktion verwendet die folgende Heuristik, wenn die angeforderten Anforderungen mit den verfügbaren Formaten verglichen werden:
+Diese Funktion verwendet die folgende Heuristik, wenn die angeforderten Anforderungen mit verfügbaren Formaten verglichen werden:
 
--   Wählen Sie kein Format aus, das über weniger Kanäle verfügt.
--   Vermeiden Sie [FourCC](d3dformat.md) -und 24-Bit-Formate, sofern diese nicht explizit angefordert werden
+-   Wählen Sie kein Format mit weniger Kanälen aus.
+-   Vermeiden [Sie FOURCC-](d3dformat.md) und 24-Bit-Formate, sofern dies nicht explizit angefordert wird.
 -   Versuchen Sie nicht, neue Kanäle hinzuzufügen.
--   Versuchen Sie nicht, die Anzahl von Bits pro Kanal zu ändern.
--   Versuchen Sie, die Typformatierung zwischen Typen von Formaten zu vermeiden. Vermeiden Sie beispielsweise die Typumwandlung eines ARGB-Formats in ein tiefen Format.
+-   Versuchen Sie nicht, die Anzahl der Bits pro Kanal zu ändern.
+-   Vermeiden Sie die Konvertierung zwischen Formattypen. Vermeiden Sie beispielsweise die Konvertierung eines ARGB-Formats in ein Tiefenformat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -133,8 +133,8 @@ Diese Funktion verwendet die folgende Heuristik, wenn die angeforderten Anforder
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
@@ -142,7 +142,7 @@ Diese Funktion verwendet die folgende Heuristik, wenn die angeforderten Anforder
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
+[Texturfunktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
 </dt> </dl>
 
  

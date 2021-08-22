@@ -1,53 +1,53 @@
 ---
-description: Gibt die Größe des Slice in Einheiten von Megabyte (MB), Bits oder MB an.
+description: Gibt die Größe des Slices in Mb-, Bit- oder MB-Zeileneinheiten an.
 ms.assetid: 42E7DB19-9FB9-4226-B0B5-97AD6B9C0E12
-title: CODECAPI_AVEncSliceControlSize-Eigenschaft (codecapi. h)
+title: CODECAPI_AVEncSliceControlSize-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e4c3e58fa34922941ea564d42e449cefd798ad2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d068d8b2c5fc15fdb82c3ffe068e6926d28228a19367114067e02ebc44b03726
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127977"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119035348"
 ---
-# <a name="codecapi_avencslicecontrolsize-property"></a>Codecapi \_ avencslicecontrolsize (Eigenschaft)
+# <a name="codecapi_avencslicecontrolsize-property"></a>CODECAPI \_ AVEncSliceControlSize-Eigenschaft
 
-Gibt die Größe des Slice in Einheiten von Megabyte (MB), Bits oder MB an.
+Gibt die Größe des Slices in Mb-, Bit- oder MB-Zeileneinheiten an.
 
 ## <a name="data-type"></a>Datentyp
 
-**Ulong** (VT \_ UI4)
+**ULONG** (VT \_ UI4)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencslicecontrolsize**
+**CODECAPI \_ AVEncSliceControlSize**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**H. 264/AVC-Encoder:**
+**H.264/AVC-Encoder:**
 
-Die Bedeutung des Werts von codecapi \_ avencslicecontrolsize wird von der [codecapi-Eigenschaft " \_ avencslicecontrolmode](codecapi-avencslicecontrolmode.md) " gesteuert. In der folgenden Tabelle wird veranschaulicht, wie die Eigenschaften codecapi \_ avencslicecontrolsize und codecapi \_ avencslicecontrolmode die Größe und die Anzahl der Slices in einem Frame steuern.
+Die Bedeutung des Werts von CODECAPI \_ AVEncSliceControlSize wird durch die [CODECAPI \_ AVEncSliceControlMode-Eigenschaft](codecapi-avencslicecontrolmode.md) gesteuert. Die folgende Tabelle veranschaulicht, wie die Eigenschaften CODECAPI \_ AVEncSliceControlSize und CODECAPI \_ AVEncSliceControlMode die Größe und Anzahl von Slices in einem Frame steuern.
 
 
 
-| Codecapi \_ avencslicecontrolmode-Einstellung | Bedeutung des Werts                                                                                                                                                                                                                                                                                                                                                                                           |
+| \_CODECAPI AVEncSliceControlMode-Einstellung | Bedeutung des Werts                                                                                                                                                                                                                                                                                                                                                                                           |
 |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0                                       | Dies ist eine ganze Zahl, die die Größe jedes Slice im Frame in Einheiten von Makroblocks angibt. <br/> Der Encoder sollte die Einstellung ablehnen, wenn der Wert größer als die Anzahl der Makroblöcke im Frame ist.<br/>                                                                                                                                                                         |
-| 1                                       | Dies ist eine ganze Zahl, die die Größe jedes Slice im Frame in Einheiten von Bits angibt. <br/> Der Encoder sollte einen neuen Slice im Makroblock starten, der bewirkt, dass die Anzahl der Bits im Slice diesen Wert überschreitet (sodass die Größe jedes Slice immer kleiner als oder gleich diesem Wert ist). Dies bedeutet, dass die letzte Slice-Größe erheblich kleiner als dieser Wert sein könnte. <br/> |
-| 2                                       | Dies ist eine ganze Zahl, die die Größe jedes Slice im Frame in Einheiten von Makroblock Zeilen angibt. <br/> Der Encoder sollte die Einstellung ablehnen, wenn der Wert größer als die Anzahl der Makroblock Zeilen im Frame ist.<br/>                                                                                                                                                                 |
+| 0                                       | Dies ist eine ganze Zahl, die die Größe jedes Slices im Frame in Einheiten von Makroblocks angibt. <br/> Der Encoder sollte die Einstellung ablehnen, wenn der Wert größer als die Anzahl der Makroblocks im Frame ist.<br/>                                                                                                                                                                         |
+| 1                                       | Dies ist eine ganze Zahl, die die Größe jedes Slices im Frame in Biteinheiten angibt. <br/> Der Encoder sollte einen neuen Slice am Makroblock starten, der bewirkt, dass die Anzahl der Bits im Slice diesen Wert überschreitet (sodass die Größe jedes Slices immer kleiner oder gleich diesem Wert ist). Dies bedeutet, dass die Größe des letzten Slices deutlich kleiner als dieser Wert sein kann. <br/> |
+| 2                                       | Dies ist eine ganze Zahl, die die Größe jedes Slices im Frame in Einheiten von Makroblockzeilen angibt. <br/> Der Encoder sollte die Einstellung ablehnen, wenn der Wert größer als die Anzahl der Makroblockzeilen im Frame ist.<br/>                                                                                                                                                                 |
 
 
 
  
 
-Wenn die Anwendung keinen Wert für [codecapi \_ avencslicecontrolmode](codecapi-avencslicecontrolmode.md)festgelegt, sollte der Encoder einen Fehler zurückgeben.
+Wenn die Anwendung keinen Wert für [CODECAPI \_ AVEncSliceControlMode](codecapi-avencslicecontrolmode.md)festgelegt, sollte der Encoder einen Fehler zurückgeben.
 
-Der empfohlene Standardwert ist, dass ein einzelner Slice für den gesamten Frame vorhanden ist.
+Die empfohlene Standardeinstellung ist ein einzelner Slice für den gesamten Frame.
 
-Einige Encoder können Slices parallel codieren, sodass die Leistung abhängig von den Slice-Steuerelement Einstellungen beeinträchtigt werden kann. Beispielsweise kann das Codieren eines Frames als einzelner Slice langsamer sein, als wenn der Frame als mehrere Slices codiert wurde.
+Einige Encoder codieren Slices möglicherweise parallel, sodass die Leistung abhängig von den Einstellungen des Slicesteuerelements beeinträchtigt werden kann. Beispielsweise kann die Codierung eines Frames als einzelner Slice langsamer sein, als wenn der Frame als mehrere Slices codiert wurde.
 
-Die Slice-Steuerelement Einstellungen sind dynamisch und können während der Codierungs Sitzung geändert werden.
+Die Slicesteuerelementeinstellungen sind dynamisch und können während der Codierungssitzung geändert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Die Slice-Steuerelement Einstellungen sind dynamisch und können während der Co
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>                                   |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 \|Desktop-Apps UWP-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Die Slice-Steuerelement Einstellungen sind dynamisch und können während der Co
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

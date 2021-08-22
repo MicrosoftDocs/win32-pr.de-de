@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 2cf736e28d6ef77944b2177e0f70ecbcff1ddc88
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a6ed2081a77c9de8682e97dab0e5f99913b20dee2c78cda47c95034dd2aaecb6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119340350"
 ---
 # <a name="reset-method-of-the-msvm_videohead-class"></a>Reset-Methode der Msvm \_ VideoHead-Klasse
 
@@ -53,7 +53,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |

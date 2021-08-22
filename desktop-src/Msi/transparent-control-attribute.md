@@ -1,19 +1,19 @@
 ---
-description: Wenn das transparente Steuerelement Bit für ein Text Steuerelement festgelegt ist, wird das Steuerelement transparent angezeigt, und der Hintergrund wird durch das Steuerelement angezeigt, wenn keine Zeichen vorhanden sind. Wenn dieses Bit nicht festgelegt ist, ist das Text Steuerelement nicht transparent.
+description: Wenn das Transparent Control-Bit für ein Textsteuerfeld festgelegt ist, wird das Steuerelement transparent mit dem Hintergrund angezeigt, der über das Steuerelement angezeigt wird, in dem keine Zeichen enthalten sind. Wenn dieses Bit nicht festgelegt ist, ist das Textsteuerfeld nicht transparent.
 ms.assetid: 1938f6c5-d5a4-41ca-b272-1166a7688be2
-title: Transparentes Steuerungs Attribut
+title: Transparentes Steuerelementattribut
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f1bb5e27c9c39ab6433c8ffa0547c7c6004a68c1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 347a2f3c9b7d6e934ad591e5917e89579c60911870dfbff51f92bef108b6017a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041589"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119500150"
 ---
-# <a name="transparent-control-attribute"></a>Transparentes Steuerungs Attribut
+# <a name="transparent-control-attribute"></a>Transparentes Steuerelementattribut
 
-Wenn das transparente Steuerelement Bit für ein Text Steuerelement festgelegt ist, wird das Steuerelement transparent angezeigt, und der Hintergrund wird durch das Steuerelement angezeigt, wenn keine Zeichen vorhanden sind. Wenn dieses Bit nicht festgelegt ist, ist das Text Steuerelement nicht transparent.
+Wenn das Transparent Control-Bit für ein Textsteuerfeld festgelegt ist, wird das Steuerelement transparent mit dem Hintergrund angezeigt, der über das Steuerelement angezeigt wird, in dem keine Zeichen enthalten sind. Wenn dieses Bit nicht festgelegt ist, ist das Textsteuerfeld nicht transparent.
 
 ## <a name="valid-controls"></a>Gültige Steuerelemente
 
@@ -25,15 +25,15 @@ Wenn das transparente Steuerelement Bit für ein Text Steuerelement festgelegt i
 
 | Decimal | Hexadezimal | Konstante                              |
 |---------|-------------|---------------------------------------|
-| 65536   | 0x00010000  | **msidbcontrolattributestransparent** |
+| 65536   | 0x00010000  | **msidbControlAttributesTransparent** |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Siehe [Steuerelement Attribute](control-attributes.md) und das Steuerelement, das Sie unter Steuer [Elementen](controls.md)erstellen müssen.
+Weitere [Informationen finden Sie unter Steuerelementattribute](control-attributes.md) und das Steuerelement, das Sie unter Steuerelemente erstellen [müssen.](controls.md)
 
  
 

@@ -1,40 +1,40 @@
 ---
 title: Manipulation-Target
-description: Die Zieldaten, auf die eine Attribut Manipulations Regel angewendet wird. Die Attribut Manipulation wurde zuvor als \ 0034; Realm processing \ 0034; bezeichnet. Weitere Informationen finden Sie Unterbereiche Verarbeitung und Attribut Bearbeitung.
+description: Die Zieldaten, auf die eine Attributbearbeitungsregel angewendet wird. Die Attributbearbeitung wurde zuvor als \0034;Bereichsverarbeitung \ 0034; bezeichnet. Weitere Informationen finden Sie unter Bereichsverarbeitung und Attributbearbeitung.
 ms.assetid: a6d06a15-2694-410c-8083-6e5fe500b809
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ebbd2c2abf0c2f2423d64f7a8649793d68abaee6
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 36b93073bff71d12c9974b0dbfd569b17f935db2d4bf7f4f3cd9e38ef3d3156c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103727904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119251116"
 ---
 # <a name="manipulation-target"></a>Manipulation-Target
 
 > [!Note]  
-> Der Internet Authentifizierungsdienst (IAS) wurde ab Windows Server 2008 in den Netzwerk Richtlinien Server (Network Policy Server, NPS) umbenannt.
+> Internet Authentication Service (IAS) wurde ab Windows Server 2008 in Network Policy Server (NPS) umbenannt.
 
- 
+ 
 
-Die Zieldaten, auf die eine Attribut Manipulations Regel angewendet wird. Die Attribut Manipulation wurde zuvor als "Realm Processing" bezeichnet. Weitere Informationen finden Sie unter [Bereiche Verarbeitung und Attribut Bearbeitung](/windows/desktop/Nps/sdo-realms-processing-and-attribute-manipulation).
+Die Zieldaten, auf die eine Attributbearbeitungsregel angewendet wird. Die Attributbearbeitung wurde zuvor als "Bereichsverarbeitung" bezeichnet. Weitere Informationen finden Sie unter [Bereichsverarbeitung und Attributbearbeitung.](/windows/desktop/Nps/sdo-realms-processing-and-attribute-manipulation)
 
-**LDAP-Name:** msmanipulationtarget
+**LDAP-Name:** msManipulationTarget
 
-**ID:** 4113 = [ **IAS- \_ Attribut \_ Bearbeitungs \_ Ziel**](/windows/desktop/api/sdoias/ne-sdoias-attributeid)
+**ID:** 4113 = [ **MANIPULATIONSZIEL \_ DES \_ \_ IAS-ATTRIBUTS**](/windows/desktop/api/sdoias/ne-sdoias-attributeid)
 
 **Syntax:** Enumerator
 
-**Werte:  **
+**Werte: **
 
-Definiert von der Internet Assigned Numbers Authority (IANA) im [RADIUS-Typen](https://www.iana.org/assignments/radius-types) Dokument, basierend auf [RFC 2865](https://www.ietf.org/rfc/rfc2865.txt).
+Wird von der Internet Assigned Numbers Authority (IANA) im [DOKUMENT RADIUS TYPES](https://www.iana.org/assignments/radius-types) basierend auf RFC [2865 definiert.](https://www.ietf.org/rfc/rfc2865.txt)
 
 -   User-Name (1)
--   Aufgerufene Stations-ID (30)
--   Aufruf Station-ID (31)
+-   Called-Station-Id (30)
+-   Calling-Station-Id (31)
 
- 
+ 
 
- 
+ 

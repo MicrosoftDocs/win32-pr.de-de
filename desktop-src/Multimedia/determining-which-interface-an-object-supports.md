@@ -1,19 +1,19 @@
 ---
-title: Bestimmen der Schnittstelle, die ein Objekt unterstützt
-description: Bestimmen der Schnittstelle, die ein Objekt unterstützt
+title: Bestimmen, welche Schnittstelle ein Objekt unterstützt
+description: Bestimmen, welche Schnittstelle ein Objekt unterstützt
 ms.assetid: cf2aacb7-5315-4907-a49b-3eb3bbfd13d1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 066523503232926f5c031efa2cee5ad7a2b05d24
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5e5afffd2818c7a8f204363180e52fe9f94f16157aacd027582ce377b2f5211c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103713793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119497256"
 ---
-# <a name="determining-which-interface-an-object-supports"></a>Bestimmen der Schnittstelle, die ein Objekt unterstützt
+# <a name="determining-which-interface-an-object-supports"></a>Bestimmen, welche Schnittstelle ein Objekt unterstützt
 
-Mit der **QueryInterface** -Methode kann eine Anwendung ein Objekt Abfragen, um zu bestimmen, welche Schnittstellen es unterstützt. In der Beispielanwendung wird der *PPV* -Zeiger auf die aktuelle-Schnittstelle festgelegt.
+Mit **der QueryInterface-Methode** kann eine Anwendung ein Objekt abfragen, um zu bestimmen, welche Schnittstellen sie unterstützt. Die Beispielanwendung legt den *ppv-Zeiger* auf die aktuelle Schnittstelle fest.
 
 
 ```C++
@@ -38,9 +38,9 @@ STDMETHODIMP CAVIFileCF::QueryInterface(
 
 
 
- 
+ 
 
- 
+ 
 
 
 

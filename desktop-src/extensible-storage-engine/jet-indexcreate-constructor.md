@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INDEXCREATE-Konstruktor'
-title: JET_INDEXCREATE-Konstruktor
+description: 'Weitere Informationen finden Sie unter: JET_INDEXCREATE Konstruktor'
+title: JET_INDEXCREATE Konstruktor
 TOCTitle: 'JET_INDEXCREATE constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_INDEXCREATE.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_indexcreate.jet_indexcreate(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2ac7ae10c146af3819fe4ab364c1d55ab61330c9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 97207bf2a6ac8e98c819d0c0e198fd2681a4d1ce6dcb0da3a1fe10151bd0103f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119039088"
 ---
-# <a name="jet_indexcreate-constructor"></a>JET_INDEXCREATE-Konstruktor
+# <a name="jet_indexcreate-constructor"></a>JET_INDEXCREATE Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,10 +52,10 @@ public JET_INDEXCREATE()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_INDEXCREATE-Klasse](./jet-indexcreate-class.md)
 
-[Mitglieder JET_INDEXCREATE](./jet-indexcreate-members.md)
+[JET_INDEXCREATE Member](./jet-indexcreate-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,21 +1,21 @@
 ---
-description: Das Stammelement einer WSDAPI-Codegenerator-XML-Skriptdatei.
+description: Das Stammelement einer XML-Skriptdatei des WSDAPI-Codegenerators.
 ms.assetid: 3d40172b-6ba1-4e42-9a1a-519c8e88c2b1
 title: wsdCodeGen-Element
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9861617854e0e75575f2993717f5b2a86515fb0f
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 67ffac9696371f53b073fa71c0b1903c826544a6f695b9b741b48936c0250d2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107994677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119049538"
 ---
 # <a name="wsdcodegen-element"></a>wsdCodeGen-Element
 
-Das Stammelement einer WSDAPI-Codegenerator-XML-Skriptdatei.
+Das Stammelement einer XML-Skriptdatei des WSDAPI-Codegenerators.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <wsdCodeGen
@@ -28,7 +28,7 @@ Das Stammelement einer WSDAPI-Codegenerator-XML-Skriptdatei.
 
 
 
-| Attribut                        | type                             | Erforderlich       | BESCHREIBUNG                                                                                  |
+| attribute                        | Typ                             | Erforderlich       | Beschreibung                                                                                  |
 |----------------------------------|----------------------------------|----------------|----------------------------------------------------------------------------------------------|
 | **ConfigFileVersion**<br/> | Eine beliebige Zeichenfolge.<br/> | Ja<br/> | Die Version der Konfigurationsdatei. Der einzige gültige Wert ist "1.0".<br/> <br/> |
 
@@ -38,12 +38,12 @@ Das Stammelement einer WSDAPI-Codegenerator-XML-Skriptdatei.
 
 
 
-| Element                                                         | BESCHREIBUNG                                                                                                                                                                                                                 |
+| Element                                                         | Beschreibung                                                                                                                                                                                                                 |
 |-----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**autoStatic**](autostatic.md)<br/>                     | Gibt an, ob WsdCodeGen versuchen soll, bestimmte generierte Felder automatisch als statisch zu kennzeichnen. Diese Einstellung ist standardmäßig aktiviert.<br/> <br/>                                                                 |
-| [**Datei**](file.md)<br/>                                 | Weist den Codegenerator an, eine Datei zu generieren.<br/> <br/>                                                                                                                                                       |
-| [**hostMetadata**](hostmetadata.md)<br/>                 | Die Hostingmetadaten für das zu implementierende Gerät. Dieses Element wird nur für Geräteimplementierungen (Hosts) verwendet.<br/> <br/>                                                                                 |
-| [**layerNumber**](layernumber.md)<br/>                   | Die Nummer der zu generierenden Codeebene. Ebenennummern werden in Laufzeittabellen verwendet, um eine Codeebene für eine andere zu unterscheiden. WSDAPI selbst verwendet generierten Code, der über eine Ebenennummer von 0 verfügt.<br/> <br/> |
+| [**Datei**](file.md)<br/>                                 | Leitet den Codegenerator an, eine Datei zu generieren.<br/> <br/>                                                                                                                                                       |
+| [**hostMetadata**](hostmetadata.md)<br/>                 | Die Hostingmetadaten für das zu implementierte Gerät. Dieses Element wird nur für Geräteimplementierungen (Hosts) verwendet.<br/> <br/>                                                                                 |
+| [**layerNumber**](layernumber.md)<br/>                   | Die Nummer der zu erstellenden Codeebene. Ebenennummern werden in Laufzeittabellen verwendet, um eine Codeebene für eine andere zu unterscheiden. WSDAPI selbst verwendet generierten Code mit der Ebenennummer 0.<br/> <br/> |
 | [**layerPrefix**](layerprefix.md)<br/>                   | Das Präfix, das im generierten Code verwendet werden soll, um die Eindeutigkeit generierter Symbole sicherzustellen. WSDAPI verwendet das Präfix "WSD".<br/> <br/>                                                                                     |
 | [**Makro**](macro.md)<br/>                               | Definiert Text oder CDATA, der vom include-Element wiederverwendet [**werden**](include.md) soll.<br/> <br/>                                                                                                                        |
 | [**Namespace**](namespace.md)<br/>                       | Beschreibt einen Namespace, der für die Codegenerierung verwendet werden soll.<br/> <br/>                                                                                                                                                |

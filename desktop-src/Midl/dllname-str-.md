@@ -1,9 +1,9 @@
 ---
-title: dllname (Str)-Attribut
-description: Das Attribut \ dllName \ definiert den Namen der dll, die die Einstiegspunkte für ein Modul enthält.
+title: dllname(str)-Attribut
+description: Das \dllname\-Attribut definiert den Namen der DLL, die die Einstiegspunkte für ein Modul enthält.
 ms.assetid: dbf062ce-9dcc-4cc6-b7cd-cdc5945e399b
 keywords:
-- dllname (Str)-Attribut (Mittel l)
+- dllname(str) attribute MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 990d277db855c2988021d19a0a756c49454546f7
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 7db6f70fb65822a63bd2bf0f9919ac1b9554a664d1ac7ec9775c611b5b4e7f73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038975"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067290"
 ---
-# <a name="dllnamestr-attribute"></a>dllname (Str)-Attribut
+# <a name="dllnamestr-attribute"></a>dllname(str)-Attribut
 
-Das **\[ dllName \]** -Attribut definiert den Namen der dll, die die Einstiegspunkte für ein Modul enthält.
+Das **\[ dllname-Attribut \]** definiert den Namen der DLL, die die Einstiegspunkte für ein Modul enthält.
 
 ``` syntax
 [
@@ -39,44 +39,44 @@ module modulename
 
 <dl> <dt>
 
-*UUID-Nummer* 
+*uuid-number* 
 </dt> <dd>
 
-Gibt eine universell eindeutige ID für das [**Modul**](module.md)an.
+Gibt eine universell eindeutige ID für das Modul [**an.**](module.md)
 
 </dd> <dt>
 
 *filename* 
 </dt> <dd>
 
-Gibt eine NULL-terminierte Zeichenfolge an, die den vollständigen Pfad zur DLL-Datei enthält.
+Gibt eine auf NULL beendete Zeichenfolge an, die den vollständigen Pfad zur DLL-Datei enthält.
 
 </dd> <dt>
 
-*optional-Attribut-List* 
+*optional-attribute-list* 
 </dt> <dd>
 
-Gibt eine Liste von 0 (null) oder mehr Attributen der Mittelwert Schnittstelle an.
+Gibt eine Liste von null oder mehr MIDL-Schnittstellenattributen an.
 
 </dd> <dt>
 
-*ModuleName* 
+*Modulename* 
 </dt> <dd>
 
-Gibt den Namen an, den andere Softwarekomponenten verwenden können, um auf das Modul zu verweisen.
+Gibt den Namen an, mit dem andere Softwarekomponenten auf das Modul verweisen können.
 
 </dd> <dt>
 
-*Elementliste* 
+*elementlist* 
 </dt> <dd>
 
-Gibt mindestens eine Modul Element Definitions-Anweisung an.
+Gibt mindestens eine Modulelementdefinitions-Anweisung an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **\[ dllName \]** -Attribut ist in einem Modul erforderlich.
+Das **\[ dllname-Attribut \]** ist für ein Modul erforderlich.
 
 ## <a name="examples"></a>Beispiele
 
@@ -96,21 +96,21 @@ module HandyStuff
 
 <dl> <dt>
 
-[**Mond**](module.md)
+[**Modul**](module.md)
 </dt> <dt>
 
-[**ein**](entry.md)
+[**Eintrag**](entry.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

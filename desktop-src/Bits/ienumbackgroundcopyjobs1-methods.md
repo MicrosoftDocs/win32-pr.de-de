@@ -1,19 +1,19 @@
 ---
 title: IEnumBackgroundCopyJobs1-Methoden
-description: Die IEnumBackgroundCopyJobs1-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IEnumBackgroundCopyJobs1-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 780E4356-019B-4ECD-BF09-02558B2F4DA8
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 447334192fb3d99acbd04d99f89f61a0405df476
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5f258f44124a5559dc734fb1b993ec61f03138b023660640f78ce76a6deccd3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339386"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119021108"
 ---
 # <a name="ienumbackgroundcopyjobs1-methods"></a>IEnumBackgroundCopyJobs1-Methoden
 
-Die [**IEnumBackgroundCopyJobs1**](/windows/desktop/api/Qmgr/nn-qmgr-ienumbackgroundcopyjobs1) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IEnumBackgroundCopyJobs1-Schnittstelle**](/windows/desktop/api/Qmgr/nn-qmgr-ienumbackgroundcopyjobs1) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -23,9 +23,9 @@ Die [**IEnumBackgroundCopyJobs1**](/windows/desktop/api/Qmgr/nn-qmgr-ienumbackgr
 -   [**Reset-Methode**](/windows/desktop/api/Qmgr/nf-qmgr-ienumbackgroundcopyjobs1-reset)
 -   [**Skip-Methode**](/windows/desktop/api/Qmgr/nf-qmgr-ienumbackgroundcopyjobs1-skip)
 
- 
+ 
 
- 
+ 
 
 
 

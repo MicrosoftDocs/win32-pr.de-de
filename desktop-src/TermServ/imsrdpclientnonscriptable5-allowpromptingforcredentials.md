@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientNonScriptable5 allowpromptingforanmeldeinformationen (Eigenschaft)
-description: Gibt an, ob das Remotedesktop ActiveX-Steuerelement den Benutzer zur Eingabe von Anmelde Informationen auffordert.
+title: IMsRdpClientNonScriptable5 AllowPromptingForCredentials-Eigenschaft
+description: Gibt an, ob das Remotedesktop ActiveX-Steuerelement den Benutzer zur Eingabe von Anmeldeinformationen auffordern kann.
 ms.assetid: 9a780886-39ee-4d3b-9a54-fa209708d9f8
 ms.tgt_platform: multiple
 keywords:
-- Allowpromptingforanmelde-Eigenschaft Remotedesktopdienste
-- Allowpromptingforanmelde-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, allowpromptingforanmeldeinformationen (Eigenschaft)
+- AllowPromptingForCredentials-Eigenschaft Remotedesktopdienste
+- AllowPromptingForCredentials-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , AllowPromptingForCredentials-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c326a83a46b41d3578c958e24fd901beb7c7b321
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: eea0fb854b5bb12533032cd6608228d81584cd8d9f4e99bccd8a5ba76b624f77
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119138753"
 ---
-# <a name="imsrdpclientnonscriptable5allowpromptingforcredentials-property"></a>IMsRdpClientNonScriptable5:: allowpromptingforanmeldeinformationen (Eigenschaft)
+# <a name="imsrdpclientnonscriptable5allowpromptingforcredentials-property"></a>IMsRdpClientNonScriptable5::AllowPromptingForCredentials-Eigenschaft
 
-Gibt an, ob das Remotedesktop ActiveX-Steuerelement den Benutzer zur Eingabe von Anmelde Informationen auffordert. Wenn diese Eigenschaft **Variant \_ true** enthält, kann der Benutzer zur Eingabe von Anmelde Informationen aufgefordert werden. Wenn diese Eigenschaft **Variant \_ false** enthält, kann der Benutzer nicht zur Eingabe von Anmelde Informationen aufgefordert werden.
+Gibt an, ob das Remotedesktop ActiveX-Steuerelement den Benutzer zur Eingabe von Anmeldeinformationen auffordern kann. Wenn diese Eigenschaft **VARIANT \_ TRUE** enthält, kann der Benutzer zur Eingabe von Anmeldeinformationen aufgefordert werden. Wenn diese Eigenschaft **VARIANT \_ FALSE** enthält, kann der Benutzer nicht zur Eingabe von Anmeldeinformationen aufgefordert werden.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,7 +49,7 @@ HRESULT get_AllowPromptingForCredentials(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt den neuen Eigenschafts Wert an.
+Gibt den neuen Eigenschaftswert an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,11 +61,11 @@ Gibt den neuen Eigenschafts Wert an.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                             |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>        |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>        |
-| IID<br/>                      | IID \_ IMsRdpClientNonScriptable5 ist als 4f 6996d5-d7b1-412c-b0ff-063718566907 definiert.<br/> |
+| IID<br/>                      | \_IID-IMsRdpClientNonScriptable5 ist als 4f6996d5-d7b1-412c-b0ff-063718566907 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

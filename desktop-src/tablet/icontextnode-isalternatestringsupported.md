@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob die angegebene erkannte Zeichenfolge aus dem System Wörterbuch, dem Benutzerwörterbuch oder der Wort Liste stammt.
+description: Gibt an, ob die angegebene erkannte Zeichenfolge aus dem Systemverzeichnis, Benutzerwörterbuch oder der Wortliste stammt.
 ms.assetid: 1504e633-5917-4ac6-b043-95d4bc75b020
-title: 'Icontextnode:: isdatasestringsupported-Methode (iacom. h)'
+title: IContextNode::IsAlternateStringSupported-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 93dfcdc59851aad3b06fb1451178e97b36ee0a9b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cbf18c63ce81a439092ba3bdabfae38c5f52882ec5364ef5c8fbd67cab5d81a7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119266300"
 ---
-# <a name="icontextnodeisalternatestringsupported-method"></a>Icontextnode:: isalternative estringsupported-Methode
+# <a name="icontextnodeisalternatestringsupported-method"></a>IContextNode::IsAlternateStringSupported-Methode
 
-Gibt an, ob die angegebene erkannte Zeichenfolge aus dem System Wörterbuch, dem Benutzerwörterbuch oder der Wort Liste stammt. Alle einschränkenden Daten, wie z. b. wordlists, Führungslinien oder Faktoide, werden verwendet, um zu bestimmen, ob die Zeichenfolge unterstützt wird.
+Gibt an, ob die angegebene erkannte Zeichenfolge aus dem Systemverzeichnis, Benutzerwörterbuch oder der Wortliste stammt. Alle einschränkenden Daten wie Wortlisten, Leitfäden oder Factoids in einem entsprechenden Hinweisknoten werden verwendet, um zu bestimmen, ob die Zeichenfolge unterstützt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ HRESULT IsAlternateStringSupported(
 
 <dl> <dt>
 
-*bstrauchanestring* \[ in\]
+*bstrAlternateString* \[ In\]
 </dt> <dd>
 
-Erkannte Zeichenfolge zur Überprüfung.
+Erkannte Zu überprüfende Zeichenfolge.
 
 </dd> <dt>
 
-*pfissupported* \[ vorgenommen\]
+*pfIsSupported* \[ out\]
 </dt> <dd>
 
-**Variant \_ TRUE** , wenn die angegebene Zeichenfolge von [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) mit den angewendeten entsprechenden Hinweis Knoten unterstützt wird. **Variant \_ FALSE** , wenn nicht unterstützt.
+**VARIANT \_ TRUE,** wenn die angegebene Zeichenfolge vom [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md) mit angewendeten entsprechenden Hinweisknoten unterstützt wird. **VARIANT \_ FALSE,** wenn nicht unterstützt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -66,18 +66,18 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> </dl>
 
  

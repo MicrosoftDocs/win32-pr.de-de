@@ -1,7 +1,7 @@
 ---
-description: Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Licht festzulegen.
+description: Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Licht zu setzen.
 ms.assetid: 3b9b2cbd-79f5-4ea4-a47b-da23b091adfd
-title: 'ID3DXEffectStateManager:: setlight-Methode (D3DX9Effect. h)'
+title: ID3DXEffectStateManager::SetLight-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 1306283b098922706f39abc7ffe2514d2fba0e5c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 83250450a0510949267ffd52f17e6e9013a646d40229efcf7d5bcc7a396e1b09
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353375"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119372080"
 ---
-# <a name="id3dxeffectstatemanagersetlight-method"></a>ID3DXEffectStateManager:: setlight-Methode
+# <a name="id3dxeffectstatemanagersetlight-method"></a>ID3DXEffectStateManager::SetLight-Methode
 
-Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Licht festzulegen.
+Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Licht zu setzen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT SetLight(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Der null basierte Index des Lichts. Dies ist derselbe Index in [**IDirect3DDevice9:: setlight**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setlight).
+Der nullbasierte Index des Lichts. Dies ist derselbe Index in [**IDirect3DDevice9::SetLight**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setlight).
 
 </dd> <dt>
 
-*Notlage* \[ in\]
+*pLight* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DLight9**](d3dlight9.md) \***
+Typ: **const [**D3DLight9**](d3dlight9.md) \***
 
-Das Light-Objekt. Siehe [**D3DLIGHT9**](d3dlight9.md).
+Das light-Objekt. Siehe [**D3DLIGHT9**](d3dlight9.md).
 
 </dd> </dl>
 
@@ -63,10 +63,10 @@ Das Light-Objekt. Siehe [**D3DLIGHT9**](d3dlight9.md).
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn der Rückruf beim Festlegen des Geräte Zustands fehlschlägt, wird eine der folgenden Aktionen ausgeführt:
+Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn der Rückruf beim Festlegen des Gerätestatus fehlschlägt, tritt eine der folgenden Bedingungen auf:
 
--   Der Effekt schlägt während [**ID3DXEffect:: beginpass**](id3dxeffect--beginpass.md)fehl.
--   Der dynamische Effekt Zustands Aufrufe (z. b. [**IDirect3DDevice9:: setlight**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setlight)) schlägt fehl.
+-   Die Auswirkung tritt während [**ID3DXEffect::BeginPass auf.**](id3dxeffect--beginpass.md)
+-   Der Dynamische Effektzustandsaufruf (z. B. [**IDirect3DDevice9::SetLight)**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setlight)tritt ein Fehler auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,12 +74,12 @@ Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn der R�
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Projiziert eine Funktion, die in einer cubemap dargestellt wird, in sphärischen Oberschwingungen (SH).
+description: Projiziert eine funktion, die auf einer Cubemap dargestellt wird, in sphärische Potenzen (SH).
 ms.assetid: da5a3195-801e-4f1c-b52c-9eafc6e2e7b4
-title: D3DXSHProjectCubeMap-Funktion (D3dx9math. h)
+title: D3DXSHProjectCubeMap-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d0e3e45b42907c47d8c7f1b9e5294738b8997cd6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7372eef528b90582d3aec64facb7c1aefffdfc479e97e1a5291f1a6d2feacc56
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353753"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119279470"
 ---
 # <a name="d3dxshprojectcubemap-function"></a>D3DXSHProjectCubeMap-Funktion
 
-Projiziert eine Funktion, die in einer cubemap dargestellt wird, in sphärischen Oberschwingungen (SH).
+Projiziert eine funktion, die auf einer Cubemap dargestellt wird, in sphärische Potenzen (SH).
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT D3DXSHProjectCubeMap(
 
 <dl> <dt>
 
-*Reihenfolge* \[ in\]
+*Bestellung* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Reihenfolge der Auswertung der sphärischen Harmonika (SH). Muss im Bereich von [D3DXSH \_ minorder](other-d3dx-constants.md) bis D3DXSH \_ maxorder (einschließlich) liegen. Die Auswertung generiert die Koeffizienten der Bestellung. Der Bewertungs Grad ist Order-1.
+Die Reihenfolge der SH-Auswertung (SphericalLips). Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order²-Koeffizienten. Der Grad der Auswertung ist "Order - 1".
 
 </dd> <dt>
 
-*pcubemap* \[ in\]
+*pCubeMap* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DCUBETEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dcubetexture9)**
 
-Zeiger auf eine quellcubetextur. Siehe [**IDirect3DCubeTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dcubetexture9).
+Zeiger auf eine Quellcubetextur. Siehe [**IDirect3DCubeTexture9.**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dcubetexture9)
 
 </dd> <dt>
 
-*Proxy* \[ in\]
+*pROut* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf den Ausgabe-SH-Vektor für die rote Komponente.
+Zeiger auf den SH-Ausgabevektor für die rote Komponente.
 
 </dd> <dt>
 
-*pgout* \[ in\]
+*pGOut* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf den Ausgabe-SH-Vektor für die grüne Komponente.
+Zeiger auf den SH-Ausgabevektor für die grüne Komponente.
 
 </dd> <dt>
 
-*pbout* \[ in\]
+*pBOut* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf den Ausgabe-SH-Vektor für die blaue Komponente.
+Zeiger auf den SH-Ausgabevektor für die blaue Komponente.
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Zeiger auf den Ausgabe-SH-Vektor für die blaue Komponente.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert lauten: D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,19 +101,19 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Mathematische Funktionen](dx9-graphics-reference-d3dx-functions-math.md)
 </dt> <dt>
 
-[Voraus berechnete Strahlungs Übertragung (Direct3D 9)](precomputed-radiance-transfer.md)
+[Vorausberechnen der Übertragungsstärke (Direct3D 9)](precomputed-radiance-transfer.md)
 </dt> </dl>
 
  

@@ -1,12 +1,12 @@
 ---
-title: Islssecgrpgpabled-Methode der Win32_TSLicenseServer-Klasse
-description: Ruft ab, ob die Sicherheitsgruppe \ 0034; Lizenzserver \ 0034; die Gruppenrichtlinien Einstellung ist auf dem Remotedesktop-Lizenzserver aktiviert.
+title: IsLSSecGrpGPEnabled-Methode der Win32_TSLicenseServer-Klasse
+description: Ruft ab, ob die \0034;Lizenzserver-Sicherheitsgruppe \ 0034; Die Gruppenrichtlinieneinstellung ist auf dem Remotedesktop Lizenzserver aktiviert.
 ms.assetid: 715b619b-f082-4fed-ac4c-70d5e286e37c
 ms.tgt_platform: multiple
 keywords:
-- Islssecgrpgpabled-Methode Remotedesktopdienste
-- Islssecgrpgpabled-Methode Remotedesktopdienste, Win32_TSLicenseServer-Klasse
-- Win32_TSLicenseServer-Klasse Remotedesktopdienste, islssecgrpgpabled-Methode
+- IsLSSecGrpGPEnabled-Methode Remotedesktopdienste
+- IsLSSecGrpGPEnabled-Methode Remotedesktopdienste , Win32_TSLicenseServer-Klasse
+- Win32_TSLicenseServer-Klasse Remotedesktopdienste , IsLSSecGrpGPEnabled-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 27f3d7ec9de3d98849f9680f1b2a87bf5b22922a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 688843106583ea0ca32a3cc8ac7142d51aac737ad6722ab4ef95621b63b66eb5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104301"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119138363"
 ---
-# <a name="islssecgrpgpenabled-method-of-the-win32_tslicenseserver-class"></a>Islssecgrpgpabled-Methode der Win32- \_ Klasse "zlicenseserver"
+# <a name="islssecgrpgpenabled-method-of-the-win32_tslicenseserver-class"></a>IsLSSecGrpGPEnabled-Methode der Win32 \_ TSLicenseServer-Klasse
 
-Ruft ab, ob die Gruppenrichtlinien Einstellung "Lizenzserver-Sicherheitsgruppe" auf dem Remotedesktop-Lizenzserver aktiviert ist.
+Ruft ab, ob die Gruppenrichtlinieneinstellung "Lizenzserversicherheitsgruppe" auf dem Remotedesktop Lizenzserver aktiviert ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,28 +43,28 @@ uint32 IsLSSecGrpGPEnabled(
 
 <dl> <dt>
 
-*Aktiviert* \[ vorgenommen\]
+*Aktiviert* \[ out\]
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob die Richtlinien Einstellung für die Sicherheitsgruppe "Lizenzserver" aktiviert ist.
+Boolescher Wert, der angibt, ob die Richtlinieneinstellung "Lizenzserversicherheitsgruppe" aktiviert ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
 
-Mit der Richtlinien Einstellung "Lizenzserver-Sicherheitsgruppe" können Sie die Remotedesktop-Sitzungshost (RD-Sitzungshost)-Server angeben, die zum Abrufen von Remotedesktopdienste Client Zugriffs Lizenzen (RDS-CALs) mit dem Lizenzserver berechtigt sind. Wenn die Richtlinien Einstellung auf dem Lizenzserver aktiviert ist, antwortet der Server nur auf RDS-Anforderungen von RD-Sitzungshost Servern, deren Computer Konten Mitglied der lokalen Gruppe "Terminal Server Computer" auf dem Lizenzserver sind.
+Mit der Richtlinieneinstellung "Lizenzserversicherheitsgruppe" können Sie die Remotedesktop-Sitzungshost -Server (RD-Sitzungshost) angeben, die den Lizenzserver kontaktieren dürfen, um Remotedesktopdienste Clientzugriffslizenzen (RDS CALs) zu erhalten. Wenn die Richtlinieneinstellung auf dem Lizenzserver aktiviert ist, antwortet der Server nur auf RDS CAL-Anforderungen von RD-Sitzungshost Servern, deren Computerkonten Mitglieder der lokalen Gruppe Terminalservercomputer auf dem Lizenzserver sind.
 
-Die Richtlinien Einstellung befindet sich im folgenden Knoten des Editors für lokale Gruppenrichtlinien:
+Die Richtlinieneinstellung befindet sich im folgenden Knoten des editors für lokale Gruppenrichtlinien:
 
-Computer Konfiguration \\ Administrative Vorlagen \\ \\ terminaldiensteterminaldienstelizenzierung von Windows-Komponenten \\
+TS-Lizenzierung für \\ \\ Computerkonfiguration Administrative Vorlagen Windows-Komponententerminaldienste \\ \\
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,16 +75,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ Lizenznehmer**](win32-tslicenseserver.md)
+[**Win32 \_ TSLicenseServer**](win32-tslicenseserver.md)
 </dt> </dl>
 
  

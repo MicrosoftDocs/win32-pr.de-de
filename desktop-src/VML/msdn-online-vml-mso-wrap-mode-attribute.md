@@ -1,34 +1,34 @@
 ---
-title: VML mso-Wrap-Mode-Attribut
-description: VML mso-Wrap-Mode-Attribut
+title: VML-MSO-Wrap-Mode-Attribut
+description: VML-MSO-Wrap-Mode-Attribut
 ms.assetid: 51c4e90d-62cc-4646-9c71-8a6bf3366b2f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5657192fcf9da72ff99dc25cff7930b6d2d9b6b9
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 88e3743522b9286da8a7f30e9100e06205430b1b18fa3c62def60b57f54b65d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136983"
 ---
-# <a name="vml-mso-wrap-mode-attribute"></a>VML mso-Wrap-Mode-Attribut
+# <a name="vml-mso-wrap-mode-attribute"></a>VML-MSO-Wrap-Mode-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den Wrapping Modus für Text. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert den Umbruchmodus für Text. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* Style = "mso-Wrap-Mode: *Expression* " >
+<v: *element* style="mso-wrap-mode: *expression* ">
 
 **Anmerkungen**
 
@@ -36,25 +36,25 @@ Mögliche Werte:
 
 
 
-| Wert          | BESCHREIBUNG                          |
+| Wert          | Beschreibung                          |
 |----------------|--------------------------------------|
 | square         | Umschließt Text um Form in einem Quadrat. |
-| knapper          | Text wird in der Nähe der Form umschließt.  |
-| oben und unten | Der Text springt von oben nach unten.       |
+| Engen          | Text wird in der Nähe der Form umschlossen.  |
+| oben und unten | Text springt von oben nach unten.       |
 | bis        | Text wird durch die Form angezeigt.     |
-| none           | Der Text wird nicht eingeschlossen.                   |
+| Keine           | Text wird nicht umbrochen.                   |
 
 
 
- 
+ 
 
-Wird von Microsoft PowerPoint zum Speichern in HTML verwendet, um anzugeben, ob der Zeilenumbruch innerhalb einer AutoForm ein (**quadratisch**) oder Off (**None**) ist.
+Wird von Microsoft PowerPoint zum Speichern in HTML verwendet, um anzugeben, ob der Zeilenumbruch innerhalb einer AutoShape auf **(quadratisch)** oder deaktiviert **(keine)** ist.
 
 *Microsoft Office Extensions-Attribut*
 
 **Beispiel**
 
-Der folgende Code gibt an, dass WordWrap innerhalb einer AutoShape in PowerPoint aktiviert ist.
+Der folgende Code gibt an, dass wordwrap innerhalb einer AutoShape in PowerPoint aktiviert ist.
 
 
 ```HTML
@@ -68,6 +68,6 @@ Der folgende Code gibt an, dass WordWrap innerhalb einer AutoShape in PowerPoint
 
 
 
- 
+ 
 
- 
+ 

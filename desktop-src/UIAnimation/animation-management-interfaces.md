@@ -1,30 +1,30 @@
 ---
-title: Animations Verwaltungs Schnittstellen
-description: Dieser Abschnitt enthält die Referenz Spezifikationen für die Windows Animation Manager-Schnittstellen, die die Animations Verwaltung unterstützen.
+title: Schnittstellen für die Animationsverwaltung
+description: Dieser Abschnitt enthält die Referenzspezifikationen für die Windows Animation Manager-Schnittstellen, die die Animationsverwaltung unterstützen.
 ms.assetid: C0467AE0-BFEA-42D2-A890-518EF2409271
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: db29e89cd3b62d72b1edb1fb3d8b485db7cf7853
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 598a6dc771a0dc67620325eb86567af8a9b3d01394741dae496d47a670fe4e5f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206683"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137383"
 ---
-# <a name="animation-management-interfaces"></a>Animations Verwaltungs Schnittstellen
+# <a name="animation-management-interfaces"></a>Schnittstellen für die Animationsverwaltung
 
-Dieser Abschnitt enthält die Referenz Spezifikationen für die Windows Animation Manager-Schnittstellen, die die Animations Verwaltung unterstützen.
+Dieser Abschnitt enthält die Referenzspezifikationen für die Windows Animation Manager-Schnittstellen, die die Animationsverwaltung unterstützen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                   | BESCHREIBUNG                                                                                                                                                              |
+| Thema                                                                                   | Beschreibung                                                                                                                                                              |
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Iuianimationmanager**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanager)<br/>                           | Definiert den Animations-Manager, der eine zentrale Schnittstelle zum Erstellen und Verwalten von Animationen bereitstellt.<br/>                                                       |
-| [**IUIAnimationManager2**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanager2)<br/>                         | Definiert einen [**Animations-Manager**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanager2), der eine zentrale Schnittstelle zum Erstellen und Verwalten von Animationen in mehreren Dimensionen bereitstellt.<br/> |
-| [**Iuianimationmanagereventhandler**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanagereventhandler)<br/>   | Definiert eine Methode zum Behandeln von Statusaktualisierungen für einen Animations-Manager.<br/>                                                                                         |
-| [**IUIAnimationManagerEventHandler2**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanagereventhandler2)<br/> | Definiert eine Methode für die Behandlung von Updates für einen [**Animations-Manager**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanager2).<br/>                                                                |
+| [**IUIAnimationManager**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanager)<br/>                           | Definiert den Animations-Manager, der eine zentrale Schnittstelle zum Erstellen und Verwalten von Animationen bietet.<br/>                                                       |
+| [**IUIAnimationManager2**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanager2)<br/>                         | Definiert einen [**Animations-Manager,**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanager2)der eine zentrale Schnittstelle zum Erstellen und Verwalten von Animationen in mehreren Dimensionen bietet.<br/> |
+| [**IUIAnimationManagerEventHandler**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanagereventhandler)<br/>   | Definiert eine Methode zum Behandeln von Statusaktualisierungen für einen Animations-Manager.<br/>                                                                                         |
+| [**IUIAnimationManagerEventHandler2**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanagereventhandler2)<br/> | Definiert eine Methode zum Behandeln von Aktualisierungen an einem [**Animations-Manager.**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanager2)<br/>                                                                |
 
 
 
