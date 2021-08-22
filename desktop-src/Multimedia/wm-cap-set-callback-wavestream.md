@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_SET_CALLBACK_WAVESTREAM Meldung (VFW. h)
-description: Die "WM \_ Cap \_ Set \_ Callback \_ WaveStream"-Nachricht legt eine Rückruffunktion in der Anwendung fest.
+title: WM_CAP_SET_CALLBACK_WAVESTREAM (Vfw.h)
+description: Die MELDUNG WM \_ CAP \_ SET \_ CALLBACK \_ WAVESTREAM legt eine Rückruffunktion in der Anwendung fest.
 ms.assetid: f2554cbb-73de-4f76-b785-6c18c82c2992
 keywords:
-- WM_CAP_SET_CALLBACK_WAVESTREAM-Nachricht (Multimedia)
+- WM_CAP_SET_CALLBACK_WAVESTREAM von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d36abc7848de082e033cfc25d4f15d90c86cf3b2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3e4a8ef585a3ceb35aa07fe4e31c5819ce3e56d20b0bfd2d6c5f588fc25c335b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118622519"
 ---
-# <a name="wm_cap_set_callback_wavestream-message"></a>WM- \_ Cap- \_ Rückruf- \_ \_ WaveStream-Nachricht
+# <a name="wm_cap_set_callback_wavestream-message"></a>WM \_ CAP \_ SET \_ CALLBACK \_ WAVESTREAM-Meldung
 
-Die " **WM \_ Cap \_ Set \_ Callback \_ WaveStream** "-Nachricht legt eine Rückruffunktion in der Anwendung fest. Avicap ruft dieses Verfahren während der streamingerfassung auf, wenn ein neuer Audiopuffer verfügbar wird. Sie können diese Nachricht explizit oder mithilfe des [**capsetcallbackonwavestream**](/windows/desktop/api/Vfw/nf-vfw-capsetcallbackonwavestream) -Makros senden.
+Die **MELDUNG WM CAP SET \_ \_ \_ CALLBACK \_ WAVESTREAM** legt eine Rückruffunktion in der Anwendung fest. AVICap ruft dieses Verfahren während der Streamingerfassung auf, wenn ein neuer Audiopuffer verfügbar wird. Sie können diese Nachricht explizit oder mithilfe des [**Makros capSetCallbackOnWaveStream**](/windows/desktop/api/Vfw/nf-vfw-capsetcallbackonwavestream) senden.
 
 
 ```C++
@@ -38,22 +38,22 @@ lParam = (LPARAM) (LPVOID) (fpProc);
 
 <dl> <dt>
 
-<span id="fpProc"></span><span id="fpproc"></span><span id="FPPROC"></span>*fpproc*
+<span id="fpProc"></span><span id="fpproc"></span><span id="FPPROC"></span>*fpProc*
 </dt> <dd>
 
-Ein Zeiger auf die Funktion "Wave Stream Callback" vom Typ [**capwavestreamcallback**](/windows/desktop/api/Vfw/nc-vfw-capwavecallback). Geben Sie **null** für diesen Parameter an, um eine zuvor installierte Wave Stream-Rückruffunktion zu deaktivieren.
+Zeiger auf die Rückruffunktion des Wavestreams vom Typ [**capWaveStreamCallback.**](/windows/desktop/api/Vfw/nc-vfw-capwavecallback) Geben **Sie NULL** für diesen Parameter an, um eine zuvor installierte Rückruffunktion für Wellenstreams zu deaktivieren.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich oder **false** , wenn eine streamingerfassung oder eine Single-Frame-Erfassungs Sitzung ausgeführt wird.
+Gibt **TRUE zurück,** wenn erfolgreich, **oder FALSE,** wenn die Streamingerfassung oder eine Einzelframe-Erfassungssitzung in Bearbeitung ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im Fenster erfassen wird die Prozedur aufgerufen, bevor der Audiopuffer auf den Datenträger geschrieben wird. Dies ermöglicht es Anwendungen, den Audiopuffer bei Bedarf zu ändern.
+Das Erfassungsfenster ruft die Prozedur auf, bevor der Audiopuffer auf den Datenträger geschrieben wird. Dadurch können Anwendungen den Audiopuffer bei Wunsch ändern.
 
-Wenn eine Wave Stream-Rückruffunktion verwendet wird, muss Sie vor dem Start der Erfassungs Sitzung installiert werden, und Sie muss für die Dauer der Sitzung aktiviert bleiben. Sie kann nach Ende der streamingerfassung deaktiviert werden.
+Wenn eine Wavestream-Rückruffunktion verwendet wird, muss sie installiert werden, bevor die Erfassungssitzung gestartet wird, und sie muss für die Dauer der Sitzung aktiviert bleiben. Sie kann nach dem Ende der Streamingerfassung deaktiviert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,18 +63,18 @@ Wenn eine Wave Stream-Rückruffunktion verwendet wird, muss Sie vor dem Start de
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Videoaufnahmenachrichten](video-capture-messages.md)
 </dt> </dl>
 
  

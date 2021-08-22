@@ -1,9 +1,9 @@
 ---
-title: Playerapplication. hasdisplay-Attribut
-description: Das hasdisplay-Attribut Ruft einen Wert ab, der angibt, ob Videos über das Remote Fenster Media Player-Steuerelement angezeigt werden können.
+title: PLAYERAPPLICATION.hasDisplay-Attribut
+description: Das hasDisplay-Attribut ruft einen Wert ab, der angibt, ob das Video über das Remotesteuerelement Windows Media Player angezeigt werden kann.
 ms.assetid: c6a735a4-29ae-401c-9381-d8aad2c456eb
 keywords:
-- Playerapplication. hasdisplay-Windows-Media Player
+- PLAYERAPPLICATION.hasDisplay Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7579c724496ee2f36ce12adb01c2f13a0962e7dc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ac144f7e9f96db707944cbb016028578d2446be43a0f06cd0293cb5d56f84c63
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372335"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118571943"
 ---
-# <a name="playerapplicationhasdisplay"></a>Playerapplication. hasdisplay
+# <a name="playerapplicationhasdisplay"></a>PLAYERAPPLICATION.hasDisplay
 
-Das **hasdisplay** -Attribut Ruft einen Wert ab, der angibt, ob Videos über das Remote Fenster Media Player-Steuerelement angezeigt werden können.
+Das **hasDisplay-Attribut** ruft einen Wert ab, der angibt, ob das Video über das Remotesteuerelement Windows Media Player angezeigt werden kann.
 
 ``` syntax
         elementID.hasDisplay
@@ -29,24 +29,24 @@ Das **hasdisplay** -Attribut Ruft einen Wert ab, der angibt, ob Videos über das
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein Schreib geschützter **boolescher** Wert.
+Dieses Attribut ist ein schreibgeschützter **boolescher** Wert.
 
 
 
 | Wert | BESCHREIBUNG               |
 |-------|---------------------------|
 | True  | Das Video kann angezeigt werden.    |
-| False | Das Video kann nicht angezeigt werden. |
+| Falsch | Das Video kann nicht angezeigt werden. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird nur verwendet, wenn das Windows Media Player-Steuerelement Remoting ist.
+Dieses Attribut wird nur beim Remoting des Windows Media Player-Steuerelements verwendet.
 
-Mehrere Windows Media Player-Steuerelemente können gleichzeitig remote ausgeführt werden, aber Video kann nur jeweils an einer Stelle angezeigt werden, entweder im vollständigen Modus des Players oder in einem der Remote Steuerelemente. Verwenden Sie diese Eigenschaft, um zu bestimmen, ob das aktuelle Steuerelement das aktuelle Steuerelement ist, durch das Video angezeigt werden kann.
+Mehrere Windows Media Player-Steuerelemente können gleichzeitig remote ausgeführt werden, video kann jedoch nur an einer Stelle gleichzeitig angezeigt werden, entweder im vollständigen Modus des Players oder in einem der Remotesteuerelemente. Verwenden Sie diese Eigenschaft, um zu bestimmen, ob das aktuelle Steuerelement das Steuerelement ist, über das Video angezeigt werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ Mehrere Windows Media Player-Steuerelemente können gleichzeitig remote ausgefü
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -62,7 +62,7 @@ Mehrere Windows Media Player-Steuerelemente können gleichzeitig remote ausgefü
 
 <dl> <dt>
 
-[**Playerapplication-Element**](playerapplication-element.md)
+[**PLAYERAPPLICATION-Element**](playerapplication-element.md)
 </dt> <dt>
 
 [**Remoting des Windows Media Player-Steuerelements**](remoting-the-windows-media-player-control.md)

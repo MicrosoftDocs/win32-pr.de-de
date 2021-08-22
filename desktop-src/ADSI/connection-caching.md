@@ -1,27 +1,27 @@
 ---
 title: Zwischenspeichern von Verbindungen
-description: Wenn eine Verbindung mit einem Server hergestellt wird, wird das Verbindungs Handle für diesen Prozess auf dem Client Computer zwischengespeichert, bis die Verbindung geschlossen wird.
+description: Wenn eine Verbindung mit einem Server hergestellt wird, wird das Verbindungshandy auf dem Clientcomputer für diesen Prozess zwischengespeichert, bis diese Verbindung geschlossen wird.
 ms.assetid: 927afd35-8703-4234-b6a8-6320a3667532
 ms.tgt_platform: multiple
 keywords:
-- Verbindungs Caching (ADSI)
-- Zwischenspeichern von Verbindungen
+- Verbindungszwischenspeicherung ADSI
+- Verbindungszwischenspeicherung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 857d102a52be9c7ccf40f9076892a85d5b3b8683
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fa0fbf63d65a6941e986069289db201a237deb9ddc7058f291218c1496d0a40e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036317"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118429027"
 ---
 # <a name="connection-caching"></a>Zwischenspeichern von Verbindungen
 
-Wenn eine Verbindung mit einem Server hergestellt wird, wird das Verbindungs Handle für diesen Prozess auf dem Client Computer zwischengespeichert, bis die Verbindung geschlossen wird. Wenn derselbe Server, Port und die gleichen Anmelde Informationen in einer nachfolgenden Verbindung verwendet werden, und nur die **ADS \_ fast \_ Bind** -oder **ADS \_ Server \_ Bind** -Authentifizierungsflags unterschiedlich sind, wird die vorhandene Verbindung von ADSI wieder verwendet. ADSI führt diese Verbindungs Zwischenspeicherung pro Prozess durch.
+Wenn eine Verbindung mit einem Server hergestellt wird, wird das Verbindungshandy auf dem Clientcomputer für diesen Prozess zwischengespeichert, bis diese Verbindung geschlossen wird. Wenn derselbe Server, Port und die gleichen Anmeldeinformationen in einer nachfolgenden Verbindung verwendet werden und sich nur die **ADS \_ FAST \_ BIND-** oder **ADS SERVER \_ BIND-Authentifizierungsflags \_** unterscheiden, verwendet ADSI die vorhandene Verbindung erneut. ADSI führt diese Verbindungszwischenspeicherung pro Prozess durch.
 
-Um die Leistung zu verbessern, verwenden Sie nach Möglichkeit vorhandene Verbindungen wieder.
+Um die Leistung zu erhöhen, sollten Sie vorhandene Verbindungen nach Möglichkeit wiederverwenden.
 
-Das folgende Codebeispiel zeigt, wie das Verbindungs Caching funktioniert.
+Das folgende Codebeispiel zeigt, wie das Zwischenspeichern von Verbindungen funktioniert.
 
 
 ```VB
@@ -64,9 +64,9 @@ Set cachedConn = Nothing
 
 
 
- 
+ 
 
- 
+ 
 
 
 

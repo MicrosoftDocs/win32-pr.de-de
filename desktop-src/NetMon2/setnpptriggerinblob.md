@@ -1,7 +1,7 @@
 ---
 description: Legt den BLOB-Trigger fest.
 ms.assetid: 88bfd5cd-f563-4d0c-81a3-54a846805b87
-title: Setnpptriggerinblob-Funktion (Netmon. h)
+title: SetNPPTriggerInBlob-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Npptools.dll
-ms.openlocfilehash: 05b8bb3f7f95dc3246ef10f3945b9ab0868550cb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ed344b3434e8ae53fe88e7ee97b77a6efa5bd3f0941af6cc9cbc6f2ff10304b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118363778"
 ---
-# <a name="setnpptriggerinblob-function"></a>Setnpptriggerinblob-Funktion
+# <a name="setnpptriggerinblob-function"></a>SetNPPTriggerInBlob-Funktion
 
-Die **setnpptriggerinblob** -Funktion legt den BLOB-Trigger fest.
+Die **SetNPPTriggerInBlob-Funktion** legt den BLOB-Trigger fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,36 +41,36 @@ DWORD SetNPPTriggerInBlob(
 
 <dl> <dt>
 
-*hblob* \[ in\]
+*hBlob* \[ In\]
 </dt> <dd>
 
 Das Handle für das BLOB.
 
 </dd> <dt>
 
-*p-Auslösung* \[ in\]
+*pTrigger* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den Wert des Auslösers.
+Ein Zeiger auf den Triggerwert.
 
 </dd> <dt>
 
-*herrorblob* \[ vorgenommen\]
+*hErrorBlob* \[ out\]
 </dt> <dd>
 
-Das Handle für ein fehlerblob, das angibt, wo der Fehler im ursprünglichen BLOB aufgetreten ist (sofern vorhanden).
+Das Handle für ein Fehler-BLOB, das angibt, wo im ursprünglichen BLOB der Fehler aufgetreten ist (falls vorhanden).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, der den Fehler angibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese auslöserdaten werden in der **Trigger** -Kategorie des BLOBs gespeichert.
+Diese Triggerdaten werden in der **Kategorie Trigger** des BLOB gespeichert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,41 +80,41 @@ Diese auslöserdaten werden in der **Trigger** -Kategorie des BLOBs gespeichert.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Npptools. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Npptools.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Npptools.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Getnpptriggerfromblob](getnpptriggerfromblob.md)
+[GetNPPTriggerFromBlob](getnpptriggerfromblob.md)
 </dt> <dt>
 
-[Setboolinblob](setboolinblob.md)
+[SetBoolInBlob](setboolinblob.md)
 </dt> <dt>
 
-[Setclassidinblob](setclassidinblob.md)
+[SetClassIDInBlob](setclassidinblob.md)
 </dt> <dt>
 
-[Setdwordinblob](setdwordinblob.md)
+[SetDwordInBlob](setdwordinblob.md)
 </dt> <dt>
 
-[Setmacaddressinblob](setmacaddressinblob.md)
+[SetMacAddressInBlob](setmacaddressinblob.md)
 </dt> <dt>
 
-[Setnetworkinfoinblob](setnetworkinfoinblob.md)
+[SetNetworkInfoInBlob](setnetworkinfoinblob.md)
 </dt> <dt>
 
-[Setnppaddressfilterinblob](setnppaddressfilterinblob.md)
+[SetNPPAddressFilterInBlob](setnppaddressfilterinblob.md)
 </dt> <dt>
 
-[Setnpppatternfilterinblob](setnpppatternfilterinblob.md)
+[SetNPPPatternFilterInBlob](setnpppatternfilterinblob.md)
 </dt> <dt>
 
-[Setstringinblob](setstringinblob.md)
+[SetStringInBlob](setstringinblob.md)
 </dt> </dl>
 
  

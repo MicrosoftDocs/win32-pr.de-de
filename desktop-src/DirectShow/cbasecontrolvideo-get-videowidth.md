@@ -1,7 +1,7 @@
 ---
-description: Die get \_ videowidth-Methode ruft die Breite des systemeigenen Videos ab.
+description: Die get \_ VideoWidth-Methode ruft die Breite des nativen Videos ab.
 ms.assetid: dfd897f0-f580-44c0-9445-ba61ae267187
-title: CBaseControlVideo.get_VideoWidth-Methode (ctlutil. h)
+title: CBaseControlVideo.get_VideoWidth-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: faeeed7ea8af58103e74d9b8c3690523c893282f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 268316dd9b7f37894f60ed45878c7de9bbc8d379301daa7bbefedcadd0b8e77f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365850"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118661377"
 ---
-# <a name="cbasecontrolvideoget_videowidth-method"></a>Cbasecontrolvideo. get \_ videowidth-Methode
+# <a name="cbasecontrolvideoget_videowidth-method"></a>CBaseControlVideo.get \_ VideoWidth-Methode
 
-Die- `get_VideoWidth` Methode ruft die Breite des systemeigenen Videos ab.
+Die `get_VideoWidth` -Methode ruft die Breite des nativen Videos ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT get_VideoWidth(
 
 <dl> <dt>
 
-*pvideowidth* 
+*pVideoWidth* 
 </dt> <dd>
 
 Zeiger auf die Breite des nativen Videos in Pixel.
@@ -51,11 +51,11 @@ Zeiger auf die Breite des nativen Videos in Pixel.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn \_ nicht genügend Arbeitsspeicher verfügbar ist, wird noError zurückgegeben, wenn der Vorgang erfolgreich war.
+Gibt NOERROR zurück, wenn erfolgreich, oder E \_ OUTOFMEMORY, wenn nicht genügend Arbeitsspeicher verfügbar ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion implementiert die [**ibasicvideo:: get \_ videowidth**](/windows/desktop/api/Control/nf-control-ibasicvideo-get_videowidth) -Methode. Er ruft den reinen virtuellen [**cbasecontrolvideo:: getvideoformat**](cbasecontrolvideo-getvideoformat.md) auf, um die [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur aus der abgeleiteten Klasse abzurufen.
+Diese Memberfunktion implementiert die [**IBasicVideo::get \_ VideoWidth-Methode.**](/windows/desktop/api/Control/nf-control-ibasicvideo-get_videowidth) Sie ruft das rein virtuelle [**CBaseControlVideo::GetVideoFormat**](cbasecontrolvideo-getvideoformat.md) auf, um die [**VIDEOINFOHEADER-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) aus der abgeleiteten Klasse abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Diese Member-Funktion implementiert die [**ibasicvideo:: get \_ videowidth**](/w
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

@@ -1,12 +1,12 @@
 ---
-title: Delta Service-Methode der Win32_TSGatewayLoadBalancer-Klasse
-description: Löscht Server aus der Server-Eigenschaft.
+title: DeleteServers-Methode der Win32_TSGatewayLoadBalancer-Klasse
+description: Löscht Server aus der Servers-Eigenschaft.
 ms.assetid: 5ef44725-82b6-464a-abab-a68cc8799669
 ms.tgt_platform: multiple
 keywords:
-- Delta Service-Methode Remotedesktopdienste
-- Delta Service-Methode Remotedesktopdienste, Win32_TSGatewayLoadBalancer-Klasse
-- Win32_TSGatewayLoadBalancer-Klasse Remotedesktopdienste, Delta Service-Methode
+- DeleteServers-Methode Remotedesktopdienste
+- DeleteServers-Methode Remotedesktopdienste , Win32_TSGatewayLoadBalancer-Klasse
+- Win32_TSGatewayLoadBalancer-Klasse Remotedesktopdienste , DeleteServers-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b889f37b783853fbca0b9cb399a83959e2522d0e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4d3c37380694706a368fb834807460c9625eb2317e87e3e5523cb93b49d9b16f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118609605"
 ---
-# <a name="deleteservers-method-of-the-win32_tsgatewayloadbalancer-class"></a>Delta Service-Methode der Win32- \_ Klasse "tsgatewayloadbalancer"
+# <a name="deleteservers-method-of-the-win32_tsgatewayloadbalancer-class"></a>DeleteServers-Methode der Win32 \_ TSGatewayLoadBalancer-Klasse
 
-Löscht Server aus der **Server** -Eigenschaft.
+Löscht Server aus der **Servers-Eigenschaft.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ uint32 DeleteServers(
 
 <dl> <dt>
 
-*Server* \[ in\]
+*Server* \[ In\]
 </dt> <dd>
 
-Durch Semikolons getrennte Liste der RD-Gateway Lasten Ausgleichs Server, die aus der **Server** Eigenschaft gelöscht werden sollen.
+Durch Semikolons getrennte Liste von RD-Gateway-Lastenausgleichsservern, die aus der **Eigenschaft Server** gelöscht werden sollen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn sich mehrere Server im *Server* -Parameter befinden und einer der Server nicht verarbeitet werden kann, wird keiner der Server verarbeitet.
+Wenn sich mehrere Server im *Serverparameter* befinden und einer der Server nicht verarbeitet werden kann, wird keiner der Server verarbeitet.
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,16 +71,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-"t- \_ gatewayloadbalancer"**](win32-tsgatewayloadbalancer.md)
+[**Win32 \_ TSGatewayLoadBalancer**](win32-tsgatewayloadbalancer.md)
 </dt> </dl>
 
  

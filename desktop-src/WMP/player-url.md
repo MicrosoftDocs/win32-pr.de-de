@@ -1,9 +1,9 @@
 ---
-title: Player. URL
-description: Die URL-Eigenschaft gibt den Namen des zu Wiedergabe enden Medien Elements an oder ruft ihn ab.
+title: Player.URL
+description: Die URL-Eigenschaft gibt den Namen des zu wiedergebenden Medienelements an oder ruft diesen ab.
 ms.assetid: 74987ffd-c625-4d30-9f5f-5170119158f9
 keywords:
-- Player. URL-Windows-Media Player
+- Player.URL-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 62d4f0c75ac0dddeeaced0f1a3a6f1247df4ae36
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a00a6513350ee9c39855aba8168faf9ced788a0686a0fdbe845013dcc521142f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118572039"
 ---
-# <a name="playerurl"></a>Player. URL
+# <a name="playerurl"></a>Player.URL
 
-Die **URL** -Eigenschaft gibt den Namen des zu Wiedergabe enden Medien Elements an oder ruft ihn ab.
+Die **URL-Eigenschaft** gibt den Namen des zu wiedergebenden Medienelements an oder ruft diesen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,19 +31,19 @@ Die **URL** -Eigenschaft gibt den Namen des zu Wiedergabe enden Medien Elements 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine Lese- **/schreibzeichenfolge** ohne Standardwert.
+Diese Eigenschaft ist eine **Zeichenfolge** mit Lese-/Schreibzugriff ohne Standardwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft kann nur auf eine URL in einer Sicherheitszone festgelegt werden, die identisch ist oder weniger restriktiv ist als die Sicherheitszone des aufrufenden Programms oder der Webseite.
+Diese Eigenschaft kann nur auf eine URL in einer Sicherheitszone festgelegt werden, die identisch oder weniger restriktiv als die Sicherheitszone des aufrufenden Programms oder der Webseite ist.
 
-Anwendungen, die Medienelemente hinter einer Firewall öffnen, haben eine bessere Leistung, wenn die Adresse anstelle der IP-Adresse mit dem DNS-Namen (Domain Nameserver) angegeben wird.
+Anwendungen, die Medienelemente hinter einer Firewall öffnen, haben eine bessere Leistung, wenn die Adresse mit dem DNS-Namen (Domain Name Server) anstelle der IP-Adresse angegeben wird.
 
-Diese Methode kann nicht aus dem Ereignishandlercode aufgerufen werden. Aufruf *Player*. Die **URL** eines Ereignis Handlers kann zu unerwarteten Ergebnissen führen.
+Rufen Sie diese Methode nicht aus Ereignishandlercode auf. Aufrufen von *Player*. **Die URL** eines Ereignishandlers kann zu unerwarteten Ergebnissen führen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel werden ein HTML-Text Eingabe Element und ein HTML-Schaltflächen-Eingabe Element erstellt. Mit dem Text-Element kann der Benutzer einen Pfad eingeben, um eine digitale Mediendatei anzugeben, die abgespielt werden soll. Das Button-Element führt JScript aus, das die Datei öffnet und Windows Media Player startet. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel werden ein HTML TEXT-Eingabeelement und ein HTML BUTTON-Eingabeelement erstellt. Mit dem TEXT-Element kann der Benutzer einen Pfad eingeben, um eine zu wiedergebende digitale Mediendatei anzugeben. Das BUTTON-Element führt JScript aus, der die Datei öffnet und Windows Media Player startet. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -70,7 +70,7 @@ Im folgenden Beispiel werden ein HTML-Text Eingabe Element und ein HTML-Schaltfl
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 

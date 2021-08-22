@@ -1,11 +1,11 @@
 ---
-title: Iwmpsettings Autostart (Eigenschaft)
-description: Mit der Autostart-Eigenschaft wird ein Wert abgerufen oder festgelegt, der angibt, ob das aktuelle Medien Element automatisch wiedergegeben wird.
+title: IWMPSettings autoStart-Eigenschaft
+description: Die autoStart-Eigenschaft ruft einen Wert ab, der angibt, ob das aktuelle Medienelement automatisch abspielt, oder legt diesen fest.
 ms.assetid: 01a1cb78-9951-478a-8ea3-1ae06164beab
 keywords:
-- Autostart-Eigenschaften Fenster Media Player
-- AutoStart-Eigenschaft, Windows Media Player, iwmpsettings-Schnittstelle
-- Iwmpsettings-Schnittstelle, Windows Media Player, AutoStart-Eigenschaft
+- autoStart-Windows Media Player
+- autoStart-Windows Media Player , IWMPSettings-Schnittstelle
+- IWMPSettings-Schnittstelle Windows Media Player , autoStart-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aaf6c1fb43107df11462737286e26fa7801360d0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ba7be64a030bbfe8abbd81830a7638094cd3da93939f3184ad3a4cfca0063c9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360930"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118568467"
 ---
-# <a name="iwmpsettingsautostart-property"></a>Iwmpsettings:: AutoStart-Eigenschaft
+# <a name="iwmpsettingsautostart-property"></a>IWMPSettings::autoStart-Eigenschaft
 
-Mit der **Autostart** -Eigenschaft wird ein Wert abgerufen oder festgelegt, der angibt, ob das aktuelle Medien Element automatisch wiedergegeben wird.
+Die **autoStart-Eigenschaft** ruft einen Wert ab, der angibt, ob das aktuelle Medienelement automatisch abspielt, oder legt diesen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,13 +46,13 @@ Public Property autoStart As System.Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Boolean** -Wert, der angibt, ob das aktuelle Medien Element automatisch wiedergegeben wird. Der Standardwert ist **true**.
+Ein **System.Boolean-Wert,** der angibt, ob die Wiedergabe des aktuellen Medienelements automatisch beginnt. Der Standardwert ist **true**.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn **Autostart** auf **true** festgelegt ist, wird das Medien Element abgespielt, wenn **AxWindowsMediaPlayer. URL**, **AxWindowsMediaPlayer. currentwiedergabe** oder **AxWindowsMediaPlayer. currentMedia** festgelegt ist. Andernfalls wird das Medien Element erst wieder abgespielt, wenn die **iwmpcontrols. Play** -Methode aufgerufen wird.
+Wenn **autoStart** auf **TRUE** festgelegt ist, beginnt die Wiedergabe des Medienelements, wenn **AxWindowsMediaPlayer.URL,** **AxWindowsMediaPlayer.currentPlaylist** oder **AxWindowsMediaPlayer.currentMedia** festgelegt ist. Andernfalls beginnt die Wiedergabe des Medienelements erst, wenn **die IWMPControls.play-Methode** aufgerufen wird.
 
-Wenn Sie " **Autostart** " nicht unmittelbar vor der Angabe eines Medien Elements auf " **true** " festlegen, sollten Sie diese Einstellung nicht als Ersatz für die Verwendung der **iwmpcontrols. Play** -Methode verwenden.
+Wenn Sie **autoStart nicht unmittelbar** vor der Angabe eines Medienelements auf **TRUE** festlegen, sollten Sie sich nicht auf diese Einstellung als Ersatz für die Verwendung der **IWMPControls.play-Methode** verlassen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,29 +60,29 @@ Wenn Sie " **Autostart** " nicht unmittelbar vor der Angabe eines Medien Element
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer. currentMedia (VB und c#)**](axwmplib-axwindowsmediaplayer-currentmedia--vb-and-c.md)
+[**AxWindowsMediaPlayer.currentMedia (VB und C#)**](axwmplib-axwindowsmediaplayer-currentmedia--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. currentwiedergabe (VB und c#)**](axwmplib-axwindowsmediaplayer-currentplaylist--vb-and-c.md)
+[**AxWindowsMediaPlayer.currentPlaylist (VB und C#)**](axwmplib-axwindowsmediaplayer-currentplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. URL (VB und c#)**](axwmplib-axwindowsmediaplayer-url--vb-and-c.md)
+[**AxWindowsMediaPlayer.URL (VB und C#)**](axwmplib-axwindowsmediaplayer-url--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. Play (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-play--vb-and-c.md)
+[**IWMPControls.play (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-play--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings-Schnittstelle (VB und c#)**](iwmpsettings--vb-and-c.md)
+[**IWMPSettings-Schnittstelle (VB und C#)**](iwmpsettings--vb-and-c.md)
 </dt> </dl>
 
  

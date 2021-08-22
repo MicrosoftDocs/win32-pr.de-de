@@ -1,34 +1,34 @@
 ---
-title: Listenfeld Benachrichtigungen
-description: Listenfeld Benachrichtigungen
+title: Listenfeldbenachrichtigungen
+description: Listenfeldbenachrichtigungen
 ms.assetid: 933cf4f6-9796-427f-a5f4-c01090554154
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 59287dceccbcc70e71a410383bb6d66ed623627f
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: c90e8c11f6d523ed342fec14c0d8093bf16402b26df8bbc2a470166ed194ceed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103869919"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118416542"
 ---
-# <a name="list-box-notifications"></a>Listenfeld Benachrichtigungen
+# <a name="list-box-notifications"></a>Listenfeldbenachrichtigungen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [DL- \_ BeginDrag](dl-begindrag.md)
--   [DL- \_ Abbruch](dl-canceldrag.md)
--   [DL- \_ Zieh Vorgänge](dl-dragging.md)
--   [DL \_ gelöscht](dl-dropped.md)
--   [LBN- \_ dblclk](lbn-dblclk.md)
--   [LBN- \_ errspace](lbn-errspace.md)
--   [LBN- \_ killfokus](lbn-killfocus.md)
--   [LBN \_ selcancel](lbn-selcancel.md)
--   [LBN \_ selChange](lbn-selchange.md)
--   [LBN- \_ SetFocus](lbn-setfocus.md)
--   [**WM- \_ Diagramm**](wm-chartoitem.md)
--   [**WM \_ ctlcolorlistbox**](wm-ctlcolorlistbox.md)
--   [**WM- \_ DeleteItem**](wm-deleteitem.md)
--   [**WM \_ vkeytoitem**](wm-vkeytoitem.md)
+-   [DL \_ BEGINDRAG](dl-begindrag.md)
+-   [DL \_ CANCELDRAG](dl-canceldrag.md)
+-   [DL \_ DRAGGING](dl-dragging.md)
+-   [DL \_ DROPPED](dl-dropped.md)
+-   [LBN \_ DBLCLK](lbn-dblclk.md)
+-   [LBN \_ ERRSPACE](lbn-errspace.md)
+-   [LBN \_ KILLFOCUS](lbn-killfocus.md)
+-   [LBN \_ SELCANCEL](lbn-selcancel.md)
+-   [LBN \_ SELCHANGE](lbn-selchange.md)
+-   [LBN \_ SETFOCUS](lbn-setfocus.md)
+-   [**WM \_ CHARTOITEM**](wm-chartoitem.md)
+-   [**WM \_ CTLCOLORLISTBOX**](wm-ctlcolorlistbox.md)
+-   [**WM \_ DELETEITEM**](wm-deleteitem.md)
+-   [**WM \_ VKEYTOITEM**](wm-vkeytoitem.md)
 
  
 

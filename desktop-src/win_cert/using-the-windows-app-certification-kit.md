@@ -1,6 +1,6 @@
 ---
 title: Verwenden des Zertifizierungskits für Windows-Apps
-description: Um ihrer Desktop-App die beste Chance zu geben, eine Zertifizierung zu erhalten, überprüfen und testen Sie Sie auf Ihrem Computer, bevor Sie Sie zur Zertifizierung einreichen und im Windows Store auflisten.
+description: Damit Ihre Desktop-App die beste Chance hat, zertifiziert zu werden, überprüfen und testen Sie sie auf Ihrem Computer, bevor Sie sie zur Zertifizierung und Auflistung im Windows Store übermitteln.
 ms.assetid: 8B460B84-0997-4987-9B66-90F9C6D88D83
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,85 +9,85 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 89b3c6e4de3286dd6418c4c8e186bcadaddf00b7
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: 8692e87f8bd152b730129c0d8684bc7ec2ca91964ecd6c25e98eb3db3e0fce44
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "104391130"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118708748"
 ---
 # <a name="using-the-windows-app-certification-kit"></a>Verwenden des Zertifizierungskits für Windows-Apps
 
-Um ihrer Desktop-App die beste Chance zu geben, eine Zertifizierung zu erhalten, überprüfen und testen Sie Sie auf Ihrem Computer, bevor Sie Sie zur Zertifizierung einreichen und im Windows Store auflisten. Zum Zertifizieren der APP müssen Sie das [zertifizierungskit für Windows-apps](/previous-versions//mt637081(v=vs.85))installieren und ausführen. Ausführliche Informationen zu bestimmten Tests im Kit finden Sie unter [Tests des Zertifizierungs Kits für Windows-apps](windows-app-certification-kit-tests.md).
+Damit Ihre Desktop-App die beste Chance hat, zertifiziert zu werden, überprüfen und testen Sie sie auf Ihrem Computer, bevor Sie sie zur Zertifizierung und Auflistung im Windows Store übermitteln. Um Ihre App zu zertifizieren, müssen Sie das [Windows App Certification Kit](/previous-versions//mt637081(v=vs.85))installieren und ausführen. Ausführliche Informationen zu bestimmten Tests im Kit finden Sie unter Windows Tests des [App Certification Kit.](windows-app-certification-kit-tests.md)
 
-Einen Überblick über den Zertifizierungsprozess und die Verwendung dieses Tools finden [Sie unter zertifizieren ihrer Desktop-App](windows-certification-portal.md).
+Einen überblick über den Zertifizierungsprozess und die Verwendung dieses Tools finden Sie unter [Zertifizieren Ihrer Desktop-App.](windows-certification-portal.md)
 
-Die aktuelle Version von Windows ACK ist in 14 Sprachen verfügbar (Tschechisch, Englisch, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch, Polnisch, Portugiesisch (Brasilien), Russisch, Chinesisch (vereinfacht), Spanisch, Chinesisch (traditionell), Spanisch, Chinesisch (traditionell) und Türkisch).
+Das aktuelle Release von Windows ACK ist in 14 Sprachen verfügbar (Tschechisch, Englisch, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch, Polnisch, Portugiesisch (Brasilien), Russisch, Vereinfachtes Chinesisch, Spanisch, Traditionelles Chinesisch und Türkisch.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Vor der Installation von Windows ACK muss das Betriebssystem installiert und ausgeführt werden.
+Bevor Sie die Windows ACK installieren, müssen Sie das Betriebssystem installieren und ausführen.
 
-1. Installieren Sie das Betriebssystem, für das Sie apps entwickeln, und führen Sie es aus.
+1. Installieren Sie das Betriebssystem, für das Sie Apps entwickeln, und führen Sie es aus.
 
 -   Wenn Sie Apps für Windows 7 entwickeln, können Sie Windows 7, Windows 8 oder Windows 8.1 installieren und ausführen.
--   Wenn Sie eine Windows 8-Desktop-App oder Windows 8-Desktop Geräte-App entwickeln, können Sie Windows 8 oder Windows 8.1 installieren und ausführen.
--   Wenn Sie eine Windows 8.1 Desktop-App oder Windows 8-Desktop Geräte-App entwickeln, installieren Sie Windows 8.1.
+-   Wenn Sie eine Windows 8 Desktop-App oder Windows 8 Desktopgeräte-App entwickeln, können Sie Windows 8 oder Windows 8.1 installieren und ausführen.
+-   Wenn Sie eine Windows 8.1 Desktop-App oder Windows 8 Desktopgeräte-App entwickeln, installieren Sie Windows 8.1.
 
-2. Installieren Sie das [Windows-zertifizierungskit für apps 3,3](/previous-versions//mt637081(v=vs.85)), das im Windows Software Development Kit (SDK) für Windows 8.1 enthalten ist.
+2. Installieren Sie das [Windows App Certification Kit 3.3,](/previous-versions//mt637081(v=vs.85))das im Windows Software Development Kit (SDK) für Windows 8.1 enthalten ist.
 
-**Hinweis:** Wenn Sie das zertifizierungskit für Windows-apps 3,3 oder höher auf Ihrem PC installieren, ersetzen Sie alle zuvor installierten Kit-Versionen.
+**Hinweis:** Wenn Sie Windows App Certification Kit 3.3 oder höher auf Ihrem PC installieren, ersetzen Sie jede zuvor installierte Version des Kits.
 
-## <a name="instructions-to-run-windows-app-certification-kit-33"></a>Anweisungen zum Ausführen des Windows App Certification Kit 3,3
+## <a name="instructions-to-run-windows-app-certification-kit-33"></a>Anweisungen zum Ausführen Windows App Certification Kit 3.3
 
-**Validieren ihrer Desktop-App mithilfe des Windows-zertifizierungskit für apps 3,3 interaktiv**
+**Überprüfen Ihrer Desktop-App mit dem Windows App Certification Kit 3.3 interaktiv**
 
-1.  Suchen Sie im Startmenü nach Windows App CERT Kit.
-2.  Klicken Sie im zertifizierungskit für Windows-apps auf die Test Validierungs Kategorie, die Sie ausführen möchten. Wenn Sie eine Desktop-App validieren, klicken Sie auf **Desktop-App** überprüfen.
-3.  Navigieren Sie im nächsten Bildschirm zu der Setup Datei der Desktop-App, die Sie überprüfen möchten.
-    -   **Hinweis:** Mithilfe der [Befehlszeilen Schritte](#commandlinesteps) können Sie ggf. Optionen oder einen Installations Schalter einschließen.
-4.  Geben Sie den App-nutzentyp an, und klicken Sie dann auf **weiter**. Das Windows-zertifizierungskit für apps startet die Installation der Desktop-App mithilfe der Setup Dateien, damit die Installation überprüft werden kann.
-5.  Wenn Sie aufgefordert werden, das System neu zu starten, um das Setup abzuschließen, klicken Sie auf **Nein**. Wenn Ihre APP mehrere Komponenten oder externe Abhängigkeiten installieren muss, wählen Sie den Namen für Ihre APP sorgfältig aus. Der Name, den Sie hier auswählen, ist der Name, den Ihre APP erhält, wenn Sie im Windows Store aufgeführt wird. Wenn die Überprüfung beendet ist, speichern Sie den Bericht mit dem Namen, den Sie in Schritt 6 für Ihre APP erhalten haben. Das Windows-zertifizierungskit für Apps erstellt eine XML-Berichtsdatei und speichert Sie.
-6.  Navigieren Sie zu dem Ordner, in dem Sie den Bericht gespeichert haben, und öffnen Sie ihn, um die Testergebnisse anzuzeigen. Wenn der Test fehlgeschlagen ist und Sie für einen Verzicht berechtigt sind, werden die Informationen, die Sie übermitteln müssen, hier aufgeführt. Sie müssen eine ausführliche Beschreibung für jede mögliche Anforderung zur Aufhebung der Anforderung einreichen.
+1.  Suchen Sie im Startmenü nach Windows App Cert Kit.
+2.  Klicken Sie im Windows App Certification Kit auf die Testvalidierungskategorie, die Sie ausführen möchten. Wenn Sie eine Desktop-App überprüfen, wählen Sie **Desktop-App überprüfen** aus.
+3.  Navigieren Sie auf dem nächsten Bildschirm zur Setupdatei der Desktop-App, die Sie überprüfen möchten.
+    -   **Hinweis:** Sie können die [Befehlszeilenschritte](#commandlinesteps) verwenden, um bei Bedarf Optionen oder einen Installationsschalter einzufügen.
+4.  Geben Sie den App-Nutzungstyp an, und klicken Sie dann auf **Weiter.** Das Windows App Certification Kit beginnt mit der Installation der Desktop-App mithilfe der Setupdateien, damit die Installation überprüft werden kann.
+5.  Wenn Sie aufgefordert werden, das System neu zu starten, um das Setup abzuschließen, wählen Sie **Nein** aus. Wenn Ihre App mehrere Komponenten oder externe Abhängigkeiten installieren muss, wählen Sie den Namen für Ihre App sorgfältig aus. Der name, den Sie hier auswählen, ist der Name, den Ihre App erhält, wenn sie im Windows Store aufgeführt wird. Speichern Sie nach Abschluss der Überprüfung den Bericht mit dem Namen, den Sie Ihrer App in Schritt 6 gegeben haben. Das Windows App Certification Kit erstellt eine XML-Berichtsdatei und speichert sie.
+6.  Navigieren Sie zu dem Ordner, in dem Sie den Bericht gespeichert haben, und öffnen Sie ihn, um die Ergebnisse des Tests anzuzeigen. Wenn ihr Test nicht erfolgreich war und Sie zu einem Widerruf berechtigt sind, werden die Informationen, die Sie übermitteln müssen, hier aufgeführt. Sie müssen eine ausführliche Beschreibung für jede mögliche Aufhebungsanforderung übermitteln.
 
-**Überprüfen Ihrer Windows-Desktop-App mithilfe des Windows-zertifizierungsk3,3 IT für apps über die Befehlszeile**
+**Überprüfen Ihrer Windows Desktop-App mithilfe des Windows App Certification Kit 3.3 über eine Befehlszeile**
 
-1.  Navigieren Sie zu dem Ordner, in dem Sie den Bericht gespeichert haben, und öffnen Sie ihn, um die Testergebnisse anzuzeigen. Fehlgeschlagene Tests mit einer möglichen Anforderung zum Anfordern von Anforderungen sind hier aufgeführt. Sie müssen eine ausführliche Beschreibung für jede mögliche Anforderung zur Aufhebung der Anforderung einreichen.
-2.  Geben Sie in dem Ordner mit dem zertifizierungskit für Windows-Apps die folgenden Befehle in dieser Reihenfolge ein:
+1.  Navigieren Sie zu dem Ordner, in dem Sie den Bericht gespeichert haben, und öffnen Sie ihn, um die Ergebnisse des Tests anzuzeigen. Fehlgeschlagene Tests mit einer möglichen Aufhebungsanforderung sind hier aufgeführt. Sie müssen eine ausführliche Beschreibung für jede mögliche Aufhebungsanforderung übermitteln.
+2.  Geben Sie in dem Ordner, der das Windows App Certification Kit enthält, die folgenden Befehle in dieser Reihenfolge ein:
 
     -   <span id="commandLineSteps"></span><span id="commandlinesteps"></span><span id="COMMANDLINESTEPS"></span>`appcert.exe reset`
     -   `appcert test -apptype desktop -setuppath d:\cdrom\setup.exe  -appusage peruser -reportoutputpath [report file name]`
 
-    dabei `[report file name]` gilt: der voll qualifizierte Dateiname der XML-Datei, die das Kit erstellt, um den Testbericht zu enthalten.
+    where: `[report file name]` ist der vollqualifizierte Dateiname der XML-Datei, die das Kit erstellt, um den Testbericht zu enthalten.
 
-3.  Nachdem der Test abgeschlossen ist, öffnen Sie die Berichtsdatei namens \[ Name der Berichtsdatei, und zeigen Sie \] die Testergebnisse an.
+3.  Öffnen Sie nach Abschluss des Tests die Berichtsdatei namens Name der \[ Berichtsdatei, \] und zeigen Sie die Testergebnisse an.
 
-    **Hinweis:** Weitere Informationen zur Befehlszeile des zertifizierungskit für Windows-apps erhalten Sie, wenn Sie den Befehl appcert.exe/?
+    **Hinweis:** Geben Sie den Befehl appcert.exe /? ein, um weitere Informationen zur Windows App Certification Kit-Befehlszeile zu erhalten.
 
-    Das zertifizierungskit für Windows-apps muss im Kontext einer aktiven Benutzersitzung ausgeführt werden, aber es ist nicht möglich, apps in einer nicht interaktiven Sitzung zu starten. Die Art und Weise, wie das Kit Token zum Ausführen von Tests mit oder ohne Administratorrechte verarbeitet, hängt ebenfalls von diesem Benutzer Sitzungs Kontext ab. Das Kit kann von einem Dienst ausgeführt werden, der Dienst muss jedoch in der Lage sein, den Kit-Prozess in einer aktiven Benutzersitzung zu erzeugen.
+    Das Windows App Certification Kit muss im Kontext einer aktiven Benutzersitzung ausgeführt werden, Aber Sie können Apps nicht in einer nicht interaktiven Sitzung starten. Die Art und Weise, wie das Kit Token zum Ausführen von Tests mit oder ohne Administratorrechte behandelt, hängt auch von diesem Benutzersitzungskontext ab. Das Kit kann von einem Dienst ausgeführt werden, aber der Dienst muss in der Lage sein, den Kit-Prozess in einer aktiven Benutzersitzung zu starten.
 
-**Verwenden des Zertifizierungs Kits für Windows-Apps zum Überprüfen Ihrer Windows 7-apps**
+**Verwenden des Windows App Certification Kit zum Überprüfen Ihrer Windows 7-Apps**
 
--   Das Windows-zertifizierungskit für apps hat das Windows Software Logo Kit ersetzt. Wenn Sie das Windows 7-Logo für Ihre APP verwenden möchten, verwenden Sie das zertifizierungskit für Windows-Apps für die Validierungstests und den Bericht. Das Kit kann erkennen, auf welchem Betriebssystem es ausgeführt wird und automatisch für Windows 7-apps gestartet wird. Führen Sie den gleichen Prozess zum Überprüfen von Windows 7-Apps aus.
+-   Das Windows App Certification Kit ersetzt das Windows Software Logo Kit. Wenn Sie das Windows 7-Logo für Ihre App verwenden möchten, verwenden Sie das Windows App Certification Kit für Ihre Validierungstests und Berichte. Das Kit kann erkennen, unter welchem Betriebssystem es ausgeführt wird, und wird automatisch für Windows 7 Apps gestartet. Führen Sie den gleichen Prozess zum Überprüfen von Windows 7 Apps aus.
 
 **Einreichen zur Zertifizierung**
 
--   Nachdem Ihre APP überprüft wurde, können Sie Sie [über den Übermittlungs Prozess des Portals](https://www.microsoft.com/?ref=go)zur Zertifizierung einreichen.
+-   Nachdem Ihre App überprüft wurde, können Sie sie [über den Portalübermittlungsprozess](https://www.microsoft.com/?ref=go)zur Zertifizierung übermitteln.
 
 ## <a name="reference-documents"></a>Referenzdokumente
 
--   [Zertifizierungsanforderungen für Windows-Desktop-Apps](/windows/desktop/win_cert/certification-requirements-for-windows-desktop-apps)
--   [Whitepaper zur APP-Zertifizierung](https://www.microsoft.com/download/details.aspx?id=27414)
--   [Windows Store-Onboarding für Desktop-Apps](/previous-versions//dn322034(v=vs.85))
--   [Zertifizierungsanforderungen für die Windows 7-Desktop-App](https://techcommunity.microsoft.com/t5/windows-hardware-certification/bg-p/WindowsHardwareCertification)
+-   [Zertifizierungsanforderungen für Windows Desktop-Apps](/windows/desktop/win_cert/certification-requirements-for-windows-desktop-apps)
+-   [Whitepaper zur App-Zertifizierung](https://www.microsoft.com/download/details.aspx?id=27414)
+-   [Windows Store Onboarding für Desktop-Apps](/previous-versions//dn322034(v=vs.85))
+-   [zertifizierungsanforderungen für Windows 7 Desktop-Apps](https://techcommunity.microsoft.com/t5/windows-hardware-certification/bg-p/WindowsHardwareCertification)
 
 ## <a name="windows-app-certification-kit-tests"></a>Tests im Zertifizierungskit für Windows-Apps
 
-Wir haben das Kit geändert, damit die [Windows-ACK-Tests](windows-app-certification-kit-tests.md) einfacher zu verwenden sind. Das Kit hat jetzt Folgendes:
+Wir haben das Kit geändert, um die Verwendung der [Windows ACK-Tests](windows-app-certification-kit-tests.md) zu vereinfachen. Das Kit verfügt jetzt über Folgendes:
 
 -   Eine neue vereinfachte Benutzeroberfläche
--   Verbesserter Multi-User-Test, der nicht mehr erfordert, dass Sie ein zweites Benutzerkonto einrichten.
+-   Verbesserter Mehrbenutzertest, der nicht mehr erfordert, dass Sie ein zweites Benutzerkonto einrichten
 
- 
+ 
 
- 
+ 

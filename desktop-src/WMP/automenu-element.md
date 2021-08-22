@@ -1,55 +1,55 @@
 ---
-title: Automenu-Element
-description: Automenu-Element
+title: AUTOMENU-Element
+description: AUTOMENU-Element
 ms.assetid: 670c9d85-6362-4068-b283-e4ca17ed43b3
 keywords:
-- Windows Media Player Skins, automenu-Element
-- Skins, automenu-Element
-- Automenu-Element
-- Verweis für Skins, automenu-Element
-- Elemente, automenu
+- Windows Media Player Skins, AUTOMENU-Element
+- skins,AUTOMENU-Element
+- AUTOMENU-Element
+- Referenz für Skins, AUTOMENU-Element
+- elements,AUTOMENU
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 77dc15db3089c48723084642d68787c04436d41a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 75a77036ffd88d514e890d92921deea5bae9d9fba1856fe324bd41c70dbbfc92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118582959"
 ---
-# <a name="automenu-element"></a>Automenu-Element
+# <a name="automenu-element"></a>AUTOMENU-Element
 
-Das **automenu** -Element bietet eine Möglichkeit, den Bereich für den **schnell Zugriff** in einer Skin anzuzeigen. Dies ist ein Menü, das im vollständigen Modus des Players angezeigt wird, wenn Sie auf den Pfeil rechts neben der Schaltfläche **jetzt Wiedergabe** klicken. Sie ermöglicht den sofortigen Zugriff auf digitale Mediendateien, die auf unterschiedliche Weise organisiert sind, wie z. b. in Wiedergabelisten oder nach Album, Artist oder Genre. Verwenden Sie die Attribute **left** und **Top** , um den Speicherort anzugeben, an dem das Menü angezeigt werden soll, wenn die **Show** -Methode aufgerufen wird.
+Das **AUTOMENU-Element** bietet eine Möglichkeit, die **Quick Zugriffsbereich** in einer Skin anzuzeigen. Dies ist ein Menü, das im vollständigen Modus des Players angezeigt wird, wenn Sie auf den Pfeil rechts neben der Schaltfläche **Jetzt wiedergeben** klicken. Es bietet sofortigen Zugriff auf digitale Mediendateien, die auf verschiedene Weise organisiert sind, z. B. in Wiedergabelisten oder nach Album, Interpret oder Genre. Verwenden Sie das **linke** und das **obere** Attribut, um die Position anzugeben, an der das Menü angezeigt werden soll, wenn die **show-Methode** aufgerufen wird.
 
-Das **automenu** -Element unterstützt die folgende Methode.
+Das **AUTOMENU-Element** unterstützt die folgende Methode.
 
 
 
 | Methode                    | BESCHREIBUNG                          |
 |---------------------------|--------------------------------------|
-| [show](automenu-show.md) | Zeigt den Bereich für den **schnell Zugriff** an. |
+| [show](automenu-show.md) | Zeigt den **Quick Zugriffsbereich an.** |
 
 
 
- 
+ 
 
-Das **automenu** -Element unterstützt die folgenden Ambient-Attribute: Left und Top.
+Das **AUTOMENU-Element** unterstützt die folgenden Ambient-Attribute: left und top.
 
 > [!Note]  
-> Für dieses Element ist Windows Media Player 9 oder höher erforderlich.
+> Dieses Element erfordert Windows Media Player Serie 9 oder höher.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Referenz zur Skin-Programmierung**](skin-programming-reference.md)
+[**Referenz zur Skinprogrammierung**](skin-programming-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -4,19 +4,19 @@ description: NAP-Schnittstellen
 ms.assetid: fff854b9-9c83-4db2-bceb-22509b261a97
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ff67fe21922c5b1baf9c2825dc7ea2852f14331
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b704e8924886047b0a50aef7929f52be276a0417d118f2026e47706f95678a2d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118620819"
 ---
 # <a name="nap-interfaces"></a>NAP-Schnittstellen
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
- 
+ 
 
 Das NAP-System besteht aus den folgenden Schnittstellen.
 
@@ -24,37 +24,37 @@ Das NAP-System besteht aus den folgenden Schnittstellen.
 
 | Schnittstellenname                                                                   | BESCHREIBUNG                                                                                                                                         |
 |----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Inapcertrelyingparty**](inapcertrelyingparty.md)                             | Stellt Methoden bereit, die von Zertifikat vertrauenden Seiten für die Kommunikation mit dem NAPAgent verwendet werden müssen.                                                        |
-| [**Inapclientmanagement**](inapclientmanagement.md)                             | Wird für die NAP-Client Verwaltung von SoH-Cache und SoH-Austausch Triggern verwendet. Veraltet.                                                                |
-| [**INapClientManagement2**](inapclientmanagement2.md)                           | Wird für die NAP-Client Verwaltung von SoH-Cache und SoH-Austausch Triggern verwendet.                                                                            |
-| [**Inapcomponentconfig**](inapcomponentconfig.md)                               | Wird für die angepasste Konfiguration von SHV-Komponenten verwendet. Veraltet.                                                                                    |
-| [**INapComponentConfig2**](inapcomponentconfig2.md)                             | Stellt NAP-System Konfigurations Methoden für System Integritätsprüfungen (SHVs) bereit, um eine Netzwerk Richtlinien Server-Benutzeroberfläche (NPS) Remote zu konfigurieren.   |
-| [**INapComponentConfig3**](inapcomponentconfig3.md)                             | Stellt NAP-System Konfigurations Methoden für System Integritätsprüfungen (SHVs) bereit, um Konfigurationsdaten für eine bestimmte Konfigurations-ID festzulegen und zu ändern. |
-| [**Inapcomponentinfo**](inapcomponentinfo.md)                                   | Muss von Plug-in-Komponenten wie SHAs und SHVs implementiert werden, damit Sie vom NAP-System kommuniziert werden können.                          |
-| [**Inapenforcementclientbinding**](inapenforcementclientbinding.md)             | Wird von Erzwingungs Clients für die Kommunikation mit dem NAPAgent verwendet.                                                                                       |
-| [**Inapenforcementclientcallback**](inapenforcementclientcallback.md)           | Erzwingungs Clients müssen diese Schnittstelle implementieren, damit der NAPAgent mit Ihnen kommunizieren kann.                                                  |
-| [**Inapenforcementclientconnection**](inapenforcementclientconnection.md)       | Ermöglicht die clientverbindungsverwaltung. Veraltet.                                                                                                |
-| [**INapEnforcementClientConnection2**](inapenforcementclientconnection2.md)     | Ermöglicht die clientverbindungsverwaltung.                                                                                                            |
-| [**Inapservercallback**](inapservercallback.md)                                 | SHVs verwenden die einzige Methode für diese Schnittstelle, um den Abschluss einer asynchronen Anforderung zu signalisieren.                                                             |
-| [**Inapserverinfo**](inapserverinfo.md)                                         | Wird von Verwaltungs Clients (z. b. WMI-Anbietern, Befehlszeilen Tools usw.) verwendet, um den Status des NAP-Server Systems abzufragen.                             |
-| [**Inapservermanagement**](inapservermanagement.md)                             | Wird für die grundlegende Verwaltung des NAP-Servers verwendet.                                                                                                        |
-| [**Inapsohconstructor**](inapsohconstructor.md)                                 | Wird von SHAs zum Erstellen von SoH-Anforderungen und von SHVs zum Erstellen von SoH-Antworten verwendet.                                                                      |
-| [**Inapsohprocessor**](inapsohprocessor.md)                                     | Wird von SHAs verwendet, um den Inhalt von SoH-Antworten zu verarbeiten, und von SHVs, um den Inhalt von SoH-Anforderungen zu verarbeiten.                                          |
-| [**Inapsystemhealthagentbinding**](inapsystemhealthagentbinding.md)             | SHAs müssen diese Schnittstelle für die Kommunikation mit dem NAPAgent verwenden. Veraltet.                                                                          |
-| [**INapSystemHealthAgentBinding2**](inapsystemhealthagentbinding2.md)           | SHAs müssen diese Schnittstelle für die Kommunikation mit dem NAPAgent verwenden.                                                                                      |
-| [**Inapsystemhealthagentcallback**](inapsystemhealthagentcallback.md)           | SHAs müssen diese Schnittstelle implementieren, um die Verarbeitung mit dem NAP-System zu koordinieren.                                                                    |
-| [**Inapsystemhealthagentrequest**](inapsystemhealthagentrequest.md)             | SHAs verwenden diese Schnittstelle, um ihre Verarbeitung mit dem NAP-System zu kommunizieren und zu koordinieren.                                                         |
-| [**Inapsystemhealthvalidator**](inapsystemhealthvalidator.md)                   | Stellt Methoden bereit, die ein SHV implementieren muss, damit das NAP-System damit kommunizieren kann.                                                         |
-| [**Inapsystemhealthvalidationrequest**](inapsystemhealthvalidationrequest.md)   | SHVs verwenden diese Schnittstelle für die Datenkommunikation mit Ihrer Client seitigen Gegenüberstellung. Veraltet.                                                      |
-| [**INapSystemHealthValidationRequest2**](inapsystemhealthvalidationrequest2.md) | SHVs verwenden diese Schnittstelle für die Datenkommunikation mit Ihrer Client seitigen Gegenüberstellung.                                                                  |
+| [**INapCertRelyingParty**](inapcertrelyingparty.md)                             | Stellt Methoden bereit, die von zertifikatvertrauenden Seiten für die Kommunikation mit NapAgent verwendet werden müssen.                                                        |
+| [**INapClientManagement**](inapclientmanagement.md)                             | Wird für die NAP-Clientverwaltung von SoH-Cache und SoH-Austauschtriggern verwendet. Veraltet.                                                                |
+| [**INapClientManagement2**](inapclientmanagement2.md)                           | Wird für die NAP-Clientverwaltung von SoH-Cache und SoH-Austauschtriggern verwendet.                                                                            |
+| [**INapComponentConfig**](inapcomponentconfig.md)                               | Wird für die benutzerdefinierte Konfiguration von SHV-Komponenten verwendet. Veraltet.                                                                                    |
+| [**INapComponentConfig2**](inapcomponentconfig2.md)                             | Stellt NAP-Systemkonfigurationsmethoden für System health validators (SHVs) bereit, um eine Netzwerkrichtlinienserver-Benutzeroberfläche (NETWORK Policy Server, NPS) remote zu konfigurieren.   |
+| [**INapComponentConfig3**](inapcomponentconfig3.md)                             | Stellt NAP-Systemkonfigurationsmethoden für System health validators (SHVs) bereit, um Konfigurationsdaten für eine bestimmte Konfigurations-ID festzulegen und zu ändern. |
+| [**INapComponentInfo**](inapcomponentinfo.md)                                   | Muss von Plug-In-Komponenten wie SHAs und SHVs implementiert werden, damit sie vom NAP-System kommuniziert werden können.                          |
+| [**INapEnforcementClientBinding**](inapenforcementclientbinding.md)             | Wird von Erzwingungsclients für die Kommunikation mit NapAgent verwendet.                                                                                       |
+| [**INapEnforcementClientCallback**](inapenforcementclientcallback.md)           | Erzwingungsclients müssen diese Schnittstelle implementieren, damit NapAgent mit ihnen kommunizieren kann.                                                  |
+| [**INapEnforcementClientConnection**](inapenforcementclientconnection.md)       | Ermöglicht die Clientverbindungsverwaltung. Veraltet.                                                                                                |
+| [**INapEnforcementClientConnection2**](inapenforcementclientconnection2.md)     | Ermöglicht die Clientverbindungsverwaltung.                                                                                                            |
+| [**INapServerCallback**](inapservercallback.md)                                 | SHVs verwenden die einzelne Methode auf dieser Schnittstelle, um die asynchrone Anforderungsvervollständigung zu signalisieren.                                                             |
+| [**INapServerInfo**](inapserverinfo.md)                                         | Wird von Verwaltungsclients (z. B. WMI-Anbieter, Befehlszeilentools usw.) zum Abfragen des Status des NAP-Serversystems verwendet.                             |
+| [**INapServerManagement**](inapservermanagement.md)                             | Wird für die grundlegende Verwaltung des NAP-Servers verwendet.                                                                                                        |
+| [**INapSoHConstructor**](inapsohconstructor.md)                                 | Wird von SHAs zum Erstellen von SoH-Anforderungen und von SHVs zum Erstellen von SoH-Antworten verwendet.                                                                      |
+| [**INapSoHProcessor**](inapsohprocessor.md)                                     | Wird von SHAs zum Verarbeiten des Inhalts von SoH-Antworten und von SHVs zum Verarbeiten des Inhalts von SoH-Anforderungen verwendet.                                          |
+| [**INapSystemHealthAgentBinding**](inapsystemhealthagentbinding.md)             | SHAs müssen diese Schnittstelle für die Kommunikation mit napagent verwenden. Veraltet.                                                                          |
+| [**INapSystemHealthAgentBinding2**](inapsystemhealthagentbinding2.md)           | SHAs müssen diese Schnittstelle für die Kommunikation mit napagent verwenden.                                                                                      |
+| [**INapSystemHealthAgentCallback**](inapsystemhealthagentcallback.md)           | SHAs müssen diese Schnittstelle implementieren, um die Verarbeitung mit dem NAP-System zu koordinieren.                                                                    |
+| [**INapSystemHealthAgentRequest**](inapsystemhealthagentrequest.md)             | SHAs verwenden diese Schnittstelle, um ihre Verarbeitung mit dem NAP-System zu kommunizieren und zu koordinieren.                                                         |
+| [**INapSystemHealthValidator**](inapsystemhealthvalidator.md)                   | Stellt Methoden bereit, die ein SHV implementieren muss, damit das NAP-System mit ihm kommunizieren kann.                                                         |
+| [**INapSystemHealthValidationRequest**](inapsystemhealthvalidationrequest.md)   | SHVs verwenden diese Schnittstelle für die Datenkommunikation mit ihrer clientseitigen Entsprechung. Veraltet.                                                      |
+| [**INapSystemHealthValidationRequest2**](inapsystemhealthvalidationrequest2.md) | SHVs verwenden diese Schnittstelle für die Datenkommunikation mit ihrer clientseitigen Entsprechung.                                                                  |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

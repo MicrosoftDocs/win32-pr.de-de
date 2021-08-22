@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. shutterspeed-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Photo.Speed-Eigenschaft.
 ms.assetid: f320944c-978d-4a3c-9bf8-5c5652123e29
-title: System. Photo. shutterspeed Photo Metadata-Richtlinie
+title: System.Photo.Speed-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b8df8c9e7fda5643fed022f67c3b6b7846e7a72f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4ad11550a19cd043fd5d182b2cf508aec3e26c64a0dc2ee1d1c24576ebf18f8e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118710099"
 ---
-# <a name="systemphotoshutterspeed-photo-metadata-policy"></a>System. Photo. shutterspeed Photo Metadata-Richtlinie
+# <a name="systemphotoshutterspeed-photo-metadata-policy"></a>System.Photo.Speed-Richtlinie für Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. Photo. shutterspeed](../properties/props-system-photo-shutterspeed.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.Photo.Speed-Eigenschaft.](../properties/props-system-photo-shutterspeed.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ Photo \_ shutterspeed
+PKEY \_ \_ PhotoSpeed
 
 ### <a name="containers"></a>Container
 
@@ -27,50 +27,50 @@ JPEG, TIFF
 
 Ja
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ R8
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Dieser Wert wird von "System. Photo. shutterspeednumerator" und "System. Photo. shutterspeednenner" generiert. Sie kann nicht direkt geschrieben werden. Werte aus unterschiedlichen Schemas sind abgestimmt.
+Dieser Wert wird von System.Photo.SpeedNumerator und System.Photo.SpeedSpeedDenominator generiert. Sie kann nicht direkt geschrieben werden. Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 37377} |             |
-| 2     | /XMP/EXIF: shutterspeedvalue   |             |
+| 1     | /app1/ifd/exif/{ushort=37377} |             |
+| 2     | /xmp/exif:SpeedSpeedValue   |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 37377} |             |
-| 2     | /XMP/EXIF: shutterspeedvalue   |             |
+| 1     | /app1/ifd/exif/{ushort=37377} |             |
+| 2     | /xmp/exif:SpeedSpeedValue   |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                          |
 |-------|-------------------------------|
-| 1     | /App1/IFD/EXIF/{ushort = 37377} |
-| 2     | /XMP/EXIF: shutterspeedvalue   |
+| 1     | /app1/ifd/exif/{ushort=37377} |
+| 2     | /xmp/exif:speedspeedvalue   |
 
 
 
@@ -78,52 +78,52 @@ Dieser Wert wird von "System. Photo. shutterspeednumerator" und "System. Photo. 
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                            | Datenträger Format |
+| Auftrag | Pfad                            | Datenträgerformat |
 |-------|---------------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 37377}        |             |
-| 2     | /IFD/XMP/EXIF: shutterspeedvalue |             |
+| 1     | /ifd/exif/{ushort=37377}        |             |
+| 2     | /ifd/xmp/exif:SpeedSpeedValue |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                            | Datenträger Format |
+| Auftrag | Pfad                            | Datenträgerformat |
 |-------|---------------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 37377}        |             |
-| 2     | /IFD/XMP/EXIF: shutterspeedvalue |             |
+| 1     | /ifd/exif/{ushort=37377}        |             |
+| 2     | /ifd/xmp/exif:SpeedSpeedValue |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                            |
 |-------|---------------------------------|
-| 1     | /IFD/EXIF/{ushort = 37377}        |
-| 2     | /IFD/XMP/EXIF: shutterspeedvalue |
+| 1     | /ifd/exif/{ushort=37377}        |
+| 2     | /ifd/xmp/exif:speedspeedvalue |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. shutterspeed](../properties/props-system-photo-shutterspeed.md)
+[System.Photo.Speed](../properties/props-system-photo-shutterspeed.md)
 </dt> </dl>
 
  

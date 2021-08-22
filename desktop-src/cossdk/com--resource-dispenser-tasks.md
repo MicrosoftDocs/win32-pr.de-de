@@ -1,25 +1,25 @@
 ---
-description: Aufgaben des com+-Ressourcen Verteilers
+description: Aufgaben der COM+-Ressourcenausgabe
 ms.assetid: 6f46c4e1-50b8-4496-b755-646d3652255a
-title: Aufgaben des com+-Ressourcen Verteilers
+title: Aufgaben der COM+-Ressourcenausgabe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f98d75137a7a2775fdeef7eafad1bdfa58d003e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 3ab1700ae1ff1fa6dc9146f449959e0f6bd366058bfd306ef6c977da7a4392ed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106339686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118548633"
 ---
-# <a name="com-resource-dispenser-tasks"></a>Aufgaben des com+-Ressourcen Verteilers
+# <a name="com-resource-dispenser-tasks"></a>Aufgaben der COM+-Ressourcenausgabe
 
-Die folgenden Themen in diesem Abschnitt enthalten Schritt-für-Schritt-Anleitungen für die Verwendung des com+-Ressourcen Verteiler dienstanders.
+Die folgenden Themen in diesem Abschnitt enthalten schritt-für-Schritt-Anweisungen für die Verwendung des COM+-Ressourcenverteilerdiensts.
 
 
 
-| Thema                                                                                           | BESCHREIBUNG                                                                                  |
+| Thema                                                                                           | Beschreibung                                                                                  |
 |-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| [Implementieren eines com+-Ressourcen Verteilers](implementing-a-com--resource-dispenser.md)<br/> | Enthält Anweisungen zum Implementieren des com+-Ressourcen Verteiler dienstanders.<br/> |
+| [Implementieren eines COM+-Ressourcensenders](implementing-a-com--resource-dispenser.md)<br/> | Enthält Anweisungen zum Implementieren des COM+-Ressourcensenderdiensts.<br/> |
 
 
 
@@ -29,7 +29,7 @@ Die folgenden Themen in diesem Abschnitt enthalten Schritt-für-Schritt-Anleitun
 
 <dl> <dt>
 
-[Konzepte des com+-Ressourcen Verteilers](com--resource-dispenser-concepts.md)
+[KONZEPTE DES COM+-Ressourcensenders](com--resource-dispenser-concepts.md)
 </dt> </dl>
 
  

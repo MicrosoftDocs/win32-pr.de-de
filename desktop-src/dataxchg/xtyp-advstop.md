@@ -1,9 +1,9 @@
 ---
-title: XTYP_ADVSTOP Transaktion (Ddeml. h)
-description: Ein Client verwendet die xtipp- \_ advend-Transaktion, um eine Empfehlung-Schleife mit einem Server zu beenden. Eine dynamischer Datenaustausch (DDE)-Server Rückruffunktion (DDE Callback) empfängt diese Transaktion, wenn ein Client xType \_ advstopps in der DDE clienttransaction-Funktion angibt.
+title: XTYP_ADVSTOP Transaktion (Ddeml.h)
+description: Ein Client verwendet die XTYP \_ ADVSTOP-Transaktion, um eine Advise-Schleife mit einem Server zu beenden. Eine dynamische Daten Exchange (DDE)-Serverrückruffunktion, DdeCallback, empfängt diese Transaktion, wenn ein Client XTYP \_ ADVSTOP in der DdeClientTransaction-Funktion angibt.
 ms.assetid: 67dfa463-6a44-43a5-93be-a39c19c87c1c
 keywords:
-- XTYP_ADVSTOP Transaktionsdaten Austausch
+- XTYP_ADVSTOP Exchange von Transaktionsdaten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 61292683377cd6c7243c3e41c5dbd9332a671163
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 37e81f1fe407186410e604a259f6e8039c074da039fc23b2f8a090c34ff58154
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338547"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118544769"
 ---
-# <a name="xtyp_advstop-transaction"></a>Xtipp- \_ advendtransaktion
+# <a name="xtyp_advstop-transaction"></a>XTYP \_ ADVSTOP-Transaktion
 
-Ein Client verwendet die **xtipp- \_ advend** -Transaktion, um eine Empfehlung-Schleife mit einem Server zu beenden. Eine dynamischer Datenaustausch (DDE)-Server Rückruffunktion ( [*DDE Callback*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)) empfängt diese Transaktion, wenn ein Client **xType \_ advstopps** in der [**DDE clienttransaction**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction) -Funktion angibt.
+Ein Client verwendet die **XTYP \_ ADVSTOP-Transaktion,** um eine Advise-Schleife mit einem Server zu beenden. Eine dynamische Daten Exchange (DDE)-Serverrückruffunktion, [*DdeCallback,*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)empfängt diese Transaktion, wenn ein Client **XTYP \_ ADVSTOP** in der [**DdeClientTransaction-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction) angibt.
 
 
 ```C++
@@ -44,14 +44,14 @@ Der Transaktionstyp:
 
 </dd> <dt>
 
-*UF* 
+*uFmt* 
 </dt> <dd>
 
-Das Datenformat, das der zu Beendigungs enden Empfehlung-Schleife zugeordnet ist.
+Das Datenformat, das der beendeten Advise-Schleife zugeordnet ist.
 
 </dd> <dt>
 
-*has* 
+*hconv* 
 </dt> <dd>
 
 Ein Handle für die Konversation.
@@ -61,7 +61,7 @@ Ein Handle für die Konversation.
 *hsz1* 
 </dt> <dd>
 
-Ein Handle für den Themen Namen.
+Ein Handle für den Themennamen.
 
 </dd> <dt>
 
@@ -75,27 +75,27 @@ Ein Handle für den Elementnamen.
 *hdata* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *dwData1* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *dwData2* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Transaktion wird gefiltert, wenn von der Serveranwendung das Flag " **CBF \_ Fail \_** " in der Funktion " [**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) " angegeben wurde.
+Diese Transaktion wird gefiltert, wenn die Serveranwendung das **CBF \_ FAIL \_ FILTERS-Flag** in der [**DdeInitialize-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) angegeben hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,30 +105,30 @@ Diese Transaktion wird gefiltert, wenn von der Serveranwendung das Flag " **CBF 
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>Ddeml. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ddeml.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**DDE clienttransaction**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction)
+[**DdeClientTransaction**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction)
 </dt> <dt>
 
-[**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea)
+[**DdeInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea)
 </dt> <dt>
 
-[**DDE postadvise**](/windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise)
+[**DdePostAdvise**](/windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[dynamischer Datenaustausch-Verwaltungs Bibliothek](dynamic-data-exchange-management-library.md)
+[dynamische Daten Exchange-Verwaltungsbibliothek](dynamic-data-exchange-management-library.md)
 </dt> </dl>
 
  

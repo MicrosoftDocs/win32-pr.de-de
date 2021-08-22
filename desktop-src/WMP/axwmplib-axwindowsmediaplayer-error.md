@@ -1,9 +1,9 @@
 ---
-title: Fehler Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das Error-Ereignis tritt auf, wenn das Windows Media Player-Steuerelement einen Fehlerzustand aufweist.
+title: Fehlerereignis des AxWindowsMediaPlayer-Objekts
+description: Das Error-Ereignis tritt auf, wenn das Windows Media Player-Steuerelement eine Fehlerbedingung aufweist.
 ms.assetid: d28c18a9-c650-4169-989b-8727b7a5a831
 keywords:
-- Fehler Ereignis der "AxWindowsMediaPlayer"-Objekt Fenster Media Player
+- Fehlerereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6cfd3571538aa2cdd263a9f5d57e479e73818806
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a146f58276ab433fa11b4c5b212af43a92511328e22f70b93d0a45779f4eaa24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106353803"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118582158"
 ---
-# <a name="error-event-of-the-axwindowsmediaplayer-object"></a>Fehler Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="error-event-of-the-axwindowsmediaplayer-object"></a>Fehlerereignis des AxWindowsMediaPlayer-Objekts
 
-Das Error-Ereignis tritt auf, wenn das Windows Media Player-Steuerelement einen Fehlerzustand aufweist.
+Das Error-Ereignis tritt auf, wenn das Windows Media Player-Steuerelement eine Fehlerbedingung aufweist.
 
 ``` syntax
 [C#]
@@ -45,7 +45,7 @@ Dieses Ereignis enthält keine Daten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein Ereignishandler für das Fehler Ereignis erstellt, um den Beschreibungstext für den ersten Fehler in der Fehler Warteschlange anzuzeigen. Das AxWMPLib. AxWindowsMediaPlayer-Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird ein Ereignishandler für das Error-Ereignis erstellt, um den Beschreibungstext für den ersten Fehler in der Fehlerwarteschlange anzuzeigen. Das AxWMPLib.AxWindowsMediaPlayer-Objekt wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -86,7 +86,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -96,13 +96,13 @@ End Sub
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmperror. Item (VB und c#)**](iwmperror-item--vb-and-c.md)
+[**IWMPError.Item (VB und C#)**](iwmperror-item--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmperroritem. ErrorDescription (VB und c#)**](wmplibiwmperroritem-iwmperroritem-errordescription--vb-and-c.md)
+[**IWMPErrorItem.errorDescription (VB und C#)**](wmplibiwmperroritem-iwmperroritem-errordescription--vb-and-c.md)
 </dt> </dl>
 
  

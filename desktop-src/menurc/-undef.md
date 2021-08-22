@@ -1,19 +1,19 @@
 ---
 title: " undef"
-description: Mit der Anweisung \ undef wird die aktuelle Definition des angegebenen Namens entfernt. Alle nachfolgenden Vorkommen des Namens werden ohne Ersetzung verarbeitet.
+description: Die \undef-Direktive entfernt die aktuelle Definition des angegebenen Namens. Alle nachfolgenden Vorkommen des Namens werden ohne Ersetzung verarbeitet.
 ms.assetid: c9a0b538-3030-4d39-bfc2-d158061967b6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a04b14eeea18a05795cd8ebbb94d81d0aead6a9d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3adf208ecca3f130aefc99de8d2926028f25bcd46be46d42e4cbf92e708fa0b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118473060"
 ---
 # <a name="undef"></a>\#undef
 
-Mit der **\# undef** -Direktive wird die aktuelle Definition des angegebenen Namens entfernt. Alle nachfolgenden Vorkommen des Namens werden ohne Ersetzung verarbeitet.
+Die **\# Undef-Direktive** entfernt die aktuelle Definition des angegebenen Namens. Alle nachfolgenden Vorkommen des Namens werden ohne Ersetzung verarbeitet.
 
 ``` syntax
 #undef name
@@ -21,16 +21,16 @@ Mit der **\# undef** -Direktive wird die aktuelle Definition des angegebenen Nam
 
 <dl> <dt>
 
-<span id="name"></span><span id="NAME"></span>*Benennen*
+<span id="name"></span><span id="NAME"></span>*Namen*
 </dt> <dd>
 
-Der Name, der entfernt werden soll. Dieser Wert ist eine beliebige Kombination aus Buchstaben, Ziffern und Interpunktions Zeichen, die für den C/C++-Präprozessor gültig ist.
+Name, der entfernt werden soll. Dieser Wert ist eine beliebige Kombination aus Buchstaben, Ziffern und Interpunktion, die für den C/C++-Präprozessor gültig ist.
 
 </dd> </dl>
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel werden die Definitionen für die Namen "ungleich NULL" und "userclass" entfernt:
+In diesem Beispiel werden die Definitionen für die Namen ungleich null und USERCLASS entfernt:
 
 ``` syntax
 #undef     nonzero
@@ -44,9 +44,9 @@ In diesem Beispiel werden die Definitionen für die Namen "ungleich NULL" und "u
 [Präprozessordirektiven](preprocessor-directives.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

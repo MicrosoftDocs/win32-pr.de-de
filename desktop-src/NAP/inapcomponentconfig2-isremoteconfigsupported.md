@@ -1,11 +1,11 @@
 ---
-title: INapComponentConfig2 isremoteconfigsupported-Methode (napcommon. h)
-description: Wird von System Integritätsprüfungen (SHVs) implementiert, um anzugeben, ob die Remote Konfiguration unterstützt wird.
+title: INapComponentConfig2 IsRemoteConfigSupported-Methode (NapCommon.h)
+description: Wird von System health validators (SHVs) implementiert, um anzugeben, ob die Remotekonfiguration unterstützt wird.
 ms.assetid: c4b8e60b-ed60-49ec-b4d6-4e1575e4d1a5
 keywords:
-- Isremoteconfigsupported-Methode NAP
-- Isremoteconfigsupported-Methode, NAP, INapComponentConfig2-Schnittstelle
-- INapComponentConfig2 Interface NAP, isremoteconfigsupported-Methode
+- IsRemoteConfigSupported-Methode NAP
+- IsRemoteConfigSupported-Methode NAP, INapComponentConfig2-Schnittstelle
+- INapComponentConfig2-Schnittstelle NAP, IsRemoteConfigSupported-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a2d144926aafff6f5ad7e243efe2a81a2955f497
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a42ae316063fc14054c8ffeb6e3987794bc33021441621ee231c9e839fc00248
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118621767"
 ---
-# <a name="inapcomponentconfig2isremoteconfigsupported-method"></a>INapComponentConfig2:: isremoteconfigsupported-Methode
+# <a name="inapcomponentconfig2isremoteconfigsupported-method"></a>INapComponentConfig2::IsRemoteConfigSupported-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **isremoteconfigsupported** -Methode wird von System Integritätsprüfungen (SHVs) implementiert, um anzugeben, ob die Remote Konfiguration unterstützt wird.
+Die **IsRemoteConfigSupported-Methode** wird von System health validators (SHVs) implementiert, um anzugeben, ob die Remotekonfiguration unterstützt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,24 +48,24 @@ HRESULT IsRemoteConfigSupported(
 
 <dl> <dt>
 
-*IsSupported* \[ vorgenommen\]
+*isSupported* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen booleschen Wert, der auf **true** festgelegt ist, wenn die Komponente die Remote Konfiguration unterstützt, andernfalls **false** .
+Ein Zeiger auf eine BOOL, die auf **TRUE** festgelegt ist, wenn die Komponente die Remotekonfiguration unterstützt, und **FALSE,** wenn dies nicht der Fall ist.
 
 </dd> <dt>
 
-*remoteconfigtype* \[ vorgenommen\]
+*remoteConfigType* \[ out\]
 </dt> <dd>
 
-Gibt den Typ der Remote Konfiguration an, der mit dem Wert aus der [**remoteconfigurationtype**](/windows/win32/api/naptypes/ne-naptypes-remoteconfigurationtype) -Enumeration unterstützt wird:
+Gibt den Typ der Remotekonfiguration an, die mit dem Wert der [**RemoteConfigurationType-Enumeration unterstützt**](/windows/win32/api/naptypes/ne-naptypes-remoteconfigurationtype) wird:
 
 
 
 | Wert                                                                                                 | Bedeutung                                                                                                                                                                                                                                                                                         |
 |-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>remoteconfigtypemachine</dt> </dl>    | [**Invokeuiformachine**](inapcomponentconfig2-invokeuiformachine.md) ist implementiert.<br/>                                                                                                                                                                                                |
-| <dl> <dt>remoteconfigtypeconfigblob</dt> </dl> | [**Invokeuifromconfigblob**](inapcomponentconfig2-invokeuifromconfigblob.md) ist implementiert. [**Inapcomponentconfig:: GetConfig**](inapcomponentconfig-getconfig.md) und [**inapcomponentconfig:: setconfig**](inapcomponentconfig-setconfig.md) können mithilfe von DCOM Remote aufgerufen werden.<br/> |
+| <dl> <dt>remoteConfigTypeMachine</dt> </dl>    | [**InvokeUIForMachine**](inapcomponentconfig2-invokeuiformachine.md) ist implementiert.<br/>                                                                                                                                                                                                |
+| <dl> <dt>remoteConfigTypeConfigBlob</dt> </dl> | [**InvokeUIFromConfigBlob**](inapcomponentconfig2-invokeuifromconfigblob.md) ist implementiert. [**INapComponentConfig::GetConfig**](inapcomponentconfig-getconfig.md) und [**INapComponentConfig::SetConfig**](inapcomponentconfig-setconfig.md) können remote über DCOM aufgerufen werden.<br/> |
 
 
 
@@ -75,11 +75,11 @@ Gibt den Typ der Remote Konfiguration an, der mit dem Wert aus der [**remoteconf
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder einen der standardmäßigen Windows-Fehlercodes zurück.
+Gibt S OK zurück, wenn erfolgreich, oder einer der Windows \_ Standardfehlercodes.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn weder [**invokeuiformachine**](inapcomponentconfig2-invokeuiformachine.md) noch [**invokeuifromconfigblob**](inapcomponentconfig2-invokeuifromconfigblob.md) implementiert ist, ist die Remote Konfiguration des SHV nicht möglich.
+Wenn weder [**InvokeUIForMachine**](inapcomponentconfig2-invokeuiformachine.md) noch [**InvokeUIFromConfigBlob**](inapcomponentconfig2-invokeuifromconfigblob.md) implementiert sind, ist die Remotekonfiguration der SHV nicht möglich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,13 +88,13 @@ Wenn weder [**invokeuiformachine**](inapcomponentconfig2-invokeuiformachine.md) 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Napcommon. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napcommon. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>NapCommon.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapCommon.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

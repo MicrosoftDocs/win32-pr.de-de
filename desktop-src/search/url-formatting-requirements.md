@@ -1,93 +1,93 @@
 ---
-description: Ab Windows 7 verbleiben Inkonsistenzen bei der Verarbeitung und der Verarbeitung von URLs. Dieses Thema enthält eine beschränkte Anleitung zum Navigieren in den Datei-URL-Formaten.
+description: Ab Windows 7 verbleiben Inkonsistenzen bei der Behandlung und Analyse von URLs. Dieses Thema enthält eine eingeschränkte Anleitung zum Navigieren in Inkonsistenzen in Datei-URL-Formaten.
 ms.assetid: E9792368-517B-4FD7-A244-6C4B7F78B66E
-title: URL-Formatierungs Anforderungen
+title: URL-Formatierungsanforderungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d08d7945578118f4d3103f44e6da60b96022e472
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2ae1bb413501548922eaf1b60801b6d35495d7f8a37dc743675052d4e0e5bae4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525439"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118462232"
 ---
-# <a name="url-formatting-requirements"></a>URL-Formatierungs Anforderungen
+# <a name="url-formatting-requirements"></a>URL-Formatierungsanforderungen
 
-Ab Windows 7 verbleiben Inkonsistenzen bei der Verarbeitung und der Verarbeitung von URLs. Dieses Thema enthält eine beschränkte Anleitung zum Navigieren in den Datei-URL-Formaten.
+Ab Windows 7 verbleiben Inkonsistenzen bei der Behandlung und Analyse von URLs. Dieses Thema enthält eine eingeschränkte Anleitung zum Navigieren in Inkonsistenzen in Datei-URL-Formaten.
 
 Dieses Thema ist wie folgt organisiert:
 
--   [Verwendete URL-Formate](#url-formats-in-use)
--   [Schrägstrich Richtung, nach gestellter Stern und nach gestellter Schrägstrich](#slash-direction-trailing-star-and-trailing-slash-sensitivity)
+-   [URL-Formate in Verwendung](#url-formats-in-use)
+-   [Schrägstrichrichtung, nach trailing star und trailing slash sensitivity](#slash-direction-trailing-star-and-trailing-slash-sensitivity)
 -   [URL-Formate nach API und Abfrage](#url-formats-by-api-and-query)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="url-formats-in-use"></a>Verwendete URL-Formate
+## <a name="url-formats-in-use"></a>URL-Formate in Verwendung
 
-Protokolle von Drittanbietern sind dafür verantwortlich, das URL-Format zu definieren und Abfragen auf eine Weise zu definieren, die Ihrem Standard entspricht. Beispielsweise unterstützt Microsoft Outlook Ordnernamen mit willkürlichen Zeichen, einschließlich derjenigen, die in URLs, wie z. b. dem Zeichen, nicht zulässig sind `"?"` . Der MAPI-Protokollhandler übernimmt seine eigene URL-Codierung seiner URLs. Daher muss der Index Speicher `"%3F"` anstelle von `"?"` und Outlook bei der Erstellung von Abfragen berücksichtigt werden.
+Protokolle von Drittanbietern sind dafür verantwortlich, ihr URL-Format und Abfragen so zu definieren, dass sie ihren Standards entsprechen. Beispielsweise unterstützt Microsoft Outlook Ordnernamen mit beliebigen Zeichen, einschließlich derer, die in URLs, z. B. dem Zeichen, unzulässig `"?"` sind. Der MAPI-Protokollhandler führt eine eigene URL-Codierung seiner URLs durch. Daher speichert der Index anstelle von , und Outlook muss dies beim Erstellen `"%3F"` `"?"` von Abfragen berücksichtigen.
 
-Die unterschiedlichen Formate sind in der folgenden Tabelle aufgeführt und werden jeweils einem Buchstaben Bezeichner zugewiesen, der später in diesem Thema beschrieben wird.
+Die verschiedenen Formate sind in der folgenden Tabelle aufgeführt und erhalten jeweils einen Buchstabenbezeichner, um später in diesem Thema darauf zu verweisen.
 
 
 
-| id  | Lokale Datei-URL oder Remote | Beispiel                     |
+| ID  | Lokale Datei-URL oder Remotedatei | Beispiel                     |
 |-----|--------------------------|-----------------------------|
-| A   | Lokal                    | file:///c: \\ Test \\ Beispiel\\ |
-| B   | Lokal                    | Datei: c:/Test/example/       |
-| C   | Lokal                    | c: \\ Test \\ Beispiel\\         |
-| D   | Remote                   | file:///- \\ \\ Server \\ Freigabe\\ |
+| Ein   | Lokal                    | file:///c: \\ \\ Testbeispiel\\ |
+| B   | Lokal                    | file:c:/test/example/       |
+| C   | Lokal                    | c: \\ \\ Testbeispiel\\         |
+| D   | Remote                   | \\ \\ file:///-Serverfreigabe \\\\ |
 | E   | Remote                   | file://server/share/        |
-| F   | Remote                   | \\\\Server \\ Freigabe\\         |
+| F   | Remote                   | \\\\\\Serverfreigabe\\         |
 
 
 
  
 
-## <a name="slash-direction-trailing-star-and-trailing-slash-sensitivity"></a>Schrägstrich Richtung, nach gestellter Stern und nach gestellter Schrägstrich
+## <a name="slash-direction-trailing-star-and-trailing-slash-sensitivity"></a>Schrägstrichrichtung, nach trailing star und trailing slash sensitivity
 
-In Windows Search gibt es größtenteils keine Sensitivität für Schrägstriche. Wenn das Format `c:\test\example` akzeptiert wird, wird auch c:/Test/example akzeptiert. Obwohl der [Bereich](-search-sql-folderdepth.md) in der Regel der Schrägstrich Richtung nicht unterschieden wird, ist er im Fall des Remote-URL-Formats F für die Schrägstrich Richtung sensibel. daher `Scope = '//server/share'` funktioniert nicht.
+In Windows Suche gibt es größtenteils keine Empfindlichkeit gegenüber der Schrägstrichrichtung. Wenn das Format `c:\test\example` akzeptiert wird, wird auch c:/test/example akzeptiert. Obwohl [SCOPE](-search-sql-folderdepth.md) im Allgemeinen keine Schrägstrichrichtung beachtet, ist die Schrägstrichrichtung im Fall des Remote-URL-Formats F nicht zu sehen. Daher funktioniert `Scope = '//server/share'` nicht.
 
-Die einzige API, die auf nachfolgende Sterne sensibel ist und zwischen und unterscheidet, `c:\test\ ` `c:\test\*` ist [**isearchcrawlscopemanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager). Wenn eine Ausschlussregel für vorhanden ist `c:\test\*` , wird das URL-Verzeichnis `c:\test` selbst immer noch indiziert. Wenn die Ausschluss-URL `c:\test\` jedoch ist, wird das URL-Verzeichnis `c:\test` selbst nicht indiziert.
+Die einzige API, die auf nach trailende Sterne reagieren und zwischen `c:\test\ ` und unterscheidet, `c:\test\*` ist [**ISearchCrawlScopeManager.**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) Wenn eine Ausschlussregel für vorhanden ist, wird das `c:\test\*` `c:\test` URL-Verzeichnis selbst weiterhin indiziert. Wenn die Ausschluss-URL jedoch ist, wird das `c:\test\` `c:\test` URL-Verzeichnis selbst nicht indiziert.
 
-Es gibt zwei Orte, an denen Windows Search von nachgestellten Schrägstrichen abhängig ist: itemurl und Path Queries. Wenn ein Verzeichnis vorhanden ist `c:\test` , behandelt Windows Search `c:\test\` anders als `c:\test` bei Prädikaten wie `path = 'c:\test'` und `System.ItemUrl = 'c:\test'` . Beispielsweise würde das Prädikat `path='file:c:/test'` aufgrund des nachgestellten Schrägstrichs dem Verzeichnis entsprechen `c:\test` , dies würde jedoch nicht der Fall sein `path='file:c:/test/'` .
+Es gibt zwei Stellen, an denen Windows Suchfunktion auf nachgeschlagene Schrägstriche reagieren kann: ItemUrl- und Path-Abfragen. Wenn ein Verzeichnis vorhanden ist, behandelt Windows Search anders `c:\test` `c:\test\` als für `c:\test` Prädikate wie `path = 'c:\test'` und `System.ItemUrl = 'c:\test'` . Das Prädikat würde z. B. mit dem Verzeichnis übereinstimmen, aber nicht aufgrund des nach folgenden `path='file:c:/test'` `c:\test` `path='file:c:/test/'` Schrägstrichs.
 
 ## <a name="url-formats-by-api-and-query"></a>URL-Formate nach API und Abfrage
 
-Lokale Datei-URL-Formate, die von ausgewählten APIs und Abfragen akzeptiert werden, sind in der folgenden Tabelle aufgeführt. Die Formate sind einem Buchstaben (a bis F) zugeordnet. die Bedeutung von ist im Abschnitt "[verwendete URL-Formate](#url-formats-in-use)" weiter oben in diesem Thema angegeben.
+Url-Formate lokaler Dateien, die von ausgewählten APIs und Abfragen akzeptiert werden, sind in der folgenden Tabelle aufgeführt. Die Formate sind einem Buchstaben (A bis F) zugeordnet, dessen Bedeutung im Abschnitt["URL-Formate in Verwendung"](#url-formats-in-use)weiter oben in diesem Thema angegeben wurde.
 
 
 
-| API oder Abfrage                                                                                                    | Formatieren | Format B | C-Format |
+| API oder Abfrage                                                                                                    | Format A | Format B | Format C |
 |-----------------------------------------------------------------------------------------------------------------|----------|----------|----------|
-| [**Isearchcrawlscopemanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager)                                            | J        | N        | J        |
-| [**Igathernotifyinline:: OnDataChange**](/previous-versions/windows/desktop/legacy/bb231472(v=vs.85))                           | J        | J        | J        |
-| [**Isearchcatalogmanager::.**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager-reindexmatchingurls)         | J        | J        | J        |
-| [**Isearchcatalogmanager:: in xsearchroot**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager-reindexsearchroot)             | J        | N        | N        |
-| [**ISearchCatalogManager2::P rioritizematchingurls**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager2-prioritizematchingurls) | J        | J        | J        |
-| Bereich =                                                                                                          | N        | J        | J        |
-| Verzeichnis =                                                                                                      | N        | J        | J        |
-| Itemurl =                                                                                                        | N        | J        | J        |
-| Pfad =                                                                                                           | N        | J        | J        |
+| [**ISearchCrawlScopeManager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager)                                            | J        | N        | J        |
+| [**IGatherNotifyInline::OnDataChange**](/previous-versions/windows/desktop/legacy/bb231472(v=vs.85))                           | J        | J        | J        |
+| [**ISearchCatalogManager::ReindexMatchingURLs**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager-reindexmatchingurls)         | J        | J        | J        |
+| [**ISearchCatalogManager::ReindexSearchRoot**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager-reindexsearchroot)             | J        | N        | N        |
+| [**ISearchCatalogManager2::P izeMatchingURLs**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager2-prioritizematchingurls) | J        | J        | J        |
+| Scope=                                                                                                          | N        | J        | J        |
+| Directory=                                                                                                      | N        | J        | J        |
+| ItemUrl=                                                                                                        | N        | J        | J        |
+| Path=                                                                                                           | N        | J        | J        |
 
 
 
  
 
-Remote Datei-URL-Formate, die von ausgewählten Abfragen akzeptiert werden, sind in der folgenden Tabelle aufgeführt.
+Url-Formate für Remotedatei, die von ausgewählten Abfragen akzeptiert werden, sind in der folgenden Tabelle aufgeführt.
 
 
 
-| Abfrage                                                                                                           | Format D | E | F-Format |
+| Abfrage                                                                                                           | Format D | Format E | Format F |
 |-----------------------------------------------------------------------------------------------------------------|----------|----------|----------|
-| [**Isearchcrawlscopemanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager)                                            | –      | –      | –      |
-| [**Igathernotifyinline:: OnDataChange**](/previous-versions/windows/desktop/legacy/bb231472(v=vs.85))                           | –      | –      | –      |
-| [**Isearchcatalogmanager::.**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager-reindexmatchingurls)         | –      | –      | –      |
-| [**Isearchcatalogmanager:: in xsearchroot**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager-reindexsearchroot)             | –      | –      | –      |
-| [**ISearchCatalogManager2::P rioritizematchingurls**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager2-prioritizematchingurls) | –      | –      | –      |
-| Bereich =                                                                                                          | J        | J        | J        |
-| Verzeichnis =                                                                                                      | J        | J        | J        |
-| Itemurl =                                                                                                        | J        | J        | J        |
-| Pfad =                                                                                                           | J        | J        | J        |
+| [**ISearchCrawlScopeManager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager)                                            | Nicht zutreffend      | Nicht zutreffend      | Nicht zutreffend      |
+| [**IGatherNotifyInline::OnDataChange**](/previous-versions/windows/desktop/legacy/bb231472(v=vs.85))                           | Nicht zutreffend      | Nicht zutreffend      | Nicht zutreffend      |
+| [**ISearchCatalogManager::ReindexMatchingURLs**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager-reindexmatchingurls)         | Nicht zutreffend      | Nicht zutreffend      | Nicht zutreffend      |
+| [**ISearchCatalogManager::ReindexSearchRoot**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager-reindexsearchroot)             | Nicht zutreffend      | Nicht zutreffend      | Nicht zutreffend      |
+| [**ISearchCatalogManager2::P rioritizeMatchingURLs**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager2-prioritizematchingurls) | Nicht zutreffend      | Nicht zutreffend      | Nicht zutreffend      |
+| Scope=                                                                                                          | J        | J        | J        |
+| Directory=                                                                                                      | J        | J        | J        |
+| ItemUrl=                                                                                                        | J        | J        | J        |
+| Path=                                                                                                           | J        | J        | J        |
 
 
 
@@ -106,7 +106,7 @@ Remote Datei-URL-Formate, die von ausgewählten Abfragen akzeptiert werden, sind
 [Abfrageprozess in Windows Search](querying-process--windows-search-.md)
 </dt> <dt>
 
-[Benachrichtigungs Prozess in Windows Search](-search-3x-wds-support.md)
+[Benachrichtigungsprozess in Windows Search](-search-3x-wds-support.md)
 </dt> </dl>
 
  

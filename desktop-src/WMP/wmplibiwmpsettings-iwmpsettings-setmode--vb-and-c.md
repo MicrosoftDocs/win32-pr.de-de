@@ -1,11 +1,11 @@
 ---
-title: Iwmpsettings setmode-Methode
-description: Die setmode-Methode legt den Schleifen Modus oder den Shuffle-Modus auf aktiv oder inaktiv fest.
+title: IWMPSettings setMode-Methode
+description: Die setMode-Methode legt den Schleifenmodus oder Shufflemodus auf aktiv oder inaktiv fest.
 ms.assetid: e9d3765e-6edb-47a5-ac97-5e00b62498c2
 keywords:
-- setmode-Methode, Windows-Media Player
-- setmode-Methode, Windows Media Player, iwmpsettings-Schnittstelle
-- Iwmpsettings-Schnittstelle, Windows Media Player, setmode-Methode
+- setMode-Methode Windows Media Player
+- setMode-Methode Windows Media Player , IWMPSettings-Schnittstelle
+- IWMPSettings-Schnittstelle Windows Media Player , setMode-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f8dffede5e634c5c4f726cff1631b79781ed5179
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 529aadf412cdae869ae3c308d82dcd08a7dfd581aeb7ecc711052f6acd54b962
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365394"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118568407"
 ---
-# <a name="iwmpsettingssetmode-method"></a>Iwmpsettings:: setmode-Methode
+# <a name="iwmpsettingssetmode-method"></a>IWMPSettings::setMode-Methode
 
-Die **setmode** -Methode legt den Schleifen Modus oder den Shuffle-Modus auf aktiv oder inaktiv fest.
+Die **setMode-Methode** legt den Schleifenmodus oder Shufflemodus auf aktiv oder inaktiv fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,18 +55,18 @@ Implements IWMPSettings.setMode
 
 <dl> <dt>
 
-*bstraumode* \[ in\]
+*bstrMode* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Wert, der der Name des geänderten Modus ist, der einen der folgenden Werte enthält.
+Eine **System.String-** mit dem Namen des modus, der geändert wird und einen der folgenden Werte enthält.
 
 
 
-| Wert      | BESCHREIBUNG                                                                                      |
+| Wert      | Beschreibung                                                                                      |
 |------------|--------------------------------------------------------------------------------------------------|
-| autorewind | Die Nachverfolgung wird von Anfang an neu gestartet.                                |
-| loop       | Die Reihenfolge der Spuren wird wiederholt.                                                           |
-| showframe  | Der nächste Keyframe wird angezeigt, wenn er nicht wiedergegeben wird. Dieser Modus ist für Audiospuren nicht relevant. |
+| autoRewind | Spuren werden von Anfang an neu gestartet, nachdem sie bis zum Ende wiedergegeben wurden.                                |
+| loop       | Die Sequenz von Spuren wiederholt sich selbst.                                                           |
+| showFrame  | Der nächstgelegene Keyframe wird angezeigt, wenn er nicht wiedergegeben wird. Dieser Modus ist für Audiospuren nicht relevant. |
 | Shuffle    | Spuren werden in zufälliger Reihenfolge wiedergegeben.                                                               |
 
 
@@ -75,10 +75,10 @@ Ein **System. String** -Wert, der der Name des geänderten Modus ist, der einen 
 
 </dd> <dt>
 
-*varf-Modus* \[ in\]
+*varfMode* \[ In\]
 </dt> <dd>
 
-Ein **System. Boolean** -Wert, der angibt, ob der neue angegebene Modus aktiv ist.
+Ein **System.Boolean-Wert,** der angibt, ob der neue angegebene Modus aktiv ist.
 
 </dd> </dl>
 
@@ -86,9 +86,9 @@ Ein **System. Boolean** -Wert, der angibt, ob der neue angegebene Modus aktiv is
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der showframe-Modus aktiv ist, muss Windows Media Player auf den Inhalt der Nachverfolgung zugreifen, um den Videoframe abzurufen. Verwenden Sie diesen Modus bei der Wiedergabe von Inhalten, die nicht lokal sind, vorsichtig.
+Wenn der ShowFrame-Modus aktiv ist, müssen Windows Media Player auf den Trackinhalt zugreifen, um den Videoframe abzurufen. Verwenden Sie diesen Modus vorsichtig, wenn Sie Inhalte wiedergeben, die nicht lokal sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,20 +96,20 @@ Wenn der showframe-Modus aktiv ist, muss Windows Media Player auf den Inhalt der
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpsettings-Schnittstelle (VB und c#)**](iwmpsettings--vb-and-c.md)
+[**IWMPSettings-Schnittstelle (VB und C#)**](iwmpsettings--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. getMode (VB und c#)**](wmplibiwmpsettings-iwmpsettings-getmode--vb-and-c.md)
+[**IWMPSettings.getMode (VB und C#)**](wmplibiwmpsettings-iwmpsettings-getmode--vb-and-c.md)
 </dt> </dl>
 
  

@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. ApplicationName-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.ApplicationName-Eigenschaft.
 ms.assetid: bf4b310a-7e63-45c5-a327-2638fb31d676
-title: System. ApplicationName Photo Metadata-Richtlinie
+title: Richtlinie für System.ApplicationName-Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e36fac2a864cabfd7c1521d72357d187a8aea50
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b3084f21453a82c79925d4a164f5f847c3a24968009b7b8c4236ce3a40872dad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759505"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118710919"
 ---
-# <a name="systemapplicationname-photo-metadata-policy"></a>System. ApplicationName Photo Metadata-Richtlinie
+# <a name="systemapplicationname-photo-metadata-policy"></a>Richtlinie für System.ApplicationName-Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. ApplicationName](../properties/props-system-applicationname.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.ApplicationName-Eigenschaft.](../properties/props-system-applicationname.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ ApplicationName
+PKEY \_ ApplicationName
 
 ### <a name="containers"></a>Container
 
@@ -27,7 +27,7 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
@@ -35,59 +35,59 @@ VT \_ LPWSTR
 
 String
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                                         | Datenträger Format |
+| Auftrag | Pfad                                         | Datenträgerformat |
 |-------|----------------------------------------------|-------------|
-|       | /App1/IFD/{ushort = 305}                       | ascii       |
-|       | /app13/IRB/8bimiptc/IPTC/Originating-Programm |             |
-|       | /XMP/XMP: kreatortool                         | Unicode     |
-|       | /XMP/XMP: kreatortool                         | Unicode     |
-|       | /XMP/TIFF: Software                           | Unicode     |
-|       | /XMP/TIFF: Software                           | Unicode     |
-|       | /app13/IRB/8bimiptc/IPTC/Originating-Programm |             |
+|       | /app1/ifd/{ushort=305}                       | ascii       |
+|       | /app13/irb/8bimiptc/iptc/Originating Program |             |
+|       | /xmp/xmp:CreatorTool                         | Unicode     |
+|       | /xmp/xmp:creatortool                         | Unicode     |
+|       | /xmp/tiff:Software                           | Unicode     |
+|       | /xmp/tiff:software                           | Unicode     |
+|       | /app13/irb/8bimiptc/iptc/Originating Program |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                                         | Datenträger Format |
+| Auftrag | Pfad                                         | Datenträgerformat |
 |-------|----------------------------------------------|-------------|
-|       | /App1/IFD/{ushort = 305}                       | ascii       |
-|       | /XMP/XMP: kreatortool                         | Unicode     |
-|       | /XMP/XMP: kreatortool                         | Unicode     |
-|       | /XMP/TIFF: Software                           | Unicode     |
-|       | /XMP/TIFF: Software                           | Unicode     |
-|       | /app13/IRB/8bimiptc/IPTC/Originating-Programm |             |
+|       | /app1/ifd/{ushort=305}                       | ascii       |
+|       | /xmp/xmp:CreatorTool                         | Unicode     |
+|       | /xmp/xmp:creatortool                         | Unicode     |
+|       | /xmp/tiff:Software                           | Unicode     |
+|       | /xmp/tiff:software                           | Unicode     |
+|       | /app13/irb/8bimiptc/iptc/Originating Program |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                                         |
 |-------|----------------------------------------------|
-|       | /App1/IFD/{ushort = 305}                       |
-|       | /XMP/XMP: kreatortool                         |
-|       | /XMP/XMP: kreatortool                         |
-|       | /XMP/TIFF: Software                           |
-|       | /XMP/TIFF: Software                           |
-|       | /app13/IRB/8bimiptc/IPTC/Originating-Programm |
+|       | /app1/ifd/{ushort=305}                       |
+|       | /xmp/xmp:CreatorTool                         |
+|       | /xmp/xmp:creatortool                         |
+|       | /xmp/tiff:Software                           |
+|       | /xmp/tiff:software                           |
+|       | /app13/irb/8bimiptc/iptc/Originating Program |
 
 
 
@@ -95,68 +95,68 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policy"></a>TIFF-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                                       | Datenträger Format |
+| Auftrag | Pfad                                       | Datenträgerformat |
 |-------|--------------------------------------------|-------------|
-|       | /IFD/{ushort = 305}                          | ascii       |
-|       | /IFD/IPTC/Originating-Programm              |             |
-|       | /IFD/XMP/XMP: kreatortool                   | Unicode     |
-|       | /IFD/XMP/XMP: kreatortool                   | Unicode     |
-|       | /IFD/XMP/TIFF: Software                     | Unicode     |
-|       | /IFD/XMP/TIFF: Software                     | Unicode     |
-|       | /IFD/IPTC/Originating-Programm              |             |
-|       | /IFD/IRB/8bimiptc/IPTC/Originating-Programm |             |
+|       | /ifd/{ushort=305}                          | ascii       |
+|       | /ifd/iptc/Originating Program              |             |
+|       | /ifd/xmp/xmp:CreatorTool                   | Unicode     |
+|       | /ifd/xmp/xmp:creatortool                   | Unicode     |
+|       | /ifd/xmp/tiff:Software                     | Unicode     |
+|       | /ifd/xmp/tiff:software                     | Unicode     |
+|       | /ifd/iptc/Originating Program              |             |
+|       | /ifd/irb/8bimiptc/iptc/Originating Program |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                                       | Datenträger Format |
+| Auftrag | Pfad                                       | Datenträgerformat |
 |-------|--------------------------------------------|-------------|
-|       | /IFD/{ushort = 305}                          | ascii       |
-|       | /IFD/XMP/XMP: kreatortool                   | Unicode     |
-|       | /IFD/XMP/XMP: kreatortool                   | Unicode     |
-|       | /IFD/XMP/TIFF: Software                     | Unicode     |
-|       | /IFD/XMP/TIFF: Software                     | Unicode     |
-|       | /IFD/IPTC/Originating-Programm              |             |
-|       | /IFD/IRB/8bimiptc/IPTC/Originating-Programm |             |
+|       | /ifd/{ushort=305}                          | ascii       |
+|       | /ifd/xmp/xmp:CreatorTool                   | Unicode     |
+|       | /ifd/xmp/xmp:creatortool                   | Unicode     |
+|       | /ifd/xmp/tiff:Software                     | Unicode     |
+|       | /ifd/xmp/tiff:software                     | Unicode     |
+|       | /ifd/iptc/Originating Program              |             |
+|       | /ifd/irb/8bimiptc/iptc/Originating Program |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                                       |
 |-------|--------------------------------------------|
-|       | /IFD/{ushort = 305}                          |
-|       | /IFD/XMP/XMP: kreatortool                   |
-|       | /IFD/XMP/XMP: kreatortool                   |
-|       | /IFD/XMP/TIFF: Software                     |
-|       | /IFD/XMP/TIFF: Software                     |
-|       | /IFD/IPTC/Originating-Programm              |
-|       | /IFD/IRB/8bimiptc/IPTC/Originating-Programm |
+|       | /ifd/{ushort=305}                          |
+|       | /ifd/xmp/xmp:CreatorTool                   |
+|       | /ifd/xmp/xmp:creatortool                   |
+|       | /ifd/xmp/tiff:Software                     |
+|       | /ifd/xmp/tiff:software                     |
+|       | /ifd/iptc/Originating Program              |
+|       | /ifd/irb/8bimiptc/iptc/Originating Program |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. ApplicationName](../properties/props-system-applicationname.md)
+[System.ApplicationName](../properties/props-system-applicationname.md)
 </dt> </dl>
 
  

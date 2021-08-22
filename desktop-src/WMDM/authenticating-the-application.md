@@ -3,35 +3,35 @@ title: Authentifizieren der Anwendung
 description: Authentifizieren der Anwendung
 ms.assetid: 011815fa-d55c-4abc-9ec8-55d754827342
 keywords:
-- Windows Media-Device Manager, Authentifizierung
-- Device Manager, Authentifizierung
-- Programmier Handbuch, Authentifizierung
-- Desktop Anwendungen, Authentifizierung
-- Erstellen von Windows Media Device Manager-Anwendungen, Authentifizierung
+- Windows Medien Geräte-Manager,Authentifizierung
+- Geräte-Manager,Authentifizierung
+- Programmierhandbuch,Authentifizierung
+- Desktopanwendungen,Authentifizierung
+- Erstellen Windows Media Geräte-Manager Anwendungen,Authentifizierung
 - authentication
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b7779cdbb874278e6b62517cc2c1983dd2ce8fa1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9b67ad7c603bbfd3a56667bfcfe8742775c8ae5683888d72661e0a0974aa5358
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106339886"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118586735"
 ---
 # <a name="authenticating-the-application"></a>Authentifizieren der Anwendung
 
-Der erste Schritt, den Ihre Anwendung ausführen muss, ist die-Authentifizierung. Bei der Authentifizierung wird die Identität der Anwendung für Windows Media Device Manager überprüft. Nachdem Sie die Anwendung authentifiziert haben, können Sie **QueryInterface** zum Abrufen der Stamm- [**iwmdevicemanager**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdevicemanager) -Schnittstelle abrufen, die für andere erforderliche Schnittstellen abgefragt werden kann, die selbst für alle anderen Schnittstellen abgefragt werden können. Die Authentifizierung muss beim Start nur einmal erfolgen.
+Der erste Schritt, den Ihre Anwendung ausführen muss, ist die Authentifizierung. Die Authentifizierung überprüft die Identität der Anwendung, um Windows Medien Geräte-Manager. Nachdem Sie Ihre Anwendung authentifiziert haben, können Sie **QueryInterface** aufrufen, um die [**Stammschnittstelle IWMDeviceManager**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdevicemanager) abzurufen, die nach anderen erforderlichen Schnittstellen abgefragt werden kann, die selbst für alle anderen Schnittstellen abgefragt werden können. Die Authentifizierung muss beim Start nur einmal stattfinden.
 
 Führen Sie die folgenden Schritte aus, um Ihre Anwendung zu authentifizieren:
 
-1.  CoCreate the **mediadevmgr** Object (Class ID mediadevmgr) und Request an eine [**icomponentauthenticate**](/windows/desktop/api/mswmdm/nn-mswmdm-icomponentauthenticate) -Schnittstelle.
-2.  Erstellen Sie ein [csecurechannelclient](csecurechannelclient-class.md) -Objekt, um die Authentifizierung zu verarbeiten.
-3.  Übergeben Sie den Anwendungs Schlüssel, und übertragen Sie das Zertifikat an das sichere Kanal Objekt. Sie können den im folgenden Beispielcode gezeigten Dummy-Schlüssel/-Zertifikat verwenden, um grundlegende Funktionen von SDK-Funktionen zu erhalten. Um jedoch eine vollständige Funktionalität zu erhalten (wichtig für das Übergeben von Dateien an und vom Gerät), müssen Sie einen Schlüssel und ein Zertifikat von Microsoft anfordern, wie unter [Tools for Development (Tools für die Entwicklung](tools-for-development.md)) beschrieben.
-4.  Übergeben Sie die **icomponentauthenticate** -Schnittstelle, die Sie in Schritt 1 erstellt haben, an das sichere Channel-Objekt.
-5.  Wenden Sie [**csecurechannelclient:: authentifizieren**](/previous-versions/ms983906(v=msdn.10)) an, um Ihre Anwendung zu authentifizieren.
-6.  Fragen Sie **icomponentauthenticate** für die **iwmtovicemanager** -Schnittstelle ab.
+1.  Erstellen Sie das **MediaDevMgr-Objekt** (Klassen-ID MediaDevMgr), und fordern Sie eine [**IComponentAuthenticate-Schnittstelle**](/windows/desktop/api/mswmdm/nn-mswmdm-icomponentauthenticate) an.
+2.  Erstellen Sie ein [CSecureChannelClient-Objekt,](csecurechannelclient-class.md) um die Authentifizierung zu verarbeiten.
+3.  Übergeben Sie Ihren Anwendungsschlüssel, und übertragen Sie das Zertifikat an das Objekt des sicheren Kanals. Sie können den Im folgenden Beispielcode gezeigten Dummyschlüssel bzw. das Dummyzertifikat verwenden, um grundlegende Funktionen von SDK-Funktionen zu erhalten. Um jedoch die vollständige Funktionalität (wichtig für die Übergabe von Dateien an und vom Gerät) zu erhalten, müssen Sie einen Schlüssel und ein Zertifikat von Microsoft anfordern, wie unter [Tools für die Entwicklung beschrieben.](tools-for-development.md)
+4.  Übergeben Sie **die IComponentAuthenticate-Schnittstelle,** die Sie in Schritt 1 erstellt haben, an das Objekt des sicheren Kanals.
+5.  Rufen [**Sie CSecureChannelClient::Authenticate auf,**](/previous-versions/ms983906(v=msdn.10)) um Ihre Anwendung zu authentifizieren.
+6.  Fragen **Sie IComponentAuthenticate** für die **IWMDeviceManager-Schnittstelle** ab.
 
-Diese Schritte sind im folgenden C++-Code dargestellt.
+Diese Schritte werden im folgenden C++-Code gezeigt.
 
 
 ```C++
@@ -91,9 +91,9 @@ HRESULT CWMDMController::Authenticate()
 
 <dl> <dt>
 
-[**Erstellen einer Windows Media Device Manager-Anwendung**](creating-a-windows-media-device-manager-application.md)
+[**Erstellen einer Windows Media Geräte-Manager Anwendung**](creating-a-windows-media-device-manager-application.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,33 +1,33 @@
 ---
-description: Gibt die Größe der Video Zugriffs Einheiten in Bytes an. Diese Eigenschaft gilt nur für die Steuermodi der Variablen Bitrate (VBR).
+description: Gibt die Größe der Videozugriffseinheiten in Bytes an. Diese Eigenschaft gilt nur für vbr-Steuerungsmodi (Variable Bit Rate).
 ms.assetid: bb46b171-d70a-4e01-88c4-321a210a0220
-title: Avencvideocodedvideoaccessunitsize-Eigenschaft (codecapi. h)
+title: AVEncVideoCodedVideoAccessUnitSize-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: be3a6e499749d862fdcc63f28b1a9a02f476d1c7
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: fcce45dbd232226aa5e0013cbead8e4ff2d8d82b5362d1d6a43cf45c2d030407
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103957732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118663165"
 ---
-# <a name="avencvideocodedvideoaccessunitsize-property"></a>Avencvideocodedvideoaccessunitsize (Eigenschaft)
+# <a name="avencvideocodedvideoaccessunitsize-property"></a>AVEncVideoCodedVideoAccessUnitSize-Eigenschaft
 
-Gibt die Größe der Video Zugriffs Einheiten in Bytes an. Diese Eigenschaft gilt nur für die Steuermodi der Variablen Bitrate (VBR).
+Gibt die Größe der Videozugriffseinheiten in Bytes an. Diese Eigenschaft gilt nur für vbr-Steuerungsmodi (Variable Bit Rate).
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencvideocodedvideoaccessunitsize**
+**CODECAPI \_ AVEncVideoCodedVideoAccessUnitSize**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Diese Eigenschaft wird als Wertebereich zurückgegeben. Um den unterstützten Bereich abzurufen, nennen Sie [**icodecapi:: getparameterrange**](/windows/desktop/api/Strmif/nf-strmif-icodecapi-getparameterrange).
+Diese Eigenschaft wird als Wertebereich zurückgegeben. Rufen Sie [**ICodecAPI::GetParameterRange**](/windows/desktop/api/Strmif/nf-strmif-icodecapi-getparameterrange)auf, um den unterstützten Bereich abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,20 +35,20 @@ Diese Eigenschaft wird als Wertebereich zurückgegeben. Um den unterstützten Be
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

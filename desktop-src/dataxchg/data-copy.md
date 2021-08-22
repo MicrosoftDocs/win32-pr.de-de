@@ -1,21 +1,21 @@
 ---
-title: Datenkopie
-description: In diesem Abschnitt wird erläutert, wie Sie die Daten Kopier Nachricht verwenden, um Daten von einer Anwendung in eine andere zu übertragen.
+title: Kopieren von Daten
+description: In diesem Abschnitt wird erläutert, wie Die Datenkopiernachricht verwendet wird, um Daten von einer Anwendung in eine andere zu übertragen.
 ms.assetid: 10a50efe-f3d5-4c59-a084-69119ef86129
 keywords:
 - Datenkopie, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f494e36387bbd25c2b8789b59fff3e3e687ea9e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8bc0fa49053ef28c5fd660571695551214d9761ed87a80f1ccb89a2d49a9c93a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118545414"
 ---
-# <a name="data-copy"></a>Datenkopie
+# <a name="data-copy"></a>Kopieren von Daten
 
-Mithilfe der Funktion zum Kopieren von Daten können Sie Daten von einer Anwendung an eine andere senden.
+Mit dem Datenkopierfeature können Sie Daten von einer Anwendung an eine andere senden.
 
 ### <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -23,32 +23,32 @@ Mithilfe der Funktion zum Kopieren von Daten können Sie Daten von einer Anwendu
 
 | Name                                                      | BESCHREIBUNG                                                                                        |
 |-----------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| [Verwenden der Datenkopie](using-data-copy.md)<br/>         | Enthält ein Beispiel, das veranschaulicht, wie Informationen zwischen zwei Anwendungen gesendet werden.<br/> |
-| [Verweis zum Kopieren von Daten](data-copy-reference.md)<br/> | Enthält die API-Referenz.<br/>                                                             |
+| [Verwenden von Datenkopiervorgang](using-data-copy.md)<br/>         | Enthält ein Beispiel, das veranschaulicht, wie Informationen zwischen zwei Anwendungen gesendet werden.<br/> |
+| [Datenkopierverweis](data-copy-reference.md)<br/> | Enthält den API-Verweis.<br/>                                                             |
 
 
 
  
 
-### <a name="data-copy-messages"></a>Meldungen zum Kopieren von Daten
+### <a name="data-copy-messages"></a>Datenkopiernachrichten
 
 
 
 | Name                                           | BESCHREIBUNG                                           |
 |------------------------------------------------|-------------------------------------------------------|
-| [**WM- \_ CopyData**](wm-copydata.md)<br/> | Wird gesendet, um Daten an eine andere Anwendung zu übergeben. <br/> |
+| [**WM \_ COPYDATA**](wm-copydata.md)<br/> | Wird gesendet, um Daten an eine andere Anwendung zu übergeben. <br/> |
 
 
 
  
 
-### <a name="data-copy-structures"></a>Daten Kopier Strukturen
+### <a name="data-copy-structures"></a>Datenkopierstrukturen
 
 
 
 | Name                                                | BESCHREIBUNG                                                                                                       |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| [**Copydatastruct**](/windows/win32/api/winuser/ns-winuser-copydatastruct)<br/> | Enthält Daten, die von der [**WM- \_ CopyData**](wm-copydata.md) -Nachricht an eine andere Anwendung übermittelt werden. <br/> |
+| [**COPYDATASTRUCT**](/windows/win32/api/winuser/ns-winuser-copydatastruct)<br/> | Enthält Daten, die von der [**WM \_ COPYDATA-Nachricht**](wm-copydata.md) an eine andere Anwendung übergeben werden sollen. <br/> |
 
 
 

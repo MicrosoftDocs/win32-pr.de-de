@@ -1,45 +1,45 @@
 ---
-description: Konfiguration des DVD-Filter Diagramms
+description: DVD-Filter Graph Konfiguration
 ms.assetid: 0c68c456-2240-4090-b45c-bd098cfea645
-title: Konfiguration des DVD-Filter Diagramms
+title: DVD-Filter Graph Konfiguration
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ec7bb8757e5246fc01309fbef55e654436560b2
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 6ece69f77ac4a4e6674bbcd12404a10b7f765a514e18cb31963d2ed7f981799e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104522403"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118653086"
 ---
-# <a name="dvd-filter-graph-configuration"></a>Konfiguration des DVD-Filter Diagramms
+# <a name="dvd-filter-graph-configuration"></a>DVD-Filter Graph Konfiguration
 
-In diesem Abschnitt werden die verschiedenen Filter Diagramm Konfigurationen für die DVD-Wiedergabe in DirectShow beschrieben. Diese Diagramme werden hauptsächlich zur Referenz bereitgestellt. Der DVD-Navigator erstellt das Diagramm. im Allgemeinen ist es nicht notwendig, die Details der Konfiguration des Diagramms zu verstehen. Weitere Informationen finden Sie unter [Building the DVD Filter Graph](building-the-dvd-filter-graph.md).
+In diesem Abschnitt werden die verschiedenen Filterdiagrammkonfigurationen für die DVD-Wiedergabe in DirectShow beschrieben. Diese Diagramme werden hauptsächlich als Referenz bereitgestellt. Der DVD-Navigator erstellt das Diagramm, sodass es im Allgemeinen nicht erforderlich ist, die Details der Konfiguration des Graphen zu verstehen. Weitere Informationen finden Sie unter [Building the DVD Filter Graph](building-the-dvd-filter-graph.md).
 
-Die folgende Abbildung zeigt ein DVD-Filter Diagramm mit einem Software Decoder.
+Die folgende Abbildung zeigt ein DVD-Filterdiagramm mit einem Softwaredecoder.
 
-![DVD-Filter Diagramm für Windows XP](images/dvd-graph-xp.png)
+![DVD-Filterdiagramm für Windows XP](images/dvd-graph-xp.png)
 
-Wenn ein Hardware Decoder vorhanden ist, wird er normalerweise direkt mit der Grafikkarte von einem Videoport verbunden. Dadurch können die decodierten Video Bits direkt an den Frame Puffer auf der Grafikkarte gesendet werden, ohne in den Host Speicher zu übergeben. Um diese direkte Verbindung unter früheren Versionen von Windows zu verwalten, unterstützt DirectShow DirectDraw Video Port Extensions (VPE) über eine Schnittstelle auf dem [Überlagerungs-Mischungs Filter](overlay-mixer-filter.md).
+Wenn ein Hardwaredecoder vorhanden ist, wird er in der Regel über einen Videoport direkt mit der Grafikkarte verbunden. Dadurch können die decodierten Videobits direkt an den Framepuffer auf der Grafikkarte gesendet werden, ohne an den Hostspeicher zu übergeben. Um diese direkte Verbindung in früheren Versionen von Windows zu verwalten, unterstützt DirectShow DirectDraw Video Port Extensions (VPE) über eine Schnittstelle auf dem [Overlay-Mixer Filter](overlay-mixer-filter.md).
 
 > [!Note]  
-> Der Überlagerungs-Mixer ist nun veraltet.
+> Das Overlay-Mixer ist jetzt veraltet.
 
  
 
-In Windows XP und höher kann ein Hardware Decoder eine Verbindung mit dem [Video Port-Manager](video-port-manager.md) -Filter herstellen.
+In Windows XP und höher kann ein Hardwaredecoder eine Verbindung mit dem [Videoport-Manager-Filter](video-port-manager.md) herstellen.
 
-![DVD-Diagramm für Windows XP mit einem Hardware Decoder](images/dvd-hwgraph-xp.png)
+![DVD-Diagramm für Windows XP mit einem Hardwaredecoder](images/dvd-hwgraph-xp.png)
 
-In allen diesen Diagrammen ist der DVD-Navigator der Quell Filter. Er führt mehrere Aufgaben aus:
+In all diesen Diagrammen ist der DVD-Navigator der Quellfilter. Er führt mehrere Aufgaben aus:
 
--   Liest die Navigations-und Videodaten von der Festplatte.
--   Demultiplexe der Video-, Audio-und Teil Bilddaten in separate Streams.
--   Pumpt die Streams zur weiteren Verarbeitung und zum endgültigen Rendering in das Diagramm.
--   Informiert ihre Anwendung über DVD-bezogene Ereignisse.
+-   Liest die Navigations- und Videodaten vom Datenträger.
+-   Demultiplexiert die Video-, Audio- und Unterbilddaten in separate Streams.
+-   Die Datenströme werden zur weiteren Verarbeitung und zum letztlichen Rendering in das Diagramm gestreamt.
+-   Informiert Ihre Anwendung über DVD-bezogene Ereignisse.
 
-Im Audiostream stellt der DVD-Navigator eine Downstream-Verbindung mit einem Audiodecoder her, der eine Verbindung mit dem [DirectSound-rendererfilter](directsound-renderer-filter.md)herstellt, dem Standardaudiorenderer. In den Video-und subbildstreams sind die downstreamfilter der Video Decoder von Drittanbietern und der Video Mischungs-Renderer (oder der [Überlagerungs-Mixer](overlay-mixer-filter.md)und der [Videorenderer](video-renderer-filter.md) bei Anwendungen mit kompatible). Wenn die Anwendung die von Closed unterteilten Daten in Zeile 21 behandelt, müssen Sie den Filter DirectShow Line 21 Decoder 2 dem Diagramm hinzufügen. Dies umfasst einen einzelnen Methoden aufzurufen. der Filter wird automatisch verbunden.
+Im Audiostream verbindet sich der DVD-Navigator nachgeschaltet mit einem Audiodecoder, der eine Verbindung mit dem [DirectSound-Rendererfilter](directsound-renderer-filter.md)herstellt, dem Standardaudiorenderer. In den Video- und Unterbildstreams sind die Downstreamfilter der Videodecoder eines Drittanbieters und der VideoMischungsrenderer (oder [der Overlay Mixer](overlay-mixer-filter.md)und der [Videorenderer](video-renderer-filter.md) in downlevel-Anwendungen). Wenn Ihre Anwendung Zeilen 21-Daten mit Untertiteln verarbeitet, müssen Sie dem Diagramm den Filter DirectShow Line 21 Decoder 2 hinzufügen. Dies umfasst einen einzelnen Methodenaufruf. Der Filter wird automatisch verbunden.
 
-Ihre Anwendung kommuniziert mit und steuert den DVD-Navigator über die benutzerdefinierten Schnittstellen, die der DVD-Navigator verfügbar macht: [**IDvdControl2**](/windows/desktop/api/Strmif/nn-strmif-idvdcontrol2)– die "Set"-Methoden – und [**IDvdInfo2**](/windows/desktop/api/Strmif/nn-strmif-idvdinfo2)– die "Get"-Methoden. Außerdem muss Sie mit dem Filter Graph-Manager (über [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol)) kommunizieren, um das Diagramm zu starten, zu starten und anderweitig zu steuern. Möglicherweise müssen Sie auch andere einzelne Filter steuern, z. b. den Überlagerungs Filter Filter zum Wechseln zwischen Fenster-und voll Bild Anzeige. Weitere Informationen finden Sie unter [**IMixerPinConfig2**](/windows/desktop/api/Mpconfig/nn-mpconfig-imixerpinconfig2). Die genaue Konfiguration des Diagramms variiert abhängig davon, welche Art von MPEG-2-Decoder Sie installiert haben, ob Sie die von Closed beschrifteten Zeilen 21 und anderen Faktoren verarbeiten müssen.
+Ihre Anwendung kommuniziert mit dem DVD-Navigator und steuert ihn über die benutzerdefinierten Schnittstellen, die der DVD-Navigator verfügbar macht: [**IDvdControl2**](/windows/desktop/api/Strmif/nn-strmif-idvdcontrol2)– die "set"-Methoden – und [**IDvdInfo2**](/windows/desktop/api/Strmif/nn-strmif-idvdinfo2)– die "get"-Methoden. Sie muss auch mit dem Filterdiagramm-Manager (über [**IMediaControl)**](/windows/desktop/api/Control/nn-control-imediacontrol)kommunizieren, um das Diagramm zu beenden, zu starten und andernfalls zu steuern. Möglicherweise müssen Sie auch andere einzelne Filter steuern, z. B. den Overlay Mixer filter for switching between windowed and full-screen display ." (Überlagerungsfilter zum Wechseln zwischen Fenstern und Vollbildanzeige). Weitere Informationen finden Sie unter [**IMixerPinConfig2**](/windows/desktop/api/Mpconfig/nn-mpconfig-imixerpinconfig2). Die genaue Konfiguration des Diagramms hängt davon ab, welche Art von MPEG-2-Decoder Sie installiert haben, ob Sie Daten mit Untertiteln in Zeile 21 und andere Faktoren verarbeiten müssen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,27 +1,27 @@
 ---
-description: Der Installer legt die Terminalserver-Eigenschaft fest, wenn das System ein Server mit Terminal Diensten ist.
+description: Das Installationsprogramm legt die TerminalServer-Eigenschaft fest, wenn das System ein Server mit Terminaldiensten ist.
 ms.assetid: 65bc1f73-8b52-4ebb-b408-96123db2176d
-title: Terminalserver (Eigenschaft)
+title: TerminalServer-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dec6000e638d965884e2922f4c2f285a2852e629
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3bf5caf18337e4fb8e3e8f3c62e47f88e64aa76f8445f2c2d780d0810386cb83
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360351"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118623574"
 ---
-# <a name="terminalserver-property"></a>Terminalserver (Eigenschaft)
+# <a name="terminalserver-property"></a>TerminalServer-Eigenschaft
 
-Der Installer legt die **Terminalserver** -Eigenschaft fest, wenn das System ein Server mit Terminal Diensten ist.
+Das Installationsprogramm legt die **TerminalServer-Eigenschaft** fest, wenn das System ein Server mit Terminaldiensten ist.
 
 ## <a name="default-value"></a>Standardwert
 
-Keine. Die-Eigenschaft ist nicht definiert, wenn Sie nicht für Terminal Dienste ausgeführt wird.
+Keine. Die -Eigenschaft ist nicht definiert, wenn sie nicht auf Terminaldiensten ausgeführt wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**remoteadmints**](remoteadmints.md) -Eigenschaft kann nur unter Microsoft Windows 2000 oder höher festgelegt werden. Die **Terminalserver** -Eigenschaft kann unter Windows 2000 festgelegt werden.
+Die [**RemoteAdminTS-Eigenschaft**](remoteadmints.md) kann nur für Microsoft Windows 2000 oder höher festgelegt werden. Die **TerminalServer-Eigenschaft** kann auf Windows 2000 festgelegt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -29,7 +29,7 @@ Die [**remoteadmints**](remoteadmints.md) -Eigenschaft kann nur unter Microsoft 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Unter [Windows Installer Run-Time Requirements (Anforderungen für](windows-installer-portal.md) Windows Installer) finden Sie Informationen zu den mindestens erforderlichen Windows Service Packs, die für eine Windows Installer-Version erforderlich sind.<br/> |
 
 
 
@@ -40,7 +40,7 @@ Die [**remoteadmints**](remoteadmints.md) -Eigenschaft kann nur unter Microsoft 
 [Eigenschaften](properties.md)
 </dt> <dt>
 
-[**Remoteadmints (Eigenschaft)**](remoteadmints.md)
+[**RemoteAdminTS-Eigenschaft**](remoteadmints.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ruft den Entitäts Text der Antwort als IStream ab.
+description: Ruft den Antwortentitätstext als IStream ab.
 ms.assetid: e12a9338-5e0c-4672-bbc6-31375b872e94
-title: 'Iwinhttprequest:: Response Stream-Eigenschaft'
+title: IWinHttpRequest::ResponseStream-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - COM
 api_location:
 - Winhttp.dll
-ms.openlocfilehash: ec9f497e687c52735784a5e3edad01905ac7a6a8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f29fad2ccfcac5cbca1c6ef13e0aeef5bdd0f4764e81dd14cabdfa58fd30fbde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217410"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118563218"
 ---
-# <a name="iwinhttprequestresponsestream-property"></a>Iwinhttprequest:: Response Stream-Eigenschaft
+# <a name="iwinhttprequestresponsestream-property"></a>IWinHttpRequest::ResponseStream-Eigenschaft
 
-Die Response **Stream** -Eigenschaft ruft den Entitäts Text der Antwort als [**IStream**](/windows/desktop/api/objidl/nn-objidl-istream)ab.
+Die **ResponseStream-Eigenschaft** ruft den Antwortentitätstext als [**IStream ab.**](/windows/desktop/api/objidl/nn-objidl-istream)
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,26 +49,26 @@ vtResponseStream = WinHttpRequest.ResponseStream
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **Variante** , die einen Zeiger auf eine [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle empfängt, die für eine [**IStream**](/windows/desktop/api/objidl/nn-objidl-istream) -Schnittstelle abgefragt werden kann. Dieser Stream gibt die Rohdaten zurück, die vom Server direkt empfangen werden.
+Eine **Variante,** die einen Zeiger auf eine [**IUnknown-Schnittstelle**](/windows/win32/api/unknwn/nn-unknwn-iunknown) empfängt, die für eine [**IStream-Schnittstelle**](/windows/desktop/api/objidl/nn-objidl-istream) abgefragt werden kann. Dieser Stream gibt die Rohdaten zurück, die direkt vom Server empfangen wurden.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der Rückgabewert ist bei Erfolg **S \_ OK** oder andernfalls ein Fehlerwert.
+Der Rückgabewert ist bei Erfolg **S \_ OK,** andernfalls ein Fehlerwert.
 
-Wenn der vorherige [**Sende**](iwinhttprequest-send.md) Vorgang nicht abgeschlossen ist, wird **E \_ Ausstehend** angezeigt.
+Wenn der vorherige [**Sendevorgang**](iwinhttprequest-send.md) nicht abgeschlossen ist, lautet sie **E \_ PENDING.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Rufen Sie [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für den zurückgegebenen Zeiger auf, um einen Zeiger auf eine [**IStream**](/windows/desktop/api/objidl/nn-objidl-istream) -Schnittstelle zu erhalten. Diese Eigenschaft gibt die Antwortdaten als **IStream** zurück. Diese Eigenschaft kann nur aufgerufen werden, nachdem die [**Send**](iwinhttprequest-send.md) -Methode aufgerufen wurde.
+Rufen Sie [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für den zurückgegebenen Zeiger auf, um einen Zeiger auf eine [**IStream-Schnittstelle**](/windows/desktop/api/objidl/nn-objidl-istream) abzurufen. Diese Eigenschaft gibt die Antwortdaten als **IStream** zurück. Diese Eigenschaft kann nur aufgerufen werden, nachdem die [**Send-Methode**](iwinhttprequest-send.md) aufgerufen wurde.
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Lauf Zeitanforderungen](winhttp-start-page.md) auf der WinHTTP-Start Seite.
+> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Laufzeitanforderungen](winhttp-start-page.md) der WinHTTP-Startseite.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie eine HTTP-Verbindung geöffnet, eine HTTP-Anforderung gesendet und die Antwort als [**IStream**](/windows/desktop/api/objidl/nn-objidl-istream)gelesen wird. Die Daten aus dem **IStream** werden in die Datei Temp1.gif geschrieben.
+Das folgende Beispiel zeigt, wie sie eine HTTP-Verbindung öffnen, eine HTTP-Anforderung senden und die Antwort als [**IStream**](/windows/desktop/api/objidl/nn-objidl-istream)lesen. Die Daten aus dem **IStream** werden in die Datei Temp1.gif geschrieben.
 
 
 ```C++
@@ -289,29 +289,29 @@ int main(int argc, char* argv[])
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5,0 und Internet Explorer 5,01 oder höher unter Windows XP und Windows 2000.<br/> |
-| IDL<br/>                      | <dl> <dt>HttpRequest. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WinHTTP. lib</dt> </dl>     |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher auf Windows XP und Windows 2000.<br/> |
+| Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwinhttprequest**](iwinhttprequest-interface.md)
+[**IWinHttpRequest**](iwinhttprequest-interface.md)
 </dt> <dt>
 
 [**WinHttpRequest**](winhttprequest.md)
 </dt> <dt>
 
-[**Response Body**](iwinhttprequest-responsebody.md)
+[**ResponseBody**](iwinhttprequest-responsebody.md)
 </dt> <dt>
 
-[**Response Text**](iwinhttprequest-responsetext.md)
+[**Responsetext**](iwinhttprequest-responsetext.md)
 </dt> <dt>
 
 [WinHTTP-Versionen](winhttp-versions.md)

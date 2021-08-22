@@ -1,38 +1,38 @@
 ---
-title: Cenum var. CPP
-description: In der Beispiel Anbieter Komponente finden Sie die Basis Implementierung für von xxxenenumvariant abgeleitete Klassen in "cenenumvar. cpp". Die zugehörigen Methoden sind in der folgenden Tabelle aufgeführt.
+title: CENUMVAR. Cpp
+description: In der Beispielanbieterkomponente finden Sie die Basisimplementierungen für von xxxEnumVariant abgeleitete Klassen in cenumvar.cpp. Zugeordnete Methoden sind in der folgenden Tabelle aufgeführt.
 ms.assetid: 6b38bc99-25d4-40af-863a-9cc37f786d9b
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d361cb7d3e2657a31645fba05aa2e1a23762a3fc
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 74277f31640bc3c44b81511596eaf0739934330e01fc2d44f1f3cb3e28112106
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104316437"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118692519"
 ---
-# <a name="cenumvarcpp"></a>Cenum var. CPP
+# <a name="cenumvarcpp"></a>CENUMVAR. Cpp
 
-In der Beispiel Anbieter Komponente finden Sie die Basis Implementierung für von xxxenenumvariant abgeleitete Klassen in "cenenumvar. cpp". Die zugehörigen Methoden sind in der folgenden Tabelle aufgeführt.
+In der Beispielanbieterkomponente finden Sie die Basisimplementierungen für von xxxEnumVariant abgeleitete Klassen in cenumvar.cpp. Zugeordnete Methoden sind in der folgenden Tabelle aufgeführt.
 
 
 
-| Methode                                          | BESCHREIBUNG                                                                           |
+| Methode                                          | Beschreibung                                                                           |
 |-------------------------------------------------|---------------------------------------------------------------------------------------|
-| **Csampledsenum Variant:: csampledsenumschlag**  | Standardkonstruktor.                                                                 |
-| **Csampledsenum Variant:: ~ csampledsenumschlag** | Standardedekonstruktor.                                                                  |
-| **Csampledsenumschlag:: QueryInterface**        | Standard mäßige [**IUnknown:: QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Implementierung. |
-| **Csampledsenumschlag:: adressf**                | Standard mäßige [**IUnknown:: adressf**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) -Implementierung.                 |
-| **Csampledsenum Variant:: Release**               | Standard mäßige [**IUnknown:: Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) -Implementierung.               |
-| **Csampledsenübervariant:: Skip**                  | Standard mäßige **IEnumXXXX:: Skip** -Implementierung.                                          |
-| **Csampledsenum Variant:: Reset**                 | Standard **IEnumXXXX:: Reset** -Implementierung.                                         |
-| **Csampledsenumschlag:: Clone**                 | Standard mäßige **IEnumXXXX:: Clone** -Implementierung.                                         |
+| **CSampleDSEnumVariant::CSampleDSEnumVariant**  | Standardkonstruktor.                                                                 |
+| **CSampleDSEnumVariant::~CSampleDSEnumVariant** | Standard-Destruktor.                                                                  |
+| **CSampleDSEnumVariant::QueryInterface**        | Standardmäßige [**IUnknown::QueryInterface-Implementierung.**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) |
+| **CSampleDSEnumVariant::AddRef**                | Standardmäßige [**IUnknown::AddRef-Implementierung.**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)                 |
+| **CSampleDSEnumVariant::Release**               | Standardmäßige [**IUnknown::Release-Implementierung.**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)               |
+| **CSampleDSEnumVariant::Skip**                  | Standardmäßige **IEnumXXXX::Skip-Implementierung.**                                          |
+| **CSampleDSEnumVariant::Reset**                 | Standardmäßige **IEnumXXXX::Reset-Implementierung.**                                         |
+| **CSampleDSEnumVariant::Clone**                 | Standardmäßige **IEnumXXXX::Clone-Implementierung.**                                         |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

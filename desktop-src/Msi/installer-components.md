@@ -1,7 +1,7 @@
 ---
-description: Die Eigenschaft schreibgeschützte Komponenten gibt ein stringlist-Objekt zurück, das den Satz der installierten Komponenten für alle Produkte auflistet.
+description: Die schreibgeschützte Components-Eigenschaft gibt ein StringList-Objekt zurück, das den Satz installierter Komponenten für alle Produkte auflistet.
 ms.assetid: c84e4329-428a-440a-bd65-097588a86932
-title: Installer. Components (Eigenschaft)
+title: Installer.Components (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: e6767be5182b15836c071bf8b00ed8441f6031dc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b8538e594ed02a1bc355ed4cf57db1befb1443e58d7afe2038b16e08eb9e4659
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368651"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118632408"
 ---
-# <a name="installercomponents-property"></a>Installer. Components (Eigenschaft)
+# <a name="installercomponents-property"></a>Installer.Components (Eigenschaft)
 
-Die Eigenschaft schreibgeschützte **Komponenten** gibt ein [**stringlist**](stringlist-object.md) -Objekt zurück, das den Satz der installierten Komponenten für alle Produkte auflistet.
+Die schreibgeschützte **Components-Eigenschaft** gibt ein [**StringList-Objekt**](stringlist-object.md) zurück, das den Satz installierter Komponenten für alle Produkte auflistet.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,9 +37,9 @@ propVal = Installer.Components
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Auflisten der Komponenten kann eine Anwendung das [**stringlist**](stringlist-object.md) -Objekt durchlaufen, indem ein-Objekt für jedes Konstrukt verwendet wird. Da Komponenten nicht geordnet sind, haben alle neuen Komponenten einen beliebigen Index. Dies bedeutet, dass die Funktion Komponenten in beliebiger Reihenfolge zurückgeben kann.
+Um die Komponenten aufzählen zu können, kann eine Anwendung das [**StringList-Objekt**](stringlist-object.md) mithilfe eines For Each-Konstrukts iterieren. Da Komponenten nicht geordnet sind, haben alle neuen Komponenten einen beliebigen Index. Dies bedeutet, dass die Funktion Komponenten in beliebiger Reihenfolge zurückgeben kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,17 +47,17 @@ Zum Auflisten der Komponenten kann eine Anwendung das [**stringlist**](stringlis
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Msienumschlag Components**](/windows/desktop/api/Msi/nf-msi-msienumcomponentsa)
+[**MsiEnumComponents**](/windows/desktop/api/Msi/nf-msi-msienumcomponentsa)
 </dt> </dl>
 
  

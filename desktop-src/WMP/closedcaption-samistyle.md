@@ -1,9 +1,9 @@
 ---
-title: Closedcaption. samistyle
-description: Die samistyle-Eigenschaft gibt den Beschriftungs Stil an oder ruft ihn ab.
+title: ClosedCaption.SAMIStyle
+description: Die SAMIStyle-Eigenschaft gibt den Untertitelstil an oder ruft diese ab.
 ms.assetid: 5535fb31-f1c0-49c4-b758-df74964b1e67
 keywords:
-- Fenster "closedcaption. samistyle" Media Player
+- ClosedCaption.SAMIStyle-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ebe81c2c2c4f4504d6167abe538c52ab769550a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ed4a12671877cf0d4d8abdb77d169b0f13000bc564e6c1dc37e65bf6eccdf005
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359309"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118580765"
 ---
-# <a name="closedcaptionsamistyle"></a>Closedcaption. samistyle
+# <a name="closedcaptionsamistyle"></a>ClosedCaption.SAMIStyle
 
-Die **samistyle** -Eigenschaft gibt den Beschriftungs Stil an oder ruft ihn ab.
+Die **SAMIStyle-Eigenschaft** gibt den Untertitelstil an oder ruft diese ab.
 
 ``` syntax
 player.closedCaption.SAMIStyle
@@ -31,11 +31,11 @@ player.closedCaption.SAMIStyle
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine Lese- **/schreibzeichenfolge**.
+Diese Eigenschaft ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Sami-Datei kann mehrere Format Definitionen enthalten. Sami-Stile werden zwischen den Tags und in der Sami <STYLE> - </STYLE> Datei definiert. Ein Stil wird mit einer Text Zeichenfolge mit vorangestelltem \# Zeichen definiert. Beispiel:
+Eine SAMI-Datei kann mehrere Formatformatdefinitionen enthalten. SAMI-Stile werden zwischen den Tags <STYLE> und </STYLE> in der SAMI-Datei definiert. Ein Stil wird mit einer Textzeichenfolge definiert, der ein Zeichen \# voran steht. Beispiel:
 
 
 ```
@@ -47,15 +47,15 @@ Eine Sami-Datei kann mehrere Format Definitionen enthalten. Sami-Stile werden zw
 
 
 
-Gibt einen Stil an, der eine bestimmte Schriftart erzeugt.
+Dies gibt einen Stil an, der eine bestimmte Schriftart erzeugt.
 
-Wenn kein Sami-Format angegeben ist, wird standardmäßig das erste Format verwendet, das in der Sami-Datei definiert ist.
+Wenn kein SAMI-Stil angegeben ist, wird standardmäßig der erste in der SAMI-Datei definierte Stil verwendet.
 
 **Windows Media Player 10 Mobile:** Diese Eigenschaft ist schreibgeschützt und gibt immer eine leere Zeichenfolge zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird ein HTML-SELECT-Element erstellt, das *closedcaption* verwendet. **Samistyle** , um die Darstellung des geschlossenen Beschriftungs Texts zu ändern. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript wird ein HTML SELECT-Element erstellt, das *closedCaption verwendet.* **SAMIStyle,** um die Darstellung des Untertiteltexts zu ändern. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -82,7 +82,7 @@ Im folgenden JScript-Beispiel wird ein HTML-SELECT-Element erstellt, das *closed
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -94,7 +94,7 @@ Im folgenden JScript-Beispiel wird ein HTML-SELECT-Element erstellt, das *closed
 [**Hinzufügen von Untertiteln zu digitalen Medien**](adding-closed-captions-to-digital-media.md)
 </dt> <dt>
 
-[**Closedcaption-Objekt**](closedcaption-object.md)
+[**ClosedCaption-Objekt**](closedcaption-object.md)
 </dt> </dl>
 
  

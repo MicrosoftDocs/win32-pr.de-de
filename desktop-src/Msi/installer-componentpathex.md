@@ -1,7 +1,7 @@
 ---
-description: Gibt ein RecordList-Objekt zurück, das den vollständigen Pfad einer angegebenen installierten Komponente enthält.
+description: Gibt ein RecordList-Objekt zurück, das den vollständigen Pfad einer angegebenen installierten Komponente angibt.
 ms.assetid: 0f4f9d21-f1cc-44fd-a22f-1b6f055fef9e
-title: Installer. componentpathex-Eigenschaft
+title: Installer.ComponentPathEx-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: b7bf98dd8e7a81a0dd261f22a565bec8298a86a1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 720b10c75fcdf4a6b72f22a72d3b0860fc6089403385b0a951127f56286b6953
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368467"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118632615"
 ---
-# <a name="installercomponentpathex-property"></a>Installer. componentpathex-Eigenschaft
+# <a name="installercomponentpathex-property"></a>Installer.ComponentPathEx-Eigenschaft
 
-Diese Eigenschaft gibt ein [**RecordList**](recordlist-object.md) -Objekt zurück, das den vollständigen Pfad einer angegebenen installierten Komponente enthält. Diese Eigenschaft ruft [**msigetcomponentpathex**](/windows/desktop/api/Msi/nf-msi-msigetcomponentpathexa)auf.
+Diese Eigenschaft gibt ein [**RecordList-Objekt**](recordlist-object.md) zurück, das den vollständigen Pfad einer angegebenen installierten Komponente angibt. Diese Eigenschaft ruft [**MsiGetComponentPathEx auf.**](/windows/desktop/api/Msi/nf-msi-msigetcomponentpathexa)
 
-**[Windows Installer 4,5 oder früher](not-supported-in-windows-installer-4-5.md):** Nicht unterstützt. Diese Eigenschaft ist ab Windows Installer 5,0 verfügbar.
+**[Windows Installer 4.5 oder früher:](not-supported-in-windows-installer-4-5.md)** Wird nicht unterstützt. Diese Eigenschaft ist ab Windows Installer 5.0 verfügbar.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,17 +45,17 @@ propVal = Installer.ComponentPathEx
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                      |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-0000000000046 definiert.<br/>                           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Msigetcomponentpathex**](/windows/desktop/api/Msi/nf-msi-msigetcomponentpathexa)
+[**MsiGetComponentPathEx**](/windows/desktop/api/Msi/nf-msi-msigetcomponentpathexa)
 </dt> </dl>
 
  

@@ -1,24 +1,24 @@
 ---
-title: Beispiel Code für die Suche nach Attributen
-description: Im folgenden Codebeispiel wird gezeigt, wie Sie die \_ Such Einstellung ADS searchpref \_ attribtypes \_ only suchen verwenden, um nur die Namen von Attributen abzurufen, denen Werte zugewiesen wurden.
+title: Beispielcode für die Suche nach Attributen
+description: Das folgende Codebeispiel zeigt, wie Sie die Sucheinstellung ADS \_ SEARCHPREF \_ ATTRIBTYPES ONLY verwenden, um nur die Namen von Attributen abzurufen, denen \_ Werte zugewiesen wurden.
 ms.assetid: 0e166f06-6030-4615-a46d-a282961d3b55
 ms.tgt_platform: multiple
 keywords:
-- ADSI, Beispiel Code C/C++, suchen nach Attributen
-- Beispiel Code für die Suche nach Attributen
-- ADSI, Search, idirector ysearch, andere Suchoptionen, zurückgeben von Attributnamen, Beispiel Code
+- ADSI, Beispielcode C/C++, Suchen nach Attributen
+- Beispielcode für die Suche nach Attributen
+- ADSI, Suchen, IDirectorySearch, andere Suchoptionen, Zurückgeben von nur Attributnamen, Beispielcode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 344ce99fe9de606212d786ff2e7b88b5eba34d14
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 207fcfd2bd688f5bb6ddcd19dcb9b1a87a2e40ddb0a7db1e63e9457e671f9947
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707433"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118428463"
 ---
-# <a name="example-code-for-searching-for-attributes"></a>Beispiel Code für die Suche nach Attributen
+# <a name="example-code-for-searching-for-attributes"></a>Beispielcode für die Suche nach Attributen
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie die Such Einstellung **ADS \_ searchpref \_ attribtypes \_ only** suchen verwenden, um nur die Namen von Attributen abzurufen, denen Werte zugewiesen wurden. Im Beispiel wird eine [**ADS- \_ suchpref- \_ Informations**](/windows/desktop/api/Iads/ns-iads-ads_searchpref_info) Struktur initialisiert, und die Such Einstellung wird durch Aufrufen der [**setsearchpreference**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-setsearchpreference) -Methode der [**IDirectorySearch**](/windows/desktop/api/Iads/nn-iads-idirectorysearch) -Schnittstelle festgelegt. Im Beispiel wird dann die [**ExecuteSearch**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-executesearch) -Methode aufgerufen, um die Suche auszuführen.
+Das folgende Codebeispiel zeigt, wie Sie die **Sucheinstellung ADS \_ SEARCHPREF \_ ATTRIBTYPES \_ ONLY** verwenden, um nur die Namen von Attributen abzurufen, denen Werte zugewiesen wurden. Im Beispiel wird eine [**ADS \_ SEARCHPREF \_ INFO-Struktur**](/windows/desktop/api/Iads/ns-iads-ads_searchpref_info) initialisiert und die Suchpräferenz durch Aufrufen der [**SetSearchPreference-Methode**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-setsearchpreference) der [**IDirectorySearch-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-idirectorysearch) festgelegt. Das Beispiel ruft dann die [**ExecuteSearch-Methode**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-executesearch) auf, um die Suche auszuführen.
 
 
 ```C++
@@ -60,9 +60,9 @@ while( m_pSearch->GetNextColumnName( hSearch, &pszColumn ) != S_ADS_NOMORE_COLUM
 
 
 
- 
+ 
 
- 
+ 
 
 
 

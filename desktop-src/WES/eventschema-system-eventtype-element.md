@@ -1,9 +1,9 @@
 ---
 title: System (EventType)-Element
-description: Enthält Informationen, die den Anbieter und die Art der Aktivierung, das Ereignis, den Kanal, in den das Ereignis geschrieben wurde, und Systeminformationen, wie z. b. den Prozess und die Thread-IDs, identifiziert.
+description: Enthält Informationen, die den Anbieter und seine Aktivierung, das Ereignis, den Kanal, in den das Ereignis geschrieben wurde, und Systeminformationen wie prozess- und thread-IDs identifizieren.
 ms.assetid: c532cfa3-b722-4227-a403-5c050d62a92c
 keywords:
-- System Element-Ereignisprotokoll
+- Systemelement EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4fef0f9f9e24a855564a8d3df2f94610ff9a8248
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 85f20b364998fb34f3fe9eb6973770b414de501b60e34df6f97a607acb494947
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341772"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118588183"
 ---
 # <a name="system-eventtype-element"></a>System (EventType)-Element
 
-Enthält Informationen, die den Anbieter und die Art der Aktivierung, das Ereignis, den Kanal, in den das Ereignis geschrieben wurde, und Systeminformationen, wie z. b. den Prozess und die Thread-IDs, identifiziert.
+Enthält Informationen, die den Anbieter und seine Aktivierung, das Ereignis, den Kanal, in den das Ereignis geschrieben wurde, und Systeminformationen wie prozess- und thread-IDs identifizieren.
 
 ``` syntax
 <xs:element name="System"
@@ -30,7 +30,7 @@ Enthält Informationen, die den Anbieter und die Art der Aktivierung, das Ereign
  />
 ```
 
-Das **System** Element wird durch den komplexen [**eventType**](eventschema-eventtype-complextype.md) -Typ definiert.
+Das **System** -Element wird durch den komplexen [**EventType-Typ**](eventschema-eventtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **System** Element wird durch den komplexen [**eventType**](eventschema-even
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

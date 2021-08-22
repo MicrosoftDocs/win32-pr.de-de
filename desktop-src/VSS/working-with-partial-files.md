@@ -1,63 +1,63 @@
 ---
-description: Es ist manchmal hilfreich, nur Datei Abschnitte zu sichern und wiederherzustellen. VSS stellt partielle Datei Mechanismen bereit, die es Writer ermöglichen, Teil Dateien Sicherungen und-Wiederherstellungen anzugeben, wenn Sie von Anforderern unterstützt werden.
+description: Manchmal ist es hilfreich, nur Abschnitte von Dateien zu sichern und wiederherzustellen. VSS bietet partielle Dateimechanismen, die es Writern ermöglichen, teildateisicherungen und -wiederherstellungen anzugeben, wenn sie von Anfordernden unterstützt werden.
 ms.assetid: 02b74a4e-d69f-4eeb-866a-3399598b7035
-title: Arbeiten mit partiellen Dateien
+title: Arbeiten mit Teildateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7194f01df11f6c0e368941e17ef6ab1620b17f67
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 13e1aa2623788cc97d62c88d52ec7096829adc350e1d420e92cea12b8dd64d70
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344444"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118590454"
 ---
-# <a name="working-with-partial-files"></a>Arbeiten mit partiellen Dateien
+# <a name="working-with-partial-files"></a>Arbeiten mit Teildateien
 
-Es ist manchmal hilfreich, nur Datei Abschnitte zu sichern und wiederherzustellen. VSS stellt [*partielle Datei*](vssgloss-p.md) Mechanismen bereit, die es Writer ermöglichen, Teil Dateien Sicherungen und-Wiederherstellungen anzugeben, wenn Sie von Anforderern unterstützt werden.
+Manchmal ist es hilfreich, nur Abschnitte von Dateien zu sichern und wiederherzustellen. VSS bietet [*partielle Dateimechanismen,*](vssgloss-p.md) die es Writern ermöglichen, teildateisicherungen und -wiederherstellungen anzugeben, wenn sie von Anfordernden unterstützt werden.
 
-Partielle Datei Vorgänge sind häufig die beste Verwendung von Writern, die sehr große Dateien verwalten, nur ein kleiner Bruchteil der Änderung zwischen den Sicherungs Vorgängen. Dies ist der Fall, es ist häufig hilfreich, nur den Abschnitt zu kopieren, der auf Sicherungsmedien geändert wurde. Aus diesem Grund werden partielle Datei Vorgänge in der Regel, aber nicht exklusiv verwendet, um inkrementelle Sicherungs-und Wiederherstellungs Vorgänge zu unterstützen.
+Teildateivorgänge sind häufig am häufigsten für Writer von Nutzen, die sehr große Dateien verwalten, von denen sich nur ein kleiner Teil zwischen Sicherungsvorgängen ändert. In diesem Fall ist es häufig hilfreich, nur diesen Abschnitt zu kopieren, der auf Sicherungsmedien geändert wurde. Aus diesem Grund werden partielle Dateivorgänge in der Regel, aber nicht ausschließlich, verwendet, um inkrementelle Sicherungs- und Wiederherstellungsvorgänge zu unterstützen.
 
-Wenn ein Writer eine partielle Dateioperation implementieren möchte, wird [**CVssWriter:: ispartialfilesupportenabled**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-ispartialfilesupportenabled) verwendet, um zu bestimmen, ob der Anforderer, mit dem er arbeitet, den Vorgang unterstützt.
+Wenn ein Writer einen partiellen Dateivorgang implementieren möchte, verwendet er [**CVssWriter::IsPartialFileSupportEnabled,**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-ispartialfilesupportenabled) um zu bestimmen, ob der Anforderer, mit dem er arbeitet, den Vorgang unterstützt.
 
-Wenn die anfordernde Person partielle Datei Vorgänge unterstützt und die Komponente, mit der die Datei verwaltet wird (oder die Komponente, die den Komponenten Satz definiert, der die Datei enthält), in das Dokument mit den Sicherungs Komponenten eingefügt wird, gibt ein Writer an, welche [](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup) Abschnitte der Datei gespeichert werden [](vssgloss-p.md) sollen [](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-addpartialfile)
+Wenn der Anforderer Teildateivorgänge unterstützt und die Komponente, die die Datei verwaltet (oder die Komponente, die den Komponentensatz definiert, der die Datei enthält), dem Sicherungskomponentendokument hinzufügt, gibt ein Writer an, welche Abschnitte der Datei gespeichert werden sollen (in der Regel bei der Behandlung eines [**PrepareForBackup-**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup) oder [*PostSnapshot-Ereignisses),*](vssgloss-p.md) indem [**er IVssComponent::AddPartialFile aufruft.**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-addpartialfile)
 
-Neben dem Pfad und dem Dateinamen stellt der Writer den Bereich optionale Metadateninformationen für [**IVssComponent:: addpartialfile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-addpartialfile)bereit.
+Zusätzlich zu einem Pfad und einem Dateinamen stellt der Writer den Bereich und optionale Metadateninformationen an [**IVssComponent::AddPartialFile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-addpartialfile)bereit.
 
-Die Bereichs Informationen werden als Zeichenfolge bereitgestellt, die eine der folgenden Optionen enthält:
+Die Bereichsinformationen werden als Zeichenfolge bereitgestellt, die eine der folgenden Angaben enthält:
 
--   Paare von Offsets in die zu sichernde Datei (in Bytes) und die Länge des zu sichernden Abschnitts (in Bytes), der Offset und die Länge, die durch einen Doppelpunkt getrennt werden, und jedes Paar durch Kommas getrennt, z. b. *offset1 ***:**_Length1_*_,_* * Offset2 ***:**_Length2_.
+-   Offsetpaare in der datei zu sichernden Datei (in Bytes) und die Länge des zu sichernden Abschnitts (in Bytes), der Offset und die Länge, die durch einen Doppelpunkt getrennt werden, und jedes Paar wird durch ein Komma getrennt, z. B. *Offset1*:_Length1_*_,_* *Offset2***:**_Length2_.
 
-    Jeder Wert ist eine 64-Bit-Ganzzahl (im Hexadezimal-oder Dezimal Format), die jeweils einen Byte Offset und eine Länge in Byte angibt.
+    Jeder Wert ist eine 64-Bit-Ganzzahl (im Hexadezimal- oder Dezimalformat), die einen Byteoffset bzw. eine Länge in Bytes angibt.
 
--   Der vollständige Pfad, einschließlich des Datei namens, auf dem aktuellen System einer Binär Bereichs Datei, die Folgendes enthält:
-    -   Die Zahl (ausgedrückt als 64-Bit-Ganzzahl) mit unterschiedlichen Datei Bereichen, die in der Datei enthalten sind.
-    -   Jeder Bereich wird als Paar von 64-Bit-Ganzzahlen ausgedrückt: das erste Element des Paars ist der Offset in die zu sichernde Datei (in Bytes), und der zweite Member ist die Länge der zu sichernden Daten (in Bytes).
+-   Der vollständige Pfad einschließlich des Dateinamens im aktuellen System einer Binärbereichsdatei, die Folgendes enthält:
+    -   Die Zahl (ausgedrückt als 64-Bit-Ganzzahl) unterschiedlicher Dateibereiche, die in der Datei enthalten sind
+    -   Jeder Bereich wird als Paar von 64-Bit-Ganzzahlen ausgedrückt: der erste Member des Paars ist der Offset in die datei, die gesichert wird (in Bytes), und der zweite Member ist die Länge der zu sichernden Daten (in Bytes).
 
-Wenn ein Writer eine Bereichs Datei zum Angeben eines partiellen Datei Vorgangs verwendet, muss ein Anforderer sicherstellen, dass entweder diese Datei gesichert wird (auch wenn die Datei nicht notwendigerweise Teil des Standard Sicherungs Satzes ist) oder dass die Bereichs Informationen auf den Sicherungsmedien auf andere Weise beibehalten werden. Wenn die Informationen zu den Bereichs Dateien nicht gesichert werden, ist das Wiederherstellen der teilweise gesicherten Datei nicht möglich.
+Wenn ein Writer eine Ranges-Datei verwendet, um einen Teildateivorgang anzugeben, muss ein Anforderer sicherstellen, dass diese Datei entweder gesichert wird (auch wenn die Datei nicht notwendigerweise Teil des Standardsicherungssatzes ist) oder dass die Bereichsinformationen auf dem Sicherungsmedium auf andere Weise beibehalten werden. Wenn die Informationen der Ranges-Datei nicht gesichert werden, ist das Wiederherstellen der teilweise gesicherten Datei nicht möglich.
 
-Der Writer kann auch eine Zeichenfolge hinzufügen, die Metadaten enthält. Diese Metadaten können ein Schreib spezifisches Format aufweisen, da es dem Writer ermöglicht, zukünftige Wiederherstellungen zu überprüfen.
+Der Writer kann auch eine Zeichenfolge mit Metadaten hinzufügen. Diese Metadaten können in einem writer-spezifischen Format vorliegen, da sie es dem Writer ermöglichen sollen, zukünftige Wiederherstellungen zu überprüfen.
 
-Mit diesen Informationen kann eine unterstützende Anforderer eine partielle Datei Sicherung ausführen.
+Mit diesen Informationen kann ein unterstützender Anforderer eine Partielle Dateisicherung ausführen.
 
-Betrachten Sie als Beispiel eine große Datei, deren Header (Bytes 64-512) eine Daten Satz Anzahl und andere häufig aktualisierte Informationen enthält und deren aktuelle Daten in den letzten 65536 Bytes der Datei – Bytes 0x1239e8577a bis 0x1239e7577a zu finden sind.
+Betrachten Sie beispielsweise eine große Datei, deren Header (Bytes 64-512) eine Datensatzanzahl und andere häufig aktualisierte Informationen enthält und deren aktuelle Daten in den letzten 65536 Bytes der Datei zu finden sind– Bytes, die 0x1239E7577A 0x1239E8577A.
 
-Ein Writer könnte eine Bereichs Liste als Zeichenfolge "**64:448, 0x1239e8577a: 65536**" angeben.
+Ein Writer kann eine Bereichsliste als Zeichenfolge **"64:448,0x1239E8577A:65536"** angeben.
 
-Bei der Wiederherstellung und vor der tatsächlichen Ausführung eines Wiederherstellungs Vorgangs sollte ein Anforderer überprüfen, ob Dateien partielle Dateiunterstützung benötigen.
+Bei der Wiederherstellung und vor der tatsächlichen Durchführung eines Wiederherstellungsvorgangs sollte ein Anforderer überprüfen, ob Dateien teilweise Dateiunterstützung erfordern.
 
-Zu diesem Zweck durchläuft der Anforderer zuerst die Writer mit gespeicherten Komponenten in seinem Sicherungs Komponenten Dokument mithilfe von [**IVssBackupComponents:: getwritercomponentscount**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponentscount) und [**IVssBackupComponents:: getwritercomponents**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents).
+Hierzu durchläuft der Anforderer zunächst die Writer mit gespeicherten Komponenten im Sicherungskomponentendokument mithilfe von [**IVssBackupComponents::GetWriterComponentsCount**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponentscount) und [**IVssBackupComponents::GetWriterComponents**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents).
 
-Die [**IVssBackupComponents:: getschreitercomponents**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents) -Schnittstelle wird dann verwendet, um Instanzen der [**ivssschreitercomponentset**](/windows/win32/api/vsbackup/nl-vsbackup-ivsswritercomponentsext) -Schnittstelle zurückzugeben, die [**ivssschreitercomponentset XT:: getComponent**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getcomponent) und [](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) [**ivssschreitercomponentset XT:: getcomponentcount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getcomponentcount)angeben
+Die [**IVssBackupComponents::GetWriterComponents-Schnittstelle**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents) wird dann verwendet, um Instanzen der [**IVssWriterComponentsExt-Schnittstelle**](/windows/win32/api/vsbackup/nl-vsbackup-ivsswritercomponentsext) zurückzugeben, die [**IVssWriterComponentsExt::GetComponent**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getcomponent) und [**IVssWriterComponentsExt::GetComponentCount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getcomponentcount)bereitstellen, mit denen der Anforderer [**IVssComponent-Instanzen**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) abrufen kann.
 
-Dadurch kann ein Anforderer Informationen über die teilweise gesicherten Dateien abrufen, um an einer Wiederherstellung teilzunehmen, indem [**IVssComponent:: GetPartialFileCount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfilecount) und [**IVssComponent:: GetPartialFile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfile) für die Instanz von [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) verwendet werden. Dies entspricht der Komponente, die die Datei verwaltet (oder der Komponente, die den Komponenten Satz definiert, der die Datei enthält).
+Dadurch kann ein Anforderer Informationen zu den teilweise gesicherten Dateien abrufen, um an einer Wiederherstellung teilzunehmen, indem [**er IVssComponent::GetPartialFileCount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfilecount) und [**IVssComponent::GetPartialFile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfile) für die Instanz von [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) verwendet, die der Komponente entspricht, die die Datei verwaltet (oder die Komponente, die den Komponentensatz definiert, der die Datei enthält).
 
-Wenn der Teil Datei Vorgang durch eine Bereichs Datei gesteuert wurde, sollte diese Datei vor dem Kopieren der Daten auf den Datenträger wieder hergestellt werden. Es kann vorkommen, dass die anfordernde Person die Bereichs Datei an einen neuen Speicherort auf dem Datenträger Zurückkopieren muss. In diesem Fall ist dies ein Hinweis darauf, dass dies über den [**IVssBackupComponents:: Server File Path**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setrangesfilepath)erfolgt ist.
+Wenn der Teildateivorgang durch eine Ranges-Datei gesteuert wurde, sollte diese Datei vor dem Kopieren von Daten zurück auf den Datenträger wiederhergestellt werden. Es kann vorkommen, dass der Anforderer die Ranges-Datei zurück an einen neuen Speicherort auf dem Datenträger kopieren muss. In diesem Fall wird angegeben, dass dies über [**die IVssBackupComponents::SetRangesFilePath**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setrangesfilepath)erfolgt ist.
 
-Der Anforderer fährt dann mit dem Kopieren von Daten an die entsprechenden Speicherorte im Wiederherstellungs Ziel auf dem Datenträger fort.
+Der Anforderer fährt dann mit dem Kopieren von Daten an die entsprechenden Speicherorte im Wiederherstellungsziel fort, die sich bereits auf dem Datenträger befinden.
 
-Ein Writer (bei der Behandlung eines [**postrestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-postrestore) -Ereignisses) bestimmt durch Untersuchen von [**IVssComponent:: getfilerestorestatus**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getfilerestorestatus) für die durch [**IVssComponent:: GetPartialFile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfile)festgelegten Dateien, ob der Teil Datei Vorgang erfolgreich war. Der Writer sollte immer versuchen, die Richtigkeit dieser Wiederherstellung mit den Offset Informationen und Metadaten zu überprüfen, die im Dokument mit den Sicherungs Komponenten enthalten sind.
+Ein Writer (während der Behandlung eines [**PostRestore-Ereignisses)**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-postrestore) durch Untersuchen von [**IVssComponent::GetFileRestoreStatus**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getfilerestorestatus) für die von [**IVssComponent::GetPartialFile angegebenen**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfile)Dateien bestimmt, ob der Teildateivorgang erfolgreich war. Der Writer sollte immer versuchen, die Richtigkeit dieser Wiederherstellung mithilfe der Offsetinformationen und aller Metadaten zu überprüfen, die im Sicherungskomponentendokument enthalten sind.
 
-Wenn der Anforderer die Bereichs Datei an einem neuen Speicherort wiederherstellen muss, aktualisiert VSS diese Informationen so, dass der von [**IVssComponent:: GetPartialFile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfile) zurückgegebene Pfad richtig ist.
+Wenn der Anforderer die Bereichsdatei an einem neuen Speicherort wiederherstellen musste, aktualisiert VSS diese Informationen so, dass der von [**IVssComponent::GetPartialFile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfile) zurückgegebene Pfad korrekt ist.
 
  
 

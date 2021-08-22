@@ -1,7 +1,7 @@
 ---
-description: Minimiert alle Fenster auf dem Desktop. Diese Methode hat denselben Effekt wie das Klicken mit der rechten Maustaste auf die Taskleiste und das Auswählen der Option alle Fenster auf älteren Systemen minimieren oder klicken auf das Symbol Desktop anzeigen auf der Taskleiste.
+description: Minimiert alle Fenster auf dem Desktop. Diese Methode hat die gleiche Wirkung wie das Klicken mit der rechten Maustaste auf die Taskleiste und das Auswählen von Alle Windows auf älteren Systemen minimieren oder auf das Symbol Desktop anzeigen auf der Taskleiste.
 ms.assetid: 25DD56B0-221E-44a2-9FAD-FB358ADD7FF1
-title: Ishelldispatch. minimizeall-Methode (Shldisp. h)
+title: IShellDispatch.MinimizeAll-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: b8b8f20ab82a6216a03d772151f852fd9c69b917
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 18f1256f93c9cd18d0c904f090716641b466e91319dbef323ee5107b802f82ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452985"
 ---
-# <a name="ishelldispatchminimizeall-method"></a>Ishelldispatch. minimizeall-Methode
+# <a name="ishelldispatchminimizeall-method"></a>IShellDispatch.MinimizeAll-Methode
 
-Minimiert alle Fenster auf dem Desktop. Diese Methode hat denselben Effekt wie das Klicken mit der rechten Maustaste auf die Taskleiste und das Auswählen der Option alle Fenster auf älteren Systemen **minimieren** oder klicken auf das Symbol **Desktop anzeigen** auf der Taskleiste.
+Minimiert alle Fenster auf dem Desktop. Diese Methode hat die gleiche Wirkung wie das Klicken mit der rechten Maustaste auf die Taskleiste und das Auswählen von **Alle** Windows auf älteren Systemen minimieren oder auf das Symbol **Desktop** anzeigen auf der Taskleiste.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,15 +55,15 @@ Diese Methode gibt keinen Wert zurück.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird implementiert, und der Zugriff erfolgt über die [**Shell. minimizeall**](shell-minimizeall.md) -Methode.
+Diese Methode wird implementiert und über die [**Shell.MinimizeAll-Methode**](shell-minimizeall.md) aufgerufen.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **minimizeall** für JScript, VBScript und Visual Basic veranschaulicht.
+In den folgenden Beispielen wird die Verwendung von **MinimizeAll** für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -79,7 +79,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -113,17 +113,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 
@@ -131,10 +131,10 @@ End Sub
 
 <dl> <dt>
 
-[**Ishelldispatch**](ishelldispatch.md)
+[**IShellDispatch**](ishelldispatch.md)
 </dt> <dt>
 
-[**Undominimizeall**](shell-undominimizeall.md)
+[**UndoMinimizeALL**](shell-undominimizeall.md)
 </dt> </dl>
 
  

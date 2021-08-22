@@ -1,9 +1,9 @@
 ---
-title: 'RWTexture3D:: Operator-Funktion'
-description: Gibt eine Ressourcen Variable eines RWTexture3D zurück.
+title: RWTexture3D::Operator-Funktion
+description: Gibt eine Ressourcenvariable einer RWTexture3D zurück.
 ms.assetid: 0b4ea895-ac34-49e5-80e6-74229c33bfe9
 keywords:
-- Operator Function HLSL
+- Operatorfunktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e41ff4db387c4d0926083419082fd589005d96a6
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 8db7073ef20976ecb6c39839d5639a1f0fcfe1fad765c2cf9b0ecdf086622b9c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104976936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118509136"
 ---
-# <a name="rwtexture3doperator--function"></a>RWTexture3D:: Operator-Funktion
+# <a name="rwtexture3doperator--function"></a>RWTexture3D::Operator-Funktion
 
-Gibt eine Ressourcen Variable eines [**RWTexture3D**](sm5-object-rwtexture3d.md)zurück.
+Gibt eine Ressourcenvariable eines [**RWTexture3D zurück.**](sm5-object-rwtexture3d.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,7 +36,7 @@ R Operator[](
 
 <dl> <dt>
 
-*POS* \[ in\]
+*pos* \[ In\]
 </dt> <dd>
 
 Typ: **uint3**
@@ -49,15 +49,15 @@ Die Indexposition. Enthält die Koordinaten (x, y, z).
 
 Typ: **R**
 
-Eine Ressourcen Variable.
+Eine Ressourcenvariable.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -72,7 +72,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [RWTexture3D](sm5-object-rwtexture3d.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

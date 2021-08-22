@@ -3,7 +3,7 @@ title: Komplexer XmlType-Typ
 description: Definiert ein XML-Fragment.
 ms.assetid: ac6ce2a2-4584-4181-9a39-aceab85d5c51
 keywords:
-- Ereignisprotokoll für komplexen XmlType-Typ
+- Komplexer XmlType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a4a4d71d7f4f2685d6c5f1c0626392c79436b68d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a9ac529ad3d965af76c144d0f02c1e6f8e5aef36fb25fd2fb052a5fdedc1e45f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391893"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118589161"
 ---
 # <a name="xmltype-complex-type"></a>Komplexer XmlType-Typ
 
-Definiert ein XML-Fragment. Eine beliebige Schema Instanz ist zulässig. der Knoten der obersten Ebene im Fragment muss ein Namespace-Attribut enthalten.
+Definiert ein XML-Fragment. Jede Schemainstanz ist zulässig. Der Knoten der obersten Ebene im Fragment muss ein Namespaceattribut enthalten.
 
 ``` syntax
 <xs:complexType name="XmlType">
@@ -43,8 +43,8 @@ Definiert ein XML-Fragment. Eine beliebige Schema Instanz ist zulässig. der Kno
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

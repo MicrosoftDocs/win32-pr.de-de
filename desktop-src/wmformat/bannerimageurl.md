@@ -1,9 +1,9 @@
 ---
-title: Bannerimageurl
-description: Das Attribut "bannerimageurl" enthält die Adresse einer Website, die dem Banner Bild zugeordnet ist.
+title: BannerImageURL
+description: Das BannerImageURL-Attribut enthält die Adresse einer Website, die dem Bannerbild zugeordnet ist.
 ms.assetid: 93d532f1-45db-406a-ae0f-441880186679
 keywords:
-- Bannerimageurl Windows Media-Format
+- BannerImageURL-Fenstermedienformat
 topic_type:
 - apiref
 api_name:
@@ -12,35 +12,35 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c4859013b77f2ad7bfafb4ad79327ef0b208544
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 0af787dedcbfce4749773fb2000e305032414ef055f9f868b3679e65da529672
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104038118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118705186"
 ---
-# <a name="bannerimageurl"></a>Bannerimageurl
+# <a name="bannerimageurl"></a>BannerImageURL
 
-Das Attribut " **bannerimageurl** " enthält die Adresse einer Website, die dem Banner Bild zugeordnet ist.
+Das **BannerImageURL-Attribut** enthält die Adresse einer Website, die dem Bannerbild zugeordnet ist.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmbannerimageurl
+g \_ wszWMBannerImageURL
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_WMT-TYPZEICHENFOLGE \_**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

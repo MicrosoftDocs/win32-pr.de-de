@@ -1,5 +1,5 @@
 ---
-description: Erstellt einen Moniker, der eine Hardwarekomponente und den zugehörigen Ereignishandler darstellt. AutoPlay verwendet diese Funktion, um Anwendungen die Verwendung von AutoPlay-Ereignissen zu ermöglichen.
+description: Erstellt einen Moniker, der eine Hardwarekomponente und den zugehörigen Ereignishandler darstellt. Die automatische Wiedergabe verwendet diese Funktion, um Anwendungen die Verwendung von AutoPlay-Ereignissen zu ermöglichen.
 title: CreateHardwareEventMoniker-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
@@ -13,18 +13,18 @@ api_type:
 api_location:
 - Shsvcs.dll
 ms.assetid: ff0ad023-42ea-4c74-adae-af55527b6ac3
-ms.openlocfilehash: c22f01835f9c526e95a4330e6ad35d370421e604
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 42f2da51bac93733a74113d3a567802975aca18be2a34f6fa349ff65349749c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118460554"
 ---
 # <a name="createhardwareeventmoniker-function"></a>CreateHardwareEventMoniker-Funktion
 
-\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Sie kann in nachfolgenden Versionen von Windows geändert oder nicht verfügbar sein.\]
+\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Er kann in nachfolgenden Versionen von Windows geändert oder nicht verfügbar sein.\]
 
-Erstellt einen Moniker, der eine Hardwarekomponente und den zugehörigen Ereignishandler darstellt. AutoPlay verwendet diese Funktion, um Anwendungen die Verwendung von AutoPlay-Ereignissen zu ermöglichen.
+Erstellt einen Moniker, der eine Hardwarekomponente und den zugehörigen Ereignishandler darstellt. Die automatische Wiedergabe verwendet diese Funktion, um Anwendungen die Verwendung von AutoPlay-Ereignissen zu ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ HRESULT CreateHardwareEventMoniker(
 
 Typ: **REFCLSID**
 
-Die ID der Klasse, an die der Moniker gebunden ist.
+Die ID der Klasse, an die der Moniker gebunden wird.
 
 </dd> <dt>
 
@@ -74,7 +74,7 @@ Die Adresse einer Zeigervariablen, die den [**IMoniker-Schnittstellenzeiger**](/
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -108,8 +108,8 @@ HKEY_CLASSES_ROOT
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Keine</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Shsvcs.dll</dt> </dl> |
 

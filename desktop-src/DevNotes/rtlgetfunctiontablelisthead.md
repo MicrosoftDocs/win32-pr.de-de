@@ -1,7 +1,7 @@
 ---
-description: Ermöglicht einem Debugger, Informationen zu dynamischen Funktionstabellen zu überprüfen.
+description: Ermöglicht einem Debugger das Untersuchen dynamischer Funktionstabelleninformationen.
 ms.assetid: 32fd0dfd-ca7c-45e4-9d59-2b3318d7e13d
-title: Rtlgetfunctiontablelisderad-Funktion
+title: RtlGetFunctionTableListHead-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Ntdll.dll
-ms.openlocfilehash: 3dde476ee9958952d85c66816a113b92529aa13e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ff41aca0d268083132fd1a45371b0bb1ca026e5e6d693619ba1e2c2f9f2dd8f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368667"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118666730"
 ---
-# <a name="rtlgetfunctiontablelisthead-function"></a>Rtlgetfunctiontablelisderad-Funktion
+# <a name="rtlgetfunctiontablelisthead-function"></a>RtlGetFunctionTableListHead-Funktion
 
-\[Diese Funktion kann ohne vorherige Ankündigung geändert oder aus Windows entfernt werden.\]
+\[Diese Funktion kann ohne weitere Ankündigung geändert oder aus Windows entfernt werden.\]
 
-Ermöglicht einem Debugger, Informationen zu dynamischen Funktionstabellen zu überprüfen.
+Ermöglicht einem Debugger das Untersuchen dynamischer Funktionstabelleninformationen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,11 +41,11 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf den Anfang der Funktionstabellen Liste zurück.
+Gibt einen Zeiger auf den Kopf der Funktionstabellenliste zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass die Windows Driver Kit (WDK)-Header Datei ntdef. h für einige Definitionen erforderlich ist. Die zugehörige Import Bibliothek ntdll. lib ist im WDK verfügbar. Sie können auch die [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Ntdll.dll zu verknüpfen.
+Beachten Sie, dass für einige Definitionen die WDK-Headerdatei (Windows Driver Kit) Ntdef.h erforderlich ist. Die zugeordnete Importbibliothek Ntdll.lib ist im WDK verfügbar. Sie können auch die Funktionen [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch mit Ntdll.dll zu verknüpfen.
 
 ## <a name="requirements"></a>Anforderungen
 

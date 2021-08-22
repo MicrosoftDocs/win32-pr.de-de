@@ -1,24 +1,24 @@
 ---
-title: Pager-Steuerelement Benachrichtigungen
-description: Pager-Steuerelement Benachrichtigungen
+title: Pager-Steuerelementbenachrichtigungen
+description: Pager-Steuerelementbenachrichtigungen
 ms.assetid: fa99d4b3-1d9d-4bda-bcca-84f9d01ce79e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 80471e54fbf2bf0130adb701e726ac4e1f4d809a
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: fe821416ec3ff61903c85c1ffb9f0f6baa6a9a28339ccb3e311ca6dc3c18f433
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106364315"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118416214"
 ---
-# <a name="pager-control-notifications"></a>Pager-Steuerelement Benachrichtigungen
+# <a name="pager-control-notifications"></a>Pager-Steuerelementbenachrichtigungen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [NM \_ releasedcapture (Pager)](nm-releasedcapture-pager-.md)
--   [PGN \_ calcsize](pgn-calcsize.md)
--   [PGN- \_ hubänderung](pgn-hotitemchange.md)
--   [PGN- \_ Scroll](pgn-scroll.md)
+-   [NM \_ RELEASEDCAPTURE (Pager)](nm-releasedcapture-pager-.md)
+-   [PGN \_ CALCSIZE](pgn-calcsize.md)
+-   [PGN \_ HOTITEMCHANGE](pgn-hotitemchange.md)
+-   [PGN \_ SCROLL](pgn-scroll.md)
 
  
 

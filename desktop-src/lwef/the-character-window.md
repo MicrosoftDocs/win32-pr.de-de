@@ -1,44 +1,44 @@
 ---
-title: Das Zeichen Fenster
-description: Das Zeichen Fenster
+title: Das Zeichenfenster
+description: Das Zeichenfenster
 ms.assetid: 92b6111f-b52d-4720-8bd9-59585d826bf5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 67a386dc769e2b5fe7313b768d1b2debfe4a1131
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 426aab4cbd6e0ad536135cb47ec9a636ea56a0509f3fb0cb75ad6440addc62da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104391263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118474886"
 ---
-# <a name="the-character-window"></a>Das Zeichen Fenster
+# <a name="the-character-window"></a>Das Zeichenfenster
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Der Microsoft-Agent zeigt animierte Zeichen in ihren eigenen Fenstern an, die immer am oberen Rand des Fensters z-Reihenfolge angezeigt werden (d. h. immer im Vordergrund). Ein Benutzer kann das Fenster eines Zeichens verschieben, indem er das Zeichen mit der linken Maustaste zieht. Das Zeichen Bild wird mit dem-Zeiger verschoben. Außerdem kann eine Anwendung mit der [**MoveTo**](moveto-method.md) -Methode ein Zeichen verschieben.
+Der Microsoft-Agent zeigt animierte Zeichen in ihren eigenen Fenstern an, die immer oben im Fenster Z-Reihenfolge angezeigt werden (d.amp;#160;D. B. immer oben). Ein Benutzer kann das Fenster eines Zeichens verschieben, indem er das Zeichen mit der linken Maustaste zieht. Das Zeichenbild wird mit dem Zeiger verschoben. Darüber hinaus kann eine Anwendung ein Zeichen mithilfe der [**MoveTo-Methode**](moveto-method.md) verschieben.
 
-Wenn der Benutzer mit der rechten Maustaste auf ein Zeichen klickt, wird ein Popup Menü angezeigt, in dem die folgenden Befehle angezeigt werden:
+Wenn der Benutzer mit der rechten Maustaste auf ein Zeichen klickt, wird ein Popupmenü mit den folgenden Befehlen angezeigt:
 
-\|Fenster schließen <span class="underline">V</span>Rach-Befehle Öffnen
+Öffnen \| Des Fensters <span class="underline">"Vice-Befehle</span>schließen"
 
-<span class="underline">H</span>-IDE
+<span class="underline">H-ide</span>
 
 ----------------------------…
 
-Get-Help\*
+Befehl\*
 
 
-*Otherhostingapplicationcaption\*\**
+*OtherHostingApplicationCaption\*\**
 
-\*Die aufgeführten Befehle basieren auf dem Eingabe aktiven Client. Weitere Informationen zum Definieren von Befehlen, die im Popup Menü angezeigt werden, finden Sie in der Übersicht über die Microsoft-Agent-Programmierschnittstelle.
+\*Die aufgeführten Befehle basieren auf dem eingabeaktiven Client. Weitere Informationen zum Definieren von Befehlen, die im Popupmenü angezeigt werden, finden Sie unter Übersicht über die Microsoft-Agent-Programmierschnittstelle.
 
-\*\*Die aufgelisteten Einträge sind alle anderen Anwendungen, die zurzeit das Zeichen sind. Weitere Informationen zum Definieren dieses Eintrags finden Sie in der Übersicht über die Microsoft-Agent-Programmierschnittstelle.
+\*\*Die aufgeführten Einträge sind alle anderen Anwendungen, die das Zeichen derzeit hosten. Weitere Informationen zum Definieren dieses Eintrags finden Sie unter Übersicht über die Programmierschnittstelle für Microsoft-Agents.
 
-Mit dem \| Fenster Befehl Schließen Stimmen Befehle öffnen wird die Anzeige des Befehls Fensters des aktuellen aktiven Zeichens gesteuert. Wenn sprach Erkennungs Dienste deaktiviert sind, ist dieser Befehl deaktiviert. Wenn sprach Erkennungs Dienste nicht installiert sind, wird dieser Befehl nicht angezeigt.
+Der Befehl Open \| Close Voice Commands Window steuert die Anzeige des Befehlsfensters des aktuellen aktiven Zeichens. Wenn Spracherkennungsdienste deaktiviert sind, ist dieser Befehl deaktiviert. Wenn spracherkennungsdienste nicht installiert sind, wird dieser Befehl nicht angezeigt.
 
-Der Hide-Befehl verbirgt das Zeichen. Die Animation, die dem **Versteck** Zustand des Zeichens zugewiesen ist, spielt das Zeichen und blendet es aus. Der Buchstabe "H" in Hide ist die Zugriffstaste des Befehls (mnetmonic).
+Der Befehl Ausblenden blendet das Zeichen aus. Die Animation, die dem **Ausblenden-Zustand** des Zeichens zugewiesen ist, wird wiedergegeben und blendet das Zeichen aus. Der im Ausblenden enthaltene Buchstabe "H" ist der Zugriffsschlüssel des Befehls (mnemonic).
 
-Die Befehle für die Anwendung (en), die das Zeichen momentan als Host verwenden, folgen dem Hide-Befehl mit vorangestelltem Trennzeichen. Anschließend werden die Namen von anderen Anwendungen, die das Zeichen verwenden, mit einem Trennzeichen angezeigt.
+Die Befehle für die Anwendungen, die das Zeichen derzeit hosten, folgen dem Befehl Ausblenden, dem ein Trennzeichen vorangestellt ist. Anschließend werden die Namen anderer Anwendungen, die das Zeichen verwenden, angezeigt, dem auch ein Trennzeichen vorangestellt ist.
 
  
 

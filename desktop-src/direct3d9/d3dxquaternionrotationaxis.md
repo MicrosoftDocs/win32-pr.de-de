@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a5cbbdc3603b5e2eb7a03f592d44fa88f07ef015
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 4879cec21f356399d2f98c7c3286da9ae3994c81fa64911177f287c9f0e216b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118524602"
 ---
 # <a name="d3dxquaternionrotationaxis-function-d3dx9mathh"></a>D3DXQuaternionRotationAxis-Funktion (D3dx9math.h)
 
@@ -65,7 +65,7 @@ Zeiger auf die [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die Achse identif
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn entlang der Drehachse zum Ursprung gesucht wird.
+Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn die Drehachse zum Ursprung hin betrachtet wird.
 
 </dd> </dl>
 
@@ -75,17 +75,17 @@ Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
 Zeiger auf eine um die angegebene Achse gedrehte [**D3DXQUATERNION-Struktur.**](d3dxquaternion.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXQuaternionRotationAxis-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für alle Quaternioneingaben, die nicht bereits normalisiert sind.
+Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für alle Quaternioneingaben, die noch nicht normalisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

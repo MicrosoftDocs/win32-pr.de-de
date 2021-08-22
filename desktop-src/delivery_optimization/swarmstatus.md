@@ -1,9 +1,9 @@
 ---
-title: Swarmstatus-Enumeration (deliveryoptimization. h)
-description: Definiert den Status einer Datei innerhalb des Bereitstellungs Optimierungs Clients.
+title: SwarmStatus-Enumeration (Deliveryoptimization.h)
+description: Definiert den Status einer Datei innerhalb des Übermittlungsoptimierungsclients.
 ms.assetid: D40ABDD3-5573-4A8D-8608-4CB0F396CCAD
 keywords:
-- Swarmstatus-Enumeration
+- SwarmStatus-Enumeration
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3622f819679c2fd2b28d66e371a8b88e0a2d2f70
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3a0f18d9e3344e05348bba0e972a18b7bf64df5edf41fde1cabc3f6a5b106d11
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118541945"
 ---
-# <a name="swarmstatus-enumeration"></a>Swarmstatus-Enumeration
+# <a name="swarmstatus-enumeration"></a>SwarmStatus-Enumeration
 
-Definiert den Status einer Datei innerhalb des Bereitstellungs Optimierungs Clients.
+Definiert den Status einer Datei innerhalb des Übermittlungsoptimierungsclients.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,7 +54,7 @@ Die Datei wird heruntergeladen.
 <span id="SwarmStatus_Complete"></span><span id="swarmstatus_complete"></span><span id="SWARMSTATUS_COMPLETE"></span>**SwarmStatus_Complete**
 </dt> <dd>
 
-Der Datei Download ist fertiggestellt.
+Der Dateidownload ist abgeschlossen.
 
 </dd> <dt>
 
@@ -68,7 +68,7 @@ Die Datei wird zwischengespeichert.
 <span id="SwarmStatus_Paused"></span><span id="swarmstatus_paused"></span><span id="SWARMSTATUS_PAUSED"></span>**SwarmStatus_Paused**
 </dt> <dd>
 
-Der Datei Download wurde angehalten.
+Der Dateidownload wird angehalten.
 
 </dd> </dl>
 
@@ -78,9 +78,9 @@ Der Datei Download wurde angehalten.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl> |
 
 
 

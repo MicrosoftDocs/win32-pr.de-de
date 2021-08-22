@@ -1,5 +1,5 @@
 ---
-description: Enthält ein einzelnes-Objekt, das dem Computer entspricht, auf den Sie zugreifen. Dieses Objekt enthält Einstellungs Informationen auf Computer Ebene.
+description: Enthält ein einzelnes -Objekt, das dem Computer entspricht, auf den Sie zugreifen. Dieses Objekt enthält Einstellungsinformationen auf Computerebene.
 ms.assetid: 75f14cad-9cd5-44a6-9afa-2c8ad1e87027
 title: LocalComputer-Sammlung
 ms.topic: reference
@@ -12,106 +12,106 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 4e1ce08f3bf1fef74af0d77ada15716abb4530a6
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b832da702942e8f84baee4303b7fa74a7fd74d683d62534cca619e8c7270e88a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118813464"
 ---
 # <a name="localcomputer-collection"></a>LocalComputer-Sammlung
 
-Enthält ein einzelnes-Objekt, das dem Computer entspricht, auf den Sie zugreifen. Dieses Objekt enthält Einstellungs Informationen auf Computer Ebene. Wenn Sie die [**Connect**](/windows/desktop/api/ComAdmin/nf-comadmin-icomadmincatalog-connect) -Methode für ein Objekt aufrufen, das aus der [**comadmincatalog**](comadmincatalog.md) -Klasse erstellt wurde, enthält das-Objekt in der **LocalComputer** -Auflistung Informationen über den Remote Computer, auf den Sie zugreifen.
+Enthält ein einzelnes -Objekt, das dem Computer entspricht, auf den Sie zugreifen. Dieses Objekt enthält Einstellungsinformationen auf Computerebene. Wenn Sie die [**Verbinden-Methode**](/windows/desktop/api/ComAdmin/nf-comadmin-icomadmincatalog-connect) für ein Objekt aufrufen, das aus der [**COMAdminCatalog-Klasse**](comadmincatalog.md) erstellt wurde, enthält das Objekt in der **LocalComputer** -Auflistung Informationen über den Remotecomputer, auf den Sie zugreifen.
 
-Diese Auflistung unterstützt die [**Add**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) -und [**Remove**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) -Methoden des [**comadmincatalogcollection**](comadmincatalogcollection.md) -Objekts nicht.
+Diese Sammlung unterstützt nicht die [**Add- und**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
 ## <a name="members"></a>Member
 
-Die **LocalComputer** -Sammlung erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle, verfügt jedoch nicht über zusätzliche Mitglieder.
+Die **LocalComputer-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
-## <a name="related-collections"></a>Verwandte Auflistungen
+## <a name="related-collections"></a>Verwandte Sammlungen
 
 Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 
 -   [**ErrorInfo**](errorinfo.md)
--   [**PropertyInfo**](propertyinfo.md)
--   [**Relatedcollectioninfo**](relatedcollectioninfo.md)
+-   [**Propertyinfo**](propertyinfo.md)
+-   [**RelatedCollectionInfo**](relatedcollectioninfo.md)
 
-Sie können von den folgenden Sammlungen aus zu dieser Sammlung navigieren:
+Sie können von den folgenden Sammlungen zu dieser Sammlung navigieren:
 
--   [**Fasst**](root.md)
+-   [**wurzel**](root.md)
 
 ## <a name="properties"></a>Eigenschaften
 
-Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatalogobject.md) -Objekt in der-Auflistung unterstützt:
+Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadmincatalogobject.md) in der Auflistung unterstützt:
 
--   [Applicationproxyrsn](#applicationproxyrsn)
--   [Cisenabled](#cisenabled)
--   [Dcomaktiviert](#dcomenabled)
+-   [ApplicationProxyRSN](#applicationproxyrsn)
+-   [CISEnabled](#cisenabled)
+-   [DCOMEnabled](#dcomenabled)
 -   [DefaultAuthenticationLevel](#defaultauthenticationlevel)
 -   [DefaultImpersonationLevel](#defaultimpersonationlevel)
--   [Defaultdeinternetports](#defaulttointernetports)
+-   [DefaultToInternetPorts](#defaulttointernetports)
 -   [Beschreibung](#description)
--   [Dspartitionlookupabled](#dspartitionlookupenabled)
--   [Internetportslisted](#internetportslisted)
--   [Isrouter](#isrouter)
--   [Loadbalancingclsid](#loadbalancingclsid)
--   [Localpartitionlookupabled](#localpartitionlookupenabled)
+-   [DSPartitionLookupEnabled](#dspartitionlookupenabled)
+-   [InternetPortsListed](#internetportslisted)
+-   [IsRouter](#isrouter)
+-   [LoadBalancingCLSID](#loadbalancingclsid)
+-   [LocalPartitionLookupEnabled](#localpartitionlookupenabled)
 -   [Name](#name)
--   [OperatingSystem](#operatingsystem)
--   [Partitionsenabled](#partitionsenabled)
+-   [Operatingsystem](#operatingsystem)
+-   [PartitionsEnabled](#partitionsenabled)
 -   [Ports](#defaulttointernetports)
--   [Resourcepoolingenabled](#resourcepoolingenabled)
--   [Rpcproxyaktivierte](#rpcproxyenabled)
--   [Securereferencesaktiviert](#securereferencesenabled)
--   [Securitytrackingenabled](#securitytrackingenabled)
--   [Srpactivateasactivatorchecks](#srpactivateasactivatorchecks)
--   [Srprunningobjectchecks](#srprunningobjectchecks)
+-   [ResourcePoolingEnabled](#resourcepoolingenabled)
+-   [RPCProxyEnabled](#rpcproxyenabled)
+-   [SecureReferencesEnabled](#securereferencesenabled)
+-   [SecurityTrackingEnabled](#securitytrackingenabled)
+-   [SRPActivateAsActivatorChecks](#srpactivateasactivatorchecks)
+-   [SRPRunningObjectChecks](#srprunningobjectchecks)
 -   [TransactionTimeout](#transactiontimeout)
 
-### <a name="applicationproxyrsn"></a>Applicationproxyrsn
+### <a name="applicationproxyrsn"></a>ApplicationProxyRSN
 
 
 
 | Eingabe | Wert |
 |----------------|------------------------------------------------------------|
-| BESCHREIBUNG    | Standardmäßig von Anwendungs Proxys verwendeter Remote Servername. |
-| Access         | ReadWrite                                                  |
+| Beschreibung    | Remoteservername, der standardmäßig von Anwendungsproxies verwendet wird. |
+| Zugriff         | ReadWrite                                                  |
 | type           | String                                                     |
 | Standard        | ""                                                         |
-| Minimalsystem | Windows 2000                                               |
+| Mindestsystem | Windows 2000                                               |
 
 
 
  
 
-### <a name="cisenabled"></a>Cisenabled
+### <a name="cisenabled"></a>CISEnabled
 
 
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------------------|
-| BESCHREIBUNG    | Gibt an, ob com-Internet Dienste aktiviert sind. |
-| Access         | ReadWrite                                           |
+| Beschreibung    | Gibt an, ob COM-Internetdienste aktiviert sind. |
+| Zugriff         | ReadWrite                                           |
 | type           | Bool                                                |
 | Standard        | Falsch                                               |
-| Minimalsystem | Windows 2000                                        |
+| Mindestsystem | Windows 2000                                        |
 
 
 
  
 
-### <a name="dcomenabled"></a>Dcomaktiviert
+### <a name="dcomenabled"></a>DCOMEnabled
 
 
 
 | Eingabe | Wert |
 |----------------|---------------------------------------------|
-| BESCHREIBUNG    | Legen Sie diese Option auf true fest, um DCOM auf dem Computer zu aktivieren |
-| Access         | ReadWrite                                   |
+| Beschreibung    | Legen Sie diese Option auf True fest, um DCOM auf dem Computer zu aktivieren. |
+| Zugriff         | ReadWrite                                   |
 | type           | Bool                                        |
 | Standard        | Richtig                                        |
-| Minimalsystem | Windows 2000                                |
+| Mindestsystem | Windows 2000                                |
 
 
 
@@ -123,18 +123,18 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 | Eingabe | Wert |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Authentifizierungs Ebene, die von Anwendungen verwendet wird, deren Authentifizierung auf Standard festgelegt ist. Die Werte entsprechen den Authentifizierungs Einstellungen für Remote Prozedur Aufrufe (RPC).                                                                                         |
-| Access         | ReadWrite                                                                                                                                                                                                                                                |
-| type           | Lange mögliche Werte: comadminauthenticationdefault (0) comadminauthenticationnone (1) comadminauthenticationconnect (2) comadminauthentication-Aufruf (3) comadminauthenticationpacket (4) comadminauthenticationintegrity (5) comadminauthenticationprivacy (6) |
-| Standard        | Comadminauthenticationconnect (2)                                                                                                                                                                                                                        |
-| Minimalsystem | Windows 2000                                                                                                                                                                                                                                             |
+| Beschreibung    | Authentifizierungsebene, die von Anwendungen verwendet wird, deren Authentifizierung auf Standard festgelegt ist. Die Werte entsprechen den RPC-Authentifizierungseinstellungen (Remote Procedure Call).                                                                                         |
+| Zugriff         | ReadWrite                                                                                                                                                                                                                                                |
+| type           | Long Possible values:COMAdminAuthenticationDefault (0)COMAdminAuthenticationNone (1) COMAdminAuthenticationConnect (2)COMAdminAuthenticationCall (3)COMAdminAuthenticationPacket (4)COMAdminAuthenticationIntegrity (5)COMAdminAuthenticationPrivacy (6) |
+| Standard        | COMAdminAuthenticationConnect (2)                                                                                                                                                                                                                        |
+| Mindestsystem | Windows 2000                                                                                                                                                                                                                                             |
 
 
 
  
 
 > [!Note]  
-> Comadminauthenticationdefault wird comadminauthenticationconnect zugeordnet, wenn com [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity)aufruft. Es wird empfohlen, die Konstanten in der-Enumeration und nicht die numerischen Werte zu verwenden.
+> COMAdminAuthenticationDefault wird COMAdminAuthenticationConnect zugeordnet, wenn COM [**CoInitializeSecurity aufruft.**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) Es wird empfohlen, die Konstanten in der Enumeration und nicht die numerischen Werte zu verwenden.
 
  
 
@@ -144,130 +144,130 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 | Eingabe | Wert |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Die Identitätswechsel Ebene, um zuzulassen, wenn eine nicht festgelegt ist.                                                                                                               |
-| Access         | ReadWrite                                                                                                                                                     |
-| type           | Lange mögliche Werte: comadminimpersonationanonymous (1) comadminimpersonationidentifiout (2) comadminimpersonationidentität (3) comadminimpersonationdelegat (4) |
-| Standard        | Comadminimpersonationidentifi(2)                                                                                                                             |
-| Minimalsystem | Windows 2000                                                                                                                                                  |
+| Beschreibung    | Die Identitätswechselebene, die zulässig ist, wenn keine festgelegt ist.                                                                                                               |
+| Zugriff         | ReadWrite                                                                                                                                                     |
+| type           | Lange mögliche Werte:COMAdminImpersonationAnonymous (1)COMAdminImpersonationIdentify (2)COMAdminImpersonationImpersonate (3)COMAdminImpersonationDelegate (4) |
+| Standard        | COMAdminImpersonationIdentify (2)                                                                                                                             |
+| Mindestsystem | Windows 2000                                                                                                                                                  |
 
 
 
  
 
 > [!Note]  
-> Es wird empfohlen, die Konstanten in der-Enumeration und nicht die numerischen Werte zu verwenden.
+> Es wird empfohlen, die Konstanten in der -Enumeration und nicht die numerischen Werte zu verwenden.
 
  
 
-### <a name="defaulttointernetports"></a>Defaultdeinternetports
+### <a name="defaulttointernetports"></a>DefaultToInternetPorts
 
 
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Bestimmt, ob der Standardtyp des angegebenen Ports Internet (true) oder Intranet (false) sein soll. |
-| Access         | ReadWrite                                                                                           |
+| Beschreibung    | Bestimmt, ob der angegebene Standardporttyp Internet (True) oder Intranet (False) sein soll. |
+| Zugriff         | ReadWrite                                                                                           |
 | type           | Bool                                                                                                |
 | Standard        | Falsch                                                                                               |
-| Minimalsystem | Windows 2000                                                                                        |
+| Mindestsystem | Windows 2000                                                                                        |
 
 
 
  
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
 
 
 | Eingabe | Wert |
 |----------------|--------------------------------|
-| BESCHREIBUNG    | Eine Beschreibung des Computers. |
-| Access         | ReadWrite                      |
+| Beschreibung    | Eine Beschreibung des Computers. |
+| Zugriff         | ReadWrite                      |
 | type           | String                         |
 | Standard        | ""                             |
-| Minimalsystem | Windows 2000                   |
+| Mindestsystem | Windows 2000                   |
 
 
 
  
 
-### <a name="dspartitionlookupenabled"></a>Dspartitionlookupabled
+### <a name="dspartitionlookupenabled"></a>DSPartitionLookupEnabled
 
 
 
 | Eingabe | Wert |
 |----------------|----------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Gibt an, ob der Benutzer der Partitions Zuordnungen in den Domänen Speicher eingecheckt wird. |
-| Access         | ReadWrite                                                                              |
+| Beschreibung    | Gibt an, ob der Benutzer der Partitionszuordnungen in den Domänenspeicher eingecheckt wird. |
+| Zugriff         | ReadWrite                                                                              |
 | type           | Bool                                                                                   |
 | Standard        | Richtig                                                                                   |
-| Minimalsystem | Windows Server 2003                                                                    |
+| Mindestsystem | Windows Server 2003                                                                    |
 
 
 
  
 
-### <a name="internetportslisted"></a>Internetportslisted
+### <a name="internetportslisted"></a>InternetPortsListed
 
 
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Bestimmt, ob die in der Eigenschaft Ports aufgelisteten Ports für das Internet (true) oder für das Intranet (false) verwendet werden sollen. |
-| Access         | ReadWrite                                                                                                             |
+| Beschreibung    | Bestimmt, ob die in der Ports -Eigenschaft aufgeführten Ports für internet (True) oder für intranet (False) verwendet werden sollen. |
+| Zugriff         | ReadWrite                                                                                                             |
 | type           | Bool                                                                                                                  |
 | Standard        | Falsch                                                                                                                 |
-| Minimalsystem | Windows 2000                                                                                                          |
+| Mindestsystem | Windows 2000                                                                                                          |
 
 
 
  
 
-### <a name="isrouter"></a>Isrouter
+### <a name="isrouter"></a>IsRouter
 
 
 
 | Eingabe | Wert |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Legen Sie diese Einstellung auf true fest, wenn der Computer ein Router für den CLB-Dienst (Component Load Balancing) ist. Diese Eigenschaft kann nur auf "true" festgelegt werden, wenn der Komponenten Lastenausgleich-Dienst derzeit auf dem Computer installiert ist. Andernfalls erfordert IT-Fehler mit COMAdmin \_ E eine \_ \_ andere \_ Plattform. |
-| Access         | ReadWrite                                                                                                                                                                                                                                                                           |
+| Beschreibung    | Legen Sie diese Einstellung auf True fest, wenn der Computer ein Router für den ClB-Dienst (Component Load Balancing) ist. Diese Eigenschaft kann nur auf True festgelegt werden, wenn der Lastenausgleichsdienst der Komponente derzeit auf dem Computer installiert ist. Andernfalls wird die Fehlermeldung COMADMIN \_ E REQUIRES DIFFERENT PLATFORM \_ \_ \_ angezeigt. |
+| Zugriff         | ReadWrite                                                                                                                                                                                                                                                                           |
 | type           | Bool                                                                                                                                                                                                                                                                                |
 | Standard        | Falsch                                                                                                                                                                                                                                                                               |
-| Minimalsystem | Windows 2000                                                                                                                                                                                                                                                                        |
+| Mindestsystem | Windows 2000                                                                                                                                                                                                                                                                        |
 
 
 
  
 
-Wenn diese Eigenschaft auf true festgelegt ist, wird der CLB-Server konfiguriert und beim Start gestartet. Der Server wird der ApplicationCluster-Sammlung hinzugefügt, wenn er nicht bereits vorhanden ist.
+Wenn diese Eigenschaft auf True festgelegt ist, wird der CLB-Server konfiguriert und beim Start gestartet. Der Server wird der ApplicationCluster-Sammlung hinzugefügt, wenn er noch nicht vorhanden ist.
 
-### <a name="loadbalancingclsid"></a>Loadbalancingclsid
+### <a name="loadbalancingclsid"></a>LoadBalancingCLSID
 
 
 
 | Eingabe | Wert |
 |----------------|-------------------------------------|
-| BESCHREIBUNG    | Die CLSID des-Objekts, das ausgeglichen werden soll. |
-| Access         | ReadWrite                           |
+| Beschreibung    | Die CLSID des objekts, das ausgeglichen werden soll. |
+| Zugriff         | ReadWrite                           |
 | type           | String                              |
 | Standard        | NULL                                |
-| Minimalsystem | Windows XP                          |
+| Mindestsystem | Windows XP                          |
 
 
 
  
 
-### <a name="localpartitionlookupenabled"></a>Localpartitionlookupabled
+### <a name="localpartitionlookupenabled"></a>LocalPartitionLookupEnabled
 
 
 
 | Eingabe | Wert |
 |----------------|---------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Gibt an, ob der Benutzer der Partitions Zuordnungen in den lokalen Speicher eingecheckt wird. |
-| Access         | ReadWrite                                                                             |
+| Beschreibung    | Gibt an, ob der Benutzer der Partitionszuordnungen im lokalen Speicher eingecheckt wird. |
+| Zugriff         | ReadWrite                                                                             |
 | type           | Bool                                                                                  |
 | Standard        | Richtig                                                                                  |
-| Minimalsystem | Windows Server 2003                                                                   |
+| Mindestsystem | Windows Server 2003                                                                   |
 
 
 
@@ -279,11 +279,11 @@ Wenn diese Eigenschaft auf true festgelegt ist, wird der CLB-Server konfiguriert
 
 | Eingabe | Wert |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Der Name des Computers. Zusätzliche Leerzeichen am Anfang und Ende der Zeichenfolge werden entfernt. Diese Eigenschaft wird zurückgegeben, wenn die [**Schlüssel**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) -oder [**Name**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) -Eigenschaften Methode für ein Objekt dieser Auflistung aufgerufen wird. |
-| Access         | WriteOnce                                                                                                                                                                                                                                                              |
+| Beschreibung    | Der Name des Computers. Zusätzliche Leerzeichen am Anfang und Ende der Zeichenfolge werden entfernt. Diese Eigenschaft wird zurückgegeben, wenn die [**Key-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) oder [**Name-Eigenschaftsmethode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) für ein Objekt dieser Auflistung aufgerufen wird. |
+| Zugriff         | WriteOnce                                                                                                                                                                                                                                                              |
 | type           | String                                                                                                                                                                                                                                                                 |
 | Standard        | "Arbeitsplatz"                                                                                                                                                                                                                                                          |
-| Minimalsystem | Windows 2000                                                                                                                                                                                                                                                           |
+| Mindestsystem | Windows 2000                                                                                                                                                                                                                                                           |
 
 
 
@@ -295,27 +295,27 @@ Wenn diese Eigenschaft auf true festgelegt ist, wird der CLB-Server konfiguriert
 
 | Eingabe | Wert |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Das auf dem lokalen Computer installierte Betriebssystem.                                                                                                                                                                                                                                                                                                                                                                                                |
-| Access         | ReadWrite                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| type           | Lange mögliche Werte: comadminosnotinitialized (0) COMAdminOSWindows3 \_ 1 (1) COMAdminOSWindows9x (2) COMAdminOSWindows2000 (3) COMAdminOSWindows2000AdvancedServer (4) COMAdminOSWindows2000Unknown (5) comadminosunknown (6) comadminoswindowsxppersonal (11) comadminoswindowsxpprofessional (12) comadminoswindowsnetstandardserver (13) comadminoswindowsnetenterpriseserver (14) comadminoswindowsnetdatacenterserver (15) comadminoswindowsnetwebserver (16) |
-| Standard        | Comadminosnotinitialized (0)                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Minimalsystem | Windows 2000                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Beschreibung    | Das auf dem lokalen Computer installierte Betriebssystem.                                                                                                                                                                                                                                                                                                                                                                                                |
+| Zugriff         | ReadWrite                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| type           | Long Possible values:COMAdminOSNotInitialized (0)COMAdminOSWindows3 \_ 1(1)COMAdminOSWindows9x (2)COMAdminOSWindows2000 (3)COMAdminOSWindows2000AdvancedServer (4)COMAdminOSWindows2000Unknown (5)COMAdminOSUnknownn (6)COMAdminOSWindowsXPPersonal (11)COMAdminOSWindowsXPProfessional (12)COMAdminOSWindowsNETStandardServer (13)COMAdminOSWindowsNETEnterpriseServer (14)COMAdminOSWindowsNETDatacenterServer (15)COMAdminOSWindowsNETWebServer (16) |
+| Standard        | COMAdminOSNotInitialized (0)                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Mindestsystem | Windows 2000                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 
 
  
 
-### <a name="partitionsenabled"></a>Partitionsenabled
+### <a name="partitionsenabled"></a>PartitionsEnabled
 
 
 
 | Eingabe | Wert |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Gibt an, ob COM+-Partitionen auf dem lokalen Computer verwendet werden können. Wenn diese Eigenschaft false ist, führt jeder Versuch, com+-Partitionen zu verwenden, zu einem Fehler. |
-| Access         | ReadWrite                                                                                                                                               |
+| Beschreibung    | Gibt an, ob COM+-Partitionen auf dem lokalen Computer verwendet werden können. Wenn diese Eigenschaft false ist, führt jeder Versuch, COM+-Partitionen zu verwenden, zu einem Fehler. |
+| Zugriff         | ReadWrite                                                                                                                                               |
 | type           | Bool                                                                                                                                                    |
 | Standard        | Falsch                                                                                                                                                   |
-| Minimalsystem | Windows Server 2003                                                                                                                                     |
+| Mindestsystem | Windows Server 2003                                                                                                                                     |
 
 
 
@@ -327,107 +327,107 @@ Wenn diese Eigenschaft auf true festgelegt ist, wird der CLB-Server konfiguriert
 
 | Eingabe | Wert |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Eine Zeichenfolge, die Ports für die Internet-oder Intranetverwendung beschreibt, abhängig von der internetportslisted-Eigenschaft. Beispiel: "500-599:600-800". |
-| Access         | ReadWrite                                                                                                                                               |
+| Beschreibung    | Eine Zeichenfolge, die Ports beschreibt, die je nach InternetPortsListed-Eigenschaft für die Internet- oder Intranetnutzung gelten. Beispiel: "500-599: 600-800". |
+| Zugriff         | ReadWrite                                                                                                                                               |
 | type           | String                                                                                                                                                  |
 | Standard        | ""                                                                                                                                                      |
-| Minimalsystem | Windows 2000                                                                                                                                            |
+| Mindestsystem | Windows 2000                                                                                                                                            |
 
 
 
  
 
-### <a name="resourcepoolingenabled"></a>Resourcepoolingenabled
+### <a name="resourcepoolingenabled"></a>ResourcePoolingEnabled
 
 
 
 | Eingabe | Wert |
 |----------------|-------------------------------------|
-| BESCHREIBUNG    | Ermöglicht die Verwendung von Ressourcen Spendern. |
-| Access         | ReadWrite                           |
+| Beschreibung    | Ermöglicht die Verwendung von Ressourcenspendern. |
+| Zugriff         | ReadWrite                           |
 | type           | Bool                                |
 | Standard        | Richtig                                |
-| Minimalsystem | Windows 2000                        |
+| Mindestsystem | Windows 2000                        |
 
 
 
  
 
-### <a name="rpcproxyenabled"></a>Rpcproxyaktivierte
+### <a name="rpcproxyenabled"></a>RPCProxyEnabled
 
 
 
 | Eingabe | Wert |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Steuert, ob der RPC-IIS-Proxy aktiviert ist. Der RPC-IIS-Proxy wird zusammen mit IIS verwendet, um Aufrufe an den RPC-Mechanismus von IIS weiterzuleiten. dabei handelt es sich um eines der Kernteile von com-Internet Diensten, die durch Festlegen von cisenabled auf true aktiviert werden. Weitere Informationen zu rpcproxyaktiviertem finden Sie unter [http-RPC-Sicherheit](/windows/desktop/Rpc/rpc-over-http-security). |
-| Access         | ReadWrite                                                                                                                                                                                                                                                                                                                                             |
+| Beschreibung    | Steuert, ob der RPC-IIS-Proxy aktiviert ist. Der RPC-IIS-Proxy wird in Verbindung mit IIS verwendet, um Aufrufe an den RPC-Mechanismus von IIS weiter zu senden, und ist eines der Wichtigsten von COM-Internetdiensten, das durch Festlegen von CISEnabled auf True aktiviert wird. Weitere Informationen zu RPCProxyEnabled finden Sie unter [HTTP RPC Security](/windows/desktop/Rpc/rpc-over-http-security). |
+| Zugriff         | ReadWrite                                                                                                                                                                                                                                                                                                                                             |
 | type           | Bool                                                                                                                                                                                                                                                                                                                                                  |
 | Standard        | Falsch                                                                                                                                                                                                                                                                                                                                                 |
-| Minimalsystem | Windows 2000                                                                                                                                                                                                                                                                                                                                          |
+| Mindestsystem | Windows 2000                                                                                                                                                                                                                                                                                                                                          |
 
 
 
  
 
-### <a name="securereferencesenabled"></a>Securereferencesaktiviert
+### <a name="securereferencesenabled"></a>SecureReferencesEnabled
 
 
 
 | Eingabe | Wert |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Erzwingt in DCOM-Computern, dass prozessübergreifende Aufrufe von [**IUnknown:: adressf**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) -und [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) -Methoden gesichert werden. |
-| Access         | ReadWrite                                                                                                                                                                 |
+| Beschreibung    | Erzwingt auf DCOM-Computern, dass prozessübergreifende Aufrufe der [**Methoden IUnknown::AddRef**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) und [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) gesichert sind. |
+| Zugriff         | ReadWrite                                                                                                                                                                 |
 | type           | Bool                                                                                                                                                                      |
 | Standard        | Falsch                                                                                                                                                                     |
-| Minimalsystem | Windows 2000                                                                                                                                                              |
+| Mindestsystem | Windows 2000                                                                                                                                                              |
 
 
 
  
 
-### <a name="securitytrackingenabled"></a>Securitytrackingenabled
+### <a name="securitytrackingenabled"></a>SecurityTrackingEnabled
 
 
 
 | Eingabe | Wert |
 |----------------|---------------------------------------------------------|
-| BESCHREIBUNG    | Auf "true" festgelegt, wenn die Sicherheitsüberwachung für Objekte aktiviert ist. |
-| Access         | ReadWrite                                               |
+| Beschreibung    | Wird auf TRUE festgelegt, wenn die Sicherheitsnachverfolgung für Objekte aktiviert ist. |
+| Zugriff         | ReadWrite                                               |
 | type           | Bool                                                    |
 | Standard        | Richtig                                                    |
-| Minimalsystem | Windows 2000                                            |
+| Mindestsystem | Windows 2000                                            |
 
 
 
  
 
-### <a name="srpactivateasactivatorchecks"></a>Srpactivateasactivatorchecks
+### <a name="srpactivateasactivatorchecks"></a>SRPActivateAsActivatorChecks
 
 
 
 | Eingabe | Wert |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Bestimmt, wie die Software Einschränkungs Richtlinie (Software Einschränkungs Richtlinie, SRP) Aktivierungs-as-activatorverbindungen behandelt. Wenn diese Einstellung auf true festgelegt ist, wird die für das Server Objekt konfigurierte SRP-Vertrauens Ebene mit der SRP-Vertrauens Ebene des Client Objekts verglichen, und die höhere (strengere) Vertrauens Ebene wird zum Ausführen des Server Objekts verwendet. Wenn false festgelegt ist, wird das Server Objekt mit der SRP-Vertrauens Ebene des Client Objekts ausgeführt, unabhängig von der SRP-Vertrauens Ebene, mit der der Server konfiguriert ist. |
-| Access         | ReadWrite                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Beschreibung    | Bestimmt, wie die Softwareeinschränkungsrichtlinie (Software Restriction Policy, SRP) Activate-as-Activator-Verbindungen verarbeitet. Bei True wird die SRP-Vertrauensebene, die für das Serverobjekt konfiguriert ist, mit der SRP-Vertrauensebene des Clientobjekts verglichen, und die höhere (strengere) Vertrauensebene wird zum Ausführen des Serverobjekts verwendet. Wenn false festgelegt ist, wird das Serverobjekt mit der SRP-Vertrauensebene des Clientobjekts ausgeführt, unabhängig von der SRP-Vertrauensebene, mit der der Server konfiguriert ist. |
+| Zugriff         | ReadWrite                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | type           | Bool                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | Standard        | Richtig                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Minimalsystem | Windows XP                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Mindestsystem | Windows XP                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 
 
  
 
-### <a name="srprunningobjectchecks"></a>Srprunningobjectchecks
+### <a name="srprunningobjectchecks"></a>SRPRunningObjectChecks
 
 
 
 | Eingabe | Wert |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Bestimmt, wie die Software Einschränkungs Richtlinie (SRP) Verbindungsversuche mit vorhandenen Prozessen behandelt. Wenn der Wert auf false festgelegt ist, werden Verbindungsversuche mit laufenden Objekten nicht auf die entsprechenden SRP-Vertrauens Ebenen geprüft. Wenn der Wert auf true festgelegt ist, muss das laufende Objekt eine gleichmäßige oder höhere (strengere) SRP-Vertrauens Ebene aufweisen als das Client Objekt. Beispielsweise kann ein Client Objekt mit einer uneingeschränkten SRP-Vertrauens Ebene keine Verbindung mit einem laufenden Objekt mit einer unzulässigen SRP-Vertrauens Ebene herstellen. |
-| Access         | ReadWrite                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Beschreibung    | Bestimmt, wie die Softwareeinschränkungsrichtlinie (Software Restriction Policy, SRP) versucht, Verbindungen mit vorhandenen Prozessen herzustellen. Wenn false festgelegt ist, werden Versuche, eine Verbindung mit ausgeführten Objekten herzustellen, nicht auf geeignete SRP-Vertrauensebenen überprüft. Wenn der Wert auf True festgelegt ist, muss das ausgeführte Objekt eine gleiche oder eine höhere (strengere) SRP-Vertrauensebene als das Clientobjekt haben. Beispielsweise kann ein Clientobjekt mit einer uneingeschränkten SRP-Vertrauensebene keine Verbindung mit einem ausgeführten Objekt mit einer nicht zu verwendenden SRP-Vertrauensebene herstellen. |
+| Zugriff         | ReadWrite                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | type           | Bool                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Standard        | Richtig                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Minimalsystem | Windows XP                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Mindestsystem | Windows XP                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 
 
@@ -439,11 +439,11 @@ Wenn diese Eigenschaft auf true festgelegt ist, wird der CLB-Server konfiguriert
 
 | Eingabe | Wert |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Sollte auf einen ausreichenden Wert in Sekunden festgelegt werden, wenn Sie zahlreiche Vorgänge innerhalb einer Transaktion durchgeführt haben. Der Standard Timeout Zeitraum beträgt 60 Sekunden, und der maximale Timeout Zeitraum beträgt 3600 Sekunden (1 Stunde). Wenn Sie diese Eigenschaft auf 0 festlegen, werden Transaktions Timeouts deaktiviert. Diese Eigenschaft kann von einzelnen Komponenten überschrieben werden, indem die componenttransaktiontimeout-Eigenschaft der [**Components**](components.md) -Auflistung verwendet wird. |
-| Access         | ReadWrite                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Beschreibung    | Sollte auf einen ausreichenden Wert in Sekunden festgelegt werden, wenn Sie zahlreiche Vorgänge innerhalb einer Transaktion tun. Der Standard-Time out-Zeitraum beträgt 60 Sekunden, und der maximale Time out-Zeitraum beträgt 3.600 Sekunden (1 Stunde). Wenn Sie diese Eigenschaft auf 0 festlegen, werden Time outs für Transaktionen deaktiviert. Diese Eigenschaft kann von einzelnen Komponenten überschrieben werden, indem die ComponentTransactionTimeout-Eigenschaft der [**Components-Auflistung verwendet**](components.md) wird. |
+| Zugriff         | ReadWrite                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | type           | Long (0-3600)                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Standard        | 60                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Minimalsystem | Windows 2000                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Mindestsystem | Windows 2000                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 
 
@@ -451,7 +451,7 @@ Wenn diese Eigenschaft auf true festgelegt ist, wird der CLB-Server konfiguriert
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Microsoft Visual Basic Beispiel wird veranschaulicht, wie Sie eine Verbindung mit einem Remote Computer herstellen und seine securitytrackingenabled-Eigenschaft mithilfe der **LocalComputer** -Sammlung des Remote Computers erhalten. Um dieses Beispiel zu verwenden, fügen Sie die com+ admin-Typbibliothek als Verweis auf Ihr Visual Basic Projekt hinzu.
+Im folgenden Microsoft Visual Basic-Beispiel wird veranschaulicht, wie Sie mithilfe der **LocalComputer-Sammlung** des Remotecomputers eine Verbindung mit einem Remotecomputer herstellen und dessen SecurityTrackingEnabled-Eigenschaft erhalten. Um dieses Beispiel zu verwenden, fügen Sie die COM+-Administratortypbibliothek als Verweis auf Ihr Visual Basic hinzu.
 
 
 ```VB
@@ -501,7 +501,7 @@ End Function
 
 
 
-Um die Funktion zu verwenden, geben Sie einen Zeichen folgen Wert für den Namen des Remote Computers an. Der folgende Visual Basic Code zeigt, wie Sie eine Verbindung mit dem Computer "Remotecomputername" herstellen.
+Um die Funktion zu verwenden, geben Sie einen Zeichenfolgenwert für den Namen des Remotecomputers an. Der folgende Visual Basic zeigt, wie Sie eine Verbindung mit dem Computer namens "RemoteComputerName" herstellen.
 
 
 ```VB
@@ -515,11 +515,11 @@ End Sub
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Com+-Verwaltungs Sammlungen](com--administration-collections.md)
+[COM+-Verwaltungssammlungen](com--administration-collections.md)
 </dt> </dl>
 
  

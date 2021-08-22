@@ -1,12 +1,12 @@
 ---
-title: Installlicenskeypack-Methode der Win32_TSLicenseKeyPack-Klasse
-description: Installiert ein Remotedesktopdienste Lizenzschlüssel Paket, das die über das Internet oder das Telefon empfangene Lizenz-ID verwendet.
+title: InstallLicenseKeyPack-Methode der Win32_TSLicenseKeyPack Klasse
+description: Installiert ein Remotedesktopdienste Lizenzschlüsselpaket, das die Lizenz-ID verwendet, die über das Internet oder das Telefon empfangen wurde.
 ms.assetid: 1e545186-cc01-4700-857f-9390e1b73923
 ms.tgt_platform: multiple
 keywords:
-- Installlicenskeypack-Methode Remotedesktopdienste
-- Installlicenskeypack-Methode Remotedesktopdienste, Win32_TSLicenseKeyPack-Klasse
-- Win32_TSLicenseKeyPack-Klasse Remotedesktopdienste, installlicenerkeypack-Methode
+- InstallLicenseKeyPack-Remotedesktopdienste
+- InstallLicenseKeyPack-Methode Remotedesktopdienste , Win32_TSLicenseKeyPack-Klasse
+- Win32_TSLicenseKeyPack klasse Remotedesktopdienste , InstallLicenseKeyPack-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5bee5e03de19783a20eeafa3f652dd60b99e871c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 875656c699e7415156b58ba6e2e64b2d9fc24ea402c7264327257c1d14bc9be4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118852790"
 ---
-# <a name="installlicensekeypack-method-of-the-win32_tslicensekeypack-class"></a>Installlicenskeypack-Methode der Win32-Klasse "-Klasse". \_
+# <a name="installlicensekeypack-method-of-the-win32_tslicensekeypack-class"></a>InstallLicenseKeyPack-Methode der Win32 \_ TSLicenseKeyPack-Klasse
 
-Installiert ein Remotedesktopdienste Lizenzschlüssel Paket, das die über das Internet oder das Telefon empfangene Lizenz-ID verwendet.
+Installiert ein Remotedesktopdienste Lizenzschlüsselpaket, das die Lizenz-ID verwendet, die über das Internet oder das Telefon empfangen wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,29 +44,29 @@ uint32 InstallLicenseKeyPack(
 
 <dl> <dt>
 
-*slicenabkeypackid* \[ in\]
+*sLicenseKeyPackId* \[ In\]
 </dt> <dd>
 
-Enthält den Lizenzcode mit 35 Zeichen. Nur die alphanumerische Zeichenfolge mit 35 Zeichen muss als Eingabe angegeben werden. Es sollten keine Bindestriche hinzugefügt werden.
+Enthält den Lizenzcode mit 35 Zeichen. Als Eingabe sollte nur die alphanumerische Zeichenfolge mit 35 Zeichen angegeben werden. Es sollten keine Bindestriche hinzugefügt werden.
 
 </dd> <dt>
 
-*Keypackid* \[ vorgenommen\]
+*KeyPackId* \[ out\]
 </dt> <dd>
 
-Empfängt den Key Pack-Bezeichner.
+Empfängt den Schlüsselpaketbezeichner.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,7 +77,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
@@ -86,7 +86,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32-Schlüssel-Lizenz-Schlüssel \_ ACK**](win32-tslicensekeypack.md)
+[**Win32 \_ TSLicenseKeyPack**](win32-tslicensekeypack.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: DSA_SEC_PAGE_INFO Struktur
-description: Wird mit dem Blatt "WM \_ adsprop \_ Sheet \_ Create" und "WM- \_ DSA" \_ \_ Erstellen \_ von Benachrichtigungs Meldungen zum Definieren eines sekundären Eigenschaften Blatts in einem Active Directory MMC-Snap-in verwendet.
+title: DSA_SEC_PAGE_INFO-Struktur
+description: Wird mit den NACHRICHTEN WM ADSPROP SHEET CREATE und WM DSA SHEET CREATE NOTIFY verwendet, um ein sekundäres Eigenschaftenblatt in einem \_ \_ Active Directory \_ \_ \_ \_ \_ MMC-Snap-In zu definieren.
 ms.assetid: 422d84dc-6b5e-43bf-ac4f-3b99cb59f9df
 ms.tgt_platform: multiple
 keywords:
-- DSA_SEC_PAGE_INFO Struktur Active Directory
-- PDSA_SEC_PAGE_INFO Struktur Zeiger Active Directory
+- DSA_SEC_PAGE_INFO Active Directory-Struktur
+- PDSA_SEC_PAGE_INFO Strukturzeiger Active Directory
 topic_type:
 - apiref
 api_name:
@@ -15,19 +15,19 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e4c8602a958c50c72942d89657a812d24f64571d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 26fa3dcfb983de8e1052b319bac7c3a594e256b594847c32b553353e6caee17d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118695648"
 ---
-# <a name="dsa_sec_page_info-structure"></a>DSA \_ sec- \_ Seite \_ Info-Struktur
+# <a name="dsa_sec_page_info-structure"></a>DSA \_ SEC \_ PAGE \_ INFO-Struktur
 
-Die **Informationen Struktur der DSA \_ sec- \_ Seite \_** wird mit dem Blatt " [**WM \_ adsprop \_ Sheet \_ Create**](wm-adsprop-sheet-create.md) " und " [**WM-DSA" Erstellen von \_ \_ \_ \_ Benachrichtigungs**](wm-dsa-sheet-create-notify.md) Meldungen zum Definieren eines sekundären Eigenschaften Blatts in einem Active Directory MMC-Snap-in verwendet.
+Die **DSA \_ SEC PAGE \_ \_ INFO-Struktur** wird mit [**den NACHRICHTEN WM \_ ADSPROP SHEET \_ \_ CREATE**](wm-adsprop-sheet-create.md) und [**WM \_ DSA SHEET CREATE \_ \_ \_ NOTIFY**](wm-dsa-sheet-create-notify.md) verwendet, um ein sekundäres Eigenschaftenblatt in einem Active Directory MMC-Snap-In zu definieren.
 
 > [!Note]  
-> Diese Struktur ist nicht in einer veröffentlichten Header Datei definiert. Um diese Struktur zu verwenden, definieren Sie Sie im exakten Format.
+> Diese Struktur ist nicht in einer veröffentlichten Headerdatei definiert. Um diese Struktur zu verwenden, definieren Sie sie im genauen angezeigten Format.
 
  
 
@@ -48,24 +48,24 @@ typedef struct _DSA_SEC_PAGE_INFO {
 
 <dl> <dt>
 
-**hwndparametrisheet**
+**hwndParentSheet**
 </dt> <dd>
 
-Enthält das Fenster Handle des übergeordneten Elements des sekundären Eigenschaften Blatts.
+Enthält das Fensterhand handle des übergeordneten Elements des sekundären Eigenschaftenblatts.
 
 </dd> <dt>
 
-**offsettitle**
+**offsetTitle**
 </dt> <dd>
 
-Enthält den Offset in Bytes vom Anfang der **DSA- \_ \_ Seiten \_ Info** Struktur zu einer auf NULL endenden Unicode-Zeichenfolge, die den Titel des sekundären Eigenschaften Blatts enthält.
+Enthält den Offset in Bytes vom Anfang der **SEC \_ PAGE \_ \_ INFO-Struktur** des DSA zu einer mit NULL beendeten Unicode-Zeichenfolge, die den Titel des sekundären Eigenschaftenblatts enthält.
 
 </dd> <dt>
 
-**dsobjectnames**
+**dsObjectNames**
 </dt> <dd>
 
-Enthält eine [**dsobjectnames**](/windows/desktop/api/Dsclient/ns-dsclient-dsobjectnames) -Struktur, die das sekundäre Eigenschaften Blatt definiert. Es kann immer nur ein sekundäres Eigenschaften Blatt erstellt werden. Daher kann die **dsobjectnames** -Struktur nur eine [**dsobject**](/windows/desktop/api/Dsclient/ns-dsclient-dsobject) -Struktur enthalten.
+Enthält eine [**DSOBJECTNAMES-Struktur,**](/windows/desktop/api/Dsclient/ns-dsclient-dsobjectnames) die das sekundäre Eigenschaftenblatt definiert. Es kann immer nur ein sekundäres Eigenschaftenblatt erstellt werden, sodass die **DSOBJECTNAMES-Struktur** nur eine [**DSOBJECT-Struktur enthalten**](/windows/desktop/api/Dsclient/ns-dsclient-dsobject) kann.
 
 </dd> </dl>
 
@@ -80,20 +80,20 @@ Enthält eine [**dsobjectnames**](/windows/desktop/api/Dsclient/ns-dsclient-dsob
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**WM- \_ adsprop- \_ Blatt \_ Erstellen**](wm-adsprop-sheet-create.md)
+[**WM \_ ADSPROP \_ SHEET \_ CREATE**](wm-adsprop-sheet-create.md)
 </dt> <dt>
 
-[**WM \_ - \_ Blatt "DSA \_ Erstellen \_ "**](wm-dsa-sheet-create-notify.md)
+[**WM \_ DSA \_ SHEET \_ CREATE \_ NOTIFY**](wm-dsa-sheet-create-notify.md)
 </dt> <dt>
 
-[**Dsobjectnames**](/windows/desktop/api/Dsclient/ns-dsclient-dsobjectnames)
+[**DSOBJECTNAMES**](/windows/desktop/api/Dsclient/ns-dsclient-dsobjectnames)
 </dt> <dt>
 
-[**Dsobject**](/windows/desktop/api/Dsclient/ns-dsclient-dsobject)
+[**DSOBJECT**](/windows/desktop/api/Dsclient/ns-dsclient-dsobject)
 </dt> </dl>
 
  

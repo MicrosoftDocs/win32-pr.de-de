@@ -1,7 +1,7 @@
 ---
 description: Starten Sie einen Auftrag, um einen Ressourcenpool zu löschen.
 ms.assetid: af3d9c7c-a825-4568-822d-044b3d92d144
-title: Deleteresourcepool-Methode der CIM_ResourcePoolConfigurationService-Klasse
+title: DeleteResourcePool-Methode der CIM_ResourcePoolConfigurationService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 9cab27df07a6a3a9679cb5e6595b6ba558d8b05e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a5fb895eb76a503d6199bf1057a9f9eaff0c72e4af59460c63551a7c581ff0cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357371"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118648089"
 ---
-# <a name="deleteresourcepool-method-of-the-cim_resourcepoolconfigurationservice-class"></a>Deleteresourcepool-Methode der CIM \_ resourcepoolconfigurationservice-Klasse
+# <a name="deleteresourcepool-method-of-the-cim_resourcepoolconfigurationservice-class"></a>DeleteResourcePool-Methode der \_ CIM-Klasse "ResourcePoolConfigurationService"
 
-Starten Sie einen Auftrag, um einen Ressourcenpool zu löschen. Möglicherweise sind keine Zuordnungen ausstehend, oder der Löschvorgang schlägt fehl mit "in Verwendung". Wenn es sich beim Ressourcenpool um einen Stamm Ressourcenpool handelt, werden alle Host Ressourcen an das zugrunde liegende System zurückgegeben.
+Starten Sie einen Auftrag, um einen Ressourcenpool zu löschen. Möglicherweise sind keine Zuordnungen aus, oder beim Löschen wird "Wird verwendet" nicht verwendet. Wenn der Ressourcenpool ein Stammressourcenpool ist, werden alle Hostressourcen an das zugrunde liegende System zurückgegeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,27 +40,27 @@ uint32 DeleteResourcePool(
 
 <dl> <dt>
 
-*Pool* \[ in\]
+*Pool* \[ In\]
 </dt> <dd>
 
-Ein [**CIM- \_ resourcepool**](cim-resourcepool.md) , der auf den zu löschenden Pool verweist.
+Ein [**\_ CIM-Ressourcenpool,**](cim-resourcepool.md) der auf den zu löschenden Pool verweist.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Ein [**CIM- \_ bettejob**](cim-concretejob.md) , der auf den Auftrag verweist (kann **null** sein, wenn der Auftrag abgeschlossen ist).
+Ein [**CIM \_ ConcreteJob,**](cim-concretejob.md) der auf den Auftrag verweist (kann **NULL sein,** wenn der Auftrag abgeschlossen ist).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
-**Auftrag ohne Fehler abgeschlossen** (0)
+**Auftrag ohne Fehler** abgeschlossen (0)
 </dt> <dt>
 
 **Nicht unterstützt** (1)
@@ -72,28 +72,28 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 **Timeout** (3)
 </dt> <dt>
 
-Fehler **(4** )
+**Fehler** (4)
 </dt> <dt>
 
 **Ungültiger Parameter** (5)
 </dt> <dt>
 
-**In Gebrauch** (6)
+**Wird verwendet** (6)
 </dt> <dt>
 
-**Falscher ResourceType für den Pool** (7).
+**Falscher ResourceType für den Pool** (7)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -105,16 +105,16 @@ Fehler **(4** )
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ resourcepoolconfigurationservice**](cim-resourcepoolconfigurationservice.md)
+[**CIM \_ ResourcePoolConfigurationService**](cim-resourcepoolconfigurationservice.md)
 </dt> </dl>
 
  

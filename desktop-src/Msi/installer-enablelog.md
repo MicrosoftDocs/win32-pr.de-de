@@ -1,7 +1,7 @@
 ---
-description: Die EnableLog-Methode des Installer-Objekts aktiviert die Protokollierung des ausgewählten Nachrichten Typs für alle nachfolgenden Installations Sitzungen im aktuellen Prozessbereich.
+description: Die EnableLog-Methode des Installer-Objekts ermöglicht die Protokollierung des ausgewählten Nachrichtentyps für alle nachfolgenden Installationssitzungen im aktuellen Prozessbereich.
 ms.assetid: eb384587-0870-4812-866c-b483c1dfa841
-title: Installer. EnableLog-Methode
+title: Installer.EnableLog-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 573b56dda0479f58595b0849f6443fd8a2e67e71
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 48481a701b7e78de372f5579dab5c9d5976a68063958b0812d6ae1ddc08b109a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373599"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118631696"
 ---
-# <a name="installerenablelog-method"></a>Installer. EnableLog-Methode
+# <a name="installerenablelog-method"></a>Installer.EnableLog-Methode
 
-Die **EnableLog** -Methode des [**Installer**](installer-object.md) -Objekts aktiviert die Protokollierung des ausgewählten Nachrichten Typs für alle nachfolgenden Installations Sitzungen im aktuellen Prozessbereich.
+Die **EnableLog-Methode** des [**Installer-Objekts**](installer-object.md) ermöglicht die Protokollierung des ausgewählten Nachrichtentyps für alle nachfolgenden Installationssitzungen im aktuellen Prozessbereich.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,27 +43,27 @@ Installer.EnableLog(
 *logMode* 
 </dt> <dd>
 
-Eine erforderliche Zeichenfolge, die Buchstaben enthält, die die zu protokollieren Nachrichten Typen darstellen. Die Zeichenfolge kann eine Kombination der folgenden Werte sein.
+Eine erforderliche Zeichenfolge, die Buchstaben enthält, die die zu protokollierenden Nachrichtentypen darstellen. Die Zeichenfolge kann eine Kombination der folgenden Werte sein.
 
 
 
-| Wert | BESCHREIBUNG                                                                                            |
+| Wert | Beschreibung                                                                                            |
 |-------|--------------------------------------------------------------------------------------------------------|
-| I     | Informationsmeldungen.                                                                             |
+| I     | Nur Informationsmeldungen.                                                                             |
 | w     | Nicht schwerwiegende Warnmeldungen.                                                                            |
-| e     | Fehlermeldungen, die schwerwiegende Fehler sein könnten.                                                               |
-| f     | Die Liste der zu verwendenden Dateien, die ersetzt werden müssen.                                                         |
-| a     | Beginn der Aktions Benachrichtigung.                                                                          |
-| r     | Aktions Daten Satz mit Inhalt, der für Action spezifisch ist.                                              |
-| u     | Benutzer Anforderungs Nachrichten.                                                                                 |
-| c     | Initialisierungs Parameter für die Benutzeroberfläche.                                                                          |
-| m     | Nicht genügend Arbeitsspeicher.                                                                                 |
-| v     | Sendet große Mengen von Informationen an die Protokolldatei, die für Benutzer im Allgemeinen nicht nützlich sind. Kann zur Unterstützung von verwendet werden. |
-| p     | Dump-Eigenschaften Tabelle; "Property = Value" bei der Engine-Beendigung                                          |
-| \+    | Fügen Sie an die vorhandene Protokolldatei an.                                                                           |
+| e     | Fehlermeldungen, die schwerwiegende Fehler sein können.                                                               |
+| f     | Liste der verwendeten Dateien, die ersetzt werden müssen.                                                         |
+| a     | Start der Aktionsbenachrichtigung.                                                                          |
+| r     | Aktionsdatensatz, der aktionsspezifische Inhalte enthält.                                              |
+| u     | Benutzeranforderungsnachrichten.                                                                                 |
+| c     | Parameter für die Benutzeroberflächeninitialisierung.                                                                          |
+| m     | Meldung zu nicht genügend Arbeitsspeicher.                                                                                 |
+| v     | Sendet große Mengen von Informationen an Protokolldateien, die für Benutzer im Allgemeinen nicht nützlich sind. Kann zur Unterstützung verwendet werden. |
+| p     | Dump-Eigenschaftentabelle; "property = value" beim Beenden der Engine                                          |
+| \+    | Fügen Sie an eine vorhandene Protokolldatei an.                                                                           |
 | !     | Leeren Sie jede Zeile in die Protokolldatei.                                                                       |
-| x     | Zusätzliche Debuginformationen. Diese Option ist nur in Windows Server 2003 verfügbar.                      |
-| o     | Nicht genügend Speicherplatz Nachrichten.                                                                            |
+| x     | Zusätzliche Debuginformationen. Diese Option ist nur mit Windows Server 2003 verfügbar.                      |
+| o     | Nachrichten mit nicht genügend Speicherplatz.                                                                            |
 
 
 
@@ -71,10 +71,10 @@ Eine erforderliche Zeichenfolge, die Buchstaben enthält, die die zu protokollie
 
 </dd> <dt>
 
-*Protokolldatei* 
+*Logfile* 
 </dt> <dd>
 
-Erforderliche Zeichenfolge, die den Pfad zu der zu erstellenden Protokolldatei enthält. Verwenden Sie eine leere Zeichenfolge (""), um die Protokollierung zu deaktivieren.
+Erforderliche Zeichenfolge, die den Pfad zur zu erstellenden Protokolldatei enthält. Verwenden Sie eine leere Zeichenfolge (""), um die Protokollierung zu deaktivieren.
 
 </dd> </dl>
 
@@ -82,17 +82,17 @@ Erforderliche Zeichenfolge, die den Pfad zu der zu erstellenden Protokolldatei e
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Pfad zum Speicherort der Protokolldatei muss bereits vorhanden sein, wenn diese Methode verwendet wird. Das Installationsprogramm erstellt nicht die Verzeichnisstruktur für die Protokolldatei.
+Der Pfad zum Protokolldateispeicherort muss bereits vorhanden sein, wenn diese Methode verwendet wird. Der Installer erstellt nicht die Verzeichnisstruktur für die Protokolldatei.
 
-Die mithilfe von **EnableLog** festgelegten Protokollierungs Optionen überschreiben alle vorhandenen Windows Installer Protokollierungs Richtlinien Einstellungen.
+Die mit **EnableLog** festgelegten Protokollierungsoptionen überschreiben alle vorhandenen Windows Installer-Protokollierungsrichtlinieneinstellungen.
 
-Bei der Protokollierung wird standardmäßig eine vorhandene Protokolldatei überschrieben. Sie müssen den Buchstaben "+" im Protokollierungs Modus verwenden, um an eine vorhandene Protokolldatei anzufügen.
+Die Protokollierung überschreibt standardmäßig eine vorhandene Protokolldatei. Sie müssen den Buchstaben "+" im Protokollierungsmodus verwenden, um an eine vorhandene Protokolldatei anzufügen.
 
-Die Option "!" wird nicht empfohlen, da Sie die Installation erheblich verlangsamen kann. Diese Option kann nützlich sein, wenn Sie eine-Installation Debuggen.
+Die Option "!" wird nicht empfohlen, da sie die Installation erheblich verlangsamen kann. Diese Option kann beim Debuggen einer Installation nützlich sein.
 
-Das folgende Beispielskript schaltet die ausführliche Protokollierung für eine-Installation ein. Am Ende der Installation wird die generierte Protokolldatei unter "c: \\ Temp \\ install. log" angezeigt.
+Das folgende Beispielskript aktiviert die ausführliche Protokollierung für eine Installation. Am Ende der Installation befindet sich die generierte Protokolldatei unter c: \\ temp \\ install.log.
 
 
 ```VB
@@ -110,17 +110,17 @@ Das folgende Beispielskript schaltet die ausführliche Protokollierung für eine
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Windows Installer Protokollierung](windows-installer-logging.md)
+[Windows Installerprotokollierung](windows-installer-logging.md)
 </dt> </dl>
 
  

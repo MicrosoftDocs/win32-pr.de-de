@@ -1,21 +1,21 @@
 ---
-description: Polygone, die in Ihrem 3D-Raum Coplanar sind, können so gestaltet werden, als wären Sie nicht durch Hinzufügen eines z-Bias zu jedem.
+description: Polygone, die in Ihrem 3D-Raum koplanar sind, können so dargestellt werden, als wären sie nicht koplanar, indem sie jeweils einen Z-Bias hinzufügen.
 ms.assetid: 0ab4f63b-49de-4bd0-a10f-6f90b9706c58
-title: Tiefen Abweichung (Direct3D 9)
+title: Tiefenabweichung (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9ce605ea1df161e5ebfed95c214c3dd180ab7ee6
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: cbc99d606a561fd6f4eec412774ce53d9b5dd5e62c7f50b118a4e90a88664a2a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104481563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118523810"
 ---
-# <a name="depth-bias-direct3d-9"></a>Tiefen Abweichung (Direct3D 9)
+# <a name="depth-bias-direct3d-9"></a>Tiefenabweichung (Direct3D 9)
 
-Polygone, die in Ihrem 3D-Raum Coplanar sind, können so gestaltet werden, als wären Sie nicht durch Hinzufügen eines z-Bias zu jedem. Dies ist eine Technik, die häufig verwendet wird, um sicherzustellen, dass Schatten in einer Szene ordnungsgemäß angezeigt werden. Beispielsweise hat ein Schatten auf einer Wand wahrscheinlich denselben tiefen Wert wie die Wand. Wenn Sie die Wand zuerst und dann den Schatten darstellen, ist der Schatten möglicherweise nicht sichtbar, oder es sind keine tiefen Artefakte sichtbar. Sie können die Reihenfolge, in der Sie die Coplanar-Objekte renden, umkehren, um den Effekt umzukehren, aber tiefe Artefakte sind immer noch wahrscheinlich.
+Polygone, die in Ihrem 3D-Raum koplanar sind, können so dargestellt werden, als wären sie nicht koplanar, indem sie jeweils einen Z-Bias hinzufügen. Dies ist eine Technik, die häufig verwendet wird, um sicherzustellen, dass Schatten in einer Szene ordnungsgemäß angezeigt werden. Beispielsweise hat ein Schatten auf einer Wand wahrscheinlich den gleichen Tiefenwert wie die Wand. Wenn Sie zuerst die Wand und dann den Schatten rendern, ist der Schatten möglicherweise nicht sichtbar, oder Tiefenartefakte sind möglicherweise sichtbar. Sie können die Reihenfolge umkehren, in der Sie die coplanaren Objekte rendern, um den Effekt umzukehren. Tiefenartefakte sind jedoch weiterhin wahrscheinlich.
 
-Eine Anwendung kann sicherstellen, dass Coplanar-Polygone ordnungsgemäß gerendert werden, indem Sie den z-Werten, die das System beim Rendern der Mengen von Coplanar-Polygonen verwendet, einen Bias hinzufügen. Zum Hinzufügen eines z-Bias zu einem Satz von Polygonen Aufrufen der [**IDirect3DDevice9:: btrenderstate**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setrenderstate) -Methode direkt vor dem Rendern, Festlegen des *State* -Parameters auf D3DRS \_ depthbias und des *value* -Parameters auf einen passenden float-Wert (z. b. kann ein geeigneter Wert von-1,0 bis 1,0 sein). um diesen Wert an "* **Trend User State**" zu übergeben, müssen Sie auch den Wert in ein **DWORD** umwandeln Ein höherer z-Bias-Wert erhöht die Wahrscheinlichkeit, dass die von Ihnen dargestellten Polygone sichtbar sind, wenn Sie mit anderen Coplanar-Polygonen angezeigt werden.
+Eine Anwendung kann sicherstellen, dass koplanare Polygone ordnungsgemäß gerendert werden, indem den Z-Werten, die das System beim Rendern der Sätze von coplanaren Polygonen verwendet, ein Voreingenommenheit hinzugefügt wird. Um einer Gruppe von Polygonen einen Z-Bias hinzuzufügen, rufen Sie die [**IDirect3DDevice9::SetRenderState-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setrenderstate) unmittelbar vor dem Rendern auf, legen Sie den *State-Parameter* auf D3DRS \_ DEPTHBIAS und den *Value-Parameter* auf einen geeigneten float-Wert fest (ein geeigneter Wert kann z. B. von -1.0 bis 1.0 sein). Um diesen Wert an **SetRenderState** zu übergeben, müssen Sie auch den Wert in ein **DWORD-Wert** umbenennen. Ein höherer Z-Bias-Wert erhöht die Wahrscheinlichkeit, dass die von Ihnen gerenderten Polygone sichtbar sind, wenn sie mit anderen koplanaren Polygonen angezeigt werden.
 
 
 ```
@@ -24,7 +24,7 @@ Offset = m * D3DRS_SLOPESCALEDEPTHBIAS + D3DRS_DEPTHBIAS
 
 
 
-wobei m der maximale tiefen Rand des gerenderten Dreiecks ist.
+dabei ist m die maximale Tiefenpiste des gerenderten Dreiecks.
 
 
 ```
@@ -33,9 +33,9 @@ m = max(abs(delta z / delta x), abs(delta z / delta y))
 
 
 
-Die Einheiten für die \_ Rendering-Zustände D3DRS depthbias und D3DRS \_ slopescaledepthbias sind davon abhängig, ob z-Pufferung oder w-Pufferung aktiviert ist. Die Anwendung muss geeignete Werte bereitstellen.
+Die Einheiten für den \_ D3DRS DEPTHBIAS- und D3DRS-RENDERzuständeN \_ VOMCALEDEPTHBIAS hängen davon ab, ob Z-Pufferung oder W-Pufferung aktiviert ist. Die Anwendung muss geeignete Werte bereitstellen.
 
-Der Bias wird nicht auf Zeilen-und Punkt primitive angewendet. Dieser Bias muss jedoch auf Dreiecke angewendet werden, die im Draht Modell-Modus gezeichnet werden.
+Die Voreingenommenheit wird auf keine Linie und keinen Punktprimitiven angewendet. Diese Voreingenommenheit muss jedoch auf Dreiecke angewendet werden, die im Wireframe-Modus gezeichnet werden.
 
 
 ```
@@ -59,7 +59,7 @@ D3DPRASTERCAPS_SLOPESCALEDEPTHBIAS
 
 <dl> <dt>
 
-[Pixel Pipeline](pixel-pipeline.md)
+[Pixelpipeline](pixel-pipeline.md)
 </dt> </dl>
 
  

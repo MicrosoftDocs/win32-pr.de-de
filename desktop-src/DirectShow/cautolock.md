@@ -1,7 +1,7 @@
 ---
-description: Die cautolock-Klasse enthält einen kritischen Abschnitt für den Bereich eines Codeblocks.
+description: Die CAutoLock-Klasse enthält einen kritischen Abschnitt für den Bereich eines Codeblocks.
 ms.assetid: 8013b3a7-297b-4cf8-8107-4cee1fc12b56
-title: Cautolock-Klasse (wxutil. h)
+title: CAutoLock-Klasse (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,20 +16,20 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 866ca7164fdaef5a93679da000779c51fb4ddb24
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4b046111e3a7e22fcf9e380fae09bb2d2007a583e49c0507b8e214142505fe02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356477"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118661702"
 ---
-# <a name="cautolock-class"></a>Cautolock-Klasse
+# <a name="cautolock-class"></a>CAutoLock-Klasse
 
-Die- `CAutoLock` Klasse enthält einen kritischen Abschnitt für den Bereich eines Codeblocks.
+Die `CAutoLock` -Klasse enthält einen kritischen Abschnitt für den Bereich eines Codeblocks.
 
-Diese Klasse funktioniert in Verbindung mit der [**ccritsec**](ccritsec.md) -Klasse, bei der es sich um einen Wrapper für kritische Abschnitts Objekte handelt. Der `CAutoLock` -Konstruktor sperrt den kritischen Abschnitt, und der Dekonstruktor entsperrt ihn. Indem Sie ein- `CAutoLock` Objekt als lokale Variable verwenden, können Sie einen kritischen Abschnitt mit der Garantie sperren, dass alle Codepfade den kritischen Abschnitt entsperren werden.
+Diese Klasse funktioniert in Verbindung mit der [**CCritSec-Klasse,**](ccritsec.md) die ein Wrapper für kritische Abschnittsobjekte ist. Der `CAutoLock` Konstruktor sperrt den kritischen Abschnitt, und der Destruktor entsperrt ihn. Wenn Sie ein -Objekt als lokale Variable verwenden, können Sie einen kritischen Abschnitt mit der Garantie sperren, dass alle Codepfade den `CAutoLock` kritischen Abschnitt entsperren.
 
-Im folgenden Codebeispiel wird gezeigt, wie diese Klasse verwendet wird:
+Im folgenden Codebeispiel wird die Verwendung dieser Klasse veranschaulicht:
 
 
 ```
@@ -45,16 +45,16 @@ CCritSec csMyLock;  // Critical section is not locked yet.
 
 
 
-Die Methoden in dieser Klasse können nicht überschrieben werden.
+Die Methoden in dieser Klasse sind nicht für das Überschreiben konzipiert.
 
 
 
-| Geschützte Member-Variablen                 | BESCHREIBUNG                                                      |
+| Geschützte Membervariablen                 | BESCHREIBUNG                                                      |
 |--------------------------------------------|------------------------------------------------------------------|
-| [**m \_ Plock**](cautolock-m-plock.md)      | Kritischer Abschnitt für diese Sperre.                                  |
+| [**m \_ pLock**](cautolock-m-plock.md)      | Kritischer Abschnitt für diese Sperre.                                  |
 | Öffentliche Methoden                             | BESCHREIBUNG                                                      |
-| [**Cautolock**](cautolock-cautolock.md)   | Konstruktormethode. Sperrt das angegebene kritische Abschnitts Objekt. |
-| [**~ Cautolock**](cautolock--cautolock.md) | Dekonstruktormethode. Entsperrt das Objekt des kritischen Abschnitts.          |
+| [**CAutoLock**](cautolock-cautolock.md)   | Konstruktormethode. Sperrt das angegebene kritische Abschnittsobjekt. |
+| [**~CAutoLock**](cautolock--cautolock.md) | Destruktormethode. Entsperrt das kritische Abschnittsobjekt.          |
 
 
 
@@ -66,8 +66,8 @@ Die Methoden in dieser Klasse können nicht überschrieben werden.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

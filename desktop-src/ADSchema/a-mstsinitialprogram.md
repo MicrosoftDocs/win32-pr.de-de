@@ -1,11 +1,11 @@
 ---
-title: MS-TS-Initial-Program-Attribut
-description: Terminal Dienste-Sitzungsstart Programm gibt den Pfad und den Dateinamen der Anwendung an, die der Benutzer automatisch starten möchte, wenn sich der Benutzer am Terminal Server anmeldet.
+title: ms-TS-Initial-Program-Attribut
+description: Das Anfängliche Programm für die Terminaldienstesitzung gibt den Pfad und dateinamen der Anwendung an, die der Benutzer automatisch starten möchte, wenn sich der Benutzer beim Terminalserver anmeldet.
 ms.assetid: c886209b-725b-4e49-a802-58be9ed5e92e
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-TS-Initial-Program\"-Attribut, AD-Schema"
-- AD-Schema des mstsinitialprogram-Attributs
+- MS-TS-Initial-Program-Attribut AD-Schema
+- MSTSInitialProgram-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f2a4796a97722f2d26142a2ff374414ca3ca1cf2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 37d014cf19c1410d21a8ee8c851fbee213e012a631ade04b6117e1cf949e22ec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104392272"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118424485"
 ---
-# <a name="ms-ts-initial-program-attribute"></a>MS-TS-Initial-Program-Attribut
+# <a name="ms-ts-initial-program-attribute"></a>ms-TS-Initial-Program-Attribut
 
-Terminal Dienste-Sitzungsstart Programm gibt den Pfad und den Dateinamen der Anwendung an, die der Benutzer automatisch starten möchte, wenn sich der Benutzer am Terminal Server anmeldet.
+Das Anfängliche Programm für die Terminaldienstesitzung gibt den Pfad und dateinamen der Anwendung an, die der Benutzer automatisch starten möchte, wenn sich der Benutzer beim Terminalserver anmeldet.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-TS-Initial-Program                       |
-| LDAP-Display-Name | mstsinitialprogram                          |
+| CN                | ms-TS-Initial-Program                       |
+| Ldap-Anzeigename | msTSInitialProgram                          |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1990                     |
-| System-ID-GUID    | 9201ac6l-1d69-4dfb-802e-d95510109599        |
+| System-ID-GUID    | 9201ac6f-1d69-4dfb-802e-d95510109599        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -55,10 +55,10 @@ Terminal Dienste-Sitzungsstart Programm gibt den Pfad und den Dateinamen der Anw
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 32767                             |
 | Search-Flags           | 0x00000000                        |
@@ -76,10 +76,10 @@ Terminal Dienste-Sitzungsstart Programm gibt den Pfad und den Dateinamen der Anw
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 32767                             |
 | Search-Flags           | 0x00000000                        |
@@ -97,10 +97,10 @@ Terminal Dienste-Sitzungsstart Programm gibt den Pfad und den Dateinamen der Anw
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 32767                             |
 | Search-Flags           | 0x00000000                        |

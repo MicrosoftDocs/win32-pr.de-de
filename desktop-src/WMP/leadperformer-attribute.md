@@ -1,9 +1,9 @@
 ---
-title: Leadperformer-Attribut
-description: Das leadperformer-Attribut ist der Name des Lead-Performers, der dem Videoinhalt zugeordnet ist.
+title: LeadPerformer-Attribut
+description: Das LeadPerformer-Attribut ist der Name des Lead performers, der dem Videoinhalt zugeordnet ist.
 ms.assetid: cfcd643e-27eb-4556-ba4c-4659694d4bc2
 keywords:
-- Leadperformer-Attribut, Windows Media Player
+- LeadPerformer-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,26 +12,26 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c4e5495e218a5e759d868fbef6561aaf80818a7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f0fade2d85a00e60fa17ef095daffe38189620031a512ec19cc5f85d9c8e592d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361996"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118575120"
 ---
-# <a name="leadperformer-attribute"></a>Leadperformer-Attribut
+# <a name="leadperformer-attribute"></a>LeadPerformer-Attribut
 
-Das **leadperformer** -Attribut ist der Name des Lead-Performers, der dem Videoinhalt zugeordnet ist.
+Das **LeadPerformer-Attribut** ist der Name des Lead performers, der dem Videoinhalt zugeordnet ist.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [DVDs](dvd-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur im Bibliotheks Cache gespeichert.
+Dieses Attribut wird nur im Bibliothekscache gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,7 +39,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -47,7 +47,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

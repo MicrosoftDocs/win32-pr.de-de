@@ -1,10 +1,10 @@
 ---
-title: Inapclientmanagement-Schnittstelle (napmanagement. h)
-description: Stellt Methoden für die NAP-Client Verwaltung bereit. | Inapclientmanagement-Schnittstelle (napmanagement. h)
+title: INapClientManagement-Schnittstelle (NapManagement.h)
+description: Stellt Methoden für die NAP-Clientverwaltung zur | INapClientManagement-Schnittstelle (NapManagement.h)
 ms.assetid: 9c5724db-1e85-4da5-92b7-9ff6579f9cfb
 keywords:
-- Inapclientmanagement-Schnittstelle NAP
-- Inapclientmanagement Interface NAP, beschrieben
+- INapClientManagement-Schnittstelle NAP
+- INapClientManagement-Schnittstelle NAP , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,21 +15,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fe90158d6f1e9a864f7d19448a412d70890133d2
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 56a9d338cdaad8ed46fd3c3c730ca3ae4c2065cda9803c283ae262addd939713
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961446"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118622116"
 ---
-# <a name="inapclientmanagement-interface"></a>Inapclientmanagement-Schnittstelle
+# <a name="inapclientmanagement-interface"></a>INapClientManagement-Schnittstelle
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **inapclientmanagement** -Schnittstelle bietet Methoden für die NAP-Client Verwaltung.
+Die **INapClientManagement-Schnittstelle** stellt Methoden für die NAP-Clientverwaltung bereit.
 
 > [!Note]  
 > [**INapClientManagement2**](inapclientmanagement2.md) erbt alle Methoden dieser Schnittstelle und sollte stattdessen verwendet werden.
@@ -38,26 +38,26 @@ Die **inapclientmanagement** -Schnittstelle bietet Methoden für die NAP-Client 
 
 ## <a name="members"></a>Member
 
-Die **inapclientmanagement** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Inapclientmanagement** verfügt auch über diese Typen von Membern:
+Die **INapClientManagement-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **INapClientManagement verfügt** auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **inapclientmanagement** -Schnittstelle verfügt über diese Methoden.
+Die **INapClientManagement-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                                | BESCHREIBUNG                                                                   |
+| Methode                                                                                                                | Beschreibung                                                                   |
 |:----------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
-| [**Inapclientmanagement:: getnapclientinfo**](inapclientmanagement-getnapclientinfo.md)                               | Ruft Informationen zu einem NAP-Client ab.<br/>                          |
-| [**Inapclientmanagement:: getregisteredenforcementclients**](inapclientmanagement-getregisteredenforcementclients.md) | Ruft Informationen zu den registrierten Erzwingungs Clients ab.<br/>    |
-| [**Inapclientmanagement:: getregisteredsystemhealthagents**](inapclientmanagement-getregisteredsystemhealthagents.md) | Abrufen von Informationen zu einem registrierten SHA.<br/>                       |
-| [**Inapclientmanagement:: getsystemisolationinfo**](inapclientmanagement-getsystemisolationinfo.md)                   | Ruft Informationen zum Isolations Status des NAP-Clients ab.<br/> |
-| [**Inapclientmanagement:: registerenforcementclient**](inapclientmanagement-registerenforcementclient.md)             | Registriert einen Erzwingungs Client beim NAP-System.<br/>               |
-| [**Inapclientmanagement:: registersystemhealthagent**](inapclientmanagement-registersystemhealthagent.md)             | Registriert einen SHA beim NAP-System.<br/>                              |
-| [**Inapclientmanagement:: unregisterenforcementclient**](inapclientmanagement-unregisterenforcementclient.md)         | Hebt die Registrierung eines Erzwingungs Clients beim NAP-System auf.<br/>             |
-| [**Inapclientmanagement:: unregistersystemhealthagent**](inapclientmanagement-unregistersystemhealthagent.md)         | Hebt die Registrierung eines SHA beim NAP-System auf.<br/>                            |
+| [**INapClientManagement::GetNapClientInfo**](inapclientmanagement-getnapclientinfo.md)                               | Ruft Informationen zu einem NAP-Client ab.<br/>                          |
+| [**INapClientManagement::GetRegisteredEnforcementClients**](inapclientmanagement-getregisteredenforcementclients.md) | Ruft Informationen zu den registrierten Erzwingungsclients ab.<br/>    |
+| [**INapClientManagement::GetRegisteredSystemHealthAgents**](inapclientmanagement-getregisteredsystemhealthagents.md) | Ruft Informationen zu einem registrierten SHA ab.<br/>                       |
+| [**INapClientManagement::GetSystemIsolationInfo**](inapclientmanagement-getsystemisolationinfo.md)                   | Ruft Informationen zum Isolationsstatus des Nap-Clients ab.<br/> |
+| [**INapClientManagement::RegisterEnforcementClient**](inapclientmanagement-registerenforcementclient.md)             | Registriert einen Erzwingungsclient beim NAP-System.<br/>               |
+| [**INapClientManagement::RegisterSystemHealthAgent**](inapclientmanagement-registersystemhealthagent.md)             | Registriert eine SHA beim NAP-System.<br/>                              |
+| [**INapClientManagement::UnregisterEnforcementClient**](inapclientmanagement-unregisterenforcementclient.md)         | Aufheben der Registrierung eines Erzwingungsclients beim NAP-System.<br/>             |
+| [**INapClientManagement::UnregisterSystemHealthAgent**](inapclientmanagement-unregistersystemhealthagent.md)         | Aufheben der Registrierung eines SHA beim NAP-System.<br/>                            |
 
 
 
@@ -69,15 +69,15 @@ Die **inapclientmanagement** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                         |
-| Header<br/>                   | <dl> <dt>Napmanagement. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napmanagement. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                         |
+| Header<br/>                   | <dl> <dt>NapManagement.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapManagement.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

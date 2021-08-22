@@ -1,17 +1,17 @@
 ---
-title: C/C++-Code Beispiel erstellen einer Aufgabe mit NewWorkItem
+title: C/C++-Codebeispiel zum Erstellen einer Aufgabe mit NewWorkItem
 description: In diesem Beispiel wird eine einzelne Aufgabe erstellt.
 ms.assetid: a96bae5d-fa36-41ab-8baf-144683fc6b52
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c8573c5d5d097bdbe58c14329a5029046eecfae8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e5a4ea0d2ddd87325a7852c95e172eaeb137ace86d1cbdaa159c71d0e26b82ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947633"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118859927"
 ---
-# <a name="cc-code-example-creating-a-task-using-newworkitem"></a>C/C++-Code Beispiel: Erstellen einer Aufgabe mit NewWorkItem
+# <a name="cc-code-example-creating-a-task-using-newworkitem"></a>C/C++-Codebeispiel: Erstellen einer Aufgabe mit NewWorkItem
 
 In diesem Beispiel wird eine einzelne Aufgabe erstellt.
 
@@ -122,12 +122,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[Taskplaner 1.0-Beispiele](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

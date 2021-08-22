@@ -1,34 +1,34 @@
 ---
-title: Win32_TSGatewayRADIUSServer Methoden
-description: Die Win32- \_ Klasse "zgatewayradiusserver" stellt die folgenden Methoden zur Verfügung.
+title: Win32_TSGatewayRADIUSServer-Methoden
+description: Die Win32 \_ TSGatewayRADIUSServer-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 22F8EB94-CA2C-46A8-BF11-0117FC00C16F
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ab7893439f82bfeeb176543e2545c8086a618f5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e961c297e853a40ed3e60a2067e5c52406407b01130bf50fccc8bb39516f7482
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118603921"
 ---
-# <a name="win32_tsgatewayradiusserver-methods"></a>Win32-Methode "t- \_ gatewayradiusserver"
+# <a name="win32_tsgatewayradiusserver-methods"></a>Win32 \_ TSGatewayRADIUSServer-Methoden
 
-Die Win32-Klasse " [**\_ zgatewayradiusserver**](win32-tsgatewayradiusserver.md) " stellt die folgenden Methoden zur Verfügung.
+Die [**Win32 \_ TSGatewayRADIUSServer-Klasse**](win32-tsgatewayradiusserver.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Add-Methode**](win32-tsgatewayradiusserver-add.md)
--   [**Muvedown-Methode**](movedown-win32-tsgatewayradiusserver.md)
+-   [**Methode hinzufügen**](win32-tsgatewayradiusserver-add.md)
+-   [**MoveDown-Methode**](movedown-win32-tsgatewayradiusserver.md)
 -   [**MoveUp-Methode**](moveup-win32-tsgatewayradiusserver.md)
 -   [**Remove-Methode**](win32-tsgatewayradiusserver-remove.md)
 -   [**SetName-Methode**](setname-win32-tsgatewayradiusserver.md)
--   [**Setsharedsecret-Methode**](setsharedsecret-win32-tsgatewayradiusserver.md)
--   [**Update-Methode**](update-win32-tsgatewayradiusserver.md)
+-   [**SetSharedSecret-Methode**](setsharedsecret-win32-tsgatewayradiusserver.md)
+-   [**Updatemethode**](update-win32-tsgatewayradiusserver.md)
 
- 
+ 
 
- 
+ 
 
 
 

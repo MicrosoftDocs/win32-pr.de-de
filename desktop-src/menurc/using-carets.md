@@ -1,49 +1,49 @@
 ---
-title: Verwenden von Caretzeichen
-description: Dieser Abschnitt enthält Codebeispiele, die das Ausführen von Aufgaben im Zusammenhang mit Caretzeichen veranschaulichen.
+title: Verwenden von Carets
+description: Dieser Abschnitt enthält Codebeispiele, in denen gezeigt wird, wie Aufgaben im Zusammenhang mit Carets durchgeführt werden.
 ms.assetid: 82b0a84c-49a9-4d9d-b4c8-7c4511d863eb
 keywords:
-- Ressourcen, Caretzeichen
-- Caretzeichen, erstellen
-- Caretzeichen, anzeigen
-- Caretzeichen, zerstören
-- Caretzeichen, ausblenden
-- Caretzeichen, blinkende Zeiten
+- resources,carets
+- Carets,creating
+- Carets, anzeigend
+- Carets,destroying
+- Caret-/Ausblenden
+- Caret-, Blinkzeiten
 - blinkende Linien
 - blinkende Blöcke
-- blinken von Bitmaps
-- Erstellen von Caretzeichen
-- Anzeigen von Caretzeichen
-- Ausblenden von Caretzeichen
-- zerstören von Caretzeichen
-- blinkende Zeiten
-- Benutzereingabe, Tastatureingabe
-- Erfassen von Benutzereingaben, Tastatureingaben
+- blinkende Bitmaps
+- Erstellen von Carets
+- Anzeigen von Caret-Texten
+- Ausblenden von Carets
+- Zerstören von Carets
+- Blinkzeiten
+- Benutzereingabe,Tastatureingabe
+- Erfassen von Benutzereingaben, Tastatureingabe
 - Tastatureingabe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e6450a3169588b3072d1fee271f4890a7cdeafd2
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 8c930931df8ce401fbed8cc9af16db3cb52de08ebe9cf539109b426497318d5d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038882"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118472646"
 ---
-# <a name="using-carets"></a>Verwenden von Caretzeichen
+# <a name="using-carets"></a>Verwenden von Carets
 
 Dieser Abschnitt enthält Codebeispiele für die folgenden Aufgaben:
 
--   [Erstellen und Anzeigen einer Einfügemarke](#creating-and-displaying-a-caret)
--   [Ausblenden einer Einfügemarke](#hiding-a-caret)
--   [Zerstören eines Caretzeichen](#destroying-a-caret)
--   [Anpassen der Blink Zeit](#adjusting-the-blink-time)
--   [Verarbeiten von Tastatureingaben](#processing-keyboard-input)
+-   [Erstellen und Anzeigen eines Caret-Text](#creating-and-displaying-a-caret)
+-   [Ausblenden eines Caret-](#hiding-a-caret)
+-   [Zerstören eines Caret-](#destroying-a-caret)
+-   [Anpassen der Blinkzeit](#adjusting-the-blink-time)
+-   [Verarbeiten der Tastatureingabe](#processing-keyboard-input)
 
-## <a name="creating-and-displaying-a-caret"></a>Erstellen und Anzeigen einer Einfügemarke
+## <a name="creating-and-displaying-a-caret"></a>Erstellen und Anzeigen eines Caret-Text
 
-Wenn Sie den Tastaturfokus erhalten, sollte das Fenster die Einfügemarke erstellen und anzeigen. Verwenden Sie die Funktion " [**kreatecaret**](/windows/desktop/api/Winuser/nf-winuser-createcaret) ", um eine Einfügemarke im angegebenen Fenster zu erstellen. Sie können dann [**SetCaretPos**](/windows/desktop/api/Winuser/nf-winuser-setcaretpos) aufrufen, um die aktuelle Position der Einfügemarke und des [**ShowCaret**](/windows/desktop/api/Winuser/nf-winuser-showcaret) festzulegen, um die Einfügemarke sichtbar zu machen.
+Wenn der Tastaturfokus angezeigt wird, sollte das Fenster das Caret-Caret-Fenster erstellen und anzeigen. Verwenden Sie [**die CreateCaret-Funktion,**](/windows/desktop/api/Winuser/nf-winuser-createcaret) um ein Caret-Caret-Paar im angegebenen Fenster zu erstellen. Anschließend können Sie [**SetCaretPos aufrufen,**](/windows/desktop/api/Winuser/nf-winuser-setcaretpos) um die aktuelle Position des Caret-Caret-Zeichens und [**ShowCaret**](/windows/desktop/api/Winuser/nf-winuser-showcaret) so festlegen, dass das Caret-Zeichen sichtbar wird.
 
-Das System sendet die [**WM- \_ SetFocus**](/windows/desktop/inputdev/wm-setfocus) -Nachricht an das Fenster, das den Tastaturfokus erhält. Daher sollte eine Anwendung die Einfügemarke bei der Verarbeitung dieser Nachricht erstellen und anzeigen.
+Das System sendet die [**WM \_ SETFOCUS-Nachricht**](/windows/desktop/inputdev/wm-setfocus) an das Fenster, das den Tastaturfokus empfängt. Daher sollte eine Anwendung das Caret-Caret-Format erstellen und anzeigen, während diese Nachricht verarbeitet wird.
 
 
 ```
@@ -70,7 +70,7 @@ char *lpszChar;  // pointer to character
 
 
 
-Wenn Sie eine Einfügemarke auf der Grundlage einer Bitmap erstellen möchten, müssen Sie bei der Verwendung von " [**anatecaret**](/windows/desktop/api/Winuser/nf-winuser-createcaret)" ein Bitmaphandle angeben. Sie können eine Grafikanwendung verwenden, um die Bitmap und einen Ressourcen Compiler zu erstellen, um die Bitmap den Ressourcen Ihrer Anwendung hinzuzufügen. Die Anwendung kann dann die [**LoadBitmap**](/windows/desktop/api/winuser/nf-winuser-loadbitmapa) -Funktion verwenden, um das Bitmap-Handle zu laden. Beispielsweise können Sie die Zeile " **anatecaret** " im vorherigen Beispiel durch die folgenden Zeilen ersetzen, um eine Bitmap-Einfügemarke zu erstellen.
+Um ein Caret-Zeichen basierend auf einer Bitmap zu erstellen, müssen Sie bei Verwendung von [**CreateCaret ein Bitmaphand handle angeben.**](/windows/desktop/api/Winuser/nf-winuser-createcaret) Sie können eine Grafikanwendung verwenden, um die Bitmap zu erstellen, und einen Ressourcencompiler, um die Bitmap den Ressourcen Ihrer Anwendung hinzuzufügen. Ihre Anwendung kann dann die [**LoadBitmap-Funktion verwenden,**](/windows/desktop/api/winuser/nf-winuser-loadbitmapa) um das Bitmaphand handle zu laden. Beispielsweise könnten Sie die **CreateCaret-Zeile** im vorherigen Beispiel durch die folgenden Zeilen ersetzen, um ein Bitmap-Caretstrich zu erstellen.
 
 
 ```
@@ -85,15 +85,15 @@ Wenn Sie eine Einfügemarke auf der Grundlage einer Bitmap erstellen möchten, m
 
 
 
-Alternativ dazu können [**Sie die Funktion**](/windows/desktop/api/wingdi/nf-wingdi-createbitmap) "up" oder " [**reatedibitmap**](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap) " verwenden, um das Handle der Bitmap für die Einfügemarke abzurufen. Weitere Informationen zu Bitmaps finden Sie unter [Bitmaps](/windows/desktop/gdi/bitmaps).
+Alternativ können Sie die Funktion [**CreateBitmap**](/windows/desktop/api/wingdi/nf-wingdi-createbitmap) oder [**CreateDIBitmap**](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap) verwenden, um das Handle der Caretbitmap abzurufen. Weitere Informationen zu Bitmaps finden Sie unter [Bitmaps](/windows/desktop/gdi/bitmaps).
 
-Wenn Ihre Anwendung ein Bitmap-Handle angibt, ignoriert " [**kreatecaret**](/windows/desktop/api/Winuser/nf-winuser-createcaret) " die Parameter "width" und "Height". Die Bitmap definiert die Größe der Einfügemarke.
+Wenn Ihre Anwendung ein Bitmaphand handle angibt, ignoriert [**CreateCaret**](/windows/desktop/api/Winuser/nf-winuser-createcaret) die Breiten- und Höhenparameter. Die Bitmap definiert die Größe des Caret-Zeichens.
 
-## <a name="hiding-a-caret"></a>Ausblenden einer Einfügemarke
+## <a name="hiding-a-caret"></a>Ausblenden eines Caret-
 
-Wenn Ihre Anwendung während der Verarbeitung einer anderen Nachricht als [**WM \_ Paint**](/windows/desktop/gdi/wm-paint)einen Bildschirm neu zeichnet, muss die Einfügemarke mithilfe der [**hideCaret**](/windows/desktop/api/Winuser/nf-winuser-hidecaret) -Funktion unsichtbar werden. Wenn die Anwendung abgeschlossen ist, zeigen Sie die Einfügemarke mithilfe der [**ShowCaret**](/windows/desktop/api/Winuser/nf-winuser-showcaret) -Funktion erneut an. Wenn die Anwendung die **WM- \_** Zeichnungs Nachricht verarbeitet, ist es nicht notwendig, die Einfügemarke auszublenden und erneut anzuzeigen, da diese Funktion dies automatisch erledigt.
+Jedes Mal, wenn Ihre Anwendung einen Bildschirm neu zeichnet, während eine andere Nachricht als [**WM \_ PAINT**](/windows/desktop/gdi/wm-paint)verarbeitet wird, muss sie das Caretstrich mithilfe der [**HideCaret-Funktion unsichtbar**](/windows/desktop/api/Winuser/nf-winuser-hidecaret) machen. Wenn die Anwendung mit dem Zeichnen fertig ist, zeigen Sie das Caret-Zeichen erneut an, indem Sie die [**ShowCaret-Funktion**](/windows/desktop/api/Winuser/nf-winuser-showcaret) verwenden. Wenn Ihre Anwendung die **WM \_ PAINT-Nachricht** verarbeitet, ist es nicht erforderlich, das Caretstrich auszublenden und erneut einblenden, da diese Funktion dies automatisch tut.
 
-Im folgenden Codebeispiel wird veranschaulicht, wie die Anwendung die Einfügemarke ausblenden kann, während ein Zeichen auf dem Bildschirm gezeichnet und die [**WM- \_ char**](/windows/desktop/inputdev/wm-char) -Nachricht verarbeitet wird.
+Das folgende Codebeispiel zeigt, wie Ihre Anwendung das Caretzeichen beim Zeichnen eines Zeichens auf dem Bildschirm und beim Verarbeiten der [**WM \_ CHAR-Nachricht ausblenden**](/windows/desktop/inputdev/wm-char) kann.
 
 
 ```
@@ -156,11 +156,11 @@ HDC hdc;     // device context
 
 
 
-Wenn die Anwendung die [**hideCaret**](/windows/desktop/api/Winuser/nf-winuser-hidecaret) -Funktion mehrmals aufruft, ohne [**ShowCaret**](/windows/desktop/api/Winuser/nf-winuser-showcaret)aufzurufen, wird die Einfügemarke erst angezeigt, wenn die Anwendung **ShowCaret** gleich oft aufruft.
+Wenn Ihre Anwendung die [**HideCaret-Funktion**](/windows/desktop/api/Winuser/nf-winuser-hidecaret) mehrmals aufruft, ohne [**ShowCaret**](/windows/desktop/api/Winuser/nf-winuser-showcaret)auf aufruft, wird das Caretzeichen erst angezeigt, wenn die Anwendung **ShowCaret** genauso oft aufruft.
 
-## <a name="destroying-a-caret"></a>Zerstören eines Caretzeichen
+## <a name="destroying-a-caret"></a>Zerstören eines Caret-
 
-Wenn ein Fenster den Tastaturfokus verliert, sendet das System die [**WM- \_ killfocus**](/windows/desktop/inputdev/wm-killfocus) -Meldung an das Fenster. Die Anwendung sollte die Einfügemarke bei der Verarbeitung dieser Nachricht mithilfe der [**DestroyCaret**](/windows/desktop/api/Winuser/nf-winuser-destroycaret) -Funktion zerstören. Der folgende Code zeigt, wie Sie eine Einfügemarke in einem Fenster, das nicht mehr über den Tastaturfokus verfügt, zerstören.
+Wenn ein Fenster den Tastaturfokus verliert, sendet das System die [**WM \_ KILLFOCUS-Nachricht**](/windows/desktop/inputdev/wm-killfocus) an das Fenster. Ihre Anwendung sollte das Caret-Caret-Gerät während der Verarbeitung dieser Nachricht mithilfe der [**DestroyCaret-Funktion**](/windows/desktop/api/Winuser/nf-winuser-destroycaret) zerstören. Der folgende Code zeigt, wie Ein caret in einem Fenster zerstört wird, das nicht mehr über den Tastaturfokus verfügt.
 
 
 ```
@@ -175,15 +175,15 @@ case WM_KILLFOCUS:
 
 
 
-## <a name="adjusting-the-blink-time"></a>Anpassen der Blink Zeit
+## <a name="adjusting-the-blink-time"></a>Anpassen der Blinkzeit
 
-In 16-Bit-Fenstern könnte eine Windows-basierte Anwendung die [**getcaretblinktime**](/windows/desktop/api/Winuser/nf-winuser-getcaretblinktime) -Funktion aufrufen, um die aktuelle Blink Zeit zu speichern, und dann die [**setcaretblinktime**](/windows/desktop/api/Winuser/nf-winuser-setcaretblinktime) -Funktion aufrufen, um die Blink Zeit während der Verarbeitung der [**WM- \_ SetFocus**](/windows/desktop/inputdev/wm-setfocus) -Nachricht anzupassen. Die Anwendung würde die gespeicherte Blink Zeit für die Verwendung anderer Anwendungen wiederherstellen, indem **setcaretblinktime** während der Verarbeitung der [**WM- \_ killfocus**](/windows/desktop/inputdev/wm-killfocus) -Nachricht aufgerufen wird. Diese Methode funktioniert jedoch nicht in Multithread-Umgebungen. Insbesondere die Aktivierung einer Anwendung wird nicht mit der Aktivierung einer anderen Anwendung synchronisiert, sodass eine andere Anwendung auch dann aktiviert werden kann, wenn eine Anwendung nicht mehr reagiert.
+In 16-Bit-Windows könnte eine Windows-basierte Anwendung die [**GetCaretBlinkTime-Funktion**](/windows/desktop/api/Winuser/nf-winuser-getcaretblinktime) aufrufen, um die aktuelle Blinkzeit zu speichern, und dann die [**SetCaretBlinkTime-Funktion**](/windows/desktop/api/Winuser/nf-winuser-setcaretblinktime) aufrufen, um die Blinkzeit während der Verarbeitung der [**WM \_ SETFOCUS-Nachricht**](/windows/desktop/inputdev/wm-setfocus) anzupassen. Die Anwendung würde die gespeicherte Blinkzeit für die Verwendung anderer Anwendungen wiederherstellen, indem **sie SetCaretBlinkTime** während der Verarbeitung der [**WM \_ KILLFOCUS-Nachricht**](/windows/desktop/inputdev/wm-killfocus) aufruft. Diese Technik funktioniert jedoch nicht in Multithreadumgebungen. Insbesondere wird die Deaktivierung einer Anwendung nicht mit der Aktivierung einer anderen Anwendung synchronisiert, sodass eine andere Anwendung weiterhin aktiviert werden kann, wenn eine Anwendung nicht mehr aktiv ist.
 
-Anwendungen sollten die vom Benutzer gewählte Blink Zeit berücksichtigen. Die [**setcaretblinktime**](/windows/desktop/api/Winuser/nf-winuser-setcaretblinktime) -Funktion sollte nur von einer Anwendung aufgerufen werden, die es dem Benutzer ermöglicht, die Blink Zeit festzulegen.
+Anwendungen sollten die vom Benutzer gewählte Blinkzeit achten. Die [**SetCaretBlinkTime-Funktion**](/windows/desktop/api/Winuser/nf-winuser-setcaretblinktime) sollte nur von einer Anwendung aufgerufen werden, die dem Benutzer das Festlegen der Blinkzeit ermöglicht.
 
-## <a name="processing-keyboard-input"></a>Verarbeiten von Tastatureingaben
+## <a name="processing-keyboard-input"></a>Verarbeiten der Tastatureingabe
 
-Im folgenden Beispiel wird veranschaulicht, wie eine Einfügemarke in einem einfachen Text-Editor verwendet wird. Im Beispiel wird die Position der Einfügemarke aktualisiert, wenn der Benutzer druckbare Zeichen eingibt und verschiedene Schlüssel verwendet, um durch den Client Bereich zu navigieren.
+Im folgenden Beispiel wird veranschaulicht, wie ein Caret-Text in einem einfachen Text-Editor verwendet wird. Im Beispiel wird die Position des Caretzeichens aktualisiert, wenn der Benutzer druckbare Zeichen ein gibt und verschiedene Tasten verwendet, um den Clientbereich zu wechseln.
 
 
 ```
@@ -495,6 +495,6 @@ LONG APIENTRY MainWndProc(
 
 
 
- 
+ 
 
- 
+ 

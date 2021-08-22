@@ -1,7 +1,7 @@
 ---
-description: Synchronisiert alle Offline Dateien im Ordner.
+description: Synchronisiert alle Offlinedateien im Ordner.
 ms.assetid: b149df96-0c8e-47b9-b71e-2ad5dcfdeb8f
-title: Folder2. synchronisieren-Methode (Shldisp. h)
+title: Folder2.Synchronize-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: e9c39c37ff0e44e58aa71c69496dec8bee2745bf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5a0865ab34c9ffba625a51881e01f5cb2df774da9e8d4a32a7fbd17f6dbf523f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118458890"
 ---
-# <a name="folder2synchronize-method"></a>Folder2. synchronisieren-Methode
+# <a name="folder2synchronize-method"></a>Folder2.Synchronize-Methode
 
-Synchronisiert alle Offline Dateien im Ordner.
+Synchronisiert alle Offlinedateien im Ordner.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,15 +37,15 @@ iRetVal = Folder2.Synchronize()
 
 Diese Methode hat keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um diese Methode verwenden zu können, muss das Offlinedateien Feature aktiviert werden.
+Um diese Methode zu verwenden, muss Offlinedateien-Funktion aktiviert sein.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung von **Synchronisierung** für JScript, VBScript und Visual Basic.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung von **Synchronize** für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -66,7 +66,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -112,17 +112,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
@@ -130,7 +130,7 @@ End Sub
 
 <dl> <dt>
 
-[**Folder2**](folder2-object.md)
+[**Ordner2**](folder2-object.md)
 </dt> <dt>
 
 [**Ordner**](folder.md)
