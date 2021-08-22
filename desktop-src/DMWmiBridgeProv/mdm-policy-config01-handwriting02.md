@@ -1,10 +1,10 @@
 ---
 title: MDM_Policy_Config01_Handwriting02-Klasse
-description: Die MDM- \_ Richtlinie \_ Config01 \_ Handwriting02-Klasse wird verwendet, um den Standardmodus für das Handschrift Panel zu konfigurieren.
+description: Die MDM \_ Policy \_ Config01 Handwriting02-Klasse wird verwendet, um den \_ Standardmodus für den Handschriftbereich zu konfigurieren.
 ms.assetid: 3b835b72-7985-45c9-afc4-b6fdc69b331b
 keywords:
 - MDM_Policy_Config01_Handwriting02-Klasse
-- MDM_Policy_Config01_Handwriting02-Klasse, beschrieben
+- MDM_Policy_Config01_Handwriting02, beschrieben
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5ef2aa5f8b6563126dfcdd9e75870334853db11a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6f7a0b5879055e5014c72c47368b3c72203b17c25d4ba4f1c3107027212ae612
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859191"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017938"
 ---
-# <a name="mdm_policy_config01_handwriting02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ Handwriting02-Klasse
+# <a name="mdm_policy_config01_handwriting02-class"></a>MDM \_ Policy \_ Config01 \_ Handwriting02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Richtlinie \_ Config01 \_ Handwriting02-Klasse wird verwendet, um den Standardmodus für das Handschrift Panel zu konfigurieren.
+Die MDM \_ Policy \_ Config01 Handwriting02-Klasse wird verwendet, um den \_ Standardmodus für den Handschriftbereich zu konfigurieren.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,20 +46,20 @@ class MDM_Policy_Config01_Handwriting02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ Handwriting02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ Handwriting02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ Handwriting02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ Handwriting02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -70,7 +70,7 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-[Paneldefaultmodeangedockt](/windows/client-management/mdm/policy-csp-handwriting#handwriting-paneldefaultmodedocked)
+[PanelDefaultModeDocked](/windows/client-management/mdm/policy-csp-handwriting#handwriting-paneldefaultmodedocked)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -81,10 +81,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -101,10 +101,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

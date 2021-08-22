@@ -1,23 +1,23 @@
 ---
-title: Kompilieren und verknüpfen
-description: Das folgende Makefile zeigt die Abhängigkeiten zwischen den Dateien, die erforderlich sind, um die Client-und Server Anwendungen zu kompilieren und Sie mit der RPC-Lauf Zeit Bibliothek und der Standard-C-Lauf Zeit Bibliothek zu verknüpfen.
+title: Kompilieren und Verknüpfen
+description: Das folgende Makefile zeigt die Abhängigkeiten zwischen den Dateien, die zum Kompilieren der Client- und Serveranwendungen erforderlich sind, und verknüpfen sie mit der RPC-Laufzeitbibliothek und der C-Standardlaufzeitbibliothek.
 ms.assetid: 9182baea-7307-4db0-8d66-7fba14227ac9
 keywords:
-- Remote Prozedur Aufruf RPC, Tasks, kompilieren und verknüpfen
+- Remoteprozeduraufruf RPC , Tasks, Kompilieren und Verknüpfen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1991e39cc028c01066cd8f13344765787374fa08
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e2500a763db149eca914060dd7920548883fa57fbd5642485a41f5a55c65cd2b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118931713"
 ---
-# <a name="compiling-and-linking"></a>Kompilieren und verknüpfen
+# <a name="compiling-and-linking"></a>Kompilieren und Verknüpfen
 
-Das folgende Makefile zeigt die Abhängigkeiten zwischen den Dateien, die erforderlich sind, um die Client-und Server Anwendungen zu kompilieren und Sie mit der RPC-Lauf Zeit Bibliothek und der Standard-C-Lauf Zeit Bibliothek zu verknüpfen.
+Das folgende Makefile zeigt die Abhängigkeiten zwischen den Dateien, die zum Kompilieren der Client- und Serveranwendungen erforderlich sind, und verknüpfen sie mit der RPC-Laufzeitbibliothek und der C-Standardlaufzeitbibliothek.
 
-Dieses Makefile kann zum Erstellen von Client-und Server Anwendungen aus dem Quellcode in diesem Tutorial verwendet werden. Die hier gezeigten stubzeilen und Header wurden mit der mittleren l-Version 2,0 generiert. Die Befehle und Argumente des Compilers und des Linkers unterscheiden sich möglicherweise für die Computerkonfiguration. Weitere Informationen finden Sie in der Compilerdokumentation.
+Dieses Makefile kann verwendet werden, um Client- und Serveranwendungen aus dem Quellcode in diesem Tutorial zu erstellen. Die hier gezeigten Stubs und Header wurden mit MIDL Version 2.0 generiert. Die Compiler- und Linkerbefehle und -argumente können sich für Ihre Computerkonfiguration unterscheiden. Weitere Informationen finden Sie in der Compilerdokumentation.
 
 ``` syntax
 #makefile for helloc.exe and hellos.exe
@@ -68,9 +68,9 @@ hello.h hello_c.c hello_s.c : hello.idl hello.acf
     midl hello.idl
 ```
 
- 
+ 
 
- 
+ 
 
 
 

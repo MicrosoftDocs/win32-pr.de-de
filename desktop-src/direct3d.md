@@ -19,7 +19,7 @@ Informationen zum Abrufen und Installieren von Direct3D finden Sie unter Einrich
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | Beschreibung |
+| Thema | BESCHREIBUNG |
 |-|-|
 | [Erste Schritte mit Direct3D](./getting-started-with-direct3d.md) | Erläutert Direct3D ausführlicher, verschiedene Anwendungsmodelle, verschiedene Versionen, Rendering und Compute. |
 | [Direct3D 12-Grafiken](./direct3d12/direct3d-12-graphics.md) | Direct3D 12 bietet eine API und Plattform, mit der Ihre Anwendung die Grafik- und Computingfunktionen von PCs nutzen kann, die mit mindestens einer Direct3D 12-kompatiblen GPUs ausgestattet sind. |

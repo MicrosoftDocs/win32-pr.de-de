@@ -1,45 +1,45 @@
 ---
 title: Starke Typisierung
-description: C ist eine schwach typisierte Sprache, d. h. der Compiler lässt Vorgänge wie Zuweisung und Vergleich zwischen Variablen verschiedener Typen zu.
+description: C ist eine schwach typierte Sprache, d. b. der Compiler lässt Vorgänge wie die Zuweisung und den Vergleich zwischen Variablen verschiedener Typen zu.
 ms.assetid: 5f52adcc-22b9-4b4f-b921-5996d278b10e
 keywords:
-- Remote Prozedur Aufruf RPC, beschrieben, Dateneingabe
+- Rpc-Aufruf einer Remoteprozedur , beschrieben, Datentypisierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ea859e2d5c160048d79e3c371b47af2bc55e0a65
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ae47746119f4c1b22bc066075ed484ef836fa6a68ee103e06975018a6ae49012
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103948058"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118924846"
 ---
 # <a name="strong-typing"></a>Starke Typisierung
 
-C ist eine schwach typisierte Sprache, d. h. der Compiler lässt Vorgänge wie Zuweisung und Vergleich zwischen Variablen verschiedener Typen zu. Beispielsweise lässt C zu, dass der Wert einer Variablen in einen anderen Typ umgewandelt wird. Die Möglichkeit, Variablen unterschiedlicher Typen im gleichen Ausdruck zu verwenden, fördert Flexibilität und Effizienz.
+C ist eine schwach typierte Sprache, d. b. der Compiler lässt Vorgänge wie die Zuweisung und den Vergleich zwischen Variablen verschiedener Typen zu. C ermöglicht z. B. das Casten des Werts einer Variablen in einen anderen Typ. Die Möglichkeit, Variablen verschiedener Typen im gleichen Ausdruck zu verwenden, fördert Flexibilität und Effizienz.
 
-Eine stark typisierte Sprache erzwingt Einschränkungen für Vorgänge zwischen Variablen unterschiedlicher Typen. In diesen Fällen gibt der Compiler einen Fehler aus, der den Vorgang untersagt. Diese strengen Richtlinien bezüglich der Datentypen sind darauf ausgelegt, potenzielle Fehler zu vermeiden.
+Eine stark typierte Sprache erzwingt Einschränkungen für Vorgänge zwischen Variablen verschiedener Typen. In diesen Fällen gibt der Compiler einen Fehler aus, der den Vorgang verhindert. Diese strengen Richtlinien in Bezug auf Datentypen sind darauf ausgelegt, potenzielle Fehler zu vermeiden.
 
-Die Schwierigkeit bei der Verwendung einer schwach typisierten Sprache wie z. b. C für Remote Prozedur Aufrufe besteht darin, dass verteilte Anwendungen auf verschiedenen Computern mit unterschiedlichen C-Compilern und verschiedenen Architekturen ausgeführt werden können. Wenn eine Anwendung nur auf einem Computer ausgeführt wird, müssen Sie sich nicht mit dem internen Datenformat beschäftigen, da die Daten konsistent verarbeitet werden. In einer verteilten Computerumgebung können von verschiedenen Computern jedoch unterschiedliche Definitionen für die Basis Datentypen verwendet werden. Einige Computer definieren z. b. den **int** -Typ, sodass die interne Darstellung 16 Bits beträgt, während andere Computer 32 Bits verwenden. Eine Computerarchitektur, die als "Little Endian" bezeichnet wird, weist der niedrigsten Speicheradresse und dem signifikantesten der höchsten Adresse das am wenigsten signifikante Byte zu. Eine andere Architektur, die als "Big Endian" bezeichnet wird, weist das am wenigsten signifikante Byte der höchsten Speicheradresse zu, die diesen Daten zugeordnet ist.
+Die Schwierigkeit bei der Verwendung einer schwach typierten Sprache wie C für Remoteprozeduraufrufe ist, dass verteilte Anwendungen auf mehreren verschiedenen Computern mit unterschiedlichen C-Compilern und verschiedenen Architekturen ausgeführt werden können. Wenn eine Anwendung nur auf einem Computer ausgeführt wird, müssen Sie sich nicht um das interne Datenformat kümmern, da die Daten konsistent verarbeitet werden. In einer verteilten Computingumgebung können verschiedene Computer jedoch unterschiedliche Definitionen für ihre Basisdatentypen verwenden. Beispielsweise definieren einige Computer den **Int-Typ,** sodass seine interne Darstellung 16 Bit beträgt, während andere Computer 32 Bits verwenden. Eine Computerarchitektur, die als "Little-Endian" bezeichnet wird, weist der niedrigsten Speicheradresse das am wenigsten signifikante Byte an Daten und das wichtigste Byte der höchsten Adresse zu. Eine andere Architektur, die als "Big-Endian" bezeichnet wird, weist das am wenigsten signifikante Byte der höchsten Speicheradresse zu, die diesen Daten zugeordnet ist.
 
-Remote Prozedur Aufrufe erfordern eine strikte Kontrolle über Parametertypen. Um die Datenübertragung und-Konvertierung über das Netzwerk zu verarbeiten, erzwingt die Mittelwert Einschränkung Typeinschränkungen für Daten, die über das Netzwerk übertragen werden. Aus diesem Grund enthält die Mittel Menge eine Reihe von klar definierten [Basis Typen](base-types.md). Die Mittel Menge erzwingt eine starke Typisierung durch die Verwendung von Schlüsselwörtern, die die Größe und den Typ der Daten eindeutig definieren. Die offensichtlichste Auswirkung der starken Typisierung besteht darin, dass die Mittel l keine Variablen vom Typ " **void \***" zulässt.
+Remoteprozeduraufrufe erfordern eine strenge Kontrolle über Parametertypen. Zur Verarbeitung der Datenübertragung und -konvertierung über das Netzwerk erzwingt MIDL strikt Typeinschränkungen für Daten, die über das Netzwerk übertragen werden. Aus diesem Grund enthält MIDL einen Satz klar definierter [Basistypen.](base-types.md) MIDL erzwingt eine starke Typisierung, indem die Verwendung von Schlüsselwörtern erzwungen wird, die die Größe und den Typ der Daten eindeutig definieren. Die sichtbarste Auswirkung der starken Typisierung ist, dass MIDL keine Variablen des Typs **void zu lässt. \***
 
-In den folgenden Themen werden in diesem Abschnitt die Funktionen der mittleren Sprache erläutert, die eine starke Dateneingabe erzwingen:
+In den folgenden Themen werden in diesem Abschnitt die MIDL-Sprachfeatures erläutert, die eine starke Datentypisierung erzwingen:
 
--   [Basis Typen](base-types.md)
--   [Typen mit und ohne Vorzeichen](signed-and-unsigned-types.md)
--   [Breit Zeichen Typen](wide-character-types.md)
+-   [Basistypen](base-types.md)
+-   [Signierte und nicht signierte Typen](signed-and-unsigned-types.md)
+-   [Breitzeichentypen](wide-character-types.md)
 -   [Strukturen](structures.md)
 -   [Unions](unions.md)
--   [Enumerierte Typen](enumerated-types.md)
+-   [Aufzählte Typen](enumerated-types.md)
 -   [Arrays](arrays.md)
 -   [Funktionsattribute](function-attributes.md)
 -   [Feldattribute](field-attributes.md)
--   [Drei Zeiger Typen](three-pointer-types.md)
+-   [Drei Zeigertypen](three-pointer-types.md)
 -   [Typattribute](type-attributes.md)
 
- 
+ 
 
- 
+ 
 
 
 

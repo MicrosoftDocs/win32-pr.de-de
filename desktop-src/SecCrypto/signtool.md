@@ -4,12 +4,12 @@ description: SignTool ist ein Befehlszeilentool, das Dateien digital signiert, d
 ms.assetid: aa59cb35-5fba-4ce8-97ea-fc767c83f88e
 ms.topic: article
 ms.date: 10/12/2020
-ms.openlocfilehash: f738eddb6e47da12297bffd13a816398ba2c46c9
-ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
+ms.openlocfilehash: f7105e81b958e463612a5065003ed04c24b913f87f52d8d72bb7a708917ebbed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "114436445"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118897955"
 ---
 # <a name="signtool"></a>SignTool
 
@@ -18,7 +18,7 @@ SignTool ist ein Befehlszeilentool, das Dateien digital signiert, die Signaturen
 SignTool ist als Teil des Windows SDK verfügbar, das Sie unter herunterladen <https://developer.microsoft.com/windows/downloads/windows-10-sdk/> können.
 
 > [!Note]  
-> Das Windows 10 SDK, Windows 10 HLK, Windows 10 WDK und Windows 10 ADK-Builds **20236** und höher erfordern jetzt die Angabe des Digestalgorithmus. Für den SignTool-Befehl sign müssen die Option /fd bzw. /td während der Signierung bzw. des `file digest algorithm` `timestamp digest algorithm` Zeitstempels angegeben werden. Eine Warnung (Fehlercode 0, anfänglich) wird ausgelöst, wenn /fd während der Signierung nicht angegeben wird und /td während der Zeitstempelung nicht angegeben wird. In späteren Versionen von SignTool wird aus dieser Warnung ein Fehler. SHA256 wird empfohlen und gilt in der Branche als sicherer als SHA1.  
+> Für Windows 10 SDK, Windows 10 HLK, Windows 10 WDK und Windows 10 ADK-Builds **ab 20236** muss nun der Digestalgorithmus angegeben werden. Für den SignTool-Befehl sign müssen die Option /fd bzw. /td während der Signierung bzw. des `file digest algorithm` `timestamp digest algorithm` Zeitstempels angegeben werden. Eine Warnung (Fehlercode 0, anfänglich) wird ausgelöst, wenn /fd während der Signierung nicht angegeben wird und /td während der Zeitstempelung nicht angegeben wird. In späteren Versionen von SignTool wird aus dieser Warnung ein Fehler. SHA256 wird empfohlen und gilt in der Branche als sicherer als SHA1.  
 
 
 ## <a name="syntax"></a>Syntax  
@@ -81,8 +81,8 @@ Die folgenden Befehle werden von SignTool unterstützt.
 |`/c`  *CertTemplateName*|Gibt den Zertifikatsvorlagennamen (eine Microsoft-Erweiterung) für das Signaturzertifikat an.|  
 |`/csp`  *CSPName*|Gibt den Kryptografiedienstanbieter (CSP) an, der den privaten Schlüsselcontainer enthält.|  
 |`/d`  *Desc*|Gibt eine Beschreibung des signierten Inhalts an.|  
-|`/dg`  *`Path`*|Generiert den zu signierten Digest und die nicht signierten PKCS7-Dateien. Die Ausgabeh digest- und PKCS7-Dateien sind: *Path\FileName.dig* und *Path\FileName.p7u*. Informationen zur Ausgabe einer zusätzlichen XML-Datei finden Sie unter <strong>/dxml</strong>.|  
-|`/di`  *`Path`*|Erstellt die Signatur durch Erfassung des signierten Digests in der nicht signierten PKCS7-Datei. Der eingegebene signierte Digest und die nicht signierten PKCS7-Dateien sollten: *Path\FileName.dig.signed* und *Path\FileName.p7u sein.*|  
+|`/dg`  *Pfad*|Generiert den zu signierten Digest und die nicht signierten PKCS7-Dateien. Die Ausgabeh digest- und PKCS7-Dateien sind: *Path\FileName.dig* und *Path\FileName.p7u*. Informationen zur Ausgabe einer zusätzlichen XML-Datei finden Sie unter <strong>/dxml</strong>.|  
+|`/di`  *Pfad*|Erstellt die Signatur durch Erfassung des signierten Digests in der nicht signierten PKCS7-Datei. Der eingegebene signierte Digest und die nicht signierten PKCS7-Dateien sollten: *Path\FileName.dig.signed* und *Path\FileName.p7u sein.*|  
 |`/dlib`  *Dll*|Gibt die DLL an, die die <code>AuthenticodeDigestSign</code> Funktion implementiert, mit der der Digest signiert werden soll. Diese Option entspricht der getrennten Verwendung von <strong>SignTool</strong> mit den Schaltern <strong>/dg,</strong> <strong>/ds</strong>und <strong>/di,</strong> außer dass diese Option alle drei als einen atomaren Vorgang aufruft.|  
 |`/dmdf`  *Dateiname*|Bei Verwendung mit der <strong>Option /dg</strong> übergibt den Inhalt der Datei ohne <code>AuthenticodeDigestSign</code> Änderung an die Funktion.|  
 |`/ds`  |Signiert nur den Digest. Die Eingabedatei sollte der Digest sein, der von der <strong>Option /dg generiert</strong> wird. Die Ausgabedatei ist: *File.signed*.|  
@@ -90,7 +90,7 @@ Die folgenden Befehle werden von SignTool unterstützt.
 |`/dxml`  |Bei Verwendung mit der <strong>Option /dg</strong> erzeugt eine XML-Datei. Die Ausgabedatei ist: *Path\FileName.dig.xml*.|  
 |`/f`  *SignCertFile*|Gibt das Signaturzertifikat in einer Datei an. Wenn die Datei im PFX-Format (Personal Information Exchange) vorliegt und mit einem Kennwort gesichert ist, verwenden Sie zur Angabe des Kennworts die `/p`-Option. Wenn die Datei keine privaten Schlüssel aufweist, verwenden Sie die `/csp`-Option und `/kc`-Option, um den CSP-Namen und den Namen des privaten Schlüsselcontainers anzugeben.|  
 |`/fd`*alg*|Gibt den Dateihashwertalgorithmus zum Erstellen von Dateisignaturen an. </br> **Hinweis:** Es wird eine Warnung generiert, wenn der Schalter <strong>/fd</strong> beim Signieren nicht bereitgestellt wird. Die Standardeinstellung ist SHA1, sha256 wird jedoch empfohlen.|
-|`/fd` *certHash*|Durch Angabe der Zeichenfolge certHash wird standardmäßig der auf dem Signaturzertifikat verwendete Algorithmus verwendet. </br> **Hinweis:** Nur in Windows 10 Kit-Builds ab 20236 verfügbar.|  
+|`/fd` *certHash*|Durch Angabe der Zeichenfolge certHash wird standardmäßig der auf dem Signaturzertifikat verwendete Algorithmus verwendet. </br> **Hinweis:** Nur in Windows 10 Kit-Builds 20236 und höher verfügbar.|  
 |`/i`  *IssuerName*|Gibt den Namen des Ausstellers des Signaturzertifikats an. Dieser Wert kann eine Teilzeichenfolge des gesamten Ausstellernamens sein.|  
 |`/kc`  *PrivKeyContainerName*|Gibt den Namen des privaten Schlüsselcontainers an.|  
 |`/n`  *SubjectName*|Gibt den Namen des Antragstellers des Signaturzertifikats an. Dieser Wert kann eine Teilzeichenfolge des gesamten Antragstellernamens sein.|  
@@ -105,7 +105,7 @@ Die folgenden Befehle werden von SignTool unterstützt.
 |`/sha1`  *Hash*|Gibt den SHA1-Hash des Signaturzertifikats an. In der Regel wird der SHA1-Hash angegeben, wenn die von den verbleibenden Schaltern festgelegten Kriterien von mehreren Zertifikaten erfüllt werden.|  
 |`/sm`|Gibt an, dass anstatt eines Benutzerspeichers ein Computerspeicher verwendet wird.|  
 |`/t`  *URL*|Gibt die URL des Zeitstempelservers an. Wenn diese Option (oder `/tr`) nicht vorhanden ist, wird der signierten Datei kein Zeitstempel hinzugefügt. Im Fall eines Fehlers beim Hinzufügen des Zeitstempels wird eine Warnung generiert. Diese Option kann nicht mit der `/tr`-Option verwendet werden.|  
-|`/td`  *alg*|Wird mit der `/tr`-Option zum Anfordern eines vom RFC 3161-Zeitstempelserver verwendeten Digestalgorithmus genutzt. </br> **Hinweis:** Es wird eine Warnung generiert, wenn der Schalter <strong>/td</strong> beim Zeitstempel nicht angegeben wird. Die Standardeinstellung ist SHA1, sha256 wird jedoch empfohlen. <br/> Der <strong>Schalter /td</strong> muss nach dem Schalter <strong>/tr</strong> deklariert werden, nicht zuvor. Wenn der <strong>Schalter /td</strong> vor dem Schalter <strong>/tr</strong> deklariert wird, stammt der zurückgegebene Zeitstempel von einem SHA1-Algorithmus anstelle des beabsichtigten SHA256-Algorithmus. |
+|`/td`  *alg*|Wird mit der `/tr`-Option zum Anfordern eines vom RFC 3161-Zeitstempelserver verwendeten Digestalgorithmus genutzt. </br> **Hinweis:** Es wird eine Warnung generiert, wenn der Schalter <strong>/td</strong> während des Zeitstempels nicht bereitgestellt wird. Die Standardeinstellung ist SHA1, sha256 wird jedoch empfohlen. <br/> Der <strong>Schalter /td</strong> muss nach dem Schalter <strong>/tr</strong> deklariert werden, nicht zuvor. Wenn der <strong>Schalter /td</strong> vor dem Schalter <strong>/tr</strong> deklariert wird, stammt der zurückgegebene Zeitstempel von einem SHA1-Algorithmus anstelle des beabsichtigten SHA256-Algorithmus. |
 |`/tr`  *URL*|Gibt die URL des RFC 3161-Zeitstempelservers an. Wenn diese Option (oder `/t`) nicht vorhanden ist, wird der signierten Datei kein Zeitstempel hinzugefügt. Im Fall eines Fehlers beim Hinzufügen des Zeitstempels wird eine Warnung generiert. Diese Option kann nicht mit der `/t`-Option verwendet werden.|  
 |`/u`  *Usage*|Gibt die verbesserte Schlüsselverwendung (EKU) an, die im Signaturzertifikat vorhanden sein muss. Der Verwendungswert kann durch einen OID oder eine Zeichenfolge angegeben werden. Die Standardverwendung lautet "Codesignatur" (1.3.6.1.5.5.7.3.3).|  
 |`/uw`|Gibt die Verwendung von "Verifizierung von Windows-Systemkomponenten" (1.3.6.1.4.1.311.10.3.6) an.|  
@@ -121,7 +121,7 @@ Die folgenden Befehle werden von SignTool unterstützt.
 |----|----|  
 |`/p7`|Fügt PKCS #7-Dateien Zeitstempel hinzu.|  
 |`/t`  *URL*|Gibt die URL des Zeitstempelservers an. Vor dem Hinzufügen eines Zeitstempels muss die jeweilige Datei signiert werden. Entweder die `/t`-Option oder die `/tr`-Option ist erforderlich.|  
-|`/td`  *alg*|Wird mit der `/tr`-Option zum Anfordern eines vom RFC 3161-Zeitstempelserver verwendeten Digestalgorithmus genutzt. </br> **Hinweis:** Es wird eine Warnung generiert, wenn der Schalter <strong>/td</strong> beim Zeitstempel nicht angegeben wird. Die Standardeinstellung ist SHA1, sha256 wird jedoch empfohlen. <br/> Der <strong>Schalter /td</strong> muss nach dem Schalter <strong>/tr</strong> deklariert werden, nicht zuvor. Wenn der <strong>Schalter /td</strong> vor dem Schalter <strong>/tr</strong> deklariert wird, stammt der zurückgegebene Zeitstempel von einem SHA1-Algorithmus anstelle des beabsichtigten SHA256-Algorithmus. |
+|`/td`  *alg*|Wird mit der `/tr`-Option zum Anfordern eines vom RFC 3161-Zeitstempelserver verwendeten Digestalgorithmus genutzt. </br> **Hinweis:** Es wird eine Warnung generiert, wenn der Schalter <strong>/td</strong> während des Zeitstempels nicht bereitgestellt wird. Die Standardeinstellung ist SHA1, sha256 wird jedoch empfohlen. <br/> Der <strong>Schalter /td</strong> muss nach dem Schalter <strong>/tr</strong> deklariert werden, nicht zuvor. Wenn der <strong>Schalter /td</strong> vor dem Schalter <strong>/tr</strong> deklariert wird, stammt der zurückgegebene Zeitstempel von einem SHA1-Algorithmus anstelle des beabsichtigten SHA256-Algorithmus. |
 |`/tp` *index*|Fügt der Signatur bei *Index* einen Zeitstempel hinzu|  
 |`/tr`  *URL*|Gibt die URL des RFC 3161-Zeitstempelservers an. Vor dem Hinzufügen eines Zeitstempels muss die jeweilige Datei signiert werden. Entweder die `/tr`-Option oder die `/t`-Option ist erforderlich.|  
 
@@ -150,7 +150,7 @@ Die folgenden Befehle werden von SignTool unterstützt.
 | **/tw** | Gibt an, dass eine Warnung generiert wird, wenn die Signatur nicht mit einem Zeitstempel versehen ist.|
 
 
-Der Befehl SignTool **verify** bestimmt, ob das Signaturzertifikat von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt wurde, ob das Signaturzertifikat widerrufen wurde und optional, ob das Signaturzertifikat für eine bestimmte Richtlinie gültig ist.  
+Der Befehl SignTool **verify** bestimmt, ob das Signaturzertifikat von einer vertrauenswürdigen Autorität ausgestellt wurde, ob das Signaturzertifikat widerrufen wurde und optional, ob das Signaturzertifikat für eine bestimmte Richtlinie gültig ist.  
 
 Der Befehl SignTool **verify** gibt den Status der **eingebetteten** Signatur aus, es sei denn, eine Option zum Durchsuchen eines Katalogs (/a, /ad, /as, /ag, /c) ist angegeben.
 

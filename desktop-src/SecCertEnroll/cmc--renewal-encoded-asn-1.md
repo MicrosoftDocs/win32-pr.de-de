@@ -1,5 +1,5 @@
 ---
-description: Das folgende Beispiel enthält eine CMC-Verlängerungsanforderung im ASN.1-Format. Das Beispiel wurde mithilfe der tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+description: Das folgende Beispiel enthält eine CMC-Verlängerungsanforderung im ASN.1-Format. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für die Certreq.exe enthält die folgende Konfiguration.
 ms.assetid: acb0fdeb-3d7b-4598-bb7a-df97e200984b
 title: CMC Renewal Encoded ASN.1
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118902073"
 ---
 # <a name="cmc-renewal-encoded-asn1"></a>CMC Renewal Encoded ASN.1
 
-Das folgende Beispiel enthält eine CMC-Verlängerungsanforderung im ASN.1-Format. Das Beispiel wurde mithilfe der tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+Das folgende Beispiel enthält eine CMC-Verlängerungsanforderung im ASN.1-Format. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für die Certreq.exe enthält die folgende Konfiguration.
 
 ``` syntax
 [NewRequest]

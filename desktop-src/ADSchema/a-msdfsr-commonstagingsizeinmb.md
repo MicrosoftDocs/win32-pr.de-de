@@ -5,7 +5,7 @@ ms.assetid: a7344654-a5c6-40dc-a03a-a1fb6ca06311
 ms.tgt_platform: multiple
 keywords:
 - MS-DFSR-CommonStagingSizeInMb-Attribut AD-Schema
-- msDFSR-CommonStagingSizeInMb-Attribut AD-Schema
+- AD-Schema des msDFSR-CommonStagingSizeInMb-Attributs
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Größe des allgemeinen Stagingverzeichnisses in Megabyte.
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.39           |
-| System-ID-GUID    | 135eb00e-4846-458b-8ea2-a37559afd405 |
+| System-Id-Guid    | 135eb00e-4846-458b-8ea2-a37559afd405 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -55,7 +55,7 @@ Größe des allgemeinen Stagingverzeichnisses in Megabyte.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | Falsch                                                              |
-| Ist einwertig       | Richtig                                                               |
+| Is-Single-Valued       | Richtig                                                               |
 | Ist indiziert             | Falsch                                                              |
 | Im globalen Katalog      | Falsch                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
@@ -76,7 +76,7 @@ Größe des allgemeinen Stagingverzeichnisses in Megabyte.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | Falsch                                                              |
-| Ist einwertig       | Richtig                                                               |
+| Is-Single-Valued       | Richtig                                                               |
 | Ist indiziert             | Falsch                                                              |
 | Im globalen Katalog      | Falsch                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
@@ -97,7 +97,7 @@ Größe des allgemeinen Stagingverzeichnisses in Megabyte.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | Falsch                                                              |
-| Ist einwertig       | Richtig                                                               |
+| Is-Single-Valued       | Richtig                                                               |
 | Ist indiziert             | Falsch                                                              |
 | Im globalen Katalog      | Falsch                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |

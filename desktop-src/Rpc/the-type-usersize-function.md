@@ -1,21 +1,21 @@
 ---
 title: Die type_UserSize-Funktion
-description: Die Type \_ usersize-Funktion ist eine Hilfsfunktion für die Attribute "\ Wire \_ Marshal \" und "\ User \_ Marshal \".
+description: Die \_ UserSize-Funktion vom Typ ist eine Hilfsfunktion für die Attribute \wire \_ marshal\ und \user \_ marshal\.
 ms.assetid: 74a46418-1a02-47ed-a3ab-35f3364cc38f
 keywords:
 - type_UserSize
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a29e5936763f9fe7b3513d66ddca7db9c35dbfe7
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a5b7c5d0918489dbc41baaa4e799aa1dbbda67723cf8104e0641ced24b9b5bf6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103730017"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118923540"
 ---
-# <a name="the-type_usersize-function"></a>Die Type \_ usersize-Funktion
+# <a name="the-type_usersize-function"></a>Der Typ \_ UserSize-Funktion
 
-Die **<type> \_ usersize** -Funktion ist eine Hilfsfunktion für die Attribute " \[ [Wire \_ Marshal](/windows/desktop/Midl/wire-marshal) " \] und " \[ [User \_ Marshal](/windows/desktop/Midl/user-marshal) " \] . Die Stubdateien bezeichnen diese Funktion, um die Größe des RPC-Daten Puffers für das Benutzerdaten Objekt zu verkleinern, bevor die Daten auf der Client-oder Serverseite gemarshallt werden. Die-Funktion ist wie folgt definiert:
+Die **<type> \_ UserSize-Funktion** ist eine Hilfsfunktion für die Attribute \[ ["wire \_ marshal"](/windows/desktop/Midl/wire-marshal) \] und \[ ["user \_ marshal".](/windows/desktop/Midl/user-marshal) \] Die Stubs rufen diese Funktion auf, um die Größe des RPC-Datenpuffers für das Benutzerdatenobjekt zu größe, bevor die Daten auf Client- oder Serverseite gemarshallt werden. Die Funktion ist wie die folgenden definiert:
 
 ``` syntax
 unsigned long __RPC_USER  <type>_UserSize(
@@ -24,53 +24,53 @@ unsigned long __RPC_USER  <type>_UserSize(
     <type>  __RPC_FAR *pMyObj);
 ```
 
-Der <type> im Funktionsnamen bedeutet den userm-Typ, wie in der Typdefinition für den **\[ Wire \_ \] Marshal** oder den **\[ Benutzer- \_ Marshal \]** angegeben. Dieser Typ kann nicht transaktierbar oder sogar – sein, wenn er mit dem Attribut " **\[ User \_ Marshal \]** " verwendet wird – unbekannt für den mittlerer l-Compiler. Der Name des Wire-Typs (der über das Netzwerk übertragene Typ) wird im Funktionsprototyp nicht verwendet. Beachten Sie jedoch, dass der Wire-Typ das Layout für die Daten definiert, wie von OSF DCE angegeben. Alle Daten müssen in das Format der Netzwerkdaten Darstellung (NDR) konvertiert werden.
+Der im Funktionsnamen bedeutet den userm-type, wie in der Definition des <type> **\[ Wire \_ Marshal- \]** oder **\[ \_ Benutzer-Marshalltyps \]** angegeben. Dieser Typ kann nicht übersetzt werden oder sogar – bei Verwendung mit dem **\[ \_ \] Benutzer-Marshallattribut** – für den MIDL-Compiler unbekannt sein. Der Name des Übertragungstyps (der Name des Typs, der über das Netzwerk übertragen wird) wird im Funktionsprototyp nicht verwendet. Beachten Sie jedoch, dass der Wire-Typ das Layout für die Daten definiert, wie von OSF DCE angegeben. Alle Daten müssen in das NDR-Format (Network Data Representation) konvertiert werden.
 
-Der *pflags* -Parameter ist ein Zeiger auf ein Feld **ohne** Vorzeichen. Das obere Wort des Flags enthält die von OSF DCE für Gleit Komma-, Byte Reihenfolge und Zeichen Darstellungen definierten NDR-Formatflags. Das untere Wort enthält ein marshallingkontextflag, wie vom com-Kanal definiert. Das genaue Layout der Flags innerhalb des Felds wird in der folgenden Tabelle gezeigt.
+Der *pFlags-Parameter* ist ein Zeiger auf ein Feld mit langen **Flags ohne** Vorzeichen. Das obere Wort des Flags enthält NDR-Formatflags, wie von OSF DCE für Gleitkomma-, Byte- und Zeichendarstellungen definiert. Das untere Wort enthält ein Marshallingkontextflag, wie vom COM-Kanal definiert. Das genaue Layout der Flags innerhalb des Felds ist in der folgenden Tabelle dargestellt.
 
 
 
 | Bits  | Flag                                  | Wert                                                                                     |
 |-------|---------------------------------------|-------------------------------------------------------------------------------------------|
-| 31-24 | Gleit Komma Darstellung         | 0 = IEEE 1 = VAX 2 = Cray 3 = IBM                                                         |
-| 23-20 | Ganzzahl und Gleit Komma-Byte Reihenfolge | 0 = Big-d 1 = Little----------                                                          |
-| 19-16 | Zeichen Darstellung              | 0 = ASCII 1 = EBCDIC                                                                      |
-| 15-0  | Marshalling von Context-Flag               | 0 = mshctx \_ Local 1 = mshctx \_ nosharedmem 2 = mshctx \_ differenentmachine 3 = mshctx \_ INPROC |
+| 31-24 | Gleitkommadarstellung         | 0 = IEEE 1 = VAX 2 = Cray 3 = IBM                                                         |
+| 23-20 | Ganzzahl- und Gleitkomma-Byte reihenfolge | 0 = Big-Endian 1 = Little-Endian                                                          |
+| 19-16 | Zeichendarstellung              | 0 = ASCII 1 = EBCDIC                                                                      |
+| 15-0  | Marshallingkontextflag               | 0 = MSHCTX \_ LOCAL 1 = MSHCTX \_ NOSHAREDMEM 2 = MSHCTX \_ DIFFERENTMACHINE 3 = MSHCTX \_ INPROC |
 
 
 
- 
+ 
 
-Das marshallingkontextflag ermöglicht es, das Verhalten der Routine abhängig vom Kontext des RPC-Aufrufs zu ändern. Wenn Sie z. b. über ein Handle (**Long**) für einen Datenblock verfügen, können Sie das Handle für einen Prozess internen-Rückruf senden, aber Sie würden die eigentlichen Daten für einen-Rückruf an einen anderen Computer senden. Das marshallingkontextflag und seine Werte werden in den Wtypes. h-und Wtypes. IDL-Dateien im Platform Software Development Kit (SDK) definiert.
+Das Marshallingkontextflag ermöglicht es, das Verhalten Ihrer Routine abhängig vom Kontext für den RPC-Aufruf zu ändern. Wenn Sie beispielsweise über ein Handle (**long**) für einen Datenblock verfügen, können Sie das Handle für einen Prozessaufruf senden, aber Sie würden die tatsächlichen Daten für einen Aufruf an einen anderen Computer senden. Das Marshallingkontextflag und seine Werte werden in den Dateien Wtypes.h und Wtypes.idl im Platform Software Development Kit (SDK) definiert.
 
 > [!Note]  
-> Wenn der Wire-Typ ordnungsgemäß definiert ist, müssen Sie die Format-Flags für den NDR nicht verwenden, da die NDR-Engine die erforderlichen Konvertierungen ausführt.
+> Wenn der Kabeltyp ordnungsgemäß definiert ist, müssen Sie die NDR-Formatflags nicht verwenden, da die NDR-Engine die erforderlichen Konvertierungen ausführt.
 
- 
+ 
 
-Der *startingsize* -Parameter ist der aktuelle Puffer Offset. Die Anfangs Größe gibt den Puffer Offset für das Benutzerobjekt an und kann möglicherweise nicht ordnungsgemäß ausgerichtet werden. Ihre Routine muss alle erforderlichen Auffüll Zeichen berücksichtigen.
+Der *StartingSize-Parameter* ist der aktuelle Pufferoffset. Die Anfangsgröße gibt den Pufferoffset für das Benutzerobjekt an und wird möglicherweise nicht ordnungsgemäß ausgerichtet. Ihre Routine sollte alle erforderlichen Auf padding-Daten berücksichtigen.
 
-Der *pmyobj* -Parameter ist ein Zeiger auf ein Benutzertyp Objekt.
+Der *pMyObj-Parameter* ist ein Zeiger auf ein Benutzertypobjekt.
 
-Der Rückgabewert ist die neue Offset-oder Puffer Position. Die-Funktion sollte die kumulative Größe zurückgeben. dabei handelt es sich um die Anfangs Größe Plus mögliche Auffüll Zeichen zuzüglich der Datengröße.
+Der Rückgabewert ist der neue Offset oder die neue Pufferposition. Die Funktion sollte die kumulative Größe zurückgeben, die die Anfangsgröße plus mögliche Auf padding plus die Datengröße ist.
 
-Die **<type> \_ usersize** -Funktion kann eine Überschätzung der benötigten Größe zurückgeben. Die tatsächliche Größe des gesendeten Puffers wird durch die Datengröße, nicht durch die Puffer Zuordnungs Größe definiert.
+Die **<type> \_ UserSize-Funktion** kann eine Überschätzung der erforderlichen Größe zurückgeben. Die tatsächliche Größe des gesendeten Puffers wird durch die Datengröße und nicht durch die Pufferzuordnungsgröße definiert.
 
-Die **<type> \_ usersize** -Funktion wird nicht aufgerufen, wenn die Wire-Größe zur Kompilierzeit berechnet werden kann. Beachten Sie, dass die tatsächliche Größe der Wire-Darstellung bei den meisten Unions nur zur Laufzeit bestimmt werden kann, auch wenn keine Zeiger vorhanden sind.
+Die **<type> \_ UserSize-Funktion** wird nicht aufgerufen, wenn die Kabelgröße zur Kompilierzeit berechnet werden kann. Beachten Sie, dass die tatsächliche Größe der Wire-Darstellung für die meisten Unions nur zur Laufzeit bestimmt werden kann, auch wenn keine Zeiger festgelegt sind.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Marshalling von Regeln für das Mars Hallen von Benutzern und das übertragen \_ \_](marshaling-rules-for-user-marshal-and-wire-marshal.md)
+[Marshallingregeln für das \_ Marshallen von Benutzer und das Wire \_ Marshal](marshaling-rules-for-user-marshal-and-wire-marshal.md)
 </dt> <dt>
 
-[Benutzer \_ Mars Hall](/windows/desktop/Midl/user-marshal)
+[\_Benutzer-Marshalling](/windows/desktop/Midl/user-marshal)
 </dt> <dt>
 
 [Wire \_ Marshal](/windows/desktop/Midl/wire-marshal)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

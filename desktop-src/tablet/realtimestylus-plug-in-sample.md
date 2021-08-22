@@ -1,38 +1,38 @@
 ---
-description: Diese Anwendung veranschaulicht das Arbeiten mit der RealTimeStylus-Klasse.
+description: Diese Anwendung veranschaulicht die Verwendung der RealTimeStylus-Klasse.
 ms.assetid: 0ba753d1-d81a-4f7a-942c-2967c46febec
-title: Plug-in-Beispiel für RealTimeStylus
+title: RealTimeStylus-Plug-In-Beispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f593bf9e4fe0fb3d8ab12674047d6c05f28617a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6a05fd9c70c11130011352d8c16d30abee672e4cd56c000c21b7fbfd2704babe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218575"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966879"
 ---
-# <a name="realtimestylus-plug-in-sample"></a>Plug-in-Beispiel für RealTimeStylus
+# <a name="realtimestylus-plug-in-sample"></a>RealTimeStylus-Plug-In-Beispiel
 
-Diese Anwendung veranschaulicht das Arbeiten mit der [**RealTimeStylus**](realtimestylus-class.md) -Klasse. Eine ausführliche Übersicht über die StylusInput-APIs, einschließlich der **RealTimeStylus** -Klasse, finden Sie unter [zugreifen auf und](accessing-and-manipulating-stylus-input.md)Bearbeiten von Tablettstifteingaben. Weitere Informationen über synchrone und asynchrone Plug-Ins finden Sie unter [Plug-ins und RealTimeStylus-Klasse](plug-ins-and-the-realtimestylus-class.md).
+Diese Anwendung veranschaulicht die Verwendung der [**RealTimeStylus-Klasse.**](realtimestylus-class.md) Eine ausführliche Übersicht über die StylusInput-APIs, einschließlich der **RealTimeStylus-Klasse,** finden Sie unter Zugreifen auf und Bearbeiten [von Stifteingaben.](accessing-and-manipulating-stylus-input.md) Informationen zu synchronen und asynchronen Plug-Ins finden Sie unter [Plug-Ins und die RealTimeStylus-Klasse](plug-ins-and-the-realtimestylus-class.md).
 
 ## <a name="overview-of-the-sample"></a>Übersicht über das Beispiel
 
-Plug-ins, Objekte, die die [**IStylusSyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin) -oder [**IStylusAsyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylusasyncplugin) -Schnittstelle implementieren, können einem [**RealTimeStylus**](realtimestylus-class.md) -Objekt hinzugefügt werden. Diese Beispielanwendung verwendet verschiedene Plug-in-Typen:
+Plug-Ins, Objekte, die die [**IStylusSyncPlugin-**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin) oder [**IStylusAsyncPlugin-Schnittstelle**](/windows/win32/api/rtscom/nn-rtscom-istylusasyncplugin) implementieren, können einem [**RealTimeStylus-Objekt hinzugefügt**](realtimestylus-class.md) werden. Diese Beispielanwendung verwendet mehrere Arten von Plug-Ins:
 
--   Paket Filter-Plug-in: ändert Pakete. Mit dem Paketfilter-Plug-in in diesem Beispiel werden Paketinformationen geändert, indem alle (x, y)-Paketdaten innerhalb eines rechteckigen Bereichs eingeschränkt werden.
--   Benutzerdefiniertes Plug-in für dynamisches Renderer: ändert dynamische renderingqualitäten. Das benutzerdefinierte Dynamic Rendering-Plug-in in diesem Beispiel ändert die Art und Weise, wie frei Hand Eingaben gerendert werden, indem ein kleiner Kreis um jeden (x, y) Punkt auf einem Strich gezeichnet wird.
--   Dynamic Renderer-Plug-in: ändert dynamische renderingqualitäten. In diesem Beispiel wird veranschaulicht, wie das [**DynamicRenderer**](/previous-versions/windows/desktop/legacy/ms701168(v=vs.85)) -Objekt als Plug-in verwendet wird, um das dynamische Rendering von frei Hand Eingaben zu verarbeiten.
--   Gesten Erkennungs-Plug-in: erkennt Anwendungs Gesten. Dieses Beispiel veranschaulicht die Verwendung des [**GestureRecognizer**](gesturerecognizer-class.md) -Objekts als Plug-in, um Anwendungs Gesten zu erkennen (bei Ausführung auf einem System mit der Microsoft Gestenerkennung).
+-   Paketfilter-Plug-In: Ändert Pakete. Das Paketfilter-Plug-In in diesem Beispiel ändert Paketinformationen, indem es alle (x,y)-Paketdaten innerhalb eines rechteckigen Bereichs einschränkt.
+-   Benutzerdefiniertes Dynamisches Renderer-Plug-In: Ändert dynamische Renderingqualitäten. Das benutzerdefinierte Dynamische Rendering-Plug-In in diesem Beispiel ändert die Art und Weise, wie Ink gerendert wird, indem ein kleiner Kreis um jeden (x,y)-Punkt eines Strichs gezeichnunget wird.
+-   Dynamisches Renderer-Plug-In: Ändert dynamische Renderingqualitäten. In diesem Beispiel wird die Verwendung des [**DynamicRenderer-Objekts**](/previous-versions/windows/desktop/legacy/ms701168(v=vs.85)) als Plug-In zum Verarbeiten des dynamischen Renderings von Ink veranschaulicht.
+-   Gestenerkennungs-Plug-In: Erkennt Anwendungsgesten. In diesem Beispiel wird veranschaulicht, wie das [**GestureRecognizer-Objekt**](gesturerecognizer-class.md) als Plug-In verwendet wird, um Anwendungsgesten zu erkennen (wenn die Gestenerkennung von Microsoft auf einem System ausgeführt wird).
 
-Außerdem wird in diesem Beispiel eine Benutzeroberfläche bereitstellt, mit der der Benutzer die Reihenfolge der einzelnen Plug-ins in der Sammlung hinzufügen, entfernen und ändern kann. Die Beispiel Projekt Mappe enthält zwei Projekte: realtimestyluspluginapp und realtimestylusplugins. Realtimestyluspluginapp enthält die Benutzeroberfläche für das Beispiel. Realtimestylusplugins enthält die Implementierungen der Plug-ins. Das realtimestylusplugins-Projekt definiert den realtimestylusplugins-Namespace, der den Paketfilter und die benutzerdefinierten dynamischen Renderer-Plug-Ins enthält. Auf diesen Namespace wird vom Projekt realtimestyluspluginapp verwiesen. Das Projekt realtimestylusplugins verwendet die Namespaces [Microsoft. Ink](/previous-versions/ms826516(v=msdn.10)), [Microsoft. StylusInput](/previous-versions/ms824750(v=msdn.10))und [Microsoft. StylusInput. PluginData](/previous-versions/ms823992(v=msdn.10)) .
+Darüber hinaus stellt dieses Beispiel eine Benutzeroberfläche bereit, die es dem Benutzer ermöglicht, die Reihenfolge der einzelnen Plug-Ins in der Auflistung hinzuzufügen, zu entfernen und zu ändern. Die Beispiellösung enthält zwei Projekte: RealTimeStylusPluginApp und RealTimeStylusPlugins. RealTimeStylusPluginApp enthält die Benutzeroberfläche für das Beispiel. RealTimeStylusPlugins enthält die Implementierungen der Plug-Ins. Das RealTimeStylusPlugins-Projekt definiert den RealTimeStylusPlugins-Namespace, der den Paketfilter und benutzerdefinierte Plug-Ins für dynamische Renderer enthält. Auf diesen Namespace wird vom RealTimeStylusPluginApp-Projekt verwiesen. Das RealTimeStylusPlugins-Projekt verwendet die [Namespaces Microsoft.Ink,](/previous-versions/ms826516(v=msdn.10)) [Microsoft.StylusInput](/previous-versions/ms824750(v=msdn.10))und [Microsoft.StylusInput.PluginData.](/previous-versions/ms823992(v=msdn.10))
 
-Eine Übersicht über die Namespaces " [Microsoft. StylusInput](/previous-versions/ms824750(v=msdn.10)) " und " [Microsoft. StylusInput. PluginData](/previous-versions/ms823992(v=msdn.10)) " finden Sie unter [Architektur der StylusInput-APIs](architecture-of-the-stylusinput-apis.md).
+Eine Übersicht über die [Namespaces Microsoft.StylusInput](/previous-versions/ms824750(v=msdn.10)) und [Microsoft.StylusInput.PluginData](/previous-versions/ms823992(v=msdn.10)) finden Sie unter Architektur der [StylusInput-APIs](architecture-of-the-stylusinput-apis.md).
 
-## <a name="packet-filter-plug-in"></a>Paket Filter-Plug-in
+## <a name="packet-filter-plug-in"></a>Paketfilter-Plug-In
 
-Das Paketfilter-Plug-in ist ein synchrones Plug-in, das die Paket Änderung veranschaulicht. Insbesondere wird ein Rechteck im Formular definiert. Alle Pakete, die außerhalb des Bereichs gezeichnet werden, werden innerhalb des Bereichs gerendert. Die Plug-in-Klasse, `PacketFilterPlugin` , registriert sich für die Benachrichtigung von `StylusDown` `StylusUp` -,-und- `Packets` Stift Eingabe Ereignissen. Die-Klasse implementiert die [StylusDown](/previous-versions/ms824761(v=msdn.10))-, [StylusUp](/previous-versions/ms824764(v=msdn.10))-und [Pakete](/previous-versions/ms824756(v=msdn.10)) -Methoden, die für die [**IStylusSyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin) -Klasse definiert sind.
+Das Paketfilter-Plug-In ist ein synchrones Plug-In, das die Paketänderung veranschaulicht. Insbesondere wird ein Rechteck auf dem Formular definiert. Alle Pakete, die außerhalb des -Bereich gezeichnet werden, werden innerhalb des -Bereich gerendert. Die Plug-In-Klasse `PacketFilterPlugin` registriert für die Benachrichtigung von `StylusDown` Stifteingabeereignissen `StylusUp` , und `Packets` . Die -Klasse implementiert die [Methoden StylusDown,](/previous-versions/ms824761(v=msdn.10)) [StylusUp](/previous-versions/ms824764(v=msdn.10))und [Packets,](/previous-versions/ms824756(v=msdn.10)) die für die [**IStylusSyncPlugin-Klasse definiert**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin) sind.
 
-Der öffentliche Konstruktor für `PacketFilterPlugin` erfordert eine [Rechteck](/dotnet/api/system.drawing.rectangle?view=netcore-3.1) Struktur. Dieses Rechteck definiert den rechteckigen Bereich in Freihand Raumkoordinaten (01mm = 1 HIMETRIC Unit), in denen Pakete enthalten sein werden. Das Rechteck wird in einem privaten Feld gespeichert `rectangle` .
+Der öffentliche Konstruktor für `PacketFilterPlugin` erfordert eine [Rectangle-Struktur.](/dotnet/api/system.drawing.rectangle?view=netcore-3.1) Dieses Rechteck definiert den rechteckigen Bereich in Freiraumkoordinaten (.01mm = 1 HIMETRIC-Einheit), in dem Pakete enthalten sind. Das Rechteck wird in einem privaten Feld( ) `rectangle` gehalten.
 
 
 ```C++
@@ -48,7 +48,7 @@ public class PacketFilterPlugin:IStylusSyncPlugin
 
 
 
-Die `PacketFilterPlugin` Klasse registriert sich für Ereignis Benachrichtigungen, indem Sie den Get-Accessor für die [DataInterest](/previous-versions/ms824752(v=msdn.10)) -Eigenschaft implementiert. In diesem Fall ist das Plug-in an der Reaktion auf die `StylusDown` Benachrichtigungen, `Packets` , `StylusUp` und interessiert `Error` . Im Beispiel werden diese Werte entsprechend der Definition in der [datainteressanmask](/previous-versions/ms824787(v=msdn.10)) -Enumeration zurückgegeben. Die [StylusDown](/previous-versions/ms824761(v=msdn.10)) -Methode wird aufgerufen, wenn der Stift Tipp die Digitalisierungs Oberfläche kontaktiert. Die [StylusUp](/previous-versions/ms824764(v=msdn.10)) -Methode wird aufgerufen, wenn die Stift Spitze die Digitalisierungs Oberfläche verlässt. Die [Paketen](/previous-versions/ms824756(v=msdn.10)) -Methode wird aufgerufen, wenn das [**RealTimeStylus**](realtimestylus-class.md) -objektpakete empfängt. Die [Error](/previous-versions/ms585069(v=vs.100)) -Methode wird aufgerufen, wenn das aktuelle Plug-in oder ein vorheriges Plug-in eine Ausnahme auslöst.
+Die `PacketFilterPlugin` -Klasse registriert sich für Ereignisbenachrichtigungen, indem sie den get-Accessor für die [DataInterest-Eigenschaft](/previous-versions/ms824752(v=msdn.10)) implementieren. In diesem Fall ist das Plug-In daran interessiert, auf die Benachrichtigungen `StylusDown` , , und zu `Packets` `StylusUp` `Error` reagieren. Das Beispiel gibt diese Werte zurück, wie in der [DataInterestMask-Enumeration](/previous-versions/ms824787(v=msdn.10)) definiert. Die [StylusDown-Methode](/previous-versions/ms824761(v=msdn.10)) wird aufgerufen, wenn die Stiftspitze die Digitizeroberfläche kontaktiert. Die [StylusUp-Methode](/previous-versions/ms824764(v=msdn.10)) wird aufgerufen, wenn die Stiftspitze die Digitizeroberfläche verlässt. Die [Packets-Methode](/previous-versions/ms824756(v=msdn.10)) wird aufgerufen, wenn das [**RealTimeStylus-Objekt**](realtimestylus-class.md) Pakete empfängt. Die [Error-Methode](/previous-versions/ms585069(v=vs.100)) wird aufgerufen, wenn das aktuelle Plug-In oder ein vorheriges Plug-In eine Ausnahme auslöst.
 
 
 ```C++
@@ -67,7 +67,7 @@ public DataInterestMask DataInterest
 
 
 
-Die- `PacketFilterPlugin` Klasse verarbeitet die meisten dieser Benachrichtigungen in einer Hilfsmethode, `ModifyPacketData` . Die `ModifyPacketData` -Methode ruft die x-und y-Werte für jedes neue Paket aus der [PacketsData](/previous-versions/ms824590(v=msdn.10)) -Klasse ab. Wenn einer der beiden Werte außerhalb des Rechtecks liegt, ersetzt die Methode den Wert durch den nächstgelegenen Punkt, der noch innerhalb des Rechtecks liegt. Dies ist ein Beispiel dafür, wie ein Plug-in Paketdaten ersetzen kann, wenn Sie vom Stift Eingabedaten Strom empfangen werden.
+Die `PacketFilterPlugin` -Klasse verarbeitet die meisten dieser Benachrichtigungen in einer Hilfsmethode, `ModifyPacketData` . Die `ModifyPacketData` -Methode ruft die x- und y-Werte für jedes neue Paket aus der [PacketsData-Klasse](/previous-versions/ms824590(v=msdn.10)) ab. Wenn sich einer der Werte außerhalb des Rechtecks befindet, ersetzt die -Methode den Wert durch den nächstgelegenen Punkt, der weiterhin innerhalb des Rechtecks liegt. Dies ist ein Beispiel dafür, wie ein Plug-In Paketdaten ersetzen kann, wenn sie vom Stifteingabestream empfangen werden.
 
 
 ```C++
@@ -100,11 +100,11 @@ private void ModifyPacketData(StylusDataBase data)
 
 
 
-## <a name="custom-dynamic-renderer-plug-in"></a>Benutzerdefiniertes Plug-in für dynamisches Renderer
+## <a name="custom-dynamic-renderer-plug-in"></a>Benutzerdefiniertes Dynamisches Renderer-Plug-In
 
-Die `CustomDynamicRenderer` -Klasse implementiert auch die [**IStylusSyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin) -Klasse, um Stift Eingabe Benachrichtigungen zu empfangen. Anschließend wird die `Packets` Benachrichtigung verarbeitet, um einen kleinen Kreis um jeden neuen Paket Punkt zu zeichnen.
+Die `CustomDynamicRenderer` -Klasse implementiert auch die [**IStylusSyncPlugin-Klasse,**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin) um Stifteingabebenachrichtigungen zu empfangen. Anschließend wird die Benachrichtigung verarbeitet, um einen kleinen Kreis um `Packets` jeden neuen Paketpunkt zu zeichnen.
 
-Die-Klasse enthält eine [Grafik](/dotnet/api/system.drawing.graphics?view=dotnet-plat-ext-3.1&preserve-view=true) Variable, die einen Verweis auf das Grafik Objekt enthält, das an den-Klassenkonstruktor übergeben wird. Dies ist das Grafik Objekt, das für das dynamische Rendering verwendet wird.
+Die -Klasse enthält eine [Graphics-Variable,](/dotnet/api/system.drawing.graphics?view=dotnet-plat-ext-3.1&preserve-view=true) die einen Verweis auf das Grafikobjekt enthält, das an den Klassenkonstruktor übergeben wird. Dies ist das Grafikobjekt, das für dynamisches Rendering verwendet wird.
 
 
 ```C++
@@ -120,7 +120,7 @@ public CustomDynamicRendererPlugin(Graphics g)
 
 
 
-Wenn das Plug-in für den benutzerdefinierten dynamischen Renderer eine Benachrichtigung über Pakete empfängt, werden die (x, y)-Daten extrahiert und ein kleiner grüner Kreis um den Punkt gezeichnet. Dies ist ein Beispiel für ein benutzerdefiniertes Rendering, das auf dem Stift Eingabedaten Strom basiert.
+Wenn das benutzerdefinierte dynamische Renderer-Plug-In eine Paketbenachrichtigung empfängt, extrahiert es die (x,y)-Daten und zeichnet einen kleinen grünen Kreis um den Punkt. Dies ist ein Beispiel für benutzerdefiniertes Rendering, das auf dem Stifteingabestream basiert.
 
 
 ```C++
@@ -143,17 +143,17 @@ public void Packets(RealTimeStylus sender,  PacketsData data)
 
 
 
-## <a name="the-realtimestyluspluginapp-project"></a>Das realtimestyluspluginapp-Projekt
+## <a name="the-realtimestyluspluginapp-project"></a>Die RealTimeStylusPluginApp-Project
 
-Das Projekt realtimestyluspluginapp veranschaulicht die zuvor beschriebenen Plug-ins sowie die Plug-ins " [**GestureRecognizer**](gesturerecognizer-class.md) " und " [**DynamicRenderer**](/previous-versions/windows/desktop/legacy/ms701168(v=vs.85)) ". Die Benutzeroberfläche des Projekts besteht aus folgendem:
+Das RealTimeStylusPluginApp-Projekt veranschaulicht die zuvor beschriebenen Plug-Ins sowie die Plug-Ins [**GestureRecognizer**](gesturerecognizer-class.md) und [**DynamicRenderer.**](/previous-versions/windows/desktop/legacy/ms701168(v=vs.85)) Die Benutzeroberfläche des Projekts besteht aus:
 
--   Ein Formular, das ein [GroupBox](/dotnet/api/system.windows.forms.groupbox?view=netcore-3.1) -Steuerelement enthält, mit dem der frei Hand Eingabebereich definiert wird.
--   Ein [CheckedListBox](/dotnet/api/system.windows.forms.checkedlistbox?view=netcore-3.1) -Steuerelement zum Auflisten und Auswählen der verfügbaren Plug-ins.
--   Ein paar von [Schaltflächen Objekten](/dotnet/api/system.windows.forms.button?view=netcore-3.1) , um die Neuanordnung der Plug-ins zu aktivieren.
+-   Ein Formular, das ein [GroupBox-Steuerelement](/dotnet/api/system.windows.forms.groupbox?view=netcore-3.1) enthält, das zum Definieren des Freieingabebereichs verwendet wird.
+-   Ein [CheckedListBox-Steuerelement](/dotnet/api/system.windows.forms.checkedlistbox?view=netcore-3.1) zum Auflisten und Auswählen der verfügbaren Plug-Ins.
+-   Ein Paar von [Button-Objekten,](/dotnet/api/system.windows.forms.button?view=netcore-3.1) um die Neubestellung der Plug-Ins zu ermöglichen.
 
-Das Projekt definiert eine Struktur, `PlugInListItem` , um die Verwaltung der im Projekt verwendeten Plug-ins zu vereinfachen. Die `PlugInListItem` -Struktur enthält das Plug-in und eine Beschreibung.
+Das Projekt definiert eine -Struktur, , um die Verwaltung der im Projekt `PlugInListItem` verwendeten Plug-Ins zu vereinfachen. Die `PlugInListItem` -Struktur enthält das Plug-In und eine Beschreibung.
 
-Die `RealTimeStylusPluginApp` Klasse selbst implementiert die Klasse [**IStylusAsyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylusasyncplugin) . Dies ist erforderlich, damit die- `RealTimeStylusPluginApp` Klasse benachrichtigt werden kann, wenn das [**GestureRecognizer**](gesturerecognizer-class.md) -Plug-in der Ausgabe Warteschlange Gesten Daten hinzufügt. Die Anwendung wird für die Benachrichtigung von [CustomStylusDataAdded](/previous-versions/ms824753(v=msdn.10))registriert. Wenn Gesten Daten empfangen werden, wird `RealTimeStylusPluginApp` eine Beschreibung dieser in der Statusleiste am unteren Rand des Formulars platziert.
+Die `RealTimeStylusPluginApp` Klasse selbst implementiert die [**IStylusAsyncPlugin-Klasse.**](/windows/win32/api/rtscom/nn-rtscom-istylusasyncplugin) Dies ist erforderlich, damit die Klasse benachrichtigt werden kann, wenn das `RealTimeStylusPluginApp` [**GestureRecognizer-Plug-In**](gesturerecognizer-class.md) Gestendaten zur Ausgabewarteschlange hinzufügt. Die Anwendung registriert sich für die Benachrichtigung [von CustomStylusDataAdded.](/previous-versions/ms824753(v=msdn.10)) Wenn Gestendaten empfangen werden, platziert eine Beschreibung davon auf der `RealTimeStylusPluginApp` Statusleiste am unteren Rand des Formulars.
 
 
 ```C++
@@ -177,13 +177,13 @@ public void CustomStylusDataAdded(RealTimeStylus sender, CustomStylusData data)
 
 
 > [!Note]  
-> In der [CustomStylusDataAdded](/previous-versions/ms824753(v=msdn.10)) -Implementierung ist es interessant, dass Sie die benutzerdefinierten Gesten Daten in der Ausgabe Warteschlange entweder mithilfe der GUID (mit dem Feld " [GestureRecognitionDataGuid](/previous-versions/ms826344(v=msdn.10)) ") oder nach Typ (mit dem Ergebnis der AS-Anweisung) identifizieren können. In diesem Beispiel werden beide Identifikationstechniken zu Demonstrationszwecken verwendet. Beide Ansätze sind ebenfalls gültig.
+> In der [CustomStylusDataAdded-Implementierung](/previous-versions/ms824753(v=msdn.10)) ist es interessant, dass Sie die benutzerdefinierten Gestendaten in der Ausgabewarteschlange entweder anhand der GUID (mithilfe des [Felds GestureRecognitionDataGuid)](/previous-versions/ms826344(v=msdn.10)) oder nach Typ (mithilfe des Ergebnisses aus der as-Anweisung) identifizieren können. Im Beispiel werden beide Identifikationstechniken zu Demonstrationszwecken verwendet. Beide Ansätze allein sind ebenfalls gültig.
 
  
 
-Im Lade Ereignishandler des Formulars erstellt die Anwendung Instanzen der `PacketFilter` -Klasse und der- `CustomDynamicRenderer` Klasse und fügt Sie dem Listenfeld hinzu. Die Anwendung versucht dann, eine Instanz der [**GestureRecognizer**](gesturerecognizer-class.md) -Klasse zu erstellen, und fügt Sie, wenn erfolgreich, dem Listenfeld hinzu. Dies schlägt fehl, wenn die Gestenerkennung nicht auf dem System vorhanden ist. Als nächstes instanziiert die Anwendung ein [**DynamicRenderer**](/previous-versions/windows/desktop/legacy/ms701168(v=vs.85)) -Objekt und fügt es dem Listenfeld hinzu. Schließlich aktiviert die Anwendung alle Plug-ins und das [**RealTimeStylus**](realtimestylus-class.md) -Objekt selbst.
+Im Load-Ereignishandler des Formulars erstellt die Anwendung Instanzen der -Klasse und der -Klasse und fügt `PacketFilter` `CustomDynamicRenderer` sie dem Listenfeld hinzu. Die Anwendung versucht dann, eine Instanz der [**GestureRecognizer-Klasse**](gesturerecognizer-class.md) zu erstellen, und fügt sie bei Erfolg dem Listenfeld hinzu. Dies schlägt fehl, wenn die Gestenerkennung auf dem System nicht vorhanden ist. Als Nächstes instanziiert die Anwendung ein [**DynamicRenderer-Objekt**](/previous-versions/windows/desktop/legacy/ms701168(v=vs.85)) und fügt es dem Listenfeld hinzu. Schließlich aktiviert die Anwendung jedes der Plug-Ins und das [**RealTimeStylus-Objekt**](realtimestylus-class.md) selbst.
 
-Ein weiterer wichtiger Aspekt für das Beispiel ist, dass in den Hilfsmethoden das [**RealTimeStylus**](realtimestylus-class.md) -Objekt zuerst deaktiviert wird, bevor Plug-Ins hinzugefügt oder entfernt und dann wieder aktiviert werden, nachdem das Hinzufügen oder Entfernen beendet wurde.
+Ein weiterer wichtiger Aspekt des Beispiels ist, dass das [**RealTimeStylus-Objekt**](realtimestylus-class.md) in den Hilfsmethoden zuerst deaktiviert wird, bevor Plug-Ins hinzugefügt oder entfernt und dann wieder aktiviert werden, nachdem das Additions- oder Entfernungs-Objekt abgeschlossen ist.
 
 
 ```C++
@@ -204,34 +204,34 @@ private void RemoveFromPluginCollection(int index)
 
 <dl> <dt>
 
-[Microsoft. StylusInput. DynamicRenderer](/previous-versions/ms575176(v=vs.100))
+[Microsoft.StylusInput.DynamicRenderer](/previous-versions/ms575176(v=vs.100))
 </dt> <dt>
 
-[Microsoft. StylusInput. GestureRecognizer](/previous-versions/ms826046(v=msdn.10))
+[Microsoft.StylusInput.GestureRecognizer](/previous-versions/ms826046(v=msdn.10))
 </dt> <dt>
 
-[Microsoft. StylusInput. RealTimeStylus](/previous-versions/ms824830(v=msdn.10))
+[Microsoft.StylusInput.RealTimeStylus](/previous-versions/ms824830(v=msdn.10))
 </dt> <dt>
 
-[Microsoft. StylusInput. datainteressanmask](/previous-versions/ms575174(v=vs.100))
+[Microsoft.StylusInput.DataInterestMask](/previous-versions/ms575174(v=vs.100))
 </dt> <dt>
 
-[Microsoft. StylusInput. IStylusSyncPlugin](/previous-versions/ms824751(v=msdn.10))
+[Microsoft.StylusInput.IStylusSyncPlugin](/previous-versions/ms824751(v=msdn.10))
 </dt> <dt>
 
-[Microsoft. StylusInput. IStylusAsyncPlugin](/previous-versions/ms824768(v=msdn.10))
+[Microsoft.StylusInput.IStylusAsyncPlugin](/previous-versions/ms824768(v=msdn.10))
 </dt> <dt>
 
-[Microsoft. StylusInput. PluginData. packegsdata](/previous-versions/ms575281(v=vs.100))
+[Microsoft.StylusInput.PluginData.PacketsData](/previous-versions/ms575281(v=vs.100))
 </dt> <dt>
 
-[Zugreifen auf und Bearbeiten von Tablettstifteingaben](accessing-and-manipulating-stylus-input.md)
+[Zugreifen auf und Bearbeiten von Stifteingaben](accessing-and-manipulating-stylus-input.md)
 </dt> <dt>
 
-[Plug-ins und die RealTimeStylus-Klasse](plug-ins-and-the-realtimestylus-class.md)
+[Plug-Ins und die RealTimeStylus-Klasse](plug-ins-and-the-realtimestylus-class.md)
 </dt> <dt>
 
-[RealTimeStylus Ink Collection-Beispiel](realtimestylus-ink-collection-sample.md)
+[RealTimeStylus Ink Collection Sample](realtimestylus-ink-collection-sample.md)
 </dt> </dl>
 
  

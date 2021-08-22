@@ -1,6 +1,6 @@
 ---
 title: ContextMenu-Element
-description: Stellt ein Kontextmenü-Steuerelement dar.
+description: Stellt ein Kontextmenüsteuerelement dar.
 ms.assetid: 08cc0514-0795-4e6b-b80c-33d920783032
 keywords:
 - ContextMenu-Element Windows Menüband
@@ -22,7 +22,7 @@ ms.locfileid: "118707433"
 ---
 # <a name="contextmenu-element"></a>ContextMenu-Element
 
-Stellt ein Kontextmenü-Steuerelement dar.
+Stellt ein Kontextmenüsteuerelement dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -39,7 +39,7 @@ Stellt ein Kontextmenü-Steuerelement dar.
 
 | attribute           | type                 | Erforderlich       | Beschreibung                                                                                                                                                                                                                |
 |---------------------|----------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Name**<br/> | xs:string<br/> | Ja<br/> | <dt> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Folge von Zeichen besteht, einschließlich Leerzeichen und Zeilenumbruchzeichen.<br/> </dd> </dl> |
+| **Name**<br/> | xs:string<br/> | Ja<br/> | <dt> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Sequenz von Zeichen besteht, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.<br/> </dd> </dl> |
 
 
 
@@ -49,7 +49,7 @@ Stellt ein Kontextmenü-Steuerelement dar.
 
 | Element                                                         | Beschreibung                                     |
 |-----------------------------------------------------------------|-------------------------------------------------|
-| [**Menugroup**](windowsribbon-element-menugroup.md)<br/> | Muss mindestens einmal auftreten<br/> <br/> |
+| [**Menugroup**](windowsribbon-element-menugroup.md)<br/> | Muss mindestens einmal auftreten.<br/> <br/> |
 
 
 
@@ -67,10 +67,10 @@ Stellt ein Kontextmenü-Steuerelement dar.
 
 Optional.
 
-Kann ein oder mehrere Male für jedes [**ContextPopup.ContextMenus auftreten.**](windowsribbon-element-contextpopup-contextmenus.md)
+Kann ein oder mehrere Male für jede [**ContextPopup.ContextMenus**](windowsribbon-element-contextpopup-contextmenus.md)auftreten.
 
 > [!IMPORTANT]
-> Ein **ContextMenu kann** keine [Combo Box- oder](windowsribbon-controls-combobox.md) [Spinner-Steuerelemente](windowsribbon-controls-spinner.md) hosten.
+> **Ein ContextMenu** kann keine [Kombinationsfeld-](windowsribbon-controls-combobox.md) oder [Spinner-Steuerelemente](windowsribbon-controls-spinner.md) hosten.
 
  
 
@@ -78,7 +78,7 @@ Kann ein oder mehrere Male für jedes [**ContextPopup.ContextMenus auftreten.**]
 
 Im folgenden Beispiel wird das grundlegende Markup für eine [**ContextPopup-Ansicht**](windowsribbon-element-contextpopup.md) veranschaulicht.
 
-Dieser Codeabschnitt zeigt eine Reihe von **ContextMenu-Steuerelementdeklarationen.**
+Dieser Codeabschnitt zeigt einen Satz von **ContextMenu-Steuerelementdeklarationen.**
 
 
 ```XML

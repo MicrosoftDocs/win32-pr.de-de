@@ -1,99 +1,99 @@
 ---
 title: Anzeigen des Menübands
-description: Das Windows-Menüband-Framework macht eine Reihe von Eigenschaften verfügbar, die es einer Anwendung ermöglichen, anzugeben, wie die Menüband-Benutzeroberfläche zur Laufzeit angezeigt wird.
+description: Das Windows Menübandframework macht einen Satz von Eigenschaften verfügbar, mit denen eine Anwendung angeben kann, wie die Menüband-Benutzeroberfläche zur Laufzeit angezeigt wird.
 ms.assetid: c6716183-ef32-4fb2-812a-2d8f27448db5
 keywords:
-- Windows-Menüband, Anpassen von Farben
-- Multifunktionsleiste, Anpassen von Farben
-- Anpassen von Windows-Menü Band Farben
+- Windows Menüband, Anpassen von Farben
+- Menüband, Anpassen von Farben
+- Anpassen von Windows Menübandfarben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 090c77c5b47afd673bc7132a87e3de336683d876
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 4b61bae9bae5620d556f26f6c7103ef222f14892c8ce12acd21289dd7bc53b43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039282"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964433"
 ---
 # <a name="displaying-the-ribbon"></a>Anzeigen des Menübands
 
-Das Windows-Menüband-Framework macht eine Reihe von Eigenschaften verfügbar, die es einer Anwendung ermöglichen, anzugeben, wie die Menüband-Benutzeroberfläche zur Laufzeit angezeigt wird.
+Das Windows Menübandframework macht einen Satz von Eigenschaften verfügbar, mit denen eine Anwendung angeben kann, wie die Menüband-Benutzeroberfläche zur Laufzeit angezeigt wird.
 
 -   [Introduction (Einführung)](#introduction)
--   [Minimieren der Multifunktionsleiste](#minimize-the-ribbon)
--   [Ausblenden der Multifunktionsleiste](#hide-the-ribbon)
+-   [Minimieren des Menübands](#minimize-the-ribbon)
+-   [Ausblenden des Menübands](#hide-the-ribbon)
 -   [Beispiel](#example)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="introduction"></a>Einführung
 
-Um den Bereich zu maximieren, der für den Dokumentbereich (oder den Ansichts Port) einer Multifunktionsleisten-Framework-Anwendung verfügbar ist, kann eine Anwendung angeben, ob die Multifunktionsleisten-Benutzeroberfläche sichtbar oder ausgeblendet ist, und wenn Sie sichtbar ist, ob das Menüband in einem erweiterten oder reduzierten Zustand
+Um den für den Dokumentbereich (oder Ansichtsport) einer Menübandframeworkanwendung verfügbaren Bereich zu maximieren, kann eine Anwendung angeben, ob die Menübandbenutzeroberfläche sichtbar oder ausgeblendet ist und ob sich das Menüband in einem erweiterten oder reduzierten Zustand befindet, wenn es angezeigt wird.
 
-Die in der folgenden Tabelle aufgeführten [Frameworks](windowsribbon-reference-properties-framework.md) -Eigenschaften Schlüssel werden verwendet, um die Anzeigeeigenschaften der Menüband-Benutzeroberfläche in einer Multifunktionsleisten-Framework-Anwendung explizit festzulegen. Diese Eigenschaften haben keine Auswirkung auf die Anzeige des [Kontext-Popup](windowsribbon-controls-contextpopup.md) Steuer Elements.
+Die [in der folgenden Tabelle](windowsribbon-reference-properties-framework.md) aufgeführten Framework-Eigenschaftsschlüssel werden verwendet, um die Anzeigemerkmale der Menübandbenutzeroberfläche in einer Menübandframeworkanwendung explizit fest zu legen. Diese Eigenschaften haben keine Auswirkungen auf die Anzeige des [Kontext-Popup-Steuerelements.](windowsribbon-controls-contextpopup.md)
 
 
 
-| Anzeige Zustand         | Menüband-Eigenschaften Schlüssel                                                            |
+| Anzeigezustand         | Menüband-Eigenschaftsschlüssel                                                            |
 |-----------------------|--------------------------------------------------------------------------------|
-| Erweitert oder reduziert | [UI- \_ pkey \_ minimiert](windowsribbon-reference-properties-uipkey-minimized.md) |
-| Sichtbar oder ausgeblendet     | [UI- \_ pkey kann angezeigt werden. \_](windowsribbon-reference-properties-uipkey-viewable.md)   |
+| Erweitert oder reduziert | [UI \_ PKEY \_ Minimiert](windowsribbon-reference-properties-uipkey-minimized.md) |
+| Sichtbar oder ausgeblendet     | [UI \_ PKEY \_ Viewable](windowsribbon-reference-properties-uipkey-viewable.md)   |
 
 
 
- 
+ 
 
-## <a name="minimize-the-ribbon"></a>Minimieren der Multifunktionsleiste
+## <a name="minimize-the-ribbon"></a>Minimieren des Menübands
 
-Eine Menüband-Framework-Anwendung kann den minimierten Zustand der Multifunktionsleisten-Befehlsleiste dynamisch festlegen, indem Sie den Wert des minimierten Eigenschafts Schlüssels der [UI \_ \_ pkey](windowsribbon-reference-properties-uipkey-minimized.md) auf **true** oder **false** festlegt.
+Eine Menübandframeworkanwendung kann den minimierten Zustand der Menübandbefehlsleiste dynamisch festlegen, indem  der Wert des [ \_ \_ PKEY-Eigenschaftsschlüssels](windowsribbon-reference-properties-uipkey-minimized.md) für die Benutzeroberfläche auf TRUE oder FALSE festgelegt **wird.**
 
 
 
-| Anzeige Zustand | Eigenschafts Schlüsselwert |
+| Anzeigezustand | Eigenschaftsschlüsselwert |
 |---------------|--------------------|
 | Expanded      | **false**          |
 | Reduziert     | **true**           |
 
 
 
- 
+ 
 
-Wenn sich die Multifunktionsleisten-Benutzeroberfläche in einem minimierten Zustand befindet, bleibt die Menüband-Registerkarte sichtbar und voll funktionsfähig.
+Wenn sich die Menübandbenutzeroberfläche in einem minimierten Zustand befindet, bleibt die Registerkartenzeile des Menübands sichtbar und voll funktionsfähig.
 
 Der folgende Screenshot zeigt das Menüband im minimierten Zustand.
 
-![Screenshot der minimierten Multifunktionsleisten-Benutzeroberfläche](images/overviews/ribbon-minimized.png)
+![Screenshot mit minimierter Menübandbenutzeroberfläche.](images/overviews/ribbon-minimized.png)
 
 > [!Note]  
-> Das Menüband-Framework macht diese Funktionalität für den Endbenutzer über die Option "Minimieren der Multifunktionsleiste" des Menü Band Kontextmenüs verfügbar.
+> Das Menübandframework macht diese Funktionalität dem Endbenutzer über die Auswahl "Menüband minimieren" des Menübandkontextmenüs verfügbar.
 
- 
+ 
 
-## <a name="hide-the-ribbon"></a>Ausblenden der Multifunktionsleiste
+## <a name="hide-the-ribbon"></a>Ausblenden des Menübands
 
-Eine Menüband-Framework-Anwendung kann den anzeigbaren Zustand der Multifunktionsleisten-Befehlsleiste dynamisch festlegen, indem Sie den Wert des Benutzeroberflächen- [ \_ pkey \_](windowsribbon-reference-properties-uipkey-viewable.md) -Eigenschafts Schlüssels auf **true** oder **false** festlegt.
+Eine Menübandframeworkanwendung kann den anzeigebaren Zustand der Menübandbefehlsleiste dynamisch festlegen, indem der Wert des [ \_ PKEY \_ Viewable-Eigenschaftsschlüssels](windowsribbon-reference-properties-uipkey-viewable.md) der Benutzeroberfläche auf **true** oder **false festgelegt wird.**
 
 
 
-| Anzeige Zustand | Eigenschafts Schlüsselwert |
+| Anzeigezustand | Eigenschaftsschlüsselwert |
 |---------------|--------------------|
 | Sichtbar       | **false**          |
 | Ausgeblendet        | **true**           |
 
 
 
- 
+ 
 
-Im Gegensatz zur [ \_ \_ minimierten Eigenschaft UI pkey](windowsribbon-reference-properties-uipkey-minimized.md) wird durch Festlegen von [UI \_ pkey \_](windowsribbon-reference-properties-uipkey-viewable.md) auf **false** die Multifunktionsleisten-Benutzeroberfläche unsichtbar und vollständig für einen Endbenutzer unbrauchbar.
+Im Gegensatz zur [ \_ \_ PKEY-Minimiert-Eigenschaft](windowsribbon-reference-properties-uipkey-minimized.md) der Benutzeroberfläche wird die Menübandbenutzeroberfläche durch Festlegen von [UI \_ PKEY \_ Viewable](windowsribbon-reference-properties-uipkey-viewable.md) auf **FALSE** unsichtbar und für einen Endbenutzer vollständig unbrauchbar.
 
 Der folgende Screenshot zeigt das Menüband im ausgeblendeten Zustand.
 
-![Screenshot, in dem die Menüband-Benutzeroberfläche ausgeblendet ist](images/overviews/ribbon-viewable.png)
+![Screenshot der ausgeblendeten Menübandbenutzeroberfläche.](images/overviews/ribbon-viewable.png)
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie der Zustand der Menüband-Benutzeroberfläche zur Laufzeit festgelegt wird.
+Im folgenden Beispiel wird veranschaulicht, wie der Zustand der Menübandbenutzeroberfläche zur Laufzeit festgelegt wird.
 
-In diesem Fall wird die [**iuicommandhandler:: Execute**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-execute) -Funktion verwendet, um die Menüband-Benutzeroberfläche basierend auf dem UMSCHALT Zustand einer [UMSCHALT Fläche](windowsribbon-controls-togglebutton.md)zu erweitern oder zu reduzieren.
+In diesem Fall wird die [**IUICommandHandler::Execute-Funktion**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-execute) verwendet, um die Menübandbenutzeroberfläche basierend auf dem Umschaltzustand einer Umschaltfläche zu erweitern [oder zu reduzieren.](windowsribbon-controls-togglebutton.md)
 
 
 ```C++
@@ -168,9 +168,9 @@ STDMETHODIMP CCommandHandler::Execute(
 
 <dl> <dt>
 
-[Menü Band Eigenschaften](windowsribbon-reference-properties-ribbon.md)
+[Menübandeigenschaften](windowsribbon-reference-properties-ribbon.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

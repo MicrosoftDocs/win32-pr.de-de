@@ -1,9 +1,9 @@
 ---
-title: glpixelstorei-Funktion (GL. h)
-description: Legt die Pixel Speicher Modi fest. | glpixelstorei-Funktion (GL. h)
+title: glPixelStorei-Funktion (Gl.h)
+description: Legt Pixelspeichermodi fest. | glPixelStorei-Funktion (Gl.h)
 ms.assetid: 1e1e94e9-aabe-4923-a0a9-f1c041a925ba
 keywords:
-- glpixelstorei-Funktion OpenGL
+- glPixelStorei-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 00c938d099665daf0578139d28c7497fc4f7debd
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 2d8658db575bbc58cd7aa1170612895f7f895ccc22f11afdfdb99be90db44fa7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104568708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118938183"
 ---
-# <a name="glpixelstorei-function"></a>glpixelstorei-Funktion
+# <a name="glpixelstorei-function"></a>glPixelStorei-Funktion
 
-Legt die Pixel Speicher Modi fest.
+Legt Pixelspeichermodi fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,36 +41,36 @@ void WINAPI glPixelStorei(
 
 <dl> <dt>
 
-*pName* 
+*pname* 
 </dt> <dd>
 
-Der symbolische Name des festzulegenden Parameters. Sechs der Speicher Parameter beeinflussen, wie Pixeldaten an den Client Speicher zurückgegeben werden, und sind daher nur für [**glread Pixels**](glreadpixels.md) -Befehle von Bedeutung. Dabei handelt es sich um die folgenden.
+Der symbolische Name des parameters, der festgelegt werden soll. Sechs der Speicherparameter beeinflussen, wie Pixeldaten an den Clientspeicher zurückgegeben werden, und sind daher nur für [**glReadPixels-Befehle**](glreadpixels.md) von Bedeutung. Sie lauten wie folgt.
 
 
 
-| Storage-Parameter                                           | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Storage Parameter                                           | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Auslagerungs Bytes von GL \_ Pack \_ \_                                       | True gibt an, dass die Byte Reihenfolge für multibytefarbkomponenten, tiefen Komponenten, Farbindizes oder Schablonen Indizes umgekehrt wird. Das heißt, wenn eine 4-Byte-Komponente aus den Bytes *b* 0, *b* 1, *b* 2, *b* 3 besteht, wird Sie im Arbeitsspeicher als *b* 3, *b* 2, *b* 1, *b* 0 gespeichert, wenn die Auslagerungs Bytes von GL Pack den Wert \_ true haben \_ \_ . Die Auslagerungs \_ \_ Bytes von GL Pack wirken sich \_ nicht auf die Speicher Reihenfolge von Komponenten innerhalb eines Pixels aus, sondern nur auf die Reihenfolge der Bytes innerhalb von Komponenten oder Indizes. So werden z. b. die drei Komponenten eines Formats des PS \_ RGB-Formats immer mit "Red First", "Green Second" und "Blue Third" gespeichert, unabhängig vom Wert der Auslagerungs Bytes des GL- \_ Pakets \_ \_ .                                                                                                                                                                                                                                                                                                                                                                                               |
-| \_zuerst GL Pack- \_ lsb \_                                        | True gibt an, dass Bits innerhalb eines Bytes von der geringsten Bedeutung bis zu den wichtigsten Zeichen geordnet sind. Andernfalls ist das erste Bit in jedem Byte das wichtigste. Dieser Parameter ist nur für Bitmapdaten wichtig.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Länge der GL- \_ Paket \_ Zeile \_                                       | Wenn der Wert größer als 0 (null) ist, wird \_ \_ \_ die Anzahl der Pixel in einer Zeile mit der Zeilenlänge von GL Wenn sich das erste Pixel einer Zeile an Position p im Speicher befindet, wird der Speicherort des ersten Pixels der nächsten Zeile durch übersprungen der Gleichung abgerufen, ![ die den Speicherort des ersten Pixels der nächsten Zeile in GL_PACK_ROW_LENGTH anzeigt. ](images/pix01.png) \[ neueinzeilige \] Komponenten oder Indizes, wobei *n* die Anzahl der Komponenten oder Indizes in einem Pixel ist, *l* ist die Anzahl der Pixel in einer Zeile (bei einem \- \- \- Wert größer als 0 (null), das width-Argument der Pixel Routine andernfalls), *a* ist der Wert der \- GL \- -Paket Ausrichtung, und *s* ist die Größe (in Bytes) einer einzelnen Komponente (wenn *ein*  <  *s*-Wert ist, dann ist Sie so, als ob *ein*  =  *s*). im Fall von 1-Bit-Werten wird der Speicherort der nächsten Zeile durch übersprungen der Gleichung abgerufen, ![ die den Speicherort der nächsten Zeile in GL_PACK_ROW_LENGTH anzeigt.](images/pix02.png)<br/> Komponenten oder Indizes. Die Word- *Komponente* in dieser Beschreibung verweist auf die nicht-Index-Werte rot, grün, blau, Alpha und Tiefe. Das Speicherformat "GL RGB" hat z. b. \_ drei Komponenten pro Pixel: zuerst rot, dann grün und schließlich blau.<br/> |
-| GL. über \_ \_ springen von \_ Pixeln und <br/> GL- \_ Paket, \_ Zeilen überspringen \_ | Diese Werte werden dem Programmierer als praktische Hilfe bereitgestellt. Sie stellen keine Funktionen bereit, die nicht dupliziert werden können, indem Sie den an [**glread Pixel**](glreadpixels.md)übergebenen Zeiger inkrementieren. Das Festlegen \_ von GL- \_ \_ Überspringen von 1 bis *i* ist äquivalent zum Inkrementieren des Zeigers durch *i n* Komponenten oder Indizes, wobei *n* die Anzahl der Komponenten oder Indizes in jedem Pixel ist. Das Festlegen \_ von GL Pack \_ zum Überspringen \_ von Zeilen an *j* entspricht dem Inkrementieren des Zeigers durch *j k* -Komponenten oder-Indizes, wobei " *k* " die Anzahl der Komponenten oder Indizes pro Zeile ist, wie oben im Abschnitt "GL \_ \_ . Row length" berechnet \_ .                                                                                                                                                                                                                                                                                                                                                                                                   |
-| GL- \_ Paket \_ Ausrichtung                                         | Gibt die Ausrichtungs Anforderungen für den Start jeder Pixel Zeile im Arbeitsspeicher an. Die zulässigen Werte sind 1 (Byte-Ausrichtung), 2 (Zeilen ausgerichtet auf gleichmäßig nummerierte Bytes), 4 (Wort Ausrichtung) und 8 (Zeilen werden an doppelten Wortgrenzen gestartet).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| GL \_ PACK \_ SWAP \_ BYTES                                       | True gibt an, dass die Byte reihenfolge für Multibyte-Farbkomponenten, Tiefenkomponenten, Farbindizes oder Schablonenindizes umgekehrt wird. Das heißt, wenn eine Vier-Byte-Komponente aus den Bytes *b* 0, *b* 1, *b* 2, *b* 3 besteht, wird sie im Arbeitsspeicher als *b* 3, *b* 2, *b* 1 , *b* 0 gespeichert, wenn GL PACK SWAP BYTES true \_ \_ \_ ist. GL PACK SWAP BYTES hat keine Auswirkungen auf die Speicher reihenfolge der Komponenten innerhalb eines Pixels, sondern nur auf die Reihenfolge der Bytes innerhalb von Komponenten \_ \_ oder \_ Indizes. Beispielsweise werden die drei Komponenten eines GL-RGB-Formatpixels immer mit Rot zuerst, grüne Sekunde und blauem Dritten gespeichert, unabhängig vom Wert von \_ GL \_ PACK SWAP \_ \_ BYTES.                                                                                                                                                                                                                                                                                                                                                                                               |
+| GL \_ PACK \_ LSB \_ FIRST                                        | True gibt an, dass Bits innerhalb eines Byte von der geringsten bedeutungsreich bis zur signifikantesten geordnet werden. Andernfalls ist das erste Bit in jedem Byte das wichtigste Bit. Dieser Parameter ist nur für Bitmapdaten von Bedeutung.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ZEILENLÄNGE \_ DES GL \_ \_ PACK-PAKETS                                       | Wenn der Wert größer als 0 (null) ist, definiert GL \_ PACK ROW LENGTH die Anzahl der Pixel in einer \_ \_ Zeile. Wenn das erste Pixel einer Zeile an der Position p im Arbeitsspeicher platziert wird, wird die Position des ersten Pixels der nächsten Zeile ermittelt, indem die Gleichung übersprungen wird, die die Position des ersten Pixels der nächsten Zeile ![ in GL_PACK_ROW_LENGTH. ](images/pix01.png) \[ Zeilenzeilenkomponenten oder -indizes, wobei n die Anzahl der Komponenten oder Indizes in einem Pixel ist, l die Anzahl von Pixeln in einer Zeile (Zeilenlänge von gl pack, wenn sie größer als 0 (null) ist, andernfalls das Breitenargument für die Pixelroutine), ist ein der Wert der Gl Pack-Ausrichtung, und s ist die Größe einer einzelnen Komponente in Bytes \]   \- \- \-  \- \-  (wenn   <     =  ein s ist, dann ist es so, als wäre ein s ). bei 1-Bit-Werten wird die Position der nächsten Zeile durch Überspringen der Gleichung ermittelt, die die Position der nächsten Zeile ![ in der GL_PACK_ROW_LENGTH.](images/pix02.png)<br/> Komponenten oder Indizes. Die *Wortkomponente* in dieser Beschreibung bezieht sich auf die Nichtindexwerte Rot, Grün, Blau, Alpha und Tiefe. Storage GL RGB hat beispielsweise drei Komponenten pro Pixel: zuerst rot, dann grün \_ und schließlich blau.<br/> |
+| GL \_ PACK SKIP PIXELS \_ \_ und <br/> GL \_ PACK \_ SKIP \_ ROWS | Diese Werte werden dem Programmierer zur Vereinfachung zur Verfügung gestellt. sie bieten keine Funktionalität, die nicht dupliziert werden kann, indem der an glReadPixel übergebene Zeiger [**inkrementiert wird.**](glreadpixels.md) Das Festlegen von GL PACK SKIP PIXELS auf i entspricht dem Erhöhen des Zeigers um i n Komponenten oder Indizes, wobei n die Anzahl der Komponenten oder Indizes in jedem \_ \_ Pixel \_ ist.    Das Festlegen von GL PACK SKIP ROWS auf j entspricht dem Erhöhen des Zeigers um j k Komponenten oder Indizes, wobei k die Anzahl der Komponenten oder Indizes pro Zeile ist, wie oben im \_ Abschnitt GL PACK ROW LENGTH \_ \_    \_ \_ \_ berechnet.                                                                                                                                                                                                                                                                                                                                                                                                   |
+| GL \_ PACK \_ ALIGNMENT                                         | Gibt die Ausrichtungsanforderungen für den Anfang jeder Pixelzeile im Arbeitsspeicher an. Die zulässigen Werte sind 1 (Byteausrichtung), 2 (Zeilen, die an gleichmäßig nummerierten Bytes ausgerichtet sind), 4 (Wortausrichtung) und 8 (Zeilen beginnen an Doppeltwortgrenzen).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 
 
  
 
-Die anderen sechs Speicher Parameter beeinflussen, wie Pixeldaten aus dem Client Speicher gelesen werden. Diese Werte sind wichtig für [**gldrawpixels**](gldrawpixels.md), [**glTexImage1D**](glteximage1d.md), [**glTexImage2D**](glteximage2d.md), [**glbitmap**](glbitmap.md)und [**glpolygonstippel**](glpolygonstipple.md). Dies sind:
+Die anderen sechs Speicherparameter beeinflussen, wie Pixeldaten aus dem Clientspeicher gelesen werden. Diese Werte sind für [**glDrawPixels,**](gldrawpixels.md) [**glTexImage1D,**](glteximage1d.md) [**glTexImage2D,**](glteximage2d.md) [**glBitmap**](glbitmap.md)und [**glPolygonStipple von bedeutung.**](glpolygonstipple.md) Dies sind:
 
 
 
-| Storage-Parameter                                               | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Storage Parameter                                               | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |-----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Auslagerungs Bytes von GL \_ Entpacken \_ \_                                         | True gibt an, dass die Byte Reihenfolge für multibytefarbkomponenten, tiefen Komponenten, Farbindizes oder Schablonen Indizes umgekehrt wird. Das heißt, wenn eine 4-Byte-Komponente aus den Bytes *b* 0, *b* 1, *b* 2, *b* 3 besteht, wird Sie im Arbeitsspeicher als *b* 3, *b* 2, *b* 1, *b* 0 gespeichert, wenn die Auslagerungs Bytes von GL \_ Entpack den Wert true haben \_ \_ . Die Auslagerungs \_ Bytes von GL Entpack \_ wirken sich \_ nicht auf die Speicher Reihenfolge von Komponenten innerhalb eines Pixels aus, sondern nur auf die Reihenfolge der Bytes innerhalb von Komponenten oder Indizes. So werden z. b. die drei Komponenten eines Formats des PS \_ RGB-Formats immer mit der roten ersten, grünen Sekunde und blauen dritten gespeichert, unabhängig vom Wert der Auslagerungs Bytes von GL \_ Entpack \_ \_ .                                                                                                                                                                                                                                                                                                                                                                                           |
-| \_zuerst GL Entpacken von \_ lsb \_                                          | True gibt an, dass Bits innerhalb eines Bytes von der geringsten Bedeutung bis zu den wichtigsten Zeichen geordnet sind. Andernfalls ist das erste Bit in jedem Byte das wichtigste. Dies ist nur für Bitmapdaten von Bedeutung.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| \_ \_ Zeilenlänge von GL entpacken \_                                         | Wenn der Wert größer als 0 (null) ist, wird \_ \_ \_ die Anzahl der Pixel in einer Zeile mit der Zeilenlänge von GL entpackt Wenn sich das erste Pixel einer Zeile an Position p im Speicher befindet, wird der Speicherort des ersten Pixels der nächsten Zeile durch übersprungen der Gleichung abgerufen, ![ die den Speicherort des ersten Pixels der nächsten Zeile in GL_UNPACK_ROW_LENGTH anzeigt. ](images/pix01.png) \[ neueinzeilige \] Komponenten oder Indizes, wobei *n* die Anzahl der Komponenten oder Indizes in einem Pixel ist, *l* ist die Anzahl der Pixel in einer Zeile (bei einem \- \- \- Wert größer als 0 (null), das width-Argument der Pixel Routine andernfalls), *a* ist der Wert der \- GL \- -Paket Ausrichtung, und *s* ist die Größe (in Bytes) einer einzelnen Komponente (wenn *ein*  <  *s*-Wert ist, dann ist Sie so, als ob *ein*  =  *s*). im Fall von 1-Bit-Werten wird der Speicherort der nächsten Zeile durch übersprungen der Gleichung abgerufen, ![ die den Speicherort der nächsten Zeile in GL_UNPACK_ROW_LENGTH anzeigt.](images/pix02.png)<br/> Komponenten oder Indizes. Die Word- *Komponente* in dieser Beschreibung verweist auf die nicht-Index-Werte rot, grün, blau, Alpha und Tiefe. Das Speicherformat "GL RGB" hat z. b. \_ drei Komponenten pro Pixel: zuerst rot, dann grün und schließlich blau.<br/> |
-| GL \_ entpackt \_ die \_ Pixel und <br/> GL \_ Entpacken \_ von \_ Zeilen überspringen | Diese Werte werden dem Programmierer als praktische Hilfe bereitgestellt. Sie stellen keine Funktionen bereit, die nicht dupliziert werden können, indem Sie den Zeiger erhöhen, der an [**gldrawpixels**](gldrawpixels.md), [**glTexImage1D**](glteximage1d.md), [**glTexImage2D**](glteximage2d.md), [**glbitmap**](glbitmap.md)oder [**glpolygonstiple**](glpolygonstipple.md)übergeben wird. Das Festlegen \_ von "GL Unpack- \_ überspringen" \_ auf " *i* " entspricht dem Inkrementieren des Zeigers durch *i n* Komponenten oder Indizes, wobei " *n* " die Anzahl der Komponenten oder Indizes in jedem Pixel ist. Das Festlegen \_ von GL Unpack \_ zum Überspringen \_ von Zeilen an *j* entspricht dem Inkrementieren des Zeigers durch *j k* -Komponenten oder-Indizes, wobei " *k* " die Anzahl der Komponenten oder Indizes pro Zeile ist, wie oben im Abschnitt "GL \_ unpack- \_ Zeilenlänge" berechnet \_ .                                                                                                                                                                                                                                    |
-| Ausrichtung des GL- \_ entpakets \_                                           | Gibt die Ausrichtungs Anforderungen für den Start jeder Pixel Zeile im Arbeitsspeicher an. Die zulässigen Werte sind 1 (Byte-Ausrichtung), 2 (Zeilen ausgerichtet auf gleichmäßig nummerierte Bytes), 4 (Wort Ausrichtung) und 8 (Zeilen werden an doppelten Wortgrenzen gestartet).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| GL \_ UNPACK \_ SWAP \_ BYTES                                         | True gibt an, dass die Byte reihenfolge für Multibyte-Farbkomponenten, Tiefenkomponenten, Farbindizes oder Schablonenindizes umgekehrt wird. Das heißt, wenn eine Vier-Byte-Komponente aus Bytes *b* 0, *b* 1, *b* 2, *b* 3 besteht, wird sie im Arbeitsspeicher als *b* 3, *b* 2, *b* 1, *b* 0 gespeichert, wenn GL \_ UNPACK SWAP \_ BYTES true \_ ist. GL UNPACK SWAP BYTES hat keine Auswirkungen auf die Speicher reihenfolge der Komponenten innerhalb eines Pixels, sondern nur auf die Reihenfolge der Bytes innerhalb von Komponenten \_ \_ oder \_ Indizes. Beispielsweise werden die drei Komponenten eines GL RGB-Formatpixels immer mit Rot zuerst, grüne Sekunde und blauem dritten Platz gespeichert, unabhängig vom Wert von \_ GL \_ UNPACK \_ SWAP \_ BYTES.                                                                                                                                                                                                                                                                                                                                                                                           |
+| GL \_ UNPACK \_ LSB \_ FIRST                                          | True gibt an, dass Bits innerhalb eines Byte von der geringsten bedeutungsreich bis zur signifikantesten geordnet werden. Andernfalls ist das erste Bit in jedem Byte das wichtigste Bit. Dies ist nur für Bitmapdaten von Bedeutung.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| GL \_ UNPACK \_ ROW \_ LENGTH                                         | Wenn der Wert größer als 0 (null) ist, definiert GL \_ UNPACK \_ ROW LENGTH die Anzahl der Pixel in einer \_ Zeile. Wenn das erste Pixel einer Zeile an der Position p im Arbeitsspeicher platziert wird, wird die Position des ersten Pixels der nächsten Zeile durch Überspringen der Gleichung ermittelt, die die Position des ersten Pixels der nächsten Zeile ![ in GL_UNPACK_ROW_LENGTH. ](images/pix01.png) \[ Zeilenzeilenkomponenten oder -indizes, wobei n die Anzahl der Komponenten oder Indizes in einem Pixel ist, l die Anzahl von Pixeln in einer Zeile (Zeilenlänge von gl pack, wenn sie größer als 0 (null) ist, andernfalls das Breitenargument für die Pixelroutine), ist ein der Wert der Gl Pack-Ausrichtung, und s ist die Größe einer einzelnen Komponente in Bytes \]   \- \- \-  \- \-  (wenn   <     =  ein s ist, dann ist es so, als wäre ein s ). bei 1-Bit-Werten wird die Position der nächsten Zeile durch Überspringen der Gleichung ermittelt, die die Position der nächsten Zeile ![ in GL_UNPACK_ROW_LENGTH.](images/pix02.png)<br/> Komponenten oder Indizes. Die *Wortkomponente* in dieser Beschreibung bezieht sich auf die Nichtindexwerte Rot, Grün, Blau, Alpha und Tiefe. Storage GL RGB hat beispielsweise drei Komponenten pro Pixel: zuerst rot, dann grün \_ und schließlich blau.<br/> |
+| GL \_ UNPACK \_ SKIP PIXELS \_ and <br/> GL \_ UNPACK \_ SKIP \_ ROWS | Diese Werte werden dem Programmierer zur Vereinfachung zur Verfügung gestellt. sie bieten keine Funktionalität, die nicht dupliziert werden kann, indem der an [**glDrawPixels,**](gldrawpixels.md) [**glTexImage1D,**](glteximage1d.md) [**glTexImage2D,**](glteximage2d.md) [**glBitmap**](glbitmap.md)oder [**glPolygonStipple**](glpolygonstipple.md)übergebene Zeiger inkrementiert wird. Das Festlegen von GL UNPACK SKIP PIXELS auf i entspricht dem Erhöhen des Zeigers um i n Komponenten oder Indizes, wobei n die Anzahl der Komponenten oder Indizes in jedem \_ \_ Pixel \_ ist.    Das Festlegen von GL UNPACK SKIP ROWS auf j entspricht dem Erhöhen des Zeigers um j k Komponenten oder Indizes, wobei k die Anzahl der Komponenten oder Indizes pro Zeile ist, wie oben im \_ \_ Abschnitt GL \_ UNPACK ROW LENGTH    \_ \_ \_ berechnet.                                                                                                                                                                                                                                    |
+| GL \_ ENTPACKEN DER \_ AUSRICHTUNG                                           | Gibt die Ausrichtungsanforderungen für den Anfang jeder Pixelzeile im Arbeitsspeicher an. Die zulässigen Werte sind 1 (Byteausrichtung), 2 (Zeilen, die an gleichmäßig nummerierten Bytes ausgerichtet sind), 4 (Wortausrichtung) und 8 (Zeilen beginnen an Doppeltwortgrenzen).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 
 
@@ -81,7 +81,7 @@ Die anderen sechs Speicher Parameter beeinflussen, wie Pixeldaten aus dem Client
 *param* 
 </dt> <dd>
 
-Der Wert, auf den *PName* festgelegt ist.
+Der Wert, auf *den pname* festgelegt ist.
 
 </dd> </dl>
 
@@ -89,64 +89,64 @@ Der Wert, auf den *PName* festgelegt ist.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit der **glpixelstore** -Funktion werden Pixel Speicher Modi festgelegt, die sich auf den Vorgang der nachfolgenden [**gldrawpixels**](gldrawpixels.md) und [**glread Pixel**](glreadpixels.md) auswirken, sowie das Entpacken von Polygon-stippingmustern (siehe [**glpolygonstippel**](glpolygonstipple.md)), Bitmaps (siehe [**glbitmap**](glbitmap.md)) und Textur Muster (siehe [**glTexImage1D**](glteximage1d.md), [**glTexImage2D**](glteximage2d.md), [**glTexSubImage1D**](gltexsubimage1d.md)und [**glTexSubImage2D**](gltexsubimage2d.md)).
+Die **glPixelStore-Funktion** legt Pixelspeichermodi fest, die sich auf den Betrieb nachfolgender [**glDrawPixels**](gldrawpixels.md) und [**glReadPixels**](glreadpixels.md) sowie das Entpacken von Polygon-Ausschnittmustern (siehe [**glPolygonStipple),**](glpolygonstipple.md)Bitmaps (siehe [**glBitmap)**](glbitmap.md)und Texturmuster auswirken (siehe [**glTexImage1D**](glteximage1d.md), [**glTexImage2D,**](glteximage2d.md) [**glTexSubImage1D**](gltexsubimage1d.md)und [**glTexSubImage2D**](gltexsubimage2d.md)).
 
-In der folgenden Tabelle sind der Typ, der Anfangswert und der Bereich gültiger Werte für jeden der Speicher Parameter angegeben, die mit **glpixelstore** festgelegt werden können.
+Die folgende Tabelle enthält den Typ, den Anfangswert und den Bereich gültiger Werte für jeden der Speicherparameter, die mit **glPixelStore festgelegt werden können.**
 
 
 
-| PName                    | type    | Anfangswert | Gültiger Bereich   |
+| Pname                    | type    | Anfangswert | Gültiger Bereich   |
 |--------------------------|---------|---------------|---------------|
-| Auslagerungs Bytes von GL \_ Pack \_ \_    | Boolean | false         | true oder false |
-| Auslagerungs Bytes von GL \_ Pack \_ \_    | Boolean | false         | true oder false |
-| Länge der GL- \_ Paket \_ Zeile \_    | integer | 0             | \[0,?)        |
-| GL- \_ Paket, \_ Zeilen überspringen \_     | integer | 0             | \[0,?)        |
-| GL. über \_ \_ springen von \_ Pixeln   | integer | 0             | \[0,?)        |
-| GL- \_ Paket \_ Ausrichtung      | integer | 4             | 1, 2, 4 oder 8 |
-| Auslagerungs Bytes von GL \_ Entpacken \_ \_  | Boolean | false         | true oder false |
-| \_zuerst GL Entpacken von \_ lsb \_   | Boolean | false         | true oder false |
-| \_ \_ Zeilenlänge von GL entpacken \_  | integer | 0             | \[0,?)        |
-| GL \_ Entpacken \_ von \_ Zeilen überspringen   | integer | 0             | \[0,?)        |
-| Entpacken von GL- \_ Entpacken \_ \_ | integer | 0             | \[0,?)        |
-| Ausrichtung des GL- \_ entpakets \_    | integer | 4             | 1, 2, 4 oder 8 |
+| GL \_ PACK \_ SWAP \_ BYTES    | Boolean | false         | true oder false |
+| GL \_ PACK \_ SWAP \_ BYTES    | Boolean | false         | true oder false |
+| ZEILENLÄNGE \_ DES GL \_ \_ PACK-PAKETS    | integer | 0             | \[0,?)        |
+| GL \_ PACK \_ SKIP \_ ROWS     | integer | 0             | \[0,?)        |
+| GL \_ PACK \_ SKIP \_ PIXELS   | integer | 0             | \[0,?)        |
+| GL \_ PACK \_ ALIGNMENT      | integer | 4             | 1, 2, 4 oder 8 |
+| GL \_ UNPACK \_ SWAP \_ BYTES  | Boolean | false         | true oder false |
+| GL \_ UNPACK \_ LSB \_ FIRST   | Boolean | false         | true oder false |
+| GL \_ UNPACK \_ ROW \_ LENGTH  | integer | 0             | \[0,?)        |
+| GL \_ UNPACK \_ SKIP \_ ROWS   | integer | 0             | \[0,?)        |
+| GL \_ ENTPACKEN SKIP \_ \_ PIXELS | integer | 0             | \[0,?)        |
+| GL \_ ENTPACKEN DER \_ AUSRICHTUNG    | integer | 4             | 1, 2, 4 oder 8 |
 
 
 
  
 
-Die [**glpixelstoref**](glpixelstoref.md) -Funktion kann verwendet werden, um einen beliebigen Pixel Speicher Parameter festzulegen. Wenn der Parametertyp Boolean ist, und wenn *param* 0,0 ist, dann ist der-Parameter false. Andernfalls wird Sie auf "true" festgelegt. Wenn " *PName* " ein ganzzahliger Typparameter ist, wird *param* auf die nächste ganze Zahl gerundet.
+Die [**glPixelStoref-Funktion**](glpixelstoref.md) kann zum Festlegen eines beliebigen Pixelspeicherparameters verwendet werden. Wenn der Parametertyp boolesch ist und *param* 0,0 ist, ist der Parameter false. Andernfalls wird sie auf TRUE festgelegt. Wenn *pname ein* ganzzahliger Typparameter ist, wird *der Parameter* auf die nächste ganze Zahl gerundet.
 
-Ebenso kann die **glpixelstorei** -Funktion auch verwendet werden, um beliebige Pixel Speicher Parameter festzulegen. Boolesche Parameter werden auf false festgelegt, wenn *param* den Wert 0 hat, andernfalls true. Der Parameter *param* wird in den Gleit Komma Wert konvertiert, bevor er den Real-Wert-Parametern zugewiesen wird.
+Ebenso kann die **glPixelStorei-Funktion** auch verwendet werden, um einen der Pixelspeicherparameter festlegen. Boolesche Parameter werden auf FALSE festgelegt, *wenn param* 0 und andernfalls TRUE ist. Der *Parameter param* wird in einen Gleitkomma konvertiert, bevor er echten Parametern zugewiesen wird.
 
-Die Pixel Speicher Modi, die in Kraft treten, wenn " [**gldrawpixels**](gldrawpixels.md)", " [**glread Pixels**](glreadpixels.md)", " [**glTexImage1D**](glteximage1d.md)", " [**glTexImage2D**](glteximage2d.md)", " [**glbitmap**](glbitmap.md)" oder " [**glpolygonstipple**](glpolygonstipple.md) " in einer Anzeigeliste platziert werden, steuern die Interpretation Die Pixel Speicher Modi, die beim Ausführen einer Anzeigeliste wirksam sind, sind nicht signifikant.
+Die Pixelspeichermodi sind wirksam, wenn [**glDrawPixels,**](gldrawpixels.md) [**glReadPixels,**](glreadpixels.md) [**glTexImage1D,**](glteximage1d.md) [**glTexImage2D,**](glteximage2d.md) [**glBitmap**](glbitmap.md)oder [**glPolygonStipple**](glpolygonstipple.md) in einer Anzeigeliste platziert werden, um die Interpretation von Speicherdaten zu steuern. Die Pixelspeichermodi, die beim Ausführen einer Anzeigeliste wirksam sind, sind nicht von Bedeutung.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glpixelstore** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glPixelStore ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Pack \_ Swap \_ Bytes
+[**glGet mit**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) Argument GL \_ PACK SWAP \_ \_ BYTES
 
-**glget** mit dem Argument GL \_ Pack \_ lsb \_ First
+**glGet** mit dem Argument GL \_ PACK \_ LSB \_ FIRST
 
-**glget** mit Argument, GL \_ Pack, \_ Zeilen \_ Länge
+**glGet** mit argument GL \_ PACK \_ ROW \_ LENGTH
 
-**glget** mit dem Argument \_ GL \_ Pack \_ Zeilen überspringen
+**glGet** mit Argument GL \_ PACK \_ SKIP \_ ROWS
 
-**glget** mit dem Argument GL \_ Pack \_ Skip \_ Pixels
+**glGet mit** Argument GL \_ PACK SKIP \_ \_ PIXELS
 
-**glget** mit der "Argument GL Pack"- \_ \_ Ausrichtung
+**glGet** mit Argument GL \_ PACK \_ ALIGNMENT
 
-**glget** mit dem Argument GL Entpack-Auslagerungs \_ \_ \_ Bytes
+**glGet mit** Argument GL \_ UNPACK \_ SWAP \_ BYTES
 
-**glget** mit dem Argument GL \_ Entpack \_ lsb \_ First
+**glGet** mit dem Argument GL \_ UNPACK \_ LSB \_ FIRST
 
-**glget** mit Argument GL \_ Entpacken der \_ Zeilen \_ Länge
+**glGet mit** dem Argument GL \_ UNPACK \_ ROW \_ LENGTH
 
-**glget** mit dem Argument GL \_ Entpacken von \_ Zeilen überspringen \_
+**glGet mit** argument GL \_ UNPACK \_ SKIP \_ ROWS
 
-**glget** mit dem Argument GL \_ unpack \_ Skip \_ Pixels
+**glGet mit** argument GL \_ UNPACK \_ SKIP \_ PIXELS
 
-**glget** mit Argument GL \_ Entpacken der \_ Ausrichtung
+**glGet mit** argument GL \_ UNPACK \_ ALIGNMENT
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -156,8 +156,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glpixels
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -169,28 +169,28 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glpixels
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glbitmap**](glbitmap.md)
+[**glBitmap**](glbitmap.md)
 </dt> <dt>
 
-[**gldrawpixels**](gldrawpixels.md)
+[**glDrawPixels**](gldrawpixels.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glpixelmap**](glpixelmap.md)
+[**glPixelMap**](glpixelmap.md)
 </dt> <dt>
 
-[**glpixeltransfer**](glpixeltransfer.md)
+[**glPixelTransfer**](glpixeltransfer.md)
 </dt> <dt>
 
-[**glpixelzoom**](glpixelzoom.md)
+[**glPixelZoom**](glpixelzoom.md)
 </dt> <dt>
 
-[**glpolygonstippel**](glpolygonstipple.md)
+[**glPolygonStipple**](glpolygonstipple.md)
 </dt> <dt>
 
-[**glread Pixels**](glreadpixels.md)
+[**glReadPixels**](glreadpixels.md)
 </dt> <dt>
 
 [**glTexImage1D**](glteximage1d.md)

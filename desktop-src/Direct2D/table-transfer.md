@@ -61,7 +61,7 @@ Die Übertragungsfunktion basiert auf einer Liste der Eingaben V=(V0,V1,V2,V3, V
 
 Die Intensität des Eingabepixels wird als C dargestellt. Die Intensität des Ausgabepixels, C kann mit der Gleichung berechnet werden.
 
-Wählen Sie für einen Wert C einen Wert k aus, sodass: k/N = C < (k+1)/N
+Wählen Sie für einen Wert C den Wert k aus, sodass: k/N = C < (k+1)/N
 
 Die Ausgabe C wird mithilfe der folgenden Gleichung berechnet: C' = V? + (C - k/N) \* N \* (V??? 1? - V?)
 

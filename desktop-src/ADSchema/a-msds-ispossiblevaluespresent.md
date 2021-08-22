@@ -36,7 +36,7 @@ Dieses Attribut identifiziert, ob ms-DS-Claim-Possible-Values für die verknüpf
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2186              |
 | System-ID-GUID    | 6fabdcda-8c53-204f-b1a4-9df0c67c1eb4 |
-| Syntax            | [**Boolean**](s-boolean.md)         |
+| Syntax            | [**Boolesch**](s-boolean.md)         |
 
 
 

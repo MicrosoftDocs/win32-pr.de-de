@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentstateexception-Konstruktor'
-title: Esentstateexception-Konstruktor
+description: 'Weitere Informationen zu: EsentStateException-Konstruktor'
+title: EsentStateException-Konstruktor
 TOCTitle: 'EsentStateException constructor '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.EsentStateException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentstateexception.esentstateexception(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: fa2e97f21e6c42c58a08eb28a853e6089f5b9bdf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d1fa8487b9b62689adb268f4daa821b9fab6385ae1514bc7d0d50973326f8b47
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104567055"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118769726"
 ---
-# <a name="esentstateexception-constructor"></a>Esentstateexception-Konstruktor
+# <a name="esentstateexception-constructor"></a>EsentStateException-Konstruktor
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -39,13 +39,13 @@ Geerbte Member einschließen
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="dn350639(v=exchg.10).md">Esentstateexception (SerializationInfo, StreamingContext)</a></td>
-<td>Initialisiert eine neue Instanz der esentstateexception-Klasse. Dieser Konstruktor wird verwendet, um eine serialisierte Ausnahme zu deserialisieren.</td>
+<td><a href="dn350639(v=exchg.10).md">EsentStateException(SerializationInfo, StreamingContext)</a></td>
+<td>Initialisiert eine neue Instanz der EsentStateException-Klasse. Dieser Konstruktor wird verwendet, um eine serialisierte Ausnahme zu deserialisieren.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="dn334929(v=exchg.10).md">Esentstateexception (Zeichenfolge, JET_err)</a></td>
-<td>Initialisiert eine neue Instanz der esentstateexception-Klasse.</td>
+<td><a href="dn334929(v=exchg.10).md">EsentStateException(String, JET_err)</a></td>
+<td>Initialisiert eine neue Instanz der EsentStateException-Klasse.</td>
 </tr>
 </tbody>
 </table>
@@ -53,12 +53,12 @@ Geerbte Member einschließen
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [EsentStateException-Klasse](./esentstateexception-class.md)
 
-[Esentstateexception-Member](./esentstateexception-members.md)
+[EsentStateException-Member](./esentstateexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

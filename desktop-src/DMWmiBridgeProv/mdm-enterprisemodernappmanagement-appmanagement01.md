@@ -1,6 +1,6 @@
 ---
 title: MDM_EnterpriseModernAppManagement_AppManagement01-Klasse
-description: Die MDM \_ enterpritsmodernappmanagement \_ AppManagement01-Klasse startet die Windows Update Scan und meldet den letzten Überprüfungs Fehler.
+description: Die MDM \_ EnterpriseModernAppManagement \_ AppManagement01-Klasse startet die Windows Updateüberprüfung und meldet den letzten Überprüfungsfehler.
 ms.assetid: f579a7c9-2e98-4e34-b45b-db8a4d553c57
 keywords:
 - MDM_EnterpriseModernAppManagement_AppManagement01-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: be1f2a3739fe16d4a13e409d7d152645d4653336
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f7ed4c744b9e5a594f0534c6c6ce384203fa4c42cfc91a63249cf1e1f6cdaedf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104213723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119018148"
 ---
-# <a name="mdm_enterprisemodernappmanagement_appmanagement01-class"></a>MDM \_ enterprismodernappmanagement \_ AppManagement01-Klasse
+# <a name="mdm_enterprisemodernappmanagement_appmanagement01-class"></a>MDM \_ EnterpriseModernAppManagement \_ AppManagement01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ enterpritsmodernappmanagement \_ AppManagement01** -Klasse startet die Windows Update Scan und meldet den letzten Überprüfungs Fehler.
+Die **MDM \_ EnterpriseModernAppManagement \_ AppManagement01-Klasse** startet die Windows Updateüberprüfung und meldet den letzten Überprüfungsfehler.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -49,21 +49,21 @@ class MDM_EnterpriseModernAppManagement_AppManagement01
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ enterpritarmodernappmanagement \_ AppManagement01** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ EnterpriseModernAppManagement \_ AppManagement01-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MDM \_ enterprismodernappmanagement \_ AppManagement01** -Klasse verfügt über diese Methoden.
+Die **MDM \_ EnterpriseModernAppManagement \_ AppManagement01-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                               | BESCHREIBUNG                                             |
+| Methode                                                                                               | Beschreibung                                             |
 |:-----------------------------------------------------------------------------------------------------|:--------------------------------------------------------|
-| [**Removepackagemethod**](mdm-enterprisemodernappmanagement-appmanagement01-removepackagemethod.md) | Methode zum Entfernen von Paketen.<br/>                |
-| [**Updatescanmethod**](mdm-enterprisemodernappmanagement-appmanagement01-updatescanmethod.md)       | Methode zum Starten des Windows Update Scans.<br/> |
+| [**RemovePackageMethod**](mdm-enterprisemodernappmanagement-appmanagement01-removepackagemethod.md) | Methode zum Entfernen von Paketen.<br/>                |
+| [**UpdateScanMethod**](mdm-enterprisemodernappmanagement-appmanagement01-updatescanmethod.md)       | Methode zum Starten der Windows Updateüberprüfung.<br/> |
 
 
 
@@ -71,14 +71,14 @@ Die **MDM \_ enterprismodernappmanagement \_ AppManagement01** -Klasse verfügt 
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ enterprismodernappmanagement \_ AppManagement01** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ EnterpriseModernAppManagement \_ AppManagement01-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Appinventoryquery](/windows/client-management/mdm/enterprisemodernappmanagement-csp#appmanagement-appinventoryquery)
+[AppInventoryQuery](/windows/client-management/mdm/enterprisemodernappmanagement-csp#appmanagement-appinventoryquery)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -86,10 +86,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Appinventoryresults](/windows/client-management/mdm/enterprisemodernappmanagement-csp#appmanagement-appinventoryresults)
+[AppInventoryResults](/windows/client-management/mdm/enterprisemodernappmanagement-csp#appmanagement-appinventoryresults)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -100,20 +100,20 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "appmanagement".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "AppManagement".
 
 </dd> <dt>
 
-[Lastscanerror](/windows/client-management/mdm/enterprisemodernappmanagement-csp#appmanagement-lastscanerror)
+[LastScanError](/windows/client-management/mdm/enterprisemodernappmanagement-csp#appmanagement-lastscanerror)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -124,26 +124,26 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/EnterpriseModernAppManagement/".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/EnterpriseModernAppManagement/".
 
 </dd> <dt>
 
 [RemovePackage](/windows/client-management/mdm/enterprisemodernappmanagement-csp#appmanagement-removepackage)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -157,19 +157,19 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

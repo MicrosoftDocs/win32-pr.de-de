@@ -25,7 +25,7 @@ Gibt eine Konstante an, die die Auflistung von Befehlen identifiziert, die in de
 
 ## <a name="remarks"></a>Hinweise
 
-**Benutzeroberfläche \_ ALL \_ COMMANDS** ist nützlich, wenn sie für alle Befehle auf ähnliche Eigenschaften zugreifen müssen. Beispielsweise können **UI \_ ALL \_ COMMANDS** an [**IUIFramework::InvalidateUICommand**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand) übergeben werden, um alle Menübandbefehle ungültig zu machen und zu aktualisieren, indem die Hostanwendung nach neuen Eigenschaftswerten abfragt.
+**Benutzeroberfläche \_ ALL \_ COMMANDS** ist nützlich, wenn sie für alle Befehle auf ähnliche Eigenschaften zugreifen müssen. Beispielsweise kann **UI \_ ALL \_ COMMANDS** an [**IUIFramework::InvalidateUICommand**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand) übergeben werden, um alle Menübandbefehle ungültig zu machen und zu aktualisieren, indem die Hostanwendung nach neuen Eigenschaftswerten abfragt.
 
 ## <a name="requirements"></a>Anforderungen
 

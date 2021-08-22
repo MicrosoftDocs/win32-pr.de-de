@@ -1,53 +1,53 @@
 ---
 title: DirectComposition
-description: In diesem Thema wird der Zweck von Microsoft directcomposition erläutert, dessen Lauf Zeitanforderungen identifiziert und der Programmier Hintergrund beschrieben, den Sie für die effektive Verwendung von Microsoft directcomposition benötigen.
+description: In diesem Thema wird der Zweck von Microsoft DirectComposition erläutert, die Laufzeitanforderungen identifiziert und der Programmierhintergrund beschrieben, den Sie benötigen, um Microsoft DirectComposition effektiv zu verwenden.
 ms.assetid: 40e2d02b-77e8-425f-ac5e-3dcddef08173
 keywords:
 - DirectComposition
-- Directcomposition-API
-- Microsoft directcomposition
+- DirectComposition-API
+- Microsoft DirectComposition
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bb34a4bb3bb7c0ffe370777888e20704fd0165d0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ca1b13dbd0ee4893f1b208cd88d7fd1251b5fb7ece2400b7e0b195e84865b2d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985410"
 ---
 # <a name="directcomposition"></a>DirectComposition
 
 > [!NOTE]
-> Für apps unter Windows 10 wird die Verwendung von Windows. UI. Composition-APIs anstelle von directcomposition empfohlen. Weitere Informationen finden Sie unter [modernisieren ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
+> Für Apps auf Windows 10 empfehlen wir die Verwendung von Windows.UI.Composition-APIs anstelle von DirectComposition. Weitere Informationen finden Sie unter [Modernisieren Ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
 
 ## <a name="purpose"></a>Zweck
 
-Microsoft directcomposition ist eine Windows-Komponente, die eine leistungsstarke bitmapkomposition mit Transformationen, Effekten und Animationen ermöglicht. Anwendungsentwickler können die DirectComposition-API zum Erstellen von visuell ansprechenden Benutzeroberflächen verwenden, die umfassende und fließende animierte Übergänge von einem visuellen Objekt zum nächsten ermöglichen.
+Microsoft DirectComposition ist eine Windows Komponente, die eine leistungsstarke Bitmapkomposition mit Transformationen, Effekten und Animationen ermöglicht. Anwendungsentwickler können die DirectComposition-API zum Erstellen von visuell ansprechenden Benutzeroberflächen verwenden, die umfassende und fließende animierte Übergänge von einem visuellen Objekt zum nächsten ermöglichen.
 
-Directcomposition ermöglicht umfassende und fließende Übergänge durch das Erreichen einer hohen Framerate, die Verwendung von Grafikhardware und die unabhängige Funktionsweise des UI-Threads. Directcomposition kann bitmapinhalte akzeptieren, die von verschiedenen renderingbibliotheken gezeichnet werden, einschließlich Microsoft DirectX-Bitmaps und Bitmaps, die in einem Fenster (HWND-Bitmaps) gerendert werden. Außerdem unterstützt directcomposition eine Vielzahl von Transformationen, wie z. b. 2D-affine Transformationen und 3D-Perspektiven Transformationen, sowie grundlegende Effekte wie Clipping und Deckkraft.
+DirectComposition ermöglicht umfangreiche und fließende Übergänge, indem eine hohe Framerate erreicht wird, Grafikhardware verwendet wird und unabhängig vom UI-Thread ausgeführt wird. DirectComposition kann Bitmapinhalte akzeptieren, die von verschiedenen Renderingbibliotheken gezeichnet werden, einschließlich Microsoft DirectX-Bitmaps und Bitmaps, die in einem Fenster gerendert werden (HWND-Bitmaps). Außerdem unterstützt DirectComposition eine Vielzahl von Transformationen, z. B. 2D-affine Transformationen und 3D-Perspektiventransformationen, sowie grundlegende Effekte wie Clipping und Deckkraft.
 
-Directcomposition ist so konzipiert, dass die Erstellung von [*visuellen*](directcomposition-glossary.md) Elementen und die Erstellung animierter Übergänge vereinfacht werden. Wenn Ihre Anwendung bereits Renderingcode enthält oder bereits die empfohlene DirectX-API verwendet, müssen Sie nur eine minimale Menge an Arbeit durchführen, um directcomposition effektiv zu verwenden.
+DirectComposition wurde entwickelt, um das Verfassen von [*Visuals*](directcomposition-glossary.md) und das Erstellen animierter Übergänge zu vereinfachen. Wenn Ihre Anwendung bereits Renderingcode enthält oder bereits die empfohlene DirectX-API verwendet, müssen Sie nur einen minimalen Arbeitsaufwand durchführen, um DirectComposition effektiv zu verwenden.
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
-Die directcomposition-API ist für erfahrene und hochgradig leistungsfähige Grafik Entwickler gedacht, die C/C++ kennen, ein solides Verständnis der Component Object Model (com) haben und mit den Windows-Programmier Konzepten vertraut sind.
+Die DirectComposition-API ist für erfahrene und hochgradig leistungsfähige Grafikentwickler bestimmt, die C/C++ kennen, über ein solides Verständnis der Component Object Model (COM) verfügen und mit Windows Programmierkonzepten vertraut sind.
 
 ## <a name="run-time-requirements"></a>Laufzeitanforderungen
 
-Directcomposition wurde in Windows 8 eingeführt. Es ist in 32-Bit-, 64-Bit-und Arm-Plattformen enthalten.
+DirectComposition wurde in Windows 8 eingeführt. Sie ist in 32-Bit-, 64-Bit- und ARM-Plattformen enthalten.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                       | BESCHREIBUNG                                                                                                                                                    |
+| Thema                                                                       | Beschreibung                                                                                                                                                    |
 |-----------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Gründe für die Verwendung von directcomposition](why-use-directcomposition-.md)<br/>     | In diesem Thema werden die Funktionen und Vorteile von directcomposition beschrieben. <br/>                                                                           |
-| [Verwenden von directcomposition](how-to-use-directcomposition.md)<br/> | In diesem Abschnitt werden bewährte Methoden für die Verwendung der directcomposition-API beschrieben, und es wird veranschaulicht, wie die API verwendet wird, um mehrere gängige Aufgaben auszuführen. <br/> |
-| [Directcomposition-Konzepte](directcomposition-concepts.md)<br/>     | Dieser Abschnitt enthält eine konzeptionelle Übersicht über directcomposition.<br/>                                                                                   |
-| [Directcomposition-Referenz](reference.md)<br/>                     | Dieser Abschnitt enthält ausführliche Referenzinformationen zu den Elementen, die die directcomposition-API bilden.<br/>                                       |
-| [Directcomposition-Beispiele](directcomposition-code-samples.md)<br/>  | Die folgenden Beispielanwendungen zeigen, wie Sie die directcomposition-API verwenden und ihre Funktionen veranschaulichen. <br/>                                      |
-| [Directcomposition-Glossar](directcomposition-glossary.md)<br/>     | In diesem Thema werden die directcomposition-Begriffe definiert. <br/>                                                                                                        |
+| [Gründe für die Verwendung von DirectComposition](why-use-directcomposition-.md)<br/>     | In diesem Thema werden die Funktionen und Vorteile von DirectComposition beschrieben. <br/>                                                                           |
+| [Verwenden von DirectComposition](how-to-use-directcomposition.md)<br/> | In diesem Abschnitt werden bewährte Methoden für die Verwendung der DirectComposition-API beschrieben, und es wird veranschaulicht, wie Sie die API verwenden, um mehrere allgemeine Aufgaben auszuführen. <br/> |
+| [DirectComposition-Konzepte](directcomposition-concepts.md)<br/>     | Dieser Abschnitt bietet eine konzeptionelle Übersicht über DirectComposition.<br/>                                                                                   |
+| [DirectComposition-Referenz](reference.md)<br/>                     | Dieser Abschnitt enthält ausführliche Referenzinformationen zu den Elementen, die die DirectComposition-API bilden.<br/>                                       |
+| [DirectComposition-Beispiele](directcomposition-code-samples.md)<br/>  | Die folgenden Beispielanwendungen veranschaulichen die Verwendung der DirectComposition-API und deren Funktionen. <br/>                                      |
+| [DirectComposition-Glossar](directcomposition-glossary.md)<br/>     | In diesem Thema werden DirectComposition-Begriffe definiert. <br/>                                                                                                        |
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: Break p-vs
-description: Unterbrechen Sie die aktuelle Schleife bedingt bei den nächstgelegenen ENDLOOP-vs oder ENDREP-vs. verwenden Sie eine der Komponenten des Prädikats als Bedingung, um zu bestimmen, ob die Anweisung durchgeführt werden soll oder nicht.
+title: breakp – vs
+description: Bedingtes Unterbrechen der aktuellen Schleife am nächsten Endeloop – vs oder endrep – vs. Verwenden Sie eine der Komponenten des Prädikatregisters als Bedingung, um zu bestimmen, ob die Anweisung ausgeführt werden soll.
 ms.assetid: 940252a0-6f6a-45d8-9d2f-315cc97686ca
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,56 +9,56 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: dbd0d5e20040bc2d353287eb4243c9e9d6d21dc8
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 8a768acaecaa77a42990b34c50cd8eccb24d61353550751f3ed830e7844d7624
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104038334"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118794314"
 ---
-# <a name="breakp---vs"></a>Break p-vs
+# <a name="breakp---vs"></a>breakp – vs
 
-Unterbrechen Sie die aktuelle Schleife bedingt bei den nächstgelegenen [endschleifen-vs](endloop---vs.md) oder [ENDREP-vs](endrep---vs.md). Verwenden Sie eine der Komponenten des Prädikats "Register" als Bedingung, um zu bestimmen, ob die Anweisung durchgeführt werden soll.
+Bedingtes Unterbrechen der aktuellen Schleife am nächsten [Endeloop – vs oder](endloop---vs.md) [endrep – vs](endrep---vs.md). Verwenden Sie eine der Komponenten des Prädikatregisters als Bedingung, um zu bestimmen, ob die Anweisung ausgeführt werden soll.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| Break p \[ ! \] P0. Stuben|Teenie|z|Löw |
+| breakp \[ ! \] p0. {x\|y\|z\|w} |
 |-----------------------------|
 
 
 
- 
+ 
 
 Hierbei gilt:
 
--   \[!\] Optionaler boolescher Wert nicht.
--   P0 ist das Prädikat Register. Siehe [Predicate Register](dx9-graphics-reference-asm-vs-registers-predicate.md).
--   {x \| y \| z \| w} ist das erforderliche Replizieren von Replizieren auf p0.
+-   \[!\] Optionaler boolescher WERT NOT.
+-   p0 ist das Prädikatregister. Weitere Informationen finden Sie unter [Prädikatregister.](dx9-graphics-reference-asm-vs-registers-predicate.md)
+-   {x \| y \| z \| w} ist die erforderliche Replikationswizzle auf p0.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| Break p                 |      |      | x    | x     | x    | x     |
+| Breakp                 |      |      | x    | x     | x    | x     |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

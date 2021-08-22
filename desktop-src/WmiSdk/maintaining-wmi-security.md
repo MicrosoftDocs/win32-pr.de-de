@@ -1,67 +1,67 @@
 ---
-description: WMI-Sicherheit konzentriert sich auf den Schutz des Zugriffs auf Namespace Daten. WMI gewährt zunächst den Benutzern, die durch das WMI-Steuerelement und DCOM-Einstellungen angegeben werden, Zugriff auf Gruppen von Benutzern, und dann ermitteln die Anbieter, ob der Benutzer Zugriff auf Namespace Daten haben sollte.
+description: Die WMI-Sicherheit konzentriert sich auf den Schutz des Zugriffs auf Namespacedaten. WMI gewährt zunächst Zugriff auf Benutzergruppen, wie in den WMI-Steuerelement- und DCOM-Einstellungen angegeben, und dann bestimmen Anbieter, ob der Benutzer Zugriff auf Namespacedaten haben soll.
 ms.assetid: 88a2538a-ae30-4a1a-9d16-f0cd9419b2ed
 ms.tgt_platform: multiple
 title: Verwalten der WMI-Sicherheit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f25cbf4a29567b263d6bd279aac9e2e6e21c523e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d79467b3baffd030cae1022f65bc0b8a97242c5e8bbe2f870753a3d3794b8705
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118818418"
 ---
 # <a name="maintaining-wmi-security"></a>Verwalten der WMI-Sicherheit
 
-WMI-Sicherheit konzentriert sich auf den Schutz des Zugriffs auf Namespace Daten. WMI gewährt zunächst den Benutzern, die durch das [*WMI-Steuer*](gloss-w.md) Element und DCOM-Einstellungen angegeben werden, Zugriff auf Gruppen von Benutzern, und dann ermitteln die Anbieter, ob der Benutzer Zugriff auf Namespace Daten haben sollte.
+Die WMI-Sicherheit konzentriert sich auf den Schutz des Zugriffs auf Namespacedaten. WMI gewährt zunächst Zugriff auf Benutzergruppen, wie in den [*WMI-Steuerelement-*](gloss-w.md) und DCOM-Einstellungen angegeben, und dann bestimmen Anbieter, ob der Benutzer Zugriff auf Namespacedaten haben soll.
 
-In diesem Thema werden die folgenden Abschnitte erläutert:
+Die folgenden Abschnitte werden in diesem Thema erläutert:
 
--   [Namespace Sicherheit](#namespace-security)
--   [DCOM-Sicherheitseinstellungen (verteiltes Component Object Model).](#distributed-component-object-model-dcom-security-settings)
--   [WMI, gemeinsame Dienst Hosts und Authentifizierung](#wmi-shared-service-hosts-and-authentication)
--   [Sicherheit für WMI-Client Skripts und-Anwendungen](#security-for-wmi-client-scripts-and-applications)
+-   [Namespacesicherheit](#namespace-security)
+-   [Distributed Component Object Model (DCOM) Security Einstellungen.](#distributed-component-object-model-dcom-security-settings)
+-   [WMI, Hosts für gemeinsame Dienste und Authentifizierung](#wmi-shared-service-hosts-and-authentication)
+-   [Sicherheit für WMI-Clientskripts und -Anwendungen](#security-for-wmi-client-scripts-and-applications)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="namespace-security"></a>Namespace Sicherheit
+## <a name="namespace-security"></a>Namespacesicherheit
 
-Die Namespace Sicherheit hängt von den standardmäßigen Windows-Benutzer Sicherheits-IDs [*(SID)*](gloss-s.md) und der [*Sicherheits Beschreibung*](gloss-s.md) für den WMI-Namespace ab.
+Die Namespacesicherheit hängt von standard Windows [*Benutzersicherheits-IDs (SID)*](gloss-s.md) und der [*Sicherheitsbeschreibung*](gloss-s.md) für den WMI-Namespace ab.
 
-Sie können die Namespace Sicherheit festlegen, indem Sie die folgenden Aktionen ausführen:
+Sie können die Namespacesicherheit festlegen, indem Sie die folgenden Aktionen ausführen:
 
--   Gewähren oder verweigern Sie Zugriffsrechte für Namespaces für Benutzer, die das WMI-Steuerelement verwenden, oder wenn der Namespace erstellt wird. Weitere Informationen finden Sie unter [Festlegen der Namespace Sicherheit mit dem WMI-Steuer](setting-namespace-security-with-the-wmi-control.md) Element und [Festlegen der Namespace Sicherheit, wenn der Namespace erstellt wird](setting-namespace-security-when-the-namespace-is-created.md).
--   Verwenden Sie die Registerkarte WMI-Steuerungs Sicherheit, um die Sicherheitsüberwachung einzurichten. Die Sicherheitsüberwachung führt zu Ereignisprotokoll Einträgen, wenn ein Benutzer in einer überwachten Aktion fehlschlägt oder erfolgreich ist, wie z. b. das Schreiben von Daten in ein WMI-Objekt oder das Lesen der Sicherheits Beschreibung. Weitere Informationen finden Sie unter [zugreifen auf WMI-Namespaces](access-to-wmi-namespaces.md).
--   Verwenden Sie die MOF-Datei, die den Namespace definiert, damit ein Benutzer eine verschlüsselte Verbindung herstellen muss. Weitere Informationen finden Sie unter [erfordern einer verschlüsselten Verbindung mit einem Namespace](requiring-an-encrypted-connection-to-a-namespace.md).
+-   Gewähren oder Verweigern von Zugriffsrechten für Namespaces für Benutzer, die das WMI-Steuerelement verwenden oder wenn der Namespace erstellt wird. Weitere Informationen finden Sie unter [Setting Namespace Security with the WMI Control (Festlegen der Namespacesicherheit mit dem WMI-Steuerelement)](setting-namespace-security-with-the-wmi-control.md) und Setting Namespace Security When the Namespace is Created [(Festlegen der Namespacesicherheit beim Erstellen des Namespace).](setting-namespace-security-when-the-namespace-is-created.md)
+-   Verwenden Sie die WMI-Steuerungs-Registerkarte "Sicherheit", um die Sicherheitsüberwachung einzurichten. Die Sicherheitsüberwachung führt zu Ereignisprotokolleinträgen, wenn ein Benutzer fehlschlägt oder eine überwachte Aktion erfolgreich ausgeführt wird, z. B. das Schreiben von Daten in ein WMI-Objekt oder das Lesen des Sicherheitsdeskriptors. Weitere Informationen finden Sie unter [Zugriff auf WMI-Namespaces.](access-to-wmi-namespaces.md)
+-   Verwenden Sie die MOF-Datei, die den Namespace definiert, damit ein Benutzer eine verschlüsselte Verbindung herstellen muss. Weitere Informationen finden Sie unter [Erfordern einer verschlüsselten Verbindung mit einem Namespace.](requiring-an-encrypted-connection-to-a-namespace.md)
 
-## <a name="distributed-component-object-model-dcom-security-settings"></a>DCOM-Sicherheitseinstellungen (verteiltes Component Object Model).
+## <a name="distributed-component-object-model-dcom-security-settings"></a>Distributed Component Object Model (DCOM) Security Einstellungen.
 
-Die DCOM-Sicherheit erfordert eine Authentifizierungs Einstellung und eine Identitätswechsel Einstellung. Die Authentifizierung bedeutet, dass sich ein Prozess bei einem anderen Prozess selbst identifiziert. Identitätswechsel gibt die Autorität an, die ein Client einem Server zuweist, verschiedene Prozesse aufzurufen. Während einer Sicherheitsüberprüfung nimmt der Server die Identität des Clients an. Weitere Informationen finden Sie unter [Sichern von C++-Clients und-Anbietern](securing-c---clients-and-providers.md) oder [Sichern von Skript Clients](securing-scripting-clients.md).
+Die DCOM-Sicherheit erfordert eine Authentifizierungseinstellung und eine Identitätswechseleinstellung. Authentifizierung bedeutet, dass sich ein Prozess gegenüber einem anderen identifiziert. Der Identitätswechsel identifiziert die Autorität, die ein Client einem Server gewährt, um verschiedene Prozesse aufzurufen. Während einer Sicherheitsüberprüfung nimmt der Server die Identität des Clients an. Weitere Informationen finden Sie unter [Sichern von C++-Clients und -Anbietern](securing-c---clients-and-providers.md) oder [Sichern von Skriptclients.](securing-scripting-clients.md)
 
-Skripts und C/C++/C #-Anwendungen stellen entweder eine Authentifizierungs-und Identitätswechsel Ebene her, wenn Sie eine Verbindung mit einem WMI-Namespace herstellen oder die Standardeinstellungen verwenden. Für Verbindungen mit Remote Computern sind andere Einstellungen erforderlich als für die WMI-Namespaces auf dem lokalen Computer. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md).
+Skripts und C/C++/C#-Anwendungen richten entweder eine Authentifizierungs- und Identitätswechselebene ein, wenn sie eine Verbindung mit einem WMI-Namespace herstellen, oder sie verwenden die Standardeinstellungen. Für Verbindungen mit Remotecomputern sind andere Einstellungen als für die WMI-Namespaces auf dem lokalen Computer erforderlich. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md)
 
-## <a name="wmi-shared-service-hosts-and-authentication"></a>WMI, gemeinsame Dienst Hosts und Authentifizierung
+## <a name="wmi-shared-service-hosts-and-authentication"></a>WMI, Hosts für gemeinsame Dienste und Authentifizierung
 
-WMI befindet sich in einem gemeinsamen Dienst Host mit mehreren anderen Diensten, die unter dem Network Service-Konto ausgeführt werden. In einem Svchost-Prozess hat WMI dieselbe Authentifizierung wie die anderen Prozesse im Host.
+WMI befindet sich auf einem freigegebenen Diensthost mit mehreren anderen Diensten, die unter dem NetworkService-Konto ausgeführt werden. In einem Svchost-Prozess verwendet WMI dieselbe Authentifizierung wie die anderen Prozesse auf dem Host.
 
-Anbieter-DLLs werden von WMI in separate Dienst Host Prozesse geladen. Die **hostingmodel** -Eigenschaft in der [**\_ \_ Win32Provider**](--win32provider.md) -System Klasse, die einen Anbieter darstellt, gibt das Systemkonto an, unter dem der Anbieter ausgeführt wird. Das Festlegen dieser Eigenschaft bewirkt, dass der Anbieter in einen freigegebenen Host Prozess geladen wird, der über eine bestimmte Berechtigungsebene verfügt. Weitere Informationen finden Sie unter [Anbieter Hosting und-Sicherheit](provider-hosting-and-security.md).
+Anbieter-DLLs werden in separate Diensthostprozesse von WMI geladen. Die **HostingModel-Eigenschaft** in der [**\_ \_ Win32Provider-Systemklasse,**](--win32provider.md) die einen Anbieter darstellt, gibt das Systemkonto an, unter dem der Anbieter ausgeführt wird. Das Festlegen dieser Eigenschaft bewirkt, dass der Anbieter in einen freigegebenen Hostprozess geladen wird, der über eine angegebene Berechtigungsebene verfügt. Weitere Informationen finden Sie unter [Anbieterhosting und Sicherheit.](provider-hosting-and-security.md)
 
-## <a name="security-for-wmi-client-scripts-and-applications"></a>Sicherheit für WMI-Client Skripts und-Anwendungen
+## <a name="security-for-wmi-client-scripts-and-applications"></a>Sicherheit für WMI-Clientskripts und -Anwendungen
 
-Skripts und Anwendungen müssen über die richtige Sicherheit verfügen, um eine Verbindung mit WMI-Namespaces auf lokalen Computern und Remote Computern herzustellen. Weitere Informationen finden Sie unter [Sichern von C++-Clients und-Anbietern](securing-c---clients-and-providers.md), [Sichern von Skript Clients](securing-scripting-clients.md)und [Sichern von WMI-Ereignissen](securing-wmi-events.md).
+Skripts und Anwendungen müssen die richtige Sicherheit einrichten, um eine Verbindung mit WMI-Namespaces auf lokalen und Remotecomputern herzustellen. Weitere Informationen finden Sie unter [Sichern von C++-Clients und -Anbietern,](securing-c---clients-and-providers.md) [Sichern von Skriptclients](securing-scripting-clients.md)und [Sichern von WMI-Ereignissen.](securing-wmi-events.md)
 
-In der folgenden Tabelle sind die Themen zum Verwalten der WMI-Sicherheit aufgelistet.
+In der folgenden Tabelle sind die Themen zur Aufrechterhaltung der WMI-Sicherheit aufgeführt.
 
 
 
-| Thema                                                                                              | BESCHREIBUNG                                                                                                                                                           |
+| Thema                                                                                              | Beschreibung                                                                                                                                                           |
 |----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Sichern von WMI-Namespaces](securing-wmi-namespaces.md)                                             | Sie können den Zugriff auf den Namespace-Datenzugriff auf autorisierte Benutzer über das WMI-Steuerelement einschränken.                                                                                      |
-| [Sichern Ihres Anbieters](securing-your-provider.md)                                               | Informationen zum Schreiben von sicheren Anbietern.                                                                                                                           |
-| [Sichern von C++-Clients und-Anbietern](securing-c---clients-and-providers.md)                       | Sowohl C++-Anbieter als auch Client Anwendungen müssen viele der gleichen Vorgänge ausführen, um die WMI-Sicherheit aufrechtzuerhalten.                                                         |
-| [Sichern von Skript Clients](securing-scripting-clients.md)                                       | Skripts und Visual Basic Anwendungen (Automatisierungs Clients) müssen die entsprechende Sicherheit festlegen, um Zugriff auf WMI-Daten und-Ereignisse zu erhalten.                                        |
-| [Sichern von WMI-Ereignissen](securing-wmi-events.md)                                                     | WMI-Ereignisse werden vom Ereignis Anbieter an einen temporären oder permanenten Consumer übermittelt. Ereignisse werden in Form einer Instanz einer Ereignisklasse übermittelt.               |
-| [Ändern der Zugriffssicherheit für Sicherungs fähige Objekte](changing-access-security-on-securable-objects.md) | Mit den entsprechenden Berechtigungen können Sie Methoden für die WMI-Objekte abrufen, die Sicherungs fähige Objekte darstellen, die Sicherheits Deskriptoren für Sicherungs fähige Objekte lesen oder ändern. |
+| [Sichern von WMI-Namespaces](securing-wmi-namespaces.md)                                             | Sie können den Zugriff auf Namespacedaten auf autorisierte Benutzer über die WMI-Steuerung beschränken.                                                                                      |
+| [Schützen Ihres Anbieters](securing-your-provider.md)                                               | Informationen zum Schreiben sicherer Anbieter.                                                                                                                           |
+| [Sichern von C++-Clients und -Anbietern](securing-c---clients-and-providers.md)                       | Sowohl C++-Anbieter als auch Clientanwendungen müssen viele der gleichen Vorgänge ausführen, um die WMI-Sicherheit aufrechtzuerhalten.                                                         |
+| [Sichern von Skriptclients](securing-scripting-clients.md)                                       | Skripts und Visual Basic Anwendungen (Automatisierungsclients) müssen die entsprechende Sicherheit festlegen, um Zugriff auf WMI-Daten und -Ereignisse zu erhalten.                                        |
+| [Sichern von WMI-Ereignissen](securing-wmi-events.md)                                                     | WMI-Ereignisse werden vom Ereignisanbieter an einen temporären oder permanenten Consumer übermittelt. Ereignisse werden in Form einer Instanz einer Ereignisklasse übermittelt.               |
+| [Ändern der Zugriffssicherheit für sicherungsfähige Objekte](changing-access-security-on-securable-objects.md) | Mit entsprechenden Berechtigungen können Sie Methoden für die WMI-Objekte aufrufen, die sicherungsfähige Objekte darstellen, die Sicherheitsbeschreibungen für sicherungsfähige Objekte lesen oder ändern. |
 
 
 

@@ -1,34 +1,34 @@
 ---
-description: Mit der Aktion "Write-einivalues" werden die Informationen der INI-Datei, die von der Anwendung benötigt werden, in die INI-Dateien geschrieben.
+description: Die WriteIniValues-Aktion schreibt die .ini Dateiinformationen, die die Anwendung benötigt, in ihre .ini Dateien geschrieben werden.
 ms.assetid: ec54db54-293c-4db3-81af-6e8669f27310
-title: Aktion "Write-einivalues"
+title: WriteIniValues-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dd96e86c361c7fe83b6ad33959149e82fb9d7969
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ce2551725e7b12a697e35b08b403011044bbd631b3ff5bf3d0a5923ecb4c99e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118942098"
 ---
-# <a name="writeinivalues-action"></a>Aktion "Write-einivalues"
+# <a name="writeinivalues-action"></a>WriteIniValues-Aktion
 
-Mit der Aktion "Write-einivalues" werden die Informationen der INI-Datei, die von der Anwendung benötigt werden, in die INI-Dateien geschrieben. Das Schreiben dieser Informationen wird von der [Komponenten Tabelle](component-table.md)abgegrenzt. Ein INI-Wert wird geschrieben, wenn die entsprechende Komponente so festgelegt wurde, dass Sie entweder lokal oder über die Quelle ausgeführt wird.
+Die WriteIniValues-Aktion schreibt die .ini Dateiinformationen, die die Anwendung benötigt, in ihre .ini Dateien geschrieben werden. Das Schreiben dieser Informationen wird durch die [Component-Tabelle](component-table.md)geschlossen. Ein .ini Wert wird geschrieben, wenn die entsprechende Komponente entweder lokal installiert oder von der Quelle ausgeführt wurde.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die InstallValidate-Aktion muss vor der Aktion "Write-einivalues" erfolgen. Wenn eine [RemoveIniValues-Aktion](removeinivalues-action.md) in der Sequenz vorhanden ist, muss Sie vor der Aktion "Write" geschrieben werden.
+Die InstallValidate-Aktion muss vor der WriteIniValues-Aktion erfolgen. Wenn die Sequenz eine [RemoveIniValues-Aktion](removeinivalues-action.md) enthält, muss sie vor der WriteIniValues-Aktion stehen.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
 
 
-| Feld | Beschreibung der Aktions Daten              |
+| Feld | Beschreibung der Aktionsdaten              |
 |-------|-----------------------------------------|
-| \[1\] | Bezeichner der INI-Datei.                |
-| \[2\] | INI-Datei Schlüssel im folgenden Abschnitt. |
-| \[3\] | Das Element wurde aus der INI-Datei entfernt.            |
-| \[4\] | Der Wert wurde aus der INI-Datei entfernt.           |
+| \[1\] | Bezeichner .ini Datei.                |
+| \[2\] | .ini Dateischlüssel im folgenden Abschnitt. |
+| \[3\] | Aus .ini Datei entferntes Element.            |
+| \[4\] | Aus .ini Datei entfernter Wert.           |
 
 
 
@@ -38,7 +38,7 @@ Die InstallValidate-Aktion muss vor der Aktion "Write-einivalues" erfolgen. Wenn
 
 <dl> <dt>
 
-[INIFILE-Tabelle](inifile-table.md)
+[IniFile-Tabelle](inifile-table.md)
 </dt> </dl>
 
  

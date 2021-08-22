@@ -17,7 +17,7 @@ Die [**IWICDevelopRaw-Schnittstelle**](/windows/desktop/api/Wincodec/nn-wincodec
 
 Es folgen einige allgemeine Implementierungsrichtlinien:
 
--   Alle Einstellungen, die über [**IWICDevelopRaw**](/windows/desktop/api/Wincodec/nn-wincodec-iwicdevelopraw) (z. B. Drehung oder Weißabgleich) vorgenommen werden, sollten das Überschreiben der Kameraeinstellung oder "as-shot"-Daten vermeiden, es sei denn, das Tag wird häufig als "aktuelle Einstellung" verwendet. Beispielsweise können EXIF-Ausrichtungstags verwendet werden, um die Rotation dauerhaft zu speichern.
+-   Alle Einstellungen, die über [**IWICDevelopRaw**](/windows/desktop/api/Wincodec/nn-wincodec-iwicdevelopraw) (z. B. Drehung oder Weißabgleich) vorgenommen werden, sollten das Überschreiben von Kameraeinstellungen oder "as-shot"-Daten vermeiden, es sei denn, das Tag wird häufig als "aktuelle Einstellung" verwendet. Beispielsweise können EXIF-Ausrichtungstags verwendet werden, um die Rotation dauerhaft zu speichern.
 -   Es empfiehlt sich, nicht jedes Mal die gesamte Datei (einschließlich der Pixeldaten) speichern zu müssen, wenn die [**IWICDevelopRaw-Einstellungen**](/windows/desktop/api/Wincodec/nn-wincodec-iwicdevelopraw) zur Serialisierung aufgefordert werden.
 -   Der Prozess der Serialisierung von [**IWICDevelopRaw-Einstellungen**](/windows/desktop/api/Wincodec/nn-wincodec-iwicdevelopraw) folgt in der Regel dieser Reihenfolge von Ereignissen. Für die Anwendung gilt Folgendes:
 
@@ -33,8 +33,8 @@ Es folgen einige allgemeine Implementierungsrichtlinien:
     7.  Ruft [**IWICBitmapEncoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder)auf:[**CreateNewFrame,**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-createnewframe) um einen neuen IWICBitmapFrameEncode für den RAW-Frame zu erstellen.
     8.  Ruft [**IWICBitmapFrameEncode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode)::[**Initialisieren**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-initialize)von auf und übergibt die IPropertyBag2-Schnittstelle aus Schritt 4.
     9.  Ruft [**IWICBitmapFrameEncode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode)auf:[**WriteSource**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-writesource) mit [**IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) aus dem RAW-Bildrahmen des Decoders.
-    10. Ruft [**IWICBitmapFrameEncode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode)auf:[**Commit .**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-commit) Der Codec serialisiert dann die Eigenschaften in IPropertyBag2 aus Schritt 8 in die Datei. Die gängigste Methode zum Serialisieren der Eigenschaften wird angenommen, indem sie als Metadaten in die Datei geschrieben werden.
-    11. Ruft [**IWICBitmapEncoder auf:**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder)[**Commit**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-commit).
+    10. Ruft [**IWICBitmapFrameEncode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode)auf:[**Commit .**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-commit) Der Codec serialisiert dann die Eigenschaften im IPropertyBag2 aus Schritt 8 in die Datei. Die gängigste Methode zum Serialisieren der Eigenschaften wird angenommen, indem sie als Metadaten in die Datei geschrieben werden.
+    11. Ruft [**IWICBitmapEncoder auf:**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder)[**Commit .**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-commit)
     12. Ruft IStream::Commit für den Stream in Schritt 6 auf.
 
     Die Einstellungen werden in der Datei serialisiert.

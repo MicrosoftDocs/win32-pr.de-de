@@ -1,5 +1,5 @@
 ---
-description: Ruft den Überblendfaktor und den Scheitelpunkt ab, die von einem angegebenen Einfluss beeinflusst werden.
+description: Ruft den Mischungsfaktor und den Scheitelpunkt ab, die von einem angegebenen Einflussfaktor betroffen sind.
 ms.assetid: bbed4766-e571-4a9e-b7e3-047052470cbe
 title: ID3DXSkinInfo::GetBoneVertexInfluence-Methode (D3DX9Mesh.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118801146"
 ---
 # <a name="id3dxskininfogetbonevertexinfluence-method"></a>ID3DXSkinInfo::GetBoneVertexInfluence-Methode
 
-Ruft den Überblendfaktor und den Scheitelpunkt ab, die von einem angegebenen Einfluss beeinflusst werden.
+Ruft den Mischungsfaktor und den Scheitelpunkt ab, die von einem angegebenen Einflussfaktor betroffen sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,12 +43,12 @@ HRESULT GetBoneVertexInfluence(
 
 <dl> <dt>
 
-*vornNum* \[ In\]
+*enumerationNum* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Index der Ungn. Muss zwischen 0 und der Anzahl der Brüche liegen.
+Index des Verzeichnisses. Muss zwischen 0 (0) und der Anzahl der Nummern (1) sein.
 
 </dd> <dt>
 
@@ -57,7 +57,7 @@ Index der Ungn. Muss zwischen 0 und der Anzahl der Brüche liegen.
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Index des Einflussarrays des angegebenen Schwunds.
+Index des Einflussarrays des angegebenen Verzeichnisses.
 
 </dd> <dt>
 
@@ -66,7 +66,7 @@ Index des Einflussarrays des angegebenen Schwunds.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf den durch influenceNum beeinflussten Mischungsfaktor.
+Zeiger auf den von influenceNum beeinflussten Mischungsfaktor.
 
 </dd> <dt>
 
@@ -75,7 +75,7 @@ Zeiger auf den durch influenceNum beeinflussten Mischungsfaktor.
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Zeiger auf den Scheitelpunkt, der durch influenceNum beeinflusst wird.
+Zeiger auf den von influenceNum beeinflussten Scheitelpunkt.
 
 </dd> </dl>
 
@@ -83,7 +83,7 @@ Zeiger auf den Scheitelpunkt, der durch influenceNum beeinflusst wird.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 

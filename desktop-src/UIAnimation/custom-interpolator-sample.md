@@ -1,36 +1,36 @@
 ---
-title: Beispiel für benutzerdefiniertes Interpolator
-description: Zeigt, wie die Windows-Animation mit Ihrem eigenen benutzerdefinierten Interpolator verwendet wird, wobei Direct2D zum Rendern verwendet wird.
+title: Beispiel für benutzerdefinierte Interpolatoren
+description: Zeigt, wie Sie Windows Animation mit Ihrem eigenen benutzerdefinierten Interpolator verwenden, wobei Direct2D für das Rendering verwendet wird.
 ms.assetid: 90c4a53a-5c5e-4dcc-8946-bc8f23a07ea2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 833a1a2ef09d603eaefac90b2ae25b3f533ba307
-ms.sourcegitcommit: c9c66a09eeb9e46311879a5181342e89964c1dd8
+ms.openlocfilehash: 3c801822bd50eebe9f405cad00bc8ffcd7ac2d611924a3ff0bae91d30bc9f249
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "104101394"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999700"
 ---
-# <a name="custom-interpolator-sample"></a>Beispiel für benutzerdefiniertes Interpolator
+# <a name="custom-interpolator-sample"></a>Beispiel für benutzerdefinierte Interpolatoren
 
-Zeigt, wie die Windows-Animation mit Ihrem eigenen benutzerdefinierten Interpolator verwendet wird, wobei Direct2D zum Rendern verwendet wird. Beispiel Bilder werden aus der Bildbibliothek geladen.
+Zeigt, wie Sie Windows Animation mit Ihrem eigenen benutzerdefinierten Interpolator verwenden, wobei Direct2D für das Rendering verwendet wird. Beispielbilder werden aus der Bildbibliothek geladen.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Dieses Beispiel ist in den folgenden Speicherorten verfügbar.
+Dieses Beispiel ist an den folgenden Speicherorten verfügbar.
 
 
 
 | Standort                               | Pfad/URL                                                                                          |
 |----------------------------------------|---------------------------------------------------------------------------------------------------|
-| Windows Software Development Kit (SDK) | [Microsoft Windows Software Development Kit 7,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx) |
-| Codegalerie                           | [Windows Animation Manager-Beispiel Code](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/DirectCompositionWindowsAnimationManager)          |
+| Windows Software Development Kit (SDK) | [Microsoft Windows Software Development Kit 7.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx) |
+| Codegalerie                           | [Windows Beispielcode für den Animations-Manager](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/DirectCompositionWindowsAnimationManager)          |
 
 
 
- 
+ 
 
-Nachdem Sie die Windows SDK heruntergeladen und installiert haben, finden Sie die Beispiele im Installationsverzeichnis. Wenn Sie z. b. den Standard Installationspfad für die Windows SDK für Windows 7 verwenden, werden die Beispiele unter C: \\ Programme \\ Microsoft sdert \\ Windows \\ v 7.0 Samples installiert \\ .
+Nachdem Sie das Windows SDK heruntergeladen und installiert haben, finden Sie die Beispiele im Installationsverzeichnis. Wenn Sie beispielsweise den Standardinstallationspfad für das Windows SDK für Windows 7 verwenden, werden die Beispiele in C: Microsoft SDKs für \\ Programme \\ Windows \\ \\ v7.0-Beispiele \\ installiert.
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
@@ -38,37 +38,37 @@ Verwenden Sie eine der folgenden Methoden, um das Beispiel zu erstellen.
 
 **So erstellen Sie das Beispiel an der Eingabeaufforderung**
 
-1.  Öffnen Sie das Eingabe Aufforderungs Fenster, und navigieren Sie zum Projektverzeichnis custominterpolator. Der Standard Installationspfad für dieses Beispiel lautet z. b. C: \\ Program Files \\ Microsoft sdert \\ Windows \\ v 7.0 \\ Samples \\ Multimedia \\ windowsanimation \\ custominterpolator.
+1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum Projektverzeichnis CustomInterpolator. Der Standardinstallationspfad für dieses Beispiel lautet z. B. C: \\ \\ Programme Microsoft SDKs Windows \\ \\ v7.0 \\ Samples Multimedia \\ \\ WindowsAnimation \\ CustomInterpolator
 
-2.  Führen Sie den folgenden Befehl aus: **MSBuild custominterpolator. sln**
+2.  Führen Sie den folgenden Befehl aus: **msbuild CustomInterpolator.sln**
 
-**So erstellen Sie das Beispiel mithilfe Microsoft Visual Studio (bevorzugt)**
+**So erstellen Sie das Beispiel mit Microsoft Visual Studio (bevorzugt)**
 
-1.  Öffnen Sie Windows-Explorer, und navigieren Sie zum Projektverzeichnis custominterpolator.
+1.  Öffnen Sie Windows Explorer, und navigieren Sie zum Projektverzeichnis CustomInterpolator.
 
     > [!Note]  
-    > Die Dateinamenerweiterung. sln wird unter den Standardordner Einstellungen nicht angezeigt. In dieser Situation kann Sie durch das eindeutige Symbol oder durch die Typbeschreibung "Microsoft Visual Studio Lösung" identifiziert werden.
+    > Die Dateierweiterung .sln wird in den Standardordnereinstellungen nicht angezeigt. In diesem Fall kann es durch sein eindeutiges Symbol oder durch die Typbeschreibung "Microsoft Visual Studio Solution" identifiziert werden.
 
-     
+     
 
-2.  Doppelklicken Sie auf das Symbol für die Datei custominterpolator. sln, um das Projekt in Visual Studio zu öffnen.
+2.  Doppelklicken Sie auf das Symbol für die Datei CustomInterpolator.sln, um das Projekt in Visual Studio zu öffnen.
 
-3.  Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus.
+3.  Klicken Sie im Menü **Build** (Erstellen) auf **Build Solution** (Projektmappe erstellen).
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
 So führen Sie das Beispiel aus:
 
-1.  Navigieren Sie zu dem Verzeichnis, das die neue ausführbare Datei enthält. verwenden Sie dazu entweder die Eingabeaufforderung oder den Windows-Explorer.
+1.  Navigieren Sie über die Eingabeaufforderung oder Windows Explorer zu dem Verzeichnis, das die neue ausführbare Datei enthält.
 
-2.  Führen Sie **CustomInterpolator.exe** an der Eingabeaufforderung aus, oder Doppelklicken Sie im Windows-Explorer auf das Symbol für CustomInterpolator.exe.
-3.  Ändern Sie die Größe des Fensters, oder drücken Sie die Leertaste, und die Bilder werden sich nach dem Zufallsprinzip in der Mitte des Client Bereichs anordnen.
+2.  Führen Sie **CustomInterpolator.exe** an der Eingabeaufforderung aus, oder doppelklicken Sie auf das Symbol für CustomInterpolator.exe in Windows Explorer.
+3.  Ändern Sie die Größe des Fensters, oder drücken Sie die Leertaste, und die Bilder ordnen sich zufällig in der Mitte des Clientbereichs an.
 
-4.  Drücken Sie die nach-oben-oder nach-unten-Taste, und die Bilder werden in Richtung oben oder unten im Client Bereich beschleunigt.
+4.  Drücken Sie den Pfeil nach oben oder unten, und die Bilder werden in Richtung oben oder unten im Clientbereich beschleunigt.
 
- 
+ 
 
- 
+ 
 
 
 

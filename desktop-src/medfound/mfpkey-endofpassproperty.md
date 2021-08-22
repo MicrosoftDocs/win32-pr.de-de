@@ -1,35 +1,35 @@
 ---
-description: Gibt das Ende eines Codierungs Durchlaufs an.
+description: Gibt das Ende eines Codierungsdurchlaufs an.
 ms.assetid: 8a7e6e09-766c-4346-8893-eea5614b2aa4
-title: MFPKEY_ENDOFPASS-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_ENDOFPASS-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a38e03867e11cde944bf902ae52f98cda7b8313
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 977c876d14c6757c5f1bc31e0d5b7cc58f6e13fad827cc23f821be8382a5e376
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864163"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118738191"
 ---
-# <a name="mfpkey_endofpass-property"></a>Mfpkey- \_ endofpass (Eigenschaft)
+# <a name="mfpkey_endofpass-property"></a>MFPKEY \_ ENDOFPASS-Eigenschaft
 
-Gibt das Ende eines Codierungs Durchlaufs an.
+Gibt das Ende eines Codierungsdurchlaufs an.
 
 ## <a name="data-type"></a>Datentyp
 
-**VT \_ bool**
+**VT \_ BOOL**
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvcendofpass
+g \_ wszWMVCEndOfPass
 
 ## <a name="data-type-for-ipropertybag"></a>Datentyp für IPropertyBag
 
-Es ist kein Datentyp erforderlich. Um diese Eigenschaft festzulegen, übergeben Sie eine nicht initialisierte **Variante**.
+Es ist kein Datentyp erforderlich. Um diese Eigenschaft festzulegen, übergeben Sie eine nicht initialisierte **VARIANT -Eigenschaft.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist keine normale Eigenschaft, da Sie unabhängig davon, ob der Wert Variant \_ true oder Variant false ist, dieselbe Auswirkung hat \_ . Sie müssen diese Eigenschaft festlegen, nachdem Sie die letzten Eingabe Beispiele für einen Vorverarbeitungs Durchlauf verarbeitet haben. Wenn Sie mehrere Durchgänge ausführen, müssen Sie diese Eigenschaft am Ende jedes Vorverarbeitungs Durchsatzes festlegen (derzeit unterstützt keiner der Codecs mehr als einen). Wenn Sie diese Eigenschaft nicht festlegen, geht der Codec davon aus, dass Sie immer noch Beispiele für die Vorverarbeitung übergeben.
+Diese Eigenschaft ist keine normale Eigenschaft, da sie unabhängig davon, ob der Wert VARIANT TRUE oder VARIANT FALSE ist, den gleichen Effekt \_ \_ hat. Sie müssen diese Eigenschaft festlegen, nachdem Sie die letzten Eingabebeispiele für einen Vorverarbeitungsdurchlauf verarbeitet haben. Wenn Sie mehrere Durchläufe ausführen, müssen Sie diese Eigenschaft am Ende jedes Vorverarbeitungsdurchlaufs festlegen (derzeit unterstützt keiner der Codecs mehr als einen). Wenn Sie diese Eigenschaft nicht festlegen, geht der Codec davon aus, dass Sie weiterhin Stichproben für die Vorverarbeitung übergeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,17 +37,17 @@ Diese Eigenschaft ist keine normale Eigenschaft, da Sie unabhängig davon, ob de
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

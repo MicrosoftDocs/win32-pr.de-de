@@ -1,21 +1,21 @@
 ---
-description: Halftone-Paletten können immer verwendet werden, wenn der streckungs Modus eines Geräte Kontexts auf "Halftone" festgelegt ist.
+description: Halbtonpaletten sind für die Verwendung vorgesehen, wenn der Stretchingmodus eines Gerätekontexts auf HALFTONE festgelegt ist.
 ms.assetid: ee171379-2ab3-4c38-8e86-ff80fa63a357
-title: "\"Halftone\"-Palette und Farbanpassung"
+title: Halbtonpalette und Farbanpassung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b3e6708aff92387b792424f07e9b82a1f6125ff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8be13f780dc5496173ffb4ddb990a96f7dbe462223e41e8a48d4a58329451277
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528340"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118761004"
 ---
-# <a name="halftone-palette-and-color-adjustment"></a>"Halftone"-Palette und Farbanpassung
+# <a name="halftone-palette-and-color-adjustment"></a>Halbtonpalette und Farbanpassung
 
-Halftone-Paletten können immer verwendet werden, wenn der streckungs Modus eines Geräte Kontexts auf "Halftone" festgelegt ist. Eine Anwendung erstellt eine halbftone-Palette mithilfe der [**CreateHalftonePalette**](/windows/desktop/api/Wingdi/nf-wingdi-createhalftonepalette) -Funktion. Die Anwendung muss diese Palette vor dem Aufrufen der Funktion [**StretchBlt**](/windows/desktop/api/Wingdi/nf-wingdi-stretchblt) oder [**StretchDIBits**](/windows/desktop/api/Wingdi/nf-wingdi-stretchdibits) in den Gerätekontext auswählen und diese nutzen.
+Halbtonpaletten sind für die Verwendung vorgesehen, wenn der Stretchingmodus eines Gerätekontexts auf HALFTONE festgelegt ist. Eine Anwendung erstellt mithilfe der [**CreateHalftonePalette-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-createhalftonepalette) eine Halbtonpalette. Die Anwendung muss diese Palette auswählen und in den Gerätekontext integrieren, bevor sie die [**StretchBlt-**](/windows/desktop/api/Wingdi/nf-wingdi-stretchblt) oder [**StretchDIBits-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-stretchdibits) aufruft.
 
-Das System passt die Eingabe Farbe der Quell Bitmaps automatisch an, wenn Anwendungen die Funktionen [**StretchBlt**](/windows/desktop/api/Wingdi/nf-wingdi-stretchblt) und [**StretchDIBits**](/windows/desktop/api/Wingdi/nf-wingdi-stretchdibits) aufzurufen und der streckungs Modus eines Geräte Kontexts auf Halftone festgelegt ist. Diese Farbanpassungen beeinflussen bestimmte Attribute des Bilds, z. b. Kontrast und Helligkeit. Eine Anwendung kann die Farb Anpassungs Werte mithilfe der [**setcoloradjustment**](/windows/desktop/api/Wingdi/nf-wingdi-setcoloradjustment) -Funktion festlegen. Die Anwendung kann die Farb Anpassungs Werte für den angegebenen Gerätekontext mithilfe der [**getcoloradjustment**](/windows/desktop/api/Wingdi/nf-wingdi-getcoloradjustment) -Funktion abrufen.
+Das System passt die Eingabefarbe von Quellbitmaps automatisch an, wenn Anwendungen die [**StretchBlt-**](/windows/desktop/api/Wingdi/nf-wingdi-stretchblt) und [**StretchDIBits-Funktionen**](/windows/desktop/api/Wingdi/nf-wingdi-stretchdibits) aufrufen und der Stretchingmodus eines Gerätekontexts auf HALFTONE festgelegt ist. Diese Farbanpassungen wirken sich auf bestimmte Attribute des Bilds aus, z. B. Kontrast und Helligkeit. Eine Anwendung kann die Farbanpassungswerte mithilfe der [**SetColorAdjustment-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-setcoloradjustment) festlegen. Die Anwendung kann die Farbanpassungswerte für den angegebenen Gerätekontext mithilfe der [**GetColorAdjustment-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-getcoloradjustment) abrufen.
 
  
 

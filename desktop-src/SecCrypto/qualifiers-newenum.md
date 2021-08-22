@@ -1,5 +1,5 @@
 ---
-description: Die \_ NewEnum-Eigenschaft von Qualifiers ruft eine IEnumVARIANT-Schnittstelle für ein Objekt ab, das zum Aufzählen der Auflistung verwendet werden kann. Diese Eigenschaft ist in Visual Basic Scripting Edition (VBScript) ausgeblendet.
+description: Die NewEnum-Eigenschaft von Qualifizierer ruft eine IEnumVARIANT-Schnittstelle für ein Objekt ab, das zum Aufzählen der \_ Auflistung verwendet werden kann. Diese Eigenschaft wird in Visual Basic Scripting Edition (VBScript) ausgeblendet.
 ms.assetid: e51f8ca1-ef1f-475b-8368-e8296fae0f04
 title: Qualifiers._NewEnum-Eigenschaft
 ms.topic: reference
@@ -22,9 +22,9 @@ ms.locfileid: "118900976"
 ---
 # <a name="qualifiers_newenum-property"></a>Qualifizierer. \_ NewEnum-Eigenschaft
 
-\[Die **\_ NewEnum-Eigenschaft** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Verwenden Sie stattdessen die [**X509Extension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509extension?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates,**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) indem Sie den Konstruktor aufrufen, der eine OID als Parameter annimmt, und dann die OID für Zertifikatrichtlinien verwenden, um Qualifizierer zu verarbeiten, die Teil der Richtlinieninformationen in der Zertifikatrichtlinienerweiterung sind.\]
+\[Die **\_ NewEnum-Eigenschaft** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Verwenden Sie stattdessen die [**X509Extension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509extension?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates,**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) indem Sie den Konstruktor aufrufen, der eine OID als Parameter akzeptiert, und dann die OID für Zertifikatrichtlinien verwenden, um Qualifizierer zu verarbeiten, die Teil der Richtlinieninformationen in der Zertifikatrichtlinienerweiterung sind.\]
 
-Die **\_ NewEnum-Eigenschaft** ruft eine [**IEnumVARIANT-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) für ein Objekt ab, das zum Aufzählen der Auflistung verwendet werden kann. Diese Eigenschaft ist in Visual Basic Scripting Edition (VBScript) ausgeblendet.
+Die **\_ NewEnum-Eigenschaft** ruft eine [**IEnumVARIANT-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) für ein Objekt ab, das zum Aufzählen der Auflistung verwendet werden kann. Diese Eigenschaft wird in Visual Basic Scripting Edition (VBScript) ausgeblendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ Eine [**IEnumVARIANT-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-ienumvar
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft wird automatisch intern verwendet, wenn Sie das `For Each In` -Konstrukt in Visual Basic Scripting Edition (VBScript) verwenden.
+Diese Eigenschaft wird automatisch intern verwendet, wenn Sie das -Konstrukt `For Each In` in Visual Basic Scripting Edition (VBScript) verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ Diese Eigenschaft wird automatisch intern verwendet, wenn Sie das `For Each In` 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

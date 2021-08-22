@@ -1,5 +1,5 @@
 ---
-description: Ruft die Druckerfunktionen ab, die in Übereinstimmung mit dem XML-Druck Schema formatiert sind.
+description: Ruft die Druckerfunktionen ab, die in Übereinstimmung mit dem XML-Druckschema formatiert sind.
 ms.assetid: 15219c19-b64c-4c51-9357-15a797557693
 title: GetPrintCapabilitiesThunk2-Funktion
 ms.topic: reference
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - prntvpt.dll
-ms.openlocfilehash: eb60f1cdabad6287e236fc099fc304e9e7de83ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 55127d15eae41380fd5376ca54589488e255a740a7881042f54bc203873701f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118971389"
 ---
 # <a name="getprintcapabilitiesthunk2-function"></a>GetPrintCapabilitiesThunk2-Funktion
 
-\[Diese Funktion wird nicht unterstützt und wird in zukünftigen Versionen von Windows möglicherweise deaktiviert oder gelöscht. [**Ptgetprintworks**](/windows/desktop/api/prntvpt/nf-prntvpt-ptgetprintcapabilities) bietet entsprechende Funktionen und sollte stattdessen verwendet werden.\]
+\[Diese Funktion wird nicht unterstützt und kann in zukünftigen Versionen des -Windows. [**PTGetPrintCapabilities bietet**](/windows/desktop/api/prntvpt/nf-prntvpt-ptgetprintcapabilities) die gleiche Funktionalität und sollte stattdessen verwendet werden.\]
 
-Ruft die Funktionen des Druckers ab, die in Übereinstimmung mit dem XML- [Druck Schema](./printschema.md)formatiert sind.
+Ruft die Funktionen des Druckers ab, die in Übereinstimmung mit dem XML-Druckschema [formatiert sind.](./printschema.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,51 +46,51 @@ HRESULT GetPrintCapabilitiesThunk2(
 
 <dl> <dt>
 
-*hprovider* \[ in\]
+*hProvider* \[ In\]
 </dt> <dd>
 
-Ein Handle für einen geöffneten Druck ticketanbieter. Dieses Handle wird von der [**bindptproviderthunk**](bindptproviderthunk.md) -Funktion zurückgegeben.
+Ein Handle für einen geöffneten Druckticketanbieter. Dieses Handle wird von der [**BindPTProviderThunk-Funktion**](bindptproviderthunk.md) zurückgegeben.
 
 </dd> <dt>
 
-*pprintticket* \[ in\]
+*pPrintTicket* \[ In\]
 </dt> <dd>
 
-Der Puffer, der die Druck Ticketdaten enthält, wie im [Druck Schema](./printschema.md)beschrieben, in XML ausgedrückt.
+Der Puffer, der die Druckticketdaten enthält, ausgedrückt in XML, wie im [Druckschema beschrieben.](./printschema.md)
 
 </dd> <dt>
 
-*cbprintticket* \[ in\]
+*cbPrintTicket* \[ In\]
 </dt> <dd>
 
-Die Größe (in Bytes) des Puffers, auf den *pprintticket* verweist.
+Die Größe des Puffers in Bytes, auf den *pPrintTicket verweist.*
 
 </dd> <dt>
 
-*ppbprint-Funktionen* \[ vorgenommen\]
+*ppbPrintCapabilities* \[ out\]
 </dt> <dd>
 
-Die Adresse des Puffers, der von dieser Funktion zugeordnet wird, und enthält die gültigen Druck Funktions Informationen, die als XML codiert sind. Diese Funktion Ruft die [**CoTaskMemAlloc**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) -Funktion auf, um diesen Puffer zuzuordnen. Wenn der Puffer nicht mehr benötigt wird, muss der Aufrufer ihn durch Aufrufen von [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)freigeben.
+Die Adresse des Puffers, der von dieser Funktion zugeordnet wird und die gültigen Informationen zu Druckfunktionen enthält, die als XML codiert sind. Diese Funktion ruft [**CoTaskMemAlloc auf,**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) um diesen Puffer zu reservieren. Wenn der Puffer nicht mehr benötigt wird, muss er vom Aufrufer durch Aufrufen von [**CoTaskMemFree frei werden.**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)
 
 </dd> <dt>
 
-*pcbprintcapabilitieslength* \[ vorgenommen\]
+*zeichenPrintCapabilitiesLength* \[ out\]
 </dt> <dd>
 
-Die Größe (in Bytes) des Puffers, auf den *ppbprint-Funktionen* verweist.
+Die Größe des Puffers in Bytes, auf den *ppbPrintCapabilities verweist.*
 
 </dd> <dt>
 
-*pbstrauerrormessage* \[ Out, optional\]
+*pbstrErrorMessage* \[ out, optional\]
 </dt> <dd>
 
-Ein Zeiger auf eine Zeichenfolge, die angibt, was, wenn nichts, für *pprintticket* ungültig ist. Wenn Sie gültig ist, ist dieser Wert **null**. Wenn *pbstrauerrormessage* bei Rückgabe der Funktion nicht **null** ist, muss der Aufrufer die Zeichenfolge mit [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring)freigeben.
+Ein Zeiger auf eine Zeichenfolge, die angibt, was bei *pPrintTicket* ungültig ist. Wenn er gültig ist, ist dieser Wert **NULL.** Wenn *pbstrErrorMessage bei Rückgabe* der Funktion nicht **NULL** ist, muss der Aufrufer die Zeichenfolge mit [**SysFreeString freigibt.**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück; andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben. Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung](../com/error-handling-in-com.md).
+Wenn die Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben. Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung.](../com/error-handling-in-com.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,8 +98,8 @@ Wenn die Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück; and
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Prntvpt.dll</dt> </dl> |
 
 
@@ -108,10 +108,10 @@ Wenn die Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück; and
 
 <dl> <dt>
 
-[**Ptgetprint-Funktionen**](/windows/desktop/api/prntvpt/nf-prntvpt-ptgetprintcapabilities)
+[**PTGetPrintCapabilities**](/windows/desktop/api/prntvpt/nf-prntvpt-ptgetprintcapabilities)
 </dt> <dt>
 
-[Druck Schema](./printschema.md)
+[Druckschema](./printschema.md)
 </dt> <dt>
 
 [Drucken](printdocs-printing.md)

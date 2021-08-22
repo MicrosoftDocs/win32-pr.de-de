@@ -1,7 +1,7 @@
 ---
-description: Die Anwendungs-GUID des Ereignis Klassen Objekts.
+description: Die Anwendungs-GUID des Ereignisklassenobjekts.
 ms.assetid: 0d19183a-429c-4564-b6a5-f06481d27e00
-title: 'IEventSubscription3:: eventclassapplicationid (Eigenschaft)'
+title: IEventSubscription3::EventClassApplicationID (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 3e80a8d8f557c80a1b2605328728260eb8ae7bd7
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 228650f97f8662e60f7866fd36c184583316e494286b55c1f70e03a148e5e979
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127029"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118813831"
 ---
-# <a name="ieventsubscription3eventclassapplicationid-property"></a>IEventSubscription3:: eventclassapplicationid (Eigenschaft)
+# <a name="ieventsubscription3eventclassapplicationid-property"></a>IEventSubscription3::EventClassApplicationID (Eigenschaft)
 
-Die Anwendungs-GUID des Ereignis Klassen Objekts.
+Die Anwendungs-GUID des Ereignisklassenobjekts.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -44,11 +44,11 @@ HRESULT get_EventClassApplicationID(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Zeichenfolge, die die GUID der Ereignis Klassen Anwendung enthält.
+Eine Zeichenfolge, die die GUID der Ereignisklassenanwendung enthält.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Diese Methode kann die Standard Rückgabewerte e \_ invalidArg, e \_ outo fmemory, e \_ unerwartet, e \_ Fail und S OK \_ zurückgeben.
+Diese Methode kann die Standard-Rückgabewerte E \_ INVALIDARG, E \_ OUTOFMEMORY, E \_ UNEXPECTED, E \_ FAIL und S \_ OK zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 

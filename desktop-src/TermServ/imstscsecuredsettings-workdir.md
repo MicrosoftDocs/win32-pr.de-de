@@ -1,14 +1,14 @@
 ---
-title: Imstscsecuredsettings WorkDir-Eigenschaft
-description: Gibt das Arbeitsverzeichnis des Start Programms an.
+title: IMsTscSecuredSettings WorkDir-Eigenschaft
+description: Gibt das Arbeitsverzeichnis des Startprogramms an.
 ms.assetid: e67f7274-be47-42c4-9267-a05bb93e6725
 ms.tgt_platform: multiple
 keywords:
-- WORKDIR-Eigenschaft Remotedesktopdienste
-- WORKDIR-Eigenschaft Remotedesktopdienste, imstscsecuredsettings-Schnittstelle
-- Imstscsecuredsettings-Schnittstelle Remotedesktopdienste, WorkDir-Eigenschaft
-- WORKDIR-Eigenschaft Remotedesktopdienste, imsrdpclientsecuredsettings-Schnittstelle
-- Imsrdpclientsecuredsettings-Schnittstelle Remotedesktopdienste, WorkDir-Eigenschaft
+- Remotedesktopdienste der WorkDir-Eigenschaft
+- WorkDir-Eigenschaft Remotedesktopdienste , IMsTscSecuredSettings-Schnittstelle
+- IMsTscSecuredSettings-Schnittstelle Remotedesktopdienste , WorkDir-Eigenschaft
+- WorkDir-Eigenschaft Remotedesktopdienste , IMsRdpClientSecuredSettings-Schnittstelle
+- IMsRdpClientSecuredSettings-Schnittstelle Remotedesktopdienste , WorkDir-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -24,16 +24,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a0a80b35ba682012150b4277d800bc4a3582e57
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7cc6bd8ffe1e2d2f5b835090ee1dec5e3420a8bfb2d5801b3f5f903b3436bf66
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344507"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118853142"
 ---
-# <a name="imstscsecuredsettingsworkdir-property"></a>Imstscsecuredsettings:: WorkDir-Eigenschaft
+# <a name="imstscsecuredsettingsworkdir-property"></a>IMsTscSecuredSettings::WorkDir-Eigenschaft
 
-Gibt das Arbeitsverzeichnis des Start Programms an.
+Gibt das Arbeitsverzeichnis des Startprogramms an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -54,15 +54,15 @@ HRESULT get_WorkDir(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Das neue Arbeitsverzeichnis. Die maximale Länge dieser Zeichenfolge beträgt **Max. \_ Pfad**-1 Zeichen.
+Das neue Arbeitsverzeichnis. Die maximale Länge dieser Zeichenfolge beträgt **MAX \_ PATH**-1 Zeichen.
 
 ## <a name="error-codes"></a>Fehlercodes
 
 Gibt bei Erfolg **S \_ OK** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Bereitstellen der RDP-Client Sicherheit](providing-for-rdp-client-security.md) .
+Weitere Informationen finden Sie unter [Bereitstellen der RDP-Clientsicherheit.](providing-for-rdp-client-security.md)
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -76,7 +76,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>   |
-| IID<br/>                      | IID \_ imstscsecuredsettings ist als c9d65442-a0f9-45b2-8f73-d61d2db8cbb6 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsTscSecuredSettings ist als c9d65442-a0f9-45b2-8f73-d61d2db8cbb6 definiert.<br/> |
 
 
 
@@ -84,10 +84,10 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imsrdpclientsecuredsettings**](imsrdpclientsecuredsettings-interface.md)
+[**IMsRdpClientSecuredSettings**](imsrdpclientsecuredsettings-interface.md)
 </dt> <dt>
 
-[**Imstscsecuredsettings**](imstscsecuredsettings-interface.md)
+[**IMsTscSecuredSettings**](imstscsecuredsettings-interface.md)
 </dt> </dl>
 
  

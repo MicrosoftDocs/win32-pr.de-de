@@ -1,6 +1,6 @@
 ---
 title: outputcontrolpoints
-description: Definiert die Anzahl der Ausgabe Steuerungs Punkte (pro Thread), die im Hull-Shader erstellt werden.
+description: Definiert die Anzahl der Ausgabekontrollpunkte (pro Thread), die im Hüllen-Shader erstellt werden.
 ms.assetid: 0bd7e5af-29b0-4814-ab96-06e15cc390ff
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 68f933293f86a368bf333ec6d18b909b4d2e5bbd
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 7a4c361092665f24aad2984d48879245529866f833b33b7ec842b91a57c0ff2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103719434"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986150"
 ---
 # <a name="outputcontrolpoints"></a>outputcontrolpoints
 
-Definiert die Anzahl der Ausgabe Steuerungs Punkte (pro Thread), die im Hull-Shader erstellt werden.
+Definiert die Anzahl der Ausgabekontrollpunkte (pro Thread), die im Hüllen-Shader erstellt werden.
 
 
 ```
@@ -27,35 +27,35 @@ outputcontrolpoints(X)
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist die Häufigkeit, mit der die Main-Funktion ausgeführt wird.
+Dies ist die Anzahl, mit der die Main-Funktion ausgeführt wird.
 
-Dieses Attribut wird in den folgenden Typen von Shadern unterstützt:
+Dieses Attribut wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        | x    |        |          |       |         |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Shader Model 5-Attribute](d3d11-graphics-reference-sm5-attributes.md)
+[Shadermodell 5-Attribute](d3d11-graphics-reference-sm5-attributes.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

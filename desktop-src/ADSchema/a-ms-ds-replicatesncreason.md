@@ -1,11 +1,11 @@
 ---
 title: MS-DS-Replicates-NC-Reason-Attribut
-description: Attribut des ntdsConnection-Objekts, das angibt, warum (oder ob) der KCC anzeigt, dass die Verbindung in der Replikationstopologie nützlich ist. Ist mehrwertig und weist distName+Binärsyntax auf, wobei der binäre Teil ein Bitfeld der Größe int ist.
+description: Attribut des ntdsConnection-Objekts, das angibt, warum (oder ob) der KCC anzeigt, dass die Verbindung in der Replikationstopologie nützlich ist. Ist mehrwertig und verfügt über distName+Binärsyntax, wobei der binäre Teil ein Bitfeld der Int-Größe ist.
 ms.assetid: ba66e346-d288-4c0b-b41e-599c3f8e8405
 ms.tgt_platform: multiple
 keywords:
 - AD-Schema des MS-DS-Replicates-NC-Reason-Attributs
-- mS-DS-ReplicatesNCReason-Attribut-AD-Schema
+- mS-DS-ReplicatesNCReason-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118686971"
 ---
 # <a name="ms-ds-replicates-nc-reason-attribute"></a>MS-DS-Replicates-NC-Reason-Attribut
 
-Attribut des ntdsConnection-Objekts, das angibt, warum (oder ob) der KCC anzeigt, dass die Verbindung in der Replikationstopologie nützlich ist. Ist mehrwertig und weist distName+Binärsyntax auf, wobei der binäre Teil ein Bitfeld der Größe int ist.
+Attribut des ntdsConnection-Objekts, das angibt, warum (oder ob) der KCC anzeigt, dass die Verbindung in der Replikationstopologie nützlich ist. Ist mehrwertig und verfügt über distName+Binärsyntax, wobei der binäre Teil ein Bitfeld der Int-Größe ist.
 
 
 
@@ -31,11 +31,11 @@ Attribut des ntdsConnection-Objekts, das angibt, warum (oder ob) der KCC anzeigt
 |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | CN                | MS-DS-Replicates-NC-Reason                                                                                                                 |
 | Ldap-Anzeigename | mS-DS-ReplicatesNCReason                                                                                                                   |
-| Size              | Wert für binären Teil: 0 = KEIN \_ GRUND,1 = \_ GC-TOPOLOGIE, 2 = \_ RINGTOPOLOGIE, 4 = \_ MINIMIEREN \_ HOPS-TOPOLOGIE, 8 = VERALTETE \_ \_ SERVERTOPOLOGIE. |
+| Size              | Wert für binären Teil: 0 = NO \_ REASON,1 = \_ GC-TOPOLOGIE, 2 = RINGTOPOLOGIE, \_ 4 = MINIMIEREN DER \_ HOPS-TOPOLOGIE, \_ 8 = TOPOLOGIE VERALTETER \_ \_ SERVER. |
 | Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.                                                                                                           |
 | Updatehäufigkeit  | Kann sich als Reaktion auf Änderungen in der Netzwerktopologie ändern.                                                                                 |
 | Attribute-Id      | 1.2.840.113556.1.4.1408                                                                                                                    |
-| System-ID-GUID    | 0ea12b84-08b3-11d3-91bc-0000f87a57d4                                                                                                       |
+| System-Id-Guid    | 0ea12b84-08b3-11d3-91bc-0000f87a57d4                                                                                                       |
 | Syntax            | [**Object(DN-Binary)**](s-object-dn-binary.md)                                                                                            |
 
 
@@ -59,7 +59,7 @@ Attribut des ntdsConnection-Objekts, das angibt, warum (oder ob) der KCC anzeigt
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | Falsch                                                  |
-| Ist einwertig       | Falsch                                                  |
+| Is-Single-Valued       | Falsch                                                  |
 | Ist indiziert             | Falsch                                                  |
 | Im globalen Katalog      | Falsch                                                  |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                           |
@@ -80,7 +80,7 @@ Attribut des ntdsConnection-Objekts, das angibt, warum (oder ob) der KCC anzeigt
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | Falsch                                                  |
-| Ist einwertig       | Falsch                                                  |
+| Is-Single-Valued       | Falsch                                                  |
 | Ist indiziert             | Falsch                                                  |
 | Im globalen Katalog      | Falsch                                                  |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                           |
@@ -101,7 +101,7 @@ Attribut des ntdsConnection-Objekts, das angibt, warum (oder ob) der KCC anzeigt
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | Falsch                                                  |
-| Ist einwertig       | Falsch                                                  |
+| Is-Single-Valued       | Falsch                                                  |
 | Ist indiziert             | Falsch                                                  |
 | Im globalen Katalog      | Falsch                                                  |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                           |
@@ -122,7 +122,7 @@ Attribut des ntdsConnection-Objekts, das angibt, warum (oder ob) der KCC anzeigt
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | Falsch                                                  |
-| Ist einwertig       | Falsch                                                  |
+| Is-Single-Valued       | Falsch                                                  |
 | Ist indiziert             | Falsch                                                  |
 | Im globalen Katalog      | Falsch                                                  |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                           |
@@ -143,7 +143,7 @@ Attribut des ntdsConnection-Objekts, das angibt, warum (oder ob) der KCC anzeigt
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | Falsch                                                  |
-| Ist einwertig       | Falsch                                                  |
+| Is-Single-Valued       | Falsch                                                  |
 | Ist indiziert             | Falsch                                                  |
 | Im globalen Katalog      | Falsch                                                  |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                           |
@@ -164,7 +164,7 @@ Attribut des ntdsConnection-Objekts, das angibt, warum (oder ob) der KCC anzeigt
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | Falsch                                                  |
-| Ist einwertig       | Falsch                                                  |
+| Is-Single-Valued       | Falsch                                                  |
 | Ist indiziert             | Falsch                                                  |
 | Im globalen Katalog      | Falsch                                                  |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                           |
@@ -185,7 +185,7 @@ Attribut des ntdsConnection-Objekts, das angibt, warum (oder ob) der KCC anzeigt
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | Falsch                                                  |
-| Ist einwertig       | Falsch                                                  |
+| Is-Single-Valued       | Falsch                                                  |
 | Ist indiziert             | Falsch                                                  |
 | Im globalen Katalog      | Falsch                                                  |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                           |

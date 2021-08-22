@@ -1,7 +1,7 @@
 ---
-description: Die Methode "donewithwindow" zerstört das Fenster.
+description: Die DoneWithWindow-Methode zerstört das Fenster.
 ms.assetid: 03c97884-7d91-4b59-b867-dda231d2a184
-title: Cbasewindow. donewithwindow-Methode (winutil. h)
+title: CBaseWindow.DoneWithWindow-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: cc31e893a4015aa8b4356d265ca4065ee336c3ef
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c6871a42e1a08693a7daf691195b86cd5a41dd208295dc625a33e41083b53adf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106350795"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016668"
 ---
-# <a name="cbasewindowdonewithwindow-method"></a>Cbasewindow. donewithwindow-Methode
+# <a name="cbasewindowdonewithwindow-method"></a>CBaseWindow.DoneWithWindow-Methode
 
-Die- `DoneWithWindow` Methode zerstört das-Fenster.
+Die `DoneWithWindow` -Methode zerstört das Fenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ruft diese Methode aus der dekonstruktormethode des abgeleiteten Objekts auf.
+Rufen Sie diese Methode aus der Destruktormethode des abgeleiteten Objekts auf.
 
-Wenn diese Methode vom gleichen Thread aufgerufen wird, der das Fenster erstellt hat, führt die-Methode die folgenden Aktionen aus:
+Wenn diese Methode aus demselben Thread aufgerufen wird, der das Fenster erstellt hat, führt die -Methode die folgenden Aktionen aus:
 
--   Ruft die [**cbasewindow:: inactivatewindow**](cbasewindow-inactivatewindow.md) -Methode auf, die das Fenster deaktiviert.
--   Ruft die [**cbasewindow:: uninitialisetwindow**](cbasewindow-uninitialisewindow.md) -Methode auf, die vom Fenster verwendete Ressourcen freigibt.
+-   Ruft die [**CBaseWindow::InactivateWindow-Methode**](cbasewindow-inactivatewindow.md) auf, die das Fenster deaktiviert.
+-   Ruft die [**CBaseWindow::UninitialiseWindow-Methode**](cbasewindow-uninitialisewindow.md) auf, die vom Fenster verwendete Ressourcen frei gibt.
 -   Zerstört das Fenster.
 
-Wenn der aufrufenden Thread `DoneWithWindow` nicht der Thread ist, der das Fenster erstellt hat, sendet die Methode eine private "Destroy"-Meldung an das Fenster. Wenn das Fenster diese Nachricht empfängt, ruft es `DoneWithWindow` auf sich selbst auf. (Wenn " [**cbasewindow:: m \_ bdopostdedestroy**](cbasewindow-m-bdoposttodestroy.md) " den Wert " **true**" hat, wird die Nachricht vom Fenster ausgegeben.)
+Wenn der Thread, der aufruft, nicht der Thread ist, der das Fenster erstellt hat, sendet die Methode eine `DoneWithWindow` private "destroy"-Nachricht an das Fenster. Wenn das Fenster diese Meldung empfängt, ruft es `DoneWithWindow` für sich selbst auf. (Wenn [**CBaseWindow::m \_ bDoPostToDestroy**](cbasewindow-m-bdoposttodestroy.md) **true ist,** gibt das Fenster die Meldung aus.)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,8 +62,8 @@ Wenn der aufrufenden Thread `DoneWithWindow` nicht der Thread ist, der das Fenst
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -71,7 +71,7 @@ Wenn der aufrufenden Thread `DoneWithWindow` nicht der Thread ist, der das Fenst
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

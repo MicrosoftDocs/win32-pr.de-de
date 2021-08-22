@@ -1,9 +1,9 @@
 ---
-title: WM_POINTERWHEEL Meldung
-description: Wird im Fenster mit dem Vordergrund Tastaturfokus gesendet, wenn ein Mausrad gedreht wird.
+title: WM_POINTERWHEEL-Nachricht
+description: Wird im Fenster mit dem Vordergrundtastaturfokus angezeigt, wenn ein Scrollrad gedreht wird.
 ms.assetid: 6eec37da-2200-4be1-bf0b-44704caa1320
 keywords:
-- Eingabe Meldungen und Benachrichtigungen der WM_POINTERWHEEL Nachricht
+- 'WM_POINTERWHEEL-Nachricht: Eingabemeldungen und Benachrichtigungen'
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - HeaderDef
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: ad1177b2e92e47ca40c745e6cd5f1ea2cf259215
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 93144125c21da2d29a0d71f56d8d865da4a07dda6adff2f25ce3528fca72b475
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118756528"
 ---
-# <a name="wm_pointerwheel-message"></a>WM_POINTERWHEEL Meldung
+# <a name="wm_pointerwheel-message"></a>WM_POINTERWHEEL-Nachricht
 
-Wird im Fenster mit dem Vordergrund Tastaturfokus gesendet, wenn ein Mausrad gedreht wird.
+Wird im Fenster mit dem Vordergrundtastaturfokus angezeigt, wenn ein Scrollrad gedreht wird.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 > \[! Wichtig\]  
-> Desktop-Apps sollten dpi-fähig sein. Wenn Ihre APP nicht dpi-fähig ist, können Bildschirm Koordinaten, die in Zeiger Nachrichten und zugehörigen Strukturen enthalten sind, aufgrund der dpi-Virtualisierung ungenau erscheinen. Die dpi-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht mit dpi-Werten kompatibel sind und standardmäßig aktiv sind (Benutzer können Sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von High-dpi-Win32-Anwendungen](/previous-versions//dd464660(v=vs.85)).
+> Desktop-Apps sollten DPI-bewusst sein. Wenn Ihre App keine DPI-Unterstützung hat, können Bildschirmkoordinaten, die in Zeigermeldungen und verwandten Strukturen enthalten sind, aufgrund der DPI-Virtualisierung ungenau erscheinen. Die DPI-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht DPI-bewusst sind und standardmäßig aktiv sind (Benutzer können sie deaktivieren). Weitere Informationen finden Sie unter [Writing High-DPI Win32 Applications ( Schreiben von Win32-Anwendungen mit hohem DPI-Code).](/previous-versions//dd464660(v=vs.85))
 
  
 
@@ -46,11 +46,11 @@ Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versi
 *wParam* 
 </dt> <dd>
 
-Enthält den Zeiger Bezeichner und das raddelta. Verwenden Sie die folgenden Makros, um diese Informationen abzurufen.
+Enthält den Zeigerbezeichner und das Raddelta. Verwenden Sie die folgenden Makros, um diese Informationen abzurufen.
 
-[**GET_POINTERID_WPARAM**](/previous-versions/windows/desktop/api)(wParam): Zeiger Bezeichner.
+[**GET_POINTERID_WPARAM**](/previous-versions/windows/desktop/api)(wParam): Zeigerbezeichner.
 
-[**GET_WHEEL_DELTA_WPARAM**](/windows/win32/api/winuser/nf-winuser-get_wheel_delta_wparam)(wParam): ein raddelta als Wert mit Vorzeichen als Vorzeichen.
+[**GET_WHEEL_DELTA_WPARAM**](/windows/win32/api/winuser/nf-winuser-get_wheel_delta_wparam)(wParam): Raddelta als kurz signierter Wert.
 
 </dd> <dt>
 
@@ -60,28 +60,28 @@ Enthält den Zeiger Bezeichner und das raddelta. Verwenden Sie die folgenden Mak
 Enthält die Punktposition des Zeigers.
 
 > [!Note]  
-> Da der Zeiger über einen nicht trivialen Bereich eine Verbindung mit dem Gerät herstellen kann, kann es sein, dass diese Punktposition eine Vereinfachung eines komplexeren Zeiger Bereichs ist. Wenn möglich, sollte eine Anwendung anstelle der Punktposition die gesamten Zeiger Bereichs Informationen verwenden.
+> Da der Zeiger den Kontakt mit dem Gerät über einen nicht trivialen Bereich stellen kann, kann diese Punktposition eine Vereinfachung eines komplexeren Zeigerbereichs sein. Wenn möglich, sollte eine Anwendung die vollständigen Zeigerbereichsinformationen anstelle der Punktposition verwenden.
 
  
 
-Verwenden Sie die folgenden Makros zum Abrufen der physischen Bildschirm Koordinaten des Punkts.
+Verwenden Sie die folgenden Makros, um die physischen Bildschirmkoordinaten des Punkts abzurufen.
 
--   [**GET_X_LPARAM**](/windows/win32/api/windowsx/nf-windowsx-get_x_lparam)(LPARAM): die X-Koordinate (horizontal Punkt).
--   [**GET_Y_LPARAM**](/windows/win32/api/windowsx/nf-windowsx-get_y_lparam)(LPARAM): die Y-Koordinate (vertikal Punkt).
+-   [**GET_X_LPARAM**](/windows/win32/api/windowsx/nf-windowsx-get_x_lparam)(lParam): Die x-Koordinate (horizontaler Punkt).
+-   [**GET_Y_LPARAM**](/windows/win32/api/windowsx/nf-windowsx-get_y_lparam)(lParam): Die y-Koordinate (vertikaler Punkt).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn die Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-Wenn die Anwendung diese Nachricht nicht verarbeitet, sollte Sie [**defwindowproc**](/windows/win32/api/winuser/nf-winuser-defwindowproca)aufgerufen werden.
+Wenn die Anwendung diese Meldung nicht verarbeiten kann, sollte sie [**DefWindowProc aufrufen.**](/windows/win32/api/winuser/nf-winuser-defwindowproca)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie zum Abrufen der Mausrad-schiebeeinheiten den **Input Data** -Befehl der [**POINTER_INFO**](/previous-versions/windows/desktop/api) Struktur, die durch den Aufruf der [**getpointerinfo**](/previous-versions/windows/desktop/api) -Funktion zurückgegeben wird. Dieses Feld enthält einen Wert mit Vorzeichen und wird in einem Vielfachen von **WHEEL_DELTA** ausgedrückt. Ein positiver Wert gibt einen Drehungs Forward an, und ein negativer Wert gibt eine Drehung rückwärts an.
+Um die Scrolleinheiten für das Rad abzurufen, verwenden Sie die **inputData-Datei** der [**POINTER_INFO,die**](/previous-versions/windows/desktop/api) durch Aufrufen der [**GetPointerInfo-Funktion zurückgegeben**](/previous-versions/windows/desktop/api) wird. Dieses Feld enthält einen Wert mit Vorsigniertem und wird in einem Vielfachen von **WHEEL_DELTA.** Ein positiver Wert gibt eine Drehung vorwärts und ein negativer Wert eine Rückwärtsdrehung an.
 
-Beachten Sie, dass die Radeingaben auch dann übermittelt werden können, wenn sich der Mauszeiger außerhalb des Fensters der Anwendung befindet. Die radnachrichten werden auf eine Weise übermittelt, die den Tastatureingaben sehr ähnlich ist. Das Fokus Fenster der foregournd-Nachrichten Warteschlange empfängt die radnachrichten.
+Beachten Sie, dass die Radeingaben auch dann übermittelt werden können, wenn sich der Mauszeiger außerhalb des Anwendungsfensters befindet. Die Radmeldungen werden auf eine Weise übermittelt, die den Tastatureingaben sehr ähnlich ist. Das Fokusfenster der nachrichtenwarteschlange empfängt die Radnachrichten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,13 +89,13 @@ Beachten Sie, dass die Radeingaben auch dann übermittelt werden können, wenn s
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                               |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

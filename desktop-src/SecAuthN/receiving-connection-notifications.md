@@ -1,27 +1,27 @@
 ---
-description: Einige Anwendungen müssen vor dem Auftreten des Ereignisses, unmittelbar nach auftreten oder beides, eine Benachrichtigung über Verbindungs Ereignisse erhalten. Sie können eine DLL erstellen, um die Benachrichtigung über Verbindungs Ereignisse vor und nach der Benachrichtigung zu erhalten.
+description: Einige Anwendungen müssen Benachrichtigungen über Verbindungsereignisse empfangen, entweder vor dem Ereignis, direkt nachdem es auftritt, oder beides. Sie können eine DLL erstellen, um Benachrichtigungen zu Verbindungsereignissen im Voraus und nach der Faktenmeldung zu empfangen.
 ms.assetid: 692eb8f2-1c53-4535-b44d-babb30eecd9c
-title: Empfangen von Verbindungs Benachrichtigungen
+title: Empfangen von Verbindungsbenachrichtigungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c054d4f7bb78f610afe6c1cbdf028416de7b5596
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c3a581855ef134536df8c4c728521e796e541c963a780e2f572ad88dc704c677
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118919689"
 ---
-# <a name="receiving-connection-notifications"></a>Empfangen von Verbindungs Benachrichtigungen
+# <a name="receiving-connection-notifications"></a>Empfangen von Verbindungsbenachrichtigungen
 
-Einige Anwendungen müssen vor dem Auftreten des Ereignisses, unmittelbar nach auftreten oder beides, eine Benachrichtigung über Verbindungs Ereignisse erhalten. Sie können eine DLL erstellen, um die Benachrichtigung über Verbindungs Ereignisse vor und nach der Benachrichtigung zu erhalten.
+Einige Anwendungen müssen Benachrichtigungen über Verbindungsereignisse empfangen, entweder vor dem Ereignis, direkt nachdem es auftritt, oder beides. Sie können eine DLL erstellen, um Benachrichtigungen zu Verbindungsereignissen im Voraus und nach der Faktenmeldung zu empfangen.
 
-Ein Beispiel für eine Anwendung, die eine vorab Benachrichtigung über ein Verbindungs Ereignis erhalten muss, ist der RAS-Dienst (RAS). RAS muss vor dem Herstellen einer Verbindung informiert werden, da es möglicherweise erforderlich ist, eine Modemverbindung herzustellen, bevor die Netzwerkverbindung hergestellt wird.
+Ein Beispiel für eine Anwendung, die eine Vorabbenachrichtigung über ein Verbindungsereignis erhalten muss, ist der Ras-Dienst (RAS). Ras muss vor dem Herstellen einer Verbindung informiert werden, da möglicherweise eine Modemverbindung hergestellt werden muss, bevor die Netzwerkverbindung hergestellt wird.
 
-Ebenso müssen Anwendungen nach dem Herstellen der Verbindung möglicherweise Ressourcen bereinigen, sodass eine Benachrichtigung nach der Verbindung erforderlich ist.
+Ebenso müssen Anwendungen möglicherweise Ressourcen bereinigen, nachdem die Verbindung hergestellt wurde. Daher ist eine Benachrichtigung nach der Verbindung erforderlich.
 
-Anwendungen, die voraus-und nachher-Benachrichtigung über Verbindungs Ereignisse erhalten möchten, müssen eine DLL bereitstellen, die zwei Funktionen, [**addconnectnotify**](/windows/desktop/api/Npapi/nf-npapi-addconnectnotify) und [**cancelconnectnotify**](/windows/desktop/api/Npapi/nf-npapi-cancelconnectnotify), exportiert.
+Anwendungen, die an einer Vorab- und Nach-der-Fakten-Benachrichtigung über Verbindungsereignisse interessiert sind, müssen eine DLL zur Verfügung stellen, die die beiden Funktionen [**AddConnectNotify**](/windows/desktop/api/Npapi/nf-npapi-addconnectnotify) und [**CancelConnectNotify exportiert.**](/windows/desktop/api/Npapi/nf-npapi-cancelconnectnotify)
 
-Nachdem Sie diese Funktionen implementiert haben, müssen Sie die dll registrieren, wie unter [registrieren für den Empfang von Verbindungs Benachrichtigungen](registering-to-receive-connection-notifications.md)beschrieben.
+Nachdem Sie diese Funktionen implementiert haben, müssen Sie Ihre DLL wie unter Registrieren für den Empfang von [Verbindungsbenachrichtigungen beschrieben registrieren.](registering-to-receive-connection-notifications.md)
 
  
 
