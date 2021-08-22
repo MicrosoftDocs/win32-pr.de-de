@@ -1,19 +1,19 @@
 ---
-title: Iagentcommandsex GetFontSize
-description: Iagentcommandsex GetFontSize
+title: IAgentCommandsEx GetFontSize
+description: IAgentCommandsEx GetFontSize
 ms.assetid: 8173e026-d28f-43d8-a8b4-96d1d97a8b68
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 48a2450d94e89dd9dddc00a11af7f37bf4837558
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e92f2ce1908ea5f37d24fb8a085204917440f61ae30feb1e596639d0240c353d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388414"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976270"
 ---
-# <a name="iagentcommandsexgetfontsize"></a>Iagentcommandsex:: GetFontSize
+# <a name="iagentcommandsexgetfontsize"></a>IAgentCommandsEx::GetFontSize
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT GetFontSize(
@@ -27,25 +27,25 @@ Ruft den Wert für die Größe der Schriftart ab, die im Popupmenü des Zeichens
 
 <dl> <dt>
 
-<span id="plFontSize"></span><span id="plfontsize"></span><span id="PLFONTSIZE"></span>*plfontsize*
+<span id="plFontSize"></span><span id="plfontsize"></span><span id="PLFONTSIZE"></span>*plFontSize*
 </dt> <dd>
 
-Die Adresse eines Werts, der die Größe der Schriftart erhält.
+Die Adresse eines Werts, der die Schriftgröße empfängt.
 
 </dd> </dl>
 
-Die Punktgröße der zurückgegebenen Schriftart entspricht der Größe, die für die Anzeige von Text im Popup Menü des Zeichens definiert ist, wenn der Client für die Eingabe aktiviert ist. Der Standardwert für die Schriftart Einstellung basiert auf der Einstellung für die Menü Schriftart für die Sprach-ID-Einstellung des Zeichens oder, wenn nicht festgelegt, der Standard Spracheinstellung des Benutzers.
+Die Punktgröße der zurückgegebenen Schriftart entspricht der Größe, die für die Anzeige von Text im Popupmenü des Zeichens definiert ist, wenn der Client eingabeaktiv ist. Der Standardwert für die Schriftarteinstellung basiert auf der Einstellung für die Menüschriftart für die Sprach-ID des Zeichens oder, falls nicht festgelegt, auf der Standardspracheinstellung des Benutzers.
 
-Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch die Client Anwendung. Diese Einstellung wirkt sich nicht auf andere Clients des Zeichens oder andere Zeichen ihrer Client Anwendung aus.
+Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch Ihre Clientanwendung. Die Einstellung wirkt sich nicht auf andere Clients des Zeichens oder anderer Zeichen Ihrer Clientanwendung aus.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcommandsex:: SetFontSize**](iagentcommandsex--setfontsize.md), [ **iagentcommandsex:: setfontname**](iagentcommandsex--setfontname.md)
+[**IAgentCommandsEx::SetFontSize**](iagentcommandsex--setfontsize.md), [ **IAgentCommandsEx::SetFontName**](iagentcommandsex--setfontname.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

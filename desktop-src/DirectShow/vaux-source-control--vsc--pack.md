@@ -1,33 +1,33 @@
 ---
-description: Vaux-Quell Code Verwaltungspaket (VSC)
+description: VAUX-Quellcodeverwaltungspaket (VSC)
 ms.assetid: 9d5dd89e-9084-409d-86c0-30b57645d33d
-title: Vaux-Quell Code Verwaltungspaket (VSC)
+title: VAUX-Quellcodeverwaltungspaket (VSC)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ed51363a15c0024dcaf3edca5d21217cb29396d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bcdc91d5c4b2cea460c85b696c59bfce7799d39aed0a6bfcbc03f3d3c522a6ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866444"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119072074"
 ---
-# <a name="vaux-source-control-vsc-pack"></a>Vaux-Quell Code Verwaltungspaket (VSC)
+# <a name="vaux-source-control-vsc-pack"></a>VAUX-Quellcodeverwaltungspaket (VSC)
 
-In den folgenden Tabellen sind die Werte aufgeführt, die vom msdv-Treiber verwendet werden, um den **dwdvvauxctl** -Member der [**dvinfo**](/windows/desktop/api/strmif/ns-strmif-dvinfo) -Struktur auszufüllen. Weitere Informationen finden Sie unter [dvinfo Field Settings in the msdv Driver](dvinfo-field-settings-in-the-msdv-driver.md).
+In den folgenden Tabellen sind die Werte aufgeführt, die vom MSDV-Treiber verwendet werden, um den **dwDVVAuxCtl-Member** der [**DVINFO-Struktur**](/windows/desktop/api/strmif/ns-strmif-dvinfo) auszufüllen. Weitere Informationen finden Sie unter [DVINFO-Feld Einstellungen im MSDV-Treiber.](dvinfo-field-settings-in-the-msdv-driver.md)
 
-**Dvcr-Einstellungen**
+**DVCR Einstellungen**
 
 
 
-DV-Standard
+DV Standard
 
-Dvcr (IEC 61834)
+DVCR (IEC 61834)
 
 FOURCC
 
 dvsl
 
-DVSD
+dvsd
 
 System
 
@@ -79,7 +79,7 @@ SS (2)
 
 11
 
-REC St (1)
+REC ST (1)
 
 1
 
@@ -99,7 +99,7 @@ Reserviert (1)
 
 1
 
-Modus "Rec" (2)
+REC-MODUS (2)
 
 00
 
@@ -159,7 +159,7 @@ FC (1)
 
 1
 
-Il (1)
+IL (1)
 
 1
 
@@ -169,7 +169,7 @@ Il (1)
 
 1
 
-St (1)
+ST (1)
 
 1
 
@@ -189,7 +189,7 @@ SC (1)
 
 1
 
-Bcsys (2)
+BCSYS (2)
 
 00
 
@@ -209,7 +209,7 @@ Reserviert (1)
 
 1
 
-Genre (7)
+GENRE (7)
 
 111:1111
 
@@ -221,25 +221,25 @@ Genre (7)
 
 VSC-Paket
 
-0xfffcc83f
+0xFFFCC83F
 
-0xfffdc83f
+0xFFFDC83F
 
-0xfffcc83f
+0xFFFCC83F
 
-0xfffdc83f
+0xFFFDC83F
 
 
 
  
 
-**DVCPRO-Einstellungen 25 und DVCPRO 50 (geplant)**
+**DVCPRO 25 und DVCPRO 50 Einstellungen (geplant)**
 
 
 
-DV-Standard
+DV Standard
 
-DVCPRO (SMPTE 314m) – geplant
+DVCPRO (SMPTE 314M) – geplant
 
 FOURCC
 
@@ -347,7 +347,7 @@ FC (1)
 
 1
 
-Il (1)
+IL (1)
 
 1
 
@@ -389,23 +389,23 @@ Reserviert (8)
 
 VSC-Paket
 
-0xfffcc83f
+0xFFFCC83F
 
-0xfffcc83f
+0xFFFCC83F
 
-0xfffcc83f
+0xFFFCC83F
 
-0xfffcc83f
+0xFFFCC83F
 
 
 
  
 
-**DVCPRO 100-Einstellungen (geplant)**
+**DVCPRO 100 Einstellungen (geplant)**
 
 
 
-DV-Standard
+DV Standard
 
 DVCPRO 100 – geplant
 
@@ -493,7 +493,7 @@ FC (1)
 
 1
 
-Il (1)
+IL (1)
 
 1
 
@@ -527,29 +527,29 @@ Reserviert (8)
 
 VSC-Paket
 
-0xfffcca3f
+0xFFFCCA3F
 
-0xfffcca3f
+0xFFFCCA3F
 
-0xfffcca3f
+0xFFFCCA3F
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die folgenden Feldcodes sind von Interesse:
 
--   **CGMS**: Verwaltungssystem für die Kopier Generierung 0 = Kopieren ohne Einschränkung zulässig.
+-   **CGMS:** Generierungsverwaltungssystem für Kopiervorgang. 0 = Kopiervorgang ohne Einschränkung zulässig.
 
     Die tatsächlichen VSC-Pakete im DV-Stream können unterschiedliche Werte enthalten.
 
 <!-- -->
 
--   **REC-Modus**: Aufzeichnungsmodus. 1 = Original.
--   **DISP**: zeigt den SELECT-Modus an. 000 = 4:3 Seitenverhältnis, vollständiges Format; 010 = 16:9-Seitenverhältnis.
--   **Bcsys**: Broadcast System. Dieses Feld definiert den Typ der Anzeigeinformationen für Breite Bildschirme.
+-   **REC MODE:** Aufzeichnungsmodus. 1 = Original.
+-   **DISP:** Anzeigeauswahlmodus. 000 = Seitenverhältnis 4:3, vollständiges Format; 010 = Seitenverhältnis 16:9.
+-   **BCSYS:** Broadcastsystem. Dieses Feld definiert den Typ der Breitbildschirmsignalisierungsinformationen.
     -   0 = Typ 0 (siehe IEC 61880)
     -   1 = Typ 1 (siehe ETSI EN 300 294)
 
@@ -560,7 +560,7 @@ Die folgenden Feldcodes sind von Interesse:
 [Digitales Video in DirectShow](digital-video-in-directshow.md)
 </dt> <dt>
 
-[Dvinfo-Feld Einstellungen im msdv-Treiber](dvinfo-field-settings-in-the-msdv-driver.md)
+[DVINFO-Feld Einstellungen im MSDV-Treiber](dvinfo-field-settings-in-the-msdv-driver.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die getduecommand-Methode ruft einen Zeiger auf den nächsten Befehl ab, der fällig ist.
+description: Die GetDueCommand-Methode ruft einen Zeiger auf den nächsten fälligen Befehl ab.
 ms.assetid: f23434a6-ad2c-4b64-90b1-2f486a16e7e6
-title: Ccmdqueue. getduecommand-Methode (winutil. h)
+title: CCmdQueue.GetDueCommand-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1a1297a3f0d514215270acf7e73b18cba46fca1f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f6e7c8d133537dc2b185c755e65f3a4febbee762c5c2306de37ad0c627434df7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016428"
 ---
-# <a name="ccmdqueuegetduecommand-method"></a>Ccmdqueue. getduecommand-Methode
+# <a name="ccmdqueuegetduecommand-method"></a>CCmdQueue.GetDueCommand-Methode
 
-Die- `GetDueCommand` Methode ruft einen Zeiger auf den nächsten Befehl ab, der fällig ist.
+Die `GetDueCommand` -Methode ruft einen Zeiger auf den nächsten fälligen Befehl ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,20 +50,20 @@ Adresse eines Zeigers auf den verzögerten Befehl.
 
 </dd> <dt>
 
-*mstimeout* 
+*msTimeout* 
 </dt> <dd>
 
-Zeitspanne, die gewartet werden soll, bevor das Timeout durchgeführt wird.
+Zeitspanne, die gewartet werden soll, bevor das Time out ausgeführt wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den \_ Abbruch bei einem Timeout zurück. Gibt \_ bei Erfolg S OK zurück; andernfalls wird ein Fehler zurückgegeben. Gibt ein Objekt zurück, das mit **IUnknown:: adressf** inkrementiert wurde.
+Gibt E \_ ABORT zurück, wenn ein Time out auftritt. Gibt S \_ OK zurück, wenn erfolgreich. Andernfalls wird ein Fehler zurückgegeben. Gibt ein Objekt zurück, das mit **IUnknown::AddRef** inkrementiert wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion wird blockiert, bis ein ausstehender Befehl fällig ist. Die Element Funktionsblöcke für die Zeitspanne (in Millisekunden), die im *mstimeout* -Parameter angegeben ist. Stream-Zeit-Befehle werden nur durch die Member-Funktionen [**ccmdqueue:: Run**](ccmdqueue-run.md) und [**ccmdqueue:: EndRun**](ccmdqueue-endrun.md) verursacht. Der Befehl wird bis zum Ausführen oder Abbrechen in die Warteschlange eingereiht.
+Diese Memberfunktion wird blockiert, bis ein ausstehender Befehl fällig ist. Die Memberfunktion blockiert den Zeitraum in Millisekunden, der im *msTimeout-Parameter* angegeben ist. Streamzeitbefehle werden nur zwischen den Memberfunktionen [**CCmdQueue::Run**](ccmdqueue-run.md) und [**CCmdQueue::EndRun**](ccmdqueue-endrun.md) fällig. Der Befehl bleibt in der Warteschlange, bis er ausgeführt oder abgebrochen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,16 +71,16 @@ Diese Member-Funktion wird blockiert, bis ein ausstehender Befehl fällig ist. D
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ccmdqueue-Klasse**](ccmdqueue.md)
+[**CCmdQueue-Klasse**](ccmdqueue.md)
 </dt> </dl>
 
  

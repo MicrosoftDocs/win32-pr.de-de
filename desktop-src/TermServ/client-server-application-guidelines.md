@@ -1,36 +1,36 @@
 ---
-title: Richtlinien für Client/Server-Anwendungen
-description: Client/Server-Anwendungen dürfen nicht davon ausgehen, dass eine einzelne Computerverbindung einer einzelnen Benutzersitzung entspricht.
+title: Client-/Serveranwendungsrichtlinien
+description: Client-/Serveranwendungen dürfen nicht davon ausgehen, dass eine einzelne Computerverbindung einer einzelnen Benutzersitzung entspricht.
 ms.assetid: 69822ef1-eca8-4302-b014-8e5894d52109
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cd0c1a71256f3ab469bfeb1c08b2d096b56ac1b5
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 234d27f5bd024e2311307f39e4f86584747b59b874576e5cd5aa28e735b2945d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001618"
 ---
-# <a name="clientserver-application-guidelines"></a>Richtlinien für Client/Server-Anwendungen
+# <a name="clientserver-application-guidelines"></a>Client-/Serveranwendungsrichtlinien
 
-Client/Server-Anwendungen dürfen nicht davon ausgehen, dass eine einzelne Computerverbindung einer einzelnen Benutzersitzung entspricht. Dies ist ein Sonderfall des in [IP-Adressen und Computer Namen](ip-addresses-and-computer-names.md)behandelten Problems.
+Client-/Serveranwendungen dürfen nicht davon ausgehen, dass eine einzelne Computerverbindung einer einzelnen Benutzersitzung entspricht. Dies ist ein Sonderfall des Problems, das unter [IP-Adressen und Computernamen](ip-addresses-and-computer-names.md)erläutert wird.
 
-Zum eindeutigen Identifizieren einer Client/Server-Verbindung muss jedes Client Modul einen eindeutigen Namen oder Bezeichner verwenden. Anwendungen können benannte Objekte oder Pipes, Sockets oder andere IPC-Methoden verwenden. Weitere Informationen finden Sie unter [Kernel Object Namespaces](kernel-object-namespaces.md).
+Um eine Client-/Serververbindung eindeutig zu identifizieren, muss jedes Clientmodul einen eindeutigen Namen oder Bezeichner verwenden. Anwendungen können benannte Objekte oder Pipes, Sockets oder andere IPC-Methoden verwenden. Weitere Informationen finden Sie unter [Kernelobjektnamespaces.](kernel-object-namespaces.md)
 
-Um Remotedesktopdienste kompatibel zu sein, muss das Servermodul in einer Client/Server-Anwendung in der Lage sein, mehrere Clients zu verarbeiten, die eine Verbindung über denselben Computer herstellen. Um dies zu erreichen, muss das Servermodul Clientverbindungen über eine klar definierte globale Schnittstelle (z. b. RPC oder Named Pipes) akzeptieren. Der Server und der Client müssen für jede Benutzersitzung einen anderen Kommunikationskanal aushandeln. Der Client muss eine Verbindung mit dem Server herstellen, indem er Protokolle verwendet, die diese Art von Vorgang (z. b. TCP/IP) problemlos unterstützen, wobei eine andere Socketverbindung für jede Client Anwendung verwendet werden kann.
+Um Remotedesktopdienste kompatibel zu sein, muss das Servermodul in einer Client-/Serveranwendung mehrere Clients verarbeiten können, die eine Verbindung vom gleichen Computer herstellen. Hierzu muss das Servermodul Clientverbindungen über eine klar definierte globale Schnittstelle wie RPC oder Named Pipes akzeptieren. Server und Client müssen für jede Benutzersitzung einen anderen Kommunikationskanal aushandeln. Der Client muss eine Verbindung mit dem Server herstellen, indem Protokolle verwendet werden, die diese Art von Vorgang problemlos unterstützen, z. B. TCP/IP, wobei für jede Clientanwendung eine andere Socketverbindung verwendet werden kann.
 
-Das Client Modul kann die [**processidtosessionid**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-processidtosessionid) -Funktion aufrufen, um den Bezeichner der Remotedesktopdienste Sitzung abzurufen. Der Client verwendet dann eine Form der prozessübergreifenden Kommunikation, um die Sitzungs-ID an das Servermodul zu übergeben. Die Client-und Server Module können dann den Sitzungs Bezeichner verwenden, um einen privaten Kommunikationskanal einzurichten. Das Servermodul kann z. b. einen Sitzungs Bezeichner verwenden, um auf Objekte im Namespace der Sitzung für Kernel Objekte zuzugreifen.
+Das Clientmodul kann die [**ProcessIdToSessionId-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-processidtosessionid) aufrufen, um den Bezeichner der Remotedesktopdienste Sitzung abzurufen. Der Client verwendet dann eine Form der prozessübergreifenden Kommunikation, um seinen Sitzungsbezeichner an das Servermodul zu übergeben. Die Client- und Servermodule können dann den Sitzungsbezeichner verwenden, um einen privaten Kommunikationskanal einzurichten. Beispielsweise kann das Servermodul einen Sitzungsbezeichner verwenden, um auf Objekte im Namespace der Sitzung für Kernelobjekte zuzugreifen.
 
-Außerdem kann das Servermodul die Sitzungs-ID in einem [**wzquerysessioninformation**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtsquerysessioninformationa) -Befehl verwenden, um zusätzliche Informationen über den Client abzurufen. Das Servermodul kann auch die Sitzungs-ID in einem [**wtssendmessage**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtssendmessagea) -Befehl verwenden, um eine Meldung auf dem Client Terminal anzuzeigen. Das Servermodul kann auch zwei Ereignisse erstellen, um die Client Verbindung mit einer Sitzung zu überwachen und die Verbindung zu trennen. Dies muss jedoch auf dem Remotedesktop-Sitzungshost-Server (RD-Sitzungshost) registriert werden. Weitere Informationen finden Sie unter über [Wachen von Sitzungs Verbindungen und Trennungen](monitoring-session-connections-and-disconnections.md).
+Darüber hinaus kann das Servermodul den Sitzungsbezeichner in einem [**WTSQuerySessionInformation-Aufruf**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtsquerysessioninformationa) verwenden, um zusätzliche Informationen zum Client abzurufen. Das Servermodul kann auch den Sitzungsbezeichner in einem [**WTSSendMessage-Aufruf**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtssendmessagea) verwenden, um eine Nachricht im Clientterminal anzuzeigen. Das Servermodul kann auch zwei Ereignisse erstellen, um die Clientverbindung mit einer Sitzung zu überwachen und die Verbindung mit einer Sitzung zu trennen. Sie muss jedoch auf dem server Remotedesktop-Sitzungshost (RD-Sitzungshost) registriert werden, um dies zu tun. Weitere Informationen finden Sie unter [Überwachen von Sitzungsverbindungen und Trennen von Verbindungen.](monitoring-session-connections-and-disconnections.md)
 
-Eingabe Aufforderungen für Benutzereingaben sind eine potenzielle Ursache für Probleme bei Client-/Server-Anwendungen. Wenn ein Dienst z. b. die [**MessageBox**](/windows/desktop/api/winuser/nf-winuser-messagebox) -Funktion aufruft, wird das Meldungs Feld auf dem Desktop des RD-Sitzungshost Servers und nicht auf dem Client Desktop angezeigt. Der Dienst kann die [**wtssendmessage**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtssendmessagea) -Funktion aufrufen, um eine Meldung auf einem Client Desktop anzuzeigen. Alternativ kann der Dienst Eingaben vom Client Modul anfordern, und das Client Modul kann die Benutzeroberfläche anzeigen und die resultierende Eingabe an den Dienst zurücksenden.
+Eingabeaufforderungen sind eine potenzielle Ursache für Probleme bei Client-/Serveranwendungen. Wenn beispielsweise ein Dienst die [**MessageBox-Funktion**](/windows/desktop/api/winuser/nf-winuser-messagebox) aufruft, wird das Meldungsfeld auf dem Desktop des RD-Sitzungshost-Servers und nicht auf dem Clientdesktop angezeigt. Um eine Nachricht auf einem Clientdesktop anzuzeigen, kann der Dienst die [**WtsSendMessage-Funktion**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtssendmessagea) aufrufen. Alternativ kann der Dienst Eingaben vom Clientmodul anfordern, und das Clientmodul kann die Benutzeroberfläche anzeigen und die resultierende Eingabe an den Dienst zurücksenden.
 
-Prozesse, die aus mehreren Sitzungen erzeugt werden, können Daten über freigegebene Speicherblöcke an Daten senden und von Ihnen empfangen. Weitere Informationen finden Sie unter [Erstellen von benannten freigegebenen Arbeitsspeicher](/windows/desktop/Memory/creating-named-shared-memory). Shared Memory kann unter den folgenden Bedingungen nicht verwendet werden:
+Prozesse, die aus mehreren Sitzungen entstehen, können Daten über freigegebene Speicherblöcke aneinander senden und voneinander empfangen. Weitere Informationen finden Sie unter [Creating Named Shared Memory](/windows/desktop/Memory/creating-named-shared-memory). Freigegebener Arbeitsspeicher kann unter den folgenden Bedingungen nicht verwendet werden:
 
--   Die Prozesse, die den freigegebenen Speicherblock verwenden, wurden von mehreren Sitzungen erzeugt.
--   Die Sitzungen verwenden dieselben Anmelde Informationen für die Benutzerauthentifizierung.
+-   Die Prozesse, die den Shared Memory-Block verwenden, wurden von mehreren Sitzungen ausgelöst.
+-   Die Sitzungen verwenden die gleichen Anmeldeinformationen für die Benutzerauthentifizierung.
 
- 
+ 
 
- 
+ 

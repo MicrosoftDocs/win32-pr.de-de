@@ -1,21 +1,21 @@
 ---
-description: Die Create-Methode erstellt ein neues Medium mit Standardeigenschaften, fügt es der Collection am angegebenen Index hinzu und gibt einen Zeiger auf die ITmedia-Schnittstelle zurück.
+description: Die Create-Methode erstellt ein neues Medium mit Standardeigenschaften, fügt es der Sammlung am angegebenen Index hinzu und gibt einen Zeiger auf die ITMedia-Schnittstelle zurück.
 ms.assetid: f0036556-d2e7-4589-8bb4-e2c5559902fe
-title: 'Itmediacollection:: Create-Methode (sdpblb. h)'
+title: ITMediaCollection::Create-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8033fb2f541f5451f918845858df756b32361f54
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 68a2b11624b6a22a9bf1bff7b87538d3c7e915892a4ec7b816ee3d6c4d03821d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060868"
 ---
-# <a name="itmediacollectioncreate-method"></a>Itmediacollection:: Create-Methode
+# <a name="itmediacollectioncreate-method"></a>ITMediaCollection::Create-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Create** -Methode erstellt ein neues Medium mit Standardeigenschaften, fügt es der Collection am angegebenen Index hinzu und gibt einen Zeiger auf die [**ITmedia**](itmedia.md) -Schnittstelle zurück.
+Die **Create-Methode** erstellt ein neues Medium mit Standardeigenschaften, fügt es der Sammlung am angegebenen Index hinzu und gibt einen Zeiger auf die [**ITMedia-Schnittstelle**](itmedia.md) zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,17 +33,17 @@ HRESULT Create(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-Der Index für das neue Element. Der minimale Wert für den Index ist 1, und der Höchstwert für den Index ist die aktuelle Anzahl von Elementen + 1.
+Index für das neue Element. Der Mindestwert für den Index ist 1, und der maximale Wert für den Index ist die aktuelle Anzahl von Elementen + 1.
 
 </dd> <dt>
 
-*ppmedia* \[ vorgenommen\]
+*ppMedia* \[ out\]
 </dt> <dd>
 
-Zeiger auf die erstellte [**ITmedia**](itmedia.md) -Schnittstelle.
+Zeiger auf erstellte [**ITMedia-Schnittstelle.**](itmedia.md)
 
 </dd> </dl>
 
@@ -56,21 +56,21 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Wert                                                                                         | Bedeutung                                                         |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *ppmedia* -Parameter ist kein gültiger Zeiger.<br/>      |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *Index* -Parameter ist ungültig.<br/>                  |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Der *ppMedia-Parameter* ist kein gültiger Zeiger.<br/>      |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *Index-Parameter* ist ungültig.<br/>                  |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die meisten C-und C++-Listen sind 0-basiert, aber dieser Index basiert auf Visual Basic Kompatibilität, d. h., das erste Element hat eine Indexnummer von 1.
+Die meisten C- und C++-Listen sind 0-basiert, aber dieser Index basiert aus Visual Basic Kompatibilität auf 1, was bedeutet, dass das erste Element eine Indexnummer von 1 hat.
 
-TAPI Ruft die **adressf** -Methode auf der [**ITmedia**](itmedia.md) -Schnittstelle auf, die von **itmediacollection:: Create** zurückgegeben wurde. Die Anwendung muss Release auf der [**ITmedia**](itmedia.md) -Schnittstelle aufzurufen, um Ressourcen frei **zugeben** , die ihr zugeordnet sind.
+TAPI ruft die **AddRef-Methode** auf der [**ITMedia-Schnittstelle**](itmedia.md) auf, die von **ITMediaCollection::Create** zurückgegeben wird. Die Anwendung muss **Release** auf der [**ITMedia-Schnittstelle**](itmedia.md) aufrufen, um zugeordnete Ressourcen freizugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,21 +78,21 @@ TAPI Ruft die **adressf** -Methode auf der [**ITmedia**](itmedia.md) -Schnittste
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ITmedia**](itmedia.md)
+[**ITMedia**](itmedia.md)
 </dt> <dt>
 
-[**Itmediacollection**](itmediacollection.md)
+[**ITMediaCollection**](itmediacollection.md)
 </dt> </dl>
 
  

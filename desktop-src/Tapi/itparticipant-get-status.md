@@ -1,21 +1,21 @@
 ---
-description: Die \_ Methode Get Status gibt einen Variant-booleschen Wert zurück, der den \_ Teilnehmer Status angibt
+description: Die get \_ Status-Methode gibt eine \_ VARIANT-BOOL zurück, die den Teilnehmerstatus angibt.
 ms.assetid: 03ad763b-5223-41b5-b0cf-1f13c761f5c2
-title: 'Itteilnehmer:: get_Status-Methode (ipmsp. h)'
+title: ITParticipant::get_Status-Methode (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2de39ac0833f856e35cc120b4f4e5b00bcd617de
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b1585c9605447e7b515885ecf9e30d060afb7a57d14c5b29a66025f2df9da05a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060848"
 ---
-# <a name="itparticipantget_status-method"></a>Itparticipants:: get \_ Status-Methode
+# <a name="itparticipantget_status-method"></a>ITParticipant::get \_ Status-Methode
 
-\[**get \_ Der Status** ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[**get \_ Der** Status ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die Methode **get \_ Status** gibt einen Variant-booleschen Wert zurück, der den \_ Teilnehmer Status angibt
+Die **get \_ Status-Methode** gibt eine \_ VARIANT-BOOL zurück, die den Teilnehmerstatus angibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,17 +33,17 @@ HRESULT get_Status(
 
 <dl> <dt>
 
-*pitstream* \[ in\]
+*pITStream* \[ In\]
 </dt> <dd>
 
-Zeiger auf die [**itstream**](/windows/win32/api/tapi3if/nn-tapi3if-itstream) -Schnittstelle.
+Zeiger auf [**die ITStream-Schnittstelle.**](/windows/win32/api/tapi3if/nn-tapi3if-itstream)
 
 </dd> <dt>
 
-*pstatus* \[ vorgenommen\]
+*pStatus* \[ out\]
 </dt> <dd>
 
-Variant \_ true, wenn der Teilnehmer im Stream aktiviert ist, Variant \_ false, wenn er deaktiviert ist.
+VARIANT \_ TRUE, wenn der Teilnehmer für den Stream aktiviert ist, VARIANT \_ FALSE, wenn er deaktiviert ist.
 
 </dd> </dl>
 
@@ -56,18 +56,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                               |
 |-----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                              |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Die Methode ist nicht implementiert.<br/>                                        |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/>           |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *pitstream* -Parameter ist kein gültiger Zeiger.<br/>              |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *pitstream* -Parameter verweist nicht auf eine gültige Schnittstelle.<br/> |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Methode nicht implementiert.<br/>                                        |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/>           |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Der *pITStream-Parameter* ist kein gültiger Zeiger.<br/>              |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *pITStream-Parameter* ist kein Zeiger auf eine gültige Schnittstelle.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Durch Aktivieren oder Deaktivieren des Status eines Teilnehmers für einen Stream kann eine Anwendung einen bestimmten Teilnehmer im wesentlichen stumm schalten.
+Durch das Aktivieren oder Deaktivieren des Status eines Teilnehmers in einem Stream kann eine Anwendung einen bestimmten Teilnehmer im Wesentlichen stummschalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,24 +75,24 @@ Durch Aktivieren oder Deaktivieren des Status eines Teilnehmers für einen Strea
 
 | Anforderung | Wert |
 |-------------------------|--------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>  |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>  |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itteilnehmer**](itparticipant.md)
+[**ITParticipant**](itparticipant.md)
 </dt> <dt>
 
-[**Itstream**](/windows/win32/api/tapi3if/nn-tapi3if-itstream)
+[**ITStream**](/windows/win32/api/tapi3if/nn-tapi3if-itstream)
 </dt> <dt>
 
-[**Put- \_ Status**](itparticipant-put-status.md)
+[**put \_ Status**](itparticipant-put-status.md)
 </dt> </dl>
 
  

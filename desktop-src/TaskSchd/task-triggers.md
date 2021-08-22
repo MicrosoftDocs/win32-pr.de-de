@@ -1,43 +1,43 @@
 ---
-title: Task Trigger
-description: Ein-Triggersatz besteht aus einer Reihe von Kriterien, die die Ausführung einer Aufgabe starten, wenn diese erfüllt ist.
+title: Aufgabentrigger
+description: Ein Trigger ist ein Satz von Kriterien, die bei Erfüllung die Ausführung eines Tasks starten.
 ms.assetid: 8b4dff8b-9dc3-4856-aed6-648588a089be
 keywords:
 - Erstellen von Triggern Taskplaner
-- Trigger Taskplaner
-- Trigger Taskplaner, beschrieben
-- Trigger Taskplaner, Zeit basiert
-- Trigger Taskplaner, Ereignis basiert
+- triggers Taskplaner
+- Trigger Taskplaner beschrieben
+- Trigger Taskplaner , zeitbasiert
+- triggers Taskplaner , ereignisbasiert
 - ereignisbasierte Trigger Taskplaner
-- Zeitbasierte Trigger Taskplaner
+- zeitbasierte Trigger Taskplaner
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d465dfa015be19ff220a77d3c85f0cbb223c4899
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0b0060511556615c638eb8385a757e9c44147720b659bb11bfe4f0849e4499ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206403"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119002298"
 ---
-# <a name="task-triggers"></a>Task Trigger
+# <a name="task-triggers"></a>Aufgabentrigger
 
-Ein-Triggersatz besteht aus einer Reihe von Kriterien, die die Ausführung einer Aufgabe starten, wenn diese erfüllt ist. Taskplaner bietet zeitbasierte und ereignisbasierte Trigger, die eine Aufgabe auf verschiedene Arten starten können. Eine bestimmte Aufgabe kann von einem oder mehreren Triggern gestartet werden. Eine Aufgabe kann maximal 48 Trigger aufweisen.
+Ein Trigger ist ein Satz von Kriterien, die bei Erfüllung die Ausführung eines Tasks starten. Taskplaner stellt sowohl zeitbasierte als auch ereignisbasierte Trigger bereit, die eine Aufgabe auf verschiedene Weise starten können. Eine bestimmte Aufgabe kann von einem oder mehreren Triggern gestartet werden. Eine Aufgabe kann maximal 48 Trigger aufweisen.
 
 ## <a name="time-based-triggers"></a>Zeitbasierte Trigger
 
-Zeitbasierte Trigger starten Tasks zu bestimmten Zeiten. Dies umfasst das einmalige Starten der Aufgabe zu einem bestimmten Zeitpunkt oder das mehrfache Starten der Aufgabe an einem täglichen, wöchentlichen, monatlichen oder monatlichen Zeitplan.
+Zeitbasierte Trigger starten Aufgaben zu bestimmten Zeiten. Dies umfasst das einmalige Starten der Aufgabe zu einem bestimmten Zeitpunkt oder das mehrmalige Starten der Aufgabe nach einem täglichen, wöchentlichen, monatlichen oder monatlichen Wochentagszeitplan.
 
 ## <a name="event-based-triggers"></a>Ereignisbasierte Trigger
 
-Ereignisbasierte Trigger starten eine Aufgabe als Reaktion auf bestimmte Systemereignisse. Ereignisbasierte Trigger können z. b. so festgelegt werden, dass eine Aufgabe gestartet wird, wenn das System gestartet wird, wenn sich ein Benutzer am lokalen Computer anmeldet oder wenn sich das System im Leerlauf befindet.
+Ereignisbasierte Trigger starten eine Aufgabe als Reaktion auf bestimmte Systemereignisse. Beispielsweise können ereignisbasierte Trigger so festgelegt werden, dass eine Aufgabe gestartet wird, wenn das System gestartet wird, wenn sich ein Benutzer beim lokalen Computer anmeldet oder wenn das System in den Leerlauf übergeht.
 
 ## <a name="multiple-triggers"></a>Mehrere Trigger
 
-Jeder Task kann von einem oder mehreren Triggern gestartet werden, sodass die Aufgabe auf eine beliebige Anzahl von Arten gestartet werden kann. In Taskplaner 1,0 und Taskplaner 2,0 werden jedoch mehrere Trigger anders implementiert.
+Jede Aufgabe kann von einem oder mehreren Triggern gestartet werden, sodass die Aufgabe auf verschiedene Arten gestartet werden kann. Mehrere Trigger werden jedoch in Taskplaner 1.0 und Taskplaner 2.0 unterschiedlich implementiert.
 
-In Taskplaner 2,0 wird jeder-Vorgang durch eine separate-auslöserapi definiert, die mit der-Aufgabe über die-auslöserauflistung verknüpft ist.
+In Taskplaner 2.0 wird jeder Trigger durch eine separate Trigger-API definiert, die der Aufgabe über die Triggersammlung zugeordnet ist.
 
-In Taskplaner 1,0 können mehrere Trigger als Zeitplan betrachtet werden. Dies ist ein Satz von Uhrzeiten, zu denen die Aufgabe gestartet wird. In diesem Fall ist der Zeitplan der Satz von Uhrzeiten (angegeben durch die Vereinigung aller Trigger, die mit dem Arbeits Element verknüpft sind), bei denen ein Arbeits Element ausgeführt wird.
+In Taskplaner 1.0 können mehrere Trigger als Zeitplan betrachtet werden, eine Reihe von Zeiten, zu denen der Task gestartet wird. In diesem Fall ist der Zeitplan der Satz von Zeiten (angegeben durch die Vereinigung aller Trigger, die dem Arbeitselement zugeordnet sind), zu denen ein Arbeitselement ausgeführt wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -46,18 +46,18 @@ In Taskplaner 1,0 können mehrere Trigger als Zeitplan betrachtet werden. Dies i
 [Wiederholen einer Aufgabe](repeating-a-task.md)
 </dt> <dt>
 
-[Auslösertypen](trigger-types.md)
+[Triggertypen](trigger-types.md)
 </dt> <dt>
 
-[Auslöse Schnittstellen](trigger-interfaces.md)
+[Triggerschnittstellen](trigger-interfaces.md)
 </dt> <dt>
 
 [Informationen zum Taskplaner](about-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

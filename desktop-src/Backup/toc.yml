@@ -1,31 +1,31 @@
 - name: Backup
   href: backup.md
   items:
-    - name: Registrierungsschlüssel und-Werte für die Sicherung und Wiederherstellung
+    - name: Registrierungsschlüssel und -werte für Sicherung und Wiederherstellung
       href: registry-keys-for-backup-and-restore.md
     - name: Srdelayed.exe
       href: srdelayed-exe.md
     - name: Bandsicherung
       href: tape-backup.md
       items:
-        - name: Band Initialisierung
+        - name: Bandinitialisierung
           href: tape-initialization.md
-        - name: Band Eingabe und-Ausgabe
+        - name: Bandeingabe und -ausgabe
           href: tape-input-and-output.md
-        - name: Erstellen einer Sicherungs Anwendung
+        - name: Erstellen einer Sicherungsanwendung
           href: creating-a-backup-application.md
-        - name: Sichern und Wiederherstellen von Hardlinks
+        - name: Sichern und Wiederherstellen von hardlinks
           href: backing-up-and-restoring-hard-links.md
-    - name: Single-Instance Speicherung und SIS-Sicherung
+    - name: Single-Instance Store und SIS-Sicherung
       href: single-instance-store-and-sis-backup.md
       items:
-        - name: SIS-Links und Analyse Punkte
+        - name: SIS-Links und -Wiederholungspunkte
           href: sis-links-and-reparse-points.md
-        - name: Die allgemeinen SIS-Speicher-und Common-Store Dateien
+        - name: Common Store- und Common-Store-Dateien für SIS
           href: the-sis-common-store-and-common-store-files.md
         - name: Vorteile der Verwendung von SIS
           href: advantages-of-using-sis.md
-    - name: Sicherungs Referenz
+    - name: Sicherungsreferenz
       href: backup-reference.md
       items:
         - name: Sicherungsfunktionen
@@ -37,41 +37,41 @@
               href: /windows/desktop/api/Winbase/nf-winbase-backupseek
             - name: BackupWrite
               href: /windows/desktop/api/Winbase/nf-winbase-backupwrite
-            - name: '"Kreatetapeer Partition"'
+            - name: CreateTapePartition
               href: /windows/desktop/api/Winbase/nf-winbase-createtapepartition
-            - name: Erasetape
+            - name: EraseTape
               href: /windows/desktop/api/Winbase/nf-winbase-erasetape
-            - name: Gettapeparameters
+            - name: GetTapeParameters
               href: /windows/desktop/api/Winbase/nf-winbase-gettapeparameters
-            - name: Gettapeposition
+            - name: GetTapePosition
               href: /windows/desktop/api/Winbase/nf-winbase-gettapeposition
-            - name: Gettapestatus
+            - name: GetTapeStatus
               href: /windows/desktop/api/Winbase/nf-winbase-gettapestatus
-            - name: Preparetape
+            - name: PrepareTape
               href: /windows/desktop/api/Winbase/nf-winbase-preparetape
-            - name: Settapeparameters
+            - name: SetTapeParameters
               href: /windows/desktop/api/Winbase/nf-winbase-settapeparameters
-            - name: Settapeposition
+            - name: SetTapePosition
               href: /windows/desktop/api/Winbase/nf-winbase-settapeposition
-            - name: Siscreatebackupstructure
+            - name: SisCreateBackupStructure
               href: siscreatebackupstructure.md
-            - name: Siscreaterestorestruktur
+            - name: SisCreateRestoreStructure
               href: siscreaterestorestructure.md
-            - name: Siscsfilestobackupforlink
+            - name: SisCSFilesToBackupForLink
               href: siscsfilestobackupforlink.md
-            - name: Sisfrezuden Speicher
+            - name: SisFreeAllocatedMemory
               href: sisfreeallocatedmemory.md
-            - name: Sisfrebackupstructure
+            - name: SisFreeBackupStructure
               href: sisfreebackupstructure.md
-            - name: Sisfreerestorestruktur
+            - name: SisFreeRestoreStructure
               href: sisfreerestorestructure.md
-            - name: Sisrestoredcommonstorefile
+            - name: SisRestoredCommonStoreFile
               href: sisrestoredcommonstorefile.md
-            - name: Sisrestoredlink
+            - name: SisRestoredLink
               href: sisrestoredlink.md
-            - name: Schreibtapemark
+            - name: WriteTapemark
               href: /windows/desktop/api/Winbase/nf-winbase-writetapemark
-        - name: Sicherungs Strukturen
+        - name: Sicherungsstrukturen
           href: backup-structures.md
           items:
             - name: 'PROCESS_MITIGATION_USER_SHADOW_STACK_POLICY '

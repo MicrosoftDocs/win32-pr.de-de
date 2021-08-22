@@ -1,21 +1,21 @@
 ---
-title: Zugreifen auf Dienste mithilfe von Java
-description: Zugreifen auf Dienste mithilfe von Java
+title: Zugreifen auf Dienste mit Java
+description: Zugreifen auf Dienste mit Java
 ms.assetid: 3eced858-487a-4f36-a7a1-34ac827aad13
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c24ae7508b5999e5d07f2480d49cb4c20dd89a0
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: b19a9a3feb1e6cb5fc9ddb8a24b87adfdb42461ebb4581723c1cdb465739c51a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948647"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976850"
 ---
-# <a name="accessing-services-using-java"></a>Zugreifen auf Dienste mithilfe von Java
+# <a name="accessing-services-using-java"></a>Zugreifen auf Dienste mit Java
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Sie können auch von einem Java-Applet aus auf die Microsoft-Agent-Dienste zugreifen. Viele der Funktionen, auf die über die Microsoft-Agent-Schnittstellen zugegriffen werden kann, geben Werte durch Parameter als Verweis an Um diese Parameter aus Java zu übergeben, müssen Arrays mit einem Element im Code erstellt und als Parameter an die entsprechende Funktion übergeben werden. Wenn Sie Microsoft Visual J++ verwenden und den Assistenten für die Java-Typbibliothek auf dem Microsoft-Agent-Server ausführen, lesen Sie die summary.txt-Datei, um zu überprüfen, welche Funktionen Array Argumente erfordern. Die Vorgehensweise ähnelt der Vorgehensweise in C; Verwenden Sie die [**iagentex**](https://www.bing.com/search?q=**IAgentEx**) -Schnittstelle, um eine Instanz des Servers zu erstellen, und laden Sie dann das Zeichen:
+Sie können auch über ein Java-Applet auf Microsoft-Agent-Dienste zugreifen. Viele der Funktionen, auf die über die Microsoft Agent-Schnittstellen zugegriffen werden kann, geben Werte über Parameter zurück, die als Verweis übergeben werden. Um diese Parameter aus Java zu übergeben, ist es erforderlich, Einelementarrays in Ihrem Code zu erstellen und sie als Parameter an die entsprechende Funktion zu übergeben. Wenn Sie Microsoft Visual J++ verwenden und den Java-Typbibliotheks-Assistenten auf dem Microsoft-Agent-Server ausgeführt haben, lesen Sie die summary.txt-Datei, um zu überprüfen, welche Funktionen Arrayargumente erfordern. Die Prozedur ähnelt der in C. Sie verwenden die [**IAgentEx-Schnittstelle,**](https://www.bing.com/search?q=**IAgentEx**) um eine Instanz des Servers zu erstellen und dann das Zeichen zu laden:
 
 
 ```
@@ -47,7 +47,7 @@ public void start()
 
 
 
-Das Verfahren unterscheidet sich geringfügig beim Laden von Zeichen von einem http-Remote Speicherort wie einer Website. In diesem Fall ist die [**Load**](/previous-versions/visualstudio/foxpro/h1tx7zt1(v=vs.71)) -Methode asynchron und auslöst eine com-Ausnahme von E \_ Pending (0x8000000a). Sie müssen diese Ausnahme abfangen und ordnungsgemäß behandeln, wie dies in den folgenden Funktionen geschieht:
+Das Verfahren unterscheidet sich geringfügig, wenn Zeichen von einem HTTP-Remotespeicherort wie einer Website geladen werden. In diesem Fall ist die [**Load-Methode**](/previous-versions/visualstudio/foxpro/h1tx7zt1(v=vs.71)) asynchron und gibt eine COM-Ausnahme von E \_ PENDING (0x8000000a) aus. Sie müssen diese Ausnahme abfangen und ordnungsgemäß behandeln, wie dies in den folgenden Funktionen der Fall ist:
 
 
 ```
@@ -110,7 +110,7 @@ public void start()
 
 
 
-Dann erhalten Sie die [**iagentcharakteriex**](https://www.bing.com/search?q=**IAgentCharacterEx**) -Schnittstelle, die Ihnen den Zugriff auf die Methoden ermöglicht:
+Anschließend erhalten Sie die [**IAgentCharacterEx-Schnittstelle,**](https://www.bing.com/search?q=**IAgentCharacterEx**) mit der Sie auf ihre Methoden zugreifen können:
 
 
 ```
@@ -130,7 +130,7 @@ m_Merlin[0].Speak("Hello World!", "", m_RequestID);
 
 
 
-Um über Ereignisse benachrichtigt zu werden, müssen Sie entweder die [**iagentnotifysink**](https://www.bing.com/search?q=**IAgentNotifySink**) -oder die [**iagentnotifysinkex**](https://www.bing.com/search?q=**IAgentNotifySinkEx**) -Schnittstelle implementieren, um ein Objekt dieses Typs zu erstellen und zu registrieren:
+Auf ähnliche Weise müssen Sie entweder die [**IAgentNotifySink-**](https://www.bing.com/search?q=**IAgentNotifySink**) oder die [**IAgentNotifySinkEx-Schnittstelle**](https://www.bing.com/search?q=**IAgentNotifySinkEx**) implementieren, um über Ereignisse benachrichtigt zu werden, und ein Objekt dieses Typs erstellen und registrieren:
 
 
 ```
@@ -159,8 +159,8 @@ public void start()
 
 
 
-Um von einem Java-Applet aus auf den Microsoft-Agent zuzugreifen, müssen Sie Java-Klassen generieren, die Sie mit dem Applet installieren. Sie können z. b. den Assistenten für die Visual J++-Java-Typbibliothek verwenden, um diese Dateien zu generieren. Wenn Sie beabsichtigen, das Applet auf einer Webseite zu hosten, müssen Sie ein signiertes Java-CAB einschließlich der generierten Klassendateien erstellen, die mit der Seite heruntergeladen werden. Die Klassendateien sind erforderlich, um auf den Microsoft-Agent-Server zuzugreifen, da es sich um ein COM-Objekt handelt, das außerhalb der Java Sandbox ausgeführt wird. Weitere Informationen zur Trust-Based Sicherheit für Java finden Sie unter <https://www.microsoft.com/java/security> .
+Um über ein Java-Applet auf den Microsoft-Agent zuzugreifen, müssen Sie Java-Klassen generieren, die Sie mit dem Applet installieren. Sie können z. B. den Visual J++-Java-Typbibliotheks-Assistenten verwenden, um diese Dateien zu generieren. Wenn Sie planen, das Applet auf einer Webseite zu hosten, müssen Sie ein signiertes Java CAB erstellen, das die generierten Klassendateien enthält, die mit der Seite heruntergeladen werden. Die Klassendateien sind für den Zugriff auf den Microsoft-Agent-Server erforderlich, da es sich um ein COM-Objekt handelt, das außerhalb der Java-Sandbox ausgeführt wird. Weitere Informationen zu Trust-Based Security for Java finden Sie unter <https://www.microsoft.com/java/security> .
 
- 
+ 
 
- 
+ 

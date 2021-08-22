@@ -1,9 +1,9 @@
 ---
-title: Mrmpackagingoptions-Enumeration (mrmresourcindexer. h)
-description: Definiert Konstanten, die Optionen für die PRI-Datei angeben, die von mrmkreateresourcefile und mrmkreateresourcefileinmemory erstellt wurde.
+title: MrmPackagingOptions-Enumeration (MrmResourceIndexer.h)
+description: Definiert Konstanten, die Optionen für die PRI-Datei angeben, die von MrmCreateResourceFile und MrmCreateResourceFileInMemory erstellt wurde.
 ms.assetid: 11FADCB2-CE6F-449E-8A85-DA50B52B26D0
 keywords:
-- Mrmpackagingoptions-Aufzählungs Menüs und andere Ressourcen
+- MrmPackagingOptions-Enumerationsmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f9a8b2bee733fe17e91501fe295e5f80be159ec5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ede8ef1367bc217827f616514a4fb9ea69e180cb654a19cbbe9593d4c74036d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118971969"
 ---
-# <a name="mrmpackagingoptions-enumeration"></a>Mrmpackagingoptions-Enumeration
+# <a name="mrmpackagingoptions-enumeration"></a>MrmPackagingOptions-Enumeration
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Definiert Konstanten, die Optionen für die PRI-Datei angeben, die von [**mrmkreateresourcefile**](mrmcreateresourcefile.md) und [**mrmkreateresourcefileinmemory**](mrmcreateresourcefileinmemory.md)erstellt wurde. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für [Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme](/windows/uwp/app-resources/pri-apis-custom-build-systems).
+Definiert Konstanten, die Optionen für die PRI-Datei angeben, die von [**MrmCreateResourceFile**](mrmcreateresourcefile.md) und [**MrmCreateResourceFileInMemory**](mrmcreateresourcefileinmemory.md)erstellt wurde. Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für [die Paketressourcenindizierung (PACKAGE Resource Indexing, PRI) und benutzerdefinierte Buildsysteme.](/windows/uwp/app-resources/pri-apis-custom-build-systems)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ typedef enum _MrmPackagingOptions {
 
 <dl> <dt>
 
-<span id="MrmPackagingOptionsNone"></span><span id="mrmpackagingoptionsnone"></span><span id="MRMPACKAGINGOPTIONSNONE"></span>**Mrmpackagingoptionsnone**
+<span id="MrmPackagingOptionsNone"></span><span id="mrmpackagingoptionsnone"></span><span id="MRMPACKAGINGOPTIONSNONE"></span>**MrmPackagingOptionsNone**
 </dt> <dd>
 
-Gibt keine Paketoptionen an.
+Gibt keine Paketierungsoptionen an.
 
 </dd> <dt>
 
-<span id="MrmPackagingOptionsOmitSchemaFromResourcePacks"></span><span id="mrmpackagingoptionsomitschemafromresourcepacks"></span><span id="MRMPACKAGINGOPTIONSOMITSCHEMAFROMRESOURCEPACKS"></span>**Mrmpackagingoptionsomitschemafromresourcepacks**
+<span id="MrmPackagingOptionsOmitSchemaFromResourcePacks"></span><span id="mrmpackagingoptionsomitschemafromresourcepacks"></span><span id="MRMPACKAGINGOPTIONSOMITSCHEMAFROMRESOURCEPACKS"></span>**MrmPackagingOptionsOmitSchemaFromResourcePacks**
 </dt> <dd>
 
-Gibt an, dass ein Schema freies Ressourcenpaket erstellt werden soll.
+Gibt an, dass ein schemafreies Ressourcenpaket erstellt werden soll.
 
 </dd> <dt>
 
-<span id="MrmPackagingOptionsSplitLanguageVariants"></span><span id="mrmpackagingoptionssplitlanguagevariants"></span><span id="MRMPACKAGINGOPTIONSSPLITLANGUAGEVARIANTS"></span>**Mrmpackagingoptionssplitlanguagevarianten**
+<span id="MrmPackagingOptionsSplitLanguageVariants"></span><span id="mrmpackagingoptionssplitlanguagevariants"></span><span id="MRMPACKAGINGOPTIONSSPLITLANGUAGEVARIANTS"></span>**MrmPackagingOptionsSplitLanguageVariants**
 </dt> <dd>
 
 Gibt an, dass die PRI-Datei automatisch von allen unterstützten Qualifizierern (insbesondere Sprache und Skalierung) aufgeteilt werden soll.
@@ -71,13 +71,13 @@ Gibt an, dass die PRI-Datei automatisch von allen unterstützten Qualifizierern 
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1803, \[ nur Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ -Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Mrmresourceingedexer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1803 \[\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows \[Nur Serverdesktop-Apps\]<br/>                                                 |
+| Header<br/>                   | <dl> <dt>MrmResourceIndexer.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

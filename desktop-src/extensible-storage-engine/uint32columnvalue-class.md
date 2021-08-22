@@ -24,28 +24,28 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7511cf3d449002e9fed069fdb721dc3e4cc4b28e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3fa507085f214359d3b00602cd8e891b519bfda26c7f4389dadbb6777a8b361a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978350"
 ---
 # <a name="uint32columnvalue-class"></a>UInt32ColumnValue-Klasse
 
-Ein [UInt32](/dotnet/api/system.uint32) -Spaltenwert.
+Ein [UInt32-Spaltenwert.](/dotnet/api/system.uint32)
 
 Diese API ist nicht CLS-kompatibel. 
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  [Microsoft. ISAM. ESENT. Interop. ColumnValue](./columnvalue-class.md)  
-    [Microsoft. ISAM. ESENT. Interop. columnvalueofistruct](./columnvalueofstruct-t-class.md)\<[UInt32](/dotnet/api/system.uint32)\>  
-      Microsoft. ISAM. ESENT. Interop. UInt32ColumnValue  
+  [Microsoft.Isam.Esent.Interop.ColumnValue](./columnvalue-class.md)  
+    [Microsoft.Isam.Esent.Interop.ColumnValueOfStruct](./columnvalueofstruct-t-class.md)\<[UInt32](/dotnet/api/system.uint32)\>  
+      Microsoft.Isam.Esent.Interop.UInt32ColumnValue  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,8 +69,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [UInt32ColumnValue-Member](./uint32columnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

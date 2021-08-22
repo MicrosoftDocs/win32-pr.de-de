@@ -1,7 +1,7 @@
 ---
-description: Die scesvasetachmentanalysis-Funktion wird von der Sicherheitskonfigurations-Engine aufgerufen, wenn das System analysiert wird.
+description: Die SceSvcAttachmentAnalyze-Funktion wird von der Sicherheitskonfigurations-Engine aufgerufen, wenn das System analysiert wird.
 ms.assetid: 8e8a39b9-c4e2-446e-8e0c-eb2113234c1a
-title: Scesvcalltachmentanalysis-Rückruffunktion
+title: SceSvcAttachmentAnalyze-Rückruffunktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - UserDefined
 api_location: ''
-ms.openlocfilehash: 296d755a0b082b46122432936d30614019b8b9a8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9bb84cc6a8492c729926b644a246b8ee8a03e1de4c2eae6e3de1fd88c5ba339f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119004918"
 ---
-# <a name="scesvcattachmentanalyze-callback-function"></a>Scesvcalltachmentanalysis-Rückruffunktion
+# <a name="scesvcattachmentanalyze-callback-function"></a>SceSvcAttachmentAnalyze-Rückruffunktion
 
-Die **scesvasetachmentanalysis** -Funktion wird von der Sicherheitskonfigurations-Engine aufgerufen, wenn das System analysiert wird.
+Die **SceSvcAttachmentAnalyze-Funktion** wird von der Sicherheitskonfigurations-Engine aufgerufen, wenn das System analysiert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,27 +38,27 @@ SCESTATUS WINAPI SceSvcAttachmentAnalyze(
 
 <dl> <dt>
 
-*pscecbinfo* \[ in\]
+*pSceCbInfo* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine [**scesvc \_ - \_ Rückruf**](/windows/win32/api/scesvc/ns-scesvc-scesvc_callback_info) Informationsstruktur, die ein undurchsichtiges Daten Bank Handle und Rückruf Funktionszeiger auf Abfrage-, festgelegte und kostenlose Informationen enthält.
+Zeiger auf eine [**SCESVC \_ CALLBACK \_ INFO-Struktur,**](/windows/win32/api/scesvc/ns-scesvc-scesvc_callback_info) die ein nicht transparentes Datenbankhandler und Rückruffunktionszeiger zum Abfragen, Festlegen und Freien von Informationen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Funktion erfolgreich ausgeführt wird, wird "scestatus Success" zurückgegeben \_ . Andernfalls wird ein Fehlercode zurückgegeben. Weitere Informationen zu den Sicherheits Konfigurations-Fehlercodes finden Sie unter [Anhang Return Values](management-return-values.md).
+Wenn diese Funktion erfolgreich ist, wird SCESTATUS \_ SUCCESS zurückgegeben. Andernfalls wird ein Fehlercode zurückgegeben. Weitere Informationen zu den Sicherheitskonfigurationsfehlercodes finden Sie unter [Attachment Return Values](management-return-values.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **scesvtortachmentanalysis** -Funktion muss folgende Aktionen ausführen:
+Die **SceSvcAttachmentAnalyze-Funktion** muss folgende Aufgaben erfüllen:
 
--   Direkte Abfrage von Konfigurationsinformationen aus dem Dienst.
--   Rufen Sie die Rückruffunktion auf, auf die vom **pfqueryinfo** -Member der [**scesvc- \_ Rückruf \_**](/windows/win32/api/scesvc/ns-scesvc-scesvc_callback_info) Informationsstruktur (pscecbinfo->pfqueryinfo) verwiesen wird, um Informationen aus der Sicherheitsdatenbank abzurufen.
--   Berechnen Sie die Unterschiede zwischen den Informationen auf der Grundlage von Typ und Syntax.
--   Rufen Sie die Rückruffunktion auf, auf die vom **pfset** -Member der [**scesvc- \_ Rückruf \_ Informations**](/windows/win32/api/scesvc/ns-scesvc-scesvc_callback_info) Struktur (pscecbinfo->pfabtinfo) verwiesen wird, um die Sicherheitsdatenbank mit den abgerufenen Dienst Informationen zu aktualisieren, die sich unterscheiden.
+-   Direktes Abfragen von Konfigurationsinformationen vom Dienst.
+-   Rufen Sie die Rückruffunktion auf, auf die das **pfQueryInfo-Element** der [**SCESVC \_ CALLBACK \_ INFO-Struktur**](/windows/win32/api/scesvc/ns-scesvc-scesvc_callback_info) (pSceCbInfo->pfQueryInfo) verweist, um Informationen aus der Sicherheitsdatenbank abzurufen.
+-   Berechnen Sie die Unterschiede zwischen den Informationen basierend auf Typ und Syntax.
+-   Rufen Sie die Rückruffunktion auf, auf die das **pfSetInfo-Element** der [**SCESVC \_ CALLBACK \_ INFO-Struktur**](/windows/win32/api/scesvc/ns-scesvc-scesvc_callback_info) (pSceCbInfo->pfSetInfo) verweist, um die Sicherheitsdatenbank mit den abgerufenen Dienstinformationen zu aktualisieren, die sich unterscheiden.
 
-Weitere Informationen finden Sie unter [Implementieren von scesvsintachmentanalysis](implementing-scesvcattachmentanalyze.md).
+Weitere Informationen finden Sie unter [Implementieren von SceSvcAttachmentAnalyze.](implementing-scesvcattachmentanalyze.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,22 +66,22 @@ Weitere Informationen finden Sie unter [Implementieren von scesvsintachmentanaly
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Implementieren von scesvpetachmentanalysis](implementing-scesvcattachmentanalyze.md)
+[Implementieren von SceSvcAttachmentAnalyze](implementing-scesvcattachmentanalyze.md)
 </dt> <dt>
 
-[**scesvc- \_ Rückruf \_ Informationen**](/windows/win32/api/scesvc/ns-scesvc-scesvc_callback_info)
+[**\_SCESVC-RÜCKRUFINFORMATIONEN \_**](/windows/win32/api/scesvc/ns-scesvc-scesvc_callback_info)
 </dt> <dt>
 
-[**Scesvalisitachmentconfig**](scesvcattachmentconfig.md)
+[**SceSvcAttachmentConfig**](scesvcattachmentconfig.md)
 </dt> </dl>
 
  

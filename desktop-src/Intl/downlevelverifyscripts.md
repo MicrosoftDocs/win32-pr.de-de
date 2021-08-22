@@ -1,7 +1,7 @@
 ---
-description: Vergleicht zwei aufgelistete Listen von Skripts.
+description: Vergleicht zwei aufzählte Listen von Skripts.
 ms.assetid: 3500ce36-75e4-4d61-8449-a65c99532326
-title: Downlevelverifyscripts-Funktion (idndl. h)
+title: DownlevelVerifyScripts-Funktion (Idndl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,19 +13,19 @@ api_type:
 - DllExport
 api_location:
 - Idndl.dll
-ms.openlocfilehash: 62e029576d53109e3c57faf4ec913472f8aea65e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: df0bdb1e8968d6bb044a3f270eb9200adf1ecaa54137fe3cface0e0898a9b5be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364190"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119068240"
 ---
-# <a name="downlevelverifyscripts-function"></a>Downlevelverifyscripts-Funktion
+# <a name="downlevelverifyscripts-function"></a>DownlevelVerifyScripts-Funktion
 
-Vergleicht zwei aufgelistete Listen von Skripts.
+Vergleicht zwei aufzählte Listen von Skripts.
 
 > [!Note]  
-> Diese Funktion wird nur von Anwendungen verwendet, die auf Betriebssystemen vor Windows Vista ausgeführt werden. Die Verwendung von erfordert das Downloadpaket. Anwendungen, die nur unter Windows Vista und höher ausgeführt werden, sollten [**verifyscripts**](/windows/desktop/api/Winnls/nf-winnls-verifyscripts)aufruft.
+> Diese Funktion wird nur von Anwendungen verwendet, die auf vista-Windows ausgeführt werden. Die Verwendung erfordert das Downloadpaket. Anwendungen, die nur unter Windows Vista und höher ausgeführt werden, sollten [**VerifyScripts aufrufen.**](/windows/desktop/api/Winnls/nf-winnls-verifyscripts)
 
  
 
@@ -48,16 +48,16 @@ BOOL DownlevelVerifyScripts(
 
 <dl> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Flags, die Optionen für die Skript Überprüfung angeben.
+Flags, die Skriptüberprüfungsoptionen angeben.
 
 
 
 | Wert                                                                                                                                                             | Bedeutung                                                                                        |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| <span id="VS_ALLOW_LATIN"></span><span id="vs_allow_latin"></span><dl> <dt>**VS \_ Allow \_ Latin**</dt> </dl> | Lassen Sie "Latn" (lateinische Skripts) in der Testliste zu, auch wenn Sie sich nicht in der Liste der Gebiets Schemas befinden.<br/> |
+| <span id="VS_ALLOW_LATIN"></span><span id="vs_allow_latin"></span><dl> <dt>**VS \_ ALLOW \_ LATIN**</dt> </dl> | Lassen Sie "Latn" (lateinisches Skript) in der Testliste zu, auch wenn es sich nicht in der Liste des Locale befindet.<br/> |
 
 
 
@@ -65,67 +65,67 @@ Flags, die Optionen für die Skript Überprüfung angeben.
 
 </dd> <dt>
 
-*lplocalescripts* \[ in\]
+*lpLocaleScripts* \[ In\]
 </dt> <dd>
 
-Zeiger auf die Liste der Gebiets Schemas, die Aufzählungs Liste der Skripts für ein bestimmtes Gebiets Schema. Diese Liste wird in der Regel durch Aufrufen von [**downlevelgetlocalescripts**](downlevelgetlocalescripts.md)aufgefüllt.
+Zeiger auf die Locale-Liste, die aufzählte Liste von Skripts für ein bestimmtes Locale. Diese Liste wird in der Regel durch Aufrufen von [**DownlevelGetLocaleScripts aufgefüllt.**](downlevelgetlocalescripts.md)
 
 </dd> <dt>
 
-*cchlocalescripts* \[ in\]
+*cchLocaleScripts* \[ In\]
 </dt> <dd>
 
-Die Größe (in Zeichen) der Zeichenfolge, die von *lplocalescripts* angegeben wird. Die Anwendung legt diesen Parameter auf-1 fest, wenn die Zeichenfolge NULL-terminiert ist. Wenn dieser Parameter auf 0 festgelegt ist, schlägt die Funktion fehl.
+Größe der durch *lpLocaleScripts angegebenen Zeichenfolge* in Zeichen. Die Anwendung legt diesen Parameter auf -1 fest, wenn die Zeichenfolge null-terminiert ist. Wenn dieser Parameter auf 0 festgelegt ist, schlägt die Funktion fehl.
 
 </dd> <dt>
 
-*lptestscripts* \[ in\]
+*lpTestScripts* \[ In\]
 </dt> <dd>
 
-Zeiger auf die Testliste, eine zweite aufgelistete Liste von Skripts. Diese Liste wird in der Regel durch Aufrufen von [**downlevelgetstringscripts**](downlevelgetstringscripts.md)aufgefüllt.
+Zeiger auf die Testliste, eine zweite Liste von Skripts. Diese Liste wird in der Regel durch Aufrufen von [**DownlevelGetStringScripts aufgefüllt.**](downlevelgetstringscripts.md)
 
 </dd> <dt>
 
-*cchtestscripts* \[ in\]
+*cchTestScripts* \[ In\]
 </dt> <dd>
 
-Die Größe (in Zeichen) der Zeichenfolge, die von *lptestscripts* angegeben wird. Die Anwendung legt diesen Parameter auf-1 fest, wenn die Zeichenfolge NULL-terminiert ist. Wenn dieser Parameter auf 0 festgelegt ist, schlägt die Funktion fehl.
+Größe der durch *lpTestScripts angegebenen Zeichenfolge* in Zeichen. Die Anwendung legt diesen Parameter auf -1 fest, wenn die Zeichenfolge null-terminiert ist. Wenn dieser Parameter auf 0 festgelegt ist, schlägt die Funktion fehl.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " **true** " zurück, wenn die Testliste nicht leer ist und alle Elemente in der Liste auch in der Liste der Gebiets Schemas enthalten sind. Andernfalls gibt die Funktion **false** zurück.
+Gibt **TRUE** zurück, wenn die Testliste nicht leer ist und alle Elemente in der Liste ebenfalls in der Locale-Liste enthalten sind. Andernfalls gibt die Funktion **FALSE zurück.**
 
-Der Rückgabewert **false** kann darauf hindeuten, dass die Testliste ein Element enthält, das nicht in der Liste der Gebiets Schemas enthalten ist, oder es kann auf einen Fehler hinweisen. Um zwischen diesen beiden Fällen zu unterscheiden, kann die Anwendung [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)aufrufen. Wenn **downlevelverifyscripts** erfolgreich festgestellt hat, dass ein Element in der Testliste vorhanden ist, das nicht in der Liste der Gebiets Schemas enthalten ist, gibt **GetLastError** den Fehler \_ Erfolg zurück. Andernfalls kann **GetLastError** einen der folgenden Fehlercodes zurückgeben:
+Der Rückgabewert **FALSE kann angeben,** dass die Testliste ein Element enthält, das nicht in der Locale-Liste enthalten ist, oder es kann auf einen Fehler hindeuten. Um zwischen diesen beiden Fällen zu unterscheiden, kann die Anwendung [**GetLastError aufrufen.**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) Wenn **DownlevelVerifyScripts** erfolgreich ermittelt hat, dass in der Testliste ein Element enthalten ist, das nicht in der Liste mit dem Locale enthalten ist, gibt **GetLastError** ERROR \_ SUCCESS zurück. **Andernfalls kann GetLastError** einen der folgenden Fehlercodes zurückgeben:
 
--   \_ungültige \_ Flags. Die für Flags angegebenen Werte waren ungültig.
--   Fehler \_ : Ungültiger \_ Parameter. Jeder Parameterwert war ungültig.
+-   FEHLER \_ \_ UNGÜLTIGE FLAGS. Die für Flags angegebenen Werte waren ungültig.
+-   FEHLER \_ \_ UNGÜLTIGER PARAMETER. Jeder der Parameterwerte war ungültig.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion vergleicht Zeichen folgen, z. b. "Latn;". Cyrl; ", die aus einer Reihe von 4-Zeichen-Skriptnamen bestehen, wobei jeder Skript Name auf ein Semikolon folgt. Es gilt auch für einen besonderen Fall, dass das lateinische Skript häufig in Sprachen und Gebiets Schemas verwendet wird, für die es nicht nativ ist.
+Diese Funktion vergleicht Zeichenfolgen, z. B. "Latn; Cyrl;", die aus einer Reihe von Vier-Zeichen-Skriptnamen besteht, mit jedem Skriptnamen gefolgt von einem Semikolon. Es gibt auch einen Sonderfall, um die Tatsache zu berücksichtigen, dass das lateinische Skript häufig in Sprachen und Lokalen verwendet wird, für die es nicht nativ ist.
 
-Diese Funktion ist als Teil einer Strategie zum mindern von Sicherheitsproblemen im Zusammenhang mit [internationalisierten Domänen Namen (IDNs)](handling-internationalized-domain-names--idns.md)nützlich.
+Diese Funktion ist im Rahmen einer Strategie zur Entschärfung von Sicherheitsproblemen im Zusammenhang mit internationalisierten Domänennamen [(IDNs) nützlich.](handling-internationalized-domain-names--idns.md)
 
-Im folgenden finden Sie Beispiele für die Rückgabe dieser Funktion und einen nachfolgenden Rückruf von [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) in verschiedenen Szenarien. In den letzten beiden Beispielen wird ein Fall veranschaulicht, in dem die Testliste ein abschließendes Semikolon (falsch formatierte Zeichenfolge) und einen Fall, in dem die Testliste leer ist, fehlt.
+Im Folgenden finden Sie Beispiele für die Rückgabe dieser Funktion und einen nachfolgenden Aufruf von [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) in verschiedenen Szenarien. Die letzten beiden Beispiele veranschaulichen jeweils einen Fall, in dem die Testliste kein abschließendes Semikolon (falsch formatierte Zeichenfolge) und einen Fall fehlt, in dem die Testliste leer ist.
 
 
 
-| "Locale"-Zeichenfolge | "Test"-Zeichenfolge | *dwFlags*        | Rückgabewert | GetLastError-Rückgabe       |
+| "Locale"-Zeichenfolge | Zeichenfolge "Test" | *dwFlags*        | Rückgabewert | GetLastError-Rückgabe       |
 |-----------------|---------------|------------------|--------------|---------------------------|
-| Han Hira; Betrieben | Han         | –              | **TRUE**     | –                       |
-| Han Hira; Betrieben | Han Latn    | 0                | **FALSE**    | Fehler \_ erfolgreich            |
-| Han Hira; Betrieben | Han Latn    | VS \_ Allow \_ Latin | **TRUE**     | –                       |
-| Han Hira; Betrieben | Cyrl;         | –              | **FALSE**    | Fehler \_ erfolgreich            |
-| Han Hira; Betrieben | Cyrl;         | –              | **FALSE**    | Fehler bei \_ ungültigem \_ Parameter |
-| Han Hira; Betrieben |               | –              | **FALSE**    | Fehler \_ erfolgreich            |
+| Hani; Hira; Kana; | Hani;         | Nicht zutreffend              | **TRUE**     | Nicht zutreffend                       |
+| Hani; Hira; Kana; | Hani; Latn;    | 0                | **FALSE**    | FEHLER \_ ERFOLGREICH            |
+| Hani; Hira; Kana; | Hani; Latn;    | VS \_ ALLOW \_ LATIN | **TRUE**     | Nicht zutreffend                       |
+| Hani; Hira; Kana; | Cyrl;         | Nicht zutreffend              | **FALSE**    | FEHLER \_ ERFOLGREICH            |
+| Hani; Hira; Kana; | Cyrl;         | Nicht zutreffend              | **FALSE**    | FEHLER \_ UNGÜLTIGER \_ PARAMETER |
+| Hani; Hira; Kana; |               | Nicht zutreffend              | **FALSE**    | FEHLER \_ ERFOLGREICH            |
 
 
 
  
 
-Die erforderliche Header Datei und dll sind Teil des Downloads ["Microsoft Internationalized Domain Name (IDN) Entschärfungs-APIs"](https://www.microsoft.com/downloads/details.aspx?FamilyID=AD6158D7-DDBA-416A-9109-07607425A815&displaylang=en) , der im [MSDN Download Center](https://www.microsoft.com/?ref=go)verfügbar ist.
+Die erforderliche Headerdatei und DLL sind Teil des Downloads ["Microsoft Internationalized Domain Name (IDN)-Entschärfungs-APIs",](https://www.microsoft.com/downloads/details.aspx?FamilyID=AD6158D7-DDBA-416A-9109-07607425A815&displaylang=en) der im [MSDN Download Center verfügbar ist.](https://www.microsoft.com/?ref=go)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -133,34 +133,34 @@ Die erforderliche Header Datei und dll sind Teil des Downloads ["Microsoft Inter
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                                                                  |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                                                         |
-| Verteilbare Komponente<br/>          | Microsoft Internationalized Domain Name (IDN) Entschärfungs-APIs onwindows XP mit SP2, Windows Server 2003 mit SP1, orwindows Vista<br/> |
-| Header<br/>                   | <dl> <dt>Idndl. h</dt> </dl>                                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                                                                                  |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                                                         |
+| Verteilbare Komponente<br/>          | Microsoft Internationalized Domain Name (IDN) Mitigation APIs onWindows XP with SP2,Windows Server 2003 with SP1 oderWindows Vista<br/> |
+| Header<br/>                   | <dl> <dt>Idndl.h</dt> </dl>                                                           |
 | DLL<br/>                      | <dl> <dt>Idndl.dll</dt> </dl>                                                         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Unterstützung für nationale Sprache](national-language-support.md)
+[Unterstützung der Landessprache](national-language-support.md)
 </dt> <dt>
 
-[Funktionen zur Unterstützung der Landessprache](national-language-support-functions.md)
+[Unterstützungsfunktionen für nationale Sprachen](national-language-support-functions.md)
 </dt> <dt>
 
-[Umgang mit internationalisierten Domänen Namen (IDNs)](handling-internationalized-domain-names--idns.md)
+[Behandeln von internationalisierten Domänennamen (IDNs)](handling-internationalized-domain-names--idns.md)
 </dt> <dt>
 
-[**Downlevelgetlocalescripts**](downlevelgetlocalescripts.md)
+[**DownlevelGetLocaleScripts**](downlevelgetlocalescripts.md)
 </dt> <dt>
 
-[**Downlevelgetstringscripts**](downlevelgetstringscripts.md)
+[**DownlevelGetStringScripts**](downlevelgetstringscripts.md)
 </dt> <dt>
 
-[**Verifyscripts**](/windows/desktop/api/Winnls/nf-winnls-verifyscripts)
+[**VerifyScripts**](/windows/desktop/api/Winnls/nf-winnls-verifyscripts)
 </dt> </dl>
 
  

@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. GPS. Longitude-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.GPS.Longitude-Eigenschaft.
 ms.assetid: 36539e20-d00c-4bbb-b9ee-1cf5e4b8df4b
-title: System. GPS. Längengrade Photo Metadata-Richtlinie
+title: System.GPS.Longitude Photo Metadata Policy
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 25eb9869bc536f97adfc8f3c0f5b1f70c8bf030f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ff05dd8ada6e10bbd3109187d34b220ff352ae984f92bd68281c56d3c1a29a76
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119087188"
 ---
-# <a name="systemgpslongitude-photo-metadata-policy"></a>System. GPS. Längengrade Photo Metadata-Richtlinie
+# <a name="systemgpslongitude-photo-metadata-policy"></a>System.GPS.Longitude Photo Metadata Policy
 
-Die fotometadatenrichtlinie für die [System. GPS. Longitude](../properties/props-system-gps-longitude.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.GPS.Longitude-Eigenschaft.](../properties/props-system-gps-longitude.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ GPS- \_ Längengrad
+PKEY \_ \_ GPS-Längengrad
 
 ### <a name="containers"></a>Container
 
@@ -27,50 +27,50 @@ JPEG, TIFF
 
 Ja
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
-VT \_ Vector \| VT \_ R8
+VT \_ VECTOR \| VT \_ R8
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Sie können diesen Wert schreiben, indem Sie in System. GPS. in "System. GPS................. Sie kann nicht direkt geschrieben werden. Werte aus unterschiedlichen Schemas sind abgestimmt.
+Dieser Wert kann durch Schreiben in System.GPS.LongitudeNumerator und System.GPS.LongitudeDenominator geschrieben werden. Er kann nicht direkt geschrieben werden. Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 4} |             |
-| 2     | /XMP/EXIF: gpslängen Grad   |             |
+| 1     | /app1/ifd/gps/{ushort=4} |             |
+| 2     | /xmp/exif:GPSLongitude   |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 4} |             |
-| 2     | /XMP/EXIF: gpslängen Grad   |             |
+| 1     | /app1/ifd/gps/{ushort=4} |             |
+| 2     | /xmp/exif:GPSLongitude   |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                     |
 |-------|--------------------------|
-| 1     | /App1/IFD/GPS/{ushort = 4} |
-| 2     | /XMP/EXIF: gpslängen Grad   |
+| 1     | /app1/ifd/gps/{ushort=4} |
+| 2     | /xmp/exif:gpslongitude   |
 
 
 
@@ -78,52 +78,52 @@ Sie können diesen Wert schreiben, indem Sie in System. GPS. in "System. GPS....
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                       | Datenträger Format |
+| Auftrag | Pfad                       | Datenträgerformat |
 |-------|----------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 4}        |             |
-| 2     | /IFD/XMP/EXIF: gpslängen Grad |             |
+| 1     | /ifd/gps/{ushort=4}        |             |
+| 2     | /ifd/xmp/exif:GPSLongitude |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                       | Datenträger Format |
+| Auftrag | Pfad                       | Datenträgerformat |
 |-------|----------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 4}        |             |
-| 2     | /IFD/XMP/EXIF: gpslängen Grad |             |
+| 1     | /ifd/gps/{ushort=4}        |             |
+| 2     | /ifd/xmp/exif:GPSLongitude |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                       |
 |-------|----------------------------|
-| 1     | /IFD/GPS/{ushort = 4}        |
-| 2     | /IFD/XMP/EXIF: gpslängen Grad |
+| 1     | /ifd/gps/{ushort=4}        |
+| 2     | /ifd/xmp/exif:gpslongitude |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. GPS. Längengrad](../properties/props-system-gps-longitude.md)
+[System.GPS.Longitude](../properties/props-system-gps-longitude.md)
 </dt> </dl>
 
  

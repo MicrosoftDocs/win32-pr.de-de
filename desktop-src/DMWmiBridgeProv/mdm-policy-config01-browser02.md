@@ -1,10 +1,10 @@
 ---
 title: MDM_Policy_Config01_Browser02-Klasse
-description: Die MDM- \_ Richtlinie \_ Config01 \_ Browser02-Klasse stellt die verfügbaren Browser Richtlinien dar.
+description: Die MDM \_ Policy \_ Config01 \_ Browser02-Klasse stellt die verfügbaren Browserrichtlinien dar.
 ms.assetid: 296e3be4-3bc1-4e06-9e31-532639a0b912
 keywords:
 - MDM_Policy_Config01_Browser02-Klasse
-- MDM_Policy_Config01_Browser02-Klasse, beschrieben
+- MDM_Policy_Config01_Browser02, beschrieben
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ba68b4d3f6798a448447e7773dc299977c54434c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 72af15222a90a76e3e0d71e38c0d8af54ff1aa8702a712314b8ddc17af393cd5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119018078"
 ---
-# <a name="mdm_policy_config01_browser02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ Browser02-Klasse
+# <a name="mdm_policy_config01_browser02-class"></a>MDM \_ Policy \_ Config01 \_ Browser02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ Browser02** -Klasse stellt die verfügbaren Browser Richtlinien dar.
+Die **MDM \_ Policy \_ Config01 \_ Browser02-Klasse** stellt die verfügbaren Browserrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -79,17 +79,17 @@ class MDM_Policy_Config01_Browser02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ Browser02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ Browser02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ Browser02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ Browser02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowaddressbardropdown](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)
+[AllowAddressBarDropdown](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -155,7 +155,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowflash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash)
+[AllowFlash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -166,7 +166,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowflash clicktor UN](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
+[AllowFlashClickToRun](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -188,7 +188,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowmicrosoftcompatibilitylist](/windows/client-management/mdm/policy-csp-browser#browser-allowmicrosoftcompatibilitylist)
+[AllowMicrosoftCompatibilityList](/windows/client-management/mdm/policy-csp-browser#browser-allowmicrosoftcompatibilitylist)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -221,7 +221,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowsearchenginecustomization](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchenginecustomization)
+[AllowSearchEngineCustomization](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchenginecustomization)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -254,7 +254,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Alwaysenablebookslibrary](/windows/client-management/mdm/policy-csp-browser#browser-alwaysenablebookslibrary)
+[AlwaysEnableBooksLibrary](/windows/client-management/mdm/policy-csp-browser#browser-alwaysenablebookslibrary)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -265,7 +265,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Clearbrowsingdataonexit](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)
+[ClearBrowsingDataOnExit](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -276,10 +276,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Konfigurieren von "Read ditionalsearchengines"](/windows/client-management/mdm/policy-csp-browser#browser-configureadditionalsearchengines)
+[ConfigureAdditionalSearchEngines](/windows/client-management/mdm/policy-csp-browser#browser-configureadditionalsearchengines)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -287,7 +287,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disablelockdownoberstartpages](/windows/client-management/mdm/policy-csp-browser#browser-disablelockdownofstartpages)
+[DisableLockdownOfStartPages](/windows/client-management/mdm/policy-csp-browser#browser-disablelockdownofstartpages)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -301,7 +301,7 @@ Zugriffstyp: Lesen/Schreiben
 [EnterpriseModeSiteList](/windows/client-management/mdm/policy-csp-browser#browser-enterprisemodesitelist)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -309,10 +309,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Enterprisisitelistserviceurl](/windows/client-management/mdm/policy-csp-browser#browser-enterprisesitelistserviceurl)
+[EnterpriseSiteListServiceUrl](/windows/client-management/mdm/policy-csp-browser#browser-enterprisesitelistserviceurl)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -323,7 +323,7 @@ Zugriffstyp: Lesen/Schreiben
 [Startseiten](/windows/client-management/mdm/policy-csp-browser#browser-homepages)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -334,7 +334,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -343,11 +343,11 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "Browser".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "Browser".
 
 </dd> <dt>
 
-[Lockdownfavoriten](/windows/client-management/mdm/policy-csp-browser#browser-lockdownfavorites)
+[LockdownFavorites](/windows/client-management/mdm/policy-csp-browser#browser-lockdownfavorites)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -358,10 +358,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -370,7 +370,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/config".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/Config".
 
 </dd> <dt>
 
@@ -385,7 +385,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Preventfirstrauunpage](/windows/client-management/mdm/policy-csp-browser#browser-preventfirstrunpage)
+[PreventFirstRunPage](/windows/client-management/mdm/policy-csp-browser#browser-preventfirstrunpage)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -396,7 +396,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Preventlivetiledatacollection](/windows/client-management/mdm/policy-csp-browser#browser-preventlivetiledatacollection)
+[PreventLiveTileDataCollection](/windows/client-management/mdm/policy-csp-browser#browser-preventlivetiledatacollection)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -429,7 +429,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Preventusinglocalhostipaddressforwebrtc](/windows/client-management/mdm/policy-csp-browser#browser-preventusinglocalhostipaddressforwebrtc)
+[PreventUsingLocalHostIPAddressForWebRTC](/windows/client-management/mdm/policy-csp-browser#browser-preventusinglocalhostipaddressforwebrtc)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -440,10 +440,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Provisionfavoriten](/windows/client-management/mdm/policy-csp-browser#browser-provisionfavorites)
+[ProvisionFavorites](/windows/client-management/mdm/policy-csp-browser#browser-provisionfavorites)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -462,10 +462,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Setdefaultsearchengine](/windows/client-management/mdm/policy-csp-browser#browser-setdefaultsearchengine)
+[SetDefaultSearchEngine](/windows/client-management/mdm/policy-csp-browser#browser-setdefaultsearchengine)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -473,7 +473,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Showmessageeingangs openingsitesininternetexplorer](/windows/client-management/mdm/policy-csp-browser#browser-showmessagewhenopeningsitesininternetexplorer)
+[ShowMessageWhenOpeningSitesInInternetExplorer](/windows/client-management/mdm/policy-csp-browser#browser-showmessagewhenopeningsitesininternetexplorer)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -484,7 +484,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Syncfavoritesbetweenieandmikrosoftedge](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)
+[SyncFavoritesBetweenIEAndMicrosoftEdge](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -501,19 +501,19 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ MDM \\ DMMap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

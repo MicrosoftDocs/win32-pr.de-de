@@ -4,12 +4,12 @@ description: Erfahren Sie, wie eine Anwendung Geräte mithilfe der Funktion Enum
 ms.assetid: 28ded3cf-b0c8-4c90-ab39-efc879adb6e7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6465b04e6f1a18a0bdb74f0ce883cf9161371fb6
-ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
+ms.openlocfilehash: f6cfe1c1b4dee11383a4c36eaea43974f7e0439ae4ff2370a90e99b1702a8e0d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "112068596"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083574"
 ---
 # <a name="enumerating-devices-wpd"></a>Aufzählen von Geräten (WPD)
 
@@ -26,7 +26,7 @@ Die EnumerateAllDevices-Funktion erfüllt vier primäre Aufgaben:
 
 Jede dieser vier Aufgaben wird in den folgenden Abschnitten ausführlicher beschrieben.
 
-Der erste Schritt des Geräteenumerationsprozesses ist die Erstellung eines portablen Geräte-Manager-Objekts. Dies erfolgt durch Aufrufen der CoCreateInstance-Funktion und Übergeben des Klassenbezeichners (CLSID) für das Objekt, Angeben des Kontexts, in dem der Code ausgeführt wird, Angabe eines Verweisbezeichners für die IPortableDeviceManager-Schnittstelle und anschließendes Angeben einer Zeigervariable, die den IPortableDeviceManager-Schnittstellenzeiger empfängt.
+Der erste Schritt im Geräteenumerationsprozess ist die Erstellung eines portablen Geräte-Manager-Objekts. Dies erfolgt durch Aufrufen der CoCreateInstance-Funktion und Übergeben des Klassenbezeichners (CLSID) für das Objekt, Angeben des Kontexts, in dem der Code ausgeführt wird, Angabe eines Verweisbezeichners für die IPortableDeviceManager-Schnittstelle und anschließendes Angeben einer Zeigervariable, die den IPortableDeviceManager-Schnittstellenzeiger empfängt.
 
 
 ```C++
@@ -42,7 +42,7 @@ if (FAILED(hr))
 
 
 
-Nachdem Sie einen [**IPortableDeviceManager-Schnittstellenzeiger**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager) erhalten haben, können Sie mit dem Aufrufen von Methoden für diese Schnittstelle beginnen. Die erste Methode, die in der EnumerateAllDevices-Funktion aufgerufen wird, ist [**IPortableDeviceManager::GetDevices**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicemanager-getdevices). Wenn diese Methode aufgerufen wird und das erste Argument auf **NULL** festgelegt ist, wird die Anzahl der verbundenen Geräte zurückgegeben.
+Nachdem Sie einen [**IPortableDeviceManager-Schnittstellenzeiger**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager) erhalten haben, können Sie mit dem Aufrufen von Methoden für diese Schnittstelle beginnen. Die erste Methode, die in der EnumerateAllDevices-Funktion aufgerufen wird, ist [**IPortableDeviceManager::GetDevices**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicemanager-getdevices). Wenn diese Methode aufgerufen wird und das erste Argument auf **NULL festgelegt** ist, wird die Anzahl der verbundenen Geräte zurückgegeben.
 
 
 ```C++
@@ -65,7 +65,7 @@ printf("\n%d Windows Portable Device(s) found on the system\n\n", cPnPDeviceIDs)
 
 Nachdem Sie die Anzahl der verbundenen Geräte abgerufen haben, können Sie diesen Wert verwenden, um Geräteinformationen für jedes verbundene Gerät abzurufen. Dieser Prozess beginnt mit der Übergabe eines Arrays von Zeichenfolgenze0ern als erstes Argument und der Anzahl der Elemente, die dieses Array als zweites Argument enthalten kann (diese Anzahl sollte mindestens der Anzahl der verfügbaren Geräte entspricht).
 
-Die von dieser Methode zurückgegebenen Zeichenfolgen sind Plug & Play Namen der verbundenen Geräte. Diese Namen werden wiederum an andere Methoden auf der [**IPortableDeviceManager-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager) übergeben, um gerätespezifische Informationen abzurufen, z. B. den Benutzernamen, den Herstellernamen und die Gerätebeschreibung. (Diese Namen werden auch verwendet, um eine Verbindung mit dem Gerät zu öffnen, wenn eine Anwendung die [**IPortableDevice::Open-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-open) aufruft.)
+Die von dieser Methode zurückgegebenen Zeichenfolgen sind Plug & Play Namen der verbundenen Geräte. Diese Namen werden wiederum an andere Methoden auf der [**IPortableDeviceManager-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager) übergeben, um gerätespezifische Informationen wie den Angezeigtennamen, den Herstellernamen und die Gerätebeschreibung abzurufen. (Diese Namen werden auch verwendet, um eine Verbindung mit dem Gerät zu öffnen, wenn eine Anwendung die [**IPortableDevice::Open-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-open) aufruft.)
 
 
 ```C++
@@ -99,7 +99,7 @@ if (SUCCEEDED(hr) && (cPnPDeviceIDs > 0))
 
 
 
-Nachdem Sie die Geräteinformationen abgerufen haben, müssen Sie den Arbeitsspeicher, der den Zeichenfolgen zugeordnet ist, auf die durch das Array von Zeichenfolgenzedern verwiesen wird, frei geben. Sie müssen auch dieses Array löschen.
+Nachdem Sie die Geräteinformationen abgerufen haben, müssen Sie den Arbeitsspeicher frei geben, der den Zeichenfolgen zugeordnet ist, auf die das Array von Zeichenfolgenzedern zeigt. Sie müssen dieses Array auch löschen.
 
 
 ```C++

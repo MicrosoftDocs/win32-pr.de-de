@@ -1,25 +1,25 @@
 ---
-description: Die lokale Sicherheits Autorität (Local Security Authority, LSA) stellt Funktionen bereit, um zwischen Benutzer-, Gruppen-und lokalen Gruppennamen und den entsprechenden sid-Werten (Security Identifier) zu übersetzen.
+description: Die lokale Sicherheitsstelle (Local Security Authority, LSA) stellt Funktionen für die Übersetzung zwischen Benutzer-, Gruppen- und lokalen Gruppennamen und den entsprechenden SID-Werten (Security Identifier) zur Verfügung.
 ms.assetid: 8845b709-a8f9-4d0f-a4a6-86d23d6b01d5
-title: Übersetzen von Namen und SIDs
+title: Übersetzen zwischen Namen und SIDs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 417034a99331c09f20546f2f352bc762a86f02e7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2d5f67bd95e41a9813522d635e737f4fc528a61aebceeab205a2d40e1f44d7c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348759"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119004808"
 ---
-# <a name="translating-between-names-and-sids"></a>Übersetzen von Namen und SIDs
+# <a name="translating-between-names-and-sids"></a>Übersetzen zwischen Namen und SIDs
 
-Die [*Lokale Sicherheits Autorität (Local Security Authority*](/windows/desktop/SecGloss/l-gly) , LSA) stellt Funktionen bereit, um zwischen Benutzer-, Gruppen-und lokalen Gruppennamen und den entsprechenden sid-Werten ( [*Security Identifier*](/windows/desktop/SecGloss/s-gly) ) zu übersetzen. Um nach Kontonamen zu suchen, nennen Sie die [**lsalookupnames**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsalookupnames) -Funktion. Diese Funktion gibt die SID als RID/Domänen-Index paar zurück. Um die SID als einzelnes Element abzurufen, nennen Sie die [**LsaLookupNames2**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsalookupnames2) -Funktion. Um SIDs zu suchen, nennen Sie [**lsalookupsids**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsalookupsids).
+Die [*lokale Sicherheitsstelle*](/windows/desktop/SecGloss/l-gly) (Local Security Authority, LSA) stellt Funktionen für die Übersetzung zwischen Benutzer-, Gruppen- und lokalen Gruppennamen und den entsprechenden SID-Werten [*(Security Identifier)*](/windows/desktop/SecGloss/s-gly) zur Verfügung. Um Kontonamen zu suchen, rufen Sie die [**LsaLookupNames-Funktion**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsalookupnames) auf. Diese Funktion gibt die SID als RID-/Domänenindexpaar zurück. Um die SID als einzelnes Element zu erhalten, rufen Sie die [**LsaLookupNames2-Funktion**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsalookupnames2) auf. Rufen Sie zum Suchen von SIDs [**LsaLookupSids auf.**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsalookupsids)
 
-Diese Funktionen können Name-und SID-Informationen von allen Domänen übersetzen, denen das lokale System vertraut.
+Diese Funktionen können Namens- und SID-Informationen aus jeder Domäne übersetzen, die vom lokalen System als vertrauenswürdig eingestuft wird.
 
-Bevor Sie die Kontonamen und SIDs übersetzen können, muss die Anwendung ein Handle für das lokale [**Richtlinien**](policy-object.md) Objekt erhalten, wie in [Öffnen eines Richtlinien Objekt Handles](opening-a-policy-object-handle.md)gezeigt.
+Bevor Sie zwischen Kontonamen und SIDs übersetzen können, muss Ihre Anwendung ein Handle für das lokale [**Policy-Objekt**](policy-object.md) erhalten, wie unter Öffnen eines [Richtlinienobjekthandpunkts gezeigt.](opening-a-policy-object-handle.md)
 
-Im folgenden Beispiel wird die SID anhand des Konto namens nach einem Konto gesucht.
+Im folgenden Beispiel wird die SID für ein Konto unter Berücksichtigung des Kontonamens nach der SID durch sucht.
 
 
 ```C++
@@ -74,14 +74,14 @@ void GetSIDInformation (LPWSTR AccountName,LSA_HANDLE PolicyHandle)
 
 
 
-Im vorherigen Beispiel konvertiert die Funktion **initlsastring** eine Unicode-Zeichenfolge in eine [**LSA- \_ Unicode- \_ Zeichen**](/windows/desktop/api/lsalookup/ns-lsalookup-lsa_unicode_string) folgen Struktur. Der Code für diese Funktion wird in [Verwenden von LSA-Unicode](using-lsa-unicode-strings.md)-Zeichen folgen angezeigt.
+Im vorherigen Beispiel konvertiert die **Funktion InitLsaString** eine Unicode-Zeichenfolge in eine [**LSA \_ UNICODE \_ STRING-Struktur.**](/windows/desktop/api/lsalookup/ns-lsalookup-lsa_unicode_string) Der Code für diese Funktion wird unter Verwenden von [LSA Unicode-Zeichenfolgen gezeigt.](using-lsa-unicode-strings.md)
 
 > [!Note]  
-> Diese Übersetzungsfunktionen werden hauptsächlich für die Verwendung durch Berechtigungs-Editoren zur Anzeige von [*Zugriffs Steuerungs Listen*](/windows/desktop/SecGloss/a-gly) -Informationen bereitgestellt. Ein Berechtigungs-Editor sollte diese Funktionen immer mit dem [**Richtlinien**](policy-object.md) Objekt für das System, in dem sich der Name oder die [*sicherheitsbezeichnersid*](/windows/desktop/SecGloss/s-gly) befindet, aufruft. Dadurch wird sichergestellt, dass während der Übersetzung auf den richtigen Satz vertrauenswürdiger Domänen verwiesen wird.
+> Diese Übersetzungsfunktionen werden hauptsächlich von Berechtigungs-Editoren bereitgestellt, um Informationen zur Zugriffssteuerungsliste (Access [*Control List,*](/windows/desktop/SecGloss/a-gly) ACL) anzuzeigen. Ein Berechtigungs-Editor sollte diese Funktionen immer mithilfe des [**Richtlinienobjekts**](policy-object.md) für das System aufrufen, in dem sich der Name oder die [*Sicherheits-ID-SID*](/windows/desktop/SecGloss/s-gly) befindet. Dadurch wird sichergestellt, dass während der Übersetzung auf die richtigen vertrauenswürdigen Domänen verwiesen wird.
 
  
 
-Windows Access Control bietet auch Funktionen, die Übersetzungen zwischen SIDs und Kontonamen ausführen: [**LookupAccountName**](/windows/desktop/api/winbase/nf-winbase-lookupaccountnamea) und [**LookupAccountSid**](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida). Wenn Ihre Anwendung einen Kontonamen oder eine SID suchen muss und keine zusätzliche LSA-Richtlinien Funktionalität verwendet, verwenden Sie die Windows Access Control-Funktionen anstelle der LSA-Richtlinien Funktionen. Weitere Informationen zu diesen Funktionen finden Sie unter [Access Control](/windows/desktop/SecAuthZ/access-control).
+Windows Access Control stellt auch Funktionen zur Verfügung, die Übersetzungen zwischen SIDs und Kontonamen ausführen: [**LookupAccountName**](/windows/desktop/api/winbase/nf-winbase-lookupaccountnamea) und [**LookupAccountSid**](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida). Wenn Ihre Anwendung einen Kontonamen oder eine SID suchen muss und keine zusätzlicheN LSA-Richtlinienfunktionen verwendet, verwenden Sie die Windows Access Control-Funktionen anstelle der LSA-Richtlinienfunktionen. Weitere Informationen zu diesen Funktionen finden Sie unter [Access Control](/windows/desktop/SecAuthZ/access-control).
 
  
 

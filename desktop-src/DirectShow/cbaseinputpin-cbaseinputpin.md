@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 95a6dca29a9bdcaf978a54587035b34959d81719
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 526c10dc0cda2f9b4d4cee6a955620f2aa1aae697522aaf3e14e57c3317ca325
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108120048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017068"
 ---
 # <a name="cbaseinputpincbaseinputpin-constructor"></a>CBaseInputPin.CBaseInputPin-Konstruktor
 
@@ -81,7 +81,7 @@ Breitzeichenfolge mit dem Pinnamen (wird auch als Pinbezeichner verwendet).
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Alle Parameter werden direkt an den [**CBasePin-Konstruktor**](cbasepin-cbasepin.md) übergeben.
 
@@ -89,14 +89,14 @@ Alle Parameter werden direkt an den [**CBasePin-Konstruktor**](cbasepin-cbasepin
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

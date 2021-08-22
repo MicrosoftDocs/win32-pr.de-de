@@ -1,21 +1,21 @@
 ---
-description: Die get- \_ Zeichensatz Methode ruft einen BLOB- \_ \_ Zeichensatz Deskriptor des Zeichensatzes ab, der im aktuellen Konferenz-BLOB verwendet wird.
+description: Die methode \_ get CharacterSet ruft einen BLOB CHARACTER SET-Deskriptor des Zeichensets ab, der \_ \_ im aktuellen Konferenzblob verwendet wird.
 ms.assetid: 9783d18c-79f6-4faa-b12d-9504c13d54e3
-title: 'Itconferendceblob:: get_CharacterSet-Methode (sdpblb. h)'
+title: ITConferenceBlob::get_CharacterSet-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 681085672f49c75a8434c4b0311e75d2b9cea270
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 20a9dd719d2ae9742a6ec4b3295e3e22ffe871b4a38c55d07e07a3421271553d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060998"
 ---
-# <a name="itconferenceblobget_characterset-method"></a>Itconferenceblob:: get- \_ Merkmal Satz Methode
+# <a name="itconferenceblobget_characterset-method"></a>ITConferenceBlob::get \_ CharacterSet-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **get \_** -Zeichensatz Methode ruft einen [**BLOB- \_ \_ Zeichensatz**](blob-character-set.md) Deskriptor des Zeichensatzes ab, der im aktuellen Konferenz-BLOB verwendet wird.
+Die **methode \_ get CharacterSet** ruft einen [**BLOB CHARACTER \_ SET-Deskriptor \_**](blob-character-set.md) des Zeichensets ab, der im aktuellen Konferenzblob verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT get_CharacterSet(
 
 <dl> <dt>
 
-*pcharakteriseset* \[ vorgenommen\]
+*pCharacterSet* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen [**BLOB \_ - \_ Zeichensatz**](blob-character-set.md) Deskriptor des Zeichensatzes.
+Zeiger auf einen [**BLOB \_ CHARACTER SET-Deskriptor \_**](blob-character-set.md) des Zeichensets.
 
 </dd> </dl>
 
@@ -48,12 +48,12 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                                   | Beschreibung                                                      |
 |---------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                          | Methode war erfolgreich.<br/>                                     |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>                     | Der *pcharakteriset* -Parameter ist kein gültiger Zeiger.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>                 | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/>  |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>                        | Unbekannter Fehler.<br/>                                    |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>                     | Diese Methode ist noch nicht implementiert.<br/>                   |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>                  | *pcharakteriset* ist **null**.<br/>                          |
-| <dl> <dt>**HRESULT \_ungültige \_ Daten**</dt> </dl> | Der aktuelle Zeichensatz ist ungültig oder nicht verfügbar.<br/>  |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>                     | Der *pCharacterSet-Parameter* ist kein gültiger Zeiger.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>                 | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/>  |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>                        | Unbekannter Fehler.<br/>                                    |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>                     | Diese Methode ist noch nicht implementiert.<br/>                   |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>                  | *pCharacterSet* ist **NULL.**<br/>                          |
+| <dl> <dt>**(HRESULT) FEHLER \_ UNGÜLTIGE \_ DATEN**</dt> </dl> | Der aktuelle Zeichensatz ist ungültig oder nicht verfügbar.<br/>  |
 
 
 
@@ -65,21 +65,21 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itconfererceblob**](itconferenceblob.md)
+[**ITConferenceBlob**](itconferenceblob.md)
 </dt> <dt>
 
-[**BLOB- \_ Zeichen \_ Satz**](blob-character-set.md)
+[**\_ \_ BLOB-ZEICHENSATZ**](blob-character-set.md)
 </dt> </dl>
 
  

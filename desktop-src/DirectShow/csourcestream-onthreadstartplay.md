@@ -1,7 +1,7 @@
 ---
-description: Die onthreadstartplay-Methode wird am Anfang der csourcestream::D obufferprocessingloop-Methode aufgerufen.
+description: Die OnThreadStartPlay-Methode wird am Anfang der CSourceStream::D oBufferProcessingLoop-Methode aufgerufen.
 ms.assetid: 16d3b28f-bfae-49af-b8e4-8cc8cb15ecab
-title: Csourcestream. onthreadstartplay-Methode (Quelle. h)
+title: CSourceStream.OnThreadStartPlay-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 857f27ad39fb9169e1ef67253d5232c7cbc3dbb6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fcd1ccf4b507570e0219854d1f5044c1d95db63d04b8f9049449beb3941e95d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369144"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073174"
 ---
-# <a name="csourcestreamonthreadstartplay-method"></a>Csourcestream. onthreadstartplay-Methode
+# <a name="csourcestreamonthreadstartplay-method"></a>CSourceStream.OnThreadStartPlay-Methode
 
-Die- `OnThreadStartPlay` Methode wird zu Beginn der [**csourcestream::D obufferprocessingloop**](csourcestream-dobufferprocessingloop.md) -Methode aufgerufen.
+Die `OnThreadStartPlay` -Methode wird am Anfang der [**CSourceStream::D oBufferProcessingLoop-Methode**](csourcestream-dobufferprocessingloop.md) aufgerufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode führt in der Basisklasse keine Aktion aus. Sie kann von der abgeleiteten Klasse außer Kraft gesetzt werden.
+Diese Methode führt in der Basisklasse nichts aus. sie ist für die abgeleitete Klasse zum Überschreiben verfügbar.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Methode führt in der Basisklasse keine Aktion aus. Sie kann von der abgel
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode führt in der Basisklasse keine Aktion aus. Sie kann von der abgel
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  

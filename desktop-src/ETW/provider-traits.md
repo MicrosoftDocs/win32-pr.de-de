@@ -1,23 +1,23 @@
 ---
-description: Anbieter Merkmale sind eine Methode zum Anfügen von mehr Daten an eine einzelne Anbieter Registrierung.
+description: Anbietermerkmale sind eine Methode zum Anfügen weiterer Daten an eine individuelle Anbieterregistrierung.
 ms.assetid: 97755D64-BF57-4C0D-8ED4-040FC375C4AF
-title: Anbieter Merkmale
+title: Anbietermerkmale
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c67b25857070edb6419be9a2898d2667f3a179d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 2131ee4900fca40b26e8675b3eb4aade4e740fd49d1ed06098a21682ed55ff25
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069890"
 ---
-# <a name="provider-traits"></a>Anbieter Merkmale
+# <a name="provider-traits"></a>Anbietermerkmale
 
-Anbieter Merkmale sind eine Methode zum Anfügen von mehr Daten an eine einzelne Anbieter Registrierung. Sie können für Manifestressourcen oder tracelogging-Anbieter verwendet werden. Dies umfasst derzeit die Unterstützung für das Hinzufügen eines Anbieter namens und/oder einer Anbieter Gruppe zu einer einzelnen Anbieter Registrierung. In Zukunft werden wahrscheinlich weitere Merkmals Typen hinzugefügt. Diese Informationen werden im Kernel als binäres Blob eines festgelegten Formats gespeichert.
+Anbietermerkmale sind eine Methode zum Anfügen weiterer Daten an eine individuelle Anbieterregistrierung. Sie können für manifestbasierte oder TraceLogging-Anbieter verwendet werden. Dies umfasst derzeit Unterstützung für das Hinzufügen eines Anbieternamens und/oder einer Anbietergruppe zu einer individuellen Anbieterregistrierung. In Zukunft werden wahrscheinlich weitere Merkmalstypen hinzugefügt. Diese Informationen werden im Kernel als binäres Blob eines festgelegten Formats gespeichert.
 
-Merkmale können nur einmal für eine Registrierung festgelegt werden. Alle weiteren Versuche, die Merkmale dieser Registrierung festzulegen, können nicht ausgeführt werden.
+Merkmale können nur einmal für eine Registrierung festgelegt werden. Alle weiteren Versuche, die Merkmale für diese Registrierung festzulegen, schlagen fehl.
 
-Um Anbieter Merkmale für einen Manifest-basierten Anbieter festzulegen, müssen Sie die [**eventsetinformation**](/windows/desktop/api/Evntprov/nf-evntprov-eventsetinformation) -Funktion mit der eventprovidersettrait-Informations Klasse aufrufen. Der eventinformation-Puffer sollte ein binäres Blob im folgenden Format enthalten:
+Um Anbietermerkmale für einen manifestbasierten Anbieter festzulegen, rufen Sie die [**EventSetInformation-Funktion**](/windows/desktop/api/Evntprov/nf-evntprov-eventsetinformation) mit der EventProviderSetTraits-Informationsklasse auf. Der EventInformation-Puffer sollte ein binäres Blob im folgenden Format enthalten:
 
 ``` syntax
 {
@@ -37,7 +37,7 @@ TRAIT {
       }
 ```
 
-Aus dem einzelnen Merkmal ist der etw- \_ Anbieter \_ Merkmals \_ Typ wie folgt definiert:
+Aus dem einzelnen Merkmal wird ETW PROVIDER TRAIT TYPE wie folgt \_ \_ \_ definiert:
 
 ``` syntax
 typedef enum {
@@ -46,27 +46,27 @@ typedef enum {
 } ETW_PROVIDER_TRAIT_TYPE;
 ```
 
-Die Anbieter Merkmale werden von tracelogging-Anbietern automatisch festgelegt, wenn die [**traceloggingregister**](/windows/win32/api/traceloggingprovider/nf-traceloggingprovider-traceloggingregister) -Funktion aufgerufen wird. Der Name des tracelogging-Anbieters ist immer in seinen Merkmalen enthalten. Eine Gruppe kann für einen tracelogging-Anbieter mithilfe des [**traceloggingoptiongroup**](/windows/win32/api/traceloggingprovider/nf-traceloggingprovider-traceloggingoptiongroup) -Makros in der Anbieter Definition festgelegt werden.
+TraceLogging-Anbieter legen die Anbietermerkmale automatisch fest, wenn die [**TraceLoggingRegister-Funktion**](/windows/win32/api/traceloggingprovider/nf-traceloggingprovider-traceloggingregister) aufgerufen wird. Der Name des TraceLogging-Anbieters ist immer in seinen Merkmalen enthalten. Eine Gruppe kann für einen TraceLogging-Anbieter mithilfe des [**TraceLoggingOptionGroup-Makros**](/windows/win32/api/traceloggingprovider/nf-traceloggingprovider-traceloggingoptiongroup) in der Anbieterdefinition festgelegt werden.
 
 ## <a name="custom-traits"></a>Benutzerdefinierte Merkmale
 
-Obwohl die meisten der 255 möglichen Merkmals Typen noch nicht definiert sind, sind Merkmals Typen 1-127 für die Definition durch Microsoft reserviert. Die verbleibenden Werte des indizierten Typs können von externen Entwicklern verwendet werden, wenn Sie passen. Jeder Benutzer, der seine eigenen benutzerdefinierten Merkmale dem Anbieter hinzufügt, sollte die gesamte Merkmals Größe in den folgenden Gründen unter 256 Bytes behalten:
+Obwohl die meisten der 255 möglichen Merkmalstypen noch nicht definiert sind, sind die Merkmalstypen 1 bis 127 für die Definition durch Microsoft reserviert. Die verbleibenden höheren indizierten Typwerte können von externen Entwicklern nach Bedarf verwendet werden. Jeder, der seinem Anbieter eigene benutzerdefinierte Merkmale hinzufügen möchte, sollte aus den folgenden Gründen versuchen, die Gesamtgröße der Merkmale unter 256 Byte zu halten:
 
--   Die Merkmale sind in jedem für den Anbieter geschriebenen Ereignis enthalten. Große Merkmale können zu sehr großen Protokolldateien führen.
--   Die Merkmale werden während der Lebensdauer des Anbieters im nicht ausgelagerten Kernel Pool gespeichert.
+-   Die Merkmale sind in jedem Ereignis enthalten, das für den Anbieter geschrieben wurde. Große Merkmale können zu sehr großen Protokolldateien führen.
+-   Die Merkmale werden für die Lebensdauer des Anbieters in einem nicht ausgelagerten Kernelpool gespeichert.
 
 ## <a name="provider-groups"></a>Anbietergruppen
 
-Eine Anbieter Gruppe ist eine GUID-definierte, steuerbare Entität, ähnlich wie ein Anbieter selbst. Der Hauptunterschied besteht darin, dass während der Verwendung einer Anbieter-GUID zum Steuern der Registrierungen nur seines Anbieters eine Gruppe alle Registrierungen der Mitglieder steuert. Wenn Sie z. b. eine Anbieter Gruppe mit einem bestimmten Schlüsselwort und einer Ebene aktivieren, werden alle Gruppenmitglieder Registrierungen mit diesem Schlüsselwort und derselben Ebene aktiviert.
+Eine Anbietergruppe ist eine GUID-definierte steuerbare Entität, die einem Anbieter selbst ähnelt. Der Hauptunterschied besteht darin, dass eine Gruppe alle Memberregistrierungen steuert, während eine Anbieter-GUID verwendet wird, um registrierungen nur ihres Anbieters zu steuern. Wenn Sie beispielsweise eine Anbietergruppe mit einem bestimmten Schlüsselwort und einer bestimmten Ebene aktivieren, werden alle Gruppenmitgliedsregistrierungen mit diesem Schlüsselwort und dieser Ebene aktiviert.
 
-Die Gruppenmitgliedschaft kann durch Berechtigungen eingeschränkt werden. Wenn der Aufrufer von [**eventsetinformation**](/windows/desktop/api/Evntprov/nf-evntprov-eventsetinformation) nicht über Berechtigungen zum Beitreten zur angegebenen Gruppe verfügt, wird die Mitgliedschaft verweigert.
+Die Gruppenmitgliedschaft kann durch Berechtigungen eingeschränkt werden. Wenn der Aufrufer von [**EventSetInformation**](/windows/desktop/api/Evntprov/nf-evntprov-eventsetinformation) nicht über berechtigungen zum Beitreten zur angegebenen Gruppe verfügt, wird die Mitgliedschaft verweigert.
 
-In einigen Fällen möchte der Ablauf Verfolgungs Sitzungs Controller einige Anbieter von der Aktivierung einer Gruppe ausschließen. Dies kann durch Festlegen einer nicht zulassen-Liste erreicht werden. Eine nicht Zulassungsliste ist eine Liste von Anbieter-GUIDs, die auf der Grundlage der Gruppeneinstellungen für eine einzelne Protokollierungs Sitzung nicht aktiviert werden. Die Zulassungs Listen können dynamisch mit [**tracesetinformation**](/windows/win32/api/evntrace/nf-evntrace-tracesetinformation) und der tracesetdisallowlist-Informations Klasse geändert werden.
+In einigen Fällen möchte der Ablaufverfolgungssitzungscontroller möglicherweise einige Anbieter von der Aktivierung einer Gruppe ausschließen. Dies kann durch Festlegen einer Liste mit nicht möglich erfolgen. Eine Unzulässigkeitsliste ist eine Liste von Anbieter-GUIDs, die nicht basierend auf den Gruppeneinstellungen für eine einzelne Protokollierungssitzung aktiviert werden. Disallow-Listen können dynamisch mit [**TraceSetInformation**](/windows/win32/api/evntrace/nf-evntrace-tracesetinformation) und der TraceSetDisallowList-Informationsklasse geändert werden.
 
-Die meisten enable-Aktionen können für Anbietergruppen auf ähnliche Weise wie bei einzelnen Anbietern durchgeführt werden. es gibt jedoch einige Ausnahmen. Zu den Ausnahmen zählen:
+Während die meisten Aktivierungsaktionen für Anbietergruppen auf ähnliche Weise wie einzelne Anbieter ausgeführt werden können, gibt es einige Ausnahmen. Zu den Ausnahmen zählen:
 
--   Anbietergruppen können nicht von privaten Ablauf Verfolgungs Sitzungen gesteuert werden.
--   Der Ereignis Name, die Ereignis-ID und die Nutz Last Filter sind für Anbietergruppen nicht anwendbar, da Sie bestimmte Informationen eines einzelnen Anbieters annehmen.
+-   Anbietergruppen können nicht von privaten Ablaufverfolgungssitzungen gesteuert werden.
+-   Die Filter "Ereignisname", "Ereignis-ID" und "Nutzlast" gelten nicht für Anbietergruppen, da sie bestimmte Informationen eines einzelnen Anbieters voraussetzt.
 
  
 

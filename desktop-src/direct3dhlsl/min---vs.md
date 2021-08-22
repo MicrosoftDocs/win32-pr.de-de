@@ -1,6 +1,6 @@
 ---
-title: min-vs
-description: Berechnet den minimalen der Quellen. | min-vs
+title: min – vs
+description: Berechnet das Minimum der Quellen. | min – im Vergleich zu
 ms.assetid: cecfe98b-8efd-4fbf-a7b5-d228de724e71
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: eda47b75398b8643f7010ff7468f72f4a7d8c199
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 2fee49698d323b55404b319e28a90e6741e8de51e96d3015d5b348bc741fee84
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986340"
 ---
-# <a name="min---vs"></a>min-vs
+# <a name="min---vs"></a>min – vs
 
-Berechnet den minimalen der Quellen.
+Berechnet das Minimum der Quellen.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| Min. DST, src0, Quelle1 |
+| min dst, src0, src1 |
 |---------------------|
 
 
@@ -33,15 +33,15 @@ Berechnet den minimalen der Quellen.
 
 where
 
--   DST ist das Ziel Register.
--   src0 ist ein Quell Register.
--   Quelle1 ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src0 ist ein Quellregister.
+-   src1 ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
 | Min                    | x    | x    | x    | x     | x    | x     |
 
@@ -49,7 +49,7 @@ where
 
  
 
-Das folgende Code Fragment zeigt die ausgeführten Vorgänge.
+Das folgende Codefragment zeigt die ausgeführten Vorgänge.
 
 
 ```
@@ -65,7 +65,7 @@ dest.w=(src0.w < src1.w) ? src0.w : src1.w;
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  

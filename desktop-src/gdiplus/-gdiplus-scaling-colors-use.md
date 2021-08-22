@@ -1,23 +1,23 @@
 ---
-description: Eine Skalierungs Transformation multipliziert eine oder mehrere der vier Farbkomponenten mit einer Zahl. Die Farbmatrix Einträge, die die Skalierung darstellen, werden in der folgenden Tabelle angegeben.
+description: Eine Skalierungstransformation multipliziert eine oder mehrere der vier Farbkomponenten mit einer Zahl. Die Farbmatrixeinträge, die die Skalierung darstellen, sind in der folgenden Tabelle angegeben.
 ms.assetid: 08347831-7100-4220-a83b-693bb7b98ccb
 title: Skalieren von Farben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 370155306f7b1a177358d7cf28d329ebb0d75f8c
-ms.sourcegitcommit: 37f276b5d887a3aad04b1ba86e390dea9d87e591
+ms.openlocfilehash: 7877db07ff1a11dcb985f8b0ca8ec3cc017f25fe45f00e989c9108891f8ff1ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "104218912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119036368"
 ---
 # <a name="scaling-colors"></a>Skalieren von Farben
 
-Eine Skalierungs Transformation multipliziert eine oder mehrere der vier Farbkomponenten mit einer Zahl. Die Farbmatrix Einträge, die die Skalierung darstellen, werden in der folgenden Tabelle angegeben.
+Eine Skalierungstransformation multipliziert eine oder mehrere der vier Farbkomponenten mit einer Zahl. Die Farbmatrixeinträge, die die Skalierung darstellen, sind in der folgenden Tabelle angegeben.
 
 
 
-| Zu skalierbare Komponente | Matrix Eintrag |
+| Zu skalierende Komponente | Matrixeintrag |
 |------------------------|--------------|
 | Red                    | \[0 \] \[ 0\]   |
 | Grün                  | \[1 \] \[ 1\]   |
@@ -28,7 +28,7 @@ Eine Skalierungs Transformation multipliziert eine oder mehrere der vier Farbkom
 
  
 
-Im folgenden Beispiel wird ein [**Image**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) -Objekt aus dem Datei ColorBars2.bmp erstellt. Anschließend skaliert der Code die blaue Komponente jedes Pixels im Bild um den Faktor 2. Das ursprüngliche Bild wird neben dem transformierten Bild gezeichnet.
+Im folgenden Beispiel wird ein [**Image-Objekt aus**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) der Datei ColorBars2.bmp. Anschließend skaliert der Code die blaue Komponente jedes Pixels im Bild um den Faktor 2. Das ursprüngliche Bild wird neben dem transformierten Bild gezeichnet.
 
 
 ```
@@ -63,15 +63,15 @@ graphics.DrawImage(
 
 
 
-Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und das skalierte Bild auf der rechten Seite.
+Die folgende Abbildung zeigt das ursprüngliche Bild links und das skalierte Bild auf der rechten Seite.
 
-![Zeigt vierfarbige Balken und dann die gleichen Balken mit unterschiedlichen Farben an.](images/colortrans3.png)
+![Zeigt vier farbige Balken und dann die gleichen Balken mit unterschiedlichen Farben an.](images/colortrans3.png)
 
-In der folgenden Tabelle werden die Farb Vektoren für die vier Balken vor und nach der blauen Skalierung angezeigt. Beachten Sie, dass die blaue Komponente in der vierten Farbleiste von 0,8 zu 0,6 gewechselt ist. Dies liegt daran, dass GDI+ nur den Bruch Teil des Ergebnisses beibehält. Beispiel: (2) (0,8) = 1,6 und der Bruchteil von 1,6 ist 0,6. Wenn nur der Bruchteil beibehalten wird, wird sichergestellt, dass das Ergebnis immer im Intervall \[ 0, 1 liegt \] .
+Die folgende Tabelle zeigt die Farbvektoren für die vier Balken vor und nach der blauen Skalierung. Beachten Sie, dass die blaue Komponente in der vierten Farbleiste von 0,8 auf 0,6 verstrichen ist. Das liegt daran GDI+ nur den Bruchteil des Ergebnisses beibebehalte. Beispiel: (2)(0,8) = 1,6, und der Bruchteil von 1,6 ist 0,6. Wenn nur der Bruchteil beibehalten wird, wird sichergestellt, dass das Ergebnis immer im \[ Intervall 0, 1 \] liegt.
 
 
 
-| Ursprünglich           | Läufig             |
+| Ursprünglich           | Skaliert             |
 |--------------------|--------------------|
 | (0.4, 0.4, 0.4, 1) | (0.4, 0.4, 0.8, 1) |
 | (0.4, 0.2, 0.2, 1) | (0.4, 0.2, 0.4, 1) |
@@ -82,7 +82,7 @@ In der folgenden Tabelle werden die Farb Vektoren für die vier Balken vor und n
 
  
 
-Im folgenden Beispiel wird ein [**Image**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) -Objekt aus dem Datei ColorBars2.bmp erstellt. Anschließend werden im Code die roten, grünen und blauen Komponenten der einzelnen Pixel im Bild skaliert. Die roten Komponenten werden auf 25% herunterskaliert, die grünen Komponenten werden um 35% herunterskaliert, und die blauen Komponenten werden um 50% herunterskaliert.
+Im folgenden Beispiel wird ein [**Image-Objekt aus**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) der Datei ColorBars2.bmp. Anschließend skaliert der Code die roten, grünen und blauen Komponenten der einzelnen Pixel im Bild. Die roten Komponenten werden um 25 Prozent herunterskaliert, die grünen Komponenten werden um 35 Prozent herunterskaliert, und die blauen Komponenten werden um 50 Prozent herunterskaliert.
 
 
 ```
@@ -117,15 +117,15 @@ graphics.DrawImage(
 
 
 
-Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und das skalierte Bild auf der rechten Seite.
+Die folgende Abbildung zeigt das ursprüngliche Bild links und das skalierte Bild auf der rechten Seite.
 
-![Abbildung, die vierfarbige Balken anzeigt, dann diese Balken mit unterschiedlichen Farben](images/colortrans4.png)
+![Abbildung mit vier farbigen Balken und balken mit unterschiedlichen Farben](images/colortrans4.png)
 
-In der folgenden Tabelle werden die Farb Vektoren für die vier Balken vor und nach der roten, grünen und blauen Skalierung angezeigt.
+Die folgende Tabelle zeigt die Farbvektoren für die vier Balken vor und nach der roten, grünen und blauen Skalierung.
 
 
 
-| Ursprünglich           | Läufig               |
+| Ursprünglich           | Skaliert               |
 |--------------------|----------------------|
 | (0.6, 0.6, 0.6, 1) | (0.45, 0.39, 0.3, 1) |
 | (0, 1, 1, 1)       | (0, 0.65, 0.5, 1)    |

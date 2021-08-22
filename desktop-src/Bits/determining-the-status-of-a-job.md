@@ -1,32 +1,32 @@
 ---
 title: Bestimmen des Status eines Auftrags
-description: Der Status eines Auftrags bezieht sich auf Änderungen im Status eines Auftrags (z. b. ändert sich der Status von BG- \_ Auftrags \_ Status \_ in BG \_ -Auftrags \_ Status \_ übertragen) und den Fortschritt beim Übertragen der Dateien.
+description: Der Status eines Auftrags bezieht sich auf Änderungen am Status eines Auftrags (z. B. änderungen des Auftragsstatus von BG JOB STATE TRANSFER in \_ \_ BG JOB STATE \_ \_ \_ \_ TRANSFERD) und den Fortschritt bei der Übertragung der Dateien.
 ms.assetid: 7c6cdf86-196d-41b3-ae45-9728b8092c30
 keywords:
-- Übertragen von Auftrags Bits, Status
-- Übertragen von Auftrags Bits, Status
+- bits , status des Übertragungsauftrags
+- BITS des Übertragungsauftrags , Status
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d2c96a170eca5edd6b2cd7c394ba104347814e1e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 104410c26f41e2a639aebe4597c9fce00dda562f5fcdb54d867a4ec5327d5842
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119021172"
 ---
 # <a name="determining-the-status-of-a-job"></a>Bestimmen des Status eines Auftrags
 
-Der Status eines Auftrags bezieht sich auf Änderungen im Status eines Auftrags (z. b. ändert sich der Status von BG- \_ Auftrags \_ Status \_ in BG \_ -Auftrags \_ Status \_ übertragen) und den Fortschritt beim Übertragen der Dateien. Um Änderungen am Status eines Auftrags aufzuzeichnen, verwenden Sie die folgenden Optionen:
+Der Status eines Auftrags bezieht sich auf Änderungen am Status eines Auftrags (z. B. änderungen des Auftragsstatus von BG JOB STATE TRANSFER in \_ \_ BG JOB STATE \_ \_ \_ \_ TRANSFERD) und den Fortschritt bei der Übertragung der Dateien. Verwenden Sie die folgenden Optionen, um Änderungen am Status eines Auftrags zu erfassen:
 
--   Ruft [den Status des Auftrags](polling-for-the-status-of-the-job.md)ab.
--   [Registrieren Sie sich, um Ereignis Benachrichtigungen zu empfangen](registering-a-com-callback.md).
--   [Registrieren Sie sich, um ein Programm](registering-to-execute-a-program.md) auf der Grundlage eines Ereignisses auszuführen.
+-   [Überprüfen Sie den Status des Auftrags.](polling-for-the-status-of-the-job.md)
+-   [Registrieren Sie sich für den Empfang von Ereignisbenachrichtigungen.](registering-a-com-callback.md)
+-   [Registrieren Sie sich, um ein Programm basierend](registering-to-execute-a-program.md) auf einem Ereignis auszuführen.
 
-Informationen zum Fortschritt eines Auftrags finden Sie unter [bestimmen des Fortschritts eines Auftrags](determining-the-progress-of-a-job.md).
+Informationen zum Status eines Auftrags finden Sie unter Bestimmen des Status [eines Auftrags.](determining-the-progress-of-a-job.md)
 
- 
+ 
 
- 
+ 
 
 
 

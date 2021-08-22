@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Methode "kreateformatconverter".
+description: Proxyfunktion für die CreateFormatConverter-Methode.
 ms.assetid: 1013720a-d00e-4381-af5d-747806546692
 title: IWICImagingFactory_CreateFormatConverter_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 91e0d87a57326e413e725e056bd5f44aff152934
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9d171847df9fb3b7fdcd15960d2caa91be09a65da2c8bb4d664aa714944435b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119088292"
 ---
-# <a name="iwicimagingfactory_createformatconverter_proxy-function"></a>IWICImagingFactory- \_ Funktion "endformatconverter" \_
+# <a name="iwicimagingfactory_createformatconverter_proxy-function"></a>IWICImagingFactory \_ \_ CreateFormatConverter-Proxyfunktion
 
-Proxy Funktion für die Methode " [**kreateformatconverter**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createformatconverter) ".
+Proxyfunktion für die [**CreateFormatConverter-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createformatconverter)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,19 +41,19 @@ HRESULT IWICImagingFactory_CreateFormatConverter_Proxy(
 
 <dl> <dt>
 
-*pfactory* \[ in\]
+*pFactory* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) \** _
+Typ: **[ **IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory)\***
 
 </dd> <dt>
 
-_ppIFormatConverter * \[ out\]
+*ppIFormatConverter* \[ out\]
 </dt> <dd>
 
 Typ: **[ **IWICFormatConverter**](/windows/desktop/api/Wincodec/nn-wincodec-iwicformatconverter)\*\***
 
-Ein Zeiger, der einen Zeiger auf einen neuen [**IWICFormatConverter**](/windows/desktop/api/Wincodec/nn-wincodec-iwicformatconverter)empfängt.
+Ein Zeiger, der einen Zeiger auf einen neuen [**IWICFormatConverter empfängt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicformatconverter)
 
 </dd> </dl>
 
@@ -61,7 +61,7 @@ Ein Zeiger, der einen Zeiger auf einen neuen [**IWICFormatConverter**](/windows/
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -71,9 +71,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

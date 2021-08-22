@@ -1,7 +1,7 @@
 ---
-description: Die Decommit-Methode hebt die Zuordnung der Zuweisung auf. Diese Methode implementiert die imemzuzucator::D ecommit-Methode.
+description: Die Decommit-Methode dekommitiert die Zuweisung. Diese Methode implementiert die IMemAllocator::D ecommit-Methode.
 ms.assetid: 0c8d44e0-17ea-4f7f-be44-f9ae2e34fbef
-title: Cbasezucator. Decommit-Methode (amfilter. h)
+title: CBaseAllocator.Decommit-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 613af805f1c04a7bf375755ff8f3adba7b70be18
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 614986a912f08d918d4fbbaf6b3eeeb0d3b2c3eabc47748351934a08b8280cca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364976"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017548"
 ---
-# <a name="cbaseallocatordecommit-method"></a>Cbasezucator. Decommit-Methode
+# <a name="cbaseallocatordecommit-method"></a>CBaseAllocator.Decommit-Methode
 
-Die-Methode führt einen Commit für `Decommit` die Zuweisung aus. Diese Methode implementiert die [**imemzuzucator::D ecommit**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-decommit) -Methode.
+Die `Decommit` -Methode dekommitiert die Zuweisung. Diese Methode implementiert die [**IMemAllocator::D ecommit-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-decommit)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem diese Methode aufgerufen wurde, können Aufrufe der [**cbasezucator:: GetBuffer**](cbaseallocator-getbuffer.md) -Methode nicht ausgeführt werden. Wenn Beispiele veröffentlicht werden, werden Sie an die kostenlose Liste zurückgegeben. Wenn das letzte Beispiel zurückgegeben wird, ruft die Zuweisung die [**cbasezucator:: Free**](cbaseallocator-free.md) -Methode auf, die den belegten Arbeitsspeicher freigibt. (In der Basisklasse ist **Free** eine rein virtuelle Methode.)
+Nachdem diese Methode aufgerufen wurde, schlagen Aufrufe der [**CBaseAllocator::GetBuffer-Methode**](cbaseallocator-getbuffer.md) fehl. Wenn Die Beispiele veröffentlicht werden, werden sie in die kostenlose Liste zurückgegeben. Wenn das letzte Beispiel zurückgegeben wird, ruft der Allocator die [**CBaseAllocator::Free-Methode**](cbaseallocator-free.md) auf, die den zugeordneten Arbeitsspeicher freigibt. (In der Basisklasse ist **Free** eine reine virtuelle Methode.)
 
-Außerdem werden von dieser Methode alle Threads freigegeben, die bei **GetBuffer** -Aufrufen blockiert werden. Der Aufruf von **GetBuffer** schlägt fehl.
+Darüber hinaus gibt diese Methode alle Threads frei, die für **GetBuffer-Aufrufe** blockiert sind. Die Aufrufe von **GetBuffer** schlagen fehl.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Außerdem werden von dieser Methode alle Threads freigegeben, die bei **GetBuffe
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Außerdem werden von dieser Methode alle Threads freigegeben, die bei **GetBuffe
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

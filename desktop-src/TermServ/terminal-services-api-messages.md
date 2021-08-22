@@ -1,18 +1,18 @@
 ---
-title: Remotedesktopdienste von API-Meldungen
-description: Listet Meldungen auf, die mit der Remotedesktopdienste-API verwendet werden.
+title: Remotedesktopdienste-API-Nachrichten
+description: Listet Nachrichten auf, die mit der Remotedesktopdienste-API verwendet werden.
 ms.assetid: 9af2a3dc-9508-411b-877c-e88c31125e23
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b98c7803b0fa6e65ecfa172afc8d8b6ea6208ae
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9cd871b565e133371f7e003f170e1840f1a7109298e61614e755e82160c95584
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207034"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119000230"
 ---
-# <a name="remote-desktop-services-api-messages"></a>Remotedesktopdienste von API-Meldungen
+# <a name="remote-desktop-services-api-messages"></a>Remotedesktopdienste-API-Nachrichten
 
 Die folgende Meldung wird mit der Remotedesktopdienste-API verwendet.
 
@@ -20,16 +20,16 @@ Die folgende Meldung wird mit der Remotedesktopdienste-API verwendet.
 
 <dl> <dt>
 
-[**WM- \_ wtssession \_ ändern**](wm-wtssession-change.md)
+[**WM \_ WTSSESSION \_ CHANGE**](wm-wtssession-change.md)
 </dt> <dd>
 
 Benachrichtigt Anwendungen über Änderungen im Sitzungszustand.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

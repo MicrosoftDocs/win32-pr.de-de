@@ -12,12 +12,12 @@ api_type:
 - COM
 api_location:
 - endpointdlp.h
-ms.openlocfilehash: 7900e79536cc9ac45037e205962a563bcde8878a
-ms.sourcegitcommit: 91110c16e4713ed82d7fb80562d3ddf40b5d76b2
+ms.openlocfilehash: 5b7066eec7832ba0b76dee38e6483e0bfcfcfb05fdb8448ee7b3a91e701069fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "107495774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976650"
 ---
 # <a name="dlpactiontype-enumeration"></a>DlpActionType-Enumeration
 
@@ -115,7 +115,7 @@ Ein Vorgang, der auf einen Cloudstandort ausgerichtet ist.
 *DlpActionTypeAccessByBluetoothApp*
 </dt> <dd>
 
-Ein Vorgang, der den Zugriff über eine Bluetooth-App umfasst.
+Ein Vorgang, der den Zugriff über eine Bluetooth-App einschließt.
 
 </dd> </dl>
 
@@ -124,7 +124,7 @@ Ein Vorgang, der den Zugriff über eine Bluetooth-App umfasst.
 *DlpActionTypeAccessByRDPApp*
 </dt> <dd>
 
-Ein Vorgang, der den Zugriff über einen Remotedesktop umfasst.
+Ein Vorgang, der den Zugriff über einen Remotedesktop einschließt.
 
 </dd> </dl>
 
@@ -138,11 +138,11 @@ Der Höchstwert der Enumeration.
 </dd> </dl>
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Werte aus dieser Enumeration werden von der [DLP_APP_OP_ENLIGHTENED_LEVEL](endpointdlp-dlp_app_op_enlightened_level.md) verwendet.
+Werte aus dieser Enumeration werden von der [DLP_APP_OP_ENLIGHTENED_LEVEL-Struktur](endpointdlp-dlp_app_op_enlightened_level.md) verwendet.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

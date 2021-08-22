@@ -1,9 +1,9 @@
 ---
-title: EM_GETHANDLE Meldung (Winuser. h)
-description: Ruft ein Handle des Speichers ab, der dem Text eines mehrzeiligen Bearbeitungs Steuer Elements zugeordnet ist.
+title: EM_GETHANDLE (Winuser.h)
+description: Ruft ein Handle des Arbeitsspeichers ab, der derzeit für den Text eines mehrzeilenigen Bearbeitungssteuerfelds zugeordnet ist.
 ms.assetid: 74271812-9715-4a46-96b3-0788134f8143
 keywords:
-- Windows-Steuerelemente für EM_GETHANDLE Meldung
+- EM_GETHANDLE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 88a466394b48d2d726621e50a7e2c5df2f747f08
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4f09ade5545197df2dbc9310b708cd7521334bba68f41a14329dd865e84fdee6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518299"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019648"
 ---
-# <a name="em_gethandle-message"></a>\_GetHandle-Nachricht
+# <a name="em_gethandle-message"></a>EM \_ GETHANDLE-Nachricht
 
-Ruft ein Handle des Speichers ab, der dem Text eines mehrzeiligen Bearbeitungs Steuer Elements zugeordnet ist.
+Ruft ein Handle des Arbeitsspeichers ab, der derzeit für den Text eines mehrzeilenigen Bearbeitungssteuerfelds zugeordnet ist.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,20 +45,20 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein Speicher handle, das den Puffer identifiziert, der den Inhalt des Bearbeitungs Steuer Elements enthält. Wenn ein Fehler auftritt, z. b. das Senden der Nachricht an ein einzeilige Bearbeitungs Steuerelement, ist der Rückgabewert 0 (null).
+Der Rückgabewert ist ein Speicherhand handle, das den Puffer identifiziert, der den Inhalt des Bearbeitungssteuersteuerpunkts enthält. Wenn ein Fehler auftritt, z. B. das Senden der Nachricht an ein einzeilenbasiertes Bearbeitungssteuer steuerelement, ist der Rückgabewert 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Funktion erfolgreich ausgeführt wird, kann die Anwendung auf den Inhalt des Bearbeitungs Steuer Elements zugreifen, indem Sie den Rückgabewert in [**hlocal**](/windows/desktop/WinProg/windows-data-types) umwandeln und an [**loczuweisung**](/windows/desktop/api/winbase/nf-winbase-locallock)übergibt. **Loczuweisung** gibt einen Zeiger auf einen Puffer zurück, der ein mit Null endendes Array von **char** s oder **WCHAR** s ist, je nachdem, ob eine ANSI-oder Unicode-Funktion das Steuerelement erstellt hat. Wenn z. b. " [**featewindowexa**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " verwendet wurde, ist der Puffer ein Array von " **char** s", aber wenn " **featewindowexw** " verwendet wurde, ist der Puffer ein Array von **WCHAR** s. Der Inhalt des Puffers wird möglicherweise nicht von der Anwendung geändert. Um den Puffer zu entsperren, ruft die Anwendung [**localunlock**](/windows/desktop/api/winbase/nf-winbase-localunlock) auf, bevor das Bearbeitungs Steuerelement neue Nachrichten empfangen kann.
+Wenn die Funktion erfolgreich ist, kann die Anwendung auf den Inhalt des Edit-Steuerelements zugreifen, indem sie den Rückgabewert in [**HLOCAL**](/windows/desktop/WinProg/windows-data-types) umleitet und an [**LocalLock übergibst.**](/windows/desktop/api/winbase/nf-winbase-locallock) **LocalLock** gibt einen Zeiger auf einen Puffer zurück, bei dem es sich um ein auf NULL beendetes Array von **CHAR** s oder **WCHAR** s handelt, je nachdem, ob das Steuerelement von einer ANSI- oder Unicode-Funktion erstellt wurde. Wenn beispielsweise [**CreateWindowExA**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) verwendet wurde, ist der Puffer ein Array von **CHAR-s,** aber wenn **CreateWindowExW** verwendet wurde, ist der Puffer ein Array von **WCHAR-s.** Die Anwendung ändert möglicherweise nicht den Inhalt des Puffers. Um den Puffer zu entsperren, ruft die Anwendung [**LocalUnlock**](/windows/desktop/api/winbase/nf-winbase-localunlock) auf, bevor dem Bearbeitungssteuerpunkt das Empfangen neuer Nachrichten erlaubt wird.
 
 > [!Note]  
-> Für Comctl32.dll Version 6 enthält der Puffer immer ein Array von **WCHAR** s, unabhängig davon, ob eine ANSI-oder Unicode-Funktion das Bearbeitungs Steuerelement erstellt hat. Weitere Informationen zu DLL-Versionen finden Sie unter [allgemeine Steuerelement Versionen](common-control-versions.md).
+> Bei Comctl32.dll Version 6 enthält der Puffer immer ein Array von **WCHAR-s,** unabhängig davon, ob das Bearbeitungssteuerfeld von einer ANSI- oder Unicode-Funktion erstellt wurde. Weitere Informationen zu DLL-Versionen finden Sie unter [Allgemeine Steuerelementversionen.](common-control-versions.md)
 
  
 
-Wenn Ihre Anwendung die von **EM \_ GetHandle** vorgegebenen Einschränkungen nicht einhalten kann, verwenden Sie die Funktionen [**getwindowtextlength**](/windows/desktop/api/winuser/nf-winuser-getwindowtextlengtha) und [**GetWindowText**](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) , um den Inhalt des Bearbeitungs Steuer Elements in einen von der Anwendung bereitgestellten Puffer zu kopieren.
+Wenn Ihre Anwendung die von EM **\_ GETHANDLE** festgelegten Einschränkungen nicht ein halten kann, verwenden Sie die [**Funktionen GetWindowTextLength**](/windows/desktop/api/winuser/nf-winuser-getwindowtextlengtha) und [**GetWindowText,**](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) um den Inhalt des Bearbeitungssteuer steuerelements in einen von der Anwendung bereitgestellten Puffer zu kopieren.
 
-Umfassende **Bearbeitung:** Die **\_ GetHandle** -Nachricht wird nicht unterstützt. Rich Edit-Steuerelemente speichern Text nicht als einfaches Zeichen Array.
+**Umfangreiche Bearbeitung:** Die **EM \_ GETHANDLE-Nachricht** wird nicht unterstützt. Rich-Edit-Steuerelemente speichern Text nicht als einfaches Array von Zeichen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,20 +66,20 @@ Umfassende **Bearbeitung:** Die **\_ GetHandle** -Nachricht wird nicht unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM- \_ andle**](em-sethandle.md)
+[**EM \_ SETHANDLE**](em-sethandle.md)
 </dt> <dt>
 
 **Andere Ressourcen**
@@ -88,13 +88,13 @@ Umfassende **Bearbeitung:** Die **\_ GetHandle** -Nachricht wird nicht unterstü
 [**GetWindowText**](/windows/desktop/api/winuser/nf-winuser-getwindowtexta)
 </dt> <dt>
 
-[**Getwindowtextlength**](/windows/desktop/api/winuser/nf-winuser-getwindowtextlengtha)
+[**GetWindowTextLength**](/windows/desktop/api/winuser/nf-winuser-getwindowtextlengtha)
 </dt> <dt>
 
-[**Loczuweisung**](/windows/desktop/api/winbase/nf-winbase-locallock)
+[**LocalLock**](/windows/desktop/api/winbase/nf-winbase-locallock)
 </dt> <dt>
 
-[**Localunlock**](/windows/desktop/api/winbase/nf-winbase-localunlock)
+[**LocalUnlock**](/windows/desktop/api/winbase/nf-winbase-localunlock)
 </dt> </dl>
 
  

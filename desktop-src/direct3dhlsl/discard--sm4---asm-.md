@@ -1,23 +1,23 @@
 ---
-title: verwerfen (SM4-ASM)
-description: Markieren Sie die Ergebnisse des Pixel-Shaders bedingt, damit Sie verworfen werden, wenn das Ende des Programms erreicht ist.
+title: discard (sm4 - asm)
+description: Kennzeichnen Sie die Ergebnisse von Pixel Shader bedingt, die verworfen werden sollen, wenn das Programmende erreicht ist.
 ms.assetid: 566C4A9A-B32A-4AA6-A888-70F6965B1B5A
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 57d98365ae6d80710f15cf7204f98d810be30a13
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: ba6b5744ee8cf8d2953247711d95fe5d5ec6f96c36c700e1a38ce4e0cb1e1ff5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103948315"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986600"
 ---
-# <a name="discard-sm4---asm"></a>verwerfen (SM4-ASM)
+# <a name="discard-sm4---asm"></a>discard (sm4 - asm)
 
-Markieren Sie die Ergebnisse des Pixel-Shaders bedingt, damit Sie verworfen werden, wenn das Ende des Programms erreicht ist.
+Kennzeichnen Sie die Ergebnisse von Pixel Shader bedingt, die verworfen werden sollen, wenn das Programmende erreicht ist.
 
 
 
-| { \_ z \ verwerfen|\_NZ} src0. Select- \_ Komponente |
+| discard{ \_ z\|\_nz} src0.select-Komponente \_ |
 |-------------------------------------------|
 
 
@@ -26,27 +26,27 @@ Markieren Sie die Ergebnisse des Pixel-Shaders bedingt, damit Sie verworfen werd
 
 
 
-| Element                                                            | BESCHREIBUNG                                                                                       |
+| Element                                                            | Beschreibung                                                                                       |
 |-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[\]der Wert, der bestimmt, ob das aktuelle Pixel, das verarbeitet wird, verworfen werden soll.<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Der Wert, der bestimmt, ob das aktuelle Pixel, das verarbeitet wird, verworfen werden soll.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung gibt das aktuelle Pixel als beendet an, während die Ausführung fortgesetzt wird, sodass andere gleichzeitig ausgeführte Pixel ggf. Ableitungen erhalten können. Obwohl die Ausführung fortgesetzt wird, werden alle Pixel-Shader-Ausgaben geschrieben, bevor oder nachdem die **Verwerfungs** Anweisung verworfen wurde.
+Diese Anweisung kennzeichnet das aktuelle Pixel als beendet, während die Ausführung fortgesetzt wird, sodass andere Parallelausführungspixel bei Bedarf Ableitungen erhalten können. Obwohl die Ausführung fortgesetzt wird, werden alle Pixel Shader-Ausgabe-Schreibvorgänge vor oder nach der **Verwerfungsanweisung** verworfen.
 
-Bei **Verwerfen von \_ z**, wenn alle Bits in *src0. Select \_ Component* gleich 0 (null) sind, wird das Pixel verworfen.
+Wenn für **discard \_ z** alle Bits in *der \_ src0.select-Komponente 0* (null) sind, wird das Pixel verworfen.
 
-Bei **Verwerfen von \_ NZ** wird das Pixel verworfen, wenn Bits in *src0. Select- \_ Komponente* ungleich NULL sind.
+Wenn für **discard \_ nz** Bits in *der \_ src0.select-Komponente* ungleich 0 (null) sind, wird das Pixel verworfen.
 
-Außerdem kann die **Verwerfungs** Anweisung in jedem Fluss Steuerungs Konstrukt vorhanden sein.
+Darüber hinaus kann die **Discard-Anweisung** in jedem Flusssteuerungskonstrukt vorhanden sein.
 
-In einem Shader sind möglicherweise mehrere **Verwerfungs** Anweisungen vorhanden, und wenn eine ausgeführt wird, wird das Pixel beendet.
+Mehrere **Verwerfungsanweisungen** können in einem Shader vorhanden sein, und wenn ein Shader ausgeführt wird, wird das Pixel beendet.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -58,20 +58,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -81,7 +81,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

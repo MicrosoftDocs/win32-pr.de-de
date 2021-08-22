@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Methode "kreatequerywriter".
+description: Proxyfunktion für die CreateQueryWriter-Methode.
 ms.assetid: 7f925117-6244-4be6-bcef-fa852672ac64
 title: IWICImagingFactory_CreateQueryWriter_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 4ae0d41b9ceb652f23084c026b130bf711c44f7c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fe37af1ebcc4c8fd95b578d363fdb498cb06c22f354b7e2ef8f5ed7a3b29ac01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119088272"
 ---
-# <a name="iwicimagingfactory_createquerywriter_proxy-function"></a>IWICImagingFactory-Funktion von " \_ inatequerywriter" \_
+# <a name="iwicimagingfactory_createquerywriter_proxy-function"></a>IWICImagingFactory \_ \_ CreateQueryWriter-Proxyfunktion
 
-Proxy Funktion für die Methode " [**kreatequerywriter**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createquerywriter) ".
+Proxyfunktion für die [**CreateQueryWriter-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createquerywriter)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,37 +43,37 @@ HRESULT IWICImagingFactory_CreateQueryWriter_Proxy(
 
 <dl> <dt>
 
-*pfactory* \[ in\]
+*pFactory* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) \** _
+Typ: **[ **IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory)\***
 
 </dd> <dt>
 
-_guidMetadataFormat * \[ in\]
+*guidMetadataFormat* \[ In\]
 </dt> <dd>
 
-Typ: **reguid**
+Typ: **REFGUID**
 
 Die GUID für das gewünschte Metadatenformat.
 
 </dd> <dt>
 
-*pguidVendor* \[ in\]
+*pguidVendor* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: * Konstante *GUID \** _
+Typ: **const \* GUID**
 
-Die Anbieter-GUID des metadatenwriters.
+Die Hersteller-GUID des Metadatenwriters.
 
 </dd> <dt>
 
-_ppIQueryWriter * \[ out\]
+*ppIQueryWriter* \[ out\]
 </dt> <dd>
 
 Typ: **[ **IWICMetadataQueryWriter**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataquerywriter)\*\***
 
-Ein Zeiger, der einen Zeiger auf ein neues [**IWICMetadataQueryWriter**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataquerywriter)empfängt.
+Ein Zeiger, der einen Zeiger auf einen neuen [**IWICMetadataQueryWriter empfängt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataquerywriter)
 
 </dd> </dl>
 
@@ -81,7 +81,7 @@ Ein Zeiger, der einen Zeiger auf ein neues [**IWICMetadataQueryWriter**](/window
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -91,9 +91,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

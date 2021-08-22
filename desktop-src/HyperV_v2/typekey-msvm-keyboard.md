@@ -1,7 +1,7 @@
 ---
-description: Simuliert eine Tastenkombination für die Tastenkombination.
+description: Simuliert eine Tastensequenz für die Veröffentlichung.
 ms.assetid: 4166BA71-315D-41BD-857C-48AFB702911E
-title: Typekey-Methode der Msvm_Keyboard-Klasse
+title: TypeKey-Methode der Msvm_Keyboard Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1b978da48600cc52472ab8bdec011ddbaa5ff624
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d387e1b0d0d939d997589c90195b4a50427f1973eaf46520a0fa70caf62c610b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119068350"
 ---
-# <a name="typekey-method-of-the-msvm_keyboard-class"></a>Typekey-Methode der MSVM- \_ Tastatur Klasse
+# <a name="typekey-method-of-the-msvm_keyboard-class"></a>TypeKey-Methode der Msvm \_ Keyboard-Klasse
 
-Simuliert eine Tastenkombination für die Tastenkombination. Dies entspricht dem Aufrufen von [**Press Key**](presskey-msvm-keyboard.md) gefolgt von [**releasekey**](releasekey-msvm-keyboard.md).
+Simuliert eine Tastensequenz für die Veröffentlichung. Dies entspricht dem Aufruf von [**PressKey**](presskey-msvm-keyboard.md) gefolgt von [**ReleaseKey.**](releasekey-msvm-keyboard.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,30 +39,30 @@ uint32 TypeKey(
 
 <dl> <dt>
 
-*Keycode* \[ in\]
+*keyCode* \[ In\]
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Der virtuelle Schlüsselcode des zu druckenden Schlüssels. Die Liste der Codes für virtuelle Schlüssel finden Sie unter [**Code für virtuelle**](../inputdev/virtual-key-codes.md)Schlüssel.
+Der virtuelle Schlüsselcode der zu drückenden Taste. Die Liste der Codes für virtuelle Schlüssel finden Sie unter [**Codes für virtuelle Schlüssel.**](../inputdev/virtual-key-codes.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Der Rückgabewert 0 (null) gibt den Erfolg an. Ein Wert ungleich 0 (null) gibt an, dass der Schlüssel Zustand nicht geändert werden konnte.
+Der Rückgabewert 0 (null) gibt den Erfolg an. Ein Wert ungleich 0 (null) gibt an, dass der Schlüsselzustand nicht geändert werden kann.
 
 <dl> <dt>
 
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -71,33 +71,33 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die [**MSVM- \_ Tastatur**](msvm-keyboard.md) Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**\_ Msvm-Tastaturklasse**](msvm-keyboard.md) kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,22 +105,22 @@ Der Zugriff auf die [**MSVM- \_ Tastatur**](msvm-keyboard.md) Klasse kann durch 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM- \_ Tastatur**](msvm-keyboard.md)
+[**Msvm-Tastatur \_**](msvm-keyboard.md)
 </dt> <dt>
 
-[**Codes von virtuellen Schlüsseln**](../inputdev/virtual-key-codes.md)
+[**Codes für virtuelle Schlüssel**](../inputdev/virtual-key-codes.md)
 </dt> </dl>
 
  

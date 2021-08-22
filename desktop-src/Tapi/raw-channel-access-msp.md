@@ -1,21 +1,21 @@
 ---
-description: Der unformatierte Kanal Zugriffs-msp (Rcsmsp.dll) führt ein Streaming über ksproxy an die RCA durch, wodurch das Streaming über Verbindungs orientierte NDIS-Geräte (Network Driver Interface Specification) wie z. b. ATM-und ISDN-Karten ermöglicht wird
+description: Der Unformatierte Kanalzugriffs-MSP (Rcsmsp.dll) streamt über ksproxy an RCA, was das Streaming über verbindungsorientierte NDIS-Geräte (Network Driver Interface Specification) wie ATM- und ISDN-Karten ermöglicht.
 ms.assetid: 187f5427-9cb5-4d16-b8b4-70b706cb4bcd
-title: Unformatierte Kanal Zugriffs-msp
+title: Unformater Kanalzugriffs-MSP
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f10939376bcacc54e2df0b403fa22313e01f424
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5aec59bc282e28d78d1037780cc710745492bae335ad5c3b1a98e5450af3e798
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350807"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060548"
 ---
-# <a name="raw-channel-access-msp"></a>Unformatierte Kanal Zugriffs-msp
+# <a name="raw-channel-access-msp"></a>Unformater Kanalzugriffs-MSP
 
-Der unformatierte Kanal Zugriffs-msp (Rcsmsp.dll) führt ein Streaming über ksproxy an die RCA durch, wodurch das Streaming über Verbindungs orientierte NDIS-Geräte (Network Driver Interface Specification) wie z. b. ATM-und ISDN-Karten ermöglicht wird Die RCA-MSP wird von der ndptsp erstellt, bei der es sich um den für NDIS-WAN-Adapter bereitgestellten TSP handelt. Mit der Windows 2000-Version wird nur Audiostreaming implementiert.
+Der Unformatierte Kanalzugriffs-MSP (Rcsmsp.dll) streamt über ksproxy an RCA, was das Streaming über verbindungsorientierte NDIS-Geräte (Network Driver Interface Specification) wie ATM- und ISDN-Karten ermöglicht. Der RCA-MSP wird von ndptsp erstellt. Dabei handelt es sich um den TSP, der für NDIS WAN-Adapter bereitgestellt wird. Mit dem Windows 2000 wird nur Audiostreaming implementiert.
 
-Der MSP für den RAW-Kanal Zugriff wird mit Windows 2000 installiert.
+Der Unformatierte Kanalzugriffs-MSP wird mit Windows 2000 installiert.
 
  
 

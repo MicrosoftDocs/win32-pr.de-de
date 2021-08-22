@@ -1,7 +1,7 @@
 ---
-description: Die Methode zum Abbrechen signalisiert dem streamingthread, den Vorgang anzuhalten.
+description: Die Stop-Methode signalisiert dem Streamingthread das Beenden.
 ms.assetid: 79bc528a-cf53-43f3-aa17-c459063c99ab
-title: Csourcestream. stopmethode (Source. h)
+title: CSourceStream.Stop-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 44c9f845c092280ef5fafa808036654bd868a796
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7ac5eb7d6b066920210d4f955084afa46ddc71d1c17820fe0300acc66b53bb8c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073164"
 ---
-# <a name="csourcestreamstop-method"></a>Csourcestream. stopmethode
+# <a name="csourcestreamstop-method"></a>CSourceStream.Stop-Methode
 
-Die- `Stop` Methode signalisiert dem Streaminginhalt das Abbrechen.
+Die `Stop` -Methode signalisiert dem Streamingthread das Beenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ OK oder E \_ unerwartet zurück.
+Gibt S \_ OK oder E UNEXPECTED \_ zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**csourcestream:: inaktive**](csourcestream-inactive.md) -Methode ruft diese Methode auf.
+Die [**CSourceStream::Inactive-Methode**](csourcestream-inactive.md) ruft diese Methode auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Die [**csourcestream:: inaktive**](csourcestream-inactive.md) -Methode ruft dies
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die [**csourcestream:: inaktive**](csourcestream-inactive.md) -Methode ruft dies
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  

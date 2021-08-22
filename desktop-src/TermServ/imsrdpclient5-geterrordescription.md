@@ -1,22 +1,22 @@
 ---
 title: IMsRdpClient5 GetErrorDescription-Methode
-description: Ruft die Fehlerbeschreibung für die Sitzungs Trennungs Ereignisse ab.
+description: Ruft die Fehlerbeschreibung für die Sitzungstrennungsereignisse ab.
 ms.assetid: 8c8f7b10-7f79-4586-845e-e99f5ca81905
 ms.tgt_platform: multiple
 keywords:
 - GetErrorDescription-Methode Remotedesktopdienste
-- GetErrorDescription-Methode Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5 Interface Remotedesktopdienste, GetErrorDescription-Methode
-- GetErrorDescription-Methode Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6 Interface Remotedesktopdienste, GetErrorDescription-Methode
-- GetErrorDescription-Methode Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7 Interface Remotedesktopdienste, GetErrorDescription-Methode
-- GetErrorDescription-Methode Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8 Interface Remotedesktopdienste, GetErrorDescription-Methode
-- GetErrorDescription-Methode Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9 Interface Remotedesktopdienste, GetErrorDescription-Methode
-- GetErrorDescription-Methode Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10 Interface Remotedesktopdienste, GetErrorDescription-Methode
+- GetErrorDescription-Methode Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , GetErrorDescription-Methode
+- GetErrorDescription-Methode Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , GetErrorDescription-Methode
+- GetErrorDescription-Methode Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , GetErrorDescription-Methode
+- GetErrorDescription-Methode Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , GetErrorDescription-Methode
+- GetErrorDescription-Methode Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , GetErrorDescription-Methode
+- GetErrorDescription-Methode Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , GetErrorDescription-Methode
 topic_type:
 - apiref
 api_name:
@@ -32,16 +32,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c402a0128286964ddeb1c53cd805e4ef6414bfb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 197025b4cfb842cf4ca38af64124c02415240ac6fc878f9c121d4e228b77f5b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392170"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001488"
 ---
-# <a name="imsrdpclient5geterrordescription-method"></a>IMsRdpClient5:: GetErrorDescription-Methode
+# <a name="imsrdpclient5geterrordescription-method"></a>IMsRdpClient5::GetErrorDescription-Methode
 
-Ruft die Fehlerbeschreibung für die Sitzungs Trennungs Ereignisse ab.
+Ruft die Fehlerbeschreibung für die Sitzungstrennungsereignisse ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,24 +60,24 @@ HRESULT GetErrorDescription(
 
 <dl> <dt>
 
-*disconnecverrat* \[ in\]
+*disconnectReason* \[ In\]
 </dt> <dd>
 
-Der Trennungsgrund.
+Der Grund für die Trennung.
 
 </dd> <dt>
 
-*extendeddisconnecverrat* \[ in\]
+*extendedDisconnectReason* \[ In\]
 </dt> <dd>
 
-Bietet ausführliche Informationen dazu, warum eine Trennung initiiert wurde.
+Enthält ausführliche Informationen dazu, warum eine Trennung initiiert wurde.
 
 </dd> <dt>
 
-*pbstrauerrormsg* \[ vorgenommen\]
+*pBstrErrorMsg* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine **BSTR** -Variable, die den Fehlermeldungs Text empfängt.
+Ein Zeiger auf eine **BSTR-Variable,** die den Fehlermeldungstext empfängt.
 
 </dd> </dl>
 
@@ -95,7 +95,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IMsRdpClient5 ist als 4eb5335b-6429-477d-B922-e06a28ecd8bf definiert.<br/>       |
+| IID<br/>                      | IID \_ IMsRdpClient5 ist als 4eb5335b-6429-477d-b922-e06a28ecd8bf definiert.<br/>       |
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: instanceparameters. LogFileDirectory-Eigenschaft'
-title: Instanceparameters. LogFileDirectory (Eigenschaft)
+description: 'Weitere Informationen zu: InstanceParameters.LogFileDirectory-Eigenschaft'
+title: InstanceParameters.LogFileDirectory-Eigenschaft
 TOCTitle: 'LogFileDirectory property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.InstanceParameters.LogFileDirectory
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.instanceparameters.logfiledirectory(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4977185809372c5ec20deff15ca1eba11434881b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 55020b6c0f9e3a4b970242de2e43fe771b4c90550fe65f1585a2ab67c4211182
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119039428"
 ---
-# <a name="instanceparameterslogfiledirectory-property"></a>Instanceparameters. LogFileDirectory (Eigenschaft)
+# <a name="instanceparameterslogfiledirectory-property"></a>InstanceParameters.LogFileDirectory-Eigenschaft
 
-Ruft den relativen oder absoluten Dateisystempfad des Ordners ab, der die Transaktionsprotokolle für die-Instanz enthält, oder legt ihn fest.
+Ruft den relativen oder absoluten Dateisystempfad des Ordners ab, der die Transaktionsprotokolle für die Instanz enthält, oder legt diesen fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public string LogFileDirectory { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. String](/dotnet/api/system.string)  
+Typ: [System.String](/dotnet/api/system.string)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Instanceparameters-Klasse](./instanceparameters-class.md)
+[InstanceParameters-Klasse](./instanceparameters-class.md)
 
-[Instanceparameters-Elemente](./instanceparameters-members.md)
+[InstanceParameters-Member](./instanceparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

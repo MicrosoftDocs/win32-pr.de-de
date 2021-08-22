@@ -1,9 +1,9 @@
 ---
-title: NM_RCLICK (Listenansicht) Benachrichtigungs Code (kommstrg. h)
-description: Wird von einem Listenansicht-Steuerelement gesendet, wenn der Benutzer mit der rechten Maustaste auf ein Element klickt. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_RCLICK (Listenansicht) Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Listenansicht-Steuerelement gesendet, wenn der Benutzer mit der rechten Maustaste auf ein Element klickt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: dc7f97b3-4aec-4a8f-a87c-62cef5ba4c40
 keywords:
-- NM_RCLICK (Listenansicht) Windows-Steuerelemente für Benachrichtigungs Code
+- NM_RCLICK -Benachrichtigungscode (Listenansicht) Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f01c21f1b1e869a909dd41dcfce693bf084f2fa1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f58ab6b2496c35bb4b95a3808afb7e58b961584b8b72d086933ad2c3281e6f29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103916"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119018808"
 ---
-# <a name="nm_rclick-list-view-notification-code"></a>NM \_ rclick-Benachrichtigungs Code (Listenansicht)
+# <a name="nm_rclick-list-view-notification-code"></a>NM \_ RCLICK-Benachrichtigungscode (Listenansicht)
 
-Wird von einem Listenansicht-Steuerelement gesendet, wenn der Benutzer mit der rechten Maustaste auf ein Element klickt. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Listenansicht-Steuerelement gesendet, wenn der Benutzer mit der rechten Maustaste auf ein Element klickt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,17 +41,17 @@ NM_RCLICK
 *lParam* 
 </dt> <dd>
 
-[Version 4,71](common-control-versions.md). Zeiger auf eine [**nmitemaktivierungs**](/windows/win32/api/commctrl/ns-commctrl-nmitemactivate) -Struktur, die zusätzliche Informationen zu dieser Benachrichtigung enthält. Die Member **iItem**, **iSubItem** und **ptaction** dieser Struktur enthalten Informationen über das Element.
+[Version 4.71](common-control-versions.md). Zeiger auf eine [**NMITEMACTIVATE-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmitemactivate) die zusätzliche Informationen zu dieser Benachrichtigung enthält. Die **Member iItem,** **iSubItem** und **ptAction** dieser Struktur enthalten Informationen zum Element.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, um die Standard Verarbeitung nicht zuzulassen, oder NULL, um die Standard Verarbeitung zuzulassen
+Geben Sie einen Wert ungleich 0 (null) zurück, um die Standardverarbeitung nicht zu erlauben, oder 0 (null), um die Standardverarbeitung zu ermöglichen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **iItem** -Member von *LPARAM* ist nur gültig, wenn auf das Symbol oder die erste Spalten Bezeichnung geklickt wurde. Wenn Sie bestimmen möchten, welches Element ausgewählt wird, wenn ein Klick an einer anderen Stelle in einer Zeile erfolgt, senden Sie eine [**LVM \_ subitemhittest**](lvm-subitemhittest.md) -Nachricht.
+Das **iItem-Member** *von lParam* ist nur gültig, wenn auf das Symbol oder die Bezeichnung der ersten Spalte geklickt wurde. Um zu bestimmen, welches Element ausgewählt wird, wenn ein Klick an anderer Stelle in einer Zeile erfolgt, senden Sie eine [**LVM \_ SUBITEMHITTEST-Nachricht.**](lvm-subitemhittest.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Das **iItem** -Member von *LPARAM* ist nur gültig, wenn auf das Symbol oder die
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

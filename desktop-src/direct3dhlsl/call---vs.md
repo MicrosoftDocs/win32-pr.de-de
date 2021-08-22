@@ -1,6 +1,6 @@
 ---
-title: callvs
-description: Führt einen Funktions Aufrufder Anweisung aus, die mit der angegebenen Bezeichnung gekennzeichnet ist. | callvs
+title: call – vs
+description: Führt einen Funktionsaufruf an die Anweisung aus, die mit der angegebenen Bezeichnung markiert ist. | call – vs
 ms.assetid: 3c1ec529-1ee4-40d9-8ce5-f8e7a61fde9c
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,35 +9,35 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: c797e7ef6745f5710752fe059d2a2ff1f94a8aa3
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d2321224b10ca1f7822b19e48ebbb58c1e01c261720f64a8b39331fbceab75fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986890"
 ---
-# <a name="call---vs"></a>callvs
+# <a name="call---vs"></a>call – vs
 
-Führt einen Funktions Aufrufder Anweisung aus, die mit der angegebenen Bezeichnung gekennzeichnet ist.
+Führt einen Funktionsaufruf an die Anweisung aus, die mit der angegebenen Bezeichnung markiert ist.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| l anrufen\# |
+| call l\# |
 |----------|
 
 
 
  
 
-Where l \# ist eine [Bezeichnung-vs](label---vs.md) , die den Anfang der aufzurufenden Unterroutine kennzeichnet.
+Wobei l \# eine Bezeichnung ist , im Gegensatz [zum](label---vs.md) Markieren des Anfangs der auf zu aufgerufenen Unterroutine.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
 | Aufruf                   |      | x    | x    | x     | x    | x     |
 
@@ -47,26 +47,26 @@ Where l \# ist eine [Bezeichnung-vs](label---vs.md) , die den Anfang der aufzuru
 
 Diese Anweisung führt Folgendes aus:
 
-1.  Die pushadresse der nächsten Anweisung in den Rückgabe Adress Stapel.
-2.  Setzen Sie die Ausführung mit der von der Bezeichnung markierten Anweisung fort.
+1.  Pushadresse der nächsten Anweisung an den Rückgabeadressenstapel.
+2.  Setzen Sie die Ausführung über die anweisung fort, die durch die Bezeichnung markiert ist.
 
-In Vertex-Shader 2 \_ 0 sind Verschachtelungs Aufrufe nicht zulässig.
+In Vertex-Shader 2 \_ 0 sind Schachtelungsaufrufe nicht zulässig.
 
-In Vertex Shader 2 \_ x wird die Schachtelungs Tiefe durch das staticflowcontroltiefe-Element der [**D3DVSHADERCAPS2 \_ 0**](/windows/desktop/api/d3d9caps/ns-d3d9caps-d3dvshadercaps2_0) -Struktur eingeschränkt. Weitere Informationen finden Sie unter [**GetDeviceCaps**](/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-getdevicecaps).
+In Vertexshader 2 x wird die Schachtelungstiefe durch das \_ StaticFlowControlDepth-Element der [**D3DVSHADERCAPS2 \_ 0-Struktur**](/windows/desktop/api/d3d9caps/ns-d3d9caps-d3dvshadercaps2_0) eingeschränkt. Weitere Informationen finden Sie unter [**GetDeviceCaps**](/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-getdevicecaps).
 
-In Vertex-Shader 3 0 sind vier Ebenen der Schachtelungs Schachtelung \_ zulässig.
+In Vertex-Shader 3 \_ 0 sind vier Ebenen der Aufrufschachtelung zulässig.
 
-Nur vorwärts Aufrufe sind zulässig. Dies bedeutet, dass der Speicherort der Bezeichnung innerhalb des Vertex-Shaders nach der Anweisung zum Aufrufen der Anweisung liegen muss.
+Nur Forward-Aufrufe sind zulässig. Dies bedeutet, dass sich die Position der Bezeichnung im Vertex-Shader hinter der Aufrufen-Anweisung befinden sollte, auf die sie verweisen.
 
-Wenn eine Aufruf Anweisung innerhalb einer [Schleife](loop---vs.md)aufgerufen wird... [ENDLOOP](endloop---vs.md) -Block: auf den Wert des [Schleifen zählungs Leistungs Zählers](dx9-graphics-reference-asm-vs-registers-loop-counter.md) (Al) kann innerhalb der Unterroutine zugegriffen werden.
+Wenn eine Aufrufanweisung innerhalb der Schleife aufgerufen [wird...](loop---vs.md) [endloop-Block:](endloop---vs.md) Der Wert des [Loop Counter Register](dx9-graphics-reference-asm-vs-registers-loop-counter.md) (aL) ist innerhalb der Unterroutine zugänglich.
 
-Wenn eine Unterroutine auf das Schleifen- [Counter-Register](dx9-graphics-reference-asm-vs-registers-loop-counter.md) (Al) verweist, das sich außerhalb der Unterroutine befindet, sollte jede Instanz des Aufrufes dieser Unterroutine von einer [Schleife](loop---vs.md)umgeben werden... [ENDLOOP](endloop---vs.md) -Block.
+Wenn eine Unterroutine auf das Schleifenzählerregister [(Loop Counter Register,](dx9-graphics-reference-asm-vs-registers-loop-counter.md) aL) außerhalb der Unterroutine verweisen, sollte jede Instanz des Aufrufs dieser Unterroutine von einer Schleife umgeben [sein...](loop---vs.md) [endloop-Block.](endloop---vs.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  

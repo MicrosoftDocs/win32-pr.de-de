@@ -1,5 +1,5 @@
 ---
-description: 'Process_V1_TypeGroup1-Klasse: Diese Klasse ist die Ereignistypklasse für Prozessereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
+description: 'Process_V1_TypeGroup1-Klasse: Diese Klasse ist die Ereignistypklasse für Prozessereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: b114d7fd-c308-4f21-8f1a-ab27dc93abc5
 title: Process_V1_TypeGroup1-Klasse
 ms.topic: reference
@@ -19,18 +19,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 8d7f4426f34a97ff79dc41806f1e0070013528d2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: cd2b4ab072b04246351ede86027536d777bce3c7e2321260be4d0622f55663d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119070000"
 ---
 # <a name="process_v1_typegroup1-class"></a>Process \_ V1 \_ TypeGroup1-Klasse
 
 Diese Klasse ist die Ereignistypklasse für Prozessereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -79,7 +79,7 @@ Beendigungsstatus des beendeten Prozesses.
 ImageFileName
 </dt> <dd> <dl> <dt>
 
-Datentyp: **String**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -120,7 +120,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Eindeutiger Bezeichner des Prozesses, der diesen Prozess erstellt. Prozessbezeichnernummern werden wiederverwendet, sodass sie nur einen Prozess für die Lebensdauer dieses Prozesses identifizieren. Es ist möglich, dass der von ParentProcessId identifizierte Prozess beendet wird, sodass ParentProcessId möglicherweise nicht auf einen ausgeführten Prozess verweisen kann. Es ist auch möglich, dass ParentProcessId fälschlicherweise auf einen Prozess verweist, der einen Prozessbezeichner wiederverwendet.
+Eindeutiger Bezeichner des Prozesses, der diesen Prozess erstellt. Prozessbezeichnernummern werden wiederverwendet, sodass sie nur einen Prozess für die Lebensdauer dieses Prozesses identifizieren. Es ist möglich, dass der durch ParentProcessId identifizierte Prozess beendet wird, sodass ParentProcessId möglicherweise nicht auf einen ausgeführten Prozess verweist. Es ist auch möglich, dass ParentProcessId fälschlicherweise auf einen Prozess verweist, der einen Prozessbezeichner wiederverwendet.
 
 **Windows Server 2003:** Schließt den Format("x")-Qualifizierer ein.
 
@@ -138,7 +138,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
-Globaler Prozessbezeichner, den Sie zum Identifizieren eines Prozesses verwenden können. Der Wert ist ab dem Zeitpunkt gültig, zu dem ein Prozess erstellt wird, bis er beendet wird.
+Globaler Prozessbezeichner, den Sie zum Identifizieren eines Prozesses verwenden können. Der Wert ist von dem Zeitpunkt an gültig, zu dem ein Prozess erstellt wird, bis er beendet wird.
 
 **Windows Server 2003:** Schließt den Format("x")-Qualifizierer ein.
 
@@ -156,14 +156,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
-Eindeutiger Bezeichner, den ein Betriebssystem generiert, wenn es eine neue Sitzung erstellt. Eine Sitzung erstreckt sich über einen Zeitraum von der Anmeldung bis zur Abmelde von einem bestimmten System.
+Eindeutiger Bezeichner, den ein Betriebssystem generiert, wenn es eine neue Sitzung erstellt. Eine Sitzung erstreckt sich über einen Zeitraum von der Anmeldung bis zur Abmeldung von einem bestimmten System.
 
 </dd> <dt>
 
 UserSID
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Objekt**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -180,10 +180,10 @@ Sicherheits-ID (SID) für den Benutzerkontext, unter dem das Ereignis eintritt.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -191,10 +191,10 @@ Sicherheits-ID (SID) für den Benutzerkontext, unter dem das Ereignis eintritt.
 
 <dl> <dt>
 
-[**Prozess \_ V1**](process.md)
+[**Verarbeiten \_ von V1**](process.md)
 </dt> <dt>
 
-[**Prozess \_ V1**](process-v1.md)
+[**Verarbeiten \_ von V1**](process-v1.md)
 </dt> </dl>
 
  

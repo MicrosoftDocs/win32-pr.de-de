@@ -1,23 +1,23 @@
 ---
 title: Zuweisen eines Laufwerks zu einer Freigabe
-description: Im folgenden Beispiel wird veranschaulicht, wie Sie einen Laufwerk Buchstaben mit einer Remote Server Freigabe verbinden, indem Sie die WNetAddConnection2-Funktion verwenden. Im Beispiel wird der Benutzer informiert, ob der-Befehl erfolgreich war.
+description: Im folgenden Beispiel wird veranschaulicht, wie ein Laufwerkbuchstabe mit einer Remoteserverfreigabe mit einem Aufruf der WNetAddConnection2-Funktion verbunden wird. Im Beispiel wird der Benutzer darüber informiert, ob der Aufruf erfolgreich war.
 ms.assetid: 1533aa5c-c3f3-4bd6-b307-fb4bd4c9aa85
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 99cb4c930250f74cc549d9b5a31f121b92abad0a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 37095f085b3124cfaa049de4bf61ae830c94191c94c5993f7532920b122b63d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053378"
 ---
 # <a name="assigning-a-drive-to-a-share"></a>Zuweisen eines Laufwerks zu einer Freigabe
 
-Im folgenden Beispiel wird veranschaulicht, wie Sie einen Laufwerk Buchstaben mit einer Remote Server Freigabe verbinden, indem Sie die [**WNetAddConnection2**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection2a) -Funktion verwenden. Im Beispiel wird der Benutzer informiert, ob der-Befehl erfolgreich war.
+Im folgenden Beispiel wird veranschaulicht, wie ein Laufwerkbuchstabe mit einer Remoteserverfreigabe mit einem Aufruf der [**WNetAddConnection2-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection2a) verbunden wird. Im Beispiel wird der Benutzer darüber informiert, ob der Aufruf erfolgreich war.
 
-Um das folgende Codebeispiel zu testen, führen Sie die folgenden Schritte aus:
+Führen Sie die folgenden Schritte aus, um das folgende Codebeispiel zu testen:
 
-1.  Ändern Sie die folgenden Zeilen in gültige Zeichen folgen:
+1.  Ändern Sie die folgenden Zeilen in gültige Zeichenfolgen:
 
     ``` syntax
     szUserName[32] = "myUserName",
@@ -26,9 +26,9 @@ Um das folgende Codebeispiel zu testen, führen Sie die folgenden Schritte aus:
     szRemoteName[MAX_PATH] = "\\\\products2\\relsys";
     ```
 
-2.  Fügen Sie die Datei einer Konsolenanwendung mit dem Namen AddConn2 hinzu.
-3.  Verknüpfen Sie die MPR der Bibliothek. LIB zur compilerliste der Bibliotheken.
-4.  Kompilieren Sie das Programm AddConn2.EXE, und führen Sie es aus.
+2.  Fügen Sie die Datei einer Konsolenanwendung namens AddConn2 hinzu.
+3.  Verknüpfen Sie die Bibliotheks-MPR. LIB zur Compilerliste der Bibliotheken.
+4.  Kompilieren Sie das Programm, und führen Sie es AddConn2.EXE aus.
 
 
 ```C++
@@ -71,6 +71,6 @@ else
 
 
 
- 
+ 
 
- 
+ 

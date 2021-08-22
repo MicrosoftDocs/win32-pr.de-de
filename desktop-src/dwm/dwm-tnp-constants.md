@@ -1,6 +1,6 @@
 ---
-title: DWM_TNP Konstanten (dwmapi. h)
-description: Flags, die von der Eigenschaften Struktur der DWM- \_ Miniaturansicht verwendet werden \_ , um anzugeben, welche der Member gültige Informationen enthalten.
+title: DWM_TNP Konstanten (Dwmapi.h)
+description: Flags, die von der DWM \_ THUMBNAIL \_ PROPERTIES-Struktur verwendet werden, um anzugeben, welche ihrer Member gültige Informationen enthalten.
 ms.assetid: 8eee1baf-e24e-40af-92ab-a7acae267ecc
 topic_type:
 - apiref
@@ -16,20 +16,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4fe91862ff4a36bc9c501a95c3c8ba21d051ddf4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1ee82f8e0384c5523b8656c0ecc6cc40bad959c2c9ad6fa1c7b19486d73b00db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985243"
 ---
-# <a name="dwm_tnp-constants"></a>DWM- \_ TNP-Konstanten
+# <a name="dwm_tnp-constants"></a>\_DWM-TNP-Konstanten
 
-Flags, die von der Eigenschaften Struktur der [**DWM- \_ Miniaturansicht \_**](/windows/desktop/api/Dwmapi/ns-dwmapi-dwm_thumbnail_properties) verwendet werden, um anzugeben, welche der Member gültige Informationen enthalten.
+Flags, die von der [**DWM \_ THUMBNAIL \_ PROPERTIES-Struktur**](/windows/desktop/api/Dwmapi/ns-dwmapi-dwm_thumbnail_properties) verwendet werden, um anzugeben, welche ihrer Member gültige Informationen enthalten.
 
 <dl> <dt>
 
-<span id="DWM_TNP_RECTDESTINATION"></span><span id="dwm_tnp_rectdestination"></span>**DWM \_ TNP \_ rectdestination**
+<span id="DWM_TNP_RECTDESTINATION"></span><span id="dwm_tnp_rectdestination"></span>**DWM \_ TNP \_ RECTDESTINATION**
 </dt> <dd> <dl> <dt>
 
 0x00000001
@@ -37,12 +37,12 @@ Flags, die von der Eigenschaften Struktur der [**DWM- \_ Miniaturansicht \_**](/
 
 
 
-Ein Wert für den **rcDestination** -Member wurde angegeben.
+Ein Wert für den **rcDestination-Member** wurde angegeben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="DWM_TNP_RECTSOURCE"></span><span id="dwm_tnp_rectsource"></span>**DWM \_ TNP \_ rectsource**
+<span id="DWM_TNP_RECTSOURCE"></span><span id="dwm_tnp_rectsource"></span>**DWM \_ TNP \_ RECTSOURCE**
 </dt> <dd> <dl> <dt>
 
 0x00000002
@@ -50,12 +50,12 @@ Ein Wert für den **rcDestination** -Member wurde angegeben.
 
 
 
-Ein Wert für den **rcSource** -Member wurde angegeben.
+Ein Wert für den **rcSource-Member** wurde angegeben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="DWM_TNP_OPACITY"></span><span id="dwm_tnp_opacity"></span>**DWM- \_ TNP- \_ Deckkraft**
+<span id="DWM_TNP_OPACITY"></span><span id="dwm_tnp_opacity"></span>**DWM \_ TNP \_ OPACITY**
 </dt> <dd> <dl> <dt>
 
 0x00000004
@@ -63,12 +63,12 @@ Ein Wert für den **rcSource** -Member wurde angegeben.
 
 
 
-Ein Wert für den **Deck Kraft** -Member wurde angegeben.
+Ein Wert für den **Deckkraftmember** wurde angegeben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="DWM_TNP_VISIBLE"></span><span id="dwm_tnp_visible"></span>**DWM \_ TNP \_ sichtbar**
+<span id="DWM_TNP_VISIBLE"></span><span id="dwm_tnp_visible"></span>**DWM \_ TNP \_ VISIBLE**
 </dt> <dd> <dl> <dt>
 
 0x00000008
@@ -76,12 +76,12 @@ Ein Wert für den **Deck Kraft** -Member wurde angegeben.
 
 
 
-Ein Wert für den **fVisible** -Member wurde angegeben.
+Ein Wert für den **fVisible-Member** wurde angegeben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="DWM_TNP_SOURCECLIENTAREAONLY"></span><span id="dwm_tnp_sourceclientareaonly"></span>**DWM \_ TNP \_ sourceclientareaonly**
+<span id="DWM_TNP_SOURCECLIENTAREAONLY"></span><span id="dwm_tnp_sourceclientareaonly"></span>**DWM \_ TNP \_ SOURCECLIENTAREAONLY**
 </dt> <dd> <dl> <dt>
 
 0x00000010
@@ -89,7 +89,7 @@ Ein Wert für den **fVisible** -Member wurde angegeben.
 
 
 
-Ein Wert für den Member " **fSourceClientAreaOnly** " wurde angegeben.
+Ein Wert für den **fSourceClientAreaOnly-Member** wurde angegeben.
 
 
 </dt> </dl> </dd> </dl>
@@ -100,9 +100,9 @@ Ein Wert für den Member " **fSourceClientAreaOnly** " wurde angegeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Dwmapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Dwmapi.h</dt> </dl> |
 
 
 

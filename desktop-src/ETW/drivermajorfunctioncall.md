@@ -1,7 +1,7 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Ereignisse des Haupt Funktions aufrufdes Treibers. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Treiber-Hauptfunktionsaufrufereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 8c913145-ac50-4d40-8519-5fed79d977ba
-title: Drivermajorfunctioncallklasse
+title: DriverMajorFunctionCall-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -18,18 +18,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: c944b11c9019ba5244850f035bfc7c02d5ca3350
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b69012ae3d9dd46d2dd54c3859895288b9113fa89c772172e3f66a730b058d4e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977144"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119070240"
 ---
-# <a name="drivermajorfunctioncall-class"></a>Drivermajorfunctioncallklasse
+# <a name="drivermajorfunctioncall-class"></a>DriverMajorFunctionCall-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Ereignisse des Haupt Funktions aufrufdes Treibers.
+Diese Klasse ist die Ereignistypklasse für Treiber-Hauptfunktionsaufrufereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,128 +48,128 @@ class DriverMajorFunctionCall : DiskIo
 
 ## <a name="members"></a>Member
 
-Die **drivermajorfunctioncallklasse** verfügt über diese Typen von Membern:
+Die **DriverMajorFunctionCall-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **drivermajorfunctioncallklasse** verfügt über diese Eigenschaften.
+Die **DriverMajorFunctionCall-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**File Object**
+**FileObject**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), Zeiger
+Qualifizierer: WmiDataId(4), Zeiger
 </dt> </dl>
 
-Vergleichen Sie den Wert dieses Zeigers mit dem **FileObject** -Zeiger Wert in einem [**diskio \_ TypeGroup1**](diskio-typegroup1.md) -Ereignis, um den Typ des e/a-Vorgangs zu bestimmen.
+Stimmen Sie den Wert dieses Zeigers mit dem **FileObject-Zeigerwert** in einem [**DiskIo \_ TypeGroup1-Ereignis**](diskio-typegroup1.md) ab, um den Typ des E/A-Vorgangs zu bestimmen.
 
 </dd> <dt>
 
-**IRP**
+**Irp**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5), Zeiger
+Qualifizierer: WmiDataId(5), Zeiger
 </dt> </dl>
 
-E/a-Anforderungspaket.
+E/A-Anforderungspaket.
 
 </dd> <dt>
 
-**Majorfunction**
+**MajorFunction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1)
+Qualifizierer: WmiDataId(1)
 </dt> </dl>
 
-Code, der die Hauptfunktion identifiziert, die aufgerufen wird.
+Code, der die aufgerufene Hauptfunktion identifiziert.
 
 </dd> <dt>
 
-**Minorfunction**
+**MinorFunction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
-Code, der die Nebenfunktion, die aufgerufen wird, identifiziert.
+Code, der die aufgerufene Nebenfunktion initialisiert.
 
 </dd> <dt>
 
-**Routineaddr**
+**RoutineAddr**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3), Zeiger
+Qualifizierer: WmiDataId(3), Zeiger
 </dt> </dl>
 
-Adresse der aufgerufenen Treiber Funktion.
+Adresse der aufgerufenen Treiberfunktion.
 
 </dd> <dt>
 
-**Uniqmatchid**
+**UniqMatchId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6)
+Qualifizierer: WmiDataId(6)
 </dt> </dl>
 
-Ein Bezeichner, der die Anforderung eindeutig identifiziert. Verwenden Sie diesen Bezeichner, um mit den anderen Treiber Ereignissen, z. b. dem [**drivercompleterequest**](drivercompleterequest.md) -Ereignis, zu korrelieren.
+Bezeichner, der die Anforderung eindeutig identifiziert. Verwenden Sie diesen Bezeichner, um mit den anderen Treiberereignissen zu korrelieren, z. B. dem [**DriverCompleteRequest-Ereignis.**](drivercompleterequest.md)
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Sowie**](diskio.md)
+[**DiskIo**](diskio.md)
 </dt> </dl>
 
  

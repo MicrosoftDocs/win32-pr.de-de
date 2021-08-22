@@ -1,7 +1,7 @@
 ---
-description: Die "Read-State"-Eigenschaft ruft den "Read ystate" des mswebdvd-Objekts ab.
+description: Die ReadyState-Eigenschaft ruft den ReadyState des MSWebDVD-Objekts ab.
 ms.assetid: e43b0fa4-4a5a-4492-a6a9-bf271f58e11b
-title: "\"Leserystate\"-Eigenschaft (\"ocidl. h\")"
+title: ReadyState-Eigenschaft (Ocidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,21 +13,21 @@ api_type:
 - HeaderDef
 api_location:
 - ocidl.h
-ms.openlocfilehash: a52b20349c58e8bd44458266da6a0a33ea149c98
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 029798e66d8ed69dc18bbb23dafc8b047d770f1bc91ac1b86ca7bdb09963c2e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119072784"
 ---
-# <a name="readystate-property"></a>Eigenschaft "leserystate"
+# <a name="readystate-property"></a>ReadyState-Eigenschaft
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `ReadyState` Eigenschaft ruft den "Read ystate" des **mswebdvd** -Objekts ab.
+Die `ReadyState` -Eigenschaft ruft den ReadyState des **MSWebDVD-Objekts** ab.
 
 ``` syntax
 [ iReadyState = ] MSWebDVD.ReadyState
@@ -35,27 +35,27 @@ Die- `ReadyState` Eigenschaft ruft den "Read ystate" des **mswebdvd** -Objekts a
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen ganzzahligen Wert zurück, der den Read-State des Steuer Elements darstellt.
+Gibt einen ganzzahligen Wert zurück, der den ReadyState des Steuerelements darstellt.
 
 
 
 | Rückgabecode | Beschreibung                                               |
 |-------------|-----------------------------------------------------------|
-| 0           | Standard Initialisierungs Zustand.                             |
+| 0           | Standardinitialisierungsstatus.                             |
 | 1           | Das Objekt lädt seine Eigenschaften.                         |
 | 2           | Das Objekt wurde initialisiert.                              |
 | 3           | Das Objekt ist interaktiv, aber nicht alle Daten sind verfügbar. |
-| 4           | Das Objekt hat alle zugehörigen Daten empfangen.                         |
+| 4           | Das Objekt hat alle seine Daten empfangen.                         |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist schreibgeschützt und weist keinen Standardwert auf.
+Diese Eigenschaft ist schreibgeschützt und hat keinen Standardwert.
 
-Jedes in eine Webseite eingebettete Objekt macht die- `ReadyState` Eigenschaft verfügbar.
+Jedes in eine Webseite eingebettete Objekt macht die `ReadyState` -Eigenschaft verfügbar.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Jedes in eine Webseite eingebettete Objekt macht die- `ReadyState` Eigenschaft v
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>"Ocidl. h"</dt> </dl> |
+| Header<br/> | <dl> <dt>Ocidl.h</dt> </dl> |
 
 
 

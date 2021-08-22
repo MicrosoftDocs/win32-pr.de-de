@@ -1,19 +1,19 @@
 ---
-description: Xmcolor beschreibt einen 32-Bit-Alpha roten grünen blauen Farb Vektor (ARGB), wobei jeder Farbkanal durch 8 Bits angegeben wird.
+description: XMCOLOR beschreibt einen 32-Bit-Alpha-Argb-Farbvektor (Alpha Red Green Blue), wobei jeder Farbkanal durch 8 Bits angegeben wird.
 ms.assetid: c2bf32a8-deb8-4aec-a94e-98d437c315f6
-title: Xmcolor-Erweiterungen
+title: XMCOLOR-Erweiterungen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a5a03771b0bed576826c1e5159ab6bfa8c55600
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3c3a17721ba2a20d43482ea6a662dd341bbb498c1391c8a71222ef24fce2243a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215100"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985000"
 ---
-# <a name="xmcolor-extensions"></a>Xmcolor-Erweiterungen
+# <a name="xmcolor-extensions"></a>XMCOLOR-Erweiterungen
 
-[**Xmcolor**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor) beschreibt einen 32-Bit-Alpha roten grünen blauen Farb Vektor (ARGB), wobei jeder Farbkanal durch 8 Bits angegeben wird.
+[**XMCOLOR**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor) beschreibt einen 32-Bit-Alpha-Argb-Farbvektor (Alpha Red Green Blue), wobei jeder Farbkanal durch 8 Bits angegeben wird.
 
 > [!Note]  
 > Die hier aufgeführten Features sind nur bei der Entwicklung mit C++ verfügbar.
@@ -26,8 +26,8 @@ ms.locfileid: "104215100"
 
 | Thema                                                     | BESCHREIBUNG                                   |
 |-----------------------------------------------------------|-----------------------------------------------|
-| [**Xmcolor-Konstruktoren**](xmcolor-ctor.md)<br/>   | Von verfügbar gemachte Konstruktoren `XMCOLOR` .<br/> |
-| [Xmcolor-Operatoren](ovw-xmcolor-operators.md)<br/> | Von verfügbar gemachte Operatoren `XMCOLOR` .<br/>    |
+| [**XMCOLOR-Konstruktoren**](xmcolor-ctor.md)<br/>   | Konstruktoren, die von verfügbar gemacht `XMCOLOR` werden.<br/> |
+| [XMCOLOR-Operatoren](ovw-xmcolor-operators.md)<br/> | Operatoren, die von verfügbar gemacht `XMCOLOR` werden.<br/>    |
 
 
 
@@ -40,7 +40,7 @@ ms.locfileid: "104215100"
 **Referenz**
 </dt> <dt>
 
-[**Xmcolor**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor)
+[**XMCOLOR**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor)
 </dt> </dl>
 
  

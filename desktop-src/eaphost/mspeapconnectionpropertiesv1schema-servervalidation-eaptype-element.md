@@ -1,6 +1,6 @@
 ---
-title: ServerValidation (eaptype)-Element (Peer-APP)
-description: Erfahren Sie mehr über das ServerValidation (eaptype)-Element. Dieses Element enthält Informationen zum Durchführen der Server Validierung. | ServerValidation (eaptype)-Element (Peer-APP)
+title: ServerValidation (EapType)-Element (PEAP)
+description: Erfahren Sie mehr über das ServerValidation(EapType)-Element. Dieses Element enthält Informationen zum Ausführen der Servervalidierung. | ServerValidation (EapType)-Element (PEAP)
 ms.assetid: 5b213853-7161-456c-bbba-d3b1118f1786
 keywords:
 - ServerValidation-Element EAPHost
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1495da3f1a1f5e69e7a6af9c64e69aa1ea354abc
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 194057a8769f32902388e733731fb1e3d987ecafd0eff26ea62c15d4fc8555d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106354940"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984020"
 ---
-# <a name="servervalidation-eaptype-element-peap"></a>ServerValidation (eaptype)-Element (Peer-APP)
+# <a name="servervalidation-eaptype-element-peap"></a>ServerValidation (EapType)-Element (PEAP)
 
-Das **ServerValidation (eaptype)** -Element enthält Informationen zum Durchführen der Server Validierung.
+Das **ServerValidation (EapType)-Element** enthält Informationen zum Ausführen der Serverüberprüfung.
 
 ``` syntax
 <xs:element name="ServerValidation"
@@ -31,46 +31,46 @@ Das **ServerValidation (eaptype)** -Element enthält Informationen zum Durchfüh
  />
 ```
 
-Das **ServerValidation** -Element wird durch das [**eaptype**](mspeapconnectionpropertiesv1schema-eaptype-element.md) -Element definiert.
+Das **ServerValidation-Element** wird durch das [**EapType-Element**](mspeapconnectionpropertiesv1schema-eaptype-element.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **ServerValidation** -Element ist optional.
+Das **ServerValidation-Element** ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eaptype**](mspeapconnectionpropertiesv1schema-eaptype-element.md)
+[**EapType**](mspeapconnectionpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Eaptype**](mspeapconnectionpropertiesv1schema-eaptype-element.md)
+[**EapType**](mspeapconnectionpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [mspeapconnectionpropertiesv1-Schema](mspeapconnectionpropertiesv1schema-schema.md)
 </dt> <dt>
 
-[mspeapconnectionpropertiesv1-Schema Elemente](mspeapconnectionpropertiesv1schema-elements.md)
+[mspeapconnectionpropertiesv1-Schemaelemente](mspeapconnectionpropertiesv1schema-elements.md)
 </dt> </dl>
 
  

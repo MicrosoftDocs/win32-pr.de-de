@@ -1,19 +1,19 @@
 ---
-description: Abrufen der DVD-Schnittstellen Zeiger
+description: Abrufen der DVD-Schnittstellenzeiger
 ms.assetid: 3d9315fc-dcfb-483a-9437-55c440813dc2
-title: Abrufen der DVD-Schnittstellen Zeiger
+title: Abrufen der DVD-Schnittstellenzeiger
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 24825b2d24ffae70e3def131e8aa522a987c11d0
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 70d965dff48813800fa76821c72fa06a2d2f652e623c8aaeb7c0b44f9f9fafc0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345986"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119072940"
 ---
-# <a name="obtaining-the-dvd-interface-pointers"></a>Abrufen der DVD-Schnittstellen Zeiger
+# <a name="obtaining-the-dvd-interface-pointers"></a>Abrufen der DVD-Schnittstellenzeiger
 
-Nachdem das Filter Diagramm erstellt wurde, kann die Anwendung die erforderlichen Zeiger zum Steuern des DVD-Navigators, des Filter-Graph-Managers und des Videofensters abrufen. Die grundlegenden Schritte, mit Fehlerüberprüfung und anderem Code, der aus Gründen der Einfachheit ausgelassen wird, sind im folgenden Codebeispiel dargestellt. Den gesamten Code finden Sie in der DVD-Beispielanwendung in der cdvdcore:: buildgraph-Methode. (Weitere Informationen finden Sie unter [DirectShow-Beispiele](directshow-samples.md).)
+Nachdem das Filterdiagramm erstellt wurde, kann Ihre Anwendung die Zeiger abrufen, die sie zum Steuern des DVD-Navigators, des Filter-Graph-Managers und des Videofensters benötigt. Die grundlegenden Schritte mit Fehlerüberprüfung und anderem Code, der der Einfachheit halber weggelassen wird, werden im folgenden Codebeispiel veranschaulicht. Den vollständigen Code finden Sie in der DVD-Beispielanwendung in der CDvdCore::BuildGraph-Methode. (Weitere Informationen finden Sie unter [DirectShow Samples](directshow-samples.md).)
 
 
 ```C++

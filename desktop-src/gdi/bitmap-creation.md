@@ -1,27 +1,27 @@
 ---
-description: Um eine Bitmap zu erstellen, verwenden Sie die Funktionen "up", "kreatebitmap", "up" oder "kreatecompatiblebitmap", "kreatedibitmap" und "kreateverwerdablebitmap".
+description: Verwenden Sie zum Erstellen einer Bitmap die Funktionen CreateBitmap, CreateBitmapIndirect oder CreateCompatibleBitmap, CreateDIBitmap und CreateDiscardableBitmap.
 ms.assetid: 313072fc-68c9-4ece-95bb-2748ccbd7f57
-title: Bitmap-Erstellung
+title: Bitmaperstellung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d00a0bc5a39d1b5e6053a34a87c28d6792a42b0b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: db37dd14f8be47ebf93c7ee7f586c54c2e55ea900402d9c255a3196987aaed43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215219"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119038258"
 ---
-# <a name="bitmap-creation"></a>Bitmap-Erstellung
+# <a name="bitmap-creation"></a>Bitmaperstellung
 
-Um eine Bitmap zu erstellen, verwenden [**Sie die Funktionen**](/windows/desktop/api/Wingdi/nf-wingdi-createbitmap)"up", "kreatebitmap", "up" oder [](/windows/desktop/api/Wingdi/nf-wingdi-createbitmapindirect)" [**kreatecompatiblebitmap**](/windows/desktop/api/Wingdi/nf-wingdi-createcompatiblebitmap) ", " [**kreatedibitmap**](/windows/desktop/api/Wingdi/nf-wingdi-createdibitmap)" und " [**kreateverwerdablebitmap**](/windows/desktop/api/Wingdi/nf-wingdi-creatediscardablebitmap)".
+Verwenden Sie zum Erstellen einer Bitmap die Funktionen [**CreateBitmap,**](/windows/desktop/api/Wingdi/nf-wingdi-createbitmap) [**CreateBitmapIndirect**](/windows/desktop/api/Wingdi/nf-wingdi-createbitmapindirect)oder [**CreateCompatibleBitmap,**](/windows/desktop/api/Wingdi/nf-wingdi-createcompatiblebitmap) [**CreateDIBitmap**](/windows/desktop/api/Wingdi/nf-wingdi-createdibitmap)und [**CreateDiscardableBitmap.**](/windows/desktop/api/Wingdi/nf-wingdi-creatediscardablebitmap)
 
-Mit diesen Funktionen können Sie die Breite und Höhe der Bitmap in Pixel angeben. Mit der Funktion "up- [**Bitmap**](/windows/desktop/api/Wingdi/nf-wingdi-createbitmap) " und der Funktion " [**kreatebitmapindirekte**](/windows/desktop/api/Wingdi/nf-wingdi-createbitmapindirect) " können Sie auch die Anzahl von Farbebenen und die Anzahl der Bits angeben, die zum Identifizieren der Farbe erforderlich sind. Andererseits verwenden die Funktionen " [**kreatecompatiblebitmap**](/windows/desktop/api/Wingdi/nf-wingdi-createcompatiblebitmap) " und " [**deateverwerdablebitmap**](/windows/desktop/api/Wingdi/nf-wingdi-creatediscardablebitmap) " einen angegebenen Gerätekontext, um die Anzahl von Farbebenen und die Anzahl der Bits, die zum Identifizieren der Farbe erforderlich sind, abzurufen.
+Mit diesen Funktionen können Sie die Breite und Höhe der Bitmap in Pixel angeben. Mit der Funktion [**CreateBitmap**](/windows/desktop/api/Wingdi/nf-wingdi-createbitmap) und [**CreateBitmapIndirect**](/windows/desktop/api/Wingdi/nf-wingdi-createbitmapindirect) können Sie auch die Anzahl der Farbebenen und die Anzahl der Bits angeben, die zum Identifizieren der Farbe erforderlich sind. Andererseits verwenden die Funktionen [**CreateCompatibleBitmap**](/windows/desktop/api/Wingdi/nf-wingdi-createcompatiblebitmap) und [**CreateDiscardableBitmap**](/windows/desktop/api/Wingdi/nf-wingdi-creatediscardablebitmap) einen angegebenen Gerätekontext, um die Anzahl der Farbebenen und die Anzahl der Bits abzurufen, die zum Identifizieren der Farbe erforderlich sind.
 
-Die Funktion " [**kreatedibitmap**](/windows/desktop/api/Wingdi/nf-wingdi-createdibitmap) " erstellt eine Geräte abhängige Bitmap aus einer geräteunabhängigen Bitmap. Sie enthält eine Farbtabelle, in der beschrieben wird, wie Pixelwerte RGB-Farbwerten entsprechen. Weitere Informationen finden Sie unter [Geräte abhängige Bitmaps](device-dependent-bitmaps.md) und [geräteunabhängige Bitmaps](device-independent-bitmaps.md).
+Die [**CreateDIBitmap-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-createdibitmap) erstellt eine geräteabhängige Bitmap aus einer geräteunabhängigen Bitmap. Sie enthält eine Farbtabelle, die beschreibt, wie Pixelwerte RGB-Farbwerten entsprechen. Weitere Informationen finden Sie unter [Geräteabhängige Bitmaps](device-dependent-bitmaps.md) und [geräteunabhängige Bitmaps.](device-independent-bitmaps.md)
 
-Nachdem die Bitmap erstellt wurde, können Sie die Größe, die Anzahl von Farbebenen oder die Anzahl der Bits, die zum Identifizieren der Farbe erforderlich sind, nicht ändern.
+Nachdem die Bitmap erstellt wurde, können Sie ihre Größe, die Anzahl der Farbebenen oder die Anzahl der Bits, die zum Identifizieren der Farbe erforderlich sind, nicht ändern.
 
-Wenn Sie keine Bitmap mehr benötigen, können Sie die [**DeleteObject**](/windows/desktop/api/Wingdi/nf-wingdi-deleteobject) -Funktion aufrufen, um Sie zu löschen.
+Wenn Sie keine Bitmap mehr benötigen, rufen Sie die [**DeleteObject-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-deleteobject) auf, um sie zu löschen.
 
  
 

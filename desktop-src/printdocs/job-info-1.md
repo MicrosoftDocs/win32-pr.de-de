@@ -1,7 +1,7 @@
 ---
-description: Die Struktur der Auftrags \_ Informationen \_ 1 gibt Druckauftrags Informationen an, z. b. den Wert des Auftrags Bezeichners, den Namen des Druckers, für den der Auftrag gespoolte ist, den Namen des Computers, der den Druckauftrag erstellt hat, den Namen des Benutzers, der den Druckauftrag besitzt, usw.
+description: Die \_ Job INFO \_ 1-Struktur gibt Druckauftragsinformationen an, z. B. den Auftragsbezeichnerwert, den Namen des Druckers, für den der Auftrag gespoolt wird, den Namen des Computers, der den Druckauftrag erstellt hat, den Namen des Benutzers, der den Druckauftrag besitzt usw.
 ms.assetid: d42ada89-6bc7-4006-81d9-dbcc0347edd3
-title: JOB_INFO_1 Struktur (winspool. h)
+title: JOB_INFO_1-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: d56d4d6bce15a661ce141d8e22d27a15837a9f6f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c6e8d5900a0f2d0a2dce5c12d2629abfc80776cdc0ada1354070005e28fbcd37
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104349079"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118971329"
 ---
-# <a name="job_info_1-structure"></a>Struktur von Auftrags \_ Informationen \_ 1
+# <a name="job_info_1-structure"></a>JOB \_ INFO \_ 1-Struktur
 
-Die Struktur der **Auftrags \_ Informationen \_ 1** gibt Druckauftrags Informationen an, z. b. den Wert des Auftrags Bezeichners, den Namen des Druckers, für den der Auftrag gespoolte ist, den Namen des Computers, der den Druckauftrag erstellt hat, den Namen des Benutzers, der den Druckauftrag besitzt, usw.
+Die **Job \_ INFO \_ 1-Struktur** gibt Druckauftragsinformationen an, z. B. den Auftragsbezeichnerwert, den Namen des Druckers, für den der Auftrag gespoolt wird, den Namen des Computers, der den Druckauftrag erstellt hat, den Namen des Benutzers, der den Druckauftrag besitzt usw.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,78 +53,78 @@ typedef struct _JOB_INFO_1 {
 
 <dl> <dt>
 
-**JobId**
+**Jobid**
 </dt> <dd>
 
-Ein Auftrags Bezeichner.
+Ein Auftragsbezeichner.
 
 </dd> <dt>
 
-**pprintername**
+**pPrinterName**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des Druckers angibt, für den der Auftrag gespoolkt ist.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Druckers angibt, für den der Auftrag gespoolt wird.
 
 </dd> <dt>
 
-**pmachinename**
+**pMachineName**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des Computers angibt, der den Druckauftrag erstellt hat.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Computers angibt, der den Druckauftrag erstellt hat.
 
 </dd> <dt>
 
-**pusername**
+**pUserName**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des Benutzers angibt, der Besitzer des Druckauftrags ist.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Benutzers angibt, der den Druckauftrag besitzt.
 
 </dd> <dt>
 
-**pdocument**
+**pDocument**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des Druckauftrags angibt (z. b. "MS-Word: Review.doc").
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Druckauftrags angibt (z. B. "MS-WORD: Review.doc").
 
 </dd> <dt>
 
-**pdatatype**
+**pDatatype**
 </dt> <dd>
 
 Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Datentyp angibt, der zum Aufzeichnen des Druckauftrags verwendet wird.
 
 </dd> <dt>
 
-**pstatus**
+**pStatus**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Status des Druckauftrags angibt. Dieser Member sollte vor dem *Status* geprüft werden, und wenn *pstatus* den Wert **null** hat, wird der Status durch den Inhalt des statusmembers definiert.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Status des Druckauftrags angibt. Dieser Member sollte vor *Status* überprüft werden. Wenn *pStatus* **NULL** ist, wird der Status durch den Inhalt des Statusmembers definiert.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd>
 
-Der Status des Auftrags. Der Wert dieses Members kann 0 (null) oder eine Kombination aus einem oder mehreren der folgenden Werte sein. Der Wert 0 (null) gibt an, dass die Druck Warteschlange angehalten wurde, nachdem das Spoolvorgang abgeschlossen wurde.
+Der Auftragsstatus. Der Wert dieses Members kann 0 (null) oder eine Kombination aus einem oder mehreren der folgenden Werte sein. Der Wert 0 (null) gibt an, dass die Druckwarteschlange angehalten wurde, nachdem das Spooling des Dokuments abgeschlossen wurde.
 
 
 
 | Wert                           | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |---------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| der Auftrags \_ Status ist \_ blockiert \_ devq.      | Der Treiber kann den Auftrag nicht drucken.                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Auftrags \_ Status ist \_ fertiggestellt           | **Windows XP und höher:** Der Auftrag wird an den Drucker gesendet, aber der Auftrag wurde möglicherweise noch nicht gedruckt.<br/> Weitere Informationen finden Sie unter Hinweise.<br/>                                                                                                                                                                                                                                                                                                                           |
-| Auftrags \_ Status \_ gelöscht            | Der Auftrag wurde gelöscht.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Auftrags \_ Status wird \_ gelöscht           | Der Auftrag wird gelöscht.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Auftrags \_ Status \_ Fehler              | Dem Auftrag ist ein Fehler zugeordnet.                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Auftrags \_ Status \_ Offline            | Der Drucker ist offline.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Ausgabe des Auftrags \_ Status \_           | Der Drucker ist nicht mehr im Papier.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Auftrags \_ Status \_ angehalten             | Der Auftrag wurde angehalten.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Auftrags \_ Status \_ gedruckt            | Der Auftrag hat gedruckt.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Drucken von Auftrags \_ Status \_           | Der Auftrag wird gedruckt.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Auftrags \_ Status \_ neu starten            | Der Auftrag wurde neu gestartet.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Auftrags \_ Status \_ beibehalten           | **Windows Vista und höher:** Der Auftrag wurde in der Druck Warteschlange beibehalten und kann nicht gelöscht werden. Dies kann folgende Ursachen haben:<br/> 1) der Auftrag wurde manuell durch einen Aufrufen von setjob aufbewahrt, und der Spooler wartet auf die Freigabe des Auftrags.<br/> 2) der Auftrag wurde nicht beendet, und das Drucken muss abgeschlossen sein, bevor er automatisch gelöscht werden kann.<br/> Weitere Informationen zu Druckauftrags Befehlen finden Sie unter [**setjob**](setjob.md) .<br/> |
-| Auftrags \_ Status \_ Spoolvorgang           | Auftrag ist Spoolvorgang.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Auftrags \_ Status \_ Benutzer \_ Eingriff | Der Drucker weist einen Fehler auf, der erfordert, dass der Benutzer etwas tut.                                                                                                                                                                                                                                                                                                                                                                                                                |
+| \_ \_ AUFTRAGSSTATUS BLOCKIERT \_ DEVQ      | Der Treiber kann den Auftrag nicht drucken.                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| AUFTRAGSSTATUS \_ \_ ABGESCHLOSSEN           | **Windows XP und höher:** Der Auftrag wird an den Drucker gesendet, aber der Auftrag ist möglicherweise noch nicht gedruckt.<br/> Weitere Informationen finden Sie unter Hinweise.<br/>                                                                                                                                                                                                                                                                                                                           |
+| AUFTRAGSSTATUS \_ \_ GELÖSCHT            | Der Auftrag wurde gelöscht.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| \_LÖSCHEN DES AUFTRAGSSTATUS \_           | Der Auftrag wird gelöscht.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| \_ \_ AUFTRAGSSTATUSFEHLER              | Dem Auftrag wird ein Fehler zugeordnet.                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| AUFTRAGSSTATUS \_ \_ OFFLINE            | Der Drucker ist offline.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| JOB \_ STATUS \_ PAPEROUT           | Der Drucker ist nicht mehr auf Papier.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| AUFTRAGSSTATUS \_ \_ ANGEHALTEN             | Der Auftrag wird angehalten.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| AUFTRAGSSTATUS \_ \_ GEDRUCKT            | Der Auftrag wurde gedruckt.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| \_DRUCKEN DES AUFTRAGSSTATUS \_           | Der Auftrag wird gedruckt.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| \_ \_ AUFTRAGSSTATUSNEUSTART            | Der Auftrag wurde neu gestartet.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| AUFTRAGSSTATUS \_ \_ BEIBEHALTEN           | **Windows Vista und höher:** Der Auftrag wurde in der Druckwarteschlange beibehalten und kann nicht gelöscht werden. Dies kann folgende Ursachen haben:<br/> 1) Der Auftrag wurde manuell durch einen Aufruf von SetJob beibehalten, und der Spooler wartet darauf, dass der Auftrag freigegeben wird.<br/> 2) Der Auftrag hat den Druck nicht abgeschlossen und muss den Druckvorgang abschließen, bevor er automatisch gelöscht werden kann.<br/> Weitere Informationen zu Druckauftragsbefehlen finden Sie unter [**SetJob.**](setjob.md)<br/> |
+| \_ \_ AUFTRAGSSTATUSSPOOLING           | Der Auftrag wird gespoolt.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| \_BENUTZEREINGRIFF BEIM AUFTRAGSSTATUS \_ \_ | Drucker weist einen Fehler auf, der erfordert, dass der Benutzer etwas tut.                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 
 
@@ -135,15 +135,15 @@ Der Status des Auftrags. Der Wert dieses Members kann 0 (null) oder eine Kombina
 **Priority**
 </dt> <dd>
 
-Die Auftrags Priorität. Bei diesem Element kann es sich um einen der folgenden Werte oder im Bereich zwischen 1 und 99 (minimale \_ Priorität bis Max \_ . Priorität) handeln.
+Die Auftragspriorität. Dieser Member kann einer der folgenden Werte oder im Bereich zwischen 1 und 99 (MIN \_ PRIORITY bis MAX \_ PRIORITY) sein.
 
 
 
 | Wert         | Bedeutung           |
 |---------------|-------------------|
-| minimale \_ Priorität | Minimale Priorität. |
-| maximale \_ Priorität | Maximale Priorität. |
-| DEF- \_ Priorität | Standardpriorität. |
+| MIN \_ PRIORITY | Mindestpriorität. |
+| MAX \_ PRIORITY | Maximale Priorität. |
+| DEF \_ PRIORITY | Standardpriorität. |
 
 
 
@@ -154,36 +154,36 @@ Die Auftrags Priorität. Bei diesem Element kann es sich um einen der folgenden 
 **Position**
 </dt> <dd>
 
-Die Position des Auftrags in der Druck Warteschlange.
+Die Position des Auftrags in der Druckwarteschlange.
 
 </dd> <dt>
 
 **TotalPages**
 </dt> <dd>
 
-Die Gesamtanzahl der Seiten, die im Dokument enthalten sind. Dieser Wert kann NULL sein, wenn der Druckauftrag keine Seiten Begrenzungs Informationen enthält.
+Die Gesamtanzahl der Seiten, die das Dokument enthält. Dieser Wert kann 0 (null) sein, wenn der Druckauftrag keine Seitentrenninformationen enthält.
 
 </dd> <dt>
 
 **PagesPrinted**
 </dt> <dd>
 
-Die Anzahl der Seiten, die gedruckt wurden. Dieser Wert kann NULL sein, wenn der Druckauftrag keine Seiten Begrenzungs Informationen enthält.
+Die Anzahl der seiten, die gedruckt wurden. Dieser Wert kann 0 (null) sein, wenn der Druckauftrag keine Seitentrenninformationen enthält.
 
 </dd> <dt>
 
 **Gesendet**
 </dt> <dd>
 
-Eine [**SYSTEMTIME**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Struktur, die die Uhrzeit angibt, zu der dieses Dokument spoolte.
+Eine [**SYSTEMTIME-Struktur,**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) die den Zeitpunkt angibt, zu dem dieses Dokument gespoolt wurde.
 
-Dieser Zeitwert liegt im UTC-Format (Universal Time Koordinate) vor. Sie sollten Sie in einen lokalen Uhrzeitwert konvertieren, bevor Sie Sie anzeigen. Sie können die [**filetimetolocalfiletime**](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) -Funktion verwenden, um die Konvertierung auszuführen.
+Dieser Zeitwert liegt im UTC-Format (Universal Time Coordinate) vor. Sie sollten ihn in einen Lokalen Zeitwert konvertieren, bevor Sie ihn anzeigen. Sie können die [**FileTimeToLocalFileTime-Funktion**](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) verwenden, um die Konvertierung durchzuführen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Port Monitore, die trueendofjob nicht unterstützen, legen den Auftrag als Auftrags Status fest, \_ \_ nachdem der Auftrag an den Drucker gesendet wurde.
+Portmonitore, die TrueEndOfJob nicht unterstützen, legen den Auftrag direkt nach der Übermittlung des Auftrags an den Drucker als \_ AUFTRAGSSTATUS \_ GEDRUCKT fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -193,8 +193,8 @@ Port Monitore, die trueendofjob nicht unterstützen, legen den Auftrag als Auftr
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Auftrags \_ Informationen \_ 1W** (Unicode) und **\_ Auftrags \_ Informationen \_ 1a** (ANSI)<br/>                                   |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ JOB \_ INFO \_ 1W** (Unicode) und **\_ JOB INFO \_ \_ 1A** (ANSI)<br/>                                   |
 
 
 
@@ -205,7 +205,7 @@ Port Monitore, die trueendofjob nicht unterstützen, legen den Auftrag als Auftr
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
 [**EnumJobs**](enumjobs.md)
@@ -214,7 +214,7 @@ Port Monitore, die trueendofjob nicht unterstützen, legen den Auftrag als Auftr
 [**GetJob**](getjob.md)
 </dt> <dt>
 
-[**Setjob**](setjob.md)
+[**SetJob**](setjob.md)
 </dt> </dl>
 
  

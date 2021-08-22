@@ -1,5 +1,5 @@
 ---
-description: 'Thread_V2 Klasse: Diese Klasse ist die übergeordnete Klasse für Threadereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
+description: 'Thread_V2 Klasse: Diese Klasse ist die übergeordnete Klasse für Threadereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 63e52cba-42a5-44f0-8eb6-e1bac8414a83
 title: Thread_V2-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: b00067af61a55e61f70b0c799a1512edf284f11c
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d057f80d5cf29f6660ee3a2ebd651c468496529a56a11147225ebd504451184c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069390"
 ---
 # <a name="thread_v2-class"></a>Thread \_ V2-Klasse
 
 Diese Klasse ist die übergeordnete Klasse für Threadereignisse.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ class Thread_V2 : MSNT_SystemTrace
 
 Die **Thread \_ V2-Klasse** definiert keine Member.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Um Threadereignisse in einer NT-Kernelprotokollierungssitzung zu aktivieren, geben Sie beim Aufrufen der [**StartTrace-Funktion**](/windows/win32/api/evntrace/nf-evntrace-starttracea) das **FLAG EVENT TRACE FLAG \_ \_ \_ THREAD** im **EnableFlags-Member** einer [**EVENT TRACE \_ \_ PROPERTIES-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) an. Sie können auch die folgenden Flags angeben:
 
@@ -49,7 +49,7 @@ Ereignisverfolgungsverbraucher können eine spezielle Verarbeitung für Threader
 
 
 
-| Ereignistyp                                                      | BESCHREIBUNG                                                                                                                                                                                                                          |
+| Ereignistyp                                                      | Beschreibung                                                                                                                                                                                                                          |
 |-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **EVENT \_ TRACE \_ TYPE \_ END**(Ereignistypwert ist 2)<br/>   | Endthreadereignis. Die [**\_ MOF-Klasse Thread V2 \_ TypeGroup1**](thread-v2-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                                        |
 | **EVENT \_ TRACE \_ TYPE \_ START**(Ereignistypwert ist 1)<br/> | Threadereignis starten. Die [**\_ MOF-Klasse Thread V2 \_ TypeGroup1**](thread-v2-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                                      |
@@ -68,10 +68,10 @@ Prozess- und Threadstartereignisse können im Kontext des übergeordneten Prozes
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -88,7 +88,7 @@ Prozess- und Threadstartereignisse können im Kontext des übergeordneten Prozes
 [**Thread**](thread.md)
 </dt> <dt>
 
-[**\_ThreadtypGruppe1**](thread-typegroup1.md)
+[**Thread \_ TypeGroup1**](thread-typegroup1.md)
 </dt> <dt>
 
 [**Thread \_ V0**](thread-v0.md)

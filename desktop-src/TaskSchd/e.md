@@ -5,23 +5,23 @@ ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: 46ecf823-8f33-46d7-a9a2-5196dc6a6805
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a6869bc3014f5c238914b7e27a59bde417a646e
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: f31f0e8cee1628d112597fd664e7569bda5b37f332ed5ea77c3ff81a262e084b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106340752"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060158"
 ---
 # <a name="e-task-scheduler"></a>E (Taskplaner)
 
-a B C D E F G H [I](i.md) J K L M N O [P](p.md) Q R [S](s.md) [T](t.md) U V [W](w.md) X Y Z
+A B C D E F G H [I](i.md) J K L M N O [P](p.md) Q R [S](s.md) [T](t.md) U V [W](w.md) X Y Z
 
 <dl> <dt>
 
-<span id="_msb_enumeration_objects_gly"></span><span id="_MSB_ENUMERATION_OBJECTS_GLY"></span>**enumerationsobjekte**
+<span id="_msb_enumeration_objects_gly"></span><span id="_MSB_ENUMERATION_OBJECTS_GLY"></span>**Enumerationsobjekte**
 </dt> <dd>
 
-Ein-Objekt, das Methoden zum Aufzählen von Aufgaben im Ordner für geplante Aufgaben bereitstellt. Dieses Objekt unterstützt zwei Schnittstellen: **IUnknown** und [**ienumworkitems**](/windows/desktop/api/Mstask/nn-mstask-ienumworkitems). Enumerationsobjekte werden durch Aufrufe von [**itaskscheduler:: Enum**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-enum)erstellt.
+Ein Objekt, das Methoden zum Aufzählen von Tasks im Ordner Geplante Aufgaben bereitstellt. Dieses Objekt unterstützt zwei Schnittstellen: **IUnknown** und [**IEnumWorkItems.**](/windows/desktop/api/Mstask/nn-mstask-ienumworkitems) Enumerationsobjekte werden durch Aufrufe von [**ITaskScheduler::Enum**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-enum)erstellt.
 
 </dd> </dl>
 

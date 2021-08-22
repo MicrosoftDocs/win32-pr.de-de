@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die übergeordnete Klasse für Image-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die übergeordnete Klasse für Bildereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: a719a34c-7e32-4758-9031-6ca2b2873e3e
 title: Image-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 47280a81b882f91ad71c6cd91004d1c0885afddf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a7db8595dd09790d875e502e479d14669a6df90b8de38b71fcf9ed58f2b68b53
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104979872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119070110"
 ---
 # <a name="image-class"></a>Image-Klasse
 
-Diese Klasse ist die übergeordnete Klasse für Image-Ereignisse.
+Diese Klasse ist die übergeordnete Klasse für Bildereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,35 +36,35 @@ class Image : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die **Image** -Klasse definiert keine Member.
+Die **Image-Klasse** definiert keine Member.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um Bild Ereignisse in einer NT-Kernel Protokollierungs Sitzung zu aktivieren, geben Sie das Ablaufverfolgungsflag für das Ereignis Ablaufverfolgungsflag im **enableflags** -Member der Eigenschaften Struktur der [**Ereignis Ablauf \_ Verfolgung \_**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) beim Aufrufen der [**starttrace**](/windows/win32/api/evntrace/nf-evntrace-starttracea) -Funktion **\_ \_ \_ \_**
+Um Bildereignisse in einer NT-Kernelprotokollierungssitzung zu aktivieren, geben Sie beim Aufrufen der [**StartTrace-Funktion**](/windows/win32/api/evntrace/nf-evntrace-starttracea) das **FLAG EVENT TRACE FLAG IMAGE \_ \_ \_ \_ LOAD** im **EnableFlags-Member** der [**EVENT TRACE \_ \_ PROPERTIES-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) an.
 
-Ereignisablaufverfolgungslistener können eine spezielle Verarbeitung für Bild Lade Ereignisse implementieren, indem Sie die [**settracecallback**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) -Funktion aufrufen und [**imageloadguid**](nt-kernel-logger-constants.md) als *pguid* -Parameter angeben. Verwenden Sie die folgenden Ereignis Typen, um Bild Lade Ereignisse beim Verarbeiten von Ereignissen zu identifizieren.
+Ereignisverfolgungsverbraucher können eine spezielle Verarbeitung für Bildladeereignisse implementieren, indem sie die [**SetTraceCallback-Funktion**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) aufrufen und [**ImageLoadGuid**](nt-kernel-logger-constants.md) als *pGuid-Parameter* angeben. Verwenden Sie die folgenden Ereignistypen, um Beim Nutzen von Ereignissen Bildladeereignisse zu identifizieren.
 
 
 
-| Ereignistyp                                                          | BESCHREIBUNG                                                                                                                                                                                                                                      |
+| Ereignistyp                                                          | Beschreibung                                                                                                                                                                                                                                      |
 |---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Ereignis \_ \_ \_ Laden von Ablauf Verfolgungs Typen**(Ereignistyp Wert ist 10)<br/>     | Bild Lade Ereignis. Wird generiert, wenn eine DLL oder eine ausführbare Datei geladen wird. Der Anbieter generiert nur ein Ereignis zum ersten Mal, wenn eine bestimmte dll geladen wird. Die MOF-Klasse " [**Image \_ Load**](image-load.md) " definiert die Ereignisdaten für dieses Ereignis.      |
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ Ende**(Ereignistyp Wert ist 2)<br/>       | Bild Entlade Ereignis. Wird generiert, wenn eine DLL oder eine ausführbare Datei entladen wird. Der Anbieter generiert nur ein Ereignis für den letzten Zeitpunkt, an dem eine bestimmte DLL entladen wird. Die MOF-Klasse " [**Image \_ Load**](image-load.md) " definiert die Ereignisdaten für dieses Ereignis. |
-| **Ereignis \_ Ablauf Verfolgungs \_ Typen- \_ DC- \_ Start**(Ereignistyp Wert ist 3)<br/> | Start Ereignis für die Datensammlung. Listet alle geladenen Bilder am Anfang der Ablauf Verfolgung auf. Die MOF-Klasse " [**Image \_ Load**](image-load.md) " definiert die Ereignisdaten für dieses Ereignis.                                                                  |
-| **Ereignis \_ Trace- \_ Typ- \_ DC- \_ Ende**(Ereignistyp Wert ist 4)<br/>   | Ereignis zum Beenden der Datensammlung. Listet alle geladenen Bilder am Ende der Ablauf Verfolgung auf. Die MOF-Klasse " [**Image \_ Load**](image-load.md) " definiert die Ereignisdaten für dieses Ereignis.                                                                          |
+| **EVENT \_ TRACE \_ TYPE \_ LOAD**(Ereignistypwert ist 10)<br/>     | Bildladeereignis. Wird generiert, wenn eine DLL oder ausführbare Datei geladen wird. Der Anbieter generiert nur ein Ereignis, wenn eine bestimmte DLL zum ersten Mal geladen wird. Die [**\_ MOF-Klasse**](image-load.md) image load definiert die Ereignisdaten für dieses Ereignis.      |
+| **EVENT \_ TRACE \_ TYPE \_ END**(Ereignistypwert ist 2)<br/>       | Ereignis zum Entladen von Images. Wird generiert, wenn eine DLL oder ausführbare Datei entladen wird. Der Anbieter generiert nur ein Ereignis für das letzte Entladen einer bestimmten DLL. Die [**\_ MOF-Klasse**](image-load.md) image load definiert die Ereignisdaten für dieses Ereignis. |
+| **EVENT \_ TRACE \_ TYPE \_ DC \_ START**(Ereignistypwert ist 3)<br/> | Startereignis der Datensammlung. Enumeriert alle geladenen Bilder am Anfang der Ablaufverfolgung. Die [**\_ MOF-Klasse**](image-load.md) image load definiert die Ereignisdaten für dieses Ereignis.                                                                  |
+| **EVENT \_ TRACE \_ TYPE \_ DC \_ END**(Ereignistypwert ist 4)<br/>   | Endereignis der Datensammlung. Enumeriert alle geladenen Bilder am Ende der Ablaufverfolgung. Die [**\_ MOF-Klasse**](image-load.md) image load definiert die Ereignisdaten für dieses Ereignis.                                                                          |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -72,16 +72,16 @@ Ereignisablaufverfolgungslistener können eine spezielle Verarbeitung für Bild 
 
 <dl> <dt>
 
-[**MSNT \_ systemtrace**](msnt-systemtrace.md)
+[**MSNT \_ SystemTrace**](msnt-systemtrace.md)
 </dt> <dt>
 
-[**Laden von Bildern \_**](image-load.md)
+[**Laden von \_ Images**](image-load.md)
 </dt> <dt>
 
-[**Bild \_ v0**](image-v0.md)
+[**Image \_ V0**](image-v0.md)
 </dt> <dt>
 
-[**Bild \_ v1**](image-v1.md)
+[**Image \_ V1**](image-v1.md)
 </dt> </dl>
 
  

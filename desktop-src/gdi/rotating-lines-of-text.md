@@ -1,19 +1,19 @@
 ---
-description: Sie können TrueType-Schriftarten in beliebiger Ecke drehen.
+description: Sie können TrueType-Schriftarten in einem beliebigen Winkel drehen.
 ms.assetid: 371ddb04-410a-425b-857f-ed3d4749b0f9
-title: Drehen von Text Zeilen
+title: Drehen von Textzeilen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 703dd4543caaa083d0b2d66512b53a0b5a213c9f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8e6ee17428e8f3727ed2d2798bacb4a1f6e43f39dc7422db2968f359359bb3cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119037638"
 ---
-# <a name="rotating-lines-of-text"></a>Drehen von Text Zeilen
+# <a name="rotating-lines-of-text"></a>Drehen von Textzeilen
 
-Sie können TrueType-Schriftarten in beliebiger Ecke drehen. Dies ist nützlich, um Diagramme und andere Abbildungen zu bezeichnen. Im folgenden Beispiel wird eine Zeichenfolge in 10-Grad-Schritten um die Mitte des Client Bereichs gedreht, indem der Wert der Member **lfescapdent** und **lforientation** der [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfonta) -Struktur, die zum Erstellen der Schriftart verwendet wird, geändert wird.
+Sie können TrueType-Schriftarten in einem beliebigen Winkel drehen. Dies ist hilfreich beim Beschriften von Diagrammen und anderen Abbildungen. Im folgenden Beispiel wird eine Zeichenfolge in 10-Grad-Schritten um die Mitte des Clientbereichs gedreht, indem der Wert der Elemente **lfEscapement** und **lfOrientation** der [LOGFONT-Struktur](/windows/win32/api/wingdi/ns-wingdi-logfonta) geändert wird, die zum Erstellen der Schriftart verwendet werden.
 
 
 ```C++

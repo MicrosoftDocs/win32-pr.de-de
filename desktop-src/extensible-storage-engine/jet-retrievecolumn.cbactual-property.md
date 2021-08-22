@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_RETRIEVECOLUMN. cbactual-Eigenschaft.'
-title: JET_RETRIEVECOLUMN. cbactual-Eigenschaft
+description: 'Weitere Informationen zu: JET_RETRIEVECOLUMN.cbActual-Eigenschaft'
+title: JET_RETRIEVECOLUMN.cbActual-Eigenschaft
 TOCTitle: 'cbActual property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_RETRIEVECOLUMN.cbActual
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_retrievecolumn.cbactual(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5dc5528a4e1228ec9bb4a09c34cb6581875ad34b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec164a6dba374ae03d00cc336234c47baa0b2ff5621eb21732ad5a96831a7182
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347530"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119038698"
 ---
-# <a name="jet_retrievecolumncbactual-property"></a>JET_RETRIEVECOLUMN. cbactual-Eigenschaft
+# <a name="jet_retrievecolumncbactual-property"></a>JET_RETRIEVECOLUMN.cbActual-Eigenschaft
 
-Ruft die Größe der Daten in Bytes ab, die durch einen Vorgang zum Abrufen einer Spalte abgerufen werden.
+Ruft die Größe von Daten in Bytes ab, die von einem Vorgang zum Abrufen von Spalten abgerufen werden.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public int cbActual { get; private set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_RETRIEVECOLUMN-Klasse](./jet-retrievecolumn-class.md)
 
-[Mitglieder JET_RETRIEVECOLUMN](./jet-retrievecolumn-members.md)
+[JET_RETRIEVECOLUMN-Member](./jet-retrievecolumn-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

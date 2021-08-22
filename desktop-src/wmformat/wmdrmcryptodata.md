@@ -1,10 +1,10 @@
 ---
-title: Wmdrmcryptodata-Struktur (wmdrmsdk. h)
-description: Die wmdrmcryptodata-Struktur enthält Informationen über den Kryptografiealgorithmus, der zum Verschlüsseln und Entschlüsseln von Inhalten verwendet wird.
+title: WMDRMCryptoData-Struktur (Wmdrmsdk.h)
+description: Die WMDRMCryptoData-Struktur enthält Informationen über den kryptografischen Algorithmus, der zum Verschlüsseln und Entschlüsseln von Inhalten verwendet wird.
 ms.assetid: ad14c6d3-4305-47c0-8f67-7ef6d11cc326
 keywords:
-- Wmdrmcryptodata-Struktur Windows Media-Format
-- Struktur des Windows-Medien Formats
+- WMDRMCryptoData-Strukturfenster Medienformat
+- Strukturfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ce972cdf41ff1e587d40b5fc95021f568be95f9d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8a732b7c1c4a4ca8d664255d39573b10ac1bdd4d004deb73d723a43b55db70ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371452"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083804"
 ---
-# <a name="wmdrmcryptodata-structure"></a>Wmdrmcryptodata-Struktur
+# <a name="wmdrmcryptodata-structure"></a>WMDRMCryptoData-Struktur
 
-Die **wmdrmcryptodata** -Struktur enthält Informationen über den Kryptografiealgorithmus, der zum Verschlüsseln und Entschlüsseln von Inhalten verwendet wird.
+Die **WMDRMCryptoData-Struktur** enthält Informationen über den kryptografischen Algorithmus, der zum Verschlüsseln und Entschlüsseln von Inhalten verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ typedef struct WMDRMCryptoData {
 
 <dl> <dt>
 
-**cryptotype**
+**cryptoType**
 </dt> <dd>
 
-Member der DRM-kryptografietyp-Enumeration, die den Typ des kryptografischen Algorithmus angibt. [**\_ \_**](drm-crypto-type.md)
+Member der [**DRM \_ CRYPTO \_ TYPE-Enumeration,**](drm-crypto-type.md) der den Typ des kryptografischen Algorithmus angibt.
 
 </dd> <dt>
 
-**qwcounterid**
+**qwCounterID**
 </dt> <dd>
 
-Die hohen 64 Bits des 128-Bit-AES-Counter-Modus. Dieser Member wird nur verwendet, wenn der **cryptotype** -Member auf den **kryptografietyp \_ \_ MCE** festgelegt ist.
+Die hohen 64 Bits des 128-Bit-AES-Indikatormodus. Dieser Member wird nur verwendet, wenn der **cryptoType-Member** auf **CRYPTO TYPE \_ \_ MCE** festgelegt ist.
 
 </dd> <dt>
 
-**qwoffset**
+**qwOffset**
 </dt> <dd>
 
-Die unteren 64 Bits des 128-Bit-AES-Counter-Modus. Dieser Member wird nur verwendet, wenn der **cryptotype** -Member auf den **kryptografietyp \_ \_ MCE** festgelegt ist.
+Die niedrigen 64 Bits des 128-Bit-AES-Indikatormodus. Dieser Member wird nur verwendet, wenn der **cryptoType-Member** auf **CRYPTO TYPE \_ \_ MCE** festgelegt ist.
 
 </dd> </dl>
 
@@ -70,11 +70,11 @@ Die unteren 64 Bits des 128-Bit-AES-Counter-Modus. Dieser Member wird nur verwen
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

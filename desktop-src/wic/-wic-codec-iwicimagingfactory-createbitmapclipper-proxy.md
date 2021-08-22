@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Methode "kreatebitmapclipper".
+description: Proxyfunktion für die CreateBitmapClipper-Methode.
 ms.assetid: 163a8d7b-f22b-4ab5-9dba-00b0cdaab440
 title: IWICImagingFactory_CreateBitmapClipper_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: fb722622ce9a8b3ad3144bcf9ea53942c8e611aa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 67104e9d2864ba5f94f0ac0594dfbbe9d7bc11d128b01430b0aacaf12acd8df1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119088391"
 ---
-# <a name="iwicimagingfactory_createbitmapclipper_proxy-function"></a>IWICImagingFactory- \_ Funktion "endbitmapclipper" \_
+# <a name="iwicimagingfactory_createbitmapclipper_proxy-function"></a>IWICImagingFactory \_ \_ CreateBitmapClipper-Proxyfunktion
 
-Proxy Funktion für die Methode " [**kreatebitmapclipper**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createbitmapclipper) ".
+Proxyfunktion für die [**CreateBitmapClipper-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createbitmapclipper)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,19 +41,19 @@ HRESULT IWICImagingFactory_CreateBitmapClipper_Proxy(
 
 <dl> <dt>
 
-*pfactory* \[ in\]
+*pFactory* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) \** _
+Typ: **[ **IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory)\***
 
 </dd> <dt>
 
-_ppIBitmapClipper * \[ out\]
+*ppIBitmapClipper* \[ out\]
 </dt> <dd>
 
-Typ: **[ **iwicbitmapclipperdatei**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapclipper)\*\***
+Typ: **[ **IWICBitmapClipper**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapclipper)\*\***
 
-Ein Zeiger, der einen Zeiger auf ein neues [**iwicbitmapclipperelement**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapclipper)empfängt.
+Ein Zeiger, der einen Zeiger auf einen neuen [**IWICBitmapClipper empfängt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapclipper)
 
 </dd> </dl>
 
@@ -61,7 +61,7 @@ Ein Zeiger, der einen Zeiger auf ein neues [**iwicbitmapclipperelement**](/windo
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -71,9 +71,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

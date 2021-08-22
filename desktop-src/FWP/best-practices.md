@@ -1,59 +1,59 @@
 ---
-title: Bewährte Methoden (Windows-Filter Plattform)
-description: In der folgenden Liste finden Sie bewährte Methoden für die Entwicklung von Anwendungen mithilfe der Windows-Filter Plattform (WFP)-API.
+title: Bewährte Methoden (Windows Filterplattform)
+description: Die folgende Liste enthält bewährte Methoden zum Entwickeln von Anwendungen mithilfe der WFP-API (Windows Filtering Platform).
 ms.assetid: 017ff210-8666-466e-8424-c95e750fd5ac
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ac43f103e0076945d566e26a1706bdec22916db
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 3e0ddb6038a9fe43070f1c16e545dbd7ac8929f3363fc88556aac391428175ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104517288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069460"
 ---
-# <a name="best-practices-windows-filtering-platform"></a>Bewährte Methoden (Windows-Filter Plattform)
+# <a name="best-practices-windows-filtering-platform"></a>Bewährte Methoden (Windows Filterplattform)
 
-In der folgenden Liste finden Sie bewährte Methoden für die Entwicklung von Anwendungen mithilfe der Windows-Filter Plattform (WFP)-API.
+Die folgende Liste enthält bewährte Methoden zum Entwickeln von Anwendungen mithilfe der WFP-API (Windows Filtering Platform).
 
--   Dynamische Sitzungen verwenden.
+-   Verwenden sie dynamische Sitzungen.
 
-    Viele Anwendungen fügen beim Start Filter Richtlinien Objekte hinzu und löschen diese Objekte dann beim Ende. Durch die Verwendung einer dynamischen Sitzung garantieren Sie, dass diese Objekte auch dann gelöscht werden, wenn die Anwendung abstürzt. Außerdem ist das einfache Schließen des Engine-Handles am Ende effizienter, als einzelne Aufrufe zum Löschen der einzelnen Objekte zu erstellen.
+    Viele Anwendungen fügen beim Start Filterungsrichtlinienobjekte hinzu und löschen diese Objekte dann am Ende. Mithilfe einer dynamischen Sitzung garantieren Sie, dass diese Objekte gelöscht werden, auch wenn die Anwendung abstürzt. Darüber hinaus ist das einfache Schließen des Engine-Handles am Ende effizienter als einzelne Aufrufe zum Löschen der einzelnen Objekte.
 
--   Behandeln Sie Transaktions Timeouts ordnungsgemäß, oder legen Sie die Sitzungs- **txnwaittimeoutinmsec** auf unendlich fest, um Timeouts zu verhindern.
+-   Behandeln Sie Transaktionstimeouts ordnungsgemäß, oder legen Sie die Sitzung **txnWaitTimeoutInMSec** auf unendlich fest, um Timeouts zu verhindern.
 
-    Auch wenn Sie keine expliziten Transaktionen verwenden, werden die meisten Aufrufe weiterhin unter einer impliziten Transaktion ausgeführt, sodass ein Timeout möglich ist.
+    Auch wenn Sie keine expliziten Transaktionen verwenden, werden die meisten Aufrufe weiterhin unter einer impliziten Transaktion ausgeführt und können daher ein Timeout erreichen.
 
--   Verwenden Sie explizite Transaktionen, um verwandte Add-oder DELETE-Vorgänge in einer einzelnen Transaktion zu kombinieren.
+-   Verwenden Sie explizite Transaktionen, um verknüpfte Add- oder Delete-Vorgänge in einer einzelnen Transaktion zu kombinieren.
 
-    Dies ist effizienter und erleichtert das Bereinigen von partiellen Ergebnissen in Fehler Pfaden.
+    Dies ist effizienter und erleichtert das Bereinigen von Teilergebnissen in Fehlerpfaden.
 
--   Verwenden Sie MUI-kompatible Zeichen folgen.
+-   Verwenden Sie DIE RICHTLINIENkonformen Zeichenfolgen.
 
-    Alle lokalisierbaren Zeichen folgen werden in einer gemeinsamen Datenstruktur gespeichert: [**swpm- \_ Anzeige \_ DATA0**](/windows/desktop/api/Fwptypes/ns-fwptypes-fwpm_display_data0). Die Zeichen folgen in dieser Struktur können indirekte Zeichen Folgen des Typs sein, der von [**shloadderetstring**](/windows/win32/api/shlwapi/nf-shlwapi-shloadindirectstring)unterstützt wird. Bevor eine **fwpm- \_ Anzeige \_ DATA0** -Struktur von einer der Funktionen zurückgegeben wird, werden die indirekten Zeichen folgen mithilfe des Gebiets Schemas des Aufrufers in die angegebene Zeichen folgen Ressource aufgelöst.
+    Alle lokalisierbaren Zeichenfolgen werden in einer gemeinsamen Datenstruktur gespeichert: [**FWPM \_ DISPLAY \_ DATA0**](/windows/desktop/api/Fwptypes/ns-fwptypes-fwpm_display_data0). Die Zeichenfolgen in dieser Struktur können indirekte Zeichenfolgen des Typs sein, der von [**SHLoadIndirectString**](/windows/win32/api/shlwapi/nf-shlwapi-shloadindirectstring)unterstützt wird. Bevor eine **FWPM \_ DISPLAY \_ DATA0-Struktur** von einer der Funktionen zurückgegeben wird, werden die indirekten Zeichenfolgen mithilfe des Gebietsschemas des Aufrufers in die angegebene Zeichenfolgenressource aufgelöst.
 
--   Ordnen Sie alle Objekte einem Anbieter zu.
+-   Ordnen Sie einem Anbieter alle Objekte zu.
 
-    Wenn mehrere Anbieter auf dem System installiert sind, ist es für Diagnosetools einfacher, festzustellen, wer was hinzugefügt hat.
+    Wenn mehrere Anbieter auf dem System installiert sind, ist es für Diagnosetools einfacher zu bestimmen, wer was hinzugefügt hat.
 
 -   Fügen Sie Ihrer eigenen Unterschicht Filter hinzu.
 
-    Sobald ein Beendender Filter in einer untergeordneten Ebene gedrückt wird, werden keine weiteren Filter in dieser Unterschicht ausgewertet. Wenn Sie also die Filter der gleichen Unterschicht wie ein anderer Anbieter hinzufügen, können Sie verhindern, dass die Filter des anderen aufgerufen werden, was zu unerwarteten Ergebnissen führt.
+    Sobald ein abschließender Filter in einer Unterebene erreicht wurde, werden keine filter mehr in dieser Unterschicht ausgewertet. Wenn Sie also Ihre Filter derselben Unterebene wie ein anderer Anbieter hinzufügen, können Sie verhindern, dass die Filter des jeweils anderen Anbieters aufgerufen werden, was zu unerwarteten Ergebnissen führt.
 
--   Verwenden Sie anstelle der Paket orientierten Filterung die Anwendungsschicht-Erzwingung (ALE).
+-   Verwenden Sie Application Layer Enforcement (ALE) anstelle der paketorientierten Filterung.
 
-    Das Filtern auf Paketebene ist langsam.
+    Die Filterung auf Paketebene ist langsam.
 
--   Filtern Sie ICMP-Fehler und RST-Ereignisse, bevor Sie generiert werden.
+-   Filtern Sie ICMP-Fehler und RST-Ereignisse, bevor sie generiert werden.
 
-    Dies ist effizienter, wenn diese Ereignisse gefiltert werden, nachdem Sie generiert wurden.
+    Dies ist effizienter als das Filtern dieser Ereignisse nach deren Generierung.
 
--   Führen Sie die Paketüberprüfung in der Stream/Datagramm-Datenschicht statt auf der Transport Ebene durch.
+-   Führen Sie die Paketuntersuchung auf Der Stream-/Datagram-Datenebene und nicht auf der Transportebene durch.
 
-    Dies gilt für die Entwicklung von Legenden. Weitere Informationen finden Sie unter [Überlegungen zur Programmierung von Legenden Treibern](/windows-hardware/drivers/network/callout-driver-programming-considerations) im Windows-Treiberkit (WDK).
+    Dies gilt für die Entwicklung von Callouts. Weitere Informationen finden Sie unter Überlegungen zur Programmierung von [Callouttreibern](/windows-hardware/drivers/network/callout-driver-programming-considerations) im Windows Driver Kit (WDK).
 
--   Beachten Sie bei der Verwendung komplexer Filter Auswirkungen auf die Leistung.
+-   Berücksichtigen Sie Leistungsauswirkungen bei der Verwendung komplexer Filter.
 
-    Ab Windows 7 und Windows Server 2008 R2 können Filter mit mehreren Bedingungen erstellt werden, die denselben Feld Schlüssel verwenden. Dadurch können komplexe Richtlinien mit weniger Filtern erstellt werden. Solche komplexen Filter können jedoch eine langsamere Leistung verursachen, damit das WFP-Filtermodul klassifiziert werden kann. Es sollte eine Auswertung vorgenommen werden, um zu bestimmen, ob die Verwendung solcher Filter eine negative Auswirkung auf die Gesamtleistung der Lösung verursacht.
+    Ab Windows 7 und Windows Server 2008 R2 können Filter mit mehreren Bedingungen erstellt werden, die denselben Feldschlüssel verwenden. Dadurch können komplexe Richtlinien mit weniger Filtern erstellt werden. Solche komplexen Filter können jedoch eine langsamere Leistung für die Klassifizierung der WFP-Filter-Engine verursachen. Es sollte eine Auswertung durchgeführt werden, um zu bestimmen, ob die Verwendung solcher Filter negative Auswirkungen auf die Gesamtleistung Ihrer Lösung hat.
 
  
 

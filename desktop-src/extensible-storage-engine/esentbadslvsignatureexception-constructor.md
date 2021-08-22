@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentbadslvsignatureexception-Konstruktor'
-title: Esentbadslvsignatureexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentBadSLVSignatureException-Konstruktor'
+title: EsentBadSLVSignatureException-Konstruktor
 TOCTitle: 'EsentBadSLVSignatureException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentBadSLVSignatureException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentbadslvsignatureexception.esentbadslvsignatureexception(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 15c5b76f8916abc2929b773ae8302fb86fcf2c53
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 974dcd71c9f12cb15a3f57a5014f7c2340e9a1e830617b2339694e4b1d3142d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759330"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119117160"
 ---
-# <a name="esentbadslvsignatureexception-constructor"></a>Esentbadslvsignatureexception-Konstruktor
+# <a name="esentbadslvsignatureexception-constructor"></a>EsentBadSLVSignatureException-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ Dim instance As New EsentBadSLVSignatureException()
 public EsentBadSLVSignatureException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentbadslvsignatureexception-Klasse](./esentbadslvsignatureexception-class.md)
+[EsentBadSLVSignatureException-Klasse](./esentbadslvsignatureexception-class.md)
 
-[Esentbadslvsignatureexception-Member](./esentbadslvsignatureexception-members.md)
+[EsentBadSLVSignatureException-Member](./esentbadslvsignatureexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
