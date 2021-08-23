@@ -1,11 +1,11 @@
 ---
-title: Basicdevice. SerialNumber (Eigenschaft)
+title: BasicDevice.SerialNumber-Eigenschaft
 description: Ruft die Seriennummer des Geräts ab.
 ms.assetid: 3B290778-F3AE-4390-B90F-ED727649AF80
 keywords:
-- SerialNumber-Eigenschaft Medien Streaming-API
-- SerialNumber-Eigenschaft Medien Streaming-API, basicdevice-Schnittstelle
-- Basicdevice-Schnittstelle Medien Streaming-API, SerialNumber-Eigenschaft
+- SerialNumber-Eigenschaft Medienstreaming-API
+- SerialNumber-Eigenschaft Media Streaming-API, BasicDevice-Schnittstelle
+- Media Streaming-API der BasicDevice-Schnittstelle, SerialNumber-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 088427411033a71b4c26e27823504d396fcf8930
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 547043d5850af91ae2bdf03783bf4254b3dfc7c543e8c1d045189e2685176e38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106341928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118972469"
 ---
-# <a name="basicdeviceserialnumber-property"></a>Basicdevice. SerialNumber (Eigenschaft)
+# <a name="basicdeviceserialnumber-property"></a>BasicDevice.SerialNumber-Eigenschaft
 
 Ruft die Seriennummer des Geräts ab.
 
@@ -33,7 +33,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 ```C++
 HRESULT get_SerialNumber(
-  [out] HSTRING *value
+  [out] HSTRING *value
 );
 ```
 
@@ -47,9 +47,9 @@ Ein Zeiger auf die Seriennummer des Geräts.
 
 <dl> <dt>
 
-[**Basicdevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
+[**BasicDevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

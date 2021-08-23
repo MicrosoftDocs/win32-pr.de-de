@@ -1,92 +1,92 @@
 ---
-description: Zusätzlich zum Durchführen einer Sicherung oder Wiederherstellung sowie zum Überwachen von Schatten Kopien muss ein Anforderer Informationen zu den Komponenten der Writer verwalten, mit denen er interagiert.
+description: Zusätzlich zum Durchführen einer Sicherung oder Wiederherstellung und zum Überwachen von Schattenkopien muss ein An anfordernde Benutzer Informationen zu den Komponenten der Writer verwalten, mit denen er interagiert.
 ms.assetid: 641abfbe-fc72-4468-9ef6-69c452adb1b3
-title: Verwendung von Komponenten durch den Anforderer
+title: Verwendung von Komponenten durch den Anfordernden
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 83efdb9e80ac0331289c3b611978e66a58098de6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec3149800a3f8cb52afff044e593f6b01177b27054c64a2ee19c19cb570ed633
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526306"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998080"
 ---
-# <a name="use-of-components-by-the-requester"></a>Verwendung von Komponenten durch den Anforderer
+# <a name="use-of-components-by-the-requester"></a>Verwendung von Komponenten durch den Anfordernden
 
-Zusätzlich zum Durchführen einer Sicherung oder Wiederherstellung sowie zum Überwachen von Schatten Kopien muss ein Anforderer Informationen zu den Komponenten der Writer verwalten, mit denen er interagiert. Die Komponentenauswahl und der logische Pfad werden verwendet, um Daten aus einer Sicherung einzubeziehen oder auszuschließen, und um zu entscheiden, welche Komponenten Informationen im Dokument mit den Sicherungs Komponenten enthalten sind.
+Zusätzlich zum Durchführen einer Sicherung oder Wiederherstellung und zum Überwachen von Schattenkopien muss ein An anfordernde Benutzer Informationen zu den Komponenten der Writer verwalten, mit denen er interagiert. Die Komponentenauswahl und der logische Pfad werden verwendet, um Daten in eine Sicherung ein- oder auszuschließen und zu entscheiden, welche Komponenteninformationen im Dokument Sicherungskomponenten enthalten sind.
 
-## <a name="requester-component-selection-during-backup"></a>Auswahl der requestkomponente während der Sicherung
+## <a name="requester-component-selection-during-backup"></a>Auswahl der An anfordernden Komponente während der Sicherung
 
-Während des Sicherungs Vorgangs importiert ein Anforderer mithilfe der Methoden [**IVssBackupComponents:: gatherschreitermetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwritermetadata) und [**IVssBackupComponents:: getschreitermetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritermetadata) (siehe [Übersicht über die Sicherungs Initialisierung](overview-of-backup-initialization.md) ).
+Während Sicherungsvorgängen importiert eine Anfordernde Writer-Metadatenkomponentendaten mithilfe der [**Methoden IVssBackupComponents::GatherWriterMetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwritermetadata) und [**IVssBackupComponents::GetWriterMetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritermetadata) (weitere Informationen finden Sie unter [Übersicht](overview-of-backup-initialization.md) über die Sicherungsin initialisierung).
 
-Nach dem untersuchen von Writer-Informationen mit der [**ivssexaminewritermetadata**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssexaminewritermetadata) -Schnittstelle entscheidet ein Anforderer, welche Writer er sichert und in begrenztem Umfang, welche der Komponenten eines bestimmten Writers wieder gesichert werden.
+Nachdem die Writerinformationen mit der [**IVssExwriterMetadata-Schnittstelle**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssexaminewritermetadata) untersucht wurden, entscheidet ein An anfordernde Benutzer, welche Writer es sichern soll, und in begrenztem Umfang, welche Komponenten eines bestimmten Writers er sichern wird.
 
-Beim Sichern eines Writers wird ein Anforderer:
+Beim Sichern eines Writers:
 
--   Muss [*explizit*](vssgloss-e.md) alle nicht auswählbaren Writer für Sicherungs Komponenten einschließen, ohne für Sicherungs-Vorgänger verfügbar zu sein, indem [**IVssBackupComponents:: addComponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) zum Hinzufügen der Komponente zum Sicherungs Komponenten Dokument verwendet wird.
--   Kann explizit beliebige für Sicherungs Komponenten auswählbare Writer einschließen, indem [**IVssBackupComponents:: addComponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) verwendet wird, um die Komponente dem Dokument mit den Sicherungs Komponenten hinzuzufügen.
--   Wenn eine auswählbare for Backup-Komponente einen [*Komponenten Satz*](vssgloss-c.md)definiert, [*umfasst*](vssgloss-i.md) die explizite Einbindung implizit alle Mitglieder des Komponenten Satzes – ob für die Sicherung auswählbar. Diese Komponenten werden dem Dokument mit den Sicherungs Komponenten nicht hinzugefügt.
+-   Muss [](vssgloss-e.md) explizit alle nicht auswählbaren Komponenten eines Writers für Sicherungskomponenten enthalten, ohne für Sicherungsvorderer mithilfe von [**IVssBackupComponents::AddComponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) ausgewählt werden zu können, um die Komponente zum Sicherungskomponentendokument hinzuzufügen.
+-   Kann explizit eines writer-Element enthalten, das für Sicherungskomponenten ausgewählt werden kann, indem [**IVssBackupComponents::AddComponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) verwendet wird, um die Komponente dem Sicherungskomponentendokument hinzuzufügen.
+-   Wenn eine für die Sicherungskomponente auswählbare [](vssgloss-i.md) Komponente einen Komponentensatz [*definiert,*](vssgloss-c.md)schließt die explizite Einbeziehung implizit alle Elemente des Komponentensets ein – unabhängig davon, ob sie für die Sicherung ausgewählt werden können oder nicht. Diese Komponenten werden dem Sicherungskomponentendokument nicht hinzugefügt.
 
-Beim Hinzufügen einer auswählbaren for Backup-Komponente oder einer nicht auswählbaren Sicherungs Komponente für Sicherungs Komponenten, die für die Sicherung von Vorgängerversionen in den Sicherungs Komponenten dokumentiert sind, gibt ein Anforderer Folgendes
+Beim Hinzufügen einer auswählbaren Sicherungskomponente oder einer nicht auswählbaren für Sicherungskomponenten, ohne dass sicherungserfahrene Elemente dem Sicherungskomponentendokument ausgewählt werden können, gibt ein An anfordernder Benutzer Folgendes an:
 
--   Die Instanz des Writers, der die Komponente verwaltet.
--   Der Klassen Bezeichner des Writers.
--   Der [*logische Pfad*](vssgloss-l.md) der Komponente (die möglicherweise **null** ist).
--   Der Name der Komponente.
+-   Die Instanz des Writer, der die Komponente verwalten soll.
+-   Der Klassenbezeichner des Writers
+-   Der [*logische Pfad*](vssgloss-l.md) der Komponente (kann NULL **sein)**
+-   Name der Komponente
 
-Wenn eine Komponente nicht mit der Spezifikation identisch ist, wird ein Fehler zurückgegeben.
+Wenn eine Komponente nicht der Spezifikation entspricht, wird ein Fehler zurückgegeben.
 
-Wenn eine solche Komponente vorhanden ist, erstellt VSS im Dokument mit den Sicherungs Komponenten eine [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle für die Komponente. Diese Informationen können vom Writer und der Anforderer aufgerufen und geändert werden. Für eine auswählbare Komponente, die einen [*Komponenten Satz*](vssgloss-c.md)definiert, werden nicht nur Eigenschaften der Komponente, sondern auch alle darin enthaltenen unter Komponenten beschrieben.
+Wenn eine solche Komponente vorhanden ist, erstellt VSS eine [**IVssComponent-Schnittstelle**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) für die Komponente im Dokument Sicherungskomponenten. Diese Informationen sind für den Writer und die Anfordernde zugänglich und änderbar. Bei einer auswählbaren Komponente, die einen Komponentensatz [*definiert,*](vssgloss-c.md)werden nicht nur die Eigenschaften der Komponente, sondern auch alle in ihr enthaltenen Unterkomponenten beschrieben.
 
-Informationen zu implizit hinzugefügten Komponenten sind im Dokument mit den Sicherungs Komponenten nicht verfügbar. Außerdem sind keine Dateiinformationen im Dokument mit den Sicherungs Komponenten verfügbar. Um diese Informationen zu erhalten, muss der Anforderer die Writer-Metadatendokumente (die bereits gelesen wurden) im Kontext der ausgewählten gespeicherten Komponenten im Dokument mit den Sicherungs Komponenten untersuchen.
+Informationen zu implizit hinzugefügten Komponenten sind im Dokument sicherungskomponenten nicht verfügbar. Darüber hinaus sind im Dokument Sicherungskomponenten keine Dateiinformationen verfügbar. Um diese Informationen zu erhalten, muss der Anfordernde die Writer-Metadatendokumente (die bereits gelesen wurden) im Kontext der ausgewählten gespeicherten Komponenten im Sicherungskomponentendokument untersuchen.
 
-## <a name="requester-component-selection-during-restore"></a>Auswahl der requestkomponente während der Wiederherstellung
+## <a name="requester-component-selection-during-restore"></a>Auswahl der anfordernden Komponente während der Wiederherstellung
 
-Während des Wiederherstellungs Vorgangs sollte ein Anforderer keine Komponenten Informationen von den zurzeit im System aktiven Writern über [**IVssBackupComponents:: gatherwritermetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwritermetadata)importieren, da der Status der derzeit ausgeführten Prozesse nicht notwendigerweise den Status der Prozesse widerspiegelt, wenn eine Sicherung erstellt wurde.
+Bei Wiederherstellungsvorgängen sollte ein An anfordernder Benutzer keine Komponenteninformationen von den Writern importieren, die derzeit im System über [**IVssBackupComponents::GatherWriterMetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwritermetadata)aktiv sind, da der Status der derzeit ausgeführten Prozesse nicht notwendigerweise den Zustand der Prozesse wiedergelangt, als eine Sicherung erstellt wurde.
 
-Es sollte immer noch ein [*identifiz-Ereignis*](vssgloss-i.md) über [**IVssBackupComponents:: gatherwritermetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwritermetadata)generiert werden, um ein *identifizereignis* zu erstellen und um zu bestimmen, welche Writer aktuell im System und deren Status sind.
+Es sollte weiterhin ein [*Identify-Ereignis*](vssgloss-i.md) über [**IVssBackupComponents::GatherWriterMetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwritermetadata)generieren, um sowohl ein *Identify-Ereignis* zu erstellen als auch um zu bestimmen, welche Writer sich derzeit im System befinden und deren Status.
 
-Der Anforderer Ruft das Dokument der gespeicherten Sicherungs Komponenten während der Initialisierung sowie gespeicherter Writer-Metadatendokumente ab (Weitere Informationen finden Sie unter [Übersicht über die Wiederherstellungs Initialisierung](overview-of-restore-initialization.md) ).
+Der Anfordernde ruft das gespeicherte Sicherungskomponentendokument während seiner Initialisierung [](overview-of-restore-initialization.md) sowie gespeicherte Writer-Metadatendokumente ab (weitere Informationen finden Sie unter Übersicht über die Wiederherstellungsin initialisierung).
 
-Die Einbindung von Komponenten während der Sicherung ist größtenteils identisch mit denen für die Wiederherstellung, mit der Ausnahme, dass Sie [*für die Wiederherstellung eine auswählbare*](vssgloss-s.md) Verbindung mit dem [*logischen Pfad*](vssgloss-l.md)– nicht [*für die Sicherung ausgewählt*](vssgloss-s.md)haben
+Die Einbeziehung von Komponenten während der Sicherung ist größtenteils [](vssgloss-s.md) identisch mit der [](vssgloss-l.md)für die Wiederherstellung, mit der Ausnahme, dass Sie die Wiederherstellung zusammen mit dem logischen Pfad in Betracht ziehen müssen – nicht für die Sicherung [*auswählbar.*](vssgloss-s.md)
 
 Es gibt jedoch einige Unterschiede:
 
--   Wenn eine Komponente bei der Sicherung bereits explizit im Sicherungs Komponenten Dokument [*enthalten*](vssgloss-e.md) ist, wird [**IVssBackupComponents:: setselectedforrestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setselectedforrestore) verwendet, um Sie explizit zum Sicherungs Komponenten Dokument für die Wiederherstellung hinzuzufügen.
--   Wenn eine Komponente implizit in die Sicherung [*eingeschlossen*](vssgloss-i.md) wurde und für die Wiederherstellung nicht ausgewählt werden kann, ohne dass für die Wiederherstellung auswählbare Elemente vorhanden sind – was im Sicherungs Fall impliziert, dass eine explizite Einbindung erforderlich ist – ist die Komponente nicht explizit eingeschlossen (d. h., Sie wird nicht im Dokument mit den Sicherungs Komponenten mithilfe von [**IVssBackupComponents:**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setselectedforrestore) Eine solche Komponente sollte als implizit für die Wiederherstellung ausgewählt werden.
--   Der Komponenten, die implizit für die Sicherung ausgewählt wurden (unabhängig davon, ob diese Komponente für die Sicherung ausgewählt wurde oder nicht), können nur diejenigen, die für die Wiederherstellung ausgewählt werden können, dem Dokument mit den Sicherungs Komponenten mithilfe von [**IVssBackupComponents:: adressstoresubcomponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addrestoresubcomponent)hinzugefügt werden
--   Auswählbar für Wiederherstellungs Komponenten kann eine [*Komponentengruppe*](vssgloss-c.md) für die Wiederherstellung definieren – genau so, wie Sie für Sicherungs Komponenten ausgewählt ist. Diese Komponente für die Wiederherstellung ist dann für den Wiederherstellungs Vorgang definiert.
+-   Wenn eine Komponente [](vssgloss-e.md) während der Sicherung bereits explizit in das Sicherungskomponentendokument eingeschlossen wurde und für die Wiederherstellung (explizit oder implizit) enthalten ist, wird [**IVssBackupComponents::SetSelectedForRestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setselectedforrestore) verwendet, um sie explizit dem Sicherungskomponentendokument für die Wiederherstellung hinzuzufügen.
+-   Wenn eine [](vssgloss-i.md) Komponente implizit in die Sicherung eingeschlossen wurde und für die Wiederherstellung nicht ausgewählt werden kann, ohne dass die Vorgängerelemente für die Wiederherstellung ausgewählt werden können – was im Fall der Sicherung die Notwendigkeit einer expliziten Einbeziehung bedeuten würde –, wird die Komponente nicht explizit eingeschlossen (d. h., sie wird dem Sicherungskomponentendokument nicht mithilfe von [**IVssBackupComponents::SetSelectedForRestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setselectedforrestore)hinzugefügt). Eine solche Komponente sollte als implizit für die Wiederherstellung ausgewählt betrachtet werden.
+-   Von den Komponenten, die implizit für die Sicherung ausgewählt wurden (unabhängig davon, ob diese Komponente für die Sicherung ausgewählt werden konnte) können nur die Komponenten, die für die Wiederherstellung ausgewählt werden können, dem Sicherungskomponentendokument mithilfe von [**IVssBackupComponents::AddRestoreSubcomponent hinzugefügt werden.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addrestoresubcomponent)
+-   Für Wiederherstellungskomponenten auswählbar kann ein [*Komponentensatz*](vssgloss-c.md) für die Wiederherstellung definiert werden – genau wie bei Sicherungskomponenten. Diese für die Wiederherstellungskomponente auswählbare Komponente definiert dann diesen Komponentensatz für den Wiederherstellungsvorgang.
 
-Ein Writer ohne explizit für die Wiederherstellung ausgewählte Komponenten vor der Generierung eines [*vorab*](vssgloss-p.md) Ereignisses werden keine VSS-Ereignisse empfangen.
+Ein Writer ohne Komponenten, die vor der Generierung eines [*PreRestore-Ereignisses*](vssgloss-p.md) explizit für die Wiederherstellung ausgewählt wurden, erhält keine VSS-Ereignisse.
 
-Requester und Writer können mithilfe der [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle auf Informationen gespeicherter Komponenten zugreifen. Mithilfe der **IVssComponent** -Schnittstelle können Writer einige der Einstellungen der Komponenten, die im Dokument mit den Sicherungs Komponenten explizit enthalten sind, ändern, um eine Wiederherstellung zu unterstützen (z. b. das [*Wiederherstellungs Ziel*](vssgloss-r.md)). Wenn ein Komponenten Satz definiert wird, werden Writer-Änderungen einer explizit enthaltenen Komponente an die zugehörigen [*unter Komponenten*](vssgloss-s.md)weitergegeben. Außerdem bietet die-Schnittstelle einen Mechanismus zum Übergeben von Informationen über Erfolg und Fehler von Wiederherstellung zwischen Writer und Anforderer.
+Anfordernde und Writer können über die [**IVssComponent-Schnittstelle auf gespeicherte Komponenteninformationen**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) zugreifen. Über die **IVssComponent-Schnittstelle** können Writer einige der Einstellungen ihrer Komponenten ändern, die explizit im Dokument sicherungskomponenten enthalten sind, um eine Wiederherstellung zu unterstützen (z. B. das Wiederherstellungsziel ). [](vssgloss-r.md) Wenn sie einen Komponentensatz definiert, werden Writeränderungen einer explizit eingeschlossenen Komponente an ihre Unterkomponenten [*weiterversetzt.*](vssgloss-s.md) Darüber hinaus bietet die -Schnittstelle einen Mechanismus zum Übergeben von Informationen zum Wiederherstellungserfolg und -fehler zwischen Writer und Anfordernde.
 
-Wie bei der Sicherung sind im Dokument mit den Sicherungs Komponenten nicht genügend Informationen vorhanden, um die Wiederherstellung zu implementieren. Auch hier sind die Writer-Metadatendokumente erforderlich, um Informationen über die tatsächlichen Pfade der wiederherzustellenden Dateien bereitzustellen und um zu ermitteln, welche nicht auswählbaren Komponenten Teil des auswählbaren Komponenten Satzes sind und daher wieder hergestellt werden müssen.
+Wie bei der Sicherung sind im Sicherungskomponentendokument selbst nicht genügend Informationen enthalten, um die Wiederherstellung zu implementieren. Auch hier müssen die Writer-Metadatendokumente Informationen zu den tatsächlichen Pfaden der wiederherzustellenden Dateien bereitstellen und feststellen, welche nicht auswählbaren Komponenten Teil des Komponentensets der auswählbaren Komponenten sind und daher wiederhergestellt werden müssen.
 
-Weitere Informationen zu den Arten der selekabilität und deren Verwendung finden Sie unter [Arbeiten mit selekabilität und logischen Pfaden](working-with-selectability-and-logical-paths.md) .
+Informationen zu den Auswählbarkeitstypen und deren Verwendung finden Sie unter Working [with Selectability](working-with-selectability-and-logical-paths.md) and Logical Paths (Arbeiten mit Auswählbarkeit und logischen Pfaden).
 
-## <a name="use-of-writer-component-document-information-by-the-requester"></a>Verwendung von Dokument Informationen des Writer-Komponente durch den Anforderer
+## <a name="use-of-writer-component-document-information-by-the-requester"></a>Verwenden von Dokumentinformationen der Writer-Komponente durch den Anfordernden
 
-Jede Komponente wird eindeutig durch die [*Writer-Klassen-ID*](vssgloss-w.md) des übergeordneten Writers, den Namen und den [*logischen Pfad*](vssgloss-l.md)identifiziert.
+Jede Komponente wird eindeutig durch die [*Writer-Klassen-ID ihres*](vssgloss-w.md) übergeordneten Writers, ihren Namen und ihren [*logischen Pfad identifiziert.*](vssgloss-l.md)
 
-Der Anforderer kann die von der [**IVssBackupComponents:: getschreitercomponents**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents) -Methode zurückgegebene [**ivssschreitercomponentset**](/windows/win32/api/vsbackup/nl-vsbackup-ivsswritercomponentsext) -Schnittstelle verwenden, um Informationen zu jeder gespeicherten Komponente abzurufen.
+Der Anfordernde kann die [**IVssWriterComponentsExt-Schnittstelle**](/windows/win32/api/vsbackup/nl-vsbackup-ivsswritercomponentsext) verwenden, die von der [**IVssBackupComponents::GetWriterComponents-Methode**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents) zurückgegeben wird, um Informationen zu jeder gespeicherten Komponente zu erhalten.
 
-Der Name und der logische Pfad der Komponente (unter anderen Elementen) finden Sie über die von [**ivssschreitercomponentslog:: getComponent**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getcomponent)zurückgegebene [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle.
+Der Name und logische Pfad der Komponente (unter anderem) finden Sie über die [**IVssComponent-Schnittstelle,**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) die von [**IVssWriterComponentsExt::GetComponent**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getcomponent)zurückgegeben wird.
 
 > [!Note]  
-> Während der Wiederherstellungs Phase sollte der Anforderer [**ivssschreitercomponentsext:: getComponent**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getcomponent) oder [**ivssschreitercomponentsext:: getcomponentcount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getcomponentcount) nur aufrufen, nachdem der Aufruf von [**IVssBackupComponents::P**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prerestore) Realisierungs Vorgang zurückgegeben wurde, um dem Writer Zeit zu geben, das Dokument mit den Sicherungs Komponenten zu aktualisieren. Ein Beispiel für eine solche Aktualisierung wäre das Ändern des Wiederherstellungs Ziels.
+> Während der Wiederherstellungsphase sollte der Anfordernde [**IVssWriterComponentsExt::GetComponent**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getcomponent) oder [**IVssWriterComponentsExt::GetComponentCount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getcomponentcount) erst aufrufen, nachdem der Aufruf von [**IVssBackupComponents::P reRestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prerestore) zurückgegeben wurde, um dem Writer Zeit zum Aktualisieren des Sicherungskomponentendokuments zu geben. Ein Beispiel für ein solches Update wäre das Ändern des Wiederherstellungsziels.
 
  
 
-Informationen zu den übergeordneten Writer der einzelnen gespeicherten auswählbaren Komponenten finden Sie unter Verwendung von [**ivssschreitercomponentsxt:: getschreiterinfo**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getwriterinfo).
+Informationen zum übergeordneten Writer jeder gespeicherten auswählbaren Komponente finden Sie mithilfe von [**IVssWriterComponentsExt::GetWriterInfo.**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getwriterinfo)
 
-Mit diesen Informationen können die Writer-Metadatendokumente abgefragt und das übereinstimmende Dokument identifiziert werden. Anschließend kann der Anforderer mit dem [*logischen Pfad*](vssgloss-l.md)die abhängigen, nicht auswählbaren Komponenten für jede auswählbare Komponente identifizieren, d. –. alle Elemente der [*Komponentengruppe*](vssgloss-c.md)der auswählbaren Komponente identifizieren.
+Mit diesen Informationen können die Writer-Metadatendokumente abgefragt und das übereinstimmende Dokument identifiziert werden. Anschließend kann der [](vssgloss-l.md)An anfordernde Benutzer mithilfe des logischen Pfads die abhängigen, nicht auswählbaren Komponenten für jede auswählbare Komponente identifizieren, d. b. alle Member des Komponentensets der auswählbaren Komponente [*identifizieren.*](vssgloss-c.md)
 
-Mithilfe der [**ivssexaminewrite Metadata**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssexaminewritermetadata) -Schnittstelle verfügt der Anforderer nun über vollständige Komponenten Informationen – einschließlich der Pfadspezifikation (von der [**ivsswmcomponent**](/windows/desktop/api/VsBackup/nl-vsbackup-ivsswmcomponent) -Schnittstelle) – sowohl für auswählbare als auch für nicht auswählbare Komponenten, die Sie sichern oder wiederherstellen müssen.
+Mithilfe der [**IVssExerklärwriterMetadata-Schnittstelle**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssexaminewritermetadata) verfügt der Anfordernde jetzt über vollständige Komponenteninformationen – einschließlich pfadspezifikation (von der [**IVssWMComponent-Schnittstelle)**](/windows/desktop/api/VsBackup/nl-vsbackup-ivsswmcomponent) – sowohl für auswählbare als auch für nicht auswählbare Komponenten, die er sichern oder wiederherstellen muss.
 
-Dies ist ein Grund, warum es wichtig ist, dass ein Anforderer sowohl den Zustand seines eigenen Sicherungs Komponenten Dokuments als auch die Writer-Metadatendokumente der von ihm gesicherten Writer speichert.
+Dies ist ein Grund, warum es für einen An anfordernden wichtig ist, sowohl den Zustand seines eigenen Sicherungskomponentendokuments als auch die Writer-Metadatendokumente der zu sichernden Writer zu speichern.
 
-Ausführlichere Informationen finden Sie [unter Arbeiten mit selekabilität und logischen Pfaden](working-with-selectability-and-logical-paths.md) .
+Ausführlichere Informationen finden Sie unter Working [with Selectability and Logical Paths](working-with-selectability-and-logical-paths.md) (Arbeiten mit Auswählbarkeit und logischen Pfaden).
 
  
 

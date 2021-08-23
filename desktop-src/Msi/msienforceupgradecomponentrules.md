@@ -1,35 +1,35 @@
 ---
-description: Legen Sie die Eigenschaft msienforceupgradecomponentrules in der Befehlszeile oder in der Eigenschaften Tabelle auf 1 fest, um die upgradekomponentenregeln bei kleinen Updates und geringfügigen Upgrades eines bestimmten Produkts anzuwenden.
+description: Legen Sie die MSIENFORCEUPGRADECOMPONENTRULES-Eigenschaft in der Befehlszeile oder in der Tabelle Eigenschaft auf 1 fest, um die Upgradekomponentenregeln bei kleinen Updates und kleineren Upgrades eines bestimmten Produkts anzuwenden.
 ms.assetid: 0c8424c7-ab9b-4a09-aaa8-6a3f44c2789f
-title: Msienforceupgradecomponentrules (Eigenschaft)
+title: MSIENFORCEUPGRADECOMPONENTRULES-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 85d5946ba3a0001c988ddfe76eeaf95c008205b7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 11535beb45ac521e59ec31c5e5231b23549394b75e5df2372ba4295471ea8008
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368575"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118945044"
 ---
-# <a name="msienforceupgradecomponentrules-property"></a>Msienforceupgradecomponentrules (Eigenschaft)
+# <a name="msienforceupgradecomponentrules-property"></a>MSIENFORCEUPGRADECOMPONENTRULES-Eigenschaft
 
-Legen Sie die Eigenschaft **msienforceupgradecomponentrules** in der Befehlszeile oder in der [Eigenschaften Tabelle](property-table.md) auf 1 fest, um die upgradekomponentenregeln bei [kleinen Updates](small-updates.md) und [geringfügigen Upgrades](minor-upgrades.md) eines bestimmten Produkts anzuwenden. Wenn Sie die Regeln bei kleinen Updates und geringfügigen Upgrades aller Produkte auf dem Computer anwenden möchten, legen Sie die [enforceupgradecomponentrules](enforceupgradecomponentrules.md) -Richtlinie auf 1 fest.
+Legen Sie die **MSIENFORCEUPGRADECOMPONENTRULES-Eigenschaft** in der Befehlszeile oder in der Tabelle [](small-updates.md) [Eigenschaft](property-table.md) [](minor-upgrades.md) auf 1 fest, um die Upgradekomponentenregeln bei kleinen Updates und kleineren Upgrades eines bestimmten Produkts anzuwenden. Um die Regeln bei kleinen Updates und kleineren Upgrades aller Produkte auf dem Computer anzuwenden, legen Sie die [Richtlinie EnforceUpgradeComponentRules](enforceupgradecomponentrules.md) auf 1 fest.
 
-Wenn die Eigenschaft oder die Richtlinie auf 1 festgelegt ist, können [kleine Updates](small-updates.md) und [kleinere Upgrades](minor-upgrades.md) fehlschlagen, da das Update versucht, Folgendes auszuführen, das gegen die Regeln der upgradekomponente verstößt:
+Wenn die Eigenschaft oder Richtlinie auf 1 [](minor-upgrades.md) festgelegt [ist,](small-updates.md) können kleine Updates und kleinere Upgrades fehlschlagen, da das Update versucht, folgende Schritte durchzuführen, die gegen die Upgradekomponentenregeln verstoßen:
 
--   Fügen Sie am Anfang oder in der Mitte einer vorhandenen Funktionsstruktur ein neues Feature hinzu.
+-   Fügen Sie oben oder in der Mitte einer vorhandenen Featurestruktur ein neues Feature hinzu.
 
-    Die neue Funktion muss als neue Blatt Funktion zu einer vorhandenen Funktionsstruktur hinzugefügt werden.
+    Das neue Feature muss einer vorhandenen Featurestruktur als neues Blattfeature hinzugefügt werden.
 
-    In diesem Fall kann der [**ProductCode**](productcode.md) des Produkts geändert werden, und das Update kann als [großes Upgrade](major-upgrades.md)behandelt werden.
+    In diesem Fall kann [**der ProductCode**](productcode.md) des Produkts geändert werden, und das Update kann als größeres [Upgrade behandelt werden.](major-upgrades.md)
 
--   Entfernen einer Komponente aus einer Funktion.
+-   Entfernen sie eine Komponente aus einem Feature.
 
-    Dies kann auch vorkommen, wenn Sie die GUID einer Komponente ändern. Die von der ursprünglichen GUID identifizierte Komponente scheint entfernt zu werden, und die von der neuen GUID identifizierte Komponente wird als neue Komponente angezeigt.
+    Dies kann auch auftreten, wenn Sie die GUID einer Komponente ändern. Die von der ursprünglichen GUID identifizierte Komponente scheint entfernt zu werden, und die Durch die neue GUID identifizierte Komponente wird als neue Komponente angezeigt.
 
-    **Windows Installer 4,5 und höher:** Die Komponente kann mithilfe von Windows Installer 4,5 und höher ordnungsgemäß entfernt werden, indem das **msidbcomponentattributesuninstallonabgelöst** -Attribut in der [Component-Tabelle](component-table.md) festgelegt oder die [**msiuninstallablösung dedcomponents**](msiuninstallsupersededcomponents.md) -Eigenschaft festgelegt wird.
+    **Windows Installer 4.5 und höher:** Die Komponente kann mithilfe von Windows Installer 4.5 und höher ordnungsgemäß entfernt werden, indem das **Attribut msidbComponentAttributesUninstallOnSupersedence** in der Komponententabelle oder die [**MSIUNINSTALLSUPERSEDEDCOMPONENTS-Eigenschaft**](msiuninstallsupersededcomponents.md) festgelegt wird. [](component-table.md)
 
-    Alternativ kann der [**ProductCode**](productcode.md) des Produkts geändert werden, und das Update kann als [großes Upgrade](major-upgrades.md)behandelt werden.
+    Alternativ kann der [**ProductCode**](productcode.md) des Produkts geändert werden, und das Update kann als größeres [Upgrade behandelt werden.](major-upgrades.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Wenn die Eigenschaft oder die Richtlinie auf 1 festgelegt ist, können [kleine U
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer 3,0 oder höher unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installer 3.0 oder höher auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 
@@ -48,7 +48,7 @@ Wenn die Eigenschaft oder die Richtlinie auf 1 festgelegt ist, können [kleine U
 [Eigenschaften](properties.md)
 </dt> <dt>
 
-[Wird in Windows Installer 2,0 und früher nicht unterstützt.](not-supported-in-windows-installer-version-2-0.md)
+[Nicht unterstützt in Windows Installer 2.0 und früher](not-supported-in-windows-installer-version-2-0.md)
 </dt> </dl>
 
  

@@ -1,57 +1,57 @@
 ---
-description: 'Um einen Peernamen zu registrieren, muss eine Anwendung die folgenden Informationen bereitstellen: IP-Adresse listpeer identitypeer nameif ein PeerName ist nicht gesichert, eine Identität ist optional.'
+description: 'Um einen Peernamen zu registrieren, muss eine Anwendung die folgenden Informationen bereitstellen: IP-Adresse listPeer identityPeer nameWenn ein Peername unsicher ist, ist eine Identität optional.'
 ms.assetid: 4de87146-3ea1-4019-9d3f-59de296083ae
-title: Registrieren eines Peer namens
+title: Registrieren eines Peernamens
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b0944c4a41c02ff221aa1cc6a0b84ed881a9453
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 41fcedbe3e405e21ec9709289e8a9237179703b1b8e81f40b449479373524beb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011488"
 ---
-# <a name="registering-a-peer-name"></a>Registrieren eines Peer namens
+# <a name="registering-a-peer-name"></a>Registrieren eines Peernamens
 
-Zum Registrieren eines Peer namens muss eine Anwendung die folgenden Informationen bereitstellen:
+Um einen Peernamen zu registrieren, muss eine Anwendung die folgenden Informationen bereitstellen:
 
 -   IP-Adressliste
--   [Peer Identität](creating-a-peer-identity.md)
--   [PeerName](peer-names.md)
+-   [Peeridentität](creating-a-peer-identity.md)
+-   [Peername](peer-names.md)
 
-Wenn ein PeerName nicht gesichert ist, ist eine Identität optional. Wenn eine Peer Identität als **null** angegeben ist, verwendet das Peer Name Resolution-Protokoll (PNRP) eine interne Standard-Peer Identität.
+Wenn ein Peername nicht gesichert ist, ist eine Identität optional. Wenn eine Peeridentität als **NULL** angegeben wird, verwendet das PEER Name Resolution Protocol (PNRP) eine interne Standard-Peeridentität.
 
-## <a name="registering-a-peer-name"></a>Registrieren eines Peer namens
+## <a name="registering-a-peer-name"></a>Registrieren eines Peernamens
 
-Nachdem die IP-Adressliste, die Peer Identität und der PeerName identifiziert wurden, kann die Anwendung einen Peernamen registrieren, indem [**wsasetservice**](pnrp-and-wsasetservice.md)aufgerufen wird. Verwenden Sie die Richtlinien in den folgenden Abschnitten dieses Themas, um die erforderlichen Konfigurationen für die **wsasetservice** -Parameter und die [**wsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur vorzunehmen.
+Nachdem die IP-Adressliste, die Peeridentität und der Peername identifiziert wurden, kann die Anwendung einen Peernamen registrieren, indem [**sie WSASetService**](pnrp-and-wsasetservice.md)aufruft. Verwenden Sie die Richtlinien in den folgenden Abschnitten dieses Themas, um die erforderlichen Konfigurationen für die **WSASetService-Parameter** und die [**WSAQUERYSET-Struktur**](pnrp-and-wsaqueryset.md) vorzunehmen.
 
-### <a name="configuring-wsasetservice"></a>Konfigurieren von wsasetservice
+### <a name="configuring-wsasetservice"></a>Konfigurieren von WSASetService
 
-Wenn eine Anwendung [**wsasetservice**](pnrp-and-wsasetservice.md)aufruft, müssen die Parameter entsprechend den folgenden Spezifikationen konfiguriert werden:
+Wenn eine Anwendung [**WSASetService aufruft,**](pnrp-and-wsasetservice.md)müssen die Parameter gemäß den folgenden Spezifikationen konfiguriert werden:
 
--   " *ESS Operation* " muss den Wert " **rnrservice \_ Register**" aufweisen.
--   *dwFlags* muss NULL (0) sein.
--   *lpqsreginfo* muss auf eine [**wsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur verweisen, die mithilfe der Richtlinien im folgenden Abschnitt Konfigurieren von **wsaqueryset** in diesem Thema konfiguriert werden muss.
+-   *essOperation* muss den Wert **RNRSERVICE \_ REGISTER aufweisen.**
+-   *dwFlags* muss 0 (null) sein.
+-   *lpqsRegInfo* muss auf eine [**WSAQUERYSET-Struktur**](pnrp-and-wsaqueryset.md) verweisen, die anhand der Richtlinien im folgenden Abschnitt Konfigurieren von **WSAQUERYSET** dieses Themas konfiguriert werden muss.
 
-### <a name="configuring-wsaqueryset"></a>Konfigurieren von wsaqueryset
+### <a name="configuring-wsaqueryset"></a>Konfigurieren von WSAQUERYSET
 
-Die [**wsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur muss entsprechend den folgenden Spezifikationen konfiguriert werden:
+Die [**WSAQUERYSET-Struktur**](pnrp-and-wsaqueryset.md) muss gemäß den folgenden Spezifikationen konfiguriert werden:
 
--   **dwSize** muss die Größe der [**wsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur angeben.
--   " **lpszserviceinstancename** " muss auf den Peernamen verweisen, der registriert wird.
--   **lpblob** muss auf eine [**pnrpinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1) -Struktur zeigen.
--   **lpcsabuffer** muss auf die Adressliste zeigen.
+-   **dwSize** muss die Größe der [**WSAQUERYSET-Struktur**](pnrp-and-wsaqueryset.md) angeben.
+-   **lpszServiceInstanceName** muss auf den Peernamen verweisen, der registriert wird.
+-   **lpBlob** muss auf eine [**PNRPINFO-Struktur**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1) zeigen.
+-   **lpcsaBuffer** muss auf die Adressliste verweisen.
 
 > [!Note]  
-> Die übrigen Elemente werden in [**PNRP und wsasetservice**](pnrp-and-wsasetservice.md)beschrieben.
+> Die verbleibenden Member werden in [**PNRP und WSASetService**](pnrp-and-wsasetservice.md)beschrieben.
 
  
 
-Nachdem ein Peername registriert wurde, sind die Informationen für die Peer Infrastruktur verfügbar. Allerdings gibt es eine Verzögerung zwischen der Registrierungs Zeit und der Weitergabe der Registrierungsinformationen an andere Knoten. Während dieser Zeit sind andere Knoten möglicherweise nicht in der Lage, den neu registrierten Peer aufzulösen.
+Nachdem ein Peername registriert wurde, sind die Informationen für die Peerinfrastruktur verfügbar. Es gibt jedoch eine Verzögerung zwischen der Registrierungszeit und der Weitergabe der Registrierungsinformationen an andere Knoten. Während dieser Zeit können andere Knoten den neu registrierten Peer möglicherweise nicht auflösen.
 
-## <a name="example-of-registering-a-peer-name"></a>Beispiel für das Registrieren eines Peer namens
+## <a name="example-of-registering-a-peer-name"></a>Beispiel für die Registrierung eines Peernamens
 
-Der folgende Code Ausschnitt zeigt, wie Sie einen Peer Namen registrieren, indem Sie beim Aufrufen von [**wsasetservice**](pnrp-and-wsasetservice.md) mithilfe der [**wsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur die korrekten Informationen bereitstellen.
+Der folgende Codeausschnitt zeigt, wie Sie einen Peernamen registrieren, indem Sie beim Aufrufen von [**WSASetService**](pnrp-and-wsasetservice.md) mithilfe der [**WSAQUERYSET-Struktur**](pnrp-and-wsaqueryset.md) die richtigen Informationen bereitstellen.
 
 
 ```C++

@@ -1,6 +1,6 @@
 ---
-title: D2DGetInput-Funktion (D2d1effecthelpers. h)
-description: Gibt die Farbe der Eingabe N an der eingabekoordinate zurück. Nur für einfache Eingaben verfügbar.
+title: D2DGetInput-Funktion (D2d1effecthelpers.h)
+description: Gibt die Farbe der Eingabe N an der Eingabekoordinate zurück. Nur für einfache Eingaben verfügbar.
 ms.assetid: 74B6F814-53C7-4C8C-B45C-3CB23B9D8BED
 keywords:
 - D2DGetInput-Funktion Direct2D
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dd6ec0fe858149ee53da1f8ca8a02c12756d6a90
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 37de536eb6ac36af3e8aa1ffca61c3840cf6c84e585466a56a447522c4d628d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119075314"
 ---
 # <a name="d2dgetinput-function"></a>D2DGetInput-Funktion
 
-Gibt die Farbe der Eingabe N an der eingabekoordinate zurück. Nur für einfache Eingaben verfügbar.
+Gibt die Farbe der Eingabe N an der Eingabekoordinate zurück. Nur für einfache Eingaben verfügbar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ float4 WINAPI D2DGetInput(
 *N* \[ in\]
 </dt> <dd>
 
-Die Eingabe Nummer.
+Die Eingabenummer.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt ein **float4**-Wert zurück, der die RGBA-Farbe im Format inputn enthält.
+Die Funktion gibt einen **float4-Wert zurück,** der die RGBA-Farbe im Format INPUTN enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im folgenden Beispiel wird die Funktion gezeigt, die als Teil eines arithmetischen zusammengesetzten Effekts verwendet wird.
+Das folgende Beispiel zeigt die Funktion, die als Teil eines arithmetischen zusammengesetzten Effekts verwendet wird.
 
 ``` syntax
   
@@ -65,7 +65,7 @@ D2D_PS_ENTRY(PS_NAME)
 }  
 ```
 
-Ein weiteres Beispiel für die Verwendung dieser Funktion finden Sie auch in der Anmerkung zum [ \_ \_ Eintrag D2D PS](d2d-ps-entry.md) .
+Ein weiteres Beispiel für die Verwendung dieser Funktion finden Sie in den Anmerkungen zu [D2D \_ PS \_ ENTRY.](d2d-ps-entry.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,19 +73,19 @@ Ein weiteres Beispiel für die Verwendung dieser Funktion finden Sie auch in der
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D2d1effecthelpers. hlsli</dt> </dl> |
+| Header<br/> | <dl> <dt>D2d1effecthelpers.hlsli</dt> </dl> |
 | DLL<br/>    | <dl> <dt>D2d1.dll</dt> </dl>                |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Effektshader-Verknüpfung](effect-shader-linking.md)
 </dt> <dt>
 
-[HLSL-Hilfsprogramme](hlsl-helpers.md)
+[HLSL-Hilfsatoren](hlsl-helpers.md)
 </dt> </dl>
 
  

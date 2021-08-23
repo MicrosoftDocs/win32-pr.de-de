@@ -4,18 +4,18 @@ ms.assetid: aba78d50-f884-416a-b022-bb03416aad11
 title: faultInfo-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e3788af9aeb31d1ed84522bc6b177143ec0607b2
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 921a7dedfffbe7bfb3e402775258636ed9ccd3e74c72d65a5c76cea40d7ed4b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107995857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119049678"
 ---
 # <a name="faultinfo-element"></a>faultInfo-Element
 
 Gibt an, ob Parameter, die zum Übergeben von Fehlerinformationen verwendet werden, in generierten Funktionen enthalten sind.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <faultInfo/>
@@ -33,7 +33,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                                                                         | BESCHREIBUNG                                                                                                |
+| Element                                                                         | Beschreibung                                                                                                |
 |---------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
 | [**functionDeclarations**](functiondeclarations.md)<br/>                 | Generiert Implementierungsdeklarationen für Proxyfunktionen für Porttypvorgänge.<br/> <br/> |
 | [**idlFunctionDeclarations**](idlfunctiondeclarations.md)<br/>           | Generiert IDL-Deklarationen für Proxyfunktionen für Porttypvorgänge.<br/> <br/>            |

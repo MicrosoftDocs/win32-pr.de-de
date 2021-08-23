@@ -1,88 +1,88 @@
 ---
-title: Problembehandlung bei App-Paket Signatur Fehlern
-description: Ein Fehler bei der APP-Bereitstellung kann durch einen Fehler bei der Überprüfung der digitalen Signatur des App-Pakets verursacht werden. Erfahren Sie, wie Sie diese Fehler erkennen und wie Sie damit zu tun haben.
+title: Behandeln von Fehlern bei der Signatur von App-Paketen
+description: Ein Fehler bei der App-Bereitstellung kann durch einen Fehler beim Überprüfen der digitalen Signatur des App-Pakets verursacht werden. Erfahren Sie, wie Sie diese Fehler erkennen und wie Sie gegen sie vorgehen.
 ms.assetid: CE868296-87F6-4BD5-8AC5-914E429EDEBC
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b6f50dc5ff428e74f4928fc20775b13de7c3be9
-ms.sourcegitcommit: 784b5954a1646e2406cd4ee27a9e4f50e28ee9b7
+ms.openlocfilehash: bdec41d2d058a48153d6126fea534c1efaf16e16ccabef5d5e940daa73e839a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106374831"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119048948"
 ---
-# <a name="how-to-troubleshoot-app-package-signature-errors"></a>Problembehandlung bei App-Paket Signatur Fehlern
+# <a name="how-to-troubleshoot-app-package-signature-errors"></a>Behandeln von Fehlern bei der Signatur von App-Paketen
 
-Ein Fehler bei der APP-Bereitstellung kann durch einen Fehler bei der Überprüfung der digitalen Signatur des App-Pakets verursacht werden. Erfahren Sie, wie Sie diese Fehler erkennen und wie Sie damit zu tun haben.
+Ein Fehler bei der App-Bereitstellung kann durch einen Fehler beim Überprüfen der digitalen Signatur des App-Pakets verursacht werden. Erfahren Sie, wie Sie diese Fehler erkennen und wie Sie gegen sie vorgehen.
 
-Beim Bereitstellen einer APP mit Windows-App-Paketen wird von Windows immer versucht, die digitale Signatur im App-Paket zu überprüfen. Fehler während der Überprüfung der Signatur Überprüfung Blockieren des Pakets. Aber warum das Paket nicht validiert wurde, ist möglicherweise nicht offensichtlich. Insbesondere, wenn Sie Ihre Pakete mit privaten Zertifikaten für lokale Tests signieren, müssen Sie häufig auch die Vertrauenswürdigkeit für diese Zertifikate verwalten. Eine falsche Konfiguration der Zertifikat Vertrauensstellung kann zu Fehlern bei der Signatur Überprüfung führen.
+Wenn Sie eine gepackte Windows App bereitstellen, versucht Windows immer, die digitale Signatur für das App-Paket zu überprüfen. Fehler während der Signaturvalidierung blockieren die Bereitstellung des Pakets. Aber warum das Paket nicht überprüft wurde, ist möglicherweise nicht offensichtlich. Insbesondere wenn Sie Ihre Pakete mit privaten Zertifikaten für lokale Tests signieren, müssen Sie häufig auch die Vertrauensstellung für diese Zertifikate verwalten. Eine falsche Konfiguration der Zertifikatvertrauensstellung kann zu Fehlern bei der Signaturüberprüfung führen.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Verpacken, Bereitstellung und Abfrage von Windows-apps](appx-portal.md)
--   [Zertifikat Vertrauensstellungs Überprüfung](/windows/desktop/SecCrypto/certificate-trust-verification)
+-   [Verpacken, Bereitstellen und Abfragen von Windows-Apps](appx-portal.md)
+-   [Überprüfung der Zertifikatvertrauensstellung](/windows/desktop/SecCrypto/certificate-trust-verification)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
--   [Windows-Ereignisprotokoll](/windows/desktop/WES/windows-event-log) zur Diagnose von Installationsfehlern.
--   [Certutil-Aufgaben zum Verwalten von Zertifikaten](/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10)) für die Zertifikat Speicher Bearbeitung während der Problembehandlung
+-   [Windows Ereignisprotokoll,](/windows/desktop/WES/windows-event-log) um Installationsfehler zu diagnostizieren.
+-   [Certutil-Aufgaben zum Verwalten von Zertifikaten](/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10)) für die Manipulation des Zertifikatspeichers während der Problembehandlung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-examine-event-logs-for-diagnostic-information"></a>Schritt 1: Untersuchen der Ereignisprotokolle nach Diagnoseinformationen
+### <a name="step-1-examine-event-logs-for-diagnostic-information"></a>Schritt 1: Untersuchen von Ereignisprotokollen auf Diagnoseinformationen
 
-Je nachdem, wie Sie versuchen, die APP bereitzustellen, haben Sie möglicherweise keinen sinnvollen Fehlercode für den Bereitstellungs Fehler erhalten. In diesem Fall können Sie den Fehlercode in der Regel direkt aus den Ereignisprotokollen erhalten.
+Je nachdem, wie Sie versucht haben, Ihre App bereitzustellen, haben Sie möglicherweise keinen aussagekräftigen Fehlercode für den Bereitstellungsfehler erhalten. In diesem Fall können Sie den Fehlercode in der Regel direkt aus den Ereignisprotokollen abrufen.
 
 **So erhalten Sie den Fehlercode aus den Ereignisprotokollen**
 
-1.  Führen Sie **eventvwr. msc** aus.
-2.  Wechseln Sie zu **Ereignisanzeige (local)**  >  **Anwendungs-und Dienst Protokolle**  >  **Microsoft**  >  **Windows**.
-3.  Das erste zu überprüfen Protokoll lautet **appxpackagingom**  >  **Microsoft-Windows-appxpackaging/Operational**.
-4.  Bereitstellungs bezogene Fehler werden in **appxdeployment-Server**  >  **Microsoft-Windows-appxdeploymentserver/Operational** aufgezeichnet.
+1.  Führen Sie **eventvwr.msc aus.**
+2.  Wechseln Sie zu **Ereignisanzeige (lokal)**  >  **Anwendungs- und Dienstprotokolle**  >  **Microsoft**  >  **Windows**.
+3.  Das erste zu überprüfende Protokoll ist **AppxPackagingOM**  >  **Microsoft-Windows-AppxPackaging/Operational**.
+4.  Bereitstellungsbezogene Fehler werden in **AppXDeployment-Server**  >  **Microsoft-Windows-AppXDeploymentServer/Operational** aufgezeichnet.
 
-    Suchen Sie bei Bereitstellungs Fehlern nach dem letzten Fehler Ereignis 404. Dieses Ereignis vom Typ Fehler enthält den Fehlercode und eine Beschreibung, warum die Bereitstellung fehlgeschlagen ist. Wenn ein Fehler Ereignis 465 dem Ereignis 404 vorangestellt war, gab es ein Problem beim Öffnen des Pakets.
+    Suchen Sie bei Bereitstellungsfehlern nach dem letzten Fehlerereignis 404. Dieses Fehlerereignis enthält den Fehlercode und eine Beschreibung, warum die Bereitstellung fehlgeschlagen ist. Wenn dem Ereignis 404 ein Fehlerereignis 465 vorangestellt wurde, liegt ein Problem beim Öffnen des Pakets vor.
 
-Wenn der Fehler 465 nicht aufgetreten ist, lesen Sie allgemeine Problembehandlung bei der [Paket Erstellung, Bereitstellung und Abfrage von Windows-apps](troubleshooting.md). Andernfalls finden Sie in dieser Tabelle allgemeine Fehlercodes, die in der Fehler Zeichenfolge für Fehler Ereignis 465 angezeigt werden können:
+Wenn der Fehler 465 nicht aufgetreten ist, finden Sie weitere Informationen unter Allgemeine [Problembehandlung beim Packen, Bereitstellen und Abfragen von Windows-Apps.](troubleshooting.md) Andernfalls finden Sie in dieser Tabelle allgemeine Fehlercodes, die in der Fehlerzeichenfolge für das Fehlerereignis 465 angezeigt werden können:
 
 | Fehlercode | Fehler                                 | BESCHREIBUNG                                                                                                          | Vorschlag                                                                                                                                                                                                 |
 |------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0x80073CF0 | Fehler beim \_ Installieren des \_ geöffneten \_ Pakets \_ | Das App-Paket konnte nicht geöffnet werden.                                                                                 | Dieser Fehler weist in der Regel auf ein Problem mit dem Paket hin. Sie müssen das Paket erneut erstellen und signieren. Weitere Informationen finden Sie unter [Verwenden von App Packager](make-appx-package--makeappx-exe-.md). |
-| 0x80080205 | AppX \_ E \_ ungültige \_ blockmap            | Das App-Paket wurde manipuliert oder weist eine ungültige Block Zuordnung auf.                                                  | Das Paket ist beschädigt. Sie müssen das Paket erneut erstellen und signieren. Weitere Informationen finden Sie unter [Verwenden von App Packager](make-appx-package--makeappx-exe-.md).                                  |
-| 0x800b0004 | Vertrauens \_ würdiger E- \_ Betreff \_ nicht \_ vertrauenswürdig       | Das App-Paket wurde manipuliert.                                                                              | Der Paket Inhalt stimmt nicht mehr mit der digitalen Signatur des Pakets. Sie müssen das Paket erneut signieren. Weitere Informationen finden Sie unter [Signieren eines App-Pakets mit SignTool](how-to-sign-a-package-using-signtool.md).  |
-| 0x800B0100 | \_e \_ NoSignature Vertrauen                 | Das App-Paket ist nicht signiert.                                                                                         | Es können nur signierte Windows-App-Pakete bereitgestellt werden. Informationen zum Signieren eines App-Pakets finden [Sie unter Signieren eines App-Pakets mit SignTool](how-to-sign-a-package-using-signtool.md).                  |
-| 0x800B0109 | CERT \_ E \_ nicht vertrauenswürdiger Stamm \_              | Die Zertifikat Kette, die zum Signieren des App-Pakets verwendet wurde, endet in einem Stamm Zertifikat, das nicht vertrauenswürdig ist.           | Fahren Sie mit Schritt 2 fort, um die Zertifikats Vertrauensstellung zu beheben.                                                                                                                                                  |
-| 0x800b010a | Zertifikat- \_ E- \_ Verkettung                     | Es konnte keine Zertifikat Kette für eine vertrauenswürdige Stamm Zertifizierungsstelle aus dem Zertifikat erstellt werden, das zum Signieren des App-Pakets verwendet wurde. | Fahren Sie mit Schritt 2 fort, um die Zertifikats Vertrauensstellung zu beheben.                                                                                                                                                  |
+| 0x80073CF0 | FEHLER \_ BEIM INSTALLIEREN DES \_ \_ GEÖFFNETEN PAKETS \_ | Das App-Paket konnte nicht geöffnet werden.                                                                                 | Dieser Fehler weist in der Regel auf ein Problem mit dem Paket hin. Sie müssen das Paket erneut erstellen und signieren. Weitere Informationen finden Sie unter [Verwenden von App Packager.](make-appx-package--makeappx-exe-.md) |
+| 0x80080205 | APPX \_ E \_ INVALID \_ BLOCKMAP            | Das App-Paket wurde manipuliert oder weist eine ungültige Blockzuordnung auf.                                                  | Das Paket ist beschädigt. Sie müssen das Paket erneut erstellen und signieren. Weitere Informationen finden Sie unter [Verwenden von App Packager.](make-appx-package--makeappx-exe-.md)                                  |
+| 0x800B0004 | \_ \_ E-BETREFF VERTRAUEN NICHT \_ \_ VERTRAUENSWÜRDIG       | Das App-Paket wurde manipuliert.                                                                              | Der Paketinhalt stimmt nicht mehr mit seiner digitalen Signatur überein. Sie müssen das Paket erneut signieren. Weitere Informationen finden Sie unter [Signieren eines App-Pakets mit SignTool.](how-to-sign-a-package-using-signtool.md)  |
+| 0x800B0100 | TRUST \_ E \_ NOSIGNATURE                 | Das App-Paket ist nicht signiert.                                                                                         | Nur signierte Windows App-Pakete können bereitgestellt werden. Informationen zum Signieren eines App-Pakets finden Sie unter [Signieren eines App-Pakets mit SignTool.](how-to-sign-a-package-using-signtool.md)                  |
+| 0x800B0109 | CERT \_ E \_ UNTRUSTED \_ ROOT              | Die Zertifikatkette, die zum Signieren des App-Pakets verwendet wurde, endet mit einem Stammzertifikat, das nicht vertrauenswürdig ist.           | Fahren Sie mit Schritt 2 fort, um probleme mit der Zertifikatvertrauensstellung zu beheben.                                                                                                                                                  |
+| 0x800B010A | \_ \_ ZERTIFIKAT-E-VERKETTUNG                     | Es konnte keine Zertifikatkette für eine vertrauenswürdige Stammzertifizierungsstelle aus dem Zertifikat erstellt werden, das zum Signieren des App-Pakets verwendet wurde. | Fahren Sie mit Schritt 2 fort, um probleme mit der Zertifikatvertrauensstellung zu beheben.                                                                                                                                                  |
 
 
 
  
 
-### <a name="step-2-determine-the-certificate-chain-used-to-sign-the-app-package"></a>Schritt 2: Bestimmen der zum Signieren des App-Pakets verwendeten Zertifikat Kette
+### <a name="step-2-determine-the-certificate-chain-used-to-sign-the-app-package"></a>Schritt 2: Bestimmen der Zertifikatkette, die zum Signieren des App-Pakets verwendet wird
 
-Zum Ermitteln der Zertifikate, denen der lokale Computer vertrauen muss, können Sie die Zertifikat Kette für die digitale Signatur im App-Paket überprüfen.
+Um die Zertifikate zu finden, denen der lokale Computer vertrauen muss, können Sie die Zertifikatkette für die digitale Signatur im App-Paket untersuchen.
 
-**So bestimmen Sie die Zertifikat Kette**
+**So bestimmen Sie die Zertifikatkette**
 
 1.  Klicken Sie im Datei-Explorer mit der rechten Maustaste auf das App-Paket, und wählen Sie **Eigenschaften** aus.
-2.  Wählen Sie im Dialogfeld **Eigenschaften** die Registerkarte **digitale Signaturen** aus, auf der auch angezeigt wird, ob die Signatur überprüft werden kann.
-3.  Wählen Sie in der Liste Signatur die Signatur aus, und klicken Sie dann auf die Schaltfläche **Details** .
-4.  Klicken Sie im Dialogfeld " **digitale Signatur Details** " auf die Schaltfläche " **Zertifikat anzeigen** ".
-5.  Klicken Sie im Dialogfeld **Zertifikat** auf die Registerkarte **Zertifizierungspfad** .
+2.  Wählen Sie im Dialogfeld **Eigenschaften** die Registerkarte **Digitale Signaturen aus,** auf der auch angezeigt wird, ob die Signatur überprüft werden kann.
+3.  Wählen Sie in der Liste Signatur die Signatur aus, und klicken Sie dann auf die Schaltfläche **Details.**
+4.  Klicken Sie im Dialogfeld Details zur **digitalen Signatur** auf die Schaltfläche **Zertifikat anzeigen.**
+5.  Wählen Sie im Dialogfeld Zertifikat die Registerkarte **Zertifizierungspfad** aus. 
 
-Das oberste Zertifikat in der Kette ist das Stamm Zertifikat, und das untere Zertifikat ist das Signaturzertifikat. Wenn sich nur ein einzelnes Zertifikat in der Kette befindet, ist das Signaturzertifikat auch sein eigenes Stamm Zertifikat. Sie können die Seriennummer für jedes Zertifikat ermitteln, das Sie dann mit [certutil](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732443(v=ws.10))verwenden:
+Das oberste Zertifikat in der Kette ist das Stammzertifikat, und das untere Zertifikat ist das Signaturzertifikat. Wenn sich nur ein einzelnes Zertifikat in der Kette befindet, ist das Signaturzertifikat auch ein eigenes Stammzertifikat. Sie können die Seriennummer für jedes Zertifikat bestimmen, das Sie dann mit [Certutil](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732443(v=ws.10))verwenden:
 
 **So bestimmen Sie die Seriennummer für jedes Zertifikat**
 
-1.  Wählen Sie im Bereich "Zertifizierungspfad" das Zertifikat aus, und klicken Sie dann auf **Zertifikat anzeigen**.
-2.  Klicken Sie im Dialogfeld Zertifikat auf die Registerkarte **Details** , auf der die Seriennummer und andere nützliche Eigenschaften des Zertifikats angezeigt werden.
+1.  Wählen Sie im Bereich Zertifizierungspfad das Zertifikat aus, und klicken Sie dann auf **Zertifikat anzeigen.**
+2.  Wählen Sie im Dialogfeld Zertifikat die Registerkarte **Details** aus, auf der die Seriennummer und andere nützliche Eigenschaften des Zertifikats angezeigt werden.
 
 ### <a name="step-3-determine-the-certificates-trusted-by-the-local-machine"></a>Schritt 3: Bestimmen der Zertifikate, die vom lokalen Computer als vertrauenswürdig eingestuft werden
 
-Damit ein App-Paket bereitgestellt werden kann, darf es nicht nur im Kontext des Benutzers, sondern auch im Kontext des lokalen Computers als vertrauenswürdig eingestuft werden. Folglich kann die digitale Signatur gültig sein, wenn Sie im vorherigen Schritt auf der Registerkarte Digitale Signaturen angezeigt wird, die Überprüfung während der Bereitstellung des App-Pakets jedoch weiterhin fehlschlägt.
+Um ein App-Paket bereitstellen zu können, muss es nicht nur im Kontext des Benutzers, sondern auch im Kontext des lokalen Computers als vertrauenswürdig eingestuft werden. Daher kann die digitale Signatur gültig sein, wenn sie im vorherigen Schritt auf der Registerkarte Digitale Signaturen angezeigt wird. Die Überprüfung während der Bereitstellung des App-Pakets schlägt jedoch fehl.
 
-**So bestimmen Sie, ob die Zertifikat Kette, die zum Signieren des App-Pakets verwendet wird, vom lokalen Computer**
+**So bestimmen Sie, ob die Zertifikatkette, die zum Signieren des App-Pakets verwendet wird, vom lokalen Computer ausdrücklich als vertrauenswürdig eingestuft wird**
 
 1.  Führen Sie den folgenden Befehl aus:
 
@@ -96,52 +96,52 @@ Damit ein App-Paket bereitgestellt werden kann, darf es nicht nur im Kontext des
     CertUtil.exe -store TrustedPeople signingCertSerialNumber
     ```
 
-Wenn Sie die Seriennummer des Zertifikats nicht angeben, listet [certutil](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732443(v=ws.10)) alle Zertifikate auf, die vom lokalen Computer für diesen Speicher als vertrauenswürdig eingestuft werden.
+Wenn Sie die Seriennummer des Zertifikats nicht angeben, [listet Certutil](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732443(v=ws.10)) alle Zertifikate auf, die vom lokalen Computer für diesen Speicher als vertrauenswürdig eingestuft werden.
 
-Das Paket kann aufgrund von Fehlern bei der Zertifikat Verkettung möglicherweise nicht installiert werden, auch wenn das Signaturzertifikat nicht selbst signiert ist und sich das Stamm Zertifikat im Stamm Speicher des lokalen Computers befindet. In diesem Fall liegt möglicherweise ein Problem mit der Vertrauensstellung für die zwischen Zertifizierungsstellen vor. Weitere Informationen zu diesem Problem finden Sie unter [Arbeiten mit Zertifikaten](/previous-versions/dotnet/netframework-3.0/ms731899(v=vs.85)).
+Das Paket kann aufgrund von Zertifikatverkettungsfehlern möglicherweise nicht installiert werden, auch wenn das Signaturzertifikat nicht selbstsigniert ist und sich das Stammzertifikat im Stammspeicher des lokalen Computers befindet. In diesem Fall kann ein Problem mit der Vertrauensstellung für die Zwischenzertifizierungsstellen vorliegen. Weitere Informationen zu diesem Problem finden Sie unter [Arbeiten mit Zertifikaten.](/previous-versions/dotnet/netframework-3.0/ms731899(v=vs.85))
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie festgestellt haben, dass das Paket nicht bereitgestellt werden konnte, weil das Signaturzertifikat nicht vertrauenswürdig ist, installieren Sie das Paket nur, wenn Sie wissen, woher es stammt, und vertrauenswürdig
+Wenn Sie festgestellt haben, dass das Paket nicht bereitgestellt werden konnte, weil das Signaturzertifikat nicht vertrauenswürdig ist, installieren Sie das Paket nur, wenn Sie wissen, woher es stammt und Sie ihm vertrauen.
 
-Wenn Sie die APP manuell für die Installation (z. b. zum Installieren eines eigenen Test signierten App-Pakets) als vertrauenswürdig einstufen möchten, können Sie das Zertifikat manuell aus dem App-Paket der Zertifikat Vertrauensstellung des lokalen Computers hinzufügen.
+Wenn Sie der App für die Installation manuell vertrauen möchten (z. B. zum Installieren Ihres eigenen testsignten App-Pakets), können Sie das Zertifikat manuell der Zertifikatvertrauensstellung des lokalen Computers aus dem App-Paket hinzufügen.
 
-**So fügen Sie das Zertifikat manuell der Zertifikat Vertrauensstellung des lokalen Computers hinzu**
+**So fügen Sie das Zertifikat der Zertifikatvertrauensstellung auf dem lokalen Computer manuell hinzu**
 
-1.  Klicken Sie im Datei-Explorer mit der rechten Maustaste auf das App-Paket, und wählen Sie im Popup Kontextmenü **Eigenschaften** aus.
-2.  Klicken Sie im Dialogfeld **Eigenschaften** auf die Registerkarte **digitale Signaturen** .
-3.  Wählen Sie in der Liste Signatur die Signatur aus, und klicken Sie dann auf die Schaltfläche **Details** .
-4.  Klicken Sie im Dialogfeld " **digitale Signatur Details** " auf die Schaltfläche " **Zertifikat anzeigen** ".
-5.  Klicken Sie im Dialogfeld **Zertifikat** auf **Zertifikat installieren...** .
-6.  Wählen Sie im Zertifikat Import-Assistenten die Option **lokaler Computer** aus, und klicken Sie dann auf **weiter**. Zum Fortfahren müssen Sie Administratorrechte erteilen.
-7.  Wählen Sie **alle Zertifikate in folgendem Speicher speichern aus** , und navigieren Sie zum Speicher für **Vertrauenswürdige Personen** .
-8.  Klicken Sie auf **weiter** und dann auf **Fertig** stellen, um den Assistenten abzuschließen.
+1.  Klicken Sie im Datei-Explorer mit der rechten Maustaste auf das App-Paket, und wählen Sie im Kontextmenü des **Popupmenüs Eigenschaften** aus.
+2.  Wählen Sie im Dialogfeld **Eigenschaften** die Registerkarte **Digitale Signaturen** aus.
+3.  Wählen Sie in der Liste Signatur die Signatur aus, und klicken Sie dann auf die Schaltfläche **Details.**
+4.  Klicken Sie im Dialogfeld Details zur **digitalen Signatur** auf die Schaltfläche **Zertifikat anzeigen.**
+5.  Klicken Sie im Dialogfeld **Zertifikat** auf Das **Zertifikat installieren...** Schaltfläche.
+6.  Wählen Sie im Zertifikatimport-Assistenten die Option **Lokaler Computer aus,** und klicken Sie dann auf **Weiter.** Sie müssen Administratorrechte erteilen, um den Fortfahren zu ermöglichen.
+7.  Wählen **Sie Alle Zertifikate im folgenden Speicher speichern aus, und** navigieren Sie zum Speicher **Vertrauenswürdige** Personen.
+8.  Klicken **Sie auf Weiter** und dann auf Fertig **stellen,** um den Assistenten abzuschließen.
 
-Nach diesem manuellen hinzufügen können Sie sehen, dass das Zertifikat im Dialogfeld **Zertifikat** vertrauenswürdig ist.
+Nach diesem manuellen Hinzufügen können Sie sehen, dass das Zertifikat jetzt im Dialogfeld Zertifikat **als vertrauenswürdig eingestuft** wird.
 
-Sie können das Zertifikat entfernen, wenn es nicht mehr benötigt wird.
+Sie können das Zertifikat entfernen, nachdem Sie es nicht mehr benötigen.
 
 **So entfernen Sie das Zertifikat**
 
-1.  Führen Sie **Cmd.exe** als Administrator aus.
-2.  Führen Sie an der Administrator Eingabeaufforderung den folgenden Befehl aus:
+1.  Führen **Cmd.exe** als Administrator aus.
+2.  Führen Sie an der Administratorbefehlsaufforderung den folgenden Befehl aus:
 
     ``` syntax
     Certutil -store TrustedPeople
     ```
 
-3.  Suchen Sie nach der Seriennummer des Zertifikats, das Sie installiert haben. Diese Zahl ist die *CertID*.
+3.  Suchen Sie nach der Seriennummer des Zertifikats, das Sie installiert haben. Diese Zahl ist die *certID.*
 4.  Führen Sie den folgenden Befehl aus:
 
     ``` syntax
     Certutil -delStore TrustedPeople certID
     ```
 
-Es wird empfohlen, dass Sie dem [Zertifikat Speicher für vertrauenswürdige Stamm Zertifizierungs](/windows-hardware/drivers/install/trusted-root-certification-authorities-certificate-store)Stellen des lokalen Computers keine Stamm Zertifikate manuell hinzufügen. Mehrere Anwendungen, die mit Zertifikaten signiert sind, die mit demselben Stamm Zertifikat verkettet sind (z. b. Branchen Anwendungen), können effizienter sein als die Installation einzelner Zertifikate im Speicher für vertrauenswürdige Personen. Der Speicher für vertrauenswürdige Personen enthält Zertifikate, die standardmäßig als vertrauenswürdig eingestuft werden und daher nicht von höheren Autoritäten oder Zertifikat Vertrauens Listen oder-Ketten überprüft werden. Überlegungen zum Hinzufügen von Zertifikaten zum Zertifikat Speicher für vertrauenswürdige Stamm Zertifizierungsstellen finden Sie unter [bewährte Methoden für die Code Signatur](/previous-versions/windows/hardware/design/dn653556(v=vs.85)).
+Es wird empfohlen, das manuelle Hinzufügen von Stammzertifikaten zum lokalen Computer Vertrauenswürdige Stammzertifizierungsstellen Zertifikatszertifikats [Store.](/windows-hardware/drivers/install/trusted-root-certification-authorities-certificate-store) Mehrere Anwendungen, die mit Zertifikaten signiert sind, die mit demselben Stammzertifikat verkettet sind, z. B. Unternehmensanwendungen, können effizienter sein als die Installation einzelner Zertifikate im Speicher für vertrauenswürdige Personen. Der Speicher für vertrauenswürdige Personen enthält Zertifikate, die standardmäßig als vertrauenswürdig angesehen werden und daher nicht von höheren Zertifizierungsstellen oder Zertifikatvertrauenslisten oder -ketten überprüft werden. Überlegungen zum Hinzufügen von Zertifikaten zum zertifikatbasierten Vertrauenswürdige Stammzertifizierungsstellen finden Sie unter Bewährte Methoden für die [Codesignatur.](/previous-versions/windows/hardware/design/dn653556(v=vs.85))
 
 ## <a name="security-considerations"></a>Überlegungen zur Sicherheit
 
-Wenn Sie einem Zertifikat [Speicher des lokalen](/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores)Computers ein Zertifikat hinzufügen, haben Sie Auswirkungen auf die Zertifikats Vertrauensstellung aller Benutzer auf dem Computer. Es wird empfohlen, dass Sie alle Code Signatur Zertifikate installieren, die Sie zum Testen von App-Paketen im Zertifikat Speicher für vertrauenswürdige Personen benötigen. Entfernen Sie diese Zertifikate unverzüglich, wenn Sie nicht mehr benötigt werden, um zu verhindern, dass Sie zur Gefährdung der System Vertrauensstellung verwendet werden. Wenn Sie eigene Test Zertifikate zum Signieren von App-Paketen erstellen, empfiehlt es sich auch, die dem Test Zertifikat zugeordneten Berechtigungen einzuschränken. Informationen zum Erstellen von Test Zertifikaten zum Signieren von App-Paketen finden [Sie unter Erstellen eines App-Paket-Signatur Zertifikats](how-to-create-a-package-signing-certificate.md).
+Durch das Hinzufügen eines Zertifikats [zu zertifikatspeichern](/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores)auf dem lokalen Computer wirken Sie sich auf die Zertifikatvertrauensstellung aller Benutzer auf dem Computer aus. Es wird empfohlen, alle Codesignaturzertifikate, die Sie zum Testen von App-Paketen wünschen, im Zertifikatspeicher für vertrauenswürdige Personen zu installieren. Entfernen Sie diese Zertifikate umgehend, wenn sie nicht mehr benötigt werden, um zu verhindern, dass sie verwendet werden, um die Systemvertrauensstellung zu gefährden. Wenn Sie eigene Testzertifikate zum Signieren von App-Paketen erstellen, wird auch empfohlen, die Berechtigungen einzuschränken, die dem Testzertifikat zugeordnet sind. Informationen zum Erstellen von Testzertifikaten zum Signieren von App-Paketen finden Sie unter Erstellen eines [App-Paketsignaturzertifikats.](how-to-create-a-package-signing-certificate.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -150,7 +150,7 @@ Wenn Sie einem Zertifikat [Speicher des lokalen](/windows-hardware/drivers/insta
 **Beispiele**
 </dt> <dt>
 
-[App-Paket erstellen (Beispiel)](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/AppxPackingCreateAppx)
+[Beispiel zum Erstellen eines App-Pakets](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/AppxPackingCreateAppx)
 </dt> <dt>
 
 **Konzepte**
@@ -159,7 +159,7 @@ Wenn Sie einem Zertifikat [Speicher des lokalen](/windows-hardware/drivers/insta
 [Problembehandlung beim Packen, Bereitstellen und Abfragen von Windows-Apps](troubleshooting.md)
 </dt> <dt>
 
-[Certutil-Aufgaben für die Verwaltung von Zertifikaten](/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
+[Certutil-Aufgaben zum Verwalten von Zertifikaten](/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
 </dt> </dl>
 
  

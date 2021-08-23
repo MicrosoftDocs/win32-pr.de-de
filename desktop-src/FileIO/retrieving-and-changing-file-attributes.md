@@ -1,27 +1,27 @@
 ---
-description: Beispielcode, der zeigt, wie die Funktion getfileattributesex zum Abrufen von Dateiattributen verwendet wird.
+description: Beispielcode, der zeigt, wie die GetFileAttributesEx-Funktion zum Abrufen von Dateiattributen verwendet wird.
 ms.assetid: f6eaea8a-0cc2-4fb6-bec5-7fb12b20c075
 title: Abrufen und Ändern von Dateiattributen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c980ddd6390f016b2057392f42f6bf645859307
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0d2609030d1657b78c266ed6b10841159e0df4d40a2e3b07b0fce42e98b45d54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356960"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119015138"
 ---
 # <a name="retrieving-and-changing-file-attributes"></a>Abrufen und Ändern von Dateiattributen
 
-Eine Anwendung kann die Dateiattribute mithilfe der [**getfileattribute**](/windows/desktop/api/FileAPI/nf-fileapi-getfileattributesa) -Funktion oder der [**getfileattributesex**](/windows/desktop/api/FileAPI/nf-fileapi-getfileattributesexa) -Funktion abrufen. Die Funktionen "Funktion [**" und "**](/windows/desktop/api/FileAPI/nf-fileapi-createfilea) [**setfileattribute**](/windows/desktop/api/FileAPI/nf-fileapi-setfileattributesa) " können viele Attribute festlegen. Allerdings können Anwendungen nicht alle Attribute festlegen.
+Eine Anwendung kann die Dateiattribute mithilfe der [**GetFileAttributes-**](/windows/desktop/api/FileAPI/nf-fileapi-getfileattributesa) oder [**GetFileAttributesEx-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-getfileattributesexa) abrufen. Die Funktionen [**CreateFile**](/windows/desktop/api/FileAPI/nf-fileapi-createfilea) und [**SetFileAttributes**](/windows/desktop/api/FileAPI/nf-fileapi-setfileattributesa) können viele der Attribute festlegen. Anwendungen können jedoch nicht alle Attribute festlegen.
 
-Das Codebeispiel in diesem Thema verwendet die [**CopyFile**](/windows/desktop/api/WinBase/nf-winbase-copyfile) -Funktion, um alle Textdateien (txt-Dateien) im aktuellen Verzeichnis in ein neues Verzeichnis mit schreibgeschützten Dateien zu kopieren. Dateien im neuen Verzeichnis werden bei Bedarf in schreibgeschützt geändert.
+Im Codebeispiel in diesem Thema wird die [**CopyFile-Funktion**](/windows/desktop/api/WinBase/nf-winbase-copyfile) verwendet, um alle Textdateien (.txt) im aktuellen Verzeichnis in ein neues Verzeichnis schreibgeschützter Dateien zu kopieren. Dateien im neuen Verzeichnis werden bei Bedarf in schreibgeschützte Dateien geändert.
 
-Die Anwendung erstellt das Verzeichnis, das als Parameter angegeben wird, mithilfe der Funktion " [**kreatedirectory**](/windows/desktop/api/FileAPI/nf-fileapi-createdirectorya) ". Das Verzeichnis darf nicht bereits vorhanden sein.
+Die Anwendung erstellt das als Parameter angegebene Verzeichnis mithilfe der [**CreateDirectory-Funktion.**](/windows/desktop/api/FileAPI/nf-fileapi-createdirectorya) Das Verzeichnis darf nicht bereits vorhanden sein.
 
-Die Anwendung durchsucht das aktuelle Verzeichnis nach allen Textdateien mithilfe der Funktionen " [**FindFirstFile**](/windows/desktop/api/FileAPI/nf-fileapi-findfirstfilea) " und " [**FindNextFile**](/windows/desktop/api/FileAPI/nf-fileapi-findnextfilea) ". Jede Textdatei wird in das \\ textro-Verzeichnis kopiert. Nachdem eine Datei kopiert wurde, wird von der [**getfileattribute**](/windows/desktop/api/FileAPI/nf-fileapi-getfileattributesa) -Funktion bestimmt, ob eine Datei schreibgeschützt ist. Wenn die Datei nicht schreibgeschützt ist, ändert die Anwendung die Verzeichnisse in \\ textro und konvertiert die kopierte Datei mithilfe der [**setfileattributorfunktion**](/windows/desktop/api/FileAPI/nf-fileapi-setfileattributesa) in schreibgeschützt.
+Die Anwendung durchsucht das aktuelle Verzeichnis mithilfe der Funktionen [**FindFirstFile**](/windows/desktop/api/FileAPI/nf-fileapi-findfirstfilea) und [**FindNextFile**](/windows/desktop/api/FileAPI/nf-fileapi-findnextfilea) nach allen Textdateien. Jede Textdatei wird in das \\ TextRO-Verzeichnis kopiert. Nachdem eine Datei kopiert wurde, bestimmt die [**GetFileAttributes-Funktion,**](/windows/desktop/api/FileAPI/nf-fileapi-getfileattributesa) ob eine Datei schreibgeschützt ist. Wenn die Datei nicht schreibgeschützt ist, ändert die Anwendung die Verzeichnisse in \\ TextRO und konvertiert die kopierte Datei mithilfe der [**SetFileAttributes-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-setfileattributesa) in schreibgeschützt.
 
-Nachdem alle Textdateien im aktuellen Verzeichnis kopiert wurden, schließt die Anwendung das Such Handle mithilfe der [**FindClose**](/windows/desktop/api/FileAPI/nf-fileapi-findclose) -Funktion.
+Nachdem alle Textdateien im aktuellen Verzeichnis kopiert wurden, schließt die Anwendung das Suchhandle mithilfe der [**Funktion FindClose.**](/windows/desktop/api/FileAPI/nf-fileapi-findclose)
 
 
 ```C++
@@ -113,7 +113,7 @@ void _tmain(int argc, TCHAR* argv[])
 
 <dl> <dt>
 
-[**Datei Attribut Konstanten**](file-attribute-constants.md)
+[**Dateiattributkonstanten**](file-attribute-constants.md)
 </dt> <dt>
 
 [Dateinamen, Pfade und Namespaces](naming-a-file.md)

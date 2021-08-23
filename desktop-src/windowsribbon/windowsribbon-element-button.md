@@ -1,9 +1,9 @@
 ---
-title: Button-Element (Windows Ribbon Framework)
+title: Schaltflächenelement (Windows Menübandframework)
 description: Stellt ein Schaltflächen-Steuerelement dar.
 ms.assetid: a17d4dd8-9b0d-4b4a-93f4-f2a8c008fc58
 keywords:
-- Schaltflächenelement Windows-Menüband
+- Schaltflächenelement Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 40236b60a9fe9c72dd35d67fcf7c98bc188938af
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: ccd6084fef3c06c62e5dc780f526965a24966e9d36b5c249f57984921d9276c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443571"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964299"
 ---
 # <a name="button-element"></a>Button-Element
 
 Stellt ein [Schaltflächen-Steuerelement](windowsribbon-controls-button.md) dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <Button
@@ -47,9 +47,9 @@ Stellt ein [Schaltflächen-Steuerelement](windowsribbon-controls-button.md) dar.
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -103,7 +103,7 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann für jedes [**SplitButton.ButtonItem-Element nur einmal auftreten.**](windowsribbon-element-splitbutton-buttonitem.md)
 
@@ -115,7 +115,7 @@ Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element
 
 Im folgenden Beispiel wird das grundlegende Markup für die **Schaltfläche veranschaulicht.**
 
-In diesem Codeabschnitt werden die **Button** Command-Deklarationen mit einer zugeordneten [**Gruppe**](windowsribbon-element-group.md) angezeigt, die als übergeordneter Container für das **Button-Element** fungiert.
+Dieser Codeabschnitt zeigt die **Button** Command-Deklarationen mit einer zugeordneten [**Gruppe,**](windowsribbon-element-group.md) die als übergeordneter Container für das **Button-Element** fungiert.
 
 
 ```XML
@@ -209,7 +209,7 @@ In diesem Codeabschnitt werden die **Button-Steuerelementdeklarationen** angezei
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-description: 'D3DXQuaternionSlerp-Funktion (D3dx9math.h): Interpoliert mithilfe der pherischen linearen Interpolation zwischen zwei Quaternionen.'
+description: 'D3DXQuaternionSlerp-Funktion (D3dx9math.h): Interpoliert zwischen zwei Quaternionen mithilfe der pherischen linearen Interpolation.'
 ms.assetid: 94a989c8-fa6b-4852-9aa3-e55ad814ffd7
 title: D3DXQuaternionSlerp-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: fb9110da7fae4ebbf4609d361124dbbcdedfe59b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 842ccd74ef7236af7a943a43c0c2701140eb897dff535023a78311dd049f06b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093938"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119044678"
 ---
 # <a name="d3dxquaternionslerp-function-d3dx9mathh"></a>D3DXQuaternionSlerp-Funktion (D3dx9math.h)
 
@@ -85,7 +85,7 @@ Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
 Zeiger auf eine [**D3DXQUATERNION-Struktur,**](d3dxquaternion.md) die das Ergebnis der Interpolation ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXQuaternionSlerp-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
@@ -95,7 +95,7 @@ Verwenden [**Sie D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für all
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

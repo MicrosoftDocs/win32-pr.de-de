@@ -1,9 +1,9 @@
 ---
-title: TB_SETPARENT Meldung (kommstrg. h)
-description: Legt das Fenster fest, in das das Symbolleisten-Steuerelement Benachrichtigungs Meldungen sendet.
+title: TB_SETPARENT (Commctrl.h)
+description: Legt das Fenster fest, an das das Symbolleisten-Steuerelement Benachrichtigungsmeldungen sendet.
 ms.assetid: 4863bd9f-021b-4295-9483-459fc19325d9
 keywords:
-- Windows-Steuerelemente für TB_SETPARENT Meldung
+- TB_SETPARENT von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f8137406c8e6854f86ed81d8d6b96293074ae67b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cd97cdab230317feea65f2bffce74a7dec34ee336d69bb46ec4c6963ca9b3eff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859205"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078144"
 ---
-# <a name="tb_setparent-message"></a>TB- \_ SetParent-Nachricht
+# <a name="tb_setparent-message"></a>TB \_ SETPARENT-Nachricht
 
-Legt das Fenster fest, in das das Symbolleisten-Steuerelement Benachrichtigungs Meldungen sendet.
+Legt das Fenster fest, an das das Symbolleisten-Steuerelement Benachrichtigungsmeldungen sendet.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt das Fenster fest, in das das Symbolleisten-Steuerelement Benachrichtigungs 
 *wParam* 
 </dt> <dd>
 
-Handle für das Fenster, um Benachrichtigungs Meldungen zu empfangen.
+Handle für das Fenster zum Empfangen von Benachrichtigungsmeldungen.
 
 </dd> <dt>
 
@@ -41,11 +41,11 @@ Handle für das Fenster, um Benachrichtigungs Meldungen zu empfangen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein Handle für das vorherige Benachrichtigungsfenster, oder **null** , wenn kein vorheriges Benachrichtigungsfenster vorhanden ist.
+Der Rückgabewert ist ein Handle für das vorherige Benachrichtigungsfenster oder **NULL,** wenn es kein vorheriges Benachrichtigungsfenster gibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **TB- \_ SetParent** -Nachricht ändert das übergeordnete Fenster nicht, das beim Erstellen des Steuer Elements angegeben wurde. Wenn Sie die [**GetParent**](/windows/desktop/api/winuser/nf-winuser-getparent) -Funktion für ein ToolBar-Steuerelement aufrufen, wird das tatsächliche übergeordnete Fenster zurückgegeben, nicht das in **TB \_ SetParent** angegebene Fenster. Um das übergeordnete Fenster des Steuer Elements zu ändern, müssen Sie die [**SetParent**](/windows/desktop/api/winuser/nf-winuser-setparent) -Funktion aufrufen.
+Die **TB \_ SETPARENT-Meldung** ändert nicht das übergeordnete Fenster, das beim Erstellen des Steuerelements angegeben wurde. Durch aufrufen [**der GetParent-Funktion**](/windows/desktop/api/winuser/nf-winuser-getparent) für ein Symbolleisten-Steuerelement wird das eigentliche übergeordnete Fenster und nicht das in **TB \_ SETPARENT** angegebene Fenster zurückgeben. Um das übergeordnete Fenster des Steuerelements zu ändern, rufen Sie die [**SetParent-Funktion**](/windows/desktop/api/winuser/nf-winuser-setparent) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Die **TB- \_ SetParent** -Nachricht ändert das übergeordnete Fenster nicht, da
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

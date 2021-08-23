@@ -1,11 +1,11 @@
 ---
-title: Mediacollection. getByName-Methode
+title: MediaCollection.getByName-Methode
 description: Die getByName-Methode ruft eine Wiedergabeliste der Medienelemente mit dem angegebenen Namen ab.
 ms.assetid: f9395a4f-06d6-438b-b7c5-7a063abdf59f
 keywords:
-- getByName-Methode, Windows-Media Player
-- getByName-Methode, Windows Media Player, mediacollection-Klasse
-- Mediacollection-Klasse, Windows Media Player, getByName-Methode
+- getByName-Windows Media Player
+- getByName-Methode Windows Media Player , MediaCollection-Klasse
+- MediaCollection-Klasse Windows Media Player , getByName-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 01a3fc6e34b508fa094f79d2fbbd1d44ab712789
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 15063a9d544f6ebe55e66513b79aeead7c94e8aeffed7571ccb2ac574e1cb876
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366032"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996290"
 ---
-# <a name="mediacollectiongetbyname-method"></a>Mediacollection. getByName-Methode
+# <a name="mediacollectiongetbyname-method"></a>MediaCollection.getByName-Methode
 
-Die **getByName** -Methode ruft eine Wiedergabeliste der Medienelemente mit dem angegebenen Namen ab.
+Die **getByName-Methode** ruft eine Wiedergabeliste der Medienelemente mit dem angegebenen Namen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ retVal = MediaCollection.getByName(
 
 <dl> <dt>
 
-*Name* \[ in\]
+*Name* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Namen enthält.
+**Zeichenfolge,** die den Namen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt ein **Wiedergabe** Listen Objekt zurück.
+Diese Methode gibt ein **Playlist-Objekt** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *mediacollection* verwendet. **getByName** , um drei Elemente aus der Bibliothek abzurufen. Jedes Element wird dann an die aktuelle Wiedergabeliste angehängt. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript *MediaCollection verwendet.* **getByName** zum Abrufen von drei Elementen aus der Bibliothek. Jedes Element wird dann an die aktuelle Wiedergabeliste angefügt. Das **Player-Objekt** wurde mit ID="Player" erstellt.
 
 
 ```JScript
@@ -94,7 +94,7 @@ Player.currentPlaylist.appendItem(Three.item(0));
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -103,16 +103,16 @@ Player.currentPlaylist.appendItem(Three.item(0));
 
 <dl> <dt>
 
-[**Mediacollection-Objekt**](mediacollection-object.md)
+[**MediaCollection-Objekt**](mediacollection-object.md)
 </dt> <dt>
 
-[**Wiedergabelisten Objekt**](playlist-object.md)
+[**Wiedergabelistenobjekt**](playlist-object.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

@@ -1,28 +1,28 @@
 ---
-description: In diesem Abschnitt wird erläutert, wie die folgenden Aufgaben im Zusammenhang mit Fenster Eigenschaften ausgeführt werden.
+description: In diesem Abschnitt wird erläutert, wie die folgenden Aufgaben ausgeführt werden, die Fenstereigenschaften zugeordnet sind.
 ms.assetid: cdf196ec-300c-4c7b-8a4f-68088c4a2507
-title: Verwenden von Fenster Eigenschaften
+title: Verwenden von Fenstereigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 736682eb34191a061aa9753ef9d5e8c7e366fbe3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b59fcb4cb0346554ee2df5c1b2fc92df7675cd61d11799b891156b13f26fb213
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349240"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119028268"
 ---
-# <a name="using-window-properties"></a>Verwenden von Fenster Eigenschaften
+# <a name="using-window-properties"></a>Verwenden von Fenstereigenschaften
 
-In diesem Abschnitt wird erläutert, wie die folgenden Aufgaben im Zusammenhang mit Fenster Eigenschaften ausgeführt werden.
+In diesem Abschnitt wird erläutert, wie die folgenden Aufgaben ausgeführt werden, die Fenstereigenschaften zugeordnet sind.
 
--   [Hinzufügen einer Fenster Eigenschaft](#adding-a-window-property)
--   [Abrufen einer Fenster Eigenschaft](#retrieving-a-window-property)
--   [Auflisten von Fenster Eigenschaften für ein bestimmtes Fenster](#listing-window-properties-for-a-given-window)
--   [Löschen einer Fenster Eigenschaft](#deleting-a-window-property)
+-   [Hinzufügen einer Fenstereigenschaft](#adding-a-window-property)
+-   [Abrufen einer Fenstereigenschaft](#retrieving-a-window-property)
+-   [Auflisten von Fenstereigenschaften für ein bestimmtes Fenster](#listing-window-properties-for-a-given-window)
+-   [Löschen einer Fenstereigenschaft](#deleting-a-window-property)
 
-## <a name="adding-a-window-property"></a>Hinzufügen einer Fenster Eigenschaft
+## <a name="adding-a-window-property"></a>Hinzufügen einer Fenstereigenschaft
 
-Im folgenden Beispiel wird ein Symbol und dann ein Cursor geladen, und es wird Speicher für einen Puffer zugewiesen. Das Beispiel verwendet dann die [**setprop**](/windows/win32/api/winuser/nf-winuser-setpropa) -Funktion, um die resultierenden Symbole, Cursor und Speicher Handles als Fenster Eigenschaften für das Fenster zuzuweisen, das durch die Anwendungs definierte Variable hwndsubclass identifiziert wird. Die Eigenschaften werden durch das Zeichen folgen \_ Symbol, den Prop \_ -Cursor und den Prop- \_ Puffer identifiziert.
+Im folgenden Beispiel werden ein Symbol und dann ein Cursor geladen und Arbeitsspeicher für einen Puffer belegt. Im Beispiel wird dann die [**SetProp-Funktion**](/windows/win32/api/winuser/nf-winuser-setpropa) verwendet, um die resultierenden Symbol-, Cursor- und Arbeitsspeicherhandles als Fenstereigenschaften für das Fenster zuzuweisen, das durch die anwendungsdefinierte Variable hwndSubclass identifiziert wird. Die Eigenschaften werden durch die Zeichenfolgen PROP \_ ICON, PROP \_ CURSOR und PROP \_ BUFFER identifiziert.
 
 
 ```
@@ -65,9 +65,9 @@ SetProp(hwndSubclass, "PROP_BUFFER", hMem);
 
 
 
-## <a name="retrieving-a-window-property"></a>Abrufen einer Fenster Eigenschaft
+## <a name="retrieving-a-window-property"></a>Abrufen einer Fenstereigenschaft
 
-Ein Fenster kann Handles für seine Fenster Eigenschaften Daten erstellen und die Daten für jeden beliebigen Zweck verwenden. Im folgenden Beispiel wird [**getprop**](/windows/win32/api/winuser/nf-winuser-getpropa) verwendet, um Handles für die durch das Prop \_ -Symbol, den Prop \_ -Cursor und den Prop-Puffer identifizierten Fenster Eigenschaften abzurufen \_ . Im Beispiel wird dann der Inhalt des neu erhaltenen Speicherpuffers, Cursors und Symbols im Client Bereich des Fensters angezeigt.
+Ein Fenster kann Handles für seine Fenstereigenschaftsdaten erstellen und die Daten für beliebige Zwecke verwenden. Im folgenden Beispiel wird [**GetProp**](/windows/win32/api/winuser/nf-winuser-getpropa) verwendet, um Handles für die Fenstereigenschaften abzurufen, die durch PROP ICON, PROP CURSOR und PROP BUFFER identifiziert \_ \_ \_ werden. Im Beispiel werden dann der Inhalt des neu abgerufenen Speicherpuffers, des Cursors und des Symbols im Clientbereich des Fensters angezeigt.
 
 
 ```
@@ -110,9 +110,9 @@ TextOut(hdc, 10, 10, tchBuffer, *nSize);
 
 
 
-## <a name="listing-window-properties-for-a-given-window"></a>Auflisten von Fenster Eigenschaften für ein bestimmtes Fenster
+## <a name="listing-window-properties-for-a-given-window"></a>Auflisten von Fenstereigenschaften für ein bestimmtes Fenster
 
-Im folgenden Beispiel listet die [**enumpropsex**](/windows/win32/api/winuser/nf-winuser-enumpropsexa) -Funktion die Zeichen folgen Bezeichner der Fenster Eigenschaften für das Fenster auf, das durch die Anwendungs definierte Variable hwndsubclass identifiziert wird. Diese Funktion basiert auf der Anwendungs definierten Rückruffunktion winpropproc, um die Zeichen folgen im Client Bereich des Fensters anzuzeigen.
+Im folgenden Beispiel listet die [**EnumPropsEx-Funktion**](/windows/win32/api/winuser/nf-winuser-enumpropsexa) die Zeichenfolgenbezeichner der Fenstereigenschaften für das Fenster auf, das durch die anwendungsdefinierte Variable hwndSubclass identifiziert wird. Diese Funktion verwendet die anwendungsdefinierte Rückruffunktion WinPropProc, um die Zeichenfolgen im Clientbereich des Fensters anzuzeigen.
 
 
 ```
@@ -155,9 +155,9 @@ BOOL CALLBACK WinPropProc(
 
 
 
-## <a name="deleting-a-window-property"></a>Löschen einer Fenster Eigenschaft
+## <a name="deleting-a-window-property"></a>Löschen einer Fenstereigenschaft
 
-Wenn ein Fenster zerstört wird, muss es alle festgelegten Fenster Eigenschaften zerstören. Im folgenden Beispiel werden die [**enumpropsex**](/windows/win32/api/winuser/nf-winuser-enumpropsexa) -Funktion und die Anwendungs definierte Rückruffunktion Delta verwendet, um die Eigenschaften zu zerstören, die dem durch die Anwendungs definierten hwndsubclass-Variablen identifizierten Fenster zugeordnet sind. Die Rückruffunktion, die die [**removeprop**](/windows/win32/api/winuser/nf-winuser-removepropa) -Funktion verwendet, wird ebenfalls angezeigt.
+Wenn ein Fenster zerstört wird, muss es alle von ihm festgelegten Fenstereigenschaften zerstören. Im folgenden Beispiel werden die [**EnumPropsEx-Funktion**](/windows/win32/api/winuser/nf-winuser-enumpropsexa) und die anwendungsdefinierte Rückruffunktion DelPropProc verwendet, um die Eigenschaften zu zerstören, die dem von der anwendungsdefinierten hwndSubclass-Variablen identifizierten Fenster zugeordnet sind. Die Rückruffunktion, die die [**RemoveProp-Funktion**](/windows/win32/api/winuser/nf-winuser-removepropa) verwendet, wird ebenfalls angezeigt.
 
 
 ```

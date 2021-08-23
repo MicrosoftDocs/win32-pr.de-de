@@ -1,7 +1,7 @@
 ---
-description: Die Transform-Methode transformiert ein Beispiel direkt.
+description: Die Transform-Methode transformiert ein Beispiel an Ort und Stelle.
 ms.assetid: 2268041b-70d4-48a9-9bb8-4ab921cce649
-title: Ctransinplacefilter. Transform-Methode (transip. h)
+title: CTransInPlaceFilter.Transform-Methode (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d5b84f326807f730745268a217b6066dacb9aaa7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 224052bc882792f57eedf9ea58842b953e5853012d3581ef14cad58467b614b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372511"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953399"
 ---
-# <a name="ctransinplacefiltertransform-method"></a>Ctransinplacefilter. Transform-Methode
+# <a name="ctransinplacefiltertransform-method"></a>CTransInPlaceFilter.Transform-Methode
 
-Die- `Transform` Methode transformiert ein Beispiel direkt.
+Die `Transform` -Methode transformiert ein Beispiel an Ort und Stelle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,33 +42,33 @@ virtual HRESULT Transform(
 
 <dl> <dt>
 
-*psample* 
+*pSample* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels.
+Zeiger auf die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) des Beispiels.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                            |
 |-----------------------------------------------------------------------------------------|----------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl> | Stellen Sie dieses Beispiel nicht bereit.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Übermitteln Sie dieses Beispiel nicht.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode muss von der abgeleiteten Klasse implementiert werden. Transformieren Sie die Beispiel Daten an Ort und Stelle. Wenn der Filter zwei Zuweisungen verwendet, kopiert er die Daten aus dem Eingabe Beispiel in ein neues Beispiel und übergibt die Kopie an diese Methode.
+Die abgeleitete Klasse muss diese Methode implementieren. Transformieren Sie die Beispieldaten. Wenn der Filter zwei Zuweisungen verwendet, kopiert er die Daten aus dem Eingabebeispiel in ein neues Beispiel und übergibt die Kopie an diese Methode.
 
-Wenn der Filter dieses Beispiel nicht bereitstellt (z. b. zur Unterstützung der Qualitätskontrolle), sollte die Methode den Wert S false zurückgeben \_ .
+Wenn der Filter dieses Beispiel nicht bereitstellen soll (z. B. zur Unterstützung der Qualitätskontrolle), sollte die Methode S \_ FALSE zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,16 +76,16 @@ Wenn der Filter dieses Beispiel nicht bereitstellt (z. b. zur Unterstützung der
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransinplacefilter-Klasse**](ctransinplacefilter.md)
+[**CTransInPlaceFilter-Klasse**](ctransinplacefilter.md)
 </dt> </dl>
 
  

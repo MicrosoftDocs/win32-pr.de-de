@@ -1,27 +1,27 @@
 ---
-title: Verwenden von Grund leisten-Steuerelementen
-description: Dieser Abschnitt enthält Themen, die das Erstellen und Verwenden von Grund leisten-Steuerelementen veranschaulichen.
+title: Verwenden von Rebar-Steuerelementen
+description: Dieser Abschnitt enthält Themen, die veranschaulichen, wie Sie Steuerelemente für die Neuleiste erstellen und verwenden.
 ms.assetid: b821216f-609e-41a4-8d45-69609f3572bf
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f9174a4ee05b966037bb30be3e796bcc2c3e00da
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 24ed7d53fd09c03598b40414a4683a9f278797420f76c85150f63822b53fc793
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103730505"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077824"
 ---
-# <a name="using-rebar-controls"></a>Verwenden von Grund leisten-Steuerelementen
+# <a name="using-rebar-controls"></a>Verwenden von Rebar-Steuerelementen
 
-Dieser Abschnitt enthält Themen, die das Erstellen und Verwenden von Grund leisten-Steuerelementen veranschaulichen.
+Dieser Abschnitt enthält Themen, die veranschaulichen, wie Sie Steuerelemente für die Neuleiste erstellen und verwenden.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Thema                                                                | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Erstellen von Grund leisten-Steuerelementen](create-rebar-controls.md)<br/> | Eine Anwendung erstellt durch Aufrufen der [**CreateWindowEx**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) -Funktion ein Grund leisten-Steuerelement, wobei [**rebarclassname**](common-control-window-classes.md) als Fenster Klasse angegeben wird. Die Anwendung muss zuerst die Fenster Klasse registrieren, indem Sie die [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) -Funktion aufrufen und \_ dabei den Wert für das cool-Klassen- \_ Bit in der zugehörigen [**InitCommonControlsEx**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) -Struktur angibt. <br/> |
+| [Erstellen von Neuleistensteuerelementen](create-rebar-controls.md)<br/> | Eine Anwendung erstellt ein Rebar-Steuerelement, indem sie die [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) aufruft und [**REBARCLASSNAME**](common-control-window-classes.md) als Fensterklasse angibt. Die Anwendung muss zuerst die Window-Klasse registrieren, indem sie die [**InitCommonControlsEx-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) aufruft und dabei das COOL CLASSES-Bit VON COOL \_ \_ INITCOMMONCONTROLSEX in der zugehörigen [**INITCOMMONCONTROLSEX-Struktur**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) angibt. <br/> |
 
 
 

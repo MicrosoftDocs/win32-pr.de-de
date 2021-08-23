@@ -1,7 +1,7 @@
 ---
-description: Die mxdc \_ PrintTicket \_ Escape \_ t-Struktur ist eine mxdc-Escape-Header-t-Struktur, die \_ \_ \_ mit einer mxdc \_ PrintTicket \_ Data T-Struktur verkettet ist \_ .
+description: Die MXDC PRINTTICKET ESCAPE T-Struktur ist eine MXDC ESCAPE HEADER T-Struktur, die mit einer \_ \_ \_ \_ \_ \_ MXDC \_ PRINTTICKET \_ DATA \_ T-Struktur verkettet ist.
 ms.assetid: 79b4f830-3e3f-4c6f-9e61-98e8bf6e2824
-title: MXDC_PRINTTICKET_ESCAPE_T-Struktur (mxdc. h)
+title: MXDC_PRINTTICKET_ESCAPE_T -Struktur (Mxdc.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - mxdc.h
-ms.openlocfilehash: 158ee2038c83b74077d00e6922b2c7050b76bc62
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eca1858bbbf09d4e3c3af8a91f9bb91550eddfd703f59e86112e65c56a43d553
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369843"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119099064"
 ---
-# <a name="mxdc_printticket_escape_t-structure"></a>Mxdc \_ PrintTicket \_ Escape- \_ T-Struktur
+# <a name="mxdc_printticket_escape_t-structure"></a>MXDC \_ PRINTTICKET \_ ESCAPE \_ T-Struktur
 
-Die **mxdc \_ PrintTicket \_ Escape \_ t** -Struktur ist eine [**mxdc- \_ Escape-Header- \_ \_ t**](mxdcescapeheader.md) -Struktur, die mit einer [**mxdc \_ PrintTicket \_ Data \_ T**](mxdcprintticketpassthrough.md) -Struktur verkettet ist.
+Die **MXDC \_ PRINTTICKET \_ ESCAPE \_ T-Struktur** ist eine [**MXDC ESCAPE HEADER \_ \_ \_ T-Struktur,**](mxdcescapeheader.md) die mit einer [**MXDC \_ PRINTTICKET DATA \_ \_ T-Struktur verkettet**](mxdcprintticketpassthrough.md) ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,25 +40,25 @@ typedef struct tagMxdcPrintTicketEscape {
 
 <dl> <dt>
 
-**mxdcescape**
+**mxdcEscape**
 </dt> <dd>
 
-Eine [**mxdc- \_ Escape- \_ Header- \_ T**](mxdcescapeheader.md) -Struktur, deren **Opcode** -Member auf mxdcop \_ PrintTicket \_ Fixed \_ Page, mxdcop \_ PrintTicket \_ Fixed \_ doc oder mxdcop \_ PrintTicket \_ Fixed doc (Fixed \_ doc \_ ) festgelegt ist.
+Eine [**MXDC \_ ESCAPE HEADER \_ \_ T-Struktur,**](mxdcescapeheader.md) deren **opCode-Member** auf \_ MXDCOP PRINTTICKET \_ FIXED \_ PAGE, MXDCOP PRINTTICKET FIXED DOC oder \_ \_ \_ MXDCOP \_ PRINTTICKET FIXED DOC \_ \_ \_ SEQ festgelegt ist.
 
 </dd> <dt>
 
-**printticketdata**
+**printTicketData**
 </dt> <dd>
 
-Eine [**mxdc \_ PrintTicket \_ Data \_ T**](mxdcprintticketpassthrough.md) -Struktur, die das Druck Ticket enthält.
+Eine [**MXDC \_ PRINTTICKET \_ DATA \_ T-Struktur,**](mxdcprintticketpassthrough.md) die das Druckticket enthält.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird in den *lpszindata* -Parameter der [**extescape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) -Funktion übergeben, wenn diese Funktion mit der escapeescapezeichen [**mxdc \_**](mxdc-escape.md) aufgerufen wird und das **Opcode** -Element der [**mxdc- \_ Escape-Header- \_ \_ T**](mxdcescapeheader.md) -Struktur **mxdcop \_ PrintTicket \_ Fixed \_ Page**, **mxdcop \_ PrintTicket Fixed \_ \_ doc** oder **mxdcop \_ PrintTicket \_ Fixed \_ doc \_** Das Ergebnis ist, das Druck Ticket in die XPS-Dokument Datei zu schreiben.
+Diese Struktur wird im *lpszInData-Parameter* der [**ExtEscape-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) übergeben, wenn diese Funktion mit dem ESCAPE-Escape-Element [**MXDC \_**](mxdc-escape.md) aufgerufen wird und der **opCode-Member** der [**MXDC \_ ESCAPE HEADER \_ \_ T-Struktur**](mxdcescapeheader.md) **MXDCOP \_ PRINTTICKET FIXED \_ \_ PAGE,** **MXDCOP \_ PRINTTICKET FIXED \_ \_ DOC** oder **MXDCOP \_ PRINTTICKET FIXED DOC \_ \_ \_ SEQ ist.** Das Ergebnis ist das Schreiben des Drucktickets in die XPS-Dokumentdatei.
 
-Weisen Sie der Escapesequenz wie unten gezeigt den Speicher zu, legen Sie die Felder nach Bedarf fest, und nennen Sie dann [**extescape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape).
+Ordnen Sie arbeitsspeicher für das Escape-Escapefeld zu, wie unten gezeigt, legen Sie die Felder nach Bedarf fest, und rufen Sie [**dann ExtEscape auf.**](/windows/desktop/api/Wingdi/nf-wingdi-extescape)
 
 
 ```C++
@@ -78,7 +78,7 @@ P_MXDC_PRINTTICKET_ESCAPE_T pS0PageEscapeData =
 
 
 
-Wenn **Opcode** auf **mxdcop \_ PrintTicket \_ Fixed \_ Page** festgelegt ist, muss der [**extescape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) -Aufrufe zwischen einem Aufrufen von [**Startpage**](/windows/desktop/api/Wingdi/nf-wingdi-startpage) und einem Aufrufen von [**EndPage**](/windows/desktop/api/Wingdi/nf-wingdi-endpage)erfolgen. Wenn der **Opcode** entweder auf **mxdcop \_ PrintTicket \_ Fixed \_ doc** oder **mxdcop \_ PrintTicket \_ Fixed \_ doc \_** festgelegt ist, muss der **extescape** -Befehl zwischen einem [**StartDoc**](/windows/desktop/api/Wingdi/nf-wingdi-startdoca) -Befehl und einem- [**Endpunkt**](/windows/desktop/api/Wingdi/nf-wingdi-enddoc)aufgerufen werden.
+Wenn **opCode auf** **MXDCOP \_ PRINTTICKET FIXED \_ \_ PAGE** festgelegt ist, muss der Aufruf von [**ExtEscape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) zwischen einem Aufruf von [**StartPage**](/windows/desktop/api/Wingdi/nf-wingdi-startpage) und einem Aufruf von [**EndPage erfolgen.**](/windows/desktop/api/Wingdi/nf-wingdi-endpage) Wenn **der opCode** auf **MXDCOP \_ PRINTTICKET \_ FIXED \_ DOC** oder **MXDCOP \_ PRINTTICKET \_ FIXED DOC \_ \_ SEQ** festgelegt ist, muss der Aufruf von **ExtEscape** zwischen einem Aufruf von [**StartDoc**](/windows/desktop/api/Wingdi/nf-wingdi-startdoca) und einem Aufruf von [**EndDoc erfolgen.**](/windows/desktop/api/Wingdi/nf-wingdi-enddoc)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,29 +86,29 @@ Wenn **Opcode** auf **mxdcop \_ PrintTicket \_ Fixed \_ Page** festgelegt ist, m
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>Mxdc. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Mxdc.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
-[Escapefunktionen für GDI-Drucker](/previous-versions/windows/desktop/legacy/dd162843(v=vs.85))
+[GDI-Drucker-Escapefunktionen](/previous-versions/windows/desktop/legacy/dd162843(v=vs.85))
 </dt> <dt>
 
-[**Extescape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape)
+[**ExtEscape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape)
 </dt> <dt>
 
-[**mxdc-Escapezeichen \_**](mxdc-escape.md)
+[**MXDC \_ ESCAPE**](mxdc-escape.md)
 </dt> </dl>
 
  

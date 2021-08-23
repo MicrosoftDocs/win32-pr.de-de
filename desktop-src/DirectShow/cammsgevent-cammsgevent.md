@@ -1,7 +1,7 @@
 ---
-description: 'OEMMsgEvent.OEMMsgEvent-Konstruktor : Konstruktormethode.'
+description: CABMsgEvent.CABMsgEvent-Konstruktor – Konstruktormethode.
 ms.assetid: 7871a624-70c0-4f21-b62a-2c4c2eaa762b
-title: OEMMsgEvent.OEMMsgEvent-Konstruktor (Wxutil.h)
+title: CABMsgEvent.CABMsgEvent-Konstruktor (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: dac72ecb97a1ea1fd2594af9c11b8a03078cf2cb
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0fc2eeaab10134022388e6a57628d1c3c5a87fc0e0a443efab19f016a1e5c27b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955499"
 ---
-# <a name="cammsgeventcammsgevent-constructor"></a>OEMMsgEvent.OEMMsgEvent-Konstruktor
+# <a name="cammsgeventcammsgevent-constructor"></a>CABMsgEvent.CABMsgEvent-Konstruktor
 
 Konstruktormethode.
 
@@ -47,7 +47,7 @@ CAMMsgEvent(
 
 Zeiger auf einen **HRESULT-Wert.** Wenn der Konstruktor fehlschlägt, empfängt dieser Parameter einen Fehlercode. In diesem Fall befindet sich das Objekt nicht in einem gültigen Zustand.
 
-Aus Gründen der Abwärtskompatibilität mit früheren Versionen von strmbase.lib wird dieser Parameter standardmäßig auf **NULL festgelegt.** Die Übergabe eines Werts, der nicht **NULL** ist, wird jedoch bevorzugt, damit der Aufrufer den Status des Objekts überprüfen kann.
+Aus Gründen der Abwärtskompatibilität mit früheren Versionen von strmbase.lib wird für diesen Parameter standardmäßig **NULL** verwendet. Die Übergabe eines Werts ungleich **NULL** wird jedoch bevorzugt, damit der Aufrufer den Status des Objekts überprüfen kann.
 
 </dd> </dl>
 
@@ -55,10 +55,10 @@ Aus Gründen der Abwärtskompatibilität mit früheren Versionen von strmbase.li
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil.h (streams.h enthalten)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -66,7 +66,7 @@ Aus Gründen der Abwärtskompatibilität mit früheren Versionen von strmbase.li
 
 <dl> <dt>
 
-[**CAMMsgEvent-Klasse**](cammsgevent.md)
+[**WEBCAMMsgEvent-Klasse**](cammsgevent.md)
 </dt> </dl>
 
  

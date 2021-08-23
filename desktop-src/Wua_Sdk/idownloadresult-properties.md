@@ -1,26 +1,26 @@
 ---
-description: Die idownloadresult-Schnittstelle definiert die folgenden Eigenschaften.
+description: Die IDownloadResult-Schnittstelle definiert die folgenden Eigenschaften.
 ms.assetid: a175e3f8-3b15-4ef9-b19b-2f3602f7c187
-title: Idownloadresult-Eigenschaften
+title: IDownloadResult-Eigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 28e33d68a7a6b9315dbbe83d689bd0f1f73646b4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f96a4044ea581c6a6c0a9cdbda62e47e72c3088f83bc0ad1c74192b650e62080
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357364"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119049378"
 ---
-# <a name="idownloadresult-properties"></a>Idownloadresult-Eigenschaften
+# <a name="idownloadresult-properties"></a>IDownloadResult-Eigenschaften
 
-Die [**idownloadresult**](/windows/desktop/api/Wuapi/nn-wuapi-idownloadresult) -Schnittstelle definiert die folgenden Eigenschaften.
+Die [**IDownloadResult-Schnittstelle**](/windows/desktop/api/Wuapi/nn-wuapi-idownloadresult) definiert die folgenden Eigenschaften.
 
 
 
-| Eigenschaft                                         | BESCHREIBUNG                                                                                                     |
+| Eigenschaft                                         | Beschreibung                                                                                                     |
 |--------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| [**HRESULT**](/windows/desktop/api/Wuapi/nf-wuapi-idownloadresult-get_hresult)       | Ruft die Ausnahme Codenummer ab, wenn während eines Downloads eine Ausnahme Codenummer ausgelöst wird.                         |
-| [**ResultCode**](/windows/desktop/api/Wuapi/nf-wuapi-idownloadresult-get_resultcode) | Ruft eine [**operationresultcode**](/windows/win32/api/wuapi/ne-wuapi-operationresultcode) -Enumeration ab, die das Ergebnis eines Downloads angibt. |
+| [**Hresult**](/windows/desktop/api/Wuapi/nf-wuapi-idownloadresult-get_hresult)       | Ruft die Ausnahmecodenummer ab, wenn während eines Downloads eine Ausnahmecodenummer ausgelöst wird.                         |
+| [**Resultcode**](/windows/desktop/api/Wuapi/nf-wuapi-idownloadresult-get_resultcode) | Ruft eine [**OperationResultCode-Enumeration**](/windows/win32/api/wuapi/ne-wuapi-operationresultcode) ab, die das Ergebnis eines Downloads angibt. |
 
 
 

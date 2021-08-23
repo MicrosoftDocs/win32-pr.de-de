@@ -1,7 +1,7 @@
 ---
-description: Fügt dem Animations Controller eine Animations Ausgabe hinzu und registriert Zeiger für die Transformation für Skalierung, Drehung und Übersetzung (SRT).
+description: Fügt dem Animationscontroller eine Animationsausgabe hinzu und registriert Zeiger für Skalierungs-, Dreh- und Übersetzungstransformationen (SRT).
 ms.assetid: 8c3197bc-9d03-40ba-869b-151f9c8e96ba
-title: 'ID3DXAnimationController:: registeranimationoutput-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::RegisterAnimationOutput-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 7670f8b311532d096b9957ebbefcf1f6fb15d952
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: dc48eb9f2fd6ee5fee6c04936801997145a5ea21542b9b5ff8ec6d257eee80e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106350716"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987820"
 ---
-# <a name="id3dxanimationcontrollerregisteranimationoutput-method"></a>ID3DXAnimationController:: registeranimationoutput-Methode
+# <a name="id3dxanimationcontrollerregisteranimationoutput-method"></a>ID3DXAnimationController::RegisterAnimationOutput-Methode
 
-Fügt dem Animations Controller eine Animations Ausgabe hinzu und registriert Zeiger für die Transformation für Skalierung, Drehung und Übersetzung (SRT).
+Fügt dem Animationscontroller eine Animationsausgabe hinzu und registriert Zeiger für Skalierungs-, Dreh- und Übersetzungstransformationen (SRT).
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT RegisterAnimationOutput(
 
 <dl> <dt>
 
-*Name* \[ in\]
+*Name* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Der Name der Animations Ausgabe.
+Name der Animationsausgabe.
 
 </dd> <dt>
 
-*pmatrix* \[ in\]
+*pMatrix* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Zeiger auf eine [**D3DXMATRIX**](d3dxmatrix.md) -Struktur, die Daten der SRT-Transformation enthält. Kann **null** sein.
+Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die SRT-Transformationsdaten enthält. Kann NULL **sein.**
 
 </dd> <dt>
 
-*pscale* \[ in\]
+*pScale* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
-Zeiger auf einen [**D3DXVECTOR3**](d3dxvector3.md) -Vektor, der die Skala des Animations Satzes beschreibt. Kann **null** sein.
+Zeiger auf einen [**D3DXVECTOR3-Vektor,**](d3dxvector3.md) der die Skalierung des Animationssets beschreibt. Kann NULL **sein.**
 
 </dd> <dt>
 
-*protation* \[ in\]
+*pRotation* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
-Zeiger auf eine [**D3DXQUATERNION**](d3dxquaternion.md) Quaternion, die die Drehung des Animations Satzes beschreibt. Kann **null** sein.
+Zeiger auf eine [**D3DXQUATERNION-Quaternion,**](d3dxquaternion.md) die die Drehung des Animationssets beschreibt. Kann NULL **sein.**
 
 </dd> <dt>
 
-*ptranslation* \[ in\]
+*pTranslation* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
-Zeiger auf einen [**D3DXVECTOR3**](d3dxvector3.md) -Vektor, der die Übersetzung des Animations Satzes beschreibt. Kann **null** sein.
+Zeiger auf einen [**D3DXVECTOR3-Vektor,**](d3dxvector3.md) der die Übersetzung des Animationssets beschreibt. Kann NULL **sein.**
 
 </dd> </dl>
 
@@ -93,13 +93,13 @@ Zeiger auf einen [**D3DXVECTOR3**](d3dxvector3.md) -Vektor, der die Übersetzung
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Ausgabe der Animation bereits registriert ist, wird pmatrix mit den Eingabe Transformations Daten aufgefüllt.
+Wenn die Animationsausgabe bereits registriert ist, wird pMatrix mit den Eingabetransformationsdaten gefüllt.
 
-Mit [**D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md) erstellte Animations Sätze registrieren automatisch alle geladenen Animations Sätze.
+Mit [**D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md) erstellte Animationssätze registrieren automatisch alle geladenen Animationssätze.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,12 +107,12 @@ Mit [**D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md) erstellte An
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

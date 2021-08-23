@@ -1,9 +1,9 @@
 ---
-title: Mediacontenttypes-Attribut
-description: Das mediacontenttypes-Attribut gibt den Typ des Inhalts im Element an.
+title: MediaContentTypes-Attribut
+description: Das MediaContentTypes-Attribut gibt den Inhaltstyp im Element an.
 ms.assetid: b91bab65-d6d2-4e05-9338-c24f28b7c71e
 keywords:
-- Mediacontenttypes-Attribut, Windows Media Player
+- MediaContentTypes-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,31 +12,31 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8979864151e029abf2731f6f0b4663e078a2c061
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: eca3c422083954554db76657a0bb9cc10062fd878a9ebf4b31f4dc88734ac1d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352945"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996240"
 ---
-# <a name="mediacontenttypes-attribute"></a>Mediacontenttypes-Attribut
+# <a name="mediacontenttypes-attribute"></a>MediaContentTypes-Attribut
 
-Das **mediacontenttypes** -Attribut gibt den Typ des Inhalts im Element an.
+Das **MediaContentTypes-Attribut** gibt den Inhaltstyp im Element an.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Wiedergabelisten](playlist-attributes-ref.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut kann einen der folgenden Werte aufweisen:
+Dieses Attribut kann einer der folgenden Werte sein:
 
 
 
 | Wert | Bedeutung                                |
 |-------|----------------------------------------|
 | 1     | Die Wiedergabeliste enthält Audioinhalte.   |
-| 2     | , Um bereitgestellt zu werden.                        |
+| 2     | Zu liefernde .                        |
 | 3     | Die Wiedergabeliste enthält Audioinhalte.   |
 | 4     | Die Wiedergabeliste enthält Videoinhalte.   |
 | 5     | Die Wiedergabeliste enthält Bildinhalte. |
@@ -46,7 +46,7 @@ Dieses Attribut kann einen der folgenden Werte aufweisen:
 
  
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -62,7 +62,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

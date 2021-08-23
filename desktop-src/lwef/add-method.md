@@ -4,52 +4,52 @@ description: Methode hinzufügen
 ms.assetid: dd258294-33d6-45f5-a6a1-a3a56b12a7df
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a4527dec6014c93bb02b4f080e032266ea40159e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 26ae6cc3cd0a39be8b293a6ae64a96859e5d4fcf6d23ff410439422676b3527e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036850"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976830"
 ---
 # <a name="add-method"></a>Methode hinzufügen
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Fügt [der Befehls](the-commands-collection-object.md) Auflistung ein [Befehls](the-command-object.md) Objekt hinzu.
+Fügt der [Commands-Auflistung](the-command-object.md) ein [Command-Objekt](the-commands-collection-object.md) hinzu.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent ***. Zeichen ("*** Merkmal-ID * * *"). Befehle. Add* *  *Name*, *Caption*, *Voice*, *aktiviert*, *Visible*
+*agent***. Zeichen ("**_CharacterID_*_"). Commands.Add_ *  *Name*, *Caption*, *Voice*, *Enabled*, *Visible*
 
 
 
-| Teil      | BESCHREIBUNG                                                                                                                                                                                                                                                                                                         |
+| Teil      | Beschreibung                                                                                                                                                                                                                                                                                                         |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Name*    | Erforderlich. Ein Zeichen folgen Wert, der der ID entspricht, die Sie für den Befehl zuweisen.                                                                                                                                                                                                                                        |
-| *Caption* | Dies ist optional. Ein Zeichen folgen Wert, der dem Namen entspricht, der im Popupmenü des Zeichens und im Befehlsfenster angezeigt wird, wenn die Client Anwendung aktiv ist. Weitere Informationen finden Sie in der [Beschriftung](caption-property.md) -Eigenschaft des [Befehls](the-command-object.md) Objekts.                       |
-| *Voice*   | Dies ist optional. Ein Zeichen folgen Wert, der den Wörtern oder Ausdrücken entspricht, die von der Sprach-Engine zum erkennen dieses Befehls verwendet werden sollen. Weitere Informationen zum Formatieren von Alternativen für die Zeichenfolge finden Sie in der [Voice](voice-property.md) -Eigenschaft des [Befehls](the-command-object.md) Objekts.                                |
-| *Aktiviert* | Dies ist optional. Ein boolescher Wert, der angibt, ob der Befehl aktiviert ist. Der Standardwert ist **True**. Weitere Informationen finden Sie unter der [aktivierten](enabled-property.md) Eigenschaft des [Befehls](the-command-object.md) Objekts.                                                                                              |
-| *Visible* | Dies ist optional. Ein boolescher Wert, der angibt, ob der Befehl im Popup Menü des Zeichens für das Zeichen sichtbar ist, wenn die Client Anwendung aktiv ist. Der Standardwert ist **True**. Weitere Informationen finden Sie in der [Visible](visible-property.md) -Eigenschaft des [Befehls](the-command-object.md) Objekts. |
+| *Name*    | Erforderlich. Ein Zeichenfolgenwert, der der ID entspricht, die Sie für den Befehl zuweisen.                                                                                                                                                                                                                                        |
+| *Caption* | Optional. Ein Zeichenfolgenwert, der dem Namen entspricht, der im Popupmenü des Zeichens und im Befehlsfenster angezeigt wird, wenn die Clientanwendung eingabeaktiv ist. Weitere Informationen finden Sie unter der [Caption-Eigenschaft](the-command-object.md) des [Command-Objekts.](caption-property.md)                       |
+| *Voice*   | Optional. Ein Zeichenfolgenwert, der den Wörtern oder Ausdrücken entspricht, die von der Sprach-Engine für die Erkennung dieses Befehls verwendet werden sollen. Weitere Informationen zu Formatierungsalternativen für die Zeichenfolge finden Sie in der [Voice-Eigenschaft](the-command-object.md) des [Command-Objekts.](voice-property.md)                                |
+| *Aktiviert* | Optional. Ein boolescher Wert, der angibt, ob der Befehl aktiviert ist. Der Standardwert ist **True**. Weitere Informationen finden Sie unter der [Enabled-Eigenschaft](the-command-object.md) des [Command-Objekts.](enabled-property.md)                                                                                              |
+| *Visible* | Optional. Ein boolescher Wert, der angibt, ob der Befehl im Popupmenü des Zeichens für das Zeichen sichtbar ist, wenn die Clientanwendung eingabeaktiv ist. Der Standardwert ist **True**. Weitere Informationen finden Sie unter der [Visible-Eigenschaft](the-command-object.md) des [Command-Objekts.](visible-property.md) |
 
 
 
- 
+ 
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft " [Name](name-property.md) " eines [Befehls](the-command-object.md) Objekts muss [innerhalb der Befehls](the-commands-collection-object.md) Auflistung eindeutig sein. Sie müssen einen Befehl entfernen, bevor Sie einen neuen Befehl mit der gleichen Namens Eigenschafts Einstellung erstellen können. Wenn Sie versuchen, einen Befehl mit einer bereits vorhandenen Name-Eigenschaft zu erstellen, wird ein Fehler ausgelöst.
+Der Wert der [Name-Eigenschaft](the-command-object.md) eines [Command-Objekts](name-property.md) muss innerhalb der Commands-Auflistung [eindeutig](the-commands-collection-object.md) sein. Sie müssen einen Befehl entfernen, bevor Sie einen neuen Befehl mit der gleichen Name-Eigenschafteneinstellung erstellen können. Der Versuch, einen Befehl mit einer bereits vorhanden Eigenschaft Name zu erstellen, löst einen Fehler aus.
 
-Diese Methode gibt auch ein [Command](the-command-object.md) -Objekt zurück. Dies ermöglicht es Ihnen, ein Objekt zu deklarieren und ihm einen Befehl zuzuweisen, wenn Sie die AddMethod-Methode aufgerufen haben.
+Diese Methode gibt auch ein [Command-Objekt](the-command-object.md) zurück. Dadurch können Sie ein Objekt deklarieren und ihm einen Befehl zuweisen, wenn Sie die Addmethod aufrufen.
 
 
 ```
@@ -73,9 +73,9 @@ Diese Methode gibt auch ein [Command](the-command-object.md) -Objekt zurück. Di
 [**Remove-Methode**](remove-method.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,51 +1,51 @@
 ---
-title: DirectShow-und Windows-Medien
-description: DirectShow-und Windows-Medien
+title: DirectShow und Windows Medien
+description: DirectShow und Windows Medien
 ms.assetid: e2ddc781-9f56-4f77-a191-015018755eff
 keywords:
-- Windows Media-Format-SDK, DirectShow
-- Advanced Systems Format (ASF), DirectShow
+- Windows Medienformat-SDK, DirectShow
+- Advanced Systems Format (ASF),DirectShow
 - ASF (Advanced Systems Format), DirectShow
-- DirectShow, Informationen
+- DirectShow,About
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fd4ca8eb4b1051d6685efa0bf73052ad9e7b31fa
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b975347d26414dda0c1f54c0b71ac852541bd58c314e3724725c3768ddfc7bfd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103714214"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119027908"
 ---
-# <a name="directshow-and-windows-media"></a>DirectShow-und Windows-Medien
+# <a name="directshow-and-windows-media"></a>DirectShow und Windows Medien
 
-Anstatt das Windows Media SDK exklusiv zu verwenden, können Anwendungen auch Windows Media-basierte Inhalte mithilfe der Microsoft® DirectShow® Streaming-Architektur lesen und schreiben, wie in den folgenden Abschnitten beschrieben.
+Als Alternative zur ausschließlichen Verwendung des Windows Media Format SDK können Anwendungen auch medienbasierte Inhalte Windows mithilfe der Streamingarchitektur Microsoft® DirectShow® lesen und schreiben, wie in den folgenden Abschnitten beschrieben.
 
 
 
 | `Section`                                                                                   | BESCHREIBUNG                                                                                                                                 |
 |-------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| [Informationen zu DirectShow](about-directshow.md)                                                  | Beschreibt DirectShow in allgemeinen Begriffen und gibt Aufschluss darüber, wo Sie weitere Informationen erhalten.                                                     |
-| [Gründe für die Verwendung von DirectShow](why-use-directshow.md)                                             | Beschreibt, wie DirectShow bestimmte Aufgaben beim Erstellen und Wiedergeben von Windows Media – basierten Inhalten vereinfacht.                              |
-| [Lesen von ASF-Dateien in DirectShow](reading-asf-files-in-directshow.md)                    | Beschreibt die Wiedergabe von ASF-Dateien mithilfe von DirectShow.                                                                                           |
-| [Erstellen von ASF-Dateien in DirectShow](creating-asf-files-in-directshow.md)                  | Beschreibt das Erstellen von ASF-Dateien mithilfe von DirectShow.                                                                                         |
-| [WMT- \_ Status Ereignis Benachrichtigung in DirectShow](wmt-status-notification-in-directshow.md) | Beschreibt, welche **WMT- \_ Status** Ereignisse von den "ASF Reader"-und "ASF Writer"-Filtern behandelt werden und wie Anwendungen diese Ereignisse empfangen können. |
-| [DRM-Unterstützung in DirectShow](drm-support-in-directshow.md)                                | Beschreibt das Lesen und Schreiben von DRM-geschützten Dateien über DirectShow.                                                                     |
-| [DirectShow-qasf-Referenz](directshow-qasf-reference.md)                                | Enthält die Referenz Dokumentation für die DirectShow-Komponenten, die Windows-Medien unterstützen.                                              |
+| [Informationen zu DirectShow](about-directshow.md)                                                  | Beschreibt DirectShow allgemein und informiert darüber, wo Weitere Informationen dazu zu erhalten sind.                                                     |
+| [Gründe für die Verwendung von DirectShow](why-use-directshow.md)                                             | Beschreibt, wie DirectShow bestimmte Aufgaben bei der Erstellung und Wiedergabe Windows medienbasierten Inhalten vereinfacht.                              |
+| [Lesen von ASF-Dateien in DirectShow](reading-asf-files-in-directshow.md)                    | Beschreibt die Wiedergabe von ASF-Dateien mit DirectShow.                                                                                           |
+| [Erstellen von ASF-Dateien in DirectShow](creating-asf-files-in-directshow.md)                  | Beschreibt, wie ASF-Dateien mit DirectShow erstellt werden.                                                                                         |
+| [WMT \_ STATUS-Ereignisbenachrichtigung in DirectShow](wmt-status-notification-in-directshow.md) | Beschreibt, **welche WMT \_ STATUS-Ereignisse** von den FILTERN ASF-Reader und ASF Writer verarbeitet werden und wie Anwendungen diese Ereignisse empfangen können. |
+| [DRM-Unterstützung in DirectShow](drm-support-in-directshow.md)                                | Beschreibt, wie DRM-geschützte Dateien über DirectShow gelesen und geschrieben werden.                                                                     |
+| [DirectShow QASF-Referenz](directshow-qasf-reference.md)                                | Enthält die Referenzdokumentation für die DirectShow-Komponenten, die Windows unterstützen.                                              |
 
 
 
- 
+ 
 
-Drei Beispielanwendungen im SDK veranschaulichen die Verwendung von DirectShow: dscopy, dsplay und dsseekfm. Weitere Informationen finden Sie unter [Beispielanwendungen](sample-applications.md).
+Drei Beispielanwendungen im SDK veranschaulichen die Verwendung von DirectShow: DSCopy, DSPlay und DSSeekFM. Weitere Informationen finden Sie unter [Beispielanwendungen](sample-applications.md).
 
 > [!Note]  
-> Anwendungen, die die in diesem SDK enthaltenen qasf-Komponenten verwenden, erfordern, dass die SDK-Laufzeit von Microsoft DirectX® 8,1 oder höher unter Windows® 2000, Windows 98 und Windows 95 Systems installiert wird. Diese Laufzeit ist insbesondere für den DMO-Wrapper Filter erforderlich, der die Windows Media-Codecs in einem DirectShow-Filter Diagramm hostet.
+> Für Anwendungen, die die in diesem SDK enthaltenen QASF-Komponenten verwenden, muss die Microsoft DirectX® 8.1- oder höher SDK-Runtime auf den Systemen Windows® 2000, Windows 98 und Windows 95 installiert werden. Diese Laufzeit ist insbesondere für den DMO Wrapper-Filter erforderlich, der die Windows Mediencodecs in einem DirectShow-Filterdiagramm hostet.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

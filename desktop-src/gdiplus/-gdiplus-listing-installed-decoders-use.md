@@ -1,21 +1,21 @@
 ---
-description: Windows GDI+ bietet die Funktion "GetImageDecoders", damit Sie bestimmen können, welche Bild-Decoder auf Ihrem Computer verfügbar sind.
+description: Windows GDI+ stellt die GetImageDecoders-Funktion bereit, damit Sie ermitteln können, welche Bilddecoder auf Ihrem Computer verfügbar sind.
 ms.assetid: 793e23de-d959-4feb-8bf6-647a455c85ae
-title: Auflisten installierter decoderer
+title: Auflisten installierter Decoder
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a20a4e8ac88fa884483ebeaf6592b8085fde807
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d54548971ff4f4346d32884ff7abc687b901044022ab886f7191d5700b9db98d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978993"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118977390"
 ---
-# <a name="listing-installed-decoders"></a>Auflisten installierter decoderer
+# <a name="listing-installed-decoders"></a>Auflisten installierter Decoder
 
-Windows GDI+ bietet die Funktion " [**GetImageDecoders**](/windows/desktop/api/Gdiplusimagecodec/nf-gdiplusimagecodec-getimagedecoders) ", damit Sie bestimmen können, welche Bild-Decoder auf Ihrem Computer verfügbar sind. **GetImageDecoders** gibt ein Array von [**ImageCodecInfo**](/windows/win32/api/gdiplusimaging/nl-gdiplusimaging-imagecodecinfo) -Objekten zurück. Vor dem Aufrufen von **GetImageDecoders** müssen Sie einen Puffer zuordnen, der groß genug ist, um das Array zu erhalten. Sie können [**getimagedecoderssize**](/windows/desktop/api/Gdiplusimagecodec/nf-gdiplusimagecodec-getimagedecoderssize) aufrufen, um die Größe des erforderlichen Puffers zu bestimmen.
+Windows GDI+ stellt die [**GetImageDecoders-Funktion**](/windows/desktop/api/Gdiplusimagecodec/nf-gdiplusimagecodec-getimagedecoders) bereit, damit Sie ermitteln können, welche Bilddecoder auf Ihrem Computer verfügbar sind. **GetImageDecoders** gibt ein Array von [**ImageCodecInfo-Objekten**](/windows/win32/api/gdiplusimaging/nl-gdiplusimaging-imagecodecinfo) zurück. Bevor Sie **GetImageDecoders** aufrufen, müssen Sie einen Puffer zuordnen, der groß genug ist, um dieses Array zu empfangen. Sie können [**GetImageDecodersSize**](/windows/desktop/api/Gdiplusimagecodec/nf-gdiplusimagecodec-getimagedecoderssize) aufrufen, um die Größe des erforderlichen Puffers zu bestimmen.
 
-In der folgenden Konsolenanwendung werden die verfügbaren Image-Decoders aufgelistet:
+Die folgende Konsolenanwendung listet die verfügbaren Imagedecoder auf:
 
 
 ```

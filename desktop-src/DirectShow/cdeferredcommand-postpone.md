@@ -1,7 +1,7 @@
 ---
-description: Die Methode zum Verschieben gibt eine neue Präsentationszeit für einen zuvor in die Warteschlange eingereihten Befehl an.
+description: Die Postpone-Methode gibt eine neue Präsentationszeit für einen zuvor in die Warteschlange eingereihten Befehl an.
 ms.assetid: 6201eb18-8180-445c-8d29-980511748fe4
-title: Cdeferredcommand. Verschiebungen-Methode (ctlutil. h)
+title: CDeferredCommand.Postpone-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c9ce19c5391541336f52dd872b44bb9f3a447c27
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 079b9f1a852ff0b9eb6e1c38cea6e24e3ee00107ac46ca15e738e1ef9e0eb8b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106374031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074364"
 ---
-# <a name="cdeferredcommandpostpone-method"></a>Cdeferredcommand. Verschiebungen-Methode
+# <a name="cdeferredcommandpostpone-method"></a>CDeferredCommand.Postpone-Methode
 
-Die- `Postpone` Methode gibt eine neue Präsentationszeit für einen zuvor in die Warteschlange eingereihten Befehl an.
+Die `Postpone` -Methode gibt eine neue Präsentationszeit für einen zuvor in der Warteschlange stehenden Befehl an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT Postpone(
 
 <dl> <dt>
 
-*Neuzeit* 
+*newtime* 
 </dt> <dd>
 
 Neue Präsentationszeit.
@@ -51,11 +51,11 @@ Neue Präsentationszeit.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt eine VFW E-Zeit zurück, die \_ \_ \_ bereits \_ vergangen ist, wenn *newTime* bereits vergangen ist Andernfalls wird ein **HRESULT** zurückgegeben, das sich aus einem Aufruf von [**ccmdqueue:: Remove**](ccmdqueue-remove.md) (beim Extrahieren aus der Liste) oder [**ccmdqueue:: Insert**](ccmdqueue-insert.md) ergibt (beim erneuten Verwenden der geänderten Zeit).
+Gibt VFW \_ E TIME ALREADY PASSED \_ \_ \_ zurück, wenn *newtime* bereits übergeben wurde. Andernfalls gibt ein **HRESULT** zurück, das aus einem Aufruf von [**CCmdQueue::Remove**](ccmdqueue-remove.md) (beim Extrahieren aus der Liste) oder [**CCmdQueue::Insert**](ccmdqueue-insert.md) (beim erneuten Einfügen mit der geänderten Zeit) resultiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion implementiert die [**ideferredcommand::P ostpone**](/windows/desktop/api/Control/nf-control-ideferredcommand-postpone) -Methode.
+Diese Memberfunktion implementiert die [**IDeferredCommand::P ostpone-Methode.**](/windows/desktop/api/Control/nf-control-ideferredcommand-postpone)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Member-Funktion implementiert die [**ideferredcommand::P ostpone**](/windo
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Member-Funktion implementiert die [**ideferredcommand::P ostpone**](/windo
 
 <dl> <dt>
 
-[**Cdeferredcommand-Klasse**](cdeferredcommand.md)
+[**CDeferredCommand-Klasse**](cdeferredcommand.md)
 </dt> </dl>
 
  

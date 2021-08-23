@@ -1,24 +1,24 @@
 ---
-title: Die Meldungs Zuordnung
-description: Die Meldungs Zuordnung
+title: Die Meldungszuordnung
+description: Die Meldungszuordnung
 ms.assetid: 4640b0f5-625e-4a9e-86f5-3e75d0afb40d
 keywords:
-- Windows Media Player-Plug-ins, Meldungs Zuordnung
-- Plug-ins, Meldungs Zuordnung
-- Benutzerschnittstellen-Plug-ins, Meldungs Zuordnung
-- UI-Plug-ins, Meldungs Zuordnung
+- Windows Media Player-Plug-Ins,Meldungszuordnung
+- Plug-Ins, Meldungszuordnung
+- Benutzeroberflächen-Plug-Ins, Meldungszuordnung
+- Benutzeroberflächen-Plug-Ins, Meldungszuordnung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ea7fc04caf752383368ab6e51ae19c82e8c3515
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 03ec00689257ee60ada8f9bdf027b1cd34e43d243492e8d8ce5b5b38d2d89044
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118831573"
 ---
-# <a name="the-message-map"></a>Die Meldungs Zuordnung
+# <a name="the-message-map"></a>Die Meldungszuordnung
 
-Das Plug-in-Fenster antwortet auf verschiedene Ereignisse, indem Methoden aufgerufen werden, die entsprechenden Ereignismeldungen zugeordnet sind. Der Assistent stellt eine Zuordnung bereit, sodass OnPaint und onerasebackground zu den entsprechenden Zeitpunkten aufgerufen werden. Um die **Such** Schaltfläche zu erstellen und darauf zu reagieren, wird der Nachrichten Zuordnungs Abschnitt wie folgt geändert:
+Das Plug-In-Fenster reagiert auf verschiedene Ereignisse durch Aufrufen von Methoden, die entsprechenden Ereignismeldungen zugeordnet sind. Der Assistent bietet eine Zuordnung, sodass OnPaint und OnEraseBackground zu den entsprechenden Zeiten aufgerufen werden. Um die Schaltfläche **Suchen zu** erstellen und darauf zu reagieren, wird der Meldungszuordnungsabschnitt wie folgt geändert:
 
 
 ```C++
@@ -37,12 +37,12 @@ END_MSG_MAP()
 
 <dl> <dt>
 
-[**Implementieren von cpluginwindow**](implementing-cpluginwindow.md)
+[**Implementieren von CPluginWindow**](implementing-cpluginwindow.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

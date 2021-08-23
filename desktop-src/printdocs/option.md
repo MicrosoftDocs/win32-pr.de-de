@@ -4,12 +4,12 @@ ms.assetid: feda78d9-58e7-4668-8a25-40e5fd8ad456
 title: Option
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ac4318e6a79a3d4daa77f15901d032c66134bdd
-ms.sourcegitcommit: 998d50f6def8a25850fc113fc8a2df903c829c5e
+ms.openlocfilehash: c1f02f506c61353698bc4386541ea96dbf858790dd7c34c6d80b8dc2542c46a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113549378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119098974"
 ---
 # <a name="option"></a>Option
 
@@ -46,8 +46,8 @@ In der folgenden Tabelle sind die Elemente aufgeführt, die möglicherweise die 
 
 | Category                   | Details                                                                                                                                                                                                                                                                                          |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Übergeordnete Elemente<br/> | Funktion <br/>                                                                                                                                                                                                                                                                              |
-| Untergeordnete Elemente<br/>  | *Eigenschaft* (null oder mehr)<br/> *ScoredProperty* (null oder mehr für Optionen mit dem XML-Attribut 'Name'; mindestens eine für Optionen, die das XML-Attribut 'name' nicht \* verwenden)<br/> \* nur öffentliche Optionen, die im Druckschema definiert sind, dürfen kein "name"-Attribut aufweisen, z. B. DocumentNUp)<br/> |
+| Übergeordnete Elemente<br/> | Komponente <br/>                                                                                                                                                                                                                                                                              |
+| Untergeordnete Elemente<br/>  | *Eigenschaft* (null oder mehr)<br/> *ScoredProperty* (null oder mehr für Optionen mit dem XML-Attribut 'Name'; mindestens eine für Optionen ohne Verwendung des XML-Attributs 'name' \* )<br/> \* nur öffentliche Optionen, die im Druckschema definiert sind, dürfen kein "name"-Attribut aufweisen, z. B. DocumentNUp)<br/> |
 | Dieses Element<br/>    | Es sind keine Zeichendaten zulässig.<br/> Doppelte untergeordnete gleichgeordnete Elemente sind nicht zulässig.<br/>                                                                                                                                                                                                |
 
 
@@ -60,7 +60,7 @@ Ein Optionsdefinitionselement hat möglicherweise keine Konfigurationsabhängigk
 
 ## <a name="element-usage"></a>Elementverwendung
 
-Der Zweck des Option-Elements besteht darin, einen der Zustände zu charakterisieren, die ein durch ein Feature-Element dargestelltes Gerätekonfigurationsattribut annehmen kann. Jede Option-Elementdefinition enthält mindestens ein ScoredProperty-Element, das ein intrinsisches oder wesentliches Merkmal dieser Option beschreibt. Zur Vereinfachung der Portabilität und Beibehaltung der Absicht definiert das Druckschema viele allgemeine Featureelemente und eine Vielzahl von Optionselementen für jedes Feature. Daher ist es wichtig, nach Möglichkeit ausdrucksschemadefinierte Optionselemente zu verwenden, bevor Sie eigene Optionsdefinitionen erstellen. Das Verständnis des Prozesses zum Definieren von Optionselementen bietet nützliche Einblicke in die Verwendung des PrintCapabilities-Dokuments und von PrintTickets in der Druckarchitektur von Microsoft .NET Framework Version 3.0 und Windows Vista.
+Der Zweck des Option-Elements besteht darin, einen der Zustände zu charakterisieren, die ein Durch ein Feature-Element dargestelltes Gerätekonfigurationsattribut annehmen kann. Jede Option-Elementdefinition enthält mindestens ein ScoredProperty-Element, das ein intrinsisches oder wesentliches Merkmal dieser Option beschreibt. Zur Vereinfachung der Portabilität und Beibehaltung der Absicht definiert das Druckschema viele allgemeine Featureelemente und eine Vielzahl von Optionselementen für jedes Feature. Daher ist es wichtig, nach Möglichkeit ausdrucksschemadefinierte Optionselemente zu verwenden, bevor Sie ihre eigenen Optionsdefinitionen erstellen. Das Verständnis des Prozesses zum Definieren von Optionselementen bietet nützliche Einblicke in die Verwendung des PrintCapabilities-Dokuments und von PrintTickets in der Druckarchitektur von Microsoft .NET Framework Version 3.0 und Windows Vista.
 
 ## <a name="example"></a>Beispiel
 

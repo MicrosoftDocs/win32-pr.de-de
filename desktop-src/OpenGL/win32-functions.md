@@ -1,33 +1,33 @@
 ---
-title: Windows-Funktionen
-description: Es folgen die Windows-Funktionen, die OpenGL zugeordnet sind.
+title: Windows Funktionen
+description: Es folgen die Windows Funktionen, die OpenGL zugeordnet sind.
 ms.assetid: 866841db-b137-4f65-856d-b9df5bde12fb
 keywords:
-- OpenGL, Windows-Funktionen
-- WGL-Referenz OpenGL, Windows-Funktionen
+- OpenGL,Windows-Funktionen
+- WGL-Referenz zu OpenGL,Windows-Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6c2a0e069a5022242331c3773146c66b497f35f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1dcf8ee0206f581aaf38f45fae392859e6850882584f8e829ffde12b39904130
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011858"
 ---
-# <a name="windows-functions"></a>Windows-Funktionen
+# <a name="windows-functions"></a>Windows Funktionen
 
-Es folgen die Windows-Funktionen, die OpenGL zugeordnet sind:
+Es folgen die Windows Funktionen, die OpenGL zugeordnet sind:
 
--   [**Auswahl Pixel Format**](/windows/desktop/api/wingdi/nf-wingdi-choosepixelformat)
--   [**Describepixelformat**](/windows/desktop/api/wingdi/nf-wingdi-describepixelformat)
--   [**Getenhmetafilepixelformat**](/windows/desktop/api/wingdi/nf-wingdi-getenhmetafilepixelformat)
+-   [**ChoosePixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-choosepixelformat)
+-   [**DescribePixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-describepixelformat)
+-   [**GetEnhMetaFilePixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-getenhmetafilepixelformat)
 -   [**GetPixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-getpixelformat)
 -   [**SetPixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-setpixelformat)
--   [**Austausch Puffer**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers)
+-   [**SwapBuffers**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers)
 
- 
+ 
 
- 
+ 
 
 
 

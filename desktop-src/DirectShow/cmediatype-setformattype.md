@@ -1,7 +1,7 @@
 ---
-description: Die setformattype-Methode gibt den Formattyp an.
+description: Die SetFormatType-Methode gibt den Formattyp an.
 ms.assetid: e8ed9190-7169-4d51-ace7-597f43ff083e
-title: Cmediatype. setformattype-Methode (mtype. h)
+title: CMediaType.SetFormatType-Methode (Mtype.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7843c5a9788545909ef4297accfa342c08b71e88
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f6a0582a882ffe40a9bd889ff48e70a52a4048bad57e01077263e607f13d9898
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954419"
 ---
-# <a name="cmediatypesetformattype-method"></a>Cmediatype. setformattype-Methode
+# <a name="cmediatypesetformattype-method"></a>CMediaType.SetFormatType-Methode
 
-Die setformattype-Methode von ' ' gibt den Formattyp an.
+Die SetFormatType-Methode gibt den Formattyp an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ void SetFormatType(
 *pformattype* 
 </dt> <dd>
 
-Zeiger auf eine **GUID** , die den Formattyp angibt.
+Zeiger auf eine **GUID,** die den Formattyp angibt.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Zeiger auf eine **GUID** , die den Formattyp angibt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode legt den **Format Type** -Member fest. Der Formattyp definiert das Layout des Format Blocks. Wenn der Formattyp beispielsweise Format \_ videoinfo ist, sollte der Format Block eine **videoinfoheader** -Struktur enthalten. Um den Format Block festzulegen, müssen Sie die [**cmediatype:: SetFormat**](cmediatype-setformat.md) -Methode aufrufen. Der Aufrufer ist dafür verantwortlich, sicherzustellen, dass der Format Block mit dem Formattyp übereinstimmt.
+Diese Methode legt den **formattype-Member** fest. Der Formattyp definiert das Layout des Formatblocks. Wenn der Formattyp beispielsweise FORMAT \_ VideoInfo ist, sollte der Formatblock eine **VIDEOINFOHEADER-Struktur** enthalten. Rufen Sie zum Festlegen des Formatblocks die [**CMediaType::SetFormat-Methode**](cmediatype-setformat.md) auf. Der Aufrufer ist dafür verantwortlich, sicherzustellen, dass der Formatblock dem Formattyp entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Methode legt den **Format Type** -Member fest. Der Formattyp definiert das
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode legt den **Format Type** -Member fest. Der Formattyp definiert das
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  

@@ -1,38 +1,38 @@
 ---
-description: Gibt den anzeigen Amen für ein Gerät an.
+description: Gibt den Anzeigenamen für ein Gerät an.
 ms.assetid: 3f6c7faf-2ecd-4510-adc2-252c3619d70f
-title: MF_DEVSOURCE_ATTRIBUTE_FRIENDLY_NAME-Attribut (mspdl. h)
+title: MF_DEVSOURCE_ATTRIBUTE_FRIENDLY_NAME-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ab0d2bb3c0e75d547e1249a83261b7c804743ac
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e90e019b37b251ad8ec00efbd3bd0395659b96c6dd2e3a1cad247ea17ace3ece
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345147"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973829"
 ---
-# <a name="mf_devsource_attribute_friendly_name-attribute"></a>Attribut Anzeige Name für das MF- \_ devsource- \_ Attribut \_ \_
+# <a name="mf_devsource_attribute_friendly_name-attribute"></a>ANZEIGENAME-Attribut DES MF \_ \_ \_ DEVSOURCE-ATTRIBUTS \_
 
-Gibt den anzeigen Amen für ein Gerät an. Der *Anzeige Name* ist eine lesbare Zeichenfolge, die für die Anzeige in einer Benutzeroberfläche geeignet ist.
+Gibt den Anzeigenamen für ein Gerät an. Der *Anzeigename* ist eine für Menschen lesbare Zeichenfolge, die für die Anzeige auf einer Benutzeroberfläche geeignet ist.
 
 ## <a name="data-type"></a>Datentyp
 
-**WCHAR \** _
+**Wchar\***
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [_ *imfattributes:: GetString* *](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring)auf.
 
-Um dieses Attribut festzulegen, müssen Sie [**imfattributes:: SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)aufrufen.
+Um dieses Attribut festzulegen, rufen Sie [**DIE ATTRIBUTEAttributes::SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)auf.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird für die Aktivierungs Objekte festgelegt, die von den folgenden Funktionen zurückgegeben werden:
+Dieses Attribut wird für die Aktivierungsobjekte festgelegt, die von den folgenden Funktionen zurückgegeben werden:
 
--   [**MF | atedevicesourceaktivierungs**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatedevicesourceactivate)
--   [**Mfenumschlag**](/windows/desktop/api/mfidl/nf-mfidl-mfenumdevicesources)
+-   [**MFCreateDeviceSourceActivate**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatedevicesourceactivate)
+-   [**MFEnumDeviceSources**](/windows/desktop/api/mfidl/nf-mfidl-mfenumdevicesources)
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -40,9 +40,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -56,7 +56,7 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 [Audio-/Videoaufzeichnung](audio-video-capture.md)
 </dt> <dt>
 
-[Geräte Attribute erfassen](capture-device-attributes.md)
+[Erfassen von Geräteattributen](capture-device-attributes.md)
 </dt> </dl>
 
  

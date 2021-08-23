@@ -1,9 +1,9 @@
 ---
-title: 'Samplebias:: samplebias (S, float, float, float, uint)-Funktion für texturecube'
-description: 'Die samplebias:: samplebias (S, float, float, float, uint)-Funktion für texturecube gibt eine Textur aus, nachdem der Bias-Wert auf die MipMap-Ebene angewendet wurde.'
+title: SampleBias::SampleBias(S,float,float,float,uint)-Funktion für TextureCube
+description: Die SampleBias::SampleBias(S,float,float,float,uint)-Funktion für TextureCube samplingt eine Textur, nachdem der Biaswert auf die Mipmapebene angewendet wurde.
 ms.assetid: A2F10B9B-5DF2-4389-83A9-F6A29781BF0A
 keywords:
-- Samplebias-Funktion HLSL
+- SampleBias-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 116749acdc23bb8ac2fd057139bf8ef7c8f5ddcc
-ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
+ms.openlocfilehash: 45640d01b744ea6d2f930a67362e323a61fc1e2f1a87417f707289d7a337090d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106368704"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119043318"
 ---
-# <a name="samplebiassamplebiassfloatfloatfloatuint-function-for-texturecube"></a>Samplebias:: samplebias (S, float, float, float, uint)-Funktion für texturecube
+# <a name="samplebiassamplebiassfloatfloatfloatuint-function-for-texturecube"></a>SampleBias::SampleBias(S,float,float,float,uint)-Funktion für TextureCube
 
-Gibt eine Textur aus, nachdem der Wert "Bias" auf die MipMap-Ebene angewendet wurde, mit einem optionalen Wert, mit dem Sample Level-of-Detail-Werte (LOD) an eine Klammer übergeben werden. Gibt den Status des Vorgangs zurück.
+Stichproben einer Textur, nachdem der Biaswert auf die Mipmapebene angewendet wurde, mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Sample Level of Detail). Gibt den Status des Vorgangs zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,18 +46,18 @@ DXGI_FORMAT SampleBias(
 *S* \[ in\]
 </dt> <dd>
 
-Typ: **samplerstate**
+Typ: **SamplerState**
 
-Ein [samplerzustand](dx-graphics-hlsl-sampler.md). Dies ist ein Objekt, das in einer Effekt Datei deklariert wurde, die Zustands Zuweisungen enthält.
+Ein [Samplerzustand.](dx-graphics-hlsl-sampler.md) Dies ist ein Objekt, das in einer Effektdatei deklariert ist, die Zustandszuweisungen enthält.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
+Texturkoordinaten Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
@@ -65,8 +65,8 @@ Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
 |----------------------------------------|----------------|
 | Texture1D                              | float          |
 | Texture1DArray, Texture2D              | float2         |
-| Texture2DArray, Texture3D, texturecube | float3         |
-| Texturecubearray                       | float4         |
+| Texture2DArray, Texture3D, TextureCube | float3         |
+| TextureCubeArray                       | float4         |
 
 
 
@@ -74,44 +74,44 @@ Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
 
 </dd> <dt>
 
-*Bias* \[ in\]
+*Voreingenommenheit* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Der Bias-Wert, bei dem es sich um eine Gleit Komma Zahl zwischen 0,0 und 1,0 handelt, wird vor der Stichprobenentnahme auf eine MIP-Ebene angewendet.
+Der Biaswert, bei dem es sich um eine Gleitkommazahl zwischen 0,0 und einschließlich 1,0 handelt, wird vor der Stichprobenentnahme auf eine Mip-Ebene angewendet.
 
 </dd> <dt>
 
-*Klammer* \[ in\]
+*Klammer* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Ein optionaler Wert zum Einspannen von Sample-Lod-Werten. Wenn Sie beispielsweise 2.0 f als Klammer Wert übergeben, stellen Sie sicher, dass kein einzelnes Beispiel auf eine MIP-Ebene kleiner als 2.0 f zugreift.
+Ein optionaler Wert zum Klammern von LOD-Beispielwerten. Wenn Sie beispielsweise 2,0f für den Klammerwert übergeben, stellen Sie sicher, dass keine einzelne Stichprobe auf eine Mip-Ebene kleiner als 2,0f zugreift.
 
 </dd> <dt>
 
-*Status* \[ vorgenommen\]
+*Status* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übergeben Sie stattdessen den Status an die systeminterne [**checkaccessfullymapping**](checkaccessfullymapped.md) -Funktion. **Checkaccessfullymapping** gibt **true** zurück, wenn alle Werte aus dem entsprechenden **Sample**-, **Gather**-oder **Load** -Vorgang auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte von einer nicht zugeordneten Kachel entnommen wurden, gibt **checkaccessfullymapping** den Wert **false** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die systeminterne [**CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE** zurück, wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte aus einer nicht zugeordneten Kachel stammen, gibt **CheckAccessFullyMapped** **FALSE** zurück.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
+Typ: **[ **DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
 
-Das Textur Format, bei dem es sich um einen der im [**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgelisteten typisierten Werte handelt.
+Das Texturformat, bei dem es sich um einen der typisierten Werte handelt, die in [**DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgeführt sind.
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Samplebias-Methoden](texturecube-samplebias.md)
+[SampleBias-Methoden](texturecube-samplebias.md)
 </dt> <dt>
 
 [**TextureCube**](texturecube.md)

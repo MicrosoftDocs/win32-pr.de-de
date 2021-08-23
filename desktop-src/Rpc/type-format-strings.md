@@ -1,62 +1,62 @@
 ---
 title: Typformatzeichenfolgen
-description: Formatierungszeichen bezeichnen Objekte, die für die NDR-Engine von Interesse sind.
+description: Formatzeichen kennzeichnen Objekte, die für die NDR-Engine von Interesse sind.
 ms.assetid: 71117082-07b0-4ba4-a920-09be8d8427ab
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f618d857e487f86e2d28ed18300d82e94b76e3a7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 42f4aa17494cbef0f3bcc232f89104e3502f94de4a3285a1da6cc0229af0fe26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011118"
 ---
 # <a name="type-format-strings"></a>Typformatzeichenfolgen
 
-Formatierungszeichen bezeichnen Objekte, die für die NDR-Engine von Interesse sind. Es gibt ein Formatzeichen für jeden Basistyp, für verschiedene komplexe Typen und für Beschreibungen von Zeigern, packen, Ausrichtungen und anderen verschiedenen Objekten. Für Verbund Typen werden verschiedene Kategorien von Strukturen und Arrays basierend auf Ihren Leistungseigenschaften erkannt. Eine Format Zeichenfolge für jede Kategorie beginnt mit einem FC-Token, das die jeweilige Format Zeichenfolge identifiziert. Format Zeichen für Strukturen und Array Kategorien können die in-Fixes in den Namen des führenden FC-Tokens freigeben, das in der folgenden Tabelle gezeigt wird.
+Formatzeichen kennzeichnen Objekte, die für die NDR-Engine von Interesse sind. Es gibt ein Formatzeichen für jeden grundlegenden Typ, für verschiedene komplexe Typen und für Beschreibungen von Zeigern, Packen, Ausrichten und anderen verschiedenen Objekten. Bei zusammengesetzten Typen werden mehrere Kategorien von Strukturen und Arrays basierend auf ihren Leistungseigenschaften erkannt. Eine Formatzeichenfolge für jede Kategorie beginnt mit einem FC-Token, das die jeweilige Formatzeichenfolge identifiziert. Formatzeichen für Strukturen und Arraykategorien können die Infixes im Namen des führenden FC-Tokens teilen, das in der folgenden Tabelle gezeigt wird.
 
 
 
-| Zeichen formatieren | BESCHREIBUNG                                    |
+| Formatieren eines Zeichens | BESCHREIBUNG                                    |
 |------------------|------------------------------------------------|
-| C                | Gibt Konformitäts Informationen im Typ an. |
-| V                | Gibt Varianz Informationen im Typ an.    |
-| P                | Gibt an, dass Zeiger ein Teil des Typs sind.     |
+| C                | Gibt Konformitätsinformationen im Typ an. |
+| V                | Gibt Varianzinformationen im Typ an.    |
+| P                | Gibt an, dass Zeiger Teil des Typs sind.     |
 
 
 
- 
+ 
 
-Beispielsweise identifizieren FC \_ cstruct und FC \_ CArray die konforme Struktur bzw. die konformen Array Deskriptoren.
+FC \_ CSTRUCT und FC CARRAY identifizieren beispielsweise \_ die konforme Struktur bzw. die konformen Arraydeskriptoren.
 
-Im folgenden sind Formatzeichen mit besonderer Bedeutung aufgeführt.
+Im Folgenden sind Formatzeichen mit besonderen Bedeutungen dargestellt.
 
 
 
-| Zeichen formatieren | BESCHREIBUNG                                                                         |
+| Formatieren eines Zeichens | BESCHREIBUNG                                                                         |
 |------------------|-------------------------------------------------------------------------------------|
-| FC- \_ PP           | Gibt den Anfang des Zeiger Beschreibungs Abschnitts einer Struktur oder eines Arrays an. |
+| FC \_ PP           | Gibt den Anfang des Zeigerbeschreibungsabschnitts einer Struktur oder eines Arrays an. |
 
 
 
- 
+ 
 
-Die Format Zeichenfolgen für den RPC-NDR-Typ werden in den folgenden Themen ausführlicher beschrieben:
+Formatzeichenfolgen des RPC-NDR-Typs werden in den folgenden Themen ausführlicher beschrieben:
 
 -   [Einfache Typen](simple-types-tfs.md)
 -   [Zeiger](pointers-tfs.md)
 -   [Arrays](arrays-tfs.md)
 -   [Zeichenfolgen](strings-tfs.md)
--   [Korrelations Deskriptoren](correlation-descriptors-tfs.md)
+-   [Korrelationsdeskriptoren](correlation-descriptors-tfs.md)
 -   [Strukturen](structures-tfs.md)
--   [Zeiger Layout](pointer-layout-tfs.md)
+-   [Zeigerlayout](pointer-layout-tfs.md)
 -   [Unions](unions-tfs.md)
--   [Übertragen \_ als und Darstellung \_ als](transmit-as-and-represent-as-tfs.md)
--   [Benutzer Mars Hallen](user-marshal-tfs.md)
+-   [Übertragen \_ als und Darstellen \_ als](transmit-as-and-represent-as-tfs.md)
+-   [Benutzer-Marshalling](user-marshal-tfs.md)
 
- 
+ 
 
- 
+ 
 
 
 

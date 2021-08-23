@@ -1,21 +1,21 @@
 ---
 title: Transmit_as und Represent_as
-description: '\_Übertragen als und stellen dar \_ , dass dasselbe Layout mit Ausnahme des führenden Tokens identisch ist. das Token liest FC-über \_ Tragung \_ als oder FC \_ , der als dargestellt wird \_ , aber der zugrunde liegende Code ist allgemein.'
+description: Übertragen \_ als und darstellen als Teilen \_ desselben Layouts mit Ausnahme des führenden Tokens. Das Token liest FC \_ TRANSMIT AS oder FC REPRESENT \_ \_ \_ AS, aber der zugrunde liegende Code ist üblich.
 ms.assetid: 70fbb4bf-0892-4c26-9790-9fc21ff8c0dd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 69267741536314c3e30e2270e7be61edfdb5caff
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6ada873ee6e928a08dfe1d9a93928e3b00835c9f2394bde3a5194b56cce58911
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011218"
 ---
-# <a name="transmit_as-and-represent_as"></a>Übertragen \_ als und Darstellung \_ als
+# <a name="transmit_as-and-represent_as"></a>Übertragen \_ als und Darstellen \_ als
 
-\_Übertragen als und stellen dar \_ , dass dasselbe Layout mit Ausnahme des führenden Tokens identisch ist. das Token liest FC-über \_ Tragung \_ als oder FC \_ , der als dargestellt wird \_ , aber der zugrunde liegende Code ist allgemein.
+Übertragen \_ als und darstellen als Teilen \_ desselben Layouts mit Ausnahme des führenden Tokens. Das Token liest FC \_ TRANSMIT AS oder FC REPRESENT \_ \_ \_ AS, aber der zugrunde liegende Code ist üblich.
 
-Die Beschreibung hat folgendes Layout:
+Die Beschreibung weist das folgende Layout auf:
 
 ``` syntax
 FC_TRANSMIT_AS | FC_REPRESENT_AS
@@ -26,11 +26,11 @@ transmitted_type_buffer_size<2>
 transmitted_type_offset<2>
 ```
 
-Die Flags<1> Byte bestehen aus dem oberen Flag-Halbbyte und dem unteren Ausrichtungs-Halbbyte.
+Die Flags<1> Byte bestehen aus dem oberen Flag nibble und dem unteren Ausrichtungsnabzeichen.
 
-Der Ausrichtungs-Halbbyte behält die Netzwerk Ausrichtung des übertragenen Typs bei. Dies ist erforderlich, wenn die Puffergröße und die übertragene Typgröße aus dem Format Code verwendet werden.
+Die Ausrichtungsnibbel behält die Kabelausrichtung des übertragenen Typs bei. Dies ist erforderlich, wenn die Puffergröße angepasst und die übertragene Typgröße aus dem Formatcode verwendet wird.
 
-Das Flag Halbbyte kann die folgenden Flags aufweisen:
+Das Flag nibble kann die folgenden Flags aufweisen:
 
 ``` syntax
 #define PRESENTED_TYPE_IS_ARRAY     0x10
@@ -38,16 +38,16 @@ Das Flag Halbbyte kann die folgenden Flags aufweisen:
 #define PRESENTED_TYPE_ALIGN_8      0x40
 ```
 
-Der dargestellte \_ Typ \_ ist \_ ein arrayflag, das als Argument der obersten Ebene übertragen wird, als ein Array von etwas und einem Wert, das ein Array aus einem Wert darstellt. Der [**– Oi**](/windows/desktop/Midl/-oi) -Interpreter verwendet dieses Flag zum Durchlaufen eines solchen Arguments (bei dem es sich eigentlich um einen Zeiger auf den Stapel handelt, nicht um das Array). Die anderen beiden Flags werden auch nur in vorherigen Interpretern verwendet, um einen ordnungsgemäßen Schritt für einen dargestellten Typ auf dem Stapel durchzusetzen.
+Das PRESENTED \_ TYPE \_ IS \_ ARRAY-Flag markiert ein Übertragungsargument der obersten Ebene als ein Array von etwas und wird als Wert übergeben. Der [**-Oi-Interpreter**](/windows/desktop/Midl/-oi) verwendet dieses Flag, um ein solches Argument zu übergehen (bei dem es sich tatsächlich um einen Zeiger auf dem Stapel und nicht um das Array handelt). Die anderen beiden Flags werden auch nur in vorherigen Interpretern verwendet, um einen dargestellten Typ auf dem Stapel ordnungsgemäß zu übergehen.
 
-Der quintupel- \_ Index<2> ist ein Index der Rückruf Routine-quintupel (Dies ist eigentlich ein Vierfaches) von Funktionen. Die-Tabelle wird häufig sowohl als als auch als dargestellt, und es gibt eine offensichtliche Zuordnung für die Position der Routinen, wie der Dienst, den der Dienst übermittelt und als Codes darstellt. Die Zuordnung erfolgt aus \_ local => to \_ xmit, \_ local => from \_ xmit, Free \_ inst => Free \_ xmit, Free \_ local => Free \_ INST.
+Der Index für die Indexaufforderung \_<2> ist ein Index der Rückrufroutine (eigentlich ein Quadruple) von Funktionen. Die Tabelle ist sowohl für die Übertragung als auch für die Darstellung als üblich, und es gibt eine offensichtliche Zuordnung für die Position der Routinen, da der gleiche Einstiegspunktedienst als und als Codes darstellt. Die Zuordnung erfolgt von \_ local => zu \_ xmit, zu \_ local => von \_ xmit, free \_ inst => free \_ xmit, free \_ local => free \_ inst.
 
-Die dargestellte Größe des Arbeits \_ \_ Speichers \_<2> bietet immer eine Größe für den dargestellten/lokalen Typ, einschließlich unbekannter Darstellung als Typen.
+Die \_ dargestellte \_ \_ Typspeichergröße<2> bietet immer eine Größe für den dargestellten/lokalen Typ, einschließlich unbekannter Darstellung als Typen.
 
-Die übertragene \_ \_ typpuffer \_ Größe<2> ist entweder 0 (null), wenn die Größe unterschiedlich ist, oder die tatsächliche Größe. Dies ist eine Optimierung, die das Überspringen einiger Rückrufe bei der Größenanpassung des Puffers ermöglicht.
+Die Puffergröße des übertragenen \_ Typs \_<\_ 2> ist entweder 0 (null), wenn die Größe variiert, oder die tatsächliche feste Größe. Dies ist eine Optimierung, die das Überspringen einiger Rückrufe beim Dimensionieren des Puffers ermöglicht.
 
-Der übertragene \_ \_ typoffset<2> ist der übliche relative typoffset der übertragenen typformatzeichenfolge.
+Der übertragene \_ \_ Typoffset<2> ist der übliche relative Typoffset zur formatierten Zeichenfolge des übertragenen Typs.
 
- 
+ 
 
- 
+ 

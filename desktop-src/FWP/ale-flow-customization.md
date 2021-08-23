@@ -1,61 +1,61 @@
 ---
-title: Anpassung des ALE-Flows
-description: Die Netzwerk Filterung auf der Ebene (Application Layer Enforcement, ALE) der Windows-Filter Plattform (WFP) kann durch Hinzufügen von Filtern mit bestimmten Klassifikations Optionen angepasst werden.
+title: ALE Flow Anpassung
+description: Die Netzwerkfilterung auf den ALE-Ebenen (Application Layer Enforcement) der Windows Filtering Platform (WFP) kann angepasst werden, indem Filter mit bestimmten Klassifizierungsoptionen hinzugefügt werden.
 ms.assetid: 123af237-cf42-410b-8a2f-c011cb5f4f19
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e9843a60719f424403139885f24f165c0dd936b
-ms.sourcegitcommit: 60ad94096619da5476f9bbcd4cc231b40b6f5358
+ms.openlocfilehash: fbe42a6df32bc69ba454226eb113cb43756224daaf752c3925f1f2d3bacd7650
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "104314368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118951369"
 ---
-# <a name="ale-flow-customization"></a>Anpassung des ALE-Flows
+# <a name="ale-flow-customization"></a>ALE Flow Anpassung
 
-Die Netzwerk Filterung auf der Ebene (Application Layer Enforcement, ALE) der Windows-Filter Plattform (WFP) kann durch Hinzufügen von Filtern mit bestimmten Klassifikations Optionen angepasst werden.
+Die Netzwerkfilterung auf den ALE-Ebenen (Application Layer Enforcement) der Windows Filtering Platform (WFP) kann angepasst werden, indem Filter mit bestimmten Klassifizierungsoptionen hinzugefügt werden.
 
-## <a name="multicastbroadcast-traffic"></a>Multicast/Broadcast-Datenverkehr
+## <a name="multicastbroadcast-traffic"></a>Multicast-/Broadcastdatenverkehr
 
-Fügen Sie zum Blockieren von eingehendem Datenverkehr, der auf ausgehenden Multicast-oder Broadcast Zuständen basiert, einen Filter hinzu, der ausgehenden Multicast-und Broadcast Datenverkehr autorisiert, und für die die FWP-Option " [**\_ \_ \_ Multicast- \_ Status**](/windows/desktop/api/Fwpmtypes/ns-fwpmtypes-fwpm_classify_option0) " auf **FWP- \_ Option \_ Wert " \_ \_ Multicast \_ Status ablehnen**"
+Um eingehenden Datenverkehr basierend auf ausgehenden Multicast- oder Broadcastzuständen zu blockieren, fügen Sie einen Filter hinzu, der ausgehenden Multicast- und Broadcastdatenverkehr autorisiert und für den die [**Option FWP \_ CLASSIFY OPTION \_ \_ MULTICAST \_ STATE**](/windows/desktop/api/Fwpmtypes/ns-fwpmtypes-fwpm_classify_option0) auf **FWP OPTION VALUE \_ \_ \_ DENY \_ MULTICAST \_ STATE** festgelegt ist.
 
-## <a name="remote-peers"></a>Remote Peers
+## <a name="remote-peers"></a>Remote-Peers
 
-Fügen Sie einen Filter mit der Option FWP-klassifizieren, wenn die Option freie [**\_ \_ \_ \_ Quell \_ Zuordnung**](/windows/desktop/api/Fwpmtypes/ns-fwpmtypes-fwpm_classify_option0) **aktivieren auf FWP- \_ Option \_ Wert \_ \_ lose \_ Quell \_ Zuordnung aktivieren** festgelegt ist, um Antwort Pakete von unterschiedlichen Peers dem gleichen Datenfluss hinzuzufügen.
+Um Antwortpakete von verschiedenen Peers demselben ALE-Flow hinzuzufügen, fügen Sie einen Filter hinzu, bei dem die [**Option FWP \_ CLASSIFY OPTION LOOSE SOURCE \_ \_ \_ \_ MAPPING**](/windows/desktop/api/Fwpmtypes/ns-fwpmtypes-fwpm_classify_option0) auf FWP OPTION VALUE ENABLE LOOSE SOURCE MAPPING festgelegt **\_ \_ \_ \_ \_ \_ ist.**
 
-Siehe [Verwenden von klassifizier Optionen](using-classify-options.md) für Codebeispiele.
+Ein [Codebeispiel finden Sie unter](using-classify-options.md) Verwenden von Klassifizieren von Optionen.
 
-## <a name="ale-flow-lifetime"></a>ALE Fluss Lebensdauer
+## <a name="ale-flow-lifetime"></a>ALE Flow Lebensdauer
 
-Fügen Sie zum Ändern der Leerlauf Timeout Werte für einen ALE-Datenfluss einen Filter mit der Option [**FWP- \_ klassifizieren- \_ Option \_ mcast \_ Bcast \_ Lifetime**](/windows/desktop/api/Fwpmtypes/ns-fwpmtypes-fwpm_classify_option0) und/oder der Option **\_ \_ \_ \_ unicastlebensdauer für die FWP-klassifizier Option** auf den gewünschten Leerlauf Timeout Wert fest.
+Um die Leerlauf-Timeoutwerte für einen ALE-Flow zu ändern, fügen Sie einen Filter hinzu, bei dem die [**Option FWP \_ CLASSIFY OPTION \_ \_ MCAST \_ BCAST \_ LIFETIME**](/windows/desktop/api/Fwpmtypes/ns-fwpmtypes-fwpm_classify_option0) und/oder **die Option FWP CLASSIFY OPTION \_ \_ \_ UNICAST \_ LIFETIME** auf den gewünschten Leerlauf-Timeoutwert festgelegt ist.
 
-Siehe [Verwenden von klassifizier Optionen](using-classify-options.md) für ein Codebeispiel.
+Ein [Codebeispiel finden Sie unter](using-classify-options.md) Verwenden von Klassifizieren von Optionen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Durchsetzung der Anwendungsschicht (ALE)](application-layer-enforcement--ale-.md)
+[Erzwingung der Anwendungsschicht (Application Layer Enforcement, ALE)](application-layer-enforcement--ale-.md)
 </dt> <dt>
 
-[ALE Ebenen](ale-layers.md)
+[ALE-Ebenen](ale-layers.md)
 </dt> <dt>
 
-[Status behaftete ALE Filterung](ale-stateful-filtering.md)
+[Zustands behaftete ALE-Filterung](ale-stateful-filtering.md)
 </dt> <dt>
 
-[ALE Multicast-/Broadcast Datenverkehr](ale-multicast-broadcast-traffic.md)
+[ALE-Multicast-/Broadcastdatenverkehr](ale-multicast-broadcast-traffic.md)
 </dt> <dt>
 
 [Erneute ALE-Autorisierung](ale-re-authorization.md)
 </dt> <dt>
 
-[Verwenden von klassifizier Optionen](using-classify-options.md)
+[Verwenden von Klassifizieren von Optionen](using-classify-options.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

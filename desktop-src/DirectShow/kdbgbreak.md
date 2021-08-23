@@ -1,7 +1,7 @@
 ---
-description: Verursacht eine breakpointausnahme und protokolliert die angegebene Zeichenfolge mit dem dbglog-Makro. Wird in Einzelhandels Builds ignoriert.
+description: Verursacht eine Breakpointausnahme und protokolliert die angegebene Zeichenfolge mithilfe des DbgLog-Makros. Wird in Einzelhandels-Builds ignoriert.
 ms.assetid: 475810db-692b-4727-9ef1-ece74e9618d0
-title: Kdbgbreak-Makro (wxdebug. h)
+title: KDbgBreak-Makro (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Wxdebug.h
-ms.openlocfilehash: 9631dc8d956652137810b25ae5923cc1c6927bee
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3339e69bb10876fe326f5960e6012849664fdbfcb4fe06fffd4029e6170af8b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357531"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118952359"
 ---
-# <a name="kdbgbreak-macro"></a>Kdbgbreak-Makro
+# <a name="kdbgbreak-macro"></a>KDbgBreak-Makro
 
-Verursacht eine breakpointausnahme und protokolliert die angegebene Zeichenfolge mit dem [**dbglog**](dbglog.md) -Makro. Wird in Einzelhandels Builds ignoriert.
+Verursacht eine Breakpointausnahme und protokolliert die angegebene Zeichenfolge mithilfe des [**DbgLog-Makros.**](dbglog.md) Wird in Einzelhandels-Builds ignoriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ void KDbgBreak(
 
 <dl> <dt>
 
-*"Straume"* 
+*strLiteral* 
 </dt> <dd>
 
-Text Zeichenfolge.
+Textzeichenfolge.
 
 </dd> </dl>
 
@@ -50,9 +50,9 @@ Text Zeichenfolge.
 
 Dieses Makro gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im Gegensatz zum [**dbgbreak**](dbgbreak.md) -Makro zeigt dieses Makro kein Meldungs Feld an, in dem der Benutzer dazu aufgefordert wird. In Debugbuilds bewirkt dies automatisch, dass eine breakpointausnahme auftritt.
+Im Gegensatz [**zum DbgBreak-Makro**](dbgbreak.md) zeigt dieses Makro kein Meldungsfeld an, in dem der Benutzer dazu aufgefordert wird. In Debugbuilds wird automatisch eine Breakpointausnahme ausgelöst.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Im Gegensatz zum [**dbgbreak**](dbgbreak.md) -Makro zeigt dieses Makro kein Meld
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Im Gegensatz zum [**dbgbreak**](dbgbreak.md) -Makro zeigt dieses Makro kein Meld
 
 <dl> <dt>
 
-[Assert-und breakpointmakros](assert-and-breakpoint-macros.md)
+[Assert- und Breakpoint-Makros](assert-and-breakpoint-macros.md)
 </dt> </dl>
 
  

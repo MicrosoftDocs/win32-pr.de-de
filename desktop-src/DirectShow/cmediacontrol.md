@@ -1,7 +1,7 @@
 ---
-description: Die cmediacontrol-Klasse stellt die Basisklassen Behandlung der IDispatch-Methoden der Dual-Interface IMediaControl bereit. Die Eigenschaften und Methoden der IMediaControl-Schnittstelle werden als rein virtuell angezeigt.
+description: Die CMediaControl-Klasse stellt die Basisklassenbehandlung der IDispatch-Methoden des Dual-Interface-IMediaControl bereit. Die Eigenschaften und Methoden der IMediaControl-Schnittstelle bleiben rein virtuell.
 ms.assetid: 033a2de6-8046-408c-995f-ec2de6654c41
-title: Cmediacontrol-Klasse
+title: CMediaControl-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,34 +12,34 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: ae3a528263af4bd2fe5e4eccbe28793799c373a0
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 119ffb93cb307db1da3bc8c7562851d63c5f9eeb8e0e3b80be62c8110181c32b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "103869595"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074078"
 ---
-# <a name="cmediacontrol-class"></a>Cmediacontrol-Klasse
+# <a name="cmediacontrol-class"></a>CMediaControl-Klasse
 
 ![cmediacontrol-Klassenhierarchie](images/cutil02.png)
 
-Die- `CMediaControl` Klasse stellt die Basisklassen Behandlung der [**IDispatch**](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) -Methoden der Dual-Interface [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol)bereit. Die Eigenschaften und Methoden der **IMediaControl** -Schnittstelle werden als rein virtuell angezeigt.
+Die `CMediaControl` -Klasse stellt die Basisklassenbehandlung der [**IDispatch-Methoden**](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) von [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol)mit dualer Schnittstelle bereit. Die Eigenschaften und Methoden der **IMediaControl-Schnittstelle** bleiben rein virtuell.
 
-In der Regel ist der Filter Graph-Manager das einzige Objekt, das die [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol) -Schnittstelle implementiert. (Filter implementieren die [**imediafilter**](/windows/desktop/api/Strmif/nn-strmif-imediafilter) -Schnittstelle, die von [**ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter)geerbt wurde, um Steuerungsbefehle vom Filter Graph-Manager zu empfangen.) Daher ist diese Klassenbibliothek nur für das Filtern von Entwicklern eingeschränkt.
+In der Regel ist der Filtergraph-Manager das einzige Objekt, das die [**IMediaControl-Schnittstelle**](/windows/desktop/api/Control/nn-control-imediacontrol) implementiert. (Filter implementieren die von [**IBaseFilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter)geerbte [**IMediaFilter-Schnittstelle,**](/windows/desktop/api/Strmif/nn-strmif-imediafilter) um Steuerungsbefehle vom Filtergraph-Manager zu empfangen.) Daher ist diese Klassenbibliothek nur von begrenztem Nutzen zum Filtern von Entwicklern.
 
-[**Cmediacontrol:: GetIDsOfNames**](cmediacontrol-getidsofnames.md), [**cmediacontrol:: die Funktionen "GetTypeInfo**](cmediacontrol-gettypeinfo.md)", " [**cmediacontrol:: GetTypeInfoCount**](cmediacontrol-gettypeinfocount.md)" und " [**cmediacontrol:: Aufrufen**](cmediacontrol-invoke.md) " sind Standard Implementierungen der [**IDispatch**](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) -Methoden mithilfe der [**cbasedispatch**](cbasedispatch.md) -Klasse (und einer Typbibliothek) zum Analysieren der Befehle und zum übergeben an die reinen virtuellen Methoden der Schnittstelle " [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol) "
+Die [**Memberfunktionen CMediaControl::GetIDsOfNames,**](cmediacontrol-getidsofnames.md) [**CMediaControl::GetTypeInfo,**](cmediacontrol-gettypeinfo.md) [**CMediaControl::GetTypeInfoCount**](cmediacontrol-gettypeinfocount.md)und [**CMediaControl::Invoke**](cmediacontrol-invoke.md) sind Standardimplementierungen der [**IDispatch-Methoden,**](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) die die [**CBaseDispatch-Klasse**](cbasedispatch.md) (und eine Typbibliothek) verwenden, um die Befehle zu analysieren und an die reinen virtuellen Methoden der [**IMediaControl-Schnittstelle**](/windows/desktop/api/Control/nn-control-imediacontrol) zu übergeben.
 
-Die in Control. ODL definierten [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol) -Methoden werden als rein virtuell belassen.
+Die in control.odl definierten [**IMediaControl-Methoden**](/windows/desktop/api/Control/nn-control-imediacontrol) bleiben rein virtuell.
 
 
 
-| Elementfunktionen                                           | BESCHREIBUNG                                                                                                                                                                                                                             |
+| Elementfunktionen                                           | Beschreibung                                                                                                                                                                                                                             |
 |------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Cmediacontrol**](cmediacontrol-cmediacontrol.md)       | Erstellt ein **cmediacontrol** -Objekt.                                                                                                                                                                                                  |
-| IDispatch-Methoden                                          | BESCHREIBUNG                                                                                                                                                                                                                             |
-| [**GetIDsOfNames**](cmediacontrol-getidsofnames.md)       | Ordnet einen einzelnen Member und einen optionalen Satz von Parametern einem entsprechenden Satz von ganzzahligen Dispatchbezeichnern (DispIds) zu, der bei nachfolgenden Aufrufen der [**cmediacontrol:: Aufrufen**](cmediacontrol-invoke.md) -Methode verwendet werden kann. |
-| [**GetTypeInfo**](cmediacontrol-gettypeinfo.md)           | Ruft ein Type-Information-Objekt ab, das die Typinformationen für eine Schnittstelle abrufen kann.                                                                                                                                          |
-| [**Gettypeingefocount**](cmediacontrol-gettypeinfocount.md) | Ruft die Anzahl der von einem-Objekt bereitgestellten Typ-Informations Schnittstellen ab.                                                                                                                                                              |
+| [**CMediaControl**](cmediacontrol-cmediacontrol.md)       | Erstellt ein **CMediaControl-Objekt.**                                                                                                                                                                                                  |
+| IDispatch-Methoden                                          | Beschreibung                                                                                                                                                                                                                             |
+| [**GetIDsOfNames**](cmediacontrol-getidsofnames.md)       | Karten einen einzelnen Member und einen optionalen Satz von Parametern zu einem entsprechenden Satz von ganzzahligen Dispatchbezeichnern (DISPIDs), die bei nachfolgenden Aufrufen der [**CMediaControl::Invoke-Methode**](cmediacontrol-invoke.md) verwendet werden können. |
+| [**GetTypeInfo**](cmediacontrol-gettypeinfo.md)           | Ruft ein Typinformationsobjekt ab, das die Typinformationen für eine Schnittstelle abrufen kann.                                                                                                                                          |
+| [**GetTypeInfoCount**](cmediacontrol-gettypeinfocount.md) | Ruft die Anzahl der Typinformationsschnittstellen ab, die von einem -Objekt bereitgestellt werden.                                                                                                                                                              |
 | [**Invoke**](cmediacontrol-invoke.md)                     | Stellt den Zugriff auf von einem Objekt verfügbar gemachte Eigenschaften und Methoden bereit.                                                                                                                                                                         |
 
 

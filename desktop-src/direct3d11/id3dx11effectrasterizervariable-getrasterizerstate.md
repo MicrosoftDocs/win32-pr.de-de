@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectRasterizerVariable getrasterizerstate-Methode (D3dx11effect. h)
-description: Einen Zeiger auf eine Raster-Schnittstelle erhalten.
+title: ID3DX11EffectRasterizerVariable GetRasterizerState-Methode (D3dx11effect.h)
+description: Abrufen eines Zeigers auf eine Rasterizerschnittstelle.
 ms.assetid: 4b8515e0-b79a-4572-9142-07c50a8839b8
 keywords:
-- Getrasterizerstate-Methode Direct3D 11
-- Getrasterizerstate-Methode Direct3D 11, ID3DX11EffectRasterizerVariable-Schnittstelle
-- ID3DX11EffectRasterizerVariable-Schnittstelle Direct3D 11, getrasterizerstate-Methode
+- GetRasterizerState-Methode Direct3D 11
+- GetRasterizerState-Methode Direct3D 11 , ID3DX11EffectRasterizerVariable-Schnittstelle
+- ID3DX11EffectRasterizerVariable-Schnittstelle Direct3D 11 , GetRasterizerState-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 972140a8f74a3e5a6728429faddacc253aaa6c9d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 94dbd6b45b14e8499fada4c1c5eb32b9bbd55b1dad843b05cf52a9318737cb9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982628"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119045878"
 ---
-# <a name="id3dx11effectrasterizervariablegetrasterizerstate-method"></a>ID3DX11EffectRasterizerVariable:: getrasterizerstate-Methode
+# <a name="id3dx11effectrasterizervariablegetrasterizerstate-method"></a>ID3DX11EffectRasterizerVariable::GetRasterizerState-Methode
 
-Einen Zeiger auf eine Raster-Schnittstelle erhalten.
+Abrufen eines Zeigers auf eine Rasterizerschnittstelle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,18 +47,18 @@ HRESULT GetRasterizerState(
 *Index* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Index in ein Array von Raster-Schnittstellen. Wenn nur eine Raster-Schnittstelle vorhanden ist, verwenden Sie 0.
+Index in ein Array von Rasterizerschnittstellen. Wenn nur eine Rasterizerschnittstelle vorhanden ist, verwenden Sie 0.
 
 </dd> <dt>
 
-*pprasterizerstate* 
+*ppRasterizerState* 
 </dt> <dd>
 
 Typ: **[ **ID3D11RasterizerState**](/windows/desktop/api/D3D11/nn-d3d11-id3d11rasterizerstate)\*\***
 
-Die Adresse eines Zeigers auf eine Raster-Schnittstelle (siehe [**ID3D11RasterizerState**](/windows/desktop/api/D3D11/nn-d3d11-id3d11rasterizerstate)).
+Die Adresse eines Zeigers auf eine Rasterizerschnittstelle (siehe [**ID3D11RasterizerState**](/windows/desktop/api/D3D11/nn-d3d11-id3d11rasterizerstate)).
 
 </dd> </dl>
 
@@ -66,27 +66,27 @@ Die Adresse eines Zeigers auf eine Raster-Schnittstelle (siehe [**ID3D11Rasteriz
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

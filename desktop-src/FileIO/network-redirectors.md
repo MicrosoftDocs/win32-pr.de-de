@@ -1,30 +1,30 @@
 ---
-description: Beschreibt die Funktionalität eines Netzwerkredirector.
+description: Beschreibt die Funktionalität eines Netzwerk-Redirectors.
 ms.assetid: 3cf36f88-b282-4f75-84fe-8106fea66825
-title: Netzwerkredirectors
+title: Netzwerkumleitung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fce8c887cba779fe3f6aee9811819c6638d926f2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1ed44bb8479c4aea5056b667688cb27ae0f1fe1ebf4f43d066a49143d5bfeadc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868915"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118951079"
 ---
-# <a name="network-redirectors"></a>Netzwerkredirectors
+# <a name="network-redirectors"></a>Netzwerkumleitung
 
-Ein Netzwerkredirector ist ein Dateisystem Treiber (oder eine voll qualifizierte Datei), der wie folgt funktioniert:
+Ein Netzwerk-Redirector ist ein Dateisystemtreiber (File System Driver, FSD), der wie folgt funktioniert:
 
--   Als Client in einem Netzwerk-e/a-Vorgang durch Senden von e/a-Anforderungen an Server und Verarbeiten der Antworten von den Servern.
--   Als Server in einem Netzwerk-e/a-Vorgang durch empfangen von e/a-Anforderungen von Servern und Verarbeiten der Anforderungen.
+-   Als Client in einem Netzwerk-E/A-Vorgang durch Senden von E/A-Anforderungen an Server und Verarbeiten der Antworten von den Servern.
+-   Als Server in einem Netzwerk-E/A-Vorgang, indem E/A-Anforderungen von Servern empfangen und die Anforderungen verarbeitet werden.
 
-Sie führt die gesamte Interaktion auf niedriger Ebene mit dem Server durch, wobei der von der Anwendung bereitgestellte Dateiname mit dem Speicherort der Ressource auf dem Remote Server aufgelöst wird. Auf diese Weise ermöglicht der Redirector der Anwendung den Zugriff auf und das Bearbeiten von Ressourcen auf Remote Servern, als ob Sie sich auf dem lokalen Computer befinden.
+Er führt die gesamte Low-Level-Interaktion mit dem Server durch, um den von der Anwendung bereitgestellten Dateinamen mit dem Speicherort der Ressource auf dem Remoteserver aufzulösen. Auf diese Weise ermöglicht der Redirector der Anwendung den Zugriff auf und die Bearbeitung von Ressourcen auf Remoteservern, als ob sie sich auf dem lokalen Computer befinden würden.
 
-Redirectors arbeiten vollständig im Kernel Modus. Dies bietet die folgenden Leistungsvorteile im Vergleich zu benutzermodusalternativen:
+Umleitungen werden vollständig im Kernelmodus ausgeführt. Dies bietet die folgenden Leistungsvorteile gegenüber Alternativen im Benutzermodus:
 
--   Die Anwendung kann mit auf dem Server ausgeführt werden, die auf dem Server ausgeführt wird, z. b. auf der FSD des Servers, ohne dass der Benutzer-zu-Kernel-Modus und Kontextwechsel zwischen Kernel und Benutzermodus erforderlich sind.
--   Sie kann im Kernel Modus mit dem Cache-Manager auf dem Server interagieren, um e/a-Daten zwischenzuspeichern, die vom Server Cache-Manager auf dem Client gesendet werden.
--   API-Funktionen, die für Remote-e/a-Anforderungen erstellt wurden, und Änderungen an den standardmäßigen Datei-e/a-Funktionen, um diese Funktionalität bereitzustellen, sind nicht erforderlich.
+-   Sie kann mit Kernelmodus-FSDs interagieren, die auf dem Server ausgeführt werden, z. B. der Server-FSD, ohne dass Kontextwechsel zwischen Benutzern und Kernel-zu-Benutzer-Modus erforderlich sind.
+-   Sie kann im Kernelmodus mit dem Cache-Manager auf dem Server interagieren, um E/A-Daten zwischenzuspeichern, die der Servercache-Manager auf dem Client sendet.
+-   API-Funktionen, die für Remote-E/A-Anforderungen angepasst wurden, und Änderungen an den Standarddatei-E/A-Funktionen zur Bereitstellung dieser Funktionalität sind nicht erforderlich.
 
  
 

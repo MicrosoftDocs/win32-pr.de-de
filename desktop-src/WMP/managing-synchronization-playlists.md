@@ -1,45 +1,45 @@
 ---
-title: Synchronisierungs Wiedergabelisten
-description: Synchronisierungs Wiedergabelisten
+title: Verwalten von Synchronisierungswiedergabelisten
+description: Verwalten von Synchronisierungswiedergabelisten
 ms.assetid: 5891ada0-37a6-4256-9885-8aa9dbe98b7c
 keywords:
-- Windows Media Player, portable Geräte
-- Windows Media Player-Objektmodell, portable Geräte
+- Windows Media Player,portable Geräte
+- Windows Media Player Objektmodell, portable Geräte
 - Objektmodell, portable Geräte
-- Windows Media Player ActiveX-Steuerelement, portable Geräte
-- ActiveX-Steuerelement, portable Geräte
-- Windows Media Player Mobile ActiveX-Steuerelement, portable Geräte
-- Windows Media Player Mobile, tragbare Geräte
-- Portable Geräte, Verwalten von Synchronisierungs Wiedergabelisten
-- Geräte Synchronisierung, Wiedergabelisten
+- Windows Media Player ActiveX,portable Geräte
+- ActiveX,portable Geräte
+- Windows Media Player Mobile ActiveX Steuerung, portable Geräte
+- Windows Media Player Mobile, portable Geräte
+- Portable Geräte,Verwalten von Synchronisierungswiedergabelisten
+- Gerätesynchronisierung,Wiedergabelisten
 - Synchronisieren von Geräten, Wiedergabelisten
-- Windows Media Player, Synchronisierungs Wiedergabelisten
-- Windows Media Player-Objektmodell, Synchronisierungs Wiedergabelisten
-- Objektmodell, Synchronisierungs Wiedergabelisten
-- Windows Media Player Mobile, Synchronisierungs Wiedergabelisten
-- Windows Media Player ActiveX-Steuerelement, Synchronisierungs Wiedergabelisten
-- Windows Media Player Mobile ActiveX-Steuerelement, Synchronisierungs Wiedergabelisten
-- ActiveX-Steuerung, Synchronisierungs Wiedergabelisten
-- Wiedergabelisten, Synchronisierung
-- Metadatei-Wiedergabelisten, Synchronisierung
-- Windows Media Metadatei-Wiedergabelisten, Synchronisierung
-- Synchronisierungs Wiedergabelisten, verwalten
+- Windows Media Player,Synchronisierungswiedergabelisten
+- Windows Media Player-Objektmodell, Synchronisierungswiedergabelisten
+- Objektmodell,Synchronisierungswiedergabelisten
+- Windows Media Player Mobil, Synchronisierungswiedergabelisten
+- Windows Media Player ActiveX,Synchronisierungswiedergabelisten
+- Windows Media Player Mobile ActiveX-Steuerelement, Synchronisierungswiedergabelisten
+- ActiveX,Synchronisierungswiedergabelisten
+- Wiedergabelisten,Synchronisierung
+- Metafile-Wiedergabelisten,Synchronisierung
+- Windows Wiedergabelisten von Medienmetadateien, Synchronisierung
+- Synchronisierungswiedergabelisten,Verwalten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: be0fe084918c0b69b827dbb941388246cbd177ee
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 10253d7f08c618d62079ccc1767fdaf85560861eae68d39cd897e7959eaffcad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337189"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996370"
 ---
-# <a name="managing-synchronization-playlists"></a>Synchronisierungs Wiedergabelisten
+# <a name="managing-synchronization-playlists"></a>Verwalten von Synchronisierungswiedergabelisten
 
-Windows Media Player 10 oder höher verwendet Wiedergabelisten, um digitale Mediendateien mit tragbaren Geräten zu synchronisieren. In diesem Abschnitt wird erläutert, wie Synchronisierungs Wiedergabelisten verwendet werden.
+Windows Media Player 10 oder höher verwendet Wiedergabelisten, um digitale Mediendateien mit portablen Geräten zu synchronisieren. In diesem Abschnitt wird erläutert, wie Sie mit Synchronisierungswiedergabelisten arbeiten.
 
-Der Beispielcode in diesem Abschnitt verwendet zwei ListView-Steuerelemente, um Informationen anzuzeigen. Das erste ListView-Steuerelement (IDC \_ plview) zeigt alle Wiedergabelisten in der Windows Media Player-Bibliothek an, wobei zuerst Synchronisierungs Wiedergabelisten angezeigt werden. Synchronisierungs Wiedergabelisten für das aktuell ausgewählte Gerät sind mit einem Häkchen gekennzeichnet und sind in der Reihenfolge der Synchronisierungs Priorität sortiert. Alle anderen Wiedergabelisten werden deaktiviert. Das ListView-Steuerelement wurde für die einfache Auswahl konfiguriert. Die Reihenfolge der Wiedergabelisten im ListView-Steuerelement bestimmt Ihre Synchronisierungs Priorität. Der aktivierte Zustand einer einzelnen Wiedergabeliste bestimmt, ob es sich um eine Synchronisierungs Wiedergabeliste für das aktuell ausgewählte Gerät handelt.
+Der Beispielcode in diesem Abschnitt verwendet zwei ListView-Steuerelemente, um Informationen anzuzeigen. Das erste ListView-Steuerelement (IDC PLVIEW) zeigt alle Wiedergabelisten in der \_ Windows Media Player-Bibliothek an, und Synchronisierungswiedergabelisten werden zuerst angezeigt. Synchronisierungswiedergabelisten für das derzeit ausgewählte Gerät werden mit einem Häkchen markiert und in der Reihenfolge der Synchronisierungspriorität sortiert. Alle anderen Wiedergabelisten sind deaktiviert. Das ListView-Steuerelement wurde für eine einzelne Auswahl konfiguriert. Die Reihenfolge der Wiedergabelisten im ListView-Steuerelement bestimmt deren Synchronisierungspriorität. Der überprüfte Status einer einzelnen Wiedergabeliste bestimmt, ob es sich um eine Synchronisierungswiedergabeliste für das aktuell ausgewählte Gerät handelt.
 
-Das zweite ListView-Steuerelement (IDC \_ MediaView) zeigt die Medienelemente in der ausgewählten Wiedergabeliste an. In zwei zusätzlichen Spalten wird Text angezeigt, der angibt, ob die digitale Mediendatei auf das Gerät kopiert wurde, und im Fall eines Fehlers, ob der Kopiervorgang fehlgeschlagen ist, da die digitale Mediendatei nicht passt.
+Das zweite ListView-Steuerelement (IDC \_ MEDIAVIEW) zeigt die Medienelemente in der ausgewählten Wiedergabeliste an. Zwei zusätzliche Spalten zeigen Text an, der angibt, ob die digitale Mediendatei auf das Gerät kopiert wurde und ob bei einem Fehler ein Fehler beim Kopieren auft war, weil die digitale Mediendatei nicht passte.
 
 Der folgende Beispielcode zeigt, wie die ListView-Steuerelemente initialisiert werden:
 
@@ -102,7 +102,7 @@ STDMETHODIMP CSyncSettings::InitListView()
 
 
 
-Das folgende Array von Zeichen folgen enthält die Namen der Synchronisierungs Attribute, die in den Beispielen verwendet werden:
+Das folgende Array von Zeichenfolgen enthält die Namen der Synchronisierungsattribute, die in den Beispielen verwendet werden:
 
 
 ```C++
@@ -128,7 +128,7 @@ static const TCHAR *g_szSyncAttributeNames[17] = {
 
 
 
-Die folgende Member-Variable enthält eine Wiedergabeliste, die alle Wiedergabelisten in der Windows Media Player-Bibliothek enthält. Jede Wiedergabeliste wird als Medien Element dargestellt.
+Die folgende Membervariable enthält eine Wiedergabeliste, die alle Wiedergabelisten in der Windows Media Player enthält. Jede Wiedergabeliste wird als Medienelement dargestellt.
 
 
 ```C++
@@ -139,22 +139,22 @@ CComPtr<IWMPPlaylist> m_spPlaylist;
 
 Die folgenden Abschnitte enthalten Beispielcode:
 
--   [Auflisten von Synchronisierungs Wiedergabelisten](enumerating-synchronization-playlists.md)
--   [Sortieren von Wiedergabelisten nach Synchronisierungs Priorität](sorting-playlists-by-synchronization-priority.md)
--   [Auflisten der Medienelemente](enumerating-the-media-items.md)
--   [Status der Wiedergabelisten Synchronisierung](determining-playlist-synchronization-state.md)
--   [Ändern der Synchronisierungs Priorität](changing-synchronization-priority.md)
+-   [Auflisten von Synchronisierungswiedergabelisten](enumerating-synchronization-playlists.md)
+-   [Sortieren von Wiedergabelisten nach Synchronisierungspriorität](sorting-playlists-by-synchronization-priority.md)
+-   [Aufzählen der Medienelemente](enumerating-the-media-items.md)
+-   [Bestimmen des Wiedergabelistensynchronisierungsstatus](determining-playlist-synchronization-state.md)
+-   [Ändern der Synchronisierungspriorität](changing-synchronization-priority.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Arbeiten mit tragbaren Geräten**](working-with-portable-devices.md)
+[**Arbeiten mit portablen Geräten**](working-with-portable-devices.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

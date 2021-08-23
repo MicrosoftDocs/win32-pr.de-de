@@ -1,7 +1,7 @@
 ---
-description: Die llmuldiv-Funktion implementiert die Formel ((a \* b) + Rnd)/c wobei jeder Begriff ein 64-Bit-Wert ist.
+description: Die llMulDiv-Funktion implementiert die Formel ((a \* b)+rnd)/c, wobei jeder Begriff ein 64-Bit-Wert ist.
 ms.assetid: cd5073b9-27c7-42ee-8487-2d4ea29f77d4
-title: llmuldiv-Funktion (wxutil. h)
+title: llMulDiv-Funktion (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e45d22eec1536517bd2b57d875dd596e4a1e28db
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: df58175955106906027a6d2d10c465b82ad6313cd493e3ef9ef3ba279cd0115f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354141"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118952349"
 ---
-# <a name="llmuldiv-function"></a>llmuldiv-Funktion
+# <a name="llmuldiv-function"></a>llMulDiv-Funktion
 
-Die `llMulDiv` -Funktion implementiert die Formel, `((a*b)+rnd)/c` bei der jeder Begriff ein 64-Bit-Wert ist.
+Die `llMulDiv` Funktion implementiert die Formel, wobei jeder Begriff ein `((a*b)+rnd)/c` 64-Bit-Wert ist.
 
-Zeitstempel und Suchzeiten sind 64-Bit-Werte, sodass diese Funktion zum Ausführen von Konvertierungen auf 32-Bit-Systemen nützlich ist. Die Formel für Bytes pro Sekunde lautet z. b..
+Zeitstempel und Suchzeiten sind 64-Bit-Werte, daher ist diese Funktion nützlich für Konvertierungen auf 32-Bit-Systemen. Die Formel für Bytes pro Sekunde ist z. B.
 
 
 ```C++
@@ -36,7 +36,7 @@ Zeitstempel und Suchzeiten sind 64-Bit-Werte, sodass diese Funktion zum Ausführ
 
 
 
-, die als berechnet werden können `llMulDiv(nBytes, rtTime, 10000000, 0)` . Verwenden Sie den *Rnd* -Parameter als Rundungs Faktor.
+kann als berechnet `llMulDiv(nBytes, rtTime, 10000000, 0)` werden. Verwenden Sie *den rnd-Parameter* als Rundungsfaktor.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,10 +56,10 @@ LONGLONG WINAPI Int64x32Div32(
 
 <dl> <dt>
 
-*ein* 
+*Eine* 
 </dt> <dd>
 
-Multiplikand.
+Multiplikation.
 
 </dd> <dt>
 
@@ -80,7 +80,7 @@ Divisor.
 *Rnd* 
 </dt> <dd>
 
-Rundungs Faktor.
+Rundungsfaktor.
 
 </dd> </dl>
 
@@ -92,16 +92,16 @@ Gibt entweder die `(a * b + rnd)/c` Berechnung oder einen der folgenden Werte zu
 
 | Rückgabecode                                                                                       | Beschreibung                                                              |
 |---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| <dl> <dt>**0x7FFFFFFFFFFFFFFF**</dt> </dl> | Ein Überlauf ist aufgetreten, da das Ergebnis zu groß ist (positiv).<br/> |
-| <dl> <dt>**0x8000000000000000**</dt> </dl> | Ein Überlauf ist aufgetreten, da das Ergebnis zu groß (negativ) ist.<br/> |
+| <dl> <dt>**0x7FFFFFFFFFFFFFFF**</dt> </dl> | Überlauf aufgetreten, weil das Ergebnis zu groß (positiv) ist.<br/> |
+| <dl> <dt>**0x8000000000000000**</dt> </dl> | Ein Überlauf ist aufgetreten, weil das Ergebnis zu groß (negativ) ist.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Rundung für die Division liegt in Richtung NULL. Die Division durch 0 (null) wird als Überlauf Bedingung gezählt.
+Die Rundung für die Division ist in Richtung 0 (null) ausgerichtet. Division durch 0 (null) wird als Überlaufbedingung gezählt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -109,16 +109,16 @@ Rundung für die Division liegt in Richtung NULL. Die Division durch 0 (null) wi
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Diverse Hilfsfunktionen](miscellaneous-helper-functions.md)
+[Verschiedene Hilfsfunktionen](miscellaneous-helper-functions.md)
 </dt> <dt>
 
 [**Int64x32Div32**](int64x32div32.md)

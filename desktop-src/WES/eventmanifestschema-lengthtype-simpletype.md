@@ -1,9 +1,9 @@
 ---
-title: Einfacher Typ des Längen Typs
-description: Definiert einen length-Typ, der verwendet wird, um die Anzahl von Bytes oder Zeichen in einem Datenelement variabler Länge anzugeben, z. b. Binärdaten oder eine ANSI-oder Unicode-Zeichenfolge.
+title: Einfacher LengthType-Typ
+description: Definiert einen Längentyp, der verwendet wird, um die Anzahl von Bytes oder Zeichen in einem Datenelement variabler Länge anzugeben, z. B. binäre Daten oder eine ANSI- oder Unicode-Zeichenfolge.
 ms.assetid: a15e4241-cce3-4f62-bc1c-f70fb1ea5d38
 keywords:
-- Simple Type-Ereignistyp EventLog
+- 'LengthType : EventLog vom typ "simple"'
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: dbb0720c2e26fa73056ccffdd17392e93e491c11
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b9ded861e3e46cd5e4fc6c069d95bba9f0ab3457559bf319aef41cdf906e193b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341207"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997860"
 ---
-# <a name="lengthtype-simple-type"></a>Einfacher Typ des Längen Typs
+# <a name="lengthtype-simple-type"></a>Einfacher LengthType-Typ
 
-Definiert einen length-Typ, der verwendet wird, um die Anzahl von Bytes oder Zeichen in einem Datenelement variabler Länge anzugeben, z. b. Binärdaten oder eine ANSI-oder Unicode-Zeichenfolge. Der Wert kann als xs: unsignedshort-Wert oder als Zeichenfolge angegeben werden, die auf den Namen des Datenelement Knotens verweist, der den Ganzzahl ohne Vorzeichen Short-Wert enthält.
+Definiert einen Längentyp, der verwendet wird, um die Anzahl von Bytes oder Zeichen in einem Datenelement variabler Länge anzugeben, z. B. binäre Daten oder eine ANSI- oder Unicode-Zeichenfolge. Der Wert kann als xs:unsignedShort-Wert oder als Zeichenfolge angegeben werden, die auf den Namen des Datenelementknotens verweist, der den unsigned short-Wert enthält.
 
 ``` syntax
 <xs:simpleType name="LengthType">
@@ -38,8 +38,8 @@ Definiert einen length-Typ, der verwendet wird, um die Anzahl von Bytes oder Zei
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

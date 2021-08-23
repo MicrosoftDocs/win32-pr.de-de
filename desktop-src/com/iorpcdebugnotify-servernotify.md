@@ -1,11 +1,11 @@
 ---
-title: Iorpcdebugnotify servernotify-Methode
-description: Informiert den Server über eine eingehende Debugger-Anforderung vom Client.
+title: IOrpcDebugNotify-ServerNotify-Methode
+description: Informiert den Server über eine eingehende Debuggeranforderung vom Client.
 ms.assetid: 6c868b9e-f25b-4d27-80ff-697d0c005b8d
 keywords:
-- Servernotify-Methode com
-- Servernotify-Methode com, iorpcdebugnotify-Schnittstelle
-- Iorpcdebugnotify-Schnittstelle com, servernotify-Methode
+- ServerNotify-Methode COM
+- Com-Methode "ServerNotify", IOrpcDebugNotify-Schnittstelle
+- IOrpcDebugNotify-Schnittstelle COM, ServerNotify-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,19 +16,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d6dab7cf68b305e83212045851a88e1cdecdde9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cff0faac4ee4e5fa691088afa9de8871a8bf9382ce3da629b3fc14dd9d932ab8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957149"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119048098"
 ---
-# <a name="iorpcdebugnotifyservernotify-method"></a>Iorpcdebugnotify:: servernotify-Methode
+# <a name="iorpcdebugnotifyservernotify-method"></a>IOrpcDebugNotify::ServerNotify-Methode
 
-Informiert den Server über eine eingehende Debugger-Anforderung vom Client.
+Informiert den Server über eine eingehende Debuggeranforderung vom Client.
 
 > [!Note]  
-> Eine Import Bibliothek mit der Funktion **servernotify** ist nicht im Microsoft Windows Software Development Kit (SDK) enthalten. Eine Anwendung kann die Funktionen [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) und [**GetModuleHandle**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea) verwenden, um aus oleaut.dll einen Funktionszeiger auf [**dlldebugobjectrpchook**](dlldebugobjectrpchook.md) abzurufen und diese Funktion über die [**iorpcdebugnotify**](iorpcdebugnotify.md) -Schnittstelle bereitzustellen.
+> Eine Importbibliothek, die die **ServerNotify-Funktion** enthält, ist nicht im Microsoft Windows Software Development Kit (SDK) enthalten. Eine Anwendung kann die [**Funktionen GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) und [**GetModuleHandle**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea) verwenden, um einen Funktionszeiger auf [**DllDebugObjectRPCHook**](dlldebugobjectrpchook.md) aus oleaut.dll abzurufen und diese Funktion über die [**IOrpcDebugNotify-Schnittstelle**](iorpcdebugnotify.md) zur Verfügung zu stellen.
 
  
 
@@ -47,10 +47,10 @@ void ServerNotify(
 
 <dl> <dt>
 
-*lporpcdebug* 
+*lpOrpcDebugAll* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**ORPC \_ dbg \_ all**](orpc-dbg-all.md) -Struktur, die Benachrichtigungs spezifische Informationen enthält, die das com-RPC-System an den Debugger übergibt.
+Ein Zeiger auf eine [**ORPC \_ DBG \_ ALL-Struktur,**](orpc-dbg-all.md) die benachrichtigungsspezifische Informationen enthält, die das COM RPC-System an den Debugger übergibt.
 
 </dd> </dl>
 
@@ -67,7 +67,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                     |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                           |
 | Header<br/>                   | <dl> <dt>N/V</dt> </dl> |
-| IDL<br/>                      | <dl> <dt>N/V</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>N/V</dt> </dl> |
 
 
 
@@ -75,13 +75,13 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**ORPC-init-Argumente \_ \_**](orpc-init-args.md)
+[**ORPC \_ INIT \_ ARGS**](orpc-init-args.md)
 </dt> <dt>
 
-[**Dlldebugobjectrpchook**](dlldebugobjectrpchook.md)
+[**DllDebugObjectRPCHook**](dlldebugobjectrpchook.md)
 </dt> <dt>
 
-[**Iorpcdebug-Benachrichtigung**](iorpcdebugnotify.md)
+[**IOrpcDebugNotify**](iorpcdebugnotify.md)
 </dt> </dl>
 
  

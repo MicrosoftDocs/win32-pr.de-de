@@ -1,29 +1,29 @@
 ---
-title: Httpclientwithkerberosoversslexample
-description: Dieses Beispiel zeigt einen HTTP-Client, der Anforderungs-/Antwort-Nachrichten mit Kerberos über SSL-Sicherheit im gemischten Modus sendet.
+title: HttpClientWithKerberosOverSslExample
+description: Dieses Beispiel zeigt einen HTTP-Client, der Anforderung-Antwort-Nachrichten mit Kerberos über ssl-Sicherheit im gemischten Modus sendet.
 ms.assetid: 48b20c9b-38e7-472c-9606-b454850e14c1
 keywords:
-- Httpclientwithkerberosoversslexample Native Webdienste
-- Wwsapi
+- HttpClientWithKerberosOverSslExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d07c56af901c6842167753e788d005ee897e9041
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3d5ff1aade781ae83b03ffb69ab8f544c79904cb58371f5f6fdcd7683691c919
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037626"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963349"
 ---
-# <a name="httpclientwithkerberosoversslexample"></a>Httpclientwithkerberosoversslexample
+# <a name="httpclientwithkerberosoversslexample"></a>HttpClientWithKerberosOverSslExample
 
-Dieses Beispiel zeigt einen HTTP-Client, der Anforderungs-/Antwort-Nachrichten mit Kerberos über SSL-Sicherheit im gemischten Modus sendet. In diesem Setup wird die Transport Verbindung von SSL geschützt (signiert, verschlüsselt), der auch die Server Authentifizierung bereitstellt. Die Client Authentifizierung wird von einem Kerberos apreq-Ticket in einem WS-Security-Header in der Nachricht bereitgestellt.
+Dieses Beispiel zeigt einen HTTP-Client, der Anforderung-Antwort-Nachrichten mit Kerberos über ssl-Sicherheit im gemischten Modus sendet. Bei diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Kerberos-APREQ-Ticket in einem WS-Security-Header in der Nachricht bereitgestellt.
 
--   [Httpclientwithkerberosoverssl. cpp](#httpclientwithkerberosoversslcpp)
--   [PurchaseOrder. WSDL](#purchaseorderwsdl)
+-   [HttpClientWithKerberosOverSsl.cpp](#httpclientwithkerberosoversslcpp)
+-   [PurchaseOrder.wsdl](#purchaseorderwsdl)
 -   [Makefile](#makefile)
 
-## <a name="httpclientwithkerberosoversslcpp"></a>Httpclientwithkerberosoverssl. cpp
+## <a name="httpclientwithkerberosoversslcpp"></a>HttpClientWithKerberosOverSsl.cpp
 
 
 ```C++
@@ -462,7 +462,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a>PurchaseOrder. WSDL
+## <a name="purchaseorderwsdl"></a>PurchaseOrder.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -606,9 +606,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die resetmediatime-Methode setzt die zwischengespeicherten Zeitstempel auf NULL zurück.
+description: Die ResetMediaTime-Methode setzt die zwischengespeicherten Zeitstempel auf null zurück.
 ms.assetid: 80dd2ae3-0a83-4017-8860-a089bef9a919
-title: Crendererpospassthru. resetmediatime-Methode (ctlutil. h)
+title: CRendererPosPassThru.ResetMediaTime-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 667b060258864290b64c5ffd780488ccb5d442ca
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f1babc39ad3329ec18be663ffcc6eb882933bead0be5f631ef82ce363391f737
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354131"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953813"
 ---
-# <a name="crendererpospassthruresetmediatime-method"></a>Crendererpospassthru. resetmediatime-Methode
+# <a name="crendererpospassthruresetmediatime-method"></a>CRendererPosPassThru.ResetMediaTime-Methode
 
-Die- `ResetMediaTime` Methode setzt die zwischengespeicherten Zeitstempel auf NULL zurück.
+Die `ResetMediaTime` -Methode setzt die zwischengespeicherten Zeitstempel auf 0 zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Filter sollte diese Methode immer dann aufrufen, wenn die Zeitstempel, die von der [**crendererpospassthru:: registermediatime**](crendererpospassthru-registermediatime.md) -Methode zwischengespeichert werden, ungültig werden. Insbesondere sollte diese Methode als Antwort auf die [**IPin:: endflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush) -Methode und die [**imediafilter::**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-stop) End-Methode aufgerufen werden.
+Der Filter sollte diese Methode aufrufen, wenn die von der [**CRendererPosPassThru::RegisterMediaTime-Methode**](crendererpospassthru-registermediatime.md) zwischengespeicherten Zeitstempel ungültig werden. Insbesondere sollte diese Methode als Antwort auf die [**Methoden IPin::EndFlush**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush) und [**IMediaFilter::Stop aufgerufen**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-stop) werden.
 
-Nachdem diese Methode aufgerufen wurde, gibt die [**crendererpospassthru:: getmediatime**](crendererpospassthru-getmediatime.md) -Methode für die Start-und Endzeit 0 (null) zurück.
+Nachdem diese Methode aufgerufen wurde, gibt die [**CRendererPosPassThru::GetMediaTime-Methode**](crendererpospassthru-getmediatime.md) 0 (null) für die Start- und Endzeiten zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Nachdem diese Methode aufgerufen wurde, gibt die [**crendererpospassthru:: getme
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

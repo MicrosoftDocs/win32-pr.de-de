@@ -1,26 +1,26 @@
 ---
-title: Dienst Vorgang
-description: Der Dienst Vorgang ist der Code und die Metadaten, die einem bestimmten Dienst Vorgang zugeordnet sind.
+title: Dienstvorgang
+description: Dienstvorgang ist der Code und die Metadaten, die einem bestimmten Vorgang eines Diensts zugeordnet sind.
 ms.assetid: 788940a0-b1d9-45d7-a4b5-6f0926026c7d
 keywords:
-- Dienst Vorgangs-Webdienste für Windows
-- Wwsapi
+- Service Operation Web Services für Windows
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 59e7883c0988189db3d977a78615c024dc92df36
-ms.sourcegitcommit: 5b98bf8c68922f8f03c14f793fbe17504900559c
+ms.openlocfilehash: 5acde0c2151dea483a3e82f45c7031fa201614076f7a5ea624926fbe08e7588b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "103961086"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026263"
 ---
-# <a name="service-operation"></a>Dienst Vorgang
+# <a name="service-operation"></a>Dienstvorgang
 
-Der Dienst Vorgang ist der Code und die Metadaten, die einem bestimmten Dienst Vorgang zugeordnet sind.
+Dienstvorgang ist der Code und die Metadaten, die einem bestimmten Vorgang eines Diensts zugeordnet sind.
 
 
-Im Hinblick auf WSDL ist jeder WSDL:-Vorgang, der im WSDL-Dokument für einen bestimmten PortType definiert ist, ein Dienst Vorgang.
+Im Hinblick auf WSDL ist jeder wsdl:operation, der im WSDL-Dokument für einen bestimmten portType definiert ist, ein Dienstvorgang.
 
 ``` syntax
 <wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
@@ -43,11 +43,11 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
 </wsdl:definitions>
 ```
 
-Jeder Dienst Vorgang innerhalb des Dienst Modells wird als [**WS- \_ Vorgangs \_ Beschreibung**](/windows/desktop/api/WebServices/ns-webservices-ws_operation_description)angegeben. Die \_ Beschreibung des WS-Vorgangs \_ wird von [wsutil.exe](web-service-compiler-tool.md)generiert.
+Jeder Dienstvorgang innerhalb des Dienstmodells wird als [**WS \_ OPERATION DESCRIPTION \_ angegeben.**](/windows/desktop/api/WebServices/ns-webservices-ws_operation_description) WS \_ OPERATION DESCRIPTION wird von \_wsutil.exe. [ ](web-service-compiler-tool.md)
 
-Für jeden WSDL:-Vorgang generiert das Tool eine separate [**WS- \_ Vorgangs \_ Beschreibung**](/windows/desktop/api/WebServices/ns-webservices-ws_operation_description).
+Für jeden wsdl:operation generiert das Tool eine separate [**WS \_ OPERATION \_ DESCRIPTION**](/windows/desktop/api/WebServices/ns-webservices-ws_operation_description).
 
-![Diagramm, das zeigt, wie wsutil.exe eine WS_CONTRACT_DESCRIPTION generiert.](images/porttypetocontract.png)
+![Diagramm, das zeigtwsutil.exe wie ein WS_CONTRACT_DESCRIPTION.](images/porttypetocontract.png)
 
 ``` syntax
 static WS_OPERATION_DESCRIPTION serviceOperationsICalculator[] =
@@ -62,28 +62,28 @@ static WS_OPERATION_DESCRIPTION serviceOperationsICalculator[] =
 };
 ```
 
-Im Hinblick auf den Code verfügt jeder Dienst Vorgang über eine zugeordnete Funktion. Die Definition dieser Funktion ist für Client und Server unterschiedlich.
+Im Hinblick auf den Code ist jedem Dienstvorgang eine Funktion zugeordnet. Die Definition dieser Funktion ist für Client und Server unterschiedlich.
 
-Dienst Vorgänge werden in klassifiziert,
+Dienstvorgänge werden in
 
--   [Client seitige Dienst Vorgänge](client-side-service-operations.md)
--   [Server seitige Dienst Vorgänge](server-side-service-operations.md)
+-   [Clientseitige Dienstvorgänge](client-side-service-operations.md)
+-   [Serverseitige Dienstvorgänge](server-side-service-operations.md)
 
-Diese Klassifizierung basiert hauptsächlich auf dem Signatur Layout des Servers und den Client seitigen Implementierungen von Dienst Vorgängen.
+Diese Klassifizierung basiert hauptsächlich auf dem Signaturlayout des Servers und den clientseitigen Implementierungen von Dienstvorgängen.
 
-Siehe auch [Abschnitt WSDL-Unterstützung](wsdl-support.md).
+Weitere Informationen finden Sie [auch im Abschnitt zur WSDL-Unterstützung.](wsdl-support.md)
 
-Die folgenden Enumerationen werden bei Dienst Vorgängen verwendet:
+Die folgenden Enumerationen werden mit Dienstvorgängen verwendet:
 
--   [**WS \_ - \_ Parametertyp**](/windows/desktop/api/WebServices/ne-webservices-ws_parameter_type)
--   [**Grund für WS- \_ Dienst \_ Abbruch \_**](/windows/desktop/api/WebServices/ne-webservices-ws_service_cancel_reason)
--   [**WS- \_ Dienst \_ Vorgangs \_ Nachrichten \_ Option**](/windows/win32/api/webservices/ne-webservices-ws_charset)
+-   [**\_WS-PARAMETERTYP \_**](/windows/desktop/api/WebServices/ne-webservices-ws_parameter_type)
+-   [**WS \_ SERVICE \_ CANCEL \_ REASON**](/windows/desktop/api/WebServices/ne-webservices-ws_service_cancel_reason)
+-   [**\_MELDUNGSOPTION \_ "WS-DIENSTVORGANG" \_ \_**](/windows/win32/api/webservices/ne-webservices-ws_charset)
 
-Die folgenden Strukturen werden bei Dienst Vorgängen verwendet:
+Die folgenden Strukturen werden mit Dienstvorgängen verwendet:
 
--   [**Beschreibung der WS- \_ Nachricht \_**](/windows/desktop/api/WebServices/ns-webservices-ws_message_description)
--   [**Beschreibung des WS- \_ Vorgangs \_**](/windows/desktop/api/WebServices/ns-webservices-ws_operation_description)
--   [**Beschreibung der WS- \_ Parameter \_**](/windows/desktop/api/WebServices/ns-webservices-ws_parameter_description)
+-   [**\_WS-NACHRICHTENBESCHREIBUNG \_**](/windows/desktop/api/WebServices/ns-webservices-ws_message_description)
+-   [**\_WS-VORGANGSBESCHREIBUNG \_**](/windows/desktop/api/WebServices/ns-webservices-ws_operation_description)
+-   [**\_WS-PARAMETERBESCHREIBUNG \_**](/windows/desktop/api/WebServices/ns-webservices-ws_parameter_description)
 
  
 

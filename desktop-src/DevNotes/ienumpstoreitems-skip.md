@@ -1,7 +1,7 @@
 ---
-description: Überspringt die nächste angegebene Anzahl von Elementen in der angegebenen enumerationssequenz.
+description: Überspringt die nächste angegebene Anzahl von Elementen in der angegebenen Enumerationssequenz.
 ms.assetid: 1459c18a-ccff-451f-8904-32858cc72b78
-title: 'Iumumpstoreitems:: Skip-Methode (pstore. h)'
+title: IEnumPStoreItems::Skip-Methode (Pstore.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Pstorec.dll
-ms.openlocfilehash: 912dea836ec5ac04ddaf54de9f7f7b609e4e23ad
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8f40ac58b6801022d62d536e8f2ad5e2a27a6d5e71f05d5e0ced3656d5d3cf32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371516"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955969"
 ---
-# <a name="ienumpstoreitemsskip-method"></a>Iumumpstoreitems:: Skip-Methode
+# <a name="ienumpstoreitemsskip-method"></a>IEnumPStoreItems::Skip-Methode
 
-\[Geschützter Speicher (pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie steht nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista zur Verfügung, ist aber möglicherweise in nachfolgenden Versionen nicht verfügbar. Pstore verwendet eine ältere Implementierung des Schutzes von Daten. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
+\[Protected Storage (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, aber in nachfolgenden Versionen möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den [**Funktionen CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData bereitgestellt**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) wird.\]
 
-Überspringt die nächste angegebene Anzahl von Elementen in der angegebenen enumerationssequenz.
+Überspringt die nächste angegebene Anzahl von Elementen in der angegebenen Enumerationssequenz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT Skip(
 
 <dl> <dt>
 
-*celt* \[ in\]
+*celt* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Datenelemente, die übersprungen werden sollen.
+Die Anzahl der zu überspringenden Datenelemente.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein **HRESULT** -Wert.
+Der Rückgabewert ist ein **HRESULT-Wert.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,7 +58,7 @@ Der Rückgabewert ist ein **HRESULT** -Wert.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Pstore. h</dt> </dl>    |
+| Header<br/> | <dl> <dt>Pstore.h</dt> </dl>    |
 | DLL<br/>    | <dl> <dt>Pstorec.dll</dt> </dl> |
 
 
@@ -67,7 +67,7 @@ Der Rückgabewert ist ein **HRESULT** -Wert.
 
 <dl> <dt>
 
-[**Iumumpstoreitems**](ienumpstoreitems.md)
+[**IEnumPStoreItems**](ienumpstoreitems.md)
 </dt> </dl>
 
  

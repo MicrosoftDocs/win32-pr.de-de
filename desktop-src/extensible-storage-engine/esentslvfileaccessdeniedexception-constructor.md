@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentslvfileaccessdeniedexception-Konstruktor'
-title: Esentslvfileaccessdeniedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentSLVFileAccessDeniedException-Konstruktor'
+title: EsentSLVFileAccessDeniedException-Konstruktor
 TOCTitle: 'EsentSLVFileAccessDeniedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSLVFileAccessDeniedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentslvfileaccessdeniedexception.esentslvfileaccessdeniedexception(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 76ff9cadd936277b6fafc9cc27427c7cd0fb0889
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 35d4b40a4fa285ee5516573290374f97636308d0622bc5ed5a27a1a6e6e1e954
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868716"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118981410"
 ---
-# <a name="esentslvfileaccessdeniedexception-constructor"></a>Esentslvfileaccessdeniedexception-Konstruktor
+# <a name="esentslvfileaccessdeniedexception-constructor"></a>EsentSLVFileAccessDeniedException-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ Dim instance As New EsentSLVFileAccessDeniedException()
 public EsentSLVFileAccessDeniedException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentslvfileaccessdeniedexception-Klasse](./esentslvfileaccessdeniedexception-class.md)
+[EsentSLVFileAccessDeniedException-Klasse](./esentslvfileaccessdeniedexception-class.md)
 
-[Esentslvfileaccessdeniedexception-Elemente](./esentslvfileaccessdeniedexception-members.md)
+[EsentSLVFileAccessDeniedException-Member](./esentslvfileaccessdeniedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

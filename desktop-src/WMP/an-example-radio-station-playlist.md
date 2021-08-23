@@ -1,30 +1,30 @@
 ---
-title: Beispiel für eine Radio Station-Wiedergabeliste
-description: Beispiel für eine Radio Station-Wiedergabeliste
+title: Beispielwiedergabeliste für Radiosender
+description: Beispielwiedergabeliste für Radiosender
 ms.assetid: 99b33036-6391-446c-816c-8d5d76107d37
 keywords:
-- Windows Media Metadatei-Wiedergabelisten, Beispiele für Wiedergabelisten
-- Wiedergabelisten, Wiedergabelisten Beispiele
-- Metadatei-Wiedergabelisten, Wiedergabelisten Beispiele
-- Windows Media Metadatei-Wiedergabelisten, Beispiel Wiedergabelisten
-- Wiedergabelisten, Beispiel Wiedergabelisten
-- Metadatei-Wiedergabelisten, Beispiel Wiedergabelisten
-- Windows Media Metadatei-Wiedergabelisten, Beispiel Wiedergabelisten
-- Wiedergabelisten, Beispiel Wiedergabelisten
-- Metadatei-Wiedergabelisten, Beispiel Wiedergabelisten
-- Windows Media Metadatei-Wiedergabelisten, Codebeispiel
-- Wiedergabelisten, Codebeispiel
-- Metadatei-Wiedergabelisten, Codebeispiel
-- Windows Media Metadatei-Wiedergabelisten, Beispiel für Radio Station-Wiedergabeliste
-- Wiedergabelisten, Beispiel für Radio Stations Wiedergabe
-- Metadatendatei-Wiedergabelisten, Beispiel für Radio Stations Wiedergabe
-- Windows Media Player, Wiedergabelisten Beispiele
-- Windows Media Player, Beispiel Wiedergabelisten
-- Windows Media Player, Beispiel Wiedergabelisten
-- Beispiel für Windows Media Player, Radio Station-Wiedergabeliste
-- Wiedergabelisten Beispiele
-- Beispiel Wiedergabelisten
-- Beispiel Wiedergabelisten
+- Windows Wiedergabelisten von Medienmetadateien, Wiedergabelistenbeispiele
+- Wiedergabelisten,Wiedergabelistenbeispiele
+- Metafile-Wiedergabelisten, Wiedergabelistenbeispiele
+- Windows Wiedergabelisten von Medienmetadateien, Beispielwiedergabelisten
+- Wiedergabelisten,Beispielwiedergabelisten
+- Metafile-Wiedergabelisten, Beispielwiedergabelisten
+- Windows Wiedergabelisten von Medienmetadateien, Beispielwiedergabelisten
+- Wiedergabelisten, Beispielwiedergabelisten
+- Metafile-Wiedergabelisten, Beispielwiedergabelisten
+- Windows Wiedergabelisten von Medienmetadateien,Codebeispiel
+- Wiedergabelisten,Codebeispiel
+- Metafile-Wiedergabelisten,Codebeispiel
+- Windows Wiedergabelisten von Medienmetadateien, Beispiel für Radiostationswiedergabeliste
+- Wiedergabelisten, Beispiel für Radiosender-Wiedergabeliste
+- Metafile-Wiedergabelisten, Beispiel für Radiosender-Wiedergabeliste
+- Windows Media Player,Wiedergabelistenbeispiele
+- Windows Media Player,Beispielwiedergabelisten
+- Windows Media Player,Beispielwiedergabelisten
+- Windows Media Player,Beispiel für Radiostation-Wiedergabeliste
+- Wiedergabelistenbeispiele
+- Beispielwiedergabelisten
+- Beispielwiedergabelisten
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -32,20 +32,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: da797937ee461ccb3afbfb000e7704486d6896e4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6db52d8eb9f109df870e65f79906761cfadee4a7871f4776fae3122dd93c8605
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388187"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055028"
 ---
-# <a name="an-example-radio-station-playlist"></a>Beispiel für eine Radio Station-Wiedergabeliste
+# <a name="an-example-radio-station-playlist"></a>Beispielwiedergabeliste für Radiosender
 
-Im folgenden Beispielcode wird veranschaulicht, wie Sie eine Wiedergabeliste erstellen, um drei feldepages zu scannen. Die fiktive Firma Adventure Works Radio Brand befindet sich in der Wiedergabeliste und in allen einzelnen Streams in der Wiedergabeliste. Wenn Sie Ihren Code schreiben, ändern Sie alle URLs und Dateinamen in gültige Dateinamen, die für Ihre Windows-Media Player verfügbar sind.
+Der folgende Beispielcode veranschaulicht das Erstellen einer Wiedergabeliste zum Scannen von drei Funkstationen für Gestein. Die fiktive Marke Adventure Works Radio befindet sich in der Wiedergabeliste und in allen einzelnen Streams innerhalb der Wiedergabeliste. Wenn Sie Ihren Code schreiben, ändern Sie alle URLs und Dateinamen in gültige Dateinamen, auf die Ihre Windows Media Player.
 
-Für jede der Stationen wird eine Wiedergabeliste erstellt. Eine vierte Wiedergabeliste scannt die ersten drei. Die Wiedergabelisten werden erstellt, um auf dynamisch generierte Ankündigungen zu verweisen und Adventure Works Radio Branding zu haben.
+Für jede Station wird eine Wiedergabeliste erstellt. Eine vierte Wiedergabeliste durchsucht die ersten drei. Die Wiedergabelisten werden erstellt, um auf dynamisch generierte Ankündigungen zu verweisen, und verfügen über ein Adventure Works Radio-Branding.
 
-Eine der Wiedergabelisten, die eine Radio Station darstellen, könnte wie folgt aussehen.
+Eine der Wiedergabelisten, die einen Radiosender darstellen, könnte wie dies aussehen.
 
 
 ```XML
@@ -69,7 +69,7 @@ Eine der Wiedergabelisten, die eine Radio Station darstellen, könnte wie folgt 
 
 
 
-Die Wiedergabeliste kann dann aus verweisen auf die einzelnen Wiedergabelisten erstellt werden.
+Die Wiedergabeliste kann dann aus Verweisen auf die einzelnen Wiedergabelisten erstellt werden.
 
 Beispielcode
 
@@ -95,7 +95,7 @@ Beispielcode
 
 
 
-In diesem Beispiel wird eine Werbe einblenden, gefolgt von 30 Sekunden für jede der drei Stationen, auf die verwiesen wird, abgespielt. Dieser Cycle wird unbegrenzt wiederholt, da das **count** -Attribut des **Repeat** -Elements nicht definiert ist.
+In diesem Beispiel wird eine Werbeanzeige gefolgt von 30 Sekunden jeder der drei Stationen, auf die verwiesen wird, nacheinander abspielt. Dieser Zyklus wird unbegrenzt wiederholt, da das **COUNT-Attribut** des **REPEAT-Elements** nicht definiert ist.
 
 -   Die in den Beispielen verwendeten Firmen, Organisationen, Produkte, Personen und Ereignisse sind frei erfunden, soweit nichts anderes angegeben ist. Jede Ähnlichkeit mit bestehenden Firmen, Organisationen, Produkten, Personen oder Ereignissen ist rein zufällig.
 
@@ -103,24 +103,24 @@ In diesem Beispiel wird eine Werbe einblenden, gefolgt von 30 Sekunden für jede
 
 <dl> <dt>
 
-[**Erstellen von Metafile-Wiedergabelisten**](creating-metafile-playlists.md)
+[**Erstellen von Metadateiwiedergabelisten**](creating-metafile-playlists.md)
 </dt> <dt>
 
-[**Beispiel Wiedergabelisten**](example-playlists.md)
+[**Beispielwiedergabelisten**](example-playlists.md)
 </dt> <dt>
 
 [**Metafile-Wiedergabelisten**](metafile-playlists.md)
 </dt> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Leitfaden für Windows Media-Metadateien**](windows-media-metafile-guide.md)
+[**Windows Leitfaden zur Medienmetadatei**](windows-media-metafile-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

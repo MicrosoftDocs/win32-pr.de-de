@@ -1,9 +1,9 @@
 ---
-title: Isvbr-Attribut
-description: Das isvbr-Attribut gibt an, ob der Inhalt mit der Variablen Bitrate-Codierung (VBR) codiert wurde.
+title: IsVBR-Attribut
+description: Das IsVBR-Attribut gibt an, ob der Inhalt mit VBR-Codierung (Variable Bit Rate) codiert wurde.
 ms.assetid: faec0940-ef53-40a1-be54-a990884e907d
 keywords:
-- Isvbr-Attribut (Windows Media Player)
+- IsVBR-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,29 +12,29 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eaec9f740e7b251c73ed12f5897ff9d95b023886
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e6b5b190e67c07978207823cef9992243be772d430e2f03f40695ae6510c39a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054818"
 ---
-# <a name="isvbr-attribute"></a>Isvbr-Attribut
+# <a name="isvbr-attribute"></a>IsVBR-Attribut
 
-Das **isvbr** -Attribut gibt an, ob der Inhalt mit der Variablen Bitrate-Codierung (VBR) codiert wurde.
+Das **IsVBR-Attribut** gibt an, ob der Inhalt mit VBR-Codierung (Variable Bit Rate) codiert wurde.
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Häufig verwendete Windows Media-Dateien](commonly-used-windows-media-file-attributes.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Häufig verwendete Windows Mediendateien](commonly-used-windows-media-file-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Attribut wird nur in der digitalen Mediendatei gespeichert.
 
-Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist g \_ wszwmisvbr.
+Die Windows Media Format SDK-Konstante für dieses Attribut ist g \_ wszWMIsVBR.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,7 +50,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

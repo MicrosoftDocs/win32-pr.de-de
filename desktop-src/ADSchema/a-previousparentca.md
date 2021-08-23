@@ -1,11 +1,11 @@
 ---
-title: Previous-Parent-ca-Attribut
+title: Attribut "Previous-Parent-CA"
 description: Verweis auf die Zertifizierungsstellen, die das letzte abgelaufene Zertifikat f√ºr eine Zertifizierungsstelle ausgestellt haben.
 ms.assetid: 9772d6cb-1105-426c-9982-473b4c1bf0d8
 ms.tgt_platform: multiple
 keywords:
-- Previous-√ºbergeordnetes Zertifizierungsstellen-Attribut AD-Schema
-- "\"previousparentca\"-Attribut AD-Schema"
+- AD-Schema des Attributs "Previous-Parent-CA"
+- previousParentCA-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e1a4c89652ef7ffffdc731614cfc57572b3edcde
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 5aefb2b7862902bebd91aad910fb52656b15d7a3a6ff2b2652a33d6f4a034e16
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104041034"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022458"
 ---
-# <a name="previous-parent-ca-attribute"></a>Previous-Parent-ca-Attribut
+# <a name="previous-parent-ca-attribute"></a>Attribut "Previous-Parent-CA"
 
 Verweis auf die Zertifizierungsstellen, die das letzte abgelaufene Zertifikat f√ºr eine Zertifizierungsstelle ausgestellt haben.
 
@@ -29,13 +29,13 @@ Verweis auf die Zertifizierungsstellen, die das letzte abgelaufene Zertifikat f√
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | Previous-Parent-ca                      |
-| LDAP-Display-Name | previousparentca                        |
+| CN                | Previous-Parent-CA                      |
+| Ldap-Anzeigename | previousParentCA                        |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungsh√§ufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updateh√§ufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.694                  |
-| System-ID-GUID    | 963d273d-48be-11d1-a9c3-0000b80367c1    |
+| System-ID-GUID    | 963d273d-48be-11d1-a9c3-0000f80367c1    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -43,7 +43,7 @@ Verweis auf die Zertifizierungsstellen, die das letzte abgelaufene Zertifikat f√
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server¬†2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Verweis auf die Zertifizierungsstellen, die das letzte abgelaufene Zertifikat f√
 |------------------------|------------------------------------------------------------------------|
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
-| System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
-| Ist indiziert             | False                                                                  |
-| Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| System-Only            | Falsch                                                                  |
+| Ist einwertig       | Falsch                                                                  |
+| Ist indiziert             | Falsch                                                                  |
+| Im globalen Katalog      | Falsch                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -70,7 +70,7 @@ Verweis auf die Zertifizierungsstellen, die das letzte abgelaufene Zertifikat f√
 
 
 
-## <a name="windows-server-2003"></a>Windows Server¬†2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Verweis auf die Zertifizierungsstellen, die das letzte abgelaufene Zertifikat f√
 |------------------------|------------------------------------------------------------------------|
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
-| System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
-| Ist indiziert             | False                                                                  |
-| Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| System-Only            | Falsch                                                                  |
+| Ist einwertig       | Falsch                                                                  |
+| Ist indiziert             | Falsch                                                                  |
+| Im globalen Katalog      | Falsch                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -99,11 +99,11 @@ Verweis auf die Zertifizierungsstellen, die das letzte abgelaufene Zertifikat f√
 |------------------------|------------------------------------------------------------------------|
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
-| System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
-| Ist indiziert             | False                                                                  |
-| Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| System-Only            | Falsch                                                                  |
+| Ist einwertig       | Falsch                                                                  |
+| Ist indiziert             | Falsch                                                                  |
+| Im globalen Katalog      | Falsch                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -120,11 +120,11 @@ Verweis auf die Zertifizierungsstellen, die das letzte abgelaufene Zertifikat f√
 |------------------------|------------------------------------------------------------------------|
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
-| System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
-| Ist indiziert             | False                                                                  |
-| Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| System-Only            | Falsch                                                                  |
+| Ist einwertig       | Falsch                                                                  |
+| Ist indiziert             | Falsch                                                                  |
+| Im globalen Katalog      | Falsch                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -141,11 +141,11 @@ Verweis auf die Zertifizierungsstellen, die das letzte abgelaufene Zertifikat f√
 |------------------------|------------------------------------------------------------------------|
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
-| System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
-| Ist indiziert             | False                                                                  |
-| Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| System-Only            | Falsch                                                                  |
+| Ist einwertig       | Falsch                                                                  |
+| Ist indiziert             | Falsch                                                                  |
+| Im globalen Katalog      | Falsch                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -162,11 +162,11 @@ Verweis auf die Zertifizierungsstellen, die das letzte abgelaufene Zertifikat f√
 |------------------------|------------------------------------------------------------------------|
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
-| System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
-| Ist indiziert             | False                                                                  |
-| Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| System-Only            | Falsch                                                                  |
+| Ist einwertig       | Falsch                                                                  |
+| Ist indiziert             | Falsch                                                                  |
+| Im globalen Katalog      | Falsch                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |

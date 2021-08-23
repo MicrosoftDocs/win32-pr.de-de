@@ -5,26 +5,26 @@ ms.tgt_platform: multiple
 title: Bereitstellen von WMI-Daten auf einer 64-Bit-Plattform
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ec1d6b348c16765014c4eb6988b64976ba3f11a6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 49cb8a7e698723c6d4705a735591097fe7cf354db9684924d58f6b363c0ae6b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527746"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992640"
 ---
 # <a name="providing-wmi-data-on-a-64-bit-platform"></a>Bereitstellen von WMI-Daten auf einer 64-Bit-Plattform
 
-Skripts und Anwendungen, die für 32-Bit-Betriebssysteme geschrieben wurden, sollten weiterhin ordnungsgemäß ausgeführt werden. Wenn Sie über einen vorhandenen 32-Bit-Anbieter verfügen, können Sie auswerten, ob Sie für eine parallele Operation eine 64-Bit-Version schreiben müssen. Im Allgemeinen sind beide Versionen nicht erforderlich, und die 64-Bit-Version kann sowohl lokale 32-Bit-als auch 64-Bit-und Remote Clients bedienen. Verwenden Sie für den 32-Bit-Anwendungs Kompatibilitätsmodus jedoch Ihren vorhandenen 32-Bit-WMI-Anbieter auf einem 64-Bit-System, das im Modus "32-Bit WOW64" ausgeführt wird.
+Skripts und Anwendungen, die für 32-Bit-Betriebssysteme geschrieben wurden, sollten weiterhin ordnungsgemäß ausgeführt werden. Wenn Sie über einen vorhandenen 32-Bit-Anbieter verfügen, können Sie auswerten, ob Sie eine 64-Bit-Version für den side-by-side-Vorgang schreiben müssen. Im Allgemeinen sind beide Versionen nicht erforderlich, und die 64-Bit-Version kann sowohl lokale 32-Bit- als auch 64-Bit-Clients oder Remoteclients bedienen. Verwenden Sie jedoch für den 32-Bit-Anwendungskompatibilitätsmodus Ihren vorhandenen 32-Bit-WMI-Anbieter auf einem 64-Bit-System, das im 32-Bit-WOW64-Modus ausgeführt wird.
 
-In seltenen Fällen müssen sowohl der 32-Bit-als auch der 64-Bit-Anbieter parallel auf 64-Bit-Systemen ausgeführt werden. In diesem Fall ist die geeignete Version des Anbieters, die geladen wird, davon abhängig, ob der Aufrufer 32-Bit oder 64-Bit und lokal oder Remote ist. Ein Aufrufer, der die verbindungsobjektflags " **\_ \_ providerarchitecture** " und "Requirements **\_ \_ darchitecture**" verwendet, kann anfordern, dass WMI einen nicht standardmäßigen Anbieter lädt. Weitere Informationen finden Sie unter " [erhalten und Bereitstellen von Daten auf einem 64-Bit-Computer](getting-and-providing-data-on-a-64-bit-computer.md)".
+In seltenen Fällen müssen sowohl der 32-Bit- als auch der 64-Bit-Anbieter parallel auf 64-Bit-Systemen ausgeführt werden. In diesem Fall hängt die entsprechende Version des geladenen Anbieters davon ab, ob der Aufrufer 32-Bit oder 64-Bit und lokal oder remote ist. Ein Aufrufer, der die Verbindungsobjektkontextflags **\_ \_ ProviderArchitecture** und **\_ \_ RequiredArchitecture** verwendet, kann anfordern, dass WMI einen Nichtstandardanbieter lädt. Weitere Informationen finden Sie unter [Abrufen und Bereitstellen von Daten auf einem 64-Bit-Computer.](getting-and-providing-data-on-a-64-bit-computer.md)
 
-In dem ungewöhnlichen Fall, dass Sie die 32-Bit-und 64-Bit-Anbieter parallel ausführen müssen, müssen Sie sicherstellen, dass die Installations-und Deinstallations Szenarien sorgfältig verarbeitet werden. Dies liegt daran, dass WMI nur über ein [*Repository*](gloss-w.md) verfügt und sowohl die 32-Bit-als auch die 64-Bit-Version von [**mofcomp.exe**](mofcomp.md) die Daten im selben Repository ablegen. Es gibt keinen Unterschied zwischen einer 32-Bit-oder einer 64-Bit. MOF-Datei. Die Neuinstallation einer Version des Anbieters wird nicht beeinträchtigt: die MOF-Dateien werden kompiliert und die Klassen werden im Repository gespeichert. Eine zweite Deinstallation, die einen Namespace löscht, kann jedoch den Betrieb des anderen Anbieters beeinträchtigen.
+In dem ungewöhnlichen Fall, dass Sie die 32-Bit- und 64-Bit-Anbieter parallel ausführen müssen, müssen Sie sicherstellen, dass Installations- und Deinstallationsszenarien sorgfältig behandelt werden. Dies liegt daran, dass WMI nur über ein [*Repository*](gloss-w.md) verfügt und sowohl die 32-Bit- als auch die 64-Bit-Version von [**mofcomp.exe**](mofcomp.md) die Daten in demselben Repository speichern. es gibt keinen Unterschied zwischen einer 32-Bit- oder einer 64-Bit-MOF-Datei. Die Neuinstallation einer Version des Anbieters wird nicht beeinträchtigt: Die MOF-Dateien werden kompiliert, und die Klassen werden im Repository gespeichert. Eine zweite Deinstallation, die einen Namespace löscht, kann jedoch den Betrieb des anderen Anbieters beeinträchtigen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Erhalten und Bereitstellen von Daten auf einem 64-Bit-Computer](getting-and-providing-data-on-a-64-bit-computer.md)
+[Abrufen und Bereitstellen von Daten auf einem 64-Bit-Computer](getting-and-providing-data-on-a-64-bit-computer.md)
 </dt> <dt>
 
 [Anfordern von WMI-Daten auf einer 64-Bit-Plattform](requesting-wmi-data-on-a-64-bit-platform.md)

@@ -1,7 +1,7 @@
 ---
-description: Speichert eine Textur im Speicher.
+description: Speichern Sie eine Textur im Arbeitsspeicher.
 ms.assetid: be541b99-6d07-480e-8f28-b7fc44566e7d
-title: D3DX10SaveTextureToMemory-Funktion (D3DX10Tex. h)
+title: D3DX10SaveTextureToMemory-Funktion (D3DX10Tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: f20278f9fc590e72f93051d5fdd4cfbd918098df
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3736b2de21df3e77f5b06d34f2b0b64a7592f2212a71ffd4a37b70454667427a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119047058"
 ---
 # <a name="d3dx10savetexturetomemory-function"></a>D3DX10SaveTextureToMemory-Funktion
 
-Speichert eine Textur im Speicher.
+Speichern Sie eine Textur im Arbeitsspeicher.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ HRESULT D3DX10SaveTextureToMemory(
 
 <dl> <dt>
 
-*psrctexture* \[ in\]
+*pSrcTexture* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Resource**](/windows/desktop/api/D3D10/nn-d3d10-id3d10resource)\***
@@ -52,30 +52,30 @@ Zeiger auf die zu speichernde Textur. Siehe [**ID3D10Resource-Schnittstelle**](/
 
 </dd> <dt>
 
-*Destformat* \[ in\]
+*DestFormat* \[ In\]
 </dt> <dd>
 
-Type: **[ **d3dx10 \_ Image \_ file \_ Format**](d3dx10-image-file-format.md)**
+Typ: **[ **D3DX10 \_ IMAGE \_ FILE \_ FORMAT**](d3dx10-image-file-format.md)**
 
-Das Format, in dem die Textur gespeichert wird. Siehe [**d3dx10 \_ Image \_ file \_ Format**](d3dx10-image-file-format.md).
+Das Format, in dem die Textur gespeichert wird. Siehe [**D3DX10 \_ IMAGE FILE \_ \_ FORMAT**](d3dx10-image-file-format.md).
 
 </dd> <dt>
 
-*ppdestbuf* \[ vorgenommen\]
+*ppDestBuf* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3D10BLOB**](/windows/desktop/api/D3DCommon/nn-d3dcommon-id3d10blob)\***
 
-Adresse eines Zeigers auf den Speicher, der die gespeicherte Textur enthält. Siehe [**ID3D10Blob-Schnittstelle**](/windows/desktop/api/D3DCommon/nn-d3dcommon-id3d10blob).
+Adresse eines Zeigers auf den Arbeitsspeicher, der die gespeicherte Textur enthält. Siehe [**ID3D10Blob-Schnittstelle**](/windows/desktop/api/D3DCommon/nn-d3dcommon-id3d10blob).
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Dies ist optional.
+Optional.
 
 </dd> </dl>
 
@@ -83,7 +83,7 @@ Dies ist optional.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,8 +91,8 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX10Tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>  |
 
 
 
@@ -100,10 +100,10 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 10](d3d10-graphics-reference-d3dx10-functions-texturing.md)
+[Texturfunktionen in D3DX 10](d3d10-graphics-reference-d3dx10-functions-texturing.md)
 </dt> <dt>
 
-[Universell Funktionen](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
+[Universell Functions](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
 </dt> </dl>
 
  

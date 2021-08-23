@@ -1,5 +1,5 @@
 ---
-description: Ordnet dem Computersystem Objekt, das das physische Host System darstellt, eine Instanz eines virtuellen Computers zu.
+description: Ordnet dem Computersystemobjekt, das das physische Hostsystem darstellt, eine VM-Instanz zu.
 ms.assetid: 755624D7-04D0-47EA-8623-DEDE6B1D5CBC
 title: Msvm_HostedDependency-Klasse
 ms.topic: reference
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0ce580e6b478dbdf320377c2738708d0eb7689fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0c67df565be0085d4579bf82b2a2d2e542f856e93321240821bc512be692c6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014518"
 ---
-# <a name="msvm_hosteddependency-class"></a>MSVM- \_ Klasse "husteddependenz"
+# <a name="msvm_hosteddependency-class"></a>Msvm \_ HostedDependency-Klasse
 
-Ordnet dem Computersystem Objekt, das das physische Host System darstellt, eine Instanz eines virtuellen Computers zu.
+Ordnet dem Computersystemobjekt, das das physische Hostsystem darstellt, eine VM-Instanz zu.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,45 +41,45 @@ class Msvm_HostedDependency : CIM_HostedDependency
 
 ## <a name="members"></a>Member
 
-Die **MSVM-Klasse " \_ husteddependenz** " verfügt über diese Typen von Membern:
+Die **Msvm \_ HostedDependency-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM-Klasse " \_ husteddepend** " verfügt über diese Eigenschaften.
+Die **Msvm \_ HostedDependency-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
+Datentyp: **[ **CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Verweis auf das hostingcomputersystem. Diese Eigenschaft wird von [**CIM- \_ hupabhängigkeit**](/previous-versions//cc136861(v=vs.85))geerbt.
+Ein Verweis auf das Hostcomputersystem. Diese Eigenschaft wird von [**CIM \_ HostedDependency**](/previous-versions//cc136861(v=vs.85))geerbt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
+Datentyp: **[ **CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Verweis auf den virtuellen Computer. Diese Eigenschaft wird von [**CIM- \_ hupabhängigkeit**](/previous-versions//cc136861(v=vs.85))geerbt.
+Ein Verweis auf den virtuellen Computer. Diese Eigenschaft wird von [**CIM \_ HostedDependency**](/previous-versions//cc136861(v=vs.85))geerbt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM-Klasse " \_ husteddepend** " kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ HostedDependency-Klasse** kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,25 +87,25 @@ Der Zugriff auf die **MSVM-Klasse " \_ husteddepend** " kann durch die UAC-Filte
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ hubabhängigkeit**](cim-hosteddependency.md)
+[**CIM \_ HostedDependency**](cim-hosteddependency.md)
 </dt> <dt>
 
-[**CIM- \_ hubabhängigkeit**](/previous-versions//cc136861(v=vs.85))
+[**CIM \_ HostedDependency**](/previous-versions//cc136861(v=vs.85))
 </dt> <dt>
 
-[Verwaltungs Klassen für virtuelle Systeme](virtual-system-management-classes.md)
+[Verwaltungsklassen für virtuelle Systeme](virtual-system-management-classes.md)
 </dt> </dl>
 
  

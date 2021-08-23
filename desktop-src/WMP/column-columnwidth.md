@@ -1,9 +1,9 @@
 ---
-title: Column. ColumnWidth
-description: Das ColumnWidth-Attribut gibt eine Spaltenbreite im Wiedergabelisten-Steuerelement an oder ruft diese ab.
+title: COLUMN.columnWidth
+description: Das columnWidth-Attribut gibt eine Spaltenbreite im PLAYLIST-Steuerelement an oder ruft diese ab.
 ms.assetid: 4c6fabf9-fca0-433a-87bd-17f5d74a0a74
 keywords:
-- Column. ColumnWidth-Windows-Media Player
+- COLUMN.columnWidth-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c12a9037c47fb051dbd0eff909b861390b38794f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e6dd9278cd495007825d109ccb13857f3c4e258d373c1830a4b7545f5bf718f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370077"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997670"
 ---
-# <a name="columncolumnwidth"></a>Column. ColumnWidth
+# <a name="columncolumnwidth"></a>COLUMN.columnWidth
 
-Das **ColumnWidth** -Attribut gibt eine Spaltenbreite im **Wiedergabe** Listen-Steuerelement an oder ruft diese ab.
+Das **columnWidth-Attribut** gibt eine Spaltenbreite im **PLAYLIST-Steuerelement** an oder ruft diese ab.
 
 ``` syntax
         elementID.columnWidth
@@ -29,11 +29,11 @@ Das **ColumnWidth** -Attribut gibt eine Spaltenbreite im **Wiedergabe** Listen-S
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**), die die Breite der Spalte in Pixel darstellt. 
+Dieses Attribut ist eine  Lese-/Schreibnummer **(long**), die die Breite der Spalte in Pixel darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **columnresizemode** -Eigenschaft muss auf "Fixed" festgelegt werden, damit diese Eigenschaft funktioniert.
+Die **columnResizeMode-Eigenschaft** muss auf "fixed" festgelegt werden, damit diese Eigenschaft funktioniert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,15 +41,15 @@ Die **columnresizemode** -Eigenschaft muss auf "Fixed" festgelegt werden, damit 
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Column-Element**](column-element.md)
+[**COLUMN-Element**](column-element.md)
 </dt> </dl>
 
  

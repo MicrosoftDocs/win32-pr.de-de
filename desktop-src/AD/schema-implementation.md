@@ -1,26 +1,26 @@
 ---
-title: Schema Implementierung
-description: In Active Directory Domain Services werden Klassen-und Attribut Definitionen im Verzeichnis als Instanzen der Klassen Schema und attributeSchema gespeichert.
+title: Schemaimplementierung
+description: In Active Directory Domain Services werden Klassen- und Attributdefinitionen im Verzeichnis als Instanzen der Klassen classSchema bzw. attributeSchema gespeichert.
 ms.assetid: 917f8e65-df2c-457e-bfd8-3f1ce0d0fbae
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a7ff18046841b5603be235266e33a7252049f93c
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: d2d35d29b4e10d27b1369c0f064e17a0ed4430cbe2d6cc59329380724cd444e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104038734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119025018"
 ---
-# <a name="schema-implementation"></a>Schema Implementierung
+# <a name="schema-implementation"></a>Schemaimplementierung
 
-In Active Directory Domain Services werden Klassen-und Attribut Definitionen im Verzeichnis als Instanzen der Klassen [**Schema**](/windows/desktop/ADSchema/c-classschema) und [**attributeSchema**](/windows/desktop/ADSchema/c-attributeschema) gespeichert. **classSchema** und **attributeSchema** sind Klassen, die im Schema definiert sind. Um das Active Directory Schema zu bearbeiten, verwenden Sie die gleichen LDAP-Vorgänge, die zum Bearbeiten anderer Objekte verwendet werden. Da es sich bei dem Schema um einen Schlüsselteil des Verzeichnisses handelt, der sich auf die gesamte Gesamtstruktur auswirkt, gelten spezielle Einschränkungen für Schema Erweiterungen. Weitere Informationen zu Einschränkungen finden Sie unter [Einschränkungen für Schema Erweiterungen](restrictions-on-schema-extension.md).
+In Active Directory Domain Services werden Klassen- und Attributdefinitionen im Verzeichnis als Instanzen der [**Klassen classSchema**](/windows/desktop/ADSchema/c-classschema) bzw. [**attributeSchema**](/windows/desktop/ADSchema/c-attributeschema) gespeichert. **classSchema** und **attributeSchema** sind Klassen, die im Schema definiert sind. Um das Active Directory-Schema zu bearbeiten, verwenden Sie dieselben LDAP-Vorgänge, die zum Bearbeiten anderer Objekte verwendet werden. Da das Schema ein wichtiger Teil des Verzeichnisses ist, der die gesamte Gesamtstruktur betrifft, gelten besondere Einschränkungen für Schemaerweiterungen. Weitere Informationen zu Einschränkungen finden Sie unter [Einschränkungen für Schemaerweiterungen.](restrictions-on-schema-extension.md)
 
-Zusammenfassen der Schema Implementierung:
+So fassen Sie die Schemaimplementierung zusammen:
 
--   Instanzen der [**classSchema**](/windows/desktop/ADSchema/c-classschema) -Klasse definieren jede Objektklasse, die von Active Directory Domain Services unterstützt wird. Die Attribute eines **classSchema** -Objekts, z. b. die Attribute " [**mayare**](/windows/desktop/ADSchema/a-maycontain) " und " [**mustattribute**](/windows/desktop/ADSchema/a-mustcontain) ", beschreiben eine Objektklasse, wie die Attribute eines Benutzer Objekts, z. b. die Attribute " [**userPrincipalName**](/windows/desktop/ADSchema/a-userprincipalname) " und " [**telefonienumber**](/windows/desktop/ADSchema/a-telephonenumber) ", den Benutzer beschreiben. Weitere Informationen finden Sie unter [Eigenschaften von Objektklassen](characteristics-of-object-classes.md).
--   Instanzen der [**attributeSchema**](/windows/desktop/ADSchema/c-attributeschema) -Klasse werden verwendet, um alle Attribute zu definieren, die von Active Directory Domain Services unterstützt werden. Die Attribute eines **attributeSchema** -Objekts, z. b. die Attribute **attributeSyntax** und **issinglewert,** beschreiben ein Attribut, und zwar auf dieselbe Weise, wie die Attribute eines Benutzer Objekts diesen Benutzer beschreiben. Weitere Informationen finden Sie unter [Merkmale von Attributen](characteristics-of-attributes.md).
--   Instanzen der [**attributeSchema**](/windows/desktop/ADSchema/c-attributeschema) -Klasse und der [**classSchema**](/windows/desktop/ADSchema/c-classschema) -Klasse werden an einem bekannten Ort im Verzeichnis, dem Schema Container, gespeichert. Der Schema Container hat immer einen Distinguished Name in der Form:
+-   Instanzen der [**classSchema-Klasse**](/windows/desktop/ADSchema/c-classschema) definieren jede Objektklasse, die von Active Directory Domain Services. Die Attribute eines **classSchema-Objekts,** z. B. die [**attribute mayContain**](/windows/desktop/ADSchema/a-maycontain) und [**mustContain,**](/windows/desktop/ADSchema/a-mustcontain) beschreiben eine Objektklasse auf die gleiche Weise wie die Attribute eines Benutzerobjekts, z. B. dessen [**UserPrincipalName-**](/windows/desktop/ADSchema/a-userprincipalname) und [**telephoneNumber-Attribute,**](/windows/desktop/ADSchema/a-telephonenumber) diesen Benutzer. Weitere Informationen finden Sie unter [Merkmale von Objektklassen.](characteristics-of-object-classes.md)
+-   Instanzen der [**attributeSchema-Klasse**](/windows/desktop/ADSchema/c-attributeschema) werden verwendet, um jedes Attribut zu definieren, das von Active Directory Domain Services. Die Attribute eines **attributeSchema-Objekts,** z. B. seine **attributeSyntax-** und **isSingleValued-Attribute,** beschreiben ein Attribut auf die gleiche Weise, wie die Attribute eines Benutzerobjekts diesen Benutzer beschreiben. Weitere Informationen finden Sie unter [Merkmale von Attributen.](characteristics-of-attributes.md)
+-   Instanzen der [**Klassen attributeSchema**](/windows/desktop/ADSchema/c-attributeschema) und [**classSchema**](/windows/desktop/ADSchema/c-classschema) werden an einem bekannten Ort im Verzeichnis gespeichert, dem Schemacontainer. Der Schemacontainer hat immer einen Distinguished Name der Form:
 
     ```C++
     CN=Schema,CN=Configuration,<DC=forestroot>
@@ -28,16 +28,16 @@ Zusammenfassen der Schema Implementierung:
 
     
 
-    dabei &lt; ist "DC = forestroot &gt; " der Distinguished Name des Stamms der Gesamtstruktur, z. b. "DC = fabrikam, DC = com".
+    Wobei " DC=forestroot " der Distinguished Name des Stamms der Gesamtstruktur ist, z. B. &lt; &gt; "DC=Fabrikam,DC=Com".
 
-    Um den Distinguished Name des Schema Containers zu erhalten, lesen Sie das **schemaNamingContext** -Attribut von RootDSE. Weitere Informationen zu RootDSE und den zugehörigen Attributen finden Sie unter [Server lose Bindung und RootDSE](serverless-binding-and-rootdse.md).
+    Um den Distinguished Name des Schemacontainers zu erhalten, lesen Sie **das schemaNamingContext-Attribut** von rootDSE. Weitere Informationen zu rootDSE und seinen Attributen finden Sie unter [Serverlose Bindung und RootDSE](serverless-binding-and-rootdse.md).
 
-Beachten Sie Folgendes, wenn Sie über das Schema nachdenken:
+Denken Sie beim Überlegen des Schemas an:
 
--   Schema Änderungen sind Global. Es gibt ein einzelnes Schema für eine gesamte Gesamtstruktur. Das Schema wird Global repliziert: eine Kopie des Schemas ist auf jedem Domänen Controller in der Gesamtstruktur vorhanden. Wenn Sie das Schema erweitern, tun Sie dies für die gesamte Gesamtstruktur.
--   Schema Erweiterungen können nicht rückgängig gemacht werden. Wenn dem Schema eine neue Klasse oder ein neues Attribut hinzugefügt wird, kann es nicht entfernt werden. Ein vorhandenes Attribut oder eine vorhandene Klasse kann deaktiviert, aber nicht entfernt werden. Weitere Informationen finden Sie unter [Deaktivieren vorhandener Klassen und Attribute](disabling-existing-classes-and-attributes.md).
--   Das Deaktivieren einer Klasse oder eines Attributs wirkt sich nicht auf vorhandene Instanzen der Klasse oder des Attributs aus, verhindert jedoch, dass neue Instanzen erstellt werden. Ein Attribut kann nicht deaktiviert werden, wenn es in einer Klasse enthalten ist, die nicht deaktiviert ist.
+-   Schemaänderungen sind global. Es gibt ein einzelnes Schema für eine gesamte Gesamtstruktur. Das Schema wird global repliziert: Auf jedem Domänencontroller in der Gesamtstruktur ist eine Kopie des Schemas vorhanden. Wenn Sie das Schema erweitern, tun Sie dies für die gesamte Gesamtstruktur.
+-   Schemaerweiterungen sind nicht umkehrbar. Wenn dem Schema eine neue Klasse oder ein neues Attribut hinzugefügt wird, kann sie nicht entfernt werden. Ein vorhandenes Attribut oder eine vorhandene Klasse kann deaktiviert, aber nicht entfernt werden. Weitere Informationen finden Sie unter [Deaktivieren vorhandener Klassen und Attribute.](disabling-existing-classes-and-attributes.md)
+-   Das Deaktivieren einer Klasse oder eines Attributs wirkt sich nicht auf vorhandene Instanzen der Klasse oder des Attributs aus, verhindert jedoch, dass neue Instanzen erstellt werden. Sie können ein Attribut nicht deaktivieren, wenn es in einer Klasse enthalten ist, die nicht deaktiviert ist.
 
- 
+ 
 
- 
+ 
