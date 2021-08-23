@@ -1,7 +1,7 @@
 ---
-description: 'Die checkmediatype-Methode bestimmt, ob die PIN einen bestimmten Medientyp akzeptiert. Diese Methode überschreibt die cbasepin:: checkmediatype-Methode.'
+description: Die CheckMediaType-Methode bestimmt, ob der Pin einen bestimmten Medientyp akzeptiert. Diese Methode überschreibt die CBasePin::CheckMediaType-Methode.
 ms.assetid: 618c6f2e-2a15-43dd-811e-898dad0de226
-title: Crendererinputpin. checkmediatype-Methode (renbase. h)
+title: CRendererInputPin.CheckMediaType-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5d3229d1431e45a6177c454f94bf9873aaceaca5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d47f69c72ab2dab366b42d6dc80100508c0b1608d25abdcbfb1bb49c4177a278
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372082"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119687700"
 ---
-# <a name="crendererinputpincheckmediatype-method"></a>Crendererinputpin. checkmediatype-Methode
+# <a name="crendererinputpincheckmediatype-method"></a>CRendererInputPin.CheckMediaType-Methode
 
-Die- `CheckMediaType` Methode bestimmt, ob die PIN einen bestimmten Medientyp akzeptiert. Diese Methode überschreibt die [**cbasepin:: checkmediatype**](cbasepin-checkmediatype.md) -Methode.
+Die `CheckMediaType` -Methode bestimmt, ob der Pin einen bestimmten Medientyp akzeptiert. Diese Methode überschreibt die [**CBasePin::CheckMediaType-Methode.**](cbasepin-checkmediatype.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT CheckMediaType(
 
 <dl> <dt>
 
-*PMT* 
+*Pmt* 
 </dt> <dd>
 
-Zeiger auf ein Medientyp Objekt, das den vorgeschlagenen Medientyp enthält.
+Zeiger auf ein Medientypobjekt, das den vorgeschlagenen Medientyp enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt einen **HRESULT** -Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt einen **HRESULT** -Wert zurück.
 
 <dl> <dt>
 
-[**Crendererinputpin-Klasse**](crendererinputpin.md)
+[**CRendererInputPin-Klasse**](crendererinputpin.md)
 </dt> </dl>
 
  

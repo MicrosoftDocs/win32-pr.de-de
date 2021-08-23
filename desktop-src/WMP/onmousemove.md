@@ -1,9 +1,9 @@
 ---
-title: OnMouseMove
-description: Der OnMouseMove-Ereignishandler behandelt ein Ereignis, das auftritt, wenn der Benutzer den Mauszeiger bewegt, während er sich über einem Element befindet.
+title: Onmousemove
+description: Der onmousemove-Ereignishandler behandelt ein Ereignis, das auftritt, wenn der Benutzer den Mauszeiger bewegt, während er sich über einem Element befindet.
 ms.assetid: 8c834593-c842-48db-862d-994922aad776
 keywords:
-- onmousmove-Windows-Media Player
+- onmousemove Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,24 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d18dcbfee95b1e8c96c3074efe41ae3769b8e1a4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5dcb53be16f2a3422e88328561f9cb2a9613b1ee3860ad8a23cf922d01afd9aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358316"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119647020"
 ---
-# <a name="onmousemove"></a>OnMouseMove
+# <a name="onmousemove"></a>Onmousemove
 
-Der **OnMouseMove** -Ereignishandler behandelt ein Ereignis, das auftritt, wenn der Benutzer den Mauszeiger bewegt, während er sich über einem Element befindet.
+Der **onmousemove-Ereignishandler** behandelt ein Ereignis, das auftritt, wenn der Benutzer den Mauszeiger bewegt, während er sich über einem Element befindet.
 
 ``` syntax
 onmousemove
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Ereignishandler ist für das **Wiedergabe** Listenelement, das **Video** Element bei *Video*, nicht anwendbar. **Windows less** ist false, oder das **Effects** -Element bei *Effekten*. Das **Fenster ist "** true".
+Dieser Ereignishandler gilt nicht für das **PLAYLIST-Element,** das **VIDEO-Element,** wenn *VIDEO*. **windowless** ist false, oder das **EFFECTS-Element,** wenn *EFFECTS ist.* **windowed** ist true.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,7 +38,7 @@ Dieser Ereignishandler ist für das **Wiedergabe** Listenelement, das **Video** 
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 70 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 70 oder höher<br/> |
 
 
 

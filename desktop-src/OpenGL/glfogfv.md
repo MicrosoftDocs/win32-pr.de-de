@@ -1,9 +1,9 @@
 ---
 title: glFogfv-Funktion (Gl.h)
-description: Die Funktion "glfogfv" gibt Nebel Parameter an. | glfogfv-Funktion (GL. h)
+description: Die glFogfv-Funktion gibt parameter an. | glFogfv-Funktion (Gl.h)
 ms.assetid: a2243ff4-4f3a-4b8c-b4fb-ce2cd74815e4
 keywords:
-- glfogfv-Funktion OpenGL
+- glFogfv-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b407dd9b9c984a744e903a2c269d21028d32977a
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 5da9c921af1a69e41c1fd38a633fccad43cd685974be2de81f4275b8388a496f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219392"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119625372"
 ---
-# <a name="glfogfv-function"></a>glfogfv-Funktion
+# <a name="glfogfv-function"></a>glFogfv-Funktion
 
-Die Funktion " **glfogfv** " gibt Nebel Parameter an.
+Die **glFogfv-Funktion** gibt parameter an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ void WINAPI glFogfv(
 
 <dl> <dt>
 
-*pName* 
+*pname* 
 </dt> <dd>
 
-Gibt einen Nebel Parameter an.
+Gibt einen Parameter an.
 
 Akzeptiert einen der folgenden Werte.
 
@@ -52,12 +52,12 @@ Akzeptiert einen der folgenden Werte.
 
 | Wert                                                                                                                                                             | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_FOG_MODE"></span><span id="gl_fog_mode"></span><dl> <dt>**GL- \_ Nebel \_ Modus**</dt> </dl>          | Der Parameter *para* Meters ist ein Gleit Komma Wert, der die Gleichung angibt, die zum Berechnen des Nebel Blend Faktors *f* verwendet wird. Drei symbolische Konstanten werden akzeptiert: GL \_ linear, GL \_ exp und GL \_ exp2. Die Gleichungen, die diesen symbolischen Konstanten entsprechen, werden im folgenden Abschnitt mit Hinweisen definiert. Der standardnebelmodus ist GL \_ Exp.<br/>                                                                           |
-| <span id="GL_FOG_DENSITY"></span><span id="gl_fog_density"></span><dl> <dt>**GL- \_ Nebel \_ Dichte**</dt> </dl> | Der Parameter *para* Meters ist ein Gleit Komma Wert, der die *Dichte* angibt, die in beiden exponentiellen Nebel Gleichungen verwendete Nebeldichte. Nur nicht negative dichten werden akzeptiert. Die standardmäßige Nebeldichte ist 1,0.<br/>                                                                                                                                                                                                              |
-| <span id="GL_FOG_START"></span><span id="gl_fog_start"></span><dl> <dt>**GL. \_ Nebel \_ Anfang**</dt> </dl>       | Der Parameter *para* Meters ist ein Gleit Komma Wert, der den *Start* angibt, d. h. den Near Distance, der in der linearen Nebel Gleichung verwendet wird. Der Standardwert für fast Distance ist 0,0.<br/>                                                                                                                                                                                                                                                            |
-| <span id="GL_FOG_END"></span><span id="gl_fog_end"></span><dl> <dt>**GL- \_ Nebel \_ Ende**</dt> </dl>             | Der Parameter " *para* meters" ist ein Gleit Komma Wert, der " *End*" angibt, d. h. der Abstand in der linearen Nebel Gleichung. Der Standardabstand ist 1,0.<br/>                                                                                                                                                                                                                                                                |
-| <span id="GL_FOG_INDEX"></span><span id="gl_fog_index"></span><dl> <dt>**GL- \_ Nebel \_ Index**</dt> </dl>       | Der Parameter *para* Meters ist ein Gleit Komma Wert, der *i*<sub>f</sub> , den Nebel Farbindex, angibt. Der standardmäßige Nebel Index ist 0,0.<br/>                                                                                                                                                                                                                                                                                     |
-| <span id="GL_FOG_COLOR"></span><span id="gl_fog_color"></span><dl> <dt>**GL- \_ Nebel \_ Farbe**</dt> </dl>       | Der Parameter *para* meters enthält vier Gleit Komma Werte, die *C*<sub>f</sub> , die Nebelfarbe, angeben. Ganzzahlige Werte werden linear zugeordnet, sodass der positivste darstellbare Wert 1,0 zugeordnet wird, und der negativere darstellbare Wert ist-1,0. Gleit Komma Werte werden direkt zugeordnet. Nach der Konvertierung werden alle Farbkomponenten an den Bereich \[ 0, 1 gebunden \] . Die standardmäßige Nebelfarbe ist (0,0).<br/> |
+| <span id="GL_FOG_MODE"></span><span id="gl_fog_mode"></span><dl> <dt>**\_GL-MODUS \_**</dt> </dl>          | Der *Parameter params* ist ein Gleitkommawert, der die Gleichung angibt, die zum Berechnen des Blendfaktors für Diess verwendet werden *soll, f*. Es werden drei symbolische Konstanten akzeptiert: GL \_ LINEAR, GL \_ EXP und GL \_ EXP2. Die Diesen symbolischen Konstanten entsprechenden Gleichungen werden im folgenden Abschnitt "Hinweise" definiert. Der Standardmodus ist GL \_ EXP.<br/>                                                                           |
+| <span id="GL_FOG_DENSITY"></span><span id="gl_fog_density"></span><dl> <dt>**\_ \_ GL-GL-GL-DICHTE**</dt> </dl> | Der *Parameter params* ist ein Gleitkommawert, der die Dichte angibt. Dies ist die Dichte, die in beiden exponentiellen Gleichungen verwendet wird. Es werden nur nicht negative Dichten akzeptiert. Die Standarddichte des Messgeräts ist 1,0.<br/>                                                                                                                                                                                                              |
+| <span id="GL_FOG_START"></span><span id="gl_fog_start"></span><dl> <dt>**GL \_ FOG \_ START**</dt> </dl>       | Der *Parameter params* ist ein Gleitkommawert, der *start* angibt, die in der linearen Gleichung verwendete Nahdistanz. Der Standardwert für die Entfernung in der Nähe ist 0,0.<br/>                                                                                                                                                                                                                                                            |
+| <span id="GL_FOG_END"></span><span id="gl_fog_end"></span><dl> <dt>**\_GL-END \_**</dt> </dl>             | Der *parameter params-Parameter* ist ein Gleitkommawert, der *end* angibt, die in der linearen Gleichung verwendete Entfernung. Die Standardentfernung ist 1,0.<br/>                                                                                                                                                                                                                                                                |
+| <span id="GL_FOG_INDEX"></span><span id="gl_fog_index"></span><dl> <dt>**GL \_ FOG \_ INDEX**</dt> </dl>       | Der *Parameter params* ist ein Gleitkommawert, der *i*<sub>f</sub> angibt, den Farbindex der Farbe . Der Standardindex ist 0,0.<br/>                                                                                                                                                                                                                                                                                     |
+| <span id="GL_FOG_COLOR"></span><span id="gl_fog_color"></span><dl> <dt>**\_ \_ GL-FARBTON**</dt> </dl>       | Der *parameter params* -Parameter enthält vier Gleitkommawerte, die *C*<sub>f</sub> , die Farbe der Farbe der Farbe , angeben. Ganzzahlwerte werden linear zugeordnet, damit der positivste darstellbare Wert 1,0 und der negativste darstellbare Wert -1,0 zugeordnet wird. Gleitkommawerte werden direkt zugeordnet. Nach der Konvertierung werden alle Farbkomponenten an den Bereich \[ 0,1 klammern. \] Die Standardfarbe ist (0,0,0,0).<br/> |
 
 
 
@@ -68,7 +68,7 @@ Akzeptiert einen der folgenden Werte.
 *params* 
 </dt> <dd>
 
-Gibt den Wert oder die Werte an, die *PName* zugewiesen werden sollen. Die GL- \_ Nebel \_ Farbe erfordert ein Array mit vier Werten. Alle anderen Parameter akzeptieren ein Array, das nur einen einzelnen Wert enthält.
+Gibt den Wert oder die Werte an, die *pname zugewiesen werden sollen.* GL \_ COLOR ERFORDERT ein Array von vier \_ Werten. Alle anderen Parameter akzeptieren ein Array, das nur einen einzelnen Wert enthält.
 
 </dd> </dl>
 
@@ -78,58 +78,58 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *PName* war kein akzeptierter Wert.<br/>                                                                                         |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *pname* war kein akzeptierter Wert.<br/>                                                                                         |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie aktivieren und deaktivieren den Nebel mit [**glEnable**](glenable.md) und [**glEnable**](gldisable.md)mithilfe des Arguments GL \_ Fog. Wenn Sie aktiviert ist, wirkt sich der Nebel auf rasterisierte Geometrie, Bitmaps und Pixelblöcke aus, aber nicht auf Puffer Löschvorgänge.
+Sie aktivieren und deaktivieren das -Argument [**mit glEnable**](glenable.md) und [**glDisable**](gldisable.md)mithilfe des Arguments GL \_ CHEAT. Während diese Option aktiviert ist, wirkt sich dies auf rasterisierte Geometrie, Bitmaps und Pixelblöcke aus, jedoch nicht auf Vorgänge mit Puffer clear.
 
-Die Funktion " **glfogfv** " weist den Wert oder die Werte in den *para* Metern dem durch " *PName*" angegebenen Nebel Parameter zu.
+Die **glFogfv-Funktion** weist den Wert oder die Werte in *Params* dem parameter an, der von *pname angegeben wird.*
 
-Der Nebel kombiniert eine arrayfarbe mit der Post texturturfarbe jedes rasterisierten Pixel Fragments mithilfe eines Mischungs Faktors *f*. Der Faktor *f* wird auf eine von drei Arten berechnet, abhängig vom Nebel Modus. Lassen Sie *z* den Abstand in den Augen Koordinaten vom Ursprung zum Fragment, das gefockt wird, angegeben werden. Die Gleichung für den \_ linearen GL-Nebel lautet:
+Blenden kombiniert eine Farbenblendung mit der Posttexturfarbe jedes rasterisierten Pixelfragments mithilfe eines Blendingfaktors *f*. Faktor *f* wird auf eine von drei Arten berechnet, je nach Modus "Mode". Lassen *Sie z* den Abstand in den Augenkoordinaten vom Ursprung zum fragmentieren, das überschwemmt wird. Die Gleichung für GL \_ LINEARe Gleichung ist:
 
-![Gleichung, die den Wert GL_LINEAR Nebel anzeigt.](images/fog01.png)
+![Gleichung, die den Wert des GL_LINEAR zeigt.](images/fog01.png)
 
-Die Gleichung für GL \_ Exp Nebel lautet:
+Die Gleichung für GL \_ EXP-Gleichung ist:
 
-![Gleichung, die den Wert des Mischungs Faktors in GL_EXP Nebel Modus anzeigt.](images/fog02.png)
+![Gleichung, die den Wert des Überblendungsfaktors im GL_EXP modus zeigt.](images/fog02.png)
 
-Die Gleichung für GL \_ exp2 Nebel lautet:
+Die Gleichung für GL \_ EXP2-Gleichung ist:
 
-![Gleichung, die den Wert des Mischungs Faktors in GL_EXP2 Nebel Modus anzeigt.](images/fog03.png)
+![Gleichung, die den Wert des Überblendungsfaktors im GL_EXP2 modus zeigt.](images/fog03.png)
 
-Unabhängig vom Nebel Modus wird *f* an den Bereich \[ 0, 1, \] nach der Berechnung gebunden. Wenn sich OpenGL im RGBA-Farbmodus befindet, wird die Farbe *C*<sub>r</sub> des Fragments durch ersetzt.
+Unabhängig vom Mode wird *f* an den Bereich \[ 0,1 klammert, \] nachdem er berechnet wurde. Wenn sich OpenGL dann im RGBA-Farbmodus befindet, wird die Farbe *C*<sub>r</sub> des Fragments durch ersetzt.
 
-![Gleichung, die die Farbe des Foto Fragments als Funktion der Mischungs Faktor-und Nebelfarbe anzeigt.](images/fog04.png)
+![Gleichung, die die Farbe des geschwenkten Fragments als Funktion des Mischens von Faktor- und Farbton zeigt.](images/fog04.png)
 
-Im Farb Index Modus wird der Farb Index *i*<sub>r</sub> des Fragments durch ersetzt.
+Im Farbindexmodus wird der Farbindex des Fragments *i*<sub>r</sub> durch ersetzt.
 
-![Gleichung, die den Farb Index des fogged-Fragments als Funktion des Mischungs Faktors und der indizierten Farbe anzeigt.](images/fog05.png)
+![Gleichung, die den Farbindex des geschwenkten Fragments als Funktion des Überblendungsfaktors und der indizierten Farbe zeigt.](images/fog05.png)
 
-Die folgenden Funktionen rufen Informationen im Zusammenhang mit den **glfog** -Funktionen ab:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit den **glFog-Funktionen** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL- \_ \_ Nebelfarbe
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ COLOR \_
 
-**glget** mit dem Argument GL- \_ Nebel \_ Index
+**glGet** mit Dem Argument GL \_ INDEX \_
 
-**glget** mit dem Argument GL- \_ Nebel \_ Dichte
+**glGet mit** dem Argument GL \_ DENSITY \_ DENSITY
 
-**glget** mit dem Argument GL \_ Nebel \_ Start
+**glGet** mit Argument GL \_ START \_
 
-**glget** mit dem Argument GL- \_ Nebel \_ Ende
+**glGet** mit Argument \_ GLENDE \_ END
 
-**glget** mit dem Argument GL- \_ Nebel \_ Modus
+**glGet** mit Argument GL \_ MODE \_
 
-[**glisenabled**](glisenabled.md) mit Argument GL \_ Nebel
+[**glIsEnabled mit**](glisenabled.md) Dem Argument \_ GLSCHLUSS
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -139,8 +139,8 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit den **glfog** -
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -152,7 +152,7 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit den **glfog** -
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**gldeaktivieren**](gldisable.md)
+[**glDisable**](gldisable.md)
 </dt> <dt>
 
 [**glEnable**](glenable.md)
@@ -161,10 +161,10 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit den **glfog** -
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glisenabled**](glisenabled.md)
+[**glIsEnabled**](glisenabled.md)
 </dt> </dl>
 
  

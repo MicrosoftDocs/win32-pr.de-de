@@ -1,7 +1,7 @@
 ---
-description: Ruft das Suchelement für die angegebenen Daten ab. Diese Methode wird einmal für jede URL aufgerufen, die vom Gatherer verarbeitet wird, und Ruft einen Zeiger auf das isearchitem-Objekt ab.
+description: Ruft das Suchelement für die angegebenen Daten ab. Diese Methode wird einmal für jede URL aufgerufen, die vom Gatherer verarbeitet wird, und ruft einen Zeiger auf das ISearchItem-Objekt ab.
 ms.assetid: 35893bc9-8327-44f9-a9fc-7855c5c063e3
-title: 'Isearchprotocolui:: getsearchitemforurl-Methode'
+title: ISearchProtocolUI::GetSearchItemForUrl-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: f8a9bbe3459109946b7a4789d9b9f0fb7473ff05
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8636f42026fe44131e149b0e378089b70c7d4f49b9e23b5d48ebe50aa5721d79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119594810"
 ---
-# <a name="isearchprotocoluigetsearchitemforurl-method"></a>Isearchprotocolui:: getsearchitemforurl-Methode
+# <a name="isearchprotocoluigetsearchitemforurl-method"></a>ISearchProtocolUI::GetSearchItemForUrl-Methode
 
-Ruft das Suchelement für die angegebenen Daten ab. Diese Methode wird einmal für jede URL aufgerufen, die vom Gatherer verarbeitet wird, und Ruft einen Zeiger auf das [**isearchitem**](-search-isearchitem.md) -Objekt ab.
+Ruft das Suchelement für die angegebenen Daten ab. Diese Methode wird einmal für jede URL aufgerufen, die vom Gatherer verarbeitet wird, und ruft einen Zeiger auf das [**ISearchItem-Objekt**](-search-isearchitem.md) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,30 +40,30 @@ HRESULT GetSearchItemForUrl(
 
 <dl> <dt>
 
-*pcwszurl* \[ in\]
+*pcwszURL* \[ In\]
 </dt> <dd>
 
-Typ: **lpcolestr**
+Typ: **LPCOLESTR**
 
-Zeiger auf eine Unicode-Zeichenfolge mit NULL-Daten, die das Suchelement für die URL enthält, auf die zugegriffen wird
+Zeiger auf eine auf NULL-Daten beendete Unicode-Zeichenfolge, die das Suchelement für die URL enthält, auf die zugegriffen wird.
 
 </dd> <dt>
 
-*ppropertybag* \[ in\]
+*pPropertyBag* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **iitempropertybag \** _
+Typ: **IItemPropertyBag \***
 
-Zeiger auf ein [_ *iitempropertybag* *](iitempropertybag.md) -Objekt, das Informationen über das Suchelement enthält, einschließlich der Eigenschaften des Elements.
+Zeiger auf ein [**IItemPropertyBag-Objekt,**](iitempropertybag.md) das Informationen über das Suchelement enthält, einschließlich der Eigenschaften des Elements.
 
 </dd> <dt>
 
-*ppsearchitem* \[ Out, retval\]
+*ppSearchItem* \[ out, retval\]
 </dt> <dd>
 
-Typ: **[ **isearchitem**](-search-isearchitem.md)\*\***
+Typ: **[ **ISearchItem**](-search-isearchitem.md)\*\***
 
-Empfängt die Adresse eines Zeigers auf das [**isearchitem**](-search-isearchitem.md) -Objekt, das mit dieser Methode erstellt wurde. Dieses Objekt enthält Informationen über das Suchelement, z. b. den Dateinamen des Elements.
+Empfängt die Adresse eines Zeigers auf das von dieser Methode erstellte [**ISearchItem-Objekt.**](-search-isearchitem.md) Dieses Objekt enthält Informationen zum Suchelement, z. B. den Dateinamen des Elements.
 
 </dd> </dl>
 
@@ -71,13 +71,13 @@ Empfängt die Adresse eines Zeigers auf das [**isearchitem**](-search-isearchite
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **isearchprotocolui:: getsearchitemforurl** -Methode wird nur unter Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
+Die **ISearchProtocolUI::GetSearchItemForUrl-Methode** wird nur unter Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
-Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler von Drittanbietern auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, kann es erforderlich sein, die [**isearchprotocolui**](-search-isearchprotocolui.md) -Schnittstelle und die folgenden APIs zu verwenden: die Schnittstellen [**iitempreviewerext**](-search-iitempreviewerext.md), [**iitempropertybag**](iitempropertybag.md) und [**isearchitem**](-search-isearchitem.md) , die [**linkinfo**](-search-linkinfo.md) -Struktur und die [**linktype**](-search-linktype.md)
+Um eine Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern anzuzeigen, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**ISearchProtocolUI-Schnittstelle**](-search-isearchprotocolui.md) und die folgenden APIs zu verwenden: die [**Schnittstellen IItemPreviewerExt,**](-search-iitempreviewerext.md) [**IItemPropertyBag**](iitempropertybag.md) und [**ISearchItem,**](-search-isearchitem.md) die [**LINKINFO-Struktur**](-search-linkinfo.md) und die [**LINKTYPE-Enumeration.**](-search-linktype.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,9 +85,9 @@ Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler von Drittanbi
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 3,0<br/>          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 3.0<br/>          |
 
 
 
@@ -95,7 +95,7 @@ Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler von Drittanbi
 
 <dl> <dt>
 
-[**Isearchprotocolui**](-search-isearchprotocolui.md)
+[**ISearchProtocolUI**](-search-isearchprotocolui.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die FillBuffer-Methode füllt ein Medien Beispiel mit Daten.
+description: Die FillBuffer-Methode füllt ein Medienbeispiel mit Daten auf.
 ms.assetid: dddad8c7-44f1-4ba3-8fb1-7e7e88e40941
-title: Csourcestream. FillBuffer-Methode (Quelle. h)
+title: CSourceStream.FillBuffer-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3611ad8b590bb823abccdecf9d3d138c70441a07
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b9a522dd2b10e7ced60b65c84621bb1817be4b8abbca8656ba23f49e95fe3892
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119687400"
 ---
-# <a name="csourcestreamfillbuffer-method"></a>Csourcestream. FillBuffer-Methode
+# <a name="csourcestreamfillbuffer-method"></a>CSourceStream.FillBuffer-Methode
 
-Die- `FillBuffer` Methode füllt ein Medien Beispiel mit Daten.
+Die `FillBuffer` -Methode füllt ein Medienbeispiel mit Daten auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,35 +42,35 @@ virtual HRESULT FillBuffer(
 
 <dl> <dt>
 
-*psample* 
+*pSample* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels.
+Zeiger auf die [**IMediaSample-Schnittstelle des**](/windows/desktop/api/Strmif/nn-strmif-imediasample) Beispiels.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
 
 
 
 | Rückgabecode                                                                             | Beschreibung              |
 |-----------------------------------------------------------------------------------------|--------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl> | Ende des Streams<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Ende des Streams<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg<br/>       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode muss von der abgeleiteten Klasse implementiert werden.
+Die abgeleitete Klasse muss diese Methode implementieren.
 
-Das für diese Methode angegebene Medien Beispiel hat keine Zeitstempel. Die abgeleitete Klasse sollte die [**imediasample:: setTime**](/windows/desktop/api/Strmif/nf-strmif-imediasample-settime) -Methode aufrufen, um die Zeitstempel festzulegen. Wenn dies für den Medientyp angebracht ist, sollte die abgeleitete Klasse auch die Medien Zeiten festlegen, indem Sie die [**imediasample:: setmediatime**](/windows/desktop/api/Strmif/nf-strmif-imediasample-setmediatime) -Methode aufruft. Weitere Informationen finden Sie unter [Zeit und Uhren in DirectShow](time-and-clocks-in-directshow.md).
+Das dieser Methode gegebene Medienbeispiel verfügt über keine Zeitstempel. Die abgeleitete Klasse sollte die [**IMediaSample::SetTime-Methode aufrufen,**](/windows/desktop/api/Strmif/nf-strmif-imediasample-settime) um die Zeitstempel zu festlegen. Wenn dies für den Medientyp geeignet ist, sollte die abgeleitete Klasse auch die Medienzeiten festlegen, indem sie die [**IMediaSample::SetMediaTime-Methode**](/windows/desktop/api/Strmif/nf-strmif-imediasample-setmediatime) aufruft. Weitere Informationen finden Sie unter [Zeit und Uhren in DirectShow](time-and-clocks-in-directshow.md).
 
-Gibt "S \_ false" am Ende des Streams zurück. Dies bewirkt, dass die **csourcestream** -Klasse das Ende der Stream-Benachrichtigung sendet und die Puffer Verarbeitungs Schleife stoppt. Weitere Informationen finden Sie unter [**csourcestream::D obufferprocessingloop**](csourcestream-dobufferprocessingloop.md) .
+Gibt S \_ FALSE am Ende des Streams zurück. Dies bewirkt, dass **die CSourceStream-Klasse** die Benachrichtigung zum Ende des Streams sendet und die Pufferverarbeitungsschleife anzuhalten. Weitere Informationen finden Sie unter [**CSourceStream::D oBufferProcessingLoop.**](csourcestream-dobufferprocessingloop.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,8 +78,8 @@ Gibt "S \_ false" am Ende des Streams zurück. Dies bewirkt, dass die **csources
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -87,7 +87,7 @@ Gibt "S \_ false" am Ende des Streams zurück. Dies bewirkt, dass die **csources
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  

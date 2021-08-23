@@ -1,7 +1,7 @@
 ---
 description: Enthält EAPOL-Konfigurationsparameter.
 ms.assetid: 4157a643-86f2-4f6f-8517-6207b11ea9a1
-title: EAPOL_INTF_PARAMS Struktur (wzcsapi. h)
+title: EAPOL_INTF_PARAMS-Struktur (Wzcsapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - wzcsapi.h
-ms.openlocfilehash: dd9e0664fe41b471162beccd31bf2c22fbfa1640
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3359454196735b8100ea40a9b4add2e8e0398c336bf254eb507b0a4e63a86e1e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350290"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119685240"
 ---
-# <a name="eapol_intf_params-structure"></a>EAPOL \_ INTF-Parameter \_ Struktur
+# <a name="eapol_intf_params-structure"></a>EAPOL \_ INTF \_ PARAMS-Struktur
 
-\[**EAPOL \_ INTF \_** -Parameter werden ab Windows Vista und Windows Server 2008 nicht mehr unterstützt. Verwenden Sie stattdessen die [native WiFi-API](native-wifi-reference.md), die eine ähnliche Funktionalität bietet. Weitere Informationen finden Sie unter Informationen zur [nativen WiFi-API](about-the-native-wifi-api.md).\]
+\[**EAPOL \_ INTF \_ PARAMS** wird ab Windows Vista und Windows Server 2008 nicht mehr unterstützt. Verwenden Sie stattdessen die [Native Wifi-API](native-wifi-reference.md), die ähnliche Funktionen bereitstellt. Weitere Informationen finden Sie unter [Informationen zur Native Wifi-API.](about-the-native-wifi-api.md)\]
 
 Enthält EAPOL-Konfigurationsparameter.
 
@@ -49,7 +49,7 @@ typedef struct _EAPOL_INTF_PARAMS {
 **dwVersion**
 </dt> <dd>
 
-Die Version des Aufrufers. Standard ist "0".
+Version des Aufrufers. Standard ist "0".
 
 </dd> <dt>
 
@@ -60,37 +60,37 @@ Für die zukünftige Verwendung reserviert.
 
 </dd> <dt>
 
-**dbewaffnung-Flags**
+**dwEapFlags**
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-**dbewaffnete-Typ**
+**dwEapType**
 </dt> <dd>
 
-Der zu verwendende EAP-Erweiterungstyp. Legen Sie auf 0x00000013 für EAP-TLS und 0x00000026 für PEAP fest.
+Der zu verwendende EAP-Erweiterungstyp. Legen Sie für EAP-TLS 0x00000013 und für PEAP 0x00000026 fest.
 
 </dd> <dt>
 
-**dwsizeofssid**
+**dwSizeOfSSID**
 </dt> <dd>
 
-Größe des Netzwerk Bezeichners.
+Größe des Netzwerkbezeichners.
 
 </dd> <dt>
 
-**bSSID**
+**Bssid**
 </dt> <dd>
 
-Netzwerk Bezeichner.
+Netzwerkbezeichner.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Header Datei "wzcsapi. h" ist im Windows SDK nicht verfügbar.
+Die Headerdatei wzcsapi.h ist im Windows SDK nicht verfügbar.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,11 +98,11 @@ Die Header Datei "wzcsapi. h" ist im Windows SDK nicht verfügbar.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                 |
 | Ende des Supports (Client)<br/>    | Windows XP mit SP3<br/>                                                       |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Wzcsapi. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Wzcsapi.h</dt> </dl> |
 
 
 

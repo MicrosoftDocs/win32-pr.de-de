@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentbackupabortbyserverexception-Konstruktor'
-title: Esentbackupabortbyserverexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentBackupAbortByServerException-Konstruktor'
+title: EsentBackupAbortByServerException-Konstruktor
 TOCTitle: 'EsentBackupAbortByServerException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentBackupAbortByServerException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentbackupabortbyserverexception.esentbackupabortbyserverexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 69b4021ea176dc4350dce63012f6b1df15f13167
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a50533b9cf6f8688fc1fb01536e49551fb17b9245831798da24e0c31d75fc821
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119623220"
 ---
-# <a name="esentbackupabortbyserverexception-constructor"></a>Esentbackupabortbyserverexception-Konstruktor
+# <a name="esentbackupabortbyserverexception-constructor"></a>EsentBackupAbortByServerException-Konstruktor
 
-Initialisiert eine neue Instanz der esentbackupabortbyserverexception-Klasse.
+Initialisiert eine neue Instanz der EsentBackupAbortByServerException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentBackupAbortByServerException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentbackupabortbyserverexception-Klasse](./esentbackupabortbyserverexception-class.md)
+[EsentBackupAbortByServerException-Klasse](./esentbackupabortbyserverexception-class.md)
 
-[Esentbackupabortbyserverexception-Member](./esentbackupabortbyserverexception-members.md)
+[EsentBackupAbortByServerException-Member](./esentbackupabortbyserverexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

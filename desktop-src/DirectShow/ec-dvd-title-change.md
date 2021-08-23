@@ -1,7 +1,7 @@
 ---
-description: Gibt an, wann die aktuelle DVD-Titel Nummer geändert wird.
+description: Gibt an, wann sich die aktuelle DVD-Titelnummer ändert.
 ms.assetid: 9888f2ec-fc2d-4d6d-a03d-b381373337eb
-title: EC_DVD_TITLE_CHANGE (dvdevcode. h)
+title: EC_DVD_TITLE_CHANGE (Dvdevcode.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - dvdevcode.h
-ms.openlocfilehash: 9539d29704797b1c7b001d426250762d2ed27b3e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 667d8f11270865f1caa4549377db2cccb278053ea9848b71aa38f0d5f7528689
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119686210"
 ---
-# <a name="ec_dvd_title_change"></a>Änderung des EC- \_ DVD- \_ Titels \_
+# <a name="ec_dvd_title_change"></a>ÄNDERUNG DES TITELS DER \_ EC-DVD \_ \_
 
-Gibt an, wann die aktuelle DVD-Titel Nummer geändert wird.
+Gibt an, wann sich die aktuelle DVD-Titelnummer ändert.
 
 ## <a name="parameters"></a>Parameter
 
@@ -31,7 +31,7 @@ Gibt an, wann die aktuelle DVD-Titel Nummer geändert wird.
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-**DWORD** -Wert, der die neue Titel Nummer angibt.
+**DWORD-Wert,** der die neue Titelnummer angibt.
 
 </dd> <dt>
 
@@ -42,11 +42,11 @@ Keinen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Titelnummern liegen zwischen 1 und 99. Diese Zahl gibt den TTN an, bei dem es sich um die Titel Nummer in Bezug auf die gesamte Festplatte handelt, nicht um die VTS-TTN, bei der es sich \_ um die Titel Nummer in Bezug auf einen aktuellen VTS handelt.
+Titelnummern liegen zwischen 1 und 99. Diese Zahl gibt den TTN an, bei dem es sich um die Titelnummer in Bezug auf den gesamten Datenträger handelt, nicht den \_ VTS-TTN, bei dem es sich lediglich um die Titelnummer eines aktuellen VTS handelt.
 
-Dieses Ereignis wird in der Titel Domäne ausgelöst.
+Dieses Ereignis wird in der Titeldomäne ausgelöst.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ Dieses Ereignis wird in der Titel Domäne ausgelöst.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdevcode. h (Include DShow. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdevcode.h (include Dshow.h)</dt> </dl> |
 
 
 
@@ -65,10 +65,10 @@ Dieses Ereignis wird in der Titel Domäne ausgelöst.
 [DVD-Anwendungen](dvd-applications.md)
 </dt> <dt>
 
-[DVD-Ereignis Benachrichtigungs Codes](dvd-notification-codes.md)
+[DVD-Ereignisbenachrichtigungscodes](dvd-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

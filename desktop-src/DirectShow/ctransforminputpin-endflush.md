@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e5e080b4531d05160bebd42a68145842c4783bea
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: bca2231f36c3d37f58bb740ddf55132d1c63babba6054629b2a76cc5d7866646
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095058"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119687220"
 ---
 # <a name="ctransforminputpinendflush-method"></a>CTransformInputPin.EndFlush-Methode
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
 
 
 
@@ -55,18 +55,18 @@ Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden T
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**CTransformFilter::EndFlush-Methode**](ctransformfilter-endflush.md) des Filters auf, um den Aufruf downstreamzu übermitteln. Anschließend wird die [**CBaseInputPin::EndFlush-Methode**](cbaseinputpin-endflush.md) des Pins aufrufen.
+Diese Methode ruft die [**CTransformFilter::EndFlush-Methode**](ctransformfilter-endflush.md) des Filters auf, um den Aufruf nachgeschaltet zu liefern. Anschließend wird die [**CBaseInputPin::EndFlush-Methode**](cbaseinputpin-endflush.md) des Pins aufruft.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: Title-Attribut
-description: Enthält die Position des Benutzers. Diese Eigenschaft wird normalerweise verwendet, um die formale Berufsbezeichnung anzugeben, wie z. b. Senior Programmer, anstelle einer berufsklasse, z. b. Programmierer. Sie wird in der Regel nicht für Suffix-Titel wie Esq verwendet. oder DDS.
+title: Titelattribut
+description: Enthält die Position des Benutzers. Diese Eigenschaft wird häufig verwendet, um die formale Position anzugeben, z. B. Senior Programmer, anstatt die klasse , z. B. Programmierer. Sie wird in der Regel nicht für Suffixtitel wie Esq verwendet. oder DDS.
 ms.assetid: 4a6899a7-ddbf-4dd0-b088-3739716f33df
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Titel Attribut
-- AD-Schema für Titel Attribut
+- Titelattribut AD-Schema
+- TITLE-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ebbb4dae862db9fc363b22647bd5e56a98e9e60b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c8885a557e8fbec17d6d58d68fdea0f99039f0e09e34a8da01954dc7b4979fc3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119645030"
 ---
-# <a name="title-attribute-ad-schema"></a>Title-Attribut (AD-Schema)
+# <a name="title-attribute-ad-schema"></a>Titelattribut (AD-Schema)
 
-Enthält die Position des Benutzers. Diese Eigenschaft wird normalerweise verwendet, um die formale Berufsbezeichnung anzugeben, wie z. b. Senior Programmer, anstelle einer berufsklasse, z. b. Programmierer. Sie wird in der Regel nicht für Suffix-Titel wie Esq verwendet. oder DDS.
+Enthält die Position des Benutzers. Diese Eigenschaft wird häufig verwendet, um die formale Position anzugeben, z. B. Senior Programmer, anstatt die klasse , z. B. Programmierer. Sie wird in der Regel nicht für Suffixtitel wie Esq verwendet. oder DDS.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------------------------------------|
 | CN                | Titel                                                                     |
-| LDAP-Display-Name | title                                                                     |
+| Ldap-Anzeigename | title                                                                     |
 | Size              | \-                                                                        |
-| Berechtigung aktualisieren  | Domänen Administrator oder Konto Besitzer.                                    |
-| Aktualisierungshäufigkeit  | Wenn der Benutzerdaten Satz erstellt wird, und wenn der Titel geändert werden muss. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator oder Kontobesitzer.                                    |
+| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und wann immer der Titel geändert werden muss. |
 | Attribute-Id      | 2.5.4.12                                                                  |
 | System-ID-GUID    | bf967a55-0de6-11d0-a285-00aa003049e2                                      |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                               |
@@ -43,7 +43,7 @@ Enthält die Position des Benutzers. Diese Eigenschaft wird normalerweise verwen
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,38 +56,38 @@ Enthält die Position des Benutzers. Diese Eigenschaft wird normalerweise verwen
 | Eingabe | Wert |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                              |
-| MAPI-Id                | 0x3a17                                                                                                                          |
+| MAPI-Id                | 0x3A17                                                                                                                          |
 | System-Only            | False                                                                                                                           |
-| Ist-einwertig       | Richtig                                                                                                                            |
+| Ist einwertig       | True                                                                                                                            |
 | Ist indiziert             | False                                                                                                                           |
 | Im globalen Katalog      | False                                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                    |
 | Range-Lower            | 1                                                                                                                               |
 | Range-Upper            | 64                                                                                                                              |
 | Search-Flags           | 0x00000000                                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                                      |
-| In verwendete Klassen        | [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Privat Person**](c-residentialperson.md)<br/> |
+| In verwendete Klassen        | [**Unternehmensperson**](c-organizationalperson.md)<br/> [**1600-000-**](c-residentialperson.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                              |
-| MAPI-Id                | 0x3a17                                                                                                                          |
+| MAPI-Id                | 0x3A17                                                                                                                          |
 | System-Only            | False                                                                                                                           |
-| Ist-einwertig       | Richtig                                                                                                                            |
+| Ist einwertig       | True                                                                                                                            |
 | Ist indiziert             | False                                                                                                                           |
 | Im globalen Katalog      | False                                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                    |
 | Range-Lower            | 1                                                                                                                               |
 | Range-Upper            | 64                                                                                                                              |
 | Search-Flags           | 0x00000000                                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                                      |
-| In verwendete Klassen        | [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Privat Person**](c-residentialperson.md)<br/> |
+| In verwendete Klassen        | [**Unternehmensperson**](c-organizationalperson.md)<br/> [**1600-000-**](c-residentialperson.md)<br/> |
 
 
 
@@ -98,17 +98,17 @@ Enthält die Position des Benutzers. Diese Eigenschaft wird normalerweise verwen
 | Eingabe | Wert |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                              |
-| MAPI-Id                | 0x3a17                                                                                                                          |
+| MAPI-Id                | 0x3A17                                                                                                                          |
 | System-Only            | False                                                                                                                           |
-| Ist-einwertig       | Richtig                                                                                                                            |
+| Ist einwertig       | True                                                                                                                            |
 | Ist indiziert             | False                                                                                                                           |
 | Im globalen Katalog      | False                                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                    |
 | Range-Lower            | 1                                                                                                                               |
 | Range-Upper            | 64                                                                                                                              |
 | Search-Flags           | 0x00000000                                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                                      |
-| In verwendete Klassen        | [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Privat Person**](c-residentialperson.md)<br/> |
+| In verwendete Klassen        | [**Unternehmensperson**](c-organizationalperson.md)<br/> [**1600-000-**](c-residentialperson.md)<br/> |
 
 
 
@@ -119,17 +119,17 @@ Enthält die Position des Benutzers. Diese Eigenschaft wird normalerweise verwen
 | Eingabe | Wert |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                              |
-| MAPI-Id                | 0x3a17                                                                                                                          |
+| MAPI-Id                | 0x3A17                                                                                                                          |
 | System-Only            | False                                                                                                                           |
-| Ist-einwertig       | Richtig                                                                                                                            |
+| Ist einwertig       | True                                                                                                                            |
 | Ist indiziert             | False                                                                                                                           |
 | Im globalen Katalog      | False                                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                    |
 | Range-Lower            | 1                                                                                                                               |
 | Range-Upper            | 128                                                                                                                             |
 | Search-Flags           | 0x00000000                                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                                      |
-| In verwendete Klassen        | [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Privat Person**](c-residentialperson.md)<br/> |
+| In verwendete Klassen        | [**Unternehmensperson**](c-organizationalperson.md)<br/> [**1600-000-**](c-residentialperson.md)<br/> |
 
 
 
@@ -140,17 +140,17 @@ Enthält die Position des Benutzers. Diese Eigenschaft wird normalerweise verwen
 | Eingabe | Wert |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                              |
-| MAPI-Id                | 0x3a17                                                                                                                          |
+| MAPI-Id                | 0x3A17                                                                                                                          |
 | System-Only            | False                                                                                                                           |
-| Ist-einwertig       | Richtig                                                                                                                            |
+| Ist einwertig       | True                                                                                                                            |
 | Ist indiziert             | False                                                                                                                           |
 | Im globalen Katalog      | False                                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                    |
 | Range-Lower            | 1                                                                                                                               |
 | Range-Upper            | 128                                                                                                                             |
 | Search-Flags           | 0x00000000                                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                                      |
-| In verwendete Klassen        | [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Privat Person**](c-residentialperson.md)<br/> |
+| In verwendete Klassen        | [**Unternehmensperson**](c-organizationalperson.md)<br/> [**1600-000-**](c-residentialperson.md)<br/> |
 
 
 
@@ -161,17 +161,17 @@ Enthält die Position des Benutzers. Diese Eigenschaft wird normalerweise verwen
 | Eingabe | Wert |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                              |
-| MAPI-Id                | 0x3a17                                                                                                                          |
+| MAPI-Id                | 0x3A17                                                                                                                          |
 | System-Only            | False                                                                                                                           |
-| Ist-einwertig       | Richtig                                                                                                                            |
+| Ist einwertig       | True                                                                                                                            |
 | Ist indiziert             | False                                                                                                                           |
 | Im globalen Katalog      | False                                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                    |
 | Range-Lower            | 1                                                                                                                               |
 | Range-Upper            | 128                                                                                                                             |
 | Search-Flags           | 0x00000000                                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                                      |
-| In verwendete Klassen        | [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Privat Person**](c-residentialperson.md)<br/> |
+| In verwendete Klassen        | [**Unternehmensperson**](c-organizationalperson.md)<br/> [**1600-000-**](c-residentialperson.md)<br/> |
 
 
 

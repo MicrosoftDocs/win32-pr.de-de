@@ -1,9 +1,9 @@
 ---
 title: Navigate-Element
-description: In diesem Abschnitt werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Das Navigate-Element gibt eine URL an, die von Aufrufen von "extern. navigatetaskpaneurl" verwendet wird.
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Das Navigate-Element gibt eine URL an, die von Aufrufen von External.NavigateTaskPaneURL verwendet wird.
 ms.assetid: 3898e381-baf8-481a-90ee-d64e55b319a0
 keywords:
-- Navigation in Element Fenstern Media Player
+- Navigate-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,21 +13,21 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ab3a76fba522332f1414b02d3e317f2793e88292
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a9e62dc0defae10eb0c271543e3ef3c85aab409325a21611792011d487840740
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119647630"
 ---
 # <a name="navigate-element"></a>Navigate-Element
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Das **Navigate** -Element gibt eine URL an, die von Aufrufen von " **extern. navigatetaskpaneurl**" verwendet wird.
+Das **Navigate-Element** gibt eine URL an, die von Aufrufen von **External.NavigateTaskPaneURL** verwendet wird.
 
 ``` syntax
 <Navigate
@@ -41,13 +41,13 @@ Das **Navigate** -Element gibt eine URL an, die von Aufrufen von " **extern. nav
 
 | Begriff                                                                                                                                             | BESCHREIBUNG                                                                                                                         |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="BaseURL__required_"></span><span id="baseurl__required_"></span><span id="BASEURL__REQUIRED_"></span>**Baseurl** (erforderlich)<br/> | Voll qualifizierte URL für die Webseite, zu der navigiert werden soll. **Navigatetaskpaneurl** kann eine Abfrage Zeichenfolge an diese URL anfügen.<br/> |
+| <span id="BaseURL__required_"></span><span id="baseurl__required_"></span><span id="BASEURL__REQUIRED_"></span>**BaseURL** (erforderlich)<br/> | Vollqualifizierte URL für die Webseite, zu der navigiert werden soll. **NavigateTaskPaneURL** kann eine Abfragezeichenfolge an diese URL anfügen.<br/> |
 
 
 
  
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
@@ -74,16 +74,16 @@ Das **Navigate** -Element gibt eine URL an, die von Aufrufen von " **extern. nav
 
 <dl> <dt>
 
-[**Beispiel eines serviceInfo-Dokuments für einen Online Store vom Typ 1**](example-serviceinfo-document-for-a-type-1-online-store.md)
+[**ServiceInfo-Beispieldokument für eine Online-Store vom Typ 1**](example-serviceinfo-document-for-a-type-1-online-store.md)
 </dt> <dt>
 
-[**Beispiel eines serviceInfo-Dokuments für einen Typ 2-Online Store**](example-serviceinfo-document-for-a-type-2-online-store.md)
+[**ServiceInfo-Beispieldokument für ein Online-Store vom Typ 2**](example-serviceinfo-document-for-a-type-2-online-store.md)
 </dt> <dt>
 
-[**Extern. navigatetaskpaneurl**](external-navigatetaskpaneurl.md)
+[**External.NavigateTaskPaneURL**](external-navigatetaskpaneurl.md)
 </dt> <dt>
 
-[**Servicinfo-Dokument**](serviceinfo-document.md)
+[**ServiceInfo-Dokument**](serviceinfo-document.md)
 </dt> </dl>
 
  

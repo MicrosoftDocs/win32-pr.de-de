@@ -1,11 +1,11 @@
 ---
 title: Server-Role-Attribut
-description: Aus Gründen der Kompatibilität mit Pre-2000 Windows Server Server Server-Servern. Ein Computer, auf dem Windows NT Server ausgeführt wird, kann ein eigenständiger Server, ein primärer Domänen Controller (PDC) oder ein Sicherungs Domänen Controller (BDC) sein.
+description: Aus Gründen der Kompatibilität mit Serverservern vor Windows 2000. Ein Computer, auf dem Windows NT-Server ausgeführt wird, kann ein eigenständiger Server, ein primärer Domänencontroller (PDC) oder ein Sicherungsdomänencontroller (BDC) sein.
 ms.assetid: 0c2e5b18-14ad-4f77-a62c-eeb95aabbb99
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Server-Role-Attribut
-- "\"serverRole\"-Attribut AD-Schema"
+- Server-Role AD-Attributschema
+- AD-Schema für serverRole-Attribut
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 58a127a94cd1ecc2bfce3701c11ee2a5e0c2376c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 4e46345362e78590cd50e75e2ea592f55f3bda2db96c4c412c85afccc5eb6f2a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106338832"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119646120"
 ---
 # <a name="server-role-attribute"></a>Server-Role-Attribut
 
-Aus Gründen der Kompatibilität mit Pre-2000 Windows Server Server Server-Servern. Ein Computer, auf dem Windows NT Server ausgeführt wird, kann ein eigenständiger Server, ein primärer Domänen Controller (PDC) oder ein Sicherungs Domänen Controller (BDC) sein.
+Aus Gründen der Kompatibilität mit Serverservern vor Windows 2000. Ein Computer, auf dem Windows NT-Server ausgeführt wird, kann ein eigenständiger Server, ein primärer Domänencontroller (PDC) oder ein Sicherungsdomänencontroller (BDC) sein.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Server-Role                          |
-| LDAP-Display-Name | serverRole                           |
+| Ldap-Anzeigename | Serverrole                           |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | 4 Bytes                              |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | 4 Bytes                              |
 | Attribute-Id      | 1.2.840.113556.1.4.157               |
 | System-ID-GUID    | bf967a33-0de6-11d0-a285-00aa003049e2 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -43,7 +43,7 @@ Aus Gründen der Kompatibilität mit Pre-2000 Windows Server Server Server-Serve
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Aus Gründen der Kompatibilität mit Pre-2000 Windows Server Server Server-Serve
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
 | System-Only            | False                                                 |
-| Ist-einwertig       | Richtig                                                  |
+| Ist einwertig       | True                                                  |
 | Ist indiziert             | False                                                 |
 | Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | \-                                                    |
 | Range-Upper            | \-                                                    |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000010                                            |
-| In verwendete Klassen        | [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Aus Gründen der Kompatibilität mit Pre-2000 Windows Server Server Server-Serve
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
 | System-Only            | False                                                 |
-| Ist-einwertig       | Richtig                                                  |
+| Ist einwertig       | True                                                  |
 | Ist indiziert             | False                                                 |
 | Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | \-                                                    |
 | Range-Upper            | \-                                                    |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000010                                            |
-| In verwendete Klassen        | [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Aus Gründen der Kompatibilität mit Pre-2000 Windows Server Server Server-Serve
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
 | System-Only            | False                                                 |
-| Ist-einwertig       | Richtig                                                  |
+| Ist einwertig       | True                                                  |
 | Ist indiziert             | False                                                 |
 | Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | \-                                                    |
 | Range-Upper            | \-                                                    |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000010                                            |
-| In verwendete Klassen        | [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Aus Gründen der Kompatibilität mit Pre-2000 Windows Server Server Server-Serve
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
 | System-Only            | False                                                 |
-| Ist-einwertig       | Richtig                                                  |
+| Ist einwertig       | True                                                  |
 | Ist indiziert             | False                                                 |
 | Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | \-                                                    |
 | Range-Upper            | \-                                                    |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000010                                            |
-| In verwendete Klassen        | [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Aus Gründen der Kompatibilität mit Pre-2000 Windows Server Server Server-Serve
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
 | System-Only            | False                                                 |
-| Ist-einwertig       | Richtig                                                  |
+| Ist einwertig       | True                                                  |
 | Ist indiziert             | False                                                 |
 | Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | \-                                                    |
 | Range-Upper            | \-                                                    |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000010                                            |
-| In verwendete Klassen        | [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Aus Gründen der Kompatibilität mit Pre-2000 Windows Server Server Server-Serve
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
 | System-Only            | False                                                 |
-| Ist-einwertig       | Richtig                                                  |
+| Ist einwertig       | True                                                  |
 | Ist indiziert             | False                                                 |
 | Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | \-                                                    |
 | Range-Upper            | \-                                                    |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000010                                            |
-| In verwendete Klassen        | [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 

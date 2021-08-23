@@ -1,27 +1,27 @@
 ---
-description: Bevor die Setup Funktionen auf Informationen in der INF zugreifen können, müssen Sie Sie mit einem Aufrufen der setupopeninffile-Funktion öffnen. Diese Funktion gibt ein Handle für die INF-Datei zurück.
+description: Bevor die Setupfunktionen auf Informationen in der INF zugreifen können, müssen Sie sie mit einem Aufruf der SetupOpenInfFile-Funktion öffnen. Diese Funktion gibt ein Handle für die INF-Datei zurück.
 ms.assetid: d838c05c-51e4-49a8-b773-af4924bff7e2
 title: Öffnen und Schließen einer INF-Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 893b72d000f433fb4da7ecfee0db4d856f878814
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e05500b473a904a3834fa507cff0d22c466153f4e08d95f75d0c076c66d86675
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529324"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119665550"
 ---
 # <a name="opening-and-closing-an-inf-file"></a>Öffnen und Schließen einer INF-Datei
 
-Bevor die Setup Funktionen auf Informationen in der INF zugreifen können, müssen Sie Sie mit einem Aufrufen der [**setupopeninffile**](/windows/desktop/api/Setupapi/nf-setupapi-setupopeninffilea) -Funktion öffnen. Diese Funktion gibt ein Handle für die INF-Datei zurück.
+Bevor die Setupfunktionen auf Informationen in der INF zugreifen können, müssen Sie sie mit einem Aufruf der [**SetupOpenInfFile-Funktion**](/windows/desktop/api/Setupapi/nf-setupapi-setupopeninffilea) öffnen. Diese Funktion gibt ein Handle für die INF-Datei zurück.
 
-Wenn Sie den Namen der INF-Datei, die Sie öffnen müssen, nicht kennen, können Sie die [**setupgetinffilelist**](/windows/desktop/api/Setupapi/nf-setupapi-setupgetinffilelista) -Funktion verwenden, um eine Liste der INF-Dateien in einem Verzeichnis abzurufen.
+Wenn Sie den Namen der INF-Datei nicht kennen, die Sie öffnen müssen, können Sie die [**SetupGetInfFileList-Funktion**](/windows/desktop/api/Setupapi/nf-setupapi-setupgetinffilelista) verwenden, um eine Liste der INF-Dateien in einem Verzeichnis abzurufen.
 
-Nachdem Sie eine INF-Datei geöffnet haben, können Sie zusätzliche INF-Dateien an die geöffnete INF-Datei anfügen, indem Sie die [**setupopenappendinffile**](/windows/desktop/api/Setupapi/nf-setupapi-setupopenappendinffilea) -Funktion verwenden. Dies ist funktionell vergleichbar mit einer include-Anweisung. Wenn nachfolgende Setup Funktionen auf eine geöffnete INF-Datei verweisen, können Sie auch auf alle in den angefügten Dateien gespeicherten Informationen zugreifen.
+Nachdem Sie eine INF-Datei geöffnet haben, können Sie mithilfe der Funktion [**SetupOpenAppendInfFile**](/windows/desktop/api/Setupapi/nf-setupapi-setupopenappendinffilea) zusätzliche INF-Dateien an die geöffnete INF-Datei anfügen. Dies ähnelt funktional einer include-Anweisung. Wenn nachfolgende Setupfunktionen auf eine geöffnete INF-Datei verweisen, können sie auch auf alle Informationen zugreifen, die in den angefügten Dateien gespeichert sind.
 
-Wenn Sie beim Aufrufen der [**setupopenappendinffile**](/windows/desktop/api/Setupapi/nf-setupapi-setupopenappendinffilea) -Funktion keine INF-Datei angeben, fügt **setupopenappendinffile** die Dateien, die vom **Layoutfile** -Schlüssel angegeben werden, im Abschnitt **Version** der geöffneten INF-Datei an.
+Wenn Sie während des Aufrufs der [**SetupOpenAppendInfFile-Funktion**](/windows/desktop/api/Setupapi/nf-setupapi-setupopenappendinffilea) keine INF-Datei angeben, fügt **SetupOpenAppendInfFile** die durch den **LayoutFile-Schlüssel** im Abschnitt **Version** der geöffneten INF-Datei angegebenen Dateien an.
 
-Wenn Sie die Informationen in der INF-Datei nicht mehr benötigen, rufen Sie die [**setupcloseinffile**](/windows/desktop/api/Setupapi/nf-setupapi-setupcloseinffile) -Funktion auf, um die während des Aufrufes [**setupopenappendinffile**](/windows/desktop/api/Setupapi/nf-setupapi-setupopenappendinffilea)zugeordneten Ressourcen freizugeben.
+Wenn Sie die Informationen in der INF-Datei nicht mehr benötigen, rufen Sie die [**SetupCloseInfFile-Funktion**](/windows/desktop/api/Setupapi/nf-setupapi-setupcloseinffile) auf, um Ressourcen freizugeben, die während des Aufrufs von [**SetupOpenAppendInfFile**](/windows/desktop/api/Setupapi/nf-setupapi-setupopenappendinffilea)zugeordnet wurden.
 
  
 

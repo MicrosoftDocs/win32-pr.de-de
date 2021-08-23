@@ -1,9 +1,9 @@
 ---
-title: Schieberegler. foregroundprogress
-description: Das foregroundprogress-Attribut gibt die aktuelle Position der Statusanzeige im Vordergrund als Prozentsatz des Schieberegler-Bereichs an oder ruft diese ab.
+title: SLIDER.foregroundProgress
+description: Das foregroundProgress-Attribut gibt die aktuelle Position der Vordergrund-Statusleiste als Prozentsatz des Schiebereglerbereichs an oder ruft sie ab.
 ms.assetid: 1218ca5a-445c-441b-aa62-74a184a25c2d
 keywords:
-- Schieberegler. foregroundprogress Windows Media Player
+- SLIDER.foregroundProgress Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a4597630453444564411d0bcfad8dc6b39914d13
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6e48819a2b3245fc8a72d29e9a30135cc37702417ca498c88b8be01578b74988
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373894"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119646340"
 ---
-# <a name="sliderforegroundprogress"></a>Schieberegler. foregroundprogress
+# <a name="sliderforegroundprogress"></a>SLIDER.foregroundProgress
 
-Das **foregroundprogress** -Attribut gibt die aktuelle Position der Statusanzeige im Vordergrund als Prozentsatz des Schieberegler-Bereichs an oder ruft diese ab.
+Das **foregroundProgress-Attribut** gibt die aktuelle Position der Vordergrund-Statusleiste als Prozentsatz des Schiebereglerbereichs an oder ruft sie ab.
 
 ``` syntax
         elementID.foregroundProgress
@@ -29,13 +29,13 @@ Das **foregroundprogress** -Attribut gibt die aktuelle Position der Statusanzeig
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibnummer (**float**) im Bereich von 0 bis 100. 
+Dieses Attribut ist eine  Lese-/Schreibnummer **(float)** im Bereich von 0 bis 100.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird hauptsächlich verwendet, um den Download Fortschritt einer Mediendatei zu verfolgen, während gleichzeitig die aktuelle Wiedergabe Position der Datei mithilfe des **value** -Attributs nachverfolgt wird. Die Position des Zieh Punkts für den Schieberegler ist auf den Bereich des Vordergrund Fortschritts beschränkt. Dadurch wird die interaktive Suche nur innerhalb des verfügbaren Teils einer Downloaddatei ermöglicht.
+Dieses Attribut wird hauptsächlich verwendet, um den Downloadfortschritt einer Mediendatei nachzuverfolgen  und gleichzeitig die aktuelle Wiedergabeposition der Datei mithilfe des Value-Attributs nachzuverfolgen. Die Position des Schiebereglers ist auf den Bereich des Vordergrundfortschritts beschränkt. Dies ermöglicht das interaktive Suchen nur innerhalb des verfügbaren Teils einer heruntergeladenen Datei.
 
-Um diese Funktion verwenden zu können, muss das **useforegroundprogress** -Attribut auf "true" festgelegt werden.
+Um diese Funktion verwenden zu können, muss das **useForegroundProgress-Attribut** auf TRUE festgelegt werden.
 
 ## <a name="examples"></a>Beispiele
 
@@ -64,7 +64,7 @@ Um diese Funktion verwenden zu können, muss das **useforegroundprogress** -Attr
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -72,19 +72,19 @@ Um diese Funktion verwenden zu können, muss das **useforegroundprogress** -Attr
 
 <dl> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> <dt>
 
-[**Schieberegler. min.**](slider-min.md)
+[**SLIDER.min**](slider-min.md)
 </dt> <dt>
 
-[**Schieberegler. Max**](slider-max.md)
+[**SLIDER.max**](slider-max.md)
 </dt> <dt>
 
-[**Schieberegler. useforegroundprogress**](slider-useforegroundprogress.md)
+[**SLIDER.useForegroundProgress**](slider-useforegroundprogress.md)
 </dt> <dt>
 
-[**Slider. Wert**](slider-value.md)
+[**SLIDER.value**](slider-value.md)
 </dt> </dl>
 
  

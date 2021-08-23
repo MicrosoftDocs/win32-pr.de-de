@@ -1,41 +1,41 @@
 ---
-description: Vorschläge für Anwendungs Sicherheitsbewertungen für die APP-Entwicklung von Windows-Sicherheitssoftware und sichere Softwareentwicklung, einschließlich Anwendungs Sicherheitstests.
+description: Vorschläge für Anwendungssicherheitsbewertungen für die App-Entwicklung von Windows Sicherheitssoftware und sichere Softwareentwicklung, einschließlich Anwendungssicherheitstests.
 ms.assetid: bb0ddae2-f559-4785-97c7-182fc204fa60
 title: Bewährte Methoden für die Sicherheits-APIs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fa821cfbaa9874d17559ad0e81f636fbaddd14f8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 934bf52d99456d599f91ec23c6e5472bb4e130565cf1acb56763f29f6396c0b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363365"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119622880"
 ---
 # <a name="best-practices-for-the-security-apis"></a>Bewährte Methoden für die Sicherheits-APIs
 
-Zur Unterstützung der Entwicklung sicherer Software empfiehlt es sich, beim Entwickeln von Anwendungen die folgenden bewährten Methoden zu verwenden. Weitere Informationen finden Sie im [Security Developer Center](https://msdn.microsoft.com/security/default.aspx).
+Um die Entwicklung sicherer Software zu unterstützen, wird empfohlen, bei der Entwicklung von Anwendungen die folgenden bewährten Methoden zu verwenden. Weitere Informationen finden Sie unter [Security Developer Center.](https://msdn.microsoft.com/security/default.aspx)
 
 ## <a name="security-development-life-cycle"></a>Lebenszyklus der Sicherheitsentwicklung
 
-Beim [Security Development](/previous-versions/ms995349(v=msdn.10)) Lifecycle (SDL) handelt es sich um einen Prozess, der eine Reihe von sicherheitsorientierten Aktivitäten und Lieferleistungen für jede Phase der Softwareentwicklung anpasst. Folgende Aktivitäten und Ergebnisse sind verfügbar:
+Der [Sicherheitsentwicklungslebenszyklus (Security Development Life Cycle,](/previous-versions/ms995349(v=msdn.10)) SDL) ist ein Prozess, der eine Reihe von sicherheitsorientierten Aktivitäten und Ergebnisse für jede Phase der Softwareentwicklung anpasst. Zu diesen Aktivitäten und Bereitstellungen gehören:
 
--   Entwickeln von Bedrohungs Modellen
--   Verwenden von Code Scan Tools
--   Durchführen von Code Überprüfungen und Sicherheitstests
+-   Entwickeln von Bedrohungsmodellen
+-   Verwenden von Codescantools
+-   Durchführen von Codeüberprüfungen und Sicherheitstests
 
-Weitere Informationen zu SDL finden Sie im SDL- [Blog](https://blogs.msdn.com/sdl/archive/2007/04/26/welcome-to-the-sdl-blog.aspx).
+Weitere Informationen zum SDL finden Sie im [SDL-Blog.](https://blogs.msdn.com/sdl/archive/2007/04/26/welcome-to-the-sdl-blog.aspx)
 
-## <a name="threat-models"></a>Bedrohungs Modelle
+## <a name="threat-models"></a>Bedrohungsmodelle
 
-Das Durchführen einer Bedrohungs Modellanalyse kann Ihnen helfen, potenzielle Angriffspunkte in Ihrem Code zu ermitteln. Weitere Informationen zur Bedrohungs Modellanalyse finden Sie unter Howard, Michael und LeBlanc, David \[ 2003 \] , Schreiben von *sicherem Code*, 2D Ed., ISBN 0-7356-1722-8, Microsoft Press, Redmond, Washington. (Diese Ressource ist möglicherweise nicht in einigen Sprachen und Ländern verfügbar.)
+Die Durchführung einer Bedrohungsmodellanalyse kann Ihnen helfen, potenzielle Angriffspunkte in Ihrem Code zu ermitteln. Weitere Informationen zur Analyse des Bedrohungsmodells finden Sie unter Msi, Michael und LeBlanc, David \[ 2003 \] , Writing Secure *Code*, 2d ed., ISBN 0-7356-1722-8, Microsoft Press, Redmond, Washington. (Diese Ressource ist in einigen Sprachen und Ländern möglicherweise nicht verfügbar.)
 
-## <a name="service-packs-and-security-updates"></a>Service Packs und Sicherheits Updates
+## <a name="service-packs-and-security-updates"></a>Service Packs und Sicherheitsupdates
 
-Build-und Testumgebungen sollten die gleichen Ebenen von Service Packs und Sicherheitsupdates der Ziel Benutzerbasis widerspiegeln. Es wird empfohlen, dass Sie die neuesten Service Packs und Sicherheitsupdates für alle Microsoft-Plattformen oder-Anwendungen installieren, die Teil ihrer Build-und Testumgebung sind, und die Benutzer dazu auffordern, die gleichen Schritte für die fertige Anwendungsumgebung durchzuführen. Weitere Informationen zu Service Packs und Sicherheitsupdates finden Sie unter [Microsoft Windows Update](https://www.update.microsoft.com/microsoftupdate/v6/vistadefault.aspx?ln=en-us) und [Microsoft-Sicherheit](https://www.microsoft.com/security).
+Build- und Testumgebungen sollten die gleichen Service Packs und Sicherheitsupdates der Zielbenutzerbasis widerspiegeln. Es wird empfohlen, die neuesten Service Packs und Sicherheitsupdates für jede Microsoft-Plattform oder -Anwendung zu installieren, die Teil Ihrer Build- und Testumgebung ist, und ihre Benutzer zu bitten, dies für die fertige Anwendungsumgebung zu tun. Weitere Informationen zu Service Packs und Sicherheitsupdates finden Sie unter [Microsoft Windows Update](https://www.update.microsoft.com/microsoftupdate/v6/vistadefault.aspx?ln=en-us) und Microsoft [Security](https://www.microsoft.com/security).
 
 ## <a name="authorization"></a>Autorisierung
 
-Sie sollten Anwendungen erstellen, die die geringstmöglichen Berechtigungen erfordern. Wenn Sie die geringstmöglichen Berechtigungen verwenden, verringern Sie das Risiko, dass bösartiger Code Ihr Computersystem beeinträchtigt. Weitere Informationen zum Ausführen von Code mit geringstmöglichen Berechtigungsstufen finden Sie unter [Ausführen mit speziellen Berechtigungen](running-with-special-privileges.md).
+Sie sollten Anwendungen erstellen, die die geringstmöglichen Berechtigungen erfordern. Durch die Verwendung der geringstmöglichen Rechte wird das Risiko verringert, dass Ihr Computersystem durch schädlichen Code kompromittieren wird. Weitere Informationen zum Ausführen von Code auf der geringstmöglichen Berechtigungsebene finden Sie unter [Ausführen mit speziellen Berechtigungen.](running-with-special-privileges.md)
 
 ## <a name="more-information"></a>Weitere Informationen
 
@@ -43,15 +43,15 @@ Weitere Informationen zu bewährten Methoden finden Sie in den folgenden Themen.
 
 
 
-| Thema                                                                                                                        | BESCHREIBUNG                                                                                                                                                                                |
+| Thema                                                                                                                        | Beschreibung                                                                                                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Ausführen mit besonderen Berechtigungen](running-with-special-privileges.md)<br/>                                            | Erläutert Sicherheitsauswirkungen von Berechtigungen.<br/>                                                                                                                                  |
-| [Vermeiden von Pufferüberläufen](avoiding-buffer-overruns.md)<br/>                                                          | Bietet Informationen zum Vermeiden von Pufferüberläufen.<br/>                                                                                                                            |
-| [Ablaufsteuerungsschutz (CFG, Control Flow Guard) ](control-flow-guard.md)<br/>                                                                | Erläutert Sicherheitsrisiken bei der Speicher Beschädigung.<br/>                                                                                                                                    |
-| [Erstellen einer DACL](creating-a-dacl.md)<br/>                                                                            | Zeigt, wie eine freigegebene Zugriffs Steuerungs Liste (DACL) mithilfe der [Sicherheits Deskriptor-Definitions Sprache](/windows/desktop/SecAuthZ/security-descriptor-definition-language) (SDDL) erstellt wird.<br/> |
-| [Behandeln von Kenn Wörtern](handling-passwords.md)<br/>                                                                      | Erläutert die Auswirkungen der Verwendung von Kenn Wörtern auf die Sicherheit.<br/>                                                                                                                             |
-| [Optimieren der MSDN Library-Suche](how-to-optimize-your-msdn-library-search.md)<br/>                          | Erläutert Optionen zum Durchsuchen von Sicherheits-SDK-Inhalten in der MSDN Library.<br/>                                                                                                           |
-| [Dynamische Access Control Developer-Erweiterbarkeit](/previous-versions/windows/desktop/dacx/dynamic-access-control-developer-extensibility-roadmap)<br/> | Grundlegende Ausrichtung auf einige Entwickler Erweiterbarkeits Punkte für die neuen dynamischen Access Control Lösungen.<br/>                                                                   |
+| [Ausführen mit speziellen Berechtigungen](running-with-special-privileges.md)<br/>                                            | Erläutert die Sicherheitsauswirkungen von Berechtigungen.<br/>                                                                                                                                  |
+| [Vermeiden von Pufferüberläufen](avoiding-buffer-overruns.md)<br/>                                                          | Stellt Informationen zum Vermeiden von Pufferüberläufen bereit.<br/>                                                                                                                            |
+| [Ablaufsteuerungsschutz (CFG, Control Flow Guard) ](control-flow-guard.md)<br/>                                                                | Erläutert Sicherheitsrisiken durch Speicherbeschädigung.<br/>                                                                                                                                    |
+| [Erstellen einer DACL](creating-a-dacl.md)<br/>                                                                            | Zeigt, wie sie eine DACL (Discretionary Access Control List) mithilfe der [Sicherheitsdeskriptordefinitionssprache (SECURITY Descriptor Definition Language,](/windows/desktop/SecAuthZ/security-descriptor-definition-language) SDDL) erstellen.<br/> |
+| [Behandeln von Kennwörtern](handling-passwords.md)<br/>                                                                      | Erläutert die Sicherheitsauswirkungen der Verwendung von Kennwörtern.<br/>                                                                                                                             |
+| [Optimieren der MSDN Library-Suche](how-to-optimize-your-msdn-library-search.md)<br/>                          | Erläutert Optionen zum Durchsuchen von Security SDK-Inhalten in der MSDN Library.<br/>                                                                                                           |
+| [Erweiterbarkeit dynamischer Access Control Entwickler](/previous-versions/windows/desktop/dacx/dynamic-access-control-developer-extensibility-roadmap)<br/> | Grundlegende Ausrichtung auf einige der Entwicklererweiterbarkeitspunkte für die neuen Dynamic Access Control-Lösungen.<br/>                                                                   |
 
 
 

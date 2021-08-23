@@ -1,54 +1,54 @@
 ---
-title: Entwickeln des Plug-Ins für einen Typ 2-Online Store
-description: Entwickeln des Plug-Ins für einen Typ 2-Online Store
+title: Erstellen des Plug-Ins für einen Typ 2 Online Store
+description: Erstellen des Plug-Ins für einen Typ 2 Online Store
 ms.assetid: a61ada7a-85ef-4ccf-bf1a-903561d41818
 keywords:
-- Windows Media Player Online Stores, Plug-ins
-- Online Stores, Plug-ins
-- Typ 2 Online Stores, Plug-ins
-- Windows Media Player Online Stores, Aufbau von Plug-ins
-- Online Stores, Aufbau von Plug-ins
-- Typ 2 Online Stores, Aufbau von Plug-ins
-- Plug-ins, Windows Media Player Online Stores
-- Plug-ins, Online Stores
-- Plug-ins, Typ 2 Online Stores
-- Plug-ins, Gebäude
-- Windows Media Player-Plug-ins, Typ 2 Online Stores
-- Windows Media Player-Plug-ins, Online Stores
-- Windows Media Player-Plug-ins, Windows Media Player Online Stores
-- Windows Media Player-Plug-ins, Gebäude
-- Entwickeln von Plug-ins, Typ 2 Online Stores
+- Windows Media Player Onlineshops, Plug-Ins
+- Onlineshops, Plug-Ins
+- Geben Sie 2 Onlineshops und Plug-Ins ein.
+- Windows Media Player Onlineshops, Erstellen von Plug-Ins
+- Onlineshops, Erstellen von Plug-Ins
+- Typ 2 Onlineshops, Erstellen von Plug-Ins
+- Plug-Ins, Windows Media Player Onlineshops
+- Plug-Ins, Onlineshops
+- Plug-Ins, Geben Sie 2 Onlineshops ein.
+- Plug-Ins, Erstellen
+- Windows Media Player Plug-Ins, geben Sie 2 Onlineshops ein.
+- Windows Media Player Plug-Ins, Onlineshops
+- Windows Media Player Plug-Ins, Windows Media Player Onlineshops
+- Windows Media Player-Plug-Ins, Erstellen
+- Erstellen von Plug-Ins, Geben Sie 2 Onlineshops ein.
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6911813fcdba56c9e1c5ee6fa9c072b4d610ef8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7f4462e6a29c694428a70cd4d3720f7df3036f371a641d9c183d5ef64824994c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206650"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119573347"
 ---
-# <a name="building-the-plug-in-for-a-type-2-online-store"></a>Entwickeln des Plug-Ins für einen Typ 2-Online Store
+# <a name="building-the-plug-in-for-a-type-2-online-store"></a>Erstellen des Plug-Ins für einen Typ 2 Online Store
 
-Sie können das Plug-in für den Typ 2 Online Store mit dem Online Store-Plug-in-Assistenten erstellen. Der Projekt-Assistent ist im Windows Media Player SDK enthalten, das Bestandteil des Windows SDK ist. Der Assistent ist ein Add-in für Microsoft Visual Studio, das ein C++-Projekt erstellt und Beispielcode generiert, den Sie als Ausgangspunkt für die Entwicklung eines eigenen Online Stores verwenden können.
+Sie können ein Onlineshop-Plug-In vom Typ 2 erstellen, indem Sie den Assistenten für Onlineshop-Plug-Ins verwenden. Der Projekt-Assistent ist im Windows Media Player SDK enthalten, das Teil des Windows SDK ist. Der Assistent ist ein Add-In für Microsoft Visual Studio, das ein C++-Projekt erstellt und Beispielcode generiert, den Sie als Ausgangspunkt für die Entwicklung Ihres eigenen Onlineshops verwenden können.
 
-In den folgenden Themen wird erläutert, wie der Plug-in-Assistent für Online-Store verwendet wird:
+In den folgenden Themen wird die Verwendung des Plug-In-Assistenten für Onlineshops erläutert:
 
--   [Installieren des Projekt-Assistenten](installing-the-project-wizard.md)
--   [Erstellen eines Beispielprojekts](creating-a-sample-project.md)
--   [Kompilieren des Beispielprojekts](compiling-the-sample-project.md)
--   [Ausführen des Beispielprojekts](running-the-sample-project.md)
--   [Anpassen des Beispielprojekts](customizing-the-sample-project.md)
+-   [Installieren des Project-Assistenten](installing-the-project-wizard.md)
+-   [Erstellen eines Project](creating-a-sample-project.md)
+-   [Kompilieren der Beispiel-Project](compiling-the-sample-project.md)
+-   [Ausführen des Beispiel-Project](running-the-sample-project.md)
+-   [Anpassen der Beispiel-Project](customizing-the-sample-project.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Programmier Handbuch für den Typ 2-Online Speicher**](programming-guide-for-type-2-online-stores.md)
+[**Programmierhandbuch für Onlineshops vom Typ 2**](programming-guide-for-type-2-online-stores.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

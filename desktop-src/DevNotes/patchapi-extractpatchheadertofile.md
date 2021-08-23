@@ -1,6 +1,6 @@
 ---
-description: Extrahiert die Header Informationen aus einem Delta.
-title: Extractpatchheaderabflea/W-Funktion
+description: Extrahiert die Headerinformationen aus einem Delta.
+title: ExtractPatchHeaderToFileA/W-Funktion
 ms.topic: reference
 ms.date: 04/17/2020
 ms.keywords: ExtractPatchHeaderToFileA, ExtractPatchHeaderToFileW
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - mspatchc.dll
-ms.openlocfilehash: 40835a0b88558046ff9086ffcd7ec4609d1ed863
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 626bd53e3361f4d29cc76e17ae2788ddea3bc8b99b580196bcbf77c27a6983d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357666"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119571800"
 ---
-# <a name="extractpatchheadertofileaw-function"></a>Extractpatchheaderabflea/W-Funktion
+# <a name="extractpatchheadertofileaw-function"></a>ExtractPatchHeaderToFileA/W-Funktion
 
-Die Funktionen **extractpatchheaderdefilea** und **extractpatchheaderdefilew** extrahieren die Header Informationen aus einem Delta. Das Delta wird als Dateipfad bereitgestellt. Der Ausgabe Header wird auch in einen bereitgestellten Pfad geschrieben.
+Die Funktionen **ExtractPatchHeaderToFileA** und **ExtractPatchHeaderToFileW** extrahieren die Headerinformationen aus einem Delta. Das Delta wird als Dateipfad bereitgestellt. Der Ausgabeheader wird auch in einen angegebenen Pfad geschrieben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,25 +42,25 @@ BOOL  PATCHAPI  ExtractPatchHeaderToFileW(
 
 ## <a name="parameters"></a>Parameter
 
-*Patchdateiname*
+*PatchFileName*
 
 Der Name des Deltas, das den Header enthält.
 
-*Patchheaderfilename*
+*PatchHeaderFileName*
 
-Der Name der Header Datei, die erstellt werden soll.
+Der Name der Headerdatei, die erstellt werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt **true** zurück, wenn Sie erfolgreich ist. Andernfalls wird **false** zurückgegeben.
+Diese Funktion gibt **TRUE** zurück, wenn sie erfolgreich ist. Andernfalls wird **FALSE** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |----------------|---------------------------------------------------------------------------------------|
-| Header | PatchAPI. h |
+| Header | patchapi.h |
 | DLL | mspatchc.dll |
-| Unicode | Implementiert als extractpatchheaderpatfilew (Unicode) und extractpatchheaderumfilea (ANSI) |
+| Unicode | Implementiert als ExtractPatchHeaderToFileW (Unicode) und ExtractPatchHeaderToFileA (ANSI) |
 
 ## <a name="see-also"></a>Siehe auch
 

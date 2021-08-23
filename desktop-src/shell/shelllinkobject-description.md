@@ -1,7 +1,7 @@
 ---
-description: Ruft die Beschreibung des links ab oder legt Sie fest.
+description: Ruft die Beschreibung des Links ab oder legt sie fest.
 ms.assetid: d3a95281-fb1f-4fd4-9d26-2a6e10a36a86
-title: Shelllinkobject. Description-Eigenschaft (Shldisp. h)
+title: ShellLinkObject.Description-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: aff08831bf194da5c7ce958e5a0746abdd533dc0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 23e1df9be00a098bbefe6a6925413a29f0e01655f9b794bb48ea14d8ac1cb91c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104979832"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119591930"
 ---
-# <a name="shelllinkobjectdescription-property"></a>Shelllinkobject. Description (Eigenschaft)
+# <a name="shelllinkobjectdescription-property"></a>ShellLinkObject.Description-Eigenschaft
 
-Ruft die Beschreibung des links ab oder legt Sie fest.
+Ruft die Beschreibung des Links ab oder legt sie fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -38,13 +38,13 @@ ShellLinkObject.Description(sDescription) = strDescription
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-die Beschreibung des Links.
+Die Beschreibung des Links.
 
 ## <a name="examples"></a>Beispiele
 
 Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Eigenschaft in JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -85,7 +85,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -167,17 +167,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

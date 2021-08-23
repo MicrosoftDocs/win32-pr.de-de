@@ -1,11 +1,11 @@
 ---
-title: Die Methode "kreateinzustancefrompropertydata" der MicrosoftDNS_MXType-Klasse
-description: Die Methode "kreatinstancefrompropertydata" instanziiert einen e-Mail-Austausch Ressourcen Eintrag (Mr).
+title: CreateInstanceFromPropertyData-Methode der MicrosoftDNS_MXType-Klasse
+description: Die CreateInstanceFromPropertyData-Methode instanziiert einen MR-Ressourceneintrag (Mail Exchanger).
 ms.assetid: 5724b14a-bb64-460c-ac49-28bac85b8620
 keywords:
-- Methode "samateinzustancefrompropertydata" (DNS)
-- Methode "-DNS", "MicrosoftDNS_MXType
-- DNS-MicrosoftDNS_MXType Klasse, Methode "Methode"
+- CreateInstanceFromPropertyData-Methode DNS
+- CreateInstanceFromPropertyData-Methode DNS , MicrosoftDNS_MXType-Klasse
+- MicrosoftDNS_MXType-Klasse DNS , CreateInstanceFromPropertyData-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8154e8ccdc6ac18824e2d56597ac8e0f186f3912
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ad85168813abb9a5c92e77275d854050ad35256963d75b7f52792776be9a6e74
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119573912"
 ---
-# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_mxtype-class"></a>Die Methode "kreateinstancefrompropertydata" der MicrosoftDNS- \_ mxtype-Klasse
+# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_mxtype-class"></a>CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ MXType-Klasse
 
-Die Methode " **kreatinstancefrompropertydata** " instanziiert einen e-Mail-Austausch Ressourcen Eintrag (Mr).
+Die **CreateInstanceFromPropertyData-Methode** instanziiert einen MR-Ressourceneintrag (Mail Exchanger).
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,31 +49,31 @@ void CreateInstanceFromPropertyData(
 
 <dl> <dt>
 
-*Dnsservername* \[ in\]
+*DnsServerName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name oder die IP-Adresse des DNS-Servers, der diesen RR enthält.
+FQDN oder IP-Adresse des DNS-Servers, der diese RR enthält.
 
 </dd> <dt>
 
-*Containername* \[ in\]
+*ContainerName* \[ In\]
 </dt> <dd>
 
-Der Name des Containers für die Zone, den Cache oder die roothints-Instanz, die diese RR enthält.
+Name des Containers für die Zone, den Cache oder die RootHints-Instanz, die diese RR enthält.
 
 </dd> <dt>
 
-Besitzer *Name* \[ in\]
+*OwnerName* \[ In\]
 </dt> <dd>
 
-Der Besitzer Name für die RR.
+Besitzername für die RR.
 
 </dd> <dt>
 
-*Recordclass* \[ in, optional\]
+*RecordClass* \[ in, optional\]
 </dt> <dd>
 
-Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
+Klasse der RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 
 
@@ -81,7 +81,7 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 |------------------------------------------------------------------------------------------------------|--------------------------|
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | IN (Internet)<br/> |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | CS (CSNET)<br/>    |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (Chaos)<br/>    |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (CHAOS)<br/>    |
 | <span id="4"></span><dl> <dt>**4**</dt> </dl> | HS (Hesiod)<br/>   |
 
 
@@ -90,31 +90,31 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 </dd> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*Gültigkeitsdauer* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, in der die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Bevorzugen* \[ in\]
+*Einstellung* \[ In\]
 </dt> <dd>
 
-Die Einstellung, die diesem RR unter anderem beim gleichen Besitzer zugewiesen wird. Niedrigere Werte werden bevorzugt.
+Diese RR wird unter anderem beim gleichen Besitzer bevorzugt. Niedrigere Werte werden bevorzugt.
 
 </dd> <dt>
 
-*Mailexchange* \[ in\]
+*MailExchange* \[ In\]
 </dt> <dd>
 
-FQDN, der einen Host angibt, der als e-Mail-Austausch für den Namen des Besitzers fungieren soll.
+FQDN, der einen Host angibt, der bereit ist, als E-Mail-Austausch für den Besitzernamen zu fungieren.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue-Objekt.
+Verweis auf das neue Objekt.
 
 </dd> </dl>
 
@@ -130,8 +130,8 @@ Diese Methode gibt keinen Wert zurück.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -139,13 +139,13 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ mxtype**](microsoftdns-mxtype.md)
+[**MicrosoftDNS \_ MXType**](microsoftdns-mxtype.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS- \_ mxtype-Klasse**](microsoftdns-mxtype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ MXType-Klasse**](microsoftdns-mxtype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

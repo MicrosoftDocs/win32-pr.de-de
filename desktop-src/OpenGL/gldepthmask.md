@@ -1,9 +1,9 @@
 ---
-title: gldepthmask-Funktion (GL. h)
-description: Die Funktion "gldepthmask" aktiviert oder deaktiviert das Schreiben in den tiefen Puffer.
+title: glDepthMask-Funktion (Gl.h)
+description: Die glDepthMask-Funktion aktiviert oder deaktiviert das Schreiben in den Tiefenpuffer.
 ms.assetid: 067b18e2-f21a-4dde-8fa6-dd975746e189
 keywords:
-- gldepthmask-Funktion OpenGL
+- glDepthMask-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5873d517770f1ce61f9a2eaad3ea7cce7b4fd7ba
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f0e774917d47cecdbb276b19dbc97a7c8c7620e04e0a044cf6932aa83167e325
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119625720"
 ---
-# <a name="gldepthmask-function"></a>gldepthmask-Funktion
+# <a name="gldepthmask-function"></a>glDepthMask-Funktion
 
-Die Funktion " **gldepthmask** " aktiviert oder deaktiviert das Schreiben in den tiefen Puffer.
+Die **glDepthMask-Funktion** aktiviert oder deaktiviert das Schreiben in den Tiefenpuffer.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void WINAPI glDepthMask(
 *flag* 
 </dt> <dd>
 
-Gibt an, ob der tiefen Puffer zum Schreiben aktiviert ist. Wenn *Flag* 0 (null) ist, ist das Schreiben von tiefen Puffern deaktiviert. Andernfalls ist es aktiviert. Zunächst ist der tiefen Puffer Schreibvorgang aktiviert.
+Gibt an, ob der Tiefenpuffer zum Schreiben aktiviert ist. Wenn *das Flag* 0 (null) ist, ist das Schreiben von Tiefenpuffern deaktiviert. Andernfalls ist sie aktiviert. Anfangs ist tiefenpufferbasiertes Schreiben aktiviert.
 
 </dd> </dl>
 
@@ -53,21 +53,21 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgende Funktion Ruft Informationen im Zusammenhang mit " **gldepthmask**" ab:
+Die folgende Funktion ruft Informationen im Zusammenhang mit **glDepthMask ab:**
 
-**glget** mit Argument GL- \_ tiefen \_ schreibfrage
+**glGet** mit Argument GL \_ DEPTH \_ WRITEMASK
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,8 +77,8 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit " **gldepthmask**" 
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -90,25 +90,25 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit " **gldepthmask**" 
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glcolormask**](glcolormask.md)
+[**glColorMask**](glcolormask.md)
 </dt> <dt>
 
-[**gldepthfunc**](gldepthfunc.md)
+[**glDepthFunc**](gldepthfunc.md)
 </dt> <dt>
 
-[**gldepthrange**](gldepthrange.md)
+[**glDepthRange**](gldepthrange.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glindexmask**](glindexmask.md)
+[**glIndexMask**](glindexmask.md)
 </dt> <dt>
 
-[**glstencilmask**](glstencilmask.md)
+[**glStencilMask**](glstencilmask.md)
 </dt> </dl>
 
  

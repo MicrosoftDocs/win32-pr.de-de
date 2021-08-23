@@ -1,27 +1,27 @@
 ---
-title: Informationen zu Windows Connect Now
-description: Windows Connect Now (WCN) bietet einen einfachen und sicheren Mechanismus zum Verbinden und Austauschen von Einstellungen für Netzwerk Zugriffspunkte und Geräte (z. b. Drucker, Kameras und PCs).
+title: Informationen Windows-Sofortverbindung
+description: Windows-Sofortverbindung (WCN) bietet einen einfachen und sicheren Mechanismus für Netzwerkzugriffspunkte und Geräte (z. B. Drucker, Kameras und PCs) zum Verbinden und Austauschen von Einstellungen.
 ms.assetid: 5c654800-e58b-4a94-b7a6-9a603f540603
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0118c6a053c480a36138f8dae850ee0862501944
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c46e0acbf2d2eb728b0b62610040aaa08e06d466c5bbd5ab47237c46a8612ddf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102186"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119593710"
 ---
-# <a name="about-windows-connect-now"></a>Informationen zu Windows Connect Now
+# <a name="about-windows-connect-now"></a>Informationen Windows-Sofortverbindung
 
-Windows Connect Now (WCN) bietet einen einfachen und sicheren Mechanismus zum Verbinden und Austauschen von Einstellungen für Netzwerk Zugriffspunkte und Geräte (z. b. Drucker, Kameras und PCs). Diese API ist die Microsoft-Implementierung des WPS-Protokolls (Wi-Fi Protected Setup), das von der Wi-Fi Alliance als Lösung für Heimnetzwerke und kleine Unternehmen erstellt wurde. Diese Technologie ist nicht für Unternehmens Szenarios vorgesehen.
+Windows-Sofortverbindung (WCN) bietet einen einfachen und sicheren Mechanismus für Netzwerkzugriffspunkte und Geräte (z. B. Drucker, Kameras und PCs) zum Verbinden und Austauschen von Einstellungen. Diese API ist die Microsoft-Implementierung des Protokolls Wi-Fi Protected Setup (WPS)/WSC (Wi-Fi Simple Configuration), das von der Wi-Fi Alliance als Lösung für Heimnetzwerke und kleine Unternehmen erstellt wurde. Diese Technologie ist nicht für Unternehmensszenarien vorgesehen.
 
 > [!Note]  
-> Der Spezifikations Name wurde zwischen Version 1.0 h und Version 2 geändert. Die Spezifikation der Version 1.0 wurde Wi-Fi geschütztes Setup (WPS) benannt. Ab Version 2 wird die Spezifikation Wi-Fi Simple Configuration (WSC) benannt. In unserer Dokumentation werden die Begriffe "WPS" und "WSC" austauschbar verwendet, sofern nichts anderes angegeben ist.
+> Der Spezifikationsname wurde zwischen Version 1.0h und Version 2 geändert. Die Version 1.0h-Spezifikation wurde Wi-Fi Protected Setup (WPS) benannt. Ab Version 2 heißt die Spezifikation Wi-Fi Simple Configuration (WSC). In unserer Dokumentation werden die Begriffe WPS und WSC austauschbar verwendet, sofern nicht anders angegeben.
 
- 
+ 
 
-Mit Windows Connect können Anwendungen nun mithilfe der [funktionermittlungs-API](/previous-versions/windows/desktop/fundisc/fd-portal)nach WCN-fähigen Geräten suchen. Der Bereich einer Suche kann zu einer bestimmten SSID, einem Status, einer Kategorie oder sogar erweitert werden, um alle WCN-fähigen Geräte einzubeziehen. Nachdem die Geräte gefunden wurden, ermöglicht die WCN-API die Kommunikation mit dem WCN-fähigen Gerät, um die Konfiguration oder Konnektivität zu vereinfachen.
+Windows-Sofortverbindung ermöglicht Es Anwendungen, mithilfe der [Funktionsermittlungs-API](/previous-versions/windows/desktop/fundisc/fd-portal)nach WCN-fähigen Geräten zu suchen. Der Bereich einer Suche kann auf eine bestimmte SSID, einen bestimmten Status, eine bestimmte Kategorie oder sogar auf alle WCN-fähigen Geräte beschränkt werden. Sobald die Geräte gefunden wurden, ermöglicht die WCN-API die Kommunikation mit dem WCN-fähigen Gerät, um die Konfiguration oder Konnektivität zu vereinfachen.
 
- 
+ 
 
- 
+ 

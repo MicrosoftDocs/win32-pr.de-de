@@ -1,9 +1,9 @@
 ---
-title: HDM_INSERTITEM Meldung (kommstrg. h)
-description: Fügt ein neues Element in ein Header Steuerelement ein. Sie können diese Nachricht explizit senden oder das-Header \_ InsertItem-Makro verwenden.
+title: HDM_INSERTITEM Meldung (Commctrl.h)
+description: Fügt ein neues Element in ein Headersteuerelement ein. Sie können diese Nachricht explizit senden oder das \_ Header InsertItem-Makro verwenden.
 ms.assetid: aececf32-090d-4cd4-a239-4435a322f72e
 keywords:
-- Windows-Steuerelemente für HDM_INSERTITEM Meldung
+- HDM_INSERTITEM Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c9cabf86fea79fd437b3e9fb7e32890b3ba1a780
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e30a07637afae1a3efcf71b3b556c32bebf96775bb2a5cbdf6e92513d33ec5c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119544740"
 ---
-# <a name="hdm_insertitem-message"></a>HDM- \_ InsertItem-Meldung
+# <a name="hdm_insertitem-message"></a>HDM \_ INSERTITEM-Nachricht
 
-Fügt ein neues Element in ein Header Steuerelement ein. Sie können diese Nachricht explizit senden oder das- [**Header \_ InsertItem**](/windows/desktop/api/Commctrl/nf-commctrl-header_insertitem) -Makro verwenden.
+Fügt ein neues Element in ein Headersteuerelement ein. Sie können diese Nachricht explizit senden oder das [**Header \_ InsertItem-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-header_insertitem) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,20 +34,20 @@ Fügt ein neues Element in ein Header Steuerelement ein. Sie können diese Nachr
 *wParam* 
 </dt> <dd>
 
-Der Index des Elements, nach dem das neue Element eingefügt werden soll. Das neue Element wird am Ende des Header Steuer Elements eingefügt, wenn *wParam* größer oder gleich der Anzahl der Elemente im Steuerelement ist. Wenn *wParam* gleich 0 (null) ist, wird das neue Element am Anfang des Header Steuer Elements eingefügt.
+Der Index des Elements, nach dem das neue Element eingefügt werden soll. Das neue Element wird am Ende des Headersteuerelements eingefügt, wenn *wParam* größer oder gleich der Anzahl der Elemente im Steuerelement ist. Wenn *wParam 0* (null) ist, wird das neue Element am Anfang des Headersteuerelements eingefügt.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**HDITEM**](/windows/win32/api/commctrl/ns-commctrl-hditema) -Struktur, die Informationen über das neue Element enthält.
+Ein Zeiger auf eine [**HDITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-hditema) die Informationen zum neuen Element enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Index des neuen Elements zurück, wenn erfolgreich, andernfalls-1.
+Gibt bei Erfolg den Index des neuen Elements zurück, andernfalls -1.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,10 +55,10 @@ Gibt den Index des neuen Elements zurück, wenn erfolgreich, andernfalls-1.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **HDM \_ Insertitemw** (Unicode) und **HDM \_ insertitema** (ANSI)<br/>             |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **HDM \_ INSERTITEMW** (Unicode) und **HDM \_ INSERTITEMA** (ANSI)<br/>             |
 
 
 

@@ -1,19 +1,19 @@
 ---
-description: Das optionale boolesche <isDefaultSaveLocation> Element gibt an, ob der im Suchconnector beschriebene Speicherort als Standard Speicherort verwendet werden soll. Dieses Element hat keine untergeordneten Elemente und keine Attribute.
+description: Das optionale boolesche Element gibt an, ob der im Suchconnector beschriebene Speicherort als <isDefaultSaveLocation> Standardspeicherort verwendet werden soll. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
 ms.assetid: 4a33f411-d71e-41d3-b5fd-018a92dceeac
-title: isdefaultsaveloation-Element (Suchconnector-Schema)
+title: isDefaultSaveLocation-Element (Connectorschema suchen)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75b664e4cd6f7c88f1dfbeb44ba23faee5d24a43
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e94cfe2f620dd7c4ccac2bed27dd87511e9174861aeb74dce9ac5737263e9275
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119597480"
 ---
-# <a name="isdefaultsavelocation-element-search-connector-schema"></a>isdefaultsaveloation-Element (Suchconnector-Schema)
+# <a name="isdefaultsavelocation-element-search-connector-schema"></a>isDefaultSaveLocation-Element (Connectorschema suchen)
 
-Das optionale boolesche <isDefaultSaveLocation> Element gibt an, ob der im Suchconnector beschriebene Speicherort als Standard Speicherort verwendet werden soll. Dieses Element hat keine untergeordneten Elemente und keine Attribute.
+Das optionale boolesche Element gibt an, ob der im Suchconnector beschriebene Speicherort als <isDefaultSaveLocation> Standardspeicherort verwendet werden soll. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,15 +39,15 @@ Das optionale boolesche <isDefaultSaveLocation> Element gibt an, ob der im Suchc
 
 | Übergeordnetes Element                                                                                                   | Untergeordnete Elemente |
 |------------------------------------------------------------------------------------------------------------------|----------------|
-| [searchconnectordescriptiontype-Element (suchconnectorschema)](search-schema-searchconnectordescription.md) |                |
+| [searchConnectorDescriptionType-Element (Search Connector Schema)](search-schema-searchconnectordescription.md) |                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Benutzer ein Element speichert, speichert Windows-Explorer das Element an der Position, die im- <simpleLocation> Element angegeben ist. Benutzer können diese Einstellung im Dialogfeld "Eigenschaften" für den Suchconnector ändern.
+Wenn ein Benutzer ein Element speichert, speichert Windows Explorer das Element an dem im -Element angegebenen <simpleLocation> Speicherort. Benutzer können diese Einstellung über das Dialogfeld Eigenschaften für den Suchconnector ändern.
 
 ## <a name="example"></a>Beispiel
 

@@ -1,25 +1,25 @@
 ---
-title: Netzwerk Listen-Manager-Architektur
-description: Netzwerk Listen-Manager-Architektur
+title: Architektur des Netzwerklisten-Managers
+description: Architektur des Netzwerklisten-Managers
 ms.assetid: d3d03891-7c61-4f7e-a2e2-ef13353e8688
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a567b103cfd5d9944aa33a799c2cc1bc4b983759
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 108ecbb36c5421bc7e3057c43feb10f92400493b306ecb21502a541c1bb4cba6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103948073"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119685645"
 ---
-# <a name="network-list-manager-architecture"></a>Netzwerk Listen-Manager-Architektur
+# <a name="network-list-manager-architecture"></a>Architektur des Netzwerklisten-Managers
 
-Der Netzwerk Listen-Manager wird im Zusammenhang mit Svchost.exe als Dienst ausgeführt und während der Computer Start Prozedur gestartet. Der Netzwerk Listen-Manager-Dienst verwaltet eine Tabelle mit verfügbaren Netzwerken und Netzwerk Attributen, die von Anwendungen über die Netzwerk Listen-Manager-API abgerufen werden. Der Netzwerk Listen-Manager stellt grundlegende Funktionen zum Filtern und Abfragen des Netzwerk Listen-Manager-Dienstanbieter für bestimmte Netzwerke und zum Abrufen der Attribute dieser Netzwerke bereit. Das folgende Diagramm zeigt die Architektur des Netzwerk Listen-Managers und die Interaktion zwischen dem Netzwerk Listen-Manager-Dienst und der Client Anwendung.
+Der Netzwerklisten-Manager wird als Dienst im Kontext des Svchost.exe ausgeführt und während des Computerstartvorgangs gestartet. Der Netzwerklisten-Manager-Dienst verwaltet eine Tabelle der verfügbaren Netzwerke und Netzwerkattribute, die von Anwendungen über die Network List Manager-API abgerufen werden. Der Netzwerklisten-Manager bietet grundlegende Funktionen zum Filtern und Abfragen des Netzwerklisten-Manager-Diensts nach bestimmten Netzwerken und zum Abrufen der Attribute dieser Netzwerke. Das folgende Diagramm zeigt die Architektur des Netzwerklisten-Managers und die Interaktion zwischen dem Netzwerklisten-Manager-Dienst und der Clientanwendung.
 
-![Diagramm zur Netzwerk Bewusstsein-Architektur](images/architecture.png)
+![Diagramm zur Netzwerkbewusstseinsarchitektur](images/architecture.png)
 
- 
+ 
 
- 
+ 
 
 
 

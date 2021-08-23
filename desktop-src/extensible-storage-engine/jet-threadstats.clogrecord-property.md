@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_THREADSTATS. clogrecord-Eigenschaft'
-title: JET_THREADSTATS. clogrecord-Eigenschaft (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen finden Sie unter: JET_THREADSTATS.cLogRecord-Eigenschaft'
+title: JET_THREADSTATS.cLogRecord-Eigenschaft (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'cLogRecord property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Vista.JET_THREADSTATS.cLogRecord
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_threadstats.clogrecord(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 17947c0ea74f00ae51101d3e10b2eb54c78abe7a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4c4e33e7055e2197a024cf71f21d153841c8ab945604e09810c368d9c3174105
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119667730"
 ---
-# <a name="jet_threadstatsclogrecord-property"></a>JET_THREADSTATS. clogrecord (Eigenschaft)
+# <a name="jet_threadstatsclogrecord-property"></a>JET_THREADSTATS.cLogRecord-Eigenschaft
 
-Ruft die Gesamtanzahl der Transaktionsprotokoll-Datensätze ab, die von der Datenbank-Engine im aktuellen Thread generiert wurden.
+Ruft die Gesamtzahl der Transaktionsprotokolldatensätze ab, die von der Datenbank-Engine im aktuellen Thread generiert wurden.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public int cLogRecord { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_THREADSTATS Struktur](./jet-threadstats-structure2.md)
+[JET_THREADSTATS-Struktur](./jet-threadstats-structure2.md)
 
-[Mitglieder JET_THREADSTATS](./jet-threadstats-members.md)
+[JET_THREADSTATS Mitglieder](./jet-threadstats-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

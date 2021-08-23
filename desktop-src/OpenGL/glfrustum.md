@@ -1,9 +1,9 @@
 ---
-title: glfrustum-Funktion (GL. h)
-description: Die glfrustum-Funktion multipliziert die aktuelle Matrix mit einer perspektivischen Matrix.
+title: glFrustum-Funktion (Gl.h)
+description: Die glFrustum-Funktion multipliziert die aktuelle Matrix mit einer Perspektivenmatrix.
 ms.assetid: aa44c3fc-3bf6-4ef3-bb29-98e3056cdad3
 keywords:
-- glfrustum-Funktion OpenGL
+- glFrustum-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ce67879ca20819713e61a9392bf77be2f15211d5
-ms.sourcegitcommit: 7ef31bf778e76ce4196205d4c4c632fbdc649805
+ms.openlocfilehash: da1ca2375206165576405c96528d0590596f4d4d870121f0a30884c8e448ca93
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "104566703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119625255"
 ---
-# <a name="glfrustum-function"></a>glfrustum-Funktion
+# <a name="glfrustum-function"></a>glFrustum-Funktion
 
-Die **glfrustum** -Funktion multipliziert die aktuelle Matrix mit einer perspektivischen Matrix.
+Die **glFrustum-Funktion** multipliziert die aktuelle Matrix mit einer Perspektivenmatrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ void WINAPI glFrustum(
 
 <dl> <dt>
 
-*linken* 
+*Links* 
 </dt> <dd>
 
 Die Koordinate für die linke vertikale Clippingebene.
@@ -55,35 +55,35 @@ Die Koordinate für die linke vertikale Clippingebene.
 *Richting* 
 </dt> <dd>
 
-Die Koordinate für die Rechte vertikale Clippingebene.
+Die Koordinate für die rechte vertikale Clippingebene.
 
 </dd> <dt>
 
-*unten* 
+*Unteres* 
 </dt> <dd>
 
-Die Koordinate für die untere horizontale Clippingebene.
+Die Koordinate für die untere horizontale Ausschneideebene.
 
 </dd> <dt>
 
 *top* 
 </dt> <dd>
 
-Die Koordinate für die untere horizontale Clippingebene.
+Die Koordinate für die untere horizontale Ausschneideebene.
 
 </dd> <dt>
 
-*znear* 
+*zNear* 
 </dt> <dd>
 
-Die Abstände zur fast tiefen Clippingebene. Muss positiv sein.
+Die Entfernungen zur Clippingebene mit nahezuer Tiefe. Muss positiv sein.
 
 </dd> <dt>
 
-*zfar* 
+*zFar* 
 </dt> <dd>
 
-Die Entfernungen zu den äußersten Ausschneide Flächen. Muss positiv sein.
+Die Entfernungen zu den Abschneideebenen mit weiter Tiefe. Muss positiv sein.
 
 </dd> </dl>
 
@@ -93,42 +93,42 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *znear* oder *zfar* war nicht Positionen.<br/>                                                                                       |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *zNear* oder *zFar* war nicht postitive.<br/>                                                                                       |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glfrustum** -Funktion beschreibt eine Perspektiven Matrix, die eine perspektivische Projektion erzeugt. Mit den Parametern (*left*, *Bottom*, *znear*) und (*right*, *Top*, *znear*) werden die Punkte auf der Near Clipping-Ebene angegeben, die der unteren linken und oberen rechten Ecke des Fensters zugeordnet sind, vorausgesetzt, das Auge befindet sich bei (0,0). Der *zfar* -Parameter gibt den Speicherort der weit entfernten Clippingebene an. *Znear* und *zfar* müssen positiv sein. Die entsprechende Matrix ist in der folgenden Abbildung dargestellt.
+Die **glFrustum-Funktion** beschreibt eine Perspektivenmatrix, die eine perspektivische Projektion erzeugt. Die Parameter (*left*, *bottom*, *zNear*) und (*right*, *top*, *zNear*) geben die Punkte auf der mittleren Clippingebene an, die den unteren linken bzw. oberen rechten Ecken des Fensters zugeordnet sind, vorausgesetzt, das Auge befindet sich bei (0,0,0). Der *zFar-Parameter* gibt die Position der fernen Clippingebene an. Sowohl *zNear* als *auch zFar* müssen positiv sein. Die entsprechende Matrix ist in der folgenden Abbildung dargestellt.
 
-![Diagramm mit der Perspektiven Matrix, die eine perspektivische Projektion erzeugt.](images/frust01.png)![Gleichungen, die die glfrustum-Funktion zeigen, die eine Perspektiven Matrix beschreibt.](images/frust02.png)
+![Diagramm der Perspektivmatrix, die eine Perspektivenprojektion erzeugt](images/frust01.png)![Gleichungen, die die glFrustum-Funktion zeigen, die eine Perspektivenmatrix beschreibt.](images/frust02.png)
 
-Die **glfrustum** -Funktion multipliziert die aktuelle Matrix mit dieser Matrix, wobei die aktuelle Matrix durch das Ergebnis ersetzt wird. Das heißt, wenn m die aktuelle Matrix und F die Frustum-perspektivische Matrix ist, ersetzt **glfrustum** m durch m F.
+Die **glFrustum-Funktion** multipliziert die aktuelle Matrix mit dieser Matrix, wobei das Ergebnis die aktuelle Matrix ersetzt. Das heißt, wenn M die aktuelle Matrix und F die Frustumperspektivenmatrix ist, ersetzt **glFrustum** M durch M F.
 
-Verwenden Sie [**glPushMatrix**](glpushmatrix.md) und [**glPopMatrix**](glpopmatrix.md) , um den aktuellen Matrix Stapel zu speichern und wiederherzustellen.
+Verwenden Sie [**glPushMatrix**](glpushmatrix.md) und [**glPopMatrix,**](glpopmatrix.md) um den aktuellen Matrixstapel zu speichern und wiederherzustellen.
 
-Die Genauigkeit des tiefen Puffers wird von den für *znear* und *zfar* angegebenen Werten beeinflusst. Je größer das Verhältnis von *zfar* zu *znear* ist, desto weniger effektiv ist der tiefen Puffer, um zwischen Oberflächen zu unterscheiden, die sich nahe beieinander befinden. Wenn
+Die Genauigkeit des Tiefenpuffers wird durch die für *zNear* und *zFar* angegebenen Werte beeinflusst. Je größer das Verhältnis von *zFar* zu *zNear* ist, desto weniger effektiv unterscheidet der Tiefenpuffer zwischen Oberflächen, die sich nahe beieinander befinden. If
 
-![Gleichung, die das Verhältnis von "weit zu nah" anzeigt.](images/frust03.png)
+![Gleichung, die das Verhältnis von "far" zu "near" zeigt.](images/frust03.png)
 
-ungefähr alle *Log* 2 (*r*)-Bits der tiefen Puffer Genauigkeit gehen verloren. Da *r* unendlich ist, wenn *znear* den Wert 0 (null) erreicht, sollten Sie *znear* nie auf NULL festlegen.
+Ungefähr *protokollieren* 2 (*r*) Bits der Genauigkeit des Tiefenpuffers gehen verloren. Da *sich r* unendlich nähert, wenn *zNear* 0 (null) nähert, sollten Sie *zNear* nie auf 0 (null) festlegen.
 
-Mit den folgenden Funktionen werden Informationen zu **glfrustum** abgerufen:
+Die folgenden Funktionen rufen Informationen zu **glFrustum** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem-Argument des GL- \_ Matrix \_ Modus
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ MATRIX \_ MODE
 
-**glget** mit dem Argument GL \_ Modelview \_ Matrix
+**glGet** mit argument GL \_ MODELVIEW \_ MATRIX
 
-**glget** mit dem Argument GL- \_ Projektions \_ Matrix
+**glGet** mit argument GL \_ PROJECTION \_ MATRIX
 
-**glget** mit Argument GL- \_ Textur \_ Matrix
+**glGet** mit argument GL \_ TEXTURE \_ MATRIX
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -138,13 +138,13 @@ Mit den folgenden Funktionen werden Informationen zu **glfrustum** abgerufen:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -154,16 +154,16 @@ Mit den folgenden Funktionen werden Informationen zu **glfrustum** abgerufen:
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
 [**glMatrixMode**](glmatrixmode.md)
 </dt> <dt>
 
-[**glmultmatrix**](glmultmatrix.md)
+[**glMultMatrix**](glmultmatrix.md)
 </dt> <dt>
 
-[**glortho**](glortho.md)
+[**glOrtho**](glortho.md)
 </dt> <dt>
 
 [**glPopMatrix**](glpopmatrix.md)

@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_PAL_PASTE Meldung (VFW. h)
-description: Die WM \_ \_ -Cap \_ -PAL-Einfüge Nachricht kopiert die Palette aus der Zwischenablage und übergibt sie an einen Aufzeichnungs Treiber. Sie können diese Nachricht explizit oder mithilfe des cappalettepaste-Makros senden.
+title: WM_CAP_PAL_PASTE (Vfw.h)
+description: Die WM \_ CAP \_ PAL \_ PASTE-Meldung kopiert die Palette aus der Zwischenablage und übergibt sie an einen Erfassungstreiber. Sie können diese Nachricht explizit oder mithilfe des Makros capPalettePaste senden.
 ms.assetid: d49c7fd9-be40-4a07-8339-b85f7c4c331e
 keywords:
-- WM_CAP_PAL_PASTE-Nachricht (Multimedia)
+- WM_CAP_PAL_PASTE-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3daf88c69edbb8bad6257456b95a86c8a68df328
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c7bedb760a444abe9b0667592855d701dc24a02b8ee57ea15ab30912a5e216d6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119686830"
 ---
-# <a name="wm_cap_pal_paste-message"></a>WM- \_ Obergrenze für \_ PAL- \_ Einfügen
+# <a name="wm_cap_pal_paste-message"></a>WM CAP PAL PASTE message (WM \_ CAP \_ \_ PAL-PASTE-Meldung)
 
-Die **WM- \_ Cap-PAL- \_ \_ Einfüge** Nachricht kopiert die Palette aus der Zwischenablage und übergibt sie an einen Aufzeichnungs Treiber. Sie können diese Nachricht explizit oder mithilfe des [**cappalettepaste**](/windows/desktop/api/Vfw/nf-vfw-cappalettepaste) -Makros senden.
+Die **WM CAP PAL \_ \_ \_ PASTE-Meldung** kopiert die Palette aus der Zwischenablage und übergibt sie an einen Erfassungstreiber. Sie können diese Nachricht explizit oder mithilfe des [**Makros capPalettePaste**](/windows/desktop/api/Vfw/nf-vfw-cappalettepaste) senden.
 
 
 ```C++
@@ -36,13 +36,13 @@ lParam = 0L;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, **andernfalls FALSE.**
 
-Wenn ein Fehler auftritt und eine Fehler Rückruffunktion mithilfe der WM- [**\_ Cap- \_ \_ Rückruf \_ Fehlermeldung**](wm-cap-set-callback-error.md) festgelegt wird, wird die Fehler Rückruffunktion aufgerufen.
+Wenn ein Fehler auftritt und eine Fehlerrückruffunktion mithilfe der [**MELDUNG WM CAP SET \_ \_ \_ CALLBACK \_ ERROR**](wm-cap-set-callback-error.md) festgelegt wird, wird die Fehlerrückruffunktion aufgerufen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Aufzeichnungs Treiber verwendet eine Palette, wenn dies für das angegebene digitalisierte Videoformat erforderlich ist.
+Ein Erfassungstreiber verwendet eine Palette, wenn dies für das angegebene formatierte Video erforderlich ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Ein Aufzeichnungs Treiber verwendet eine Palette, wenn dies für das angegebene 
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -60,10 +60,10 @@ Ein Aufzeichnungs Treiber verwendet eine Palette, wenn dies für das angegebene 
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Videoaufnahmenachrichten](video-capture-messages.md)
 </dt> </dl>
 
  

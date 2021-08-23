@@ -1,7 +1,7 @@
 ---
-description: Die keysvc \_ \_ -Unicode-Zeichen folgen Struktur definiert eine Unicode-Zeichenfolge und eine maximale Länge für die Zeichenfolge. Diese Struktur wird von der Funktion rkeypfxinstall verwendet.
+description: Die KEYSVC \_ UNICODE \_ STRING-Struktur definiert eine Unicode-Zeichenfolge und eine maximale Länge für die Zeichenfolge. Diese Struktur wird von der RKeyPFXInstall-Funktion verwendet.
 ms.assetid: 12142543-5c53-4638-9fd7-f523594142c8
-title: KEYSVC_UNICODE_STRING Struktur (rkeysvcc. h)
+title: KEYSVC_UNICODE_STRING-Struktur (Rkeysvcc.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Rkeysvcc.h
-ms.openlocfilehash: 5424fa103b2bbbadd735dbda0bb92f9dea21787b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ac1e82ab481b9844e8a21940112c6014a19f111cab53db2974c488dff0982027
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351583"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119622330"
 ---
-# <a name="keysvc_unicode_string-structure"></a>Keysvc- \_ Unicode- \_ Zeichen folgen Struktur
+# <a name="keysvc_unicode_string-structure"></a>KEYSVC \_ UNICODE \_ STRING-Struktur
 
-Die **keysvc- \_ Unicode- \_ Zeichen** folgen Struktur definiert eine [*Unicode*](../secgloss/u-gly.md) -Zeichenfolge und eine maximale Länge für die Zeichenfolge. Diese Struktur wird von der Funktion [**rkeypfxinstall**](rkeypfxinstall.md) verwendet.
+Die **KEYSVC \_ UNICODE \_ STRING-Struktur** definiert eine [*Unicode-Zeichenfolge*](../secgloss/u-gly.md) und eine maximale Länge für die Zeichenfolge. Diese Struktur wird von der [**RKeyPFXInstall-Funktion**](rkeypfxinstall.md) verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ typedef struct _KEYSVC_UNICODE_STRING {
 **Länge**
 </dt> <dd>
 
-Ein **UShort** -Wert, der die Länge in Bytes angibt, die für den **Puffer** verwendet wird.
+Ein **USHORT-Wert,** der die Länge in Bytes angibt, die für **Buffer** verwendet wird.
 
 </dd> <dt>
 
 **MaximumLength**
 </dt> <dd>
 
-Ein **UShort** -Wert, der die maximale Länge (in Byte) angibt, die für den **Puffer** zulässig ist.
+Ein **USHORT-Wert,** der die maximale Länge in Bytes angibt, die für **Buffer** zulässig ist.
 
 </dd> <dt>
 
 **Buffer**
 </dt> <dd>
 
-Ein Zeiger auf einen **UShort** , der die Unicode-Zeichenfolge darstellt.
+Ein Zeiger auf einen **USHORT,** der die Unicode-Zeichenfolge darstellt.
 
 </dd> </dl>
 
@@ -69,19 +69,19 @@ Ein Zeiger auf einen **UShort** , der die Unicode-Zeichenfolge darstellt.
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Rkeysvcc. h</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Rkeysvcc.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Rkeypfxinstall**](rkeypfxinstall.md)
+[**RKeyPFXInstall**](rkeypfxinstall.md)
 </dt> <dt>
 
-[**keysvc- \_ BLOB**](keysvc-blob.md)
+[**\_KEYSVC-BLOB**](keysvc-blob.md)
 </dt> </dl>
 
  

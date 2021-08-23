@@ -1,9 +1,9 @@
 ---
-title: Pausen Schaltfläche
-description: Dies ist eine vordefinierte Schaltfläche mit den folgenden Standardwerten. | Pausen Schaltfläche
+title: PAUSEBUTTON
+description: Dies ist eine vordefinierte SCHALTFLÄCHE mit den folgenden Standardwerten. | PAUSEBUTTON
 ms.assetid: 73536341-c31f-4c7b-b56f-6260459e7471
 keywords:
-- Media Player "pausbutton-Fenster"
+- PAUSEBUTTON Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6713c765a27ad7d341beab58266ae3bd383674bc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5e1173b178adfa6e9cf3b9f6e0d5af0ef6b52e6c39a88c5d9be1af9d8836a25b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119646890"
 ---
-# <a name="pausebutton"></a>Pausen Schaltfläche
+# <a name="pausebutton"></a>PAUSEBUTTON
 
-Dies ist eine vordefinierte **Schaltfläche** mit den folgenden Standardwerten.
+Dies ist eine vordefinierte **SCHALTFLÄCHE** mit den folgenden Standardwerten.
 
 ``` syntax
 onclick="jscript:player.controls.pause()" 
@@ -31,9 +31,9 @@ cursor="system"
 enabled="wmpenabled:player.controls.pause"
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Eigenschaften dieser **Schaltfläche** können überschrieben werden, indem Sie explizit angegeben werden.
+Alle Eigenschaften dieser **SCHALTFLÄCHE** können überschrieben werden, indem sie explizit angegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Alle Eigenschaften dieser **Schaltfläche** können überschrieben werden, indem
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -49,7 +49,7 @@ Alle Eigenschaften dieser **Schaltfläche** können überschrieben werden, indem
 
 <dl> <dt>
 
-[**Button-Element**](button-element.md)
+[**BUTTON-Element**](button-element.md)
 </dt> </dl>
 
  

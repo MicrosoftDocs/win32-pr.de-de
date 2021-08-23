@@ -1,7 +1,7 @@
 ---
-description: Löscht einen Unterschlüssel und seine Werte aus einer Offline Registrierungs Struktur.
+description: Löscht einen Unterschlüssel und seine Werte aus einer Offlineregistrierungsstruktur.
 ms.assetid: 651795d3-4328-4281-9a7f-ba75b4ec4da1
-title: Ordeletekey-Funktion (offreg. h)
+title: ORDeleteKey-Funktion (Offreg.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Offreg.dll
-ms.openlocfilehash: a122be2e738bb16730eee31772fc2c1c0671eddb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9f3be934eca97d88f4dfeb1b1576d9fcd06f5681351a2e85d8ae7f6ba31e8860
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119571930"
 ---
-# <a name="ordeletekey-function"></a>Ordeletekey-Funktion
+# <a name="ordeletekey-function"></a>ORDeleteKey-Funktion
 
-Löscht einen Unterschlüssel und seine Werte aus einer Offline Registrierungs Struktur.
+Löscht einen Unterschlüssel und seine Werte aus einer Offlineregistrierungsstruktur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,43 +40,43 @@ DWORD ORDeleteKey(
 
 <dl> <dt>
 
-*Handle* \[ in\]
+*Handle* \[ In\]
 </dt> <dd>
 
-Ein Handle für einen geöffneten Registrierungsschlüssel in einer Offline Registrierungs Struktur. Dieses Handle wird von der [**orkreatekey**](orcreatekey.md) -Funktion oder der [**oropenkey**](oropenkey.md) -Funktion zurückgegeben.
+Ein Handle für einen geöffneten Registrierungsschlüssel in einer Offlineregistrierungsstruktur. Dieses Handle wird von der [**ORCreateKey-**](orcreatekey.md) oder [**OROpenKey-Funktion**](oropenkey.md) zurückgegeben.
 
 </dd> <dt>
 
-*lpsubkey* \[ in, optional\]
+*lpSubKey* \[ in, optional\]
 </dt> <dd>
 
-Der Name des zu löschenden Schlüssels. Dabei muss es sich um einen Unterschlüssel des Schlüssels handeln, der von *behandelt* wird, es können jedoch keine Unterschlüssel vorhanden sein.
+Der Name des zu löschenden Schlüssels. Er muss ein Unterschlüssel des Schlüssels sein, der *von Handle* identifiziert wird, darf jedoch keine Unterschlüssel haben.
 
-Wenn der Unterschlüssel nicht vorhanden ist, gibt die Funktion einen Fehler zurück, der \_ nicht \_ gefunden wurde.
+Wenn der Unterschlüssel nicht vorhanden ist, gibt die Funktion ERROR \_ NOT \_ FOUND zurück.
 
-Wenn dieser Parameter **null** ist, löscht die Funktion den Schlüssel, der durch den *handle* -Parameter angegeben wird. Wenn der vom *handle* -Parameter angegebene Schlüssel der Stamm Schlüssel der Hive ist, gibt die Funktion einen \_ ungültigen \_ Parameter zurück.
+Wenn dieser Parameter **NULL ist,** löscht die Funktion den durch den *Handle-Parameter angegebenen* Schlüssel. Wenn der durch den *Handle-Parameter angegebene* Schlüssel der Stammschlüssel der Struktur ist, gibt die Funktion ERROR INVALID \_ PARAMETER \_ zurück.
 
-Bei Schlüsselnamen wird Groß-/Kleinschreibung nicht beachtet.
+Bei Schlüsselnamen wird die Schreibung nicht beachtet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR \_ SUCCESS.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in WinError. h definiert ist. Sie können die [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) -Funktion mit dem \_ Flag Format Message \_ from System verwenden \_ , um eine generische Beschreibung des Fehlers zu erhalten. Folgende Fehlercodes sind möglich:
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerfreier Code, der in Winerror.h definiert ist. Sie können die [FormatMessage-Funktion](/windows/win32/api/winbase/nf-winbase-formatmessage) mit dem Flag FORMAT MESSAGE FROM SYSTEM verwenden, \_ um eine generische Beschreibung des \_ \_ Fehlers zu erhalten. Mögliche Fehlercodes:
 
--   Wenn der angegebene Unterschlüssel nicht vorhanden ist, gibt die Funktion die Fehler \_ Datei \_ nicht gefunden zurück \_ .
--   Wenn der angegebene Unterschlüssel der Stamm Schlüssel der Registrierungs Struktur ist, gibt die Funktion einen \_ ungültigen \_ Parameter zurück.
--   Wenn der angegebene Unterschlüssel über Unterschlüssel verfügt, gibt die Funktion einen untergeordneten Schlüssel zurück \_ \_ \_ .
+-   Wenn der angegebene Unterschlüssel nicht vorhanden ist, gibt die Funktion ERROR \_ FILE \_ NOT FOUND \_ zurück.
+-   Wenn der angegebene Unterschlüssel der Stammschlüssel der Registrierungsstruktur ist, gibt die Funktion ERROR \_ INVALID \_ PARAMETER zurück.
+-   Wenn der angegebene Unterschlüssel Unterschlüssel hat, gibt die Funktion ERROR \_ KEY \_ HAS CHILDREN \_ zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn der angegebene Registrierungsschlüssel vorhanden ist, wird er als gelöscht markiert. Ein gelöschter Schlüssel wird erst entfernt, wenn das letzte Handle geschlossen wurde.
 
-Der zu löschende Schlüssel darf keine Unterschlüssel aufweisen. Um einen Schlüssel und alle zugehörigen Unterschlüssel zu löschen, verwenden Sie die Funktion " [**orenkey**](orenumkey.md) ", um die Unterschlüssel aufzulisten und Sie einzeln zu löschen.
+Der zu löschende Schlüssel darf keine Unterschlüssel haben. Um einen Schlüssel und alle seine Unterschlüssel zu löschen, verwenden Sie die [**OREnumKey-Funktion,**](orenumkey.md) um die Unterschlüssel zu aufzählen und einzeln zu löschen.
 
-Nur die [**orclosekey**](orclosekey.md) -Funktion kann für einen gelöschten Schlüssel aufgerufen werden. alle anderen offline Registrierungs Vorgänge können nicht ausgeführt werden. Wenn der gelöschte Schlüssel explizit durch Aufrufen von [**orcreatekey**](orcreatekey.md)erstellt wurde, werden die dem Schlüssel zugeordneten Ressourcen freigegeben, wenn das letzte Handle für den gelöschten Schlüssel geschlossen wird.
+Nur die [**ORCloseKey-Funktion**](orclosekey.md) kann für einen gelöschten Schlüssel aufgerufen werden. Alle anderen Offlineregistrierungsvorgänge sind nicht möglich. Wenn der gelöschte Schlüssel explizit durch Aufrufen von [**ORCreateKey**](orcreatekey.md)erstellt wurde, werden ressourcen, die dem Schlüssel zugeordnet sind, freigegeben, wenn das letzte Handle für den gelöschten Schlüssel geschlossen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,8 +84,8 @@ Nur die [**orclosekey**](orclosekey.md) -Funktion kann für einen gelöschten Sc
 
 | Anforderung | Wert |
 |----------------------------|---------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | Windows-offline Registrierungs Bibliothek, Version 1,0 oder höher<br/>                      |
-| Header<br/>          | <dl> <dt>Offreg. h</dt> </dl>   |
+| Verteilbare Komponente<br/> | Windows Offlineregistrierungsbibliothek, Version 1.0 oder höher<br/>                      |
+| Header<br/>          | <dl> <dt>Offreg.h</dt> </dl>   |
 | DLL<br/>             | <dl> <dt>Offreg.dll</dt> </dl> |
 
 
@@ -94,16 +94,16 @@ Nur die [**orclosekey**](orclosekey.md) -Funktion kann für einen gelöschten Sc
 
 <dl> <dt>
 
-[**Orclosekey**](orclosekey.md)
+[**ORCloseKey**](orclosekey.md)
 </dt> <dt>
 
-[**Orkreatekey**](orcreatekey.md)
+[**ORCreateKey**](orcreatekey.md)
 </dt> <dt>
 
-[**Orenkey**](orenumkey.md)
+[**OREnumKey**](orenumkey.md)
 </dt> <dt>
 
-[**Oropenkey**](oropenkey.md)
+[**OROpenKey**](oropenkey.md)
 </dt> </dl>
 
  

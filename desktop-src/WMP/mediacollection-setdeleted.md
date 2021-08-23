@@ -1,11 +1,11 @@
 ---
-title: Mediacollection. SetDeleted-Methode
-description: Die SetDeleted-Methode verschiebt das angegebene Medien Element in den Ordner "Gelöschte Elemente". | Mediacollection. SetDeleted-Methode
+title: MediaCollection.setDeleted-Methode
+description: Die setDeleted-Methode verschiebt das angegebene Medienelement in den Ordner für gelöschte Elemente. | MediaCollection.setDeleted-Methode
 ms.assetid: 3e3c9a16-37e1-41b4-8593-58aaf4541eb9
 keywords:
-- SetDeleted-Methoden Fenster Media Player
-- SetDeleted-Methode, Windows Media Player, mediacollection-Klasse
-- Mediacollection-Klasse, Windows Media Player, SetDeleted-Methode
+- setDeleted-Methode Windows Media Player
+- setDeleted-Methode Windows Media Player , MediaCollection-Klasse
+- MediaCollection-Klasse Windows Media Player , setDeleted-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f545953899883933286f3c38def62d9f254dfdc0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 63dcb4c0062acbd5f457cd09b9c1370ff9c4f7683fd8758a4a64ce5f510a6948
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119647840"
 ---
-# <a name="mediacollectionsetdeleted-method"></a>Mediacollection. SetDeleted-Methode
+# <a name="mediacollectionsetdeleted-method"></a>MediaCollection.setDeleted-Methode
 
-Die **SetDeleted** -Methode verschiebt das angegebene Medien Element in den Ordner "Gelöschte Elemente".
+Die **setDeleted-Methode** verschiebt das angegebene Medienelement in den Ordner für gelöschte Elemente.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,14 +43,14 @@ MediaCollection.setDeleted(
 
 <dl> <dt>
 
-*Element* \[ in\]
+*Element* \[ In\]
 </dt> <dd>
 
-Das **Medien** Objekt, das verschoben wird.
+**Medienobjekt,** das verschoben wird.
 
 </dd> <dt>
 
-*true* \[ in\]
+*TRUE* \[ In\]
 </dt> <dd>
 
 Geben Sie diesen Wert immer an.
@@ -61,17 +61,17 @@ Geben Sie diesen Wert immer an.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Methode werden Dateien nicht auf dem Computer des Benutzers entfernt.
+Diese Methode entfernt keine Dateien vom Computer des Benutzers.
 
-Um diese Methode verwenden zu können, ist der vollständige Zugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist vollzugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *mediacollection* verwendet. **SetDeleted** zum Verschieben eines bestimmten Medien Elements, das in der Variablen mit dem Namen "mediaobject" gespeichert ist, in den Ordner "Gelöschte Elemente". Die *mediacollection*. die **isDeleted** -Methode testet zunächst, ob das Element bereits gelöscht wurde. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird *MediaCollection* verwendet. **setDeleted,** um ein bestimmtes Medienelement, das in der Variablen mit dem Namen mediaObject gespeichert ist, in den Ordner für gelöschte Elemente zu verschieben. Die *MediaCollection*. **die isDeleted-Methode** testet zunächst, ob das Element bereits gelöscht wurde. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -100,7 +100,7 @@ else
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0, Windows Media Player Version 7,1 oder Windows Media Player für Windows XP. Diese Methode wird für Windows Media Player 9-Serie oder höher nicht unterstützt.<br/> |
+| Version<br/> | Windows Media Player Version 7.0, Windows Media Player Version 7.1 oder Windows Media Player für Windows XP. Diese Methode wird für Windows Media Player 9er Serie oder höher nicht unterstützt.<br/> |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl>                                                                                                              |
 
 
@@ -112,16 +112,16 @@ else
 [**Medienobjekt**](media-object.md)
 </dt> <dt>
 
-[**Mediacollection-Objekt**](mediacollection-object.md)
+[**MediaCollection-Objekt**](mediacollection-object.md)
 </dt> <dt>
 
-[**Mediacollection. IsDeleted**](mediacollection-isdeleted.md)
+[**MediaCollection.isDeleted**](mediacollection-isdeleted.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

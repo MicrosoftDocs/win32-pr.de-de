@@ -1,41 +1,41 @@
 ---
-title: Navigieren zwischen Dienstaufgaben Bereichen
-description: Navigieren zwischen Dienstaufgaben Bereichen
+title: Navigieren zwischen Dienstaufgabenbereichen
+description: Navigieren zwischen Dienstaufgabenbereichen
 ms.assetid: cb26a26d-a80d-4af5-9c5f-fab01129d83c
 keywords:
-- Windows Media Player Online Stores, navigieren
-- Online Stores, navigieren
-- Geben Sie 2 Online Stores ein, navigieren Sie zu
-- Windows Media Player Online Stores, Aufgabenbereiche für Dienste
-- Online Stores, Aufgabenbereiche für Dienste
-- Typ 2 Online Stores, Dienstaufgaben Bereiche
-- Windows Media Player Online Stores, Aufgabenbereiche
-- Online Stores, Aufgabenbereiche
-- Typ 2 Online Stores, Aufgabenbereiche
-- Navigieren zu Typ 2 Online Stores
-- Aufgabenbereiche für Windows Media Player, Dienste
+- Windows Media Player Onlineshops, Navigieren
+- Onlineshops, Navigieren
+- Geben Sie 2 Onlineshops ein, und navigieren Sie
+- Windows Media Player Onlineshops, Dienstaufgabenbereiche
+- Onlineshops, Dienstaufgabenbereiche
+- Geben Sie 2 Onlineshops, Dienstaufgabenbereiche ein.
+- Windows Media Player Onlineshops, Aufgabenbereiche
+- Onlineshops, Aufgabenbereiche
+- Geben Sie 2 Onlineshops und Aufgabenbereiche ein.
+- Navigieren in 2 Onlineshops
+- Windows Media Player, Dienstaufgabenbereiche
 - Windows Media Player, Aufgabenbereiche
-- Aufgabenbereiche für Dienste
+- Dienstaufgabenbereiche
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 86035215f822c67bb40c528f141422977efc8653
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9f54a82f2637fe11b0a2a7703cc241c47e799999a89b56ba8ba19c079b7393de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119647580"
 ---
-# <a name="navigating-between-service-task-panes"></a>Navigieren zwischen Dienstaufgaben Bereichen
+# <a name="navigating-between-service-task-panes"></a>Navigieren zwischen Dienstaufgabenbereichen
 
-Um zwischen Dienstaufgaben Bereichen in Windows Media Player zu navigieren, verwenden Sie die **navigatetaskpaneurl** -Methode, die über das **Window. extern** -Objekt verfügbar ist. Wenn Sie diese Methode verwenden, geben Sie Werte für drei Parameter an:
+Zum Navigieren zwischen Dienstaufgabenbereichen in Windows Media Player verwenden Sie die **NavigateTaskPaneURL-Methode,** die mit dem **window.external-Objekt** verfügbar ist. Wenn Sie diese Methode verwenden, geben Sie Werte für drei Parameter an:
 
--   *btrekeyname*. Dies ist der Schlüssel Name des Online Stores. Wenn Sie in einem Online Shop navigieren, verwenden Sie den Schlüsselnamen des aktuellen Stores.
--   *bstrautaskpane*. Diese Zeichenfolge enthält den Namen des Aufgabenbereichs Dienst, zu dem Sie navigieren möchten.
--   *bstrinbiams*. Diese Zeichenfolge enthält die Abfrage Zeichenfolgen-Parameter, die Sie an die URL für die Webseite anfügen möchten, die vom Aufgabenbereich Dienst gehostet wird, zu dem Sie navigieren möchten.
+-   *bstrKeyName*. Dies ist der Schlüsselname des Onlineshops. Verwenden Sie beim Navigieren innerhalb eines Onlineshops den Schlüsselnamen des aktuellen Speichers.
+-   *bstrTaskPane*. Diese Zeichenfolge enthält den Namen des Dienstaufgabenbereichs, zu dem Sie navigieren möchten.
+-   *bstrParams*. Diese Zeichenfolge enthält die Abfragezeichenfolgenparameter, die Sie an die URL für die Webseite anfügen möchten, die vom Aufgabenbereich des Diensts gehostet wird, zu dem Sie navigieren möchten.
 
-Die Navigation wird von einer von Ihnen erstellten Webseite verwaltet, die als Navigationsseite bezeichnet wird. Die URL für die Navigationsseite wird vom **Navigate** -Element im servicinput Info-Dokument angegeben. Wenn Sie **navigatetaskpaneurl** aufzurufen, öffnet Windows Media Player die Navigationsseite und nicht die Webseite, die von den Elementen **ServiceTask1**, **ServiceTask2** oder **ServiceTask3** angegeben wird. Dabei handelt es sich um die Navigationsseite, die die von *bstrinparameams* angegebene Abfrage Zeichenfolge empfängt. Die Navigationsseite sollte die Regeln enthalten, mit denen bestimmt wird, welcher Inhalt nach der Navigation in einem Dienstaufgaben Bereich angezeigt wird.
+Die Navigation wird von einer Webseite verwaltet, die Sie erstellen, die als Navigationsseite bezeichnet wird. Die URL für die Navigationsseite wird vom **Navigate-Element** im ServiceInfo-Dokument angegeben. Wenn Sie **NavigateTaskPaneURL** aufrufen, öffnet Windows Media Player die Navigationsseite, nicht die Webseite, die von den **Elementen ServiceTask1,** **ServiceTask2** oder **ServiceTask3** angegeben wird. Dies ist die Navigationsseite, die die durch *bstrParams* angegebene Abfragezeichenfolge empfängt. Die Navigationsseite sollte die Regeln enthalten, die bestimmen, welcher Inhalt nach der Navigation in einem Dienstaufgabenbereich angezeigt wird.
 
-Angenommen, Sie möchten, dass Benutzer auf einen Link klicken, um von **ServiceTask1** zu **ServiceTask2** zu navigieren. Zum Erstellen des Links können Sie den folgenden HTML-Code verwenden:
+Angenommen, Sie möchten, dass Benutzer auf einen Link klicken, um von **ServiceTask1** zu **ServiceTask2** zu navigieren. Sie können den folgenden HTML-Code verwenden, um den Link zu erstellen:
 
 
 ```C++
@@ -45,7 +45,7 @@ Angenommen, Sie möchten, dass Benutzer auf einen Link klicken, um von **Service
 
 
 
-Wenn der Benutzer auf den Videolink klickt, wechselt Windows Media Player zu **ServiceTask2** und öffnet die Navigationsseite, wobei die folgende Abfrage Zeichenfolge an die zugehörige URL angehängt wird.
+Wenn der Benutzer auf den Link Video klickt, wechselt Windows Media Player zu **ServiceTask2,** öffnet die Navigationsseite und fügt die folgende Abfragezeichenfolge an die URL an.
 
 
 ```C++
@@ -55,9 +55,9 @@ Wenn der Benutzer auf den Videolink klickt, wechselt Windows Media Player zu **S
 
 
 
-Der from-Parameter identifiziert die Seite, auf der der Benutzer auf den Link geklickt hat, und der to-Parameter gibt die Nummer des Dienstaufgaben Bereichs an, zu dem er navigieren möchte. (Beachten Sie, dass es keine besonderen Informationen zu diesen Parametern gibt. Sie können beliebige Parameter für beliebige Zwecke verwenden, die Sie auswählen möchten.)
+Der From-Parameter identifiziert die Seite, von der aus der Benutzer auf den Link geklickt hat, und der To-Parameter gibt die Nummer des Dienstaufgabenbereichs an, zu dem er navigieren möchte. (Beachten Sie, dass diese Parameter nichts Besonderes sind. Sie können beliebige Parameter für beliebige Zwecke verwenden.)
 
-Der folgende Beispielcode zeigt z. b. das **Navigate** -Element in einem serviceInfo-Dokument:
+Der folgende Beispielcode zeigt beispielsweise das **Navigate-Element** in einem ServiceInfo-Dokument:
 
 
 ```C++
@@ -67,7 +67,7 @@ Der folgende Beispielcode zeigt z. b. das **Navigate** -Element in einem service
 
 
 
-Die resultierende URL, die mit der Abfrage Zeichenfolge vervollständigt wird, wird im folgenden Beispiel gezeigt:
+Die resultierende URL, die mit der Abfragezeichenfolge vollständig ist, wird im folgenden Beispiel gezeigt:
 
 
 ```C++
@@ -106,7 +106,7 @@ Der folgende Beispielcode zeigt die Navigationsseite:
 
 
 
-Der vorangehende Code erstellt einfach eine URL und leitet den Browser an ihn weiter. Zuerst ruft der Code Werte aus der URL-Abfrage Zeichenfolge und der Abfrage Zeichenfolge selbst ab. Er verwendet den Wert des to-Parameters, um zu bestimmen, welche Seite angezeigt werden soll. Anschließend wird die ursprüngliche Abfrage Zeichenfolge an die URL angefügt. Zum Schluss navigiert der Browser mit einer URL, die der folgenden ähnelt:
+Der vorangehende Code erstellt einfach eine URL und leitet den Browser darauf um. Zunächst ruft der Code To-Werte aus der URL-Abfragezeichenfolge und der Abfragezeichenfolge selbst ab. Er verwendet den Wert des To-Parameters, um zu bestimmen, welche Seite angezeigt werden soll. Anschließend wird die ursprüngliche Abfragezeichenfolge an die URL angefügt. Schließlich navigiert er über eine URL, die der folgenden ähnelt:
 
 
 ```C++
@@ -116,11 +116,11 @@ https://www.proseware.com/service/html/Video.asp?locale=409&geoid=f4&version=10.
 
 
 
-Wenn Sie auf diese Weise eine Navigation ausführen, müssen Sie " [extern. selectedtaskpane](external-selectedtaskpane.md) " angeben, um sicherzustellen, dass die Schaltfläche für die korrekte Aufgabe hervorgehoben ist.
+Wenn Sie die Navigation auf diese Weise durchführen, müssen Sie [External.SelectedTaskPane](external-selectedtaskpane.md) angeben, um sicherzustellen, dass die richtige Aufgabenschaltfläche hervorgehoben ist.
 
--   **Warnung** Achten Sie darauf, wie Sie Abfrage Zeichen folgen Parameter für die Navigation verwenden.
+-   **Warnung** Achten Sie darauf, wie Sie Abfragezeichenfolgenparameter für die Navigation verwenden.
 
-HtmlView-Webseiten können von allen Benutzern bereitgestellt werden, die eine ASX-Wiedergabeliste erstellen. Dies bedeutet, dass böswillige Websites Abfrage Zeichenfolgen-Werte mithilfe von **navigatetaskpaneurl** an Ihren Online Store übergeben können. Sie müssen diese Möglichkeit planen, um den Online Store sicher zu halten. Wenn Ihr Online Store z. b. einfach einen Abfrage Zeichen folgen Wert für den Benutzer anzeigt, könnte eine böswillige Website einen unerwarteten Text anzeigen.
+HTMLView-Webseiten können von allen Personen bereitgestellt werden, die eine ASX-Wiedergabeliste erstellen. Dies bedeutet, dass schädliche Websites mit **NavigateTaskPaneURL** Abfragezeichenfolgenwerte an Ihren Onlineshop übergeben können. Sie müssen diese Möglichkeit einplanen, um den Schutz Ihres Onlineshops zu gewährleisten. Wenn Ihr Onlineshop dem Benutzer beispielsweise einfach einen Abfragezeichenfolgenwert anzeigt, kann eine schädliche Website unerwarteten Text anzeigen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -132,12 +132,12 @@ HtmlView-Webseiten können von allen Benutzern bereitgestellt werden, die eine A
 [**Navigate-Element**](navigate-element.md)
 </dt> <dt>
 
-[**Navigation für den Typ 2-Online Speicher**](navigation-for-type-2-online-stores.md)
+[**Navigation für Onlineshops vom Typ 2**](navigation-for-type-2-online-stores.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

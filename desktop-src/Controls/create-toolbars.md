@@ -1,38 +1,38 @@
 ---
 title: Erstellen von Symbolleisten
-description: Um eine Symbolleiste zu erstellen, verwenden Sie die Funktion "kreatewindowex", die die toolbarclassname-Fenster Klasse angibt.
+description: Verwenden Sie zum Erstellen einer Symbolleiste die CreateWindowEx-Funktion, und geben Sie die Fensterklasse TOOLBARCLASSNAME an.
 ms.assetid: 5D060291-6ACF-478C-97EC-CD8BD55D1FFF
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a69cd40338eaebc0d9de852519dce34dc9bc8aa4
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 24ea2751edf513aadf197199f92389a9fb4ad0e1ecd1048b945dd78802dc674b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103730416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119542035"
 ---
 # <a name="how-to-create-toolbars"></a>Erstellen von Symbolleisten
 
-Um eine Symbolleiste zu erstellen, verwenden Sie die Funktion " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) ", die die [**toolbarclassname**](common-control-window-classes.md) -Fenster Klasse angibt. Die resultierende Symbolleiste enthält anfänglich keine Schaltflächen. Fügen Sie der Symbolleiste mithilfe der " [**TB \_ AddButtons**](tb-addbuttons.md) "-oder " [**TB \_ InsertButton**](tb-insertbutton.md) "-Meldung Schaltflächen hinzu. Nachdem alle Elemente und Zeichen folgen in das-Steuerelement eingefügt wurden, müssen Sie die TB-Meldung [**\_ AutoSize**](tb-autosize.md) senden, damit die Größe der Symbolleiste auf der Grundlage des Inhalts neu berechnet wird.
+Verwenden Sie zum Erstellen einer Symbolleiste die [**CreateWindowEx-Funktion,**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) und geben Sie die [**Fensterklasse TOOLBARCLASSNAME**](common-control-window-classes.md) an. Die resultierende Symbolleiste enthält anfänglich keine Schaltflächen. Fügen Sie der Symbolleiste Schaltflächen hinzu, indem Sie die [**\_ TB-Nachricht ADDBUTTONS**](tb-addbuttons.md) oder [**TB \_ INSERTBUTTON**](tb-insertbutton.md) verwenden. Sie müssen die [**\_ TB-AUTOIZE-Nachricht**](tb-autosize.md) senden, nachdem alle Elemente und Zeichenfolgen in das Steuerelement eingefügt wurden, damit die Symbolleiste ihre Größe basierend auf dem Inhalt neu berechnet.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 ### <a name="create-a-toolbar"></a>Erstellen einer Symbolleiste
 
-Der folgende Beispielcode erstellt die Symbolleiste, die in der Abbildung gezeigt wird, unter Verwendung von Standardsystem Symbolen. Die Schaltfläche " **Speichern** " ist anfänglich deaktiviert.
+Im folgenden Beispielcode wird die in der Abbildung dargestellte Symbolleiste mithilfe von Standardsystemsymbolen erstellt. Die Schaltfläche **Speichern** ist anfänglich deaktiviert.
 
-![Screenshot mit einem Dialogfeld, in dem drei Symbolleisten Elemente horizontal angeordnet sind, von denen jedes ein Symbol und eine Text Bezeichnung aufweist](images/tb-codesample1.png)
+![Screenshot eines Dialogfelds mit drei horizontal angeordneten Symbolleistenelementen, von denen jedes über ein Symbol und eine Textbezeichnung verfügt](images/tb-codesample1.png)
 
 
 ```C++
@@ -94,7 +94,7 @@ HWND CreateSimpleToolbar(HWND hWndParent)
 
 
 
-Im folgenden Beispiel wird dieselbe Symbolleiste auf die gleiche Weise erstellt, aber in diesem Fall werden die Zeichen folgen aus einer Ressource gelesen.
+Im folgenden Beispiel wird die gleiche Symbolleiste auf die gleiche Weise erstellt. In diesem Fall werden die Zeichenfolgen jedoch aus einer Ressource gelesen.
 
 
 ```C++
@@ -170,12 +170,12 @@ HWND CreateToolbarFromResource(HWND hWndParent)
 
 <dl> <dt>
 
-[Verwenden von Symbolleisten](using-toolbar-controls.md)
+[Verwenden von Symbolleistensteuerelementen](using-toolbar-controls.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Demo Windows allgemeinen Steuerelementen (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

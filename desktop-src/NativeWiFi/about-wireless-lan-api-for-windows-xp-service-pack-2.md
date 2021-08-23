@@ -1,55 +1,55 @@
 ---
-description: Eine Teilmenge der nativen WiFi-API-Funktionen wird unter Windows XP mit Service Pack 2 (SP2) und Windows XP mit Service Pack 3 (SP3) unterstützt.
+description: Eine Teilmenge der Native Wifi-API-Funktionalität wird auf Windows XP mit Service Pack 2 (SP2) und Windows XP mit Service Pack 3 (SP3) unterstützt.
 ms.assetid: d32c4a03-59e8-4fdd-9d5a-e7ef0eb25e84
-title: Native WiFi-API-Unterstützung unter Windows XP
+title: Native Wifi-API-Unterstützung auf Windows XP
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4cd422c6589b37f516b9d45d072489c9d5e00b82
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4fc284ed24a6aa6ddb266b410a6233c15e063bf909aa9c82f0afa3dc070c9289
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119685310"
 ---
-# <a name="native-wifi-api-support-on-windows-xp"></a>Native WiFi-API-Unterstützung unter Windows XP
+# <a name="native-wifi-api-support-on-windows-xp"></a>Native Wifi-API-Unterstützung auf Windows XP
 
-Eine Teilmenge der nativen WiFi-API-Funktionen wird unter Windows XP mit Service Pack 2 (SP2) und Windows XP mit Service Pack 3 (SP3) unterstützt. Diese Funktionalität ist standardmäßig in Windows XP mit SP3 enthalten. In Windows XP mit SP2 kann diese Funktionalität hinzugefügt werden, indem ein Hotfix angewendet wird, der als drahtlose LAN-API für Windows XP mit Service Pack 2 (SP2) bezeichnet wird. Weitere Informationen oder das Herunterladen des Hotfixes finden Sie unter "Entwickler können keine drahtlosen Client Programme erstellen, die drahtlos Profile und Verbindungen über den drahtlos Konfigurations Dienst für drahtlose Daten in Microsoft Windows XP Service Pack 2 (SP2)" in der Hilfe-und Support-Wissensdatenbank unter Verwalten [https://support.microsoft.com/kb/918997](https://support.microsoft.com/kb/918997) .
+Eine Teilmenge der Native Wifi-API-Funktionalität wird auf Windows XP mit Service Pack 2 (SP2) und Windows XP mit Service Pack 3 (SP3) unterstützt. Diese Funktionalität ist standardmäßig in Windows XP mit SP3 enthalten. In Windows XP mit SP2 kann diese Funktionalität durch Anwenden eines Hotfixes hinzugefügt werden, der als Wlan-API für Windows XP mit Service Pack 2 (SP2) bezeichnet wird. Weitere Informationen oder zum Herunterladen des Hotfixes finden Sie unter "Entwickler können keine Drahtlosclientprogramme erstellen, die Drahtlosprofile und Verbindungen über den Wireless Zero Configuration-Dienst in Microsoft Windows XP Service Pack 2 (SP2)" im Hilfe- und Support-Knowledge Base unter [https://support.microsoft.com/kb/918997](https://support.microsoft.com/kb/918997) verwalten.
 
-Aufgrund der zugrunde liegenden architektonischen Unterschiede in Windows XP gelten für die native WiFi-API von einige Einschränkungen. Im folgenden finden Sie eine Liste der Einschränkungen:
+Aufgrund der zugrunde liegenden Architekturunterschiede in Windows XP weist die Native Wifi-API für einige Einschränkungen auf. Im Folgenden finden Sie eine Liste der Einschränkungen:
 
--   Höchstens eine SSID kann einem Profil zugeordnet werden.
--   Infrastruktur Netzwerke werden immer vor Ad-hoc-Netzwerken in der Profil Liste angezeigt.
+-   Einem Profil kann höchstens eine SSID zugeordnet werden.
+-   Infrastrukturnetzwerke werden immer vor Ad-hoc-Netzwerken in der Profilliste angezeigt.
 -   Profilnamen werden von der SSID abgeleitet und können vom Benutzer nicht auf eine beliebige Zeichenfolge festgelegt werden.
 -   PHY-Typen werden nicht unterstützt.
--   PMK-Zwischenspeicherung wird nicht unterstützt.
--   IHV-Erweiterbarkeits Funktionen (Independent Hardware Vendor) werden nicht unterstützt.
--   Profil Berechtigungen werden nicht unterstützt.
--   Es sind nur die WLAN \_ -Benachrichtigungs \_ -ACM \_ -Verbindung und die verbindungsverbindungen mit \_ WLAN- \_ Benachrichtigungs- \_ ACM \_ verfügbar.
--   Globale 802.1 x-und EAPOL-Konfigurationseinstellungen werden nicht unterstützt.
+-   Das Zwischenspeichern des paarweisen Hauptschlüssels (Pairwise Master Key, PMK) wird nicht unterstützt.
+-   Erweiterbarkeitsfunktionen unabhängiger Hardwarehersteller (Independent Hardware Vendor, IHV) werden nicht unterstützt.
+-   Profilberechtigungen werden nicht unterstützt.
+-   Nur die \_ WLAN-Benachrichtigung \_ \_ acm-Verbindung \_ ist abgeschlossen, und die WLAN-Benachrichtigung \_ \_ acm \_ disconnected notifications ist verfügbar.
+-   Globale 802.1X- und EAPOL-Konfigurationseinstellungen werden nicht unterstützt.
 
-Die folgenden Funktionen werden von Windows XP mit SP3 und der Wireless LAN-API für Windows XP mit SP2 unterstützt:
+Die folgenden Funktionen werden von Windows XP mit SP3 und der Wlan-API für Windows XP mit SP2 unterstützt:
 
--   [**WLAN- \_ Benachrichtigungs \_ Rückruf**](/windows/win32/api/wlanapi/nc-wlanapi-wlan_notification_callback)
--   [**Wlanbelegcatememory**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanallocatememory)
--   [**Wlanclosehandle**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanclosehandle)
--   [**Wlanconnect**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanconnect)
--   [**Wlandeleteprofile**](/windows/desktop/api/wlanapi/nf-wlanapi-wlandeleteprofile)
--   [**Wlandisconnect**](/windows/desktop/api/wlanapi/nf-wlanapi-wlandisconnect)
--   [**Wlanenuminterfaces**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanenuminterfaces)
--   [**Wlanfrememory**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanfreememory)
--   [**Wlangetavailablenetworklist**](/windows/desktop/api/wlanapi/nf-wlanapi-wlangetavailablenetworklist)
--   [**Wlangetprofile**](/windows/desktop/api/wlanapi/nf-wlanapi-wlangetprofile)
--   [**Wlangetprofilelist**](/windows/desktop/api/wlanapi/nf-wlanapi-wlangetprofilelist)
--   [**Wlanopenhandle**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanopenhandle)
--   [**Wlanqueryinterface**](/windows/desktop/api/Wlanapi/nf-wlanapi-wlanqueryinterface)
--   [**Wlanreasoncodedestring**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanreasoncodetostring)
--   [**Wlanregisternotification**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanregisternotification)
--   [**Wlanscan**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanscan)
--   [**Wlansetinterface**](/windows/desktop/api/Wlanapi/nf-wlanapi-wlansetinterface)
--   [**WLanSetProfile**](/windows/desktop/api/wlanapi/nf-wlanapi-wlansetprofile)
--   [**Wlansetprofileeapxmluserdata**](/windows/desktop/api/wlanapi/nf-wlanapi-wlansetprofileeapxmluserdata)
--   [**Wlansetprofilelist**](/windows/desktop/api/wlanapi/nf-wlanapi-wlansetprofilelist)
--   [**Wlansetprofileposition**](/windows/desktop/api/wlanapi/nf-wlanapi-wlansetprofileposition)
+-   [**\_ \_ WLAN-BENACHRICHTIGUNGSRÜCKRUF**](/windows/win32/api/wlanapi/nc-wlanapi-wlan_notification_callback)
+-   [**WLANAllocateMemory**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanallocatememory)
+-   [**WLANCloseHandle**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanclosehandle)
+-   [**WLANVerbindung**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanconnect)
+-   [**WlanDeleteProfile**](/windows/desktop/api/wlanapi/nf-wlanapi-wlandeleteprofile)
+-   [**WLANDisconnect**](/windows/desktop/api/wlanapi/nf-wlanapi-wlandisconnect)
+-   [**WlanEnumInterfaces**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanenuminterfaces)
+-   [**WlanFreeMemory**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanfreememory)
+-   [**WlanGetAvailableNetworkList**](/windows/desktop/api/wlanapi/nf-wlanapi-wlangetavailablenetworklist)
+-   [**WLANGetProfile**](/windows/desktop/api/wlanapi/nf-wlanapi-wlangetprofile)
+-   [**WlanGetProfileList**](/windows/desktop/api/wlanapi/nf-wlanapi-wlangetprofilelist)
+-   [**WlanOpenHandle**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanopenhandle)
+-   [**WlanQueryInterface**](/windows/desktop/api/Wlanapi/nf-wlanapi-wlanqueryinterface)
+-   [**WlanReasonCodeToString**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanreasoncodetostring)
+-   [**WLANRegisterNotification**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanregisternotification)
+-   [**WlanScan**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanscan)
+-   [**WlanSetInterface**](/windows/desktop/api/Wlanapi/nf-wlanapi-wlansetinterface)
+-   [**WlanSetProfile**](/windows/desktop/api/wlanapi/nf-wlanapi-wlansetprofile)
+-   [**WlanSetProfileEapXmlUserData**](/windows/desktop/api/wlanapi/nf-wlanapi-wlansetprofileeapxmluserdata)
+-   [**WlanSetProfileList**](/windows/desktop/api/wlanapi/nf-wlanapi-wlansetprofilelist)
+-   [**WlanSetProfilePosition**](/windows/desktop/api/wlanapi/nf-wlanapi-wlansetprofileposition)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -58,7 +58,7 @@ Die folgenden Funktionen werden von Windows XP mit SP3 und der Wireless LAN-API 
 [https://support.microsoft.com/kb/918997](https://support.microsoft.com/kb/918997)
 </dt> <dt>
 
-[Informationen zu nativem WiFi](about-native-wifi.md)
+[Informationen zu Native Wifi](about-native-wifi.md)
 </dt> </dl>
 
  

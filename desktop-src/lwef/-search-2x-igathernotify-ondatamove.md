@@ -1,11 +1,11 @@
 ---
-title: Igathernotify ondatamove (deprecated)-Methode
-description: Dieses Thema der Windows-Desktop Suchschnittstelle ist veraltet und wird durch die Windows Search-isearchpersistentitemschangedsink-API im Windows SDK abgelöst. | Igathernotify ondatamove (deprecated)-Methode
+title: IGatherNotify OnDataMove-Methode (veraltet)
+description: Dieses Windows-Benutzeroberflächenthema für die Desktopsuche ist veraltet und wird durch die Windows Search ISearchPersistentItemsChangedSink-API im Windows SDK ersetzt. | IGatherNotify OnDataMove-Methode (veraltet)
 ms.assetid: cc223d0f-6508-4e38-b365-c60660db5324
 keywords:
-- Ondatamove (veraltet) Methode ältere Windows-Umgebungs Features
-- Ondatamove (veraltet) Methode ältere Windows-Umgebungs Features, igathernotify-Schnittstelle
-- Igathernotify-Schnittstelle ältere Windows-Umgebungs Features, ondatamove (deprecated)-Methode
+- OnDataMove-Methode (veraltet) Legacy-Windows-Umgebungsfeatures
+- OnDataMove-Methode (veraltet) Legacy-Windows Umgebungsfeatures, IGatherNotify-Schnittstelle
+- IGatherNotify interface Legacy Windows Environment Features , OnDataMove (Veraltet)-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,20 +15,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9fe38cd11e9072981334e5b724445ea3393d4361
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 2f3d4f7d91bc9e9741f227812997a820ab4180ccf438d52ae8cfea93f67dc0bf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119665870"
 ---
-# <a name="igathernotifyondatamove-deprecated-method"></a>Igathernotify:: ondatamove (deprecated)-Methode
+# <a name="igathernotifyondatamove-deprecated-method"></a>IGatherNotify::OnDataMove -Methode (veraltet)
 
-\[**Ondatamove** kann in nachfolgenden Versionen des Betriebssystems oder Produkts geändert oder nicht verfügbar sein.\]
+\[**OnDataMove** kann in nachfolgenden Versionen des Betriebssystems oder Produkts geändert oder nicht verfügbar sein.\]
 
-Dieses Thema der Windows-Desktop Suchschnittstelle ist veraltet und wird durch die Windows Search- [**isearchpersistentitemschangedsink**](/windows/desktop/api/searchapi/nn-searchapi-isearchpersistentitemschangedsink) -API im Windows SDK abgelöst.
+Dieses Windows-Benutzeroberflächenthema für die Desktopsuche ist veraltet und wird durch die Windows Search [**ISearchPersistentItemsChangedSink-API**](/windows/desktop/api/searchapi/nn-searchapi-isearchpersistentitemschangedsink) im Windows SDK ersetzt.
 
-Diese Methode benachrichtigt den Indexer von Daten, die verschoben wurden. Wenn die Benachrichtigung an den Indexer gesendet wird, enthält Sie die alte Adresse, die neue Adresse und die logische Adresse.
+Diese Methode benachrichtigt den Indexer über daten, die verschoben wurden. Wenn die Benachrichtigung an den Indexer gesendet wird, enthält sie die alte Adresse, die neue Adresse und die logische Adresse.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,25 +48,25 @@ void OnDataMove (Deprecated)(
 
 <dl> <dt>
 
-*echangeadvisesemantics* \[ in\]
+*eChangeAdviseSemantics* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **long**
 
-Ein Enumerationsparameter, der den Typ der aufgetretenen Verschiebung beschreibt.
+Ein aufzählter Parameter, der den Typ der aufgetretenen Bewegung beschreibt.
 
 </dd> <dt>
 
-*bstroldaddress* \[ in\]
+*bstrOldAddress* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
 
-Die alte Adresse des Elements, das verschoben wurde. Für normale Dateien ist *echangeadvisesematics* **null**. Legen Sie für einen Ordner oder ein Verzeichnis *echangeadvisesematics* auf das Verzeichnis der gthr-Zertifizierungsstellen \_ \_ Semantik fest \_ .
+Die alte Adresse des Elements, das verschoben wurde. Für normale Dateien ist *eChangeAdviseSematics* **NULL.** Legen Sie für einen Ordner oder ein Verzeichnis *eChangeAdviseSematics auf* GTHR \_ CA \_ SEMANTICS DIRECTORY \_ fest.
 
 </dd> <dt>
 
-*bstrinnewaddress* \[ in\]
+*bstrNewAddress* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -75,7 +75,7 @@ Die neue Adresse des Elements, das verschoben wurde.
 
 </dd> <dt>
 
-*bstraulogicaladdress* \[ in\]
+*bstrLogicalAddress* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**

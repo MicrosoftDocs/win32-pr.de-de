@@ -1,46 +1,46 @@
 ---
-title: Behandeln von Dropdown-Schaltflächen
-description: Eine Dropdown-Schaltfläche kann Benutzern eine Liste von Optionen zur Verfügung stellen.
+title: Behandeln von Dropdownschaltflächen
+description: Eine Dropdownschaltfläche kann Benutzern eine Liste von Optionen anzeigen.
 ms.assetid: 2D908D4B-AA8B-4DEF-B656-C37B673ABB4D
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 35d6f59bfa888d346e196e13ce030d1473a07f0f
-ms.sourcegitcommit: f0ca63c18dc52c357d3398af7be766d2bdd40be7
+ms.openlocfilehash: b74443b0d29b3ab39255d7417fd13677769f6a762ebe176e8301a76029db0c37
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "103724273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119544949"
 ---
-# <a name="how-to-handle-drop-down-buttons"></a>Behandeln von Dropdown-Schaltflächen
+# <a name="how-to-handle-drop-down-buttons"></a>Behandeln von Dropdownschaltflächen
 
-Eine Dropdown-Schaltfläche kann Benutzern eine Liste von Optionen zur Verfügung stellen. Um diese Art von Schaltfläche zu erstellen, geben Sie den [**btns- \_ Dropdown**](toolbar-control-and-button-styles.md) Stil (auch als [**tbstyle- \_ Dropdown**](toolbar-control-and-button-styles.md) bezeichnet) für die Kompatibilität mit früheren Versionen der allgemeinen Steuerelemente an. Um eine Dropdown-Schaltfläche mit einem Pfeil anzuzeigen, müssen Sie auch den Symbolleisten Stil [**tbstyle \_ Ex \_ drawddarrows**](toolbar-extended-styles.md) festlegen, indem Sie eine [**TB- \_ SetExtendedStyle**](tb-setextendedstyle.md) -Nachricht senden.
+Eine Dropdownschaltfläche kann Benutzern eine Liste von Optionen anzeigen. Um diesen Stil der Schaltfläche zu erstellen, geben Sie den [**BTNS-DROPDOWN-Stil \_**](toolbar-control-and-button-styles.md) an (aus Kompatibilitäts- und Kompatibilitäts- mit früheren Versionen der allgemeinen Steuerelemente auch [**ALS \_ TBSTYLE-DROPDOWN**](toolbar-control-and-button-styles.md) bezeichnet). Um eine Dropdownschaltfläche mit einem Pfeil anzuzeigen, müssen Sie auch den [**TBSTYLE \_ EX \_ DRAWDDARROWS-Symbolleistenstil**](toolbar-extended-styles.md) festlegen, indem Sie eine [**TB \_ SETEXTENDEDSTYLE-Meldung**](tb-setextendedstyle.md) senden.
 
-Die folgende Abbildung zeigt eine Dropdown-Schaltfläche "Öffnen", bei der das Kontextmenü geöffnet ist und eine Liste von Dateien anzeigt. In diesem Beispiel hat die Symbolleiste den Stil [**tbstyle \_ Ex \_ drawddarrows**](toolbar-extended-styles.md) .
+Die folgende Abbildung zeigt eine Dropdownschaltfläche "Öffnen", in der das Kontextmenü geöffnet ist und eine Liste von Dateien angezeigt wird. In diesem Beispiel hat die Symbolleiste den [**TBSTYLE \_ EX \_ DRAWDDARROWS-Stil.**](toolbar-extended-styles.md)
 
-![Screenshot eines Dialog Felds mit drei Symbolleisten Elementen, die durch Symbole dargestellt werden. eine verfügt über einen erweiterten Dropdown Pfeil und ein Kontextmenü mit drei Elementen.](images/tb-dropdown.png)
+![Screenshot eines Dialogfelds mit drei Symbolleistenelementen, die durch Symbole dargestellt werden; eine verfügt über einen erweiterten Dropdownpfeil und ein Kontextmenü mit drei Elemente.](images/tb-dropdown.png)
 
-In der folgenden Abbildung wird die gleiche Symbolleiste angezeigt, diesmal ohne den Stil " [**tbstyle \_ Ex \_ drawddarrows**](toolbar-extended-styles.md) ".
+Die folgende Abbildung zeigt dieselbe Symbolleiste, dieses Mal ohne [**den TBSTYLE \_ EX \_ DRAWDDARROWS-Stil.**](toolbar-extended-styles.md)
 
-![Screenshot eines vorherigen Dialog Felds, aber das Symbol mit dem Kontextmenü enthält keinen Dropdown Pfeil.](images/tb-dropdown2.png)
+![Screenshot eines vorherigen Dialogfelds, aber das Symbol mit dem Kontextmenü hat keinen Dropdownpfeil](images/tb-dropdown2.png)
 
-Wenn Benutzer auf eine Symbolleisten Schaltfläche klicken, die den [**btns- \_ Dropdown**](toolbar-control-and-button-styles.md) Stil verwendet, sendet das Symbolleisten-Steuerelement das übergeordnete Fenster mit dem [ \_ Dropdown](tbn-dropdown.md) -Benachrichtigungs Code
+Wenn Benutzer auf eine Symbolleistenschaltfläche klicken, die das [**DROPDOWN-Format von BTNS \_**](toolbar-control-and-button-styles.md) verwendet, sendet das Symbolleisten-Steuerelement dem übergeordneten Fenster einen [TBN-DROPDOWN-Benachrichtigungscode. \_](tbn-dropdown.md)
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="handle-a-drop-down-button"></a>Behandeln einer Dropdown Schaltfläche
+### <a name="handle-a-drop-down-button"></a>Behandeln einer Dropdownschaltfläche
 
-Im folgenden Codebeispiel wird veranschaulicht, wie eine Anwendung eine Dropdown-Schaltfläche in einem Symbolleisten-Steuerelement unterstützen kann.
+Im folgenden Codebeispiel wird veranschaulicht, wie eine Anwendung eine Dropdownschaltfläche in einem Symbolleisten-Steuerelement unterstützen kann.
 
 
 ```C++
@@ -101,15 +101,15 @@ BOOL DoNotify(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 <dl> <dt>
 
-[Verwenden von Symbolleisten](using-toolbar-controls.md)
+[Verwenden von Symbolleisten-Steuerelementen](using-toolbar-controls.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Windows demo (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

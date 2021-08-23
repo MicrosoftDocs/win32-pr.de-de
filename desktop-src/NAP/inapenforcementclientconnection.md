@@ -1,10 +1,10 @@
 ---
-title: Inapenforcementclientconnection-Schnittstelle (napforcementclient. h)
-description: Ermöglicht die clientverbindungsverwaltung. | Inapenforcementclientconnection-Schnittstelle (napforcementclient. h)
+title: INapEnforcementClientConnection-Schnittstelle (NapEnforcementClient.h)
+description: Lassen Sie die Clientverbindungsverwaltung zu. | INapEnforcementClientConnection-Schnittstelle (NapEnforcementClient.h)
 ms.assetid: 96b94995-24b8-47ed-880e-6182d1bfe925
 keywords:
-- Inapenforcementclientconnection-Schnittstelle NAP
-- Inapenforcementclientconnection-Schnittstelle NAP, beschrieben
+- INapEnforcementClientConnection-Schnittstelle NAP
+- INapEnforcementClientConnection-Schnittstelle NAP , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,21 +15,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c5f132da021e7970ec2f15a872091c101cd5c42
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 9ba017ca0948c5769466be9ad43ef68dc5ff60e75ecea430c96a1e8b0c36ab1d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219184"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119686250"
 ---
-# <a name="inapenforcementclientconnection-interface"></a>Inapenforcementclientconnection-Schnittstelle
+# <a name="inapenforcementclientconnection-interface"></a>INapEnforcementClientConnection-Schnittstelle
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **inapenforcementclientconnection** stellt Methoden bereit, die die Client Verbindungs Verwaltung ermöglichen.
+**INapEnforcementClientConnection bietet** Methoden, die die Clientverbindungsverwaltung ermöglichen.
 
 > [!Note]  
 > [**INapEnforcementClientConnection2**](inapenforcementclientconnection2.md) erbt alle Methoden dieser Schnittstelle und sollte stattdessen verwendet werden.
@@ -38,38 +38,38 @@ Die **inapenforcementclientconnection** stellt Methoden bereit, die die Client V
 
 ## <a name="members"></a>Member
 
-Die **inapenforcementclientconnection** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Inapenforcementclientconnection** verfügt auch über die folgenden Typen von Membern:
+Die **INapEnforcementClientConnection-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **INapEnforcementClientConnection** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **inapenforcementclientconnection** -Schnittstelle verfügt über diese Methoden.
+Die **INapEnforcementClientConnection-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                                           | BESCHREIBUNG                                                                                                                               |
+| Methode                                                                                                                           | Beschreibung                                                                                                                               |
 |:---------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Inapenforcementclientconnection:: GetConnectionID**](inapenforcementclientconnection-getconnectionid-method.md)               | Ruft die Verbindungs-ID des Clients ab.<br/>                                                                                          |
-| [**Inapenforcementclientconnection:: getcorrelationid**](inapenforcementclientconnection-getcorrelationid-method.md)             | Ruft die ID ab, die verwendet wird, um SoH-Anforderungen und SoH-Antworten zu korrelieren.<br/>                                                                  |
-| [**Inapenforcementclientconnection:: getenforcerprivatedata**](inapenforcementclientconnection-getenforcerprivatedata-method.md) | Wird vom-Enforcer verwendet, um private Daten zu erhalten.<br/>                                                                                      |
-| [**Inapenforcementclientconnection:: GetFlags**](inapenforcementclientconnection-getflags-method.md)                             | Ruft den Wert des Flags ab, das erstmalige Antworten von Antworten aufgrund von sohrequests unterscheidet, die von den-enforcern zwischengespeichert wurden.<br/> |
-| [**Inapenforcementclientconnection:: getisolationinfo**](inapenforcementclientconnection-getisolationinfo-method.md)             | Wird verwendet, um die Isolations Informationen des Clients zu erhalten.<br/>                                                                              |
-| [**Inapenforcementclientconnection:: getmaxsize**](inapenforcementclientconnection-getmaxsize-method.md)                         | Ruft die maximale Größe des SoH-Pakets für diesen Client ab.<br/>                                                                       |
-| [**Inapenforcementclientconnection:: getprivatedata**](inapenforcementclientconnection-getprivatedata-method.md)                 | Wird vom NAPAgent verwendet, um private Daten zu erhalten.<br/>                                                                                      |
-| [**Inapenforcementclientconnection:: getsohrequest**](inapenforcementclientconnection-getsohrequest-method.md)                   | Ruft die SoH-Anforderung ab.<br/>                                                                                                          |
-| [**Inapenforcementclientconnection:: getsohresponse**](inapenforcementclientconnection-getsohresponse-method.md)                 | Ruft den SoH-Response ab, der vom Erzwingungs Client empfangen wurde.<br/>                                                                      |
-| [**Inapenforcementclientconnection:: getstringcorrelationid**](inapenforcementclientconnection-getstringcorrelationid-method.md) | Ruft die Zeichen folgen Version von CorrelationId ab. Wird hauptsächlich für Protokollierungs Zwecke verwendet.<br/>                                             |
-| [**Inapenforcementclientconnection:: Initialize**](inapenforcementclientconnection-initialize-method.md)                         | Initialisiert die Verbindung<br/>                                                                                                    |
-| [**Inapenforcementclientconnection:: setconnectionid**](inapenforcementclientconnection-setconnectionid-method.md)               | Legt die Verbindungs-ID des Clients fest.<br/>                                                                                          |
-| [**Inapenforcementclientconnection:: setcorrelationid**](inapenforcementclientconnection-setcorrelationid-method.md)             | Legt die ID fest, die verwendet wird, um SoH-Anforderungen und SoH-Antworten zu korrelieren.<br/>                                                                  |
-| [**Inapenforcementclientconnection:: Setup Data**](inapenforcementclientconnection-setenforcerprivatedata-method.md) | Wird vom-Enforcer verwendet, um private Daten festzulegen.<br/>                                                                                      |
-| [**Inapenforcementclientconnection:: setFlags**](inapenforcementclientconnection-setflags-method.md)                             | Legt das Flag fest, das erstmalige Antworten von Antworten aufgrund von sohrequests unterscheidet, die von enforcern zwischengespeichert wurden.<br/>                  |
-| [**Inapenforcementclientconnection:: Setup Info**](inapenforcementclientconnection-setisolationinfo-method.md)             | Wird von NAPAgent zum Festlegen der Isolations Informationen des Clients verwendet.<br/>                                                           |
-| [**Inapenforcementclientconnection:: setmaxsize**](inapenforcementclientconnection-setmaxsize-method.md)                         | Legt die maximale Größe des SoH-Pakets für diesen Client fest.<br/>                                                                       |
-| [**Inapenforcementclientconnection:: setprivatedata**](inapenforcementclientconnection-setprivatedata-method.md)                 | Wird vom NAPAgent verwendet, um private Daten festzulegen.<br/>                                                                                      |
-| [**Inapenforcementclientconnection:: setsohrequest**](inapenforcementclientconnection-setsohrequest-method.md)                   | Legt die SoH-Anforderung fest.<br/>                                                                                                          |
-| [**Inapenforcementclientconnection:: setsohresponse**](inapenforcementclientconnection-setsohresponse-method.md)                 | Legt den SoH-Response fest und wird vom Erzwingungs Client beim Empfang eines Pakets verwendet.<br/>                                             |
+| [**INapEnforcementClientConnection::GetConnectionId**](inapenforcementclientconnection-getconnectionid-method.md)               | Ruft die Verbindungs-ID des Clients ab.<br/>                                                                                          |
+| [**INapEnforcementClientConnection::GetCorrelationId**](inapenforcementclientconnection-getcorrelationid-method.md)             | Ruft die ID ab, die zum Korrelieren von SoH-Anforderungen und SoH-Antworten verwendet wird.<br/>                                                                  |
+| [**INapEnforcementClientConnection::GetEnforcerPrivateData**](inapenforcementclientconnection-getenforcerprivatedata-method.md) | Wird vom Erzwinger verwendet, um private Daten zu erhalten.<br/>                                                                                      |
+| [**INapEnforcementClientConnection::GetFlags**](inapenforcementclientconnection-getflags-method.md)                             | Ruft den Wert des Flags ab, das erstmalige Antworten von Antworten aufgrund von SoHRequests unterscheidet, die von den Erzwingern zwischengespeichert werden.<br/> |
+| [**INapEnforcementClientConnection::GetIsolationInfo**](inapenforcementclientconnection-getisolationinfo-method.md)             | Wird verwendet, um die Isolationsinformationen des Clients zu erhalten.<br/>                                                                              |
+| [**INapEnforcementClientConnection::GetMaxSize**](inapenforcementclientconnection-getmaxsize-method.md)                         | Ruft die maximale Größe des SoH-Pakets für diesen Client ab.<br/>                                                                       |
+| [**INapEnforcementClientConnection::GetPrivateData**](inapenforcementclientconnection-getprivatedata-method.md)                 | Wird vom NapAgent verwendet, um private Daten zu erhalten.<br/>                                                                                      |
+| [**INapEnforcementClientConnection::GetSoHRequest**](inapenforcementclientconnection-getsohrequest-method.md)                   | Ruft die SoH-Anforderung ab.<br/>                                                                                                          |
+| [**INapEnforcementClientConnection::GetSoHResponse**](inapenforcementclientconnection-getsohresponse-method.md)                 | Ruft die SoH-Response, die vom Erzwingungsclient empfangen werden.<br/>                                                                      |
+| [**INapEnforcementClientConnection::GetStringCorrelationId**](inapenforcementclientconnection-getstringcorrelationid-method.md) | Ruft die Zeichenfolgenversion der CorrelationId ab. Wird hauptsächlich zu Protokollierungszwecken verwendet.<br/>                                             |
+| [**INapEnforcementClientConnection::Initialize**](inapenforcementclientconnection-initialize-method.md)                         | Initialisiert die Verbindung<br/>                                                                                                    |
+| [**INapEnforcementClientConnection::SetConnectionId**](inapenforcementclientconnection-setconnectionid-method.md)               | Legt die Verbindungs-ID des Clients fest.<br/>                                                                                          |
+| [**INapEnforcementClientConnection::SetCorrelationId**](inapenforcementclientconnection-setcorrelationid-method.md)             | Legt die ID fest, die zum Korrelieren von SoH-Anforderungen und SoH-Antworten verwendet wird.<br/>                                                                  |
+| [**INapEnforcementClientConnection::SetEnforcerPrivateData**](inapenforcementclientconnection-setenforcerprivatedata-method.md) | Wird vom Erzwinger zum Festlegen privater Daten verwendet.<br/>                                                                                      |
+| [**INapEnforcementClientConnection::SetFlags**](inapenforcementclientconnection-setflags-method.md)                             | Legt das Flag fest, das erstmalige Antworten von Antworten aufgrund von SoHRequests unterscheidet, die von Erzwingern zwischengespeichert werden.<br/>                  |
+| [**INapEnforcementClientConnection::SetIsolationInfo**](inapenforcementclientconnection-setisolationinfo-method.md)             | Wird vom NapAgent zum Festlegen der Isolationsinformationen des Clients verwendet.<br/>                                                           |
+| [**INapEnforcementClientConnection::SetMaxSize**](inapenforcementclientconnection-setmaxsize-method.md)                         | Legt die maximale Größe des SoH-Pakets für diesen Client fest.<br/>                                                                       |
+| [**INapEnforcementClientConnection::SetPrivateData**](inapenforcementclientconnection-setprivatedata-method.md)                 | Wird vom NapAgent zum Festlegen privater Daten verwendet.<br/>                                                                                      |
+| [**INapEnforcementClientConnection::SetSoHRequest**](inapenforcementclientconnection-setsohrequest-method.md)                   | Legt die SoH-Anforderung fest.<br/>                                                                                                          |
+| [**INapEnforcementClientConnection::SetSoHResponse**](inapenforcementclientconnection-setsohresponse-method.md)                 | Legt die SoH-Response fest und wird beim Empfang eines Pakets vom Erzwingungsclient verwendet.<br/>                                             |
 
 
 
@@ -81,10 +81,10 @@ Die **inapenforcementclientconnection** -Schnittstelle verfügt über diese Meth
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napforcementclient. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napforcementclient. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>               |
 
 

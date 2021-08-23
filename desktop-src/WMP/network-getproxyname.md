@@ -1,11 +1,11 @@
 ---
-title: Network. getproxyname-Methode
-description: Die getproxyname-Methode ruft den Namen des verwendeten Proxy Servers ab.
+title: Network.getProxyName-Methode
+description: Die getProxyName-Methode ruft den Namen des verwendeten Proxyservers ab.
 ms.assetid: 273b1f7d-84b7-4e50-9f80-9fd1978e7528
 keywords:
-- getproxyname-Methode, Windows Media Player
-- getproxyname-Methode, Windows Media Player, Network-Klasse
-- Network Class Windows Media Player, getproxyname-Methode
+- getProxyName-Windows Media Player
+- getProxyName-Methode Windows Media Player , Network-Klasse
+- Netzwerkklasse Windows Media Player , getProxyName-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a97e51508e9df9aeac85dbc01116e80e710dcb45
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 43f40eb7eb695376768cd8168e1eb1d1916c8e84e6ede8ef93251df6097a15d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119647450"
 ---
-# <a name="networkgetproxyname-method"></a>Network. getproxyname-Methode
+# <a name="networkgetproxyname-method"></a>Network.getProxyName-Methode
 
-Die **getproxyname** -Methode ruft den Namen des verwendeten Proxy Servers ab.
+Die **getProxyName-Methode** ruft den Namen des verwendeten Proxyservers ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,26 +42,26 @@ strRetVal = Network.getProxyName(
 
 <dl> <dt>
 
-*Protokoll* \[ in\]
+*Protocol* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Namen des Protokolls angibt. Eine Liste der unterstützten Protokolle finden Sie [unter Unterstützte Protokolle und Dateitypen](supported-protocols-and-file-types.md).
+**Zeichenfolge,** die den Protokollnamen angibt. Eine Liste der unterstützten Protokolle finden Sie unter [Unterstützte Protokolle und Dateitypen.](supported-protocols-and-file-types.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zeichenfolge** zurück, die den Namen des verwendeten Proxy Servers enthält. Der zurückgegebene Wert ist nur dann von Bedeutung, wenn **getproxysettings** den Wert 2 zurückgibt (manuelle Einstellungen verwenden).
+Diese Methode gibt eine **Zeichenfolge zurück,** die den Namen des verwendeten Proxyservers enthält. Der zurückgegebene Wert ist nur sinnvoll, **wenn getProxySettings** den Wert 2 zurückgibt (manuelle Einstellungen verwenden).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode schlägt fehl, es sei denn, die aufrufenden Anwendung wird auf dem lokalen Computer oder Intranet ausgeführt.
+Diese Methode schlägt fehl, es sei denn, die aufrufende Anwendung wird auf dem lokalen Computer oder Intranet ausgeführt.
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *Network* verwendet. **getproxyname** zum Anzeigen der Namen der Windows Media Player-Proxy Server für die HTTP-und MMS-Protokolle. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript Netzwerk *verwendet.* **getProxyName zum** Anzeigen Windows Media Player Proxyservernamen für die HTTP- und MMS-Protokolle. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -93,7 +93,7 @@ document.write("The current MMS proxy server name is: " + proxyNameMMS);
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -102,10 +102,10 @@ document.write("The current MMS proxy server name is: " + proxyNameMMS);
 
 <dl> <dt>
 
-[**Netzwerk Objekt**](network-object.md)
+[**Netzwerkobjekt**](network-object.md)
 </dt> <dt>
 
-[**Network. getproxysettings**](network-getproxysettings.md)
+[**Network.getProxySettings**](network-getproxysettings.md)
 </dt> </dl>
 
  

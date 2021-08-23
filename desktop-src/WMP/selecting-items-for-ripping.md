@@ -1,33 +1,33 @@
 ---
-title: Auswählen von Elementen für das Ripping
-description: Auswählen von Elementen für das Ripping
+title: Auswählen von Elementen für Das Auswählen
+description: Auswählen von Elementen für Das Auswählen
 ms.assetid: 94bc765a-8318-4715-82e0-e7a9b93e99e0
 keywords:
-- Windows Media Player, CD-einreißen
-- Windows Media Player-Objektmodell, CD-einreißen
-- Objektmodell, CD-einreißen
-- Windows Media Player ActiveX-Steuerelement, CD-einreißen
-- ActiveX-Steuerelement, CD-einreißen
-- Windows Media Player Mobile ActiveX-Steuerelement, CD-einreißen
-- Windows Media Player Mobile, CD-einreißen
-- CD-Ripping, auswählen von Elementen
-- einreißen CDs, auswählen von Elementen
+- Windows Media Player, CD-Umarbeitung
+- Windows Media Player-Objektmodell, CD-Endering
+- Objektmodell, CD-Endering
+- Windows Media Player ActiveX-Steuerelement, CD-Platte
+- ActiveX-Steuerelement, CD-Platte
+- Windows Media Player Mobile ActiveX-Steuerelement, CD-Platte
+- Windows Media Player Mobil, CD-Platte
+- CD-Umschalten, Auswählen von Elementen
+- CDs auswählen, Elemente auswählen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cfc18ded43b609be6c7ac1f16833b0c8a33505ae
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ea677028fab6b3c39466e916bd8bb59ea8cee4d370730c096cbb98978f4abc49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119646650"
 ---
-# <a name="selecting-items-for-ripping"></a>Auswählen von Elementen für das Ripping
+# <a name="selecting-items-for-ripping"></a>Auswählen von Elementen für Das Auswählen
 
-Manchmal möchte ein Benutzer nicht jede Spur auf einer CD zerreißen. Windows Media Player stellt eine Schnittstelle bereit, mit der angegeben wird, welche Spuren zum Ripping ausgewählt werden. In der Regel gibt es in einer CD-einreißen-Anwendung eine Benutzeroberfläche, über die der Benutzer Kontrollkästchen in einer Liste der Titel auf der CD auswählen kann.
+Manchmal möchte ein Benutzer nicht jede Spur auf einer CD berennen. Windows Media Player stellt eine Schnittstelle bereit, mit der angegeben werden kann, welche Spuren für die Löschung ausgewählt werden. In einer CD-Anwendung gibt es in der Regel eine Benutzeroberfläche, über die der Benutzer Kontrollkästchen in einer Liste von Spuren auf der CD aktivieren kann.
 
-Einige Spuren werden möglicherweise nicht standardmäßig für das einreißen ausgewählt. Wenn ein Track bereits in der Windows Media Player-Bibliothek vorhanden ist, wird er nicht automatisch für das Ripping ausgewählt. Im zweiten Codebeispiel in diesem Abschnitt wird veranschaulicht, wie der Standardwert umgangen und manuell eine Spur für das einreißen ausgewählt wird, wenn er bereits in den Code gerissen wurde.
+Einige Spuren sind möglicherweise nicht standardmäßig für die Löschung ausgewählt. Wenn sich eine Spur bereits in der bibliothek Windows Media Player befindet, wird sie nicht automatisch für die Suche ausgewählt. Im zweiten Codebeispiel in diesem Abschnitt wird veranschaulicht, wie der Standardwert umgangen und manuell eine Spur für die Suche ausgewählt wird, wenn er bereits ausgereift wurde.
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie bestimmen können, ob ein Track für das Ripping ausgewählt ist:
+Im folgenden Codebeispiel wird veranschaulicht, wie ermittelt wird, ob eine Spur für die Löschung ausgewählt ist:
 
 
 ```C++
@@ -71,7 +71,7 @@ HRESULT CMainDlg::IsTrackSelected(long lIndex, bool &bSelected)
 
 
 
-Im folgenden Codebeispiel wird veranschaulicht, wie angegeben wird, ob ein Track für das Ripping ausgewählt ist.
+Im folgenden Codebeispiel wird veranschaulicht, wie sie angeben, ob eine Spur für die Löschung ausgewählt wird.
 
 
 ```C++
@@ -119,21 +119,21 @@ HRESULT CMainDlg::SelectTrack (long lIndex, bool bSelected)
 
 <dl> <dt>
 
-[**Ripping einer CD**](ripping-a-cd.md)
+[**Bearbeitung einer CD**](ripping-a-cd.md)
 </dt> <dt>
 
 [**Abrufen der Rippingschnittstelle**](retrieving-the-ripping-interface.md)
 </dt> <dt>
 
-[**Der RIP-Prozess wird gestartet.**](starting-the-rip-process.md)
+[**Starten des Abzockprozesses**](starting-the-rip-process.md)
 </dt> <dt>
 
-[**Abrufen des Status "RIP"**](retrieving-the-rip-status.md)
+[**Abrufen des Reifegrads**](retrieving-the-rip-status.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

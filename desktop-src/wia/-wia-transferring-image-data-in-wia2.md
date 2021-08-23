@@ -1,28 +1,28 @@
 ---
-description: Da die Image-Datenübertragung Datenstrom basiert in der Windows-Abbild Erfassung (WIA) 2,0 ist, müssen Sie keinen Zieltyp angeben (z. b.
+description: Da die Bilddatenübertragung in Windows Image Acquisition (WIA) 2.0 streambasiert ist, müssen Sie keinen Zieltyp angeben (z. B.
 ms.assetid: ebb9fce5-9450-4ffe-b480-b21670b60f90
-title: Übertragen von Bilddaten in WIA 2,0
+title: Übertragen von Bilddaten in WIA 2.0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 85ded5c6cd8fb94b1beccd86c3cd8aef3018aed0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 66aca2179c477f49bc76197795ddf9d59792ca242da8729c169c39aa69553161
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119592960"
 ---
-# <a name="transferring-image-data-in-wia-20"></a>Übertragen von Bilddaten in WIA 2,0
+# <a name="transferring-image-data-in-wia-20"></a>Übertragen von Bilddaten in WIA 2.0
 
 > [!Note]  
-> In diesem Tutorial wird veranschaulicht, wie Sie Abbild Daten in Anwendungen übertragen, die unter Windows Vista oder höher ausgeführt werden. Informationen zum Übertragen von Bilddaten in Anwendungen, die unter Windows XP oder früher ausgeführt werden, finden Sie unter über [tragen von Bilddaten in WIA 1,0](-wia-transferring-image-data.md) .
+> In diesem Tutorial wird veranschaulicht, wie Sie Imagedaten in Anwendungen übertragen, die auf Windows Vista oder höher ausgeführt werden. Informationen zum Übertragen von Imagedaten in Anwendungen, die auf Windows XP oder früher ausgeführt werden, finden Sie unter Übertragen von [Bilddaten in WIA 1.0.](-wia-transferring-image-data.md)
 
  
 
-Da die Image-Datenübertragung Datenstrom basiert in Windows-Abbild Abruf (WIA) 2,0 ist, müssen Sie keinen Zieltyp angeben (z. b. Arbeitsspeicher oder Datei). Die Anwendung gibt lediglich WIA 2,0 den zu verwendenden Stream aus, und der Treiber liest oder schreibt in den Stream. Der Stream kann ein Dateistream, ein Arbeitsspeicherstream oder ein beliebiger anderer Streamtyp sein und ist für den Treiber transparent. Die Verwendung von Streams bietet auch eine einfache Integration in den Bild Verarbeitungs Filter.
+Da die Bilddatenübertragung in Windows Image Acquisition (WIA) 2.0 streambasiert ist, müssen Sie keinen Zieltyp angeben (z. B. Arbeitsspeicher oder Datei). Die Anwendung gibt wia 2.0 einfach den zu verwendenden Stream, und der Treiber liest oder schreibt in den Stream. Der Stream kann ein Dateistream, ein Speicherstream oder ein anderer Streamtyp sein und ist für den Treiber transparent. Die Verwendung von Streams bietet auch eine einfache Integration in den Filter Bildverarbeitung.
 
-Verwenden Sie die Methoden der [**iwiatransfer**](-wia-iwiatransfer.md) -Schnittstelle zum Übertragen von Daten von einem WIA 2,0-Gerät an eine Anwendung. Diese Schnittstelle ist über die [**IWiaItem2**](-wia-iwiaitem2.md) -Schnittstelle verfügbar. Die **iwiatransfer** -Schnittstelle verfügt über Methoden zum Anfordern oder Herunterladen von Daten auf ein und von einem Gerät. Diese Methoden verwenden einen Rückruf, der von der Anwendung bereitgestellt wird, und verwenden einen [IStream](/windows/win32/api/objidl/nn-objidl-istream) , der von der Anwendung für das tatsächliche Ziel der Datenübertragung bereitgestellt wird.
+Verwenden Sie die Methoden der [**IWiaTransfer-Schnittstelle,**](-wia-iwiatransfer.md) um Daten von einem WIA 2.0-Gerät an eine Anwendung zu übertragen. Diese Schnittstelle ist über die [**IWiaItem2-Schnittstelle**](-wia-iwiaitem2.md) verfügbar. Die **IWiaTransfer-Schnittstelle** verfügt über Methoden zum Anfordern des Hochladens oder Herunterladens von Daten auf ein und von einem Gerät. Diese Methoden verwenden einen Rückruf, den die Anwendung bereitstellt, und verwenden einen [IStream,](/windows/win32/api/objidl/nn-objidl-istream) der von der Anwendung für das tatsächliche Ziel der Datenübertragung bereitgestellt wird.
 
-Anwendungen müssen ein Bildelement Abfragen, um einen Zeiger auf seine [**iwiatransfer**](-wia-iwiatransfer.md) -Schnittstelle zu erhalten, wie im folgenden Codebeispiel gezeigt:
+Anwendungen müssen ein Bildelement abfragen, um einen Zeiger auf seine [**IWiaTransfer-Schnittstelle**](-wia-iwiatransfer.md) abzurufen, wie im folgenden Codebeispiel gezeigt:
 
 
 ```
@@ -34,9 +34,9 @@ Anwendungen müssen ein Bildelement Abfragen, um einen Zeiger auf seine [**iwiat
 
 
 
-Im vorherigen Code wird angenommen, dass **pWiaItem2** ein gültiger Zeiger auf die [**IWiaItem2**](-wia-iwiaitem2.md) -Schnittstelle ist. Der [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Aufrufe füllt **pwiatransfer** mit einem Zeiger auf die [**iwiatransfer**](-wia-iwiatransfer.md) -Schnittstelle des Elements, auf das von **pWiaItem2** verwiesen wird.
+Im vorherigen Code wird davon ausgegangen, dass **pWiaItem2** ein gültiger Zeiger auf die [**IWiaItem2-Schnittstelle**](-wia-iwiaitem2.md) ist. Der Aufruf von [IUnknown::QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) füllt **pWiaTransfer** mit einem Zeiger auf die [**IWiaTransfer-Schnittstelle**](-wia-iwiatransfer.md) des Elements, auf das **pWiaItem2** verweist.
 
-Die Anwendung instanziiert dann das Rückruf Objekt, wie hier gezeigt.
+Die Anwendung instanziiert dann das Rückrufobjekt, wie hier gezeigt.
 
 
 ```
@@ -47,7 +47,7 @@ Die Anwendung instanziiert dann das Rückruf Objekt, wie hier gezeigt.
 
 
 
-Die Anwendung legt die Eigenschaften dann mithilfe der [**iwiapropertystorage**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) -Schnittstelle von [**IWiaItem2**](-wia-iwiaitem2.md) Item fest und führt die Übertragung aus.
+Die Anwendung legt als Nächstes die Eigenschaften mithilfe der [**IWiaPropertyStorage-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) des [**IWiaItem2-Elements**](-wia-iwiaitem2.md) fest und führt die Übertragung durch.
 
 Downloadvorgang läuft:
 
@@ -59,7 +59,7 @@ Downloadvorgang läuft:
 
 
 
-Hochladen
+Hochladen:
 
 
 ```
@@ -102,7 +102,7 @@ Hochladen
 
 
 
-Hier ist das Beispiel für die komplette Datenübertragung:
+Hier ist das vollständige Beispiel für die Datenübertragung:
 
 
 ```

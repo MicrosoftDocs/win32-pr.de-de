@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_COLUMNDEF. colyp-Eigenschaft.
-title: JET_COLUMNDEF. colyp (Eigenschaft)
+description: 'Erfahren Sie mehr über: JET_COLUMNDEF.coltyp-Eigenschaft'
+title: JET_COLUMNDEF.coltyp-Eigenschaft
 TOCTitle: 'coltyp property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_COLUMNDEF.coltyp
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_columndef.coltyp(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: fa9222317069db406c38ab591cd3988890645b78
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2b831645527de7ecb141e54627e2d17f109ea2107e9cc34f395a0e6d6224b57f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345175"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119668190"
 ---
-# <a name="jet_columndefcoltyp-property"></a>JET_COLUMNDEF. colyp (Eigenschaft)
+# <a name="jet_columndefcoltyp-property"></a>JET_COLUMNDEF.coltyp-Eigenschaft
 
-Ruft den Typ der Spalte ab oder legt ihn fest.
+Ruft den Typ der Spalte ab oder legt sie fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public JET_coltyp coltyp { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_coltyp](./jet-coltyp-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_coltyp](./jet-coltyp-enumeration.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_COLUMNDEF-Klasse](./jet-columndef-class.md)
 
-[Mitglieder JET_COLUMNDEF](./jet-columndef-members.md)
+[JET_COLUMNDEF-Member](./jet-columndef-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

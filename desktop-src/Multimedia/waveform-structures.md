@@ -1,32 +1,32 @@
 ---
-title: Waveform-Strukturen
-description: Waveform-Strukturen
+title: Wellenformstrukturen
+description: Wellenformstrukturen
 ms.assetid: 4ae84ba8-f444-4d9e-adc8-343b4ee764cc
 keywords:
-- Multimedia-Audiofunktionen, Wellenform Strukturen
-- Audiodaten, Wellenform Strukturen
-- Wellenform-Audiodaten, Strukturen
-- Wellenform-Audioreferenz, Strukturen
-- Referenz für Wellen-Audiodaten, Strukturen
+- Multimediaaudio, Wellenformstrukturen
+- Audio, Wellenformstrukturen
+- Waveformaudio, Strukturen
+- Waveform-Audioreferenz, Strukturen
+- Referenz für Wavefore-Audio, Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3593594cb2637befb670bfffb4cf0c08eb7c3cee
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: ac6e760a84d22343abe0042a236132b3373bb2059c4d0f5d00f9e9e651ebba81
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948733"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119687260"
 ---
-# <a name="waveform-structures"></a>Waveform-Strukturen
+# <a name="waveform-structures"></a>Wellenformstrukturen
 
 -   [**PCMWAVEFORMAT**](/windows/win32/api/mmreg/ns-mmreg-pcmwaveformat)
--   [**Wavefilter**](/windows/desktop/api/Mmreg/ns-mmreg-wavefilter)
--   [**Waveformat**](/windows/win32/api/mmreg/ns-mmreg-waveformat)
+-   [**WAVEFILTER**](/windows/desktop/api/Mmreg/ns-mmreg-wavefilter)
+-   [**WAVEFORMAT**](/windows/win32/api/mmreg/ns-mmreg-waveformat)
 -   [**WAVEFORMATEX**](/windows/win32/api/mmeapi/ns-mmeapi-waveformatex)
 -   [**WAVEFORMATEXTENSIBLE**](/windows/win32/api/mmreg/ns-mmreg-waveformatextensible)
--   [**Wavehdr**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr)
--   [**Wavin Caps**](/windows/win32/api/mmeapi/ns-mmeapi-waveincaps)
--   [**Waveoutcaps**](/windows/win32/api/mmeapi/ns-mmeapi-waveoutcaps)
+-   [**WAVEHDR**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr)
+-   [**WAVEINCAPS**](/windows/win32/api/mmeapi/ns-mmeapi-waveincaps)
+-   [**WAVEOUTCAPS**](/windows/win32/api/mmeapi/ns-mmeapi-waveoutcaps)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -35,6 +35,6 @@ ms.locfileid: "103948733"
 [Waveform-Audioreferenz](waveform-audio-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

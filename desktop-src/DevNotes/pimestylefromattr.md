@@ -1,7 +1,7 @@
 ---
-description: Ruft Stile für ein angegebenes Attribut ab.
+description: Ruft Stile für ein bestimmtes Attribut ab.
 ms.assetid: 206c69b9-981b-49ef-9f71-1c65e08637bb
-title: Pimestylefromattr-Funktion
+title: PIMEStyleFromAttr-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Imeshare.dll
-ms.openlocfilehash: 27673ebb74c1dca3e686542a541735cfc515bee9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b2f7708a55337b79ff168e4f387b39e3920074fd8217e52570f0084ca5aa3734
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365937"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119541760"
 ---
-# <a name="pimestylefromattr-function"></a>Pimestylefromattr-Funktion
+# <a name="pimestylefromattr-function"></a>PIMEStyleFromAttr-Funktion
 
-Ruft Stile für ein angegebenes Attribut ab.
+Ruft Stile für ein bestimmtes Attribut ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,43 +39,43 @@ const IMESTYLE* __cdecl PIMEStyleFromAttr(
 
 <dl> <dt>
 
-*attr* \[ in\]
+*attr* \[ In\]
 </dt> <dd>
 
 Dieser Parameter kann einen der folgenden Werte annehmen.
 
 <dl> <dt>
 
-<span id="IMESATTR_FIXEDCONVERTED"></span><span id="imesattr_fixedconverted"></span>**Imesattr \_ Fixedkonvertierte** (5)
+<span id="IMESATTR_FIXEDCONVERTED"></span><span id="imesattr_fixedconverted"></span>**IMESATTR \_ FIXEDCONVERTED** (5)
 </dt> <dt>
 
-<span id="IMESATTR_INPUT"></span><span id="imesattr_input"></span>**Imesattr \_ Eingabe** (0)
+<span id="IMESATTR_INPUT"></span><span id="imesattr_input"></span>**IMESATTR \_ INPUT** (0)
 </dt> <dt>
 
-<span id="IMESATTR_INPUT_ERROR"></span><span id="imesattr_input_error"></span>**Imesattr \_ Eingabe \_ Fehler** (4)
+<span id="IMESATTR_INPUT_ERROR"></span><span id="imesattr_input_error"></span>**IMESATTR \_ \_EINGABEFEHLER** (4)
 </dt> <dt>
 
-<span id="IMESATTR_MAX"></span><span id="imesattr_max"></span>**Imesattr \_ Max** (5)
+<span id="IMESATTR_MAX"></span><span id="imesattr_max"></span>**IMESATTR \_ MAX** (5)
 </dt> <dt>
 
-<span id="IMESATTR_MIN"></span><span id="imesattr_min"></span>**Imesattr \_ MIN** (0)
+<span id="IMESATTR_MIN"></span><span id="imesattr_min"></span>**IMESATTR \_ MIN** (0)
 </dt> <dt>
 
-<span id="IMESATTR_TARGET_CONVERTED"></span><span id="imesattr_target_converted"></span>**Imesattr \_ Ziel \_ konvertiert** (1)
+<span id="IMESATTR_TARGET_CONVERTED"></span><span id="imesattr_target_converted"></span>**IMESATTR \_ TARGET \_ CONVERTED** (1)
 </dt> <dt>
 
-<span id="IMESATTR_TARGET_NOTCONVERTED"></span><span id="imesattr_target_notconverted"></span>**Imesattr \_ Ziel nicht \_ konvertiert** (4)
+<span id="IMESATTR_TARGET_NOTCONVERTED"></span><span id="imesattr_target_notconverted"></span>**IMESATTR \_ TARGET \_ NOTCONVERTED** (4)
 </dt> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf eine **imestyle** -Struktur zurück, die die Farb-und die nicht-Farbeinstellungen darstellt.
+Gibt einen Zeiger auf eine **IMESTYLE-Struktur** zurück, die die Farb- und Nicht-Farbeinstellungen darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
-Die **imestyle** -Struktur ist wie folgt definiert:
+Die **IMESTYLE-Struktur** ist wie folgt definiert:
 
 ``` syntax
 typedef struct {

@@ -4,8 +4,8 @@ description: Die Anrede des Benutzers.
 ms.assetid: 51faf19e-bec7-4f72-87d0-2df51af3fa1d
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Personal-Title-Attribut
-- Personal Title-Attribut AD-Schema
+- Personal-Title AD-Attributschema
+- personalTitle-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b0a707cc56eac5f92c50852a0d006fe6374b802
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 2ff01428e1faf994766586f9e25c5e051aa88f40ae29c979b1aafb2b988f33d6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519700"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119647790"
 ---
 # <a name="personal-title-attribute"></a>Personal-Title-Attribut
 
@@ -30,12 +30,12 @@ Die Anrede des Benutzers.
 | Eingabe | Wert |
 |-------------------|----------------------------------------------------------------------------------|
 | CN                | Personal-Title                                                                   |
-| LDAP-Display-Name | Personal Titel                                                                    |
+| Ldap-Anzeigename | personalTitle                                                                    |
 | Size              | \-                                                                               |
-| Berechtigung aktualisieren  | Jeder kann dieses Objekt basierend auf der Sicherheit des Objekts, das erstellt wird, aktualisieren. |
-| Aktualisierungshäufigkeit  | \-                                                                               |
+| Aktualisieren von Berechtigungen  | Jeder kann dieses Objekt basierend auf der Sicherheit des erstellten Objekts aktualisieren. |
+| Updatehäufigkeit  | \-                                                                               |
 | Attribute-Id      | 1.2.840.113556.1.2.615                                                           |
-| System-ID-GUID    | 16775858-47F 3-11d1-a9c3-0000 C1                                             |
+| System-ID-GUID    | 16775858-47f3-11d1-a9c3-0000f80367c1                                             |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                      |
 
 
@@ -43,7 +43,7 @@ Die Anrede des Benutzers.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,12 +56,12 @@ Die Anrede des Benutzers.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c6b                                                             |
+| MAPI-Id                | 0x8C6B                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Ist einwertig       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -70,19 +70,19 @@ Die Anrede des Benutzers.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c6b                                                             |
+| MAPI-Id                | 0x8C6B                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Ist einwertig       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -98,12 +98,12 @@ Die Anrede des Benutzers.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c6b                                                             |
+| MAPI-Id                | 0x8C6B                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Ist einwertig       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -119,12 +119,12 @@ Die Anrede des Benutzers.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c6b                                                             |
+| MAPI-Id                | 0x8C6B                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Ist einwertig       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -140,12 +140,12 @@ Die Anrede des Benutzers.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c6b                                                             |
+| MAPI-Id                | 0x8C6B                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Ist einwertig       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -161,12 +161,12 @@ Die Anrede des Benutzers.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c6b                                                             |
+| MAPI-Id                | 0x8C6B                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Ist einwertig       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |

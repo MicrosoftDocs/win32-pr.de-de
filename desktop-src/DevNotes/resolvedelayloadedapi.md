@@ -1,7 +1,7 @@
 ---
-description: Gibt die Zielfunktion des angegebenen Imports an und ersetzt den Funktionszeiger im Import Thunk durch das Ziel der Funktions Implementierung.
+description: Sucht die Zielfunktion des angegebenen Imports und ersetzt den Funktionszeiger im Importthunk durch das Ziel der Funktionsimplementierung.
 ms.assetid: 4ab79b7c-81d1-40bf-a76b-217d93567e40
-title: Resolvedelta-loadedapi-Funktion
+title: ResolveDelayLoadedAPI-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,16 +17,16 @@ api_location:
 - kernelbase.dll
 - mincoredload.dll
 - minkernelbase.dll
-ms.openlocfilehash: 019729cacb45cce87de2cc4015c661c494125108
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 359de5c52417f09c35e2fc994e36f0efd054f2a18dc3063be71dc12d588c60e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370184"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119571550"
 ---
-# <a name="resolvedelayloadedapi-function"></a>Resolvedelta-loadedapi-Funktion
+# <a name="resolvedelayloadedapi-function"></a>ResolveDelayLoadedAPI-Funktion
 
-Gibt die Zielfunktion des angegebenen Imports an und ersetzt den Funktionszeiger im Import Thunk durch das Ziel der Funktions Implementierung.
+Sucht die Zielfunktion des angegebenen Imports und ersetzt den Funktionszeiger im Importthunk durch das Ziel der Funktionsimplementierung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,51 +48,51 @@ PVOID WINAPI ResolveDelayLoadedAPI(
 
 <dl> <dt>
 
-" *Parametrimodulebase* \[ " in\]
+*ParentModuleBase* \[ In\]
 </dt> <dd>
 
 Die Adresse der Basis des Moduls, das eine verzögert geladene Funktion importiert.
 
 </dd> <dt>
 
-*Delta-loaddescriptor* \[ in\]
+*DelayloadDescriptor* \[ In\]
 </dt> <dd>
 
-Der Deskriptor für das Modul, das geladen werden soll.
+Der Deskriptor für das zu ladende Modul.
 
 </dd> <dt>
 
-*Failuredllhook* \[ in, optional\]
+*FailureDllHook* \[ in, optional\]
 </dt> <dd>
 
-Die Adresse des fehlerhaften Hooks. Siehe " [**Delta-loadfailurehook**](delayloadfailurehook.md)".
+Die Adresse des Fehlerhooks. Siehe [**DelayLoadFailureHook**](delayloadfailurehook.md).
 
 </dd> <dt>
 
-*Failuresystemhook* \[ in, optional\]
+*FailureSystemHook* \[ in, optional\]
 </dt> <dd>
 
-Die Adresse des Systemfehler-Hooks.
+Die Adresse des Systemfehlerhooks.
 
 </dd> <dt>
 
-*Thunkaddress* \[ vorgenommen\]
+*ThunkAddress* \[ out\]
 </dt> <dd>
 
-Die Thunk-Daten für die Zielfunktion. Wird verwendet, um den Namen der jeweiligen namens Tabelle der Funktion zu suchen.
+Die Thunkdaten für die Zielfunktion. Wird verwendet, um den spezifischen Namenstabelleneintrag der Funktion zu suchen.
 
 </dd> <dt>
 
 *Flags* 
 </dt> <dd>
 
-Bleiben muss 0 sein.
+Reserviert; muss 0 sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Adresse des Imports oder der fehlerstub für die Anwendung.
+Die Adresse des Imports oder der Fehlerstub dafür.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -109,7 +109,7 @@ Die Adresse des Imports oder der fehlerstub für die Anwendung.
 
 <dl> <dt>
 
-[Linker-Unterstützung für Delay-Loaded DLLs](https://msdn.microsoft.com/library/151kt790(v=VS.71).aspx)
+[Linkerunterstützung für Delay-Loaded DLLs](https://msdn.microsoft.com/library/151kt790(v=VS.71).aspx)
 </dt> </dl>
 
  

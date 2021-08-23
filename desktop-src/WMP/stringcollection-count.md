@@ -1,9 +1,9 @@
 ---
-title: StringCollection. Count
-description: Die Count-Eigenschaft ruft die Anzahl der Elemente in der Zeichen folgen Auflistung ab.
+title: StringCollection.count
+description: Die count-Eigenschaft ruft die Anzahl der Elemente in der Zeichenfolgensammlung ab.
 ms.assetid: bf02d102-deb2-4c5a-971c-d54f36dd2ad8
 keywords:
-- StringCollection. count-Windows-Media Player
+- StringCollection.count Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ce3e0a755411228d8a71de1cdc781c360050ee94
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ac93b14cf79aadc6622f00e9d3867d3dfdb50955799f1185db80d2fb1e8b271d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372629"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119571780"
 ---
-# <a name="stringcollectioncount"></a>StringCollection. Count
+# <a name="stringcollectioncount"></a>StringCollection.count
 
-Die **count** -Eigenschaft ruft die Anzahl der Elemente in der Zeichen folgen Auflistung ab.
+Die **count-Eigenschaft** ruft die Anzahl der Elemente in der Zeichenfolgensammlung ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player*. *mediacollection*. **getAttributeStringCollection**( *Attribut*, *mediaType*). **Anzahl**
+*Player*. *mediaCollection*. **getAttributeStringCollection**( *Attribut*, *mediaType*). **count**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erfo
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -52,10 +52,10 @@ Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erfo
 
 <dl> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> <dt>
 
 [**StringCollection-Objekt**](stringcollection-object.md)

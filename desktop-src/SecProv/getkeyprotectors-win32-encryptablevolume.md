@@ -1,7 +1,7 @@
 ---
-description: Listet die Schutzvorrichtungen auf, mit denen der Verschlüsselungsschlüssel des Volumes geschützt wird.
+description: Listet die Schutzvorrichtungen auf, die zum Sichern des Verschlüsselungsschlüssels des Volumes verwendet werden.
 ms.assetid: ea88f128-c835-49e3-a395-c5ba472fff4b
-title: Getkeyprotector-Methode der Win32_EncryptableVolume-Klasse
+title: GetKeyProtectors-Methode der Win32_EncryptableVolume-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Root\CIMV2\Security\MicrosoftVolumeEncryption
-ms.openlocfilehash: 3a7d6a4110953d905b10eb4f7ef9a255af77897a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 01342b932e3a285870026ef57bfa0040d1659ca7af1165e6fb67f3af780896d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119667680"
 ---
-# <a name="getkeyprotectors-method-of-the-win32_encryptablevolume-class"></a>Getkeyprotector-Methode der Win32- \_ Klasse "verschlüsseltablevolume"
+# <a name="getkeyprotectors-method-of-the-win32_encryptablevolume-class"></a>GetKeyProtectors-Methode der Win32 \_ EncryptableVolume-Klasse
 
-Die **getkeyprotector** -Methode der Win32-Klasse " [**\_ verschlüsseltablevolume**](win32-encryptablevolume.md) " listet die Schutzvorrichtungen auf, mit denen der Verschlüsselungsschlüssel des Volumes geschützt wird. Wenn ein schutzschutztyp bereitgestellt wird, werden nur volumeschlüsselschutzvorrichtungen des angegebenen Typs zurückgegeben.
+Die **GetKeyProtectors-Methode** der [**Win32 \_ EncryptableVolume-Klasse**](win32-encryptablevolume.md) listet die Schutzvorrichtungen auf, die zum Sichern des Verschlüsselungsschlüssels des Volumes verwendet werden. Wenn ein Schutzvorrichtungstyp bereitgestellt wird, werden nur Volumeschlüsselschutzvorrichtungen des angegebenen Typs zurückgegeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,26 +40,26 @@ uint32 GetKeyProtectors(
 
 <dl> <dt>
 
-*Keyprotector Type* \[ in, optional\]
+*KeyProtectorType* \[ in, optional\]
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Eine ganze Zahl ohne Vorzeichen, die den Typ der zurück zugebende Schlüssel Schutzvorrichtung angibt.
+Eine ganze Zahl ohne Vorzeichen, die den Typ der zurückzugebenden Schlüsselschutzvorrichtung angibt.
 
-Wenn dieser Parameter nicht angegeben wird, werden alle verfügbaren Schlüssel Schutzvorrichtungen des Volumes zurückgegeben.
+Wenn dieser Parameter nicht angegeben ist, werden alle verfügbaren Schlüsselschutzvorrichtungen des Volumes zurückgegeben.
 
 
 
 | Wert                                                                         | Bedeutung                                                           |
 |-------------------------------------------------------------------------------|-------------------------------------------------------------------|
-| <dl> <dt>0</dt> </dl>  | Alle Typen.<br/> Alle Schlüssel Schutzvorrichtungen werden zurückgegeben.<br/> |
+| <dl> <dt>0</dt> </dl>  | Alle Typen.<br/> Alle Schlüsselschutzvorrichtungen werden zurückgegeben.<br/> |
 | <dl> <dt>1</dt> </dl>  | Trusted Platform Module (TPM).<br/>                         |
 | <dl> <dt>2</dt> </dl>  | Externer Schlüssel.<br/>                                          |
 | <dl> <dt>3</dt> </dl>  | Numerisches Kennwort.<br/>                                      |
 | <dl> <dt>4</dt> </dl>  | TPM und PIN.<br/>                                           |
-| <dl> <dt>5</dt> </dl>  | TPM-und Systemstart Schlüssel.<br/>                                   |
-| <dl> <dt>6</dt> </dl>  | TPM-und PIN-und Systemstart Schlüssel.<br/>                           |
+| <dl> <dt>5</dt> </dl>  | TPM und Startschlüssel.<br/>                                   |
+| <dl> <dt>6</dt> </dl>  | TPM und PIN und Startschlüssel.<br/>                           |
 | <dl> <dt>7</dt> </dl>  | Öffentlicher Schlüssel.<br/>                                            |
 | <dl> <dt>8</dt> </dl>  | Passphrase.<br/>                                            |
 | <dl> <dt>9</dt> </dl>  | TPM-Zertifikat<br/>                                        |
@@ -71,36 +71,36 @@ Wenn dieser Parameter nicht angegeben wird, werden alle verfügbaren Schlüssel 
 
 </dd> <dt>
 
-*Volumekeyprotectorid* \[ vorgenommen\]
+*VolumeKeyProtectorID* \[ out\]
 </dt> <dd>
 
-Typ: **Zeichen \[ \] Folge**
+Typ: **\[ \] Zeichenfolge**
 
-Ein Array von Zeichen folgen, die die zum Schutz des Verschlüsselungsschlüssels des Volumes verwendeten Schlüssel Schutzvorrichtungen identifizieren.
+Ein Array von Zeichenfolgen, die die Schlüsselschutzvorrichtungen identifizieren, die zum Sichern des Verschlüsselungsschlüssels des Volumes verwendet werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurück, wenn ein Fehler auftritt.
+Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurück, wenn er fehlschlägt.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                                  | BESCHREIBUNG                                                                                                    |
+| Rückgabecode/-wert                                                                                                                                                                  | Beschreibung                                                                                                    |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl>                                  | Die Methode war erfolgreich.<br/>                                                                          |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>2147942487 (0x80070057)</dt> </dl>          | Der *volumekeyprotectorid-* Parameter ist angegeben, verweist jedoch nicht auf einen gültigen *keyprotectortype*.<br/> |
-| <dl> <dt>**F \_ E \_ nicht \_ aktiviert**</dt> <dt>2150694920 (0x80310008)</dt> </dl> | BitLocker ist auf dem Volume nicht aktiviert. Fügen Sie eine Schlüssel Schutzvorrichtung zum Aktivieren von BitLocker hinzu. <br/>                   |
+| <dl> <dt>**E \_ INVALIDARG**</dt> <dt>2147942487 (0x80070057)</dt> </dl>          | Der *VolumeKeyProtectorID-Parameter* wird angegeben, verweist jedoch nicht auf einen gültigen *KeyProtectorType.*<br/> |
+| <dl> <dt>**FVE \_ E \_ NICHT \_ AKTIVIERT**</dt> <dt>2150694920 (0x80310008)</dt> </dl> | BitLocker ist auf dem Volume nicht aktiviert. Fügen Sie eine Schlüsselschutzvorrichtung hinzu, um BitLocker zu aktivieren. <br/>                   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,10 +108,10 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista Enterprise, Windows Vista Ultimate \[ Desktop-Apps\]<br/>                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | Root \\ CIMV2 \\ Sicherheit ( \\ microsoftvolumeencryption)<br/>                                             |
-| MOF<br/>                      | <dl> <dt>Win32 \_ verschlüsseltablevolume. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista Enterprise, nur Windows Vista \[ Ultimate-Desktop-Apps\]<br/>                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | \\CIMV2-Stammsicherheit \\ \\ MicrosoftVolumeEncryption<br/>                                             |
+| MOF<br/>                      | <dl> <dt>Win32 \_ encryptablevolume.mof</dt> </dl> |
 
 
 
@@ -119,7 +119,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32- \_ verschlüsseltablevolume**](win32-encryptablevolume.md)
+[**Win32 \_ EncryptableVolume**](win32-encryptablevolume.md)
 </dt> </dl>
 
  

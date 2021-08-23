@@ -1,11 +1,11 @@
 ---
-title: ACS-minimal-Delay-Variation-Attribut
-description: Das ACS-minimal-Delay-Variation-Attribut ist nur für die interne Verwendung vorgesehen.
+title: ACS-Minimum-Delay-Variation-Attribut
+description: Das ATTRIBUT ACS-Minimum-Delay-Variation ist nur zur internen Verwendung.
 ms.assetid: eb82ac12-d570-4edc-bbfa-2de63d8f5088
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ACS-minimal-Delay-Variation
-- acsminimumdelta ayvariation-Attribut AD-Schema
+- AD-Schema des ACS-Minimum-Delay-Variation-Attributs
+- AD-Schema des aCSMinimumDelayVariation-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d4f360e87bd2d9c36da1651800e5765a0a6f924
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 7cc0c3165d44a607ee52c388626d8193cb1317b6912b49d78643711ac2d6ca92
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104520287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119545260"
 ---
-# <a name="acs-minimum-delay-variation-attribute"></a>ACS-minimal-Delay-Variation-Attribut
+# <a name="acs-minimum-delay-variation-attribute"></a>ACS-Minimum-Delay-Variation-Attribut
 
-Das **ACS-minimal-Delay-Variation-** Attribut ist nur für die interne Verwendung vorgesehen. Basierend auf RFC2210.
+Das **ATTRIBUT ACS-Minimum-Delay-Variation** ist nur zur internen Verwendung. Basierend auf RFC2210.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ACS-minimal-Delay-Variation          |
-| LDAP-Display-Name | acsminimumdelta ayvariation             |
+| CN                | ACS-Minimum-Delay-Variation          |
+| Ldap-Anzeigename | aCSMinimumDelayVariation             |
 | Size              | 8 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1317              |
-| System-ID-GUID    | 9c65329b-3b90-11d2-90cc-00c04f d91ab1 |
+| System-Id-Guid    | 9c65329b-3b90-11d2-90cc-00c04fd91ab1 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -43,7 +43,7 @@ Das **ACS-minimal-Delay-Variation-** Attribut ist nur für die interne Verwendun
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Das **ACS-minimal-Delay-Variation-** Attribut ist nur für die interne Verwendun
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Is-Single-Valued       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Das **ACS-minimal-Delay-Variation-** Attribut ist nur für die interne Verwendun
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Is-Single-Valued       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Das **ACS-minimal-Delay-Variation-** Attribut ist nur für die interne Verwendun
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Is-Single-Valued       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Das **ACS-minimal-Delay-Variation-** Attribut ist nur für die interne Verwendun
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Is-Single-Valued       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Das **ACS-minimal-Delay-Variation-** Attribut ist nur für die interne Verwendun
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Is-Single-Valued       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Das **ACS-minimal-Delay-Variation-** Attribut ist nur für die interne Verwendun
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Is-Single-Valued       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> |
 
 
 

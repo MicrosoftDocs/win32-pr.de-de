@@ -1,7 +1,7 @@
 ---
-description: Wird aufgerufen, wenn der aktuelle Benutzer angefordert hat, dass die Benutzeridentität gewechselt wird, jedoch bevor der Switch auftritt.
+description: Wird aufgerufen, wenn der aktuelle Benutzer die Umstellung seiner Benutzeridentität angefordert hat, aber bevor der Wechsel erfolgt.
 ms.assetid: f159b829-623c-4348-9692-7317663811a7
-title: 'Iidentitychangenotify:: queryswitchidentities-Methode (Msident. h)'
+title: IIdentityChangeNotify::QuerySwitchIdentities-Methode (Msident.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Msoe.dll
-ms.openlocfilehash: 42f8033c943e402d434c973f8c768ed5a951811d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 38469490db92278c82e7935e1078181010757dd22be220203361d2d4c18ef380
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864900"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119593080"
 ---
-# <a name="iidentitychangenotifyqueryswitchidentities-method"></a>Iidentitychangenotify:: queryswitchidentities-Methode
+# <a name="iidentitychangenotifyqueryswitchidentities-method"></a>IIdentityChangeNotify::QuerySwitchIdentities-Methode
 
-\[**Queryswitchidentities** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
+\[**QuerySwitchIdentities steht** für die Verwendung in den Betriebssystemen zur Verfügung, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
 
-Wird aufgerufen, wenn der aktuelle Benutzer angefordert hat, dass die Benutzeridentität gewechselt wird, jedoch bevor der Switch auftritt.
+Wird aufgerufen, wenn der aktuelle Benutzer die Umstellung seiner Benutzeridentität angefordert hat, aber bevor der Wechsel erfolgt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,13 +43,13 @@ Diese Methode hat keine Parameter.
 
 Typ: **HRESULT**
 
-Ergebnis der Switch-Abfrage. Wenn der Switch fortgesetzt werden soll, geben Sie S \_ OK zurück. Andernfalls wird \_ der Schalter E-Prozess abgebrochen zurückgegeben, \_ \_ um anzugeben, dass der Benutzer Identitätswechsel abgebrochen werden soll.
+Ergebnis der Switchabfrage. Wenn der Schalter fortgesetzt werden soll, geben Sie S \_ OK zurück. Geben Sie andernfalls E \_ PROCESS \_ CANCELLED SWITCH zurück, um anzugeben, dass der Benutzeridentitätswechsel \_ abgebrochen werden soll.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können diese Methode implementieren, um benutzerdefiniertes Verhalten für Ihre Anwendung bereitzustellen, wenn ein Benutzer anfordert, dass Identitäten gewechselt werden. Sie können den ausstehenden Identitätswechsel abbrechen, indem Sie den Schalter Wert E \_ Prozess \_ abgebrochen zurückgeben \_ .
+Sie können diese Methode implementieren, um benutzerdefiniertes Verhalten für Ihre Anwendung zu bieten, wenn ein Benutzer das Wechseln von Identitäten an fordert. Sie können den ausstehenden Identitätswechsel beenden, indem Sie den Wert E \_ PROCESS \_ CANCELLED SWITCH \_ zurückgeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -59,20 +59,20 @@ Sie können diese Methode implementieren, um benutzerdefiniertes Verhalten für 
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Ende des Supports (Client)<br/>    | Windows 2000 Professional<br/>                                                   |
 | Ende des Supports (Server)<br/>    | Windows 2000 Server<br/>                                                         |
-| Header<br/>                   | <dl> <dt>Msident. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Msident. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msident.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Msident.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Msoe.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Iidentitychangenotify**](iidentitychangenotify.md)
+[**IIdentityChangeNotify**](iidentitychangenotify.md)
 </dt> <dt>
 
-[**Iidentitychangenotify:: switchidentities**](iidentitychangenotify-switchidentities.md)
+[**IIdentityChangeNotify::SwitchIdentities**](iidentitychangenotify-switchidentities.md)
 </dt> </dl>
 
  

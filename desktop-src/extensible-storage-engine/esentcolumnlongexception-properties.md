@@ -28,7 +28,7 @@ Der [EsentColumnLongException-Typ](./esentcolumnlongexception-class.md) macht di
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -83,7 +83,7 @@ Der [EsentColumnLongException-Typ](./esentcolumnlongexception-class.md) macht di
 
 Oben
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

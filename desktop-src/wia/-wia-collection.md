@@ -1,5 +1,5 @@
 ---
-description: Sammlungsklasse
+description: Collection-Klasse
 ms.assetid: 2b2a70ff-2b49-44b2-b506-b0b2cc953ec4
 title: Collection-Objekt
 ms.topic: reference
@@ -13,47 +13,47 @@ api_type:
 - COM
 api_location:
 - Wiascr.dll
-ms.openlocfilehash: cf9c5fc6b01574b930b7b8b74186243d00fa5202
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 63f2d1be37ae244eee5960feb8d5eae22ce379a8567bd782c3b0c3e43eabb53b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104345599"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119593340"
 ---
 # <a name="collection-object"></a>Collection-Objekt
 
-Sammlungsklasse
+Collection-Klasse
 
 ## <a name="members"></a>Member
 
-Das **Sammlungs** Objekt verfügt über diese Typen von Membern:
+Das **Collection-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **Sammlungs** Objekt verfügt über diese Eigenschaften.
+Das **Collection-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                           | Zugriffstyp          | BESCHREIBUNG                                                |
+| Eigenschaft                                           | Zugriffstyp          | Beschreibung                                                |
 |:---------------------------------------------------|:---------------------|:-----------------------------------------------------------|
-| [**Countdown**](-wia-icollection-count.md)<br/> | Schreibgeschützt<br/> | Gibt die Anzahl der Elemente in der Auflistung zurück.<br/> |
+| [**Anzahl**](-wia-icollection-count.md)<br/> | Schreibgeschützt<br/> | Gibt die Anzahl der Elemente in der Auflistung zurück.<br/> |
 | [**Element**](-wia-icollection-item.md)<br/>   | Schreibgeschützt<br/> | Gibt das angegebene Element in der Auflistung zurück.<br/>    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-### <a name="creationaccess-functions"></a>Zugriffs Funktionen für die Erstellung \\
+### <a name="creationaccess-functions"></a>\\Erstellungszugriffsfunktionen
 
-Verwenden Sie eine der folgenden Informationen, um einen Verweis auf das-Objekt abzurufen:
+Verwenden Sie einen der folgenden , um einen Verweis auf das -Objekt abzurufen:
 
 
 
-[**Getitemsfromui**](-wia-iwiadispatchitem-getitemsfromui.md)
+[**GetItemsFromUI**](-wia-iwiadispatchitem-getitemsfromui.md)
 
 [**Children**](-wia-iwiadispatchitem-children.md)
 
@@ -69,9 +69,9 @@ Verwenden Sie eine der folgenden Informationen, um einen Verweis auf das-Objekt 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4,90 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 
 
 

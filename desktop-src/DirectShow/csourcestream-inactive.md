@@ -1,7 +1,7 @@
 ---
-description: 'Die inaktive Methode benachrichtigt die PIN, dass der Filter nicht mehr aktiv ist. Diese Methode überschreibt die cbasepin:: inaktive-Methode. Wenn der streamingingthread aktiv ist, beendet diese Methode ihn und wartet, bis der Thread beendet wird.'
+description: Die inaktive Methode benachrichtigt den Pin, dass der Filter nicht mehr aktiv ist. Diese Methode überschreibt die CBasePin::Inactive-Methode. Wenn der Streamingthread aktiv ist, beendet diese Methode ihn und wartet, bis der Thread beendet wird.
 ms.assetid: 82cf0f13-e563-4a0b-b2e1-25ab19f7ed78
-title: Csourcestream. inaktive-Methode (Source. h)
+title: CSourceStream.Inactive-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6c4fab336f5f06d932189ee991fd190d1ae42b27
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c9d9424f4299d7a07ad98010846fa917307bd38eead028b4b8c38c40e2284c1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119687370"
 ---
-# <a name="csourcestreaminactive-method"></a>Csourcestream. inaktive-Methode
+# <a name="csourcestreaminactive-method"></a>CSourceStream.Inactive-Methode
 
-Die- `Inactive` Methode benachrichtigt die PIN, dass der Filter nicht mehr aktiv ist. Diese Methode überschreibt die [**cbasepin:: inaktive**](cbasepin-inactive.md) -Methode. Wenn der streamingingthread aktiv ist, beendet diese Methode ihn und wartet, bis der Thread beendet wird.
+Die `Inactive` -Methode benachrichtigt den Pin, dass der Filter nicht mehr aktiv ist. Diese Methode überschreibt die [**CBasePin::Inactive-Methode.**](cbasepin-inactive.md) Wenn der Streamingthread aktiv ist, beendet diese Methode ihn und wartet, bis der Thread beendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK oder einen anderen **HRESULT** -Wert zurück.
+Gibt S \_ OK oder einen anderen **HRESULT-Wert** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt S \_ OK oder einen anderen **HRESULT** -Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt S \_ OK oder einen anderen **HRESULT** -Wert zurück.
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  

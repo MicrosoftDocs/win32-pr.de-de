@@ -1,11 +1,11 @@
 ---
 title: Query-Policy-BL-Attribut
-description: Liste aller Objekte, die Verweise auf eine bestimmte Abfrage Richtlinie enthalten.
+description: Liste aller Objekte, die Verweise auf eine bestimmte Abfragerichtlinie enthalten.
 ms.assetid: af421d00-2cc8-4ea1-8374-148db58c493b
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Abfrage-Policy-BL-Attribut
-- querypolicybl-Attribut, AD-Schema
+- AD-Schema des Query-Policy-BL-Attributs
+- queryPolicyBL-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 739abe3dbf67e5e8d154ef1424db81476f153858
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 27e576294a66dd896ec17ad3d0c9894c53824824ed89fff043d44093245850cd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343506"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119646949"
 ---
 # <a name="query-policy-bl-attribute"></a>Query-Policy-BL-Attribut
 
-Liste aller Objekte, die Verweise auf eine bestimmte Abfrage Richtlinie enthalten.
+Liste aller Objekte, die Verweise auf eine bestimmte Abfragerichtlinie enthalten.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | Abfrage-Richtlinie-BL                         |
-| LDAP-Display-Name | querypolicybl                           |
+| CN                | Query-Policy-BL                         |
+| Ldap-Anzeigename | queryPolicyBL                           |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.        |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.        |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.608                  |
 | System-ID-GUID    | e1aea404-cd5b-11d0-afff-0000f80367c1    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
@@ -43,7 +43,7 @@ Liste aller Objekte, die Verweise auf eine bestimmte Abfrage Richtlinie enthalte
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,11 +58,11 @@ Liste aller Objekte, die Verweise auf eine bestimmte Abfrage Richtlinie enthalte
 |------------------------|---------------------------------|
 | Link-ID                | 69                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -71,7 +71,7 @@ Liste aller Objekte, die Verweise auf eine bestimmte Abfrage Richtlinie enthalte
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,11 +79,11 @@ Liste aller Objekte, die Verweise auf eine bestimmte Abfrage Richtlinie enthalte
 |------------------------|---------------------------------|
 | Link-ID                | 69                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -100,11 +100,11 @@ Liste aller Objekte, die Verweise auf eine bestimmte Abfrage Richtlinie enthalte
 |------------------------|---------------------------------|
 | Link-ID                | 69                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -121,11 +121,11 @@ Liste aller Objekte, die Verweise auf eine bestimmte Abfrage Richtlinie enthalte
 |------------------------|---------------------------------|
 | Link-ID                | 69                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -142,11 +142,11 @@ Liste aller Objekte, die Verweise auf eine bestimmte Abfrage Richtlinie enthalte
 |------------------------|---------------------------------|
 | Link-ID                | 69                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -163,11 +163,11 @@ Liste aller Objekte, die Verweise auf eine bestimmte Abfrage Richtlinie enthalte
 |------------------------|---------------------------------|
 | Link-ID                | 69                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -184,11 +184,11 @@ Liste aller Objekte, die Verweise auf eine bestimmte Abfrage Richtlinie enthalte
 |------------------------|---------------------------------|
 | Link-ID                | 69                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

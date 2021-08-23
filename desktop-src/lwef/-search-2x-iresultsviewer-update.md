@@ -1,11 +1,11 @@
 ---
-title: Iresultsviewer-Aktualisierungs Methode (wdsview. h)
-description: Wendet alle Abfrage Änderungen an und navigiert die Ansicht zum neuen Resultset.
+title: IResultsViewer Update-Methode (WdsView.h)
+description: Wendet alle Abfrageänderungen an und navigiert in der Ansicht zum neuen Satz von Ergebnissen.
 ms.assetid: 3bcb4ac0-4a78-4051-bd2b-701d19c83602
 keywords:
-- Aktualisierungs Methode für ältere Windows-Umgebungs Features
-- Aktualisierungs Methode für ältere Windows-Umgebungs Features, iresultviewer-Schnittstelle
-- Iresultviewer-Schnittstelle ältere Windows-Umgebungs Features, Aktualisierungs Methode
+- Aktualisieren der Legacy-Windows-Umgebungsfeatures
+- Updatemethode Legacy Windows Environment Features , IResultsViewer-Schnittstelle
+- IResultsViewer-Schnittstelle Legacy Windows Environment Features , Update-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,19 +16,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c9c1bcd97ae2137ea66d215d3c17a314194d9e99
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: aba3598912ad548677da789b7bbdc730396e5881e0ac0670819c9db59136fa95
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119665790"
 ---
-# <a name="iresultsviewerupdate-method"></a>Iresulzviewer:: Update-Methode
+# <a name="iresultsviewerupdate-method"></a>IResultsViewer::Update-Methode
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [die Windows Search-API.](../search/-search-reference-entry-page.md) 
 
-Wendet alle Abfrage Änderungen an und navigiert die Ansicht zum neuen Resultset.
+Wendet alle Abfrageänderungen an und navigiert in der Ansicht zum neuen Satz von Ergebnissen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,8 +53,8 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wdsview. h</dt> </dl>   |
-| IDL<br/>    | <dl> <dt>Wdsview. idl</dt> </dl> |
+| Header<br/> | <dl> <dt>WdsView.h</dt> </dl>   |
+| Idl<br/>    | <dl> <dt>WdsView.idl</dt> </dl> |
 
 
 

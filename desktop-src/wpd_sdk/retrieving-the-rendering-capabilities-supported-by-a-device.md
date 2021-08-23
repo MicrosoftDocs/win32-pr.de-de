@@ -4,38 +4,38 @@ ms.assetid: 2332e3cc-087c-49cf-bde9-7f86f65158e7
 title: Abrufen der von einem Gerät unterstützten Renderingfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 523f1f9bbcaefe1c502c7c74252582fddcadad4b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e5b5e4fd09417585954ae205fc28fc8cf0e78ab02fdd3add616859b35b4237ae
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104349339"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119546230"
 ---
 # <a name="retrieving-the-rendering-capabilities-supported-by-a-device"></a>Abrufen der von einem Gerät unterstützten Renderingfunktionen
 
-Tragbare Windows-Geräte, die die Funktions Kategorie Renderinginformationen unterstützen ( \_ Renderinginformationen der WPD- \_ Funktionskategorie \_ ), \_ geben Renderinginformationen zurück, Die Renderinginformationen beschreiben die Anforderungen und Einschränkungen für Anwendungen, die versuchen, Inhalte auf ein Gerät zu schreiben.
+Windows Portable Geräte, die die Funktionale Kategorie für Renderinginformationen (WPD \_ FUNCTIONAL \_ CATEGORY RENDERING \_ INFORMATION) unterstützen, geben \_ Renderinginformationen zurück, wenn sie abgefragt werden. Die Renderinginformationen beschreiben Anforderungen und Einschränkungen, die für Anwendungen gelten, die versuchen, Inhalte auf ein Gerät zu schreiben.
 
-Die Funktion listrenderingcapabilityinformation, die Hilfsfunktion supportsfunctionalcategory und die Hilfsfunktion "leseprofileinformationproperties" im Modul "devicecapabili. cpp" veranschaulichen das Abrufen von Renderingfunktionen für ein ausgewähltes Gerät.
+Die ListRenderingCapabilityInformation-Funktion, die Hilfsfunktion SupportsFunctionalCategory und die Hilfsfunktion ReadProfileInformationProperties im Modul DeviceCapabilities.cpp veranschaulichen das Abrufen von Renderingfunktionen für ein ausgewähltes Gerät.
 
-Die Anwendung kann die von einem Gerät unterstützten Renderingfunktionen mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen abrufen.
+Ihre Anwendung kann die von einem Gerät unterstützten Renderingfunktionen mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen abrufen.
 
 
 
 | Schnittstelle                                                                                      | BESCHREIBUNG                                                 |
 |------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| [**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)                             | Bietet Zugriff auf die iportabledeviceproperties-Schnittstelle. |
-| [**Iportabledeviceproperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties)                       | Bietet Zugriff auf die Eigenschaften spezifischen Methoden.           |
-| [**Iportabledevicekeycollection-Schnittstelle**](iportabledevicekeycollection.md)                 | Wird verwendet, um die Eigenschafts Schlüssel für das angegebene Profil zu speichern.      |
-| [**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)                               | Wird verwendet, um die Eigenschaftswerte für das angegebene Profil zu speichern.       |
-| [**Iportabledebug-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities)                   | Wird verwendet, um die Eigenschaftswerte für das angegebene Profil zu speichern.       |
-| [**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Wird verwendet, um die Eigenschaftswerte für das angegebene Profil zu speichern.       |
-| [**Iportableabvicevaluescollection-Schnittstelle**](iportabledevicevaluescollection.md)           | Wird verwendet, um die Eigenschaftswerte für das angegebene Profil zu speichern.       |
+| [**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)                             | Ermöglicht den Zugriff auf die IPortableDeviceProperties-Schnittstelle. |
+| [**IPortableDeviceProperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties)                       | Ermöglicht den Zugriff auf die eigenschaftenspezifischen Methoden.           |
+| [**IPortableDeviceKeyCollection-Schnittstelle**](iportabledevicekeycollection.md)                 | Wird zum Speichern der Eigenschaftsschlüssel für das gegebene Profil verwendet.      |
+| [**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)                               | Wird verwendet, um die Eigenschaftswerte für das gegebene Profil zu speichern.       |
+| [**IPortableDeviceCapabilities-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities)                   | Wird verwendet, um die Eigenschaftswerte für das gegebene Profil zu speichern.       |
+| [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Wird verwendet, um die Eigenschaftswerte für das gegebene Profil zu speichern.       |
+| [**IPortableDeviceValuesCollection-Schnittstelle**](iportabledevicevaluescollection.md)           | Wird verwendet, um die Eigenschaftswerte für das gegebene Profil zu speichern.       |
 
 
 
  
 
-Eine der ersten Aufgaben, die von der Beispielanwendung durchgeführt werden, besteht darin, zu bestimmen, ob das ausgewählte Gerät Renderingfunktionen auflisten kann. Die supportsfunctionalcategory-Hilfsfunktion bestimmt, ob dies der Fall ist, indem die Hilfsfunktion listrenderingcapabilityinformation aufgerufen und \_ \_ \_ die Renderinginformationen der WPD-Funktionskategorie \_ als zweites Argument übergeben werden.
+Eine der ersten Aufgaben, die von der Beispielanwendung ausgeführt wird, besteht in der Ermittlung, ob das ausgewählte Gerät Renderingfunktionen auflisten kann. Die Hilfsfunktion SupportsFunctionalCategory bestimmt, ob dies der Fall ist, indem die ListRenderingCapabilityInformation-Hilfsfunktion aufruft und WPD FUNCTIONAL CATEGORY RENDERING INFORMATION als zweites Argument übergeben \_ \_ \_ \_ wird.
 
 
 ```C++
@@ -53,7 +53,7 @@ if (SupportsFunctionalCategory(pDevice, WPD_FUNCTIONAL_CATEGORY_RENDERING_INFORM
 
 
 
-Wenn das Gerät Renderingfunktionen auflisten kann, umfasst der nächste Schritt das Abrufen eines [**iportabledevicecapabili-**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities) Objekts und das Aufrufen der [**getfunctionalobjects**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecapabilities-getfunctionalobjects) -Methode zum Abrufen eines Objekt Bezeichners für das Rendering-Information-Objekt.
+Wenn das Gerät Renderingfunktionen auflisten kann, umfasst der nächste Schritt das Abrufen eines [**IPortableDeviceCapabilities-Objekts**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities) und das Aufrufen der [**GetFunctionalObjects-Methode,**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecapabilities-getfunctionalobjects) um einen Objektbezeichner für das Renderinginformationsobjekt abzurufen.
 
 
 ```C++
@@ -81,7 +81,7 @@ if (SUCCEEDED(hr))
 
 
 
-Der nächste Schritt besteht darin, den renderinformationsobjektbezeichner zu speichern, der soeben in einer Zeichen folgen Variablen ("straurenderinginfoobjectid") abgerufen wurde, und dann die Hilfsfunktion "Read profileinformationproperties" aufzurufen. (Die Variable "straurenderinginfoobjectid" wird als zweites Argument an die Hilfsfunktion übermittelt.)
+Der nächste Schritt besteht im Speichern des Renderinginformationsobjektbezeichners, der gerade in einer Zeichenfolgenvariablen (strRenderingInfoObjectID) abgerufen wurde, und anschließend zum Aufrufen der Hilfsfunktion ReadProfileInformationProperties. (Die Variable strRenderingInfoObjectID wird als zweites Argument an die Hilfsfunktion übergeben.)
 
 
 ```C++
@@ -120,7 +120,7 @@ if (SUCCEEDED(hr))
 
 
 
-Eine der ersten Aufgaben, die von der Hilfsfunktion durchgeführt werden, besteht darin, ein [**iportabledevicecontent**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent) -Objekt abzurufen, das für den Zugriff auf die Inhalts spezifischen Methoden verwendet wird.
+Eine der ersten Aufgaben, die von der Hilfsfunktion ausgeführt wird, ist das Abrufen eines [**IPortableDeviceContent-Objekts,**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent) das für den Zugriff auf die inhaltsspezifischen Methoden verwendet wird.
 
 
 ```C++
@@ -142,7 +142,7 @@ if (SUCCEEDED(hr))
 
 
 
-Als nächstes Ruft die Hilfsfunktion ein [**iportabledeviceproperties**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties) -Objekt ab, das für den Zugriff auf die Eigenschaften spezifischen Methoden verwendet wird.
+Als Nächstes ruft die Hilfsfunktion ein [**IPortableDeviceProperties-Objekt**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties) ab, das für den Zugriff auf die eigenschaftenspezifischen Methoden verwendet wird.
 
 
 ```C++
@@ -164,7 +164,7 @@ if (SUCCEEDED(hr))
 
 
 
-Der nächste Schritt ist das Erstellen eines [**iportabledevicekeycollection**](iportabledevicekeycollection.md) -Objekts, in das die Eigenschafts Schlüssel für die Renderinginformationen gespeichert werden. Nachdem das Objekt erstellt wurde, wird die [**iportabledevicekeycollection:: Add**](iportabledevicekeycollection-add.md) -Methode aufgerufen, um die erforderlichen Schlüssel hinzuzufügen. (Es ist notwendig, diese Schlüssel hinzuzufügen, damit die entsprechenden renderingprofile in den nachfolgenden Schritten abgerufen werden können.)
+Der nächste Schritt besteht im Erstellen eines [**IPortableDeviceKeyCollection-Objekts,**](iportabledevicekeycollection.md) in dem die Eigenschaftsschlüssel für die Renderinginformationen gespeichert werden. Nachdem das Objekt erstellt wurde, wird die [**IPortableDeviceKeyCollection::Add-Methode**](iportabledevicekeycollection-add.md) aufgerufen, um die erforderlichen Schlüssel hinzuzufügen. (Es ist erforderlich, diese Schlüssel hinzuzufügen, damit die entsprechenden Renderingprofile in den nachfolgenden Schritten abgerufen werden können.)
 
 
 ```C++
@@ -198,7 +198,7 @@ if (SUCCEEDED(hr))
 
 
 
-Der nächste Schritt besteht darin, die Eigenschaftswerte aus dem Gerätetreiber abzurufen, indem Sie die [**iportabledeviceproperties:: GetValues**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledeviceproperties-getvalues) -Methode aufrufen.
+Der nächste Schritt besteht im Abrufen der Eigenschaftswerte aus dem Gerätetreiber durch Aufrufen der [**IPortableDeviceProperties::GetValues-Methode.**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledeviceproperties-getvalues)
 
 
 ```C++
@@ -222,7 +222,7 @@ if (SUCCEEDED(hr))
 
 
 
-Im nächsten Schritt wird das Rendering-Information-Profil abgerufen und im pprenderinginf-files-Argument gespeichert.
+Im nächsten Schritt wird das Renderinginformationsprofil abgerufen und im Argument ppRenderingInfoProfiles gespeichert.
 
 
 ```C++
@@ -255,7 +255,7 @@ if (SUCCEEDED(hr))
 
 
 
-Nachdem die Hilfsfunktion die Eigenschaften der WPD- \_ Rendering- \_ Informations \_ profile gelesen hat, werden die renderingprofile angezeigt. Diese Profile werden durch die displayrenderingprofile-Hilfsfunktion angezeigt.
+Nachdem die Hilfsfunktion die WPD RENDERING INFORMATION PROFILES-Eigenschaften gelesen \_ \_ \_ hat, werden die Renderingprofile angezeigt. Diese Profile werden von der Hilfsfunktion DisplayRenderingProfile angezeigt.
 
 
 ```C++
@@ -341,28 +341,28 @@ void DisplayRenderingProfile(
 
 
 
-Beachten Sie Folgendes: da die renderingprofile statisch sind, kann die Anwendung die Profile lesen und lokal speichern (anstatt jedes Mal, wenn die Daten benötigt werden, auf das Gerät zuzugreifen).
+Da die Renderingprofile statisch sind, kann Ihre Anwendung die Profile lesen und lokal speichern (anstatt jedes Mal, wenn die Daten benötigt werden, auf das Gerät zu zugreifen).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
+[**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
 </dt> <dt>
 
-[**Iportabledebug-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities)
+[**IPortableDeviceCapabilities-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities)
 </dt> <dt>
 
-[**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
+[**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
 </dt> <dt>
 
-[**Iportabledevicekeycollection-Schnittstelle**](iportabledevicekeycollection.md)
+[**IPortableDeviceKeyCollection-Schnittstelle**](iportabledevicekeycollection.md)
 </dt> <dt>
 
-[**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
+[**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
 </dt> <dt>
 
-[**Iportableabvicevaluescollection-Schnittstelle**](iportabledevicevaluescollection.md)
+[**IPortableDeviceValuesCollection-Schnittstelle**](iportabledevicevaluescollection.md)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

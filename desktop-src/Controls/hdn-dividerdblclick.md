@@ -1,9 +1,9 @@
 ---
-title: HDN_DIVIDERDBLCLICK Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Header Steuer Elements, dass der Benutzer auf den unter Teiler des-Steuer Elements Doppel geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: HDN_DIVIDERDBLCLICK Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Headersteuerelements, dass der Benutzer auf den Unterteilerbereich des Steuerelements doppelklickt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: b722196a-23ae-49c3-b0a2-8fe0d1e33b26
 keywords:
-- Windows-Steuerelemente für HDN_DIVIDERDBLCLICK Benachrichtigungs
+- HDN_DIVIDERDBLCLICK Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0129096139a4d698f25de543a2628b473bfd66e2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0b9ba7e974ce9e3adac2b48815bfb9bba5273db8298bc9948164be5904dca8a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104041020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119544675"
 ---
-# <a name="hdn_dividerdblclick-notification-code"></a>Hdn \_ dividerdblclick-Benachrichtigungs Code
+# <a name="hdn_dividerdblclick-notification-code"></a>HDN \_ DIVIDERDBLCLICK-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Header Steuer Elements, dass der Benutzer auf den unter Teiler des-Steuer Elements Doppel geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Headersteuerelements, dass der Benutzer auf den Unterteilerbereich des Steuerelements doppelklickt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,7 +43,7 @@ HDN_DIVIDERDBLCLICK
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**NMHEADER**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) -Struktur, die Informationen über das Header Steuerelement und das Element enthält, auf das Doppel geklickt wurde.
+Ein Zeiger auf eine [**NMHEADER-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) die Informationen über das Headersteuerelement und das Element enthält, auf das doppelt geklickt wurde.
 
 </dd> </dl>
 
@@ -57,10 +57,10 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Hdn \_ Dividerdblclickw** (Unicode) und **Hdn \_ dividerdblclicka** (ANSI)<br/>   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **HDN \_ DIVIDERDBLCLICKW** (Unicode) und **HDN \_ DIVIDERDBLCLICKA** (ANSI)<br/>   |
 
 
 

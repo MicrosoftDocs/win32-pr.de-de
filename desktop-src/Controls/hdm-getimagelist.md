@@ -1,9 +1,9 @@
 ---
-title: HDM_GETIMAGELIST Meldung (kommstrg. h)
-description: Ruft das Handle für die Bildliste ab, die für ein vorhandenes Header Steuerelement festgelegt wurde. Sie können diese Nachricht explizit senden oder den Header \_ GetImageList oder das \_ getstateimagelist-Makro des Headers verwenden.
+title: HDM_GETIMAGELIST (Commctrl.h)
+description: Ruft das Handle für die Bildliste ab, die für ein vorhandenes Header-Steuerelement festgelegt wurde. Sie können diese Nachricht explizit senden oder das Header \_ GetImageList- oder Header \_ GetStateImageList-Makro verwenden.
 ms.assetid: 3e1a979c-60c5-4538-bd4d-16238829062e
 keywords:
-- Windows-Steuerelemente für HDM_GETIMAGELIST Meldung
+- HDM_GETIMAGELIST message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e199d603af873f1957d33855ccf5c59a90a4002
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8149dd4914ceb1835e9e04442492855e9c25340604ed4e4eeb2619c62b88e69f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119540910"
 ---
-# <a name="hdm_getimagelist-message"></a>HDM \_ GetImageList-Meldung
+# <a name="hdm_getimagelist-message"></a>HDM \_ GETIMAGELIST-Nachricht
 
-Ruft das Handle für die Bildliste ab, die für ein vorhandenes Header Steuerelement festgelegt wurde. Sie können diese Nachricht explizit senden oder den [**Header \_ GetImageList**](/windows/desktop/api/Commctrl/nf-commctrl-header_getimagelist) oder das [**\_ getstateimagelist**](/windows/desktop/api/Commctrl/nf-commctrl-header_getstateimagelist) -Makro des Headers verwenden.
+Ruft das Handle für die Bildliste ab, die für ein vorhandenes Header-Steuerelement festgelegt wurde. Sie können diese Nachricht explizit senden oder das [**Header \_ GetImageList-**](/windows/desktop/api/Commctrl/nf-commctrl-header_getimagelist) oder [**Header \_ GetStateImageList-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-header_getstateimagelist) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -31,8 +31,8 @@ Ruft das Handle für die Bildliste ab, die für ein vorhandenes Header Steuerele
 
 | Wert                                                                                                                                                      | Bedeutung                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| <span id="HDSIL_NORMAL"></span><span id="hdsil_normal"></span><dl> <dt>**hdsil \_ Normal**</dt> </dl> | Gibt an, dass es sich hierbei um eine normale Bildliste handelt.<br/> |
-| <span id="HDSIL_STATE"></span><span id="hdsil_state"></span><dl> <dt>**hdsil- \_ Status**</dt> </dl>    | Gibt an, dass es sich um eine Status Bild Liste handelt.<br/>  |
+| <span id="HDSIL_NORMAL"></span><span id="hdsil_normal"></span><dl> <dt>**HDSIL \_ NORMAL**</dt> </dl> | Gibt an, dass es sich um eine normale Bildliste handelt.<br/> |
+| <span id="HDSIL_STATE"></span><span id="hdsil_state"></span><dl> <dt>**HDSIL \_ STATE**</dt> </dl>    | Gibt an, dass es sich um eine Statusbildliste handelt.<br/>  |
 
 
 
@@ -45,7 +45,7 @@ Ruft das Handle für die Bildliste ab, die für ein vorhandenes Header Steuerele
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein Handle für die Bildliste zurück, die für das Header Steuerelement festgelegt ist.
+Gibt ein Handle für den Bildlistensatz für das Header-Steuerelement zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt ein Handle für die Bildliste zurück, die für das Header Steuerelement fe
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

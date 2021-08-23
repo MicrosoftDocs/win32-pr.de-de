@@ -1,11 +1,11 @@
 ---
-title: Inapserverinfo getnapserverinfo-Methode (napservermanagement. h)
+title: INapServerInfo GetNapServerInfo-Methode (NapServerManagement.h)
 description: Ruft Informationen zum NAP-Server ab.
 ms.assetid: 02f7ce40-3443-4263-86b2-4276cbc7b694
 keywords:
-- Getnapserverinfo-Methode NAP
-- Getnapserverinfo-Methode NAP, inapserverinfo-Schnittstelle
-- Inapserverinfo-Schnittstelle NAP, getnapserverinfo-Methode
+- NAP-Methode "GetNapServerInfo"
+- GetNapServerInfo-Methode NAP, INapServerInfo-Schnittstelle
+- INapServerInfo-Schnittstelle NAP, GetNapServerInfo-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b182b9e1a5c8d7974128b062fd284c5af3f060f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5eec9926e1a0bf94a1e3dac38c01a169d596c1c00bf032b8f6954f6331d5a4d4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119626130"
 ---
-# <a name="inapserverinfogetnapserverinfo-method"></a>Inapserverinfo:: getnapserverinfo-Methode
+# <a name="inapserverinfogetnapserverinfo-method"></a>INapServerInfo::GetNapServerInfo-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Mit der Methode **inapserverinfo:: getnapserverinfo** werden Informationen zum NAP-Server abgerufen.
+Die **INapServerInfo::GetNapServerInfo-Methode** ruft Informationen zum NAP-Server ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,38 +49,38 @@ HRESULT GetNapServerInfo(
 
 <dl> <dt>
 
-*Servername* \[ vorgenommen\]
+*serverName* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf eine [**zählstring**](/windows/win32/api/naptypes/ns-naptypes-countedstring) -Struktur, die den Servernamen enthält.
+Ein Zeiger auf einen Zeiger auf eine [**CountedString-Struktur,**](/windows/win32/api/naptypes/ns-naptypes-countedstring) die den Servernamen enthält.
 
 </dd> <dt>
 
-*Server Beschreibung* \[ vorgenommen\]
+*serverDescription* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf eine [**zählstring**](/windows/win32/api/naptypes/ns-naptypes-countedstring) -Struktur, die die Server Beschreibung enthält.
+Ein Zeiger auf einen Zeiger auf eine [**CountedString-Struktur,**](/windows/win32/api/naptypes/ns-naptypes-countedstring) die die Serverbeschreibung enthält.
 
 </dd> <dt>
 
-*ProtocolVersion* \[ vorgenommen\]
+*protocolVersion* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf eine [**zählstring**](/windows/win32/api/naptypes/ns-naptypes-countedstring) -Struktur, die die Protokollversion enthält.
+Ein Zeiger auf einen Zeiger auf eine [**CountedString-Struktur,**](/windows/win32/api/naptypes/ns-naptypes-countedstring) die die Protokollversion enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Vorgang erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
@@ -93,9 +93,9 @@ Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                               |
-| Header<br/>                   | <dl> <dt>Napservermanagement. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napservermanagement. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                               |
+| Header<br/>                   | <dl> <dt>NapServerManagement.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapServerManagement.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qsvrmgmt.dll</dt> </dl>            |
 
 
@@ -104,10 +104,10 @@ Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
 
 <dl> <dt>
 
-[**Inapserverinfo**](inapserverinfo.md)
+[**INapServerInfo**](inapserverinfo.md)
 </dt> <dt>
 
-[**"Zählzeichen Folge"**](/windows/win32/api/naptypes/ns-naptypes-countedstring)
+[**CountedString**](/windows/win32/api/naptypes/ns-naptypes-countedstring)
 </dt> </dl>
 
  
