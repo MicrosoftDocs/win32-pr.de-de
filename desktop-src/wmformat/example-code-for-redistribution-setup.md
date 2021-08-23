@@ -1,32 +1,32 @@
 ---
-title: Beispiel Code für die weitergabeeinrichtung
-description: Beispiel Code für die weitergabeeinrichtung
+title: Beispielcode für das Setup der Neuverteilung
+description: Beispielcode für das Setup der Neuverteilung
 ms.assetid: 480f0da7-68c1-4144-a623-47578ae54acb
 keywords:
-- Windows Media-Format-SDK, Software Verteilung
-- Advanced Systems Format (ASF), Software Verteilung
-- ASF (Advanced Systems Format), Software Verteilung
-- SDK für Windows Media-Format, Neuverteilung
-- Advanced Systems Format (ASF), Verteilung
-- ASF (Advanced Systems Format), Verteilung
-- Software Verteilung, Beispielcode
-- Software Verteilung, Codebeispiele
-- Neuverteilung, Beispielcode
-- Neuverteilung, Codebeispiele
+- Windows Medienformat-SDK, Softwareverteilung
+- Advanced Systems Format (ASF), Softwareverteilung
+- ASF (Advanced Systems Format), Softwareverteilung
+- Windows Medienformat-SDK, Neuverteilung
+- Advanced Systems Format (ASF), Redistribution
+- ASF (Advanced Systems Format), Redistribution
+- Softwareverteilung, Beispielcode
+- Softwareverteilung, Codebeispiele
+- Redistribution, Beispielcode
+- Redistribution, Codebeispiele
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d9990b617ed9c3492c0565b794798412f8e8373
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6a845f6c4ec66f2858756071a3e0260cb812c665a2b5b4effa063369bc894abc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855700"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119586070"
 ---
-# <a name="example-code-for-redistribution-setup"></a>Beispiel Code für die weitergabeeinrichtung
+# <a name="example-code-for-redistribution-setup"></a>Beispielcode für das Setup der Neuverteilung
 
-Wenn Sie das Verteilungs Paket in Ihre Anwendung einschließen, können Sie das/Q: A-Flag verwenden, wenn Sie das Verteilungs Paket in der Setup Routine aufrufen. Dadurch wird die Benutzeroberfläche (UI) unterdrückt.
+Wenn Sie das Weiterverteilungspaket in Ihre Anwendung einschließen, können Sie das /Q:A-Flag verwenden, wenn Sie das Weiterverteilungspaket in Ihrer Setuproutine aufrufen. Dadurch wird die Benutzeroberfläche unterdrückt.
 
-Der folgende Beispielcode kann in der Setup Routine verwendet werden, um die Verteilungs Pakete im stillen Modus auszuführen und die Setup Routine zu benachrichtigen, wenn der Computer neu gestartet werden muss.
+Der folgende Beispielcode kann in ihrer Setuproutine verwendet werden, um die Weiterverteilungspakete im stillen Modus auszuführen und die Setuproutine zu benachrichtigen, wenn der Computer neu gestartet werden muss.
 
 
 ```C++
@@ -211,12 +211,12 @@ BOOL SystemNeedsReboot( void )
 
 <dl> <dt>
 
-[**Software Verteilung**](software-redistribution.md)
+[**Softwareverteilung**](software-redistribution.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: MDM_AppLocker_CodeIntegrity03-Klasse
-description: Die MDM \_ AppLocker \_ CodeIntegrity03-Klasse definiert die Richtlinie für die Code Integrität.
+description: Die MDM \_ \_ AppLocker-Klasse CodeIntegrity03 definiert die Richtlinie für die Codeintegrität.
 ms.assetid: 8e7649b4-2e89-4d79-923e-3767e5b0ea52
 keywords:
 - MDM_AppLocker_CodeIntegrity03-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ff702f2887f47c1cc5fcebeb4b8ec9a08c450b8f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1e556ca99efa431d809dbdec3a468e16234eb67be2414e70052e999db5137bfb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741201"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119575230"
 ---
 # <a name="mdm_applocker_codeintegrity03-class"></a>MDM \_ AppLocker \_ CodeIntegrity03-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ AppLocker \_ CodeIntegrity03** -Klasse definiert die Richtlinie für die Code Integrität.
+Die **MDM \_ \_ AppLocker-Klasse CodeIntegrity03 definiert** die Richtlinie für die Codeintegrität.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,20 +46,20 @@ class MDM_AppLocker_CodeIntegrity03
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ AppLocker \_ CodeIntegrity03** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ AppLocker \_ CodeIntegrity03-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ AppLocker- \_ CodeIntegrity03** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ AppLocker \_ CodeIntegrity03-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -68,14 +68,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an.
+Identifiziert den Namen des übergeordneten Knotens.
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -88,16 +88,16 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 </dd> <dt>
 
-[**Policy**](/windows/client-management/mdm/applocker-csp)
+[**Richtlinie**](/windows/client-management/mdm/applocker-csp)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-**Qualifizierer: octetstring**
+Qualifizierer: **Oktettzeichenfolge**
 </dt> </dl>
 
 </dd> </dl>
@@ -108,10 +108,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -120,7 +120,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

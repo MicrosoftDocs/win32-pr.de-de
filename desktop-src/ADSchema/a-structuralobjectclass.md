@@ -1,11 +1,11 @@
 ---
-title: Strukturgeschütztes Objektklassen Attribut
-description: Dieses konstruierte Attribut speichert eine Liste der Klassen, die in einer Klassenhierarchie enthalten sind, einschließlich abstrakter Klassen. Diese Liste enthält dynamisch verknüpfte Hilfsklassen.
+title: Structural-Object-Class-Attribut
+description: Dieses konstruierte Attribut speichert eine Liste von Klassen, die in einer Klassenhierarchie enthalten sind, einschließlich abstrakter Klassen. Diese Liste enthält dynamisch verknüpfte Hilfsklassen.
 ms.assetid: f7311cb9-4816-4caa-9cae-cbcd61b93d27
 ms.tgt_platform: multiple
 keywords:
-- Struktur-Objektklassen Attribut AD-Schema
-- StructuralObjectClass-Attribut, AD-Schema
+- AD-Schema des Structural-Object-Class-Attributs
+- structuralObjectClass-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,42 +14,42 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cdcc236c0c65aa365400894dd6ccfb845af04b55
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 12e6eb52e59ebb2c7a840235bf7a2529b567c4909f0338670738901fea91f183
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119645500"
 ---
-# <a name="structural-object-class-attribute"></a>Strukturgeschütztes Objektklassen Attribut
+# <a name="structural-object-class-attribute"></a>Structural-Object-Class-Attribut
 
-Dieses konstruierte Attribut speichert eine Liste der Klassen, die in einer Klassenhierarchie enthalten sind, einschließlich abstrakter Klassen. Diese Liste enthält dynamisch verknüpfte Hilfsklassen.
+Dieses konstruierte Attribut speichert eine Liste von Klassen, die in einer Klassenhierarchie enthalten sind, einschließlich abstrakter Klassen. Diese Liste enthält dynamisch verknüpfte Hilfsklassen.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------------------------------|
-| CN                | Struktur-Objekt-Klasse                                         |
-| LDAP-Display-Name | StructuralObjectClass                                           |
+| CN                | Structural-Object-Class                                         |
+| Ldap-Anzeigename | structuralObjectClass                                           |
 | Size              | \-                                                              |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.                                |
-| Aktualisierungshäufigkeit  | Bei der Klassen Erstellung.                                              |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.                                |
+| Updatehäufigkeit  | Bei der Klassenerstellung.                                              |
 | Attribute-Id      | 2.5.21.9                                                        |
-| System-ID-GUID    | 3860949b38-9950-81ecb6bc2982                            |
+| System-ID-GUID    | 3860949f-f6a8-4b38-9950-81ecb6bc2982                            |
 | Syntax            | [**String(Object-Identifier)**](s-string-object-identifier.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -58,10 +58,10 @@ Dieses konstruierte Attribut speichert eine Liste der Klassen, die in einer Klas
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -79,10 +79,10 @@ Dieses konstruierte Attribut speichert eine Liste der Klassen, die in einer Klas
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -100,10 +100,10 @@ Dieses konstruierte Attribut speichert eine Liste der Klassen, die in einer Klas
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -121,10 +121,10 @@ Dieses konstruierte Attribut speichert eine Liste der Klassen, die in einer Klas
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -142,10 +142,10 @@ Dieses konstruierte Attribut speichert eine Liste der Klassen, die in einer Klas
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -163,10 +163,10 @@ Dieses konstruierte Attribut speichert eine Liste der Klassen, die in einer Klas
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

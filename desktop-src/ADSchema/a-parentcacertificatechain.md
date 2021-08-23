@@ -1,11 +1,11 @@
 ---
 title: Parent-CA-Certificate-Chain-Attribut
-description: Der-codiertes X. 509v3-Zertifikat für die übergeordnete Zertifizierungsstelle.
+description: DER-codiertes X.509v3-Zertifikat für die übergeordnete Zertifizierungsstelle.
 ms.assetid: 37e04c7b-5350-4e48-b3fd-22f97959d26a
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für übergeordnete Zertifizierungsstellen-Zertifikat Kette
-- cschema für das Attribut "centcacertificatechain"
+- AD-Schema des Attributs "Parent-CA-Certificate-Chain"
+- parentCACertificateChain-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 62f27bacb77fb7ab3f1ae712920dace7cb525efc
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 0e70d168bc9a16bffe1a0675c04d335c27ffeff89f53937b1507b01ce41486f5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479975"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119647820"
 ---
 # <a name="parent-ca-certificate-chain-attribute"></a>Parent-CA-Certificate-Chain-Attribut
 
-Der-codiertes X. 509v3-Zertifikat für die übergeordnete Zertifizierungsstelle.
+DER-codiertes X.509v3-Zertifikat für die übergeordnete Zertifizierungsstelle.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | Übergeordnete Zertifizierungsstellen-Zertifikat Kette                           |
-| LDAP-Display-Name | parametricacertificatechain                              |
+| CN                | Parent-CA-Certificate-Chain                           |
+| Ldap-Anzeigename | parentCACertificateChain                              |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.685                                |
-| System-ID-GUID    | 963d2733-48be-11d1-a9c3-0000 C1                  |
+| System-Id-Guid    | 963d2733-48be-11d1-a9c3-0000f80367c1                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Der-codiertes X. 509v3-Zertifikat für die übergeordnete Zertifizierungsstelle.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Der-codiertes X. 509v3-Zertifikat für die übergeordnete Zertifizierungsstelle.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | Richtig                                                                   |
+| Is-Single-Valued       | True                                                                   |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -70,7 +70,7 @@ Der-codiertes X. 509v3-Zertifikat für die übergeordnete Zertifizierungsstelle.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Der-codiertes X. 509v3-Zertifikat für die übergeordnete Zertifizierungsstelle.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | Richtig                                                                   |
+| Is-Single-Valued       | True                                                                   |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -100,10 +100,10 @@ Der-codiertes X. 509v3-Zertifikat für die übergeordnete Zertifizierungsstelle.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | Richtig                                                                   |
+| Is-Single-Valued       | True                                                                   |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -121,10 +121,10 @@ Der-codiertes X. 509v3-Zertifikat für die übergeordnete Zertifizierungsstelle.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | Richtig                                                                   |
+| Ist einwertig       | True                                                                   |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -142,10 +142,10 @@ Der-codiertes X. 509v3-Zertifikat für die übergeordnete Zertifizierungsstelle.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | Richtig                                                                   |
+| Ist einwertig       | True                                                                   |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -163,10 +163,10 @@ Der-codiertes X. 509v3-Zertifikat für die übergeordnete Zertifizierungsstelle.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | Richtig                                                                   |
+| Ist einwertig       | True                                                                   |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |

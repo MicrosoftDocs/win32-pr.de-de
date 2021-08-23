@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - Wiadefd.h
-ms.openlocfilehash: ad7b08f5396a7a6e9b1f74df3dd409303b2d548d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e20b8689e71031024c46451d3079450061e8112acf1052c12129b89ed9e0a23c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108104268"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119451200"
 ---
 # <a name="devicedialogdata-structure"></a>DEVICEDIALOGDATA-Struktur
 
@@ -92,8 +92,8 @@ Gibt einen Satz von Flags an, die den Vorgang des Dialogfelds steuern. Kann auf 
 | Flag                                 | Bedeutung                                                                                                                                                                                     |
 |--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0                                    | Standardverhalten.                                                                                                                                                                           |
-| \_WIA-GERÄTEDIALOGFELD \_ \_ – \_ EINZELNES IMAGE   | Beschränken Sie die Bildauswahl auf ein einzelnes Bild im Dialogfeld "Gerätebilderfassung".                                                                                                      |
-| DIALOGFELD \_ "WIA-GERÄT" \_ VERWENDEN DER ALLGEMEINEN \_ \_ \_ BENUTZEROBERFLÄCHE | Verwenden Sie die Systembenutzeroberfläche (falls verfügbar) anstelle der vom Anbieter bereitgestellten Benutzeroberfläche. Wenn die Systembenutzeroberfläche nicht verfügbar ist, wird die Benutzeroberfläche des Anbieters verwendet. Wenn keine der Benutzeroberflächen verfügbar ist, gibt die Funktion E \_ NOTIMPL zurück. |
+| \_WIA-GERÄTEDIALOGFELD \_ \_ – \_ EINZELBILD   | Beschränken Sie die Bildauswahl auf ein einzelnes Bild im Dialogfeld zum Erfassen von Geräteimages.                                                                                                      |
+| \_WIA DEVICE \_ DIALOG USE COMMON UI (WIA-GERÄTEDIALOGFELD: \_ ALLGEMEINE \_ BENUTZEROBERFLÄCHE VERWENDEN) \_ | Verwenden Sie ggf. die Systembenutzeroberfläche anstelle der vom Anbieter bereitgestellten Benutzeroberfläche. Wenn die Systemoberfläche nicht verfügbar ist, wird die Benutzeroberfläche des Anbieters verwendet. Wenn keine Benutzeroberfläche verfügbar ist, gibt die Funktion E \_ NOTIMPL zurück. |
 
 
 
@@ -138,10 +138,10 @@ Empfängt die Adresse eines Arrays von Zeigern auf [**IWiaItem-Schnittstellen.**
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
 | Header<br/>                   | <dl> <dt>Wiadefd.h</dt> </dl> |
 
 

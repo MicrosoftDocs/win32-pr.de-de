@@ -1,9 +1,9 @@
 ---
-title: ICM_DRAW_SETTIME Meldung (VFW. h)
-description: Der ICM \_ Draw \_ setTime stellt Synchronisierungs Informationen für einen renderingtreiber bereit, der die zeitliche Steuerung von Zeichnungs Frames behandelt.
+title: ICM_DRAW_SETTIME-Nachricht (Vfw.h)
+description: Der ICM \_ DRAW \_ SETTIME stellt Synchronisierungsinformationen für einen Renderingtreiber bereit, der die Zeitsteuerung von Zeichnungsframes verarbeitet.
 ms.assetid: 211e8ecc-ef36-4598-aa1d-cb0a06e64f14
 keywords:
-- ICM_DRAW_SETTIME-Nachricht (Multimedia)
+- ICM_DRAW_SETTIME nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5ce1e37709477ba6080219e5225b3fde02dfed75
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 62c291b736b0138386c235703c29fffdae470d011f55284e8aaac4c4cfd604a4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858810"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119691140"
 ---
-# <a name="icm_draw_settime-message"></a>ICM \_ Draw- \_ setTime-Meldung
+# <a name="icm_draw_settime-message"></a>\_ICM DRAW \_ SETTIME-Nachricht
 
-Der **ICM \_ Draw \_ setTime** stellt Synchronisierungs Informationen für einen renderingtreiber bereit, der die zeitliche Steuerung von Zeichnungs Frames behandelt. Die Synchronisierungs Informationen sind die Beispiel Nummer des Frames, der gezeichnet werden soll. Sie können diese Nachricht explizit oder mithilfe des [**icdrawsettime**](/windows/desktop/api/Vfw/nf-vfw-icdrawsettime) -Makros senden.
+Der **ICM \_ DRAW \_ SETTIME** stellt Synchronisierungsinformationen für einen Renderingtreiber bereit, der die Zeitsteuerung von Zeichnungsframes verarbeitet. Die Synchronisierungsinformationen sind die Beispielnummer des zu zeichnende Frames. Sie können diese Nachricht explizit oder mithilfe des [**ICDrawSetTime-Makros**](/windows/desktop/api/Vfw/nf-vfw-icdrawsettime) senden.
 
 
 ```C++
@@ -38,22 +38,22 @@ lParam = 0;
 
 <dl> <dt>
 
-<span id="lpTime"></span><span id="lptime"></span><span id="LPTIME"></span>*lptime*
+<span id="lpTime"></span><span id="lptime"></span><span id="LPTIME"></span>*lpTime*
 </dt> <dd>
 
-Die Stichproben Nummer des zu Rendering enden Frames.
+Beispielnummer des zu rendernde Rahmens.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei erfolgreicher Ausführung von ICERR \_ OK oder andernfalls einen Fehler zurück.
+Gibt ICERR \_ OK zurück, wenn erfolgreich, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Normalerweise vergleicht der Treiber den angegebenen Wert mit der dem Zeitpunkt der internen Uhr zugeordneten Frame Nummer und versucht, die beiden zu synchronisieren, wenn der Unterschied signifikant ist.
+In der Regel vergleicht der Treiber den angegebenen Wert mit der Framenummer, die der Zeit seiner internen Uhr zugeordnet ist, und versucht, die beiden zu synchronisieren, wenn der Unterschied signifikant ist.
 
-Verwenden Sie diese Meldung, wenn die Hardware eine eigene asynchrone Dekomprimierung, zeitliche Steuerung und Zeichnung ausführt und die Hardware auf einem externen Synchronisierungs Signal basiert (die Hardware wird nicht als Synchronisierungs Master verwendet).
+Verwenden Sie diese Meldung, wenn die Hardware eine eigene asynchrone Dekomprimierung, zeitliche Steuerung und Zeichnung ausführt und die Hardware von einem externen Synchronisierungssignal abhängig ist (die Hardware wird nicht als Synchronisierungsmaster verwendet).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Verwenden Sie diese Meldung, wenn die Hardware eine eigene asynchrone Dekomprimi
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Verwenden Sie diese Meldung, wenn die Hardware eine eigene asynchrone Dekomprimi
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

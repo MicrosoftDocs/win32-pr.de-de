@@ -1,37 +1,37 @@
 ---
-title: Verwenden von System Profilen
-description: Verwenden von System Profilen
+title: Verwenden von Systemprofilen
+description: Verwenden von Systemprofilen
 ms.assetid: 4e0f3a40-68d6-452e-8e6a-c9e79504ccb6
 keywords:
-- Windows Media-Format-SDK, Systemprofile
-- Profile, System
-- Systemprofile, Informationen zu
+- Windows Medienformat-SDK, Systemprofile
+- Profile,System
+- Systemprofile,Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb3fe9d9b3c11056e5fcf9ad6287225019c6db47
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cf7fd0a1107b302df70ea7f66c0eb562ab4e3e0ce0cdcb814d5a356af9abe017
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856339"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119585220"
 ---
-# <a name="using-system-profiles"></a>Verwenden von System Profilen
+# <a name="using-system-profiles"></a>Verwenden von Systemprofilen
 
-Die im Windows Media-Format-SDK enthaltenen Systemprofile wurden so entworfen, dass Sie die grundlegenden Anforderungen digitaler Medieninhalte abdecken, die aus Audiodaten und Videos bestehen. Aufgrund der zahlreichen Features, die jetzt verfügbar sind, und der zugehörigen Zunahme möglicher digitaler Medien Szenarien wurden Systemprofile hervorgehoben. Der aktuellste Satz von Systemprofilen nutzt die Windows Media-Codecs der Version 8, die mit Windows XP veröffentlicht wurden. Obwohl die neuesten Versionen der Codecs nicht unterstützt werden, sind die Systemprofile ein hervorragender Ausgangspunkt für die Erstellung von Profilen, die Ihren Anforderungen entsprechen.
+Die systemprofile, die im Windows Media Format SDK enthalten sind, wurden für die grundlegenden Anforderungen digitaler Medieninhalte konzipiert, die aus Audio und Video bestehen. Aufgrund der vielzahl der jetzt verfügbaren Features und der damit verbundenen Zunahme möglicher Szenarien für digitale Medien wurden Systemprofile deemphiert. Die neuesten Systemprofile verwenden Version 8 Windows Mediencodecs, die mit xp Windows wurden. Obwohl die neueste Version der Codecs nicht unterstützt wird, sind die Systemprofile ein hervorragender Ausgangspunkt für die Erstellung von Profilen, die Ihren Anforderungen entsprechen.
 
-In den folgenden Themen wird beschrieben, wie Systemprofile als Grundlage für Ihre ASF-Dateien verwendet werden.
+In den folgenden Themen wird beschrieben, wie Sie Systemprofile als Grundlage für Ihre ASF-Dateien verwenden.
 
 
 
 | **Bereich**                                                                          | **Beschreibung**                                                  |
 |--------------------------------------------------------------------------------------|------------------------------------------------------------------|
-| [So ändern Sie System Profil Versionen](to-change-system-profile-versions.md)           | Hier wird beschrieben, wie Sie auf ältere Systemprofile zugreifen.                   |
-| [So laden Sie ein System Profil](to-load-a-system-profile.md)                             | Beschreibt, wie ein Systemprofil in ein Profil Objekt geladen wird.    |
-| [Arbeiten mit lokalisierten System Profilen](working-with-localized-system-profiles.md) | Beschreibt das Arbeiten mit Systemprofilen in verschiedenen Sprachen. |
+| [So ändern Sie systemprofilversionen](to-change-system-profile-versions.md)           | Beschreibt den Zugriff auf ältere Systemprofile.                   |
+| [So laden Sie ein Systemprofil](to-load-a-system-profile.md)                             | Beschreibt, wie ein Systemprofil in ein Profilobjekt geladen wird.    |
+| [Arbeiten mit lokalisierten Systemprofilen](working-with-localized-system-profiles.md) | Beschreibt das Arbeiten mit Systemprofilen in verschiedenen Sprachen. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -40,9 +40,9 @@ In den folgenden Themen wird beschrieben, wie Systemprofile als Grundlage für I
 [**Arbeiten mit Profilen**](working-with-profiles.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

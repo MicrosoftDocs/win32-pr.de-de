@@ -13,7 +13,7 @@ ms.locfileid: "119691450"
 ---
 # <a name="detecting-kernel-mode-callbacks"></a>Erkennen Kernel-Mode Rückrufe
 
-Der größte Teil des Codes für Windows Betriebssystem wird im Kernelmodus ausgeführt. Der Prozessormodus wechselt vom Benutzermodus in den Kernelmodus, wenn ein Anwendungsthread eine Funktion von der Windows-API aufruft, die wiederum eine interne Systemfunktion aufruft, die im Kernelmodus ausgeführt werden muss. Der Prozessormodus kehrt in den Benutzermodus zurück, bevor die Steuerung zur Funktion zurückkehrt, damit die Systemdaten geschützt werden.
+Der größte Teil des Codes für das Windows wird im Kernelmodus ausgeführt. Der Prozessormodus wechselt vom Benutzermodus in den Kernelmodus, wenn ein Anwendungsthread eine Funktion von der Windows-API aufruft, die wiederum eine interne Systemfunktion aufruft, die im Kernelmodus ausgeführt werden muss. Der Prozessormodus kehrt in den Benutzermodus zurück, bevor die Steuerung zur Funktion zurückkehrt, damit die Systemdaten geschützt werden.
 
 Wenn ein Thread auf den Abschluss eines Rückrufs im Kernelmodus wartet, verzögert sich die Benutzermodusseite des Threads bei einem Aufruf der **ZwCallbackReturn-Funktion.**
 

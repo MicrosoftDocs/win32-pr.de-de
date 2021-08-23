@@ -1,12 +1,12 @@
 ---
-title: Iremotedesktopclientevents onnetworkstatuschangi-Methode
-description: Wird aufgerufen, wenn sich der Netzwerkstatus geändert hat. | Iremotedesktopclientevents onnetworkstatuschangi-Methode
+title: IRemoteDesktopClientEvents OnNetworkStatusChanged-Methode
+description: Wird aufgerufen, wenn sich der Netzwerkstatus geändert hat. | IRemoteDesktopClientEvents OnNetworkStatusChanged-Methode
 ms.assetid: B68D1AA0-6403-40CA-95C5-BBBF39CEFFD8
 ms.tgt_platform: multiple
 keywords:
-- Onnetworkstatuschangi-Methode Remotedesktopdienste
-- Onnetworkstatuschangi-Methode Remotedesktopdienste, iremotedesktopclientevents-Schnittstelle
-- Iremotedesktopclientevents-Schnittstelle Remotedesktopdienste, onnetworkstatuschangi-Methode
+- OnNetworkStatusChanged-Remotedesktopdienste
+- OnNetworkStatusChanged-Remotedesktopdienste , IRemoteDesktopClientEvents-Schnittstelle
+- IRemoteDesktopClientEvents-Schnittstelle Remotedesktopdienste , OnNetworkStatusChanged-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: de64d8b16ea9acf9defc976d4baa91afd64f8fa7
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 96d14519f5da78a0d42b5bd7e52abf790c21406bfe20848235d2639beed2e215
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104530662"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119515110"
 ---
-# <a name="iremotedesktopclienteventsonnetworkstatuschanged-method"></a>Iremotedesktopclientevents:: onnetworkstatuschangi-Methode
+# <a name="iremotedesktopclienteventsonnetworkstatuschanged-method"></a>IRemoteDesktopClientEvents::OnNetworkStatusChanged-Methode
 
 Wird aufgerufen, wenn sich der Netzwerkstatus geändert hat.
 
@@ -45,10 +45,10 @@ void OnNetworkStatusChanged(
 
 <dl> <dt>
 
-*qualitylevel* \[ in\]
+*qualityLevel* \[ In\]
 </dt> <dd>
 
-Die neue Qualitätsstufe der Verbindung. Die Qualitätsstufe wird von den Werten für Bandbreite und Roundtrip-Zeit (RTT) bestimmt.
+Die neue Qualitätsstufe der Verbindung. Der Qualitätsgrad wird anhand der Werte für Bandbreite und Roundtripzeit (rtt) bestimmt.
 
 Einer der folgenden Werte.
 
@@ -56,8 +56,8 @@ Einer der folgenden Werte.
 
 | Wert                                                                        | Bedeutung                                                     |
 |------------------------------------------------------------------------------|-------------------------------------------------------------|
-| <dl> <dt>0</dt> </dl> | Die Qualitätsstufe konnte nicht bestimmt werden.<br/>       |
-| <dl> <dt>1</dt> </dl> | Die Verbindungsqualität ist "schlecht" (ein Balken).<br/>        |
+| <dl> <dt>0</dt> </dl> | Der Qualitätsgrad konnte nicht bestimmt werden.<br/>       |
+| <dl> <dt>1</dt> </dl> | Die Verbindungsqualität ist schlecht (ein Balken).<br/>        |
 | <dl> <dt>2</dt> </dl> | Die Verbindungsqualität ist fair (zwei Balken).<br/>       |
 | <dl> <dt>3</dt> </dl> | Die Verbindungsqualität ist gut (drei Balken).<br/>     |
 | <dl> <dt>4</dt> </dl> | Die Verbindungsqualität ist hervorragend (vier Balken).<br/> |
@@ -68,17 +68,17 @@ Einer der folgenden Werte.
 
 </dd> <dt>
 
-*Bandbreite* \[ in\]
+*Bandbreite* \[ In\]
 </dt> <dd>
 
-Gibt die neue Verbindungs Bandbreite in Kbit pro Sekunde (Kbit/s) an.
+Gibt die neue Verbindungsbandbreite in Kilobits pro Sekunde (KBit/s) an.
 
 </dd> <dt>
 
-*RTT* \[ in\]
+*rtt* \[ In\]
 </dt> <dd>
 
-Gibt die neue Roundtripzeit der Verbindung (Latenzzeit) in Millisekunden an.
+Gibt die neue Verbindungsrundtripzeit (Latenz) in Millisekunden an.
 
 </dd> </dl>
 
@@ -96,7 +96,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                 |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>         |
-| IID<br/>                      | Diid \_ iremotedesktopclientevents ist als 079863b7-6d47-4105-8bfe-0cdcb360e67d definiert.<br/> |
+| IID<br/>                      | DIID \_ IRemoteDesktopClientEvents ist als 079863B7-6D47-4105-8BFE-0CDCB360E67D definiert.<br/> |
 
 
 
@@ -104,7 +104,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Iremotedesktopclientevents**](iremotedesktopclientevents.md)
+[**IRemoteDesktopClientEvents**](iremotedesktopclientevents.md)
 </dt> </dl>
 
  

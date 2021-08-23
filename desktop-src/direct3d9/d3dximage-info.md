@@ -1,7 +1,7 @@
 ---
-description: 'D3DXIMAGE_INFO-Struktur: Gibt eine Beschreibung des ursprünglichen Inhalts einer Bilddatei zurück.'
+description: 'D3DXIMAGE_INFO struktur: Gibt eine Beschreibung des ursprünglichen Inhalts einer Bilddatei zurück.'
 ms.assetid: d6cbd5b7-642e-43ce-a2ed-11a400c5bdc1
-title: D3DXIMAGE_INFO-Struktur (D3dx9tex.h)
+title: D3DXIMAGE_INFO -Struktur (D3dx9tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9tex.h
-ms.openlocfilehash: be70cc88645e0aac6734907c6a97f2d4bb104c99
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ede879b288569b503257abeb189d93316ed2bd96dd4db99f6e22f32bbb4f98b1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108090538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119607820"
 ---
 # <a name="d3dximage_info-structure"></a>D3DXIMAGE \_ INFO-Struktur
 
@@ -85,7 +85,7 @@ Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl der MIP-Ebenen im ursprünglichen Bild.
+Anzahl der MIP-Ebenen im originalen Bild.
 
 </dd> <dt>
 
@@ -96,7 +96,7 @@ Typ: **[D3DFORMAT](d3dformat.md)**
 
 </dd> <dd>
 
-Ein Wert aus dem [D3DFORMAT-Enumerationstyp,](d3dformat.md) der die Daten im ursprünglichen Bild am genauesten beschreibt.
+Ein Wert aus dem [aufzählten D3DFORMAT-Typ,](d3dformat.md) der die Daten im ursprünglichen Bild am besten beschreibt.
 
 </dd> <dt>
 
@@ -107,7 +107,7 @@ Typ: **[ **D3DRESOURCETYPE**](./d3dresourcetype.md)**
 
 </dd> <dd>
 
-Stellt den Typ der in der Datei gespeicherten Textur dar. Dabei handelt es sich entweder um D3DRTYPE \_ TEXTURE, D3DRTYPE \_ VOLUMETEXTURE oder D3DRTYPE \_ CubeTexture.
+Stellt den Typ der in der Datei gespeicherten Textur dar. Dies ist entweder D3DRTYPE \_ TEXTURE, D3DRTYPE \_ VOLUMETEXTURE oder D3DRTYPE \_ CubeTexture.
 
 </dd> <dt>
 
@@ -126,7 +126,7 @@ Stellt das Format der Bilddatei dar.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3dx9tex.h</dt> </dl> |
 

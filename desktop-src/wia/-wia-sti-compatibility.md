@@ -1,19 +1,19 @@
 ---
-description: Die Architektur der Windows-Abbild Beschaffung (WIA) basiert auf der Grundlage der noch nicht Bildarchitektur (STI) eingerichteten Grundlage.
+description: Die Windows Image Acquisition (WIA)-Architektur basiert auf der Grundlage der Still Image Architecture (STI).
 ms.assetid: 4ce9c1e4-02e1-4584-9cc1-37f691102cc2
 title: STI-Kompatibilität
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d2246ba3f74d1ff7bcc59ecaf06ccf0c085b2e4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 00d456f827bcac1b32d71318b1e6b5a9bc3e92a0ee802ce4658f951dc1e51528
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350452"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119549610"
 ---
 # <a name="sti-compatibility"></a>STI-Kompatibilität
 
-Die Architektur der Windows-Abbild Beschaffung (WIA) basiert auf der Grundlage der noch nicht Bildarchitektur (STI) eingerichteten Grundlage. WIA-Gerätetreiber werden mit dem Modell des Benutzermodus-Treibers von STI (USD) kompatibel sein. Der ursprüngliche Zweck von USD ist die Unterstützung von TWAIN-Datenquellen und anderen APIs. WIA-Treiber unterstützen jedoch die neue WIA-Anwendungs Schnittstelle.
+Die Windows Image Acquisition (WIA)-Architektur basiert auf der Grundlage der Still Image Architecture (STI). WIA-Gerätetreiber werden mit dem STI-Modell Benutzermodustreiber (USD) kompatibel sein. Obwohl der ursprüngliche Zweck von USD die Unterstützung von TWAIN-Datenquellen und anderen APIs ist, unterstützen WIA-Treiber die neue WIA-Anwendungsschnittstelle.
 
  
 

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 8304184f3323feb92a14b523dc629c6ae45f6a85
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: abf157a8a539d98c5b75826e4568df7c3209a0efc2dab49f6487250dd08ae391
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119707370"
 ---
 # <a name="iportabledevicevaluescollectiongetcount-method"></a>IPortableDeviceValuesCollection::GetCount-Methode
 
@@ -49,14 +49,14 @@ Zeiger auf ein **DWORD,** das die Anzahl der **IPortableDeviceValues-Schnittstel
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die -Methode gibt ein **HRESULT zurück.** Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                                          |
 |-------------------------------------------------------------------------------------------|------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Die Methode wurde erfolgreich ausgeführt.<br/>                     |
-| <dl> <dt>**\_E-ZEIGER**</dt> </dl> | Ein erforderliches Zeigerargument war **NULL.**<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl> | Ein erforderliches Zeigerargument war **NULL.**<br/> |
 
 
 
@@ -66,14 +66,14 @@ Die -Methode gibt ein **HRESULT zurück.** Mögliches Werte (aber nicht die Einz
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

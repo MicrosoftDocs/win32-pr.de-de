@@ -1,7 +1,7 @@
 ---
-description: Die onstopstreaming-Methode wird am Ende des Streamings aufgerufen, um die Zeit für den Bericht der Eigenschaften Seite zu korrigieren.
+description: Die OnStopStreaming-Methode wird am Ende des Streamings aufgerufen, um die Zeiten für den Eigenschaftenseitenbericht zu korrigieren.
 ms.assetid: 92174edb-2f6c-4bad-91c5-769aaebcc495
-title: Cbasevideorenderer. onstopstreaming-Methode (renbase. h)
+title: CBaseVideoRenderer.OnStopStreaming-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 08cf23fd2e1a7e854625d8a369d15290591386fe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 38e1e3fef83bab4d598cfd36294c5c405c1eca938372b43f12a6401c4be3c46b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368312"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119586040"
 ---
-# <a name="cbasevideorendereronstopstreaming-method"></a>Cbasevideorenderer. onstopstreaming-Methode
+# <a name="cbasevideorendereronstopstreaming-method"></a>CBaseVideoRenderer.OnStopStreaming-Methode
 
-Die- `OnStopStreaming` Methode wird am Ende des Streamings aufgerufen, um die Zeit für den Bericht der Eigenschaften Seite zu korrigieren.
+Die `OnStopStreaming` -Methode wird am Ende des Streamings aufgerufen, um die Zeiten für den Eigenschaftenseitenbericht zu korrigieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,13 +42,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion wird zweimal aufgerufen, einmal beim Anhalten und wiederholen, wenn der Stream tatsächlich angehalten wird.
+Diese Memberfunktion wird zweimal aufgerufen, einmal beim Anhalten und erneut, wenn der Stream tatsächlich beendet wird.
 
-Diese Member-Funktion überschreibt [**cbaserenderer:: onstopstreaming**](cbaserenderer-onstopstreaming.md).
+Diese Memberfunktion überschreibt [**CBaseRenderer::OnStopStreaming**](cbaserenderer-onstopstreaming.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Diese Member-Funktion überschreibt [**cbaserenderer:: onstopstreaming**](cbaser
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Diese Member-Funktion überschreibt [**cbaserenderer:: onstopstreaming**](cbaser
 
 <dl> <dt>
 
-[**Cbasevideorenderer-Klasse**](cbasevideorenderer.md)
+[**CBaseVideoRenderer-Klasse**](cbasevideorenderer.md)
 </dt> </dl>
 
  

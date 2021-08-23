@@ -1,5 +1,5 @@
 ---
-description: Lesen Sie die aktive Konfiguration des Sammlers.
+description: Liest die aktive Konfiguration des Collectors.
 ms.assetid: ea26142d-5dcd-466d-b9df-5349f58a190f
 ms.tgt_platform: multiple
 title: GetConfiguration-Methode der Control-Klasse
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - BEvtCol.exe
-ms.openlocfilehash: 5adfedb833043ffc56da09c7bdab95c1c4698587
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a877b4ae061b6568b877d9b8ee65b8d9b0380a012d7fdba28408ad4bfcae7030
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958160"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119579720"
 ---
 # <a name="getconfiguration-method-of-the-control-class"></a>GetConfiguration-Methode der Control-Klasse
 
-Lesen Sie die aktive Konfiguration des Sammlers.
+Liest die aktive Konfiguration des Collectors.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ Uint32 GetConfiguration(
 
 <dl> <dt>
 
-*TimeStampLow* \[ vorgenommen\]
+*TimestampLow* \[ out\]
 </dt> <dd>
 
-Wenn diese Methode zurückgegeben wird, enthält dieser Parameter die nieder wertigen Bits eines Zeitstempels, der angibt, wann die Konfiguration festgelegt wurde.
+Wenn diese Methode zurückgegeben wird, enthält dieser Parameter die Bits mit niedriger Reihenfolge eines Zeitstempels, der angibt, wann die Konfiguration festgelegt wurde.
 
 </dd> <dt>
 
-*TimeStampHigh* \[ vorgenommen\]
+*TimestampHigh* \[ out\]
 </dt> <dd>
 
-Wenn diese Methode zurückgegeben wird, enthält dieser Parameter die höherwertigen Bits eines Zeitstempels, der angibt, wann die Konfiguration festgelegt wurde.
+Wenn diese Methode zurückgegeben wird, enthält dieser Parameter die hohen Bits eines Zeitstempels, der angibt, wann die Konfiguration festgelegt wurde.
 
 </dd> </dl>
 
@@ -83,10 +83,10 @@ Erfolg
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                       |
-| Namespace<br/>                | Stammverzeichnis von \\ Microsoft \\ Windows \\ booteventcollector<br/>                                              |
-| MOF<br/>                      | <dl> <dt>Booteventcollector WMI. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-Microsoft \\ Windows \\ BootEventCollector<br/>                                              |
+| MOF<br/>                      | <dl> <dt>BootEventCollectorWMI.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>BEvtCol.exe</dt> </dl>               |
 
 

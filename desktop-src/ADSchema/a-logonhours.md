@@ -1,11 +1,11 @@
 ---
 title: Logon-Hours-Attribut
-description: Die Stunden, die der Benutzer für die Anmeldung bei der Domäne berechtigt ist.
+description: Die Stunden, in denen sich der Benutzer bei der Domäne anmelden darf.
 ms.assetid: b97cc8b0-7f26-45c1-b1c9-bae6467bdfb6
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Logon-Hours-Attribut
-- LogonHours-Attribut, AD-Schema
+- Logon-Hours AD-Attributschema
+- LOGONHours-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f764192ac57efdb1f14d55f691183240f0eddfc
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f389556d3b6e3905229d99261b8132ebf8e2424d04b33c65174902991c366110
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479770"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119705680"
 ---
 # <a name="logon-hours-attribute"></a>Logon-Hours-Attribut
 
-Die Stunden, die der Benutzer für die Anmeldung bei der Domäne berechtigt ist.
+Die Stunden, in denen sich der Benutzer bei der Domäne anmelden darf.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | Logon-Hours                                           |
-| LDAP-Display-Name | LogonHours                                            |
+| Ldap-Anzeigename | logonHours                                            |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | Domänen Administrator                                  |
-| Aktualisierungshäufigkeit  | Immer, wenn die Anmeldezeiten des Kontos geändert werden müssen.   |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                                  |
+| Updatehäufigkeit  | Wann immer sich die Anmeldezeiten des Kontos ändern müssen.   |
 | Attribute-Id      | 1.2.840.113556.1.4.64                                 |
 | System-ID-GUID    | bf9679ab-0de6-11d0-a285-00aa003049e2                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
@@ -43,7 +43,7 @@ Die Stunden, die der Benutzer für die Anmeldung bei der Domäne berechtigt ist.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Die Stunden, die der Benutzer für die Anmeldung bei der Domäne berechtigt ist.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -70,7 +70,7 @@ Die Stunden, die der Benutzer für die Anmeldung bei der Domäne berechtigt ist.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Die Stunden, die der Benutzer für die Anmeldung bei der Domäne berechtigt ist.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -100,10 +100,10 @@ Die Stunden, die der Benutzer für die Anmeldung bei der Domäne berechtigt ist.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -121,10 +121,10 @@ Die Stunden, die der Benutzer für die Anmeldung bei der Domäne berechtigt ist.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -142,10 +142,10 @@ Die Stunden, die der Benutzer für die Anmeldung bei der Domäne berechtigt ist.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -163,10 +163,10 @@ Die Stunden, die der Benutzer für die Anmeldung bei der Domäne berechtigt ist.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |

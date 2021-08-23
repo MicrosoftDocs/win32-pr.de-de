@@ -1,11 +1,11 @@
 ---
 title: Schema-Info-Attribut
-description: Ein interner binärer Wert, der verwendet wird, um Schema Änderungen zwischen DCS zu erkennen und einen Schema-NC-Replikations Durchlauf vor der Replikation anderer NC- Wird zum Auflösen von Verknüpfungen verwendet, wenn das Schema FSMO übernommen wird und eine Änderung an mehr als einem DC vorgenommen wird.
+description: Ein interner binärer Wert, der verwendet wird, um Schemaänderungen zwischen DCs zu erkennen und einen Schema-NC-Replikationszyklus zu erzwingen, bevor ein anderer NC repliziert wird. Wird verwendet, um Bindungen aufzulösen, wenn das Schema FSMO aufgelöst wird und eine Änderung an mehreren Domänencontrollern vorgenommen wird.
 ms.assetid: 416cef3f-211b-439d-b177-267806c6a5d2
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Schema-Info-Attribut
-- Schema des Schema Info-Attributs AD
+- Schema-Info AD-Attributschema
+- schemaInfo-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5ca55fc8ad3f53709b3819a7333e3470a1ac35cd
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: cfa0d55dd29f207b84b0951ee448ba988d128fabfd126f38b2a4692d7cd3e0fa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104520023"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119646529"
 ---
 # <a name="schema-info-attribute"></a>Schema-Info-Attribut
 
-Ein interner binärer Wert, der verwendet wird, um Schema Änderungen zwischen DCS zu erkennen und einen Schema-NC-Replikations Durchlauf vor der Replikation anderer NC- Wird zum Auflösen von Verknüpfungen verwendet, wenn das Schema FSMO übernommen wird und eine Änderung an mehr als einem DC vorgenommen wird.
+Ein interner binärer Wert, der verwendet wird, um Schemaänderungen zwischen DCs zu erkennen und einen Schema-NC-Replikationszyklus zu erzwingen, bevor ein anderer NC repliziert wird. Wird verwendet, um Bindungen aufzulösen, wenn das Schema FSMO aufgelöst wird und eine Änderung an mehreren Domänencontrollern vorgenommen wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | Schema-Info                                           |
-| LDAP-Display-Name | Schema Info                                            |
+| Ldap-Anzeigename | Schemainfo                                            |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.                      |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.                      |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.1358                               |
 | System-ID-GUID    | f9fb64ae-93b4-11d2-9945-0000f87a57d4                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
@@ -43,7 +43,7 @@ Ein interner binärer Wert, der verwendet wird, um Schema Änderungen zwischen D
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,20 +58,20 @@ Ein interner binärer Wert, der verwendet wird, um Schema Änderungen zwischen D
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,16 +79,16 @@ Ein interner binärer Wert, der verwendet wird, um Schema Änderungen zwischen D
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -100,16 +100,16 @@ Ein interner binärer Wert, der verwendet wird, um Schema Änderungen zwischen D
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -121,16 +121,16 @@ Ein interner binärer Wert, der verwendet wird, um Schema Änderungen zwischen D
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -142,16 +142,16 @@ Ein interner binärer Wert, der verwendet wird, um Schema Änderungen zwischen D
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -163,16 +163,16 @@ Ein interner binärer Wert, der verwendet wird, um Schema Änderungen zwischen D
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -184,16 +184,16 @@ Ein interner binärer Wert, der verwendet wird, um Schema Änderungen zwischen D
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 

@@ -1,23 +1,23 @@
 ---
-title: Inkdraw-Methode
-description: Cguipaper speichert auch ein m- \_ binking-Flag. Inkstart legt ihn auf "true" fest, um zu signalisieren, dass eine Zeichnungs Sequenz gerade verarbeitet wird. Beispielsweise verwendet die inkdraw-Methode dieses Flag, um zu bestimmen, ob Sie frei Hand Daten zeichnen und speichern soll.
+title: InkDraw-Methode
+description: CGuiPaper behält auch ein m \_ bInking-Flag bei. InkStart legt ihn auf TRUE fest, um zu signalisieren, dass eine Zeichnungssequenz ausgeführt wird. Beispielsweise verwendet die InkDraw-Methode dieses Flag, um zu bestimmen, ob sie Ink-Daten zeichnen und speichern soll.
 ms.assetid: 0fe9d029-1522-4caf-8efb-0a4eb2b59958
 keywords:
-- Inkdraw
+- InkDraw
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 41973d3f8560f25a81ac1deb782bada51b015239
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6e146093d23fd16d122da1ea81d1c99bdf06ed926d5cb4dba2f1d77b747b2058
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388585"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119662760"
 ---
-# <a name="inkdraw-method"></a>Inkdraw-Methode
+# <a name="inkdraw-method"></a>InkDraw-Methode
 
-Cguipaper speichert auch ein m- \_ binking-Flag. [Inkstart](inkstart-method.md) legt ihn auf " **true** " fest, um zu signalisieren, dass eine Zeichnungs Sequenz gerade verarbeitet wird. Beispielsweise verwendet die inkdraw-Methode dieses Flag, um zu bestimmen, ob Sie frei Hand Daten zeichnen und speichern soll.
+CGuiPaper behält auch ein m \_ bInking-Flag bei. [InkStart legt](inkstart-method.md) ihn auf **TRUE fest,** um zu signalisieren, dass eine Zeichnungssequenz ausgeführt wird. Beispielsweise verwendet die InkDraw-Methode dieses Flag, um zu bestimmen, ob sie Ink-Daten zeichnen und speichern soll.
 
-Im folgenden finden Sie die inkdraw-Methode von guipaper. CPP.
+Im Folgenden finden Sie die InkDraw-Methode von GUIPAPER. Cpp.
 
 
 ```C++
@@ -44,13 +44,13 @@ HRESULT CGuiPaper::InkDraw(
 
 
 
-Diese Methode führt keine Aktion aus, wenn m- \_ binking **false** ist. Dies ist die Bedingung, wenn der Benutzer einfach den Mauszeiger über das Client Fenster bewegt, ohne die linke Maustaste zu drücken.
+Diese Methode führt nichts aus, wenn m \_ bInking FALSE **ist.** Dies ist die Bedingung, wenn der Benutzer einfach den Mauszeiger über das Clientfenster bewegt, ohne die linke Maustaste zu drücken.
 
-Inkdraw hat eine doppelte Verantwortung. Die Win32-Aufrufe "fivetoex" und "LineTo" werden zum Zeichnen von Linienbildern auf dem GUI-Bildschirm erstellt (mit dem Gerätekontext handle, das in m \_ hdc gespeichert ist). Die frei Hand Daten werden auch an das copaper-Objekt für die Aufzeichnung mithilfe der inkdraw-Methode der [iPaper](ipaper-methods.md) -Schnittstelle übermittelt. Wenn "m \_ binksave" den Wert " **false**" hat, zeichnet inkdraw das Linien Bild, speichert die Daten aber nicht in copaper. Diese Bedingung wird beim Neuzeichnen verwendet.
+InkDraw hat eindeutig eine doppelte Verantwortung. Die Win32-Aufrufe MoveToEx und LineTo werden zum Zeichnen von Linienbildern auf dem GUI-Bildschirm (mithilfe des Gerätekontexthandlers in m \_ hDC) vorgenommen. Die Ink-Daten werden auch zur Aufzeichnung mithilfe der InkDraw-Methode der IPaper-Schnittstelle an das [COPaper-Objekt](ipaper-methods.md) übergeben. Wenn m \_ bInkSaving **FALSE ist,** zeichnet InkDraw das Linienbild, aber die Daten werden nicht in COPaper gespeichert. Diese Bedingung wird während des Neupaintings verwendet.
 
- 
+ 
 
- 
+ 
 
 
 

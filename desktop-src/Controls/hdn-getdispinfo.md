@@ -1,9 +1,9 @@
 ---
-title: HDN_GETDISPINFO Benachrichtigungs Code (kommctrl. h)
-description: Wird an den Besitzer eines Header Steuer Elements gesendet, wenn das Steuerelement Informationen zu einem Rückruf Header Element benötigt. Dieser Benachrichtigungs Code wird als WM-Benachrichtigungs \_ Meldung gesendet.
+title: HDN_GETDISPINFO Benachrichtigungscode (Commctrl.h)
+description: Wird an den Besitzer eines Headersteuerelements gesendet, wenn das Steuerelement Informationen zu einem Rückrufheaderelement benötigt. Dieser Benachrichtigungscode wird als WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 51522df0-83ae-4d9a-a8fc-31083e24242a
 keywords:
-- Windows-Steuerelemente für HDN_GETDISPINFO Benachrichtigungs
+- HDN_GETDISPINFO Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c45fe753b610fae69956b89caadade394566d0dd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fc6e6cbc9559cda3312ecdca341aa7c7ad2b44dc5cc29e50690ddf10b2729a39
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040181"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119435450"
 ---
-# <a name="hdn_getdispinfo-notification-code"></a>Hdn \_ getdispinfo-Benachrichtigungs Code
+# <a name="hdn_getdispinfo-notification-code"></a>HDN \_ GETDISPINFO-Benachrichtigungscode
 
-Wird an den Besitzer eines Header Steuer Elements gesendet, wenn das Steuerelement Informationen zu einem Rückruf Header Element benötigt. Dieser Benachrichtigungs Code wird als [**WM- \_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird an den Besitzer eines Headersteuerelements gesendet, wenn das Steuerelement Informationen zu einem Rückrufheaderelement benötigt. Dieser Benachrichtigungscode wird als [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,7 +43,7 @@ HDN_GETDISPINFO
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**nmhddispinfo**](/windows/win32/api/commctrl/ns-commctrl-nmhddispinfoa) -Struktur. Bei der Eingabe geben die Felder der Struktur an, welche Informationen erforderlich sind und welches Element von Interesse ist.
+Ein Zeiger auf eine [**NMHDDISPINFO-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmhddispinfoa) Bei der Eingabe geben die Felder der Struktur an, welche Informationen erforderlich sind und welches Element von Interesse ist.
 
 </dd> </dl>
 
@@ -51,9 +51,9 @@ Ein Zeiger auf eine [**nmhddispinfo**](/windows/win32/api/commctrl/ns-commctrl-n
 
 Gibt ein LRESULT zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Füllen Sie die entsprechenden Member der-Struktur aus, um die angeforderten Informationen an das Header Steuerelement zurückzugeben. Wenn Ihr Nachrichten Handler das **Masken** Element der [**nmhddispinfo**](/windows/win32/api/commctrl/ns-commctrl-nmhddispinfoa) -Struktur auf HDI \_ di \_ SetItem festlegt, speichert das Header Steuerelement die Informationen und fordert Sie nicht erneut an.
+Füllen Sie die entsprechenden Member der -Struktur aus, um die angeforderten Informationen an das Headersteuerelement zurückzugeben. Wenn Ihr Nachrichtenhandler den **Maskenmember** der [**NMHDDISPINFO-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmhddispinfoa) auf HDI \_ DI \_ SETITEM festlegt, speichert das Headersteuerelement die Informationen und fordert sie nicht erneut an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,10 +61,10 @@ Füllen Sie die entsprechenden Member der-Struktur aus, um die angeforderten Inf
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Hdn \_ Getdispinfow** (Unicode) und **Hdn \_ getdispinfoa** (ANSI)<br/>           |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **HDN \_ GETDISPINFOW** (Unicode) und **HDN \_ GETDISPINFOA** (ANSI)<br/>           |
 
 
 

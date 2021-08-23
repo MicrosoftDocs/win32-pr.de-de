@@ -1,5 +1,5 @@
 ---
-description: 'SystemConfig_LogDisk Klasse: Diese Klasse ist die Ereignistypklasse für logische Datenträgerkonfigurationsereignisse.'
+description: 'SystemConfig_LogDisk-Klasse: Diese Klasse ist die Ereignistypklasse für Konfigurationsereignisse für logische Datenträger.'
 ms.assetid: a11a8245-8ace-4061-b6c7-938002d8b9fc
 title: SystemConfig_LogDisk-Klasse
 ms.topic: reference
@@ -28,18 +28,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 1d7ca8dc3f632e88c250715292a27e18ff36e3af
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c24ce209c51e0ac2d6167ae76d3f8289d73aa0fffa9ce607e51c8566cbb37c36
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106108"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119582230"
 ---
 # <a name="systemconfig_logdisk-class"></a>SystemConfig \_ LogDisk-Klasse
 
-Diese Klasse ist die Ereignistypklasse für Logische Datenträgerkonfigurationsereignisse.
+Diese Klasse ist die Ereignistypklasse für Konfigurationsereignisse des logischen Datenträgers.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,13 +68,13 @@ class SystemConfig_LogDisk : SystemConfig
 
 ## <a name="members"></a>Member
 
-Die **\_ LogDisk-Klasse SystemConfig** verfügt über die folgenden Membertypen:
+Die **SystemConfig \_ LogDisk-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ LogDisk-Klasse SystemConfig** verfügt über diese Eigenschaften.
+Die **SystemConfig \_ LogDisk-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -90,7 +90,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (10)
 </dt> </dl>
 
-Anzahl von Bytes in jedem Sektor für das physische Laufwerk.
+Anzahl der Bytes in jedem Sektor für das physische Laufwerk.
 
 </dd> <dt>
 
@@ -119,10 +119,10 @@ Datentyp: **char16-Array**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **WmiDataId** (6), **Max** (4), **Format("s")**
+Qualifizierer: **WmiDataId** (6), **Max** (4), **Format(s)**
 </dt> </dl>
 
-Laufwerkbuchstaben des Datenträgers im Formular " <letter> :".
+Laufwerkbuchstabe des Datenträgers im Format <letter> ":".
 
 </dd> <dt>
 
@@ -163,7 +163,7 @@ Datentyp: **char16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **WmiDataId** (14), **Max** (16), **Format(s)**
+Qualifizierer: **WmiDataId** (14), Max(16), **Format(s)** 
 </dt> </dl>
 
 Dateisystem auf dem logischen Datenträger, z. B. NTFS.
@@ -198,7 +198,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (7)
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
@@ -214,7 +214,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (11)
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
@@ -230,7 +230,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (16)
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
@@ -294,7 +294,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (4)
 </dt> </dl>
 
-Größe des Laufwerks in Byte.
+Größe des Laufwerks in Bytes.
 
 </dd> <dt>
 
@@ -326,7 +326,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (13)
 </dt> </dl>
 
-Anzahl der verwendeten und freien Cluster im Volume.
+Anzahl der verwendeten und kostenlosen Cluster im Volume.
 
 </dd> <dt>
 
@@ -350,14 +350,14 @@ Reserviert.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

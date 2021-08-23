@@ -1,8 +1,8 @@
 ---
-description: Hält den Collector schnell an, wobei alle Daten in der Warteschlange verworfen werden.
+description: Beenden Sie den Collector schnell, und verwerfen Sie alle Daten in der Warteschlange.
 ms.assetid: 9d96a94b-21ae-40bd-9c7f-b466ca38dce3
 ms.tgt_platform: multiple
-title: Fastshutdown-Methode der Steuerelement Klasse
+title: FastShutdown-Methode der Control-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - BEvtCol.exe
-ms.openlocfilehash: 444fe9c94e9fd247e5976fd67a43b0a5eee8b591
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: f524cc1ce57ccedf519bf80695a11f75d77eac792088d5f39d3dcf1e29187669
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344807"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119579810"
 ---
-# <a name="fastshutdown-method-of-the-control-class"></a>Fastshutdown-Methode der Steuerelement Klasse
+# <a name="fastshutdown-method-of-the-control-class"></a>FastShutdown-Methode der Control-Klasse
 
-Hält den Collector schnell an, wobei alle Daten in der Warteschlange verworfen werden.
+Beenden Sie den Collector schnell, und verwerfen Sie alle Daten in der Warteschlange.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,10 +48,10 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                       |
-| Namespace<br/>                | Stammverzeichnis von \\ Microsoft \\ Windows \\ booteventcollector<br/>                                              |
-| MOF<br/>                      | <dl> <dt>Booteventcollector WMI. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ Microsoft \\ Windows \\ BootEventCollector<br/>                                              |
+| MOF<br/>                      | <dl> <dt>BootEventCollectorWMI.Mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>BEvtCol.exe</dt> </dl>               |
 
 

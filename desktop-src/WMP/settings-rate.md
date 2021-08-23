@@ -1,9 +1,9 @@
 ---
-title: "\"Settings. Rate\""
-description: Die Rate-Eigenschaft gibt die aktuelle Wiedergabe Rate von Video Medien an oder ruft diese ab.
+title: Einstellungen.rate
+description: Die eigenschaft rate gibt die aktuelle Wiedergaberate von Videomedien an oder ruft sie ab.
 ms.assetid: 0f95f7ac-1bb6-4c80-89eb-eb300a03a0f1
 keywords:
-- Einstellungen. Raten Sie Windows Media Player
+- Einstellungen.rate Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,45 +14,45 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e61287789487fddbe7e77fba5fc033d3103aecb8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 01936462593b8b27a8d45f2e3e4090b9cf242d79e1d9b1c2cda00c152bd41182
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357652"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119646400"
 ---
-# <a name="settingsrate"></a>"Settings. Rate"
+# <a name="settingsrate"></a>Einstellungen.rate
 
-Die **Rate** -Eigenschaft gibt die aktuelle Wiedergabe Rate von Video Medien an oder ruft diese ab.
+Die **eigenschaft rate** gibt die aktuelle Wiedergaberate von Videomedien an oder ruft sie ab.
 
 ## <a name="syntax"></a>Syntax
 
-Player. Settings. Rate
+player.settings.rate
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine Lese-/schreibzahl (**Double**) mit einem Standardwert von 1,0. 
+Diese Eigenschaft ist eine Lese-/Schreibnummer (**double**) mit dem Standardwert 1.0. 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft fungiert als Multiplikatorwert, mit dem Sie einen Clip schneller oder langsamer abspielen können. Der Standardwert 1,0 gibt die erstellte Geschwindigkeit an. Beachten Sie, dass eine Audiospur bei Raten, die niedriger als 0,5 oder höher als 1,5 sind, schwer zu verstehen ist. Eine Wiedergabe Rate von 2 entspricht der doppelten normalen Wiedergabegeschwindigkeit.
+Diese Eigenschaft fungiert als Multiplikatorwert, mit dem Sie einen Clip schneller oder langsamer wiederverspielen können. Der Standardwert 1,0 gibt die erstellungsgeschwindigkeit an. Beachten Sie, dass eine Audiospur mit Raten unter 0,5 oder höher als 1,5 schwer zu verstehen ist. Eine Wiedergaberate von 2 entspricht der doppelten normalen Wiedergabegeschwindigkeit.
 
-Windows Media Player versucht, die effektivsten von vier verschiedenen Wiedergabe Modi zu verwenden. Bei diesen Modi handelt es sich um eine reibungslose Videowiedergabe, bei der Audiowiedergabe gewartet wird, eine nahtlose Videowiedergabe mit nicht gebeibehaltung Audiowiedergabe, eine Smooth Videowiedergabe ohne Audiodaten und eine Keyframe-Videowiedergabe ohne Audio Der vom Player gewählte Modus hängt von zahlreichen Faktoren ab, einschließlich Dateityp und-Speicherort, Betriebssystem, Netzwerk und Server.
+Windows Media Player versucht, die effektivste von vier verschiedenen Wiedergabemodi zu verwenden. Diese Modi sind eine reibungslose Videowiedergabe mit beibehaltener Audiowiedergabe, eine reibungslose Videowiedergabe mit nicht verwalteter Audiowiedergabe, eine reibungslose Videowiedergabe ohne Audio und eine Keyframe-Videowiedergabe ohne Audio. Der vom Player gewählte Modus hängt von zahlreichen Faktoren ab, einschließlich Dateityp und Speicherort, Betriebssystem, Netzwerk und Server.
 
-Es gelten auch weitere Überlegungen, abhängig vom Medientyp:
+Je nach Medientyp gelten auch andere Überlegungen:
 
--   Windows Media-Format (WMV) und ASF-Dateien: optimale Werte für diese Eigenschaft liegen zwischen 1 und 10 oder zwischen 1 und 10 für Reverse-Play. Werte zwischen 0,5 und 1,0 oder von-0,5 bis 1,0 funktionieren möglicherweise auch in Fällen, in denen audiotonhöhe beibehalten werden kann, z. b. bei der Wiedergabe von Dateien auf dem lokalen Computer. Werte mit einer absoluten Größe von mehr als 10 sind zulässig, sind jedoch nicht sehr sinnvoll.
--   Andere Video Medientypen: Diese Eigenschaft kann zwischen 0 und 9 liegen. Negative Werte sind nicht zulässig. Werte kleiner als 1 stellen eine langsame Bewegung dar. Werte oberhalb von 9 sind zulässig, sind jedoch nicht sehr sinnvoll.
+-   Windows Medienformatdateien (WMV) und ASF-Dateien: Optimale Werte für diese Eigenschaft liegen zwischen 1 und 10 oder von 1 bis 10 für reverse play. Werte von 0,5 bis 1,0 oder von -0,5 bis -1,0 funktionieren möglicherweise auch gut in Fällen, in denen audio pitch beibehalten werden kann, z. B. bei der Wiedergabe von Dateien auf dem lokalen Computer. Werte mit einer absoluten Größe größer als 10 sind zulässig, sind jedoch nicht sehr aussagekräftig.
+-   Andere Videomedientypen: Diese Eigenschaft kann zwischen 0 und 9 liegen. Negative Werte sind nicht zulässig. Werte kleiner als 1 stellen langsame Bewegung dar. Werte über 9 sind zulässig, aber nicht sehr aussagekräftig.
 
-Die-Steuer *Elemente*. die **FastForward** -Methode ändert den Wert von Rate in 5,0, während die **Steuer** *Elemente*. die **Rate** der **fastreverse** -Methode wurde in 5,0 geändert.
+Das *-Steuerelement*. **Die fastForward-Methode** ändert den Wert der **Rate** in 5,0, während die *Controls -Methode .* **Die fastReverse-Methode** **ändert die Rate** in 5.0.
 
-Die Wiedergabe Rate einiger Medientypen kann nicht geändert werden. Verwenden Sie die *Einstellungen*. **IsAvailable** -Methode, um zu bestimmen, ob diese Eigenschaft für ein bestimmtes Medien Element angegeben werden kann.
+Die Wiedergaberate einiger Medientypen kann nicht geändert werden. Verwenden Sie *Einstellungen*. **isAvailable-Methode,** um zu bestimmen, ob diese Eigenschaft für ein bestimmtes Medienelement angegeben werden kann.
 
-**Windows Media Player 10 Mobile**: Diese Eigenschaft akzeptiert nur die Werte von-5,0, 1,0 oder 5,0.
+**Windows Media Player 10 Mobile:** Diese Eigenschaft akzeptiert oder gibt nur Werte von -5.0, 1.0 oder 5.0 zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein HTML-SELECT-Element erstellt, das es dem Benutzer ermöglicht, die Wiedergabegeschwindigkeit des aktuellen Mediums zu ändern. Die SELECT-Optionen bieten eine normale Geschwindigkeit, eine halbe Geschwindigkeit und eine doppelte Geschwindigkeit der Wiedergabe Raten. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird ein HTML SELECT-Element erstellt, mit dem der Benutzer die Wiedergabegeschwindigkeit des aktuellen Mediums ändern kann. Die SELECT-Optionen bieten normale Geschwindigkeit, halbe Geschwindigkeit und Doppelte Geschwindigkeit bei der Wiedergabe. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```
@@ -83,7 +83,7 @@ Im folgenden Beispiel wird ein HTML-SELECT-Element erstellt, das es dem Benutzer
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -92,16 +92,16 @@ Im folgenden Beispiel wird ein HTML-SELECT-Element erstellt, das es dem Benutzer
 
 <dl> <dt>
 
-[**Controls. FastForward**](controls-fastforward.md)
+[**Controls.fastForward**](controls-fastforward.md)
 </dt> <dt>
 
-[**Controls. fastreverse**](controls-fastreverse.md)
+[**Controls.fastReverse**](controls-fastreverse.md)
 </dt> <dt>
 
-[**Einstellungs Objekt**](settings-object.md)
+[**Einstellungen Objekt**](settings-object.md)
 </dt> <dt>
 
-[**Settings. IsAvailable**](settings-isavailable.md)
+[**Einstellungen.isAvailable**](settings-isavailable.md)
 </dt> </dl>
 
  

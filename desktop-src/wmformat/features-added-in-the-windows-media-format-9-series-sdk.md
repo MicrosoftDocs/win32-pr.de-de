@@ -1,187 +1,187 @@
 ---
-title: Features, die im SDK der Windows Media-Serie 9 hinzugefügt werden
-description: Features, die im SDK der Windows Media-Serie 9 hinzugefügt werden
+title: Features, die im Windows Media Format 9 Series SDK hinzugefügt wurden
+description: Features, die im Windows Media Format 9 Series SDK hinzugefügt wurden
 ms.assetid: 73c4da27-a456-4845-a35b-edb75aa3f953
 keywords:
-- Windows Media-Format-SDK, Features
-- Windows Media-Format-SDK, neue Funktionen
-- SDK für den Windows Media-Format, synchrone Reader
-- Windows Media-Format-SDK, Frame basierte Indizierung
-- Windows Media-Format-SDK, SMPTE-Zeit Codes
-- Windows Media-Format-SDK, DirectShow-Filter
-- Windows Media-Format-SDK, DRM-Schreibfunktion
-- Windows Media-Format-SDK, Datei senken
-- Windows Media-Format-SDK, DirectX-Video Beschleunigung (DXVA)
-- Windows Media-Format-SDK, Multichannel-Audiodatei
-- Windows Media-Format-SDK, Wasserzeichen
-- Windows Media-Format-SDK, Unterstützung mehrerer Sprachen
-- Windows Media-Format-SDK, Geräte Konformitäts Vorlagen
-- Windows Media-Format-SDK, Codec-Enumerationen
-- Windows Media-Format-SDK, gegenseitiger Ausschluss
-- Windows Media-Format-SDK, mehrfache Bitrate (MBR)
-- Windows Media-Format-SDK, Transcoding mit intelligenter Neukomprimierung
-- Windows Media-Format-SDK, intelligente Neukomprimierung
-- SDK für Windows Media-Format, Neukomprimierung
-- SDK für Windows Media-Format, Metadaten
-- Windows Media-Format-SDK, dynamisches Pixel Seitenverhältnis
-- Windows Media-Format-SDK, Text Ströme mit Zeilen Sprung
-- Windows Media-Format-SDK, Two-Pass-Codierung
-- Windows Media-Format-SDK, wmstub. lib
-- synchrone Leser, Informationen zu
-- Frame basierte Indizierung
-- SMPTE-Zeit Codes, Informationen zu
+- Windows Medienformat-SDK, Features
+- Windows Medienformat-SDK, neue Features
+- Windows Medienformat-SDK, synchrone Reader
+- Windows Medienformat-SDK, framebasierte Indizierung
+- Windows Medienformat-SDK, SMPTE-Zeitcodes
+- Windows Medienformat-SDK, DirectShow-Filter
+- Windows Medienformat-SDK, DRM-Schreibfunktion
+- Windows Medienformat-SDK, Dateisenken
+- Windows Medienformat-SDK, DirectX-Videobeschleunigung (DXVA)
+- Windows Medienformat-SDK, Multichannel-Audio
+- Windows Medienformat-SDK, Wasserzeichen
+- Windows Medienformat-SDK, Unterstützung mehrerer Sprachen
+- Windows Medienformat-SDK, Gerätekonformitätsvorlagen
+- Windows Medienformat-SDK, Codecenumerationen
+- Windows Medienformat-SDK, gegenseitiger Ausschluss
+- Windows Medienformat-SDK, Mehrfachbitrate (MBR)
+- Windows Medienformat-SDK,Transcodierung mit intelligenter Neukomprimierung
+- Windows Medienformat-SDK, intelligente Neukomprimierung
+- Windows Medienformat-SDK, Neukomprimierung
+- Windows Medienformat-SDK, Metadaten
+- Windows Medienformat-SDK, dynamisches Pixel-Seitenverhältnis
+- Windows Medienformat-SDK, geschachtelte Videostreams
+- Windows Medienformat-SDK, Zwei-Pass-Codierung
+- Windows Media Format SDK,WMStub.lib
+- synchrone Reader, Informationen
+- framebasierte Indizierung
+- SMPTE-Zeitcodes,Informationen
 - DirectShow-Filter
-- Datei senken, Erweiterungen
-- Multichannel-Audioinformationen, Informationen zu
-- Wasserzeichen, Info
+- Dateisenken, Erweiterungen
+- Multichannelaudio, Informationen
+- Wasserzeichen, Informationen
 - Codecs, Enumerationen
-- gegenseitiger Ausschluss, Informationen
-- Digital Rights Management (DRM), Schreiben von Funktionen
-- DRM (Digital Rights Management), Schreiben von Funktionen
-- DirectX-Video Beschleunigung (DXVA), Informationen zu
-- DXVA (DirectX-Video Beschleunigung), Informationen zu
+- gegenseitiger Ausschluss,Informationen
+- Digital Rights Management (DRM), Schreibfunktion
+- DRM (Digital Rights Management), Schreibfunktion
+- DirectX-Videobeschleunigung (DXVA), Informationen
+- DXVA (DirectX-Videobeschleunigung),Informationen
 - Advanced Systems Format (ASF), Unterstützung mehrerer Sprachen
 - ASF (Advanced Systems Format), Unterstützung mehrerer Sprachen
-- mehrfache Bitrate (MBR), Informationen zu
-- MBR (mehrfache Bitrate), Informationen zu
+- Multiple Bit Rate (MBR),About
+- MBR (Multiple-Bit-Rate),Informationen
 - Transcodierung mit intelligenter Neukomprimierung
-- intelligente Neukomprimierung
+- Intelligente Neukomprimierung
 - Neukomprimierung
-- Metadaten, Windows Media-Format-SDK
-- Verhältnis des dynamischen Pixel Aspekts
-- Videodaten Ströme mit Zeilen Sprung
-- zwei-Pass-Codierung, Informationen
-- '2: Codierung, Informationen'
-- Wmstub. lib
+- metadata,Windows Media Format SDK
+- Dynamisches Pixel-Seitenverhältnis
+- Videostreams mit Interlacing
+- Zwei-Pass-Codierung, Informationen
+- 2-Pass-Codierung, Informationen
+- WMStub.lib
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: adca7e39c89220c2c8c4cac6af354eefb77257aa
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 76dc0f4a8c0b23ba33409039ae7f1d46ada1b3299790ef82fb98b8714f616117
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119547450"
 ---
-# <a name="features-added-in-the-windows-media-format-9-series-sdk"></a>Features, die im SDK der Windows Media-Serie 9 hinzugefügt werden
+# <a name="features-added-in-the-windows-media-format-9-series-sdk"></a>Features, die im Windows Media Format 9 Series SDK hinzugefügt wurden
 
-Das Windows Media Format 9 Series SDK hat viele Verbesserungen und Features eingeführt. Dieser Abschnitt bietet eine Übersicht über die Features, die Benutzer bei der Migration von einer früheren Version des SDK nutzen.
+Das Windows Media Format 9 Series SDK hat viele Verbesserungen und Features eingeführt. Dieser Abschnitt bietet eine Übersicht über diese Features, die den Vorteil haben, dass Benutzer von einer früheren Version des SDK migrieren.
 
-## <a name="synchronous-reading"></a>Synchrones lesen
+## <a name="synchronous-reading"></a>Synchrones Lesen
 
-Sie können ASF-Dateien mit synchronen Aufrufen lesen. Beim synchronen Lesen einer Datei können Sie die Einstellungen des Readers beim Lesen ändern. Die synchronen Lesevorgänge des SDK bieten keine Unterstützung für das Lesen von Dateien über das Internet, aber Sie können die Standard-COM-Schnittstelle **IStream** verwenden, um aus benutzerdefinierten Quellen zu lesen.
+Sie können ASF-Dateien mit synchronen Aufrufen lesen. Beim synchronen Lesen einer Datei können Sie die Einstellungen des Readers beim Lesen ändern. Die synchronen Lesevorgänge des SDK bieten keine Unterstützung für das Lesen von Dateien über das Internet, aber Sie können die COM-Standardschnittstelle **IStream** verwenden, um aus benutzerdefinierten Quellen zu lesen.
 
-## <a name="frame-based-indexing"></a>Frame basierte Indizierung
+## <a name="frame-based-indexing"></a>Framebasierte Indizierung
 
-Sie können ASF-Dateien auf der Grundlage von Video Frames indizieren. Sowohl der Reader als auch der synchrone Reader können einen Frame eines Videodaten Stroms suchen und die anderen Streams mit diesem Frame synchronisieren.
+Asf-Dateien können basierend auf Videoframes indiziert werden. Sowohl der Reader als auch der synchrone Reader können einen Frame eines Videostreams suchen und die anderen Streams mit diesem Frame synchronisieren.
 
-## <a name="indexing-and-seeking-with-smpte-time-code"></a>Indizierung und Suche mit SMPTE-Zeit Code
+## <a name="indexing-and-seeking-with-smpte-time-code"></a>Indizieren und Suchen mit SMPTE-Zeitcode
 
-Mit dem Windows Media-Format-SDK können Sie SMPTE-Zeit Codes in ASF-Dateien speichern. Dateien können mithilfe von SMPTE-Zeit Code indiziert werden, und sowohl der asynchrone Reader als auch der synchrone Reader können nach SMPTE-Zeit Code Indexeinträgen suchen.
+Mit dem Windows Media Format SDK können Sie SMPTE-Zeitcodes in ASF-Dateien speichern. Dateien können durch SMPTE-Zeitcode indiziert werden, und sowohl der asynchrone Reader als auch der synchrone Reader können nach SMPTE-Zeitcodeindexeinträgen suchen.
 
 ## <a name="directshow-filters"></a>DirectShow-Filter
 
-Das Windows Media-Format SDK enthält zwei Microsoft DirectShow-® Filter, mit denen DirectShow-basierte Anwendungen die Möglichkeit haben, ASF-Dateien zu lesen und zu schreiben. Mithilfe von DirectShow können Anwendungen auch Daten von audiovideogeräten erfassen und Daten aus verschiedenen Formaten dekomprimieren, bevor Sie Sie als Windows Media-basierte Inhalte neu codieren.
+Das Windows Media Format SDK enthält zwei Microsoft DirectShow®filter, mit denen DirectShow-basierte Anwendungen ASF-Dateien lesen und schreiben können. DirectShow ermöglicht es Anwendungen auch, Daten von Audiovideogeräten zu erfassen und Daten aus einer Vielzahl von Formaten zu dekomprimieren, bevor sie als medienbasierte Inhalte Windows neu codiert werden.
 
-## <a name="enhanced-profiles"></a>Erweiterte profile
+## <a name="enhanced-profiles"></a>Erweiterte Profile
 
-Profile können Informationen zur Bandbreiten Freigabe und Informationen zur streampriorisierung enthalten. Mit der Bandbreiten Freigabe können Sie angeben, dass für zwei oder mehr Datenströme unabhängig von den einzelnen Bitraten niemals mehr als eine angegebene Bandbreite verwendet werden soll. Die Bandbreiten Freigabe von Daten in einem Profil ist nur eine Informations Meldung. Sie wird von keiner Logik im SDK erzwungen. Mithilfe der streampriorisierung können Sie eine Prioritäts Priorität für die Datenströme in einem Profil angeben. Wenn bei der Wiedergabe nicht genügend Bandbreite vorhanden ist, um die Datei ordnungsgemäß zu streamen, können Datenströme mit niedrigster Priorität ignoriert werden, um die Leistung zu verbessern
+Profile können Informationen zur Freigabe der Bandbreite und Datenstrompriorisierungsinformationen enthalten. Mithilfe der Bandbreitenfreigabe können Sie angeben, dass zwei oder mehr Datenströme unabhängig von den einzelnen Bitraten niemals mehr als eine angegebene Bandbreite verwenden. Die Bandbreitenfreigabedaten in einem Profil sind rein informationshalber. sie wird von keiner Logik im SDK erzwungen. Mit der Streampriorisierung können Sie eine Prioritätsreihenfolge für die Streams in einem Profil angeben. Wenn bei der Wiedergabe nicht genügend Bandbreite vorhanden ist, um die Datei ordnungsgemäß zu streamen, können die Streams mit der niedrigsten Priorität ignoriert werden, um die Leistung zu verbessern.
 
 ## <a name="drm-writing-capability"></a>DRM-Schreibfunktion
 
-Zusätzlich zu der vorhandenen Unterstützung für DRM-Lesevorgänge hat das Windows Media Format 9-Serie-SDK Unterstützung für das Schreiben von ASF-Dateien mit DRM-Version 1 oder DRM-Schutz Version 7 hinzugefügt. Diese neue Funktion ermöglicht "Live DRM-Szenarien", wie z. b. Pay-per-View-Webcasting von Live Sportveranstaltungen oder Konzerten.
+Zusätzlich zur vorhandenen DRM-Leseunterstützung hat das SDK der Windows Media Format 9-Serie Unterstützung für das Schreiben von ASF-Dateien mit DRM-Schutz der Version 1 oder DRM Version 7 hinzugefügt. Diese neue Funktion ermöglicht "Live-DRM"-Szenarien, z. B. Webcasting mit nutzungsbasierter Bezahlung von Liveereignissen oder Veranstaltungen.
 
-## <a name="enhanced-file-sink"></a>Erweiterte Datei Senke
+## <a name="enhanced-file-sink"></a>Erweiterte Dateisenke
 
-Der 9-Serienversion des SDK wurden mehrere neue dateisenke-Funktionen hinzugefügt. Sie können die Datei Senke so konfigurieren, dass die automatische Indizierung neu erstellter ASF-Dateien deaktiviert wird. Sie haben auch die Möglichkeit, Sie für nicht gepufferte Eingaben und Ausgaben zu konfigurieren.
+Der Version der 9-Serie des SDK wurden mehrere neue Dateisenkenfunktionen hinzugefügt. Sie können die Dateisenke so konfigurieren, dass die automatische Indizierung neu erstellter ASF-Dateien deaktiviert wird. Sie haben auch die Möglichkeit, sie für nicht gepufferte Eingaben und Ausgaben zu konfigurieren.
 
-## <a name="directx-video-acceleration"></a>DirectX-Video Beschleunigung
+## <a name="directx-video-acceleration"></a>DirectX-Videobeschleunigung
 
-Bei DirectX Video Acceleration (DXVA) handelt es sich um eine Technologie, die die Wiedergabe von Videos mit hoher Bitrate (DVD-Qualität oder besser) auf weniger leistungsfähigen Computern mit DXVA-fähigen Grafikkarten ermöglicht. Sie können das Reader-Objekt dieses SDK verwenden, um die DirectX-Video Beschleunigung bei der Wiedergabe von ASF-Dateien zu aktivieren, wenn die Hardware dies unterstützt.
+DirectX Video Acceleration (DXVA) ist eine Technologie, die die Wiedergabe von Videos mit hoher Bitrate (DVD-Qualität oder höher) auf weniger leistungsstarken Computern mit DXVA-fähigen Grafikkarten ermöglicht. Sie können das Readerobjekt dieses SDK verwenden, um die DirectX-Videobeschleunigung beim Wiedergeben von ASF-Dateien zu aktivieren, sofern die Hardware dies unterstützt.
 
-## <a name="multichannel-audio"></a>Multichannel-Audiodatei
+## <a name="multichannel-audio"></a>Multichannelaudio
 
-Sie können Multichannel-audiocode codieren und wiedergeben. Der Windows Media Audio 9 Professional-Codec unterstützt Formate mit 6 Kanälen und acht Kanälen sowie eine Stereo-High-Definition.
+Sie können Multichannel-Audio codieren und wiedergeben. Der Windows Media Audio 9 Professional Codec unterstützt Formate mit 6 Kanälen und 8 Kanälen sowie High Definition Stereo.
 
-## <a name="watermarking"></a>Grenzwerte
+## <a name="watermarking"></a>Wasserzeichen
 
-Sie können ASF-Dateien mit digitalen Wasserzeichen für die Sicherheit codieren. Alle Wasserzeichen Systeme unterscheiden sich in ihrem Ansatz, aber alle Betten die Identifizierung in codierten Inhalt ein. Das Wasserzeichen wird mithilfe spezieller DirectX® Media Objects (DMOs) von Drittanbietern ausgeführt.
+Sie können ASF-Dateien aus Sicherheitsgründen mit digitalen Wasserzeichen codieren. Alle Wasserzeichensysteme unterscheiden sich in ihrem Ansatz, aber alle betten die Identifikation in codierten Inhalt ein. Das Wasserzeichen wird mithilfe spezieller DirectX®-Medienobjekte (DMOs) von Drittanbietern ausgeführt.
 
 ## <a name="support-for-multiple-languages-in-asf-files"></a>Unterstützung für mehrere Sprachen in ASF-Dateien
 
-Sie können mehrere Sprachen in ASF-Dateien sowohl in Streams als auch in Metadaten unterstützen. Beispielsweise können Sie eine Videodatei mit Audiodatenströmen in verschiedenen Sprachen erstellen. Bei der Wiedergabe kann der Benutzer auswählen, welche Sprache verwendet werden soll, oder die Anwendung kann die Systeminformationen auf dem wiedergegebenen Computer Abfragen und automatisch eine Sprache auswählen. Metadatenattribute können auch mehrmals eingegeben werden, mit den Werten in verschiedenen Sprachen.
+Sie können mehrere Sprachen in ASF-Dateien unterstützen, sowohl in Streams als auch in Metadaten. Beispielsweise können Sie eine Videodatei mit Audiostreams in mehreren Sprachen erstellen. Bei der Wiedergabe kann der Benutzer auswählen, welche Sprache verwendet werden soll, oder Ihre Anwendung kann die Systeminformationen auf dem wiedergabenden Computer abfragen und automatisch eine Sprache auswählen. Metadatenattribute können auch mehrmals eingegeben werden, wobei die Werte in verschiedenen Sprachen vorliegen.
 
-## <a name="device-conformance-templates"></a>Geräte Konformitäts Vorlagen
+## <a name="device-conformance-templates"></a>Gerätekonformitätsvorlagen
 
-Zur Unterstützung bei der Ausrichtung von Inhalten auf bestimmte Client Geräte unterstützen die Windows Media-Codecs nun Geräte Konformitäts Vorlagen. Jede Vorlage enthält einen definierten Bereich von Einstellungen und Codec-Funktionen, die für Medien verwendet werden sollen, die für eine bestimmte Platt Form Plattform gedacht sind. System Profile werden in den neuesten Versionen der Windows Media-Codecs nicht mehr unterstützt. Alle Profile müssen Ihren Anforderungen entsprechend angepasst werden. Sie können Geräte Konformitäts Vorlagen verwenden, um Sie beim Entwerfen von Profilen zu unterstützen.
+Um die Ausrichtung von Inhalten auf bestimmte Clientgeräte zu unterstützen, unterstützen die Windows Mediencodecs jetzt Gerätekonformitätsvorlagen. Jede Vorlage enthält einen definierten Bereich von Einstellungen und Codecfunktionen, die für Medien verwendet werden sollen, die für eine bestimmte Kategorie von Plattformen vorgesehen sind. Systemprofile werden mit den neuesten Versionen der Windows Mediencodecs nicht mehr unterstützt. Alle Profile müssen ihren Anforderungen entsprechend angepasst werden. Sie können Gerätekonformitätsvorlagen verwenden, um Sie beim Entwerfen Ihrer Profile zu unterstützen.
 
-## <a name="expanded-codec-enumeration"></a>Erweiterte Codec-Enumeration
+## <a name="expanded-codec-enumeration"></a>Erweiterte Codecenumeration
 
-Das Profil-Manager-Objekt kann die Windows Media Audio und Video Codecs nach unterstützten Formaten Abfragen. Sie können Parameter für die abgerufenen Formate festlegen. Beispielsweise können Sie alle Qualitäts basierten Variablen Bitrate-Formate abrufen, die vom Windows Media Audio 9-Codec unterstützt werden.
+Das Profil-Manager-Objekt kann die Windows Medienaudio- und Videocodecs nach unterstützten Formaten abfragen. Sie können Parameter für die abgerufenen Formate festlegen. Beispielsweise können Sie alle qualitätsbasierten Formate mit variabler Bitrate abrufen, die vom Windows Media Audio 9-Codec unterstützt werden.
 
 ## <a name="improved-mutual-exclusion"></a>Verbesserter gegenseitiger Ausschluss
 
-Sie können benannte Datensätze erstellen, die mehrere Datenströme innerhalb eines gegenseitigen Ausschluss Objekts enthalten. Sie können auch Objekte für die gegenseitige Ausschluss benennen, um Sie leichter zu identifizieren. Dies ermöglicht Ihnen das Erstellen von Ebenen des gegenseitigen Ausschlusses. Eine Datei kann z. b. Datenströme enthalten, die sich nach Bitrate und Sprache gegenseitig ausschließen. Der sprachbasierte gegenseitige Ausschluss umfasst Gruppen von Streams, jede Gruppe, die aus Streams in derselben Sprache besteht, aber sich gegenseitig von der Bitrate ausschließen.
+Sie können benannte Datensätze erstellen, die mehrere Streams innerhalb eines gegenseitigen Ausschlussobjekts enthalten. Sie können auch gegenseitige Ausschlussobjekte benennen, um sie leichter zu identifizieren. Dadurch können Sie Ebenen des gegenseitigen Ausschlusses erstellen. Eine Datei kann z. B. Streams enthalten, die sich durch Bitrate und Sprache gegenseitig ausschließen. Der sprachbasierte gegenseitige Ausschluss würde Gruppen von Streams umfassen, die jeweils aus Streams in der gleichen Sprache bestehen, sich jedoch durch die Bitrate gegenseitig ausschließen.
 
-## <a name="expanded-multiple-bit-rate-support"></a>Erweiterte Unterstützung für mehrere Bitraten
+## <a name="expanded-multiple-bit-rate-support"></a>Erweiterte Unterstützung der Multiple-Bit-Rate
 
-Die Unterstützung gegenseitiger Ausschluss ist für MBR-Audiodaten (Multiple Bitrate) und für Videos mit unterschiedlichen Bildgrößen enthalten.
+Unterstützung für gegenseitigen Ausschluss ist für MBITR-Audio (Multiple Bit Rate) und für Videos mit Streams unterschiedlicher Bildgröße enthalten.
 
 ## <a name="attributes-for-streams"></a>Attribute für Streams
 
-Sie können einzelnen Streams in ASF-Dateien Attribute zuweisen. Sie müssen weiterhin Attribute auf Dateiebene für MP3-Dateien verwenden. Diese Funktion fügt dem SDK keine Methoden hinzu, aber die vorhandenen Methoden akzeptieren jetzt streamnummern außer 0 (null).
+Sie können einzelnen Streams in ASF-Dateien Attribute zuweisen. Sie müssen weiterhin Attribute auf Dateiebene für MP3-Dateien verwenden. Dieses Feature fügt dem SDK keine Methoden hinzu, aber die vorhandenen Methoden akzeptieren jetzt andere Streamnummern als 0 (null).
 
-## <a name="transcoding-with-smart-recompression"></a>Transcoding mit intelligenter Neukomprimierung
+## <a name="transcoding-with-smart-recompression"></a>Transcodieren mit smarter Rekomprimierung
 
-Die intelligente Neukomprimierung ermöglicht es Ihnen, Windows Media-Audiodateien von einer hohen Bitrate in eine niedrigere Bitrate zu transcodieren, die eine bessere Qualität als zuvor erreicht hat.
+Mit der intelligenten Rekomprimierung können Sie Windows Medienaudiodateien von einer hohen Bitrate in eine niedrigere Bitrate mit einer besseren Qualität als zuvor erreichbar transcodieren.
 
 ## <a name="expanded-metadata-support"></a>Erweiterte Metadatenunterstützung
 
-Das Windows Media-Format SDK bietet die folgenden neuen Metadatenfeatures:
+Das Windows Media Format SDK bietet die folgenden neuen Metadatenfeatures:
 
--   Index basierte Metadatentags, die mehrere Tags mit dem gleichen Namen ermöglichen.
--   Möglichkeit zum Lesen von DRM-Header Attributen ohne wmstubdrm. lib-Datei.
--   Attribute mit mehr als 64 Kilobyte zugeordneten Daten.
+-   Indexbasierte Metadatentags, die mehrere Tags mit demselben Namen ermöglichen.
+-   Möglichkeit zum Lesen von DRM-Headerattributen ohne eine WMStubDRM.lib-Datei.
+-   Attribute mit mehr als 64 KB zugeordneten Daten.
 -   Attribute in mehreren Sprachen.
--   Dutzende von neuen vordefinierten Attributen.
+-   Dutzende neuer vordefinierter Attribute.
 
-## <a name="dynamic-pixel-aspect-ratio"></a>Verhältnis des dynamischen Pixel Aspekts
+## <a name="dynamic-pixel-aspect-ratio"></a>Dynamisches Pixel-Seitenverhältnis
 
-Videostreams, die aus verschiedenen Inhaltstypen bestehen, können durch die Identifizierung des Pixel Seitenverhältnisses der unterschiedlichen Stichproben im Stream untersucht werden. Dadurch kann die Spiele Anwendung eine bessere Wiedergabe solcher Inhalte bereitstellen.
+Videostreams, die aus verschiedenen Inhaltstypen bestehen, können berücksichtigt werden, indem das Pixel-Seitenverhältnis der unterschiedlichen Stichproben im Stream identifiziert wird. Dies ermöglicht es der Wiedergabeanwendung, eine bessere Wiedergabe solcher Inhalte zu ermöglichen.
 
-## <a name="interlaced-video-streams"></a>Video Datenströme mit Zeilen Sprung
+## <a name="interlaced-video-streams"></a>Interlaced Video Streams
 
-In früheren Versionen des SDK für den Windows Media-Format haben Sie die Möglichkeit bereitgestellt, Zeilen Sprung Inhalte in einen Videodaten Strom mit progressivem Scannen [*zu codieren*](wmformat-glossary.md) . Beginnend mit dem Windows Media Format 9-Reihe-SDK können Sie Zeilen Sprung Video codieren, während das Zeilen Sprung Format beibehalten wird. Dies kann zu einer verbesserten Wiedergabe führen, insbesondere auf Zeilen Sprung Geräten, z. b. Fernseh Sets.
+Frühere Versionen des Windows Media Format SDK haben die Möglichkeit [](wmformat-glossary.md) bereitgestellt, Zwischeninhalte in einen Progressive Scan-Videostream zu codieren. Ab dem Windows Media Format 9 Series SDK können Sie Interlacingvideo codieren und dabei das Interlaced-Format beibehalten. Dies kann zu einer verbesserten Wiedergabe führen, insbesondere auf Verschachtelungsgeräten wie Fernsehsendungen.
 
 ## <a name="two-pass-encoding"></a>Two-Pass Codierung
 
-Die neuen Windows Media-Codecs ermöglichen die zwei-Pass-Codierung. Inhalt, der in zwei Durchläufen codiert ist, kann eine höhere Qualität ausgeben
+Die neuen Windows Mediencodecs ermöglichen die Zwei-Durch-Durch-Codierung. Inhalte, die in zwei Durchläufen codiert sind, können eine ausgabe mit höherer Qualität erzielen.
 
 ## <a name="new-speech-codec"></a>Neuer Sprachcodec
 
-Dieses SDK enthält den neuen Windows Media Audio 9-Sprachcodec, der für die Codierung der menschlichen Stimme bei niedriger Bitrate optimiert ist. Dieser Codec bietet auch eine bessere Leistung für gemischte Musikinhalte.
+Dieses SDK enthält den neuen Windows Media Audio 9 Voice-Codec, der für die Codierung der menschlichen Stimme bei Verwendung einer niedrigen Bitrate optimiert ist. Dieser Codec bietet auch eine bessere Leistung für gemischten Musikstimmeninhalt.
 
-## <a name="accessible-video-frame-duration"></a>Barrierefreie Video Frame Dauer
+## <a name="accessible-video-frame-duration"></a>Accessible Video Frame Duration
 
-Sie können das Writer-Objekt dieses SDK zum Bereitstellen der Dauer von Video Frames für den Reader bereitstellen.
+Sie können das Writer-Objekt dieses SDK die Dauer von Videoframes für den Reader bereitstellen lassen.
 
-## <a name="streaming-html"></a>Streaming-HTML
+## <a name="streaming-html"></a>Streaming HTML
 
-Mit der vorherigen Version dieses SDK konnten Sie einen Skript Befehl verwenden, um Ihrer Anwendung das Öffnen einer Webseite zu signalisieren. Beginnend mit dem Windows Media Format 9-Reihe-SDK können Sie die Komponenten von Webseiten in ihren ASF-Dateien speichern, um sicherzustellen, dass es keine Verzögerung bei Präsentationen gibt.
+Mit der vorherigen Version dieses SDK konnten Sie einen Skriptbefehl verwenden, um Ihrer Anwendung zu signalisieren, eine Webseite zu öffnen. Ab dem Windows Media Format 9 Series SDK können Sie die Komponenten von Webseiten in Ihren ASF-Dateien speichern, um sicherzustellen, dass es keine Verzögerung bei Präsentationen gibt.
 
-## <a name="wmstublib-no-longer-required-for-build-environment"></a>"Wmstub. lib" ist für die Buildumgebung nicht mehr erforderlich.
+## <a name="wmstublib-no-longer-required-for-build-environment"></a>WMStub.lib nicht mehr für Buildumgebung erforderlich
 
-Die buildumgebungseinstellungen für das SDK für Windows Media-Format wurden beginnend mit dem SDK für Windows Media-Serie 9 geändert. Sie müssen wmstub. lib nicht mehr für Anwendungen einschließen, die dieses SDK verwenden. Allerdings müssen DRM-fähige Anwendungen weiterhin einen separaten Lizenzvertrag abrufen und Signieren und eine eindeutige statische Bibliothek von Microsoft erhalten. Kontaktieren Sie, wmla@microsoft.com um weitere Informationen zur DRM-Bibliothek und zum Lizenzvertrag zu erhalten. Weitere Informationen zum Aufbau von Projekten mit diesem SDK finden Sie unter [Bibliotheksdateien und Compilereinstellungen](library-files-and-compiler-settings.md).
+Die Buildumgebungseinstellungen für das Windows Media Format SDK wurden ab dem Windows Media Format 9 Series SDK geändert. WmStub.lib muss für Anwendungen, die dieses SDK verwenden, nicht mehr enthalten sein. DRM-fähige Anwendungen müssen jedoch weiterhin einen separaten Lizenzvertrag und eine eindeutige statische Bibliothek von Microsoft abrufen und unterzeichnen. Wenden wmla@microsoft.com Sie sich an , um weitere Informationen zur DRM-Bibliothek und zum Lizenzvertrag zu erhalten. Weitere Informationen zum Erstellen von Projekten mit diesem SDK finden Sie unter [Bibliotheksdateien und Compiler Einstellungen](library-files-and-compiler-settings.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen zum Windows Media-Format-SDK**](about-the-windows-media-format-sdk.md)
+[**Informationen zum Windows Media Format SDK**](about-the-windows-media-format-sdk.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

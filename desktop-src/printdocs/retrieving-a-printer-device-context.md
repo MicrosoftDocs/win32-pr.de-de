@@ -1,34 +1,34 @@
 ---
-description: In diesem Thema wird beschrieben, wie ein Drucker Gerätekontext abgerufen wird.
+description: In diesem Thema wird das Abrufen eines Druckergerätekontexts beschrieben.
 ms.assetid: b3eb9c48-f4c4-42f1-b189-1fa42670008e
-title: 'Vorgehensweise: Abrufen eines Drucker Geräte Kontexts'
+title: 'How To: Retrieve a Printer Device Context'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 39fde55450273e42f3429f173150296fdd67a1c9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3f723ece0e00d58ed684029e0eb3202d637443bd7f0e9d8878024346b9d79ba9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356292"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119600560"
 ---
-# <a name="how-to-retrieve-a-printer-device-context"></a>Vorgehensweise: Abrufen eines Drucker Geräte Kontexts
+# <a name="how-to-retrieve-a-printer-device-context"></a>How To: Retrieve a Printer Device Context
 
-In diesem Thema wird beschrieben, wie ein Drucker Gerätekontext abgerufen wird. Sie können einen Drucker Gerätekontext abrufen, indem Sie die [**CreateDC**](/windows/desktop/api/wingdi/nf-wingdi-createdca) -Funktion direkt aufrufen, oder Sie können von einem Dialogfeld " **Drucken** " zurückgegeben werden.
+In diesem Thema wird das Abrufen eines Druckergerätekontexts beschrieben. Sie können einen Druckergerätekontext abrufen, indem Sie die [**CreateDC-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-createdca) direkt aufrufen, oder sie kann von einem allgemeinen Dialogfeld Drucken **zurückgegeben** werden.
 
-Wenn Sie ein Dialogfeld " **Drucken** " anzeigen, kann ein Benutzer den Drucker, die Seiten des Dokuments und die Anzahl der zu druckenden Dokument Kopien auswählen. Im Dialogfeld **Drucken** (allgemein) werden diese Auswahlmöglichkeiten in einer Datenstruktur zurückgegeben.
+Wenn Sie ein **Allgemeines** Dialogfeld Drucken anzeigen, kann ein Benutzer den Drucker, die Seiten des Dokuments und die Anzahl der Dokumentkopien auswählen, die er drucken möchte. Das **Dialogfeld Allgemein** drucken gibt diese Auswahl in einer Datenstruktur zurück.
 
-In diesem Thema wird beschrieben, wie Sie den Kontext eines Drucker Geräts mithilfe der folgenden Methoden abrufen.
+In diesem Thema wird beschrieben, wie Sie mithilfe der folgenden Methoden einen Druckergerätekontext abrufen.
 
--   [Aufrufen von "kreatedc"](#call-createdc)
--   [Anzeigen eines allgemeinen Druck Dialogfelds](#display-a-print-common-dialog-box)
-    -   [Verwenden der printdlgex-Funktion](#using-the-printdlgex-function)
+-   [Aufrufen von CreateDC](#call-createdc)
+-   [Anzeigen eines allgemeinen Druckdialogfelds](#display-a-print-common-dialog-box)
+    -   [Verwenden der PrintDlgEx-Funktion](#using-the-printdlgex-function)
     -   [Verwenden der PrintDlg-Funktion](#using-the-printdlg-function)
 
-## <a name="call-createdc"></a>Aufrufen von "kreatedc"
+## <a name="call-createdc"></a>Aufrufen von CreateDC
 
-Wenn Sie das Gerät kennen, das Sie drucken möchten, können Sie " [**kreatedc**](/windows/desktop/api/wingdi/nf-wingdi-createdca) " aufrufen und diese Informationen direkt an die Funktion übergeben. " **Kreatedc** " gibt einen Gerätekontext zurück, in den der zu druckende Inhalt dargestellt werden kann.
+Wenn Sie das Gerät kennen, auf dem Sie drucken möchten, können Sie [**CreateDC aufrufen**](/windows/desktop/api/wingdi/nf-wingdi-createdca) und diese Informationen direkt an die Funktion übergeben. **CreateDC gibt** einen Gerätekontext zurück, in dem Sie den zu druckenden Inhalt rendern können.
 
-Der einfachste Abruf zum Abrufen eines Geräte Kontexts wird im folgenden Codebeispiel gezeigt. Der Code in diesem Beispiel ruft einen Gerätekontext zum Standard Anzeigegerät ab.
+Der einfachste Aufruf zum Abrufen eines Gerätekontexts wird im folgenden Codebeispiel gezeigt. Der Code in diesem Beispiel ruft einen Gerätekontext auf das Standardanzeigegerät ab.
 
 
 ```C++
@@ -37,9 +37,9 @@ Der einfachste Abruf zum Abrufen eines Geräte Kontexts wird im folgenden Codebe
 
 
 
-Zum Renderingvorgang für einen bestimmten Drucker müssen Sie "winspool" als Gerät angeben und den richtigen Drucker Namen an " [**kreatedc**](/windows/desktop/api/wingdi/nf-wingdi-createdca)" übergeben. Sie können auch eine [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) -Struktur im Aufrufen von " **anatedc** " übergeben, wenn Sie gerätespezifische Initialisierungs Daten für den Gerätetreiber bereitstellen möchten, wenn Sie den Gerätekontext erstellen.
+Um auf einem bestimmten Drucker zu rendern, müssen Sie "WINSPOOL" als Gerät angeben und den richtigen Namen des Druckers an [**CreateDC übergeben.**](/windows/desktop/api/wingdi/nf-wingdi-createdca) Sie können auch eine [**DEVMODE-Struktur**](/windows/win32/api/wingdi/ns-wingdi-devmodea) im Aufruf von **CreateDC** übergeben, wenn Sie beim Erstellen des Gerätekontexts gerätespezifische Initialisierungsdaten für den Gerätetreiber bereitstellen möchten.
 
-Das folgende Beispiel zeigt einen Aufrufen von " [**kreatedc**](/windows/desktop/api/wingdi/nf-wingdi-createdca) ", bei dem der "winspool"-Treiber ausgewählt und der Druckername anhand des Namens angegeben wird.
+Das folgende Beispiel zeigt einen Aufruf von [**CreateDC,**](/windows/desktop/api/wingdi/nf-wingdi-createdca) in dem der WINSPOOL-Treiber ausgewählt und der Druckername durch den Namen angegeben wird.
 
 
 ```C++
@@ -48,7 +48,7 @@ Das folgende Beispiel zeigt einen Aufrufen von " [**kreatedc**](/windows/desktop
 
 
 
-Sie können die exakte Zeichenfolge des Drucker namens abrufen, die an [**CreateDC**](/windows/desktop/api/wingdi/nf-wingdi-createdca) übergeben werden soll, indem Sie die [**enumprinter**](enumprinters.md) -Funktion aufrufen. Im folgenden Codebeispiel wird gezeigt, wie Sie **enumprinter** aufzurufen und die Namen der lokalen und lokal verbundenen Drucker abrufen. Da die Größe des erforderlichen Puffers nicht im Voraus bekannt sein kann, wird der **enumprinter** zweimal aufgerufen. Der erste-Befehl gibt die Größe des erforderlichen Puffers zurück. Diese Informationen werden verwendet, um einen Puffer mit der erforderlichen Größe zuzuweisen, und der zweite aufzurufende aufzurufende Daten gibt die gewünschten **Daten zurück.**
+Sie können die exakte Druckernamenzeichenfolge abrufen, die an [**CreateDC übergeben werden soll,**](/windows/desktop/api/wingdi/nf-wingdi-createdca) indem Sie die [**EnumPrinters-Funktion**](enumprinters.md) aufrufen. Das folgende Codebeispiel zeigt, wie **Sie EnumPrinters** aufrufen und die Namen der lokalen und lokal verbundenen Drucker erhalten. Da die Größe des erforderlichen Puffers nicht im Voraus bekannt ist, wird **EnumPrinters** zweimal aufgerufen. Der erste Aufruf gibt die Größe des erforderlichen Puffers zurück. Diese Informationen werden verwendet, um einen Puffer der erforderlichen Größe zu reservieren, und der zweite Aufruf von **EnumPrinters** gibt die gewünschten Daten zurück.
 
 
 ```C++
@@ -100,29 +100,29 @@ Sie können die exakte Zeichenfolge des Drucker namens abrufen, die an [**Create
 
 
 
-## <a name="display-a-print-common-dialog-box"></a>Anzeigen eines allgemeinen Druck Dialogfelds
+## <a name="display-a-print-common-dialog-box"></a>Anzeigen eines allgemeinen Druckdialogfelds
 
-Sie können zwischen zwei **Druck** Dialogfeldern auswählen, die für einen Benutzer angezeigt werden sollen. das neuere Dialogfeld, das Sie anzeigen können, indem Sie die [**printdlgex**](/previous-versions/windows/desktop/legacy/ms646942(v=vs.85)) -Funktion aufrufen, und das Dialogfeld für die ältere Formatvorlage, das Sie durch Aufrufen der [**PRINTDLG**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) -Funktion anzeigen können. In den folgenden Abschnitten wird beschrieben, wie jedes Dialogfeld von einer Anwendung aufgerufen wird.
+Sie können zwischen  zwei allgemeinen Dialogfeldern drucken auswählen, um sie einem Benutzer anzuzeigen. das neuere Dialogfeld, das Sie anzeigen können, indem Sie die [**PrintDlgEx-Funktion**](/previous-versions/windows/desktop/legacy/ms646942(v=vs.85)) aufrufen, und das ältere Formatdialogfeld, das Sie anzeigen können, indem Sie die [**PrintDlg-Funktion**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) aufrufen. In den folgenden Abschnitten wird beschrieben, wie sie die einzelnen Dialogfelder aus einer Anwendung aufrufen.
 
-### <a name="using-the-printdlgex-function"></a>Verwenden der printdlgex-Funktion
+### <a name="using-the-printdlgex-function"></a>Verwenden der PrintDlgEx-Funktion
 
-Aufrufen der [**printdlgex**](/previous-versions/windows/desktop/legacy/ms646942(v=vs.85)) -Funktion, um das **Druck** Eigenschaften Blatt anzuzeigen. Mithilfe des Eigenschaften Blatts kann der Benutzerinformationen zum Druckauftrag angeben. Beispielsweise kann der Benutzer einen Seitenbereich auswählen, der gedruckt werden soll, die Anzahl der Kopien usw. Mit **printdlgex** kann auch ein Handle für einen Gerätekontext für den ausgewählten Drucker abgerufen werden. Sie können das Handle verwenden, um die Ausgabe auf dem Drucker zu Rendering.
+Rufen Sie die [**PrintDlgEx-Funktion**](/previous-versions/windows/desktop/legacy/ms646942(v=vs.85)) auf, um das **Eigenschaftenblatt Drucken** anzuzeigen. Mithilfe des Eigenschaftenblatts kann der Benutzer Informationen zum Druckauftrag angeben. Der Benutzer kann z. B. einen Bereich von seiten auswählen, der gedruckt werden soll, die Anzahl der Kopien und so weiter. **PrintDlgEx kann** auch ein Handle für einen Gerätekontext für den ausgewählten Drucker abrufen. Sie können das Handle verwenden, um die Ausgabe auf dem Drucker zu rendern.
 
-Beispielcode, der die Verwendung von [**printdlgex**](/previous-versions/windows/desktop/legacy/ms646942(v=vs.85)) zum Abrufen eines Drucker Geräte Kontexts veranschaulicht, finden Sie unter "Verwenden des Druckeigenschaften Blatts" in [Verwenden von allgemeinen Dialog Feldern](../dlgbox/using-common-dialog-boxes.md).
+Beispielcode, der die Verwendung von [**PrintDlgEx**](/previous-versions/windows/desktop/legacy/ms646942(v=vs.85)) zum Abrufen eines Druckergerätekontexts veranschaulicht, finden Sie unter "Verwenden des Druckeigenschaftenblatts" in Verwenden von [allgemeinen Dialogfeldern](../dlgbox/using-common-dialog-boxes.md).
 
 ### <a name="using-the-printdlg-function"></a>Verwenden der PrintDlg-Funktion
 
-Wenn die Anwendung auf einem System ausgeführt werden muss, das die [**printdlgex**](/previous-versions/windows/desktop/legacy/ms646942(v=vs.85)) -Funktion nicht unterstützt, z. b. auf einem System, auf dem eine frühere Windows-Version als Windows 2000 ausgeführt wird, oder die zusätzliche Funktionalität nicht benötigt, die die **printdlgex** -Funktion bereitstellt, verwenden Sie die [**PRINTDLG**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) -Funktion. In den folgenden Schritten wird beschrieben, wie Sie das Dialogfeld für den älteren Stil **Drucken** anzeigen.
+Wenn Ihre Anwendung auf einem System ausgeführt werden muss, das die [**PrintDlgEx-Funktion**](/previous-versions/windows/desktop/legacy/ms646942(v=vs.85)) nicht unterstützt, z. B. auf einem System, auf dem eine Version von Windows vor Windows 2000 ausgeführt wird, oder nicht die zusätzliche Funktionalität benötigt, die die **PrintDlgEx-Funktion** bietet, verwenden Sie die [**PrintDlg-Funktion.**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) In den folgenden Schritten wird beschrieben, wie Sie das Dialogfeld "Allgemein **drucken"** im älteren Format anzeigen.
 
-1.  Initialisieren Sie die [**PRINTDLG**](/windows/win32/api/commdlg/ns-commdlg-printdlga) -Datenstruktur.
-2.  Aufrufen von [**PRINTDLG**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) , um dem Benutzer das Dialogfeld "Allgemein **Drucken** " anzuzeigen.
-3.  Wenn der [**PRINTDLG**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) -Rückruf **true** zurückgibt, Sperren Sie den zurückgegebenen [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) -Struktur Arbeitsspeicher. Wenn der **PRINTDLG** -Rückruf " **false**" zurückgibt, hat der Benutzer die Schaltfläche " **Abbrechen** " im Dialogfeld "Allgemein **Drucken** " gedrückt, sodass nichts mehr verarbeitet werden kann.
-4.  Zuordnen eines lokalen Speicherpuffers, der groß genug ist, um eine Kopie der [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) -Struktur zu enthalten.
-5.  Kopieren Sie die zurückgegebene [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) -Struktur in die lokal zugeordnete.
-6.  Speichern Sie weitere Informationen, die in der [**PRINTDLG**](/windows/win32/api/commdlg/ns-commdlg-printdlga) -Struktur zurückgegeben werden und die Sie verarbeiten müssen, um den Druckauftrag zu verarbeiten.
-7.  Freigeben der [**PRINTDLG**](/windows/win32/api/commdlg/ns-commdlg-printdlga) und der Speicherpuffer, auf die verwiesen wird.
+1.  Initialisieren Sie [**die PRINTDLG-Datenstruktur.**](/windows/win32/api/commdlg/ns-commdlg-printdlga)
+2.  Rufen [**Sie PrintDlg auf,**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) **um** dem Benutzer das Dialogfeld Allgemein drucken anzuzeigen.
+3.  Wenn der [**PrintDlg-Aufruf**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) **TRUE zurückgibt,** sperren Sie den zurückgegebenen [**DEVMODE-Strukturspeicher.**](/windows/win32/api/wingdi/ns-wingdi-devmodea) Wenn der **PrintDlg-Aufruf** **FALSE zurückgibt,** hat  der Benutzer im Dialogfeld Allgemeines Drucken auf die Schaltfläche Abbrechen gedrückt, damit nichts weiter zu verarbeiten ist. 
+4.  Ordnen Sie einen lokalen Speicherpuffer zu, der groß genug ist, um eine Kopie der [**DEVMODE-Struktur zu**](/windows/win32/api/wingdi/ns-wingdi-devmodea) enthalten.
+5.  Kopieren Sie die [**zurückgegebene DEVMODE-Struktur**](/windows/win32/api/wingdi/ns-wingdi-devmodea) in die lokal zugeordnete Struktur.
+6.  Speichern Sie weitere Informationen, die in der [**PRINTDLG-Struktur zurückgegeben**](/windows/win32/api/commdlg/ns-commdlg-printdlga) werden und die Sie zum Verarbeiten des Druckauftrags benötigen.
+7.  Geben Sie [**die PRINTDLG und**](/windows/win32/api/commdlg/ns-commdlg-printdlga) die Speicherpuffer frei, auf die sie verweist.
 
-Der folgende Beispielcode veranschaulicht, wie die [**PRINTDLG**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) -Funktion verwendet wird, um den Gerätekontext und den Namen des ausgewählten Druckers zu erhalten.
+Der folgende Beispielcode veranschaulicht die Verwendung der [**PrintDlg-Funktion,**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) um den Gerätekontext und den Namen des ausgewählten Druckers zu erhalten.
 
 
 ```C++
@@ -216,7 +216,7 @@ else
 
 
 
-Weitere Informationen zur [**PRINTDLG**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) -Funktion finden Sie unter "Anzeigen des Druck Dialogfelds" in [Verwenden von allgemeinen Dialog Feldern](../dlgbox/using-common-dialog-boxes.md).
+Weitere Informationen zur [**PrintDlg-Funktion**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) finden Sie unter "Anzeigen des Druckdialogfelds" unter [Verwenden von allgemeinen Dialogfeldern.](../dlgbox/using-common-dialog-boxes.md)
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Diese Struktur enthält Daten für die Arbeitsspeicher Auslastung.
+description: Diese Struktur enthält Daten für die Berichterstellung zur Arbeitsspeicherauslastung.
 ms.assetid: 42cf0922-53cc-48b9-8359-b88583ef5f1c
-title: D3DMEMORYPRESSURE-Struktur (D3d9types. h) für Microsoft Media Foundation
+title: D3DMEMORYPRESSURE-Struktur (D3d9types.h) für Microsoft Media Foundation
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3d9types.h
-ms.openlocfilehash: 7400c4822b61a84ab288f0424cfa84e825e69dc9
-ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
+ms.openlocfilehash: ec6fdf0d27edb5e1cafa575664b07dfe0807c8d124e1b066161734e75247709f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106371590"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119449420"
 ---
-# <a name="d3dmemorypressure-structure-d3d9typesh-for-microsoft-media-foundation"></a>D3DMEMORYPRESSURE-Struktur (D3d9types. h) für Microsoft Media Foundation
+# <a name="d3dmemorypressure-structure-d3d9typesh-for-microsoft-media-foundation"></a>D3DMEMORYPRESSURE-Struktur (D3d9types.h) für Microsoft Media Foundation
 
-Enthält Daten für die Arbeitsspeicher Auslastung.
+Enthält Daten für die Berichterstellung zur Arbeitsspeicherauslastung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ typedef struct _D3DMEMORYPRESSURE {
 
 <dl> <dt>
 
-**Bytesevictedfromprocess**
+**BytesEvictedFromProcess**
 </dt> <dd>
 
-Die Anzahl der Bytes, die während der Abfrage Dauer vom Prozess entfernt wurden.
+Die Anzahl der Bytes, die während der Dauer der Abfrage vom Prozess entfernt wurden.
 
 </dd> <dt>
 
-**Sizeofinefficientallocation**
+**SizeOfInefficientAllocation**
 </dt> <dd>
 
-Die Gesamtanzahl der Bytes, die in nicht optimalen Speicher Segmenten abgelegt werden, aufgrund unzureichenden Speicherplatzes innerhalb der bevorzugten Speichersegmente.
+Die Gesamtanzahl von Bytes, die aufgrund unzureichenden Speicherplatzes innerhalb der bevorzugten Speichersegmente in nicht optimalen Speichersegmenten platziert werden.
 
 </dd> <dt>
 
-**Levelofefficiency**
+**LevelOfEfficiency**
 </dt> <dd>
 
-Die Gesamteffizienz der Speicher Belegungen, die im nicht optimalen Arbeitsspeicher platziert wurden. Der Wert wird als Prozentsatz ausgedrückt. Der Wert 95 gibt beispielsweise an, dass die in nicht bevorzugten Speicher Segmenten platzierten Zuordnungen 95% effizient sind. Diese Zahl sollte nicht als exakte Messung angesehen werden.
+Die Gesamteffizienz der Speicherbelegungen, die im nicht optimalen Speicher platziert wurden. Der Wert wird als Prozentsatz ausgedrückt. Der Wert 95 gibt beispielsweise an, dass die Zuordnungen, die in nicht abgeleiteten Speichersegmenten platziert werden, zu 95 % effizient sind. Diese Zahl sollte nicht als genaue Messung betrachtet werden.
 
 </dd> </dl>
 
@@ -68,20 +68,20 @@ Die Gesamteffizienz der Speicher Belegungen, die im nicht optimalen Arbeitsspeic
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Nur Windows 7 \[ -Desktop-Apps\]                                                              |
-| Unterstützte Mindestversion (Server) | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]                                                 |
-| Header                  | D3d9types. h (Include d3d9. h) |
+| Unterstützte Mindestversion (Client) | nur Windows 7 \[ Desktop-Apps\]                                                              |
+| Unterstützte Mindestversion (Server) | Windows Nur Server 2008 \[ R2-Desktop-Apps\]                                                 |
+| Header                  | D3d9types.h (einschließlich D3d9.h) |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Direct3D-Video Strukturen](direct3d-video-structures.md)
+[Direct3D-Videostrukturen](direct3d-video-structures.md)
 </dt> <dt>
 
-[Berichterstellung für Speicherauslastung](memory-pressure-reporting.md)
+[Berichterstellung zu Auslastung des Arbeitsspeichers](memory-pressure-reporting.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Mrmdumppridatainmemory-Funktion (mrmresourceindexer. h)
-description: Sichert PRI-Informationen (als BLOB im Arbeitsspeicher, erstellt durch einen vorherigen-Befehl von mrmkreateresourcefileinmemory) an die zugehörige XML-Entsprechung (als in-Memory-Daten), um Sie leichter lesbar zu machen.
+title: MrmDumpPriDataInMemory-Funktion (MrmResourceIndexer.h)
+description: Gibt PRI-Informationen (als Blob im Arbeitsspeicher, das durch einen vorherigen Aufruf von MrmCreateResourceFileInMemory erstellt wurde) in die xml-Entsprechung (als In-Memory-Daten) zurück, um sie leichter lesbar zu machen.
 ms.assetid: 6E563B43-4E0A-465D-A8EA-7DE61738DE06
 keywords:
-- Funktionen von mrmdumppridatainmemory-Funktionen und andere Ressourcen
+- Menüs und andere Ressourcen der MrmDumpPriDataInMemory-Funktion
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 072309dcf9ebda1ba4a5669034019582b99105f3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dbeec26f0741ebb77b742ff647e91cb5fd18afe633a1519228b887b4b438bb72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345505"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119601780"
 ---
-# <a name="mrmdumppridatainmemory-function"></a>Mrmdumppridatainmemory-Funktion
+# <a name="mrmdumppridatainmemory-function"></a>MrmDumpPriDataInMemory-Funktion
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Sichert PRI-Informationen (als BLOB im Arbeitsspeicher, erstellt durch einen vorherigen-Befehl von [**mrmkreateresourcefileinmemory**](mrmcreateresourcefileinmemory.md)) an die zugehörige XML-Entsprechung (als in-Memory-Daten), um Sie leichter lesbar zu machen. Die-Funktion ordnet Speicher zu und gibt einen Zeiger auf diesen Speicher in *outputxmldata* zurück. Nennen Sie [**mrmfreememory**](mrmfreememory.md) mit dem gleichen Zeiger, um diesen Arbeitsspeicher freizugeben. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für [Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme](/windows/uwp/app-resources/pri-apis-custom-build-systems).
+Gibt PRI-Informationen (als Blob im Arbeitsspeicher, das durch einen vorherigen Aufruf von [**MrmCreateResourceFileInMemory**](mrmcreateresourcefileinmemory.md)erstellt wurde) in die xml-Entsprechung (als In-Memory-Daten) zurück, um sie leichter lesbar zu machen. Die Funktion belegt Arbeitsspeicher und gibt einen Zeiger auf diesen Speicher in *outputXmlData* zurück. Rufen Sie [**MrmFreeMemory**](mrmfreememory.md) mit dem gleichen Zeiger auf, um diesen Arbeitsspeicher freizugeben. Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für [die Paketressourcenindizierung (PACKAGE Resource Indexing, PRI) und benutzerdefinierte Buildsysteme.](/windows/uwp/app-resources/pri-apis-custom-build-systems)
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,66 +48,66 @@ HRESULT HRESULT MrmDumpPriDataInMemory(
 
 <dl> <dt>
 
-*inputpridata* \[ in\]
+*inputPriData* \[ In\]
 </dt> <dd>
 
-Typ: **Byte \** _
+Typ: **BYTE \***
 
-Ein Zeiger auf PRI-Daten, die durch einen vorherigen-Befehl von [_ *mrmkreateresourcefileinmemory* *](mrmcreateresourcefileinmemory.md)erstellt wurden.
+Ein Zeiger auf PRI-Daten, die durch einen vorherigen Aufruf von [**MrmCreateResourceFileInMemory**](mrmcreateresourcefileinmemory.md)erstellt wurden.
 
 </dd> <dt>
 
-*Input prisize* \[ in\]
+*inputPriSize* \[ In\]
 </dt> <dd>
 
-Typ: **ulong**
+Typ: **ULONG**
 
-Die Größe der Daten, auf die von *inputpridata* verwiesen wird.
+Die Größe der Daten, auf die *inputPriData* zeigt.
 
 </dd> <dt>
 
-*schemapridata* \[ in, optional\]
+*schemaPriData* \[ in, optional\]
 </dt> <dd>
 
-Typ: **Byte \** _
+Typ: **BYTE \***
 
-Ein optionaler Zeiger auf PRI Info (als BLOB im Arbeitsspeicher), der Schema Daten darstellt, die durch einen vorherigen-Befehl von [_ *mrmkreateresourcefileinmemory* *](mrmcreateresourcefileinmemory.md)erstellt wurden. Machen Sie *schemapridata* erst frei, wenn Sie die Verwendung des ressourcenindexers abgeschlossen haben. Siehe auch Hinweise.
+Ein optionaler Zeiger auf PRI-Informationen (als Blob im Arbeitsspeicher), die Schemadaten darstellen, die durch einen vorherigen Aufruf von [**MrmCreateResourceFileInMemory**](mrmcreateresourcefileinmemory.md)erstellt wurden. Geben Sie *schemaPriData* erst frei, nachdem Sie den Ressourcenindexer verwendet haben. Siehe auch Hinweise.
 
 </dd> <dt>
 
-*schemaprisize* \[ in\]
+*schemaPriSize* \[ In\]
 </dt> <dd>
 
-Typ: **ulong**
+Typ: **ULONG**
 
-Die Größe der Daten, auf die von *schemapridata* verwiesen wird.
+Die Größe der Daten, auf die *schemaPriData* zeigt.
 
 </dd> <dt>
 
-*dumptype* \[ in\]
+*dumpType* \[ In\]
 </dt> <dd>
 
-Typ: **[ **mrmdumptype**](mrmdumptype.md)**
+Typ: **[ **MrmDumpType**](mrmdumptype.md)**
 
-Gibt an, wie detailliert das XML-Dump sein soll oder ob ein Schema gekippt werden soll.
+Gibt an, wie detailliert das XML-Dump sein soll oder ob ein Schema gedumpt werden soll.
 
 </dd> <dt>
 
-*outputxmldata* \[ vorgenommen\]
+*outputXmlData* \[ out\]
 </dt> <dd>
 
-Type: **Byte \* \***
+Typ: **BYTE \* \***
 
-Die Adresse eines Zeigers auf ein Byte. Die-Funktion ordnet Speicher zu und gibt einen Zeiger auf diesen Speicher in *outputxmldata* zurück. Nennen Sie [**mrmfreememory**](mrmfreememory.md) mit dem Zeiger auf Byte, um diesen Arbeitsspeicher freizugeben.
+Die Adresse eines Zeigers auf BYTE. Die Funktion belegt Arbeitsspeicher und gibt einen Zeiger auf diesen Speicher in *outputXmlData* zurück. Rufen Sie [**MrmFreeMemory**](mrmfreememory.md) mit Ihrem Zeiger auf BYTE auf, um diesen Arbeitsspeicher freizugeben.
 
 </dd> <dt>
 
-*outputxmlsize* \[ vorgenommen\]
+*outputXmlSize* \[ out\]
 </dt> <dd>
 
-Typ: **ulong \** _
+Typ: **ULONG \***
 
-Die Adresse eines ulong. In _outputXmlSize * gibt die-Funktion die Größe des belegten Speichers zurück, auf den von *outputxmldata* verwiesen wird.
+Die Adresse eines ULONG. In *outputXmlSize* gibt die Funktion die Größe des zugeordneten Arbeitsspeichers zurück, auf den *outputXmlData* zeigt.
 
 </dd> </dl>
 
@@ -115,11 +115,11 @@ Die Adresse eines ulong. In _outputXmlSize * gibt die-Funktion die Größe des b
 
 Typ: **HRESULT**
 
-S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwenden Sie die Makros Success () oder failed () (in WinError. h definiert), um den Erfolg oder Misserfolg zu ermitteln.
+S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwenden Sie die Makros SUCCEEDED() oder FAILED() (definiert in winerror.h), um erfolg- oder fehlerbestimmend zu sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Schema freies Ressourcenpaket, das mit dem " [**mrmpackagingoptionsomitschemafromresourcepacks**](mrmpackagingoptions.md) "-Argument erstellt wurde, das an [**mrmkreateresourcefile**](mrmcreateresourcefile.md) oder [**mrmkreateresourcefileinmemory**](mrmcreateresourcefileinmemory.md) übergeben wurde (oder mit dem Schalter *omitschemafromresourcepacks* in der PRI-Konfigurationsdatei). Zum Sichern eines Ressourcen Pakets, das Schema frei ist, übergeben Sie den Pfad zu ihren Hauptpaket-PRI-Daten als Argument für den *schemapridata* -Parameter.
+Ein schemafreies Ressourcenpaket wurde mit dem [**MrmPackagingOptionsOmitSchemaFromResourcePacks-Argument**](mrmpackagingoptions.md) erstellt, das an [**MrmCreateResourceFile**](mrmcreateresourcefile.md) oder [**MrmCreateResourceFileInMemory**](mrmcreateresourcefileinmemory.md) übergeben wurde (oder mit dem Schalter *omitSchemaFromResourcePacks* in der PRI-Konfigurationsdatei). Um ein schemafreies Ressourcenpaket zu speichern, übergeben Sie den Pfad zu Den PRI-Hauptpaketdaten als Argument für den *parameter schemaPriData.*
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -127,10 +127,10 @@ Ein Schema freies Ressourcenpaket, das mit dem " [**mrmpackagingoptionsomitschem
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1803, \[ nur Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ -Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Mrmresourceingedexer. h</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Mrmsupport. lib</dt> </dl>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1803 \[\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows \[Nur Serverdesktop-Apps\]<br/>                                                 |
+| Header<br/>                   | <dl> <dt>MrmResourceIndexer.h</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Mrmsupport.lib</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Mrmsupport.dll</dt> </dl>       |
 
 

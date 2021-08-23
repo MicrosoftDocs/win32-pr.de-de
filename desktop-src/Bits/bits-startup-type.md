@@ -1,25 +1,25 @@
 ---
-title: Bits-Starttyp
-description: Der Starttyp für Bits ist ein verzögerter automatischer Start. Vor Windows Vista ist der Starttyp für Bits manuell. Beim Erstellen eines Bits-Auftrags ändert sich der Starttyp in automatisch. Der Starttyp wird manuell zurückgegeben, wenn alle Aufträge vollständig oder abgebrochen wurden.
+title: BITS-Starttyp
+description: Der Starttyp für BITS wird verzögert automatisch gestartet. Vor der Windows Vista ist der Starttyp für BITS manuell. Wenn ein BITS-Auftrag erstellt wird, ändert sich der Starttyp in Automatisch. Der Starttyp kehrt zu Manuell zurück, wenn alle Aufträge abgeschlossen oder abgebrochen wurden.
 ms.assetid: 0d9ec60f-3488-4eb2-a6a2-22932fd74caf
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fd1ce1dcd2f939237142a0afd44e49b4b63df419
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: defafff5b3dd0a9b03e18b61b84fa6c32022035ce58913599151ee526fd52d0d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104387996"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119579430"
 ---
-# <a name="bits-startup-type"></a>Bits-Starttyp
+# <a name="bits-startup-type"></a>BITS-Starttyp
 
-Der **Starttyp** für Bits ist ein verzögerter automatischer Start (wenn aktive BITS-Aufträge vorhanden sind) oder der Start der Anforderung (wenn keine aktiven Aufträge vorhanden sind). Für Windows-Versionen vor dem November-Update wurde nur der verzögerte Autostart-Starttyp verwendet. Versionen vor Vista verwendeten den manuellen Starttyp.
+Der **Starttyp für** BITS verzögert den automatischen Start (wenn aktive BITS-Aufträge sind) oder der Bedarfsstart (wenn keine aktiven Aufträge sind). Versionen von Windows vor dem November-Update verwendeten nur den verzögerten Starttyp für den automatischen Start. Versionen vor Vista verwendeten den manuellen Starttyp.
 
-Legen Sie den **Starttyp** nicht auf deaktiviert fest. Durch das Deaktivieren von Bits können Anwendungen, die auf Bits zum Übertragen von Dateien basieren
+Sie sollten den Starttyp **nicht auf** Deaktiviert festlegen. Durch das Deaktivieren von BITS können Anwendungen, die bits zum Übertragen von Dateien verwenden, unter Umständen nicht mehr verwendet werden.
 
- 
+ 
 
- 
+ 
 
 
 

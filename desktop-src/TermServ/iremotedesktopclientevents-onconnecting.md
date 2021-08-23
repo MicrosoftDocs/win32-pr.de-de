@@ -1,12 +1,12 @@
 ---
-title: Iremotedesktopclientevents onconnecting-Methode
-description: Wird aufgerufen, wenn das Client Steuerelement versucht, eine Verbindung mit einer Remote Sitzung herzustellen.
+title: IRemoteDesktopClientEvents OnConnecting-Methode
+description: Wird aufgerufen, wenn die Clientsteuerung versucht, eine Verbindung mit einer Remotesitzung herzustellen.
 ms.assetid: E27118B2-C1AE-4F10-AB3E-3DBF978CC2AF
 ms.tgt_platform: multiple
 keywords:
-- Onconnecting-Methode Remotedesktopdienste
-- Onconnecting-Methode Remotedesktopdienste, iremotedesktopclientevents-Schnittstelle
-- Iremotedesktopclientevents-Schnittstelle Remotedesktopdienste, onconnecting-Methode
+- OnConnecting-Remotedesktopdienste
+- OnConnecting-Remotedesktopdienste , IRemoteDesktopClientEvents-Schnittstelle
+- IRemoteDesktopClientEvents-Schnittstelle Remotedesktopdienste , OnConnecting-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6211be67110200b1cd419b99fe76b5ce98d5408d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5a2f0d2ab00c1a5422912c9fa37abe88585e5352fd7003da4fbcf918c511b293
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119511660"
 ---
-# <a name="iremotedesktopclienteventsonconnecting-method"></a>Iremotedesktopclientevents:: onconnecting-Methode
+# <a name="iremotedesktopclienteventsonconnecting-method"></a>IRemoteDesktopClientEvents::OnConnecting-Methode
 
-Wird aufgerufen, wenn das Client Steuerelement versucht, eine Verbindung mit einer Remote Sitzung herzustellen.
+Wird aufgerufen, wenn die Clientsteuerung versucht, eine Verbindung mit einer Remotesitzung herzustellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                 |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>         |
-| IID<br/>                      | Diid \_ iremotedesktopclientevents ist als 079863b7-6d47-4105-8bfe-0cdcb360e67d definiert.<br/> |
+| IID<br/>                      | DIID \_ IRemoteDesktopClientEvents ist als 079863B7-6D47-4105-8BFE-0CDCB360E67D definiert.<br/> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Iremotedesktopclientevents**](iremotedesktopclientevents.md)
+[**IRemoteDesktopClientEvents**](iremotedesktopclientevents.md)
 </dt> </dl>
 
  

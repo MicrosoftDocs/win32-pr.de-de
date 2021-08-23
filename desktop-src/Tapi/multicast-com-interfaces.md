@@ -1,36 +1,36 @@
 ---
-description: Die Multicast-com-Schnittstellen ermöglichen den Zugriff auf die Netzwerke, um Leases für Multicast Adressen zuzuordnen, zu erneuern und freizugeben.
+description: Die Multicast-COM-Schnittstellen ermöglichen den Zugriff auf die Netzwerkeinrichtung zum Zuordnen, Erneuern und Freigeben von Leases für Multicastadressen.
 ms.assetid: d4da9616-bdb4-4919-96aa-9e45582b05dd
-title: Multicast-com-Schnittstellen
+title: Multicast-COM-Schnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 01370372e3ea05b27dc789f90918b148075c28f5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3c87c231f18904e3b0287095f511cf3c82bfd263e23a9e69dd50c02eb491616d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119575540"
 ---
-# <a name="multicast-com-interfaces"></a>Multicast-com-Schnittstellen
+# <a name="multicast-com-interfaces"></a>Multicast-COM-Schnittstellen
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die Multicast-com-Schnittstellen ermöglichen den Zugriff auf die Funktion des Netzwerks zum zuordnen, erneuern und Freigeben von Leases für Multicast Adressen. Sie Kapseln eine Reihe von Funktions-und Datenstruktur Definitionen. Die COM-Schnittstellen machen dem Programmierer den Aufwand, diese Datenstrukturen zu verstehen und zu bearbeiten. Da TAPI 3 selbst com-basiert ist, ist die Zuordnung von Multicast Adressen auf eine Weise möglich, die mit den anderen von TAPI 3 bereitgestellten Funktionen konsistent ist. Anwendungen, die mit Visual Basic-, Java-oder Skriptsprachen geschrieben wurden, die normalerweise nicht direkt auf die Windows-API zugreifen können, können diese Schnittstellen verwenden.
+Die Multicast-COM-Schnittstellen ermöglichen den Zugriff auf die Einrichtung des Netzwerks zum Zuordnen, Erneuern und Freigeben von Leases für Multicastadressen. Sie kapseln eine Reihe von Funktions- und Datenstrukturdefinitionen. Die COM-Schnittstellen entlasten den Programmierer von der Last, diese Datenstrukturen zu verstehen und zu bearbeiten. Da TAPI 3 selbst COM-basiert ist, ermöglichen diese Schnittstellen den Zugriff auf die Multicastadressenzuordnung auf eine Weise, die mit den anderen von TAPI 3 bereitgestellten Einrichtungen konsistent ist. Anwendungen, die mit Visual Basic, Java oder Skriptsprachen geschrieben wurden und normalerweise nicht direkt auf die Windows-API zugreifen können, können diese Schnittstellen verwenden.
 
-Die Zuordnung von Multicast Adressen ist zurzeit der Betreff einer IETF-Arbeitsgruppe. Wenn Sie auf aktuelle Informationen zugreifen möchten, Fragen Sie "MDHCP" oder "MADCAP" und "Internet Draft" mithilfe eines beliebigen Internet Suchmoduls ab. Zusätzlich zu MADCAP umfasst die vorgeschlagene Architektur ein Protokoll für die Server-zu-Server-Koordination innerhalb einer Domäne oder als sowie ein Protokoll für die Interoperabilität zwischen den Domänen. Obwohl sich diese Architektur gerade weiterentwickelt, muss sich der Client nicht mit den Details dieses Schemas befassen.
+Die Multicastadressenzuordnung ist derzeit Thema einer IETF-Arbeitsgruppe. Um auf aktuelle Informationen zu zugreifen, fragen Sie mithilfe einer beliebigen Internetsuch-Engine nach "MDHCP" oder "MADCAP" und "Internetentwurf" ab. Zusätzlich zu MADCAP enthält die vorgeschlagene Architektur ein Protokoll für die Server-zu-Server-Koordination innerhalb einer Domäne oder AS sowie ein Protokoll für die Domänenkoordinierung. Während sich diese Architektur gerade weiterentwickelt, muss sich der Client nicht um die Details dieses Schemas sorgen.
 
-Diese Komponente unterstützt zurzeit nur IP-Adressen der Version 4.
+Diese Komponente unterstützt derzeit nur IP-Adressen der Version 4.
 
 > [!Note]  
-> Das für diese Schnittstellen verwendete Protokoll wird derzeit als MADCAP bezeichnet. In früheren Versionen wurde sie als MDHCP bezeichnet.
+> Das für diese Schnittstellen verwendete Protokoll heißt derzeit "MADCAP". In früheren Versionen wurde dies als MDHCP bezeichnet.
 
  
 
-Das Multicast Objekt wird durch Aufrufen von **CoCreateInstance** in der [**imcastaddressallocation**](/windows/desktop/api/Mdhcp/nn-mdhcp-imcastaddressallocation) -Schnittstelle erstellt. Die **imcastaddressallocation** -Schnittstelle macht die [**enumeratescopes**](/windows/desktop/api/Mdhcp/nf-mdhcp-imcastaddressallocation-enumeratescopes) -Methode verfügbar, die es einer Anwendung ermöglicht, eine Liste aller verfügbaren Multicast Bereiche zu erhalten.
+Das Multicastobjekt wird durch Aufrufen von **CoCreateInstance** auf der [**IMcastAddressAllocation-Schnittstelle**](/windows/desktop/api/Mdhcp/nn-mdhcp-imcastaddressallocation) erstellt. Die **IMcastAddressAllocation-Schnittstelle** macht die [**EnumerateScopes-Methode**](/windows/desktop/api/Mdhcp/nf-mdhcp-imcastaddressallocation-enumeratescopes) verfügbar, die es einer Anwendung ermöglicht, eine Liste aller verfügbaren Multicast-Bereiche zu erhalten.
 
-Nachdem ein Arbeitsbereich abgerufen wurde, wird die [**requestaddress**](/windows/desktop/api/Mdhcp/nf-mdhcp-imcastaddressallocation-requestaddress) -Methode verwendet, um eine Multicast Adresse vom Server anzufordern. Wenn die Anforderung erfolgreich ist, wird ein [**imcastleaseinfo**](/windows/desktop/api/Mdhcp/nn-mdhcp-imcastleaseinfo) -Zeiger zurückgegeben. Die [**enumerateadressen**](/windows/desktop/api/Mdhcp/nf-mdhcp-imcastleaseinfo-enumerateaddresses) -Methode, die von dieser Schnittstelle verfügbar gemacht wird, kann dann zum Abrufen der Adressen verwendet werden.
+Nachdem ein Arbeitsbereich erhalten wurde, wird die [**RequestAddress-Methode**](/windows/desktop/api/Mdhcp/nf-mdhcp-imcastaddressallocation-requestaddress) verwendet, um eine Multicastadresse vom Server an fordern. Wenn die Anforderung erfolgreich ist, wird ein [**IMcastLeaseInfo-Zeiger**](/windows/desktop/api/Mdhcp/nn-mdhcp-imcastleaseinfo) zurückgegeben. Die von dieser Schnittstelle verfügbar gemachte [**EnumerateAddresses-Methode**](/windows/desktop/api/Mdhcp/nf-mdhcp-imcastleaseinfo-enumerateaddresses) kann dann verwendet werden, um die Adressen zu erhalten.
 
-Jedes Medienobjekt, das der Konferenz zugeordnet ist, macht eine [**itconnection**](itconnection.md) -Schnittstelle verfügbar. Die [**itconnection:: setaddressinfo**](itconnection-setaddressinfo.md) -Methode ermöglicht die Zuweisung der Multicast Adressen, die an die Medien der Konferenz bezogen werden. Die Adresse muss für jede **itconnection** -Schnittstelle jedes Medien Objekts festgelegt werden, das der Konferenz zugeordnet ist.
+Jedes Medienobjekt, das der Konferenz zugeordnet ist, macht eine [**ITConnection-Schnittstelle**](itconnection.md) verfügbar. Die [**ITConnection::SetAddressInfo-Methode**](itconnection-setaddressinfo.md) ermöglicht die Zuweisung der Multicastadressen, die den Medien der Konferenz zugeordnet werden. Die Adresse muss für jede **ITConnection-Schnittstelle** jedes Media-Objekts festgelegt werden, das der Konferenz zugeordnet ist.
 
  
 

@@ -5,12 +5,12 @@ ms.assetid: 85934873-8889-4564-A717-28A00614B38C
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d51d30c7a99250ee0842b79d76ccebb6150bcf9a
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: 73383659727fea4ef385e56788ce97e18e7976dc5d040a4c1f3a6fc51c3616d4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110343455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119608280"
 ---
 # <a name="non-shader-visible-descriptor-heaps"></a>Für den Shader nicht sichtbare Deskriptorheaps
 
@@ -18,11 +18,11 @@ Auf einige Deskriptorheaps kann von Shadern nicht über Deskriptortabellen verwi
 
 -   [Nicht sichtbare Ansichten](#non-visible-views)
 -   [Zusammenfassung](#summary)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
 ## <a name="non-visible-views"></a>Nicht sichtbare Ansichten
 
-Alle Deskriptorheaps, einschließlich der zuvor beschriebenen Shader-Deskriptorheaps, können von den CPU- und/oder Befehlslisten abhängig vom Arbeitsspeicherpool und den CPU-Zugriffseigenschaften bearbeitet werden, die die Anwendung für einen Deskriptorheap auswählt.
+Alle Deskriptorheaps, einschließlich der zuvor beschriebenen Shader-Deskriptorheaps, können von den CPU- und/oder Befehlslisten abhängig vom Speicherpool und den CPU-Zugriffseigenschaften bearbeitet werden, die die Anwendung für einen Deskriptorheap auswählt.
 
 Für [Shader Visible Descriptor Heaps](shader-visible-descriptor-heaps.md)ist der offensichtliche Grund, shader den Zugriff auf diese Deskriptorheaps zu verweigern, während sie ge staget werden. Anschließend werden diese Heaps als Shader sichtbar gemacht und über Deskriptortabellen bei der Ausführung der Befehlsliste aufgerufen. Es ist jedoch nicht erforderlich, für Shader sichtbare Heaps zu stagen, da sie direkt aufgefüllt werden können.
 
@@ -41,12 +41,12 @@ Selbst Deskriptortabellen verfügen über Optionen, bei denen eine App es der Im
 
 
 
-|                   | Shader sichtbar, nur CPU-Schreibzugriff                                   | Nicht-Shader sichtbar, CPU-Lese-/Schreibzugriff                                       |
+|                   | Shader sichtbar, nur CPU-Schreibvorgang                                   | Nicht-Shader sichtbar, CPU-Lese-/Schreibzugriff                                       |
 |-------------------|------------------------------------|----------------------------------------|
 | **CBV, SRV, UAV** | Ja                                | Ja                                    |
 | **Sampler**       | Ja                                | Ja                                    |
-| **RTV**           | nein                                 | Ja                                    |
-| **Dsv**           | nein                                 | Ja                                    |
+| **RTV**           | Nein                                 | Ja                                    |
+| **Dsv**           | Nein                                 | Ja                                    |
 
 
 

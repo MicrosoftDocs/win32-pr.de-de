@@ -1,19 +1,19 @@
 ---
-description: Eine umfassende Liste der Fehlercodes, die von Windows Installer Funktionen MsiExec.exe und InstMsi.exe zurückgegeben werden, finden Sie unter MsiExec.exe und InstMsi.exe Fehlermeldungen.
+description: Eine vollständige Liste der Fehlercodes, die von Windows Installer-Funktionen MsiExec.exe und InstMsi.exe zurückgegeben werden, finden Sie unter MsiExec.exe und InstMsi.exe Fehlermeldungen.
 ms.assetid: 468cec68-2f3b-4530-9036-760bb19eeaa2
-title: Fehler Referenz
+title: Fehlerreferenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 856efbbb5d3cf1bc5ddb3237f2a51aba4b725b3a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4269132abfc6fc6a17d5b4611e6b7a1de248c2422812f7a4658180c44743b243
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119520000"
 ---
-# <a name="errors-reference"></a>Fehler Referenz
+# <a name="errors-reference"></a>Fehlerreferenz
 
-Eine umfassende Liste der Fehlercodes, die von Windows Installer Funktionen MsiExec.exe und InstMsi.exe zurückgegeben werden, finden Sie unter [MsiExec.exe und InstMsi.exe Fehlermeldungen](error-codes.md). Eine umfassende Liste der Fehlermeldungen und Fehlercodes, die von Windows Installer zurückgegeben werden, finden Sie unter [Windows Installer Fehlermeldungen](windows-installer-error-messages.md).
+Eine vollständige Liste der Fehlercodes, die von Windows Installer-Funktionen MsiExec.exe und InstMsi.exe zurückgegeben werden, finden Sie unterMsiExec.exe und [InstMsi.exe Fehlermeldungen.](error-codes.md) Eine vollständige Liste der Fehlermeldungen und Fehlercodes, die vom Windows Installer zurückgegeben werden, finden Sie unter Windows [Installer-Fehlermeldungen.](windows-installer-error-messages.md)
 
  
 

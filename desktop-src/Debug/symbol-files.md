@@ -1,43 +1,43 @@
 ---
-description: Normalerweise werden Debuginformationen in einer Symbol Datei gespeichert, getrennt von der ausführbaren Datei.
+description: Normalerweise werden Debuginformationen in einer Symboldatei gespeichert, die von der ausführbaren Datei getrennt ist.
 ms.assetid: 610e5cd3-9dc3-462c-98f8-6a63874464f8
 title: Symboldateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d964fbe0ab5f07a6c3d7cfa08b057550e1cc2c74
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 610e289a64ed807a26086f12780b45bc35ea65464946ec81a07e4169515d1132
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126055"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119642180"
 ---
 # <a name="symbol-files"></a>Symboldateien
 
-Normalerweise werden Debuginformationen in einer Symbol Datei gespeichert, getrennt von der ausführbaren Datei. Die Implementierung dieser Debuginformationen hat sich im Laufe der Jahre geändert, und in der folgenden Dokumentation finden Sie Anleitungen zu diesen verschiedenen Implementierungen.
+Normalerweise werden Debuginformationen in einer Symboldatei gespeichert, die von der ausführbaren Datei getrennt ist. Die Implementierung dieser Debuginformationen hat sich im Laufe der Jahre geändert, und die folgende Dokumentation enthält Anleitungen zu diesen verschiedenen Implementierungen.
 
 ## <a name="pdb-files"></a>PDB-Dateien
 
-Alle modernen Versionen der Microsoft-Compiler speichern Debuginformationen zu einer kompilierten ausführbaren Datei in einer separaten *Programm Daten Bank* Datei (. pdb). Diese Datei wird im Allgemeinen als *PDB* bezeichnet. Die Daten werden in einer separaten Datei der ausführbaren Datei gespeichert, um die Größe der ausführbaren Datei einzuschränken, Speicherplatz auf dem Datenträger zu sparen und den Zeitaufwand für das Laden der Daten zu verkürzen. Diese Methodik ermöglicht außerdem die Verteilung der ausführbaren Datei, ohne diese wichtigen Informationen offenzulegen, was das Programm leichter umkehren könnte.
+Alle modernen Versionen der Microsoft-Compiler speichern Debuginformationen zu einer kompilierten ausführbaren Datei in einer *separaten* Programmdatenbankdatei (PDB). Diese Datei wird häufig als *PDB bezeichnet.* Die Daten werden in einer separaten Datei von der ausführbaren Datei gespeichert, um die Größe der ausführbaren Datei zu begrenzen, Speicherplatz auf dem Datenträger zu sparen und die Zeit zu reduzieren, die zum Laden der Daten benötigt wird. Diese Methodik ermöglicht auch die Verteilung der ausführbaren Datei, ohne diese wichtigen Informationen offenlegen zu müssen, wodurch das Programm einfacher reverse engineering möglich ist.
 
-Erstellen Sie zum Erstellen einer PDB-Datei die ausführbare Datei mit Debuginformationen gemäß den Anweisungen für die Buildtools.
+Um eine PDB-Datei zu erstellen, erstellen Sie Ihre ausführbare Datei mit Debuginformationen gemäß den Anweisungen für Ihre Buildtools.
 
-Die dbghelp-API kann PDB verwenden, um die folgenden Informationen zu erhalten.
+Die DbgHelp-API kann PDBs verwenden, um die folgenden Informationen zu erhalten.
 
--   publics und Exporte
--   globale Symbole
--   lokale Symbole
+-   Publics und Exporte
+-   Globale Symbole
+-   Lokale Symbole
 -   Typdaten
 -   Quelldateien
 -   Zeilennummern
 
-## <a name="dbg-files-and-embedded-debug-information"></a>Dbg-Dateien und eingebettete Debuginformationen
+## <a name="dbg-files-and-embedded-debug-information"></a>DBG-Dateien und eingebettete Debuginformationen
 
-Frühere Versionen des Microsoft-Toolsets, das zum Einbetten der Debuginformationen in die ausführbare Datei verwendet wird, werden jedoch normalerweise in eine separate Datei mit der Erweiterung. dbg entfernt. Dies wird häufig als *dbg* -Datei bezeichnet. Dbg-Dateien verwenden dasselbe PE-Dateiformat wie ausführbare Dateien.
+Frühere Versionen des Microsoft-Toolsets, die zum Einbetten der Debuginformationen in die ausführbare Datei verwendet wurden, wurden jedoch normalerweise in eine separate Datei mit der Erweiterung .dbg entfernt. Dies wird häufig als *DBG-Datei* bezeichnet. DBG-Dateien verwenden das gleiche PE-Dateiformat wie ausführbare Dateien.
 
-Die dbghelp-API-Unterstützung für DBGs und eingebettete Debuginformationen ist begrenzt und umfasst Folgendes:
+Die DbgHelp-API-Unterstützung für DBGs und eingebettete Debuginformationen ist eingeschränkt und umfasst Folgendes.
 
--   publics und Exporte
--   globale Symbole
+-   Publics und Exporte
+-   Globale Symbole
 
  
 

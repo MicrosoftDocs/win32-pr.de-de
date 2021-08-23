@@ -1,7 +1,7 @@
 ---
-description: Die sourcelistaddsource-Methode fügt eine Netzwerk-oder URL-Quelle hinzu. Akzeptiert SourcePath, Type und Index als Parameter. Diese Methode ruft msisourcelistaddsourceex auf.
+description: Die SourceListAddSource-Methode fügt ein Netzwerk oder eine URL-Quelle hinzu. Akzeptiert SourcePath, Type und Index als Parameter. Diese Methode ruft MsiSourceListAddSourceEx auf.
 ms.assetid: 87797a8c-f1ba-4bfb-9296-3d3ef2a3c37f
-title: Patch. sourcelistaddsource-Methode
+title: Patch.SourceListAddSource-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: cc0a3bc0d966ec6836d1523745b296350562aaa7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 712551a31868ad3a97738ce9f49c9b0ff3526cf33cbae0ca5dd284f701869666
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119519600"
 ---
-# <a name="patchsourcelistaddsource-method"></a>Patch. sourcelistaddsource-Methode
+# <a name="patchsourcelistaddsource-method"></a>Patch.SourceListAddSource-Methode
 
-Die **sourcelistaddsource** -Methode fügt eine Netzwerk-oder URL-Quelle hinzu. Akzeptiert *SourcePath*, *Type* und *Index* als Parameter. Diese Methode ruft [**msisourcelistaddsourceex**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddsourceexa)auf.
+Die **SourceListAddSource-Methode** fügt ein Netzwerk oder eine URL-Quelle hinzu. Akzeptiert *SourcePath,* *Type und* *Index* als Parameter. Diese Methode ruft [**MsiSourceListAddSourceEx auf.**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddsourceexa)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,32 +41,32 @@ Patch.SourceListAddSource(
 
 <dl> <dt>
 
-*Type* 
+*Typ* 
 </dt> <dd>
 
-Typ der hinzu zufügenden Quelle: msisourcetype \_ Network oder msisourcetype \_ URL.
+Typ der quelle, die hinzugefügt werden soll: MSISOURCETYPE \_ NETWORK oder MSISOURCETYPE \_ URL.
 
 </dd> <dt>
 
-*SourcePath* 
+*Sourcepath* 
 </dt> <dd>
 
-Der Pfad zur hinzu zufügenden Quelle.
+Pfad zur quelle, die hinzugefügt werden soll.
 
 </dd> <dt>
 
 *Index* 
 </dt> <dd>
 
-Wenn **sourcelistaddsource** mit einer neuen Quelle und einem auf 0 festgelegten *Index* aufgerufen wird, fügt das Installationsprogramm die Quelle am Ende der Quell Liste hinzu.
+Wenn **SourceListAddSource mit** einer neuen Quelle aufgerufen wird und *Index* auf 0 festgelegt ist, fügt das Installationsprogramm die Quelle am Ende der Quellliste hinzu.
 
-Wenn diese Funktion mit einer bereits in der Quell Liste vorhandenen Quelle aufgerufen wird und der *Index* auf 0 festgelegt ist, behält das Installationsprogramm den vorhandenen Index der Quelle bei.
+Wenn diese Funktion mit einer quelle aufgerufen wird, die bereits in der Quellliste vorhanden ist, und *Index* auf 0 festgelegt ist, behält das Installationsprogramm den vorhandenen Index der Quelle bei.
 
-Wenn die Funktion mit einer vorhandenen Quelle in der Quell Liste aufgerufen wird und der *Index* auf einen Wert ungleich 0 (null) festgelegt ist, wird die Quelle aus der aktuellen Position in der Liste entfernt und an der durch *Index* angegebenen Position eingefügt, bevor eine Quelle vorhanden ist, die an dieser Position bereits vorhanden ist.
+Wenn die Funktion mit einer vorhandenen Quelle in der Quellliste aufgerufen wird und *Index* auf einen Wert von nicht 0 (null) festgelegt ist, wird die Quelle aus ihrer aktuellen Position in der Liste entfernt und an der durch *Index* angegebenen Position vor jeder Quelle eingefügt, die bereits an dieser Position vorhanden ist.
 
-Wenn die Funktion mit einer neuen Quelle aufgerufen wird und der *Index* auf einen Wert ungleich 0 (null) festgelegt ist, wird die Quelle an der durch *Index* angegebenen Position eingefügt, bevor eine Quelle vorhanden ist, die an dieser Position bereits vorhanden ist. Der Indexwert für alle Quellen in der Liste nach dem durch *Index* angegebenen Index wird aktualisiert, um sicherzustellen, dass eindeutige Indexwerte und die vorhandene Reihenfolge sicher unverändert bleiben.
+Wenn die Funktion mit einer neuen Quelle aufgerufen wird und *Index* auf einen Wert von nicht 0 (null) festgelegt ist, wird die Quelle an der von *Index* angegebenen Position vor jeder Quelle eingefügt, die bereits an dieser Position vorhanden ist. Der Indexwert für alle Quellen in der Liste, nachdem der durch *Index* angegebene Index aktualisiert wurde, um sicherzustellen, dass eindeutige Indexwerte und die bereits vorhandene Reihenfolge garantiert unverändert bleiben.
 
-Wenn *Index* größer als die Anzahl der Quellen in der Liste ist, wird die Quelle am Ende der Liste mit einem Indexwert eingefügt, der größer als jede vorhandene Quelle ist.
+Wenn *Index* größer als die Anzahl der Quellen in der Liste ist, wird die Quelle am Ende der Liste mit einem Indexwert platziert, der größer als jede vorhandene Quelle ist.
 
 </dd> </dl>
 
@@ -80,9 +80,9 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer 3,0 oder höher unter Windows Server 2003, Windows XP und Windows 2000<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installer 3.0 oder höher auf Windows Server 2003, Windows XP und Windows 2000<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                                                   |
-| IID<br/>     | IID \_ iPatch ist definiert als 000c10a1-0000-0000-C000-000000000046<br/>                                                                                                                                                                                                            |
+| IID<br/>     | IID IPatch ist als \_ 000C10A1-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                                                            |
 
 
 
@@ -93,10 +93,10 @@ Diese Methode gibt keinen Wert zurück.
 [**Patch**](patch-object.md)
 </dt> <dt>
 
-[**Msisourcelistaddsourceex**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddsourceexa)
+[**MsiSourceListAddSourceEx**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddsourceexa)
 </dt> <dt>
 
-[Wird in Windows Installer 2,0 und früher nicht unterstützt.](not-supported-in-windows-installer-version-2-0.md)
+[Nicht unterstützt in Windows Installer 2.0 und früher](not-supported-in-windows-installer-version-2-0.md)
 </dt> </dl>
 
  

@@ -1,4 +1,4 @@
-- name: Synchronization
+- name: Synchronisierung
   href: synchronization.md
   items:
     - name: Neuerungen bei der Synchronisierung
@@ -71,13 +71,13 @@
           href: using-waitable-timer-objects.md
         - name: Verwenden von wartebaren Timern mit einem asynchronen Prozeduraufruf
           href: using-a-waitable-timer-with-an-asynchronous-procedure-call.md
-        - name: Verwenden kritischer Abschnittsobjekte
+        - name: Verwenden von kritischen Abschnittsobjekten
           href: using-critical-section-objects.md
         - name: Verwenden von Bedingungsvariablen
           href: using-condition-variables.md
         - name: Verwenden One-Time Initialisierung
           href: using-one-time-initialization.md
-        - name: Verwenden von singly-verknüpften Listen
+        - name: Verwenden von einfach verknüpften Listen
           href: using-singly-linked-lists.md
         - name: Verwenden von Timer-Warteschlangen
           href: using-timer-queues.md

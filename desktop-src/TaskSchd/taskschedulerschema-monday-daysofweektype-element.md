@@ -1,9 +1,9 @@
 ---
-title: Montag (daysofweektype)-Element
+title: Monday (daysOfWeekType)-Element
 description: Gibt an, dass der Task am Montag ausgeführt wird.
 ms.assetid: 2b7ce0c1-c635-47d0-b482-5c93c0028c92
 keywords:
-- Montag-Element Taskplaner
+- Monday-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3967db32a6ccd536e2e389e84de4eec05b333634
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 22bd1028a36efa6e2fe96a300b221073dbf87f14e77621d8b1591f85c7f6fd6c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478165"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119513930"
 ---
-# <a name="monday-daysofweektype-element"></a>Montag (daysofweektype)-Element
+# <a name="monday-daysofweektype-element"></a>Monday (daysOfWeekType)-Element
 
 Gibt an, dass der Task am Montag ausgeführt wird.
 
@@ -30,22 +30,22 @@ Gibt an, dass der Task am Montag ausgeführt wird.
 </xs:element>
 ```
 
-Das **Montag** -Element wird durch den komplexen Typ " [**weeklyscheduletype**](taskschedulerschema-weeklyscheduletype-complextype.md) " definiert.
+Das **Monday-Element** wird durch den komplexen Typ [**weeklyScheduleType**](taskschedulerschema-weeklyscheduletype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                                                  | Abgeleitet von                                                             | BESCHREIBUNG                                                                                          |
+| Element                                                                                                                  | Abgeleitet von                                                             | Beschreibung                                                                                          |
 |--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [**DaysOfWeek (monthlydayosweekscheduletype)**](taskschedulerschema-daysofweek-monthlydayofweekscheduletype-element.md) | [**daysofweektype**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen der Task für einen monatlichen Wochentag ausgeführt wird.<br/> |
-| [**DaysOfWeek (weeklyscheduletype)**](taskschedulerschema-daysofweek-weeklyscheduletype-element.md)                     | [**daysofweektype**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen der Task für einen wöchentlichen Zeitplan ausgeführt wird.<br/>              |
+| [**DaysOfWeek (monthlyDayOfWeekScheduleType)**](taskschedulerschema-daysofweek-monthlydayofweekscheduletype-element.md) | [**daysOfWeekType**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen der Task für einen monatlichen Wochentag ausgeführt wird.<br/> |
+| [**DaysOfWeek (weeklyScheduleType)**](taskschedulerschema-daysofweek-weeklyscheduletype-element.md)                     | [**daysOfWeekType**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen der Task nach einem wöchentlichen Zeitplan ausgeführt wird.<br/>              |
 
 
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert einen Wochentag-Kalender, der eine Aufgabe am Montag startet.
+Der folgende XML-Code definiert einen Wochentagskalender, der eine Aufgabe am Montag startet.
 
 
 ```XML
@@ -62,8 +62,8 @@ Der folgende XML-Code definiert einen Wochentag-Kalender, der eine Aufgabe am Mo
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -71,7 +71,7 @@ Der folgende XML-Code definiert einen Wochentag-Kalender, der eine Aufgabe am Mo
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

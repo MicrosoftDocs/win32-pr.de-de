@@ -1,56 +1,56 @@
 ---
-description: Bietet eine kurze Einführung in einige Arten von Pufferüberlauf Situationen und bietet einige Ideen und Ressourcen, die Sie dabei unterstützen, neue Risiken zu vermeiden und vorhandene Risiken zu verringern.
+description: Bietet eine kurze Einführung in einige Arten von Pufferüberlaufsituationen und bietet einige Ideen und Ressourcen, mit denen Sie neue Risiken vermeiden und vorhandene minimieren können.
 ms.assetid: 713fd6de-16af-49d2-8940-763c4a6e414b
 title: Vermeiden von Pufferüberläufen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c8a3456384e799380fa0041172fb2b2ea09c0c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ae85d66d32b1efc29e75e187bb1afa67653084a3b9c729cd56728078f5e0c1ef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364092"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119622950"
 ---
 # <a name="avoiding-buffer-overruns"></a>Vermeiden von Pufferüberläufen
 
-Ein Pufferüberlauf ist eine der häufigsten Ursachen für Sicherheitsrisiken. Ein Pufferüberlauf wird im Wesentlichen durch die Behandlung von nicht überprüften, externer Eingaben als vertrauenswürdige Daten verursacht. Der Vorgang des Kopierens dieser Daten unter Verwendung von Vorgängen wie [**CopyMemory**](/previous-versions/windows/desktop/legacy/aa366535(v=vs.85)), " **Strauch**", " **straucpy**" oder " **wcscpy**" kann zu unerwarteten Ergebnissen führen, was eine System Beschädigung ermöglicht. In den meisten Fällen wird Ihre Anwendung mit einem zentralen Dump-, Segmentierungs-oder Zugriffs Verstoß abgebrochen. Im schlimmsten Fall kann ein Angreifer den Pufferüberlauf ausnutzen, indem er einen anderen bösartigen Code in Ihrem Prozess einführt und ausführt. Das Kopieren von nicht überprüften, Eingabedaten in einen Stapel basierten Puffer ist die häufigste Ursache für ausnutzbare Fehler.
+Ein Pufferüberlauf ist eine der häufigsten Quellen für Sicherheitsrisiken. Ein Pufferüberlauf wird im Wesentlichen dadurch verursacht, dass nicht überprüfte externe Eingaben als vertrauenswürdige Daten behandelt werden. Durch das Kopieren dieser Daten mithilfe von Vorgängen wie [**CopyMemory,**](/previous-versions/windows/desktop/legacy/aa366535(v=vs.85)) **strcat,** **strcpy** oder **wcscpy** können unerwartete Ergebnisse erstellt werden, die eine Beschädigung des Systems ermöglichen. Im besten Fall bricht Ihre Anwendung mit einem Kernabbild, Segmentierungsfehler oder Einer Zugriffsverletzung ab. Im schlimmsten Fall kann ein Angreifer den Pufferüberlauf ausnutzen, indem er anderen schädlichen Code in Ihren Prozess einschlangen und ausführen kann. Das Kopieren ungeprüfter Eingabedaten in einen stapelbasierten Puffer ist die häufigste Ursache für auswertbare Fehler.
 
-Pufferüberläufe können auf unterschiedlichste Weise erfolgen. Die folgende Liste bietet eine kurze Einführung in einige Arten von Pufferüberlauf Situationen und bietet einige Ideen und Ressourcen, mit denen Sie das Erstellen neuer Risiken und das verringern vorhandener Risiken vermeiden können:
+Pufferüberläufe können auf unterschiedliche Weise auftreten. Die folgende Liste bietet eine kurze Einführung in einige Arten von Pufferüberlaufsituationen und bietet einige Ideen und Ressourcen, mit denen Sie neue Risiken vermeiden und vorhandene minimieren können:
 
 <dl> <dt>
 
-<span id="Static_buffer_overruns"></span><span id="static_buffer_overruns"></span><span id="STATIC_BUFFER_OVERRUNS"></span>Über Läufe statischer Puffer
+<span id="Static_buffer_overruns"></span><span id="static_buffer_overruns"></span><span id="STATIC_BUFFER_OVERRUNS"></span>Statische Pufferüberläufe
 </dt> <dd>
 
-Ein statischer Pufferüberlauf tritt auf, wenn ein Puffer, der auf dem Stapel deklariert wurde, mit mehr Daten geschrieben wird, als Sie aufbewahrt werden. Die weniger offensichtlichen Versionen dieses Fehlers treten auf, wenn nicht überprüfte Benutzereingabe Daten direkt in eine statische Variable kopiert werden, was eine potenzielle Stapel Beschädigung zur Folge hat.
+Ein statischer Pufferüberlauf tritt auf, wenn ein Puffer, der im Stapel deklariert wurde, mit mehr Daten in geschrieben wird, als ihm zugeordnet wurden. Die weniger offensichtlichen Versionen dieses Fehlers treten auf, wenn nicht überprüfte Benutzereingabedaten direkt in eine statische Variable kopiert werden, was zu einer potenziellen Stapelbeschädigung führt.
 
 </dd> <dt>
 
-<span id="Heap_overruns"></span><span id="heap_overruns"></span><span id="HEAP_OVERRUNS"></span>Heap Überläufe
+<span id="Heap_overruns"></span><span id="heap_overruns"></span><span id="HEAP_OVERRUNS"></span>Heapüberläufe
 </dt> <dd>
 
-Heap Überläufe, wie z. b. statische Pufferüberläufe, können zu Arbeitsspeicher-und Stapel Beschädigungen führen. Da Heap Überläufe nicht auf dem Stapel, sondern im Heap Speicher stattfinden, werden Sie von manchen Benutzern als weniger schwerwiegend angesehen, schwerwiegende Probleme zu verursachen. Trotzdem ist für Heap Überläufe eine echte Programmierung erforderlich, und es sind nur die Möglichkeit, Systemrisiken als statische Pufferüberläufe zuzulassen.
+Heapüberläufe, wie statische Pufferüberläufe, können zu Speicher- und Stapelbeschädigungen führen. Da Heapüberläufe im Heapspeicher statt im Stapel auftreten, betrachten einige Personen sie als weniger in der Lage, schwerwiegende Probleme zu verursachen. Trotzdem erfordern Heapüberläufe echte Programmieraufwand und sind genauso in der Lage, Systemrisiken wie statische Pufferüberläufe zu ermöglichen.
 
 </dd> <dt>
 
-<span id="Array_indexing_errors"></span><span id="array_indexing_errors"></span><span id="ARRAY_INDEXING_ERRORS"></span>Array Indizierungs Fehler
+<span id="Array_indexing_errors"></span><span id="array_indexing_errors"></span><span id="ARRAY_INDEXING_ERRORS"></span>Fehler bei der Arrayindizierung
 </dt> <dd>
 
-Array Indizierungs Fehler sind auch eine Quelle für Arbeitsspeicher Überläufe. Eine sorgfältige Überprüfung der Begrenzungen und die Index Verwaltung helfen dabei, diese Art von Arbeitsspeicher Überlauf zu verhindern.
+Arrayindizierungsfehler sind auch eine Quelle für Speicherüberläufe. Eine sorgfältige Begrenzungsüberprüfung und Indexverwaltung hilft dabei, diese Art von Speicherüberlauf zu verhindern.
 
 </dd> </dl>
 
-Das verhindern von Pufferüberläufen ist hauptsächlich das Schreiben von gutem Code. Überprüfen Sie immer alle Eingaben, und führen Sie ggf. einen Fehler aus. Weitere Informationen zum Schreiben von sicherem Code finden Sie in den folgenden Ressourcen:
+Beim Verhindern von Pufferüberläufen geht es in erster Linie um das Schreiben von gutem Code. Überprüfen Sie immer alle Ihre Eingaben, und führen Sie bei Bedarf ordnungsgemäß einen Fehler aus. Weitere Informationen zum Schreiben von sicherem Code finden Sie in den folgenden Ressourcen:
 
--   Maguire, Steve \[ 1993 \] , *Schreiben von Solid-Code*, ISBN 1-55615-551-4, Microsoft Press, Redmond, Washington.
--   Howard, Michael und LeBlanc, David \[ 2003 \] , *Schreiben von sicherem Code*, 2D Ed., ISBN 0-7356-1722-8, Microsoft Press, Redmond, Washington.
+-   Maguire, Steve \[ 1993 \] , *Writing Solid Code*, ISBN 1-55615-551-4, Microsoft Press, Redmond, Washington.
+-   John, Michael und LeBlanc, David \[ 2003 \] , Writing Secure *Code*, 2d ed., ISBN 0-7356-1722-8, Microsoft Press, Redmond, Washington.
 
 > [!Note]  
 > Diese Ressourcen sind in einigen Sprachen und Ländern möglicherweise nicht verfügbar.
 
  
 
-Die Behandlung sicherer Zeichen folgen ist ein lang Zeitproblem, das sowohl durch die Verwendung von bewährten Programmierverfahren als auch durch die neurüstung vorhandener Systeme mit sicheren Funktionen zur Zeichen folgen Behandlung weiterhin behandelt wird. Ein Beispiel für eine Reihe von Funktionen für die Windows-Shell beginnt mit [**stringcbcat**](/windows/win32/api/strsafe/nf-strsafe-stringcbcata).
+Tresor behandlung von Zeichenfolgen ist ein seit langem bestehendes Problem, das sowohl durch die Verwendung bewährter Programmiermethoden als auch häufig durch die Verwendung und Überführung vorhandener Systeme mit sicheren Funktionen zur Zeichenfolgenverarbeitung weiterhin behoben wird. Ein Beispiel für einen solchen Satz von Funktionen für die Windows Shell beginnt mit [**StringCbCat.**](/windows/win32/api/strsafe/nf-strsafe-stringcbcata)
 
  
 

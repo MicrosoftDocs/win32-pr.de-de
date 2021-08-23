@@ -1,5 +1,5 @@
 ---
-description: 'IShellDispatch.ShutdownWindows-Methode: Zeigt das Dialogfeld Windows herunterfahren an. Dies ist identisch mit dem Klicken auf das Startmenü und dem Auswählen von Herunterfahren.'
+description: 'IShellDispatch.ShutdownWindows-Methode: Zeigt das Dialogfeld Herunterfahren Windows an. Dies entspricht dem Klicken auf die Startmenü und dem Auswählen von Herunterfahren.'
 ms.assetid: 3C4F6579-6398-4af4-8911-FE22555B0ABC
 title: IShellDispatch.ShutdownWindows-Methode (Shldisp.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 5146e17d17ba0f082ad2d80f91ae05c176cf44ed
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 2ba63602dd2603ea2bf4ff2b14346d640800a74082cd89e154ee98a0a0431bd3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108100468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119661210"
 ---
 # <a name="ishelldispatchshutdownwindows-method"></a>IShellDispatch.ShutdownWindows-Methode
 
-Zeigt das **Dialogfeld Windows herunterfahren** an. Dies ist identisch mit dem Klicken auf das **Startmenü** und dem Auswählen **von Herunterfahren.**
+Zeigt das Dialogfeld **Herunterfahren Windows** an. Dies entspricht dem Klicken auf das **Menü Start** und dem Auswählen von **Herunterfahren.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,15 +55,15 @@ Diese Methode gibt keinen Wert zurück.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird implementiert und über die [**Shell.ShutdownWindows-Methode aufgerufen.**](shell-shutdownwindows.md)
+Diese Methode wird implementiert und über die [**Shell.ShutdownWindows-Methode**](shell-shutdownwindows.md) aufgerufen.
 
 ## <a name="examples"></a>Beispiele
 
 Das folgende Beispiel zeigt die Verwendung von **ShutdownWindows** in JScript, VBScript und Visual Basic.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -117,9 +117,9 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |

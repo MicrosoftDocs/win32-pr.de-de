@@ -1,25 +1,25 @@
 ---
-description: Sie können eine Namespace Erweiterung verwenden, um Benutzern zu ermöglichen, den Inhalt einer Datei zu durchsuchen, anstatt Sie als Ordner zu verwenden. Erweiterungen dieser Art werden normalerweise verwendet, um den Inhalt der Member eines Dateityps anzuzeigen.
-title: Anzeigen einer rootansicht einer Datei
+description: Sie können eine Namespaceerweiterung verwenden, damit Benutzer den Inhalt einer Datei durchsuchen können, anstatt sie als Ordner anzuzeigen. Erweiterungen dieser Art werden in der Regel verwendet, um den Inhalt der Member eines Dateityps anzuzeigen.
+title: Anzeigen einer Stammansicht einer Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 30ee16f3ce50cd79800dd98aa53256591d1f79d9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0c91e17ef12393b1a95316c37a18d51876cf988293c330610a3638c7995ab12a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119596580"
 ---
-# <a name="how-to-display-a-rooted-view-of-a-file"></a>Anzeigen einer rootansicht einer Datei
+# <a name="how-to-display-a-rooted-view-of-a-file"></a>Anzeigen einer Stammansicht einer Datei
 
-Sie können eine Namespace Erweiterung verwenden, um Benutzern zu ermöglichen, den Inhalt einer Datei zu durchsuchen, anstatt Sie als Ordner zu verwenden. Erweiterungen dieser Art werden normalerweise verwendet, um den Inhalt der Member eines [Dateityps](fa-file-types.md)anzuzeigen. Beispielsweise können die Member eines Dateityps mehrere komprimierte Dateien oder Bilder enthalten, die in einer Hierarchie organisiert sind. Anstatt eine Anwendung zu schreiben, die es dem Benutzer ermöglicht, den Inhalt einer solchen Datei anzuzeigen, können Sie stattdessen eine Namespace Erweiterung schreiben und Windows-Explorer die Anzeige verarbeiten lassen.
+Sie können eine Namespaceerweiterung verwenden, damit Benutzer den Inhalt einer Datei durchsuchen können, anstatt sie als Ordner anzuzeigen. Erweiterungen dieser Art werden in der Regel verwendet, um den Inhalt der Member eines [Dateityps](fa-file-types.md)anzuzeigen. Beispielsweise können die Member eines Dateityps mehrere komprimierte Dateien oder Bilder enthalten, die in einer Hierarchie organisiert sind. Anstatt eine Anwendung zu schreiben, damit der Benutzer den Inhalt einer solchen Datei anzeigen kann, können Sie stattdessen eine Namespaceerweiterung schreiben und Windows Explorer die Anzeige verarbeiten lassen.
 
-Sie müssen eine rootansicht verwenden, damit eine Erweiterung den Inhalt einer Datei anzeigen darf. Die gängigste Methode, um eine rootansicht der Member eines Dateityps bereitzustellen, ist das Definieren eines Kontext [Menü Verbs](context.md) , das eine Instanz von Explorer.exe gestartet. Wenn Sie dieses Verb als Standard Verb festlegen, wird mit einem Doppelklick auch eine rootansicht der Datei geöffnet. Sie können entweder ein Verb für alle Elemente des Dateityps definieren, indem Sie [die Registrierung ändern](context.md), oder Sie können die Verben auf Datei Basis durch Implementieren eines Kontext [Menü Handlers](context-menu-handlers.md)dynamisch definieren.
+Sie müssen eine Stammansicht verwenden, damit eine Erweiterung den Inhalt einer Datei anzeigt. Die gängigste Möglichkeit, eine Stammansicht der Member eines Dateityps bereitzustellen, besteht darin, ein [Kontextmenüverb](context.md) zu definieren, das eine Instanz von Explorer.exe startet. Wenn sie dieses Verb zum Standardverb machen, öffnet ein Doppelklick auch eine Stammansicht der Datei. Sie können entweder ein Verb für alle Member des Dateityps definieren, indem Sie [die Registrierung ändern,](context.md)oder Verben auf Dateibasis dynamisch definieren, indem Sie einen [Kontextmenühandler](context-menu-handlers.md)implementieren.
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
 
-Im folgenden Beispiel wird veranschaulicht, wie die Registrierung verwendet wird, um eine rootansicht der Member eines Dateityps durch Ändern der Registrierung bereitzustellen. Der Beispiel Registrierungs Eintrag ist eine Änderung eines der Beispiele in Erweitern von Kontext [Menüs](context.md). In den Registrierungs Einträgen werden Dateien mit der Dateinamenerweiterung MYP als Dateityp definiert, und mit dem **Browse** -Verb wird eine rootansicht von Membern dieses Typs gestartet.
+Im folgenden Beispiel wird veranschaulicht, wie die Registrierung verwendet wird, um eine Stammansicht der Member eines Dateityps durch Ändern der Registrierung bereitzustellen. Der Beispielregistrierungseintrag ist eine Änderung eines der Beispiele unter [Erweitern von Kontextmenüs.](context.md) Die Registrierungseinträge definieren Dateien mit der Dateinamenerweiterung .myp als Dateityp und verwenden das **Verb zum Durchsuchen,** um eine Stammansicht von Membern dieses Typs zu starten.
 
 ```
 HKEY_CLASSES_ROOT
@@ -34,19 +34,19 @@ HKEY_CLASSES_ROOT
                (Default) = %SYSTEMROOT%\explorer.exe /e,/root,{Extension CLSID}, "%1"
 ```
 
-Sie können das gleiche Verb verwenden, um eine rootansicht eines Members des Dateityps Programm gesteuert zu starten, indem Sie die [**ShellExecute**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecutea) -Funktion aufrufen.
+Sie können das gleiche Verb verwenden, um programmgesteuert eine Stammansicht eines Members des Dateityps zu starten, indem Sie die [**ShellExecute-Funktion**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecutea) aufrufen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Angeben des Speicher Orts der Namespace Erweiterung](nse-junction.md)
+[Angeben des Speicherorts einer Namespaceerweiterung](nse-junction.md)
 </dt> <dt>
 
-[Öffnen einer Stamm Ansicht eines Verknüpfungs Punkts durch die Registrierung](how-to-use-a-junction-point-to-open-a-rooted-view.md)
+[Öffnen einer Stammansicht eines Verbindungspunkts über die Registrierung](how-to-use-a-junction-point-to-open-a-rooted-view.md)
 </dt> <dt>
 
-[Öffnen einer Stamm Ansicht eines Verknüpfungs Punkts durch eine Verknüpfungs Datei](how-to-use-a-shortcut-file-to-open-a-rooted-view.md)
+[Öffnen einer Stammansicht eines Verbindungspunkts durch eine Verknüpfungsdatei](how-to-use-a-shortcut-file-to-open-a-rooted-view.md)
 </dt> <dt>
 
 [**ShellExecute**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecutea)

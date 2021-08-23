@@ -1,7 +1,7 @@
 ---
 description: Initialisiert die IME-Freigabe.
 ms.assetid: 7f58564e-d660-4936-b74c-af4eb93e2442
-title: Finitimeshare-Funktion
+title: FInitIMEShare-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - Imeshare.dll
-ms.openlocfilehash: 0724bb6cb9e44dc86699a66da37616050ce54e18
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 178b39c67d12473663eb93bc300651341a9c459c19680218fa2c6f7a939c688c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365513"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119691380"
 ---
-# <a name="finitimeshare-function"></a>Finitimeshare-Funktion
+# <a name="finitimeshare-function"></a>FInitIMEShare-Funktion
 
 Initialisiert die IME-Freigabe.
 
@@ -39,13 +39,13 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Andernfalls gibt die Funktion **true** bei Success oder **false** zurück.
+Die Funktion gibt **TRUE** bei Erfolg zurück, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
-Diese Funktion sollte aufgerufen werden, bevor andere IME-Freigabe Funktionen aufgerufen werden.
+Diese Funktion sollte aufgerufen werden, bevor andere IME-Freigabefunktionen aufgerufen werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Diese Funktion sollte aufgerufen werden, bevor andere IME-Freigabe Funktionen au
 
 <dl> <dt>
 
-[**Umdimeshare**](endimeshare.md)
+[**EndIMEShare**](endimeshare.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: 'Reset-Methode der Msvm_FcSwitchPort Klasse: Fordert eine Zurücksetzung an.'
+description: 'Reset-Methode der Msvm_FcSwitchPort-Klasse: Fordert eine Zurücksetzung an.'
 ms.assetid: c56ed3ae-381e-4359-a0c7-53284b19364f
-title: Reset-Methode der Msvm_FcSwitchPort Klasse
+title: Reset-Methode der Msvm_FcSwitchPort-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: f37de79ab639c8b78a440c5993d951eb79e5deb4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 763d7bff520566bc3117ce22ad83df04f430a470e599c55af1ac5eb6a6cf9052
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108111808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119523350"
 ---
 # <a name="reset-method-of-the-msvm_fcswitchport-class"></a>Reset-Methode der Msvm \_ FcSwitchPort-Klasse
 
@@ -53,17 +53,17 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

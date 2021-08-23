@@ -1,33 +1,33 @@
 ---
-description: Sie können Audiodaten in XAudio2 streamen, indem Sie einen separaten Thread erstellen und Puffer Lesevorgänge für die Audiodaten im streamingthread durchführen. verwenden Sie dann Rückrufe, um diesen Thread zu steuern.
+description: Sie können Audiodaten in XAudio2 streamen, indem Sie einen separaten Thread erstellen und Pufferlesedaten der Audiodaten im Streamingthread ausführen und dann Rückrufe verwenden, um diesen Thread zu steuern.
 ms.assetid: 48b80a66-91c1-973f-069b-6f63422d7154
 title: "So wird's gemacht: Streamen von Sound von einem Datenträger"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d0c5598e8913514d6b0bf81b55bab5b481dbc43b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 15ee06866427a8efcdd3e132740d595ec547f55a592182ebfbdced0feefca793
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103757687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119707100"
 ---
 # <a name="how-to-stream-a-sound-from-disk"></a>So wird's gemacht: Streamen von Sound von einem Datenträger
 
 > [!Note]  
-> Dieser Inhalt gilt nur für Desktop-Apps und erfordert Revision, damit Sie in einer Windows Store-App funktionieren. Weitere Informationen finden Sie in der Dokumentation zu **CreateFile2**, " [forateeventex](/windows/win32/api/synchapi/nf-synchapi-createeventexa)", " [WaitForSingleObjectEx](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobjectex)", " [setfilepointerex](/windows/win32/api/fileapi/nf-fileapi-setfilepointerex)" und " **getoverlappedresultex**". Weitere Informationen finden Sie im Beispiel zu streameffect Windows 8 aus der [Windows SDK Samples Gallery](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/XAudio2%20audio%20stream%20effect%20sample%20(Windows%208)).
+> Dieser Inhalt gilt nur für Desktop-Apps und erfordert eine Revision, um in einer Windows Store-App zu funktionieren. Weitere Informationen finden Sie in der Dokumentation zu **CreateFile2,** [CreateEventEx,](/windows/win32/api/synchapi/nf-synchapi-createeventexa) [WaitForSingleObjectEx,](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobjectex) [SetFilePointerEx](/windows/win32/api/fileapi/nf-fileapi-setfilepointerex)und **GetOverlappedResultEx.** Weitere Informationen finden Sie im StreamEffect Windows 8-Beispiel aus dem [Windows SDK-Beispielkatalog.](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/XAudio2%20audio%20stream%20effect%20sample%20(Windows%208))
 
  
 
-Sie können Audiodaten in XAudio2 streamen, indem Sie einen separaten Thread erstellen und Puffer Lesevorgänge für die Audiodaten im streamingthread durchführen. verwenden Sie dann Rückrufe, um diesen Thread zu steuern.
+Sie können Audiodaten in XAudio2 streamen, indem Sie einen separaten Thread erstellen und Pufferlesedaten der Audiodaten im Streamingthread ausführen und dann Rückrufe verwenden, um diesen Thread zu steuern.
 
--   [Ausführen von Puffer Lesevorgängen im streamingindthread](#performing-buffer-reads-in-the-streaming-thread)
--   [Erstellen der Rückruf Klasse](#creating-the-callback-class)
+-   [Ausführen von Pufferleseläufen im Streamingthread](#performing-buffer-reads-in-the-streaming-thread)
+-   [Erstellen der Rückrufklasse](#creating-the-callback-class)
 
-## <a name="performing-buffer-reads-in-the-streaming-thread"></a>Ausführen von Puffer Lesevorgängen im streamingindthread
+## <a name="performing-buffer-reads-in-the-streaming-thread"></a>Ausführen von Pufferleseläufen im Streamingthread
 
-Führen Sie die folgenden Schritte aus, um die Puffer Lesevorgänge im streamingthread auszuführen:
+Führen Sie die folgenden Schritte aus, um Pufferleseläufe im Streamingthread auszuführen:
 
-1.  Erstellen Sie ein Array von Lese Puffern.
+1.  Erstellen Sie ein Array von Lesepuffern.
 
     ```
     #define STREAMING_BUFFER_SIZE 65536
@@ -37,9 +37,9 @@ Führen Sie die folgenden Schritte aus, um die Puffer Lesevorgänge im streaming
 
     
 
-2.  Initialisieren Sie eine überlappende Struktur.
+2.  Initialisieren sie eine OVERLAPPED-Struktur.
 
-    Die-Struktur wird verwendet, um zu überprüfen, wann ein asynchroner Datenträger Lesevorgang abgeschlossen wurde.
+    Die -Struktur wird verwendet, um zu überprüfen, wann ein asynchroner Datenträgerleselauf abgeschlossen ist.
 
     ```
     OVERLAPPED Overlapped = {0};
@@ -48,7 +48,7 @@ Führen Sie die folgenden Schritte aus, um die Puffer Lesevorgänge im streaming
 
     
 
-3.  Geben Sie die [**Start**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-start) -Funktion auf der [**Quell Stimme**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2sourcevoice) an, die das streamingaudiomaterial wieder gibt.
+3.  Rufen Sie die [**Start-Funktion**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-start) für die [**Quellstimme**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2sourcevoice) auf, die das Streamingaudio wiedergeben wird.
 
     ```
     hr = pSourceVoice->Start( 0, 0 );
@@ -56,7 +56,7 @@ Führen Sie die folgenden Schritte aus, um die Puffer Lesevorgänge im streaming
 
     
 
-4.  Schleife, während die aktuelle Lese Position nicht das Ende der Audiodatei überschritten wird.
+4.  Schleife, während die aktuelle Leseposition nicht an das Ende der Audiodatei übergeben wird.
 
     ```
     CurrentDiskReadBuffer = 0;
@@ -69,9 +69,9 @@ Führen Sie die folgenden Schritte aus, um die Puffer Lesevorgänge im streaming
 
     
 
-    Führen Sie in der-Schleife die folgenden Schritte aus:
+    Gehen Sie in der -Schleife wie folgt vor:
 
-    1.  Liest einen Datenblock vom Datenträger in den aktuellen Lese Puffer.
+    1.  Liest einen Datenabschnitt vom Datenträger in den aktuellen Lesepuffer.
 
         ```
         DWORD dwRead;
@@ -89,7 +89,7 @@ Führen Sie die folgenden Schritte aus, um die Puffer Lesevorgänge im streaming
 
         
 
-    2.  Verwenden Sie die **ge-verlappedresult** -Funktion, um auf das Ereignis zu warten, das signalisiert, dass der Lesevorgang abgeschlossen wurde.
+    2.  Verwenden Sie die **GetOverlappedResult-Funktion,** um auf das Ereignis zu warten, das signalisiert, dass der Leselauf abgeschlossen ist.
 
         ```
         DWORD NumberBytesTransferred;
@@ -98,9 +98,9 @@ Führen Sie die folgenden Schritte aus, um die Puffer Lesevorgänge im streaming
 
         
 
-    3.  Warten Sie, bis die Anzahl der in der [**Quell Stimme**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2sourcevoice) befindlichen Puffer kleiner als die Anzahl der gelesenen Puffer ist.
+    3.  Warten Sie, bis die Anzahl der Puffer, die in der [**Quellstimme**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2sourcevoice) in die Warteschlange eingereiht werden, kleiner als die Anzahl der Lesepuffer ist.
 
-        Der Zustand der [**Quell Stimme**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2sourcevoice) wird mit der [**GetState**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-getstate) -Funktion geprüft.
+        Der Zustand der [**Quellstimme**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2sourcevoice) wird mit der [**GetState-Funktion**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-getstate) überprüft.
 
         ```
         XAUDIO2_VOICE_STATE state;
@@ -112,7 +112,7 @@ Führen Sie die folgenden Schritte aus, um die Puffer Lesevorgänge im streaming
 
         
 
-    4.  Übermitteln Sie den aktuellen Lese Puffer mithilfe der [**submitsourcebuffer**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-submitsourcebuffer) -Funktion an die [**Quell Stimme**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2sourcevoice) .
+    4.  Übermitteln Sie den aktuellen Lesepuffer mithilfe der [**SubmitSourceBuffer-Funktion**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-submitsourcebuffer) an die [**Quellstimme.**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2sourcevoice)
 
         ```
         XAUDIO2_BUFFER buf = {0};
@@ -127,7 +127,7 @@ Führen Sie die folgenden Schritte aus, um die Puffer Lesevorgänge im streaming
 
         
 
-    5.  Legen Sie den aktuellen lesepufferindex auf den nächsten Puffer fest.
+    5.  Legen Sie den aktuellen Index des Lesepuffers auf den nächsten Puffer fest.
 
         ```
         CurrentDiskReadBuffer++;
@@ -136,9 +136,9 @@ Führen Sie die folgenden Schritte aus, um die Puffer Lesevorgänge im streaming
 
         
 
-5.  Nachdem die Schleife abgeschlossen ist, warten Sie, bis die verbleibenden Puffer in der Warteschlange beendet sind.
+5.  Warten Sie nach Abschluss der Schleife, bis die verbleibenden Puffer in der Warteschlange die Wiedergabe abgeschlossen haben.
 
-    Wenn die restlichen Puffer wieder abgespielt wurden, wird der Sound angehalten, und der Thread kann beendet oder wieder verwendet werden, um einen anderen Sound zu streamen.
+    Wenn die wiedergabe der verbleibenden Puffer abgeschlossen ist, wird der Sound beendet, und der Thread kann beendet oder wiederverwendet werden, um einen anderen Sound zu streamen.
 
     ```
     XAUDIO2_VOICE_STATE state;
@@ -150,11 +150,11 @@ Führen Sie die folgenden Schritte aus, um die Puffer Lesevorgänge im streaming
 
     
 
-## <a name="creating-the-callback-class"></a>Erstellen der Rückruf Klasse
+## <a name="creating-the-callback-class"></a>Erstellen der Rückrufklasse
 
-Um die Rückruf Klasse zu erstellen, erstellen Sie eine Klasse, die von der [**IXAudio2VoiceCallback**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2voicecallback) -Schnittstelle erbt.
+Erstellen Sie zum Erstellen der Rückrufklasse eine Klasse, die von der [**IXAudio2VoiceCallback-Schnittstelle**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2voicecallback) erbt.
 
-Die Klasse sollte ein Ereignis in der [**onbufferend**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voicecallback-onbufferend) -Methode festlegen. Dadurch kann sich der Streaminginhalt in den Standbymodus versetzen, bis das Ereignis signalisiert, dass XAudio2 das Lesen aus einem Audiopuffer beendet hat. Weitere Informationen zur Verwendung von Rückrufen mit XAudio2 finden Sie unter Gewusst [wie: Verwenden von Quellcode-Rückrufe](how-to--use-source-voice-callbacks.md).
+Die -Klasse sollte ein Ereignis in ihrer [**OnBufferEnd-Methode**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voicecallback-onbufferend) festlegen. Dadurch kann sich der Streamingthread in den Ruhezustand versetzen, bis das Ereignis signalisiert, dass XAudio2 das Lesen aus einem Audiopuffer abgeschlossen hat. Weitere Informationen zur Verwendung von Rückrufen mit XAudio2 finden Sie unter [Vorgehensweise: Verwenden von Quellstimmenrückrufen.](how-to--use-source-voice-callbacks.md)
 
 
 ```

@@ -1,11 +1,11 @@
 ---
-title: MS-tsls-Property02-Attribut
-description: Platzhalter für Terminal Server Eigenschaft 02.
+title: MS-TSLS-Property02-Attribut
+description: Platzhalter-Terminalservereigenschaft 02.
 ms.assetid: b16e38d0-b21c-4293-b3c2-f4d3bc17d9d8
 ms.tgt_platform: multiple
 keywords:
-- MS-tsls-Property02-Attribut AD-Schema
-- msTSLSProperty02-Attribut AD-Schema
+- AD-Schema des MS-TSLS-Property02-Attributs
+- AD-Schema des msTSLSProperty02-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fc364c268dcba4f23cc04470c75795db7623802e
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e870e2b357aa77e951812a780032f977e4cf11a4dc363cc28a35781e03bfe9cd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119508300"
 ---
-# <a name="ms-tsls-property02-attribute"></a>MS-tsls-Property02-Attribut
+# <a name="ms-tsls-property02-attribute"></a>MS-TSLS-Property02-Attribut
 
-Platzhalter für Terminal Server Eigenschaft 02.
+Platzhalter-Terminalservereigenschaft 02.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS--ls-Property02                          |
-| LDAP-Display-Name | msTSLSProperty02                            |
+| CN                | MS-TSLS-Property02                          |
+| Ldap-Anzeigename | msTSLSProperty02                            |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.2010                     |
-| System-ID-GUID    | 47c77bb0-316e-4e2f-97f1-0d4c48fca9dd        |
+| System-Id-Guid    | 47c77bb0-316e-4e2f-97f1-0d4c48fca9dd        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -55,10 +55,10 @@ Platzhalter für Terminal Server Eigenschaft 02.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | Richtig                              |
+| Is-Single-Valued       | False                             |
+| Ist indiziert             | True                              |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 32767                             |
 | Search-Flags           | 0x00000001                        |
@@ -76,10 +76,10 @@ Platzhalter für Terminal Server Eigenschaft 02.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | Richtig                              |
+| Is-Single-Valued       | False                             |
+| Ist indiziert             | True                              |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 32767                             |
 | Search-Flags           | 0x00000001                        |
@@ -97,10 +97,10 @@ Platzhalter für Terminal Server Eigenschaft 02.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | Richtig                              |
+| Is-Single-Valued       | False                             |
+| Ist indiziert             | True                              |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 32767                             |
 | Search-Flags           | 0x00000001                        |

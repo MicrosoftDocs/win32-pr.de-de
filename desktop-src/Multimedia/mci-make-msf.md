@@ -1,9 +1,9 @@
 ---
-title: MCI_MAKE_MSF-Makro (mciapi. h)
-description: Das MCI \_ make \_ MSF-Makro erstellt einen Zeitwert im MSF-Format (gepackt Minutes/seconds/Frames) aus den angegebenen Minuten, Sekunden und Frame Werten.
+title: MCI_MAKE_MSF-Makro (Mciapi.h)
+description: Das MSF-Makro MCI MAKE erstellt einen Zeitwert im \_ MSF-Format (Gepackte Minuten/Sekunden/Frames) aus den angegebenen Minuten-, Sekunden- \_ und Framewerten.
 ms.assetid: 8c981d84-b049-4448-a820-bff30896065e
 keywords:
-- MCI_MAKE_MSF Makro Windows Multimedia
+- MCI_MAKE_MSF-Makros Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ae7e8566986337d6b9b5161c85bcc62cecc52be0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e16f5cfa2b99f7bdbd7eb3029b3f0186904d8b8e94f455614464fadc98cdd20a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957161"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119690130"
 ---
-# <a name="mci_make_msf-macro"></a>MCI- \_ make \_ MSF-Makro
+# <a name="mci_make_msf-macro"></a>MCI \_ MAKE \_ MSF-Makro
 
-Das **MCI \_ make \_ MSF** -Makro erstellt einen Zeitwert im MSF-Format (gepackt Minutes/seconds/Frames) aus den angegebenen Minuten, Sekunden und Frame Werten.
+Das **\_ \_ MSF-Makro MCI MAKE** erstellt einen Zeitwert im MSF-Format (Gepackte Minuten/Sekunden/Frames) aus den angegebenen Minuten-, Sekunden- und Framewerten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,10 +56,10 @@ Anzahl der Sekunden.
 
 </dd> <dt>
 
-*SSE* 
+*Frames* 
 </dt> <dd>
 
-Anzahl der Frames.
+Anzahl von Frames.
 
 </dd> </dl>
 
@@ -67,11 +67,11 @@ Anzahl der Frames.
 
 Gibt die Zeit im gepackten MSF-Format zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Zeit im MSF-Format wird als **DWORD** -Wert mit dem niedrigsten signifikanten Byte, das Minuten enthält, dem nächst bedeutsamen Byte, das Sekunden enthält, und dem nächstniedrigsten Byte mit Frames ausgedrückt. Das signifikanteste Byte wird nicht verwendet.
+Die Zeit im MSF-Format wird als **DWORD-Wert** mit dem am wenigsten signifikanten Byte mit Minuten, dem nächsten am wenigsten signifikanten Byte mit Sekunden und dem nächsten am wenigsten signifikanten Byte ausgedrückt, das Frames enthält. Das wichtigste Byte wird nicht verwendet.
 
-Das **MCI- \_ make- \_ MSF** -Makro wird wie folgt definiert:
+Das **\_ \_ MSF-Makro MCI MAKE** ist wie folgt definiert:
 
 
 ```C++
@@ -90,7 +90,7 @@ Das **MCI- \_ make- \_ MSF** -Makro wird wie folgt definiert:
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
@@ -98,7 +98,7 @@ Das **MCI- \_ make- \_ MSF** -Makro wird wie folgt definiert:
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Makros](mci-macros.md)

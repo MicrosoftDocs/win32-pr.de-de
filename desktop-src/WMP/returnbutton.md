@@ -1,9 +1,9 @@
 ---
-title: Returnbutton
-description: Dies ist eine vordefinierte Schaltfläche mit den folgenden Standardwerten. | Returnbutton
+title: RETURNBUTTON
+description: Dies ist eine vordefinierte SCHALTFLÄCHE mit den folgenden Standardwerten. | RETURNBUTTON
 ms.assetid: c2c3886e-9089-4ec0-9e02-94b9a22f35ad
 keywords:
-- Returnbutton-Fenster Media Player
+- RETURNBUTTON Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,25 +13,25 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 75a1ddad5e3844c32e2b46d03badc4b00af4c773
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e54cb405e9bed39bb893ca4bdba2b3da45060cf84e7cbb61a2e634c645ef7daf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356392"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119646810"
 ---
-# <a name="returnbutton"></a>Returnbutton
+# <a name="returnbutton"></a>RETURNBUTTON
 
-Dies ist eine vordefinierte **Schaltfläche** mit den folgenden Standardwerten.
+Dies ist eine vordefinierte **SCHALTFLÄCHE** mit den folgenden Standardwerten.
 
 ``` syntax
 onclick="jscript:view.returnToMediaCenter();"
 upToolTip="Return to Full Mode"
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dadurch wird ein **Schalt** Flächen-Steuerelement erstellt, das den Player an das Medienzentrum zurückgibt. Die Quick Infos sind lokalisiert. Alle Eigenschaften dieser **Schaltfläche** können überschrieben werden, indem Sie explizit angegeben werden.
+Dadurch wird ein **BUTTON-Steuerelement** erstellt, das den Player an das Mediencenter zurückgibt. Die QuickInfos sind lokalisiert. Alle Eigenschaften dieser **SCHALTFLÄCHE können** überschrieben werden, indem sie explizit angegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,15 +39,15 @@ Dadurch wird ein **Schalt** Flächen-Steuerelement erstellt, das den Player an d
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------|
-| Version<br/> | Windows Media Player 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Button-Element**](button-element.md)
+[**BUTTON-Element**](button-element.md)
 </dt> </dl>
 
  

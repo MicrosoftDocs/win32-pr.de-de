@@ -1,29 +1,29 @@
 ---
-title: Erstellen eines Hull-Shaders
-description: In diesem Thema wird gezeigt, wie ein Hull-Shader erstellt wird.
+title: Erstellen eines Hüllen-Shaders
+description: In diesem Thema wird gezeigt, wie Sie einen Hüllen-Shader erstellen.
 ms.assetid: 221cb578-fcfc-411a-8515-7880a96e32ce
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c1a1eea7d2e6e70377028976f9576790ce3b64ab
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1fa9fe55a11c68e4cbc247f6509c52b6bac1d01b823d48637ee51073437316f1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708183"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119608990"
 ---
-# <a name="how-to-create-a-hull-shader"></a>Gewusst wie: Erstellen eines Hull-Shaders
+# <a name="how-to-create-a-hull-shader"></a>Vorgehensweise: Erstellen eines Hüllen-Shaders
 
-Ein Hull-Shader ist die erste von drei Phasen, die zusammenarbeiten, um Mosaik Vorgänge [zu implementieren.](direct3d-11-advanced-stages-tessellation.md) Die Hull-Shader-Ausgaben steuern die Mosaik Phase sowie die Domäne-Shader-Stufe. In diesem Thema wird gezeigt, wie ein Hull-Shader erstellt wird.
+Ein Hüllen-Shader ist die erste von drei Phasen, die zusammenarbeiten, um [Mosaik](direct3d-11-advanced-stages-tessellation.md)zu implementieren. Die Ausgaben des Hüllen-Shaders steuern die Mosaikstufe sowie die Domänen-Shader-Stufe. In diesem Thema wird gezeigt, wie Sie einen Hüllen-Shader erstellen.
 
-Ein Hull-Shader wandelt eine Reihe von Eingabe Steuerungs Punkten (von einem Vertex-Shader) in einen Satz von Ausgabe Steuerungs Punkten um. Die Anzahl von Eingabe-und Ausgabe Punkten kann in Abhängigkeit von der Transformation (bei einer typischen Transformation eine Basis Transformation) variieren.
+Ein Hüllen-Shader wandelt einen Satz von Eingabesteuerpunkten (von einem Scheitelpunkt-Shader) in eine Reihe von Ausgabekontrollpunkten um. Die Anzahl der Eingabe- und Ausgabepunkte kann je nach Transformation in Inhalt und Anzahl variieren (eine typische Transformation wäre eine Basistransformation).
 
-Ein Hull-Shader gibt auch patchkonstante Informationen wie Mosaik Faktoren für einen Domänen-Shader und den Mosaik Ausdruck aus. Die Mosaik Stufe Fixed-Function verwendet die Mosaik Faktoren sowie einen anderen Zustand, der in einem Hull-Shader deklariert wurde, um zu bestimmen, wie viel der Mosaik Prozess ist.
+Ein Hüllen-Shader gibt auch Patchkonstanteninformationen wie Mosaikfaktoren für einen Domänen-Shader und den Mosaikator aus. Die Tessellatorphase mit fester Funktion verwendet die Mosaikfaktoren sowie einen anderen Zustand, der in einem Hüllen-Shader deklariert ist, um zu bestimmen, wie viel mosaikiert werden soll.
 
-**So erstellen Sie einen Hull-Shader**
+**So erstellen Sie einen Hüllen-Shader**
 
-1.  Entwerfen Sie einen Hull-Shader. Weitere Informationen finden [Sie unter Gewusst wie: Entwerfen eines Hull-Shaders](direct3d-11-advanced-stages-hull-shader-design.md).
-2.  Kompilieren des Shader-Codes
-3.  Erstellen Sie ein Hull-Shader-Objekt mit [**ID3D11Device:: kreatehullshader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createhullshader).
+1.  Entwerfen sie einen Hüllen-Shader. Weitere Informationen finden Sie unter [Vorgehensweise: Entwerfen eines Hüllen-Shaders.](direct3d-11-advanced-stages-hull-shader-design.md)
+2.  Kompilieren des Shadercodes
+3.  Erstellen Sie mit [**id3D11Device::CreateHullShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createhullshader)ein Shaderobjekt.
     ```
     HRESULT CreateHullShader(
       const void *pShaderBytecode,  
@@ -35,7 +35,7 @@ Ein Hull-Shader gibt auch patchkonstante Informationen wie Mosaik Faktoren für 
 
     
 
-4.  Initialisieren Sie die Pipeline Phase mithilfe von [**Verknüpfung id3d11devicecontext aus:: hssetshader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hssetshader).
+4.  Initialisieren Sie die Pipelinephase mit [**ID3D11DeviceContext::HSSetShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hssetshader).
     ```
     void HSSetShader(
       ID3D11HullShader *pHullShader,  
@@ -46,21 +46,21 @@ Ein Hull-Shader gibt auch patchkonstante Informationen wie Mosaik Faktoren für 
 
     
 
-Wenn ein Hull-Shader gebunden ist, muss ein Domänen-Shader an die Pipeline gebunden werden. Insbesondere ist es nicht zulässig, Hull-Shader-Steuerungs Punkte direkt mit dem Geometry-Shader zu streamen.
+Ein Domänen-Shader muss an die Pipeline gebunden werden, wenn ein Hüllen-Shader gebunden ist. Insbesondere ist es nicht gültig, mit dem geometry-Shader direkt Hüllen-Shader-Kontrollpunkte zu streamen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwendung von Direct3D 11](how-to-use-direct3d-11.md)
+[Verwenden von Direct3D 11](how-to-use-direct3d-11.md)
 </dt> <dt>
 
-[Mosaik Übersicht](direct3d-11-advanced-stages-tessellation.md)
+[Übersicht über Mosaik](direct3d-11-advanced-stages-tessellation.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

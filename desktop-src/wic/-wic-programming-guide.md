@@ -1,36 +1,36 @@
 ---
-title: WIC-Programmier Handbuch
+title: WIC-Programmierhandbuch
 description: Beschreibt die Verwendung der WIC-APIs.
 ms.assetid: ed7987f0-5983-4bb5-8640-0830a87c8f2e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0bb6675ef7f5c065d2d3e00ab470cb334af25525
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b6ea9412cb0d75b8258a68a16c2eb2ebc706e1e6a2311267ff1265e47d803456
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104393678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119441779"
 ---
-# <a name="wic-programming-guide"></a>WIC-Programmier Handbuch
+# <a name="wic-programming-guide"></a>WIC-Programmierhandbuch
 
-Dieser Abschnitt enthält konzeptionelle Themen, in denen die Verwendung der WIC-APIs (Windows Imaging Component) beschrieben wird.
+Dieser Abschnitt enthält konzeptionelle Themen, in denen die Verwendung der Windows Imaging Component (WIC)-APIs beschrieben wird.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                 | BESCHREIBUNG                                                                                                                                                                                                           |
+| Thema                                                                                 | Beschreibung                                                                                                                                                                                                           |
 |---------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Übersicht über die Windows Imaging-Komponente](-wic-about-windows-imaging-codec.md)<br/> | Der WIC bietet ein erweiterbares Framework zum Arbeiten mit Bildern und Bild Metadaten.<br/>                                                                                                                       |
-| [WIC-API-Übersicht](-wic-api.md)<br/>                                           | Der WIC stellt eine Component Object Model (com)-basierte API für die Verwendung in C und C++ bereit.<br/>                                                                                                                            |
-| [Decodieren digitaler Images](-wic-decoder-portal.md)<br/>                         | Dieser Abschnitt enthält konzeptionelle und Vorgehensweisen, in denen WIC-BitmapDecoder beschrieben werden, die beim Decodieren digitaler Images verwendet werden.<br/>                                                                            |
-| [Verwenden von Bilddaten](-wic-bitmapsources-portal.md)<br/>                          | Dieser Abschnitt enthält konzeptionelle und Vorgehensweisen zum Beschreiben von WIC-bitmapquellen und deren Bearbeitung.<br/>                                                                                            |
-| [Codieren von Bilddaten](encoding-bitmaps-to-digital-images.md)<br/>              | Dieser Abschnitt enthält konzeptionelle und Vorgehensweisen, in denen WIC-Bitmap-Encoder beschrieben werden, die zum Codieren digitaler Images verwendet werden.<br/>                                                                              |
-| [Native WIC-Codecs](native-wic-codecs.md)<br/>                                 | Dieser Abschnitt enthält Informationen zu den systemeigenen, in WIC verfügbaren Codecs für die Bildverarbeitung.<br/>                                                                                                                        |
-| [Verarbeiten von Bild Metadaten](-wic-metadata-portal.md)<br/>                      | Dieser Abschnitt enthält konzeptionelle Themen, in denen das WIC-Metadatensystem beschrieben wird.<br/>                                                                                                                             |
-| [JPEG YCbCr-Unterstützung](jpeg-ycbcr-support.md)<br/>                               | Ab Windows 8.1 unterstützt der JPEG-Codec der [Windows Imaging Component (WIC)](-wic-about-windows-imaging-codec.md) das Lesen und Schreiben von Bilddaten in der nativen Yc<sub>b</sub>c<sub>r</sub> -Form. <br/> |
-| [Farbverwaltung](-wic-colormanagement.md)<br/>                               | WIC vereinfacht die Farbverwaltung durch die Bereitstellung der [**IWICColorContext**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolorcontext) -Schnittstelle und der [**iwiccolortransform**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolortransform) -Schnittstelle.<br/>          |
-| [Komponentenentwicklung](-wic-component-development.md)<br/>                    | Die WIC ist eine erweiterbare Plattform, die eine Low-Level-API für digitale Images bereitstellt.<br/>                                                                                                                          |
+| [Windows Übersicht über Bildverarbeitungskomponenten](-wic-about-windows-imaging-codec.md)<br/> | Der WIC stellt ein erweiterbares Framework für die Arbeit mit Bildern und Bildmetadaten bereit.<br/>                                                                                                                       |
+| [Übersicht über die WIC-API](-wic-api.md)<br/>                                           | Der WIC stellt eine Component Object Model-basierte API (COM) für die Verwendung in C und C++ bereit.<br/>                                                                                                                            |
+| [Decodieren digitaler Bilder](-wic-decoder-portal.md)<br/>                         | Dieser Abschnitt enthält konzeptionelle und how-to-Themen, in denen WIC-Bitmapdecoder beschrieben werden, die zum Decodieren digitaler Bilder verwendet werden.<br/>                                                                            |
+| [Verwenden von Bilddaten](-wic-bitmapsources-portal.md)<br/>                          | Dieser Abschnitt enthält konzeptionelle und how-to-Themen, in denen WIC-Bitmapquellen und deren Bearbeitung beschrieben werden.<br/>                                                                                            |
+| [Codieren von Bilddaten](encoding-bitmaps-to-digital-images.md)<br/>              | Dieser Abschnitt enthält konzeptionelle und how-to-Themen, in denen WIC-Bitmapencoder beschrieben werden, die zum Codieren digitaler Bilder verwendet werden.<br/>                                                                              |
+| [Native WIC-Codecs](native-wic-codecs.md)<br/>                                 | Dieser Abschnitt enthält Informationen zu den nativen Codecs für die Bildverarbeitung, die in WIC verfügbar sind.<br/>                                                                                                                        |
+| [Verarbeiten von Bildmetadaten](-wic-metadata-portal.md)<br/>                      | Dieser Abschnitt enthält konzeptionelle Themen, in denen das WIC-Metadatensystem beschrieben wird.<br/>                                                                                                                             |
+| [JPEG-YCbCr-Unterstützung](jpeg-ycbcr-support.md)<br/>                               | Ab Windows 8.1 unterstützt der [JPEG-Codec Windows Imaging Component (WIC)](-wic-about-windows-imaging-codec.md) das Lesen und Schreiben von Bilddaten in seiner nativen YC<sub>b</sub>C<sub>r-Form.</sub> <br/> |
+| [Farbverwaltung](-wic-colormanagement.md)<br/>                               | WIC vereinfacht die Farbverwaltung, indem die [**IWICColorContext-Schnittstelle**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolorcontext) und die [**IWICColorTransform-Schnittstelle bereitgestellt**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolortransform) werden.<br/>          |
+| [Komponentenentwicklung](-wic-component-development.md)<br/>                    | WIC ist eine erweiterbare Plattform, die low-level-API für digitale Bilder bietet.<br/>                                                                                                                          |
 
 
 

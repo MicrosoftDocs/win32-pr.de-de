@@ -1,7 +1,7 @@
 ---
-description: Die networkinfo-Struktur beschreibt eine NIC.
+description: Die NETWORKINFO-Struktur beschreibt eine NIC.
 ms.assetid: 40169409-7de5-44d1-8dff-dfa9f647edc9
-title: Networkinfo-Struktur (Netmon. h)
+title: NETWORKINFO-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 8917966d2e090417a95a9ca20158c6c5935bda3e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b5b57d7f051c1409c4b691d78d9173341efda984f35498289cd1eacb8c8b3199
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103760129"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119555710"
 ---
-# <a name="networkinfo-structure"></a>Networkinfo-Struktur
+# <a name="networkinfo-structure"></a>NETWORKINFO-Struktur
 
-Die networkinfo-Struktur beschreibt eine NIC.
+Die NETWORKINFO-Struktur beschreibt eine NIC.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,31 +49,31 @@ typedef struct _NETWORKINFO {
 
 <dl> <dt>
 
-**Permanent addr**
+**PermanentAddr**
 </dt> <dd>
 
-Permanente Mac-Adresse.
+Permanente MAC-Adresse.
 
 </dd> <dt>
 
-**Currentaddr**
+**CurrentAddr**
 </dt> <dd>
 
-Aktuelle Mac-Adresse.
+Aktuelle MAC-Adresse.
 
 </dd> <dt>
 
 **OtherAddress**
 </dt> <dd>
 
-Weitere Adresse, die dies unterstützt (z. b. IP, IPX).
+Andere Adresse, die dies unterstützt (z. B. IP, IPX).
 
 </dd> <dt>
 
 **LinkSpeed**
 </dt> <dd>
 
-Verbindungsgeschwindigkeit in Mbit/s.
+Verbindungsgeschwindigkeit in MBit/s.
 
 </dd> <dt>
 
@@ -87,24 +87,24 @@ Medientyp.
 **MaxFrameSize**
 </dt> <dd>
 
-Maximale Frame Größe zulässig.
+Maximal zulässige Framegröße.
 
 </dd> <dt>
 
 **Flags**
 </dt> <dd>
 
-Dieser Parameter kann eine der folgenden informationsflags sein:
+Dieser Parameter kann eines der folgenden Informationsflags sein:
 
 
 
 | Wert                                                                                                                                                                                                                                       | Bedeutung                                                                                                                                                                   |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="NETWORKINFO_FLAGS_PMODE_NOT_SUPPORTED"></span><span id="networkinfo_flags_pmode_not_supported"></span><dl> <dt>**networkinfo- \_ Flags \_ pmode \_ \_ wird nicht unterstützt.**</dt> </dl>    | Die Netzwerkkarte unterstützt den gemischten-Modus nicht. Dies bedeutet, dass nur Datenverkehr erfasst wird, der in der Natur übertragen wird, oder nur den lokalen Computer einbezieht.<br/> |
-| <span id="NETWORKINFO_FLAGS_RAS"></span><span id="networkinfo_flags_ras"></span><dl> <dt>**networkinfo- \_ Flags ( \_ RAS)**</dt> </dl>                                                      | Dies ist eine virtuelle Netzwerkkarte, bei der es sich um eine RAS-Verbindung (RAS-Server) über ein Modem oder eine andere Netzwerkkarte handelt.<br/>                                        |
-| <span id="NETWORKINFO_FLAGS_REMOTE_CARD"></span><span id="networkinfo_flags_remote_card"></span><dl> <dt>**networkinfo- \_ Flags- \_ Remote \_ Karte**</dt> </dl>                             | Die Netzwerkkarte befindet sich nicht auf dem lokalen Computer, sondern wird auf einem Remote Computer auf dem Weg des lokalen Computers erfasst.<br/>                                      |
-| <span id="NETWORKINFO_FLAGS_REMOTE_NAL"></span><span id="networkinfo_flags_remote_nal"></span><dl> <dt>**networkinfo- \_ Flags \_ Remote- \_ nal**</dt> </dl>                                | Veralteten Verwenden Sie nicht.<br/>                                                                                                                                          |
-| <span id="NETWORKINFO_FLAGS_REMOTE_NAL_CONNECTED"></span><span id="networkinfo_flags_remote_nal_connected"></span><dl> <dt>**networkinfo \_ Flags \_ Remote- \_ nal- \_ Verbindung**</dt> </dl> | Veralteten Verwenden Sie nicht.<br/>                                                                                                                                          |
+| <span id="NETWORKINFO_FLAGS_PMODE_NOT_SUPPORTED"></span><span id="networkinfo_flags_pmode_not_supported"></span><dl> <dt>**\_NETWORKINFO-FLAGS \_ PMODE \_ NICHT \_ UNTERSTÜTZT**</dt> </dl>    | Die Netzwerkkarte unterstützt keinen promiscuous-Modus, d. h., sie erfasst nur Datenverkehr, der übertragen wird oder nur den lokalen Computer betrifft.<br/> |
+| <span id="NETWORKINFO_FLAGS_RAS"></span><span id="networkinfo_flags_ras"></span><dl> <dt>**\_NETWORKINFO-FLAGS \_ RAS**</dt> </dl>                                                      | Dies ist eine virtuelle Netzwerkkarte, bei der es sich um eine RAS-Verbindung (Ras Access Server) über ein Modem oder eine andere Netzwerkkarte handelt.<br/>                                        |
+| <span id="NETWORKINFO_FLAGS_REMOTE_CARD"></span><span id="networkinfo_flags_remote_card"></span><dl> <dt>**NETWORKINFO \_ FLAGS \_ REMOTE \_ CARD**</dt> </dl>                             | Die Netzwerkkarte befindet sich nicht auf dem lokalen Computer, sondern wird auf einem Remotecomputer auf dem lokalen Computer erfasst.<br/>                                      |
+| <span id="NETWORKINFO_FLAGS_REMOTE_NAL"></span><span id="networkinfo_flags_remote_nal"></span><dl> <dt>**NETWORKINFO \_ FLAGS \_ REMOTE \_ NAL**</dt> </dl>                                | Veraltet; nicht verwenden.<br/>                                                                                                                                          |
+| <span id="NETWORKINFO_FLAGS_REMOTE_NAL_CONNECTED"></span><span id="networkinfo_flags_remote_nal_connected"></span><dl> <dt>**NETWORKINFO \_ FLAGS \_ REMOTE \_ NAL \_ CONNECTED**</dt> </dl> | Veraltet; nicht verwenden.<br/>                                                                                                                                          |
 
 
 
@@ -112,31 +112,31 @@ Dieser Parameter kann eine der folgenden informationsflags sein:
 
 </dd> <dt>
 
-**Timestampscalefactor**
+**TimestampScaleFactor**
 </dt> <dd>
 
-Der Wert 1 gibt z. b. 1/1 MS an, 10 gibt 1/10 MS an, 100 gibt 1/100 MS an usw.
+Beispielsweise gibt der Wert 1 1/1 ms an, 10 steht für 1/10 ms, 100 für 1/100 ms und so weiter.
 
 </dd> <dt>
 
 **NodeName**
 </dt> <dd>
 
-Name der Remote Arbeitsstation.
+Name der Remotearbeitsstation.
 
 </dd> <dt>
 
-**Pmodesupported**
+**PModeSupported**
 </dt> <dd>
 
-Support Indikator für den NIC-P-Modus.
+NIC-P-Modus-Unterstützungsindikator.
 
 </dd> <dt>
 
-**Kommentar**
+**Comment**
 </dt> <dd>
 
-Feld für den Adapter Kommentar.
+Adapterkommentarfeld.
 
 </dd> </dl>
 
@@ -148,7 +148,7 @@ Feld für den Adapter Kommentar.
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

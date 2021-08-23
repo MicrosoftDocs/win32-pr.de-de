@@ -1,7 +1,7 @@
 ---
-description: Die cmediatype. Set-Methode (mtype. h) legt den Medientyp von einem anderen Medientyp fest. Die-Methode verwendet den cmtype-Parameter.
+description: Die CMediaType.Set-Methode (Mtype.h) legt den Medientyp von einem anderen Medientyp fest. Die -Methode verwendet den Parameter "cmtype".
 ms.assetid: 71c19d0f-93b6-41db-8659-c64411b83e7c
-title: Cmediatype. Set-Methode (mtype. h)-cmtype [REF]-Parameter
+title: CMediaType.Set-Methode (Mtype.h) – cmtype [ref]-Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f9bf14132660045afbd171173a38d3ea320ba1aa
-ms.sourcegitcommit: 11f52354f570aacaf1ba2a266b2e507abd73352a
+ms.openlocfilehash: 0a317b23b4870ad6e68032ed23f846a81019be358974ebbe75e2a5859db71303
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "106352000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119585880"
 ---
-# <a name="cmediatypeset-method-mtypeh---cmtype-ref-parameter"></a>Cmediatype. Set-Methode (mtype. h)-cmtype [REF]-Parameter
+# <a name="cmediatypeset-method-mtypeh---cmtype-ref-parameter"></a>CMediaType.Set-Methode (Mtype.h) – cmtype [ref]-Parameter
 
-Die- `Set` Methode legt den Medientyp von einem anderen Medientyp fest.
+Die `Set` -Methode legt den Medientyp von einem anderen Medientyp fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,33 +42,33 @@ HRESULT Set(
 
 <dl> <dt>
 
-*cmtype* \[ atur\]
+*cmtype* \[ Ref\]
 </dt> <dd>
 
-Verweis auf ein [**cmediatype**](cmediatype.md) -Objekt.
+Verweis auf ein [**CMediaType-Objekt.**](cmediatype.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " \_ OK" oder "E \_ outo" zurück.
+Gibt S \_ OK oder E \_ OUTOFMEMORY zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kopiert den gesamten Medientyp aus *cmtype*.
+Diese Methode kopiert den gesamten Medientyp aus *cmtype.*
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung                   | Wert                                                                                                                                                                                           |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header  | Mtype. h (Include Streams. h)                                                                                     |
-| Bibliothek | "Straumbase. lib" (Einzelhandels Builds); "Straumbasd. lib" (Debugbuilds) |
+| Header  | Mtype.h (include Streams.h)                                                                                     |
+| Bibliothek | Strmbase.lib (Einzelhandels-Builds); Strmbasd.lib (Debugbuilds) |
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  

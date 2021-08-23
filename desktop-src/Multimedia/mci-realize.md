@@ -1,9 +1,9 @@
 ---
-title: MCI_REALIZE Befehl (MMSYSTEM. h)
-description: Der MCI- \_ Befehl "überprüfen" bewirkt, dass die Palette eines Grafik Geräts in einem Gerätekontext (DC) erkannt wird. Dieser Befehl wird von Digital-Video-Geräten erkannt.
+title: MCI_REALIZE Befehl (Mmsystem.h)
+description: Der MCI \_ REALIZE-Befehl bewirkt, dass ein Grafikgerät seine Palette in einen Gerätekontext (DC) umsetzt. Digitalvideogeräte erkennen diesen Befehl.
 ms.assetid: cbc9e6ef-a372-4ddb-b7f3-ea99ac14ec95
 keywords:
-- MCI_REALIZE Befehl Windows-Multimedia
+- MCI_REALIZE Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 35f2e59bfe9bbe1443f55ae0fbcf8819b932bb1c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e81204fe679d543438a0d0dcc7ec333462cb6a3d0c30212706969dc22a143df1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339145"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119689830"
 ---
-# <a name="mci_realize-command"></a>Befehl "MCI- \_ Umsetzung"
+# <a name="mci_realize-command"></a>MCI \_ REALIZE-Befehl
 
-Der MCI- \_ Befehl "überprüfen" bewirkt, dass die Palette eines Grafik Geräts in einem Gerätekontext (DC) erkannt wird. Dieser Befehl wird von Digital-Video-Geräten erkannt.
+Der MCI \_ REALIZE-Befehl bewirkt, dass ein Grafikgerät seine Palette in einen Gerätekontext (DC) umsetzt. Digitalvideogeräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Rufen Sie zum Senden dieses Befehls die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,54 +43,54 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsmeldung empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-**MCI \_ Benachrichtigen**, **MCI- \_ Wartezeit** oder, für Digital-Video-Geräte, **MCI- \_ Test**. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+**MCI \_ NOTIFY,** **MCI \_ WAIT** oder bei Geräten mit digitalen Videos **MCI \_ TEST**. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
 
 </dd> <dt>
 
-<span id="lpRealize"></span><span id="lprealize"></span><span id="LPREALIZE"></span>*lprealize*
+<span id="lpRealize"></span><span id="lprealize"></span><span id="LPREALIZE"></span>*lpRealize*
 </dt> <dd>
 
-Zeiger auf eine [**generische MCI-Struktur von \_ \_ Parametern**](mci-generic-parms.md) . (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
+Zeiger auf eine [**GENERISCHE \_ MCI-PARMS-Struktur. \_**](mci-generic-parms.md) (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie sollten diesen Befehl verwenden, wenn die Anwendung die [**WM- \_ querynewpalette**](/windows/desktop/gdi/wm-querynewpalette) -Nachricht empfängt.
+Sie sollten diesen Befehl verwenden, wenn Ihre Anwendung die [**WM \_ QUERYNEWPALETTE-Nachricht**](/windows/desktop/gdi/wm-querynewpalette) empfängt.
 
-Die folgenden zusätzlichen Flags werden mit dem Gerätetyp "Digitalvideo" verwendet:
+Die folgenden zusätzlichen Flags werden mit dem Gerätetyp "digitalvideo" verwendet:
 
 <dl> <dt>
 
-<span id="MCI_DGV_REALIZE_BKGD"></span><span id="mci_dgv_realize_bkgd"></span>MCI \_ DGV \_ realisiert \_ bkgd
+<span id="MCI_DGV_REALIZE_BKGD"></span><span id="mci_dgv_realize_bkgd"></span>MCI \_ DGV \_ REALIZE \_ BKGD
 </dt> <dd>
 
-Erkennt die Palette als Hintergrund Palette.
+Erkennt die Palette als Hintergrundpalette.
 
 </dd> <dt>
 
-<span id="MCI_DGV_REALIZE_NORM"></span><span id="mci_dgv_realize_norm"></span>MCI \_ DGV-Integritäts \_ \_ Norm
+<span id="MCI_DGV_REALIZE_NORM"></span><span id="mci_dgv_realize_norm"></span>MCI \_ DGV \_ REALIZE \_ NORM
 </dt> <dd>
 
 Erkennt die Palette normal. Dies ist die Standardoption.
 
 </dd> </dl>
 
-Für Digital Video-Geräte verweist der *lprealize* -Parameter auf eine **MCI-Struktur zum \_ realisieren von \_ para** Metern. Weitere Informationen finden Sie in den Kommentaren in der [**\_ generischen \_ MCI**](mci-generic-parms.md) -Struktur von Parametern.
+Bei Digitalvideogeräten verweist der *lpRealize-Parameter* auf eine **MCI \_ REALIZE \_ PARMS-Struktur.** Weitere Informationen finden Sie in den Kommentaren in der [**\_ MCI GENERIC \_ PARMS-Struktur.**](mci-generic-parms.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,7 +100,7 @@ Für Digital Video-Geräte verweist der *lprealize* -Parameter auf eine **MCI-St
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -108,7 +108,7 @@ Für Digital Video-Geräte verweist der *lprealize* -Parameter auf eine **MCI-St
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)

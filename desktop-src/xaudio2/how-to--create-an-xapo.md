@@ -1,42 +1,42 @@
 ---
-description: Die xapo-API stellt die ixapo-Schnittstelle und die cxapobase-Klasse zum Entwickeln neuer xapo-Typen bereit.
+description: Die XAPO-API stellt die IXAPO-Schnittstelle und die CXAPOBase-Klasse zum Erstellen neuer XAPO-Typen bereit.
 ms.assetid: 34f5c3d5-ee40-e304-7c97-d30c17621d26
 title: "So wird's gemacht: Erstellen eines XAPOs"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 549739462a0e76cbb437f0aa1403b099f72f5224
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ea17729c5a6d872d98443c85f79dc72e8eee6dd2233b99f31e189a9eb28708e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119583850"
 ---
 # <a name="how-to-create-an-xapo"></a>So wird's gemacht: Erstellen eines XAPOs
 
-Die xapo-API stellt die [**ixapo**](/windows/desktop/api/XAPO/nn-xapo-ixapo) -Schnittstelle und die [**cxapobase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapobase) -Klasse zum Entwickeln neuer xapo-Typen bereit. Die **ixapo** -Schnittstelle enthält alle Methoden, die implementiert werden müssen, um eine neue xapo-Datei zu erstellen. Die **cxapobase** -Klasse stellt eine grundlegende Implementierung der **ixapo** -Schnittstelle bereit. **Cxapobase** implementiert alle **ixapo** -Schnittstellen Methoden außer der [**ixapo::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process) -Methode, die für jedes xapo eindeutig ist.
+Die XAPO-API stellt die [**IXAPO-Schnittstelle**](/windows/desktop/api/XAPO/nn-xapo-ixapo) und die [**CXAPOBase-Klasse**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapobase) zum Erstellen neuer XAPO-Typen bereit. Die **IXAPO-Schnittstelle** enthält alle Methoden, die implementiert werden müssen, um eine neue XAPO zu erstellen. Die **CXAPOBase-Klasse** stellt eine grundlegende Implementierung der **IXAPO-Schnittstelle** bereit. **CXAPOBase** implementiert alle **IXAPO-Schnittstellenmethoden** mit Ausnahme der [**IXAPO::P rocess-Methode,**](/windows/win32/api/xapo/nf-xapo-ixapo-process) die für jedes XAPO eindeutig ist.
 
-## <a name="to-create-a-new-static-xapo"></a>So erstellen Sie ein neues statisches xapo
+## <a name="to-create-a-new-static-xapo"></a>So erstellen Sie ein neues statisches XAPO
 
-1.  Leiten Sie eine neue xapo-Klasse von der [**cxapobase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapobase) -Basisklasse ab.
+1.  Leiten Sie eine neue XAPO-Klasse von der [**CXAPOBase-Basisklasse**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapobase) ab.
 
     > [!Note]  
-    > Xapos implementiert die **IUnknown** -Schnittstelle. Die [**ixapo**](/windows/desktop/api/XAPO/nn-xapo-ixapo) -und [**ixapoparameters**](/windows/desktop/api/XAPO/nn-xapo-ixapoparameters) -Schnittstellen enthalten die drei **IUnknown** -Methoden: **QueryInterface**, **adressf** und **Release**. [**Cxapobase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapobase) stellt Implementierungen aller drei **IUnknown** -Methoden bereit. Eine neue Instanz von **cxapobase** erhält einen Verweis Zähler von 1. Er wird zerstört, wenn der Verweis Zähler 0 (null) ist. Um zuzulassen, dass XAudio2 eine Instanz von xapo zerstört, wenn Sie nicht mehr benötigt wird, nennen Sie **IUnknown:: Release** auf dem xapo, nachdem es einer XAudio2-Wirkungskette hinzugefügt wurde. Weitere Informationen zur Verwendung von xapo mit XAudio2 finden Sie unter Gewusst [wie: Verwenden von xapo in XAudio2](how-to--use-an-xapo-in-xaudio2.md) .
+    > XAPOs implementieren die **IUnknown-Schnittstelle.** Die [**Schnittstellen IXAPO**](/windows/desktop/api/XAPO/nn-xapo-ixapo) und [**IXAPOParameters**](/windows/desktop/api/XAPO/nn-xapo-ixapoparameters) enthalten die drei **IUnknown-Methoden:** **QueryInterface,** **AddRef** und **Release**. [**CXAPOBase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapobase) stellt Implementierungen aller drei **IUnknown-Methoden** bereit. Eine neue Instanz von **CXAPOBase** hat einen Verweiszähler von 1. Er wird zerstört, wenn der Verweiszähler 0 wird. Damit XAudio2 eine Instanz einer XAPO zerstören kann, wenn sie nicht mehr benötigt wird, rufen **Sie IUnknown::Release** für die XAPO auf, nachdem sie einer XAudio2-Effektkette hinzugefügt wurde. Weitere Informationen zur Verwendung [eines XAPO mit XAudio2](how-to--use-an-xapo-in-xaudio2.md) finden Sie unter Vorgehensweise: Verwenden eines XAPO in XAudio2.
 
      
 
-2.  Überschreiben Sie die Implementierung der [**cxapobase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapobase) -Klasse der [**ixapo:: lockforprocess**](/windows/win32/api/xapo/nf-xapo-ixapo-lockforprocess) -Methode.
+2.  Überschreiben Sie die [**CXAPOBase-Klassenimplementierung**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapobase) der [**IXAPO::LockForProcess-Methode.**](/windows/win32/api/xapo/nf-xapo-ixapo-lockforprocess)
 
-    Durch das Überschreiben von [**lockforprocess**](/windows/win32/api/xapo/nf-xapo-ixapo-lockforprocess) können Informationen über das Format der Audiodaten für die Verwendung in [**ixapo::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process)gespeichert werden.
+    Durch das Überschreiben von [**LockForProcess**](/windows/win32/api/xapo/nf-xapo-ixapo-lockforprocess) können Informationen über das Format von Audiodaten zur Verwendung in [**IXAPO::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process)gespeichert werden.
 
-3.  Implementieren Sie die [**ixapo::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process) -Methode.
+3.  Implementieren Sie die [**IXAPO::P rocess-Methode.**](/windows/win32/api/xapo/nf-xapo-ixapo-process)
 
-    XAudio2 Ruft die [**ixapo::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process) -Methode auf, wenn ein xapo Audiodaten verarbeiten muss. Der **Prozess** enthält den Großteil des Codes für ein xapo.
+    XAudio2 ruft die [**IXAPO::P rocess-Methode**](/windows/win32/api/xapo/nf-xapo-ixapo-process) auf, wenn ein XAPO Audiodaten verarbeiten muss. **Der Prozess** enthält den Großteil des Codes für eine XAPO.
 
-## <a name="implementing-the-process-method"></a>Implementieren der Process-Methode
+## <a name="implementing-the-process-method"></a>Implementieren der Prozessmethode
 
-Die [**ixapo::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process) -Methode akzeptiert Streampuffer für Eingabe-und ausgabeaudiodaten. Ein typisches xapo-Objekt erwartet einen Eingabestreampuffer und einen ausgabestreampuffer. Sie sollten die Verarbeitung von Daten aus dem Eingabestreampuffer auf das in der [**lockforprocess**](/windows/win32/api/xapo/nf-xapo-ixapo-lockforprocess) -Funktion angegebene Format und alle Flags, die an die **Prozess** Funktion mit dem Eingabestreampuffer weitergegeben wurden, basieren. Kopieren Sie die verarbeiteten Eingabedaten Strom-Puffer Daten in den ausgabestreampuffer. Legen Sie den bufferflags-Parameter des ausgabestreampuffers entweder als [**\_ \_ gültiger xapo-Puffer**](/windows/desktop/api/xapo/ne-xapo-xapo_buffer_flags) oder **xapo- \_ \_ Puffer** unbeaufsichtigt fest
+Die [**IXAPO::P rocess-Methode**](/windows/win32/api/xapo/nf-xapo-ixapo-process) akzeptiert Streampuffer für Eingabe- und Ausgabeaudiodaten. Ein typischer XAPO-Typ erwartet einen Eingabestreampuffer und einen Ausgabestreampuffer. Sie sollten die Verarbeitung von Daten aus dem Eingabedatenstrompuffer auf dem in der [**LockForProcess-Funktion**](/windows/win32/api/xapo/nf-xapo-ixapo-lockforprocess) angegebenen Format und allen an die **Process-Funktion** übergebenen Flags mit dem Eingabestreampuffer basieren. Kopieren Sie die verarbeiteten Eingabestreampufferdaten in den Ausgabestreampuffer. Legen Sie den BufferFlags-Parameter des Ausgabestreampuffers entweder auf [**XAPO \_ BUFFER \_ VALID**](/windows/desktop/api/xapo/ne-xapo-xapo_buffer_flags) oder **XAPO \_ BUFFER \_ SILENT** fest.
 
-Im folgenden Beispiel wird eine [**lockforprocess**](/windows/win32/api/xapo/nf-xapo-ixapo-lockforprocess) -und [**Process**](/windows/win32/api/xapo/nf-xapo-ixapo-process) -Implementierung veranschaulicht, mit der Daten einfach aus einem Eingabepuffer in einen Ausgabepuffer kopiert werden. Es gibt jedoch keine Verarbeitung, wenn der Eingabepuffer mit dem automatischen [**xapo \_ - \_ Puffer**](/windows/desktop/api/xapo/ne-xapo-xapo_buffer_flags)markiert ist.
+Im folgenden Beispiel wird eine [**LockForProcess-**](/windows/win32/api/xapo/nf-xapo-ixapo-lockforprocess) und [**Process-Implementierung**](/windows/win32/api/xapo/nf-xapo-ixapo-process) veranschaulicht, die einfach Daten aus einem Eingabepuffer in einen Ausgabepuffer kopiert. Es erfolgt jedoch keine Verarbeitung, wenn der Eingabepuffer mit [**XAPO \_ BUFFER \_ SILENT**](/windows/desktop/api/xapo/ne-xapo-xapo_buffer_flags)markiert ist.
 
 
 ```
@@ -116,7 +116,7 @@ STDMETHOD_(void, Process)(UINT32 InputProcessParameterCount,
 
 
 
-Beim Schreiben einer [**Prozess**](/windows/win32/api/xapo/nf-xapo-ixapo-process) Methode ist es wichtig zu beachten, dass sich XAudio2 Audiodaten überlappen. Dies bedeutet, dass die Daten aus den einzelnen Kanälen für eine bestimmte Stichproben Nummer nebeneinander liegen. Wenn z. b. eine 4-Kanal-Welle in einer XAudio2 Source-Sprache vorhanden ist, sind die Audiodaten ein Beispiel für Channel 0, ein Beispiel für Channel 1, ein Beispiel für Channel 2, ein Beispiel für Channel 3 und anschließend das nächste Beispiel der Kanäle 0, 1, 2, 3 usw.
+Beim Schreiben einer [**Process-Methode**](/windows/win32/api/xapo/nf-xapo-ixapo-process) ist es wichtig zu beachten, dass XAudio2-Audiodaten verschachtelt sind. Dies bedeutet, dass daten aus jedem Kanal für eine bestimmte Beispielnummer angrenzen. Wenn beispielsweise eine 4-Kanal-Welle in einer XAudio2-Quellstimme wiedergegeben wird, sind die Audiodaten ein Beispiel für Kanal 0, ein Beispiel für Kanal 1, ein Beispiel für Kanal 2, ein Beispiel für Kanal 3 und dann das nächste Beispiel der Kanäle 0, 1, 2, 3 usw.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -125,7 +125,7 @@ Beim Schreiben einer [**Prozess**](/windows/win32/api/xapo/nf-xapo-ixapo-process
 [Audioeffekte](audio-effects.md)
 </dt> <dt>
 
-[Übersicht über xapo](xapo-overview.md)
+[Übersicht über XAPO](xapo-overview.md)
 </dt> </dl>
 
  

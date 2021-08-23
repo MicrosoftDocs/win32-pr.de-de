@@ -4,16 +4,16 @@ ms.assetid: 86577c09-919b-4f07-9388-47879c656f32
 title: PrintCapabilities-Dokumentbeispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f3e2bf839e3e88e43a295912966f5b1906ef8f35
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 5f9729a3f4ce4799aa4df30b1e8c6393d3c8c7a228015b469985d39714708ce2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112407103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119600680"
 ---
 # <a name="printcapabilities-document-example"></a>PrintCapabilities-Dokumentbeispiel
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Hinweise: Der Standardnamespace gilt nicht für XML-Attribute. Sie müssen explizit präfixqualifiziert sein. Instanznamen, die im folgenden Beispiel verwendet werden, dienen nur zur Veranschaulichung, obwohl sie im Allgemeinen den Instanznamen entsprechen, die in den Schlüsselwörtern für Druckschemas definiert sind.
 

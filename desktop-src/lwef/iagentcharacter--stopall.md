@@ -4,16 +4,16 @@ description: IAgentCharacter StopAll
 ms.assetid: cb0ce220-7b35-45c0-b587-30939d26740f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 558ca23b500ee2146470c8d595b2a5a64febf59a
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 7ff1811e7b7ee323ef57e21dbeea4e6ea9d33dc8bc735327ec9ba5afc2ce299b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113120913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119609779"
 ---
 # <a name="iagentcharacterstopall"></a>IAgentCharacter::StopAll
 
-\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT StopAll();

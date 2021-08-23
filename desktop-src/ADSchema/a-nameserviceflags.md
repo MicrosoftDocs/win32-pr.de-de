@@ -4,8 +4,8 @@ description: Konfigurationsflags für den RPC-Namensdienst.
 ms.assetid: f32cd2fb-4a0a-4a1b-873b-3e4d893f80cd
 ms.tgt_platform: multiple
 keywords:
-- Name-Service-Flags-Attribut AD-Schema
-- nameserviceflags-Attribut AD-Schema
+- AD-Schema des Attributs "Name-Service-Flags"
+- nameServiceFlags-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 98e0b8bec096a8dce43df7bb71658c90bbfd98a4
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: cdd2ec0a986a1408ba3631634c6cc85ca8007b9588224a7be65b499766f83558
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957464"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119442670"
 ---
 # <a name="name-service-flags-attribute"></a>Name-Service-Flags-Attribut
 
@@ -30,12 +30,12 @@ Konfigurationsflags für den RPC-Namensdienst.
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Name-Service-Flags                   |
-| LDAP-Display-Name | nameserviceflags                     |
+| Ldap-Anzeigename | nameServiceFlags                     |
 | Size              | 4 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.753               |
-| System-ID-GUID    | 80212840-4bdc-11d1-a9c4-0000b80367c1 |
+| System-ID-GUID    | 80212840-4bdc-11d1-a9c4-0000f80367c1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Konfigurationsflags für den RPC-Namensdienst.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Konfigurationsflags für den RPC-Namensdienst.
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Ist einwertig       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**RPC-Container**](c-rpccontainer.md)<br/> |
+| In verwendete Klassen        | [**Rpc-Container**](c-rpccontainer.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Konfigurationsflags für den RPC-Namensdienst.
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Ist einwertig       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**RPC-Container**](c-rpccontainer.md)<br/> |
+| In verwendete Klassen        | [**Rpc-Container**](c-rpccontainer.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Konfigurationsflags für den RPC-Namensdienst.
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Ist einwertig       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**RPC-Container**](c-rpccontainer.md)<br/> |
+| In verwendete Klassen        | [**Rpc-Container**](c-rpccontainer.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Konfigurationsflags für den RPC-Namensdienst.
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Is-Single-Valued       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**RPC-Container**](c-rpccontainer.md)<br/> |
+| In verwendete Klassen        | [**Rpc-Container**](c-rpccontainer.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Konfigurationsflags für den RPC-Namensdienst.
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Is-Single-Valued       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**RPC-Container**](c-rpccontainer.md)<br/> |
+| In verwendete Klassen        | [**Rpc-Container**](c-rpccontainer.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Konfigurationsflags für den RPC-Namensdienst.
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Is-Single-Valued       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**RPC-Container**](c-rpccontainer.md)<br/> |
+| In verwendete Klassen        | [**Rpc-Container**](c-rpccontainer.md)<br/> |
 
 
 

@@ -1,17 +1,17 @@
 ---
 description: Ein Bewertungssystem, das einen Bereich von ganzzahligen Werten zwischen 0 und 5 verwendet.
 ms.assetid: 50353ba9-86dd-4172-91b4-1898c8fc5522
-title: System. simplerating
+title: System.SimpleRating
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b4741edd076b6027bc5f8dfbe3b2ff2a31374a7b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 74e13d7f65fb335aea6362509c20845bd1324b6e99d48f14cd9746f0237661f4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350114"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119598140"
 ---
-# <a name="systemsimplerating"></a>System. simplerating
+# <a name="systemsimplerating"></a>System.SimpleRating
 
 Ein Bewertungssystem, das einen Bereich von ganzzahligen Werten zwischen 0 und 5 verwendet.
 
@@ -31,17 +31,17 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
-Aus Kompatibilitätsgründen mit dem Windows Vista-Shell-Bewertungssystem sollte der Eigenschafts Handler auch die [System. Rating](./props-system-rating.md) -Eigenschaft mit der Zuordnung auffüllen, wie für diese Eigenschaft beschrieben.
+Zur Kompatibilität mit dem Windows Vista Shell-Bewertungssystem sollte ihr Eigenschaftenhandler auch die [System.Rating-Eigenschaft](./props-system-rating.md) mit der Für diese Eigenschaft beschriebenen Zuordnung auffüllen.
 
-Verwenden Sie die folgende Tabelle, um von [System. Rating](./props-system-rating.md) in [System. simplerating]()zu konvertieren.
+Verwenden Sie die folgende Tabelle, um [von System.Rating in](./props-system-rating.md) [System.SimpleRating zu konvertieren.]()
 
 
 
-| System. Rating | System. simplerating |
+| System.Rating | System.SimpleRating |
 |---------------|---------------------|
 | 0             | 0                   |
 | 1-12          | 1                   |
@@ -58,46 +58,46 @@ Verwenden Sie die folgende Tabelle, um von [System. Rating](./props-system-ratin
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

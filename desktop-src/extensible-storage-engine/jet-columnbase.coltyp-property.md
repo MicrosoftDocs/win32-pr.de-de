@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_COLUMNBASE. colyp-Eigenschaft.
-title: JET_COLUMNBASE. colyp (Eigenschaft)
+description: 'Weitere Informationen zu: JET_COLUMNBASE.coltyp-Eigenschaft'
+title: JET_COLUMNBASE.coltyp-Eigenschaft
 TOCTitle: 'coltyp property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_COLUMNBASE.coltyp
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_columnbase.coltyp(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d50a9ea77b7c466b26668c564f7ec251cb3ca8af
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2e222063abe920d03b29174d21ee6367f3f160f1df61c56ba3fb46f622db0ad7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349981"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119731450"
 ---
-# <a name="jet_columnbasecoltyp-property"></a>JET_COLUMNBASE. colyp (Eigenschaft)
+# <a name="jet_columnbasecoltyp-property"></a>JET_COLUMNBASE.coltyp-Eigenschaft
 
 Ruft den Typ der Spalte ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public JET_coltyp coltyp { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_coltyp](./jet-coltyp-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_coltyp](./jet-coltyp-enumeration.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_COLUMNBASE-Klasse](./jet-columnbase-class.md)
 
-[Mitglieder JET_COLUMNBASE](./jet-columnbase-members.md)
+[JET_COLUMNBASE-Member](./jet-columnbase-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

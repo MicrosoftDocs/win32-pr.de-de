@@ -1,11 +1,11 @@
 ---
-title: MS-spp-Ausstellung-License-Attribut
-description: Ausstellungs Lizenz bei der Online-/Telefon-Aktivierung der Active Directory Gesamtstruktur
+title: ms-SPP-Issuance-License-Attribut
+description: Ausstellungslizenz, die während der Online-/Telefonaktivierung der Active Directory-Gesamtstruktur verwendet wird
 ms.assetid: 926a04b6-0af7-42be-aedb-7a278bcb47fb
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-spp-Ausstellung-License\"-Attribut AD-Schema"
-- AD-Schema des msspp-issuancelicense-Attributs
+- MS-SPP-Issuance-License-Attribut AD-Schema
+- MSSPP-IssuanceLicense-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0355cf0d798c179e089a6a85b81047a8d2afccef
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d26bc310f5a5ffc495612f408b5f2c39a6443ec46d23cf0a80c2c96aa189937d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344143"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119581870"
 ---
-# <a name="ms-spp-issuance-license-attribute"></a>MS-spp-Ausstellung-License-Attribut
+# <a name="ms-spp-issuance-license-attribute"></a>ms-SPP-Issuance-License-Attribut
 
-Ausstellungs Lizenz bei der Online-/Telefon-Aktivierung der Active Directory Gesamtstruktur
+Ausstellungslizenz, die während der Online-/Telefonaktivierung der Active Directory-Gesamtstruktur verwendet wird
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | MS-spp-Ausstellung-License                               |
-| LDAP-Display-Name | msspp-issuancelicense                                 |
+| CN                | ms-SPP-Issuance-License                               |
+| Ldap-Anzeigename | msSPP-IssuanceLicense                                 |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.2088                               |
 | System-ID-GUID    | 1075b3a1-bbaf-49d2-ae8d-c4f25c823303                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
@@ -53,15 +53,15 @@ Ausstellungs Lizenz bei der Online-/Telefon-Aktivierung der Active Directory Ges
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Ist einwertig       | True                                                                    |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**MS-spp-Activation-Object**](c-msspp-activationobject.md)<br/> |
+| In verwendete Klassen        | [**ms-SPP-Activation-Object**](c-msspp-activationobject.md)<br/> |
 
 
 

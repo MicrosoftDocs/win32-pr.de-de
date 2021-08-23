@@ -1,11 +1,11 @@
 ---
-title: ID3DX11ThreadPump processdeviceworkitems-Methode (D3DX11core. h)
-description: Beachten Sie, dass die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) für Windows 8 veraltet ist und für Windows Store-Apps nicht unterstützt wird. Legt Arbeitselemente auf das Gerät fest, nachdem Sie geladen und verarbeitet wurden.
+title: ID3DX11ThreadPump ProcessDeviceWorkItems-Methode (D3DX11core.h)
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Legt Arbeitselemente auf dem Gerät fest, nachdem sie das Laden und Verarbeiten abgeschlossen haben.
 ms.assetid: 154e6ea5-0a88-4c8a-9c20-e7fbf95f1946
 keywords:
-- Processdeviceworkitems-Methode Direct3D 11
-- Processdeviceworkitems-Methode Direct3D 11, ID3DX11ThreadPump-Schnittstelle
-- ID3DX11ThreadPump Interface Direct3D 11, processdeviceworkitems-Methode
+- ProcessDeviceWorkItems-Methode Direct3D 11
+- ProcessDeviceWorkItems-Methode Direct3D 11, ID3DX11ThreadPump-Schnittstelle
+- ID3DX11ThreadPump-Schnittstelle Direct3D 11 , ProcessDeviceWorkItems-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,21 +17,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5ad570785ac7dc36fb5dd9d464e97ef46f52ca93
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 07a6918e9ecea9d66c3ebca034628387ea471e9173b4b14f24e9b7f866897325
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119608670"
 ---
-# <a name="id3dx11threadpumpprocessdeviceworkitems-method"></a>ID3DX11ThreadPump::P rocess deviceworkitems-Methode
+# <a name="id3dx11threadpumpprocessdeviceworkitems-method"></a>ID3DX11ThreadPump::P rocessDeviceWorkItems-Methode
 
 > [!Note]  
 > Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
 
  
 
-Legt Arbeitselemente auf das Gerät fest, nachdem Sie geladen und verarbeitet wurden.
+Legt Arbeitselemente auf dem Gerät fest, nachdem sie das Laden und Verarbeiten abgeschlossen haben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,12 +48,12 @@ HRESULT ProcessDeviceWorkItems(
 
 <dl> <dt>
 
-*iworkitemcount* \[ in\]
+*iWorkItemCount* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Anzahl der Arbeitselemente, die auf das Gerät festgelegt werden sollen.
+Die Anzahl der Arbeitselemente, die auf das Gerät festgelegt werden.
 
 </dd> </dl>
 
@@ -61,26 +61,26 @@ Die Anzahl der Arbeitselemente, die auf das Gerät festgelegt werden sollen.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Werte, die unter [Direct3D 11-Rückgabecodes aufgeführt sind.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Thread Pumpe das Laden und Verarbeiten einer Ressource oder eines Shaders abgeschlossen hat, wird Sie in einer Warteschlange gespeichert, bis diese API aufgerufen wird. an diesem Punkt werden die verarbeiteten Elemente auf das Gerät festgelegt. Dies ist hilfreich, um die Verarbeitungs Menge zu steuern, die für die Bindung von Ressourcen an das Gerät für jeden Frame aufgewendet wird.
+Wenn die Threadpump das Laden und Verarbeiten einer Ressource oder eines Shaders abgeschlossen hat, wird sie in einer Warteschlange gespeichert, bis diese API aufgerufen wird. An diesem Punkt werden die verarbeiteten Elemente auf das Gerät festgelegt. Dies ist nützlich, um die Verarbeitungsmenge zu steuern, die für das Binden von Ressourcen an das Gerät für jeden Frame verwendet wird.
 
-Ein Beispiel dafür, wie Sie diese API verwenden können, ist, dass Sie das Ende einer Ebene im Spiel nähern und damit beginnen möchten, die Texturen, Shader und andere Ressourcen für die nächste Ebene vorab zu laden. Die Thread Pumpe lädt das Laden, dekomprimieren und Verarbeiten der Ressourcen und Shader in einem separaten Thread, bis Sie für die Festlegung auf das Gerät bereit sind. an diesem Punkt werden Sie in einer Warteschlange belassen. Möglicherweise möchten Sie nicht alle Ressourcen und Shader gleichzeitig auf das Gerät festlegen, da dies zu einer merklichen vorübergehenden Verlangsamung der Spielleistung führen kann. Daher könnte diese API einmal pro Frame aufgerufen werden, sodass nur eine kleine Anzahl von Arbeitsaufgaben auf das Gerät in jedem Frame festgelegt wird. Dadurch wird die Arbeitslast der Bindungs Ressourcen über mehrere Frames auf das Gerät verteilt.
+Ein Beispiel für die Verwendung dieser API: Sie nähern sich dem Ende einer Ebene in Ihrem Spiel und möchten mit dem Vorabladen der Texturen, Shader und anderen Ressourcen für die nächste Ebene beginnen. Die Threadpump beginnt mit dem Laden, Dekomprimieren und Verarbeiten der Ressourcen und Shader in einem separaten Thread, bis sie bereit sind, auf das Gerät festgelegt zu werden. An diesem Punkt werden sie in einer Warteschlange bereinige. Möglicherweise möchten Sie nicht alle Ressourcen und Shader gleichzeitig auf das Gerät festlegen, da dies zu einer spürbaren vorübergehenden Verlangsamung der Leistung des Spiels führen kann. Diese API kann also einmal pro Frame aufgerufen werden, sodass auf jedem Frame nur eine kleine Anzahl von Arbeitselementen auf das Gerät festgelegt wird, wodurch die Arbeitslast der Bindungsressourcen auf das Gerät auf mehrere Frames übertragen wird.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX11core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Bibliothek d3dx11. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX11core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX11.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

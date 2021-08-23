@@ -1,5 +1,5 @@
 ---
-description: 'CBaseAllocator.CBaseAllocator-Konstruktor : Konstruktormethode.'
+description: CBaseAllocator.CBaseAllocator-Konstruktor – Konstruktormethode.
 ms.assetid: e697e377-6407-4316-9f04-fe3bdb814175
 title: CBaseAllocator.CBaseAllocator-Konstruktor (Amfilter.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: dfda2b03d1ddb3f4a8ad5f4446dbee997da4e790
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 21da9f5dda7f60fd4a88e85eb28f2197bdc9847d0b56d413bd6b49cb5abfe658
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096359"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119641000"
 ---
 # <a name="cbaseallocatorcbaseallocator-constructor"></a>CBaseAllocator.CBaseAllocator-Konstruktor
 
@@ -56,21 +56,21 @@ Zeiger auf eine Zeichenfolge, die den Debugnamen der Zuweisung enthält. Weitere
 *Punk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle des aggregierenden** Objekts. Legen Sie andernfalls diesen Parameter auf **NULL fest.**
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle** des aggregierenden Objekts. Legen Sie andernfalls diesen Parameter auf **NULL** fest.
 
 </dd> <dt>
 
 *Phr* 
 </dt> <dd>
 
-Zeiger auf einen **HRESULT-Wert.** Legen Sie den Wert auf S \_ OK fest, bevor Sie das -Objekt erstellen. Wenn der Konstruktor fehlschlägt, wird der Wert auf einen Fehlercode festgelegt.
+Zeiger auf einen **HRESULT-Wert.** Legen Sie den Wert auf S \_ OK fest, bevor Sie das Objekt erstellen. Wenn der Konstruktor fehlschlägt, wird der Wert auf einen Fehlercode festgelegt.
 
 </dd> <dt>
 
 *bEvent* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob ein Semaphor erstellt werden soll. True **gibt an,** dass die Zuweisung ein Semaphor ([**CBaseAllocator::m \_ hSem**](cbaseallocator-m-hsem.md)) erstellt, das signalisiert wird, wenn ein Beispiel verfügbar wird. Legen Sie den Wert auf **FALSE** fest, wenn Sie eine abgeleitete Klasse implementieren, die kein Semaphor erfordert.
+Boolescher Wert, der angibt, ob ein Semaphor erstellt werden soll. True gibt an, dass die Zuweisung ein Semaphor [**(CBaseAllocator::m \_ hSem)**](cbaseallocator-m-hsem.md)erstellt, das signalisiert wird, sobald ein Beispiel verfügbar wird. Legen Sie den Wert auf **FALSE** fest, wenn Sie eine abgeleitete Klasse implementieren, die kein Semaphor erfordert.
 
 </dd> <dt>
 
@@ -85,14 +85,14 @@ Boolescher Wert, der angibt, ob der Releaserückrufmechanismus aktiviert ist. Le
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

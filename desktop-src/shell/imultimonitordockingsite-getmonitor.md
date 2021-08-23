@@ -12,12 +12,12 @@ api_type:
 - COM
 api_location: ''
 ms.assetid: 0bae75eb-ebd5-4de4-9249-0e9bb489f61f
-ms.openlocfilehash: 2cd437fd6c0e842eb314db6c57420af6b54b05ff
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 63609dc545e8f69ae2023e6659158297a65fdb7b549071126702b163c04555f1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109840641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119661890"
 ---
 # <a name="imultimonitordockingsitegetmonitor-method"></a>IMultiMonitorDockingSite::GetMonitor-Methode
 
@@ -39,12 +39,12 @@ HRESULT GetMonitor(
 
 <dl> <dt>
 
-*dateiSrc* \[ In\]
+*hexSrc* \[ In\]
 </dt> <dd>
 
 Typ: **[ **IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown)\***
 
-Ein Zeiger auf das Objekt, das die [**IDockingWindow-Schnittstelle**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow) implementiert, für die der Monitor angefordert wird.
+Ein Zeiger auf das -Objekt, das die [**IDockingWindow-Schnittstelle**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow) implementiert, für die der Monitor angefordert wird.
 
 </dd> <dt>
 
@@ -53,7 +53,7 @@ Ein Zeiger auf das Objekt, das die [**IDockingWindow-Schnittstelle**](/windows/d
 
 Typ: **HMONITOR \***
 
-Wenn die Funktion zurückgegeben wird, enthält sie einen Zeiger auf das Handle des Standardmonitors.
+Enthält nach der Rückgabe der Funktion einen Zeiger auf das Handle des Standardmonitors.
 
 </dd> </dl>
 
@@ -61,7 +61,7 @@ Wenn die Funktion zurückgegeben wird, enthält sie einen Zeiger auf das Handle 
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,8 +69,8 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                   |
 
 
 
