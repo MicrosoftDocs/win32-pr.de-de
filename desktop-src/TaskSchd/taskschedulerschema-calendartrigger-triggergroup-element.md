@@ -1,10 +1,10 @@
 ---
-title: Calendartrigger (triggergroup)-Element
-description: Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen Tag-of-the-Week-(Dow-)-auslöst an.
+title: CalendarTrigger (triggerGroup)-Element
+description: Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen DOW-Trigger (Day-of-the-Week) an.
 ms.assetid: 9b9218bf-222c-4ece-8b37-5c5d8b765015
 keywords:
-- Calendar-auslöserTaskplaner, XML-Element
-- Calendarauslöserelement Taskplaner
+- Kalendertrigger Taskplaner , XML-Element
+- CalendarTrigger-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 02c061d8821dffa82eca8756ab26acadc6bb9281
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d02b14fa056940a8139e87d9b471f6eaef84c311eb095073f274a9b4adf3c6dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119516970"
 ---
-# <a name="calendartrigger-triggergroup-element"></a>Calendartrigger (triggergroup)-Element
+# <a name="calendartrigger-triggergroup-element"></a>CalendarTrigger (triggerGroup)-Element
 
-Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen Tag-of-the-Week-(Dow-)-auslöst an.
+Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen DOW-Trigger (Day-of-the-Week) an.
 
 ``` syntax
 <xs:element name="CalendarTrigger"
@@ -31,15 +31,15 @@ Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen Tag-of-the-W
  />
 ```
 
-Das **calendartrigger** -Element wird durch den komplexen Typ [**calendartriggertype**](taskschedulerschema-calendartriggertype-complextype.md) definiert.
+Das **CalendarTrigger-Element** wird durch den komplexen [**CalendarTriggerType-Typ**](taskschedulerschema-calendartriggertype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                            |
+| Element                                                           | Abgeleitet von                                                         | Beschreibung                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------------------------------|
-| [**Trigger**](taskschedulerschema-triggers-tasktype-element.md) | [**triggerstype**](taskschedulerschema-triggerstype-complextype.md) | Gibt die Trigger an, die den Task starten.<br/> |
+| [**Trigger**](taskschedulerschema-triggers-tasktype-element.md) | [**triggersType**](taskschedulerschema-triggerstype-complextype.md) | Gibt die Trigger an, die die Aufgabe starten.<br/> |
 
 
 
@@ -47,17 +47,17 @@ Das **calendartrigger** -Element wird durch den komplexen Typ [**calendartrigger
 
 
 
-| Element                                                                                                                            | type                                                                                                 | BESCHREIBUNG                                                                                                                        |
+| Element                                                                                                                            | Typ                                                                                                 | Beschreibung                                                                                                                        |
 |------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| [**Aktiviert (triggerbasetype)**](taskschedulerschema-enabled-triggerbasetype-element.md)                                           | boolean                                                                                              | Gibt an, dass der-Wert aktiviert ist.<br/>                                                                                  |
-| [**Endboundary (triggerbasetype)**](taskschedulerschema-endboundary-triggerbasetype-element.md)                                   | dateTime                                                                                             | Gibt das Datum und die Uhrzeit der Deaktivierung des Auslösers an. Der-Vorgang kann die Aufgabe nicht starten, nachdem Sie deaktiviert wurde.<br/> |
-| [**Executiontimelimit (triggerbasetype)**](taskschedulerschema-executiontimelimit-triggerbasetype-element.md)                     | duration                                                                                             | Gibt die maximale Zeitspanne an, in der der Task vom-Vorgang gestartet werden kann.<br/>                                   |
-| [**Wiederholung (triggerbasetype)**](taskschedulerschema-repetition-triggerbasetype-element.md)                                     | [**Wiederholungstyp**](taskschedulerschema-repetitiontype-complextype.md)                             | Gibt an, wie oft die Aufgabe ausgeführt wird und wie lange das Wiederholungsmuster nach dem Start der Aufgabe wiederholt wird.<br/>          |
-| [**Schedulebyday (calendartriggertype)**](taskschedulerschema-schedulebyday-calendartriggertype-element.md)                       | [**dailyscheduletype**](taskschedulerschema-dailyscheduletype-complextype.md)                       | Gibt einen täglichen Zeitplan an.<br/>                                                                                             |
-| [**Schedulebymonth (calendartriggertype)**](taskschedulerschema-schedulebymonth-calendartriggertype-element.md)                   | [**monthlyscheduletype**](taskschedulerschema-monthlyscheduletype-complextype.md)                   | Gibt einen monatlichen Zeitplan an.<br/>                                                                                           |
-| [**Schedulebymonthdayoatweek (calendartriggertype)**](taskschedulerschema-schedulebymonthdayofweek-calendartriggertype-element.md) | [**monthlydayosweekscheduletype**](taskschedulerschema-monthlydayofweekscheduletype-complextype.md) | Gibt einen-Vorgang an, durch den ein Auftrag an einem monatlichen Wochentag gestartet wird.<br/>                                                |
-| [**Schedulebyweek (calendartriggertype)**](taskschedulerschema-schedulebyweek-calendartriggertype-element.md)                     | [**weeklyscheduletype**](taskschedulerschema-weeklyscheduletype-complextype.md)                     | Gibt einen wöchentlichen Zeitplan an.<br/>                                                                                            |
-| [**StartBoundary (triggerbasetype)**](taskschedulerschema-startboundary-triggerbasetype-element.md)                               | dateTime                                                                                             | Gibt das Datum und die Uhrzeit der Aktivierung des Auslösers an. Dieses Element ist erforderlich.<br/>                                    |
+| [**Aktiviert (triggerBaseType)**](taskschedulerschema-enabled-triggerbasetype-element.md)                                           | boolean                                                                                              | Gibt an, dass der Trigger aktiviert ist.<br/>                                                                                  |
+| [**EndBoundary (triggerBaseType)**](taskschedulerschema-endboundary-triggerbasetype-element.md)                                   | dateTime                                                                                             | Gibt das Datum und die Uhrzeit der Deaktivierung des Triggers an. Der Trigger kann die Aufgabe nicht starten, nachdem sie deaktiviert wurde.<br/> |
+| [**ExecutionTimeLimit (triggerBaseType)**](taskschedulerschema-executiontimelimit-triggerbasetype-element.md)                     | duration                                                                                             | Gibt die maximale Zeitdauer an, in der der Task vom Trigger gestartet werden kann.<br/>                                   |
+| [**Wiederholung (triggerBaseType)**](taskschedulerschema-repetition-triggerbasetype-element.md)                                     | [**wiederholungstyp**](taskschedulerschema-repetitiontype-complextype.md)                             | Gibt an, wie oft der Task ausgeführt wird und wie lange das Wiederholungsmuster wiederholt wird, nachdem der Task gestartet wurde.<br/>          |
+| [**ScheduleByDay (calendarTriggerType)**](taskschedulerschema-schedulebyday-calendartriggertype-element.md)                       | [**dailyScheduleType**](taskschedulerschema-dailyscheduletype-complextype.md)                       | Gibt einen täglichen Zeitplan an.<br/>                                                                                             |
+| [**ScheduleByMonth (calendarTriggerType)**](taskschedulerschema-schedulebymonth-calendartriggertype-element.md)                   | [**monthlyScheduleType**](taskschedulerschema-monthlyscheduletype-complextype.md)                   | Gibt einen monatlichen Zeitplan an.<br/>                                                                                           |
+| [**ScheduleByMonthDayOfWeek (calendarTriggerType)**](taskschedulerschema-schedulebymonthdayofweek-calendartriggertype-element.md) | [**monthlyDayOfWeekScheduleType**](taskschedulerschema-monthlydayofweekscheduletype-complextype.md) | Gibt einen Trigger an, der einen Auftrag nach einem monatlichen Wochentag startet.<br/>                                                |
+| [**ScheduleByWeek (calendarTriggerType)**](taskschedulerschema-schedulebyweek-calendartriggertype-element.md)                     | [**weeklyScheduleType**](taskschedulerschema-weeklyscheduletype-complextype.md)                     | Gibt einen wöchentlichen Zeitplan an.<br/>                                                                                            |
+| [**StartBoundary (triggerBaseType)**](taskschedulerschema-startboundary-triggerbasetype-element.md)                               | dateTime                                                                                             | Gibt das Datum und die Uhrzeit der Aktivierung des Triggers an. Dieses Element ist erforderlich.<br/>                                    |
 
 
 
@@ -65,35 +65,35 @@ Das **calendartrigger** -Element wird durch den komplexen Typ [**calendartrigger
 
 
 
-| Name | type | BESCHREIBUNG                               |
+| Name | Typ | BESCHREIBUNG                               |
 |------|------|-------------------------------------------|
-| Id   | id   | Der Bezeichner des Auslösers.<br/> |
+| Id   | ID   | Der Bezeichner des Triggers.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das [**StartBoundary**](taskschedulerschema-startboundary-triggerbasetype-element.md) -Element ist ein erforderliches Element für Zeit-und Kalender Trigger ([**timetrigger**](taskschedulerschema-timetrigger-triggergroup-element.md) und **calendartrigger**).
+Das [**StartBoundary-Element**](taskschedulerschema-startboundary-triggerbasetype-element.md) ist ein erforderliches Element für Zeit- und Kalendertrigger ([**TimeTrigger**](taskschedulerschema-timetrigger-triggergroup-element.md) und **CalendarTrigger**).
 
-Die oben aufgeführten untergeordneten Elemente werden von den komplexen Elementtypen [**triggerbasetype**](taskschedulerschema-triggerbasetype-complextype.md) und [**calendartriggertype**](taskschedulerschema-calendartriggertype-complextype.md) definiert.
+Die oben aufgeführten untergeordneten Elemente werden durch die [**komplexen Elementtypen triggerBaseType**](taskschedulerschema-triggerbasetype-complextype.md) und [**calendarTriggerType**](taskschedulerschema-calendartriggertype-complextype.md) definiert.
 
-Bei der Skript Entwicklung werden Kalender Trigger mithilfe eines der folgenden Objekte angegeben.
+Für die Skriptentwicklung werden Kalendertrigger mit einem der folgenden Objekte angegeben.
 
--   [**Dailylöst**](dailytrigger.md)
--   [**Weeklyauslösers**](weeklytrigger.md)
--   [**Monthly-auslöst**](monthlytrigger.md)
--   [**Monthlydowlöst**](monthlydowtrigger.md)
+-   [**DailyTrigger**](dailytrigger.md)
+-   [**WeeklyTrigger**](weeklytrigger.md)
+-   [**MonthlyTrigger**](monthlytrigger.md)
+-   [**MonthlyDOWTrigger**](monthlydowtrigger.md)
 
-Bei der C++-Entwicklung werden Kalender Trigger mithilfe einer der folgenden Schnittstellen angegeben.
+Für die C++-Entwicklung werden Kalendertrigger mithilfe einer der folgenden Schnittstellen angegeben.
 
--   [**Idaily-Fehler**](/windows/desktop/api/taskschd/nn-taskschd-idailytrigger)
--   [**Iweeklylöst**](/windows/desktop/api/taskschd/nn-taskschd-iweeklytrigger)
--   [**Imonthly-Auslösung**](/windows/desktop/api/taskschd/nn-taskschd-imonthlytrigger)
--   [**Imonthlydowlöst**](/windows/desktop/api/taskschd/nn-taskschd-imonthlydowtrigger)
+-   [**IDailyTrigger**](/windows/desktop/api/taskschd/nn-taskschd-idailytrigger)
+-   [**IWeeklyTrigger**](/windows/desktop/api/taskschd/nn-taskschd-iweeklytrigger)
+-   [**IMonthlyTrigger**](/windows/desktop/api/taskschd/nn-taskschd-imonthlytrigger)
+-   [**IMonthlyDOWTrigger**](/windows/desktop/api/taskschd/nn-taskschd-imonthlydowtrigger)
 
 ## <a name="examples"></a>Beispiele
 
-Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen Kalender--Auslösers angibt, finden Sie unter Beispiel für das [tägliche Beispiel (XML)](daily-trigger-example--xml-.md)
+Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die einen Kalendertrigger angibt, finden Sie unter Beispiel für tägliche [Trigger (XML).](daily-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,8 +101,8 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen Kalender
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -110,7 +110,7 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen Kalender
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Herstellen einer Verbindung mit einem Gerät'
+description: 'Weitere Informationen zu: Herstellen einer Verbindung mit einem Gerät'
 ms.assetid: 16ff280d-818b-4a4e-b5a6-16e81f5b35c6
 title: Herstellen einer Verbindung mit einem Gerät
 ms.topic: article
@@ -9,23 +9,23 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: fc7d8c78f77854a9adbedad7c0870721b3b037ab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bf98c11b285d4c7aa4705095af99f35c129e27311dbe19ff42e4b0d288c45efc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106351696"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119451220"
 ---
 # <a name="connecting-to-a-device"></a>Herstellen einer Verbindung mit einem Gerät
 
 > [!Note]  
-> Dieses Skript System wurde durch die Windows-Abbild Erwerbs-Automatisierungs Schicht (WIA) ersetzt. Weitere Informationen finden Sie unter [Automatisierungs Schicht für Windows-Abbild](/previous-versions/windows/desktop/wiaaut/-wiaaut-startpage)
+> Dieses Skriptsystem wurde durch Windows Image Acquisition (WIA) Automation Layer ersetzt. Weitere Informationen finden Sie [unter Windows Image Acquisition Automation Layer](/previous-versions/windows/desktop/wiaaut/-wiaaut-startpage).
 
  
 
-Der erste Schritt in einer Anwendung oder einem Skript, das das Windows-Abbild Erfassungs Modell (WIA) verwendet, ist das Erstellen des [**WIA**](-wia-wia.md) -Objekts. Dieses Objekt stellt Methoden zum Abrufen einer Auflistung von [**deviceInfo**](-wia-deviceinfo.md) -Objekten bereit und verbindet diese Objekte mit Geräten. Außerdem bietet es die Möglichkeit, auf WIA-Hardware Ereignisse zu lauschen.
+Der erste Schritt in jeder Anwendung oder jedem Skript, die das WIA-Skriptmodell (Windows Image Acquisition) verwendet, ist das Erstellen des [**Wia-Objekts.**](-wia-wia.md) Dieses Objekt stellt Methoden für bereit, um eine Sammlung von [**DeviceInfo-Objekten**](-wia-deviceinfo.md) abzurufen und diese Objekte mit Geräten zu verbinden. Sie bietet auch die Möglichkeit, auf WIA-Hardwareereignisse zu lauschen.
 
-In der folgenden Zeile des Microsoft Visual Basic Scripting Edition-Codes (VBScript) wird das [**WIA**](-wia-wia.md) -Objekt erstellt:
+Mit der folgenden Zeile von Microsoft Visual Basic Scripting Edition -Code (VBScript) wird das [**Wia-Objekt**](-wia-wia.md) erstellt:
 
 
 ```
@@ -34,9 +34,9 @@ objWia = CreateObject("Wia.Script")
 
 
 
-Verwenden Sie nach dem Erstellen des [**WIA**](-wia-wia.md) -Objekts die [**Create**](-wia-iwia-create.md) -Methode, um eine Verbindung mit einem WIA-Hardware Gerät herzustellen.
+Verwenden Sie nach dem Erstellen des [**Wia-Objekts**](-wia-wia.md) die [**Create-Methode,**](-wia-iwia-create.md) um eine Verbindung mit einem WIA-Hardwaregerät herzustellen.
 
-Sie können auch die [**Devices**](-wia-iwia-devices.md) -Eigenschaft des [**WIA**](-wia-wia.md) -Objekts verwenden, um eine Auflistung von " [**de viceinfo**](-wia-deviceinfo.md) "-Objekten abzurufen. Auflisten Sie diese Auflistung, und verwenden Sie die [**Create**](-wia-iwiadeviceinfo-create.md) -Methode, um eine Verbindung mit einem Gerät herzustellen.
+Sie können auch die [**Devices-Eigenschaft**](-wia-iwia-devices.md) des [**Wia-Objekts**](-wia-wia.md) verwenden, um eine Sammlung von [**DeviceInfo-Objekten**](-wia-deviceinfo.md) abzurufen. Aufzählen Sie diese Auflistung, und verwenden Sie die [**Create-Methode,**](-wia-iwiadeviceinfo-create.md) um eine Verbindung mit einem Gerät herzustellen.
 
  
 

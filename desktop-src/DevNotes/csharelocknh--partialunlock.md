@@ -1,7 +1,7 @@
 ---
-description: Gibt eine partielle Sperre frei, sodass andere exklusive oder partielle sperrenerwerber jetzt eingeben können.
+description: Gibt eine partielle Sperre frei, sodass andere exklusive oder partielle Lock Acquirer jetzt eingeben können.
 ms.assetid: 95a3e0d1-4e8b-4e30-b4fd-709b9db465de
-title: Csharelocknh::P artialunlock-Methode
+title: CShareLockNH::P artialUnlock-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Rwnh.dll
-ms.openlocfilehash: 930c0f51e199c1668a70f2dd017b0280939b0710
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7b06285cf03315296a78cda000d281ba674ae6778c6d11102aac463546befd87
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119691680"
 ---
-# <a name="csharelocknhpartialunlock-method"></a>Csharelocknh::P artialunlock-Methode
+# <a name="csharelocknhpartialunlock-method"></a>CShareLockNH::P artialUnlock-Methode
 
-Gibt eine partielle Sperre frei, sodass andere exklusive oder partielle sperrenerwerber jetzt eingeben können.
+Gibt eine partielle Sperre frei, sodass andere exklusive oder partielle Lock Acquirer jetzt eingeben können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,9 +41,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,12 +1,12 @@
 ---
-title: Disconnect-Methode der Win32_VirtualDesktopSession-Klasse
-description: Trennt die virtuelle Desktop Sitzung.
+title: Disconnect-Methode der Win32_VirtualDesktopSession Klasse
+description: Trennt die Verbindung mit der virtuellen Desktopsitzung.
 ms.assetid: 9dbb256c-c416-4749-87be-05a906070560
 ms.tgt_platform: multiple
 keywords:
-- Disconnect-Methode Remotedesktopdienste
-- Disconnect-Methode Remotedesktopdienste, Win32_VirtualDesktopSession-Klasse
-- Win32_VirtualDesktopSession-Klasse Remotedesktopdienste, Disconnect-Methode
+- Disconnect-Remotedesktopdienste
+- Disconnect-methode Remotedesktopdienste , Win32_VirtualDesktopSession-Klasse
+- Win32_VirtualDesktopSession klasse Remotedesktopdienste , Disconnect-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d473286dec0d286b0e5e9e310c146bd46a2f95b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0998e6dad97c1dcf6e55a999f02eac34a9881efa27c6cb6636f729cbb75befad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392035"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119515660"
 ---
-# <a name="disconnect-method-of-the-win32_virtualdesktopsession-class"></a>Disconnect-Methode der Win32 \_ virtualdesktopsession-Klasse
+# <a name="disconnect-method-of-the-win32_virtualdesktopsession-class"></a>Disconnect-Methode der Win32 \_ VirtualDesktopSession-Klasse
 
-Trennt die virtuelle Desktop Sitzung.
+Trennt die Verbindung mit der virtuellen Desktopsitzung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,8 +53,8 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2-Rdms \\<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -63,7 +63,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 <dl> <dt>
 
-[**Win32 \_ virtualdesktopsession**](win32-virtualdesktopsession.md)
+[**Win32 \_ VirtualDesktopSession**](win32-virtualdesktopsession.md)
 </dt> </dl>
 
  

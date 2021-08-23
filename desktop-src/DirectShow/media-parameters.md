@@ -1,33 +1,33 @@
 ---
-description: Medien Parameter
+description: Medienparameter
 ms.assetid: 48b2bc2e-897d-4aa9-8a50-c2855a17dca5
-title: Medien Parameter
+title: Medienparameter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ce9276a3d38b9176458299bfd1a47057cac6236e
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 37cf7229cac3deb5b31a6c6879fd3b5896e5f4098a4cce64ac42d19970f5c569
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "103869472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119584340"
 ---
-# <a name="media-parameters"></a>Medien Parameter
+# <a name="media-parameters"></a>Medienparameter
 
-Mithilfe von Medien Parametern kann eine Anwendung die Eigenschaften eines Objekts so konfigurieren, dass Sie sich im Laufe der Zeit auf mathematisch deterministische Weise ändern.
+Medienparameter ermöglichen es einer Anwendung, die Eigenschaften eines Objekts so zu konfigurieren, dass sie sich im Laufe der Zeit auf mathematische deterministische Weise ändern.
 
-Nehmen wir beispielsweise an, dass ein Sound Techniker ein digitales Master Band vermischt und eine geringfügige Verzögerung auf einen Vokal Abschnitt anwenden möchte, um den Sound auszufüllen. Der Effekt wird als jarringvorgang verwendet, wenn die Verzögerung plötzlich reduziert wird. Stattdessen sollte der Effekt 100 Prozent trocken (keine Verzögerung) beginnen, und die nasse/trockene Mischung sollte allmählich erhöht werden, bis die gewünschte Ebene erreicht wird. Außerdem sollte dieser Übergang eine glatte Kurve oder eine lineare Fortsetzung nach sich ziehen. Zur Unterstützung dieses Szenarios kann ein DMO die folgenden Schnittstellen verfügbar machen:
+Angenommen, ein Tontechniker mischen ein digitales Masterband und möchte eine geringfügige Verzögerung auf einen Bänderabschnitt anwenden, um den Sound zu füllen. Der Effekt ist jarring, wenn die Verzögerung plötzlich einschneidet. Stattdessen sollte der Effekt zu 100 Prozent (ohne Verzögerung) beginnen, und die Versheiterungs-/Regenmischung sollte schrittweise zunehmen, bis sie das gewünschte Niveau erreicht. Darüber hinaus sollte dieser Übergang einer reibungslosen Kurve oder einem linearen Fortschritt folgen. Zur Unterstützung dieses Szenarios kann ein DMO die folgenden Schnittstellen verfügbar machen:
 
--   [**Imediaparaminfo**](/previous-versions/windows/desktop/api/Medparam/nn-medparam-imediaparaminfo) enthält Methoden zum Ermitteln von Informationen zu den unterstützten Eigenschaften. In der Regel ruft der Client diese Methoden auf, bevor er mit dem Streamen von Daten beginnt.
--   [**Imediaparams**](/previous-versions/windows/desktop/api/Medparam/nn-medparam-imediaparams) enthalten Methoden zum Festlegen der Kurven, die ein Parameter beim Streaming befolgt.
+-   [**IMediaParamInfo enthält**](/previous-versions/windows/desktop/api/Medparam/nn-medparam-imediaparaminfo) Methoden zum Entdecken von Informationen zu den unterstützten Eigenschaften. In der Regel wird der Client diese Methoden aufrufen, bevor er mit dem Streamen von Daten beginnt.
+-   [**IMediaParams enthält**](/previous-versions/windows/desktop/api/Medparam/nn-medparam-imediaparams) Methoden zum Festlegen der Kurven, denen ein Parameter während des Streamings folgt.
 
-Diese Schnittstellen sind hauptsächlich für DMOS konzipiert, aber jedes Objekt kann Sie unterstützen. In diesem Abschnitt bezieht sich der Begriffs *Parameter* auf eine beliebige Eigenschaft, die diese beiden Schnittstellen unterstützt.
+Diese Schnittstellen sind in erster Linie für DMOs konzipiert, aber jedes Objekt kann sie unterstützen. In diesem Abschnitt bezieht sich der Begriff *parameter* auf jede Eigenschaft, die diese beiden Schnittstellen unterstützt.
 
 Dieser Abschnitt enthält die folgenden Themen:
 
--   [Parameter Kurven](parameter-curves.md)
--   [Parameter Informationen](parameter-information.md)
--   [Umschlag Segmente](envelope-segments.md)
--   [Berechnen von Parameter Werten](calculating-parameter-values.md)
+-   [Parameterkurven](parameter-curves.md)
+-   [Parameterinformationen](parameter-information.md)
+-   [Umschlagsegmente](envelope-segments.md)
+-   [Berechnen von Parameterwerten](calculating-parameter-values.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

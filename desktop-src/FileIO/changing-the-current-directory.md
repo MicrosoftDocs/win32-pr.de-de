@@ -1,26 +1,26 @@
 ---
-description: Eine Anwendung kann das aktuelle Verzeichnis ändern, indem Sie die Funktion SetCurrentDirectory aufruft.
+description: Eine Anwendung kann das aktuelle Verzeichnis ändern, indem sie die SetCurrentDirectory-Funktion aufruft.
 ms.assetid: b08e7739-55d4-4690-9ce5-2a8cb29214e9
 title: Ändern des aktuellen Verzeichnisses
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 02e507d206bcd988a7c00f557bde2b8a0ad39c79
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 60cf742c872bab7d37e115afa815fff961d2f975bfbd3db75ff61a5e992d64a9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106354010"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119632110"
 ---
 # <a name="changing-the-current-directory"></a>Ändern des aktuellen Verzeichnisses
 
-Das Verzeichnis am Ende des aktiven Pfads wird als Aktuelles Verzeichnis bezeichnet. Dabei handelt es sich um das Verzeichnis, in dem die aktive Anwendung gestartet wurde, sofern Sie nicht explizit geändert wurde. Eine Anwendung kann ermitteln, welches Verzeichnis aktuell ist, indem Sie die [**GetCurrentDirectory**](/windows/desktop/api/WinBase/nf-winbase-getcurrentdirectory) -Funktion aufrufen. Es ist manchmal notwendig, die [**getfullpathname**](/windows/desktop/api/FileAPI/nf-fileapi-getfullpathnamea) -Funktion zu verwenden, um sicherzustellen, dass der Laufwerk Buchstabe enthalten ist, wenn Sie von der Anwendung benötigt wird.
+Das Verzeichnis am Ende des aktiven Pfads wird als aktuelles Verzeichnis bezeichnet. Es handelt sich um das Verzeichnis, in dem die aktive Anwendung gestartet wurde, es sei denn, sie wurde explizit geändert. Eine Anwendung kann ermitteln, welches Verzeichnis aktuell ist, indem sie die [**GetCurrentDirectory-Funktion**](/windows/desktop/api/WinBase/nf-winbase-getcurrentdirectory) aufruft. Manchmal ist es erforderlich, die [**GetFullPathName-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-getfullpathnamea) zu verwenden, um sicherzustellen, dass der Laufwerkbuchstabe enthalten ist, wenn die Anwendung dies erfordert.
 
 > [!Note]  
-> Obwohl jeder Prozess nur über ein aktuelles Verzeichnis verfügen kann, speichert das System den letzten aktuellen Pfad für jedes Volume (Laufwerk Buchstabe), wenn die Anwendung Volumes mithilfe der [**SetCurrentDirectory**](/windows/desktop/api/WinBase/nf-winbase-setcurrentdirectory) -Funktion schaltet. Dieses Verhalten wird nur dann selbst bei der Angabe eines Laufwerk Buchstabens ohne einen voll qualifizierten Pfad angezeigt, wenn der aktuelle Verzeichnis Verweis auf ein anderes Volume geändert wird. Dies gilt für Get-oder Set-Vorgänge.
+> Obwohl jeder Prozess nur über ein aktuelles Verzeichnis verfügen kann, speichert das System den letzten aktuellen Pfad für jedes Volume (Laufwerkbuchstabe), wenn die Anwendung volumes mithilfe der [**SetCurrentDirectory-Funktion**](/windows/desktop/api/WinBase/nf-winbase-setcurrentdirectory) wechselt. Dieses Verhalten tritt nur auf, wenn ein Laufwerkbuchstabe ohne vollqualifizierten Pfad angegeben wird, wenn der aktuelle Verzeichnisverweispunkt auf ein anderes Volume geändert wird. Dies gilt für Get- oder Set-Vorgänge.
 
  
 
-Eine Anwendung kann das aktuelle Verzeichnis ändern, indem Sie die Funktion [**SetCurrentDirectory**](/windows/desktop/api/WinBase/nf-winbase-setcurrentdirectory) aufruft.
+Eine Anwendung kann das aktuelle Verzeichnis ändern, indem sie die [**SetCurrentDirectory-Funktion**](/windows/desktop/api/WinBase/nf-winbase-setcurrentdirectory) aufruft.
 
 Im folgenden Beispiel wird die Verwendung von [**GetCurrentDirectory**](/windows/desktop/api/WinBase/nf-winbase-getcurrentdirectory) und [**SetCurrentDirectory**](/windows/desktop/api/WinBase/nf-winbase-setcurrentdirectory)veranschaulicht.
 

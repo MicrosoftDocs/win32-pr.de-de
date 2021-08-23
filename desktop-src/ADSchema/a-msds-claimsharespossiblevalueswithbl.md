@@ -1,11 +1,11 @@
 ---
-title: ms-DS-Claim-Shares-mögliche-values-with-BL-Attribut
-description: Bei einem Anspruchstyp Objekt gibt dieses Attribut an, dass von anderen Anspruchstyp Objekten auf die möglichen Werte verwiesen wird, die in ms-DS-Claim-possible-Values beschrieben werden.
+title: ms-DS-Claim-Shares-Possible-Values-With-BL-Attribut
+description: Für ein Anspruchstypobjekt gibt dieses Attribut an, dass auf die in ms-DS-Claim-Possible-Values beschriebenen möglichen Werte von anderen Anspruchstypobjekten verwiesen wird.
 ms.assetid: 2013ada9-ba80-4133-ad56-ba23be6eb36b
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-Claim-Shares-mögliche-values-with-BL-Attribut AD-Schema
-- AD-Schema des msDS-claimsharespossiblevalueswithbl-Attributs
+- ms-DS-Claim-Shares-Possible-Values-With-BL attribute AD Schema
+- AD-Schema des msDS-ClaimSharesPossibleValuesWithBL-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d51e4316f4c87a1b8055df7256f586b3cc13f02e
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: a90ca04d9dfcfbc17eb8ff0e33b459503e8b7a5bae281cfd1101f14f529a4fff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119552670"
 ---
-# <a name="ms-ds-claim-shares-possible-values-with-bl-attribute"></a>ms-DS-Claim-Shares-mögliche-values-with-BL-Attribut
+# <a name="ms-ds-claim-shares-possible-values-with-bl-attribute"></a>ms-DS-Claim-Shares-Possible-Values-With-BL-Attribut
 
-Bei einem Anspruchstyp Objekt gibt dieses Attribut an, dass von anderen Anspruchstyp Objekten auf die möglichen Werte verwiesen wird, die in ms-DS-Claim-possible-Values beschrieben werden.
+Für ein Anspruchstypobjekt gibt dieses Attribut an, dass auf die in ms-DS-Claim-Possible-Values beschriebenen möglichen Werte von anderen Anspruchstypobjekten verwiesen wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------------|
-| CN                | ms-DS-Claim-Shares-mögliche-values-with-BL |
-| LDAP-Display-Name | MSDS-claimsharespossiblevalueswithbl       |
+| CN                | ms-DS-Claim-Shares-Possible-Values-With-BL |
+| Ldap-Anzeigename | msDS-ClaimSharesPossibleValuesWithBL       |
 | Size              | \-                                         |
-| Berechtigung aktualisieren  | \-                                         |
-| Aktualisierungshäufigkeit  | \-                                         |
+| Aktualisieren von Berechtigungen  | \-                                         |
+| Updatehäufigkeit  | \-                                         |
 | Attribute-Id      | 1.2.840.113556.1.4.2102                    |
-| System-ID-GUID    | 54d522db-ec95-48f5-9bbd-1880ebbb2180       |
+| System-Id-Guid    | 54d522db-ec95-48f5-9bbd-1880ebbb2180       |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md)    |
 
 
@@ -53,10 +53,10 @@ Bei einem Anspruchstyp Objekt gibt dieses Attribut an, dass von anderen Anspruch
 | Link-ID                | 2179                            |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

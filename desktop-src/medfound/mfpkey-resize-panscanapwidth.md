@@ -1,19 +1,19 @@
 ---
-description: Gibt die Breite des Pan/Scan-Bereichs in Pixel an.
+description: Gibt die Breite des Schwenk-/Scanbereichs in Pixel an.
 ms.assetid: c0dcf305-ec81-45df-891c-8aaacd95f620
-title: MFPKEY_RESIZE_PANSCANAPWIDTH-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_RESIZE_PANSCANAPWIDTH-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 65040307901bf01fee6c095f32dd4e579b6caad3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f912541eb0ce5f0dab304c83bb90e7f7b0eef36f7d62685801ac5d11be01cf73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042080"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119603755"
 ---
-# <a name="mfpkey_resize_panscanapwidth-property"></a>Mfpkey \_ Resize \_ panscanapwidth-Eigenschaft
+# <a name="mfpkey_resize_panscanapwidth-property"></a>MFPKEY \_ RESIZE \_ PANSCANAPWIDTH-Eigenschaft
 
-Gibt die Breite des Pan/Scan-Bereichs in Pixel an.
+Gibt die Breite des Schwenk-/Scanbereichs in Pixel an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
@@ -33,9 +33,9 @@ VT \_ I4
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -43,7 +43,7 @@ VT \_ I4
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

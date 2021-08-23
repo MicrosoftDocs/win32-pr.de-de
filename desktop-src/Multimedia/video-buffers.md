@@ -1,30 +1,30 @@
 ---
-title: Video Puffer
-description: Video Puffer
+title: Videopuffer
+description: Videopuffer
 ms.assetid: 0dfe01ec-f997-4e5e-a73d-e6b712d0e19e
 keywords:
 - WM_CAP_GET_SEQUENCE_SETUP Meldung
-- capcapturegetsetup-Makro
+- capCaptureGetSetup-Makro
 - WM_CAP_SET_SEQUENCE_SETUP Meldung
-- capcapturesetsetup-Makro
+- capCaptureSetSetup-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 71e2f3e5b56f995e6a09792260ac2fd6e1ba5cd7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 46a6493d22a495a56084e89d2b067c1cf9a874752b44b81f636b5a184b895199
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712582"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119687690"
 ---
-# <a name="video-buffers"></a>Video Puffer
+# <a name="video-buffers"></a>Videopuffer
 
-Die mit der Video Erfassung verwendeten Puffer befinden sich im Arbeitsspeicher Heap. Die Anzahl von Puffern, die bei einem Aufzeichnungs Vorgang verwendet werden, kann variieren und hängt vom Wert des **wnumvideorequused** -Members der [**captuprojektmappenstruktur**](/windows/win32/api/vfw/ns-vfw-captureparms) und des verfügbaren System Speichers ab.
+Die mit der Videoaufnahme verwendeten Puffer befinden sich im Speicherheap. Die Anzahl von Puffern, die in einem Erfassungsvorgang verwendet werden, kann variieren und hängt vom Wert des **wNumVideoRequested-Elements** der [**CAPTUREPARMS-Struktur**](/windows/win32/api/vfw/ns-vfw-captureparms) und des verfügbaren Systemspeichers ab.
 
-Sie können den aktuellen Wert der angeforderten Video Puffer abrufen, indem Sie die " [**WM \_ Cap \_ get \_ Sequence \_**](wm-cap-get-sequence-setup.md) "-Setup Nachricht (oder das " [**capcapturegetsetup**](/windows/desktop/api/Vfw/nf-vfw-capcapturegetsetup) "-Makro) verwenden. Die aktuell angeforderte Anzahl von Video Puffern wird im **wnumvideorequtzig** -Member der **captuprojektstruktur** -Struktur gespeichert. Sie können die Platzierung und die Anzahl der Puffer anfordern, indem Sie dieses Element aktualisieren, und dann die aktualisierte **captuprojektmappenstruktur** [**mithilfe der**](/windows/desktop/api/Vfw/nf-vfw-capcapturesetsetup) Setup-Nachricht der [**WM-Cap-Set- \_ \_ \_ Sequenz \_**](wm-cap-set-sequence-setup.md) an das Aufzeichnungs Fenster senden.
+Sie können den aktuellen Wert der angeforderten Videopuffer abrufen, indem Sie die [**WM CAP GET SEQUENCE \_ \_ \_ \_ SETUP-Meldung**](wm-cap-get-sequence-setup.md) (oder das [**CapCaptureGetSetup-Makro)**](/windows/desktop/api/Vfw/nf-vfw-capcapturegetsetup) verwenden. Die aktuell angeforderte Anzahl von Videopuffern wird im **wNumVideoRequested-Member** der **CAPTUREPARMS-Struktur** gespeichert. Sie können die Platzierung und Die Anzahl von Puffern anfordern, indem Sie diesen Member aktualisieren und dann die aktualisierte **CAPTUREPARMS-Struktur** mithilfe der [**WM CAP SET SEQUENCE \_ \_ \_ \_ SETUP-Meldung**](wm-cap-set-sequence-setup.md) (oder des [**CapCaptureSetSetup-Makros)**](/windows/desktop/api/Vfw/nf-vfw-capcapturesetsetup) an das Erfassungsfenster senden.
 
- 
+ 
 
- 
+ 
 
 
 

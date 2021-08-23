@@ -1,54 +1,54 @@
 ---
-description: Die Stop Services-Aktion beendet Systemdienste. Durch diese Aktion wird die ServiceControl-Tabelle abgefragt.
+description: Die Aktion StopServices beendet Systemdienste. Diese Aktion fragt die ServiceControl-Tabelle ab.
 ms.assetid: 1ad01205-f8b6-400f-be1d-c00a5b71ccfd
-title: Stop Services-Aktion
+title: StopServices-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 31cb271b99c434a1ac54ab9744697b991e9e1fcc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2fee0082d1588c3a1486b51bd4f06869374e1f6babfa71d309d65512e1ff1b0b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347253"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119627380"
 ---
-# <a name="stopservices-action"></a>Stop Services-Aktion
+# <a name="stopservices-action"></a>StopServices-Aktion
 
-Die Stop Services-Aktion beendet Systemdienste. Durch diese Aktion wird die [ServiceControl-Tabelle](servicecontrol-table.md)abgefragt.
+Die Aktion StopServices beendet Systemdienste. Diese Aktion fragt die [ServiceControl-Tabelle ab.](servicecontrol-table.md)
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die Dienst Aktionen müssen in der folgenden Reihenfolge verwendet werden:
+Die Dienstaktionen müssen in der folgenden Reihenfolge verwendet werden:
 
--   Stop Services
--   [Delta Service Services](deleteservices-action.md)
+-   StopServices
+-   [DeleteServices](deleteservices-action.md)
 
 Eine der folgenden Aktionen:
 
 -   [InstallFiles](installfiles-action.md)
 -   [RemoveFiles](removefiles-action.md)
--   [Duplicatefiles](duplicatefiles-action.md)
--   ["Muvefiles"](movefiles-action.md)
--   [Patchdateien](patchfiles-action.md)
+-   [DuplicateFiles](duplicatefiles-action.md)
+-   [MoveFiles](movefiles-action.md)
+-   [PatchFiles](patchfiles-action.md)
 -   [RemoveDuplicateFiles](removeduplicatefiles-action.md)
--   [Installdienste](installservices-action.md)
--   [Startdienste](startservices-action.md)
+-   [InstallServices](installservices-action.md)
+-   [StartServices](startservices-action.md)
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
 
 
-| Feld | Beschreibung der Aktions Daten |
+| Feld | Beschreibung der Aktionsdaten |
 |-------|----------------------------|
-| \[1\] | Dienst Anzeige Name.      |
+| \[1\] | Anzeigename des Diensts.      |
 | \[2\] | Dienstname              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Aktion erfordert, dass der Benutzer ein Administrator ist oder über erweiterte Berechtigungen mit der Berechtigung zum Steuern von Diensten oder der Anwendung zu einer verwalteten Installation verfügt.
+Diese Aktion erfordert, dass der Benutzer Administrator ist oder über erhöhte Berechtigungen mit der Berechtigung zum Steuern von Diensten verfügt oder dass die Anwendung Teil einer verwalteten Installation ist.
 
  
 

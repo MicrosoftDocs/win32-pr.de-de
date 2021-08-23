@@ -53,7 +53,7 @@ Die **MicrosoftDNS \_ MGType-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                      |
+| Methode                             | Beschreibung                                                                                                                                                                                                                                                                                                                                                      |
 |:-----------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **CreateInstanceFromPropertyData** | Diese Methode instanziiert einen MG-Typ von RR basierend auf den Daten in den Eingabeparametern der Methode: DNS-Servername des Datensatzes, Containername, Besitzername der E-Mail-Gruppe, Klasse (Standard = IN), Wert für Live-Datenübertragung und Postfachname. Sie gibt einen Verweis auf das neue Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert, statisch<br/> |
 | **Änderung**                         | Diese Methode aktualisiert die TTL und das MG-Postfach auf die Werte, die als Eingabeparameter dieser Methode angegeben sind. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die -Methode gibt einen Verweis auf das geänderte Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert<br/>                |
@@ -94,7 +94,7 @@ FQDN, der ein Postfach an gibt, das Mitglied der E-Mail-Gruppe ist, die durch de
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

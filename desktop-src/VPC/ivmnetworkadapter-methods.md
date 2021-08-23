@@ -1,28 +1,28 @@
 ---
-title: Ivmnetworkadapter-Methoden
-description: Die ivmnetworkadapter-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: IVMNetworkAdapter-Methoden
+description: Die IVMNetworkAdapter-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 666E52A5-8312-41C2-9087-C324E2C93F37
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0fefaf3a9e973ac91a1aa2e936f9eb6e4779281e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ef72f2af2ae89f89ba64fdf15f39e6b38772ec890a46e14d264c569b147f3aea
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390885"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119510550"
 ---
-# <a name="ivmnetworkadapter-methods"></a>Ivmnetworkadapter-Methoden
+# <a name="ivmnetworkadapter-methods"></a>IVMNetworkAdapter-Methoden
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Die [**ivmnetworkadapter**](ivmnetworkadapter.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IVMNetworkAdapter-Schnittstelle**](ivmnetworkadapter.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [**\_ID-Methode**](ivmnetworkadapter--id.md)
--   [**Attachdevirtualnetwork-Methode**](ivmnetworkadapter-attachtovirtualnetwork.md)
--   [**Detachfromvirtualnetwork-Methode**](ivmnetworkadapter-detachfromvirtualnetwork.md)
+-   [**AttachToVirtualNetwork-Methode**](ivmnetworkadapter-attachtovirtualnetwork.md)
+-   [**DetachFromVirtualNetwork-Methode**](ivmnetworkadapter-detachfromvirtualnetwork.md)
 
- 
+ 
 
- 
+ 

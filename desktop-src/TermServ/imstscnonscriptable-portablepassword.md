@@ -1,24 +1,24 @@
 ---
-title: Imstscnonscriptable-portablepassword-Eigenschaft
-description: Diese Eigenschaft ist nicht mehr zur Verwendung verfügbar. | Imstscnonscriptable-portablepassword-Eigenschaft
+title: IMsTscNonScriptable PortablePassword-Eigenschaft
+description: Diese Eigenschaft ist nicht mehr für die Verwendung verfügbar. | IMsTscNonScriptable PortablePassword-Eigenschaft
 ms.assetid: 8d831ed3-1f4a-41a9-b283-507c5d9eea22
 ms.tgt_platform: multiple
 keywords:
-- Portablepassword-Eigenschaft Remotedesktopdienste
-- Portablepassword-Eigenschaft Remotedesktopdienste, imstscnonscriptable-Schnittstelle
-- Imstscnonscriptable-Schnittstelle Remotedesktopdienste, portablepassword-Eigenschaft
-- Portablepassword-Eigenschaft Remotedesktopdienste, mstscax-Objekt
-- Mstscax-Objekt Remotedesktopdienste, portablepassword-Eigenschaft
-- Portablepassword-Eigenschaft Remotedesktopdienste, imsrdpclientnonscriptable-Schnittstelle
-- Imsrdpclientnonscriptable-Schnittstelle Remotedesktopdienste, portablepassword-Eigenschaft
-- Portablepassword-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable2-Schnittstelle
-- IMsRdpClientNonScriptable2 Interface Remotedesktopdienste, portablepassword (Eigenschaft)
-- Portablepassword-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3 Interface Remotedesktopdienste, portablepassword (Eigenschaft)
-- Portablepassword-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, portablepassword (Eigenschaft)
-- Portablepassword-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, portablepassword (Eigenschaft)
+- PortablePassword-Eigenschaft Remotedesktopdienste
+- PortablePassword-Eigenschaft Remotedesktopdienste , IMsTscNonScriptable-Schnittstelle
+- IMsTscNonScriptable-Schnittstelle Remotedesktopdienste , PortablePassword-Eigenschaft
+- PortablePassword-Eigenschaft Remotedesktopdienste , MsTscAx-Objekt
+- MsTscAx-Objekt Remotedesktopdienste , PortablePassword-Eigenschaft
+- PortablePassword-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable-Schnittstelle
+- IMsRdpClientNonScriptable-Schnittstelle Remotedesktopdienste , PortablePassword-Eigenschaft
+- PortablePassword-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable2-Schnittstelle
+- IMsRdpClientNonScriptable2-Schnittstelle Remotedesktopdienste , PortablePassword-Eigenschaft
+- PortablePassword-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , PortablePassword-Eigenschaft
+- PortablePassword-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , PortablePassword-Eigenschaft
+- PortablePassword-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , PortablePassword-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -47,16 +47,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a5259e83087287395e6114bb8ffe3eb7e859ab52
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: fad57f972d3f33f199a3908f1c088f889fa7a56933878cd616feadd418f9424f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106355137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119512040"
 ---
-# <a name="imstscnonscriptableportablepassword-property"></a>Imstscnonscriptable::P ortablepassword-Eigenschaft
+# <a name="imstscnonscriptableportablepassword-property"></a>IMsTscNonScriptable::P ortablePassword-Eigenschaft
 
-Diese Eigenschaft ist nicht mehr zur Verwendung verfügbar.
+Diese Eigenschaft ist nicht mehr für die Verwendung verfügbar.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -77,11 +77,11 @@ HRESULT get_PortablePassword(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der neue Kenn Wort Teil im portablen codierten Format.
+Der neue Kennwortteil im portierbaren codierten Format.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt " **E \_ notimpl**" zurück.
+Gibt **E \_ NOTIMPL zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,7 +95,7 @@ Gibt " **E \_ notimpl**" zurück.
 | Ende des Supports (Server)<br/>    | Nicht unterstützt<br/>                                                              |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imstscnonscriptable ist als c1e6743a-41c1-4a74-832a-0dd06c1c7a0e definiert.<br/> |
+| IID<br/>                      | \_IID-IMsTscNonScriptable ist als c1e6743a-41c1-4a74-832a-0dd06c1c7a0e definiert.<br/> |
 
 
 
@@ -103,7 +103,7 @@ Gibt " **E \_ notimpl**" zurück.
 
 <dl> <dt>
 
-[**Imsrdpclientnonscriptable**](imsrdpclientnonscriptable-interface.md)
+[**IMsRdpClientNonScriptable**](imsrdpclientnonscriptable-interface.md)
 </dt> <dt>
 
 [**IMsRdpClientNonScriptable2**](imsrdpclientnonscriptable2.md)
@@ -118,7 +118,7 @@ Gibt " **E \_ notimpl**" zurück.
 [**IMsRdpClientNonScriptable5**](imsrdpclientnonscriptable5.md)
 </dt> <dt>
 
-[**Imstscnonscriptable**](imstscnonscriptable-interface.md)
+[**IMsTscNonScriptable**](imstscnonscriptable-interface.md)
 </dt> </dl>
 
  

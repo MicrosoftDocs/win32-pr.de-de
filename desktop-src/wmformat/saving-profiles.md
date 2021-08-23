@@ -3,30 +3,30 @@ title: Speichern von Profilen
 description: Speichern von Profilen
 ms.assetid: 07c1ef16-6696-4314-aed8-58cda464b0db
 keywords:
-- Windows Media-Format-SDK, Speichern von Profilen
-- Windows Media-Format-SDK, Profil Speicherung
-- Profile, speichern
-- Profile, iwmprofilemanager-Schnittstelle
-- Iwmprofilemanager, Speichern von Profilen
+- Windows Medienformat-SDK, Speichern von Profilen
+- Windows Medienformat-SDK, Speichern von Profilen
+- Profile,Speichern
+- profiles,IWMProfileManager-Schnittstelle
+- IWMProfileManager, Speichern von Profilen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 276b002f0b7f98de2e84f2c27a4f52bde25726bb
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 6befb09d7e0d628462bdd22e1e905c351be58dc077959089883ce3707dc493d3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104389847"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119547040"
 ---
 # <a name="saving-profiles"></a>Speichern von Profilen
 
-Sie können die [**iwmprofilemanager:: saveprofile**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofilemanager-saveprofile) -Methode verwenden, um den Inhalt eines Profil Objekts in einer mit XML formatierten Zeichenfolge zu speichern. Es werden keine Methoden bereitgestellt, um die Profil Zeichenfolge in einer Datei zu speichern. Sie können die Datei-e/a-Routinen Ihrer Wahl verwenden.
+Sie können die [**IWMProfileManager::SaveProfile-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofilemanager-saveprofile) verwenden, um den Inhalt eines Profilobjekts in einer mit XML formatierten Zeichenfolge zu speichern. Es werden keine Methoden bereitgestellt, um die Profilzeichenfolge in einer Datei zu speichern. Sie können die Datei-E/A-Routinen Ihrer Wahl verwenden.
 
 > [!Note]  
-> Sie sollten die in eine Datei geschriebene Profil Zeichenfolge niemals ändern. Alle Änderungen, die Sie an einem Profil vornehmen möchten, sollten Programm gesteuert erfolgen. Das Ändern von Werten in einer PRX-Datei kann zu unvorhersehbaren Ergebnissen führen.
+> Sie sollten die in eine Datei geschriebene Profilzeichenfolge nie ändern. Alle Änderungen, die Sie an einem Profil vornehmen möchten, sollten programmgesteuert vorgenommen werden. Das Ändern von Werten in einer PRX-Datei kann zu unvorhersehbaren Ergebnissen führen.
 
- 
+ 
 
-Das folgende Beispiel ist eine Funktion, mit der ein Profil in einer Datei unter Verwendung der standardmäßigen Datei-e/a im C-Stil gespeichert wird. Um eine Anwendung zu kompilieren, die dieses Beispiel verwendet, müssen Sie "stdio. h" in Ihr Projekt einschließen.
+Das folgende Beispiel ist eine Funktion zum Speichern eines Profils in einer Datei mithilfe von Datei-E/A im C-Standardformat. Um eine Anwendung zu kompilieren, die dieses Beispiel verwendet, müssen Sie stdio.h in Das Projekt verwenden.
 
 
 ```C++
@@ -94,9 +94,9 @@ HRESULT ProfileToFile(IWMProfileManager* pProfileMgr,
 [**Arbeiten mit Profilen**](working-with-profiles.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

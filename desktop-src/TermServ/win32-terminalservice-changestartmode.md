@@ -1,12 +1,12 @@
 ---
-title: ChangeStartMode-Methode der Win32_Service-Klasse (Remotedesktopdienste)
-description: Ändert den Start Modus eines Win32 \_ Terminalservice.
+title: ChangeStartMode-Methode der Win32_Service -Klasse (Remotedesktopdienste)
+description: Ändert den Startmodus eines \_ Win32-Terminaldiensts.
 ms.assetid: 4F4B8CFC-B38C-47C6-A2BA-D498EC2B7F55
 ms.tgt_platform: multiple
 keywords:
-- ChangeStartMode-Methode Remotedesktopdienste
-- ChangeStartMode-Methode Remotedesktopdienste, Win32_Service-Klasse
-- Win32_Service-Klasse Remotedesktopdienste, ChangeStartMode-Methode
+- ChangeStartMode-Remotedesktopdienste
+- ChangeStartMode-Methode Remotedesktopdienste , Win32_Service-Klasse
+- Win32_Service klasse Remotedesktopdienste , ChangeStartMode-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a46c6b72fbb070dac32b2b6990a217068c77da9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cf7189d687c8cdc58122da4e20750c6158396587cf07b08f6fc53cecee625ebd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119514390"
 ---
-# <a name="changestartmode-method-of-the-win32_service-class-remote-desktop-services"></a>ChangeStartMode-Methode der Win32_Service-Klasse (Remotedesktopdienste)
+# <a name="changestartmode-method-of-the-win32_service-class-remote-desktop-services"></a>ChangeStartMode-Methode der Win32_Service -Klasse (Remotedesktopdienste)
 
-Die [WMI-Klassen](/windows/desktop/WmiSdk/retrieving-a-class) Methode **ChangeStartMode** ändert den Start Modus eines [**Win32 \_ Terminalservice**](win32-terminalservice.md).
+Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **ChangeStartMode** ändert den Startmodus eines [**Win32 \_ TerminalService.**](win32-terminalservice.md)
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,32 +45,32 @@ uint32 ChangeStartMode(
 
 <dl> <dt>
 
-*StartMode* \[ in\]
+*StartMode* \[ In\]
 </dt> <dd>
 
-Der Start Modus des Windows-Basis Dienstanbieter.
+Startmodus des Windows Basisdiensts.
 
 <dt>
 
 <span id="Boot"></span><span id="boot"></span><span id="BOOT"></span>
 
-<span id="Boot"></span><span id="boot"></span><span id="BOOT"></span>**Starten**
+<span id="Boot"></span><span id="boot"></span><span id="BOOT"></span>**Booten**
 
 
 </dt> <dd>
 
-Der Gerätetreiber wurde vom Betriebssystem Lader gestartet. Dieses Wert ist nur für Treiberdienste gültig.
+Vom Betriebssystemlader gestarteter Gerätetreiber. Dieses Wert ist nur für Treiberdienste gültig.
 
 </dd> <dt>
 
 <span id="System"></span><span id="system"></span><span id="SYSTEM"></span>
 
-<span id="System"></span><span id="system"></span><span id="SYSTEM"></span>**Anlage**
+<span id="System"></span><span id="system"></span><span id="SYSTEM"></span>**System**
 
 
 </dt> <dd>
 
-Der Gerätetreiber wurde durch den Initialisierungs Prozess des Betriebssystems gestartet. Dieses Wert ist nur für Treiberdienste gültig.
+Der Gerätetreiber wurde durch den Initialisierungsprozess des Betriebssystems gestartet. Dieses Wert ist nur für Treiberdienste gültig.
 
 </dd> <dt>
 
@@ -81,7 +81,7 @@ Der Gerätetreiber wurde durch den Initialisierungs Prozess des Betriebssystems 
 
 </dt> <dd>
 
-Der Dienst, der vom Dienststeuerungs-Manager beim Systemstart automatisch gestartet wird.
+Der Dienst wird automatisch vom Dienststeuerungs-Manager während des Systemstarts gestartet.
 
 </dd> <dt>
 
@@ -92,7 +92,7 @@ Der Dienst, der vom Dienststeuerungs-Manager beim Systemstart automatisch gestar
 
 </dt> <dd>
 
-Der Dienst, der vom Dienststeuerungs-Manager gestartet werden soll, wenn ein Prozess die [**StartService**](win32-terminalservice-startservice.md) -Methode aufruft.
+Der Dienst, der vom Dienststeuerungs-Manager gestartet werden soll, wenn ein Prozess die [**StartService-Methode**](win32-terminalservice-startservice.md) aufruft.
 
 </dd> <dt>
 
@@ -109,7 +109,7 @@ Dienst, der nicht mehr gestartet werden kann.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um auf einen Fehler hindeuten zu können. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -130,7 +130,7 @@ Die Anforderung wird nicht unterstützt.
 **2**
 </dt> <dd>
 
-Der Benutzer verfügte nicht über die erforderlichen Zugriffsrechte.
+Der Benutzer hatte nicht den erforderlichen Zugriff.
 
 </dd> <dt>
 
@@ -151,7 +151,7 @@ Der angeforderte Steuerungscode ist nicht gültig, oder es ist für den Dienst n
 **5**
 </dt> <dd>
 
-Der angeforderte Steuerungs Code kann nicht an den Dienst gesendet werden, weil der Status des Diensts ([**Win32- \_ baseservice**](/windows/desktop/CIMWin32Prov/win32-baseservice).**State** -Eigenschaft) ist gleich 0, 1 oder 2.
+Der angeforderte Steuerungscode kann nicht an den Dienst gesendet werden, da der Zustand des Diensts ([**Win32 \_ BaseService ) ist.**](/windows/desktop/CIMWin32Prov/win32-baseservice)**State-Eigenschaft)** ist gleich 0, 1 oder 2.
 
 </dd> <dt>
 
@@ -172,14 +172,14 @@ Der Dienst hat auf die Startanforderung nicht rechtzeitig reagiert.
 **8**
 </dt> <dd>
 
-Unbekannter Fehler beim Starten des Dienstanbieter.
+Unbekannter Fehler beim Starten des Diensts.
 
 </dd> <dt>
 
 **9**
 </dt> <dd>
 
-Der Verzeichnispfad zur ausführbaren Dienst Datei wurde nicht gefunden.
+Der Verzeichnispfad zur ausführbaren Dienstdatei wurde nicht gefunden.
 
 </dd> <dt>
 
@@ -200,7 +200,7 @@ Die Datenbank zum Hinzufügen eines neuen Diensts ist gesperrt.
 **12**
 </dt> <dd>
 
-Eine Abhängigkeit, von der dieser Dienst abhängt, wurde aus dem System entfernt.
+Eine Abhängigkeit, von der dieser Dienst abhängig ist, wurde aus dem System entfernt.
 
 </dd> <dt>
 
@@ -235,42 +235,42 @@ Dieser Dienst wird aus dem System entfernt.
 **17**
 </dt> <dd>
 
-Der Dienst hat keinen Ausführungs Thread.
+Der Dienst verfügt über keinen Ausführungsthread.
 
 </dd> <dt>
 
-**Jahren**
+**18**
 </dt> <dd>
 
-Der Dienst weist zirkuläre Abhängigkeiten auf, wenn er gestartet wird.
+Der Dienst verfügt beim Start über zirkuläre Abhängigkeiten.
 
 </dd> <dt>
 
 **19**
 </dt> <dd>
 
-Ein Dienst wird unter dem gleichen Namen ausgeführt.
+Ein Dienst wird unter demselben Namen ausgeführt.
 
 </dd> <dt>
 
 **20**
 </dt> <dd>
 
-Der Dienst Name enthält ungültige Zeichen.
+Der Dienstname enthält ungültige Zeichen.
 
 </dd> <dt>
 
 **21**
 </dt> <dd>
 
-An den Dienst wurden ungültige Parameter übermittelt.
+Ungültige Parameter wurden an den Dienst übergeben.
 
 </dd> <dt>
 
 **22**
 </dt> <dd>
 
-Das Konto, unter dem dieser Dienst ausgeführt wird, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Dienstanbieter.
+Das Konto, unter dem dieser Dienst ausgeführt wird, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Diensts.
 
 </dd> <dt>
 
@@ -290,7 +290,7 @@ Der Dienst ist im System derzeitig angehalten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden wird der Start Modus eines Dienstanbieter geändert, wenn der Start [Modus eines Dienst](https://Gallery.TechNet.Microsoft.Com/6d0f06ed-f840-4228-ad2d-e16ebe6a3aed) -PowerShell-Beispiels aus der TechNet Gallery abgerufen wird.
+Das folgende [Change StartMode-Beispiel eines](https://Gallery.TechNet.Microsoft.Com/6d0f06ed-f840-4228-ad2d-e16ebe6a3aed) Dienst-PowerShell-Beispiels, das aus dem TechNet-Katalog pullt, ändert den Startmodus eines Diensts.
 
 
 ```PowerShell
@@ -313,8 +313,8 @@ ELSE
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
@@ -323,16 +323,16 @@ ELSE
 
 <dl> <dt>
 
-[**Win32- \_ Dienst**](/windows/desktop/CIMWin32Prov/win32-service)
+[**Win32-Dienst \_**](/windows/desktop/CIMWin32Prov/win32-service)
 </dt> <dt>
 
 [Betriebssystemklassen](/windows/desktop/CIMWin32Prov/operating-system-classes)
 </dt> <dt>
 
-[**Win32 \_ Terminalservice**](win32-terminalservice.md)
+[**Win32 \_ TerminalService**](win32-terminalservice.md)
 </dt> <dt>
 
-[WMI-Tasks: Dienste](/windows/desktop/WmiSdk/wmi-tasks--services)
+[WMI-Aufgaben: Dienste](/windows/desktop/WmiSdk/wmi-tasks--services)
 </dt> </dl>
 
  

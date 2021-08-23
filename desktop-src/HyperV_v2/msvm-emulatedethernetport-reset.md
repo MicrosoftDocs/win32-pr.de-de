@@ -1,7 +1,7 @@
 ---
 description: Setzt das virtuelle Gerät zurück.
 ms.assetid: e4eb3952-a58e-4acd-85df-205d6ed23133
-title: Reset-Methode der Msvm_EmulatedEthernetPort-Klasse
+title: Reset-Methode der Msvm_EmulatedEthernetPort Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: a28eaffe88b5a6be401a3cbe8bef3e60b429fb14
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1860738c08ad5711a610e76b17d2e19e7d062d67501d17ecfbc74de8e0f1117e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866404"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119525040"
 ---
-# <a name="reset-method-of-the-msvm_emulatedethernetport-class"></a>Reset-Methode der MSVM- \_ emulatedethernetport-Klasse
+# <a name="reset-method-of-the-msvm_emulatedethernetport-class"></a>Reset-Methode der Msvm \_ EmulatedEthernetPort-Klasse
 
 Setzt das virtuelle Gerät zurück.
 
@@ -58,7 +58,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -67,7 +67,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 <dl> <dt>
 
-[**MSVM \_ emuatedethernetport**](msvm-emulatedethernetport.md)
+[**Msvm \_ EmulatedEthernetPort**](msvm-emulatedethernetport.md)
 </dt> </dl>
 
  

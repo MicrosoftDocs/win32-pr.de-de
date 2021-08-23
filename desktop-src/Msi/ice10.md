@@ -1,51 +1,51 @@
 ---
-description: ICE10 überprüft, ob der Ankündigungs Status von untergeordneten Funktionen mit dem des übergeordneten Features übereinstimmt.
+description: ICE10 überprüft, ob der Ankündigungsstatus untergeordneter Features mit dem des übergeordneten Features entspricht.
 ms.assetid: b0e0d837-245e-4c38-a7c4-06dda0eea25c
 title: ICE10
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ac8f1304f4444a0f087d747328cdea4b3d714ab0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 80071bdb7f219904c03d7c6b5b947a1bd818af2c3ebc270b0bfb17f2cf185280
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357869"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119581210"
 ---
 # <a name="ice10"></a>ICE10
 
-ICE10 überprüft, ob der Ankündigungs Status von untergeordneten Funktionen mit dem des übergeordneten Features übereinstimmt.
+ICE10 überprüft, ob der Ankündigungsstatus untergeordneter Features mit dem des übergeordneten Features entspricht.
 
-Eine untergeordnete Funktion lässt eine Ankündigung möglicherweise nicht zu, während ihre übergeordnete Funktion eine Ankündigung zulässt. Die folgende Kombination aus über-und untergeordneten Attributen ist daher ungültig.
+Eine untergeordnete Funktion lässt möglicherweise keine Ankündigung zu, während das übergeordnete Feature Ankündigungen zulässt. Die folgende Kombination aus übergeordneten und untergeordneten Attributen ist daher ungültig.
 
 ``` syntax
 parent = msidbFeatureAttributesFavorAdvertise 
 child = msidbFeatureAttributesDisallowAdvertise
 ```
 
-Diese Kombination ist ungültig, da Sie das übergeordnete Element ausschalten würde, wenn das übergeordnete Element angekündigt werden soll. Der umgekehrte Wert ist jedoch zulässig. Ein untergeordnetes Element kann gekennzeichnet werden, um Ankündigungen zu bevorzugen, während das übergeordnete Element als nicht zulassen gekennzeichnet ist.
+Diese Kombination ist ungültig, da sie das übergeordnete Element immer dann deaktivieren würde, wenn das übergeordnete Element angekündigt werden sollte. Das Gegenteil ist jedoch zulässig. Ein untergeordnetes Element kann markiert werden, um die Ankündigung zu bevorzugen, während das übergeordnete Element so markiert ist, dass keine Ankündigung mehr möglich ist.
 
-Die benutzerdefinierte Aktion ICE10 bestimmt den Status von übergeordneten und untergeordneten Funktionen [in der Spalte](feature-table.md) Attribute der Featuretabelle. Beachten Sie, dass es zulässig ist, den Status einer Funktion auf 0 festzulegen und das übergeordnete oder untergeordnete Element festzulegen, um Ankündigungen zu bevorzugen oder zu unterbinden.
+Die benutzerdefinierte ICE10-Aktion bestimmt den Status von übergeordneten und untergeordneten Features aus der Spalte Attribute der [Featuretabelle.](feature-table.md) Beachten Sie, dass es gültig ist, den Zustand eines Features auf 0 und dessen übergeordnetes oder untergeordnetes Element so zu setzen, dass Ankündigungen bevorzugt oder nicht zulässig sind.
 
 ## <a name="result"></a>Ergebnis
 
-ICE10 gibt einen Fehler aus, wenn die Spalte Attribute der [Merkmals](feature-table.md) Tabelle eine fehlende Übereinstimmung im Ankündigungs Status enthält.
+ICE10 gibt einen Fehler aus, wenn die Spalte Attribute der [Featuretabelle](feature-table.md) einen Konflikt im Anknungszustand enthält.
 
 ## <a name="example"></a>Beispiel
 
-ICE10 gibt die folgende Fehlermeldung für das gezeigte Beispiel aus.
+ICE10 veröffentlicht die folgende Fehlermeldung für das gezeigte Beispiel.
 
 ``` syntax
 Conflicting states, one favors, one disallows. Child: Word differs in advertise state 
 from Parent: Office.
 ```
 
-Beachten Sie in diesem Beispiel, dass Microsoft Excel und Microsoft Word untergeordnete Funktionen von Microsoft Office sind.
+Beachten Sie für dieses Beispiel, dass Microsoft Excel und Microsoft Word untergeordnete Features von Microsoft Office.
 
-[Funktions](feature-table.md) Tabelle (partiell)
+[Featuretabelle](feature-table.md) (partiell)
 
 
 
-| Funktion | Über \_ geordnetes Element | Attribute |
+| Feature | Übergeordnetes \_ Feature | Attribute |
 |---------|-----------------|------------|
 | Office  | Null            | 4          |
 | Excel   | Office          | 4          |
@@ -55,7 +55,7 @@ Beachten Sie in diesem Beispiel, dass Microsoft Excel und Microsoft Word unterge
 
  
 
-Im Beispiel wird Word so festgelegt, dass keine Ankündigung zugelassen wird. Dies steht in Konflikt mit dem Status "Ankündigung zulassen" des übergeordneten Office.
+In diesem Beispiel wird Word so festgelegt, dass Keine Ankündigung zulässig ist, die mit dem Zustand der zulässigen Ankündigung des übergeordneten Elements in Konflikt steht, Office.
 
 In einigen Fällen gibt ICE10 den folgenden Fehler aus:
 
@@ -65,13 +65,13 @@ that for the child feature 'Child', the feature 'Parent' is not listed in the
 Feature table.
 ```
 
-Dies bezieht sich auf einen ungültigen Fremdschlüssel Verweis. Die Korrektur besteht darin, dass ' Child ' [auf die richtige](feature-table.md) übergeordnete Funktion verweist, oder Sie fügt der Featuretabelle einen Eintrag für das übergeordnete Feature ' Parent ' hinzu.
+Dies bezieht sich auf einen ungültigen Fremdschlüsselverweis. Das Problem wird behoben, indem "Child" auf das richtige übergeordnete Feature zeigt oder der Featuretabelle einen Eintrag für das übergeordnete Feature ["Parent"](feature-table.md) hinzufüge.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

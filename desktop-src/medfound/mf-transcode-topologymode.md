@@ -1,52 +1,52 @@
 ---
-description: Gibt für eine transcodetopologie an, ob das topologielader hardwarebasierte Transformationen lädt.
+description: Gibt für eine Transcodierungstopologie an, ob das Topologielader hardwarebasierte Transformationen geladen.
 ms.assetid: 33db8621-114a-4531-908f-f30034441973
-title: MF_TRANSCODE_TOPOLOGYMODE-Attribut (mspdl. h)
+title: MF_TRANSCODE_TOPOLOGYMODE -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f700397914faf7fee35e7f82027d8f8771e8b099
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 36e8715c135e074956af2280b8474172e94e69e1cca20cd01b020fc6dc79076c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863171"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119663840"
 ---
-# <a name="mf_transcode_topologymode-attribute"></a>MF- \_ transcode- \_ topologymode-Attribut
+# <a name="mf_transcode_topologymode-attribute"></a>MF \_ TRANSCODE \_ TOPOLOGYMODE-Attribut
 
-Gibt für eine transcodetopologie an, ob das topologielader hardwarebasierte Transformationen lädt.
+Gibt für eine Transcodierungstopologie an, ob das Topologielader hardwarebasierte Transformationen geladen.
 
-Der topologiemodus gibt an, ob Hardware Transformationen (z. b. Hardware Codecs) in der transcodieren-Topologie verwendet werden können. Die Anwendung kann dieses Attribut in einem transcodieren-Profil speichern, indem [**imftranscodeprofile:: setcontainerattribute**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setcontainerattributes)aufgerufen wird.
+Der Topologiemodus gibt an, ob Hardwaretransformationen (z. B. Hardwarecodecs) in der Transcodierungstopologie verwendet werden können. Die Anwendung kann dieses Attribut in einem Transcodierungsprofil speichern, indem [**SIE DEN WERTTRANSCODEProfile::SetContainerAttributes aufruft.**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setcontainerattributes)
 
 ## <a name="data-type"></a>Datentyp
 
-**[**MF \_ Transcode- \_ topologymode- \_ Flags**](/windows/desktop/api/mfidl/ne-mfidl-mf_transcode_topologymode_flags)** , die als **UInt32** gespeichert sind
+**[**MF \_ TRANSCODE \_ \_ TOPOLOGYMODE-FLAGS, die**](/windows/desktop/api/mfidl/ne-mfidl-mf_transcode_topologymode_flags)** als **UINT32 gespeichert sind**
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist optional. Er muss einen der folgenden Werte aufweisen.
+Dieses Attribut ist optional. Sie muss einen der folgenden Werte haben.
 
 
 
-| Wert                                              | BESCHREIBUNG                                                                                                                                                                                                                                                                       |
+| Wert                                              | Beschreibung                                                                                                                                                                                                                                                                       |
 |----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **MF- \_ transcode- \_ topologymode- \_ Hardware \_ zulässig** | Das topologielader lädt hardwarebasierte MFTs (z. b. Hardware Decoder), wenn diese verfügbar sind.<br/> Das topologielader greift automatisch auf Software Decodierung zurück, wenn kein Hardware Decoder gefunden wird oder wenn ein Hardware Decoder aus irgendeinem Grund keine Verbindung herstellen kann.<br/> |
-| **nur für die MF- \_ transcode- \_ topologymode- \_ Software \_**    | Das topologielader lädt nur Software-MFTs, einschließlich Software Decoder.                                                                                                                                                                                                    |
+| **HARDWARE FÜR \_ MF-TRANSCODIERUNGSTOPOLOGIEMODUS \_ \_ \_ ZULÄSSIG** | Das Topologielader geladen hardwarebasierte MFTs, z. B. Hardwaredecoder, falls verfügbar.<br/> Das Topologielader verwendet automatisch die Softwaredecodierung, wenn kein Hardwaredecoder gefunden wird oder ein Hardwaredecoder aus irgendeinem Grund keine Verbindung herstellen kann.<br/> |
+| **NUR SOFTWARE FÜR \_ \_ MF-TRANSCODIERUNG DES \_ \_ TOPOLOGIEMODUS**    | Das Topologielader geladen nur Software-MFTs, einschließlich Softwaredecodern.                                                                                                                                                                                                    |
 
 
 
  
 
-Der Standardwert ist **nur für die MF- \_ transcode- \_ topologymode- \_ Software \_**.
+Der Standardwert ist **MF \_ TRANSCODE \_ TOPOLOGYMODE \_ SOFTWARE \_ ONLY**.
 
-Wenn das topologielader eine Hardware-MFT in die Topologie einfügt, wird das Attribut Attribut der [MFT- \_ Enum- \_ Hardware- \_ \_ URL](mft-enum-hardware-url-attribute.md) für den topologieknoten festgelegt. Um zu überprüfen, ob eine Hardware-MFT vorhanden ist, müssen Sie die Knoten in der aufgelösten Topologie auflisten und überprüfen, ob dieses Attribut vorhanden ist.
+Wenn das Topologielader einen Hardware-MFT in die Topologie einträgt, wird das [Attribut MFT \_ ENUM HARDWARE URL Attribute (MFT-ENUM-HARDWARE-URL-Attribut) \_ \_ \_ ](mft-enum-hardware-url-attribute.md) auf dem Topologieknoten festlegen. Um zu überprüfen, ob ein Hardware-MFT vorhanden ist, aufzählen Sie die Knoten in der aufgelösten Topologie, und überprüfen Sie, ob dieses Attribut vorhanden ist.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,9 +54,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -64,16 +64,16 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Transcode-API](transcode-api.md)
+[Transcodierungs-API](transcode-api.md)
 </dt> <dt>
 
-[**IMF transcodeprofile:: getcontainerattribute**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-getcontainerattributes)
+[**CODIERUNGTranscodeProfile::GetContainerAttributes**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-getcontainerattributes)
 </dt> <dt>
 
-[**IMF transcodeprofile:: setcontainerattribute**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setcontainerattributes)
+[**CODIERUNGTranscodeProfile::SetContainerAttributes**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setcontainerattributes)
 </dt> </dl>
 
  

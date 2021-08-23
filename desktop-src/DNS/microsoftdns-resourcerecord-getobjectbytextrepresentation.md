@@ -1,11 +1,11 @@
 ---
-title: Getobjectbytextrepresentation-Methode der MicrosoftDNS_ResourceRecord-Klasse
-description: Die getobjectbytextrepresentation-Methode ruft eine vorhandene Instanz der MicrosoftDNS \_ resourcerecord-Klasse ab.
+title: GetObjectByTextRepresentation-Methode der MicrosoftDNS_ResourceRecord Klasse
+description: Die GetObjectByTextRepresentation-Methode ruft eine vorhandene Instanz der MicrosoftDNS \_ ResourceRecord-Klasse ab.
 ms.assetid: d25e10de-81fa-4220-b2b8-d9a65298b629
 keywords:
-- Getobjectbytextrepresentation-Methode (DNS)
-- Getobjectbytextrepresentation-Methode (DNS), MicrosoftDNS_ResourceRecord-Klasse
-- MicrosoftDNS_ResourceRecord-Klasse DNS, getobjectbytextrepresentation-Methode
+- GetObjectByTextRepresentation-Methode DNS
+- GetObjectByTextRepresentation-Methode DNS , MicrosoftDNS_ResourceRecord-Klasse
+- MicrosoftDNS_ResourceRecord DNS-Klasse, GetObjectByTextRepresentation-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a2aea2588a70ff4bdab89eae58b65715152d6c7c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 08e3b824ccabe86e842d4ef6f61799b33110b5d28a58658a6d4cbedc824c134b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477277"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119692420"
 ---
-# <a name="getobjectbytextrepresentation-method-of-the-microsoftdns_resourcerecord-class"></a>Getobjectbytextrepresentation-Methode der MicrosoftDNS \_ resourcerecord-Klasse
+# <a name="getobjectbytextrepresentation-method-of-the-microsoftdns_resourcerecord-class"></a>GetObjectByTextRepresentation-Methode der MicrosoftDNS \_ ResourceRecord-Klasse
 
-Die **getobjectbytextrepresentation** -Methode ruft eine vorhandene Instanz der [**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md) -Klasse ab.
+Die **GetObjectByTextRepresentation-Methode** ruft eine vorhandene Instanz der [**MicrosoftDNS \_ ResourceRecord-Klasse**](microsoftdns-resourcerecord.md) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,31 +45,31 @@ void GetObjectByTextRepresentation(
 
 <dl> <dt>
 
-*Dnsservername* \[ in\]
+*DnsServerName* \[ In\]
 </dt> <dd>
 
-Der Name des DNS-Servers, von dem die RR-Datei abgerufen werden soll.
+Name des DNS-Servers, von dem die RR abgerufen werden soll.
 
 </dd> <dt>
 
-*Containername* \[ in\]
+*ContainerName* \[ In\]
 </dt> <dd>
 
-Der Name des Containers, von dem die RR abgerufen werden soll.
+Name des Containers, aus dem die RR erhalten werden soll.
 
 </dd> <dt>
 
-*Textrepresentation* \[ in\]
+*TextRepresentation* \[ In\]
 </dt> <dd>
 
-Text Darstellung des zu abzurufenden RR-Werts.
+Textdarstellung der abzurufenden RR.
 
 </dd> <dt>
 
-*RR* \[ vorgenommen\]
+*RR* \[ out\]
 </dt> <dd>
 
-Verweis auf den instanziierten RR.
+Verweis auf die instanziierte RR.
 
 </dd> </dl>
 
@@ -86,7 +86,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -94,10 +94,10 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> <dt>
 
-[**Methode "kreateinzustancefromtextrepresentation" der MicrosoftDNS \_ resourcerecord-Klasse**](microsoftdns-resourcerecord-createinstancefromtextrepresentation.md)
+[**CreateInstanceFromTextRepresentation-Methode der MicrosoftDNS \_ ResourceRecord-Klasse**](microsoftdns-resourcerecord-createinstancefromtextrepresentation.md)
 </dt> </dl>
 
  

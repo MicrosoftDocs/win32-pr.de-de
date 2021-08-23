@@ -1,19 +1,19 @@
 ---
-description: Gibt an, ob der Quell Leser die Medienquelle herunterfährt.
+description: Gibt an, ob der Quellleser die Medienquelle heruntergefahren hat.
 ms.assetid: c85f5994-8005-48c9-8a05-0316f48f4142
-title: MF_SOURCE_READER_DISCONNECT_MEDIASOURCE_ON_SHUTDOWN-Attribut (mfreadwrite. h)
+title: MF_SOURCE_READER_DISCONNECT_MEDIASOURCE_ON_SHUTDOWN -Attribut (Mfreadwrite.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7a9474e7fb19bb6531baf31a97238bbe6b10e46
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 323340a0b95fd6f52d4ac7e8db2e9ff53bf70edb30442369f1ffd8f2f2c55fa1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104351718"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119663890"
 ---
-# <a name="mf_source_reader_disconnect_mediasource_on_shutdown-attribute"></a>Der MF- \_ Quell \_ Leser \_ trennt \_ MediaSource \_ beim \_ Shutdown-Attribut.
+# <a name="mf_source_reader_disconnect_mediasource_on_shutdown-attribute"></a>\_MF-QUELLLESER \_ \_ DISCONNECT \_ MEDIASOURCE ON \_ \_ SHUTDOWN-Attribut
 
-Gibt an, ob der [Quell Leser](source-reader.md) die Medienquelle herunterfährt.
+Gibt an, ob [der Quellleser](source-reader.md) die Medienquelle heruntergefahren hat.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,19 +21,19 @@ Gibt an, ob der [Quell Leser](source-reader.md) die Medienquelle herunterfährt.
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt nur, wenn die Anwendung den Quell Leser aus einem vorhandenen Medien Quell Objekt erstellt, indem Sie entweder [**mfcreatesourcereaderfrommediasource**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesourcereaderfrommediasource) aufrufen oder [**imfreadschreiteclassfactory:: createinstancefromuject**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfreadwriteclassfactory-createinstancefromobject)aufrufen.
+Dieses Attribut gilt nur, wenn die Anwendung den Quellreader aus einem vorhandenen Medienquellenobjekt erstellt, entweder durch Aufrufen von [**MFCreateSourceReaderFromMediaSource**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesourcereaderfrommediasource) oder durch Aufrufen [**vonWRITEReadWriteClassFactory::CreateInstanceFromObject**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfreadwriteclassfactory-createinstancefromobject).
 
-Wenn die Anwendung den Quell Leser freigibt, fährt der Quell Leser standardmäßig die Medienquelle durch Aufrufen von [**imfmediasource:: Shutdown**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-shutdown) für die Medienquelle herunter. An diesem Punkt kann die Anwendung die Medienquelle nicht mehr verwenden.
+Wenn die Anwendung den Quellleser frei gibt, fährt der Quellleser die Medienquelle standardmäßig herunter, indem [**er FÜR DIE MEDIENQUELLE::Shutdown**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-shutdown) für die Medienquelle aufruft. An diesem Punkt kann die Anwendung die Medienquelle nicht mehr verwenden.
 
-Wenn der MF- \_ Quell \_ Leser \_ \_ MediaSource \_ beim Shutdown-Attribut jedoch auf \_ **true** trennt, wird die Medienquelle vom Quell Leser nicht heruntergefahren. Dies bedeutet, dass die Anwendung nach der Veröffentlichung des Quell Readers die Medienquelle weiterhin verwenden kann. Dies bedeutet auch, dass die Anwendung für das Aufrufen von [**imfmediasource:: Shutdown**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-shutdown) für die Medienquelle zuständig ist.
+Wenn das MF SOURCE READER DISCONNECT MEDIASOURCE ON SHUTDOWN-Attribut jedoch TRUE ist, fährt der Quellleser \_ \_ die \_ \_ \_ \_ Medienquelle nicht herunter.  Das bedeutet, dass die Anwendung die Medienquelle weiterhin verwenden kann, nachdem die Anwendung den Quellleser veröffentlicht hat. Dies bedeutet auch, dass die Anwendung für den Aufruf von 1000222222222111111111111111111177111111111111771 [](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-shutdown)
 
-Wenn die Anwendung den Quell Leser aus einer URL oder einem Bytestream erstellt, fährt der Quell Leser die Medienquelle immer herunter. In diesem Fall wird die Verbindung des MF- \_ Quell \_ Lesers " \_ \_ MediaSource" \_ beim \_ Shutdown-Attribut ignoriert.
+Wenn die Anwendung den Quellreader aus einer URL oder einem Bytestream erstellt, fährt der Quellleser immer die Medienquelle herunter. Das MF \_ SOURCE \_ READER DISCONNECT \_ \_ MEDIASOURCE ON \_ \_ SHUTDOWN-Attribut wird in diesem Fall ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,9 +41,9 @@ Wenn die Anwendung den Quell Leser aus einer URL oder einem Bytestream erstellt,
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>"Mfreadwrite. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server 2008 \[ \| R2-Desktop-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Mfreadwrite.h</dt> </dl> |
 
 
 
@@ -51,13 +51,13 @@ Wenn die Anwendung den Quell Leser aus einer URL oder einem Bytestream erstellt,
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Quell Leser](source-reader.md)
+[Quellleser](source-reader.md)
 </dt> <dt>
 
-[Attribute des Quell Readers](source-reader-attributes.md)
+[Quellleseattribute](source-reader-attributes.md)
 </dt> </dl>
 
  

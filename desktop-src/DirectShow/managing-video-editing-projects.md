@@ -1,48 +1,48 @@
 ---
-description: Verwalten von Video Bearbeitungs Projekten
+description: Verwalten von Videobearbeitungsprojekten
 ms.assetid: f8d74807-562f-429b-93a1-e65d0f15163b
-title: Verwalten von Video Bearbeitungs Projekten
+title: Verwalten von Videobearbeitungsprojekten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 491cfcb9a6e94874d2cae43567b61666bbd43cd3
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: fe226f4fdc43889daac8e978086c67bd81c5d8d822902e7c041bf500f2836fb3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119584450"
 ---
-# <a name="managing-video-editing-projects"></a>Verwalten von Video Bearbeitungs Projekten
+# <a name="managing-video-editing-projects"></a>Verwalten von Videobearbeitungsprojekten
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Die folgenden Tipps helfen Ihnen beim Verwalten von Projekten in [DirectShow-Bearbeitungs Diensten](directshow-editing-services.md).
+Die folgenden Tipps helfen Ihnen beim Verwalten von Projekten in [DirectShow Editing Services](directshow-editing-services.md).
 
 Änderungen an der Zeitachse
 
--   Wenn Sie die Zeitachse nach dem Erstellen des Filter Diagramms ändern, müssen Sie " [**unenderengine:: connectfrontend**](irenderengine-connectfrontend.md) " erneut ausführen, um das Front-End wiederherzustellen. Normalerweise wirkt sich dies nicht auf den Rest des Diagramms aus. Gelegentlich muss die Renderingengine jedoch das gesamte Diagramm löschen, bevor es das Front-End neu erstellt. (Dies ist z. b. der Fall, wenn Sie eine Gruppe hinzufügen oder entfernen.) Die **connectfrontend** -Methode gibt "S \_ Warn \_ outputreset" zurück, um zu signalisieren, dass Sie das Diagramm gelöscht hat. Wenn dies der Fall ist, muss die Anwendung den Renderingabschnitt des Diagramms neu erstellen.
--   Um alle Objekte vollständig aus der Zeitachse zu entfernen, müssen Sie die [**iamtimeline:: clearallgroups**](iamtimeline-clearallgroups.md) -Methode aufrufen.
+-   Wenn Sie die Zeitachse nach dem Erstellen des Filterdiagramms ändern, rufen Sie [**erneut IRenderEngine::ConnectFrontEnd**](irenderengine-connectfrontend.md) auf, um das Front-End neu zu erstellen. In der Regel wirkt sich dies nicht auf den Rest des Diagramms aus. Gelegentlich muss die Render-Engine jedoch das gesamte Diagramm löschen, bevor das Front-End neu erstellt wird. (Dies geschieht beispielsweise, wenn Sie eine Gruppe hinzufügen oder entfernen.) Die **ConnectFrontEnd-Methode** gibt S WARN OUTPUTRESET zurück, um zu \_ \_ signalisieren, dass das Diagramm gelöscht wurde. In diesem Fall muss Ihre Anwendung den Renderingabschnitt des Graphen neu erstellen.
+-   Um alle Objekte vollständig aus der Zeitachse zu entfernen, rufen Sie die [**IAMTimeline::ClearAllGroups-Methode**](iamtimeline-clearallgroups.md) auf.
 
 **Bereinigung**
 
--   Wenn Sie mit der Verwendung einer Rendering-Engine fertig sind, müssen Sie die Methode " [**irienderengine:: scrapit**](irenderengine-scrapit.md) " aufzurufen. Stellen Sie wie bei jedem COM-Objekt sicher, dass Sie jeden Schnittstellen Zeiger freigeben, wenn Sie ihn nicht mehr verwenden.
--   Die Renderingengine behält keinen Verweis Zähler auf der Zeitachse. Veröffentlichen Sie die Zeitachse nicht, bevor Sie Sie verwenden, und fordern Sie zuerst in der Renderingengine zuerst " **scrapit** " an.
--   Wenn Sie alle Verweise auf eine Zeitachse freigeben, sollten Sie keines der Objekte in dieser Zeitachse verwenden, auch wenn Sie Verweis Zähler für Sie enthalten.
+-   Wenn Sie mit der Verwendung einer Render-Engine fertig sind, rufen Sie die [**IRenderEngine::ScrapIt-Methode**](irenderengine-scrapit.md) auf. Geben Sie wie bei jedem COM-Objekt jeden Schnittstellenzeiger frei, wenn Sie ihn nicht mehr verwenden.
+-   Die Render-Engine hält keine Verweisanzahl auf der Zeitachse. Geben Sie die Zeitachse nicht frei, bevor Sie sie nicht mehr verwenden, und rufen Sie **zuerst ScrapIt** in der Render-Engine auf.
+-   Wenn Sie alle Verweise auf eine Zeitachse frei geben, verwenden Sie keines der Objekte in dieser Zeitachse, auch wenn Sie die Verweisanzahl für sie halten.
 
-**Mehrere Zeitachsen Instanzen**
+**Mehrere Zeitachseninstanzen**
 
--   Verschieben Sie keine Zeitachsen Objekte Zwischenzeit Achsen. Jedes Objekt in einer Zeitachse muss von dieser Zeitachse erstellt werden. Die Zeitachse enthält einen internen Cache mit Informationen zu den Objekten, die Sie erstellt. das Verschieben von Zeitachsen Objekten kann den Cache stören.
--   Verwenden Sie niemals dieselbe Instanz eines rendermoduls mit mehr als einer Zeitachse. Die Renderingengine enthält einen Cache mit Informationen über die Zeitachse. Mehrere Zeitachsen stören den Cache und verursachen unvorhersehbare Ergebnisse. Wenn Sie zwei aktive Zeitachsen benötigen, erstellen Sie separate Instanzen von renderengines für jede Zeitachse.
--   Eine Zeitachse kann mehr als eine Renderingengine verwenden, aber nicht gleichzeitig. Löschen Sie die alte Rendering-Engine, bevor Sie eine andere Renderengine verwenden (Dies würden Sie in der Regel tun, wenn Sie von der Verwendung der grundlegenden Renderingengine für die Vorschauversion zum intelligenten Renderingmodul zum Schreiben von Dateien wechseln
+-   Verschieben Sie zeitachsenobjekte nicht zwischen Zeitachsen. Jedes Objekt in einer Zeitachse muss von dieser Zeitachse erstellt werden. Die Zeitachse enthält einen internen Cache mit Informationen zu den von ihr erstellten Objekten. Das Verschieben von Zeitachsenobjekten kann den Cache unterbrechen.
+-   Verwenden Sie nie dieselbe Instanz einer Render-Engine mit mehr als einer Zeitachse. Die Render-Engine enthält einen Cache mit Informationen zur Zeitachse. Mehrere Zeitachsen unterbrechen den Cache und führen zu unvorhersehbaren Ergebnissen. Wenn Sie zwei aktive Zeitachsen benötigen, erstellen Sie separate Instanzen von Render-Engines für jede Zeitachse.
+-   Eine Zeitachse kann mehrere Render-Engine verwenden, aber nicht gleichzeitig. Löschen Sie die alte Render-Engine, bevor Sie eine andere Render-Engine verwenden. (Sie würden dies in der Regel tun, wenn Sie von der einfachen Render-Engine für die Vorschauversion zur intelligenten Render-Engine zum Schreiben von Dateien wechseln.)
 
 **Persistenz**
 
--   Das Filter Diagramm ist nicht persistent, wenn Sie das Projekt in einer XML-Datei speichern. Daher verlieren Sie alle Informationen im Zusammenhang mit der intelligenten Neukomprimierung, dem Komprimierungs Format oder den Komprimierungs Parametern. Die Anwendung kann diese Parameter nach dem Laden eines Projekts wiederherstellen.
+-   Das Filterdiagramm ist nicht persistent, wenn Sie das Projekt in einer XML-Datei speichern. Daher verlieren Sie alle Informationen im Zusammenhang mit der intelligenten Neukomprimierung, dem Komprimierungsformat oder den Komprimierungsparametern. Die Anwendung muss diese Parameter wiederherstellen, nachdem sie ein Projekt geladen hat.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von DirectShow-Bearbeitungs Diensten](using-directshow-editing-services.md)
+[Verwenden von DirectShow-Bearbeitungsdiensten](using-directshow-editing-services.md)
 </dt> </dl>
 
  

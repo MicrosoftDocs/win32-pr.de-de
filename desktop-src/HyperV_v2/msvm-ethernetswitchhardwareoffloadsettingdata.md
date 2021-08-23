@@ -1,5 +1,5 @@
 ---
-description: Stellt die Einstellungen für die Auslagerungs Auslagerung dar.
+description: Stellt die Einstellungen für die Switch-Ausladung dar.
 ms.assetid: 4e00544e-a8db-4337-af3f-f651bfcf6b05
 title: Msvm_EthernetSwitchHardwareOffloadSettingData-Klasse
 ms.topic: reference
@@ -20,16 +20,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 86ef0e22143ffd424ee3acee616504e45d8125bf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 751e5f3256da82d2b7cae2da17a8b9dfb54bc5331ebf2679e745bc67c0b4d3b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350996"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119524543"
 ---
-# <a name="msvm_ethernetswitchhardwareoffloadsettingdata-class"></a>MSVM \_ ethernezwitchhardwareoffloadsettingdata-Klasse
+# <a name="msvm_ethernetswitchhardwareoffloadsettingdata-class"></a>Msvm \_ EthernetSwitchHardwareOffloadSettingData-Klasse
 
-Stellt die Einstellungen für die Auslagerungs Auslagerung dar.
+Stellt die Einstellungen für die Switch-Ausladung dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -51,143 +51,143 @@ class Msvm_EthernetSwitchHardwareOffloadSettingData : Msvm_EthernetSwitchFeature
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ ethernezwitchhardwareoffloadsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ EthernetSwitchHardwareOffloadSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ ethernezwitchhardwareoffloadsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ EthernetSwitchHardwareOffloadSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Defaultqueuevmmqaktivierte**
+**DefaultQueueVmmqEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (2), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt die vmmq-Einstellungen für die Standard Warteschlange des vSwitches an.
+Gibt die VMMQ-Einstellungen für die Standardwarteschlange von vswitch an.
 
 </dd> <dt>
 
-**Defaultqueuevmmqqueuepairs**
+**DefaultQueueVmmqQueuePairs**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (3), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt die Anzahl der Warteschlangen für die Standard Warteschlange an.
+Gibt die Anzahl der Warteschlangen für die Standardwarteschlange an.
 
 </dd> <dt>
 
-**Defaultqueuevrssaktivierte**
+**DefaultQueueVrssEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (1), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt die vrss-Einstellungen für die Standard Warteschlange des vSwitches an.
+Gibt die VRs-Einstellungen für die Standardwarteschlange von vswitch an.
 
 </dd> <dt>
 
-**Defaultqueuevrssexcludeprimaryprocessor**
+**DefaultQueueVrssExcludePrimaryProcessor**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (6), **interfacetten** (2), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (6), **InterfaceVersion** (2), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, ob die primäre VMQ-CPU von der vrss/vmmq-dereferenzierungstabelle ausgeschlossen wird.
+Gibt an, ob die primäre VMQ-CPU aus der VRSS/VMMQ-Deskriptionstabelle ausgeschlossen ist.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Defaultqueuevrssindependenthostverteilung**
+**DefaultQueueVrssIndependentHostSpreading**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (7), **interfacetten** (2), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (7), **InterfaceVersion** (2), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, ob die vrss-Verteilung für die Standard Warteschlange unabhängig vom RSS-Status des externen VPORTS immer durchzuführen ist.
+Gibt an, ob die VRSS-Verteilung immer für die Standardwarteschlange unabhängig vom RSS-Status des externen vPorts erfolgt.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Defaultqueuevrssminqueuepairs**
+**DefaultQueueVrssMinQueuePairs**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4), **interfacetten** (2), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (4), **InterfaceVersion** (2), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt die Mindestanzahl von Warteschlangen an, die für vrss/vmmq verwendet werden.
+Gibt die Mindestanzahl von Warteschlangen an, die für VRSS/VMMQ verwendet werden.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Defaultqueuevrssqueueschedulingmode**
+**DefaultQueueVrssQueueSchedulingMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (5), **interfacetten** (2), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (5), **InterfaceVersion** (2), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, wie vrss/vmmq-Warteschlangen an verschiedene Host Prozessoren geleitet werden.
+Gibt an, wie VRSS/VMMQ-Warteschlangen auf verschiedene Hostprozessoren umgesteuerte werden.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
@@ -199,10 +199,10 @@ Gibt an, wie vrss/vmmq-Warteschlangen an verschiedene Host Prozessoren geleitet 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1703 desktop apps only (Nur \[ Desktop-Apps der Version 1703)\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -211,7 +211,7 @@ Gibt an, wie vrss/vmmq-Warteschlangen an verschiedene Host Prozessoren geleitet 
 
 <dl> <dt>
 
-[**MSVM \_ ethernetzwitchfeaturesettingdata**](msvm-ethernetswitchfeaturesettingdata.md)
+[**Msvm \_ EthernetSwitchFeatureSettingData**](msvm-ethernetswitchfeaturesettingdata.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ruft den Globally Unique Identifier (GUID) der Erkennung ab.
+description: Ruft den GUID (Globally Unique Identifier) der Erkennung ab.
 ms.assetid: 9b98993b-eaf3-4207-9d56-33efeceb75cf
-title: 'Iinkanalysiserkenzer:: GetGuid-Methode (iacom. h)'
+title: IInkAnalysisRecognizer::GetGuid-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 9a027a405829e6d1237a8ec90dd59fcc8905006d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b5fbf2b07b2a63f2fdb088c38a5e03e4182c4e38528208c039f927b282755344
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862711"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119596740"
 ---
-# <a name="iinkanalysisrecognizergetguid-method"></a>Iinkanalysiserkenzer:: GetGuid-Methode
+# <a name="iinkanalysisrecognizergetguid-method"></a>IInkAnalysisRecognizer::GetGuid-Methode
 
-Ruft den Globally Unique Identifier (GUID) der Erkennung ab.
+Ruft den GUID (Globally Unique Identifier) der Erkennung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ HRESULT GetGuid(
 
 <dl> <dt>
 
-*pId* \[ vorgenommen\]
+*pId* \[ out\]
 </dt> <dd>
 
-Die GUID, die diese [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md)identifiziert.
+Die GUID, die diesen [**IInkAnalysisRecognizer identifiziert.**](iinkanalysisrecognizer.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,9 +56,9 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -67,10 +67,10 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 <dl> <dt>
 
-[**Iinkanalysiserkenzer**](iinkanalysisrecognizer.md)
+[**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

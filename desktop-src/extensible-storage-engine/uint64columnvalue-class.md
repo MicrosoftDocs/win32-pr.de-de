@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: UInt64ColumnValue-Klasse'
+description: 'Weitere Informationen zu: UInt64ColumnValue-Klasse'
 title: UInt64ColumnValue-Klasse
 TOCTitle: UInt64ColumnValue class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.UInt64ColumnValue
@@ -24,28 +24,28 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 71a673c469d382c81e5cce9ae3bd883bf63e16d5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8292cbbb4d7e9a3c9cc4df9fc9cf6924888716e8bdb51840552d331487c1714a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353835"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119603560"
 ---
 # <a name="uint64columnvalue-class"></a>UInt64ColumnValue-Klasse
 
-Ein [UInt64](/dotnet/api/system.uint64) -Spaltenwert.
+Ein [UInt64-Spaltenwert.](/dotnet/api/system.uint64)
 
 Diese API ist nicht CLS-kompatibel. 
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  [Microsoft. ISAM. ESENT. Interop. ColumnValue](./columnvalue-class.md)  
-    [Microsoft. ISAM. ESENT. Interop. columnvalueofistruct](./columnvalueofstruct-t-class.md)\<[UInt64](/dotnet/api/system.uint64)\>  
-      Microsoft. ISAM. ESENT. Interop. UInt64ColumnValue  
+  [Microsoft.Isam.Esent.Interop.ColumnValue](./columnvalue-class.md)  
+    [Microsoft.Isam.Esent.Interop.ColumnValueOfStruct](./columnvalueofstruct-t-class.md)\<[UInt64](/dotnet/api/system.uint64)\>  
+      Microsoft.Isam.Esent.Interop.UInt64ColumnValue  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,8 +69,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [UInt64ColumnValue-Member](./uint64columnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

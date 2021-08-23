@@ -1,60 +1,60 @@
 ---
-title: Erweiterte Verwendung von deskriptortabellen
-description: In den folgenden Abschnitten finden Sie Informationen zur erweiterten Verwendung von deskriptortabellen.
+title: Erweiterte Verwendung von Deskriptortabellen
+description: Die folgenden Abschnitte enthalten Informationen zur erweiterten Verwendung von Deskriptortabellen.
 ms.assetid: BB0CA29C-65CB-48B1-8351-EE13CC470B54
 ms.date: 05/31/2018
 ms.localizationpriority: high
 ms.topic: article
-ms.openlocfilehash: 79dad6914cff07726c2d40ed2ee27cccb6a0cf1e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 044c02b87591f7ad53212ce37d7549ade68308a648092a260a67c97395959c98
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "74104641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119632590"
 ---
-# <a name="advanced-use-of-descriptor-tables"></a>Erweiterte Verwendung von deskriptortabellen
+# <a name="advanced-use-of-descriptor-tables"></a>Erweiterte Verwendung von Deskriptortabellen
 
-In den folgenden Abschnitten finden Sie Informationen zur erweiterten Verwendung von deskriptortabellen.
+Die folgenden Abschnitte enthalten Informationen zur erweiterten Verwendung von Deskriptortabellen.
 
--   [Ändern von deskriptortabelleneinträgen zwischen renderingaufrufen](#changing-descriptor-table-entries-between-rendering-calls)
--   [Indizierung außerhalb der Grenzen](#out-of-bounds-indexing)
+-   [Ändern von Deskriptortabelleneinträgen zwischen Renderingaufrufen](#changing-descriptor-table-entries-between-rendering-calls)
+-   [Out-of-Bounds-Indizierung](#out-of-bounds-indexing)
 -   [Shader-Ableitungen und abweichende Indizierung](#shader-derivatives-and-divergent-indexing)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
-## <a name="changing-descriptor-table-entries-between-rendering-calls"></a>Ändern von deskriptortabelleneinträgen zwischen renderingaufrufen
+## <a name="changing-descriptor-table-entries-between-rendering-calls"></a>Ändern von Deskriptortabelleneinträgen zwischen Renderingaufrufen
 
-Nachdem in der Befehlsliste festgelegt wurde, dass die deskriptortabellen für die Ausführung an eine Warteschlange gesendet wurden, darf die Anwendung die Teile der deskriptorheaps, auf die die GPU verweisen könnte, nicht aus der CPU bearbeiten, bis die Anwendung weiß, dass die GPU die Verwendung der Verweise abgeschlossen hat.
+Nachdem Befehlslisten, die Deskriptortabellen festlegen, zur Ausführung an eine Warteschlange übermittelt wurden, darf die Anwendung die Teile der Deskriptorheaps, auf die die GPU verweisen kann, nicht von der CPU bearbeiten, bis die Anwendung weiß, dass die GPU die Verweise verwendet hat.
 
-Der Abschluss des Vorgangs kann an einer eng gebundenen Grenze mithilfe von API-Zäunen für die Nachverfolgung des GPU-Status oder durch mehr grobe Mechanismen (z. b. das warten darauf, dass das Rendering an die Anzeige gesendet wurde) festgelegt werden. Wenn eine Anwendung weiß, dass nur eine Teilmenge des Bereichs, auf den eine Deskriptortabelle zeigt, zugegriffen wird (z.b. aufgrund der Fluss Steuerung im Shader), können die anderen Deskriptoren, auf die nicht verwiesen wird, weiterhin geändert werden. Wenn eine Anwendung zwischen den verschiedenen deskriptortabellen zwischen renderingaufrufen wechseln muss, gibt es einige Ansätze, aus denen die Anwendung wählen kann:
+Die Arbeitsvervollständigung kann mithilfe von API-Zäunen zur Nachverfolgung des GPU-Fortschritts oder mit weiteren groben Mechanismen wie dem Warten darauf, dass das Rendering zur Anzeige gesendet wurde, bestimmt werden – unabhängig davon, was für die Anwendung geeignet ist. Wenn eine Anwendung weiß, dass nur auf eine Teilmenge des Bereichs, auf den eine Deskriptortabelle verweist , zugegriffen wird (z. B. aufgrund der Flusssteuerung im Shader), können die anderen nicht zurückgestellten Deskriptoren weiterhin geändert werden. Wenn eine Anwendung zwischen verschiedenen Deskriptortabellen zwischen Renderingaufrufen wechseln muss, gibt es einige Ansätze, aus denen die Anwendung wählen kann:
 
--   Deskriptor Table Versioning: erstellt (oder verwendet) eine separate Deskriptortabelle für jede eindeutige Auflistung von Deskriptoren, auf die von einer Befehlsliste verwiesen werden soll. Beim Bearbeiten und erneuten verwenden zuvor aufgefüllter Bereiche auf deskriptorheaps müssen Anwendungen zuerst sicherstellen, dass die GPU die Verwendung eines beliebigen Teils eines deskriptorheaps abgeschlossen hat, der wieder verwendet werden soll.
--   Dynamische Indizierung: Anwendungen können Objekte anordnen, die überzeichnen/verteilen (oder sogar innerhalb eines zeichnen) in einem Bereich eines deskriptorheaps variieren, eine Deskriptortabelle definieren, die alle umfasst, und aus dem Shader die dynamische Indizierung der Tabelle während der shaderausführung verwenden, um das zu verwendende Objekt auszuwählen.
--   Direktes Platzieren von Deskriptoren in der Stamm Signatur. Nur eine sehr kleine Anzahl von Deskriptoren kann auf diese Weise verwaltet werden, da der Stamm Signatur Bereich beschränkt ist.
+-   Versionsangabe für Deskriptortabellen: Erstellen (oder wiederverwenden) Sie eine separate Deskriptortabelle für jede eindeutige Auflistung von Deskriptoren, auf die von einer Befehlsliste verwiesen werden soll. Beim Bearbeiten und Wiederverwenden zuvor aufgefüllter Bereiche auf Deskriptorheaps müssen Anwendungen zunächst sicherstellen, dass die GPU alle Teile eines Deskriptorheaps verwendet, der wiederverwendet wird.
+-   Dynamische Indizierung: Anwendungen können Objekte anordnen, die sich über Draw/Dispatch (oder sogar innerhalb eines Draws) in einem Bereich eines Deskriptorheaps unterscheiden, eine Deskriptortabelle definieren, die sich über alle Bereiche erstreckt, und über den Shader die dynamische Indizierung der Tabelle während der Shaderausführung verwenden, um auszuwählen, welches Objekt verwendet werden soll.
+-   Direktes Setzen von Deskriptoren in die Stammsignatur. Auf diese Weise kann nur eine sehr kleine Anzahl von Deskriptoren verwaltet werden, da der Stammsignaturbereich begrenzt ist.
 
-Die Verwendung der deskriptortabellenversionierung besteht darin, dass der deskriptorspeicher aus einem deskriptorheap für jeden eindeutigen Satz von Deskriptoren, auf die von der Grafik Pipeline für jede Befehlsliste verwiesen wird, die entweder ausgeführt werden kann, in die Warteschlange eingereiht oder zu einem bestimmten Zeitpunkt aufgezeichnet werden kann, durchgebrannt werden muss.
+Die Verwendung der Deskriptortabellenversionsierung impliziert, dass der Deskriptorspeicher eines Deskriptorheaps für jeden eindeutigen Satz von Deskriptoren, auf den von der Grafikpipeline verwiesen wird, für jede Befehlsliste, die entweder ausgeführt werden kann, zur Ausführung in die Warteschlange eingereiht oder zu einem beliebigen Zeitpunkt aufgezeichnet wird, durchlaufen werden muss.
 
-D3D12 übernimmt die Verwaltung der Versionsverwaltung für die Anwendung für die Objekttypen, die über deskriptorheaps und deskriptortabellen verwaltet werden. Ein Vorteil besteht darin, dass Anwendungen den deskriptortabelleninhalt so weit wie möglich wieder verwenden können, anstatt immer eine neue deskriptortabellenversion für jede Übermittlung von Befehlslisten zu definieren. Bei der Stamm Signatur handelt es sich um ein Leerzeichen, das der D3D12-Treiber automatisch Versionen
+D3D12 überlässt die Verwaltung der Versionsverwaltung der Anwendung für die Objekttypen, die über Deskriptorheaps und Deskriptortabellen verwaltet werden. Ein Vorteil besteht darin, dass Anwendungen deskriptortabelleninhalte so weit wie möglich wiederverwenden können, anstatt immer eine neue Deskriptortabellenversion für jede Befehlslistenübermittlung zu definieren. Die Stammsignatur ist ein Bereich, den der D3D12-Treiber automatisch erstellt.
 
-Die Möglichkeit, mehrere deskriptortabellen gleichzeitig an die Stamm Signatur (und somit an die Pipeline) zu binden, ermöglicht es Anwendungen, Gruppen von deskriptorverweisen bei Bedarf zu gruppieren und zu wechseln. Eine Anwendung kann z. b. eine kleine Zahl (z. b. nur eine) von großen statischen deskriptortabellen verwenden, die selten geändert werden, oder in der die Bereiche im zugrunde liegenden deskriptorheap-Speicher nach Bedarf aufgefüllt werden, wobei die dynamische Indizierung aus dem Shader verwendet wird, um Texturen auszuwählen. Gleichzeitig kann die Anwendung eine andere Klasse von Ressourcen verwalten, in der die Gruppe, auf die von jedem Zeichnen-Befehl verwiesen wird, mithilfe der deskriptortable-versionierungstechnik von der CPU gewechselt wird.
+Die Möglichkeit, mehrere Deskriptortabellen gleichzeitig an die Stammsignatur (und somit an die Pipeline) zu binden, ermöglicht Anwendungen das Gruppieren und Wechseln von Deskriptorverweisen in unterschiedlichen Häufigkeiten, falls gewünscht. Beispielsweise könnte eine Anwendung eine kleine Zahl (vielleicht nur eine) großer statischer Deskriptortabellen verwenden, die sich nur selten ändern, oder in welchen Bereichen im zugrunde liegenden Deskriptorheapspeicher nach Bedarf aufgefüllt wird, wobei die dynamische Indizierung vom Shader zum Auswählen von Texturen verwendet wird. Gleichzeitig könnte die Anwendung eine weitere Klasse von Ressourcen verwalten, bei der die Menge, auf die durch jeden Draw-Aufruf verwiesen wird, mithilfe der Deskriptortabellenversionsverwaltung von der CPU gewechselt wird.
 
-## <a name="out-of-bounds-indexing"></a>Indizierung außerhalb der Grenzen
+## <a name="out-of-bounds-indexing"></a>Out-of-Bounds-Indizierung
 
-Die Indizierung einer beliebigen Deskriptortabelle aus dem Shader führt zu einem größtenteils undefinierten Speicherzugriff, einschließlich der Möglichkeit, beliebigen Prozess internen Speicher zu lesen, als ob es sich um einen Hardware Zustands Deskriptor handelt, der mit der Folge der Auswirkungen der Hardware zu tun hat. Dies kann zum Zurücksetzen des Geräts führen, stürzt jedoch nicht auf Windows ab.
+Die Indizierung außerhalb der Grenzen einer Deskriptortabelle aus dem Shader führt zu einem größtenteils nicht definierten Speicherzugriff, einschließlich der Möglichkeit, beliebigen In-Process-Speicher zu lesen, als wäre es ein Hardwarezustandsdeskriptor, der mit dem Ergebnis der Hardwarearbeit arbeitet. Dies kann zu einer Geräterücksetzung führen, stürzt jedoch nicht Windows ab.
 
 ## <a name="shader-derivatives-and-divergent-indexing"></a>Shader-Ableitungen und abweichende Indizierung
 
-Wenn Pixel-Shader-Aufrufe, die in einem 2 x 2-Stempel ausgeführt werden (zur Unterstützung von abgeleiteten Berechnungen), verschiedene Textur Indizes auswählen, um aus einer Deskriptortabelle Stichproben zu erhalten. wenn die ausgewählte samplingkonfiguration und Textur für ein bestimmtes Pixel eine Lod-Berechnung aus Texturkoordinaten Ableitungen erfordert, werden die Lod-Berechnung und der Textur samplingprozess von der Hardware unabhängig für jede Textur Suche im 2 x 2-Stempel durchgeführt. , was sich auf die Leistung auswirkt.
+Wenn Pixel-Shaderaufrufe, die in einem 2x2-Stempel ausgeführt werden (um abgeleitete Berechnungen zu unterstützen), verschiedene Texturindizes auswählen, die aus einer Deskriptortabelle entnommen werden sollen, und wenn die ausgewählte Samplerkonfiguration und -textur für ein bestimmtes Pixel eine LOD-Berechnung aus Texturkoordinatenableitungen erfordert, erfolgt die LOD-Berechnung und Textursampling unabhängig von der Hardware für jede Textursuche im 2x2-Stempel.  Dies wirkt sich auf die Leistung aus.
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
 [Deskriptortabellen](descriptor-tables.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -4,12 +4,12 @@ ms.assetid: eee684f1-2d79-444b-86cd-322bf53ab756
 title: D3DX-Strukturen (Direct3D 9-Grafiken)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 616797f20a75ed7bd9a49e5bf811fff451d69078
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 75d96eae38a8d07d4b89192c255b58fd0f41db0d8c13a3f8d8f0c87c6e477501
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112408113"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119728210"
 ---
 # <a name="d3dx-structures-direct3d-9-graphics"></a>D3DX-Strukturen (Direct3D 9-Grafiken)
 
@@ -42,11 +42,11 @@ Dieser Abschnitt enthält Informationen zu den Strukturen, die in der D3DX-Hilfs
 -   [**D3DXPLANE-Erweiterungen**](d3dxplane-extensions.md)
 -   [**D3DXQUATERNION**](d3dxquaternion.md)
 -   [**D3DXQUATERNION-Erweiterungen**](d3dxquaternion-extensions.md)
--   [**D3DXORTE \_ DESC**](d3dxrte-desc.md)
+-   [**D3DXRTE \_ DESC**](d3dxrte-desc.md)
 -   [**D3DXRTS \_ DESC**](d3dxrts-desc.md)
 -   [**D3DXSHADER \_ CONSTANTINFO**](d3dxshader-constantinfo.md)
 -   [**D3DXSHADER \_ CONSTANTTABLE**](d3dxshader-constanttable.md)
--   [**D3DXSHADER \_ STRUCTMEMBERINFO**](d3dxshader-structmemberinfo.md)
+-   [**\_D3DXSHADER-STRUKTURTMEMBERINFO**](d3dxshader-structmemberinfo.md)
 -   [**D3DXSHADER \_ TYPEINFO**](d3dxshader-typeinfo.md)
 -   [**D3DXSHMATERIAL**](d3dxshmaterial.md)
 -   [**D3DXSHPRTSPLITMESHCLUSTERDATA**](d3dxshprtsplitmeshclusterdata.md)

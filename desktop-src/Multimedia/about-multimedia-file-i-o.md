@@ -1,37 +1,37 @@
 ---
-title: Informationen zu Multimedia-Datei-e/a
-description: Informationen zu Multimedia-Datei-e/a
+title: Informationen zu Multimediadatei-E/A
+description: Informationen zu Multimediadatei-E/A
 ms.assetid: d72ba20c-0085-4d5c-9fc6-b9024b575027
 keywords:
-- Windows-Multimedia, Datei-e/a
-- Multimedia, Datei-e/a
-- Multimedia-Eingabe, Datei-e/a
-- Multimedia-Datei-e/a, Informationen
-- Datei-e/a, Informationen
-- Eingabe und Ausgabe (e/a), Informationen zu
-- E/a (Eingabe und Ausgabe), Informationen zu
-- grundlegende e/a
-- Format der Ressourcenaustausch Datei (Riff)
-- Riff (Ressourcenaustausch-Dateiformat)
-- Riff-e/a
+- Windows Multimedia, Datei-E/A
+- Multimedia, Datei-E/A
+- Multimediaeingabe, Datei-E/A
+- Multimediadatei-E/A, Informationen
+- Datei-E/A, Informationen
+- Eingabe und Ausgabe (E/A), Informationen
+- E/A (Eingabe und Ausgabe),Informationen
+- Grundlegende E/A
+- Resource Interchange File Format (DOSSIER)
+- DATEIFORMAT (Resource Interchange File Format)
+- IGE E/A
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6fa055411819d719636d2e248ea5c565e3f060d7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 584b736ba41fb0ea7dd5f3e6411e1783964db21a9819fbb98364708196dc2943
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119526640"
 ---
-# <a name="about-multimedia-file-io"></a>Informationen zu Multimedia-Datei-e/a
+# <a name="about-multimedia-file-io"></a>Informationen zu Multimediadatei-E/A
 
-Die meisten Multimedia-Anwendungen erfordern Datei Eingaben und-Ausgaben (e/a) – d. h. die Fähigkeit, Datenträger Dateien zu erstellen, zu lesen und zu schreiben. Multimedia-Datei-e/a-Dienste bieten gepufferte und nicht gepufferte Datei-e/a und Unterstützung für Riff-Dateien. Die Dienste können durch benutzerdefinierte e/a-Prozeduren erweitert werden, die von den Anwendungen gemeinsam genutzt werden können.
+Die meisten Multimediaanwendungen erfordern Dateieingabe und -ausgabe (E/A), d. h. die Möglichkeit, Datenträgerdateien zu erstellen, zu lesen und zu schreiben. Multimedia-Datei-E/A-Dienste bieten gepufferte und nicht gepufferte Datei-E/A- und Unterstützung für CSV-Dateien. Die Dienste sind mit benutzerdefinierten E/A-Prozeduren erweiterbar, die von Anwendungen gemeinsam genutzt werden können.
 
-Die meisten Anwendungen benötigen nur die grundlegenden Datei-e/a-Dienste und die Datei-e/a-Dienste von Riff Dateien. Anwendungen, die für die Datei-e/a-Leistung sensibel sind, z. b. Anwendungen, die Daten aus Compact Disk in Echtzeit streamen, können die Leistung optimieren, indem Sie Dienste direkt auf den Datei-e/a-Puffer zugreifen. Anwendungen, die auf benutzerdefinierte Speichersysteme (z. b. Dateiarchive und Datenbanken) zugreifen, können Ihre eigene e/a-Prozedur bereitstellen, mit der Elemente des Speichersystems gelesen und geschrieben werden.
+Die meisten Anwendungen benötigen nur die grundlegenden Datei-E/A-Dienste und die CSV-Datei-E/A-Dienste. Anwendungen, die für die Datei-E/A-Leistung sensibel sind, z. B. Anwendungen, die Daten von Compact Discs in Echtzeit streamen, können die Leistung optimieren, indem Dienste verwendet werden, um direkt auf den Datei-E/A-Puffer zuzugreifen. Anwendungen, die auf benutzerdefinierte Speichersysteme wie Dateiarchive und Datenbanken zugreifen, können eine eigene E/A-Prozedur bereitstellen, die Elemente des Speichersystems liest und schreibt.
 
- 
+ 
 
- 
+ 
 
 
 

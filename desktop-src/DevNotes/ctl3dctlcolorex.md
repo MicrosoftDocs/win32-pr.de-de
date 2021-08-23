@@ -1,5 +1,5 @@
 ---
-description: Behandelt die WM \_ CtlColor-Meldung für Anwendungen, die ctl3d verwenden.
+description: Verarbeitet die \_ WM-CTLCOLOR-Nachricht für Anwendungen, die CTL3D verwenden.
 ms.assetid: 8626a559-4856-4e7d-bf9c-edc48613b8f4
 title: Ctl3dCtlColorEx-Funktion
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ctl3d32.dll
-ms.openlocfilehash: 57df7ed5e439d75b2edbf71e743cac069f0ed75b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 46fe35fd507f20e41e0a9b563ded5c9cf46e9c557893bc9287d65cbdf651b24f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373935"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119691640"
 ---
 # <a name="ctl3dctlcolorex-function"></a>Ctl3dCtlColorEx-Funktion
 
-Behandelt die **WM \_ CtlColor** -Meldung für Anwendungen, die ctl3d verwenden.
+Verarbeitet die **\_ WM-CTLCOLOR-Nachricht** für Anwendungen, die CTL3D verwenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,31 +44,31 @@ HBRUSH Ctl3dCtlColorEx(
 *wm* 
 </dt> <dd>
 
-Die **WM- \_ CtlColor** -Meldung für die Anwendung.
+Die **WM \_ CTLCOLOR-Nachricht** für die Anwendung.
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Ein Handle für den Anzeige Kontext (DC).
+Ein Handle für den Anzeigekontext (DC).
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Handle für ein untergeordnetes Fenster (-Steuerelement).
+Ein Handle für ein untergeordnetes Fenster (Steuerelement).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein Handle für den passenden Pinsel zurück, wenn die Funktion erfolgreich ausgeführt wird. Andernfalls wird zurück `(HBRUSH)(0)` gegeben, dass ein Fehler aufgetreten ist.
+Gibt ein Handle für den entsprechenden Pinsel zurück, wenn die Funktion erfolgreich ausgeführt wird. Andernfalls wird zurückgegeben, `(HBRUSH)(0)` was angibt, dass ein Fehler aufgetreten ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

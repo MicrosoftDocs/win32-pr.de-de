@@ -5,12 +5,12 @@ ms.localizationpriority: low
 ms.topic: article
 ms.date: 04/19/2019
 ms.custom: 19H1
-ms.openlocfilehash: 64ae11c5b9a4298c340488499a5a309b71a2d48b
-ms.sourcegitcommit: d168355cd7112871f24643b4079c2640b36f4975
+ms.openlocfilehash: deb388962043926afd3868785364df6297b05d78f3997359fc88ea97ab679f33
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111521176"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119728950"
 ---
 # <a name="directml-interfaces"></a>DirectML-Schnittstellen
 
@@ -18,7 +18,7 @@ Die folgenden Schnittstellen werden in DirectML.h deklariert.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | BESCHREIBUNG |
+| Thema | Beschreibung |
 |-|-|
 | [**IDMLBindingTable**](/windows/desktop/api/directml/nn-directml-idmlbindingtable) | Erstellt ein DirectML-Gerät für ein bestimmtes Direct3D 12-Gerät. |
 | [**IDMLCommandRecorder**](/windows/desktop/api/directml/nn-directml-idmlcommandrecorder) | Zeichnet Verteilungen von DirectML-Arbeiten in eine Direct3D 12-Befehlsliste auf. |

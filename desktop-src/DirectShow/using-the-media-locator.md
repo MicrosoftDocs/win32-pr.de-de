@@ -1,28 +1,28 @@
 ---
-description: Verwenden des medienlocators
+description: Verwenden des Medienlocator
 ms.assetid: 07840a37-7065-41e8-aee5-855c9f89fb77
-title: Verwenden des medienlocators
+title: Verwenden des Medienlocator
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fce934b06d92c0bec66d9260a485516d3acaf5a9
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: be064a375f121f7c4e3dad54c2615bf8d6f7df489e119ec9cbb2c6f4b4294628
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "103961099"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119633130"
 ---
-# <a name="using-the-media-locator"></a>Verwenden des medienlocators
+# <a name="using-the-media-locator"></a>Verwenden des Medienlocator
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Der medienlocator ist ein Hilfsobjekt, das Dateinamen überprüft und nach fehlenden Dateien in lokalen Verzeichnissen oder Netzwerkverzeichnissen sucht. Der Medien Detektor speichert einen Cache von Verzeichnis Pfaden, in denen er Dateien in früheren Such Vorgängen erfolgreich gefunden hat. Um eine Datei zu suchen, durchsucht Sie die Verzeichnisse im Cache. Wenn ein Fehler auftritt, kann der Medien Detektor ein Dialogfeld "Datei öffnen" anzeigen, in dem der Benutzer eine Datei manuell finden kann. Wenn der Benutzer die Datei eingibt, fügt der medienlocator das neue Verzeichnis dem Cache hinzu. Der medienlocator macht die [**imedialocator**](imedialocator.md) -Schnittstelle verfügbar.
+Der Medienlocator ist ein Hilfsobjekt, das Dateinamen überprüft und nach fehlenden Dateien in lokalen Verzeichnissen oder Netzwerkverzeichnissen sucht. Die Medienerkennung speichert einen Cache von Verzeichnispfaden, in denen dateien in früheren Suchvorgängen erfolgreich gefunden wurden. Um eine Datei zu suchen, durchsucht sie die Verzeichnisse im Cache. Wenn dies nicht der Fehler ist, kann die Medienerkennung ein Dialogfeld Datei öffnen anzeigen, in dem der Benutzer manuell nach einer Datei suchen kann. Wenn der Benutzer die Datei findet, fügt der Medienlocator das neue Verzeichnis dem Cache hinzu. Der Medienlocator macht die [**IMediaLocator-Schnittstelle**](imedialocator.md) verfügbar.
 
-In der Regel erstellt Ihre Anwendung nicht direkt eine Instanz des medienlocators. Stattdessen stellen die Zeitachse und die Renderingengine die folgenden Methoden zum Validieren von Dateinamen mithilfe des Medien Detektors bereit.
+In der Regel erstellt Ihre Anwendung nicht direkt eine Instanz des Medienlocator. Stattdessen stellen die Zeitachse und die Render-Engine die folgenden Methoden zum Überprüfen von Dateinamen mithilfe der Medienerkennung zur Verfügung.
 
--   Um Dateinamen in der Zeitachse zu validieren, nennen Sie [**iamtimeline:: validatesourcenames**](iamtimeline-validatesourcenames.md). Optional aktualisiert diese Methode auch die Quell Objekte mit den richtigen Dateinamen.
--   Zum Überprüfen von Dateinamen, wenn das Projekt gerendert wird, nennen Sie " [**irienderengine:: setsourcenamevalidation**](irenderengine-setsourcenamevalidation.md)".
+-   Um Dateinamen auf der Zeitachse zu überprüfen, rufen [**Sie IAMTimeline::ValidateSourceNames auf.**](iamtimeline-validatesourcenames.md) Optional aktualisiert diese Methode auch die Quellobjekte mit den richtigen Dateinamen.
+-   Um Dateinamen beim Rendern des Projekts zu überprüfen, rufen Sie [**IRenderEngine::SetSourceNameValidation auf.**](irenderengine-setsourcenamevalidation.md)
 
-Beide Methoden verwenden Flags, die das Verhalten des medienlocators steuern. Beispielsweise können Sie die Suche auf lokale Verzeichnisse beschränken.
+Beide Methoden verwenden Flags, die das Verhalten des Medienlocator steuern. Beispielsweise können Sie die Suche auf lokale Verzeichnisse beschränken.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

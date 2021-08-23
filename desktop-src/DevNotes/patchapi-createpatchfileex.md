@@ -1,6 +1,6 @@
 ---
 description: Erstellt ein Delta zwischen der angegebenen Quelldatei und der angegebenen Zieldatei.
-title: Funktion "featepatchfileexa/W"
+title: CreatePatchFileExA/W-Funktion
 ms.topic: reference
 ms.date: 04/17/2020
 ms.keywords: CreatePatchFileExA, CreatePatchFileExW
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - mspatchc.dll
-ms.openlocfilehash: c84be2d859a780e46e7e940aa4a7e7da5296f0e7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7d73b6f4d10c52e9eca147227fdbfece31cba157af84fdf56dbef5cacda516b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355268"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119690870"
 ---
-# <a name="createpatchfileexaw-function"></a>Funktion "featepatchfileexa/W"
+# <a name="createpatchfileexaw-function"></a>CreatePatchFileExA/W-Funktion
 
-Die Funktionen " **epatepatchfileexa** " und " **upatepatchfileexw** " erstellen ein Delta zwischen der angegebenen Quelldatei und der angegebenen Zieldatei. Sowohl die Quell-als auch die Zieldateien werden als Pfade bereitgestellt. Das Ausgabe Delta wird auch in einen bereitgestellten Pfad geschrieben. Diese Funktionen stellen während des Erstellungs Vorgangs Statusberichte bereit.
+Die Funktionen **CreatePatchFileExA** und **CreatePatchFileExW** erstellen ein Delta zwischen der angegebenen Quelldatei und der angegebenen Zieldatei. Sowohl die Quell- als auch die Zieldateien werden als Pfade bereitgestellt. Das Ausgabedelta wird auch in einen angegebenen Pfad geschrieben. Diese Funktionen stellen während des Erstellungsprozesses Statusberichte bereit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,45 +54,45 @@ BOOL  PATCHAPI  CreatePatchFileExW(
 
 ## <a name="parameters"></a>Parameter
 
-*Oldfilecount*
+*OldFileCount*
 
-Die Gesamtanzahl der Quelldateien. Wird verwendet, um Delta-Dateien für mehrere Quelldateien (maximal 255) zu erstellen.
+Die Gesamtzahl der Quelldateien. Wird verwendet, um Deltas für mehrere Quelldateien zu erstellen (maximal 255).
 
-*Oldfileingefoarray*
+*OldFileInfoArray*
 
-Ein Zeiger auf das Quelldatei Informations Array.
+Zeiger auf das Informationsarray der Quelldatei.
 
 *NewFileName*
 
 Der Name der Zieldatei.
 
-*Patchdateiname*
+*PatchFileName*
 
 Der Name des Deltas, das erstellt wird.
 
-*Optionflags*
+*OptionFlags*
 
 Erstellungsflags.
 
 *ProgressCallback*
 
-Zeiger auf einen Anwendungs definierten Fortschritts Rückruf.
+Zeiger auf den anwendungsdefinierte Statusrückruf.
 
 *CallbackContext*
 
-Zeiger auf einen Anwendungs definierten Kontext.
+Zeiger auf anwendungsdefinierte Kontexte.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt **true** zurück, wenn Sie erfolgreich ist. Andernfalls wird **false** zurückgegeben.
+Diese Funktion gibt **TRUE** zurück, wenn sie erfolgreich ist. Andernfalls wird **FALSE** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |----------------|---------------------------------------------------------------------------------------|
-| Header | PatchAPI. h |
+| Header | patchapi.h |
 | DLL | mspatchc.dll |
-| Unicode | Implementiert als "kreatepatchfileexw (Unicode)" und "kreatepatchfileexa" (ANSI) |
+| Unicode | Implementiert als CreatePatchFileExW (Unicode) und CreatePatchFileExA (ANSI) |
 
 ## <a name="see-also"></a>Siehe auch
 

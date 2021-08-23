@@ -6,31 +6,31 @@ keywords:
 - OpenGL, Modi
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 427e04b856c79c9adfdfebf4061f7e96f09db835
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ec448fa94c8ed0983be68f8aa1dbbef0974d2e040c4f68b002b026b300406981
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119553980"
 ---
 # <a name="managing-modes-and-execution"></a>Verwalten von Modi und Ausführung
 
-Die Auswirkung vieler OpenGL-Funktionen hängt davon ab, ob ein bestimmter Modus wirksam ist. Die Funktionen " [**glEnable**](glenable.md) " und " [**gldeaktivieren**](gldisable.md) " legen solche Modi fest. " [**glisenabled**](glisenabled.md) " bestimmt, ob ein bestimmter Modus festgelegt ist.
+Die Auswirkung vieler OpenGL-Funktionen hängt davon ab, ob ein bestimmter Modus aktiviert ist. Die [**Funktionen glEnable**](glenable.md) und [**glDisable**](gldisable.md) legen solche Modi fest. [**glIsEnabled**](glisenabled.md) bestimmt, ob ein bestimmter Modus festgelegt ist.
 
-Sie können die Ausführung von zuvor ausgestellten OpenGL-Funktionen mit [**glfinish**](glfinish.md)steuern, wodurch alle Funktionen beendet werden, oder [**glflush**](glflush.md), wodurch sichergestellt wird, dass alle diese Funktionen innerhalb einer begrenzten Zeit abgeschlossen werden.
+Sie können die Ausführung von zuvor ausgegebenen OpenGL-Funktionen mit [**glFinish**](glfinish.md)steuern, wodurch der Abschluss aller dieser Funktionen erzwingt wird, oder [**glFlush,**](glflush.md)wodurch sichergestellt wird, dass alle diese Funktionen in einer begrenzten Zeit abgeschlossen werden.
 
-In einer bestimmten Implementierung von OpenGL können Sie möglicherweise bestimmte Verhalten mit Hinweisen mithilfe von [**glhint**](glhint.md)steuern. Solche Verhalten sind die Qualität der Farb-und Texturkoordinaten interpolung. die Genauigkeit von Nebel Berechnungen; und die Stichproben Qualität von Antialiasing Punkten, Linien oder Polygonen.
+In einer bestimmten Implementierung von OpenGL können Sie möglicherweise bestimmte Verhaltensweisen mit Hinweisen steuern, indem Sie [**glHint verwenden.**](glhint.md) Solche Verhaltensweisen sind die Qualität der Farb- und Texturkoordinateninterpolation. Die Genauigkeit von Berechnungen von Berechnungen; und die Stichprobenqualität von Antialiasingpunkten, Linien oder Polygonen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Modi und Ausführungs Verweis](modes-and-execution-reference.md)
+[Modi und Ausführungsreferenz](modes-and-execution-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

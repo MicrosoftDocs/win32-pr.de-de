@@ -1,47 +1,47 @@
 ---
-title: Befehlssatz für den MIDI-Sequencer
-description: Befehlssatz für den MIDI-Sequencer
+title: SEQUENCE Sequencer-Befehlssatz
+description: SEQUENCE Sequencer-Befehlssatz
 ms.assetid: 8f5af706-0674-4ed1-855f-22f8d74361fd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0bac1f9ca26a8e7e7e636c19ffa92d05281e16bd
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1a389c363d2efc58edf27f3174fa81d71e0aa5fac00b6efe70ef3c7fe8c1ceb4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119525080"
 ---
-# <a name="midi-sequencer-command-set"></a>Befehlssatz für den MIDI-Sequencer
+# <a name="midi-sequencer-command-set"></a>SEQUENCE Sequencer-Befehlssatz
 
-Der MIDI-Sequencer unterstützt den folgenden Satz von Befehlen.
+Der SEQUENCEr unterstützt die folgenden Befehle.
 
 
 
-| Zeichen folgen Formular                      | Nachrichten Formular                              |
+| Zeichenfolgenformular                      | Nachrichtenformular                              |
 |----------------------------------|-------------------------------------------|
-| [**Umbruch**](break.md)           | [**MCI-unter \_ Brechung**](mci-break.md)           |
-| [**Re**](capability.md) | [**MCI- \_ getdevcaps**](mci-getdevcaps.md) |
-| [**ihrer**](close.md)           | [**MCI- \_ Schließen**](mci-close.md)           |
-| [**Opo**](info.md)             | [**MCI- \_ Informationen**](mci-info.md)             |
-| [**eren**](open.md)             | [**MCI \_ geöffnet**](mci-open.md)             |
-| [**Brechung**](pause.md)           | [**MCI- \_ Pause**](mci-pause.md)           |
-| [**Theater**](play.md)             | [**MCI- \_ Play**](mci-play.md)             |
-| [**Aufnahme**](record.md)         | [**MCI- \_ Datensatz**](mci-record.md)         |
-| [**zusetzen**](resume.md)         | [**MCI-Fortsetzung \_**](mci-resume.md)         |
-| [**sicher**](save.md)             | [**MCI- \_ Speicherung**](mci-save.md)             |
-| [**einzuholen**](seek.md)             | [**MCI- \_ Suche**](mci-seek.md)             |
-| [**Set**](set.md)               | [**MCI- \_ Gruppe**](mci-set.md)               |
-| [**status**](status.md)         | [**MCI- \_ Status**](mci-status.md)         |
-| [**anzuhalten**](stop.md)             | [**MCI- \_ Beendigung**](mci-stop.md)             |
-| [sysinfo](sysinfo.md)           | [**MCI- \_ sysinfo**](mci-sysinfo.md)       |
+| [**Brechen**](break.md)           | [**MCI \_ BREAK**](mci-break.md)           |
+| [**Fähigkeit**](capability.md) | [**MCI \_ GETDEVCAPS**](mci-getdevcaps.md) |
+| [**Schließen**](close.md)           | [**MCI \_ CLOSE**](mci-close.md)           |
+| [**Informationen**](info.md)             | [**\_MCI-INFORMATIONEN**](mci-info.md)             |
+| [**öffnen**](open.md)             | [**MCI \_ OPEN**](mci-open.md)             |
+| [**pause**](pause.md)           | [**MCI \_ PAUSE**](mci-pause.md)           |
+| [**Spielen**](play.md)             | [**MCI \_ PLAY**](mci-play.md)             |
+| [**Aufzeichnung**](record.md)         | [**MCI \_ RECORD**](mci-record.md)         |
+| [**Fortsetzen**](resume.md)         | [**MCI \_ RESUME**](mci-resume.md)         |
+| [**Speichern**](save.md)             | [**MCI \_ SAVE**](mci-save.md)             |
+| [**Suchen**](seek.md)             | [**MCI \_ SEEK**](mci-seek.md)             |
+| [**Festgelegt**](set.md)               | [**MCI \_ SET**](mci-set.md)               |
+| [**status**](status.md)         | [**\_MCI-STATUS**](mci-status.md)         |
+| [**Stoppen**](stop.md)             | [**MCI \_ STOP**](mci-stop.md)             |
+| [Sysinfo](sysinfo.md)           | [**MCI \_ SYSINFO**](mci-sysinfo.md)       |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

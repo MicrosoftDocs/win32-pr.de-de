@@ -3,34 +3,34 @@ title: Audiopuffer
 description: Audiopuffer
 ms.assetid: e18e9ff4-e8e9-4013-a800-1a30335026ff
 keywords:
-- WM_CAP_GET_SEQUENCE_SETUP Meldung
-- capcapturegetsetup-Makro
-- WM_CAP_SET_SEQUENCE_SETUP Meldung
-- capcapturesetsetup-Makro
+- WM_CAP_GET_SEQUENCE_SETUP-Nachricht
+- capCaptureGetSetup-Makro
+- WM_CAP_SET_SEQUENCE_SETUP-Nachricht
+- capCaptureSetSetup-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f1a67f120dc2d2ff956148e5dd4e3992a960641d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7993e3dc89abda520c0f1c5bda90f3eb209aca31e36071a304af01fb420d821e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709179"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119692100"
 ---
 # <a name="audio-buffers"></a>Audiopuffer
 
-Sie können den Audioteil eines Aufzeichnungs Vorgangs auf drei Arten steuern:
+Sie können den Audioteil eines Erfassungsvorgang auf drei Arten steuern:
 
--   Einschließen oder Ausschließen von Audiodaten aus dem Aufzeichnungs Vorgang.
--   Fordern Sie eine bestimmte Anzahl von audiopuffern an.
--   Fordern Sie an, dass Audiopuffer eine bestimmte Größe aufweisen.
+-   Schließen Sie Audiodaten in den Erfassungsvorgang ein, oder schließen Sie sie aus.
+-   Fordern Sie eine bestimmte Anzahl von Audiopuffern an.
+-   Fordern Sie an, dass Audiopuffer eine bestimmte Größe haben.
 
-Sie können die Einstellungen für Audiopuffer abrufen, indem Sie [**die \_ \_ get \_ Sequence- \_ Setup**](wm-cap-get-sequence-setup.md) Nachricht (oder das [**capcapturegetsetup**](/windows/desktop/api/Vfw/nf-vfw-capcapturegetsetup) -Makro) der WM-Obergrenze verwenden. Der **fcaptureaudiomember** der [**captumams**](/windows/win32/api/vfw/ns-vfw-captureparms) -Struktur gibt an, ob Audiodaten in den Aufzeichnungs Vorgang eingeschlossen oder davon ausgeschlossen werden. Die aktuell angeforderte Anzahl der Audiopuffer wird im **wnumaudiorequtzig** -Element gespeichert, und die aktuelle audiopuffergröße wird im **dwaudiobuffersize** -Element gespeichert. Sie können angeben, ob Audioerfassung eingeschlossen werden soll, wie die Größe und Anzahl der Audiopuffer durch Aktualisieren dieser Member angegeben werden soll, und die aktualisierte **captuadapms** -Struktur wird mithilfe der " [**WM \_ Cap \_ Set \_ Sequence \_**](wm-cap-set-sequence-setup.md) "-Setup Nachricht (oder dem [**capcapturesetsetup**](/windows/desktop/api/Vfw/nf-vfw-capcapturesetsetup) -Makro) an das Aufzeichnungs Fenster gesendet.
+Sie können die Einstellungen für Audiopuffer mithilfe der [**WM CAP GET SEQUENCE \_ \_ \_ \_ SETUP-Meldung**](wm-cap-get-sequence-setup.md) (oder des [**Makros capCaptureGetSetup)**](/windows/desktop/api/Vfw/nf-vfw-capcapturegetsetup) abrufen. Der **fCaptureAudio-Member** der [**CAPTUREPARMS-Struktur**](/windows/win32/api/vfw/ns-vfw-captureparms) gibt an, ob Audiodaten in den Erfassungsvorgang eingeschlossen oder davon ausgeschlossen werden. Die aktuell angeforderte Anzahl von Audiopuffern wird im **wNumAudioRequested-Element** gespeichert, und die aktuelle Audiopuffergröße wird im **dwAudioBufferSize-Element** gespeichert. Sie können angeben, ob audio capture enthalten sein soll, die Größe und Anzahl von Audiopuffern angeben, indem Sie diese Member aktualisieren, und die aktualisierte **CAPTUREPARMS-Struktur** mithilfe der [**WM CAP SET SEQUENCE \_ \_ \_ \_ SETUP-Meldung**](wm-cap-set-sequence-setup.md) (oder des [**capCaptureSetSetup-Makros)**](/windows/desktop/api/Vfw/nf-vfw-capcapturesetsetup) an das Erfassungsfenster senden.
 
-Standardmäßig ist das Audioformat im Aufzeichnungs Vorgang enthalten, und es werden vier Audiopuffer zugewiesen. Der Standardwert von " **f** " ist " **true**". Die Standardpuffergröße (der Wert von **dwaudiobuffersize**) kann 0,5 Sekunden Audiodaten oder 10K enthalten, je nachdem, welcher Wert größer ist.
+Standardmäßig ist Audio im Erfassungsvorgang enthalten, und vier Audiopuffer werden zugeordnet. Der Standardwert von **fCaptureAudio ist** **TRUE.** Die Standardpuffergröße (der Wert **von dwAudioBufferSize)** kann 0,5 Sekunden Audiodaten oder 10.000 enthalten, je nach Größe.
 
- 
+ 
 
- 
+ 
 
 
 

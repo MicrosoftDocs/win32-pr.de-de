@@ -1,11 +1,11 @@
 ---
 title: OEM-Information-Attribut
-description: Zum Speichern von OEM-Informationen. Nicht mehr verwendet. Aus Gründen der Abwärtskompatibilität.
+description: Zum Halten von OEM-Informationen. Nicht mehr verwendet. Hier aus Gründen der Abwärtskompatibilität.
 ms.assetid: d456f9e0-da88-4f3a-897a-1a9f42f4b7b9
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für OEM-Information-Attribut
-- OEMInformation-Attribut, AD-Schema
+- OEM-Information AD-Schema
+- oEMInformation-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 700baa4453d0ce88c2c6a316cef88244c6a96687
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 28a9440f2ef5dbb6ed4c1899b8439a442767ab1692acda2c38d280d56eb62be0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119442340"
 ---
 # <a name="oem-information-attribute"></a>OEM-Information-Attribut
 
-Zum Speichern von OEM-Informationen. Nicht mehr verwendet. Aus Gründen der Abwärtskompatibilität.
+Zum Halten von OEM-Informationen. Nicht mehr verwendet. Hier aus Gründen der Abwärtskompatibilität.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | OEM-Information                             |
-| LDAP-Display-Name | OEMInformation                              |
+| Ldap-Anzeigename | oEMInformation                              |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.151                      |
-| System-ID-GUID    | bf9679ea-0de6-11d0-a285-00aa003049e2        |
+| System-Id-Guid    | bf9679ea-0de6-11d0-a285-00aa003049e2        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Zum Speichern von OEM-Informationen. Nicht mehr verwendet. Aus Gründen der Abw�
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Zum Speichern von OEM-Informationen. Nicht mehr verwendet. Aus Gründen der Abw�
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
 | System-Only            | False                                                 |
-| Ist-einwertig       | Richtig                                                  |
+| Is-Single-Valued       | True                                                  |
 | Ist indiziert             | False                                                 |
 | Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | 0                                                     |
 | Range-Upper            | 32767                                                 |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000010                                            |
-| In verwendete Klassen        | [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Zum Speichern von OEM-Informationen. Nicht mehr verwendet. Aus Gründen der Abw�
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
 | System-Only            | False                                                 |
-| Ist-einwertig       | Richtig                                                  |
+| Is-Single-Valued       | True                                                  |
 | Ist indiziert             | False                                                 |
 | Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | 0                                                     |
 | Range-Upper            | 32767                                                 |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000010                                            |
-| In verwendete Klassen        | [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Zum Speichern von OEM-Informationen. Nicht mehr verwendet. Aus Gründen der Abw�
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
 | System-Only            | False                                                 |
-| Ist-einwertig       | Richtig                                                  |
+| Is-Single-Valued       | True                                                  |
 | Ist indiziert             | False                                                 |
 | Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | 0                                                     |
 | Range-Upper            | 32767                                                 |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000010                                            |
-| In verwendete Klassen        | [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Zum Speichern von OEM-Informationen. Nicht mehr verwendet. Aus Gründen der Abw�
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
 | System-Only            | False                                                 |
-| Ist-einwertig       | Richtig                                                  |
+| Is-Single-Valued       | True                                                  |
 | Ist indiziert             | False                                                 |
 | Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | 0                                                     |
 | Range-Upper            | 32767                                                 |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000010                                            |
-| In verwendete Klassen        | [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Zum Speichern von OEM-Informationen. Nicht mehr verwendet. Aus Gründen der Abw�
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
 | System-Only            | False                                                 |
-| Ist-einwertig       | Richtig                                                  |
+| Is-Single-Valued       | True                                                  |
 | Ist indiziert             | False                                                 |
 | Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | 0                                                     |
 | Range-Upper            | 32767                                                 |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000010                                            |
-| In verwendete Klassen        | [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Zum Speichern von OEM-Informationen. Nicht mehr verwendet. Aus Gründen der Abw�
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
 | System-Only            | False                                                 |
-| Ist-einwertig       | Richtig                                                  |
+| Is-Single-Valued       | True                                                  |
 | Ist indiziert             | False                                                 |
 | Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | 0                                                     |
 | Range-Upper            | 32767                                                 |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000010                                            |
-| In verwendete Klassen        | [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 

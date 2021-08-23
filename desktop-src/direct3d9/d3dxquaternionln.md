@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d1a529c1c6ca4d7f81bf4d41fcdb4a7c7179874b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: df6e7c46f444fc99026e09fe39aa66271afba0565f268ed1c86b67e29f74c3bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094058"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119631050"
 ---
 # <a name="d3dxquaternionln-function-d3dx9mathh"></a>D3DXQuaternionLn-Funktion (D3dx9math.h)
 
@@ -65,7 +65,7 @@ Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
 Zeiger auf eine [**D3DXQUATERNION-Struktur,**](d3dxquaternion.md) bei der es sich um den natürlichen Logarithmus handelt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die **D3DXQuaternionLn-Funktion** funktioniert nur für Einheitenquaternionen.
 
@@ -86,14 +86,14 @@ Verwenden [**Sie D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für all
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

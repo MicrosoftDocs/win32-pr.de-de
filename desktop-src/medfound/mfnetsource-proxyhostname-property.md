@@ -1,41 +1,41 @@
 ---
-description: Gibt den Hostnamen des Proxy Servers an.
+description: Gibt den Hostnamen des Proxyservers an.
 ms.assetid: e53c86e9-c326-41c9-aa86-c80a750b9ce3
-title: MFNETSOURCE_PROXYHOSTNAME-Eigenschaft (mspdl. h)
+title: MFNETSOURCE_PROXYHOSTNAME -Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dc59d5b827276eb5063febf7a8cb7647002ca72a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f82746763c937bdca388782cb0882b536c0b9e93b660e0f8e0a04426e5b48a61
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368124"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119663670"
 ---
-# <a name="mfnetsource_proxyhostname-property"></a>Eigenschaft "MF NetSource \_ proxyhostname"
+# <a name="mfnetsource_proxyhostname-property"></a>MFNETSOURCE-Eigenschaft \_ "PROXYHOSTNAME"
 
-Gibt den Hostnamen des Proxy Servers an.
+Gibt den Hostnamen des Proxyservers an.
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
-Breit Zeichen-Zeichenfolge (**WCHAR** \* )
+Breitzeichenzeichenfolge (**WCHAR** \* )
 
 VT \_ LPWSTR
 
-**pwszval**
+**pwszVal**
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Konstante " **MF NetSource \_ proxyhostname** " definiert die GUID für diesen Eigenschafts Schlüssel. Der Eigenschaften Bezeichner (PID) ist 0 (null).
+Die Konstante **MFNETSOURCE \_ PROXYHOSTNAME** definiert die GUID für diesen Eigenschaftsschlüssel. Der Eigenschaftenbezeichner (PID) ist 0 (null).
 
-Anwendungen können diese Eigenschaft verwenden, um beim Erstellen des proxylocator-Objekts den standardproxylocator zu konfigurieren. Um die-Eigenschaft festzulegen, übergeben Sie einen **IPropertyStore** -Zeiger im *pproxyconfig* -Parameter der [**mfkreateproxylocator**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateproxylocator) -Funktion. Diese Eigenschaft muss von der Anwendung festgelegt werden, wenn der proxylocator für den Betrieb im manuellen Modus konfiguriert ist.
+Anwendungen können diese Eigenschaft verwenden, um den Standardproxylocator beim Erstellen des Proxylocatorobjekts zu konfigurieren. Übergeben Sie zum Festlegen der Eigenschaft einen **IPropertyStore-Zeiger** im *pProxyConfig-Parameter* der [**MFCreateProxyLocator-Funktion.**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateproxylocator) Diese Eigenschaft muss von der Anwendung festgelegt werden, wenn der Proxylocator für den Betrieb im manuellen Modus konfiguriert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,9 +43,9 @@ Anwendungen können diese Eigenschaft verwenden, um beim Erstellen des proxyloca
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -53,13 +53,13 @@ Anwendungen können diese Eigenschaft verwenden, um beim Erstellen des proxyloca
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
 [Netzwerk in Media Foundation](networking-in-media-foundation.md)
 </dt> <dt>
 
-[Proxy Unterstützung für Netzwerk Quellen](proxy-support-for-network-sources.md)
+[Proxyunterstützung für Netzwerkquellen](proxy-support-for-network-sources.md)
 </dt> </dl>
 
  

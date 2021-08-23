@@ -1,7 +1,7 @@
 ---
 description: Ruft den Wert der alternativen Klassen-ID ab.
 ms.assetid: 80c7cbba-e28d-4973-9f3f-7636ff331b64
-title: 'Iscardcmd:: get_AlternateClassId-Methode (scarddat. h)'
+title: ISCardCmd::get_AlternateClassId-Methode (Scarddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 8cfc47011881ae3e3f6df5ef51c910899a054f84
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ac6d74f89eaf2c42ec9fc00cef9d82735b4b28885180c3c5d429dad7450e3c74
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363335"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119577780"
 ---
-# <a name="iscardcmdget_alternateclassid-method"></a>Iscardcmd:: get- \_ Methode "alternative Methode"
+# <a name="iscardcmdget_alternateclassid-method"></a>ISCardCmd::get \_ AlternateClassId-Methode
 
-\[Die Methode " **get \_ Alternativen Klassifizierungs d** " ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **Get \_ AlternateClassId-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die Methode **Get Alternate \_ -lassid** Ruft den Wert der alternativen Klassen-ID ab. Bei dieser Methode tritt ein Fehler auf, es sei [**denn, die \_**](iscardcmd-put-alternateclassid.md)Alternative ID wurde durch einen vorherigen-Befehl von Set Alternate
+Die **Get \_ AlternateClassId-Methode** ruft den Wert der alternativen Klassen-ID ab. Bei dieser Methode ist ein Fehler zu sehen, es sei denn, die alternative ID wurde durch einen vorherigen Aufruf von [**\_ AlternateClassId festgelegt.**](iscardcmd-put-alternateclassid.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,36 +41,36 @@ HRESULT get_AlternateClassId(
 
 <dl> <dt>
 
-*pbyclass* \[ vorgenommen\]
+*pbyClass* \[ out\]
 </dt> <dd>
 
-Zeiger auf das Byte, das bei Rückgabe den Wert der alternativen Klassen-ID enthält.
+Zeiger auf das Byte, das den alternativen Klassen-ID-Wert bei der Rückgabe enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt die folgenden möglichen Werte zurück.
+Die -Methode gibt die folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                    | Beschreibung                                                                                                                                 |
 |------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Der Vorgang wurde erfolgreich abgeschlossen.<br/>                                                                                            |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>   | Der *pbyclass* -Parameter ist ungültig.<br/>                                                                                           |
-| <dl> <dt>**E \_ AccessDenied**</dt> </dl> | Die Alternative Klassen-ID wurde zuvor nicht durch einen-Befehl zum Einfügen von ' Alternate [**\_ -lassid**](iscardcmd-put-alternateclassid.md)' festgelegt.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>   | Der *pbyClass-Parameter* ist ungültig.<br/>                                                                                           |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Die alternative Klassen-ID wurde zuvor nicht durch einen Aufruf von [**\_ AlternateClassId festgelegt.**](iscardcmd-put-alternateclassid.md)<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gilt für die Kommunikation mit dem [*Protokoll T = 0*](../secgloss/t-gly.md). Weitere Informationen finden Sie unter [**Put \_ -Alternativen**](iscardcmd-put-alternateclassid.md).
+Diese Methode gilt für die Kommunikation mithilfe des [*T=0-Protokolls*](../secgloss/t-gly.md). Weitere Informationen finden Sie unter [**put \_ AlternateClassId**](iscardcmd-put-alternateclassid.md).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie die Alternative Klassen-ID abgerufen wird. Im Beispiel wird davon ausgegangen, dass "piscardcmd" ein gültiger Zeiger auf eine Instanz der [**iscardcmd**](iscardcmd.md) -Schnittstelle ist.
+Das folgende Beispiel zeigt, wie die alternative Klassen-ID abgerufen wird. Im Beispiel wird davon ausgegangen, dass pISCardCmd ein gültiger Zeiger auf eine Instanz der [**ISCardCmd-Schnittstelle**](iscardcmd.md) ist.
 
 
 ```C++
@@ -94,14 +94,14 @@ if (FAILED(hr))
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scarddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scarddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardcmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
+| IID<br/>                      | IID \_ ISCardCmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
 
 
 
@@ -109,10 +109,10 @@ if (FAILED(hr))
 
 <dl> <dt>
 
-[**Iscardcmd**](iscardcmd.md)
+[**ISCardCmd**](iscardcmd.md)
 </dt> <dt>
 
-[**" \_ Alternative" platzieren**](iscardcmd-put-alternateclassid.md)
+[**put \_ AlternateClassId**](iscardcmd-put-alternateclassid.md)
 </dt> </dl>
 
  

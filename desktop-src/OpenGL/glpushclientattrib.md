@@ -1,9 +1,9 @@
 ---
-title: glpushclientatpub-Funktion (GL. h)
-description: Die Funktionen glpushclientattab und glpopclientatpub speichern und stellen Gruppen von Client Zustandsvariablen im Client Attribut Stapel wieder her. | glpushclientatpub-Funktion (GL. h)
+title: glPushClientAttrib-Funktion (Gl.h)
+description: Mit den Funktionen glPushClientAttrib und glPopClientAttrib werden Gruppen von Clientzustandsvariablen im Clientattributstapel gespeichert und wiederhergestellt. | glPushClientAttrib-Funktion (Gl.h)
 ms.assetid: 69f28af6-1023-4546-95ff-169525c23b07
 keywords:
-- glpushclientatpub-Funktion OpenGL
+- glPushClientAttrib-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 944e2e4229f0d36f0009ce337fd3806020322dbf
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: f378ec3ff735ed916567ea91e211a1d8a1685580b1f1ea80d448b92203b39a3d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353779"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119492610"
 ---
-# <a name="glpushclientattrib-function"></a>glpushclientatpub-Funktion
+# <a name="glpushclientattrib-function"></a>glPushClientAttrib-Funktion
 
-Die Funktionen **glpushclientattab** und [**glpopclientatpub**](glpopclientattrib.md) speichern und stellen Gruppen von Client Zustandsvariablen im Client Attribut Stapel wieder her.
+Mit **den Funktionen glPushClientAttrib** und [**glPopClientAttrib**](glpopclientattrib.md) werden Gruppen von Clientzustandsvariablen im Clientattributstapel gespeichert und wiederhergestellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,15 +43,15 @@ void WINAPI glPushClientAttrib(
 *mask* 
 </dt> <dd>
 
-Eine Maske, die angibt, welche Attribute gespeichert werden sollen. Im folgenden finden Sie die symbolischen Masken Konstanten und ihre zugeordneten OpenGL-Client Zustände.
+Eine Maske, die angibt, welche Attribute zu speichern sind. Im Folgenden finden Sie die symbolischen Maskenkonstant und die zugehörigen OpenGL-Clientzustände.
 
 
 
 | Wert                                                                                                                                                                                                                                            | Bedeutung                                           |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
-| <span id="GL_CLIENT_PIXEL_STORE_BIT"></span><span id="gl_client_pixel_store_bit"></span><dl> <dt>**GL- \_ Client \_ Pixel \_ Speicher \_ Bit**</dt> </dl>                                             | Pixel Speicher Modus-Attribute.<br/>         |
-| <span id="GL_CLIENT_VERTEX_ARRAY_BIT"></span><span id="gl_client_vertex_array_bit"></span><dl> <dt>**GL- \_ Client- \_ Vertex- \_ array \_ Bit**</dt> </dl>                                          | Vertex-Array Attribute.<br/>               |
-| <span id="GL_CLIENT_ALL_ATTRIB_BITs"></span><span id="gl_client_all_attrib_bits"></span><span id="GL_CLIENT_ALL_ATTRIB_BITS"></span><dl> <dt>**GL- \_ Client \_ alle \_ attrb- \_ Bits**</dt> </dl> | Alle Stackable Client-State-Attribute.<br/> |
+| <span id="GL_CLIENT_PIXEL_STORE_BIT"></span><span id="gl_client_pixel_store_bit"></span><dl> <dt>**GL \_ CLIENT \_ PIXEL \_ STORE \_ BIT**</dt> </dl>                                             | Pixelspeichermodusattribute.<br/>         |
+| <span id="GL_CLIENT_VERTEX_ARRAY_BIT"></span><span id="gl_client_vertex_array_bit"></span><dl> <dt>**GL \_ CLIENT \_ VERTEX \_ ARRAY \_ BIT**</dt> </dl>                                          | Vertexarrayattribute.<br/>               |
+| <span id="GL_CLIENT_ALL_ATTRIB_BITs"></span><span id="gl_client_all_attrib_bits"></span><span id="GL_CLIENT_ALL_ATTRIB_BITS"></span><dl> <dt>**GL \_ CLIENT \_ ALL \_ ATTRIB \_ BITs**</dt> </dl> | alle stapelbaren Clientzustandsattribute.<br/> |
 
 
 
@@ -65,38 +65,38 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                               | Bedeutung                                                                       |
 |----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| <dl> <dt>**GL- \_ Stapel \_ Überlauf**</dt> </dl> | Die Funktion wurde aufgerufen, während der Client Attribut Stapel voll war.<br/> |
+| <dl> <dt>**GL \_ STACK \_ OVERFLOW**</dt> </dl> | Die Funktion wurde aufgerufen, während der Clientattributstapel voll war.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glpushclientatpub** -Funktion verwendet den mask-Parameter, um zu bestimmen, welche Gruppen von Client Zustandsvariablen im Client Attribut Stapel gespeichert werden. Sie können den bitweisen OR-Operator verwenden, um akzeptierte symbolische Konstanten zum Festlegen von Bits und zum Erstellen einer Maske zusammenzufassen.
+Die **glPushClientAttrib-Funktion** verwendet ihren mask-Parameter, um zu bestimmen, welche Gruppen von Clientzustandsvariablen im Clientattributstapel gespeichert werden. Sie können den bitweise OR-Operator verwenden, um akzeptierte symbolische Konstanten zu verbinden, um Bits zu setzen und eine Maske zu erstellen.
 
-Die Funktion " [**glpopclientatpub**](glpopclientattrib.md) " stellt die Werte der Client Zustandsvariablen wieder her, die zuletzt mit " **glpushclientatpub**" gespeichert wurden. Nicht zuvor gespeicherte Client Zustandsvariablen bleiben unverändert. Durch das Übertragen von Attributen auf einen vollständigen Client Attribut Stapel oder das Pop von Attributen aus einem leeren Stapel wird ein Fehlerflag festgelegt, und es wird keine andere Änderung am OpenGL-Zustand vorgenommen. Der Client Attribut Stapel ist standardmäßig leer.
+Die [**glPopClientAttrib-Funktion**](glpopclientattrib.md) stellt die Werte der zuletzt mit **glPushclientAttrib** gespeicherten Clientzustandsvariablen wieder auf. Clientzustandsvariablen, die nicht zuvor gespeichert wurden, bleiben unverändert. Durch Das Pushen von Attributen in einen vollständigen Clientattributstapel oder das Ausblenden von Attributen aus einem leeren Stapel wird ein Fehlerflag und keine andere Änderung am OpenGL-Zustand vorgenommen. Standardmäßig ist der Clientattributstapel leer.
 
-Einige OpenGL-Client Zustands Werte können nicht auf dem Client Attribut Stapel gespeichert werden. Beispielsweise können Sie die SELECT-oder Feedback Zustände nicht im Client Attribut Stapel speichern. Die Tiefe des Client Attribut Stapels beträgt mindestens 16.
+Einige OpenGL-Clientzustandswerte können nicht im Clientattributstapel gespeichert werden. Beispielsweise können Sie die Auswahl- oder Feedbackzustände nicht im Clientattributstapel speichern. Die Tiefe des Clientattributstapels beträgt mindestens 16.
 
-Die Funktionen " **glpushclientattab** " und " **glpopclientatpub** " werden nicht in Anzeigelisten kompiliert, sondern sofort ausgeführt.
+Die **Funktionen glPushclientAttrib** und **glPopClientAttrib** werden nicht in Anzeigelisten kompiliert, sondern sofort ausgeführt.
 
-Die Funktionen " **glpushclientattab** " und " **glpopclientatpub** " können nur die Pixel Speicher Modi per Push und Pop und den Scheitelpunkt Array-Client Status per Push Sie müssen zum überführen von Push-und Pop-Zuständen, die auf dem Server aufbewahrt werden, [**glpushattab**](glpushattrib.md) und [**glpopatpub**](glpopattrib.md) verwenden.
+Die **Funktionen glPushClientAttrib** und **glPopClientAttrib** können nur Push- und Poppixelspeichermodi und Scheitelpunktarray-Clientzustände verwenden. Sie müssen [**glPushAttrib**](glpushattrib.md) und [**glPopAttrib**](glpopattrib.md) verwenden, um push- und pop-Zustände zu übertragen, die auf dem Server beibehalten werden.
 
 > [!Note]  
-> Die Funktionen **glpushclientatpub** und **glpopclientatpub** sind nur in OpenGL, Version 1,1 oder höher, verfügbar.
+> Die **Funktionen glPushClientAttrib** und **glPopClientAttrib** sind nur in OpenGL Version 1.1 oder höher verfügbar.
 
  
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glpushclientatpub** und **glpopclientatpub** abgerufen:
+Die folgenden Funktionen rufen Informationen zu **glPushClientAttrib** und **glPopClientAttrib ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL- \_ Client- \_ attrb- \_ Stapel \_ Tiefe
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ CLIENT \_ ATTRIB \_ STACK \_ DEPTH
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Max. Client Nachweis \_ \_ \_ \_ Tiefe für Client Nachweis
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ MAX \_ CLIENT \_ ATTRIB \_ STACK \_ DEPTH
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -106,8 +106,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glpushcl
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -116,43 +116,43 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glpushcl
 
 <dl> <dt>
 
-[**glcolorpointer**](glcolorpointer.md)
+[**glColorPointer**](glcolorpointer.md)
 </dt> <dt>
 
-[**gldisableclientstate**](gldisableclientstate.md)
+[**glDisableClientState**](gldisableclientstate.md)
 </dt> <dt>
 
-[**gledgeflagpointer**](gledgeflagpointer.md)
+[**glEdgeFlagPointer**](gledgeflagpointer.md)
 </dt> <dt>
 
-[**glenableclientstate**](glenableclientstate.md)
+[**glEnableClientState**](glenableclientstate.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glgeterror**](glgeterror.md)
+[**glGetError**](glgeterror.md)
 </dt> <dt>
 
-[**glindexpointer**](glindexpointer.md)
+[**glIndexPointer**](glindexpointer.md)
 </dt> <dt>
 
-[**glnormalpointer**](glnormalpointer.md)
+[**glNormalPointer**](glnormalpointer.md)
 </dt> <dt>
 
-[**glnewlist**](glnewlist.md)
+[**glNewList**](glnewlist.md)
 </dt> <dt>
 
-[**glpixelstore**](glpixelstore-functions.md)
+[**glPixelStore**](glpixelstore-functions.md)
 </dt> <dt>
 
-[**glpushatpub**](glpushattrib.md)
+[**glPushAttrib**](glpushattrib.md)
 </dt> <dt>
 
-[**gltexcoordpointer**](gltexcoordpointer.md)
+[**glTexCoordPointer**](gltexcoordpointer.md)
 </dt> <dt>
 
-[**glvertexpointer**](glvertexpointer.md)
+[**glVertexPointer**](glvertexpointer.md)
 </dt> </dl>
 
  

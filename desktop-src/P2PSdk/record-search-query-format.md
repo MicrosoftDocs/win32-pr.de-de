@@ -1,19 +1,19 @@
 ---
-description: Ein Aufrufen der Funktion "Peer groupsearchrecords" erfordert einen XML-Abfrage Zeichenfolgen-Parameter, der verwendet wird, um die grundlegenden Kriterien einer Suche zu ermitteln.
+description: Ein Aufruf der PeerGroupSearchRecords-Funktion erfordert einen XML-Abfragezeichenfolgenparameter, der verwendet wird, um die grundlegenden Kriterien einer Suche zu bestimmen.
 ms.assetid: 2c5ab425-6959-418a-8d9a-c8155257fc7e
-title: Suchabfrage Format aufzeichnen
+title: Abfrageformat der Datensatzsuche
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 02b475c8a449e3bcd360df5757fef508b1a744d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 23457cfde6955927b3efdcce5ae2dff94480c7cf56849b418547fe2503a36830
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119517960"
 ---
-# <a name="record-search-query-format"></a>Suchabfrage Format aufzeichnen
+# <a name="record-search-query-format"></a>Abfrageformat der Datensatzsuche
 
-Ein Aufrufen der Funktion " [**Peer groupsearchrecords**](/windows/desktop/api/P2P/nf-p2p-peergroupsearchrecords) " erfordert einen XML-Abfrage Zeichenfolgen-Parameter, der verwendet wird, um die grundlegenden Kriterien einer Suche zu ermitteln. Verwenden Sie das folgende Schema, um eine XML-Zeichenfolge zu formulieren:
+Ein Aufruf der [**PeerGroupSearchRecords-Funktion**](/windows/desktop/api/P2P/nf-p2p-peergroupsearchrecords) erfordert einen XML-Abfragezeichenfolgenparameter, der verwendet wird, um die grundlegenden Kriterien einer Suche zu bestimmen. Verwenden Sie das folgende Schema, um eine XML-Zeichenfolge zu formulieren:
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8" ?>
@@ -80,13 +80,13 @@ Ein Aufrufen der Funktion " [**Peer groupsearchrecords**](/windows/desktop/api/P
 </xs:schema> 
 ```
 
-### <a name="elements-to-use-for-a-record-search"></a>Für eine Daten Satz Suche zu verwendende Elemente
+### <a name="elements-to-use-for-a-record-search"></a>Elemente, die für eine Datensatzsuche verwendet werden
 
-Das primäre Element in einer Daten Satz Suche ist " **Peer Search**", das die Uniform Resource Identifier (URI) des zugeordneten Schemas im **xmlns** -Attribut enthält. Wenn " **Peer Search** " als untergeordnetes Element verwendet wird, können Sie **und**,- **Klausel** und **oder** als untergeordnete Elemente verwenden.
+Das primäre Element in einer Datensatzsuche ist **peersearch,** das die Uniform Resource Identifier (URI) des zugeordneten Schemas im **xmlns-Attribut** enthält. Wenn **peersearch** als untergeordnetes Element verwendet wird, können Sie **und**, die **-Klausel** und **oder** als untergeordnete Elemente verwenden.
 
--   **und** -das- **und** -Element führt eine logische and-Operation für eine oder mehrere Klauseln aus, die zwischen den öffnenden und schließenden Tags enthalten sind. Andere **-** und- **oder** -Tags können untergeordnete Elemente sein, und rekursive Ergebnisse ihrer untergeordneten Klauseln sind im-Vorgang enthalten.
+-   **und** : Das **-Element und** das -Element führt einen logischen AND-Vorgang für eine oder mehrere Klauseln aus, die zwischen den öffnenden und schließenden Tags enthalten sind. Andere **-** und **- und -** oder -Tags können untergeordnete -Tags sein, und rekursive Ergebnisse ihrer untergeordneten Klauseln werden in den Vorgang eingeschlossen.
 
-    Wenn Sie z. b. einen Datensatz mit einem Namen, der mit James Peters identisch ist, und ein letztes Update, das größer als 2/28/2003 ist, oder ein Erstellungsdatum, das kleiner als 1/31/2003 ist, abrufen möchten, verwenden Sie die folgende XML-Abfrage Zeichenfolge:
+    Wenn Sie beispielsweise einen Datensatz abrufen möchten, der einen Namen enthält, der James Peters entspricht, und ein letztes Update, das größer als 28.02.2003 ist, oder ein Erstellungsdatum, das kleiner als 31.1.2003 ist, verwenden Sie die folgende XML-Abfragezeichenfolge:
 
     ``` syntax
     <?xml version="1.0" encoding="utf-8" ?> 
@@ -103,7 +103,7 @@ Das primäre Element in einer Daten Satz Suche ist " **Peer Search**", das die U
 
 <!-- -->
 
--   **Klausel** : das **Klauselelement gibt** eine grundlegende Vergleichs Regel an, die den Wert eines bestimmten Daten Satz Attributs mit dem Wert vergleicht, der zwischen den öffnenden und schließenden Tags enthalten ist. Der **Typ** und die **Vergleichs** Attribute müssen angegeben werden. **vergleichen** gibt den auszuführenden Vergleichs Vorgang an. Beispielsweise muss eine einfache Suche, die alle übereinstimmenden Datensätze anzeigt, einen Wert von " **Peer-kreatorid** " aufweisen, der "James Peters" entspricht, wie folgt in der XML-Abfrage Zeichenfolge
+-   **clause:** Das **Klauselelement** gibt eine grundlegende Vergleichsregel an, die den Wert eines bestimmten Datensatzattributs mit dem Wert vergleicht, der zwischen dem öffnenden und dem schließenden Tag enthalten ist. Die **Typ-** und **Vergleichsattribute** müssen angegeben werden. **Compare** gibt den durchzuführenden Vergleichsvorgang an. Beispielsweise wird eine einfache Suche, die angibt, dass alle übereinstimmenden Datensätze einen **peercreierten Wert** haben müssen, der James Peters entspricht, in der XML-Abfragezeichenfolge wie folgt angezeigt:
 
     ``` syntax
     <?xml version="1.0" encoding="utf-8" ?> 
@@ -112,13 +112,13 @@ Das primäre Element in einer Daten Satz Suche ist " **Peer Search**", das die U
     </peersearch>
     ```
 
-    Allgemeine **Typattribute** sind **int**, **String** und **Date**. Das **Date** -Attribut kann eines der Standard Datumsformate sein, das unter beschrieben wird [https://www.w3.org/TR/NOTE-datetime](https://www.w3.org/TR/NOTE-datetime) .
+    Allgemeine **Typattribute** sind **int,** **string** und **date.** Das **Date-Attribut** kann eines der unter beschriebenen Standarddatumsformate [https://www.w3.org/TR/NOTE-datetime](https://www.w3.org/TR/NOTE-datetime) sein.
 
-    Werte für das **Compare** -Attribut sind **gleich**, **NotEqual**, **less**, **größer**, **lessOrEqual** und **greaterOrEqual**.
+    Werte für das **compare-Attribut** **sind gleich**, **notequal**, **less**, **greater**, **lessorequal** und **greaterorequal**.
 
 <!-- -->
 
--   **oder** : das- **oder** -Element führt eine logische OR-Operation für eine oder mehrere Klauseln aus, die zwischen den öffnenden und schließenden Tags enthalten sind. Andere **-und-und** **-** Elemente können untergeordnete Elemente sein, und rekursive Ergebnisse der untergeordneten Klauseln sind im-Vorgang enthalten. Wenn Sie z. b. einen Datensatz abrufen möchten, der einen Namen wie James Peters oder ein letztes Update zwischen 1/31/2003 und 2/28/2003 enthält, verwenden Sie die folgende XML-Abfrage Zeichenfolge:
+-   **oder** : Das **- oder -Element** führt einen logischen OR-Vorgang für eine oder mehrere Klauseln aus, die zwischen den öffnenden und schließenden Tags enthalten sind. Andere **-** oder **- und -** und -Elemente können untergeordnete Elemente sein, und rekursive Ergebnisse der untergeordneten Klauseln werden in den Vorgang eingeschlossen. Wenn Sie beispielsweise einen Datensatz abrufen möchten, der einen Namen enthält, der James Peters entspricht, oder ein letztes Update zwischen dem 31.01.2003 und dem 28.02.2003, verwenden Sie die folgende XML-Abfragezeichenfolge:
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8" ?> 
@@ -133,9 +133,9 @@ Das primäre Element in einer Daten Satz Suche ist " **Peer Search**", das die U
 </peersearch>
 ```
 
-## <a name="more-information-about-a-record-search"></a>Weitere Informationen zu einer Daten Satz Suche
+## <a name="more-information-about-a-record-search"></a>Weitere Informationen zu einer Datensatzsuche
 
-Die erste Ebene der Knoten nach **peersearch** darf nur ein Element aufweisen. Nachfolgende untergeordnete Elemente dieses Elements können jedoch viele Elemente auf derselben Ebene aufweisen.
+Die erste Knotenebene nach **peersearch** kann nur ein Element enthalten. Nachfolgende elemente dieses Elements können jedoch viele Elemente auf der gleichen Ebene haben.
 
 Die folgende Suchabfrage ist falsch:
 
@@ -150,9 +150,9 @@ Die folgende Suchabfrage ist falsch:
 </peersearch>
 ```
 
-Die Abfrage schlägt fehl, da zwei Werte für die Übereinstimmung zurückgegeben werden, ohne dass Sie in einen true/false-Wert aufgelöst werden. Dies bedeutet, dass eine Klausel eine Abfrage für den Namen eines Datensatzes ist, der auf James Peters festgelegt ist, und der-Vorgang und der-Vorgang mit den beiden Das Ergebnis sind zwei logische true/false-Werte, die widersprüchlich sind.
+Die Abfrage schlägt fehl, da zwei Werte für die Übereinstimmung zurückgegeben werden, ohne in einen true/false-Wert aufgelöst zu werden. Dies bedeutet, dass eine Klausel eine Abfrage für den Namen eines Datensatzes ist, der James Peters entspricht, und der AND-Vorgang mit den beiden Komponentenklauseln abgleicht. Das Ergebnis sind zwei logische TRUE-/FALSE-Werte, die unertreffend sind.
 
-Zum Abrufen aller Datensätze, die einen Namen wie James Peters und ein letztes Update zwischen 1/31/2003 und 2/28/2003 enthalten, platzieren Sie die- **Klausel** und die **-** Tags, die sich auf derselben Ebene befinden, zwischen öffnenden und schließenden **-und-** Tags. Das folgende Beispiel zeigt die erfolgreiche Abfrage:
+Um alle Datensätze zu erhalten, die einen Namen enthalten, der James Peters entspricht, und ein letztes Update zwischen dem 31.1.2003 und dem 28.02.2003, platzieren Sie die -Klausel und die -Tags auf der gleichen Ebene zwischen öffnenden und schließenden Tags und Tags.    Das folgende Beispiel zeigt die erfolgreiche Abfrage:
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8" ?> 
@@ -167,43 +167,43 @@ Zum Abrufen aller Datensätze, die einen Namen wie James Peters und ein letztes 
 </peersearch>
 ```
 
-Die folgende Liste enthält weitere Informationen, die Sie kennen müssen, um eine erfolgreiche Abfrage zu schreiben:
+In der folgenden Liste sind weitere spezifische Informationen aufgeführt, die Sie kennen müssen, um eine erfolgreiche Abfrage zu schreiben:
 
--   Die Tags **and** und **or** können nicht zwischen öffnenden **und schließenden** klauseltags gefunden werden, da Sie in dieser Konfiguration als Teil des Werts interpretiert werden, mit dem abgeglichen wird, was zu einem Fehler oder einer fehlgeschlagenen Entsprechung führt.
--   Jedes Paar von **-** und- **oder** -öffnenden und schließenden Tags muss mindestens einen untergeordneten Knoten enthalten.
--   Ein Nullsatz von Elementen ist in diesem Schema nicht zulässig.
+-   Die Tags **und** und **oder** können  nicht zwischen öffnenden und schließenden Klauseltags gefunden werden, da sie in dieser Konfiguration als Teil des Werts interpretiert werden, mit dem eine Übereinstimmung gefunden werden soll, was zu einem Fehler oder einer fehlgeschlagenen Übereinstimmung führt.
+-   Jedes Paar von **und und** **oder öffnenden** und schließenden Tags muss mindestens einen oder mehrere untergeordnete Knoten enthalten.
+-   Ein Satz von 0 (null) Elementen ist in diesem Schema nicht zulässig.
 
-## <a name="record-attributes"></a>Attribute aufzeichnen
+## <a name="record-attributes"></a>Datensatzattribute
 
-Mithilfe des [Datensatz-Attribut Schemas](record-attribute-schema.md)kann ein Benutzerdaten Satz Attribute erstellen, die vom XML-Attribut **atelemb** in einem clause-Element angegeben werden. Attribute für einen neuen Datensatz werden hinzugefügt, indem der **pszattribute** -Member des [**Peer \_ Datensatzes**](/windows/desktop/api/P2P/ns-p2p-peer_record) mithilfe des im Schema angegebenen Formats auf eine XML-Zeichenfolge festgelegt wird.
+Mithilfe des [Datensatzattributschemas](record-attribute-schema.md)kann ein Benutzer Datensatzattribute erstellen, die das **ATTRIB-XML-Attribut** in einem Klauselelement angibt. Attribute für einen neuen Datensatz werden hinzugefügt, indem das **pszAttributes-Element** von [**PEER \_ RECORD**](/windows/desktop/api/P2P/ns-p2p-peer_record) mithilfe des im Schema angegebenen Formats auf eine XML-Zeichenfolge festgelegt wird.
 
-Die Peer Infrastruktur reserviert die folgenden Attributnamen:
+Die Peerinfrastruktur reserviert die folgenden Attributnamen:
 
--   **"Peer Last ModifiedBy"**
--   **"Peer-kreatorid"**
--   **"Peer Last ModificationTime"**
--   **Peer RecordID**
--   **"Peer RecordType"**
--   **"Peer-erkreationtime"**
--   **"Peer Last ModificationTime"**
+-   **peerlastmodifiedby**
+-   **peercrekollegd**
+-   **peerlastmodificationtime**
+-   **peerrecordid**
+-   **peerrecordtype**
+-   **peercreationtime**
+-   **peerlastmodificationtime**
 
 ## <a name="special-characters"></a>Sonderzeichen
 
-Bestimmte Zeichen können zum Ausdrücken von übereinstimmenden Mustern oder zum Escapezeichen für andere Sonderzeichen verwendet werden. Diese Zeichen werden in der folgenden Tabelle beschrieben. 
+Bestimmte Zeichen können verwendet werden, um übereinstimmende Muster auszudrücken oder andere Sonderzeichen mit Escapezeichen zu escapen. Diese Zeichen werden in der folgenden Tabelle beschrieben. 
 
-| Zeichen Muster | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Zeichenmuster | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \*                | Das Platzhalter Zeichen. Wenn dieses Zeichen in einem-klauselwert vorkommt, entspricht es 0-n-Zeichen eines beliebigen Werts, einschließlich Leerzeichen und nicht alphanumerischen Zeichen. Beispiel:<br/> "<clause attrib="peercreatorid" type="string" compare="equal">James P \* </clause>"<br/> Diese Klausel entspricht allen Werten von " **Peer-up-** ID" mit dem Vornamen "James" und einem Nachnamen, der mit "P" beginnt.<br/> |
-| \\\*              | Ein mit Escapezeichen versehen. Diese Sequenz entspricht einem Sternchen-Zeichen.                                                                                                                                                                                                                                                                                                                                                                       |
-| ?                 | Das Platzhalter Zeichen mit einem einzelnen Zeichen. Wenn dieses Zeichen in einem-klauselwert vorkommt, entspricht es einem beliebigen einzelnen Zeichen, einschließlich Leerzeichen und nicht alphanumerischen Zeichen. Zum Beispiel:<br/> "<clause attrib="filename" type="string" compare="equal">Data-0?. XML</clause>"<br/> Diese Klausel entspricht **Dateinamen** Werten wie "data-01.xml" und "data-0B.xml".<br/>                              |
+| \*                | Das Platzhalterzeichen. Wenn dieses Zeichen in einem -Klauselwert gefunden wird, entspricht es 0-n Zeichen eines beliebigen Werts, einschließlich Leerzeichen und nicht alphanumerischer Zeichen. Beispiel:<br/> "<clause attrib="peercreatorid" type="string" compare="equal">James \* P</clause>"<br/> Diese Klausel gleicht alle **peercrewertierten Werte** mit dem Vornamen "James" und einem Nachnamen ab, der mit "P" beginnt.<br/> |
+| \\\*              | Ein mit Escape versehenes Sternchen. Diese Sequenz entspricht einem Sternchenzeichen.                                                                                                                                                                                                                                                                                                                                                                       |
+| ?                 | Das Platzhalterzeichen mit einem einzelnen Zeichen. Wenn dieses Zeichen in einem -Klauselwert gefunden wird, entspricht es jedem einzelnen Zeichen, einschließlich Leerzeichen und nicht alphanumerischen Zeichen. Zum Beispiel:<br/> "<clause attrib="filename" type="string" compare="equal">data-0?.xml</clause>"<br/> Diese Klausel gleicht **Dateinamenwerte** wie "data-01.xml" und "data-0B.xml" ab.<br/>                              |
 | \\?               | Ein Fragezeichen mit Escapezeichen. Diese Sequenz entspricht einem Fragezeichen.                                                                                                                                                                                                                                                                                                                                                              |
-| \\\\              | Ein umgekehrter umgekehrter Schrägstrich. Diese Sequenz entspricht einem einzelnen umgekehrten Schrägstrich.                                                                                                                                                                                                                                                                                                                                                               |
+| \\\\              | Ein mit Escapestrichen bestrichener schräger Schrägstrich. Diese Sequenz entspricht einem einzelnen schrägen Schrägstrich.                                                                                                                                                                                                                                                                                                                                                               |
 
 
 
  
 
-Wenn die Zeichenfolge ungültig ist, gibt die Funktion " [**Peer groupsearchrecords**](/windows/desktop/api/P2P/nf-p2p-peergroupsearchrecords) " den Fehler **E \_ invalidArg** zurück. Eine ungültige Sequenz ist eine beliebige Sequenz, die einen " \\ " (umgekehrter Schrägstrich) enthält, auf den nicht unmittelbar ein " \* " (Sternchen), ein "?"-Zeichen folgt. (Fragezeichen) oder ein anderer " \\ "-Zeichen (umgekehrter Schrägstrich).
+Wenn die Zeichenfolge ungültig ist, gibt die [**PeerGroupSearchRecords-Funktion**](/windows/desktop/api/P2P/nf-p2p-peergroupsearchrecords) den Fehler **E \_ INVALIDARG zurück.** Eine ungültige Sequenz ist eine Sequenz, die ein "" (schräger Schrägstrich) enthält, das nicht unmittelbar gefolgt von einem \\ " \* " (Sternchen)-Zeichen, einem "?" (Fragezeichen) oder ein anderes " \\ " (schräger Schrägstrich)
 
  
 

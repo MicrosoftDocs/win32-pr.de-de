@@ -1,9 +1,9 @@
 ---
-title: EM_REQUESTRESIZE Meldung (RichEdit. h)
-description: Erzwingt, dass ein RichEdit-Steuerelement einen en \_ RequestResize-Benachrichtigungs Code an das übergeordnete Fenster sendet.
+title: EM_REQUESTRESIZE Nachricht (Richedit.h)
+description: Erzwingt, dass ein Rich Edit-Steuerelement einen EN \_ REQUESTRESIZE-Benachrichtigungscode an das übergeordnete Fenster sendet.
 ms.assetid: efc22771-9b9f-4a30-a906-f02095607c21
 keywords:
-- Windows-Steuerelemente für EM_REQUESTRESIZE Meldung
+- EM_REQUESTRESIZE Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ec41e7be8e0f30d5c1ec011247f3964292c2218e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7113f52e2fa3a293549443f779ba937bf20b85736c6751cd9ab77bdbecd45c3b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104213743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119440160"
 ---
-# <a name="em_requestresize-message"></a>EM \_ RequestResize-Meldung
+# <a name="em_requestresize-message"></a>EM \_ REQUESTRESIZE-Nachricht
 
-Erzwingt, dass ein RichEdit-Steuerelement einen [**en \_ RequestResize**](en-requestresize.md) -Benachrichtigungs Code an das übergeordnete Fenster sendet.
+Erzwingt, dass ein Rich Edit-Steuerelement einen [**EN \_ REQUESTRESIZE-Benachrichtigungscode**](en-requestresize.md) an das übergeordnete Fenster sendet.
 
 ## <a name="parameters"></a>Parameter
 
@@ -47,9 +47,9 @@ Nicht verwendet; muss 0 (null) sein.
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung ist während der Verarbeitung der [**WM- \_ Größe**](/windows/desktop/winmsg/wm-size) für das übergeordnete Element eines untersten Rich-Edit-Steuer Elements nützlich.
+Diese Meldung ist während der [**WM \_ SIZE-Verarbeitung**](/windows/desktop/winmsg/wm-size) für das übergeordnete Element eines steuerelements für die bottomless Rich Edit nützlich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,26 +57,26 @@ Diese Meldung ist während der Verarbeitung der [**WM- \_ Größe**](/windows/de
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**de \_ RequestResize**](en-requestresize.md)
+[**EN \_ REQUESTRESIZE**](en-requestresize.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**WM- \_ Größe**](/windows/desktop/winmsg/wm-size)
+[**\_WM-GRÖßE**](/windows/desktop/winmsg/wm-size)
 </dt> </dl>
 
  

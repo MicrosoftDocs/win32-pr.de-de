@@ -1,41 +1,41 @@
 ---
-title: Zeitliche Steuerung (Windows Multimedia)
+title: Timing (Windows Multimedia)
 description: Zeitliche Steuerung
 ms.assetid: 9ab284c7-eebc-4b44-b9e1-cc95efde22c1
 keywords:
-- Drawdib, zeitliche Steuerung
-- Drawdibtime-Funktion
-- Drawdib, Debuggen
-- Debuggen von drawdib
+- DrawDib, timing
+- DrawDibTime-Funktion
+- DrawDib, Debuggen
+- Debuggen von DrawDib
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: adddd43ff5067d08334a40f2e52e79109c8a8bb7
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 1bc4324de5336a00b246ad644794ce8d0b3491bb644f34e8fc22dc8a7e460ba1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104474862"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119688080"
 ---
-# <a name="timing-windows-multimedia"></a>Zeitliche Steuerung (Windows Multimedia)
+# <a name="timing-windows-multimedia"></a>Timing (Windows Multimedia)
 
-Beim Debuggen einer Anwendung können Sie Informationen über die Zeit abrufen, die zum Durchführen von wiederkehrenden drawdib-Vorgängen erforderlich ist. Die [**drawdibtime**](/windows/desktop/api/Vfw/nf-vfw-drawdibtime) -Funktion gibt Zeit Steuerungsinformationen für die folgenden Vorgänge zurück:
+Im Rahmen des Debuggens einer Anwendung können Sie Informationen zur Zeit abrufen, die zum Ausführen von wiederkehrenden DrawDib-Vorgängen erforderlich ist. Die [**DrawDibTime-Funktion**](/windows/desktop/api/Vfw/nf-vfw-drawdibtime) gibt Zeitsteuerungsinformationen für die folgenden Vorgänge zurück:
 
 -   Zeichnen einer Bitmap
--   Das Komprimieren einer Bitmap wird deaktiviert.
+-   Dekomprimieren einer Bitmap
 -   Dithering einer Bitmap
 -   Strecken einer Bitmap
--   Übertragen einer Bitmap mithilfe der [**BitBLT**](/windows/desktop/api/wingdi/nf-wingdi-bitblt) -Funktion
--   Übertragen einer Bitmap mithilfe der [**StretchDIBits**](/windows/desktop/api/wingdi/nf-wingdi-stretchdibits) -Funktion
+-   Übertragen einer Bitmap mithilfe der [**BitBlt-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-bitblt)
+-   Übertragen einer Bitmap mithilfe der [**StretchDIBits-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-stretchdibits)
 
-Nach dem Abrufen eines Satzes von Werten setzt [**drawdibtime**](/windows/desktop/api/Vfw/nf-vfw-drawdibtime) die Anzahl und den Wert für jeden Vorgang zurück.
+Nach dem Abrufen eines Satzes von Werten setzt [**DrawDibTime**](/windows/desktop/api/Vfw/nf-vfw-drawdibtime) die Anzahl und den Wert für jeden Vorgang zurück.
 
-Die [**drawdibtime**](/windows/desktop/api/Vfw/nf-vfw-drawdibtime) -Funktion ist nur in der Debugversion der drawdib-Funktionen verfügbar.
+Die [**DrawDibTime-Funktion**](/windows/desktop/api/Vfw/nf-vfw-drawdibtime) ist nur in der Debugversion der DrawDib-Funktionen verfügbar.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Bild Rendering](image-rendering.md)
+[Rendern von Bildern](image-rendering.md)
 </dt> </dl>
 
  

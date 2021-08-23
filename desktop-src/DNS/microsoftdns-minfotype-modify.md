@@ -1,11 +1,11 @@
 ---
-title: Modify-Methode der MicrosoftDNS_MINFOType-Klasse
-description: Die Modify-Methode aktualisiert einen Ressourcen Daten Satz für e-Mail-Informationen (MINFO).
+title: Modify-Methode der MicrosoftDNS_MINFOType Klasse
+description: Die Modify-Methode aktualisiert einen MINFO-Ressourcendatensatz (Mail Information).
 ms.assetid: fbec0cd3-f735-44c6-b010-80f35cc33d98
 keywords:
-- DNS-Methode ändern
-- Modify-Methode (DNS), MicrosoftDNS_MINFOType-Klasse
-- DNS-MicrosoftDNS_MINFOType Klasse, Methode ändern
+- Ändern der DNS-Methode
+- Modify method DNS , MicrosoftDNS_MINFOType class
+- MicrosoftDNS_MINFOType DNS-Klasse, Modify-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b59d7d1231ed88e61a0ecf94cef50041ca772f4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 954015ffdb01a8655a7762d3c364abe3440a8cfd19ec7eabf5ad8db5cf11c8c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475882"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119692560"
 ---
-# <a name="modify-method-of-the-microsoftdns_minfotype-class"></a>Modify-Methode der MicrosoftDNS- \_ minfotype-Klasse
+# <a name="modify-method-of-the-microsoftdns_minfotype-class"></a>Modify-Methode der MicrosoftDNS \_ MINFOType-Klasse
 
-Die **Modify** -Methode aktualisiert einen Ressourcen Daten Satz für e-Mail-Informationen (MINFO).
+Die **Modify-Methode** aktualisiert einen MINFO-Ressourcendatensatz (Mail Information).
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,28 +45,28 @@ void Modify(
 
 <dl> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*TTL* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, die die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-" *Verantworblemailbox* \[ " in, optional\]
+*ResponsibleMailbox* \[ in, optional\]
 </dt> <dd>
 
-Der voll qualifizierte Name ist ein Postfach, das für die Mailingliste oder das Postfach zuständig ist, die im Besitzer Namen des Datensatzes angegeben sind.
+FQDN, der ein Postfach an, das für die Adressenliste oder das Postfach zuständig ist, die im Besitzernamen des Datensatzes angegeben ist.
 
 </dd> <dt>
 
-*Errormailbox* \[ in, optional\]
+*ErrorMailbox* \[ in, optional\]
 </dt> <dd>
 
-FQDN, der ein Postfach für den Empfang von Fehlermeldungen in Bezug auf die Mailingliste oder das Postfach angibt, das durch den Besitzer Namen des MINFO-Datensatzes angegeben wird.
+FQDN, der ein Postfach zum Empfangen von Fehlermeldungen im Zusammenhang mit der Adressenliste oder dem Postfach an, das durch den Besitzernamen des MINFO-Datensatzes angegeben wird.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
 Verweis auf das geänderte Objekt.
@@ -77,9 +77,9 @@ Verweis auf das geänderte Objekt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unverändert.
+Nicht angegebene Parameter bleiben im geänderten Datensatz unverändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,7 +90,7 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -98,13 +98,13 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ minfotype**](microsoftdns-minfotype.md)
+[**MicrosoftDNS \_ MINFOType**](microsoftdns-minfotype.md)
 </dt> <dt>
 
-[**Methode "kreateinstancefrompropertydata" der MicrosoftDNS- \_ minfotype-Klasse**](microsoftdns-minfotype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ MINFOType-Klasse**](microsoftdns-minfotype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

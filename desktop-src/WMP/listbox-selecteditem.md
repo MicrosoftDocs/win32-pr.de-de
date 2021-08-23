@@ -1,9 +1,9 @@
 ---
-title: ListBox. SelectedItem
-description: Das SelectedItem-Attribut gibt den Index des im Listenfeld-Steuerelement ausgewählten Elements an oder ruft ihn ab.
+title: LISTBOX.selectedItem
+description: Das selectedItem-Attribut gibt den Index des im Listenfeld-Steuerelement ausgewählten Elements an oder ruft diesen ab.
 ms.assetid: 8c4eb914-c3a3-447e-a42b-8bb80b8aa8f4
 keywords:
-- ListBox. SelectedItem-Fenster Media Player
+- LISTBOX.selectedItem Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b6ec30032e62713436e85f3924f63344c96944ed
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bd236e288bf91d77cdf79b2b5f4f4cb2e8ebcf4b2bcb6eb876c6978dc2249335
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119508492"
 ---
-# <a name="listboxselecteditem"></a>ListBox. SelectedItem
+# <a name="listboxselecteditem"></a>LISTBOX.selectedItem
 
-Das **SelectedItem** -Attribut gibt den Index des im Listenfeld-Steuerelement ausgewählten Elements an oder ruft ihn ab.
+Das **selectedItem-Attribut** gibt den Index des im Listenfeld-Steuerelement ausgewählten Elements an oder ruft diesen ab.
 
 ``` syntax
         elementID.selectedItem
@@ -29,11 +29,11 @@ Das **SelectedItem** -Attribut gibt den Index des im Listenfeld-Steuerelement au
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**). 
+Dieses Attribut ist eine Lese-/Schreibnummer (**long**). 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Eigenschaft wird eine Zeile im Listenfeld-Steuerelement ausgewählt. Alle anderen markierten Zeilen werden deaktiviert.
+Diese Eigenschaft wählt eine Zeile im Listenfeld-Steuerelement aus. Alle anderen ausgewählten Zeilen werden deaktiviert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,7 +49,7 @@ Mit dieser Eigenschaft wird eine Zeile im Listenfeld-Steuerelement ausgewählt. 
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
 title: Modify-Methode der MicrosoftDNS_RTType-Klasse
-description: Die Modify-Methode aktualisiert einen Route-through-Ressourcen Daten Satz (RT).
+description: Die Modify-Methode aktualisiert einen Routendurchleitungs-Ressourceneintrag (RT).
 ms.assetid: 80053ae6-8ce8-4aa1-be2b-aac9daa5dae3
 keywords:
-- DNS-Methode ändern
-- Modify-Methode (DNS), MicrosoftDNS_RTType-Klasse
-- DNS-MicrosoftDNS_RTType Klasse, Methode ändern
+- Ändern der DNS-Methode
+- Modify method DNS , MicrosoftDNS_RTType class
+- MicrosoftDNS_RTType-Klasse DNS, Modify-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8267bf1dc256ec95a456978643226ab5c01af93f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2003f8e2840a2684f91a7a01b0341e2e8dcdf0ca88b6bf31fcf58b3a3c6f79bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517939"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119692400"
 ---
-# <a name="modify-method-of-the-microsoftdns_rttype-class"></a>Modify-Methode der MicrosoftDNS \_ rttype-Klasse
+# <a name="modify-method-of-the-microsoftdns_rttype-class"></a>Modify-Methode der MicrosoftDNS \_ RTType-Klasse
 
-Die **Modify** -Methode aktualisiert einen Route-through-Ressourcen Daten Satz (RT).
+Die **Modify-Methode** aktualisiert einen Routendurchleitungs-Ressourceneintrag (RT).
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,31 +45,31 @@ void Modify(
 
 <dl> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*Gültigkeitsdauer* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, in der die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Bevorzugen* \[ in, optional\]
+*Einstellung* \[ in, optional\]
 </dt> <dd>
 
-Die Einstellung, die diesem RR unter anderem beim gleichen Besitzer zugewiesen wird. Niedrigere Werte werden bevorzugt.
+Diese RR wird unter anderem beim gleichen Besitzer bevorzugt. Niedrigere Werte werden bevorzugt.
 
 </dd> <dt>
 
-*Intermediatehost* \[ in, optional\]
+*IntermediateHost* \[ in, optional\]
 </dt> <dd>
 
-FQDN, der einen Host angibt, der als zwischengeschalteter Host zum Erreichen des vom Besitzer angegebenen Hosts dienen soll.
+FQDN, der einen Host angibt, der als Zwischenstufe beim Erreichen des vom Besitzer angegebenen Hosts dienen soll.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue-Objekt.
+Verweis auf das neue Objekt.
 
 </dd> </dl>
 
@@ -77,9 +77,9 @@ Verweis auf das neue-Objekt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unverändert.
+Alle nicht angegebenen Parameter bleiben im geänderten Datensatz unverändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,8 +89,8 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -98,13 +98,13 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ rttype**](microsoftdns-rttype.md)
+[**MicrosoftDNS \_ RTType**](microsoftdns-rttype.md)
 </dt> <dt>
 
-[**Methode "kreateinzustancefrompropertydata" der Klasse "MicrosoftDNS \_ rttype"**](microsoftdns-rttype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ RTType-Klasse**](microsoftdns-rttype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

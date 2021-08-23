@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentmakebackupdirectoryfailexception-Konstruktor'
-title: Esentmakebackupdirectoryfailexception-Konstruktor
+description: 'Weitere Informationen zu: EsentMakeBackupDirectoryFailException-Konstruktor'
+title: EsentMakeBackupDirectoryFailException-Konstruktor
 TOCTitle: 'EsentMakeBackupDirectoryFailException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentMakeBackupDirectoryFailException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentmakebackupdirectoryfailexception.esentmakebackupdirectoryfailexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d459263ddaa3fad6f6cc86654f82b82db232838f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 896c63c3a6f64e377cf7f3bdbdfbb3ac2240c660e0ab625153f40fd1aeb41f74
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103756032"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119604950"
 ---
-# <a name="esentmakebackupdirectoryfailexception-constructor"></a>Esentmakebackupdirectoryfailexception-Konstruktor
+# <a name="esentmakebackupdirectoryfailexception-constructor"></a>EsentMakeBackupDirectoryFailException-Konstruktor
 
-Initialisiert eine neue Instanz der esentmakebackupdirectoryfailexception-Klasse.
+Initialisiert eine neue Instanz der EsentMakeBackupDirectoryFailException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentMakeBackupDirectoryFailException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentmakebackupdirectoryfailexception-Klasse](./esentmakebackupdirectoryfailexception-class.md)
+[EsentMakeBackupDirectoryFailException-Klasse](./esentmakebackupdirectoryfailexception-class.md)
 
-[Esentmakebackupdirectoriyfailexception-Elemente](./esentmakebackupdirectoryfailexception-members.md)
+[EsentMakeBackupDirectoryFailException-Member](./esentmakebackupdirectoryfailexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

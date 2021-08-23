@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_THREADSTATS. Add-Methode'
-title: JET_THREADSTATS. Add-Methode (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Erfahren Sie mehr über: JET_THREADSTATS. Methode hinzufügen'
+title: JET_THREADSTATS. Methode hinzufügen (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'Add method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Vista.JET_THREADSTATS.Add(Microsoft.Isam.Esent.Interop.Vista.JET_THREADSTATS,Microsoft.Isam.Esent.Interop.Vista.JET_THREADSTATS)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_threadstats.add(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2a824249fde43de92c65d64d02fbab4097b7dc34
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d22427056b126c2fcb49f7e395c4a43161eaee70c9d9ed8b9ac7020be88504fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119728910"
 ---
-# <a name="jet_threadstatsadd-method"></a>JET_THREADSTATS. Add-Methode
+# <a name="jet_threadstatsadd-method"></a>JET_THREADSTATS. Methode hinzufügen
 
-Fügen Sie die Statistiken in zwei JET_THREADSTATS Strukturen hinzu.
+Fügen Sie die Statistiken in zwei JET_THREADSTATS-Strukturen hinzu.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,28 +64,28 @@ public static JET_THREADSTATS Add(
 #### <a name="parameters"></a>Parameter
 
   - t1  
-    Typ: [Microsoft.ISAM.ESENT.Interop.Vista.JET_THREADSTATS](./jet-threadstats-structure2.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.Vista.JET_THREADSTATS](./jet-threadstats-structure2.md)  
     
     Der erste JET_THREADSTATS.
 
 <!-- end list -->
 
-  - T2  
-    Typ: [Microsoft.ISAM.ESENT.Interop.Vista.JET_THREADSTATS](./jet-threadstats-structure2.md)  
+  - t2  
+    Typ: [Microsoft.Isam.Esent.Interop.Vista.JET_THREADSTATS](./jet-threadstats-structure2.md)  
     
     Der zweite JET_THREADSTATS.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.Vista.JET_THREADSTATS](./jet-threadstats-structure2.md)  
-Eine JET_THREADSTATS, die das Ergebnis der Hinzufügung der Statistiken in T1 und T2 enthält.  
+Typ: [Microsoft.Isam.Esent.Interop.Vista.JET_THREADSTATS](./jet-threadstats-structure2.md)  
+Ein JET_THREADSTATS, der das Ergebnis des Hinzufügens der Statistiken in t1 und t2 enthält.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_THREADSTATS Struktur](./jet-threadstats-structure2.md)
 
-[Mitglieder JET_THREADSTATS](./jet-threadstats-members.md)
+[JET_THREADSTATS-Member](./jet-threadstats-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

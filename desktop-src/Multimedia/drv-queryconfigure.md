@@ -1,9 +1,9 @@
 ---
-title: DRV_QUERYCONFIGURE Meldung (MMSYSTEM. h)
-description: Weist den Treiber an, anzugeben, ob die benutzerdefinierte Konfiguration unterstützt wird.
+title: DRV_QUERYCONFIGURE (Mmsystem.h)
+description: Leitet den Treiber an anzugeben, ob er benutzerdefinierte Konfiguration unterstützt.
 ms.assetid: fb2e36a7-8d6b-4b08-b2d7-e128ca7082dc
 keywords:
-- DRV_QUERYCONFIGURE-Nachricht (Multimedia)
+- DRV_QUERYCONFIGURE von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,42 +14,42 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 66780106fdd42364d247db534a838842f25dc16a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 22c49ec54d1822bbc9ddc4d2606f8905a21c5193322a12df335549074dacdea3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104213738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119691570"
 ---
-# <a name="drv_queryconfigure-message"></a>DRV- \_ queryconfigure-Meldung
+# <a name="drv_queryconfigure-message"></a>DRV \_ QUERYCONFIGURE-Meldung
 
-Weist den Treiber an, anzugeben, ob die benutzerdefinierte Konfiguration unterstützt wird.
+Leitet den Treiber an anzugeben, ob er benutzerdefinierte Konfiguration unterstützt.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-<span id="dwDriverId"></span><span id="dwdriverid"></span><span id="DWDRIVERID"></span>*dwdriverid*
+<span id="dwDriverId"></span><span id="dwdriverid"></span><span id="DWDRIVERID"></span>*dwDriverId*
 </dt> <dd>
 
-Der Bezeichner des installierbaren Treibers. Dabei handelt es sich um den gleichen Wert, der zuvor vom Treiber aus der von [**drv \_ geöffneten**](drv-open.md) Nachricht zurückgegeben wurde.
+Bezeichner des installierbaren Treibers. Dies ist der gleiche Wert, der zuvor vom Treiber von der [**DRV \_ OPEN-Nachricht zurückgegeben**](drv-open.md) wurde.
 
 </dd> <dt>
 
 <span id="hdrvr"></span><span id="HDRVR"></span>*hdrvr*
 </dt> <dd>
 
-Handle der installierbaren Treiber Instanz.
+Handle der installierbaren Treiberinstanz.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, wenn der Treiber ein Konfigurations Dialogfeld anzeigen kann, andernfalls NULL.
+Gibt einen Wert ungleich 0 (null) zurück, wenn der Treiber ein Konfigurationsdialogfeld anzeigen kann, andernfalls 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Parameter *lParam1* und *lParam2* werden nicht verwendet.
+Die *Parameter lParam1* *und lParam2* werden nicht verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,7 +59,7 @@ Die Parameter *lParam1* und *lParam2* werden nicht verwendet.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -70,7 +70,7 @@ Die Parameter *lParam1* und *lParam2* werden nicht verwendet.
 [Installierbare Treiber](installable-drivers.md)
 </dt> <dt>
 
-[Installierbare Treiber Meldungen](installable-driver-messages.md)
+[Installierbare Treibermeldungen](installable-driver-messages.md)
 </dt> </dl>
 
  

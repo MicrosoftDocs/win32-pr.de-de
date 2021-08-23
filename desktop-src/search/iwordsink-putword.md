@@ -1,7 +1,7 @@
 ---
-description: Fügt ein Wort und seine Position in das iwordsink-Objekt ein.
+description: Legt ein Wort und seine Position im IWordSink-Objekt ab.
 ms.assetid: 3D645BF6-895E-46E2-92A3-3E301CD228D8
-title: Iwordsink::P utword-Methode (Search. h)
+title: IWordSink::P utWord-Methode (Search.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - search.h
-ms.openlocfilehash: 5f622e09c2b82bc8de986dafcc83247617caec75
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e860aafbef633e226933281aaaa0be5c6429387542e7c3ae2d65d3026fd7fe37
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106339755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119597600"
 ---
-# <a name="iwordsinkputword-method"></a>Iwordsink::P utword-Methode
+# <a name="iwordsinkputword-method"></a>IWordSink::P utWord-Methode
 
-Fügt ein Wort und seine Position in das [**iwordsink**](iwordsink.md) -Objekt ein.
+Legt ein Wort und seine Position im [**IWordSink-Objekt**](iwordsink.md) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ HRESULT PutWord(
 
 <dl> <dt>
 
-*CWC* \[ in\]
+*cwc* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Zeichen in *pwcinbuf*.
+Die Anzahl der Zeichen in *pwcInBuf.*
 
 </dd> <dt>
 
-*pwcinbuf* \[ in\]
+*pwcInBuf* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der eine alternative Form eines Worts aus dem Quelltext enthält. Dieser Parameter wird nicht von **putword** geändert. Sie können den *ptextsource* -Parameter nach Bedarf von [**iwordbreaker:: breaktext**](/windows/win32/api/indexsrv/nf-indexsrv-iwordbreaker-breaktext) übergeben.
+Ein Zeiger auf einen Puffer, der eine alternative Form eines Worts aus dem Quelltext enthält. Dieser Parameter wird von **PutWord nicht geändert.** Sie können den *pTextSource-Parameter* [**von IWordBreaker::BreakText**](/windows/win32/api/indexsrv/nf-indexsrv-iwordbreaker-breaktext) entsprechend übergeben.
 
 </dd> <dt>
 
-*cwcsrclen* \[ in\]
+*cwcSrcLen* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Zeichen im Quell Text Puffer (angegeben durch den *ptextsource* -Parameter für [**iwordbreaker:: breaktext**](/windows/win32/api/indexsrv/nf-indexsrv-iwordbreaker-breaktext)), die dem in *pwcinbuf* enthaltenen Wort entsprechen.
+Die Anzahl der Zeichen im Quelltextpuffer (angegeben durch den *pTextSource-Parameter* für [**IWordBreaker::BreakText**](/windows/win32/api/indexsrv/nf-indexsrv-iwordbreaker-breaktext)), die dem in *pwcInBuf* enthaltenen Wort entsprechen.
 
 </dd> <dt>
 
-*cwcsrcpos* \[ in\]
+*cwcSrcPos* \[ In\]
 </dt> <dd>
 
-Die Anfangsposition des Worts in *pwcinbuf* im Quell Text Puffer (angegeben durch den *ptextsource* -Parameter für [**iwordbreaker:: breaktext**](/windows/win32/api/indexsrv/nf-indexsrv-iwordbreaker-breaktext)).
+Die Anfangsposition des Worts in *pwcInBuf* im Quelltextpuffer (angegeben durch den *pTextSource-Parameter* für [**IWordBreaker::BreakText**](/windows/win32/api/indexsrv/nf-indexsrv-iwordbreaker-breaktext)).
 
 </dd> </dl>
 
@@ -78,18 +78,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Rückgabecode                                                                                              | Beschreibung                                                                                                                                               |
 |----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>                     | Der Vorgang wurde erfolgreich abgeschlossen. Gibt auch an, dass kein Text mehr zum Auffüllen des Puffers verfügbar ist.<br/>                                  |
-| <dl> <dt>**Sprache \_ \_großes \_ Wort**</dt> </dl> | Der Wert von *CWC* ist größer als der Wert für *ulmaxumkensize* , der in [**iwordbreaker:: init**](/windows/win32/api/indexsrv/nf-indexsrv-iwordbreaker-init)angegeben wird. <br/> |
+| <dl> <dt>**S \_ OK**</dt> </dl>                     | Der Vorgang wurde erfolgreich abgeschlossen. Gibt außerdem an, dass kein text mehr zum Auffüllen des Puffers verfügbar ist.<br/>                                  |
+| <dl> <dt>**SPRACHE \_ S \_ LARGE \_ WORD**</dt> </dl> | Der Wert *von cwc* ist größer als der Wert für *ulMaxTokenSize,* der in [**IWordBreaker::Init angegeben ist.**](/windows/win32/api/indexsrv/nf-indexsrv-iwordbreaker-init) <br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es wird empfohlen, dass die **iwordsink::P utword** -Methode immer das ursprüngliche Wort enthält, wie es in *ptextsource* gefunden wurde. Alternative Formen des Worts werden mithilfe von [**iwordsink::P utaltword**](iwordsink-putaltword.md)an wordsink übermittelt. Außerdem wird empfohlen, dass die Wörter in *pwcinbuf* so genau wie möglich mit dem Quelltext übereinstimmen. Behalten Sie z. b. Groß-/Kleinschreibung und Akzente bei.
+Es wird empfohlen, dass **die IWordSink::P utWord-Methode** immer das ursprüngliche Wort wie in *pTextSource enthält.* Alternative Formen des Worts werden mithilfe von [**IWordSink::P utAltWord an WordSink übergeben.**](iwordsink-putaltword.md) Außerdem wird empfohlen, dass die Wörter in *pwcInBuf* so genau wie möglich mit dem Quelltext übereinstimmen. Behalten Sie z. B. nach Möglichkeit Groß- und Akzente bei.
 
-Dieser Rückruf muss für jedes aus *ptextsource* abgerufene Wort mit Ausnahme derjenigen erfolgen, für die der [**iwordsink::P utaltword**](iwordsink-putaltword.md) -Befehl durchgeführt wurde. Das Wort wird mit einem EOW-Zeichen beendet, wenn es in der wordsink gespeichert wird.
+Dieser Aufruf muss für jedes Von *pTextSource* abgerufene Wort vorgenommen werden, mit Ausnahme der Wörter, für die der [**IWordSink::P utAltWord-Aufruf**](iwordsink-putaltword.md) erfolgt ist. Das Wort wird mit einem EOW-Zeichen beendet, wenn es im WordSink gespeichert wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -99,7 +99,7 @@ Dieser Rückruf muss für jedes aus *ptextsource* abgerufene Wort mit Ausnahme d
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Search. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Search.h</dt> </dl> |
 
 
 
@@ -107,7 +107,7 @@ Dieser Rückruf muss für jedes aus *ptextsource* abgerufene Wort mit Ausnahme d
 
 <dl> <dt>
 
-[**Iwordsink**](iwordsink.md)
+[**IWordSink**](iwordsink.md)
 </dt> </dl>
 
  

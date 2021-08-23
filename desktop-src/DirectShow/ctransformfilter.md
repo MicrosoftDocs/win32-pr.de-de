@@ -1,7 +1,7 @@
 ---
-description: Die ctransformfilter-Klasse ist eine Basisklasse zum Implementieren von Transformations filtern.
+description: Die CTransformFilter-Klasse ist eine Basisklasse zum Implementieren von Transformationsfiltern.
 ms.assetid: 99db8252-a8db-4995-b4be-a6cf944be869
-title: Ctransformfilter-Klasse (Transfrm. h)
+title: CTransformFilter-Klasse (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,85 +16,85 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d24c305b28641fcee366b4e906b87008decac014
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9d199a406fa1934fb63625cd258baee8d69c20c17992a7d1d3bbd2c83956a1f9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368350"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119633894"
 ---
-# <a name="ctransformfilter-class"></a>Ctransformfilter-Klasse
+# <a name="ctransformfilter-class"></a>CTransformFilter-Klasse
 
 ![ctransformfilter-Klassenhierarchie](images/tfrm03.png)
 
-Die- `CTransformFilter` Klasse ist eine Basisklasse zum Implementieren von Transformations filtern. Diese Klasse ist für die Implementierung eines Transformations Filters mit einer Eingabe-und einer Ausgabe-PIN konzipiert. Dabei werden separate Zuweisungen für die Eingabe-und die Ausgabepin verwendet. Verwenden Sie zum Erstellen eines Filters, der Daten an Ort und Stelle verarbeitet, die [**ctransinplacefilter**](ctransinplacefilter.md) -Klasse.
+Die `CTransformFilter` -Klasse ist eine Basisklasse zum Implementieren von Transformationsfiltern. Diese Klasse ist für die Implementierung eines Transformationsfilters mit einem Eingabepin und einem Ausgabepin konzipiert. Es werden separate Zuweisungen für den Eingabepin und den Ausgabepin verwendet. Um einen Filter zu erstellen, der Daten direkt verarbeitet, verwenden Sie die [**CTransInPlaceFilter-Klasse.**](ctransinplacefilter.md)
 
-Dieser Filter verwendet die [**ctransforminputpin**](ctransforminputpin.md) -Klasse für seine Eingabe-PIN und die [**ctransformoutputpin**](ctransformoutputpin.md) -Klasse für die Ausgabepin. In der Regel müssen Sie diese Pin-Klassen nicht überschreiben. In den meisten der PIN-Methoden werden die entsprechenden Methoden für die `CTransformFilter` Klasse aufgerufen, sodass Sie ggf. die Filter Methoden überschreiben können. Der Filter erstellt beide Pins in der [**ctransformfilter:: getpin**](ctransformfilter-getpin.md) -Methode. Wenn Sie die PIN-Klassen überschreiben, müssen Sie **getpin** überschreiben, um Ihre benutzerdefinierten Pins zu erstellen.
+Dieser Filter verwendet die [**CTransformInputPin-Klasse**](ctransforminputpin.md) für den Eingabepin und die [**CTransformOutputPin-Klasse**](ctransformoutputpin.md) für den Ausgabepin. In der Regel müssen Sie diese Pinklassen nicht überschreiben. Die meisten pin-Methoden rufen entsprechende Methoden für die -Klasse `CTransformFilter` auf, sodass Sie die Filtermethoden bei Bedarf überschreiben können. Der Filter erstellt beide Pins in der [**CTransformFilter::GetPin-Methode.**](ctransformfilter-getpin.md) Wenn Sie die Pinklassen überschreiben, müssen Sie **GetPin überschreiben,** um Ihre benutzerdefinierten Pins zu erstellen.
 
-Um diese Klasse zu verwenden, leiten Sie eine neue Klasse von ab, `CTransformFilter` und implementieren Sie die folgenden Methoden:
+Um diese Klasse zu verwenden, leiten Sie eine neue Klasse von ab `CTransformFilter` und implementieren die folgenden Methoden:
 
--   [**Ctransformfilter:: checkinputtype**](ctransformfilter-checkinputtype.md)
--   [**Ctransformfilter:: checktransform**](ctransformfilter-checktransform.md)
--   [**Ctransformfilter::D ecidebuffersize**](ctransformfilter-decidebuffersize.md)
--   [**Ctransformfilter:: getmediatype**](ctransformfilter-getmediatype.md)
--   [**Ctransformfilter:: Transform**](ctransformfilter-transform.md)
+-   [**CTransformFilter::CheckInputType**](ctransformfilter-checkinputtype.md)
+-   [**CTransformFilter::CheckTransform**](ctransformfilter-checktransform.md)
+-   [**CTransformFilter::D ecideBufferSize**](ctransformfilter-decidebuffersize.md)
+-   [**CTransformFilter::GetMediaType**](ctransformfilter-getmediatype.md)
+-   [**CTransformFilter::Transform**](ctransformfilter-transform.md)
 
-Abhängig von den Anforderungen Ihres Filters müssen Sie möglicherweise auch andere Methoden außer Kraft setzen.
+Abhängig von den Anforderungen Ihres Filters müssen Sie möglicherweise auch andere Methoden überschreiben.
 
 ## <a name="media-types"></a>Medientypen
 
-Mit der Eingabe-PIN dieses Filters werden keine Medientypen vorgeschlagen. Er basiert auf dem Upstream-Filter, um die Medientypen für die Verbindung vorzuschlagen. Der Grund für diesen Entwurf ist, dass der upstreamfilter in den meisten Fällen weitere Informationen über das Format bereitstellen kann. Der upstreamfilter kennt z. b. die Video Abmessungen und die Framerate, während der Transformations Filter keine Möglichkeit hat, diese Informationen zu bestimmen. Wenn Sie dieses Verhalten ändern möchten, überschreiben Sie die [**getmediatype**](ctransformfilter-getmediatype.md) -Methode der Eingabe-PIN. Wenn der upstreamfilter einen Medientyp vorschlägt, ruft die Eingabe-PIN die [**checkinputtype**](ctransformfilter-checkinputtype.md) -Methode des Filters auf (rein virtuell).
+Der Eingabepin dieses Filters schlägt keine Medientypen vor. es basiert auf dem Upstreamfilter, um die Medientypen für die Verbindung vorzuschlagen. Der Grund für diesen Entwurf ist, dass der Upstreamfilter in den meisten Fällen weitere Informationen zum Format bereitstellen kann. Bei Videoformaten kennt der Upstreamfilter beispielsweise die Videodimensionen und die Bildfrequenz, während der Transformationsfilter keine Möglichkeit hat, diese Informationen zu bestimmen. Wenn Sie dieses Verhalten ändern möchten, überschreiben Sie die [**GetMediaType-Methode**](ctransformfilter-getmediatype.md) des Eingabepins. Wenn der Upstreamfilter einen Medientyp vorschlägt, ruft der Eingabepin die [**CheckInputType-Methode**](ctransformfilter-checkinputtype.md) des Filters (rein virtuell) auf.
 
-Bis die Eingabe-PIN verbunden ist, lehnt die Ausgabe-PIN alle Verbindungen ab und gibt keine bevorzugten Medientypen zurück. Nachdem die Eingabe-PIN verbunden ist, gibt die Ausgabe-PIN eine Liste der bevorzugten Typen zurück, indem die [**getmediatype**](ctransformfilter-getmediatype.md) -Methode des Filters aufgerufen wird. Er überprüft die Ausgabetypen für die Verbindung über die [**checktransform**](ctransformfilter-checktransform.md) -Methode des Filters. (Beide Methoden sind rein virtuell.) In der Regel bestimmt der Eingabetyp teilweise die zulässigen Ausgabetypen.
+Solange der Eingabepin nicht verbunden ist, verweigert der Ausgabepin alle Verbindungen und gibt keine bevorzugten Medientypen zurück. Nachdem der Eingabepin verbunden wurde, gibt der Ausgabepin eine Liste der bevorzugten Typen zurück, indem die [**GetMediaType-Methode**](ctransformfilter-getmediatype.md) des Filters aufruft. Die Ausgabetypen für die Verbindung werden über die [**CheckTransform-Methode**](ctransformfilter-checktransform.md) des Filters überprüft. (Beide Methoden sind rein virtuell.) In der Regel bestimmt der Eingabetyp teilweise die zulässigen Ausgabetypen.
 
-Abhängig vom Filter sollten Sie möglicherweise einige der unterstützten Medientypen des Filters registrieren, damit das [Filter Mapper](filter-mapper.md) -Objekt den Filter finden kann. Weitere Informationen finden Sie unter Vorgehens [Weise beim Registrieren von DirectShow-Filtern](how-to-register-directshow-filters.md).
+Je nach Filter können Sie einige der vom Filter unterstützten Medientypen registrieren, damit das [Filterzuordnungsobjekt](filter-mapper.md) ihren Filter finden kann. Weitere Informationen finden Sie unter [Registrieren von DirectShow-Filtern.](how-to-register-directshow-filters.md)
 
 ## <a name="streaming"></a>Streaming
 
-Diese Klasse fügt die Ausgabedaten nicht in die Warteschlange ein. Jedes Ausgabe Beispiel wird innerhalb der [**IMemInputPin:: Receive**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) -Methode übermittelt. Die **Receive** -Methode ruft die [**Transformations**](ctransformfilter-transform.md) Methode des Filters (auch rein virtuell) auf, um die Daten zu verarbeiten.
+Diese Klasse stellt die Ausgabedaten nicht in die Warteschlange. Jedes Ausgabebeispiel wird innerhalb der [**IMemInputPin::Receive-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) übermittelt. Die **Receive-Methode** ruft die [**Transformationsmethode**](ctransformfilter-transform.md) des Filters (auch rein virtuell) auf, um die Daten zu verarbeiten.
 
-Weitere Informationen zum Verwenden dieser Klasse finden Sie unter [Schreiben von Transformations Filtern](writing-transform-filters.md).
+Weitere Informationen zur Verwendung dieser Klasse finden Sie unter Writing Transform Filters ( [Schreiben von Transformationsfiltern](writing-transform-filters.md)).
 
 
 
-| Geschützte Member-Variablen                                                | BESCHREIBUNG                                                                                             |
+| Geschützte Membervariablen                                                | Beschreibung                                                                                             |
 |---------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [**m \_ BeOS übermittelt**](ctransformfilter-m-beosdelivered.md)              | Flag, das angibt, ob der Filter eine Benachrichtigung über das Ende des Datenstroms gesendet hat.                          |
-| [**m \_ bsampleskipped**](ctransformfilter-m-bsampleskipped.md)            | Flag, das angibt, ob das letzte Beispiel gelöscht wurde.                                         |
-| [**m \_ bqualitychanged**](ctransformfilter-m-bqualitychanged.md)          | Flag, das angibt, ob sich die Qualität geändert hat.                                                    |
-| [**m \_ CSFilter**](ctransformfilter-m-csfilter.md)                        | Kritischer Abschnitt, der den Filter Zustand schützt.                                                        |
-| [**m \_ csreceive**](ctransformfilter-m-csreceive.md)                      | Kritischer Abschnitt, der den streamingstatus schützt.                                                     |
-| [**m \_ pinput**](ctransformfilter-m-pinput.md)                            | Zeiger auf die eingabepin.                                                                               |
-| [**m \_ poutput**](ctransformfilter-m-poutput.md)                          | Zeiger auf den Ausgabepin.                                                                              |
-| Öffentliche Methoden                                                            | BESCHREIBUNG                                                                                             |
-| [**Ctransformfilter**](ctransformfilter-ctransformfilter.md)             | Konstruktormethode.                                                                                     |
-| [**~ Ctransformfilter**](ctransformfilter--ctransformfilter.md)          | Dekonstruktormethode.                                                                                      |
-| [**Getpincount**](ctransformfilter-getpincount.md)                       | Ruft die Anzahl der Pins für den Filter ab. Virtu.                                                    |
-| [**Getpin**](ctransformfilter-getpin.md)                                 | Ruft eine PIN ab. Virtu.                                                                               |
-| [**Transform**](ctransformfilter-transform.md)                           | Transformiert ein Eingabe Beispiel, um ein Ausgabe Beispiel zu erhalten. Virtu.                                        |
-| [**Startstreaming**](ctransformfilter-startstreaming.md)                 | Wird aufgerufen, wenn der Filter in den angehaltenen Zustand wechselt. Virtu.                                           |
-| [**Stopstreaming**](ctransformfilter-stopstreaming.md)                   | Wird aufgerufen, wenn der Filter in den Zustand "beendet" wechselt. Virtu.                                          |
-| [**Alterquality**](ctransformfilter-alterquality.md)                     | Benachrichtigt den Filter, dass eine Qualitätsänderung angefordert wird. Virtu.                                        |
-| [**Setmediatype**](ctransformfilter-setmediatype.md)                     | Wird aufgerufen, wenn der Medientyp für einen der Pins des Filters festgelegt wird. Virtu.                                 |
-| [**Check Connect**](ctransformfilter-checkconnect.md)                     | Bestimmt, ob eine PIN-Verbindung geeignet ist. Virtu.                                               |
-| [**Breakconnect**](ctransformfilter-breakconnect.md)                     | Gibt eine PIN von einer Verbindung frei. Virtu.                                                              |
-| [**Completeconnect**](ctransformfilter-completeconnect.md)               | Schließt eine PIN-Verbindung ab. Virtu.                                                                    |
-| [**Medizinisch**](ctransformfilter-receive.md)                               | Empfängt ein Medien Beispiel, verarbeitet es und stellt ein Ausgabe Beispiel für den downstreamfilter bereit. Virtu. |
-| [**Initializeoutputsample**](ctransformfilter-initializeoutputsample.md) | Ruft ein neues Ausgabe Beispiel ab und initialisiert es.                                                       |
-| [**EndOfStream**](ctransformfilter-endofstream.md)                       | Benachrichtigt den Filter, dass keine weiteren Daten von der eingabepin erwartet werden. Virtu.                    |
-| [**Beginflush**](ctransformfilter-beginflush.md)                         | Startet einen Löschvorgang. Virtu.                                                                      |
-| [**Endflush**](ctransformfilter-endflush.md)                             | Beendet einen Löschvorgang. Virtu.                                                                        |
-| [**Newsegment**](ctransformfilter-newsegment.md)                         | Benachrichtigt den Filter, dass nach diesem-Befehl empfangene Medien Beispiele als Segment gruppiert werden. Virtu.      |
-| Reine virtuelle Methoden                                                      | BESCHREIBUNG                                                                                             |
-| [**Checkinputtype**](ctransformfilter-checkinputtype.md)                 | Überprüft, ob ein angegebener Medientyp für die Eingabe zulässig ist.                                          |
-| [**Checktransform**](ctransformfilter-checktransform.md)                 | Überprüft, ob ein Eingabe Medientyp mit einem Ausgabe Medientyp kompatibel ist.                             |
-| [**Decidebuffersize**](ctransformfilter-decidebuffersize.md)             | Legt die Puffer Anforderungen der Ausgabe-PIN fest.                                                              |
-| [**Getmediatype**](ctransformfilter-getmediatype.md)                     | Ruft einen bevorzugten Medientyp für die Ausgabepin ab.                                                    |
-| Imediafilter-Methoden                                                      | BESCHREIBUNG                                                                                             |
-| [**Stop**](ctransformfilter-stop.md)                                     | Beendet den Filter.                                                                                       |
+| [**m \_ bEOSDelivered**](ctransformfilter-m-beosdelivered.md)              | Flag, das angibt, ob der Filter eine Benachrichtigung zum Streamende gesendet hat.                          |
+| [**m \_ bSampleSkipped**](ctransformfilter-m-bsampleskipped.md)            | Flag, das angibt, ob das letzte Beispiel gelöscht wurde.                                         |
+| [**m \_ bQualityChanged**](ctransformfilter-m-bqualitychanged.md)          | Flag, das angibt, ob sich die Qualität geändert hat.                                                    |
+| [**m \_ csFilter**](ctransformfilter-m-csfilter.md)                        | Kritischer Abschnitt, der den Filterzustand schützt.                                                        |
+| [**m \_ csReceive**](ctransformfilter-m-csreceive.md)                      | Abschnitt "Kritisch", der den Streamingzustand schützt.                                                     |
+| [**m \_ pInput**](ctransformfilter-m-pinput.md)                            | Zeiger auf den Eingabepin.                                                                               |
+| [**m \_ pOutput**](ctransformfilter-m-poutput.md)                          | Zeiger auf den Ausgabepin.                                                                              |
+| Öffentliche Methoden                                                            | Beschreibung                                                                                             |
+| [**CTransformFilter**](ctransformfilter-ctransformfilter.md)             | Konstruktormethode.                                                                                     |
+| [**~ CTransformFilter**](ctransformfilter--ctransformfilter.md)          | Destruktormethode.                                                                                      |
+| [**GetPinCount**](ctransformfilter-getpincount.md)                       | Ruft die Anzahl der Stecknadeln im Filter ab. Virtuellen.                                                    |
+| [**GetPin**](ctransformfilter-getpin.md)                                 | Ruft eine Stecknadel ab. Virtuellen.                                                                               |
+| [**Transform**](ctransformfilter-transform.md)                           | Transformiert ein Eingabebeispiel, um ein Ausgabebeispiel zu erzeugen. Virtuellen.                                        |
+| [**StartStreaming**](ctransformfilter-startstreaming.md)                 | Wird aufgerufen, wenn der Filter in den angehaltenen Zustand wechselt. Virtuellen.                                           |
+| [**StopStreaming**](ctransformfilter-stopstreaming.md)                   | Wird aufgerufen, wenn der Filter in den Zustand "Beendet" wechselt. Virtuellen.                                          |
+| [**AlterQuality**](ctransformfilter-alterquality.md)                     | Benachrichtigt den Filter, dass eine Qualitätsänderung angefordert wird. Virtuellen.                                        |
+| [**SetMediaType**](ctransformfilter-setmediatype.md)                     | Wird aufgerufen, wenn der Medientyp an einem der Pins des Filters festgelegt wird. Virtuellen.                                 |
+| [**CheckConnect**](ctransformfilter-checkconnect.md)                     | Bestimmt, ob eine Stecknadelverbindung geeignet ist. Virtuellen.                                               |
+| [**BreakConnect**](ctransformfilter-breakconnect.md)                     | Gibt eine Stecknadel aus einer Verbindung frei. Virtuellen.                                                              |
+| [**CompleteConnect**](ctransformfilter-completeconnect.md)               | Schließt eine Stecknadelverbindung ab. Virtuellen.                                                                    |
+| [**Erhalten**](ctransformfilter-receive.md)                               | Empfängt ein Medienbeispiel, verarbeitet es und übergibt ein Ausgabebeispiel an den Downstreamfilter. Virtuellen. |
+| [**InitializeOutputSample**](ctransformfilter-initializeoutputsample.md) | Ruft ein neues Ausgabebeispiel ab und initialisiert es.                                                       |
+| [**EndOfStream**](ctransformfilter-endofstream.md)                       | Benachrichtigt den Filter, dass keine zusätzlichen Daten vom Eingabepin erwartet werden. Virtuellen.                    |
+| [**BeginFlush**](ctransformfilter-beginflush.md)                         | Startet einen Leerungsvorgang. Virtuellen.                                                                      |
+| [**EndFlush**](ctransformfilter-endflush.md)                             | Beendet einen Leerungsvorgang. Virtuellen.                                                                        |
+| [**NewSegment**](ctransformfilter-newsegment.md)                         | Benachrichtigt den Filter, dass medienbeispiele, die nach diesem Aufruf empfangen wurden, als Segment gruppiert werden. Virtuellen.      |
+| Rein virtuelle Methoden                                                      | Beschreibung                                                                                             |
+| [**CheckInputType**](ctransformfilter-checkinputtype.md)                 | Überprüft, ob ein angegebener Medientyp für die Eingabe akzeptabel ist.                                          |
+| [**CheckTransform**](ctransformfilter-checktransform.md)                 | Überprüft, ob ein Eingabemedientyp mit einem Ausgabemedientyp kompatibel ist.                             |
+| [**DecideBufferSize**](ctransformfilter-decidebuffersize.md)             | Legt die Pufferanforderungen des Ausgabepins fest.                                                              |
+| [**GetMediaType**](ctransformfilter-getmediatype.md)                     | Ruft einen bevorzugten Medientyp für den Ausgabepin ab.                                                    |
+| IMediaFilter-Methoden                                                      | Beschreibung                                                                                             |
+| [**Beenden**](ctransformfilter-stop.md)                                     | Beendet den Filter.                                                                                       |
 | [**Anhalten**](ctransformfilter-pause.md)                                   | Hält den Filter an.                                                                                      |
-| Ibasefilter-Methoden                                                       | BESCHREIBUNG                                                                                             |
-| [**Findpin**](ctransformfilter-findpin.md)                               | Ruft die PIN mit dem angegebenen Bezeichner ab.                                                        |
+| IBaseFilter-Methoden                                                       | Beschreibung                                                                                             |
+| [**FindPin**](ctransformfilter-findpin.md)                               | Ruft den Pin mit dem angegebenen Bezeichner ab.                                                        |
 
 
 
@@ -106,8 +106,8 @@ Weitere Informationen zum Verwenden dieser Klasse finden Sie unter [Schreiben vo
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
 description: Beendet die Überwachung der Inaktivität.
 ms.assetid: 26e52341-77cd-46cd-8b32-e786dfac870e
-title: Endidleerkennungs-Funktion
+title: EndIdleDetection-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Msidle.dll
-ms.openlocfilehash: e50679c53123ad140324f7d159ef938367c02af0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a2ba6732b9221d4d4d43e670d0d42d39363d50dffc0d2d4b0daf378b10dd292e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354197"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119691410"
 ---
-# <a name="endidledetection-function"></a>Endidleerkennungs-Funktion
+# <a name="endidledetection-function"></a>EndIdleDetection-Funktion
 
-\[Diese Funktion wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen die **getlastinputinfo** -Funktion.\]
+\[Diese Funktion wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen die **GetLastInputInfo-Funktion.**\]
 
 Beendet die Überwachung der Inaktivität.
 
@@ -50,11 +50,11 @@ Dieser Parameter muss auf 0 (null) festgelegt werden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Funktion erfolgreich ausgeführt wurde. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE** zurück, wenn die Funktion erfolgreich ausgeführt wird. Andernfalls wird **FALSE** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen. Diese Funktion wird nicht nach dem Namen exportiert. Geben Sie beim Aufrufen von " **GetProcAddress**" Ordnungszahl 4 an.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen. Diese Funktion wird nicht anhand des Namens exportiert. Geben Sie beim Aufrufen von **GetProcAddress** die Ordnungszahl 4 an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 <dl> <dt>
 
-[**Getlastinputinfo**](/windows/win32/api/winuser/nf-winuser-getlastinputinfo)
+[**GetLastInputInfo**](/windows/win32/api/winuser/nf-winuser-getlastinputinfo)
 </dt> </dl>
 
  

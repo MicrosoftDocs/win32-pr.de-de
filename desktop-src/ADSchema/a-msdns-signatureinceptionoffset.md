@@ -1,11 +1,11 @@
 ---
-title: MS-DNS-Signature-Inception-Offset-Attribut
-description: Ein Attribut, das in Sekunden definiert, wie weit in den letzten DNSSEC-Signatur Gültigkeits Punkten beginnen soll, wenn die DNS-Zone signiert wird.
+title: ms-DNS-Signature-Inception-Offset-Attribut
+description: Ein Attribut, das in Sekunden definiert, wie weit in den letzten Gültigkeitsdauern der DNSSEC-Signatur beim Signieren der DNS-Zone begonnen werden soll.
 ms.assetid: 2d929ec8-38ff-481e-a926-eb1251dd7a86
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-DNS-Signature-Inception-Offset\"-Attribut AD-Schema"
-- MSDNs-SignatureInceptionOffset-Attribut AD-Schema
+- AD-Schema des ms-DNS-Signature-Inception-Offset-Attributs
+- AD-Schema des msDNS-SignatureInceptionOffset-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f81e3e278b3c37531a4e537fe45583421bce8928
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 1f6e66bac8dcf2653d7b4f82eb73a80e852c6f8902ddddec50ae601ed80e37ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480407"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119552970"
 ---
-# <a name="ms-dns-signature-inception-offset-attribute"></a>MS-DNS-Signature-Inception-Offset-Attribut
+# <a name="ms-dns-signature-inception-offset-attribute"></a>ms-DNS-Signature-Inception-Offset-Attribut
 
-Ein Attribut, das in Sekunden definiert, wie weit in den letzten DNSSEC-Signatur Gültigkeits Punkten beginnen soll, wenn die DNS-Zone signiert wird.
+Ein Attribut, das in Sekunden definiert, wie weit in den letzten Gültigkeitsdauern der DNSSEC-Signatur beim Signieren der DNS-Zone begonnen werden soll.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DNS-Signature-Inception-Offset    |
-| LDAP-Display-Name | MSDNs-SignatureInceptionOffset       |
+| CN                | ms-DNS-Signature-Inception-Offset    |
+| Ldap-Anzeigename | msDNS-SignatureInceptionOffset       |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2141              |
-| System-ID-GUID    | 03d4c32e-E217-4a61-9699-7bbc4729a026 |
+| System-Id-Guid    | 03d4c32e-e217-4a61-9699-7bbc4729a026 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -53,10 +53,10 @@ Ein Attribut, das in Sekunden definiert, wie weit in den letzten DNSSEC-Signatur
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
+| Is-Single-Valued       | True                                     |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | 0                                        |
 | Range-Upper            | 2592000                                  |
 | Search-Flags           | 0x00000008                               |

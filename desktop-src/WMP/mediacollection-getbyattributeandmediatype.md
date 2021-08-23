@@ -1,11 +1,11 @@
 ---
-title: Mediacollection. getbyattributeandmediatype-Methode
-description: Die getbyattributeandmediatype-Methode ruft ein Wiedergabelisten Objekt ab, das Medienobjekte mit dem angegebenen Attribut und Medientyp enthält.
+title: MediaCollection.getByAttributeAndMediaType-Methode
+description: Die getByAttributeAndMediaType-Methode ruft ein Playlist-Objekt ab, das Medienobjekte mit dem angegebenen Attribut und Medientyp enthält.
 ms.assetid: 75241b38-ae0e-4216-b405-af9a9c71f5ec
 keywords:
-- getbyattributeandmediatype-Methode, Windows Media Player
-- getbyattributeandmediatype-Methode Windows Media Player, mediacollection-Klasse
-- Mediacollection-Klasse, Windows Media Player, getbyattributeandmediatype-Methode
+- getByAttributeAndMediaType-Methode Windows Media Player
+- getByAttributeAndMediaType-Methode Windows Media Player , MediaCollection-Klasse
+- MediaCollection-Klasse Windows Media Player , getByAttributeAndMediaType-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e26abbf2f19d50ec6a10ebbafe12afae8576f34
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 46dab1bdcb511e4c96374b17bc6a98be95e48fd64d005eb856c9ec247af48f2f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119647880"
 ---
-# <a name="mediacollectiongetbyattributeandmediatype-method"></a>Mediacollection. getbyattributeandmediatype-Methode
+# <a name="mediacollectiongetbyattributeandmediatype-method"></a>MediaCollection.getByAttributeAndMediaType-Methode
 
-Die **getbyattributeandmediatype** -Methode ruft ein **Wiedergabe** Listen Objekt ab, das **Medien** Objekte mit dem angegebenen Attribut und Medientyp enthält.
+Die **getByAttributeAndMediaType-Methode** ruft ein **Playlist-Objekt** ab, das **Medienobjekte** mit dem angegebenen Attribut und Medientyp enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,30 +44,30 @@ retVal = MediaCollection.getByAttributeAndMediaType(
 
 <dl> <dt>
 
-*Attribut* \[ in\]
+*-Attribut* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die das Attribut enthält.
+**Zeichenfolge,** die das Attribut enthält.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*wert* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Wert enthält.
+**Zeichenfolge,** die den Wert enthält.
 
 </dd> <dt>
 
-*mediaType* \[ in\]
+*mediaType* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Medientyp enthält. Muss einen der folgenden Werte enthalten: "Audiodatei", "Video", "Photo", "Wiedergabeliste" oder "Other".
+**Zeichenfolge,** die den Medientyp enthält. Muss einen der folgenden Werte enthalten: "audio", "video", "photo", "playlist" oder "other".
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt ein **Wiedergabe** Listen Objekt zurück.
+Diese Methode gibt ein **Wiedergabelistenobjekt zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,13 +84,13 @@ Diese Methode gibt ein **Wiedergabe** Listen Objekt zurück.
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> <dt>
 
-[**Mediacollection-Objekt**](mediacollection-object.md)
+[**MediaCollection-Objekt**](mediacollection-object.md)
 </dt> <dt>
 
-[**Wiedergabelisten Objekt**](playlist-object.md)
+[**Wiedergabelistenobjekt**](playlist-object.md)
 </dt> </dl>
 
  

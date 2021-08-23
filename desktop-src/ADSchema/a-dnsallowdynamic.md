@@ -1,11 +1,11 @@
 ---
-title: DNS-Allow-Dynamic-Attribut
-description: Das DNS-Allow-Dynamic-Attribut wird derzeit nicht verwendet.
+title: Dns-Allow-Dynamic-Attribut
+description: Das Dns-Allow-Dynamic-Attribut wird derzeit nicht verwendet.
 ms.assetid: a81383dd-0e5b-4423-b140-33071cf80159
 ms.tgt_platform: multiple
 keywords:
-- DNS-Allow-Dynamic-Attribut AD-Schema
-- dnsallowdynamic-Attribut, AD-Schema
+- AD-Schema des DNS-Allow-Dynamic-Attributs
+- AD-Schema des dnsAllowDynamic-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a805f997f9dc87de1748718fe7099c42b03f56a7
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 86ff03bff6cf61ae9d2737b4c8332337d1db3cc2255e6d7bb1ad34370d0a68c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119706290"
 ---
-# <a name="dns-allow-dynamic-attribute"></a>DNS-Allow-Dynamic-Attribut
+# <a name="dns-allow-dynamic-attribute"></a>Dns-Allow-Dynamic-Attribut
 
-Das **DNS-Allow-Dynamic-** Attribut wird derzeit nicht verwendet.
+Das **Dns-Allow-Dynamic-Attribut** wird derzeit nicht verwendet.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | DNS-Allow-Dynamic                    |
-| LDAP-Display-Name | dnsallowdynamic                      |
+| CN                | Dns-Allow-Dynamic                    |
+| Ldap-Anzeigename | dnsAllowDynamic                      |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.378               |
-| System-ID-GUID    | e0fa1e65-9b45-11d0-afdd-00c04fd930c9 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-Id-Guid    | e0fa1e65-9b45-11d0-afdd-00c04fd930c9 |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Das **DNS-Allow-Dynamic-** Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -70,7 +70,7 @@ Das **DNS-Allow-Dynamic-** Attribut wird derzeit nicht verwendet.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Das **DNS-Allow-Dynamic-** Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -99,11 +99,11 @@ Das **DNS-Allow-Dynamic-** Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -120,11 +120,11 @@ Das **DNS-Allow-Dynamic-** Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -141,11 +141,11 @@ Das **DNS-Allow-Dynamic-** Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -162,11 +162,11 @@ Das **DNS-Allow-Dynamic-** Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |

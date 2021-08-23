@@ -1,7 +1,7 @@
 ---
 description: Fügt ein Datenobjekt als untergeordnetes Objekt hinzu. Veraltet.
 ms.assetid: 43771dd6-c17f-4376-9b0a-459ba61ff4c5
-title: 'Idirectxfiledata:: adddataobject-Methode (dxfile. h)'
+title: IDirectXFileData::AddDataObject-Methode (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3dxof.lib
 - D3dxof.dll
-ms.openlocfilehash: 393526bb249b0337964bee0af5be1b55b8dd513e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: db11f5f3c0d9078663c87db8948bc483ab05d229cd4d7fd0950efaf5143e1408
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355397"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119491830"
 ---
-# <a name="idirectxfiledataadddataobject-method"></a>Idirectxfiledata:: adddataobject-Methode
+# <a name="idirectxfiledataadddataobject-method"></a>IDirectXFileData::AddDataObject-Methode
 
 Fügt ein Datenobjekt als untergeordnetes Objekt hinzu. Veraltet.
 
@@ -40,12 +40,12 @@ HRESULT AddDataObject(
 
 <dl> <dt>
 
-*pdataobj* \[ in\]
+*pDataObj* \[ In\]
 </dt> <dd>
 
-Typ: **[ **lpdirectxfiledata**](idirectxfiledata.md)**
+Typ: **[ **LPDIRECTXFILEDATA**](idirectxfiledata.md)**
 
-Ein Zeiger auf eine [**idirectxfiledata**](idirectxfiledata.md) -Schnittstelle, die das Datei Datenobjekt darstellt, das als untergeordnetes Objekt hinzugefügt werden soll.
+Zeiger auf eine [**IDirectXFileData-Schnittstelle,**](idirectxfiledata.md) die das Dateidatenobjekt darstellt, das als untergeordnetes Objekt hinzugefügt werden soll.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Ein Zeiger auf eine [**idirectxfiledata**](idirectxfiledata.md) -Schnittstelle, 
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \_ . Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein. dxfileerr \_ badzuweisung dxfileerr \_ badvalue
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert DXFILE \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein. DXFILEERR \_ BADALLOC DXFILEERR \_ BADVALUE
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die [**idirectxfilesaveobject:: createDataObject**](idirectxfilesaveobject--createdataobject.md) -Methode, um das [**idirectxfiledata**](idirectxfiledata.md) -Objekt zu erstellen, bevor Sie diese Methode aufrufen.
+Verwenden Sie die [**IDirectXFileSaveObject::CreateDataObject-Methode,**](idirectxfilesaveobject--createdataobject.md) um das [**IDirectXFileData-Objekt**](idirectxfiledata.md) zu erstellen, bevor Sie diese Methode aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Verwenden Sie die [**idirectxfilesaveobject:: createDataObject**](idirectxfilesa
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 
 
 
@@ -74,10 +74,10 @@ Verwenden Sie die [**idirectxfilesaveobject:: createDataObject**](idirectxfilesa
 
 <dl> <dt>
 
-[Idirectxfiledata](idirectxfiledata.md)
+[IDirectXFileData](idirectxfiledata.md)
 </dt> <dt>
 
-[**Idirectxfilesaveobject:: kreatedataobject**](idirectxfilesaveobject--createdataobject.md)
+[**IDirectXFileSaveObject::CreateDataObject**](idirectxfilesaveobject--createdataobject.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: ID3DX11DataLoader Load-Methode (D3DX11core. h)
-description: Beachten Sie, dass die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) für Windows 8 veraltet ist und für Windows Store-Apps nicht unterstützt wird. Lädt Daten von einem Datenträger.
+title: ID3DX11DataLoader Load-Methode (D3DX11core.h)
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt. Lädt Daten von einem Datenträger.
 ms.assetid: 21dee078-af8f-4ca1-bb2e-d4ecc0471609
 keywords:
 - Load-Methode Direct3D 11
-- Load-Methode Direct3D 11, ID3DX11DataLoader-Schnittstelle
-- ID3DX11DataLoader-Schnittstelle Direct3D 11, Load-Methode
+- Load-Methode Direct3D 11 , ID3DX11DataLoader-Schnittstelle
+- ID3DX11DataLoader-Schnittstelle Direct3D 11 , Load-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,17 +17,17 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c0f720a5e6884bfdf1935c6d93f7a05decae5e8a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b5f698896ca696a6d63b4738f1246deb35be0139f3bff817518cc5f81b52a191
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982613"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119632990"
 ---
-# <a name="id3dx11dataloaderload-method"></a>ID3DX11DataLoader:: Load-Methode
+# <a name="id3dx11dataloaderload-method"></a>ID3DX11DataLoader::Load-Methode
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 
  
 
@@ -50,24 +50,24 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 11-Rückgabecodes aufgeführten](d3d11-graphics-reference-returnvalues.md)Werte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode wird von einer [**ID3DX11ThreadPump-Schnittstelle**](id3dx11threadpump.md)verwendet.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX11core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Bibliothek d3dx11. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX11core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX11.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

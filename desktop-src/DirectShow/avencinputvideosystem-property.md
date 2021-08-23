@@ -1,33 +1,33 @@
 ---
-description: Gibt das Videosystem des Quell Inhalts an.
+description: Gibt das Videosystem des Quellinhalts an.
 ms.assetid: a4ad7ca2-bab0-42f7-a098-a5ff6853b109
-title: Avencinputvideosystem-Eigenschaft (codecapi. h)
+title: AVEncInputVideoSystem-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8012b814a50f7c543b2b72682871fe29545d4b80
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 28970a5f4312503fa6a2c5f1e81d29ef7028ea3e7c214ffe08bb9e6729af4fcc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860418"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119689790"
 ---
-# <a name="avencinputvideosystem-property"></a>Avencinputvideosystem (Eigenschaft)
+# <a name="avencinputvideosystem-property"></a>AVEncInputVideoSystem (Eigenschaft)
 
-Gibt das Videosystem des Quell Inhalts an.
+Gibt das Videosystem des Quellinhalts an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencinputvideosystem**
+**CODECAPI \_ AVEncInputVideoSystem**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavencinputvideosystem**](/windows/desktop/api/codecapi/ne-codecapi-eavencinputvideosystem) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVEncInputVideoSystem-Enumeration.**](/windows/desktop/api/codecapi/ne-codecapi-eavencinputvideosystem)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavencinputvideosystem**](/win
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -45,10 +45,10 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavencinputvideosystem**](/win
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

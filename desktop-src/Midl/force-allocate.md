@@ -1,9 +1,9 @@
 ---
 title: force_allocate-Attribut
-description: Das ACF-Attribut \ Force Allocation \_ \ erzwingt, dass ein Zeiger Parameter mithilfe der Benutzer Zuordnung von mittlerer l zugewiesen wird, \_ \_ anstatt die Zuordnung zu optimieren.
+description: Das ACF-Attribut \force \_ allocate\ erzwingt, dass ein Zeigerparameter mithilfe von midl user allocate zugeordnet wird, \_ \_ anstatt die Zuordnung zu optimieren.
 ms.assetid: 40e3a7d9-7e4f-4e3d-8c82-fb6ef567f293
 keywords:
-- force_allocate Attribut-Mittel l
+- force_allocate-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f73d0386d786e4d3004c78b1acccda7e9be8fc16
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: c9c82e1665e4c49461c3c7bd1c315b31f4f72c7e3f0e5331d9f0326347d36105
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104472844"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119582160"
 ---
-# <a name="force_allocate-attribute"></a>Attribut "zuordnen" erzwingen \_
+# <a name="force_allocate-attribute"></a>Zuordnen des Attributs erzwingen \_
 
-Mit der ACF-Attribut \[ **Erzwingung wird erzwungen \_** \] , dass ein Zeiger Parameter mithilfe der [**Mittel \_ \_**](midl-user-allocate-1.md) Wertzuordnung zugewiesen wird, anstatt die Zuordnung zu optimieren.
+Die \[ **ACF-Attributerzwingung \_ erzwingt,** \] dass ein Zeigerparameter mithilfe von [**midl user \_ \_ allocate**](midl-user-allocate-1.md) zugeordnet wird, anstatt die Zuordnung zu optimieren.
 
 ``` syntax
 [ [function-attribute-list <>] ] type-specifier <> [pointer- <>declarator <>] function-name <>( [ force_allocate [ , parameter-attribute-list <> ] ] type-specifier <> [declarator <>] , ...);
@@ -29,13 +29,13 @@ Mit der ACF-Attribut \[ **Erzwingung wird erzwungen \_** \] , dass ein Zeiger Pa
 
 ## <a name="parameters"></a>Parameter
 
-Dieses Attribut hat keine Parameter.
+Dieses Attribut verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-RPC versucht, Speicher Belegungen auf dem Server zu minimieren, indem Zeiger auf interne Speicherpuffer bereitgestellt werden. Diese Vorgehensweise kann Probleme bei Anwendungen verursachen, die versuchen, den [**\_ Benutzer \_ kostenlos**](midl-user-free-1.md) für die von RPC bereitgestellten Zeiger aufzurufen, da ein optimierter Zeiger nicht freigegeben werden kann. Wenn Sie einen Parameter mit " **\[ erzwingen" \_ zuweisen \]** , wird diese Optimierung für alle Zeiger, die ihn ableiten, verhindert.
+RPC versucht, Speicherbelegungen auf dem Server zu minimieren, indem Zeiger auf interne Speicherpuffer bereitgestellt werden. Dieser Ansatz kann Probleme für Anwendungen verursachen, die versuchen, [**midl \_ user \_ free**](midl-user-free-1.md) direkt auf RPC-bereitgestellten Zeigern aufzurufen, da ein optimierter Zeiger nicht freigegeben werden kann. Das Markieren eines Parameters mit **\[ "Force \_ Allocate" \]** verhindert diese Optimierung für alle Zeiger, die ihn ableiten.
 
-Eine weitere häufige Verwendung für die **\[ Zwangs \_ \]** Zuordnungen besteht darin, die Ausrichtung des Speichers zu gewährleisten, auf den verwiesen wird, wenn eine Anwendung eine Ausrichtung erfordert, die größer ist als der Speicher, auf den verwiesen wird Beispielsweise übergeben Anwendungen häufig Daten in einem generischen Bytearray, anstatt den eigentlichen Typ zu verwenden, aber ein Byte wird nur bei 1 sichergestellt, was für Anwendungen, die eine größere Ausrichtung annehmen, zu Problemen führen kann. Durch Markieren des Parameters mit der Zuweisungs **\[ \_ Zuteilung \]** kann die Anwendung sicherstellen, dass für den gesamten Speicher, auf den verwiesen wird, eine Ausrichtung entspricht, die durch die [**\_ Benutzer \_**](midl-user-allocate-1.md)Zuordnungen garantiert wird.
+Eine weitere häufige Verwendung von **\[ Force \_ Allocate \]** besteht darin, die Ausrichtung des Arbeitsspeichers zu gewährleisten, auf den gezeigt wird, wenn eine Anwendung eine Ausrichtung erfordert, die größer als die des Arbeitsspeichers ist, auf den gezeigt wird. Beispielsweise übergeben Anwendungen Daten häufig in einem generischen Bytearray, anstatt den tatsächlichen Typ zu verwenden. Es ist jedoch garantiert, dass ein Byte nur bei 1 ausgerichtet wird. Dies kann zu Problemen bei Anwendungen führen, die eine größere Ausrichtung voraussetzen. Durch Markieren des Parameters mit **\[ force \_ allocate \]** kann die Anwendung sicherstellen, dass der gesamte Arbeitsspeicher, auf den gezeigt wird, eine Ausrichtung aufweist, die der von [**der mittleren \_ \_ Benutzerzuweisung**](midl-user-allocate-1.md)garantierten Entspricht.
 
 ## <a name="examples"></a>Beispiele
 
@@ -57,21 +57,21 @@ Func2([force_allocate] pData);
 
 <dl> <dt>
 
-[Vermeiden von Informationen ausblenden](/windows/desktop/WinProg64/avoiding-information-hiding)
+[Vermeiden des Ausblendens von Informationen](/windows/desktop/WinProg64/avoiding-information-hiding)
 </dt> <dt>
 
 [Entwerfen von 64-Bit-kompatiblen Schnittstellen](/windows/desktop/WinProg64/designing-64-bit-compatible-interfaces)
 </dt> <dt>
 
-[**mittlere Benutzer Zuordnungen \_ \_**](midl-user-allocate-1.md)
+[**midl \_ user \_ allocate**](midl-user-allocate-1.md)
 </dt> <dt>
 
-[**mittlerer l- \_ Benutzer \_ kostenlos**](midl-user-free-1.md)
+[**midl \_ user \_ free**](midl-user-free-1.md)
 </dt> <dt>
 
 [**allocate**](allocate.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
