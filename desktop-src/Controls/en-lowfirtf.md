@@ -1,9 +1,9 @@
 ---
-title: EN_LOWFIRTF Benachrichtigungs Code (RichEdit. h)
-description: Benachrichtigt das übergeordnete Fenster eines Microsoft Rich Edit-Steuer Elements, dass ein nicht unterstütztes RTF-Schlüsselwort (Rich Text Format) empfangen wurde. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer WM-Benachrichtigungs \_ Meldung.
+title: EN_LOWFIRTF Benachrichtigungscode (Richedit.h)
+description: Benachrichtigt das übergeordnete Fenster eines Microsoft Rich Edit-Steuerelements, dass ein nicht unterstütztes RTF-Schlüsselwort (Rich Text Format) empfangen wurde. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungscode in Form einer WM \_ NOTIFY-Nachricht.
 ms.assetid: 3b18320b-ebc3-44f2-a93c-e967a028c522
 keywords:
-- Windows-Steuerelemente für EN_LOWFIRTF Benachrichtigungs
+- EN_LOWFIRTF Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e74a6e5dada471fdd8364b34bf2ed1b4da7f2314
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ffafccf7fc52506ce72c6591ae9d4b5e3f5ee8855788267fbfae98497165e4ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518662"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119576320"
 ---
-# <a name="en_lowfirtf-notification-code"></a>EN \_ lowfirtf-Benachrichtigungs Code
+# <a name="en_lowfirtf-notification-code"></a>EN \_ LOWFIRTF-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Microsoft Rich Edit-Steuer Elements, dass ein nicht unterstütztes RTF-Schlüsselwort (Rich Text Format) empfangen wurde. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer WM-Benachrichtigungs Meldung. [**\_**](wm-notify.md)
+Benachrichtigt das übergeordnete Fenster eines Microsoft Rich Edit-Steuerelements, dass ein nicht unterstütztes RTF-Schlüsselwort (Rich Text Format) empfangen wurde. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungscode in Form einer [**WM \_ NOTIFY-Nachricht.**](wm-notify.md)
 
 
 ```C++
@@ -41,17 +41,17 @@ EN_LOWFIRTF
 *lParam* 
 </dt> <dd>
 
-Die Struktur von " [**umlowfirtf**](/windows/desktop/api/Richedit/ns-richedit-enlowfirtf) ".
+Die [**ENLOWFIRTF-Struktur.**](/windows/desktop/api/Richedit/ns-richedit-enlowfirtf)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Dieser Benachrichtigungs Code gibt keinen Wert zurück.
+Dieser Benachrichtigungscode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um eine en \_ lowfirtf-Benachrichtigung zu erhalten, geben Sie das ENM \_ lowfirtf-Flag in der mit der [**EM \_ SetEventMask**](em-seteventmask.md) -Nachricht gesendeten Maske an.
+Um eine EN \_ LOWFIRTF-Benachrichtigung zu erhalten, geben Sie das ENM \_ LOWFIRTF-Flag in der Maske an, die mit der [**EM \_ SETEVENTMASK-Nachricht**](em-seteventmask.md) gesendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Um eine en \_ lowfirtf-Benachrichtigung zu erhalten, geben Sie das ENM \_ lowfir
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP1 \[ Desktop-Apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP1-Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -69,13 +69,13 @@ Um eine en \_ lowfirtf-Benachrichtigung zu erhalten, geben Sie das ENM \_ lowfir
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**"Umlowfirtf"**](/windows/desktop/api/Richedit/ns-richedit-enlowfirtf)
+[**ENLOWFIRTF**](/windows/desktop/api/Richedit/ns-richedit-enlowfirtf)
 </dt> <dt>
 
-[**WM- \_ Benachrichtigung**](wm-notify.md)
+[**WM \_ NOTIFY**](wm-notify.md)
 </dt> </dl>
 
  

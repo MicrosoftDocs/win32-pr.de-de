@@ -1,25 +1,25 @@
 ---
-description: Erstellen des ASF-Splitter Objekts
+description: Erstellen des ASF-Splitterobjekts
 ms.assetid: 448e2b38-70f7-4491-aac8-ee988a6f7473
-title: Erstellen des ASF-Splitter Objekts
+title: Erstellen des ASF-Splitterobjekts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d42c8033a0861102f6d66b22e43516a616d6428b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fa5782f42b53607943704836c350b76e69d872e8d9654959d4453d8e029c21f0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861812"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119600810"
 ---
-# <a name="creating-the-asf-splitter-object"></a>Erstellen des ASF-Splitter Objekts
+# <a name="creating-the-asf-splitter-object"></a>Erstellen des ASF-Splitterobjekts
 
-Das ASF- *Splitter* Objekt ist ein wmcontainer-Ebenenobjekt, das das ASF-Datenobjekt einer ASF-Datei (Advanced Systems Format) analysiert. Um eine neue Instanz des ASF-Splitter Objekts zu erstellen, rufen Sie die [**mfkreateasfsplitter**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfsplitter) -Funktion auf. Diese Funktion gibt einen Zeiger auf die [**imfasfsplitter**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfsplitter) -Schnittstelle zurück, die ein leeres Splitter Objekt darstellt.
+Das *ASF-Splitterobjekt* ist ein WMContainer-Ebenenobjekt, das das ASF-Datenobjekt einer ASF-Datei (Advanced Systems Format) analysiert. Um eine neue Instanz des ASF-Splitterobjekts zu erstellen, rufen Sie die [**MFCreateASFSplitter-Funktion**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfsplitter) auf. Diese Funktion gibt einen Zeiger auf die [**IMFASFSplitter-Schnittstelle**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfsplitter) zurück, die ein leeres Splitterobjekt darstellt.
 
-Bevor der Splitter die Verarbeitung beginnen kann, muss die Anwendung den Splitter mit Informationen aus dem ASF-Header Objekt initialisieren. Um den Splitter zu initialisieren, nennen Sie die [**imfasfsplitter:: Initialisieren**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfsplitter-initialize) -Methode. Diese Methode nimmt einen Zeiger auf das [Objekt "ASF ContentInfo](asf-contentinfo-object.md) " an, das Header Informationen der zu debuggende ASF-Datei enthält. Die Anwendung muss das ContentInfo-Objekt initialisieren, bevor es an den Splitter übergeben wird, damit die Merkmale der Mediendatei der Anwendung bekannt sind. Die **Initialize** -Methode des Splitters extrahiert streaminginformationen aus dem ContentInfo-Objekt, z. b. streamnummern, sodass der Splitter die Datenpakete analysieren kann.
+Bevor der Splitter mit der Analyse beginnen kann, muss die Anwendung den Splitter mit Informationen aus dem ASF-Headerobjekt initialisieren. Rufen Sie zum Initialisieren des Splitters die [**IMFASFSplitter::Initialize-Methode**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfsplitter-initialize) auf. Diese Methode verwendet einen Zeiger auf das [ASF ContentInfo-Objekt,](asf-contentinfo-object.md) das Headerinformationen der zu analysierende ASF-Datei enthält. Die Anwendung muss das ContentInfo-Objekt initialisieren, bevor es an den Splitter übergeben wird, damit die Merkmale der Mediendatei der Anwendung bekannt sind. Die **Initialize-Methode** des Splitters extrahiert Streaminformationen aus dem ContentInfo-Objekt, z. B. Datenstromnummern, damit der Splitter die Datenpakete analysieren kann.
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Codebeispiel wird gezeigt, wie ein Splitter erstellt und mit einem vorhandenen ContentInfo-Objekt initialisiert wird.
+Das folgende Codebeispiel zeigt, wie Sie einen Splitter erstellen und mit einem vorhandenen ContentInfo-Objekt initialisieren.
 
 
 ```C++
@@ -52,7 +52,7 @@ HRESULT CreateASFSplitter (IMFASFContentInfo* pContentInfo,
 
 
 > [!Note]  
-> In diesem Beispiel wird die Funktion " [saferelease](saferelease.md) " verwendet, um Schnittstellen Zeiger freizugeben.
+> In diesem Beispiel wird die [SafeRelease-Funktion](saferelease.md) verwendet, um Schnittstellenzeiger freizugeben.
 
  
 

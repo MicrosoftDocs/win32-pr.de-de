@@ -1,28 +1,28 @@
 ---
-description: In diesem Thema wird beschrieben, wie überprüft wird, ob das System eine Digest-Methode unterstützt.
+description: In diesem Thema wird beschrieben, wie Sie überprüfen, ob das System eine Digestmethode unterstützt.
 ms.assetid: dd1b53cd-66b9-46b3-89ad-ee84b4690e1e
-title: Überprüfen, ob das System eine Digest-Methode unterstützt
+title: Überprüfen, ob das System eine Digestmethode unterstützt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9acf3e0c2c7f4927fc6047c88039e443e2db3e71
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 272db3f7169ba66fdaa67c2943030d53e7c75927c2024750d405aa9a8246949e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119600300"
 ---
-# <a name="verify-the-system-supports-a-digest-method"></a>Überprüfen, ob das System eine Digest-Methode unterstützt
+# <a name="verify-the-system-supports-a-digest-method"></a>Überprüfen, ob das System eine Digestmethode unterstützt
 
-In diesem Thema wird beschrieben, wie überprüft wird, ob das System eine Digest-Methode unterstützt.
+In diesem Thema wird beschrieben, wie Sie überprüfen, ob das System eine Digestmethode unterstützt.
 
-Digitale XPS-Signaturen verwenden die Crypto-API, die Methoden bereitstellt, um zu überprüfen, ob das System eine bestimmte Digest-Methode unterstützt. Um die Funktion " **cryptxmlenumalgorithminfo** " der kryptografieapi zum Auflisten der vom System unterstützten Digest-Methoden zu verwenden, muss der Aufrufer eine Rückruf Methode und eine Datenstruktur bereitstellen. Die Funktion " **cryptxmlenumalgorithminfo** " übergibt die Enumerationsdaten über die Rückruf Methode an den Aufrufer zurück.
+XPS Digital Signatures verwendet die Kryptografie-API, die Methoden zur Überprüfung bereitstellt, ob das System eine bestimmte Digestmethode unterstützt. Um die **CryptXmlEnumAlgorithmInfo-Funktion** der Crypto-API zum Auflisten der digest-Methoden zu verwenden, die vom System unterstützt werden, muss der Aufrufer eine Rückrufmethode und eine Datenstruktur bereitstellen. Die **CryptXmlEnumAlgorithmInfo-Funktion** übergibt die Enumerationsdaten über die Rückrufmethode zurück an den Aufrufer.
 
-Die in diesem Beispiel verwendete Datenstruktur ist im folgenden Codebeispiel dargestellt und enthält die folgenden Felder:
+Die in diesem Beispiel verwendete Datenstruktur wird im folgenden Codebeispiel gezeigt und enthält die folgenden Felder:
 
-| Feld                            | BESCHREIBUNG                                                                                                |
+| Feld                            | Beschreibung                                                                                                |
 |----------------------------------|------------------------------------------------------------------------------------------------------------|
-| **userdigestalgorithm**          | Ein **LPWSTR** -Feld, das auf die Zeichenfolge verweist, die den URI des zu überprüfenden Digest-Algorithmus enthält. |
-| **userdigestalgorithmsupported** | Ein **boolescher** Wert, der angibt, ob der Digest-Algorithmus vom Zertifikat unterstützt wird.           |
+| **userDigestAlgorithm**          | Ein **LPWSTR-Feld,** das auf die Zeichenfolge zeigt, die den URI des zu überprüfenden Digestalgorithmus enthält. |
+| **userDigestAlgorithmSupported** | Ein **boolescher** Wert, der angibt, ob der Digestalgorithmus vom Zertifikat unterstützt wird.           |
 
 
 
@@ -39,7 +39,7 @@ struct DigestMethodData
 
 
 
-Die Crypto-API-Methode, die die Digest-Methoden auflistet, verwendet eine Rückruf Methode, um Daten an den Aufrufer zurückzugeben. **Cryptxmlenumalgorithminfo** listet die Digest-Methoden auf, die vom System unterstützt werden, und ruft die Rückruf Methode für jede aufgeführte Digest-Methode auf, bis die Rückruf Methode **false** zurückgibt oder alle vom System unterstützten Digest-Methoden aufgelistet werden. Die Rückruf Methode in diesem Beispiel vergleicht die von **cryptxmlenumschlag** -Methode übergebenen Digest-Methode mit der Digest-Methode, die von der aufrufenden Methode bereitgestellt wird.
+Die Crypto-API-Methode, die die Digestmethoden aufzählt, verwendet eine Rückrufmethode, um Daten an den Aufrufer zurückzugeben. **CryptXmlEnumAlgorithmInfo** listet die vom System unterstützten Digestmethoden auf und ruft die Rückrufmethode für jede Digestmethode auf, die sie aufzählt, bis die Rückrufmethode **FALSE** zurückgibt oder bis alle vom System unterstützten Digestmethoden aufzählt werden. Die Rückrufmethode in diesem Beispiel vergleicht die digest-Methode, die von **CryptXmlEnumAlgorithmInfo** übergeben wird, mit der digest-Methode, die von der aufrufenden Methode bereitgestellt wird.
 
 
 ```C++
@@ -96,7 +96,7 @@ EnumDigestMethodCallback (
 
 
 
-Das folgende Codebeispiel umschließt die Validierungs Funktionen in eine einzelne-Methode, die einen **booleschen** Wert zurückgibt, der angibt, ob das System die Digest-Methode unterstützt.
+Das folgende Codebeispiel umschließt die Validierungsfunktionalität in eine einzelne Methode, die einen **booleschen** Wert zurückgibt, der angibt, ob das System die Digestmethode unterstützt.
 
 
 ```C++
@@ -144,31 +144,31 @@ SupportsDigestAlgorithm (
 [Laden eines Zertifikats aus einer Datei](load-a-certificate-from-a-file.md)
 </dt> <dt>
 
-[Überprüfen, ob ein Zertifikat eine Signatur Methode unterstützt](verify-a-certificate-supports-a-signature-method.md)
+[Überprüfen, ob ein Zertifikat eine Signaturmethode unterstützt](verify-a-certificate-supports-a-signature-method.md)
 </dt> <dt>
 
-[Einbinden von Zertifikat Ketten in ein Dokument](embedding-certificate-trust-chains-in-a-document.md)
+[Einbetten von Zertifikatketten in ein Dokument](embedding-certificate-trust-chains-in-a-document.md)
 </dt> <dt>
 
 **In diesem Beispiel verwendet**
 </dt> <dt>
 
-**Cryptxmlenenalgorithminfo**
+**CryptXmlEnumAlgorithmInfo**
 </dt> <dt>
 
 **Weitere Informationen**
 </dt> <dt>
 
-[Kryptografieapi](/windows/desktop/SecCrypto/cryptography-portal)
+[Kryptografie-API](/windows/desktop/SecCrypto/cryptography-portal)
 </dt> <dt>
 
 [Kryptografiefunktionen](/windows/desktop/SecCrypto/cryptography-functions)
 </dt> <dt>
 
-[XPS-Fehler bei der digitalen Signatur-API](xps-digital-signatures-errors.md)
+[Fehler bei der API für digitale XPS-Signaturen](xps-digital-signatures-errors.md)
 </dt> <dt>
 
-[XPS-Dokument Fehler](xps-document-errors.md)
+[XPS-Dokumentfehler](xps-document-errors.md)
 </dt> <dt>
 
 [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

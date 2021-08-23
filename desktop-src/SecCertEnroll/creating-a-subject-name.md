@@ -1,49 +1,49 @@
 ---
-description: Mit der IX500DistinguishedName-Schnittstelle können Sie einen Antragsteller Namen aus einer Distinguished Name-Zeichenfolge erstellen.
+description: Sie können die IX500DistinguishedName-Schnittstelle verwenden, um einen Betreffnamen aus einer Distinguished Name-Zeichenfolge zu erstellen.
 ms.assetid: 78fbf15a-678f-4d87-a309-e70374e3ecee
-title: Erstellen eines Antragsteller namens
+title: Erstellen eines Betreffnamens
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7fe512be48c9a727857c4fac4abc6e04a705b7f6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 00a7350268c4b7fe5f0d6bde0630bfa7556bc8dd6085e11261456299b725dd57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525097"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119670210"
 ---
-# <a name="creating-a-subject-name"></a>Erstellen eines Antragsteller namens
+# <a name="creating-a-subject-name"></a>Erstellen eines Betreffnamens
 
-Mit der [**IX500DistinguishedName**](/windows/desktop/api/CertEnroll/nn-certenroll-ix500distinguishedname) -Schnittstelle können Sie einen Antragsteller Namen aus einer Distinguished Name-Zeichenfolge erstellen. Die Zeichenfolge besteht aus verketteten relativen Distinguished Names (rDNS). Die folgenden RDN-Schlüssel werden von der Zertifikatregistrierungs-API unterstützt.
+Sie können die [**IX500DistinguishedName-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix500distinguishedname) verwenden, um einen Betreffnamen aus einer Distinguished Name-Zeichenfolge zu erstellen. Die Zeichenfolge besteht aus verketteten relativen Distinguished Names (RDNs). Die folgenden RDN-Schlüssel werden von der Zertifikatregistrierungs-API unterstützt.
 
-| Schlüssel                               | OID                                             | BESCHREIBUNG                                                                                        |
+| Key                               | OID                                             | Beschreibung                                                                                        |
 |-----------------------------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| C<br/>                      | XCN- \_ OID- \_ Länder \_ Name<br/>              | Enthält einen aus zwei Buchstaben bestehenden Code für ISO 3166-Länder oder-Regionen.<br/>                                  |
-| CN<br/>                     | allgemeiner Name der XCN- \_ OID \_ \_<br/>               | Enthält einen allgemeinen Namen.<br/>                                                                 |
-| E<br/> E-Mail<br/>     | XCN \_ OID \_ RSA \_ EmailAddr<br/>             | Enthält eine e-Mail-Adresse.<br/>                                                              |
-| SL<br/>                     | XCN \_ OID- \_ Domänen \_ Komponente<br/>          | Enthält einen Teil eines Domain Name System-namens (DNS).<br/>                                   |
-| G<br/> GivenName<br/> | Vorname der XCN- \_ OID \_ \_<br/>                | Enthält den Teil des Namens einer Person, bei dem es sich nicht um einen Nachnamen handelt.<br/>                             |
-| I<br/>                      | XCN- \_ OID- \_ Initialen<br/>                   | Enthält die Initialen einer Person.<br/>                                                           |
-| L<br/>                      | XCN- \_ OID- \_ lokalitäts \_ Name<br/>             | Enthält den Ortsnamen, der eine Stadt, ein Land oder eine andere geografische Region identifiziert.<br/> |
-| O<br/>                      | Name der XCN- \_ OID- \_ Organisation \_<br/>         | Enthält den Namen einer Organisation.<br/>                                                   |
-| OU<br/>                     | Name der \_ \_ Organisations \_ Einheit \_ für XCN OID<br/> | Enthält den Namen einer Einheiten Teildivision innerhalb einer Organisation.<br/>                         |
-| E<br/> ST<br/>        | XCN- \_ OID- \_ Status \_ oder \_ Provinz \_ Name<br/>  | Enthält den vollständigen Namen eines Bundesstaats oder Provinz-.<br/>                                          |
-| STREET<br/>                 | XCN- \_ OID- \_ Straße \_<br/>            | Enthält die physische Adresse.<br/>                                                          |
-| SN<br/>                     | XCN \_ OID \_ - \_ Name<br/>                  | Enthält den Familiennamen einer Person.<br/>                                                   |
-| T<br/> TITLE-<br/>     | XCN- \_ OID- \_ Titel<br/>                      | Enthält den Titel einer Person in der Organisation.<br/>                                     |
+| C<br/>                      | NAME DES \_ XCN-OID-LANDS \_ \_<br/>              | Enthält einen aus zwei Buchstaben großen ISO 3166-Länder- oder -Region-Code.<br/>                                  |
+| CN<br/>                     | ALLGEMEINE \_ XCN-OID-NAME \_ \_<br/>               | Enthält einen allgemeinen Namen.<br/>                                                                 |
+| E<br/> E-Mail<br/>     | XCN \_ OID \_ RSA \_ emailAddr<br/>             | Enthält eine E-Mail-Adresse.<br/>                                                              |
+| DC<br/>                     | \_XCN-OID-DOMÄNENKOMPONENTE \_ \_<br/>          | Enthält einen Teil eines DNS-namens (Domain Name System Dns).<br/>                                   |
+| G<br/> GivenName<br/> | VORNAME DER \_ XCN-OID \_ \_<br/>                | Enthält den Teil des Namens einer Person, der kein Nachname ist.<br/>                             |
+| I<br/>                      | \_XCN-OID-INITIALEN \_<br/>                   | Enthält die Initialen einer Person.<br/>                                                           |
+| L<br/>                      | NAME DER \_ XCN-OID-LOKALITÄT \_ \_<br/>             | Enthält den Ortsnamen, der eine Stadt, ein Land oder eine andere geografische Region identifiziert.<br/> |
+| O<br/>                      | NAME DER \_ XCN-OID-ORGANISATION \_ \_<br/>         | Enthält den Namen einer Organisation.<br/>                                                   |
+| OU<br/>                     | NAME DER \_ XCN-OID-ORGANISATIONSEINHEIT \_ \_ \_<br/> | Enthält den Namen einer Einheitenunterteilung innerhalb einer Organisation.<br/>                         |
+| E<br/> ST<br/>        | NAME DES \_ XCN-OID-BUNDESSTAATS \_ ODER DER \_ \_ \_ PROVINZ<br/>  | Enthält den vollständigen Namen eines Bundesstaats oder einer Provinz.<br/>                                          |
+| STREET<br/>                 | \_XCN-OID-STRAßENADRESSE \_ \_<br/>            | Enthält die physische Adresse.<br/>                                                          |
+| SN<br/>                     | \_ \_ XCN-OID-SUR-NAME \_<br/>                  | Enthält den Familiennamen einer Person.<br/>                                                   |
+| T<br/> TITLE-<br/>     | \_XCN-OID-TITEL \_<br/>                      | Enthält den Titel einer Person in der Organisation.<br/>                                     |
 
 
 
  
 
-Wenn Sie ein [**IX500DistinguishedName**](/windows/desktop/api/CertEnroll/nn-certenroll-ix500distinguishedname) -Objekt initialisieren, können Sie das Format des Distinguished Name-Objekts identifizieren, indem Sie einen Wert aus dem [**X500NameFlags**](/windows/desktop/api/CertEnroll/ne-certenroll-x500nameflags) -Enumerationstyp angeben. Nehmen Sie beispielsweise an, dass der Distinguished Name des Antragstellers aus folgendem RDNs besteht:<dl> CN = Administrator  
-CN = Benutzer  
-DC = jdomcsc  
-DC = nttest  
-DC = Microsoft  
-DC = com  
+Wenn Sie ein [**IX500DistinguishedName-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix500distinguishedname) initialisieren, können Sie das Format des Distinguished Name identifizieren, indem Sie einen Wert aus dem [**X500NameFlags-Enumerationstyp**](/windows/desktop/api/CertEnroll/ne-certenroll-x500nameflags) angeben. Angenommen, der Distinguished Name des Betreffs besteht aus den folgenden RDNs:<dl> CN=Administrator  
+CN=Users  
+DC=jdomcsc  
+DC=nttest  
+DC=microsoft  
+DC=com  
 </dl>
 
-Wenn Sie diese RDNs in der folgenden durch Trennzeichen getrennten Distinguished Name-Zeichenfolge verketten, können Sie beim Initialisieren eines [**IX500DistinguishedName**](/windows/desktop/api/CertEnroll/nn-certenroll-ix500distinguishedname) -Objekts den Wert für den **XCN \_ CERT \_ Name \_ Str-Komma- \_ \_ Flag** angeben.
+Wenn Sie diese RDNs mit der folgenden durch Trennzeichen getrennten Distinguished Name-Zeichenfolge verketten, können Sie beim Initialisieren eines [**IX500DistinguishedName-Objekts**](/windows/desktop/api/CertEnroll/nn-certenroll-ix500distinguishedname) den **XCN \_ CERT \_ NAME STR \_ \_ COMMA \_ FLAG-Wert** angeben.
 
 ``` syntax
 CN=Administrator,CN=Users,DC=jdomcsc,DC=nttest,DC=microsoft,DC=com
@@ -53,7 +53,7 @@ CN=Administrator,CN=Users,DC=jdomcsc,DC=nttest,DC=microsoft,DC=com
 
 <dl> <dt>
 
-[Codieren eines Antragsteller namens](encoding-a-subject-name.md)
+[Codieren eines Betreffnamens](encoding-a-subject-name.md)
 </dt> <dt>
 
 [Antragstellernamen](subject-names.md)

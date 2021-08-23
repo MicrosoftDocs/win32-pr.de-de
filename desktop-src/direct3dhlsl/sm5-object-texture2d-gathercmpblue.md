@@ -1,9 +1,9 @@
 ---
-title: 'Texture2D:: gathercmpblue (S, float, float, int)-Funktion'
-description: 'Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der blauen Komponente mit einem Vergleichswert zurückgegeben. | Texture2D:: gathercmpblue (S, float, float, int)-Funktion'
+title: Texture2D::GatherCmpBlue(S,float,float,int)-Funktion
+description: Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer blauen Komponente mit einem Vergleichswert zurück. | Texture2D::GatherCmpBlue(S,float,float,int)-Funktion
 ms.assetid: d8e03c55-18f1-4598-a700-9ba3a680d78a
 keywords:
-- Gathercmpblue-Funktion HLSL
+- GatherCmpBlue-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: eedeb21141c1e694effe4eb8c7be70c828aa0a3c
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 5344414ce35b1063fff938eb6ea0f6ed0813d407f99d1fc2202c2cb58b6a74b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995414"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119671320"
 ---
-# <a name="texture2dgathercmpbluesfloatfloatint-function"></a>Texture2D:: gathercmpblue (S, float, float, int)-Funktion
+# <a name="texture2dgathercmpbluesfloatfloatint-function"></a>Texture2D::GatherCmpBlue(S,float,float,int)-Funktion
 
-Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der blauen Komponente mit einem Vergleichswert zurückgegeben.
+Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer blauen Komponente mit einem Vergleichswert zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,36 +42,36 @@ float4 GatherCmpBlue(
 *s* \[ in\]
 </dt> <dd>
 
-Typ: **samplercomparisonstate**
+Typ: **SamplerComparisonState**
 
-Der null basierte samplerindex.
+Der nullbasierte Samplerindex.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **float2**
 
-Die Beispiel Koordinaten (u, v).
+Die Beispielkoordinaten (u,v).
 
 </dd> <dt>
 
-*\_ Wert vergleichen* \[ in\]
+*\_ Vergleichswert* \[ in\]
 </dt> <dd>
 
 Typ: **float**
 
-Ein Wert, der jeweils mit jedem Stichproben Wert verglichen werden soll.
+Ein -Wert, der mit jedem Stichprobenwert verglichen werden soll.
 
 </dd> <dt>
 
-*Offset* \[ in\]
+*Offset* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Ein Offset, der vor der Stichprobenentnahme auf die Textur Koordinate angewendet wird.
+Ein Offset, der vor der Stichprobenentnahme auf die Texturkoordinate angewendet wird.
 
 </dd> </dl>
 
@@ -79,17 +79,17 @@ Ein Offset, der vor der Stichprobenentnahme auf die Textur Koordinate angewendet
 
 Typ: **float4**
 
-Ein vier komponentenwert, wobei jede Komponente das Ergebnis eines Vergleichs pro Komponente ist.
+Ein Wert mit vier Komponenten, jede Komponente ist das Ergebnis eines Komponentenvergleichs.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Textur Beispiele können für bilineare Interpolationen verwendet werden.
+Die Texturbeispiele können für die bilineare Interpolation verwendet werden.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -97,14 +97,14 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Gathercmpblue-Methoden](texture2d-gathercmpblue.md)
+[GatherCmpBlue-Methoden](texture2d-gathercmpblue.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

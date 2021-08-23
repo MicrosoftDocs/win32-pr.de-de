@@ -1,5 +1,5 @@
 ---
-description: LockMedia-Methode der Msvm_DVDDrive - Sperrt oder gibt die Medien frei.
+description: 'LockMedia-Methode der Msvm_DVDDrive-Klasse: Sperrt oder gibt die Medien frei.'
 ms.assetid: 924bc20a-901b-4618-be49-eaacf80c9465
 title: LockMedia-Methode der Msvm_DVDDrive-Klasse
 ms.topic: reference
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: e00780fbeeeec60563b31008c8e5979a09f9d173
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e86ef975d872f0fd86922f25f9752fda7508a037e293db85245ef6b1384a1570
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119525320"
 ---
 # <a name="lockmedia-method-of-the-msvm_dvddrive-class"></a>LockMedia-Methode der Msvm \_ DVDDrive-Klasse
 
@@ -39,10 +39,10 @@ uint32 LockMedia(
 
 <dl> <dt>
 
-*Sperre* \[ In\]
+*Sperren* \[ In\]
 </dt> <dd>
 
-**TRUE,** um das Medium zu sperren; **FALSE,** um die Medien frei zu geben.
+**TRUE,** um die Medien zu sperren; **FALSE,** um die Medien freizugeben.
 
 </dd> </dl>
 
@@ -62,17 +62,17 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

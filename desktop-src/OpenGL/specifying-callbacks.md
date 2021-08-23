@@ -1,58 +1,58 @@
 ---
 title: Angeben von Rückrufen
-description: Sie können bis zu fünf Rückruf Funktionen für ein Mosaik angeben.
+description: Sie können bis zu fünf Rückruffunktionen für ein Mosaik angeben.
 ms.assetid: b49a8400-8111-450d-a2d7-c313a898a213
 keywords:
-- OpenGL-Hilfsprogramm (GLU), angeben von Rückruf Funktionen
-- GLU (OpenGL-Hilfsprogramm), angeben von Rückruf Funktionen
+- OpenGL-Hilfsprogramm (GLU), Angeben von Rückruffunktionen
+- GLU (OpenGL-Hilfsprogramm), Angeben von Rückruffunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6086448cf6f4a71ea6a49359d5656f12f613d760
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9e57a5f961a980f20451f594fa59885eda99d1e2de94a55fbfd2abd4b8301b4d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104516029"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119553780"
 ---
 # <a name="specifying-callbacks"></a>Angeben von Rückrufen
 
-Sie können bis zu fünf Rückruf Funktionen für ein Mosaik angeben. Alle Funktionen, die Sie nicht angeben, werden im Mosaik Prozess nicht aufgerufen, und Sie erhalten keine Informationen, die Sie möglicherweise zurückgegeben haben. Sie geben die Rückruf Funktionen mit " [*glutesscallback*](glutess.md)" an.
+Sie können bis zu fünf Rückruffunktionen für ein Mosaik angeben. Alle Funktionen, die Sie nicht angeben, werden während des Mosaiks nicht aufgerufen, und Sie erhalten keine Informationen, die sie möglicherweise zurückgegeben haben. Sie geben die Rückruffunktionen mit [*gluTessCallback an.*](glutess.md)
 
-Die Funktion " **glutesscallback** " verknüpft die Rückruffunktion " *FN* " mit dem Mosaik Objekt " *tessobj*". Der Typ des Rückrufs wird durch den *Parametertyp* bestimmt, der z. b. " **glu \_ Begin**", " **glu \_ Edge \_ Flag** **", " \_** **glu \_ Scheitel** Punkt" oder " **glu- \_ Fehler**" sein kann. Die fünf möglichen Rückruf Funktionen verfügen über die folgenden Prototypen.
+Die **gluTessCallback-Funktion** ordnet die Rückruffunktion *fn* dem Mosaikobjekt *tessobj zu.* Der Typ des Rückrufs wird durch den Parametertyp *bestimmt,* der **GLU \_ BEGIN,** **GLU EDGE \_ \_ FLAG,** **GLU \_ VERTEX,** **GLU \_ END** oder **GLU ERROR \_ sein kann.** Die fünf möglichen Rückruffunktionen verfügen über die folgenden Prototypen.
 
 
 
 | Rückruffunktion   | Prototyp                                    |
 |---------------------|----------------------------------------------|
-| **Glu \_ Anfang**      | **void** **Begin**(**GLenum * * *-Typ* );       |
-| **Glu \_ Edge- \_ Flag** | **void** **edgeflag**(**glboolean * * *-Flag* ); |
-| **Glu- \_ Scheitelpunkt**     | **void** **Scheitel** Punkt (**void \* * * *-Daten* );     |
-| **Glu \_ Ende**        |  **Ende beenden**( *void* );                  |
-| **Glu- \_ Fehler**      | **void** - **Fehler**(**GLenum * * * errno* );      |
+| **GLU \_ BEGIN**      | **void** **begin**(**GLenum-Typ** );       |
+| **\_ \_ GLU-EDGEFLAG** | **void** **edgeFlag**(**GLboolean**_flag_ ); |
+| **GLU \_ VERTEX**     | **void** **vertex**(**void \* \data* );     |
+| **\_GLU-ENDE**        | **void** **end**( *void* );                  |
+| **\_GLU-FEHLER**      | **void** **error**(**GLenum**_errno_ );      |
 
 
 
- 
+ 
 
-Um eine Rückruffunktion zu ändern, rufen Sie mit der neuen Funktion " [*glutesscallback*](glutess.md) " auf. Um eine Rückruffunktion auszuschließen, ohne Sie durch eine neue zu ersetzen, **übergeben Sie** für die entsprechende Funktion einen NULL-Zeiger.
+Um eine Rückruffunktion zu ändern, rufen Sie [*gluTessCallback*](glutess.md) mit der neuen Funktion auf. Um eine Rückruffunktion zu beseitigen, ohne sie durch eine neue zu ersetzen, übergeben Sie **gluTessCallback** einen NULL-Zeiger für die entsprechende Funktion.
 
-Wenn das Mosaik Vorgang fortgesetzt wird, werden die Rückruf Funktionen ähnlich wie die OpenGL-Funktionen " [**glBegin**](glbegin.md)", " [gledgeflag](gledgeflag-functions.md)", " [glVertex](glvertex-functions.md)" und " [**glEnd**](glend.md)" aufgerufen.
+Während das Mosaik fortgesetzt wird, werden die Rückruffunktionen ähnlich wie die OpenGL-Funktionen [**glBegin,**](glbegin.md) [glEdgeFlag,](gledgeflag-functions.md) [glVertex](glvertex-functions.md)und [**glEnd**](glend.md)aufgerufen.
 
-Die **glu \_ Begin** -Rückruffunktion wird mit einem von drei möglichen Parametern aufgerufen:
+Die **GLU \_ BEGIN-Rückruffunktion** wird mit einem von drei möglichen Parametern aufgerufen:
 
--   GL- \_ Dreiecks \_ Lüfter
--   GL- \_ Dreiecks \_ Streifen
--   GL- \_ Dreiecke
+-   GL \_ TRIANGLE \_ FAN
+-   GL \_ TRIANGLE \_ STRIP
+-   \_GL-DREIECKE
 
-Nach dem Aufrufen der Funktion " **glu \_ Begin** Callback" und vor dem Aufrufen der mit dem " **glu \_ End**" verknüpften Rückruffunktion wird eine Kombination aus dem glu-edgeflag und dem **glu \_ Vertex** -Rückrufe aufgerufen. **\_ \_** Die zugeordneten Scheitel Punkte und edgeflags werden genau so interpretiert, wie Sie in OpenGL zwischen **glBegin**(GL- \_ Dreieck- \_ Lüfter), **glBegin**(GL- \_ Dreiecks \_ Streifen) oder **glBegin**(GL \_ -Dreiecke **)** und dem passenden **glEnd** liegen.
+Nach dem Aufruf der **GLU \_ BEGIN-Rückruffunktion** und vor dem Aufruf der Rückruffunktion, die **GLU \_ END** zugeordnet ist, wird eine Kombination der **GLU \_ \_ EDGE-FLAG-** und **GLU \_ VERTEX-Rückrufe** aufgerufen. Die zugeordneten Scheitelzeichen und Kantenflags werden genau so interpretiert, wie sie sich in OpenGL zwischen **glBegin**(GL \_ TRIANGLE \_ FAN), **glBegin**(GL TRIANGLE STRIP) oder \_ \_ **glBegin**(GL TRIANGLES ) und dem entsprechenden \_ **glEnd befinden.**
 
-Da edgeflags in einem Dreiecks Lüfter oder einem Dreiecks Streifen keinen Sinn ergeben, wird der **glu \_ Begin** -Rückruf nur mit **GL- \_ Dreiecke** aufgerufen, wenn eine Rückruffunktion mit einem glu-edgeflag verknüpft ist. **\_ \_** Die Funktion " **glu \_ Edge \_ Flag** Callback" funktioniert analog zur OpenGL [gledgeflag](gledgeflag-functions.md) -Funktion.
+Da Kantenflags in einem Dreiecksfächer oder Dreiecksstreifen keinen Sinn ergeben, wird der **GLU \_ BEGIN-Rückruf** nur mit GL TRIANGLES aufgerufen, wenn eine Rückruffunktion dem **GLU \_ EDGE \_ FLAG** zugeordnet **\_ ist.** Die **GLU \_ EDGE \_ FLAG-Rückruffunktion** funktioniert analog zur OpenGL [glEdgeFlag-Funktion.](gledgeflag-functions.md)
 
-Wenn während des Mosaik Fehlers ein Fehler auftritt, wird die Fehler Rückruffunktion aufgerufen. An die Fehler Rückruffunktion wird eine glu-Fehlernummer übermittelt. Sie können eine Zeichenfolge abrufen, in der der Fehler mit der Funktion " [**gluerrorstring**](gluerrorstring.md) " beschrieben wird.
+Wenn während des Mosaiks ein Fehler auftritt, wird die Fehlerrückruffunktion aufgerufen. Der Fehlerrückruffunktion wird eine GLU-Fehlernummer übergeben. Sie können eine Zeichenfolge abrufen, die den Fehler mit der [**gluErrorString-Funktion**](gluerrorstring.md) beschreibt.
 
- 
+ 
 
- 
+ 
 
 
 

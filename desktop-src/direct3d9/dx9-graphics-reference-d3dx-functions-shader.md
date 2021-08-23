@@ -1,19 +1,19 @@
 ---
-description: D3DX stellt die folgenden Shaderfunktionen bereit.
+description: D3DX stellt die folgenden Shaderfunktionen zur Verfügung.
 ms.assetid: 541e8988-db05-4e25-84f1-c6799f31e442
 title: Shaderfunktionen (Direct3D 9-Grafiken)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 86f1a346cb0b5934c942668fb18f7d5b835d04a2
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 9e879672240269aca8795999ae1b3b5f83b3e828d9a0f9e315ceee89fe7a41b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346809"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119728220"
 ---
 # <a name="shader-functions-direct3d-9-graphics"></a>Shaderfunktionen (Direct3D 9-Grafiken)
 
-D3DX stellt die folgenden Shaderfunktionen bereit.
+D3DX stellt die folgenden Shaderfunktionen zur Verfügung.
 
 -   [**D3DXAssembleShader**](d3dxassembleshader.md)
 -   [**D3DXAssembleShaderFromFile**](d3dxassembleshaderfromfile.md)

@@ -1,29 +1,29 @@
 ---
-title: Das standardmäßige Zeichen Eigenschaften Fenster
-description: Das standardmäßige Zeichen Eigenschaften Fenster
+title: Das Eigenschaftenfenster für Standardzeichen
+description: Das Eigenschaftenfenster für Standardzeichen
 ms.assetid: a775738e-c3f8-443e-b519-1df0a5d3e95d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: acfa4345b9c95af40ce933ef072b576b987cdb9c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b3e66a2b101cfae80e9dfc7d97c2430355343a6c231986eea216975791ef03e1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119555754"
 ---
-# <a name="the-default-character-properties-window"></a>Das standardmäßige Zeichen Eigenschaften Fenster
+# <a name="the-default-character-properties-window"></a>Das Eigenschaftenfenster für Standardzeichen
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Anwendungen können nicht nur ein bestimmtes Zeichen laden, sondern auch ein Zeichen laden, das eine freigegebene Ressource für den Benutzer ist, die als *Standard Zeichen* bezeichnet wird. Auf das Standard Zeichen kann von einer beliebigen Anwendung aus zugegriffen werden, aber das Zeichen wird nur vom Benutzer ausgewählt. Um die Auswahl dieses Zeichens zu vereinfachen, stellt der-Agent ein Fenster bereit, das den Zugriff auf das Auswählen dieses Zeichens ermöglicht, das als Standard Zeichen Eigenschaften Fenster bezeichnet wird. Der Zugriff auf dieses Fenster wird von der Agent-API unterstützt.
+Anwendungen können nicht nur das Laden eines bestimmten Zeichens ermöglichen, sie können auch ein Zeichen laden, das eine freigegebene Ressource für den Benutzer ist, die als *Standardzeichen* bezeichnet wird. Auf das Standardzeichen kann von jeder Anwendung aus zugegriffen werden, aber das Zeichen kann nur vom Benutzer ausgewählt werden. Um die Auswahl dieses Zeichens zu erleichtern, stellt der -Agent ein Fenster bereit, das Zugriff auf die Auswahl dieses Zeichens bietet, das als Standardfenster für Zeicheneigenschaften bezeichnet wird. Der Zugriff auf dieses Fenster wird über die Agent-API unterstützt.
 
-![Genie-Zeichen Eigenschaften (Dialogfeld)](images/f8dpwin.gif)
+![Genie-Zeicheneigenschaften (Dialogfeld)](images/f8dpwin.gif)
 
-Das Standard Zeichen Eigenschaften Fenster kann nicht verwendet werden, um eine andere Zeichenauswahl als für das Standard Zeichen bereitzustellen.
+Das Standardzeicheneigenschaftenfenster kann nicht verwendet werden, um eine andere Zeichenauswahl als für das Standardzeichen bereitzustellen.
 
- 
+ 
 
- 
+ 
 
 
 

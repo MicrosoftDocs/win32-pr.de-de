@@ -3,25 +3,25 @@ title: Globale Attribute (Windows Media Player SDK)
 description: Globale Attribute
 ms.assetid: 2ed09506-990e-4da2-89d6-6ff77dc43eb2
 keywords:
-- Windows Media Player Skins, globale Attribute
-- Skins, globale Attribute
+- Windows Media Player Skins,globale Attribute
+- Skins,globale Attribute
 - Referenz für Skins, globale Attribute
 - Globale Attribute
-- Attribute, Global
+- Attribute,global
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 19c3f7a605b5c277b3207cefbbeaaa641f81f026
-ms.sourcegitcommit: 40a1246849dba8ececf54c716b2794b99c96ad50
+ms.openlocfilehash: 69c2d52b6489a28eff20e3a7e5c7180fc9e2db9309c0fe42880bfc779a23f563
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "104389474"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648080"
 ---
 # <a name="global-attributes"></a>Globale Attribute
 
-Globale Attribute sind Attribute, die einfachen Zugriff auf bestimmte Player Elemente oder Objekte von jedem beliebigen Ort innerhalb eines Skin ermöglichen.
+Globale Attribute sind Attribute, die einen einfachen Zugriff auf bestimmte Playerelemente oder -objekte von überall innerhalb einer Skin ermöglichen.
 
-Das globale Attribut " **Player** " ist ein Verweis auf das [Player](player-object.md) -Objekt und wird für den Zugriff auf die primäre Funktionalität von Windows-Media Player verwendet. Im folgenden Beispiel wird **Player** verwendet, um die Wiedergabe digitaler Medien zu starten.
+Das **globale Player-Attribut** ist ein Verweis auf das [Player-Objekt](player-object.md) und wird für den Zugriff auf die primäre Funktionalität des Windows Media Player. Im folgenden Beispiel wird der **Player verwendet,** um die Wiedergabe digitaler Medien zu starten.
 
 
 ```C++
@@ -33,7 +33,7 @@ Das globale Attribut " **Player** " ist ein Verweis auf das [Player](player-obje
 
 
 
-Das **Global Attribute** -Attribut ist ein Verweis auf das [Theme](theme-element.md) -Element. Dies ist die richtige Methode für den **Zugriff auf** Design Attribute, anstatt eine ID innerhalb des **Theme** -Elements anzugeben. Im folgenden Beispiel wird das **Design verwendet,** um eine neue Ansicht zu öffnen.
+Das **globale Designattribut** ist ein Verweis auf das [THEME-Element.](theme-element.md) Dies ist die  richtige Möglichkeit für den Zugriff auf THEME-Attribute, anstatt eine ID innerhalb des **THEME-Elements** anzugeben. Im folgenden Beispiel wird **design verwendet,** um eine neue Ansicht zu öffnen.
 
 
 ```C++
@@ -46,7 +46,7 @@ Das **Global Attribute** -Attribut ist ein Verweis auf das [Theme](theme-element
 
 
 
-Das **View** Global-Attribut ist ein Verweis auf die aktuelle [Ansicht](view-element.md). Dies kann anstelle der ID verwendet werden, die in den verschiedenen **Ansichts** Elementen angegeben ist. Im folgenden Beispiel wird die **Ansicht** verwendet, um die aktuelle Ansicht zu schließen.
+Das **globale View-Attribut** ist ein Verweis auf die aktuelle [VIEW.](view-element.md) Dies kann anstelle der ID verwendet werden, die in den verschiedenen **VIEW-Elementen angegeben** ist. Im folgenden Beispiel wird **die ansicht verwendet,** um die aktuelle Ansicht zu schließen.
 
 
 ```C++
@@ -59,7 +59,7 @@ Das **View** Global-Attribut ist ein Verweis auf die aktuelle [Ansicht](view-ele
 
 
 
-Das **Ereignis** Global-Attribut wird für den Zugriff auf Ambient-Ereignis Attribute aus Ereignis Handlern verwendet. Im folgenden Beispiel wird das- **Ereignis** verwendet, um zu bestimmen, ob beim Klicken auf eine Schaltfläche die Alt-Taste gedrückt wird.
+Das **globale Ereignisattribut** wird verwendet, um innerhalb von Ereignishandlern auf Ambient-Ereignisattribute zu zugreifen. Im folgenden Beispiel wird das **-Ereignis** verwendet, um zu bestimmen, ob die ALT-TASTE gedrückt wird, wenn auf eine Schaltfläche geklickt wird.
 
 
 ```C++
@@ -71,7 +71,7 @@ Das **Ereignis** Global-Attribut wird für den Zugriff auf Ambient-Ereignis Attr
 
 
 
-Das globale Attribut **playerapplication** ist ein Verweis auf das [playerapplication](playerapplication-object.md) -Objekt und wird von Skin-Dateien verwendet, die als benutzerdefinierte Benutzeroberflächen für Remote Player-Steuerelemente bereitgestellt werden. Das Player-Steuerelement kann nur in C++-Programmen, die die **iwmpremotemediaservices** -Schnittstelle implementieren, in den Remote Modus eingebettet werden. Im folgenden Beispiel wird **playerapplication** verwendet, um in den vollständigen Modus des Players zu wechseln.
+Das **globale PlayerApplication-Attribut** ist ein Verweis auf das [PlayerApplication-Objekt](playerapplication-object.md) und wird von Skindateien verwendet, die als benutzerdefinierte Benutzeroberflächen für Player-Remotesteuerelemente bereitgestellt werden. Das Player-Steuerelement kann nur in C++-Programme, die die **IWMPRemoteMediaServices-Schnittstelle** implementieren, in den Remotemodus eingebettet werden. Im folgenden Beispiel wird **playerApplication verwendet,** um in den vollständigen Modus des Players zu wechseln.
 
 
 ```C++
@@ -83,18 +83,18 @@ Das globale Attribut **playerapplication** ist ein Verweis auf das [playerapplic
 
 
 
-Weitere Informationen finden Sie unter [Ambient-Ereignis Attribute](ambient-event-attributes.md).
+Weitere Informationen finden Sie unter [Ambient Event Attributes](ambient-event-attributes.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Verschiedenes**](miscellaneous.md)
+[**verschiedene gefährliche Stoffe**](miscellaneous.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: 'D3DXQuaternionBaryCentric-Funktion (D3dx9math.h): Gibt eine Quaternion in barycentric-Koordinaten zurück.'
+description: 'D3DXQuaternionBaryCentric-Funktion (D3dx9math.h): Gibt eine Quaternion in baryzentrierten Koordinaten zurück.'
 ms.assetid: 8fcd2e16-1bf1-4e18-afc9-17c92f2bbac5
 title: D3DXQuaternionBaryCentric-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 2ce0cfc7b3a59dc2a3cae6fa240015e70a035695
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1fd226fbeb150af22d56fff8dac28e8a651a03ffd10ca8c50f0c1b40ae742090
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094108"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119631090"
 ---
 # <a name="d3dxquaternionbarycentric-function-d3dx9mathh"></a>D3DXQuaternionBaryCentric-Funktion (D3dx9math.h)
 
-Gibt eine Quaternion in baryzentrischen Koordinaten zurück.
+Gibt eine Quaternion in baryzentrierten Koordinaten zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -105,7 +105,7 @@ Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
 Zeiger auf eine [**D3DXQUATERNION-Struktur**](d3dxquaternion.md) in baryzentrierten Koordinaten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Um die barytischen Koordinaten zu berechnen, implementiert die **D3DXQuaternionBaryCentric-Funktion** die folgende Reihe von pherischen linearen Interpolationsvorgängen:
 
@@ -126,14 +126,14 @@ Baryzentrierte Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Be
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

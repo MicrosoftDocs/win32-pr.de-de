@@ -1,44 +1,44 @@
 ---
-title: Datentypen der MIDI-Eingabe
-description: Datentypen der MIDI-Eingabe
+title: EINGABE-Datentypen
+description: EINGABE-Datentypen
 ms.assetid: c67f149e-60b8-4f9e-8e3c-a88cd579d29f
 keywords:
-- Digital Instrumentation Digital Interface (MIDI), Eingabe Datentypen
-- MIDI (Digital Instrumentation Digital Interface), Eingabe Datentypen
-- Aufzeichnen von MIDI-Audiodaten, Eingabe Datentypen
-- Datentypen der MIDI-Eingabe
+- Instrument Digital Interface (KEYBOARD), Eingabedatentypen
+- SIGNATURE (Keyboard Instrument Digital Interface), Eingabedatentypen
+- Aufzeichnung von audio,input data types
+- EINGABEDATENTYPEN
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f8f0738827cce4cfd8cb4a237dcd2031c2fe71a7
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 4f3cb45c321cdac95c09274f25293f4635d5a715638367c8f9e06cf5c45777af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106340264"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119525220"
 ---
-# <a name="midi-input-data-types"></a>Datentypen der MIDI-Eingabe
+# <a name="midi-input-data-types"></a>EINGABE-Datentypen
 
-Windows definiert die folgenden Datentypen für die MIDI-Eingabefunktionen.
+Windows definiert die folgenden Datentypen für die EINGABEFUNKTIONEN des -Eingabetyps.
 
 
 
 | Wert                            | Bedeutung                                                                                                                                                                                     |
 |----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Hmidiin**                      | Handle eines MIDI-Eingabe Geräts.                                                                                                                                                              |
-| [**Midihdr**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr)       | Header für einen Streampuffer oder einen Block von System exklusiven systemeigenen Systemdaten. Bei Eingabe Anwendungen zeichnet diese Struktur nur System exklusive Daten auf (das Streaming wird für eine MIDI-Eingabe nicht unterstützt). |
-| [**Midiincaps**](/windows/win32/api/mmeapi/ns-mmeapi-midiincaps) | Struktur, die verwendet wird, um die Funktionen eines MIDI-Eingabe Geräts zu Fragen.                                                                                                                    |
+| **HMIDIIN**                      | Handle eines EINGABE-Eingabegeräts.                                                                                                                                                              |
+| [**KEYBOARDHDR**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr)       | Header für einen Streampuffer oder einen Block mit system-exklusiven SYSTEM-Daten. Bei Eingabeanwendungen zeichnet diese Struktur nur system exklusive Daten auf (Streaming wird für die EINGABE-Eingabe nicht unterstützt). |
+| [**KEYBOARDINCAPS**](/windows/win32/api/mmeapi/ns-mmeapi-midiincaps) | Struktur, die verwendet wird, um die Funktionen eines EINGABE-Eingabegeräts zu untersuchen.                                                                                                                    |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Aufzeichnen von MIDI-Audiodateien](recording-midi-audio.md)
+[Aufzeichnen von TONS-Audio](recording-midi-audio.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,9 +1,9 @@
 ---
-title: Extern. appcolorbuttonhoverface
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Extern. appcolorbuttonhoverface
+title: External.appColorButtonHoverFace
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | External.appColorButtonHoverFace
 ms.assetid: bf3a0898-b2fb-48bf-84b2-11e9aada4bf3
 keywords:
-- Externe. appcolorbuttonhoverface-Fenster Media Player
+- External.appColorButtonHoverFace Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 40ef3a654ee5468595d48ca5cd56144c4bf1f5de
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bcebb6f48d82f0d91e3431052e6a10ddcbe2c1566e2337aa7160ab34077c6b1d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369412"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119649940"
 ---
-# <a name="externalappcolorbuttonhoverface"></a>Extern. appcolorbuttonhoverface
+# <a name="externalappcolorbuttonhoverface"></a>External.appColorButtonHoverFace
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **appcolorbuttonhoverface** -Eigenschaft ruft die aktuelle Schaltflächen-Hover-Farbe für die Windows Media Player-Benutzeroberfläche ab. Diese Farbe wird angezeigt, wenn der Benutzer den Mauszeiger über eine Schaltfläche bewegt.
+Die **appColorButtonHoverFace-Eigenschaft** ruft die aktuelle Schaltflächenzeigerfarbe für die Windows Media Player Benutzeroberfläche ab. Diese Farbe wird angezeigt, wenn der Benutzer den Mauszeiger über eine Schaltfläche bewegt.
 
 ``` syntax
 window.external.appColorButtonHoverFace
@@ -37,11 +37,11 @@ window.external.appColorButtonHoverFace
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge**.
+Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Benutzer können die Farbe der Windows Media Player-Benutzeroberfläche ändern. Sie können diese Eigenschaft verwenden, um die Darstellung der gehosteten Webseite so anzupassen, dass Sie dem Player entspricht.
+Benutzer können die Farbe der Windows Media Player Benutzeroberfläche ändern. Sie können diese Eigenschaft verwenden, um die Darstellung Ihrer gehosteten Webseite an den Player anzupassen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,7 +58,7 @@ Benutzer können die Farbe der Windows Media Player-Benutzeroberfläche ändern.
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 2-Online Speicher**](external-object-for-type-2-online-stores.md)
+[**Externes Objekt für Onlineshops vom Typ 2**](external-object-for-type-2-online-stores.md)
 </dt> </dl>
 
  

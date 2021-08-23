@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_CHANGESTYLES Meldung (VFW. h)
-description: Die mciwndm \_ changestyles-Meldung ändert die vom mciwnd-Fenster verwendeten Stile. Sie können diese Nachricht explizit oder mithilfe des mciwndchangestyles-Makros senden.
+title: MCIWNDM_CHANGESTYLES (Vfw.h)
+description: Die MCIWNDM \_ CHANGESTYLES-Meldung ändert die vom MCIWnd-Fenster verwendeten Stile. Sie können diese Nachricht explizit oder mithilfe des MCIWndChangeStyles-Makros senden.
 ms.assetid: 9074c21a-e49f-4089-a6d2-af8d513cb632
 keywords:
-- MCIWNDM_CHANGESTYLES-Nachricht (Multimedia)
+- MCIWNDM_CHANGESTYLES-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b2cea636c3c879da642da753c4fd084b06c4334
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5525066f4c377cc093e1e7a0dedd4edf7463792c136214a519da9744917cbc89
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340313"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119525510"
 ---
-# <a name="mciwndm_changestyles-message"></a>Mciwndm \_ changestyles-Nachricht
+# <a name="mciwndm_changestyles-message"></a>MCIWNDM \_ CHANGESTYLES-Nachricht
 
-Die **mciwndm \_ changestyles** -Meldung ändert die vom mciwnd-Fenster verwendeten Stile. Sie können diese Nachricht explizit oder mithilfe des [**mciwndchangestyles**](/windows/desktop/api/Vfw/nf-vfw-mciwndchangestyles) -Makros senden.
+Die **MCIWNDM \_ CHANGESTYLES-Meldung** ändert die vom MCIWnd-Fenster verwendeten Stile. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndChangeStyles-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndchangestyles) senden.
 
 
 ```C++
@@ -38,17 +38,17 @@ lParam = (LPARAM) (LONG) value;
 
 <dl> <dt>
 
-<span id="mask"></span><span id="MASK"></span>*chel*
+<span id="mask"></span><span id="MASK"></span>*Maske*
 </dt> <dd>
 
-Maske, die die Stile identifiziert, die geändert werden können. Diese Maske ist der bitweise OR-Operator aller Stile, die geändert werden dürfen.
+Maske, die die Stile identifiziert, die sich ändern können. Diese Maske ist der bitweise OR-Operator aller Stile, die geändert werden dürfen.
 
 </dd> <dt>
 
 <span id="value"></span><span id="VALUE"></span>*Wert*
 </dt> <dd>
 
-Neue Stileinstellungen für das Fenster. Geben Sie 0 (null) für diesen Parameter an, um alle in der Maske identifizierten Stile zu deaktivieren. Eine Liste der verfügbaren Stile finden Sie unter der Funktion " [**mciwndcreate**](/windows/desktop/api/Vfw/nf-vfw-mciwndcreatea) ".
+Neue Stileinstellungen für das Fenster. Geben Sie 0 (null) für diesen Parameter an, um alle in der Maske identifizierten Stile zu deaktivieren. Eine Liste der verfügbaren Stile finden Sie in der [**MCIWndCreate-Funktion.**](/windows/desktop/api/Vfw/nf-vfw-mciwndcreatea)
 
 </dd> </dl>
 
@@ -64,7 +64,7 @@ Gibt 0 (null) zurück.
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -72,10 +72,10 @@ Gibt 0 (null) zurück.
 
 <dl> <dt>
 
-[**Mciwndcreate**](/windows/desktop/api/Vfw/nf-vfw-mciwndcreatea)
+[**MCIWndCreate**](/windows/desktop/api/Vfw/nf-vfw-mciwndcreatea)
 </dt> <dt>
 
-[**Mciwndchangestyles**](/windows/desktop/api/Vfw/nf-vfw-mciwndchangestyles)
+[**MCIWndChangeStyles**](/windows/desktop/api/Vfw/nf-vfw-mciwndchangestyles)
 </dt> </dl>
 
  

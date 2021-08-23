@@ -1,29 +1,29 @@
 ---
-description: Zeichen Cluster sind Symbol Sequenzen, die nicht zwischen Zeilen aufgeteilt werden können.
+description: Zeichencluster sind Glyphensequenzen, die nicht auf Zeilen aufgeteilt werden können.
 ms.assetid: ab852feb-9e26-429e-a02a-11fe0abdfafc
-title: Verwenden von Zeichen Clustern
+title: Verwenden von Zeichenclustern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 11357a929cf8fec2a7b0caa2bb6ae1ac403e3b91
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f7a48dc8ec1b6fa3ea28cd116f275b1f410b8abd7e232442cff430ab843765f4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103760488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119631820"
 ---
-# <a name="using-character-clusters"></a>Verwenden von Zeichen Clustern
+# <a name="using-character-clusters"></a>Verwenden von Zeichenclustern
 
-Zeichen Cluster sind Symbol Sequenzen, die nicht zwischen Zeilen aufgeteilt werden können. Einige Sprachen, z. b. Thai und indic, schränken die Platzierung von Caretzeichen auf Punkte zwischen Clustern ein. Diese Einschränkung gilt für Einfügevorgänge, die mit Tastatur-oder Mausaktionen initiiert wurden (Treffer Tests).
+Zeichencluster sind Glyphensequenzen, die nicht auf Zeilen aufgeteilt werden können. Einige Sprachen, z. B. Thai und Indic, beschränken die Platzierung von Caretpunkten auf Punkte zwischen Clustern. Diese Einschränkung gilt für Caret-Verschiebungen, die mit Tastatur- oder Mausaktionen initiiert werden (Treffertests).
 
-Unischreiber stellt Cluster Informationen sowohl in den visuellen Attributen in einer [**Skript- \_ visattr**](/windows/win32/api/usp10/ns-usp10-script_visattr) -Struktur als auch in den logischen Attributen bereit, die in einer [**Skript- \_ logattr**](/windows/win32/api/usp10/ns-usp10-script_logattr) -Struktur enthalten sind. Nachdem die Anwendung [**scriptshape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape)aufgerufen hat, werden die Cluster Informationen sowohl durch Sequenzen desselben Werts im **\_ logattr-Skript des Skripts** als auch durch den **fclusterstart** -Member im **Skript ' \_ visattr** '-Array dargestellt.
+Uniscribe stellt Clusterinformationen sowohl in den visuellen Attributen, die in einer [**SCRIPT \_ CSVTTR-Struktur**](/windows/win32/api/usp10/ns-usp10-script_visattr) enthalten sind, als auch in den logischen Attributen in einer [**SCRIPT \_ LOGATTR-Struktur**](/windows/win32/api/usp10/ns-usp10-script_logattr) bereit. Nachdem die Anwendung [**ScriptShape aufruft,**](/windows/desktop/api/Usp10/nf-usp10-scriptshape)werden die Clusterinformationen sowohl durch Sequenzen desselben Werts im **SCRIPT \_ LOGATTR-Array** als auch durch den **fClusterStart-Member** im **SCRIPT \_ BAGTTR-Array** dargestellt.
 
-[**Scriptbreak**](/windows/desktop/api/Usp10/nf-usp10-scriptbreak) ruft auch das **fcharstopmember** der Skript- [**\_ logattr**](/windows/win32/api/usp10/ns-usp10-script_logattr) -Struktur ab, um die Cluster Positionen zu identifizieren.
+[**ScriptBreak**](/windows/desktop/api/Usp10/nf-usp10-scriptbreak) ruft auch den **fCharStop-Member** der [**SCRIPT \_ LOGATTR-Struktur**](/windows/win32/api/usp10/ns-usp10-script_logattr) ab, um Clusterpositionen zu identifizieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von uniscri](using-uniscribe.md)
+[Verwenden von Uniscribe](using-uniscribe.md)
 </dt> </dl>
 
  

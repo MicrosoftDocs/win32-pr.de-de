@@ -1,38 +1,38 @@
 ---
-title: Verarbeiten von Benachrichtigungs Meldungen
-description: Ein Eigenschaften Blatt sendet WM \_ -Benachrichtigungs Meldungen, um Informationen von den Seiten abzurufen und die Seiten mit Benutzeraktionen zu benachrichtigen.
+title: Verarbeiten von Benachrichtigungsmeldungen
+description: Ein Eigenschaftenblatt sendet WM NOTIFY-Meldungen, um Informationen von den Seiten abzurufen und die Seiten über \_ Benutzeraktionen zu benachrichtigen.
 ms.assetid: 82768E43-97BA-451A-9373-D5B8FD06ABED
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e2c544910e44e0c865e738427285d7488147b9c1
-ms.sourcegitcommit: f0ca63c18dc52c357d3398af7be766d2bdd40be7
+ms.openlocfilehash: 9baf0c58fdbcbe5378dd46e828a2d29a7c91832174c9564660a82c5ab70997a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "103724276"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119575480"
 ---
-# <a name="how-to-process-notification-messages"></a>Verarbeiten von Benachrichtigungs Meldungen
+# <a name="how-to-process-notification-messages"></a>Verarbeiten von Benachrichtigungsmeldungen
 
-Ein Eigenschaften Blatt sendet [**WM- \_ Benachrichtigungs**](wm-notify.md) Meldungen, um Informationen von den Seiten abzurufen und die Seiten mit Benutzeraktionen zu benachrichtigen.
+Ein Eigenschaftenblatt sendet [**WM \_ NOTIFY-Meldungen,**](wm-notify.md) um Informationen von den Seiten abzurufen und die Seiten über Benutzeraktionen zu benachrichtigen.
 
-Der *LPARAM* -Parameter der Nachricht ist die Adresse einer [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die das Handle für das Eigenschaften Blatt-Dialogfeld, das Handle für das Dialogfeld der Seite und einen Benachrichtigungs Code enthält. Die Seite muss auf einige Benachrichtigungs Meldungen reagieren, indem der DWL- \_ msgresult-Wert der Seite auf " **true** " oder " **false**" festgelegt wird.
+Der *lParam-Parameter* der Nachricht ist die Adresse einer [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) die das Handle für das Eigenschaftenblattdialogfeld, das Handle für das Seitendialogfeld und einen Benachrichtigungscode enthält. Die Seite muss auf einige Benachrichtigungsmeldungen reagieren, indem der DWL MSGRESULT-Wert der Seite entweder auf TRUE oder \_ **FALSE festgelegt wird.** 
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="process-notification-messages"></a>Verarbeiten von Benachrichtigungs Meldungen
+### <a name="process-notification-messages"></a>Verarbeiten von Benachrichtigungsmeldungen
 
-Das folgende Beispiel ist ein Code Fragment aus der Dialogfeld Prozedur für eine Seite. Es zeigt, wie der [PSN- \_ Hilfe](psn-help.md) -Benachrichtigungs Code verarbeitet wird.
+Das folgende Beispiel ist ein Codefragment aus der Dialogfeldprozedur für eine Seite. Es wird gezeigt, wie sie den [PSN \_ HELP-Benachrichtigungscode](psn-help.md) verarbeiten.
 
 
 ```C++
@@ -64,15 +64,15 @@ case WM_NOTIFY:
 
 <dl> <dt>
 
-[Verwenden von Eigenschaften Blättern](using-property-sheets.md)
+[Verwenden von Eigenschaftenblättern](using-property-sheets.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Windows demo (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

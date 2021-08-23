@@ -1,11 +1,11 @@
 ---
 title: Netboot-Initialization-Attribut
-description: Standard Start Pfad für den Start ohne Datenträger.
+description: Standardstartpfad für datenträgerlosen Start.
 ms.assetid: 359f9fff-1630-4c47-9221-1a2cc6249567
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Netboot-Initialization-Attribut
-- AD-Schema des netbootinitialization-Attributs
+- Netboot-Initialization AD-Attributschema
+- netbootInitialization-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: db4232d57b38e87386b340810f5edea47f2e409c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c9e8fbb11ae06efe9adb6b530670d88cc7c7e466922d3d8cbc6162cc6701ed3d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744585"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648690"
 ---
 # <a name="netboot-initialization-attribute"></a>Netboot-Initialization-Attribut
 
-Standard Start Pfad für den Start ohne Datenträger.
+Standardstartpfad für datenträgerlosen Start.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Netboot-Initialization                      |
-| LDAP-Display-Name | netbootinitialization                       |
+| Ldap-Anzeigename | netbootInitialization                       |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.            |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.            |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.358                      |
-| System-ID-GUID    | 3e978920-8c01-11D0-AFDA-00c04f 930c9        |
+| System-ID-GUID    | 3e978920-8c01-11d0-afda-00c04fd930c9        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Standard Start Pfad für den Start ohne Datenträger.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Standard Start Pfad für den Start ohne Datenträger.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
+| Ist einwertig       | True                                      |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -70,7 +70,7 @@ Standard Start Pfad für den Start ohne Datenträger.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Standard Start Pfad für den Start ohne Datenträger.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
+| Ist einwertig       | True                                      |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -100,10 +100,10 @@ Standard Start Pfad für den Start ohne Datenträger.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
+| Ist einwertig       | True                                      |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -121,10 +121,10 @@ Standard Start Pfad für den Start ohne Datenträger.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
+| Ist einwertig       | True                                      |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -142,10 +142,10 @@ Standard Start Pfad für den Start ohne Datenträger.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
+| Ist einwertig       | True                                      |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -163,10 +163,10 @@ Standard Start Pfad für den Start ohne Datenträger.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
+| Ist einwertig       | True                                      |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |

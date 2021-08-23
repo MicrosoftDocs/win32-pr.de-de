@@ -1,87 +1,87 @@
 ---
-title: Video Erfassungs Meldungen
-description: Video Erfassungs Meldungen
+title: Videoaufnahmenachrichten
+description: Videoaufnahmenachrichten
 ms.assetid: ec5c2c4b-d0a2-4982-aedc-24f814a5ab74
 keywords:
-- Video für Windows (Vfw), Video Erfassungs Meldungen
-- VFW (Video für Windows), Video Erfassungs Meldungen
+- Video für Windows (VFW), Videoaufnahmenachrichten
+- VFW (Video for Windows),Video capture messages
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e6d775decf7a7514772e9291665f3fdf10233d6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7f45832d0712ef73ed4e66694f2a89abeb1431d14a540ecec910f3cd2cf75ae7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119687640"
 ---
-# <a name="video-capture-messages"></a>Video Erfassungs Meldungen
+# <a name="video-capture-messages"></a>Videoaufnahmenachrichten
 
-Die folgenden Meldungen werden bei der Video Erfassung verwendet.
+Die folgenden Meldungen werden bei der Videoaufnahme verwendet.
 
--   [**Abbruch der WM- \_ Obergrenze \_**](wm-cap-abort.md)
--   [**WM \_ Cap \_ DLG- \_ Video Komprimierung**](wm-cap-dlg-videocompression.md)
--   [**WM- \_ Cap- \_ DLG- \_ Videodisplay**](wm-cap-dlg-videodisplay.md)
--   [**WM \_ Cap \_ DLG- \_ Videoformat**](wm-cap-dlg-videoformat.md)
--   [**WM \_ Cap \_ DLG- \_ videosource**](wm-cap-dlg-videosource.md)
--   [**WM- \_ Cap- \_ Treiber \_ Verbindung**](wm-cap-driver-connect.md)
--   [**WM- \_ Cap- \_ Treiber Verbindung \_ trennen**](wm-cap-driver-disconnect.md)
--   [**WM- \_ Cap- \_ Treiber \_ get \_ Caps**](wm-cap-driver-get-caps.md)
--   [**WM- \_ Cap- \_ Treiber get- \_ \_ Name**](wm-cap-driver-get-name.md)
--   [**WM- \_ Cap- \_ Treiber get- \_ \_ Version**](wm-cap-driver-get-version.md)
--   [**\_ \_ Bearbeitungs \_ Kopie der WM-Abdeckung**](wm-cap-edit-copy.md)
--   [**WM- \_ Cap- \_ Datei \_ zuordnen**](wm-cap-file-allocate.md)
--   [**WM- \_ Cap- \_ Datei get- \_ \_ Erfassungs \_ Datei**](wm-cap-file-get-capture-file.md)
--   [**WM- \_ Cap- \_ Datei ( \_ SaveAs)**](wm-cap-file-saveas.md)
--   [**WM- \_ Cap- \_ Datei ( \_ savedib)**](wm-cap-file-savedib.md)
--   [**\_ \_ Datei Satz- \_ \_ Erfassungs \_ Datei für WM-Cap**](wm-cap-file-set-capture-file.md)
--   [**WM- \_ Cap- \_ Datei \_ Satz \_ Infoblock**](wm-cap-file-set-infochunk.md)
--   [**WM- \_ Cap \_ get \_ Audioformat**](wm-cap-get-audioformat.md)
--   [**WM- \_ Cap \_ get \_ MCI- \_ Gerät**](wm-cap-get-mci-device.md)
--   [**WM- \_ Cap- \_ \_ Setup Get Sequence \_ Setup**](wm-cap-get-sequence-setup.md)
--   [**WM- \_ Cap- \_ \_ Status Get**](wm-cap-get-status.md)
--   [**WM- \_ Cap- \_ \_ Benutzer \_ Daten erhalten**](wm-cap-get-user-data.md)
--   [**WM- \_ Cap \_ get \_ Videoformat**](wm-cap-get-videoformat.md)
--   [**WM- \_ Abdeckungs \_ \_ Rahmen**](wm-cap-grab-frame.md)
--   [**WM- \_ Obergrenze für Abdeckungs \_ \_ Rahmen \_ nostopps**](wm-cap-grab-frame-nostop.md)
--   [**WM \_ Cap \_ PAL \_ AutoCreate**](wm-cap-pal-autocreate.md)
--   [**WM \_ Cap \_ PAL \_ manualcreate**](wm-cap-pal-manualcreate.md)
--   [**WM- \_ Cap- \_ PAL \_ geöffnet**](wm-cap-pal-open.md)
--   [**WM- \_ Cap- \_ PAL \_ Einfügen**](wm-cap-pal-paste.md)
--   [**WM- \_ Cap- \_ PAL \_ Speichern**](wm-cap-pal-save.md)
--   [**WM- \_ Cap- \_ Sequenz**](wm-cap-sequence.md)
--   [**WM- \_ Abdeckungs \_ Sequenz- \_ NoFile**](wm-cap-sequence-nofile.md)
--   [**WM- \_ Cap- \_ Set \_ Audioformat**](wm-cap-set-audioformat.md)
--   [**WM- \_ Cap- \_ Satz Rückruf ( \_ \_ capcontrol)**](wm-cap-set-callback-capcontrol.md)
--   [**Rückruf Fehler bei WM-Abdeckung \_ \_ festgelegt \_ \_**](wm-cap-set-callback-error.md)
--   [**\_ \_ \_ Rückruf \_ Rahmen für WM-Cap-Satz**](wm-cap-set-callback-frame.md)
--   [**Rückruf Status der WM- \_ Obergrenze \_ festlegen \_ \_**](wm-cap-set-callback-status.md)
--   [**WM- \_ Abdeckungs \_ Satz \_ Rückruf \_ Videostream**](wm-cap-set-callback-videostream.md)
--   [**WM- \_ Cap- \_ Satz \_ Rückruf \_ WaveStream**](wm-cap-set-callback-wavestream.md)
--   [**\_ \_ \_ Rückruf \_ Rendite für WM-Cap-Satz**](wm-cap-set-callback-yield.md)
--   [**WM- \_ Cap- \_ festgelegte \_ MCI- \_ Gerät**](wm-cap-set-mci-device.md)
--   [**Überlagerung der WM- \_ Obergrenze \_ \_**](wm-cap-set-overlay.md)
--   [**WM- \_ Cap- \_ \_ Vorschau festlegen**](wm-cap-set-preview.md)
--   [**\_previewrate der WM-Obergrenze \_ \_**](wm-cap-set-previewrate.md)
--   [**WM- \_ Cap- \_ Set- \_ Skala**](wm-cap-set-scale.md)
--   [**Bild Lauf der WM- \_ Obergrenze \_ \_**](wm-cap-set-scroll.md)
--   [**Setup für die WM- \_ Cap- \_ Einrichtung \_ \_**](wm-cap-set-sequence-setup.md)
--   [**WM- \_ Cap- \_ \_ Benutzer \_ Daten festlegen**](wm-cap-set-user-data.md)
--   [**WM- \_ Cap- \_ Set- \_ Videoformat**](wm-cap-set-videoformat.md)
--   [**WM- \_ Cap- \_ Einzel \_ Rahmen**](wm-cap-single-frame.md)
--   [**WM- \_ Cap- \_ Einzel \_ Rahmen \_ Schließen**](wm-cap-single-frame-close.md)
--   [**WM- \_ Cap- \_ Einzel \_ Rahmen \_ geöffnet**](wm-cap-single-frame-open.md)
--   [**WM- \_ Cap- \_ Ende**](wm-cap-stop.md)
+-   [**WM \_ CAP \_ ABORT**](wm-cap-abort.md)
+-   [**WM \_ CAP \_ DLG \_ VIDEOCOMPRESSION**](wm-cap-dlg-videocompression.md)
+-   [**WM \_ CAP \_ DLG \_ VIDEODISPLAY**](wm-cap-dlg-videodisplay.md)
+-   [**WM \_ CAP \_ DLG \_ VIDEOFORMAT**](wm-cap-dlg-videoformat.md)
+-   [**WM \_ CAP \_ DLG \_ VIDEOSOURCE**](wm-cap-dlg-videosource.md)
+-   [**WM \_ CAP \_ DRIVER \_ CONNECT**](wm-cap-driver-connect.md)
+-   [**WM \_ CAP \_ DRIVER \_ DISCONNECT**](wm-cap-driver-disconnect.md)
+-   [**WM \_ CAP \_ DRIVER \_ GET \_ CAPS**](wm-cap-driver-get-caps.md)
+-   [**WM \_ CAP \_ DRIVER \_ GET \_ NAME**](wm-cap-driver-get-name.md)
+-   [**WM \_ CAP \_ DRIVER \_ GET \_ VERSION**](wm-cap-driver-get-version.md)
+-   [**WM \_ CAP \_ EDIT \_ COPY**](wm-cap-edit-copy.md)
+-   [**WM \_ CAP \_ FILE \_ ALLOCATE**](wm-cap-file-allocate.md)
+-   [**WM \_ CAP \_ FILE \_ GET \_ CAPTURE \_ FILE**](wm-cap-file-get-capture-file.md)
+-   [**WM \_ CAP \_ FILE \_ SAVEAS**](wm-cap-file-saveas.md)
+-   [**WM \_ CAP \_ FILE \_ SAVEDIB**](wm-cap-file-savedib.md)
+-   [**WM \_ CAP \_ FILE \_ SET \_ CAPTURE \_ FILE**](wm-cap-file-set-capture-file.md)
+-   [**WM \_ CAP \_ FILE \_ SET \_ INFOCHUNK**](wm-cap-file-set-infochunk.md)
+-   [**WM \_ CAP \_ GET \_ AUDIOFORMAT**](wm-cap-get-audioformat.md)
+-   [**WM \_ CAP \_ GET \_ MCI \_ DEVICE**](wm-cap-get-mci-device.md)
+-   [**WM \_ CAP \_ GET \_ SEQUENCE \_ SETUP**](wm-cap-get-sequence-setup.md)
+-   [**WM \_ CAP \_ GET \_ STATUS**](wm-cap-get-status.md)
+-   [**WM \_ CAP \_ GET \_ USER \_ DATA**](wm-cap-get-user-data.md)
+-   [**WM \_ CAP \_ GET \_ VIDEOFORMAT**](wm-cap-get-videoformat.md)
+-   [**WM \_ CAP \_ GRAB \_ FRAME**](wm-cap-grab-frame.md)
+-   [**WM \_ CAP \_ GRAB \_ FRAME \_ NOSTOP**](wm-cap-grab-frame-nostop.md)
+-   [**WM \_ CAP \_ PAL \_ AUTOCREATE**](wm-cap-pal-autocreate.md)
+-   [**WM \_ CAP \_ PAL \_ MANUALCREATE**](wm-cap-pal-manualcreate.md)
+-   [**WM \_ CAP \_ PAL \_ OPEN**](wm-cap-pal-open.md)
+-   [**WM \_ CAP \_ PAL \_ PASTE**](wm-cap-pal-paste.md)
+-   [**WM \_ CAP \_ PAL \_ SAVE**](wm-cap-pal-save.md)
+-   [**\_ \_ WM-CAP-SEQUENZ**](wm-cap-sequence.md)
+-   [**WM \_ CAP \_ SEQUENCE \_ NOFILE**](wm-cap-sequence-nofile.md)
+-   [**WM \_ CAP \_ SET \_ AUDIOFORMAT**](wm-cap-set-audioformat.md)
+-   [**WM \_ CAP \_ SET \_ CALLBACK \_ CAPCONTROL**](wm-cap-set-callback-capcontrol.md)
+-   [**WM \_ CAP SET CALLBACK ERROR (WM-CAP \_ \_ SET-RÜCKRUFFEHLER) \_**](wm-cap-set-callback-error.md)
+-   [**WM \_ CAP \_ SET \_ CALLBACK \_ FRAME**](wm-cap-set-callback-frame.md)
+-   [**WM \_ CAP \_ SET \_ CALLBACK \_ STATUS**](wm-cap-set-callback-status.md)
+-   [**WM \_ CAP \_ SET \_ CALLBACK \_ VIDEOSTREAM**](wm-cap-set-callback-videostream.md)
+-   [**WM \_ CAP \_ SET \_ CALLBACK \_ WAVESTREAM**](wm-cap-set-callback-wavestream.md)
+-   [**WM \_ CAP \_ SET \_ CALLBACK \_ YIELD**](wm-cap-set-callback-yield.md)
+-   [**WM \_ CAP \_ SET \_ MCI \_ DEVICE**](wm-cap-set-mci-device.md)
+-   [**WM \_ CAP \_ SET \_ OVERLAY**](wm-cap-set-overlay.md)
+-   [**WM \_ CAP \_ SET \_ PREVIEW**](wm-cap-set-preview.md)
+-   [**WM \_ CAP \_ SET \_ PREVIEWRATE**](wm-cap-set-previewrate.md)
+-   [**WM \_ CAP \_ SET \_ SCALE**](wm-cap-set-scale.md)
+-   [**WM \_ CAP \_ SET \_ SCROLL**](wm-cap-set-scroll.md)
+-   [**WM \_ CAP \_ SET \_ SEQUENCE \_ SETUP**](wm-cap-set-sequence-setup.md)
+-   [**WM \_ CAP \_ \_ SET-BENUTZERDATEN \_**](wm-cap-set-user-data.md)
+-   [**WM \_ CAP \_ SET \_ VIDEOFORMAT**](wm-cap-set-videoformat.md)
+-   [**WM \_ CAP \_ SINGLE \_ FRAME**](wm-cap-single-frame.md)
+-   [**WM \_ CAP \_ SINGLE \_ FRAME \_ CLOSE**](wm-cap-single-frame-close.md)
+-   [**WM \_ CAP \_ SINGLE \_ FRAME \_ OPEN**](wm-cap-single-frame-open.md)
+-   [**WM \_ CAP \_ STOP**](wm-cap-stop.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Video Aufzeichnungs Referenz](video-capture-reference.md)
+[Videoaufnahmereferenz](video-capture-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

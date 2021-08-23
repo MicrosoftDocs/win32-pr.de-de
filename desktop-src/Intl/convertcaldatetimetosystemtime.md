@@ -1,7 +1,7 @@
 ---
-description: Veraltet. Konvertiert eine angegebene caldatetime-Struktur in eine SYSTEMTIME-Struktur.
+description: Veraltet. Konvertiert eine angegebene CALDATETIME-Struktur in eine SYSTEMTIME-Struktur.
 ms.assetid: 0c3f602d-62de-4c27-95d9-d35738f3279d
-title: Convertcaldatetimetsystemtime-Funktion
+title: ConvertCalDateTimeToSystemTime-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_location:
 - Kernel32.dll
 - API-MS-Win-Core-calendar-l1-1-0.dll
 - kernel32legacy.dll
-ms.openlocfilehash: 9c317a31904e2d1b0b2110f6b2dc367ac3e2e0c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cb579eb80c421d6f206045889edfe3f1b64130f58d02d96c61b3867abcaabb75
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373073"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119631930"
 ---
-# <a name="convertcaldatetimetosystemtime-function"></a>Convertcaldatetimetsystemtime-Funktion
+# <a name="convertcaldatetimetosystemtime-function"></a>ConvertCalDateTimeToSystemTime-Funktion
 
-Veraltet. Konvertiert eine angegebene [**caldatetime**](caldatetime.md) -Struktur in eine [**SYSTEMTIME**](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) -Struktur.
+Veraltet. Konvertiert eine angegebene [**CALDATETIME-Struktur**](caldatetime.md) in eine [**SYSTEMTIME-Struktur.**](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ BOOL ConvertCalDateTimeToSystemTime(
 
 <dl> <dt>
 
-*lpcaldatetime* \[ in\]
+*lpCalDateTime* \[ In\]
 </dt> <dd>
 
-Zeiger auf die zu konvertierende [**caldatetime**](caldatetime.md) -Struktur.
+Zeiger auf die [**zu konvertierende CALDATETIME-Struktur.**](caldatetime.md)
 
 </dd> <dt>
 
-*lpsystime* \[ vorgenommen\]
+*lpSysTime* \[ out\]
 </dt> <dd>
 
-Zeiger auf die entsprechende [**SYSTEMTIME**](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) -Struktur.
+Zeiger auf die entsprechende [**SYSTEMTIME-Struktur.**](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** . Um erweiterte Fehlerinformationen abzurufen, kann die Anwendung [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)aufrufen, die einen der folgenden Fehlercodes zurückgeben kann:
+Gibt **TRUE zurück,** wenn erfolgreich, **andernfalls FALSE.** Um erweiterte Fehlerinformationen zu erhalten, kann die Anwendung [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)aufrufen, wodurch einer der folgenden Fehlercodes zurückgegeben werden kann:
 
--   das Fehler \_ Datum liegt \_ außerhalb des zulässigen \_ \_ Bereichs. Das angegebene Datum lag außerhalb des gültigen Bereichs.
--   Fehler \_ : Ungültiger \_ Parameter. Jeder Parameterwert war ungültig.
+-   FEHLERDATUM \_ \_ LIEGT NICHT IM \_ \_ BEREICH. Das angegebene Datum lag nicht im Bereich.
+-   FEHLER \_ \_ UNGÜLTIGER PARAMETER. Jeder der Parameterwerte war ungültig.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion verfügt über keine zugeordnete Header Datei oder Bibliotheksdatei. Die Anwendung kann [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) mit dem DLL-Namen (Kernel32.dll) aufzurufen, um ein Modul Handle zu erhalten. Anschließend kann [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) mit dem Modul Handle und dem Namen dieser Funktion aufgerufen werden, um die Funktions Adresse abzurufen.
+Dieser Funktion ist keine Headerdatei oder Bibliotheksdatei zugeordnet. Die Anwendung kann [**LoadLibrary mit**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) dem DLL-Namen (Kernel32.dll) aufrufen, um ein Modulhand handle zu erhalten. Sie kann dann [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) mit dem Modulhandle und dem Namen dieser Funktion aufrufen, um die Funktionsadresse zu erhalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,8 +73,8 @@ Diese Funktion verfügt über keine zugeordnete Header Datei oder Bibliotheksdat
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Kernel32.dll</dt> </dl> |
 
 
@@ -83,13 +83,13 @@ Diese Funktion verfügt über keine zugeordnete Header Datei oder Bibliotheksdat
 
 <dl> <dt>
 
-[Unterstützung für nationale Sprache](national-language-support.md)
+[Unterstützung der Landessprache](national-language-support.md)
 </dt> <dt>
 
-[Funktionen zur Unterstützung der Landessprache](national-language-support-functions.md)
+[Unterstützungsfunktionen für nationale Sprachen](national-language-support-functions.md)
 </dt> <dt>
 
-[Abrufen von Zeit-und Datumsinformationen](time-and-date.md)
+[Abrufen von Zeit- und Datumsinformationen](time-and-date.md)
 </dt> </dl>
 
  

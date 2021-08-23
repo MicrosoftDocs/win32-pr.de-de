@@ -1,55 +1,55 @@
 ---
-title: Informationen zu MIDI
-description: Informationen zu MIDI
+title: Informationen zu PARTS
+description: Informationen zu PARTS
 ms.assetid: 32030c98-e513-4ee3-bbd0-ba41fceadd57
 keywords:
-- Windows Multimedia, Digital Instrumentation Digital Interface (MIDI)
-- Multimedia, Digital Instrumentation Digital Interface (MIDI)
-- Multimedia-Audiodatei, Digital Instrumentation Digital Interface (MIDI)
-- Audioschnittstelle (Digital Instrumentation Digital Interface, MIDI)
-- Digital Instrumentation Digital Interface (MIDI), Informationen zu
-- MIDI (Digital Instrumentation Digital Interface), Informationen zu
-- Digital Instrumentation Digital Interface (MIDI), Media Control Interface (MCI)
-- MIDI (Digital Instrumentation Digital Interface), Medien Steuerungs Schnittstelle (MCI)
-- Digital Instrumentation Digital Interface (MIDI), Streampuffer
-- MIDI (Digital Instrumentation Digital Interface), Streampuffer
-- Digital Instrumentation Digital Interface (MIDI), MIDI-Dienste
-- MIDI (Digital Instrumentation Digital Interface), MIDI-Dienste
-- Media Control Interface (MCI), Digital Instrumentation Digital Interface (MIDI)
-- MCI (Media Control Interface), Digital Instrumentation Digital Interface (MIDI)
+- Windows Multimedia, Audio Instrument Digital Interface (INSTRUMENTS)
+- multimedia,Music Instrument Digital Interface (INSTRUMENTS)
+- Multimediaaudio, Music Instrument Digital Interface (INSTRUMENTS)
+- audio, Music Instrument Digital Interface (INSTRUMENTS)
+- Music Instrument Digital Interface (OPC), About
+- INSTRUMENTS (Music Instrument Digital Interface),about
+- Music Instrument Digital Interface (SENDER), Media Control Interface (MCI)
+- INSTRUMENTS (Music Instrument Digital Interface), Media Control Interface (MCI)
+- Music Instrument Digital Interface (INSTRUMENT DIGITAL INTERFACE), Streampuffer
+- INSTRUMENTS (Music Instrument Digital Interface), Streampuffer
+- Music Instrument Digital Interface (OPC), INSTRUMENTS-Dienste
+- INSTRUMENTS (Music Instrument Digital Interface), INSTRUMENTS-Dienste
+- Mediensteuerungsschnittstelle (Media Control Interface, MCI), Music Instrument Digital Interface (INSTRUMENTS)
+- MCI (Media Control Interface), Music Instrument Digital Interface (INSTRUMENTS)
 - Streampuffer, Informationen
-- MIDI-Dienste, Informationen zu
+- DIENSTEN, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 43c476807f750f9e90788377588f6c9af96561aa
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ad1ce20164c42342c52defd27e7f3ccdfb0a44ec9a4e0a6679c1b190270fc62e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708927"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119526690"
 ---
-# <a name="about-midi"></a>Informationen zu MIDI
+# <a name="about-midi"></a>Informationen zu PARTS
 
-Die Microsoft Win32-API (Application Programming Interface) bietet die folgenden Methoden für Anwendungen, um mit den Daten von MIDI zu arbeiten:
+Die Microsoft Win32-API (Application Programming Interface) stellt die folgenden Methoden bereit, mit der Anwendungen mit DEN DATEN arbeiten können:
 
--   Die Media Control Interface (MCI). Die einfachste Möglichkeit zum Wiedergeben einer MIDI-Datei ist die Verwendung der mciwnd-Fenster Klasse, Sie können jedoch auch MCI-Befehle verwenden, um eine benutzerdefinierte Schnittstelle zu einem MIDI-Gerät zu erstellen. Weitere Informationen zur mciwnd-Fenster Klasse finden Sie unter [mciwnd Window Class](mciwnd-window-class.md). Weitere Informationen zu MCI finden Sie unter [MCI](mci.md)oder [Media Control Interface (MCI)](media-control-interface--mci.md).
--   [Streampuffer](stream-buffers.md). Dieses Format ermöglicht es einer Anwendung, Puffer von mit Zeitstempel versehene MIDI-Daten für die Wiedergabe zu bearbeiten. Streampuffer sind für Anwendungen nützlich, die eine präzisere Kontrolle über die Ausgabe benötigen als MCI bietet.
--   [MIDI-Dienste](midi-services.md). Anwendungen, die die präzisere Kontrolle über die Daten von MIDI benötigen, verwenden normalerweise diese Dienste auf niedriger Ebene.
+-   Die Mediensteuerungsschnittstelle (Media Control Interface, MCI). Obwohl die einfachste Möglichkeit zum Wiedergeben einer CSV-Datei die Verwendung der MCIWnd-Fensterklasse ist, können Sie auch MCI-Befehle verwenden, um eine benutzerdefinierte Schnittstelle für ein CAB-Gerät zu erstellen. Weitere Informationen zur MCIWnd-Fensterklasse finden Sie unter [MCIWnd-Fensterklasse.](mciwnd-window-class.md) Weitere Informationen zu MCI finden Sie unter [MCI](mci.md)oder [Media Control Interface (MCI).](media-control-interface--mci.md)
+-   [Streampuffer](stream-buffers.md). Dieses Format ermöglicht einer Anwendung das Bearbeiten von Puffern mit ZEITStempeln von CSV-Daten für die Wiedergabe. Streampuffer sind nützlich für Anwendungen, die eine genauere Kontrolle über die Ausgabe benötigen, als MCI bietet.
+-   [WEBDIENSTE-Dienste](midi-services.md). Anwendungen, die die genaueste Kontrolle über DIE DATENQUELLEN benötigen, verwenden in der Regel diese Low-Level-Dienste.
 
-In den folgenden Themen wird jede dieser Methoden beschrieben, und es wird eine Übersicht über den MIDI-Mapper bereitstellt.
+In den folgenden Themen werden die einzelnen Methoden erörtert, und es wird eine Übersicht über die MAPPER-Funktion von INTEGRAL (Mapper) vermittelt.
 
--   [Der MIDI-Mapper](the-midi-mapper.md)
--   [Medien Steuerungs Schnittstelle (MCI)](media-control-interface--mci.md)
+-   [DER MAPPER](the-midi-mapper.md)
+-   [Media Control Interface (MCI)](media-control-interface--mci.md)
 -   [Streampuffer](stream-buffers.md)
--   [MIDI-Dienste](midi-services.md)
--   [Abspielen von MIDI-Dateien](playing-midi-files.md)
--   [Aufzeichnen von MIDI-Audiodateien](recording-midi-audio.md)
--   [Verarbeiten von MIDI-Daten aus zwei MIDI-Quellen](processing-midi-data-from-two-midi-sources.md)
--   [Erstellen von MIDI-Dateien](creating-midi-files.md)
+-   [PARTS-Dienste](midi-services.md)
+-   [Wiedergeben von PROTOKOLLDATEIEN](playing-midi-files.md)
+-   [Recording RECORDING Audio (Aufzeichnen von AUDIO)](recording-midi-audio.md)
+-   [Verarbeiten von DATENQUELLEN aus zwei DATENQUELLEN](processing-midi-data-from-two-midi-sources.md)
+-   [Erstellen von DATEIEN](creating-midi-files.md)
 
- 
+ 
 
- 
+ 
 
 
 

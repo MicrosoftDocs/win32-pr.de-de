@@ -3,26 +3,26 @@ title: Streampufferformat
 description: Streampufferformat
 ms.assetid: 4b24c12e-b43f-492e-a000-af4f59d5e16f
 keywords:
-- Digital Instrumentation Digital Interface (MIDI), Streampuffer
-- MIDI (Digital Instrumentation Digital Interface), Streampuffer
+- Music Instrument Digital Interface (INSTRUMENT DIGITAL INTERFACE), Streampuffer
+- INSTRUMENTS (Music Instrument Digital Interface), Streampuffer
 - Streampuffer, Format
-- Midihdr-Struktur
-- MidiEvent-Struktur
+- STRUKTURENHDR-Struktur
+- STRUKTURENEVENT-Struktur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 801a7f0dbeabd0d7aebeae0387af415a831e4658
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 072c2541ab6b731686fc63c59b11b0dfff529ef9cab347d41fbddf13e9b60b04
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390146"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119688500"
 ---
 # <a name="stream-buffer-format"></a>Streampufferformat
 
-Der **lpdata** -Member der [**midihdr**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) -Struktur verweist auf einen Streampuffer, und der **dwbufferlength** -Member gibt die tatsächliche Größe dieses Puffers an. Der **dwbytesrecorded** -Member von **midihdr** gibt die Anzahl der Bytes im Puffer an, die tatsächlich von den MIDI-Ereignissen verwendet werden. Dieser Wert muss kleiner oder gleich dem Wert sein, der von **dwbufferlength** angegeben wird.
+Der **lpData-Member** der [**CSVHDR-Struktur**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) zeigt auf einen Streampuffer, und der **dwBufferLength-Member** gibt die tatsächliche Größe dieses Puffers an. Der **dwBytesRecorded-Member** von **GIGABYTEHDR** gibt die Anzahl der Bytes im Puffer an, die tatsächlich von den EREIGNISSEN DES -Attributs verwendet werden. dieser Wert muss kleiner oder gleich dem von **dwBufferLength** angegebenen Wert sein.
 
-Jedes der MIDI-Ereignisse im Streampuffer wird durch eine [**MidiEvent**](/windows/win32/api/mmeapi/ns-mmeapi-midievent) -Struktur angegeben, die die Uhrzeit für das Ereignis, einen Datenstrom Bezeichner, einen Ereignis Code und ggf. Parameter für das Ereignis enthält. Jede dieser **MidiEvent** -Strukturen muss an einer Double Word-Grenze beginnen. Ggf. müssen Pad-Bytes am Ende der Struktur hinzugefügt werden, um sicherzustellen, dass das nächste an einer Double Word-Grenze beginnt.
+Jedes der EREIGNISSE im Streampuffer wird durch eine [**CABEVENT-Struktur**](/windows/win32/api/mmeapi/ns-mmeapi-midievent) angegeben, die die Zeit für das Ereignis, einen Streambezeichner, einen Ereigniscode und ggf. Parameter für das Ereignis enthält. Jede dieser **STRUKTURENEVENT-Strukturen** muss an einer Doppelwortgrenze beginnen. Bei Bedarf müssen am Ende der -Struktur Padbytes hinzugefügt werden, um sicherzustellen, dass der nächste an einer Doppelwortgrenze beginnt.
 
- 
+ 
 
- 
+ 

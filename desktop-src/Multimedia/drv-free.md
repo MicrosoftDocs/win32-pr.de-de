@@ -1,9 +1,9 @@
 ---
-title: DRV_FREE Meldung (MMSYSTEM. h)
-description: Benachrichtigt den Treiber, dass er aus dem Arbeitsspeicher entfernt wird. Der Treiber sollte jeglichen Arbeitsspeicher und andere Systemressourcen freigeben, die er zugewiesen hat.
+title: DRV_FREE (Mmsystem.h)
+description: Benachrichtigt den Treiber, dass er aus dem Arbeitsspeicher entfernt wird. Der Treiber sollte arbeitsspeicher- und andere Systemressourcen, die er zugeordnet hat, frei geben.
 ms.assetid: 0447f8e9-4c4d-4be5-ab1f-ecd3e8cd2e67
 keywords:
-- DRV_FREE-Nachricht (Multimedia)
+- DRV_FREE-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: abb9d70d269cb84e0d6ef0881618b67cfef11068
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 21a558dc7a2c3ece040790b2351ff39dc3054d660eb9368567ed7ce79d40c8a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119526210"
 ---
-# <a name="drv_free-message"></a>Freie drv- \_ Nachricht
+# <a name="drv_free-message"></a>DRV \_ FREE-Nachricht
 
-Benachrichtigt den Treiber, dass er aus dem Arbeitsspeicher entfernt wird. Der Treiber sollte jeglichen Arbeitsspeicher und andere Systemressourcen freigeben, die er zugewiesen hat.
+Benachrichtigt den Treiber, dass er aus dem Arbeitsspeicher entfernt wird. Der Treiber sollte arbeitsspeicher- und andere Systemressourcen, die er zugeordnet hat, frei geben.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Benachrichtigt den Treiber, dass er aus dem Arbeitsspeicher entfernt wird. Der T
 <span id="hdrvr"></span><span id="HDRVR"></span>*hdrvr*
 </dt> <dd>
 
-Handle der installierbaren Treiber Instanz.
+Handle der installierbaren Treiberinstanz.
 
 </dd> </dl>
 
@@ -40,11 +40,11 @@ Handle der installierbaren Treiber Instanz.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Parameter " *dwdriverid*", " *lParam1*" und " *lParam2* " werden nicht verwendet.
+Die *Parameter dwDriverId,* *lParam1* und *lParam2* werden nicht verwendet.
 
-Die **\_ freie drv** -Nachricht ist immer die letzte Nachricht, die ein Gerätetreiber erhält.
+Die **DRV \_ FREE-Nachricht** ist immer die letzte Nachricht, die ein Gerätetreiber empfängt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ Die **\_ freie drv** -Nachricht ist immer die letzte Nachricht, die ein Gerätet
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Die **\_ freie drv** -Nachricht ist immer die letzte Nachricht, die ein Gerätet
 [Installierbare Treiber](installable-drivers.md)
 </dt> <dt>
 
-[Installierbare Treiber Meldungen](installable-driver-messages.md)
+[Installierbare Treibermeldungen](installable-driver-messages.md)
 </dt> </dl>
 
  

@@ -1,56 +1,56 @@
 ---
-title: Fence-Based Ressourcenverwaltung
-description: Zeigt, wie die Lebensdauer von Ressourcen Daten verwaltet wird, indem der GPU-Status über Zäune nachverfolgt wird. Der Arbeitsspeicher kann mit der Verwendung von Zäunen, die die Verfügbarkeit von freiem Speicherplatz im Arbeitsspeicher sorgfältig verwalten, wie z. b. in einer Ringpuffer Implementierung für einen uploadheap
+title: Fence-basierte Ressourcenverwaltung
+description: Zeigt, wie Sie die Lebensdauer von Ressourcendaten verwalten, indem Sie den GPU-Fortschritt über Fences nachverfolgen. Arbeitsspeicher kann effektiv mit Fences erneut verwendet werden, um die Verfügbarkeit von freiem Speicherplatz im Arbeitsspeicher sorgfältig zu verwalten, z. B. in einer Ringpufferimplementierung für einen Hochladen Heap.
 ms.assetid: A7AB6569-EC6B-4B1B-9266-D05B6DB3A27B
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aba8afd66f8a50a54b699c6a314ba148ebcef023
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0cbfd9231e3013099c8382072049f1ae1478e28f00830e89fb4ecef1b835ce58
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "74103495"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119728890"
 ---
-# <a name="fence-based-resource-management"></a>Fence-Based Ressourcenverwaltung
+# <a name="fence-based-resource-management"></a>Fence-basierte Ressourcenverwaltung
 
-Zeigt, wie die Lebensdauer von Ressourcen Daten verwaltet wird, indem der GPU-Status über Zäune nachverfolgt wird. Der Arbeitsspeicher kann mit der Verwendung von Zäunen, die die Verfügbarkeit von freiem Speicherplatz im Arbeitsspeicher sorgfältig verwalten, wie z. b. in einer Ringpuffer Implementierung für einen uploadheap
+Zeigt, wie Sie die Lebensdauer von Ressourcendaten verwalten, indem Sie den GPU-Fortschritt über Fences nachverfolgen. Arbeitsspeicher kann effektiv mit Fences erneut verwendet werden, um die Verfügbarkeit von freiem Speicherplatz im Arbeitsspeicher sorgfältig zu verwalten, z. B. in einer Ringpufferimplementierung für einen Hochladen Heap.
 
--   [Ring Puffer Szenario](#ring-buffer-scenario)
--   [Ring Puffer Beispiel](#ring-buffer-sample)
--   [Verwandte Themen](#related-topics)
+-   [Ringpufferszenario](#ring-buffer-scenario)
+-   [Ringpufferbeispiel](#ring-buffer-sample)
+-   [Zugehörige Themen](#related-topics)
 
-## <a name="ring-buffer-scenario"></a>Ring Puffer Szenario
+## <a name="ring-buffer-scenario"></a>Ringpufferszenario
 
-Im folgenden finden Sie ein Beispiel, in dem eine APP einen seltenen Bedarf für den Upload von Heap Speicher hat.
+Im Folgenden finden Sie ein Beispiel, in dem für eine App ein seltener Bedarf an Upload-Heapspeicher besteht.
 
-Ein Ringpuffer ist eine Möglichkeit zum Verwalten eines uploadheaps. Der Ringpuffer enthält die für die nächsten Frames erforderlichen Daten. Die APP verwaltet einen aktuellen Dateneingabe Zeiger und eine Frame Offset Warteschlange, um jeden Frame und den Start Offset von Ressourcen Daten für diesen Frame aufzuzeichnen.
+Ein Ringpuffer ist eine Möglichkeit, einen Upload-Heap zu verwalten. Der Ringpuffer enthält daten, die für die nächsten Frames erforderlich sind. Die App verwaltet einen aktuellen Dateneingabezeiger und eine Frameoffsetwarteschlange, um jeden Frame und den Startoffset der Ressourcendaten für diesen Frame zu erfassen.
 
-Eine App erstellt einen Ringpuffer, der auf einem Puffer basiert, um Daten für jeden Frame in die GPU hochzuladen. Frame 2 wurde gerade gerendert, der Ringpuffer umschließt die Daten für Frame 4, alle für Frame 5 erforderlichen Daten sind vorhanden, und für Frame 6 muss ein großer konstanter Puffer unter zugewiesen werden.
+Eine App erstellt einen Ringpuffer basierend auf einem Puffer, um Daten für jeden Frame in die GPU hochzuladen. Derzeit wurde Frame 2 gerendert, der Ringpuffer umhingt die Daten für Frame 4, alle für Frame 5 erforderlichen Daten sind vorhanden, und ein großer konstanter Puffer, der für Frame 6 erforderlich ist, muss unter zugeordnet werden.
 
-**Abbildung 1** : die APP versucht, eine untergeordnete Zuordnungen für den Konstantenpuffer zu verwenden, sucht jedoch nicht genügend freien Speicherplatz.
+**Abbildung 1:** Die App versucht, den konstanten Puffer unterzuteilen, findet jedoch nicht genügend freien Arbeitsspeicher.
 
-![nicht genügend freier Arbeitsspeicher in diesem Ringpuffer.](images/ring-buffer-1.png)
+![Unzureichender freier Arbeitsspeicher in diesem Ringpuffer](images/ring-buffer-1.png)
 
-**Abbildung 2** : durch das Absichern der APP wird festgestellt, dass Frame 3 gerendert wurde, die Warteschlange des Frame Offsets aktualisiert wird und der aktuelle Zustand des Ring Puffers lautet. der freie Arbeitsspeicher ist jedoch immer noch nicht groß genug, um dem Konstanten Puffer Rechnung zu tragen.
+**Abbildung 2:** Durch fence polling stellt die App fest, dass Frame 3 gerendert wurde, die Frameoffsetwarteschlange dann aktualisiert wird und der aktuelle Zustand des Ringpuffers folgt. Der freie Arbeitsspeicher ist jedoch immer noch nicht groß genug, um den konstanten Puffer aufnehmen zu können.
 
 ![nach dem Rendern von Frame 3 noch nicht genügend Arbeitsspeicher](images/ring-buffer-2.png)
 
-**Abbildung 3** : aufgrund der Situation gibt es die CPU-Blockierung (über das Ende des endblocks), bis Frame 4 gerendert wurde. Dadurch wird der für Frame 4 zugewiesene Arbeitsspeicher freigegeben.
+**Abbildung 3:** Angesichts der Situation blockiert sich die CPU selbst (über den Fence Waiting), bis Frame 4 gerendert wurde, wodurch der für Frame 4 unter zugeordnete Arbeitsspeicher frei wird.
 
-![Rendern von Frame 4 gibt weitere Informationen zum Ringpuffer frei.](images/ring-buffer-3.png)
+![Renderingframe 4 gibt mehr vom Ringpuffer frei](images/ring-buffer-3.png)
 
-**Abbildung 4** : der freie Speicherplatz ist nun groß genug für den konstanten Puffer, und die unter Zuordnung ist erfolgreich. die APP kopiert die großen Konstanten Puffer Daten in den Arbeitsspeicher, der zuvor von den Ressourcen Daten für die beiden Rahmen 3 und 4 verwendet wurde. Der aktuelle Eingabe Zeiger wird schließlich aktualisiert.
+**Abbildung 4:** Jetzt ist der freie Arbeitsspeicher groß genug für den konstanten Puffer, und die Unterzuordnung ist erfolgreich. Die App kopiert die großen konstanten Pufferdaten in den Arbeitsspeicher, der zuvor von Ressourcendaten für die Frames 3 und 4 verwendet wurde. Der aktuelle Eingabezeiger wird schließlich aktualisiert.
 
-![der Ringpuffer enthält jetzt Platz aus Frame 6.](images/ring-buffer-4.png)
+![Jetzt ist Platz aus Frame 6 im Ringpuffer](images/ring-buffer-4.png)
 
-Wenn eine APP einen Ringpuffer implementiert, muss der Ringpuffer groß genug sein, um mit dem schlechteren Szenario der Größe von Ressourcen Daten umzugehen.
+Wenn eine App einen Ringpuffer implementiert, muss der Ringpuffer groß genug sein, um mit dem schlechteren Szenario der Größen von Ressourcendaten umgehen zu können.
 
-## <a name="ring-buffer-sample"></a>Ring Puffer Beispiel
+## <a name="ring-buffer-sample"></a>Ringpufferbeispiel
 
-Der folgende Beispielcode zeigt, wie ein Ringpuffer verwaltet werden kann, und es wird auf die untergeordnete Zuordnungs Routine geachtet, die das Abrufen und warten von Endpunkten behandelt. Der Einfachheit halber verwendet das Beispiel nicht \_ genügend Arbeits \_ Speicher, um die Details von "nicht genügend freiem Speicher im Heap" zu verbergen, da diese Logik (basierend auf *m \_ pdatacur* und Offsets innerhalb von *frameoffsetqueue*) nicht eng mit Heaps oder Zäunen verknüpft ist. Das Beispiel wird vereinfacht, um die Framerate anstelle der Speicherauslastung zu opfern.
+Der folgende Beispielcode zeigt, wie ein Ringpuffer verwaltet werden kann, und achten Sie dabei auf die Unterzuordnungsroutine, die das Abrufen und Warten von Fence verarbeitet. Der Einfachheit halber verwendet das Beispiel NICHT GENÜGEND ARBEITSSPEICHER, um die Details von "nicht genügend freiem Arbeitsspeicher im Heap" auszublenden, da diese Logik (basierend auf \_ \_ m *\_ pDataCur* und Offsets in *FrameOffsetQueue)* nicht eng mit Heaps oder Fences verknüpft ist. Das Beispiel wird vereinfacht, um die Bildfrequenz anstelle der Arbeitsspeicherauslastung zu erhöhen.
 
-Beachten Sie, dass die Ringpuffer Unterstützung ein gängiges Szenario ist. der Heap Entwurf schließt jedoch nicht die andere Verwendung aus, z. b. die Parametrisierung der Befehlsliste und die erneute Verwendung.
+Beachten Sie, dass die Ringpufferunterstützung ein beliebtes Szenario sein wird. Der Heapentwurf schließt jedoch keine andere Verwendung aus, z. B. die Parametrisierung und Erneutverwendung von Befehlslisten.
 
 ``` syntax
 struct FrameResourceOffset
@@ -142,19 +142,19 @@ void FreeUpMemoryUntilFrame(UINT lastCompletedFrame)
 }
 ```
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
 [**ID3D12Fence**](/windows/desktop/api/d3d12/nn-d3d12-id3d12fence)
 </dt> <dt>
 
-[Untergeordnete Zuordnung innerhalb von Puffern](large-buffers.md)
+[Unterzuweisung innerhalb von Puffern](large-buffers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

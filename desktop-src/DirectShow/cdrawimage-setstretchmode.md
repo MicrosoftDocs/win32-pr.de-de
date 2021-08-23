@@ -1,7 +1,7 @@
 ---
-description: Die setstretchmode-Methode berechnet, ob das Video Bild gestreckt werden muss.
+description: Die SetStretchMode-Methode berechnet, ob das Videobild gestreckt werden muss.
 ms.assetid: ffdcaf9c-e157-4557-9193-8430c1c451bf
-title: Cdrawimage. setstretchmode-Methode (winutil. h)
+title: CDrawImage.SetStretchMode-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 33a4b3a6b104b9e2888776cc59183835f412fdcb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b3886910bce57aca728f64ffbe9d660c1073d1281864a7721faa7e757c7c7d81
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367215"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119526490"
 ---
-# <a name="cdrawimagesetstretchmode-method"></a>Cdrawimage. setstretchmode-Methode
+# <a name="cdrawimagesetstretchmode-method"></a>CDrawImage.SetStretchMode-Methode
 
-Die- `SetStretchMode` Methode berechnet, ob das Video Bild gestreckt werden muss.
+Die `SetStretchMode` -Methode berechnet, ob das Videobild gestreckt werden muss.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **cdrawimage** -Klasse ruft diese Methode automatisch auf, wenn sich das Quell-oder Ziel Rechteck ändert.
+Die **CDrawImage-Klasse** ruft diese Methode automatisch auf, wenn sich das Quell- oder Zielrechteck ändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Die **cdrawimage** -Klasse ruft diese Methode automatisch auf, wenn sich das Que
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die **cdrawimage** -Klasse ruft diese Methode automatisch auf, wenn sich das Que
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> </dl>
 
  

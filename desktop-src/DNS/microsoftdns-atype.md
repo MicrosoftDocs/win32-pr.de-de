@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_AType-Klasse
-description: Die Unterklasse von MicrosoftDNS \_ resourcerecord, die einen Host Adresseintrag (a) darstellt.
+description: Unterklasse von MicrosoftDNS \_ ResourceRecord, die einen Hostadressendatensatz (A) darstellt.
 ms.assetid: c7bd8a26-b0ac-49ef-9068-a0ecddeb6ef4
 keywords:
-- DNS-MicrosoftDNS_AType Klasse
-- DNS-MicrosoftDNS_AType Klasse, beschrieben
+- MicrosoftDNS_AType DNS-Klasse
+- MicrosoftDNS_AType DNS-Klasse , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -18,18 +18,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 25e856968e2c3d4e581d69e0ac7bcbddc256424c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4fb5cd5735d30d4b512c2dd382f6ef59b182da51c99df26ccebddbdc0e2a1837
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342434"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119574090"
 ---
-# <a name="microsoftdns_atype-class"></a>MicrosoftDNS- \_ aType-Klasse
+# <a name="microsoftdns_atype-class"></a>MicrosoftDNS \_ AType-Klasse
 
-Die Unterklasse von [**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md) , die einen Host Adresseintrag (a) darstellt.
+Unterklasse von [**MicrosoftDNS \_ ResourceRecord,**](microsoftdns-resourcerecord.md) die einen Hostadressendatensatz (A) darstellt.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,21 +42,21 @@ class MicrosoftDNS_AType : MicrosoftDNS_ResourceRecord
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS- \_ aType** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ AType-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS- \_ aType** -Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ AType-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                       |
+| Methode                             | Beschreibung                                                                                                                                                                                                                                                                                                                                       |
 |:-----------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **"Kreateinzustancefrompropertydata"** | Instanziiert eine Host Adresse (a) RR auf der Grundlage der Daten in den Eingabe Parametern der Methode: der DNS-Server Name des Datensatzes, der Container Name, der Besitzer Name, die Klasse (Standard = in), der Gültigkeitsdauer Wert und die IP-Adresse des Hosts. Es wird ein Verweis auf das neue-Objekt als Output-Parameter zurückgegeben. <br/> Qualifizierer: implementiert, statisch<br/> |
-| **Modify**                         | Aktualisiert die Gültigkeitsdauer und die IP-Adresse auf die Werte, die als Eingabeparameter dieser Methode angegeben werden. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die-Methode gibt einen Verweis auf das geänderte-Objekt als Output-Parameter zurück. <br/> Qualifizierer: Implementiert<br/>             |
+| **CreateInstanceFromPropertyData** | Instanziiert eine Hostadresse (A) RR basierend auf den Daten in den Eingabeparametern der Methode: DNS-Servername des Datensatzes, Containername, Besitzername, Klasse (Standard = IN), Wert der Live-Datenübertragung und IP-Adresse des Hosts. Sie gibt einen Verweis auf das neue Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert, statisch<br/> |
+| **Änderung**                         | Aktualisiert die Tl und ip-Adresse auf die Werte, die als Eingabeparameter dieser Methode angegeben sind. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die -Methode gibt einen Verweis auf das geänderte Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert<br/>             |
 
 
 
@@ -64,20 +64,20 @@ Die **MicrosoftDNS- \_ aType** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS- \_ aType** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ AType-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **IPAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeichenfolge, die die IPv4-Adresse des Hosts darstellt.
+Eine Zeichenfolge, die die IPv4-Adresse des Hosts darstellt.
 
 </dd> </dl>
 
@@ -90,7 +90,7 @@ Zeichenfolge, die die IPv4-Adresse des Hosts darstellt.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -98,13 +98,13 @@ Zeichenfolge, die die IPv4-Adresse des Hosts darstellt.
 
 <dl> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> <dt>
 
-[**Methode "kreateinzustancefrompropertydata" der Klasse "MicrosoftDNS \_ aType"**](microsoftdns-atype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ AType-Klasse**](microsoftdns-atype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS- \_ atyp-Klasse**](microsoftdns-atype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ AType-Klasse**](microsoftdns-atype-modify.md)
 </dt> </dl>
 
  

@@ -4,12 +4,12 @@ ms.assetid: fde5c85f-e620-4557-89f0-7dbbbea74f8c
 title: Kalender
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 51056df2e412add722b10b896ac082fcb437b73e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 2ac312c6e85eabb7ab1d85e1213bcb785a3e684a50410e172a0316c473ebf078
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119600180"
 ---
 # <a name="calendar"></a>Kalender
 
@@ -17,7 +17,7 @@ ms.locfileid: "108105118"
 
 
 
-| Thema                                                                                                              | BESCHREIBUNG                                                                                                                                                          |
+| Thema                                                                                                              | Beschreibung                                                                                                                                                          |
 |--------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [System.Calendar.Duration](./props-system-calendar-duration.md)<br/>                                   | Die Kalenderdauer.<br/>                                                                                                                                    |
 | [System.Calendar.IsOnline](./props-system-calendar-isonline.md)<br/>                                   | Gibt an, ob das Ereignis ein Onlineereignis ist.<br/>                                                                                                           |
@@ -32,8 +32,8 @@ ms.locfileid: "108105118"
 | [System.Calendar.RequiredAttendeeNames](./props-system-calendar-requiredattendeenames.md)<br/>         | Namen aller erforderlichen Teilnehmer.<br/>                                                                                                                      |
 | [System.Calendar.Resources](./props-system-calendar-resources.md)<br/>                                 | Gibt die für dieses Ereignis verwendeten Ressourcen an.<br/>                                                                                                              |
 | [System.Calendar.ResponseStatus](./props-system-calendar-responsestatus.md)<br/>                       | Speichert den Status der Antworten eines Benutzers auf Besprechungen im Kalender.<br/>                                                                                      |
-| [System.Calendar.ShowTimeAs](./props-system-calendar-showtimeas.md)<br/>                               | Gibt den Status des Teilnehmers während des Ereignisses an. Der Benutzer kann den Status als "Free", "Busy", "vorläufiges" oder "Out of Office" festlegen. <br/>                      |
-| [System.Calendar.ShowTimeAsText](./props-system-calendar-showtimeastext.md)<br/>                       | Die benutzerfreundliche Form von [System.Calendar.ShowTimeAs.](./props-system-calendar-showtimeas.md) Dieser Wert ist nicht für die programmgesteuerte Analyse vorgesehen.<br/> |
+| [System.Calendar.ShowTimeAs](./props-system-calendar-showtimeas.md)<br/>                               | Gibt den Status des Teilnehmers während der Veranstaltung an. Der Benutzer kann den Status als "Kostenlos", "Ausgelastet", "Vorläufig" oder "Nicht im Büro" festlegen. <br/>                      |
+| [System.Calendar.ShowTimeAsText](./props-system-calendar-showtimeastext.md)<br/>                       | Die benutzerfreundliche Form von [System.Calendar.ShowTimeAs](./props-system-calendar-showtimeas.md). Dieser Wert ist nicht für die programmgesteuerte Analyse vorgesehen.<br/> |
 
 
 

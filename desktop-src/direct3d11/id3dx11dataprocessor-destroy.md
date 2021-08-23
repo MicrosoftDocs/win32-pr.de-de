@@ -1,11 +1,11 @@
 ---
-title: ID3DX11DataProcessor Destroy-Methode (D3DX11core. h)
-description: Beachten Sie, dass die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) für Windows 8 veraltet ist und für Windows Store-Apps nicht unterstützt wird. Zerstört den Prozessor, nachdem ein Arbeits Element abgeschlossen wurde.
+title: ID3DX11DataProcessor Destroy-Methode (D3DX11core.h)
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Zerstört den Prozessor, nachdem ein Arbeitselement abgeschlossen wurde.
 ms.assetid: 759641c0-ef86-42ee-88b9-3fcb7a171d86
 keywords:
 - Destroy-Methode Direct3D 11
-- Destroy-Methode Direct3D 11, ID3DX11DataProcessor-Schnittstelle
-- ID3DX11DataProcessor Interface Direct3D 11, Methode zerstören
+- Destroy-Methode Direct3D 11 , ID3DX11DataProcessor-Schnittstelle
+- ID3DX11DataProcessor-Schnittstelle Direct3D 11 , Destroy-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,21 +17,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af92f8b3a22ba9a62258e8b24589a662eda22592
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0a0968ff090f01a27cb18d3fff0e6dbd499c05c95cd558a2eba805dd91a153c7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103870196"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119632926"
 ---
-# <a name="id3dx11dataprocessordestroy-method"></a>ID3DX11DataProcessor::D estroy-Methode
+# <a name="id3dx11dataprocessordestroy-method"></a>ID3DX11DataProcessor::D estprocess-Methode
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 
  
 
-Zerstört den Prozessor, nachdem ein Arbeits Element abgeschlossen wurde.
+Zerstört den Prozessor, nachdem ein Arbeitselement abgeschlossen wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,20 +50,20 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 11-Rückgabecodes aufgeführten](d3d11-graphics-reference-returnvalues.md)Werte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode wird von einer [**ID3DX11ThreadPump-Schnittstelle**](id3dx11threadpump.md)verwendet.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX11core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Bibliothek d3dx11. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX11core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX11.lib</dt> </dl>   |
 
 
 

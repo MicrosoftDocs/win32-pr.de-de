@@ -1,50 +1,50 @@
 ---
-title: MIDI-Nachrichten
-description: MIDI-Nachrichten
+title: MESSAGES-Meldungen
+description: MESSAGES-Meldungen
 ms.assetid: 7c352eaf-61a5-4e56-8480-97245c08963f
 keywords:
-- Multimedia-Audiodaten, MIDI-Meldungen
-- Audiodaten, MIDI-Nachrichten
-- Digital Instrumentation Digital Interface (MIDI), Nachrichten
-- MIDI (Digital Instrumentation Digital Interface), Nachrichten
-- Referenz für "MIDI", Nachrichten
-- MIDI-Referenz, Meldungen
-- MIDI-Nachrichten
+- Multimediaaudio, DANN-Nachrichten
+- Audio, DANN-Nachrichten
+- Instruments Instrument Digital Interface (SOLLEN), Nachrichten
+- SIGNATURE (Instrument Digital Interface), Nachrichten
+- Referenz für DIE NACHRICHTEN,NACHRICHTEN
+- VERWEISEN-Referenz,Meldungen
+- MESSAGES-Meldungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 63a49e918a4f06efbafd5d8f61848111d3331153
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c45c7c9f101c931591857d3957df0f0cfd00a4ecaff61c31f6f69ef24b36deff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710361"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119525130"
 ---
-# <a name="midi-messages"></a>MIDI-Nachrichten
+# <a name="midi-messages"></a>MESSAGES-Meldungen
 
-Die folgenden Meldungen werden bei der Verwendung von MIDI verwendet.
+Die folgenden Meldungen werden mit DABEI verwendet.
 
--   [**MIM \_ Close**](mim-close.md)
--   [**MIM- \_ Daten**](mim-data.md)
--   [**MIM- \_ Fehler**](mim-error.md)
--   [**MIM \_ longdata**](mim-longdata.md)
--   [**MIM \_ longerror**](mim-longerror.md)
--   [**MIM \_ MoreData**](mim-moredata.md)
--   [**MIM \_ geöffnet**](mim-open.md)
--   [**MM \_ MIM \_ Schließen**](mm-mim-close.md)
--   [**MM \_ MIM- \_ Daten**](mm-mim-data.md)
--   [**MM \_ MIM- \_ Fehler**](mm-mim-error.md)
--   [**MM \_ MIM \_ longdata**](mm-mim-longdata.md)
--   [**MM \_ MIM \_ longerror**](mm-mim-longerror.md)
--   [**MM \_ MIM \_ MoreData**](mm-mim-moredata.md)
--   [**MM \_ MIM \_ geöffnet**](mm-mim-open.md)
--   [**Schließen von mm \_ MOM \_**](mm-mom-close.md)
--   [**MM- \_ MOM \_ abgeschlossen**](mm-mom-done.md)
--   [**MM \_ MOM \_ geöffnet**](mm-mom-open.md)
--   [**MM \_ MOM \_ positioncb**](mm-mom-positioncb.md)
--   [**MOM \_ Schließen**](mom-close.md)
--   [**MOM \_ abgeschlossen**](mom-done.md)
--   [**MOM \_ geöffnet**](mom-open.md)
--   [**MOM- \_ positioncb**](mom-positioncb.md)
+-   [**\_MIM Schließen**](mim-close.md)
+-   [**\_MIM Daten**](mim-data.md)
+-   [**\_MIM Fehler**](mim-error.md)
+-   [**\_MIM LONGDATA**](mim-longdata.md)
+-   [**\_MIM LONGERROR**](mim-longerror.md)
+-   [**\_MIM MOREDATA**](mim-moredata.md)
+-   [**\_MIM Öffnen**](mim-open.md)
+-   [**MM \_ MIM \_ CLOSE**](mm-mim-close.md)
+-   [**MM \_ MIM \_ DATA**](mm-mim-data.md)
+-   [**\_MM-MIM FEHLER \_**](mm-mim-error.md)
+-   [**MM \_ MIM \_ LONGDATA**](mm-mim-longdata.md)
+-   [**MM \_ MIM \_ LONGERROR**](mm-mim-longerror.md)
+-   [**MM \_ MIM \_ MOREDATA**](mm-mim-moredata.md)
+-   [**MM \_ MIM \_ OPEN**](mm-mim-open.md)
+-   [**MM \_ MOM \_ CLOSE**](mm-mom-close.md)
+-   [**MM \_ MOM \_ DONE**](mm-mom-done.md)
+-   [**MM \_ MOM \_ OPEN**](mm-mom-open.md)
+-   [**MM \_ MOM \_ POSITIONCB**](mm-mom-positioncb.md)
+-   [**MOM \_ CLOSE**](mom-close.md)
+-   [**MOM \_ DONE**](mom-done.md)
+-   [**MOM \_ OPEN**](mom-open.md)
+-   [**MOM \_ POSITIONCB**](mom-positioncb.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -53,9 +53,9 @@ Die folgenden Meldungen werden bei der Verwendung von MIDI verwendet.
 [MIDI-Referenz](midi-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

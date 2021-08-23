@@ -1,32 +1,32 @@
 ---
-title: Erstellen eines einfachen visuellen Baums
-description: In diesem Thema wird veranschaulicht, wie eine einfache visuelle Struktur von Microsoft directcomposition erstellt wird. Im Beispiel in diesem Thema wird eine visuelle Struktur erstellt und zusammengefasst, die aus einem visuellen Stamm Element und drei untergeordneten visuellen Elementen besteht.
+title: Erstellen einer einfachen visuellen Struktur
+description: In diesem Thema wird veranschaulicht, wie Sie eine einfache visuelle Microsoft DirectComposition-Struktur erstellen. Im Beispiel in diesem Thema wird eine visuelle Struktur erstellt und erstellt, die aus einem Stammvisual und drei untergeordneten Visuals besteht.
 ms.assetid: 86006C3C-67A8-4931-BE76-D0CA9DB19505
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 621e3f48f76b76be92dc464678dce23b08ebdbd6
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0e27a3af12976f08a1f878779506ac1a42076adecebda02550149e5cb1653d31
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119670875"
 ---
-# <a name="how-to-build-a-simple-visual-tree"></a>Erstellen eines einfachen visuellen Baums
+# <a name="how-to-build-a-simple-visual-tree"></a>Erstellen einer einfachen visuellen Struktur
 
 > [!NOTE]
-> Für apps unter Windows 10 wird die Verwendung von Windows. UI. Composition-APIs anstelle von directcomposition empfohlen. Weitere Informationen finden Sie unter [modernisieren ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
+> Für Apps auf Windows 10 empfehlen wir die Verwendung von Windows.UI.Composition-APIs anstelle von DirectComposition. Weitere Informationen finden Sie unter [Modernisieren Ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
 
-In diesem Thema wird veranschaulicht, wie eine einfache visuelle Struktur von Microsoft directcomposition erstellt wird. Im Beispiel in diesem Thema wird eine visuelle Struktur erstellt und zusammengefasst, die aus einem visuellen Stamm Element und drei untergeordneten visuellen Elementen besteht. Der Inhalt der visuellen Stamm Visualisierung ist ein hellblaues Bitmuster, das als Hintergrund für die untergeordneten visuellen Elemente fungiert. Diese Abbildung zeigt die Komposition, die durch den Beispielcode in diesem Thema erstellt wurde.
+In diesem Thema wird veranschaulicht, wie Sie eine einfache visuelle Microsoft DirectComposition-Struktur erstellen. Im Beispiel in diesem Thema wird eine visuelle Struktur erstellt und erstellt, die aus einem Stammvisual und drei untergeordneten Visuals besteht. Der Inhalt des Stammvisuals ist eine hellblaue Bitmap, die als Hintergrund für die untergeordneten Visuals dient. Diese Abbildung zeigt die Komposition, die durch den Beispielcode in diesem Thema erstellt wurde.
 
-![eine Komposition bestehend aus einer Stamm Bitmap und drei untergeordneten Bitmaps](images/buildvisualtree.png)
+![eine Komposition, die aus einer Stammbitmap und drei untergeordneten Bitmaps besteht](images/buildvisualtree.png)
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
 -   [DirectComposition](directcomposition-portal.md)
 -   [Direct3D 11-Grafik](/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11)
--   [DirectX-Grafik Infrastruktur (DXGI)](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
+-   [DirectX Graphic Infrastructure (DXGI)](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
@@ -38,16 +38,16 @@ Kenntnisse über:
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-initialize-the-device-and-composition-target-objects"></a>Schritt 1: Initialisieren des Geräts und der Kompositions Zielobjekte
+### <a name="step-1-initialize-the-device-and-composition-target-objects"></a>Schritt 1: Initialisieren des Geräte- und Kompositionszielobjekts
 
-Weitere Informationen finden Sie unter [Initialisieren von directcomposition](initialize-directcomposition.md).
+Weitere Informationen finden Sie unter [Initialisieren von DirectComposition.](initialize-directcomposition.md)
 
 ### <a name="step-2-create-the-visual-objects-and-set-the-bitmap-content"></a>Schritt 2: Erstellen der visuellen Objekte und Festlegen des Bitmapinhalts
 
-Verwenden Sie die [**idcompositiondevice:: anatevisual**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createvisual) -Methode, um die visuellen Elemente zu erstellen, und die [**idcompositionvisual:: setContent**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-setcontent) -Methode, um den Bitmapinhalt der visuellen Elemente festzulegen.
+Verwenden Sie die [**IDCompositionDevice::CreateVisual-Methode,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createvisual) um die Visuals zu erstellen, und die [**IDCompositionVisual::SetContent-Methode,**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-setcontent) um den Bitmapinhalt der Visuals festzulegen.
 
 > [!NOTE]  
-> Im folgenden Beispiel enthält das erste Element des `m_hBitmaps` Arrays die Bitmap für das visuelle Stamm Element, und die restlichen Elemente enthalten die Bitmaps für die untergeordneten visuellen Elemente.
+> Im folgenden Beispiel enthält das erste Element des `m_hBitmaps` Arrays die Bitmap für das Stammvisual, und die übrigen Elemente enthalten die Bitmaps für die untergeordneten Visuals.
 
 ```cpp
 #define NUM_VISUALS 4 // number of visuals in the composition
@@ -83,7 +83,7 @@ for (int i = 0; i < NUM_VISUALS; i++)
 }
 ``` 
 
-Die folgende Anwendungs definierte Funktion zeigt, wie die Microsoft directcomposition-Oberfläche erstellt und eine Windows Graphics Device Interface-Bitmap (GDI) auf der-Oberfläche gerenkt wird.
+Die folgende anwendungsdefinierte Funktion zeigt, wie Sie die Microsoft DirectComposition-Oberfläche erstellen und eine GDI-Bitmap (Windows Graphics Device Interface) auf der Oberfläche rendern.
 
 ```cpp
 // MyCreateGDIRenderedDCompSurface - Creates a DirectComposition surface and 
@@ -169,9 +169,9 @@ HRESULT DemoApp::MyCreateGDIRenderedDCompSurface(HBITMAP hBitmap, IDCompositionS
 }
 ```
 
-### <a name="step-3-set-the-root-visual"></a>Schritt 3: Festlegen des visuellen Stamm Elements
+### <a name="step-3-set-the-root-visual"></a>Schritt 3: Festlegen des Stammvisuals
 
-Legen Sie die horizontale und vertikale Offsets der visuellen Stamm Visualisierung fest, und fügen Sie Sie dann der visuellen Struktur hinzu, indem Sie die [**idcompositiontarget:: setRoot**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontarget-setroot) -Methode aufrufen.
+Legen Sie die horizontalen und vertikalen Offsets des Stammvisuals fest, und fügen Sie sie dann der visuellen Struktur hinzu, indem Sie die [**IDCompositionTarget::SetRoot-Methode**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontarget-setroot) aufrufen.
 
 ```cpp
 float xPosRoot = 50.0;
@@ -185,9 +185,9 @@ pVisuals[0]->SetOffsetY(yPosRoot);
 hr = m_pCompTarget->SetRoot(pVisuals[0]);
 ```
 
-### <a name="step-4-add-the-child-visuals-and-commit-the-composition"></a>Schritt 4: Hinzufügen der untergeordneten visuellen Elemente und Commit der Komposition
+### <a name="step-4-add-the-child-visuals-and-commit-the-composition"></a>Schritt 4: Hinzufügen der untergeordneten Visuals und Committen der Komposition
 
-Verwenden Sie Methoden, die von der [**idcompositionvisual**](/windows/win32/api/dcomp/nn-dcomp-idcompositionvisual) -Schnittstelle jedes untergeordneten visuellen Elements verfügbar gemacht werden, um den Bitmapinhalt und andere Eigenschaften festzulegen, und verwenden Sie dann die [**idcompositionvisual:: addvisual**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-addvisual) -Methode des visuellen Elements, um dem Stamm der visuellen Struktur die untergeordneten Visuals hinzuzufügen. Rufen Sie [**idcompositiondevice:: Commit**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit) auf, um den Batch von Befehlen für die Verarbeitung in directcomposition zu committen. Die resultierende Komposition wird im Zielfenster angezeigt.
+Verwenden Sie Methoden, die von der [**IDCompositionVisual-Schnittstelle**](/windows/win32/api/dcomp/nn-dcomp-idcompositionvisual) jedes untergeordneten Visuals verfügbar gemacht werden, um den Bitmapinhalt und andere Eigenschaften festzulegen, und verwenden Sie dann die [**IDCompositionVisual::AddVisual-Methode**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-addvisual) des Stammvisuals, um die untergeordneten Visuals dem Stamm der visuellen Struktur hinzuzufügen. Rufen Sie [**IDCompositionDevice::Commit**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit) auf, um den Befehlsbatch zur Verarbeitung an DirectComposition zu committen. Die resultierende Komposition wird im Zielfenster angezeigt.
 
 ```cpp
 float xPosChild = 20.0f;
@@ -211,9 +211,9 @@ if (SUCCEEDED(hr))
 hr = m_pDevice->Commit();
 ```
 
-### <a name="step-5-free-the-directcomposition-objects"></a>Schritt 5: Freigeben der directcomposition-Objekte
+### <a name="step-5-free-the-directcomposition-objects"></a>Schritt 5: Freigeben der DirectComposition-Objekte
 
-Freigeben der visuellen Objekte, sobald Sie Sie nicht mehr benötigen. Mit dem folgenden Code wird das von der Anwendung definierte [**saferelease**](/windows/desktop/medfound/saferelease) -Makro aufgerufen, um die visuellen Objekte freizugeben.
+Freigeben der visuellen Objekte, sobald Sie sie nicht mehr benötigen. Dieses nächste Codebit ruft das anwendungsdefinierte [**SafeRelease-Makro**](/windows/desktop/medfound/saferelease) auf, um die visuellen Objekte frei zu machen.
 
 ```cpp
 Cleanup:
@@ -224,7 +224,7 @@ Cleanup:
     }
 ```
 
-Denken Sie auch daran, die Zielobjekte des Geräts und der Komposition freizugeben, bevor die Anwendung beendet wird.
+Denken Sie außerdem daran, das Gerät und die Kompositionszielobjekte frei zu lassen, bevor Ihre Anwendung beendet wird.
 
 ```cpp
 SafeRelease(&m_pD3D11Device);
@@ -855,10 +855,10 @@ HRESULT DemoApp::MyCreateGDIRenderedDCompSurface(HBITMAP hBitmap, IDCompositionS
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-* [**Dcompositionkreatedevice**](/windows/desktop/api/Dcomp/nf-dcomp-dcompositioncreatedevice)
-* [**Idcompositiondevice:: Commit**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit)
-* [**Idcompositiondevice:: kreatetargetforhwnd**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createtargetforhwnd)
-* [**Idcompositiondevice:: kreatevisual**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createvisual)
-* [**Idcompositiontarget:: Abort**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontarget-setroot)
-* [**Idcompositionvisual:: setContent**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-setcontent)
-* [**Saferelease**](/windows/desktop/medfound/saferelease)
+* [**DCompositionCreateDevice**](/windows/desktop/api/Dcomp/nf-dcomp-dcompositioncreatedevice)
+* [**IDCompositionDevice::Commit**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit)
+* [**IDCompositionDevice::CreateTargetForHwnd**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createtargetforhwnd)
+* [**IDCompositionDevice::CreateVisual**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createvisual)
+* [**IDCompositionTarget::SetRoot**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontarget-setroot)
+* [**IDCompositionVisual::SetContent**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-setcontent)
+* [**SafeRelease**](/windows/desktop/medfound/saferelease)

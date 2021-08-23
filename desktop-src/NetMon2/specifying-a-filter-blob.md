@@ -1,25 +1,25 @@
 ---
-description: Wenn Sie eine registrierte Netzwerkschnittstellenkarte (NIC) auswählen, die auf einem lokalen Computer aufgeführt ist, können Sie einen filterblob verwenden, um die NICs zu ignorieren, an denen Sie nicht interessiert sind.
+description: Wenn Sie eine registrierte Netzwerkschnittstellenkarte (Network Interface Card, NIC) auswählen, die auf einem lokalen Computer aufgeführt ist, können Sie ein FilterBLOB verwenden, um die NICs zu ignorieren, an denen Sie nicht interessiert sind.
 ms.assetid: fa87bb7d-c481-4eb1-b116-b22643a7c9da
-title: Angeben eines filterblobs
+title: Angeben eines FilterBLOBs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8754b8f7ea5388b730fd2dfb65e26e24a906d648
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 486a5dfe318da50a921560c92b82a3a3bf05a9434a4ac609b7f135afd7bf5a34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349021"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119555350"
 ---
-# <a name="specifying-a-filter-blob"></a>Angeben eines filterblobs
+# <a name="specifying-a-filter-blob"></a>Angeben eines FilterBLOBs
 
-Wenn Sie eine registrierte Netzwerkschnittstellenkarte (NIC) auswählen, die auf einem lokalen Computer aufgeführt ist, können Sie einen [*filterblob*](f.md) verwenden, um die NICs zu ignorieren, an denen Sie nicht interessiert sind. Beispielsweise können Sie die Suche nach einem bestimmten Kartentyp (z. b. Ethernet) oder auf eine bestimmte MAC-Adresse einschränken.
+Wenn Sie eine registrierte Netzwerkschnittstellenkarte (Network Interface Card, NIC) auswählen, die auf einem lokalen Computer aufgeführt ist, können Sie ein FilterBLOB verwenden, um die NICs zu ignorieren, an denen Sie nicht interessiert sind. [](f.md) Beispielsweise können Sie die Suche nach einem bestimmten Kartentyp (z. B. ETHERNET) oder einer bestimmten MAC-Adresse einschränken.
 
-Während der Suche nach einer NIC muss jeder Eintrag im filterblob mit einem entsprechenden Eintrag im NPP-BLOB übereinstimmen, der die NIC darstellt. Filterblobzeichen können auch [*spezielle blobzeichen*](s.md)sein.
+Während der Suche nach einer NIC muss jeder Eintrag im FilterBLOB mit einem entsprechenden Eintrag im NPP-BLOB übereinstimmen, der die NIC darstellt. Filterblobs können auch spezielle [*BLOBs sein.*](s.md)
 
-Wenn die [**getnppblobfromui**](getnppblobfromui.md) -Funktion aufgerufen wird, schränkt das filterblob die im Dialogfeld " **Netzwerk auswählen** " angezeigten NICs ein. Wenn die [**getnppblobtable**](getnppblobtable.md) -Funktion aufgerufen wird, schränkt das filterblob die in der BLOB-Tabelle zurückgegebenen NICs ein.
+Wenn die [**GetNPPBlobFromUI-Funktion**](getnppblobfromui.md) aufgerufen wird, schränkt das FilterBLOB die NICs ein, die im Dialogfeld **Netzwerk auswählen** angezeigt werden. Wenn die [**GetNPPBlobTable-Funktion**](getnppblobtable.md) aufgerufen wird, schränkt das FilterBLOB die niCs ein, die in der BLOB-Tabelle zurückgegeben werden.
 
-Wenn Sie den Filter verwenden möchten, müssen Sie ein filterblob erstellen, die Werte der Eigenschaften festlegen, nach denen Sie filtern möchten (einschließlich aller speziellen BLOB-Einträge), und dann den blobfilter und einen Aufrufen der [**getnppblobtable**](getnppblobtable.md) -oder [**getnppblobfromui**](getnppblobfromui.md) -Funktion angeben.
+Um den Filter zu verwenden, müssen Sie ein Filterblob erstellen, die Werte der Eigenschaften festlegen, nach denen Sie filtern möchten (einschließlich spezieller BLOB-Einträge), und dann den BLOB-Filter und einen Aufruf der [**GetNPPBlobTable-**](getnppblobtable.md) oder [**GetNPPBlobFromUI-Funktion**](getnppblobfromui.md) angeben.
 
 
 

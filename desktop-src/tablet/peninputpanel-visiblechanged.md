@@ -1,21 +1,21 @@
 ---
-description: Veraltet. Der "tzinputpanel" wurde durch den Text Eingabe Panel (Tip) ersetzt. Tritt auf, wenn das ""-Objekt des ""-Objekts angezeigt oder ausgeblendet wird.
+description: Veraltet. Das PenInputPanel wurde durch den Texteingabebereich (TIP) ersetzt. Tritt ein, wenn das PenInputPanel-Objekt sich selbst angezeigt oder ausgeblendet hat.
 ms.assetid: bf4651f4-2cf4-4952-a93e-3c6ba4846722
-title: "\"Pinputpanel. VisibleChanged\"-Ereignis (msink AUT. h)"
+title: PenInputPanel.VisibleChanged-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c739f3517ad9739f1d1ba95af9e5001dfbe659a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5cc917f34c09ef0d4f079fd55e476bbbc4cea266e1b1c436a62b20d6c08ed1b8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362992"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119596609"
 ---
-# <a name="peninputpanelvisiblechanged-event"></a>"Pinputpanel. VisibleChanged"-Ereignis
+# <a name="peninputpanelvisiblechanged-event"></a>PenInputPanel.VisibleChanged-Ereignis
 
-Veraltet. Der " [**tzinputpanel**](peninputpanel-class.md) " wurde durch den [Text Eingabe Panel (Tip)](text-input-panel-reference.md)ersetzt.
+Veraltet. Das [**PenInputPanel**](peninputpanel-class.md) wurde durch den [Texteingabebereich (TIP) ersetzt.](text-input-panel-reference.md)
 
-Tritt auf, [**Wenn das "**](peninputpanel-class.md) "-Objekt des ""-Objekts angezeigt oder ausgeblendet wird.
+Tritt ein, wenn [**das PenInputPanel-Objekt**](peninputpanel-class.md) sich selbst angezeigt oder ausgeblendet hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,20 +32,20 @@ HRESULT VisibleChanged(
 
 <dl> <dt>
 
-*Neusicht barkeit* \[ in\]
+*NewVisibility* \[ In\]
 </dt> <dd>
 
-**Variant \_ TRUE** , wenn das Objekt " [**pinputpanel**](peninputpanel-class.md) " sichtbar wird. Andernfalls ist der Wert **\_ false**.
+**VARIANT \_ TRUE,** damit das [**PenInputPanel-Objekt**](peninputpanel-class.md) sichtbar wird; andernfalls **VARIANT \_ FALSE**.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn dieses Ereignis erfolgreich ist, gibt es " **S \_ OK**" zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn dieses Ereignis erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **VisibleChanged** -Ereignis gilt für den Tablet PC-Eingabe Panel-Hover-Ziel. Sie wird jedoch nicht ausgelöst, wenn das Hover-Ziel erweitert wird, um den vollständigen Tablet PC-Eingabebereich anzuzeigen.
+Das **VisibleChanged-Ereignis** gilt für das Tablet PC Input Panel Hover-Ziel. Sie wird jedoch nicht ausgelöst, wenn das Hoverziel erweitert wird, um den vollständigen Tablet PC-Eingabebereich zu zeigen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Das **VisibleChanged** -Ereignis gilt für den Tablet PC-Eingabe Panel-Hover-Zie
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
@@ -64,7 +64,7 @@ Das **VisibleChanged** -Ereignis gilt für den Tablet PC-Eingabe Panel-Hover-Zie
 
 <dl> <dt>
 
-[**"Pendel Panel"**](peninputpanel-class.md)
+[**Peninputpanel**](peninputpanel-class.md)
 </dt> </dl>
 
  

@@ -1,58 +1,58 @@
 ---
-description: In diesem Thema wird das Eigenschafts Beschreibungs Schema eingeführt, das vom Shell-Eigenschaften System verwendet wird
+description: In diesem Thema wird das Eigenschaftenbeschreibungsschema vorgestellt, das vom Shell-Eigenschaftensystem verwendet wird.
 ms.assetid: cac93c31-d90d-4116-b846-0cf593d1d56e
-title: Grundlegendes zum Eigenschafts Beschreibungs Schema
+title: Grundlegendes zum Eigenschaftenbeschreibungsschema
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 51d9e7c2b6fb4b599f977c0c49ad1cb2514fe8d8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 85dbb0f20c5c4a206069e80aa308a26908bf90ee0d00cf80712a342e834411e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119554560"
 ---
-# <a name="understanding-the-property-description-schema"></a>Grundlegendes zum Eigenschafts Beschreibungs Schema
+# <a name="understanding-the-property-description-schema"></a>Grundlegendes zum Eigenschaftenbeschreibungsschema
 
-In diesem Thema wird das Eigenschafts Beschreibungs Schema eingeführt, das vom Shell-Eigenschaften System verwendet wird
+In diesem Thema wird das Eigenschaftenbeschreibungsschema vorgestellt, das vom Shell-Eigenschaftensystem verwendet wird.
 
-Die Einführung neuer Features für Windows Vista und höher erforderte, dass das vorhandene shelleigenschaftensystem auf Folgendes erweitert werden muss:
+Die Einführung neuer Features für Windows Vista und höher erforderte, dass das vorhandene Shell-Eigenschaftensystem auf Folgendes erweitert werden muss:
 
--   Unterstützen Sie ein umfassendes und erweiterbares Eigenschafts Beschreibungs System, das Informationen zu Eigenschaften wie anzeigen Amen, Typ, Anzeigetyp, Sortier-und Gruppenverhalten und anderen Attributen bereitstellt, die erforderlich sind, um die Eigenschaften anzuzeigen und zu verarbeiten.
--   Unterstützen Sie eine Bestandsliste von Eigenschafts Typen (in Kombination mit der Benutzeroberfläche, die diese Typen in verschiedenen Ansichten bearbeiten kann, wie z. b. ListView, Vorschaubereich, Eigenschaften Dialogfelder usw.), die verschiedenen Eigenschaften zugeordnet werden können.
--   Geben Sie Eigenschaften Beschreibungs Listen an, die den Satz von Eigenschaften definieren, die in unterschiedlichen Ansichten angezeigt werden.
--   Stellen Sie eine vereinfachte Schnittstelle ( [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)) bereit, sodass Eigenschafts Handler einfacher geschrieben werden können, sodass Eigenschaften in Dateien persistent gespeichert werden können.
--   Unterstützung für nicht-Dateieigenschaften Handler, um Eigenschaften in der Ansicht verfügbar zu machen.
+-   Unterstützt ein umfassendes und erweiterbares Eigenschaftenbeschreibungssystem, das Informationen zu Eigenschaften bereitstellt, einschließlich Anzeigenamen, Typ, Anzeigetyp, Sortier- und Gruppenverhalten sowie andere Attribute, die zum Darstellen und Verwenden der Eigenschaften erforderlich sind.
+-   Unterstützt eine Bestandsliste von Eigenschaftstypen (kombiniert mit der Benutzeroberfläche, die diese Typen in verschiedenen Ansichten bearbeiten kann, z. B. listenansicht, Vorschaubereich, Eigenschaftendialoge usw.), die verschiedenen Eigenschaften zugeordnet werden können.
+-   Geben Sie Eigenschaftenbeschreibungslisten an, die den Satz von Eigenschaften definieren, die in verschiedenen Ansichten angezeigt werden.
+-   Stellen Sie eine vereinfachte Schnittstelle [**(IPropertyStore)**](/windows/win32/api/propsys/nn-propsys-ipropertystore)bereit, damit Eigenschaftenhandler einfacher geschrieben und Eigenschaften in Dateien beibehalten werden können.
+-   Unterstützung für Nicht-Dateieigenschaftenhandler, um Eigenschaften in der Ansicht verfügbar zu machen.
 
-Diese Features werden in einer Architektur erzielt, die abstrakten Zugriff auf die Eigenschaften eines shellelements bereitstellt. Diese Abstraktion wird als shelleigenschaftensystem bezeichnet.
+Diese Features werden in einer Architektur erreicht, die abstrakten Zugriff auf die Eigenschaften eines Shellelements bietet. Diese Abstraktion wird als Shell-Eigenschaftensystem bezeichnet.
 
--   [Was ist das Eigenschafts Beschreibungs Schema?](#what-is-the-property-description-schema)
+-   [Was ist das Eigenschaftenbeschreibungsschema?](#what-is-the-property-description-schema)
 -   [Gründe für die Verwendung eines Schemas](#why-use-a-schema)
--   [Was sind die wichtigsten Schema Teile?](#what-are-the-major-schema-parts)
+-   [Was sind die hauptteiligen Schemateile?](#what-are-the-major-schema-parts)
 -   [Änderungen für Windows 7](#changes-for-windows-7)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="what-is-the-property-description-schema"></a>Was ist das Eigenschafts Beschreibungs Schema?
+## <a name="what-is-the-property-description-schema"></a>Was ist das Eigenschaftenbeschreibungsschema?
 
-Das Schema Subsystem besteht aus folgendem:
+Das Schemasubsystem besteht aus folgendem Code:
 
--   Eine oder mehrere. PropDesc-Schema Dateien, die Eigenschafts Beschreibungen definieren. Das Eigenschafts Beschreibungs Schema wird in einer Auflistung von XML-Schema Dateien (mit der Dateierweiterung ". PropDesc") zur Laufzeit des Systems definiert. Diese Dateien werden verzögert geladen, wenn Sie von einem Teil des Eigenschaften Systems benötigt werden.
--   Ein in-Memory-Schema Cache zum Speichern der analysierten Schema Dateien, die alle Eigenschafts Beschreibungen enthalten, die mit dem Subsystem eingeführt wurden. Es ist nicht erforderlich, die. PropDesc-Konfigurationsdateien zu analysieren, die das Schema beschreiben. Weitere Informationen finden Sie unter [**psregisterpropertyschema**](/windows/win32/api/propsys/nf-propsys-psregisterpropertyschema), [**psunregisterpropertyschema**](/windows/win32/api/propsys/nf-propsys-psunregisterpropertyschema)und [**psrefreshpropertyschema**](/windows/win32/api/propsys/nf-propsys-psrefreshpropertyschema).
--   Ein subsystemobjekt, das [**ipropertysystem**](/windows/win32/api/propsys/nn-propsys-ipropertysystem)implementiert, das verwendet wird, um Eigenschafts Beschreibungen abzurufen oder mit Ihnen zu arbeiten.
--   Ein subsystemobjekt, das [**ipropertydescription**](/windows/win32/api/propsys/nn-propsys-ipropertydescription)implementiert, das verwendet wird, um basierend auf einer Eigenschafts Beschreibung zu informieren und zu arbeiten.
--   Ein subsystemobjekt, das [**ipropertydescriptionlist**](/windows/win32/api/propsys/nn-propsys-ipropertydescriptionlist)implementiert, das als Auflistung von Eigenschafts Beschreibungen verwendet wird.
+-   Eine oder mehrere PROPDESC-Schemadateien, die Eigenschaftenbeschreibungen definieren. Das Eigenschaftenbeschreibungsschema wird zur Laufzeit im System in einer Auflistung von XML-Schemadateien (mit der Dateierweiterung .propdesc) definiert. Diese Dateien werden verzögert geladen, wenn sie für einen Teil des Eigenschaftensystems erforderlich sind.
+-   Ein In-Memory-Schemacache, der zum Speichern der analysierten Schemadateien verwendet wird, die alle Eigenschaftenbeschreibungen enthalten, die in das Subsystem eingeführt wurden. Es ist nicht erforderlich, die PROPDESC-Konfigurationsdateien, die das Schema beschreiben, neu zu prüfen. Weitere Informationen finden Sie unter [**PSRegisterPropertySchema**](/windows/win32/api/propsys/nf-propsys-psregisterpropertyschema), [**PSUnregisterPropertySchema**](/windows/win32/api/propsys/nf-propsys-psunregisterpropertyschema)und [**PSRefreshPropertySchema**](/windows/win32/api/propsys/nf-propsys-psrefreshpropertyschema).
+-   Ein Subsystemobjekt, das [**IPropertySystem**](/windows/win32/api/propsys/nn-propsys-ipropertysystem)implementiert, das zum Abrufen oder Arbeiten mit Eigenschaftenbeschreibungen verwendet wird.
+-   Ein Subsystemobjekt, das [**IPropertyDescription**](/windows/win32/api/propsys/nn-propsys-ipropertydescription)implementiert, das verwendet wird, um basierend auf einer Eigenschaftenbeschreibung zu informieren und zu arbeiten.
+-   Ein Subsystemobjekt, das [**IPropertyDescriptionList**](/windows/win32/api/propsys/nn-propsys-ipropertydescriptionlist)implementiert, das als Auflistung von Eigenschaftenbeschreibungen verwendet wird.
 
 > [!Note]  
-> Sie müssen `xmlns=http://schemas.microsoft.com/windows/2006/propertydescription` dem Root-Schema Element ihrer. PropDesc-Dateien hinzufügen.
+> Sie müssen `xmlns=http://schemas.microsoft.com/windows/2006/propertydescription` dem Stammschemaelement Ihrer PROPDESC-Dateien hinzufügen.
 
  
 
 ## <a name="why-use-a-schema"></a>Gründe für die Verwendung eines Schemas
 
-Eigenständige Eigenschaften sind nicht typsicher. Eine Komponente kann der System. Author-Eigenschaft einen numerischen Wert oder einen [**Dateizeit**](/windows/win32/api/minwinbase/ns-minwinbase-filetime) -Datumsstempel der System. Music. albumtitle-Eigenschaft zuweisen. ohne weitere Erzwingung oder Anleitungen wird Sie von den Eigenschaften speichern zugelassen. Wir mussten also einen Begriff "schematisieren", um die Eigenschaften zu "schematisieren", was uns zum Schema Subsystem führt.
+Eigenschaften selbst sind nicht typsicher. Eine Komponente kann der System.Author-Eigenschaft einen [](/windows/win32/api/minwinbase/ns-minwinbase-filetime) numerischen Wert oder dem System einen FILETIME-Datumsstempel zuweisen. Musik. Die AlbumTitle-Eigenschaft und die Eigenschaftsspeicher lassen sie ohne weitere Erzwingung oder Anleitung zu. Daher mussten wir die Eigenschaften "schematisieren", wodurch wir zum Schemasubsystem gelangen.
 
-## <a name="what-are-the-major-schema-parts"></a>Was sind die wichtigsten Schema Teile?
+## <a name="what-are-the-major-schema-parts"></a>Was sind die Wichtigsten Schemateile?
 
-Das vom shelleigenschafts System verwendete Eigenschafts Beschreibungs Schema besteht aus einem einzelnen [propertydescriptionlist](./propdesc-schema-propertydescriptionlist.md) -Element sowie einem *Schemaversion* -Attribut, das die Version dieses Schema Definitions Formats angibt. Hinweis: der Wert muss "1,0" sein.
+Das vom Shell-Eigenschaftensystem verwendete Eigenschaftenbeschreibungsschema besteht aus einem einzelnen [propertyDescriptionList-Element](./propdesc-schema-propertydescriptionlist.md) sowie einem *schemaVersion-Attribut,* das die Version dieses Schemadefinitionsformats angibt. Hinweis: Der Wert muss "1.0" sein.
 
 
 ```
@@ -69,7 +69,7 @@ Das vom shelleigenschafts System verwendete Eigenschafts Beschreibungs Schema be
 
 
 
-Die [propertydescriptionlist](./propdesc-schema-propertydescriptionlist.md) besteht aus einem oder mehreren [propertydescription](./propdesc-schema-propertydescription.md) -Elementen sowie aus *Verleger* -und *Produkt* Attributen.
+[PropertyDescriptionList](./propdesc-schema-propertydescriptionlist.md) besteht aus einem oder mehreren [propertyDescription-Elementen](./propdesc-schema-propertydescription.md) sowie *Herausgeber-* und *Produktattributen.*
 
 
 ```
@@ -87,9 +87,9 @@ Die [propertydescriptionlist](./propdesc-schema-propertydescriptionlist.md) best
 
 
 
-Eine [propertydescription](./propdesc-schema-propertydescription.md) besteht aus einem [SearchInfo](./propdesc-schema-searchinfo.md) -Element und keinem oder einem " [Labelinfo](./propdesc-schema-labelinfo.md)", einem [TypeInfo](./propdesc-schema-typeinfo.md)-Element und einem [DisplayInfo](./propdesc-schema-displayinfo.md) -Element sowie den Attributen " *FormatID*", " *PROPID*", " *propstr*" und " *Name* ".
+Eine [propertyDescription](./propdesc-schema-propertydescription.md) besteht aus einem [searchInfo-](./propdesc-schema-searchinfo.md) und einem null- oder [labelInfo-,](./propdesc-schema-labelinfo.md) [typeInfo-](./propdesc-schema-typeinfo.md)und [displayInfo-Element](./propdesc-schema-displayinfo.md) sowie *aus formatID-,* *propID-,* *propstr-* und name-Attributen. 
 
-Es sollte ein [propertydescription](./propdesc-schema-propertydescription.md) -Element für jeden eindeutigen kanonischen Eigenschaftsnamen vorhanden sein, der im System verfügbar sein soll. Die Zeichen folgen Attribute haben ein Limit von 512 Zeichen. Werte, die länger als 512 Zeichen sind, werden abgeschnitten.
+Es sollte ein [propertyDescription-Element](./propdesc-schema-propertydescription.md) für jeden eindeutigen kanonischen Eigenschaftennamen vorhanden sein, der im System verfügbar sein soll. Die Zeichenfolgenattribute haben einen Grenzwert von 512 Zeichen. Werte, die länger als 512 Zeichen sind, werden abgeschnitten.
 
 
 ```
@@ -114,76 +114,76 @@ Es sollte ein [propertydescription](./propdesc-schema-propertydescription.md) -E
 
 ## <a name="changes-for-windows-7"></a>Änderungen für Windows 7
 
-Das Eigenschafts Beschreibungs Schema wurde für Windows 7 geändert. Dabei handelt es sich um nicht unterbrechende Änderungen. Wenn ein Eigenschafts Element oder-Attribut in Windows 7 nicht mehr unterstützt wird, ignoriert das Windows 7-Betriebssystem das Windows Vista-Element oder die Windows Vista-Attribute. Ebenso ignoriert Windows Vista auch neue Eigenschaften Elemente oder Attribute von Windows 7.
+Das Eigenschaftenbeschreibungsschema wurde für Windows 7 geändert. Dies sind nicht breaking changes. Wenn ein Eigenschaftselement oder Attribut in Windows 7 nicht mehr unterstützt wird, ignoriert das Windows 7-Betriebssystem die Windows Vista-Elemente oder -Attribute. Auf ähnliche Weise ignoriert Windows Vista auch neue Windows 7-Eigenschaftselemente oder -Attribute.
 
-Es wird jedoch empfohlen, benutzerdefinierte Eigenschaften für Windows 7 zu aktualisieren, um eine bessere und konsistentere Benutzer Leistung zu erzielen.
+Es wird jedoch empfohlen, benutzerdefinierte Eigenschaften für Windows 7 zu aktualisieren, um eine bessere und konsistentere Benutzererfahrung zu gewährleisten.
 
-Im folgenden finden Sie neue Elemente und Attribute:
+Im Folgenden werden neue Elemente und Attribute beschrieben:
 
--   [relatedpropertyinfo](./propdesc-schema-relatedpropertyinfo.md) -und [relatedproperty](./propdesc-schema-relatedproperty.md) -Elemente
--   [Image](./propdesc-schema-image.md) -Element
--   mnetmonics-Attribut des [SearchInfo](./propdesc-schema-searchinfo.md) -Elements
--   mnetmonics-Attribut des [Enumeration](./propdesc-schema-enum.md) -Elements
--   searchrawvalue-Attribut des [Typeingabe Info](./propdesc-schema-typeinfo.md) -Elements
+-   [relatedPropertyInfo-](./propdesc-schema-relatedpropertyinfo.md) und [relatedProperty-Elemente](./propdesc-schema-relatedproperty.md)
+-   [image-Element](./propdesc-schema-image.md)
+-   mnemonics-Attribut des [searchInfo-Elements](./propdesc-schema-searchinfo.md)
+-   mnemonics-Attribut [](./propdesc-schema-enum.md) des Enumerationselements
+-   searchRawValue-Attribut des [typeInfo-Elements](./propdesc-schema-typeinfo.md)
 
 Die folgenden Elemente und Attribute wurden geändert:
 
--   [enumeratedlist](./propdesc-schema-enumeratedlist.md)-, [Enumeration](./propdesc-schema-enum.md)-und [enumrange](./propdesc-schema-enumrange.md) -Elemente
--   [DrawControl](./propdesc-schema-drawcontrol.md) -Element
--   [editcontrol](./propdesc-schema-editcontrol.md) -Element
--   PROPID-Attribut des [propertydescription](./propdesc-schema-propertydescription.md) -Elements
--   columnindextype-Attribut des [SearchInfo](./propdesc-schema-searchinfo.md) -Elements
+-   [enumeratedList-,](./propdesc-schema-enumeratedlist.md) [enum-](./propdesc-schema-enum.md)und [enumRange-Elemente](./propdesc-schema-enumrange.md)
+-   [drawControl-Element](./propdesc-schema-drawcontrol.md)
+-   [editControl-Element](./propdesc-schema-editcontrol.md)
+-   propID-Attribut des [propertyDescription-Elements](./propdesc-schema-propertydescription.md)
+-   columnIndexType-Attribut des [searchInfo-Elements](./propdesc-schema-searchinfo.md)
 
 Die folgenden Elemente und Attribute wurden entfernt:
 
--   [querycontrol](./propdesc-schema-querycontrol.md) -Element
--   isquervable-Attribut des [Typeingabe Info](./propdesc-schema-typeinfo.md) -Elements
--   includeinfulltextquery-Attribut des [TypeInfo](./propdesc-schema-typeinfo.md) -Elements
+-   [queryControl-Element](./propdesc-schema-querycontrol.md)
+-   isQueryable-Attribut des [typeInfo-Elements](./propdesc-schema-typeinfo.md)
+-   includeInFullTextQuery-Attribut des [typeInfo-Elements](./propdesc-schema-typeinfo.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> <dt>
 
 [image](./propdesc-schema-image.md)

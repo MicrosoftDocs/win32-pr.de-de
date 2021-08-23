@@ -1,11 +1,11 @@
 ---
-title: Die Methode "kreateinzustancefrompropertydata" der MicrosoftDNS_MINFOType-Klasse
-description: Die Methode "kreateinstancefrompropertydata" instanziiert einen Ressourcen Eintrag für e-Mail-Informationen (MINFO).
+title: CreateInstanceFromPropertyData-Methode der MicrosoftDNS_MINFOType-Klasse
+description: Die CreateInstanceFromPropertyData-Methode instanziiert einen MINFO-Ressourceneintrag (Mail Information).
 ms.assetid: 693b4b19-cbdd-48d5-89e0-a700a60477aa
 keywords:
-- Methode "samateinzustancefrompropertydata" (DNS)
-- Methode "-DNS", "MicrosoftDNS_MINFOType
-- DNS-MicrosoftDNS_MINFOType Klasse, Methode "Methode"
+- CreateInstanceFromPropertyData-Methode DNS
+- CreateInstanceFromPropertyData-Methode DNS, MicrosoftDNS_MINFOType-Klasse
+- MicrosoftDNS_MINFOType-Klasse DNS , CreateInstanceFromPropertyData-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7a565b1575dc51a59a09faea6fd271d719518f5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ce72838382dd5276a4a0b9b660b67f1d7f8cb04cb894c72f245e908a916ae8f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119573930"
 ---
-# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_minfotype-class"></a>Methode "kreateinstancefrompropertydata" der MicrosoftDNS- \_ minfotype-Klasse
+# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_minfotype-class"></a>CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ MINFOType-Klasse
 
-Die Methode " **kreateinstancefrompropertydata** " instanziiert einen Ressourcen Eintrag für e-Mail-Informationen (MINFO).
+Die **CreateInstanceFromPropertyData-Methode** instanziiert einen MINFO-Ressourceneintrag (Mail Information).
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,31 +49,31 @@ void CreateInstanceFromPropertyData(
 
 <dl> <dt>
 
-*Dnsservername* \[ in\]
+*DnsServerName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name oder die IP-Adresse des DNS-Servers, der diesen RR enthält.
+FQDN oder IP-Adresse des DNS-Servers, der diese RR enthält.
 
 </dd> <dt>
 
-*Containername* \[ in\]
+*ContainerName* \[ In\]
 </dt> <dd>
 
-Der Name des Containers für die Zone, den Cache oder die roothints-Instanz, die diese RR enthält.
+Name des Containers für die Zone, den Cache oder die RootHints-Instanz, die diese RR enthält.
 
 </dd> <dt>
 
-Besitzer *Name* \[ in\]
+*OwnerName* \[ In\]
 </dt> <dd>
 
-Der Besitzer Name für die RR.
+Besitzername für die RR.
 
 </dd> <dt>
 
-*Recordclass* \[ in, optional\]
+*RecordClass* \[ in, optional\]
 </dt> <dd>
 
-Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
+Klasse der RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 
 
@@ -81,7 +81,7 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 |------------------------------------------------------------------------------------------------------|--------------------------|
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | IN (Internet)<br/> |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | CS (CSNET)<br/>    |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (Chaos)<br/>    |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (CHAOS)<br/>    |
 | <span id="4"></span><dl> <dt>**4**</dt> </dl> | HS (Hesiod)<br/>   |
 
 
@@ -90,31 +90,31 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 </dd> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*Gültigkeitsdauer* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, in der die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-" *Verantworblemailbox* \[ " in\]
+*ResponsibleMailbox* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name ist ein Postfach, das für die Mailingliste oder das Postfach zuständig ist, die im Besitzer Namen des Datensatzes angegeben sind.
+FQDN, der ein Postfach angibt, das für die Adressliste oder das Postfach verantwortlich ist, das im Besitzernamen des Datensatzes angegeben ist.
 
 </dd> <dt>
 
-*Errormailbox* \[ in\]
+*ErrorMailbox* \[ In\]
 </dt> <dd>
 
-FQDN, der ein Postfach für den Empfang von Fehlermeldungen in Bezug auf die Mailingliste oder das Postfach angibt, das durch den Besitzer Namen des MINFO-Datensatzes angegeben wird.
+FQDN, der ein Postfach angibt, um Fehlermeldungen zu erhalten, die sich entweder auf die Adressenliste oder auf das Postfach beziehen, das durch den Besitzernamen des MINFO-Eintrags angegeben wird.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue-Objekt.
+Verweis auf das neue Objekt.
 
 </dd> </dl>
 
@@ -130,8 +130,8 @@ Diese Methode gibt keinen Wert zurück.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -139,13 +139,13 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ minfotype**](microsoftdns-minfotype.md)
+[**MicrosoftDNS \_ MINFOType**](microsoftdns-minfotype.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS- \_ minfotype-Klasse**](microsoftdns-minfotype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ MINFOType-Klasse**](microsoftdns-minfotype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

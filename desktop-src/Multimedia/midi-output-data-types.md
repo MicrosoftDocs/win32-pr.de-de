@@ -1,39 +1,39 @@
 ---
-title: Datentypen der MIDI-Ausgabe
-description: Datentypen der MIDI-Ausgabe
+title: DATEITYP-Ausgabedatentypen
+description: DATEITYP-Ausgabedatentypen
 ms.assetid: d0cb0614-e979-4b9f-81ce-13457fdde906
 keywords:
-- Digital Instrumentation Digital Interface (MIDI), Ausgabe Datentypen
-- MIDI (Digital Instrumentation Digital Interface), Ausgabe Datentypen
-- Abspielen von MIDI-Dateien, Ausgabe Datentypen
-- Datentypen der MIDI-Ausgabe
-- Midihdr-Datentyp
-- Midioutcaps-Datentyp
+- Instrument Digital Interface (KEYBOARD), Ausgabedatentypen
+- KEYBOARD (Instrument Digital Interface), Ausgabedatentypen
+- Wiedergeben von DATEITYP-Dateien, Ausgabedatentypen
+- OUTPUT-Datentypen von KEYBOARD
+- KEYBOARDHDR-Datentyp
+- DATEITYPOUTCAPS-Datentyp
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e57911800e0d45c1db515e5b57045aae3856732c
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 8ba36163eb8074386f0f1fc573a123d4ef64271a8661ea42d521ab5b1b4c9aa9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103726328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119525100"
 ---
-# <a name="midi-output-data-types"></a>Datentypen der MIDI-Ausgabe
+# <a name="midi-output-data-types"></a>DATEITYP-Ausgabedatentypen
 
-Windows definiert die folgenden Datentypen für die Funktionen von MIDI-Ausgabe.
+Windows definiert die folgenden Datentypen für DIE AUSGABEFUNKTIONEN.
 
 
 
 | Wert                              | Bedeutung                                                                              |
 |------------------------------------|--------------------------------------------------------------------------------------|
-| **Hmidiout**                       | Handle eines MIDI-Ausgabegeräts.                                                      |
-| [**Midihdr**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr)         | -Header für einen Block von System exklusiven oder Streamingdaten des systemeigenen Systems.                          |
-| [**Midioutcaps**](/windows/win32/api/mmeapi/ns-mmeapi-midioutcaps) | Struktur, die verwendet wird, um die Funktionen eines bestimmten MIDI-Ausgabegeräts zu Fragen. |
+| **HMIDIOUT**                       | Handle eines AUSGABEGERÄTS VOM FORMAT                                                      |
+| [**KEYBOARDHDR**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr)         | Header für einen Block von system-exklusiven SYSTEM- oder Streamdaten.                          |
+| [**KEYBOARDOUTCAPS**](/windows/win32/api/mmeapi/ns-mmeapi-midioutcaps) | Struktur, die verwendet wird, um die Funktionen eines bestimmten OUTPUT-Ausgabegeräts zu untersuchen. |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

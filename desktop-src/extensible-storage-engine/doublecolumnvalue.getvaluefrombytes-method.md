@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der Double ColumnValue. getvaluefromb tes-Methode.
-title: Doublecolumnvalue. getvaluefromb tes-Methode
+description: Weitere Informationen zur DoubleColumnValue.GetValueFromBytes-Methode
+title: DoubleColumnValue.GetValueFromBytes-Methode
 TOCTitle: 'GetValueFromBytes method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.DoubleColumnValue.GetValueFromBytes(System.Byte[],System.Int32,System.Int32,System.Int32)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.doublecolumnvalue.getvaluefrombytes(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 209f573862a257e587a26c1957e80e46f3190616
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2c8ad64b546b80bccf7bf0ac490284306c8f9b8488a814b64b0ba0e902ec3c84
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345212"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119670000"
 ---
-# <a name="doublecolumnvaluegetvaluefrombytes-method"></a>Doublecolumnvalue. getvaluefromb tes-Methode
+# <a name="doublecolumnvaluegetvaluefrombytes-method"></a>DoubleColumnValue.GetValueFromBytes-Methode
 
-Wenn Sie Daten aus ESENT abrufen, decodieren Sie die Daten, und legen Sie den Wert im ColumnValue-Objekt fest.
+Decodieren Sie die Daten mit den aus ESENT abgerufenen Daten, und legen Sie den Wert im ColumnValue-Objekt fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,38 +69,38 @@ protected override void GetValueFromBytes(
 
 #### <a name="parameters"></a>Parameter
 
-  - value  
-    Sorte \[\]  
+  - Wert  
+    Typ: \[\]  
     
     Ein Bytearray.
 
 <!-- end list -->
 
   - startIndex  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Die Anfangsposition innerhalb der Bytes.
 
 <!-- end list -->
 
   - count  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Die Anzahl der zu decodierenden Bytes.
 
 <!-- end list -->
 
-  - irre  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - Err  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Der von ESENT zurückgegebene Fehler.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Doublecolumnvalue-Klasse](./doublecolumnvalue-class.md)
+[DoubleColumnValue-Klasse](./doublecolumnvalue-class.md)
 
-[Doublecolumnvalue-Member](./doublecolumnvalue-members.md)
+[DoubleColumnValue-Elemente](./doublecolumnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

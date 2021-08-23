@@ -1,19 +1,19 @@
 ---
-description: Der Installer legt die startupfolder-Eigenschaft auf den vollständigen Pfad des Start Ordners fest.
+description: Das Installationsprogramm legt die StartupFolder-Eigenschaft auf den vollständigen Pfad des Ordners Start fest.
 ms.assetid: 206ac8bd-abfd-4377-911f-b62e77fb405a
-title: Startupfolder (Eigenschaft)
+title: StartupFolder-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ebec24c7366ea4948a8794a8baa72fd5193e8fb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1b14276eed5d3409a380470cbb9f48e776f45305c2ad35d12e64bd17469717da
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119627520"
 ---
-# <a name="startupfolder-property"></a>Startupfolder (Eigenschaft)
+# <a name="startupfolder-property"></a>StartupFolder-Eigenschaft
 
-Der Installer legt die **startupfolder** -Eigenschaft auf den vollständigen Pfad des Start Ordners fest. Standardmäßig ist diese Eigenschaft auf den Ordner für den aktuellen Benutzer festgelegt. Wenn das Profil "alle Benutzer" vorhanden ist und die Eigenschaft [**ALLUSERS**](allusers.md) festgelegt ist, wird diese Eigenschaft auf den Ordner im Profil "alle Benutzer" festgelegt.
+Das Installationsprogramm legt die **StartupFolder-Eigenschaft** auf den vollständigen Pfad des Ordners Start fest. Standardmäßig ist diese Eigenschaft auf den Ordner für den aktuellen Benutzer festgelegt. Wenn ein Profil "Alle Benutzer" vorhanden ist und die [**ALLUSERS-Eigenschaft**](allusers.md) festgelegt ist, wird diese Eigenschaft auf den Ordner im Profil "Alle Benutzer" festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -21,7 +21,7 @@ Der Installer legt die **startupfolder** -Eigenschaft auf den vollständigen Pfa
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

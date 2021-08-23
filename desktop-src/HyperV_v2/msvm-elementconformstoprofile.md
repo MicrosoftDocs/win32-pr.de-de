@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: e9b4e257c2ebc0584a8291461439f75238599d35
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: a80dfcb5ab260b4d60b6370bb34698efb201401f0c6d4924b143e8b9041258a3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109843281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119525050"
 ---
 # <a name="msvm_elementconformstoprofile-class"></a>Msvm \_ ElementConformsToProfile-Klasse
 
-Definiert die registrierten Profile, denen das System entspricht, auf das verwiesen wird. Diese Zuordnung kann für jedes verwaltete Element gelten. Die typische Verwendung wendet sie auf eine Instanz auf höherer Ebene an, z. B. auf ein System, einen Namespace oder einen Dienst. Bei Anwendung auf eine Instanz auf höherer Ebene müssen sich alle Bestandteile entsprechend verhalten, um die Konformität des verwalteten Elements mit dem benannten registrierten Profil zu unterstützen.
+Definiert die registrierten Profile, denen das System entspricht, auf das verwiesen wird. Diese Zuordnung kann für alle verwalteten Elemente gelten. Die typische Verwendung wendet sie auf eine Instanz auf höherer Ebene an, z. B. auf ein System, einen Namespace oder einen Dienst. Bei Anwendung auf eine Instanz auf höherer Ebene müssen sich alle Bestandteile entsprechend verhalten, um die Konformität des verwalteten Elements mit dem benannten registrierten Profil zu unterstützen.
 
 Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -88,8 +88,8 @@ Ein Verweis auf eine Instanz der [**Msvm \_ ComputerSystem-Klasse,**](msvm-compu
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 8.1 \[ Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ R2-Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
 | Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |

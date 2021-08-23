@@ -1,19 +1,19 @@
 ---
-description: Wenn eine Quell Liste oder eine Protokolldatei verwendet wurde, sollten Ressourcen durch Aufrufen von setupfreesourcelist oder setupterminatefilelog freigegeben werden.
+description: Wenn eine Quellliste oder Protokolldatei verwendet wurde, sollten Ressourcen durch Aufrufen von SetupFreeSourceList oder SetupTerminateFileLog freigegeben werden.
 ms.assetid: 9c8a81c0-182f-4ec1-842c-efb41eca07d7
-title: Freigeben von anderen System Ressourcen
+title: Freigeben anderer Systemressourcen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b78812912be82b17d0ae673640cdedda3ebdbdb7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1c312eb85723c8ee6121ec35b715e73b64e358cc116fb46f39f43ab78ef96ab7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119665390"
 ---
-# <a name="releasing-other-system-resources"></a>Freigeben von anderen System Ressourcen
+# <a name="releasing-other-system-resources"></a>Freigeben anderer Systemressourcen
 
-Wenn eine Quell Liste oder eine Protokolldatei verwendet wurde, sollten Ressourcen durch Aufrufen von [**setupfreesourcelist**](/windows/desktop/api/Setupapi/nf-setupapi-setupfreesourcelista) oder [**setupterminatefilelog**](/windows/desktop/api/Setupapi/nf-setupapi-setupterminatefilelog)freigegeben werden.
+Wenn eine Quellliste oder Protokolldatei verwendet wurde, sollten Ressourcen durch Aufrufen von [**SetupFreeSourceList**](/windows/desktop/api/Setupapi/nf-setupapi-setupfreesourcelista) oder [**SetupTerminateFileLog freigegeben werden.**](/windows/desktop/api/Setupapi/nf-setupapi-setupterminatefilelog)
 
  
 

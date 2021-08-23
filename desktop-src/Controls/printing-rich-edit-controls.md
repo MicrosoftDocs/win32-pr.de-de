@@ -1,50 +1,50 @@
 ---
-title: Drucken des Inhalts der Rich Edit-Steuerelemente
-description: Dieser Abschnitt enthält Informationen zum Drucken der Inhalte der Rich Edit-Steuerelemente.
+title: Drucken des Inhalts von Rich Edit-Steuerelementen
+description: Dieser Abschnitt enthält Informationen zum Drucken des Inhalts von Rich-Edit-Steuerelementen.
 ms.assetid: d61e2e11-d848-43fc-9622-b3b2032bda48
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a304e5c09b5f8ea934c90873c3d915179295964e
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: e00c7a7287fc86e47e085cfacd7757a7e24b4a91a3a513e75dc4610b51606b36
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106338690"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119575550"
 ---
-# <a name="how-to-print-the-contents-of-rich-edit-controls"></a>Drucken des Inhalts der Rich Edit-Steuerelemente
+# <a name="how-to-print-the-contents-of-rich-edit-controls"></a>Drucken des Inhalts von Rich Edit-Steuerelementen
 
-Dieser Abschnitt enthält Informationen zum Drucken der Inhalte der Rich Edit-Steuerelemente.
+Dieser Abschnitt enthält Informationen zum Drucken des Inhalts von Rich-Edit-Steuerelementen.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 ### <a name="use-print-preview"></a>Verwenden der Seitenansicht
 
-Zum Formatieren von Text in einem Rich-Edit-Steuerelement, das auf einem Zielgerät angezeigt wird (in der Regel die gedruckte Seite), senden Sie die Nachricht [**EM \_ SetTargetDevice**](em-settargetdevice.md) , und übergeben Sie das Handle an einen Gerätekontext (HDC) des Zielgeräts und die gewünschte Linienbreite. Normalerweise erhalten Sie die Linienbreite, indem Sie [**GetDeviceCaps**](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) für den Ziel-HDC aufrufen.
+Um Text in einem Rich-Edit-Steuerelement so zu formatieren, wie er auf einem Zielgerät (normalerweise auf der gedruckten Seite) angezeigt wird, senden Sie die [**EM \_ SETTARGETDEVICE-Nachricht,**](em-settargetdevice.md) und übergeben Sie das Handle an einen Gerätekontext (HDC) des Zielgeräts und die gewünschte Linienbreite. In der Regel erhalten Sie die Linienbreite, indem [**Sie GetDeviceCaps für**](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) das HDC-Ziel aufrufen.
 
-### <a name="format-print-for-a-specific-device"></a>Formatieren von Drucken für ein bestimmtes Gerät
+### <a name="format-print-for-a-specific-device"></a>Formatdruck für ein bestimmtes Gerät
 
-Um einen Teil des Inhalts eines Rich-Edit-Steuer Elements für ein bestimmtes Gerät zu formatieren, senden Sie die [**EM- \_ Format Bereichs**](em-formatrange.md) Nachricht. Die [**FormatRange**](/windows/desktop/api/Richedit/ns-richedit-formatrange) -Struktur, die mit dieser Meldung verwendet wird, gibt den Textbereich an, der formatiert werden soll, sowie den hdc für das Zielgerät. Optional sendet diese Nachricht den Text auch an den Drucker.
+Um einen Teil des Inhalts eines Rich-Edit-Steuerelements für ein bestimmtes Gerät zu formatieren, senden Sie die [**EM \_ FORMATRANGE-Nachricht.**](em-formatrange.md) Die [**FORMATRANGE-Struktur,**](/windows/desktop/api/Richedit/ns-richedit-formatrange) die mit dieser Meldung verwendet wird, gibt den zu formatierten Textbereich sowie den HDC für das Zielgerät an. Optional sendet diese Nachricht auch den Text an den Drucker.
 
-### <a name="use-banding"></a>Verwenden von Bändern
+### <a name="use-banding"></a>Verwenden von Banding
 
-Die Bandbreite ist der Prozess, mit dem eine einzelne Seite der Ausgabe mit einem oder mehreren separaten Rechtecke oder Bändern generiert wird. Wenn alle Bänder auf der Seite platziert werden, ergibt sich ein vollständiges Bild. Diese Vorgehensweise wird häufig von Raster Druckern verwendet, die nicht über genügend Arbeitsspeicher oder die Möglichkeit verfügen, eine vollständige Seite gleichzeitig zu Abbildern.
+Banding ist der Prozess, bei dem eine einzelne Seite der Ausgabe mit einem oder mehr separaten Rechtecke oder Bändern generiert wird. Wenn alle Bänder auf der Seite platziert werden, wird ein vollständiges Bild angezeigt. Dieser Ansatz wird häufig von Rasterdruckern verwendet, die nicht über genügend Arbeitsspeicher verfügen oder eine vollständige Seite gleichzeitig erstellen können.
 
-Um die Bandbreite zu implementieren, verwenden Sie die [**EM \_ DisplayBand**](em-displayband.md) -Nachricht, um aufeinander folgende Teile des Inhalts des Rich Edit-Steuer Elements an das Gerät zu senden. Diese Meldung wird auf das Gerät gedruckt, das in einem vorherigen Befehl von [**EM \_ FormatRange**](em-formatrange.md)angegeben wurde. Natürlich sollte der *wParam* -Parameter der **EM \_ FormatRange** -Nachricht NULL sein, damit das Drucken nicht durch diese Nachricht initiiert wird.
+Um banding zu implementieren, verwenden Sie die [**EM \_ DISPLAYBAND-Nachricht,**](em-displayband.md) um aufeinander folgende Teile des Rich Edit-Steuerelementinhalts an das Gerät zu senden. Diese Meldung wird auf dem Gerät gedruckt, das in einem vorherigen Aufruf von [**EM \_ FORMATRANGE angegeben wurde.**](em-formatrange.md) Natürlich sollte der *wParam-Parameter* der **EM \_ FORMATRANGE-Nachricht** 0 (null) sein, damit das Drucken nicht von dieser Nachricht initiiert wird.
 
-## <a name="printrtf-code-example"></a>Printrtf-Code Beispiel
+## <a name="printrtf-code-example"></a>PrintRTF-Codebeispiel
 
-Im folgenden Beispielcode wird der Inhalt eines Rich-Edit-Steuer Elements auf den angegebenen Drucker gedruckt.
+Der folgende Beispielcode gibt den Inhalt eines Rich-Edit-Steuerelements auf dem angegebenen Drucker aus.
 
 
 ```C++
@@ -147,9 +147,9 @@ BOOL PrintRTF(HWND hwnd, HDC hdc)
 [Verwenden von Rich Edit-Steuerelementen](using-rich-edit-controls.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Windows demo (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

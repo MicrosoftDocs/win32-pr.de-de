@@ -1,9 +1,9 @@
 ---
-title: glugettessproperty-Funktion (glu. h)
-description: Die Funktion "glugettessproperty" Ruft eine Mosaik Objekt Eigenschaft ab.
+title: gluGetTessProperty-Funktion (Glu.h)
+description: Die gluGetTessProperty-Funktion ruft eine Mosaikobjekteigenschaft ab.
 ms.assetid: 6aa565d8-2257-4259-a959-b7d806a7ed96
 keywords:
-- glugettessproperty-Funktion OpenGL
+- gluGetTessProperty-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 482f32b227dbcf0c2a62405e344aa719bb4b9e17
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d12e7ca8099197b663893b1edcf04dd8fa98348fe4f6d3d324b54f33904e026a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391812"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119554240"
 ---
-# <a name="glugettessproperty-function"></a>glugettessproperty-Funktion
+# <a name="glugettessproperty-function"></a>gluGetTessProperty-Funktion
 
-Die Funktion " **glugettessproperty** " Ruft eine Mosaik Objekt Eigenschaft ab.
+Die **gluGetTessProperty-Funktion** ruft eine Mosaikobjekteigenschaft ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ void WINAPI gluGetTessProperty(
 
 <dl> <dt>
 
-*ATI* 
+*Tess* 
 </dt> <dd>
 
-Das Mosaik Objekt (mit [**glunewtess**](glunewtess.md)erstellt).
+Das Mosaikobjekt (erstellt mit [**gluNewTess**](glunewtess.md)).
 
 </dd> <dt>
 
-*,* 
+*welche* 
 </dt> <dd>
 
-Die Eigenschaft, deren Wert abgerufen werden soll. Die folgenden Werte sind gültig: die \_ Regel "glu Tess" \_ , " \_ glu Tess" und " \_ \_ \_ glu- \_ Toleranz" \_ .
+Die Eigenschaft, deren Wert abgerufen werden soll. Die folgenden Werte sind gültig: GLU \_ TESS \_ WINDING \_ RULE, GLU \_ TESS \_ BOUNDARY ONLY und \_ GLU \_ TESS \_ TOLERANCE.
 
 </dd> <dt>
 
 *value* 
 </dt> <dd>
 
-Ein Zeiger auf den Speicherort, an dem der Wert der benannten Eigenschaft geschrieben wird.
+Ein Zeiger auf die Position, an der der Wert der benannten Eigenschaft geschrieben wird.
 
 </dd> </dl>
 
@@ -67,9 +67,9 @@ Ein Zeiger auf den Speicherort, an dem der Wert der benannten Eigenschaft geschr
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie " **glugettessproperty** ", um Eigenschaften abzurufen, die in einem Mosaik Objekt gespeichert sind. Diese Eigenschaften beeinflussen die Art und Weise, wie Mosaik Objekte interpretiert und gerendert werden. Informationen zu den Eigenschaften und deren Funktionsfähigkeit finden Sie unter " [**glutessproperty**](glutessproperty.md)".
+Verwenden **Sie gluGetTessProperty,** um Eigenschaften abzurufen, die in einem Mosaikobjekt gespeichert sind. Diese Eigenschaften beeinflussen die Art und Weise, wie Mosaikobjekte interpretiert und gerendert werden. Informationen dazu, was die Eigenschaften sind und was sie tun, finden Sie unter [**gluTessProperty**](glutessproperty.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Verwenden Sie " **glugettessproperty** ", um Eigenschaften abzurufen, die in ein
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -89,10 +89,10 @@ Verwenden Sie " **glugettessproperty** ", um Eigenschaften abzurufen, die in ein
 
 <dl> <dt>
 
-[**glunewtess**](glunewtess.md)
+[**gluNewTess**](glunewtess.md)
 </dt> <dt>
 
-[**glutessproperty**](glutessproperty.md)
+[**gluTessProperty**](glutessproperty.md)
 </dt> </dl>
 
  

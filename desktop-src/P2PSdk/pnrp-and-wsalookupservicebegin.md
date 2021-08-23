@@ -1,365 +1,365 @@
 ---
-description: PNRP verwendet die wsalookupservicebegin-Funktion, um den Prozess zu starten, mit dem eine Anwendung folgende Aktionen ausführen kann.
+description: PNRP verwendet die WSALookupServiceBegin-Funktion, um den Prozess zu starten, der einer Anwendung folgende Aufgaben ermöglicht.
 ms.assetid: 71cca892-89e7-44d1-920d-987587eeed50
-title: PNRP und wsalookupservicebegin
+title: PNRP und WSALookupServiceBegin
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 78efd0ee28284cb41866795aea8a2a8d5f17e871
-ms.sourcegitcommit: 6515eef99ca0d1bbe3e27d4575e9986f5255f277
+ms.openlocfilehash: 8a90bee9e2979f80464b05a3f2891cc7d3cc8e1fa10fe33faefb7319940e321f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "106354344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119553400"
 ---
-# <a name="pnrp-and-wsalookupservicebegin"></a>PNRP und wsalookupservicebegin
+# <a name="pnrp-and-wsalookupservicebegin"></a>PNRP und WSALookupServiceBegin
 
-PNRP verwendet die [**wsalookupservicebegin**](winsock-nsp-reference-links.md) -Funktion, um den Prozess zu starten, mit dem eine Anwendung folgende Aktionen ausführen kann:
+PNRP verwendet die [**WSALookupServiceBegin-Funktion,**](winsock-nsp-reference-links.md) um den Prozess zu starten, der einer Anwendung folgende Aufgaben ermöglicht:
 
 -   [Auflösen eines Namens](#resolving-a-name)
--   [Auflisten von Netzwerk Clouds](#enumerating-network-clouds)
+-   [Aufzählen von Netzwerk clouds](#enumerating-network-clouds)
 
-Clients, die versuchen, eine der Funktionen auszuführen, verwenden die Funktionen [**wsalookupservicebegin**](winsock-nsp-reference-links.md), **WSALookupServiceNext** und **WSALookupServiceEnd** .
+Clients, die versuchen, eine der Funktionen auszuführen, verwenden die [**Funktionen WSALookupServiceBegin,**](winsock-nsp-reference-links.md) **WSALookupServiceNext** und **WSALookupServiceEnd.**
 
-Mithilfe von [**wsanspioctl**](winsock-nsp-reference-links.md)kann der Suchdienst asynchron verwendet werden. Weitere Informationen zur asynchronen Verwendung der Suche-Dienstfunktionen finden Sie unter [PNRP und wsanspioctl](pnrp-and-wsanspioctl.md).
+Mit [**WSANSPIoctl kann**](winsock-nsp-reference-links.md)der Suchdienst asynchron verwendet werden. Informationen zur asynchronen Verwendung der Suchdienstfunktionen finden Sie unter [PNRP und WSANSPIoctl](pnrp-and-wsanspioctl.md).
 
-Der Prozess zum Arbeiten mit Peernamen unterscheidet sich von der Arbeit mit Clouds. Jeder Prozess wird in diesem Thema separat beschrieben.
+Der Prozess für die Arbeit mit Peernamen ist anders als bei der Arbeit mit Clouds. Jeder Prozess wird in diesem Thema separat beschrieben.
 
 ## <a name="resolving-a-name"></a>Auflösen eines Namens
 
-Die IP-Adresse, der Port und das Protokoll für einen Peer Dienst, der auf einem anderen Computer registriert ist, werden von einer Anwendung mithilfe von [**wsalookupservicebegin**](winsock-nsp-reference-links.md) abgerufen. Die **wsalookupservicebegin** -Funktion wird verwendet, um den namens Auflösungsprozess zu starten und die Parameter und Einschränkungen einzurichten. Ein Handle wird zurückgegeben und muss beim Aufrufen von **WSALookupServiceNext** und **wsanspioctl** verwendet werden.
+Eine Anwendung verwendet [**WSALookupServiceBegin,**](winsock-nsp-reference-links.md) um die IP-Adresse, den Port und das Protokoll für einen Peerdienst zu erhalten, der auf einem anderen Computer registriert ist. Mit **der WSALookupServiceBegin-Funktion** wird der Namensauflösungsprozess gestartet und die Parameter und Einschränkungen eingerichtet. Ein Handle wird zurückgegeben und muss beim Aufrufen von **WSALookupServiceNext** und **WSANSPIoctl verwendet werden.**
 
-### <a name="lpqsrestrictions"></a>lpqsrestrictions
+### <a name="lpqsrestrictions"></a>lpqsRestrictions
 
-Beim Auflösen eines Peer namens muss die [**lpwsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur, auf die der *lpqsrestrictions* -Parameter verweist, die folgenden Werte enthalten:
+Beim Auflösen eines Peernamens muss die [**LPWSAQUERYSET-Struktur,**](pnrp-and-wsaqueryset.md) auf die *die lpqsRestrictions-Parameterverweise* verweisen, die folgenden Werte enthalten:
 
 <dl> <dt>
 
 <span id="dwSize"></span><span id="dwsize"></span><span id="DWSIZE"></span>**dwSize**
 </dt> <dd>
 
-Gibt die Größe der-Struktur an.
+Gibt die Größe dieser -Struktur an.
 
 </dd> <dt>
 
-<span id="lpszServiceInstanceName"></span><span id="lpszserviceinstancename"></span><span id="LPSZSERVICEINSTANCENAME"></span>**lpszserviceingestancename**
+<span id="lpszServiceInstanceName"></span><span id="lpszserviceinstancename"></span><span id="LPSZSERVICEINSTANCENAME"></span>**lpszServiceInstanceName**
 </dt> <dd>
 
 Gibt einen aufzulösenden Peernamen an.
 
 </dd> <dt>
 
-<span id="lpServiceClassID"></span><span id="lpserviceclassid"></span><span id="LPSERVICECLASSID"></span>**lpserviceclassid**
+<span id="lpServiceClassID"></span><span id="lpserviceclassid"></span><span id="LPSERVICECLASSID"></span>**lpServiceClassID**
 </dt> <dd>
 
-Muss " **svcid \_ pnrpname**" lauten.
+Muss **SVCID \_ PNRPNAME sein.**
 
 </dd> <dt>
 
-<span id="lpVersion"></span><span id="lpversion"></span><span id="LPVERSION"></span>**lpversion**
+<span id="lpVersion"></span><span id="lpversion"></span><span id="LPVERSION"></span>**lpVersion**
 </dt> <dd>
 
-Reserviert, muss **null** sein.
+Reserviert, muss NULL **sein.**
 
 </dd> <dt>
 
-<span id="lpszComment"></span><span id="lpszcomment"></span><span id="LPSZCOMMENT"></span>**lpszcomment**
+<span id="lpszComment"></span><span id="lpszcomment"></span><span id="LPSZCOMMENT"></span>**lpszComment**
 </dt> <dd>
 
-Reserviert, muss **null** sein.
+Reserviert, muss NULL **sein.**
 
 </dd> <dt>
 
-<span id="dwNameSpace"></span><span id="dwnamespace"></span><span id="DWNAMESPACE"></span>**dwnamespace**
+<span id="dwNameSpace"></span><span id="dwnamespace"></span><span id="DWNAMESPACE"></span>**dwNameSpace**
 </dt> <dd>
 
-Muss entweder ' **NS \_ ' pnrpname** ' oder ' **NS \_ all**' sein.
+Muss entweder **NS \_ PNRPNAME oder** **NS \_ ALL sein.**
 
 </dd> <dt>
 
-<span id="lpNSProviderID"></span><span id="lpnsproviderid"></span><span id="LPNSPROVIDERID"></span>**lpnsproviderid**
+<span id="lpNSProviderID"></span><span id="lpnsproviderid"></span><span id="LPNSPROVIDERID"></span>**lpNSProviderID**
 </dt> <dd>
 
-Muss entweder der **NS- \_ Anbieter \_ pnrpname** oder **null** sein.
+Muss entweder **NS \_ PROVIDER \_ PNRPNAME oder** NULL **sein.**
 
 </dd> <dt>
 
-<span id="lpszContext"></span><span id="lpszcontext"></span><span id="LPSZCONTEXT"></span>**lpszcontext**
+<span id="lpszContext"></span><span id="lpszcontext"></span><span id="LPSZCONTEXT"></span>**lpszContext**
 </dt> <dd>
 
-Muss ein cloudName, eine leere Zeichenfolge oder **null** sein. Wenn dieser Wert **null** oder eine leere Zeichenfolge ist, wird die Standard-Cloud "Global \_ " verwendet. Andernfalls muss Sie auf einen gültigen cloudnamen verweisen.
+Muss ein Cloudname, eine leere Zeichenfolge oder **NULL sein.** Wenn dieser Wert **NULL oder** eine leere Zeichenfolge ist, wird die Standardwolke "Global" \_ verwendet. Andernfalls muss sie auf einen gültigen Cloudnamen verweisen.
 
 </dd> <dt>
 
-<span id="dwNumberOfProtocols"></span><span id="dwnumberofprotocols"></span><span id="DWNUMBEROFPROTOCOLS"></span>**dwnumofprotokolle**
+<span id="dwNumberOfProtocols"></span><span id="dwnumberofprotocols"></span><span id="DWNUMBEROFPROTOCOLS"></span>**dwNumberOfProtocols**
 </dt> <dd>
 
-Reserviert, muss NULL (0) sein.
+Reserviert, muss 0 (null) sein.
 
 </dd> <dt>
 
-<span id="lpszQueryString"></span><span id="lpszquerystring"></span><span id="LPSZQUERYSTRING"></span>**lpszquerystring**
+<span id="lpszQueryString"></span><span id="lpszquerystring"></span><span id="LPSZQUERYSTRING"></span>**lpszQueryString**
 </dt> <dd>
 
-Reserviert, muss **null** sein.
+Reserviert, muss NULL **sein.**
 
 </dd> <dt>
 
-<span id="dwNumberOfCsAddrs"></span><span id="dwnumberofcsaddrs"></span><span id="DWNUMBEROFCSADDRS"></span>**dwnumofcsaddrs**
+<span id="dwNumberOfCsAddrs"></span><span id="dwnumberofcsaddrs"></span><span id="DWNUMBEROFCSADDRS"></span>**dwNumberOfCsAddrs**
 </dt> <dd>
 
-Reserviert, muss NULL (0) sein.
+Reserviert, muss 0 (null) sein.
 
 </dd> <dt>
 
-<span id="lpcsaBuffer"></span><span id="lpcsabuffer"></span><span id="LPCSABUFFER"></span>**lpcsabuffer**
+<span id="lpcsaBuffer"></span><span id="lpcsabuffer"></span><span id="LPCSABUFFER"></span>**lpcsaBuffer**
 </dt> <dd>
 
-Reserviert, muss **null** sein.
+Reserviert, muss NULL **sein.**
 
 </dd> <dt>
 
-<span id="dwOutputFlags"></span><span id="dwoutputflags"></span><span id="DWOUTPUTFLAGS"></span>**dwoutputflags**
+<span id="dwOutputFlags"></span><span id="dwoutputflags"></span><span id="DWOUTPUTFLAGS"></span>**dwOutputFlags**
 </dt> <dd>
 
-Reserviert, muss NULL (0) sein.
+Reserviert, muss 0 (null) sein.
 
 </dd> <dt>
 
-<span id="lpBlob"></span><span id="lpblob"></span><span id="LPBLOB"></span>**lpblob**
+<span id="lpBlob"></span><span id="lpblob"></span><span id="LPBLOB"></span>**lpBlob**
 </dt> <dd>
 
-Muss entweder ein Zeiger auf eine [**BLOB**](winsock-nsp-reference-links.md) -Struktur oder **null** sein. Wenn er **null** ist, werden Standardwerte verwendet. Wenn Sie festgelegt ist, verweist **lpblob** auf eine [**pnrpinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1) -Struktur, und bestimmte Parameter in der **pnrpinfo** -Struktur müssen festgelegt werden. Weitere Informationen finden Sie in den folgenden Beschreibungen der pnrpinfo-Struktur.
+Muss entweder ein Zeiger auf eine [**BLOB-Struktur**](winsock-nsp-reference-links.md) oder **NULL sein.** Wenn es NULL **ist,** werden Standardwerte verwendet. Wenn sie festgelegt ist, **verweist lpBlob** auf eine [**PNRPINFO-Struktur,**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1) und bestimmte Parameter in der **PNRPINFO-Struktur** müssen festgelegt werden. Weitere Informationen finden Sie in den folgenden Beschreibungen für die PNRPINFO-Struktur.
 
 </dd> </dl>
 
-Pnrpinfo-Struktur
+PNRPINFO-Struktur
 
-Wenn das **lpblob** -Element der [**lpwsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur festgelegt ist, müssen die folgenden Member der [**pnrpinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1) -Struktur festgelegt werden:
+Wenn das **lpBlob-Element** der [**LPWSAQUERYSET-Struktur**](pnrp-and-wsaqueryset.md) festgelegt ist, müssen die folgenden Member der [**PNRPINFO-Struktur**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1) festgelegt werden:
 
 <dl> <dt>
 
 <span id="dwSize"></span><span id="dwsize"></span><span id="DWSIZE"></span>**dwSize**
 </dt> <dd>
 
-Gibt die Größe der-Struktur an.
+Gibt die Größe dieser -Struktur an.
 
 </dd> <dt>
 
-<span id="lpwszIdentity"></span><span id="lpwszidentity"></span><span id="LPWSZIDENTITY"></span>**lpwszidentity**
+<span id="lpwszIdentity"></span><span id="lpwszidentity"></span><span id="LPWSZIDENTITY"></span>**lpwszIdentity**
 </dt> <dd>
 
-Reserviert, muss **null** sein.
+Reserviert, muss NULL **sein.**
 
 </dd> <dt>
 
-<span id="nMaxResolve"></span><span id="nmaxresolve"></span><span id="NMAXRESOLVE"></span>**nmaxresolve**
+<span id="nMaxResolve"></span><span id="nmaxresolve"></span><span id="NMAXRESOLVE"></span>**nMaxResolve**
 </dt> <dd>
 
 Gibt die angeforderte Anzahl von Auflösungen an.
 
 </dd> <dt>
 
-<span id="dwTimeout"></span><span id="dwtimeout"></span><span id="DWTIMEOUT"></span>**dwtimeout**
+<span id="dwTimeout"></span><span id="dwtimeout"></span><span id="DWTIMEOUT"></span>**dwTimeout**
 </dt> <dd>
 
-Gibt den angeforderten Timeout Zeitraum an, der auf Antworten gewartet werden soll. Der Standardwert ist 30 Sekunden. Der Höchstwert beträgt 600 Sekunden (10 Minuten).
+Gibt den angeforderten Timeoutzeitraum an, um auf Antworten zu warten. Der Standardwert ist 30 Sekunden. Der Höchstwert beträgt 600 Sekunden (10 Minuten).
 
 </dd> <dt>
 
-<span id="dwLifetime"></span><span id="dwlifetime"></span><span id="DWLIFETIME"></span>**dwlifetime**
+<span id="dwLifetime"></span><span id="dwlifetime"></span><span id="DWLIFETIME"></span>**dwLifetime**
 </dt> <dd>
 
-Reserviert, muss NULL (0) sein.
+Reserviert, muss 0 (null) sein.
 
 </dd> <dt>
 
-<span id="enResolveCriteria"></span><span id="enresolvecriteria"></span><span id="ENRESOLVECRITERIA"></span>**einlösungs Vektor**
+<span id="enResolveCriteria"></span><span id="enresolvecriteria"></span><span id="ENRESOLVECRITERIA"></span>**enResolveCriteria**
 </dt> <dd>
 
-Muss einer der zulässigen Werte sein. Der Standardwert ist **PNRP \_ Auflösungs \_ Kriterien \_ nicht \_ aktueller \_ Prozess \_ Peer \_ Name**. Gültige Werte werden von [**PNRP- \_ Auflösungs \_ Kriterien**](/windows/desktop/api/Pnrpdef/ne-pnrpdef-pnrp_resolve_criteria)angegeben.
+Muss einer der zulässigen Werte sein. Der Standardwert ist **PNRP \_ RESOLVE CRITERIA NON CURRENT PROCESS PEER \_ \_ \_ \_ \_ \_ NAME**. Gültige Werte werden von [**PNRP \_ RESOLVE CRITERIA \_ angegeben.**](/windows/desktop/api/Pnrpdef/ne-pnrpdef-pnrp_resolve_criteria)
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>**dwFlags**
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>**Dwflags**
 </dt> <dd>
 
-Muss entweder NULL (0) oder **pnrpinfo- \_ Hinweis** sein. Der Standardwert ist null (0).
+Muss entweder null (0) oder **PNRPINFO \_ HINT sein.** Der Standardwert ist null (0).
 
 </dd> <dt>
 
-<span id="saHint"></span><span id="sahint"></span><span id="SAHINT"></span>**sahint**
+<span id="saHint"></span><span id="sahint"></span><span id="SAHINT"></span>**saHint**
 </dt> <dd>
 
-Gibt die IP-Adresse für den Hinweis an. Der Hinweis wird verwendet, wenn versucht wird, den nächsten Peernamen zu suchen. Das Format des Hinweises ist eine IPv6-Adresse. Wenn bei der Suche nach dem nächstgelegenen Peernamen **sahint** nicht angegeben wird, wird stattdessen eine IPv6-Adresse des lokalen Computers verwendet. Dieser Member wird ignoriert, wenn **dwFlags** nicht festgelegt ist.
+Gibt die IP-Adresse für den Hinweis an. Der Hinweis wird verwendet, wenn versucht wird, den nächsten Peernamen zu finden. Das Format des Hinweises ist eine IPv6-Adresse. Wenn **saHint beim** Suchen des nächsten Peernamens nicht angegeben wird, wird stattdessen eine IPv6-Adresse des lokalen Computers verwendet. Dieser Member wird ignoriert, wenn **dwFlags** nicht festgelegt ist.
 
 </dd> <dt>
 
-<span id="enNameState"></span><span id="ennamestate"></span><span id="ENNAMESTATE"></span>**ennamestate**
+<span id="enNameState"></span><span id="ennamestate"></span><span id="ENNAMESTATE"></span>**enNameState**
 </dt> <dd>
 
-Reserviert, muss NULL (0) sein.
+Reserviert, muss 0 (null) sein.
 
 </dd> </dl>
 
-### <a name="dwcontrolflags"></a>dwcontrolflags
+### <a name="dwcontrolflags"></a>dwControlFlags
 
-Die folgenden Lup \_ - \_ \* rückgabeflags werden von PNRP unterstützt:
+Die folgenden \_ LUP-RÜCKGABEflags \_ \* werden von PNRP unterstützt:
 
 
 
-| Wert                | BESCHREIBUNG                                |
+| Wert                | Beschreibung                                |
 |----------------------|--------------------------------------------|
-| Name der Lup- \_ Rückgabe \_    | Gibt einen Namen und einen Kontext zurück.                |
-| Lup- \_ Rückgabe \_ Kommentar | Gibt einen Kommentar zurück, der einem Namen zugeordnet ist.  |
-| Lup \_ Return \_ addr    | Gibt eine Adresse zurück, die einem Namen zugeordnet ist. |
+| \_LUP-RÜCKGABENAME \_    | Gibt einen Namen und Kontext zurück.                |
+| \_ \_ LUP-RÜCKGABEKOMMENTAR | Gibt einen Kommentar zurück, der einem Namen zugeordnet ist.  |
+| \_ \_ LUP-RÜCKGABE-ADDR    | Gibt eine Adresse zurück, die einem Namen zugeordnet ist. |
 
 
 
  
 
-## <a name="enumerating-network-clouds"></a>Auflisten von Netzwerk Clouds
+## <a name="enumerating-network-clouds"></a>Aufzählen von Netzwerk clouds
 
-### <a name="lpqsrestrictions"></a>lpqsrestrictions
+### <a name="lpqsrestrictions"></a>lpqsRestrictions
 
-Beim Auflisten von Clouds muss die [**lpwsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur, auf die der *lpqsrestrictions* -Parameter verweist, die folgenden Werte enthalten:
+Beim Aufzählen von Clouds muss die [**LPWSAQUERYSET-Struktur,**](pnrp-and-wsaqueryset.md) auf die *der lpqsRestrictions-Parameter* verweist, die folgenden Werte enthalten:
 
 <dl> <dt>
 
 <span id="dwSize"></span><span id="dwsize"></span><span id="DWSIZE"></span>**dwSize**
 </dt> <dd>
 
-Gibt die Größe der-Struktur an.
+Gibt die Größe dieser -Struktur an.
 
 </dd> <dt>
 
-<span id="lpszServiceInstanceName"></span><span id="lpszserviceinstancename"></span><span id="LPSZSERVICEINSTANCENAME"></span>**lpszserviceingestancename**
+<span id="lpszServiceInstanceName"></span><span id="lpszserviceinstancename"></span><span id="LPSZSERVICEINSTANCENAME"></span>**lpszServiceInstanceName**
 </dt> <dd>
 
-Muss **null** sein.
+Muss NULL **sein.**
 
 </dd> <dt>
 
-<span id="lpServiceClassID"></span><span id="lpserviceclassid"></span><span id="LPSERVICECLASSID"></span>**lpserviceclassid**
+<span id="lpServiceClassID"></span><span id="lpserviceclassid"></span><span id="LPSERVICECLASSID"></span>**lpServiceClassID**
 </dt> <dd>
 
-Muss **svcid \_ pnrpcloud** sein.
+Muss **SVCID \_ PNRPCLOUD sein.**
 
 </dd> <dt>
 
-<span id="lpVersion"></span><span id="lpversion"></span><span id="LPVERSION"></span>**lpversion**
+<span id="lpVersion"></span><span id="lpversion"></span><span id="LPVERSION"></span>**lpVersion**
 </dt> <dd>
 
-Reserviert, muss **null** sein.
+Reserviert, muss NULL **sein.**
 
 </dd> <dt>
 
-<span id="lpszComment"></span><span id="lpszcomment"></span><span id="LPSZCOMMENT"></span>**lpszcomment**
+<span id="lpszComment"></span><span id="lpszcomment"></span><span id="LPSZCOMMENT"></span>**lpszComment**
 </dt> <dd>
 
-Reserviert, muss **null** sein.
+Reserviert, muss **NULL** sein.
 
 </dd> <dt>
 
-<span id="dwNameSpace"></span><span id="dwnamespace"></span><span id="DWNAMESPACE"></span>**dwnamespace**
+<span id="dwNameSpace"></span><span id="dwnamespace"></span><span id="DWNAMESPACE"></span>**dwNameSpace**
 </dt> <dd>
 
-Muss **NS \_ pnrpcloud** sein.
+Muss **NS \_ PNRPCLOUD** sein.
 
 </dd> <dt>
 
-<span id="lpNSProviderID"></span><span id="lpnsproviderid"></span><span id="LPNSPROVIDERID"></span>**lpnsproviderid**
+<span id="lpNSProviderID"></span><span id="lpnsproviderid"></span><span id="LPNSPROVIDERID"></span>**lpNSProviderID**
 </dt> <dd>
 
-Muss entweder der **NS- \_ Anbieter \_ pnrpcloud** oder **null** sein.
+Muss entweder **NS \_ PROVIDER \_ PNRPCLOUD** oder **NULL** sein.
 
 </dd> <dt>
 
-<span id="lpszContext"></span><span id="lpszcontext"></span><span id="LPSZCONTEXT"></span>**lpszcontext**
+<span id="lpszContext"></span><span id="lpszcontext"></span><span id="LPSZCONTEXT"></span>**lpszContext**
 </dt> <dd>
 
-Reserviert, muss **null** sein.
+Reserviert, muss **NULL** sein.
 
 </dd> <dt>
 
-<span id="dwNumberOfProtocols"></span><span id="dwnumberofprotocols"></span><span id="DWNUMBEROFPROTOCOLS"></span>**dwnumofprotokolle**
+<span id="dwNumberOfProtocols"></span><span id="dwnumberofprotocols"></span><span id="DWNUMBEROFPROTOCOLS"></span>**dwNumberOfProtocols**
 </dt> <dd>
 
-Reserviert, muss NULL (0) sein.
+Reserviert, muss null (0) sein.
 
 </dd> <dt>
 
-<span id="lpszQueryString"></span><span id="lpszquerystring"></span><span id="LPSZQUERYSTRING"></span>**lpszquerystring**
+<span id="lpszQueryString"></span><span id="lpszquerystring"></span><span id="LPSZQUERYSTRING"></span>**lpszQueryString**
 </dt> <dd>
 
-Reserviert, muss **null** sein.
+Reserviert, muss **NULL** sein.
 
 </dd> <dt>
 
-<span id="dwNumberOfCsAddrs"></span><span id="dwnumberofcsaddrs"></span><span id="DWNUMBEROFCSADDRS"></span>**dwnumofcsaddrs**
+<span id="dwNumberOfCsAddrs"></span><span id="dwnumberofcsaddrs"></span><span id="DWNUMBEROFCSADDRS"></span>**dwNumberOfCsAddrs**
 </dt> <dd>
 
-Reserviert, muss NULL (0) sein.
+Reserviert, muss null (0) sein.
 
 </dd> <dt>
 
-<span id="lpcsaBuffer"></span><span id="lpcsabuffer"></span><span id="LPCSABUFFER"></span>**lpcsabuffer**
+<span id="lpcsaBuffer"></span><span id="lpcsabuffer"></span><span id="LPCSABUFFER"></span>**lpcsaBuffer**
 </dt> <dd>
 
-Reserviert, muss **null** sein.
+Reserviert, muss **NULL** sein.
 
 </dd> <dt>
 
-<span id="dwOutputFlags"></span><span id="dwoutputflags"></span><span id="DWOUTPUTFLAGS"></span>**dwoutputflags**
+<span id="dwOutputFlags"></span><span id="dwoutputflags"></span><span id="DWOUTPUTFLAGS"></span>**dwOutputFlags**
 </dt> <dd>
 
-Reserviert, muss NULL (0) sein.
+Reserviert, muss null (0) sein.
 
 </dd> <dt>
 
-<span id="lpBlob"></span><span id="lpblob"></span><span id="LPBLOB"></span>**lpblob**
+<span id="lpBlob"></span><span id="lpblob"></span><span id="LPBLOB"></span>**lpBlob**
 </dt> <dd>
 
-Zeiger auf eine [**BLOB**](winsock-nsp-reference-links.md) -Struktur, die auf eine [**pnrpcloudinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo) -Struktur zeigt. Wenn **lpblob** den Wert **null** hat, werden alle Clouds aufgelistet.
+Zeiger auf eine [**BLOB-Struktur,**](winsock-nsp-reference-links.md) die auf eine [**PNRPCLOUDINFO-Struktur**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo) zeigt. Wenn **lpBlob** **NULL** ist, werden alle Clouds aufzählt.
 
 </dd> </dl>
 
-Pnrpcloudinfo-Struktur
+PNRPCLOUDINFO-Struktur
 
-Beim Auflisten von Clouds müssen die folgenden Member der [**pnrpcloudinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo) -Struktur festgelegt werden:
+Beim Aufzählen von Clouds müssen die folgenden Member der [**PNRPCLOUDINFO-Struktur**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo) festgelegt werden:
 
 <dl> <dt>
 
 <span id="dwSize"></span><span id="dwsize"></span><span id="DWSIZE"></span>**dwSize**
 </dt> <dd>
 
-Gibt die Größe der-Struktur an.
+Gibt die Größe dieser Struktur an.
 
 </dd> <dt>
 
 <span id="Cloud"></span><span id="cloud"></span><span id="CLOUD"></span>**Cloud**
 </dt> <dd>
 
-Verweist auf eine-Struktur, die Kriterien angibt, die Sie zum Filtern von Suchergebnissen verwenden können. Das Element **Cloud. Scope** kann den **PNRP \_ -Bereich \_ any**, den **globalen PNRP- \_ \_ Bereich**, den **lokalen PNRP- \_ Standort \_ \_ Bereich** oder den **lokalen PNRP- \_ Link \_ \_** aufweisen. Wenn **PNRP- \_ Bereich \_ any** angegeben ist, werden alle Clouds zurückgegeben. Andernfalls werden nur Clouds zurückgegeben, die dem **Cloud. Scope** entsprechen.
+Zeigt auf eine -Struktur, die Kriterien angibt, die Sie zum Filtern von Suchergebnissen verwenden können. Das **Cloud.Scope-Element** kann **PNRP \_ SCOPE \_ ANY,** **PNRP GLOBAL \_ \_ SCOPE,** **PNRP SITE LOCAL \_ \_ \_ SCOPE** oder **PNRP LINK LOCAL SCOPE \_ \_ \_ sein.** Wenn **PNRP \_ SCOPE \_ ANY** angegeben ist, werden alle Clouds zurückgegeben. Andernfalls werden nur Clouds zurückgegeben, die mit **Cloud.Scope** übereinstimmen.
 
 </dd> <dt>
 
-<span id="enCloudState"></span><span id="encloudstate"></span><span id="ENCLOUDSTATE"></span>**umcloudstate**
+<span id="enCloudState"></span><span id="encloudstate"></span><span id="ENCLOUDSTATE"></span>**enCloudState**
 </dt> <dd>
 
-Reserviert, muss NULL (0) sein.
+Reserviert, muss null (0) sein.
 
 </dd> </dl>
 
-### <a name="dwcontrolflags"></a>dwcontrolflags
+### <a name="dwcontrolflags"></a>dwControlFlags
 
-Die folgenden Lup \_ - \_ \* rückgabeflags werden von PNRP unterstützt:
+Die folgenden LUP \_ \_ \* RETURN-Flags werden von PNRP unterstützt:
 
 
 
-| Wert             | BESCHREIBUNG                                                       |
+| Wert             | Beschreibung                                                       |
 |-------------------|-------------------------------------------------------------------|
-| Name der Lup- \_ Rückgabe \_ | Gibt einen Namen und einen Kontext zurück.                                       |
-| Lup- \_ Rückgabe- \_ BLOB | Gibt das [BLOB](pnrp-and-blob.md) zurück, das dieser Cloud zugeordnet ist. |
+| \_LUP-RÜCKGABENAME \_ | Gibt einen Namen und Kontext zurück.                                       |
+| \_ \_ LUP-RÜCKGABEBLOB | Gibt das [BLOB zurück,](pnrp-and-blob.md) das dieser Cloud zugeordnet ist. |
 
 
 
@@ -378,19 +378,19 @@ Die folgenden Lup \_ - \_ \* rückgabeflags werden von PNRP unterstützt:
 [PNRP und WSALookupServiceNext](pnrp-and-wsalookupservicenext.md)
 </dt> <dt>
 
-[PNRP und wsanspioctl](pnrp-and-wsanspioctl.md)
+[PNRP und WSANSPIoctl](pnrp-and-wsanspioctl.md)
 </dt> <dt>
 
-[PNRP und wsaqueryset](pnrp-and-wsaqueryset.md)
+[PNRP und WSAQUERYSET](pnrp-and-wsaqueryset.md)
 </dt> <dt>
 
-[**Pnrpcloudinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo)
+[**PNRPCLOUDINFO**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo)
 </dt> <dt>
 
-[**Pnrpinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1)
+[**PNRPINFO**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1)
 </dt> <dt>
 
-[PNRP-NSP-Fehler Codes](pnrp-nsp-error-codes.md)
+[PNRP-NSP-Fehlercodes](pnrp-nsp-error-codes.md)
 </dt> </dl>
 
  

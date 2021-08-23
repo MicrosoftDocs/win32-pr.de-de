@@ -1,100 +1,100 @@
 ---
-title: Externes Objekt für den Typ 1-Online Speicher
-description: Externes Objekt für den Typ 1-Online Speicher
+title: Externes Objekt für Onlineshops vom Typ 1
+description: Externes Objekt für Onlineshops vom Typ 1
 ms.assetid: 5c42e1a9-c5c6-4725-8528-de2839d84e77
 keywords:
-- Windows Media Player Online Stores, externe Objekte
-- Online Stores, externe Objekte
-- Typ 1 Online Stores, externe Objekte
+- Windows Media Player Onlineshops, externe Objekte
+- Onlineshops, externe Objekte
+- Geben Sie 1 Onlineshops, externe Objekte ein.
 - externe Objekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f50e5e6bfc98ea3669996b06fa4a4defb52452fb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7e7d95d2ca332b88edea73da2238374aeffc52e520d7bc0346eab9f4eb7a05f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103948028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119649000"
 ---
-# <a name="external-object-for-type-1-online-stores"></a>Externes Objekt für den Typ 1-Online Speicher
+# <a name="external-object-for-type-1-online-stores"></a>Externes Objekt für Onlineshops vom Typ 1
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
- 
+ 
 
-Das **externe** Objekt bietet Funktionen für Webseiten, die von einem Online Shop bereitgestellt werden und in Windows Media Player gehostet werden.
+Das **External-Objekt** stellt Funktionen für Webseiten bereit, die von einem Onlineshop bereitgestellt werden, der in Windows Media Player gehostet wird.
 
-Das **externe** Objekt macht die folgenden Eigenschaften für den Typ 1 Online Stores verfügbar.
+Das **External-Objekt** macht die folgenden Eigenschaften für Onlineshops vom Typ 1 verfügbar.
 
 
 
-| Eigenschaft                                                                                  | BESCHREIBUNG                                                                                                                              |
+| Eigenschaft                                                                                  | Beschreibung                                                                                                                              |
 |-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| [AccountType](external-accounttype.md)                                                   | Ruft den Kontotyp des aktuellen Benutzers ab.                                                                                          |
-| [appcolorbuttonhighlight](external-appcolorbuttonhighlight.md)                           | Ruft die aktuelle Schaltflächen Hervorhebungs Farbe für die Windows Media Player-Benutzeroberfläche ab.                                                |
-| [appcolorbuttonhoverface](external-appcolorbuttonhoverface.md)                           | Ruft die aktuelle Schaltflächen-Hover-Farbe für die Windows Media Player-Benutzeroberfläche ab.                                                    |
-| [appcolorbuttonshadow](external-appcolorbuttonshadow.md)                                 | Ruft die aktuelle Schaltflächen Schatten Farbe für die Windows Media Player-Benutzeroberfläche ab.                                                   |
-| [appcolordark](external-appcolordark.md)                                                 | Ruft die aktuelle dunkel schattierte Farbe der Windows Media Player-Benutzeroberfläche ab.                                                      |
-| [appcolorlight](external-appcolorlight.md)                                               | Ruft die aktuelle helle schattierte Farbe der Windows Media Player-Benutzeroberfläche ab.                                                     |
-| [appcolormedium](external-appcolormedium.md)                                             | Ruft die aktuelle mittelgroße schattierte Farbe der Windows Media Player-Benutzeroberfläche ab.                                                    |
-| [Baskettitel](external-baskettitle.md)                                                   | Ruft den Titel der Schaltfläche im Listen Bereich (auch als Warenkorb bezeichnet) in Windows Media Player ab.                                     |
-| [filter](external-filter.md)                                                             | Ruft den Suchfilter ab, der derzeit von Windows Media Player verwendet wird.                                                                    |
-| [ignoreiehistory](external-ignoreiehistory.md)                                           | Gibt an, ob Windows Media Player den Internet Explorer-Verlauf ignorieren soll.                                                          |
-| [librarylocationid](external-librarylocationid.md)                                       | Ruft den Bezeichner eines bestimmten Medien Elements ab, das momentan in der Ansicht des Players angezeigt wird.                                      |
-| [librarylocationtype](external-librarylocationtype.md)                                   | Ruft eine [Bibliotheks Speicherort Konstante](library-location-constants.md) ab, die den Typ der aktuellen Ansicht in Windows-Media Player angibt. |
-| [pluginrunning](external-pluginrunning.md)                                               | Ruft einen Wert ab, der angibt, ob das Plug-in des Online Stores ausgeführt wird.                                                          |
-| [selecteditemid](external-selecteditemid.md)                                             | Ruft den Bezeichner des Medien Elements ab, das derzeit in Windows Media Player ausgewählt ist.                                           |
-| [selecteditemtype](external-selecteditemtype.md)                                         | Ruft den Typ des Medien Elements ab, das derzeit in Windows Media Player ausgewählt ist.                                                 |
-| [Task](external-task.md)                                                                 | Ruft den Namen des aktuellen Aufgabenbereichs ab.                                                                                             |
-| [templatebingdisplayedinlocallibrary](external-templatebeingdisplayedinlocallibrary.md) | Gibt an, ob der von der aktuellen Ermittlungs Seite dargestellte Feed im Strukturansicht-Steuerelement der lokalen Bibliothek angezeigt wird.          |
-| [userloggedin](external-userloggedin.md)                                                 | Ruft einen Wert ab, der angibt, ob der Benutzer am Online Store angemeldet ist.                                                          |
+| [accountType](external-accounttype.md)                                                   | Ruft den Kontotyp des aktuellen Benutzers ab.                                                                                          |
+| [appColorButtonHighlight](external-appcolorbuttonhighlight.md)                           | Ruft die aktuelle Hervorhebungsfarbe der Schaltfläche für die Windows Media Player Benutzeroberfläche ab.                                                |
+| [appColorButtonHoverFace](external-appcolorbuttonhoverface.md)                           | Ruft die aktuelle Schaltflächenzeigerfarbe für die Windows Media Player Benutzeroberfläche ab.                                                    |
+| [appColorButtonShadow](external-appcolorbuttonshadow.md)                                 | Ruft die aktuelle Schaltflächenschattenfarbe für die Windows Media Player Benutzeroberfläche ab.                                                   |
+| [appColorDark](external-appcolordark.md)                                                 | Ruft die aktuelle dunkel schattierte Farbe der Windows Media Player Benutzeroberfläche ab.                                                      |
+| [appColorLight](external-appcolorlight.md)                                               | Ruft die aktuelle hell schattierte Farbe der Windows Media Player Benutzeroberfläche ab.                                                     |
+| [appColorMedium](external-appcolormedium.md)                                             | Ruft die aktuelle mittelschattierte Farbe der Windows Media Player Benutzeroberfläche ab.                                                    |
+| [basketTitle](external-baskettitle.md)                                                   | Ruft den Titel der Schaltfläche im Listenbereich (auch als Warenkorb bezeichnet) in Windows Media Player ab.                                     |
+| [filter](external-filter.md)                                                             | Ruft den derzeit von Windows Media Player verwendeten Suchfilter ab.                                                                    |
+| [ignoreIEHistory](external-ignoreiehistory.md)                                           | Gibt an, ob Windows Media Player Internet Explorer Verlauf ignorieren soll.                                                          |
+| [libraryLocationID](external-librarylocationid.md)                                       | Ruft den Bezeichner eines bestimmten Medienelements ab, das derzeit in der Ansicht des Players angezeigt wird.                                      |
+| [libraryLocationType](external-librarylocationtype.md)                                   | Ruft eine [Bibliotheksspeicherort-Konstante](library-location-constants.md) ab, die den Typ der aktuellen Ansicht in Windows Media Player angibt. |
+| [pluginRunning](external-pluginrunning.md)                                               | Ruft einen Wert ab, der angibt, ob das Plug-In des Onlineshops ausgeführt wird.                                                          |
+| [selectedItemID](external-selecteditemid.md)                                             | Ruft den Bezeichner des Medienelements ab, das derzeit in Windows Media Player ausgewählt ist.                                           |
+| [selectedItemType](external-selecteditemtype.md)                                         | Ruft den Typ des Medienelements ab, das derzeit in Windows Media Player ausgewählt ist.                                                 |
+| [Aufgabe](external-task.md)                                                                 | Ruft den Namen des aktuellen Aufgabenbereichs ab.                                                                                             |
+| [templateBeingDisplayedInLocalLibrary](external-templatebeingdisplayedinlocallibrary.md) | Gibt an, ob der von der aktuellen Ermittlungsseite dargestellte Feed im Strukturansichtssteuerelement der lokalen Bibliothek angezeigt wird.          |
+| [userLoggedIn](external-userloggedin.md)                                                 | Ruft einen Wert ab, der angibt, ob der Benutzer beim Onlineshop angemeldet ist.                                                          |
 | [version](external-version.md)                                                           | Ruft die aktuelle Version von Windows Media Player ab.                                                                                   |
-| [viewparameters](external-viewparameters.md)                                             | Ruft Parameter ab, die der aktuellen Ansicht in Windows Media Player zugeordnet sind.                                                           |
+| [viewParameters](external-viewparameters.md)                                             | Ruft Parameter ab, die der aktuellen Ansicht in Windows Media Player zugeordnet sind.                                                           |
 
 
 
- 
+ 
 
-Das **externe** Objekt macht die folgenden Methoden für den Typ 1 Online Stores verfügbar.
+Das **External-Objekt** macht die folgenden Methoden für Onlineshops vom Typ 1 verfügbar.
 
 
 
-| Methode                                                            | BESCHREIBUNG                                                                                                                  |
+| Methode                                                            | Beschreibung                                                                                                                  |
 |-------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| ["AddTo Basket"](external-addtobasket.md)                           | Fügt dem Listen Bereich (auch als Warenkorb bezeichnet) in Windows Media Player Medienelemente hinzu.                                          |
-| [Anmelde Name](external-attemptlogin.md)                         | Zeigt ein Dialogfeld an, damit der Benutzer versuchen kann, sich beim Online Shop anzumelden.                                                 |
-| [authenticate](external-authenticate.md)                         | Initiiert den Versuch, den Benutzer zu authentifizieren.                                                                               |
-| [auf](external-buy.md)                                           | Initiiert den Erwerb eines Satzes von Medien Elementen.                                                                              |
-| [cancelnavigate](external-cancelnavigate.md)                     | Informiert Windows Media Player, dass eine neue Ermittlungs Seite auch dann nicht angezeigt werden soll, wenn sich die Ansicht im Player geändert hat. |
+| [addToBasket](external-addtobasket.md)                           | Fügt dem Listenbereich (auch als Warenkorb bezeichnet) in Windows Media Player Medienelemente hinzu.                                          |
+| [attemptLogin](external-attemptlogin.md)                         | Zeigt ein Dialogfeld an, damit der Benutzer versuchen kann, sich beim Onlineshop anzumelden.                                                 |
+| [Authentifizieren](external-authenticate.md)                         | Initiiert einen Versuch, den Benutzer zu authentifizieren.                                                                               |
+| [kaufen](external-buy.md)                                           | Initiiert den Kauf eines Satzes von Medienelementen.                                                                              |
+| [cancelNavigate](external-cancelnavigate.md)                     | Informiert Windows Media Player, dass keine neue Ermittlungsseite angezeigt werden soll, obwohl sich die Ansicht im Player geändert hat. |
 | [changeView](external-changeview.md)                             | Ändert die Ansicht in Windows Media Player.                                                                                    |
-| [changeviewonlinelist](external-changeviewonlinelist.md)         | Ändert die Ansicht in Windows Media Player, um eine Liste anzuzeigen, die dynamisch vom Online Store generiert wurde.                        |
-| [Herunterladen](external-download.md)                                 | Initiiert das Herunterladen eines Satzes von Medien Elementen.                                                                              |
-| [Theater](external-play.md)                                         | Weist Windows Media Player an, einen Satz von Medien Elementen wiederzugeben.                                                                 |
-| [savecurrentviewdelibrary](external-savecurrentviewtolibrary.md) | Erstellt eine Wiedergabeliste aus den Medien Elementen in der aktuellen Ansicht und speichert die Wiedergabeliste in der lokalen Bibliothek.                     |
-| [SendMessage](external-sendmessage.md)                           | Sendet eine Meldung an das Plug-in des Online Stores.                                                                               |
-| [showPopup](external-showpopup.md)                               | Weist Windows Media Player an, eine Popup Webseite anzuzeigen. Das heißt, eine Webseite, die in einem separaten Fenster angezeigt wird.            |
+| [changeViewOnlineList](external-changeviewonlinelist.md)         | Ändert die Ansicht in Windows Media Player, um eine dynamisch vom Onlineshop generierte Liste anzuzeigen.                        |
+| [Herunterladen](external-download.md)                                 | Initiiert den Download eines Satzes von Medienelementen.                                                                              |
+| [Spielen](external-play.md)                                         | Weist Windows Media Player an, eine Reihe von Medienelementen wiederzuspielen.                                                                 |
+| [saveCurrentViewToLibrary](external-savecurrentviewtolibrary.md) | Erstellt eine Wiedergabeliste aus den Medienelementen in der aktuellen Ansicht und speichert die Wiedergabeliste in der lokalen Bibliothek.                     |
+| [Sendmessage](external-sendmessage.md)                           | Sendet eine Nachricht an das Plug-In des Onlineshops.                                                                               |
+| [showPopup](external-showpopup.md)                               | Weist Windows Media Player an, eine Popupwebseite anzuzeigen. Das heißt, eine Webseite, die in einem separaten Fenster angezeigt wird.            |
 
 
 
- 
+ 
 
-Das **externe** Objekt macht die folgenden Ereignisse für den Onlinespeicher vom Typ 1 verfügbar.
+Das **External-Objekt** macht die folgenden Ereignisse für Onlineshops vom Typ 1 verfügbar.
 
 
 
-| Ereignis                                                                         | BESCHREIBUNG                                                                             |
+| Ereignis                                                                         | Beschreibung                                                                             |
 |-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [Onchangeviewerror](external-onchangeviewerror-event.md)                     | Tritt auf, wenn ein Aufrufvorgang der **externen. changeView** -Methode zu einem Fehler führt.           |
-| [Onchangeviewonlinelisterror](external-onchangeviewonlinelisterror-event.md) | Tritt auf, wenn ein Aufrufvorgang der **externen. changeviewonlinelist** -Methode zu einem Fehler führt. |
-| [Oncolorchange](external-oncolorchange-event.md)                             | Tritt auf, wenn sich die Farbe der Windows Media Player-Benutzeroberfläche ändert.               |
-| [Onloginchange](external-onloginchange-event.md)                             | Tritt auf, wenn der Anmeldestatus des Benutzers geändert wird oder wenn der Anmeldeversuch fehlschlägt.        |
-| [Onsendmessagecomplete](external-onsendmessagecomplete-event.md)             | Tritt auf, wenn der Online Shop die Verarbeitung einer Nachricht abgeschlossen hat.                         |
-| [OnViewChange](external-onviewchange-event.md)                               | Tritt auf, wenn die Sicht in Windows-Media Player geändert wird.                                   |
+| [OnChangeViewError](external-onchangeviewerror-event.md)                     | Tritt ein, wenn ein Aufruf der **External.ChangeView-Methode** zu einem Fehler führt.           |
+| [OnChangeViewOnlineListError](external-onchangeviewonlinelisterror-event.md) | Tritt ein, wenn ein Aufruf der **External.ChangeViewOnlineList-Methode** zu einem Fehler führt. |
+| [OnColorChange](external-oncolorchange-event.md)                             | Tritt ein, wenn sich die Farbe der Windows Media Player Benutzeroberfläche ändert.               |
+| [OnLoginChange](external-onloginchange-event.md)                             | Tritt ein, wenn sich der Anmeldestatus des Benutzers ändert oder ein Anmeldeversuch fehlschlägt.        |
+| [OnSendMessageComplete](external-onsendmessagecomplete-event.md)             | Tritt ein, wenn der Onlineshop die Verarbeitung einer Nachricht abgeschlossen hat.                         |
+| [OnViewChange](external-onviewchange-event.md)                               | Tritt ein, wenn sich die Ansicht in Windows Media Player ändert.                                   |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -106,9 +106,9 @@ Das **externe** Objekt macht die folgenden Ereignisse für den Onlinespeicher vo
 [**Remoting des Windows Media Player-Steuerelements**](remoting-the-windows-media-player-control.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

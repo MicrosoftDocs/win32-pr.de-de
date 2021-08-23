@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e51a86ec9b12992d49364d3a7c614751dacafac3
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 14b138ae4c1b61b70147726d1a320e8dca1c0a57ffb11dd742419a46f9d131b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093898"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119630870"
 ---
 # <a name="d3dxshprtcompsplitmeshsc-function"></a>D3DXSHPRTCompSplitMeshSC-Funktion
 
-Wird mit komprimierten Ergebnissen der Scheitelpunktversion des PRT-Simulators (Precomputed Radiance Transfer) verwendet. Nachdem [**D3DXSHPRTCompSuperCluster**](d3dxshprtcompsupercluster.md) aufgerufen wurde, kann diese Funktion verwendet werden, um das Gitternetz in eine Gruppe von Gesichtern/Scheitelpunkten pro Supercluster aufzuteilen. Jeder Supercluster enthält alle Gesichter, die einen beliebigen Scheitelpunkt enthalten, der in einem seiner Cluster klassifiziert ist. Alle Scheitelpunkte, die mit dieser Gruppe von Gesichtern verbunden sind, sind auch im zurückgegebenen Array ppVertStatus enthalten, das angibt, ob der Scheitelpunkt zum Supercluster gehört.
+Wird mit komprimierten Ergebnissen der Scheitelpunktversion des PRT-Simulators (Precomputed Radiance Transfer) verwendet. Nachdem [**D3DXSHPRTCompSuperCluster**](d3dxshprtcompsupercluster.md) aufgerufen wurde, kann diese Funktion verwendet werden, um das Gitternetz in eine Gruppe von Gesichtern/Scheitelräumen pro Supercluster zu unterteilen. Jeder Supercluster enthält alle Gesichter, die alle Scheitelpunkte enthalten, die in einem seiner Cluster klassifiziert sind. Alle Scheitelpunkte, die mit dieser Gruppe von Gesichtern verbunden sind, sind auch im zurückgegebenen Array ppVertStatus enthalten, das angibt, ob der Scheitelpunkt zum Supercluster gehört oder nicht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,7 +60,7 @@ HRESULT D3DXSHPRTCompSplitMeshSC(
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-*NumVertices-Cluster-IDs* (aus einem komprimierten Puffer extrahiert)
+*NumVertices-Cluster-IDs* (aus einem komprimierten Puffer extrahiert).
 
 </dd> <dt>
 
@@ -69,7 +69,7 @@ Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Scheitelpunkte im ursprünglichen Gitternetz.
+Anzahl der Scheitelzeichen im ursprünglichen Gitter.
 
 </dd> <dt>
 
@@ -78,7 +78,7 @@ Anzahl der Scheitelpunkte im ursprünglichen Gitternetz.
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl von Clustern (Eingabeparameter für Komprimierung))
+Anzahl von Clustern (Eingabeparameter für die Komprimierung)
 
 </dd> <dt>
 
@@ -87,7 +87,7 @@ Anzahl von Clustern (Eingabeparameter für Komprimierung))
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Array von *NumCs* der Größe, die Supercluster-IDs enthalten.
+Ein Array von *Größen-NumCs,* das Supercluster-IDs enthält.
 
 </dd> <dt>
 
@@ -141,7 +141,7 @@ Unformatierter Indexpuffer, der die resultierenden geteilten Gesichter enthält.
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Länge von *ppIBData,* zugewiesen in funktion.
+Länge von *ppIBData,* in Funktion zugewiesen.
 
 </dd> <dt>
 
@@ -150,7 +150,7 @@ Länge von *ppIBData,* zugewiesen in funktion.
 
 Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-True gibt an, dass ein Ganzzahlarray ohne Vorzeichen zuordnet. andernfalls ordnet ein short-Array ohne Vorzeichen zu.
+True **gibt an,** dass ein Ganzzahlarray ohne Vorzeichen zugibt. andernfalls ordnet ein unsigniertes short-Array zu.
 
 </dd> <dt>
 
@@ -159,7 +159,7 @@ True gibt an, dass ein Ganzzahlarray ohne Vorzeichen zuordnet. andernfalls ordne
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Zuordnung jedes Gesichts in *ppIBData* zu ursprünglichen Gesichtern. Die Länge ist \* *pIBDataLength*/3.
+Zuordnung jedes Gesichts in *ppIBData zu* ursprünglichen Gesichtern. Length ist \* *pIBDataLength*/3.
 
 </dd> <dt>
 
@@ -168,7 +168,7 @@ Zuordnung jedes Gesichts in *ppIBData* zu ursprünglichen Gesichtern. Die Länge
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Neue Scheitelpunktdatenstruktur. Größe von *pVertDataLength.*
+Neue Vertexdatenstruktur. Größe von *pVertDataLength.*
 
 </dd> <dt>
 
@@ -177,7 +177,7 @@ Neue Scheitelpunktdatenstruktur. Größe von *pVertDataLength.*
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Anzahl der neuen Scheitelpunkte im geteilten Gitternetz. In Funktion zugewiesen.
+Anzahl der neuen Scheitelzeichen im geteilten Netz. In Funktion zugewiesen.
 
 </dd> <dt>
 
@@ -186,7 +186,7 @@ Anzahl der neuen Scheitelpunkte im geteilten Gitternetz. In Funktion zugewiesen.
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Ein Array mit *NumCs* der Länge, in das *pSCData* für jeden Supercluster indiziert *(pClusterIDs-Felder),* \* enthält Cluster, die nach Supercluster sortiert sind.
+Ein Array von *Längen-NumCs,* in das *pSCData* in (*pClusterIDs-Felder)* für jeden Supercluster indiziert wird, enthält Nach \* Supercluster sortierte Cluster.
 
 </dd> <dt>
 
@@ -209,14 +209,14 @@ Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Fun
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

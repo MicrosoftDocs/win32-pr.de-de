@@ -1,9 +1,9 @@
 ---
-title: /Partial-Schalter
-description: Der Schalter/Partial gibt an, dass nicht aufgelöste Typen für Metadatendateien aufgelöst werden, die durch den Schalter/Metadata dir aufgelistet werden \_ .
+title: /partial-Schalter
+description: Der Schalter /partial gibt an, dass nicht aufgelöste Typen für Metadatendateien aufgelöst werden, die vom Schalter /metadata \_ dir aufgelistet werden.
 ms.assetid: 2A8ED420-84DE-46AE-9FA6-8CB6ECDA4835
 keywords:
-- /Partial-Schalter-Mittel l
+- /partial switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,30 +12,30 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 66113791c242e88485dcb160917191ff4789af03
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d0feea96e2a510211bbe7dd3ead8f9570750609a30c860751e6073472c9aa772
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354752"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119650280"
 ---
-# <a name="partial-switch"></a>/Partial-Schalter
+# <a name="partial-switch"></a>/partial-Schalter
 
-Der Schalter **/Partial** gibt an, dass nicht aufgelöste Typen für Metadatendateien aufgelöst werden, die durch den Schalter [**/Metadata \_ dir**](-mdmerge-metadata-dir.md) aufgelistet werden.
+Der **Schalter /partial** gibt an, dass nicht aufgelöste Typen für Metadatendateien aufgelöst werden, die vom [**Schalter /metadata dir \_ aufgelistet**](-mdmerge-metadata-dir.md) werden.
 
 ``` syntax
 mdmerge /partial 
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
 ## <a name="remarks"></a>Bemerkungen
 
 ## <a name="examples"></a>Beispiele
 
-**mdmerge-/Partial**
+**mdmerge /partial**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Dieser Switch hat keine Parameter.
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> </dl>
 
  

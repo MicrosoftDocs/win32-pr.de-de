@@ -4,12 +4,12 @@ description: Komponentenweise Division.
 ms.assetid: B086F069-8F43-4746-A6A5-8F4462212648
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d406c5e61b4615990b445abe169619227d22124c
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 0a1df4e40032a2eaa2c4ef89ca5d1e227b4ebc35bbc8b13d7868eda5ea7a5b07
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107999097"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119625770"
 ---
 # <a name="div-sm4---asm"></a>div (sm4 - asm)
 
@@ -26,7 +26,7 @@ Komponentenweise Division.
 
 
 
-| Element                                                            | BESCHREIBUNG                                    |
+| Element                                                            | Beschreibung                                    |
 |-----------------------------------------------------------------|------------------------------------------------|
 | <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Das Ergebnis des Vorgangs.<br/> |
 | <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[im \] Dividend.<br/>                |
@@ -42,7 +42,7 @@ Die folgende Tabelle zeigt die Ergebnisse, die beim Ausführen der Anweisung mit
 
 Beachten Sie die beiden zulässigen Implementierungen von divide: a/b und a \* (1/b).
 
-Ein Ergebnis davon ist, dass für große Nennerwerte (größer als 8,5070592e+37), bei denen 1/Nenner eine Denorm ist, Ausnahmen von der folgenden Tabelle gelten. Da Implementierungen eine Division als \* (1/b) ausführen können, anstatt direkt a/b, und ein großer Wert ein Denormal ist, der geleert werden kann, führen einige Fälle in der Tabelle zu unterschiedlichen \[ \] Ergebnissen. Beispielsweise kann der (+/-)INF/(+/-)-Wert \[ > 8.5070592e+37 für einige Implementierungen \] NaN erzeugen, aber (+/-)INF für andere Implementierungen.
+Ein Ergebnis davon ist, dass für große Nennerwerte (größer als 8,5070592e+37) Ausnahmen für die folgende Tabelle gelten, wobei 1/Nenner eine Denorm ist. Da Implementierungen eine Division als \* (1/b) ausführen können, anstatt direkt a/b, und ein großer Wert ein Denormal ist, der geleert werden kann, führen einige Fälle in der Tabelle zu unterschiedlichen \[ \] Ergebnissen. Beispielsweise kann der (+/-)INF/(+/-)-Wert \[ > 8.5070592e+37 für einige Implementierungen \] NaN erzeugen, aber (+/-)INF für andere Implementierungen.
 
 In dieser Tabelle steht F für finite-real number.
 
@@ -76,7 +76,7 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-## <a name="minimum-shader-model"></a>Shader-Mindestmodell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -84,12 +84,12 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -99,7 +99,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

@@ -1,41 +1,41 @@
 ---
-description: Beispielcode, der zeigt, wie eine temporäre Datei für Daten Bearbeitungs Zwecke mithilfe der Funktionen GetTempFileName und GetTempPath erstellt wird.
+description: Beispielcode, der zeigt, wie eine temporäre Datei zu Datenbearbeitungszwecken mithilfe der Funktionen GetTempFileName und GetTempPath erstellt wird.
 ms.assetid: 6254c67d-5d34-499d-b1a4-8cac526dd294
 title: Erstellen und Verwenden einer temporären Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8ca18b7b72aab7c53bea95c38147af66f2b7fef9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f242b9b021744c42e7e1b8745c7eec2b6388249246872192ecfd6308bdab55af
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119650420"
 ---
 # <a name="creating-and-using-a-temporary-file"></a>Erstellen und Verwenden einer temporären Datei
 
-Anwendungen können mithilfe der Funktionen [**GetTempFileName**](/windows/desktop/api/FileAPI/nf-fileapi-gettempfilenamea) und [**GetTempPath**](/windows/desktop/api/FileAPI/nf-fileapi-gettemppatha) eindeutige Datei-und Pfadnamen für temporäre Dateien abrufen. Die **GetTempFileName** -Funktion generiert einen eindeutigen Dateinamen, und die **GetTempPath** -Funktion Ruft den Pfad zu einem Verzeichnis ab, in dem temporäre Dateien erstellt werden sollen.
+Anwendungen können eindeutige Datei- und Pfadnamen für temporäre Dateien mithilfe der [**Funktionen GetTempFileName**](/windows/desktop/api/FileAPI/nf-fileapi-gettempfilenamea) und [**GetTempPath**](/windows/desktop/api/FileAPI/nf-fileapi-gettemppatha) abrufen. Die **GetTempFileName-Funktion** generiert einen eindeutigen Dateinamen, und die **GetTempPath-Funktion** ruft den Pfad zu einem Verzeichnis ab, in dem temporäre Dateien erstellt werden sollen.
 
-Im folgenden Verfahren wird beschrieben, wie eine Anwendung eine temporäre Datei für Daten Bearbeitungs Zwecke erstellt.
+Im folgenden Verfahren wird beschrieben, wie eine Anwendung eine temporäre Datei zu Datenbearbeitungszwecken erstellt.
 
 **So erstellen und verwenden Sie eine temporäre Datei**
 
-1.  Die Anwendung öffnet die vom Benutzer bereitgestellte Quell Textdatei mithilfe [**von**](/windows/desktop/api/FileAPI/nf-fileapi-createfilea)"".
-2.  Die Anwendung ruft einen temporären Dateipfad und Dateinamen mithilfe der Funktionen [**GetTempPath**](/windows/desktop/api/FileAPI/nf-fileapi-gettemppatha) und [**GetTempFileName**](/windows/desktop/api/FileAPI/nf-fileapi-gettempfilenamea) ab und verwendet dann zum Erstellen der [**temporären Datei "**](/windows/desktop/api/FileAPI/nf-fileapi-createfilea) ".
-3.  Die Anwendung liest Blöcke von Textdaten in einen Puffer, konvertiert den Pufferinhalt mithilfe der [charupperbuffa](/windows/win32/api/winuser/nf-winuser-charupperbuffa) -Funktion in Großbuchstaben und schreibt den konvertierten Puffer in die temporäre Datei.
-4.  Wenn die gesamte Quelldatei in die temporäre Datei geschrieben wird, schließt die Anwendung beide Dateien und benennt die temporäre Datei in "allcaps.txt" um, indem Sie die Funktion "" von " [**fivefileex**](/windows/desktop/api/WinBase/nf-winbase-movefileexa) " verwendet.
+1.  Die Anwendung öffnet die vom Benutzer bereitgestellte Quelltextdatei mithilfe von [**CreateFile.**](/windows/desktop/api/FileAPI/nf-fileapi-createfilea)
+2.  Die Anwendung ruft einen temporären Dateipfad und Dateinamen mithilfe der [**Funktionen GetTempPath**](/windows/desktop/api/FileAPI/nf-fileapi-gettemppatha) und [**GetTempFileName**](/windows/desktop/api/FileAPI/nf-fileapi-gettempfilenamea) ab und verwendet [**dann CreateFile,**](/windows/desktop/api/FileAPI/nf-fileapi-createfilea) um die temporäre Datei zu erstellen.
+3.  Die Anwendung liest Textdatenblöcke in einen Puffer, konvertiert den Pufferinhalt mithilfe der [CharUpperBuffA-Funktion](/windows/win32/api/winuser/nf-winuser-charupperbuffa) in Großbuchstaben und schreibt den konvertierten Puffer in die temporäre Datei.
+4.  Wenn alle Quelldateien in die temporäre Datei geschrieben werden, schließt die Anwendung beide Dateien und benennt die temporäre Datei mithilfe der [**MoveFileEx-Funktion**](/windows/desktop/api/WinBase/nf-winbase-movefileexa) in "allcaps.txt" um.
 
-Jeder der vorherigen Schritte wird auf Erfolg geprüft, bevor mit dem nächsten Schritt fortfahren, und eine Fehlerbeschreibung wird angezeigt, wenn ein Fehler auftritt. Die Anwendung wird sofort nach dem Anzeigen der Fehlermeldung beendet.
+Jeder der vorherigen Schritte wird auf Erfolg überprüft, bevor mit dem nächsten Schritt fortbeschrieben wird. Im Fall eines Fehlers wird eine Fehlerbeschreibung angezeigt. Die Anwendung wird sofort beendet, nachdem die Fehlermeldung angezeigt wurde.
 
-Beachten Sie, dass die Bearbeitung von Textdateien nur für eine einfache Demonstration ausgewählt wurde und durch eine beliebige gewünschte Daten Bearbeitungs Prozedur ersetzt werden kann. Die Datendatei kann einen beliebigen Datentyp aufweisen, nicht nur Text.
+Beachten Sie, dass die Bearbeitung von Textdateien nur aus Demonstrationszwecken ausgewählt wurde und durch alle gewünschten erforderlichen Datenbearbeitungsprozeduren ersetzt werden kann. Die Datendatei kann einen beliebigen Datentyp haben, nicht nur Text.
 
-Die [**GetTempPath**](/windows/desktop/api/FileAPI/nf-fileapi-gettemppatha) -Funktion Ruft eine voll qualifizierte Pfad Zeichenfolge aus einer Umgebungsvariablen ab, überprüft jedoch nicht, ob der Pfad oder ausreichende Zugriffsrechte für diesen Pfad vorhanden sind. Dies ist die Verantwortung des Anwendungs Entwicklers. Weitere Informationen finden Sie unter [**GetTempPath**](/windows/desktop/api/FileAPI/nf-fileapi-gettemppatha). Im folgenden Beispiel wird ein Fehler als Terminal Bedingung betrachtet, und die Anwendung wird beendet, nachdem eine beschreibende Nachricht an die Standardausgabe gesendet wurde. Viele andere Optionen sind jedoch vorhanden, z. b. wenn der Benutzer zur Eingabe eines temporären Verzeichnisses aufgefordert wird oder einfach versucht wird, das aktuelle Verzeichnis zu verwenden.
+Die [**GetTempPath-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-gettemppatha) ruft eine vollqualifizierte Pfadzeichenfolge aus einer Umgebungsvariablen ab, überprüft jedoch nicht im Voraus, ob der Pfad oder die entsprechenden Zugriffsrechte für diesen Pfad vorliegen. Dies liegt in der Verantwortung des Anwendungsentwicklers. Weitere Informationen finden Sie unter [**GetTempPath**](/windows/desktop/api/FileAPI/nf-fileapi-gettemppatha). Im folgenden Beispiel wird ein Fehler als Terminalbedingung betrachtet, und die Anwendung wird beendet, nachdem eine beschreibende Meldung an die Standardausgabe gesendet wurde. Es gibt jedoch viele andere Optionen, z. B. die Aufforderung des Benutzers zur Eingabe eines temporären Verzeichnisses oder einfach den Versuch, das aktuelle Verzeichnis zu verwenden.
 
 > [!Note]  
-> Die [**GetTempFileName**](/windows/desktop/api/FileAPI/nf-fileapi-gettempfilenamea) -Funktion erfordert nicht, dass die [**GetTempPath**](/windows/desktop/api/FileAPI/nf-fileapi-gettemppatha) -Funktion verwendet wird.
+> Die [**GetTempFileName-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-gettempfilenamea) erfordert nicht, dass die [**GetTempPath-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-gettemppatha) verwendet wird.
 
  
 
-Im folgenden Beispiel wird gezeigt, wie eine temporäre Datei für Daten Bearbeitungs Zwecke erstellt wird.
+Das folgende C++-Beispiel zeigt, wie Sie eine temporäre Datei zu Datenbearbeitungszwecken erstellen.
 
 
 ```C++

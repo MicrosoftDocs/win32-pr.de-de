@@ -1,10 +1,10 @@
 ---
-title: ms-DS-enthüllte-List-Attribut
-description: Identifiziert Sicherheits Prinzipale, deren aktuelle Computer Konto Kennwörter auf den RODC repliziert wurden.
+title: ms-DS-Revealed-List-Attribut
+description: Identifiziert Sicherheitsprinzipale, deren aktuelle Computerkontokennwörter in den RODC repliziert wurden.
 ms.assetid: 10100719-4d03-4954-bcb6-d4ca635d00f7
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das Attribut "ms-DS-enthüllte-List"
+- AD-Schema des ms-DS-Revealed-List-Attributs
 - AD-Schema des msDS-RevealedList-Attributs
 topic_type:
 - apiref
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dbf8c5dc2e308b69ce142c7345957d25510168ab
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b4f3316a57658d0dfb5f674f432aeb1a9d5bcd0f5490bccb9aee69ec8fc58689
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103745105"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119544890"
 ---
-# <a name="ms-ds-revealed-list-attribute"></a>ms-DS-enthüllte-List-Attribut
+# <a name="ms-ds-revealed-list-attribute"></a>ms-DS-Revealed-List-Attribut
 
-Identifiziert Sicherheits Prinzipale, deren aktuelle Computer Konto Kennwörter auf den RODC repliziert wurden.
+Identifiziert Sicherheitsprinzipale, deren aktuelle Computerkontokennwörter in den RODC repliziert wurden.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | ms-DS-enthüllt-List                                   |
-| LDAP-Display-Name | MSDS-RevealedList                                     |
+| CN                | ms-DS-Revealed-List                                   |
+| Ldap-Anzeigename | msDS-RevealedList                                     |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.1940                               |
-| System-ID-GUID    | cbdad11c-7fec-387b-6219-3a0627d9af81                  |
+| System-Id-Guid    | hilftad11c-7fec-387b-6219-3a0627d9af81                  |
 | Syntax            | [**Object(Access-Point)**](s-object-access-point.md) |
 
 
@@ -54,11 +54,11 @@ Identifiziert Sicherheits Prinzipale, deren aktuelle Computer Konto Kennwörter 
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | Richtig                                      |
-| Ist-einwertig       | False                                     |
+| System-Only            | True                                      |
+| Is-Single-Valued       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -75,11 +75,11 @@ Identifiziert Sicherheits Prinzipale, deren aktuelle Computer Konto Kennwörter 
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | Richtig                                      |
-| Ist-einwertig       | False                                     |
+| System-Only            | True                                      |
+| Is-Single-Valued       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -96,11 +96,11 @@ Identifiziert Sicherheits Prinzipale, deren aktuelle Computer Konto Kennwörter 
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | Richtig                                      |
-| Ist-einwertig       | False                                     |
+| System-Only            | True                                      |
+| Is-Single-Valued       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |

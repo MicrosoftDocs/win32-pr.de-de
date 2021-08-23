@@ -1,9 +1,9 @@
 ---
-title: Ereignis. y
+title: event.y
 description: Das y-Attribut ruft die y-Koordinate des Mauszeigers in Bezug auf das Anwendungsfenster ab.
 ms.assetid: b141bcc9-26aa-4743-8660-b0981d949c0e
 keywords:
-- Event. y-Windows-Media Player
+- event.y Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 29362adbcef240f51f4aeb9417153c8a7630bcc3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9658cfb9737399852699209cb5afdea875c263a2bef83e5879358381ab7c0c66
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359727"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119650320"
 ---
-# <a name="eventy"></a>Ereignis. y
+# <a name="eventy"></a>event.y
 
-Das **y** -Attribut ruft die y-Koordinate des Mauszeigers in Bezug auf das Anwendungsfenster ab.
+Das **y-Attribut** ruft die y-Koordinate des Mauszeigers in Bezug auf das Anwendungsfenster ab.
 
 ``` syntax
 event.y
@@ -29,7 +29,7 @@ event.y
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long**).
+Dieses Attribut ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,10 +45,10 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 <dl> <dt>
 
-[**Ambient-Ereignis Attribute**](ambient-event-attributes.md)
+[**Ambient-Ereignisattribute**](ambient-event-attributes.md)
 </dt> <dt>
 
-[**Ereignis. x**](event-x.md)
+[**event.x**](event-x.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
 title: Original-Display-Table-MSDOS-Attribut
-description: Die MAPI-Anzeige Tabelle (Original) für einen MSDOS-Adresseintrag.
+description: Die MAPI-Anzeigetabelle (original) für einen MSDOS-Adresseintrag.
 ms.assetid: 51233cab-e5d9-4a2a-8897-97be93ea195a
 ms.tgt_platform: multiple
 keywords:
 - Original-Display-Table-MSDOS-Attribut AD-Schema
-- originaldisplaytablemsdos-Attribut AD-Schema
+- originalDisplayTableMSDOS-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea800504a344fb92320d2fa714344603f3e7a315
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 4ec6acd1475d1feccff9a0eb3ce4ee3650392a9506f337efcadbd307db5736b8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859595"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648160"
 ---
 # <a name="original-display-table-msdos-attribute"></a>Original-Display-Table-MSDOS-Attribut
 
-Die MAPI-Anzeige Tabelle (Original) für einen MSDOS-Adresseintrag.
+Die MAPI-Anzeigetabelle (original) für einen MSDOS-Adresseintrag.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | Original-Display-Table-MSDOS                          |
-| LDAP-Display-Name | originaldisplaytablemsdos                             |
+| Ldap-Anzeigename | originalDisplayTableMSDOS                             |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.2.214                                |
-| System-ID-GUID    | 5fd424cf-1262-11D0-a060-00aa006c33ed                  |
+| System-ID-GUID    | 5fd424cf-1262-11d0-a060-00aa006c33ed                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Die MAPI-Anzeige Tabelle (Original) für einen MSDOS-Adresseintrag.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Die MAPI-Anzeige Tabelle (Original) für einen MSDOS-Adresseintrag.
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8104                                                   |
 | System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
+| Ist einwertig       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | 1                                                        |
 | Range-Upper            | 32768                                                    |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000000                                               |
-| In verwendete Klassen        | [**Anzeige-Vorlage**](c-displaytemplate.md)<br/> |
+| In verwendete Klassen        | [**Display-Template**](c-displaytemplate.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Die MAPI-Anzeige Tabelle (Original) für einen MSDOS-Adresseintrag.
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8104                                                   |
 | System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
+| Ist einwertig       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | 1                                                        |
 | Range-Upper            | 32768                                                    |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000000                                               |
-| In verwendete Klassen        | [**Anzeige-Vorlage**](c-displaytemplate.md)<br/> |
+| In verwendete Klassen        | [**Display-Template**](c-displaytemplate.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Die MAPI-Anzeige Tabelle (Original) für einen MSDOS-Adresseintrag.
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8104                                                   |
 | System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
+| Ist einwertig       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | 1                                                        |
 | Range-Upper            | 32768                                                    |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000000                                               |
-| In verwendete Klassen        | [**Anzeige-Vorlage**](c-displaytemplate.md)<br/> |
+| In verwendete Klassen        | [**Display-Template**](c-displaytemplate.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Die MAPI-Anzeige Tabelle (Original) für einen MSDOS-Adresseintrag.
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8104                                                   |
 | System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
+| Is-Single-Valued       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | 1                                                        |
 | Range-Upper            | 32768                                                    |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000000                                               |
-| In verwendete Klassen        | [**Anzeige-Vorlage**](c-displaytemplate.md)<br/> |
+| In verwendete Klassen        | [**Display-Template**](c-displaytemplate.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Die MAPI-Anzeige Tabelle (Original) für einen MSDOS-Adresseintrag.
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8104                                                   |
 | System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
+| Is-Single-Valued       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | 1                                                        |
 | Range-Upper            | 32768                                                    |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000000                                               |
-| In verwendete Klassen        | [**Anzeige-Vorlage**](c-displaytemplate.md)<br/> |
+| In verwendete Klassen        | [**Display-Template**](c-displaytemplate.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Die MAPI-Anzeige Tabelle (Original) für einen MSDOS-Adresseintrag.
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8104                                                   |
 | System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
+| Is-Single-Valued       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | 1                                                        |
 | Range-Upper            | 32768                                                    |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000000                                               |
-| In verwendete Klassen        | [**Anzeige-Vorlage**](c-displaytemplate.md)<br/> |
+| In verwendete Klassen        | [**Display-Template**](c-displaytemplate.md)<br/> |
 
 
 

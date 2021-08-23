@@ -1,7 +1,7 @@
 ---
-description: 'Die beginflush-Methode startet einen Löschvorgang. Diese Methode überschreibt die cbaseiniputpin:: beginflush-Methode.'
+description: Die BeginFlush-Methode startet einen Leerungsvorgang. Diese Methode überschreibt die CBaseInputPin::BeginFlush-Methode.
 ms.assetid: c41260d3-04b2-47dd-96e6-675f000c4e3b
-title: Crendererinputpin. beginflush-Methode (renbase. h)
+title: CRendererInputPin.BeginFlush-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 422ab72a0823e3bd1a014aca3aaed51858fdb8a3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 49464f9590741d6713befb306d53473d62ca0d12ab1b7e87872ccd03177f63cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354207"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119687730"
 ---
-# <a name="crendererinputpinbeginflush-method"></a>Crendererinputpin. beginflush-Methode
+# <a name="crendererinputpinbeginflush-method"></a>CRendererInputPin.BeginFlush-Methode
 
-Die- `BeginFlush` Methode startet einen Löschvorgang. Diese Methode überschreibt die [**cbaseiniputpin:: beginflush**](cbaseinputpin-beginflush.md) -Methode.
+Die `BeginFlush` -Methode startet einen Leerungsvorgang. Diese Methode überschreibt die [**CBaseInputPin::BeginFlush-Methode.**](cbaseinputpin-beginflush.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt einen **HRESULT** -Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt einen **HRESULT** -Wert zurück.
 
 <dl> <dt>
 
-[**Crendererinputpin-Klasse**](crendererinputpin.md)
+[**CRendererInputPin-Klasse**](crendererinputpin.md)
 </dt> </dl>
 
  

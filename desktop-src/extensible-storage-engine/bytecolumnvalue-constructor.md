@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: bytecolumnvalue-Konstruktor'
-title: Bytecolumnvalue-Konstruktor
+description: Weitere Informationen finden Sie unter ByteColumnValue-Konstruktor.
+title: ByteColumnValue-Konstruktor
 TOCTitle: 'ByteColumnValue constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.ByteColumnValue.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.bytecolumnvalue.bytecolumnvalue(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d740bf3d315e79b57ca49eec59a5d5bd5088c621
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6a50efd9f214632ca6123f434f47fa4390b133bffc9a32bd94b12056a77188c9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529918"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119670050"
 ---
-# <a name="bytecolumnvalue-constructor"></a>Bytecolumnvalue-Konstruktor
+# <a name="bytecolumnvalue-constructor"></a>ByteColumnValue-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,10 +52,10 @@ public ByteColumnValue()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Bytecolumnvalue-Klasse](./bytecolumnvalue-class.md)
+[ByteColumnValue-Klasse](./bytecolumnvalue-class.md)
 
-[Bytecolumnvalue-Member](./bytecolumnvalue-members.md)
+[ByteColumnValue-Elemente](./bytecolumnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

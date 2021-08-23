@@ -1,7 +1,7 @@
 ---
-description: Die incrementtypeversion-Methode erhöht die Versionsnummer für den Satz bevorzugter Medientypen.
+description: Die IncrementTypeVersion-Methode erhöht die Versionsnummer für den Satz bevorzugter Medientypen.
 ms.assetid: 30cad0ae-58e7-47f6-94ee-75e24ce0a7e9
-title: Cbasepin. incrementtypeversion-Methode (amfilter. h)
+title: CBasePin.IncrementTypeVersion-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6db3c08972bebbaf1172c44412ae9c8652100da8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8a8c2536b91d5630141e5a62fa1aa895555537b61f89a574f4cdc1ec208810c6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119526860"
 ---
-# <a name="cbasepinincrementtypeversion-method"></a>Cbasepin. incrementtypeversion-Methode
+# <a name="cbasepinincrementtypeversion-method"></a>CBasePin.IncrementTypeVersion-Methode
 
-Die- `IncrementTypeVersion` Methode erhöht die Versionsnummer für den Satz bevorzugter Medientypen.
+Die `IncrementTypeVersion` -Methode erhöht die Versionsnummer für den Satz bevorzugter Medientypen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode erhöht die Member-Variable [**cbasepin:: m \_ typeversion**](cbasepin-m-typeversion.md) . Wenn die PIN die Liste der bevorzugten Medientypen dynamisch ändert, wird diese Methode immer dann aufgerufen, wenn die Liste geändert wird. Weitere Informationen finden Sie unter [**cbasepin:: getmediatypeer Version**](cbasepin-getmediatypeversion.md).
+Diese Methode erhöht die [**CBasePin::m \_ TypeVersion-Membervariable.**](cbasepin-m-typeversion.md) Wenn der Pin die Liste der bevorzugten Medientypen dynamisch ändert, rufen Sie diese Methode auf, wenn sich die Liste ändert. Weitere Informationen finden Sie unter [**CBasePin::GetMediaTypeVersion**](cbasepin-getmediatypeversion.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Methode erhöht die Member-Variable [**cbasepin:: m \_ typeversion**](cbas
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode erhöht die Member-Variable [**cbasepin:: m \_ typeversion**](cbas
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

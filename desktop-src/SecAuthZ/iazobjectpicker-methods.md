@@ -1,19 +1,19 @@
 ---
-description: Die iazobjectpicker-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IAzObjectPicker-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: B1906BD1-80C6-4481-B741-B71D39CA33F1
-title: Iazobjectpicker-Methoden
+title: IAzObjectPicker-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c802df29f4e1cd76b401001768fbd2bf085e4329
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 80f59f46492a897845b89d484fd49ff6d928b4e87a41be26dc4218f7ba311848
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119671610"
 ---
-# <a name="iazobjectpicker-methods"></a>Iazobjectpicker-Methoden
+# <a name="iazobjectpicker-methods"></a>IAzObjectPicker-Methoden
 
-Die [**iazobjectpicker**](/windows/desktop/api/Azroles/nn-azroles-iazobjectpicker) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IAzObjectPicker-Schnittstelle**](/windows/desktop/api/Azroles/nn-azroles-iazobjectpicker) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

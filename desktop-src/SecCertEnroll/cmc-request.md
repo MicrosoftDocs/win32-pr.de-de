@@ -1,19 +1,19 @@
 ---
-description: Das folgende Beispiel enthält eine CMC-Zertifikat Anforderung. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+description: Das folgende Beispiel enthält eine CMC-Zertifikatanforderung. Das Beispiel wurde mithilfe der tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
 ms.assetid: 54c9c447-5c97-462f-b9cb-2df7d4126d80
 title: CMC-Anforderung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 39097ab92065aa902b23e7388b406a7c17e88944
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 074602a9afb87562502e622dbdf0e6ceb95b979dc95820f015d2ae3edef88031
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106351615"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119670340"
 ---
 # <a name="cmc-request"></a>CMC-Anforderung
 
-Das folgende Beispiel enthält eine CMC-Zertifikat Anforderung. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+Das folgende Beispiel enthält eine CMC-Zertifikatanforderung. Das Beispiel wurde mithilfe der tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
 
 ``` syntax
 [NewRequest]
@@ -24,13 +24,13 @@ RequestType=cmc
 CertificateTemplate=User
 ```
 
-Mit dieser Konfiguration wird die folgende Beispielausgabe generiert. Die Konfiguration gibt den Betreff, den Typ der Anforderung (CMC) und die Zertifikat Vorlage (Benutzer) an. Die Benutzer Vorlage gibt Folgendes an:
+Diese Konfiguration generiert die folgende Beispielausgabe. Die Konfiguration gibt den Antragsteller, den Anforderungstyp (CMC) und die Zertifikatvorlage (Benutzer) an. Die Benutzervorlage gibt Folgendes an:
 
--   Die Anforderung muss entweder den Kryptografieanbieter von Microsoft Base 1,0 oder den Microsoft Enhanced Cryptographic Provider 1,0 verwenden.
--   Der Antragsteller Name muss aus Active Directory erstellt werden.
--   Die Anforderung enthält den Namen der Zertifikat Vorlage, die erweiterte Schlüssel Verwendung (Enhanced Key Usage, EKU) und Schlüssel Verwendungs Erweiterungen. Die EKU-Erweiterung gibt an, dass das ausgestellte Zertifikat für Verschlüsselndes Dateisystem (EFS), sichere e-Mail und Client Authentifizierung verwendet werden kann.
+-   Die Anforderung muss entweder den Microsoft Base Cryptographic Provider 1.0 oder den Microsoft Enhanced Cryptographic Provider 1.0 verwenden.
+-   Der Antragstellername muss aus Active Directory erstellt werden.
+-   Die Anforderung umfasst den Namen der Zertifikatvorlage, die erweiterte Schlüsselverwendung (Enhanced Key Usage, EKU) und die Schlüsselverwendungserweiterungen. Die EKU-Erweiterung gibt an, dass das ausgestellte Zertifikat für verschlüsselndes Dateisystem (EFS), sichere E-Mail- und Clientauthentifizierung verwendet werden kann.
 
-Eine CMC-Zertifikat Anforderung wird durch die [**IX509CertificateRequestCmc**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc) -Schnittstelle dargestellt.
+Eine CMC-Zertifikatanforderung wird durch die [**IX509CertificateRequestCmc-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc) dargestellt.
 
 ``` syntax
 PKCS7/CMS Message:
@@ -277,7 +277,7 @@ CertUtil: -dump command completed successfully.
 
 <dl> <dt>
 
-[Beispiel Anforderungen](sample-requests.md)
+[Beispielanforderungen](sample-requests.md)
 </dt> </dl>
 
  

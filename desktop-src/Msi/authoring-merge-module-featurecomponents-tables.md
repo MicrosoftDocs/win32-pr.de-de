@@ -1,21 +1,21 @@
 ---
-description: Eine leere FeatureComponents-Tabelle ist in jedem Mergemodul erforderlich. Diese leere Tabelle stellt ein Schema für das Mergetool bereit, wenn die MSI-Datei des Ziels nicht über eine eigene FeatureComponents-Tabelle verfügt.
+description: In jedem Mergemodul ist eine leere FeatureComponents-Tabelle erforderlich. Diese leere Tabelle stellt ein Schema für das Mergetool zur Verfügung, wenn .msi Zieldatei nicht über eine eigene FeatureComponents-Tabelle verfügt.
 ms.assetid: 19463fc7-8362-4943-8907-22c38f66fe25
-title: Erstellen von FeatureComponents-Tabellen für Mergemodule
+title: Erstellen von MergemodulfeaturesKomponententabellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3522f32f91a66df93e9096bf9c528f8d00e11f6c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 52b2da3e25d84f4f10edad6566edeba5a10d43c5617340d40c733aa23d31f4b5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350184"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119650299"
 ---
-# <a name="authoring-merge-module-featurecomponents-tables"></a>Erstellen von FeatureComponents-Tabellen für Mergemodule
+# <a name="authoring-merge-module-featurecomponents-tables"></a>Erstellen von MergemodulfeaturesKomponententabellen
 
-Eine leere [FeatureComponents-Tabelle](featurecomponents-table.md) ist in jedem Mergemodul erforderlich. Diese leere Tabelle stellt ein Schema für das Mergetool bereit, wenn die MSI-Datei des Ziels nicht über eine eigene FeatureComponents-Tabelle verfügt.
+In jedem Mergemodul ist eine leere [FeatureComponents-Tabelle](featurecomponents-table.md) erforderlich. Diese leere Tabelle stellt ein Schema für das Mergetool zur Verfügung, wenn .msi Zieldatei nicht über eine eigene FeatureComponents-Tabelle verfügt.
 
-Wenn, und nur wenn, in der MSI-Datei des Ziels keine FeatureComponents-Tabelle vorhanden ist, verwendet das Merge-Tool die leere Tabelle, die im Modul enthalten ist. In diesem Fall erstellt das Merge-Tool eine doppelte Tabelle in der MSI-Ziel Datei und fügt Zeilen hinzu, die die neuen Komponenten im Mergemodul den Funktionen im Installationspaket der Anwendung zuordnen.
+Wenn keine FeatureComponents-Tabelle in der Zieldatei vorhanden .msi verwendet das Mergetool die im Modul bereitgestellte leere Tabelle. In diesem Fall erstellt das Mergetool eine doppelte Tabelle in der Ziel-.msi-Datei und fügt Zeilen hinzu, die die neuen Komponenten im Mergemodul den Funktionen im Installationspaket der Anwendung zuordnen.
 
  
 

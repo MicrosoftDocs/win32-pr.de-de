@@ -1,21 +1,21 @@
 ---
-description: Erfahren Sie mehr über den PageDeviceColorSpaceProfileURI-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
+description: Erfahren Sie mehr über den PageDeviceColorSpaceProfileURI-Parameter. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: ab26850e-554a-4a1b-9250-edb0b4e17fe2
 title: PageDeviceColorSpaceProfileURI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 21420dec2e3057de903b1e04c55a7c6d234343b0
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: a979ed2bdabd9d31be44942de2a8fbe47119f2e27c77041b2410413d9e43ece6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112396645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119554610"
 ---
 # <a name="pagedevicecolorspaceprofileuri"></a>PageDeviceColorSpaceProfileURI
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt einen relativen URI zum Paketstamm zu einem in einem XPS-Dokument enthaltenen XPS-Profil an. Die Verarbeitung dieser Option hängt von der Einstellung des PageDeviceColorSpaceUsage-Features ab. Bei allen Elementen, die dieses Profil verwenden, wird davon ausgegangen, dass sie sich bereits im entsprechenden Gerätefarbraum befinden und im Treiber oder Gerät nicht farblich verwaltet werden.
+Gibt einen relativen URI zum Paketstamm zu einem INTS-Profil an, das in einem XPS-Dokument enthalten ist. Die Verarbeitung dieser Option hängt von der Einstellung des Features PageDeviceColorSpaceUsage ab. Es wird davon ausgegangen, dass sich alle Elemente, die dieses Profil verwenden, bereits im entsprechenden Gerätefarbraum befinden und nicht im Treiber oder Gerät farblich verwaltet werden.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -28,7 +28,7 @@ Gibt einen relativen URI zum Paketstamm zu einem in einem XPS-Dokument enthalten
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Bereichspräfix <br/> | Seite<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Hinweise <br/>          | Dies gilt nur für XPS-Dokumente und sollte nicht in beliebigen PrintTickets verwendet werden.<br/> XPS-kompatible Consumer MÜSSEN erzwingen, dass ein URI-Verweis auf eine Ressource, z. B. ein Bild oder Farbprofil, entweder in einem Dokument mit Druckfunktionen oder printTicket auf einen Teilnamen (einen relativen URI zum Paketstamm) innerhalb desselben XPS-Dokumentpakets verweisen muss, das das resultierende PrintTicket enthält. Ein kompatibler XPS-Consumer DARF KEINEN URI verwenden, der nicht mit der Partnamenssyntax kompatibel ist. Diese Einstellungen sind XPS-spezifisch. <br/> URIs, auf die in einem Dokument mit Druckfunktionen oder in PrintTicket verwiesen wird, DÜRFEN NICHT als URLs aufgelöst werden. Dies ist unsicher, da sie möglicherweise nicht wie beabsichtigt aufgelöst werden und schädliche Sicherheitsrisiken für Treiber und Betriebssystem darstellen können.<br/> |
+| Hinweise <br/>          | Dies gilt nur für XPS-Dokumente und sollte nicht in beliebigen PrintTickets verwendet werden.<br/> XPS-kompatible Benutzer MÜSSEN erzwingen, dass ein URI-Verweis auf eine Ressource, z. B. ein Bild oder Farbprofil, entweder in einem Druckfunktionendokument oder printTicket auf einen Teilenamen (einen relativen URI zum Paketstamm) innerhalb desselben XPS-Dokumentpakets verweisen muss, das das resultierende PrintTicket enthält. Ein kompatibler XPS-Consumer DARF KEINEN URI verwenden, der nicht mit der Partnamenssyntax kompatibel ist. Diese Einstellungen sind XPS-spezifisch. <br/> URIs, auf die entweder in einem Druckfunktionendokument oder printTicket verwiesen wird, DÜRFEN NICHT als URLs aufgelöst werden. Dies ist unsicher, da sie möglicherweise nicht wie beabsichtigt gelöst werden und zu schädlichen Sicherheitsrisiken für treiber und betriebssystem könnten.<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt einen relativen URI zum Paketstamm zu einem in einem XPS-Dokument enthalten
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageDeviceColorSpaceProfileURI">
@@ -63,7 +63,7 @@ Die XML-Struktur dieses Elements lautet:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 

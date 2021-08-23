@@ -1,9 +1,9 @@
 ---
-title: Direntry-Struktur
-description: Enthält eine eindeutige Ordinalzahl, die eine einzelne Schriftart in der Schriftarten Ressourcengruppe identifiziert. Die hier bereitgestellte Struktur Definition dient nur der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+title: DIRENTRY-Struktur
+description: Enthält eine eindeutige Ordnungszahl, die eine einzelne Schriftart in der Ressourcengruppe der Schriftart identifiziert. Die hier bereitgestellte Strukturdefinition ist nur zur Erklärung vorgesehen. sie ist in einer Standardheaderdatei nicht vorhanden.
 ms.assetid: 4afc561e-bc98-4968-9a00-5002870b0c5e
 keywords:
-- Direntry-Struktur Menüs und andere Ressourcen
+- DIRENTRY-Strukturmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: caed8f05a92abbeda39084b99b6806c2e28777a8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 281ede8b2f87e73bf0600d985abd3194a83e8e8f186fa8f780f18f80985e0f9d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742032"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119602110"
 ---
-# <a name="direntry-structure"></a>Direntry-Struktur
+# <a name="direntry-structure"></a>DIRENTRY-Struktur
 
-Enthält eine eindeutige Ordinalzahl, die eine einzelne Schriftart in der Schriftarten Ressourcengruppe identifiziert. Die hier bereitgestellte Struktur Definition dient nur der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+Enthält eine eindeutige Ordnungszahl, die eine einzelne Schriftart in der Ressourcengruppe der Schriftart identifiziert. Die hier bereitgestellte Strukturdefinition ist nur zur Erklärung vorgesehen. sie ist in einer Standardheaderdatei nicht vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ typedef struct {
 
 <dl> <dt>
 
-**fontorion**
+**fontOrdinal**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Ein eindeutiger ordinalbezeichner für eine einzelne Schriftart in einer Schriftart Ressourcengruppe.
+Ein eindeutiger Ordinalbezeichner für eine einzelne Schriftart in einer Schriftartressourcengruppe.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**fontdirentry**](fontdirentry.md) -Struktur für die angegebene Schriftart folgt direkt der **direntry** -Struktur für diese Schriftart.
+Die [**FONTDIRENTRY-Struktur**](fontdirentry.md) für die angegebene Schriftart folgt direkt der **DIRENTRY-Struktur** für diese Schriftart.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,16 +69,16 @@ Die [**fontdirentry**](fontdirentry.md) -Struktur für die angegebene Schriftart
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Fontdirentry**](fontdirentry.md)
+[**FONTDIRENTRY**](fontdirentry.md)
 </dt> <dt>
 
-[**Fontgrouphdr**](fontgrouphdr.md)
+[**FONTGROUPHDR**](fontgrouphdr.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Ressourcen](resources.md)

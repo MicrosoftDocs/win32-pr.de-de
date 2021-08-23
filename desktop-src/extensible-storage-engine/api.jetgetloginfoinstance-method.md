@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetgetloginfoinstance-Methode.
-title: API. jetgetloginfoinstance-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetGetLogInfoInstance-Methode'
+title: Api.JetGetLogInfoInstance-Methode
 TOCTitle: 'JetGetLogInfoInstance method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetGetLogInfoInstance(Microsoft.Isam.Esent.Interop.JET_INSTANCE,System.String@,System.Int32,System.Int32@)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgetloginfoinstance(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 85e252b74c47d3274fc83af59e3fb571906219fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 044e3a214a520ecb331956108eb83449b689decbd995f4b5b9330fdef6729a53
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344418"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119670370"
 ---
-# <a name="apijetgetloginfoinstance-method"></a>API. jetgetloginfoinstance-Methode
+# <a name="apijetgetloginfoinstance-method"></a>Api.JetGetLogInfoInstance-Methode
 
-Wird bei einer von [jetbeginexternalbackupinstance initiierten Sicherung (JET_INSTANCE, beginexternalbackupgrbit)](./api.jetbeginexternalbackupinstance-method.md) verwendet, um eine Instanz für die Namen von datenbankpatchdateien und Protokolldateien abzufragen, die Teil der Sicherungsdatei Gruppe werden sollen. Diese Dateien können anschließend mit [jetopenfileinstance (JET_INSTANCE, String, JET_HANDLE, Int64, Int64)](./api.jetopenfileinstance-method.md) geöffnet und mit [jetreadfileinstance (JET_INSTANCE, JET_HANDLE, \[ \] , Int32, Int32)](./api.jetreadfileinstance-method.md)gelesen werden.
+Wird während einer Sicherung verwendet, die von [JetBeginExternalBackupInstance(JET_INSTANCE, BeginExternalBackupGrbit)](./api.jetbeginexternalbackupinstance-method.md) initiiert wird, um eine Instanz nach den Namen von Datenbankpatchdateien und Protokolldateien abfragt, die Teil des Sicherungsdateisets werden sollen. Diese Dateien können anschließend mit [JetOpenFileInstance(JET_INSTANCE, String, JET_HANDLE, Int64, Int64)](./api.jetopenfileinstance-method.md) geöffnet und mit [JetReadFileInstance(JET_INSTANCE, JET_HANDLE, \[ \] , Int32, Int32) gelesen werden.](./api.jetreadfileinstance-method.md)
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,41 +68,41 @@ public static void JetGetLogInfoInstance(
 #### <a name="parameters"></a>Parameter
 
   - instance  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INSTANCE](./jet-instance-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
     
-    Die-Instanz, für die die Informationen zu erhalten sind.
+    Die -Instanz, für die die Informationen erhalten werden.
 
 <!-- end list -->
 
   - files  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
-    Gibt eine Liste von null-terminierten Zeichen folgen zurück, die den Satz von datenbankpatchdateien und Protokolldateien beschreiben, die Teil des Sicherungsdatei Satzes sein sollen. Die Liste der in diesem Puffer zurückgegebenen Zeichen folgen weist das gleiche Format auf wie eine von der Registrierung verwendete Multizeichenfolge. Jede NULL terminierte Zeichenfolge wird nacheinander zurückgegeben, gefolgt von einem abschließenden NULL-Terminator.
+    Gibt eine Liste mit auf NULL beendeten Zeichenfolgen zurück, die den Satz von Datenbankpatchdateien und Protokolldateien beschreiben, die Teil des Sicherungsdateisets sein sollen. Die Liste der in diesem Puffer zurückgegebenen Zeichenfolgen hat das gleiche Format wie eine mehrzeichenfolge, die von der Registrierung verwendet wird. Jede auf NULL endende Zeichenfolge wird nacheinander zurückgegeben, gefolgt von einem abschließenden NULL-Abschlusszeichen.
 
 <!-- end list -->
 
   - maxChars  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Maximale Anzahl der abzurufenden Zeichen.
 
 <!-- end list -->
 
-  - actualchars  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - actualChars  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Die tatsächliche Größe der Datei Liste. Wenn dieser Wert größer als maxChars ist, wurde die Liste abgeschnitten.
+    Tatsächliche Größe der Dateiliste. Wenn dies größer als maxChars ist, wurde die Liste abgeschnitten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass diese API keinen Fehler oder keine Warnung zurückgibt, wenn der Ausgabepuffer zu klein ist, um die vollständige Liste der Dateien zu akzeptieren, die Bestandteil des Sicherungsdatei Satzes sein sollten.
+Beachten Sie, dass diese API keinen Fehler oder eine Warnung zurück gibt, wenn der Ausgabepuffer zu klein ist, um die vollständige Liste der Dateien zu akzeptieren, die Teil des Sicherungsdateisets sein sollten.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
