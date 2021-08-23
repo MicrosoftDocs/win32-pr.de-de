@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ memorycapacity-Klasse stellt den Arbeitsspeicher dar, der auf einem physischen Element und dessen minimalen und maximalen Konfigurationen installiert werden kann.
+description: Die CIM \_ MemoryCapacity-Klasse stellt Arbeitsspeicher dar, der auf einem physischen Element installiert werden kann, sowie die minimalen und maximalen Konfigurationen.
 ms.assetid: a962ee38-9281-4a7a-b9d7-b321edb5670d
 ms.tgt_platform: multiple
 title: CIM_MemoryCapacity-Klasse
@@ -20,23 +20,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: aa63d06187c76c5add433502d012cdb63905795a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: c7e15d5ff6e381b2e87aaa1b15ade624ac598a0880b1ff736a6f46ba6aa66bb6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214065"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119506870"
 ---
-# <a name="cim_memorycapacity-class"></a>CIM \_ memorycapacity-Klasse
+# <a name="cim_memorycapacity-class"></a>CIM \_ MemoryCapacity-Klasse
 
-Die **CIM \_ memorycapacity** -Klasse stellt den Arbeitsspeicher dar, der auf einem physischen Element und dessen minimalen und maximalen Konfigurationen installiert werden kann. Informationen zu derzeit installiertem Arbeitsspeicher und den minimalen und maximalen Anforderungen eines Elements befinden sich in Instanzen der [**CIM \_ PhysicalMemory**](cim-physicalmemory.md) -Klasse.
+Die **CIM \_ MemoryCapacity-Klasse** stellt Arbeitsspeicher dar, der auf einem physischen Element installiert werden kann, sowie die minimalen und maximalen Konfigurationen. Informationen zum derzeit installierten Arbeitsspeicher und den Mindest- und Maximalanforderungen eines Elements befinden sich in Instanzen der [**CIM \_ PhysicalMemory-Klasse.**](cim-physicalmemory.md)
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,80 +55,80 @@ class CIM_MemoryCapacity : CIM_PhysicalCapacity
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ memorycapacity** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ MemoryCapacity-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ memorycapacity** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ MemoryCapacity-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Textbeschreibung des-Objekts.
+Kurze Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ physicalcapacity**](cim-physicalcapacity.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalCapacity**](cim-physicalcapacity.md)geerbt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Textbeschreibung des Objekts.
+Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ physicalcapacity**](cim-physicalcapacity.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalCapacity**](cim-physicalcapacity.md)geerbt.
 
 </dd> <dt>
 
-**Maximummemorycapacity**
+**MaximumMemoryCapacity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobyte")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobytes")
 </dt> </dl>
 
-Maximale Größe des Arbeitsspeichers in Kilobyte, der vom zugeordneten physischen Element unterstützt werden kann.
+Maximale Arbeitsspeichermenge in Kilobyte, die vom zugeordneten physischen Element unterstützt werden kann.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **MemoryType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ PhysicalMemory**](cim-physicalmemory.md).**MemoryType**")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ PhysicalMemory**](cim-physicalmemory.md).**MemoryType**")
 </dt> </dl>
 
-Der Typ des Arbeitsspeichers, der Teil des Objektschlüssels ist. Werte entsprechen der Liste der möglichen Speichertypen in der [**CIM \_ PhysicalMemory**](cim-physicalmemory.md) -Klasse.
+Typ des Arbeitsspeichers, der Teil des Objektschlüssels ist. Werte entsprechen der Liste der möglichen Speichertypen in der [**CIM \_ PhysicalMemory-Klasse.**](cim-physicalmemory.md)
 
 <dt>
 
@@ -141,7 +141,7 @@ Der Typ des Arbeitsspeichers, der Teil des Objektschlüssels ist. Werte entsprec
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -155,7 +155,7 @@ Der Typ des Arbeitsspeichers, der Teil des Objektschlüssels ist. Werte entsprec
 
 <span id="Synchronous_DRAM"></span><span id="synchronous_dram"></span><span id="SYNCHRONOUS_DRAM"></span>
 
-**Synchroner DRAM** (3)
+**Synchrones DRAM** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -169,7 +169,7 @@ Der Typ des Arbeitsspeichers, der Teil des Objektschlüssels ist. Werte entsprec
 
 <span id="EDO"></span><span id="edo"></span>
 
-**Edo** (5)
+**EDO** (5)
 
 
 </dt> <dd></dd> <dt>
@@ -204,7 +204,7 @@ Der Typ des Arbeitsspeichers, der Teil des Objektschlüssels ist. Werte entsprec
 
 <span id="ROM"></span><span id="rom"></span>
 
-**Rom** (10)
+**ROM** (10)
 
 
 </dt> <dd></dd> <dt>
@@ -225,7 +225,7 @@ Der Typ des Arbeitsspeichers, der Teil des Objektschlüssels ist. Werte entsprec
 
 <span id="FEPROM"></span><span id="feprom"></span>
 
-**Feprom** (13)
+**FEPROM** (13)
 
 
 </dt> <dd></dd> <dt>
@@ -246,7 +246,7 @@ Der Typ des Arbeitsspeichers, der Teil des Objektschlüssels ist. Werte entsprec
 
 <span id="3DRAM"></span><span id="3dram"></span>
 
-**3dram** (16)
+**3DRAM** (16)
 
 
 </dt> <dd></dd> <dt>
@@ -288,45 +288,45 @@ Der Typ des Arbeitsspeichers, der Teil des Objektschlüssels ist. Werte entsprec
 
 </dd> <dt>
 
-**Minimummemorycapacity**
+**MinimumMemoryCapacity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobyte")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobytes")
 </dt> </dl>
 
-Mindestmenge an Arbeitsspeicher in Kilobyte, die benötigt wird, damit das zugehörige physische Element ordnungsgemäß funktioniert.
+Mindestmenge an Arbeitsspeicher in Kilobytes, die erforderlich ist, damit das zugeordnete physische Element ordnungsgemäß funktioniert.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Name"), [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name"), [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 Der Name des Objekts. dient als Teil des Objektschlüssels.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -336,8 +336,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -346,7 +346,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ physicalcapacity**](cim-physicalcapacity.md)
+[**CIM \_ PhysicalCapacity**](cim-physicalcapacity.md)
 </dt> </dl>
 
  

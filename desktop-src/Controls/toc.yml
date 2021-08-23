@@ -11,9 +11,9 @@
         - name: Unicode-Unterstützung für allgemeine Steuerelemente
           href: unicode-support.md
         - name: Lokalisierungsunterstützung für allgemeine Steuerelemente
-          href: cc-faq-localization.yml
+          href: cc-faq-localization.md
         - name: Häufig gestellte Fragen zu häufig gestellten Steuerelementen
-          href: cc-faq.yml
+          href: cc-faq.md
     - name: Steuern von Nachrichten
       href: control-messages.md
     - name: Benutzerdefinierte Steuerelemente
@@ -1102,7 +1102,7 @@
                       href: /windows/desktop/api/Commctrl/nf-commctrl-header_setstateimagelist
                     - name: Header_SetUnicodeFormat
                       href: /windows/desktop/api/Commctrl/nf-commctrl-header_setunicodeformat
-                - name: Headersteuerelementmeldungen
+                - name: Headersteuerungsmeldungen
                   href: bumper-header-control-reference-messages.md
                   items:
                     - name: HDM_CLEARFILTER
@@ -1159,7 +1159,7 @@
                       href: hdm-setunicodeformat.md
                     - name: HDM_TRANSLATEACCELERATOR
                       href: hdm-translateaccelerator.md
-                - name: Headersteuerelementbenachrichtigungen
+                - name: Header-Steuerelementbenachrichtigungen
                   href: bumper-header-control-reference-notifications.md
                   items:
                     - name: HDN_BEGINDRAG
@@ -1206,7 +1206,7 @@
                       href: nm-rclick-header.md
                     - name: NM_RELEASEDCAPTURE (Header)
                       href: nm-releasedcapture-header-.md
-                - name: Headersteuerelementstrukturen
+                - name: Header-Steuerelementstrukturen
                   href: bumper-header-control-reference-structures.md
                   items:
                     - name: HDHITTESTINFO
@@ -1223,10 +1223,10 @@
                       href: /windows/win32/api/Commctrl/ns-commctrl-nmhdfilterbtnclick
                     - name: NMHEADER
                       href: /windows/win32/api/Commctrl/ns-commctrl-nmheadera
-                - name: Headersteuerelementkonstanten
+                - name: Header-Steuerelementkonst constants
                   href: bumper-header-control-reference-constants.md
                   items:
-                    - name: Headersteuerelementstile
+                    - name: Header-Steuerelementstile
                       href: header-control-styles.md
         - name: Hot Key
           href: hot-key-control-reference.md
@@ -1234,19 +1234,19 @@
             - name: Übersicht über das Hot Key-Steuerelement
               href: bumper-hot-key-hot-key-control-overviews.md
               items:
-                - name: Informationen zu Hot-Key-Steuerelementen
+                - name: Informationen zu Hot Key-Steuerelementen
                   href: hot-key-controls.md
-                - name: Verwenden von Hot-Key-Steuerelementen
+                - name: Verwenden von Hot Key-Steuerelementen
                   href: using-hot-key-controls.md
                   items:
                     - name: Erstellen eines Hot Key-Steuerelements
                       href: create-a-hot-key-control.md
-                    - name: Abrufen und Festlegen eines hot-Schlüssels
+                    - name: Abrufen und Festlegen eines heißen Schlüssels
                       href: '-retrieve-and-set-a-hot-key.md'
-            - name: Referenz zum Hot-Key-Steuerelement
+            - name: Referenz zum Hot Key-Steuerelement
               href: bumper-hot-key-hot-key-control-reference.md
               items:
-                - name: Hot-Key-Steuernachrichten
+                - name: Hot Key-Steuerungsmeldungen
                   href: bumper-hot-key-control-reference-messages.md
                   items:
                     - name: HKM_GETHOTKEY
@@ -1275,7 +1275,7 @@
             - name: Referenz zu Bildlisten
               href: bumper-image-lists-image-lists-reference.md
               items:
-                - name: Aufzählungstypen für Bildlisten
+                - name: Aufzählte Typen der Bildliste
                   href: bumper-image-lists-reference-enumerated-types.md
                   items:
                     - name: IMAGELISTDRAWFLAGS
@@ -1361,7 +1361,7 @@
                       href: /windows/desktop/api/Commctrl/nf-commctrl-imagelist_write
                     - name: ImageList_WriteEx
                       href: /windows/desktop/api/Commctrl/nf-commctrl-imagelist_writeex
-                - name: Schnittstellen für Bildlisten
+                - name: Bildlistenschnittstellen
                   href: bumper-image-lists-reference-interfaces.md
                   items:
                     - name: IImageList
@@ -1474,15 +1474,15 @@
                       href: /windows/desktop/api/commoncontrols/ns-commoncontrols-imagelistdrawparams
                     - name: IMAGELISTSTATS
                       href: /windows/win32/api/Commoncontrols/ns-commoncontrols-imageliststats
-                - name: Bildlistenkonst constants
+                - name: Bildlistenkonstanten
                   href: image-list-constants.md
                   items:
-                    - name: Flags für die Imagelistenerstellung
+                    - name: ImageListenerstellungsflags
                       href: ilc-constants.md
         - name: IP-Adressensteuerelement
           href: ip-address-control-reference.md
           items:
-            - name: Übersicht über die IP-Adresssteuerung
+            - name: Übersichten zur IP-Adresssteuerung
               href: bumper-ip-address-control-ip-address-control-overviews.md
               items:
                 - name: Informationen zu IP-Adresssteuerelementen
@@ -1490,7 +1490,7 @@
                 - name: Verwenden von IP-Adresssteuerelementen
                   href: using-ip-address-controls.md
                   items:
-                    - name: Erstellen eines IP-Adresssteuer steuerelements
+                    - name: Erstellen eines IP-Adresssteuerelements
                       href: create-an-ip-address-control.md
             - name: Referenz zur IP-Adresssteuerung
               href: bumper-ip-address-control-ip-address-control-reference.md
@@ -1510,7 +1510,7 @@
                       href: /windows/desktop/api/Commctrl/nf-commctrl-second_ipaddress
                     - name: THIRD_IPADDRESS
                       href: /windows/desktop/api/Commctrl/nf-commctrl-third_ipaddress
-                - name: IP-Adressmeldungen
+                - name: IP-Adressnachrichten
                   href: bumper-ip-address-control-reference-messages.md
                   items:
                     - name: IPM_CLEARADDRESS
@@ -1538,7 +1538,7 @@
         - name: Listenfeld
           href: list-boxes.md
           items:
-            - name: Übersichten über Listenfeldsteuerelement
+            - name: Übersichten über Listenfeld-Steuerelement
               href: bumper-list-box-list-box-control-overviews.md
               items:
                 - name: Informationen zu Listenfeldern
@@ -1647,7 +1647,7 @@
                       href: /windows/desktop/api/Windowsx/nf-windowsx-listbox_settabstops
                     - name: ListBox_SetTopIndex
                       href: /windows/desktop/api/Windowsx/nf-windowsx-listbox_settopindex
-                - name: List Box Messages
+                - name: Listenfeldmeldungen
                   href: bumper-list-box-control-reference-messages.md
                   items:
                     - name: LB_ADDFILE
@@ -1770,7 +1770,7 @@
                       href: /windows/win32/api/Winuser/ns-winuser-deleteitemstruct
                     - name: DRAGLISTINFO
                       href: /windows/win32/api/Commctrl/ns-commctrl-draglistinfo
-                - name: List Box-Konstanten
+                - name: Listenfeldkonstanten
                   href: bumper-list-box-control-reference-constants.md
                   items:
                     - name: Listenfeldstile
@@ -1778,15 +1778,15 @@
         - name: Listenansicht
           href: list-view-control-reference.md
           items:
-            - name: List-View-Steuerelementübersichten
+            - name: Übersicht über List-View-Steuerelement
               href: bumper-list-view-list-view-control-overviews.md
               items:
-                - name: Informationen List-View Steuerelementen
+                - name: Informationen zu List-View-Steuerelementen
                   href: list-view-controls-overview.md
-                - name: Verwenden von List-View Steuerelementen
+                - name: Verwenden von List-View-Steuerelementen
                   href: using-list-view-controls.md
                   items:
-                    - name: Erstellen eines List-View Steuerelements
+                    - name: Erstellen eines List-View-Steuerelements
                       href: create-a-list-view-control.md
                     - name: Hinzufügen von List-View Bildlisten
                       href: add-list-view-image-lists.md
@@ -1798,13 +1798,13 @@
                       href: use-tile-views.md
                     - name: Verwenden von Gruppen in einem List-View
                       href: use-groups-in-a-list-view.md
-                    - name: How to Use List-View Working Areas
+                    - name: Verwenden von List-View Arbeitsbereichen
                       href: use-list-view-working-areas.md
                     - name: Verwenden von Virtual List-View-Steuerelementen
                       href: use-virtual-list-view-controls.md
-                - name: Standardmäßige List-View Nachrichtenverarbeitung
+                - name: Standard-List-View Nachrichtenverarbeitung
                   href: listview-message-processing.md
-            - name: List-View-Steuerelementreferenz
+            - name: referenz zum List-View-Steuerelement
               href: bumper-list-view-list-view-control-reference.md
               items:
                 - name: Listenansichtsfunktionen
@@ -2666,12 +2666,12 @@
                       href: /windows/win32/api/Commctrl/ns-commctrl-nmselchange
                     - name: NMVIEWCHANGE
                       href: /windows/win32/api/Commctrl/ns-commctrl-nmviewchange
-                - name: Monatskalenderkonstanten
+                - name: Monatskalenderkonst constants
                   href: bumper-month-calendar-control-reference-constants.md
                   items:
                     - name: Monatskalender-Steuerelementstile
                       href: month-calendar-control-styles.md
-                - name: Monatskalender-Datentypen
+                - name: Month Calendar-Datentypen
                   href: bumper-month-calendar-control-reference-data-types.md
                   items:
                     - name: MONTHDAYSTATE
@@ -2679,7 +2679,7 @@
         - name: Pager
           href: pager-control-reference.md
           items:
-            - name: Übersichten über Pagersteuerelement
+            - name: Übersicht über pager-Steuerelement
               href: bumper-pager-pager-control-overviews.md
               items:
                 - name: Informationen zu Pager-Steuerelementen
@@ -2687,12 +2687,12 @@
                 - name: Verwenden von Pagersteuerelementen
                   href: using-pager-controls.md
                   items:
-                    - name: Verwenden von Pagersteuerelementen
+                    - name: Verwenden von Pager-Steuerelementen
                       href: use-pager-controls.md
-            - name: Pagersteuerelementreferenz
+            - name: Pager-Steuerelementreferenz
               href: bumper-pager-pager-control-reference.md
               items:
-                - name: Pager-Steuerelementmakros
+                - name: Pagersteuersteuermakros
                   href: bumper-pager-control-reference-macros.md
                   items:
                     - name: Pager_ForwardMouse
@@ -2723,7 +2723,7 @@
                       href: /windows/desktop/api/Commctrl/nf-commctrl-pager_setpos
                     - name: Pager_SetScrollInfo
                       href: /windows/desktop/api/Commctrl/nf-commctrl-pager_setscrollinfo
-                - name: Pagersteuerelementmeldungen
+                - name: Pager-Steuerelementmeldungen
                   href: bumper-pager-control-reference-messages.md
                   items:
                     - name: PGM_FORWARDMOUSE
@@ -2754,7 +2754,7 @@
                       href: pgm-setpos.md
                     - name: PGM_SETSCROLLINFO
                       href: pgm-setscrollinfo.md
-                - name: Pagersteuerelementbenachrichtigungen
+                - name: Pager-Steuerelementbenachrichtigungen
                   href: bumper-pager-control-reference-notifications.md
                   items:
                     - name: NM_RELEASEDCAPTURE (Pager)
@@ -2774,7 +2774,7 @@
                       href: /windows/win32/api/Commctrl/ns-commctrl-nmpghotitem
                     - name: NMPGSCROLL
                       href: /windows/desktop/api/Commctrl/ns-commctrl-nmpgscroll
-                - name: Pager-Steuerelementkonstanten
+                - name: Pager-Steuerelementkonst constants
                   href: bumper-pager-control-reference-constants.md
                   items:
                     - name: Pager-Steuerelementstile
@@ -2782,20 +2782,20 @@
         - name: Statusanzeige
           href: progress-bar-control-reference.md
           items:
-            - name: Übersichten über statusanzeigensteuerelement
+            - name: Übersichten über das Statusleisten-Steuerelement
               href: bumper-progress-bar-progress-bar-control-overviews.md
               items:
-                - name: Informationen zu Statusanzeige-Steuerelementen
+                - name: Informationen zu Statusleisten-Steuerelementen
                   href: progress-bar-control.md
-                - name: Verwenden von Statusanzeige-Steuerelementen
+                - name: Verwenden von Statusleisten-Steuerelementen
                   href: using-progress-bar-controls.md
                   items:
-                    - name: Verwenden von Statusanzeige-Steuerelementen
+                    - name: Verwenden von Statusleisten-Steuerelementen
                       href: create-progress-bar-controls.md
-            - name: Referenz zum Statusleisten-Steuerelement
+            - name: Statusleisten-Steuerelementreferenz
               href: bumper-progress-bar-progress-bar-control-reference.md
               items:
-                - name: Statusanzeigemeldungen
+                - name: Statusleistenmeldungen
                   href: bumper-progress-bar-control-reference-messages.md
                   items:
                     - name: PBM_DELTAPOS
@@ -2830,12 +2830,12 @@
                       href: pbm-setstep.md
                     - name: PBM_STEPIT
                       href: pbm-stepit.md
-                - name: Statusanzeigestrukturen
+                - name: Statusleistenstrukturen
                   href: bumper-progress-bar-control-reference-structures.md
                   items:
                     - name: PBRANGE
                       href: /windows/desktop/api/Commctrl/ns-commctrl-pbrange
-                - name: Statusanzeigekonstanten
+                - name: Statusleistenkonst constants
                   href: bumper-progress-bar-control-reference-constants.md
                   items:
                     - name: Statusleisten-Steuerelementstile
@@ -2857,7 +2857,7 @@
                       href: process-notification-messages.md
                     - name: Erstellen von Assistenten
                       href: wizards.md
-            - name: Referenz zu Eigenschaftenblättern
+            - name: Eigenschaftenblattreferenz
               href: bumper-property-sheet-property-sheets-reference.md
               items:
                 - name: Eigenschaftenblattfunktionen
@@ -3060,12 +3060,12 @@
             - name: Beispiel für Eigenschaftenblätter
               href: bumper-property-sheet-property-sheets-sample.md
               items:
-                - name: Eigenschaftsbeispiel
+                - name: Eigenschaftenbeispiel
                   href: property-sample.md
         - name: Bewehrung
           href: rebar-control-reference.md
           items:
-            - name: Übersichten über das Neuleistensteuerelement
+            - name: Übersicht über das Rebar-Steuerelement
               href: bumper-rebar-rebar-control-overviews.md
               items:
                 - name: Informationen zu Rebar-Steuerelementen
@@ -3073,12 +3073,12 @@
                 - name: Verwenden von Rebar-Steuerelementen
                   href: using-rebar-controls.md
                   items:
-                    - name: Erstellen von Neuleistensteuerelementen
+                    - name: Erstellen von Rebar-Steuerelementen
                       href: create-rebar-controls.md
-            - name: Referenz zum Rebar-Steuerelement
+            - name: Rebar-Steuerelementreferenz
               href: bumper-rebar-rebar-control-reference.md
               items:
-                - name: Nachrichten zum Neuleistensteuerelement
+                - name: Rebar-Steuerelementmeldungen
                   href: bumper-rebar-control-reference-messages.md
                   items:
                     - name: RB_BEGINDRAG
@@ -3165,14 +3165,14 @@
                       href: rb-showband.md
                     - name: RB_SIZETORECT
                       href: rb-sizetorect.md
-                - name: Benachrichtigungen zum Rebar-Steuerelement
+                - name: Benachrichtigungen zum Neuleistensteuerelement
                   href: bumper-rebar-control-reference-notifications.md
                   items:
-                    - name: NM_CUSTOMDRAW (Leiste)
+                    - name: NM_CUSTOMDRAW (Neuleiste)
                       href: nm-customdraw-rebar.md
-                    - name: NM_NCHITTEST (Leiste)
+                    - name: NM_NCHITTEST (Neuleiste)
                       href: nm-nchittest-rebar.md
-                    - name: NM_RELEASEDCAPTURE (Leiste)
+                    - name: NM_RELEASEDCAPTURE (Neuleiste)
                       href: nm-releasedcapture-rebar-.md
                     - name: RBN_AUTOBREAK
                       href: rbn-autobreak.md
@@ -3200,7 +3200,7 @@
                       href: rbn-minmax.md
                     - name: RBN_SPLITTERDRAG
                       href: rbn-splitterdrag.md
-                - name: Rebar-Steuerelementstrukturen
+                - name: Struktur von Steuerelementen für die Neuleiste
                   href: bumper-rebar-control-reference-structures.md
                   items:
                     - name: NMRBAUTOSIZE
@@ -3221,17 +3221,17 @@
                       href: /windows/win32/api/Commctrl/ns-commctrl-rebarbandinfoa
                     - name: REBARINFO
                       href: /windows/win32/api/Commctrl/ns-commctrl-rebarinfo
-                - name: Rebar-Steuerelementkonst constants
+                - name: Rebar Control Constants
                   href: bumper-rebar-control-reference-constants.md
                   items:
-                    - name: Umleisten-Steuerelementstile
+                    - name: Formatvorlagen für DasBar-Steuerelement
                       href: rebar-control-styles.md
-            - name: Beispiel für ein Rebar-Steuerelement
+            - name: Beispiel für Einbar-Steuerelement
               href: bumper-rebar-rebar-control-sample.md
               items:
-                - name: Rebar-Beispiel
+                - name: Beispiel für die Neuleiste
                   href: rebar-sample.md
-        - name: Umfangreiche Bearbeitung
+        - name: Rich Edit
           href: rich-edit-controls.md
           items:
             - name: Übersichten zu Rich Edit-Steuerelementen
@@ -3248,9 +3248,9 @@
                       href: format-text-in-rich-edit-controls.md
                     - name: Interagieren mit der aktuellen Auswahl
                       href: interact-with-the-current-selection.md
-                    - name: Verwenden von Rich-Edit-Text-Vorgängen
+                    - name: Verwenden von Rich Edit Text-Vorgängen
                       href: use-rich-edit-text-operations.md
-                    - name: Verwenden von Informationen zu Wörtern und Zeilenumbrüchen
+                    - name: Verwenden von Word- und Zeilenunterbrechungsinformationen
                       href: use-word-and-line-break-information.md
                     - name: Verwenden von Rich Edit-Zwischenablagevorgängen
                       href: use-rich-edit-clipboard-operations.md
@@ -3258,7 +3258,7 @@
                       href: use-streams.md
                     - name: Automatisches Ändern der Größe von Rich Edit-Steuerelementen
                       href: automatically-resize-rich-edit-controls.md
-                    - name: Verwenden von Rich Edit-Steuerelement-Benachrichtigungscodes
+                    - name: Verwenden von Rich Edit-Steuerelementbenachrichtigungscodes
                       href: use-rich-edit-control-notification-codes.md
                     - name: Verwenden der Schriftartbindung in Rich Edit-Steuerelementen
                       href: use-font-binding-in-rich-edit-controls.md
@@ -3269,7 +3269,7 @@
             - name: Rich Edit-Steuerelementreferenz
               href: bumper-rich-edit-rich-edit-control-reference.md
               items:
-                - name: Umfangreiche Bearbeitungsfunktionen
+                - name: Rich Edit-Funktionen
                   href: bumper-rich-edit-control-reference-functions.md
                   items:
                     - name: AutoCorrectProc
@@ -3278,11 +3278,11 @@
                       href: /windows/desktop/api/Richedit/nc-richedit-editstreamcallback
                     - name: EditWordBreakProcEx
                       href: /windows/desktop/api/Richedit/nc-richedit-editwordbreakprocex
-                    - name: GetMath Alphaumeric
+                    - name: GetMathAlphanumeric
                       href: /previous-versions/windows/desktop/legacy/hh780353(v=vs.85)
-                    - name: GetMath AlphaumericCode
+                    - name: GetMathAlphanumericCode
                       href: /previous-versions/windows/desktop/legacy/hh780354(v=vs.85)
-                    - name: HyphnateProc
+                    - name: HyphenateProc
                       href: /windows/desktop/api/Richedit/nf-richedit-hyphenateproc
                     - name: MathBuildDown
                       href: /previous-versions/windows/desktop/legacy/hh780443(v=vs.85)
@@ -3292,7 +3292,7 @@
                       href: /previous-versions/windows/desktop/legacy/hh780446(v=vs.85)
                     - name: REExtendedRegisterClass
                       href: reextendedregisterclass.md
-                - name: Umfangreiche Bearbeitungsschnittstellen
+                - name: Rich Edit-Schnittstellen
                   href: bumper-rich-edit-control-reference-interfaces.md
                   items:
                     - name: IRichEditOle
@@ -3353,7 +3353,7 @@
                           href: /windows/desktop/api/Richole/nf-richole-iricheditolecallback-queryinsertobject
                         - name: ShowContainerUI
                           href: /windows/desktop/api/Richole/nf-richole-iricheditolecallback-showcontainerui
-                - name: Umfangreiches Bearbeiten von Nachrichten
+                - name: Rich Edit Messages
                   href: bumper-rich-edit-control-reference-messages.md
                   items:
                     - name: EM_AUTOURLDETECT
@@ -3562,10 +3562,10 @@
                       href: em-streamin.md
                     - name: EM_STREAMOUT
                       href: em-streamout.md
-                - name: Rich Edit-Benachrichtigungen
+                - name: Umfangreiche Bearbeitungsbenachrichtigungen
                   href: bumper-rich-edit-control-reference-notifications.md
                   items:
-                    - name: EN_CHANGE (Rich Edit)
+                    - name: EN_CHANGE (umfangreiche Bearbeitung)
                       href: en-change--rich-edit-control-.md
                     - name: EN_ALIGNLTR
                       href: en-alignltr.md
@@ -3876,9 +3876,9 @@
                               href: /windows/desktop/api/Tom/nf-tom-itextfont-getbold
                             - name: GetDuplicate
                               href: /windows/desktop/api/Tom/nf-tom-itextfont-getduplicate
-                            - name: GetEchorss
+                            - name: GetEposs
                               href: /windows/desktop/api/Tom/nf-tom-itextfont-getemboss
-                            - name: GetEn wie
+                            - name: GetEntinee
                               href: /windows/desktop/api/Tom/nf-tom-itextfont-getengrave
                             - name: GetForeColor
                               href: /windows/desktop/api/Tom/nf-tom-itextfont-getforecolor
@@ -3932,9 +3932,9 @@
                               href: /windows/desktop/api/Tom/nf-tom-itextfont-setbold
                             - name: SetDuplicate
                               href: /windows/desktop/api/Tom/nf-tom-itextfont-setduplicate
-                            - name: SetEchorss
+                            - name: SetEposs
                               href: /windows/desktop/api/Tom/nf-tom-itextfont-setemboss
-                            - name: SetEn wie
+                            - name: SetEntinee
                               href: /windows/desktop/api/Tom/nf-tom-itextfont-setengrave
                             - name: SetForeColor
                               href: /windows/desktop/api/Tom/nf-tom-itextfont-setforecolor
@@ -4284,7 +4284,7 @@
                               href: /windows/desktop/api/Tom/nf-tom-itextrange-paste
                             - name: ScrollIntoView
                               href: /windows/desktop/api/Tom/nf-tom-itextrange-scrollintoview
-                            - name: Auswählen
+                            - name: Select
                               href: /windows/desktop/api/Tom/nf-tom-itextrange-select
                             - name: SetChar
                               href: /windows/desktop/api/Tom/nf-tom-itextrange-setchar
@@ -4337,7 +4337,7 @@
                               href: /windows/desktop/api/Tom/nf-tom-itextrange2-getfont2
                             - name: GetFormattedText2-Methode
                               href: /windows/desktop/api/Tom/nf-tom-itextrange2-getformattedtext2
-                            - name: GetIty-Methode
+                            - name: GetMethodity-Methode
                               href: /windows/desktop/api/Tom/nf-tom-itextrange2-getgravity
                             - name: GetInlineObject-Methode
                               href: /windows/desktop/api/Tom/nf-tom-itextrange2-getinlineobject
@@ -4377,7 +4377,7 @@
                               href: /windows/desktop/api/Tom/nf-tom-itextrange2-setfont2
                             - name: SetFormattedText2-Methode
                               href: /windows/desktop/api/Tom/nf-tom-itextrange2-setformattedtext2
-                            - name: SetIty-Methode
+                            - name: SetSpezifitity-Methode
                               href: /windows/desktop/api/Tom/nf-tom-itextrange2-setgravity
                             - name: SetInlineObject-Methode
                               href: /windows/desktop/api/Tom/nf-tom-itextrange2-setinlineobject
@@ -5391,9 +5391,9 @@
                     - name: Verwenden von Hot Tracking mit Symbolleisten
                       href: use-hot-tracking-with-toolbars.md
                     - name: Erstellen einer Internet Explorer-Symbolleiste
-                      href: cc-faq-ietoolbar.yml
+                      href: cc-faq-ietoolbar.md
                     - name: Erstellen einer Internet Explorer-Menüleiste
-                      href: cc-faq-iemenubar.yml
+                      href: cc-faq-iemenubar.md
             - name: Symbolleisten-Steuerelementreferenz
               href: bumper-toolbar-toolbar-control-reference.md
               items:
@@ -5885,61 +5885,61 @@
                       href: tbm-getpagesize.md
                     - name: TBM_GETPOS Meldung
                       href: tbm-getpos.md
-                    - name: TBM_GETPTICS-Nachricht
+                    - name: TBM_GETPTICS Meldung
                       href: tbm-getptics.md
-                    - name: TBM_GETRANGEMAX-Nachricht
+                    - name: TBM_GETRANGEMAX Meldung
                       href: tbm-getrangemax.md
-                    - name: TBM_GETRANGEMIN-Nachricht
+                    - name: TBM_GETRANGEMIN Meldung
                       href: tbm-getrangemin.md
-                    - name: TBM_GETSELEND-Nachricht
+                    - name: TBM_GETSELEND Meldung
                       href: tbm-getselend.md
-                    - name: TBM_GETSELSTART Nachricht
+                    - name: TBM_GETSELSTART Meldung
                       href: tbm-getselstart.md
-                    - name: TBM_GETTHUMBLENGTH-Nachricht
+                    - name: TBM_GETTHUMBLENGTH Meldung
                       href: tbm-getthumblength.md
-                    - name: TBM_GETTHUMBRECT-Nachricht
+                    - name: TBM_GETTHUMBRECT Meldung
                       href: tbm-getthumbrect.md
-                    - name: TBM_GETTIC-Nachricht
+                    - name: TBM_GETTIC Meldung
                       href: tbm-gettic.md
-                    - name: TBM_GETTICPOS-Nachricht
+                    - name: TBM_GETTICPOS Meldung
                       href: tbm-getticpos.md
-                    - name: TBM_GETTOOLTIPS-Nachricht
+                    - name: TBM_GETTOOLTIPS Meldung
                       href: tbm-gettooltips.md
-                    - name: TBM_GETUNICODEFORMAT-Nachricht
+                    - name: TBM_GETUNICODEFORMAT Meldung
                       href: tbm-getunicodeformat.md
-                    - name: TBM_SETBUDDY-Nachricht
+                    - name: TBM_SETBUDDY Meldung
                       href: tbm-setbuddy.md
-                    - name: TBM_SETLINESIZE Nachricht
+                    - name: TBM_SETLINESIZE Meldung
                       href: tbm-setlinesize.md
-                    - name: TBM_SETPAGESIZE Nachricht
+                    - name: TBM_SETPAGESIZE Meldung
                       href: tbm-setpagesize.md
-                    - name: TBM_SETPOS-Nachricht
+                    - name: TBM_SETPOS Meldung
                       href: tbm-setpos.md
-                    - name: TBM_SETPOSNOTIFY-Nachricht
+                    - name: TBM_SETPOSNOTIFY Meldung
                       href: tbm-setposnotify.md
-                    - name: TBM_SETRANGE-Nachricht
+                    - name: TBM_SETRANGE Meldung
                       href: tbm-setrange.md
-                    - name: TBM_SETRANGEMAX Nachricht
+                    - name: TBM_SETRANGEMAX Meldung
                       href: tbm-setrangemax.md
-                    - name: TBM_SETRANGEMIN-Nachricht
+                    - name: TBM_SETRANGEMIN Meldung
                       href: tbm-setrangemin.md
-                    - name: TBM_SETSEL-Nachricht
+                    - name: TBM_SETSEL Meldung
                       href: tbm-setsel.md
-                    - name: TBM_SETSELEND Nachricht
+                    - name: TBM_SETSELEND Meldung
                       href: tbm-setselend.md
-                    - name: TBM_SETSELSTART-Nachricht
+                    - name: TBM_SETSELSTART Meldung
                       href: tbm-setselstart.md
-                    - name: TBM_SETTHUMBLENGTH-Nachricht
+                    - name: TBM_SETTHUMBLENGTH Meldung
                       href: tbm-setthumblength.md
-                    - name: TBM_SETTIC-Nachricht
+                    - name: TBM_SETTIC Meldung
                       href: tbm-settic.md
-                    - name: TBM_SETTICFREQ-Nachricht
+                    - name: TBM_SETTICFREQ Meldung
                       href: tbm-setticfreq.md
-                    - name: TBM_SETTIPSIDE-Nachricht
+                    - name: TBM_SETTIPSIDE Meldung
                       href: tbm-settipside.md
-                    - name: TBM_SETTOOLTIPS-Nachricht
+                    - name: TBM_SETTOOLTIPS Meldung
                       href: tbm-settooltips.md
-                    - name: TBM_SETUNICODEFORMAT-Nachricht
+                    - name: TBM_SETUNICODEFORMAT Nachricht
                       href: tbm-setunicodeformat.md
                 - name: Trackbar-Steuerelementbenachrichtigungen
                   href: bumper-trackbar-control-reference-notifications.md
@@ -5952,14 +5952,14 @@
                       href: trbn-thumbposchanging.md
                     - name: WM_HSCROLL -Benachrichtigungscode (Trackbar)
                       href: wm-hscroll--trackbar-.md
-                    - name: Benachrichtigungscode für WM_VSCROLL (Trackbar)
+                    - name: WM_VSCROLL -Benachrichtigungscode (Trackbar)
                       href: wm-vscroll--trackbar-.md
                 - name: Trackbar-Steuerelementstrukturen
                   href: trackbar-control-structures.md
                   items:
                     - name: NMTRBTHUMBPOSCHANGING-Struktur
                       href: /windows/win32/api/Commctrl/ns-commctrl-nmtrbthumbposchanging
-                - name: Trackbar-Steuerelementkonstanten
+                - name: Trackbar-Steuerelementkonst constants
                   href: bumper-trackbar-control-reference-constants.md
                   items:
                     - name: Benutzerdefinierte Zeichnen-Werte
@@ -5969,15 +5969,15 @@
         - name: Strukturansicht
           href: tree-view-control-reference.md
           items:
-            - name: Übersicht über Tree-View-Steuerelemente
+            - name: Tree-View-Steuerelemente – Übersichten
               href: bumper-tree-view-tree-view-controls-overviews.md
               items:
-                - name: Informationen zu Tree-View-Steuerelementen
+                - name: Informationen Tree-View Steuerelementen
                   href: tree-view-controls.md
-                - name: Verwenden von Tree-View-Steuerelementen
+                - name: Verwenden von Tree-View Steuerelementen
                   href: using-treeview.md
                   items:
-                    - name: Erstellen eines Tree-View-Steuerelements
+                    - name: Erstellen eines Tree-View Steuerelements
                       href: create-a-tree-view-control.md
                     - name: Initialisieren der Bildliste
                       href: initialize-the-image-list.md
@@ -5987,9 +5987,9 @@
                       href: drag-a-tree-view-item.md
                     - name: Arbeiten mit Zustandsbildindizes
                       href: work-with-state-image-indexes.md
-                    - name: Verwenden von Tree-View Infotips
+                    - name: Verwenden von Tree-View Infos
                       href: use-tree-view-infotips.md
-            - name: referenz zum Tree-View-Steuerelement
+            - name: Tree-View-Steuerelementreferenz
               href: bumper-tree-view-tree-view-control-reference.md
               items:
                 - name: Strukturansichtsmakros
@@ -6330,29 +6330,29 @@
                       href: /windows/win32/api/Commctrl/ns-commctrl-tvitemexa
                     - name: TVSORTCB
                       href: /windows/win32/api/Commctrl/ns-commctrl-tvsortcb
-                - name: Strukturansichtskonst constants
+                - name: Strukturansichtskonstanten
                   href: bumper-tree-view-control-reference-constants.md
                   items:
-                    - name: Tree-View Von Steuerelementen erweiterte Stile
+                    - name: erweiterte Stile für Tree-View-Steuerelement
                       href: tree-view-control-window-extended-styles.md
-                    - name: Tree-View Steuerelementelementzustände
+                    - name: Tree-View Zustände von Steuerelementen
                       href: tree-view-control-item-states.md
-                    - name: Tree-View-Fensterstile
+                    - name: Tree-View-Steuerelementfensterstile
                       href: tree-view-control-window-styles.md
         - name: Up-Down-Steuerelement
           href: up-down-control-reference.md
           items:
-            - name: Up-Down-Steuerelementübersichten
+            - name: Übersicht über Up-Down-Steuerelement
               href: up-down-control-overview.md
               items:
-                - name: Informationen Up-Down Steuerelementen
+                - name: Informationen zu Up-Down-Steuerelementen
                   href: up-down-controls.md
-                - name: Verwenden von Up-Down Steuerelementen
+                - name: Verwenden von Up-Down-Steuerelementen
                   href: using-up-down-controls.md
                   items:
-                    - name: Erstellen von Up-Down Steuerelementen
+                    - name: Erstellen von Up-Down-Steuerelementen
                       href: create-an-up-down-control.md
-            - name: Up-Down-Steuerelementreferenz
+            - name: referenz zum Up-Down-Steuerelement
               href: bumper-up-down-control-up-down-control-reference.md
               items:
                 - name: Up-Down Functions
@@ -6360,7 +6360,7 @@
                   items:
                     - name: CreateUpDownControl
                       href: /windows/desktop/api/Commctrl/nf-commctrl-createupdowncontrol
-                - name: Up-Down Nachrichten
+                - name: Up-Down-Meldungen
                   href: bumper-up-down-control-reference-messages.md
                   items:
                     - name: UDM_GETACCEL
@@ -6414,10 +6414,10 @@
                   items:
                     - name: Up-Down-Steuerelementstile
                       href: up-down-control-styles.md
-    - name: Allgemeine Steuerelementreferenz
+    - name: Referenz zu allgemeinen Steuerelementen
       href: common-control-reference.md
       items:
-        - name: Steuerelementfunktionen
+        - name: Steuerungsfunktionen
           href: bumper-general-control-reference-functions.md
           items:
             - name: DoReaderMode
@@ -6536,7 +6536,7 @@
               href: /windows/desktop/api/dpa_dsa/nf-dpa_dsa-str_setptrw
             - name: TranslateDispatch
               href: translatedispatch.md
-        - name: Steuerungsmakros
+        - name: Steuerelementmakros
           href: bumper-general-control-reference-macros.md
           items:
             - name: DPA_AppendPtr
@@ -6648,7 +6648,7 @@
               href: /windows/win32/api/Commctrl/ns-commctrl-nmtooltipscreated
             - name: READERMODEINFO
               href: readermodeinfo.md
-        - name: Steuerelementkonst constants
+        - name: Steuerelementkonstanten
           href: bumper-general-control-reference-constants.md
           items:
             - name: CDRF-Konstanten
@@ -6657,7 +6657,7 @@
               href: common-control-styles.md
             - name: Fensterklassen
               href: common-control-window-classes.md
-    - name: Steuern von Spy v2.0
+    - name: Control Spy v2.0
       href: control-spy.md
     - name: Visuelle Stile
       href: themes-overview.md
@@ -6668,7 +6668,7 @@
           href: visual-styles-overview.md
         - name: Aktivieren von visuellen Stilen
           href: cookbook-overview.md
-        - name: Verwenden von visuellen Stilen mit benutzerdefinierten und Owner-Drawn Steuerelementen
+        - name: Verwenden von visuellen Stilen mit benutzerdefinierten und Owner-Drawn-Steuerelementen
           href: using-visual-styles.md
         - name: Unterstützen hoher Kontrast Designs
           href: supporting-high-contrast-themes.md
@@ -6849,7 +6849,7 @@
                   href: /windows/win32/api/Uxtheme/ns-uxtheme-margins
                 - name: WTA_OPTIONS
                   href: /windows/win32/api/Uxtheme/ns-uxtheme-wta_options
-            - name: Aufzählte Typen
+            - name: Aufzählungstypen
               href: bumper-visual-styles-reference-enumerated-types.md
               items:
                 - name: BP_ANIMATIONSTYLE
@@ -6858,7 +6858,7 @@
                   href: /windows/win32/api/Uxtheme/ne-uxtheme-bp_bufferformat
                 - name: PROPERTYORIGIN
                   href: /windows/desktop/api/Uxtheme/ne-uxtheme-propertyorigin
-                - name: THEMESIZE
+                - name: DESIGNS
                   href: /windows/desktop/api/Uxtheme/ne-uxtheme-themesize
                 - name: TM_PROPS
                   href: tm-props.md
@@ -6872,7 +6872,7 @@
               href: theme-hit-test-retval.md
             - name: Parts and States
               href: parts-and-states.md
-            - name: 'Stilklassen, Teile und Zustände von Stilen'
+            - name: 'Style Classes, Parts, and States (Klassen, Teile und Zustände)'
               href: aero-style-classes-parts-and-states.md
             - name: Eigenschaftsbezeichner
               href: property-typedefs.md

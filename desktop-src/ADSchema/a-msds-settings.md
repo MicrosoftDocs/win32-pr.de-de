@@ -1,11 +1,11 @@
 ---
-title: ms-DS-Settings-Attribut
-description: Wird verwendet, um Einstellungen für ein Objekt zu speichern. Die Verwendung hängt ausschließlich vom Besitzer des Objekts ab. Es wird empfohlen, diese zum Speichern von Name-Wert-Paaren zu verwenden. Beispielsweise Color Blue.
+title: ms-DS-Einstellungen-Attribut
+description: 'Wird zum Speichern von Einstellungen für ein Objekt verwendet. Seine Verwendung wird ausschließlich vom Besitzer des Objekts bestimmt. Es wird empfohlen, sie zum Speichern von Name-Wert-Paaren zu verwenden. Beispiel: Farbe Blau.'
 ms.assetid: 44e3a9e2-5528-4328-9cb7-1b6a4a77950a
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ms-DS-Settings-Attribut
-- AD-Schema für das msDS-Settings-Attribut
+- MS-DS-Einstellungen AD-Attributschema
+- MSDS-Einstellungen AD-Attributschema
 topic_type:
 - apiref
 api_name:
@@ -14,42 +14,42 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f466bd5aa5a904482ff9c84c1f818c12205f69c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 6dd39e64c096049bb39379aa48d97444982e51746808ae59987e4ddcad2de30c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119544570"
 ---
-# <a name="ms-ds-settings-attribute"></a>ms-DS-Settings-Attribut
+# <a name="ms-ds-settings-attribute"></a>ms-DS-Einstellungen-Attribut
 
-Wird verwendet, um Einstellungen für ein Objekt zu speichern. Die Verwendung hängt ausschließlich vom Besitzer des Objekts ab. Es wird empfohlen, diese zum Speichern von Name-Wert-Paaren zu verwenden. Beispielsweise Color = Blue.
+Wird zum Speichern von Einstellungen für ein Objekt verwendet. Seine Verwendung wird ausschließlich vom Besitzer des Objekts bestimmt. Es wird empfohlen, sie zum Speichern von Name-Wert-Paaren zu verwenden. Beispiel: color=blue.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | ms-DS-Settings                              |
-| LDAP-Display-Name | MSDS-Einstellungen                               |
+| CN                | ms-DS-Einstellungen                              |
+| Ldap-Anzeigename | msDS-Einstellungen                               |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Domänen Administrator                        |
-| Aktualisierungshäufigkeit  | Jedes Mal, wenn die Einstellungs Werte geändert werden.       |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                        |
+| Updatehäufigkeit  | Jedes Mal, wenn sich die Einstellungswerte ändern.       |
 | Attribute-Id      | 1.2.840.113556.1.4.1697                     |
-| System-ID-GUID    | 0e1b47d7-40A3-4 B48-8d1b-4cac0c1cdf21        |
+| System-ID-GUID    | 0e1b47d7-40a3-4b48-8d1b-4cac0c1cdf21        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -58,15 +58,15 @@ Wird verwendet, um Einstellungen für ein Objekt zu speichern. Die Verwendung h�
 | Link-ID                | \-                                                                                                                        |
 | MAPI-Id                | \-                                                                                                                        |
 | System-Only            | False                                                                                                                     |
-| Ist-einwertig       | False                                                                                                                     |
+| Ist einwertig       | False                                                                                                                     |
 | Ist indiziert             | False                                                                                                                     |
 | Im globalen Katalog      | False                                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                              |
 | Range-Lower            | \-                                                                                                                        |
 | Range-Upper            | \-                                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                                |
 | System-Flags           | 0x00000000                                                                                                                |
-| In verwendete Klassen        | [**Anwendungseinstellungen**](c-applicationsettings.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Anwendungs-Einstellungen**](c-applicationsettings.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> |
 
 
 
@@ -79,15 +79,15 @@ Wird verwendet, um Einstellungen für ein Objekt zu speichern. Die Verwendung h�
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | False                                                            |
-| Ist-einwertig       | False                                                            |
+| Ist einwertig       | False                                                            |
 | Ist indiziert             | False                                                            |
 | Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**Anwendungseinstellungen**](c-applicationsettings.md)<br/> |
+| In verwendete Klassen        | [**Anwendungs-Einstellungen**](c-applicationsettings.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Wird verwendet, um Einstellungen für ein Objekt zu speichern. Die Verwendung h�
 | Link-ID                | \-                                                                                                                        |
 | MAPI-Id                | \-                                                                                                                        |
 | System-Only            | False                                                                                                                     |
-| Ist-einwertig       | False                                                                                                                     |
+| Ist einwertig       | False                                                                                                                     |
 | Ist indiziert             | False                                                                                                                     |
 | Im globalen Katalog      | False                                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                              |
 | Range-Lower            | \-                                                                                                                        |
 | Range-Upper            | \-                                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                                |
 | System-Flags           | 0x00000000                                                                                                                |
-| In verwendete Klassen        | [**Anwendungseinstellungen**](c-applicationsettings.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Anwendungs-Einstellungen**](c-applicationsettings.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Wird verwendet, um Einstellungen für ein Objekt zu speichern. Die Verwendung h�
 | Link-ID                | \-                                                                                                                        |
 | MAPI-Id                | \-                                                                                                                        |
 | System-Only            | False                                                                                                                     |
-| Ist-einwertig       | False                                                                                                                     |
+| Ist einwertig       | False                                                                                                                     |
 | Ist indiziert             | False                                                                                                                     |
 | Im globalen Katalog      | False                                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                              |
 | Range-Lower            | \-                                                                                                                        |
 | Range-Upper            | \-                                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                                |
 | System-Flags           | 0x00000000                                                                                                                |
-| In verwendete Klassen        | [**Anwendungseinstellungen**](c-applicationsettings.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Anwendungs-Einstellungen**](c-applicationsettings.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Wird verwendet, um Einstellungen für ein Objekt zu speichern. Die Verwendung h�
 | Link-ID                | \-                                                                                                                        |
 | MAPI-Id                | \-                                                                                                                        |
 | System-Only            | False                                                                                                                     |
-| Ist-einwertig       | False                                                                                                                     |
+| Ist einwertig       | False                                                                                                                     |
 | Ist indiziert             | False                                                                                                                     |
 | Im globalen Katalog      | False                                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                              |
 | Range-Lower            | \-                                                                                                                        |
 | Range-Upper            | \-                                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                                |
 | System-Flags           | 0x00000000                                                                                                                |
-| In verwendete Klassen        | [**Anwendungseinstellungen**](c-applicationsettings.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Anwendungs-Einstellungen**](c-applicationsettings.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Wird verwendet, um Einstellungen für ein Objekt zu speichern. Die Verwendung h�
 | Link-ID                | \-                                                                                                                        |
 | MAPI-Id                | \-                                                                                                                        |
 | System-Only            | False                                                                                                                     |
-| Ist-einwertig       | False                                                                                                                     |
+| Ist einwertig       | False                                                                                                                     |
 | Ist indiziert             | False                                                                                                                     |
 | Im globalen Katalog      | False                                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                              |
 | Range-Lower            | \-                                                                                                                        |
 | Range-Upper            | \-                                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                                |
 | System-Flags           | 0x00000000                                                                                                                |
-| In verwendete Klassen        | [**Anwendungseinstellungen**](c-applicationsettings.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Anwendungs-Einstellungen**](c-applicationsettings.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> |
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: ms-DS-supported-Encryption-Types-Attribut
-description: Die Verschlüsselungsalgorithmen, die von Benutzer-, Computer-oder Vertrauens Konten unterstützt werden. Beachten Sie, dass der KDC diese Informationen beim Erstellen eines Dienst Tickets für dieses Konto verwendet.
+title: ms-DS-Supported-Encryption-Types-Attribut
+description: Die verschlüsselungsalgorithmen, die von Benutzer-, Computer- oder Vertrauenskonten unterstützt werden. Hinweis Das KDC verwendet diese Informationen beim Generieren eines Diensttickets für dieses Konto.
 ms.assetid: 6f9055a9-531e-4f4b-8703-aca5531a3bcb
 ms.tgt_platform: multiple
 keywords:
-- von ms-DS unterstützte-Encryption-Types-Attribut AD-Schema
-- adschema des msDS-supportedencryptiontypes-Attributs
+- AD-Schema des Attributs ms-DS-Supported-Encryption-Types
+- AD-Schema des msDS-SupportedEncryptionTypes-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,19 +14,19 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f7ab16959d1f1cd4405cb661a6026f3734a134f8
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c1d092061dfebcea8e9a0e4f4a060010e16102108d1e2e74f05e6df2db706141
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346578"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119544340"
 ---
-# <a name="ms-ds-supported-encryption-types-attribute"></a>ms-DS-supported-Encryption-Types-Attribut
+# <a name="ms-ds-supported-encryption-types-attribute"></a>ms-DS-Supported-Encryption-Types-Attribut
 
-Die Verschlüsselungsalgorithmen, die von Benutzer-, Computer-oder Vertrauens Konten unterstützt werden.
+Die verschlüsselungsalgorithmen, die von Benutzer-, Computer- oder Vertrauenskonten unterstützt werden.
 
 > [!Note]  
-> Der KDC verwendet diese Informationen bei der Erstellung eines Dienst Tickets für dieses Konto. Dienste und Computer können dieses Attribut auf den jeweiligen Konten in Active Directory automatisch aktualisieren und benötigen daher Schreibzugriff auf dieses Attribut.
+> Das KDC verwendet diese Informationen beim Generieren eines Diensttickets für dieses Konto. Dienste und Computer können dieses Attribut für ihre jeweiligen Konten in Active Directory automatisch aktualisieren und benötigen daher Schreibzugriff auf dieses Attribut.
 
  
 
@@ -34,13 +34,13 @@ Die Verschlüsselungsalgorithmen, die von Benutzer-, Computer-oder Vertrauens Ko
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-supported-Encryption-Types     |
-| LDAP-Display-Name | MSDS-supportedencryptiontypes        |
+| CN                | ms-DS-Supported-Encryption-Types     |
+| Ldap-Anzeigename | msDS-SupportedEncryptionTypes        |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1963              |
-| System-ID-GUID    | 20119867-1d04-4ab7-9371-cfc3d5df0afd |
+| System-Id-Guid    | 20119867-1d04-4ab7-9371-cfc3d5df0afd |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -60,15 +60,15 @@ Die Verschlüsselungsalgorithmen, die von Benutzer-, Computer-oder Vertrauens Ko
 | Link-ID                | \-                                                                                     |
 | MAPI-Id                | \-                                                                                     |
 | System-Only            | False                                                                                  |
-| Ist-einwertig       | Richtig                                                                                   |
+| Is-Single-Valued       | True                                                                                   |
 | Ist indiziert             | False                                                                                  |
 | Im globalen Katalog      | False                                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                           |
 | Range-Lower            | \-                                                                                     |
 | Range-Upper            | \-                                                                                     |
 | Search-Flags           | 0x00000000                                                                             |
 | System-Flags           | 0x00000010                                                                             |
-| In verwendete Klassen        | [**Vertrauenswürdige Domäne**](c-trusteddomain.md)<br/> [**Benutzer**](c-user.md)<br/> |
+| In verwendete Klassen        | [**Trusted-Domain**](c-trusteddomain.md)<br/> [**Benutzer**](c-user.md)<br/> |
 
 
 
@@ -81,15 +81,15 @@ Die Verschlüsselungsalgorithmen, die von Benutzer-, Computer-oder Vertrauens Ko
 | Link-ID                | \-                                                                                     |
 | MAPI-Id                | \-                                                                                     |
 | System-Only            | False                                                                                  |
-| Ist-einwertig       | Richtig                                                                                   |
+| Is-Single-Valued       | True                                                                                   |
 | Ist indiziert             | False                                                                                  |
 | Im globalen Katalog      | False                                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                           |
 | Range-Lower            | \-                                                                                     |
 | Range-Upper            | \-                                                                                     |
 | Search-Flags           | 0x00000000                                                                             |
 | System-Flags           | 0x00000010                                                                             |
-| In verwendete Klassen        | [**Vertrauenswürdige Domäne**](c-trusteddomain.md)<br/> [**Benutzer**](c-user.md)<br/> |
+| In verwendete Klassen        | [**Trusted-Domain**](c-trusteddomain.md)<br/> [**Benutzer**](c-user.md)<br/> |
 
 
 
@@ -102,15 +102,15 @@ Die Verschlüsselungsalgorithmen, die von Benutzer-, Computer-oder Vertrauens Ko
 | Link-ID                | \-                                                                                     |
 | MAPI-Id                | \-                                                                                     |
 | System-Only            | False                                                                                  |
-| Ist-einwertig       | Richtig                                                                                   |
+| Is-Single-Valued       | True                                                                                   |
 | Ist indiziert             | False                                                                                  |
 | Im globalen Katalog      | False                                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                           |
 | Range-Lower            | \-                                                                                     |
 | Range-Upper            | \-                                                                                     |
 | Search-Flags           | 0x00000000                                                                             |
 | System-Flags           | 0x00000010                                                                             |
-| In verwendete Klassen        | [**Vertrauenswürdige Domäne**](c-trusteddomain.md)<br/> [**Benutzer**](c-user.md)<br/> |
+| In verwendete Klassen        | [**Trusted-Domain**](c-trusteddomain.md)<br/> [**Benutzer**](c-user.md)<br/> |
 
 
 

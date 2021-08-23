@@ -1,5 +1,5 @@
 ---
-description: Ändert den Text der Titelleiste des angegebenen Fensters (sofern eine solche).
+description: Ändert den Text der Titelleiste des angegebenen Fensters (sofern es eine hat).
 ms.assetid: 0da53972-8f2e-4ca5-92f8-97eb88514e35
 title: _SetWindowText-Funktion
 ms.topic: reference
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Sqlunirl.dll
-ms.openlocfilehash: 8832f8ee08877edae695a858874c3a2f87a2c286
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a0c66230d9e7f074fe50ca826ab196ab75a239942257899362b738296b329074
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365630"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119572553"
 ---
 # <a name="_setwindowtext-function"></a>\_SetWindowText-Funktion
 
-\[Diese Funktion ist ein Wrapper über die **SetWindowText** -Funktion. Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **SetWindowText** direkt aufrufen.\]
+\[Diese Funktion ist ein Wrapper für die **SetWindowText-Funktion.** Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **SetWindowText direkt** aufrufen.\]
 
-Ändert den Text der Titelleiste des angegebenen Fensters (sofern eine solche). Siehe [**SetWindowText**](/windows/win32/api/winuser/nf-winuser-setwindowtexta).
+Ändert den Text der Titelleiste des angegebenen Fensters (sofern es eine hat). Weitere Informationen [**finden Sie unter SetWindowText**](/windows/win32/api/winuser/nf-winuser-setwindowtexta).
 
 ## <a name="syntax"></a>Syntax
 

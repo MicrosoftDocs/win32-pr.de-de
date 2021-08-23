@@ -5,16 +5,16 @@ ms.assetid: 5cd3c745-b360-43fb-b780-c526ed539db0
 ms.tgt_platform: multiple
 keywords:
 - TransportSettings2-Eigenschaft Remotedesktopdienste
-- TransportSettings2-Eigenschaften Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6-Schnittstelle Remotedesktopdienste, TransportSettings2-Eigenschaft
-- TransportSettings2-Eigenschaften Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, TransportSettings2-Eigenschaft
-- TransportSettings2-Eigenschaften Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, TransportSettings2-Eigenschaft
-- TransportSettings2-Eigenschaften Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, TransportSettings2-Eigenschaft
-- TransportSettings2-Eigenschaften Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10-Schnittstelle Remotedesktopdienste, TransportSettings2-Eigenschaft
+- TransportSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , TransportSettings2-Eigenschaft
+- TransportSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , TransportSettings2-Eigenschaft
+- TransportSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , TransportSettings2-Eigenschaft
+- TransportSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , TransportSettings2-Eigenschaft
+- TransportSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , TransportSettings2-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -34,16 +34,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 91ba11975e0e065e0cfcce91eb22402153acf236
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 12aa42dfb54f6139ab0847f83b44298a0b81c1ff84dd1ea41e483a38ee8889bb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119574400"
 ---
-# <a name="imsrdpclient6transportsettings2-property"></a>IMsRdpClient6:: TransportSettings2-Eigenschaft
+# <a name="imsrdpclient6transportsettings2-property"></a>IMsRdpClient6::TransportSettings2-Eigenschaft
 
-Ruft die [**IMsRdpClientTransportSettings2**](imsrdpclienttransportsettings2.md) -Schnittstelle ab.
+Ruft die [**IMsRdpClientTransportSettings2-Schnittstelle**](imsrdpclienttransportsettings2.md) ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -60,7 +60,7 @@ HRESULT get_TransportSettings2(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein [**IMsRdpClientTransportSettings2**](imsrdpclienttransportsettings2.md) -Schnittstellen Zeiger.
+Ein [**IMsRdpClientTransportSettings2-Schnittstellenzeiger.**](imsrdpclienttransportsettings2.md)
 
 ## <a name="requirements"></a>Anforderungen
 

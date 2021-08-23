@@ -1,6 +1,6 @@
 ---
 title: attribute_onchange
-description: Wenn ein Skin-Attribut den Wert ändert, tritt ein Ereignis auf, das von einem Ereignishandler behandelt werden kann. Der Name des Ereignis Handlers ist der Name des Attributs, gefolgt von einem Unterstrich und \ 0034; OnChange \ 0034;, z. b. \ 0034; Value \_ OnChange \ 0034;.
+description: Wenn ein Skinattribut den Wert ändert, tritt ein Ereignis auf, das von einem Ereignishandler behandelt werden kann. Der Name des Ereignishandlers ist der Name des Attributs, gefolgt von einem Unterstrich und \0034;onchange \ 0034;, z. B. \0034;value \_ onchange \ 0034;.
 ms.assetid: 783b686c-d56c-4036-9af4-97b9b246ef7e
 keywords:
 - attribute_onchange Windows Media Player
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 45c4955193507e258d055a3399fc565c569fd291
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0c707b04587b6e975f81c8a0d0918b14c8e193d303f82c61b5220796bb6975b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370236"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119573760"
 ---
-# <a name="attribute_onchange"></a>Attribut \_ OnChange
+# <a name="attribute_onchange"></a>Attribut \_ onchange
 
-Wenn ein Skin-Attribut den Wert ändert, tritt ein Ereignis auf, das von einem Ereignishandler behandelt werden kann. Der Name des Ereignis Handlers ist der Name des Attributs, gefolgt von einem Unterstrich und "OnChange", z. b. "Value \_ OnChange".
+Wenn ein Skinattribut den Wert ändert, tritt ein Ereignis auf, das von einem Ereignishandler behandelt werden kann. Der Name des Ereignishandlers ist der Name des Attributs, gefolgt von einem Unterstrich und "onchange", z. B. "value \_ onchange".
 
 ``` syntax
         attribute_onchange
@@ -47,7 +47,7 @@ Wenn ein Skin-Attribut den Wert ändert, tritt ein Ereignis auf, das von einem E
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 70 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 70 oder höher<br/> |
 
 
 

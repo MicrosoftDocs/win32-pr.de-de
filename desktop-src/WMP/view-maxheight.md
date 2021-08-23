@@ -1,9 +1,9 @@
 ---
-title: View. MaxHeight
-description: Das MaxHeight-Attribut gibt die maximale Höhe in Pixel der Ansicht an oder ruft diese bei der Größenänderung ab.
+title: VIEW.maxHeight
+description: Das maxHeight-Attribut gibt beim Ändern der Größe die maximale Höhe in Pixel der ANSICHT an oder ruft sie ab.
 ms.assetid: 81e919f6-4333-424c-bd65-1155e308a493
 keywords:
-- Ansicht. MaxHeight-Fenster Media Player
+- VIEW.maxHeight Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e4cc43f9119c24a5a89928c4ffc4e854cee33350
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ee1ccc883293d493996b854d572bfbcefd9982ed964088e927f2e23e1df85ec0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365754"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119571634"
 ---
-# <a name="viewmaxheight"></a>View. MaxHeight
+# <a name="viewmaxheight"></a>VIEW.maxHeight
 
-Das **MaxHeight** -Attribut gibt die maximale Höhe in Pixel der **Ansicht** an oder ruft diese bei der Größenänderung ab.
+Das **maxHeight-Attribut** gibt beim Ändern der Größe die maximale Höhe in Pixel der **VIEW-Ansicht** an oder ruft sie ab.
 
 ``` syntax
         elementID.maxHeight
@@ -29,7 +29,7 @@ Das **MaxHeight** -Attribut gibt die maximale Höhe in Pixel der **Ansicht** an 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**) mit einem Wert von 0 (null) oder größer.  Der Standardwert ist 0 (null), was bedeutet, dass keine Einschränkung für die maximale Höhe der **Ansicht** vorliegt.
+Dieses Attribut ist eine  Lese-/Schreibnummer **(long**) mit einem Wert von 0 (null) oder größer. Er weist den Standardwert 0 (null) auf, was bedeutet, dass es keine Einschränkung für die maximale Höhe von **VIEW** gibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Dieses Attribut ist eine Lese-/schreibzahl (**Long**) mit einem Wert von 0 (null
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,10 +45,10 @@ Dieses Attribut ist eine Lese-/schreibzahl (**Long**) mit einem Wert von 0 (null
 
 <dl> <dt>
 
-[**View-Element**](view-element.md)
+[**VIEW-Element**](view-element.md)
 </dt> <dt>
 
-[**View. MinHeight**](view-minheight.md)
+[**VIEW.minHeight**](view-minheight.md)
 </dt> </dl>
 
  

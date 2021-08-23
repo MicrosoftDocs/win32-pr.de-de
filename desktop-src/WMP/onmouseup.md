@@ -1,9 +1,9 @@
 ---
-title: OnMouseUp
-description: Der OnMouseUp-Ereignishandler behandelt ein Ereignis, das auftritt, wenn der Benutzer eine Maustaste loslässt, während sich der Mauszeiger über dem Element befindet.
+title: Onmouseup
+description: Der Onmouseup-Ereignishandler behandelt ein Ereignis, das eintritt, wenn der Benutzer eine Maustaste loslässt, während sich der Zeiger über dem Element befindet.
 ms.assetid: d6c9c028-cb12-4767-a5de-b2312681ea13
 keywords:
-- onmouonup-Windows-Media Player
+- onmouseup Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,24 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: baa1713b828fc2d2c3dea885ec9a642c53710260
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 08059a66646834aac55c03c65ad9c80f6e1a60309a15c1867ef616c48036036d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364634"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119572200"
 ---
-# <a name="onmouseup"></a>OnMouseUp
+# <a name="onmouseup"></a>Onmouseup
 
-Der **OnMouseUp** -Ereignishandler behandelt ein Ereignis, das auftritt, wenn der Benutzer eine Maustaste loslässt, während sich der Mauszeiger über dem Element befindet.
+Der **Onmouseup-Ereignishandler** behandelt ein Ereignis, das eintritt, wenn der Benutzer eine Maustaste loslässt, während sich der Zeiger über dem Element befindet.
 
 ``` syntax
 onmouseup
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Ereignishandler ist für das **Wiedergabe** Listenelement nicht anwendbar.
+Dieser Ereignishandler gilt nicht für das **PLAYLIST-Element.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,7 +38,7 @@ Dieser Ereignishandler ist für das **Wiedergabe** Listenelement nicht anwendbar
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 70 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 70 oder höher<br/> |
 
 
 

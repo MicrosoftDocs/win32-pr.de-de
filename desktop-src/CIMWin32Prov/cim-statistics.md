@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ Statistics-Klasse stellt eine Zuordnung dar, die verwaltete Systemelemente mit den statistischen Gruppen verknüpft, die für Sie gelten.
+description: Die CIM Statistics-Klasse stellt eine Zuordnung dar, die verwaltete Systemelemente mit den statistischen Gruppen \_ verbindet, die für sie gelten.
 ms.assetid: fc75991b-adcd-4e47-b610-7503f6bb7c03
 ms.tgt_platform: multiple
 title: CIM_Statistics-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: b35299a52c771ee3bcb76673ef1e2164af3b3180
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 97f751460cc92e2f30fa734197e2bef3f2e48436b8ce9f20058cc921060188f4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958207"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119505860"
 ---
-# <a name="cim_statistics-class"></a>CIM- \_ Statistik Klasse
+# <a name="cim_statistics-class"></a>CIM \_ Statistics-Klasse
 
-Die **CIM \_ Statistics** -Klasse stellt eine Zuordnung dar, die verwaltete Systemelemente mit den statistischen Gruppen verknüpft, die für Sie gelten.
+Die **CIM \_ Statistics-Klasse** stellt eine Zuordnung dar, die verwaltete Systemelemente mit den statistischen Gruppen verbindet, die für sie gelten.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,13 +47,13 @@ class CIM_Statistics
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ Statistik** Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ Statistics-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ Statistics** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ Statistics-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -66,14 +66,14 @@ Datentyp: **CIM \_ ManagedSystemElement**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verweis auf die [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md) -Klasse, für die statistische Daten oder Metrikdaten definiert werden.
+Verweis auf die [**CIM \_ ManagedSystemElement-Klasse,**](cim-managedsystemelement.md) für die statistische oder Metrikdaten definiert sind.
 
 </dd> <dt>
 
 **Stats**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ statisticalinformation**
+Datentyp: **CIM \_ StatisticalInformation**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -83,11 +83,11 @@ Verweis auf die statistischen Informationen oder das Objekt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,8 +97,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

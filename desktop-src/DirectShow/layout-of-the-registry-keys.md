@@ -4,23 +4,23 @@ ms.assetid: c041d094-8165-446f-bf77-0d53b728fe7a
 title: Layout der Registrierungsschlüssel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5783a9f083f639912188f418238f46a5d45ed922
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 4473027b2612d16b3c6daee4f8e708d90b993397b133db111aa55c58e9c4ceb0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119502290"
 ---
 # <a name="layout-of-the-registry-keys"></a>Layout der Registrierungsschlüssel
 
 DirectShow-Filter werden an zwei Stellen registriert:
 
--   Die dll, die den Filter enthält, wird als com-Server des Filters registriert. Wenn eine Anwendung **cokreateinstance** aufruft, um den Filter zu erstellen, verwendet die Microsoft Windows com-Bibliothek diesen Registrierungs Eintrag, um die dll zu suchen.
--   Weitere Informationen über den Filter können in einer Filterkategorie registriert werden. Diese Informationen ermöglichen es dem [Enumerator des System Geräts](system-device-enumerator.md) und dem [Filter-Mapper](filter-mapper.md) , den Filter zu suchen.
+-   Die DLL, die den Filter enthält, wird als COM-Server des Filters registriert. Wenn eine Anwendung **CoCreateInstance aufruft,** um den Filter zu erstellen, verwendet die Microsoft Windows COM-Bibliothek diesen Registrierungseintrag, um die DLL zu suchen.
+-   Zusätzliche Informationen zum Filter können innerhalb einer Filterkategorie registriert werden. Diese Informationen ermöglichen es dem [Systemgeräte-Enumerator](system-device-enumerator.md) und der [Filterzuordnung,](filter-mapper.md) den Filter zu suchen.
 
-Zum Registrieren der zusätzlichen Filter Informationen sind keine Filter erforderlich. Solange die dll als com-Server registriert ist, kann eine Anwendung den Filter erstellen und einem Filter Diagramm hinzufügen. Wenn Sie jedoch möchten, dass der Filter vom Enumerator für System Geräte oder vom Filter Mapper erkannt werden kann, müssen Sie die zusätzlichen Informationen registrieren.
+Filter sind nicht erforderlich, um die zusätzlichen Filterinformationen zu registrieren. Solange die DLL als COM-Server registriert ist, kann eine Anwendung den Filter erstellen und einem Filterdiagramm hinzufügen. Wenn Der Filter jedoch vom Systemgeräte-Enumerator oder filter mapper ermittelt werden kann, müssen Sie die zusätzlichen Informationen registrieren.
 
-Der Registrierungs Eintrag für die dll verfügt über die folgenden Schlüssel:
+Der Registrierungseintrag für die DLL verfügt über die folgenden Schlüssel:
 
 
 ```
@@ -36,7 +36,7 @@ HKEY_CLASSES_ROOT
 
 
 
-Der Registrierungs Eintrag für die Filter Informationen verfügt über die folgenden Schlüssel:
+Der Registrierungseintrag für die Filterinformationen verfügt über die folgenden Schlüssel:
 
 
 ```
@@ -59,9 +59,9 @@ Category
 
 
 
-die GUID einer Filterkategorie. (Weitere Informationen finden Sie unter [Filter Kategorien](filter-categories.md).) Die Filter Informationen werden in ein Binärformat verpackt. Die [**IFilterMapper2**](/windows/desktop/api/Strmif/nn-strmif-ifiltermapper2) -Schnittstelle entpackt diese Daten, wenn Sie die Registrierung nach einem Filter durchsucht.
+ist die GUID einer Filterkategorie. (Siehe [Filterkategorien](filter-categories.md).) Die Filterinformationen werden in ein Binärformat gepackt. Die [**IFilterMapper2-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ifiltermapper2) entpackt diese Daten, wenn sie die Registrierung nach einem Filter durchsucht.
 
-Alle Filterkategorie-GUIDs sind in der Registrierung unter dem folgenden Schlüssel aufgeführt:
+Alle GUIDs der Filterkategorie werden in der Registrierung unter dem folgenden Schlüssel aufgeführt:
 
 
 ```C++

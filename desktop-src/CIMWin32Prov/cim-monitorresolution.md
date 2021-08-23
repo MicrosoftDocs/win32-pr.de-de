@@ -1,5 +1,5 @@
 ---
-description: Die CIM- \_ monitorresolution-Klasse stellt die Beziehung zwischen horizontaler und vertikaler Auflösung und der Aktualisierungsrate und dem Überprüfungs Modus für einen Desktop Monitor dar. Werte werden im Videocontroller Objekt angegeben.
+description: Die CIM MonitorResolution-Klasse stellt die Beziehung zwischen horizontaler und vertikaler Auflösung und der Aktualisierungsrate und dem Scanmodus \_ für einen Desktopmonitor dar. Werte werden im Videocontrollerobjekt angegeben.
 ms.assetid: 064620dd-2d92-42d0-9167-35867830a077
 ms.tgt_platform: multiple
 title: CIM_MonitorResolution-Klasse
@@ -23,23 +23,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: b359a2e7eccf31b32aced8a2ea9f85fb6dc48b7a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: aa1fd025c87b3b497e400351aed91af71bf4958f3ee8748bf5d23255540dc6cf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119506715"
 ---
-# <a name="cim_monitorresolution-class"></a>CIM- \_ monitorresolution-Klasse
+# <a name="cim_monitorresolution-class"></a>CIM \_ MonitorResolution-Klasse
 
-Die **CIM- \_ monitorresolution** -Klasse stellt die Beziehung zwischen horizontaler und vertikaler Auflösung und der Aktualisierungsrate und dem Überprüfungs Modus für einen Desktop Monitor dar. Werte werden im Videocontroller Objekt angegeben.
+Die **CIM \_ MonitorResolution-Klasse** stellt die Beziehung zwischen horizontaler und vertikaler Auflösung und der Aktualisierungsrate und dem Scanmodus für einen Desktopmonitor dar. Werte werden im Videocontrollerobjekt angegeben.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,126 +61,126 @@ class CIM_MonitorResolution : CIM_Setting
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ monitorresolution** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ MonitorResolution-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ monitorresolution** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ MonitorResolution-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Textbeschreibung des aktuellen-Objekts.
+Kurze Textbeschreibung des aktuellen Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Textbeschreibung des aktuellen-Objekts.
+Textbeschreibung des aktuellen -Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
 
 </dd> <dt>
 
 **HorizontalResolution**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ Videocontroller**](cim-videocontroller.md)".**Happthorizontalresolution**"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) (" MIF ". DMTF- \| Monitor Auflösungen \| 002,2 "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Pixel ")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VideoController**](cim-videocontroller.md).**CurrentHorizontalResolution**"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Monitorauflösungen \| 002.2"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Pixel")
 </dt> </dl>
 
-Horizontale Auflösung des Monitors in Pixel.
+Die horizontale Auflösung des Monitors in Pixel.
 
 </dd> <dt>
 
-**Maxfreshshrate**
+**MaxRefreshRate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ Videocontroller**](cim-videocontroller.md)".**Maxaktushrate**"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) (" MIF ". DMTF- \| Monitor Auflösungen \| 002,7 "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Hertz ")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VideoController**](cim-videocontroller.md).**MaxRefreshRate**"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Monitor Resolution \| 002.7"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
 </dt> </dl>
 
-Die maximale Aktualisierungsrate des Monitors in Hertz, wenn ein Bereich von Raten bei den angegebenen Auflösungen unterstützt wird.
+Die maximale Aktualisierungsrate des Monitors in Hertz, wenn ein Bereich von Raten mit den angegebenen Auflösungen unterstützt wird.
 
 </dd> <dt>
 
-**Minfreshshrate**
+**MinRefreshRate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ Videocontroller**](cim-videocontroller.md)".**Minfreshshrate**"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) (" MIF ". DMTF- \| Monitor Auflösungen \| 002,6 "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Hertz ")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VideoController**](cim-videocontroller.md).**MinRefreshRate**"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Monitor Resolution \| 002.6"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
 </dt> </dl>
 
-Die minimale Aktualisierungsrate des Monitors in Hertz, wenn ein Bereich von Raten bei den angegebenen Auflösungen unterstützt wird.
+Die minimale Aktualisierungsrate des Monitors in Hertz, wenn ein Bereich von Raten mit den angegebenen Auflösungen unterstützt wird.
 
 </dd> <dt>
 
 **RefreshRate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ Videocontroller**](cim-videocontroller.md)".**CurrentRefreshRate**"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) (" MIF ". DMTF- \| Monitor Auflösungen \| 002,4 "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Hertz ")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VideoController**](cim-videocontroller.md).**CurrentRefreshRate**"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Monitor Resolution \| 002.4"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
 </dt> </dl>
 
-Die Aktualisierungsrate des Monitors in Hertz. Wenn ein Bereich von Raten unterstützt wird, verwenden Sie die Eigenschaften **minaktushrate** und **maxfreshshrate** , und legen Sie diese Eigenschaft auf 0 fest.
+Aktualisierungsrate des Monitors in Hertz. Wenn ein Tarifbereich unterstützt wird, verwenden Sie die **Eigenschaften MinRefreshRate** und **MaxRefreshRate,** und legen Sie diese Eigenschaft auf 0 fest.
 
 </dd> <dt>
 
-**Scanmode**
+**ScanMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ Videocontroller**](cim-videocontroller.md)".**Currentscanmode**"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) (" MIF ". DMTF- \| Monitor Auflösungen \| 002,5 ")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VideoController**](cim-videocontroller.md).**CurrentScanMode**"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Monitor Resolution \| 002.5")
 </dt> </dl>
 
-Der Scanmodus, den der Monitor verwendet.
+Scanmodus, der vom Monitor verwendet wird.
 
 <dt>
 
@@ -207,14 +207,14 @@ Der Scanmodus, den der Monitor verwendet.
 
 <span id="Non-Interlaced_Operation"></span><span id="non-interlaced_operation"></span><span id="NON-INTERLACED_OPERATION"></span>
 
-**Nicht-Interlacing-Vorgang** (4)
+**Nicht verschachtelter Vorgang** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Interlaced_Operation"></span><span id="interlaced_operation"></span><span id="INTERLACED_OPERATION"></span>
 
-Zeilen Sprung **Vorgang** (5)
+**Interlaced-Vorgang** (5)
 
 
 </dt> <dd></dd> </dl>
@@ -224,40 +224,40 @@ Zeilen Sprung **Vorgang** (5)
 **SettingID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("SettingID"), [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("SettingID"), [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Dient als Teil des Schlüssels für die aktuelle-Instanz.
+Dient als Teil des Schlüssels für die aktuelle Instanz.
 
 </dd> <dt>
 
 **VerticalResolution**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ Videocontroller**](cim-videocontroller.md)".**Currentverticalresolution**"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) (" MIF ". DMTF- \| Monitor Auflösungen \| 002,3 "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Pixel ")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VideoController**](cim-videocontroller.md).**CurrentVerticalResolution**"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Monitorauflösungen \| 002.3"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Pixel")
 </dt> </dl>
 
 Vertikale Auflösung des Monitors in Pixel.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -267,17 +267,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Einstellung**](cim-setting.md)
+[**\_CIM-Einstellung**](cim-setting.md)
 </dt> </dl>
 
  

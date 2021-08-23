@@ -1,11 +1,11 @@
 ---
-title: ms-DS-Tasks-für-AZ-Role-BL-Attribut
-description: Rückwärts Verknüpfung von Az-Task zu Az-Role Objekten, die mit diesem verknüpft sind.
+title: ms-DS-Tasks-For-Az-Role-BL-Attribut
+description: Rückwärtsverbindung von Az-Task zu Az-Role Objekten, die mit ihr verknüpft sind.
 ms.assetid: 6cce9461-3515-4098-9c05-7b39a067aa40
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-Tasks-für-AZ-Role-BL-Attribut AD-Schema
-- AD-Schema des msDS-tasksforazrolebl-Attributs
+- ms-DS-Tasks-For-Az-Role-BL-Attribut-AD-Schema
+- MSDS-TasksForAzRoleBL-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dcdb496702e80a432ebe25872f8ccf6a13b3f284
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 28f14029804a027aff7c60a8b8749dace0815b813c20739e58bb8dd878afd45a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104520135"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119544310"
 ---
-# <a name="ms-ds-tasks-for-az-role-bl-attribute"></a>ms-DS-Tasks-für-AZ-Role-BL-Attribut
+# <a name="ms-ds-tasks-for-az-role-bl-attribute"></a>ms-DS-Tasks-For-Az-Role-BL-Attribut
 
-Rückwärts Verknüpfung von Az-Task zu Az-Role Objekten, die mit diesem verknüpft sind.
+Rückwärtsverbindung von Az-Task zu Az-Role Objekten, die mit ihr verknüpft sind.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-Tasks-für-AZ-Role-BL              |
-| LDAP-Display-Name | MSDS-tasksforazrolebl                   |
+| CN                | ms-DS-Tasks-for-Az-Role-BL              |
+| Ldap-Anzeigename | msDS-TasksForAzRoleBL                   |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | Dieser Wert wird vom System festgelegt.        |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | Dieser Wert wird vom System festgelegt.        |
 | Attribute-Id      | 1.2.840.113556.1.4.1815                 |
 | System-ID-GUID    | a0dcd536-5158-42fe-8c40-c00a7ad37959    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
@@ -42,13 +42,13 @@ Rückwärts Verknüpfung von Az-Task zu Az-Role Objekten, die mit diesem verknü
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,11 +56,11 @@ Rückwärts Verknüpfung von Az-Task zu Az-Role Objekten, die mit diesem verknü
 |------------------------|---------------------------------|
 | Link-ID                | 2025                            |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -77,11 +77,11 @@ Rückwärts Verknüpfung von Az-Task zu Az-Role Objekten, die mit diesem verknü
 |------------------------|---------------------------------|
 | Link-ID                | 2025                            |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -98,11 +98,11 @@ Rückwärts Verknüpfung von Az-Task zu Az-Role Objekten, die mit diesem verknü
 |------------------------|---------------------------------|
 | Link-ID                | 2025                            |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -119,11 +119,11 @@ Rückwärts Verknüpfung von Az-Task zu Az-Role Objekten, die mit diesem verknü
 |------------------------|---------------------------------|
 | Link-ID                | 2025                            |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -140,11 +140,11 @@ Rückwärts Verknüpfung von Az-Task zu Az-Role Objekten, die mit diesem verknü
 |------------------------|---------------------------------|
 | Link-ID                | 2025                            |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

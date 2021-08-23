@@ -1,11 +1,11 @@
 ---
-title: Die Methode "kreateinzustancefrompropertydata" der MicrosoftDNS_RPType-Klasse
-description: Die Methode "kreatinstancefrompropertydata" instanziiert einen Ressourcen Eintrag für eine verantwortliche Person (RP).
+title: CreateInstanceFromPropertyData-Methode der MicrosoftDNS_RPType-Klasse
+description: Die CreateInstanceFromPropertyData-Methode instanziiert einen Ressourceneintrag für eine verantwortliche Person (Responsible Person, RP).
 ms.assetid: 6d9366c3-fc82-4c1f-8fa3-c107f6a1ff74
 keywords:
-- Methode "samateinzustancefrompropertydata" (DNS)
-- Methode "-DNS", "MicrosoftDNS_RPType
-- DNS-MicrosoftDNS_RPType Klasse, Methode "Methode"
+- CreateInstanceFromPropertyData-Methode DNS
+- CreateInstanceFromPropertyData-Methode DNS, MicrosoftDNS_RPType-Klasse
+- MicrosoftDNS_RPType-Klasse DNS, CreateInstanceFromPropertyData-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c150a8a91a7a94fbea8492faea08b61d437a4c9d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9493a3ad57e8a30ed08f11b22e35514eb4b58df35a1291987a62dc1840e79c56
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104213719"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119642210"
 ---
-# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_rptype-class"></a>Methode "kreateinstancefrompropertydata" der MicrosoftDNS- \_ rptype-Klasse
+# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_rptype-class"></a>CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ RPType-Klasse
 
-Die Methode " **kreatinstancefrompropertydata** " instanziiert einen Ressourcen Eintrag für eine verantwortliche Person (RP).
+Die **CreateInstanceFromPropertyData-Methode** instanziiert einen Ressourceneintrag für eine verantwortliche Person (Responsible Person, RP).
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,31 +49,31 @@ void CreateInstanceFromPropertyData(
 
 <dl> <dt>
 
-*Dnsservername* \[ in\]
+*DnsServerName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name oder die IP-Adresse des DNS-Servers, der diesen RR enthält.
+FQDN oder IP-Adresse des DNS-Servers, der diese RR enthält.
 
 </dd> <dt>
 
-*Containername* \[ in\]
+*ContainerName* \[ In\]
 </dt> <dd>
 
-Der Name des Containers für die Zone, den Cache oder die roothints-Instanz, die diese RR enthält.
+Name des Containers für die Zone, den Cache oder die RootHints-Instanz, die diese RR enthält.
 
 </dd> <dt>
 
-Besitzer *Name* \[ in\]
+*OwnerName* \[ In\]
 </dt> <dd>
 
-Der Besitzer Name für die RR.
+Besitzername für die RR.
 
 </dd> <dt>
 
-*Recordclass* \[ in, optional\]
+*RecordClass* \[ in, optional\]
 </dt> <dd>
 
-Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
+Klasse der RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 
 
@@ -81,7 +81,7 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 |------------------------------------------------------------------------------------------------------|--------------------------|
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | IN (Internet)<br/> |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | CS (CSNET)<br/>    |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (Chaos)<br/>    |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (CHAOS)<br/>    |
 | <span id="4"></span><dl> <dt>**4**</dt> </dl> | HS (Hesiod)<br/>   |
 
 
@@ -90,31 +90,31 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 </dd> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*Gültigkeitsdauer* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, in der die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Rpmailbox* \[ in\]
+*RPMailbox* \[ In\]
 </dt> <dd>
 
-Vollständiger vollständiger vollständiger Name des Postfachs.
+FQDN, der das Postfach für die verantwortliche Person angibt.
 
 </dd> <dt>
 
-*TxtDomainName* \[ in\]
+*TXTDomainName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Daten Satz, für den txt-Ressourcen Einträge vorhanden sind.
+FQDN, für den TXT-Ressourceneinträge vorhanden sind.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue-Objekt.
+Verweis auf das neue Objekt.
 
 </dd> </dl>
 
@@ -130,8 +130,8 @@ Diese Methode gibt keinen Wert zurück.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -139,13 +139,13 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ rptype**](microsoftdns-rptype.md)
+[**MicrosoftDNS \_ RPType**](microsoftdns-rptype.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS- \_ rptype-Klasse**](microsoftdns-rptype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ RPType-Klasse**](microsoftdns-rptype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

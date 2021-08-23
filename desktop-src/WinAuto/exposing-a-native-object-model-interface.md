@@ -1,25 +1,25 @@
 ---
-title: Verfügbar machen einer systemeigenen Objektmodell Schnittstelle
-description: Wenn ein Benutzeroberflächen Element ein anderes System eigenes Objektmodell als Microsoft Active Accessibility oder eine Benutzeroberflächen Automatisierung unterstützt, kann es die benutzerdefinierte Schnittstelle verfügbar machen, indem auf die WM- \_ GetObject-Nachrichten reagiert wird, die den objID \_ nativeom-Objekt
+title: Verfügbar machen einer nativen Objektmodellschnittstelle
+description: Wenn ein Benutzeroberflächenelement ein anderes natives Objektmodell als Microsoft Active Accessibility oder Benutzeroberflächenautomatisierung unterstützt, kann es die benutzerdefinierte Schnittstelle verfügbar machen, indem es auf WM GETOBJECT-Meldungen reagiert, die den \_ OBJID NATIVEOM-Objektbezeichner \_ enthalten.
 ms.assetid: 430abeaf-e5ca-48c4-aa35-8d52a8cee2f1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e52543908e89a1cea57c981d60bf7cb2b9fbd1fb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 701ed721e8259aa3b707fa1d7a6f2e80b9da13a3760b9850edef22b169d772e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119644920"
 ---
-# <a name="exposing-a-native-object-model-interface"></a>Verfügbar machen einer systemeigenen Objektmodell Schnittstelle
+# <a name="exposing-a-native-object-model-interface"></a>Verfügbar machen einer nativen Objektmodellschnittstelle
 
-Wenn ein Benutzeroberflächen Element ein anderes System eigenes Objektmodell als Microsoft Active Accessibility oder eine Benutzeroberflächen Automatisierung unterstützt, kann es die benutzerdefinierte Schnittstelle verfügbar machen, indem auf die [**WM- \_ GetObject**](wm-getobject.md) -Nachrichten reagiert wird, die den [**objID \_ nativeom**](object-identifiers.md) -Objekt Um zu reagieren, sollte das UI-Element den Wert zurückgeben, der durch einen aufgerufenen der [**lresultfrobobject**](/windows/desktop/api/Oleacc/nf-oleacc-lresultfromobject) -Funktion abgerufen wird.
+Wenn ein Benutzeroberflächenelement ein anderes natives Objektmodell als Microsoft Active Accessibility oder Benutzeroberflächenautomatisierung unterstützt, kann es die benutzerdefinierte Schnittstelle verfügbar machen, indem es auf [**WM \_ GETOBJECT-Nachrichten**](wm-getobject.md) reagiert, die den [**OBJID \_ NATIVEOM-Objektbezeichner**](object-identifiers.md) enthalten. Um zu antworten, sollte das Benutzeroberflächenelement den Wert zurückgeben, der durch einen Aufruf der [**LresultFromObject-Funktion abgerufen**](/windows/desktop/api/Oleacc/nf-oleacc-lresultfromobject) wurde.
 
-Ein Client kann eine Schnittstelle von einem Benutzeroberflächen Element abrufen, das ein System eigenes Objektmodell unterstützt, indem die [**accessibleobjectfromwindow**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfromwindow) -Funktion aufgerufen und [**objID \_ nativeom**](object-identifiers.md) als zweiter Parameter angegeben wird.
+Ein Client kann eine Schnittstelle aus einem Benutzeroberflächenelement abrufen, das ein natives Objektmodell unterstützt, indem er die [**AccessibleObjectFromWindow-Funktion**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfromwindow) aufruft und [**OBJID \_ NATIVEOM**](object-identifiers.md) als zweiten Parameter angibt.
 
- 
+ 
 
- 
+ 
 
 
 

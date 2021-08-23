@@ -1,9 +1,9 @@
 ---
-title: LB_GETLOCALE Meldung (Winuser. h)
-description: Ruft das aktuelle Gebiets Schema des Listen Felds ab. Sie können das Gebiets Schema verwenden, um die richtige Sortierreihenfolge des angezeigten Texts (für Listenfelder mit dem lbs \_ -Sortier Stil) und des von der LB AddString-Nachricht hinzugefügten Texts zu bestimmen \_ .
+title: LB_GETLOCALE (Winuser.h)
+description: Ruft das aktuelle Locale des Listenfelds ab. Sie können das -Locale verwenden, um die richtige Sortierreihenfolge des angezeigten Texts (für Listenfelder mit dem LBS SORT-Format) und des von der \_ LB ADDSTRING-Meldung hinzugefügten Texts \_ zu bestimmen.
 ms.assetid: ec814b03-5ce2-4b81-a36c-ab4c115f88be
 keywords:
-- Windows-Steuerelemente für LB_GETLOCALE Meldung
+- LB_GETLOCALE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 57620b62011dba234710caf1b5d1c429da37ace9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 732bfac72502c38265f7c1651667dc235c440293c8435f16088eaee775a874f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119544520"
 ---
-# <a name="lb_getlocale-message"></a>\_GetLocale-Nachricht des lb
+# <a name="lb_getlocale-message"></a>LB \_ GETLOCALE-Nachricht
 
-Ruft das aktuelle Gebiets Schema des Listen Felds ab. Sie können das Gebiets Schema verwenden, um die richtige Sortierreihenfolge des angezeigten Texts (für Listenfelder mit dem [**lbs- \_ Sortier**](list-box-styles.md) Stil) und des von der [**lb \_ AddString**](lb-addstring.md) -Nachricht hinzugefügten Texts zu bestimmen.
+Ruft das aktuelle Locale des Listenfelds ab. Sie können das -Locale verwenden, um die richtige Sortierreihenfolge des angezeigten Texts (für Listenfelder mit [**dem LBS \_ SORT-Format)**](list-box-styles.md) und des von der [**LB \_ ADDSTRING-Meldung**](lb-addstring.md) hinzugefügten Texts zu bestimmen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,11 +45,11 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert gibt das aktuelle Gebiets Schema des Listen Felds an. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) enthält den Länder-/Regionscode, und das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den sprach Bezeichner.
+Der Rückgabewert gibt das aktuelle Locale des Listenfelds an. Das [**HIWORD enthält**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) den Länder-/Regioncode und [**das LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) den Sprachbezeichner.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Sprach-ID besteht aus einer unter Sprachen-ID und einem primären sprach Bezeichner. Verwenden Sie das [**primarylangid**](/windows/desktop/api/winnt/nf-winnt-primarylangid) -Makro, um den Bezeichner der Primärsprache aus dem [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) des Rückgabewerts zu extrahieren, und das [**sublangid**](/windows/desktop/api/winnt/nf-winnt-sublangid) -Makro, um die unter Sprachen-ID zu extrahieren.
+Der Sprachbezeichner besteht aus einem Bezeichner für die Untersprache und einem Bezeichner der primären Sprache. Verwenden Sie [**das PRIMARYLANGID-Makro,**](/windows/desktop/api/winnt/nf-winnt-primarylangid) um den Bezeichner der primären Sprache aus [**dem LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) des Rückgabewerts zu extrahieren, und das [**SUBLANGID-Makro,**](/windows/desktop/api/winnt/nf-winnt-sublangid) um den Bezeichner für die Untersprache zu extrahieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Die Sprach-ID besteht aus einer unter Sprachen-ID und einem primären sprach Bez
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -67,22 +67,22 @@ Die Sprach-ID besteht aus einer unter Sprachen-ID und einem primären sprach Bez
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**LB- \_ AddString**](lb-addstring.md)
+[**LB \_ ADDSTRING**](lb-addstring.md)
 </dt> <dt>
 
-[**LB- \_ setlocale**](lb-setlocale.md)
+[**LB \_ SETLOCALE**](lb-setlocale.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**Primarylangid**](/windows/desktop/api/winnt/nf-winnt-primarylangid)
+[**PRIMARYLANGID**](/windows/desktop/api/winnt/nf-winnt-primarylangid)
 </dt> <dt>
 
-[**Sublangid**](/windows/desktop/api/winnt/nf-winnt-sublangid)
+[**SUBLANGID**](/windows/desktop/api/winnt/nf-winnt-sublangid)
 </dt> </dl>
 
  

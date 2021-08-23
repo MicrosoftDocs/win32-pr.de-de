@@ -1,30 +1,30 @@
 ---
-title: Ermittlung von DMTF-Profilen durch Zuordnungs Durchlauf
-description: Eine Schlüsselkomponente der WMI-Infrastruktur (Windows-Verwaltungsinstrumentation) ist ein objektorientiertes Modell der verwaltbaren Entitäten in einem System.
+title: DMTF-Profilermittlung durch Zuordnungsdurchlauf
+description: Eine wichtige Komponente der WMI-Infrastruktur (Windows Management Instrumentation) ist ein objektorientiertes Modell der verwaltbaren Entitäten in einem System.
 ms.assetid: 21e03d78-bce1-471e-a826-e676d32990ba
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 776b3f5883075ddf549330c422efec558195c8fa
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: a8f49d1433d8263dff2c1d50007f9aa0daf1573c09ebc8d7a513eda658c51997
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "104391122"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119643150"
 ---
-# <a name="dmtf-profile-discovery-through-association-traversal"></a>Ermittlung von DMTF-Profilen durch Zuordnungs Durchlauf
+# <a name="dmtf-profile-discovery-through-association-traversal"></a>DMTF-Profilermittlung durch Zuordnungsdurchlauf
 
-Eine Schlüsselkomponente der WMI-Infrastruktur (Windows-Verwaltungsinstrumentation) ist ein objektorientiertes Modell der verwaltbaren Entitäten in einem System. Das Modell entspricht einem Standard, der vom Desktop Management Task Force ([DMTF](https://www.dmtf.org/standards/wsman)) verwaltet wird, und wird als Common Information Model (CIM) bezeichnet. Einige Klassen im Modell, z. b. [CIM \_ DataFile](../cimwin32prov/cim-datafile.md) oder [Win32 \_ Process](../cimwin32prov/win32-process.md), entsprechen direkt verwaltbaren Entitäten. Andere Klassen im Modell, z. b. [Win32- \_ Systemdienste](../cimwin32prov/win32-systemservices.md), stellen Beziehungen zwischen verwaltbaren Entitäten dar. Diese Beziehungs Modellierungs Klassen werden als Zuordnungs Klassen bezeichnet.
+Eine wichtige Komponente der WMI-Infrastruktur (Windows Management Instrumentation) ist ein objektorientiertes Modell der verwaltbaren Entitäten in einem System. Das Modell entspricht einem Standard, der von der Desktop Management Task Force[(DMTF)](https://www.dmtf.org/standards/wsman)verwaltet wird und als Common Information Model (CIM) bekannt ist. Einige Klassen im Modell, z. B. [CIM \_ DataFile](../cimwin32prov/cim-datafile.md) oder [Win32 \_ Process,](../cimwin32prov/win32-process.md)entsprechen direkt verwaltbaren Entitäten. Andere Klassen im Modell, z. B. [Win32 \_ SystemServices,](../cimwin32prov/win32-systemservices.md)stellen Beziehungen zwischen verwaltbaren Entitäten dar. Diese Beziehungsmodellierungsklassen werden als Zuordnungsklassen bezeichnet.
 
-Mithilfe der WMI-spezifischen Abfragesprache (WQL) können Sie Instanzen von Klassen abrufen, die verwaltbare Entitäten oder Instanzen von Zuordnungs Klassen darstellen. WQL ist jedoch Implementierungs spezifisch. Dies funktioniert nur mit der Windows-Implementierung des DMTF-Standards (WMI). Außerdem ist die WQL-Syntax zum Abrufen von Zuordnungs Klassen recht kompliziert.
+Mithilfe der WMI-spezifischen Abfragesprache WQL können Sie Instanzen von Klassen abrufen, die verwaltbare Entitäten oder Instanzen von Association-Klassen darstellen. WQL ist jedoch implementierungsspezifisch. Er funktioniert nur mit der Windows-Implementierung des DMTF-Standards (WMI). Darüber hinaus ist die WQL-Syntax zum Abrufen von Association-Klassen recht kompliziert.
 
-Die Windows-Remoteverwaltung-Infrastruktur (WinRM) bietet eine hervorragende Möglichkeit, die Funktionalität von WMI zu nutzen. In frühen Versionen von WinRM mussten WQL zum Abrufen von Instanzen von Zuordnungs Klassen verwendet werden. WinRM 2,0 umfasst ein neues Feature, das als DMTF-Profil Ermittlung über Association Traversal bezeichnet wird. Der Zuordnungs Durchlauf ermöglicht einem Benutzer von WinRM das Abrufen von Instanzen von Zuordnungs Klassen mithilfe eines Standardfilter Mechanismus, dem associationfilter-Dialekt, der in der DMTF-CIM-Bindungs Spezifikation definiert ist. Weitere Informationen zu Association Traversal finden Sie in der WS-Management CIM-Bindungs Spezifikation ( [https://www.dmtf.org/standards/wsman]( https://www.dmtf.org/standards/ws-man) ).
+Die Windows-Infrastruktur der Remoteverwaltung (WinRM) bietet eine hervorragende Möglichkeit, die Funktionalität von WMI zu nutzen. Frühe Versionen von WinRM mussten WQL verwenden, um Instanzen von Association-Klassen abzurufen. WinRM 2.0 enthält ein neues Feature, das als DMTF-Profilermittlung durch Zuordnungsdurchlauf bezeichnet wird. Der Zuordnungsdurchlauf ermöglicht einem Benutzer von WinRM das Abrufen von Instanzen von Association-Klassen mithilfe eines Standardfiltermechanismus, des AssociationFilter-Dialekts, der in der DMTF CIM-Bindungsspezifikation definiert ist. Weitere Informationen zum Zuordnungsdurchlauf finden Sie in der WS-Management CIM-Bindungsspezifikation ( [https://www.dmtf.org/standards/wsman]( https://www.dmtf.org/standards/ws-man) ).
 
-Das WinRM-Hilfsprogramm bietet einen einfachen Mechanismus zum Durchlaufen der entsprechenden Zuordnung und zum Abrufen eines Geräte Profils.
+Das Hilfsprogramm winrm bietet einen einfachen Mechanismus, um die entsprechende Zuordnung zu durchlaufen und ein Geräteprofil abzurufen.
 
-## <a name="configuration-implementation-details"></a>Details zur Konfigurations Implementierung
+## <a name="configuration-implementation-details"></a>Details zur Konfigurationsimplementierung
 
-Das WinRM-Hilfsprogramm unterstützt jetzt einen Dialekt für die Zuordnungs Anforderung. Entweder der URI oder der Alias kann mit dem WinRM-Hilfsprogramm angegeben werden.
+Das Hilfsprogramm winrm unterstützt jetzt einen Dialekt für die Zuordnungsanforderung. Entweder der URI oder der Alias kann mit dem Hilfsprogramm winrm angegeben werden.
 
 
 
@@ -34,15 +34,15 @@ Das WinRM-Hilfsprogramm unterstützt jetzt einen Dialekt für die Zuordnungs Anf
 
 
 
- 
+ 
 
-## <a name="retrieving-instances-of-an-association-class-by-using-the-associationfilter-dialect"></a>Abrufen von Instanzen einer Association-Klasse mithilfe des associationfilter-Dialekts
+## <a name="retrieving-instances-of-an-association-class-by-using-the-associationfilter-dialect"></a>Abrufen von Instanzen einer Zuordnungsklasse mithilfe des AssociationFilter-Dialekts
 
-Das WinRM-Hilfsprogramm kann WMI-Zuordnungs Klassen Instanzen einer bestimmten Quell Instanz abrufen. Der folgende Befehl veranschaulicht, wie das WinRM-Hilfsprogramm verwendet wird, um Instanzen von [Win32- \_ Dienst](../cimwin32prov/win32-service.md) Zuordnungs Klassen abzurufen. Der Switch "-Zuordnungen" muss verwendet werden, um Zuordnungs Klassen zurückzugeben.
+Das Hilfsprogramm winrm kann WMI-Zuordnungsklasseninstanzen einer bestimmten Quellinstanz abrufen. Der folgende Befehl veranschaulicht die Verwendung des Hilfsprogramms winrm zum Abrufen von Instanzen von [ \_ Win32-Dienst-Zuordnungsklassen.](../cimwin32prov/win32-service.md) Der Schalter "-associations" muss zum Zurückgeben von Zuordnungsklassen verwendet werden.
 
-**WinRM auflisten wmicimv2/ \* -Dialekt: Association-Zuordnungen-Filter: {Object = Win32 \_ Service? Name = WinRM; resultclassname = Win32 \_ dependentservice; Role = Dependent}**
+**winrm enumerate wmicimv2/ \* -dialect:association -associations -filter:{object=win32 \_ service?name=winrm;resultclassname=win32 \_ dependentservice;role=dependent}**
 
-Der folgende textbasierte Code Ausschnitt ist die Ausgabe des obigen Befehls:
+Der folgende textbasierte Codeausschnitt ist die Ausgabe des obigen Befehls:
 
 ``` syntax
 Win32_DependentService
@@ -76,13 +76,13 @@ Win32_DependentService
     TypeOfDependency = null
 ```
 
-## <a name="retrieving-instances-of-an-associated-class-by-using-the-associationfilter-dialect"></a>Abrufen von Instanzen einer zugeordneten Klasse mithilfe des associationfilter-Dialekts
+## <a name="retrieving-instances-of-an-associated-class-by-using-the-associationfilter-dialect"></a>Abrufen von Instanzen einer zugeordneten Klasse mithilfe des AssociationFilter-Dialekts
 
-Mit dem WinRM-Hilfsprogramm können WMI-Klassen Instanzen abgerufen werden, die einer bestimmten Quell Instanz zugeordnet sind. Der folgende Befehl veranschaulicht, wie das WinRM-Hilfsprogramm verwendet wird, um Instanzen von zugeordneten [Win32- \_ Dienst](../cimwin32prov/win32-service.md) Klassen abzurufen.
+Das Hilfsprogramm winrm kann WMI-Klasseninstanzen abrufen, die einer bestimmten Quellinstanz zugeordnet sind. Der folgende Befehl veranschaulicht die Verwendung des Hilfsprogramms winrm zum Abrufen von Instanzen der zugeordneten Klassen des [Win32-Diensts. \_ ](../cimwin32prov/win32-service.md)
 
-**WinRM auflisten wmicimv2/ \* -Dialekt: Association-Filter: {Object = Win32 \_ Service? Name = WinRM; associationclassname = Win32 \_ dependentservice; resultclassname = Win32 \_ Service; RESULTROLE = Vorgänger; Role = Dependent}**
+**winrm enumerate wmicimv2/ \* -dialect:association -filter:{object=win32 \_ service?name=winrm;associationclassname=win32 \_ dependentservice;resultclassname=win32 \_ service;resultrole=antecedent;role=dependent}**
 
-Der folgende textbasierte Code Ausschnitt ist die Ausgabe des obigen Befehls:
+Der folgende textbasierte Codeausschnitt ist die Ausgabe des obigen Befehls:
 
 ``` syntax
 Win32_Service
@@ -112,6 +112,6 @@ Win32_Service
     WaitHint = 0
 ```
 
- 
+ 
 
- 
+ 

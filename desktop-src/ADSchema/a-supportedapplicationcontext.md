@@ -1,11 +1,11 @@
 ---
-title: Unterstützt-Anwendungskontext Attribut
-description: Gibt die Objekt Bezeichner von Anwendungs Kontexten an, die von einer OSI-Anwendung unterstützt werden.
+title: Supported-Application-Context-Attribut
+description: Gibt die Objektbezeichner von Anwendungskontexten an, die von einer OSI-Anwendung unterstützt werden.
 ms.assetid: 803d68bc-4537-4a45-bd86-b0558076e4df
 ms.tgt_platform: multiple
 keywords:
-- 'Unterstützt: AD-Schema des Anwendungskontext Attributs'
-- supportedapplicationcontext-Attribut AD-Schema
+- Supported-Application-Context-Attribut AD-Schema
+- supportedApplicationContext-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 29512a4d9588a8097ca531acd477c08b0e316876
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: abeb9f3a7b7a0956798fb20a3fcbbe77040efa8dcd6b6909a0115bf68957ebc6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519972"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119645481"
 ---
-# <a name="supported-application-context-attribute"></a>Unterstützt-Anwendungskontext Attribut
+# <a name="supported-application-context-attribute"></a>Supported-Application-Context-Attribut
 
-Gibt die Objekt Bezeichner von Anwendungs Kontexten an, die von einer OSI-Anwendung unterstützt werden.
+Gibt die Objektbezeichner von Anwendungskontexten an, die von einer OSI-Anwendung unterstützt werden.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | Unterstützt-Anwendungskontext                         |
-| LDAP-Display-Name | supportedapplicationcontext                           |
+| CN                | Supported-Application-Context                         |
+| Ldap-Anzeigename | supportedApplicationContext                           |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 2.5.4.30                                              |
-| System-ID-GUID    | 1677588f -47b3-11d1-a9c3-0000b80367c1                  |
+| System-ID-GUID    | 1677588f-47f3-11d1-a9c3-0000f80367c1                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Gibt die Objekt Bezeichner von Anwendungs Kontexten an, die von einer OSI-Anwend
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,38 +56,38 @@ Gibt die Objekt Bezeichner von Anwendungs Kontexten an, die von einer OSI-Anwend
 | Eingabe | Wert |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                  |
-| MAPI-Id                | 0x813d                                                                                                                              |
+| MAPI-Id                | 0x813D                                                                                                                              |
 | System-Only            | False                                                                                                                               |
-| Ist-einwertig       | False                                                                                                                               |
+| Ist einwertig       | False                                                                                                                               |
 | Ist indiziert             | False                                                                                                                               |
 | Im globalen Katalog      | False                                                                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                        |
 | Range-Lower            | \-                                                                                                                                  |
 | Range-Upper            | \-                                                                                                                                  |
 | Search-Flags           | 0x00000000                                                                                                                          |
 | System-Flags           | 0x00000000                                                                                                                          |
-| In verwendete Klassen        | [**Anwendungs Entität**](c-applicationentity.md)<br/> [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> |
+| In verwendete Klassen        | [**Anwendungsentität**](c-applicationentity.md)<br/> [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                  |
-| MAPI-Id                | 0x813d                                                                                                                              |
+| MAPI-Id                | 0x813D                                                                                                                              |
 | System-Only            | False                                                                                                                               |
-| Ist-einwertig       | False                                                                                                                               |
+| Ist einwertig       | False                                                                                                                               |
 | Ist indiziert             | False                                                                                                                               |
 | Im globalen Katalog      | False                                                                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                        |
 | Range-Lower            | \-                                                                                                                                  |
 | Range-Upper            | \-                                                                                                                                  |
 | Search-Flags           | 0x00000000                                                                                                                          |
 | System-Flags           | 0x00000000                                                                                                                          |
-| In verwendete Klassen        | [**Anwendungs Entität**](c-applicationentity.md)<br/> [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> |
+| In verwendete Klassen        | [**Anwendungsentität**](c-applicationentity.md)<br/> [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> |
 
 
 
@@ -98,17 +98,17 @@ Gibt die Objekt Bezeichner von Anwendungs Kontexten an, die von einer OSI-Anwend
 | Eingabe | Wert |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                  |
-| MAPI-Id                | 0x813d                                                                                                                              |
+| MAPI-Id                | 0x813D                                                                                                                              |
 | System-Only            | False                                                                                                                               |
-| Ist-einwertig       | False                                                                                                                               |
+| Ist einwertig       | False                                                                                                                               |
 | Ist indiziert             | False                                                                                                                               |
 | Im globalen Katalog      | False                                                                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                        |
 | Range-Lower            | \-                                                                                                                                  |
 | Range-Upper            | \-                                                                                                                                  |
 | Search-Flags           | 0x00000000                                                                                                                          |
 | System-Flags           | 0x00000000                                                                                                                          |
-| In verwendete Klassen        | [**Anwendungs Entität**](c-applicationentity.md)<br/> [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> |
+| In verwendete Klassen        | [**Anwendungsentität**](c-applicationentity.md)<br/> [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> |
 
 
 
@@ -119,17 +119,17 @@ Gibt die Objekt Bezeichner von Anwendungs Kontexten an, die von einer OSI-Anwend
 | Eingabe | Wert |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                  |
-| MAPI-Id                | 0x813d                                                                                                                              |
+| MAPI-Id                | 0x813D                                                                                                                              |
 | System-Only            | False                                                                                                                               |
-| Ist-einwertig       | False                                                                                                                               |
+| Ist einwertig       | False                                                                                                                               |
 | Ist indiziert             | False                                                                                                                               |
 | Im globalen Katalog      | False                                                                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                        |
 | Range-Lower            | \-                                                                                                                                  |
 | Range-Upper            | \-                                                                                                                                  |
 | Search-Flags           | 0x00000000                                                                                                                          |
 | System-Flags           | 0x00000000                                                                                                                          |
-| In verwendete Klassen        | [**Anwendungs Entität**](c-applicationentity.md)<br/> [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> |
+| In verwendete Klassen        | [**Anwendungsentität**](c-applicationentity.md)<br/> [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> |
 
 
 
@@ -140,17 +140,17 @@ Gibt die Objekt Bezeichner von Anwendungs Kontexten an, die von einer OSI-Anwend
 | Eingabe | Wert |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                  |
-| MAPI-Id                | 0x813d                                                                                                                              |
+| MAPI-Id                | 0x813D                                                                                                                              |
 | System-Only            | False                                                                                                                               |
-| Ist-einwertig       | False                                                                                                                               |
+| Ist einwertig       | False                                                                                                                               |
 | Ist indiziert             | False                                                                                                                               |
 | Im globalen Katalog      | False                                                                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                        |
 | Range-Lower            | \-                                                                                                                                  |
 | Range-Upper            | \-                                                                                                                                  |
 | Search-Flags           | 0x00000000                                                                                                                          |
 | System-Flags           | 0x00000000                                                                                                                          |
-| In verwendete Klassen        | [**Anwendungs Entität**](c-applicationentity.md)<br/> [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> |
+| In verwendete Klassen        | [**Anwendungsentität**](c-applicationentity.md)<br/> [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> |
 
 
 
@@ -161,17 +161,17 @@ Gibt die Objekt Bezeichner von Anwendungs Kontexten an, die von einer OSI-Anwend
 | Eingabe | Wert |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                  |
-| MAPI-Id                | 0x813d                                                                                                                              |
+| MAPI-Id                | 0x813D                                                                                                                              |
 | System-Only            | False                                                                                                                               |
-| Ist-einwertig       | False                                                                                                                               |
+| Ist einwertig       | False                                                                                                                               |
 | Ist indiziert             | False                                                                                                                               |
 | Im globalen Katalog      | False                                                                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                        |
 | Range-Lower            | \-                                                                                                                                  |
 | Range-Upper            | \-                                                                                                                                  |
 | Search-Flags           | 0x00000000                                                                                                                          |
 | System-Flags           | 0x00000000                                                                                                                          |
-| In verwendete Klassen        | [**Anwendungs Entität**](c-applicationentity.md)<br/> [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> |
+| In verwendete Klassen        | [**Anwendungsentität**](c-applicationentity.md)<br/> [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> |
 
 
 
