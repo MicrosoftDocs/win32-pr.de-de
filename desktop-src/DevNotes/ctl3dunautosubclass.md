@@ -1,5 +1,5 @@
 ---
-description: Deaktiviert die automatische unter Klassifizierung.
+description: Deaktiviert die automatische Unterklasse.
 ms.assetid: 85e5689f-6805-4aad-b97c-aa496e315900
 title: Ctl3dUnAutoSubclass-Funktion
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ctl3d32.dll
-ms.openlocfilehash: 1250deb16307400898c92d36b9dda214115ec01d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ca7980705ca93ad88b7c9e535abe59c3cdcc2e011130c843f0e89a533ce97599
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119654470"
 ---
 # <a name="ctl3dunautosubclass-function"></a>Ctl3dUnAutoSubclass-Funktion
 
-Deaktiviert die automatische unter Klassifizierung.
+Deaktiviert die automatische Unterklasse.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,11 +39,11 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Funktion erfolgreich ausgeführt wurde. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE zurück,** wenn die Funktion erfolgreich ist. andernfalls wird **FALSE zurückgegeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

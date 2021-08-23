@@ -1,49 +1,49 @@
 ---
-description: Die Microsoft Digest Challenge wird durch den ursprünglichen Rückruf des Servers an die Funktion "akzeptsecuritycontext (Digest)" generiert.
+description: Die Microsoft Digest wird durch den ersten Aufruf der AcceptSecurityContext-Funktion (Digest) des Servers generiert.
 ms.assetid: d33383c2-5c0d-401f-ab28-2a985f6508e0
-title: Die Digest-Abfrage wird erzeugt.
+title: Generieren der Digest-Herausforderung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 511ec4f01c90acf08669835f9728cc711dfd1023
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 08a01a7edfa6498ed621e351c114e65a6d4ff6ef7a75b459cb29e00f0dc668a6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217780"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119623330"
 ---
-# <a name="generating-the-digest-challenge"></a>Die Digest-Abfrage wird erzeugt.
+# <a name="generating-the-digest-challenge"></a>Generieren der Digest-Herausforderung
 
-Die Microsoft Digest Challenge wird durch den ursprünglichen Rückruf des Servers an die Funktion " [**akzeptsecuritycontext (Digest)**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) " generiert. Dieser Funktions Aufrufwert generiert eine Nonce, bei der es sich um einen eindeutigen Wert handelt, der Informationen enthält, die zum Erkennen von Sicherheitsverletzungen verwendet werden können. Dieser Befehl generiert außerdem einen partiellen [*Sicherheitskontext*](/windows/desktop/SecGloss/s-gly) , der verwendet wird, um Zustandsinformationen zu verwalten. Beim Aufrufen von " **Accept-SecurityContext (Digest)** " geben Sie kontextanstellungsflags an, um das Verhalten von Microsoft Digest zu steuern und die Qualität des Schutzes festzulegen. Weitere Informationen finden Sie unter [Digest-Abfrage Kontext Anforderungen](#digest-challenge-context-requirements).
+Die Microsoft Digest wird durch den ersten Aufruf der [**AcceptSecurityContext-Funktion (Digest) des**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) Servers generiert. Dieser Funktionsaufruf generiert eine Nonce. Dies ist ein eindeutiger Wert, der Informationen enthält, die zum Erkennen von Sicherheitsverletzungen verwendet werden können. Dieser Aufruf generiert auch einen partiellen [*Sicherheitskontext,*](/windows/desktop/SecGloss/s-gly) der zum Verwalten von Zustandsinformationen verwendet wird. Beim Aufrufen **von AcceptSecurityContext (Digest)** geben Sie Kontextanforderungenflags an, um das Verhalten von Microsoft Digest und die Qualität des Schutzes festzulegen. Weitere Informationen finden Sie unter [Digest Challenge Context Requirements](#digest-challenge-context-requirements).
 
-Bei der Ausgabe des ersten Aufrufes der [**Accept-SecurityContext (Digest)**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) - [*Funktion*](/windows/desktop/SecGloss/c-gly) handelt es sich um einen Sicherheitspuffer, der ein Token enthält, das mit einer HTTP 401-Antwort (Zugriff verweigert) an den Client gesendet wird.
+Die Ausgabe des ersten Aufrufs der [**AcceptSecurityContext-Funktion (Digest)**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) [](/windows/desktop/SecGloss/c-gly) ist ein Sicherheitspuffer, der ein Token enthält, das mit einer HTTP 401-Antwort (Zugriff verweigert) an den Client gesendet wird.
 
 > [!Note]  
-> Aufrufe von [**akzeptsecuritycontext (Digest)**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) , die keine Informationen in den Eingabe Puffern enthalten, geben eine Digestherausforderung zurück.
+> Aufrufe [**von AcceptSecurityContext (Digest),**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) die keine Informationen in den Eingabepuffern enthalten, geben eine Digest-Herausforderung zurück.
 
  
 
-## <a name="digest-challenge-context-requirements"></a>Kontext Anforderungen für Digest-Anforderungen
+## <a name="digest-challenge-context-requirements"></a>Digest Challenge Context Requirements
 
-Kontext Anforderungen sind Flags, die Folgendes bestimmen:
+Kontextanforderungen sind Flags, die Dies bestimmen:
 
--   Gibt an, ob Microsoft Digest als SASL-Mechanismus oder http-Authentifizierungsprotokoll fungiert.
--   Die Qualität des Schutzes, der durch den vom Client und vom Server gemeinsam genutzten Sicherheitskontext unterstützt wird.
+-   Ob Microsoft Digest als SASL-Mechanismus oder HTTP-Authentifizierungsprotokoll fungiert.
+-   Die Qualität des Schutzes, die vom Sicherheitskontext unterstützt wird, der vom Client und Server gemeinsam genutzt wird.
 
-Standardmäßig Microsoft Digest Funktionen als SASL-Mechanismus. Um es für die HTTP-Authentifizierung zu verwenden, muss das ASC \_ req \_ http (0x10000000)-Flag vom Server festgelegt werden.
+Standardmäßig fungiert Microsoft Digest als SASL-Mechanismus. Um ihn für die HTTP-Authentifizierung zu verwenden, muss das ASC \_ REQ \_ HTTP-Flag (0x10000000) vom Server festgelegt werden.
 
-Kontext Anforderungen werden als Flags angegeben, die an den Parameter *fContextReq* der Funktion " [**Accept-SecurityContext (Digest)**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) " übergeben werden. Die Flags wirken sich auf die Qualität des Sicherheits Kontexts aus, indem Sie die QoP-Direktive in der Herausforderung steuern.
+Kontextanforderungen werden als Flags angegeben, die an den *fContextReq-Parameter* der [**AcceptSecurityContext-Funktion (Digest) übergeben**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) werden. Die Flags beeinflussen die Qualität des Schutzes des Sicherheitskontexts, indem sie die qop-Direktive in der Herausforderung steuern.
 
-Standardmäßig ist die QoP-Direktive auf "auth" festgelegt. Um eine Aufforderung zu generieren, die die QoP-Direktive auf "auth-int" festlegt, muss der Server mindestens eines der folgenden Flags angeben:
+Standardmäßig ist die qop-Direktive auf "auth" festgelegt. Um eine Herausforderung zu generieren, die die qop-Direktive auf "auth-int" setzt, muss der Server eines oder mehrere der folgenden Flags angeben:
 
--   ASC \_ req- \_ Integrität
--   ASC \_ req \_ Replay \_ Detect
--   ASC \_ req- \_ Sequenz \_ Erkennung
+-   ASC \_ \_ REQ-INTEGRITÄT
+-   ASC \_ REQ \_ REPLAY \_ DETECT
+-   ASC \_ REQ \_ SEQUENCE \_ DETECT
 
-Nur für SASL: Generieren Sie eine Herausforderung, wenn die QoP-Direktive auf "auth-conf" festgelegt ist, indem Sie das Flag "ASC \_ req \_ Vertraulichkeit Context Requirements" angeben. Da dieses Flag für die HTTP-Authentifizierung nicht gültig ist, kann es nicht mit dem ASC \_ req-http-Flag verwendet werden \_ .
+Nur für SASL: Generieren Sie eine Abfrage, bei der die qop-Direktive auf "auth-conf" festgelegt ist, indem Sie das ASC \_ REQ \_ CONFIDENTIALITY-Kontextanforderungsflag angeben. Da dieses Flag für die HTTP-Authentifizierung nicht gültig ist, kann es nicht mit dem ASC \_ \_ REQ-HTTP-Flag verwendet werden.
 
-Weitere Informationen zur QoP-Direktive finden Sie unter [Qualität von Schutz und Chiffren](quality-of-protection-and-ciphers.md).
+Weitere Informationen zur qop-Direktive finden Sie unter [Quality of Protection and Ciphers](quality-of-protection-and-ciphers.md).
 
-Weitere Informationen zu den Herausforderungen finden Sie unter [Content of a Digest Challenge](contents-of-a-digest-challenge.md).
+Weitere Informationen zu Herausforderungen finden Sie unter [Inhalt einer Digest-Herausforderung.](contents-of-a-digest-challenge.md)
 
  
 

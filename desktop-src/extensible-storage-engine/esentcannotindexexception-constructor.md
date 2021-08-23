@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentcannotindexexception-Konstruktor'
-title: Esentcannotindexexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentCannotIndexException-Konstruktor'
+title: EsentCannotIndexException-Konstruktor
 TOCTitle: 'EsentCannotIndexException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentCannotIndexException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcannotindexexception.esentcannotindexexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 84f56c0c6b1a7c5cd911fab4182c7465e2d746d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 91cfc6fdbb5665351ced0051ce23487a72fa2c3c1423416f33594b0dacb0d89d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119737120"
 ---
-# <a name="esentcannotindexexception-constructor"></a>Esentcannotindexexception-Konstruktor
+# <a name="esentcannotindexexception-constructor"></a>EsentCannotIndexException-Konstruktor
 
-Initialisiert eine neue Instanz der esentcannotindexexception-Klasse.
+Initialisiert eine neue Instanz der EsentCannotIndexException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentCannotIndexException()
 public EsentCannotIndexException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcannotindexexception-Klasse](./esentcannotindexexception-class.md)
+[EsentCannotIndexException-Klasse](./esentcannotindexexception-class.md)
 
-[Esentcannotindexexception-Member](./esentcannotindexexception-members.md)
+[EsentCannotIndexException-Member](./esentcannotindexexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

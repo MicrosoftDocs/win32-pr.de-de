@@ -1,7 +1,7 @@
 ---
-description: Gibt den Gebiets Schema Bezeichner des angegebenen Strichs zurück.
+description: Gibt den Gebietsschemabezeichner des angegebenen Strichs zurück.
 ms.assetid: a5fb9b7a-ed3e-4552-9412-39529203bd81
-title: 'Iinkanalyzer:: GetStrokeLanguageId-Methode (iacom. h)'
+title: IInkAnalyzer::GetStrokeLanguageId-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: a231dde453467ad2973d729fa068cedcc35151c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8b61bfa61b4e4aa2c8415c9596cb97a3b0c1313cf3a080d065a7c82e4d69b84d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119713390"
 ---
-# <a name="iinkanalyzergetstrokelanguageid-method"></a>Iinkanalyzer:: GetStrokeLanguageId-Methode
+# <a name="iinkanalyzergetstrokelanguageid-method"></a>IInkAnalyzer::GetStrokeLanguageId-Methode
 
-Gibt den Gebiets Schema Bezeichner des angegebenen Strichs zurück.
+Gibt den Gebietsschemabezeichner des angegebenen Strichs zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,27 +40,27 @@ HRESULT GetStrokeLanguageId(
 
 <dl> <dt>
 
-*lstrokeid* \[ in\]
+*lStrokeId* \[ In\]
 </dt> <dd>
 
-Der Strich Bezeichner.
+Der Strichbezeichner.
 
 </dd> <dt>
 
-*lstrokelcid* \[ vorgenommen\]
+*lStrokeLCID* \[ out\]
 </dt> <dd>
 
-Der Gebiets Schema Bezeichner für den angegebenen Strich.
+Der Gebietsschemabezeichner für den angegebenen Strich.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Gebiets Schema des Strichs wird festgelegt, wenn Sie den Strich durch Aufrufen von [**iinkanalyzer:: AddStroke Method**](iinkanalyzer-addstroke.md), [**iinkanalyzer:: addstrokeforlanguage-Methode**](iinkanalyzer-addstrokeforlanguage.md), [**iinkanalyzer:: addstriche**](iinkanalyzer-addstrokes.md)-Methode oder [**iinkanalyzer:: addstrokesforlanguage**](iinkanalyzer-addstrokesforlanguage.md)-Methode hinzufügen. Um das Gebiets Schema des Strichs zu ändern, verwenden Sie die [**iinkanalyzer:: SetStrokeLanguageId-Methode**](iinkanalyzer-setstrokelanguageid.md) oder die [**iinkanalyzer:: SetStrokesLanguageId-Methode**](iinkanalyzer-setstrokeslanguageid.md).
+Das Gebietsschema des Strichs wird festgelegt, wenn Sie den Strich hinzufügen, indem Sie [**die IInkAnalyzer::AddStroke-Methode,**](iinkanalyzer-addstroke.md) [**die IInkAnalyzer::AddStrokeForLanguage-Methode,**](iinkanalyzer-addstrokeforlanguage.md)die [**IInkAnalyzer::AddStrokes-Methode**](iinkanalyzer-addstrokes.md)oder [**die IInkAnalyzer::AddStrokesForLanguage-Methode**](iinkanalyzer-addstrokesforlanguage.md)aufrufen. Verwenden Sie zum Ändern des Gebietsschemas des Strichs die [**IInkAnalyzer::SetStrokeLanguageId-Methode**](iinkanalyzer-setstrokelanguageid.md) oder [**die IInkAnalyzer::SetStrokesLanguageId-Methode.**](iinkanalyzer-setstrokeslanguageid.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,27 +68,27 @@ Das Gebiets Schema des Strichs wird festgelegt, wenn Sie den Strich durch Aufruf
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: SetStrokeLanguageId-Methode**](iinkanalyzer-setstrokelanguageid.md)
+[**IInkAnalyzer::SetStrokeLanguageId-Methode**](iinkanalyzer-setstrokelanguageid.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: SetStrokesLanguageId-Methode**](iinkanalyzer-setstrokeslanguageid.md)
+[**IInkAnalyzer::SetStrokesLanguageId-Methode**](iinkanalyzer-setstrokeslanguageid.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

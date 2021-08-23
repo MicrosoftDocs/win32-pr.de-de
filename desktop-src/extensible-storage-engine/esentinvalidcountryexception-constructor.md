@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentinvalidcountryexception-Konstruktor'
-title: Esentinvalidcountryexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentInvalidCountryException-Konstruktor'
+title: EsentInvalidCountryException-Konstruktor
 TOCTitle: 'EsentInvalidCountryException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidCountryException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidcountryexception.esentinvalidcountryexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d47e39c6a9b94a20b3a39fb642c911cea3591469
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7027b7893c01325f11cc668783464b6527fb4061c44fe05e7671c3e29bb6e51c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119723760"
 ---
-# <a name="esentinvalidcountryexception-constructor"></a>Esentinvalidcountryexception-Konstruktor
+# <a name="esentinvalidcountryexception-constructor"></a>EsentInvalidCountryException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidcountryexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidCountryException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentInvalidCountryException()
 public EsentInvalidCountryException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidcountryexception-Klasse](./esentinvalidcountryexception-class.md)
+[EsentInvalidCountryException-Klasse](./esentinvalidcountryexception-class.md)
 
-[Esentinvalidcountryexception-Member](./esentinvalidcountryexception-members.md)
+[EsentInvalidCountryException-Member](./esentinvalidcountryexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

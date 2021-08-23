@@ -1,7 +1,7 @@
 ---
-description: Die WIA \_ \_ -rohheaderstruktur definiert ein Bild im RAW-Datenformat eines Geräts und ermöglicht es Anwendungen, bei der Übertragung von Windows-Bild Käufen (WIA) das RAW-Format zu verwenden.
+description: Die WIA \_ RAW \_ HEADER-Struktur definiert ein Bild im RAW-Datenformat eines Geräts und ermöglicht Anwendungen die Verwendung des RAW-Formats in Windows Wia-Übertragungen (Image Acquisition).
 ms.assetid: c7b50816-d596-4c62-a00e-cd8d6e303e42
-title: WIA_RAW_HEADER Struktur (wiadef. h)
+title: WIA_RAW_HEADER-Struktur (Wiadef.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Wiadef.h
-ms.openlocfilehash: 8da33f0b257168712f1b16fb7f940df5db862d3f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2b4e89f47737788fa9ebf238f06f6420eafbc31d7b27ab7933372d0716fb6588
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119812950"
 ---
-# <a name="wia_raw_header-structure"></a>WIA \_ - \_ rohheader Struktur
+# <a name="wia_raw_header-structure"></a>WIA \_ RAW \_ HEADER-Struktur
 
-Die **WIA \_ - \_ rohheaderstruktur** definiert ein Bild im RAW-Datenformat eines Geräts und ermöglicht es Anwendungen, bei der Übertragung von Windows-Bild Käufen (WIA) das RAW-Format zu verwenden.
+Die **WIA \_ RAW \_ HEADER-Struktur** definiert ein Bild im RAW-Datenformat eines Geräts und ermöglicht Anwendungen die Verwendung des RAW-Formats in Windows Übertragungen der Bilderfassung (WIA).
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,7 +64,7 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Der Name des Formats. Dabei muss es sich um das Literale "wraw" (vier Einzel Byte-ASCII-Zeichen) handeln.
+Der Name des Formats. Dies muss das Literal "WRAW" (vier EINZELNE BYTE-ASCII-Zeichen) sein.
 
 </dd> <dt>
 
@@ -75,7 +75,7 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Die Version des RAW-Formats. Verwenden Sie immer 0x00010000 bis.
+Die Version des RAW-Formats. Verwenden Sie immer 0x00010000.
 
 </dd> <dt>
 
@@ -86,11 +86,11 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Die Gesamtanzahl der gültigen Bytes in der Kopfzeile.
+Die insgesamt gültigen Bytes im Header.
 
 </dd> <dt>
 
-**Xres**
+**XRes**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -101,7 +101,7 @@ Die horizontale Auflösung als DPI-Wert.
 
 </dd> <dt>
 
-**Yres**
+**YRes**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -112,7 +112,7 @@ Die vertikale Auflösung als DPI-Wert.
 
 </dd> <dt>
 
-**XBlock**
+**XExtent**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -123,7 +123,7 @@ Die Breite des Bilds in Pixel.
 
 </dd> <dt>
 
-**Yblock**
+**YExtent**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -134,36 +134,36 @@ Die Höhe des Bilds in Pixel.
 
 </dd> <dt>
 
-**Bytesperline**
+**BytesPerLine**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Die Anzahl der Bytes in einer Zeile eines unkomprimierten Bilds. Verwenden Sie 0, wenn die Daten komprimiert werden, um zu signalisieren, dass die Anzahl der Bytes pro Zeile unbekannt ist.
+Die Anzahl der Bytes in einer Zeile eines nicht komprimierten Bilds. Verwenden Sie 0, wenn die Daten komprimiert werden, um zu signalisieren, dass die Anzahl der Bytes pro Zeile unbekannt ist.
 
 </dd> <dt>
 
-**Bitsper Pixel**
+**BitsPerPixel**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Die Gesamtanzahl der Bits pro Pixel für alle Kanäle des Pixels.
+Die Gesamtanzahl von Bits pro Pixel für alle Kanäle des Pixels.
 
 </dd> <dt>
 
-**Channelsperpixel**
+**ChannelsPerPixel**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Die Anzahl der farbchannels in einem Pixel.
+Die Anzahl der Farbkanäle in einem Pixel.
 
 </dd> <dt>
 
@@ -174,18 +174,18 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Der WIA \_ IPA- \_ Datentyp des Bilds. Da das WIA \_ IPA- \_ Format auf wiaimgfmt RAW festgelegt ist \_ , ist dies eine Liste zulässiger Werte, von denen die Anwendung auswählt.
+Der WIA \_ \_ IPA-DATENTYP des Bilds. Da WIA \_ IPA \_ FORMAT auf WiaImgFmt RAW festgelegt \_ ist, ist dies eine Liste der zulässigen Werte, aus denen die Anwendung wählt.
 
 </dd> <dt>
 
-**Bitsperchannel \[ 8\]**
+**BitsPerChannel \[ 8\]**
 </dt> <dd>
 
-Type: **Byte**
+Typ: **BYTE**
 
 </dd> <dd>
 
-Die Anzahl der Bits in einem Kanal bis maximal 8.
+Die Anzahl der Bits in einem Kanal, bis zu einem Maximum von 8.
 
 </dd> <dt>
 
@@ -196,85 +196,85 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Ein WIA- \_ IPA- \_ Komprimierungs Wert, der den verwendeten Komprimierungstyp angibt, sofern vorhanden.
+Ein WIA \_ IPA \_ COMPRESSION-Wert, der ggf. den Typ der verwendeten Komprimierung angibt.
 
 </dd> <dt>
 
-**Photomezcinterp**
+**PhotometricInterp**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Ein WIA \_ IPA- \_ Wert für die photometrische \_ interp, der die photometrische Interpretation des Bilds angibt.
+Ein WIA \_ IPA \_ PHOTOMETRIC \_ INTERP-Wert, der die fotometrische Interpretation des Bilds angibt.
 
 </dd> <dt>
 
-**Lineorder**
+**LineOrder**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Ein Wert, der die Reihenfolge der Bildzeilen darstellt. Dabei handelt es sich immer \_ um eine Zeile von \_ \_ oben \_ nach \_ unten oder eine \_ Zeilen \_ Reihenfolge \_ \_ von unten nach \_ oben.
+Ein -Wert, der die Bildzeilenreihenfolge darstellt. Dies ist immer ENTWEDER WIA \_ LINE ORDER TOP TO BOTTOM oder \_ \_ \_ \_ WIA LINE ORDER BOTTOM \_ TO \_ \_ \_ \_ TOP.
 
 </dd> <dt>
 
-**Rawdataoffset**
+**RawDataOffset**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Die Position der Rohbilddaten in Bytes, beginnend an der Position, an der die Kopfzeile endet, oder an der Position, an der die Palette endet.
+Die Position der Rohbilddaten in Bytes, beginnend an der Position, an der der Header endet, oder an der Position, an der die Palette endet.
 
 </dd> <dt>
 
-**Rawdatasize**
+**RawDataSize**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Die Größe der Rohbilddaten in Bytes.
+Die Größe der Rohdaten des Bilds in Bytes.
 
 </dd> <dt>
 
-**Paletteoffset**
+**PaletteOffset**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Die Position der Palette in Bytes, beginnend an der Position, an der die Kopfzeile endet, oder an der Position, an der die Daten enden. (Dieser Wert ist 0 (null), wenn keine Palette vorhanden ist.)
+Die Position der Palette in Bytes, beginnend mit der Position, an der der Header endet, oder der Position, an der die Daten enden. (Dieser Wert ist 0, wenn keine Palette vorhanden ist.)
 
 </dd> <dt>
 
-**Palettesize**
+**PaletteSize**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Die Größe der Palettentabelle in Byte. (Dieser Wert ist 0, wenn keine Palette vorhanden ist.)
+Die Größe der Palettentabelle in Bytes. (Dies ist 0, wenn keine Palette vorhanden ist.)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Da es sich hierbei nicht um ein Dateiformat handelt, verwenden Sie eine leere Zeichenfolge für die WIA \_ IPA- \_ Datei \_ Erweiterungs Eigenschaft.
+Da dies kein Dateiformat ist, verwenden Sie eine leere Zeichenfolge für die WIA \_ IPA \_ FILE \_ EXTENSION-Eigenschaft.
 
-Die Palette und die Daten können in einer der beiden Reihenfolge stehen.
+Die Palette und die Daten können in beiden Reihenfolgen angezeigt werden.
 
-**Rawdatasize** enthält weder den Header noch die Palette. Verwenden Sie dieses Feld, um zu überprüfen, ob die Übertragung des Abbilds erfolgreich war.
+**RawDataSize** enthält weder den Header noch die Palette. Verwenden Sie dieses Feld, um zu überprüfen, ob die Übertragung des Images erfolgreich war.
 
-**Palettesize** ist bytes, nicht die Anzahl der Einträge in der Palette.
+**PaletteSize** ist Bytes, nicht die Anzahl der Einträge in der Palette.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -282,9 +282,9 @@ Die Palette und die Daten können in einer der beiden Reihenfolge stehen.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Wiadef. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Wiadef.h</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die PF- \_ handoffentry-Struktur definiert ein Protokoll, das Netzwerkmonitor dem Übergabe Satz eines Parsers hinzufügt.
+description: Die PF \_ HANDOFFENTRY-Struktur definiert ein Protokoll, das Netzwerkmonitor dem Übergabesatz eines Parsers hinzufügt.
 ms.assetid: c26bee6e-7dbf-4994-a0a7-a280cf4838be
-title: PF_HANDOFFENTRY Struktur (Netmon. h)
+title: PF_HANDOFFENTRY-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 5ad431e936265be96831778f9949ae67ef737beb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: faf98490424754d6ae2223ca063e0e3a4eec69c113b1a220e9657b7db5edbb8a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119778670"
 ---
-# <a name="pf_handoffentry-structure"></a>PF- \_ handoffentry-Struktur
+# <a name="pf_handoffentry-structure"></a>PF \_ HANDOFFENTRY-Struktur
 
-Die **PF- \_ handoffentry** -Struktur definiert ein Protokoll, das Netzwerkmonitor dem Übergabe Satz eines Parsers hinzufügt.
+Die **PF \_ HANDOFFENTRY-Struktur** definiert ein Protokoll, das Netzwerkmonitor dem Übergabesatz eines Parsers hinzufügt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,46 +43,46 @@ typedef struct _PF_HANDOFFENTRY {
 
 <dl> <dt>
 
-**szinifile**
+**szIniFile**
 </dt> <dd>
 
-Der Name der INI-Datei, die dem Protokoll zugeordnet ist.
+Name der DEM Protokoll zugeordneten INI-Datei.
 
 </dd> <dt>
 
-**szinisection**
+**szIniSection**
 </dt> <dd>
 
-Abschnitts Bezeichnung in der INI-Datei.
+Abschnittsbezeichnung in der INI-Datei.
 
 </dd> <dt>
 
-**szprotocol**
+**szProtocol**
 </dt> <dd>
 
 Der Name des Protokolls.
 
 </dd> <dt>
 
-**dwhandoffvalue**
+**dwHandOffValue**
 </dt> <dd>
 
-Der Wert, der dem Protokoll zugeordnet ist.
+Wert, der dem Protokoll zugeordnet ist.
 
 </dd> <dt>
 
-**Valueformatbase**
+**ValueFormatBase**
 </dt> <dd>
 
-Numerische Basis des Protokoll Werts, der in **dwhandoffvalue** angegeben wird. Die **valueformatbase** -Funktion muss auf einen der folgenden Werte festgelegt werden:
+Numerische Basis des Protokollwerts, der in **dwHandOffValue** angegeben ist. Die **ValueFormatBase-Funktion** muss auf eine der folgenden Werte festgelegt werden:
 
 
 
 | Wert                                                                                                                                                                                                                        | Bedeutung                     |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|
-| <span id="HANDOFF_VALUE_FORMAT_BASE_UNKNOWN"></span><span id="handoff_value_format_base_unknown"></span><dl> <dt>**das Format des Handoff- \_ Werts ist \_ \_ \_ unbekannt.**</dt> </dl> | Unbekannte Basis<br/>     |
-| <span id="HANDOFF_VALUE_FORMAT_BASE_DECIMAL"></span><span id="handoff_value_format_base_decimal"></span><dl> <dt>**Grund für das Format des Handoff- \_ Werts \_ \_ \_**</dt> </dl> | Dezimaltrennzeichen<br/>     |
-| <span id="HANDOFF_VALUE_FORMAT_BASE_HEX"></span><span id="handoff_value_format_base_hex"></span><dl> <dt>**Format für Übergabe \_ Wert \_ Format \_ Basis \_ Hex**</dt> </dl>             | Hexadezimale Basis<br/> |
+| <span id="HANDOFF_VALUE_FORMAT_BASE_UNKNOWN"></span><span id="handoff_value_format_base_unknown"></span><dl> <dt>**HANDOFF \_ VALUE \_ FORMAT \_ BASE \_ UNKNOWN**</dt> </dl> | Unbekannte Basis<br/>     |
+| <span id="HANDOFF_VALUE_FORMAT_BASE_DECIMAL"></span><span id="handoff_value_format_base_decimal"></span><dl> <dt>**HANDOFF \_ VALUE \_ FORMAT \_ BASE \_ DECIMAL**</dt> </dl> | Dezimalbasis<br/>     |
+| <span id="HANDOFF_VALUE_FORMAT_BASE_HEX"></span><span id="handoff_value_format_base_hex"></span><dl> <dt>**\_ \_ \_ \_ BASIS-HEXADEZIMALES FORMAT DES ÜBERGABEWERTFORMATS**</dt> </dl>             | Hexadezimalbasis<br/> |
 
 
 
@@ -90,9 +90,9 @@ Numerische Basis des Protokoll Werts, der in **dwhandoffvalue** angegeben wird. 
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Array der **PF- \_ handoffentry** -Strukturen wird in der [PF- \_ handoffset](pf-handoffset.md) -Struktur verwendet.
+Ein Array der **PF \_ HANDOFFENTRY-Strukturen** wird in der [PF \_ HANDOFFSET-Struktur](pf-handoffset.md) verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -102,7 +102,7 @@ Ein Array der **PF- \_ handoffentry** -Strukturen wird in der [PF- \_ handoffset
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
@@ -110,7 +110,7 @@ Ein Array der **PF- \_ handoffentry** -Strukturen wird in der [PF- \_ handoffset
 
 <dl> <dt>
 
-[PF- \_ handoffset](pf-handoffset.md)
+[PF \_ HANDOFFSET](pf-handoffset.md)
 </dt> </dl>
 
  

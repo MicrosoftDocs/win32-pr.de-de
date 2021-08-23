@@ -1,21 +1,21 @@
 ---
-description: Wenn Sie nicht mit einem Vertex-Shader oder einem Pixelshader Leuchten, können Sie die Beleuchtungs-Engine in der Laufzeit verwenden.
+description: Wenn Sie nicht mit einem Scheitelpunkt-Shader oder einem Pixel-Shader lichten, können Sie die Beleuchtungs-Engine in der Runtime verwenden.
 ms.assetid: vs|directx_sdk|~\lighting_state.htm
-title: Beleuchtungs Zustand (Direct3D 9)
+title: Beleuchtungszustand (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74f0e7b7ec4a8bcf0ee27c9bc1e643536819d8fc
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5935590c46776c621535968f4d457f3738d83d02342ffddf832cbf0278bbd9ce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106339646"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119674270"
 ---
-# <a name="lighting-state-direct3d-9"></a>Beleuchtungs Zustand (Direct3D 9)
+# <a name="lighting-state-direct3d-9"></a>Beleuchtungszustand (Direct3D 9)
 
-Wenn Sie nicht mit einem Vertex-Shader oder einem Pixelshader Leuchten, können Sie die Beleuchtungs-Engine in der Laufzeit verwenden. Die Beleuchtungs-Engine erfordert, dass die Vertex-Daten pro-vertexnormale enthalten. Vertices ohne normale Daten generieren in allen Beleuchtungsberechnungen ein Punktprodukt von NULL. Die Beleuchtungsberechnungen werden in der [Mathematik der Beleuchtung ausführlicher behandelt (Direct3D 9)](mathematics-of-lighting.md).
+Wenn Sie nicht mit einem Scheitelpunkt-Shader oder einem Pixel-Shader lichten, können Sie die Beleuchtungs-Engine in der Runtime verwenden. Das Beleuchtungsmodul erfordert, dass die Scheitelpunktdaten pro Scheitelpunkt normal sind. Scheitelpunkte ohne normale Daten generieren in allen Beleuchtungsberechnungen ein Punktprodukt von 0 (null). Die Beleuchtungsberechnungen werden unter [Mathematik der Beleuchtung (Direct3D 9)](mathematics-of-lighting.md)ausführlicher behandelt.
 
-Verwenden Sie zum Aktivieren der Beleuchtungs-Engine Folgendes:
+Verwenden Sie Folgendes, um die Beleuchtungsmaschine zu aktivieren:
 
 
 ```
@@ -28,7 +28,7 @@ SetRenderState(D3DRS_LIGHTING, TRUE);
 
 <dl> <dt>
 
-[Rendering-Zustände](render-states.md)
+[Renderzustände](render-states.md)
 </dt> </dl>
 
  

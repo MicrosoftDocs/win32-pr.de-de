@@ -1,7 +1,7 @@
 ---
 description: Schließt den OC-Manager.
 ms.assetid: feba9954-03b2-4b57-b7ba-933e171751ff
-title: Ocend-Funktion
+title: OcTerminate-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - OcManage.dll
-ms.openlocfilehash: 2e747c19db5e5a79e2827dc3bcfb88b97fae2ba6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 399bdb936befb4f7ff45f9f5a3b132245b984bf2a5201ce054ee0fbeb50f5598
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371029"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119833350"
 ---
-# <a name="octerminate-function"></a>Ocend-Funktion
+# <a name="octerminate-function"></a>OcTerminate-Funktion
 
 Schließt den OC-Manager.
 
@@ -39,10 +39,10 @@ VOID OcTerminate(
 
 <dl> <dt>
 
-*Ocmanagercontext* \[ in, out\]
+*OcManagerContext* \[ in, out\]
 </dt> <dd>
 
-Enthält bei Eingabe den von [**ocinitialize**](ocinitialize.md)zurückgegebenen OC Manager-Kontext Zeiger. Bei der Ausgabe empfängt **null**.
+Enthält bei der Eingabe den Kontextzeiger des OC-Managers, der von [**OcInitialize zurückgegeben wird.**](ocinitialize.md) Empfängt bei der Ausgabe **NULL.**
 
 </dd> </dl>
 
@@ -50,9 +50,9 @@ Enthält bei Eingabe den von [**ocinitialize**](ocinitialize.md)zurückgegebenen
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 <dl> <dt>
 
-[**Ocinitialize**](ocinitialize.md)
+[**OcInitialize**](ocinitialize.md)
 </dt> </dl>
 
  

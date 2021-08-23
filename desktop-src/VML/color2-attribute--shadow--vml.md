@@ -1,26 +1,26 @@
 ---
-title: Color2-Attribut (Schatten) (VML)
-description: Color2-Attribut (Schatten) (VML)
+title: Color2-Attribut (Schatten)(VML)
+description: Color2-Attribut (Schatten)(VML)
 ms.assetid: 265d189a-1a11-4f57-9299-1bc1efd13595
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e735d7672457153881d384c7b625199cf4a202e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 241c7e0a620b6b5f2f54a8849779dcc905d027781fe38a5121ca74b6acbeac4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119655700"
 ---
-# <a name="color2-attribute-shadowvml"></a>Color2-Attribut (Schatten) (VML)
+# <a name="color2-attribute-shadowvml"></a>Color2-Attribut (Schatten)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die zweite Farbe eines Schattens. Lese-/Schreibzugriff. **Vgcolor**.
+Definiert die zweite Farbe eines Schattens. Lese-/Schreibzugriff. **VgColor**.
 
 **Gilt für**
 
@@ -28,23 +28,23 @@ Definiert die zweite Farbe eines Schattens. Lese-/Schreibzugriff. **Vgcolor**.
 
 **Tagsyntax**
 
-<v: *Element* color2 = " *Ausdruck* " >
+<v: *element* color2="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . color2 = "*Ausdruck*"
+*element* .color2="*expression*"
 
-*Ausdruck* = *Element*. color2
+*expression* = *Element*.color2
 
 **Anmerkungen**
 
-Verwenden Sie eine zweite Farbe, um besondere Schatteneffekte zu erstellen. Weitere Informationen zu zweiten Farben finden Sie unter dem [Type](type-attribute--shadow--vml.md) -Attribut.
+Verwenden Sie eine zweite Farbe, um spezielle Schatteneffekte zu erstellen. Weitere Informationen [zu zweiten](type-attribute--shadow--vml.md) Farben finden Sie unter Type-Attribut.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Der Schatten ist für eine zweite Farbe blau.
+Der Schatten hat blau für eine zweite Farbe.
 
 
 ```HTML
@@ -59,6 +59,6 @@ Der Schatten ist für eine zweite Farbe blau.
 
 
 
- 
+ 
 
- 
+ 

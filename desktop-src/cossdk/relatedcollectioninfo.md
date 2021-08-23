@@ -1,7 +1,7 @@
 ---
-description: Ruft Informationen zu anderen Auflistungen ab, die sich auf die Auflistung beziehen, von der Sie aufgerufen wird.
+description: Ruft Informationen zu anderen Auflistungen ab, die mit der Auflistung verknüpft sind, aus der sie aufgerufen wird.
 ms.assetid: daea5b23-6a13-46f4-89c8-0d93b614311e
-title: Relatedcollectioninfo-Auflistung
+title: RelatedCollectionInfo-Sammlung
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,35 +12,35 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 21a9a1905d75c81d605f30a3f6cffced8837034d
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 45e9e0f0e251bc9b0772d5def40fec148d541964d34e4f1dda954825f456468b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214141"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119637090"
 ---
-# <a name="relatedcollectioninfo-collection"></a>Relatedcollectioninfo-Auflistung
+# <a name="relatedcollectioninfo-collection"></a>RelatedCollectionInfo-Sammlung
 
-Ruft Informationen zu anderen Auflistungen ab, die sich auf die Auflistung beziehen, von der Sie aufgerufen wird. Auf die **relatedcollectioninfo** -Auflistung kann von jedem [**comadmincatalogcollection**](comadmincatalogcollection.md) -Objekt aus zugegriffen werden, indem die [**GetCollection**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-getcollection) -Methode verwendet wird. Die **relatedcollectioninfo** -Auflistung enthält ein-Objekt für jede Auflistung, auf die von der ursprünglichen Auflistung aus zugegriffen werden kann. Verwandte Sammlungen Folgen der Hierarchie der Komponenten Dienste-Verwaltungs Tools.
+Ruft Informationen zu anderen Auflistungen ab, die mit der Auflistung verknüpft sind, aus der sie aufgerufen wird. Auf **die RelatedCollectionInfo-Auflistung** kann von jedem [**COMAdminCatalogCollection-Objekt aus zugegriffen**](comadmincatalogcollection.md) werden, indem die [**GetCollection-Methode verwendet**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-getcollection) wird. Die **RelatedCollectionInfo-Auflistung** enthält ein -Objekt für jede Auflistung, auf die von der ursprünglichen Auflistung aus zugegriffen werden kann. Verwandte Sammlungen folgen der Sammlungshierarchie der Komponentendienste-Verwaltungstool.
 
-Diese Auflistung unterstützt die [**Add**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) -und [**Remove**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) -Methoden des [**comadmincatalogcollection**](comadmincatalogcollection.md) -Objekts nicht.
+Diese Sammlung unterstützt nicht die [**Add- und**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
 ## <a name="members"></a>Member
 
-Die **relatedcollectioninfo** -Auflistung erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle, verfügt jedoch nicht über zusätzliche Member.
+Die **RelatedCollectionInfo-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
-## <a name="related-collections"></a>Verwandte Auflistungen
+## <a name="related-collections"></a>Verwandte Sammlungen
 
 Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 
--   [**PropertyInfo**](propertyinfo.md)
--   **Relatedcollectioninfo**
+-   [**Propertyinfo**](propertyinfo.md)
+-   **RelatedCollectionInfo**
 
-Sie können von jeder Sammlung aus zu dieser Sammlung navigieren.
+Sie können von jeder Sammlung zu dieser Sammlung navigieren.
 
 ## <a name="properties"></a>Eigenschaften
 
-Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatalogobject.md) -Objekt in der-Auflistung unterstützt:
+Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadmincatalogobject.md) in der Auflistung unterstützt:
 
 -   [Name](#name)
 
@@ -50,11 +50,11 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 | Eingabe | Wert |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Der Name der verknüpften Auflistung. Diese Eigenschaft wird zurückgegeben, wenn die [**Schlüssel**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) -oder [**Name**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) -Eigenschaften Methode für ein Objekt dieser Auflistung aufgerufen wird. |
-| Access         | ReadOnly                                                                                                                                                                                                   |
+| Beschreibung    | Der Name der verknüpften Auflistung. Diese Eigenschaft wird zurückgegeben, wenn die [**Key-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) oder [**Name-Eigenschaftsmethode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) für ein Objekt dieser Auflistung aufgerufen wird. |
+| Zugriff         | ReadOnly                                                                                                                                                                                                   |
 | type           | String                                                                                                                                                                                                     |
 | Standard        | Keine                                                                                                                                                                                                       |
-| Minimalsystem | Windows 2000                                                                                                                                                                                               |
+| Mindestsystem | Windows 2000                                                                                                                                                                                               |
 
 
 
@@ -64,7 +64,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 <dl> <dt>
 
-[Com+-Verwaltungs Sammlungen](com--administration-collections.md)
+[COM+-Verwaltungssammlungen](com--administration-collections.md)
 </dt> </dl>
 
  

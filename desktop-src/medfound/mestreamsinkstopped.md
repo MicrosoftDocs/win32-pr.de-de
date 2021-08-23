@@ -1,29 +1,29 @@
 ---
-description: Wird durch eine streamsenke ausgelöst, wenn der Übergang zum beendeten Zustand abgeschlossen wird. Der Übergang zu "beendet" tritt auf, wenn die imfpresentationclock-Stopp Methode auf der senkenpräsentationmuhr aufgerufen wird.
+description: Wird von einer Streamsenke ausgelöst, wenn der Übergang in den beendeten Zustand abgeschlossen ist. Der Übergang zu "Beendet" tritt auf, wenn die STOPPresentationClock-Methode für die Präsentationsuhr der Senken aufgerufen wird.
 ms.assetid: 1a8c7faa-4d4a-4458-ad08-a760a15dc347
-title: Mestreamsinkbeendete-Ereignis (mfobjects. h)
+title: MEStreamSinkStopped-Ereignis (Mfobjects.h)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e35313ab3d43c950184a82e403fa6ad0eb5b4ab4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8d7bf6a39dca8f50fed8fdd1d0137405225624999fab42771e485174ba4f0afa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119715100"
 ---
-# <a name="mestreamsinkstopped-event"></a>Mestreamsinkbeendete-Ereignis
+# <a name="mestreamsinkstopped-event"></a>MEStreamSinkStopped-Ereignis
 
-Wird durch eine streamsenke ausgelöst, wenn der Übergang zum beendeten Zustand abgeschlossen wird. Der Übergang zu "beendet" tritt auf, wenn die [**imfpresentationclock:: Stopp**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-stop) -Methode auf der Präsentations Uhr der Senke aufgerufen wird.
+Wird von einer Streamsenke ausgelöst, wenn der Übergang in den beendeten Zustand abgeschlossen ist. Der Übergang zu "Beendet" tritt auf, wenn die [**METHODE VORREDPresentationClock::Stop**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-stop) für die Präsentationsuhr der Senke aufgerufen wird.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -33,20 +33,20 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> <dt>
 
-[Medien senken](media-sinks.md)
+[Mediensenken](media-sinks.md)
 </dt> </dl>
 
  

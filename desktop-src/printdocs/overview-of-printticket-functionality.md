@@ -4,12 +4,12 @@ ms.assetid: c48b9821-9194-47d9-a3ec-b10dbbdf14cc
 title: Übersicht über die PrintTicket-Funktionalität
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e90aa6f967f5fce25977b52a4d0bec7e9e1ea705
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: edd01e7247de83e8f378dbcff8e99c32abacd448f436ad69af1f99a1566655b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112408543"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119718970"
 ---
 # <a name="overview-of-printticket-functionality"></a>Übersicht über die PrintTicket-Funktionalität
 

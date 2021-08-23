@@ -1,41 +1,41 @@
 ---
-description: Der mit einem Domänen Controller verknüpfte Stift, Pinsel, Bitmap, Palette, Bereich und Pfad werden als Grafik Objekte bezeichnet. Die folgenden Attribute sind jedem dieser Objekte zugeordnet.
+description: Stift, Pinsel, Bitmap, Palette, Bereich und Pfad, die einem DC zugeordnet sind, werden als grafische Objekte bezeichnet. Die folgenden Attribute sind jedem dieser Objekte zugeordnet.
 ms.assetid: 95c82efa-257e-4718-9853-7ef10cdfd76c
 title: Grafikobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b80aadcb0988e7bd64910d04ecfbf6ec608845d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4cf256cd8eafd6ee346c12f6658a7c3dd388c94fb4107b010528e47c126fce2a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104993983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119831960"
 ---
 # <a name="graphic-objects"></a>Grafikobjekte
 
-Der mit einem Domänen Controller verknüpfte Stift, Pinsel, Bitmap, Palette, Bereich und Pfad werden als Grafik Objekte bezeichnet. Die folgenden Attribute sind jedem dieser Objekte zugeordnet.
+Stift, Pinsel, Bitmap, Palette, Bereich und Pfad, die einem DC zugeordnet sind, werden als grafische Objekte bezeichnet. Die folgenden Attribute sind jedem dieser Objekte zugeordnet.
 
 
 
-| Grafik Objekt | Zugeordnete Attribute                                                               |
+| Grafikobjekt | Zugeordnete Attribute                                                               |
 |----------------|-------------------------------------------------------------------------------------|
-| Bitmap         | Größe in Bytes Dimensionen in Pixel; Farb Format; Komprimierungs Schema; Und so weiter. |
+| Bitmap         | Größe in Bytes; Dimensionen in Pixel; Farbformat; Komprimierungsschema; Und so weiter. |
 | Brush          | Stil, Farbe, Muster und Ursprung.                                                  |
-| Palette        | Farben und Größe (oder Anzahl von Farben).                                              |
-| Schriftart           | Schriftart Name, Breite, Höhe, Gewichtung, Zeichensatz usw.                     |
-| `Path`           | Gebildet.                                                                              |
+| Palette        | Farben und Größe (oder Anzahl der Farben).                                              |
+| Schriftart           | Schriftartname, Breite, Höhe, Gewichtung, Zeichensatz usw.                     |
+| Pfad           | Form.                                                                              |
 | Stift            | Stil, Breite und Farbe.                                                            |
-| Region         | Speicherort und Dimensionen.                                                            |
+| Region         | Position und Dimensionen.                                                            |
 
 
 
  
 
-Wenn eine Anwendung einen DC erstellt, speichert das System automatisch eine Reihe von Standardobjekten darin (es gibt keine Standard Bitmap oder einen Standardpfad). Eine Anwendung kann die Attribute der Standardobjekte überprüfen, indem Sie die [**getcurrentobject**](/windows/desktop/api/Wingdi/nf-wingdi-getcurrentobject) -und [**GetObject**](/windows/desktop/api/Wingdi/nf-wingdi-getobject) -Funktionen aufrufen. Die Anwendung kann diese Standardeinstellungen ändern, indem ein neues-Objekt erstellt und in den DC ausgewählt wird. Ein Objekt wird durch Aufrufen der [**SelectObject**](/windows/desktop/api/Wingdi/nf-wingdi-selectobject) -Funktion in einem Domänen Controller ausgewählt.
+Wenn eine Anwendung einen DC erstellt, speichert das System automatisch einen Satz von Standardobjekten darin (es gibt keine Standardbitmap oder keinen Standardpfad). Eine Anwendung kann die Attribute der Standardobjekte untersuchen, indem sie die Funktionen [**GetCurrentObject**](/windows/desktop/api/Wingdi/nf-wingdi-getcurrentobject) und [**GetObject**](/windows/desktop/api/Wingdi/nf-wingdi-getobject) aufruft. Die Anwendung kann diese Standardwerte ändern, indem sie ein neues -Objekt erstellt und es auf dem DC auswählt. Ein Objekt wird in einem Domänencontroller durch Aufrufen der [**SelectObject-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-selectobject) ausgewählt.
 
-Eine Anwendung kann die aktuelle Pinsel Farbe mit [**setdcbrushcolor**](/windows/desktop/api/Wingdi/nf-wingdi-setdcbrushcolor)auf einen angegebenen Farbwert festlegen.
+Eine Anwendung kann die aktuelle Pinselfarbe mit [**SetDCBrushColor**](/windows/desktop/api/Wingdi/nf-wingdi-setdcbrushcolor)auf einen angegebenen Farbwert festlegen.
 
-Die [**getdcbrushcolor**](/windows/desktop/api/WinGdi/nf-wingdi-getdcbrushcolor) -Funktion gibt die DC-Pinsel Farbe zurück. Die Funktion [**setdcpencolor**](/windows/desktop/api/Wingdi/nf-wingdi-setdcpencolor) legt die Stift Farbe auf einen angegebenen Farbwert fest. Die [**getdcpencolor**](/windows/desktop/api/WinGdi/nf-wingdi-getdcpencolor) -Funktion gibt die DC-Stift Farbe zurück.
+Die [**GetDCBrushColor-Funktion**](/windows/desktop/api/WinGdi/nf-wingdi-getdcbrushcolor) gibt die DC-Pinselfarbe zurück. Die [**SetDCPenColor-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-setdcpencolor) legt die Stiftfarbe auf einen angegebenen Farbwert fest. Die [**GetDCPenColor-Funktion**](/windows/desktop/api/WinGdi/nf-wingdi-getdcpencolor) gibt die DC-Stiftfarbe zurück.
 
  
 

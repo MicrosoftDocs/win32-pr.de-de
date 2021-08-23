@@ -1,24 +1,24 @@
 ---
-description: F/a-Rückrufe
+description: FCachDLL-Rückrufe
 ms.assetid: 59521B1E-6124-44FB-8C11-A955EE3D6A95
-title: F/a-Rückrufe
+title: FCachDLL-Rückrufe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 93ba98aac6c1660f3774c05bbe1d98b0fa7d456e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 4f232deec1ad3ca77c1b68ea60df9587170c97313ad8b8154fff74480195afc7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041330"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119758610"
 ---
-# <a name="fcachdll-callbacks"></a>F/a-Rückrufe
+# <a name="fcachdll-callbacks"></a>FCachDLL-Rückrufe
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [*Cache \_ Lösch \_ Rückruf*](/windows/desktop/api/Filehc/nc-filehc-cache_destroy_callback)
--   [**Cache \_ Lese \_ Rückruf**](/windows/win32/api/filehc/nc-filehc-cache_read_callback)
--   [**f-Cache \_ erstellen ( \_ Rückruf)**](/windows/win32/api/filehc/nc-filehc-fcache_create_callback)
--   [**Ecache- \_ richcreate- \_ Rückruf**](/windows/win32/api/filehc/nc-filehc-fcache_richcreate_callback)
+-   [*CACHE \_ DESTROY \_ CALLBACK*](/windows/desktop/api/Filehc/nc-filehc-cache_destroy_callback)
+-   [**\_ \_ CACHELESERÜCKRUF**](/windows/win32/api/filehc/nc-filehc-cache_read_callback)
+-   [**FCACHE \_ CREATE \_ CALLBACK**](/windows/win32/api/filehc/nc-filehc-fcache_create_callback)
+-   [**FCACHE \_ RICHCREATE \_ CALLBACK**](/windows/win32/api/filehc/nc-filehc-fcache_richcreate_callback)
 
  
 

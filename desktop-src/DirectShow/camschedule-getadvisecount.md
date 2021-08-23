@@ -1,7 +1,7 @@
 ---
-description: Die getadviscount-Methode ruft die Anzahl der ausstehenden Anforderungs Anforderungen ab.
+description: Die GetAdviseCount-Methode ruft die Anzahl ausstehender Advise-Anforderungen ab.
 ms.assetid: 5978abcf-2fc8-42d4-aaca-a8b79c623e84
-title: Camschedule. getadviscount-Methode (dsschedule. h)
+title: CAMSchedule.GetAdviseCount-Methode (Dsschedule.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: da1a1722fea0c601cf0188c4a2c2530ee6afb92a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 759a0d66c3de0ad622a494c8f2d1eef89ada16a8c84aa19b054b1393f6f82b27
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366756"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119757740"
 ---
-# <a name="camschedulegetadvisecount-method"></a>Camschedule. getadviscount-Methode
+# <a name="camschedulegetadvisecount-method"></a>CAMSchedule.GetAdviseCount-Methode
 
-Die- `GetAdviseCount` Methode ruft die Anzahl der ausstehenden Anforderungs Anforderungen ab.
+Die `GetAdviseCount` -Methode ruft die Anzahl ausstehender Advise-Anforderungen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl der ausstehenden Anforderungs Anforderungen zurück.
+Gibt die Anzahl ausstehender Advise-Anforderungen zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,16 +50,16 @@ Gibt die Anzahl der ausstehenden Anforderungs Anforderungen zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dsschedule. h (Include Streams. h)</dt> </dl>                                                                                |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Dsschedule.h (include Streams.h)</dt> </dl>                                                                                |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Camschedule-Klasse**](camschedule.md)
+[**CAMSchedule-Klasse**](camschedule.md)
 </dt> </dl>
 
  

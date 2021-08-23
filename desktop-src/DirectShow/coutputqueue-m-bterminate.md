@@ -1,7 +1,7 @@
 ---
-description: Flag, das angibt, ob der Thread beendet werden soll. TRUE gibt an, dass der Thread beendet wird.
+description: Flag, das angibt, ob der Thread beendet werden soll. True gibt an, dass der Thread beendet wird.
 ms.assetid: 4a49ad6f-8af8-4429-9ae0-cca334e307b3
-title: 'Coutputqueue:: m_bTerminate-Member (outputq. h)'
+title: COutputQueue::m_bTerminate-Member (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: aaa51bad8e1c5c133497666b6272dee0b590e43e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b4f85cdc52ed96b2a370ba5e4e02a5981e05fbcf540492e3de91a74363600c70
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369589"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634210"
 ---
-# <a name="coutputqueuem_bterminate-member"></a>Coutputqueue:: m \_ bbeendigung-Member
+# <a name="coutputqueuem_bterminate-member"></a>COutputQueue::m \_ bTerminate-Member
 
-Flag, das angibt, ob der Thread beendet werden soll. **True** gibt an, dass der Thread beendet wird.
+Flag, das angibt, ob der Thread beendet werden soll. True gibt an, dass der Thread beendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ BOOL m_bTerminate;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

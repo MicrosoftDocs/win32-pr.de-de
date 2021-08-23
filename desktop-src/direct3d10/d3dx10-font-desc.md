@@ -1,7 +1,7 @@
 ---
-description: Definiert Schriftart Attribute.
+description: Definiert Schriftartattribute.
 ms.assetid: 66e8a320-2b83-4766-a9a7-5571ee6c9f2a
-title: D3DX10_FONT_DESC-Struktur (d3dx10. h)
+title: D3DX10_FONT_DESC -Struktur (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10.h
-ms.openlocfilehash: 0b358c57e6410827177e76e3da30b2f5f9896ee2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f3ee6dea032475eb94a723229751d9523c12d118f7319da8f0296cc8c8c42a2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106373497"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634950"
 ---
-# <a name="d3dx10_font_desc-structure"></a>D3dx10 \_ Font- \_ Struktur Struktur
+# <a name="d3dx10_font_desc-structure"></a>D3DX10 \_ FONT \_ DESC-Struktur
 
-Definiert Schriftart Attribute.
+Definiert Schriftartattribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,29 +51,29 @@ typedef struct D3DX10_FONT_DESC {
 **Height**
 </dt> <dd>
 
-Typ: **[ **int**](../winprog/windows-data-types.md)**
+Typ: **[ **INT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Höhe (in logischen Einheiten) der Zeichen Zelle oder des Zeichens der Schriftart.
+Höhe der Zeichenzelle oder des Zeichens der Schriftart in logischen Einheiten.
 
 </dd> <dt>
 
 **Width**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Breite (in logischen Einheiten) der Zeichen in der Schriftart.
+Breite der Zeichen in der Schriftart in logischen Einheiten.
 
 </dd> <dt>
 
 **Weight**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -84,29 +84,29 @@ Gewichtung der Schriftart im Bereich von 0 bis 1000.
 **MipLevels**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl der angeforderten MipMap-Ebenen. Wenn dieser Wert 0 (null) oder D3DX \_ Default ist, wird eine komplette MipMap-Kette erstellt. Wenn der Wert 1 ist, wird der Textur Bereich identisch mit dem Bildschirmbereich zugeordnet.
+Anzahl der angeforderten Mipmap-Ebenen. Wenn dieser Wert 0 (null) oder D3DX \_ DEFAULT ist, wird eine vollständige Mipmapkette erstellt. Wenn der Wert 1 ist, wird der Texturraum identisch mit dem Bildschirmbereich zugeordnet.
 
 </dd> <dt>
 
 **Kursiv**
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Legen Sie für eine kursiv Schrift auf **true** fest.
+Legen Sie für eine italische Schriftart auf **TRUE** fest.
 
 </dd> <dt>
 
-**CharSet**
+**Charset**
 </dt> <dd>
 
-Type: **[ **Byte**](../winprog/windows-data-types.md)**
+Typ: **[ **BYTE**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -114,21 +114,21 @@ Zeichensatz.
 
 </dd> <dt>
 
-**Outputprecision**
+**OutputPrecision**
 </dt> <dd>
 
-Type: **[ **Byte**](../winprog/windows-data-types.md)**
+Typ: **[ **BYTE**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Ausgabe Genauigkeit. Die Ausgabe Genauigkeit definiert, wie genau die Ausgabe der angeforderten Schrift Höhe, der Breite, der Zeichen Ausrichtung, dem Escapezeichen, der Tonhöhe und dem Schrifttyp entsprechen muss.
+Ausgabegenauigkeit. Die Ausgabegenauigkeit definiert, wie genau die Ausgabe mit der angeforderten Schrifthöhe, Breite, Zeichenausrichtung, Escapezeichen, Tonhöhe und Schrifttyp übereinstimmen muss.
 
 </dd> <dt>
 
 **Qualität**
 </dt> <dd>
 
-Type: **[ **Byte**](../winprog/windows-data-types.md)**
+Typ: **[ **BYTE**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -139,30 +139,30 @@ Ausgabequalität.
 **PitchAndFamily**
 </dt> <dd>
 
-Type: **[ **Byte**](../winprog/windows-data-types.md)**
+Typ: **[ **BYTE**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Tonhöhe und Familie der Schriftart.
+Tonhöhe und Schriftfamilie der Schriftart.
 
 </dd> <dt>
 
-**Fakename \[ LF- \_ fakesisieren\]**
+**FaceName \[ LF \_ FACESIZE\]**
 </dt> <dd>
 
 Typ: **TCHAR**
 
 </dd> <dd>
 
-Eine NULL-terminierte Zeichenfolge, die den Schriftart Namen der Schriftart angibt. Die Länge der Zeichenfolge darf 32 Zeichen nicht überschreiten, einschließlich des abschließenden **null** -Zeichens. Wenn "fakename" eine leere Zeichenfolge ist, wird die erste Schriftart verwendet, die mit den anderen angegebenen Attributen übereinstimmt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp "TCHAR" in "WCHAR;" aufgelöst. Andernfalls wird der-Datentyp in char aufgelöst. Siehe Hinweise.
+Eine auf NULL beendete Zeichenfolge, die den Schriftartnamen der Schriftart angibt. Die Länge der Zeichenfolge darf 32 Zeichen nicht überschreiten, einschließlich des beendenden **NULL-Zeichens.** Wenn FaceName eine leere Zeichenfolge ist, wird die erste Schriftart verwendet, die den anderen angegebenen Attributen entspricht. Wenn die Compilereinstellungen Unicode erfordern, wird der TCHAR-Datentyp in WCHARauflöset. Andernfalls wird der Datentyp in CHAR auflösen. Siehe Hinweise.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt auch den Strukturtyp. Wenn Unicode definiert ist, wird der d3dx10 \_ Font \_ DESC-Strukturtyp in einen d3dx10 \_ Schriftart- \_ descw aufgelöst; andernfalls wird der Strukturtyp in eine d3dx10- \_ Schriftart \_ DeScA aufgelöst.
+Die Compilereinstellung bestimmt auch den Strukturtyp. Wenn Unicode definiert ist, wird der D3DX10 FONT DESC-Strukturtyp in eine D3DX10-SCHRIFTART DESCWauflöst. Andernfalls wird der Strukturtyp in eine \_ \_ \_ \_ D3DX10-SCHRIFTART \_ \_ DESCAauflöset.
 
-Mögliche Werte der obigen Member werden in der GDI- [LOGFONT](/previous-versions//ms533931(v=vs.85)) -Struktur angegeben.
+Mögliche Werte der oben genannten Member sind in der GDI [LOGFONT-Struktur](/previous-versions//ms533931(v=vs.85)) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -170,7 +170,7 @@ Mögliche Werte der obigen Member werden in der GDI- [LOGFONT](/previous-version
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx10. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10.h</dt> </dl> |
 
 
 

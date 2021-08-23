@@ -1,7 +1,7 @@
 ---
-description: Die bezeichnete \_ SYSTEMTIME-Struktur definiert eine Bezeichnung, die angezeigt wird, wenn ein bestimmter SYSTEMTIME-Eigenschafts Wert erkannt wird.
+description: Die LABELED \_ SYSTEMTIME-Struktur definiert eine Bezeichnung, die angezeigt wird, wenn ein bestimmter SYSTEMTIME-Eigenschaftswert erkannt wird.
 ms.assetid: 307b490a-af8e-4f2a-a45a-33a84fcb4d5c
-title: LABELED_SYSTEMTIME Struktur (Netmon. h)
+title: LABELED_SYSTEMTIME-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 4484d5ec55f700410eb80d11d2249cceceef43ee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 94ce2a2e0b86c24ea6c16627fd0b866e18aaf48f3c1f0b318a601809e1ee03dc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868827"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119742710"
 ---
-# <a name="labeled_systemtime-structure"></a>Bezeichnete \_ SYSTEMTIME-Struktur
+# <a name="labeled_systemtime-structure"></a>BEZEICHNETE \_ SYSTEMTIME-Struktur
 
-Die **bezeichnete \_ SYSTEMTIME** -Struktur definiert eine Bezeichnung, die angezeigt wird, wenn ein bestimmter SYSTEMTIME-Eigenschafts Wert erkannt wird.
+Die **LABELED \_ SYSTEMTIME-Struktur** definiert eine Bezeichnung, die angezeigt wird, wenn ein bestimmter SYSTEMTIME-Eigenschaftswert erkannt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,20 +43,20 @@ typedef struct _LABELED_SYSTEMTIME {
 **Wert**
 </dt> <dd>
 
-Der SystemTime-Wert einer Eigenschaft, die Sie erkennen möchten.
+SYSTEMTIME-Wert einer Eigenschaft, die Sie erkennen möchten.
 
 </dd> <dt>
 
 **Label**
 </dt> <dd>
 
-Die Textbeschreibung oder Bezeichnung, die angezeigt wird, wenn der im **Wertmember** angegebene SYSTEMTIME-Wert erkannt wird.
+Textbeschreibung oder Bezeichnung, die angezeigt wird, wenn der im **Wertmember** angegebene SYSTEMTIME-Wert erkannt wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **lplabeledsystemtimetable** -Member der [set](set.md) -Struktur verweist auf ein Array von **set** -Strukturen, die ein oder mehrere Bezeichnungs Wert Paare definieren. Die Paare werden verwendet, wenn Sie eine Bezeichnung anstelle eines bestimmten largeint-Werts anzeigen möchten, der im Protokoll Paket enthalten ist.
+Der **lpLabeledSystemTimeTable-Member** der [SET-Struktur](set.md) verweist auf ein Array von **SET-Strukturen,** die ein oder mehrere Bezeichnungswertpaare definieren. Die Paare werden verwendet, wenn Sie eine Bezeichnung anstelle eines bestimmten LARGEINT-Werts anzeigen möchten, der im Protokollpaket gefunden wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,11 +66,11 @@ Der **lplabeledsystemtimetable** -Member der [set](set.md) -Struktur verweist au
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

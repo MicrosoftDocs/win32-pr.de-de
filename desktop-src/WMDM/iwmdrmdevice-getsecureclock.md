@@ -1,11 +1,11 @@
 ---
-title: "' Iwmdrmdevice ' getsecureclock-Methode"
-description: Die getsecureclock-Methode ruft die sichere Uhr ab. Daher können zeitbasierte Lizenzen erzwungen werden.
+title: IWMDRMDevice GetSecureClock-Methode
+description: Die GetSecureClock-Methode ruft die sichere Uhr ab, sodass zeitbasierte Lizenzen erzwungen werden können.
 ms.assetid: 6de9b7ce-9c2a-44e5-9de7-40cfbaf4d92c
 keywords:
-- Getsecureclock-Methode, Windows Media Device Manager
-- Getsecureclock-Methode Windows Media Device Manager, iwmdrmdevice-Schnittstelle
-- Iwmdrmdevice-Schnittstelle Windows Media Device Manager, getsecureclock-Methode
+- GetSecureClock-Methode windows Media Geräte-Manager
+- GetSecureClock-Methode windows Media Geräte-Manager , IWMDRMDevice-Schnittstelle
+- IWMDRMDevice interface windows Media Geräte-Manager , GetSecureClock method
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aaa92c3bc2ee82facf2f2e1043e71467a0c55bd8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: aa9494a594a396550028f083cc2b646f2093f6369ab27ae5494bf70c13628d4f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367420"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119619780"
 ---
-# <a name="iwmdrmdevicegetsecureclock-method"></a>Iwmdrmdevice:: getsecureclock-Methode
+# <a name="iwmdrmdevicegetsecureclock-method"></a>IWMDRMDevice::GetSecureClock-Methode
 
-Die **getsecureclock** -Methode ruft die sichere Uhr ab. Daher können zeitbasierte Lizenzen erzwungen werden.
+Die **GetSecureClock-Methode** ruft die sichere Uhr ab, sodass zeitbasierte Lizenzen erzwungen werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,32 +45,32 @@ HRESULT GetSecureClock(
 
 <dl> <dt>
 
-*ppbsecureclock* \[ vorgenommen\]
+*ppbSecureClock* \[ out\]
 </dt> <dd>
 
-Die sichere Uhr wurde abgerufen.
+Abgerufene sichere Uhr.
 
 </dd> <dt>
 
-*pcbsecureclock* \[ vorgenommen\]
+*–secureClock* \[ out\]
 </dt> <dd>
 
-Größe der sicheren Uhr (in Bytes).
+Größe der sicheren Uhr in Bytes.
 
 </dd> <dt>
 
-*pdwflags* \[ vorgenommen\]
+*pdwFlags* \[ out\]
 </dt> <dd>
 
-Gerätestatusflags. Bei diesem Wert muss es sich um eines der folgenden Flags handeln.
+Gerätestatusflags. Dieser Wert muss eines der folgenden Flags sein.
 
 
 
 | Flag                     | Beschreibung                            |
 |--------------------------|----------------------------------------|
-| WMDRM- \_ Gerät \_ iswmdrm   | Das Gerät unterstützt Windows Media DRM. |
-| WMDRM- \_ Geräte- \_ needclock | Das Gerät benötigt die Uhr.                |
-| WMDRM- \_ Gerät gesperrt \_   | Das Gerät wurde widerrufen.           |
+| \_WMDRM-GERÄT \_ ISWMDRM   | Das Gerät unterstützt Windows Medien-DRM. |
+| WMDRM \_ DEVICE \_ NEEDCLOCK | Das Gerät benötigt uhr.                |
+| \_WMDRM-GERÄT \_ WIDERRUFEN   | Das Gerät wurde widerrufen.           |
 
 
 
@@ -80,7 +80,7 @@ Gerätestatusflags. Bei diesem Wert muss es sich um eines der folgenden Flags ha
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -98,8 +98,8 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmddrmsp. idl</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Mssachlp. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>WMDDRMSP.idl</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Mssachlp.lib</dt> </dl> |
 
 
 
@@ -107,13 +107,13 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Getsecureclockchallenge**](iwmdrmdevice-getsecureclockchallenge.md)
+[**GetSecureClockCuhrge**](iwmdrmdevice-getsecureclockchallenge.md)
 </dt> <dt>
 
-[**Iwmdrmdevice-Schnittstelle**](iwmdrmdevice.md)
+[**IWMDRMDevice-Schnittstelle**](iwmdrmdevice.md)
 </dt> <dt>
 
-[**Setsecureclockresponse**](iwmdrmdevice-setsecureclockresponse.md)
+[**SetSecureClockResponse**](iwmdrmdevice-setsecureclockresponse.md)
 </dt> </dl>
 
  

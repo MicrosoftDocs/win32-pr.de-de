@@ -3,18 +3,18 @@ title: Desktopaktivitätenmoderator
 description: Desktopaktivitätenmoderator
 ms.assetid: F1C54DB0-0AFC-4A1B-9697-6CEB519C2663
 keywords:
-- Akku Lebensdauer
-- verbundener Standby
-- ten
+- Akkulebensdauer
+- Verbundener Standbymodus
+- Aussetzung
 - Drosselung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b8bb3d7925633d3feca8bb6ed5af191670af681
-ms.sourcegitcommit: ea4baf9953a78d2d6bd530b680601e39f3884541
+ms.openlocfilehash: b465bbb377a06fdad50d04d5fcf788cb2e687fdf5db852125e4143fd971773d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "103730720"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119815420"
 ---
 # <a name="desktop-activity-moderator"></a>Desktopaktivitätenmoderator
 
@@ -24,98 +24,98 @@ ms.locfileid: "103730720"
 
 
 > [!Note]  
-> Der Damm ist nur auf Windows 8-Client Computern vorhanden, die Connected Standby unterstützen. Der Damm ist auf Server-SKUs nicht vorhanden.
+> Das STANDBY ist nur auf Windows 8 Clientcomputern vorhanden, die den verbundenen Standbymodus unterstützen. DIE NOTE ist auf Server-SKUs nicht vorhanden.
 
- 
+ 
 
   
 
 > [!Note]  
-> Windows Store-Apps, die für Windows 8 erstellt wurden, werden vom-Staudamm nicht beeinträchtigt.
+> Windows Store Apps, die für Windows 8 erstellt wurden, sind nicht von DER -Sperre betroffen.
 
- 
+ 
 
   
 </dl>
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Unsere Kunden wechseln zu leichteren, kleineren und mobilen Plattformen, um Ihre computinganforderungen zu erfüllen. Im Rahmen der Umstellung auf mobile Geräte haben sich Benutzer zunehmend Sorgen um die Akku Lebensdauer Ihrer Geräte. Der Desktop Activity Moderator (Dam) ist eines von mehreren neuen Features in Windows 8, das entwickelt wurde, um eine konsistente, lange Akku Lebensdauer für Geräte sicherzustellen, die Connected Standby unterstützen.
+Unsere Kunden entwickeln sich auf einfachere, kleinere und mobilere Plattformen um, um ihre Computinganforderungen zu erfüllen. Im Rahmen der Umstellung auf mobile Geräte haben sich Benutzer zunehmend Gedanken über die Akkulaufzeit ihrer Geräte machen. Desktop Activity Moderator (CSV) ist eines von mehreren neuen Features in Windows 8, die eine konsistente, lange Akkulebensdauer für Geräte gewährleisten, die den verbundenen Standbymodus unterstützen.
 
-Der verbundene Standbymodus tritt auf, wenn das Gerät eingeschaltet ist, der Bildschirm jedoch ausgeschaltet ist. In diesem Energiezustand ist das System technisch immer "on" (zur Unterstützung wichtiger Szenarien wie e-Mail, VoIP, Social Networking und Instant Messaging mit Windows Store-Apps). Dies entspricht dem Zustand, in dem sich ein Smartphone befindet, wenn der Benutzer den Netzschalter drückt.
+Der verbundene Standbymodus tritt auf, wenn das Gerät eingeschaltet ist, der Bildschirm jedoch ausgeschaltet ist. In diesem Energiezustand ist das System technisch immer "eingeschaltet" (um wichtige Szenarien wie E-Mail, VoIP, soziale Netzwerke und Instant Messaging mit Windows Store-Apps zu unterstützen). Dies entspricht dem Zustand, in dem sich ein Smartphone befindet, wenn der Benutzer auf den Netzschalter drückt.
 
-Daher muss Software (einschließlich apps und Betriebssystem Software) während des verbundenen Standbymodus gut funktionieren. Der Damm wurde erstellt, um die Ausführung der Desktop-App auf eine Weise zu unterdrücken, die dem Ruhezustand (S3 auf ACPI-Geräten) ähnelt. Dies geschieht durch Anhalten oder Einschränken von Desktop Softwareprozessen auf dem gesamten System nach einem verbundenen Standby-Eintrag. Dadurch können Systeme, die verbundenen Standby unterstützen, eine minimierte Ressourcennutzung und eine lange, konsistente Akku Lebensdauer bereitzustellen und gleichzeitig den Windows Store-Apps die Bereitstellung der verbundenen Umgebungen ermöglichen
+Daher muss sich Software (einschließlich Apps und Betriebssystemsoftware) während des verbundenen Standbymodus gut verhalten. Die EDITIONS-App wurde erstellt, um die Ausführung von Desktop-Apps auf ähnliche Weise zu unterdrücken wie den Standbyzustand (S3 auf ACPI-Geräten). Dies geschieht durch Anhalten oder Drosseln von Desktopsoftwareprozessen im gesamten System nach dem verbundenen Standbyeintrag. Auf diese Weise können Systeme, die den verbundenen Standbymodus unterstützen, eine minimierte Ressourcennutzung und eine lange, konsistente Akkulaufzeit bereitstellen und gleichzeitig Windows Store Apps ermöglichen, die von ihnen zugesicherten verbundenen Funktionen bereitzustellen.
 
 ## <a name="details"></a>Details
 
-Der Damm ist ein Kernelmodustreiber, der beim Systemstart geladen und initialisiert wird, wenn das System den verbundenen Standbymodus unterstützt. (Dies wird durch Auswerten von bestimmt, ob das Feld "AOAC" im System \_ \_Die von callntpowerinformation zurückgegebene Energie Funktionsstruktur ist auf true festgelegt.)
+DER STANDBY ist ein Kernelmodustreiber, der beim Systemstart geladen und initialisiert wird, wenn das System den verbundenen Standbymodus unterstützt. (Dies wird bestimmt, indem ausgewertet wird, ob das AOAC-Feld im SYSTEM \_ Die \_ von CallNtPowerInformation zurückgegebene POWER CAPABILITIES-Struktur ist auf TRUE festgelegt.
 
-Wenn der Damm aktiviert ist und Ihr Desktop Prozess erstellt wird, fügt der Damm Ihren Prozess den vom System verwalteten Auftrags Objekten hinzu:
+Wenn das EDITIONS-Objekt aktiviert ist und Ihr Desktopprozess erstellt wird, fügt DER PROZESS den vom System verwalteten Auftragsobjekten hinzu:
 
--   Wenn der Prozess in Sitzung 0 erstellt wurde, wird der Prozess einem Auftrags Objekt hinzugefügt, das der **Drosselung** unterliegt.
--   Wenn der Prozess in einer interaktiven Sitzung (Sitzung 1 oder höher) erstellt wurde, wird der Prozess einem Auftrags Objekt hinzugefügt, das der unter **Brechung** unterliegt.
+-   Wenn der Prozess in Sitzung 0 erstellt wurde, fügt DER PROZESS einem Auftragsobjekt hinzu, das einer **Drosselung** unterliegt.
+-   Wenn der Prozess in einer interaktiven Sitzung (Sitzung 1 oder höher) erstellt wurde, fügt DER PROZESS einem Auftragsobjekt hinzu, das **unterbrochen werden** muss.
 
 > [!Note]  
-> Für Windows 8 können Auftrags Objekte eingebettet werden. Dies bedeutet, dass die Nutzung von Auftrags Objekten durch den Staudamm nicht die vorhandene Verwendung von Auftrags Objekten einer APP beeinträchtigt.
+> Für Windows 8 können Auftragsobjekte geschachtelt werden. Dies bedeutet, dass die Verwendung von Auftragsobjekten durch die VERWENDUNG von AUFTRAGSOBJEKTEN durch die VERWENDUNG von Auftragsobjekten durch eine App nicht beeinträchtigt wird.
 
- 
+ 
 
-Wenn der Bildschirm eingeschaltet ist, wird der Damm entzigiert und wirkt sich nicht auf Prozesse im System aus. Wenn sich das System im Standbymodus befindet, kann der Damm abhängig von der Aktivität im System Prozesse Drosseln oder aussetzen.
+Wenn der Bildschirm eingeschaltet ist, wird der SCREEN ausgesperrt und wirkt sich nicht auf Prozesse auf dem System aus. Wenn sich das System im verbundenen Standbymodus befindet, kann DIEs abhängig von der Aktivität des Systems dazu führen, dass DIE PROZESSE gedrosselt oder angehalten werden.
 
--   Bei Prozessen, die angehalten werden, werden alle Threads angehalten (unter Umständen nicht ausgeführt); der APP-Zustand (Prozess Speicher) wird beibehalten.
--   Prozesse, die dem Drosselungs Zeitraum zwischen angehalten und nicht angehalten (eine große Mehrheit der Zeit wird im angehaltenen Zustand aufgewendet)
-    -   Beachten Sie, dass Windows möglicherweise auch erkennt, dass wichtige Aktivitäten auftreten, und die Einschränkung gedrosselt Dienste für längere Zeiträume während dieser Aktivität aufheben können.
-    -   Beachten Sie außerdem, dass während des verbundenen Standbymodus Sensoren und Netzwerke möglicherweise nicht verfügbar sind. Daher sollten gedrosselte Prozesse so entworfen werden, dass Sie gegenüber schlechten Netzwerkbedingungen stabil sind (für die meisten Prozesse ist dies keine Änderung erforderlich).
+-   Bei Prozessen, die angehalten werden, sind alle Threads angehalten (unter keinen Umständen zulässig). App-Status (Prozessspeicher) wird beibehalten
+-   Prozesse, die einem Drosselungszyklus zwischen angehalten und nicht verwendet unterliegen (ein großteil der Zeit wird im Angehalten-Zustand aufgewendet).
+    -   Beachten Sie, dass Windows möglicherweise auch erkennen, dass kritische Aktivitäten ausgeführt werden und gedrosselte Dienste während dieser Aktivität für längere Zeit nicht verwendet werden.
+    -   Beachten Sie außerdem, dass Sensoren und Netzwerke im verbundenen Standbymodus möglicherweise nicht verfügbar sind, sodass gedrosselte Prozesse so entworfen werden sollten, dass sie gegen schlechte Netzwerkbedingungen resilient sind (für die meisten Prozesse erfordert dies keine Änderung).
 
-Wenn die Unterbrechung der Unterbrechung aktiviert oder aufgehoben wird, löst die-Sperre die Übermittlung einer WM- \_ powerbroadcast-Nachricht an die Prozesse aus, die der Unterbrechung unterliegen, die für die Nachrichtenübermittlung (über API-Aufrufe oder Kompatibilitäts-Shim, weiter unten beschrieben) Nach einer Verzögerung von wenigen Sekunden hält der Staudamm den Prozess an.
+Wenn die SUSPEND-Unterbrechung aktiviert oder aufgehoben wird, löst DER DURCH die Übermittlung einer WM POWERBROADCAST-Nachricht an die Prozesse aus, für die eine Unterbrechung erforderlich ist, die sich für \_ die Nachrichtenübermittlung entschieden haben (per API-Aufruf oder Kompatibilitätss shim, wie weiter unten beschrieben). Nach einigen Sekunden Verzögerung wird der Prozess von SUSPEND angehalten.
 
-Es gibt keine Benachrichtigungen, wenn die Drosselung von Dämmen aktiviert oder aufgehoben wird. Prozesse sollten nicht geändert werden. Prozesse funktionieren weiterhin, auch wenn Sie langsamer ausfallen.
+Es gibt keine Benachrichtigungen, wenn die EINSCHRÄNKUNGsdrosselung aktiv ist oder nicht mehr verwendet wird. Prozesse sollten nicht geändert werden müssen. -Prozesse funktionieren weiterhin, wenn auch mit einer langsameren Rate.
 
-## <a name="manifestation"></a>Ausstrahlung
+## <a name="manifestation"></a>Manifestation
 
-Prozesse werden während des verbundenen Standbystatus häufig angehalten oder gedrosselt. Bei der Mehrzahl der angehaltenen apps sollte dies einem S3-/Fortsetzungs-oder S4-Ruhezustand/fortsetzen-Übergang sehr ähnlich sein. Zu den Manifestationen zählen u. a. Inkonsistenzen in der Betriebszeit/Laufzeit und die Zeit der Wall-Uhr, Inkonsistenzen im Zeit Geber Verhalten oder drastische Änderungen des Betriebssystem Zustands vor und nach dem aussetzen.
+Prozesse werden während des verbundenen Standbyzustands häufig angehalten oder gedrosselt. Für die meisten angehaltenen Apps sollte dies sehr ähnlich wie ein Übergang vom 3. Anhalten/Fortsetzen oder S4-Ruhezustand/Wiederaufnahme sein. Zu den Schwankungen zählen u. a. Inkonsistenzen in Betriebszeit/Laufzeit im Vergleich zur Uhr, Inkonsistenzen im Timerverhalten oder drastische Änderungen des Betriebssystemzustands vor und nach Abschluss des Anhaltens.
 
-Unterbrechung und Drosselung werden als Einheit durchgeführt (alle untergeordneten Prozesse werden in Unison angehalten und nicht angehalten, und alle Prozesse, die gedrosselt werden können, werden gedrosselt, und die Drosselung erfolgt in Unison). Daher stellt die Kommunikation zwischen zwei angehaltenen Prozessen oder zwei gedrosselte Prozesse kein Problem dar.
+Das Anhalten und Drosseln erfolgt als Einheit (alle suspendierbaren Prozesse werden angehalten und nicht zusammengehörig verwendet, und alle Prozesse, die gedrosselt werden können, werden gedrosselt und nicht zusammengedrosselt), sodass die Kommunikation zwischen zwei angehaltenen Prozessen oder zwei gedrosselten Prozessen kein Problem darstellt.
 
-Software, die auf Prozess übergreifender Kommunikation basiert, muss möglicherweise besondere Aspekte berücksichtigen:
+Software, die auf prozessübergreifender Kommunikation basiert, muss möglicherweise besonders berücksichtigt werden:
 
--   **Kommunikation zwischen Prozessen in Sitzung 0 (gedrosselt) und Sitzung 1 + (** angehalten) – Beispiele sind Info leisten Symbole oder UI-Komponenten, die den aktuellen Dienststatus darstellen.
--   **Kommunikation zwischen Komponenten im Benutzermodus (Sitzung 0 oder 1) und Treibern (die weder eingeschränkt noch** angehalten wurden) – Beispiele hierfür sind Dienste, die im Auftrag eines Treibers funktionieren.
+-   **Kommunikation zwischen Prozessen in Sitzung 0 (gedrosselt) und Sitzung 1+ (angehalten):** Beispiele hierfür sind Taskleistensymbole oder Benutzeroberflächenkomponenten, die den aktuellen Dienstzustand darstellen.
+-   **Kommunikation zwischen Komponenten im Benutzermodus (Sitzung 0 oder 1) und Treibern (die weder gedrosselt noch angehalten sind)** – Beispiele hierfür sind Dienste, die im Auftrag eines Treibers funktionieren.
 
-Wenn die prozessübergreifende Kommunikation in diesen Fällen nicht ordnungsgemäß behandelt wird, können apps nicht reagiert oder nicht reagieren (obwohl der Benutzer diese Auswirkung möglicherweise nicht direkt sieht, da der Bildschirm im verbundenen Standbymodus deaktiviert wird). In den meisten Fällen sollten Dienste und Treiber jedoch bereits so entwickelt werden, dass Sie für prozessübergreifende Kommunikationsprobleme robust sind.
+Wenn die prozessübergreifende Kommunikation in diesen Fällen nicht ordnungsgemäß verarbeitet wird, können Apps hängen bleiben oder nicht reagieren (obwohl der Benutzer diese Auswirkung möglicherweise nicht direkt erkennt, da der Bildschirm im verbundenen Standbymodus ausgeschaltet ist). In den meisten Fällen sollten Dienste und Treiber jedoch bereits entwickelt werden, um robust gegen prozessübergreifende Kommunikationsprobleme zu sein.
 
-Anbieter, die Software für das Internet erstellen oder davon abhängig sind, sollten berücksichtigen, wie sich die Prozessunterbrechung auf Verbindungs Lebensdauern und Handshakes auswirkt. Da die Netzwerk Konnektivität im verbundenen Standbymodus möglicherweise nicht verfügbar ist, sollten Entwickler der in Sitzung 0 erstellten Prozesse vor allem erkennen, wie sich die zeitweiligen Netzwerkverbindungen auf den Prozess auswirken.
+Anbieter, die Software für das Web erstellen oder davon abhängig sind, sollten berücksichtigen, wie sich das Anhalten des Prozesses auf die Lebensdauer von Verbindungen und Handshakes auswirkt. Darüber hinaus sollten Entwickler von Prozessen, die in Sitzung 0 erstellt wurden, besonders wissen, wie sich zeitweilige Netzwerkverbindungen auf den Prozess auswirken, da die Netzwerkkonnektivität im Modus "Verbundener Standbymodus" möglicherweise nicht verfügbar ist.
 
 ## <a name="solution"></a>Lösung
 
-Windows Store-Apps werden vom-Staudamm nicht beeinträchtigt. Wenn Ihre Desktop-app durch den Staudamm beeinträchtigt wird, können Sie Benachrichtigungen anfordern, bevor die Unterbrechung erfolgt (z. b. zum Speichern des Zustands oder zum Schließen von Netzwerkverbindungen), indem Sie eine der folgenden Methoden verwenden:
+Windows Store Apps sind nicht von DER ENTE betroffen. Wenn Ihre Desktop-App von DER ENERGIESPARE betroffen ist, können Sie mit einer der folgenden Methoden Benachrichtigungen anfordern, bevor die Unterbrechung ausgeführt wird (z. B. um den Zustand zu speichern oder Netzwerkverbindungen zu schließen):
 
--   Wenn Ihre APP über ein Fenster (HWND) verfügt und Sie diese Benachrichtigungen über die Fenster Prozedur verarbeiten möchten, können Sie [registersuspendresumenotifizum](/windows/win32/api/winuser/nf-winuser-registersuspendresumenotification) registrieren für diese Nachrichten (oder [unregistersuspendresumenotifito](/windows/win32/api/winuser/nf-winuser-unregistersuspendresumenotification) Unregister) aufrufen. Sie können \_ \_ \_ das Handle für den Geräte Benachrichtigungsfenster im flags-Parameter verwenden und das HWND des Fensters in als Empfänger Parameter übergeben. Die empfangene Nachricht ist die WM- \_ powerbroadcast-Nachricht.
--   Wenn Ihre APP kein Fenster (HWND) hat oder Sie einen direkten Rückruf wünschen, rufen Sie [powerregistersuspendresumenotifiauf](/windows/win32/api/powerbase/nf-powerbase-powerregistersuspendresumenotification) , um sich für diese Nachrichten zu registrieren (oder [powerunregistersuspendresumenotifito](/windows/win32/api/powerbase/nf-powerbase-powerunregistersuspendresumenotification) Unregister). Sie müssen \_ \_ den Rückruf für die Geräte Benachrichtigung im flags-Parameter verwenden und einen Wert vom Typ "pdevice \_ Notify \_ subscribe Parameters" \_ im Parameter "Recipient" übergeben.
--   Wenn Ihre APP nicht neu kompiliert werden kann, können Sie diese WM- \_ powerbroadcast-Nachrichten über das [AppCompat-Toolkit](../win7appqual/application-compatibility-toolkit--act-.md) (mit dem promotedam-Shim) empfangen.
+-   Wenn Ihre App über ein Fenster (HWND) verfügt und Sie diese Benachrichtigungen über Ihre Fensterprozedur behandeln möchten, rufen Sie [RegisterSuspendResumeNotification](/windows/win32/api/winuser/nf-winuser-registersuspendresumenotification) auf, um sich für diese Nachrichten zu registrieren (oder [UnregisterSuspendResumeNotification,](/windows/win32/api/winuser/nf-winuser-unregistersuspendresumenotification) um die Registrierung zu aufheben). Sie können DEVICE NOTIFY WINDOW HANDLE im Flags-Parameter verwenden und den \_ \_ \_ HWND Ihres Fensters als Recipient-Parameter übergeben. Die empfangene Nachricht ist die WM \_ POWERBROADCAST-Nachricht.
+-   Wenn Ihre App kein Fenster (HWND) hat oder Sie einen direkten Rückruf wünschen, rufen Sie [PowerRegisterSuspendResumeNotification](/windows/win32/api/powerbase/nf-powerbase-powerregistersuspendresumenotification) auf, um sich für diese Nachrichten zu registrieren (oder [PowerUnregisterSuspendResumeNotification,](/windows/win32/api/powerbase/nf-powerbase-powerunregistersuspendresumenotification) um die Registrierung zu aufheben). Sie müssen DEVICE \_ NOTIFY \_ CALLBACK im Flags-Parameter verwenden und einen Wert vom Typ PDEVICE \_ NOTIFY SUBSCRIBE PARAMETERS im \_ \_ Recipient-Parameter übergeben.
+-   Wenn Ihre App nicht neu kompiliert werden kann, können Sie diese \_ WM-POWERBROADCAST-Nachrichten über das [AppCompat-Toolkit](../win7appqual/application-compatibility-toolkit--act-.md) (mithilfe des PromoteVAS-Shims) empfangen.
 
-Die Suspend-Nachricht lautet WM \_ powerbroadcast mit wParam = PBT \_ apmsuspend. diese Nachricht wird gleichzeitig an alle in den System Vorgängen abgewicknten Prozesse übertragen. Ihre APP muss schnell und effizient auf dem anhaltepfad arbeiten. Das Timeout nach der Übertragungs Benachrichtigung erfolgt global, nicht pro Prozess, sodass der Prozess möglicherweise für Systemressourcen in Konflikt steht, wenn die in diesem Pfad erforderliche Arbeit sehr umfangreich ist.
+Die Meldung zum Anhalten ist WM \_ POWERBROADCAST mit wParam=PBT \_ APMSUSPEND. Diese Nachricht wird gleichzeitig an alle prozesse im System übertragen. Ihre App muss alle Aufgaben auf dem Unterbrechungspfad schnell und effizient ausführen. Das Timeout nach der Broadcastbenachrichtigung ist global und nicht pro Prozess, sodass Ihr Prozess möglicherweise um Systemressourcen in Abkämmung steht, wenn die in diesem Pfad erforderliche Arbeit umfangreich ist.
 
-Die Fortsetzung der Nachricht lautet WM \_ powerbroadcast mit wParam = PBT \_ apmresume. diese Nachricht wird nach einer Wiederaufnahme gleichzeitig an alle abgewicknten Prozesse übertragen. Die relative Zeit der Übermittlung an das System beenden aus dem verbundenen Standbymodus ist nicht garantiert.
+Die Fortsetzungsnachricht ist WM \_ POWERBROADCAST mit wParam=PBT \_ APMRESUME. Diese Nachricht wird nach einem Fortsetzen gleichzeitig an alle angemeldeten Prozesse übertragen. Die relative Zeit der Übermittlung an das System aus dem verbundenen Standbymodus ist nicht garantiert.
 
-Bei Kamera bezogenen Anwendungen müssen Anwendungen während der Unterbrechungs Benachrichtigung alle Verweise auf die Kamera freigeben (alle Aufzeichnungs Pipeline Objekte müssen heruntergefahren und verworfen werden).  Um einen möglichen Akku Ausgleich zu vermeiden, schließt der Windows-Kamera-Frame Server von Windows 10 RS3 + Systems alle Erfassungs Sitzungen, wenn die Anwendung die Unterbrechungs Benachrichtigung nicht ordnungsgemäß verarbeitet.  Dies hat den Nebeneffekt, dass sich die Aufzeichnungs Pipeline der Anwendung nicht mehr in einem funktionierenden Zustand befindet, wenn das System in den Standbymodus oder den S3/S4-Status versetzt wird.
+Bei kamerabezogenen Anwendungen müssen Anwendungen beim Übergang des Energiezustands während der Unterbrechungsbenachrichtigung alle Verweise auf die Kamera freigeben (alle Aufzeichnungspipelineobjekte müssen heruntergefahren und verworfen werden).  Um einen möglichen Akkuladezustand zu vermeiden, schließt Windows-Kamera Frame Server-Dienst auf Windows 10 RS3+-Systemen alle Erfassungssitzungen, wenn die Anwendung die Unterbrechungsbenachrichtigung nicht ordnungsgemäß verarbeitet.  Dies hat den Nebeneffekt, dass die Erfassungspipeline der Anwendung nicht mehr funktionsfähig ist, wenn das System aus dem Standby- oder S3/S4-Zustand ausfällt.
 
 ## <a name="tests"></a>Tests
 
-Testen Sie Ihre Software über verbundene Standby-Übergänge.
+Testen Sie Ihre Software über verbundene Standbyübergänge hinweg.
 
 ## <a name="resources"></a>Ressourcen
 
--   [Lösungen für die mobile Akku Lebensdauer für Windows 7](/previous-versions/windows/hardware/design/dn641606(v=vs.85))
--   [System \_ Energie \_ Funktionen](/windows/win32/api/winnt/ns-winnt-system_power_capabilities)
--   [Callntpowerinformation-Funktion](/windows/win32/api/powerbase/nf-powerbase-callntpowerinformation)
--   [Auftrags Objekte](../procthread/job-objects.md)
--   [Registersuspendresumenotifizierung](/windows/win32/api/winuser/nf-winuser-registersuspendresumenotification)
--   [Unregistersuspendresumenotifi](/windows/win32/api/winuser/nf-winuser-unregistersuspendresumenotification)
--   [Powerregistersuspendresumenotifi](/windows/win32/api/powerbase/nf-powerbase-powerregistersuspendresumenotification)
--   [Powerunregistersuspendresumenotifi](/windows/win32/api/powerbase/nf-powerbase-powerunregistersuspendresumenotification)
+-   [Mobile Battery Life-Lösungen für Windows 7](/previous-versions/windows/hardware/design/dn641606(v=vs.85))
+-   [\_ \_ SYSTEMLEISTUNGSFUNKTIONEN](/windows/win32/api/winnt/ns-winnt-system_power_capabilities)
+-   [CallNtPowerInformation-Funktion](/windows/win32/api/powerbase/nf-powerbase-callntpowerinformation)
+-   [Auftragsobjekte](../procthread/job-objects.md)
+-   [RegisterSuspendResumeNotification](/windows/win32/api/winuser/nf-winuser-registersuspendresumenotification)
+-   [UnregisterSuspendResumeNotification](/windows/win32/api/winuser/nf-winuser-unregistersuspendresumenotification)
+-   [PowerRegisterSuspendResumeNotification](/windows/win32/api/powerbase/nf-powerbase-powerregistersuspendresumenotification)
+-   [PowerUnregisterSuspendResumeNotification](/windows/win32/api/powerbase/nf-powerbase-powerunregistersuspendresumenotification)
 -   [AppCompat-Toolkit](../win7appqual/application-compatibility-toolkit--act-.md)
 
- 
+ 
 
- 
+ 

@@ -1,6 +1,6 @@
 ---
-title: break_comp vs
-description: Unterbrechen Sie die aktuelle Schleife bedingt bei den nächstgelegenen endschleifen-vs oder ENDREP-vs.
+title: break_comp – vs
+description: Bedingtes Ausbrechen der aktuellen Schleife beim nächsten Endloop – vs. oder endrep – vs.
 ms.assetid: 01745e03-874a-4594-b6ab-12db22d0cb4a
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,63 +9,63 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 631998aeba6612d945495d8115a74d00f7e657c7
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: a02bf34844918255086b318d9a13feeabbd6e75bdecca03684adaba70b420626
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103857779"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119626560"
 ---
-# <a name="break_comp---vs"></a>" \_ Comp-vs" Abbrechen
+# <a name="break_comp---vs"></a>break \_ comp – vs
 
-Unterbrechen Sie die aktuelle Schleife bedingt bei den nächstgelegenen [endschleifen-vs](endloop---vs.md) oder [ENDREP-vs](endrep---vs.md).
+Bedingtes Ausbrechen der aktuellen Schleife beim nächsten [Endloop – vs.](endloop---vs.md) oder [endrep – im Vergleich zu](endrep---vs.md).
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| Break \_ Comp src0, Quelle1 |
+| break \_ comp src0, src1 |
 |------------------------|
 
 
 
- 
+ 
 
 Hierbei gilt:
 
--   \_comp ist ein Vergleich zwischen den beiden Quell Registern. Folgende Werte sind möglich: 
+-   \_comp ist ein Vergleich zwischen den beiden Quellregistern. Folgende Werte sind möglich: 
 
     | Syntax | Vergleich            |
     |--------|-----------------------|
-    | \_siegt   | Größer als          |
-    | \_General   | Kleiner als             |
-    | \_Färbung   | Größer als oder gleich |
-    | \_Kirchturm   | Kleiner als oder gleich    |
-    | \_stecken   | Gleich              |
-    | \_NES   | Ungleich          |
+    | \_Gt   | Größer als          |
+    | \_Lt   | Kleiner als             |
+    | \_Ge   | Größer als oder gleich |
+    | \_Le   | Kleiner oder gleich    |
+    | \_Eq   | Gleich              |
+    | \_Ne   | Ungleich          |
 
     
 
-     
+     
 
--   src0 ist ein Quell Register. Das Replizieren der Replizierung ist erforderlich, um eine einzelne Komponente auszuwählen.
--   Quelle1 ist ein Quell Register. Das Replizieren der Replizierung ist erforderlich, um eine einzelne Komponente auszuwählen.
+-   src0 ist ein Quellregister. Replizieren von Swizzle ist erforderlich, um eine einzelne Komponente auszuwählen.
+-   src1 ist ein Quellregister. Replizieren von Swizzle ist erforderlich, um eine einzelne Komponente auszuwählen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Anweisung wird in den folgenden Versionen unterstützt.
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| \_Comp Abbrechen            |      |      | x    | x     | x    | x     |
+| break \_ comp            |      |      | x    | x     | x    | x     |
 
 
 
- 
+ 
 
-Wenn der Vergleich true ist, wird er wie gezeigt aus der aktuellen Schleife unterbrochen.
+Wenn der Vergleich true ist, wird er wie gezeigt aus der aktuellen Schleife herausbricht.
 
 
 ```
@@ -79,12 +79,12 @@ if (src0 comparison src1)
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

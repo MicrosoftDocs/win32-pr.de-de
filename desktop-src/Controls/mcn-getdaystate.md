@@ -1,9 +1,9 @@
 ---
-title: MCN_GETDAYSTATE Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Monatskalender-Steuerelement gesendet, um Informationen über die Anzeige einzelner Tage anzufordern. Dieser Benachrichtigungs Code wird nur nach Monatskalender-Steuerelementen gesendet, die den MCS \_ daystate-Stil verwenden, und er wird in Form einer WM- \_ Benachrichtigungs Meldung gesendet.
+title: MCN_GETDAYSTATE Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Monatskalender-Steuerelement gesendet, um Informationen darüber an fordern, wie einzelne Tage angezeigt werden sollen. Dieser Benachrichtigungscode wird nur von Monatskalender-Steuerelementen gesendet, die den MCS DAYSTATE-Stil verwenden, und in Form einer \_ WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: dc2608e0-c598-4b26-9195-208f09cd84b7
 keywords:
-- Windows-Steuerelemente für MCN_GETDAYSTATE Benachrichtigungs
+- MCN_GETDAYSTATE Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bff81b9f171884f39063c517cb17299a55b4053b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 64af64fde86ed91ae41cbd3fed53e9cb27a0be410140bc1d25e0548a64042668
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741689"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119697140"
 ---
-# <a name="mcn_getdaystate-notification-code"></a>MCN \_ getdaystate-Benachrichtigungs Code
+# <a name="mcn_getdaystate-notification-code"></a>MCN \_ GETDAYSTATE-Benachrichtigungscode
 
-Wird von einem Monatskalender-Steuerelement gesendet, um Informationen über die Anzeige einzelner Tage anzufordern. Dieser Benachrichtigungs Code wird nur nach Monatskalender-Steuerelementen gesendet, die den [**MCS \_ daystate**](month-calendar-control-styles.md) -Stil verwenden, und er wird in Form einer [**WM- \_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Monatskalender-Steuerelement gesendet, um Informationen darüber an fordern, wie einzelne Tage angezeigt werden sollen. Dieser Benachrichtigungscode wird nur von Monatskalender-Steuerelementen gesendet, die den [**MCS \_ DAYSTATE-Stil**](month-calendar-control-styles.md) verwenden, und in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ MCN_GETDAYSTATE
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmdaystate**](/windows/win32/api/commctrl/ns-commctrl-nmdaystate) -Struktur. Die Struktur enthält Informationen über den Zeitraum, für den das Steuerelement Informationen benötigt, und empfängt die Adresse eines Arrays, das diese Daten bereitstellt.
+Zeiger auf eine [**NMDAYSTATE-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmdaystate) Die -Struktur enthält Informationen über den Zeitrahmen, für den das Steuerelement Informationen benötigt, und empfängt die Adresse eines Arrays, das diese Daten zur Verfügung stellt.
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Zeiger auf eine [**nmdaystate**](/windows/win32/api/commctrl/ns-commctrl-nmdayst
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Durch die Behandlung dieses Benachrichtigungs Codes kann Ihre Anwendung Ihre Anzeige anpassen, indem Sie angeben, dass bestimmte Tage fett angezeigt werden.
+Durch die Verarbeitung dieses Benachrichtigungscodes kann Ihre Anwendung die Anzeige anpassen, indem sie an, dass bestimmte Tage fett angezeigt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Durch die Behandlung dieses Benachrichtigungs Codes kann Ihre Anwendung Ihre Anz
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

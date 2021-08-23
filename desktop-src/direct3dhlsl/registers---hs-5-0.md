@@ -1,163 +1,163 @@
 ---
-title: Register-hs_5_0
-description: Ein Hull-Shader besteht aus drei verschiedenen Phasen, der Steuerungspunkt Phase, der Verzweigungs Phase und der joinphase. Jede Phase verfügt über eigene Sätze von Eingabe-und Ausgabe Registern.
+title: Register – hs_5_0
+description: 'Ein Hüllen-Shader besteht aus drei unterschiedlichen Phasen: Kontrollpunktphase, Forkphase und Joinphase. Jede Phase verfügt über eigene Sätze von Eingabe- und Ausgaberegistern.'
 ms.assetid: 82F689EF-D3F4-40B5-9A2C-1F97F4CE6501
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1aca1377c7ca6b56434c361ba06b01cf659319f6
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 3891130b4a952cb991615dbcc386e245d5eb8abedc2d8cec0b441eb6b3c2fbae
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104351898"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119854030"
 ---
-# <a name="registers---hs_5_0"></a>Register-HS \_ 5 \_ 0
+# <a name="registers---hs_5_0"></a>Register – hs \_ 5 \_ 0
 
-Ein Hull-Shader besteht aus drei verschiedenen Phasen: Steuerungspunkt Phase, Verzweigungs Phase und joinphase. Jede Phase verfügt über eigene Sätze von Eingabe-und Ausgabe Registern.
+Ein Hüllen-Shader besteht aus drei unterschiedlichen Phasen: Kontrollpunktphase, Forkphase und Joinphase. Jede Phase verfügt über eigene Sätze von Eingabe- und Ausgaberegistern.
 
-## <a name="control-point-phase"></a>Steuerungspunkt Phase
+## <a name="control-point-phase"></a>Kontrollpunktphase
 
-Die HS- \_ Steuerungs \_ Punkt \_ Phase ist ein Shader-Programm mit dem folgenden Register Modell.
+Die \_ \_ hs-Steuerungspunktphase \_ ist ein Shaderprogramm mit dem folgenden Registermodell.
 
-### <a name="input-registers"></a>Eingabe Register
+### <a name="input-registers"></a>Eingaberegister
 
 
 
-| Registriungstyp                                     | Anzahl                 | R/W | Dimension | Indizierbar durch r\# | der Arbeitszeittabelle | Erfordert DCL |
+| Registertyp                                     | Anzahl                 | R/W | Dimension | Indizierbar durch r\# | Standardeinstellungen | Erfordert DCL |
 |---------------------------------------------------|-----------------------|-----|-----------|------------------|----------|--------------|
-| 32-Bit-Temp (r \# )                                 | 4096 (r \# + x \# \[ n \] )    | R/W | 4         | Nein               | Keine     | Ja          |
-| 32-Bit indizierbares temporäres Array (x \# \[ n \] )            | 4096 (r \# + x \# \[ n \] )    | R/W | 4         | Ja              | Keine     | Ja          |
-| 32-Bit-Eingabe (v- \[ Vertex- \] \[ Element \] )             | 32 (-Element) \* 32 (Vert) | R   | 4         | Ja              | Keine     | Ja          |
-| 32-Bit uint-Eingabe voutputcontrolpointid (23,7)     | 1                     | R   | 1         | Nein               | Keine     | Ja          |
-| 32-Bit uint Eingabe primitiveid (vprim)             | 1                     | R   | 1         | Nein               | –      | Ja          |
-| -Element in einer Eingabe Ressource (t \# )                | 128                   | R   | 128       | Ja              | Keine     | Ja          |
-| Sampler (e \# )                                     | 16                    | R   | 1         | Ja              | Keine     | Ja          |
-| Constantbuffer-Verweis (CB- \# \[ Index \] )          | 15                    | R   | 4         | Ja              | Keine     | Ja          |
-| Sofortiger constantbuffer-Verweis (ICB- \[ Index \] ) | 1                     | R   | 4         | Ja (Inhalt)   | Keine     | Ja          |
+| 32-Bit-Temp (r \# )                                 | 4096(r \# +x \# \[ n \] )    | R/W | 4         | Nein               | Keine     | Ja          |
+| Indizierbares 32-Bit-Temp Array (x \# \[ n \] )            | 4096(r \# +x \# \[ n \] )    | R/W | 4         | Ja              | Keine     | Ja          |
+| 32-Bit-Eingabe \[ (v-Scheitelpunktelement \] \[ \] )             | 32(element) \* 32(vert) | R   | 4         | Ja              | Keine     | Ja          |
+| 32-Bit-UINT-Eingabe vOutputControlPointID(23.7)     | 1                     | R   | 1         | Nein               | Keine     | Ja          |
+| 32-Bit-UINT-EingabeprimitiveID (vPrim)             | 1                     | R   | 1         | Nein               | –      | Ja          |
+| Element in einer Eingaberessource (t \# )                | 128                   | R   | 128       | Ja              | Keine     | Ja          |
+| Sampler (s \# )                                     | 16                    | R   | 1         | Ja              | Keine     | Ja          |
+| ConstantBuffer-Referenz (cb \# \[ index \] )          | 15                    | R   | 4         | Ja              | Keine     | Ja          |
+| Direktverweis auf ConstantBuffer (icb \[ index \] ) | 1                     | R   | 4         | Ja (Inhalt)   | Keiner     | Ja          |
 
 
 
  
 
-### <a name="output-registers"></a>Ausgabe Register
+### <a name="output-registers"></a>Ausgaberegister
 
 
 
-| Registriungstyp                           | Anzahl | R/W | Dimension | Indizierbar durch r\# | der Arbeitszeittabelle | Erfordert DCL |
+| Registertyp                           | Anzahl | R/W | Dimension | Indizierbar durch r\# | Standardeinstellungen | Erfordert DCL |
 |-----------------------------------------|-------|-----|-----------|------------------|----------|--------------|
-| 32-Bit-Ausgabe-Vertex-Daten Element (o \# ) | 32    | W   | 4         | Ja              | Keine     | Ja          |
+| 32-Bit-Ausgabe– Vertex Data-Element (o \# ) | 32    | W   | 4         | Ja              | Keine     | Ja          |
 
 
 
  
 
-Jedes Hull-Shader-Steuerelement Punkt-Phasen-Ausgabe Register ist bis zu einem 4-Vektor, von dem bis zu 32 Register deklariert werden können. Außerdem sind zwischen 1 und 32 Ausgabe Steuerungs Punkte deklariert, die die erforderliche Speichermenge skalieren. Wir verweisen auf die maximal zulässige Anzahl von skalaren in allen Hull-Shader-Steuerungspunkt-Phasen Ausgabe als \# CP \_ Output \_ Max.
+Jedes Ausgaberegister für die Hüllen-Shader-Kontrollpunktphase ist bis zu einem 4-Vektor, von dem bis zu 32 Register deklariert werden können. Es werden auch 1 bis 32 Ausgabekontrollpunkte deklariert, wodurch die erforderliche Speichermenge skaliert wird. Betrachten wir die maximal zulässige Aggregatanzahl von Skalaren in der gesamten Ausgabe der Hüllen-Shader-Kontrollpunkt-Phase als \# maximale \_ \_ CP-Ausgabe.
 
-\#CP \_ Output \_ Max = 3968 Skalars.
+\#cp \_ output max = \_ 3968 Skalar.
 
-Dieser Grenzwert basiert auf einem Entwurfspunkt für bestimmte Hardware des 4096 \* 32-Bit-Speichers. Der Betrag für die Kontrollpunkt Ausgabe ist 3968 = 4096-128, d. h. 32 (Kontrollpunkte) \* 4 (Komponenten) \* 32 (Elemente)-4 (Komponenten) \* 32 (Elemente). Die Subtraktion reserviert 128 skalare (ein Steuerungspunkt), die für die Hull-Shader-Phase 2 und 3 reserviert sind. Die Wahl der Reservierung von 128-skalaren für Patch-Konstanten, anstatt zuzulassen, dass der Betrag einfach nur von den 4096-Skaren des Speichers verwendet wird, wird von den Ausgabe Steuerungs Punkten nicht verwendet, sondern die Grenzwerte eines anderen bestimmten Hardware Entwurfs. In der Steuerungspunkt Phase können 32-Ausgabe Steuerungs Punkte deklariert werden, Sie können jedoch nur vollständig 32-Elemente mit jeweils vier Komponenten sein, da der gesamte Speicher zu hoch wäre.
+Dieser Grenzwert basiert hier auf einem Entwurfspunkt für bestimmte Hardware mit 4096 \* 32-Bit-Speicher. Die Ausgabemenge für den Kontrollpunkt beträgt 3968 =4096-128. Dies ist 32(Kontrollpunkte) \* 4(Komponenten) \* 32(Elemente) - 4(Komponenten) \* 32(Elemente). Die Subtraktion reserviert 128 Skalaren (einen Kontrollpunkt) Speicherplatz, der für phase 2 und 3 des Hüllen-Shaders reserviert ist. Die Wahl, 128 Skalar für Patchkonst constants zu reservieren , anstatt zu erlauben, dass die Menge einfach den 4096-Skalaren des Speichers beträgt, die von Ausgabekontrollpunkten nicht verwendet wird, ist die Grenze eines anderen bestimmten Hardwareentwurfs. Die Kontrollpunktphase kann 32 Ausgabekontrollpunkte deklarieren, aber sie können nicht vollständig 32 Elemente mit jeweils 4 Komponenten sein, da der Gesamtspeicher zu hoch wäre.
 
-## <a name="fork-phase"></a>Verzweigungs Phase
+## <a name="fork-phase"></a>Forkphase
 
-Die folgenden Register sind im HS- \_ Verzweigungs \_ Phasenmodell sichtbar.
+Die folgenden Register sind im hs \_ fork-Phasenmodell \_ sichtbar.
 
-Die folgenden Eingabe Ressourcen (t \# ), Samplern \# , Konstante Puffer (CB \# ) und unmittelbarer konstanter Puffer (ICB) sind mit allen anderen Hull-Shader-Phasen gemeinsam. Aus der API/DDI-Sicht hat der Hull-Shader also einen einzelnen Satz von Eingabe Ressourcen Status für alle Phasen. Dies hat zur Folge, dass der Hull-Shader aus der API/DDI-Sicht ein einzelner atomarischer Shader ist. die darin enthaltenen Phasen sind Implementierungsdetails.
+Die folgenden Eingaberessourcen (t), Sampler (s), konstanten Puffer (cb) und unmittelbar konstanter Puffer (icb) sind alle mit allen anderen \# Hüllen-Shaderphasen \# gemeinsam \# genutzt. Das heißt, dass der Hüllen-Shader aus API-/DDI-Sicht für alle Phasen über einen einzelnen Satz von Eingaberessourcenstatus verfügt. Dies geht mit der Tatsache ein, dass der Hüllen-Shader aus API-/DDI-Sicht ein einzelner atomarer Shader ist. Die Phasen in diesem Sind Implementierungsdetails.
 
-### <a name="input-registers"></a>Eingabe Register
+### <a name="input-registers"></a>Eingaberegister
 
 
 
-| Registriungstyp                                                                         | Anzahl              | R/W | Dimension                           | Indizierbar durch r\# | der Arbeitszeittabelle | Erfordert DCL |
+| Registertyp                                                                         | Anzahl              | R/W | Dimension                           | Indizierbar durch r\# | Standardeinstellungen | Erfordert DCL |
 |---------------------------------------------------------------------------------------|--------------------|-----|-------------------------------------|------------------|----------|--------------|
-| 32-Bit-Temp (r \# )                                                                     | 4096 (r \# + x \# \[ n \] ) | R/W | 4                                   | Nein               | Keine     | Ja          |
-| 32-Bit indizierbares temporäres Array (x \# \[ n \] )                                                | 4096 (r \# + x \# \[ n \] ) | R/W | 4                                   | Ja              | Keine     | Ja          |
-| 32-Bit-Eingabe Steuerungs Punkte (vicp- \[ Vertex- \] \[ Element \] ) (Pre-Control Point-Phase)     | 32 siehe Hinweis unten  | R   | 4 (Komponente) \* 32 (Element) \* 32 (Vert) | Ja              | Keine     | Ja          |
-| 32-Bit-Ausgabe Steuerungs Punkte (vocp- \[ Vertex- \] \[ Element \] \] ) (Post-Steuerungspunkt Phase) | 32 siehe Hinweis unten  | R   | 4 (Komponente) \* 32 (Element) \* 32 (Vert) | Ja              | Keine     | Ja          |
-| 32-Bit uint Eingabe primitiveid (vprim)                                                 | 1                  | R   | 1                                   | Nein               | –      | Ja          |
-| 32-Bit uint Input forkinstanceid (23,8) (vforkinstanceid)                              | 1                  | R   | 1                                   | Nein               | –      | Ja          |
-| -Element in einer Eingabe Ressource (t \# )                                                    | 128                | R   | 128                                 | Ja              | Keine     | Ja          |
-| Sampler (e \# )                                                                         | 16                 | R   | 1                                   | Ja              | Keine     | Ja          |
-| Constantbuffer-Verweis (CB- \# \[ Index \] )                                              | 15                 | R   | 4                                   | Ja              | Keine     | Ja          |
-| Sofortiger constantbuffer-Verweis (ICB- \[ Index \] )                                     | 1                  | R   | 4                                   | Ja (Inhalt)   | Keine     | Ja          |
+| 32-Bit-Temp (r \# )                                                                     | 4096(r \# +x \# \[ n \] ) | R/W | 4                                   | Nein               | Keine     | Ja          |
+| Indizierbares 32-Bit-Temp Array (x \# \[ n \] )                                                | 4096(r \# +x \# \[ n \] ) | R/W | 4                                   | Ja              | Keine     | Ja          |
+| 32-Bit-Eingabekontrollpunkte (Scheitelpunktelement \[ \] \[ \] ) (Phase vor der Steuerung)     | 32 Siehe Hinweis unten  | R   | 4(Component) \* 32(element) \* 32(vert) | Ja              | Keine     | Ja          |
+| 32-Bit-Ausgabekontrollpunkte (vocp \[ \] \[ vertex-Element \] \] ) (Phase nach der Steuerungspunkt) | 32 Siehe Hinweis unten  | R   | 4(Component) \* 32(element) \* 32(vert) | Ja              | Keine     | Ja          |
+| 32-Bit-UINT-EingabeprimitiveID (vPrim)                                                 | 1                  | R   | 1                                   | Nein               | –      | Ja          |
+| 32-Bit UINT Input ForkInstanceID(23.8) (vForkInstanceID)                              | 1                  | R   | 1                                   | Nein               | –      | Ja          |
+| Element in einer Eingaberessource (t \# )                                                    | 128                | R   | 128                                 | Ja              | Keine     | Ja          |
+| Sampler (s \# )                                                                         | 16                 | R   | 1                                   | Ja              | Keine     | Ja          |
+| ConstantBuffer-Referenz (cb \# \[ index \] )                                              | 15                 | R   | 4                                   | Ja              | Keine     | Ja          |
+| Direktverweis auf ConstantBuffer (icb \[ index \] )                                     | 1                  | R   | 4                                   | Ja (Inhalt)   | Keiner     | Ja          |
 
 
 
  
 
 > [!Note]
-> Die Typdeklarationen der Eingabe Steuerungspunkt Registrierung (vicp) der Hull-Shader-Verzweigungs Phase müssen auf der Element Achse eine beliebige Teilmenge \[ \] der Eingabe für den Hull-Shader-Steuerungspunkt (Pre-Control Point Phase) sein. Auf ähnliche Weise müssen die Deklarationen zum Einfügen der Ausgabe Steuerungs Punkte (vocp) jede Teilmenge (entlang der \[ Element \] Achse) der Hull-Shader-Ausgabe Steuerungs Punkte (Post-Control Point Phase) sein.
+> Die Deklarationen des Eingangskontrollpunktregisters (Control Point Register, Deklarationen) der Hüllen-Shader-Forkphase müssen eine beliebige Teilmenge der Eingangs- (Vorkontrollpunktphase) der Hüllen-Shader-Kontrollpunkt-Eingabe \[ \] sein. Ebenso müssen die Deklarationen für die Eingabe der Ausgabekontrollpunkte (vocp) eine beliebige Teilmenge der Ausgabekontrollpunkte des Hüllen-Shaders (Phase nach der Steuerungspunkt) entlang der Elementachse \[ \] sein.
 > 
-> Entlang der \[ \] vertexachse muss die Anzahl der zu lesenden Steuerungs Punkte für die einzelnen vicp-und vocp-Elemente auf ähnliche Weise eine Teilmenge der Anzahl der Eingabe Kontrollpunkte des Hull-Shaders und der Anzahl der leaseshaderausgabesteuerungspunkte sein. Wenn z. b. die vertexachse der vocp-Register mit n Scheitel Punkten deklariert wird, ist die Ausgabe Steuerung der Steuer Punkt Phase \[ 0.. n-1 \] als schreibgeschützte Eingabe für die Verzweigungs Phase verfügbar.
+> Entlang der Scheitelpunktachse muss die Anzahl der Steuerpunkte, die für die einzelnen Bzw. vocp gelesen werden sollen, auf ähnliche Weise eine Teilmenge der Anzahl der Eingangskontrollpunkte des Hüllen-Shaders bzw. der Anzahl der Ausgabekontrollpunkte des Hüllen-Shaders \[ \] sein. Wenn beispielsweise die Scheitelpunktachse der vocp-Register mit n Scheitelpunkten deklariert wird, werden die Ausgabekontrollpunkte der Kontrollpunktphase 0..n-1 als schreibgeschützte Eingabe für die \[ \] Forkphase verfügbar.
 
-### <a name="output-registers"></a>Ausgabe Register
+### <a name="output-registers"></a>Ausgaberegister
 
 
 
-| Register                                        | Anzahl               | R/W | Dimension | Indizierbar durch r\# | der Arbeitszeittabelle | Erfordert DCL |
+| Registrieren                                        | Anzahl               | R/W | Dimension | Indizierbar durch r\# | Standardeinstellungen | Erfordert DCL |
 |-------------------------------------------------|---------------------|-----|-----------|------------------|----------|--------------|
-| 32-Bit-Ausgabe Patch-Konstante Daten Element (o \# ) | 32 siehe Hinweis 1 unten | W   | 4         | Ja              | Keine     | Ja          |
+| 32-Bit-Ausgabeelement "Patch Constant Data" (o \# ) | 32 Siehe Hinweis 1 unten | W   | 4         | Ja              | Keine     | Ja          |
 
 
 
  
 
 > [!Note]  
-> Die Hull-Shader-Verzweigung und die joinphasen Ausgaben sind ein gemeinsam genutzter Satz von 4 4-Vektor Registern. Die Ausgaben der einzelnen Verzweigungen oder joinphasen können einander nicht überlappen. Vom System interpretierte Werte, wie z. b. "ttierfactors", kommen in diesem Bereich.
+> Die Ausgaben für den Hüllen-Shader fork und die Joinphase sind ein gemeinsamer Satz von vier Registern mit vier Vektoren. Die Ausgaben der einzelnen Fork- oder Joinphasenprogramme dürfen sich nicht überlappen. Vom System interpretierte Werte wie TessFactors stammen aus diesem Bereich.
 
 ## <a name="join-phase"></a>Einbindungsphase
 
-Die folgenden Register sind im HS Join- \_ \_ Phasenmodell sichtbar. Es gibt drei Sätze von Eingabe Registern: eingabesteuerungspunkte in der Steuerungspunkt-Phase (vicp), vocp-Steuerungs Punkte (vocp) und Patch-Konstanten (VCP). VPC sind die aggregierte Ausgabe aller umlaufungsprogramme der Hull-shaderverzweigung. Die \# Registrierungs Registrierungsstellen-Registrierungs Registrierungsstellen-Registrierungsstellen befinden sich in demselben Register Bereich wie die verlaufungs-stagingphasen der hulll-Shader.
+Die folgenden Register sind im \_ hs-Joinphasenmodell \_ sichtbar. Es gibt drei Sätze von Eingaberegistern: Kontrollpunkt-Phasen-Eingabesteuerungspunkte (Control Point Phase Control Points,Cp), VoCP-Steuerungspunkt-Phasen-Ausgabekontrollpunkte (vocp) und Patchkonst constants (vcp). vpc ist die aggregierte Ausgabe aller Hüllen-Shader-Forkphasenprogramme. Die Ausgabe der Hüllen-Shader-Joinphase o registers befindet sich im gleichen Registerbereich wie die Ausgaben der \# Hüllen-Shader-Forkphase.
 
-Die folgenden Eingabe Ressourcen (t \# ), Samplern \# , Konstante Puffer (CB \# ) und unmittelbarer konstanter Puffer (ICB) sind mit allen anderen Hull-Shader-Phasen gemeinsam. Aus der API/DDI-Sicht hat der Hull-Shader also einen einzelnen Satz von Eingabe Ressourcen Status für alle Phasen. Dies hat zur Folge, dass der Hull-Shader aus der API/DDI-Sicht ein einzelner atomarischer Shader ist. die darin enthaltenen Phasen sind Implementierungsdetails.
+Die folgenden Eingaberessourcen (t), Sampler (s), konstanten Puffer (cb) und unmittelbar konstanter Puffer (icb) sind alle mit allen anderen \# Hüllen-Shaderphasen \# gemeinsam \# genutzt. Das heißt, dass der Hüllen-Shader aus API-/DDI-Sicht für alle Phasen über einen einzelnen Satz von Eingaberessourcenstatus verfügt. Dies geht mit der Tatsache ein, dass der Hüllen-Shader aus API-/DDI-Sicht ein einzelner atomarer Shader ist. Die Phasen in diesem Sind Implementierungsdetails.
 
-### <a name="input-registers"></a>Eingabe Register
+### <a name="input-registers"></a>Eingaberegister
 
 
 
-| Registriungstyp                                                                       | Anzahl               | R/W | Dimension                           | Indizierbar durch r\# | der Arbeitszeittabelle | Erfordert DCL |
+| Registertyp                                                                       | Anzahl               | R/W | Dimension                           | Indizierbar durch r\# | Standardeinstellungen | Erfordert DCL |
 |-------------------------------------------------------------------------------------|---------------------|-----|-------------------------------------|------------------|----------|--------------|
-| 32-Bit-Temp (r \# )                                                                   | 4096 (r \# + x \# \[ n \] )  | R/W | 4                                   | Nein               | Keine     | Ja          |
-| 32-Bit indizierbares temporäres Array (x \# \[ n \] )                                              | 4096 (r \# + x \# \[ n \] )  | R/W | 4                                   | Ja              | Keine     | Ja          |
-| 32-Bit-Eingabe Steuerungs Punkte (vicp- \[ Vertex- \] \[ Element \] ) (Pre-Control Point-Phase)   | 32 siehe Hinweis 1 unten | R   | 4 (Komponente) \* 32 (Element) \* 32 (Vert) | Ja              | Keine     | Ja          |
-| 32-Bit-Ausgabe Steuerungs Punkte (vocp- \[ Vertex- \] \[ Element \] ) (Post-Steuerungspunkt Phase) | 32 siehe Hinweis 1 unten | R   | 4 (Komponente) \* 32 (Element) \* 32 (Vert) | Ja              | Keine     | Ja          |
-| 32-Bit-Eingabe (VPC- \[ Element \] ) (Patch-Konstante Daten)                                 | 32 siehe Hinweis 2 unten | R   | 4                                   | Ja              | Keine     | Ja          |
-| 32-Bit uint Eingabe primitiveid (vprim)                                               | 1                   | R   | 1                                   | Nein               | –      | Ja          |
-| 32-Bit uint Input joininstanceid (vjoininstanceid)                                  | 1                   | R   | 1                                   | Nein               | –      | Ja          |
-| -Element in einer Eingabe Ressource (t \# )                                                  | 128                 | R   | 128                                 | Ja              | Keine     | Ja          |
-| Sampler (e \# )                                                                       | 16                  | R   | 1                                   | Ja              | Keine     | Ja          |
-| Constantbuffer-Verweis (CB- \# \[ Index \] )                                            | 15                  | R   | 4                                   | Ja              | Keine     | Ja          |
-| Sofortiger constantbuffer-Verweis (ICB- \[ Index \] )                                   | 1                   | R   | 4                                   | Ja (Inhalt)   | Keine     | Ja          |
+| 32-Bit-Temp (r \# )                                                                   | 4096(r \# +x \# \[ n \] )  | R/W | 4                                   | Nein               | Keine     | Ja          |
+| Indizierbares 32-Bit-Temp Array (x \# \[ n \] )                                              | 4096(r \# +x \# \[ n \] )  | R/W | 4                                   | Ja              | Keine     | Ja          |
+| 32-Bit-Eingabekontrollpunkte (Scheitelpunktelement \[ \] \[ \] ) (Phase vor der Steuerung)   | 32 Siehe Hinweis 1 unten | R   | 4(Component) \* 32(element) \* 32(vert) | Ja              | Keine     | Ja          |
+| 32-Bit-Ausgabekontrollpunkte (vocp \[ \] \[ vertex-Element \] ) (Phase nach der Steuerungspunkt) | 32 Siehe Hinweis 1 unten | R   | 4(Component) \* 32(element) \* 32(vert) | Ja              | Keine     | Ja          |
+| 32-Bit-Eingabe \[ (vpc-Element \] ) (Patchkonst constant data)                                 | 32 Siehe Hinweis 2 unten | R   | 4                                   | Ja              | Keine     | Ja          |
+| 32-Bit-UINT-EingabeprimitiveID (vPrim)                                               | 1                   | R   | 1                                   | Nein               | –      | Ja          |
+| 32-Bit-UINT-EingabejoinstanceID (vJoinInstanceID)                                  | 1                   | R   | 1                                   | Nein               | –      | Ja          |
+| Element in einer Eingaberessource (t \# )                                                  | 128                 | R   | 128                                 | Ja              | Keine     | Ja          |
+| Sampler (s \# )                                                                       | 16                  | R   | 1                                   | Ja              | Keine     | Ja          |
+| ConstantBuffer-Referenz (cb \# \[ index \] )                                            | 15                  | R   | 4                                   | Ja              | Keine     | Ja          |
+| Direktverweis auf ConstantBuffer (icb \[ index \] )                                   | 1                   | R   | 4                                   | Ja (Inhalt)   | Keiner     | Ja          |
 
 
 
  
 
-**Hinweis 1:** Die Typdeklarationen der Eingabe Steuerungspunkt Registrierung (vicp) des Hull-Shader-Joins müssen eine beliebige Teilmenge auf der \[ Element \] Achse der Hull-Shader-Steuerungspunkt Eingabe (Pre-Control Point Phase) sein. Auf ähnliche Weise müssen die Deklarationen zum Einfügen der Ausgabe Steuerungs Punkte (vocp) jede Teilmenge (entlang der \[ Element \] Achse) der Hull-Shader-Ausgabe Steuerungs Punkte (Post-Control Point Phase) sein.
+**Hinweis 1:** Die Deklarationen des Eingabekontrollpunktregisters (Control Point Register, Deklarationen) der Hüllen-Shader-Joinphase müssen eine beliebige Teilmenge der Eingangs- (Vorkontrollpunktphase) der Hüllen-Shader-Kontrollpunkt-Eingabe \[ \] sein. Ebenso müssen die Deklarationen für die Eingabe der Ausgabekontrollpunkte (vocp) eine beliebige Teilmenge der Ausgabekontrollpunkte des Hüllen-Shaders (Phase nach der Steuerungspunkt) entlang der Elementachse \[ \] sein.
 
-Entlang der \[ \] vertexachse muss die Anzahl der zu lesenden Steuerungs Punkte für die einzelnen vicp-und vocp-Elemente auf ähnliche Weise eine Teilmenge der Anzahl der Eingabe Kontrollpunkte des Hull-Shaders und der Anzahl der leaseshaderausgabesteuerungspunkte sein. Wenn z. b. die vertexachse der vocp-Register mit n Scheitel Punkten deklariert wird, ist die Ausgabe Steuerung der Steuer Punkt Phase \[ 0.. n-1 \] als schreibgeschützte Eingabe für die joinphase verfügbar.
+Entlang der Scheitelpunktachse muss die Anzahl der Steuerpunkte, die für die einzelnen Bzw. vocp gelesen werden sollen, auf ähnliche Weise eine Teilmenge der Anzahl der Eingangskontrollpunkte des Hüllen-Shaders bzw. der Anzahl der Ausgabekontrollpunkte des Hüllen-Shaders \[ \] sein. Wenn beispielsweise die Scheitelpunktachse der vocp-Register mit n Scheitelpunkten deklariert wird, werden die Ausgabekontrollpunkte der Kontrollpunktphase \[ 0..n-1 als schreibgeschützte Eingabe für die Joinphase \] verfügbar.
 
-**Hinweis 2:** Zusätzlich zur Steuerungspunkt Eingabe sieht die Umstellungsphase des Hull-Shaders auch als Eingabe die von den Hull-Shader-Verzweigungs Phasen (en) berechneten Patch-Konstanten Daten an. Dies wird in der Hull-Shader-Verzweigungs Phase angezeigt, wenn der VPC \# registriert wird. Die Eingabe-VPC-Registrierungsphase der Hull-Shader-Verknüpfung hat \# denselben Register Bereich wie die Registrierungs-shaderphase der Hull-Shader-Verzweigung \# . Die Deklarationen der o- \# Register dürfen sich nicht mit der Ausgabe Deklaration der Hull-Shader-Verzweigungs Phase überschneiden \# . die joinphase des Hull-Shaders fügt der Aggregatdaten Ausgabe für den Hull-Shader hinzu.
+**Hinweis 2:** Zusätzlich zur Steuerungspunkteingabe werden in der Hüllen-Shader-Joinphase auch die Von den Hüllen-Shader-Forkphasenprogrammen berechneten Patchkonstanzdaten als Eingabe betrachtet. Dies wird in der Hüllen-Shader-Fork-Phase als vpc-Register \# gezeigt. Die VPC-Eingaberegister der Hüllen-Shader-Joinphase verwenden denselben Registerbereich wie die \# Hüllen-Shader-Forkphasenausgabe o \# registers. Die Deklarationen der o-Register dürfen sich nicht mit einem Hüllen-Shader-Fork-Phasesprogramm o Ausgabedeklaration überschneiden. Die Hüllen-Shader-Joinphase wird der aggregierten Patchkonst constant data-Ausgabe für den Hüllen-Shader \# \# hinzugefügt.
 
-### <a name="output-registers"></a>Ausgabe Register
+### <a name="output-registers"></a>Ausgaberegister
 
 
 
-| Registriungstyp                                   | Anzahl             | R/W | Dimension | Indizierbar durch r\# | der Arbeitszeittabelle | Erfordert DCL |
+| Registertyp                                   | Anzahl             | R/W | Dimension | Indizierbar durch r\# | Standardeinstellungen | Erfordert DCL |
 |-------------------------------------------------|-------------------|-----|-----------|------------------|----------|--------------|
-| 32-Bit-Ausgabe Patch-Konstante Daten Element (o \# ) | 32 siehe Hinweis unten | W   | 4         | Ja              | Keine     | Ja          |
+| 32-Bit-Ausgabeelement "Patch Constant Data" (o \# ) | 32 Siehe Hinweis unten | W   | 4         | Ja              | Keine     | Ja          |
 
 
 
  
 
 > [!Note]  
-> Die Hull-Shader-Verzweigung und die joinphasen Ausgaben sind ein gemeinsam genutzter Satz von 4 4-Vektor Registern. Die Ausgaben der einzelnen Verzweigungen oder joinphasen können einander nicht überlappen. Vom System interpretierte Werte, wie z. b. "ttierfactors", kommen in diesem Bereich.
+> Die Ausgaben für den Hüllen-Shader fork und die Joinphase sind ein gemeinsamer Satz von vier Registern mit vier Vektoren. Die Ausgaben der einzelnen Fork- oder Joinphasenprogramme dürfen sich nicht überlappen. Vom System interpretierte Werte wie TessFactors stammen aus diesem Bereich.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

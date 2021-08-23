@@ -1,7 +1,7 @@
 ---
-description: Legt einen Einfluss Wert eines Knotens in einem einzelnen Scheitelpunkt fest.
+description: Legt einen Einflusswert eines Würfes auf einen einzelnen Scheitelpunkt fest.
 ms.assetid: 9283866f-3dfe-467d-a74f-77e89c2778c4
-title: 'ID3DXSkinInfo:: setbonevertexinfluence-Methode (D3DX9Mesh. h)'
+title: ID3DXSkinInfo::SetBoneVertexInfluence-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: db84cdf9a1647bc5302c421e52d50f812e74596e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 950c72ed89c9204fb2369f175effd381548cb1913e9a2949666f6a0f4ea9aad9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119674690"
 ---
-# <a name="id3dxskininfosetbonevertexinfluence-method"></a>ID3DXSkinInfo:: setbonevertexinfluence-Methode
+# <a name="id3dxskininfosetbonevertexinfluence-method"></a>ID3DXSkinInfo::SetBoneVertexInfluence-Methode
 
-Legt einen Einfluss Wert eines Knotens in einem einzelnen Scheitelpunkt fest.
+Legt einen Einflusswert eines Würfes auf einen einzelnen Scheitelpunkt fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT SetBoneVertexInfluence(
 
 <dl> <dt>
 
-*bonumum* \[ in\]
+*enumerationNum* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Der Index des-Knochens. Muss zwischen 0 und der Anzahl der Knochen liegen.
+Index des Verzeichnisses. Muss zwischen 0 (0) und der Anzahl der Nummern (1) sein.
 
 </dd> <dt>
 
-*Einflussfaktoren* \[ in\]
+*influenceNum* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Index des Einfluss Arrays des angegebenen Knochen.
+Index des Einflussarrays des angegebenen Verzeichnisses.
 
 </dd> <dt>
 
-*Gewichtung* \[ in\]
+*Gewichtung* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Der Blend-Faktor des angegebenen Knochen Einflusses.
+Der Mischungsfaktor des angegebenen Einflussfaktors.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Der Blend-Faktor des angegebenen Knochen Einflusses.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -93,13 +93,13 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 [ID3DXSkinInfo](id3dxskininfo.md)
 </dt> <dt>
 
-[**ID3DXSkinInfo:: getbonevertexinfluence**](id3dxskininfo--getbonevertexinfluence.md)
+[**ID3DXSkinInfo::GetBoneVertexInfluence**](id3dxskininfo--getbonevertexinfluence.md)
 </dt> <dt>
 
-[**ID3DXSkinInfo:: findbonevertexinfluendceindex**](id3dxskininfo--findbonevertexinfluenceindex.md)
+[**ID3DXSkinInfo::FindBoneVertexInfluenceIndex**](id3dxskininfo--findbonevertexinfluenceindex.md)
 </dt> <dt>
 
-[**ID3DXSkinInfo:: getboneingefluence**](id3dxskininfo--getboneinfluence.md)
+[**ID3DXSkinInfo::GetBoneInfluence**](id3dxskininfo--getboneinfluence.md)
 </dt> </dl>
 
  

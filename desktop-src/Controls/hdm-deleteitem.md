@@ -1,9 +1,9 @@
 ---
-title: HDM_DELETEITEM Meldung (kommstrg. h)
-description: Löscht ein Element aus einem Header-Steuerelement. Sie können diese Nachricht explizit senden oder das-Header \_ DeleteItem-Makro verwenden.
+title: HDM_DELETEITEM (Commctrl.h)
+description: Löscht ein Element aus einem Headersteuerelement. Sie können diese Nachricht explizit senden oder das Header \_ DeleteItem-Makro verwenden.
 ms.assetid: 1dd1f233-2812-41ae-8a36-c42b9ac70ffc
 keywords:
-- Windows-Steuerelemente für HDM_DELETEITEM Meldung
+- HDM_DELETEITEM meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e6a3ec4b48c3dcc77579f70d26cd55b7127f5a6d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 28b0a48d769117ffd68f2ba2af9695fe7fce00031f297626ae48c111d4574dd6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119697350"
 ---
-# <a name="hdm_deleteitem-message"></a>HDM \_ DeleteItem-Meldung
+# <a name="hdm_deleteitem-message"></a>HDM \_ DELETEITEM-Nachricht
 
-Löscht ein Element aus einem Header-Steuerelement. Sie können diese Nachricht explizit senden oder das- [**Header \_ DeleteItem**](/windows/desktop/api/Commctrl/nf-commctrl-header_deleteitem) -Makro verwenden.
+Löscht ein Element aus einem Headersteuerelement. Sie können diese Nachricht explizit senden oder das [**Header \_ DeleteItem-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-header_deleteitem) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -41,7 +41,7 @@ Ein Index des zu löschenden Elements.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

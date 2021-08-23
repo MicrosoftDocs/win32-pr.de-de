@@ -1,5 +1,5 @@
 ---
-description: Stellt die Isolations Einstellungsdaten dar.
+description: Stellt die Isolationseinstellungsdaten dar.
 ms.assetid: f6bf5fcf-61c4-4e69-8ba0-fff4c4873368
 title: Msvm_EthernetSwitchPortIsolationSettingData-Klasse
 ms.topic: reference
@@ -17,16 +17,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 3d7761b090cfd3bf2ae6aaaa92e9c5d09d55eae6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 33ddf01fb7df5787fc35c073472987aa9a170e62086cd6c127f874cb2360b38d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368834"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681530"
 ---
-# <a name="msvm_ethernetswitchportisolationsettingdata-class"></a>MSVM \_ ethernetzwitchportisolationsettingdata-Klasse
+# <a name="msvm_ethernetswitchportisolationsettingdata-class"></a>Msvm \_ EthernetSwitchPortIsolationSettingData-Klasse
 
-Stellt die Isolations Einstellungsdaten dar.
+Stellt die Isolationseinstellungsdaten dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -45,77 +45,77 @@ class Msvm_EthernetSwitchPortIsolationSettingData : Msvm_EthernetSwitchPortFeatu
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ ethernetzwitchportisolationsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ EthernetSwitchPortIsolationSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ ethernetzwitchportisolationsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ EthernetSwitchPortIsolationSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**"Zugewuntaggedtraffic"**
+**AllowUntaggedTraffic**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
+Qualifizierer: **WmiDataId** (2), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
 </dt> </dl>
 
-Gibt an, ob der Port nicht markierten Datenverkehr senden/empfangen darf.
+Gibt an, ob der Port nicht mit Tags bezeichneten Datenverkehr senden/empfangen darf.
 
 </dd> <dt>
 
-**Defaultisolationid**
+**DefaultIsolationId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
+Qualifizierer: **WmiDataId** (3), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
 </dt> </dl>
 
-Die standardvirtualsubnetz-ID oder VLAN, die für den gesamten Sende-/empfangsdatenverkehr festgelegt wird, wenn " **zuordnduntaggedtraffic** " **true**
+Die Standardmäßige VirtualSubnetId oder das VLAN, die für sämtlichen Sende-/Empfangsdatenverkehr festgelegt wird, wenn **AllowedUntaggedTraffic** true **ist.**
 
 </dd> <dt>
 
-**Enablemultitenantstack**
+**EnableMultiTenantStack**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **Boolesch**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
+Qualifizierer: **WmiDataId** (4), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
 </dt> </dl>
 
-**True** gibt an, dass der Netzwerk Stapel auf der VM auf die Isolations Konfiguration zugreifen kann. Der Standardwert ist **false**.
+True **gibt an,** dass der Netzwerkstapel auf dem virtuellen Computer auf die Isolationskonfiguration zugreifen kann. Der Standardwert ist **false**.
 
 </dd> <dt>
 
 **IsolationMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
+Qualifizierer: **WmiDataId** (1), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
 </dt> </dl>
 
-Gibt an, ob der Port **VLAN** oder **virtualsubnetztid** für die Isolation verwendet. **Nativevirtualsubnettid** wird für wNv-virtualsubnetztid-basierte Netzwerke verwendet.
+Gibt an, ob der Port **VLAN oder** **VirtualSubnetId für** die Isolation verwendet. **NativeVirtualSubnetId wird** für WNV VirtualSubnetId-basierte Netzwerke verwendet.
 
 <dt>
 
@@ -128,14 +128,14 @@ Gibt an, ob der Port **VLAN** oder **virtualsubnetztid** für die Isolation verw
 
 <span id="NativeVirtualSubnetId"></span><span id="nativevirtualsubnetid"></span><span id="NATIVEVIRTUALSUBNETID"></span>
 
-**Nativevirtualsubnetztid** (1)
+**NativeVirtualSubnetId** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ExternalVirtualSubnetId"></span><span id="externalvirtualsubnetid"></span><span id="EXTERNALVIRTUALSUBNETID"></span>
 
-**Externalvirtualsubnetztid** (2)
+**ExternalVirtualSubnetId** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -158,7 +158,7 @@ Gibt an, ob der Port **VLAN** oder **virtualsubnetztid** für die Isolation verw
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -167,7 +167,7 @@ Gibt an, ob der Port **VLAN** oder **virtualsubnetztid** für die Isolation verw
 
 <dl> <dt>
 
-[**MSVM \_ ethernetzwitchportfeaturesettingdata**](msvm-ethernetswitchportfeaturesettingdata.md)
+[**Msvm \_ EthernetSwitchPortFeatureSettingData**](msvm-ethernetswitchportfeaturesettingdata.md)
 </dt> </dl>
 
  

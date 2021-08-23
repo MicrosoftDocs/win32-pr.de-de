@@ -1,7 +1,7 @@
 ---
-description: Beschreibt ein von einem Effekt verwendetes Verfahren.
+description: Beschreibt eine von einem Effekt verwendete Technik.
 ms.assetid: 7ba2dbb3-8039-4d1c-ad9d-130d9bf3d80a
-title: D3DXTECHNIQUE_DESC-Struktur (D3dx9effect. h)
+title: D3DXTECHNIQUE_DESC -Struktur (D3dx9effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9effect.h
-ms.openlocfilehash: 35dd483a983f17371d6a77e6c020b3a45d9e9360
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7e835c0eac067825942568464df8d5d345a06b530b71b7eaf7f319eae5f5d366
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119630730"
 ---
-# <a name="d3dxtechnique_desc-structure"></a>D3DXTECHNIQUE- \_ Struktur
+# <a name="d3dxtechnique_desc-structure"></a>D3DXTECHNIQUE \_ DESC-Struktur
 
-Beschreibt ein von einem Effekt verwendetes Verfahren.
+Beschreibt eine von einem Effekt verwendete Technik.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,35 +48,35 @@ Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Eine Zeichenfolge, die den Namen der Technik enthält.
+Eine Zeichenfolge, die den Techniknamen enthält.
 
 </dd> <dt>
 
-**Ausweisen**
+**Übergibt**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Anzahl von Renderingdurchläufen, die für das Siehe Hinweise.
+Anzahl von Renderingüberläufen, die für die Technik erforderlich sind. Siehe Hinweise.
 
 </dd> <dt>
 
 **Anmerkungen**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Anzahl der Anmerkungen. Weitere [Informationen finden Sie unter Hinzufügen von Informationen zu Effekt Parametern mit \_ Anmerkungen](using-an-effect.md).
+Die Anzahl der Anmerkungen. Weitere [Informationen finden Sie unter Hinzufügen von Informationen zu Effektparametern mit \_ Anmerkungen.](using-an-effect.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Einige Grafikkarten können zwei Texturen in einem einzigen Durchlauf renderingzeichen darstellen. Wenn eine Karte jedoch nicht über diese Funktion verfügt, ist es oft möglich, denselben Effekt in zwei Durchläufen zu rendern, wobei eine Textur für jeden Durchlauf verwendet wird.
+Einige Grafikkarten können zwei Texturen in einem einzelnen Durchgang rendern. Wenn eine Karte jedoch nicht über diese Funktion verfügt, ist es häufig möglich, den gleichen Effekt in zwei Durchläufen zu rendern, indem sie eine Textur für jeden Durchgang verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,15 +84,15 @@ Einige Grafikkarten können zwei Texturen in einem einzigen Durchlauf renderingz
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9effect. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9effect.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Effekt Strukturen](dx9-graphics-reference-effects-structures.md)
+[Effektstrukturen](dx9-graphics-reference-effects-structures.md)
 </dt> </dl>
 
  

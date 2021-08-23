@@ -1,5 +1,5 @@
 ---
-description: 'SystemConfig_Video-Klasse: Diese Klasse ist die Ereignistypklasse für Videokonfigurationsereignisse.'
+description: 'SystemConfig_Video Klasse: Diese Klasse ist die Ereignistypklasse für Videokonfigurationsereignisse.'
 ms.assetid: ddb5924b-70d9-4693-bf68-0536c3c3fa8d
 title: SystemConfig_Video-Klasse
 ms.topic: reference
@@ -23,18 +23,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 716194eb9ceb67b609f886482393795eaef2ef09
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 09d68fcd2710e4f16b315182624ce32eaa3729f370a4a6a071c55f705dcbe6af
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105898"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119811700"
 ---
 # <a name="systemconfig_video-class"></a>SystemConfig \_ Video-Klasse
 
 Diese Klasse ist die Ereignistypklasse für Videokonfigurationsereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ class SystemConfig_Video : SystemConfig
 
 ## <a name="members"></a>Member
 
-Die **SystemConfig \_ Video-Klasse** verfügt über folgende Typen von Membern:
+Die **SystemConfig \_ Video-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -77,7 +77,7 @@ Datentyp: **char16-Array**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **WmiDataId** (8), **Max** (256), **Format(s)**
+Qualifizierer: **WmiDataId** (8), **Max** (256), **Format("s")**
 </dt> </dl>
 
 Name oder Beschreibung des Adapters.
@@ -93,7 +93,7 @@ Datentyp: **char16-Array**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **WmiDataId** (9), **Max** (256), **Format(s)**
+Qualifizierer: **WmiDataId** (9), **Max** (256), **Format("s")**
 </dt> </dl>
 
 BIOS-Name des Adapters.
@@ -125,7 +125,7 @@ Datentyp: **char16-Array**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **WmiDataId** (6), **Max** (256), **Format(s)**
+Qualifizierer: **WmiDataId** (6), **Max** (256), **Format("s")**
 </dt> </dl>
 
 Chipname des Adapters.
@@ -141,10 +141,10 @@ Datentyp: **char16-Array**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **WmiDataId** (7), **Max** (256), **Format(s)**
+Qualifizierer: **WmiDataId** (7), **Max** (256), **Format("s")**
 </dt> </dl>
 
-DAC-Chipname (Digital-to-Analog Converter) des Adapters.
+Der Name des DAC-Chips (Digital-to-Analog Converter) des Adapters.
 
 </dd> <dt>
 
@@ -157,10 +157,10 @@ Datentyp: **char16-Array**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **WmiDataId** (10), **Max** (256), **Format(s)**
+Qualifizierer: **WmiDataId** (10), **Max** (256), **Format("s")**
 </dt> </dl>
 
-Adresse oder andere identifizierende Informationen, um dem logischen Gerät einen eindeutigen Namen zu geben.
+Adresse oder andere identifizierende Informationen, um das logische Gerät eindeutig zu benennen.
 
 </dd> <dt>
 
@@ -176,7 +176,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (1)
 </dt> </dl>
 
-Maximaler unterstützter Arbeitsspeicher in Bytes.
+Maximal unterstützter Arbeitsspeicher in Bytes.
 
 </dd> <dt>
 
@@ -192,17 +192,17 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (11), **Format("x")**
 </dt> </dl>
 
-Gerätezustandsflags. Dies kann eine beliebige sinnvolle Kombination der folgenden Sein.
+Gerätestatusflags. Dies kann eine beliebige kombination der folgenden Punkte sein.
 
 
 
 | Wert                                                                                                                                                                                                                                                                                        | Bedeutung                                                                                                                                                                                                                      |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="DISPLAY_DEVICE_ATTACHED_TO_DESKTOP"></span><span id="display_device_attached_to_desktop"></span><dl> <dt>**DISPLAY \_ \_GERÄT, \_ DAS AN \_ DESKTOP**</dt> 1 ANGEFÜGT IST <dt>(0x1)</dt> </dl> | Das Gerät ist Teil des Desktops.<br/>                                                                                                                                                                                |
-| <span id="DISPLAY_DEVICE_MIRRORING_DRIVER"></span><span id="display_device_mirroring_driver"></span><dl> <dt>**DISPLAY \_ \_GERÄTESPIEGELUNGSTREIBER \_**</dt> <dt>8 (0x8)</dt> </dl>           | Stellt ein Pseudogerät dar, das zum Spiegeln von Anwendungszeichnungen zum Herstellen einer Verbindung mit einem Remotecomputer oder anderen Zwecken verwendet wird. Diesem Gerät ist ein unsichtbarer Pseudomonitor zugeordnet. NetMeeting verwendet sie beispielsweise.<br/> |
+| <span id="DISPLAY_DEVICE_ATTACHED_TO_DESKTOP"></span><span id="display_device_attached_to_desktop"></span><dl> <dt>**DISPLAY \_ AN DESKTOP 1 \_ \_ \_ ANGESCHLOSSENES GERÄT**</dt> <dt>(0X1)</dt> </dl> | Das Gerät ist Teil des Desktops.<br/>                                                                                                                                                                                |
+| <span id="DISPLAY_DEVICE_MIRRORING_DRIVER"></span><span id="display_device_mirroring_driver"></span><dl> <dt>**DISPLAY \_ \_ \_ GERÄTESPIEGELUNGSTREIBER**</dt> <dt>8 (0x8)</dt> </dl>           | Stellt ein Pseudogerät dar, das zum Spiegeln der Anwendungszeichnung zum Herstellen einer Verbindung mit einem Remotecomputer oder anderen Zwecken verwendet wird. Diesem Gerät ist ein unsichtbarer Pseudomonitor zugeordnet. NetMeeting verwendet es beispielsweise.<br/> |
 | <span id="DISPLAY_DEVICE_MODESPRUNED"></span><span id="display_device_modespruned"></span><dl> <dt>**DISPLAY \_ \_GERÄTEMODUSSPRUNED**</dt> <dt>134217728 (0x8000000)</dt> </dl>             | Das Gerät verfügt über mehr Anzeigemodi als die Ausgabegeräte unterstützen.<br/>                                                                                                                                                |
-| <span id="DISPLAY_DEVICE_PRIMARY_DEVICE"></span><span id="display_device_primary_device"></span><dl> <dt>**DISPLAY \_ \_PRIMÄRES \_ GERÄT**</dt> <dt>4 (0x4)</dt> </dl>                 | Der primäre Desktop befindet sich auf dem Gerät. Für ein System mit einer einzelnen Anzeigekarte ist dies immer festgelegt. Für ein System mit mehreren Grafikkarten kann diese Einstellung nur auf einem Gerät festgelegt werden.<br/>                                   |
-| <span id="DISPLAY_DEVICE_REMOVABLE"></span><span id="display_device_removable"></span><dl> <dt>**DISPLAY \_ DEVICE \_ REMOVABLE**</dt> <dt>32 (0x20)</dt> </dl>                               | Das Gerät ist wechselbar. es kann nicht die primäre Anzeige sein.<br/>                                                                                                                                                        |
+| <span id="DISPLAY_DEVICE_PRIMARY_DEVICE"></span><span id="display_device_primary_device"></span><dl> <dt>**DISPLAY \_ PRIMÄRES \_ \_ GERÄT DES GERÄTS**</dt> <dt>4 (0x4)</dt> </dl>                 | Der primäre Desktop befindet sich auf dem Gerät. Für ein System mit einer einzelnen Anzeigekarte wird dies immer festgelegt. Für ein System mit mehreren Anzeigekarten kann diese Gruppe nur auf einem Gerät festgelegt werden.<br/>                                   |
+| <span id="DISPLAY_DEVICE_REMOVABLE"></span><span id="display_device_removable"></span><dl> <dt>**DISPLAY \_ \_WECHSELMEDIUM**</dt> <dt>32 (0x20)</dt> </dl>                               | Das Gerät ist wechselbar. es kann nicht die primäre Anzeige sein.<br/>                                                                                                                                                        |
 | <span id="DISPLAY_DEVICE_VGA_COMPATIBLE"></span><span id="display_device_vga_compatible"></span><dl> <dt>**DISPLAY \_ \_ \_ GERÄTE-VGA-KOMPATIBEL**</dt> <dt>16 (0x10)</dt> </dl>               | Das Gerät ist VGA-kompatibel.<br/>                                                                                                                                                                                     |
 
 
@@ -263,14 +263,14 @@ Aktuelle Anzahl vertikaler Pixel.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

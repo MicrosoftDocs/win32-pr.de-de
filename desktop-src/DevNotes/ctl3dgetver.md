@@ -1,5 +1,5 @@
 ---
-description: Gibt die Version von ctl3d an, die zurzeit ausgeführt wird.
+description: Gibt die Version von CTL3D an, die derzeit ausgeführt wird.
 ms.assetid: 38c0842c-417f-4ca1-acc2-3bbadf45c804
 title: Ctl3dGetVer-Funktion
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ctl3d32.dll
-ms.openlocfilehash: e548d8933538ea85ba94f6e120032453079d69ab
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f29963020290686521d5e3bd165d2c8fac6e5e0c96f34552ad11f725d95567cf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119654500"
 ---
 # <a name="ctl3dgetver-function"></a>Ctl3dGetVer-Funktion
 
-Gibt die Version von ctl3d an, die zurzeit ausgeführt wird.
+Gibt die Version von CTL3D an, die derzeit ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,11 +39,11 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen-Wert zurück, der die Hauptversionsnummer im Byte mit hoher Reihenfolge und die neben Versionsnummer im nieder wertigen Byte enthält.
+Gibt einen Wert zurück, der die Hauptversionsnummer im hohen Byte und die Nebenversionsnummer im niedrigen Byte enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

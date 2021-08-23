@@ -1,34 +1,34 @@
 ---
-description: 'Verwenden Sie die folgenden Programmier Elemente zum Schreiben von Anwendungen, die Leistungsdaten des Leistungs Zählers verwenden oder bereitstellen:'
+description: 'Verwenden Sie die folgenden Programmierelemente, um Anwendungen zu schreiben, die Leistungsindikatordaten nutzen oder bereitstellen:'
 ms.assetid: 8600f48f-0ef5-4ac2-bdb9-6d9700cae306
-title: Leistungsindikator Referenz
+title: Referenz zu Leistungsindikatoren
 ms.topic: article
 ms.date: 08/17/2020
-ms.openlocfilehash: e716d44c08a847f7f64dc07bc4382faa9adf8f0a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca2d7f0593aff143ab4612c5ed9489bb8a48c76e7726d2289f8387fcb38a257e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358452"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119775300"
 ---
-# <a name="performance-counters-reference"></a>Leistungsindikator Referenz
+# <a name="performance-counters-reference"></a>Referenz zu Leistungsindikatoren
 
-Verwenden Sie die folgenden Programmier Elemente zum Schreiben von Anwendungen, die Leistungsdaten des Leistungs Zählers verwenden oder bereitstellen:
+Verwenden Sie die folgenden Programmierelemente, um Anwendungen zu schreiben, die Leistungsindikatordaten nutzen oder bereitstellen:
 
 - [Funktionen der Leistungsindikatoren](performance-counters-functions.md)
-- [Leistungsindikator Funktionen für Visual Basic](performance-counters-functions-for-visual-basic.md)
+- [Leistungsindikatorfunktionen für Visual Basic](performance-counters-functions-for-visual-basic.md)
 - [Strukturen der Leistungsindikatoren](performance-counters-structures.md)
-- [Leistungsindikator Enumerationen](performance-counter-enumerations.md)
-- [Leistungsindikator Typen](performance-counters-types.md)
+- [Leistungsindikatorenumeration](performance-counter-enumerations.md)
+- [Leistungsindikatortypen](performance-counters-types.md)
 - [Fehlercodes des Leistungsdaten-Hilfsprogramms](pdh-error-codes.md)
-- [SQL-Protokolldatei Schema](sql-log-file-schema.md)
+- [SQL Protokolldateischema](sql-log-file-schema.md)
 
-Außerdem wird in diesem Abschnitt Folgendes beschrieben:
+In diesem Abschnitt wird außerdem Beschrieben:
 
-- Die [Schema Elemente](performance-counters-schema.md) , die Sie in Ihrem v2-Anbieter Manifest verwenden, um die Leistungsindikatoren zu definieren.
-- Das [ctrpp](ctrpp.md) -Tool, das das Manifest analysiert und den Code generiert, der das Layout der gegen Daten in Ihrem v2-Anbieter definiert.
+- Die [Schemaelemente,](performance-counters-schema.md) die Sie in Ihrem V2-Anbietermanifest verwenden, um Ihre Leistungsindikatoren zu definieren.
+- Das [CTRPP-Tool,](ctrpp.md) das Ihr Manifest analysiert und den Code generiert, der das Layout der Indikatordaten in Ihrem V2-Anbieter definiert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Informationen zu Leistungsindikatoren](about-performance-counters.md)
 

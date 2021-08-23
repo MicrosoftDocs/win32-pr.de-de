@@ -1,21 +1,21 @@
 ---
-description: Die WM \_ paletteischanging-Nachricht informiert Anwendungen darüber, dass eine Anwendung ihre logische Palette erkennen wird.
+description: Die WM \_ PALETTEISCHANGING-Nachricht informiert Anwendungen darüber, dass eine Anwendung ihre logische Palette umsetzen wird.
 ms.assetid: 64ec1042-0ab5-496f-9a88-2f293b412704
-title: WM_PALETTEISCHANGING Meldung (Winuser. h)
+title: WM_PALETTEISCHANGING Meldung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa2127dc9c682bba1fc4cea4e10b2b96ecc92102
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7b0de17e7957e4b03c0a8fb942e7c0e4f94a3329e53cb039ce1d7f0a8c33aa89
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103757878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119717680"
 ---
-# <a name="wm_paletteischanging-message"></a>WM \_ paletteischanging-Meldung
+# <a name="wm_paletteischanging-message"></a>WM \_ PALETTEISCHANGING-Meldung
 
-Die **WM \_ paletteischanging** -Nachricht informiert Anwendungen darüber, dass eine Anwendung ihre logische Palette erkennen wird.
+Die **WM \_ PALETTEISCHANGING-Nachricht** informiert Anwendungen darüber, dass eine Anwendung ihre logische Palette umsetzen wird.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -36,7 +36,7 @@ LRESULT CALLBACK WindowProc(
 *wParam* 
 </dt> <dd>
 
-Ein Handle für das Fenster, in dem die logische Palette erkannt wird.
+Ein Handle für das Fenster, das seine logische Palette realisiert.
 
 </dd> <dt>
 
@@ -49,15 +49,15 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung, die die Palette ändert, wartet nicht auf die Bestätigung dieser Nachricht, bevor die Palette geändert und die [**WM \_ palettechanged**](wm-palettechanged.md) -Nachricht gesendet wird. Folglich wird die Palette möglicherweise bereits geändert, wenn eine Anwendung diese Nachricht empfängt.
+Die Anwendung, die ihre Palette ändert, wartet nicht auf die Bestätigung dieser Nachricht, bevor sie die Palette ändert und die [**WM \_ PALETTECHANGED-Nachricht**](wm-palettechanged.md) sendet. Daher kann die Palette bereits geändert werden, wenn eine Anwendung diese Nachricht empfängt.
 
-Wenn die Anwendung diese Nachricht ignoriert oder nicht verarbeitet, und eine zweite Anwendung ihre Palette erkennt, während die erste Palette-Indizes verwendet, besteht die Möglichkeit, dass der Benutzer bei nachfolgenden Zeichnungs Vorgängen unerwartete Farben erkennt.
+Wenn die Anwendung diese Nachricht entweder ignoriert oder nicht verarbeitet und eine zweite Anwendung ihre Palette erkennt, während die erste Palettenindizes verwendet, besteht die starke Möglichkeit, dass dem Benutzer bei nachfolgenden Zeichnungsvorgängen unerwartete Farben angezeigt werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -65,7 +65,7 @@ Wenn die Anwendung diese Nachricht ignoriert oder nicht verarbeitet, und eine zw
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -76,13 +76,13 @@ Wenn die Anwendung diese Nachricht ignoriert oder nicht verarbeitet, und eine zw
 [Übersicht über Farben](colors.md)
 </dt> <dt>
 
-[Farb Meldungen](color-messages.md)
+[Farbmeldungen](color-messages.md)
 </dt> <dt>
 
-[**WM \_ palettechanged**](wm-palettechanged.md)
+[**WM \_ PALETTECHANGED**](wm-palettechanged.md)
 </dt> <dt>
 
-[**WM \_ querynewpalette**](wm-querynewpalette.md)
+[**WM \_ QUERYNEWPALETTE**](wm-querynewpalette.md)
 </dt> </dl>
 
  

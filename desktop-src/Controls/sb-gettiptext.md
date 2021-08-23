@@ -1,9 +1,9 @@
 ---
-title: SB_GETTIPTEXT Meldung (kommstrg. h)
-description: Ruft den QuickInfo-Text für einen Teil in einer Statusleiste ab. Die Statusleiste muss mit dem SBT- \_ Tooltips-Stil erstellt werden, um Quick Infos zu aktivieren.
+title: SB_GETTIPTEXT-Nachricht (Commctrl.h)
+description: Ruft den QuickInfo-Text für ein Teil in einer Statusleiste ab. Die Statusleiste muss mit dem SBT \_ TOOLTIPS-Format erstellt werden, um QuickInfos zu aktivieren.
 ms.assetid: a3936830-a855-4ef6-b179-3aa3730cd0b8
 keywords:
-- Windows-Steuerelemente für SB_GETTIPTEXT Meldung
+- SB_GETTIPTEXT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d492bc19f82300f460666b3213c545fe95b8db85
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 89a78fa6650d850cad2b6de8cc77f1d44b49b8325bf6856b989953fc6511f56f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859108"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119637130"
 ---
-# <a name="sb_gettiptext-message"></a>SB \_ GetTipText-Nachricht
+# <a name="sb_gettiptext-message"></a>SB \_ GETTIPTEXT-Nachricht
 
-Ruft den QuickInfo-Text für einen Teil in einer Statusleiste ab. Die Statusleiste muss mit dem [**SBT- \_ Tooltips**](status-bar-styles.md) -Stil erstellt werden, um Quick Infos zu aktivieren.
+Ruft den QuickInfo-Text für ein Teil in einer Statusleiste ab. Die Statusleiste muss mit dem [**SBT \_ TOOLTIPS-Format**](status-bar-styles.md) erstellt werden, um QuickInfos zu aktivieren.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,14 +34,14 @@ Ruft den QuickInfo-Text für einen Teil in einer Statusleiste ab. Die Statusleis
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) gibt den NULL basierten Index des Teils an, der den QuickInfo-Text empfängt. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt die Größe des Puffers bei *LPARAM* in Zeichen an.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) gibt den nullbasierten Index des Teils an, der den QuickInfo-Text empfängt. [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt die Größe des Puffers bei *lParam* in Zeichen an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf einen Zeichen Puffer, der den QuickInfo-Text empfängt.
+Zeiger auf einen Zeichenpuffer, der den QuickInfo-Text empfängt.
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Ein Zeiger auf einen Zeichen Puffer, der den QuickInfo-Text empfängt.
 
 Der Rückgabewert wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Sicherheitswarnung:** Wenn Sie diese Meldung falsch verwenden, kann dies zu Problemen bei der Anwendung führen. Wenn der Text z. b. zu groß für den *LPARAM* -Puffer ist, kann dies zu einem Pufferüberlauf führen. Überprüfen Sie die [Sicherheitsaspekte: Microsoft Windows](sec-comctls.md) -Steuerelemente, bevor Sie fortfahren.
+**Sicherheitswarnung:** Wenn Sie diese Meldung falsch verwenden, kann dies zu Problemen für Ihre Anwendung führen. Wenn der Text beispielsweise zu groß für den *lParam-Puffer* ist, kann dies zu einem Pufferüberlauf führen. Lesen Sie die [Sicherheitsüberlegungen: Microsoft Windows Controls,](sec-comctls.md) bevor Sie fortfahren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,10 +59,10 @@ Der Rückgabewert wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **SB \_ Gettiptextw** (Unicode) und **SB \_ gettiptexta** (ANSI)<br/>               |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **SB \_ GETTIPTEXTW** (Unicode) und **SB \_ GETTIPTEXTA** (ANSI)<br/>               |
 
 
 

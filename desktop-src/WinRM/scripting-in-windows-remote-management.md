@@ -1,11 +1,11 @@
 ---
-title: Skripterstellung in Windows-Remoteverwaltung
-description: Die Skript-API in WinRM und die dazugehörige com-API für C++ sind so konzipiert, dass Sie die Vorgänge des WS-Management Protokolls genau widerspiegeln.
+title: Skripterstellung in Windows Remoteverwaltung
+description: Die Skript-API in WinRM und die zugehörige COM-API für C++ sind so konzipiert, dass sie die Vorgänge des WS-Management Protokolls genau widerspiegeln.
 ms.assetid: fda2042a-8fca-4cd8-bb55-fd1c3591921e
 ms.tgt_platform: multiple
 keywords:
-- Skripterstellung in Windows-Remoteverwaltung
-- Windows-Remoteverwaltung, Skripterstellung in
+- Skripterstellung in Windows Remoteverwaltung
+- Windows Remoteverwaltung, Skripterstellung in
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -13,34 +13,34 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 75af10fea03853de99c884eda0a74ce340683b49
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 3c10d36420b2826162a6ed5e3fb6bf69408a74032faafac75c84c25a754cf534
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119795430"
 ---
-# <a name="scripting-in-windows-remote-management"></a>Skripterstellung in Windows-Remoteverwaltung
+# <a name="scripting-in-windows-remote-management"></a>Skripterstellung in Windows Remoteverwaltung
 
-Die [Skript-API in WinRM](winrm-scripting-api.md) und die dazugehörige com-API für C++ sind so konzipiert, dass Sie die Vorgänge des WS-Management Protokolls genau widerspiegeln.
+Die [Skript-API in WinRM](winrm-scripting-api.md) und die zugehörige COM-API für C++ sind so konzipiert, dass sie die Vorgänge des WS-Management Protokolls genau widerspiegeln.
 
-Die WinRM-Skript-API in Windows-Remoteverwaltung unterstützt alle WS-Management Protokoll Vorgänge mit Ausnahme von 1. Abonnements für Ereignisse können nicht verwendet werden. Zum Abonnieren von Ereignissen aus dem BMC-System Ereignisprotokoll müssen Sie die Befehlszeilen Tools "wecutil" oder "wevtutil" verwenden. Weitere Informationen finden Sie unter [Ereignisse](events.md).
+Die WinRM-Skripterstellungs-API in Windows Remoteverwaltung unterstützt alle WS-Management-Protokollvorgänge mit Ausnahme eines. Abonnements für Ereignisse sind nicht zulässig. Um Ereignisse aus dem BMC-Systemereignisprotokoll zu abonnieren, müssen Sie die Befehlszeilentools Wecutil oder Wevtutil verwenden. Weitere Informationen finden Sie unter [Ereignisse](events.md).
 
-Die WinRM-Skript-API wird von Winrm.vbs, einem Befehlszeilen Tool, das in Visual Basic Scripting Edition (VBScript) geschrieben ist, aufgerufen. Winrm.vbs enthält Beispiele für die Verwendung der [WinRM-Skript-API](winrm-scripting-api.md).
+Die WinRM Scripting-API wird von Winrm.vbs aufgerufen, einem Befehlszeilentool, das in Visual Basic Scripting Edition (VBScript) geschrieben ist. Winrm.vbs enthält Beispiele für die Verwendung der [WinRM-Skript-API.](winrm-scripting-api.md)
 
-## <a name="using-wsman-compared-to-using-wmi-scripting"></a>Verwenden von WSMAN im Vergleich zur Verwendung von WMI-Skripting
+## <a name="using-wsman-compared-to-using-wmi-scripting"></a>Verwenden von WSman im Vergleich zur Verwendung von WMI-Skripts
 
-WMI stellt über DCOM eine Verbindung mit Remote Computern her. hierfür ist die Konfiguration erforderlich, die unter [Herstellen einer Verbindung mit WMI auf einem Remote Computer](/windows/desktop/WmiSdk/connecting-to-wmi-on-a-remote-computer)beschrieben wird. WinRM verwendet nicht DCOM, um eine Verbindung mit einem Remote Computer herzustellen. Stattdessen sendet das WS-Management Protokoll SOAP-Nachrichten, und der Dienst verwendet einen einzelnen Port für http und einen Port für den HTTPS-Transport.
+WMI stellt über DCOM eine Verbindung mit Remotecomputern her. Hierfür ist die konfiguration erforderlich, die unter [Herstellen einer Verbindung mit WMI auf einem Remotecomputer](/windows/desktop/WmiSdk/connecting-to-wmi-on-a-remote-computer)beschrieben ist. WinRM verwendet DCOM nicht, um eine Verbindung mit einem Remotecomputer herzustellen. Stattdessen sendet das WS-Management-Protokoll SOAP-Nachrichten, und der Dienst verwendet einen einzelnen Port für HTTP und einen Port für den HTTPS-Transport.
 
-Im Gegensatz zum **WinRM** -Befehlszeilen Tool müssen Skripts das XML bereitstellen, das für die Übergabe an die WS-Management-Protokollnachrichten erforderlich ist. Sie müssen auch URIs bereitstellen. Weitere Informationen finden Sie unter [Ressourcen-URIs](resource-uris.md) und [Windows-Remoteverwaltung und WMI](windows-remote-management-and-wmi.md).
+Im Gegensatz zum **Befehlszeilentool winrm** müssen Skripts den XML-Code bereitstellen, der für die Übergabe an die WS-Management Protokollmeldungen erforderlich ist. Sie müssen auch URIs bereitstellen. Weitere Informationen finden Sie unter [Ressourcen-URIs](resource-uris.md) und [Windows Remoteverwaltung und WMI.](windows-remote-management-and-wmi.md)
 
-Die WMI-Skript-API funktioniert mit Objekten, wie z. b. Instanzen von [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk), die Ressourcen auf einem Computer darstellen. Diese WMI-Klasse wird in [*Managed Object Format Dateien (MOF*](/windows/desktop/WmiSdk/gloss-m) -Dateien) definiert, die im WMI-Repository im Binärformat gespeichert werden. In WMI gibt ein Get-Vorgang für eine einzelne Ressource oder eine Abfrage für mehrere Instanzen WMI-Objekte zurück.
+Die WMI-Skripterstellungs-API funktioniert mit -Objekten, z. B. Instanzen von [**Win32 \_ LogicalDisk,**](/windows/desktop/CIMWin32Prov/win32-logicaldisk)die Ressourcen auf einem Computer darstellen. Diese WMI-Klasse wird in [*mof-Dateien (Managed Object Format)*](/windows/desktop/WmiSdk/gloss-m) definiert, die im WMI-Repository in binärer Form gespeichert werden. In WMI gibt ein Get-Vorgang für eine einzelne Ressource oder eine Abfrage für mehrere Instanzen WMI-Objekte zurück.
 
-Ein WinRM-Skript gibt keine Objekte zurück, sondern stattdessen XML-Text Ströme. Weitere Informationen finden Sie unter [Windows-Remoteverwaltung und WMI](windows-remote-management-and-wmi.md).
+Ein WinRM-Skript gibt keine Objekte zurück, sondern xml-Textstreams. Weitere Informationen finden Sie unter [Windows Remoteverwaltung und WMI.](windows-remote-management-and-wmi.md)
 
 ## <a name="displaying-xml-output-from-winrm-scripts"></a>Anzeigen der XML-Ausgabe von WinRM-Skripts
 
-Die WinRM-Skript-API ruft XML-Zeichen folgen ab, die Ressourcen beschreiben und empfängt. Das resultierende XML-Format ist in Form eines Textstreams und erfordert, dass eine XML-Transformation auf andere Weise angezeigt wird.
+Die WinRM-Skript-API ruft XML-Zeichenfolgen ab, die Ressourcen beschreiben, und empfängt sie. Das resultierende XML hat die Form eines Textstreams und erfordert, dass eine XML-Transformation auf andere Weise angezeigt wird.
 
 Das folgende WinRM-Skript erzeugt eine unformatierte XML-Ausgabe.
 
@@ -57,7 +57,7 @@ xmlFile.Save( "c:\RawOutput.xml")
 
 
 
-Der folgende TextBlock zeigt die XML-Ausgabe des WinRM-Skripts.
+Der folgende Textblock zeigt die XML-Ausgabe des WinRM-Skripts.
 
 
 ```XML
@@ -94,9 +94,9 @@ _Service>
 
 
 
-Ihre Skripts können eine XML-Transformation verwenden, um diese Ausgabe lesbarer zu machen. Weitere Informationen finden Sie unter [Anzeigen der XML-Ausgabe von WinRM-Skripts](displaying-xml-output-from-winrm-scripts.md).
+Ihre Skripts können eine XML-Transformation verwenden, um diese Ausgabe lesbarer zu machen. Weitere Informationen finden Sie unter [Anzeigen der XML-Ausgabe von WinRM-Skripts.](displaying-xml-output-from-winrm-scripts.md)
 
-Die folgende Version des Skripts formatiert den XML-Code in eine lesbare Ausgabe.
+Die folgende Version des Skripts formatiert den XML-Code in eine für Menschen lesbare Ausgabe.
 
 
 ```VB
@@ -148,26 +148,26 @@ Win32_Service
 
 
 
-## <a name="winrm-script-and-winrmcmd-output"></a>WinRM-Skript und WinRM. cmd-Ausgabe
+## <a name="winrm-script-and-winrmcmd-output"></a>WinRM-Skript und Winrm.cmd-Ausgabe
 
-Die Ausgabe eines WinRM-Skripts wird in Unicode codiert. Wenn Sie ein [FileSystemObject](/previous-versions//6kxy1a51(v=vs.85)) erstellen und eine Datei aus dem Skript schreiben, ist die resultierende Datei Unicode. Wenn Sie die Ausgabe jedoch in eine Datei umleiten, ist die Codierung ANSI. Wenn Sie die Ausgabe an eine XML-Datei umleiten und Unicode-Zeichen in der Ausgabe vorhanden sind, ist die XML ungültig. Beachten Sie, dass das **WinRM** -Befehlszeilen Tool ANSI ausgibt.
+Die Ausgabe eines WinRM-Skripts wird in Unicode codiert. Wenn Sie ein [FileSystemObject](/previous-versions//6kxy1a51(v=vs.85)) erstellen und eine Datei aus dem Skript schreiben, ist die resultierende Datei Unicode. Wenn Sie die Ausgabe jedoch an eine Datei umleiten, ist die Codierung ANSI. Wenn Sie die Ausgabe an eine XML-Datei umleiten und die Ausgabe Unicode-Zeichen enthält, ist der XML-Code ungültig. Beachten Sie,  dass das Winrm-Befehlszeilentool ANSI ausgibt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Informationen zu Windows-Remoteverwaltung](about-windows-remote-management.md)
+[Informationen Windows Remoteverwaltung](about-windows-remote-management.md)
 </dt> <dt>
 
-[Verwenden von Windows-Remoteverwaltung](using-windows-remote-management.md)
+[Verwenden der Windows Remoteverwaltung](using-windows-remote-management.md)
 </dt> <dt>
 
-[MSXSL](/previous-versions/windows/desktop/ms763742(v=vs.85))
+[Msxsl](/previous-versions/windows/desktop/ms763742(v=vs.85))
 </dt> <dt>
 
 [DOM-Referenz](/previous-versions/windows/desktop/ms764730(v=vs.85))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

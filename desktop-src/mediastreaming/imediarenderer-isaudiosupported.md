@@ -1,11 +1,11 @@
 ---
-title: Imediarenderer isaudiosupported-Methode
-description: Ruft einen Wert ab, der angibt, ob der DMR Audioinhalt abspielen kann.
+title: IMediaRenderer IsAudioSupported-Methode
+description: Ruft einen Wert ab, der angibt, ob die DMR Audioinhalte wiedergibt.
 ms.assetid: D5F0C4ED-5778-4388-A7BD-E3923145D663
 keywords:
-- Isaudiosupported-Methode Medien Streaming-API
-- Isaudiosupported-Methode Medien Streaming-API, imediarenderer-Schnittstelle
-- Imediarenderer-Schnittstelle Medien Streaming-API, isaudiosupported-Methode
+- 'IsAudioSupported-Methode: Media Streaming-API'
+- 'IsAudioSupported-Methode: Media Streaming-API, IMediaRenderer-Schnittstelle'
+- IMediaRenderer-Schnittstelle Media Streaming-API, IsAudioSupported-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4f7670d0a2818cf5518bee0b2586531caeea20fd
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 5abe42e65e451464a5f7f3a4d59679db62c3634e95e89e5e275919dd0ece869e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106340659"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119777010"
 ---
-# <a name="imediarendererisaudiosupported-method"></a>Imediarenderer:: isaudiosupported-Methode
+# <a name="imediarendererisaudiosupported-method"></a>IMediaRenderer::IsAudioSupported-Methode
 
-Ruft einen Wert ab, der angibt, ob der DMR Audioinhalt abspielen kann.
+Ruft einen Wert ab, der angibt, ob die DMR Audioinhalte wiedergibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT IsAudioSupported(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*value* \[ out\]
 </dt> <dd>
 
-Ein boolescher Wert, der **true** ist, wenn der DMR Audioinhalt abspielen kann, andernfalls **false** .
+Ein boolescher Wert, der **True** ist, wenn die DMR Audioinhalte wiederveröffentlichen kann, und **False,** wenn dies nicht der Fall ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -66,7 +66,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Imediarenderer**](imediarenderer.md)
+[**IMediaRenderer**](imediarenderer.md)
 </dt> </dl>
 
  

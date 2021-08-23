@@ -1,31 +1,31 @@
 ---
-description: Windows GDI+ stellt die Metafile-Klasse bereit, sodass Sie Metafiles aufzeichnen und anzeigen können.
+description: Windows GDI+ stellt die Metafile-Klasse bereit, sodass Sie Metadateien aufzeichnen und anzeigen können.
 ms.assetid: a9f9bac4-f3c7-44a1-9f0f-59ff1a27b077
-title: Metadatendateien (GDI+)
+title: Metadateien (GDI+)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ae75c2185670563f9a9e624d868da5b0e299cbec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 190d03edd8857da3e840c2b3fde04314fa1fb1ddb01c8e69c684bccecf3e708d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119778680"
 ---
-# <a name="metafiles-gdi"></a>Metadatendateien (GDI+)
+# <a name="metafiles-gdi"></a>Metadateien (GDI+)
 
-Windows GDI+ stellt die [**Metafile**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) -Klasse bereit, sodass Sie Metafiles aufzeichnen und anzeigen können. Eine Metadatei, auch als Vektorbild bezeichnet, ist ein Bild, das als Sequenz von Zeichnungs Befehlen und-Einstellungen gespeichert wird. Die in einem **Metafile** -Objekt aufgezeichneten Befehle und Einstellungen können im Arbeitsspeicher gespeichert oder in einer Datei oder einem Stream gespeichert werden.
+Windows GDI+ stellt die [**Metafile-Klasse**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) bereit, sodass Sie Metadateien aufzeichnen und anzeigen können. Eine Metadatei, auch vektorbild genannt, ist ein Bild, das als Sequenz von Zeichnungsbefehlen und -einstellungen gespeichert wird. Die in einem **Metafile-Objekt** aufgezeichneten Befehle und Einstellungen können im Arbeitsspeicher oder in einer Datei oder einem Stream gespeichert werden.
 
-In GDI+ können Metadateien angezeigt werden, die in den folgenden Formaten gespeichert wurden:
+GDI+ können Metadateien anzeigen, die in den folgenden Formaten gespeichert wurden:
 
 -   Windows Metafile-Format (WMF)
 -   Erweiterte Metadatei (Enhanced Metafile, EMF)
--   EMF +
+-   EMF+
 
-GDI+ kann Metadateien in den EMF-und EMF +-Formaten aufzeichnen, aber nicht im WMF-Format.
+GDI+ können Metadateien im EMF- und EMF+-Format aufzeichnen, jedoch nicht im WMF-Format.
 
-EMF + ist eine Erweiterung von EMF, mit der GDI+-Datensätze gespeichert werden können. Es gibt zwei Variationen des EMF +-Formats: EMF + only und EMF + Dual. Nur "EMF +"-Metadateien enthalten nur GDI+-Datensätze. Solche Metadatendateien können von GDI+, aber nicht von Windows Graphics Device Interface (GDI) angezeigt werden. "EMF + Dual Metadateien" enthält GDI+-und GDI-Datensätze. Jeder GDI+-Datensatz in einer EMF + Dual-Metadatei wird mit einem alternativen GDI-Datensatz gekoppelt. Solche Metadatendateien können von GDI+ oder GDI angezeigt werden.
+EMF+ ist eine Erweiterung für EMF, mit der GDI+ Datensätze gespeichert werden können. Es gibt zwei Varianten des EMF+-Formats: NUR EMF+ und EMF+ Dual. Nur EMF+-Metadateien enthalten nur GDI+ Datensätze. Solche Metadateien können durch GDI+, aber nicht durch Windows Graphics Device Interface (GDI) angezeigt werden. EMF+ Dual-Metadateien enthalten GDI+- und GDI-Datensätze. Jeder GDI+ Datensatz in einer EMF+ Dual-Metadatei wird mit einem alternativen GDI-Datensatz gekoppelt. Solche Metadateien können durch GDI+ oder GDI angezeigt werden.
 
-Im folgenden Beispiel wird eine Einstellung und ein Zeichnungs Befehl in einer Datenträger Datei aufgezeichnet. Beachten Sie, dass im Beispiel ein [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt erstellt wird und dass der Konstruktor für das **Grafik** Objekt die Adresse eines [**Metafile**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) -Objekts als Argument erhält.
+Im folgenden Beispiel werden eine Einstellung und ein Zeichnungsbefehl in einer Datenträgerdatei aufgezeichnet. Beachten Sie, dass im Beispiel ein [**Graphics-Objekt**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) erstellt wird und der Konstruktor für das **Graphics-Objekt** die Adresse eines [**Metafile-Objekts**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) als Argument empfängt.
 
 
 ```
@@ -41,9 +41,9 @@ delete myMetafile;
 
 
 
-Wie das vorherige Beispiel zeigt, ist die [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse der Schlüssel zum Aufzeichnen von Anweisungen und Einstellungen in einem [**Metafile**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) -Objekt. Alle Aufrufe einer Methode eines **Grafik** Objekts können in einem **Metafile** -Objekt aufgezeichnet werden. Ebenso können Sie jede Eigenschaft eines **Grafik** Objekts festlegen und diese Einstellung in einem **Metafile** -Objekt aufzeichnen. Die Aufzeichnung wird beendet, wenn das **Grafik** Objekt gelöscht wird oder den Gültigkeitsbereich verlässt.
+Wie im vorherigen Beispiel gezeigt, ist die [**Graphics-Klasse**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) der Schlüssel zum Aufzeichnen von Anweisungen und Einstellungen in einem [**Metafile-Objekt.**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) Jeder Aufruf einer Methode eines **Graphics-Objekts** kann in einem **Metafile-Objekt** aufgezeichnet werden. Ebenso können Sie jede Eigenschaft eines **Grafikobjekts** festlegen und diese Einstellung in einem **Metafile-Objekt** aufzeichnen. Die Aufzeichnung wird beendet, wenn das **Grafikobjekt** gelöscht wird oder den Gültigkeitsbereich übergeht.
 
-Im folgenden Beispiel wird die im vorherigen Beispiel erstellte Metadatendatei angezeigt. Die Metadatendatei wird mit der linken oberen Ecke bei (100, 100) angezeigt.
+Im folgenden Beispiel wird die im vorherigen Beispiel erstellte Metadatei angezeigt. Die Metadatei wird mit der oberen linken Ecke bei (100, 100) angezeigt.
 
 
 ```
@@ -54,7 +54,7 @@ myGraphics.DrawImage(&myImage, 100, 100);
 
 
 
-Im folgenden Beispiel werden mehrere Eigenschafts Einstellungen (Clippingbereich, Welt Transformation und Glättungs Modus) in einem [**Metafile**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) -Objekt aufgezeichnet. Anschließend zeichnet der Code mehrere Zeichnungs Anweisungen auf. Die Anweisungen und Einstellungen werden in einer Datenträger Datei gespeichert.
+Im folgenden Beispiel werden mehrere Eigenschafteneinstellungen (Clippingbereich, Welttransformation und Glättungsmodus) in einem [**Metafile-Objekt**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) aufgezeichnet. Anschließend zeichnet der Code mehrere Zeichnungsanweisungen auf. Die Anweisungen und Einstellungen werden in einer Datenträgerdatei gespeichert.
 
 
 ```
@@ -82,7 +82,7 @@ delete myMetafile;
 
 
 
-Im folgenden Beispiel wird das im vorherigen Beispiel erstellte Metadateibild angezeigt.
+Im folgenden Beispiel wird das metafile-Bild angezeigt, das im vorherigen Beispiel erstellt wurde.
 
 
 ```
@@ -93,9 +93,9 @@ myGraphics->DrawImage(myMetafile, 10, 10);
 
 
 
-Die folgende Abbildung zeigt die Ausgabe des vorangehenden Codes. Beachten Sie das Antialiasing, den Ellipsen Clippingbereich und die 30-Grad-Rotation.
+Die folgende Abbildung zeigt die Ausgabe des vorangehenden Codes. Beachten Sie das Antialiasing, den elliptischen Clippingbereich und die Drehung um 30 Grad.
 
-![Screenshot eines Fensters, das eine Ellipse mit Zeilen enthält, die an einem Punkt außerhalb der Ellipse stehen](images/aboutgdip05-art00.png)
+![Screenshot eines Fensters, das eine Ellipse enthält, die mit Zeilen gefüllt ist, die an einem Punkt außerhalb der Ellipse stammen](images/aboutgdip05-art00.png)
 
  
 

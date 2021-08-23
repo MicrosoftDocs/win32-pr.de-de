@@ -1,7 +1,7 @@
 ---
-description: Die onframes-Methode muss vom Monitor implementiert werden. Die mcsvc ruft diese Methode auf, wenn entweder der Erfassungs Puffer voll ist oder die Aktualisierungszeit abgelaufen ist.
+description: Die OnFrames-Methode muss vom Monitor implementiert werden. McSVC ruft diese Methode auf, wenn entweder der Erfassungspuffer voll ist oder die Aktualisierungszeit verstrichen ist.
 ms.assetid: 243bd35b-2527-463e-b3d2-4bd840fe9c3f
-title: 'Imonitor:: onframes-Methode (Netmon. h)'
+title: IMonitor::OnFrames-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Netmon.h
-ms.openlocfilehash: c5b6ff3e9d5b97a228e6e1d865fe4d8f1b5bfc9f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a4138c35384753c8df79728a61decf78bf302d0dc9c0a71ca9f787d76a70a620
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119779170"
 ---
-# <a name="imonitoronframes-method"></a>Imonitor:: onframes-Methode
+# <a name="imonitoronframes-method"></a>IMonitor::OnFrames-Methode
 
-Die **onframes** -Methode muss vom Monitor implementiert werden. Die mcsvc ruft diese Methode auf, wenn entweder der Erfassungs Puffer voll ist oder die Aktualisierungszeit abgelaufen ist.
+Die **OnFrames-Methode** muss vom Monitor implementiert werden. McSVC ruft diese Methode auf, wenn entweder der Erfassungspuffer voll ist oder die Aktualisierungszeit verstrichen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,18 +39,18 @@ HRESULT OnFrames(
 
 <dl> <dt>
 
-*Ereignis* \[ in\]
+*Ereignis* \[ In\]
 </dt> <dd>
 
-[Aktualisieren \_ Ereignis](update-event.md) Struktur, die zum Aktualisieren von Ereignissen verwendete Frame Informationen enthält.
+[UPDATE \_ EVENT-Struktur,](update-event.md) die Frameinformationen enthält, die zum Aktualisieren von Ereignissen verwendet werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK (entspricht noError). Der mcsvc übergibt den zurückgegebenen Wert zur Verarbeitung an den NPP zurück.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S OK (was mit \_ NOERROR identisch ist). McSVC übergibt den zurückgegebenen Wert zur Verarbeitung zurück an das NPP.
 
-Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode. Der mcsvc übergibt den zurückgegebenen Wert zur Verarbeitung an den NPP zurück.
+Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode. McSVC übergibt den zurückgegebenen Wert zur Verarbeitung zurück an das NPP.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode. De
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

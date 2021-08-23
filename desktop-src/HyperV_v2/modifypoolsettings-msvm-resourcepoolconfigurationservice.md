@@ -1,7 +1,7 @@
 ---
-description: Ändert die Einstellungen eines untergeordneten Pools, die nicht zugeordnet sind.
+description: Ändert die Einstellungen eines untergeordneten Pools, die nicht zuordnungsbezogen sind.
 ms.assetid: f60068e0-f333-41e2-8f11-78aa48dfa260
-title: Modifypoolsettings-Methode der Msvm_ResourcePoolConfigurationService-Klasse
+title: ModifyPoolSettings-Methode der Msvm_ResourcePoolConfigurationService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: edc5f48dabfb84554954cc80d9c4e8a20678d34f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e1c8d71f8f380d5049d6bd2743e1f1d48573407431372c53aaeaacf4297ec56e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694040"
 ---
-# <a name="modifypoolsettings-method-of-the-msvm_resourcepoolconfigurationservice-class"></a>Modifypoolsettings-Methode der MSVM \_ resourcepoolconfigurationservice-Klasse
+# <a name="modifypoolsettings-method-of-the-msvm_resourcepoolconfigurationservice-class"></a>ModifyPoolSettings-Methode der Msvm \_ ResourcePoolConfigurationService-Klasse
 
-Ändert die Einstellungen eines untergeordneten Pools, die nicht zugeordnet sind.
+Ändert die Einstellungen eines untergeordneten Pools, die nicht zuordnungsbezogen sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ uint32 ModifyPoolSettings(
 
 <dl> <dt>
 
-*Childpool* \[ in\]
+*ChildPool* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine Instanz der [**CIM \_ resourcepool**](cim-resourcepool.md) -Klasse, die den zu ändernden untergeordneten Pool darstellt.
+Ein Verweis auf eine Instanz der [**CIM \_ ResourcePool-Klasse,**](cim-resourcepool.md) die den untergeordneten Pool darstellt, der geändert werden soll.
 
 </dd> <dt>
 
-*Poolsettings* \[ in\]
+*PoolSettings* \[ In\]
 </dt> <dd>
 
-Eine eingebettete Instanz der [**MSVM \_ resourcepoolsettingdata**](msvm-resourcepoolsettingdata.md) -Klasse, die verwendet wird, um die neuen Einstellungen für den Pool anzugeben.
+Eine eingebettete Instanz der [**Msvm \_ ResourcePoolSettingData-Klasse,**](msvm-resourcepoolsettingdata.md) die zum Angeben der neuen Einstellungen für den Pool verwendet wird.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -71,16 +71,16 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Auftrag ohne Fehler abgeschlossen** (0)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -98,34 +98,34 @@ Fehler **(32768** )
 **Ungültiger Parameter** (32773)
 </dt> <dt>
 
-**Verwendet** (32774)
+**In Verwendung** (32774)
 </dt> <dt>
 
-**Ungültiger Status** (32775)
+**Ungültiger Zustand** (32775)
 </dt> <dt>
 
-**Falscher Ressourcentyp für den Pool** (32776).
+**Falscher Ressourcentyp für den Pool** (32776)
 </dt> <dt>
 
-Nicht **verfügbar** (32777)
+**Nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-**Anbieter reserviert** (32779)
+**Reservierter Anbieter** (32779)
 </dt> <dt>
 
 **Unzureichende Ressourcen** (32780)
 </dt> <dt>
 
-**Objekt nicht gefunden** (32781.. 32787)
+**Objekt nicht gefunden** (32781..32787)
 </dt> <dt>
 
-**Objekt vorhanden** (32788)
+**Objekt ist vorhanden** (32788)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -134,10 +134,10 @@ Nicht **verfügbar** (32777)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -146,7 +146,7 @@ Nicht **verfügbar** (32777)
 
 <dl> <dt>
 
-[**MSVM \_ resourcepoolconfigurationservice**](msvm-resourcepoolconfigurationservice.md)
+[**Msvm \_ ResourcePoolConfigurationService**](msvm-resourcepoolconfigurationservice.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Änderungs Ereignis für den Winsock-Katalog für einen mehrstufigen Dienstanbieter (LSP).
+description: Winsock-Katalogänderungsereignis für einen mehrschichtigen Dienstanbieter (Layered Service Provider, LSP) – Deaktivierungsvorgang.
 ms.assetid: 6BCEECB1-92AD-47D8-952B-D0FD2A78EB45
-title: WINSOCK_WS2HELP_LSP_DISABLE Ereignis
+title: WINSOCK_WS2HELP_LSP_DISABLE-Ereignis
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,21 +12,21 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 6d785bfbd96d35717be7bbf76dab8f28f41c9fc6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 578479710856e149760202699be13d4b30b50709f6ea9b389e055793a8b0ca94
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350006"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119733130"
 ---
-# <a name="winsock_ws2help_lsp_disable-event"></a>Winsock \_ WS2HELP \_ LSP-Deaktivierungs \_ Ereignis
+# <a name="winsock_ws2help_lsp_disable-event"></a>WINSOCK \_ WS2HELP \_ LSP \_ DISABLE-Ereignis
 
 > [!Note]  
-> Mehrstufige Dienstanbieter sind veraltet. Ab Windows 8 und Windows Server 2012 verwenden Sie die [Windows-Filter Plattform](../fwp/windows-filtering-platform-start-page.md).
+> Mehrschichtige Dienstanbieter sind veraltet. Verwenden Sie ab Windows 8 Windows Server 2012 [Filterplattform Windows Filterplattform](../fwp/windows-filtering-platform-start-page.md).
 
  
 
-Das **Winsock \_ WS2HELP \_ LSP \_** -Deaktivierungs Ereignis ist ein Winsock-Katalog Änderungs Ereignis für einen aktivierten Dienstanbieter (LSP).
+Das **WINSOCK \_ WS2HELP \_ LSP \_ DISABLE-Ereignis** ist ein Winsock-Katalogänderungsereignis für einen mehrschichtigen Dienstanbieter-Deaktivierungsvorgang (Layered Service Provider, LSP).
 
 
 ```C++
@@ -42,43 +42,43 @@ const EVENT_DESCRIPTOR WINSOCK_WS2HELP_LSP_DISABLE = {0x3, 0x0, 0x10, 0x0, 0x0, 
 *LSP-Name* 
 </dt> <dd>
 
-Der Name des LSP, der vom **szprotocol** -Member der [**wsaprotocol- \_ Informations**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) Struktur für das deaktivierte LSP abgerufen wird.
+Der Name des LSP, der vom **szProtocol-Member** der [**WSAPROTOCOL \_ INFO-Struktur**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) für den deaktivierten LSP erhalten wurde.
 
 </dd> <dt>
 
 *Katalog* 
 </dt> <dd>
 
-Der Winsock-Katalog (32 Bit oder 64 Bit), in dem der LSP deaktiviert wird. Dies ist ein ganzzahliger Wert, der entweder 32 oder 64 ist.
+Der Winsock-Katalog (32-Bit oder 64-Bit), in dem der LSP deaktiviert wird. Dies ist ein ganzzahliger Wert, der entweder 32 oder 64 ist.
 
 </dd> <dt>
 
 *Installationsprogramm* 
 </dt> <dd>
 
-Der Modul Dateiname der Anwendung, die die LSP-Deaktivierung aufruft.
+Der Moduldateiname der Anwendung, die den LSP-Deaktivierungsaufruf vor sich hat.
 
 </dd> <dt>
 
 *GUID* 
 </dt> <dd>
 
-Der GUID-Wert des Winsock-Transport Anbieters, für den der LSP deaktiviert wird.
+Der GUID-Wert des Winsock-Transportanbieters, dass der LSP deaktiviert wird.
 
 </dd> <dt>
 
 *Kategorie* 
 </dt> <dd>
 
-Der **dwcatalogentryid** -Member der [**wsaprotocol- \_ Informations**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) Struktur für das deaktivierte LSP.
+Das **dwCatalogEntryId-Member** der [**WSAPROTOCOL \_ INFO-Struktur**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) für den deaktivierten LSP.
 
 </dd> </dl>
 
-Dieses Ereignis weist keine Parameter auf.
+Dieses Ereignis verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **Winsock \_ WS2HELP \_ LSP \_** -Deaktivierungs Ereignis wird für einen LSP-Deaktivierungs Vorgang nachverfolgt, wenn ein Protokolleintrag im Winsock-Katalog deaktiviert ist.
+Das **WINSOCK \_ WS2HELP \_ LSP \_ DISABLE-Ereignis** wird für einen LSP-Deaktivierungsvorgang nachverfolgt, wenn ein Protokolleintrag im Winsock-Katalog deaktiviert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,25 +86,25 @@ Das **Winsock \_ WS2HELP \_ LSP \_** -Deaktivierungs Ereignis wird für einen LS
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Kontrolle über die Winsock-Ablauf Verfolgung](control-of-winsock-tracing.md)
+[Steuerung der Winsock-Ablaufverfolgung](control-of-winsock-tracing.md)
 </dt> <dt>
 
-[Winsock-Ablauf Verfolgung](winsock-tracing.md)
+[Winsock-Ablaufverfolgung](winsock-tracing.md)
 </dt> <dt>
 
-[Winsock-Ablauf Verfolgungs Ebenen](winsock-tracing-levels.md)
+[Winsock-Ablaufverfolgungsebenen](winsock-tracing-levels.md)
 </dt> <dt>
 
-[Details zur Änderung der Winsock-Katalog Änderung](winsock-layered-service-provider-tracing-event-details.md)
+[Details zur Ablaufverfolgung für Winsock-Katalogänderung](winsock-layered-service-provider-tracing-event-details.md)
 </dt> </dl>
 
  

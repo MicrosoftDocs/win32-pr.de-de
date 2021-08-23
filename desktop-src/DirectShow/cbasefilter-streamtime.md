@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f3334ac273a733c3f0591b76af7e76460997a199
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: af266e22cb8ee5a2ff5d5d233dc6cfc623e37cd0d34c073db4dbab71d9c221ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108120068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119635480"
 ---
 # <a name="cbasefilterstreamtime-method"></a>CBaseFilter.StreamTime-Methode
 
@@ -64,20 +64,20 @@ Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden T
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Streamzeit wird als die aktuelle Referenzzeit (wie durch die Verweisuhr angegeben) abzüglich der Startzeit (angegeben durch [**CBaseFilter::m \_ tStart)**](cbasefilter-m-tstart.md)definiert. Der *Zeitstempel* eines Medienbeispiels gibt die Streamzeit an, zu der es gerendert werden soll. Wenn ein Beispiel mit einem Zeitstempel kleiner als die aktuelle Streamzeit noch nicht gerendert wurde, kommt es zu einem späteren Zeitpunkt.
+Die Streamzeit wird als aktuelle Referenzzeit (wie von der Referenzuhr angegeben) abzüglich der Startzeit (angegeben durch [**CBaseFilter::m \_ tStart ) definiert.**](cbasefilter-m-tstart.md) Der Zeitstempel eines *Medienbeispiels* gibt die Streamzeit an, zu der es gerendert werden soll. Wenn ein Beispiel mit einem Zeitstempel, der kleiner als die aktuelle Streamzeit ist, noch nicht gerendert wurde, ist es zu spät.
 
-Diese Methode ruft die Streamzeit ab, indem [**sie IReferenceClock::GetTime**](/windows/desktop/api/Strmif/nf-strmif-ireferenceclock-gettime) aufruft, um die aktuelle Verweiszeit abzurufen, und subtrahiert dann die anfängliche Startzeit.
+Diese Methode ruft die Streamzeit ab, indem [**sie IReferenceClock::GetTime**](/windows/desktop/api/Strmif/nf-strmif-ireferenceclock-gettime) aufruft, um die aktuelle Verweiszeit zu erhalten, und subtrahiert dann die anfängliche Startzeit.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -85,7 +85,7 @@ Diese Methode ruft die Streamzeit ab, indem [**sie IReferenceClock::GetTime**](/
 
 <dl> <dt>
 
-[Uhrzeit und Uhren in DirectShow](time-and-clocks-in-directshow.md)
+[Zeit und Uhren in DirectShow](time-and-clocks-in-directshow.md)
 </dt> <dt>
 
 [**CBaseFilter-Klasse**](cbasefilter.md)

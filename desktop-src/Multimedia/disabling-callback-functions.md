@@ -1,26 +1,26 @@
 ---
-title: Deaktivieren von Rückruf Funktionen
-description: Deaktivieren von Rückruf Funktionen
+title: Deaktivieren von Rückruffunktionen
+description: Deaktivieren von Rückruffunktionen
 ms.assetid: 1907b185-b13d-459c-a174-55d2bc075cb3
 keywords:
-- Avicap-Rückruf Funktionen, deaktivieren
-- Deaktivieren von avicap-Rückruf Funktionen
+- AVICap-Rückruffunktionen,deaktivieren
+- Deaktivieren von AVICap-Rückruffunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: df5ec3d14d251803f0d5881ea7c855c02c5c7dd8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2636e1ed876f0dacd570713d69bc59e451c5465be846c749be6fa5cd2ffea836
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119678780"
 ---
-# <a name="disabling-callback-functions"></a>Deaktivieren von Rückruf Funktionen
+# <a name="disabling-callback-functions"></a>Deaktivieren von Rückruffunktionen
 
-Sie können jede der Rückruf Funktionen dauerhaft oder temporär deaktivieren, indem Sie **null** anstelle der Rückruffunktion angeben, wenn Sie die entsprechende Nachricht senden, um eine Rückruffunktion festzulegen.
+Sie können eine der Rückruffunktionen dauerhaft oder vorübergehend deaktivieren, indem Sie **NULL** statt der Rückruffunktion angeben, wenn Sie die entsprechende Nachricht senden, um eine Rückruffunktion festzulegen.
 
- 
+ 
 
- 
+ 
 
 
 

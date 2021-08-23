@@ -4,69 +4,69 @@ description: Digital-Video Befehlssatz
 ms.assetid: 408587b1-3ead-4720-a063-5fb749273043
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a37e093b1363fdf8485f63be803a2fce1627706
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c3b17c57bf6aa6c00fcf075492a1be9691925ddf569f54c456d0259175faecd7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037334"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119678870"
 ---
 # <a name="digital-video-command-set"></a>Digital-Video Befehlssatz
 
-Digital Video-Geräte (z. b. der MCIAVI-Treiber) unterstützen den folgenden Satz von Befehlen.
+Digitale Videogeräte (z. B. der MCIAVI-Treiber) unterstützen die folgenden Befehle.
 
 
 
-| Zeichen folgen Formular                      | Nachrichten Formular                              |
+| Zeichenfolgenformular                      | Meldungsformular                              |
 |----------------------------------|-------------------------------------------|
-| [**Umbruch**](break.md)           | [**MCI-unter \_ Brechung**](mci-break.md)           |
-| [**Re**](capability.md) | [**MCI- \_ getdevcaps**](mci-getdevcaps.md) |
-| [**einver**](capture.md)       | [**MCI- \_ Erfassung**](mci-capture.md)       |
-| [**ihrer**](close.md)           | [**MCI- \_ Schließen**](mci-close.md)           |
-| [**Konfigurieren**](configure.md)   | [**MCI- \_ Konfiguration**](mci-configure.md)   |
-| [**skopie**](copy.md)             | [**MCI- \_ Kopie**](mci-copy.md)             |
-| [**STI**](cue.md)               | [**MCI \_ -Hinweis**](mci-cue.md)               |
-| [**Schnitts**](cut.md)               | [**MCI- \_ Ausschneiden**](mci-cut.md)               |
-| [**delete**](delete.md)         | [**MCI \_ Löschen**](mci-delete.md)         |
-| [**ge**](freeze.md)         | [**MCI- \_ Einfrieren**](mci-freeze.md)         |
-| [**Opo**](info.md)             | [**MCI- \_ Informationen**](mci-info.md)             |
-| [**list**](list.md)             | [**MCI- \_ Liste**](mci-list.md)             |
-| [**Laden**](load.md)             | [**MCI- \_ Auslastung**](mci-load.md)             |
-| [**über**](monitor.md)       | [**MCI- \_ Monitor**](mci-monitor.md)       |
-| [**eren**](open.md)             | [**MCI \_ geöffnet**](mci-open.md)             |
-| [**kle**](paste.md)           | [**MCI- \_ Einfügen**](mci-paste.md)           |
-| [**Brechung**](pause.md)           | [**MCI- \_ Pause**](mci-pause.md)           |
-| [**Theater**](play.md)             | [**MCI- \_ Play**](mci-play.md)             |
-| [**stellte**](put.md)               | [**MCI- \_ Put**](mci-put.md)               |
-| [**Qualität**](quality.md)       | [**MCI- \_ Qualität**](mci-quality.md)       |
-| [**erkannten**](realize.md)       | [**MCI- \_ Umsetzung**](mci-realize.md)       |
-| [**Aufnahme**](record.md)         | [**MCI- \_ Datensatz**](mci-record.md)         |
-| [**Reserve**](reserve.md)       | [**MCI- \_ Reserve**](mci-reserve.md)       |
-| [**Wiederherstellungsprozess**](restore.md)       | [**MCI- \_ Wiederherstellung**](mci-restore.md)       |
-| [**zusetzen**](resume.md)         | [**MCI-Fortsetzung \_**](mci-resume.md)         |
-| [**sicher**](save.md)             | [**MCI- \_ Speicherung**](mci-save.md)             |
-| [**einzuholen**](seek.md)             | [**MCI- \_ Suche**](mci-seek.md)             |
-| [**Set**](set.md)               | [**MCI- \_ Gruppe**](mci-set.md)               |
-| [**setaudiodatei**](setaudio.md)     | [**MCI \_ -setaudiodatei**](mci-setaudio.md)     |
-| [**setvideo**](setvideo.md)     | [**MCI- \_ setvideo**](mci-setvideo.md)     |
-| [**aussendet**](signal.md)         | [**MCI- \_ Signal**](mci-signal.md)         |
-| [**status**](status.md)         | [**MCI- \_ Status**](mci-status.md)         |
-| [**Schritt**](step.md)             | [**MCI- \_ Schritt**](mci-step.md)             |
-| [**anzuhalten**](stop.md)             | [**MCI- \_ Beendigung**](mci-stop.md)             |
-| [sysinfo](sysinfo.md)           | [**MCI- \_ sysinfo**](mci-sysinfo.md)       |
-| [**machen**](undo.md)             | [**MCI \_ rückgängig machen**](mci-undo.md)             |
-| [**Fixierung aufheben**](unfreeze.md)     | [**MCI- \_ Sperrung aufheben**](mci-unfreeze.md)     |
-| [**alisierungs**](update.md)         | [**MCI- \_ Update**](mci-update.md)         |
-| [**Was**](where.md)           | [**MCI, \_ wobei**](mci-where.md)           |
-| [**ster**](window.md)         | [**MCI- \_ Fenster**](mci-window.md)         |
+| [**Brechen**](break.md)           | [**\_MCI-UNTERBRECHUNG**](mci-break.md)           |
+| [**Fähigkeit**](capability.md) | [**MCI \_ GETDEVCAPS**](mci-getdevcaps.md) |
+| [**Erfassen**](capture.md)       | [**MCI \_ CAPTURE**](mci-capture.md)       |
+| [**Schließen**](close.md)           | [**MCI \_ CLOSE**](mci-close.md)           |
+| [**Konfigurieren**](configure.md)   | [**MCI \_ CONFIGURE**](mci-configure.md)   |
+| [**Kopieren**](copy.md)             | [**MCI \_ COPY**](mci-copy.md)             |
+| [**Hinweis**](cue.md)               | [**MCI \_ CUE**](mci-cue.md)               |
+| [**Schneiden**](cut.md)               | [**MCI \_ CUT**](mci-cut.md)               |
+| [**Löschen**](delete.md)         | [**MCI \_ DELETE**](mci-delete.md)         |
+| [**Einfrieren**](freeze.md)         | [**MCI \_ FREEZE**](mci-freeze.md)         |
+| [**Informationen**](info.md)             | [**\_MCI-INFO**](mci-info.md)             |
+| [**list**](list.md)             | [**\_MCI-LISTE**](mci-list.md)             |
+| [**Laden**](load.md)             | [**MCI \_ LOAD**](mci-load.md)             |
+| [**Monitor**](monitor.md)       | [**MCI \_ MONITOR**](mci-monitor.md)       |
+| [**öffnen**](open.md)             | [**MCI \_ OPEN**](mci-open.md)             |
+| [**Einfügen**](paste.md)           | [**\_MCI-EINFÜGE**](mci-paste.md)           |
+| [**anhalten**](pause.md)           | [**MCI \_ PAUSE**](mci-pause.md)           |
+| [**Spielen**](play.md)             | [**MCI \_ PLAY**](mci-play.md)             |
+| [**put**](put.md)               | [**MCI \_ PUT**](mci-put.md)               |
+| [**Qualität**](quality.md)       | [**MCI \_ QUALITY**](mci-quality.md)       |
+| [**Erkennen**](realize.md)       | [**MCI \_ REALIZE**](mci-realize.md)       |
+| [**Aufzeichnung**](record.md)         | [**MCI \_ RECORD**](mci-record.md)         |
+| [**Reserve**](reserve.md)       | [**MCI \_ RESERVE**](mci-reserve.md)       |
+| [**Wiederherstellungsprozess**](restore.md)       | [**MCI \_ RESTORE**](mci-restore.md)       |
+| [**Fortsetzen**](resume.md)         | [**MCI \_ RESUME**](mci-resume.md)         |
+| [**Speichern**](save.md)             | [**MCI \_ SAVE**](mci-save.md)             |
+| [**Suchen**](seek.md)             | [**MCI \_ SEEK**](mci-seek.md)             |
+| [**Festgelegt**](set.md)               | [**MCI \_ SET**](mci-set.md)               |
+| [**Setaudio**](setaudio.md)     | [**MCI \_ SETAUDIO**](mci-setaudio.md)     |
+| [**setvideo**](setvideo.md)     | [**MCI \_ SETVIDEO**](mci-setvideo.md)     |
+| [**Signal**](signal.md)         | [**MCI \_ SIGNAL**](mci-signal.md)         |
+| [**status**](status.md)         | [**\_MCI-STATUS**](mci-status.md)         |
+| [**Schritt**](step.md)             | [**\_MCI-SCHRITT**](mci-step.md)             |
+| [**Stoppen**](stop.md)             | [**MCI \_ STOP**](mci-stop.md)             |
+| [Sysinfo](sysinfo.md)           | [**MCI \_ SYSINFO**](mci-sysinfo.md)       |
+| [**Rückgängig**](undo.md)             | [**MCI \_ UNDO**](mci-undo.md)             |
+| [**Auftauen**](unfreeze.md)     | [**MCI \_ UNFREEZE**](mci-unfreeze.md)     |
+| [**aktualisieren**](update.md)         | [**MCI \_ UPDATE**](mci-update.md)         |
+| [**Wo**](where.md)           | [**MCI \_ WHERE**](mci-where.md)           |
+| [**Fenster**](window.md)         | [**\_MCI-FENSTER**](mci-window.md)         |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

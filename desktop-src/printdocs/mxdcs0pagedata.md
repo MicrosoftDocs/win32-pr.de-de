@@ -1,7 +1,7 @@
 ---
-description: Die mxdc \_ S0PAGE \_ Data \_ T-Struktur enthält eine XPS-Dokument Seite, die ohne Verarbeitung an die Microsoft XPS Document Converter-Ausgabedatei (mxdc) übermittelt werden soll.
+description: Die MXDC S0PAGE DATA T-Struktur enthält eine XPS-Dokumentseite, die ohne Verarbeitung an die \_ \_ MXDC-Ausgabedatei \_ (Microsoft XPS Document Converter) übergeben wird.
 ms.assetid: 3dc8e0b9-cf63-4345-93d2-3b60dac42546
-title: MXDC_S0PAGE_DATA_T-Struktur (mxdc. h)
+title: MXDC_S0PAGE_DATA_T -Struktur (Mxdc.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - mxdc.h
-ms.openlocfilehash: 2da9df454b8741f2203072fd25856118407ef5c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1ff54325859acef6da136c4bce20286bc7c746d8880d8994ca834213adf57b58
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103757741"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119776550"
 ---
-# <a name="mxdc_s0page_data_t-structure"></a>Mxdc \_ S0PAGE \_ Data \_ T-Struktur
+# <a name="mxdc_s0page_data_t-structure"></a>MXDC \_ S0PAGE \_ DATA \_ T-Struktur
 
-Die **mxdc \_ S0PAGE \_ Data \_ T** -Struktur enthält eine XPS-Dokument Seite, die ohne Verarbeitung an die Microsoft XPS Document Converter-Ausgabedatei (mxdc) übermittelt werden soll.
+Die **MXDC \_ S0PAGE \_ DATA \_ T-Struktur** enthält eine XPS-Dokumentseite, die ohne Verarbeitung an die MXDC-Ausgabedatei (Microsoft XPS Document Converter) übergeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,26 +43,26 @@ typedef struct tagMxdcS0PageData {
 **dwSize**
 </dt> <dd>
 
-Die Größe des Ausgabepuffers, **bdata**.
+Die Größe des Ausgabepuffers **bData.**
 
 </dd> <dt>
 
 **bData**
 </dt> <dd>
 
-Die XPS-Dokument Seite.
+Die XPS-Dokumentseite.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird an eine [**mxdc- \_ \_ escapeheader- \_ t**](mxdcescapeheader.md) -Struktur angehängt (deren **Opcode** auf mxdcop Set S0PAGE festgelegt ist \_ \_ ), um eine [**mxdc \_ S0PAGE \_ Passthrough- \_ Escape \_ t**](mxdcs0pagepassthroughescape.md) -Struktur zu erstellen. Diese Struktur wird dann an den *lpszindata* -Parameter der [**extescape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) -Funktion übergeben, wenn Sie mit [**mxdc \_ Escape**](mxdc-escape.md) als Escapezeichen aufgerufen wird. Das Ergebnis ist, dass der mxdc die Seite an die Ausgabe übergibt, ohne Sie zu verarbeiten.
+Diese Struktur wird an eine [**MXDC \_ ESCAPE HEADER \_ \_ T-Struktur**](mxdcescapeheader.md) angefügt (deren **opCode** auf MXDCOP SET S0PAGE festgelegt ist), um eine \_ \_ [**MXDC \_ S0PAGE \_ PASSTHROUGH ESCAPE \_ \_ T-Struktur**](mxdcs0pagepassthroughescape.md) zu erstellen. Diese Struktur wird dann an den *lpszInData-Parameter* der [**ExtEscape-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) übergeben, wenn sie mit [**MXDC \_ ESCAPE**](mxdc-escape.md) als Escape-Element aufgerufen wird. Das Ergebnis ist, dass der MXDC die Seite an die Ausgabe übergibt, ohne sie zu verarbeiten.
 
-Der [**extescape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) -aufrufsausdruck muss zwischen einem Aufrufen von [**Startpage**](/windows/desktop/api/Wingdi/nf-wingdi-startpage) und einem Aufrufen von [**EndPage**](/windows/desktop/api/Wingdi/nf-wingdi-endpage)liegen.
+Der Aufruf von [**ExtEscape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) muss zwischen einem Aufruf von [**StartPage**](/windows/desktop/api/Wingdi/nf-wingdi-startpage) und einem Aufruf von [**EndPage liegen.**](/windows/desktop/api/Wingdi/nf-wingdi-endpage)
 
-Die aufrufende Anwendung ist für die Validierung des XML-Codes der XPS-Dokument Seite verantwortlich.
+Die aufrufende Anwendung ist für die Validierung des XML-Code der XPS-Dokumentseite verantwortlich.
 
-Der Streamingverbrauch ist effizienter, wenn Sie [**extescape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) mit **mxdcop \_ Set \_ S0PAGE \_ Resource** als **Opcode** für jede Ressource auf der Seite aufruft, bevor Sie Sie mit **mxdcop \_ Set \_ S0PAGE** aufzurufen.
+Die Streamingnutzung ist effizienter, wenn Sie [**ExtEscape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) mit **MXDCOP \_ SET \_ S0PAGE \_ RESOURCE** als **opCode** für jede Ressource auf der Seite aufrufen, bevor Sie sie mit **MXDCOP \_ SET \_ S0PAGE aufrufen.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,9 +70,9 @@ Der Streamingverbrauch ist effizienter, wenn Sie [**extescape**](/windows/deskto
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>Mxdc. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Mxdc.h</dt> </dl> |
 
 
 
@@ -83,16 +83,16 @@ Der Streamingverbrauch ist effizienter, wenn Sie [**extescape**](/windows/deskto
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
-[Escapefunktionen für GDI-Drucker](/previous-versions/windows/desktop/legacy/dd162843(v=vs.85))
+[GDI-Drucker-Escapefunktionen](/previous-versions/windows/desktop/legacy/dd162843(v=vs.85))
 </dt> <dt>
 
-[**Extescape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape)
+[**ExtEscape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape)
 </dt> <dt>
 
-[**mxdc-Escapezeichen \_**](mxdc-escape.md)
+[**MXDC \_ ESCAPE**](mxdc-escape.md)
 </dt> </dl>
 
  

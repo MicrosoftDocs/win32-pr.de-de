@@ -1,38 +1,38 @@
 ---
-description: Benennen von postslots und Einfügen von Nachrichten in postslots.
+description: Benennen von Mailslots und Setzen von Nachrichten in mailslots.
 ms.assetid: 1ef522a4-9786-427c-a18a-ae1f0a05cc50
-title: Mailslotnamen
+title: Maillot-Namen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bf03718a7e603fe891e00d82c2b0b06fab63f8f9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a6f96cc5300b3472abe7d6e824266bd0abd0e7b668e38f9f3462eee3cbf3dfb6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749688"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119716900"
 ---
-# <a name="mailslot-names"></a>Mailslotnamen
+# <a name="mailslot-names"></a>Maillot-Namen
 
-Wenn ein Prozess einen Mailslot erstellt, muss der Name des postslots folgende Form aufweisen.
+Wenn ein Prozess einen Mailslot erstellt, muss der Maillotname das folgende Format aufweisen.
 
-\\\\.\\ \\ \[ *postslotpfadname* \\ \] 
+\\\\.\\ maillot \\ \[ *path* \\ \] *name*
 
-Der Name des postslots erfordert die folgenden Elemente: zwei umgekehrte Schrägstriche, um den Namen zu beginnen, einen Zeitraum, einen umgekehrten Schrägstrich, der auf den Zeitraum folgt, das Wort "Mailslot" und einen nachfolgenden umgekehrten Schrägstrich. Bei Namen wird Groß-/Kleinschreibung nicht beachtet Einem postslotnamen kann ein Pfad vorangestellt werden, der aus den Namen eines oder mehrerer Verzeichnisse besteht, die durch umgekehrte Schrägstriche getrennt sind. Wenn ein Benutzer beispielsweise Nachrichten für das Subjekt der Steuern von Bob, Pete und Sue erwartet, kann der Benutzer mit der mailslotanwendung für jeden Absender einzelne Postfächer erstellen, wie hier gezeigt:<dl> \\\\.\\ postslot \\ steuert \\ BOSB- \_ Kommentare  
-\\\\.\\ postslotsteuern zeigt Kommentare an. \\ \\ \_  
-\\\\.\\ postslottaxen unterliegen \\ \\ \_ Kommentaren  
+Ein maillot-Name erfordert die folgenden Elemente: zwei umgekehrte Schrägstriche, um den Namen zu beginnen, einen Punkt, einen umgekehrten Schrägstrich nach dem Punkt, das Wort "mailslot" und einen nachgestellten umgekehrten Schrägstrich. Bei Namen wird die Groß-/Kleinschreibung nicht beachtet. Einem maillot-Namen kann ein Pfad vorangestellt werden, der aus den Namen eines oder mehrerer Verzeichnisse besteht, getrennt durch umgekehrte Schrägstriche. Wenn ein Benutzer beispielsweise Nachrichten zum Thema Steuern von Bob, Pete und Sue erwartet, kann die maillot-Anwendung des Benutzers es dem Benutzer ermöglichen, einzelne Mailslots für jeden Absender zu erstellen, wie hier gezeigt:<dl> \\\\.\\ mailslot \\ tax \\ bobs \_ comments  
+\\\\.\\ mailslot \\ tax \\ petes \_ comments  
+\\\\.\\ mailslot \\ tax \\ sues \_ comments  
 </dl>
 
-Wenn eine Nachricht in einem postslot abgelegt werden soll, öffnet ein Prozess einen postslot anhand des Namens. Um in einen Mailslot auf dem lokalen Computer zu schreiben, kann ein Prozess einen Mailslot-Namen verwenden, der die gleiche Form hat, die zum Erstellen eines postslots verwendet wurde. Diese Situation ist jedoch relativ ungewöhnlich. Häufig verwenden Sie das folgende Formular, um in einen Mailslot auf einem bestimmten Remote Computer zu schreiben:
+Um eine Nachricht in ein Maillot zu stellen, öffnet ein Prozess einen Mailslot anhand des Namens. Zum Schreiben in ein Maillot auf dem lokalen Computer kann ein Prozess einen maillot-Namen verwenden, der das gleiche Formular hat, das zum Erstellen eines Mailslots verwendet wird. Diese Situation ist jedoch relativ ungewöhnlich. Häufiger würden Sie das folgende Formular verwenden, um auf einem bestimmten Remotecomputer in ein Maillot zu schreiben:
 
-\\\\*Computername* \\ \\ \[ *postslotpfadname* \\ \] 
+\\\\*ComputerName* \\ maillot \\ \[ *path* \\ \] *name*
 
-Verwenden Sie das folgende Formular, um eine Nachricht in jedem Mailslot in der angegebenen Domäne mit einem bestimmten Namen zu platzieren:
+Verwenden Sie das folgende Formular, um eine Nachricht in jedem Maillot in der angegebenen Domäne mit einem bestimmten Namen zu senden:
 
-\\\\*Domain Name* \\ \\ \[ *postslotpfadname* \\ \] 
+\\\\*DomainName* \\ maillot \\ \[ *path* \\ \] *name*
 
-Verwenden Sie das folgende Format, um eine Nachricht in jedem postslot mit einem bestimmten Namen in der primären Domäne des Systems zu platzieren:
+Verwenden Sie das folgende Format, um eine Nachricht in jedem Maillot mit einem bestimmten Namen in der primären Domäne des Systems zu senden:
 
-\\\\\*\\\\ \[ *postslotpfadname* \\ \] 
+\\\\\*\\maillot \\ \[ *path* \\ \] *name*
 
  
 

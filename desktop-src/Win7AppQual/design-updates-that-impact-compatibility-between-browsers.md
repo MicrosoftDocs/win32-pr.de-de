@@ -4,12 +4,12 @@ ms.assetid: F2C13FEC-5537-4B0D-BFDB-E17A42A289CB
 title: Entwurfsupdates, die sich auf die Kompatibilität zwischen Browsern auswirken
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a306a64cb03bce8b466f6367339302522109619a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b7b47f7f8a83d7e03dcefec083cbbe962dcd3c12b250d224c2ef1762f749495b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108088478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119795900"
 ---
 # <a name="design-updates-that-impact-compatibility-between-browsers"></a>Entwurfsupdates, die sich auf die Kompatibilität zwischen Browsern auswirken
 
@@ -56,11 +56,11 @@ Dieser Abschnitt und die folgende Tabelle zeigen die vier Hauptbereiche der Komp
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="security.md">Security</a></td>
+<td><a href="security.md">Sicherheit</a></td>
 <td><ul>
 <li>HTTPS-Verbesserungen</li>
 <li>Sicherere Skripterstellung</li>
-<li>Geschützter Modus (Windows Vista und höhere Versionen)</li>
+<li>Geschützter Modus (Windows Vista und höher)</li>
 </ul></td>
 <td><ul>
 <li>Besserer Schutz vor Schadsoftware</li>

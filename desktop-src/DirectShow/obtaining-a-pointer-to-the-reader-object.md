@@ -4,16 +4,16 @@ ms.assetid: d1292e2f-bd0e-4961-a6fa-8cdaeb28b692
 title: Abrufen eines Zeigers auf das Readerobjekt (DirectShow)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e131b9e111aa5e779d1208b68e04c9979e3b1d7f
-ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
+ms.openlocfilehash: 5c1395a9d1c2cb764e8994600845362816ac2c158ca9ab7d8fdf630a1a51ed00
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111989106"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119633620"
 ---
 # <a name="obtaining-a-pointer-to-the-reader-object-directshow"></a>Abrufen eines Zeigers auf das Readerobjekt (DirectShow)
 
-In bestimmten Fällen, z. B. wenn Sie bestimmen, welche Dateneinheitserweiterungen für einen bestimmten Stream festgelegt sind, müssen Sie möglicherweise direkt auf das Reader-Objekt des Windows Media Format SDK zugreifen. Die folgende Funktion zeigt, wie sie die [**IWMReaderAdvanced2-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreaderadvanced2) für das Readerobjekt selbst abrufen:
+In bestimmten Fällen, z. B. wenn Sie bestimmen, welche Dateneinheitserweiterungen für einen bestimmten Stream festgelegt sind, müssen Sie möglicherweise direkt auf das Reader-Objekt des Windows Media Format SDK zugreifen. Die folgende Funktion zeigt, wie Sie die [**IWMReaderAdvanced2-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreaderadvanced2) für das Reader-Objekt selbst abrufen:
 
 
 ```C++

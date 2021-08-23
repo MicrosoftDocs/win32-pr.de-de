@@ -1,5 +1,5 @@
 ---
-description: Stellt eine generische Zuordnung zwischen zwei verwalteten Elementen dar, die unterschiedliche Aspekte der gleichen zugrunde liegenden Entität darstellen.
+description: Stellt eine generische Zuordnung zwischen zwei verwalteten Elementen dar, die verschiedene Aspekte derselben zugrunde liegenden Entität darstellen.
 ms.assetid: 28d153de-ce9c-4cd3-8995-0d959846be4d
 title: CIM_LogicalIdentity-Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 71382910dc195c0fa6ef2456e1811d66d90a41e6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9520817a2099901d1b6e61ab37ccacf1c2e2a61e76c57a9f327bdef32df63285
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119695450"
 ---
 # <a name="cim_logicalidentity-class-hyper-v-management"></a>CIM_LogicalIdentity-Klasse (Hyper-V-Verwaltung)
 
-Stellt eine generische Zuordnung zwischen zwei verwalteten Elementen dar, die unterschiedliche Aspekte der gleichen zugrunde liegenden Entität darstellen.
+Stellt eine generische Zuordnung zwischen zwei verwalteten Elementen dar, die verschiedene Aspekte derselben zugrunde liegenden Entität darstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ class CIM_LogicalIdentity
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ logicalidentity** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ LogicalIdentity-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ logicalidentity** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ LogicalIdentity-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **SameElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -65,10 +65,10 @@ Der zweite Aspekt in der Zuordnung.
 
 </dd> <dt>
 
-**Systemelement**
+**SystemElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -77,7 +77,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der erste Aspekt in der Zuordnung. Durch die Verwendung von System im Eigenschaftsnamen wird der Bereich der Zuordnung nicht eingeschränkt.
+Der erste Aspekt in der Zuordnung. Die Verwendung von System im Eigenschaftennamen schränkt den Bereich der Zuordnung nicht ein.
 
 </dd> </dl>
 
@@ -89,8 +89,8 @@ Der erste Aspekt in der Zuordnung. Durch die Verwendung von System im Eigenschaf
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

@@ -1,11 +1,11 @@
 ---
-title: Iwmpcontrols-PlayItem-Methode
-description: Die PlayItem-Methode gibt das angegebene Medien Element wieder. | Iwmpcontrols-PlayItem-Methode
+title: IWMPControls playItem-Methode
+description: Die playItem-Methode gibt das angegebene Medienelement wieder. | IWMPControls playItem-Methode
 ms.assetid: ddd4e4f7-475c-4964-a623-9123ed66be8e
 keywords:
-- PlayItem-Methoden Fenster Media Player
-- PlayItem-Methode, Windows Media Player, iwmpcontrols-Schnittstelle
-- Iwmpcontrols-Schnittstelle, Windows Media Player, PlayItem-Methode
+- playItem-Methode Windows Media Player
+- playItem-Methode Windows Media Player , IWMPControls-Schnittstelle
+- IWMPControls-Schnittstelle Windows Media Player , playItem-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b2ac11f93409128eccc88c1d916144615d77476
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1fabab78fe60120110f72176885e3b5825699b83782272dfbef0b48c165d1d02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371311"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119761030"
 ---
-# <a name="iwmpcontrolsplayitem-method"></a>Iwmpcontrols::p layitem-Methode
+# <a name="iwmpcontrolsplayitem-method"></a>IWMPControls::p layItem-Methode
 
-Die **PlayItem** -Methode gibt das angegebene Medien Element wieder.
+Die **playItem-Methode** gibt das angegebene Medienelement wieder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,10 +53,10 @@ Implements IWMPControls.playItem
 
 <dl> <dt>
 
-*piwmpmedia* \[ in\]
+*pIWMPMedia* \[ In\]
 </dt> <dd>
 
-Eine **WMPLib. iwmpmedia** -Schnittstelle für das Medien Element.
+Eine **WMPLib.IWMPMedia-Schnittstelle** für das Medienelement.
 
 </dd> </dl>
 
@@ -64,17 +64,17 @@ Eine **WMPLib. iwmpmedia** -Schnittstelle für das Medien Element.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Medien Element wird unabhängig vom Wert der **iwmpsettings. Autostart** -Eigenschaft automatisch geladen und abgespielt. Wenn Sie ein Element ohne automatische Wiedergabe laden möchten, legen Sie " **iwmpsettings. Autostart** " auf " **false** " fest, und weisen Sie " **AxWindowsMediaPlayer. URL**" einen Wert zu, nachdem " **iwmpcontrols. Play** " aufgerufen werden kann, um die Wiedergabe des Elements
+Das Medienelement wird unabhängig vom Wert der **IWMPSettings.autoStart-Eigenschaft** automatisch geladen und wiedergegeben. Um ein Element zu laden, ohne es automatisch wiederzuspielen, legen **Sie IWMPSettings.autoStart** auf **false** fest, und weisen **Sie AxWindowsMediaPlayer.URL** einen Wert zu. Anschließend kann **IWMPControls.play** aufgerufen werden, um mit der Wiedergabe des Elements zu beginnen.
 
 Hinweis
 
-**PlayItem** funktioniert nur mit Elementen in **AxWindowsMediaPlayer. currentwiedergabe**. Das Aufrufen von **PlayItem** mit einem Verweis auf ein gespeichertes Medien Element wird nicht unterstützt.
+**playItem** funktioniert nur mit Elementen in **AxWindowsMediaPlayer.currentPlaylist.** Das Aufrufen von **playItem** mit einem Verweis auf ein gespeichertes Medienelement wird nicht unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **PlayItem** verwendet, um ein Medien Element aus der aktuellen Wiedergabeliste wiederzugeben. Das Element, das abgespielt werden soll, wird basierend auf seiner Position in der Wiedergabeliste ausgewählt. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **playItem** verwendet, um ein Medienelement aus der aktuellen Wiedergabeliste wiederzuspielen. Das zu wiedergebende Element wird basierend auf seiner Position in der Wiedergabeliste ausgewählt. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -113,7 +113,7 @@ player.Ctlcontrols.playItem(Media)
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -123,22 +123,22 @@ player.Ctlcontrols.playItem(Media)
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer. currentwiedergabe (VB und c#)**](axwmplib-axwindowsmediaplayer-currentplaylist--vb-and-c.md)
+[**AxWindowsMediaPlayer.currentPlaylist (VB und C#)**](axwmplib-axwindowsmediaplayer-currentplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. URL (VB und c#)**](axwmplib-axwindowsmediaplayer-url--vb-and-c.md)
+[**AxWindowsMediaPlayer.URL (VB und C#)**](axwmplib-axwindowsmediaplayer-url--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols-Schnittstelle (VB und c#)**](iwmpcontrols--vb-and-c.md)
+[**IWMPControls-Schnittstelle (VB und C#)**](iwmpcontrols--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. Play (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-play--vb-and-c.md)
+[**IWMPControls.play (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-play--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe. Item (VB und c#)**](iwmpplaylist-item--vb-and-c.md)
+[**IWMPPlaylist.Item (VB und C#)**](iwmpplaylist-item--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. Autostart (VB und c#)**](wmplibiwmpsettings-iwmpsettings-autostart--vb-and-c.md)
+[**IWMPSettings.autoStart (VB und C#)**](wmplibiwmpsettings-iwmpsettings-autostart--vb-and-c.md)
 </dt> </dl>
 
  

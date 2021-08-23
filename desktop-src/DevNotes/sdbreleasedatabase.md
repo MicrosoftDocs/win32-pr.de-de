@@ -1,7 +1,7 @@
 ---
-description: Schließt die mit der sdbinitdatabase-Funktion initialisierte Shimdatenbank.
+description: Schließt die shim-Datenbank, die mit der SdbInitDatabase-Funktion initialisiert wurde.
 ms.assetid: 8452ab14-a1e9-41b3-a1ac-7ff3a7d3a7ed
-title: Sdbreleasedatabase-Funktion
+title: SdbReleaseDatabase-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 7df4b62af6b2fe654269a8bea4b2e866d0d765b3
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 82a7cf785927a5ef14e3e033c29233afcc4a49cf89d610757d110583bce4eff6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119815330"
 ---
-# <a name="sdbreleasedatabase-function"></a>Sdbreleasedatabase-Funktion
+# <a name="sdbreleasedatabase-function"></a>SdbReleaseDatabase-Funktion
 
-Schließt die mit der [**sdbinitdatabase**](sdbinitdatabase.md) -Funktion initialisierte Shimdatenbank.
+Schließt die shim-Datenbank, die mit der [**SdbInitDatabase-Funktion**](sdbinitdatabase.md) initialisiert wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ void WINAPI SdbReleaseDatabase(
 
 <dl> <dt>
 
-*hsdb* \[ in\]
+*hSDB* \[ In\]
 </dt> <dd>
 
-Ein Handle für die von der [**sdbinitdatabase**](sdbinitdatabase.md) -Funktion zurückgegebene Shimdatenbank.
+Ein Handle für die shim-Datenbank, die von der [**SdbInitDatabase-Funktion**](sdbinitdatabase.md) zurückgegeben wird.
 
 </dd> </dl>
 
@@ -56,8 +56,8 @@ Diese Funktion gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
@@ -66,7 +66,7 @@ Diese Funktion gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Sdbinitdatabase**](sdbinitdatabase.md)
+[**SdbInitDatabase**](sdbinitdatabase.md)
 </dt> </dl>
 
  
