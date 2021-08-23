@@ -1,10 +1,10 @@
 ---
-title: Host Attribut
-description: Gibt einen Host Computer an.
+title: Hostattribut
+description: Gibt einen Hostcomputer an.
 ms.assetid: 4ad13026-eea2-4a69-a149-14cc04188c93
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des Host Attributs
+- Hostattribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,41 +13,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 46d9ac0441230c92909bcdf247929425e268a159
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 569fc05b5c10758d56de543d26d3d4733846b92132885431b9e0d9b6b0c0b301
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119322970"
 ---
-# <a name="host-attribute"></a>Host Attribut
+# <a name="host-attribute"></a>Hostattribut
 
-Gibt einen Host Computer an.
+Gibt einen Hostcomputer an.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | host                                        |
-| LDAP-Display-Name | host                                        |
+| Ldap-Anzeigename | host                                        |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 0.9.2342.19200300.100.1.9                   |
-| System-ID-GUID    | 6043df71-fa48-46cf-ab7c-cbd54644b22d        |
+| System-ID-GUID    | 6043df71-fa48-46cf-ab7c-fg54644b22d        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,15 +56,15 @@ Gibt einen Host Computer an.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Ist einwertig       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | 1                                       |
 | Range-Upper            | 256                                     |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000000                              |
-| In verwendete Klassen        | [**Ziehen**](c-account.md)<br/> |
+| In verwendete Klassen        | [**Konto**](c-account.md)<br/> |
 
 
 
@@ -77,15 +77,15 @@ Gibt einen Host Computer an.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Ist einwertig       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | 1                                       |
 | Range-Upper            | 256                                     |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000000                              |
-| In verwendete Klassen        | [**Ziehen**](c-account.md)<br/> |
+| In verwendete Klassen        | [**Konto**](c-account.md)<br/> |
 
 
 
@@ -98,15 +98,15 @@ Gibt einen Host Computer an.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Ist einwertig       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | 1                                       |
 | Range-Upper            | 256                                     |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000000                              |
-| In verwendete Klassen        | [**Ziehen**](c-account.md)<br/> |
+| In verwendete Klassen        | [**Konto**](c-account.md)<br/> |
 
 
 
@@ -119,15 +119,15 @@ Gibt einen Host Computer an.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Is-Single-Valued       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | 1                                       |
 | Range-Upper            | 256                                     |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000000                              |
-| In verwendete Klassen        | [**Ziehen**](c-account.md)<br/> |
+| In verwendete Klassen        | [**Konto**](c-account.md)<br/> |
 
 
 
@@ -140,15 +140,15 @@ Gibt einen Host Computer an.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Is-Single-Valued       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | 1                                       |
 | Range-Upper            | 256                                     |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000000                              |
-| In verwendete Klassen        | [**Ziehen**](c-account.md)<br/> |
+| In verwendete Klassen        | [**Konto**](c-account.md)<br/> |
 
 
 

@@ -1,129 +1,129 @@
 ---
-title: Erstellen von Briefcase-abgleichen
-description: 'Eine Aktentasche-Abstimmung ermöglicht Brief: die Möglichkeit, unterschiedliche Versionen eines Dokuments abzugleichen.'
+title: Erstellen von Briefcase-Abstimmungen
+description: Ein Abstimmungs-Paar aus Kleinbuchstaben gibt In Kleinbuchstaben die Möglichkeit, verschiedene Versionen eines Dokuments abgleichen.
 ms.assetid: 86d66291-96ae-40ea-98ef-ef263f25aa82
 keywords:
-- Brief Synchronisierer
+- Briefcase-Abstimmungen
 - Erstattung
-- Ireconcilableobject
-- Ireconcileinitiator
+- IReconcilableObject
+- IReconcileInitiator
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b925e7055e15f6c7a49408aa28d147fb2eef5a7e
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: dc4161796999172e6ee9bc7c403e723f9f8bafe7e876b544888fa5e7105b724f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390160"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119556940"
 ---
-# <a name="creating-briefcase-reconcilers"></a>Erstellen von Briefcase-abgleichen
+# <a name="creating-briefcase-reconcilers"></a>Erstellen von Briefcase-Abstimmungen
 
-Eine Aktentasche-Abstimmung ermöglicht Brief: die Möglichkeit, unterschiedliche Versionen eines Dokuments abzugleichen.
+Ein Abstimmungs-Paar aus Kleinbuchstaben gibt In Kleinbuchstaben die Möglichkeit, verschiedene Versionen eines Dokuments abgleichen.
 
--   [Informationen über die Abgleichen von Brief Fällen](#about-briefcase-reconcilers)
-    -   [Ö](#reconciliation)
-    -   [Erstellen eines Briefcase-abversers](#creating-a-briefcase-reconciler)
-    -   [Benutzerinteraktion bei Abstimmung](#user-interaction-in-reconciliation)
-    -   [Abgleichen von eingebetteten Objekten](#reconciling-embedded-objects)
-    -   [Stoff](#residues)
--   [Referenz zur Briefcase-Synchronisierung](#briefcase-reconciler-reference)
-    -   [Schnittstellen und Methoden der Briefcase-Synchronisierung](#briefcase-reconciler-interfaces-and-methods)
+-   [Informationen zu Briefcase-Reconcilern](#about-briefcase-reconcilers)
+    -   [Versöhnung](#reconciliation)
+    -   [Erstellen eines Briefcase-Reconcilers](#creating-a-briefcase-reconciler)
+    -   [Benutzerinteraktion bei der Abstimmung](#user-interaction-in-reconciliation)
+    -   [Abgleich eingebetteter Objekte](#reconciling-embedded-objects)
+    -   [Rückstände](#residues)
+-   [Referenz zur Abstimmung von Kleinbuchstaben](#briefcase-reconciler-reference)
+    -   [Schnittstellen und Methoden für die Abstimmung von Kleinbuchstaben](#briefcase-reconciler-interfaces-and-methods)
 
-## <a name="about-briefcase-reconcilers"></a>Informationen über die Abgleichen von Brief Fällen
+## <a name="about-briefcase-reconcilers"></a>Informationen zu Briefcase-Reconcilern
 
-Eine Aktentasche-Synchronisierung kombiniert verschiedene Eingabe Versionen eines Dokuments, um eine einzelne, neue Ausgabe Version des Dokuments zu generieren. Möglicherweise müssen Sie eine Aktentasche-Konfiguration erstellen, um Ihren Dokumenttyp zu unterstützen. In dieser Übersicht werden die Protokolle von Brief Fällen beschrieben und erläutert, wie Sie erstellt werden.
+Ein Briefcase-Reconciler kombiniert verschiedene Eingabeversionen eines Dokuments, um eine einzelne, neue Ausgabeversion des Dokuments zu erzeugen. Möglicherweise müssen Sie einen Abstimmungstyp für Kleinbuchstaben erstellen, um Ihren Dokumenttyp zu unterstützen. In dieser Übersicht werden Abstimmungen in Kleinbuchstaben beschrieben und erläutert, wie sie erstellt werden.
 
 Die folgenden Themen werden erörtert:
 
--   [Ö](#reconciliation)
--   [Erstellen eines Briefcase-abversers](#creating-a-briefcase-reconciler)
--   [Benutzerinteraktion bei Abstimmung](#user-interaction-in-reconciliation)
--   [Abgleichen von eingebetteten Objekten](#reconciling-embedded-objects)
--   [Stoff](#residues)
+-   [Versöhnung](#reconciliation)
+-   [Erstellen eines Briefcase-Reconcilers](#creating-a-briefcase-reconciler)
+-   [Benutzerinteraktion bei der Abstimmung](#user-interaction-in-reconciliation)
+-   [Abgleich eingebetteter Objekte](#reconciling-embedded-objects)
+-   [Rückstände](#residues)
 
-### <a name="reconciliation"></a>Ö
+### <a name="reconciliation"></a>Versöhnung
 
-Ein Dokument ist eine Sammlung von Informationen, die kopiert und geändert werden können. Ein Dokument weist verschiedene Versionen auf, wenn sich der Inhalt mindestens zweier Kopien des Dokuments unterscheidet. Die Abstimmung erzeugt eine einzelne Version eines Dokuments aus mindestens zwei Versionen. In der Regel ist die abgestimmte Version eine Kombination aus Informationen aus den anfänglichen Versionen mit den neuesten oder nützlichsten Informationen.
+Ein Dokument ist eine Sammlung von Informationen, die kopiert und geändert werden können. Ein Dokument verfügt über unterschiedliche Versionen, wenn der Inhalt von mindestens zwei Kopien des Dokuments unterschiedlich ist. Die Abstimmung erzeugt eine einzelne Version eines Dokuments aus zwei oder mehr Anfangsversionen. In der Regel ist die abgeglichene Version eine Kombination aus Informationen aus den ursprünglichen Versionen mit den neuesten oder nützlichsten Informationen, die beibehalten werden.
 
-Die Abstimmung wird von Briefcase initiiert, wenn festgelegt wird, dass sich mindestens zwei Kopien desselben Dokuments unterscheiden. In Aktentasche, das in diesem Kontext als Initiator fungiert, wird die dem angegebenen Dokumenttyp zugeordnete Aktentasche-Synchronisierung nach dem jeweiligen Dokumenttyp lokalisiert und gestartet. Die Synchronisierung vergleicht die Dokumente und bestimmt, welche Teile der Dokumente beibehalten werden. Einige Konflikt Handler erfordern möglicherweise eine Benutzerinteraktion, um die Abstimmung abzuschließen. Andere Benutzer können die Abstimmung ohne Benutzerinteraktion durchführen. Die Synchronisierung kann in einer Anwendung enthalten sein oder eine Erweiterung sein, die als dll implementiert ist.
+Der Abgleich wird durch "Briefcase" initiiert, wenn festgestellt wird, dass zwei oder mehr Kopien desselben Dokuments unterschiedlich sind. In Kleinbuchstaben, die in diesem Kontext als Initiator fungiert, wird der dem angegebenen Dokumenttyp zugeordnete Abstimmungstyp für Kleinbuchstaben gefunden und gestartet. Der Abgleich vergleicht die Dokumente und bestimmt, welche Teile der Dokumente beibehalten werden. Einige Abstimmungen erfordern möglicherweise eine Benutzerinteraktion, um die Abstimmung abschließen zu können. Andere personen können den Abgleich ohne Benutzerinteraktion abschließen. Der Abgleich kann in einer Anwendung enthalten sein oder eine Erweiterung sein, die als DLL implementiert ist.
 
-Einige brieffall-Abgleiche können zu Daten Rückständen führen. Ein Rückstand ist ein Dokument, das in der Regel den gleichen Dateityp wie das ursprüngliche Dokument hat, das Informationen enthält, die nicht in der zusammengeführten Version gespeichert wurden. Mithilfe von-Nachrichten können Autoren in der Regel schnell feststellen, welche Informationen aus Ihrem ursprünglichen Dokument nicht in der endgültigen zusammengeführten Version enthalten sind. Wenn ein-Abgleichen von Rückständen unterstützt wird, erstellt er einen Rückstand für jede der ursprünglichen Versionen des Dokuments. Es werden keine Reste erstellt, es sei denn, der Initiator fordert Sie an
+Einige Abstimmungen in Kleinbuchstaben können zu Einerzungsbeendigten werden. Ein Rückstand ist ein Dokument, das in der Regel den gleichen Dateityp wie das ursprüngliche Dokument auft, das Informationen enthält, die nicht in der zusammengeführten Version gespeichert wurden. In der Regel werden Sie verwendet, um Autoren eine schnelle Möglichkeit zu geben, zu bestimmen, welche Informationen aus ihrem ursprünglichen Dokument nicht in der endgültigen zusammengeführten Version enthalten sind. Wenn ein Abstimmungser einen Bruch unterstützt, erstellt er einen Rückstand für jede der ursprünglichen Versionen des Dokuments. Die Befreiung wird nur erstellt, wenn der Initiator sie an fordert.
 
-Einige Brief Synchronisierer von Brief Fällen können mit Aktentasche verwendet werden, damit der Benutzer die Abstimmung beenden kann. Dies ist eine wichtige Funktion für einen Benutzer, der sich entscheiden kann, dass die Abstimmung nicht fortgesetzt werden soll. Eine Abstimmung stellt in der Regel ein Beendigungs Objekt bereit, wenn die Abstimmung eine Benutzerinteraktion erfordert und lange dauern kann. In einigen Umgebungen kann eine Abstimmung eine partielle Abstimmung zulassen, sodass ein Benutzer eine Abstimmung vorübergehend aussetzen und später wieder fortsetzen kann. "Briefcase" unterstützt derzeit keine partielle Abstimmung.
+Einige Abstimmungen in Kleinbuchstaben arbeiten mit "Briefcase", damit der Benutzer den Abstimmungsabgleich beenden kann. Dies ist ein wichtiges Feature für einen Benutzer, der möglicherweise entscheidet, dass die Abstimmung nicht fortgesetzt werden soll. Ein Abgleich stellt in der Regel ein Beendigungsobjekt zur Unterstützung von Zureigung bei, wenn die Abstimmung eine Benutzerinteraktion erfordert und sehr lang sein kann. In einigen Umgebungen kann ein Abgleich eine Teilabstimmung ermöglichen, sodass ein Benutzer eine Abstimmung vorübergehend ansetzen und später fortsetzen kann. Die Teilabstimmung wird derzeit jedoch nicht von Kleinbuchstaben unterstützt.
 
-### <a name="creating-a-briefcase-reconciler"></a>Erstellen eines Briefcase-abversers
+### <a name="creating-a-briefcase-reconciler"></a>Erstellen eines Briefcase-Reconcilers
 
-Sie erstellen eine Aktentasche-Abstimmung, indem Sie die ababstimmungs Schnittstellen implementieren. Ein-connecler implementiert mindestens die [**ireconcilableobject**](/windows/win32/api/reconcil/nn-reconcil-ireconcilableobject) -Schnittstelle und die [IPersistStorage](/windows/win32/api/objidl/nn-objidl-ipersiststorage) -oder [IPersistFile](/windows/win32/api/objidl/nn-objidl-ipersistfile) -Schnittstelle. Als Initiator bestimmt Briefcase, wann eine Abstimmung erforderlich ist, und ruft die [**ireconcilableobject::**](/windows/win32/api/reconcil/nf-reconcil-ireconcilableobject-reconcile) abstimmen-Methode auf, um die Abstimmung zu initiieren.
+Sie erstellen eine Abstimmung von Kleinbuchstaben, indem Sie die Abstimmungsschnittstellen implementieren. Ein Reconciler implementiert mindestens die [**IReconcilableObject-Schnittstelle**](/windows/win32/api/reconcil/nn-reconcil-ireconcilableobject) und die [IPersistStorage-](/windows/win32/api/objidl/nn-objidl-ipersiststorage) oder [IPersistFile-Schnittstelle.](/windows/win32/api/objidl/nn-objidl-ipersistfile) Als Initiator bestimmt Briefcase, wann eine Abstimmung erforderlich ist, und ruft die [**IReconcilableObject::Reconcile-Methode**](/windows/win32/api/reconcil/nf-reconcil-ireconcilableobject-reconcile) auf, um die Abstimmung zu initiieren.
 
-Obwohl [**ireconcilableobject::**](/windows/win32/api/reconcil/nf-reconcil-ireconcilableobject-reconcile) abgestimmt einen umfangreichen Satz von abgleichsfunktionen bereitstellt, führt eine Aktentasche-Abstimmung in den meisten Fällen nur minimale Abstimmung durch. Insbesondere ist es für Briefcase nicht erforderlich, dass die Abkopplung die Rückstands Generierung unterstützt oder das Beendigungs Objekt unterstützt. Die Abstimmung führt außerdem eine einzige von oben nach unten gerichteten Abstimmung durch und darf nicht den Wert "REC E notcomplete" zurückgeben, d \_ \_ . h., Sie sollte keine partielle Abstimmung versuchen.
+Obwohl [**IReconcilableObject::Reconcile**](/windows/win32/api/reconcil/nf-reconcil-ireconcilableobject-reconcile) einen umfangreichen Satz von Abstimmungsfunktionen bietet, führt eine Abstimmung von Kleinbuchstaben in den meisten Fällen nur eine minimale Abstimmung aus. Insbesondere erfordert "Briefcase" nicht, dass der Abgleicher die Generierung von Resten oder das Beendigungsobjekt unterstützt. Außerdem führt der Abgleich eine einzelne Von-oben-unten-Abstimmung durch und darf nicht den REC \_ E NOTCOMPLETE-Wert zurückgeben. Das heißt, es sollte nicht versucht werden, einen Teilabgleich \_ zu versuchen.
 
-Briefcase stellt die [**ireconcileinitiator**](ireconcileinitiator.md) -Schnittstelle bereit. Die Aktentasche-Vergleichsfunktion kann die [**ireconcileinitiator:: setabortcallback**](/windows/win32/api/reconcil/nf-reconcil-ireconcileinitiator-setabortcallback) -Methode verwenden, um das Beendigungs Objekt festzulegen. "Briefcase" verwendet keine Versions Bezeichner und kann daher keine früheren Versionen eines Dokuments bereitstellen, wenn Sie von einem Vergleichsdienst mithilfe der entsprechenden Methoden in **ireconcileinitiator** angefordert werden.
+Der Kleinbuchstaben stellt die [**IReconcileInitiator-Schnittstelle**](ireconcileinitiator.md) bereit. Der Briefcase-Abgleicher kann die [**IReconcileInitiator::SetAbortCallback-Methode**](/windows/win32/api/reconcil/nf-reconcil-ireconcileinitiator-setabortcallback) verwenden, um das Beendigungsobjekt fest zu legen. In Großbuchstaben werden keine Versionsbezeichner verwendet, und daher können keine früheren Versionen eines Dokuments angegeben werden, wenn sie von einem Abgleicher mithilfe der entsprechenden Methoden in **IReconcileInitiator abgeslangt werden.**
 
-Briefcase übergibt an [**ireconcilableobject::**](/windows/win32/api/reconcil/nf-reconcil-ireconcilableobject-reconcile) ausgleichen dateimoniker, die die Versionen des zu stimmenden Dokuments darstellen. Die Aktentasche-Synchronisierung erhält Zugriff auf die Versionen, indem Sie entweder die [IMoniker:: bindteobject](/windows/win32/api/objidl/nf-objidl-imoniker-bindtoobject) -Methode oder die [IMoniker:: bindesstorage](/windows/win32/api/objidl/nf-objidl-imoniker-bindtostorage) -Methode verwendet. Letzteres ist im Allgemeinen schneller und wird empfohlen. Die Synchronisierung muss alle Objekte oder Speicher freigeben, an die Sie gebunden wird.
+Die Großbuchstaben werden an [**IReconcilableObject::Reconcile-Dateimoniker**](/windows/win32/api/reconcil/nf-reconcil-ireconcilableobject-reconcile) übergibt, die die Versionen des zu abstimmenden Dokuments darstellen. Die Abstimmung von Kleinbuchstaben erhält zugriff auf die Versionen mithilfe der [IMoniker::BindToObject-](/windows/win32/api/objidl/nf-objidl-imoniker-bindtoobject) oder [IMoniker::BindToStorage-Methode.](/windows/win32/api/objidl/nf-objidl-imoniker-bindtostorage) Letzteres ist im Allgemeinen schneller und wird empfohlen. Der Abgleicher muss alle Objekte oder Speicher frei geben, an die er gebunden ist.
 
-Wenn der Aktentasche-Verbindungs Dienst [IMoniker:: bindesstorage](/windows/win32/api/objidl/nf-objidl-imoniker-bindtostorage)verwendet, wird er an einen Speicher gebunden, bei dem es sich entweder um einen flatstorage (einen Stream) oder einen OLE-definierten strukturierten Speicher handelt. Wenn für die Verbindung eine flache Speicherung erwartet wird, sollte IMoniker:: BindToStorage verwendet werden, um die [IStream](/windows/win32/api/objidl/nn-objidl-istream) -Schnittstelle anzufordern. Wenn die-Konfiguration eine strukturierte Speicherung erwartet, sollte Sie die [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) -Schnittstelle anfordern. In beiden Fällen sollte Sie einen schreibgeschützten direkten (nicht transaktiven) Zugriff auf den Speicher anfordern. der Lese-/Schreibzugriff ist möglicherweise nicht verfügbar.
+Wenn die Abstimmung von Kleinbuchstaben [IMoniker::BindToStorage](/windows/win32/api/objidl/nf-objidl-imoniker-bindtostorage)verwendet, wird sie an einen Speicher gebunden, der entweder flacher Speicher (ein Stream) oder OLE-definierter strukturierter Speicher ist. Wenn der Abgleicher flachen Speicher erwartet, sollte er IMoniker::BindToStorage verwenden, um die [IStream-Schnittstelle an](/windows/win32/api/objidl/nn-objidl-istream) fordern. Wenn die Abstimmung strukturierten Speicher erwartet, sollte sie die [IStorage-Schnittstelle](/windows/win32/api/objidl/nn-objidl-istorage) anfordern. In beiden Fällen sollte er schreibgeschützten direkten (nicht übersetzten) Zugriff auf den Speicher anfordern. Lese-/Schreibzugriff ist möglicherweise nicht verfügbar.
 
-Ein minimaler Aktentasche-Vergleich sucht in der Regel direkt nach dem Speicher der anderen Versionen und verarbeitet eingebettete Objekte in sehr primitiver Weise, z. b. das Zusammenführen von zwei Versionen des Objekts durch einbeziehen beider Versionen in der Ausgabe Version.
+Eine minimale Abstimmung von Kleinbuchstaben untersucht in der Regel direkt den Speicher der anderen Versionen und behandelt eingebettete Objekte sehr primitiv, z. B. durch Zusammenführen von zwei Versionen des Objekts, indem beide Versionen in die Ausgabeversion eingebunden werden.
 
-Der Initiator sucht mithilfe einer Teilmenge der Logik, die von der [getclassfile](/windows/win32/api/objbase/nf-objbase-getclassfile) -Funktion implementiert wird, den Typ einer bestimmten Datei und sucht dann in der Registrierung nach der dem angegebenen Dateityp zugeordneten "Versöhnler"-Klasse. In Briefcase wird wie bei anderen Shellkomponenten der Dateityp ausschließlich durch die Dateinamenerweiterung bestimmt. Die Erweiterung einer Datei muss über einen registrierten Dateityp für "Briefcase" verfügen, um einen für die Datei abgleichen. Sie müssen einen Registrierungs Eintrag der folgenden Form festlegen, wenn Sie die-Synchronisierung installieren.
+Der Initiator sucht mithilfe einer Teilmenge der Logik, die von der [GetClassFile-Funktion](/windows/win32/api/objbase/nf-objbase-getclassfile) implementiert wird, den Typ einer bestimmten Datei und sucht dann in der Registrierung nach der Abstimmungsklasse, die dem angegebenen Dateityp zugeordnet ist. Der Typ einer Datei wird wie bei anderen Shell-Komponenten nur durch die Dateierweiterung bestimmt. Die Erweiterung einer Datei muss einen registrierten Dateityp für "Briefcase" haben, um einen Abstimmungsserver für die Datei aufrufen zu können. Sie müssen einen Registrierungseintrag im folgenden Formular festlegen, wenn Sie die Abstimmung installieren.
 
 ```
 CLSID
-   {the file CLSID}
-      Roles
-         Reconciler
-            (Default) = {the reconciler-classid}
+   {the file CLSID}
+      Roles
+         Reconciler
+            (Default) = {the reconciler-classid}
 ```
 
-Die Klasse muss schnell geladen werden, muss \_ als multipleuse angegeben werden, und es muss sich um einen in-Process-Server (der in einer DLL enthalten ist) und nicht um einen lokalen Server (Implementiert in einer exe-Datei) handeln.
+Die -Klasse muss schnell geladen werden, muss als MULTIPLEUSE festgelegt sein und muss, sofern keine Marshaller für die Abstimmungsschnittstelle bereitgestellt werden, ein Prozessserver (in einer DLL enthalten) und nicht ein lokaler Server (implementiert in einer \_ .exe-Datei) sein.
 
-### <a name="user-interaction-in-reconciliation"></a>Benutzerinteraktion bei Abstimmung
+### <a name="user-interaction-in-reconciliation"></a>Benutzerinteraktion bei der Abstimmung
 
-Eine brieffall-Abstimmung sollte versuchen, eine Abstimmung ohne Benutzerinteraktion auszuführen. Umso automatisierter ist die Abstimmung des Benutzers.
+Eine Abstimmung mit Kleinbuchstaben sollte versuchen, eine Abstimmung ohne Benutzerinteraktion durchführen. Desto automatisierter die Abstimmung, desto besser wird die Wahrnehmung des Prozesses durch den Benutzer.
 
-In einigen Fällen kann der Benutzereingriff wertvoll sein. Beispielsweise kann ein Dokument System erfordern, dass ein Benutzer Änderungen überprüfen kann, bevor er die zusammengeführte Version eines Dokuments annimmt. es kann auch sein, dass Kommentare vom Benutzer erforderlich sind, die die vorgenommenen Änderungen erläutern. In diesen Fällen ist der Initiator, nicht der Buchstabe "Aktentasche", dafür verantwortlich, den Benutzer abzufragen und die Anweisungen des Benutzers auszuführen.
+In einigen Fällen kann der Benutzereingriff nützlich sein. Ein Dokumentsystem kann z. B. verlangen, dass ein Benutzer Änderungen überprüft, bevor er die zusammengeführte Version eines Dokuments akzeptiert, oder er benötigt Kommentare vom Benutzer, die die vorgenommenen Änderungen erläutern. In diesen Fällen ist der Initiator und nicht der Briefkoffer für die Abfrage des Benutzers und die Ausführung der Anweisungen des Benutzers verantwortlich.
 
-In anderen Fällen kann ein Benutzereingriff erforderlich sein, z. –., wenn zwei Versionen auf inkompatible Weise bearbeitet wurden. In solchen Fällen muss entweder der Initiator oder der Aktentasche-Konflikt Bezeichner den Benutzer Abfragen, um Anweisungen zum Beheben des Konflikts zu erhalten. Im Allgemeinen kann kein Initiator auf das Abschließen einer Abstimmung verlassen, ohne dass eine Benutzerinteraktion erwartet wird. Allerdings haben Sie die Möglichkeit, mit dem Benutzer zu interagieren, um Konflikte aufzulösen oder den Initiator zu erfordern.
+In anderen Fällen kann ein Benutzereingriff erforderlich sein, z. B. wenn zwei Versionen auf inkompatible Weise bearbeitet wurden. In solchen Fällen muss entweder der Initiator oder die Briefcase-Abstimmung den Benutzer abfragen, um Anweisungen zum Lösen des Konflikts zu erhalten. Im Allgemeinen kann sich kein Initiator darauf verlassen, dass eine Abstimmung abgeschlossen wird, ohne dass eine Benutzerinteraktion erwartet wird. Abstimmungen haben hingegen die Möglichkeit, mit dem Benutzer zu interagieren, um Konflikte aufzulösen oder dies vom Initiator zu verlangen.
 
-### <a name="reconciling-embedded-objects"></a>Abgleichen von eingebetteten Objekten
+### <a name="reconciling-embedded-objects"></a>Abgleich eingebetteter Objekte
 
-Beim Abgleichen eines Dokuments kann die Aktentasche-Abstimmung selbst ein Initiator werden, wenn ein eingebettetes Objekt eines Typs erkannt wird, das nicht abgeglichen werden kann. In diesem Fall muss die Abstimmung jedes der eingebetteten Objekte rekursiv abstimmen und alle Verantwortlichkeiten eines Initiators annehmen.
+Wenn ein Dokument abgeglichen wird, kann der Briefcase-Abgleich selbst zum Initiator werden, wenn er ein eingebettetes Objekt eines Typs entdeckt, der nicht abgeglichen werden kann. In diesem Fall muss die Abstimmung jedes eingebettete Objekt rekursiv abstimmen und alle Aufgaben eines Initiators übernehmen.
 
-Um die Rekursion auszuführen, lädt die Aktentasche-Konfiguration das Objekt und fragt die entsprechende Schnittstelle ab. Der-Handler für das-Objekt muss die-Schnittstelle unterstützen. Wenn eine Methode der Schnittstelle den OLE \_ E- \_ notrunning-Wert zurückgibt, muss das-Objekt das-Objekt ausführen, um den Vorgang auszuführen. Da Code für eingebettete Objekte nicht immer verfügbar ist, muss eine Problemlösung eine Lösung für diese Bedingung bereitstellen. Beispielsweise kann die-Vereinbarkeit sowohl alte als auch neue Versionen des eingebetteten Objekts in der abgeglichen Version enthalten. Die Abstimmung darf nicht versuchen, Verknüpfungen über Verknüpfungen abzustimmen.
+Um die Rekursion durchführen zu können, lädt die Briefcase-Abstimmung das Objekt und fragt die entsprechende Schnittstelle ab. Der Handler für das -Objekt muss die -Schnittstelle unterstützen. Wenn eine Methode der -Schnittstelle den OLE \_ E NOTRUNNING-Wert zurückgibt, muss der Abgleicher das -Objekt ausführen, um \_ den Vorgang ausführen zu können. Da Code für eingebettete Objekte nicht immer verfügbar ist, muss eine Abstimmung eine Lösung für diese Bedingung bereitstellen. Beispielsweise kann die Abstimmung sowohl alte als auch neue Versionen des eingebetteten Objekts in der abgestimmten Version enthalten. Der Abgleicher darf nicht versuchen, linksübergreifend eine Abstimmung zu versuchen.
 
-Der Initiator speichert die Dokument Versionen, die zusammengeführt werden. In vielen Fällen hat der Initiator Zugriff auf den Speicher jeder Version und speichert das Ergebnis der Abstimmung mithilfe eines ähnlichen Speichers. Manchmal verfügt der Initiator jedoch möglicherweise über ein in-Memory-Objekt, für das keine persistente Version verfügbar ist. Diese Situation kann auftreten, wenn ein Dokument mit geöffneten eingebetteten Objekten abgestimmt werden muss, bevor es gespeichert wird. In solchen Fällen speichert der Initiator das Ergebnis der Abstimmung in der Version, die im Arbeitsspeicher gefunden wird.
+Der Initiator speichert die zusammengeführten Dokumentversionen. In vielen Fällen hat der Initiator Zugriff auf den Speicher jeder Version und speichert das Ergebnis der Abstimmung mithilfe eines ähnlichen Speichers. Manchmal kann der Initiator jedoch über ein In-Memory-Objekt verfügen, für das keine persistente Version verfügbar ist. Diese Situation kann auftreten, wenn ein Dokument, das geöffnete eingebettete Objekte enthält, vor dem Speichern abgestimmt werden muss. In solchen Fällen speichert der Initiator das Ergebnis der Abstimmung in der Im Arbeitsspeicher gefundenen Version.
 
-Der Initiator verwendet die [IPersistStorage](/windows/win32/api/objidl/nn-objidl-ipersiststorage) -Schnittstelle, um die zusammengeführte Version zu binden (laden). Der Initiator verwendet die [IPersistStorage:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) -Methode, wenn bereits eine anfängliche Version erstellt wurde, und verwendet die [IPersistStorage:: InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) -Methode für die anfängliche Version. Wenn die zusammengeführte Version geladen wird, verwendet der Initiator [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) , um die Adresse der [**ireconcilableobject**](/windows/win32/api/reconcil/nn-reconcil-ireconcilableobject) -Schnittstelle abzurufen. Diese Schnittstelle ermöglicht dem Initiator den Zugriff auf die Speicherung der vorhandenen-Rest-und bietet eine Möglichkeit zum Erstellen von Speicherplatz für alle neuen-Rest-Geräte. Anschließend leitet der Initiator die-Schnittstelle an, um die Abstimmung auszuführen. Der Initiator fragt tatsächlich die [IPersistFile](/windows/win32/api/objidl/nn-objidl-ipersistfile) -Schnittstelle vor IPersistStorage ab. Wenn die-Methode IPersistFile unterstützt, manipuliert der Initiator das Replikat über die IPersistFile-Methode anstelle der IPersistStorage-Methoden. Dies ermöglicht die Abstimmung von Dateien, die nicht als Verbund Dokumente gespeichert werden.
+Der Initiator verwendet die [IPersistStorage-Schnittstelle,](/windows/win32/api/objidl/nn-objidl-ipersiststorage) um die zusammengeführte Version zu binden (zu laden). Der Initiator verwendet die [IPersistStorage::Load-Methode,](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) wenn bereits eine erste Version erstellt wurde, und verwendet die [IPersistStorage::InitNew-Methode](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) für die erste Version. Wenn die zusammengeführte Version geladen wird, verwendet der Initiator [QueryInterface,](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) um die Adresse der [**IReconcilableObject-Schnittstelle**](/windows/win32/api/reconcil/nn-reconcil-ireconcilableobject) abzurufen. Diese Schnittstelle ermöglicht dem Initiator den Zugriff auf die Speicherung der vorhandenen 1000-000-Daten und ermöglicht die Erstellung von Speicher für neue Ingen. Anschließend leitet der Initiator die Schnittstelle an, um die Abstimmung durchführen zu können. Der Initiator fragt tatsächlich die [IPersistFile-Schnittstelle](/windows/win32/api/objidl/nn-objidl-ipersistfile) vor IPersistStorage ab. Wenn der Reconciler IPersistFile unterstützt, bearbeitet der Initiator das Replikat über die IPersistFile anstelle der IPersistStorage-Methoden. Dies ermöglicht den Abgleich von Dateien, die nicht als Verbunddokumente gespeichert sind.
 
-Wenn die Abstimmung vollständig ist, kann der Initiator die zusammengeführte Version mithilfe der [IPersistStorage](/windows/win32/api/objidl/nn-objidl-ipersiststorage) -oder [IPersistFile](/windows/win32/api/objidl/nn-objidl-ipersistfile) -Schnittstelle speichern. Während der Abstimmung erstellt der Aktentasche-Konflikt die nach Bedarf, und schreibt die persistenten Bits in den Speicher. Wenn die zusammengeführte Version ein Stream ist, enthält die an [IPersistStorage:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) über gegebene [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) -Schnittstelle einen Stream mit dem Namen "Content", wobei der Speicherstatus auf statebits Flat festgelegt ist \_ . (Sie können die Zustands Bits mithilfe der [IStorage:: stat](/windows/win32/api/objidl/nf-objidl-istorage-stat) -Methode festlegen.) Nach der Zusammenführung speichert der Initiator die zusammengeführte Version, indem er die Daten in angemessener Weise schreibt. Dabei sollte sichergestellt werden, dass statebits \_ Flat für den Speicher entsprechend festgelegt ist.
+Nach Abschluss der Abstimmung kann der Initiator die zusammengeführte Version mithilfe der [IPersistStorage-](/windows/win32/api/objidl/nn-objidl-ipersiststorage) oder [IPersistFile-Schnittstelle](/windows/win32/api/objidl/nn-objidl-ipersistfile) speichern. Während des Abgleichs erstellt der Abstimmungs-Abgleich von Kleinbuchstaben bei Bedarf eine Belagerung und schreibt ihre persistenten Bits in den Speicher. Wenn die zusammengeführte Version ein Stream ist, enthält die an [IPersistStorage::Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) übergebene [IStorage-Schnittstelle](/windows/win32/api/objidl/nn-objidl-istorage) einen Stream namens "Contents", dessen Speicherstatus auf STATEBITS FLAT festgelegt \_ ist. (Sie können die Zustandsbits mithilfe der [IStorage::Stat-Methode](/windows/win32/api/objidl/nf-objidl-istorage-stat) festlegen.) Nach der Zusammenführung speichert der Initiator die zusammengeführte Version, indem er die Daten entsprechend schreibt. Es sollte sichergestellt werden, dass STATEBITS \_ FLAT für den Speicher entsprechend festgelegt ist.
 
-### <a name="residues"></a>Stoff
+### <a name="residues"></a>Rückstände
 
-Der Initiator gibt an, ob die Daten Rückstände durch Festlegen des Parameters *pstgnew-Rest* auf eine gültige Adresse beim Aufrufen der [**ireconcilableobject::**](/windows/win32/api/reconcil/nf-reconcil-ireconcilableobject-reconcile) Rename-Methode festgelegt werden sollen. Wenn die-Abstimmung die Erstellung von-Replikate nicht unterstützt, muss Sie sofort den Wert von "REC \_ E \_ noresidues" zurückgeben, es sei denn, der *dwFlags* -Parameter gibt den Wert für den Wert der **\_** Eigenschaft "" von "Wert"
+Der Initiator gibt an, ob er beim Aufrufen der [**IReconcilableObject::Reconcile-Methode**](/windows/win32/api/reconcil/nf-reconcil-ireconcilableobject-reconcile) den *Parameter pstgNewResidues* auf eine gültige Adresse festlegen möchte. Wenn der Abgleicher die Erstellung von Stichen nicht unterstützt, muss er sofort den REC E NORESIDUES-Wert zurückgeben, es sei denn, der dwFlags-Parameter gibt den \_ \_ **RECONCILEF \_ NORESIDUESOK-Wert** an. 
 
-Die Aktentasche-Synchronisierung gibt durch Erstellen neuer Speicherelemente und Kopieren in das Array, auf das von *pstgnewreturns* verwiesen wird, Rückstände an den Initiator zurück. Bei strukturierten Speicher Rückständen kopiert der Verbindungs Dienst eine [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) -Schnittstelle, und bei flachen Speicher Rückständen wird entweder eine [IStream](/windows/win32/api/objidl/nn-objidl-istream) -oder eine IStorage-Schnittstelle mit dem festgelegten statebits- \_ Flag kopiert. Der-Abgleich verwendet IStorage, um den erforderlichen Speicher zu erstellen, wobei [IStorage:: foratestream](/windows/win32/api/objidl/nf-objidl-istorage-createstream) verwendet wird, um einen flachen Speicher für einen Restwert zu erstellen, bei dem es sich um einen Stream und [IStorage:: foratestorage](/windows/win32/api/objidl/nf-objidl-istorage-createstorage) handelt
+Der Abstimmungsator für Kleinbuchstaben gibt dem Initiator einen Fehler zurück, indem er neue Speicherelemente erstellt und in das Array kopiert, auf das *pstgNewResidues zeigt.* Bei strukturierten Speicherbenutzeroberflächen kopiert der Abgleicher eine [IStorage-Schnittstelle,](/windows/win32/api/objidl/nn-objidl-istorage) und für Flat Storage-Ausfälle wird entweder eine [IStream-](/windows/win32/api/objidl/nn-objidl-istream) oder eine IStorage-Schnittstelle kopiert, für die das FLAG STATEBITS FLAT festgelegt \_ ist. Der Abgleicher verwendet IStorage, um den erforderlichen Speicher zu erstellen, indem er [IStorage::CreateStream](/windows/win32/api/objidl/nf-objidl-istorage-createstream) verwendet, um flachen Speicher für einen Rest zu erstellen, bei dem es sich um einen Stream handelt, und [IStorage::CreateStorage,](/windows/win32/api/objidl/nf-objidl-istorage-createstorage) um strukturierten Speicher zu erstellen.
 
-Der Initiator bereitet *pstgnewrückstände* vor, sodass keine Elemente im nicht reservierten Teil des [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) -Namespace enthalten sind. Die Aktentasche-Synchronisierung platziert jeden Rest in einem Element, dessen Name der Reihenfolge ihrer ursprünglichen Version entspricht. Beispielsweise ist der erste Rest in "1", der zweite in "2" usw. enthalten. Wenn das abgeglichen Objekt selbst einen Rückstand erzeugt, befindet es sich im-Element mit dem Namen "0".
+Der Initiator bereitet *pstgNewResidues* so vor, dass er keine Elemente im nicht reservierten Teil des [IStorage-Namespace](/windows/win32/api/objidl/nn-objidl-istorage) enthält. Die Abstimmung von Kleinbuchstaben platziert jeden Rest in einem Element, dessen Name der Reihenfolge seiner ursprünglichen Version entspricht. Beispielsweise ist der erste Rest in "1", der zweite in "2" und so weiter enthalten. Wenn das abgeglichene Objekt selbst einen Rückstand erzeugt, befindet es sich im Element mit dem Namen "0".
 
-Die Aktentasche-debuggung führt ein Commit für jedes der neu erstellten Elemente einzeln aus, um sicherzustellen, dass der Initiator auf die Informationen zugreifen kann. Die-Synchronisierung führt jedoch kein Commit für *pstgnewrest* -Objekte aus. Der Initiator ist dafür verantwortlich, diesen Commit auszuführen oder anderweitig zu verwerfen.
+Der Abstimmungsator für Kleinbuchstaben committ jedes neu erstellte Element einzeln und stellt sicher, dass der Initiator Zugriff auf die Informationen hat. Der Reconciler führt jedoch keinen Commit *für pstgNewResidues selbst* aus. Der Initiator ist dafür verantwortlich, dies zu committen oder anderweitig zu verdringen.
 
-## <a name="briefcase-reconciler-reference"></a>Referenz zur Briefcase-Synchronisierung
+## <a name="briefcase-reconciler-reference"></a>Referenz zur Abstimmung von Kleinbuchstaben
 
-Dieser Abschnitt enthält Informationen zu den Abstimmungs Schnittstellen. Bei der Behandlung von Fehlern kann eine Methode nur die Fehler Werte zurückgeben, die explizit als mögliche Rückgabewerte definiert sind. Außerdem muss die-Methode alle Variablen festlegen, deren Adressen als Parameter an **null** weitergegeben werden, bevor der Fehler zurückgegeben wird.
+Dieser Abschnitt enthält Informationen zu den Abstimmungsschnittstellen. Bei der Behandlung von Fehlern kann eine Methode nur die Fehlerwerte zurückgeben, die explizit als mögliche Rückgabewerte definiert sind. Darüber hinaus muss die -Methode alle Variablen, deren Adressen als Parameter übergeben werden, auf **NULL** festlegen, bevor der Fehler zurückgegeben wird.
 
-### <a name="briefcase-reconciler-interfaces-and-methods"></a>Schnittstellen und Methoden der Briefcase-Synchronisierung
+### <a name="briefcase-reconciler-interfaces-and-methods"></a>Schnittstellen und Methoden für die Abstimmung von Kleinbuchstaben
 
--   [**Ireconcilableobject**](/windows/win32/api/reconcil/nn-reconcil-ireconcilableobject) 
-    -   -   [**Ireconcilableobject:: getprogressfeedbackmaxschätz**](/windows/win32/api/reconcil/nf-reconcil-ireconcilableobject-getprogressfeedbackmaxestimate)
-        -   [**Ireconcilableobject:: Abstimmung**](/windows/win32/api/reconcil/nf-reconcil-ireconcilableobject-reconcile)
+-   [**IReconcilableObject**](/windows/win32/api/reconcil/nn-reconcil-ireconcilableobject) 
+    -   -   [**IReconcilableObject::GetProgressFeedbackMaxEstimate**](/windows/win32/api/reconcil/nf-reconcil-ireconcilableobject-getprogressfeedbackmaxestimate)
+        -   [**IReconcilableObject::Reconcile**](/windows/win32/api/reconcil/nf-reconcil-ireconcilableobject-reconcile)
 
--   [**Ireconcileinitiator**](ireconcileinitiator.md) 
-    -   -   [**Ireconcileinitiator::-tabortcallback**](/windows/win32/api/reconcil/nf-reconcil-ireconcileinitiator-setabortcallback)
-        -   [**Ireconcileinitiator:: setprogressfeedback**](/windows/win32/api/reconcil/nf-reconcil-ireconcileinitiator-setprogressfeedback)
+-   [**IReconcileInitiator**](ireconcileinitiator.md) 
+    -   -   [**IReconcileInitiator::SetAbortCallback**](/windows/win32/api/reconcil/nf-reconcil-ireconcileinitiator-setabortcallback)
+        -   [**IReconcileInitiator::SetProgressFeedback**](/windows/win32/api/reconcil/nf-reconcil-ireconcileinitiator-setprogressfeedback)
 
--   [**Inotifyreplica**](/windows/desktop/api/reconcil/nn-reconcil-inotifyreplica) 
-    -   -   [**Inotifyreplica:: youareareplica**](/windows/desktop/api/reconcil/nf-reconcil-inotifyreplica-youareareplica)
+-   [**INotifyReplica**](/windows/desktop/api/reconcil/nn-reconcil-inotifyreplica) 
+    -   -   [**INotifyReplica::YouAreAReplica**](/windows/desktop/api/reconcil/nf-reconcil-inotifyreplica-youareareplica)
 
- 
+ 
 
- 
+ 

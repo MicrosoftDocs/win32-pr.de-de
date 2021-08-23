@@ -1,25 +1,25 @@
 ---
-description: 'Die folgenden Enumerationen werden in der ressourcenenumeration verwendet:'
+description: 'Die folgenden Enumerationen werden in der Ressourcenenumeration verwendet:'
 ms.assetid: fb43b8b4-04ed-4fcf-9df3-cdcad1a73fb5
-title: Ressourcenenumerationsenumerationen
+title: Ressourcenenumerationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e46a97043a1237b419e0254bb20528c5c7e9c40a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a7b46e8fc8547cb18dad9c8376f8279436985c0f2e6571284046c7955273acee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119571510"
 ---
-# <a name="resource-enumeration-enumerations"></a>Ressourcenenumerationsenumerationen
+# <a name="resource-enumeration-enumerations"></a>Ressourcenenumerationen
 
-Die folgenden Enumerationen werden in der ressourcenenumeration verwendet:
+Die folgenden Enumerationen werden in der Ressourcenenumeration verwendet:
 
--   [**eavrfresourcetypes**](/windows/desktop/api/Avrfsdk/ne-avrfsdk-eavrfresourcetypes)
--   [**ehandle \_ - \_ Ablauf Verfolgungs Vorgänge**](/windows/desktop/api/Avrfsdk/ne-avrfsdk-ehandle_trace_operations)
--   [**eheapzuzustandsstate**](/windows/desktop/api/Avrfsdk/ne-avrfsdk-eheapallocationstate)
--   [**"eheapenumerationlevel"**](/windows/desktop/api/Avrfsdk/ne-avrfsdk-eheapenumerationlevel)
--   [**euserzubinationstate**](/windows/desktop/api/Avrfsdk/ne-avrfsdk-euserallocationstate)
+-   [**eAvrfResourceTypes**](/windows/desktop/api/Avrfsdk/ne-avrfsdk-eavrfresourcetypes)
+-   [**\_eHANDLE-ABLAUFVERFOLGUNGSVORGÄNGE \_**](/windows/desktop/api/Avrfsdk/ne-avrfsdk-ehandle_trace_operations)
+-   [**eHeapAllocationState**](/windows/desktop/api/Avrfsdk/ne-avrfsdk-eheapallocationstate)
+-   [**eHeapEnumerationLevel**](/windows/desktop/api/Avrfsdk/ne-avrfsdk-eheapenumerationlevel)
+-   [**eUserAllocationState**](/windows/desktop/api/Avrfsdk/ne-avrfsdk-euserallocationstate)
 
  
 

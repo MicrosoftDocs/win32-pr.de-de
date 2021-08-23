@@ -1,23 +1,23 @@
 ---
-title: ld_structured (SM5-ASM)
-description: Zufälliger Lesezugriff auf 1-4 32-Bit-Komponenten aus einem strukturierten Puffer.
+title: ld_structured (sm5 - asm)
+description: Zufälliger Lesezugriff von 1-4 32-Bit-Komponenten aus einem strukturierten Puffer.
 ms.assetid: ED572B76-FF6C-405E-9110-4B12AD5E5AE6
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 00a34bafdcfbe0658723dd83d62507e255ff4bfa
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: dfb3c19b56271a02c20ff85dd71352b545843f62b3d01292e87c2edbd6384d83
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119562310"
 ---
-# <a name="ld_structured-sm5---asm"></a>LD \_ strukturiert (SM5-ASM)
+# <a name="ld_structured-sm5---asm"></a>ld \_ structured (sm5 - asm)
 
-Zufälliger Lesezugriff auf 1-4 32-Bit-Komponenten aus einem strukturierten Puffer.
+Zufälliger Lesezugriff von 1-4 32-Bit-Komponenten aus einem strukturierten Puffer.
 
 
 
-| : LD \_ strukturiert dst0 \[ . mask \] , srcaddress \[ . Select \_ Component \] , srcbyteoffset \[ . Select \_ Component \] , src0 \[ . Swizzle\] |
+| : ld \_ structured dst0 \[ .mask \] , srcAddress \[ .select component , \_ \] srcByteOffset \[ .select component , \_ \] src0 \[ .swizzle\] |
 |-------------------------------------------------------------------------------------------------------------------------|
 
 
@@ -26,20 +26,20 @@ Zufälliger Lesezugriff auf 1-4 32-Bit-Komponenten aus einem strukturierten Puff
 
 
 
-| Element                                                                                                                       | BESCHREIBUNG                                                                                                                                                |
+| Element                                                                                                                       | Beschreibung                                                                                                                                                |
 |----------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="dst0"></span><span id="DST0"></span>*dst0*<br/>                                                            | \[in \] der Adresse der Ergebnisse des Vorgangs.<br/>                                                                                             |
-| <span id="srcAddress"></span><span id="srcaddress"></span><span id="SRCADDRESS"></span>*srcaddress*<br/>             | \[in \] gibt den Index der zu lesenden-Struktur an.<br/>                                                                                            |
-| <span id="srcByteOffset"></span><span id="srcbyteoffset"></span><span id="SRCBYTEOFFSET"></span>*srcbyteoffset*<br/> | \[in \] gibt den Byte Offset in der-Struktur an, ab dem gelesen werden soll. <br/>                                                                       |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/>                                                            | Der Puffer, aus dem gelesen werden soll. Dieser Parameter muss ein SRV (t \# ), UAV (u \# ) sein. Im COMPUTE-Shader kann es sich auch um einen Thread Gruppen-Shared Memory (g \# ) handeln. <br/> |
+| <span id="dst0"></span><span id="DST0"></span>*dst0*<br/>                                                            | \[in \] Die Adresse der Ergebnisse des Vorgangs.<br/>                                                                                             |
+| <span id="srcAddress"></span><span id="srcaddress"></span><span id="SRCADDRESS"></span>*srcAddress*<br/>             | \[in \] Gibt den Index der zu lesenden Struktur an.<br/>                                                                                            |
+| <span id="srcByteOffset"></span><span id="srcbyteoffset"></span><span id="SRCBYTEOFFSET"></span>*srcByteOffset*<br/> | \[in \] Gibt den Byteoffset in der -Struktur an, von der aus gelesen werden soll. <br/>                                                                       |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/>                                                            | Der Puffer, aus dem gelesen werden soll. Dieser Parameter muss ein SRV (t \# ), UAV (u \# ) sein. Im Compute-Shader kann es sich auch um gemeinsam genutzten Threadgruppenspeicher (g ) \# sein. <br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die aus der-Struktur gelesenen Daten entsprechen dem folgenden Pseudocode: wobei der Offset, die Adresse, der Zeiger auf den Pufferinhalt, der Schritt der Quelle und die Daten linear gespeichert sind.
+Die aus der -Struktur gelesenen Daten entsprechen dem folgenden Pseudocode: hier haben wir den Offset, die Adresse, den Zeiger auf den Pufferinhalt, den Schritt der Quelle und die linear gespeicherten Daten.
 
 ``` syntax
                     BYTE *BufferContents;         // from SRV or UAV
@@ -59,21 +59,21 @@ Die aus der-Struktur gelesenen Daten entsprechen dem folgenden Pseudocode: wobei
                     ApplyWriteMask(dstRegister, dstWriteMask, Temp);
 ```
 
-Dieser Pseudo Code zeigt, wie der Vorgang funktioniert, aber die tatsächlichen Daten müssen nicht linear gespeichert werden. Wenn die Daten nicht linear gespeichert werden, muss die tatsächliche Operation der Anweisung mit dem Verhalten des obigen Vorgangs identisch sein.
+Dieser Pseudocode zeigt, wie der Vorgang funktioniert, aber die tatsächlichen Daten müssen nicht linear gespeichert werden. Wenn die Daten nicht linear gespeichert werden, muss der tatsächliche Vorgang der Anweisung mit dem Verhalten des oben genannten Vorgangs übereinstimmen.
 
-Die Out-of-Bounds-Adressierung für die u- \# /t \# einer bestimmten 32-Bit-Komponente gibt 0 für diese Komponente zurück. mit Ausnahme von *srcbyteoffset* und Swizzle, was den Zugriff auf Sie \# /t verursacht \# , ist der zurückgegebene Wert für alle Komponenten nicht definiert.
+Die Adressierung außerhalb der Grenzen für u /t einer bestimmten 32-Bit-Komponente gibt 0 für diese Komponente zurück, außer wenn \# \# *srcByteOffset* und swizzle den Zugriff außerhalb der Grenzen für \# Sie /t verursacht, ist der zurückgegebene Wert für alle Komponenten \# nicht definiert.
 
-Die Adressierung auf g \# (die Begrenzungen dieses bestimmten g \# , im Gegensatz zum gesamten Shared Memory) für eine bestimmte 32-Bit-Komponente gibt ein nicht definiertes Ergebnis zurück.
+Die Adressierung für g (die Grenzen dieses bestimmten g im Gegensatz zum freigegebenen Speicher) für eine bestimmte \# 32-Bit-Komponente gibt ein nicht definiertes \# Ergebnis zurück.
 
-*srcbyteoffset* ist ein separates Argument von *srcaddress* , da es sich häufig um einen Literalwert handelt. Diese Parameter Trennung wurde nicht für Atomics in strukturiertem Arbeitsspeicher durchgeführt.
+*srcByteOffset* ist ein separates Argument von *srcAddress,* da es sich im Allgemeinen um ein Literal handelt. Diese Parametertrennung wurde für Atomardaten im strukturierten Speicher nicht durchgeführt.
 
-CS \_ 4 \_ 0 und CS \_ 4 \_ 1 unterstützen diese Anweisung für UAV, SRV und TGSM.
+cs \_ 4 \_ 0 und cs \_ 4 1 unterstützen diese Anweisung für \_ UAV, SRV und TGSM.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -81,11 +81,11 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-Da UAVs in allen Shader-Phasen für Direct3D 11,1 verfügbar sind, gilt diese Anweisung für alle Shader-Phasen für UAVs für die Direct3D 11,1-Laufzeit, die ab Windows 8 verfügbar ist.
+Da UAVs in allen Shaderstufen für Direct3D 11.1 verfügbar sind, gilt diese Anweisung für alle Shaderstufen für UAVs für die Direct3D 11.1-Runtime, die ab Windows 8.
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -93,26 +93,26 @@ Da UAVs in allen Shader-Phasen für Direct3D 11,1 verfügbar sind, gilt diese An
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
  
 
-CS \_ 4 \_ 0 und CS \_ 4 \_ 1 unterstützen diese Anweisung für UAV, SRV und TGSM.
+cs \_ 4 \_ 0 und cs \_ 4 1 unterstützen diese Anweisung für \_ UAV, SRV und TGSM.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

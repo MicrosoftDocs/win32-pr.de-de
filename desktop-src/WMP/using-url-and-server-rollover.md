@@ -1,17 +1,17 @@
 ---
-title: Verwenden von URL-und Serverrollover
-description: Verwenden von URL-und Serverrollover
+title: Verwenden von URL und Serverrollover
+description: Verwenden von URL und Serverrollover
 ms.assetid: d0d15b1c-5631-486e-8490-b85ec51bd355
 keywords:
-- Windows Media Metadatei-Wiedergabelisten, URL-Rollover
+- Windows Medienmetadatei-Wiedergabelisten, URL-Rollover
 - Wiedergabelisten, URL-Rollover
-- Metadatei-Wiedergabelisten, URL-Rollover
-- Windows Media Metadatei-Wiedergabelisten, Serverrollover
+- Metafile-Wiedergabelisten, URL-Rollover
+- Windows Medienmetadatei-Wiedergabelisten, Serverrollover
 - Wiedergabelisten, Serverrollover
-- Metadatei-Wiedergabelisten, Serverrollover
-- Windows Media Metadatei-Wiedergabelisten, Protokollrollover
+- Metafile-Wiedergabelisten, Serverrollover
+- Windows Medienmetadatei-Wiedergabelisten, Protokollrollover
 - Wiedergabelisten, Protokollrollover
-- Metadatei-Wiedergabelisten, Protokollrollover
+- Metafile-Wiedergabelisten, Protokollrollover
 - Windows Media Player, URL-Rollover
 - Windows Media Player, Serverrollover
 - Windows Media Player, Protokollrollover
@@ -25,18 +25,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: eae38e81f8ae23199628e543f65f2766491f1a2a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3988ff019fba838e86ea1d0e7b0f6124c367bb8b505a0f2d2e2f639b94d93e52
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119465674"
 ---
-# <a name="using-url-and-server-rollover"></a>Verwenden von URL-und Serverrollover
+# <a name="using-url-and-server-rollover"></a>Verwenden von URL und Serverrollover
 
-Mithilfe von Metadatei-Wiedergabelisten können Sie ein automatisches Rollback zu alternativen Inhalts Quellen bereitstellen, wenn auf einen Stream nicht zugegriffen oder wiedergegeben werden kann. Mit dieser Rollover-Methode können Sie Quellen desselben Inhalts auf unterschiedlichen Servern oder unterschiedlichen Server Typen angeben. Sie können z. b. eine erste Alternative auf einem anderen Windows Media-Server angeben. Wenn diese Inhalte nicht wiedergegeben werden können, kann der Client ein Rollback auf eine zweite Alternative auf einem Webserver ausführen. Windows Media Player versucht automatisch, gemäß seinen Windows Media-Eigenschafts Einstellungen ein Rollback auf verschiedene Protokolle auszuführen, bevor die Rollover-URLs in der Wiedergabeliste ausprobiert werden.
+Sie können Metadateiwiedergabelisten verwenden, um ein automatisches Rollback auf alternative Inhaltsquellen bereitzustellen, wenn auf einen Stream nicht zugegriffen oder wiedergegeben werden kann. Sie können diese Rollovermethode verwenden, um Quellen desselben Inhalts auf verschiedenen Servern oder verschiedenen Servertypen anzugeben. Sie können z. B. eine erste Alternative auf einem anderen Windows Medienserver angeben. Wenn dieser Inhalt nicht wiedergegeben werden kann, kann der Client ein Rollup auf eine zweite Alternative auf einem Webserver erstellen. Windows Media Player versucht automatisch, ein Rollover zu verschiedenen Protokollen gemäß den Einstellungen der Windows Media-Eigenschaft vorzunehmen, bevor sie die Rollover-URLs in der Wiedergabeliste ausprobieren.
 
-Legen Sie Server-und Protokollrollover fest, indem Sie mehrere **ref** -Elemente nacheinander innerhalb eines **Eintrags** Elements platzieren. Jedes **ref** -Element gibt einen alternativen Speicherort oder ein alternatives Protokoll für eine Mediendatei oder einen Datenstrom an.
+Legen Sie einen Server- und Protokollrollover fest, indem Sie mehrere **REF-Elemente** nacheinander innerhalb eines **ENTRY-Elements** platzieren. Jedes **REF-Element** gibt einen alternativen Speicherort oder ein protokoll für eine Mediendatei oder einen Stream an.
 
 Beispielcode
 
@@ -67,9 +67,9 @@ Beispielcode
 [**Verwenden von Metafile-Wiedergabelisten**](using-metafile-playlists.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

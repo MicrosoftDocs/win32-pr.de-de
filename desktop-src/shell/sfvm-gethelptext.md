@@ -1,6 +1,6 @@
 ---
-description: 'Ermöglicht dem Rückruf Objekt, eine Hilfe Text Zeichenfolge für Menü Elemente oder Symbolleisten-Schaltflächen anzugeben. Wird von ishellfolderviewcb:: messagesfvcb verwendet.'
-title: SFVM_GETHELPTEXT Meldung (shlobj. h)
+description: Ermöglicht es dem Rückrufobjekt, eine Hilfetextzeichenfolge für Menüelemente oder Symbolleistenschaltflächen anzugeben. Wird von IShellFolderViewCB::MessageSFVCB verwendet.
+title: SFVM_GETHELPTEXT (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 9bd6d632-308c-4ba5-8ac6-2d0f65853947
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 5b33bd99c2dd1e6d1013da9015a5ff70bc111c79
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c015c1999cbd60174da1994d92766b4f334630294767ee390be21340aef97cc3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103757842"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119661020"
 ---
-# <a name="sfvm_gethelptext-message"></a>Sfvm- \_ GetHelpText-Nachricht
+# <a name="sfvm_gethelptext-message"></a>SFVM \_ GETHELPTEXT-Nachricht
 
-Ermöglicht dem Rückruf Objekt, eine Hilfe Text Zeichenfolge für Menü Elemente oder Symbolleisten-Schaltflächen anzugeben. Wird von [**ishellfolderviewcb:: messagesfvcb**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
+Ermöglicht es dem Rückrufobjekt, eine Hilfetextzeichenfolge für Menüelemente oder Symbolleistenschaltflächen anzugeben. Wird von [**IShellFolderViewCB::MessageSFVCB verwendet.**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)
 
 
 ```C++
@@ -41,21 +41,21 @@ SFVM_GETHELPTEXT
 
 <dl> <dt>
 
-*idcmd \_ cchmax* \[ in\]
+*idCmd \_ cchMax* \[ in\]
 </dt> <dd>
 
-Das nieder wertige Wort dieses Parameters enthält die Befehls-ID. Das höchst wertige Wort enthält die Anzahl der Zeichen im *pszText* -Puffer.
+Das niedrige Wort dieses Parameters enthält die Befehls-ID. Das obere Wort enthält die Anzahl der Zeichen im *pszText-Puffer.*
 
 </dd> <dt>
 
-*pszText* \[ vorgenommen\]
+*pszText* \[ out\]
 </dt> <dd>
 
-Eine mit NULL endenden Zeichenfolge, die den Hilfetext enthält.
+Eine auf NULL beendete Zeichenfolge, die den Hilfetext enthält.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -63,7 +63,7 @@ Eine mit NULL endenden Zeichenfolge, die den Hilfetext enthält.
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

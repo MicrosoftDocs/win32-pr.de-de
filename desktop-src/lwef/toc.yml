@@ -4,7 +4,7 @@
     - name: Legacy-Shellfeatures
       href: legacy-shell-features.md
       items:
-        - name: Erstellen von Abstimmungen in Kleinbuchstaben
+        - name: Erstellen von Briefcase-Abstimmungen
           href: briefcase-reconcilers.md
         - name: Erstellen eines Datenträgerbereinigungshandlers
           href: disk-cleanup.md
@@ -14,15 +14,15 @@
           href: nse-folderview.md
         - name: Anpassen der Webansicht eines Ordners
           href: web-view.md
-        - name: Anwendungsinternetverknüpfungen
+        - name: Anwendungs-Internetverknüpfungen
           href: internet-shortcuts.md
-        - name: Verwenden des Active Desktop-Objekts
+        - name: Verwenden des Active Desktop Objekts
           href: active-desktop-interface.md
         - name: Erstellen von Spaltenhandlern
           href: column-handlers.md
         - name: Erstellen von Suchhandlern
           href: search-handlers.md
-        - name: Ersetzen der Windows Bild- und Fax-Viewer-Anwendung mithilfe des Vorschauverb
+        - name: Ersetzen der Windows Bild- und Faxanzeigeanwendung mithilfe des Vorschauverbs
           href: replacing-picture-fax-viewer.md
         - name: Foto-Assistenten
           href: photo-wizards-bumper.md
@@ -44,7 +44,7 @@
               href: pubwiz-reg.md
             - name: Verwenden des Übertragungsmanifests
               href: pubwiz-manifest.md
-        - name: Referenz zur Legacyshell
+        - name: Legacy-Shellreferenz
           href: legacy-shell-reference.md
           items:
             - name: IActiveDesktop
@@ -160,7 +160,7 @@
                       href: webviewfoldercontents-folder.md
                     - name: Parent
                       href: webviewfoldercontents-parent.md
-                    - name: Skript
+                    - name: Script
                       href: webviewfoldercontents-script.md
                     - name: ViewOptions
                       href: webviewfoldercontents-viewoptions.md
@@ -169,41 +169,41 @@
                   items:
                     - name: SelectionChanged
                       href: webviewfoldercontents-selectionchanged.md
-    - name: Microsoft-Agent
+    - name: Microsoft Agent
       href: microsoft-agent.md
       items:
-        - name: Einführung in den Microsoft-Agent
+        - name: Einführung in Microsoft Agent
           href: introduction-to-microsoft-agent.md
-        - name: Änderungen am Microsoft-Agent in Windows Vista
+        - name: Microsoft Agent-Änderungen in Windows Vista
           href: microsoft-agent-changes-in-windows-vista.md
         - name: Microsoft Agent-Benutzeroberfläche
           href: the-microsoft-agent-user-interface.md
           items:
             - name: Das Zeichenfenster
               href: the-character-window.md
-            - name: Symbol der Zeichentaskleiste
+            - name: Symbol "Taskleiste für Zeichen"
               href: the-character-taskbar-icon.md
             - name: Fenster "Sprachbefehle"
               href: the-voice-commands-window.md
-            - name: Die Wortsprechblase
+            - name: Der Wortsprechblasen
               href: the-word-balloon.md
-            - name: Fenster "Lauschende Trinkgeld"
+            - name: Fenster "Lauschende Tipps"
               href: the-listening-tip-window.md
             - name: Fenster "Erweiterte Zeichenoptionen"
               href: the-advanced-character-options-window.md
               items:
-                - name: Seite "Ausgabe"
+                - name: Die Ausgabeseite
                   href: the-output-page.md
-                - name: Seite "Spracheingabe"
+                - name: Die Seite "Spracheingabe"
                   href: the-speech-input-page.md
-                - name: Seite "Copyright"
+                - name: Copyrightseite
                   href: the-copyright-page.md
-            - name: Das Eigenschaftenfenster für Standardzeichen
+            - name: Das Standardzeicheneigenschaftenfenster
               href: the-default-character-properties-window.md
-        - name: Programmieren des Microsoft-Agents
+        - name: Programmieren von Microsoft Agent
           href: programming-microsoft-agent.md
           items:
-            - name: Richtlinien für das Entwerfen von Zeicheninteraktionen
+            - name: Richtlinien für das Entwerfen von Zeicheninteraktion
               href: guidelines-for-designing-character-interaction.md
               items:
                 - name: Allgemeine Richtlinien für die Zeicheninteraktion
@@ -211,16 +211,16 @@
                   items:
                     - name: Nicht exklusiv sein
                       href: be-non-exclusive.md
-                    - name: Bereitstellen von entsprechendem Feedback
+                    - name: Geben Sie entsprechendes Feedback an.
                       href: provide-appropriate-feedback.md
                     - name: Verwenden natürlicher Variationen
                       href: use-natural-variation.md
-                - name: Soziale Interaktion
+                - name: Interaktion zwischen sozialen Netzwerken
                   href: social-interaction.md
                   items:
-                    - name: Erstellen von Persönlichkeiten
+                    - name: Erstellen einer Persönlichkeit
                       href: create-personality.md
-                    - name: Beobachten der geeigneten Etiteroperabilität
+                    - name: Achten Sie auf die passende Etiquette.
                       href: observe-appropriate-etiquette.md
                     - name: Verwenden Lob
                       href: use-praise.md
@@ -240,7 +240,7 @@
                 - name: Sprachausgabe
                   href: speech-output.md
                   items:
-                    - name: Effizient und natürlich sein
+                    - name: Seien Sie effizient und natürlich
                       href: be-efficient-and-natural.md
                     - name: Verwenden von Active Voice
                       href: use-the-active-voice.md
@@ -283,7 +283,7 @@
                   items:
                     - name: Unterstützung für synthetisierte Sprache
                       href: synthesized-speech-support.md
-                    - name: Unterstützung der Audioausgabe
+                    - name: Audioausgabeunterstützung
                       href: audio-output-support.md
                     - name: Word Balloon-Unterstützung
                       href: word-balloon-support.md
@@ -494,10 +494,10 @@
                               href: visible-property-cob.md
                             - name: Width-Eigenschaft
                               href: width-property-co.md
-                    - name: Das Commands-Auflistungsobjekt
+                    - name: Das Commands Collection-Objekt
                       href: the-commands-collection-object.md
                       items:
-                        - name: Commands-Objektmethoden
+                        - name: Befehlsobjektmethoden
                           href: commands-object-methods.md
                           items:
                             - name: Methode hinzufügen
@@ -642,16 +642,16 @@
                           href: visible-property.md
                         - name: Width-Eigenschaft
                           href: width-property-pso.md
-            - name: Programmieren der Microsoft Agent-Serverschnittstelle
+            - name: Programmieren der Microsoft-Agent-Serverschnittstelle
               href: programming-the-microsoft-agent-server-interface.md
               items:
-                - name: Hinzufügen von Microsoft Agent-Funktionen zu Ihrer Anwendung
+                - name: Hinzufügen von Microsoft-Agent-Funktionen zu Ihrer Anwendung
                   href: adding-microsoft-agent-functionality-to-your-application.md
                 - name: Laden von Zeichen- und Animationsdaten
                   href: loading-character-and-animation-data.md
                 - name: Erstellen einer Benachrichtigungssenke
                   href: creating-a-notification-sink.md
-                - name: Zugreifen auf Dienste mitHilfe von Java
+                - name: Zugreifen auf Dienste mit Java
                   href: accessing-services-using-java.md
                 - name: Zugreifen auf Speech-Dienste
                   href: accessing-speech-services.md
@@ -1076,9 +1076,9 @@
                   href: rst-tag.md
                 - name: Markierung "Soll"
                   href: spd-tag.md
-                - name: Vol Tag
+                - name: Vol-Tag
                   href: vol-tag.md
-            - name: Textnormalisierung von Text-to-Speech-Engines
+            - name: Text-to-Speech Engines Text Normalization
               href: text-to-speech-engines-text-normalization.md
             - name: Supportanforderungen für die Sprach-Engine
               href: speech-engine-support-requirements.md
@@ -1096,31 +1096,31 @@
                       href: ittsattributesw.md
                 - name: Anforderungen für Spracherkennungs-Engines
                   href: requirements-for-speech-recognition-engines.md
-                - name: Anforderungen für die Unterstützung des Microsoft Linguistic Information Sound Editing Tools
+                - name: Anforderungen für die Unterstützung des Soundbearbeitungstools für linguistische Informationen von Microsoft
                   href: requirements-for-supporting-the-microsoft-linguistic-information-sound-editing-tool.md
                   items:
                     - name: ISRResGraphEx und IAttributes
                       href: isrresgraphex-and-iattributes.md
-            - name: 'Andere Sprach-Engines, die mit Microsoft Agent kompatibel sind'
+            - name: 'Andere Sprach-Engines, die mit Dem Microsoft-Agent kompatibel sind'
               href: other-speech-engines-compatible-with-microsoft-agent.md
-        - name: Erstellen von Zeichen für Microsoft Agent
+        - name: Erstellen von Zeichen für den Microsoft-Agent
           href: creating-characters-for-microsoft-agent.md
           items:
-            - name: Entwerfen von Zeichen für Microsoft Agent
+            - name: Entwerfen von Zeichen für den Microsoft-Agent
               href: designing-characters-for-microsoft-agent.md
               items:
                 - name: Zeichen
                   href: characters.md
                 - name: Animationen
                   href: animations.md
-                - name: Agent-Zustände
+                - name: Agent-Status
                   href: agent-states.md
                 - name: Animationsprinzipien
                   href: animation-principles.md
-            - name: Verwenden des Microsoft Agent-Zeichen-Editors
+            - name: Verwenden des Zeichen-Editors des Microsoft-Agents
               href: using-the-microsoft-agent-character-editor.md
               items:
-                - name: Starten des Zeichen-Editors des Agents
+                - name: Starten des Agent-Zeichen-Editors
                   href: starting-the-agent-character-editor.md
                 - name: Definieren eines neuen Zeichens
                   href: defining-a-new-character.md
@@ -1135,11 +1135,11 @@
               items:
                 - name: Animationsentwurf
                   href: animation-design.md
-                - name: Der Office-Animationssatz
+                - name: Der Office Animationssatz
                   href: the-office-animation-set.md
                 - name: Installieren des Zeichens
                   href: installing-your-character.md
-        - name: Verwenden des Microsoft Linguistic Information Sound Editing Tools
+        - name: Verwenden des Soundbearbeitungstools für linguistische Informationen von Microsoft
           href: using-the-microsoft-linguistic-information-sound-editing-tool.md
           items:
             - name: Installieren des Sound-Editors
@@ -1160,32 +1160,32 @@
               href: command-reference.md
             - name: Symbolleistenschaltflächen
               href: toolbar-buttons.md
-        - name: Problembehandlung für Microsoft Agent
+        - name: Problembehandlung für den Microsoft-Agent
           href: troubleshooting-microsoft-agent.md
           items:
             - name: Installations- und Seitenladeprobleme
               href: installation-and-page-loading-problems.md
             - name: Ausgabeprobleme
               href: output-problems.md
-            - name: Probleme bei der Spracheingabe
+            - name: Spracheingabeprobleme
               href: speech-input-problems.md
         - name: Animationslisten für die von Microsoft verfügbaren Zeichen
           href: animation-lists-for-the-characters-available-from-microsoft.md
           items:
-            - name: Microsoft Agent-Animationen für Figurzeichen
+            - name: Microsoft-Agent-Animationen für Genie-Zeichen
               href: microsoft-agent-animations-for-genie-character.md
-            - name: Microsoft Agent-Animationen für Merlin-Zeichen
+            - name: Microsoft-Agent-Animationen für Merlin-Zeichen
               href: microsoft-agent-animations-for-merlin-character.md
-            - name: Microsoft Agent-Animationen für Zeichen
+            - name: Microsoft-Agent-Animationen für Zeichenfolgen
               href: microsoft-agent-animations-for-robby-character.md
-            - name: Microsoft Agent-Animationen für Peedy-Zeichen
+            - name: Microsoft-Agent-Animationen für Peedy-Zeichen
               href: microsoft-agent-animations-for-peedy-character.md
         - name: Quellenangaben
           href: bibliography.md
     - name: Windows Desktopsuche 2.x
       href: '-search-2x-wds-overview.md'
       items:
-        - name: Abfragen des Index (WDS 2.x)
+        - name: Abfragen des Indexes (WDS 2.x)
           href: '-search-2x-querying-entry-page.md'
           items:
             - name: Aufrufen von WDS über Webseiten
@@ -1206,7 +1206,7 @@
                   href: '-search-2x-wds-phimplementing.md'
                 - name: Hinzufügen von Symbolen und Kontextmenüs mit Shellerweiterungen
                   href: '-search-2x-wds-ph-ui-extensions.md'
-                - name: Benachrichtigen des Indexes über Änderungen
+                - name: Benachrichtigen des Änderungsindexes
                   href: '-search-2x-wds-notifyingofchanges.md'
                 - name: Benutzerdefinierter Protokollhandler Benutzeroberfläche Beispielcode
                   href: '-search-2x-wds-ph-ui-samplecode.md'
@@ -1220,7 +1220,7 @@
           href: '-search-2x-wds-perceivedtype.md'
         - name: Inhaltsindizierungsdienste-Protokoll
           href: '-search-2x-wds-content-indexing-services-protocol.md'
-        - name: WDS 2.x ActiveX Steuerschnittstellen
+        - name: WDS 2.x ActiveX-Steuerelementschnittstellen
           href: '-search-activex-control-reference-entry-page.md'
           items:
             - name: IPropertyFilter
@@ -1362,7 +1362,7 @@
                   href: '-search-2x-isearchresult-putvalue.md'
                 - name: ThumbnailState
                   href: '-search-2x-isearchresult-thumbnailstate.md'
-                - name: type
+                - name: Typ
                   href: '-search-2x-isearchresult-type.md'
                 - name: VerbCount
                   href: '-search-2x-isearchresult-verbcount.md'

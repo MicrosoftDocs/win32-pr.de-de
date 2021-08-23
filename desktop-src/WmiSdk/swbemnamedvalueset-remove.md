@@ -1,8 +1,8 @@
 ---
-description: Die Remove-Methode des "Swap Name"-Objekts löscht einen benannten Wert aus dem Kontext.
+description: Die Remove-Methode des SWbemNamedValueSet-Objekts löscht einen benannten Wert aus dem Kontext.
 ms.assetid: 8cb353fb-c6d7-41d9-a2d0-ff1ad37264e4
 ms.tgt_platform: multiple
-title: Taubemnamedvalueset. Remove-Methode (wbemdisp. h)
+title: SWbemNamedValueSet.Remove-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: d41ecd7d28b95534c8e6d88d1c57756c269cf790
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1c733f932588c5c0d7ccfe3c906f28244d37fee0c649451c05fb8f72742edef4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362879"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119611920"
 ---
-# <a name="swbemnamedvaluesetremove-method"></a>Swap. Remove-Methode
+# <a name="swbemnamedvaluesetremove-method"></a>SWbemNamedValueSet.Remove-Methode
 
-Die **Remove** -Methode des " [**Swap Name**](swbemnamedvalueset.md) "-Objekts löscht einen benannten Wert aus dem Kontext.
+Die **Remove-Methode** des [**SWbemNamedValueSet-Objekts**](swbemnamedvalueset.md) löscht einen benannten Wert aus dem Kontext.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ SWbemNamedValueSet.Remove( _
 
 <dl> <dt>
 
-" *Name* \[ " in\]
+*strName* \[ In\]
 </dt> <dd>
 
-Erforderlich. Der Name des zu entfernenden Werts.
+Erforderlich. Name des zu entfernenden Werts.
 
 </dd> <dt>
 
-*IFlags* \[ in, optional\]
+*iFlags* \[ in, optional\]
 </dt> <dd>
 
-Reserviert. Dieser Wert muss NULL sein, wenn angegeben.
+Reserviert. Dieser Wert muss 0 (null) sein, wenn angegeben.
 
 </dd> </dl>
 
@@ -65,25 +65,25 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach Abschluss der **Remove** -Methode kann das **Err** -Objekt einen der Fehlercodes in der folgenden Liste enthalten.
+Nach Abschluss der **Remove-Methode** kann **das Err-Objekt** einen der Fehlercodes in der folgenden Liste enthalten.
 
 <dl> <dt>
 
-**wbemErrFailed** -2147749889 (0x80041001)
+**wbemErrFailed** – 2147749889 (0x80041001)
 </dt> <dd>
 
 Unbekannter Fehler.
 
 </dd> <dt>
 
-**wbemErrInvalidParameter** -2147749896 (0x80041008)
+**wbemErrInvalidParameter** – 2147749896 (0x80041008)
 </dt> <dd>
 
-Es wurde ein ungültiger Parameter angegeben, oder der Namespace konnte nicht analysiert werden.
+Ein ungültiger Parameter wurde angegeben, oder der Namespace konnte nicht analysiert werden.
 
 </dd> <dt>
 
-**wbemErrNotFound** -2147749890 (0x80041002 angezeigt)
+**wbemErrNotFound** – 2147749890 (0x80041002)
 </dt> <dd>
 
 Das angeforderte Element wurde nicht gefunden.
@@ -98,11 +98,11 @@ Das angeforderte Element wurde nicht gefunden.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-namedvalueset<br/>                                                    |
-| IID<br/>                      | IID \_ iswbemnamedvalueset<br/>                                                     |
+| CLSID<br/>                    | CLSID \_ SWbemNamedValueSet<br/>                                                    |
+| IID<br/>                      | IID \_ ISWbemNamedValueSet<br/>                                                     |
 
 
 
@@ -110,7 +110,7 @@ Das angeforderte Element wurde nicht gefunden.
 
 <dl> <dt>
 
-[**Austausch Elementname**](swbemnamedvalueset.md)
+[**SWbemNamedValueSet**](swbemnamedvalueset.md)
 </dt> </dl>
 
  

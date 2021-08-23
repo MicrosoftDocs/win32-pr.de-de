@@ -1,19 +1,19 @@
 ---
-title: Versions unabhängiger ProgID-Schlüssel
-description: Ordnet eine ProgID einer CLSID zu. Dieser Schlüssel wird verwendet, um die neueste Version einer Objekt Anwendung zu bestimmen.
+title: Versionsunabhängiger ProgID-Schlüssel
+description: Ordnet eine ProgID einer CLSID zu. Dieser Schlüssel wird verwendet, um die neueste Version einer Objektanwendung zu bestimmen.
 ms.assetid: fb43c8d0-d923-487f-afdf-14fc29a71e0b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f0a0bf379a06a6a05bb69a232ef91bb9fe81dc2f
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 88dec371f87ff3aba98bd642537e4de893df20682cc9bd84eda8829f24d241b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104474910"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119567970"
 ---
-# <a name="version-independent-progid-key"></a>Versions unabhängiger ProgID-Schlüssel
+# <a name="version-independent-progid-key"></a>Versionsunabhängiger ProgID-Schlüssel
 
-Ordnet eine ProgID einer CLSID zu. Dieser Schlüssel wird verwendet, um die neueste Version einer Objekt Anwendung zu bestimmen.
+Ordnet eine ProgID einer CLSID zu. Dieser Schlüssel wird verwendet, um die neueste Version einer Objektanwendung zu bestimmen.
 
 ## <a name="registry-entry"></a>Registrierungseintrag
 
@@ -23,23 +23,23 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Classes
       CurVer = ProgID
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Schlüssel **HKEY- \_ \_ \\ Software \\ Klassen für lokale Computer** entspricht dem Stamm Schlüssel der **HKEY- \_ Klassen \_** , der für die Kompatibilität mit früheren Versionen von com beibehalten wurde.
+Der Schlüssel **HKEY \_ LOCAL MACHINE \_ SOFTWARE \\ \\ Classes** entspricht dem **\_ HKEY CLASSES \_ ROOT-Schlüssel,** der aus Kompatibilitätsgründen mit früheren Versionen von COM beibehalten wurde.
 
-Das Format für <*Versions unabhängige ProgID*> ist <*Programm*>. <*Komponenten*>, getrennt durch Punkte, keine Leerzeichen und keine Versionsnummer. Die Versions unabhängige ProgID, wie z. b. die ProgID, kann mit einem lesbaren Namen registriert werden.
+Das Format für <*versionsunabhängige ProgID->* ist <*Programm*>.<*Komponente*>, getrennt durch Zeiträume, leerzeichen und keine Versionsnummer. Die versionsunabhängige ProgID kann wie die ProgID mit einem für Menschen lesbaren Namen registriert werden.
 
-*ProgID* ist die ProgID der neuesten installierten Version der-Klasse.
+*ProgID* ist die ProgID der neuesten installierten Version der -Klasse.
 
-Anwendungen müssen einen Versions unabhängigen programmatischen Bezeichner unter dem *Versions unabhängigen ProgID-* Schlüssel registrieren. Die Versions unabhängige ProgID bezieht sich auf die-Klasse der Anwendung und ändert sich nicht von Version zu Version, sondern bleibt für alle Versionen von Microsoft Word unverändert. Sie wird mit Makro Sprachen verwendet und verweist auf die aktuell installierte Version der-Klasse der Anwendung. Die Versions unabhängige ProgID muss mit dem Namen der aktuellen Version der Objekt Anwendung übereinstimmen.
+Anwendungen müssen einen versionsunabhängigen programmgesteuerten Bezeichner unter dem *versionsunabhängigen ProgID-Schlüssel* registrieren. Die versionsunabhängige ProgID bezieht sich auf die -Klasse der Anwendung und ändert sich nicht von Version zu Version, sondern bleibt für alle Versionen konstant– z.B. Microsoft Word-Dokument. Sie wird mit Makrosprachen verwendet und bezieht sich auf die derzeit installierte Version der -Klasse der Anwendung. Die versionsunabhängige ProgID muss dem Namen der neuesten Version der Objektanwendung entsprechen.
 
-Beispielsweise wird die Versions unabhängige ProgID verwendet, wenn eine Containeranwendung ein Diagramm oder eine Tabelle mit einer Symbolleisten Schaltfläche erstellt. In dieser Situation kann die Anwendung die Versions unabhängige ProgID verwenden, um die neueste Version der benötigten Objekt Anwendung zu ermitteln.
+Beispielsweise wird die versionsunabhängige ProgID verwendet, wenn eine Containeranwendung ein Diagramm oder eine Tabelle mit einer Symbolleistenschaltfläche erstellt. In diesem Fall kann die Anwendung die versionsunabhängige ProgID verwenden, um die neueste Version der erforderlichen Objektanwendung zu ermitteln.
 
-Die Versions unabhängige ProgID wird nur durch den Anwendungscode gespeichert und verwaltet. Wenn die Versions unabhängige ProgID angegeben ist, gibt die [**CLSIDFromProgID**](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) -Funktion die CLSID der aktuellen Version zurück.
+Die versionsunabhängige ProgID wird ausschließlich durch Anwendungscode gespeichert und verwaltet. Wenn die versionsunabhängige ProgID angegeben wird, gibt die [**CLSIDFromProgID-Funktion**](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) die CLSID der aktuellen Version zurück.
 
-Sie können [**CLSIDFromProgID**](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) und [**progidfromclsid**](/windows/desktop/api/combaseapi/nf-combaseapi-progidfromclsid) verwenden, um zwischen diesen beiden Darstellungen zu konvertieren.
+Sie können [**CLSIDFromProgID**](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) und [**ProgIDFromCLSID**](/windows/desktop/api/combaseapi/nf-combaseapi-progidfromclsid) verwenden, um zwischen diesen beiden Darstellungen zu konvertieren.
 
-Sie können [**IOleObject:: GetUserType**](/windows/desktop/api/OleIdl/nf-oleidl-ioleobject-getusertype) oder [**olereggetusertype**](/windows/desktop/api/Ole2/nf-ole2-olereggetusertype) verwenden, um den Bezeichner in eine anzeigbare Zeichenfolge zu ändern.
+Sie können [**IOleObject::GetUserType**](/windows/desktop/api/OleIdl/nf-oleidl-ioleobject-getusertype) oder [**OleRegGetUserType**](/windows/desktop/api/Ole2/nf-ole2-olereggetusertype) verwenden, um den Bezeichner in eine anzuzeigende Zeichenfolge zu ändern.
 
 Wenn kein benutzerdefinierter Handler verwendet wird, sollte der Eintrag auf OLE32.DLL festgelegt werden, wie im folgenden Beispiel gezeigt:
 
@@ -55,10 +55,10 @@ HKEY_CLASSES_ROOT\CLSID\{00000402-0000-0000-C000-000000000046}
 [**CLSIDFromProgID**](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid)
 </dt> <dt>
 
-[**Progidfromclsid**](/windows/desktop/api/combaseapi/nf-combaseapi-progidfromclsid)
+[**ProgIDFromCLSID**](/windows/desktop/api/combaseapi/nf-combaseapi-progidfromclsid)
 </dt> <dt>
 
-[<ProgID> Wichtigen](-progid--key.md)
+[<ProgID> Schlüssel](-progid--key.md)
 </dt> </dl>
 
  

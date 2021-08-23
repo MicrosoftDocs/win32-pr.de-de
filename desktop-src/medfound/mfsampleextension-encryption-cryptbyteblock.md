@@ -1,29 +1,29 @@
 ---
-description: Gibt die verschlüsselte Byte Blockgröße für die Beispiel basierte Muster Verschlüsselung an.
+description: Gibt die verschlüsselte Byteblockgröße für die stichprobenbasierte Musterverschlüsselung an.
 ms.assetid: 1F370DEC-20B5-456D-BB68-C94E183410F3
-title: MFSampleExtension_Encryption_CryptByteBlock-Attribut (mspdl. h)
+title: MFSampleExtension_Encryption_CryptByteBlock-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 927e08d81cc8066f73b579c8abf419d754fc1713
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 85da01a8b69fa22604cc10df54aa474ec117256ebee0630e490e25d9888484d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042046"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119603200"
 ---
-# <a name="mfsampleextension_encryption_cryptbyteblock-attribute"></a>MF SampleExtension \_ Encryption \_ cryptbyteblock-Attribut
+# <a name="mfsampleextension_encryption_cryptbyteblock-attribute"></a>MFSampleExtension \_ Encryption \_ CryptByteBlock-Attribut
 
-Gibt die verschlüsselte Byte Blockgröße für die Beispiel basierte Muster Verschlüsselung an.
+Gibt die verschlüsselte Byteblockgröße für die stichprobenbasierte Musterverschlüsselung an.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anzahl der eindeutigen (nicht verschlüsselten) Bytes im Teilprobe-Zuordnungs Block wird im [ \_ \_ skipbyteblock-Attribut der MF SampleExtension-Verschlüsselung](mfsampleextension-encryption-skipbyteblock.md) angegeben. Wenn keines dieser Attribute vorhanden ist oder den Wert 0 hat, bedeutet dies, dass die Beispiel Daten nicht verschlüsselt sind. Beide Werte müssen einen Wert ungleich 0 (null), positive Werte aufweisen, oder beide müssen den Wert 0 (null) aufweisen.
+Die Anzahl der eindeutigen (nicht verschlüsselten) Bytes im Subsamplezuordnungsblock wird im [MFSampleExtension \_ Encryption \_ SkipByteBlock-Attribut](mfsampleextension-encryption-skipbyteblock.md) angegeben. Wenn eines dieser Attribute nicht vorhanden ist oder den Wert 0 aufweist, bedeutet dies, dass die Beispieldaten nicht verschlüsselt sind. Beide Werte müssen ungleich 0 (null) sein, positive Werte, oder beide müssen den Wert 0 (null) aufweisen.
 
-In Fällen, in denen die Quelle MP4-basiert ist, wird der Wert basierend auf den Werten des standardmäßigen \_ crypt- \_ \_ Byteblocks innerhalb des Felds "Verschlüsselung nachverfolgen" ("tenc") im MP4-Header festgelegt. Weitere Informationen finden Sie unter [MF SampleExtension \_ Encryption \_ Protection Schema](mfsampleextension-encryption-protectionscheme.md).
+In Fällen, in denen die Quelle MP4-basiert ist, wird der Wert basierend auf den Werten des \_ standardmäßigen crypt-Byteblocks innerhalb des Felds für \_ die \_ Nachverfolgungsverschlüsselung ("tenc") im MP4-Header festgelegt. Weitere Informationen finden Sie unter [MFSampleExtension \_ Encryption \_ ProtectionScheme](mfsampleextension-encryption-protectionscheme.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,9 +31,9 @@ In Fällen, in denen die Quelle MP4-basiert ist, wird der Wert basierend auf den
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 

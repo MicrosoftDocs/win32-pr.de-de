@@ -1,20 +1,20 @@
 ---
-description: Beschreibt die WMI-SNMP-Anbieter Fehler 1051 bis 1060.
+description: Beschreibt die Fehler 1051 bis 1060 des WMI-SNMP-Anbieters.
 ms.assetid: 789cc5b6-e3ef-4f66-8dec-6970d6df1fe9
 ms.tgt_platform: multiple
 title: Fehler 1051 bis 1060
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 170eddf3126a40f929aa36899259b731fa244941
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8e75d2fda06b7761fd7e14de936ef7b38fbb18df46dd2597509bc7c1e1502023
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352446"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119464080"
 ---
 # <a name="errors-1051-through-1060"></a>Fehler 1051 bis 1060
 
-Beschreibt die WMI-SNMP-Anbieter Fehler 1051 bis 1060.
+Beschreibt die Fehler 1051 bis 1060 des WMI-SNMP-Anbieters.
 
 [Schwerwiegender Fehler 1051](#fatal-error-1051)
 
@@ -26,10 +26,10 @@ Beschreibt die WMI-SNMP-Anbieter Fehler 1051 bis 1060.
 
 <dl> <dt>
 
-<span id="_1051__Fatal_____fileName___line____Ambiguous_reference_to_symbol__identifier__"></span><span id="_1051__fatal_____filename___line____ambiguous_reference_to_symbol__identifier__"></span><span id="_1051__FATAL_____FILENAME___LINE____AMBIGUOUS_REFERENCE_TO_SYMBOL__IDENTIFIER__"></span>**<1051, schwerwiegender>: " <fileName> : <line \#>: mehrdeutiger Verweis auf Symbol <identifier> "**
+<span id="_1051__Fatal_____fileName___line____Ambiguous_reference_to_symbol__identifier__"></span><span id="_1051__fatal_____filename___line____ambiguous_reference_to_symbol__identifier__"></span><span id="_1051__FATAL_____FILENAME___LINE____AMBIGUOUS_REFERENCE_TO_SYMBOL__IDENTIFIER__"></span>**<1051, Fatal>: " <fileName> :<line \#>: Ambiguous reference to symbol <identifier> "**
 </dt> <dd>
 
-Der Code für die Modul Semantik der Importe ist spezifisch für weder SNMPv1 noch SNMPv2C. Jeder Objekt Deskriptor, der einem Objekt in einer Internet Standard-MIB entspricht, muss eindeutig sein. Da Enterprise-MIBs allgemeine Objekt Deskriptoren haben können, müssen solche Deskriptoren, die aus zwei Modulen importiert werden, im MIB-Modul mithilfe der Notation "Module. Descriptor" eindeutig verwendet werden.
+Semantischer Fehler des IMPORTS-Abschnittmoduls, der weder für SNMPv1 noch für SNMPv2C spezifisch ist. Jeder Objektdeskriptor, der einem Objekt in einer Internet Standard-MIB entspricht, muss eindeutig sein. Da Unternehmens-MIBs über allgemeine Objektdeskriptoren verfügen können, müssen solche aus zwei Modulen importierten Deskriptoren eindeutig im MIB-Modul verwendet werden, indem die Notation "module.descriptor" verwendet wird.
 
 </dd> </dl>
 
@@ -37,12 +37,12 @@ Der Code für die Modul Semantik der Importe ist spezifisch für weder SNMPv1 no
 
 <dl> <dt>
 
-<span id="_1054__Fatal_____fileName___line_____identifier__in_INDEX_clause_does_not_resolve_to_one_of_the_allowed_types_"></span><span id="_1054__fatal_____filename___line_____identifier__in_index_clause_does_not_resolve_to_one_of_the_allowed_types_"></span><span id="_1054__FATAL_____FILENAME___LINE_____IDENTIFIER__IN_INDEX_CLAUSE_DOES_NOT_RESOLVE_TO_ONE_OF_THE_ALLOWED_TYPES_"></span>**<1054, schwerwiegender>: " <fileName> : <line \#>: <identifier> in einer Index Klausel wird nicht in einen der zulässigen Typen aufgelöst."**
+<span id="_1054__Fatal_____fileName___line_____identifier__in_INDEX_clause_does_not_resolve_to_one_of_the_allowed_types_"></span><span id="_1054__fatal_____filename___line_____identifier__in_index_clause_does_not_resolve_to_one_of_the_allowed_types_"></span><span id="_1054__FATAL_____FILENAME___LINE_____IDENTIFIER__IN_INDEX_CLAUSE_DOES_NOT_RESOLVE_TO_ONE_OF_THE_ALLOWED_TYPES_"></span>**<1054, Fatal>: " <fileName> :<line \#>: <identifier> in INDEX clause does not resolve to one of the allowed types"**
 </dt> <dd>
 
-Semantik Fehler des **Objekttyp-** Makro Aufruf Moduls. Der Typ eines Objekts in der Index Klausel oder ein beliebiger Typ, der in der Index-Klausel angegeben ist, muss in einen skalaren Typ aufgelöst werden, d. h. eine nicht-Sequenz oder eine nicht-Sequenz vom Typ. Jeder in der Index-Klausel angegebene Typ muss ebenfalls in einen dieser Typen aufgelöst werden.
+Semantischer Fehler des **OBJECT-TYPE-Makroaufrufmoduls.** Der Typ eines Objekts in der INDEX-Klausel oder ein beliebiger in der INDEX-Klausel angegebener Typ muss in einen Skalartyp aufgelöst werden, d. h. in einen Nicht-SEQUENCE- oder Nicht-SEQUENCE OF-Typ. Jeder in der INDEX-Klausel angegebene Typ muss ebenfalls in einen dieser Typen aufgelöst werden.
 
-Dieser Fehler kann entweder in SNMPv1 oder SNMPv2C auftreten.
+Dieser Fehler kann in SNMPv1 oder SNMPv2C auftreten.
 
 </dd> </dl>
 
@@ -50,12 +50,12 @@ Dieser Fehler kann entweder in SNMPv1 oder SNMPv2C auftreten.
 
 <dl> <dt>
 
-<span id="_1055__Fatal____fileName___line____SYNTAX_of_INDEX_OBJECT-TYPE__identifier___does_not_resolve_to_one_of_the_allowed_types_"></span><span id="_1055__fatal____filename___line____syntax_of_index_object-type__identifier___does_not_resolve_to_one_of_the_allowed_types_"></span><span id="_1055__FATAL____FILENAME___LINE____SYNTAX_OF_INDEX_OBJECT-TYPE__IDENTIFIER___DOES_NOT_RESOLVE_TO_ONE_OF_THE_ALLOWED_TYPES_"></span>**<1055, schwerwiegender>: " <fileName> : <line \#>: Syntax des Index Objekt Typs <identifier> wird nicht in einen der zulässigen Typen aufgelöst"**
+<span id="_1055__Fatal____fileName___line____SYNTAX_of_INDEX_OBJECT-TYPE__identifier___does_not_resolve_to_one_of_the_allowed_types_"></span><span id="_1055__fatal____filename___line____syntax_of_index_object-type__identifier___does_not_resolve_to_one_of_the_allowed_types_"></span><span id="_1055__FATAL____FILENAME___LINE____SYNTAX_OF_INDEX_OBJECT-TYPE__IDENTIFIER___DOES_NOT_RESOLVE_TO_ONE_OF_THE_ALLOWED_TYPES_"></span>**<1055, Fatal>:" <fileName> :<line \#>: SYNTAX of INDEX OBJECT-TYPE <identifier> , does not resolve to one of the allowed types"**
 </dt> <dd>
 
-Semantik Fehler des **Objekttyp-** Makro Aufruf Moduls. Der Typ eines Objekts in der Index Klausel oder ein beliebiger Typ, der in der Index-Klausel angegeben ist, muss in einen skalaren Typ aufgelöst werden, d. h. eine nicht-Sequenz oder eine nicht-Sequenz vom Typ.
+Semantischer Fehler des **OBJECT-TYPE-Makroaufrufmoduls.** Der Typ eines Objekts in der INDEX-Klausel oder ein beliebiger in der INDEX-Klausel angegebener Typ muss in einen Skalartyp aufgelöst werden, d. h. in einen Nicht-SEQUENCE- oder Nicht-SEQUENCE OF-Typ.
 
-Dieser Fehler kann entweder in SNMPv1 oder SNMPv2C auftreten.
+Dieser Fehler kann in SNMPv1 oder SNMPv2C auftreten.
 
 </dd> </dl>
 

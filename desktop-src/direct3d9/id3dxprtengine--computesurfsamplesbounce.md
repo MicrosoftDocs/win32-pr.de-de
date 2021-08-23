@@ -1,7 +1,7 @@
 ---
-description: Berechnet PRT-Proben (preberechneten Radiance Transfer) für einen beliebigen Punkt (und den normalen Vektor).
+description: Berechnet prt-Stichproben (Precomputed Radiance Transfer) für einen beliebigen Punkt (und normalen Vektor).
 ms.assetid: 862a9067-5c5e-4428-86f4-ebef653411b9
-title: 'ID3DXPRTEngine:: computesurf samplesbounce-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::ComputeMultiSamplesBounce-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 55cea3e87850273b6ea8d190422bd77afeb831f4
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 925b5da620ae665e0fa863527c196b65a5dfcb17dd81de1c25a23b907cb88ba9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104356056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119492710"
 ---
-# <a name="id3dxprtenginecomputesurfsamplesbounce-method"></a>ID3DXPRTEngine:: computesurf samplesbounce-Methode
+# <a name="id3dxprtenginecomputesurfsamplesbounce-method"></a>ID3DXPRTEngine::ComputeKapselSamplesBounce-Methode
 
-Berechnet PRT-Proben (preberechneten Radiance Transfer) für einen beliebigen Punkt (und den normalen Vektor).
+Berechnet prt-Stichproben (Precomputed Radiance Transfer) für einen beliebigen Punkt (und normalen Vektor).
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,57 +45,57 @@ HRESULT ComputeSurfSamplesBounce(
 
 <dl> <dt>
 
-*psurfdatain* \[ in\]
+*pDataIn* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Eingabe Objekt, das die Quell Ausstrahlung des 3D-Objekts darstellt. Dieser Eingabepuffer muss über die richtige Anzahl von Farbkanälen verfügen, die für die Simulation reserviert werden.
+Zeiger auf ein [**EINGABE-ID3DXPRTBuffer-Objekt,**](id3dxprtbuffer.md) das die Quellleistung des 3D-Objekts darstellt. Diesem Eingabepuffer muss die richtige Anzahl von Farbkanälen für die Simulation zugeordnet sein.
 
 </dd> <dt>
 
-*NumSamples* \[ in\]
+*NumSamples* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Beispiel Speicherorte.
+Anzahl von Beispielspeicherorten.
 
 </dd> <dt>
 
-*psamplelocs* \[ in\]
+*pSampleLocs* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Die Position für jede Stichprobe.
+Position für jedes Beispiel.
 
 </dd> <dt>
 
-*psamplenorms* \[ in\]
+*pSampleNorms* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Normaler Vektor für jeden Beispiel Speicherort.
-
-</dd> <dt>
-
-*pdataout* \[ in, out\]
-</dt> <dd>
-
-Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
-
-Zeiger auf ein Output [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, das den direkten Beleuchtungs Beitrag zu dem Punkt modelliert, indem die Näherung für die kugelförmige harmonische (SH) verwendet wird.
+Normaler Vektor für jede Beispielposition.
 
 </dd> <dt>
 
-*pdatatotal* \[ in, out\]
+*pDataOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein optionales [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, bei dem es sich um die laufende Summe aller vorherigen pdataout-Ausgaben handelt. Kann **null** sein.
+Zeiger auf ein [**ID3DXPRTBuffer-Ausgabeobjekt,**](id3dxprtbuffer.md) das den direkten Beleuchtungsbeitrag an den Punkt modelliert, wobei die Sphärische Gleichung (SH) verwendet wird.
+
+</dd> <dt>
+
+*pDataTotal* \[ in, out\]
+</dt> <dd>
+
+Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
+
+Zeiger auf ein optionales [**ID3DXPRTBuffer-Objekt,**](id3dxprtbuffer.md) das die laufende Summe aller vorherigen pDataOut-Ausgaben ist. Kann **NULL** sein.
 
 </dd> </dl>
 
@@ -103,7 +103,7 @@ Zeiger auf ein optionales [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, bei d
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -111,8 +111,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -123,7 +123,7 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 [ID3DXPRTEngine](id3dxprtengine.md)
 </dt> <dt>
 
-[**ID3DXPRTEngine:: computesurf samplesdirectsh**](id3dxprtengine--computesurfsamplesdirectsh.md)
+[**ID3DXPRTEngine::ComputeBatsamplesDirectSH**](id3dxprtengine--computesurfsamplesdirectsh.md)
 </dt> </dl>
 
  

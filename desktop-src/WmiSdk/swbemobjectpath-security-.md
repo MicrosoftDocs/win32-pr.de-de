@@ -1,8 +1,8 @@
 ---
-description: Die Security-Eigenschaft des Objekts "errbewbjectpath" wird verwendet, um die Sicherheitskomponenten eines Objekt Pfads zu erhalten oder festzulegen.
+description: Die Security-Eigenschaft des SWbemObjectPath-Objekts wird verwendet, um die Sicherheitskomponenten eines Objektpfads zu erhalten oder zu festlegen.
 ms.assetid: 26e5e990-3b78-41b6-83c4-ba0d8b0d2f00
 ms.tgt_platform: multiple
-title: SWbemObjectPath.Security_-Eigenschaft (wbemdisp. h)
+title: SWbemObjectPath.Security_ -Eigenschaft (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,23 +16,23 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 000f3f5e334ef0eba3dbd687d7bdc4b594442305
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ed473049de6973da077b1ccfabdd3fe752ff4e5edd13f4a49a7c5589309ae81e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215317"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119639970"
 ---
-# <a name="swbemobjectpathsecurity_-property"></a>Errbemubjectpath. Security- \_ Eigenschaft
+# <a name="swbemobjectpathsecurity_-property"></a>SWbemObjectPath.Security \_ (Eigenschaft)
 
-Die **Security** -Eigenschaft des Objekts " [**errbewbjectpath**](swbemobjectpath.md) " wird verwendet, um die Sicherheitskomponenten eines Objekt Pfads zu erhalten oder festzulegen. Beachten Sie, dass es nicht verwendet wird, um Sicherheits Attribute des Objekts " **errbemubjectpath** " selbst festzulegen. Sie wird nur verwendet, um die Sicherheitskomponenten des Pfads für ein Objekt vom Typ " [**Swap**](swbemlocator.md) " darzustellen. Diese Eigenschaft ist ein [**Swap Security**](swbemsecurity.md) -Objekt.
+Die **Security-Eigenschaft** des [**SWbemObjectPath-Objekts**](swbemobjectpath.md) wird verwendet, um die Sicherheitskomponenten eines Objektpfads zu erhalten oder zu festlegen. Beachten Sie, dass es nicht zum Festlegen von Sicherheitsattributen des **SWbemObjectPath-Objekts** selbst verwendet wird. Es wird nur verwendet, um die Sicherheitskomponenten des Pfads für ein [**SWbemLocator-Objekt**](swbemlocator.md) zu darstellen. Diese Eigenschaft ist ein [**SWbemSecurity-Objekt.**](swbemsecurity.md)
 
 > [!Note]  
-> Durch das Festlegen der [**\_ Sicherheits**](swbemobject-security-.md) Eigenschaft eines " [**errbemubjectpath**](swbemobjectset.md) "-Objekts auf **null** wird allen Benutzern jederzeit uneingeschränkter Zugriff gewährt. Weitere Informationen finden Sie unter [**Swap Security**](swbemsecurity.md).
+> Durch festlegen [**der \_ Security-Eigenschaft**](swbemobject-security-.md) eines [**SWbemObjectPath-Objekts**](swbemobjectset.md) auf **NULL** wird jedem jederzeit unbegrenzter Zugriff gewährt. Weitere Informationen finden Sie unter [**SWbemSecurity**](swbemsecurity.md).
 
  
 
-Weitere Informationen finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Weitere Informationen finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -55,11 +55,11 @@ SWbemObjectPath.Security_ As Object
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-Austausch Pfad<br/>                                                       |
-| IID<br/>                      | IID \_ iswbemubjectpath<br/>                                                        |
+| CLSID<br/>                    | CLSID \_ SWbemObjectPath<br/>                                                       |
+| IID<br/>                      | IID \_ ISWbemObjectPath<br/>                                                        |
 
 
 
@@ -67,13 +67,13 @@ SWbemObjectPath.Security_ As Object
 
 <dl> <dt>
 
-[**Errbemubjectpath**](swbemobjectpath.md)
+[**SWbemObjectPath**](swbemobjectpath.md)
 </dt> <dt>
 
 [Erstellen einer WMI-Anwendung oder eines Skripts](creating-a-wmi-application-or-script.md)
 </dt> <dt>
 
-[Festlegen der \_ Prozesssicherheit für Client Anwendungen \_](setting-client-application-process-security.md)
+[Festlegen der Sicherheit \_ des \_ Clientanwendungsprozesses](setting-client-application-process-security.md)
 </dt> </dl>
 
  

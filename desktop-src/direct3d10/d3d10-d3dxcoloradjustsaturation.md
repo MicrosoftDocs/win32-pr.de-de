@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 9e9ae91f5c898dae8ff922616bc02846732c760a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6dbc819a1c2b8b6d4eb862b61d4ee23abbb9a2fc6e5aef6b7820d7d6a1a71482
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119609540"
 ---
 # <a name="d3dxcoloradjustsaturation-function-d3dx10mathh"></a>D3DXColorAdjustSaturation-Funktion (D3DX10Math.h)
 
@@ -75,9 +75,9 @@ Typ: **[ **D3DXCOLOR**](../direct3d9/d3dxcolor.md)\***
 
 Diese Funktion gibt einen Zeiger auf eine D3DXCOLOR-Struktur zurück, die das Ergebnis der Anpassung der Sättigung ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Alpha-Eingabekanal wird unverändert in den Alphaausgabekanal kopiert.
+Der Eingabe-Alphakanal wird unverändert in den Alphaausgabekanal kopiert.
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann diese Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -96,7 +96,7 @@ pOut->r = grey + s * (pC->r - grey);
 
 Wenn s größer als 0 und kleiner als 1 ist, wird die Sättigung verringert. Wenn s größer als 1 ist, wird die Sättigung erhöht.
 
-Die Graustufenfarbe wird wie die folgende berechnet:
+Die Graustufenfarbe wird folgendermaßen berechnet:
 
 
 ```
@@ -109,14 +109,14 @@ r = g = b = 0.2125*r + 0.7154*g + 0.0721*b;
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

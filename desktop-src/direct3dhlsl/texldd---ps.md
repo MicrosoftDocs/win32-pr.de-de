@@ -1,6 +1,6 @@
 ---
-title: texldd-PS
-description: Modelliert eine Textur mit zusätzlichen Farbverlaufs Eingaben.
+title: texldd – ps
+description: Probieren Sie eine Textur mit zusätzlichen Farbverlaufseingaben aus.
 ms.assetid: 6d6b3180-d82e-4be4-929b-e5a6431bec38
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,55 +9,55 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 72f3c4aaf9ac7e6beaad1343c024aa28bd2a85ab
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 45bd755cdc0d183a6b06e42cbd9fb3934a5dc26a729e9982bc54fb9d2a2b01fb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390343"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119561970"
 ---
-# <a name="texldd---ps"></a>texldd-PS
+# <a name="texldd---ps"></a>texldd – ps
 
-Modelliert eine Textur mit zusätzlichen Farbverlaufs Eingaben.
+Probieren Sie eine Textur mit zusätzlichen Farbverlaufseingaben aus.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| texldd, DST, src0, Quelle1, Quelle2, src3 |
+| texldd, dst, src0, src1, src2, src3 |
 |-------------------------------------|
 
 
 
- 
+ 
 
 Hierbei gilt:
 
--   DST ist ein Ziel Register.
--   src0 ist ein Quell Register, das die Texturkoordinaten für das Textur Beispiel bereitstellt. Siehe [Texturkoordinaten Register](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md).
--   Quelle1 identifiziert die Quell-Samplerregister \# , bei der \# angibt, welche Textur samplingnummer Stichproben geben soll. Der Sampler hat ihm eine Textur und einen von der [**D3DSAMPLERSTATETYPE**](/windows/desktop/direct3d9/d3dsamplerstatetype) -Enumeration definierten Steuerelement Zustand zugeordnet (z. D3DSAMP \_ MinFilter).
--   Quelle2 ist ein Eingabe Quellen Register, das den x-Farbverlauf angibt.
--   src3 ist ein Eingabe Quellen Register, das den y-Farbverlauf angibt.
+-   dst ist ein Zielregister.
+-   src0 ist ein Quellregister, das die Texturkoordinaten für das Texturbeispiel bereitstellt. Siehe [Texturkoordinatenregister.](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md)
+-   src1 identifiziert das Quell-Samplerregister \# (s), wobei \# angibt, welche Textur-Samplernummer entnommen werden soll. Der Sampler hat ihm eine Textur und einen Durch die [**D3DSAMPLERSTATETYPE-Enumeration**](/windows/desktop/direct3d9/d3dsamplerstatetype) definierten Steuerelementzustand zugeordnet (z. B. D3DSAMP \_ MINFILTER).
+-   src2 ist ein Eingabequellregister, das den x Farbverlauf angibt.
+-   src3 ist ein Eingabequellregister, das den y-Farbverlauf angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| texldd                |      |      |      |      |      | Stuben \* | x     | x    | x     |
+| texldd                |      |      |      |      |      | X \* | x     | x    | x     |
 
 
 
- 
+ 
 
-\* Diese Anweisung wird nur von PS \_ 2 a unterstützt \_ . Sie wird von PS 2 b nicht unterstützt \_ \_ . Weitere Informationen zu Profilen finden Sie unter [**D3DXGetPixelShaderProfile**](/windows/desktop/direct3d9/d3dxgetpixelshaderprofile).
+\* Diese Anweisung wird nur von ps \_ 2 \_ a unterstützt. Sie wird von ps 2 b nicht \_ \_ unterstützt. Weitere Informationen zu Profilen finden Sie unter [**D3DXGetPixelShaderProfile.**](/windows/desktop/direct3d9/d3dxgetpixelshaderprofile)
 
-Diese Anweisung unterscheidet eine Textur mithilfe der Texturkoordinaten bei src0, dem durch Quelle1 angegebenen Sampler und den Gradienten DSX und DSY aus Quelle2 und src3. Die Werte für x und y-Farbverlauf werden verwendet, um die entsprechende MipMap-Ebene der Textur für die Stichprobenentnahme auszuwählen.
+Diese Anweisung erfasst eine Textur mithilfe der Texturkoordinaten bei src0, des von src1 angegebenen Samplers und der Farbverläufe DSX und DSY, die von src2 und src3 stammen. Die Farbverlaufswerte x und y werden verwendet, um die entsprechende Mipmapebene der Textur für die Stichprobenentnahme auszuwählen.
 
-Alle Quellen unterstützen willkürliche Streifen.
+Alle Quellen unterstützen beliebige Swizzles.
 
-Alle Schreib Masken sind auf dem Ziel gültig.
+Alle Schreibmasken sind auf dem Ziel gültig.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -66,6 +66,6 @@ Alle Schreib Masken sind auf dem Ziel gültig.
 [Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

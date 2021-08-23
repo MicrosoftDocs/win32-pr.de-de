@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentslvfile otfoundexception-Konstruktor'
-title: Esentslvfile otfoundexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentSLVFileNotFoundException-Konstruktor'
+title: EsentSLVFileNotFoundException-Konstruktor
 TOCTitle: 'EsentSLVFileNotFoundException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSLVFileNotFoundException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentslvfilenotfoundexception.esentslvfilenotfoundexception(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ebf558c315d92013cd25a8c7e19c1fa2c01f053e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 07cdc7f1740be078f743288ada1b828df6519a0914f342d8310cbfa8599c8ffa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119476930"
 ---
-# <a name="esentslvfilenotfoundexception-constructor"></a>Esentslvfile otfoundexception-Konstruktor
+# <a name="esentslvfilenotfoundexception-constructor"></a>EsentSLVFileNotFoundException-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ Dim instance As New EsentSLVFileNotFoundException()
 public EsentSLVFileNotFoundException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentslvfile otfoundexception-Klasse](./esentslvfilenotfoundexception-class.md)
+[EsentSLVFileNotFoundException-Klasse](./esentslvfilenotfoundexception-class.md)
 
-[Esentslvdatdatabfoundexception-Elemente](./esentslvfilenotfoundexception-members.md)
+[EsentSLVFileNotFoundException-Member](./esentslvfilenotfoundexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

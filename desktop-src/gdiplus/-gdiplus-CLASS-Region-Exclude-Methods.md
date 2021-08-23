@@ -1,30 +1,30 @@
 ---
-description: In diesem Thema werden die Exclude-Methoden der Regions Klasse aufgelistet. Eine umfassende Liste der Methoden für die Regions Klasse finden Sie unter Regions Methoden.
+description: In diesem Thema werden die Exclude-Methoden der Region-Klasse aufgelistet. Eine vollständige Liste der Methoden für die Region-Klasse finden Sie unter Regionsmethoden.
 ms.assetid: 1a8b639d-c12f-4130-a107-acf008ea1408
-title: Region. Exclude-Methoden
+title: Region.Exclude-Methoden
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: e5bd762122e304ca2eff3877ac0fb55a15aa6070
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d8d9d8fba6fcd1aa84edc5565cc3729c1c4001cbd83bf4264d1dd5da0ef7f69b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042115"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119602610"
 ---
-# <a name="regionexclude-methods"></a>Region. Exclude-Methoden
+# <a name="regionexclude-methods"></a>Region.Exclude-Methoden
 
-In diesem Thema werden die Exclude-Methoden der [**Regions**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-region) Klasse aufgelistet. Eine umfassende Liste der Methoden für die **Regions** Klasse finden Sie unter [Regions Methoden](-gdiplus-class-region-methods.md).
+In diesem Thema werden die Exclude-Methoden der [**Region-Klasse**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-region) aufgelistet. Eine vollständige Liste der Methoden für die **Region-Klasse** finden Sie unter [Regionsmethoden.](-gdiplus-class-region-methods.md)
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                 | BESCHREIBUNG                                                                                                                                                                                         |
+| Methode                                                                 | Beschreibung                                                                                                                                                                                         |
 |:-----------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Ausschließen (Rect&)**](/previous-versions//ms534825(v=vs.85))     | Mit der [**Region:: Exclude**](/previous-versions//ms534825(v=vs.85)) -Methode wird dieser Bereich auf den Teil von sich selbst aktualisiert, der sich nicht mit dem Inneren des angegebenen Rechtecks überschneidet.<br/>  |
-| [**Ausschließen (RectF&)**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-region-exclude(inconstrectf_))   | Mit der [**Region:: Exclude**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-region-exclude(inconstrectf_)) -Methode wird dieser Bereich auf den Teil von sich selbst aktualisiert, der sich nicht mit dem Inneren des angegebenen Rechtecks überschneidet.<br/> |
-| [**Ausschließen (Region \* )**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-region-exclude(inconstregion))     | Mit der [**Region:: Exclude**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-region-exclude(inconstregion)) -Methode wird dieser Bereich auf den Teil von sich selbst aktualisiert, der sich nicht über einen anderen Bereich überschneidet.<br/>                         |
-| [**Ausschließen (GraphicsPath \* )**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-region-exclude(inconstgraphicspath)) | Die [**Region:: Exclude**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-region-exclude(inconstgraphicspath)) -Methode aktualisiert diesen Bereich auf den Teil von sich selbst, der sich nicht mit dem Inneren des angegebenen Pfads überschneidet.<br/>            |
+| [**Exclude(Rect&)**](/previous-versions//ms534825(v=vs.85))     | Die [**Region::Exclude-Methode**](/previous-versions//ms534825(v=vs.85)) aktualisiert diesen Bereich auf den Teil von sich selbst, der das Innere des angegebenen Rechtecks nicht überschneidet.<br/>  |
+| [**Exclude(RectF&)**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-region-exclude(inconstrectf_))   | Die [**Region::Exclude-Methode**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-region-exclude(inconstrectf_)) aktualisiert diesen Bereich auf den Teil von sich selbst, der das Innere des angegebenen Rechtecks nicht überschneidet.<br/> |
+| [**Exclude(Region \* )**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-region-exclude(inconstregion))     | Die [**Region::Exclude-Methode**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-region-exclude(inconstregion)) aktualisiert diese Region auf den Teil von sich selbst, der keine andere Region überschneidet.<br/>                         |
+| [**Exclude(GraphicsPath \* )**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-region-exclude(inconstgraphicspath)) | Die [**Region::Exclude-Methode**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-region-exclude(inconstgraphicspath)) aktualisiert diese Region auf den Teil von sich selbst, der das Innere des angegebenen Pfads nicht überschneidet.<br/>            |
 
 
 

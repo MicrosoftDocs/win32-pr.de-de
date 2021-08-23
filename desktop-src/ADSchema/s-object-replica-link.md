@@ -1,10 +1,10 @@
 ---
-title: Objekt Syntax (Replikat Link)
-description: Objekt Syntax (Replikat Link).
+title: Object(Replica-Link)-Syntax
+description: Object(Replica-Link)-Syntax.
 ms.assetid: 772dee62-1e87-44dd-aa8a-91762a87d9bc
 ms.tgt_platform: multiple
 keywords:
-- Objekt Syntax (Replikat Link) AD-Schema
+- Object(Replica-Link) syntax AD Schema
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 56c3eb396f0475b4f6f0924cce823c290005818a
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 0376fb8dd180f475f0b42441ac054054ff7ed463eca092bbeab6c6b42a147c26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104106953"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119702540"
 ---
-# <a name="objectreplica-link-syntax"></a>Objekt Syntax (Replikat Link)
+# <a name="objectreplica-link-syntax"></a>Object(Replica-Link)-Syntax
 
-Objekt Syntax (Replikat Link). Diese Syntax wird nur vom System verwendet.
+Object(Replica-Link)-Syntax. Diese Syntax wird nur vom System verwendet.
 
 
 
@@ -32,8 +32,8 @@ Objekt Syntax (Replikat Link). Diese Syntax wird nur vom System verwendet.
 | Syntax-ID    | 2.5.5.10                                                          |
 | OM-ID        | 127                                                               |
 | MAPI-Typ    | BINARY                                                            |
-| ADS-Typ     | Zeichenfolge des adstype- \_ Oktetts \_                                            |
-| Varianttyp | VT- \_ Variante                                                       |
+| ADS-Typ     | ADSTYPE \_ OCTET \_ STRING                                            |
+| Variant-Typ | VT \_ VARIANT                                                       |
 | SDS-Typ     | [System.Byte\[\]](/dotnet/api/system.byte) |
 
 

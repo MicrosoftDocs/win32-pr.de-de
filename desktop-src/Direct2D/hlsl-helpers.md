@@ -1,37 +1,37 @@
 ---
-title: HLSL-Hilfsprogramme
-description: Zur Unterstützung von Autoren beim Schreiben von Verknüpf bares-Pixel-Shadern definiert d2d1effecthelpers. hlsli einen Satz von HLSL-Spracherweiterungen in Form von Hilfsmethoden und-Makros.
+title: HLSL-Hilfsatoren
+description: d2d1effecthelpers.hlsli definiert eine Reihe von HLSL-Spracherweiterungen in Form von Hilfsmethoden und Makros, um Autoren beim Schreiben linkbarer Pixel-Shader zu unterstützen.
 ms.assetid: 5D0BB99E-7C77-4D45-82E6-F038E4B752A4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ec8f43447c16d93ef9e1839ac319c761b975222a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 608ae4b47b96616f8818cd45b466c02a7b09b2171383fbe82ecbe055ed0915b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947482"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119569560"
 ---
-# <a name="hlsl-helpers"></a>HLSL-Hilfsprogramme
+# <a name="hlsl-helpers"></a>HLSL-Hilfsatoren
 
-Zur Unterstützung von Autoren beim Schreiben von Verknüpf bares-Pixel-Shadern definiert d2d1effecthelpers. hlsli einen Satz von HLSL-Spracherweiterungen in Form von Hilfsmethoden und-Makros.
+d2d1effecthelpers.hlsli definiert eine Reihe von HLSL-Spracherweiterungen in Form von Hilfsmethoden und Makros, um Autoren beim Schreiben linkbarer Pixel-Shader zu unterstützen.
 
-Fügen Sie der HLSL-Datei eine include-Anweisung hinzu, um d2d1effecthelpers. hlsli dem Projekt hinzuzufügen \# . d2d1effecthelpers. hlsli befindet sich am gleichen Speicherort wie andere Direct2D-Header, z. b. d2d1. h; Sie können auf die Eigenschaften Seite der HLSL-Datei verweisen, indem Sie das Makro $ (windowssdk \_ INCLUDEPATH) der zusätzlichen include-Verzeichnisse-Eigenschaft hinzufügen. Beachten Sie, dass die \# include-Anweisung vorhanden sein muss, nachdem alle Präprozessordirektiven wie D2D \_ input \_ count definiert wurden.
+Um "d2d1effecthelpers.hlsli" ihrem Projekt hinzuzufügen, fügen Sie \# der HLSL-Datei eine include-Anweisung hinzu. d2d1effecthelpers.hlsli befindet sich am gleichen Speicherort wie andere Direct2D-Header wie d2d1.h; Sie können auf die Eigenschaftenseite der HLSL-Datei verweisen, indem Sie das Makro $(WindowsSDK \_ IncludePath) zur Eigenschaft Zusätzliche Includeverzeichnisse hinzufügen. Beachten Sie, \# dass die include-Anweisung kommen muss, nachdem präprozessordirektiven wie D2D \_ INPUT COUNT definiert \_ wurden.
 
 ``` syntax
 #include <d2d1effecthelpers.hlsli>
 ```
 
-Direct2D bietet keine Unterstützung für das Verknüpfen von COMPUTE-oder Vertex-Shadern. Wenn Ihre Wirkung jedoch sowohl einen Vertex-Shader als auch einen PixelShader verwendet, kann die Ausgabe des Pixelshaders weiterhin verknüpft werden.
+Direct2D unterstützt keine Verknüpfung von Compute- oder Vertex-Shadern. Wenn der Effekt jedoch sowohl einen Vertex-Shader als auch einen Pixel-Shader verwendet, kann die Ausgabe des Pixel-Shaders weiterhin verknüpft werden.
 
 ## <a name="preprocessor-directives"></a>Präprozessoranweisungen
 
-Präprozessordirektiven sind erforderlich, um Informationen über den Effekt zu übermitteln. Dies schließt die Anzahl der Eingaben und den Samplings der einzelnen Eingaben ein. Die folgenden Werte sollten ggf. im Effekt-Shader-Code oberhalb des relevanten Shader-Einstiegs Punkts definiert werden.
+Präprozessordirektiven sind erforderlich, um Informationen über den Effekt zu kommunizieren. Dies schließt die Anzahl der Eingaben und den Samplingtyp jeder Eingabe ein. Die folgenden Werte sollten ggf. im Effekt-Shader-Code oberhalb des relevanten Shadereinstiegspunkts definiert werden.
 
--   `D2D_INPUT_COUNT <N>` : Deklariert die Anzahl der Textur Eingaben für den Effekt. Wenn der Effekt eine Variable Anzahl von Eingaben hat, muss dieser Wert ordnungsgemäß auf jeden Shader-Einstiegspunkt festgelegt werden. Die Definition dieses Werts ist obligatorisch.
--   `D2D_INPUT<N>_SIMPLE` : Deklariert die n-te Eingabe für die Verwendung der einfachen Stichprobenentnahme. Wenn Sie nicht definiert ist, wird die n-te Eingabe standardmäßig auf Complex festgelegt Die Definition dieses Werts ist optional.
--   `D2D_INPUT<N>_COMPLEX` : Deklariert die n-te Eingabe für die Verwendung komplexer Stichproben. Wenn Sie nicht definiert ist, wird die n-te Eingabe standardmäßig auf Complex festgelegt Die Definition dieses Werts ist optional.
--   `D2D_REQUIRES_SCENE_POSITION` : Gibt an, dass die shaderfunktion Hilfsmethoden aufruft, die den Positionswert der Szene verwenden (nämlich die [D2DGetScenePosition](d2dgetsceneposition.md) Helper-Funktion). Dieser Parameter sollte nur bei Bedarf eingeschlossen werden, da dieser Parameter nur von einer Funktion pro verknüpftem Shader verwendet werden kann. Die Definition dieses Werts ist optional.
--   `D2D_CUSTOM_ENTRY` : Gibt an, dass die pixelshaderfunktion die Ausgabe eines benutzerdefinierten Vertex-Shaders verarbeitet und somit seine Eingabeparameter deklariert. Alle benutzerdefinierten Vertex-shadereingaben verwenden eine komplexe Stichprobenentnahme und können die Ausgabe einer anderen shaderfunktion nicht verwenden (d. h., Sie sind nur nach dem ablaufbar). Die Definition dieses Werts ist optional.
+-   `D2D_INPUT_COUNT <N>` : Deklariert die Anzahl der Textureingaben für den Effekt. Wenn der Effekt über eine variable Anzahl von Eingaben verfügt, muss dieser Wert auf jeden Shadereinstiegspunkt entsprechend angepasst werden. Das Definieren dieses Werts ist obligatorisch.
+-   `D2D_INPUT<N>_SIMPLE` : Deklariert die N-te Eingabe für die Verwendung einer einfachen Stichprobenentnahme. Wenn sie nicht definiert ist, wird die N-te Eingabe standardmäßig auf komplex festgelegt. Das Definieren dieses Werts ist optional.
+-   `D2D_INPUT<N>_COMPLEX` : Deklariert die N-te Eingabe für die Verwendung komplexer Stichproben. Wenn sie nicht definiert ist, wird die N-te Eingabe standardmäßig auf komplex festgelegt. Das Definieren dieses Werts ist optional.
+-   `D2D_REQUIRES_SCENE_POSITION`: Gibt an, dass die Shaderfunktion Hilfsmethoden aufruft, die den Szenenpositionswert verwenden (d. h. die [Hilfsfunktion D2DGetScenePosition).](d2dgetsceneposition.md) Dieser Parameter sollte nur bei Bedarf eingeschlossen werden, da nur eine Funktion pro verknüpften Shader diesen Parameter verwenden kann. Das Definieren dieses Werts ist optional.
+-   `D2D_CUSTOM_ENTRY` : Gibt an, dass die Pixelsh shader-Funktion die Ausgabe eines benutzerdefinierten Vertex-Shaders verwendet und somit seine Eingabeparameter deklariert. Alle benutzerdefinierten Vertex-Shadereingaben verwenden eine komplexe Stichprobenentnahme und können nicht die Ausgabe einer anderen Shaderfunktion nutzen (d. h., sie sind nur nachverknüpfungsfähig). Das Definieren dieses Werts ist optional.
 
 Beispiel:
 
@@ -46,7 +46,7 @@ Beispiel:
 
 ## <a name="helper-functions"></a>Hilfsfunktionen
 
-Hilfsfunktionen werden als Ersatz für einige systeminterne HLSL-Funktionen verwendet. Zur Kompilierzeit werden diese Hilfsfunktionen von Direct2D in der entsprechenden Version neu definiert, abhängig vom Typ der Kompilierungs Methode (Full Shader oder Export Function).
+Hilfsfunktionen werden als Ersatz für einige native systeminterne HLSL-Funktionen verwendet. Zur Kompilierzeit werden diese Hilfsfunktionen von Direct2D je nach Kompilierungszieltyp (vollständiger Shader oder Exportfunktion) in die entsprechende Version neu definiert.
 
 Die Hilfsfunktionen:
 
@@ -58,7 +58,7 @@ Die Hilfsfunktionen:
 [D2DSampleInputAtPosition](d2dsampleinputatposition.md)  
 [D2DGetInputCoordinate](d2dgetinputcoordinate.md)  
 [D2DGetScenePosition](d2dgetsceneposition.md)  
-[D2D \_ PS- \_ Eintrag](d2d-ps-entry.md)  
+[D2D \_ \_ PS-EINTRAG](d2d-ps-entry.md)  
 </dl>
 
 ## <a name="related-topics"></a>Zugehörige Themen
@@ -68,9 +68,9 @@ Die Hilfsfunktionen:
 [Effektshader-Verknüpfung](effect-shader-linking.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

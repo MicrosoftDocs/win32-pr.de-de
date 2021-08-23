@@ -1,7 +1,7 @@
 ---
-description: Ruft den zweiten Parameter (P2) aus der Anwendungsprotokoll Dateneinheit (APDU) ab.
+description: Ruft das zweite Parameter-Byte (P2) aus der Anwendungsprotokoll-Dateneinheit (Application Protocol Data Unit, APDU) ab.
 ms.assetid: c719786f-0f50-472e-a92e-a64c333fc255
-title: 'Iscardcmd:: get_P2-Methode (scarddat. h)'
+title: ISCardCmd::get_P2-Methode (Scarddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 7811ad3e42264477210830f340338d0786ed5547
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bf9d5735e4583e0b55a91e6c45f9f23905bd199e15697596a93b06c2347aab65
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119577550"
 ---
-# <a name="iscardcmdget_p2-method"></a>Iscardcmd:: get \_ P2-Methode
+# <a name="iscardcmdget_p2-method"></a>ISCardCmd::get \_ P2-Methode
 
-\[Die **get \_ P2** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **Get \_ P2-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **get \_ P2** -Methode ruft den zweiten Parameter (P2) aus der [*Anwendungsprotokoll Daten-Einheit*](../secgloss/a-gly.md) (APDU) ab.
+Die **get \_ P2-Methode** ruft das zweite Parameter-Byte (P2) aus der [*Anwendungsprotokoll-Dateneinheit*](../secgloss/a-gly.md) (Application Protocol Data Unit, APDU) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,43 +41,43 @@ HRESULT get_P2(
 
 <dl> <dt>
 
-*pbyP2* \[ vorgenommen\]
+*pbyP2* \[ out\]
 </dt> <dd>
 
-Zeiger auf das Byte, das P2 aus dem APDU bei der Rückgabe ist.
+Zeiger auf das Byte, bei dem es sich um das P2 aus der APDU handelt, bei der Rückgabe.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                     |
 |-----------------------------------------------------------------------------------------------|-------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/>    |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *pbyP2* -Parameter ist ungültig.<br/>  |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | In *pbyP2* wurde ein fehlerhafter Zeiger übermittelt.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                       |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *pbyP2-Parameter* ist ungültig.<br/>  |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Ein fehlerhafter Zeiger wurde in *pbyP2 übergeben.*<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um den P2-Parameter auf einen neuen Wert festzulegen, nennen Sie [**Put \_ P2**](iscardcmd-put-p2.md).
+Um den P2-Parameter auf einen neuen Wert zu setzen, rufen Sie [**put \_ P2 auf.**](iscardcmd-put-p2.md)
 
-Um die P1-oder P3-Parameter abzurufen, nennen [**Sie get \_ P1**](iscardcmd-get-p1.md) , und [**holen Sie sich den Befehl \_ P3**](iscardcmd-get-p3.md) .
+Um die P1- oder P3-Parameter zu erhalten, rufen Sie [**get \_ P1 bzw.**](iscardcmd-get-p1.md) [**get \_ P3**](iscardcmd-get-p3.md) auf.
 
-Eine Liste aller Methoden, die von dieser Schnittstelle bereitgestellt werden, finden Sie unter [**iscardcmd**](iscardcmd.md).
+Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardCmd**](iscardcmd.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die [*Smartcard*](../secgloss/s-gly.md) zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes [](../secgloss/s-gly.md) gibt diese Schnittstelle möglicherweise einen Smartcard-Fehlercode zurück, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung zu erfüllen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie Sie den zweiten Parameter (P2) aus der [*Anwendungsprotokoll Daten-Einheit (Application Protocol Data Unit*](../secgloss/a-gly.md) , APDU) abrufen können. Im Beispiel wird davon ausgegangen, dass "piscardcmd" ein gültiger Zeiger auf eine Instanz der [**iscardcmd**](iscardcmd.md) -Schnittstelle ist.
+Das folgende Beispiel zeigt, wie das zweite Parameter-Byte (P2) aus der [*Anwendungsprotokoll-Dateneinheit*](../secgloss/a-gly.md) (Application Protocol Data Unit, APDU) abgerufen wird. Im Beispiel wird davon ausgegangen, dass pISCardCmd ein gültiger Zeiger auf eine Instanz der [**ISCardCmd-Schnittstelle**](iscardcmd.md) ist.
 
 
 ```C++
@@ -101,14 +101,14 @@ if (FAILED(hr))
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scarddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scarddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardcmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
+| IID<br/>                      | IID \_ ISCardCmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
 
 
 
@@ -116,16 +116,16 @@ if (FAILED(hr))
 
 <dl> <dt>
 
-[**\_P1 erhalten**](iscardcmd-get-p1.md)
+[**\_P1-Get**](iscardcmd-get-p1.md)
 </dt> <dt>
 
-[**\_P3 erhalten**](iscardcmd-get-p3.md)
+[**\_P3-Get**](iscardcmd-get-p3.md)
 </dt> <dt>
 
-[**Iscardcmd**](iscardcmd.md)
+[**ISCardCmd**](iscardcmd.md)
 </dt> <dt>
 
-[**\_P2 platzieren**](iscardcmd-put-p2.md)
+[**put \_ P2**](iscardcmd-put-p2.md)
 </dt> </dl>
 
  

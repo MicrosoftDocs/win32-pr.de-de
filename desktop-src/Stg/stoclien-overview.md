@@ -1,67 +1,67 @@
 ---
-title: Übersicht über stoclien
-description: Das stoclien-Beispiel veranschaulicht, wie der Client strukturierte Speicher verwendet und wie er eine Serverkomponente anweist, diesen Speicher zu verwenden.
+title: Übersicht über StoClien
+description: Das StoClien-Beispiel veranschaulicht, wie der Client strukturierten Speicher verwendet und wie er eine Serverkomponente zur Verwendung dieses Speichers leitet.
 ms.assetid: 1f540e0f-2189-4f45-aad3-9b4b56732907
 keywords:
-- Übersicht über stoclien
+- Übersicht über StoClien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ee37f6f84cf981bda637abbd96ff8e8f0314d8ee
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6a28c8d0f4740b5a1d5f93934fb055d16e2ed9d843bcb11b210e6cde9589d53b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119661850"
 ---
-# <a name="stoclien-overview"></a>Übersicht über stoclien
+# <a name="stoclien-overview"></a>Übersicht über StoClien
 
 ## <a name="purpose"></a>Zweck
 
-Der Hauptschwerpunkt des [stoclien](structured-storage-client-sample--stoclien-.md) -Beispiels ist, wie der Client strukturierte Speicher verwendet und wie er eine Serverkomponente anweist, diesen Speicher zu verwenden. Das stoclien-Beispiel veranschaulicht ein Programmiermodell strukturierter Speicherdienste.
+Der Hauptfokus des [StoClien-Beispiels](structured-storage-client-sample--stoclien-.md) liegt darauf, wie der Client strukturierten Speicher verwendet und wie er eine Serverkomponente anweisen soll, diesen Speicher zu verwenden. Das StoClien-Beispiel veranschaulicht ein Programmiermodell strukturierter Speicherdienste.
 
 ## <a name="functionality"></a>Funktionalität
 
-Die [stoclien](structured-storage-client-sample--stoclien-.md) -Funktionalität ähnelt den "Scribble"-Beispielen in einigen Versionen von Microsoft Visual C++. Der Unterschied zwischen dem stoclien-Beispiel und dem [stoservicesbeispiel](structured-storage-server-sample--stoserve-.md) ist eine interne Architektur, die auf der com-Technologie basiert. Zwischen com-Client und com-Server wird eine deutliche Unterscheidung der Architektur beibehalten.
+Die [StoClien-Funktionalität](structured-storage-client-sample--stoclien-.md) ähnelt den "scribble"-Beispielen in einigen Versionen Microsoft Visual C++. Der Unterschied zwischen dem StoClien-Beispiel und dem [StoServe-Beispiel](structured-storage-server-sample--stoserve-.md) ist eine interne Architektur, die auf COM-Technologie basiert. Zwischen COM-Client und COM-Server wird eine klare architektonische Unterscheidung beibehalten.
 
-[Stoclien](structured-storage-client-sample--stoclien-.md) lädt und speichert seine Zeichnungen in der strukturierten Speicherung von com-Verbund Dateien.
+[StoClien lädt](structured-storage-client-sample--stoclien-.md) und speichert seine Zeichnungen im strukturierten Speicher von COM-Verbunddateien.
 
-Das [stoclien](structured-storage-client-sample--stoclien-.md) -Beispiel erstellt und verwendet das Verbindungs fähige copaper-com-Objekt, das als CLSID- \_ dllpaper-Komponente auf dem [stoservice](structured-storage-server-sample--stoserve-.md) -Server bereitgestellt wird. Der stoclien-Client erstellt ein copaper-Objekt und steuert es über die iPaper-Schnittstelle, die das Objekt verfügbar macht. Stoclien ruft Zeichnungsdaten vom Benutzer ab und stellt Sie grafisch in einem von ihm verwalteten Fenster dar. Stoclien verwendet die copaper iPaper-Schnittstelle zum Speichern der Zeichnungsdaten im copaper und zum Weiterleiten von Dateispeicher Vorgängen an diese Daten.
+Im [StoClien-Beispiel](structured-storage-client-sample--stoclien-.md) wird das verbindungsfähige COM-Objekt COPaper erstellt und verwendet, das als CLSID-DllPaper-Komponente auf dem \_ [StoServe-Server bereitgestellt](structured-storage-server-sample--stoserve-.md) wird. Der StoClien-Client erstellt ein COPaper-Objekt und steuert es über die IPaper-Schnittstelle, die das Objekt verfügbar macht. StoClien erhält Zeichnungsdaten vom Benutzer und stellt sie grafisch in einem von ihm verwalteten Fenster dar. StoClien verwendet die COPaper-IPaper-Schnittstelle, um die Zeichnungsdaten in COPaper zu speichern und Dateispeichervorgänge auf diese Daten zu richten.
 
-Ein copaper com-Objekt kapselt nur den serverbasierten Speicher der Zeichnungs Papier Daten: auf der Serverseite wird kein grafisches GUI-Verhalten (Graphical User Interface) bereitgestellt. Das gesamte GUI-Verhalten ist im Client isoliert. Die Daten Verwaltungs-und Speicherfunktionen von copaper-Objekten sind nur über eine benutzerdefinierte COM-Schnittstelle (iPaper) verfügbar.
+Ein COPaper COM-Objekt kapselt nur den serverbasierten Speicher der Zeichnungsdokumentdaten: Auf der Serverseite wird kein Grafisches Benutzeroberflächenverhalten bereitgestellt. Das verhalten der grafischen Benutzeroberfläche ist im Client isoliert. Die Datenverwaltungs- und Speicherfunktionen von COPaper-Objekten sind nur über die benutzerdefinierte COM-Schnittstelle IPaper verfügbar.
 
-[Stoclien](structured-storage-client-sample--stoclien-.md) arbeitet mit dem copaper zusammen, um die kopierdaten zu laden und zu speichern. Stoclien erhält eine [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) -Schnittstelle für das Speicher Objekt in einer Verbund Datei. In den Lade-und Speicher Vorgängen übergibt stoclien einen Zeiger an die **IStorage** -Schnittstelle auf dem Server. Copaper verwendet den bereitgestellten **IStorage** , um Streams im Speicher zu erstellen. Copaper kann dann die standardmäßige [**IStream**](/windows/desktop/api/Objidl/nn-objidl-istream) -Schnittstelle verwenden, um die von ihr verwalteten Zeichnungsdaten zu lesen und zu schreiben.
+[StoClien arbeitet](structured-storage-client-sample--stoclien-.md) mit dem COPaper zusammen, um die COPaper-Zeichnungsdaten zu laden und zu speichern. StoClien erhält eine [**IStorage-Schnittstelle**](/windows/desktop/api/Objidl/nn-objidl-istorage) für das Speicherobjekt in einer Verbunddatei. Beim Laden und Speichern übergibt StoClien einen Zeiger auf die **IStorage-Schnittstelle** an COPaper auf dem Server. COPaper verwendet das bereitgestellte **IStorage,** um Streams im Speicher zu erstellen. COPaper kann dann die [**IStream-Standardschnittstelle**](/windows/desktop/api/Objidl/nn-objidl-istream) zum Lesen und Schreiben der verwalteten Zeichnungsdaten verwenden.
 
-Copaper verwaltet nur die Zeichnungsdaten; Es führt keine GUI-Aktionen aus. [Stoclien](structured-storage-client-sample--stoclien-.md) stellt die GUI für die Zeichnungsanwendung bereit. Dies wird in einem zentralen cguipaper C++-Objekt gekapselt.
+COPaper verwaltet nur die Zeichnungsdaten. Es werden keine GUI-Aktionen durchgeführt. [StoClien stellt](structured-storage-client-sample--stoclien-.md) die grafische Benutzeroberfläche für die Zeichnungsanwendung zur Anwendung. Sie kapselt diese in einem zentralen CGuiPaper-C++-Objekt.
 
-[Stoclien](structured-storage-client-sample--stoclien-.md) implementiert auch die benutzerdefinierte ipapersink-Schnittstelle in einem copapersink-com-Objekt und verbindet diese Schnittstelle mit einem entsprechenden Verbindungspunkt im Server-copaper-Objekt. Copaper verwendet die verbundene ipapersink-Schnittstelle, um Benachrichtigungen zurück an stoclien zu senden. Das normale GUI-Neuzeichnen der copaper-Zeichnungsdaten erfolgt in stoclien mithilfe der kopierbaren Verbindungs fähigen-Objekttechnologie.
+[StoClien implementiert](structured-storage-client-sample--stoclien-.md) auch die benutzerdefinierte IPaperSink-Schnittstelle in einem COPaperSink-COM-Objekt und verbindet diese Schnittstelle mit einem entsprechenden Verbindungspunkt im COPaper-Serverobjekt. COPaper verwendet die verbundene IPaperSink-Schnittstelle, um Benachrichtigungen zurück an StoClien zu senden. Die normale GUI-Neuzeichnung der COPaper-Zeichnungsdaten erfolgt in StoClien mithilfe der COPaper-Technologie für verbindende Objekte.
 
-[Stoclien](structured-storage-client-sample--stoclien-.md) ist eine Anwendung, die Sie direkt oder über das Eingabe Aufforderungs Fenster ausführen können. Stoclien akzeptiert einen optionalen Dateinamen Parameter in der Befehlszeile.
+[StoClien](structured-storage-client-sample--stoclien-.md) ist eine Anwendung, die Sie direkt auf normale Weise oder über das Eingabeaufforderungsfenster ausführen können. StoClien akzeptiert einen optionalen Dateinamenparameter in der Befehlszeile.
 
-Im folgenden Beispiel ist Drawing. PAP eine Verbund Datei, die eine mit dllpaper kompatible strukturierte Speicherung von Zeichnungsdaten enthält. Wenn kein Befehlszeilen-Dateiname-Parameter angegeben ist, wird von [stoclien](structured-storage-client-sample--stoclien-.md) der Standard Dateiname stoclien. PAP verwendet, und es wird versucht, das Verzeichnis im gleichen Verzeichnis wie das ausführende Stoclien.exe zu öffnen.
+Im folgenden Beispiel ist Drawing.pap eine Verbunddatei, die dllPaper-kompatible strukturierte Speicherung von Zeichnungsdaten enthält. Wenn kein Parameter für den Namen der Befehlszeilendatei angegeben ist, verwendet [StoClien](structured-storage-client-sample--stoclien-.md) den Standarddateinamen Stoclien.pap und versucht, ihn im gleichen Verzeichnis wie die ausführende Datei Stoclien.exe.
 
-**Stoclien c: \\ Zeichnungen \\ Drawing. PAP**
+**StoClien c: \\ drawings \\ drawing.pap**
 
 ## <a name="support-information"></a>Supportinformationen
 
-Weitere Informationen, funktionale Beschreibungen und ein Code-Tutorial für [stoclien](structured-storage-client-sample--stoclien-.md)finden Sie im Abschnitt Code Tour in Stoclien.htm. Weitere Informationen zum externen Benutzer Vorgang von stoclien finden Sie in den Abschnitten zu Verwendung und Betrieb in Stoclien.htm. Um Stoclient.htm zu lesen, führen Sie Tutorial.exe im haupttutorial-Verzeichnis aus, und klicken Sie in der Tabelle mit Lektionen auf die stoclien-Lektion. Sie können auch auf Stoclien.htm klicken, nachdem Sie das haupttutorial Verzeichnis in Windows-Explorer gefunden haben. Weitere Informationen zur Funktionsweise von [**stoservice**](structured-storage-server-sample--stoserve-.md) und zur Bereitstellung der zugehörigen Dienste für stoclien finden Sie unter Stoserve.htm im haupttutorial Verzeichnis. Beachten Sie, dass Sie die Stoserve.dll vor dem Erstellen von stoclien erstellen müssen. Das Makefile für [**stoservice**](structured-storage-server-sample--stoserve-.md) registriert diesen Server in der Systemregistrierung. Daher müssen Sie [**stoservice**](structured-storage-server-sample--stoserve-.md) erstellen, bevor Sie versuchen, stoclien auszuführen.
+Weitere Informationen, Funktionsbeschreibungen und ein Codetutorial für [StoClien](structured-storage-client-sample--stoclien-.md)finden Sie im Abschnitt Code Tour in Stoclien.htm. Weitere Informationen zum Externen Benutzerbetrieb von StoClien finden Sie in den Abschnitten Verwendung und Betrieb in Stoclien.htm. Führen Sie Stoclient.htm Im Hauptverzeichnis des Tutorials aus, und klicken Sie in der Tabelle der Lektionen auf die Lektion StoClien Tutorial.exe, um die Stoclient.htm zu lesen. Klicken Sie alternativ auf Stoclien.htm, nachdem Sie im Explorer das Hauptverzeichnis des Tutorials Windows haben. Weitere Informationen zur Funktionsweise [**von StoServe**](structured-storage-server-sample--stoserve-.md) und zum Verfügbar machen seiner Dienste für StoClien finden Sie unter Stoserve.htm im Hauptverzeichnis des Tutorials. Beachten Sie, dass Sie die Stoserve.dll erstellen müssen, bevor Sie StoClien erstellen. Das Makefile für [**StoServe**](structured-storage-server-sample--stoserve-.md) registriert diesen Server in der Systemregistrierung. Daher müssen Sie [**StoServe**](structured-storage-server-sample--stoserve-.md) erstellen, bevor Sie versuchen, StoClien ausführen zu können.
 
-Weitere Informationen zum Einrichten eines Systems zum Erstellen und Testen der Codebeispiele in dieser com-tutorialreihe finden Sie unter [Erstellen von Beispielen](how-to-build-samples.md). Das angegebene Makefile-Element (Makefile) ist Microsoft NMAKE-kompatibel. Wenn Sie einen Debugbuild erstellen möchten, geben Sie im Eingabe Aufforderungs Fenster den Befehl NMAKE aus.
+Weitere Informationen zum Einrichten eines Systems zum Erstellen und Testen der Codebeispiele in dieser COM-Tutorialreihe finden Sie unter [Erstellen von Beispielen.](how-to-build-samples.md) Das angegebene Makefile (MAKEFILE) ist mit Microsoft NMAKE kompatibel. Um einen Debugbuild zu erstellen, geben Sie den NMAKE-Befehl im Eingabeaufforderungsfenster aus.
 
-Zur einfacheren Verwendung wird für jedes Beispiel eine Projektdatei bereitgestellt, die in Microsoft Visual Studio verwendet werden kann. Um das Projekt für das [stoclien](structured-storage-client-sample--stoclien-.md) -Beispiel zu laden, führen Sie Visual Studio wie folgt an der Eingabeaufforderung im Beispiel Verzeichnis aus:
+Der Einfachheit halber wird für jedes Beispiel eine Projektdatei für die Verwendung in Microsoft Visual Studio. Um das Projekt für das [StoClien-Beispiel](structured-storage-client-sample--stoclien-.md) zu laden, führen Visual Studio an der Eingabeaufforderung im Beispielverzeichnis wie folgt aus:
 
-Msdev-stoclien. DSP
+MSDEV STOCLIEN. Dsp
 
-Sie können auch auf die Datei stoclient. DSP in Windows-Explorer doppelklicken, um ein Beispiel Projekt in Visual Studio zu laden. In Visual Studio können Sie die C++-Klassen der Beispiel Quelle durchsuchen und im Allgemeinen die anderen edit-compile-Debug-Vorgänge durchführen. Beachten Sie, dass die Kompilierung dieser Beispiele in Visual Studio als Teil des Server-SDK die ordnungsgemäße Einstellung von Verzeichnis Pfaden in Visual Studio erfordert. Weitere Informationen finden Sie unter [Erstellen von Beispielen](how-to-build-samples.md).
+Sie können auch auf die Datei Stoclient.dsp im Windows Explorer doppelklicken, um ein Beispielprojekt in Visual Studio. In Visual Studio können Sie die C++-Klassen der Beispielquelle durchsuchen und im Allgemeinen die anderen Edit-Compile-Debug-Vorgänge ausführen. Beachten Sie, dass die Kompilierung dieser Beispiele aus Visual Studio im Rahmen des Server SDK die ordnungsgemäße Einstellung von Verzeichnispfaden in Visual Studio. Weitere Informationen finden Sie unter [Erstellen von Beispielen.](how-to-build-samples.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Client Beispiel und andere verwandte Beispiele müssen kompiliert werden, bevor Sie den Client ausführen können. Weitere Informationen zum Erstellen der Beispiele finden Sie unter [Erstellen von Beispielen](how-to-build-samples.md). Wenn Sie die entsprechenden Beispiele erstellt haben, ist Stoclien.exe die ausführbare Client Datei für dieses Beispiel.
+Das Clientbeispiel und andere zugehörige Beispiele müssen kompiliert werden, bevor Sie den Client ausführen können. Weitere Informationen zum Erstellen der Beispiele finden Sie unter [Erstellen von Beispielen.](how-to-build-samples.md) Wenn Sie die entsprechenden Beispiele erstellt haben, Stoclien.exe die ausführbare Clientdatei, die für dieses Beispiel ausgeführt werden soll.
 
-Die Stoclien.exe-Anwendung stellt die Benutzeroberfläche für dieses Tutorial bereit. Er führt die zugeordneten, aber unabhängigen Stoserve.dll aus, um die Client-und Server Verwendung von com-strukturiertem Speicher in Verbund Dateien zu veranschaulichen.
+Die Stoclien.exe-Anwendung stellt die Benutzeroberfläche für dieses Tutorial bereit. Sie führt die zugeordneten, aber unabhängigen Stoserve.dll, um die Client- und Servernutzung des strukturierten COM-Speichers in Verbunddateien zu veranschaulichen.
 
- 
+ 
 
- 
+ 
 
 
 

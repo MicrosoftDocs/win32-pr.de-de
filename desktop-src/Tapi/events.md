@@ -1,33 +1,33 @@
 ---
-description: Ereignisse sind ein wesentlicher Bestandteil der Telefon Behandlung unter TAPI 3. Die Ereignis Behandlung umfasst vier Phasen.
+description: Ereignisse sind ein entscheidender Bestandteil der Anrufverarbeitung unter TAPI 3. Die Ereignisbehandlung umfasst vier Phasen.
 ms.assetid: db43f4e0-f2f5-49b1-a03d-3df3de0e5611
-title: Ereignisse (telefonieapi)
+title: Ereignisse (Telefonie-API)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b6a9a7d994c7bc9f8019224d826d586d698bc605
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f3b2cf181f10373505a0fe50d3c9efa7358b3ccb749acb723d8314dee27ff9aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104529072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119660860"
 ---
-# <a name="events-telephony-api"></a>Ereignisse (telefonieapi)
+# <a name="events-telephony-api"></a>Ereignisse (Telefonie-API)
 
-Ereignisse sind ein wesentlicher Bestandteil der Telefon Behandlung unter TAPI 3. Die Ereignis Behandlung umfasst vier Phasen.
+Ereignisse sind ein entscheidender Bestandteil der Anrufverarbeitung unter TAPI 3. Die Ereignisbehandlung umfasst vier Phasen.
 
-**So registrieren Sie sich für und aktivieren den Empfang von Ereignissen**
+**So registrieren Sie sich für den Empfang von Ereignissen und aktivieren diesen.**
 
-1.  Implementieren Sie die [**ittapieventnotification:: Event**](/windows/desktop/api/Tapi3if/nf-tapi3if-ittapieventnotification-event) -Methode. (TAPI ruft diese Methode auf, wenn ein Ereignis auftritt.) Diese Implementierung übernimmt in der Regel nicht mehr als die **adressieren** des **IDispatch** -Schnittstellen Zeigers und sendet dann eine Post-Nachricht an die Meldungs Pumpe der Anwendung.
-2.  Registrieren Sie die ausgehende [**ittapieventnotification**](/windows/desktop/api/Tapi3if/nn-tapi3if-ittapieventnotification) -Schnittstelle mithilfe der com-Standard [**IConnectionPointContainer**](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) -Schnittstelle und der [**IConnectionPoint**](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint) -Schnittstelle, und übergeben Sie der [**IConnectionPoint:: Empfehlung**](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) -Methode einen Zeiger auf [**ittapieventnotification:: Event**](/windows/desktop/api/Tapi3if/nf-tapi3if-ittapieventnotification-event).
-3.  Nennen Sie die " [**ittapi::p UT \_ EventFilter**](/windows/desktop/api/tapi3if/nf-tapi3if-ittapi-put_eventfilter) "-Methode, um TAPI mitzuteilen, welche Ereignisse von der Anwendung behandelt werden. Der Ereignis Filter besteht aus **bzw**. Ed-Membern der [**TAPI- \_ ereignisenumeration**](/windows/desktop/api/Tapi3if/ne-tapi3if-tapi_event) .
+1.  Implementieren Sie die [**ITTAPIEventNotification::Event-Methode.**](/windows/desktop/api/Tapi3if/nf-tapi3if-ittapieventnotification-event) (TAPI ruft diese Methode auf, wenn ein Ereignis auftritt.) In der Regel führt diese Implementierung nicht mehr als **AddRef** für den **IDispatch-Schnittstellenzeiger** aus und postt dann an die Nachrichtenpump der Anwendung.
+2.  Registrieren Sie die ausgehende [**ITTAPIEventNotification-Schnittstelle**](/windows/desktop/api/Tapi3if/nn-tapi3if-ittapieventnotification) mithilfe der COM-Standardschnittstellen [**IConnectionPointContainer**](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) und [**IConnectionPoint,**](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint) und übergeben Sie der [**IConnectionPoint::Advise-Methode**](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) einen Zeiger auf [**ITTAPIEventNotification::Event.**](/windows/desktop/api/Tapi3if/nf-tapi3if-ittapieventnotification-event)
+3.  Rufen Sie die [**ITTAPI::p ut \_ EventFilter-Methode**](/windows/desktop/api/tapi3if/nf-tapi3if-ittapi-put_eventfilter) auf, um TAPI mitzuteilen, welche Ereignisse von der Anwendung behandelt werden. Der Ereignisfilter besteht aus OR-ed-Membern der [**TAPI \_ EVENT-Enumeration.**](/windows/desktop/api/Tapi3if/ne-tapi3if-tapi_event)
     > [!Note]  
-    > Sie müssen die Ereignis **\_ Filter-Methode ittapi::p UT** zum Festlegen der Ereignis Filtermaske und zum Aktivieren des Empfangs von Ereignissen aufruft. Wenn Sie **ittapi::p UT \_ EventFilter** nicht anrufen, empfängt Ihre Anwendung keine Ereignisse.
+    > Sie müssen die **\_ EventFilter-Methode ITTAPI::p ut** aufrufen, um die Ereignisfiltermaske festzulegen und den Empfang von Ereignissen zu aktivieren. Wenn Sie **ITTAPI::p ut \_ EventFilter** nicht aufrufen, empfängt Ihre Anwendung keine Ereignisse.
 
      
 
-Sie müssen auch die [**ittapi:: registercallnotification**](/windows/desktop/api/tapi3if/nf-tapi3if-ittapi-registercallnotifications) -Methode für jedes Adress Objekt aufrufen, für das die Anwendung Aufrufe verarbeitet.
+Sie müssen auch die [**ITTAPI::RegisterCallNotifications-Methode**](/windows/desktop/api/tapi3if/nf-tapi3if-ittapi-registercallnotifications) für jedes Adressobjekt aufrufen, für das die Anwendung Aufrufe verarbeitet.
 
-Eine Liste aller Ereignis Schnittstellen finden Sie unter [Ereignis Schnittstellen](./event-interfaces.md) . Unter [Registrieren von Ereignissen](register-events.md) finden Sie Codebeispiele, die den Registrierungsprozess veranschaulichen und einen-Befehl für ein Codebeispiel [empfangen](receive-a-call.md) , das eine Verwendung von Ereignissen anzeigt.
+Eine [](./event-interfaces.md) Liste aller Ereignisschnittstellen finden Sie unter Ereignisschnittstellen. Codebeispiele zur Veranschaulichung des Registrierungsprozesses und [Zum Empfangen eines Aufrufs](receive-a-call.md) finden Sie unter Registrieren von [Ereignissen](register-events.md) für ein Codebeispiel, das eine Verwendung von Ereignissen zeigt.
 
  
 

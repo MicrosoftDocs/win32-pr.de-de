@@ -1,19 +1,19 @@
 ---
-description: In diesem Abschnitt werden die Medientypen aufgeführt, die für MPEG-1-Daten verwendet werden.
+description: In diesem Abschnitt werden die Medientypen aufgelistet, die für MPEG-1-Daten verwendet werden.
 ms.assetid: 4ea1cb84-0558-4c4a-9483-1b0f2a8f76f8
 title: MPEG-1-Medientypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0e44db1f4423365efb7814d61b35c1985142aa14
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 64f6486b455fc2045ceb0256f6b6344f06a8923ef767c397068022acec052627
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107910028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119684930"
 ---
 # <a name="mpeg-1-media-types"></a>MPEG-1-Medientypen
 
-In diesem Abschnitt werden die Medientypen aufgeführt, die für MPEG-1-Daten verwendet werden.
+In diesem Abschnitt werden die Medientypen aufgelistet, die für MPEG-1-Daten verwendet werden.
 
 ## <a name="mpeg-1-system-stream"></a>MPEG-1-Systemdatenstrom
 
@@ -73,7 +73,7 @@ In diesem Abschnitt werden die Medientypen aufgeführt, die für MPEG-1-Daten ve
 | Subtype               | MEDIASUBTYPE \_ MPEG1Payload                 |
 | Formattyp           | FORMAT \_ WaveFormatEx                       |
 | Formatstruktur      | [**MPEG1WAVEFORMAT**](/windows/desktop/api/mmreg/ns-mmreg-mpeg1waveformat) |
-| Medienbeispielinhalt | Mpeg-1-Audiodaten mit Byte-Ausrichtung.            |
+| Medienbeispielinhalt | Bytebündig ausgerichtete MPEG-1-Audiodaten.            |
 
 
 
@@ -143,28 +143,28 @@ In diesem Abschnitt werden die Medientypen aufgeführt, die für MPEG-1-Daten ve
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die DirectShow MPEG-1-Filter unterstützen diese Typen wie folgt.
 
 
 
-| Filter               | Direction | Unterstützte Medientypen                                                                                             |
+| Filtern               | Richtung | Unterstützte Medientypen                                                                                             |
 |----------------------|-----------|-------------------------------------------------------------------------------------------------------------------|
 | MPEG-1-Splitter      | Eingabe     | MPEG-1-SystemstreamMPEG-1-Systemstream aus Video-CD<br/>                                                 |
-| MPEG-1-Splitter      | Output    | MPEG-1-AudiopaketMPEG-1 Audionutzlast<br/> MPEG-1-Videopaket<br/> MPEG-1-Videonutzlast<br/> |
+| MPEG-1-Splitter      | Ausgabe    | MPEG-1-AudiopaketMPEG-1 Audionutzlast<br/> MPEG-1-Videopaket<br/> MPEG-1-Videonutzlast<br/> |
 | Softwareaudiocodec | Eingabe     | MPEG-1-AudiopaketMPEG-1 Audionutzlast<br/>                                                                |
 | Softwarevideocodec | Eingabe     | MPEG-1-VideopaketMPEG-1 Videonutzlast<br/>                                                                |
-| Softwareaudiocodec | Output    | PCM-Audio                                                                                                         |
-| Softwarevideocodec | Output    | Unkomprimiertes Video (Y41P, YUY2, UYCLIP, RGB-24, RGB-32, RGB-565, RGB-555, RGB-8)                                    |
+| Softwareaudiocodec | Ausgabe    | PCM-Audio                                                                                                         |
+| Softwarevideocodec | Ausgabe    | Nicht komprimiertes Video (Y41P, YUY2, UYVY, RGB-24, RGB-32, RGB-565, RGB-555, RGB-8)                                    |
 
 
 
  
 
-MPEG-1 Video-Paket- und Nutzlastmedientypen enthalten einen vollständigen Sequenzheader, sodass Daten aus der Mitte einer Datei abgespielt werden können, ohne dass ein Sequenzheader zum Initialisieren der Videowiedergabe erforderlich ist.
+MPEG-1 Videopaket- und Nutzlastmedientypen enthalten einen vollständigen Sequenzheader, sodass Daten aus der Mitte einer Datei wiedergegeben werden können, ohne dass ein Sequenzheader zum Initialisieren der Videowiedergabe erforderlich ist.
 
-Der Videosequenzheader wird an den Videodatentyp für MPEG-Video angefügt, damit die Wiedergabe von der Mitte eines Streams aus beginnen kann. Die Länge dieses Felds beträgt bis zu 140 Bytes. Sie enthält den Startcode (0x000001B3) des Sequenzheaders am Anfang sowie alle Quantisierungsmatrizen, die im ersten gefundenen Sequenzheader gefunden wurden.
+Der Videosequenzheader wird an den Videodatentyp für MPEG-Videos angefügt, damit die Wiedergabe von der Mitte eines Streams aus beginnen kann. Die Länge dieses Felds beträgt bis zu 140 Bytes. sie enthält den Startcode des Sequenzheaders (0x000001B3) am Anfang sowie alle Quantisierungsmatrizen, die im ersten gefundenen Sequenzheader gefunden wurden.
 
  
 

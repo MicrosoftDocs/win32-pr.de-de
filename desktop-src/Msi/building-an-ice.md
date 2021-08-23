@@ -1,58 +1,58 @@
 ---
-description: Wenn Sie die internen Konsistenzprüfungen, die Sie benötigen, in den in der ICE-Referenz aufgeführten, benutzerdefinierten Ice-Aktionen nicht finden können, müssen Sie Ihr eigenes Eis vorbereiten, um das Paket zu überprüfen.
+description: Wenn Sie die internen Konsistenzauswertungen, die Sie benötigen, nicht unter den vorhandenen benutzerdefinierten ICE-Aktionen finden können, die in der ICE-Referenz aufgeführt sind, müssen Sie Ihr eigenes ICE vorbereiten, um Ihr Paket zu überprüfen.
 ms.assetid: d9ff43ee-8e7a-4132-ac2f-232dc24606d8
-title: Aufbauen eines Eis
+title: Erstellen eines ICE
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f2de8dab0284a612723461d11b420ed1f22b244
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6b4b79ab8e17d53ccfb60484c0d307f668c44a7a0e530cf776b10e73a697541c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349165"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119500764"
 ---
-# <a name="building-an-ice"></a>Aufbauen eines Eis
+# <a name="building-an-ice"></a>Erstellen eines ICE
 
-Wenn Sie die [internen Konsistenz](internal-consistency-evaluators-ices.md) Prüfungen, die Sie benötigen, in den in der [Ice-Referenz](ice-reference.md)aufgeführten, benutzerdefinierten Ice-Aktionen nicht finden können, müssen Sie Ihr eigenes Eis vorbereiten, um das Paket zu überprüfen.
+Wenn Sie die [internen Konsistenzauswertungen](internal-consistency-evaluators-ices.md) nicht finden können, die Sie unter den vorhandenen benutzerdefinierten ICE-Aktionen in der [ICE-Referenz](ice-reference.md)benötigen, müssen Sie Ihr eigenes ICE vorbereiten, um Ihr Paket zu überprüfen.
 
-Wenn Sie benutzerdefinierte Ice-Aktionen erstellen, sollten Sie folgende Schritte ausführen:
+Beim Erstellen von benutzerdefinierten ICE-Aktionen sollten Sie folgende Schritte ausführen:
 
--   Basieren Sie auf den ICES nur auf benutzerdefinierte Aktionen der Typen, die in der angezeigten Tabelle aufgeführt sind.
--   [**Msiprocessmessage**](/windows/desktop/api/Msiquery/nf-msiquery-msiprocessmessage) anrufen und einen installmessage- \_ Benutzertyp von Message veröffentlichen. Befolgen Sie beim Erstellen von Ice-Nachrichten das Nachrichtenformat in den [Richtlinien](ice-message-guidelines.md)für die Ice-Nachricht.
--   Schreiben Sie Ihr Eis so, dass alle API-Fehler erfasst werden und immer Fehler erfolgreich zurückgegeben werden \_ . Dies ist erforderlich, damit nachfolgende benutzerdefinierte Aktionen nach dem Ausfall eines ICE ausgeführt werden können.
+-   Basieren Sie die ICEs nur auf benutzerdefinierten Aktionen von Typen, die in der angezeigten Tabelle aufgeführt sind.
+-   Rufen Sie [**MsiProcessMessage auf,**](/windows/desktop/api/Msiquery/nf-msiquery-msiprocessmessage) und senden Sie einen INSTALLMESSAGE \_ USER-Nachrichtentyp. Wenn Sie Ihre ICE-Nachrichten erstellen, befolgen Sie das Nachrichtenformat in den [ICE-Nachrichtenrichtlinien.](ice-message-guidelines.md)
+-   Schreiben Sie Ihren ICE so, dass api-Fehler erfasst werden, und geben Sie immer ERROR \_ SUCCESS zurück. Dies ist erforderlich, damit nachfolgende benutzerdefinierte Aktionen nach dem Ausfall eines ICE ausgeführt werden können.
 
-Benutzerdefinierte Ice-Aktionen sind auf die folgenden benutzerdefinierten Aktions Typen beschränkt.
+Benutzerdefinierte ICE-Aktionen sind auf die folgenden benutzerdefinierten Aktionstypen beschränkt.
 
 
 
-| Benutzerdefinierter Aktionstyp                                 | BESCHREIBUNG               |
+| Benutzerdefinierter Aktionstyp                                 | Beschreibung               |
 |----------------------------------------------------|---------------------------|
 | [Benutzerdefinierter Aktionstyp 1](custom-action-type-1.md)   | DLL im binären Stream      |
 | [Benutzerdefinierter Aktionstyp 2](custom-action-type-2.md)   | EXE im binären Stream      |
 | [Benutzerdefinierter Aktionstyp 5](custom-action-type-5.md)   | JScript im binären Stream  |
 | [Benutzerdefinierter Aktionstyp 6](custom-action-type-6.md)   | VBScript im binären Stream |
-| [Benutzerdefinierter Aktionstyp 37](custom-action-type-37.md) | JScript-Code als Zeichenfolge    |
+| [Benutzerdefinierter Aktionstyp 37](custom-action-type-37.md) | JScript Code als Zeichenfolge    |
 | [Benutzerdefinierter Aktionstyp 38](custom-action-type-38.md) | VBScript-Code als Zeichenfolge   |
 
 
 
  
 
-Wenn Sie eine benutzerdefinierte Ice-Aktion erstellen, gehen Sie wie folgt vor:
+Gehen Sie beim Erstellen einer benutzerdefinierten ICE-Aktion wie folgt vor:
 
--   Gehen Sie nicht davon aus, dass das Handle für die Engine, das das Ice empfängt, eine Installations Instanz der Installer-Datenbank ist. Wenn es sich nicht um eine-Installations Instanz handelt, werden bestimmte Eigenschaften nicht definiert, die Quell-und Zielverzeichnisse werden nicht aufgelöst, und die aktuellen Funktions Zustände sind nicht definiert.
--   Verlassen Sie sich weder auf die vorherige Ausführung noch auf die Nichtausführung von Installationsprogramm Aktionen, benutzerdefinierten Aktionen oder anderen Eis. Da ein vorheriger Ice temporäre Spalten in einer beliebigen Tabelle erstellt hat, sollten Autoren nach Möglichkeit nach Möglichkeit auf Spalten verweisen. Der ICES sollte alle temporären Spalten oder Tabellen bereinigen, bevor Sie beendet werden.
--   Gehen Sie nicht davon aus, dass die Autoren auf ein Bild des Quell Verzeichnisses der Datenbank zugreifen können.
--   Gehen Sie nicht davon aus, dass die an der Datenbank vorgenommenen Änderungen nicht beibehalten werden.
+-   Gehen Sie nicht davon aus, dass das Handle für die Engine, die der ICE empfängt, eine Installationsinstanz der Installationsdatenbank ist. Wenn es sich nicht um eine Installationsinstanz handelt, werden bestimmte Eigenschaften nicht definiert, die Quell- und Zielverzeichnisse werden nicht aufgelöst, und die aktuellen Featurezustände werden nicht definiert.
+-   Verlassen Sie sich nicht auf die vorherige oder nicht ausgeführte Installationsprogrammaktion, benutzerdefinierte Aktion oder einen anderen ICE. Da ein früherer ICE möglicherweise temporäre Spalten in einer Beliebigen Tabelle erstellt hat, sollten Autoren nach Möglichkeit nach Namen auf Spalten verweisen. ICEs sollten alle temporären Spalten oder Tabellen bereinigen, bevor sie beendet werden.
+-   Gehen Sie nicht davon aus, dass Autoren Zugriff auf ein Image des Quellverzeichnisses der Datenbank haben.
+-   Gehen Sie nicht davon aus, dass an der Datenbank vorgenommene Änderungen nicht beibehalten werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Sample Ice in C++](sample-ice-in-c-.md)
+[ICE-Beispiel in C++](sample-ice-in-c-.md)
 </dt> <dt>
 
-[Sample Ice in VBScript](sample-ice-in-vbscript.md)
+[ICE-Beispiel in VBScript](sample-ice-in-vbscript.md)
 </dt> </dl>
 
  

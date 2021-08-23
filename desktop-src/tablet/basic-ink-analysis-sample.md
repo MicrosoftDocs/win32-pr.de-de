@@ -1,42 +1,42 @@
 ---
-description: Das Beispiel für die einfache Ink-Analyse zeigt, wie die InkAnalyzer-Klasse frei Hand Eingaben in verschiedene Wort-und Zeichnungs Segmente unterteilt Bei diesem Beispiel handelt es sich um eine aktualisierte Version des frei Hand Teiler-Beispiels.
+description: Das Beispiel grundlegende Ink-Analyse zeigt, wie die InkAnalyzer-Klasse Ink in verschiedene Wort- und Zeichnungssegmente unterteilt. Dieses Beispiel ist eine aktualisierte Version des Beispiels "Ink Divider".
 ms.assetid: cb9a28d9-f8c6-478e-ae43-2d30106edc7b
-title: Beispiel für grundlegende Ink-Analyse
+title: Grundlegendes Beispiel für die Ink-Analyse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e94ac73ca9049169c6e406059665a66e8eaa6f3b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ab307deac8ac58a741b0c7f332986b09074f4f5c6a8afa53f0156a94916bf16
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119660830"
 ---
-# <a name="basic-ink-analysis-sample"></a>Beispiel für grundlegende Ink-Analyse
+# <a name="basic-ink-analysis-sample"></a>Grundlegendes Beispiel für die Ink-Analyse
 
-Das Beispiel für die einfache Ink-Analyse zeigt, wie die [InkAnalyzer](/previous-versions/ms583671(v=vs.100)) -Klasse frei Hand Eingaben in verschiedene Wort-und Zeichnungs Segmente unterteilt
+Das Beispiel grundlegende Ink-Analyse zeigt, wie die [InkAnalyzer-Klasse Ink](/previous-versions/ms583671(v=vs.100)) in verschiedene Wort- und Zeichnungssegmente unterteilt.
 
-Bei diesem Beispiel handelt es sich um eine aktualisierte Version des frei Hand [Teiler](ink-divider-sample.md)-Beispiels. Während das frei Hand Trennzeichen die [Divider](/previous-versions/ms839398(v=msdn.10)) -Klasse verwendet, wird in diesem Beispiel die neuere und bevorzugte InkAnalysis-API verwendet. Die InkAnalysis-API kombiniert den [Erkennungs Kontext](/previous-versions/ms828542(v=msdn.10)) und den unter Teiler zu einer API und erweitert die Funktionalität beider Funktionen.
+Dieses Beispiel ist eine aktualisierte Version des [Ink Divider-Beispiels.](ink-divider-sample.md) Während das Ink Divider Sample die [Divider-Klasse](/previous-versions/ms839398(v=msdn.10)) verwendet, verwendet dieses Beispiel die neuere und bevorzugte InkAnalysis-API. Die InkAnalysis-API kombiniert [recognizerContext](/previous-versions/ms828542(v=msdn.10)) und Divider in einer API und erweitert die Funktionalität beider ApIs.
 
-Wenn Sie das Formular aktualisieren, zeichnet das Beispiel ein Rechteck um alle analysierten Einheiten: Wörter, Zeilen, Absätze, Schreib Bereiche, Zeichnungen und Aufzählungen. Das Formular verwendet unterschiedliche Farben für die verschiedenen Einheiten. Die Rechtecke werden ebenfalls durch unterschiedliche Beträge vergrößert, um sicherzustellen, dass kein Rechteck von anderen verdeckt wird.
+Wenn Sie das Formular aktualisieren, zeichnet das Beispiel ein Rechteck um jede analysierte Einheit: Wörter, Zeilen, Absätze, Schreibbereiche, Zeichnungen und Aufzählungszeichen. Das Formular verwendet unterschiedliche Farben für die verschiedenen Einheiten. Die Rechtecke werden auch um verschiedene Mengen vergrößert, um sicherzustellen, dass kein Rechteck von anderen verdeckt wird.
 
-In der folgenden Tabelle werden die Farbe und die Vergrößerung der einzelnen analysierten Einheiten angegeben.
+Die folgende Tabelle gibt die Farbe und Färbung für jede analysierte Einheit an.
 
 
 
-| Analysierte Einheit             | Farbe des Rechtecks | Rechteck Vergrößerung (Pixel) |
+| Analysierte Einheit             | Farbe des Rechtecks | Rechteckige Vergrößerung (Pixel) |
 |---------------------------|--------------------|--------------------------------|
 | Word<br/>           | Grün<br/>   | 1<br/>                   |
-| Zeile<br/>           | Magenta<br/> | 3<br/>                   |
+| Linie<br/>           | Magenta<br/> | 3<br/>                   |
 | Paragraph<br/>      | Blau<br/>    | 5<br/>                   |
-| Bereich wird geschrieben<br/> | Gelb<br/>  | 7<br/>                   |
+| Schreibregion<br/> | Gelb<br/>  | 7<br/>                   |
 | Zeichnung<br/>        | Red<br/>     | 1<br/>                   |
-| Streif<br/>         | Orange<br/>  | 1<br/>                   |
+| Kugel<br/>         | Orange<br/>  | 1<br/>                   |
 
 
 
  
 
-Sie können Striche im Formular löschen. In der Beispielanwendung können Sie zwischen den Freihand-und den Lösch Modus wechseln, um die Funktion des Stifts zu ändern.
+Sie können Striche im Formular löschen. In der Beispielanwendung können Sie zwischen dem Ink- und dem Erase-Modus wechseln, um die Funktion des Stifts zu ändern.
 
 
 ```C++
@@ -69,7 +69,7 @@ Sie können Striche im Formular löschen. In der Beispielanwendung können Sie z
 
 
 
-Wenn Sie Striche hinzufügen oder löschen, aktualisiert die Beispiele den [InkAnalyzer](/previous-versions/ms583671(v=vs.100)).
+Wenn Sie Striche hinzufügen oder löschen, wird in den Beispielen [inkAnalyzer](/previous-versions/ms583671(v=vs.100))aktualisiert.
 
 
 ```C++
@@ -106,16 +106,16 @@ Wenn Sie Striche hinzufügen oder löschen, aktualisiert die Beispiele den [InkA
 
 
 
-Beachten Sie, dass im Menü Modus die automatische Layoutanalyse standardmäßig aktiviert ist. Wenn diese Option ausgewählt ist, [wird der](/previous-versions/ms833057(v=msdn.10)) [Stroke](/previous-versions/ms835344(v=msdn.10)) -Ereignishandler und der [strokeslösch](/previous-versions/ms835360(v=msdn.10)) -Ereignishandler die [BackgroundAnalyze](/previous-versions/ms568972(v=vs.100)) -Methode jedes Mal aufgerufen, wenn ein Strich erstellt oder gelöscht wird.
+Beachten Sie, dass im Menü Modus die automatische Layoutanalyse standardmäßig aktiviert ist. Wenn diese Option ausgewählt ist, rufen die [Stroke-](/previous-versions/ms835344(v=msdn.10)) und [StrokesDeleting-Ereignishandler](/previous-versions/ms835360(v=msdn.10)) des [InkOverlay-Objekts](/previous-versions/ms833057(v=msdn.10)) jedes Mal die [BackgroundAnalyze-Methode](/previous-versions/ms568972(v=vs.100)) auf, wenn ein Strich erstellt oder gelöscht wird.
 
 > [!Note]  
-> Wenn die [Analyse](/previous-versions/ms568971(v=vs.100)) Methode des [InkAnalyzer](/previous-versions/ms583671(v=vs.100)) -Objekts mit mehr als wenigen Strichen aufgerufen wird, wird eine merkliche Verzögerung in einer Anwendung erzeugt. Der Grund hierfür ist, dass "analysieren" eine synchrone Handschrift Analyse ist In der Praxis wird die Analysemethode nur aufgerufen, wenn Sie das Ergebnis benötigen. Andernfalls verwenden Sie die asynchrone [BackgroundAnalyze](/previous-versions/ms568972(v=vs.100)) -Methode, wie im Beispiel gezeigt.
+> Das Aufrufen der [Analyze-Methode](/previous-versions/ms568971(v=vs.100)) des [InkAnalyzer-Objekts](/previous-versions/ms583671(v=vs.100)) mit mehr als ein paar vorhandenen Strichen führt zu einer spürbaren Verzögerung in einer Anwendung. Dies liegt daran, dass Analyze ein synchroner Vorgang zur Analyse von Ink ist. In der Praxis rufen Sie die Analyze-Methode nur auf, wenn Sie das Ergebnis benötigen. Verwenden Sie andernfalls die asynchrone [BackgroundAnalyze-Methode,](/previous-versions/ms568972(v=vs.100)) wie im Beispiel gezeigt.
 
  
 
 ## <a name="handling-the-analysis-results"></a>Verarbeiten der Analyseergebnisse
 
-Im Beispiel werden zwei Arrays erstellt, die die verschiedenen Rechtecke enthalten, entweder horizontal oder gedreht. Verwenden Sie ein gedrehtes Begrenzungsfeld, um den Winkel zu erhalten, in dem eine Zeile von Wörtern geschrieben wird. Das Beispiel zeigt die Eigenschaften, die vom [InkAnalyzer](/previous-versions/ms583671(v=vs.100)) zurückgegeben werden, und zeigt das umgebende Feld oder das gedrehte umgebende Feld an (abhängig von der Menü Auswahl).
+Im Beispiel werden zwei Arrays erstellt, die die verschiedenen Rechtecke enthalten, entweder horizontal oder gedreht. Verwenden Sie einen gedrehten Begrenzungsfeld, um den Winkel abzurufen, in den eine Zeile mit Wörtern geschrieben wird. Das Beispiel zeigt die eigenschaften, die von [InkAnalyzer](/previous-versions/ms583671(v=vs.100)) zurückgegeben werden, und zeigt das begrenzungsfeld oder das gedrehte Begrenzungsfeld (je nach Menüauswahl) an.
 
 
 ```C++
@@ -274,23 +274,23 @@ Im Beispiel werden zwei Arrays erstellt, die die verschiedenen Rechtecke enthalt
 
 
 
-Der Parser berechnet [getrotatedboundingbox](/previous-versions/ms569544(v=vs.100)) während der Analyse. Sie können aus verschiedenen nützlichen Gründen auf die Informationen aus den gedrehten umgebenden Feldern in der Anwendung zugreifen:
+Der Parser berechnet [GetRotatedBoundingBox](/previous-versions/ms569544(v=vs.100)) während der Analyse. Sie können aus verschiedenen nützlichen Gründen über die gedrehten Begrenzungsfelder in Ihrer Anwendung auf die Informationen zugreifen:
 
--   Erkennen oder zeichnen Sie die Begrenzungen einer einzelnen Zeile, eines Absatzes oder einer anderen Einheit.
--   Bestimmen Sie den Winkel, in dem eine Zeile oder ein Absatz geschrieben wird.
--   Implementieren Sie Funktionen wie die Auswahl für eine Zeile, einen Absatz oder eine andere Einheit.
+-   Erkennen oder Zeichnen der Grenzen einer einzelnen Zeile, eines Absatzes oder einer anderen Einheit.
+-   Bestimmen Sie den Winkel, in dem eine Linie oder ein Absatz geschrieben wird.
+-   Implementieren Sie Features wie die Auswahl für eine Zeile, einen Absatz oder eine andere Einheit.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Grundlegende Erkennungs-und Handschrift Analyse](basic-recognition-and-ink-analysis.md)
+[Grundlegende Erkennung und Ink-Analyse](basic-recognition-and-ink-analysis.md)
 </dt> <dt>
 
-[Beispiel für gescannte Papier Form](scanned-paper-form-sample.md)
+[Beispiel für gescanntes Papierformular](scanned-paper-form-sample.md)
 </dt> <dt>
 
-[Ink-Divider-Beispiel](ink-divider-sample.md)
+[Beispiel für Ink Divider](ink-divider-sample.md)
 </dt> </dl>
 
  

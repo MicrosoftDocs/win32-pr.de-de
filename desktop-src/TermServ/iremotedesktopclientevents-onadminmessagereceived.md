@@ -1,12 +1,12 @@
 ---
-title: Iremotedesktopclientevents-Methode (onadminmessagereceived)
-description: Wird aufgerufen, wenn das Client Steuerelement eine administrative Nachricht empfängt.
+title: IRemoteDesktopClientEvents OnAdminMessageReceived-Methode
+description: Wird aufgerufen, wenn das Clientsteuer steuerelement eine Administratornachricht empfängt.
 ms.assetid: CD580207-CEC1-493B-989E-7C1D4FA71228
 ms.tgt_platform: multiple
 keywords:
-- Onadminmessagereceived-Methode Remotedesktopdienste
-- Onadminmessagereceived-Methode Remotedesktopdienste, iremotedesktopclientevents-Schnittstelle
-- Iremotedesktopclientevents-Schnittstelle Remotedesktopdienste, onadminmessagereceived-Methode
+- OnAdminMessageReceived-Remotedesktopdienste
+- OnAdminMessageReceived-Methode Remotedesktopdienste , IRemoteDesktopClientEvents-Schnittstelle
+- IRemoteDesktopClientEvents-Schnittstelle Remotedesktopdienste , OnAdminMessageReceived-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 201dd3111dbac0b6395654ef8dfad21318419de3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b6c50b4b3f26564cc93f1e41653e856f2984559234de92dd2ed2ab02bee20cd6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119511890"
 ---
-# <a name="iremotedesktopclienteventsonadminmessagereceived-method"></a>Iremotedesktopclientevents:: onadminmessagereceived-Methode
+# <a name="iremotedesktopclienteventsonadminmessagereceived-method"></a>IRemoteDesktopClientEvents::OnAdminMessageReceived-Methode
 
-Wird aufgerufen, wenn das Client Steuerelement eine administrative Nachricht empfängt.
+Wird aufgerufen, wenn das Clientsteuer steuerelement eine Administratornachricht empfängt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void OnAdminMessageReceived(
 
 <dl> <dt>
 
-*AdminMessage* \[ in\]
+*adminMessage* \[ In\]
 </dt> <dd>
 
 Die Meldung.
@@ -64,7 +64,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                 |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>         |
-| IID<br/>                      | Diid \_ iremotedesktopclientevents ist als 079863b7-6d47-4105-8bfe-0cdcb360e67d definiert.<br/> |
+| IID<br/>                      | DIID \_ IRemoteDesktopClientEvents ist als 079863B7-6D47-4105-8BFE-0CDCB360E67D definiert.<br/> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Iremotedesktopclientevents**](iremotedesktopclientevents.md)
+[**IRemoteDesktopClientEvents**](iremotedesktopclientevents.md)
 </dt> </dl>
 
  

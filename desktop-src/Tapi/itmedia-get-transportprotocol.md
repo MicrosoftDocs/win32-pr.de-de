@@ -1,21 +1,21 @@
 ---
-description: Das \_ Transportprotokoll wird von der Get transportprotocol-Methode abgerufen.
+description: Die get \_ TransportProtocol-Methode ruft das Transportprotokoll ab.
 ms.assetid: d270d6f4-bdcf-4cf4-970b-65f0be706171
-title: 'ITmedia:: get_TransportProtocol-Methode (sdpblb. h)'
+title: ITMedia::get_TransportProtocol-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7cf2bc66a98e181674bbf6f7956579bbaa0b5a72
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a7927469ff00caab36ab45af12939c6f2f6518a415d4a764c3d04f9c715db75e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682770"
 ---
-# <a name="itmediaget_transportprotocol-method"></a>ITmedia:: get \_ transportprotocol-Methode
+# <a name="itmediaget_transportprotocol-method"></a>\_ITMedia::get-TransportProtocol-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Das Transportprotokoll wird von der **get \_ transportprotocol** -Methode abgerufen. Diese Angabe wird zusätzlich zum Medienformat angegeben, sodass dasselbe Standard Medienformat auch dann über verschiedene Transportprotokolle übertragen werden kann, wenn das Netzwerkprotokoll identisch ist, z. b. mit der Mehrwertsteuer-und RTP-PCM-Audiodatei.
+Die **get \_ TransportProtocol-Methode** ruft das Transportprotokoll ab. Dies wird zusätzlich zum Medienformat angegeben, sodass das gleiche Standardmedienformat auch dann über verschiedene Transportprotokolle übertragen werden kann, wenn das Netzwerkprotokoll identisch ist, z. B. bei Der PCM-Audiodatei und rtp-PCM-Audio.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT get_TransportProtocol(
 
 <dl> <dt>
 
-*ppprotocol* \[ vorgenommen\]
+*ppProtocol* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die **BSTR** -Darstellung des Transport Protokolls.
+Zeiger auf die **BSTR-Darstellung** des Transportprotokolls.
 
 </dd> </dl>
 
@@ -48,18 +48,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *ppprotocol* -Parameter ist kein gültiger Zeiger.<br/>   |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Der *ppProtocol-Parameter* ist kein gültiger Zeiger.<br/>   |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung muss [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) verwenden, um den für den *ppprotocol* -Parameter belegten Arbeitsspeicher freizugeben.
+Die Anwendung muss [**SysFreeString verwenden,**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) um den für den *ppProtocol-Parameter* zugeordneten Arbeitsspeicher freizu geben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,9 +67,9 @@ Die Anwendung muss [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sys
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
@@ -78,10 +78,10 @@ Die Anwendung muss [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sys
 
 <dl> <dt>
 
-[**ITmedia**](itmedia.md)
+[**ITMedia**](itmedia.md)
 </dt> <dt>
 
-[**ITmedia::p UT \_ transportprotocol**](itmedia-put-transportprotocol.md)
+[**ITMedia::put \_ TransportProtocol**](itmedia-put-transportprotocol.md)
 </dt> </dl>
 
  

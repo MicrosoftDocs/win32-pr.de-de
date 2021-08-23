@@ -1,7 +1,7 @@
 ---
-description: Löscht einen Eintrag für eine VHD-Momentaufnahme in einer VHD-Satz Datei.
+description: Löscht einen VHD-Momentaufnahmeeintrag in einer VHD-Set-Datei.
 ms.assetid: 37d55a5f-209d-42ce-8f69-8b494055e263
-title: Deletevhdsnapshot-Methode der Msvm_ImageManagementService-Klasse
+title: DeleteVHDSnapshot-Methode der Msvm_ImageManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 5c7f3f115825aedb3a21a8f33326a712c52e0780
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 45a15b03b3ca26375ef0a563981cb9405c4397f355735c173e105029959d8282
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350477"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119522660"
 ---
-# <a name="deletevhdsnapshot-method-of-the-msvm_imagemanagementservice-class"></a>Deletevhdsnapshot-Methode der MSVM \_ imagemanagementservice-Klasse
+# <a name="deletevhdsnapshot-method-of-the-msvm_imagemanagementservice-class"></a>DeleteVHDSnapshot-Methode der Msvm \_ ImageManagementService-Klasse
 
-Löscht einen Eintrag für eine VHD-Momentaufnahme in einer VHD-Satz Datei.
+Löscht einen VHD-Momentaufnahmeeintrag in einer VHD-Set-Datei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ uint32 DeleteVHDSnapshot(
 
 <dl> <dt>
 
-*Vhdsetpath* \[ in\]
+*VHDSetPath* \[ In\]
 </dt> <dd>
 
-Zeichenfolge, die den Pfad zur VHD-Satz Datei enthält, die die betreffende Momentaufnahme enthält.
+Eine Zeichenfolge, die den Pfad zur VHD-Set-Datei mit der in Frage gestellten Momentaufnahme enthält.
 
 </dd> <dt>
 
-*Snapshotid* \[ in\]
+*SnapshotId* \[ In\]
 </dt> <dd>
 
-Eine GUID, die die Momentaufnahme-ID für den zu löschenden Eintrag der VHD-Momentaufnahme darstellt.
+Eine GUID, die die Momentaufnahme-ID für den zu löschenden VHD-Momentaufnahmeeintrag darstellt.
 
 </dd> <dt>
 
-*Persistreferencesnapshot* \[ in\]
+*PersistReferenceSnapshot* \[ In\]
 </dt> <dd>
 
-Gibt an, ob ein Verweis basierter Momentaufnahme Daten Satz nach dem Löschen der Momentaufnahme beibehalten werden soll.
+Gibt an, ob ein Nur-Verweis-Momentaufnahmedatensatz beibehalten werden soll, nachdem die Momentaufnahme gelöscht wurde.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Ein Verweis auf den Auftrag (kann NULL sein, wenn die Aufgabe abgeschlossen ist).
+Ein Verweis auf den Auftrag (kann NULL sein, wenn der Task abgeschlossen ist).
 
 </dd> </dl>
 
@@ -79,10 +79,10 @@ Diese Methode gibt einen der folgenden Werte zurück:
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -91,31 +91,31 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -124,10 +124,10 @@ Die **Datei wurde nicht gefunden** (32779).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -136,7 +136,7 @@ Die **Datei wurde nicht gefunden** (32779).
 
 <dl> <dt>
 
-[**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md)
+[**Msvm \_ ImageManagementService**](msvm-imagemanagementservice.md)
 </dt> </dl>
 
  

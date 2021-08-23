@@ -1,7 +1,7 @@
 ---
-description: Bestimmt, ob eine Anwendung und eine Themen Zeichenfolge (&\# 0034; AppName \| TopicName&\# 0034;) verwendet die richtige Syntax.
+description: Bestimmt, ob eine Anwendung und eine Themenzeichenfolge (&\# 0034; AppName \| TopicName&\# 0034;) verwendet die richtige Syntax.
 ms.assetid: bcf5442b-452e-4b42-95e9-f09bf885be40
-title: Nddeisvalidapptopiclist-Funktion (nddeapi. h)
+title: NDdeIsValidAppTopicList-Funktion (Nddeapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - Nddeapi.dll
-ms.openlocfilehash: fb990830583f6684502438f132c1c98f5741a0ad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f7b70d3e33f67c8c0a457f85df91e83e374a3ef4d0f0b1a0af1c5c41ea81c2ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362665"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119611130"
 ---
-# <a name="nddeisvalidapptopiclist-function"></a>Nddeisvalidapptopiclist-Funktion
+# <a name="nddeisvalidapptopiclist-function"></a>NDdeIsValidAppTopicList-Funktion
 
-\[Network DDE wird nicht mehr unterstützt. Nddeapi.dll ist unter Windows Vista vorhanden, aber alle Funktionsaufrufe geben "ndde" \_ nicht \_ implementiert zurück.\]
+\[Netzwerk-DDE wird nicht mehr unterstützt. Nddeapi.dll ist auf Windows Vista vorhanden, aber alle Funktionsaufrufe geben NDDE \_ NICHT \_ IMPLEMENTIERT zurück.\]
 
-Bestimmt, ob eine Anwendung und eine Themen Zeichenfolge ("*appname* \| *TopicName*") die richtige Syntax verwendet.
+Bestimmt, ob eine Anwendungs- und Themenzeichenfolge ("*AppName* \| *TopicName*") die richtige Syntax verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,22 +43,22 @@ BOOL NDdeIsValidAppTopicList(
 
 <dl> <dt>
 
-*targettopisch* \[ in\]
+*targetTopic* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die zu validierende Anwendungs-und Themen Zeichenfolge. Dieser Parameter darf nicht **null** sein.
+Ein Zeiger auf die zu überprüfende Anwendung und Themenzeichenfolge. Dieser Parameter darf nicht **NULL sein.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der *targettopparameter* über eine gültige Syntax verfügt, ist der Rückgabewert ungleich 0 (null).
+Wenn der *targetTopic-Parameter* über eine gültige Syntax verfügt, ist der Rückgabewert ungleich 0 (null).
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird auch von [**ndabshareadd**](nddeshareadd.md) aufgerufen, wenn Sie die DDE-Freigabe erstellt.
+Diese Funktion wird auch von [**NDdeShareAdd aufgerufen,**](nddeshareadd.md) wenn die DDE-Freigabe erstellt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,10 +68,10 @@ Diese Funktion wird auch von [**ndabshareadd**](nddeshareadd.md) aufgerufen, wen
 |-------------------------------------|-------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                      |
-| Header<br/>                   | <dl> <dt>Ndde API. h</dt> </dl>      |
-| Bibliothek<br/>                  | <dl> <dt>Ndde API. lib</dt> </dl>    |
+| Header<br/>                   | <dl> <dt>Nddeapi.h</dt> </dl>      |
+| Bibliothek<br/>                  | <dl> <dt>Nddeapi.lib</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>Nddeapi.dll</dt> </dl>    |
-| Unicode- und ANSI-Name<br/>   | **Nddeisvalidapptopiclistw** (Unicode) und **nddeisvalidapptopiclista** (ANSI)<br/> |
+| Unicode- und ANSI-Name<br/>   | **NDdeIsValidAppTopicListW** (Unicode) und **NDdeIsValidAppTopicListA** (ANSI)<br/> |
 
 
 
@@ -79,13 +79,13 @@ Diese Funktion wird auch von [**ndabshareadd**](nddeshareadd.md) aufgerufen, wen
 
 <dl> <dt>
 
-[Übersicht über das Netzwerk dynamischer Datenaustausch](network-dynamic-data-exchange.md)
+[Übersicht dynamische Daten Exchange Netzwerksicherheit](network-dynamic-data-exchange.md)
 </dt> <dt>
 
-[Network DDE-Funktionen](network-dde-functions.md)
+[DDE-Netzwerkfunktionen](network-dde-functions.md)
 </dt> <dt>
 
-[**Ndabshareadd**](nddeshareadd.md)
+[**NDdeShareAdd**](nddeshareadd.md)
 </dt> </dl>
 
  

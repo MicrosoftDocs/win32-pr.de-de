@@ -1,34 +1,34 @@
 ---
-description: Löschen von Inhalt vom Gerät
+description: Löschen von Inhalten vom Gerät
 ms.assetid: 195f68d5-f139-456e-b000-86c91732a292
-title: Löschen von Inhalt vom Gerät
+title: Löschen von Inhalten vom Gerät
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b1c7b8d266517933caaf770236e96110a3ef334c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d22400c5812c4996fe38836c1f05e264c9bff66ada5124969139c0f8f037b6b5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353052"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119657930"
 ---
-# <a name="deleting-content-from-the-device"></a>Löschen von Inhalt vom Gerät
+# <a name="deleting-content-from-the-device"></a>Löschen von Inhalten vom Gerät
 
-Ein weiterer häufiger Vorgang, der von einer WPD-Anwendung ausgeführt wird, ist das Löschen von Inhalten von einem Speicherort auf dem Gerät.
+Ein weiterer gängiger Vorgang, der von einer WPD-Anwendung durchgeführt wird, ist das Löschen von Inhalten von einem Speicherort auf dem Gerät.
 
-Vorgänge zum Löschen von Inhalt werden mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen ausgeführt.
+Vorgänge zum Löschen von Inhalten werden mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen durchgeführt.
 
 
 
 | Schnittstelle                                                                                      | BESCHREIBUNG                                      |
 |------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| [**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)                             | Bietet Zugriff auf die Methoden zum Löschen von Inhalt. |
-| [**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Ermöglicht den Zugriff auf Eigenschaften spezifische Methoden.    |
+| [**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)                             | Ermöglicht den Zugriff auf die Methoden zum Löschen von Inhalten. |
+| [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Ermöglicht den Zugriff auf eigenschaftenspezifische Methoden.    |
 
 
 
  
 
-Die Funktion deletecontentfromdevice im Modul contenttransfer. cpp der Beispielanwendung veranschaulicht, wie eine Anwendung den Inhalt auf dem Gerät löschen könnte. Vorgänge zum Löschen von Inhalten sind sehr ähnlich wie Inhalts Übertragungs Vorgänge. Der einzige Unterschied besteht darin, dass die Anwendung während eines Löschvorgangs [**iportabledevicecontent::D Elete**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-delete) anstelle von [**iportabledevicecontent:: Move**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-move)aufruft. (Eine Beschreibung der Aufgaben, die zum Aufrufen der Delete-Methode führen, finden Sie im Thema [Verschieben von Inhalten auf dem Gerät](moving-content-on-the-device.md) .)
+Die DeleteContentFromDevice-Funktion im ContentTransfer.cpp-Modul der Beispielanwendung veranschaulicht, wie eine Anwendung Inhalte auf dem Gerät löschen kann. Vorgänge zum Löschen von Inhalten sind mit Inhaltsübertragungsvorgängen sehr ähnlich. Der einzige Unterschied besteht darin, dass die Anwendung während eines Löschvorgangs [**IPortableDeviceContent::D elete**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-delete) statt [**IPortableDeviceContent::Move**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-move)aufruft. (Eine Beschreibung der Aufgaben, die zum Aufrufen der Delete-Methode führen, finden Sie im Thema Verschieben von [Inhalten auf](moving-content-on-the-device.md) dem Gerät.)
 
 
 ```C++
@@ -155,13 +155,13 @@ void DeleteContentFromDevice(
 
 <dl> <dt>
 
-[**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
+[**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
 </dt> <dt>
 
-[**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
+[**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
 </dt> <dt>
 
-[**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
+[**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

@@ -1,23 +1,23 @@
 ---
-description: Code Beispiel ist ein Single Thread-Pipe-Server, der eine Nachrichtentyp Pipe erstellt und überlappende Vorgänge verwendet.
+description: Das Codebeispiel ist ein Singlethread-Pipeserver, der eine Pipe vom Typ Message erstellt und überlappende Vorgänge verwendet.
 ms.assetid: 8b73485c-c6f7-44df-9e53-308df2c752e7
-title: Named Pipe-Server mithilfe von Vervollständigungs Routinen
+title: Named Pipe-Server mit Vervollständigungsroutinen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: efa3ac238680de5cee701488bc4cd60f6543d991
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 61ddd1a5213de8593a5697341ef3aed4988b7a700c02db9eba83440f40634627
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119611200"
 ---
-# <a name="named-pipe-server-using-completion-routines"></a>Named Pipe-Server mithilfe von Vervollständigungs Routinen
+# <a name="named-pipe-server-using-completion-routines"></a>Named Pipe-Server mit Vervollständigungsroutinen
 
-Das folgende Beispiel zeigt einen Single Thread-Pipe-Server, der eine Nachrichtentyp Pipe erstellt und überlappende Vorgänge verwendet. Er verwendet die erweiterten Funktionen "read [**fileex**](/windows/desktop/api/fileapi/nf-fileapi-readfileex) " und " [**Write fileex**](/windows/desktop/api/fileapi/nf-fileapi-writefileex) ", um überlappende e/a-Vorgänge mithilfe einer Abschluss Routine auszuführen, die nach Abschluss des Vorgangs in die Warteschlange eingereiht wird. Der Pipeserver verwendet die [**WaitForSingleObjectEx**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobjectex) -Funktion, die einen Warn baren warte Vorgang ausführt, der zurückgibt, wenn eine Abschluss Routine für die Ausführung bereit ist. Die wait-Funktion gibt auch dann zurück, wenn ein Ereignis Objekt signalisiert wird, das in diesem Beispiel anzeigt, dass der überlappende [**connectnamedpipe**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-connectnamedpipe) -Vorgang abgeschlossen wurde (ein neuer Client hat eine Verbindung hergestellt). Dieser Pipeserver kann mit dem in [Named Pipe-Client](named-pipe-client.md)beschriebenen Pipe-Client verwendet werden.
+Das folgende Beispiel ist ein Singlethread-Pipeserver, der eine Pipe vom Typ Message erstellt und überlappende Vorgänge verwendet. Sie verwendet die erweiterten [**Funktionen ReadFileEx**](/windows/desktop/api/fileapi/nf-fileapi-readfileex) und [**WriteFileEx,**](/windows/desktop/api/fileapi/nf-fileapi-writefileex) um überlappende E/A-Aktionen mithilfe einer Vervollständigungsroutine auszuführen, die nach Abschluss des Vorgangs zur Ausführung in die Warteschlange gestellt wird. Der Pipeserver verwendet die [**WaitForSingleObjectEx-Funktion,**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobjectex) die einen warnbaren Wartevorgang ausführt, der zurückgibt, wenn eine Abschlussroutine ausgeführt werden kann. Die wait-Funktion gibt auch zurück, wenn ein Ereignisobjekt signalisiert wird, was in diesem Beispiel angibt, dass der überlappende [**ConnectNamedPipe-Vorgang**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-connectnamedpipe) abgeschlossen wurde (ein neuer Client hat eine Verbindung hergestellt). Dieser Pipeserver kann mit dem pipe-Client verwendet werden, der in [Named Pipe Client beschrieben wird.](named-pipe-client.md)
 
-Anfänglich erstellt der Pipe-Server eine einzelne Instanz der Pipe und startet einen überlappenden [**connectnamedpipe**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-connectnamedpipe) -Vorgang. Wenn ein Client eine Verbindung herstellt, ordnet der Server eine Struktur zu, um Speicher für diese Pipeinstanz bereitzustellen, und ruft dann die Funktion "read [**fileex**](/windows/desktop/api/fileapi/nf-fileapi-readfileex) " auf, um eine Sequenz von e/a-Vorgängen für die Kommunikation mit dem Client zu starten. Jeder Vorgang gibt eine Abschluss Routine an, die den nächsten Vorgang in der Sequenz ausführt. Die Sequenz wird beendet, wenn der Client getrennt wird und die Pipe-Instanz geschlossen ist. Nach dem Start der Sequenz von Vorgängen für den neuen Client erstellt der Server eine weitere Pipeinstanz und wartet, bis der nächste Client eine Verbindung herstellt.
+Zunächst erstellt der Pipeserver eine einzelne Instanz der Pipe und startet einen überlappenden [**ConnectNamedPipe-Vorgang.**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-connectnamedpipe) Wenn ein Client eine Verbindung herstellt, ordnet der Server eine -Struktur zu, um Speicher für diese Pipeinstanz zu bieten, und ruft dann die [**ReadFileEx-Funktion**](/windows/desktop/api/fileapi/nf-fileapi-readfileex) auf, um eine Sequenz von E/A-Vorgängen zum Verarbeiten der Kommunikation mit dem Client zu starten. Jeder Vorgang gibt eine Vervollständigungsroutine an, die den nächsten Vorgang in der Sequenz ausführt. Die Sequenz wird beendet, wenn der Client getrennt und die Pipeinstanz geschlossen wird. Nachdem die Abfolge der Vorgänge für den neuen Client gestartet wurde, erstellt der Server eine weitere Pipeinstanz und wartet, bis der nächste Client eine Verbindung hergestellt hat.
 
-Die Parameter der Funktionen "read [**fileex**](/windows/desktop/api/fileapi/nf-fileapi-readfileex) " und " [**Write fileex**](/windows/desktop/api/fileapi/nf-fileapi-writefileex) " geben eine Vervollständigungs Routine und einen Zeiger auf eine [**über**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur an. Dieser Zeiger wird in seinem *lpoverlap* -Parameter an die Vervollständigungs Routine übergeben. Da die **über** Lapp Ende Struktur auf das erste Element in der Struktur verweist, die für jede Pipe-Instanz zugeordnet ist, kann die Abschluss Routine den *lpoverlap* -Parameter verwenden, um auf die Struktur der Pipeinstanz zuzugreifen.
+Die Parameter der [**Funktionen ReadFileEx**](/windows/desktop/api/fileapi/nf-fileapi-readfileex) und [**WriteFileEx**](/windows/desktop/api/fileapi/nf-fileapi-writefileex) geben eine Vervollständigungsroutine und einen Zeiger auf eine [**OVERLAPPED-Struktur**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) an. Dieser Zeiger wird an die Vervollständigungsroutine im *lpOverLap-Parameter* übergeben. Da die **OVERLAPPED-Struktur** auf den ersten Member in der Struktur verweist, die für jede Pipeinstanz zugeordnet ist, kann die Vervollständigungsroutine ihren *lpOverLap-Parameter* verwenden, um auf die -Struktur für die Pipeinstanz zu zugreifen.
 
 
 ```C++

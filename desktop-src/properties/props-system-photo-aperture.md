@@ -1,19 +1,19 @@
 ---
-description: Der Aperture-Wert des Bilds in Spitze Einheiten.
+description: Der Öffnungswert des Bilds in APEX-Einheiten.
 ms.assetid: ec8c0271-1e1e-4d37-a09a-f430d0682213
-title: System. Photo. Aperture
+title: System.Photo.Aperture
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2273425c1974617b7d76657f818c4f1c39cd3aea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 433298e2e7ac728b91c5b7cd0dd65e6ee1c637e6ff8f32b89a61f1793f41e1b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215762"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119596720"
 ---
-# <a name="systemphotoaperture"></a>System. Photo. Aperture
+# <a name="systemphotoaperture"></a>System.Photo.Aperture
 
-Der Aperture-Wert des Bilds in Spitze Einheiten. Einen Vergleich von [System. Photo. Aperture]() -Nummern und [System. Photo. f Number](./props-system-photo-fnumber.md) -Werten finden Sie in der Spezifikation für die austauschbare Image Datei (EXIF) 2,2, Anhang C. Diese Eigenschaft wird aus [System. Photo. aperturenumerator](./props-system-photo-aperturenumerator.md) und [System. Photo. aperturenenner](./props-system-photo-aperturedenominator.md)berechnet.
+Der Öffnungswert des Bilds in APEX-Einheiten. Einen Vergleich von [System.Photo.Aperture-Zahlen]() und [System.Photo.FNumber-Werten](./props-system-photo-fnumber.md) finden Sie in der Exif 2.2-Spezifikation (Anhang C). Diese Eigenschaft wird aus [System.Photo.ApertureNumerator](./props-system-photo-aperturenumerator.md) und [System.Photo.ApertureDenominator](./props-system-photo-aperturedenominator.md)berechnet.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7
 
@@ -46,57 +46,57 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Exchangeable Image File Format für digitale Kameras: EXIF Version 2,2](https://www.exif.org/Exif2-2.PDF)
+[Exchangeable Image File Format für Digital Still Cameras: Exif Version 2.2](https://www.exif.org/Exif2-2.PDF)
 </dt> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

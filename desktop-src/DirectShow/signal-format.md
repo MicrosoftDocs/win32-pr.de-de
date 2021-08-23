@@ -1,25 +1,25 @@
 ---
-description: Signal Format
+description: Signalformat
 ms.assetid: 8684972c-3233-49bf-8c34-ca644aca432a
-title: Signal Format
+title: Signalformat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cb6983328729e0dc72d93c0e00a74e7e65a7f237
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 66add7467f2f497985094c603aaea83b55967f6b2c07eba4cacde080503ef2e3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860314"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119583180"
 ---
-# <a name="signal-format"></a>Signal Format
+# <a name="signal-format"></a>Signalformat
 
-Das Signal Format eines DV-Camcorders kann NTSC, PAL, Standard oder Long-Play sein.
+Das Signalformat eines DV-Dv-Formats kann NTSC oder PAL, Standard oder LongPlay sein.
 
-**Msdv-Treiber**
+**MSDV-Treiber**
 
-Um das Eingabe Signal Format vom msdv-Treiber abzurufen, müssen Sie die [**IAMExtTransport:: gettransportbasicparameters**](/windows/desktop/api/Strmif/nf-strmif-iamexttransport-gettransportbasicparameters) -Methode aufrufen und das ED \_ transbasic- \_ Eingabe Signal-Flag übergeben \_ . Die-Methode gibt eine definierte Konstante zurück, die das Format angibt.
+Um das Eingabesignalformat vom MSDV-Treiber zu erhalten, rufen Sie die [**IAMExtTransport::GetTransportBasicParameters-Methode**](/windows/desktop/api/Strmif/nf-strmif-iamexttransport-gettransportbasicparameters) auf, und übergeben Sie das Flag ED \_ TRANSBASIC \_ INPUT \_ SIGNAL. Die -Methode gibt eine definierte Konstante zurück, die das Format angibt.
 
-Der folgende Code überprüft das Signal Format und verwendet diesen Wert, um die durchschnittliche Zeit pro Frame zu berechnen. Der Variablen Modus empfängt die Signal Format Konstante.
+Der folgende Code überprüft das Signalformat und berechnet mit diesem Wert die durchschnittliche Zeit pro Frame. Der Variablenmodus empfängt die Konstante signalformat.
 
 
 ```C++
@@ -52,17 +52,17 @@ if (SUCCEEDED(hr))
 
 
 
-Zum Abrufen des Ausgabesignal Formats müssen Sie dieselbe Methode mit dem ED \_ transbasic- \_ ausgabesignflag abrufen \_ .
+Um das Ausgabesignalformat zu erhalten, rufen Sie dieselbe Methode mit dem Flag ED \_ TRANSBASIC \_ OUTPUT \_ SIGNAL auf.
 
 **UVC-Treiber**
 
-Um das Eingabe-oder Ausgabesignal Format vom UVC-Treiber abzurufen, nennen Sie [**iamstreamconfig:: GetFormat**](/windows/desktop/api/Strmif/nf-strmif-iamstreamconfig-getformat) in der PIN, und untersuchen Sie den Videoformat Block. (Bei UVC-Geräten gibt der im vorherigen Beispiel gezeigte Code in der Regel "Ed \_ " zurück. Das transbasic- \_ Signal \_ ist unbekannt, sodass es nicht zuverlässig ist.)
+Um das Eingabe- oder Ausgabesignalformat vom UVC-Treiber zu erhalten, rufen Sie [**IAMStreamConfig::GetFormat**](/windows/desktop/api/Strmif/nf-strmif-iamstreamconfig-getformat) auf dem Pin auf, und untersuchen Sie den Videoformatblock. (Bei UVC-Geräten gibt der im vorherigen Beispiel gezeigte Code in der Regel ED zurück. \_ TRANSBASIC \_ SIGNAL \_ UNKNOWN, daher ist es nicht zuverlässig.)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Steuern eines DV-Camcorder](controlling-a-dv-camcorder.md)
+[Steuern eines DV-Dvd](controlling-a-dv-camcorder.md)
 </dt> </dl>
 
  

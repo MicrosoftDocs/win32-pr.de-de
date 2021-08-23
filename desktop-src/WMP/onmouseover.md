@@ -1,9 +1,9 @@
 ---
-title: "\"onmouseover"
-description: Der "onmouseover-Ereignishandler behandelt ein Ereignis, das auftritt, wenn der Benutzer den Mauszeiger über das Element platziert.
+title: Onmouseover
+description: Der Onmouseover-Ereignishandler behandelt ein Ereignis, das auftritt, wenn der Benutzer den Zeiger zum ersten Mal auf das Element legt.
 ms.assetid: b62da27e-0bdf-46b5-b956-cb20c29df1c2
 keywords:
-- "\"onmouseover-Windows-Media Player"
+- onmouseover Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,24 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 82163d74f060d9f57be2decb78c517844c1f5b3f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6d59809a7b0d1a5530359f6e8d288e21d0c13e67ac7ee9dc9b2537eb43183a7f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358004"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119468030"
 ---
-# <a name="onmouseover"></a>"onmouseover
+# <a name="onmouseover"></a>Onmouseover
 
-Der **"onmouseover** -Ereignishandler behandelt ein Ereignis, das auftritt, wenn der Benutzer den Mauszeiger über das Element platziert.
+Der **Onmouseover-Ereignishandler** behandelt ein Ereignis, das auftritt, wenn der Benutzer den Zeiger zum ersten Mal auf das Element legt.
 
 ``` syntax
 onmouseover
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Ereignishandler ist für das **Wiedergabe** Listenelement nicht anwendbar.
+Dieser Ereignishandler gilt nicht für das **PLAYLIST-Element.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,11 +38,11 @@ Dieser Ereignishandler ist für das **Wiedergabe** Listenelement nicht anwendbar
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 70 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 70 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

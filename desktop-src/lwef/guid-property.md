@@ -4,16 +4,16 @@ description: GUID-Eigenschaft
 ms.assetid: d57e1d7c-df65-40ff-9068-64b3506835c6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5bdf36ce888b9526b6bbe2c11d8567d292dcdbc6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7f4502cb1806dd8e1923201cecd8350438532099da939d745c79ca88b268f3ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206935"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119610160"
 ---
 # <a name="guid-property"></a>GUID-Eigenschaft
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
@@ -27,17 +27,17 @@ Gibt den eindeutigen Bezeichner für das Zeichen zurück.
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Büros. ***Zeichen ("*** Merkmal-ID * * *"). GUID**
+*agent.***Characters("**_CharacterID_*_"). GUID_*
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft gibt eine Zeichenfolge zurück, die den internen Bezeichner darstellt, den der Server verwendet, um auf eindeutige Identifizierung des Zeichens zu verweisen. Eine Zeichen Kennung wird festgelegt, wenn Sie mit dem Microsoft-Agent-Zeichen-Editor kompiliert wird. Die Eigenschaft ist schreibgeschützt.
+Diese Eigenschaft gibt eine Zeichenfolge zurück, die den internen Bezeichner darstellt, der vom Server verwendet wird, um das Zeichen eindeutig zu identifizieren. Ein Zeichenbezeichner wird festgelegt, wenn er mit dem Microsoft Agent-Zeichen-Editor kompiliert wird. Die Eigenschaft ist schreibgeschützt.
 
- 
+ 
 
- 
+ 
 
 
 

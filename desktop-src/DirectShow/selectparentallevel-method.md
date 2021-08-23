@@ -1,24 +1,24 @@
 ---
-description: Die selectparser-allevel-Methode legt die angegebene Jugend Stufe für die nachfolgende Wiedergabe fest.
+description: Die SelectParentalLevel-Methode legt die angegebene Jugendebene für die nachfolgende Wiedergabe fest.
 ms.assetid: ffd1e204-6ed2-4190-8635-9f3866d38099
-title: Selectparser-allevel-Methode
+title: SelectParentalLevel-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cb00172b8e61f353c45981af628eb396bca7a7df
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 95de7e8cbf1fb6fa284eddefa1ba07ebb9268825116fdac9c97fbd5d42bac84e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521272"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119684040"
 ---
-# <a name="selectparentallevel-method"></a>Selectparser-allevel-Methode
+# <a name="selectparentallevel-method"></a>SelectParentalLevel-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `SelectParentalLevel` Methode legt die angegebene Jugend Stufe für die nachfolgende Wiedergabe fest.
+Die `SelectParentalLevel` -Methode legt die angegebene Jugendebene für die nachfolgende Wiedergabe fest.
 
 ``` syntax
 MSWebDVD.SelectParentalLevel(iLevel, sUserName, sPassword)
@@ -31,21 +31,21 @@ MSWebDVD.SelectParentalLevel(iLevel, sUserName, sPassword)
 <span id="iLevel"></span><span id="ilevel"></span><span id="ILEVEL"></span>*iLevel*
 </dt> <dd>
 
-Gibt die Jugend Verwaltungsebene als Ganzzahl an. Um die Eltern Verwaltung zu aktivieren, muss der *iLevel* -Parameter zwischen 1 und 8 liegen. Um die Jugendverwaltung zu deaktivieren, legen Sie *iLevel* auf-1 fest.
+Gibt die Ebene der Elternverwaltung als ganze Zahl an. Um die Elternverwaltung zu aktivieren, muss *der iLevel-Parameter* zwischen 1 und 8 liegen. Um die Elternverwaltung zu deaktivieren, legen *Sie iLevel* auf -1 fest.
 
 </dd> <dt>
 
 <span id="sUserName"></span><span id="susername"></span><span id="SUSERNAME"></span>*sUserName*
 </dt> <dd>
 
-Gibt den aktuellen Benutzer als Zeichenfolge an. (Wird zurzeit ignoriert.)
+Gibt den aktuellen Benutzer als Zeichenfolge an. (Derzeit ignoriert.)
 
 </dd> <dt>
 
 <span id="sPassword"></span><span id="spassword"></span><span id="SPASSWORD"></span>*sPassword*
 </dt> <dd>
 
-Gibt das Kennwort an, das zurzeit als Zeichenfolge in der Registrierung gespeichert ist.
+Gibt das Kennwort an, das derzeit in der Registrierung als Zeichenfolge gespeichert ist.
 
 </dd> </dl>
 
@@ -53,30 +53,30 @@ Gibt das Kennwort an, das zurzeit als Zeichenfolge in der Registrierung gespeich
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode legt die Zugriffsebene im mswebdvd-Objekt fest, das bestimmt, welche Inhalte der Benutzer wiedergeben kann. Eine höhere Ebene kann Inhalte auf niedrigerer Ebene wiedergeben, aber niedrigere Ebenen können keine Inhalte höherer Ebene wiedergeben. Die genaue Bedeutung der acht Verwaltungsebenen für die DVD ist abhängig vom Land/der Region. In den USA und Kanada werden die Ebenen der Kategorie Motion Image Association of America (MPa) Rating zugeordnet. Die Eltern Verwaltung im DVD-Navigator ist standardmäßig deaktiviert.
+Diese Methode legt die Zugriffsebene im MSWebDVD-Objekt fest, die bestimmt, welche Inhalte der Benutzer wieder geben kann. Höhere Ebenen können Inhalte auf niedrigerer Ebene wieder geben, aber niedrigere Ebenen können keine Inhalte auf höherer Ebene wieder geben. Die genaue Bedeutung der acht Dvd-Elternverwaltungsebenen variiert je nach Land/Region. In den USA und Kanada werden die Ebenen den MpAA-Bewertungskategorien (Motion Picture Association of America) zugeordnet. Die Elternverwaltung im DVD-Navigator ist standardmäßig deaktiviert.
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Selectpartalcountry**](selectparentalcountry-method.md)
+[**Wählen SieParentalCountry aus.**](selectparentalcountry-method.md)
 </dt> <dt>
 
-[**Notifyparametriallevelchange**](notifyparentallevelchange-method.md)
+[**NotifyParentalLevelChange**](notifyparentallevelchange-method.md)
 </dt> <dt>
 
-[**Gettitleparamevels**](gettitleparentallevels-method.md)
+[**GetTitleParentalLevels**](gettitleparentallevels-method.md)
 </dt> <dt>
 
-[**Getplayerparameentalcountry**](getplayerparentalcountry-method.md)
+[**GetPlayerParentalCountry**](getplayerparentalcountry-method.md)
 </dt> <dt>
 
-[**Getplayerparser**](getplayerparentallevel-method.md)
+[**GetPlayerParentalLevel**](getplayerparentallevel-method.md)
 </dt> <dt>
 
-[**Accept-Parser-allevelchange**](acceptparentallevelchange-method.md)
+[**AcceptParentalLevelChange**](acceptparentallevelchange-method.md)
 </dt> </dl>
 
  

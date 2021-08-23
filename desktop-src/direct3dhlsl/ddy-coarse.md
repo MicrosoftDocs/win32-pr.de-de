@@ -1,9 +1,9 @@
 ---
 title: ddy_coarse-Funktion
-description: Berechnet eine partielle Ableitung mit niedriger Genauigkeit in Bezug auf die y-Koordinate für den Bildschirmbereich.
+description: Berechnet eine partielle Ableitung mit niedriger Genauigkeit in Bezug auf die Bildschirmraum-y-Koordinate.
 ms.assetid: f6103cd3-f7ee-41c2-b3cf-9e72ca84b25e
 keywords:
-- ddy_coarse-Funktion HLSL
+- ddy_coarse HlSL-Funktion
 topic_type:
 - apiref
 api_name:
@@ -13,22 +13,22 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b6fef330e919a31e39306742bb03280454d47626
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 997b17d486d5e0a396e420bdc7b36da9d7ef83366a0d5c290110cf1cf2098c25
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104038122"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119490640"
 ---
-# <a name="ddy_coarse-function"></a>rauen \_ grobe Funktion
+# <a name="ddy_coarse-function"></a>ddy \_ coarse-Funktion
 
-Berechnet eine partielle Ableitung mit niedriger Genauigkeit in Bezug auf die y-Koordinate für den Bildschirmbereich.
+Berechnet eine partielle Ableitung mit niedriger Genauigkeit in Bezug auf die Bildschirmraum-y-Koordinate.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 float ddy_coarse(
-  in float value
+  in float value
 );
 ```
 
@@ -36,7 +36,7 @@ float ddy_coarse(
 
 <dl> <dt>
 
-*Wert* \[ in\]
+*wert* \[ In\]
 </dt> <dd>
 
 Typ: **float**
@@ -49,11 +49,11 @@ Der Eingabewert.
 
 Typ: **float**
 
-Die partielle Ableitung mit niedriger Genauigkeit des *Werts*.
+Die partielle Ableitung des *Werts* mit niedriger Genauigkeit.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Außerdem sind die folgenden überladenen Versionen verfügbar:
+Die folgenden überladenen Versionen sind ebenfalls verfügbar:
 
 ``` syntax
 float2 ddy_coarse(float2 value);
@@ -61,45 +61,45 @@ float3 ddy_coarse(float3 value);
 float4 ddy_coarse(float4 value);
 ```
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     |         |
 
 
 
- 
+ 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

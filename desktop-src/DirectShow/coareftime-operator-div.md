@@ -1,7 +1,7 @@
 ---
-description: Dieser Operator dividiert eine Verweis Zeit durch einen-Wert.
+description: Dieser Operator dividiert eine Verweiszeit durch einen -Wert.
 ms.assetid: fb2e2a4b-dc0b-42e3-86c7-8aa2c60daedc
-title: Coaref time. Operator/Method (ctlutil. h)
+title: COARefTime.operator/-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6e1e4d7b7adb881ac11988a2d2c46946ff6cddcc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d6ff5f23691a3c4c44fdb9b93006834913648391ed473cf84906dff3eb8afb21
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370220"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119566020"
 ---
-# <a name="coareftimeoperator-method"></a>Coaref time. Operator/Method
+# <a name="coareftimeoperator-method"></a>COARefTime.operator/-Methode
 
-Dieser Operator dividiert eine Verweis Zeit durch einen-Wert.
+Dieser Operator dividiert eine Verweiszeit durch einen -Wert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ Divisor.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein neues **coareftime** -Objekt zurück, das dem Quotienten dieses-Objekts und **l** entspricht.
+Gibt ein neues **COARefTime-Objekt** zurück, das dem Quotienten dieses Objekts und **l entspricht.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt ein neues **coareftime** -Objekt zurück, das dem Quotienten dieses-Objekts
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt ein neues **coareftime** -Objekt zurück, das dem Quotienten dieses-Objekts
 
 <dl> <dt>
 
-[**Coaref Time-Klasse**](coareftime.md)
+[**COARefTime-Klasse**](coareftime.md)
 </dt> </dl>
 
  

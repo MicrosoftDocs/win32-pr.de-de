@@ -1,24 +1,24 @@
 ---
-description: Parallele Assemblys können als freigegebene Assemblys oder als private Assemblys installiert werden. Weitere Informationen finden Sie unter Installieren paralleler Assemblys als private Assemblys und Installieren paralleler Assemblys als freigegebene Assemblys.
+description: Sie können assemblys nebeneinander als freigegebene Assemblys oder als private Assemblys installieren. Weitere Informationen finden Sie unter Installing Side-by-Side Assemblies as Private Assemblies (Installieren von nebenseitigen Assemblys als private Assemblys) und Installing Side-by-Side Assemblies as Shared Assemblies (Installieren von nebenseitigen Assemblys als freigegebene Assemblys).
 ms.assetid: 36f271ff-be0c-4162-8e1c-86088ebddbcc
-title: Parallele Assemblys werden installiert.
+title: Installieren von nebenseitigen Assemblys
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3be68580c7f0e3890c2e53b148daec92fbad18ae
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2124b490d64427e80b5beee53d1221cba4d5e59a23dc2d72c2da6833e14a98cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119142133"
 ---
-# <a name="installing-side-by-side-assemblies"></a>Parallele Assemblys werden installiert.
+# <a name="installing-side-by-side-assemblies"></a>Installieren von nebenseitigen Assemblys
 
-Parallele Assemblys können als frei [gegebene](/windows/desktop/Msi/shared-assemblies) Assemblys oder als [private](/windows/desktop/Msi/private-assemblies)Assemblys installiert werden. Weitere Informationen finden Sie unter Installieren paralleler Assemblys [als private](installing-side-by-side-assemblies-as-private-assemblies.md) Assemblys und Installieren paralleler Assemblys [als freigegebene](installing-side-by-side-assemblies-as-shared-assemblies.md)Assemblys.
+Sie können assemblys nebeneinander als [freigegebene Assemblys](/windows/desktop/Msi/shared-assemblies) oder als [private Assemblys](/windows/desktop/Msi/private-assemblies)installieren. Weitere Informationen finden Sie unter [Installing Side-by-Side Assemblies as Private Assemblies (Installieren von nebenseitigen Assemblys als private Assemblys)](installing-side-by-side-assemblies-as-private-assemblies.md) und [Installing Side-by-side Assemblies as Shared Assemblies (Installieren von nebenseitigen Assemblys als freigegebene Assemblys).](installing-side-by-side-assemblies-as-shared-assemblies.md)
 
 Beachten Sie dabei Folgendes:
 
--   Assemblys, die im globalen Assemblycache durch eine Installation mithilfe des [Installations Kontexts](/windows/desktop/Msi/installation-context) pro Benutzer installiert werden, werden nicht durch den Windows-Datei Schutz geschützt.
--   Assemblys, die durch eine Installation im globalen Assemblycache mithilfe des [Installations Kontexts](/windows/desktop/Msi/installation-context) pro Computer installiert werden, werden durch den Windows-Datei Schutz geschützt.
+-   Assemblys, die mithilfe des [Benutzerinstallationskontexts](/windows/desktop/Msi/installation-context) im globalen Assemblycache installiert werden, werden nicht durch Windows Dateischutz geschützt.
+-   Assemblys, die mithilfe des [Installationskontexts](/windows/desktop/Msi/installation-context) pro Computer im globalen Assemblycache installiert werden, werden durch Windows Dateischutz geschützt.
 
  
 

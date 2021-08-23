@@ -1,9 +1,9 @@
 ---
-title: LVM_INSERTITEM Meldung (kommstrg. h)
+title: LVM_INSERTITEM-Nachricht (Commctrl.h)
 description: Fügt ein neues Element in ein Listenansicht-Steuerelement ein. Sie können diese Nachricht explizit oder mithilfe des ListView \_ InsertItem-Makros senden.
 ms.assetid: ac283e81-5b9f-4a90-acdb-fd7813c9cb84
 keywords:
-- Windows-Steuerelemente für LVM_INSERTITEM Meldung
+- LVM_INSERTITEM Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 467c6b595e307dc16f87e40da858ff8b120fb3f7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9408a8d09adca2a097281b13e56241c66a68521dcef0892502d7f8d0e14d25e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119575710"
 ---
-# <a name="lvm_insertitem-message"></a>LVM \_ InsertItem-Nachricht
+# <a name="lvm_insertitem-message"></a>LVM \_ INSERTITEM-Nachricht
 
-Fügt ein neues Element in ein Listenansicht-Steuerelement ein. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ InsertItem**](/windows/desktop/api/Commctrl/nf-commctrl-listview_insertitem) -Makros senden.
+Fügt ein neues Element in ein Listenansicht-Steuerelement ein. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ InsertItem-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_insertitem) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,29 +37,29 @@ Fügt ein neues Element in ein Listenansicht-Steuerelement ein. Sie können dies
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**lvitem**](/windows/win32/api/commctrl/ns-commctrl-lvitema) -Struktur, die die Attribute des Listen Ansichts Elements angibt. Verwenden Sie den **iItem** -Member, um den NULL basierten Index anzugeben, an dem das neue Element eingefügt werden soll. Wenn dieser Wert größer als die Anzahl der aktuell in der ListView enthaltenen Elemente ist, wird das neue Element an das Ende der Liste angefügt und dem richtigen Index zugewiesen. Überprüfen Sie den Rückgabewert der Nachricht, um den dem Element zugewiesenen tatsächlichen Index zu bestimmen.
+Zeiger auf eine [**LVITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-lvitema) die die Attribute des Listenansichtselements angibt. Verwenden Sie das **iItem-Element,** um den nullbasierten Index anzugeben, an dem das neue Element eingefügt werden soll. Wenn dieser Wert größer als die Anzahl der elemente ist, die derzeit in der Listenansicht enthalten sind, wird das neue Element am Ende der Liste angefügt und dem richtigen Index zugewiesen. Überprüfen Sie den Rückgabewert der Nachricht, um den tatsächlichen Index zu ermitteln, der dem Element zugewiesen ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Index des neuen Elements zurück, wenn erfolgreich, andernfalls-1.
+Gibt bei Erfolg den Index des neuen Elements zurück, andernfalls -1.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können " [**ListView \_ InsertItem**](/windows/desktop/api/Commctrl/nf-commctrl-listview_insertitem) " oder " **LVM \_ InsertItem** " nicht verwenden, um unter Elemente einzufügen. Der **iSubItem** -Member der [**lvitem**](/windows/win32/api/commctrl/ns-commctrl-lvitema) -Struktur muss NULL sein. Weitere Informationen zum Festlegen von unter Elementen finden Sie unter [**LVM \_**](lvm-setitem.md) -Element.
+Sie können [**ListView \_ InsertItem**](/windows/desktop/api/Commctrl/nf-commctrl-listview_insertitem) oder **LVM \_ INSERTITEM** nicht verwenden, um Unteritems einzufügen. Der **iSubItem-Member** der [**LVITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-lvitema) muss 0 (null) sein. Informationen zum Festlegen von Unteritems finden Sie unter [**LVM \_ SETITEM.**](lvm-setitem.md)
 
-Wenn für ein Listenansicht-Steuerelement die [**LVS \_ Ex- \_ Kontrollkästchen**](extended-list-view-styles.md) festgelegt sind, werden alle Werte, die in Bits 12 bis 15 des **State** -Members der [**lvitem**](/windows/win32/api/commctrl/ns-commctrl-lvitema) -Struktur platziert werden, ignoriert. Wenn ein Element mit diesem Stilsatz hinzugefügt wird, wird es immer auf den deaktivierten Zustand festgelegt.
+Wenn für ein Listenansichtssteuerelement der [**LVS \_ EX \_ CHECKBOXES-Stil**](extended-list-view-styles.md) festgelegt ist, werden alle Werte ignoriert, die in den Bits 12 bis 15 des **Zustandsmembers** der [**LVITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-lvitema) platziert werden. Wenn ein Element mit diesem Stilsatz hinzugefügt wird, wird es immer auf den status unchecked festgelegt.
 
-Wenn ein Listenansicht-Steuerelement entweder den [**LVS \_ SortAscending**](list-view-window-styles.md) -oder [**LVS \_ sortabsteig**](list-view-window-styles.md) enden Fenster Stil aufweist, schlägt eine **LVM \_ InsertItem** -Nachricht fehl, wenn Sie versuchen, ein Element einzufügen, das LPSTR \_ textcallback als Wert für das zugehörige **pszText** -Element aufweist.
+Wenn ein Listenansichtssteuerelement entweder über das Fensterformat [**LVS \_ SORTASCENDING**](list-view-window-styles.md) oder [**LVS \_ SORTDESCENDING**](list-view-window-styles.md) verfügt, schlägt eine **LVM \_ INSERTITEM-Nachricht** fehl, wenn Sie versuchen, ein Element einzufügen, das LPSTR \_ TEXTCALLBACK als Wert für das **pszText-Element** enthält.
 
-Die **LVM- \_ InsertItem** -Nachricht fügt das neue Element an der richtigen Position in der Sortierreihenfolge ein, wenn die folgenden Bedingungen erfüllt sind:
+Die **LVM \_ INSERTITEM-Nachricht** fügt das neue Element an der richtigen Position in der Sortierreihenfolge ein, wenn die folgenden Bedingungen gelten:
 
--   Sie verwenden einen der LVS \_ sortxxx-Stile.
--   Sie verwenden nicht den [**LVS-Besitzer \_ Zeichnungs**](list-view-window-styles.md) Stil.
--   Der **pszText** -Member der Struktur, auf die von **pitem** gezeigt wird, ist nicht auf "LPSTR textcallback" festgelegt \_ .
+-   Sie verwenden einen der LVS \_ SORTXXX-Stile.
+-   Sie verwenden nicht den [**LVS \_ OWNERDRAW-Stil.**](list-view-window-styles.md)
+-   Der **pszText-Member** der Struktur, auf die von **pitem** gezeigt wird, ist nicht auf LPSTR \_ TEXTCALLBACK festgelegt.
 
-Wenn die [**lvitem**](/windows/win32/api/commctrl/ns-commctrl-lvitema) -Struktur keine lvif- \_ GroupID im **Mask** -Member enthält, ist der Wert des **igroupid** -Members \_ standardmäßig "groupidcallback".
+Wenn die [**LVITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-lvitema) keine LVIF \_ GROUPID im **Maskenmember** enthält, lautet der Wert des **iGroupId-Members** standardmäßig I \_ GROUPIDCALLBACK.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,10 +67,10 @@ Wenn die [**lvitem**](/windows/win32/api/commctrl/ns-commctrl-lvitema) -Struktur
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **LVM \_ Insertitemw** (Unicode) und **LVM \_ insertitema** (ANSI)<br/>             |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **LVM \_ INSERTITEMW** (Unicode) und **LVM \_ INSERTITEMA** (ANSI)<br/>             |
 
 
 

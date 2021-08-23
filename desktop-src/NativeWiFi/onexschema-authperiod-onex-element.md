@@ -1,7 +1,7 @@
 ---
-description: Gibt die maximale Zeitspanne in Sekunden an, in der ein Client auf eine Antwort vom Authentifikator wartet.
+description: Gibt die maximale Zeitdauer in Sekunden an, in der ein Client auf eine Antwort vom Authentator wartet.
 ms.assetid: 5cb2e164-913f-4c35-854f-aac8ed180c46
-title: authperiod-Element (Onex)
+title: authPeriod (OneX)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,20 +12,20 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 098391a672eedd2657dbd7ad5913fef13fde98cd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ccaef08f65baffa0d7b9a921afd9db78a6ac6c6dd1d0bf4fd8075454fe38be21
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042230"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119684859"
 ---
-# <a name="authperiod-onex-element"></a>authperiod-Element (Onex)
+# <a name="authperiod-onex-element"></a>authPeriod (OneX)-Element
 
-Das authperiod (Onex)-Element gibt die maximale Zeitspanne in Sekunden an, in der ein Client auf eine Antwort vom Authentifikator wartet. Wenn innerhalb des angegebenen Zeitraums keine Antwort empfangen wird, geht der Client davon aus, dass im Netzwerk kein Authentifikator vorhanden ist.
+Das authPeriod (OneX)-Element gibt die maximale Zeitdauer in Sekunden an, in der ein Client auf eine Antwort vom Authentisierungsator wartet. Wenn innerhalb des angegebenen Zeitraums keine Antwort empfangen wird, geht der Client davon aus, dass im Netzwerk kein Authentator vorhanden ist.
 
-Dieses Element ist optional. Wenn authperiod nicht in einem Profil angegeben ist, wird ein Wert von 18 Sekunden verwendet.
+Dieses Element ist optional. Wenn authPeriod nicht in einem Profil angegeben ist, wird ein Wert von 18 Sekunden verwendet.
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Dieses Element wird ignoriert, wenn es in einem Profil vorhanden ist.
+**Windows XP mit SP3 und wlan-API für Windows XP mit SP2:** Dieses Element wird ignoriert, wenn es in einem Profil vorhanden ist.
 
 ``` syntax
 <xs:element name="authPeriod">
@@ -44,7 +44,7 @@ Dieses Element ist optional. Wenn authperiod nicht in einem Profil angegeben ist
 </xs:element>
 ```
 
-Das **authperiod** -Element wird durch das [**Onex**](onexschema-onex-element.md) -Element definiert.
+Das **authPeriod-Element** wird durch das [**OneX-Element**](onexschema-onex-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,22 +52,22 @@ Das **authperiod** -Element wird durch das [**Onex**](onexschema-onex-element.md
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
 [**Onex**](onexschema-onex-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
 [**Onex**](onexschema-onex-element.md)

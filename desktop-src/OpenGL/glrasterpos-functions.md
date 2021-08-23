@@ -1,32 +1,32 @@
 ---
 title: glRasterPos-Funktionen
-description: Diese Funktionen geben die Raster Position für Pixel Vorgänge an.
+description: Diese Funktionen geben die Rasterposition für Pixelvorgänge an.
 ms.assetid: 2a661893-0818-441d-9399-0103560737c3
 keywords:
-- OpenGL-, glRasterPos-Funktionen
+- OpenGL,glRasterPos-Funktionen
 - OpenGL-Referenz, glRasterPos-Funktionen
-- Referenz für OpenGL-, glRasterPos-Funktionen
-- OpenGL, Raster Funktionen
-- OpenGL-Referenz, Raster Funktionen
-- Referenz für OpenGL, Raster Funktionen
+- Referenz für OpenGL,glRasterPos-Funktionen
+- OpenGL,Rasterfunktionen
+- OpenGL-Referenz, Rasterfunktionen
+- Referenz zu OpenGL,Rasterfunktionen
 - glRasterPos-Funktionen
-- Raster Vektor Funktionen
-- OpenGL, Pixel Funktionen
-- OpenGL-Referenz, Pixel Funktionen
-- Verweis für OpenGL, Pixel Funktionen
+- Rastervektorfunktionen
+- OpenGL,Pixel-Funktionen
+- OpenGL-Referenz, Pixelfunktionen
+- Referenz für OpenGL,Pixel-Funktionen
 - Pixel, Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c8f2ce2f387e70b3ea7a378b5463a03a88a4d5d2
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 134db3f2186b6026fb88a23cbbe9cff9a0e84e784164b27a3cf464beeea370bb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711844"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119492560"
 ---
 # <a name="glrasterpos-functions"></a>glRasterPos-Funktionen
 
-Diese Funktionen geben die Raster Position für Pixel Vorgänge an:
+Diese Funktionen geben die Rasterposition für Pixelvorgänge an:
 
 -   [**glRasterPos2d**](glrasterpos2d.md)
 -   [**glRasterPos2f**](glrasterpos2f.md)
@@ -53,9 +53,9 @@ Diese Funktionen geben die Raster Position für Pixel Vorgänge an:
 -   [**glRasterPos4iv**](glrasterpos4iv.md)
 -   [**glRasterPos4sv**](glrasterpos4sv.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: Ibasicdevice-remove_ConnectionStatusChanged-Methode
-description: Hebt die Registrierung eines Ereignis Handlers für das connectionstatuschge-Ereignis auf. | Ibasicdevice-remove_ConnectionStatusChanged-Methode
+title: IBasicDevice remove_ConnectionStatusChanged Methode
+description: Aufheben der Registrierung eines Ereignishandlers für das ConnectionStatusChanged-Ereignis. | IBasicDevice remove_ConnectionStatusChanged Methode
 ms.assetid: 577D9C50-486D-441A-A9FE-AF79D1FC2B52
 keywords:
-- Medien Streaming-API für remove_ConnectionStatusChanged-Methode
-- remove_ConnectionStatusChanged-Methode Medien Streaming-API, ibasicdevice-Schnittstelle
-- Ibasicdevice-Schnittstelle Medien Streaming-API, remove_ConnectionStatusChanged-Methode
+- remove_ConnectionStatusChanged Media Streaming-API
+- remove_ConnectionStatusChanged Media Streaming-API, IBasicDevice-Schnittstelle
+- IBasicDevice-Schnittstelle Media Streaming-API , remove_ConnectionStatusChanged-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 45c2bfa2886774ad637e66385a057c9d4e21efe0
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 35b2f08b6df25f57d77f5c3677a4c6499370d9472202b6808073c5a75d1e2c34
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106361813"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119599800"
 ---
-# <a name="ibasicdeviceremove_connectionstatuschanged-method"></a>Ibasicdevice:: Remove \_ connectionstatuschangimethod
+# <a name="ibasicdeviceremove_connectionstatuschanged-method"></a>IBasicDevice::remove \_ ConnectionStatusChanged-Methode
 
-Hebt die Registrierung eines Ereignis Handlers für das [**connectionstatuschge**](connectionstatuschanged.md) -Ereignis auf.
+Aufheben der Registrierung eines Ereignishandlers für das [**ConnectionStatusChanged-Ereignis.**](connectionstatuschanged.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT remove_ConnectionStatusChanged(
 
 <dl> <dt>
 
-*Token* \[ in\]
+*Token* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf ein Token, das von der [**Add \_ connectionstatuschangi-**](ibasicdevice-add-connectionstatuschanged.md) Methode abgerufen wurde, als der Ereignishandler registriert wurde.
+Ein Verweis auf ein Token, das von der [**\_ Add ConnectionStatusChanged-Methode beim**](ibasicdevice-add-connectionstatuschanged.md) Registrieren des Ereignishandlers erhalten wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -66,7 +66,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Ibasicdevice**](ibasicdevice.md)
+[**IBasicDevice**](ibasicdevice.md)
 </dt> </dl>
 
  

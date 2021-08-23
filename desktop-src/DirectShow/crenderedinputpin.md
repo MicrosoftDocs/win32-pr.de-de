@@ -1,7 +1,7 @@
 ---
-description: Die crenderedinputpin-Klasse ist eine Basisklasse zum Implementieren einer Eingabe-PIN für einen Renderer.
+description: Die CRenderedInputPin-Klasse ist eine Basisklasse zum Implementieren eines Eingabepins auf einem Renderer.
 ms.assetid: 644dc6ef-eefa-4dfa-a27e-cab690b6e1db
-title: Crenderedinputpin-Klasse (amextra. h)
+title: CRenderedInputPin-Klasse (Amextra.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,42 +16,42 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3fc00b4aa0ce1fc6c8a93fb2fbda2118ad6bb40e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 139b0ebd887dc81efd19953d48f3caa8fd6377acde8723de23178ee7a0278c8b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370146"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119585295"
 ---
-# <a name="crenderedinputpin-class"></a>Crenderedinputpin-Klasse
+# <a name="crenderedinputpin-class"></a>CRenderedInputPin-Klasse
 
 ![crenderedinputpin-Klassenhierarchie](images/rbase04.png)
 
-Die **crenderedinputpin** -Klasse ist eine Basisklasse zum Implementieren einer Eingabe-PIN für einen Renderer. Diese Klasse wurde für Renderer-Filter entwickelt, die nicht von der [**cbaserenderer**](cbaserenderer.md) -Klasse abgeleitet werden. (Filter, die von **cbaserenderer** abgeleitet werden, sollten die [**crendererinputpin**](crendererinputpin.md) -Klasse für die Eingabe-PIN verwenden.)
+Die **CRenderedInputPin-Klasse** ist eine Basisklasse zum Implementieren eines Eingabepins auf einem Renderer. Diese Klasse ist für Rendererfilter konzipiert, die nicht von der [**CBaseRenderer-Klasse ableiten.**](cbaserenderer.md) (Filter, die von **CBaseRenderer ableiten,** sollten die [**CRendererInputPin-Klasse**](crendererinputpin.md) für den Eingabepin verwenden.)
 
-Um diese Klasse verwenden zu können, müssen Sie mindestens die folgenden Schritte ausführen:
+Um diese Klasse verwenden zu können, müssen Sie mindestens folgende Schritte unternehmen:
 
--   Deklarieren Sie eine neue PIN-Klasse, die **crenderedinputpin** erbt.
--   Deklarieren Sie in der PIN-Klasse ein kritisches Abschnitts Objekt, das die streamingsperre enthalten soll. Zu diesem Zweck können Sie die [**ccritsec**](ccritsec.md) -Klasse verwenden. Weitere Informationen finden Sie unter [Threads und wichtige Abschnitte](threads-and-critical-sections.md).
--   Überschreiben Sie [**crenderedinputpin:: EndOfStream**](crenderedinputpin-endofstream.md) , um die streamingsperre aufzunehmen.
--   Implementieren Sie die Methoden [**IMemInputPin:: Receive**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive), [**cbasepin:: checkmediatype**](cbasepin-checkmediatype.md)und [**cbasepin:: getmediatype**](cbasepin-getmediatype.md) .
--   Implementieren Sie in Ihrem Filter [**cbasefilter:: getpin**](cbasefilter-getpin.md) , um eine Instanz der PIN-Klasse zurückzugeben.
+-   Deklarieren Sie eine neue PIN-Klasse, die **CRenderedInputPin erbt.**
+-   Deklarieren Sie in Ihrer Pin-Klasse ein kritisches Abschnittsobjekt, um die Streamingsperre zu halten. Zu diesem Zweck [**können Sie die CCritSec-Klasse**](ccritsec.md) verwenden. Weitere Informationen finden Sie unter [Threads und kritische Abschnitte](threads-and-critical-sections.md).
+-   Überschreiben [**Sie CRenderedInputPin::EndOfStream,**](crenderedinputpin-endofstream.md) um die Streamingsperre zu halten.
+-   Implementieren Sie [**die Methoden IMemInputPin::Receive,**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) [**CBasePin::CheckMediaType**](cbasepin-checkmediatype.md)und [**CBasePin::GetMediaType.**](cbasepin-getmediatype.md)
+-   Implementieren Sie in Ihrem Filter [**CBaseFilter::GetPin,**](cbasefilter-getpin.md) um eine Instanz Ihrer Pin-Klasse zurück zu geben.
 
-Sie können diese Klasse in einem Renderer verwenden, der über mehr als eine Eingabe-PIN verfügt. Diese Klasse erbt die [**cbasinput Pin**](cbaseinputpin.md) -Klasse.
+Sie können diese Klasse in einem Renderer verwenden, der über mehrere Eingabepins verfügt. Diese Klasse erbt die [**CBaseInputPin-Klasse.**](cbaseinputpin.md)
 
 
 
-| Geschützte Member-Variablen                                            | BESCHREIBUNG                                                                                                  |
+| Geschützte Membervariablen                                            | Beschreibung                                                                                                  |
 |-----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| [**m \_ batendofistream**](crenderedinputpin-m-batendofstream.md)       | Gibt an, ob das Ende des Streams erreicht wurde.                                                         |
-| [**m \_ bcompletenotifiziert**](crenderedinputpin-m-bcompletenotified.md) | Gibt an, ob die PIN ein [**EC \_ Complete**](ec-complete.md) -Ereignis an den Filter Diagramm-Manager gesendet hat. |
-| Öffentliche Methoden                                                        | BESCHREIBUNG                                                                                                  |
-| [**Aktiv**](crenderedinputpin-active.md)                            | Benachrichtigt die PIN, dass der Filter jetzt aktiv ist.                                                              |
-| [**Crenderedinputpin**](crenderedinputpin-crenderedinputpin.md)      | Konstruktormethode.                                                                                          |
-| [**Ausführen**](crenderedinputpin-run.md)                                  | Benachrichtigt die PIN, dass der Filter jetzt ausgeführt wird.                                                             |
-| IPin-Methoden                                                          | BESCHREIBUNG                                                                                                  |
-| [**Endflush**](crenderedinputpin-endflush.md)                        | Beendet einen Löschvorgang.                                                                                      |
-| [**EndOfStream**](crenderedinputpin-endofstream.md)                  | Benachrichtigt die PIN, dass keine weiteren Daten erwartet werden, bis der Filter einen neuen Befehl zum Ausführen erhält.            |
+| [**m \_ bAtEndOfStream**](crenderedinputpin-m-batendofstream.md)       | Gibt an, ob das Ende des Streams erreicht wurde.                                                         |
+| [**m \_ bCompleteNomost**](crenderedinputpin-m-bcompletenotified.md) | Gibt an, ob der Pin ein [**EC \_ COMPLETE-Ereignis**](ec-complete.md) an den Filter-Graph gesendet hat. |
+| Öffentliche Methoden                                                        | Beschreibung                                                                                                  |
+| [**Aktiv**](crenderedinputpin-active.md)                            | Benachrichtigt den Pin, dass der Filter jetzt aktiv ist.                                                              |
+| [**CRenderedInputPin**](crenderedinputpin-crenderedinputpin.md)      | Konstruktormethode.                                                                                          |
+| [**Ausführung**](crenderedinputpin-run.md)                                  | Benachrichtigt den Pin, dass der Filter jetzt ausgeführt wird.                                                             |
+| IPin-Methoden                                                          | Beschreibung                                                                                                  |
+| [**EndFlush**](crenderedinputpin-endflush.md)                        | Beendet einen Leerungsvorgang.                                                                                      |
+| [**EndOfStream**](crenderedinputpin-endofstream.md)                  | Benachrichtigt den Pin, dass keine zusätzlichen Daten erwartet werden, bis der Filter einen neuen Ausführungsbefehl empfängt.            |
 
 
 
@@ -63,8 +63,8 @@ Sie können diese Klasse in einem Renderer verwenden, der über mehr als eine Ei
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amextra. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amextra.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

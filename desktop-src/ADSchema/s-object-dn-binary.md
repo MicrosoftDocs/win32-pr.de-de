@@ -1,10 +1,10 @@
 ---
-title: Object (DN-Binary)-Syntax
-description: Eine Oktett-Zeichenfolge, die einen binären Wert und einen Distinguished Name (DN) enthält.
+title: Object(DN-Binary)-Syntax
+description: Eine Oktettzeichenfolge, die einen Binärwert und einen Distinguished Name (DN) enthält.
 ms.assetid: 1d7efc17-a99a-41bf-9812-9e8a2b2b6644
 ms.tgt_platform: multiple
 keywords:
-- Objekt Syntax (DN-Binary) AD-Schema
+- Objektsyntax (DN-Binary) AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 06e96f640ad729f203362df906bcc6afe6b82e7e
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 15172a8577cf8ccec71053c3d374b389d71d3264fcc1934b19440a3f9efc4904
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104106701"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119702570"
 ---
-# <a name="objectdn-binary-syntax"></a>Object (DN-Binary)-Syntax
+# <a name="objectdn-binary-syntax"></a>Object(DN-Binary)-Syntax
 
-Eine Oktett-Zeichenfolge, die einen binären Wert und einen Distinguished Name (DN) enthält.
+Eine Oktettzeichenfolge, die einen Binärwert und einen Distinguished Name (DN) enthält.
 
 
 
@@ -31,22 +31,22 @@ Eine Oktett-Zeichenfolge, die einen binären Wert und einen Distinguished Name (
 | Name         | Object(DN-Binary)                                                                  |
 | Syntax-ID    | 2.5.5.7                                                                            |
 | OM-ID        | 127                                                                                |
-| MAPI-Typ    | TString                                                                            |
-| ADS-Typ     | adstype \_ DN \_ mit \_ Binär                                                          |
-| Varianttyp | VT \_ -Verteilung                                                                       |
-| SDS-Typ     | Ein COM-Objekt, das in [**IADsDNWithBinary**](/windows/desktop/api/iads/nn-iads-iadsdnwithbinary)umgewandelt werden kann. |
+| MAPI-Typ    | TSTRING                                                                            |
+| ADS-Typ     | \_ADSTYPE-DN \_ MIT \_ BINÄRDATEI                                                          |
+| Variant-Typ | VT \_ DISPATCH                                                                       |
+| SDS-Typ     | Ein COM-Objekt, das in ein [**IADsDNWithBinary -Objekt castiert werden kann.**](/windows/desktop/api/iads/nn-iads-iadsdnwithbinary) |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Wert mit dieser Syntax weist das folgende Format auf:
+Ein Wert mit dieser Syntax hat das folgende Format:
 
 ``` syntax
 B:<char count>:<binary value>:<object DN>
 ```
 
-Dabei ist " &lt; char Count &gt; " die Anzahl von hexadezimalen Ziffern im " &lt; binären Wert &gt; ", " &lt; Binärwert &gt; " ist die hexadezimale Darstellung des binären Werts, und " &lt; Object DN &gt; " ist ein definierter Name. Active Directory aktualisiert den DN automatisch, wenn das Objekt, auf das es verweist, verschoben oder umbenannt wird. Weitere Informationen und ein Codebeispiel, in dem diese Syntax verwendet wird, finden Sie unter [Aktivieren der Umbenennungs sicheren Bindung mit der otherWellKnownObjects-Eigenschaft](/windows/desktop/AD/enabling-rename-safe-binding-with-the-otherwellknownobjects-property).
+wobei " char count " die Anzahl der &lt; &gt; Hexadezimalziffern in " binärer Wert &lt; &gt; ", " binärer Wert " die &lt; &gt; hexadezimale Darstellung des Binärwerts und " &lt; Objekt-DN &gt; " ein Distinguished Name ist. Active Directory aktualisiert den DN automatisch, wenn das Objekt, auf das es verweist, verschoben oder umbenannt wird. Weitere Informationen und ein Codebeispiel, in dem diese Syntax verwendet wird, finden Sie unter Aktivieren der umbenennungssicheren Bindung mit der [otherWellKnownObjects-Eigenschaft.](/windows/desktop/AD/enabling-rename-safe-binding-with-the-otherwellknownobjects-property)
 
 ## <a name="see-also"></a>Siehe auch
 

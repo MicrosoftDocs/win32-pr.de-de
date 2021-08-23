@@ -1,10 +1,10 @@
 ---
 title: Win32_WinSAT-Klasse
-description: Definiert Übersichts Bewertungsinformationen für die aktuellste formale Bewertung.
+description: Definiert zusammenfassende Bewertungsinformationen für die letzte formale Bewertung.
 ms.assetid: adf4de42-9dfd-46a7-ae75-3bbcfd15dd68
 keywords:
-- Win32_WinSAT Klasse WinSAT
-- Win32_WinSAT Klasse WinSAT, beschrieben
+- Win32_WinSAT WinSAT-Klasse
+- Win32_WinSAT WinSAT-Klasse , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -23,18 +23,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 829e5e1b3658771728aab9ef30634d90a8bc6450
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c0a9e863bd22cebc6609e32521b85de4bca29ae048d9673e3b09cfff2b95408f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344109"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119504530"
 ---
-# <a name="win32_winsat-class"></a>Win32- \_ WinSAT-Klasse
+# <a name="win32_winsat-class"></a>Win32 \_ WinSAT-Klasse
 
-\[**Win32 \_ WinSAT** kann nach Windows 8.1 geändert werden oder für Releases nicht verfügbar sein.\]
+\[**Win32 \_ WinSAT** kann geändert werden oder ist für Releases nach der Windows 8.1.\]
 
-Definiert Übersichts Bewertungsinformationen für die aktuellste formale Bewertung.
+Definiert zusammenfassende Bewertungsinformationen für die letzte formale Bewertung.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -56,17 +56,17 @@ class Win32_WinSAT
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ WinSAT** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ WinSAT-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ WinSAT** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ WinSAT-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Cpuscore**
+**CPUScore**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **real32**
@@ -75,7 +75,7 @@ Datentyp: **real32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Bewertung der Prozessoren auf dem Computer.
+Eine Bewertung für die Prozessoren auf dem Computer.
 
 </dd> <dt>
 
@@ -88,11 +88,11 @@ Datentyp: **real32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nach Windows 8.1 bewertet WinSAT nicht mehr die dreidimensionalen Grafikfunktionen (Gaming) des Computers, und die Fähigkeit des Grafik Treibers, Objekte zu rendern und mithilfe dieser Bewertung Shader auszuführen. Aus Kompatibilitätsgründen werden WinSAT-Werte für die Metriken und Ergebnisse in WinSAT-Berichten angezeigt. Diese werden jedoch nicht in Echtzeit berechnet.
+Nach Windows 8.1 bewertet WinSAT nicht mehr die Funktionen für dreidimensionale Grafiken (Gaming) des Computers und die Fähigkeit des Grafiktreibers, Objekte zu rendern und Shader mithilfe dieser Bewertung auszuführen. Aus Kompatibilitäts-, WinSAT-Berichts-Sentinel-Werten für die Metriken und Bewertungen werden diese jedoch nicht in Echtzeit berechnet.
 
 </dd> <dt>
 
-**Diskscore**
+**DiskScore**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **real32**
@@ -101,11 +101,11 @@ Datentyp: **real32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Ergebnis für den sequenziellen Lesedurchsatz auf der primären Festplatte auf dem Computer.
+Eine Bewertung für den sequenziellen Lesedurchsatz auf der primären Festplatte des Computers.
 
 </dd> <dt>
 
-**Graphicsscore**
+**GraphicsScore**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **real32**
@@ -118,7 +118,7 @@ Eine Bewertung für die Grafikfunktionen des Computers.
 
 </dd> <dt>
 
-**Memoryscore**
+**MemoryScore**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **real32**
@@ -127,14 +127,14 @@ Datentyp: **real32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Ergebnis für den Arbeitsspeicher Durchsatz und die Kapazität des Computers.
+Eine Bewertung für den Arbeitsspeicherdurchsatz und die Kapazität des Computers.
 
 </dd> <dt>
 
 **TimeTaken**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -143,33 +143,33 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Diese Eigenschaft muss in der WHERE-Klausel der WQL-Abfrage auf "mustrecentassessment" festgelegt werden.
+Diese Eigenschaft muss in der WHERE-Klausel Ihrer WQL-Abfrage auf "MostRecentAssessment" festgelegt werden.
 
 </dd> <dt>
 
-**Winsatbewermentstate**
+**WinSATAssessmentState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Status der Bewertung. Eine Beschreibung der möglichen Werte finden Sie in der [**WinSAT- \_ Bewertungs \_ Zustands**](/windows/win32/api/winsatcominterfacei/ne-winsatcominterfacei-winsat_assessment_state) Enumeration.
+Status der Bewertung. Eine Beschreibung der möglichen Werte finden Sie in der [**WINSAT \_ ASSESSMENT \_ STATE-Enumeration.**](/windows/win32/api/winsatcominterfacei/ne-winsatcominterfacei-winsat_assessment_state)
 
 <dl> <dt>
 
-<span id="StateUnknown"></span><span id="stateunknown"></span><span id="STATEUNKNOWN"></span>**Stateunknown** (0)
+<span id="StateUnknown"></span><span id="stateunknown"></span><span id="STATEUNKNOWN"></span>**StateUnknown** (0)
 </dt> <dt>
 
 <span id="Valid"></span><span id="valid"></span><span id="VALID"></span>**Gültig** (1)
 </dt> <dt>
 
-<span id="IncoherentWithHardware"></span><span id="incoherentwithhardware"></span><span id="INCOHERENTWITHHARDWARE"></span>**Incoherent entwithhardware** (2)
+<span id="IncoherentWithHardware"></span><span id="incoherentwithhardware"></span><span id="INCOHERENTWITHHARDWARE"></span>**IncoherentWithHardware** (2)
 </dt> <dt>
 
-<span id="NoAssessmentAvailable"></span><span id="noassessmentavailable"></span><span id="NOASSESSMENTAVAILABLE"></span>**Nogutamentavailable** (3)
+<span id="NoAssessmentAvailable"></span><span id="noassessmentavailable"></span><span id="NOASSESSMENTAVAILABLE"></span>**NoAssessmentAvailable** (3)
 </dt> <dt>
 
 <span id="Invalid"></span><span id="invalid"></span><span id="INVALID"></span>**Ungültig** (4)
@@ -177,7 +177,7 @@ Der Status der Bewertung. Eine Beschreibung der möglichen Werte finden Sie in d
 
 </dd> <dt>
 
-**Winsprlevel**
+**WinSPRLevel**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **real32**
@@ -186,17 +186,17 @@ Datentyp: **real32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Basisbewertung für den Computer. Ausführliche Informationen zum Wert "Score" finden Sie in der [**iprovidebug**](/windows/desktop/api/Winsatcominterfacei/nf-winsatcominterfacei-iprovidewinsatresultsinfo-get_systemrating) -Eigenschaft.
+Basispunktzahl für den Computer. Weitere Informationen zum Bewertungswert finden Sie in der [**IProvideWinSATResultsInfo::SystemRating-Eigenschaft.**](/windows/desktop/api/Winsatcominterfacei/nf-winsatcominterfacei-iprovidewinsatresultsinfo-get_systemrating)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zu den unter Komponenten Bewertungen, wie z. b. **memoryscore**, finden Sie in der [**iprovidewinsatprocessmentinfo:: Score**](/windows/desktop/api/Winsatcominterfacei/nf-winsatcominterfacei-iprovidewinsatassessmentinfo-get_score) -Eigenschaft.
+Informationen zu den Unterkomponentenbewertungen wie **MemoryScore** finden Sie in der [**IProvideWinSATAssessmentInfo::Score-Eigenschaft.**](/windows/desktop/api/Winsatcominterfacei/nf-winsatcominterfacei-iprovidewinsatassessmentinfo-get_score)
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung von WMI zum Abrufen von Daten aus dieser Klasse finden Sie in der [**iprovidewinsatvisuals:: get- \_ Bitmap**](/windows/desktop/api/Winsatcominterfacei/nf-winsatcominterfacei-iprovidewinsatvisuals-get_bitmap) -Methode.
+Ein Beispiel, das zeigt, wie WMI zum Abrufen von Daten aus dieser Klasse verwendet wird, finden Sie in der [**IProvideWinSATVisuals::get \_ Bitmap-Methode.**](/windows/desktop/api/Winsatcominterfacei/nf-winsatcominterfacei-iprovidewinsatvisuals-get_bitmap)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -204,10 +204,10 @@ Ein Beispiel für die Verwendung von WMI zum Abrufen von Daten aus dieser Klasse
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WinSAT. MOF</dt> </dl>    |
+| MOF<br/>                      | <dl> <dt>WinSAT.mof</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>WinSATAPI.dll</dt> </dl> |
 
 

@@ -1,6 +1,6 @@
 ---
-description: Fügt der shellansicht ein Objekt hinzu. Wird von der shshellfolderview- \_ Nachricht verwendet.
-title: SFVM_ADDOBJECT Meldung (shlobj. h)
+description: Fügt der Shellansicht ein -Objekt hinzu. Wird von SHShellFolderView \_ Message verwendet.
+title: SFVM_ADDOBJECT (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 90394af6-3809-457c-b2f2-5f35187ed45b
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 0e5b3f0a5b1aed634ab8929b0501d2e23ba40352
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 441ddac74e1640b2f836686c171d6fc896cbccee2dd6325c31041903ba610b39
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104994887"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119661060"
 ---
-# <a name="sfvm_addobject-message"></a>Sfvm- \_ AddObject-Nachricht
+# <a name="sfvm_addobject-message"></a>SFVM \_ ADDOBJECT-Nachricht
 
-Fügt der shellansicht ein Objekt hinzu. Wird von der [**shshellfolderview- \_ Nachricht**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shshellfolderview_message)verwendet.
+Fügt der Shellansicht ein -Objekt hinzu. Wird von [**SHShellFolderView Message \_ verwendet.**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shshellfolderview_message)
 
 
 ```C++
@@ -39,14 +39,14 @@ SFVM_ADDOBJECT
 
 <dl> <dt>
 
-*PIDL* \[ in\]
-</dt> <dd>Ein Zeiger auf das hinzu zufügende Objekt.</dd> </dl>
+*pidl* \[ In\]
+</dt> <dd>Ein Zeiger auf das hinzuzufügende Objekt.</dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die neue ListView-Element-ID des hinzugefügten Objekts zurück, wenn der Prozess erfolgreich war. Andernfalls wird-1 zurückgegeben.
+Gibt die neue Listview-Element-ID des hinzugefügten Objekts zurück, wenn der Prozess erfolgreich war. andernfalls wird -1 zurückgegeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -54,7 +54,7 @@ Gibt die neue ListView-Element-ID des hinzugefügten Objekts zurück, wenn der P
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

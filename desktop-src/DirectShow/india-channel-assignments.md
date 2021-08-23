@@ -1,25 +1,25 @@
 ---
-description: Dieses Thema enthält eine Liste der Häufigkeits Tabellen, die für die Optimierung des analogen TV für Indien verwendet
+description: In diesem Thema werden die Häufigkeitstabellen aufgelistet, die für die analoge TV-Optimierung für Indien verwendet werden.
 ms.assetid: 4bf7a67e-0434-4177-96c7-dcaad14c6545
-title: Indien-Kanal Zuweisungen
+title: Indien – Kanalzuweisungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ced8fdba140fba2a7274fa9dbd8dcae84ffce13
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 4cef59d270165a75dd42b05f1a9934bb413bdc0d9d53dd11eed987d6cee8aa9b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119584550"
 ---
-# <a name="india-channel-assignments"></a>Indien-Kanal Zuweisungen
+# <a name="india-channel-assignments"></a>Indien – Kanalzuweisungen
 
-Dieses Thema enthält eine Liste der Häufigkeits Tabellen, die für die Optimierung des analogen TV für Indien verwendet
+In diesem Thema werden die Häufigkeitstabellen aufgelistet, die für die analoge TV-Optimierung für Indien verwendet werden.
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Tabelle "Unicable Frequency](unicable-frequency-table.md) " verwendet.
+Die folgenden Kanalzuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Tabelle Unicable Frequency](unicable-frequency-table.md) verwendet.
 
-## <a name="cable-assignments"></a>Kabel Zuweisungen
+## <a name="cable-assignments"></a>Kabelzuweisungen
 
 ``` syntax
         1L,             // Lowest channel
@@ -138,7 +138,7 @@ Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale Analog TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

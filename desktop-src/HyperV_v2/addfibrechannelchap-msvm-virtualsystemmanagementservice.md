@@ -1,7 +1,7 @@
 ---
-description: Fügt einem synthetischen Fibre Channel Port auf einem virtuellen Computer dh-CHAP (Diffie Hellman-Challenge Handshake Authentication Protocol)-Parameter hinzu.
+description: Fügt DH-CHAP-Parameter (Diffie Hellman – Challenge Handshake Authentication Protocol) einem synthetischen Fibre Channel Port auf einem virtuellen Computer hinzu.
 ms.assetid: b9799ea4-f948-4b5c-bd18-1faa90213bb3
-title: Addfbrechannelchap-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: AddFibreChannelChap-Methode der Msvm_VirtualSystemManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 07151a902efa8f8077debc44bd732286c0a96a81
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 26a9f99826e92a35462f0c42e8fce723168799177e96e0ae429aad45c99de928
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959806"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119562360"
 ---
-# <a name="addfibrechannelchap-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Addfibrechannelchap-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="addfibrechannelchap-method-of-the-msvm_virtualsystemmanagementservice-class"></a>AddFibreChannelChap-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Fügt einem synthetischen Fibre Channel Port auf einem virtuellen Computer dh-CHAP (Diffie Hellman-Challenge Handshake Authentication Protocol)-Parameter hinzu. Bei dieser Methode tritt ein Fehler auf, wenn der virtuelle Computer ausgeführt wird.
+Fügt DH-CHAP-Parameter (Diffie Hellman – Challenge Handshake Authentication Protocol) einem synthetischen Fibre Channel Port auf einem virtuellen Computer hinzu. Diese Methode schlägt fehl, wenn der virtuelle Computer ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ uint32 AddFibreChannelChap(
 
 <dl> <dt>
 
-*Fcportsettings* \[ in\]
+*FcPortSettings* \[ In\]
 </dt> <dd>
 
-Ein Array von Zeichen folgen, die eine eingebettete Instanz der [**MSVM \_ syntheticfcportsettingdata**](msvm-syntheticfcportsettingdata.md) -Klasse enthalten, die Einstellungen für synthetische Fibre Channel Ports für virtuelle Maschinen beschreibt. Die **InstanceId-** Eigenschaft jeder dieser Instanzen identifiziert die Elemente, die geändert werden sollen.
+Ein Array von Zeichenfolgen, die eine eingebettete Instanz der [**Msvm \_ SyntheticFcPortSettingData-Klasse**](msvm-syntheticfcportsettingdata.md) enthalten, die Einstellungen für synthetische Fibre Channel Ports für virtuelle Computer beschreibt. Die **InstanceID-Eigenschaft** jeder dieser Instanzen identifiziert die zu ändernden Elemente.
 
 </dd> <dt>
 
-*Secretencoding* \[ in\]
+*SecretEncoding* \[ In\]
 </dt> <dd>
 
-Gibt den Codierungstyp für den gemeinsamen geheimen Schlüssel an.
+Gibt den Typ der Codierung für das gemeinsame Geheimnis an.
 
 <dt>
 
 <span id="Printable_ASCII"></span><span id="printable_ascii"></span><span id="PRINTABLE_ASCII"></span>
 
-**Druckbare ASCII** (1)
+**Druckbarer ASCII-Code** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -69,10 +69,10 @@ Gibt den Codierungstyp für den gemeinsamen geheimen Schlüssel an.
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*Sharedsecret* \[ in\]
+*SharedSecret* \[ In\]
 </dt> <dd>
 
-Gibt den gemeinsamen geheimen Schlüssel an.
+Gibt das gemeinsame Geheimnis an.
 
 </dd> </dl>
 
@@ -85,7 +85,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -94,7 +94,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -106,16 +106,16 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -124,10 +124,10 @@ Das **System ist nicht verfügbar** (32777).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -136,7 +136,7 @@ Das **System ist nicht verfügbar** (32777).
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

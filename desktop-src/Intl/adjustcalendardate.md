@@ -1,7 +1,7 @@
 ---
-description: Veraltet. Passt ein Datum an eine angegebene Anzahl von Jahren, Monaten, Wochen oder Tagen an.
+description: Veraltet. Passt ein Datum um eine angegebene Anzahl von Jahren, Monaten, Wochen oder Tagen an.
 ms.assetid: be8d61fd-efa3-4386-969f-30216c282ebc
-title: "\"-Funktion\""
+title: AdjustCalendarDate-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_location:
 - Kernel32.dll
 - API-MS-Win-Core-calendar-l1-1-0.dll
 - kernel32legacy.dll
-ms.openlocfilehash: ce2f61fd7d7d6354130873b5b2b2376c856e3958
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 061d0e246f7839345b0f1e55221d26d276f52af4997a7cb47d62b680d2638fb4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119520620"
 ---
-# <a name="adjustcalendardate-function"></a>"-Funktion"
+# <a name="adjustcalendardate-function"></a>AdjustCalendarDate-Funktion
 
-Veraltet. Passt ein Datum an eine angegebene Anzahl von Jahren, Monaten, Wochen oder Tagen an.
+Veraltet. Passt ein Datum um eine angegebene Anzahl von Jahren, Monaten, Wochen oder Tagen an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,21 +43,21 @@ BOOL AdjustCalendarDate(
 
 <dl> <dt>
 
-*lpcaldatetime* \[ in, out\]
+*lpCalDateTime* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**caldatetime**](caldatetime.md) -Struktur, die die Datums-und Kalenderinformationen enthält, die angepasst werden sollen.
+Zeiger auf eine [**CALDATETIME-Struktur,**](caldatetime.md) die die anzupassenden Datums- und Kalenderinformationen enthält.
 
 </dd> <dt>
 
-*calunit* \[ in\]
+*calUnit* \[ In\]
 </dt> <dd>
 
-Der [**\_ dateunit**](caldatetime-dateunit.md) -Enumerationswert caldatetime, der die Datums Einheit angibt, z. b. dayunit.
+Der [**CALDATETIME \_ DATEUNIT-Enumerationswert,**](caldatetime-dateunit.md) der die Datumseinheit angibt, z. B. DayUnit.
 
 </dd> <dt>
 
-*Betrag* \[ vorgenommen\]
+*amount* \[ out\]
 </dt> <dd>
 
 Der Betrag, um den das angegebene Datum angepasst werden soll.
@@ -66,14 +66,14 @@ Der Betrag, um den das angegebene Datum angepasst werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** . Um erweiterte Fehlerinformationen abzurufen, kann die Anwendung [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)aufrufen, die einen der folgenden Fehlercodes zurückgeben kann:
+Gibt **TRUE zurück,** wenn erfolgreich, **andernfalls FALSE.** Um erweiterte Fehlerinformationen zu erhalten, kann die Anwendung [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)aufrufen, wodurch einer der folgenden Fehlercodes zurückgegeben werden kann:
 
--   das Fehler \_ Datum liegt \_ außerhalb des zulässigen \_ \_ Bereichs. Das angegebene Datum lag außerhalb des gültigen Bereichs.
--   Fehler \_ : Ungültiger \_ Parameter. Jeder Parameterwert war ungültig.
+-   FEHLERDATUM \_ \_ LIEGT NICHT IM \_ \_ BEREICH. Das angegebene Datum lag nicht im Bereich.
+-   FEHLER \_ \_ UNGÜLTIGER PARAMETER. Jeder der Parameterwerte war ungültig.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion verfügt über keine zugeordnete Header Datei oder Bibliotheksdatei. Die Anwendung kann [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) mit dem DLL-Namen (Kernel32.dll) aufzurufen, um ein Modul Handle zu erhalten. Anschließend kann [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) mit dem Modul Handle und dem Namen dieser Funktion aufgerufen werden, um die Funktions Adresse abzurufen.
+Dieser Funktion ist keine Headerdatei oder Bibliotheksdatei zugeordnet. Die Anwendung kann [**LoadLibrary mit**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) dem DLL-Namen (Kernel32.dll) aufrufen, um ein Modulhand handle zu erhalten. Sie kann dann [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) mit dem Modulhandle und dem Namen dieser Funktion aufrufen, um die Funktionsadresse zu erhalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Diese Funktion verfügt über keine zugeordnete Header Datei oder Bibliotheksdat
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Kernel32.dll</dt> </dl> |
 
 
@@ -91,10 +91,10 @@ Diese Funktion verfügt über keine zugeordnete Header Datei oder Bibliotheksdat
 
 <dl> <dt>
 
-[Unterstützung für nationale Sprache](national-language-support.md)
+[Unterstützung der Landessprache](national-language-support.md)
 </dt> <dt>
 
-[Funktionen zur Unterstützung der Landessprache](national-language-support-functions.md)
+[Unterstützungsfunktionen für nationale Sprachen](national-language-support-functions.md)
 </dt> <dt>
 
 [NLS: Beispiel für namensbasierte APIs](nls--name-based-apis-sample.md)

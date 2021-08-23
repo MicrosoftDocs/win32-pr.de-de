@@ -1,7 +1,7 @@
 ---
-description: 'Die beginflush-Methode startet einen Löschvorgang. Implementiert die IPin:: beginflush-Methode.'
+description: Die BeginFlush-Methode startet einen Leerungsvorgang. Implementiert die IPin::BeginFlush-Methode.
 ms.assetid: f16c8337-5b7f-47e8-810d-00ffb3b5a1b4
-title: Cbaseoutputpin. beginflush-Methode (amfilter. h)
+title: CBaseOutputPin.BeginFlush-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0216f74094d0c024d9b354dc594ff8d65315efbe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5dd12216fb040601d73eb566d47ec5c8c3ceeec685bd8f7abc6877756f94c6a6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119640010"
 ---
-# <a name="cbaseoutputpinbeginflush-method"></a>Cbaseoutputpin. beginflush-Methode
+# <a name="cbaseoutputpinbeginflush-method"></a>CBaseOutputPin.BeginFlush-Methode
 
-Die- `BeginFlush` Methode startet einen Löschvorgang. Implementiert die [**IPin:: beginflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) -Methode.
+Die `BeginFlush` -Methode startet einen Leerungsvorgang. Implementiert die [**IPin::BeginFlush-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt "E unerwartete" zurück \_ .
+Gibt E \_ UNEXPECTED zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode sollte nur für Eingabe Pins aufgerufen werden, sodass die **cbaseoutputpin** -Implementierung E \_ unerwartet zurückgibt.
+Diese Methode sollte nur für Eingabepins aufgerufen werden, sodass die **CBaseOutputPin-Implementierung** E \_ UNEXPECTED zurückgibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Methode sollte nur für Eingabe Pins aufgerufen werden, sodass die **cbase
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode sollte nur für Eingabe Pins aufgerufen werden, sodass die **cbase
 
 <dl> <dt>
 
-[**Cbaseoutputpin-Klasse**](cbaseoutputpin.md)
+[**CBaseOutputPin-Klasse**](cbaseoutputpin.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Erstellen Sie einen Matrix Stapel.
+description: Erstellen Sie einen Matrixstapel.
 ms.assetid: df0f3564-0226-44b8-b22b-4dd27905c44c
-title: D3DXCreateMatrixStack-Funktion (D3DX10Math. h)
+title: D3DXCreateMatrixStack-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: b5799632f171d1b80f95f0f684bb22d24f741f6f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 90436f905c2470fd14b022a1c025737fa78726cf5e46286dec2e13d7392e9b32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394205"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119498350"
 ---
-# <a name="d3dxcreatematrixstack-function-d3dx10mathh"></a>D3DXCreateMatrixStack-Funktion (D3DX10Math. h)
+# <a name="d3dxcreatematrixstack-function-d3dx10mathh"></a>D3DXCreateMatrixStack-Funktion (D3DX10Math.h)
 
-Erstellen Sie einen Matrix Stapel.
+Erstellen Sie einen Matrixstapel.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT D3DXCreateMatrixStack(
 
 <dl> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Nicht implementiert. Geben Sie NULL an.
+Nicht implementiert. Geben Sie 0 (null) an.
 
 </dd> <dt>
 
-*ppstack* \[ vorgenommen\]
+*ppStack* \[ out\]
 </dt> <dd>
 
 Typ: **LPD3DXMATRIXSTACK \***
 
-Die Adresse eines Zeigers auf einen Matrix Stapel (siehe [**ID3DXMatrixStack-Schnittstelle**](d3d10-id3dxmatrixstack.md)).
+Die Adresse eines Zeigers auf einen Matrixstapel (siehe [**ID3DXMatrixStack-Schnittstelle**](d3d10-id3dxmatrixstack.md)).
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Die Adresse eines Zeigers auf einen Matrix Stapel (siehe [**ID3DXMatrixStack-Sch
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,12 +71,12 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

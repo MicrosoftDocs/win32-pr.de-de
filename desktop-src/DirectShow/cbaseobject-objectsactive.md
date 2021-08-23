@@ -1,7 +1,7 @@
 ---
-description: Die objectionactive-Methode ruft eine Prozess weite Anzahl aktiver Objekte ab.
+description: Die ObjectsActive-Methode ruft eine prozessweite Anzahl aktiver Objekte ab.
 ms.assetid: adbc023a-22b7-44e9-b078-a26831f961cc
-title: Cbaseobject. objectactive-Methode (ComBase. h)
+title: CBaseObject.ObjectsActive-Methode (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2a3aee21fd9835b28bdcc23eabe30c1d2b5217b9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ea1b85303751531662123662c1af0e1a35799a780842e8b0bcbc912916c94976
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357610"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119640200"
 ---
-# <a name="cbaseobjectobjectsactive-method"></a>Cbaseobject. objeczactive-Methode
+# <a name="cbaseobjectobjectsactive-method"></a>CBaseObject.ObjectsActive-Methode
 
-Die `ObjectsActive` -Methode ruft eine Prozess weite Anzahl aktiver-Objekte ab.
+Die `ObjectsActive` -Methode ruft eine prozessweite Anzahl aktiver Objekte ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl aktiver-Objekte zurück.
+Gibt die Anzahl der aktiven Objekte zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt die Anzahl aktiver-Objekte zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt die Anzahl aktiver-Objekte zurück.
 
 <dl> <dt>
 
-[**Cbaseobject-Klasse**](cbaseobject.md)
+[**CBaseObject-Klasse**](cbaseobject.md)
 </dt> </dl>
 
  

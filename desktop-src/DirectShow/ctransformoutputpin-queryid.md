@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d4c2d222ca4dd184adfe41f9f610b10f15ee9f02
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 56da848f3829f56d93d7d0383dc7fdc1ec6d5bfd995c2c74507d05eb13801fb4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119584810"
 ---
 # <a name="ctransformoutputpinqueryid-method"></a>CTransformOutputPin.QueryId-Methode
 
@@ -65,15 +65,15 @@ Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Stecknadelbezeichner wird für die Graphpersistenz verwendet. Der Stecknadelbezeichner für diese Klasse ist Out. Diese Klasse überschreibt das Verhalten der [**CBasePin-Klasse.**](cbasepin.md) In der **CBasePin-Klasse** ist der Stecknadelbezeichner mit dem Pinnamen identisch, der im Klassenkonstruktor angegeben ist. In der **CTransformInputPin-Klasse** sind der Stecknadelbezeichner und der Pinname nicht identisch.
+Der Stecknadelbezeichner wird für die Graphpersistenz verwendet. Der Stecknadelbezeichner für diese Klasse ist Out. Diese Klasse überschreibt das Verhalten der [**CBasePin-Klasse.**](cbasepin.md) In der **CBasePin-Klasse** entspricht der Pinbezeichner dem Pinnamen, der im Klassenkonstruktor angegeben ist. In der **CTransformInputPin-Klasse** sind der Pinbezeichner und der Pinname nicht identisch.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |

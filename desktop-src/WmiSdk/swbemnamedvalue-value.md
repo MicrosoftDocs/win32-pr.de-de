@@ -1,8 +1,8 @@
 ---
-description: Die Value-Eigenschaft des-Objekts von ' Swap Name ' gibt den Variant-Wert eines ' Swap NamedValue '-Elements zurück.
+description: Die Value-Eigenschaft des SWbemNamedValue-Objekts gibt den Variantwert eines SWbemNamedValue-Elements zurück.
 ms.assetid: f9609bd2-893a-48c3-9faa-93cd033c4109
 ms.tgt_platform: multiple
-title: "' Taubemnamedvalue. Value '-Eigenschaft (wbemdisp. h)"
+title: SWbemNamedValue.Value-Eigenschaft (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,18 +17,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 4bf63b15a27c1149341200f29e938bdba6cd7bae
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e6b30be89022b100adf4fbf162f0da8c8d7951394fd0a251c440bd56a814d027
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119612190"
 ---
-# <a name="swbemnamedvaluevalue-property"></a>"Swap NamedValue. Value"-Eigenschaft
+# <a name="swbemnamedvaluevalue-property"></a>SWbemNamedValue.Value-Eigenschaft
 
-Die **value** -Eigenschaft des-Objekts von ' [**Swap Name**](swbemnamedvalue.md) ' gibt den Variant-Wert eines ' **Swap NamedValue** '-Elements zurück. Dies ist die Standard Eigenschaft für die Objekte " **Swap Name** ". Änderungen, die an der Value-Eigenschaft vorgenommen werden, werden automatisch in der Auflistung von [**Swap namedvalueset**](swbemnamedvalueset.md) reflektiert, zu der das Objekt " **Swap Name Name** " gehört.
+Die **Value-Eigenschaft** des [**SWbemNamedValue-Objekts**](swbemnamedvalue.md) gibt den Variantwert eines **SWbemNamedValue-Elements** zurück. Dies ist die Standardeigenschaft für **SWbemNamedValue-Objekte.** Änderungen an der Value-Eigenschaft werden automatisch in der [**SWbemNamedValueSet-Auflistung**](swbemnamedvalueset.md) widergespiegelt, zu der das **SWbemNamedValue-Objekt** gehört.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -51,11 +51,11 @@ SWbemNamedValue.Value As Variant
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-NamedValue<br/>                                                       |
-| IID<br/>                      | IID \_ iswbemnamedvalue<br/>                                                        |
+| CLSID<br/>                    | CLSID \_ SWbemNamedValue<br/>                                                       |
+| IID<br/>                      | IID \_ ISWbemNamedValue<br/>                                                        |
 
 
 

@@ -1,23 +1,23 @@
 ---
-description: Aktivierungs Kontexte sind Objekte mit Verweis Zählung. Die Anwendung muss über einen Verweis auf einen Aktivierungs Kontext verfügen, damit Sie verwendet werden kann.
+description: Aktivierungskontexte sind Objekte mit Verweiszählung. Ihre Anwendung muss über einen Verweis auf einen Aktivierungskontext verfügen, um sie verwenden zu können.
 ms.assetid: 2dc8ffc5-0a65-4227-b93a-30c3cf0d3c2d
-title: Aktivierungs Kontexte der Verweis Zählung
+title: Aktivierungskontexte zur Verweiszählung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ff00afa0dd3a347e14ff9723c06d54af4520ce4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a62f7806a452dc8b98f824069be0cd584c39f45ad9807a97a11f6f3d7c4929f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119141933"
 ---
-# <a name="reference-counting-activation-contexts"></a>Aktivierungs Kontexte der Verweis Zählung
+# <a name="reference-counting-activation-contexts"></a>Aktivierungskontexte zur Verweiszählung
 
-Aktivierungs Kontexte sind Objekte mit Verweis Zählung. Die Anwendung muss über einen Verweis auf einen Aktivierungs Kontext verfügen, damit Sie verwendet werden kann. Die Funktionen der Aktivierungs Kontext-API, die einen Aktivierungs Kontext annehmen, können eine eigene Verweis Zählung ausführen. Beispielsweise wird [**activateactctx**](/windows/desktop/api/Winbase/nf-winbase-activateactctx) vergrößert, und [**deactivateactctx**](/windows/desktop/api/Winbase/nf-winbase-deactivateactctx) verringert den Verweis Zähler. Wenn Ihre Anwendung jedoch einen Aktivierungs Kontext übergibt, ohne diese Funktionen zu verwenden, sollte die Anwendung eine eigene Methode zum zählen von verweisen bereitstellen.
+Aktivierungskontexte sind Objekte mit Verweiszählung. Ihre Anwendung muss über einen Verweis auf einen Aktivierungskontext verfügen, um sie verwenden zu können. Die Funktionen der Aktivierungskontext-API, die einen Aktivierungskontext verwenden, können ihre eigene Verweiszählung durchführen. Beispielsweise erhöht [**ActivateActCtx**](/windows/desktop/api/Winbase/nf-winbase-activateactctx) und [**DeactivateActCtx**](/windows/desktop/api/Winbase/nf-winbase-deactivateactctx) die Verweisanzahl. Wenn Ihre Anwendung jedoch einen Aktivierungskontext übergibt, ohne diese Funktionen zu verwenden, sollte die Anwendung eine eigene Methode zur Verweiszählung bereitstellen.
 
-Wenn eine Anwendung " [**kreateactctx**](/windows/desktop/api/Winbase/nf-winbase-createactctxa)" aufruft, hat das zurückgegebene Handle einen Verweis Zähler von 1. Nachdem die Anwendung mit dem Aktivierungs Kontext abgeschlossen wurde, sollte das Handle freigegeben und der Verweis Zähler durch Aufrufen von [**releaseactctx**](/windows/desktop/api/Winbase/nf-winbase-releaseactctx)gesenkt werden. Versuchen Sie nicht, [**LocalFree**](/windows/desktop/api/winbase/nf-winbase-localfree), [**HeapFree**](/windows/desktop/api/heapapi/nf-heapapi-heapfree)oder andere Speicherverwaltungsfunktionen auf dem Aktivierungs Kontext Handle zu verwenden.
+Wenn eine Anwendung [**CreateActCtx aufruft,**](/windows/desktop/api/Winbase/nf-winbase-createactctxa)hat das zurückgegebene Handle den Verweiszähler 1. Nachdem die Anwendung mit dem Aktivierungskontext abgeschlossen wurde, sollte das Handle freigegeben und die Verweisanzahl verringert werden, indem [**ReleaseActCtx aufruft.**](/windows/desktop/api/Winbase/nf-winbase-releaseactctx) Versuchen Sie nicht, [**LocalFree,**](/windows/desktop/api/winbase/nf-winbase-localfree) [**HeapFree**](/windows/desktop/api/heapapi/nf-heapapi-heapfree)oder andere Speicherverwaltungsfunktionen für das Aktivierungskontexthand handle zu verwenden.
 
-Das folgende Beispiel zeigt eine Methode zum Behandeln der Verweis Zählung über die Lebensdauer eines Aktivierungs Kontexts. Die Funktion Funct erstellt einen Aktivierungs Kontext, der an das Objekt Ziel weitergeleitet wird, das den Verweis Zähler auf 2 erhöht. "Funct" gibt dann seinen Verweis auf den Aktivierungs kontextfrei und verringert den Verweis Zähler auf 1. Das Ziel ist dann in der Besitz Freigabe seines eigenen Verweises, wenn setactctx erneut aufgerufen wird oder wenn das Objekt zerstört wird.
+Das folgende Beispiel zeigt eine Methode zum Behandeln der Verweiszählung über die Lebensdauer eines Aktivierungskontexts. Die Funktion Funct erstellt einen Aktivierungskontext, der dann an das Objekt Target übergeben wird, wodurch die Verweisanzahl auf 2 erhöht wird. Funct gibt dann seinen Verweis auf den Aktivierungskontext frei und verringert die Verweisanzahl wieder auf 1. Das Ziel besitzt dann die Freigabe seines eigenen Verweises, wenn SetActCtx erneut aufgerufen wird oder wenn das Objekt zerstört wird.
 
 
 ```C++

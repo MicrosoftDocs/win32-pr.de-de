@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob ein Strich im Rahmen einer Zeichnung oder beim Schreiben analysiert werden soll.
+description: Gibt an, ob ein Strich als Teil einer Zeichnung oder als Teil des Schreibens analysiert werden soll.
 ms.assetid: 3f4c4522-ada7-4759-bca7-88b2a71f36ea
-title: StrokeType-Enumeration (iacom. h)
+title: StrokeType-Enumeration (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - IACom.h
-ms.openlocfilehash: 3b59be130c6c7055bb7636760451dcadf5acf841
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4b02a05582d675f04ad4458b1cb21c6d4a1797bacf15baf5d0851804d1a95d49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217200"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119589580"
 ---
 # <a name="stroketype-enumeration"></a>StrokeType-Enumeration
 
-Gibt an, ob ein Strich im Rahmen einer Zeichnung oder beim Schreiben analysiert werden soll.
+Gibt an, ob ein Strich als Teil einer Zeichnung oder als Teil des Schreibens analysiert werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ typedef enum StrokeType {
 
 <dl> <dt>
 
-<span id="StrokeType_Unclassified"></span><span id="stroketype_unclassified"></span><span id="STROKETYPE_UNCLASSIFIED"></span>**StrokeType \_ nicht klassifiziert**
+<span id="StrokeType_Unclassified"></span><span id="stroketype_unclassified"></span><span id="STROKETYPE_UNCLASSIFIED"></span>**StrokeType \_ Unclassified**
 </dt> <dd>
 
-Der Strich kann entweder Teil einer Zeichnung oder eines Teils eines Schreibvorgangs sein.
+Der Strich kann entweder Teil einer Zeichnung oder Teil des Schreibens sein.
 
 </dd> <dt>
 
-<span id="StrokeType_Writing"></span><span id="stroketype_writing"></span><span id="STROKETYPE_WRITING"></span>**Schreiben von StrokeType \_**
+<span id="StrokeType_Writing"></span><span id="stroketype_writing"></span><span id="STROKETYPE_WRITING"></span>**StrokeType \_ Writing**
 </dt> <dd>
 
 Der Strich ist Teil des Schreibens.
 
 </dd> <dt>
 
-<span id="StrokeType_Drawing"></span><span id="stroketype_drawing"></span><span id="STROKETYPE_DRAWING"></span>**StrokeType- \_ Zeichnung**
+<span id="StrokeType_Drawing"></span><span id="stroketype_drawing"></span><span id="STROKETYPE_DRAWING"></span>**StrokeType \_ Drawing**
 </dt> <dd>
 
 Der Strich ist Teil einer Zeichnung.
@@ -64,7 +64,7 @@ Der Strich ist Teil einer Zeichnung.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt einen Teil eines Stroke-Ereignis Handlers, der in ähnlicher Weise wie das [C++ Event Sinks-Beispiel](c---event-sinks-sample.md)implementiert wird. Der hinzugefügte Strich wird geprüft, um festzustellen, ob der obere Rand seines umgebenden Felds unterhalb eines Rands gezeichnet wurde `drawingMargin` . Wenn dies der Fall ist, wird das [**iinkanalyzer**](iinkanalyzer.md) -Objekt, `m_spInkAnalyzer` , so festgelegt, dass der Strich als Zeichen Strich analysiert wird, anstatt als Handschrift Strich. `CheckHResult` eine Funktion, die eine `HRESULT` -und eine-Zeichenfolge annimmt und eine mit der-Zeichenfolge erstellte Ausnahme auslöst, wenn der `HRESULT` nicht **erfolgreich** ist.
+Das folgende Beispiel zeigt einen Teil eines Strichereignishandlers, der ähnlich wie das [C++-Ereignissenkenbeispiel implementiert ist.](c---event-sinks-sample.md) Der hinzugefügte Strich wird überprüft, um zu überprüfen, ob der obere Rand des Begrenzungsfelds unterhalb eines Rands gezeichnet `drawingMargin` wurde. Wenn ja, wird das [**IInkAnalyzer-Objekt**](iinkanalyzer.md) so festgelegt, dass der Strich nicht als Handschriftstrich, sondern als `m_spInkAnalyzer` Zeichnungsstrich analysiert wird. `CheckHResult`ist eine Funktion, die eine und eine Zeichenfolge verwendet und eine Ausnahme auslöst, die mit der Zeichenfolge erstellt wird, wenn nicht `HRESULT` `HRESULT` SUCCESS **ist.**
 
 
 ```C++
@@ -88,9 +88,9 @@ if (top > drawingMargin)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 
 
 
@@ -98,7 +98,7 @@ if (top > drawingMargin)
 
 <dl> <dt>
 
-[**Iinkanalyzer:: SetStrokeType-Methode**](iinkanalyzer-setstroketype.md)
+[**IInkAnalyzer::SetStrokeType-Methode**](iinkanalyzer-setstroketype.md)
 </dt> </dl>
 
  

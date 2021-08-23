@@ -1,20 +1,20 @@
 ---
-description: Das Objekt "Swap PropertySet" macht die folgenden Eigenschaften verfügbar.
+description: Das SWbemPropertySet-Objekt macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 40837F5B-1F56-40E3-A28F-54BBAF950211
 ms.tgt_platform: multiple
-title: Eigenschaften von "taubempropertyset"
+title: SWbemPropertySet-Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: efbcbeed098168de46001991ed081832074ac09e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 083ff24d974800848aeeb3a70a434693fa12a347e59f39d1fccf64bab76a64ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350930"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119639900"
 ---
-# <a name="swbempropertyset-properties"></a>Eigenschaften von "taubempropertyset"
+# <a name="swbempropertyset-properties"></a>SWbemPropertySet-Eigenschaften
 
-Das Objekt " [**Swap PropertySet**](swbempropertyset.md) " macht die folgenden Eigenschaften verfügbar.
+Das [**SWbemPropertySet-Objekt**](swbempropertyset.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

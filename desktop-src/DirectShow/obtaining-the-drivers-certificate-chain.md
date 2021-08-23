@@ -1,21 +1,21 @@
 ---
-description: Abrufen der Treiber Zertifikat Kette
+description: Abrufen der Treiberzertifikatkette
 ms.assetid: bc7b346c-3382-4f2b-90b6-03f6a1a5a9ce
-title: Abrufen der Treiber Zertifikat Kette
+title: Abrufen der Treiberzertifikatkette
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c3f46e395550ca4bcb02396fe09126c1232f2c2
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: ea2641c27c3d24ab45a87b16e8c805228c316d9f89428cd29abbaff347b5aae0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103859981"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119684560"
 ---
-# <a name="obtaining-the-drivers-certificate-chain"></a>Abrufen der Treiber Zertifikat Kette
+# <a name="obtaining-the-drivers-certificate-chain"></a>Abrufen der Treiberzertifikatkette
 
-Zur Verwendung des Certified Output Protection Protocol (COPP) muss die Anwendung zuerst ein DirectShow-Diagramm erstellen, das den Video Mischungs Filter (VMR-7 oder VMR-9) enthält. Der ältere Videorendererfilter unterstützt COPP nicht. Vor dem Aufrufen von COPP-Methoden muss die Anwendung ein Videowiedergabe Diagramm erstellen und den Decoder mit der Eingabe-PIN des VMR-Filters verbinden. Die Videodatei muss nicht abgespielt werden.
+Zur Verwendung des Certified Output Protection Protocol (COPP) muss die Anwendung zunächst ein DirectShow-Diagramm erstellen, das den Filter "Rendern von Videos mischen" (VMR-7 oder VMR-9) enthält. Der ältere Videorendererfilter unterstützt COPP nicht. Vor dem Aufrufen von COPP-Methoden muss die Anwendung ein Videowiedergabediagramm erstellen und den Decoder mit dem Eingabepin des VMR-Filters verbinden. Die Videodatei muss nicht wieder verwendet werden.
 
-Fragen Sie nach der Erstellung des Diagramms den VMR nach der [**iamcertifiedoutputprotection**](/windows/desktop/api/Strmif/nn-strmif-iamcertifiedoutputprotection) -Schnittstelle ab, und nennen Sie dann [**iamcertifiedoutputprotection:: keyexchange**](/windows/desktop/api/Strmif/nf-strmif-iamcertifiedoutputprotection-keyexchange). Diese Methode gibt eine als GUID typisierte 128-Bit-Zufallszahl zusammen mit einem Zeiger auf ein Bytearray zurück, das die XML-Zertifikat Kette des Treibers im UTF-8-Format enthält. Der folgende Code zeigt, wie Sie die Zertifikat Kette erhalten.
+Fragen Sie nach dem Erstellen des Graphen die VMR nach der [**IAMCertifiedOutputProtection-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iamcertifiedoutputprotection) ab, und rufen Sie [**dann IAMCertifiedOutputProtection::KeyExchange auf.**](/windows/desktop/api/Strmif/nf-strmif-iamcertifiedoutputprotection-keyexchange) Diese Methode gibt eine als GUID typisierte 128-Bit-Zufallszahl sowie einen Zeiger auf ein Bytearray zurück, das die XML-Zertifikatkette des Treibers im UTF-8-Format enthält. Der folgende Code zeigt, wie die Zertifikatkette erhalten wird.
 
 
 ```C++

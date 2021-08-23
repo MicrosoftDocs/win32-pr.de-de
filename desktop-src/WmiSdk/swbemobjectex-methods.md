@@ -1,25 +1,25 @@
 ---
-description: Das Objekt "errbemubjectex" macht die folgenden Methoden verfügbar.
+description: Das SWbemObjectEx-Objekt macht die folgenden Methoden verfügbar.
 ms.assetid: 7F2F7F4A-8A83-4F6F-BDA4-A1B5BCB01F5E
 ms.tgt_platform: multiple
-title: "' Errbemubjectex '-Methoden"
+title: SWbemObjectEx-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c46e08bf4612372fe5f58dca84e8a79711e1ba38
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 80247a3e040c5457c91c8a67a6b56bc0158f0971936aa622525187006cc694bb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215319"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119611900"
 ---
-# <a name="swbemobjectex-methods"></a>' Errbemubjectex '-Methoden
+# <a name="swbemobjectex-methods"></a>SWbemObjectEx-Methoden
 
-Das Objekt " [**errbemubjectex**](swbemobjectex.md) " macht die folgenden Methoden verfügbar.
+Das [**SWbemObjectEx-Objekt**](swbemobjectex.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Gettext- \_ Methode**](swbemobjectex-gettext-.md)
--   [**Aktualisierungs \_ Methode**](swbemobjectex-refresh-.md)
+-   [**\_GetText-Methode**](swbemobjectex-gettext-.md)
+-   [**\_Refresh-Methode**](swbemobjectex-refresh-.md)
 
  
 

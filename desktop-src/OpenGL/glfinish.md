@@ -1,9 +1,9 @@
 ---
-title: glfinish-Funktion (GL. h)
-description: Die Funktion "glfinish" wird blockiert, bis die gesamte OpenGL-Ausführung abgeschlossen ist.
+title: glFinish-Funktion (Gl.h)
+description: Die glFinish-Funktion wird blockiert, bis die gesamte OpenGL-Ausführung abgeschlossen ist.
 ms.assetid: 1dcb4767-02ea-41d8-bf1f-d61d20873d4f
 keywords:
-- glfinish-Funktion OpenGL
+- glFinish-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4731ffc91dbb8d31137a792b59d3ebc36bb4d5d4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d99d4cb185beb09cb882667b80dbd06a25546fb9209da38a775cefa887443617
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119580175"
 ---
-# <a name="glfinish-function"></a>glfinish-Funktion
+# <a name="glfinish-function"></a>glFinish-Funktion
 
-Die Funktion " **glfinish** " wird blockiert, bis die gesamte OpenGL-Ausführung abgeschlossen ist.
+Die **glFinish-Funktion** wird blockiert, bis die gesamte OpenGL-Ausführung abgeschlossen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glfinish** " gibt erst zurück, wenn die Auswirkungen aller zuvor genannten OpenGL-Funktionen vollständig sind. Zu diesen Effekten gehören alle Änderungen am OpenGL-Status, alle Änderungen am Verbindungsstatus und alle Änderungen am Frame Puffer-Inhalt.
+Die **glFinish-Funktion** gibt erst dann zurück, wenn die Auswirkungen aller zuvor aufgerufenen OpenGL-Funktionen abgeschlossen sind. Zu diesen Auswirkungen gehören alle Änderungen am OpenGL-Zustand, alle Änderungen am Verbindungszustand und alle Änderungen am Framepufferinhalt.
 
-Die Funktion " **glfinish** " erfordert einen Roundtrip zum Server.
+Die **glFinish-Funktion** erfordert einen Roundtrip zum Server.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,8 +68,8 @@ Die Funktion " **glfinish** " erfordert einen Roundtrip zum Server.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -84,7 +84,7 @@ Die Funktion " **glfinish** " erfordert einen Roundtrip zum Server.
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glflush**](glflush.md)
+[**glFlush**](glflush.md)
 </dt> </dl>
 
  

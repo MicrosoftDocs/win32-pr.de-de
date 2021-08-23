@@ -1,9 +1,9 @@
 ---
-title: HDM_ORDERTOINDEX Meldung (kommstrg. h)
-description: Ruft einen Indexwert für ein Element auf Grundlage seiner Reihenfolge im Header Steuerelement ab. Sie können diese Nachricht explizit senden oder den Header \_ orderdeindex-Makro verwenden.
+title: HDM_ORDERTOINDEX (Commctrl.h)
+description: Ruft einen Indexwert für ein Element basierend auf seiner Reihenfolge im Headersteuerelement ab. Sie können diese Nachricht explizit senden oder das \_ OrderToIndex-Makro Header verwenden.
 ms.assetid: vs|controls|~\controls\header\messages\hdm_ordertoindex.htm
 keywords:
-- Windows-Steuerelemente für HDM_ORDERTOINDEX Meldung
+- HDM_ORDERTOINDEX meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b65d10fb27c9a07639ebbd5770a53d72cbf0aba
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7afd006c90684137ffc484dac62ab40c04d90c0cdbc87f51102d8e9119e8b14d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119576259"
 ---
-# <a name="hdm_ordertoindex-message"></a>HDM \_ Order$ Index-Meldung
+# <a name="hdm_ordertoindex-message"></a>HDM \_ ORDERTOINDEX-Nachricht
 
-Ruft einen Indexwert für ein Element auf Grundlage seiner Reihenfolge im Header Steuerelement ab. Sie können diese Nachricht explizit senden oder den [**Header \_ orderdeindex**](/windows/desktop/api/Commctrl/nf-commctrl-header_ordertoindex) -Makro verwenden.
+Ruft einen Indexwert für ein Element basierend auf seiner Reihenfolge im Headersteuerelement ab. Sie können diese Nachricht explizit senden oder das [**\_ OrderToIndex-Makro Header**](/windows/desktop/api/Commctrl/nf-commctrl-header_ordertoindex) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Ruft einen Indexwert für ein Element auf Grundlage seiner Reihenfolge im Header
 *wParam* 
 </dt> <dd>
 
-Die Reihenfolge, in der das Element im Header Steuerelement angezeigt wird, von links nach rechts. Der Indexwert des Elements in der Spalte ganz links wäre z. b. 0. Der Wert für das nächste Element rechts ist 1 usw.
+Die Reihenfolge, in der das Element im Headersteuerelement von links nach rechts angezeigt wird. Der Indexwert des Elements in der spalte ganz links wäre z. B. 0. Der Wert für das nächste Element auf der rechten Seite wäre 1, und so weiter.
 
 </dd> <dt>
 
@@ -41,7 +41,7 @@ Die Reihenfolge, in der das Element im Header Steuerelement angezeigt wird, von 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt int zurück, das den Element Index angibt. Wenn *wParam* ungültig ist (negativ oder zu groß), ist die Rückgabe gleich *wParam*.
+Gibt INT zurück, das den Elementindex angibt. Wenn *wParam* ungültig (negativ oder zu groß) ist, entspricht die Rückgabe *wParam*.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt int zurück, das den Element Index angibt. Wenn *wParam* ungültig ist (neg
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: gluproject-Funktion (glu. h)
-description: Die Funktion "gluproject" ordnet den Fenster Koordinaten Objekt Koordinaten zu.
+title: gluProject-Funktion (Glu.h)
+description: Die gluProject-Funktion ordnet Objektkoordinaten Fensterkoordinaten zu.
 ms.assetid: cfd8bc5b-b684-4207-8bdb-bf086858da13
 keywords:
-- gluproject-Funktion OpenGL
+- gluProject-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 84972d95d381a630bf6caf7f0099ce740a4f2741
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 324f6c896c225453bfc8bf2ebb4b8619707c498c75e1309ea24fc6557cdd3deb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119488809"
 ---
-# <a name="gluproject-function"></a>gluproject-Funktion
+# <a name="gluproject-function"></a>gluProject-Funktion
 
-Die Funktion " **gluproject** " ordnet den Fenster Koordinaten Objekt Koordinaten zu.
+Die **gluProject-Funktion** ordnet Objektkoordinaten Fensterkoordinaten zu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,78 +48,78 @@ int WINAPI gluProject(
 
 <dl> <dt>
 
-*objX* 
+*objx* 
 </dt> <dd>
 
-Die x-Objekt Koordinate.
+Die x-Objektkoordinate.
 
 </dd> <dt>
 
 *objy* 
 </dt> <dd>
 
-Die y-Objekt Koordinate.
+Die y-Objektkoordinate.
 
 </dd> <dt>
 
 *objz* 
 </dt> <dd>
 
-Die z-Objekt Koordinate.
+Die z-Objektkoordinate.
 
 </dd> <dt>
 
-*modelmatrix* 
+*modelMatrix* 
 </dt> <dd>
 
-Die aktuelle Modelview-Matrix (wie von einem [**glgetdoublev**](glgetdoublev.md) -Befehl).
+Die aktuelle ModelView-Matrix (wie bei einem [**glGetDoublev-Aufruf).**](glgetdoublev.md)
 
 </dd> <dt>
 
-*projmatrix* 
+*projMatrix* 
 </dt> <dd>
 
-Die aktuelle Projektions Matrix (wie bei einem **glgetdoublev** -Befehl).
+Die aktuelle Projektionsmatrix (wie bei einem **glGetDoublev-Aufruf).**
 
 </dd> <dt>
 
-*Viewport* 
+*Ansichtsfenster* 
 </dt> <dd>
 
-Der aktuelle Viewport (wie bei einem [**glgetintegerv**](glgetintegerv.md) -Befehl).
+Der aktuelle Viewport (wie bei einem [**glGetIntegerv-Aufruf).**](glgetintegerv.md)
 
 </dd> <dt>
 
 *Winx* 
 </dt> <dd>
 
-Die berechnete x-Fenster Koordinate.
+Die berechnete x-Fensterkoordinate.
 
 </dd> <dt>
 
-*Winy* 
+*winy* 
 </dt> <dd>
 
-Die berechnete y-Fenster Koordinate.
+Die berechnete y-Fensterkoordinate.
 
 </dd> <dt>
 
-*Winz* 
+*winz* 
 </dt> <dd>
 
-Die berechnete z-Fenster Koordinate.
+Die berechnete Z-Fensterkoordinate.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert "GL \_ true".
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert GL \_ TRUE.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert "GL \_ false".
+Wenn die Funktion fehlschlägt, ist der Rückgabewert GL \_ FALSE.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **gluproject** " wandelt die angegebenen Objekt Koordinaten mithilfe von " *modelmatrix*", " *projmatrix*" und " *Viewport*" in Fenster Koordinaten um. Das Ergebnis wird in *Winx*, *Winy* und *Winz* gespeichert.
+Die **gluProject-Funktion** transformiert die angegebenen Objektkoordinaten mithilfe von *modelMatrix,* *projMatrix* und viewport in *Fensterkoordinaten.* Das Ergebnis wird in *winx*, *winy* und *winz gespeichert.*
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -129,8 +129,8 @@ Die Funktion " **gluproject** " wandelt die angegebenen Objekt Koordinaten mithi
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -139,13 +139,13 @@ Die Funktion " **gluproject** " wandelt die angegebenen Objekt Koordinaten mithi
 
 <dl> <dt>
 
-[**glgetdoublev**](glgetdoublev.md)
+[**glGetDoublev**](glgetdoublev.md)
 </dt> <dt>
 
-[**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**"gluunproject"**](gluunproject.md)
+[**gluUnProject**](gluunproject.md)
 </dt> </dl>
 
  

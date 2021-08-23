@@ -1,11 +1,11 @@
 ---
-title: Basicdevice. FriendlyName (Eigenschaft)
-description: Ruft den anzeigen amen des Geräts ab.
+title: BasicDevice.FriendlyName (Eigenschaft)
+description: Ruft den Angezeigten Namen des Geräts ab.
 ms.assetid: C17143AD-845B-4665-B765-A1FB0D135F84
 keywords:
-- FriendlyName-Eigenschaft Medien Streaming-API
-- FriendlyName-Eigenschaft Medien Streaming-API, basicdevice-Schnittstelle
-- Basicdevice-Schnittstelle Medien Streaming-API, FriendlyName (Eigenschaft)
+- FriendlyName-Eigenschaft Media Streaming-API
+- FriendlyName-Eigenschaft Media Streaming-API, BasicDevice-Schnittstelle
+- BasicGeräteschnittstelle Medienstreaming-API, FriendlyName-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 79406e67b6152c9240c5967b223f6b54fb2cd86d
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: f9842265039c9565b33ef1eb73c6aecb14cbc61f6b9cd0c95324da83ed40066c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106341932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119462120"
 ---
-# <a name="basicdevicefriendlyname-property"></a>Basicdevice. FriendlyName (Eigenschaft)
+# <a name="basicdevicefriendlyname-property"></a>BasicDevice.FriendlyName (Eigenschaft)
 
-Ruft den anzeigen amen des Geräts ab.
+Ruft den Angezeigten Namen des Geräts ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -33,7 +33,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 ```C++
 HRESULT get_FriendlyName(
-  [out] HSTRING *value
+  [out] HSTRING *value
 );
 ```
 
@@ -41,15 +41,15 @@ HRESULT get_FriendlyName(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Zeiger auf den anzeigen amen des Geräts.
+Ein Zeiger auf den Benutzerfreundlichen Namen des Geräts.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Basicdevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
+[**BasicDevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

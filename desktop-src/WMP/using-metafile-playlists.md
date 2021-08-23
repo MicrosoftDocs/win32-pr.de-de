@@ -3,9 +3,9 @@ title: Verwenden von Metafile-Wiedergabelisten
 description: Verwenden von Metafile-Wiedergabelisten
 ms.assetid: f5711a7f-7674-4b92-8262-cee8bac4aa77
 keywords:
-- Windows Media Metadatei-Wiedergabelisten, Informationen zu
+- Windows Wiedergabelisten von Medienmetadateien, Informationen
 - Wiedergabelisten, Informationen
-- Metadatei-Wiedergabelisten, Informationen
+- Metafile-Wiedergabelisten, Informationen
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -13,36 +13,36 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 71f245d1fc1610174f842347a15dfcfaa13286e0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ec4cd47584aaba961d9faa3ba2058ab45145839787f702755ccb7a00fffbe827
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119465860"
 ---
 # <a name="using-metafile-playlists"></a>Verwenden von Metafile-Wiedergabelisten
 
-Wiedergabelisten geben an, wie die Streamingmedien oder Mediendateien abgespielt werden und welche Metadatenfenster Media Player angezeigt werden.
+Wiedergabelisten geben an, wie die Streamingmedien oder Mediendateien abgespielt werden und welche Metadaten Windows Media Player werden.
 
-In diesem Abschnitt werden verschiedene Möglichkeiten erläutert, wie Sie Wiedergabelisten verwenden können. Der Abschnitt ist in folgende Themen unterteilt:
+In diesem Abschnitt werden mehrere Möglichkeiten zum Verwenden von Wiedergabelisten erläutert. Der Abschnitt ist in die folgenden Themen unterteilt.
 
 
 
 | Thema                                                                                              | BESCHREIBUNG                                                                                                                                                    |
 |----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Ändern der Anzeige](modifying-the-display.md)                                                 | Hinzufügen von Text, Links und Bildern.                                                                                                                                |
-| [Umleitung](redirection.md)                                                                     | Verwenden von Wiedergabelisten zum Umleiten des Browsers an Windows Media Player und angeben der URL eines zu Wiedergabe enden Streams oder einer Mediendatei.                                      |
-| [Zugreifen auf Medien](accessing-media.md)                                                             | Verwenden Sie Metadatei-Elemente und ihre untergeordneten Elemente, um den Zugriff auf die Inhalte und die Reihenfolge und Dauer ihrer Wiedergabe anzugeben.                               |
-| [Verwenden von Live ereignisstreamumschaltung](using-live-event-stream-switching.md)                         | Verwenden Sie das **Ereignis** Element, um einen Mediendaten Strom anzugeben, auf den zugegriffen werden soll, und setzen Sie dann den ursprünglichen Stream wieder Wird zum Einfügen von Werbe Einfügungs                            |
-| [Verwenden von Metadatendateien für den nahtlosen Datenstrom Wechsel](using-metafiles-for-seamless-stream-switching.md) | Verwenden des- **Ereignis** Elements, um den nächsten Mediendaten Strom für den Zugriff vorab zu laden, um Lücken in der Präsentation zu vermeiden.                                                      |
-| [Verwenden von Ankündigungen](using-announcements.md)                                                     | Verwenden einer Metadatei zum Bereitstellen von Informationen über die URL für einen Medienstrom, einschließlich der Multicast-IP-Adresse, des Ports, des streamformats und anderer Stations Einstellungen. |
-| [Verwenden von URL-und Serverrollover](using-url-and-server-rollover.md)                                 | Verwenden von Metadatei-Wiedergabelisten, um ein automatisches Rollback zu alternativen Inhalts Quellen bereitzustellen, wenn auf einen Stream nicht zugegriffen werden kann oder wiedergegeben wird.             |
-| [Verwenden von benutzerdefinierten Parametern und Befehlen](using-custom-parameters-and-commands.md)                   | Verwenden des **param** -Elements zum Definieren benutzerdefinierter Elemente, um zusätzliche Metadaten bereitzustellen.                                                                          |
-| [Personalisieren der Medien Bereitstellung](personalizing-media-delivery.md)                                   | Verwenden von Benutzereinstellungen zum Ermitteln von Broadcast Inhalten                                                                                                         |
+| [Umleitung](redirection.md)                                                                     | Verwenden von Wiedergabelisten zum Umleiten des Browsers Windows Media Player und Angeben der URL eines Streams oder einer Mediendatei, die wieder verwendet werden soll.                                      |
+| [Zugreifen auf Medien](accessing-media.md)                                                             | Verwenden von Metadateielementen und deren untergeordneten Elementen zum Angeben des Inhalts, auf den zugriff werden soll, sowie der Reihenfolge und Dauer der Wiedergabe.                               |
+| [Verwenden von Live Event Stream Switching](using-live-event-stream-switching.md)                         | Verwenden des **EVENT-Elements,** um einen Medienstream anzugeben, auf den sie zugreifen und dann die Wiedergabe des ursprünglichen Streams fortsetzen. Wird zum Einfügen von Werbeeinblendung verwendet.                            |
+| [Verwenden von Metadateien für den nahtlosen Streamwechsel](using-metafiles-for-seamless-stream-switching.md) | Verwenden des **EVENT-Elements** zum Vorabladen des nächsten Medienstreams für den Zugriff, um Lücken in der Präsentation zu vermeiden.                                                      |
+| [Verwenden von Ankündigungen](using-announcements.md)                                                     | Verwenden einer Metadatei zum Bereitstellen von Informationen über die URL für einen Medienstream, einschließlich der Multicast-IP-Adresse, des Ports, des Streamformats und anderer Stationseinstellungen. |
+| [Verwenden von URL und Serverrollover](using-url-and-server-rollover.md)                                 | Verwenden von Metadateiwiedergabelisten, um ein automatisches Roll over zu alternativen Inhaltsquellen zu ermöglichen, wenn auf einen Stream nicht zugegriffen oder abgespielt werden kann.             |
+| [Verwenden von benutzerdefinierten Parametern und Befehlen](using-custom-parameters-and-commands.md)                   | Verwenden des **PARAM-Elements** zum Definieren benutzerdefinierter Elemente zum Bereitstellen zusätzlicher Metadaten.                                                                          |
+| [Personalisieren der Medienbereitstellung](personalizing-media-delivery.md)                                   | Verwenden von Benutzereinstellungen zum Bestimmen von Broadcastinhalten.                                                                                                         |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -51,15 +51,15 @@ In diesem Abschnitt werden verschiedene Möglichkeiten erläutert, wie Sie Wiede
 [**Metafile-Wiedergabelisten**](metafile-playlists.md)
 </dt> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Leitfaden für Windows Media-Metadateien**](windows-media-metafile-guide.md)
+[**Windows Leitfaden zur Medienmetadatei**](windows-media-metafile-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

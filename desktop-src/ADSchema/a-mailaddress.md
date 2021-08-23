@@ -1,11 +1,11 @@
 ---
-title: SMTP-Mail-address-Attribut
-description: Generisches Mail Adress Attribut. Wird im Feld als optionales Attribut von Server Objekten verwendet, wo es von e-Mail-basierter DS-Replikation genutzt wird (sofern die Computer so konfiguriert sind).
+title: SMTP-Mail-Address-Attribut
+description: Generisches E-Mail-Adressattribut. Wird im Feld als optionales Attribut von Serverobjekten verwendet, wobei es von der E-Mail-basierten DS-Replikation genutzt wird (wenn die Computer so konfiguriert sind).
 ms.assetid: 54fd710c-d140-4d46-9db3-0c72fb5fb08c
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für SMTP-e-Mail-Adress Attribut
-- MailAddress-Attribut AD-Schema
+- AD-Schema des SMTP-Mail-Address-Attributs
+- mailAddress-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e1828c59af346ab5a5741aaa03358b711484089
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b6ffc0e535b97994d3ef6ed451516eafa68c59940468f31bd88ffab84a878dbf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119301290"
 ---
-# <a name="smtp-mail-address-attribute"></a>SMTP-Mail-address-Attribut
+# <a name="smtp-mail-address-attribute"></a>SMTP-Mail-Address-Attribut
 
-Generisches Mail Adress Attribut. Wird im Feld als optionales Attribut von Server Objekten verwendet, wo es von e-Mail-basierter DS-Replikation genutzt wird (sofern die Computer so konfiguriert sind).
+Generisches E-Mail-Adressattribut. Wird im Feld als optionales Attribut von Serverobjekten verwendet, wobei es von der E-Mail-basierten DS-Replikation genutzt wird (wenn die Computer so konfiguriert sind).
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | SMTP-e-Mail-Adresse                           |
-| LDAP-Display-Name | mailAddress                                 |
+| CN                | SMTP-E-Mail-Adresse                           |
+| Ldap-Anzeigename | mailAddress                                 |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Domänen Administrator                        |
-| Aktualisierungshäufigkeit  | Fast nie                                |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                        |
+| Updatehäufigkeit  | Fast nie                                |
 | Attribute-Id      | 1.2.840.113556.1.4.786                      |
-| System-ID-GUID    | 26d9736b-6070-11d1-a9c6-0000 C1        |
+| System-ID-GUID    | 26d9736f-6070-11d1-a9c6-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Generisches Mail Adress Attribut. Wird im Feld als optionales Attribut von Serve
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,19 +59,19 @@ Generisches Mail Adress Attribut. Wird im Feld als optionales Attribut von Serve
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
+| Ist einwertig       | True                                  |
 | Ist indiziert             | False                                 |
 | Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Servers**](c-server.md)<br/> |
+| In verwendete Klassen        | [**Server**](c-server.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,15 +80,15 @@ Generisches Mail Adress Attribut. Wird im Feld als optionales Attribut von Serve
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
+| Ist einwertig       | True                                  |
 | Ist indiziert             | False                                 |
 | Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Servers**](c-server.md)<br/> |
+| In verwendete Klassen        | [**Server**](c-server.md)<br/> |
 
 
 
@@ -101,15 +101,15 @@ Generisches Mail Adress Attribut. Wird im Feld als optionales Attribut von Serve
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
+| Ist einwertig       | True                                  |
 | Ist indiziert             | False                                 |
 | Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Servers**](c-server.md)<br/> |
+| In verwendete Klassen        | [**Server**](c-server.md)<br/> |
 
 
 
@@ -122,15 +122,15 @@ Generisches Mail Adress Attribut. Wird im Feld als optionales Attribut von Serve
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
+| Is-Single-Valued       | True                                  |
 | Ist indiziert             | False                                 |
 | Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Servers**](c-server.md)<br/> |
+| In verwendete Klassen        | [**Server**](c-server.md)<br/> |
 
 
 
@@ -143,15 +143,15 @@ Generisches Mail Adress Attribut. Wird im Feld als optionales Attribut von Serve
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
+| Is-Single-Valued       | True                                  |
 | Ist indiziert             | False                                 |
 | Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Servers**](c-server.md)<br/> |
+| In verwendete Klassen        | [**Server**](c-server.md)<br/> |
 
 
 
@@ -164,15 +164,15 @@ Generisches Mail Adress Attribut. Wird im Feld als optionales Attribut von Serve
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
+| Is-Single-Valued       | True                                  |
 | Ist indiziert             | False                                 |
 | Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Servers**](c-server.md)<br/> |
+| In verwendete Klassen        | [**Server**](c-server.md)<br/> |
 
 
 
@@ -185,15 +185,15 @@ Generisches Mail Adress Attribut. Wird im Feld als optionales Attribut von Serve
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
+| Is-Single-Valued       | True                                  |
 | Ist indiziert             | False                                 |
 | Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Servers**](c-server.md)<br/> |
+| In verwendete Klassen        | [**Server**](c-server.md)<br/> |
 
 
 

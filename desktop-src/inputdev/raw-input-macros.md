@@ -1,17 +1,17 @@
 ---
-title: Unformatiert eingegebene Makros
-description: Unformatiert eingegebene Makros
+title: Unformatierte Eingabemakros
+description: Unformatierte Eingabemakros
 ms.assetid: d6438ecf-6e9d-4099-bd20-a039c1f3c36c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c7b07590b9b0df39b7eb4c6ae731109bedad963
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 623e84dd53d5d92a88a81b39aa29d6921e5a877f16acb1f1da6b29aca1ac1786
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108087778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119611610"
 ---
-# <a name="raw-input-macros"></a>Unformatiert eingegebene Makros
+# <a name="raw-input-macros"></a>Unformatierte Eingabemakros
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

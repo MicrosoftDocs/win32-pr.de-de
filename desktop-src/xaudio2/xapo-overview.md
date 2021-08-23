@@ -1,45 +1,45 @@
 ---
-description: Die xapo-API ermöglicht die Erstellung von plattformübergreifenden audioverarbeitungsobjekten (xapo) für die Verwendung in XAudio2 sowohl unter Windows als auch in Xbox 360.
+description: Die XAPO-API ermöglicht die Erstellung plattformübergreifender Audioverarbeitungsobjekte (Cross-Platform Audio Processing Objects, XAPO) für die Verwendung in XAudio2 auf Windows und Xbox 360.
 ms.assetid: 4fe88a0f-0234-462f-b575-e592f2c8401e
-title: Übersicht über xapo
+title: Übersicht über XAPO
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 31e2372790e26b7fcd3d15019797185ba180d668
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2ee9ee64e865c8e3ef3cdac026274b922db438a54979dcb30d855a92b96e4e0e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357076"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119589910"
 ---
-# <a name="xapo-overview"></a>Übersicht über xapo
+# <a name="xapo-overview"></a>Übersicht über XAPO
 
-Die xapo-API ermöglicht die Erstellung von plattformübergreifenden audioverarbeitungsobjekten (xapo) für die Verwendung in XAudio2 sowohl unter Windows als auch in Xbox 360. Ein xapo-Objekt ist ein Objekt, das eingehende Audiodaten annimmt und vor der Übergabe einen Vorgang für die Daten ausführt. Sie können ein xapo-Objekt verwenden, um eine Vielzahl von Aufgaben auszuführen. dazu gehören das Hinzufügen von Reverb zu einem Audiostream und das Überwachen von Spitzen Volumen Ebenen
+Die XAPO-API ermöglicht die Erstellung plattformübergreifender Audioverarbeitungsobjekte (Cross-Platform Audio Processing Objects, XAPO) für die Verwendung in XAudio2 auf Windows und Xbox 360. Ein XAPO-Objekt ist ein Objekt, das eingehende Audiodaten übernimmt und vor der Übergabe einen Vorgang für die Daten ausführt. Sie können einen XAPO-Wert verwenden, um eine Vielzahl von Aufgaben auszuführen, z. B. das Hinzufügen von Hall zu einem Audiostream und das Überwachen von Spitzenvolumenebenen.
 
-## <a name="creating-new-xapos"></a>Neue xapos werden erstellt
+## <a name="creating-new-xapos"></a>Erstellen neuer XAPOs
 
-Die xapo-API stellt die [**ixapo**](/windows/desktop/api/XAPO/nn-xapo-ixapo) -Schnittstelle und die [**cxapobase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapobase) -Klasse zum Entwickeln neuer xapo-Typen bereit. Die **ixapo** -Schnittstelle enthält alle Methoden, die implementiert werden müssen, um eine neue xapo-Datei zu erstellen. Die **cxapobase** -Klasse stellt eine grundlegende Implementierung der **ixapo** -Schnittstelle bereit. **Cxapobase** implementiert alle **ixapo** -Schnittstellen Methoden außer der [**ixapo::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process) -Methode, die für jedes xapo eindeutig ist.
+Die XAPO-API stellt die [**IXAPO-Schnittstelle**](/windows/desktop/api/XAPO/nn-xapo-ixapo) und die [**CXAPOBase-Klasse**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapobase) zum Erstellen neuer XAPO-Typen bereit. Die **IXAPO-Schnittstelle** enthält alle Methoden, die implementiert werden müssen, um eine neue XAPO zu erstellen. Die **CXAPOBase-Klasse** stellt eine grundlegende Implementierung der **IXAPO-Schnittstelle** bereit. **CXAPOBase** implementiert alle **IXAPO-Schnittstellenmethoden** mit Ausnahme der [**IXAPO::P rocess-Methode,**](/windows/win32/api/xapo/nf-xapo-ixapo-process) die für jede XAPO eindeutig ist.
 
-Ein Beispiel für das Erstellen eines neuen xapo finden Sie unter Gewusst [wie: Erstellen eines xapo](how-to--create-an-xapo.md).
+Ein Beispiel für die Erstellung eines neuen XAPO finden Sie unter [How to: Create an XAPO](how-to--create-an-xapo.md).
 
-Ein Beispiel für das Erstellen eines xapo, das Lauf Zeitparameter annimmt, finden [Sie unter Gewusst wie: Hinzufügen der Unterstützung für Lauf Zeitparameter zu einem xapo](how-to--add-run-time-parameter-support-to-an-xapo.md)-Code.
+Ein Beispiel für die Erstellung eines XAPO-Werts, der Laufzeitparameter akzeptiert, finden Sie unter [How to: Add Run-time Parameter Support to an XAPO](how-to--add-run-time-parameter-support-to-an-xapo.md).
 
-## <a name="xapos-and-com"></a>Xapos und com
+## <a name="xapos-and-com"></a>XAPOs und COM
 
-Xapos implementiert die **IUnknown** -Schnittstelle. Die [**ixapo**](/windows/desktop/api/XAPO/nn-xapo-ixapo) -und [**ixapoparameters**](/windows/desktop/api/XAPO/nn-xapo-ixapoparameters) -Schnittstellen enthalten die drei **IUnknown** -Methoden: **QueryInterface**, **adressf** und **Release**. [**Cxapobase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapobase) stellt Implementierungen aller drei IUnknown-Methoden bereit. Eine neue Instanz von **cxapobase** erhält einen Verweis Zähler von 1. Er wird zerstört, wenn der Verweis Zähler 0 (null) ist. Die Implementierungen von **ixapo** und **ixapoparameters** sollten das gleiche Muster befolgen, um ihre ordnungsgemäße Verwaltung bei Verwendung mit XAudio2 zuzulassen.
+XAPOs implementieren die **IUnknown-Schnittstelle.** Die [**Schnittstellen IXAPO**](/windows/desktop/api/XAPO/nn-xapo-ixapo) und [**IXAPOParameters**](/windows/desktop/api/XAPO/nn-xapo-ixapoparameters) enthalten die drei **IUnknown-Methoden:** **QueryInterface,** **AddRef** und **Release**. [**CXAPOBase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapobase) bietet Implementierungen aller drei IUnknown-Methoden. Eine neue Instanz von **CXAPOBase** hat den Verweiszähler 1. Sie wird zerstört, wenn ihre Verweisanzahl 0 (0) beträgt. Implementierungen von **IXAPO und** **IXAPOParameters** sollten das gleiche Muster befolgen, um eine ordnungsgemäße Verwaltung zu ermöglichen, wenn sie mit XAudio2 verwendet werden.
 
-Xapo-Instanzen werden als **IUnknown** -Schnittstellen an XAudio2 übermittelt. XAudio2 verwendet **QueryInterface** , um eine [**ixapo**](/windows/desktop/api/XAPO/nn-xapo-ixapo) -Schnittstelle abzurufen und zu erkennen, ob xapo die [**ixapoparameters**](/windows/desktop/api/XAPO/nn-xapo-ixapoparameters) -Schnittstelle implementiert. Implementierungen von **ixapo** müssen Anforderungen für **\_ \_ uuidof (ixapo)** akzeptieren. Wenn **ixapoparameters** implementiert ist, muss es auch Anforderungen für **\_ \_ uuidof (ixapoparameters)** akzeptieren.
+XAPO-Instanzen werden als **IUnknown-Schnittstellen an** XAudio2 übergeben. XAudio2 verwendet **QueryInterface,** um eine [**IXAPO-Schnittstelle**](/windows/desktop/api/XAPO/nn-xapo-ixapo) zu erhalten und zu erkennen, ob XAPO die [**IXAPOParameters-Schnittstelle**](/windows/desktop/api/XAPO/nn-xapo-ixapoparameters) implementiert. Implementierungen von **IXAPO** müssen Anforderungen für **\_ \_ uuidof(IXAPO) akzeptieren.** Wenn **IXAPOParameters** implementiert ist, müssen auch Anforderungen für **\_ \_ uuidof(IXAPOParameters) akzeptiert werden.**
 
-## <a name="using-an-xapo-in-xaudio2"></a>Verwenden eines xapo in XAudio2
+## <a name="using-an-xapo-in-xaudio2"></a>Verwenden eines XAPO in XAudio2
 
-Xapos werden in XAudio2 verwendet, indem Sie an Stimmen angehängt werden. Jede XAudio2-Stimme hat eine Wirkungskette, die NULL oder mehr Audioeffekte enthält. Audiodaten, die an eine Stimme gesendet werden, werden durch jeden Effekt in der Kette geleitet, bevor Sie an die Ausgabe Ziele der Stimme gesendet werden. Die Daten werden von der Stimme mithilfe des *pinputprocessparameters* -Parameters der [**ixapo::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process) -Methode von der Stimme an jede Auswirkung übergeben. Anschließend wird er mithilfe des Parameters *poutputprocessparameters* an die Stimme zurückgegeben. Die Stimme nimmt die Ausgabe jedes Effekts an und fügt Sie in den nächsten Effekt in der Kette ein, bis keine Auswirkungen mehr in der Kette vorhanden sind.
+XAPOs werden in XAudio2 verwendet, indem sie an Stimmen angefügt werden. Jede XAudio2-Stimme verfügt über eine Effektkette, die null oder mehr Audioeffekte enthält. Audiodaten, die an eine Stimme gesendet werden, werden durch jeden Effekt in der Kette übergeben, bevor sie an die Ausgabeziele der Stimme gesendet werden. Daten werden von der Stimme an jeden Effekt übergeben, indem der *pInputProcessParameters-Parameter* der [**IXAPO::P rocess-Methode verwendet**](/windows/win32/api/xapo/nf-xapo-ixapo-process) wird. Anschließend wird sie mit dem Parameter *pOutputProcessParameters* an die Stimme zurückgegeben. Die Stimme übernimmt die Ausgabe jedes Effekts und gibt sie in den nächsten Effekt in der Kette ein, bis keine Auswirkungen in der Kette übrig sind.
 
-Weitere Informationen zu XAudio2 Effect-Ketten finden Sie unter [XAudio2-Audioeffekte](xaudio2-audio-effects.md).
+Weitere Informationen zu XAudio2-Effektketten finden Sie unter [XAudio2 Audio Effects](xaudio2-audio-effects.md).
 
-Ein Beispiel für die Verwendung von xapo in XAudio2 finden Sie unter Gewusst [wie: Verwenden von xapo in XAudio2](how-to--use-an-xapo-in-xaudio2.md).
+Ein Beispiel für die Verwendung eines XAPO in XAudio2 finden Sie unter [How to: Use an XAPO in XAudio2](how-to--use-an-xapo-in-xaudio2.md).
 
-## <a name="effect-libraries"></a>Effekt Bibliotheken
+## <a name="effect-libraries"></a>Effect-Bibliotheken
 
-Die xapo-Effekt Bibliothek enthält mehrere xapos und eine gängige Methode, Sie zu instanziieren. Weitere Informationen zu xapofx finden Sie unter [Übersicht über xapofx](xapofx-overview.md) . Außerdem verfügt XAudio2 über integrierte Hall-und volumemetereffekte. Weitere Informationen zu den integrierten XAudio2-Effekten finden Sie unter [XAudio2-Audioeffekte](xaudio2-audio-effects.md) .
+Die XAPO-Effektbibliothek enthält mehrere XAPOs und eine gängige Methode zum Instanziieren. Informationen [zu XAPOFX](xapofx-overview.md) finden Sie unter Übersicht über XAPOFX. Außerdem verfügt XAudio2 über integrierte Hall- und Volumenmessungseffekte. Weitere Informationen zu den integrierten XAudio2-Effekten finden Sie unter [XAudio2-Audioeffekte.](xaudio2-audio-effects.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

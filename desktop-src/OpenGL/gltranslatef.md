@@ -1,6 +1,6 @@
 ---
-title: glTranslatef-Funktion (GL. h)
-description: Die glTranslatef-Funktion multipliziert die aktuelle Matrix mit einer Übersetzungs Matrix.
+title: glTranslatef-Funktion (Gl.h)
+description: Die glTranslatef-Funktion multipliziert die aktuelle Matrix mit einer Übersetzungsmatrix.
 ms.assetid: 2354ad52-e80f-49fc-82e7-ac6c146aa59d
 keywords:
 - glTranslatef-Funktion OpenGL
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d5b52c3890b70ecb931211af1788afe2b8e6ad4
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 12975095aa78d143aaaf096e8b0141f37d45a56286e7d607a9253e59e27ba5bf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "103869388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119489844"
 ---
 # <a name="gltranslatef-function"></a>glTranslatef-Funktion
 
-Die [**glTranslatef**](gltranslate.md) -Funktion multipliziert die aktuelle Matrix mit einer Übersetzungs Matrix.
+Die [**glTranslatef-Funktion**](gltranslate.md) multipliziert die aktuelle Matrix mit einer Übersetzungsmatrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ void WINAPI glTranslatef(
 *x* 
 </dt> <dd>
 
-Die *x* -Koordinate eines Übersetzungs Vektors.
+Die  x-Koordinate eines Übersetzungsvektors.
 
 </dd> <dt>
 
 *y* 
 </dt> <dd>
 
-Die *y* -Koordinate eines Übersetzungs Vektors.
+Die  y-Koordinate eines Übersetzungsvektors.
 
 </dd> <dt>
 
 *z* 
 </dt> <dd>
 
-Die *z* -Koordinate eines Übersetzungs Vektors.
+Die  z-Koordinate eines Übersetzungsvektors.
 
 </dd> </dl>
 
@@ -67,25 +67,25 @@ Die *z* -Koordinate eines Übersetzungs Vektors.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glTranslatef** -Funktion erzeugt die durch (*x*, *y*, *z*) angegebene Übersetzung. Der Übersetzungs Vektor wird verwendet, um eine 4 x 4-Übersetzungs Matrix zu berechnen:
+Die **glTranslatef-Funktion** erzeugt die von angegebene Übersetzung (*x*, *y*, *z*). Der Übersetzungsvektor wird verwendet, um eine 4x4-Übersetzungsmatrix zu berechnen:
 
-![Diagramm, das die durch x, y, z angegebene 4 x 4-Übersetzungs Matrix anzeigt.](images/trans01.png)
+![Diagramm der 4x4-Übersetzungsmatrix, angegeben durch x, y, z.](images/trans01.png)
 
-Die aktuelle Matrix (siehe [**glMatrixMode**](glmatrixmode.md)) wird mit dieser Übersetzungs Matrix multipliziert, und das Produkt ersetzt die aktuelle Matrix. Das heißt, wenn m die aktuelle Matrix und T die Übersetzungs Matrix ist, wird m durch m T ersetzt.
+Die aktuelle Matrix (siehe [**glMatrixMode**](glmatrixmode.md)) wird mit dieser Übersetzungsmatrix multipliziert, wobei das Produkt die aktuelle Matrix ersetzt. Das heißt, wenn M die aktuelle Matrix und T die Übersetzungsmatrix ist, wird M durch M T ersetzt.
 
-Wenn der Matrix Modus entweder eine GL \_ Modelview-oder GL- \_ Projektion ist, werden alle Objekte, die nach dem Aufruf von **glTranslatef** gezeichnet werden, übersetzt. Verwenden Sie [**glPushMatrix**](glpushmatrix.md) und **glPopMatrix** , um das nicht übersetzte Koordinatensystem zu speichern und wiederherzustellen.
+Wenn der Matrixmodus entweder GL \_ MODELVIEW oder GL PROJECTION ist, werden alle Objekte übersetzt, die nach dem Aufruf von \_ **glTranslatef** gezeichnet wurden. Verwenden Sie [**glPushMatrix**](glpushmatrix.md) und **glPopMatrix,** um das nicht übersetzte Koordinatensystem zu speichern und wiederherzustellen.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit [**glübersetzt**](gltranslate.md) und **glTranslatef** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit [**glTranslated**](gltranslate.md) und **glTranslatef ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem-Argument des GL- \_ Matrix \_ Modus
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ MATRIX \_ MODE
 
-**glget** mit dem Argument GL \_ Modelview \_ Matrix
+**glGet** mit argument GL \_ MODELVIEW \_ MATRIX
 
-**glget** mit dem Argument GL- \_ Projektions \_ Matrix
+**glGet** mit argument GL \_ PROJECTION \_ MATRIX
 
-**glget** mit Argument GL- \_ Textur \_ Matrix
+**glGet** mit argument GL \_ TEXTURE \_ MATRIX
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,8 +95,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit [**glüber
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -114,16 +114,16 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit [**glüber
 [**glMatrixMode**](glmatrixmode.md)
 </dt> <dt>
 
-[**glmultmatrix**](glmultmatrix.md)
+[**glMultMatrix**](glmultmatrix.md)
 </dt> <dt>
 
 [**glPushMatrix**](glpushmatrix.md)
 </dt> <dt>
 
-[**glrotation**](glrotate.md)
+[**glRotate**](glrotate.md)
 </dt> <dt>
 
-[**glscale**](glscale.md)
+[**glScale**](glscale.md)
 </dt> </dl>
 
  

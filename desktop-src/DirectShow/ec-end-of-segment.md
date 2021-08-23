@@ -1,17 +1,17 @@
 ---
 description: Das Ende eines Segments wurde erreicht.
 ms.assetid: 07f141b1-2e96-49e2-9cf7-581690e245b5
-title: EC_END_OF_SEGMENT (DShow. h)
+title: EC_END_OF_SEGMENT (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a779b0f46a031ad694bd3fed3fe29536424a3a7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 13bbc55ab316a56264c9c0b66196a53181d0abd72bfdddf3315523b8c387a1d7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373751"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119639750"
 ---
-# <a name="ec_end_of_segment"></a>EC- \_ Ende \_ des \_ Segments
+# <a name="ec_end_of_segment"></a>EC \_ END \_ OF \_ SEGMENT
 
 Das Ende eines Segments wurde erreicht.
 
@@ -22,24 +22,24 @@ Das Ende eines Segments wurde erreicht.
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-(**Konstante** **Verweis \_ Zeit** \* ) Zeiger auf einen **Verweis \_ Zeitwert** , der die akkumulierte streamzeit seit dem Start des Segments in 100-Nanosecond-Einheiten angibt.
+(**const** **REFERENCE \_ TIME**) Zeiger auf einen REFERENCE TIME-Wert, der die akkumulierte Streamzeit seit dem Start des Segments \* in Einheiten von 100 Nanosekunden angibt. **\_**
 
 </dd> <dt>
 
 <span id="lParam2"></span><span id="lparam2"></span><span id="LPARAM2"></span>*lParam2*
 </dt> <dd>
 
-(**DWORD**) Segment Nummer (null basiert).
+(**DWORD**) Segmentnummer (nullbasierte).
 
 </dd> </dl>
 
 ## <a name="default-action"></a>Standardaktion
 
-Der Filter Graph-Manager überprüft die Anzahl der Ereignisse des **EC- \_ Endes \_ von \_ Segmenten mit** der Anzahl der Ereignisse, die vom [**EC- \_ Segment \_ gestartet**](ec-segment-started.md) wurden. Wenn Sie gleich sind, wird das **EC- \_ Ende \_ des \_ Segment** Ereignisses an die Anwendung weitergeleitet. Anwendungen können die Standardaktion für dieses Ereignis nicht überschreiben.
+Der Filterdiagramm-Manager überprüft die Anzahl der **EC \_ END OF \_ \_ SEGMENT-Ereignisse** mit der Anzahl der [**EC SEGMENT \_ \_ STARTED-Ereignisse.**](ec-segment-started.md) Wenn sie übereinstimmen, wird das **EC \_ END OF \_ \_ SEGMENT-Ereignis** an die Anwendung weitergeleitet. Anwendungen können die Standardaktion für dieses Ereignis nicht überschreiben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Ereignis Code unterstützt nahtlose Schleifen. Wenn ein Aufruf der [**imediaseeking:: setpositions**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions) -Methode das Element für die \_ Suche nach Segmenten enthält \_ , sendet der Quell Filter diesen Ereignis Code anstelle des Aufrufs von [**IPin:: EndOfStream**](/windows/desktop/api/Strmif/nf-strmif-ipin-endofstream).
+Dieser Ereigniscode unterstützt nahtlose Schleifen. Wenn ein Aufruf der [**IMediaSeeking::SetPositions-Methode**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions) das AM SEEKING Segment-Flag enthält, sendet der Quellfilter diesen Ereigniscode, anstatt \_ \_ [**IPin::EndOfStream auf aufruft.**](/windows/desktop/api/Strmif/nf-strmif-ipin-endofstream)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,7 +47,7 @@ Dieser Ereignis Code unterstützt nahtlose Schleifen. Wenn ein Aufruf der [**ime
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
@@ -55,10 +55,10 @@ Dieser Ereignis Code unterstützt nahtlose Schleifen. Wenn ein Aufruf der [**ime
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

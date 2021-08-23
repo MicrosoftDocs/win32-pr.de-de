@@ -1,7 +1,7 @@
 ---
-description: Stellt ein e/a-abschlusspaket an einen e/a-Abschlussport.
+description: Sendet ein E/A-Abschlusspaket an einen E/A-Abschlussport.
 ms.assetid: 69a9b1e5-2d40-42de-a14a-f7b6f29bf571
-title: PostQueuedCompletionStatus-Funktion (ioapi. h)
+title: PostQueuedCompletionStatus-Funktion (IoAPI.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -18,16 +18,16 @@ api_location:
 - MinKernelBase.dll
 - API-MS-Win-Core-io-l1-1-1.dll
 - api-ms-win-downlevel-kernel32-l1-1-0.dll
-ms.openlocfilehash: f12de10032df7fec32dd9a577353dd20c0f4eaa5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e56bad8b9de85f22836f9446b67340d22e71fe83552da6796e7864d3baddae4b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119683360"
 ---
 # <a name="postqueuedcompletionstatus-function"></a>PostQueuedCompletionStatus-Funktion
 
-Stellt ein e/a-abschlusspaket an einen e/a-Abschlussport.
+Sendet ein E/A-Abschlusspaket an einen E/A-Abschlussport.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,31 +47,31 @@ BOOL WINAPI PostQueuedCompletionStatus(
 
 <dl> <dt>
 
-*Completionport* \[ in\]
+*CompletionPort* \[ In\]
 </dt> <dd>
 
-Ein Handle für einen e/a-Abschlussport, an den das e/a-abschlusspaket gesendet werden soll.
+Ein Handle für einen E/A-Abschlussport, an den das E/A-Abschlusspaket gesendet werden soll.
 
 </dd> <dt>
 
-*dwnumofbytestransferred* \[ in\]
+*dwNumberOfBytesTransferred* \[ In\]
 </dt> <dd>
 
-Der Wert, der durch den *lpnumofbytestransferred* -Parameter der [**GetQueuedCompletionStatus**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) -Funktion zurückgegeben werden soll.
+Der Wert, der über den *lpNumberOfBytesTransferred-Parameter* der [**GetQueuedCompletionStatus-Funktion**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) zurückgegeben werden soll.
 
 </dd> <dt>
 
-*dwcompletionkey* \[ in\]
+*dwCompletionKey* \[ In\]
 </dt> <dd>
 
-Der Wert, der durch den *lpcompletionkey* -Parameter der [**GetQueuedCompletionStatus**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) -Funktion zurückgegeben werden soll.
+Der Wert, der über den *lpCompletionKey-Parameter* der [**GetQueuedCompletionStatus-Funktion**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) zurückgegeben werden soll.
 
 </dd> <dt>
 
-*lpoverlgetauscht* \[ in, optional\]
+*lpOverlapped* \[ in, optional\]
 </dt> <dd>
 
-Der Wert, der durch den *lpoverllapp* -Parameter der [**GetQueuedCompletionStatus**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) -Funktion zurückgegeben werden soll.
+Der Wert, der über den *lpOverlapped-Parameter* der [**GetQueuedCompletionStatus-Funktion**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) zurückgegeben werden soll.
 
 </dd> </dl>
 
@@ -79,11 +79,11 @@ Der Wert, der durch den *lpoverllapp* -Parameter der [**GetQueuedCompletionStatu
 
 Wenn die Funktion erfolgreich ist, ist der Rückgabewert ungleich Null.
 
-Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null. Um erweiterte Fehlerinformationen abzurufen, nennen Sie [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) .
+Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null. Rufen [**Sie GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) auf, um erweiterte Fehlerinformationen abzurufen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das e/a-abschlusspaket erfüllt einen ausstehenden aufrufungs [**Vorgang der GetQueuedCompletionStatus**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) -Funktion. Diese Funktion gibt mit den drei Werten zurück, die als zweite, dritte und vierte Parameter des Aufrufes **PostQueuedCompletionStatus** zurückgegeben werden. Diese Werte werden vom System nicht verwendet oder überprüft. Insbesondere muss der Parameter " *lpoverlgetauscht* " nicht auf eine [**über**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur zeigen.
+Das E/A-Abschlusspaket erfüllt einen ausstehenden Aufruf der [**GetQueuedCompletionStatus-Funktion.**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) Diese Funktion gibt mit den drei Werten zurück, die als zweiter, dritter und vierter Parameter des Aufrufs von **PostQueuedCompletionStatus** übergeben werden. Das System verwendet oder überprüft diese Werte nicht. Insbesondere muss der *lpOverlapped-Parameter* nicht auf eine [**OVERLAPPED-Struktur**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) verweisen.
 
 In Windows 8 und Windows Server 2012 wird diese Funktion von den folgenden Technologien unterstützt.
 
@@ -91,17 +91,17 @@ In Windows 8 und Windows Server 2012 wird diese Funktion von den folgenden Techn
 
 | Technologie                                           | Unterstützt      |
 |------------------------------------------------------|----------------|
-| Server Message Block-Protokoll (SMB) 3,0<br/>   | Ja<br/> |
-| SMB 3,0 transparent Failover (TFO)<br/>        | Ja<br/> |
-| SMB 3,0 mit Dateifreigaben mit horizontaler Skalierung (also)<br/>   | Ja<br/> |
-| Freigegebenes Clustervolume Datei System (csvfs)<br/> | Ja<br/> |
+| Server Message Block (SMB) 3.0-Protokoll<br/>   | Ja<br/> |
+| Transparentes SMB 3.0-Failover (TFO)<br/>        | Ja<br/> |
+| SMB 3.0 mit Dateifreigaben mit aufskalieren (SO)<br/>   | Ja<br/> |
+| Freigegebenes Clustervolume File System (CsvFS)<br/> | Ja<br/> |
 | Robustes Dateisystem (Resilient File System, ReFS)<br/>              | Ja<br/> |
 
 
 
  
 
-Csvfs führt umgeleitete e/a für komprimierte Dateien aus.
+CsvFs verwenden umgeleitete E/A-Leitungen für komprimierte Dateien.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -109,9 +109,9 @@ Csvfs führt umgeleitete e/a für komprimierte Dateien aus.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[UWP-Apps für Windows XP-Desktop-Apps \|\]<br/>                                                                                                                                                                                                                                                       |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 \[ -Desktop-Apps \| UWP-apps\]<br/>                                                                                                                                                                                                                                              |
-| Header<br/>                   | <dl> <dt>Ioapi. h (Include Windows. h); </dt> <dt>Winbase. h unter Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP (Include Windows. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[XP-Desktop-Apps \| UWP-Apps\]<br/>                                                                                                                                                                                                                                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für \[ Server 2003-Desktop-Apps \|\]<br/>                                                                                                                                                                                                                                              |
+| Header<br/>                   | <dl> <dt>IoAPI.h (include Windows.h);</dt> <dt>WinBase.h auf Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP (einschließlich Windows.h)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>Kernel32.lib</dt> </dl>                                                                                                                                                                                                                  |
 | DLL<br/>                      | <dl> <dt>Kernel32.dll</dt> </dl>                                                                                                                                                                                                                  |
 

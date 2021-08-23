@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 7654feea410564137e98861c4c0b5de2b5e7192e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d5546ef4c67a6c9fa23f723f45725b19999770e11771608e197d6b759ca61de8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119504540"
 ---
 # <a name="pauseservice-method-of-the-win32_service-class-cimwin32-wmi-providers"></a>PauseService-Methode der Win32_Service -Klasse (CIMWin32 WMI-Anbieter)
 
 Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **PauseService** versucht, den Dienst im angehaltenen Zustand zu platzieren.
 
-In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -175,7 +175,7 @@ Der Dienst verfügt über keinen Ausführungsthread.
 **18**
 </dt> <dd>
 
-Der Dienst verfügt beim Start über zirkuläre Abhängigkeiten.
+Der Dienst verfügt beim Starten über zirkuläre Abhängigkeiten.
 
 </dd> <dt>
 
@@ -221,24 +221,24 @@ Der Dienst ist im System derzeitig angehalten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem Sie ermittelt haben, welche Dienste beendet oder angehalten werden können, können Sie die Dienste mithilfe der Methoden [**StopService**](stopservice-method-in-class-win32-service.md) und [**PauseService**](pauseservice-method-in-class-win32-systemdriver.md) beenden und anhalten. Die Entscheidung, einen Dienst anzuhalten, anstatt ihn anzuhalten oder umgekehrt, hängt von mehreren Faktoren ab, einschließlich der folgenden:
+Nachdem Sie ermittelt haben, welche Dienste beendet oder angehalten werden können, können Sie die [**Methoden StopService**](stopservice-method-in-class-win32-service.md) und [**PauseService**](pauseservice-method-in-class-win32-systemdriver.md) verwenden, um Dienste zu beenden und anzuhalten. Die Entscheidung, einen Dienst zu beenden, anstatt ihn anzuhalten (oder umgekehrt), hängt von mehreren Faktoren ab, z. B.:
 
--   Kann der Dienst angehalten werden? Wenn dies nicht dere ist, ist die einzige Option das Beenden des Diensts.
--   Müssen Sie weiterhin Clientanforderungen für personen verarbeiten, die bereits mit dem Dienst verbunden sind? In diesem Falle ermöglicht das Anhalten eines Diensts in der Regel die Verarbeitung vorhandener Clients, während der Zugriff auf neue Clients verweigert wird. Wenn Sie dagegen einen Dienst beenden, werden alle Clients sofort getrennt.
--   Müssen Sie einen Dienst neu konfigurieren, damit die Änderungen sofort wirksam werden? Obwohl Diensteigenschaften geändert werden können, während ein Dienst angehalten wird, werden die meisten erst wirksam, wenn der Dienst tatsächlich beendet und neu gestartet wurde.
+-   Kann der Dienst angehalten werden? Wenn nicht, ist die einzige Option das Beenden des Diensts.
+-   Müssen Sie weiterhin Clientanforderungen für alle Personen behandeln, die bereits mit dem Dienst verbunden sind? In diesem Beispiel ermöglicht das Anhalten eines Diensts in der Regel die Handhabung vorhandener Clients, während der Zugriff auf neue Clients verweigert wird. Wenn Sie dagegen einen Dienst beenden, werden alle Clients sofort getrennt.
+-   Müssen Sie einen Dienst neu konfigurieren, damit die Änderungen sofort wirksam werden? Obwohl Diensteigenschaften geändert werden können, während ein Dienst angehalten wird, werden die meisten davon erst wirksam, wenn der Dienst tatsächlich beendet und neu gestartet wird.
 
 Der Skriptcode, der zum Beenden eines Diensts erforderlich ist, ist fast identisch mit dem Code, der zum Anhalten des Diensts erforderlich ist.
 
 ## <a name="examples"></a>Beispiele
 
-Im VBScript-Beispiel Dienste anhalten, die [unter einem bestimmten Konto ausgeführt werden,](https://Gallery.TechNet.Microsoft.Com/12a256dd-39da-4690-b3f0-f0adccaf25f1) werden alle Dienste angehalten, die unter dem hypothetischen Dienstkonto "Netsvc" ausgeführt werden.
+Im [](https://Gallery.TechNet.Microsoft.Com/12a256dd-39da-4690-b3f0-f0adccaf25f1) VBScript-Beispiel Zum Anhalten von Diensten, die unter einem bestimmten Konto ausgeführt werden, werden alle Dienste angehalten, die unter dem hypothetischen Dienstkonto "Netsvc" ausgeführt werden.
 
-Im folgenden VBScript-Codebeispiel wird veranschaulicht, wie ein bestimmter Dienst von Instanzen des [**\_ Win32-Diensts**](win32-service.md)angehalten wird.
+Im folgenden VBScript-Codebeispiel wird veranschaulicht, wie ein bestimmter Dienst von Instanzen des [**Win32-Diensts angehalten \_ wird.**](win32-service.md)
 
 > [!Note]  
-> Der Dienst muss das Anhalten unterstützen und bereits ausgeführt werden.
+> Der Dienst muss anhalten und bereits ausgeführt werden.
 
  
 
@@ -266,10 +266,10 @@ next
 
 
 
-Im folgenden Perl-Codebeispiel wird veranschaulicht, wie ein bestimmter Dienst von Instanzen des [**\_ Win32-Diensts**](win32-service.md)angehalten wird.
+Im folgenden Perl-Codebeispiel wird veranschaulicht, wie ein bestimmter Dienst von Instanzen des [**Win32-Diensts angehalten \_ wird.**](win32-service.md)
 
 > [!Note]  
-> Der Dienst muss das Anhalten unterstützen und bereits ausgeführt werden.
+> Der Dienst muss anhalten und bereits ausgeführt werden.
 
  
 
@@ -322,7 +322,7 @@ else
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
@@ -332,14 +332,14 @@ else
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**\_Win32-Dienst**](win32-service.md)
+[**Win32-Dienst \_**](win32-service.md)
 </dt> <dt>
 
 [WMI-Aufgaben: Dienste](/windows/desktop/WmiSdk/wmi-tasks--services)

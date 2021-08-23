@@ -1,26 +1,26 @@
 ---
-title: Speicher Modi
-description: Der asynchrone Speicher unterstützt zwei Speicher Modi, die blockieren und nicht blockieren, was ein Client (entweder ein Browser oder das Objekt selbst) angeben kann, indem er bindf \_ asyncstorage aus dem Aufruf von ibindstatuencallback getbindinfo des Monikers zurückgibt.
+title: Storage Modi
+description: Asynchroner Speicher unterstützt zwei Speichermodi, die blockieren und nicht blockieren, die ein Client (entweder ein Browser oder das Objekt selbst) angeben kann, indem BINDF ASYNCSTORAGE aus dem Aufruf von \_ IBindStatusCallback GetBindInfo des Monikers zurückgegeben wird.
 ms.assetid: df8f9e2c-40d2-4997-b5f9-bdbc524437cf
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 827e893f5077a64485251111837e6b56657756f0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: db1a0a4c08daa1663f7513226dc25f4d5c8fd26341a6c8ee7d90a2ec0d1099db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119661830"
 ---
-# <a name="storage-modes"></a>Speicher Modi
+# <a name="storage-modes"></a>Storage Modi
 
-Der asynchrone Speicher unterstützt zwei Speicher Modi: Blockierung und nicht Blockierung, bei denen ein Client (entweder ein Browser oder das Objekt selbst) angeben kann, indem er bindf \_ asyncstorage aus dem Aufruf von [**ibindstatuencallback:: getbindinfo**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775058(v=vs.85))des Monikers zurückgibt. Wenn ein Client bindf \_ asyncstorage angibt, empfängt er einen Zeiger auf einen nicht blockierenden asynchronen Speicher. Andernfalls erhält Sie einen Zeiger auf einen blockierenden asynchronen Speicher. Auch wenn der Client keinen asynchronen Bindungs Vorgang anfordert (durch das nicht registrieren von [**ibindstatus-Callback**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060(v=vs.85)) beim Bindungs Kontext), gibt der Moniker weiterhin einen blockierenden asynchronen Speicher zurück, der das progressive Laden für ältere Anwendungen ermöglicht.
+Asynchroner Speicher unterstützt zwei Speichermodi: blockierende und nicht blockierende Modi, die ein Client (entweder ein Browser oder das Objekt selbst) angeben kann, indem BINDF ASYNCSTORAGE aus dem Aufruf von \_ [**IBindStatusCallback::GetBindInfo**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775058(v=vs.85))des Monikers zurückgegeben wird. Wenn ein Client BINDF ASYNCSTORAGE angibt, empfängt er einen Zeiger auf einen nicht \_ blockierenden asynchronen Speicher. Andernfalls wird ein Zeiger auf einen blockierenden asynchronen Speicher empfangen. Auch wenn der Client keinen asynchronen Bindungsvorgang anfordert (indem [**IBindStatusCallback**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060(v=vs.85)) nicht beim Bindungskontext registriert wird), gibt der Moniker weiterhin einen blockierenden asynchronen Speicher zurück, wodurch das progressive Laden für Legacyanwendungen ermöglicht wird.
 
-Im nicht blockierenden Modus gibt ein asynchroner Speicher "E Pending" zurück, \_ Wenn Daten nicht verfügbar sind. Beim Empfang dieser Nachricht wartet der Client auf eine Benachrichtigung, dass zusätzliche Daten verfügbar sind, bevor erneut versucht wird, ihn herunterzuladen.
+Im Nichtblockierungsmodus gibt ein asynchroner Speicher E \_ PENDING zurück, wenn Daten nicht verfügbar sind. Beim Empfang dieser Nachricht wartet der Client auf eine Benachrichtigung, dass zusätzliche Daten verfügbar sind, bevor er erneut versucht, sie herunterzuladen.
 
-Im Blockierungs Modus \_ blockiert der asynchrone Speicher den aufzurufenden, bis neue Daten verfügbar sind, und gibt die neuen Daten zurück. Der Client muss bereit sein, die Daten zu empfangen. Während der Thread blockiert wird, sind Daten, die bereits an den Client übermittelt wurden, dem Benutzer vollständig verfügbar.
+Im Blockierungsmodus blockiert der asynchrone Speicher den Aufruf, bis neue Daten verfügbar sind, entsperrt den Aufruf und gibt die \_ neuen Daten zurück. Der Client muss bereit sein, die Daten zu empfangen. Während der Thread blockiert ist, stehen dem Benutzer bereits an den Client übergebene Daten vollständig zur Verfügung.
 
-Der Blockierungs Modus ist erforderlich, da Clients, die den asynchronen Speicher nicht kennen \_ , E ausstehend nicht erkennen und davon ausgehen, dass ein nicht BEHEB barer Fehler aufgetreten ist. Durch das Blockieren des asynchronen Speichers können vorhandene Clients progressives Rendering durchführen.
+Der Blockierungsmodus ist erforderlich, da Clients, die den asynchronen Speicher nicht kennen, E PENDING nicht erkennen und davon ausgehen, dass ein nicht behebbarer \_ Fehler aufgetreten ist. Durch das Blockieren von asynchronem Speicher können vorhandene Clients progressives Rendering ausführen.
 
- 
+ 
 
- 
+ 
