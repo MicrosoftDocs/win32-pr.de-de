@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_ServerDomainContainment-Klasse
-description: Jede Instanz der WMI-Klasse MicrosoftDNS \_ Server Association kann mehrere Instanzen der MicrosoftDNS- \_ Domänen Klasse enthalten.
+description: Jede Instanz der WMI-Klasse für die \_ MicrosoftDNS-Serverzuordnung kann mehrere Instanzen der MicrosoftDNS-Domänenklasse \_ enthalten.
 ms.assetid: a16a11fb-65fc-4f12-903c-b3a61f6a4720
 keywords:
-- DNS-MicrosoftDNS_ServerDomainContainment Klasse
-- DNS-MicrosoftDNS_ServerDomainContainment Klasse, beschrieben
+- dns-Klasse MicrosoftDNS_ServerDomainContainment
+- MicrosoftDNS_ServerDomainContainment Dns-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 55d160176b51fc518ff2d00ef87bf08a812ee4d7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bdc747cae72ac4733ad9bec7288858731b6250312d43476a000d2f99a989267d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740265"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119527250"
 ---
-# <a name="microsoftdns_serverdomaincontainment-class"></a>MicrosoftDNS \_ serverdomaincontainment-Klasse
+# <a name="microsoftdns_serverdomaincontainment-class"></a>MicrosoftDNS \_ ServerDomainContainment-Klasse
 
-Jede Instanz der WMI-Klasse [**MicrosoftDNS \_ Server**](microsoftdns-server.md) Association kann mehrere Instanzen der [**MicrosoftDNS- \_ Domänen**](microsoftdns-domain.md) Klasse enthalten. Jede Instanz der **MicrosoftDNS- \_ Domänen** Klasse gehört zu einer einzelnen Instanz der **MicrosoftDNS- \_ Server** Klasse und ist so definiert, dass Sie für diesen Server schwach ist.
+Jede Instanz der WMI-Klasse für die [**MicrosoftDNS-Serverzuordnung \_**](microsoftdns-server.md) kann mehrere Instanzen der [**MicrosoftDNS-Domänenklasse \_**](microsoftdns-domain.md) enthalten. Jede Instanz der **MicrosoftDNS \_ Domain-Klasse** gehört zu einer einzelnen Instanz der **MicrosoftDNS-Serverklasse \_** und ist für diesen Server als schwach definiert.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -42,53 +42,53 @@ class MicrosoftDNS_ServerDomainContainment : CIM_Component
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS \_ serverdomaincontainment** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ ServerDomainContainment-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS \_ serverdomaincontainment** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ ServerDomainContainment-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MicrosoftDNS- \_ Server**
+Datentyp: **MicrosoftDNS \_ Server**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Qualifizierer: Key, override ("GroupComponent"), min (1), Max (1)
+Qualifizierer: Schlüssel, Außerkraftsetzung ("GroupComponent"), Min (1), Max (1)
 
-Beschreibung: der DNS-Server.
+Beschreibung: Der DNS-Server.
 
-Geerbt von **CIM- \_ Komponente**.
+Geerbt von **der \_ CIM-Komponente**.
 
 </dd> <dt>
 
 **PartComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MicrosoftDNS \_ Domain**
+Datentyp: **\_ MicrosoftDNS-Domäne**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Qualifizierer: Key, override ("PartComponent")
+Qualifizierer: Key, Override("PartComponent")
 
-Beschreibung: Domäne, Zone, Cache oder roothints, die vom DNS-Server verwaltet werden.
+Beschreibung: Eine Domäne, Zone, ein Cache oder RootHints, die vom DNS-Server verwaltet werden.
 
-Geerbt von **CIM- \_ Komponente**.
+Geerbt von **der \_ CIM-Komponente**.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **MicrosoftDNS \_ serverdomaincontainment** -Klasse wird von der **CIM- \_ Komponenten** Klasse abgeleitet.
+Die **MicrosoftDNS \_ ServerDomainContainment-Klasse** wird von der **\_ CIM-Komponentenklasse** abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,8 +98,8 @@ Die **MicrosoftDNS \_ serverdomaincontainment** -Klasse wird von der **CIM- \_ K
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -107,13 +107,13 @@ Die **MicrosoftDNS \_ serverdomaincontainment** -Klasse wird von der **CIM- \_ K
 
 <dl> <dt>
 
-[**MicrosoftDNS \_ domaindomaincontainment**](microsoftdns-domaindomaincontainment.md)
+[**MicrosoftDNS \_ DomainDomainContainment**](microsoftdns-domaindomaincontainment.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ domainresourcerecordcontainment**](microsoftdns-domainresourcerecordcontainment.md)
+[**MicrosoftDNS \_ DomainResourceRecordContainment**](microsoftdns-domainresourcerecordcontainment.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

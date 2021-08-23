@@ -1,11 +1,11 @@
 ---
-title: Network. setproxyexceptionlist-Methode
-description: Die setproxyexceptionlist-Methode gibt die Proxy Ausnahmeliste an. | Network. setproxyexceptionlist-Methode
+title: Network.setProxyExceptionList-Methode
+description: Die setProxyExceptionList-Methode gibt die Proxyausnahmeliste an. | Network.setProxyExceptionList-Methode
 ms.assetid: c9eeb058-5ffb-4405-9bf2-776f120e2db4
 keywords:
-- setproxyexceptionlist-Methode, Windows Media Player
-- setproxyexceptionlist-Methode, Windows Media Player, Netzwerk Klasse
-- Netzwerk Klassen-Windows-Media Player, setproxyexceptionlist-Methode
+- setProxyExceptionList-Windows Media Player
+- setProxyExceptionList-Methode Windows Media Player , Network-Klasse
+- Netzwerkklasse Windows Media Player , setProxyExceptionList-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d1e48aa91ec4857181de5c607a586da42d6f2cb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cf72d9c35778e965021ec31671e4e345ec2d8e281d18f9fcb16c8f2ff04d4722
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119647300"
 ---
-# <a name="networksetproxyexceptionlist-method"></a>Network. setproxyexceptionlist-Methode
+# <a name="networksetproxyexceptionlist-method"></a>Network.setProxyExceptionList-Methode
 
-Die **setproxyexceptionlist** -Methode gibt die Proxy Ausnahmeliste an.
+Die **setProxyExceptionList-Methode** gibt die Proxyausnahmeliste an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ Network.setProxyExceptionList(
 
 <dl> <dt>
 
-*Protokoll* \[ in\]
+*Protocol* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Namen des Protokolls angibt. Eine Liste der unterstützten Protokolle finden Sie [unter Unterstützte Protokolle und Dateitypen](supported-protocols-and-file-types.md).
+**Zeichenfolge,** die den Protokollnamen angibt. Eine Liste der unterstützten Protokolle finden Sie unter [Unterstützte Protokolle und Dateitypen.](supported-protocols-and-file-types.md)
 
 </dd> <dt>
 
-*Liste* \[ in\]
+*list* \[ In\]
 </dt> <dd>
 
-Eine **Zeichenfolge** , die eine durch Semikolons getrennte Liste von Hosts angibt, für die der Proxy Server umgangen wird.
+**Eine** Zeichenfolge, die eine durch Semikolons getrennte Liste von Hosts angibt, für die der Proxyserver umgangen wird.
 
 </dd> </dl>
 
@@ -61,21 +61,21 @@ Eine **Zeichenfolge** , die eine durch Semikolons getrennte Liste von Hosts angi
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist eine Liste von Computern, Domänen und/oder Adressen, die den Proxy Server umgehen, wenn der Hostteil der Ziel-URL mit einem Eintrag in der Liste übereinstimmt.
+Dies ist eine Liste von Computern, Domänen und/oder Adressen, die den Proxyserver umgehen, wenn der Hostteil der Ziel-URL einem Eintrag in der Liste entspricht.
 
-Das \* Zeichen kann als Platzhalter für das Auflisten von Einträgen verwendet werden. Beispielsweise \* entspricht ". com" allen Hosts in der com-Domäne, und 67. \* entspricht allen Hosts in der 67-Klasse einem Subnetz.
+Das \* Zeichen kann als Platzhalter für das Auflisten von Einträgen verwendet werden. Beispielsweise würde .com mit allen Hosts in der Com-Domäne übereinstimmen, während 67. mit allen Hosts \* \* im Subnetz der 67-Klasse A übereinstimmen würde.
 
-Diese Methode hat keine Auswirkung, es sei denn, **getproxysettings** gibt den Wert 2 zurück (manuelle Einstellungen verwenden).
+Diese Methode hat keine Auswirkungen, es **sei denn, getProxySettings** gibt den Wert 2 zurück (verwenden Sie manuelle Einstellungen).
 
-Diese Methode schlägt fehl, es sei denn, die aufrufenden Anwendung wird auf dem lokalen Computer oder Intranet ausgeführt.
+Diese Methode schlägt fehl, es sei denn, die aufrufende Anwendung wird auf dem lokalen Computer oder Intranet ausgeführt.
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *Network* verwendet. **setproxyexceptionlist** zum Angeben einer Liste von Hosts, für die der Proxy Server bei Verwendung des MMS-Protokolls umgangen wird. Die neue Liste wird aus einem HTML-Text Element mit ID = "xList" abgerufen. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript Netzwerk *verwendet.* **setProxyExceptionList,** um eine Liste von Hosts anzugeben, für die der Proxyserver umgangen wird, wenn das MMS-Protokoll verwendet wird. Die neue Liste wird aus einem HTML-TEXT-Element mit der ID = "XLIST" abgerufen. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -104,7 +104,7 @@ alert("Proxy settings must be manual!");
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -113,7 +113,7 @@ alert("Proxy settings must be manual!");
 
 <dl> <dt>
 
-[**Netzwerk Objekt**](network-object.md)
+[**Netzwerkobjekt**](network-object.md)
 </dt> </dl>
 
  

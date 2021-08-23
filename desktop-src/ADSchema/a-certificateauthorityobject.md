@@ -1,11 +1,11 @@
 ---
 title: Certificate-Authority-Object-Attribut
-description: Verweis auf die Zertifizierungsstelle, die einem Verteilungs Punkt für die Zertifikat Sperr Liste zugeordnet ist.
+description: Verweis auf die Zertifizierungsstelle, die einem Zertifikatsperrlisten-Verteilungspunkt zugeordnet ist.
 ms.assetid: 8dfd4441-6b45-4dc4-aed8-e33aa7fd099f
 ms.tgt_platform: multiple
 keywords:
-- Certificate-Authority-Object-Attribut AD-Schema
-- AD-Schema des certificateautorityobject-Attributs
+- AD-Schema des Attributs "Certificate-Authority-Object"
+- certificateAuthorityObject-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 65ffceb810cd6a4ef3033834dbf0f3c489f1506e
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e6196e7d40f18ff60bab78ee8580a609bbbd96fe00ed69b4b07d82ca9c695b56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859915"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119706870"
 ---
 # <a name="certificate-authority-object-attribute"></a>Certificate-Authority-Object-Attribut
 
-Verweis auf die Zertifizierungsstelle, die einem Verteilungs Punkt für die Zertifikat Sperr Liste zugeordnet ist.
+Verweis auf die Zertifizierungsstelle, die einem Zertifikatsperrlisten-Verteilungspunkt zugeordnet ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
 | CN                | Certificate-Authority-Object            |
-| LDAP-Display-Name | certificateautorityobject              |
+| Ldap-Anzeigename | certificateAuthorityObject              |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.684                  |
-| System-ID-GUID    | 963d2732-48be-11d1-a9c3-0000 C1    |
+| System-Id-Guid    | 963d2732-48be-11d1-a9c3-0000f80367c1    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -43,7 +43,7 @@ Verweis auf die Zertifizierungsstelle, die einem Verteilungs Punkt für die Zert
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Verweis auf die Zertifizierungsstelle, die einem Verteilungs Punkt für die Zert
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**CRL-Verteilungs Punkt**](c-crldistributionpoint.md)<br/> |
+| In verwendete Klassen        | [**CRL-Verteilungspunkt**](c-crldistributionpoint.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Verweis auf die Zertifizierungsstelle, die einem Verteilungs Punkt für die Zert
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**CRL-Verteilungs Punkt**](c-crldistributionpoint.md)<br/> |
+| In verwendete Klassen        | [**CRL-Verteilungspunkt**](c-crldistributionpoint.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Verweis auf die Zertifizierungsstelle, die einem Verteilungs Punkt für die Zert
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**CRL-Verteilungs Punkt**](c-crldistributionpoint.md)<br/> |
+| In verwendete Klassen        | [**CRL-Verteilungspunkt**](c-crldistributionpoint.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Verweis auf die Zertifizierungsstelle, die einem Verteilungs Punkt für die Zert
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**CRL-Verteilungs Punkt**](c-crldistributionpoint.md)<br/> |
+| In verwendete Klassen        | [**CRL-Verteilungspunkt**](c-crldistributionpoint.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Verweis auf die Zertifizierungsstelle, die einem Verteilungs Punkt für die Zert
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**CRL-Verteilungs Punkt**](c-crldistributionpoint.md)<br/> |
+| In verwendete Klassen        | [**CRL-Verteilungspunkt**](c-crldistributionpoint.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Verweis auf die Zertifizierungsstelle, die einem Verteilungs Punkt für die Zert
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**CRL-Verteilungs Punkt**](c-crldistributionpoint.md)<br/> |
+| In verwendete Klassen        | [**CRL-Verteilungspunkt**](c-crldistributionpoint.md)<br/> |
 
 
 

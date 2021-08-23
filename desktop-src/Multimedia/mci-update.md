@@ -1,9 +1,9 @@
 ---
-title: MCI_UPDATE Befehl (MMSYSTEM. h)
-description: Der Befehl "MCI- \_ Update" aktualisiert das Anzeige Rechteck. Dieser Befehl wird von Digital-Video-Geräten erkannt.
+title: MCI_UPDATE Befehl (Mmsystem.h)
+description: Der MCI \_ UPDATE-Befehl aktualisiert das Anzeigerechteck. Digitalvideogeräte erkennen diesen Befehl.
 ms.assetid: 90a8c10f-61b9-49a1-bbcc-e0729aa8c454
 keywords:
-- MCI_UPDATE Befehl Windows-Multimedia
+- MCI_UPDATE-Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 423186096c88a8f1ff74987ff57c6b49dc6c3131
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e58333b108891a8bcd0e0548d4dcd0db2f2606d1259f0934f19b8f6804afab3b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119689680"
 ---
-# <a name="mci_update-command"></a>Befehl "MCI- \_ Update"
+# <a name="mci_update-command"></a>MCI \_ UPDATE-Befehl
 
-Der Befehl "MCI- \_ Update" aktualisiert das Anzeige Rechteck. Dieser Befehl wird von Digital-Video-Geräten erkannt.
+Der MCI \_ UPDATE-Befehl aktualisiert das Anzeigerechteck. Digitalvideogeräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,59 +43,59 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsnachricht empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-**MCI \_ Benachrichtigen**, **MCI- \_ Wartezeit** oder, für Digital-Video-Geräte, **MCI- \_ Test**. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+**MCI \_ NOTIFY**, **MCI \_ WAIT** oder für Digitalvideogeräte **MCI \_ TEST**. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> <dt>
 
-<span id="lpDest"></span><span id="lpdest"></span><span id="LPDEST"></span>*lpdest*
+<span id="lpDest"></span><span id="lpdest"></span><span id="LPDEST"></span>*lpDest*
 </dt> <dd>
 
-Zeiger auf eine [**generische MCI-Struktur von \_ \_ Parametern**](mci-generic-parms.md) . (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
+Zeiger auf eine [**MCI \_ GENERIC \_ PARMS-Struktur.**](mci-generic-parms.md) (Geräte mit erweiterten Befehlssätzen ersetzen diese Struktur möglicherweise durch eine gerätespezifische Struktur.)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgenden zusätzlichen Flags werden mit dem Gerätetyp "Digitalvideo" verwendet:
+Die folgenden zusätzlichen Flags werden mit dem Gerätetyp "digitalvideo" verwendet:
 
 <dl> <dt>
 
-<span id="MCI_DGV_UPDATE_HDC"></span><span id="mci_dgv_update_hdc"></span>MCI- \_ DGV- \_ Update- \_ hdc
+<span id="MCI_DGV_UPDATE_HDC"></span><span id="mci_dgv_update_hdc"></span>MCI \_ DGV \_ UPDATE \_ HDC
 </dt> <dd>
 
-Das **hdc** -Mitglied der durch *lpdest* identifizierten Struktur enthält ein gültiges Fenster des Domänen Controllers, das gezeichnet werden soll. Dieses Flag ist erforderlich.
+Der **hDC-Member** der durch *lpDest* identifizierten Struktur enthält ein gültiges Fenster des zu zeichnenden Domänencontrollers. Dieses Flag ist erforderlich.
 
 </dd> <dt>
 
-<span id="MCI_DGV_RECT"></span><span id="mci_dgv_rect"></span>MCI- \_ DGV- \_ Rect
+<span id="MCI_DGV_RECT"></span><span id="mci_dgv_rect"></span>MCI \_ DGV \_ RECT
 </dt> <dd>
 
-Der **RC** -Member der durch *lpunfreeze* identifizierten Struktur enthält ein gültiges Anzeige Rechteck. Das Rechteck gibt das Clippingrechteck relativ zum Client Rechteck an.
+Der **rc-Member** der durch *lpUnfreeze* identifizierten Struktur enthält ein gültiges Anzeigerechteck. Das Rechteck gibt das Clippingrechteck relativ zum Clientrechteck an.
 
 </dd> <dt>
 
-<span id="MCI_DGV_UPDATE_PAINT"></span><span id="mci_dgv_update_paint"></span>MCI \_ DGV- \_ Update \_ Paint
+<span id="MCI_DGV_UPDATE_PAINT"></span><span id="mci_dgv_update_paint"></span>MCI \_ DGV \_ UPDATE \_ PAINT
 </dt> <dd>
 
-Eine Anwendung verwendet dieses Flag, wenn Sie eine [**WM \_**](/windows/desktop/gdi/wm-paint) -Zeichnungs Nachricht empfängt, die für einen Anzeige-DC vorgesehen ist. Ein Frame Puffer Gerät zeichnet in der Regel die Schlüsselfarbe. Wenn das Anzeigegerät nicht über einen Frame Puffer verfügt, wird möglicherweise der Befehl MCI-Update ignoriert, \_ Wenn das **MCI DGV-Flag zum \_ \_ Zeichnen von \_ Paint** verwendet wird, da die Anzeige während des Wiedergabe Vorgangs neu gezeichnet wird.
+Eine Anwendung verwendet dieses Flag, wenn sie eine [**WM \_ PAINT-Nachricht**](/windows/desktop/gdi/wm-paint) empfängt, die für einen Anzeigedomänencontroller vorgesehen ist. Ein Framepuffergerät zeichnet in der Regel die Schlüsselfarbe. Wenn das Anzeigegerät über keinen Framepuffer verfügt, kann es den MCI UPDATE-Befehl ignorieren, wenn das \_ **MCI \_ DGV \_ UPDATE \_ PAINT-Flag** verwendet wird, da die Anzeige während des Wiedergabevorgang neu gepaint wird.
 
 </dd> </dl>
 
-Für Digital Video-Geräte verweist der *lpdest* -Parameter auf eine [**MCI- \_ DGV- \_ Update \_**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_update_parms) -Parameter-Struktur.
+Bei Digitalvideogeräten verweist *der lpDest-Parameter* auf eine [**MCI \_ DGV UPDATE \_ \_ PARMS-Struktur.**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_update_parms)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,7 +105,7 @@ Für Digital Video-Geräte verweist der *lpdest* -Parameter auf eine [**MCI- \_ 
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -113,7 +113,7 @@ Für Digital Video-Geräte verweist der *lpdest* -Parameter auf eine [**MCI- \_ 
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)

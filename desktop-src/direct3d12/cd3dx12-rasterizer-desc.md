@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_RASTERIZER_DESC-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, um die einfache Initialisierung einer D3D12 \_ Rasterizer- \_ DESC-Struktur zu ermöglichen.
+title: CD3DX12_RASTERIZER_DESC-Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, um eine einfache Initialisierung einer D3D12 \_ RASTERIZER \_ DESC-Struktur zu ermöglichen.
 ms.assetid: 28AA8256-1CAF-484F-B219-0F0461BA947C
 keywords:
-- CD3DX12_RASTERIZER_DESC Struktur
+- CD3DX12_RASTERIZER_DESC-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 078b9e92d25cb5309b4cd97d35586192a37eed90
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: faa95dde87aea8e3c61d0d1fb6de6845f33717f6a46db4df7996a23afd7590b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106364347"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119729430"
 ---
-# <a name="cd3dx12_rasterizer_desc-structure"></a>CD3DX12 \_ Rasterizer- \_ Struktur
+# <a name="cd3dx12_rasterizer_desc-structure"></a>CD3DX12 \_ RASTERIZER \_ DESC-Struktur
 
-Eine hilfsstruktur, um die einfache Initialisierung einer [**D3D12 \_ Rasterizer- \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rasterizer_desc) -Struktur zu ermöglichen.
+Eine Hilfsstruktur, um eine einfache Initialisierung einer [**D3D12 \_ RASTERIZER \_ DESC-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rasterizer_desc) zu ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,24 +46,24 @@ struct CD3DX12_RASTERIZER_DESC  : public D3D12_RASTERIZER_DESC{
 
 <dl> <dt>
 
-**CD3DX12 \_ Rasterizer \_ deaktiviert ()**
+**CD3DX12 \_ RASTERIZER \_ DESC()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12 \_ Rasterizer-Moduls \_ .
+Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12 \_ RASTERIZER \_ DESC.
 
 </dd> <dt>
 
-**explizites CD3DX12 \_ Rasterizer-Element \_ (konstant D3D12 \_ Rasterizer- \_& o)**
+**explicit CD3DX12 \_ RASTERIZER \_ DESC(const D3D12 \_ RASTERIZER \_ DESC& o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 \_ Rasterizer-Moduls \_ , das mit dem Inhalt einer anderen [**D3D12 \_ Rasterizer \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rasterizer_desc) -Erstellungs Struktur initialisiert wurde.
+Erstellt eine neue Instanz eines CD3DX12 \_ RASTERIZER \_ DESC, initialisiert mit dem Inhalt einer anderen [**D3D12 \_ RASTERIZER \_ DESC-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rasterizer_desc)
 
 </dd> <dt>
 
-**explizites CD3DX12 \_ Rasterizer-Element \_ (CD3DX12- \_ Standard)**
+**Explicit CD3DX12 \_ RASTERIZER \_ DESC (CD3DX12 \_ DEFAULT)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 \_ Rasterizer- \_ DESC, initialisiert mit Standardparametern.
+Erstellt eine neue Instanz eines CD3DX12 \_ RASTERIZER \_ DESC, initialisiert mit Standardparametern.
 
 ``` syntax
         FillMode = D3D12_FILL_MODE_SOLID;  
@@ -81,46 +81,46 @@ Erstellt eine neue Instanz eines CD3DX12 \_ Rasterizer- \_ DESC, initialisiert m
 
 </dd> <dt>
 
-**explizites CD3DX12 \_ Rasterizer \_ DESC (D3D12 \_ Fill \_ Mode FillMode, D3D12 \_ cull \_ Mode CullMode, bool frontcounteruhrzeiger Sinn, int depthbias, float depthbiasclamp, float slopescaleddepthbias, bool depthclipenable, bool multisampleenable, bool antialiasedlineenable, uint forcedsamplecount, D3D12 \_ konservative \_ rasterisierungsmodus \_ conservativeraster)**
+**explicit CD3DX12 \_ RASTERIZER \_ DESC(D3D12 \_ FILL MODE \_ fillMode, D3D12 \_ CULL MODE \_ cullMode, BOOL frontCounterClockwise, INT depthBias, FLOAT depthBiasClamp, FLOAT slopeScaledDepthBias, BOOL depthClipEnable, BOOL multisampleEnable, BOOL antialiasedLineEnable, UINT forcedSampleCount, D3D12 \_ CONSERVATIVE \_ RASTERIZATION MODE \_ conservativeRaster)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 \_ Rasterizer- \_ DESC und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz eines CD3DX12 \_ RASTERIZER \_ DESC und initialisiert die folgenden Parameter:
 
-[**D3D12 \_ Füllmodus für Füll \_ Modus**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_fill_mode)
+[**D3D12 \_ FILL \_ MODE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_fill_mode) fillMode
 
-[**D3D12 \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_cull_mode) CullMode im cull-Modus
+[**D3D12 \_ CULL \_ MODE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_cull_mode) cullMode
 
-Bool frontcounteruhrzeiger Sinn
+BOOL frontCounterClockwise
 
-INT depthbias
+INT depthBias
 
-FLOAT depthbiasclamp
+FLOAT depthBiasClamp
 
-FLOAT slopescaleddepthbias
+FLOAT slopeScaledDepthBias
 
-Boolescher Wert
+BOOL depthClipEnable
 
-Bool multisampleenable
+BOOL multisampleEnable
 
-Bool antialiasedlineenable
+BOOL antialiasedLineEnable
 
-Uint forcedsamplecount
+UINT forcedSampleCount
 
-[**D3D12 \_ Konservativer \_ rasterisierungsmodus \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_conservative_rasterization_mode) conservativeraster
+[**D3D12 \_ CONSERVATIVE \_ RASTERIZATION \_ MODE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_conservative_rasterization_mode) conservativeRaster
 
 </dd> <dt>
 
-**~ CD3DX12 \_ Rasterizer- \_ Decoder ()**
+**~CD3DX12 \_ RASTERIZER \_ DESC()**
 </dt> <dd>
 
-Zerstört eine Instanz eines CD3DX12 \_ Rasterizer-Moduls \_ .
+Zerstört eine Instanz eines CD3DX12 \_ RASTERIZER \_ DESC.
 
 </dd> <dt>
 
-**Operator Konstanten D3D12 \_ Rasterizer- \_& () Konstanten**
+**operator const D3D12 \_ RASTERIZER \_ DESC&() const**
 </dt> <dd>
 
-Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturtyp.
+Definiert den & Pass-by-Reference-Operator für den übergeordneten Strukturtyp.
 
 </dd> </dl>
 
@@ -130,15 +130,15 @@ Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturty
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**D3D12 \_ Rasterizer- \_ Abteilung**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rasterizer_desc)
+[**D3D12 \_ RASTERIZER \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rasterizer_desc)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

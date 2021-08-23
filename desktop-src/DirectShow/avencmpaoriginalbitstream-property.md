@@ -1,29 +1,29 @@
 ---
-description: Gibt die Standardeinstellung für das ursprüngliche Bit im MPEG-1-Audiodatenstrom an. Diese Eigenschaft gilt für MPEG-Audioencoder.
+description: Gibt die Standardeinstellung für das ursprüngliche Bit im MPEG-1-Audiostream an. Diese Eigenschaft gilt für MPEG-Audioencoder.
 ms.assetid: 62b56868-684f-4f28-90da-dac19cb07946
-title: Avencmteioriginalbitstream-Eigenschaft (codecapi. h)
+title: AVEncMPAOriginalBitstream-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a1a49fda5bb605ac8735ebac4be758e7f73efb9
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 46d39b34339e25d08b138fd1c55a64e8a84d6cf4b4db302cbab1e5f50b8ccebc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119689740"
 ---
-# <a name="avencmpaoriginalbitstream-property"></a>Avencmteioriginalbitstream (Eigenschaft)
+# <a name="avencmpaoriginalbitstream-property"></a>AVEncMPAOriginalBitstream-Eigenschaft
 
-Gibt die Standardeinstellung für das ursprüngliche Bit im MPEG-1-Audiodatenstrom an. Diese Eigenschaft gilt für MPEG-Audioencoder.
+Gibt die Standardeinstellung für das ursprüngliche Bit im MPEG-1-Audiostream an. Diese Eigenschaft gilt für MPEG-Audioencoder.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**Variant \_ bool** (**VT \_ bool**)
+**VARIANT \_ BOOL** (**VT \_ BOOL**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencmporiginalbitstream**
+**CODECAPI \_ AVEncMPAOriginalBitstream**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
@@ -31,18 +31,18 @@ Diese Eigenschaft kann die folgenden Werte aufweisen.
 
 
 
-| Wert          | BESCHREIBUNG          |
+| Wert          | Beschreibung          |
 |----------------|----------------------|
-| Variant \_ false | Ursprüngliches Bit ist off. |
-| Variant \_ true  | Ursprüngliches Bit ist on.  |
+| VARIANT \_ FALSE | Das ursprüngliche Bit ist deaktiviert. |
+| VARIANT \_ TRUE  | Das ursprüngliche Bit ist eingeschaltet.  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Encoder kann diese Einstellung basierend auf dem Inhalt des Eingabestreams überschreiben.
+Der Encoder überschreibt diese Einstellung möglicherweise basierend auf dem Inhalt des Eingabestreams.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,9 +50,9 @@ Der Encoder kann diese Einstellung basierend auf dem Inhalt des Eingabestreams �
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -60,10 +60,10 @@ Der Encoder kann diese Einstellung basierend auf dem Inhalt des Eingabestreams �
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

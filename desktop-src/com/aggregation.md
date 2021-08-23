@@ -1,35 +1,35 @@
 ---
 title: Aggregation
-description: Aggregation ist der Mechanismus für die Wiederverwendung von Objekten, bei dem das äußere Objekt Schnittstellen vom inneren Objekt verfügbar macht, als wären Sie auf dem äußeren Objekt selbst implementiert.
+description: Aggregation ist der Mechanismus zur Objektwiederverwendung, bei dem das äußere Objekt Schnittstellen aus dem inneren Objekt verfügbar macht, als wären sie für das äußere Objekt selbst implementiert.
 ms.assetid: 6845b114-8f43-47ad-acdf-b63d6008d221
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a4f11f69f5d7b14047a8138cba93bd503b645a3
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 4855b1fa3a614d190b8f192aeee2e7cf3d3d53bbdce589a1363e0398f70430c7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104316533"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119731720"
 ---
 # <a name="aggregation"></a>Aggregation
 
-Aggregation ist der Mechanismus für die Wiederverwendung von Objekten, bei dem das äußere Objekt Schnittstellen vom inneren Objekt verfügbar macht, als wären Sie auf dem äußeren Objekt selbst implementiert. Dies ist hilfreich, wenn das äußere Objekt alle Aufrufe an eine der Schnittstellen an die gleiche Schnittstelle im inneren Objekt delegiert. Die Aggregation ist zur Vermeidung zusätzlicher Implementierungs Mehraufwand im äußeren Objekt in diesem Fall verfügbar. Die Aggregation ist tatsächlich ein spezieller Fall von Kapselung [/Delegierung](containment-delegation.md).
+Aggregation ist der Mechanismus zur Objektwiederverwendung, bei dem das äußere Objekt Schnittstellen aus dem inneren Objekt verfügbar macht, als wären sie für das äußere Objekt selbst implementiert. Dies ist nützlich, wenn das äußere Objekt jeden Aufruf einer seiner Schnittstellen an dieselbe Schnittstelle im inneren Objekt delegiert. Aggregation ist zur Vereinfachung verfügbar, um in diesem Fall zusätzlichen Implementierungsaufwand im äußeren Objekt zu vermeiden. Aggregation ist eigentlich ein spezieller Fall von [Einschluss/Delegierung.](containment-delegation.md)
 
-Die Aggregation ist fast so einfach wie die Kapselung, mit Ausnahme der drei [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) -Funktionen: [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)), [**adressf**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)und [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release). Der catch besteht aus der Sicht des Clients, dass sich jede **IUnknown** -Funktion für das äußere Objekt auf das äußere Objekt auswirken muss. Das heißt, dass sich **adressf** und **Release** auf das äußere Objekt auswirken und **QueryInterface** alle für das äußere Objekt verfügbaren Schnittstellen verfügbar macht. Wenn das äußere Objekt jedoch einfach die Schnittstelle eines inneren Objekts als eigen macht, Verhalten sich die **IUnknown** -Member, die über diese Schnittstelle aufgerufen wurden, anders als die **IUnknown** -Member in den Schnittstellen des äußeren Objekts, eine absolute Verletzung der Regeln und Eigenschaften, die **IUnknown** steuern.
+Die Aggregation ist fast so einfach zu implementieren wie die Einschlussfunktion, mit Ausnahme der drei [**IUnknown-Funktionen:**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) [**QueryInterface,**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) [**AddRef**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)und [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release). Der Catch ist, dass sich aus Sicht des Clients jede **IUnknown-Funktion** für das äußere Objekt auf das äußere Objekt auswirken muss. Das heißt, **AddRef** und **Release** wirken sich auf das äußere Objekt aus, und **QueryInterface** macht alle Schnittstellen verfügbar, die für das äußere Objekt verfügbar sind. Wenn das äußere Objekt jedoch einfach die Schnittstelle eines inneren Objekts als eigene verfügbar macht, verhalten sich die **IUnknown-Member** dieses inneren Objekts, die über diese Schnittstelle aufgerufen werden, anders als die **IUnknown-Member** in den Schnittstellen des äußeren Objekts. Dies ist ein absoluter Verstoß gegen die Regeln und Eigenschaften, die **IUnknown** steuern.
 
-Die Lösung besteht darin, dass für die Aggregation eine explizite Implementierung von [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) für das innere Objekt und die Delegierung der **IUnknown** -Methoden einer beliebigen anderen Schnittstelle zu den **IUnknown** -Methoden des äußeren Objekts erforderlich ist.
+Die Lösung besteht darin, dass die Aggregation eine explizite Implementierung von [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) für das innere Objekt und die Delegierung der **IUnknown-Methoden** einer beliebigen anderen Schnittstelle an die **IUnknown-Methoden** des äußeren Objekts erfordert.
 
-## <a name="creating-aggregable-objects"></a>Erstellen von aggrebfähigen Objekten
+## <a name="creating-aggregable-objects"></a>Erstellen von Aggregable-Objekten
 
-Das Erstellen von Objekten, die aggregiert werden können, ist optional. Es ist jedoch einfach zu tun und bietet bedeutende Vorteile. Die folgenden Regeln gelten für das Erstellen eines aggretfähigen Objekts:
+Das Erstellen von Objekten, die aggregiert werden können, ist optional. dies ist jedoch einfach und bietet erhebliche Vorteile. Die folgenden Regeln gelten für das Erstellen eines aggregable-Objekts:
 
--   Die Implementierung von [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)), [**adressf**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)und [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für die [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) -Schnittstelle durch das aggregierte (oder innere) Objekt steuert den Verweis Zähler des inneren Objekts, und diese Implementierung darf nicht an das äußere Objekt (das steuernde **IUnknown**) delegiert werden.
--   Die Implementierung von [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)), [**adressf**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)und [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für die anderen Schnittstellen des aggreofähigen (oder inneren) Objekts muss an das steuernde [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) delegiert werden und darf sich nicht direkt auf den Verweis Zähler des inneren Objekts auswirken.
--   Das innere [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) muss [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) nur für das innere Objekt implementieren.
--   Beim Speichern eines Verweises auf den steuernden [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) -Zeiger darf das Aggregat Objekt keine [**adressf**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) -Funktion abrufen.
--   Wenn das Objekt erstellt wird und eine andere Schnittstelle als [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) angefordert wird, muss die Erstellung mit E \_ nointerface fehlschlagen.
+-   Die Implementierung von [**QueryInterface,**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) [**AddRef**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)und [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für die [**IUnknown-Schnittstelle**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) des Aggregable-Objekts steuert den Verweiszähler des inneren Objekts, und diese Implementierung darf nicht an das unbekannte (das steuernde **IUnknown)** des äußeren Objekts delegiert werden.
+-   Die Implementierung von [**QueryInterface,**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) [**AddRef**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)und [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) des aggregable -Objekts (oder inneren Objekts) für seine anderen Schnittstellen muss an die steuernde [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) delegiert werden und darf sich nicht direkt auf den Verweiszähler des inneren Objekts auswirken.
+-   Der innere [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) muss [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) nur für das innere Objekt implementieren.
+-   Das aggregable-Objekt darf [**AddRef**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) nicht aufrufen, wenn ein Verweis auf den steuernden [**IUnknown-Zeiger**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) gehalten wird.
+-   Wenn beim Erstellen des Objekts eine andere Schnittstelle als [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) angefordert wird, muss die Erstellung mit E \_ NOINTERFACE fehlschlagen.
 
-Das folgende Code Fragment veranschaulicht eine korrekte Implementierung eines aggreterfähigen Objekts, indem die Methode der Methode der Methode zum Implementieren von Schnittstellen verwendet wird:
+Das folgende Codefragment veranschaulicht eine korrekte Implementierung eines aggregable-Objekts mithilfe der geschachtelten Klassenmethode zum Implementieren von Schnittstellen:
 
 
 ```C++
@@ -131,13 +131,13 @@ class CSomeObject : public IUnknown
 
 
 
-## <a name="aggregating-objects"></a>Aggregations Objekte
+## <a name="aggregating-objects"></a>Aggregieren von Objekten
 
-Beim Entwickeln eines aggrebfähigen Objekts gelten die folgenden Regeln:
+Beim Entwickeln eines aggregable-Objekts gelten die folgenden Regeln:
 
--   Beim Erstellen des inneren Objekts muss das äußere Objekt explizit nach [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown)Fragen.
--   Das äußere Objekt muss seine Implementierung der [**Freigabe**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) vor dem erneuten eintreten mit einem künstlichen Verweis Zähler um seinen Zerstörungs Code schützen.
--   Das äußere Objekt muss seine steuernde **IUnknown**- [**releasemethode**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) aufruft, wenn es einen Zeiger auf eine der Schnittstellen des inneren Objekts abfragt. Um diesen Zeiger freizugeben, ruft das äußere Objekt seine kontrollierte **IUnknown**- [**adressf**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) -Methode auf, gefolgt vom **Release** auf dem-Zeiger des inneren Objekts.
+-   Beim Erstellen des inneren Objekts muss das äußere Objekt explizit nach seinem [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown)-Objekt fragen.
+-   Das äußere Objekt muss seine Implementierung von [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) vor Erneutinvarianz mit einem künstlichen Verweiszähler um seinen Zerstörungscode schützen.
+-   Das äußere Objekt muss seine steuernde **IUnknown** [**Release-Methode**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) aufrufen, wenn es einen Zeiger auf eine der Schnittstellen des inneren Objekts abfragt. Um diesen Zeiger freizugeben, ruft das äußere Objekt seine steuernde **IUnknown** [**AddRef-Methode**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) auf, gefolgt von **Release** für den Zeiger des inneren Objekts.
     ```C++
     // Obtaining inner object interface pointer 
     pUnkInner->QueryInterface(IID_ISomeInterface, &pISomeInterface); 
@@ -151,7 +151,7 @@ Beim Entwickeln eines aggrebfähigen Objekts gelten die folgenden Regeln:
 
     
 
--   Das äußere Objekt darf eine Abfrage für eine unbekannte Schnittstelle nicht blind an das innere Objekt delegieren, es sei denn, dieses Verhalten ist die Absicht des äußeren Objekts.
+-   Das äußere Objekt darf eine Abfrage für nicht erkannte Schnittstellen nicht blind an das innere Objekt delegieren, es sei denn, dieses Verhalten ist speziell die Absicht des äußeren Objekts.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -160,6 +160,6 @@ Beim Entwickeln eines aggrebfähigen Objekts gelten die folgenden Regeln:
 [Einschluss/Delegierung](containment-delegation.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

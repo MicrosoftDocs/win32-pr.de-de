@@ -4,32 +4,32 @@ ms.assetid: 146e7e4a-4281-4f5c-8346-d6c0d5f5442f
 title: Zertifikatsperrlisten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b51ddee9f77b147d69b8895b3335d41e041da7f2
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 703bb8813e95ebfe07783fa07284b2ae7dad0df2ff8a9205234ee9a4514192d0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106343132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119537304"
 ---
 # <a name="certificate-revocation-lists"></a>Zertifikatsperrlisten
 
-In diesem Thema wird beschrieben, wie Sie die Zertifikat Sperr Liste (CRL) für widerrufene Treiber bei Verwendung des Certified Output Protection-Protokolls (COPP) untersuchen.
+In diesem Thema wird beschrieben, wie die Zertifikatsperrliste (Certificate Revocation List, CRL) bei Verwendung des Certified Output Protection Protocol (COPP) auf gesperrte Treiber untersucht wird.
 
-Die Zertifikat Sperr Liste enthält Digests von gesperrten Zertifikaten und kann nur von Microsoft bereitgestellt und signiert werden. Die CRL wird über Digital Rights Management (DRM)-Lizenzen verteilt. Die CRL kann alle Zertifikate in der Zertifikat Kette des Treibers widerrufen. Wenn ein Zertifikat in der Kette widerrufen wird, werden dieses Zertifikat und alle in der Kette untergeordneten Zertifikate ebenfalls gesperrt.
+Die Zertifikatsperrliste enthält Digests gesperrter Zertifikate und kann nur von Microsoft bereitgestellt und signiert werden. Die CRL wird über DRM-Lizenzen (Digital Rights Management) verteilt. Die Zertifikatsperrliste kann jedes Zertifikat in der Zertifikatkette des Treibers widerrufen. Wenn ein Zertifikat in der Kette widerrufen wird, werden dieses Zertifikat und alle darunter liegenden Zertifikate in der Kette ebenfalls widerrufen.
 
-Zum erhalten der CRL muss die Anwendung das Windows Media-Format SDK, Version 9 oder höher, verwenden und die folgenden Schritte ausführen:
+Um die CRL zu erhalten, muss die Anwendung das Windows Media Format SDK, Version 9 oder höher, verwenden und die folgenden Schritte ausführen:
 
-1.  Rufen Sie **wmkreatereader** auf, um das Windows Media Format SDK Reader-Objekt zu erstellen.
-2.  Fragen Sie das Reader-Objekt für die **iwmdrmreader** -Schnittstelle ab.
-3.  Rufen Sie **iwmdrmreader:: getdrmproperty** mit dem Wert g \_ wszwmdrmnet- \_ Widerruf auf, um die CRL abzurufen. Sie müssen diese Methode zweimal ausführen: einmal, um die Größe des zuzuordnenden Puffers abzurufen, und einmal, um den Puffer zu füllen. Der zweite-Rückruf gibt eine Zeichenfolge zurück, die die CRL enthält. Die gesamte Zeichenfolge ist Base-64-codiert.
-4.  Decodieren Sie die Base-64-codierte Zeichenfolge. Hierfür können Sie die **cryptstringto Binary** -Funktion verwenden. Diese Funktion ist Teil von CryptoAPI.
+1.  Rufen Sie **WMCreateReader** auf, um das Readerobjekt Windows Media Format SDK zu erstellen.
+2.  Fragen Sie das Readerobjekt nach der **IWMDRMReader-Schnittstelle** ab.
+3.  Rufen Sie **IWMDRMReader::GetDRMProperty** mit dem Wert g \_ wszWMDRMNet \_ Revocation auf, um die Zertifikatsperrliste abzurufen. Sie müssen diese Methode zweimal aufrufen: Einmal, um die Größe des zuzuordnenden Puffers abzurufen, und einmal, um den Puffer zu füllen. Der zweite Aufruf gibt eine Zeichenfolge zurück, die die CRL enthält. Die gesamte Zeichenfolge ist base64-codiert.
+4.  Decodieren Sie die Base64-codierte Zeichenfolge. Hierzu können Sie die **CryptStringToBinary-Funktion** verwenden. Diese Funktion ist Teil von CryptoAPI.
 
 > [!Note]  
-> Um die **iwmdrmreader** -Schnittstelle verwenden zu können, müssen Sie eine statische DRM-Bibliothek von Microsoft abrufen und Ihre Anwendung mit dieser Bibliotheksdatei verknüpfen. Weitere Informationen finden Sie im Thema zum Abrufen der erforderlichen DRM-Bibliothek in der Dokumentation zum Windows Media-Format-SDK.
+> Um die **IWMDRMReader-Schnittstelle** zu verwenden, müssen Sie eine statische DRM-Bibliothek von Microsoft abrufen und Ihre Anwendung mit dieser Bibliotheksdatei verknüpfen. Weitere Informationen finden Sie im Thema "Abrufen der erforderlichen DRM-Bibliothek" in der Windows Media Format SDK-Dokumentation.
 
  
 
-Wenn die Zertifikat Sperr Liste nicht auf dem Computer des Benutzers vorhanden ist, gibt die **getdrmproperty** -Methode die \_ \_ \_ nicht unterstützte Eigenschaft "NS E DRM" zurück \_ . Derzeit besteht die einzige Möglichkeit zum Abrufen der CRL darin, eine DRM-Lizenz zu erwerben.
+Wenn die CRL auf dem Computer des Benutzers nicht vorhanden ist, gibt die **GetDRMProperty-Methode** NS \_ E \_ DRM \_ UNSUPPORTED \_ PROPERTY zurück. Derzeit besteht die einzige Möglichkeit zum Abrufen der CRL darin, eine DRM-Lizenz zu erwerben.
 
 Der folgende Code zeigt eine Funktion, die die CRL zurückgibt:
 
@@ -165,9 +165,9 @@ HRESULT GetCRL(BYTE **ppBuffer, DWORD *pcbBuffer)
 
 
 
-Anschließend muss die Anwendung überprüfen, ob die CRL gültig ist. Vergewissern Sie sich hierzu, dass das Zertifikat der CRL, das Teil der Zertifikat Sperr Liste ist, direkt vom Microsoft-Stamm Zertifikat signiert ist und dass der Wert des signcrl-Elements auf 1 festgelegt ist. Überprüfen Sie außerdem die Signatur der CRL.
+Als Nächstes muss die Anwendung überprüfen, ob die CRL gültig ist. Stellen Sie hierzu sicher, dass das Zertifikat der Zertifikatsperrliste, das Teil der Zertifikatsperrliste ist, direkt vom Microsoft-Stammzertifikat signiert ist und der Wert des SignCRL-Elements auf 1 festgelegt ist. Überprüfen Sie außerdem die Signatur der Sperrliste.
 
-Nachdem die CRL überprüft wurde, kann Sie von der Anwendung gespeichert werden. Die CRL-Versionsnummer sollte vor dem Speichern auch geprüft werden, damit die Anwendung immer die neueste Version speichert.
+Nachdem die Sperrliste überprüft wurde, kann sie von der Anwendung gespeichert werden. Die CRL-Versionsnummer sollte auch vor dem Speichern überprüft werden, damit die Anwendung immer die neueste Version speichert.
 
 Die CRL weist das folgende Format auf.
 
@@ -175,56 +175,56 @@ Die CRL weist das folgende Format auf.
 
 | `Section`            | Contents                                                             |
 |--------------------|----------------------------------------------------------------------|
-| Header             | 32-Bit-CRL version32-Bit-Anzahl von Einträgen                           |
-| Sperr Einträge | Mehrere 160-Bit-Sperr Einträge                                  |
-| Zertifikat        | 32-Bit-Zertifikat mit Längen variabler Länge                 |
-| Signatur          | 8-Bit-Signatur type16-Bit-Signatur Längen variabler Länge |
+| Header             | 32-Bit-CRL-Version32-Bit-Anzahl von Einträgen                           |
+| Sperreinträge | Mehrere 160-Bit-Sperreinträge                                  |
+| Zertifikat        | 32-Bit-ZertifikatlängeVariable-Längenzertifikat                 |
+| Signatur          | 8-Bit-Signaturtyp16-Bit-SignaturlängeVariable-Längensignatur |
 
 
 
  
 
 > [!Note]  
-> Alle ganzzahligen Werte sind unsigniert und werden in der Big-Endian-Notation (netzwerkbyte Reihenfolge) dargestellt.
+> Alle ganzzahligen Werte sind ohne Vorzeichen und werden in Big-Endian-Notation (Netzwerk-Bytereihenfolge) dargestellt.
 
  
 
-CRL-Abschnitts Beschreibungen
+CRL-Abschnittsbeschreibungen
 
 <dl> <dt>
 
 <span id="Header"></span><span id="header"></span><span id="HEADER"></span>Header
 </dt> <dd>
 
-Der-Header enthält die Versionsnummer der CRL und die Anzahl der Sperr Einträge in der CRL. Eine CRL kann NULL oder mehr Einträge enthalten.
+Der Header enthält die Versionsnummer der Zertifikatsperrliste und die Anzahl der Sperreinträge in der Zertifikatsperrliste. Eine Sperrliste kann 0 (null) oder mehr Einträge enthalten.
 
 </dd> <dt>
 
-<span id="Revocation_entries"></span><span id="revocation_entries"></span><span id="REVOCATION_ENTRIES"></span>Sperr Einträge
+<span id="Revocation_entries"></span><span id="revocation_entries"></span><span id="REVOCATION_ENTRIES"></span>Sperreinträge
 </dt> <dd>
 
-Jeder Sperr Eintrag ist der 160-Bit-Digest eines gesperrten Zertifikats. Vergleichen Sie diesen Digest mit dem DigestValue-Element innerhalb des Zertifikats.
+Jeder Sperreintrag ist der 160-Bit-Digest eines gesperrten Zertifikats. Vergleichen Sie diesen Digest mit dem DigestValue-Element innerhalb des Zertifikats.
 
 </dd> <dt>
 
-<span id="Certificate"></span><span id="certificate"></span><span id="CERTIFICATE"></span>Stellt
+<span id="Certificate"></span><span id="certificate"></span><span id="CERTIFICATE"></span>Zertifikat
 </dt> <dd>
 
-Der Abschnitt Zertifikat enthält einen 32-Bit-Wert, der die Länge (in Bytes) des XML-Zertifikats und seiner Zertifikat Kette sowie ein Bytearray angibt, das sowohl das XML-Zertifikat der Zertifizierungsstelle als auch die Zertifikat Kette enthält, die Microsoft als Stamm hat. Das Zertifikat muss von einer Zertifizierungsstelle signiert werden, die über die Berechtigung zum Ausstellen von CRLs verfügt.
+Der Abschnitt certificate enthält einen 32-Bit-Wert, der die Länge (in Bytes) des XML-Zertifikats und seiner Zertifikatkette sowie ein Bytearray angibt, das sowohl das XML-Zertifikat der Zertifizierungsstelle (Certificate Authority, CA) als auch die Zertifikatkette mit Microsoft als Stamm enthält. Das Zertifikat muss von einer Zertifizierungsstelle signiert werden, die über die Berechtigung zum Ausstellen von CRLs verfügt.
 
 > [!Note]  
-> Das Zertifikat darf nicht auf Null enden.
+> Das Zertifikat darf nicht NULL-terminiert sein.
 
  
 
 </dd> <dt>
 
-<span id="Signature"></span><span id="signature"></span><span id="SIGNATURE"></span>Unter
+<span id="Signature"></span><span id="signature"></span><span id="SIGNATURE"></span>Signatur
 </dt> <dd>
 
-Der Signatur Abschnitt enthält den Typ und die Länge der Signatur sowie die digitale Signatur selbst. Der 8-Bit-Typ wird auf 2 festgelegt, um anzugeben, dass SHA-1 mit 1024-Bit-RSA-Verschlüsselung verwendet wird. Die Länge ist ein 16-Bit-Wert, der die Länge der digitalen Signatur in Bytes enthält. Die digitale Signatur wird über alle vorherigen Abschnitte der CRL berechnet.
+Der Signaturabschnitt enthält den Signaturtyp und die Länge sowie die digitale Signatur selbst. Der 8-Bit-Typ ist auf 2 festgelegt, um anzugeben, dass SHA-1 mit 1024-Bit-RSA-Verschlüsselung verwendet wird. Die Länge ist ein 16-Bit-Wert, der die Länge der digitalen Signatur in Bytes enthält. Die digitale Signatur wird für alle vorherigen Abschnitte der Sperrliste berechnet.
 
-Die Signatur wird mit dem digitalen rsassa-PSS-Signatur Schema berechnet, das in PKCS \# 1 (Version 2,1) definiert ist. Bei der Hash Funktion handelt es sich um SHA-1, der in Federal Information Processing Standard (FI) 180-2 definiert ist, und die Masken Generierungs Funktion ist MGF1, die in Abschnitt B. 2.1 in PKCS \# 1 (Version 2,1) definiert ist. Der RSASP1-und der RSAVP1-Vorgang verwenden RSA mit einem 1024-Bit-Modulo mit einem Verifizierungs Exponent von 65537.
+Die Signatur wird mithilfe des in PKCS \# 1 (Version 2.1) definierten Schemas für digitale Signaturen RSATUR-PSS berechnet. Die Hashfunktion ist SHA-1, die in Federal Information Processing Standard (FIPS) 180-2 definiert ist, und die Maskengenerierungsfunktion ist MGF1, die in Abschnitt B.2.1 in PKCS \# 1 (Version 2.1) definiert ist. Die RSASP1- und RSAVP1-Vorgänge verwenden RSA mit einem 1024-Bit-Modulus mit einem Überprüfungs exponenten 65537.
 
 </dd> </dl>
 
@@ -232,7 +232,7 @@ Die Signatur wird mit dem digitalen rsassa-PSS-Signatur Schema berechnet, das in
 
 <dl> <dt>
 
-[Verwenden des Certified Output Protection-Protokolls (COPP)](using-certified-output-protection-protocol--copp.md)
+[Verwenden von Certified Output Protection Protocol (COPP)](using-certified-output-protection-protocol--copp.md)
 </dt> </dl>
 
  

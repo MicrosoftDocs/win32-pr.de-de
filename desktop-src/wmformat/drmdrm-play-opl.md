@@ -1,10 +1,10 @@
 ---
-title: DRM_PLAY_OPL Struktur (wmdrmsdk. h)
-description: Die DRM- \_ Wiedergabe- \_ OPL-Struktur enthält Informationen zu den in einer Lizenz für Wiedergabe Aktionen angegebenen Ausgabe Schutz Ebenen (opls).
+title: DRM_PLAY_OPL -Struktur (Wmdrmsdk.h)
+description: Die DRM PLAY OPL-Struktur enthält Informationen zu den Ausgabeschutzebenen \_ \_ (OUTPUT Protection Levels, OPLs), die in einer Lizenz für Wiedergabeaktionen angegeben sind.
 ms.assetid: 10703893-630c-4cbe-a0b0-d2890905daba
 keywords:
-- DRM_PLAY_OPL Struktur-Windows Media-Format
-- Struktur des Windows-Medien Formats
+- DRM_PLAY_OPL struktur windows media format
+- Strukturfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a40d8fe4e8b3c820f9d7bcb405b5c0806040182
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3f649263db5435310d076386c49b2e77960552646e7ea2325190c3f0b94f27bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365424"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119708310"
 ---
-# <a name="drm_play_opl-structure"></a>DRM- \_ Wiedergabe- \_ OPL-Struktur
+# <a name="drm_play_opl-structure"></a>DRM \_ PLAY \_ OPL-Struktur
 
-Die **DRM- \_ Wiedergabe- \_ OPL** -Struktur enthält Informationen zu den in einer Lizenz für Wiedergabe Aktionen angegebenen Ausgabe Schutz Ebenen (opls).
+Die **DRM \_ PLAY \_ OPL-Struktur** enthält Informationen zu den Ausgabeschutzebenen (OUTPUT Protection Levels, OPLs), die in einer Lizenz für Wiedergabeaktionen angegeben sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,14 +43,14 @@ typedef struct DRM_PLAY_OPL {
 
 <dl> <dt>
 
-**minopl**
+**minOPL**
 </dt> <dd>
 
-[**DRM \_ Minimale \_ Ausgabe \_ Schutz \_ Ebenen**](drmdrm-minimum-output-protection-levels.md) -Struktur, die die minimale OPL enthält, die für die Wiedergabe von Inhalten in verschiedenen Formaten erforderlich
+[**DRM \_ MINIMUM \_ OUTPUT \_ PROTECTION \_ LEVELS-Struktur,**](drmdrm-minimum-output-protection-levels.md) die die mindest erforderliche OPL enthält, um Inhalte in verschiedenen Formaten wieder zu spielen.
 
 </dd> <dt>
 
-**oplidreserved**
+**oplIdReserved**
 </dt> <dd>
 
 Für die zukünftige Verwendung reserviert.
@@ -60,7 +60,7 @@ Für die zukünftige Verwendung reserviert.
 **vopi**
 </dt> <dd>
 
-[**DRM \_ Die Video- \_ Ausgabe \_ Schutz- \_ IDs**](drmdrm-video-output-protection-ids.md) -Struktur, die die für die Wiedergabe des Inhalts geltenden Video-Ausgabe Schutz Bezeichner enthält.
+[**DRM \_ VIDEO \_ OUTPUT \_ PROTECTION \_ IDS-Struktur,**](drmdrm-video-output-protection-ids.md) die die Bezeichner für den Videoausgabeschutz enthält, die für die Wiedergabe des Inhalts gelten.
 
 </dd> </dl>
 
@@ -70,7 +70,7 @@ Für die zukünftige Verwendung reserviert.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
@@ -78,10 +78,10 @@ Für die zukünftige Verwendung reserviert.
 
 <dl> <dt>
 
-[**DRM- \_ Kopier- \_ OPL**](drmdrm-copy-opl.md)
+[**DRM \_ COPY \_ OPL**](drmdrm-copy-opl.md)
 </dt> <dt>
 
-[**DRM \_ Play \_ OPL \_ Ex**](drm-play-opl-ex.md)
+[**DRM \_ PLAY \_ OPL \_ EX**](drm-play-opl-ex.md)
 </dt> <dt>
 
 [**Strukturen**](drm-structures.md)

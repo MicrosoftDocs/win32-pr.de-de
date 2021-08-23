@@ -1,7 +1,7 @@
 ---
-description: Enthält Informationen zu einem Tablet-System Ereignis.
+description: Enthält Informationen zu einem Tablet-Systemereignis.
 ms.assetid: 725f4b43-0bcb-4452-a87f-b24a85de0049
-title: SYSTEM_EVENT_DATA Struktur
+title: SYSTEM_EVENT_DATA-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 5d77c78a78a6cecae0368e8d9192a0dc0efc10e8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 58e153da2695990f74d1268aa3e861bb9011b108ebdd1ea2d5128ff6f8e40a20
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218573"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119708210"
 ---
-# <a name="system_event_data-structure"></a>System \_ Ereignis- \_ Datenstruktur
+# <a name="system_event_data-structure"></a>SYSTEM \_ EVENT \_ DATA-Struktur
 
-Enthält Informationen zu einem Tablet-System Ereignis.
+Enthält Informationen zu einem Tablet-Systemereignis.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,72 +43,72 @@ typedef struct tagSYSTEM_EVENT_DATA {
 
 <dl> <dt>
 
-**bmodifizierer**
+**bModifier**
 </dt> <dd>
 
 Bitwerte für die Modifizierer. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 </dd> <dt>
 
-**wkey**
+**wKey**
 </dt> <dd>
 
-Scannen Sie den Code nach dem Tastatur Zeichen.
+Scancode für das Tastaturzeichen.
 
 </dd> <dt>
 
-**XPos**
+**xPos**
 </dt> <dd>
 
-X-Position des Ereignisses.
+X Position des Ereignisses.
 
 </dd> <dt>
 
-**YPos**
+**yPos**
 </dt> <dd>
 
 Y-Position des Ereignisses.
 
 </dd> <dt>
 
-**bcurrsormode**
+**bCursorMode**
 </dt> <dd>
 
 Der Cursortyp, der das Ereignis verursacht hat. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 </dd> <dt>
 
-**dwbuttonstate**
+**dwButtonState**
 </dt> <dd>
 
-Der Zustand der Schaltflächen zum Zeitpunkt des System Ereignisses.
+Status der Schaltflächen zum Zeitpunkt des Systemereignisses.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgenden Systemereignisse werden für die Verwendung im **bmodifier** -Member definiert.
+Die folgenden Systemereignisse werden für die Verwendung im **bModifier-Member** definiert.
 
 
 
-| Wert               | BESCHREIBUNG                  |
+| Wert               | Beschreibung                  |
 |---------------------|------------------------------|
-| SE- \_ Modifizierer \_ STRG  | Die Steuerelement Taste wurde gedrückt. |
-| SE- \_ Modifizierer \_ alt   | Die Alt-Taste wurde gedrückt.     |
-| SE- \_ \_ modifiziererschicht | Die UMSCHALTTASTE wurde gedrückt.   |
+| \_SE MODIFIZIERER \_ STRG  | Die Steuertaste wurde gedrückt. |
+| \_SE MODIFIZIERER \_ ALT   | Die ALT-TASTE wurde gedrückt.     |
+| \_SE \_MODIFIZIERERVERSCHIEBUNG | Die UMSCHALTTASTE wurde gedrückt.   |
 
 
 
  
 
-Die folgenden Systemereignisse sind für die Verwendung im **bcurrsormode** -Member definiert.
+Die folgenden Systemereignisse werden für die Verwendung im **bCursorMode-Member** definiert.
 
 
 
-| Wert              | BESCHREIBUNG               |
+| Wert              | Beschreibung               |
 |--------------------|---------------------------|
-| \_normaler \_ Cursor SE | Gibt den Stift Tipp an.    |
-| SE- \_ \_ radierercursor | Gibt den Stift Radierer an. |
+| \_SE NORMAL \_ CURSOR | Gibt die Stiftspitze an.    |
+| \_SE \_RADIERERCURSOR | Gibt den Stiftradierer an. |
 
 
 
@@ -120,19 +120,19 @@ Die folgenden Systemereignisse sind für die Verwendung im **bcurrsormode** -Mem
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Istylusplugin:: systemevent-Methode**](/windows/desktop/api/RTSCom/nf-rtscom-istylusplugin-systemevent)
+[**IStylusPlugin::SystemEvent-Methode**](/windows/desktop/api/RTSCom/nf-rtscom-istylusplugin-systemevent)
 </dt> <dt>
 
-[**Itableteventsink:: systemevent-Methode**](itableteventsink-systemevent.md)
+[**ITabletEventSink::SystemEvent-Methode**](itableteventsink-systemevent.md)
 </dt> </dl>
 
  

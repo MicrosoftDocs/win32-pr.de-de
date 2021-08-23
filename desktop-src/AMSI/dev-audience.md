@@ -1,51 +1,51 @@
 ---
-title: Entwickler Audience und Beispielcode
-description: In diesem Thema werden die Gruppen von Entwicklern beschrieben, für die die Antimalware-Scan Schnittstelle entworfen wurde.
+title: Zielgruppe für Entwickler und Beispielcode
+description: In diesem Thema werden die Entwicklergruppen beschrieben, für die die Antimalware Scan Interface entworfen wurde.
 ms.topic: article
 ms.date: 03/20/2019
-ms.openlocfilehash: 22cf1156a8fa0aedc212b2ab70e34b984d13470f
-ms.sourcegitcommit: 272ba17a215d0d27bb7918fee1192d4954ccc576
+ms.openlocfilehash: 4ac11c75d5714d0706bed28264f9fa1bf03432af82107826178007e2c42243c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "104038479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119579910"
 ---
-# <a name="developer-audience-and-sample-code"></a>Entwickler Audience und Beispielcode
+# <a name="developer-audience-and-sample-code"></a>Zielgruppe für Entwickler und Beispielcode
 
-Die Antimalware-Scan Schnittstelle ist für die Verwendung durch zwei Gruppen von Entwicklern konzipiert.
+Die Antimalware Scan Interface ist für die Verwendung durch zwei Gruppen von Entwicklern konzipiert.
 
-- Anwendungsentwickler, die in ihren apps Anforderungen an antischadsoftwareprodukte stellen möchten.
-- Ersteller von Antischadsoftware-Produkten von Drittanbietern, die ihren Produkten die besten Features für Anwendungen anbieten sollen.
+- Anwendungsentwickler, die Anforderungen an Antischadsoftwareprodukte aus ihren Apps stellen möchten.
+- Ersteller von Antischadsoftwareprodukten von Drittanbietern, die möchten, dass ihre Produkte anwendungen die besten Features bieten.
 
 ## <a name="application-developers"></a>Anwendungsentwickler
 
-AMSI wurde speziell entwickelt, um "nicht filterlos Schadsoftware" zu bekämpfen. Anwendungs Typen, die die AMSI-Technologie optimal nutzen können, sind Skript-Engines, Anwendungen, die vor der Verwendung von Speicher Puffern gescannt werden müssen, und Anwendungen, die Dateien verarbeiten, die ausführbaren Code enthalten können (z. b. Microsoft Word-und Excel-Makros oder PDF-Dokumente). Die Nützlichkeit der AMSI-Technologie ist jedoch nicht auf diese Beispiele beschränkt.
+AMSI ist insbesondere dafür konzipiert, "dateilose Schadsoftware" zu schützen. Zu den Anwendungstypen, die am besten die AMSI-Technologie nutzen können, gehören Skript-Engines, Anwendungen, die Speicherpuffer vor der Verwendung scannen müssen, und Anwendungen, die Dateien verarbeiten, die ausführbaren Code enthalten können, der nicht peinlich ist (z. B. Microsoft Word- und Excel-Makros oder PDF-Dokumente). Die Nützlichkeit der AMSI-Technologie ist jedoch nicht auf diese Beispiele beschränkt.
 
-Es gibt zwei Möglichkeiten, wie Sie in Ihrer Anwendung mit AMSI verbinden können.
+Es gibt zwei Möglichkeiten, wie Sie eine Schnittstelle mit AMSI in Ihrer Anwendung verwenden können.
 
-- Mithilfe der AMSI-Win32-APIs. Weitere Informationen finden Sie unter [Antimalware Scan Interface (AMSI)-Funktionen](/windows/desktop/amsi/antimalware-scan-interface-functions).
-- Mithilfe der AMSI-com-Schnittstellen. Siehe [ **iamsistream** -Schnittstelle](/windows/desktop/api/amsi/nn-amsi-iamsistream).
+- Mithilfe der AMSI Win32-APIs. Siehe [Antimalware Scan Interface (AMSI)-Funktionen](/windows/desktop/amsi/antimalware-scan-interface-functions).
+- Mithilfe der AMSI COM-Schnittstellen. Siehe [ **IAmsiStream-Schnittstelle**](/windows/desktop/api/amsi/nn-amsi-iamsistream).
 
-Beispielcode, der zeigt, wie AMSI in ihrer com-Anwendung verwendet wird, finden Sie in der [Beispielanwendung für die iamsistream-Schnittstelle](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/AmsiStream).
+Beispielcode, der zeigt, wie AMSI in Ihrer COM-Anwendung verwendet wird, finden Sie in der [IAmsiStream-Schnittstellenbeispielanwendung](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/AmsiStream).
 
-## <a name="third-party-creators-of-antimalware-products"></a>Ersteller von Antischadsoftware-Produkten von Drittanbietern
+## <a name="third-party-creators-of-antimalware-products"></a>Ersteller von Antischadsoftwareprodukten von Drittanbietern
 
-Als Ersteller von Antischadsoftware-Produkten können Sie entscheiden, ihren eigenen Prozess internen com-Server (eine DLL) zu erstellen und zu registrieren, der als AMSI-Anbieter fungiert. Dieser AMSI-Anbieter muss die [ **iantimalwareprovider** -Schnittstelle](/windows/desktop/api/amsi/nn-amsi-iantimalwareprovider)implementieren, und er muss in-Process ausgeführt werden.
+Als Ersteller von Antischadsoftwareprodukten können Sie ihren eigenen Prozess-COM-Server (eine DLL) erstellen und registrieren, um als AMSI-Anbieter zu arbeiten. Dieser AMSI-Anbieter muss die [ **IAntimalwareProvider-Schnittstelle** implementieren](/windows/desktop/api/amsi/nn-amsi-iantimalwareprovider)und prozessintern ausgeführt werden.
 
-Beachten Sie, dass die AMSI-Anbieter-DLL nach Windows 10, Version 1709 (Fall 2017 Creators ' Update), möglicherweise nicht funktioniert, wenn Sie davon abhängt, dass andere DLLs im Pfad gleichzeitig geladen werden müssen. Um dll-Hijacking zu verhindern, wird empfohlen, dass die Anbieter-DLL ihre Abhängigkeiten explizit (mit einem vollständigen Pfad) mithilfe von sicheren [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryw) -aufrufen oder einer ähnlichen Version lädt. Dies wird empfohlen, anstatt sich auf das **LoadLibrary** -Suchverhalten zu verlassen.
+Beachten Sie, dass ihre AMSI-Anbieter-DLL nach Windows 10 Version 1709 (Creators Update vom Fall 2017) möglicherweise nicht funktioniert, wenn sie von anderen DLLs in ihrem Pfad abhängig ist, die gleichzeitig geladen werden. Um DLL-Hijacking zu verhindern, empfiehlt es sich, dass Ihre Anbieter-DLL ihre Abhängigkeiten explizit (mit einem vollständigen Pfad) mithilfe sicherer [**LoadLibrary-Aufrufe**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryw) oder entsprechender Aufrufe geladen. Dies wird empfohlen, anstatt sich auf das **Suchverhalten von LoadLibrary** zu verlassen.
 
-Der folgende Abschnitt zeigt, wie Sie Ihren AMSI-Anbieter registrieren. Vollständigen Beispielcode, der zeigt, wie Sie eine eigene AMSI-Anbieter-DLL erstellen, finden Sie in der [Beispielanwendung iantimalwareprovider Interface](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/AmsiProvider).
+Im folgenden Abschnitt wird gezeigt, wie Sie Ihren AMSI-Anbieter registrieren. Den vollständigen Beispielcode, der zeigt, wie Sie Ihre eigene AMSI-Anbieter-DLL erstellen, finden Sie in der [IAntimalwareProvider-Schnittstellenbeispielanwendung](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/AmsiProvider).
 
-### <a name="register-your-provider-dll-with-amsi"></a>Registrieren der Anbieter-DLL bei AMSI
+### <a name="register-your-provider-dll-with-amsi"></a>Registrieren Ihrer Anbieter-DLL bei AMSI
 
-Zunächst müssen Sie sicherstellen, dass diese Windows-Registrierungsschlüssel vorhanden sind.
+Zunächst müssen Sie sicherstellen, dass diese Windows Registrierungsschlüssel vorhanden sind.
 
-- Hklm\software\microsoft\amsi\providers
-- Hklm\software\classes\clsid
+- HKLM\SOFTWARE\Microsoft\AMSI\Providers
+- HKLM\SOFTWARE\Classes\CLSID
 
-Ein AMSI-Anbieter ist ein Prozess interner com-Server. Folglich muss Sie sich bei com registrieren. COM-Klassen werden in registriert `HKLM\SOFTWARE\Classes\CLSID` .
+Ein AMSI-Anbieter ist ein In-Process-COM-Server. Daher muss es sich selbst bei COM registrieren. COM-Klassen werden in `HKLM\SOFTWARE\Classes\CLSID` registriert.
 
-Der folgende Code zeigt, wie Sie einen AMSI-Anbieter registrieren, dessen GUID (in diesem Beispiel) angenommen wird `2E5D8A62-77F9-4F7B-A90C-2744820139B2` .
+Der folgende Code zeigt, wie Sie einen AMSI-Anbieter registrieren, dessen GUID (in diesem Beispiel) angenommen `2E5D8A62-77F9-4F7B-A90C-2744820139B2` wird.
 
 ```cpp
 #include <strsafe.h>
@@ -100,7 +100,7 @@ STDAPI DllRegisterServer()
 }
 ```
 
-Wenn die dll die [DllRegisterServer-Funktion](/windows/desktop/api/olectl/nf-olectl-dllregisterserver)implementiert, wie im obigen Beispiel gezeigt, können Sie Sie mit der von Windows bereitgestellten ausführbaren Datei registrieren `regsvr32.exe` . Geben Sie an einer Eingabeaufforderung mit erhöhten Rechten einen Befehl in diesem Formular aus.
+Wenn Ihre DLL wie im obigen Beispiel die [DllRegisterServer-Funktion](/windows/desktop/api/olectl/nf-olectl-dllregisterserver)implementiert, können Sie sie mithilfe der Windows ausführbaren Datei `regsvr32.exe` registrieren. Geben Sie an einer Eingabeaufforderung mit erhöhten Rechten einen Befehl dieses Formulars aus.
 
 ```cmd
 C:>C:\Windows\System32\regsvr32.exe SampleAmsiProvider.dll
@@ -108,21 +108,21 @@ C:>C:\Windows\System32\regsvr32.exe SampleAmsiProvider.dll
 
 In diesem Beispiel erstellt der Befehl die folgenden Einträge.
 
-**HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\\ {2e5d8a62-77 B2).**
+**HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\\ {2E5D8A62-77F9-4F7B-A90C-2744820139B2}**
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Vorgegebene    REG_SZ Beispiel für die AMSI-Anbieter Implementierung**
+&nbsp;&nbsp;&nbsp;&nbsp;**(Standard)    REG_SZ Amsi-Beispielanbieterimplementierung**
 
 
-**HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\\ {2e5d8a62-77F 9-4b2} \InprocServer32**
+**HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\\ {2E5D8A62-77F9-4F7B-A90C-2744820139B2}\InprocServer32**
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Vorgegebene    REG_EXPAND_SZ% Program Files% \TestProvider\SampleAmsiProvider.dll**
+&nbsp;&nbsp;&nbsp;&nbsp;**(Standard)    REG_EXPAND_SZ %ProgramFiles%\TestProvider\SampleAmsiProvider.dll**
 
-&nbsp;&nbsp;&nbsp;&nbsp;**ThreadingModel-REG_SZ beides**
+&nbsp;&nbsp;&nbsp;&nbsp;**ThreadingModel REG_SZ Beides**
 
-Zusätzlich zur regulären com-Registrierung müssen Sie den Anbieter auch bei AMSI registrieren. Hierzu fügen Sie einen Eintrag zum folgenden Schlüssel hinzu.
+Zusätzlich zur regulären COM-Registrierung müssen Sie den Anbieter auch bei AMSI registrieren. Dazu fügen Sie dem folgenden Schlüssel einen Eintrag hinzu.
 
-**Hklm\software\microsoft\amsi\providers**
+**HKLM\SOFTWARE\Microsoft\AMSI\Providers**
 
 Beispiel:
 
-**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AMSI\Providers\\ {2e5d8a62-77 B2).**
+**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AMSI\Providers\\ {2E5D8A62-77F9-4F7B-A90C-2744820139B2}**

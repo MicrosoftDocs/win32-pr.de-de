@@ -1,11 +1,11 @@
 ---
-title: Extern. ShowPopup-Methode
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Extern. ShowPopup-Methode
+title: External.showPopup-Methode
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | External.showPopup-Methode
 ms.assetid: 17958543-dbed-45a5-9b02-4800a07cb820
 keywords:
-- Windows-Media Player der ShowPopup-Methode
-- ShowPopup-Methode, Windows Media Player, externe Klasse
-- Externe Klasse, Windows Media Player, ShowPopup-Methode
+- showPopup-Windows Media Player
+- showPopup-Methode Windows Media Player , Externe Klasse
+- Externe Klasse Windows Media Player , showPopup-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: acaecb559e7df60067e89ec754ec9432233500f4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a651add93e32c1c2eb82827a4089a338341f2506ba26d9fbb06061aa6d185d75
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364619"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648340"
 ---
-# <a name="externalshowpopup-method"></a>Extern. ShowPopup-Methode
+# <a name="externalshowpopup-method"></a>External.showPopup-Methode
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **ShowPopup** -Methode weist Windows Media Player an, eine Popup Webseite anzuzeigen. Das heißt, eine Webseite, die in einem separaten Fenster angezeigt wird.
+Die **showPopup-Methode** weist Windows Media Player, eine Popupwebseite anzuzeigen. das heißt, eine Webseite, die in einem separaten Fenster angezeigt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,17 +48,17 @@ External.showPopup(
 
 <dl> <dt>
 
-*Popupindex* \[ in\]
+*PopupIndex* \[ In\]
 </dt> <dd>
 
-**Number** (**Long**), der den Index der Popup Webseite angibt.
+**Number** (**long**), die den Index der Popupwebseite angibt.
 
 </dd> <dt>
 
-*Parameter* \[ in\]
+*Parameter* \[ In\]
 </dt> <dd>
 
-Die **Zeichenfolge** , die von Windows Media Player an die URL der Webseite angefügt wird.
+**Eine** Zeichenfolge Windows Media Player an die URL der Webseite angefügt wird.
 
 </dd> </dl>
 
@@ -66,21 +66,21 @@ Die **Zeichenfolge** , die von Windows Media Player an die URL der Webseite ange
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Popup Index wird nicht von Windows Media Player interpretiert. Indizes, die Popup Webseiten identifizieren, werden vom Online Shop erstellt und sind nur im Online Store gemeint.
+Der Popupindex wird von der -Windows Media Player. Indizes, die Popupwebseiten identifizieren, werden vom Onlineshop erstellt und haben nur eine Bedeutung für den Onlineshop.
 
-Die folgenden Schritte zeigen, wie Windows Media Player die Parameter der **ShowPopup** -Methode verwendet, um eine URL für das Popup Fenster zu erstellen.
+Die folgenden Schritte zeigen, Windows Media Player die Parameter der **showPopup-Methode** verwendet, um eine URL für das Popupfenster zu erstellen.
 
-1.  Skript auf einer Discovery-Seite ruft **ShowPopup** auf und übergibt eine Ganzzahl in *popupindex* und eine Zeichenfolge in *Parametern*.
+1.  Das Skript auf einer Ermittlungsseite ruft **showPopup** auf und übergibt eine ganze Zahl in *PopupIndex* und eine Zeichenfolge in *Parameter*.
 
-2.  Windows Media Player übergibt den Index an [iwmpcontentpartner:: getiteminfo](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-getiteminfo) , um die URL der Webseite abzurufen, die angezeigt werden soll.
+2.  Windows Media Player den Index an [IWMPContentPartner::GetItemInfo](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-getiteminfo) weiter, um die URL der anzuzeigenden Webseite abzurufen.
 
-3.  Windows Media Player fügt *Parameter* als Abfrage Zeichenfolge an die URL an. Wenn **getiteminfo** z. b. " https://www.Proseware.com/Pages/Popup1.htm " zurückgibt und *Parameter* gleich "dlgx = 800&dlgy = 400&Gruß = Hi", erstellt Windows Media Player die folgende URL:
+3.  Windows Media Player parameter an *die* URL als Abfragezeichenfolge an. Wenn **GetItemInfo** beispielsweise "" zurückgibt und Parameter gleich https://www.Proseware.com/Pages/Popup1.htm "DlgX=800&DlgY=400&Greeting=Hi" ist, erstellt Windows Media Player die folgende URL: 
 
     https://www.Proseware.com/Pages/Popup1.htm?DlgX=800&DlgY=400&Greeting=Hi
 
-Sie können *Parameter* verwenden, um die Größe des Popup Fensters anzugeben. Wenn Sie z. b. *Parameter* auf "dlgx = 800&dlgy = 400" festlegen, hat das Popup Fenster eine Größe von 800 Pixel um 400 Pixel.
+Sie können Parameter *verwenden,* um die Größe des Popupfensters anzugeben. Wenn Sie parameter  beispielsweise auf "DlgX=800&DlgY=400" festlegen, hat das Popupfenster eine Größe von 800 x 400 Pixel.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,7 +97,7 @@ Sie können *Parameter* verwenden, um die Größe des Popup Fensters anzugeben. 
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 1-Online Speicher**](external-object-for-type-1-online-stores.md)
+[**Externes Objekt für Onlinespeicher vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> </dl>
 
  

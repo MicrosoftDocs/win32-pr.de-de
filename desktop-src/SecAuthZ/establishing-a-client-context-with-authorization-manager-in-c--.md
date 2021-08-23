@@ -1,25 +1,25 @@
 ---
-description: Zum Einrichten eines Client Kontexts in C++ kann eine Anwendung einen Client Kontext mit einem Handle für ein Token, einen Domänen-und Benutzernamen oder eine Zeichen folgen Darstellung der Sicherheits-ID des Clients erstellen.
+description: Um einen Clientkontext in C++ zu erstellen, kann eine Anwendung einen Clientkontext mit einem Handle für ein Token, eine Domäne und einen Benutzernamen oder eine Zeichenfolgendarstellung der Sicherheits-ID des Clients erstellen.
 ms.assetid: 765cd702-a1a8-4ff6-bea5-54de9fb62c0b
-title: Einrichten eines Client Kontexts mit dem Autorisierungs-Manager in C++
+title: Einrichten eines Clientkontexts mit dem Autorisierungs-Manager in C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 79afa31db547b28d129c5b8e90dcf3e4ba1e91c4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ef1b74cab7d6c113f5120a682250f85dca772e1764acf432317049da27ec091d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119672120"
 ---
-# <a name="establishing-a-client-context-with-authorization-manager-in-c"></a>Einrichten eines Client Kontexts mit dem Autorisierungs-Manager in C++
+# <a name="establishing-a-client-context-with-authorization-manager-in-c"></a>Einrichten eines Clientkontexts mit dem Autorisierungs-Manager in C++
 
-Im Autorisierungs-Manager bestimmt eine Anwendung, ob ein Client Zugriff auf einen Vorgang erhält, indem die [**Access Check**](/windows/desktop/api/Azroles/nf-azroles-iazclientcontext-accesscheck) -Methode eines [**IAzClientContext**](/windows/desktop/api/Azroles/nn-azroles-iazclientcontext) -Objekts aufgerufen wird, das einen Client Kontext darstellt.
+Im Autorisierungs-Manager bestimmt eine Anwendung, ob einem Client Zugriff auf einen Vorgang erteilt wird, indem die [**AccessCheck-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazclientcontext-accesscheck) eines [**IAzClientContext-Objekts**](/windows/desktop/api/Azroles/nn-azroles-iazclientcontext) aufgerufen wird, das einen Clientkontext darstellt.
 
-Eine Anwendung kann einen Client Kontext mit einem Handle für ein Token, einen Domänen-und Benutzernamen oder eine Zeichen folgen Darstellung der [*Sicherheits*](/windows/desktop/SecGloss/s-gly) -ID (SID) des Clients erstellen.
+Eine Anwendung kann einen Clientkontext mit einem Handle für ein Token, eine [](/windows/desktop/SecGloss/s-gly) Domäne und einen Benutzernamen oder eine Zeichenfolgendarstellung der Sicherheits-ID (SID) des Clients erstellen.
 
-Verwenden Sie die Methoden [**InitializeClientContextFromToken**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-initializeclientcontextfromtoken), [**InitializeClientContextFromName**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-initializeclientcontextfromname)und [**InitializeClientContextFromStringSID**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-initializeclientcontextfromstringsid) der [**IAzApplication**](/windows/desktop/api/Azroles/nn-azroles-iazapplication) -Schnittstelle, um einen Client Kontext zu erstellen.
+Verwenden Sie [**die Methoden InitializeClientContextFromToken,**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-initializeclientcontextfromtoken) [**InitializeClientContextFromName**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-initializeclientcontextfromname)und [**InitializeClientContextFromStringSid**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-initializeclientcontextfromstringsid) der [**IAzApplication-Schnittstelle,**](/windows/desktop/api/Azroles/nn-azroles-iazapplication) um einen Clientkontext zu erstellen.
 
-Im folgenden Beispiel wird gezeigt, wie ein [**IAzClientContext**](/windows/desktop/api/Azroles/nn-azroles-iazclientcontext) -Objekt aus einem Client Token erstellt wird. Im Beispiel wird davon ausgegangen, dass ein vorhandener XML-Richtlinien Speicher namens MyStore.xml im Stammverzeichnis des Laufwerks C vorhanden ist, dass dieser Speicher eine Anwendung mit dem Namen "Kosten" enthält und dass die Variable "hToken" ein gültiges Client Token enthält.
+Das folgende Beispiel zeigt, wie sie ein [**IAzClientContext-Objekt**](/windows/desktop/api/Azroles/nn-azroles-iazclientcontext) aus einem Clienttoken erstellen. Im Beispiel wird davon ausgegangen, dass im Stammverzeichnis von Laufwerk C ein XML-Richtlinienspeicher namens MyStore.xml vorhanden ist, dass dieser Speicher eine Anwendung namens Expense enthält und dass die Variable hToken ein gültiges Clienttoken enthält.
 
 
 ```C++

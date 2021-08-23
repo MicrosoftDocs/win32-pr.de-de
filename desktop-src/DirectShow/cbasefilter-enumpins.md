@@ -1,7 +1,7 @@
 ---
-description: 'Die Methode umumpins listet die Pins für diesen Filter auf. Diese Methode implementiert die ibasefilter:: umumpins-Methode.'
+description: Die EnumPins-Methode listet die Pins für diesen Filter auf. Diese Methode implementiert die IBaseFilter::EnumPins-Methode.
 ms.assetid: c1015ed3-658f-4f96-a1fb-e04b81a9ddb5
-title: Cbasefilter. endumpins-Methode (amfilter. h)
+title: CBaseFilter.EnumPins-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 66a0f88a9749ba1dabb982e2f275da8a4be2a422
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3cd0be44f768898a530eef20d3e4d5d082d230ff809133c0eb62ceb2308b524b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119640580"
 ---
-# <a name="cbasefilterenumpins-method"></a>Cbasefilter. endumpins-Methode
+# <a name="cbasefilterenumpins-method"></a>CBaseFilter.EnumPins-Methode
 
-Die- `EnumPins` Methode listet die Pins für diesen Filter auf. Diese Methode implementiert die [**ibasefilter:: umumpins**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-enumpins) -Methode.
+Die `EnumPins` -Methode listet die Stecknadeln für diesen Filter auf. Diese Methode implementiert die [**IBaseFilter::EnumPins-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-enumpins)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,31 +45,31 @@ HRESULT EnumPins(
 *ppEnum* 
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf die [**iumumpins**](/windows/desktop/api/Strmif/nn-strmif-ienumpins) -Schnittstelle empfängt.
+Adresse einer Variablen, die einen Zeiger auf die [**IEnumPins-Schnittstelle empfängt.**](/windows/desktop/api/Strmif/nn-strmif-ienumpins)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der folgenden **HRESULT** -Werte zurück.
+Gibt einen der folgenden **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                          |
 |-----------------------------------------------------------------------------------------------|--------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg<br/>                   |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher<br/>       |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | **Null** -Zeigerargument<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher<br/>       |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | **NULL-Zeigerargument**<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode erstellt eine Instanz der [**cenumpins**](cenumpins.md) -Basisklasse und gibt einen Zeiger auf dieses Objekt vom Typ **ienumpins** zurück. Die **cenumpins** -Klasse ruft die [**cbasefilter:: getpin**](cbasefilter-getpin.md) -Methode des Filters auf, um die Pins für den Filter aufzuzählen.
+Diese Methode erstellt eine Instanz der [**CEnumPins-Basisklasse**](cenumpins.md) und gibt einen Zeiger auf dieses Objekt vom Typ **IEnumPins** zurück. Die **CEnumPins-Klasse** ruft die [**CBaseFilter::GetPin-Methode**](cbasefilter-getpin.md) des Filters auf, um die Pins für den Filter aufzuzählen.
 
-Wenn diese Methode erfolgreich ausgeführt wird, hat die **ieinumpins** -Schnittstelle einen ausstehenden Verweis Zähler. Der Aufrufer muss die-Schnittstelle freigeben.
+Wenn diese Methode erfolgreich ist, verfügt die **IEnumPins-Schnittstelle** über einen ausstehenden Verweiszähler. Der Aufrufer muss die Schnittstelle freigeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,8 +77,8 @@ Wenn diese Methode erfolgreich ausgeführt wird, hat die **ieinumpins** -Schnitt
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -86,7 +86,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, hat die **ieinumpins** -Schnitt
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> </dl>
 
  

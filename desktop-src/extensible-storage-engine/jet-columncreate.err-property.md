@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_COLUMNCREATE. err-Eigenschaft.
-title: JET_COLUMNCREATE. err-Eigenschaft
+description: 'Weitere Informationen finden Sie unter: JET_COLUMNCREATE.err-Eigenschaft'
+title: JET_COLUMNCREATE.err-Eigenschaft
 TOCTitle: 'err property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_COLUMNCREATE.err
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_columncreate.err(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6b648f0df28ab2a00b85625febed151d5c198158
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6fea46189c81455e25376328764da57a6bbc7691cb02470c62feb17c64fc87ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119731370"
 ---
-# <a name="jet_columncreateerr-property"></a>JET_COLUMNCREATE. err-Eigenschaft
+# <a name="jet_columncreateerr-property"></a>JET_COLUMNCREATE.err-Eigenschaft
 
-Ruft den Fehlercode aus der Erstellung dieser Spalte ab oder legt ihn fest.
+Ruft den Fehlercode beim Erstellen dieser Spalte ab oder legt diesen fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public JET_err err { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_err](./jet-err-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_err](./jet-err-enumeration.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_COLUMNCREATE-Klasse](./jet-columncreate-class.md)
 
-[Mitglieder JET_COLUMNCREATE](./jet-columncreate-members.md)
+[JET_COLUMNCREATE Mitglieder](./jet-columncreate-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

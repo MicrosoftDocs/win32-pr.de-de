@@ -4,18 +4,18 @@ ms.assetid: a0af318d-9ac2-43f9-8934-f28c472256a6
 title: Benutzerdefinierte Mixer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ac7e56c578a7081de7c71ae3abaf9fc45d085827
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 587206f7bc34d1fad4a64a12aeff9ab8ad21e18a84c92c8f2302776fdc126a68
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119605990"
 ---
 # <a name="custom-mixers"></a>Benutzerdefinierte Mixer
 
-In diesem Thema wird beschrieben, wie ein benutzerdefinierter Mixer für den erweiterten Videorenderer (EVR) geschrieben wird. Sie können einen benutzerdefinierten Mixer entweder mit der Media Foundation EVR-Medien Senke oder mit dem DirectShow-EVR-Filter verwenden. Weitere Informationen zu Mixern und Moderatoren finden Sie unter [Enhanced Video Renderer](enhanced-video-renderer.md).
+In diesem Thema wird beschrieben, wie ein benutzerdefinierter Mixer für den erweiterten Videorenderer (EVR) geschrieben wird. Sie können einen benutzerdefinierten Mixer mit der Media Foundation EVR-Mediensenke oder dem DirectShow EVR-Filter verwenden. Weitere Informationen zu Mixern und Moderatoren finden Sie unter [Enhanced Video Renderer](enhanced-video-renderer.md).
 
-Der Mixer ist eine Media Foundation Transformation (MFT) mit einer oder mehreren Eingaben (dem Verweis Datenstrom und den unter strömen) und einer Ausgabe. Der Eingabestream empfängt Beispiele von Upstream. Der Ausgabestream liefert Beispiele für den Presenter. Der EVR ist für das Aufrufen von [**imftransform::P rocessinput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput) im Mixer zuständig, und der Presenter ist für das Aufrufen von [**imftransform::P rocess Output**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput)verantwortlich.
+Der Mixer ist eine Media Foundation-Transformation (MFT) mit mindestens einer Eingabe (dem Verweisstream plus den Unterstreams) und einer Ausgabe. Der Eingabestream empfängt Beispiele vom Upstream. Der Ausgabestream übermittelt Beispiele an die Moderatorin. Die EVR ist für den Aufruf von [**"CSVTransform::P rocessInput"**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput) auf dem Mixer verantwortlich, und der Presenter ist für den Aufruf von [**"MIXERTransform::P rocessOutput"**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput)verantwortlich.
 
 Ein EVR-Mixer muss mindestens die folgenden Schnittstellen implementieren:
 
@@ -23,101 +23,101 @@ Ein EVR-Mixer muss mindestens die folgenden Schnittstellen implementieren:
 
 | Schnittstelle                                                                | BESCHREIBUNG                                                                                      |
 |--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| [**IMF-Transformation**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)                                     | Stellt grundlegende MFT-Funktionen bereit.                                                                 |
-| [**Imftopologyservicelookupclient**](/windows/desktop/api/evr/nn-evr-imftopologyservicelookupclient) | Ermöglicht dem Mixer, Schnittstellen vom EVR zu erhalten.                                                |
-| [**IMF videoabviceid**](/windows/desktop/api/evr/nn-evr-imfvideodeviceid)                             | Ermöglicht dem Mixer, Schnittstellen vom EVR zu erhalten.                                                |
-| [**Imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)                                   | Wird verwendet, um das [**MF \_ sa \_ D3D \_ Aware**](mf-sa-d3d-aware-attribute.md) -Attribut für den EVR verfügbar zu machen. |
+| [**ÜBERTRANSFORM**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)                                     | Stellt MFT-Basisfunktionen bereit.                                                                 |
+| [**SHOPPERTopologyServiceLookupClient**](/windows/desktop/api/evr/nn-evr-imftopologyservicelookupclient) | Ermöglicht dem Mixer das Abrufen von Schnittstellen aus der EVR.                                                |
+| [**DINNERVideoDeviceID**](/windows/desktop/api/evr/nn-evr-imfvideodeviceid)                             | Ermöglicht dem Mixer das Abrufen von Schnittstellen aus der EVR.                                                |
+| [**ATTRIBUTEAttributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)                                   | Wird verwendet, um das [**MF \_ SA \_ D3D \_ AWARE-Attribut**](mf-sa-d3d-aware-attribute.md) für die EVR verfügbar zu machen. |
 
 
 
  
 
-Optional kann eine MFT eine der folgenden Schnittstellen implementieren:
+Optional kann ein MFT eine der folgenden Schnittstellen implementieren:
 
 
 
 | Schnittstelle                                                | BESCHREIBUNG                                                                                                                                          |
 |----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Ievrtreuhändvideoplugin**](/windows/desktop/api/evr/nn-evr-ievrtrustedvideoplugin) | Erforderlich, um geschützte Inhalte wiederzugeben.                                                                                                                  |
-| [**IMF-Dienst**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice)                   | Macht Schnittstellen wie [**imfvideomixerbitmap**](/windows/desktop/api/evr9/nn-evr9-imfvideomixerbitmap) und [**imfvideoprocessor**](/windows/desktop/api/evr9/nn-evr9-imfvideoprocessor) für die Anwendung verfügbar. |
-| [**IMF-Empfehlung**](/windows/desktop/api/mfidl/nn-mfidl-imfqualityadvise)             | Ermöglicht dem Quality Manager das Anpassen der Videoqualität.                                                                                             |
-| [**IMF videomixerbitmap**](/windows/desktop/api/evr9/nn-evr9-imfvideomixerbitmap)       | Ermöglicht der Anwendung, eine statische Bitmap auf das Video zu mischen.                                                                                       |
-| [**IMF videopositionmapper**](/windows/desktop/api/evr/nn-evr-imfvideopositionmapper) | Ordnet die Koordinaten im Video Frame der Ausgabe den Koordinaten des eingabevideoframes zu.                                                                  |
-| [**IMF videoprocessor**](/windows/desktop/api/evr9/nn-evr9-imfvideoprocessor)           | Macht einige DXVA-Video Verarbeitungs Features für die Anwendung verfügbar.                                                                                      |
+| [**IEVRTrustedVideoPlugin**](/windows/desktop/api/evr/nn-evr-ievrtrustedvideoplugin) | Erforderlich, um geschützten Inhalt wiederzuspielen.                                                                                                                  |
+| [**VERZRGETService**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice)                   | Macht Schnittstellen wie Z.B. [**"ORBITVideoMixerBitmap"**](/windows/desktop/api/evr9/nn-evr9-imfvideomixerbitmap) und [**"WFVideoProcessor"**](/windows/desktop/api/evr9/nn-evr9-imfvideoprocessor) für die Anwendung verfügbar. |
+| [**HAPQualityAdvise**](/windows/desktop/api/mfidl/nn-mfidl-imfqualityadvise)             | Ermöglicht dem Qualitätsmanager, die Videoqualität anzupassen.                                                                                             |
+| [**ORBITVideoMixerBitmap**](/windows/desktop/api/evr9/nn-evr9-imfvideomixerbitmap)       | Ermöglicht der Anwendung das Mischen einer statischen Bitmap in das Video.                                                                                       |
+| [**CITRIXVideoPositionMapper**](/windows/desktop/api/evr/nn-evr-imfvideopositionmapper) | Karten Koordinaten auf dem Ausgabevideorahmen zu Koordinaten für den Eingabevideorahmen.                                                                  |
+| [**DENKVideoProcessor**](/windows/desktop/api/evr9/nn-evr9-imfvideoprocessor)           | Macht einige DXVA-Videoverarbeitungsfunktionen für die Anwendung verfügbar.                                                                                      |
 
 
 
  
 
-Die Format Aushandlung mit dem Mixer funktioniert wie folgt:
+Die Formataushandlung mit dem Mixer funktioniert wie folgt:
 
-1.  Der EVR legt den Medientyp für den Verweis Datenstrom fest.
-2.  Der EVR ruft [**IMF videopresenter::P rocess Message**](/windows/desktop/api/evr/nf-evr-imfvideopresenter-processmessage) für den Presenter mit der Meldung " **\_ \_ invalidatemediatype" der MF-Nachricht** auf.
+1.  Die EVR legt den Medientyp im Verweisstream fest.
+2.  Der EVR ruft [**AUFANZEIGEVideoPresenter::P rocessMessage**](/windows/desktop/api/evr/nf-evr-imfvideopresenter-processmessage) auf dem Presenter mit der **MFVP \_ MESSAGE \_ INVALIDATEMEDIATYPE-Nachricht** auf.
 
-3.  Der Presenter legt den Medientyp für den Ausgabestream des Mischers fest.
-4.  Der EVR legt den Medientyp für die untergeordneten Datenströme fest.
+3.  Die Präsentation legt den Medientyp im Ausgabestream des Mixers fest.
+4.  Die EVR legt den Medientyp für die Unterstreams fest.
 
-Wenn sich der Medientyp im Verweis Datenstrom ändert, sind die anderen Medientypen des Mixers nicht mehr gültig. Die [**imftransform::P rocess Output**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) -Methode des Mischers schlägt dann fehl und gibt die Änderung von MF-E-Stream-Daten **\_ \_ \_ Strom \_** zurück. Der Presenter sollte an dieser Stelle nichts Unternehmen. Der EVR initiiert den formataushandlungs Prozess erneut.
+Wenn sich der Medientyp im Verweisstream ändert, sind die anderen Medientypen des Mixers nicht mehr gültig. Die [**MIXERTransform::P rocessOutput-Methode**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) des Mixers schlägt dann fehl und gibt **MF E TRANSFORM STREAM \_ \_ \_ \_ CHANGE** zurück. Der Presenter sollte an diesem Punkt nichts tun. Die EVR initiiert den Formataushandlungsprozess erneut.
 
-Wenn ein Eingabedaten Strom das Ende des Streams erreicht, ruft der EVR [**imftransform::P rocess Message**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage) auf dem Mixer mit dem [**\_ \_ \_ Ende \_ des Daten \_ Stroms der MFT-Nachrichten Benachrichtigung**](mft-message-notify-end-of-stream.md)auf.
+Wenn ein Eingabestream das Ende des Datenstroms erreicht, ruft der EVR MIT [**MFT \_ MESSAGE \_ NOTIFY END OF \_ \_ \_ STREAM**](mft-message-notify-end-of-stream.md)DIE [**BENACHRICHTIGUNGSTRANSFORM::P rocessMessage**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage) auf dem Mixer auf.
 
-Der Mixer sendet die folgenden Ereignisse mithilfe der [**imediaeventsink**](/windows/win32/api/strmif/nn-strmif-imediaeventsink) -Schnittstelle von EVR an den EVR. Diese Schnittstelle ist in der DirectShow SDK-Dokumentation dokumentiert.
+Der Mixer sendet die folgenden Ereignisse über die [**IMediaEventSink-Schnittstelle**](/windows/win32/api/strmif/nn-strmif-imediaeventsink) der EVR an die EVR. Diese Schnittstelle ist in der DirectShow SDK-Dokumentation dokumentiert.
 
 
 
-| Ereignis                                            | BESCHREIBUNG                            |
+| Ereignis                                            | Beschreibung                            |
 |--------------------------------------------------|----------------------------------------|
-| [**EC- \_ Beispiel \_ erforderlich**](../directshow/ec-sample-needed.md) | Für den Mixer ist ein neues Eingabe Beispiel erforderlich. |
+| [**\_EC-BEISPIEL \_ ERFORDERLICH**](../directshow/ec-sample-needed.md) | Der Mixer erfordert ein neues Eingabebeispiel. |
 
 
 
  
 
-Der EVR könnte [**ProcessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) auf dem Mixer aufzurufen, bevor das Streaming gestartet wird. Der Mixer sollte diese Aufrufe nicht fehlschlagen. Stattdessen sollte die Ausgabe Oberfläche in schwarze Pixel gefüllt werden. Der Mixer sollte weiterhin Ausgabe Beispiele mit Farben füllen, bis er eine Nachricht zum [**\_ \_ \_ Starten \_ von MFT**](mft-message-notify-begin-streaming.md) -Nachrichten empfängt oder die [**ProcessInput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput) -Methode aufgerufen wird. Wenn der Mixer eine Nachricht zum [**\_ \_ \_ Beenden \_ von MFT**](mft-message-notify-end-streaming.md) -Nachrichten empfängt, sollte er wieder in den farbfüllmodus wechseln.
+Die EVR ruft möglicherweise [**ProcessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) auf dem Mixer auf, bevor das Streaming gestartet wird. Der Mixer sollte diese Aufrufe nicht fehlschlagen. Stattdessen sollte die Ausgabeoberfläche mit schwarzen Pixeln gefüllt werden. Der Mixer sollte weiterhin Ausgabebeispiele mit Farben füllen, bis er eine [**MFT \_ MESSAGE NOTIFY \_ BEGIN \_ \_ STREAMING-Nachricht**](mft-message-notify-begin-streaming.md) empfängt oder die [**ProcessInput-Methode**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput) aufgerufen wird. Wenn der Mixer eine [**MFT \_ MESSAGE NOTIFY \_ END \_ \_ STREAMING-Nachricht**](mft-message-notify-end-streaming.md) empfängt, sollte er wieder in den Farbfüllmodus wechseln.
 
-## <a name="implementing-imfvideodeviceid"></a>Implementieren von IMF videode viceid
+## <a name="implementing-imfvideodeviceid"></a>Implementieren von IMPLEMENTVIDEODeviceID
 
-Die [**IMF videodeviceid**](/windows/desktop/api/evr/nn-evr-imfvideodeviceid) -Schnittstelle enthält eine Methode, [**getdeviceid**](/windows/desktop/api/evr/nf-evr-imfvideodeviceid-getdeviceid), die eine Geräte-GUID zurückgibt. Die Geräte-GUID stellt sicher, dass der Presenter und der Mixer kompatible Technologien verwenden. Wenn die Geräte-GUIDs nicht stimmen, kann der EVR nicht initialisiert werden.
+Die [**INTERFACESVideoDeviceID-Schnittstelle**](/windows/desktop/api/evr/nn-evr-imfvideodeviceid) enthält eine Methode, [**GetDeviceID,**](/windows/desktop/api/evr/nf-evr-imfvideodeviceid-getdeviceid)die eine Geräte-GUID zurückgibt. Die Geräte-GUID stellt sicher, dass der Presenter und der Mixer kompatible Technologien verwenden. Wenn die Geräte-GUIDs nicht übereinstimmen, kann die EVR nicht initialisiert werden.
 
-Der Standard-Mixer und der Presenter verwenden jeweils Direct3D 9, wobei die Geräte-GUID IID \_ IDirect3DDevice9 entspricht. Wenn Sie beabsichtigen, den benutzerdefinierten Presenter mit dem Standard-Mixer zu verwenden, muss die Geräte-GUID des Presenter IID \_ IDirect3DDevice9 lauten. Wenn Sie beide Komponenten ersetzen, können Sie eine neue Geräte-GUID definieren.
+Sowohl der Standardmixer als auch der Presenter verwenden Direct3D 9, wobei die Geräte-GUID gleich IID \_ IDirect3DDevice9 ist. Wenn Sie Ihre benutzerdefinierte Präsentation mit dem Standardmixer verwenden möchten, muss die Geräte-GUID des Moderators IID \_ IDirect3DDevice9 sein. Wenn Sie beide Komponenten ersetzen, können Sie eine neue Geräte-GUID definieren.
 
-## <a name="implementing-imftopologyservicelookupclient"></a>Implementieren von imftopologyservicelookupclient
+## <a name="implementing-imftopologyservicelookupclient"></a>Implementieren vonTOPTOPOLOGYServiceLookupClient
 
-Der Mixer muss die [**imftopologyservicelookupclient**](/windows/desktop/api/evr/nn-evr-imftopologyservicelookupclient) -Schnittstelle implementieren. Bevor das Streaming beginnt, ruft der EVR [**imftopologyservicelookupclient:: initservicepointer**](/windows/desktop/api/evr/nf-evr-imftopologyservicelookupclient-initservicepointers) auf und übergibt einen Zeiger auf die [**IMFTopologyServiceLookup**](/windows/desktop/api/evr/nn-evr-imftopologyservicelookup) -Schnittstelle von EVR. Der Mixer verwendet diesen Zeiger, um Schnittstellen Zeiger aus dem EVR zu erhalten.
+Der Mixer muss die [**SCHNITTSTELLE "MIXERTopologyServiceLookupClient"**](/windows/desktop/api/evr/nn-evr-imftopologyservicelookupclient) implementieren. Bevor mit dem Streaming begonnen wird, ruft der EVR [**DENTOPTOPOLOGYServiceLookupClient::InitServicePointers**](/windows/desktop/api/evr/nf-evr-imftopologyservicelookupclient-initservicepointers) auf und übergibt einen Zeiger auf die [**INTERFACESTopologyServiceLookup-Schnittstelle**](/windows/desktop/api/evr/nn-evr-imftopologyservicelookup) der EVR. Der Mixer verwendet diesen Zeiger, um Schnittstellenzeiger von der EVR abzurufen.
 
-Der Mixer muss mindestens die folgende Schnittstelle Abfragen:
+Der Mixer muss mindestens die folgende Schnittstelle abfragen:
 
--   [**Imediaeventsink**](/windows/win32/api/strmif/nn-strmif-imediaeventsink)
+-   [**IMediaEventSink**](/windows/win32/api/strmif/nn-strmif-imediaeventsink)
 
-Wenn der EVR [**imftopologyservicelookupclient:: releaseservicepointer**](/windows/desktop/api/evr/nf-evr-imftopologyservicelookupclient-releaseservicepointers)aufruft, muss der Mixer alle vom Aufruf von [**initservicepointer**](/windows/desktop/api/evr/nf-evr-imftopologyservicelookupclient-initservicepointers)abgerufenen Zeiger freigeben.
+Wenn der EVR [**DENTOPTOPOLOGYServiceLookupClient::ReleaseServicePointers**](/windows/desktop/api/evr/nf-evr-imftopologyservicelookupclient-releaseservicepointers)aufruft, muss der Mixer alle Zeiger freigeben, die aus dem Aufruf von [**InitServicePointers**](/windows/desktop/api/evr/nf-evr-imftopologyservicelookupclient-initservicepointers)abgerufen wurden.
 
-## <a name="mixer-attributes"></a>Mixattribute
+## <a name="mixer-attributes"></a>Mixer Attribute
 
 Ein Mixer sollte die folgenden Attribute unterstützen.
 
 
 
-| Attribut                                                                        | BESCHREIBUNG                                                                                                                                                                                                                                           |
+| attribute                                                                        | Beschreibung                                                                                                                                                                                                                                           |
 |----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**MF \_ sa \_ D3D \_**](mf-sa-d3d-aware-attribute.md)                          | Gibt an, ob der Mixer eine DirectX-Video Beschleunigung (DXVA) unterstützt.                                                                                                                                                                               |
-| [**\_ \_ Anzahl erforderlicher MF-Anforderungen \_ \_**](mf-sa-required-sample-count-attribute.md) | Die Anzahl der Videobeispiele, die der EVR für jeden mixerstream zuordnen soll. Dieses Attribut gilt für einzelne Streams. Verwenden Sie den Attribut Speicher, der von [**IMF Transform:: getinputstreamattribute**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getinputstreamattributes)zurückgegeben wurde. |
+| [**MF \_ SA \_ D3D \_ AWARE**](mf-sa-d3d-aware-attribute.md)                          | Gibt an, ob der Mixer DirectX Video Acceleration (DXVA) unterstützt.                                                                                                                                                                               |
+| [**MF \_ SA \_ REQUIRED \_ SAMPLE \_ COUNT**](mf-sa-required-sample-count-attribute.md) | Die Anzahl der Videobeispiele, die die EVR für jeden Mixerstream zuordnen sollte. Dieses Attribut gilt für einzelne Streams. verwenden Sie den attributspeicher, der von [**DERTRANSFORM::GetInputStreamAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getinputstreamattributes)zurückgegeben wird. |
 
 
 
  
 
-## <a name="setting-the-mixer-on-the-evr"></a>Festlegen des Mischers auf dem EVR
+## <a name="setting-the-mixer-on-the-evr"></a>Festlegen der Mixer für die EVR
 
-Um einen benutzerdefinierten Mixer für den EVR festzulegen, nennen Sie [**imfvideorenderer:: initializerenderer**](/windows/desktop/api/evr/nf-evr-imfvideorenderer-initializerenderer). Sowohl der DirectShow-EVR-Filter als auch die EVR-Medien Senke implementieren diese Methode.
+Um einen benutzerdefinierten Mixer für die EVR festzulegen, rufen Sie [**DIE AUFFORDERUNGVideoRenderer::InitializeRenderer**](/windows/desktop/api/evr/nf-evr-imfvideorenderer-initializerenderer)auf. Sowohl der DirectShow EVR-Filter als auch die EVR-Mediensenke implementieren diese Methode.
 
-**EVR-Aktivierungs Objekt**. Wenn Sie das EVR-Aktivierungs Objekt verwenden, können Sie einen benutzerdefinierten Mixer bereitstellen, indem Sie eines der folgenden Attribute für das EVR-Aktivierungs Objekt festlegen:
+**EVR-Aktivierungsobjekt**. Wenn Sie das EVR-Aktivierungsobjekt verwenden, können Sie einen benutzerdefinierten Mixer bereitstellen, indem Sie eines der folgenden Attribute für das EVR-Aktivierungsobjekt festlegen:
 
 
 
-| Attribut                                                                                                 | BESCHREIBUNG                                                                                                                           |
+| attribute                                                                                                 | Beschreibung                                                                                                                           |
 |-----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| [**MF Aktivieren des \_ \_ benutzerdefinierten \_ Video \_ Mischers \_ aktivieren**](mf-activate-custom-video-mixer-activate-attribute.md) | Zeiger auf ein Aktivierungs Objekt für den Mixer. Das Aktivierungs Objekt muss die [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Schnittstelle implementieren. |
-| [**MF \_ - \_ benutzerdefinierte \_ Video-Mixer- \_ \_ CLSID aktivieren**](mf-activate-custom-video-mixer-clsid-attribute.md)       | CLSID des Mischers.                                                                                                                   |
+| [**MF \_ ACTIVATE \_ CUSTOM \_ VIDEO \_ MIXER \_ ACTIVATE**](mf-activate-custom-video-mixer-activate-attribute.md) | Zeiger auf ein Aktivierungsobjekt für den Mixer. Das Aktivierungsobjekt muss die [**INTERFACESActivate-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) implementieren. |
+| [**MF \_ ACTIVATE \_ CUSTOM \_ VIDEO \_ MIXER \_ CLSID**](mf-activate-custom-video-mixer-clsid-attribute.md)       | CLSID des Mixers.                                                                                                                   |
 
 
 

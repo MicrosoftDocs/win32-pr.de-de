@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_RESOURCE_ALLOCATION_INFO-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, um die einfache Initialisierung einer D3D12- \_ Ressourcen \_ Zuordnungs Info-Struktur zu ermöglichen \_ .
+title: CD3DX12_RESOURCE_ALLOCATION_INFO-Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, um die einfache Initialisierung einer D3D12 \_ RESOURCE \_ ALLOCATION \_ INFO-Struktur zu ermöglichen.
 ms.assetid: 81FC8D0E-2C15-42D3-9E06-1FE193F707C6
 keywords:
-- CD3DX12_RESOURCE_ALLOCATION_INFO Struktur
+- CD3DX12_RESOURCE_ALLOCATION_INFO-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 08542c7460b2fadf381f85dc271167258e31fb46
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 63915f2fa05950ad96bc621b9887b1c4fe23149e22ba408767d111f7b74d6927
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106350662"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119729220"
 ---
-# <a name="cd3dx12_resource_allocation_info-structure"></a>CD3DX12 \_ \_ ressourcenzuordnungs- \_ Informationsstruktur
+# <a name="cd3dx12_resource_allocation_info-structure"></a>CD3DX12 \_ RESOURCE \_ ALLOCATION \_ INFO-Struktur
 
-Eine hilfsstruktur, um die einfache Initialisierung einer [**D3D12- \_ Ressourcen \_ Zuordnungs \_ Info**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_allocation_info) -Struktur zu ermöglichen.
+Eine Hilfsstruktur, um die einfache Initialisierung einer [**D3D12 \_ RESOURCE \_ ALLOCATION \_ INFO-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_allocation_info) zu ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,24 +44,24 @@ struct CD3DX12_RESOURCE_ALLOCATION_INFO  : public D3D12_RESOURCE_ALLOCATION_INFO
 
 <dl> <dt>
 
-**CD3DX12 \_ Ressourcen \_ Zuordnungs \_ Informationen ()**
+**CD3DX12 \_ RESOURCE \_ ALLOCATION \_ INFO()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12- \_ Ressourcen \_ Zuordnungs \_ Informationen.
+Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12 \_ RESOURCE \_ ALLOCATION \_ INFO.
 
 </dd> <dt>
 
-**explizite CD3DX12 \_ Ressourcen \_ Zuordnungs \_ Informationen (konstant D3D12 \_ Ressourcen \_ Zuordnungs \_ Informationen& o)**
+**EXPLICIT CD3DX12 \_ RESOURCE \_ ALLOCATION \_ INFO(const D3D12 \_ RESOURCE ALLOCATION INFO& \_ \_ o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz der CD3DX12- \_ Ressourcen \_ Zuordnungs \_ Informationen, die mit dem Inhalt einer anderen [**D3D12 \_ Resource \_ Allocation \_ Info**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_allocation_info) -Struktur initialisiert werden.
+Erstellt eine neue Instanz von CD3DX12 \_ RESOURCE \_ ALLOCATION \_ INFO, initialisiert mit dem Inhalt einer anderen [**D3D12 \_ RESOURCE ALLOCATION \_ \_ INFO-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_allocation_info)
 
 </dd> <dt>
 
-**CD3DX12 \_ Ressourcen \_ Zuordnungs \_ Informationen (UINT64 Size, UINT64 Alignment)**
+**CD3DX12 \_ RESOURCE ALLOCATION INFO \_ \_ (UINT64-Größe, UINT64-Ausrichtung)**
 </dt> <dd>
 
-Erstellt eine neue Instanz der CD3DX12- \_ Ressourcen \_ Zuordnungs \_ Informationen und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz von CD3DX12 \_ RESOURCE ALLOCATION INFO und \_ \_ initialisiert die folgenden Parameter:
 
 UINT64-Größe
 
@@ -69,10 +69,10 @@ UINT64-Ausrichtung
 
 </dd> <dt>
 
-**Operator Konstanten D3D12 \_ Ressourcen \_ Zuordnungs \_ Informationen& () Konstanten**
+**operator const D3D12 \_ RESOURCE \_ ALLOCATION INFO \_&() const**
 </dt> <dd>
 
-Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturtyp.
+Definiert den & Pass-by-Reference-Operator für den übergeordneten Strukturtyp.
 
 </dd> </dl>
 
@@ -82,7 +82,7 @@ Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturty
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
@@ -90,7 +90,7 @@ Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturty
 
 <dl> <dt>
 
-[**D3D12 \_ Ressourcen \_ Zuordnungs \_ Informationen**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_allocation_info)
+[**INFORMATIONEN \_ ZUR D3D12-RESSOURCENZUORDNUNG \_ \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_allocation_info)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

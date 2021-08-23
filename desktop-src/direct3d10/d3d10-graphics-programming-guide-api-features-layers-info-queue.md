@@ -4,65 +4,65 @@ ms.assetid: 082c7783-c53a-4b73-b8f2-3f60e2c2689a
 title: Anpassen der Debugausgabe mit ID3D10InfoQueue (Direct3D 10)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 843ac7dd34b19cfe1fc7835a2026ae2dd28b9dcd
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 8212b78352ccc9139c069ca5d388993fd83aca6833d77547a91401bc40380fb8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041466"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119753830"
 ---
 # <a name="customize-debug-output-with-id3d10infoqueue-direct3d-10"></a>Anpassen der Debugausgabe mit ID3D10InfoQueue (Direct3D 10)
 
-Die Informations Warteschlange wird von einer Schnittstelle (siehe [**ID3D10InfoQueue Interface**](/windows/desktop/api/D3D10SDKLayers/nn-d3d10sdklayers-id3d10infoqueue)) verwaltet, die Debugmeldungen speichert, abruft und filtert. Die Warteschlange besteht aus: einer Nachrichten Warteschlange, einem optionalen Speicher Filter Stapel und einem optionalen Abruf Filter Stapel. Der Speicher Filter Stapel kann verwendet werden, um die Nachrichten zu filtern, die gespeichert werden sollen. der Abruf Filter Stapel kann verwendet werden, um die Nachrichten zu filtern, die gespeichert werden sollen. Nachdem Sie eine Meldung gefiltert haben, wird die Nachricht im Debugfenster ausgegeben und im entsprechenden Stapel gespeichert.
+Die Informationswarteschlange wird von einer Schnittstelle verwaltet (siehe [**ID3D10InfoQueue-Schnittstelle),**](/windows/desktop/api/D3D10SDKLayers/nn-d3d10sdklayers-id3d10infoqueue)die Debugmeldungen speichert, abruft und filtert. Die Warteschlange besteht aus: einer Nachrichtenwarteschlange, einem optionalen Speicherfilterstapel und einem optionalen Abruffilterstapel. Der Speicherfilterstapel kann verwendet werden, um die Nachrichten zu filtern, die Sie speichern möchten. der Abruf-Filter-Stapel kann verwendet werden, um die Nachrichten zu filtern, die Sie speichern möchten. Nachdem Sie eine Nachricht gefiltert haben, wird die Nachricht im Debugfenster ausgegeben und im entsprechenden Stapel gespeichert.
 
 Im Allgemeinen:
 
--   Rufen Sie [**ID3D10InfoQueue:: addapplicationmessage**](/windows/desktop/api/D3D10SDKLayers/nf-d3d10sdklayers-id3d10infoqueue-addapplicationmessage) auf, um benutzerdefinierte Meldungen zu generieren.
--   Aufrufen von [**ID3D10InfoQueue:: getMessage**](/windows/desktop/api/D3D10SDKLayers/nf-d3d10sdklayers-id3d10infoqueue-getmessage) dient zum Abrufen von Nachrichten (die einen optionalen Abruf Filter übergeben).
+-   Rufen Sie [**ID3D10InfoQueue::AddApplicationMessage**](/windows/desktop/api/D3D10SDKLayers/nf-d3d10sdklayers-id3d10infoqueue-addapplicationmessage) auf, um benutzerdefinierte Nachrichten zu generieren.
+-   Der Aufruf [**ID3D10InfoQueue::GetMessage**](/windows/desktop/api/D3D10SDKLayers/nf-d3d10sdklayers-id3d10infoqueue-getmessage) wird verwendet, um Nachrichten abzurufen (die einen optionalen Abruffilter übergeben).
 
-## <a name="registry-controls"></a>Registrierungs Steuerelemente
+## <a name="registry-controls"></a>Registrierungssteuerelemente
 
-Verwenden Sie die Registrierungsschlüssel zum Anpassen von Filtereinstellungen, zum Anpassen von Breakpoints und zum stumm schalten der Debugausgabe. Die debugschicht prüft diese Pfade auf Registrierungsschlüssel. der erste gefundene Pfad wird verwendet.
+Verwenden Sie Registrierungsschlüssel, um Filtereinstellungen anzupassen, Haltepunkte anzupassen und die Debugausgabe zu stummschalten. Die Debugebene überprüft diese Pfade auf Registrierungsschlüssel. Der erste gefundene Pfad wird verwendet.
 
-1.  HKCU \\ Software \\ Microsoft \\ Direct3D \\<benutzerdefinierter Unterschlüssel>
-2.  HKLM \\ Software \\ Microsoft \\ Direct3D \\<benutzerdefinierter Unterschlüssel>
-3.  HKCU- \\ Software \\ Microsoft \\ Direct3D
+1.  HKCU \\ Software \\ Microsoft \\ Direct3D \\<benutzerdefinierten Unterschlüssel>
+2.  HKLM \\ Software \\ Microsoft \\ Direct3D \\<benutzerdefinierten Unterschlüssel>
+3.  HKCU \\ Software \\ Microsoft \\ Direct3D
 
 Hierbei gilt:
 
--   HKCU steht für HKEY \_ Current \_ User und HKLM für HKEY \_ local \_ Machine.
--   <benutzerdefinierter Unterschlüssel> ein beliebiger Name zum Speichern der Debugeinstellungen für eine Anwendung ist.
+-   HKCU steht für HKEY \_ CURRENT \_ USER und HKLM für HKEY \_ LOCAL \_ MACHINE.
+-   <benutzerdefinierten Unterschlüssel> ist ein beliebiger Name zum Speichern von Debugeinstellungen für eine Anwendung.
 
-### <a name="filtering-debug-messages-using-registry-keys"></a>Filtern von Debugmeldungen mithilfe von Registrierungs Schlüsseln
+### <a name="filtering-debug-messages-using-registry-keys"></a>Filtern von Debugmeldungen mit registrierungsschlüsseln
 
-Wenn die Registrierung einen infoqueuestoragefilteroverride-Schlüssel enthält (und nicht NULL ist), können Nachrichten (und Debugausgaben) gefiltert werden, indem Sie die folgenden Registrierungs Steuerelemente hinzufügen.
+Wenn die Registrierung einen InfoQueueStorageFilterOverride-Schlüssel enthält (und ungleich null ist), können Nachrichten (und Debugausgaben) gefiltert werden, indem die folgenden Registrierungssteuerelemente hinzugefügt werden.
 
--   DWORD stumm \_ Kategorie \_ \* -Debugausgabe, wenn dieser Schlüssel ungleich 0 (null) ist.
--   DWORD-Wert zum stumm schalten \_ \_ \* : die Debug-Ausgabe ist deaktiviert, wenn dieser Schlüssel nicht NULL ist.
--   DWORD \_ -stumm \_ \* -ID: der Name oder die Nummer der Nachricht kann für verwendet werden \* (genau wie bei der zuvor beschriebenen breakon- \_ ID \_ \* ). Die Debugausgabe ist deaktiviert, wenn dieser Schlüssel ungleich 0 (null) ist.
--   DWORD: unstumm \_ Schweregrad \_ Info-die Debug-Ausgabe ist aktiviert, wenn dieser Schlüssel nicht 0 (null) ist. Wenn infoqueuestoragefilteroverride aktiviert ist, werden standardmäßig Debugmeldungen mit dem Schweregrad Info stumm geschaltet. Daher können für diesen Schlüssel die Informationen wieder aktiviert werden.
+-   DWORD Mute \_ CATEGORY \_ \* : Debugausgabe, wenn dieser Schlüssel ungleich 0 (null) ist.
+-   DWORD Mute \_ SEVERITY \_ \* : Die Debugausgabe ist deaktiviert, wenn dieser Schlüssel ungleich 0 (null) ist.
+-   DWORD-Mute-ID: \_ \_ \* Nachrichtenname oder -nummer kann für verwendet werden \* (genau wie bei der \_ zuvor beschriebenen BreakOn-ID). \_ \* Die Debugausgabe ist deaktiviert, wenn dieser Schlüssel ungleich 0 (null) ist.
+-   DWORD Unmute SEVERITY INFO : \_ \_ Die Debugausgabe ist AKTIVIERT, wenn dieser Schlüssel ungleich 0 (null) ist. Wenn InfoQueueStorageFilterOverride aktiviert ist, werden Debugmeldungen mit dem Schweregrad INFO standardmäßig stummgeschaltet. Daher kann INFO für diesen Schlüssel wieder aktiviert werden.
 
-Diese Steuerelemente ändern, ob eine Nachricht aufgezeichnet oder angezeigt wird. Sie haben keine Auswirkung darauf, ob eine API erfolgreich verläuft oder fehlschlägt.
+Diese Steuerelemente ändern, ob eine Nachricht aufgezeichnet oder angezeigt wird. sie wirken sich nicht darauf aus, ob eine API erfolgreich ist oder fehlschlägt.
 
-### <a name="setting-break-conditions-using-registry-keys"></a>Festlegen von Abbruch Bedingungen mithilfe von Registrierungs Schlüsseln
+### <a name="setting-break-conditions-using-registry-keys"></a>Festlegen von Unterbrechungsbedingungen mithilfe von Registrierungsschlüsseln
 
-Anwendungen können mit den folgenden Registrierungs Schlüsseln gezwungen werden, eine Nachricht zu unterbrechen.
+Anwendungen können mithilfe der folgenden Registrierungsschlüssel gezwungen werden, eine Nachricht zu unterbrechen.
 
-**Enableatemkonmessage** : dieser Schlüssel ermöglicht das Unterbrechen von Nachrichten (und bewirkt, dass die Einstellungen für "setbreakoncategory ()/SetBreakOnSeverity ()/SetBreakOnID ()" ignoriert werden). Die eigentlichen Nachrichten, für die die Unterbrechung durchlaufen werden soll, werden mit einem oder mehreren Break on- \_ \* Werten definiert
+**EnableBreakOnMessage:** Dieser Schlüssel ermöglicht das Abbrechen von Nachrichten (und bewirkt, dass die Einstellungen von SetBreakOnCategory()/SetBreakOnSeverity()/SetBreakOnID() ignoriert werden. Die tatsächlichen Nachrichten, für die ein Breakbreak ausgeführt werden soll, werden mit einem oder mehreren \_ \* unten definierten BreakOn-Werten definiert.
 
--   **Break on \_ \_Kategorie \** _: unterbrechen Sie jede Nachricht, die die Speicher Filter durchläuft. \_ ist eine der \_ \_ kategorienachrichten der d3d10-Nachricht.
--   **Break on \_ Schwere \_ \* Grad* _: unterbrechen Sie jede Nachricht, die die Speicher Filter durchläuft. \_ ist eine der \_ Nachrichten Schweregrade der d3d10-Nachricht \_ \_ .
--   **Break on \_ \_ID \** _: unterbrechen Sie jede Nachricht, die die Speicher Filter durchläuft. \_ ist eine der d3d10- \_ \_ Nachrichten-ID- \_ Nachrichten oder kann der numerische Wert der Error-Enumeration sein. Nehmen wir beispielsweise an, dass die Nachricht mit der ID "d3d10 \_ Message \_ ID \_ hypothetisch" den Wert 123 in der d3d10-nach \_ richten-ID- \_ Enumeration enthielt. In diesem Fall würde das Erstellen der Wert breakon- \_ ID \_ hypothetisch = 1 oder breakon \_ ID \_ 123 = 1 denselben Vorgang unterbrechen, wenn eine Nachricht mit der ID d3d10 \_ Message \_ ID \_ hypothetisch vorkommt.
+-   **BreakOn \_ \_CATEGORY \** _ – Unterbrechung bei jeder Nachricht, die die Speicherfilter durchläuft. \_ ist eine der D3D10 \_ MESSAGE \_ CATEGORY-Meldungen.
+-   **BreakOn \_ SEVERITY \_ \** _ – Unterbrechung bei jeder Nachricht, die die Speicherfilter durchläuft. \_ ist eine der D3D10 \_ MESSAGE \_ \_ SEVERITY-Meldungen.
+-   **BreakOn \_ \_ID \** _ – Unterbrechung bei jeder Nachricht, die die Speicherfilter durchläuft. \_ ist eine der D3D10 \_ MESSAGE \_ \_ ID-Meldungen oder kann der numerische Wert der Fehlerenumeration sein. Angenommen, die Nachricht mit der ID "D3D10 \_ MESSAGE \_ ID \_ HYPOTHETISCH" hat den Wert 123 in der D3D10 \_ MESSAGE \_ ID-Enumeration. In diesem Fall würde das Erstellen des Werts BreakOn \_ ID \_ HYPOTHETISCH=1 oder \_ BreakOn-ID \_ 123=1 das gleiche erreichen: break, wenn eine Nachricht mit der ID D3D10 \_ MESSAGE ID \_ \_ HYPOTHETISCH gefunden wird.
 
-### <a name="muting-debug-output-using-registry-keys"></a>Muting Debugausgabe mithilfe von Registrierungs Schlüsseln
+### <a name="muting-debug-output-using-registry-keys"></a>Stummschalten der Debugausgabe mit registrierungsschlüsseln
 
-Die Debugausgabe kann mit einem mutedebugoutput-Schlüssel stumm geschaltet werden. Das vorhanden sein dieses Werts in der Registrierung erzwingt das Überschreiben der [**ID3D10InfoQueue:: setmutedebugoutput**](/windows/desktop/api/D3D10SDKLayers/nf-d3d10sdklayers-id3d10infoqueue-setmutedebugoutput) -Methode der infoqueue. "Mutedebugoutput" beendet Nachrichten, die den Speicher Filter übergeben, an die Debugausgabe.
+Die Debugausgabe kann mithilfe eines MuteDebugOutput-Schlüssels stummgeschaltet werden. Das Vorhandensein dieses Werts in der Registrierung erzwingt die Außerkraftsetzung der [**ID3D10InfoQueue::SetMuteDebugOutput-Methode**](/windows/desktop/api/D3D10SDKLayers/nf-d3d10sdklayers-id3d10infoqueue-setmutedebugoutput) von InfoQueue. MuteDebugOutput verhindert, dass Nachrichten, die den Speicherfilter übergeben, an die Debugausgabe gesendet werden.
 
-## <a name="disabling-debug-layer-messages"></a>Debugebenennachrichten werden deaktiviert.
+## <a name="disabling-debug-layer-messages"></a>Deaktivieren von Meldungen der Debugebene
 
-Debugebenennachrichten können einzeln oder als Gruppe zur Laufzeit deaktiviert werden, indem Filter mithilfe von [**ID3D10InfoQueue:: addstoragefilterentries**](/windows/desktop/api/D3D10SDKLayers/nf-d3d10sdklayers-id3d10infoqueue-addstoragefilterentries)angegeben werden. Das *pFilter* -Argument für **ID3D10InfoQueue:: addstoragefilterentries** übernimmt eine [**d3d10 \_ Info Queue- \_ \_ Filter**](/windows/desktop/api/d3d10sdklayers/ns-d3d10sdklayers-d3d10_info_queue_filter) Struktur, die eine Zulassungsliste und eine Verweigerungs Liste enthält. Die Zulassungs-und Verweigerungs Listen werden von den [**d3d10 \_ Info \_ Queue \_ Filter \_ DESC**](/windows/desktop/api/d3d10sdklayers/ns-d3d10sdklayers-d3d10_info_queue_filter_desc) -Strukturen beschrieben, die die Angabe von Filtern durch catergory, Schweregrad und einzelne Nachrichten-ID ermöglichen.
+Debugebenenmeldungen können einzeln oder als Gruppe zur Laufzeit deaktiviert werden, indem Filter mit [**id3D10InfoQueue::AddStorageFilterEntries**](/windows/desktop/api/D3D10SDKLayers/nf-d3d10sdklayers-id3d10infoqueue-addstoragefilterentries)angegeben werden. Das *pFilter-Argument* für **ID3D10InfoQueue::AddStorageFilterEntries** nimmt eine [**D3D10 \_ INFO QUEUE \_ \_ FILTER-Struktur**](/windows/desktop/api/d3d10sdklayers/ns-d3d10sdklayers-d3d10_info_queue_filter) an, die eine Liste der Zulässigen und eine Verweigerungsliste enthält. Die Listen "Zulassen" und "Verweigern" werden von [**D3D10 \_ INFO QUEUE FILTER \_ \_ \_ DESC-Strukturen**](/windows/desktop/api/d3d10sdklayers/ns-d3d10sdklayers-d3d10_info_queue_filter_desc) beschrieben, die es ermöglichen, filtering nach "catergory", "severity" und "individual message ID" anzugeben.
 
-Der folgende Code ist ein Beispiel für das Einrichten der [**ID3D10InfoQueue-Schnittstelle**](/windows/desktop/api/D3D10SDKLayers/nn-d3d10sdklayers-id3d10infoqueue) zum Verweigern der d3d10-nach \_ richten- \_ ID \_ Geräte \_ \_ Index \_ Puffer \_ zu \_ klein.
+Der folgende Code ist ein Beispiel für das Einrichten der [**ID3D10InfoQueue-Schnittstelle,**](/windows/desktop/api/D3D10SDKLayers/nn-d3d10sdklayers-id3d10infoqueue) um die Nachricht D3D10 \_ MESSAGE ID DEVICE DRAW INDEX BUFFER TOO SMALL zu \_ \_ \_ \_ \_ \_ \_ verweigern.
 
 
 ```

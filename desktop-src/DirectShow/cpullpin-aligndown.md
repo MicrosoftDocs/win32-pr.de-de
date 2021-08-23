@@ -1,7 +1,7 @@
 ---
-description: Die aligndown-Methode verkürzt einen Wert auf eine angegebene Ausrichtungs Grenze.
+description: Die AlignDown-Methode schneidet einen Wert auf eine angegebene Ausrichtungsgrenze ab.
 ms.assetid: f0efdedb-67ec-49d6-92a8-54485aa04e15
-title: Cpullpin. aligndown-Methode (pullpin. h)
+title: CPullPin.AlignDown-Methode (Pullpin.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1383517f4931fa153fd141878475cc8775a61045
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7cdf16f3759bb7637fa243ce98bc4886b65e31d25bf62f5e9f581064d3741ea1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359392"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119585350"
 ---
-# <a name="cpullpinaligndown-method"></a>Cpullpin. aligndown-Methode
+# <a name="cpullpinaligndown-method"></a>CPullPin.AlignDown-Methode
 
-Die- `AlignDown` Methode verkürzt einen Wert auf eine angegebene Ausrichtungs Grenze.
+Die `AlignDown` -Methode schneidet einen Wert auf eine angegebene Ausrichtungsgrenze ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ LONGLONG AlignDown(
 
 <dl> <dt>
 
-*ll* 
+*Ll* 
 </dt> <dd>
 
 Gibt die Zahl an, die ausgerichtet werden soll.
 
 </dd> <dt>
 
-*lalign* 
+*lAlign* 
 </dt> <dd>
 
-Gibt die Ausrichtungs Grenze an.
+Gibt die Ausrichtungsgrenze an.
 
 </dd> </dl>
 
@@ -67,8 +67,8 @@ Gibt das ausgerichtete Ergebnis zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Pullpin. h</dt> </dl>                                                                                                       |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pullpin.h</dt> </dl>                                                                                                       |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -76,7 +76,7 @@ Gibt das ausgerichtete Ergebnis zurück.
 
 <dl> <dt>
 
-[**Cpullpin-Klasse**](cpullpin.md)
+[**CPullPin-Klasse**](cpullpin.md)
 </dt> </dl>
 
  

@@ -4,18 +4,18 @@ ms.assetid: b4dbda89-effb-43f7-b3cc-774db57862a9
 title: Aufrufen von DeviceIoControl
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bf032182b4c461f13ebc046d30bc445abbfc9a1b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1372adc551d7816c047823b70a7541fa50318632ff7ea593f70896ceffc4f80c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523659"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119642090"
 ---
 # <a name="calling-deviceiocontrol"></a>Aufrufen von DeviceIoControl
 
-Eine Anwendung kann die Funktion [**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) verwenden, um direkte Eingabe-und Ausgabe Vorgänge für ein Diskettenlaufwerk, ein Festplattenlaufwerk, ein Bandlaufwerk oder ein CD-ROM-Laufwerk auszuführen. Eine Liste der Standard Steuercodes, die in der SDK-Dokumentation enthalten sind, finden Sie im Abschnitt "Hinweise" von **DeviceIoControl**.
+Eine Anwendung kann die [**DeviceIoControl-Funktion**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) verwenden, um direkte Eingabe- und Ausgabevorgänge für ein Diskettenlaufwerk, ein Festplattenlaufwerk, ein Bandlaufwerk oder ein CD-ROM-Laufwerk auszuführen oder Informationen dazu abzurufen. Eine Liste der Standardkontrollcodes, die in der SDK-Dokumentation enthalten sind, finden Sie im Abschnitt Hinweise von **DeviceIoControl.**
 
-Im folgenden Beispiel wird veranschaulicht, wie Informationen zum ersten physischen Laufwerk im System abgerufen werden. Er verwendet die [**Funktion "**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Funktion", um das Geräte Handle auf das erste physische Laufwerk abzurufen, und verwendet dann [**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) mit dem [ioctl-Laufwerk \_ \_ \_ \_ Geometrie](/windows/desktop/api/winioctl/ni-winioctl-ioctl_disk_get_drive_geometry) -Steuerungs Code, um eine Datenträger [**\_ Geometrie**](/windows/desktop/api/winioctl/ns-winioctl-disk_geometry) -Struktur mit Informationen über das Laufwerk auszufüllen.
+Im folgenden Beispiel wird veranschaulicht, wie Informationen zum ersten physischen Laufwerk im System abgerufen werden. Er verwendet die [**CreateFile-Funktion,**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) um das Gerätehandle auf das erste physische Laufwerk abzurufen, und verwendet dann [**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) mit dem [IOCTL \_ DISK GET DRIVE \_ \_ \_ GEOMETRY-Steuerelementcode,](/windows/desktop/api/winioctl/ni-winioctl-ioctl_disk_get_drive_geometry) um eine [**DISK \_ GEOMETRY-Struktur**](/windows/desktop/api/winioctl/ns-winioctl-disk_geometry) mit Informationen zum Laufwerk zu füllen.
 
 
 ```C++

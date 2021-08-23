@@ -1,7 +1,7 @@
 ---
-description: Die notifyEvent-Methode sendet eine Ereignis Benachrichtigung an den Filter Graph-Manager.
+description: Die NotifyEvent-Methode sendet eine Ereignisbenachrichtigung an den Filterdiagramm-Manager.
 ms.assetid: 79587b72-4152-4443-9fde-c2746bf06191
-title: Cbasefilter. notisyevent-Methode (amfilter. h)
+title: CBaseFilter.NotifyEvent-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 49fa689262d8f9b584c93a4b0485bbeaaacbf9a4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e21ab1275aba05331055b7a38631f8c98ae65476aacf8f17073ed1dc45c90bf4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361449"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119640310"
 ---
-# <a name="cbasefilternotifyevent-method"></a>Cbasefilter. notityevent-Methode
+# <a name="cbasefilternotifyevent-method"></a>CBaseFilter.NotifyEvent-Methode
 
-Die- `NotifyEvent` Methode sendet eine Ereignis Benachrichtigung an den Filter Graph-Manager.
+Die `NotifyEvent` -Methode sendet eine Ereignisbenachrichtigung an den Filterdiagramm-Manager.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,45 +47,45 @@ HRESULT NotifyEvent(
 *EventCode* 
 </dt> <dd>
 
-Ereignis Benachrichtigungs Code.
+Ereignisbenachrichtigungscode.
 
 </dd> <dt>
 
 *EventParam1* 
 </dt> <dd>
 
-Der erste Parameter des Ereignisses.
+Erster Parameter des Ereignisses.
 
 </dd> <dt>
 
 *EventParam2* 
 </dt> <dd>
 
-Der zweite Parameter des Ereignisses.
+Zweiter Parameter des Ereignisses.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die werte in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                                                                                            |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl>   | Der Filter Graph-Manager akzeptiert keine Ereignis Benachrichtigungen.<br/>                              |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>   | Der Filterdiagramm-Manager akzeptiert keine Ereignisbenachrichtigungen.<br/>                              |
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg.<br/>                                                                                    |
-| <dl> <dt>**E \_ notimpl**</dt> </dl> | Der Filter weist keinen Zeiger auf die [**imediaeventsink**](/windows/desktop/api/Strmif/nn-strmif-imediaeventsink) -Schnittstelle auf.<br/> |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl> | Der Filter verfügt nicht über einen Zeiger auf die [**IMediaEventSink-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-imediaeventsink)<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Liste von Benachrichtigungs Codes und Parameterwerten finden Sie unter [Ereignis Benachrichtigungs Codes](event-notification-codes.md).
+Eine Liste der Benachrichtigungscodes und Parameterwerte finden Sie unter [Ereignisbenachrichtigungscodes](event-notification-codes.md).
 
-Wenn in der-Basisklasse der Ereignis Code EC \_ Complete lautet, legt die-Methode den *EventParam2* -Parameter auf einen Zeiger auf die [**ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) -Schnittstelle des Filters fest.
+Wenn der Ereigniscode in der Basisklasse EC COMPLETE ist, legt die Methode den EventParam2-Parameter auf einen Zeiger auf die \_ [**IBaseFilter-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) des  Filters fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,8 +93,8 @@ Wenn in der-Basisklasse der Ereignis Code EC \_ Complete lautet, legt die-Method
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -102,7 +102,7 @@ Wenn in der-Basisklasse der Ereignis Code EC \_ Complete lautet, legt die-Method
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> </dl>
 
  

@@ -4,30 +4,30 @@ ms.assetid: 02ecdf93-1133-48af-a6c9-52142256673f
 title: Erstellen von bereitgestellten Ordnern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a5d64630716be6e85ac323c80e89dda0500ba6c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8d3067af38a893085adcc407263711c80a64c3eea1e535f6814db2cd2742f899
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366223"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119650230"
 ---
 # <a name="creating-mounted-folders"></a>Erstellen von bereitgestellten Ordnern
 
-Das Erstellen eines bereitgestellten Ordners ist ein zweistufiger Prozess. Nennen Sie zuerst [**getvolumenameforvolumemountpoint**](/windows/desktop/api/FileAPI/nf-fileapi-getvolumenameforvolumemountpointw) mit dem Bereitstellungspunkt (Laufwerksbuchstaben, VolumeGuid-Pfad oder eingebundenes Ordner) des Volumes, das dem bereitgestellten Ordner zugewiesen werden soll. Verwenden Sie dann die [**setvolumemountpoint**](/windows/desktop/api/WinBase/nf-winbase-setvolumemountpointa) -Funktion, um den zurückgegebenen Volume-GUID-Pfad dem gewünschten Verzeichnis auf einem anderen Volume zuzuordnen. Beispielcode finden Sie unter [Erstellen eines eingebundenen Ordners](mounting-a-volume-at-a-mount-point.md).
+Das Erstellen eines bereitgestellten Ordners ist ein zweistufiger Prozess. Rufen Sie zunächst [**GetVolumeNameForVolumeMountPoint**](/windows/desktop/api/FileAPI/nf-fileapi-getvolumenameforvolumemountpointw) mit dem Bereitstellungspunkt (Laufwerkbuchstaben, Volume-GUID-Pfad oder bereitgestellter Ordner) des Volumes auf, das dem bereitgestellten Ordner zugewiesen werden soll. Verwenden Sie dann die [**SetVolumeMountPoint-Funktion,**](/windows/desktop/api/WinBase/nf-winbase-setvolumemountpointa) um den zurückgegebenen Volume-GUID-Pfad dem gewünschten Verzeichnis auf einem anderen Volume zu zuordnen. Beispielcode finden Sie unter [Erstellen eines bereitgestellten Ordners.](mounting-a-volume-at-a-mount-point.md)
 
-Die Anwendung kann ein beliebiges leeres Verzeichnis auf einem anderen Volume als dem Stammverzeichnis als bereitgestellter Ordner festlegen. Wenn Sie die [**setvolumemountpoint**](/windows/desktop/api/WinBase/nf-winbase-setvolumemountpointa) -Funktion aufrufen, wird dieses Verzeichnis zum bereitgestellten Ordner. Sie können das gleiche Volume mehreren bereitgestellten Ordnern zuweisen.
+Ihre Anwendung kann ein beliebiges leeres Verzeichnis auf einem anderen Volume als das Stammverzeichnis als bereitgestellten Ordner festlegen. Wenn Sie die [**SetVolumeMountPoint-Funktion**](/windows/desktop/api/WinBase/nf-winbase-setvolumemountpointa) aufrufen, wird dieses Verzeichnis zum bereitgestellten Ordner. Sie können dasselbe Volume mehreren bereitgestellten Ordnern zuweisen.
 
-Nachdem der bereitgestellte Ordner eingerichtet wurde, wird er über Computer Neustarts automatisch verwaltet.
+Nachdem der bereitgestellte Ordner eingerichtet wurde, wird er automatisch durch Computerneustarts verwaltet.
 
-Wenn ein Volume ausfällt, kann auf alle Volumes, die den bereitgestellten Ordnern auf diesem Volume zugewiesen wurden, nicht mehr über diese eingebundenen Ordner zugegriffen werden. Angenommen, Sie verfügen über zwei Volumes: c: und d:, und das Laufwerk d: ist dem bereitgestellten Ordner c: \\ mountd zugeordnet \\ . Wenn das Volume "c:" ausfällt, kann auf Volume "D:" nicht mehr über den Pfad "c: mountd" zugegriffen werden \\ \\ .
+Wenn ein Volume ausfällt, kann auf volumes, die bereitgestellten Ordnern auf diesem Volume zugewiesen wurden, nicht mehr über diese bereitgestellten Ordner zugegriffen werden. Angenommen, Sie verfügen über zwei Volumes: C: und D:, und D: ist dem bereitgestellten Ordner C: \\ MountD \\ zugeordnet. Wenn Volume C: ausfällt, kann auf Volume D: nicht mehr über den Pfad C: \\ MountD zugegriffen \\ werden.
 
-Nur NTFS-Dateisystemvolumes können eingebundene Ordner enthalten, aber die Zielvolumes für die bereitgestellten Ordner können nicht-NTFS-Volumes sein.
+Nur NTFS-Dateisystemvolumes können über bereitgestellte Ordner verfügen, aber die Zielvolumes für die bereitgestellten Ordner können Nicht-NTFS-Volumes sein.
 
-Eingebundene Ordner werden mithilfe von Analyse Punkten implementiert und unterliegen ihren Einschränkungen. Weitere Informationen finden Sie unter Analyse [Punkte](reparse-points.md). Es ist nicht erforderlich, Analyse Punkte für die Verwendung bereitgestellter Ordner zu manipulieren. Funktionen, wie z. b. [**setvolumemountpoint**](/windows/desktop/api/WinBase/nf-winbase-setvolumemountpointa) , behandeln alle Analyse Punkt Details für Sie.
+Bereitgestellte Ordner werden mithilfe von Aufbereitungspunkten implementiert und unterliegen deren Einschränkungen. Weitere Informationen finden Sie unter [Reparse Points](reparse-points.md). Für die Verwendung von bereitgestellten Ordnern ist es nicht erforderlich, Aufbereitungspunkte zu bearbeiten. Funktionen wie [**SetVolumeMountPoint**](/windows/desktop/api/WinBase/nf-winbase-setvolumemountpointa) verarbeiten alle Details des Prüfpunkts für Sie.
 
-Da eingebundene Ordner Verzeichnisse sind, können Sie Sie wie andere Verzeichnisse umbenennen, entfernen, verschieben und anderweitig bearbeiten.
+Da es sich bei bereitgestellten Ordnern um Verzeichnisse handelt, können Sie sie wie andere Verzeichnisse umbenennen, entfernen, verschieben und anderweitig bearbeiten.
 
-(Hinweis: in der TechNet-Dokumentation wird der Begriff bereitgestellte *Laufwerke* verwendet, um auf bereitgestellte *Ordner* zu verweisen.)
+(Hinweis: In der TechNet-Dokumentation wird der Begriff *bereitgestellte Laufwerke* verwendet, um auf *bereitgestellte Ordner zu verweisen.)*
 
  
 

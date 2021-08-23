@@ -1,9 +1,9 @@
 ---
-title: CDM_HIDECONTROL Meldung (Commdlg.h)
-description: Blendet das angegebene Steuerelement im Explorer-Stil im Dialogfeld Öffnen oder Speichern unter aus.
+title: CDM_HIDECONTROL (Commdlg.h)
+description: Blendet das angegebene Steuerelement in einem Dialogfeld Öffnen oder Speichern unter im Explorer-Stil aus.
 ms.assetid: 5bf7f861-d38c-491a-89f0-5b3dfce8abfc
 keywords:
-- Dialogfelder für CDM_HIDECONTROL Meldung
+- CDM_HIDECONTROL-Dialogfelder
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 21f1a5a7a1830ceeb2c3671b0dfb538ad89e0a58
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 0a69bbbf284631e83b607b6709dfec052e80ca0250e058fa68ca2d2c2a2dc0ad
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110548655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119606360"
 ---
-# <a name="cdm_hidecontrol-message"></a>CDM \_ HIDECONTROL-Nachricht
+# <a name="cdm_hidecontrol-message"></a>CDM \_ HIDECONTROL-Meldung
 
-\[Ab Windows Vista wurden die Dialogfelder **Öffnen** und **Speichern unter** allgemein durch das [Dialogfeld "Allgemeines Element"](../shell/common-file-dialog.md)ersetzt. Es wird empfohlen, die Dialogfeld-API für allgemeine Elemente anstelle dieser Dialogfelder aus der Common Dialog Box Library zu verwenden.\]
+\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
 
-Blendet das angegebene Steuerelement im Explorer-Stil im Dialogfeld **Öffnen** oder **Speichern unter** aus. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
+Blendet das angegebene Steuerelement in  einem Dialogfeld Öffnen oder Speichern unter im **Explorer-Stil** aus. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
 
 
 ```C++
@@ -56,7 +56,7 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Nachricht weist keinen Rückgabewert auf.
+Diese Meldung hat keinen Rückgabewert.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -74,7 +74,7 @@ void CommDlg_OpenSave_HideControl(hwnd, wparam);
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Commdlg.h (windows.h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (einschließlich Windows.h)</dt> </dl> |
 
 
 

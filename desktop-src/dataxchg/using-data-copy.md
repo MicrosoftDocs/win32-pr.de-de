@@ -1,26 +1,26 @@
 ---
-title: Verwenden der Datenkopie
-description: Dieses Thema enthält ein Beispiel, das veranschaulicht, wie Informationen zwischen zwei Anwendungen gesendet werden.
+title: Verwenden von Datenkopiervorgang
+description: Dieses Thema enthält ein Beispiel, das das Senden von Informationen zwischen zwei Anwendungen veranschaulicht.
 ms.assetid: 5b37aa75-1208-435b-bf81-3e75f48f27f3
 keywords:
-- Windows-Benutzeroberfläche, Datenkopie
-- Kopieren von Daten, Beispiele
-- Kopieren von Daten, WM_COPYDATA Nachricht
+- Windows Benutzeroberfläche,Datenkopiervorgang
+- Datenkopie, Beispiele
+- Datenkopie,WM_COPYDATA Meldung
 - WM_COPYDATA Meldung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e1e44c4abb9aba68d4db1544f5c7d52220cdc681
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b231a03a30c578590dabf04d740f917a791a86d0e868d3587ff0b63bf283866f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106340273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119730555"
 ---
-# <a name="using-data-copy"></a>Verwenden der Datenkopie
+# <a name="using-data-copy"></a>Verwenden von Datenkopiervorgang
 
-Im folgenden Beispiel wird veranschaulicht, wie Informationen zwischen zwei Anwendungen mithilfe der ". [**\_ CopyData**](wm-copydata.md) "-Nachricht gesendet werden.
+Im folgenden Beispiel wird veranschaulicht, wie Informationen zwischen zwei Anwendungen mithilfe der [**WM \_ COPYDATA-Nachricht**](wm-copydata.md) gesendet werden.
 
-Die sendende Anwendung zeigt ein Dialogfeld für den Benutzer an, der bestimmte Informationen anfordert. Die Anwendung verpackt die Informationen in eine private Datenstruktur, enthält einen Zeiger auf die-Struktur in der [**copydatastruct**](/windows/win32/api/winuser/ns-winuser-copydatastruct) -Struktur und sendet die Informationen mithilfe der ". [**\_ CopyData**](wm-copydata.md) "-Nachricht an die empfangende Anwendung. Die empfangende Anwendung verfügt über ein verborgenes Fenster mit dem Klassennamen Disp32Class.
+Die sendende Anwendung zeigt dem Benutzer ein Dialogfeld an, in dem bestimmte Informationen angefordert werden. Die Anwendung packt die Informationen in eine private Datenstruktur, enthält einen Zeiger auf die Struktur in der [**COPYDATASTRUCT-Struktur**](/windows/win32/api/winuser/ns-winuser-copydatastruct) und sendet die Informationen mithilfe der [**WM \_ COPYDATA-Nachricht**](wm-copydata.md) an die empfangende Anwendung. Die empfangende Anwendung verfügt über ein ausgeblendetes Fenster mit dem Klassennamen Disp32Class.
 
 
 ```C++
@@ -73,7 +73,7 @@ BOOL CALLBACK InfoDlgProc( HWND, UINT, WPARAM, LPARAM );
 
 
 
-Die empfangende Anwendung verfügt über ein ausgeblendetes Fenster, das die Informationen von [**WM \_ CopyData**](wm-copydata.md) empfängt und für den Benutzer anzeigt.
+Die empfangende Anwendung verfügt über ein ausgeblendetes Fenster, das die Informationen von [**WM \_ COPYDATA**](wm-copydata.md) empfängt und dem Benutzer anzeigt.
 
 
 ```C++
@@ -112,9 +112,9 @@ case WM_COPYDATA:
 **Referenz**
 </dt> <dt>
 
-[**FindWindow**](/windows/desktop/api/winuser/nf-winuser-findwindowa)
+[**Findwindow**](/windows/desktop/api/winuser/nf-winuser-findwindowa)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

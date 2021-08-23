@@ -1,11 +1,11 @@
 ---
-title: Lock-out-Observation-Window-Attribut
-description: Der Zeitraum in 100-Nanosekunden-Intervallen, in dem das System die falsche Anmelde Anzahl inkremendet.
+title: Lock-Out-Observation-Window-Attribut
+description: Der Zeitbereich in Intervallen von 100 Nanosekunden, in dem das System die falsche Anmeldeanzahl erhöht.
 ms.assetid: a1929c32-cd05-43ca-9d4a-554683991696
 ms.tgt_platform: multiple
 keywords:
-- Lock-out-Observation-Window-Attribut AD-Schema
-- AD-Schema des LockoutObservationWindow-Attributs
+- AD-Schema des Lock-Out-Observation-Window-Attributs
+- lockOutObservationWindow-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa00a71ba504ff4aa772cc43838f95c326db04c5
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 0850c966b9a6a200779b2c567cecbfd4c68f38af1f45c6196a2f913c9e9e13fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106338830"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119705760"
 ---
-# <a name="lock-out-observation-window-attribute"></a>Lock-out-Observation-Window-Attribut
+# <a name="lock-out-observation-window-attribute"></a>Lock-Out-Observation-Window-Attribut
 
-Der Zeitraum in 100-Nanosekunden-Intervallen, in dem das System die falsche Anmelde Anzahl inkremendet.
+Der Zeitbereich in Intervallen von 100 Nanosekunden, in dem das System die falsche Anmeldeanzahl erhöht.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Sperr-out-Observation-Fenster          |
-| LDAP-Display-Name | LockoutObservationWindow             |
+| CN                | Fenster "Überwachung der Sperre aus"          |
+| Ldap-Anzeigename | lockOutObservationWindow             |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | Domänen Administrator                 |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                 |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.61                |
-| System-ID-GUID    | bf9679a4-0de6-11d0-a285-00aa003049e2 |
+| System-Id-Guid    | bf9679a4-0de6-11d0-a285-00aa003049e2 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -43,7 +43,7 @@ Der Zeitraum in 100-Nanosekunden-Intervallen, in dem das System die falsche Anme
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Der Zeitraum in 100-Nanosekunden-Intervallen, in dem das System die falsche Anme
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
+| Is-Single-Valued       | True                                                                                                                                                  |
 | Ist indiziert             | False                                                                                                                                                 |
 | Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Der Zeitraum in 100-Nanosekunden-Intervallen, in dem das System die falsche Anme
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
+| Is-Single-Valued       | True                                                                                                                                                  |
 | Ist indiziert             | False                                                                                                                                                 |
 | Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Der Zeitraum in 100-Nanosekunden-Intervallen, in dem das System die falsche Anme
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
+| Is-Single-Valued       | True                                                                                                                                                  |
 | Ist indiziert             | False                                                                                                                                                 |
 | Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Der Zeitraum in 100-Nanosekunden-Intervallen, in dem das System die falsche Anme
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
+| Ist einwertig       | True                                                                                                                                                  |
 | Ist indiziert             | False                                                                                                                                                 |
 | Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Der Zeitraum in 100-Nanosekunden-Intervallen, in dem das System die falsche Anme
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
+| Ist einwertig       | True                                                                                                                                                  |
 | Ist indiziert             | False                                                                                                                                                 |
 | Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Der Zeitraum in 100-Nanosekunden-Intervallen, in dem das System die falsche Anme
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
+| Ist einwertig       | True                                                                                                                                                  |
 | Ist indiziert             | False                                                                                                                                                 |
 | Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 

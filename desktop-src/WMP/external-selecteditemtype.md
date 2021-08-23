@@ -1,9 +1,9 @@
 ---
-title: Extern. selecteditemtype
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Extern. selecteditemtype
+title: External.selectedItemType
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | External.selectedItemType
 ms.assetid: f566e41e-127b-4596-99e6-bb07fc97249e
 keywords:
-- Extern. selecteditemtype Windows Media Player
+- External.selectedItemType Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,35 +14,35 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9755f66dd00947f295bdd40ea6ab79e69d655d49
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: eb58b13f1486bb30a79cd20e2f43f715df694f661c7b56e5eadd29f0c5c06c80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352830"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648416"
 ---
-# <a name="externalselecteditemtype"></a>Extern. selecteditemtype
+# <a name="externalselecteditemtype"></a>External.selectedItemType
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **selecteditemtype** -Eigenschaft ruft den Typ des Medien Elements ab, das derzeit in Windows Media Player ausgewählt ist.
+Die **selectedItemType-Eigenschaft** ruft den Typ des Medienelements ab, das derzeit in der Windows Media Player.
 
 ## <a name="syntax"></a>Syntax
 
-Window. extern. selecteditemtype ()
+window.external.selectedItemType()
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge** , die eine der [Bibliotheks Speicherort Konstanten](library-location-constants.md)enthält.
+Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge,** die eine der [Bibliotheksspeicherortkonst constants enthält.](library-location-constants.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft wird in Kombination mit der **externen. selecteditemid** -Eigenschaft verwendet. Wenn **selecteditemtype** beispielsweise cptrackid entspricht, ist **selecteditemid** die ID des ausgewählten Titels. Weitere Informationen zur kennzeichnen von Ansichten von Online Store-Inhalten durch Windows Media Player finden Sie unter [Standort und ausgewähltes Element](location-and-selected-item.md).
+Diese Eigenschaft wird in Kombination mit der **External.selectedItemID-Eigenschaft** verwendet. Wenn z. B. **selectedItemType** gleich CPTrackID ist, ist **selectedItemID** die ID der ausgewählten Spur. Weitere Informationen dazu, wie Windows Media Player Ansichten von Onlineshopinhalten kennzeichnet, finden Sie unter [Speicherort und Ausgewähltes Element.](location-and-selected-item.md)
 
-Bestimmte Sichten in Windows Media Player ein bestimmtes Medien Element, das ausgewählt ist. Nehmen wir beispielsweise an, dass die aktuelle Ansicht ein Album darstellt. Ein Album ist ein Container von Spuren, weshalb **selecteditemtype** gleich cptrackid und **selecteditemid** die ID des ausgewählten Titels ist. Andere Sichten verfügen über kein ausgewähltes Medien Element. Wenn der Benutzer z. b. auf den Stamm Knoten des Online Stores im Strukturansicht-Steuerelement klickt, zeigt Windows Media Player eine vom Online Store bereitgestellte Ermittlungs Seite an. Der Player zeigt in der Benutzeroberfläche des Players keinen Container von Medien Elementen an. In diesem Fall ist **selecteditemtype** gleich unknownlocation, und **selecteditemid** ist gleich der leeren Zeichenfolge.
+Bestimmte Ansichten in Windows Media Player haben ein bestimmtes Medienelement, das ausgewählt ist. Angenommen, die aktuelle Ansicht stellt ein Album dar. Ein Album ist ein Container von Spuren, daher **ist selectedItemType** gleich CPTrackID, und **selectedItemID** ist die ID des ausgewählten Titels. Für andere Ansichten ist kein Medienelement ausgewählt. Wenn der Benutzer beispielsweise im Strukturansicht-Steuerelement auf den Stammknoten des Onlineshops klickt, zeigt Windows Media Player eine vom Onlineshop bereitgestellte Ermittlungsseite an. Der Player zeigt auf der Player-Benutzeroberfläche keinen Container mit Medienelementen an. In diesem Fall ist **selectedItemType** gleich UnknownLocation und **selectedItemID** gleich der leeren Zeichenfolge.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,10 +59,10 @@ Bestimmte Sichten in Windows Media Player ein bestimmtes Medien Element, das aus
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 1-Online Speicher**](external-object-for-type-1-online-stores.md)
+[**Externes Objekt für Onlinespeicher vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> <dt>
 
-[**Extern. selecteditemid**](external-selecteditemid.md)
+[**External.selectedItemID**](external-selecteditemid.md)
 </dt> <dt>
 
 [**Speicherort und ausgewähltes Element**](location-and-selected-item.md)

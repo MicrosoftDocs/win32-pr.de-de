@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der indexrangegrbit-Enumeration.
-title: Indexrangegrbit-Enumeration
+description: Weitere Informationen finden Sie unter IndexRangeGrbit-Enumeration.
+title: IndexRangeGrbit-Enumeration
 TOCTitle: IndexRangeGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.IndexRangeGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.indexrangegrbit(v=EXCHG.10)
@@ -26,21 +26,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3202241ad4a3b7195fe82f494eadf4b5838b91ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a36a3905e6deb204ef90f7bdbd76ef700af63f0e95e5360416ed503172f6d866
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119732180"
 ---
-# <a name="indexrangegrbit-enumeration"></a>Indexrangegrbit-Enumeration
+# <a name="indexrangegrbit-enumeration"></a>IndexRangeGrbit-Enumeration
 
-Optionen für das JET_INDEXRANGE Objekt.
+Optionen für das JET_INDEXRANGE-Objekt.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ public enum IndexRangeGrbit
 <tbody>
 <tr class="odd">
 <td></td>
-<td>Recordinindex</td>
-<td>Datensätze im Cursor-Indexbereich sollten in die Ausgabe eingeschlossen werden.</td>
+<td>RecordInIndex</td>
+<td>Datensätze im Indexbereich cursors sollten in der Ausgabe enthalten sein.</td>
 </tr>
 </tbody>
 </table>
@@ -79,6 +79,6 @@ public enum IndexRangeGrbit
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

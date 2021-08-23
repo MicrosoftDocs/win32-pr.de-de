@@ -1,32 +1,32 @@
 ---
-description: Das updateoverlay-Ereignis wird gesendet, wenn die über Lagerungs Oberfläche verschoben oder die Größe geändert wurde oder der Farbschlüssel geändert wurde.
+description: Das UpdateOverlay-Ereignis wird gesendet, wenn die Überlagerungsoberfläche verschoben oder die Größe geändert oder der Farbschlüssel geändert wurde.
 ms.assetid: 692cbd26-b7b3-4fa3-9157-ca96a33e3a1e
-title: Updateoverlay (ddraw. h)
+title: UpdateOverlay (Ddraw.h)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2152e1f58ba161dc8dc3e04c908aaf037f1eed2a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 205b4ca002ec06862b006dc3e3b6facec2f5cb7f0ffb92f3e5a65bc2bb0a161c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372497"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119650824"
 ---
-# <a name="updateoverlay"></a>Updateoverlay
+# <a name="updateoverlay"></a>UpdateOverlay
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Das **updateoverlay** -Ereignis wird gesendet, wenn die über Lagerungs Oberfläche verschoben oder die Größe geändert wurde oder der Farbschlüssel geändert wurde.
+Das **UpdateOverlay-Ereignis** wird gesendet, wenn die Überlagerungsoberfläche verschoben oder ihre Größe geändert wurde oder der Farbschlüssel geändert wurde.
 
 ``` syntax
 UpdateOverlay()
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen sollten sich nie Gedanken darüber machen, dass die Größe der Überlagerungs Oberfläche geändert oder verschoben wird. Alles wird intern behandelt. Dieses Ereignis wird jedoch auch gesendet, wenn sich der Farbschlüssel ändert. Dies bedeutet Folgendes: Wenn eine Anwendung mswebdvd als fensterloses Steuerelement und unverankerte Schaltflächen oben auf der Video Oberfläche im Vollbildmodus anzeigt, sollte Sie auf dieses Ereignis reagieren, indem der neue Wert der **Colorkey** -Eigenschaft abgerufen wird, damit die Schaltflächen ordnungsgemäß gezeichnet werden können.
+Anwendungen sollten sich keine Gedanken darüber machen, dass die Größe der Überlagerungsoberfläche geändert oder verschoben wird. Dies alles wird intern behandelt. Dieses Ereignis wird jedoch auch gesendet, wenn sich der Farbschlüssel ändert. Das bedeutet: Wenn eine Anwendung MSWebDVD als fensterloses Steuerelement hostet und unverankerte Schaltflächen auf der Videooberfläche im Vollbildmodus anzeigt, sollte sie auf dieses Ereignis reagieren, indem sie den neuen Wert der **ColorKey-Eigenschaft** erhält, damit sie die Schaltflächen ordnungsgemäß zeichnen kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -34,7 +34,7 @@ Anwendungen sollten sich nie Gedanken darüber machen, dass die Größe der Übe
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Ddraw. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Ddraw.h</dt> </dl> |
 
 
 

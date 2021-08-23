@@ -1,25 +1,25 @@
 ---
-description: Gibt das Transportprotokoll an, das von der Netzwerkquelle verwendet wird.
+description: Gibt das von der Netzwerkquelle verwendete Transportprotokoll an.
 ms.assetid: 7c8598ff-f408-42d0-9eee-3ef1e82f0466
-title: MFNETSOURCE_TRANSPORT-Eigenschaft (mspdl. h)
+title: MFNETSOURCE_TRANSPORT-Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fd41653f2b5ea0686527af4d6ee8c8b9962005aa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 933c4051cd3d008082c3b7811fcd88f8b118e51a9e864d947750813c11883b67
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119663470"
 ---
-# <a name="mfnetsource_transport-property"></a>MF-Quell- \_ Transport Eigenschaft
+# <a name="mfnetsource_transport-property"></a>MFNETSOURCE \_ TRANSPORT-Eigenschaft
 
-Gibt das Transportprotokoll an, das von der Netzwerkquelle verwendet wird. Der Wert dieser Eigenschaft ist ein Member der [**mfnetsource- \_ \_ Transporttyp**](/windows/desktop/api/mfidl/ne-mfidl-mfnetsource_transport_type) -Enumeration.
+Gibt das von der Netzwerkquelle verwendete Transportprotokoll an. Der Wert dieser Eigenschaft ist ein Member der [**MFNETSOURCE \_ TRANSPORT \_ TYPE-Enumeration.**](/windows/desktop/api/mfidl/ne-mfidl-mfnetsource_transport_type)
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
@@ -27,15 +27,15 @@ PROPVARIANT-Member
 
 VT \_ I4
 
-**LVAL**
+**lVal**
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Konstante **MF-Quell \_ Transport** definiert die GUID für diesen Eigenschafts Schlüssel. Der Eigenschaften Bezeichner (PID) ist 0 (null).
+Die Konstante **MFNETSOURCE \_ TRANSPORT** definiert die GUID für diesen Eigenschaftsschlüssel. Der Eigenschaftenbezeichner (PID) ist 0 (null).
 
-Diese Eigenschaft ist schreibgeschützt. Um diese Eigenschaft abzurufen, Fragen Sie die Netzwerkquelle nach der **IPropertyStore** -Schnittstelle ab, und rufen Sie **IPropertyStore:: GetValue** auf.
+Diese Eigenschaft ist schreibgeschützt. Um diese Eigenschaft abzurufen, fragen Sie die Netzwerkquelle nach der **IPropertyStore-Schnittstelle** ab, und rufen **Sie IPropertyStore::GetValue auf.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,9 +43,9 @@ Diese Eigenschaft ist schreibgeschützt. Um diese Eigenschaft abzurufen, Fragen 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -53,7 +53,7 @@ Diese Eigenschaft ist schreibgeschützt. Um diese Eigenschaft abzurufen, Fragen 
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
 [Netzwerk in Media Foundation](networking-in-media-foundation.md)

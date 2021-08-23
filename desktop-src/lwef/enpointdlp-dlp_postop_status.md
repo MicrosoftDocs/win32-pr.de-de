@@ -12,12 +12,12 @@ api_type:
 - COM
 api_location:
 - endpointdlp.h
-ms.openlocfilehash: c0221926700fc8960de5ef4d25c36136c3fc9737
-ms.sourcegitcommit: 91110c16e4713ed82d7fb80562d3ddf40b5d76b2
+ms.openlocfilehash: 6b8922bee5fb93ee4412833418a63c19dd311c8809cf64132a0f28fbe91d11bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "107495581"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119610230"
 ---
 # <a name="dlp_postop_status-structure"></a>DLP_POSTOP_STATUS-Struktur
 
@@ -36,7 +36,7 @@ typedef struct _DLP_POSTOP_STATUS {
 ```
 
 
-## <a name="members"></a>Members
+## <a name="members"></a>Member
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
-title: Videosettings. Hue
-description: Das Hue-Attribut gibt die Hue-Einstellung des Videos an oder ruft diese ab.
+title: VIDEOSETTINGS.hue
+description: Das hue-Attribut gibt die Farbtoneinstellung des Videos an oder ruft sie ab.
 ms.assetid: b965b05c-6ffc-44bd-8761-366350ff14e3
 keywords:
-- Videosettings. Hue-Fenster Media Player
+- VIDEOSETTINGS.hue Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8df6e379183693bc072a7b7fccad0954fd6bcb75
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d5ca3a5613ff348b6ef725a772f54a527997c7db8b772202ad2085687799ca8c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357309"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119615500"
 ---
-# <a name="videosettingshue"></a>Videosettings. Hue
+# <a name="videosettingshue"></a>VIDEOSETTINGS.hue
 
-Das **Hue** -Attribut gibt die Hue-Einstellung des Videos an oder ruft diese ab.
+Das **hue-Attribut** gibt die Farbtoneinstellung des Videos an oder ruft sie ab.
 
 ``` syntax
         elementID.hue
@@ -29,7 +29,7 @@ Das **Hue** -Attribut gibt die Hue-Einstellung des Videos an oder ruft diese ab.
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**) mit einem Wert im Bereich von-127 bis + 127 und einem Standardwert von 0. 
+Dieses Attribut ist eine Lese-/Schreibnummer (**long**) mit einem Wert zwischen -127 und +127 und dem Standardwert 0. 
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Dieses Attribut ist eine Lese-/schreibzahl (**Long**) mit einem Wert im Bereich 
 
 <dl> <dt>
 
-[**Videosettings-Element**](videosettings-element.md)
+[**VIDEOSETTINGS-Element**](videosettings-element.md)
 </dt> </dl>
 
  

@@ -1,25 +1,25 @@
 ---
-description: Aufzeichnen von Videos in einer AVI-Datei
+description: Erfassen von Videos in einer AVI-Datei
 ms.assetid: 0f5f4a82-4a2e-4c48-b201-bda641cb8619
-title: Aufzeichnen von Videos in einer AVI-Datei
+title: Erfassen von Videos in einer AVI-Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 86504e9ce149f495e1ea31664f56382340d33887
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 2f5ec58c021c5f37fed992959b33965efddb5603798ff756909879d307bca1f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104568390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119689035"
 ---
-# <a name="capturing-video-to-an-avi-file"></a>Aufzeichnen von Videos in einer AVI-Datei
+# <a name="capturing-video-to-an-avi-file"></a>Erfassen von Videos in einer AVI-Datei
 
-Die folgende Abbildung zeigt das einfachste mögliche Diagramm für die Erfassung von Videos in einer AVI-Datei.
+Die folgende Abbildung zeigt das einfachste mögliche Diagramm zum Erfassen von Videos in einer AVI-Datei.
 
-![AVI-Video Erfassungs Diagramm](images/vidcap02.png)
+![Avi Video Capture Graph](images/vidcap02.png)
 
-Der [AVI MUX](avi-mux-filter.md) -Filter nimmt den Videostream aus der Erfassungs-PIN und verpackt ihn in einen AVI-Stream. Ein Audiodatenstrom kann auch mit dem AVI MUX-Filter verbunden werden. in diesem Fall würde die MUX die beiden Streams überlassen. Der [dateiwriter](file-writer-filter.md) -Filter schreibt den AVI-Stream auf den Datenträger.
+Der [AVI Mux-Filter](avi-mux-filter.md) verwendet den Videostream aus dem Aufnahmepin und packt ihn in einen AVI-Stream. Ein Audiostream kann auch mit dem AVI Mux-Filter verbunden werden. In diesem Fall verwebt der Mux die beiden Streams. Der [File Writer-Filter](file-writer-filter.md) schreibt den AVI-Stream auf den Datenträger.
 
-Um das Diagramm zu erstellen, rufen Sie zunächst die [**ICaptureGraphBuilder2:: setoutputfilename**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-setoutputfilename) -Methode wie folgt auf:
+Um das Diagramm zu erstellen, rufen Sie zunächst die [**ICaptureGraphBuilder2::SetOutputFileName-Methode**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-setoutputfilename) wie folgt auf:
 
 
 ```C++
@@ -33,9 +33,9 @@ hr = pBuild->SetOutputFileName(
 
 
 
-Der erste Parameter gibt den Dateityp an – in diesem Fall AVI. Der zweite Parameter gibt den Dateinamen an. Für AVI erstellt die setoutputfilename-Methode den AVI MUX-Filter und den dateiwriter-Filter und fügt Sie dem Diagramm hinzu. Außerdem wird der Dateiname im Datei Schreiber Filter festgelegt, indem die [**ifilesink Filter:: setFileName**](/windows/desktop/api/Strmif/nf-strmif-ifilesinkfilter-setfilename) -Methode aufgerufen und die beiden Filter miteinander verbunden werden. Die-Methode gibt einen Zeiger auf die AVI MUX im dritten Parameter zurück. Optional wird ein Zeiger auf die [**ifilesinkfilter**](/windows/desktop/api/Strmif/nn-strmif-ifilesinkfilter) -Schnittstelle im vierten Parameter zurückgegeben. Wenn Sie diese Schnittstelle nicht benötigen, können Sie diesen Parameter auf **null** festlegen, wie im vorherigen Beispiel gezeigt.
+Der erste Parameter gibt den Dateityp an – in diesem Fall AVI. Der zweite Parameter gibt den Dateinamen an. Für AVI erstellt die SetOutputFileName-Methode den AVI Mux-Filter und den File Writer-Filter zusammen und fügt sie dem Diagramm hinzu. Außerdem wird der Dateiname für den File Writer-Filter festgelegt, indem die [**IFileSinkFilter::SetFileName-Methode**](/windows/desktop/api/Strmif/nf-strmif-ifilesinkfilter-setfilename) aufgerufen wird, und die beiden Filter werden miteinander verknüpft. Die -Methode gibt einen Zeiger auf den AVI Mux im dritten Parameter zurück. Optional wird im vierten Parameter ein Zeiger auf die [**IFileSinkFilter-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ifilesinkfilter) zurückgegeben. Wenn Sie diese Schnittstelle nicht benötigen, können Sie diesen Parameter auf **NULL** festlegen, wie im vorherigen Beispiel gezeigt.
 
-Als nächstes wird die [**ICaptureGraphBuilder2:: RenderStream**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream) -Methode aufgerufen, um den Erfassungs Filter wie folgt mit der AVI-MUX-Datei zu verbinden:
+Rufen Sie als Nächstes die [**ICaptureGraphBuilder2::RenderStream-Methode**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream) auf, um den Erfassungsfilter wie folgt mit DER AVI Mux zu verbinden:
 
 
 ```C++
@@ -52,9 +52,9 @@ pMux->Release();
 
 
 
-Der erste Parameter gibt die PIN-Kategorie an, die PIN- \_ kategorieerfassung \_ für die Erfassung ist. Der zweite Parameter gibt den Medientyp an. Der dritte Parameter ist ein Zeiger auf die [**ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) -Schnittstelle des Erfassungs Filters. Der vierte Parameter ist optional. Sie können den Videostream über einen zwischen Filter, z. b. einen Encoder, weiterleiten, bevor Sie ihn an den MUX-Filter übergeben. Andernfalls legen Sie diesen Parameter auf **null** fest, wie im vorherigen Beispiel gezeigt. Der fünfte Parameter ist der Zeiger auf den MUX-Filter. Dieser Zeiger wird durch Aufrufen der setoutputfilename-Methode abgerufen.
+Der erste Parameter gibt die Pinkategorie an, bei der es sich um PIN \_ CATEGORY CAPTURE für die Erfassung \_ handelt. Der zweite Parameter gibt den Medientyp an. Der dritte Parameter ist ein Zeiger auf die [**IBaseFilter-Schnittstelle des Erfassungsfilters.**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) Der vierte Parameter ist optional. Sie können den Videostream über einen Zwischenfilter wie einen Encoder routen, bevor Sie ihn an den Mux-Filter übergeben. Legen Sie andernfalls diesen Parameter auf **NULL** fest, wie im vorherigen Beispiel gezeigt. Der fünfte Parameter ist der Zeiger auf den Muxfilter. Dieser Zeiger wird durch Aufrufen der SetOutputFileName-Methode erhalten.
 
-Um Audiodaten aufzuzeichnen, nennen Sie RenderStream mit dem Medientyp MediaType \_ -Audiodatei. Wenn Sie Audiodaten und Videos von zwei separaten Geräten erfassen, empfiehlt es sich, den Audiostream in den Masterstream zu legen. Dadurch wird die Abweichung zwischen den beiden Streams verhindert, da der AVI MUX-Filter die Wiedergabe Rate für den Videostream entsprechend dem Audiostream anpasst. Um den Masterstream festzulegen, müssen Sie die [**iconfigavimux:: setmasterstream**](/windows/desktop/api/Strmif/nf-strmif-iconfigavimux-setmasterstream) -Methode für den AVI MUX-Filter aufrufen:
+Um Audio zu erfassen, rufen Sie RenderStream mit dem Medientyp MEDIATYPE \_ Audio auf. Wenn Sie Audio- und Videodaten von zwei separaten Geräten erfassen, ist es eine gute Idee, den Audiostream zum Masterstream zu machen. Dies hilft, Abweichungen zwischen den beiden Streams zu verhindern, da der AVI Mux-Filter die Wiedergaberate im Videostream an den Audiostream an passt. Rufen Sie zum Festlegen des Masterstreams die [**IConfigAviMux::SetMasterStream-Methode**](/windows/desktop/api/Strmif/nf-strmif-iconfigavimux-setmasterstream) für den AVI Mux-Filter auf:
 
 
 ```C++
@@ -69,9 +69,9 @@ if (SUCCEEDED(hr))
 
 
 
-Der Parameter für setmasterstream ist die streamnummer, die durch die Reihenfolge bestimmt wird, in der Sie RenderStream aufrufen. Wenn Sie z. b. RenderStream zuerst für Video und dann für Audiodaten aufzurufen, ist das Video Stream 0 und das Audioformat Stream 1.
+Der Parameter für SetMasterStream ist die Streamnummer, die durch die Reihenfolge bestimmt wird, in der Sie RenderStream aufrufen. Wenn Sie renderStream beispielsweise zuerst für Video und dann für Audio aufrufen, ist das Video Stream 0 und das Audio Stream 1.
 
-Sie können auch festlegen, wie der AVI MUX-Filter die Audio-und Videostreams interverlässt, indem Sie die [**iconfiginterleaving::p UT \_ Mode**](/windows/desktop/api/Strmif/nf-strmif-iconfiginterleaving-put_mode) -Methode aufrufen.
+Sie können auch festlegen, wie der AVI Mux-Filter die Audio- und Videostreams überlagert, indem Sie die [**IConfigInterleaving::p ut \_ Mode-Methode**](/windows/desktop/api/Strmif/nf-strmif-iconfiginterleaving-put_mode) aufrufen.
 
 
 ```C++
@@ -86,13 +86,13 @@ if (SUCCEEDED(hr))
 
 
 
-Mit dem Interleave- \_ Erfassungs Kennzeichen führt der AVI MUX eine Überlappungs Rate mit einer Rate aus, die für die Video Erfassung geeignet ist. Sie können auch Interleave \_ None verwenden, was bedeutet, dass kein Austausch erfolgt – die AVI-MUX schreibt die Daten einfach in der Reihenfolge, in der Sie ankommt. Das Interleave- \_ vollständige Flag bedeutet, dass die AVI-MUX vollständige überlappende Vorgänge ausführt. dieser Modus ist jedoch für die Video Erfassung weniger geeignet, da er die am meisten übergefasste erfordert.
+Mit dem INTERLEAVE CAPTURE-Flag führt der AVI Mux eine Überlappung mit einer Rate durch, die \_ für die Videoaufnahme geeignet ist. Sie können auch INTERLEAVE NONE verwenden, was bedeutet, dass keine Überlappung möglich ist. Der AVI Mux schreibt die Daten einfach in der Reihenfolge, in der \_ sie eintreffen. Das INTERLEAVE FULL-Flag bedeutet, dass der AVI Mux eine vollständige Überlappung ausführt. Dieser Modus eignet sich jedoch weniger für die Videoaufnahme, da er den überhebbarsten \_ erfordert.
 
-Codieren des Video Datenstroms
+Codieren des Videostreams
 
-Sie können den Videostream codieren, indem Sie einen encoderfilter zwischen dem Erfassungs Filter und dem AVI MUX-Filter einfügen. Verwenden Sie den [Enumerator für System Geräte](system-device-enumerator.md) oder den [Filter-Mapper](filter-mapper.md) , um einen encoderfilter auszuwählen. (Weitere Informationen finden Sie unter Auflisten von [Geräten und Filtern](enumerating-devices-and-filters.md).)
+Sie können den Videostream codieren, indem Sie einen Encoderfilter zwischen dem Erfassungsfilter und dem AVI Mux-Filter einfügen. Verwenden Sie [den Systemgeräte-Enumerator](system-device-enumerator.md) oder die [Filterzuordnung,](filter-mapper.md) um einen Encoderfilter auszuwählen. (Weitere Informationen finden Sie unter [Aufzählen von Geräten und Filtern](enumerating-devices-and-filters.md).)
 
-Geben Sie den encoderfilter als vierten Parameter für RenderStream an, wie im folgenden Beispiel fett dargestellt:
+Geben Sie den Encoderfilter als vierten Parameter für RenderStream an, der im folgenden Beispiel fett dargestellt wird:
 
 
 ```C++
@@ -112,13 +112,13 @@ pEncoder->Release();
 
 
 
-Der Encoder-Filter unterstützt möglicherweise [**IAMVideoCompression**](/windows/desktop/api/Strmif/nn-strmif-iamvideocompression) oder andere Schnittstellen zum Festlegen der Codierungs Parameter. Eine Liste möglicher Schnittstellen finden Sie unter [Schnittstellen für die Datei Codierung und-Decodierung](file-encoding-and-decoding-interfaces.md).
+Der Encoderfilter unterstützt möglicherweise [**IAMVideoCompression**](/windows/desktop/api/Strmif/nn-strmif-iamvideocompression) oder andere Schnittstellen zum Festlegen der Codierungsparameter. Eine Liste der möglichen Schnittstellen finden Sie unter [Dateicodierungs- und Decodierungsschnittstellen.](file-encoding-and-decoding-interfaces.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Aufzeichnen von Videos in einer Datei](capturing-video-to-a-file.md)
+[Erfassen von Videos in einer Datei](capturing-video-to-a-file.md)
 </dt> </dl>
 
  

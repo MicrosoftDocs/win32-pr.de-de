@@ -1,7 +1,7 @@
 ---
-description: Die m \_ batendofstream-Member-Variable ist ein boolesches Flag, das angibt, ob das Ende des Streams erreicht wurde.
+description: Die m \_ bAtEndOfStream-Membervariable ist ein boolesches Flag, das angibt, ob das Ende des Streams erreicht wurde.
 ms.assetid: 96cad18e-6a3e-409a-9949-5e050683e384
-title: 'Crenderedinputpin:: m_bAtEndOfStream Member (amextra. h)'
+title: CRenderedInputPin::m_bAtEndOfStream Member (Amextra.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: dfd0f3a02865f7945cbe875ca2dab7df339cf8ec
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b1f4d5ccf336daaa62c4df8f73086dc61d30e8b981813790f195234a41eb2aab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371604"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119652055"
 ---
-# <a name="crenderedinputpinm_batendofstream-member"></a>Crenderedinputpin:: m \_ batendofstream-Member
+# <a name="crenderedinputpinm_batendofstream-member"></a>CRenderedInputPin::m \_ bAtEndOfStream-Member
 
-Die m \_ batendofstream-Member-Variable ist ein boolesches Flag, das angibt, ob das Ende des Streams erreicht wurde.
+Die m \_ bAtEndOfStream-Membervariable ist ein boolesches Flag, das angibt, ob das Ende des Streams erreicht wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ BOOL m_bAtEndOfStream;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amextra. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amextra.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ BOOL m_bAtEndOfStream;
 
 <dl> <dt>
 
-[**Crenderedinputpin-Klasse**](crenderedinputpin.md)
+[**CRenderedInputPin-Klasse**](crenderedinputpin.md)
 </dt> </dl>
 
  

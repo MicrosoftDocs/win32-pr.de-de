@@ -1,31 +1,31 @@
 ---
-description: Gibt für einen Medientyp an, ob die Stichproben eine festgelegte Größe aufweisen.
+description: Gibt für einen Medientyp an, ob die Beispiele eine feste Größe haben.
 ms.assetid: 2d67864a-fd2f-400d-8a1e-e71dc1920593
-title: MF_MT_FIXED_SIZE_SAMPLES-Attribut (mfapi. h)
+title: MF_MT_FIXED_SIZE_SAMPLES -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d1bb5bdd4e1330e4744902ed1b37cc55b7a67a3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3662532d1e10857945a828ec3f46beef991fb438dfea0f33dc7d73832aeca7e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368200"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119605630"
 ---
-# <a name="mf_mt_fixed_size_samples-attribute"></a>Das MF \_ MT- \_ Attribut mit fester \_ Größe \_ Samples
+# <a name="mf_mt_fixed_size_samples-attribute"></a>MF \_ MT FIXED SIZE \_ \_ \_ SAMPLES-Attribut
 
-Gibt für einen Medientyp an, ob die Stichproben eine festgelegte Größe aufweisen.
+Gibt für einen Medientyp an, ob die Beispiele eine feste Größe haben.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-Als booleschen Wert behandeln.
+Als boolescher Wert behandeln.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn dieses Attribut den Wert **true** hat, ist jede Stichprobe im Stream identisch mit der Größe (in Bytes). Andernfalls können sich die Größe von Beispielen unterscheiden.
+Wenn dieses Attribut **TRUE ist,** hat jedes Beispiel im Stream die gleiche Größe (in Bytes). Andernfalls kann die Größe der Beispiele variieren.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,9 +33,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -43,19 +43,19 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEs::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEs::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**VERERBungstyp**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> </dl>
 
  

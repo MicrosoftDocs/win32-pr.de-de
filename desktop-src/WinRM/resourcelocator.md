@@ -1,11 +1,11 @@
 ---
-title: ResourceLocator-Objekt (WSManDisp. h)
-description: Gibt den Pfad zu einer Ressource an. Sie können ein ResourceLocator-Objekt anstelle eines Ressourcen-URI in Sitzungs Objekt Vorgängen verwenden, z. b. "Session. Get", "Session. Put" oder "Session. Enumerate".
+title: ResourceLocator-Objekt (WSManDisp.h)
+description: Gibt den Pfad zu einer Ressource an. Sie können ein ResourceLocator-Objekt anstelle eines Ressourcen-URI in Sitzungsobjektvorgängen wie Session.Get, Session.Put oder Session.Enumerate verwenden.
 ms.assetid: 0904b7eb-d4ce-46a7-bf58-452e7c0d41e9
 ms.tgt_platform: multiple
 keywords:
-- ResourceLocator-Objekt Windows-Remoteverwaltung
-- ResourceLocator-Objekt Windows-Remoteverwaltung, beschrieben
+- ResourceLocator-Objekt Windows Remoteverwaltung
+- ResourceLocator-Objekt Windows Remoteverwaltung , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,44 +16,44 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd110b94d3174134e6410428843de76e809d5e22
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 26d3287c02949326b672f550271ba3472e6cb16abb6748efb4a80de425c40e57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119642870"
 ---
 # <a name="resourcelocator-object"></a>ResourceLocator-Objekt
 
-Ein-Objekt, das den Pfad zu einer Ressource bereitstellt. Sie können ein **ResourceLocator** -Objekt anstelle eines [*Ressourcen-URI*](windows-remote-management-glossary.md) in [**Sitzungs**](session.md) Objekt Vorgängen verwenden, z. b. " [**Session. Get**](session-get.md)", " [**Session. Put**](session-put.md)" oder " [**Session. Enumerate**](session-enumerate.md)".
+Ein -Objekt, das den Pfad zu einer Ressource liefert. Sie können ein **ResourceLocator-Objekt** anstelle eines [*Ressourcen-URI*](windows-remote-management-glossary.md) in Sitzungsobjektvorgängen wie [**Session.Get,**](session-get.md) [**Session.Put**](session-put.md)oder [**Session.Enumerate verwenden.**](session-enumerate.md) [](session.md)
 
-Mit diesem Objekt können Sie folgende Aktionen ausführen:
+Dieses Objekt ermöglicht Ihnen:
 
--   Fügen Sie mindestens einen [*Selektoren*](windows-remote-management-glossary.md) hinzu, der eine bestimmte Instanz einer Ressource identifiziert. Dies entspricht dem Angeben eines Schlüssel Werts im Ressourcen-URI für eine Ressource, die Schlüssel verwendet. Weitere Informationen finden Sie unter [**ResourceLocator. addselector**](resourcelocator-addselector.md). Sie können einen ähnlichen Vorgang ausführen, indem Sie den *Filter* -Parameter in einem Aufrufen von [**Session. Enumerate**](session-enumerate.md)verwenden.
--   Geben Sie einen [*Fragmentpfad*](windows-remote-management-glossary.md) und einen Dialekt an, um nur eine Eigenschaft einer Ressource zu erhalten. Sie können auch ein oder alle Elemente einer Array Eigenschaft angeben, indem Sie den Array Index bereitstellen. Weitere Informationen finden Sie unter [**ResourceLocator. fragmentpath**](resourcelocator-fragmentpath.md).
--   Fügen Sie eine oder mehrere [*Optionen*](windows-remote-management-glossary.md) hinzu, die eine Datenquelle möglicherweise benötigt, um eine Anforderung zu verarbeiten. Weitere Informationen finden Sie unter [**ResourceLocator. AddOption**](resourcelocator-addoption.md).
+-   Fügen Sie einen oder mehrere [*Selektoren hinzu,*](windows-remote-management-glossary.md) die eine bestimmte Instanz einer Ressource identifizieren. Dies ist identisch mit der Bereitstellung eines Schlüsselwerts im Ressourcen-URI für eine Ressource, die Schlüssel verwendet. Weitere Informationen finden Sie unter [**ResourceLocator.AddSelector**](resourcelocator-addselector.md). Sie können einen ähnlichen Vorgang mithilfe des *Filterparameters* in einem Aufruf von [**Session.Enumerate tun.**](session-enumerate.md)
+-   Geben Sie einen [*Fragmentpfad*](windows-remote-management-glossary.md) und einen Dialekt an, um nur eine Eigenschaft einer Ressource zu erhalten. Sie können auch eines oder alle Elemente einer Arrayeigenschaft angeben, indem Sie den Arrayindex angeben. Weitere Informationen finden Sie unter [**ResourceLocator.FragmentPath**](resourcelocator-fragmentpath.md).
+-   Fügen Sie eine oder mehrere [*Optionen hinzu,*](windows-remote-management-glossary.md) die eine Datenquelle möglicherweise benötigt, um eine Anforderung zu verarbeiten. Weitere Informationen finden Sie unter [**ResourceLocator.AddOption**](resourcelocator-addoption.md).
 
-Weitere Informationen finden Sie unter [Abfragen für bestimmte Instanzen einer Ressource](querying-for-specific-instances-of-a-resource.md).
+Weitere Informationen finden Sie unter [Abfragen für bestimmte Instanzen einer Ressource.](querying-for-specific-instances-of-a-resource.md)
 
 ## <a name="members"></a>Member
 
-Das **ResourceLocator** -Objekt verfügt über diese Typen von Membern:
+Das **ResourceLocator-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Das **ResourceLocator** -Objekt verfügt über diese Methoden.
+Das **ResourceLocator-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                                   | BESCHREIBUNG                                                                                                                        |
+| Methode                                                   | Beschreibung                                                                                                                        |
 |:---------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|
-| [**AddOption**](resourcelocator-addoption.md)           | Fügt zusätzliche Daten hinzu, die für die Verarbeitung der Anforderung erforderlich sind.<br/>                                                                   |
-| [**Addselector**](resourcelocator-addselector.md)       | Fügt dem **ResourceLocator** -Objekt einen [*Selektor*](windows-remote-management-glossary.md) hinzu.<br/>     |
-| [**Clearoptions**](resourcelocator-clearoptions.md)     | Entfernt alle [*Optionen*](windows-remote-management-glossary.md) aus dem **ResourceLocator** -Objekt.<br/> |
-| [**Clearselectors**](resourcelocator-clearselectors.md) | Entfernt alle Selektoren aus einem **ResourceLocator** -Objekt.<br/>                                                            |
+| [**AddOption**](resourcelocator-addoption.md)           | Fügt zusätzliche Daten hinzu, die zum Verarbeiten der Anforderung erforderlich sind.<br/>                                                                   |
+| [**AddSelector**](resourcelocator-addselector.md)       | Fügt dem **ResourceLocator-Objekt einen Selektor** hinzu. [](windows-remote-management-glossary.md)<br/>     |
+| [**ClearOptions**](resourcelocator-clearoptions.md)     | Entfernt alle Optionen [*aus*](windows-remote-management-glossary.md) dem **ResourceLocator-Objekt.**<br/> |
+| [**ClearSelectors**](resourcelocator-clearselectors.md) | Entfernt alle Selektoren aus einem **ResourceLocator-Objekt.**<br/>                                                            |
 
 
 
@@ -61,28 +61,28 @@ Das **ResourceLocator** -Objekt verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **ResourceLocator** -Objekt verfügt über diese Eigenschaften.
+Das **ResourceLocator-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                          | Zugriffstyp           | BESCHREIBUNG                                                                                                                                                                                             |
+| Eigenschaft                                                                          | Zugriffstyp           | Beschreibung                                                                                                                                                                                             |
 |:----------------------------------------------------------------------------------|:----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Fragmentdialekt**](resourcelocator-fragmentdialect.md)<br/>             | Lesen/Schreiben<br/> | Ruft den sprach Dialekt für ein [*Ressourcen*](windows-remote-management-glossary.md) [*Fragment*](windows-remote-management-glossary.md)ab oder legt ihn fest.<br/> |
-| [**Fragmentpath**](resourcelocator-fragmentpath.md)<br/>                   | Lesen/Schreiben<br/> | Ruft den Pfad für ein [*Ressourcen*](windows-remote-management-glossary.md) [*Fragment*](windows-remote-management-glossary.md) oder eine Ressourcen Eigenschaft ab oder legt ihn fest.<br/> |
-| [**Mustverständlicherweise-Optionen**](resourcelocator-mustunderstandoptions.md)<br/> | Lesen/Schreiben<br/> | Ruft den **mustverständlicherweise Options** -Wert für das **ResourceLocator** -Objekt ab oder legt ihn fest.<br/>                                                                                                         |
-| [**ResourceURI**](resourcelocator-resourceuri.md)<br/>                     | Lesen/Schreiben<br/> | Ruft den Ressourcen- [*URI*](windows-remote-management-glossary.md) in einem **ResourceLocator** -Objekt ab oder legt ihn fest.<br/>                                                          |
+| [**FragmentDialect**](resourcelocator-fragmentdialect.md)<br/>             | Lesen/Schreiben<br/> | Ruft den Sprachdialekt für ein Ressourcenfragment ab oder [*legt*](windows-remote-management-glossary.md) [*diese fest.*](windows-remote-management-glossary.md)<br/> |
+| [**FragmentPath**](resourcelocator-fragmentpath.md)<br/>                   | Lesen/Schreiben<br/> | Ruft den Pfad für ein Ressourcenfragment oder eine Eigenschaft [*ab*](windows-remote-management-glossary.md) [*oder*](windows-remote-management-glossary.md) legt diesen fest.<br/> |
+| [**MustUnderstandOptions**](resourcelocator-mustunderstandoptions.md)<br/> | Lesen/Schreiben<br/> | Ruft den **MustUnderstandOptions-Wert für das** **ResourceLocator-Objekt** ab oder legt den Wert fest.<br/>                                                                                                         |
+| [**ResourceURI**](resourcelocator-resourceuri.md)<br/>                     | Lesen/Schreiben<br/> | Ruft den [*Ressourcen-URI*](windows-remote-management-glossary.md) in einem **ResourceLocator-Objekt** ab oder legt diese fest.<br/>                                                          |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **ResourceLocator** -Objekt entspricht der **iwsmanresourcelocator** -Schnittstelle.
+Das **ResourceLocator-Objekt** entspricht der **IWSManResourceLocator-Schnittstelle.**
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Codebeispiel werden die Eigenschaften " **numoflogicalprocessor** " und " **numofcores** " von einer bestimmten Instanz des [**Win32- \_ Prozessors**](/windows/desktop/CIMWin32Prov/win32-processor)abgerufen.
+Im folgenden VBScript-Codebeispiel werden die **NumberOfLogicalProcessors-** und **NumberOfCores-Eigenschaften** von einer bestimmten Instanz des [**Win32-Prozessors \_ erhalten.**](/windows/desktop/CIMWin32Prov/win32-processor)
 
 
 ```VB
@@ -141,9 +141,9 @@ End Sub
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>WSManDisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WSManDisp. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WSManDisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WSManDisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WSManDisp.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>WSManDisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WSMAuto.dll</dt> </dl>   |
 
 
@@ -152,7 +152,7 @@ End Sub
 
 <dl> <dt>
 
-[WinRM-Skript-API](winrm-scripting-api.md)
+[WinRM-Skripterstellungs-API](winrm-scripting-api.md)
 </dt> </dl>
 
  

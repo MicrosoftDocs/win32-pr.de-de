@@ -4,16 +4,16 @@ ms.assetid: 5347cd55-a27e-40b9-857c-09e3665a1817
 title: Steuern eines externen Geräts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 84cb82de59877f2527c92da9123d8a9d5a59d41e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 92f530bb48f35a6e35a0ab75d0559cc3c6770c4d0d1dfb2948f871982f70eb0b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104520723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119652130"
 ---
 # <a name="controlling-an-external-device"></a>Steuern eines externen Geräts
 
-Um ein Video Tape Recorder (VTR)-Gerät zu steuern, verwenden Sie die [**IAMExtTransport::p UT \_ Mode**](/windows/desktop/api/Strmif/nf-strmif-iamexttransport-put_mode) -Methode. Geben Sie den neuen Status an, indem Sie eine der Konstanten verwenden, die im [Geräte Transport Status](device-transport-state.md)aufgeführt sind. Um z. b. das Gerät anzuhalten, verwenden Sie Folgendes:
+Verwenden Sie zum Steuern eines VTR-Geräts (Video Tape Recorder) die [**IAMExtTransport::p ut \_ Mode-Methode.**](/windows/desktop/api/Strmif/nf-strmif-iamexttransport-put_mode) Geben Sie den neuen Zustand mithilfe einer der Konstanten an, die unter [Gerätetransportstatus](device-transport-state.md)aufgeführt sind. Verwenden Sie beispielsweise Folgendes, um das Gerät zu beenden:
 
 
 ```C++
@@ -22,15 +22,15 @@ pTransport->put_Mode(ED_MODE_STOP);
 
 
 
-Da es sich bei VTR um ein physisches Gerät handelt, gibt es in der Regel eine Verzögerung zwischen der Ausgabe des Befehls und dem Abschluss des Befehls. Ihre Anwendung sollte einen zweiten Arbeits Thread erstellen, der auf den Abschluss des Befehls wartet. Wenn der Befehl abgeschlossen ist, kann der Thread die Benutzeroberfläche aktualisieren. Verwenden Sie einen kritischen Abschnitt, um die Statusänderung zu serialisieren.
+Da es sich bei der VTR um ein physisches Gerät handelt, kommt es in der Regel zu einer Verzögerung zwischen der Ausgabe des Befehls und dem Abschluss des Befehls. Ihre Anwendung sollte einen zweiten Arbeitsthread erstellen, der auf den Abschluss des Befehls wartet. Wenn der Befehl abgeschlossen ist, kann der Thread die Benutzeroberfläche aktualisieren. Verwenden Sie einen kritischen Abschnitt, um die Zustandsänderung zu serialisieren.
 
-Die Anwendung kann von einigen VTRs benachrichtigt werden, wenn sich der Transportzustand des Geräts geändert hat. Wenn das Gerät dieses Feature unterstützt, kann der Arbeits Thread auf die Benachrichtigung warten. Gemäß der "AV/C Tape Recorder/Player subunit Specification" der 1394-Handels Association ist der Befehl für die Transport Zustands Benachrichtigung jedoch optional, was bedeutet, dass Geräte diese nicht unterstützen müssen. Wenn eine Benachrichtigung von einem Gerät nicht unterstützt wird, sollten Sie das Gerät in regelmäßigen Abständen nach dem aktuellen Statusabfragen.
+Einige VTRs können die Anwendung benachrichtigen, wenn sich der Transportstatus des Geräts geändert hat. Wenn das Gerät dieses Feature unterstützt, kann der Arbeitsthread auf die Benachrichtigung warten. Gemäß der AV/C Tape Recorder/Player-Untereinheitsspezifikation der Trade Association von 1394 ist der Transportzustandsbenachrichtigungsbefehl jedoch optional, d.h. Geräte müssen ihn nicht unterstützen. Wenn ein Gerät keine Benachrichtigung unterstützt, sollten Sie das Gerät in regelmäßigen Abständen nach seinem aktuellen Zustand abfragen.
 
-In diesem Abschnitt wird zunächst der Benachrichtigungs Mechanismus beschrieben. Anschließend wird der Abruf von Geräten beschrieben.
+In diesem Abschnitt wird zunächst der Benachrichtigungsmechanismus und dann das Abfragen von Geräten beschrieben.
 
-Verwenden der Transport Zustands Benachrichtigung
+Verwenden von Transportstatusbenachrichtigungen
 
-Die Transport Zustands Benachrichtigung bewirkt, dass der Treiber ein Ereignis signalisiert, wenn der Transport in einen neuen Zustand wechselt. Deklarieren Sie in der Anwendung einen kritischen Abschnitt, ein Ereignis und ein Thread handle. Der Abschnitt kritisch wird verwendet, um den Gerätezustand zu synchronisieren. Das-Ereignis wird verwendet, um den Arbeits Thread anzuhalten, wenn die Anwendung beendet wird:
+Die Transportzustandsbenachrichtigung funktioniert, indem der Treiber ein Ereignis signalisiert, wenn der Transport in einen neuen Zustand wechselt. Deklarieren Sie in Ihrer Anwendung einen kritischen Abschnitt, ein Ereignis und ein Threadhandle. Der kritische Abschnitt wird verwendet, um den Gerätezustand zu synchronisieren. Das -Ereignis wird verwendet, um den Arbeitsthread anzuhalten, wenn die Anwendung beendet wird:
 
 
 ```C++
@@ -46,7 +46,7 @@ InitializeCriticalSection(&cdIssueCmd);
 
 
 
-Nachdem Sie eine Instanz des Erfassungs Filters erstellt haben, erstellen Sie den Arbeits Thread:
+Nachdem Sie eine Instanz des Erfassungsfilters erstellt haben, erstellen Sie den Arbeitsthread:
 
 
 ```C++
@@ -56,7 +56,7 @@ hThread = CreateThread(NULL, 0, ThreadProc, 0, 0, &ThreadId);
 
 
 
-Starten Sie im Arbeits Thread, indem Sie die [**IAMExtTransport:: GetStatus**](/windows/desktop/api/Strmif/nf-strmif-iamexttransport-getstatus) -Methode mit dem Wert Ed \_ Notify \_ hevent \_ Get aufrufen. Dieser Rückruf gibt ein Handle für ein Ereignis zurück, das signalisiert wird, wenn ein Vorgang abgeschlossen wird:
+Rufen Sie im Arbeitsthread zunächst die [**IAMExtTransport::GetStatus-Methode**](/windows/desktop/api/Strmif/nf-strmif-iamexttransport-getstatus) mit dem Wert ED \_ NOTIFY \_ HEVENT \_ GET auf. Dieser Aufruf gibt ein Handle für ein Ereignis zurück, das signalisiert wird, wenn ein Vorgang abgeschlossen ist:
 
 
 ```C++
@@ -67,7 +67,7 @@ hr = pTransport->GetStatus(ED_NOTIFY_HEVENT_GET, (long*)&hNotify);
 
 
 
-Im nächsten Schritt wird **GetState** erneut aufgerufen, und der Wert für die \_ \_ Änderungs \_ Benachrichtigung im ED-Modus wird übergeben
+Rufen Sie als Nächstes GetState erneut **auf,** und übergeben Sie den Wert ED \_ MODE CHANGE \_ \_ NOTIFY:
 
 
 ```C++
@@ -77,9 +77,9 @@ hr = pTransport->GetStatus(ED_MODE_CHANGE_NOTIFY, &State);
 
 
 
-Wenn das Gerät eine Benachrichtigung unterstützt, gibt die Methode den Wert E \_ Pending zurück. (Andernfalls müssen Sie das Gerät abrufen, wie im nächsten Abschnitt beschrieben.) Wenn das Gerät eine Benachrichtigung unterstützt, wird das Ereignis immer dann signalisiert, wenn sich der Status des VTR-Transports ändert. An diesem Punkt können Sie die Benutzeroberfläche aktualisieren, um den neuen Zustand widerzuspiegeln. Wenn Sie die nächste Benachrichtigung abrufen möchten, setzen Sie das Ereignis Handle zurück, und wenden Sie erneut " **GetStatus** " auf " \_ \_ \_ Benachrichtigung Benachrichtigen".
+Wenn das Gerät Benachrichtigungen unterstützt, gibt die Methode den Wert E \_ PENDING zurück. (Andernfalls müssen Sie das Gerät wie im nächsten Abschnitt beschrieben abfragen.) Wenn das Gerät Benachrichtigungen unterstützt, wird das Ereignis immer dann signalisiert, wenn sich der Status des VTR-Transports ändert. An diesem Punkt können Sie die Benutzeroberfläche aktualisieren, um den neuen Zustand widerzuspiegeln. Um die nächste Benachrichtigung zu erhalten, setzen Sie das Ereignishandle zurück, und rufen **Sie GetStatus** mit ED \_ MODE CHANGE NOTIFY erneut \_ \_ auf.
 
-Bevor der Arbeits Thread beendet wird, geben Sie das Ereignis Handle frei, indem Sie **GetStatus** mit dem Flag Ed \_ Notification \_ hevent \_ Release und der Adresse des Handles aufrufen:
+Bevor der Arbeitsthread beendet wird, geben Sie das Ereignishandle frei, indem **Sie GetStatus** mit dem Flag ED \_ NOTIFY \_ HEVENT RELEASE und der Adresse des \_ Handles aufrufen:
 
 
 ```C++
@@ -88,7 +88,7 @@ hr = pTransport->GetStatus(ED_NOTIFY_HEVENT_RELEASE, (long*)&hNotify)
 
 
 
-Der folgende Code zeigt die gesamte Thread Prozedur. Es wird davon ausgegangen, dass die Funktion "updatetransportstate" eine Anwendungsfunktion ist, die die Benutzeroberfläche aktualisiert. Beachten Sie, dass der Thread auf zwei Ereignisse wartet: das Benachrichtigungs Ereignis (*hnotify*) und das Thread Beendigungs Ereignis (*hthreadend*). Beachten Sie auch, dass der kritische Abschnitt verwendet wird, um die Geräte Zustands Variable zu schützen.
+Der folgende Code zeigt die vollständige Threadprozedur. Die Funktion UpdateTransportState wird als Anwendungsfunktion angenommen, die die Benutzeroberfläche aktualisiert. Beachten Sie, dass der Thread auf zwei Ereignisse wartet: das Benachrichtigungsereignis (*hNotify*) und das Threadbeendigungsereignis (*hThreadEnd*). Beachten Sie außerdem, wo der kritische Abschnitt verwendet wird, um die Gerätezustandsvariable zu schützen.
 
 
 ```C++
@@ -144,7 +144,7 @@ DWORD WINAPI ThreadProc(void *pParam)
 
 
 
-Verwenden Sie außerdem den Abschnitt kritisch, wenn Sie Befehle an das Gerät ausgeben, wie im folgenden beschrieben:
+Verwenden Sie beim Ausführen von Befehlen für das Gerät auch den Abschnitt kritisch wie folgt:
 
 
 ```C++
@@ -159,7 +159,7 @@ LeaveCriticalSection(&csIssueCmd);
 
 
 
-Bevor die Anwendung beendet wird, stoppen Sie den sekundären Thread, indem Sie das Thread-End-Ereignis festlegen:
+Halten Sie den sekundären Thread an, bevor die Anwendung beendet wird, indem Sie das Thread-End-Ereignis festlegen:
 
 
 ```C++
@@ -178,9 +178,9 @@ CloseHandle(hThread);
 
 
 
-Abrufen des Transport Zustands
+Abfragen des Transportzustands
 
-Wenn Sie **IAMExtTransport:: GetStatus** mit dem Flag zum \_ Benachrichtigen von Änderungen im ED-Modus aufrufen \_ \_ und der Rückgabewert nicht E \_ Pending ist, bedeutet dies, dass das Gerät keine Benachrichtigung unterstützt. In diesem Fall müssen Sie das Gerät Abfragen, um seinen Status zu ermitteln. Abruf *bedeutet einfach,* dass Sie in regelmäßigen Abständen den Abruf **\_ Modus** aufrufen, um den Transport Status zu überprüfen Sie sollten weiterhin einen sekundären Thread und einen kritischen Abschnitt verwenden, wie zuvor beschrieben. Der Thread fragt das Gerät in regelmäßigen Abständen nach seinem Status ab. Das folgende Beispiel zeigt eine Möglichkeit, den Thread zu implementieren:
+Wenn Sie **IAMExtTransport::GetStatus** mit dem \_ ED MODE \_ CHANGE NOTIFY-Flag aufrufen und der \_ Rückgabewert nicht E \_ PENDING lautet, bedeutet dies, dass das Gerät keine Benachrichtigung unterstützt. In diesem Fall müssen Sie das Gerät abfragen, um seinen Zustand zu bestimmen. *Abrufen* bedeutet einfach, dass **der \_ get-Modus** in regelmäßigen Abständen aufgerufen wird, um den Transportstatus zu überprüfen. Sie sollten weiterhin einen sekundären Thread und einen kritischen Abschnitt verwenden, wie zuvor beschrieben. Der Thread fragt das Gerät in regelmäßigen Abständen nach seinem Zustand ab. Das folgende Beispiel zeigt eine Möglichkeit, den Thread zu implementieren:
 
 
 ```C++
@@ -216,7 +216,7 @@ DWORD WINAPI ThreadProc(void *pParam)
 
 <dl> <dt>
 
-[Steuern eines DV-Camcorder](controlling-a-dv-camcorder.md)
+[Steuern eines DV-Dvds](controlling-a-dv-camcorder.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Anzeigen. Wiederherstellen
-description: Die Restore-Methode stellt die-Sicht wieder her.
+title: VIEW.restore
+description: Mit der Wiederherstellungsmethode wird view wiederhergestellt.
 ms.assetid: 8005c14e-771b-4f20-8039-fc09869dc726
 keywords:
-- Anzeigen. Windows Media Player wiederherstellen
+- VIEW.restore-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: db92fc5e796acc55fe9c4faf93417d648652415e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a4bb4948c9c21b87ede4c88c85d2fc7681335a2bf6adb32bfa5c51638b773e74
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367070"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119615370"
 ---
-# <a name="viewrestore"></a>Anzeigen. Wiederherstellen
+# <a name="viewrestore"></a>VIEW.restore
 
-Die Restore-Methode stellt die- **Sicht** **wieder her** .
+Mit **der Wiederherstellungsmethode** wird view **wiederhergestellt.**
 
 ``` syntax
         elementID.restore()
@@ -57,7 +57,7 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -65,7 +65,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**View-Element**](view-element.md)
+[**VIEW-Element**](view-element.md)
 </dt> </dl>
 
  

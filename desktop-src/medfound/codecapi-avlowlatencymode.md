@@ -4,12 +4,12 @@ ms.assetid: 15E8FF6F-AD8C-436F-B3C0-5062B1F86E32
 title: CODECAPI_AVLowLatencyMode (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5be7e23a29e9dd5f88f7a96e6c32fd42b68a7204
-ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
+ms.openlocfilehash: 2d1466f7874fe743dbc865df251f077440885103853e3784af19624c4733a1e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111826904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119606270"
 ---
 # <a name="codecapi_avlowlatencymode-property"></a>\_CODECAPI-Eigenschaft "AVLowLatencyMode"
 
@@ -36,16 +36,16 @@ Der Modus mit geringer Latenz ist für die Echtzeitkommunikation oder Liveerfass
 Es wird erwartet, dass der Encoder keine Beispielverzögerung aufgrund einer Frame-Neuanordnung im Codierungsprozess hinzufüge, und ein Eingabebeispiel sollte ein Ausgabebeispiel erzeugen. B-Slices/Frames können vorhanden sein, solange sie keine Frame-Neubestellung im Encoder einführen.
 
 > [!WARNING] 
-> In der aktuellen Implementierung verwendet der Media Foundation H.264-Decoder den VT_UI4 **für** diese Eigenschaft. Alle anderen Implementierungen, einschließlich des H.264-Encoders, verwenden den Typ **VT_BOOL.**
+> In der aktuellen Implementierung verwendet der Media Foundation H.264-Decoder den VT_UI4 **für** diese Eigenschaft. Alle anderen Implementierungen, einschließlich des H.264-Encoders, verwenden den **Typ VT_BOOL.**
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ Desktop-Apps \| UWP-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | UWP-Apps für Windows Server \[ 2012-Desktop-Apps \|\]<br/>                           |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Desktop-Apps \| UWP-Apps\]<br/>                           |
 | Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 

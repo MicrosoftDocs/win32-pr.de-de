@@ -1,19 +1,19 @@
 ---
-description: Gibt den Zeitstempel für den letzten Frame Schritt an.
+description: Gibt den Zeitstempel für den letzten Frameschritt an.
 ms.assetid: 2c2ef8b8-7bee-4cd8-ad87-b48d6a48aa0e
-title: EC_SCRUB_TIME (DShow. h)
+title: EC_SCRUB_TIME (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 530362520f8e80ef06a769383f82dee1d60d66c2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3d4d3cc09d286f6955dda30aeb77288b75e90e8c66777a5f9f16246507f64b45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361306"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119686090"
 ---
-# <a name="ec_scrub_time"></a>\_Zeit für \_ Zeit Bereinigung
+# <a name="ec_scrub_time"></a>\_ \_ EC-REINIGUNGSZEIT
 
-Gibt den Zeitstempel für den letzten Frame Schritt an.
+Gibt den Zeitstempel für den letzten Frameschritt an.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,9 +37,9 @@ Gibt den Zeitstempel für den letzten Frame Schritt an.
 
 Keine.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Präsentator für den " [**Enhanced Video Renderer**](enhanced-video-renderer-filter.md) "-Filter (EVR) sendet diese Nachricht an den EVR, wenn er einen Frame Schritt abschließt.
+Der Moderator für den EVR-Filter [**(Enhanced Video Renderer)**](enhanced-video-renderer-filter.md) sendet diese Nachricht an den EVR, wenn er einen Frameschritt abgeschlossen hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,7 +47,7 @@ Der Präsentator für den " [**Enhanced Video Renderer**](enhanced-video-rendere
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Der Präsentator für den " [**Enhanced Video Renderer**](enhanced-video-rendere
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> </dl>
 
  

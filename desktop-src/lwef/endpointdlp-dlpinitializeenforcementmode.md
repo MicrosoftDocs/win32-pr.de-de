@@ -1,5 +1,5 @@
 ---
-description: Benachrichtigt das System über die gewünschten Erzwingungsmodi für eine Reihe von DLP-Vorgängen (Endpoint Data Loss Prevention).
+description: Benachrichtigt das System über die gewünschten Erzwingungsmodi für eine Reihe von Endpunktvorgängen zur Verhinderung von Datenverlust (Data Loss Prevention, DLP).
 title: DlpInitializeEnforcementMode-Funktion (endpointdlp.h)
 ms.topic: reference
 ms.date: 03/18/2021
@@ -12,12 +12,12 @@ api_type:
 - DllExport
 api_location:
 - EndpointDlp.dll
-ms.openlocfilehash: cff3e1609f15f2cbbe6f6d9f76c6433ba3f4e5d7
-ms.sourcegitcommit: 91110c16e4713ed82d7fb80562d3ddf40b5d76b2
+ms.openlocfilehash: be1e71782b258745e31d286a69ae76d3ecbcafb74c170f3b5baf5eb19bcc4b4b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "107495730"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119610440"
 ---
 # <a name="dlpinitializeenforcementmode-function"></a>DlpInitializeEnforcementMode-Funktion
 
@@ -39,7 +39,7 @@ HRESULT WINAPI DlpInitializeEnforcementMode(_In_ DWORD Count, _In_reads_(Count) 
 *Anzahl* \[ In\]
 </dt> <dd>
 
-Ein **DWORD,** das die Anzahl von Vorgängen angibt, die im *OperationEnforcement-Array* enthalten sind.
+Ein **DWORD,** das die Anzahl der im *OperationEnforcement-Array enthaltenen Vorgänge an* gibt.
 
 </dd> </dl>
 
@@ -48,7 +48,7 @@ Ein **DWORD,** das die Anzahl von Vorgängen angibt, die im *OperationEnforcemen
 *OperationEnforcement* \[ In\]
 </dt> <dd>
 
-Ein Array von [DLP_APP_OP_ENLIGHTENED_LEVEL](endpointdlp-dlp_app_op_enlightened_level.md) Strukturen, die die Erzwingungsebene für einen Endpunkt-DLP-Vorgang angeben.
+Ein Array von [DLP_APP_OP_ENLIGHTENED_LEVEL,](endpointdlp-dlp_app_op_enlightened_level.md) die die Erzwingungsebene für einen Endpunkt-DLP-Vorgang angeben.
 
 </dd> </dl>
 
@@ -57,11 +57,11 @@ Ein Array von [DLP_APP_OP_ENLIGHTENED_LEVEL](endpointdlp-dlp_app_op_enlightened_
 
 Gibt ein HRESULT zurück, einschließlich, aber nicht beschränkt auf die folgenden Werte.
 
-| HRESULT | BESCHREIBUNG |
+| HRESULT | Beschreibung |
 |---------|-------------|
 | S_OK | Die Funktion wurde erfolgreich abgeschlossen. |
 | E_INVALIDARG | Mindestens einer der Funktionsparameter ist ungültig. |
-| E_OUTOFMEMORY | Fehler bei der Speicherbelegung für den Vorgang. |
+| E_OUTOFMEMORY | Fehler bei der Speicherzuweisung für den Vorgang. |
 
 
 

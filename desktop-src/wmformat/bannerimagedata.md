@@ -1,9 +1,9 @@
 ---
-title: Bannerimagedata
-description: Das Attribut "bannerimagedata" enthält ein Banner Bild zu brandingzwecken. Der Typ des Bilds, das in diesem Attribut enthalten ist, wird durch das Attribut "bannerimagetype" beschrieben.
+title: BannerImageData
+description: Das BannerImageData-Attribut enthält ein Bannerbild zu Brandingzwecken. Der Typ des Bilds, das dieses Attribut enthält, wird durch das BannerImageType-Attribut beschrieben.
 ms.assetid: ce9b0692-ae0b-4a23-b38c-3a1df830fac2
 keywords:
-- Bannerimagedata-Windows Media-Format
+- BannerImageData-Fenstermedienformat
 topic_type:
 - apiref
 api_name:
@@ -12,39 +12,39 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 17f7153bdd95b0807f8fe94e20c9f7fef6bb17f5
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: a424216d420b36ec5ff5679167fcfabdb8a4bf89e5cf6edc2eb4e1715669785b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104038155"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119709390"
 ---
-# <a name="bannerimagedata"></a>Bannerimagedata
+# <a name="bannerimagedata"></a>BannerImageData
 
-Das Attribut " **bannerimagedata** " enthält ein Banner Bild zu brandingzwecken. Der Typ des Bilds, das in diesem Attribut enthalten ist, wird durch das Attribut " [**bannerimagetype**](bannerimagetype.md) " beschrieben.
+Das **BannerImageData-Attribut** enthält ein Bannerbild zu Brandingzwecken. Der Typ des Bilds, das dieses Attribut enthält, wird durch das [**BannerImageType-Attribut**](bannerimagetype.md) beschrieben.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmbannerimagedata
+g \_ wszWMBannerImageData
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ typbinär Datei**
+**\_WMT-TYP \_ BINARY**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das in diesem Attribut gespeicherte Image kann im Bitmap-, JPEG-oder GIF-Format vorliegen.
+Das in diesem Attribut gespeicherte Bild kann im Bitmap-, JPEG- oder GIF-Format vorliegen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

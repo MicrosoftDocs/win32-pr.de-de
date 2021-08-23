@@ -1,29 +1,29 @@
 ---
-description: 'Es kann vorkommen, dass Sie eine Offscreen-Bitmap erstellen möchten, die über die folgenden Eigenschaften verfügt:'
+description: 'Es kann manchmal sein, dass Sie eine Bitmap im Off-Screen-Format erstellen möchten, die die folgenden Merkmale aufweist:'
 ms.assetid: 2a7590ce-daf4-4892-a838-603e3f89b1bb
-title: Verwenden des Compositing-Modus zum Steuern der Alpha Mischung
+title: Verwenden des Compositing-Modus zum Steuern des Alphablendings
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: db54c71ac9687a1ddf28db09b922b7799d0ebaa3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2ea2fc9d5be10e3a73bacf7f5a6dc5cbecb8c2992ac8cd961701f55fc2cb524d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119611986"
 ---
-# <a name="using-compositing-mode-to-control-alpha-blending"></a>Verwenden des Compositing-Modus zum Steuern der Alpha Mischung
+# <a name="using-compositing-mode-to-control-alpha-blending"></a>Verwenden des Compositing-Modus zum Steuern des Alphablendings
 
-Es kann vorkommen, dass Sie eine Offscreen-Bitmap erstellen möchten, die über die folgenden Eigenschaften verfügt:
+Es kann manchmal sein, dass Sie eine Bitmap im Off-Screen-Format erstellen möchten, die die folgenden Merkmale aufweist:
 
--   Farben haben alpha-Werte, die kleiner als 255 sind.
--   Farben werden bei der Erstellung der Bitmap nicht mit einander gemischt.
--   Wenn Sie die fertige Bitmap anzeigen, werden Farben in der Bitmap mit den Hintergrundfarben auf dem Anzeigegerät gemischt.
+-   Farben haben Alphawerte, die kleiner als 255 sind.
+-   Farben werden beim Erstellen der Bitmap nicht alphablendet.
+-   Wenn Sie die fertige Bitmap anzeigen, werden Farben in der Bitmap mit den Hintergrundfarben auf dem Anzeigegerät kombiniert.
 
-Um eine solche Bitmap zu erstellen, erstellen Sie ein leeres [**Bitmap**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-bitmap) -Objekt, und erstellen Sie dann auf der Grundlage dieser Bitmap ein [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt. Legen Sie den Zusammensetzung-Modus des **Grafik** Objekts auf compositingmodesourcecopy fest.
+Um eine solche Bitmap zu [](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-bitmap) erstellen, erstellen Sie ein leeres Bitmap-Objekt, und erstellen Sie dann ein [**Grafikobjekt**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) basierend auf dieser Bitmap. Legen Sie den Compositing-Modus des **Grafikobjekts** auf CompositingModeSourceCopy fest.
 
-Im folgenden Beispiel wird ein [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt erstellt, das auf einem [**Bitmap**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-bitmap) -Objekt basiert. Der Code verwendet das **Grafik** Objekt zusammen mit zwei semitransparenten Pinseln (Alpha = 160), um die Bitmap zu zeichnen. Der Code füllt eine rote Ellipse und eine grüne Ellipse mithilfe der semitransparenten Pinsel. Die grüne Ellipse überlappt die rote Ellipse, das grüne wird jedoch nicht mit der roten Ellipse kombiniert, da der Zusammensetzung-Modus des **Grafik** Objekts auf compositingmodesourcecopy festgelegt ist.
+Im folgenden Beispiel wird ein [**Grafikobjekt basierend**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) auf einem [**Bitmap-Objekt**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-bitmap) erstellt. Der Code verwendet das **Grafikobjekt** zusammen mit zwei halbtransparenten Pinseln (Alpha = 160), um die Bitmap zu zeichnen. Der Code füllt eine rote Ellipse und eine grüne Ellipse mithilfe der halbtransparenten Pinsel. Die grüne Ellipse überlappt die rote Ellipse, aber das grüne wird nicht mit dem roten überblendet, da der Compositing-Modus des **Graphics-Objekts** auf CompositingModeSourceCopy festgelegt ist.
 
-Im nächsten Schritt bereitet der Code das Zeichnen auf dem Bildschirm vor, indem [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) aufgerufen und ein [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt auf der Grundlage eines Geräte Kontexts erstellt wird. Der Code zeichnet die Bitmap zweimal auf dem Bildschirm: einmal auf einem weißen Hintergrund und einmal in einem mehrfarbigen Hintergrund. Die Pixel in der Bitmap, die Teil der beiden Ellipsen sind, haben eine Alpha Komponente von 160, sodass die Ellipsen mit den Hintergrundfarben auf dem Bildschirm kombiniert werden.
+Als Nächstes bereitet der Code das Zeichnen auf dem Bildschirm vor, indem [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) aufruft und ein [**Grafikobjekt**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) basierend auf einem Gerätekontext erstellt wird. Der Code zeichnet die Bitmap zweimal auf dem Bildschirm: einmal auf einem weißen Hintergrund und einmal auf einem mehrfarbigen Hintergrund. Die Pixel in der Bitmap, die Teil der beiden Ausellipsen sind, haben eine Alphakomponente von 160, sodass die Ausellipsen mit den Hintergrundfarben auf dem Bildschirm kombiniert werden.
 
 
 ```
@@ -65,11 +65,11 @@ EndPaint(hWnd, &ps);
 
 
 
-Die folgende Abbildung zeigt die Ausgabe des vorangehenden Codes. Beachten Sie, dass die Ellipsen mit dem Hintergrund kombiniert werden, aber nicht miteinander vermischt werden.
+Die folgende Abbildung zeigt die Ausgabe des vorangehenden Codes. Beachten Sie, dass die Ausellipsen mit dem Hintergrund kombiniert werden, aber nicht miteinander kombiniert werden.
 
-![Abbildung: zwei anders farbige Ellipsen, die jeweils mit dem mehrfarbigen Hintergrund kombiniert werden](images/sourcecopy.png)
+![Abbildung mit zwei unterschiedlich farbigen Ellipsen, von denen jede mit ihrem mehrfarbigen Hintergrund kombiniert wird](images/sourcecopy.png)
 
-Das vorangehende Codebeispiel enthält die folgende-Anweisung:
+Das vorangehende Codebeispiel verfügt über die folgende Anweisung:
 
 
 ```
@@ -78,7 +78,7 @@ bitmapGraphics.SetCompositingMode(CompositingModeSourceCopy);
 
 
 
-Wenn Sie möchten, dass die Ellipsen miteinander und mit dem Hintergrund kombiniert werden sollen, ändern Sie die Anweisung wie folgt:
+Wenn die Ausellipsen miteinander und mit dem Hintergrund kombiniert werden sollen, ändern Sie diese Anweisung wie folgt:
 
 
 ```
@@ -89,7 +89,7 @@ bitmapGraphics.SetCompositingMode(CompositingModeSourceOver);
 
 Die folgende Abbildung zeigt die Ausgabe des überarbeiteten Codes.
 
-![Verwenden des Zusammensetzung-Modus zum Steuern der Alpha Blending-Darstellung](images/sourceover.png)
+![Verwenden des Compositingmodus zum Steuern der Alphablendingdarstellung](images/sourceover.png)
 
  
 

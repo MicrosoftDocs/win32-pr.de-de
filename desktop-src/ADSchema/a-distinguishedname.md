@@ -1,11 +1,11 @@
 ---
 title: Obj-Dist-Name-Attribut
-description: Identisch mit dem Distinguished Name für ein Objekt. Wird von Exchange verwendet.
+description: Identisch mit dem Distinguished Name für ein Objekt. Wird von Exchange.
 ms.assetid: 0dc2855c-2707-49d8-80e6-27f163a59bc8
 ms.tgt_platform: multiple
 keywords:
-- Obj-Dist-Name-Attribut AD-Schema
-- das Attribut "-AD-Schema"
+- AD-Schema des Obj-Dist-Name-Attributs
+- distinguishedName-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 42cd118f38de78546b7b792bca3c8c9ef6d229cb
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ae6e4608a7f164a22cbf9ba3f0bbb93aed01026b8270c6b1145ee110b4221af1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859449"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119706380"
 ---
 # <a name="obj-dist-name-attribute"></a>Obj-Dist-Name-Attribut
 
-Identisch mit dem Distinguished Name für ein Objekt. Wird von Exchange verwendet.
+Identisch mit dem Distinguished Name für ein Objekt. Wird von Exchange.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
 | CN                | Obj-Dist-Name                           |
-| LDAP-Display-Name | distinguishedName                       |
+| Ldap-Anzeigename | distinguishedName                       |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.        |
-| Aktualisierungshäufigkeit  | Jedes Mal, wenn ein Objekt erstellt oder verschoben wird. |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.        |
+| Updatehäufigkeit  | Jedes Mal, wenn ein Objekt erstellt oder verschoben wird. |
 | Attribute-Id      | 2.5.4.49                                |
-| System-ID-GUID    | bf9679e4-0de6-11d0-a285-00aa003049e2    |
+| System-Id-Guid    | bf9679e4-0de6-11d0-a285-00aa003049e2    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -43,7 +43,7 @@ Identisch mit dem Distinguished Name für ein Objekt. Wird von Exchange verwende
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -57,12 +57,12 @@ Identisch mit dem Distinguished Name für ein Objekt. Wird von Exchange verwende
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x803c                          |
+| MAPI-Id                | 0x803C                          |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000008                      |
@@ -71,19 +71,19 @@ Identisch mit dem Distinguished Name für ein Objekt. Wird von Exchange verwende
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x803c                          |
+| MAPI-Id                | 0x803C                          |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000008                      |
@@ -99,12 +99,12 @@ Identisch mit dem Distinguished Name für ein Objekt. Wird von Exchange verwende
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x803c                          |
+| MAPI-Id                | 0x803C                          |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000008                      |
@@ -120,12 +120,12 @@ Identisch mit dem Distinguished Name für ein Objekt. Wird von Exchange verwende
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x803c                          |
+| MAPI-Id                | 0x803C                          |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000008                      |
@@ -141,12 +141,12 @@ Identisch mit dem Distinguished Name für ein Objekt. Wird von Exchange verwende
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x803c                          |
+| MAPI-Id                | 0x803C                          |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000008                      |
@@ -162,12 +162,12 @@ Identisch mit dem Distinguished Name für ein Objekt. Wird von Exchange verwende
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x803c                          |
+| MAPI-Id                | 0x803C                          |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000008                      |
@@ -183,12 +183,12 @@ Identisch mit dem Distinguished Name für ein Objekt. Wird von Exchange verwende
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x803c                          |
+| MAPI-Id                | 0x803C                          |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000008                      |

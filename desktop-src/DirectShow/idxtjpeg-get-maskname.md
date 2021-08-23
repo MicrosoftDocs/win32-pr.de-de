@@ -1,7 +1,7 @@
 ---
-description: Die get \_ maskname-Methode ruft den Namen einer JPEG-Datei ab, die als abzurufende Maske verwendet werden soll.
+description: Die methode get \_ MaskName ruft den Namen einer JPEG-Datei ab, die als Zurücksetzungsmaske verwendet werden soll.
 ms.assetid: b21913c0-4269-41f9-b2f0-ae69be9c0871
-title: 'Idxtjpeg:: get_MaskName-Methode (qedit. h)'
+title: IDxtJpeg::get_MaskName-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: a00c8104ee19cac33a00ff9062006338a19e283b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d984f426289b9017ca316567b474beaa41b39a35f0ab012ea94ffdd8db33a36b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370004"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119584740"
 ---
-# <a name="idxtjpegget_maskname-method"></a>Idxtjpeg:: get \_ maskname-Methode
+# <a name="idxtjpegget_maskname-method"></a>IDxtJpeg::get \_ MaskName-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `get_MaskName` Methode ruft den Namen einer JPEG-Datei ab, die als abzurufende Maske verwendet werden soll.
+Die `get_MaskName` -Methode ruft den Namen einer JPEG-Datei ab, die als Zurücksetzungsmaske verwendet werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ HRESULT get_MaskName(
 
 <dl> <dt>
 
-*PVal* \[ Out, retval\]
+*pVal* \[ out, retval\]
 </dt> <dd>
 
 Empfängt den Dateinamen.
@@ -54,21 +54,21 @@ Empfängt den Dateinamen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der zurücksetzungübergang eines der integrierten SMPTE-setzt verwendet, die es unterstützt, ist der Wert dieser Eigenschaft eine leere Zeichenfolge.
+Wenn der Zurücksetzungsübergang eines der integrierten SMPTE-Zurücksetzungen verwendet, die er unterstützt, ist der Wert dieser Eigenschaft eine leere Zeichenfolge.
 
-Der Aufrufer muss die zurückgegebene Zeichenfolge mit der **sysfrestring** -Funktion freigeben.
+Der Aufrufer muss die zurückgegebene Zeichenfolge mithilfe der **SysFreeString-Funktion** veröffentlichen.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -78,8 +78,8 @@ Der Aufrufer muss die zurückgegebene Zeichenfolge mit der **sysfrestring** -Fun
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -87,10 +87,10 @@ Der Aufrufer muss die zurückgegebene Zeichenfolge mit der **sysfrestring** -Fun
 
 <dl> <dt>
 
-[**Idxtjpeg-Schnittstelle**](idxtjpeg.md)
+[**IDxtJpeg-Schnittstelle**](idxtjpeg.md)
 </dt> <dt>
 
-[**Idxtjpeg:: get \_ masknum**](idxtjpeg-get-masknum.md)
+[**IDxtJpeg::get \_ MaskNum**](idxtjpeg-get-masknum.md)
 </dt> </dl>
 
  

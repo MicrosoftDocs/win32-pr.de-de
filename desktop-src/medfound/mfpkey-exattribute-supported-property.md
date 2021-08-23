@@ -1,63 +1,63 @@
 ---
-description: Gibt an, ob eine Media Foundation Transformation (MFT) Attribute aus Eingabe Beispielen in Ausgabe Beispiele kopiert.
+description: Gibt an, ob Media Foundation -Transformation (MFT) Attribute aus Eingabebeispielen in Ausgabebeispiele kopiert.
 ms.assetid: 039ecb35-9aa9-4e8a-bbbc-042b9c4c874c
-title: MFPKEY_EXATTRIBUTE_SUPPORTED-Eigenschaft (MF Transform. h)
+title: MFPKEY_EXATTRIBUTE_SUPPORTED -Eigenschaft (Mftransform.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 33017111eba95f54e88671cbcf026b3f40812a08
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 248609828df3ef977112058ffe0d169104e68c181fa455ef27f2adcea0220aaa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864160"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119663509"
 ---
-# <a name="mfpkey_exattribute_supported-property"></a>\_Unterstützte Eigenschaft "mfpkey exattribute" \_
+# <a name="mfpkey_exattribute_supported-property"></a>MFPKEY \_ EXATTRIBUTE \_ SUPPORTED (Eigenschaft)
 
-Gibt an, ob eine Media Foundation Transformation (MFT) Attribute aus Eingabe Beispielen in Ausgabe Beispiele kopiert.
+Gibt an, ob Media Foundation -Transformation (MFT) Attribute aus Eingabebeispielen in Ausgabebeispiele kopiert.
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
-**Variant \_ bool**
+**VARIANT \_ BOOL**
 
-VT \_ bool
+VT \_ BOOL
 
-**Boolesche Werte**
-
-
-
-## <a name="remarks"></a>Bemerkungen
-
-Dieses Attribut kann die folgenden Werte aufweisen.
+**boolVal**
 
 
 
-| Wert              | BESCHREIBUNG                                                                                                                                             |
+## <a name="remarks"></a>Hinweise
+
+Dieses Attribut kann die folgenden Werte haben.
+
+
+
+| Wert              | Beschreibung                                                                                                                                             |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Variant \_ true**  | Die MFT kopiert Attribute aus den Eingabe Beispielen in die Ausgabe Beispiele.                                                                                 |
-| **Variant \_ false** | Die Medien Sitzung kopiert Attribute aus Eingabe Beispielen in Ausgabe Beispiele. Er überschreibt keine Attribute, die der MFT für die Ausgabe Beispiele festlegt. |
+| **VARIANT \_ TRUE**  | Der MFT kopiert Attribute aus den Eingabebeispielen in die Ausgabebeispiele.                                                                                 |
+| **VARIANT \_ FALSE** | Die Mediensitzung kopiert Attribute aus Eingabebeispielen in Ausgabebeispiele. Es werden keine Attribute überschrieben, die der MFT für die Ausgabebeispiele festschreibt. |
 
 
 
  
 
-Zum Abrufen dieses Attributs aufrufen Sie **QueryInterface** für die **IPropertyStore** -Schnittstelle.
+Um dieses Attribut zu erhalten, rufen **Sie QueryInterface** für MFT für die **IPropertyStore-Schnittstelle** auf.
 
-Der Standardwert ist **Variant \_ false**. Wenn die MFT die **IPropertyStore** -Schnittstelle nicht verfügbar macht oder diese Eigenschaft nicht festgelegt ist, wird der Wert als **Variant \_ false** behandelt.
+Der Standardwert ist **VARIANT \_ FALSE.** Wenn MFT die **IPropertyStore-Schnittstelle** nicht verfügbar macht oder diese Eigenschaft nicht festgelegt ist, behandeln Sie den Wert als **VARIANT \_ FALSE.**
 
 Diese Eigenschaft ist schreibgeschützt.
 
 > [!NOTE] 
-> Dieses Attribut gilt nicht für asynchrone MFTs. Attribute werden nicht unabhängig vom Wert dieses Attributs aus den Eingabe Beispielen in die Ausgabe Beispiele für asynchrone MFTs kopiert.
+> Dieses Attribut gilt nicht für asynchrone MFTs. Attribute werden unabhängig vom Wert dieses Attributs nicht aus den Eingabebeispielen in die Ausgabebeispiele für asynchrone MFTs kopiert.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird Variant true zurückgegeben, \_ Wenn ein MFT Beispiel Attribute kopiert.
+Im folgenden Beispiel wird VARIANT \_ TRUE zurückgegeben, wenn ein MFT Beispielattribute kopiert.
 
 
 ```C++
@@ -95,9 +95,9 @@ BOOL TransformCopiesSampleAttributes(IMFTransform *pMFT)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>"MF Transform. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Mftransform.h</dt> </dl> |
 
 
 
@@ -105,13 +105,13 @@ BOOL TransformCopiesSampleAttributes(IMFTransform *pMFT)
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
-[Beispiel Attribute](sample-attributes.md)
+[Beispielattribute](sample-attributes.md)
 </dt> <dt>
 
-[**IMF Transform::P rocess Output**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput)
+[**DURCHSICHTTransform::P rocessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput)
 </dt> </dl>
 
  

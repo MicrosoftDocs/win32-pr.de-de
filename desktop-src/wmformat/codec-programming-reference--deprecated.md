@@ -1,9 +1,9 @@
 ---
-title: Referenz zur Codec-Programmierung
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Referenz zur Codec-Programmierung
+title: Referenz zur Codecprogrammierung
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | Referenz zur Codecprogrammierung
 ms.assetid: c64b9479-aecc-4669-bc4b-9ddcdae92c9a
 keywords:
-- Referenz zur Codec-Programmierung Windows Media-Format
+- Codecprogrammierungsreferenz für Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fd0733923d234d0260f3c6e23dc90d0714585094
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: c31b87c8c984ced1525eaed181d3d9c562ba18435e6ede4e4aa5aee30dd5e9bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219131"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119709130"
 ---
-# <a name="codec-programming-reference"></a>Referenz zur Codec-Programmierung
+# <a name="codec-programming-reference"></a>Referenz zur Codecprogrammierung
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
  
 

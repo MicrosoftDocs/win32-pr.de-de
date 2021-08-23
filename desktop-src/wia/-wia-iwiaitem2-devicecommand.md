@@ -1,7 +1,7 @@
 ---
-description: Gibt einen Befehl für ein Windows-Abbild Erfassungs-Hardware Gerät (WIA) 2,0 aus.
+description: Gibt einen Befehl für ein Windows WiA 2.0-Hardwaregerät aus.
 ms.assetid: a077448f-2029-4fd3-8bce-c0291afd0b79
-title: IWiaItem2::D evicecommand-Methode (WIA. h)
+title: IWiaItem2::D eviceCommand-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 2961a3c0e0d1b75a487b9bf112e76bee8c937a72
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f70fd7b4a987dac3a079651f2cbc04dc50817ba8a43f8da1449a3f605683ba65
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119706310"
 ---
-# <a name="iwiaitem2devicecommand-method"></a>IWiaItem2::D evicecommand-Methode
+# <a name="iwiaitem2devicecommand-method"></a>IWiaItem2::D eviceCommand-Methode
 
-Gibt einen Befehl für ein Windows-Abbild Erfassungs-Hardware Gerät (WIA) 2,0 aus.
+Gibt einen Befehl für ein Windows WiA 2.0-Hardwaregerät aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT DeviceCommand(
 
 <dl> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
 Derzeit nicht verwendet. Sollte auf Null festgelegt werden.
 
 </dd> <dt>
 
-*pcmdguid* \[ in\]
+*pCmdGUID* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: * Konstante *GUID \** _
+Typ: **const \* GUID**
 
-Gibt den Befehl an, der an das WIA 2,0-Gerät gesendet werden soll. Weitere Informationen finden Sie unter [_ *WIA-Geräte Befehle* *](-wia-wia-device-commands.md).
+Gibt den Befehl an, der an das WIA 2.0-Gerät gesendet werden soll. Weitere Informationen [**finden Sie unter WIA-Gerätebefehle.**](-wia-wia-device-commands.md)
 
 </dd> <dt>
 
@@ -64,7 +64,7 @@ Gibt den Befehl an, der an das WIA 2,0-Gerät gesendet werden soll. Weitere Info
 
 Typ: **[ **IWiaItem2**](-wia-iwiaitem2.md)\*\***
 
-Empfängt die Adresse eines Zeigers auf das [**IWiaItem2**](-wia-iwiaitem2.md) Element, das vom Befehl erstellt wurde (sofern vorhanden).
+Empfängt die Adresse eines Zeigers auf das [**IWiaItem2-Element,**](-wia-iwiaitem2.md) das durch den Befehl erstellt wurde, sofern dies der Fall ist.
 
 </dd> </dl>
 
@@ -72,25 +72,25 @@ Empfängt die Adresse eines Zeigers auf das [**IWiaItem2**](-wia-iwiaitem2.md) E
 
 Typ: **HRESULT**
 
-Zusätzlich zu den Standard-COM-Fehlercodes kann die-Methode den folgenden Wert zurückgeben.
+Zusätzlich zu den STANDARDMÄßIGEN COM-Fehlercodes gibt die -Methode möglicherweise den folgenden Wert zurück.
 
 
 
 | Rückgabecode                                                                                       | Beschreibung                                                                                                                                                                          |
 |---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**E \_ cmdnotsupported**</dt> </dl> | Der-Befehl ist nicht für die [**IWiaItem2**](-wia-iwiaitem2.md) -Schnittstelle implementiert, für die die-Methode aufgerufen wird. Der numerische Wert für diesen Fehler ist noch nicht definiert. <br/> |
+| <dl> <dt>**E \_ CMDNOTSUPPORTED**</dt> </dl> | Der Befehl ist nicht für die [**IWiaItem2-Schnittstelle**](-wia-iwiaitem2.md) implementiert, für die die -Methode aufgerufen wird. Der numerische Wert für diesen Fehler ist noch nicht definiert. <br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Verhalten dieser Methode hängt von der Kategorie des Knotens ab, auf dem die Methode aufgerufen wird.
+Das Verhalten dieser Methode ist abhängig von der Kategorie des Knotens, auf dem die Methode aufgerufen wird, unterschiedlich.
 
-Wenn die Anwendung mithilfe der **IWiaItem2::D evicecommand** -Methode den Befehl [**Bild von WIA \_ cmd über \_ nehmen \_**](-wia-wia-device-commands.md) an das Gerät sendet, erstellt das WIA 2,0-Laufzeitsystem ein [**IWiaItem2**](-wia-iwiaitem2.md) -Objekt, das das Bild darstellt. Die **IWiaItem2::D evicecommand** -Methode speichert die Adresse der Schnittstelle im *ppIWiaItem2* -Parameter.
+Wenn die Anwendung den [**WIA \_ CMD \_ TAKE \_ PICTURE-Befehl**](-wia-wia-device-commands.md) mithilfe der **IWiaItem2::D eviceCommand-Methode** an das Gerät sendet, erstellt das WIA 2.0-Laufzeitsystem ein [**IWiaItem2-Objekt**](-wia-iwiaitem2.md) zur Darstellung des Bilds. Die **IWiaItem2::D eviceCommand-Methode** speichert die Adresse der Schnittstelle im *ppIWiaItem2-Parameter.*
 
-Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) -Methode für die Schnittstellen Zeiger aufrufen, die Sie über den *ppIWiaItem2* -Parameter empfangen.
+Anwendungen müssen die [IUnknown::Release-Methode für](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) die Schnittstellenzeigen aufrufen, die sie über den *ppIWiaItem2-Parameter* erhalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,10 +98,10 @@ Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

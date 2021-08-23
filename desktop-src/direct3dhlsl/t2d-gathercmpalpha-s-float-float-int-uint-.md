@@ -1,9 +1,9 @@
 ---
-title: 'Texture2D:: gathercmpalpha (S, float, float, int, uint)-Funktion'
-description: 'Für vier Texel-Werte, die in einem bilinearen Filter Vorgang verwendet werden, gibt einen Vergleich der Alpha Komponente mit einem Vergleichswert zusammen mit dem Status der Kachel Zuordnung zurück. | Texture2D:: gathercmpalpha (S, float, float, int, uint)-Funktion'
+title: Texture2D::GatherCmpAlpha(S,float,float,int,uint)-Funktion
+description: Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer Alphakomponente mit einem Vergleichswert zusammen mit dem Kachelzuordnungsstatus zurück. | Texture2D::GatherCmpAlpha(S,float,float,int,uint)-Funktion
 ms.assetid: 4E281512-2E0A-49A5-B568-8CE793A854F9
 keywords:
-- Gathercmpalpha-Funktion HLSL
+- GatherCmpAlpha-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2c9a323f0220a593d783de3e87e8dc8bce6f53a1
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: e5d4cc054d832bcaea7987fda26f8c000a7c6c2bbfe5e2f13366a99fcddb0e01
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219343"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119671180"
 ---
-# <a name="texture2dgathercmpalphasfloatfloatintuint-function"></a>Texture2D:: gathercmpalpha (S, float, float, int, uint)-Funktion
+# <a name="texture2dgathercmpalphasfloatfloatintuint-function"></a>Texture2D::GatherCmpAlpha(S,float,float,int,uint)-Funktion
 
-Für vier Texel-Werte, die in einem bilinearen Filter Vorgang verwendet werden, gibt einen Vergleich der Alpha Komponente mit einem Vergleichswert zusammen mit dem Status der Kachel Zuordnung zurück.
+Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer Alphakomponente mit einem Vergleichswert zusammen mit dem Kachelzuordnungsstatus zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,63 +46,63 @@ TemplateType GatherCmpAlpha(
 *S* \[ in\]
 </dt> <dd>
 
-Typ: **samplerstate**
+Typ: **SamplerState**
 
-Der null basierte samplerindex.
+Der nullbasierte Samplerindex.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Die Beispiel Koordinaten (u, v).
+Die Beispielkoordinaten (u,v).
 
 </dd> <dt>
 
-*CompareValue* \[ in\]
+*CompareValue* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Ein Wert, der jeweils mit jedem Stichproben Wert verglichen werden soll.
+Ein -Wert, der mit jedem Stichprobenwert verglichen werden soll.
 
 </dd> <dt>
 
-*Offset* \[ in\]
+*Offset* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Der Offset, der vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Der Offset, der vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Status* \[ vorgenommen\]
+*Status* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übergeben Sie stattdessen den Status an die systeminterne [**checkaccessfullymapping**](checkaccessfullymapped.md) -Funktion. **Checkaccessfullymapping** gibt **true** zurück, wenn alle Werte aus dem entsprechenden **Sample**-, **Gather**-oder **Load** -Vorgang auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte von einer nicht zugeordneten Kachel entnommen wurden, gibt **checkaccessfullymapping** den Wert **false** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die systeminterne [**CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE** zurück, wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte aus einer nicht zugeordneten Kachel stammen, gibt **CheckAccessFullyMapped** **FALSE** zurück.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **TemplateType**
+Typ: **TemplateType**
 
-Ein vier komponentenwert, dessen Typ mit dem Vorlagentyp identisch ist.
+Ein Wert mit vier Komponenten, dessen Typ mit dem Vorlagentyp identisch ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Textur Beispiele können für bilineare Interpolationen verwendet werden.
+Die Texturbeispiele können für die bilineare Interpolation verwendet werden.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -110,11 +110,11 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Gathercmpalpha-Methoden](texture2d-gathercmpalpha.md)
+[GatherCmpAlpha-Methoden](texture2d-gathercmpalpha.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-description: Im Autorisierungs-Manager ist eine Aufgabe eine allgemeine Aktion, die Benutzer einer Anwendung ausführen müssen. Aufgaben bestehen aus Vorgängen, bei denen es sich um Low-Level-Funktionen und-Methoden der Anwendung handelt.
+description: Im Autorisierungs-Manager ist eine Aufgabe eine aktion auf hoher Ebene, die Benutzer einer Anwendung abschließen müssen. Aufgaben besteht aus Vorgängen, bei denen es sich um Low-Level-Funktionen und -Methoden der Anwendung handelt.
 ms.assetid: a9a0202e-44c9-4192-8ff8-e22bddf26cfe
-title: Gruppieren von Vorgängen in Aufgaben in C++
+title: Gruppieren von Vorgängen in Tasks in C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c869db5dc5acbd4a7e7f9401ebbf97dea481c40
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: adfcfee2368a04fcd1b97faa6c27184371e047d0753080894c87d93c69957c5a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867835"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119672080"
 ---
-# <a name="grouping-operations-into-tasks-in-c"></a>Gruppieren von Vorgängen in Aufgaben in C++
+# <a name="grouping-operations-into-tasks-in-c"></a>Gruppieren von Vorgängen in Tasks in C++
 
-Im Autorisierungs-Manager ist eine Aufgabe eine allgemeine Aktion, die Benutzer einer Anwendung ausführen müssen. Aufgaben bestehen aus Vorgängen, bei denen es sich um Low-Level-Funktionen und-Methoden der Anwendung handelt. Anschließend wird eine Aufgabe den Rollen zugewiesen, die diese Aufgabe ausführen müssen. Eine Aufgabe wird durch ein [**iaztask**](/windows/desktop/api/Azroles/nn-azroles-iaztask) -Objekt dargestellt. Weitere Informationen zu Vorgängen und Aufgaben finden Sie unter [Vorgänge und Aufgaben](operations-and-tasks.md).
+Im Autorisierungs-Manager ist eine Aufgabe eine aktion auf hoher Ebene, die Benutzer einer Anwendung abschließen müssen. Aufgaben besteht aus Vorgängen, bei denen es sich um Low-Level-Funktionen und -Methoden der Anwendung handelt. Eine Aufgabe wird dann den Rollen zugewiesen, die diese Aufgabe ausführen müssen. Eine Aufgabe wird durch ein [**IAzTask-Objekt**](/windows/desktop/api/Azroles/nn-azroles-iaztask) dargestellt. Weitere Informationen zu Vorgängen und Aufgaben finden Sie unter [Vorgänge und Aufgaben.](operations-and-tasks.md)
 
-Im folgenden Beispiel wird gezeigt, wie Sie Vorgänge gruppieren, um eine Aufgabe zu erstellen. Im Beispiel wird davon ausgegangen, dass ein vorhandener XML-Richtlinien Speicher namens MyStore.xml im Stammverzeichnis des Laufwerks C vorhanden ist, dass dieser Speicher eine Anwendung mit dem Namen "Kosten" enthält und dass diese Anwendung Vorgänge enthält, die im Thema [Definieren von Vorgängen in C++](defining-operations-in-c--.md)definiert sind.
+Im folgenden Beispiel wird gezeigt, wie Vorgänge zum Erstellen einer Aufgabe gegruppen werden. Im Beispiel wird davon ausgegangen, dass im Stammverzeichnis von Laufwerk C ein XML-Richtlinienspeicher namens MyStore.xml vorhanden ist, dass dieser Speicher eine Anwendung namens Expense enthält und dass diese Anwendung Vorgänge enthält, die im Thema Definieren von [Vorgängen in C++](defining-operations-in-c--.md)definiert sind.
 
 
 ```C++

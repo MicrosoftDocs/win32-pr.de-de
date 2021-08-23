@@ -1,5 +1,5 @@
 ---
-description: Gibt eine MCA-, korrigierte Computer Überprüfung (CMC) oder einen korrigierten Platt Formfehler (CPE)-Informations Eintrag an. Diese Klasse ist nur in 64-Bit-Windows-Systemen verfügbar.
+description: Gibt einen MCA-, korrigierten Computerüberprüfungs- (CMC) oder korrigierten CpE-Informationseintrag (Platform Error) an. Diese Klasse ist nur in 64-Bit-Windows-Systemen verfügbar.
 ms.assetid: 4edbca20-2525-4e35-ab79-8cf421343144
 title: MSMCAInfo_Entry-Klasse
 ms.topic: reference
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - Wmiprov.dll
-ms.openlocfilehash: cda6abba06dc4d4f3fec3a4763391eee1fa81274
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8f6146d629678c1ee209738095fea901f0edb865bccb9aff2d4eeab02d18e773
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119640902"
 ---
-# <a name="msmcainfo_entry-class"></a>Msmcainfo- \_ Einstiegsklasse
+# <a name="msmcainfo_entry-class"></a>MSMCAInfo \_ Entry-Klasse
 
-Die **msmcainfo- \_ Einstiegs** Klasse zeigt eine MCA-, korrigierte Computer Überprüfung (SMTP) oder einen korrigierten Platt Formfehler (CPE)-Informations Eintrag an. Diese Klasse ist nur in 64-Bit-Windows-Systemen verfügbar.
+Die **MSMCAInfo \_ Entry-Klasse** gibt einen MCA-, korrigierten Computerüberprüfungs- (CMC) oder korrigierten CPE-Informationseintrag (Platform Error) an. Diese Klasse ist nur in 64-Bit-Windows-Systemen verfügbar.
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge sortiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,45 +40,45 @@ class MSMCAInfo_Entry : MSMCAInfo
 
 ## <a name="members"></a>Member
 
-Die **msmcainfo- \_ Einstiegs** Klasse verfügt über diese Typen von Membern:
+Die **MSMCAInfo \_ Entry-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **msmcainfo- \_ Einstiegs** Klasse verfügt über diese Eigenschaften.
+Die **MSMCAInfo \_ Entry-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Daten**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein ganzzahliges Array, das einen von der System Abstraktionsschicht (SAL) gemeldeten kompletten MCA-Fehler Daten Satz enthält. Der SAL wird in Rom verbrannt, den das Betriebssystem zum Ausführen von Platt Form abhängigen Vorgängen aufruft. Sie ähnelt dem BIOS auf einer x86-Plattform.
+Ganzzahliges Array, das einen vollständigen MCA-Fehlerdatensatz enthält, wie von der Systemabstraktionsschicht (SAL) gemeldet. Die SAL wird in ein ROM-Laufwerk verbraucht, das das Betriebssystem aufruft, um plattformabhängige Vorgänge auszuführen. Es ähnelt dem BIOS auf einer x86-Plattform.
 
 </dd> <dt>
 
 **Länge**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der Bytes im Fehler Daten Satz.
+Anzahl der Bytes im Fehlerdatensatz.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **msmcainfo- \_ Einstiegs** Klasse wird von [**msmcainfo**](msmcainfo.md)abgeleitet.
+Die **MSMCAInfo \_ Entry-Klasse** wird von [**MSMCAInfo**](msmcainfo.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,9 +87,9 @@ Die **msmcainfo- \_ Einstiegs** Klasse wird von [**msmcainfo**](msmcainfo.md)abg
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP<br/>                                                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                         |
-| Namespace<br/>                | WMI-Stammdatei \\<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                         |
+| Namespace<br/>                | Root \\ wmi<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>Wmicore.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wmiprov.dll</dt> </dl> |
 
 
@@ -101,7 +101,7 @@ Die **msmcainfo- \_ Einstiegs** Klasse wird von [**msmcainfo**](msmcainfo.md)abg
 [MSMCA-Klassen](msmca-classes.md)
 </dt> <dt>
 
-[**Msmcainfo**](msmcainfo.md)
+[**MSMCAInfo**](msmcainfo.md)
 </dt> </dl>
 
  

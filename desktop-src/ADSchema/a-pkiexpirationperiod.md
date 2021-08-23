@@ -1,11 +1,11 @@
 ---
-title: PKI-Ablaufzeit Periode-Attribut
-description: Der Gültigkeits Zeitraum für die Zertifikat Vorlage.
+title: PKI-Expiration-Period-Attribut
+description: Die Gültigkeitsdauer für die Zertifikatvorlage.
 ms.assetid: 6b3f7497-b156-4afe-ae93-ccb96d9ba403
 ms.tgt_platform: multiple
 keywords:
-- PKI-Ablaufzeit Attribut AD-Schema
-- pkiexpirationperiod-Attribut, AD-Schema
+- AD-Schema des PKI-Expiration-Period-Attributs
+- AD-Schema des pKIExpirationPeriod-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6553bbeb23c6b810c5fcb7b82a4ffdee0f303ee2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 0b25a2cb65aaa835f124eb7c5441afec40a8127bec1f84f0199e24e317468a63
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479967"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119647720"
 ---
-# <a name="pki-expiration-period-attribute"></a>PKI-Ablaufzeit Periode-Attribut
+# <a name="pki-expiration-period-attribute"></a>PKI-Expiration-Period-Attribut
 
-Der Gültigkeits Zeitraum für die Zertifikat Vorlage.
+Die Gültigkeitsdauer für die Zertifikatvorlage.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | PKI-Ablauf Zeitraum                                 |
-| LDAP-Display-Name | pkiexpirationperiod                                   |
+| CN                | PKI-Ablaufzeitraum                                 |
+| Ldap-Anzeigename | pKIExpirationPeriod                                   |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.1331                               |
-| System-ID-GUID    | 041570d2-3 b9e-11d2-90cc-00c04f d91ab1                  |
+| System-Id-Guid    | 041570d2-3b9e-11d2-90cc-00c04fd91ab1                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Der Gültigkeits Zeitraum für die Zertifikat Vorlage.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Der Gültigkeits Zeitraum für die Zertifikat Vorlage.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Der Gültigkeits Zeitraum für die Zertifikat Vorlage.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Der Gültigkeits Zeitraum für die Zertifikat Vorlage.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Der Gültigkeits Zeitraum für die Zertifikat Vorlage.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Ist einwertig       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Der Gültigkeits Zeitraum für die Zertifikat Vorlage.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Ist einwertig       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Der Gültigkeits Zeitraum für die Zertifikat Vorlage.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Ist einwertig       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 

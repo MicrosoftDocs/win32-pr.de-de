@@ -1,7 +1,7 @@
 ---
 description: Ruft die Bibliothek auf, um zu überprüfen, ob eine bestimmte CLSID sicher aufgerufen werden kann.
 ms.assetid: 94C8731B-88FD-4240-BF5D-2CD67C41B063
-title: Wldpisclassinapprovedlist-Funktion (wldp. h)
+title: WldpIsClassInApprovedList-Funktion (Wldp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - wldp.dll
-ms.openlocfilehash: 01762c60a3f1aef1574cc218ace9988669175efe
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ef4f6a719a1fe5146badbe59239dc16f9031f553ee8bba189c838dddcb641d8b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104125857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119642040"
 ---
-# <a name="wldpisclassinapprovedlist-function"></a>Wldpisclassinapprovedlist-Funktion
+# <a name="wldpisclassinapprovedlist-function"></a>WldpIsClassInApprovedList-Funktion
 
-Ruft die Bibliothek auf, um zu überprüfen, ob eine bestimmte **CLSID** sicher aufgerufen werden kann. Die Funktion verfügt über keine zugeordnete Import Bibliothek. Sie müssen die LoadLibrary-Funktion und die GetProcAddress-Funktion verwenden, um dynamisch mit wldp.dll zu verknüpfen.
+Ruft die Bibliothek auf, um zu überprüfen, ob eine bestimmte **CLSID** sicher aufgerufen werden kann. Der Funktion ist keine Importbibliothek zugeordnet. Sie müssen die Funktionen LoadLibrary und GetProcAddress verwenden, um dynamisch mit wldp.dll zu verknüpfen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,28 +42,28 @@ HRESULT WINAPI WldpIsClassInApprovedList(
 
 <dl> <dt>
 
-*ClassID* 
+*Classid* 
 </dt> <dd>
 
-Die com-Klassen-ID, die auf Genehmigung überprüft werden soll.
+Die COM-Klassen-ID, die auf Genehmigung überprüft werden soll.
 
 </dd> <dt>
 
-*Hostinformationen* \[ in\]
+*hostInformation* \[ In\]
 </dt> <dd>
 
-Eine [**wldp- \_ Host \_ Informations**](wldp-host-information.md) Struktur, die den zu bewertenden Host identifiziert.
+Eine [**\_ WLDP-HOSTINFORMATIONsstruktur, \_**](wldp-host-information.md) die den auszuwertenden Host identifiziert.
 
 </dd> <dt>
 
-*IsApproved* \[ vorgenommen\]
+*isApproved* \[ out\]
 </dt> <dd>
 
-Nach erfolgreichem Abschluss enthält **true** , wenn die Klassen-ID genehmigt ist. andernfalls **false**.
+Enthält nach erfolgreichem Abschluss **TRUE,** wenn die Klassen-ID genehmigt wurde. Andernfalls **FALSE**.
 
 </dd> <dt>
 
-*optionalflags* 
+*optionalFlags* 
 </dt> <dd>
 
 Dieser Parameter ist reserviert und muss auf 0 (null) festgelegt werden.
@@ -72,7 +72,7 @@ Dieser Parameter ist reserviert und muss auf 0 (null) festgelegt werden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt bei Erfolg **S \_ OK** zurück oder andernfalls einen Fehlercode.
+Diese Methode gibt **S \_ OK** zurück, wenn erfolgreich ist, oder andernfalls einen Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,9 +80,9 @@ Diese Methode gibt bei Erfolg **S \_ OK** zurück oder andernfalls einen Fehlerc
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Wldp. h</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Wldp.h</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>Wldp.dll</dt> </dl> |
 
 

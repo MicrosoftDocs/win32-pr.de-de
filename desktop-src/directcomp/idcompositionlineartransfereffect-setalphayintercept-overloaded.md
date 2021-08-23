@@ -1,9 +1,9 @@
 ---
-title: Idcompositionlineartransfereffect-Enumeratormethoden (Dcomp. h)
-description: Legt den Y-Abfang der linearen Funktion für den Alphakanal fest.
+title: IDCompositionLinearTransferEffect SetAlphaYIntercept-Methoden (Dcomp.h)
+description: Legt den Y-Intercept der linearen Funktion für den Alphakanal fest.
 ms.assetid: 7d0fa3a9-367b-4cb7-b6d2-db2f603f38bd
 keywords:
-- Setup für die Setup-Methode (directcomposition)
+- SetAlphaYIntercept-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,25 +12,25 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 34f6f0db5dbbed154f33a3eeca891048315cfbb6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a3e53d2b3d85a9a8dcf828f13206feb71f72ad0ab9e53f9356aede157936eb26
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364484"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119670860"
 ---
-# <a name="idcompositionlineartransfereffectsetalphayintercept-methods"></a>Idcompositionlineartransfereffect:: Setup Update-Methoden
+# <a name="idcompositionlineartransfereffectsetalphayintercept-methods"></a>IDCompositionLinearTransferEffect::SetAlphaYIntercept-Methoden
 
-Legt den Y-Abfang der linearen Funktion für den Alphakanal fest.
+Legt den Y-Intercept der linearen Funktion für den Alphakanal fest.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                           | BESCHREIBUNG                                                                   |
+| Methode                                                                                                           | Beschreibung                                                                   |
 |:-----------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
-| [**"Abfang"**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setalphayintercept(float))                               | Legt den Y-Abfang der linearen Funktion für den Alphakanal fest.<br/> |
-| [**"Setup Page Animation" (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setalphayintercept(idcompositionanimation)) | Legt den Y-Abfang der linearen Funktion für den Alphakanal fest.<br/> |
+| [**SetAlphayIntercept**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setalphayintercept(float))                               | Legt den Y-Intercept der linearen Funktion für den Alphakanal fest.<br/> |
+| [**SetAlphaYIntercept (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setalphayintercept(idcompositionanimation)) | Legt den Y-Intercept der linearen Funktion für den Alphakanal fest.<br/> |
 
 
 
@@ -40,7 +40,7 @@ Legt den Y-Abfang der linearen Funktion für den Alphakanal fest.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 
@@ -48,7 +48,7 @@ Legt den Y-Abfang der linearen Funktion für den Alphakanal fest.
 
 <dl> <dt>
 
-[**Idcompositionlineartransfereffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionlineartransfereffect)
+[**IDCompositionLinearTransferEffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionlineartransfereffect)
 </dt> </dl>
 
 �

@@ -1,49 +1,49 @@
 ---
 title: Namen in IStorage
-description: Ein Eigenschaften Satz wird in der IPropertySetStorage-Schnittstelle mit einem Format Bezeichner (fmtid) identifiziert.
+description: Ein Eigenschaftensatz wird mit einem Formatbezeichner (FMTID) in der IPropertySetStorage-Schnittstelle identifiziert.
 ms.assetid: 5f8eba37-c589-413e-9971-7ecb01dc6734
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6cef9417f2f5fad7fd17dcc3d431f1d3565a3843
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e17b1125f642d3f24e24fa6040bc5e55ca3d48b2384aac551680b84c1496900f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104516112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119662380"
 ---
 # <a name="names-in-istorage"></a>Namen in IStorage
 
-Ein Eigenschaften Satz wird in der [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) -Schnittstelle mit einem Format Bezeichner (fmtid) identifiziert. In der [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) -Schnittstelle wird ein Eigenschaften Satz mit einer null-terminierten Unicode-Zeichenfolge mit einer maximalen Länge von 32 Zeichen benannt. Um die Interoperabilität zu aktivieren, muss eine Zuordnung zwischen einer fmtid und einer entsprechenden mit NULL endenden Unicode-Zeichenfolge eingerichtet werden.
+Ein Eigenschaftensatz wird mit einem Formatbezeichner (FMTID) in der [**IPropertySetStorage-Schnittstelle**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) identifiziert. In der [**IStorage-Schnittstelle**](/windows/desktop/api/Objidl/nn-objidl-istorage) wird ein Eigenschaftensatz mit einer unicode-Zeichenfolge mit NULL-Terminierung und einer maximalen Länge von 32 Zeichen benannt. Um die Interoperabilität zu ermöglichen, muss eine Zuordnung zwischen einer FMTID und einer entsprechenden auf NULL terminierten Unicode-Zeichenfolge eingerichtet werden.
 
-## <a name="converting-a-property-set-from-a-fmtid-to-a-string-name"></a>Wandeln Sie einen Eigenschaften Satz von einer fmtid in einen Zeichen folgen Namen um.
+## <a name="converting-a-property-set-from-a-fmtid-to-a-string-name"></a>Konvertieren eines Eigenschaftensets aus einer FMTID in einen Zeichenfolgennamen
 
-Wenn Sie von einer fmtid in einen entsprechenden Unicode-Zeichen folgen Namen umrechnen, überprüfen Sie zunächst, ob fmtid ein bekannter Wert ist, der in der folgenden Tabelle aufgeführt ist. Wenn dies der Fall ist, verwenden Sie den entsprechenden bekannten Zeichen folgen Namen.
+Wenn Sie eine FMTID-Datei in einen entsprechenden Unicode-Zeichenfolgennamen konvertieren, überprüfen Sie zunächst, ob fmtid ein bekannter Wert ist, der in der folgenden Tabelle aufgeführt ist. Wenn dies der Wert ist, verwenden Sie den entsprechenden bekannten Zeichenfolgennamen.
 
-| FMTID                                                                                | Zeichenfolgenname                       | Tischer                                                         |
+| FMTID                                                                                | Zeichenfolgenname                       | Semantische                                                         |
 |--------------------------------------------------------------------------------------|-----------------------------------|------------------------------------------------------------------|
-| F29F85E0-4FF9-1068-AB91-08002B27B3D9                                                 | " \\ 005summaryinformation"         | COM2 Zusammenfassungs Informationen                                         |
-| D5CDD502-2E9C-101B-9397-08002B2CF9AE D5CDD505-2E9C-101B-9397-08002B2CF9AE<br/> | " \\ 005documentsummaryinformation" | Zusammenfassende Informationen zu Office-Dokumenten und benutzerdefinierte Eigenschaften. |
+| F29F85E0-4FF9-1068-AB91-08002B27B3D9                                                 | " \\ 005SummaryInformation"         | COM2-Zusammenfassungsinformationen                                         |
+| D5CDD502-2E9C-101B-9397-08002B2CF9AE D5CDD505-2E9C-101B-9397-08002B2CF9AE<br/> | " \\ 005DocumentSummaryInformation" | Office Dokumentzusammenfassungsinformationen und benutzerdefinierte Eigenschaften. |
 
 
 
  
 
 > [!Note]  
-> Die Eigenschaften Sätze " **documentsummaryinformation** " und " **UserDefined** " sind insofern eindeutig, als Sie zwei Abschnitte enthalten. In keinem anderen Eigenschaften Satz sind mehrere Abschnitte zulässig. Weitere Informationen finden Sie unter [Format des serialisierten genserialisierten Speichers](structured-storage-serialized-property-set-format.md)und [der Eigenschaften Sätze "documentsummaryinformation" und "UserDefined](the-documentsummaryinformation-and-userdefined-property-sets.md)". Der erste Abschnitt wurde als Teil von com definiert. die zweite wurde durch Microsoft Office definiert.
+> Der **Eigenschaftensatz DocumentSummaryInformation** **und UserDefined** ist eindeutig, da er zwei Abschnitte enthält. Mehrere Abschnitte sind in einem anderen Eigenschaftensatz nicht zulässig. Weitere Informationen finden Sie unter [Structured Storage Serialized Property Set Format](structured-storage-serialized-property-set-format.md)und The [DocumentSummaryInformation and UserDefined Property Sets](the-documentsummaryinformation-and-userdefined-property-sets.md). Der erste Abschnitt wurde als Teil von COM definiert. die zweite wurde durch Microsoft Office.
 
  
 
-Wenn die fmtid kein bekannter Wert ist, verwenden Sie das folgende Verfahren, um einen Zeichen folgen Namen algorithmisch zu bilden.
+Wenn fmtid kein bekannter Wert ist, verwenden Sie das folgende Verfahren, um einen Zeichenfolgennamen algorithmusisch zu bilden.
 
-**So bilden Sie einen Zeichen folgen Namen algorithmisch**
+**So bilden Sie einen Zeichenfolgennamen algorithmisch**
 
-1.  Konvertieren Sie ggf. die fmtid in eine Little-Endian-Byte Reihenfolge.
-2.  Nehmen Sie die 128 Bits der fmtid, und betrachten Sie Sie als eine lange Bitzeichenfolge, indem Sie die einzelnen Bytes miteinander verketten. Das erste Bit des 128-Bit-Werts ist das am wenigsten bedeutende Bit des ersten Bytes im Arbeitsspeicher der fmtid. das letzte Bit des 128-Bit-Werts ist das signifikanteste Bit des letzten Bytes im Arbeitsspeicher der fmtid. Erweitern Sie diese 128 Bits auf 130 Bits, indem Sie zwei Bits am Ende hinzufügen.
-3.  Dividieren Sie die 130 Bits in Gruppen mit fünf Bits. Es gibt 26 solche Gruppen. Stellen Sie jede Gruppe als ganze Zahl mit umgekehrter bitrangfolge in Erwägung. Beispielsweise ist das erste der 128 Bits das am wenigsten bedeutende Bit der ersten Gruppe von fünf Bits. das fünfte der 128 Bits ist das signifikanteste Bit der ersten Gruppe.
-4.  Ordnen Sie die einzelnen ganzen Zahlen als Index dem Array von 32 Zeichen zu: ABCDEFGHIJKLMNOPQRSTUVWXYZ012345. Dies ergibt eine Sequenz von 26 Unicode-Zeichen, die nur Großbuchstaben und Ziffern verwendet. Überlegungen zur Groß-/Kleinschreibung sollten nicht beachtet werden, sodass jedes Zeichen in jedem Gebiets Schema eindeutig ist.
-5.  Erstellen Sie die endgültige Zeichenfolge, indem Sie die Zeichenfolge " \\ 005" an der Vorderseite dieser 26 Zeichen mit einer Gesamtlänge von 27 Zeichen verketten.
+1.  Konvertieren Sie die FMTID bei Bedarf in die Little-Endian-Byte reihenfolge.
+2.  Nehmen Sie die 128 Bits des FMTID, und betrachten Sie sie als eine Long-Bit-Zeichenfolge, indem Sie jedes der Bytes miteinander verketten. Das erste Bit des 128-Bit-Werts ist das am wenigsten signifikante Bit des ersten Byte im Arbeitsspeicher des FMTID. Das letzte Bit des 128-Bit-Werts ist das wichtigste Bit des letzten Byte im Arbeitsspeicher der FMTID. Erweitern Sie diese 128 Bits auf 130 Bit, indem Sie am Ende zwei Nullbits hinzufügen.
+3.  Teilen Sie die 130 Bits in Gruppen von fünf Bits auf. Es werden 26 solcher Gruppen verwendet. Betrachten Sie jede Gruppe als ganze Zahl mit umgekehrter Bit-Rangfolge. Beispielsweise ist das erste der 128 Bits das am wenigsten signifikante Bit der ersten Gruppe von fünf Bits. das fünfte der 128 Bits ist das wichtigste Bit der ersten Gruppe.
+4.  Ordnen Sie jede dieser ganzen Zahlen als Index dem Array mit 32 Zeichen zu: ABCDEFGHLMNOPQRSTUVWXYZ012345. Dies ergibt eine Sequenz von 26 Unicode-Zeichen, die nur Großbuchstaben und Ziffern verwendet. Überlegungen zur Groß-/Kleinschreibung und zur Berücksichtigung der Groß-/Kleinschreibung sind nicht zu berücksichtigen, sodass jedes Zeichen in einem beliebigen Locale eindeutig ist.
+5.  Erstellen Sie die endgültige Zeichenfolge, indem Sie die Zeichenfolge "005" mit einer Gesamtlänge von 27 Zeichen an den Front dieser \\ 26 Zeichen verketten.
 
-Der folgende Beispielcode zeigt, wie Sie eine Zuordnung von einer fmtid zu einer Eigenschaften Zeichenfolge durch sehen.
+Der folgende Beispielcode zeigt, wie eine FMTID einer Eigenschaftenzeichenfolge zuordnt.
 
 
 ```C++
@@ -95,11 +95,11 @@ VOID GuidToPropertyStringName(GUID *pguid, WCHAR awcname[]) {
 
 
 
-## <a name="converting-a-property-set-from-a-string-name-to-a-fmtid"></a>Wandeln eines Eigenschaften Satzes von einem Zeichen folgen Namen in eine fmtid
+## <a name="converting-a-property-set-from-a-string-name-to-a-fmtid"></a>Konvertieren eines Eigenschaftensets von einem Zeichenfolgennamen in eine FMTID
 
-Konverter von Eigenschafts Zeichenfolgen-Namen an GUIDs sollten Kleinbuchstaben als Synonym mit ihren Großbuchstaben akzeptieren.
+Konverter von Eigenschaftszeichenfolgennamen zu GUIDs sollten Kleinbuchstaben als Synonyme mit ihren Entsprechungen in Großbuchstaben akzeptieren.
 
-Der folgende Beispielcode zeigt, wie Sie eine Zuordnung von einer Eigenschafts Zeichenfolge zu einer fmtid durch sehen.
+Der folgende Beispielcode zeigt, wie sie eine Zuordnung von einer Eigenschaftenzeichenfolge zu einer FMTID ausführen.
 
 
 ```C++
@@ -218,9 +218,9 @@ fail:
 
 
 
-Wenn Sie versuchen, einen vorhandenen Eigenschaften Satz zu öffnen, wird in [IPropertySetStorage:: Open](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-open)die (root) fmtid wie oben beschrieben in eine Zeichenfolge konvertiert. Wenn ein [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) -Element mit diesem Namen vorhanden ist, wird es verwendet. Andernfalls schlägt das Öffnen fehl.
+Beim Versuch, einen vorhandenen Eigenschaftensatz zu öffnen, wird in [IPropertySetStorage::Open](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-open)der FMTID -Wert (root) in eine Zeichenfolge konvertiert, wie oben beschrieben. Wenn ein Element des [**IStorage-Elements**](/windows/desktop/api/Objidl/nn-objidl-istorage) dieses Namens vorhanden ist, wird es verwendet. Andernfalls schlägt das Öffnen fehl.
 
-Wenn Sie einen neuen Eigenschaften Satz erstellen, bestimmt die oben genannte Zuordnung den verwendeten Zeichen folgen Namen.
+Beim Erstellen eines neuen Eigenschaftensets bestimmt die obige Zuordnung den verwendeten Zeichenfolgennamen.
 
  
 

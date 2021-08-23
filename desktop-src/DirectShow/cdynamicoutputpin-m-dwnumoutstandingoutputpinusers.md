@@ -1,7 +1,7 @@
 ---
-description: Anzahl der streamingthreads, die diese PIN verwenden.
+description: Anzahl der Streamingthreads, die diesen Pin verwenden.
 ms.assetid: f8650a17-edab-4d69-91da-78107c3c60b9
-title: 'Cdynamicoutputpin:: m_dwNumOutstandingOutputPinUsers Member (amfilter. h)'
+title: CDynamicOutputPin::m_dwNumOutstandingOutputPinUsers-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2ba214a2c1c6d3d056147db54c936cb61b73dcfc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 29fc593065af4252f58ce4bb08dd41fac82926dc11490377f6a8af614794b22a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352155"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119688710"
 ---
-# <a name="cdynamicoutputpinm_dwnumoutstandingoutputpinusers-member"></a>Cdynamicoutputpin:: m \_ dwnumoutstandingoutputpinusers-Member
+# <a name="cdynamicoutputpinm_dwnumoutstandingoutputpinusers-member"></a>CDynamicOutputPin::m \_ dwNumOutstandingOutputPinUsers-Member
 
-Anzahl der streamingthreads, die diese PIN verwenden.
+Anzahl der Streamingthreads, die diesen Pin verwenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,11 +36,11 @@ DWORD m_dwNumOutstandingOutputPinUsers;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cdynamicoutputpin:: startusingoutputpin**](cdynamicoutputpin-startusingoutputpin.md) -Methode erhöht diese Variable, und die [**cdynamicoutputpin:: stopusingoutputpin**](cdynamicoutputpin-stopusingoutputpin.md) -Methode dekretet diese Variable. Wenn der Wert größer als 0 (null) ist, verwendet ein Thread diese PIN, um Daten zu streamen oder den Verbindungstyp zu ändern. Die PIN kann nicht blockiert werden, wenn dies der Fall ist.
+Die [**CDynamicOutputPin::StartUsingOutputPin-Methode**](cdynamicoutputpin-startusingoutputpin.md) erhöht diese Variable, und die [**CDynamicOutputPin::StopUsingOutputPin-Methode**](cdynamicoutputpin-stopusingoutputpin.md) dekrementiert sie. Wenn der Wert größer als 0 (null) ist, verwendet ein Thread diesen Pin, um Daten zu streamen oder den Verbindungstyp zu ändern. Die Stecknadel kann nicht blockiert werden, während dies der Fall ist.
 
-Bevor Sie auf diese Variable zugreifen, halten Sie den kritischen Abschnitt [**cdynamicoutputpin:: m \_ blockstatus eLOCK**](cdynamicoutputpin-m-blockstatelock.md) .
+Bevor Sie auf diese Variable zugreifen, speichern Sie den kritischen Abschnitt [**CDynamicOutputPin::m \_ BlockStateLock.**](cdynamicoutputpin-m-blockstatelock.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,8 +48,8 @@ Bevor Sie auf diese Variable zugreifen, halten Sie den kritischen Abschnitt [**c
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -57,10 +57,10 @@ Bevor Sie auf diese Variable zugreifen, halten Sie den kritischen Abschnitt [**c
 
 <dl> <dt>
 
-[**Cdynamicoutputpin-Klasse**](cdynamicoutputpin.md)
+[**CDynamicOutputPin-Klasse**](cdynamicoutputpin.md)
 </dt> <dt>
 
-[**Cdynamicoutputpin:: streamingthreadusingoutputpin**](cdynamicoutputpin-streamingthreadusingoutputpin.md)
+[**CDynamicOutputPin::StreamingThreadUsingOutputPin**](cdynamicoutputpin-streamingthreadusingoutputpin.md)
 </dt> </dl>
 
  

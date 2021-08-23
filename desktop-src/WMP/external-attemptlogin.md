@@ -1,11 +1,11 @@
 ---
-title: Extern.-Anmelde Methode
-description: Mit der Methode "Methode" wird ein Dialogfeld angezeigt, in dem der Benutzer versuchen kann, sich beim Online Shop anzumelden.
+title: External.attemptLogin-Methode
+description: Die attemptLogin-Methode zeigt ein Dialogfeld an, damit sich der Benutzer beim Onlineshop anmelden kann.
 ms.assetid: 04fe476f-6d0e-4faa-9e4a-f87bed782205
 keywords:
-- Media Player der Methode "Methode"
-- Methode "-Anmeldung", Windows Media Player, externe Klasse
-- Externe Klasse, Windows Media Player, Methode "Methode anmelden"
+- attemptLogin-Windows Media Player
+- attemptLogin-Methode Windows Media Player , Externe Klasse
+- Externe Klasse Windows Media Player , attemptLogin-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 86958c241f2399efbe342371b8cd4cfd376ff628
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f7f967e812ff76dd11dfd9b4ff07a542d2575548519c3a52816fadf6302a719d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357688"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119649540"
 ---
-# <a name="externalattemptlogin-method"></a>Extern.-Anmelde Methode
+# <a name="externalattemptlogin-method"></a>External.attemptLogin-Methode
 
-Mit **der Methode "** Methode" wird ein Dialogfeld angezeigt, in dem der Benutzer versuchen kann, sich beim Online Shop anzumelden.
+Die **attemptLogin-Methode** zeigt ein Dialogfeld an, damit sich der Benutzer beim Onlineshop anmelden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Anmeldeversuch zu einer Änderung des Anmeldestatus führt, löst Windows Media Player das [onloginchange](external-onloginchange-event.md) -Ereignis aus.
+Wenn der Anmeldeversuch zu einer Änderung des Anmeldestatus führt, löst Windows Media Player [OnLoginChange-Ereignis](external-onloginchange-event.md) aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Wenn der Anmeldeversuch zu einer Änderung des Anmeldestatus führt, löst Windo
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 1-Online Speicher**](external-object-for-type-1-online-stores.md)
+[**Externes Objekt für Onlinespeicher vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> <dt>
 
-[**Externes. onloginchange-Ereignis**](external-onloginchange-event.md)
+[**External.OnLoginChange-Ereignis**](external-onloginchange-event.md)
 </dt> <dt>
 
-[**Extern. userloggedin**](external-userloggedin.md)
+[**External.userLoggedIn**](external-userloggedin.md)
 </dt> <dt>
 
-[**Iwmpcontentpartner:: Login**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-login)
+[**IWMPContentPartner::Login**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-login)
 </dt> <dt>
 
 [**Verwalten der Anmeldung**](managing-login.md)

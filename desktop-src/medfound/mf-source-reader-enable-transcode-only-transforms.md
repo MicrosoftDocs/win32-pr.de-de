@@ -1,33 +1,33 @@
 ---
-description: Ermöglicht es dem Quell Leser, Media Foundation Transformationen (MFTs) zu verwenden, die für die Transcodierung optimiert sind.
+description: Ermöglicht dem Quellleser die Verwendung Media Foundation Transformationen (MFTs), die für die Transcodierung optimiert sind.
 ms.assetid: 9463EB8C-2CA3-4F8F-8A2A-B1292879DD1B
-title: MF_SOURCE_READER_ENABLE_TRANSCODE_ONLY_TRANSFORMS-Attribut (mfreadwrite. h)
+title: MF_SOURCE_READER_ENABLE_TRANSCODE_ONLY_TRANSFORMS -Attribut (Mfreadwrite.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 04a9559254216a102613d97824601c004c71bfd2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8bc5362c93138ef301ac65ace799ad64d59ac9110af349822e0efa98d410686e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119605017"
 ---
-# <a name="mf_source_reader_enable_transcode_only_transforms-attribute"></a>MF- \_ Quell \_ Leser Aktivieren von \_ \_ transcode \_ only- \_ Attribut Transformationen
+# <a name="mf_source_reader_enable_transcode_only_transforms-attribute"></a>\_ \_ MF-QUELLLESER: \_ ENABLE \_ TRANSCODE ONLY \_ \_ TRANSFORMS-Attribut
 
-Ermöglicht es dem [Quell Leser](source-reader.md) , Media Foundation Transformationen (MFTs) zu verwenden, die für die Transcodierung optimiert sind.
+Ermöglicht dem [Quellleser](source-reader.md) die Verwendung Media Foundation Transformationen (MFTs), die für die Transcodierung optimiert sind.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-Als booleschen Wert behandeln.
+Als boolescher Wert behandeln.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Einige MFTs, insbesondere Decoder, sind für die Transcodierung und nicht für die Wiedergabe optimiert. Standardmäßig lädt der Quell Leser diese Transformationen nicht. Legen Sie dieses Attribut auf " **true** " fest, wenn Sie Transcodierung-MFTs mit dem Quell Leser verwenden möchten.
+Einige MFTs, insbesondere Decoder, sind für die Transcodierung und nicht für die Wiedergabe optimiert. Standardmäßig werden solche Transformationen vom Quellleser nicht geladen. Legen Sie dieses Attribut auf **TRUE** fest, wenn Sie MFTs mit dem Quellleser transcodieren möchten.
 
-Eine Anwendung kann dieses Attribut festlegen, wenn Sie die Daten nicht in Echtzeit verarbeitet (für die Transcodierung oder ähnliche Szenarien). Verwenden Sie andernfalls für die Echt Zeit Wiedergabe das Standardverhalten.
+Eine Anwendung kann dieses Attribut festlegen, wenn sie die Daten nicht in Echtzeit (für Transcodierung oder ähnliche Szenarien) verarbeiten kann. Verwenden Sie andernfalls für die Echtzeitwiedergabe das Standardverhalten.
 
-Intern bewirkt dieses Attribut, dass der Quell Leser beim Aufrufen von [**mftenumex**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex)das Flag **\_ \_ \_ transcode \_ only für das MFT-Enum-Flag** einschließt.
+Intern bewirkt dieses Attribut, dass der Quellleser das **Flag MFT \_ ENUM \_ FLAG \_ TRANSCODE \_ ONLY** enthält, wenn [**es MFTEnumEx aufruft.**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Intern bewirkt dieses Attribut, dass der Quell Leser beim Aufrufen von [**mftenu
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>"Mfreadwrite. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Mfreadwrite.h</dt> </dl> |
 
 
 
@@ -45,10 +45,10 @@ Intern bewirkt dieses Attribut, dass der Quell Leser beim Aufrufen von [**mftenu
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Quell Leser](source-reader.md)
+[Quellleser](source-reader.md)
 </dt> </dl>
 
  

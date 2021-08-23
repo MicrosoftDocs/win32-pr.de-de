@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentinvalidbuffersizeexception-Klasse'
-title: Esentinvalidbuffersizeexception-Klasse
+description: 'Weitere Informationen zu: EsentInvalidBufferSizeException-Klasse'
+title: EsentInvalidBufferSizeException-Klasse
 TOCTitle: EsentInvalidBufferSizeException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentInvalidBufferSizeException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidbuffersizeexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0dc693135124ba5d2979fa0f1a7ff80fcca27600
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6f3a8119eb774d86058d7fbf5f5ae6b96adecb9f2b3dc7214b6f41bef51dfb0d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119668737"
 ---
-# <a name="esentinvalidbuffersizeexception-class"></a>Esentinvalidbuffersizeexception-Klasse
+# <a name="esentinvalidbuffersizeexception-class"></a>EsentInvalidBufferSizeException-Klasse
 
-Basisklasse für JET_err. Invalidbuffersize-Ausnahmen.
+Basisklasse für JET_err. InvalidBufferSize-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentstateexception](./esentstateexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentinvalidbuffersizeexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentStateException](./esentstateexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentInvalidBufferSizeException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidbuffersizeexception-Member](./esentinvalidbuffersizeexception-members.md)
+[EsentInvalidBufferSizeException-Member](./esentinvalidbuffersizeexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

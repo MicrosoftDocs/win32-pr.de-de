@@ -1,10 +1,10 @@
 ---
-title: Loginshell-Attribut
-description: Enthält den Pfad zur Anmeldungs-Shell.
+title: loginShell-Attribut
+description: Enthält den Pfad zur Anmeldeshell.
 ms.assetid: 3052a028-3565-4af6-b8d4-4c0f4f5f4781
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des Loginshell-Attributs
+- loginShell-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f26353159648d0f8b738e6b28383f1d38ecb05e5
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: bf6771592e7e77b37108673913a4f56bf2e6a8145371c02d856078a2a9113917
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859471"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119705750"
 ---
-# <a name="loginshell-attribute"></a>Loginshell-Attribut
+# <a name="loginshell-attribute"></a>loginShell-Attribut
 
-Enthält den Pfad zur Anmeldungs-Shell.
+Enthält den Pfad zur Anmeldeshell.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Loginshell                           |
-| LDAP-Display-Name | Loginshell                           |
+| CN                | loginShell                           |
+| Ldap-Anzeigename | loginShell                           |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.3.6.1.1.1.1.4                      |
-| System-ID-GUID    | a553d12c-3231-4c5e-8adf-8d189697721e |
+| System-Id-Guid    | a553d12c-3231-4c5e-8adf-8d189697721e |
 | Syntax            | [**String(IA5)**](s-string-ia5.md)  |
 
 
@@ -54,11 +54,11 @@ Enthält den Pfad zur Anmeldungs-Shell.
 |------------------------|---------------------------------------------------|
 | Link-ID                | \-                                                |
 | MAPI-Id                | \-                                                |
-| System-Only            | False                                             |
-| Ist-einwertig       | Richtig                                              |
-| Ist indiziert             | False                                             |
-| Im globalen Katalog      | False                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                      |
+| System-Only            | Falsch                                             |
+| Is-Single-Valued       | Richtig                                              |
+| Ist indiziert             | Falsch                                             |
+| Im globalen Katalog      | Falsch                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                      |
 | Range-Lower            | \-                                                |
 | Range-Upper            | \-                                                |
 | Search-Flags           | 0x00000000                                        |
@@ -75,11 +75,11 @@ Enthält den Pfad zur Anmeldungs-Shell.
 |------------------------|---------------------------------------------------|
 | Link-ID                | \-                                                |
 | MAPI-Id                | \-                                                |
-| System-Only            | False                                             |
-| Ist-einwertig       | Richtig                                              |
-| Ist indiziert             | False                                             |
-| Im globalen Katalog      | False                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                      |
+| System-Only            | Falsch                                             |
+| Is-Single-Valued       | Richtig                                              |
+| Ist indiziert             | Falsch                                             |
+| Im globalen Katalog      | Falsch                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                      |
 | Range-Lower            | \-                                                |
 | Range-Upper            | \-                                                |
 | Search-Flags           | 0x00000000                                        |
@@ -96,11 +96,11 @@ Enthält den Pfad zur Anmeldungs-Shell.
 |------------------------|---------------------------------------------------|
 | Link-ID                | \-                                                |
 | MAPI-Id                | \-                                                |
-| System-Only            | False                                             |
-| Ist-einwertig       | Richtig                                              |
-| Ist indiziert             | False                                             |
-| Im globalen Katalog      | False                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                      |
+| System-Only            | Falsch                                             |
+| Is-Single-Valued       | Richtig                                              |
+| Ist indiziert             | Falsch                                             |
+| Im globalen Katalog      | Falsch                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                      |
 | Range-Lower            | \-                                                |
 | Range-Upper            | \-                                                |
 | Search-Flags           | 0x00000000                                        |
@@ -117,11 +117,11 @@ Enthält den Pfad zur Anmeldungs-Shell.
 |------------------------|---------------------------------------------------|
 | Link-ID                | \-                                                |
 | MAPI-Id                | \-                                                |
-| System-Only            | False                                             |
-| Ist-einwertig       | Richtig                                              |
-| Ist indiziert             | False                                             |
-| Im globalen Katalog      | False                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                      |
+| System-Only            | Falsch                                             |
+| Ist einwertig       | Richtig                                              |
+| Ist indiziert             | Falsch                                             |
+| Im globalen Katalog      | Falsch                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                      |
 | Range-Lower            | \-                                                |
 | Range-Upper            | \-                                                |
 | Search-Flags           | 0x00000000                                        |
@@ -130,7 +130,7 @@ Enthält den Pfad zur Anmeldungs-Shell.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

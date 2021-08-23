@@ -1,49 +1,49 @@
 ---
-description: Für konfigurierte Komponenten, die in com+-Anwendungen ausgeführt werden, sind Kontexte die Grundlage, auf der com+-Dienste bereitgestellt werden.
+description: Für konfigurierte Komponenten, die in COM+-Anwendungen ausgeführt werden, sind Kontexte die Grundlage, auf der COM+-Dienste bereitgestellt werden.
 ms.assetid: 62a0bef2-c3c2-4a60-a5d1-6c038958e13e
-title: Com+-Kontexte
+title: COM+-Kontexte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f0ae1228f89797f9124e817db07f11a23dbec12
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 71c48e2fb9a118bff5fe4d6590ff859f0f053ab29687d4f4a2a070d44af37b25
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393181"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119730650"
 ---
-# <a name="com-contexts"></a>Com+-Kontexte
+# <a name="com-contexts"></a>COM+-Kontexte
 
-Für konfigurierte Komponenten, die in com+-Anwendungen ausgeführt werden, sind *Kontexte* die Grundlage, auf der com+-Dienste bereitgestellt werden. In com+ wird ein Kontext als Satz von Lauf Zeiteigenschaften definiert, die einem oder mehreren COM-Objekten zugeordnet sind, die für die Bereitstellung von Diensten für diese Objekte verwendet werden.
+Für konfigurierte Komponenten, die in COM+-Anwendungen ausgeführt werden, sind *Kontexte* die Grundlage, auf der COM+-Dienste bereitgestellt werden. In COM+ wird ein Kontext als Satz von Laufzeiteigenschaften definiert, die einem oder mehrere COM-Objekten zugeordnet sind, die zum Bereitstellen von Diensten für diese Objekte verwendet werden.
 
-In com+ wird jedes COM-Objekt genau einem Kontext zugeordnet, während es ausgeführt wird (d. h. zwischen seiner Aktivierung und Deaktivierung), und jeder Kontext befindet sich in genau einem com-Apartment. Mehrere Objekte können innerhalb desselben Kontexts ausgeführt werden, und mehrere Kontexte können sich im selben Apartment befinden. Wird initialisiert, wenn ein Objekt aktiviert wird. Kontexteigenschaften, wie z. b. Sicherheitskontext Eigenschaften, stellen die Lauf Zeitanforderungen eines Objekts dar.
+In COM+ wird jedem COM-Objekt genau ein Kontext zugeordnet, während es ausgeführt wird (d. h. zwischen seiner Aktivierung und Deaktivierung), und jeder Kontext befindet sich genau in einem COM-Apartment. Mehrere Objekte können innerhalb desselben Kontexts ausgeführt werden, und mehrere Kontexte können sich innerhalb desselben Apartment befinden. Wenn ein Objekt aktiviert wird, stellen Kontexteigenschaften, z. B. Sicherheitskontexteigenschaften, die Laufzeitanforderungen eines Objekts dar.
 
 > [!Note]  
-> Für nicht konfigurierte Komponenten, die keine COM+-Dienste verwenden, wird der Kontext größtenteils ignoriert.
+> Bei nicht konfigurierten Komponenten, die keine COM+-Dienste verwenden, wird der Kontext größten teils ignoriert.
 
  
 
-Com+ verwendet Kontexteigenschaften als Grundlage für die Bereitstellung von Lauf Zeit Diensten. Diese Eigenschaften enthalten den Status, der bestimmt, wie die Ausführungsumgebung Dienste für Objekte innerhalb des Kontexts ausführt. In einigen Fällen können Sie direkt mit den Kontexteigenschaften eines Objekts interagieren, um einen Zustand anzugeben, der für einen Dienst relevant ist, der für das Objekt bereitgestellt wird. Dies wäre z. b. der Fall, wenn ein Objekt, das an einer automatischen Transaktion teilnimmt, das Ergebnis der Transaktion abwählt.
+COM+ verwendet Kontexteigenschaften als Grundlage für die Bereitstellung von Laufzeitdiensten. Diese Eigenschaften enthalten einen Zustand, der bestimmt, wie die Ausführungsumgebung Dienste für Objekte innerhalb des Kontexts ausführt. In einigen Fällen können Sie direkt mit den Kontexteigenschaften eines Objekts interagieren, um einen Zustand anzugeben, der für einen Dienst relevant ist, der für das Objekt bereitgestellt wird. Dies würden Sie beispielsweise tun, wenn ein Objekt, das an einer automatischen Transaktion beteiligt ist, über das Ergebnis der Transaktion abstimmet.
 
-Eine ausführliche Erläuterung der com-Grundlage dieser Konzepte finden Sie unter [Prozesse, Threads und Apartments](/windows/desktop/com/processes--threads--and-apartments).
+Eine ausführliche Erläuterung der COM-Grundlage dieser Konzepte finden Sie unter [Prozesse, Threads und Apartment](/windows/desktop/com/processes--threads--and-apartments).
 
 ## <a name="programmatic-interaction-with-context-properties"></a>Programmgesteuerte Interaktion mit Kontexteigenschaften
 
-Jeder Kontext verfügt über ein zugeordnetes [**ObjectContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-objectcontext) -Objekt, mit dem seine Eigenschaften nachverfolgt werden. Sie können auf **ObjectContext** zugreifen, indem Sie die [**GetObjectContext**](/windows/desktop/api/ComSvcs/nf-comsvcs-getobjectcontext) -Funktion aufrufen. Nachdem Sie auf **ObjectContext** zugegriffen haben, können Sie Methoden für die [**IObjectContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontext) -Schnittstelle aufrufen, die Sie zum Bearbeiten von Kontexteigenschaften verfügbar macht.
+Jedem Kontext ist ein [**ObjectContext-Objekt zugeordnet,**](/windows/desktop/api/ComSvcs/nn-comsvcs-objectcontext) das seine Eigenschaften nachverfolgt. Sie können auf **ObjectContext zugreifen,** indem Sie die [**GetObjectContext-Funktion**](/windows/desktop/api/ComSvcs/nf-comsvcs-getobjectcontext) aufrufen. Nachdem Sie auf **ObjectContext** zugegriffen haben, können Sie Methoden für die [**IObjectContext-Schnittstelle**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontext) aufrufen, die verfügbar macht, um Kontexteigenschaften zu bearbeiten.
 
-Wenn Sie z. [**b. IObjectContext:: SetComplete**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontext-setcomplete) aufrufen, wirkt sich das Transaktions Konsistenz Bit auf "konsistent" und die [JIT-Aktivierung](com--just-in-time-activation.md) auf "Done" in dem Kontext aus, der dem Objekt zugeordnet ist. "Konsistent" signalisiert com+, dass für die Transaktion ein Commit ausgeführt wird, und "Done" gibt an, dass das Objekt für die Deaktivierung bereit ist, wenn die Methode zurückgibt.
+Beispielsweise hat der Aufruf von [**IObjectContext::SetComplete**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontext-setcomplete) den Effekt, dass das Transaktionskonsistenzbit auf "consistent" und die [JIT-Aktivierungs-Done-Bit](com--just-in-time-activation.md) auf "done" im Kontext festgelegt wird, der dem -Objekt zugeordnet ist. "Konsistent" signalisiert COM+, dass Sie für den Commit der Transaktion abstimmen, und "done" gibt an, dass Ihr Objekt deaktiviert werden kann, wenn die Methode zurückgegeben wird.
 
-Zusätzlich zu [**IObjectContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontext)sind andere spezialisierte Schnittstellen, die Zugriff auf Kontexteigenschaften bereitstellen, [**IObjectContextInfo**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontextinfo), [**IContextState**](/windows/desktop/api/ComSvcs/nn-comsvcs-icontextstate)und [**IObjectContextActivity**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontextactivity). Zu einem bestimmten Block greift [**ISecurityCallContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallcontext) auch auf Kontexteigenschaften zu. Sie können [**igetsecuritycallcontext:: getsecuritycallcontext**](/windows/desktop/api/ComSvcs/nf-comsvcs-igetsecuritycallcontext-getsecuritycallcontext) zum Abrufen von **ISecurityCallContext** verwenden.
+Zusätzlich zu [**IObjectContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontext)sind [**IObjectContextInfo,**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontextinfo) [**IContextState**](/windows/desktop/api/ComSvcs/nn-comsvcs-icontextstate)und [**IObjectContextActivity**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontextactivity)weitere spezialisierte Schnittstellen, die Zugriff auf Kontexteigenschaften bieten. In einem bestimmten Umfang greifen [**ISecurityCallContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallcontext) auch auf Kontexteigenschaften zu. Sie können [**IGetSecurityCallContext::GetSecurityCallContext verwenden,**](/windows/desktop/api/ComSvcs/nf-comsvcs-igetsecuritycallcontext-getsecuritycallcontext) um **ISecurityCallContext zu erhalten.**
 
-## <a name="understanding-activation-and-interception"></a>Grundlegendes zu Aktivierung und Abfang
+## <a name="understanding-activation-and-interception"></a>Grundlegendes zu Aktivierung und Abfangen
 
-Im Allgemeinen müssen Sie den Kontext nur so betrachten, dass er eine Reihe von Eigenschaften darstellt, von denen Sie einige Eigenschaften festlegen oder die Sie für die Bereitstellung von COM+-Diensten für Ihre Komponenten verwenden können. In einigen Fällen müssen Sie jedoch möglicherweise die folgenden beiden miteinander verknüpften Facetten von Kontexten ausführlicher in Erwägung gezogen werden:
+Im Allgemeinen müssen Sie den Kontext nur in dem Umfang betrachten, in dem er eine Reihe von Eigenschaften darstellt, von denen sie einige festlegen oder erhalten können, die zum Bereitstellen von COM+-Diensten für Ihre Komponenten verwendet werden. In einigen Fällen müssen Sie jedoch möglicherweise die folgenden zwei miteinander verknüpften Facets von Kontexten ausführlicher betrachten:
 
--   [Kontext Aktivierung](context-activation.md)oder die Initialisierung eines Objekts in einem geeigneten Kontext.
--   [Abfang](interception-of-cross-context-calls.md)Vorgänge oder Aktionen, die com+ bei Aufrufen über eine Kontext Grenze hinweg durchführt.
+-   [Kontextaktivierung](context-activation.md)oder die Initialisierung eines Objekts in einem geeigneten Kontext.
+-   [Abfangen](interception-of-cross-context-calls.md)von , oder was COM+ bei Aufrufen über eine Kontextgrenze hinweg tut.
 
-## <a name="relation-to-mts-context-wrappers"></a>Beziehung zu MTS-Kontext Wrapper
+## <a name="relation-to-mts-context-wrappers"></a>Beziehung zu MTS-Kontext-Wrappern
 
-Kontexte ersetzen die MTS-Kontext Wrapper. Der Zweck der Bereitstellung – das Bereitstellen automatischer Dienste durch das Abfangen von Erstellungs Anforderungen – ist nun eine integrierte Funktion von com+. Folglich ist es nicht mehr erforderlich, die [**saferef**](/windows/desktop/api/ComSvcs/nf-comsvcs-saferef) -Funktion zu verwenden. In MTS wurde **saferef** verwendet, um einen Verweis auf Ihr Objekt zu erhalten, das außerhalb des Kontext Wrappers übermittelt werden konnte. In com+ ist dies unnötig. normale Objekt Verweise (**diese** Zeiger) funktionieren.
+Kontexte ersetzen effektiv die MTS-Kontext-Wrapper. Der Zweck, den sie erfüllt haben – das Bereitstellen automatischer Dienste durch das Auffangen von Erstellungsanforderungen – ist jetzt ein integriertes Feature von COM+. Daher müssen Sie die [**SafeRef-Funktion nicht mehr**](/windows/desktop/api/ComSvcs/nf-comsvcs-saferef) verwenden. In MTS wurde **SafeRef** verwendet, um einen Verweis auf Ihr Objekt zu erhalten, der außerhalb des Kontext-Wrappers übergeben werden konnte. In COM+ ist dies nicht erforderlich. normale Objektverweise **(diese** Zeiger) funktionieren.
 
  
 

@@ -1,9 +1,9 @@
 ---
-title: 'Rwbyteaddressbuffer:: Load (int)-Funktion'
-description: 'Ruft einen Wert ab. | Rwbyteaddressbuffer:: Load (int)-Funktion'
+title: RWByteAddressBuffer::Load(int)-Funktion
+description: Ruft einen Wert ab. | RWByteAddressBuffer::Load(int)-Funktion
 ms.assetid: C95C865E-E44D-46DC-A076-BD2903758432
 keywords:
-- Ladefunktion HLSL
+- Load-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6efff2363f844e6940b489dd2dda48cbdc0c6b75
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 4885a94041201eed790768cd6b75d07f8bd5ccd24b9d37ce56df734adced15ef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119672160"
 ---
-# <a name="rwbyteaddressbufferloadint-function"></a>Rwbyteaddressbuffer:: Load (int)-Funktion
+# <a name="rwbyteaddressbufferloadint-function"></a>RWByteAddressBuffer::Load(int)-Funktion
 
 Ruft einen Wert ab.
 
@@ -39,12 +39,12 @@ uint Load(
 
 <dl> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Der Speicherort des Puffers.
+Die Position des Puffers.
 
 </dd> </dl>
 
@@ -52,15 +52,15 @@ Der Speicherort des Puffers.
 
 Typ: **uint**
 
-Ein-Wert.
+Ein Wert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -68,11 +68,11 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Lade Methoden](rwbyteaddressbuffer-load.md)
+[Laden von Methoden](rwbyteaddressbuffer-load.md)
 </dt> </dl>
 
  

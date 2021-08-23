@@ -1,9 +1,9 @@
 ---
-title: DRM_LICENSE_STATE_DATA-Struktur (Wmdrmsdk.h)
+title: DRM_LICENSE_STATE_DATA -Struktur (Wmdrmsdk.h)
 description: Die DRM \_ LICENSE \_ STATE \_ DATA-Struktur enthält Informationen zu den Lizenzeinschränkungen für ein DRM-Recht.
 ms.assetid: 822d60ae-5d96-4577-8564-0e1adafa5dd5
 keywords:
-- DRM_LICENSE_STATE_DATA Strukturfenster Medienformat
+- DRM_LICENSE_STATE_DATA struktur windows media format
 - Strukturfenster Medienformat
 topic_type:
 - apiref
@@ -22,7 +22,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119708930"
 ---
-# <a name="drm_license_state_data-structure-wmdrmsdkh"></a>DRM_LICENSE_STATE_DATA-Struktur (Wmdrmsdk.h)
+# <a name="drm_license_state_data-structure-wmdrmsdkh"></a>DRM_LICENSE_STATE_DATA -Struktur (Wmdrmsdk.h)
 
 Die **DRM \_ LICENSE STATE \_ \_ DATA-Struktur** enthält Informationen zu den Lizenzeinschränkungen für ein DRM-Recht.
 
@@ -64,43 +64,43 @@ Kategorie der anzuzeigenden Zeichenfolge. Mögliche Werte und deren Bedeutung fi
 **dwNumCounts**
 </dt> <dd>
 
-Anzahl der in **dwCount** bereitgestellten Elemente. Dieser Wert ist in der Regel 0 oder 1.
+Anzahl der in **dwCount bereitgestellten Elemente.** Dieser Wert ist in der Regel 0 oder 1.
 
 </dd> <dt>
 
 **dwCount \[ 4\]**
 </dt> <dd>
 
-Ein Array von 0 oder 1 oder mehr **DWORD-Werten,** die die Anzahl der in **dwCategory** angegebenen Aktionen darstellen. Siehe Hinweise.
+Ein Array von 0 oder 1 oder mehr **DWORD-Werten,** die angeben, wie oft die in **dwCategory** angegebene Aktion ausgeführt werden kann. Siehe Hinweise.
 
 </dd> <dt>
 
 **dwNumDates**
 </dt> <dd>
 
-Anzahl der in **datetime** bereitgestellten Elemente. In der Regel werden nicht mehr als zwei Datumsangaben verwendet, z. B. mit einer Lizenz, die von einem Datum bis zu einem anderen Datum gültig ist.
+Anzahl der in **datetime angegebenen Elemente.** In der Regel werden nicht mehr als zwei Datumsangaben verwendet, z. B. mit einer Lizenz, die von einem Datum bis zu einem anderen Datum gültig ist.
 
 </dd> <dt>
 
 **datetime \[ 4\]**
 </dt> <dd>
 
-Ein Array von einer oder mehreren **FILETIME-Strukturen,** die mindestens ein Datum in der Lizenz darstellen. Die Bedeutung eines bestimmten Datums hängt vom Wert von **dwCategory** ab.
+Ein Array von einer oder mehr **FILETIME-Strukturen,** die ein oder mehrere Datumsangaben in der Lizenz darstellen. Die Bedeutung eines bestimmten Datums hängt vom Wert von **dwCategory ab.**
 
 </dd> <dt>
 
 **dwVague**
 </dt> <dd>
 
-Null oder mehr der folgenden Flags in Kombination mit einem bitweisen **OR:**
+Null oder mehr der folgenden Flags in Kombination mit einem bitweisem **OR:**
 
 
 
 | Flag                                    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \_DRM-LIZENZZUSTANDSDATEN \_ \_ \_ UNGENAU        | Wenn diese Einstellung festgelegt ist, gibt es möglicherweise weitere Lizenzen, die für den Inhalt gelten. Die einzige Möglichkeit, bei den einzelnen Lizenzen, die für eine bestimmte Schlüssel-ID gelten, sicher zu sein, besteht darin, die Lizenzen aufzuzählen. Rufen Sie hierzu [**IWMDRMLicenseManagement::CreateLicenseEnumeration**](iwmdrmlicensemanagement-createlicenseenumeration.md)auf, und übergeben Sie die Schlüssel-ID als bstrKID-Parameter. Verwenden Sie dann die abgerufene IWMDRMLicense-Schnittstelle, um die Lizenzen zu untersuchen. |
-| DRM \_ LICENSE \_ STATE \_ DATA \_ OPL \_ PRESENT | Wenn diese Einstellung festgelegt ist, enthält die Lizenz Ausgabeschutzebenen (Output Protection Levels, OPLs), die abgerufen und anhand des Ziels der Ausgabe Ihrer Anwendung überprüft werden müssen.                                                                                                                                                                                                                                                                                  |
-| DRM \_ LICENSE \_ STATE \_ DATA \_ SAP \_ PRESENT | Falls festgelegt, muss der Inhalt über einen sicheren Audiopfad (SECURE Audio Path, SAP) übermittelt werden.                                                                                                                                                                                                                                                                                                                                                                   |
+| \_ \_ DRM-LIZENZSTATUSDATEN \_ \_        | Wenn festgelegt, gibt es möglicherweise weitere Lizenzen, die für den Inhalt gelten. Die einzige Möglichkeit, sich über die einzelnen Lizenzen zu sorgen, die für eine bestimmte Schlüssel-ID gelten, besteht im Aufzählen der Lizenzen. Rufen Sie hierzu [**IWMDRMLicenseManagement::CreateLicenseEnumeration**](iwmdrmlicensemanagement-createlicenseenumeration.md)auf, und übergeben Sie die Schlüssel-ID als bstrKID-Parameter. Verwenden Sie dann die abgerufene IWMDRMLicense-Schnittstelle, um die Lizenzen zu untersuchen. |
+| \_ \_ DRM-LIZENZZUSTANDSDATEN \_ \_ OPL \_ VORHANDEN | Wenn festgelegt, enthält die Lizenz Ausgabeschutzebenen (Output Protection Levels, OPLs), die abgerufen und mit dem Ziel der Anwendungsausgabe überprüft werden müssen.                                                                                                                                                                                                                                                                                  |
+| \_ \_ DRM-LIZENZSTATUSDATEN \_ \_ SAP \_ VORHANDEN | Wenn festgelegt, muss der Inhalt mithilfe eines sicheren Audiopfads (SECURE AUDIO Path, SAP) übermittelt werden.                                                                                                                                                                                                                                                                                                                                                                   |
 
 
 
@@ -110,13 +110,13 @@ Null oder mehr der folgenden Flags in Kombination mit einem bitweisen **OR:**
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird durch Aufrufen von **IWMDRMLicenseQuery::QueryLicenseState** abgerufen.
+Diese Struktur wird durch Aufrufen von **IWMDRMLicenseQuery::QueryLicenseState abgerufen.**
 
 Wenn **dwCategory** **WM \_ DRM LICENSE STATE COUNT \_ FROM \_ \_ \_ \_ UNTIL** ist, enthält das **datetime-Array** in der Regel zwei Datumsangaben: ein "from"-Datum und ein "until"-Datum. Es können auch zwei Datumspaare angegeben werden, um komplexere Lizenzen zu erstellen.
 
-Die Elemente des **dwCount-Arrays** entsprechen den Datums- oder Datumsbereichen, die im **datetime-Array** angegeben sind. Wenn **dwCategory** **WM \_ DRM LICENSE STATE COUNT \_ FROM \_ \_ \_ \_ UNTIL** ist und **datetime** ein Datumspaar enthält, enthält **dwCount** ein Element. Wenn **datetime** zwei Datumspaare (vier Elemente) enthält, sollte **dwCount** zwei Elemente enthalten, eines für jedes Datumspaar.
+Die Elemente des **dwCount-Arrays** entsprechen den Datums- oder Datumsbereichen, die im **datetime-Array angegeben** sind. Wenn **dwCategory** **WM \_ DRM LICENSE STATE COUNT \_ FROM UNTIL \_ \_ \_ \_ ist** und **datetime** ein Datumspaar enthält, enthält **dwCount** ein Element. Wenn **datetime** zwei Datumspaare (vier Elemente) enthält, sollte **dwCount** zwei Elemente enthalten, eines für jedes Datumspaar.
 
-In einigen Fällen haben Benutzer möglicherweise mehr als eine Lizenz für eine Datei ausgestellt. Beispielsweise könnten sie eine Lizenz erworben haben, die bis zum Ende des Monats fünf Wiedergaben zulässt, und später eine zweite Lizenz für unbegrenzte Rechte erworben haben. In einem solchen Fall wird das FLAG DRM \_ LICENSE STATE DATA IM \_ \_ \_ **DWVAGUE** () festgelegt, `dwVague & DRM_LICENSE_STATE_DATA_VAGUE != 0` und die DRM-Komponente verwendet einen Algorithmus, um den wahrscheinlichsten Satz von Rechten zu bestimmen, die angewendet wurden. Wenn eine Lizenz abläuft, überprüft die DRM-Komponente die verbleibenden Lizenzen usw. bis alle Lizenzen abgelaufen sind.
+In einigen Fällen wurden Benutzern möglicherweise mehrere Lizenzen für eine Datei ausgestellt. Beispielsweise haben sie möglicherweise eine Lizenz erworben, die fünf Spiele bis zum Ende des Monats erlaubt hat, und später eine zweite Lizenz für unbegrenzte Rechte erworben. In einem solchen Fall wird das FLAG DRM \_ LICENSE STATE DATA ALGORITHM in \_ \_ \_ **dwVague** ( ) festgelegt, und die `dwVague & DRM_LICENSE_STATE_DATA_VAGUE != 0` DRM-Komponente verwendet einen Algorithmus, um den wahrscheinlichsten Satz von Rechten zu bestimmen, die angewendet wurden. Wenn eine Lizenz abläuft, überprüft die DRM-Komponente die verbleibenden Lizenzen und so weiter, bis alle Lizenzen abgelaufen sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -128,7 +128,7 @@ In einigen Fällen haben Benutzer möglicherweise mehr als eine Lizenz für eine
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

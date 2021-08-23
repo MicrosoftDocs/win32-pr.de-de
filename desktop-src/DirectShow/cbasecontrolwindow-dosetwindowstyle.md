@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: db88c5818d31d65f361ae1a805bd50c285d4a5c2
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: d3b1f72ace792f13f88fbf0ce1e0edaf7b08789ecba88aede0b4094e9e75ae52
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107909808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119640880"
 ---
 # <a name="cbasecontrolwindowdosetwindowstyle-method"></a>CBaseControlWindow.DoSetWindowStyle-Methode
 
@@ -53,7 +53,7 @@ Geeignete Fensterstile.
 *WindowLong* 
 </dt> <dd>
 
-Wert, der angibt, welche Stile festgelegt werden sollen. Dies muss eine der folgenden Ressourcen sein:
+Wert, der an gibt, welche Stile festgelegt werden. Dies muss eine der folgenden Ressourcen sein:
 
 
 
@@ -72,9 +72,9 @@ Wert, der angibt, welche Stile festgelegt werden sollen. Dies muss eine der folg
 
 Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion ruft die Win32 **SetWindowLong-Funktion** auf, um den Fensterstil festzulegen, und zeigt das Fenster dann erneut an der aktuellen Position an. Diese Memberfunktion wird von den [**Memberfunktionen CBaseControlWindow::p ut \_ WindowStyle**](cbasecontrolwindow-put-windowstyle.md) und [**CBaseControlWindow::p ut \_ WindowStyleEx**](cbasecontrolwindow-put-windowstyleex.md) aufgerufen.
+Diese Memberfunktion ruft die **Win32-Funktion SetWindowLong** auf, um den Fensterstil zu festlegen, und zeigt das Fenster dann an der aktuellen Position erneut an. Diese Memberfunktion wird von den [**Memberfunktionen CBaseControlWindow::p ut \_ WindowStyle**](cbasecontrolwindow-put-windowstyle.md) und [**CBaseControlWindow::p ut \_ WindowStyleEx**](cbasecontrolwindow-put-windowstyleex.md) aufgerufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,7 +83,7 @@ Diese Memberfunktion ruft die Win32 **SetWindowLong-Funktion** auf, um den Fenst
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

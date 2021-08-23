@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10.h
-ms.openlocfilehash: 520abae0409dd4214106363d7ffde0cfb5c81ff1
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b2611bb343801bbe2bd6572f250a7f0eb6d9df7b9980445f1045ee89bee23203
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119753570"
 ---
 # <a name="d3dx10_err-enumeration"></a>D3DX10 \_ ERR-Enumeration
 
@@ -110,7 +110,7 @@ Das letzte Element kann nicht gelöscht werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Einrichtungscode \_ FACDD wird zum Generieren von Fehlercodes verwendet, wie in den folgenden Makros zu sehen.
 
@@ -131,7 +131,7 @@ enum _D3DXERR {
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10.h</dt> </dl> |
 

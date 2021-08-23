@@ -1,22 +1,22 @@
 ---
-description: In den folgenden Abschnitten werden die Aspekte der Erstellung neuer Sockets und die Zuordnung von socketdeskriptoren beschrieben. Deskriptor zugssocket-Attributflags und das Zurückziehen von Sockets
+description: In den folgenden Abschnitten werden Aspekte der Erstellung neuer Sockets und die Zuordnung von Socketdeskriptoren beschrieben. Deskriptor allocationSocket Attribute Flags and ModesClosing Sockets
 ms.assetid: 121f9ec6-4f27-4d0b-ad94-c729ef7fc408
-title: Socketerstellung und deskriptorverwaltung
+title: Socketerstellung und Deskriptorverwaltung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b61a5c24af8182e7394e56a48949f7719e7d68c0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cdd2b235602a3fe01ce0e257307a02ce7fe9a500f5255362230ef553ef985975
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347916"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119641600"
 ---
-# <a name="socket-creation-and-descriptor-management"></a>Socketerstellung und deskriptorverwaltung
+# <a name="socket-creation-and-descriptor-management"></a>Socketerstellung und Deskriptorverwaltung
 
-In den folgenden Abschnitten werden die Aspekte der Erstellung neuer Sockets und die Zuordnung von socketdeskriptoren beschrieben.
+In den folgenden Abschnitten werden Aspekte der Erstellung neuer Sockets und die Zuordnung von Socketdeskriptoren beschrieben.
 
 -   [Deskriptorzuordnung](descriptor-allocation-2.md)
--   [Socketattributflags und-Modi](socket-attribute-flags-and-modes-2.md)
+-   [Socketattributflags und -modi](socket-attribute-flags-and-modes-2.md)
 -   [Schließen von Sockets](closing-sockets-2.md)
 
  

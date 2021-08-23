@@ -1,7 +1,7 @@
 ---
-description: Beachten Sie, dass Sie die D3DDisassemble-API verwenden, anstatt diese Legacy Funktion zu verwenden. Diese Funktion, die einen kompilierten Shader in eine Text Zeichenfolge disassembliert, die Assemblyanweisungen und Register Zuweisungen enthält, ist nicht mehr vorhanden.
+description: Hinweis Anstatt diese Legacyfunktion zu verwenden, wird empfohlen, die D3DDisassemble-API zu verwenden. Diese Funktion , die einen kompilierten Shader in eine Textzeichenfolge disassembliert, die Assemblyanweisungen und Registerzuweisungen enthält, ist nicht mehr vorhanden.
 ms.assetid: f94264f8-121a-4bb7-bf1f-cc5d2cac6cd2
-title: D3DX10DisassembleShader-Funktion (D3DX10Core. h)
+title: D3DX10DisassembleShader-Funktion (D3DX10Core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,21 +13,21 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Core.h
-ms.openlocfilehash: 13716fd5d25e2e8602379ea3864c516fa5388475
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: bd69b6dc2cede96e6ca07983195d202cfd248633f44a13fe1967393c446ca329
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119753220"
 ---
 # <a name="d3dx10disassembleshader-function"></a>D3DX10DisassembleShader-Funktion
 
 > [!Note]  
-> Anstatt diese Legacy Funktion zu verwenden, empfiehlt es sich, die [**D3DDisassemble**](/windows/win32/api/d3dcompiler/nf-d3dcompiler-d3ddisassemble) -API zu verwenden.
+> Anstatt diese Legacyfunktion zu verwenden, wird empfohlen, die [**D3DDisassemble-API**](/windows/win32/api/d3dcompiler/nf-d3dcompiler-d3ddisassemble) zu verwenden.
 
  
 
-Diese Funktion, die einen kompilierten Shader in eine Text Zeichenfolge disassembliert, die Assemblyanweisungen und Register Zuweisungen enthält, ist nicht mehr vorhanden. Verwenden Sie stattdessen [**D3DDisassemble10Effect**](/windows/win32/api/d3dcompiler/nf-d3dcompiler-d3ddisassemble10effect).
+Diese Funktion , die einen kompilierten Shader in eine Textzeichenfolge disassembliert, die Assemblyanweisungen und Registerzuweisungen enthält, ist nicht mehr vorhanden. Verwenden Sie stattdessen [**D3DDisassemble10Effect**](/windows/win32/api/d3dcompiler/nf-d3dcompiler-d3ddisassemble10effect).
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,48 +48,48 @@ HRESULT D3DX10DisassembleShader(
 
 <dl> <dt>
 
-*pshader* \[ in\]
+*pShader* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **void \***
+Typ: **const \* void**
 
 Ein Zeiger auf den [**kompilierten Shader**](/windows/desktop/api/D3D10/nf-d3d10-id3d10device-createinputlayout).
 
 </dd> <dt>
 
-*Bytecodelta ength* \[ in\]
+*BytecodeLength* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Größe \_ T**](../winprog/windows-data-types.md)**
+Typ: **[ **SIZE \_ T**](../winprog/windows-data-types.md)**
 
-Die Größe des pshader.
+Die Größe von pShader.
 
 </dd> <dt>
 
-*Enablecolorcode* \[ in\]
+*EnableColorCode* \[ In\]
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Fügen Sie HTML-Tags in die Ausgabe ein, um das Ergebnis farblich zu färben.
+Fügen Sie HTML-Tags in die Ausgabe ein, um das Ergebnis mit Farbcode zu versehen.
 
 </dd> <dt>
 
-*pcomments* \[ in\]
+*pComments* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Die Kommentar Zeichenfolge am Anfang des Shader, die die shaderkonstanten und Variablen identifiziert.
+Die Kommentarzeichenfolge am oberen Rand des Shaders, die die Shaderkonstanten und -variablen identifiziert.
 
 </dd> <dt>
 
-*ppdisassembly* \[ vorgenommen\]
+*ppDisassembly* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Blob**](/windows/desktop/api/D3DCommon/nn-d3dcommon-id3d10blob)\*\***
 
-Adresse eines Puffers (siehe [**ID3D10Blob Interface**](/windows/desktop/api/D3DCommon/nn-d3dcommon-id3d10blob)), der den disassemblierten Shader enthält.
+Adresse eines Puffers (siehe [**ID3D10Blob-Schnittstelle),**](/windows/desktop/api/D3DCommon/nn-d3dcommon-id3d10blob)der den disassemblierten Shader enthält.
 
 </dd> </dl>
 
@@ -97,13 +97,13 @@ Adresse eines Puffers (siehe [**ID3D10Blob Interface**](/windows/desktop/api/D3D
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 10-Rückgabecodes zurück.](d3d10-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser zurückgegebene Text enthält einen Header mit der Version des HLSL-Compilers, der zum Generieren dieses Objekts verwendet wurde, Kommentare, die das Speicher Layout der vom Shader verwendeten Konstanten Puffer, Eingabe-und Ausgabe Signaturen und Ressourcen Bindungs Punkte beschreiben.
+Dieser zurückgegebene Text enthält einen Header mit der Version des HLSL-Compilers, der zum Generieren dieses Objekts verwendet wird, Kommentare, die das Speicherlayout der konstanten Puffer beschreiben, die vom Shader verwendet werden, Eingabe- und Ausgabesignaturen sowie Ressourcenbindungspunkte.
 
-Im folgenden finden Sie ein Beispiel für die Disassemblierung eines kompilierten Shaders. Im Beispiel wird davon ausgegangen, dass Sie mit einem kompilierten Shader beginnen (als *pvsbuf* angezeigt, den Sie in [HLSLWithoutFX10 Sample](https://msdn.microsoft.com/library/Ee416414(v=VS.85).aspx)sehen können).
+Hier sehen Sie ein Beispiel für die Disassemblierung eines kompilierten Shaders. Im Beispiel wird davon ausgegangen, dass Sie mit einem kompilierten Shader beginnen (dargestellt als *pVSBuf,* der im [HLSLWithoutFX10-Beispiel angezeigt wird).](https://msdn.microsoft.com/library/Ee416414(v=VS.85).aspx)
 
 
 ```
@@ -134,15 +134,15 @@ if( pVSBuf )
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Core. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Core.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Universell Funktionen](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
+[Universell Functions](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
 </dt> </dl>
 
  

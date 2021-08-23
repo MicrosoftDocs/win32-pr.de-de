@@ -1,9 +1,9 @@
 ---
 title: Frequency-Attribut
-description: Das Frequency-Attribut ist die Häufigkeit der Radio Station oder \ 0034; nur net \ 0034;.
+description: Das Frequency-Attribut ist die Frequenz des Radiosenders oder \ 0034;Net only \ 0034;.
 ms.assetid: af9d348a-35f5-4cd6-ac1e-523e310860dd
 keywords:
-- Frequency-Attribut, Windows Media Player
+- Windows Media Player des Frequency-Attributs
 topic_type:
 - apiref
 api_name:
@@ -12,26 +12,26 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2bbc3ca8dde29c5729446c54e36b3d10b9c9825f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 81d75a542963a8587ad25ead39090ec77fb7d10f72119804c3c43280fd588a54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371414"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648210"
 ---
 # <a name="frequency-attribute"></a>Frequency-Attribut
 
-Das **Frequency** -Attribut ist die Häufigkeit der Radio Station oder "NET only".
+Das **Frequency-Attribut** ist die Frequenz des Radiosenders oder "Nur Net".
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Options Felder](radio-item-attributes.md)
+-   [Funkelemente](radio-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur in der-Bibliothek gespeichert.
+Dieses Attribut wird nur in der Bibliothek gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,7 +39,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------|
-| Version<br/> | Nur Windows Media Player 9-Serie<br/> |
+| Version<br/> | nur Windows Media Player 9er Serie<br/> |
 
 
 
@@ -47,7 +47,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  
